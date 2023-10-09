@@ -7,7 +7,7 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
 source-wordcount: '1479'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -15,10 +15,10 @@ ht-degree: 2%
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
->title="(Version bêta) Prise en charge des tableaux d’exportation"
->abstract="Utilisez la variable **Ajouter un champ calculé** pour exporter des tableaux simples de valeurs int, string ou booléennes d’Experience Platform vers la destination de stockage dans le cloud souhaitée. Certaines restrictions s’appliquent. Consultez la documentation pour obtenir des exemples complets et des fonctions prises en charge."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Exemples"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Limites connues"
+>title="(Beta) Prise en charge de l’export des tableaux"
+>abstract="Utilisez la commande **Ajouter un champ calculé** pour exporter des tableaux simples de valeurs entières, de chaîne ou booléennes d’Experience Platform vers la destination d’espace de stockage dans le cloud de votre choix. Certaines limites s’appliquent. Consultez la documentation pour obtenir des exemples complets et des fonctions prises en charge."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=fr#examples" text="Exemples"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=fr#known-limitations" text="Limites connues"
 
 >[!AVAILABILITY]
 >

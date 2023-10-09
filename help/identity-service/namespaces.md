@@ -5,7 +5,7 @@ exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: 3e4f79620d1f1b08684223214980ecbfdfa10a38
 workflow-type: tm+mt
 source-wordcount: '1699'
-ht-degree: 22%
+ht-degree: 24%
 
 ---
 
@@ -43,13 +43,13 @@ Un espace de noms se compose des composants suivants :
 >[!CONTEXTUALHELP]
 >id="platform_identity_create_namespace"
 >title="Définition du type d&#39;identité"
->abstract="Le type d&#39;identité contrôle si les données sont stockées ou non dans le graphique d&#39;identité. Les graphiques d’identités ne sont pas générés pour les types d’identité suivants : identifiants de non-personne et identifiants de partenaire."
+>abstract="Le type d&#39;identité contrôle si les données sont stockées ou non dans le graphique d&#39;identité. Les graphiques d’identités ne sont pas générés pour les types d’identités suivants : identifiants autres que de personne et identifiants de partenaire."
 >text="Learn more in documentation"
 
 Un élément d’un espace de noms d’identité est le suivant : **type d&#39;identité**. Le type d’identité détermine :
 
 * Génération d’un graphique d’identités :
-   * Les graphiques d’identités ne sont pas générés pour les types d’identité suivants : identifiants de non-personne et identifiants de partenaire.
+   * Les graphiques d’identités ne sont pas générés pour les types d’identités suivants : identifiants autres que de personne et identifiants de partenaire.
    * Des graphiques d’identités sont générés pour tous les autres types d’identités.
 * Les identités qui sont supprimées du graphique d’identités lorsque les limites du système sont atteintes. Pour plus d’informations, consultez la section [barrières de sécurité pour les données d’identité](guardrails.md).
 

@@ -5,7 +5,7 @@ exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
 source-wordcount: '828'
-ht-degree: 49%
+ht-degree: 53%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 49%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
 >title="Supprimer des enregistrements de clients et de clientes et de jeux de données non souhaités ou ayant expiré"
->abstract="<h2>Description</h2><p>Pour gérer le cycle de vie de vos données Experience Platform sans rapport avec la conformité réglementaire, vous pouvez supprimer les enregistrements des consommateurs et consommatrices et planifier des dates d’expiration pour les jeux de données. Pour créer ou gérer des demandes des titulaires de données, consultez le bloc de cas d’utilisation &quot;Respect de la vie privée des titulaires de données&quot;.</p>"
+>abstract="<h2>Description</h2><p>Pour gérer le cycle de vie de vos données Experience Platform sans rapport avec la conformité réglementaire, vous pouvez supprimer les enregistrements des consommateurs et consommatrices et planifier des dates d’expiration pour les jeux de données. Pour créer ou gérer des demandes des titulaires de données, consultez le bloc de cas d’utilisation « Respecter les demandes d’accès à des informations personnelles des titulaires de données ».</p>"
 
 La variable [[!UICONTROL Cycle de vie des données] workspace](./overview.md) dans l’interface utilisateur de Adobe Experience Platform vous permet de planifier des expirations pour les jeux de données. Lorsqu’un jeu de données atteint sa date d’expiration, le lac de données, le service d’identités et le profil client en temps réel lancent des processus distincts pour supprimer le contenu du jeu de données de leurs services respectifs. Une fois les données supprimées des trois services, l’expiration est marquée comme étant terminée.
 
@@ -33,7 +33,7 @@ Ce document explique comment planifier et automatiser les expirations de jeux de
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="Instructions"
->abstract="<ul><li>Sélectionner <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=fr">Cycle de vie des données</a> dans le volet de navigation de gauche, puis sélectionnez <b>Créer une requête</b>.</li><li>Si vous souhaitez supprimer des enregistrements :</li>   <li>Sélectionnez <b>Enregistrement</b>.</li>   <li>Sélectionnez un jeu de données spécifique à partir duquel supprimer des enregistrements ou choisissez l’option permettant de les supprimer de tous les jeux de données.</li>   <li>Indiquez les identités des consommateurs et des consommatrices dont les enregistrements doivent être supprimés. Sélectionnez <b>Ajouter une identité</b> pour fournir les identités une par une ou sélectionnez <b>Choisir les fichiers</b> pour charger un fichier JSON d’identités à la place.</li>   <li>Si nécessaire, sélectionnez <b>Modèle</b> pour afficher le format attendu du fichier JSON.</li><li>Consultez la documentation pour obtenir des instructions si vous souhaitez <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">planifier des dates d’expiration des jeux de données</a>.</li></ul>"
+>abstract="<ul><li>Sélectionnez <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=fr">Cycle de vie des données</a> dans le volet de navigation de gauche, puis <b>Créer une requête</b>.</li><li>Si vous souhaitez supprimer des enregistrements :</li>   <li>Sélectionnez <b>Enregistrement</b>.</li>   <li>Sélectionnez un jeu de données spécifique à partir duquel supprimer des enregistrements ou choisissez l’option permettant de les supprimer de tous les jeux de données.</li>   <li>Indiquez les identités des consommateurs et des consommatrices dont les enregistrements doivent être supprimés. Sélectionnez <b>Ajouter une identité</b> pour fournir les identités une par une ou sélectionnez <b>Choisir les fichiers</b> pour charger un fichier JSON d’identités à la place.</li>   <li>Si nécessaire, sélectionnez <b>Modèle</b> pour afficher le format attendu du fichier JSON.</li><li>Consultez la documentation pour obtenir des instructions si vous souhaitez <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">planifier des dates d’expiration des jeux de données</a>.</li></ul>"
 
 Pour créer une requête, sélectionnez **[!UICONTROL Créer une requête]** de la page principale de l’espace de travail.
 

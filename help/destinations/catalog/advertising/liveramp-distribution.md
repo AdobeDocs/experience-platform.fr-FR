@@ -1,13 +1,13 @@
 ---
 title: LiveRamp - Connexion de distribution
 description: Découvrez comment utiliser le connecteur LiveRamp - Distribution pour orchestrer et activer les audiences précédemment intégrées dans LiveRamp, vers les destinations publicitaires en aval.
-source-git-commit: b97694dcf0d7fd600c6aada9600364e99ffe0902
+exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2716'
-ht-degree: 32%
+ht-degree: 46%
 
 ---
-
 
 # Connexion [!DNL LiveRamp - Distribution]
 
@@ -110,13 +110,13 @@ Consultez les sections ci-dessous pour obtenir des instructions détaillées sur
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_4cinsights_profile_id"
 >title="Identifiant de profil de marque 4C"
->abstract="Saisissez l’identifiant numérique associé à votre profil de marque 4C. Si vous ne possédez pas cet identifiant, contactez votre représentant des services à la clientèle 4C."
+>abstract="Saisissez l’identifiant numérique associé à votre profil de marque 4C. Si vous ne disposez pas de cet identifiant, contactez votre représentant ou représentante des services à la clientèle 4C."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
 ![Image de l’interface utilisateur de Platform montrant les champs de données client pour la destination Statistiques 4C.](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)
 
-* **[!UICONTROL Identifiant de profil de marque 4C]**: saisissez l’identifiant numérique associé à votre profil de marque 4C. Si vous ne possédez pas cet identifiant, contactez votre représentant des services à la clientèle 4C.
+* **[!UICONTROL Identifiant de profil de marque 4C]**: saisissez l’identifiant numérique associé à votre profil de marque 4C. Si vous ne disposez pas de cet identifiant, contactez votre représentant ou représentante des services à la clientèle 4C.
 
 ### [!DNL Acast] {#acast}
 
@@ -136,7 +136,7 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_ampersand_company_name"
 >title="Nom de votre société"
->abstract="Nom de votre société, comme vous souhaitez qu’il soit présenté au partenaire de destination. N&#39;utilisez ni espaces ni caractères spéciaux."
+>abstract="Nom de votre société, tel que vous souhaitez le présenter au partenaire de destination. N&#39;utilisez ni espaces ni caractères spéciaux."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
@@ -175,7 +175,7 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_agreement"
 >title="Accord sur les conditions de destination des données des annonceurs"
->abstract="Saisissez . `I AGREE` pour confirmer l’accusé de réception et l’accord avec les termes de données de l’annonceur Disney."
+>abstract="Cochez `I AGREE` pour confirmer la reconnaissance et l’acceptation des conditions d’utilisation des données de l’annonceur Disney."
 
 <!-- >additional-url="<https://www.disneyadvertising.com/ADVERTISER-DATA-DESTINATION-TERMS/>" text="Read the agreement" -->
 
@@ -187,7 +187,7 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_email"
 >title="Votre adresse e-mail"
->abstract="Saisissez une adresse e-mail liée à une personne. Cette adresse e-mail sert de signature pour l’accord des conditions de données des annonceurs. Cette adresse email est également utilisée pour vous contacter si nécessaire."
+>abstract="Saisissez une adresse e-mail liée à une personne. Cette adresse e-mail sert de signature pour l’accord des conditions de données des annonceurs. Cette adresse e-mail est également utilisée pour vous contacter si nécessaire."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
@@ -201,7 +201,7 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_iheartmedia_client"
->title="Nom du client"
+>title="Nom du client ou de la cliente"
 >abstract="Nom de votre compte publicitaire, tel que vous souhaitez le présenter au partenaire ou à la partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
@@ -215,7 +215,7 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_index_advertiseraccountname"
 >title="Nom de compte"
->abstract="Nom de votre compte client Index Exchange. N&#39;utilisez ni espaces ni caractères spéciaux."
+>abstract="Nom de votre compte clientèle Index Exchange. N&#39;utilisez ni espaces ni caractères spéciaux."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
@@ -228,7 +228,7 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitectv_client"
 >title="client"
->abstract="Votre nom de client, comme vous souhaitez qu’il soit présenté au partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux."
+>abstract="Nom de votre client ou cliente, tel que vous souhaitez le présenter au partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
@@ -241,63 +241,63 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitedv+_partnerid"
 >title="Identifiant du partenaire"
->abstract="Identifiant de partenaire de projet Rubicon associé à l’éditeur propriétaire du segment/des données. Contactez votre gestionnaire de compte de projet Rubicon si vous n’êtes pas sûr de la valeur que vous devez utiliser."
+>abstract="Identifiant du partenaire de projet Rubicon associé à l’éditeur propriétaire du segment/des données. Contactez le représentant ou la représentante de votre compte de projet Rubicon si vous ne savez pas la valeur que vous devez utiliser."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitedv+_seatid"
->title="ID de siège"
->abstract="Identifiant de siège Magnite DV+ fourni par votre gestionnaire de compte Magnite"
+>title="Identifiant du siège"
+>abstract="Identifiant du siège Magnite DV+ fourni par votre personne gestionnaire de compte Magnite"
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
 ![Image de l’interface utilisateur de Platform montrant les champs de données client pour la destination Magnite DV+.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
 
-* **[!UICONTROL Identifiant du partenaire]**: identifiant de partenaire de projet Rubicon associé à l’éditeur propriétaire du segment/des données. Contactez votre gestionnaire de compte de projet Rubicon si vous n’êtes pas sûr de la valeur que vous devez utiliser.
+* **[!UICONTROL Identifiant du partenaire]**: identifiant de partenaire de projet Rubicon associé à l’éditeur propriétaire du segment/des données. Contactez le représentant ou la représentante de votre compte de projet Rubicon si vous ne savez pas la valeur que vous devez utiliser.
 * **[!UICONTROL ID de siège]**: identifiant de siège Magnite DV+ fourni par votre gestionnaire de compte Magnite
 
 ### [!DNL Nexxen (formerly known as [!DNL Amobee])] {#nexxen}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_ratetype"
->title="Type de taux"
->abstract="Le type de taux représente la manière dont l’utilisation des données doit être facturée. Tous les tarifs de 0,00 $ devraient être fixes. Confirmez auprès de votre représentant Nexxen si vous ne savez pas quel type de taux utiliser."
+>title="Type de tarif"
+>abstract="Le type de tarif représente la manière dont l’utilisation des données doit être facturée. Tous les tarifs de 0,00 $ doivent être fixes. Contactez votre représentant ou représentante Nexxen si vous ne savez pas quel type de tarif utiliser."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_marketid"
->title="Identifiant de marché"
->abstract="Saisissez l’identifiant numérique de marché où le contrat de données Nexxen doit être créé. Si vous effectuez une syndication &quot;AlwaysOn&quot; sur tous les marchés de la plateforme Nexxen, saisissez -1."
+>title="Identifiant du marché"
+>abstract="Saisissez l’identifiant du marché numérique où le contrat de données Nexxen doit être créé. Si vous effectuez une syndication « AlwaysOn » sur tous les marchés de la plateforme Nexxen, saisissez -1."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_advertiserid"
 >title="Identifiant annonceur"
->abstract="Si vous envoyez des données à un seul annonceur sur la plate-forme Nexxen, saisissez le numéro Amobe Advertiser ID. Si vous souhaitez que les données soient disponibles pour tous les annonceurs sur un marché ou si ces segments sont &quot;AlwaysOn&quot;, veuillez saisir -1."
+>abstract="Si vous envoyez des données à un seul annonceur sur la plateforme Nexxen, saisissez l’identifiant d’annonceur Amobee numérique. Si vous souhaitez que les données soient disponibles pour tous les annonceurs sur un marché ou si ces segments sont « AlwaysOn », saisissez -1."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_nexxen_contactemail"
->title="Courriel du contact"
->abstract="Saisissez l&#39;adresse email que Nexxen doit utiliser pour envoyer les détails du contrat de données. Il s’agit probablement de votre propre adresse électronique, mais il peut également s’agir d’un alias de messagerie. Pour plusieurs destinataires, séparez-les à l’aide de virgules (`email1@domain.com`,`email2@domain.com`, etc.)."
+>title="E-mail de contact"
+>abstract="Saisissez l&#39;adresse e-mail que Nexxen doit utiliser pour envoyer les détails du contrat de données. Il s’agit probablement de votre propre adresse e-mail, mais il peut également s’agir d’un alias de messagerie. Pour plusieurs personnes destinataires, effectuez la séparation à l’aide de virgules (`email1@domain.com`, `email2@domain.com`, etc.)."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
 ![Image de l’interface utilisateur de Platform montrant les champs de données client pour la destination suivante.](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
 
-* **[!UICONTROL Type de taux]**: le type de taux représente la manière dont l’utilisation des données doit être facturée. Tous les tarifs de 0,00 $ devraient être fixes. Confirmez auprès de votre représentant Nexxen si vous ne savez pas quel type de taux utiliser.
-* **[!UICONTROL Identifiant de marché]**: saisissez l’identifiant numérique de marché où le contrat de données Nexxen doit être créé. Si vous effectuez une syndication &quot;AlwaysOn&quot; sur tous les marchés de la plateforme Nexxen, saisissez -1.
+* **[!UICONTROL Type de taux]**: le type de taux représente la manière dont l’utilisation des données doit être facturée. Tous les tarifs de 0,00 $ doivent être fixes. Contactez votre représentant ou représentante Nexxen si vous ne savez pas quel type de tarif utiliser.
+* **[!UICONTROL Identifiant de marché]**: saisissez l’identifiant numérique de marché où le contrat de données Nexxen doit être créé. Si vous effectuez une syndication « AlwaysOn » sur tous les marchés de la plateforme Nexxen, saisissez -1.
 * **[!UICONTROL Identifiant publicitaire]**: si vous envoyez des données à un seul annonceur sur la plateforme Nexxen, saisissez le Nexxen Advertiser ID numérique. Si vous souhaitez que les données soient disponibles pour tous les annonceurs sur un marché ou si ces segments sont &quot;AlwaysOn&quot;, saisissez -1.
-* **[!UICONTROL Courriel du contact]**: saisissez l’adresse email que Nexxen doit utiliser pour envoyer les détails du contrat de données. Il s’agit probablement de votre propre adresse électronique, mais il peut également s’agir d’un alias de messagerie. Pour plusieurs destinataires, séparez-les à l’aide de virgules ( `email1@domain.com`, `email2@domain.com`).
+* **[!UICONTROL Courriel du contact]**: saisissez l’adresse email que Nexxen doit utiliser pour envoyer les détails du contrat de données. Il s’agit probablement de votre propre adresse e-mail, mais il peut également s’agir d’un alias de messagerie. Pour plusieurs destinataires, séparez-les à l’aide de virgules ( `email1@domain.com`, `email2@domain.com`).
 
 ### [!DNL One Fox] {#fox}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_fox_client"
 >title="client"
->abstract="Nom de votre société/compte de distribution tel que vous souhaitez le voir apparaître pour le partenaire. Contactez votre gestionnaire de compte partenaire si vous ne savez pas quel nom utiliser. N&#39;utilisez ni espaces ni caractères spéciaux."
+>abstract="Nom de votre société/compte de distribution tel que vous souhaitez le voir apparaître pour le partenaire. Contactez le représentant ou la représentante de votre compte partenaire si vous ne savez pas quel nom utiliser. N&#39;utilisez ni espaces ni caractères spéciaux."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
 ![Image de l’interface utilisateur de Platform montrant les champs de données client pour la destination One Fox.](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
 
-* **[!UICONTROL Client]**: nom de votre société/compte de distribution tel que vous souhaitez le voir apparaître dans le partenaire. Par défaut, utilisez le nom de votre société. Contactez votre gestionnaire de compte partenaire si vous ne savez pas quel nom utiliser. N&#39;utilisez ni espaces ni caractères spéciaux.
+* **[!UICONTROL Client]**: nom de votre société/compte de distribution tel que vous souhaitez le voir apparaître dans le partenaire. Par défaut, utilisez le nom de votre société. Contactez le représentant ou la représentante de votre compte partenaire si vous ne savez pas quel nom utiliser. N&#39;utilisez ni espaces ni caractères spéciaux.
 
 ### [!DNL Pandora] {#pandora}
 
@@ -399,8 +399,8 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_teads_teadsid"
->title="ID de teads"
->abstract="Identifiant de vos équipes"
+>title="ID de Teads"
+>abstract="Identifiant de Teads"
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
