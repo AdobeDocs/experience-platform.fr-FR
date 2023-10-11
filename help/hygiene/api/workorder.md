@@ -2,20 +2,20 @@
 title: Point de terminaison de l’API Work Order
 description: Le point d’entrée /workorder de l’API Data Hygiene vous permet de gérer par programmation les tâches de suppression pour les identités.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-hide: true
-hidefromtoc: true
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 8e21bcc7b9d7fe3f4d26f80f953d454f090b0928
 workflow-type: tm+mt
-source-wordcount: '997'
-ht-degree: 75%
+source-wordcount: '1034'
+ht-degree: 72%
 
 ---
 
-# Point d’entrée de l’ordre de travail
+# [!BADGE Beta]{type=Informative} Point d’entrée de l’ordre de travail {#work-order-endpoint}
 
 La variable `/workorder` Le point de terminaison de l’API Data Hygiene vous permet de gérer par programmation les demandes de suppression d’enregistrements dans Adobe Experience Platform.
 
 >[!IMPORTANT]
+> 
+>La fonction de suppression d’enregistrement est actuellement en version bêta et disponible uniquement dans un **version limitée**. Il n’est pas disponible pour tous les clients. Les demandes de suppression d’enregistrements ne sont disponibles que pour les organisations de la version limitée.
 >
 >Les suppressions d’enregistrements sont destinées au nettoyage des données, à la suppression des données anonymes ou à la minimisation des données. Elles ne sont **pas** destinées aux demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez plutôt [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
 

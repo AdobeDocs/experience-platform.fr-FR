@@ -4,10 +4,10 @@ user-guide-title: Aide sur la gestion avancée du cycle de vie des données
 breadcrumb-title: Guide de gestion avancée du cycle de vie des données
 user-guide-description: Supprimez des enregistrements individuels et planifiez les expirations de jeux de données dans Experience Platform pour le nettoyage des données, la suppression des données anonymes et la minimisation des données.
 feature: Data Hygiene
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 35f598d3a03b459e2bbed58a006c7d020aba7dac
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 48%
+source-wordcount: '65'
+ht-degree: 44%
 
 ---
 
@@ -24,5 +24,5 @@ ht-degree: 48%
    * [Présentation](./api/overview.md)
    * [Expirations de jeux de données](./api/dataset-expiration.md)
    * [Suppressions d’enregistrements](./api/jobs.md)
-   * [Suppressions d’enregistrements](./api/workorder.md)
+   * [(Version bêta) Suppressions d’enregistrement](./api/workorder.md)
    * [Quota](./api/quota.md)
