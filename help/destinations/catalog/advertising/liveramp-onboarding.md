@@ -3,7 +3,7 @@ title: LiveRamp - Connexion pour l’intégration
 description: Découvrez comment utiliser le connecteur LiveRamp pour intégrer des audiences d’Adobe Real-time Customer Data Platform vers LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 9122159b3facf7952e6072d0b9e6f8d8d7d7c99c
 workflow-type: tm+mt
 source-wordcount: '1793'
 ht-degree: 98%
@@ -195,7 +195,7 @@ Platform exportera deux fichiers CSV vers [!DNL LiveRamp - Onboarding] :
 
 Les fichiers CSV exportés contiennent des profils avec les attributs sélectionnés et le statut d’audience correspondant, sur des colonnes distinctes, avec le nom de l’attribut, et les paires `audience_namespace:audience_ID` en tant qu’en-têtes de colonne, comme illustré dans l’exemple ci-dessous :
 
-`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1:AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2:AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X:AUDIENCE_ID_X`
+`ATTRIBUTE_NAME, AUDIENCE_NAMESPACE_1_AUDIENCE_ID_1, AUDIENCE_NAMESPACE_2_AUDIENCE_ID_2,..., AUDIENCE_NAMESPACE_X_AUDIENCE_ID_X`
 
 Les profils inclus dans les fichiers exportés peuvent correspondre à l’un des statuts de qualification d’audience suivants :
 
