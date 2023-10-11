@@ -2,10 +2,10 @@
 title: Configurer un flux de données
 description: Découvrez comment connecter votre intégration SDK Web côté client à d’autres produits Adobe et destinations tierces.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 1233d9dcfefa71685e457815cb5b9d7a768b7d6e
+source-git-commit: db75771d09caef00db58073333909f730a303975
 workflow-type: tm+mt
-source-wordcount: '2681'
-ht-degree: 82%
+source-wordcount: '2777'
+ht-degree: 75%
 
 ---
 
@@ -48,12 +48,18 @@ Développez l’objet **[!UICONTROL Géolocalisation et recherche de réseau]** 
 
 | Paramètre | Description |
 | --- | --- |
-| [!UICONTROL Recherche géographique] | Active les recherches de géolocalisation pour les options sélectionnées, sur la base de l’adresse IP du visiteur ou de la visiteuse. Pour effectuer des recherches de géolocalisation, vous devez inclure le groupe de champs [`placeContext`](../edge/data-collection/automatic-information.md#place-context) dans la configuration du SDK Web. <br> Options disponibles : <ul><li>Pays</li><li>Code postal</li><li>État/Province</li><li>DMA</li><li>Ville</li><li>Latitude </li><li>Longitude</li></ul>Les options **[!UICONTROL Ville]**, **[!UICONTROL Latitude]** ou **[!UICONTROL Longitude]** fournissent des coordonnées jusqu’à deux décimales, indépendamment des autres options sélectionnées. Il s’agit d’une granularité au niveau de la ville. <br> <br>Si vous ne sélectionnez aucune option, les recherches de géolocalisation sont désactivées. La géolocalisation intervient avant l’[!UICONTROL Obscurcissement de l’adresse IP]. Elle n’est donc pas affectée par le paramètre [!UICONTROL Obscurcissement d’adresses IP]. |
-| [!UICONTROL Recherche réseau] | Active les recherches réseau pour les options sélectionnées, sur la base de l’adresse IP du visiteur ou de la visiteuse. Pour effectuer des recherches réseau, vous devez inclure le groupe de champs [`Environment`](../edge/data-collection/automatic-information.md#environment) dans la configuration du SDK Web. <br>Options disponibles : <ul><li>Opérateur téléphonique</li><li>Domaine</li><li>Fournisseur de services Internet</li></ul>Ces options peuvent être utilisées pour fournir à d’autres services davantage d’informations sur le réseau spécifique d’où proviennent les requêtes. |
+| [!UICONTROL Recherche géographique] | Active les recherches de géolocalisation pour les options sélectionnées en fonction de l’adresse IP du visiteur. Les options disponibles sont les suivantes : <ul><li>**Pays**: renseigne `xdm.placeContext.geo.countryCode`</li><li>**Code postal**: renseigne `xdm.placeContext.geo.postalCode`</li><li>**Etat/Province**: renseigne `xdm.placeContext.geo.stateProvince`</li><li>**DMA**: renseigne `xdm.placeContext.geo.dmaID`</li><li>**Ville**: renseigne `xdm.placeContext.geo.city`</li><li>**Latitude**: renseigne `xdm.placeContext.geo._schema.latitude`</li><li>**Longitude**: renseigne `xdm.placeContext.geo._schema.longitude`</li></ul>Les options **[!UICONTROL Ville]**, **[!UICONTROL Latitude]** ou **[!UICONTROL Longitude]** fournissent des coordonnées jusqu’à deux décimales, indépendamment des autres options sélectionnées. Il s’agit d’une granularité au niveau de la ville.<br> <br>Si vous ne sélectionnez aucune option, les recherches de géolocalisation sont désactivées. La géolocalisation a lieu avant [!UICONTROL Obscurcissement d’IP], ce qui signifie qu’il n’est pas affecté par la variable [!UICONTROL Obscurcissement d’IP] . |
+| [!UICONTROL Recherche réseau] | Active les recherches réseau pour les options sélectionnées en fonction de l’adresse IP du visiteur. Les options disponibles sont les suivantes : <ul><li>**Opérateur**: renseigne `xdm.environment.carrier`</li><li>**Domaine**: renseigne `xdm.environment.domain`</li><li>**FAI**: renseigne `xdm.environment.ISP`</li></ul> |
+
+Si vous activez l’un des champs ci-dessus pour la collecte de données, veillez à définir correctement la variable [`context`](../edge/data-collection/automatic-information.md) Propriété de tableau lorsque [configuration du SDK Web](../edge/fundamentals/configuring-the-sdk.md).
+
+Les champs de recherche de géolocalisation utilisent la variable `context` chaîne de tableau `"placeContext"`, tandis que les champs de recherche réseau utilisent la variable `context` chaîne de tableau `"environment"`.
+
+De plus, assurez-vous que chaque champ XDM souhaité existe dans votre schéma. Dans le cas contraire, vous pouvez ajouter l’Adobe fourni `Environment Details` groupe de champs à votre schéma.
 
 ### Configuration de la recherche de périphérique {#geolocation-device-lookup}
 
-La variable **[!UICONTROL Recherche de périphérique]** vous permettent de sélectionner le niveau de granularité des informations spécifiques à l’appareil que vous souhaitez collecter.
+La variable **[!UICONTROL Recherche de périphérique]** vous permettent de sélectionner des informations spécifiques à l’appareil que vous souhaitez collecter.
 
 Développez l’objet **[!UICONTROL Recherche de périphérique]** pour configurer les paramètres décrits ci-dessous.
 
@@ -65,9 +71,15 @@ Développez l’objet **[!UICONTROL Recherche de périphérique]** pour configur
 
 | Paramètre | Description |
 | --- | --- |
-| **[!UICONTROL Conserver les en-têtes de l’agent utilisateur et des conseils client]** | Sélectionnez cette option pour ne collecter que les informations stockées dans la chaîne de l’agent utilisateur. Il s’agit du paramètre par défaut. |
-| **[!UICONTROL Utilisez la recherche de périphérique pour collecter les informations suivantes :]** | Sélectionnez cette option si vous souhaitez collecter une ou plusieurs des informations suivantes spécifiques à l’appareil : <ul><li>**[!UICONTROL Appareil]** information :<ul><li>Fabricant de l’appareil</li><li>Modèle d’appareil</li><li>Nom marketing</li></ul></li><li>**[!UICONTROL Matériel]** information : <ul><li>Type d’appareil</li><li>Hauteur d’affichage</li><li>Largeur d’affichage</li><li>Profondeur de couleur d’affichage</li></ul></li><li>**[!UICONTROL Navigateur]** information : <ul><li>Fournisseur du navigateur</li><li>Nom du navigateur</li><li>Version du navigateur</li></ul></li><li>**[!UICONTROL Système d’exploitation]** information : <ul><li>Fournisseur du système d’exploitation</li><li>Nom du système d’exploitation</li><li>Version du système d’exploitation</li></ul></li></ul> <br>  Les informations de recherche de périphérique ne peuvent pas être collectées avec l’agent utilisateur et les conseils client. Si vous choisissez de collecter des informations sur l’appareil, la collecte de l’agent utilisateur et des conseils client sera désactivée, et vice versa. Toutes les informations de recherche de périphérique sont stockées dans la variable `xdm:device` groupe de champs. |
-| **[!UICONTROL Ne collectez aucune information sur l’appareil]** | Sélectionnez cette option si vous ne souhaitez collecter aucune sorte d’informations de recherche. Aucune information sur le périphérique, le matériel, le navigateur ou le système d’exploitation ne sera collectée, y compris aucun agent utilisateur ou en-tête d’indice client. |
+| **[!UICONTROL Conserver les en-têtes de l’agent utilisateur et des conseils client]** | Sélectionnez cette option pour ne collecter que les informations stockées dans la chaîne de l’agent utilisateur. Ce paramètre est sélectionné par défaut. Renseigner `xdm.environment.browserDetails.userAgent` |
+| **[!UICONTROL Utilisez la recherche de périphérique pour collecter les informations suivantes :]** | Sélectionnez cette option si vous souhaitez collecter une ou plusieurs des informations suivantes spécifiques à l’appareil : <ul><li>**[!UICONTROL Appareil]** information :<ul><li>**Fabricant de l’appareil**: renseigne `xdm.device.manufacturer`</li><li>**Modèle de périphérique**: renseigne `xdm.device.modelNumber`</li><li>**Nom marketing**: renseigne `xdm.device.model`</li></ul></li><li>**[!UICONTROL Matériel]** information : <ul><li>**Type de matériel**: renseigne `xdm.device.type`</li><li>**Hauteur d’affichage**: renseigne `xdm.device.screenHeight`</li><li>**Largeur d’affichage**: renseigne `xdm.device.screenWidth`</li><li>**Profondeur de couleur d’affichage**: renseigne `xdm.device.colorDepth`</li></ul></li><li>**[!UICONTROL Navigateur]** information : <ul><li>**Fournisseur du navigateur**: renseigne `xdm.environment.browserDetails.vendor`</li><li>**Nom du navigateur**: renseigne `xdm.environment.browserDetails.name`</li><li>**Version du navigateur**: renseigne `xdm.environment.browserDetails.version`</li></ul></li><li>**[!UICONTROL Système d’exploitation]** information : <ul><li>**Fournisseur du système d’exploitation**: renseigne `xdm.environment.operatingSystemVendor`</li><li>**Nom du système d’exploitation**: renseigne `xdm.environment.operatingSystem`</li><li>**Version du système d&#39;exploitation**: renseigne `xdm.environment.operatingSystemVersion`</li></ul></li></ul>Les informations de recherche de périphérique ne peuvent pas être collectées avec l’agent utilisateur et les conseils client. Si vous choisissez de collecter des informations sur l’appareil, la collecte des indices de l’agent utilisateur et du client est désactivée, et vice versa. |
+| **[!UICONTROL Ne collectez aucune information sur l’appareil]** | Sélectionnez cette option si vous ne souhaitez collecter aucune information de recherche de périphérique. Aucune donnée sur l’appareil, le matériel, le navigateur, le système d’exploitation, l’agent utilisateur ou l’indice client n’est collectée. |
+
+Si vous activez l’un des champs ci-dessus pour la collecte de données, veillez à définir correctement la variable [`context`](../edge/data-collection/automatic-information.md) Propriété de tableau lorsque [configuration du SDK Web](../edge/fundamentals/configuring-the-sdk.md).
+
+Les informations sur le périphérique et le matériel utilisent la variable `context` chaîne de tableau `"device"`, tandis que les informations du navigateur et du système d’exploitation utilisent la variable `context` chaîne de tableau `"environment"`.
+
+De plus, assurez-vous que chaque champ XDM souhaité existe dans votre schéma. Dans le cas contraire, vous pouvez ajouter l’Adobe fourni `Environment Details` groupe de champs à votre schéma.
 
 ### Configuration des options avancées {#@advanced-options}
 
