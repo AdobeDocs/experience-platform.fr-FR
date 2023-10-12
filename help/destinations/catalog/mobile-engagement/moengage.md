@@ -2,7 +2,7 @@
 title: Connexion au moteur
 description: Moengage est une plateforme d’engagement client qui optimise les interactions centrées sur les clients entre les consommateurs et les marques en temps réel.
 last-substantial-update: 2023-10-11T00:00:00Z
-source-git-commit: 3d5a3ce18e7f1c0e06246faf8ec4403871e1a1a9
+source-git-commit: 6a80089f404057b5c98764b5e0166b9afaf1a7e4
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 41%
@@ -20,7 +20,7 @@ Avec l’Adobe, l’intégration est très simple et intuitive. Il vous suffit d
 
 >[!IMPORTANT]
 >
->Cette page de documentation et de connecteur de destination est créée et conservée par *Moengager* l&#39;équipe. Pour toute demande ou information, contactez directement l’équipe d’Amazon Ads à l’adresse *`[amc-support@amazon.com](https://help.moengage.com/hc/en-us)`.*
+>Cette page de documentation et de connecteur de destination est créée et conservée par *Moengager* l&#39;équipe. Pour toute demande ou information, contactez directement l’équipe d’Amazon Ads à l’adresse *`https://help.moengage.com/hc/en-us`.*
 
 ## Cas d’utilisation {#use-cases}
 
