@@ -4,9 +4,9 @@ description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe�
 keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1589'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -118,7 +118,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 * Optimisation des événements de modification de la vue pour les applications monopages. La notification d’affichage est désormais incluse avec l’événement de modification de la vue lors du rendu d’expériences personnalisées.
 * Suppression de l’avertissement de la console en cas d’absence de `eventType`.
 * Correction d’un problème où la propriété `propositions` n’était renvoyée que par une commande `sendEvent` lorsque des expériences étaient demandées ou récupérées à partir du cache. La propriété `propositions` sera désormais toujours définie comme un tableau.
-* Correction d’un problème en raison duquel les conteneurs masqués n’étaient pas affichés lorsqu’une erreur était renvoyée depuis le réseau Edge.
+* Correction d’un problème en raison duquel les conteneurs masqués n’étaient pas affichés lorsqu’une erreur était renvoyée depuis Edge Network.
 * Correction d’un problème où les événements d’interaction n’étaient pas comptabilisés dans Adobe Target. Ce problème a été corrigé en ajoutant le nom de la vue au fichier XDM sur web.webPageDetails.viewName.
 * Correction des liens rompus de la documentation dans les messages de la console.
 
@@ -130,7 +130,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 ## Version 2.7.0 - 26 octobre 2021
 
-* Exposer des informations supplémentaires du réseau Edge dans la valeur renvoyée par `sendEvent`, y compris `inferences` et `destinations`. Le format de ces propriétés peut changer, car ces fonctionnalités sont actuellement déployées dans le cadre d’une version bêta. Pour plus d’informations, voir [Événements de tracking.](fundamentals/tracking-events.md)
+* Exposition d’informations supplémentaires d’Edge Network dans la valeur renvoyée de `sendEvent`, y compris `inferences` et `destinations`. Le format de ces propriétés peut changer, car ces fonctionnalités sont actuellement déployées dans le cadre d’une version bêta. Pour plus d’informations, voir [Événements de tracking.](fundamentals/tracking-events.md)
 
 ## Version 2.6.4 - 7 septembre 2021
 

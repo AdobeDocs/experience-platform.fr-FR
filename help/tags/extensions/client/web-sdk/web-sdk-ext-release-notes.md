@@ -3,9 +3,9 @@ title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Plat
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1758'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -14,17 +14,17 @@ ht-degree: 96%
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir les [notes de mise à jour du SDK Web Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=fr).
 
-## Version 2.20.3 - 8 août 2023
+## Version 2.20.3 - 8 août 2023
 
 **Correctifs et améliorations**
 
-* Correction d’un problème en raison duquel les éléments de données ne pouvaient pas être enregistrés dans le champ de remplacement de l’ID de conteneur de synchronisation des identifiants .
+* Correction d’un problème en raison duquel les éléments de données ne pouvaient pas être enregistrés dans le champ de remplacement de l’ID de conteneur de synchronisation des identifiants.
 
-## Version 2.20.1 - 3 août 2023
+## Version 2.20.1 - 3 août 2023
 
 **Correctifs et améliorations**
 
-* Amélioration de la validation des paramètres de remplacement de la banque de données enregistrés.
+* Amélioration de la validation des paramètres de remplacement du train de données enregistré.
 
 ## Version 2.20.0 - 31 juillet 2023
 
@@ -34,8 +34,8 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 
 **Correctifs et améliorations**
 
-* `edgeConfigId` est devenu obsolète et est remplacé par `datastreamId` dans la configuration du SDK 
-* Plusieurs améliorations de l’expérience utilisateur pour la configuration du flux de données remplacent l’interface utilisateur.
+* `edgeConfigId` est devenu obsolète et est remplacé par `datastreamId` dans la configuration du SDK.
+* Plusieurs améliorations de l’expérience client pour la configuration du train de données qui remplace l’interface utilisateur.
 
 ## Version 2.19.0 - 21 juin 2023
 
@@ -145,7 +145,7 @@ Contient la version 2.8.0 de la bibliothèque SDK Web Adobe Experience Platfo
 
 Contient la version 2.7.0 de la bibliothèque SDK Web Adobe Experience Platform.
 
-* Des informations supplémentaires provenant du réseau Edge sont disponibles dans l’événement Send Event Complete , notamment `inferences` et `destinations`. Le format de ces propriétés peut changer, car ces fonctionnalités sont actuellement déployées dans le cadre d’une version bêta. Pour plus d’informations, voir [Suivi des événements.](../../../../edge/fundamentals/tracking-events.md)
+* Des informations supplémentaires provenant d’Edge Network sont disponibles dans l’événement d’envoi d’événement terminé, notamment `inferences` et `destinations`. Le format de ces propriétés peut changer, car ces fonctionnalités sont actuellement déployées dans le cadre d’une version bêta. Pour plus d’informations, voir [Suivi des événements.](../../../../edge/fundamentals/tracking-events.md)
 
 ## Version 2.7.3 - 7 septembre 2021
 
