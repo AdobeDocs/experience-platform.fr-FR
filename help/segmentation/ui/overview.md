@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’IU de Segmentation Service
 description: Découvrez comment créer et gérer des audiences et des définitions de segment dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 7eaf3383bb8dde0d5918eefba1ee69caddea0c0b
+source-git-commit: 695a5c9b39def899c6b1f9cb169508ae0299686c
 workflow-type: tm+mt
-source-wordcount: '3781'
-ht-degree: 94%
+source-wordcount: '3822'
+ht-degree: 92%
 
 ---
 
@@ -92,7 +92,7 @@ Dans la partie supérieure de la page, vous trouverez des options permettant d�
 
 L’activation de l’option **[!UICONTROL Planifier toutes les audiences]** active la segmentation planifiée. Vous trouverez plus d’informations sur la segmentation planifiée dans la [section segmentation planifiée de ce guide d’utilisation](#scheduled-segmentation).
 
-Sélectionner **[!UICONTROL Importer une audience]** vous permet d’importer une audience générée en externe. Pour en savoir plus sur l’importation d’audiences, consultez la section sur l’[importation d’une audience dans le guide d’utilisation](#import-audience).
+Sélection **[!UICONTROL Importer une audience]** vous permet d’importer une audience générée en externe. Pour en savoir plus sur l&#39;import d&#39;audiences, consultez la section sur [import d’une audience dans le guide d’utilisation](#import-audience).
 
 Sélectionner **[!UICONTROL Créer une audience]** vous permet de créer une audience. Pour en savoir plus sur la création d’audiences, consultez la section sur la [création d’une audience dans le guide d’utilisation](#create-audience).
 
@@ -350,6 +350,10 @@ La page **[!UICONTROL Réviser]** s’affiche. Vous pouvez consulter les détail
 ![La page [!UICONTROL Réviser] s’affiche, avec les détails de votre audience générée en externe nouvellement importée.](../images/ui/overview/import-audience-review-details.png)
 
 Une fois que les détails sont corrects, sélectionnez **[!UICONTROL Terminer]** pour importer votre audience générée en externe dans Adobe Experience Platform.
+
+>[!IMPORTANT]
+>
+>Si votre audience générée en externe contient des informations sensibles et/ou liées à la santé, vous **must** appliquez les libellés d’utilisation des données nécessaires avant de l’activer vers n’importe quelle destination. Pour plus d’informations sur l’application des libellés d’utilisation des données, consultez la documentation sur [gestion des libellés](../../access-control/abac/ui/labels.md).
 
 ## Segmentation planifiée {#scheduled-segmentation}
 
