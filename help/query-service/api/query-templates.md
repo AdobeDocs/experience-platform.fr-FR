@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API de modèles de requête
 description: Ce guide décrit les différents appels d’API de modèle de requête que vous pouvez effectuer à l’aide de l’API Query Service.
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 61%
+source-wordcount: '969'
+ht-degree: 54%
 
 ---
 
@@ -42,7 +42,7 @@ Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour
 | --------- | ----------- |
 | `orderby` | Spécifie le champ de référence pour le tri des résultats. Les champs `created` et `updated` sont pris en charge. Par exemple, `orderby=created` triera les résultats par ordre croissant de création. L’ajout d’un `-` devant created (`orderby=-created`) triera les éléments par ordre décroissant de création. |
 | `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. (*Valeur par défaut : 20*) |
-| `start` | Décale la liste de réponses à l’aide d’une numérotation à partir de zéro. Par exemple, `start=2` renvoie une liste commençant par la troisième requête répertoriée. (*Valeur par défaut : 0*) |
+| `start` | Spécifiez un horodatage au format ISO pour classer les résultats. Si aucune date de début n’est spécifiée, l’appel API renvoie d’abord les modèles créés les plus anciens, puis continue à répertorier les résultats plus récents.<br> Les horodatages ISO permettent différents niveaux de granularité dans la date et l’heure. Les horodatages ISO de base prennent le format suivant : `2020-09-07` le 7 septembre 2020. Un exemple plus complexe serait écrit comme suit : `2022-11-05T08:15:30-05:00` et correspond au 5 novembre 2022, 8:15:30 h, heure normale de l&#39;Est des États-Unis. Un fuseau horaire peut être fourni avec un décalage UTC et est signalé par le suffixe &quot;Z&quot; (`2020-01-01T01:01:01Z`). Si aucun fuseau horaire n’est fourni, la valeur par défaut est zéro. |
 | `property` | Filtrez les résultats en fonction des champs. Les filtres **doivent** être précédés d’une séquence d’échappement HTML. Des virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les champs `name` et `userId` sont pris en charge. Le seul opérateur pris en charge est `==` (égal à). Par exemple, `name==my_template` renvoie tous les modèles de requête portant le nom `my_template`. |
 
 **Requête**

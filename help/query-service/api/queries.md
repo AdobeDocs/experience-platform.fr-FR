@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API de requêtes
 description: Les sections suivantes passent en revue les appels que vous pouvez effectuer à l’aide du point de terminaison /query de l’API Query Service.
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 62%
+source-wordcount: '943'
+ht-degree: 54%
 
 ---
 
@@ -38,11 +38,11 @@ Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour
 | --------- | ----------- |
 | `orderby` | Spécifie le champ de référence pour le tri des résultats. Les champs `created` et `updated` sont pris en charge. Par exemple, `orderby=created` triera les résultats par ordre croissant de création. L’ajout d’un `-` devant created (`orderby=-created`) triera les éléments par ordre décroissant de création. |
 | `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. (*Valeur par défaut : 20*) |
-| `start` | Décale la liste de réponses à l’aide d’une numérotation à partir de zéro. Par exemple, `start=2` renvoie une liste commençant par la troisième requête répertoriée. (*Valeur par défaut : 0*) |
+| `start` | Spécifiez un horodatage au format ISO pour classer les résultats. Si aucune date de début n’est spécifiée, l’appel API renvoie d’abord la requête créée la plus ancienne, puis continue à répertorier les résultats plus récents.<br> Les horodatages ISO permettent différents niveaux de granularité dans la date et l’heure. Les horodatages ISO de base prennent le format suivant : `2020-09-07` le 7 septembre 2020. Un exemple plus complexe serait écrit comme suit : `2022-11-05T08:15:30-05:00` et correspond au 5 novembre 2022, 8:15:30 h, heure normale de l&#39;Est des États-Unis. Un fuseau horaire peut être fourni avec un décalage UTC et est signalé par le suffixe &quot;Z&quot; (`2020-01-01T01:01:01Z`). Si aucun fuseau horaire n’est fourni, la valeur par défaut est zéro. |
 | `property` | Filtrez les résultats en fonction des champs. Les filtres **doivent** être précédés d’une séquence d’échappement HTML. Des virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les champs `created`, `updated`, `state` et `id` sont pris en charge. Les opérateurs `>` (supérieur à), `<` (inférieur à), `>=` (supérieur ou égal à), `<=` (inférieur ou égal à), `==` (égal à), `!=` (différent de) et `~` (contient). Par exemple, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` renvoie toutes les requêtes avec l’identifiant spécifié. |
 | `excludeSoftDeleted` | Indique s’il faut inclure une requête ayant été supprimée de manière réversible. Par exemple, `excludeSoftDeleted=false` inclut **des** requêtes supprimées de manière réversible. (*booléenne, valeur par défaut : true*) |
 | `excludeHidden` | Indique si les requêtes formulées par l’utilisateur doivent être affichées. Si cette valeur est définie sur false, cela **inclut** les requêtes qui ne sont pas formulées par l’utilisateur telles que les définitions CURSOR, FETCH ou les requêtes de métadonnées. (*booléenne, valeur par défaut : true*) |
-| `isPrevLink` | Le `isPrevLink` Le paramètre de requête est utilisé pour la pagination. Les résultats de l’appel API sont triés à l’aide de leur `created` l’horodatage et la variable `orderby` . Lors de la navigation dans les pages de résultats, `isPrevLink` est défini sur true lorsque vous effectuez une pagination à l’envers. L’ordre de la requête est alors inversé. Voir les liens &quot;suivant&quot; et &quot;prev&quot; comme exemples. |
+| `isPrevLink` | La variable `isPrevLink` Le paramètre de requête est utilisé pour la pagination. Les résultats de l’appel API sont triés à l’aide de leur `created` l’horodatage et la variable `orderby` . Lors de la navigation dans les pages de résultats, `isPrevLink` est défini sur true lorsque vous effectuez une pagination à l’envers. L’ordre de la requête est alors inversé. Voir les liens &quot;suivant&quot; et &quot;prev&quot; comme exemples. |
 
 **Requête**
 
@@ -307,7 +307,7 @@ PATCH /queries/{QUERY_ID}
 
 | Paramètre | Description |
 | -------- | ----------- |
-| `{QUERY_ID}` | Le `id` de la requête sur laquelle vous souhaitez effectuer l’opération. |
+| `{QUERY_ID}` | La variable `id` de la requête sur laquelle vous souhaitez effectuer l’opération. |
 
 
 **Requête**

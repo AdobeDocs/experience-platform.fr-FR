@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison de l’API des exécutions de requête planifiées
 description: Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer pour exécuter des requêtes planifiées avec l’API Query Service.
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: e9639cb90a561adc59388ac77984edaf90f4bfdd
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 90%
+source-wordcount: '774'
+ht-degree: 78%
 
 ---
 
@@ -41,7 +41,7 @@ Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour
 | --------- | ----------- |
 | `orderby` | Spécifie le champ de référence pour le tri des résultats. Les champs `created` et `updated` sont pris en charge. Par exemple, `orderby=created` triera les résultats par ordre croissant de création. L’ajout d’un `-` devant created (`orderby=-created`) triera les éléments par ordre décroissant de création. |
 | `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. (*Valeur par défaut : 20*) |
-| `start` | Décale la liste de réponses à l’aide d’une numérotation à partir de zéro. Par exemple, `start=2` renvoie une liste commençant par la troisième requête répertoriée. (*Valeur par défaut : 0*) |
+| `start` | Spécifiez un horodatage au format ISO pour classer les résultats. Si aucune date de début n’est spécifiée, l’appel API renvoie d’abord les exécutions les plus anciennes, puis continue à répertorier les résultats plus récents.<br> Les horodatages ISO permettent différents niveaux de granularité dans la date et l’heure. Les horodatages ISO de base prennent le format suivant : `2020-09-07` le 7 septembre 2020. Un exemple plus complexe serait écrit comme suit : `2022-11-05T08:15:30-05:00` et correspond au 5 novembre 2022, 8:15:30 h, heure normale de l&#39;Est des États-Unis. Un fuseau horaire peut être fourni avec un décalage UTC et est signalé par le suffixe &quot;Z&quot; (`2020-01-01T01:01:01Z`). Si aucun fuseau horaire n’est fourni, la valeur par défaut est zéro. |
 | `property` | Filtrez les résultats en fonction des champs. Les filtres **doivent** être précédés d’une séquence d’échappement HTML. Des virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les champs `created`, `state` et `externalTrigger` sont pris en charge. Les opérateurs `>` (supérieur à), `<` (inférieur à), `==` (égal à) et `!=` (différent de) sont pris en charge. Par exemple, `externalTrigger==true,state==SUCCESS,created>2019-04-20T13:37:00Z` renverra toutes les exécutions créées manuellement, réussies et créées après le 20 avril 2019. |
 
 **Requête**

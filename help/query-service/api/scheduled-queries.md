@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Point de terminaison des planifications
 description: Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer pour les requêtes planifiées avec l’API Query Service.
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
 workflow-type: tm+mt
-source-wordcount: '1132'
-ht-degree: 70%
+source-wordcount: '1212'
+ht-degree: 64%
 
 ---
 
@@ -40,7 +40,7 @@ Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour
 | --------- | ----------- |
 | `orderby` | Spécifie le champ de référence pour le tri des résultats. Les champs `created` et `updated` sont pris en charge. Par exemple, `orderby=created` triera les résultats par ordre croissant de création. L’ajout d’un `-` devant created (`orderby=-created`) triera les éléments par ordre décroissant de création. |
 | `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. (*Valeur par défaut : 20*) |
-| `start` | Décale la liste de réponses à l’aide d’une numérotation à partir de zéro. Par exemple, `start=2` renvoie une liste commençant par la troisième requête répertoriée. (*Valeur par défaut : 0*) |
+| `start` | Spécifiez un horodatage au format ISO pour classer les résultats. Si aucune date de début n’est spécifiée, l’appel API renvoie d’abord la requête planifiée créée la plus ancienne, puis continue à répertorier les résultats plus récents.<br> Les horodatages ISO permettent différents niveaux de granularité dans la date et l’heure. Les horodatages ISO de base prennent le format suivant : `2020-09-07` le 7 septembre 2020. Un exemple plus complexe serait écrit comme suit : `2022-11-05T08:15:30-05:00` et correspond au 5 novembre 2022, 8:15:30 h, heure normale de l&#39;Est des États-Unis. Un fuseau horaire peut être fourni avec un décalage UTC et est signalé par le suffixe &quot;Z&quot; (`2020-01-01T01:01:01Z`). Si aucun fuseau horaire n’est fourni, la valeur par défaut est zéro. |
 | `property` | Filtrez les résultats en fonction des champs. Les filtres **doivent** être précédés d’une séquence d’échappement HTML. Des virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les champs `created`, `templateId` et `userId` sont pris en charge. Les opérateurs `>` (supérieur à), `<` (inférieur à) et `==` (égal à) sont pris en charge. Par exemple, `userId==6ebd9c2d-494d-425a-aa91-24033f3abeec` renvoie toutes les requêtes planifiées pour lesquelles l’identifiant utilisateur est tel qu’indiqué. |
 
 **Requête**
@@ -160,7 +160,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.dbName` | Nom de la base de données pour laquelle vous créez une requête planifiée. |
 | `query.sql` | La requête SQL que vous souhaitez créer. |
 | `query.name` | Le nom de la requête planifiée. |
-| `schedule.schedule` | Le planning cron de la requête. Pour plus d’informations sur les plannings cron, consultez la documentation sur le [format d’expression cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Dans cet exemple, « 30 * * * * » signifie que la requête s’exécute toutes les heures à la 30e minute.<br><br>Vous pouvez également utiliser les expressions abrégées suivantes :<ul><li>`@once`: La requête ne s’exécute qu’une seule fois.</li><li>`@hourly`: La requête s’exécute toutes les heures au début de l’heure. Cela équivaut à l’expression cron. `0 * * * *`.</li><li>`@daily`: La requête s’exécute une fois par jour à minuit. Cela équivaut à l’expression cron. `0 0 * * *`.</li><li>`@weekly`: La requête s’exécute une fois par semaine, le dimanche, à minuit. Cela équivaut à l’expression cron. `0 0 * * 0`.</li><li>`@monthly`: La requête s&#39;exécute une fois par mois, le premier jour du mois, à minuit. Cela équivaut à l’expression cron. `0 0 1 * *`.</li><li>`@yearly`: La requête s’exécute une fois par an, le 1er janvier, à minuit. Cela équivaut à l’expression cron. `1 0 0 1 1 *`. |
+| `schedule.schedule` | Le planning cron de la requête. Pour plus d’informations sur les plannings cron, consultez la documentation sur le [format d’expression cron](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html). Dans cet exemple, « 30 * * * * » signifie que la requête s’exécute toutes les heures à la 30e minute.<br><br>Vous pouvez également utiliser les expressions abrégées suivantes :<ul><li>`@once`: la requête ne s’exécute qu’une seule fois.</li><li>`@hourly`: la requête s’exécute toutes les heures au début de l’heure. Cela équivaut à l’expression cron. `0 * * * *`.</li><li>`@daily`: la requête s’exécute une fois par jour à minuit. Cela équivaut à l’expression cron. `0 0 * * *`.</li><li>`@weekly`: la requête s’exécute une fois par semaine, le dimanche, à minuit. Cela équivaut à l’expression cron. `0 0 * * 0`.</li><li>`@monthly`: la requête s’exécute une fois par mois, le premier jour du mois, à minuit. Cela équivaut à l’expression cron. `0 0 1 * *`.</li><li>`@yearly`: la requête s’exécute une fois par an, le 1er janvier, à minuit. Cela équivaut à l’expression cron. `1 0 0 1 1 *`. |
 | `schedule.startDate` | La date de début de votre requête planifiée, écrite en tant qu’horodatage en UTC. |
 
 **Réponse**
@@ -311,7 +311,7 @@ La requête PATCH prend en charge deux chemins d’accès différents : `/state
 
 ### Mise à jour de l’état de la requête planifiée
 
-Vous pouvez mettre à jour l’état de la requête planifiée sélectionnée en définissant la variable `path` de `/state` et le `value` comme `enable` ou `disable`.
+Vous pouvez mettre à jour l’état de la requête planifiée sélectionnée en définissant la variable `path` de `/state` et la variable `value` comme `enable` ou `disable`.
 
 **Format d’API**
 
@@ -321,7 +321,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Le `id` valeur de la requête planifiée que vous souhaitez PATCH. |
+| `{SCHEDULE_ID}` | La variable `id` valeur de la requête planifiée que vous souhaitez PATCH. |
 
 
 **Requête**
@@ -374,7 +374,7 @@ PATCH /schedules/{SCHEDULE_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Le `id` valeur de la requête planifiée que vous souhaitez PATCH. |
+| `{SCHEDULE_ID}` | La variable `id` valeur de la requête planifiée que vous souhaitez PATCH. |
 
 **Requête**
 
@@ -430,7 +430,7 @@ DELETE /schedules/{SCHEDULE_ID}
 
 | Propriété | Description |
 | -------- | ----------- |
-| `{SCHEDULE_ID}` | Le `id` valeur de la requête planifiée que vous souhaitez DELETE. |
+| `{SCHEDULE_ID}` | La variable `id` valeur de la requête planifiée que vous souhaitez DELETE. |
 
 **Requête**
 
