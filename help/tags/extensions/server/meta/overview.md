@@ -2,9 +2,9 @@
 title: Présentation de l’extension de l’API Meta Conversions
 description: Découvrez l’extension de l’API Meta Conversions pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: d55398f328f3f85ce6b32a2553e7a93df3584f02
 workflow-type: tm+mt
-source-wordcount: '2370'
+source-wordcount: '2624'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Pour installer le [!DNL Meta Conversions API] , accédez à l’interface utilis
 
 Une fois que vous avez sélectionné ou créé la propriété souhaitée, sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, puis sélectionnez l’option **[!UICONTROL Catalogue]** . Recherchez le [!UICONTROL API des conversions de métadonnées] carte, puis sélectionnez **[!UICONTROL Installer]**.
 
-![La variable [!UICONTROL Installer] sélectionné pour l’option [!UICONTROL API des conversions de métadonnées] dans l’interface utilisateur de la collecte de données.](../../../images/extensions/server/meta/install.png)
+![La variable [!UICONTROL Installer] sélectionnée pour l’option [!UICONTROL API des conversions de métadonnées] dans l’interface utilisateur de la collecte de données.](../../../images/extensions/server/meta/install.png)
 
 Dans la vue de configuration qui s’affiche, vous devez fournir la variable [!DNL Pixel] ID que vous avez copié précédemment pour lier l’extension à votre compte. Vous pouvez coller l’identifiant directement dans l’entrée ou vous pouvez utiliser un élément de données à la place.
 
@@ -46,6 +46,30 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**
 ![La variable [!DNL Pixel] ID fourni en tant qu’élément de données dans la vue de configuration de l’extension.](../../../images/extensions/server/meta/configure.png)
 
 L’extension est installée et vous pouvez désormais utiliser ses fonctionnalités dans vos règles de transfert d’événement.
+
+## Intégration avec Meta Business Extension (MBE) {#mbe}
+
+L’amélioration de l’intégration à Meta Business Extensions (MBE) vous permet de vous authentifier rapidement dans votre compte Meta Business. Cela renseigne ensuite automatiquement la variable [!UICONTROL ID de pixel] et l’API de métadonnées de conversion [!UICONTROL Jeton d’accès], ce qui facilite l’installation et la configuration de l’API de métadonnées de conversion.
+
+Une invite de dialogue pour s’authentifier dans MBE s’affiche lors de l’installation de la variable [!UICONTROL API des conversions de métadonnées] extension .
+
+![La variable [!UICONTROL Extension de l’API Meta Conversions] mise en surbrillance de la page d’installation [!UICONTROL Connexion aux métadonnées].](../../../images/extensions/server/meta/mbe-extension-install.png)
+
+Une invite de dialogue permettant de s’authentifier dans MBE s’affiche également dans l’interface utilisateur du processus de démarrage rapide dans le transfert d’événement.
+
+![Mise en surbrillance de l’interface utilisateur de processus de démarrage rapide [!UICONTROL Connexion aux métadonnées].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
+
+## Intégration à Event Quality Match Score (EMQ) {#emq}
+
+L’intégration à Event Quality Match Score (EMQ) vous permet d’afficher facilement l’efficacité de votre mise en oeuvre en affichant les scores EMQ. Cette intégration minimise le changement de contexte et vous aide à améliorer le succès de vos mises en oeuvre d’API de métadonnées de conversion. Ces scores d’événement apparaissent dans la variable [!UICONTROL Extension de l’API Meta Conversions] écran de configuration.
+
+![La variable [!UICONTROL Extension de l’API Meta Conversions] mise en surbrillance de page de configuration [!UICONTROL Afficher le score EMQ].](../../../images/extensions/server/meta/emq-score.png)
+
+## Intégration à LiveRamp (Alpha) {#alpha}
+
+L’intégration à LiveRamp ajoute de nouveaux champs à la configuration des règles de l’API de métadonnées, ce qui facilite l’intégration des clients à l’API de conversions LiveRamp. Cette intégration évite d’avoir à partager les informations d’identification personnelles directement avec votre partenaire ou votre méta. En raison de la robustesse du graphique d’identités de LiveRamp, l’inclusion de [!UICONTROL Identifiant du partenaire (alpha)] peut améliorer la qualité de l’intégration en augmentant le taux de correspondance de l’utilisateur.
+
+![Le transfert des métadonnées [!UICONTROL Règle] mise en surbrillance de page de configuration [!UICONTROL Nom du partenaire (alpha)] et [!UICONTROL Identifiant du partenaire (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## Configurer une règle de transfert d’événement {#rule}
 
