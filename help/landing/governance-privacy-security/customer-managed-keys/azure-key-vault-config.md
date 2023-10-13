@@ -1,10 +1,11 @@
 ---
 title: Configuration d’Azure Key Vault
 description: Découvrez comment créer un compte d’entreprise avec Azure ou utiliser un compte d’entreprise existant et créer le Key Vault.
-source-git-commit: a0df05cde19e97d4abdad7abd19eafea8efe1096
+exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
+source-git-commit: 4ec87482c5a38404217ecd910b6a27ee2d0e00eb
 workflow-type: tm+mt
-source-wordcount: '506'
-ht-degree: 40%
+source-wordcount: '565'
+ht-degree: 36%
 
 ---
 
@@ -41,6 +42,12 @@ La page **[!DNL Key vaults]** s’affiche après avoir sélectionné le service.
 Une fois que vous êtes parvenu au **[!DNL Review + create]** vous pouvez consulter les détails de KeyVault pendant la validation. Une fois la validation acceptée, sélectionnez **[!DNL Create]** pour terminer le processus.
 
 ![La Microsoft Azure Key valide la révision et la création d’une page avec l’option Créer mise en surbrillance.](../../images/governance-privacy-security/customer-managed-keys/finish-creation.png)
+
+## Configurer l’accès {#configure-access}
+
+Ensuite, activez le contrôle d’accès basé sur les rôles Azure pour votre coffre-fort de clé. Sélectionner **[!DNL Access configuration]** dans le [!DNL Settings] dans la barre de navigation de gauche, puis sélectionnez **[!DNL Azure role-based access control]** pour activer le paramètre. Cette étape est essentielle, car l’application CMK doit être associée ultérieurement à un rôle Azure. L’attribution d’un rôle est présentée dans la section [API](./api-set-up.md#assign-to-role) et [Interface utilisateur](./ui-set-up.md#assign-to-role) workflows.
+
+![La variable [!DNL Microsoft Azure] tableau de bord avec [!DNL Access configuration] et [!DNL Azure role-based access control] surlignée.](../../images/governance-privacy-security/customer-managed-keys/access-configuration.png)
 
 ## Configurer les options de mise en réseau {#configure-network-options}
 
