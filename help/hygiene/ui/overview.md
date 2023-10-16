@@ -5,7 +5,7 @@ exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
 source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 16%
+ht-degree: 51%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 16%
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_consumer"
->title="État des requêtes du cycle de vie des données"
->abstract="Ce widget affiche le nombre total de tâches de suppression d’enregistrements de cycle de vie des données créées, ayant échoué et terminées. Pour plus d’informations sur vos processus de cycle de vie des données, sélectionnez **Cycle de vie des données** dans le volet de navigation de gauche."
+>title="Statut des demandes de cycle de vie des données"
+>abstract="Ce widget affiche le nombre total de tâches de suppression d’enregistrements de cycle de vie des données créées, terminées et ayant échoué. Pour plus d’informations sur vos processus de cycle de vie des données, sélectionnez **Cycle de vie des données** dans le volet de navigation de gauche."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_privacyconsole_recents"
->title="Commandes de travail récentes du cycle de vie des données"
->abstract="Ce widget présente les cinq derniers ordres de travail du cycle de vie des données créés ou mis à jour, selon l’option que vous sélectionnez en haut à droite. Pour plus d’informations sur vos processus de cycle de vie des données, sélectionnez **Cycle de vie des données** dans le volet de navigation de gauche."
+>title="Ordres de travail récents sur le cycle de vie des données"
+>abstract="Ce widget affiche les cinq derniers ordres de travail de cycle de vie des données créés ou mis à jour, selon l’option sélectionnée en haut à droite. Pour plus d’informations sur vos processus de cycle de vie des données, sélectionnez **Cycle de vie des données** dans le volet de navigation de gauche."
 
 La variable **[!UICONTROL Cycle de vie des données]** workspace de l’interface utilisateur de Adobe Experience Platform vous permet de créer et de surveiller diverses tâches de gestion du cycle de vie des données, notamment la suppression d’enregistrements et la planification de l’expiration des jeux de données.
 

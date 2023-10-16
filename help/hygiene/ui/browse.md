@@ -5,7 +5,7 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '841'
-ht-degree: 67%
+ht-degree: 79%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 67%
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"
 >title="Identifiants des ordres de travail"
->abstract="Lorsqu’une demande de cycle de vie des données est envoyée au système, un ordre de travail est créé pour exécuter la tâche demandée. En d’autres termes, un ordre de travail représente un processus de cycle de vie des données spécifique, qui inclut son état actuel et d’autres détails connexes. Chaque ordre de travail est automatiquement doté d’un identifiant unique lors de sa création."
+>abstract="Lorsqu’une demande de cycle de vie des données est envoyée au système, un ordre de travail est créé pour exécuter la tâche demandée. En d’autres termes, un ordre de travail représente un processus spécifique de cycle de vie des données comprenant le statut actuel et d’autres détails connexes. Chaque ordre de travail est automatiquement doté d’un identifiant unique lors de sa création."
 >text="See the data lifecycle UI guide to learn more."
 
 Lorsqu’une demande de cycle de vie des données est envoyée au système, un ordre de travail est créé pour exécuter la tâche demandée. Un ordre de travail représente un processus de cycle de vie des données spécifique, tel qu’une expiration de jeu de données planifiée, qui inclut son état actuel et d’autres détails connexes.
@@ -65,17 +65,17 @@ Les filtres suivants s’appliquent aux requêtes d’expiration de jeu de donn�
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
 >title="Statut par service"
->abstract="Les demandes relatives au cycle de vie des données sont traitées indépendamment par plusieurs services Experience Platform. Cette section décrit le statut actuel du traitement de la requête pour chaque service respectif. Pour en savoir plus, consultez le guide de l’interface utilisateur du cycle de vie des données."
+>abstract="Les demandes liées au cycle de vie des données sont traitées indépendamment par plusieurs services d’Experience Platform. Cette section décrit le statut actuel du traitement de la requête pour chaque service respectif. Pour en savoir plus, consultez le guide de l’interface utilisateur sur le cycle de vie des données."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Nombre d’identités"
->abstract="Le nombre d&#39;identités pour lesquelles une demande de mise à jour ou de suppression des enregistrements a été formulée dans le cadre de cet ordre de travail. Les identités incluses dans le nombre n’existent pas nécessairement dans les jeux de données affectés. Pour en savoir plus, consultez le guide de l’interface utilisateur du cycle de vie des données."
+>abstract="Le nombre d&#39;identités pour lesquelles une demande de mise à jour ou de suppression des enregistrements a été formulée dans le cadre de cet ordre de travail. Les identités incluses dans le nombre n’existent pas nécessairement dans les jeux de données affectés. Pour en savoir plus, consultez le guide de l’interface utilisateur sur le cycle de vie des données."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Réponse de suppression d&#39;enregistrement"
->abstract="Lorsqu&#39;un processus de suppression d&#39;enregistrement reçoit une réponse du système, ces messages s&#39;affichent sous la section **[!UICONTROL Résultat]**. Si un problème se produit alors qu’un ordre de travail est en cours de traitement, tous les messages d’erreur pertinents s’affichent dans cette section pour vous aider à résoudre le problème. Pour en savoir plus, consultez le guide de l’interface utilisateur du cycle de vie des données."
+>abstract="Lorsqu&#39;un processus de suppression d&#39;enregistrement reçoit une réponse du système, ces messages s&#39;affichent sous la section **[!UICONTROL Résultat]**. Si un problème se produit alors qu’un ordre de travail est en cours de traitement, tous les messages d’erreur pertinents s’affichent dans cette section pour vous aider à résoudre le problème. Pour en savoir plus, consultez le guide de l’interface utilisateur sur le cycle de vie des données."
 
 Sélectionnez l’identifiant d’un ordre de travail répertorié pour en afficher les détails.
 
