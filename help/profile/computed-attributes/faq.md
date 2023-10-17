@@ -1,13 +1,13 @@
 ---
 title: Questions fréquentes sur les attributs calculés
 description: Découvrez les réponses aux questions fréquentes sur l’utilisation des attributs calculés.
-source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
+exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
+source-git-commit: 48c728c183d6ad28cd291543a79902b16a247a5a
 workflow-type: tm+mt
-source-wordcount: '870'
-ht-degree: 2%
+source-wordcount: '1092'
+ht-degree: 1%
 
 ---
-
 
 # Questions fréquentes
 
@@ -25,9 +25,9 @@ Les attributs calculés prennent en compte les jeux de données d’événement 
 
 Tous les champs XDM de votre schéma d’union d’événement d’expérience peuvent être utilisés pour créer des attributs calculés.
 
-## Que représente la &quot;dernière heure d’évaluation&quot; ?
+## Que représentent &quot;dernière évaluation&quot; et &quot;dernier état d’évaluation&quot; ?
 
-La dernière heure d’évaluation signifie que les événements **before** à cet horodatage ont été pris en compte dans la dernière actualisation réussie de l’attribut calculé.
+La dernière évaluation fait référence à l’horodatage jusqu’auquel les événements sont considérés dans la dernière exécution réussie. Le statut Dernière évaluation fait référence à la réussite ou non de la dernière évaluation.
 
 ## Puis-je choisir la fréquence d’actualisation ? Comment est-ce décidé ?
 
@@ -65,9 +65,25 @@ Les attributs calculés alimentent l’enrichissement de profil en agrégeant vo
 
 ## À quelle fréquence les attributs calculés sont-ils évalués ? Est-ce lié au planning d’évaluation de l’audience ?
 
-Les attributs calculés sont évalués par lots indépendamment du planning de segmentation. Cela signifie que, quel que soit le type de segmentation (segmentation par lots ou segmentation par flux), l’attribut calculé sera évalué selon son propre planning (horaire, quotidien, hebdomadaire ou mensuel).
+Les attributs calculés sont évalués dans une **batch** fréquence qui est **indépendant** à la planification de votre audience, de votre destination et de votre évaluation de parcours. Cela signifie que, quel que soit le type de segmentation (segmentation par lots ou segmentation par flux), l’attribut calculé sera évalué selon son propre planning (horaire, quotidien, hebdomadaire ou mensuel).
 
-Lorsque l’audience est évaluée, elle utilise la variable **dernier** valeur de l’attribut calculé disponible.
+La première évaluation de votre attribut calculé se produit dans les 24 heures suivant son **création**. Les évaluations par lots suivantes se produisent toutes les heures, tous les jours, toutes les semaines ou tous les mois, selon la période de recherche arrière définie.
+
+Par exemple, si une première évaluation a lieu à 12h00 UTC le 9 octobre, les évaluations suivantes se produisent aux moments suivants :
+
+- Prochaine actualisation quotidienne : 12 heures UTC le 10 octobre
+- Prochaine actualisation hebdomadaire : 12 heures UTC le 15 octobre
+- Prochaine actualisation mensuelle : 12h00 UTC le 1er novembre
+
+>[!IMPORTANT]
+>
+>Cela n’est possible que si l’actualisation rapide est **not** activée. Pour savoir comment la période de recherche en amont change lorsque l’actualisation rapide est activée, veuillez lire la section [section actualisation rapide](./overview.md#fast-refresh).
+
+Les deux **hebdomadaire** et **mensuel** les actualisations ont lieu au début de la **semaine calendaire** (le dimanche de la nouvelle semaine) ou le début de la **mois calendaire** (le premier du nouveau mois), par opposition à exactement une semaine ou un mois après la première date d’évaluation.
+
+>[!NOTE]
+>
+>La valeur d’attribut calculée est **not** actualisée immédiatement dans le profil après chaque exécution d’évaluation. Afin de vous assurer que la valeur mise à jour se trouve dans vos profils, vous devez envisager un tampon de quelques heures entre le temps d’évaluation et l’utilisation calculée des attributs. Le planning d’actualisation des attributs calculé est le suivant : **déterminé par le système** et **cannot** être modifié. Pour plus d’informations, veuillez contacter l’assistance clientèle d’Adobe.
 
 ## Comment les attributs calculés interagissent-ils avec les audiences évaluées à l’aide de la segmentation par flux ?
 

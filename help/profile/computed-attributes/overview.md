@@ -1,13 +1,13 @@
 ---
 title: Présentation des attributs calculés
 description: Les attributs calculés sont des fonctions permettant d’agréger des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation.
-source-git-commit: 7ed473750b673eefd84b8d727043ad6ea35c3a8e
+exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
+source-git-commit: 03f1dfab768e98ef4959d605cc3ead25bb5eb238
 workflow-type: tm+mt
-source-wordcount: '1059'
-ht-degree: 10%
+source-wordcount: '1140'
+ht-degree: 12%
 
 ---
-
 
 # Présentation des attributs calculés
 
@@ -56,7 +56,7 @@ Les attributs calculés vous permettent de définir des agrégats d’événemen
 
 ### Périodes de recherche en amont
 
-Les attributs calculés sont calculés par lots, ce qui vous permet de garder vos agrégats à jour et d’utiliser les derniers événements. Pour prendre en charge ces scénarios en temps quasi réel, la fréquence d’actualisation varie en fonction de la période de recherche en amont des événements.
+Les attributs calculés sont calculés par lots, ce qui vous permet de garder vos agrégats à jour et d’utiliser les derniers événements. Afin de prendre en charge ces scénarios avec un délai minimal, la fréquence d’actualisation varie en fonction de la période de recherche en amont des événements.
 
 La période de recherche arrière fait référence à la durée passée en revue lors de l’agrégation des événements d’expérience pour l’attribut calculé. Cette période peut être définie en heures, jours, semaines ou mois.
 
@@ -73,11 +73,13 @@ Par exemple, si votre attribut calculé a une période de recherche arrière des
 
 >[!NOTE]
 >
->Les semaines et les mois sont considérés comme **semaines calendaires** et **mois calendaires** lorsqu’elle est utilisée dans les recherches en amont d’événements. La semaine calendaire commence au moment de la **Dimanche** et se termine sur le **samedi** de la semaine.
+>Les semaines et les mois sont considérés comme **semaines calendaires** et **mois calendaires** lorsqu’elle est utilisée dans les recherches en amont d’événements. La semaine calendaire commence au moment de la **Dimanche** et se termine sur le **samedi** de la semaine. Le mois calendaire commence au **first** du mois et se termine le **dernier jour** du mois.
+
+La période de recherche en amont pour les attributs calculés est une **roller** période de recherche arrière. Par exemple, si une première évaluation a lieu le 15 octobre à 12h00 UTC, une période de recherche arrière de deux semaines récupère tous les événements du 1er au 15 octobre, les actualise dans une semaine à partir du 22 octobre, puis récupère tous les événements du 8 au 22 octobre.
 
 **Actualisation rapide** {#fast-refresh}
 
-Une actualisation rapide vous permet de garder vos attributs à jour. L’activation de cette option vous permet d’actualiser quotidiennement vos attributs calculés, même pour des périodes de recherche en amont plus longues, ce qui vous permet de réagir rapidement aux activités de l’utilisateur.
+Une actualisation rapide vous permet de garder vos attributs à jour. L’activation de cette option vous permet d’actualiser quotidiennement vos attributs calculés, même pour des périodes de recherche en amont plus longues, ce qui vous permet de réagir rapidement aux activités de l’utilisateur ou de l’utilisatrice.
 
 >[!NOTE]
 >
