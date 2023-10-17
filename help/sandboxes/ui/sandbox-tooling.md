@@ -1,13 +1,13 @@
 ---
 title: Outils Sandbox
 description: Exportez et importez en toute transparence des configurations Sandbox entre des environnements de test.
-source-git-commit: 900cb35f6cb758f145904666c709c60dc760eff2
+exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
+source-git-commit: 0aaba1d1ae47908ea92e402b284438accb4b4731
 workflow-type: tm+mt
-source-wordcount: '1619'
+source-wordcount: '1821'
 ht-degree: 9%
 
 ---
-
 
 # [!BADGE Beta] Outils Sandbox
 
@@ -21,38 +21,55 @@ ht-degree: 9%
 
 Améliorez la précision de la configuration dans les environnements de test et exportez et importez en toute transparence les configurations des environnements de test entre les environnements de test grâce à la fonctionnalité d’outil d’environnement de test. Utilisez l’outil d’environnement de test pour réduire le temps de valorisation du processus de mise en oeuvre et déplacer les configurations réussies entre les environnements de test.
 
-Vous pouvez utiliser la fonction d’outils des environnements de test pour sélectionner différents objets et les exporter dans un package. Un package peut se composer d’un seul objet, de plusieurs objets ou d’un environnement de test entier. Tous les objets inclus dans un package doivent provenir du même environnement de test.
+Vous pouvez utiliser la fonction d’outils des environnements de test pour sélectionner différents objets et les exporter dans un package. Un package peut se composer d’un ou de plusieurs objets. <!--or an entire sandbox.-->Tous les objets inclus dans un package doivent provenir du même environnement de test.
 
 ## Objets pris en charge pour les outils Sandbox {#supported-objects}
 
-Le tableau ci-dessous répertorie les objets actuellement pris en charge pour les outils Sandbox :
+La fonctionnalité d’outil d’environnement de test vous permet d’exporter des [!DNL Adobe Real-Time Customer Data Platform] et [!DNL Adobe Journey Optimizer] dans un package.
 
-| Plateforme | Objet |
-| --- | --- |
-| [!DNL Adobe Journey Optimizer] | Parcours |
-| Plateforme de données clients | Sources |
-| Plateforme de données clients | Segments |
-| Plateforme de données clients | Identités |
-| Plateforme de données clients | Politiques |
-| Plateforme de données clients | Schémas |
-| Plateforme de données clients | Jeux de données |
+### Objets Real-time Customer Data Platform {#real-time-cdp-objects}
 
-Les objets suivants sont importés, mais leur état est en version préliminaire ou désactivé :
+Le tableau ci-dessous répertorie [!DNL Adobe Real-Time Customer Data Platform] objets actuellement pris en charge pour les outils Sandbox :
+
+| Plateforme | Objet | Détails |
+| --- | --- | --- |
+| Plateforme de données clients | Sources | Les informations d’identification du compte source ne sont pas répliquées dans l’environnement de test cible pour des raisons de sécurité et devront être mises à jour manuellement. Par défaut, le flux de données source est copié dans un état de brouillon. |
+| Plateforme de données clients | Audiences | Seule la variable **[!UICONTROL Public du client]** type **[!UICONTROL Service de segmentation]** est prise en charge. Les étiquettes existantes pour le consentement et la gouvernance seront copiées dans la même tâche d’importation. |
+| Plateforme de données clients | Identités | Le système dédupliquera automatiquement les espaces de noms d’identité standard Adobe lors de la création dans l’environnement de test cible. Les audiences ne peuvent être copiées que lorsque tous les attributs des règles d’audience sont activés dans le schéma d’union. Les schémas nécessaires doivent d’abord être déplacés et activés pour le profil unifié. |
+| Plateforme de données clients | Schémas | Les étiquettes existantes pour le consentement et la gouvernance seront copiées dans la même tâche d’importation. L’état du profil unifié du schéma sera copié tel quel depuis l’environnement de test source. Si le schéma est activé pour le profil unifié dans l’environnement de test source, tous les attributs sont déplacés vers le schéma d’union. Les cas de périphérie des relations de schéma ne sont pas inclus dans le package. |
+| Plateforme de données clients | Jeux de données | Les jeux de données sont copiés avec le paramètre de profil unifié désactivé par défaut. |
+
+Les objets suivants sont importés, mais leur état est brouillon ou désactivé :
 
 | Fonctionnalité | Objet | Statut |
 | --- | --- | --- |
 | Statut de l’importation | Flux de données source | Brouillon |
 | Statut de l’importation | Parcours | Brouillon |
-| Profil unifié | Schéma | Désactivé |
-| Profil unifié | Jeu de données | Désactivé |
-| Politiques | Stratégies de consentement | Désactivé |
+| Profil unifié | Jeu de données | Profil unifié désactivé |
 | Politiques | Stratégies de gouvernance des données | Désactivé |
 
-Les cas de périphérie répertoriés ci-dessous ne sont pas inclus dans le package :
+### Objets Adobe Journey Optimizer {#abobe-journey-optimizer-objects}
 
-* Relations de schéma
+Le tableau ci-dessous répertorie [!DNL Adobe Journey Optimizer] les objets actuellement pris en charge pour l’outil et les limitations des environnements de test :
+
+| Plateforme | Objet | Détails |
+| --- | --- | --- |
+| [!DNL Adobe Journey Optimizer] | Audience | Une audience peut être copiée en tant qu’objet dépendant de l’objet parcours. Vous pouvez sélectionner Créer une audience ou réutiliser une audience existante dans l’environnement de test cible. |
+| [!DNL Adobe Journey Optimizer] | Schéma | Les schémas utilisés dans le parcours peuvent être copiés en tant qu’objets dépendants. Vous pouvez sélectionner Créer un nouveau schéma ou en réutiliser un existant dans l’environnement de test cible. |
+| [!DNL Adobe Journey Optimizer] | Message | Les messages utilisés dans le parcours peuvent être copiés en tant qu’objets dépendants. Les activités d’action de canal utilisées dans les champs de parcours, qui sont utilisées pour la personnalisation dans le message, ne sont pas vérifiées pour être complètes. Les blocs de contenu ne sont pas copiés. |
+| [!DNL Adobe Journey Optimizer] | Parcours : détails de la zone de travail | La représentation du parcours sur la zone de travail inclut les objets du parcours, tels que les conditions, les actions, les événements, les audiences de lecture, etc., qui sont copiés. L’activité de saut est exclue de la copie. |
+| [!DNL Adobe Journey Optimizer] | Événement | Les événements et les détails de l’événement utilisés dans le parcours sont copiés. Il crée toujours une nouvelle version dans l’environnement de test cible. |
+| [!DNL Adobe Journey Optimizer] | Action | Les actions et les détails des actions utilisées dans le parcours sont copiés. Il crée toujours une nouvelle version dans l’environnement de test cible. |
+
+Les surfaces (par exemple, les paramètres prédéfinis) ne sont pas copiées. Le système sélectionne automatiquement la correspondance la plus proche possible sur l’environnement de test de destination en fonction du type de message et du nom de la surface. Si aucune surface n’est trouvée sur l’environnement de test cible, la copie de surface échoue, ce qui entraîne l’échec de la copie du message, car un message nécessite qu’une surface soit disponible pour la configuration. Dans ce cas, au moins une surface doit être créée pour le bon canal du message pour que la copie fonctionne.
+
+Les types d’identité personnalisés ne sont pas pris en charge en tant qu’objets dépendants lors de l’exportation d’un parcours.
 
 ## Exporter des objets dans un package {#export-objects}
+
+>[!NOTE]
+>
+>Toutes les actions d’exportation sont enregistrées dans les journaux d’audit.
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_exit_package"
@@ -120,6 +137,10 @@ Vous revenez alors à la variable **[!UICONTROL Packages]** dans le [!UICONTROL 
 
 ## Importation d’un package dans un environnement de test cible {#import-package-to-target-sandbox}
 
+>[!NOTE]
+>
+>Toutes les actions d’importation sont enregistrées dans les journaux d’audit.
+
 Pour importer le package dans un environnement de test cible, accédez aux environnements de test **[!UICONTROL Parcourir]** et sélectionnez l’option plus (+) en regard du nom de l’environnement de test.
 
 ![Environnements de test **[!UICONTROL Parcourir]** surligner la sélection du package d&#39;import.](../images/ui/sandbox-tooling/browse-sandboxes.png)
@@ -148,41 +169,47 @@ Vous revenez alors à la variable [!UICONTROL Objet de package et dépendances] 
 
 ![La variable [!UICONTROL Objet de package et dépendances] affiche une liste des ressources incluses dans le module, en surbrillance. [!UICONTROL Terminer].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
-## Exportation et importation d’un environnement de test complet
-
-### Exportation d’un environnement de test entier {#export-entire-sandbox}
-
-Pour exporter un environnement de test complet, accédez à la [!UICONTROL Environnements de test] **[!UICONTROL Packages]** et sélectionnez **[!UICONTROL Créer un package]**.
-
-![La variable [!UICONTROL Environnements de test] **[!UICONTROL Packages]** mise en surbrillance des onglets [!UICONTROL Créer un package].](../images/ui/sandbox-tooling/create-sandbox-package.png)
-
-Sélectionner **[!UICONTROL Environnement de test complet]** pour le type de package dans la variable [!UICONTROL Créer un package] boîte de dialogue. Fournissez une [!UICONTROL Nom du module] pour votre module et sélectionnez l’option **[!UICONTROL Sandbox]** dans la liste déroulante. Enfin, sélectionnez **[!UICONTROL Créer]** pour confirmer vos entrées.
-
-![La variable [!UICONTROL Créer un package] Boîte de dialogue affichant les champs remplis et mise en surbrillance [!UICONTROL Créer].](../images/ui/sandbox-tooling/create-package-dialog.png)
-
-Le package a été créé avec succès, sélectionnez **[!UICONTROL Publier]** pour publier le module.
-
-![Liste des packages sandbox qui mettent en évidence le nouveau package publié.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
-
-Vous revenez alors à la variable **[!UICONTROL Packages]** dans le [!UICONTROL Environnements de test] , où vous pouvez voir le nouveau module publié.
-
-### Importez l’intégralité du package sandbox. {#import-entire-sandbox-package}
-
-Pour importer le package dans un environnement de test cible, accédez au [!UICONTROL Environnements de test] **[!UICONTROL Parcourir]** et sélectionnez l’option plus (+) en regard du nom de l’environnement de test.
-
-![Environnements de test **[!UICONTROL Parcourir]** surligner la sélection du package d&#39;import.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
-
-À l’aide du menu déroulant, sélectionnez l’environnement de test complet à l’aide du **[!UICONTROL Nom du module]** menu déroulant. Ajouter une **[!UICONTROL Job name]**, qui sera utilisé pour la surveillance future, puis sélectionnez **[!UICONTROL Suivant]**.
-
-![La page de détails de l’importation affiche la variable [!UICONTROL Nom du module] sélection de liste déroulante](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
+<!--
+## Export and import an entire sandbox 
 
 >[!NOTE]
 >
->Tous les objets sont créés comme nouveaux à partir du package lors de l’importation d’un environnement de test complet. Les objets ne sont pas répertoriés dans la variable [!UICONTROL Objet de package et dépendances] , car il peut y avoir des multiples. Un message intégré s’affiche, vous informant des types d’objets qui ne sont pas pris en charge.
+>All export and import actions are recorded in the audit logs.
 
-Vous accédez au [!UICONTROL Objet de package et dépendances] où vous pouvez voir le nombre d’objets et de dépendances importés et exclus. À partir de là, sélectionnez **[!UICONTROL Importer]** pour terminer l’importation du package.
+### Export an entire sandbox {#export-entire-sandbox}
 
-![La variable [!UICONTROL Objet de package et dépendances] La page affiche le message intégré des types d’objets non pris en charge, en surbrillance. [!UICONTROL Importer].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+To export an entire sandbox, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab and select **[!UICONTROL Create package]**.
+
+![The [!UICONTROL Sandboxes] **[!UICONTROL Packages]** tab highlighting [!UICONTROL Create package].](../images/ui/sandbox-tooling/create-sandbox-package.png)
+
+Select **[!UICONTROL Entire sandbox]** for the Type of package in the [!UICONTROL Create package] dialog. Provide a [!UICONTROL Package name] for your package and select the **[!UICONTROL Sandbox]** from the dropdown. Finally, select **[!UICONTROL Create]** to confirm your entries.
+
+![The [!UICONTROL Create package] dialog showing completed fields and highlighting [!UICONTROL Create].](../images/ui/sandbox-tooling/create-package-dialog.png)
+
+The package is created successfully, select **[!UICONTROL Publish]** to publish the package.
+
+![List of sandbox packages highlighting the new published package.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
+
+You are returned to the **[!UICONTROL Packages]** tab in the [!UICONTROL Sandboxes] environment, where you can see the new published package.
+
+### Import the entire sandbox package {#import-entire-sandbox-package}
+
+To import the package into a target sandbox, navigate to the [!UICONTROL Sandboxes] **[!UICONTROL Browse]** tab and select the plus (+) option beside the sandbox name.
+
+![The sandboxes **[!UICONTROL Browse]** tab highlighting the import package selection.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
+
+Using the dropdown menu, select the full sandbox using the **[!UICONTROL Package name]** dropdown. Add an optional **[!UICONTROL Job name]**, which will be used for future monitoring, then select **[!UICONTROL Next]**.
+
+![The import details page showing the [!UICONTROL Package name] dropdown selection](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
+
+>[!NOTE]
+>
+>All objects are created as new from the package when importing an entire sandbox. The objects are not listed in the [!UICONTROL Package object and dependencies] page, as there can be multiples. An inline message is displayed, advising of object types that are not supported.
+
+You are taken to the [!UICONTROL Package object and dependencies] page where you can see the number of objects and dependencies that are imported and excluded objects. From here, select **[!UICONTROL Import]** to complete the package import.
+
+ ![The [!UICONTROL Package object and dependencies] page shows the inline message of object types not supported, highlighting [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+-->
 
 ## Surveillance des traitements d’importation et affichage des détails des objets d’importation
 
