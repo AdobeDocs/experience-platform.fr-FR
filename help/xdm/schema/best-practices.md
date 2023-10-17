@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Bonnes pratiques de modélisation des données
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
-workflow-type: ht
-source-wordcount: '2709'
-ht-degree: 100%
+source-git-commit: 4e87471dcfc99ff70a0d91245821e7f974973b49
+workflow-type: tm+mt
+source-wordcount: '3044'
+ht-degree: 88%
 
 ---
 
@@ -228,6 +228,16 @@ Pour Adobe Analytics, ECID est l’identité principale par défaut. Si une vale
 >[!IMPORTANT]
 >
 >Lors de l’utilisation de groupes de champs d’application Adobe, aucun autre champ ne doit être marqué comme identité principale. Si d’autres propriétés doivent être marquées comme identités, ces champs doivent être attribués en tant qu’identités secondaires à la place.
+
+## Champs de validation des données {#data-validation-fields}
+
+Pour éviter que des données inutiles ne soient ingérées dans Platform, il est recommandé de définir les critères de validation au niveau du champ lors de la création de vos schémas. Pour définir des contraintes sur un champ spécifique, sélectionnez le champ dans l’éditeur de schémas pour ouvrir la [!UICONTROL Propriétés du champ] barre latérale. Consultez la documentation relative à [propriétés de champ spécifiques à un type](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html?lang=en#type-specific-properties) pour obtenir une description exacte des champs disponibles.
+
+![L’éditeur de schémas avec les champs de contrainte mis en évidence dans la variable [!UICONTROL Propriétés du champ] barre latérale.](../images/best-practices/data-validation-fields.png)
+
+>[!TIP]
+>
+>Vous trouverez ci-dessous un ensemble de suggestions pour la modélisation des données lors de la création d’un schéma :<br><ul><li>**Considérer les identités principales**: pour les produits Adobe tels que le SDK web, le SDK mobile, Adobe Analytics et Adobe Journey Optimizer, la variable `identityMap` sert souvent d’identité principale. Évitez de désigner des champs supplémentaires comme identités principales pour ce schéma.</li><li>**Éviter d’utiliser `_id` comme identité**: évitez d’utiliser la variable `_id` dans les schémas d’événement d’expérience en tant qu’identité. Il est destiné à une unicité record, et non à une utilisation en tant qu&#39;identité.</li><li>**Définir des contraintes de longueur**: il est recommandé de définir des longueurs minimales et maximales sur les champs marqués comme identités. Ces limites permettent de maintenir la cohérence et la qualité des données.</li><li>**Application de modèles pour des valeurs homogènes**: si vos valeurs d’identité suivent un modèle spécifique, utilisez la variable [!UICONTROL Modèle] pour appliquer cette contrainte. Ce paramètre peut inclure des règles telles que des chiffres uniquement, des majuscules, des minuscules ou des combinaisons de caractères spécifiques. Utilisez des expressions régulières pour faire correspondre des modèles dans vos chaînes.</li><li>**Limitation des eVars dans le schéma Analytics**: en règle générale, un schéma Analytics ne doit comporter qu’un seul eVar désigné comme identité. Si vous envisagez d’utiliser plusieurs eVars comme identité, vous devez vérifier deux fois si la structure de données peut être optimisée.</li><li>**Garantir l’unicité d’un champ sélectionné**: le champ de votre choix doit être unique par rapport à l’identité principale du schéma. Dans le cas contraire, ne le marquez pas comme une identité. Par exemple, si plusieurs clients peuvent fournir la même adresse électronique, cet espace de noms n’est pas une identité appropriée. Ce principe s’applique également à d’autres espaces de noms d’identité tels que les numéros de téléphone.</li></ul>
 
 ## Étapes suivantes
 

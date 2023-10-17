@@ -5,9 +5,9 @@ title: Créer un schéma à l’aide de l’éditeur de schémas
 type: Tutorial
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: bf3099afadd6c8807060a6796cb6f37471478b44
+source-git-commit: ff49189d6f3331db5b7853be36afe0bb6176916f
 workflow-type: tm+mt
-source-wordcount: '4619'
+source-wordcount: '4632'
 ht-degree: 82%
 
 ---
@@ -201,7 +201,7 @@ Chaque champ nécessite les informations suivantes :
 * **[!UICONTROL Type] :** le type de données du champ. Cela inclut les types scalaires de base et tous les types de données définis dans [!DNL Schema Registry]. Exemples : [!UICONTROL chaîne], [!UICONTROL entier], [!UICONTROL booléen], [!UICONTROL personne], [!UICONTROL adresse], [!UICONTROL numéro de téléphone], etc.
 * **[!UICONTROL Description] :** une description facultative du champ doit être incluse avec un maximum de 200 caractères.
 
-Le premier champ de l’objet `loyaltyTier` sera une chaîne de caractères appelée `id`, représentant l’ID du niveau actuel du membre du programme de fidélité. L’ID de niveau sera unique pour chaque membre du programme de fidélité, car cette entreprise définit différents seuils de point de niveau de fidélité pour chaque client en fonction de différents facteurs. Définissez le type du nouveau champ sur « [!UICONTROL Chaîne] » et la section **[!UICONTROL Propriétés du champ]** se remplit de plusieurs options pour l’application de contraintes, y compris la valeur par défaut, le format, et la longueur maximale.
+Le premier champ de l’objet `loyaltyTier` sera une chaîne de caractères appelée `id`, représentant l’ID du niveau actuel du membre du programme de fidélité. L’ID de niveau sera unique pour chaque membre du programme de fidélité, car cette entreprise définit différents seuils de point de niveau de fidélité pour chaque client en fonction de différents facteurs. Définissez le type du nouveau champ sur « [!UICONTROL Chaîne] » et la section **[!UICONTROL Propriétés du champ]** se remplit de plusieurs options pour l’application de contraintes, y compris la valeur par défaut, le format, et la longueur maximale. Consultez la documentation relative à [bonnes pratiques relatives aux champs de validation des données](../schema/best-practices.md#data-validation-fields) pour en savoir plus.
 
 ![L’éditeur de schémas avec les valeurs de propriété de champ pour le nouveau champ d’identifiant mis en surbrillance.](../images/tutorials/create-schema/string-constraints.png)
 
