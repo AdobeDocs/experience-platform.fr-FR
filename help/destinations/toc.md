@@ -4,9 +4,9 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: c1f5c27a689e91b472d4e3c8e69e1637c12c37e4
+source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1167'
 ht-degree: 96%
 
 ---
@@ -176,7 +176,6 @@ ht-degree: 96%
       * [Connexion à Pega Profile](./catalog/personalization/pega-profile.md)
    * Destinations sociales{#social}
       * [Présentation des destinations sociales](./catalog/social/overview.md)
-      * [Extension Adobe Livefyre](./catalog/social/adobe-livefyre.md)
       * [Connexion Facebook](./catalog/social/facebook.md)
       * [Connexion des audiences correspondantes linkedIn](./catalog/social/linkedin.md)
       * [Connexion à TikTok](./catalog/social/tiktok.md)

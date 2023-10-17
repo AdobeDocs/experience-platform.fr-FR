@@ -1,12 +1,12 @@
 ---
-keywords: destinations;solutions experience cloud ; cible;destination cible; cloud publicitaire ; advertising cloud ; audience manager; destination d’adobe target ; cible; destination du gestionnaire d’audience ;
+keywords: destinations;solutions experience cloud;cible;destination target;cloud publicitaire;audience manager;destination adobe target;cible;destination audience manager
 title: Présentation des destinations Adobe
 description: Gérez l’expérience de vos clients en connectant vos données dans Platform à d’autres solutions Adobe Experience Cloud pour le ciblage publicitaire, la personnalisation, l’automatisation du marketing, etc.
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
 workflow-type: tm+mt
-source-wordcount: '234'
-ht-degree: 32%
+source-wordcount: '231'
+ht-degree: 33%
 
 ---
 
@@ -20,7 +20,7 @@ Gérez l’expérience de vos clients en connectant vos données dans Adobe Expe
 
 Actuellement, Platform prend en charge les destinations d’Adobe répertoriées ci-dessous.
 
-Pour comprendre la différence entre les connexions et les extensions, voir [Connexions](../../destination-types.md#connections) dans la page Types et catégories de destination .
+Pour comprendre la différence entre les connexions et les extensions, voir [Connexions](../../destination-types.md#connections) sur la page Types et catégories de destination .
 
 ### Connexions
 
@@ -35,7 +35,6 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Con
 
 * [Extension Adobe Advertising Cloud](../advertising/adobe-advertising-cloud.md)
 * [Extension Adobe Analytics](../analytics/adobe-analytics.md)
-* [Extension Adobe Livefyre](../social/adobe-livefyre.md)
 * [Extension Adobe Media Analytics for Audio and Video](../analytics/adobe-video-analytics.md)
 * [Extension Adobe Target](../personalization/adobe-target.md)
 * [Extension Adobe Target v2](../personalization/adobe-target-v2.md)
@@ -45,7 +44,7 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Con
 * [Extension Marketo Munchkin](../email/marketo-munchkin.md)
 * [Extension Marketo Web Personalization](../personalization/marketo-web-personalization.md)
 
-## Partage d’audiences Experience Platform
+## Partage d’audiences Experience Platform
 
 Utilisez la fonctionnalité de partage d’audience Experience Platform pour partager vos audiences Experience Platform avec d’autres destinations d’Adobe. Pour plus d’informations, consultez la page ci-dessous (s’ouvre dans le portail de documentation d’Audience Manager) :
 
