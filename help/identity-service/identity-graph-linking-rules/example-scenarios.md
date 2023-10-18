@@ -3,17 +3,21 @@ title: Exemples De Scénarios De Configuration Des Paramètres D’Identité
 description: Découvrez les exemples de scénarios de configuration des paramètres d’identité.
 hide: true
 hidefromtoc: true
-source-git-commit: bde6c96bf72bb948c149bf5dc8d35591f2586887
+badge: Alpha
+source-git-commit: 03e4cd440f8627ad837a31e1c017d0b824cafb04
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 1%
+source-wordcount: '433'
+ht-degree: 3%
 
 ---
 
 # Exemples de scénarios de configuration des règles de liaison de graphiques d’identités
 
-Ce document présente des exemples de scénarios que vous pouvez prendre en compte lors de la configuration des règles de liaison de graphiques d’identités.
+>[!IMPORTANT]
+>
+>Les règles de liaison de graphiques d’identités sont actuellement en Alpha. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
 
+Ce document présente des exemples de scénarios que vous pouvez prendre en compte lors de la configuration des règles de liaison de graphiques d’identités.
 
 ## Appareil partagé
 

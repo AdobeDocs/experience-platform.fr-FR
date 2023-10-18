@@ -3,10 +3,11 @@ title: Identity Service et Real-time Customer Profile
 description: En savoir plus sur la relation entre Identity Service et Real-Time Customer Profile
 hide: true
 hidefromtoc: true
-source-git-commit: 026f0dee203dd9d7f23d3343025665313692efbe
+badge: Alpha
+source-git-commit: 03e4cd440f8627ad837a31e1c017d0b824cafb04
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 1%
+source-wordcount: '705'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +15,9 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Cette page suppose que la stratégie de fusion utilise le graphique d’identités. Pour plus d’informations sur les stratégies de fusion dans Real-Time Customer Profile, consultez la documentation sur [stratégies de fusion et combinaison d’identités](../../profile/merge-policies/overview.md#identity-stitching).
+>* Les règles de liaison de graphiques d’identités sont actuellement en Alpha. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
+>
+>* Cette page suppose que la stratégie de fusion utilise le graphique d’identités. Pour plus d’informations sur les stratégies de fusion dans Real-Time Customer Profile, consultez la documentation sur [stratégies de fusion et combinaison d’identités](../../profile/merge-policies/overview.md#identity-stitching).
 
 Bien que vous puissiez utiliser Identity Service et Real-time Customer Profile en tandem, les deux fonctionnalités de Adobe Experience Platform ne sont pas intrinsèquement les mêmes.
 
