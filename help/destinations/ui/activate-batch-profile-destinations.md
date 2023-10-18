@@ -4,10 +4,10 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations basées sur un profil de lot.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a81daa2a929505a934910892a4ad9c73e603ed9b
+source-git-commit: a854960b11cb3e56046dc9541f76c62a7e3f2f10
 workflow-type: tm+mt
-source-wordcount: '3710'
-ht-degree: 64%
+source-wordcount: '3720'
+ht-degree: 63%
 
 ---
 
@@ -413,8 +413,10 @@ En raison d’une limitation connue, vous ne pouvez actuellement pas utiliser la
 ![Enregistrement de l’écran montrant la solution de contournement de l’appartenance à l’audience à l’étape de mappage du workflow d’activation.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
 Les exportations de fichiers varient comme suit, selon que `segmentMembership.status` est sélectionné :
-* Si le champ `segmentMembership.status` est sélectionné, les fichiers exportés incluent les membres **[!UICONTROL actifs]** dans l’instantané complet initial ainsi que les membres **[!UICONTROL actifs]** et **[!UICONTROL expirés]** dans les exportations incrémentielles suivantes.
+* Si la variable `segmentMembership.status` champ sélectionné, les fichiers exportés incluent **[!UICONTROL Actif]** membres dans l’instantané complet initial et les nouveaux **[!UICONTROL Actif]** et **[!UICONTROL Expiré]** membres dans les exportations incrémentielles suivantes.
 * Si le champ `segmentMembership.status` n’est pas sélectionné, les fichiers exportés incluent uniquement les membres **[!UICONTROL actifs]** dans l’instantané complet initial et dans les exportations incrémentielles suivantes.
+
+En savoir plus sur [comportement d’exportation de profils pour les destinations basées sur des fichiers](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
 #### Les espaces de noms d’identité ne peuvent actuellement pas être sélectionnés pour les exportations.
 
