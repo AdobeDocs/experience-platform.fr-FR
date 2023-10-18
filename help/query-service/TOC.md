@@ -4,10 +4,10 @@ user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
-source-git-commit: a74ec87c27d3db3bcd8d0a5075a593535e3c4de1
+source-git-commit: 6c3c5e3a87773f9f58a5d61bd4bef19f4cdc2e96
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 99%
+source-wordcount: '311'
+ht-degree: 90%
 
 ---
 
@@ -29,6 +29,13 @@ ht-degree: 99%
       - [Aperçu](data-distiller/derived-attributes/overview.md)
       - [Flux SQL transparent](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [Créer des attributs dérivés basés sur des déciles](data-distiller/derived-attributes/decile-based-derived-attributes.md)
+   - Pipelines de fonctionnalités AI/ML {#ml-feature-pipelines}
+      - [Pipelines de fonctionnalités AI/ML](data-distiller/ml-feature-pipelines/overview.md)
+      - [Connexion aux notebooks Jupyter](data-distiller/ml-feature-pipelines/establish-connection.md)
+      - [Analyse exploratoire des données](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
+      - [Fonctionnalités de conception pour ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
+      - [Exportation des données dans des environnements ML](data-distiller/ml-feature-pipelines/export-data.md)
+      - [Workflow d’enrichissement de pipeline de données AI/ML de bout en bout](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Cas d’utilisation {#use-cases}
    - [Navigation abandonnée](use-cases/abandoned-browse.md)
    - [Analyse de l’attribution](use-cases/attribution-analysis.md)
