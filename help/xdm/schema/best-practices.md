@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Bonnes pratiques de modélisation des données
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 4e87471dcfc99ff70a0d91245821e7f974973b49
+source-git-commit: f9c3e20bdfbf4aa1b206b9efe770e9950fcd62d6
 workflow-type: tm+mt
 source-wordcount: '3044'
 ht-degree: 88%
@@ -231,7 +231,7 @@ Pour Adobe Analytics, ECID est l’identité principale par défaut. Si une vale
 
 ## Champs de validation des données {#data-validation-fields}
 
-Pour éviter que des données inutiles ne soient ingérées dans Platform, il est recommandé de définir les critères de validation au niveau du champ lors de la création de vos schémas. Pour définir des contraintes sur un champ spécifique, sélectionnez le champ dans l’éditeur de schémas pour ouvrir la [!UICONTROL Propriétés du champ] barre latérale. Consultez la documentation relative à [propriétés de champ spécifiques à un type](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html?lang=en#type-specific-properties) pour obtenir une description exacte des champs disponibles.
+Pour empêcher l’ingestion de données incorrectes dans Platform, il est recommandé de définir les critères de validation au niveau du champ lors de la création de vos schémas. Pour définir des contraintes sur un champ spécifique, sélectionnez le champ dans l’éditeur de schémas pour ouvrir la [!UICONTROL Propriétés du champ] barre latérale. Consultez la documentation relative à [propriétés de champ spécifiques à un type](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html?lang=en#type-specific-properties) pour obtenir une description exacte des champs disponibles.
 
 ![L’éditeur de schémas avec les champs de contrainte mis en évidence dans la variable [!UICONTROL Propriétés du champ] barre latérale.](../images/best-practices/data-validation-fields.png)
 

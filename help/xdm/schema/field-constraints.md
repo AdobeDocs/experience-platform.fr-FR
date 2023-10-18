@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Contraintes de type de champ XDM
 description: Référence pour les contraintes de type de champ dans le modèle de données d’expérience (XDM), y compris les autres formats de sérialisation auxquels elles peuvent être mappées et comment définir vos propres types de champ dans l’API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 88caea133bd2bf994587bda5b31cddd22f2c90cb
 workflow-type: tm+mt
 source-wordcount: '654'
 ht-degree: 11%
@@ -23,7 +23,7 @@ Si vous prévoyez de définir vos propres types de champ dans l’API, il est vi
 
 ## Structure de base et exemples {#basic-types}
 
-XDM repose sur le schéma JSON. Par conséquent, les champs XDM héritent d’une syntaxe similaire lors de la définition de leur type. Comprendre comment différents types de champ sont représentés dans le schéma JSON peut aider à indiquer les contraintes de base de chaque type.
+XDM repose sur le schéma JSON. Par conséquent, les champs XDM héritent d’une syntaxe similaire lors de la définition de leur type. La compréhension de la manière dont différents types de champ sont représentés dans le schéma JSON peut aider à indiquer les contraintes de base de chaque type.
 
 >[!NOTE]
 >
@@ -49,7 +49,7 @@ Le tableau suivant décrit la représentation de chaque type XDM dans le schéma
       <td><code>"Platinum"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Double]</td>
+      <td>[!UICONTROL Number]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "number"}</pre>
@@ -60,7 +60,7 @@ Le tableau suivant décrit la représentation de chaque type XDM dans le schéma
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 9007199254740991, "minimum" : -9007199254740991 }</pre>
+{ "type": "integer", "maximum": 9007199254740991, "minimum": -9007199254740991 }</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
@@ -68,7 +68,7 @@ Le tableau suivant décrit la représentation de chaque type XDM dans le schéma
       <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 2147483648, "minimum" : -2147483648 }</pre>
+{ "type": "integer", "maximum": 2147483648, "minimum": -2147483648 }</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -76,7 +76,7 @@ Le tableau suivant décrit la représentation de chaque type XDM dans le schéma
       <td>[!UICONTROL Court]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 32768, "minimum" : -32768 }</pre>
+{ "type": "integer", "maximum": 32768, "minimum": -32768 }</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -84,7 +84,7 @@ Le tableau suivant décrit la représentation de chaque type XDM dans le schéma
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 128, "minimum" : -128 }</pre>
+{ "type": "integer", "maximum": 128, "minimum": -128 }</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -136,7 +136,7 @@ Les sections ci-dessous décrivent comment chaque type XDM est mappé à d’aut
 | Type XDM | Parquet | Spark SQL | Java |
 | --- | --- | --- | --- |
 | [!UICONTROL Chaîne] | Type : `BYTE_ARRAY`<br>Annotation : `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL Double] | Type : `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Nombre] | Type : `DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Long] | Type : `INT64` | `LongType` | `java.lang.Long` |
 | [!UICONTROL Nombre entier] | Type : `INT32`<br>Annotation : `INT_32` | `IntegerType` | `java.lang.Integer` |
 | [!UICONTROL Court] | Type : `INT32`<br>Annotation : `INT_16` | `ShortType` | `java.lang.Short` |
@@ -153,7 +153,7 @@ Les sections ci-dessous décrivent comment chaque type XDM est mappé à d’aut
 | Type XDM | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL Chaîne] | `String` | `System.String` | `String` |
-| [!UICONTROL Double] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Nombre] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
 | [!UICONTROL Nombre entier] | `Int` | `System.Int32` | `Number` |
 | [!UICONTROL Court] | `Short` | `System.Int16` | `Number` |
@@ -170,7 +170,7 @@ Les sections ci-dessous décrivent comment chaque type XDM est mappé à d’aut
 | Type XDM | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
 | [!UICONTROL Chaîne] | `string` | `String` | `string` |
-| [!UICONTROL Double] | `double` | `Double` | `double` |
+| [!UICONTROL Nombre] | `double` | `Double` | `double` |
 | [!UICONTROL Long] | `long` | `Integer` | `int64` |
 | [!UICONTROL Nombre entier] | `int` | `Integer` | `int32` |
 | [!UICONTROL Court] | `int` | `Integer` | `int32` |

@@ -4,10 +4,10 @@ user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
-source-git-commit: 6c3c5e3a87773f9f58a5d61bd4bef19f4cdc2e96
+source-git-commit: f9c3e20bdfbf4aa1b206b9efe770e9950fcd62d6
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 90%
+source-wordcount: '308'
+ht-degree: 91%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 90%
       - [Flux SQL transparent](data-distiller/derived-attributes/seamless-sql-flow.md)
       - [Créer des attributs dérivés basés sur des déciles](data-distiller/derived-attributes/decile-based-derived-attributes.md)
    - Pipelines de fonctionnalités AI/ML {#ml-feature-pipelines}
-      - [Pipelines de fonctionnalités AI/ML](data-distiller/ml-feature-pipelines/overview.md)
+      - [Vue d’ensemble](data-distiller/ml-feature-pipelines/overview.md)
       - [Connexion aux notebooks Jupyter](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [Analyse exploratoire des données](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
       - [Fonctionnalités de conception pour ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
