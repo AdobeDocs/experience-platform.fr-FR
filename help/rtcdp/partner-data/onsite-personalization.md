@@ -2,10 +2,10 @@
 title: Utiliser la reconnaissance des visiteurs et visiteuses par les partenaires pour personnaliser les expériences sur site
 description: Découvrez comment utiliser la reconnaissance des visiteurs et visiteuses par les partenaires pour personnaliser les expériences sur site de vos visiteurs et visiteuses.
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: de8aeb553066405424711e75480204f6136b52ff
 workflow-type: tm+mt
-source-wordcount: '2548'
-ht-degree: 97%
+source-wordcount: '2580'
+ht-degree: 95%
 
 ---
 
@@ -248,9 +248,13 @@ Entrez `interact` dans la zone de recherche et actualisez la page. Les appels r�
 
 Vous pouvez à présent créer et activer des audiences pour la personnalisation.
 
-#### Configurer la segmentation Edge
+#### Création d’une audience et configuration de la segmentation Edge
 
-Configurez la [segmentation Edge](/help/segmentation/ui/edge-segmentation.md) de sorte que l’appartenance aux audiences de vos visiteurs et visiteuses soit évaluée en temps réel, lorsqu’ils visitent votre propriété web.
+Dans l’interface utilisateur de Platform, accédez à **[!UICONTROL Client]** > **[!UICONTROL Audiences]** et créer une audience pour capturer les visiteurs de votre site web.
+
+![Vue de la navigation vers les audiences.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
+
+Vous devez configurer votre audience avec [segmentation de périphérie](/help/segmentation/ui/edge-segmentation.md) ainsi, l’appartenance de l’audience de vos visiteurs est évaluée en temps réel, lorsqu’ils visitent votre propriété web.
 
 Veillez également à configurer une [politique de fusion Active-On-Edge](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) pour les audiences Edge.
 
