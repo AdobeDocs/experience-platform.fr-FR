@@ -4,14 +4,34 @@ description: Dernières notes de mise à jour pour Adobe Experience Platform 
 keywords: debugger ; extension experience cloud debugger ; chrome ; extension ; notes de mise à jour
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 70abe974aa7f94ea172d7ab90aacaf765b88de0e
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 100%
+source-wordcount: '526'
+ht-degree: 82%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform Debugger
+
+## Version 1.5.0 - 19 octobre 2023
+
+### Nouvelles fonctionnalités
+
+* Affichez les liens vers la propriété, l’environnement et les règles dans le résumé et les journaux des balises.
+
+### Correctifs et améliorations
+
+* Correction d’un problème en raison duquel les données de résumé des balises n’étaient pas envoyées.
+* Correction d’un problème en raison duquel les sessions d’assurance généraient une erreur CORS.
+* Correction d’un problème qui empêchait l’affichage de Target Trace.
+* Correction du bouton &quot;Envoyer un retour&quot;.
+* Correction de l’absence de l’&quot;ID de flux de données&quot; dans le résumé du SDK Web pour la version ≥2.18.0.
+* Correction d’un problème en raison duquel les journaux Edge ne pouvaient pas faire l’objet de recherches.
+* Ajout d’une remarque concernant les profils supplémentaires pour certains types de compte.
+
+## Version 1.4.1 - 1er novembre 2022
+
+* Amélioration des performances sur les pages comportant de nombreux événements Adobe Experience Platform Assurance.
 
 ## Version 1.4.0 - 3 octobre 2022
 
