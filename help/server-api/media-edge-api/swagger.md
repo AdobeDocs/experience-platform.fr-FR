@@ -1,18 +1,17 @@
 ---
 solution: Experience Platform
-title: Prise en main des API Media Edge
-description: Les API Media Edge permettent aux développeurs et aux développeuses de collecter des données pour Media Edge Analytics et Customer Journey Analytics.
-source-git-commit: 249a12e6a079e3c99bf13bec4bf83b2a53cd522b
-workflow-type: ht
-source-wordcount: '82'
-ht-degree: 100%
+title: Media Edge Open API, spécification
+description: Ce document comprend une référence OAS (YAML Open API Specification) ou "Swagger". Vous pouvez copier et coller cette spécification dans un outil de rendu, tel que editor.swagger.io, pour afficher les informations de l’API Media Edge. Cette spécification inclut des paramètres, des exemples et un schéma pour chaque point d’entrée.
+source-git-commit: 11a9dc980b7a63549cdd9a8c9522e001faceeb56
+workflow-type: tm+mt
+source-wordcount: '107'
+ht-degree: 72%
 
 ---
 
-
 # Utilisation du fichier de spécification Open API pour les API Media Edge
 
-Ce document comprend une référence JSON de spécification Open API ou « Swagger ». Vous pouvez copier et coller cette spécification dans un outil de rendu, tel que editor.swagger.io, pour afficher les informations de l’API Media Edge. Cette spécification inclut des paramètres, des exemples et un schéma pour chaque point d’entrée.
+Ce document comprend une référence OAS (YAML Open API Specification) ou &quot;Swagger&quot;. Vous pouvez copier et coller cette spécification dans un outil de rendu, tel que editor.swagger.io, pour afficher les informations de l’API Media Edge. Cette spécification inclut des paramètres, des exemples et un schéma pour chaque point d’entrée.
 
 +++ Sélectionnez cette option pour afficher et copier la spécification Open API
 
@@ -2660,7 +2659,7 @@ Ce document comprend une référence JSON de spécification Open API ou « Swag
     },
     "/play": {
       "post": {
-        "description": "Sent when the player changes state to "playing" from another state, such as when the on ('Playing') callback is triggered by the player. Other states from which the player moves to "playing" include "buffering", when the user resumes from "paused", when the player recovers from an error, and during autoplay."
+        "description": "Sent when the player changes state to \"playing\" from another state, such as when the on ('Playing') callback is triggered by the player. Other states from which the player moves to \"playing\" include \"buffering\", when the user resumes from \"paused\", when the player recovers from an error, and during autoplay.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -3332,11 +3331,11 @@ Ce document comprend une référence JSON de spécification Open API ou « Swag
                                     },
                                     "contentType": {
                                       "type": "string",
-                                      "description": "Available values per Stream Type: Audio - "song", "podcast", "audiobook", "radio"; Video: "VoD", "Live", "Linear", "UGC", "DVoD" Customers can provide custom values for this parameter"
+                                      "description": "Available values per Stream Type: Audio - \"song\", \"podcast\", \"audiobook\", \"radio\"; Video: \"VoD\", \"Live\", \"Linear\", \"UGC\", \"DVoD\" Customers can provide custom values for this parameter",
                                     },
                                     "friendlyName": {
                                       "type": "string",
-                                      "description": "This is the "friendly" (human-readable) name of the content"
+                                      "description": "This is the \"friendly\" (human-readable) name of the content"
                                     },
                                     "playerName": {
                                       "type": "string",
