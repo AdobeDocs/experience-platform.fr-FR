@@ -2,10 +2,10 @@
 title: Point de terminaison de l’API Work Order
 description: Le point d’entrée /workorder de l’API Data Hygiene vous permet de gérer par programmation les tâches de suppression pour les identités.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 8e21bcc7b9d7fe3f4d26f80f953d454f090b0928
+source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 72%
+source-wordcount: '1181'
+ht-degree: 63%
 
 ---
 
@@ -26,6 +26,10 @@ Le point d’entrée utilisé dans ce guide fait partie de lʼAPI Data Hygiene. 
 ## Création d’une requête de suppression d’enregistrement {#create}
 
 Vous pouvez supprimer une ou plusieurs identités d’un seul jeu de données ou de tous les jeux de données en adressant une requête POST à la variable `/workorder` point de terminaison .
+
+>[!IMPORTANT]
+> 
+>Il existe différentes limites pour le nombre total de suppressions d’enregistrement d’identité unique qui peuvent être envoyées chaque mois. Ces limites sont basées sur votre contrat de licence. Les organisations qui ont acheté toutes les éditions d’Adobe Real-time Customer Data Platform et de Adobe Journey Optimizer peuvent envoyer jusqu’à 100 000 enregistrements d’identité supprimés chaque mois. Organisations ayant effectué des achats **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité** peut envoyer jusqu’à 600 000 enregistrements d’identité supprimés chaque mois.<br>Une seule [demande de suppression d’enregistrement via l’interface utilisateur](../ui/record-delete.md) vous permet d’envoyer 10 000 identifiants à la fois. La méthode d’API pour supprimer des enregistrements permet l’envoi simultané de 100 000 identifiants.<br>Il est recommandé d’envoyer autant d’ID par demande que possible, jusqu’à votre limite d’ID. Lorsque vous envisagez de supprimer un volume élevé d’identifiants, il est préférable d’éviter d’envoyer un volume faible ou une seule demande de suppression d’identifiant par enregistrement.
 
 **Format d’API**
 

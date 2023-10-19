@@ -2,9 +2,9 @@
 title: Suppression d’enregistrements
 description: Découvrez comment supprimer des enregistrements dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1564'
 ht-degree: 34%
 
 ---
@@ -42,13 +42,13 @@ Le workflow de création de requête s’affiche. Par défaut, la variable **[!U
 
 >[!IMPORTANT]
 > 
->Dans le cadre des modifications en cours visant à améliorer l’efficacité et à rendre les opérations de jeux de données moins coûteuses, les organisations qui ont été déplacées au format Delta peuvent supprimer des données d’Identity Service, de Real-Time Customer Profile et du lac de données. Ce type d’utilisateur est appelé delta-migrated. Les utilisateurs des organisations qui ont fait l’objet d’une migration delta peuvent choisir de supprimer des enregistrements d’un seul jeu de données ou de tous les jeux de données. Les utilisateurs d’organisations qui n’ont pas fait l’objet d’une migration différentielle ne peuvent pas choisir de supprimer des enregistrements d’un seul jeu de données ou de tous les jeux de données comme illustré dans l’image ci-dessous. Dans ce cas, veuillez continuer à [fournir des identités](#provide-identities) du guide.
+>Dans le cadre des modifications en cours visant à améliorer l’efficacité et à rendre les opérations de jeux de données moins coûteuses, les organisations qui ont été déplacées au format Delta peuvent supprimer des données d’Identity Service, de Real-Time Customer Profile et du lac de données. Ce type d’utilisateur est appelé delta-migrated. Les utilisateurs des organisations qui ont fait l’objet d’une migration delta peuvent choisir de supprimer des enregistrements d’un seul jeu de données ou de tous les jeux de données. Les utilisateurs d’organisations qui n’ont pas fait l’objet d’une migration différentielle ne peuvent pas choisir de supprimer des enregistrements d’un seul jeu de données ou de tous les jeux de données comme illustré dans l’image ci-dessous. Dans ce cas, continuez à [fournir des identités](#provide-identities) du guide.
 
 ![Le workflow de création de la requête avec la fonction [!UICONTROL Supprimer un enregistrement] sélectionnée et surlignée.](../images/ui/record-delete/delete-record.png)
 
 ## Sélectionner des jeux de données {#select-dataset}
 
-L’étape suivante consiste à déterminer si vous souhaitez supprimer des enregistrements d’un seul jeu de données ou de tous les jeux de données. Si cette option n’est pas disponible, veuillez continuer à [fournir des identités](#provide-identities) du guide.
+L’étape suivante consiste à déterminer si vous souhaitez supprimer des enregistrements d’un seul jeu de données ou de tous les jeux de données. Si cette option n’est pas disponible, passez à la [fournir des identités](#provide-identities) du guide.
 
 Sous , **[!UICONTROL Détails de l’enregistrement]** utilisez le bouton radio pour effectuer une sélection entre un jeu de données spécifique et tous les jeux de données. Si vous choisissez **[!UICONTROL Sélectionner un jeu de données]**, procédez pour sélectionner l’icône de base de données (![Icône Base de données](../images/ui/record-delete/database-icon.png)) pour ouvrir une boîte de dialogue qui fournit une liste de jeux de données disponibles. Sélectionnez le jeu de données souhaité dans la liste, suivi de **[!UICONTROL Terminé]**.
 
@@ -139,7 +139,7 @@ Une fois que vous avez terminé d’ajouter des identités à la requête, sous 
 
 >[!IMPORTANT]
 > 
->Il existe différentes limites pour le nombre total de suppressions d’enregistrement d’identité unique qui peuvent être envoyées chaque mois. Ces limites sont basées sur votre contrat de licence. Les organisations qui ont acheté toutes les éditions d’Adobe Real-time Customer Data Platform et de Adobe Journey Optimizer peuvent envoyer jusqu’à 100 000 enregistrements d’identité supprimés chaque mois. Organisations ayant effectué des achats **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité** peut envoyer jusqu’à 600 000 enregistrements d’identité supprimés chaque mois.<br>Une seule requête de suppression d’enregistrement via l’interface utilisateur vous permet d’envoyer 10 000 identifiants à la fois. La variable [Méthode d’API pour supprimer des enregistrements](https://experienceleague.adobe.com/docs/experience-platform/hygiene/api/workorder.html?lang=en#create) permet l’envoi simultané de 100 000 identifiants.
+>Il existe différentes limites pour le nombre total de suppressions d’enregistrement d’identité unique qui peuvent être envoyées chaque mois. Ces limites sont basées sur votre contrat de licence. Les organisations qui ont acheté toutes les éditions d’Adobe Real-time Customer Data Platform et de Adobe Journey Optimizer peuvent envoyer jusqu’à 100 000 enregistrements d’identité supprimés chaque mois. Organisations ayant effectué des achats **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité** peut envoyer jusqu’à 600 000 enregistrements d’identité supprimés chaque mois.<br>Une seule requête de suppression d’enregistrement via l’interface utilisateur vous permet d’envoyer 10 000 identifiants à la fois. La variable [Méthode d’API pour supprimer des enregistrements](../api/workorder.md#create) permet l’envoi simultané de 100 000 identifiants.<br>Il est recommandé d’envoyer autant d’ID par demande que possible, jusqu’à votre limite d’ID. Lorsque vous envisagez de supprimer un volume élevé d’identifiants, il est préférable d’éviter d’envoyer un volume faible ou une seule demande de suppression d’identifiant par enregistrement.
 
 ![Le paramètre de requête [!UICONTROL Nom] et [!UICONTROL Description] champs avec [!UICONTROL Envoyer] surlignée.](../images/ui/record-delete/submit.png)
 
