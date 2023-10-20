@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
 description: La Composition d’audience dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 56d9d3ec5565960438540ffec867ed528b52eaf1
-workflow-type: ht
-source-wordcount: '1767'
-ht-degree: 100%
+source-git-commit: 820ba6c9cedcb85db7ff9bc199a67e56ee628c93
+workflow-type: tm+mt
+source-wordcount: '1780'
+ht-degree: 99%
 
 ---
 
@@ -51,6 +51,10 @@ Lorsque vous sélectionnez le bloc **[!UICONTROL Audience]**, le rail de droite 
 Pour ajouter des audiences au bloc Audience : Sélectionnez **[!UICONTROL Ajouter une audience]**.
 
 ![Le bouton Ajouter une audience est mis en surbrillance.](../images/ui/audience-composition/add-audience.png)
+
+>[!IMPORTANT]
+>
+>Veuillez noter que **only** les audiences définies à l’aide de la stratégie de fusion par défaut s’affichent.
 
 Une liste d’audiences s’affiche. Sélectionnez les audiences que vous souhaitez inclure, puis **[!UICONTROL Ajouter]** pour les ajouter à votre bloc d’audience.
 
