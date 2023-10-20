@@ -2,10 +2,10 @@
 title: Tri et filtrage des réponses dans l’API Flow Service
 description: Ce tutoriel décrit la syntaxe à utiliser pour trier et filtrer à l’aide des paramètres de requête dans l’API Flow Service, y compris certains cas d’utilisation avancés.
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
-source-git-commit: ef8db14b1eb7ea555135ac621a6c155ef920e89a
+source-git-commit: c7ff379b260edeef03f8b47f932ce9040eef3be2
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 4%
+source-wordcount: '863'
+ht-degree: 3%
 
 ---
 
@@ -195,6 +195,58 @@ Selon l’entité de service de flux que vous récupérez, différentes proprié
 
 {style="table-layout:auto"}
 
+## Cas d’utilisation {#use-cases}
+
+Lisez cette section pour obtenir des exemples spécifiques sur l’utilisation du filtrage et du tri afin de renvoyer des informations sur certains connecteurs ou de vous aider à résoudre les problèmes de débogage. Si vous souhaitez ajouter d’autres cas d’utilisation, veuillez utiliser la variable **[!UICONTROL Options de commentaires détaillées]** sur la page pour envoyer une requête.
+
+**Filtrer pour renvoyer des connexions à une certaine destination uniquement**
+
+Vous pouvez utiliser des filtres pour renvoyer des connexions à certaines destinations uniquement. Tout d’abord, interrogez la variable `connectionSpecs` point d’entrée comme ci-dessous :
+
+```http
+GET /connectionSpecs
+```
+
+Recherchez ensuite le `connectionSpec` en examinant la variable `name` . Par exemple, recherchez Amazon Ads, Pega ou SFTP, etc. dans la variable `name` . La variable `id` est la valeur `connectionSpec` que vous pouvez rechercher dans l’appel API suivant.
+
+Par exemple, filtrez vos destinations pour ne renvoyer que les connexions existantes aux connexions Amazon S3 :
+
+```http
+GET /connections?property=connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
+```
+
+**Filtrage des flux de données renvoyés aux destinations uniquement**
+
+Lors de l’interrogation de la variable `/flows` au lieu de renvoyer tous les flux de données de sources et de destinations, vous pouvez utiliser un filtre pour renvoyer uniquement les flux de données aux destinations. Pour ce faire, utilisez `isDestinationFlow` comme paramètre de requête, comme ceci :
+
+```http
+GET /flows?property=inheritedAttributes.properties.isDestinationFlow==true
+```
+
+**Filtrer pour renvoyer des flux de données vers une source ou une destination spécifique uniquement**
+
+Vous pouvez filtrer les flux de données pour renvoyer les flux de données vers une certaine destination ou depuis une certaine source uniquement. Par exemple, filtrez vos destinations pour ne renvoyer que les connexions existantes aux connexions Amazon S3 :
+
+```http
+GET /flows?property=inheritedAttributes.targetConnections[].connectionSpec.id==4890fc95-5a1f-4983-94bb-e060c08e3f81
+```
+
+**Filtrer pour obtenir toutes les exécutions d’un flux de données pour une période spécifique**
+
+Vous pouvez filtrer les exécutions de flux de données d’un flux de données afin de ne consulter que les exécutions dans un certain intervalle de temps, comme ci-dessous :
+
+```
+GET /runs?property=flowId==<flow-id>&property=metrics.durationSummary.startedAtUTC>1593134665781&property=metrics.durationSummary.startedAtUTC<1653134665781
+```
+
+**Filtrer pour renvoyer uniquement les flux de données en échec**
+
+À des fins de débogage, vous pouvez filtrer et afficher toutes les exécutions de flux de données ayant échoué pour un certain flux de données source ou de destination, comme ci-dessous :
+
+```http
+GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Failed
+```
+
 ## Étapes suivantes
 
-Ce guide explique comment utiliser la variable `orderby` et `property` paramètres de requête pour trier et filtrer les réponses dans l’API Flow Service. Pour obtenir des guides détaillés sur l’utilisation de l’API pour les processus courants dans Platform, consultez les tutoriels sur l’API contenus dans la [sources](../../sources/home.md) et [destinations](../../destinations/home.md) documentation.
+Ce guide explique comment utiliser la variable `orderby` et `property` paramètres de requête pour trier et filtrer les réponses dans l’API Flow Service. Pour obtenir des guides détaillés sur l’utilisation de l’API pour les processus courants dans Platform, consultez les tutoriels sur l’API contenus dans la [sources](../../sources/home.md) et [destinations](../../destinations/home.md) la documentation.
