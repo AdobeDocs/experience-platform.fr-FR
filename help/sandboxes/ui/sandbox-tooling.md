@@ -2,10 +2,10 @@
 title: Outils Sandbox
 description: Exportez et importez en toute transparence des configurations Sandbox entre des environnements de test.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 0aaba1d1ae47908ea92e402b284438accb4b4731
+source-git-commit: 1fd523b827a591fdc04ba64a558bc178f242a450
 workflow-type: tm+mt
-source-wordcount: '1821'
-ht-degree: 9%
+source-wordcount: '1834'
+ht-degree: 8%
 
 ---
 
@@ -56,10 +56,9 @@ Le tableau ci-dessous répertorie [!DNL Adobe Journey Optimizer] les objets actu
 | --- | --- | --- |
 | [!DNL Adobe Journey Optimizer] | Audience | Une audience peut être copiée en tant qu’objet dépendant de l’objet parcours. Vous pouvez sélectionner Créer une audience ou réutiliser une audience existante dans l’environnement de test cible. |
 | [!DNL Adobe Journey Optimizer] | Schéma | Les schémas utilisés dans le parcours peuvent être copiés en tant qu’objets dépendants. Vous pouvez sélectionner Créer un nouveau schéma ou en réutiliser un existant dans l’environnement de test cible. |
-| [!DNL Adobe Journey Optimizer] | Message | Les messages utilisés dans le parcours peuvent être copiés en tant qu’objets dépendants. Les activités d’action de canal utilisées dans les champs de parcours, qui sont utilisées pour la personnalisation dans le message, ne sont pas vérifiées pour être complètes. Les blocs de contenu ne sont pas copiés. |
 | [!DNL Adobe Journey Optimizer] | Parcours : détails de la zone de travail | La représentation du parcours sur la zone de travail inclut les objets du parcours, tels que les conditions, les actions, les événements, les audiences de lecture, etc., qui sont copiés. L’activité de saut est exclue de la copie. |
 | [!DNL Adobe Journey Optimizer] | Événement | Les événements et les détails de l’événement utilisés dans le parcours sont copiés. Il crée toujours une nouvelle version dans l’environnement de test cible. |
-| [!DNL Adobe Journey Optimizer] | Action | Les actions et les détails des actions utilisées dans le parcours sont copiés. Il crée toujours une nouvelle version dans l’environnement de test cible. |
+| [!DNL Adobe Journey Optimizer] | Action | Les messages électroniques et push utilisés dans le parcours peuvent être copiés en tant qu’objets dépendants. Les activités d’action de canal utilisées dans les champs de parcours, qui sont utilisées pour la personnalisation dans le message, ne sont pas vérifiées pour être complètes. Les blocs de contenu ne sont pas copiés.<br><br>L’action de mise à jour du profil utilisée dans le parcours peut être copiée. Les actions personnalisées et les détails des actions utilisées dans le parcours sont également copiés. Il crée toujours une nouvelle version dans l’environnement de test cible. |
 
 Les surfaces (par exemple, les paramètres prédéfinis) ne sont pas copiées. Le système sélectionne automatiquement la correspondance la plus proche possible sur l’environnement de test de destination en fonction du type de message et du nom de la surface. Si aucune surface n’est trouvée sur l’environnement de test cible, la copie de surface échoue, ce qui entraîne l’échec de la copie du message, car un message nécessite qu’une surface soit disponible pour la configuration. Dans ce cas, au moins une surface doit être créée pour le bon canal du message pour que la copie fonctionne.
 
