@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Syntaxe SQL dans Query Service
 description: Ce document présente la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 18b8f683726f612a5979ab724067cc9f1bfecbde
+source-git-commit: 67fce2a88b4e75cfb033c6aef40afbca824c9354
 workflow-type: tm+mt
-source-wordcount: '4006'
+source-wordcount: '4134'
 ht-degree: 9%
 
 ---
@@ -375,7 +375,7 @@ DROP VIEW v1
 DROP VIEW IF EXISTS v1
 ```
 
-## Bloc anonyme
+## Bloc anonyme {#anonymous-block}
 
 Un bloc anonyme se compose de deux sections : les sections exécutable et de gestion des exceptions. Dans un bloc anonyme, la section exécutable est obligatoire. Toutefois, la section de gestion des exceptions est facultative.
 
@@ -410,6 +410,109 @@ EXCEPTION
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
 $$END;
+```
+
+### Instructions conditionnelles dans un bloc anonyme {#conditional-anonymous-block-statements}
+
+La structure de contrôle IF-THEN-ELSE permet l’exécution conditionnelle d’une liste d’instructions lorsqu’une condition est évaluée comme TRUE. Cette structure de contrôle ne s&#39;applique qu&#39;à l&#39;intérieur d&#39;un bloc anonyme. Si cette structure est utilisée comme commande autonome, une erreur de syntaxe s’affiche (&quot;Commande non valide en dehors du bloc anonyme&quot;).
+
+Le fragment de code ci-dessous illustre le format correct des instructions conditionnelles IF-THEN-ELSE dans un bloc anonyme.
+
+```javascript
+IF booleanExpression THEN
+   List of statements;
+ELSEIF booleanExpression THEN 
+   List of statements;
+ELSEIF booleanExpression THEN 
+   List of statements;
+ELSE
+   List of statements;
+END IF
+```
+
+**Exemple**
+
+L’exemple ci-dessous exécute `SELECT 200;`.
+
+```sql
+$$BEGIN
+    SET @V = SELECT 2;
+    SELECT @V;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT 200;
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT 'DEFAULT';
+    END IF;   
+
+ END$$;
+```
+
+Cette structure peut être utilisée en combinaison avec `raise_error();` pour renvoyer un message d’erreur personnalisé. Le bloc de code illustré ci-dessous met fin au bloc anonyme avec &quot;message d’erreur personnalisé&quot;.
+
+**Exemple**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 5;
+    SELECT @V;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT 200;
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT raise_error('custom error message');
+    END IF;   
+
+ END$$;
+```
+
+#### Instructions IF imbriquées
+
+Les instructions IF imbriquées sont prises en charge dans les blocs anonymes.
+
+**Exemple**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 1;
+    IF @V = 1 THEN
+       SELECT 100;
+       IF @V > 0 THEN
+         SELECT 1000;
+       END IF;   
+    END IF;   
+
+ END$$; 
+```
+
+#### Blocs d’exception
+
+Les blocs d’exception sont pris en charge dans les blocs anonymes.
+
+**Exemple**
+
+```sql
+$$BEGIN
+    SET @V = SELECT 2;
+    IF @V = 1 THEN
+       SELECT 100;
+    ELSEIF @V = 2 THEN
+       SELECT raise_error(concat('custom-error for v= ', '@V' ));
+
+    ELSEIF @V = 3 THEN
+       SELECT 300;
+    ELSE    
+       SELECT 'DEFAULT';
+    END IF;  
+EXCEPTION WHEN OTHER THEN 
+  SELECT 'THERE WAS AN ERROR';    
+ END$$;
 ```
 
 ### Auto to JSON {#auto-to-json}
@@ -651,7 +754,7 @@ La variable `FILTER CONTEXT` calcule les statistiques sur un sous-ensemble du je
 
 >[!NOTE]
 >
->La variable `Statistics ID` et les statistiques générées ne sont valides que pour chaque session et ne sont pas accessibles dans différentes sessions PSQL.<br><br>Limites:<ul><li>La génération de statistiques n’est pas prise en charge pour les types de données de tableau ou de mappage.</li><li>Les statistiques calculées sont **not** persistaient entre les sessions.</li></ul><br><br>Options:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>Par défaut, l’indicateur est défini sur « true ». Par conséquent, lorsque des statistiques sont demandées sur un type de données qui n’est pas pris en charge, il n’échoue pas, mais ignore silencieusement les champs avec les types de données non pris en charge.<br>Pour activer les notifications d’erreurs lorsque des statistiques sont demandées sur un type de données non pris en charge, utilisez : `SET skip_stats_for_complex_datatypes = false`.
+>La variable `Statistics ID` et les statistiques générées ne sont valides que pour chaque session et ne sont pas accessibles dans différentes sessions PSQL.<br><br>Limites :<ul><li>La génération de statistiques n’est pas prise en charge pour les types de données de tableau ou de mappage.</li><li>Les statistiques calculées sont **not** persistaient entre les sessions.</li></ul><br><br>Options:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>Par défaut, l’indicateur est défini sur « true ». Par conséquent, lorsque des statistiques sont demandées sur un type de données qui n’est pas pris en charge, il n’échoue pas, mais ignore silencieusement les champs avec les types de données non pris en charge.<br>Pour activer les notifications d’erreurs lorsque des statistiques sont demandées sur un type de données non pris en charge, utilisez : `SET skip_stats_for_complex_datatypes = false`.
 
 La sortie de la console s’affiche comme illustré ci-dessous.
 
