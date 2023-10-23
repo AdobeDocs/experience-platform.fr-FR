@@ -4,9 +4,9 @@ user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
-source-git-commit: f9c3e20bdfbf4aa1b206b9efe770e9950fcd62d6
+source-git-commit: 113e74b3a4783a11bc88dc2d16134b68638604e5
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '311'
 ht-degree: 91%
 
 ---
@@ -108,5 +108,6 @@ ht-degree: 91%
    - [Commandes de métadonnées](sql/metadata.md)
    - [Instructions préparées](sql/prepared-statements.md)
 - [Questions fréquentes](troubleshooting-guide.md)
+- [Liste autorisée d’adresses IP](ip-address-allowlist.md)
 - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Notes de mise à jour de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=fr)
