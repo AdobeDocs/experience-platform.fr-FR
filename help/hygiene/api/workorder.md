@@ -2,10 +2,10 @@
 title: Point de terminaison de l’API Work Order
 description: Le point d’entrée /workorder de l’API Data Hygiene vous permet de gérer par programmation les tâches de suppression pour les identités.
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
+source-git-commit: 15f3f7c9e0efb2fe5e9a1acd39b1cf23790355cb
 workflow-type: tm+mt
-source-wordcount: '1181'
-ht-degree: 63%
+source-wordcount: '1281'
+ht-degree: 58%
 
 ---
 
@@ -36,6 +36,10 @@ Vous pouvez supprimer une ou plusieurs identités d’un seul jeu de données ou
 ```http
 POST /workorder
 ```
+
+>[!NOTE]
+>
+>Les requêtes de cycle de vie des données peuvent uniquement modifier des jeux de données en fonction d’identités principales ou d’une carte d’identité. Une requête doit spécifier l’identité principale ou fournir une carte d’identité.
 
 **Requête**
 
@@ -80,7 +84,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `action` | L’action à effectuer. La valeur doit être définie sur `delete_identity` pour les suppressions d’enregistrement. |
-| `datasetId` | Si vous effectuez une suppression dans un seul jeu de données, cette valeur doit correspondre à l’identifiant du jeu de données en question. Si vous effectuez une suppression dans tous les jeux de données, définissez la valeur sur `ALL`.<br><br>Si vous spécifiez un seul jeu de données, une identité principale doit être définie pour le schéma de modèle de données d’expérience (XDM) associé au jeu de données. |
+| `datasetId` | Si vous effectuez une suppression dans un seul jeu de données, cette valeur doit correspondre à l’identifiant du jeu de données en question. Si vous effectuez une suppression dans tous les jeux de données, définissez la valeur sur `ALL`.<br><br>Si vous spécifiez un seul jeu de données, une identité principale doit être définie pour le schéma de modèle de données d’expérience (XDM) associé au jeu de données. Si le jeu de données ne possède pas d’identité principale, il doit alors disposer d’une carte d’identité pour pouvoir être modifié par une requête Data Lifecycle.<br>Si une carte d’identité existe, elle est présente sous la forme d’un champ de niveau supérieur nommé `identityMap`.<br>Notez qu’une ligne de jeu de données peut avoir de nombreuses identités dans sa carte d’identité, mais qu’une seule peut être marquée comme principale. `"primary": true` doit être inclus pour forcer la variable `id` pour correspondre à une identité principale. |
 | `displayName` | Nom d’affichage de la requête de suppression d’enregistrement. |
 | `description` | Description de la requête de suppression d’enregistrement. |
 | `identities` | Un tableau contenant les identités d’au moins un utilisateur dont vous souhaitez supprimer les informations. Chaque identité se compose d’un [espace de noms d’identité](../../identity-service/namespaces.md) et d’une valeur :<ul><li>`namespace` : contient une seule propriété de chaîne, `code`, qui représente l’espace de noms d’identité. </li><li>`id` : la valeur de l’identité.</ul>Si `datasetId` spécifie un seul jeu de données, chaque entité sous `identities` doit utiliser le même espace de noms d’identité que l’identité principale du schéma.<br><br>Si `datasetId` est défini sur `ALL`, le tableau `identities` n’est limité à aucun espace de noms unique, car chaque jeu de données peut être différent. Toutefois, les requêtes sont toujours limitées aux espaces de noms disponibles pour l’organisation, comme indiqué par le [service d’identités](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
