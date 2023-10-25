@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: c171d333569a6006d3399ede07d55ce233c166fa
+source-git-commit: 57d3e136902201f9ba9bd2f427ebe0f876900671
 workflow-type: tm+mt
-source-wordcount: '1182'
-ht-degree: 95%
+source-wordcount: '1185'
+ht-degree: 94%
 
 ---
 
@@ -186,6 +186,7 @@ ht-degree: 95%
       * [Liste autorisée d’adresses IP pour les destinations en flux continu](./catalog/streaming/ip-address-allow-list.md)
    * Destinations d’enquête {#survey}
       * [Présentation des destinations d’enquête](./catalog/survey/overview.md)
+      * [Destination des automatisations Qualtrics](./catalog/survey/qualtrics-automations.md)
       * [Destination de l’extension Foresee](./catalog/survey/foresee.md)
       * [Extension InMoment](./catalog/survey/inmoment.md)
       * [Extension Website Feedback de Qualtrics](./catalog/survey/qualtrics.md)
