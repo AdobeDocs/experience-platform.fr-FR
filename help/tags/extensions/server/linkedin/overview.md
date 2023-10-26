@@ -2,7 +2,7 @@
 title: Extension de transfert d’événement de l’API Conversions liées
 description: Cette extension de transfert d’événement Adobe Experience Platform vous permet de mesurer les performances de votre campagne marketing Linkedin.
 last-substantial-update: 2023-10-25T00:00:00Z
-source-git-commit: ca65f010cda5d37c40fd57075a26e365c76bdc0b
+source-git-commit: e1ed18aa79abae70974df1845c211a00390ecca4
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 4%
@@ -19,7 +19,7 @@ Vous devez créer une règle de conversion dans votre [!DNL LinkedIn] compte pub
 
 ### Créer un secret et un élément de données
 
-Créer `LinkedIn` [secret de transfert d’événement](../../../ui/event-forwarding/secrets.md) et indiquez-lui un nom unique qui signifie membre d’authentification. Elle sera utilisée pour authentifier la connexion à votre compte tout en conservant la valeur en sécurité.
+Créer [!DNL LinkedIn] [secret de transfert d’événement](../../../ui/event-forwarding/secrets.md) et indiquez-lui un nom unique qui signifie membre d’authentification. Elle sera utilisée pour authentifier la connexion à votre compte tout en conservant la valeur en sécurité.
 
 Ensuite, [créer un élément de données ;](../../../ui/managing-resources/data-elements.md#create-a-data-element) en utilisant la variable [!UICONTROL Core] et une [!UICONTROL Secret] type d’élément de données pour référencer la variable `LinkedIn` secret que vous venez de créer.
 
