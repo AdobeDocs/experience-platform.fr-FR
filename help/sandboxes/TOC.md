@@ -4,10 +4,10 @@ user-guide-title: Aide pour les sandbox dans Adobe Experience Platform
 breadcrumb-title: Guide des environnements de test
 user-guide-description: Partitionnez une instance de Platform en environnements virtuels pour le développement, le test et le déploiement d’applications.
 feature: Sandboxes
-source-git-commit: 5675aa0980465b0b1aab18c2ed5869dd5cd64819
+source-git-commit: b5ba5afaa06d27230a211efff25f7f0222fcc23a
 workflow-type: tm+mt
-source-wordcount: '62'
-ht-degree: 87%
+source-wordcount: '71'
+ht-degree: 84%
 
 ---
 
@@ -26,6 +26,12 @@ ht-degree: 87%
    * [Gestion des environnements de test](api/sandboxes.md)
    * [Types de sandbox](api/types.md)
    * [Annexe](api/appendix.md)
+* API des outils Sandbox {#sandbox-tooling-api}
+   * [Aperçu](sandbox-tooling-api/overview.md)
+   * [Prise en main](sandbox-tooling-api/getting-started.md)
+   * [Packages](sandbox-tooling-api/packages.md)
+   * [Outils](sandbox-tooling-api/tools.md)
+   * [Annexe](sandbox-tooling-api/appendix.md)
 * [Guide de dépannage](troubleshooting-guide.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/sandbox)
 * [Notes de mise à jour de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=fr)
