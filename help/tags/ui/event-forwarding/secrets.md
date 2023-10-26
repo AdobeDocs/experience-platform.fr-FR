@@ -2,10 +2,10 @@
 title: Configuration de secrets dans le transfert d’événements
 description: Découvrez comment configurer des secrets dans lʼinterface utilisateur afin de vous authentifier aux points dʼentrée utilisés dans les propriétés de transfert dʼévénement.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: a863d65c3e6e330254a58aa822383c0847b0e5f5
+source-git-commit: 592acdd45b1db5da95430b4e707cd9a2c18c1645
 workflow-type: tm+mt
-source-wordcount: '2182'
-ht-degree: 85%
+source-wordcount: '2458'
+ht-degree: 77%
 
 ---
 
@@ -19,6 +19,7 @@ Les types de secret suivants sont actuellement pris en charge :
 | --- | --- |
 | [!UICONTROL Google OAuth 2] | Contient plusieurs attributs pour prendre en charge la spécification d’authentification [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) pour une utilisation dans l’[API Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) et l’[API Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
 | [!UICONTROL HTTP] | Contient deux attributs de chaîne pour un nom dʼutilisateur et un mot de passe, respectivement. |
+| [!UICONTROL [!DNL LinkedIn] OAuth 2] | Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
 | [!UICONTROL OAuth 2] | Contient plusieurs attributs pour prendre en charge le [type d’octroi des informations d’identification du client](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) pour la spécification d’authentification [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749). Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
 | [!UICONTROL JWT OAuth 2] | Contient plusieurs attributs pour la prise en charge du profil JSON Web Token (JWT) pour [Autorisation OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) subventions. Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
 | [!UICONTROL Jeton] | Chaîne unique de caractères représentant une valeur de jeton dʼauthentification connue et comprise par les deux systèmes. |
@@ -76,6 +77,7 @@ Pour chaque environnement ajouté, vous devez attribuer un nouveau nom unique po
 * [[!UICONTROL OAuth 2]](#oauth2)
 * [[!UICONTROL JWT OAuth 2]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
+* [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
 
 ### [!UICONTROL Jeton] {#token}
 
@@ -175,6 +177,38 @@ Une boîte de dialogue s’affiche et vous permet de saisir les informations d�
 >Si votre organisation a défini une politique de réauthentification pour les applications Google Cloud, les secrets créés ne seront pas actualisés avec succès après l’expiration de l’authentification (entre 1 et 24 heures selon la configuration de la politique).
 >
 >Pour résoudre ce problème, connectez-vous à l’Admin Console Google et accédez à la page **[!DNL App access control]** afin de marquer l’application de transfert d’événement (Adobe Real-Time CDP Event Forwarding) comme [!DNL Trusted]. Reportez-vous à la documentation Google sur comment [définir des durées de session pour les services Google Cloud](https://support.google.com/a/answer/9368756) pour plus d’informations.
+
+### [!UICONTROL [!DNL LinkedIn] OAuth 2] {#linkedin-oauth2}
+
+Pour créer une [!DNL LinkedIn] Secret OAuth 2, sélectionnez **[!UICONTROL [!DNL LinkedIn]OAuth 2]** de la **[!UICONTROL Type]** menu déroulant. Ensuite, sélectionnez **[!UICONTROL Créer un secret]**.
+
+![La variable [!UICONTROL Créer un secret] avec l’onglet [!UICONTROL Type] en surbrillance.](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
+
+Une fenêtre contextuelle s’affiche pour vous informer que le secret doit être autorisé manuellement via [!DNL LinkedIn]. Sélectionner **[!UICONTROL Créer et autoriser le secret avec[!DNL LinkedIn]]** pour continuer.
+
+![[!DNL LinkedIn] surlignage de la fenêtre contextuelle d’autorisation [!UICONTROL Créer et autoriser le secret avec [!DNL LinkedIn]].](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+
+Une boîte de dialogue s’affiche, vous invitant à saisir votre [!DNL LinkedIn] informations d’identification. Suivez les invites pour accorder l’accès au transfert d’événement à vos données.
+
+Une fois le processus d’autorisation terminé, vous revenez à la variable **[!UICONTROL Secrets]** dans laquelle vous pouvez voir le secret que vous venez de créer. Vous pouvez y voir le statut du secret et la date d&#39;expiration.
+
+![La variable [!UICONTROL Secret] en surbrillant le secret nouvellement créé.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
+
+#### Réautoriser un [!UICONTROL [!DNL LinkedIn] OAuth 2] secret
+
+>IMPORTANT
+>
+>Vous devez réautoriser à l’aide de [!DNL LinkedIn] informations d’identification tous les 365 jours. Si vous ne réautorisez pas votre secret dans les délais impartis, il ne sera pas actualisé et la variable [!DNL LinkedIn] les demandes de conversion échoueront.
+
+Trois mois avant la réautorisation du secret, une fenêtre contextuelle s’affiche lorsque vous naviguez sur une page de la propriété. Sélectionner **[!UICONTROL Cliquez ici pour accéder à vos secrets]**.
+
+![La variable [!UICONTROL Présentation de la propriété] onglet surlignant la fenêtre contextuelle de réautorisation secrète.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
+
+Vous êtes redirigé vers le [!UICONTROL Secrets] . Les secrets répertoriés sur cette page sont filtrés pour n’afficher que les secrets qui doivent être réautorisés. Sélectionner **[!UICONTROL Audits nécessaires]** pour le secret que vous devez réautoriser.
+
+![La variable [!UICONTROL Secret] mise en surbrillance des onglets [!UICONTROL Audits nécessaires]pour le [!DNL LinkedIn] secret.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+
+Une boîte de dialogue s’affiche, vous invitant à saisir votre [!DNL LinkedIn] informations d’identification. Suivez les invites pour réautoriser votre secret.
 
 ## Modifier un secret
 

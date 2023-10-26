@@ -2,10 +2,10 @@
 title: Référence des extensions de transfert d’événement
 description: Recherchez la documentation pour les extensions de transfert d’événement dans Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
+source-git-commit: f63d171354e15a23c29c1e579ce816750dea3c97
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 57%
+source-wordcount: '193'
+ht-degree: 56%
 
 ---
 
@@ -37,6 +37,7 @@ Vous trouverez ci-dessous une liste de la documentation relative aux extensions 
 * [API d’événement Epsilon](https://exchange.adobe.com/apps/ec/109127)*
 * [Conversions améliorées de Google Ads](./google-ads-enhanced-conversions/overview.md)
 * [Google Cloud Platform](./google-cloud-platform/overview.md)
+* [[!DNL LinkedIn] API de conversion](./linkedin/overview.md)
 * [[!DNL Mailchimp] Edge](./mailchimp/overview.md)
 * [[!DNL Meta] API de conversion](./meta/overview.md)
 * [[!UICONTROL Microsoft Azure]](./azure/overview.md)

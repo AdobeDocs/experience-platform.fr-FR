@@ -5,9 +5,9 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: c2baf3d14e57df87303aeadeed90203dcd233242
+source-git-commit: f63d171354e15a23c29c1e579ce816750dea3c97
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1033'
 ht-degree: 99%
 
 ---
@@ -228,11 +228,13 @@ ht-degree: 99%
          * [Aperçu](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * Google Cloud Platform {#google-cloud-platform}
          * [Aperçu](./extensions/server/google-cloud-platform/overview.md)
+      * [!DNL LinkedIn Conversions API] {#linkedin}
+         * [Aperçu](./extensions/server/linkedin/overview.md)
       * [!DNL Mailchimp] Edge {#mailchimp}
          * [Aperçu](./extensions/server/mailchimp/overview.md)
       * [!DNL Meta Conversions API] {#meta}
          * [Aperçu](./extensions/server/meta/overview.md)
-      * [!UICONTROL Microsoft Azure] {#azure}
+      * [!DNL Microsoft Azure] {#azure}
          * [Aperçu](./extensions/server/azure/overview.md)
       * [!DNL Mixpanel] {#mixpanel}
          * [Aperçu](./extensions/server/mixpanel/overview.md)
