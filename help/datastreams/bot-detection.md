@@ -1,11 +1,11 @@
 ---
-title: Configuration de la détection des robots
-description: Découvrez comment configurer la détection des robots pour les flux de données.
+title: Configuration de la détection des robots pour les flux de données
+description: Découvrez comment configurer la détection des robots pour les flux de données afin de différencier le trafic humain et non humain.
 hide: true
 hidefromtoc: true
-source-git-commit: 8445d530ca1241d86775ffa7fc49f49cb5a03b72
+source-git-commit: 07b3ff85c1092614a60495e73575907df36d4158
 workflow-type: tm+mt
-source-wordcount: '1353'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
