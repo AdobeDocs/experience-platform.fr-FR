@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4ab89ef7cabc9d808fd9dab24b6dbe3fe23e53f3
+source-git-commit: ac7597a2e63559f3af91d559dd77f7778c9f27bb
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 49%
+source-wordcount: '766'
+ht-degree: 46%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 49%
 Mises à jour des fonctionnalités existantes dans Experience Platform :
 
 - [Collecte de données](#data-collection)
+- [Destinations](#destinations)
 - [Sandbox](#sandboxes)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
@@ -31,6 +32,31 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | Extension | [!DNL Meta] Amélioration de l’API de conversion | Trois améliorations ont été apportées au [API des conversions de métadonnées](/help/tags/extensions/server/meta/overview.md) extension : <ul><li>Intégration avec [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): crée une expérience de connexion transparente en vous permettant de partager votre pixelID et votre jeton d’accès pour l’intégration de l’API Conversions avec Adobe.</li><li>Intégration avec [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): vous permet de diffuser de la publicité aux personnes qui sont plus susceptibles de terminer une action souhaitée et de lier l’action aux publicités diffusées.</li><li>Intégration avec [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): permet de transmettre l’RampID de LiveRamp dans le champ CIP, éliminant ainsi la nécessité de partager les informations d’identification personnelles directement avec des partenaires ou des métadonnées. </li></ul> |
 
 Pour plus d’informations sur la collecte de données, consultez la [vue d’ensemble des collectes de données](../../tags/home.md).
+
+## Destinations {#destinations}
+
+Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+**Fonctionnalités nouvelles ou mises à jour** {#new-updated-destinations}
+
+| Destination | Nouveau ou mis à jour | Description |
+| ----------- |----------------|----------- |
+| [[!DNL MoEngage]](/help/destinations/catalog/mobile-engagement/moengage.md) | Nouveau  | Utilisez la destination Mobile pour connecter et mapper vos données d’Adobe (attributs utilisateur, segments et événements) à MoEngage en temps réel. Les clients peuvent alors agir sur ces données, en proposant des expériences ciblées et personnalisées. |
+| [[!DNL Qualtrics Automations]](/help/destinations/catalog/survey/qualtrics-automations.md) | Nouveau | Utilisez l’agrégation de plusieurs sources de données opérationnelles dans Adobe Experience Platform en tant qu’entrée dans Qualtrics Experience ID pour mieux comprendre vos clients et permettre une sensibilisation ciblée pour combler le fossé en matière de compréhension des facteurs d’intention, d’émotion et d’expérience. |
+
+{style="table-layout:auto"}
+
+**Fonctionnalités nouvelles ou mises à jour** {#destinations-new-updated-functionality}
+
+| Fonction | Description |
+| ----------- | ----------- |
+| Prise en charge des fonctions de hachage dans les champs calculés | En plus des fonctions spécifiques à [exportation de tableaux](../../destinations/ui/export-arrays-calculated-fields.md) ou des éléments d’un tableau, vous pouvez désormais utiliser des [fonctions de hachage](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) pour hacher des attributs dans les fichiers exportés. Les fonctions de hachage prises en charge sont les suivantes : `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+
+{style="table-layout:auto"}
+
+**Correctifs et améliorations** {#destinations-fixes-and-enhancements}
+
+Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
 ## Sandbox {#sandboxes}
 
