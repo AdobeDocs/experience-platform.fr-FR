@@ -1,16 +1,16 @@
 ---
-title: Configurer un flux de données
+title: Création et configuration des flux de données
 description: Découvrez comment connecter votre intégration SDK Web côté client à d’autres produits Adobe et destinations tierces.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: db75771d09caef00db58073333909f730a303975
+source-git-commit: d7a0299c5fe3729620e74602ac99459093cc2e28
 workflow-type: tm+mt
-source-wordcount: '2777'
+source-wordcount: '2779'
 ht-degree: 75%
 
 ---
 
 
-# Configurer un flux de données
+# Création et configuration des flux de données
 
 Ce document décrit les étapes de configuration d’un [flux de données](./overview.md) dans l’interface utilisateur.
 
@@ -72,7 +72,7 @@ Développez l’objet **[!UICONTROL Recherche de périphérique]** pour configur
 | Paramètre | Description |
 | --- | --- |
 | **[!UICONTROL Conserver les en-têtes de l’agent utilisateur et des conseils client]** | Sélectionnez cette option pour ne collecter que les informations stockées dans la chaîne de l’agent utilisateur. Ce paramètre est sélectionné par défaut. Renseigner `xdm.environment.browserDetails.userAgent` |
-| **[!UICONTROL Utilisez la recherche de périphérique pour collecter les informations suivantes :]** | Sélectionnez cette option si vous souhaitez collecter une ou plusieurs des informations suivantes spécifiques à l’appareil : <ul><li>**[!UICONTROL Appareil]** information :<ul><li>**Fabricant de l’appareil**: renseigne `xdm.device.manufacturer`</li><li>**Modèle de périphérique**: renseigne `xdm.device.modelNumber`</li><li>**Nom marketing**: renseigne `xdm.device.model`</li></ul></li><li>**[!UICONTROL Matériel]** information : <ul><li>**Type de matériel**: renseigne `xdm.device.type`</li><li>**Hauteur d’affichage**: renseigne `xdm.device.screenHeight`</li><li>**Largeur d’affichage**: renseigne `xdm.device.screenWidth`</li><li>**Profondeur de couleur d’affichage**: renseigne `xdm.device.colorDepth`</li></ul></li><li>**[!UICONTROL Navigateur]** information : <ul><li>**Fournisseur du navigateur**: renseigne `xdm.environment.browserDetails.vendor`</li><li>**Nom du navigateur**: renseigne `xdm.environment.browserDetails.name`</li><li>**Version du navigateur**: renseigne `xdm.environment.browserDetails.version`</li></ul></li><li>**[!UICONTROL Système d’exploitation]** information : <ul><li>**Fournisseur du système d’exploitation**: renseigne `xdm.environment.operatingSystemVendor`</li><li>**Nom du système d’exploitation**: renseigne `xdm.environment.operatingSystem`</li><li>**Version du système d&#39;exploitation**: renseigne `xdm.environment.operatingSystemVersion`</li></ul></li></ul>Les informations de recherche de périphérique ne peuvent pas être collectées avec l’agent utilisateur et les conseils client. Si vous choisissez de collecter des informations sur l’appareil, la collecte des indices de l’agent utilisateur et du client est désactivée, et vice versa. |
+| **[!UICONTROL Utilisez la recherche de périphérique pour collecter les informations suivantes :]** | Sélectionnez cette option si vous souhaitez collecter une ou plusieurs des informations suivantes spécifiques à l’appareil : <ul><li>**[!UICONTROL Appareil]** information :<ul><li>**Fabricant de l’appareil**: renseigne `xdm.device.manufacturer`</li><li>**Modèle de périphérique**: renseigne `xdm.device.modelNumber`</li><li>**Nom marketing**: renseigne `xdm.device.model`</li></ul></li><li>**[!UICONTROL Matériel]** information : <ul><li>**Type de matériel**: renseigne `xdm.device.type`</li><li>**Hauteur d’affichage**: renseigne `xdm.device.screenHeight`</li><li>**Largeur d’affichage**: renseigne `xdm.device.screenWidth`</li><li>**Profondeur de couleur d’affichage**: renseigne `xdm.device.colorDepth`</li></ul></li><li>**[!UICONTROL Navigateur]** information : <ul><li>**Fournisseur du navigateur**: renseigne `xdm.environment.browserDetails.vendor`</li><li>**Nom du navigateur**: renseigne `xdm.environment.browserDetails.name`</li><li>**Version du navigateur**: renseigne `xdm.environment.browserDetails.version`</li></ul></li><li>**[!UICONTROL Système d’exploitation]** information : <ul><li>**Fournisseur du système d’exploitation**: renseigne `xdm.environment.operatingSystemVendor`</li><li>**Nom du système d’exploitation**: renseigne `xdm.environment.operatingSystem`</li><li>**Version du système d&#39;exploitation**: renseigne `xdm.environment.operatingSystemVersion`</li></ul></li></ul> Les informations de recherche d’appareils ne peuvent pas être collectées avec les indices clients et l’agent utilisateur. Si vous choisissez de collecter des informations sur l’appareil, la collecte des indices de l’agent utilisateur et du client est désactivée, et vice versa. |
 | **[!UICONTROL Ne collectez aucune information sur l’appareil]** | Sélectionnez cette option si vous ne souhaitez collecter aucune information de recherche de périphérique. Aucune donnée sur l’appareil, le matériel, le navigateur, le système d’exploitation, l’agent utilisateur ou l’indice client n’est collectée. |
 
 Si vous activez l’un des champs ci-dessus pour la collecte de données, veillez à définir correctement la variable [`context`](../edge/data-collection/automatic-information.md) Propriété de tableau lorsque [configuration du SDK Web](../edge/fundamentals/configuring-the-sdk.md).
