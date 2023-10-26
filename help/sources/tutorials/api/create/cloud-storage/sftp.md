@@ -2,9 +2,9 @@
 title: Création d’une connexion de base SFTP à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à un serveur SFTP (protocole de transfert de fichiers sécurisé) à l’aide de l’API Flow Service.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: 922e9a26f1791056b251ead2ce2702dfbf732193
+source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
 workflow-type: tm+mt
-source-wordcount: '895'
+source-wordcount: '938'
 ht-degree: 30%
 
 ---
@@ -20,7 +20,7 @@ Ce tutoriel vous guide tout au long des étapes pour créer une connexion de bas
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 >[!IMPORTANT]
 >
@@ -40,7 +40,7 @@ Pour que [!DNL Flow Service] puisse se connecter à [!DNL SFTP], vous devez four
 | `password` | Le mot de passe de votre [!DNL SFTP] serveur. |
 | `privateKeyContent` | Contenu de clé privée SSH codée en Base64. Le type de clé OpenSSH doit être classé en tant que RSA ou DSA. |
 | `passPhrase` | L’expression de passe ou le mot de passe pour déchiffrer la clé privée si le fichier de clé ou le contenu de la clé est protégé par une expression de passe. Si la variable `privateKeyContent` est protégé par mot de passe, ce paramètre doit être utilisé avec comme valeur le mot de passe du contenu de clé privée. |
-| `maxConcurrentConnections` | Ce paramètre vous permet de spécifier une limite maximale pour le nombre de connexions simultanées que Platform va créer lors de la connexion à votre serveur SFTP. Vous devez définir cette valeur sur une valeur inférieure à la limite définie par SFTP. **Remarque**: Lorsque ce paramètre est activé pour un compte SFTP existant, il n’affecte que les flux de données futurs et non les flux de données existants. |
+| `maxConcurrentConnections` | Ce paramètre vous permet de spécifier une limite maximale pour le nombre de connexions simultanées que Platform va créer lors de la connexion à votre serveur SFTP. Vous devez définir cette valeur sur une valeur inférieure à la limite définie par SFTP. **Remarque**: lorsque ce paramètre est activé pour un compte SFTP existant, il n’affecte que les flux de données futurs et non les flux de données existants. |
 | `folderPath` | Chemin d’accès au dossier auquel vous souhaitez accorder l’accès. [!DNL SFTP] source, vous pouvez indiquer le chemin du dossier pour spécifier l’accès de l’utilisateur au sous-dossier de votre choix. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL SFTP] est `b7bf2577-4520-42c9-bae9-cad01560f7bc`. |
 
@@ -50,15 +50,19 @@ Pour plus d’informations sur la manière d’effectuer avec succès des appels
 
 ## Créer une connexion de base
 
+>[!TIP]
+>
+>Une fois créée, vous ne pouvez pas modifier le type d&#39;authentification d&#39;un [!DNL Dynamics] connexion de base. Pour modifier le type d&#39;authentification, vous devez créer une nouvelle connexion de base.
+
 Une connexion de base conserve les informations échangées entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 
-Le [!DNL SFTP] source prend en charge l’authentification et l’authentification de base via la clé publique SSH. Au cours de cette étape, vous pouvez également désigner le chemin d’accès au sous-dossier auquel vous souhaitez accorder l’accès.
+La variable [!DNL SFTP] source prend en charge l’authentification et l’authentification de base via la clé publique SSH. Au cours de cette étape, vous pouvez également désigner le chemin d’accès au sous-dossier auquel vous souhaitez accorder l’accès.
 
 Pour créer un identifiant de connexion de base, envoyez une requête POST au point d’entrée `/connections` lors de la fourniture des informations d’identification d’authentification [!DNL SFTP] dans le cadre des paramètres de requête.
 
 >[!IMPORTANT]
 >
->Le [!DNL SFTP] Le connecteur prend en charge une clé OpenSSH de type RSA ou DSA. Assurez-vous que le contenu de votre fichier clé commence par `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` et se termine par `"-----END [RSA/DSA] PRIVATE KEY-----"`. Si le fichier de clé privée est un fichier au format PPK, utilisez l’outil PuTTY pour effectuer une conversion de PPK au format OpenSSH.
+>La variable [!DNL SFTP] Le connecteur prend en charge une clé OpenSSH de type RSA ou DSA. Assurez-vous que le contenu de votre fichier clé commence par `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` et se termine par `"-----END [RSA/DSA] PRIVATE KEY-----"`. Si le fichier de clé privée est un fichier au format PPK, utilisez l’outil PuTTY pour effectuer une conversion de PPK au format OpenSSH.
 
 **Format d’API**
 
@@ -66,13 +70,11 @@ Pour créer un identifiant de connexion de base, envoyez une requête POST au po
 POST /connections
 ```
 
-**Requête**
-
-La requête suivante permet de créer une connexion de base pour [!DNL SFTP] :
-
 >[!BEGINTABS]
 
 >[!TAB Authentification de base]
+
++++Requête
 
 ```shell
 curl -X POST \
@@ -113,7 +115,24 @@ curl -X POST \
 | `auth.params.folderPath` | Chemin d’accès au dossier auquel vous souhaitez accorder l’accès. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion au serveur SFTP : `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
++++
+
++++Réponse
+
+Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle connexion Cet identifiant est nécessaire pour explorer votre serveur SFTP dans le tutoriel suivant.
+
+```json
+{
+    "id": "bf367b0d-3d9b-4060-b67b-0d3d9bd06094",
+    "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
+}
+```
+
++++
+
 >[!TAB Authentification de clé publique SSH]
+
++++Requête
 
 ```shell
 curl -X POST \
@@ -154,11 +173,11 @@ curl -X POST \
 | `auth.params.passPhrase` | L’expression de passe ou le mot de passe pour déchiffrer la clé privée si le fichier de clé ou le contenu de la clé est protégé par une expression de passe. Si PrivateKeyContent est protégé par mot de passe, ce paramètre doit être utilisé avec comme valeur le mot de passe de PrivateKeyContent. |
 | `auth.params.maxConcurrentConnections` | Nombre maximal de connexions simultanées spécifiées lors de la connexion de Platform à SFTP. Lorsqu’elle est activée, cette valeur doit être définie sur au moins 1. |
 | `auth.params.folderPath` | Chemin d’accès au dossier auquel vous souhaitez accorder l’accès. |
-| `connectionSpec.id` | Le [!DNL SFTP] identifiant de spécification de connexion au serveur : `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
+| `connectionSpec.id` | La variable [!DNL SFTP] identifiant de spécification de connexion au serveur : `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 
->[!ENDTABS]
++++
 
-**Réponse**
++++Réponse
 
 Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle connexion Cet identifiant est nécessaire pour explorer votre serveur SFTP dans le tutoriel suivant.
 
@@ -168,6 +187,10 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
     "etag": "\"1700cc7b-0000-0200-0000-5e3b3fba0000\""
 }
 ```
+
++++
+
+>[!ENDTABS]
 
 ## Étapes suivantes
 

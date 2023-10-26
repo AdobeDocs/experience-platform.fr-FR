@@ -3,10 +3,10 @@ title: Créer une connexion de source Google PubSub dans l’interface utilisat
 description: Découvrez comment créer un connecteur source Google PubSub à l’aide de l’interface utilisateur de Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
+source-git-commit: 563ad16304894cab1ee1ead06f63a5b3f65c4ec2
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 41%
+source-wordcount: '1099'
+ht-degree: 39%
 
 ---
 
@@ -31,12 +31,24 @@ Si vous disposez déjà d’une connexion [!DNL PubSub] valide, vous pouvez igno
 
 Pour connecter [!DNL PubSub] à Platform, vous devez fournir une valeur valide pour les informations d’identification suivantes :
 
+>[!BEGINTABS]
+
+>[!TAB Authentification basée sur un projet]
+
 | Informations d’identification | Description |
-| ---------- | ----------- |
+| --- | --- |
 | Identifiant du projet | Identifiant de projet requis pour authentifier [!DNL PubSub]. |
+| Informations d’identification | Informations d’identification requises pour l’authentification [!DNL PubSub]. Vous devez vous assurer de placer l’intégralité du fichier JSON après avoir supprimé les espaces blancs de vos informations d’identification. |
+
+>[!TAB Authentification par thème et par abonnement]
+
+| Informations d’identification | Description |
+| --- | --- |
 | Informations d’identification | Informations d’identification requises pour l’authentification [!DNL PubSub]. Vous devez vous assurer de placer l’intégralité du fichier JSON après avoir supprimé les espaces blancs de vos informations d’identification. |
 | Nom de la rubrique | Le nom de votre [!DNL PubSub] abonnement. Dans [!DNL PubSub], les abonnements permettent de recevoir des messages, en s’abonnant à la rubrique sur laquelle les messages ont été publiés. **Remarque**: une seule [!DNL PubSub] abonnement ne peut être utilisé que pour un seul flux de données. Pour créer plusieurs flux de données, vous devez disposer de plusieurs abonnements. |
 | Nom de l’abonnement | Le nom de votre [!DNL PubSub] abonnement. Dans [!DNL PubSub], les abonnements permettent de recevoir des messages, en s’abonnant à la rubrique sur laquelle les messages ont été publiés. |
+
+>[!ENDTABS]
 
 Pour plus d’informations sur ces valeurs, consultez le document suivant : [Authentification PubSub](https://cloud.google.com/pubsub/docs/authentication). Si vous utilisez l’authentification par compte de service, consultez le [guide de PubSub](https://cloud.google.com/docs/authentication/production#create_service_account) et suivez les instructions pour générer vos informations d’identification.
 
@@ -68,7 +80,8 @@ Pour utiliser un compte existant, sélectionnez le compte [!DNL PubSub] avec leq
 
 >[!TIP]
 >
->Lors de la création d’un compte avec accès restreint, vous devez indiquer au moins un nom de rubrique ou d’abonnement. L’authentification échoue si les deux valeurs sont manquantes.
+>* Lors de la création d’un compte avec accès restreint, vous devez indiquer au moins un nom de rubrique ou d’abonnement. L’authentification échoue si les deux valeurs sont manquantes.
+>* Une fois créée, vous ne pouvez pas modifier le type d&#39;authentification d&#39;un [!DNL Google PubSub] connexion de base. Pour modifier le type d&#39;authentification, vous devez créer une nouvelle connexion de base.
 
 Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom et une description facultative de votre nouvelle [!DNL PubSub] compte .
 

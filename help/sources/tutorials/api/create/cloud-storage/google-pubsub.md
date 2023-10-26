@@ -3,10 +3,10 @@ title: Créer une connexion source Google PubSub à l’aide de l’API Flow Ser
 description: Découvrez comment connecter Adobe Experience Platform à un compte Google PubSub à l’aide de l’API Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: b157b9147d8ea8100bcaedca272b303a3c04e71a
+source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
 workflow-type: tm+mt
-source-wordcount: '996'
-ht-degree: 65%
+source-wordcount: '1153'
+ht-degree: 59%
 
 ---
 
@@ -31,13 +31,26 @@ Les sections suivantes contiennent des informations supplémentaires que vous de
 
 Pour que [!DNL Flow Service] puisse se connecter à [!DNL PubSub], vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
+>[!BEGINTABS]
+
+>[!TAB Authentification basée sur un projet]
+
 | Informations d’identification | Description |
-| ---------- | ----------- |
+| --- | --- |
 | `projectId` | Identifiant de projet requis pour authentifier [!DNL PubSub]. |
+| `credentials` | Informations d’identification requises pour l’authentification [!DNL PubSub]. Vous devez vous assurer de placer l’intégralité du fichier JSON après avoir supprimé les espaces blancs de vos informations d’identification. |
+| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions cible de base et source. L’identifiant de spécification de connexion [!DNL PubSub] est : `70116022-a743-464a-bbfe-e226a7f8210c`. |
+
+>[!TAB Authentification par thème et par abonnement]
+
+| Informations d’identification | Description |
+| --- | --- |
 | `credentials` | Informations d’identification requises pour l’authentification [!DNL PubSub]. Vous devez vous assurer de placer l’intégralité du fichier JSON après avoir supprimé les espaces blancs de vos informations d’identification. |
 | `topicName` | Nom de la ressource qui représente un flux de messages. Vous devez spécifier un nom de rubrique si vous souhaitez donner accès à un flux de données spécifique dans votre [!DNL PubSub] source. Le format du nom de la rubrique est le suivant : `projects/{PROJECT_ID}/topics/{TOPIC_ID}`. |
 | `subscriptionName` | Le nom de votre [!DNL PubSub] abonnement. Dans [!DNL PubSub], les abonnements permettent de recevoir des messages, en s’abonnant à la rubrique sur laquelle les messages ont été publiés. **Remarque**: une seule [!DNL PubSub] abonnement ne peut être utilisé que pour un seul flux de données. Pour créer plusieurs flux de données, vous devez disposer de plusieurs abonnements. Le format du nom de l&#39;abonnement est le suivant : `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_ID}`. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions cible de base et source. L’identifiant de spécification de connexion [!DNL PubSub] est : `70116022-a743-464a-bbfe-e226a7f8210c`. |
+
+>[!ENDTABS]
 
 Pour plus d’informations sur ces valeurs, voir le document d’[[!DNL PubSub] authentification](https://cloud.google.com/pubsub/docs/authentication). Pour utiliser l’authentification par compte de service, consultez le [[!DNL PubSub] Guide de création de comptes de service](https://cloud.google.com/docs/authentication/production#create_service_account) pour savoir comment générer vos informations d’identification.
 
@@ -50,6 +63,10 @@ Pour plus d’informations sur ces valeurs, voir le document d’[[!DNL PubSub] 
 Pour plus d’informations sur la manière d’effectuer avec succès des appels vers les API Platform, consultez le guide sur la [Prise en main des API Platform](../../../../../landing/api-guide.md).
 
 ## Créer une connexion de base
+
+>[!TIP]
+>
+>Une fois créée, vous ne pouvez pas modifier le type d&#39;authentification d&#39;un [!DNL Google PubSub] connexion de base. Pour modifier le type d&#39;authentification, vous devez créer une nouvelle connexion de base.
 
 La première étape de création d’une connexion source consiste à authentifier votre source [!DNL PubSub] et à générer un identifiant de connexion de base. Un identifiant de connexion de base vous permet d’explorer et de parcourir les fichiers de votre source et d’identifier les éléments spécifiques à ingérer, y compris des informations concernant leurs types et formats de données.
 
@@ -67,11 +84,13 @@ La variable [!DNL PubSub] source vous permet de spécifier le type d’accès qu
 POST /connections
 ```
 
-**Requête**
-
 >[!BEGINTABS]
 
 >[!TAB Authentification basée sur un projet]
+
+Pour créer une connexion de base avec l’authentification basée sur le projet, envoyez une requête de POST à la fonction `/connections` endpoint et fournissez vos `projectId` et `credentials` dans le corps de la requête.
+
++++Requête
 
 ```shell
 curl -X POST \
@@ -104,7 +123,26 @@ curl -X POST \
 | `auth.params.credentials` | Informations d’identification ou clé requises pour authentifier [!DNL PubSub]. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion [!DNL PubSub] : `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
+++++
+
++++Réponse
+
+Une réponse réussie renvoie les détails de la connexion nouvellement créée, y compris son identifiant unique (`id`). Cet identifiant de connexion de base est requis à l’étape suivante pour créer une connexion source.
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+}
+```
+
+++++
+
 >[!TAB Authentification par thème et par abonnement]
+
+Pour créer une connexion de base avec l’authentification par sujet et par abonnement, envoyez une requête de POST à la fonction `/connections` endpoint et fournissez vos `credentials`, `topicName`, et `subscriptionName` dans le corps de la requête.
+
++++Requête
 
 ```shell
 curl -X POST \
@@ -139,9 +177,9 @@ curl -X POST \
 | `auth.params.subscriptionName` | L’ID de projet et l’ID d’abonnement pour la [!DNL PubSub] source à laquelle vous souhaitez donner accès. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion [!DNL PubSub] : `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
->[!ENDTABS]
++++
 
-**Réponse**
++++Réponse
 
 Une réponse réussie renvoie les détails de la connexion nouvellement créée, y compris son identifiant unique (`id`). Cet identifiant de connexion de base est requis à l’étape suivante pour créer une connexion source.
 
@@ -151,6 +189,11 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
     "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
 }
 ```
+
+++++
+
+>[!ENDTABS]
+
 
 ## Créer une connexion source {#source}
 

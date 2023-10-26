@@ -5,10 +5,10 @@ title: Création d’une connexion de base Microsoft Dynamics à l’aide de l�
 type: Tutorial
 description: Découvrez comment connecter Platform à un compte Microsoft Dynamics à l’aide de l’API Flow Service.
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
 workflow-type: tm+mt
-source-wordcount: '639'
-ht-degree: 56%
+source-wordcount: '738'
+ht-degree: 55%
 
 ---
 
@@ -23,7 +23,7 @@ Ce tutoriel vous guide tout au long des étapes pour créer une connexion de bas
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour connecter Platform à un compte Dynamics à l’aide de la variable [!DNL Flow Service] API.
 
@@ -31,16 +31,26 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 Pour que [!DNL Flow Service] puisse se connecter à [!DNL Dynamics], vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
+>[!BEGINTABS]
+
+>[!TAB Authentification de base]
+
 | Informations d’identification | Description |
-| ---------- | ----------- |
+| --- | --- |
 | `serviceUri` | L’URL du service de votre [!DNL Dynamics] instance. |
 | `username` | Le nom d’utilisateur de votre [!DNL Dynamics] compte utilisateur. |
 | `password` | Le mot de passe de votre [!DNL Dynamics] compte . |
+
+>[!TAB Authentification principale et clé de service]
+
+| Informations d’identification | Description |
+| --- | --- |
 | `servicePrincipalId` | L’ID client de votre [!DNL Dynamics] compte . Cet identifiant est requis lors de l’utilisation de l’authentification principale et basée sur les clés du service. |
 | `servicePrincipalKey` | Clé secrète principale du service. Ces informations d’identification sont requises lors de l’utilisation de l’authentification principale et basée sur les clés du service. |
-| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Dynamics] est `38ad80fe-8b06-4938-94f4-d4ee80266b07`. |
 
-Pour plus d’informations sur la prise en main, voir [this [!DNL Dynamics] document](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
+>[!ENDTABS]
+
+Pour plus d’informations sur la prise en main, reportez-vous à la section [this [!DNL Dynamics] document](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/authenticate-oauth).
 
 ### Utiliser les API Platform
 
@@ -48,13 +58,23 @@ Pour plus d’informations sur la manière d’effectuer avec succès des appels
 
 ## Créer une connexion de base
 
+>[!TIP]
+>
+>Une fois créée, vous ne pouvez pas modifier le type d&#39;authentification d&#39;un [!DNL Dynamics] connexion de base. Pour modifier le type d&#39;authentification, vous devez créer une nouvelle connexion de base.
+
 Une connexion de base conserve les informations échangées entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 
 Pour créer un identifiant de connexion de base, envoyez une requête POST au point d’entrée `/connections` et indiquez vos informations d’authentification [!DNL Dynamics] dans les paramètres de la requête.
 
-### Créer une connexion de base [!DNL Dynamics] à l’aide de l’authentification de base
+### Créez un [!DNL Dynamics] connexion de base
 
-Pour créer une [!DNL Dynamics] connexion de base à l’aide de l’authentification de base, effectuez une requête de POST à l’adresse [!DNL Flow Service] API tout en fournissant des valeurs pour la connexion `serviceUri`, `username`, et `password`.
+>[!TIP]
+>
+>Une fois créé, vous ne pouvez pas modifier le type d&#39;authentification d&#39;un [!DNL Dynamics] connexion de base. Pour modifier le type d&#39;authentification, vous devez créer une nouvelle connexion de base.
+
+La première étape de création d’une connexion source consiste à authentifier votre source [!DNL Dynamics] et à générer un identifiant de connexion de base. Un identifiant de connexion de base vous permet d’explorer et de parcourir les fichiers de votre source et d’identifier les éléments spécifiques à ingérer, y compris des informations concernant leurs types et formats de données.
+
+Pour créer un identifiant de connexion de base, envoyez une requête POST au point d’entrée `/connections` lors de la fourniture des informations d’identification d’authentification [!DNL Dynamics] dans le cadre des paramètres de requête.
 
 **Format d’API**
 
@@ -62,7 +82,13 @@ Pour créer une [!DNL Dynamics] connexion de base à l’aide de l’authentific
 POST /connections
 ```
 
-**Requête**
+>[!BEGINTABS]
+
+>[!TAB Authentification de base]
+
+Pour créer une [!DNL Dynamics] connexion de base à l’aide de l’authentification de base, effectuez une requête de POST à l’adresse [!DNL Flow Service] API tout en fournissant des valeurs pour la connexion `serviceUri`, `username`, et `password`.
+
++++Requête
 
 ```shell
 curl -X POST \
@@ -97,7 +123,9 @@ curl -X POST \
 | `auth.params.password` | Le mot de passe associé à votre [!DNL Dynamics] compte . |
 | `connectionSpec.id` | Identifiant de spécification de connexion [!DNL Dynamics] : `38ad80fe-8b06-4938-94f4-d4ee80266b07`. |
 
-**Réponse**
++++
+
++++Réponse
 
 Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer votre système CRM à l’étape suivante. 
 
@@ -108,42 +136,38 @@ Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant d
 }
 ```
 
-### Créez un [!DNL Dynamics] connexion de base à l’aide de l’authentification par clé principale de service
++++
+
+>[!TAB Authentification par clé principale de service]
 
 Pour créer une [!DNL Dynamics] connexion de base à l’aide de l’authentification par clé principale de service, envoyez une requête de POST à la fonction [!DNL Flow Service] API tout en fournissant des valeurs pour la connexion `serviceUri`, `servicePrincipalId`, et `servicePrincipalKey`.
 
-**Format d’API**
-
-```http
-POST /connections
-```
-
-**Requête**
++++Requête
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Dynamics connection",
-        "description": "Dynamics connection using key-based authentication",
-        "auth": {
-            "specName": "Service Principal Key Based Authentication",
-            "params": {
-                "serviceUri": "{SERVICE_URI}",
-                "servicePrincipalId": "{SERVICE_PRINCIPAL_ID}",
-                "servicePrincipalKey": "{SERVICE_PRINCIPAL_KEY}"
-            }
-        },
-        "connectionSpec": {
-            "id": "38ad80fe-8b06-4938-94f4-d4ee80266b07",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Dynamics connection",
+      "description": "Dynamics connection using key-based authentication",
+      "auth": {
+          "specName": "Service Principal Key Based Authentication",
+          "params": {
+              "serviceUri": "{SERVICE_URI}",
+              "servicePrincipalId": "{SERVICE_PRINCIPAL_ID}",
+              "servicePrincipalKey": "{SERVICE_PRINCIPAL_KEY}"
+          }
+      },
+      "connectionSpec": {
+          "id": "38ad80fe-8b06-4938-94f4-d4ee80266b07",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Propriété | Description |
@@ -153,7 +177,9 @@ curl -X POST \
 | `auth.params.servicePrincipalKey` | Clé secrète principale du service. Ces informations d’identification sont requises lors de l’utilisation de l’authentification principale et basée sur les clés du service. |
 | `connectionSpec.id` | Identifiant de spécification de connexion [!DNL Dynamics] : `38ad80fe-8b06-4938-94f4-d4ee80266b07`. |
 
-**Réponse**
++++
+
++++Réponse
 
 Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer votre système CRM à l’étape suivante. 
 
@@ -163,6 +189,11 @@ Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant d
     "etag": "\"9e0052a2-0000-0200-0000-5e35tb330000\""
 }
 ```
+
++++
+
+>[!ENDTABS]
+
 
 ## Étapes suivantes
 
