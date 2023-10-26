@@ -31,7 +31,7 @@ Avant d’ajouter un tableau de bord personnalisé, l’inventaire des tableaux 
 >
 >Pour modifier un tableau de bord existant, sélectionnez le nom du tableau de bord dans la liste de stock, puis cliquez sur l’icône en forme de crayon (![Une icône en forme de crayon.](./images/user-defined-dashboards/edit-icon.png))
 
-Le [!UICONTROL Créer un tableau de bord] s’affiche. Saisissez un nom explicite et convivial pour la collection de widgets que vous souhaitez créer, puis sélectionnez **[!UICONTROL Enregistrer]**.
+La variable [!UICONTROL Créer un tableau de bord] s’affiche. Saisissez un nom explicite et convivial pour la collection de widgets que vous souhaitez créer, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![Boîte de dialogue Créer un tableau de bord .](./images/user-defined-dashboards/create-dashboard-dialog.png)
 
@@ -50,7 +50,7 @@ Dans la nouvelle vue de tableau de bord, sélectionnez **[!UICONTROL Ajouter un 
 >
 >Les tableaux de bord définis par l&#39;utilisateur prennent en charge jusqu&#39;à dix widgets. Une fois que vous avez ajouté dix widgets à votre tableau de bord, l&#39;option [!UICONTROL Ajouter un nouveau widget] est désactivée et apparaît en gris.
 
-![Le nouveau tableau de bord vide avec l’option Ajouter un nouveau widget mise en surbrillance.](./images/user-defined-dashboards/add-new-widget.png)
+![Le nouveau tableau de bord vide avec l’option Ajouter un nouveau widget surlignée.](./images/user-defined-dashboards/add-new-widget.png)
 
 ### Compositeur de widgets
 
@@ -60,7 +60,7 @@ L’espace de travail du compositeur de widgets s’affiche. Ensuite, sélection
 
 #### Sélectionner le modèle de données {#select-data-model}
 
-Le [!UICONTROL Sélectionner le modèle de données] s’affiche. Sélectionnez un modèle de données dans la colonne de gauche pour afficher la liste de tous les tableaux disponibles. Le modèle de données préconfiguré de Real-time Customer Data Platform est nommé [!UICONTROL CDPInsights].
+La variable [!UICONTROL Sélectionner le modèle de données] s’affiche. Sélectionnez un modèle de données dans la colonne de gauche pour afficher la liste de prévisualisation de tous les tableaux disponibles. Le modèle de données préconfiguré de Real-time Customer Data Platform est nommé [!UICONTROL CDPInsights].
 
 >[!TIP]
 >
@@ -82,7 +82,7 @@ Sélectionner **[!UICONTROL Suivant]** pour confirmer votre choix du modèle de 
 
 ### Renseigner le widget {#populate-widget}
 
-Le [!UICONTROL Aperçu] contient des onglets pour [!UICONTROL Exemples d’enregistrements] et [!UICONTROL Attributs]. Le [!UICONTROL Exemples d’enregistrements] fournit un sous-ensemble des enregistrements de la table sélectionnée dans une vue tabulée. Le [!UICONTROL Attributs] fournit le nom de l’attribut, le type de données et la table source pour chaque attribut associé au tableau sélectionné.
+La variable [!UICONTROL Aperçu] contient des onglets pour [!UICONTROL Exemples d’enregistrements] et [!UICONTROL Attributs]. La variable [!UICONTROL Exemples d’enregistrements] fournit un sous-ensemble des enregistrements de la table sélectionnée dans une vue tabulée. La variable [!UICONTROL Attributs] fournit le nom de l’attribut, le type de données et la table source pour chaque attribut associé au tableau sélectionné.
 
 Sélectionnez un tableau dans la liste disponible dans le rail de gauche pour fournir des données à votre widget, puis sélectionnez **[!UICONTROL Sélectionner]** pour revenir au compositeur de widget.
 
@@ -96,7 +96,7 @@ Le modèle de données et le tableau actuellement sélectionné sont affichés d
 
 #### Ajout et filtrage d’attributs {#add-and-filter-attributes}
 
-Cliquez sur l’icône d’ajout (![Une icône d’ajout.](./images/user-defined-dashboards/add-icon.png)) en regard d’un nom d’attribut pour ajouter un attribut à votre widget. Le menu déroulant qui s’affiche vous permet d’ajouter un attribut en tant qu’axe X, axe Y, couleur ou filtre pour votre widget. Le [!UICONTROL Couleur] vous permet de différencier les résultats des marques des axes X et Y en fonction de la couleur. Pour ce faire, il divise les résultats en différentes couleurs en fonction de leur composition d’un troisième attribut.
+Cliquez sur l’icône d’ajout (![Une icône d’ajout.](./images/user-defined-dashboards/add-icon.png)) en regard d’un nom d’attribut pour ajouter un attribut à votre widget. Le menu déroulant qui s’affiche vous permet d’ajouter un attribut en tant qu’axe X, axe Y, couleur ou filtre pour votre widget. La variable [!UICONTROL Couleur] vous permet de différencier les résultats des marques des axes X et Y en fonction de la couleur. Pour ce faire, il divise les résultats en différentes couleurs en fonction de leur composition d’un troisième attribut.
 
 >[!TIP]
 >
@@ -116,7 +116,7 @@ En ajoutant un attribut comme filtre, vous pouvez sélectionner les valeurs à i
 
 Pour filtrer les données historiques des insights générés par votre widget, ajoutez la variable `date_key` comme filtre et sélectionnez **[!UICONTROL Date récente]** suivie de **[!UICONTROL Appliquer]**. Ce filtre permet de s’assurer que les données utilisées pour obtenir des informations proviennent de l’instantané système le plus récent.
 
-![Le [!UICONTROL Filtre : date_key] Boîte de dialogue avec [!UICONTROL Date récente] et [!UICONTROL Appliquer] surlignée.](./images/user-defined-dashboards/recent-date.png)
+![La variable [!UICONTROL Filtre : date_key] Boîte de dialogue avec [!UICONTROL Date récente] et [!UICONTROL Appliquer] surlignée.](./images/user-defined-dashboards/recent-date.png)
 
 Vous pouvez également créer une période personnalisée en fonction de laquelle filtrer vos données. Sélectionner **[!UICONTROL Sélectionner des dates]** pour étendre la boîte de dialogue avec une liste de dates disponibles. Utilisez la variable **[!UICONTROL Tout sélectionner]** pour activer ou désactiver toutes les options disponibles, ou cochez la case correspondant à chaque jour individuellement. Enfin, sélectionnez **[!UICONTROL Appliquer]** pour confirmer vos choix.
 
@@ -124,7 +124,7 @@ Vous pouvez également créer une période personnalisée en fonction de laquell
 >
 >Si la variable `date_key` a déjà été ajouté en tant que filtre, sélectionnez les points de suspension suivis de **[!UICONTROL Modifier]** des options de la liste déroulante pour modifier la période de filtrage.
 
-![Le [!UICONTROL Filtre : date_key] avec des cases à cocher de jour individuelles cochées et non cochées.](./images/user-defined-dashboards/select-dates.png)
+![La variable [!UICONTROL Filtre : date_key] avec des cases à cocher de jour individuelles cochées et non cochées.](./images/user-defined-dashboards/select-dates.png)
 
 ### Propriétés du widget
 
@@ -134,7 +134,7 @@ Cliquez sur l’icône Propriétés (![Icône Propriétés.](./images/user-defin
 
 Dans le panneau des propriétés du widget, vous pouvez modifier plusieurs aspects de votre widget. Vous disposez d’un contrôle total pour modifier l’emplacement de la légende du widget. Pour déplacer la légende, sélectionnez l’option [!UICONTROL Emplacement des légendes] et choisissez l’emplacement de votre choix dans la liste des options disponibles. Vous pouvez également renommer le libellé associé à la légende, ainsi que l’axe X ou Y en entrant un nouveau nom dans la variable [!UICONTROL Titre de la légende] champ de texte ou [!UICONTROL Libellé de l&#39;axe] Champ de texte, respectivement.
 
-#### Enregistrez votre widget. {#save-widget}
+#### Enregistrement du widget {#save-widget}
 
 L’enregistrement dans le compositeur de widgets enregistre le widget localement dans votre tableau de bord. Si vous souhaitez enregistrer votre travail et reprendre ultérieurement, sélectionnez **[!UICONTROL Enregistrer]**. Une icône de coche sous le nom du widget indique que le widget a été enregistré. Lorsque vous êtes satisfait de votre widget, vous pouvez également sélectionner **[!UICONTROL Enregistrer et fermer]** pour rendre le widget disponible pour tous les autres utilisateurs ayant accès à votre tableau de bord. Sélectionner **[!UICONTROL Annuler]** pour abandonner votre travail et revenir à votre tableau de bord personnalisé.
 
@@ -158,7 +158,7 @@ Une fois que vous avez créé un widget, vous pouvez dupliquer l’intégralité
 
 Sélectionnez l’icône de crayon (![Une icône en forme de crayon.](./images/user-defined-dashboards/edit-icon.png)) en haut à droite de votre tableau de bord personnalisé pour entrer en mode de modification.
 
-![Un tableau de bord personnalisé avec l’icône en forme de crayon mise en surbrillance.](./images/user-defined-dashboards/edit-mode.png)
+![Un tableau de bord personnalisé avec l’icône en forme de crayon surlignée.](./images/user-defined-dashboards/edit-mode.png)
 
 Sélectionnez ensuite les ellipses situées en haut à droite du widget que vous souhaitez copier, puis choisissez **[!UICONTROL Dupliquer]** dans la liste des options disponibles.
 

@@ -2,13 +2,13 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;mettre à jour les flux de données;modifier la planification
 description: Ce tutoriel décrit les étapes de mise à jour d’un planning de flux de données, y compris sa fréquence d’ingestion et son taux d’intervalle, à l’aide de l’espace de travail Sources .
 solution: Experience Platform
-title: Mise à jour d’un flux de données de connexion source dans l’interface utilisateur
+title: Mettre à jour un flux de données de connexion source dans l’interface utilisateur
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 source-git-commit: cef5c203acf3318445399669336166e6627ebe66
 workflow-type: tm+mt
 source-wordcount: '782'
-ht-degree: 13%
+ht-degree: 20%
 
 ---
 
@@ -21,7 +21,7 @@ Ce tutoriel vous explique comment mettre à jour un flux de données existant, y
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ## Mettre à jour des flux de données {#update-dataflows}
 
@@ -34,7 +34,7 @@ Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]
 
 ![catalogue](../../images/tutorials/update-dataflows/catalog.png)
 
-Le [!UICONTROL Flux de données] contient une liste de tous les flux de données existants, y compris des informations sur leur jeu de données cible, leur source et leur nom de compte correspondant.
+La variable [!UICONTROL Flux de données] contient une liste de tous les flux de données existants, y compris des informations sur leur jeu de données cible, leur source et leur nom de compte correspondant.
 
 Pour trier la liste, sélectionnez l’icône de filtre ![filter](../../images/tutorials/update/filter.png) en haut à gauche pour utiliser le panneau de tri.
 
@@ -60,7 +60,7 @@ L’étape [!UICONTROL Ajouter les données] apparaît. Sélectionnez le format 
 
 ### Détails du flux de données
 
-Dans le [!UICONTROL Détails du flux de données] , vous pouvez fournir un nom et une description mis à jour pour votre flux de données et reconfigurer le seuil d’erreur de votre flux de données. Au cours de cette étape, vous pouvez également configurer ou modifier les paramètres de votre abonnement aux alertes.
+Dans le [!UICONTROL Détails du flux de données] , vous pouvez fournir un nom et une description mis à jour pour votre flux de données, ainsi que reconfigurer le seuil d’erreur de votre flux de données. Au cours de cette étape, vous pouvez également configurer ou modifier les paramètres de votre abonnement aux alertes.
 
 Une fois les valeurs mises à jour fournies, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -72,17 +72,17 @@ Une fois les valeurs mises à jour fournies, sélectionnez **[!UICONTROL Suivant
 >
 >La fonction de modification du mappage n’est actuellement pas prise en charge pour les sources suivantes : Adobe Analytics, Adobe Audience Manager, API HTTP et [!DNL Marketo Engage].
 
-Le [!UICONTROL Mappage] vous fournit une interface dans laquelle vous pouvez ajouter et supprimer des jeux de mappages associés à votre flux de données.
+La variable [!UICONTROL Mappage] vous fournit une interface dans laquelle vous pouvez ajouter et supprimer des jeux de mappages associés à votre flux de données.
 
 L’interface de mappage affiche le jeu de mappage existant de votre flux de données et non un nouveau jeu de mappage recommandé. Les mises à jour du mappage ne sont appliquées qu’aux exécutions de flux de données planifiées à l’avenir. Les jeux de mappages d’un flux de données planifié pour une ingestion unique ne peuvent pas être mis à jour.
 
-À partir de là, vous pouvez utiliser l’interface de mappage pour modifier les jeux de mappages appliqués à votre flux de données. Pour obtenir des instructions complètes sur l’utilisation de l’interface de mappage, reportez-vous à la section [guide de l’interface utilisateur de la préparation de données](../../../data-prep/ui/mapping.md) pour plus d’informations.
+À partir de là, vous pouvez utiliser l’interface de mappage pour modifier les jeux de mappages appliqués à votre flux de données. Pour obtenir des instructions complètes sur l’utilisation de l’interface de mappage, voir [guide de l’interface utilisateur de la préparation de données](../../../data-prep/ui/mapping.md) pour plus d’informations.
 
 ![mappage](../../images/tutorials/update-dataflows/mapping.png)
 
 ### Planification
 
-Le [!UICONTROL Planification] s’affiche, ce qui vous permet de mettre à jour le planning d’ingestion de votre flux de données et d’ingérer automatiquement les données source sélectionnées avec les mappages mis à jour.
+La variable [!UICONTROL Planification] s’affiche, ce qui vous permet de mettre à jour le planning d’ingestion de votre flux de données et d’ingérer automatiquement les données source sélectionnées avec les mappages mis à jour.
 
 >[!NOTE]
 >
@@ -96,13 +96,13 @@ Dans la page des flux de données, sélectionnez les ellipses (`...`) en regard 
 
 ![edit-schedule](../../images/tutorials/update-dataflows/edit-schedule.png)
 
-Le **[!UICONTROL Modifier le planning]** La boîte de dialogue vous fournit des options permettant de mettre à jour la fréquence d’ingestion et le taux d’intervalle de votre flux de données. Une fois que vous avez défini les valeurs de fréquence et d’intervalle mises à jour, sélectionnez **[!UICONTROL Enregistrer]**.
+La variable **[!UICONTROL Modifier le planning]** La boîte de dialogue vous fournit des options permettant de mettre à jour la fréquence d’ingestion et le taux d’intervalle de votre flux de données. Une fois les valeurs de fréquence et d’intervalle mises à jour, sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![planning-pop-up](../../images/tutorials/update-dataflows/schedule-pop-up.png)
 
 ### Réviser
 
-Le **[!UICONTROL Réviser]** s’affiche, ce qui vous permet de consulter votre flux de données avant qu’il ne soit mis à jour.
+La variable **[!UICONTROL Réviser]** s’affiche, ce qui vous permet de consulter votre flux de données avant qu’il ne soit mis à jour.
 
 Une fois que vous avez examiné votre flux de données, sélectionnez **[!UICONTROL Terminer]** et laisser un certain temps au flux de données avec les nouveaux jeux de mappage à créer.
 

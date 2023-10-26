@@ -123,23 +123,23 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Créer un secret]** pour
 
 Pour créer un secret JWT OAuth 2, sélectionnez **[!UICONTROL JWT OAuth 2]** de la **[!UICONTROL Type]** menu déroulant.
 
-![Le [!UICONTROL Créer un secret] avec le secret JWT OAuth 2 mis en surbrillance dans l’onglet [!UICONTROL Type] menu déroulant.](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+![La variable [!UICONTROL Créer un secret] avec le secret JWT OAuth 2 mis en surbrillance dans la [!UICONTROL Type] menu déroulant.](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
 
 >[!NOTE]
 >
 >La seule [!UICONTROL Algorithme] qui est actuellement pris en charge pour la signature du JWT est RS256.
 
-Dans les champs qui s’affichent ci-dessous, fournissez vos [!UICONTROL Émetteur], [!UICONTROL Objet], [!UICONTROL Audience], [!UICONTROL Demandes personnalisées], [!UICONTROL TTL], puis sélectionnez la variable [!UICONTROL Algorithme] dans la liste déroulante. Ensuite, saisissez le [!UICONTROL Id De Clé Privée], ainsi que vos [[!UICONTROL URL du jeton]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) pour votre intégration OAuth. Le [!UICONTROL URL du jeton] n’est pas un champ obligatoire. Si une valeur est fournie, le jeton JWT est échangé avec un jeton d’accès. Le secret sera actualisé en fonction de la variable `expires_in` de la réponse et de la variable [!UICONTROL Actualiser le décalage] . Si aucune valeur n’est fournie, le secret envoyé au bord est le JWT. Le jeton JWT sera actualisé en fonction de la variable [!UICONTROL TTL] et [!UICONTROL Actualiser le décalage] valeurs.
+Dans les champs qui s’affichent ci-dessous, fournissez vos [!UICONTROL Émetteur], [!UICONTROL Objet], [!UICONTROL Audience], [!UICONTROL Demandes personnalisées], [!UICONTROL TTL], puis sélectionnez la variable [!UICONTROL Algorithme] dans la liste déroulante. Ensuite, saisissez le [!UICONTROL Id De Clé Privée], ainsi que vos [[!UICONTROL URL du jeton]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) pour votre intégration OAuth. La variable [!UICONTROL URL du jeton] n’est pas un champ obligatoire. Si une valeur est fournie, le jeton JWT est échangé avec un jeton d’accès. Le secret sera actualisé en fonction des `expires_in` de la réponse et de la variable [!UICONTROL Actualiser le décalage] . Si aucune valeur n’est fournie, le secret envoyé au bord est le JWT. Le jeton JWT sera actualisé en fonction de la variable [!UICONTROL TTL] et [!UICONTROL Actualiser le décalage] valeurs.
 
-![Le [!UICONTROL Créer un secret] avec une sélection de champs de saisie en surbrillance.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+![La variable [!UICONTROL Créer un secret] avec une sélection de champs de saisie en surbrillance.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
 
 Sous **[!UICONTROL Options d’identification]**, vous pouvez fournir d’autres options d’identification, telles que `jwt_param` sous la forme de paires clé-valeur. Pour ajouter des paires clé-valeur supplémentaires, sélectionnez **[!UICONTROL Ajouter une autre]**.
 
-![Le [!UICONTROL Créer un secret] mise en surbrillance de l’onglet [!UICONTROL Options d’identification] champs.](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+![La variable [!UICONTROL Créer un secret] mise en surbrillance de l’onglet [!UICONTROL Options d’identification] des champs.](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
 
 Enfin, vous pouvez configurer la valeur **[!UICONTROL Actualiser le décalage]** pour le secret. Cette valeur représente le nombre de secondes avant l’expiration du jeton pendant lesquelles le système effectue une actualisation automatique. L’équivalent en heures et minutes s’affiche à droite du champ et se met automatiquement à jour au fur et à mesure que vous tapez.
 
-![Le [!UICONTROL Créer un secret] mise en surbrillance de l’onglet [!UICONTROL Actualiser le décalage] champ .](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+![La variable [!UICONTROL Créer un secret] mise en surbrillance de l’onglet [!UICONTROL Actualiser le décalage] champ .](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
 
 Par exemple, si le décalage d’actualisation est défini sur la valeur par défaut de `1800` (30 minutes) et le jeton d’accès comporte une `expires_in` valeur de `3600` (une heure), le système actualise automatiquement le secret en une heure.
 
@@ -151,7 +151,7 @@ Par exemple, si le décalage d’actualisation est défini sur la valeur par dé
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Créer un secret]** pour enregistrer le secret.
 
-![Le [!UICONTROL Créer un secret] mise en surbrillance des onglets [!UICONTROL Créer un secret]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
+![La variable [!UICONTROL Créer un secret] mise en surbrillance des onglets [!UICONTROL Créer un secret]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 

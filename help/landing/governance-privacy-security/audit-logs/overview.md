@@ -68,7 +68,7 @@ Le tableau ci-dessous présente les actions sur lesquelles les ressources sont e
 
 Lorsque la fonction est activée pour votre organisation, les journaux d’audit sont automatiquement collectés au fur et à mesure de l’activité. Vous n’avez pas besoin d’activer manuellement la collecte des journaux.
 
-Pour afficher et exporter les journaux d’audit, vous devez disposer de la variable **[!UICONTROL Afficher le journal d’activité utilisateur]** l’autorisation de contrôle d’accès accordée (trouvée sous [!UICONTROL Gouvernance des données] catégorie). Pour savoir comment gérer les autorisations individuelles pour les fonctionnalités de Platform, reportez-vous à la section [documentation sur le contrôle d’accès](../../../access-control/home.md).
+Pour afficher et exporter les journaux d’audit, vous devez disposer de la variable **[!UICONTROL Afficher le journal d’activité utilisateur]** l’autorisation de contrôle d’accès accordée (trouvée sous [!UICONTROL Gouvernance des données] catégorie). Pour savoir comment gérer les autorisations individuelles pour les fonctionnalités de Platform, reportez-vous au [documentation sur le contrôle d’accès](../../../access-control/home.md).
 
 ## Gestion des journaux d’audit dans l’interface utilisateur {#managing-audit-logs-in-the-ui}
 
@@ -79,7 +79,7 @@ Pour afficher et exporter les journaux d’audit, vous devez disposer de la vari
 
 Vous pouvez afficher les journaux d’audit pour différentes fonctionnalités d’Experience Platform dans le **[!UICONTROL Audits]** dans l’interface utilisateur de Platform. L’espace de travail affiche une liste des journaux enregistrés, triés par défaut du plus récent au moins récent.
 
-![Le tableau de bord Audits met en surbrillance les Audits dans le menu de gauche.](../../images/audit-logs/audits.png)
+![Le tableau de bord Audits surligne les Audits dans le menu de gauche.](../../images/audit-logs/audits.png)
 
 Les journaux d’audit sont conservés pendant 365 jours, après quoi ils seront supprimés du système. Par conséquent, vous ne pouvez revenir en arrière que pendant une période maximale de 365 jours. Si vous avez besoin de données de plus de 365 jours, vous devez exporter les journaux à un rythme régulier afin de répondre aux exigences de votre stratégie interne.
 
@@ -120,7 +120,7 @@ Les données du journal d’audit renvoyées contiennent les informations suivan
 | [!UICONTROL Nom de la ressource] | La valeur de la variable [!UICONTROL Nom de la ressource] dépend de la catégorie choisie comme filtre. |
 | [!UICONTROL Catégorie] | Ce champ correspond à la catégorie sélectionnée dans la liste déroulante des filtres. |
 | [!UICONTROL Action] | Les actions disponibles dépendent de la catégorie choisie comme filtre. |
-| [!UICONTROL Utilisateur] | Ce champ indique l’ID utilisateur qui a exécuté la requête. |
+| [!UICONTROL Utilisateur] | Ce champ indique l’identifiant de l’utilisateur qui a exécuté la requête. |
 
 ![Le tableau de bord Audits avec le journal d’activité filtré en surbrillance.](../../images/audit-logs/filtered.png)
 
@@ -128,7 +128,7 @@ Les données du journal d’audit renvoyées contiennent les informations suivan
 
 Pour exporter la liste actuelle des journaux d’audit, sélectionnez **[!UICONTROL Journal de téléchargement]**.
 
-![Le tableau de bord Audits avec le [!UICONTROL Journal de téléchargement] surlignée.](../../images/audit-logs/download.png)
+![Le tableau de bord Audits avec la variable [!UICONTROL Journal de téléchargement] surlignée.](../../images/audit-logs/download.png)
 
 Dans la boîte de dialogue qui s’affiche, sélectionnez le format de votre choix (soit **[!UICONTROL CSV]** ou **[!UICONTROL JSON]**), puis sélectionnez **[!UICONTROL Télécharger]**. Le navigateur télécharge le fichier généré et l’enregistre sur votre ordinateur.
 

@@ -7,7 +7,7 @@ exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
 workflow-type: tm+mt
 source-wordcount: '657'
-ht-degree: 36%
+ht-degree: 37%
 
 ---
 
@@ -24,7 +24,7 @@ Ce guide d’utilisation décrit les étapes à suivre pour surveiller vos donn�
 >title="Taux d&#39;ingestion"
 >abstract="Le nombre d&#39;événements traités avec succès par seconde."
 >text="Learn more in the documentation"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html" text="Surveillance des flux de données pour les sources dans l&#39;interface utilisateur"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=fr" text="Surveillance des flux de données pour les sources dans l&#39;interface utilisateur"
 
 >[!TIP]
 >

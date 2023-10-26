@@ -34,11 +34,11 @@ When [définition d’un nouveau champ](./overview.md#define) dans l’interface
 
 ![](../../images/ui/fields/special/identity.png)
 
-D’autres contrôles s’affichent après avoir coché la case. Si vous souhaitez que ce champ soit l’identité Principale du schéma, sélectionnez la variable **[!UICONTROL Identité Principal]** .
+D’autres contrôles s’affichent après avoir coché la case. Si vous souhaitez que ce champ soit l’identité principale du schéma, sélectionnez la variable **[!UICONTROL Identité du Principal]** .
 
 >[!NOTE]
 >
->Un schéma unique peut comporter de nombreux champs d’identité définis, mais ne peut comporter qu’une seule identité Principale. Tous les champs d’identité (Principaux ou non) contribuent au graphique d’identités pour un client individuel, mais Real-Time Customer Profile utilise uniquement l’identité Principale comme source de vérité lors de la fusion de fragments de données. Si vous souhaitez activer un schéma à utiliser dans Profile, une identité Principale doit être définie pour le schéma.
+>Un schéma unique peut comporter de nombreux champs d’identité définis, mais ne peut comporter qu’une seule identité principale. Tous les champs d’identité (principaux ou autres) contribuent au graphique d’identités pour un client individuel, mais Real-Time Customer Profile utilise uniquement l’identité principale comme source de vérité lors de la fusion de fragments de données. Si vous souhaitez activer un schéma à utiliser dans Profile, une identité principale doit être définie pour le schéma.
 
 Sous **[!UICONTROL Espace de noms d’identité]**, utilisez le menu déroulant pour sélectionner l’espace de noms approprié pour le champ d’identité. Les espaces de noms standard fournis par Adobe sont répertoriés, ainsi que les espaces de noms personnalisés définis par votre organisation.
 
@@ -48,11 +48,11 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]** pour appliq
 
 La zone de travail se met à jour pour refléter les modifications, le champ sélectionné gagnant un symbole d’empreinte (![](../../images/ui/fields/special/identity-symbol.png)) pour le désigner comme identité. Dans le rail de gauche, le champ d’identité est désormais répertorié sous le nom de la classe ou du groupe de champs de schéma qui fournit le champ au schéma.
 
-Si le champ a également été défini comme identité Principale, il sera également répertorié sous **[!UICONTROL Champs obligatoires]** dans le rail de gauche. Si le champ d’identité est imbriqué dans la structure du schéma, tous les champs parents sont également répertoriés selon les besoins.
+Si le champ a également été défini comme identité principale, il sera également répertorié sous **[!UICONTROL Champs obligatoires]** dans le rail de gauche. Si le champ d’identité est imbriqué dans la structure du schéma, tous les champs parents sont également répertoriés selon les besoins.
 
 ![](../../images/ui/fields/special/identity-applied.png)
 
-Si vous avez défini une identité Principale pour le schéma, vous pouvez maintenant passer à [Activation du schéma à utiliser dans Real-time Customer Profile](../resources/schemas.md#profile).
+Si vous avez défini une identité principale pour le schéma, vous pouvez maintenant passer à [Activation du schéma à utiliser dans Real-time Customer Profile](../resources/schemas.md#profile).
 
 ## Étapes suivantes
 

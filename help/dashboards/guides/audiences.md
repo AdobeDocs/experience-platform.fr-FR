@@ -7,13 +7,13 @@ exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
 workflow-type: tm+mt
 source-wordcount: '3053'
-ht-degree: 40%
+ht-degree: 41%
 
 ---
 
-# [!UICONTROL Audiences] tableau de bord {#audiences-dashboard}
+# Tableau de bord des [!UICONTROL Audiences] {#audiences-dashboard}
 
-L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos audiences, telles qu’elles sont capturées lors d’un instantané quotidien. Ce guide explique comment accéder à et utiliser le [!UICONTROL Audiences] tableau de bord dans l’interface utilisateur et fournit des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
+L’interface utilisateur (IU) d’Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos audiences, présentées ainsi lors d’un instantané quotidien. Ce guide explique comment accéder à et utiliser le [!UICONTROL Audiences] tableau de bord dans l’interface utilisateur et fournit des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
 
 Pour obtenir un aperçu de toutes les fonctionnalités du service de segmentation d’Adobe Experience Platform au sein de l’interface utilisateur de la plateforme, veuillez consulter le [Guide de l’interface utilisateur du service de segmentation](../../segmentation/ui/overview.md).
 
@@ -33,7 +33,7 @@ Pour accéder au [!UICONTROL Audiences] Tableau de bord dans l’interface utili
 
 >[!NOTE]
 >
->Si votre organisation découvre Platform et ne dispose pas encore de jeux de données Profile actifs ni de stratégies de fusion, la variable [!UICONTROL Audiences] tableau de bord n’est pas visible. Au lieu de cela, l’onglet [!UICONTROL Présentation] affiche des liens et de la documentation pour vous aider à démarrer avec la segmentation.
+>Si votre organisation débute sur Platform et ne dispose pas encore de jeux de données de profils actifs ou de politiques de fusion créés, le tableau de bord [!UICONTROL Audiences] n’est pas visible. Au lieu de cela, l’onglet [!UICONTROL Présentation] affiche des liens et de la documentation pour vous aider à démarrer avec la segmentation.
 
 ![La variable [!UICONTROL Audiences] tableau de bord [!UICONTROL Présentation] avec [!UICONTROL Audiences] et [!UICONTROL Présentation] surlignée.](../images/audiences/dashboard-overview.png)
 

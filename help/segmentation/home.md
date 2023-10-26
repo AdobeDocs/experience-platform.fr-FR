@@ -6,7 +6,7 @@ exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
 source-wordcount: '1635'
-ht-degree: 97%
+ht-degree: 98%
 
 ---
 
@@ -89,7 +89,7 @@ Les audiences par lots sont automatiquement évaluées toutes les 24 heures. Si
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Évaluation Edge"
->abstract="La segmentation Edge permet d’évaluer instantanément les segments dans Platform sur le réseau Edge, ce qui permet d’activer les cas d’utilisation de personnalisation de la même page et de la page suivante."
+>abstract="La segmentation Edge permet d’évaluer instantanément les segments dans Platform sur le réseau Edge, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=fr" text="Guide de l’interface utilisateur de segmentation Edge"
 
 La segmentation Edge permet d’évaluer instantanément les segments dans Platform. [sur le réseau Edge](../edge/home.md), activation des cas d’utilisation de la personnalisation de la même page et de la page suivante.

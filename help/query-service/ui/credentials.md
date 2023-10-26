@@ -26,15 +26,15 @@ Vous pouvez utiliser des informations d’identification arrivant à expiration 
 
 ![L’onglet Informations d’identification du tableau de bord Requêtes avec la section Informations d’identification arrivant à expiration est mise en surbrillance.](../images/ui/credentials/expiring-credentials.png)
 
-Le **[!UICONTROL Expiration des informations d’identification]** fournit les informations suivantes :
+La variable **[!UICONTROL Expiration des informations d’identification]** fournit les informations suivantes :
 
-- **[!UICONTROL Hôte]**: Nom de l’hôte auquel connecter votre client. Le nom de votre organisation est alors intégré dans le ruban supérieur de l’interface utilisateur de Platform.
-- **[!UICONTROL Port]**: Numéro de port de l’hôte auquel se connecter.
-- **[!UICONTROL Base]**: Nom de la base de données à laquelle connecter un client.
-- **[!UICONTROL Nom d’utilisateur]**: Nom d’utilisateur utilisé pour se connecter à Query Service.
-- **[!UICONTROL Mot de passe]**: Mot de passe utilisé pour se connecter à Query Service. Les mots de passe de l’interface utilisateur ont été hachés pour des raisons de sécurité. Sélectionnez l’icône de copie (![Icône Copier.](../images/ui/credentials/copy-icon.png)) pour copier vos informations d’identification complètes et non hachées dans le presse-papiers.
-- **[!UICONTROL PSQL, commande]**: Une commande qui a automatiquement inséré toutes les informations pertinentes pour vous connecter à Query Service à l’aide de PSQL sur la ligne de commande.
-- **[!UICONTROL Expires]**: Date et heure d’expiration des informations d’identification arrivant à expiration. La durée de validité par défaut du jeton est de 24 heures, mais elle peut être modifiée dans les paramètres avancés du Admin Console.
+- **[!UICONTROL Hôte]**: nom de l’hôte auquel connecter votre client. Le nom de votre organisation est alors intégré dans le ruban supérieur de l’interface utilisateur de Platform.
+- **[!UICONTROL Port]**: numéro de port de l’hôte auquel se connecter.
+- **[!UICONTROL Base]**: nom de la base de données à laquelle connecter un client.
+- **[!UICONTROL Nom d’utilisateur]**: nom d’utilisateur utilisé pour se connecter à Query Service.
+- **[!UICONTROL Password]**: mot de passe utilisé pour la connexion à Query Service. Les mots de passe de l’interface utilisateur ont été hachés pour des raisons de sécurité. Sélectionnez l’icône de copie (![Icône Copier.](../images/ui/credentials/copy-icon.png)) pour copier vos informations d’identification complètes et non hachées dans le presse-papiers.
+- **[!UICONTROL PSQL, commande]**: une commande qui a automatiquement inséré toutes les informations pertinentes pour vous connecter à Query Service à l’aide de PSQL sur la ligne de commande.
+- **[!UICONTROL Expires]**: date et heure d’expiration des informations d’identification arrivant à expiration. La durée de validité par défaut du jeton est de 24 heures, mais elle peut être modifiée dans les paramètres avancés du Admin Console.
 
 >[!TIP]
 >
@@ -42,7 +42,7 @@ Le **[!UICONTROL Expiration des informations d’identification]** fournit les i
 >
 >![L’onglet Paramètres du Admin Console avec la confidentialité et la sécurité, les paramètres d’authentification et la durée de session maximale est mis en surbrillance.](../images/ui/credentials/max-session-life.png)
 >
->Pour plus d’informations sur le [Paramètres avancés](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) proposé par Admin Console.
+>Pour plus d’informations sur la rubrique [Paramètres avancés](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) proposé par Admin Console.
 
 ## Informations d’identification non arrivant à expiration {#non-expiring-credentials}
 
@@ -50,7 +50,7 @@ Vous pouvez utiliser des informations d’identification non arrivant à expirat
 
 >[!NOTE]
 >
->Les informations d’identification non expirantes présentent les limites suivantes :<br><ul><li>Les utilisateurs doivent se connecter avec leur nom d’utilisateur et leur mot de passe. `{technicalAccountId}:{credential}`. Vous trouverez plus d’informations dans la section [Génération des informations d’identification](#generate-credentials) .</li><li>Lors de la création des informations d’identification arrivant à expiration, un nouveau rôle avec un ensemble d’autorisations de base est créé pour permettre aux utilisateurs d’afficher les schémas et les jeux de données. L’autorisation &quot;gérer les requêtes&quot; est également affectée à ce rôle pour une utilisation avec Query Service.</li><li>Les clients tiers peuvent effectuer des opérations différentes de celles attendues lors de la mise en liste des objets de requête. Par exemple, certains clients tiers, tels que [!DNL DB Visualizer] n’affiche pas le nom de la vue dans le panneau de gauche. Cependant, le nom de la vue est accessible s’il est appelé dans une requête SELECT. De même, [!DNL PowerUI] peut ne pas répertorier les vues temporaires créées via SQL à sélectionner pour la création du tableau de bord.</li></ul>
+>Les informations d’identification non expirantes présentent les limites suivantes :<br><ul><li>Les utilisateurs doivent se connecter avec leur nom d’utilisateur et leur mot de passe. `{technicalAccountId}:{credential}`. Vous trouverez plus d’informations dans la section [Génération des informations d’identification](#generate-credentials) .</li><li>Lors de la création des informations d’identification arrivant à expiration, un nouveau rôle avec un ensemble d’autorisations de base est créé pour permettre aux utilisateurs d’afficher les schémas et les jeux de données. L’autorisation &quot;gérer les requêtes&quot; est également affectée à ce rôle en vue d’une utilisation avec Query Service.</li><li>Les clients tiers peuvent réaliser des performances différentes de celles attendues lors de la mise en liste des objets de requête. Par exemple, certains clients tiers, tels que [!DNL DB Visualizer] n’affiche pas le nom de la vue dans le panneau de gauche. Cependant, le nom de la vue est accessible s’il est appelé dans une requête SELECT. De même, [!DNL PowerUI] peut ne pas répertorier les vues temporaires créées via SQL à sélectionner pour la création du tableau de bord.</li></ul>
 
 ### Conditions préalables
 
@@ -60,7 +60,7 @@ Avant de pouvoir générer des informations d’identification non arrivant à e
 2. [Sélection dʼun profil de produit.](../../access-control/ui/browse.md)
 3. [Configurez les **Environnements de test** et **Gestion de l’intégration de Query Service** permissions](../../access-control/ui/permissions.md) pour le profil de produit.
 4. [Ajout d’un nouvel utilisateur à un profil de produit](../../access-control/ui/users.md) ils reçoivent donc les autorisations configurées.
-5. [Ajout de l’utilisateur en tant qu’administrateur de profil de produit](https://helpx.adobe.com/fr/enterprise/using/manage-product-profiles.html) pour permettre la création d’un compte pour tout profil de produit principal.
+5. [Ajout de l’utilisateur en tant qu’administrateur de profil de produit](https://helpx.adobe.com/fr/enterprise/using/manage-product-profiles.html) pour permettre la création d’un compte pour tout profil de produit actif.
 6. [Ajout de l’utilisateur en tant que développeur de profil de produit](https://helpx.adobe.com/fr/enterprise/using/manage-developers.html) afin de créer une intégration.
 
 Pour en savoir plus sur l’affectation d’autorisations, consultez la documentation sur [contrôle d&#39;accès](../../access-control/home.md).
@@ -75,10 +75,10 @@ Pour créer un ensemble d’informations d’identification non arrivant à expi
 
 Une boîte de dialogue s’affiche, vous permettant de générer des informations d’identification. Pour créer des informations d’identification non expirantes, vous devez fournir les détails suivants :
 
-- **[!UICONTROL Nom]**: Nom des informations d’identification que vous générez.
-- **[!UICONTROL Description]**: (Facultatif) Description des informations d’identification que vous générez.
-- **[!UICONTROL Affecté à]**: L’utilisateur auquel les informations d’identification seront attribuées. Cette valeur doit correspondre à l’adresse électronique de l’utilisateur qui crée les informations d’identification.
-- **[!UICONTROL Mot de passe]** (Facultatif) Mot de passe facultatif pour vos informations d’identification. Si le mot de passe n’est pas défini, Adobe génère automatiquement un mot de passe.
+- **[!UICONTROL Nom]**: nom des informations d’identification que vous générez.
+- **[!UICONTROL Description]**: (facultatif) description des informations d’identification que vous générez.
+- **[!UICONTROL Affecté à]**: utilisateur auquel les informations d’identification seront attribuées. Cette valeur doit correspondre à l’adresse électronique de l’utilisateur qui crée les informations d’identification.
+- **[!UICONTROL Password]** (Facultatif) Mot de passe facultatif pour vos informations d’identification. Si le mot de passe n’est pas défini, Adobe génère automatiquement un mot de passe.
 
 Une fois que vous avez fourni tous les détails requis, sélectionnez **[!UICONTROL Génération des informations d’identification]** pour générer vos informations d’identification.
 
@@ -104,9 +104,9 @@ Vous pouvez modifier ou supprimer vos informations d’identification non arriva
 
 Lors de la modification d’informations d’identification non expirantes, un modal s’affiche. Vous pouvez fournir les détails suivants à mettre à jour :
 
-- **[!UICONTROL Nom]**: Nom des informations d’identification que vous générez.
-- **[!UICONTROL Description]**: (Facultatif) Description des informations d’identification que vous générez.
-- **[!UICONTROL Affecté à]**: L’utilisateur auquel les informations d’identification seront attribuées. Cette valeur doit correspondre à l’adresse électronique de l’utilisateur qui crée les informations d’identification.
+- **[!UICONTROL Nom]**: nom des informations d’identification que vous générez.
+- **[!UICONTROL Description]**: (facultatif) description des informations d’identification que vous générez.
+- **[!UICONTROL Affecté à]**: utilisateur auquel les informations d’identification seront attribuées. Cette valeur doit correspondre à l’adresse électronique de l’utilisateur qui crée les informations d’identification.
 
 ![Boîte de dialogue Mettre à jour le compte .](../images/ui/credentials/update-credentials.png)
 
@@ -133,7 +133,7 @@ Le tableau ci-dessous décrit les paramètres généralement requis pour se conn
 | **Port** | port du serveur/hôte auquel vous vous connectez. <ul><li>Cette valeur est utilisée pour les informations d’identification arrivant à expiration et les informations d’identification non arrivant à expiration. Elle se trouve sous **[!UICONTROL Port]** dans le [!UICONTROL EXPIRATION DES INFORMATIONS D’IDENTIFICATION] .</ul></li> | `80` |
 | **Base de données** | La base de données à laquelle vous vous connectez. <ul><li>Cette valeur est utilisée pour les informations d’identification arrivant à expiration et les informations d’identification non arrivant à expiration et se trouve sous **[!UICONTROL Base]** dans le [!UICONTROL EXPIRATION DES INFORMATIONS D’IDENTIFICATION] . </ul></li> | `prod:all` |
 | **Nom d’utilisateur** | Nom d’utilisateur de l’utilisateur qui se connecte au client externe. <ul><li>Cette valeur est utilisée pour les informations d’identification arrivant à expiration et les informations d’identification non arrivant à expiration. Il prend la forme d’une chaîne alphanumérique avant `@AdobeOrg`. Cette valeur se trouve sous **[!UICONTROL Nom d’utilisateur]**.</li></ul> | `ECBB80245ECFC73E8A095EC9@AdobeOrg` |
-| **Mot de passe** | Mot de passe de l’utilisateur qui se connecte au client externe. <ul><li>Si vous utilisez des informations d’identification arrivant à expiration, vous pouvez le trouver sous **[!UICONTROL Mot de passe]** dans le [!UICONTROL EXPIRATION DES INFORMATIONS D’IDENTIFICATION] .</li><li>Si vous utilisez des informations d’identification qui ne expirent pas, cette valeur correspond aux arguments concaténés de l’ID de compte technique et aux informations d’identification extraites du fichier JSON de configuration. La valeur du mot de passe se présente comme suit : `{technicalAccountId}:{credential}`. </li></ul> | <ul><li>Le mot de passe des informations d’identification arrivant à expiration est une chaîne alphanumérique de plus de mille caractères. Aucun exemple ne sera donné.</li><li>Le mot de passe des informations d’identification non expirantes est le suivant :<br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
+| **Mot de passe** | Mot de passe de l’utilisateur qui se connecte au client externe. <ul><li>Si vous utilisez des informations d’identification arrivant à expiration, vous pouvez le trouver sous **[!UICONTROL Password]** dans la fonction [!UICONTROL EXPIRATION DES INFORMATIONS D’IDENTIFICATION] .</li><li>Si vous utilisez des informations d’identification qui ne expirent pas, cette valeur correspond aux arguments concaténés de l’ID de compte technique et aux informations d’identification extraites du fichier JSON de configuration. La valeur du mot de passe se présente comme suit : `{technicalAccountId}:{credential}`. </li></ul> | <ul><li>Le mot de passe des informations d’identification arrivant à expiration est une chaîne alphanumérique de plus de mille caractères. Aucun exemple ne sera donné.</li><li>Le mot de passe des informations d’identification non expirantes est le suivant :<br>`4F2611B8613DK3670V495N55:3d182fa9e0b54f33a7881305c06203ee`</li></ul> |
 
 {style="table-layout:auto"}
 

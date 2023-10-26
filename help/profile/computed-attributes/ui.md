@@ -1,13 +1,13 @@
 ---
 title: Guide de l’interface utilisateur des attributs calculés
 description: Découvrez comment créer, afficher et mettre à jour des attributs calculés à l’aide de l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: 631b67eb6609381235113009acefaf0d0cd8063c
+exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1485'
-ht-degree: 4%
+ht-degree: 12%
 
 ---
-
 
 # Guide de l’interface utilisateur des attributs calculés
 
@@ -42,7 +42,7 @@ Pour sélectionner les champs visibles, vous pouvez sélectionner ![icône de co
 | [!UICONTROL Dernière évaluation] | Cet horodatage représente la dernière opération d’évaluation réussie. Seuls les événements qui se sont produits **before** cet horodatage est pris en compte dans la dernière évaluation réussie. |
 | [!UICONTROL Dernier état d’évaluation] | État qui indique si l’attribut calculé a été correctement calculé lors de la dernière exécution d’évaluation. Les valeurs possibles incluent : **[!UICONTROL Succès]** ou **[!UICONTROL En échec]**. |
 | [!UICONTROL Fréquence d’actualisation] | Une indication sur la fréquence à laquelle l’attribut calculé doit être actualisé. Les valeurs possibles sont toutes les heures, tous les jours, toutes les semaines ou tous les mois. |
-| [!UICONTROL Actualisation rapide] | Une valeur qui indique si l’actualisation rapide est activée ou non pour cet attribut de calcul. Si l’actualisation rapide est activée, l’attribut calculé peut être actualisé quotidiennement, plutôt que sur une base hebdomadaire, bimensuelle ou mensuelle. Cette valeur s’applique uniquement aux attributs calculés avec une période de recherche arrière supérieure à une base hebdomadaire. |
+| [!UICONTROL Actualisation rapide] | Une valeur qui indique si l’actualisation rapide est activée ou non pour cet attribut de calcul. Si l’actualisation rapide est activée, l’attribut calculé peut être actualisé quotidiennement, plutôt que sur une base hebdomadaire, bimensuelle ou mensuelle. Cette valeur s’applique uniquement aux attributs calculés avec une période de recherche en amont plus longue que la base hebdomadaire. |
 | [!UICONTROL Statut du cycle de vie] | État actuel de l’attribut calculé. Il existe trois états possibles : <ul><li>**[!UICONTROL Version préliminaire]:** L’attribut calculé fait **not** ont déjà un champ créé sur le schéma. Dans cet état, l’attribut calculé peut être modifié. </li><li>**[!UICONTROL Publié]:** L’attribut calculé comporte un champ créé sur le schéma et est prêt à être utilisé. Dans cet état, l’attribut calculé **cannot** être édités.</li><li>**[!UICONTROL Inactif]:** L’attribut calculé est désactivé. Pour plus d’informations sur l’état inactif, consultez la section [Page FAQ](./faq.md#inactive-status). </li> |
 | [!UICONTROL Créé] | Horodatage indiquant la date et l’heure de création de l’attribut calculé. |
 | [!UICONTROL Dernière modification] | Horodatage indiquant la date et l’heure de la dernière modification de l’attribut calculé. |
@@ -106,13 +106,13 @@ Après avoir appliqué la fonction d’agrégation, vous devrez définir la pér
 >[!CONTEXTUALHELP]
 >id="platform_profile_computedAttributes_fastRefresh"
 >title="Actualisation rapide"
->abstract="Une actualisation rapide vous permet de garder vos attributs à jour. L’activation de cette option vous permet d’actualiser quotidiennement vos attributs calculés, même pour des périodes de recherche en amont plus longues, ce qui vous permet de réagir rapidement aux activités de l’utilisateur. Cette valeur s’applique uniquement aux attributs calculés avec une période de recherche arrière supérieure à une base hebdomadaire."
+>abstract="Une actualisation rapide vous permet de garder vos attributs à jour. L’activation de cette option vous permet d’actualiser quotidiennement vos attributs calculés, même pour des périodes de recherche en amont plus longues, ce qui vous permet de réagir rapidement aux activités de l’utilisateur ou de l’utilisatrice. Cette valeur s’applique uniquement aux attributs calculés avec une période de recherche en amont plus longue que la base hebdomadaire."
 
 Lors de l’application de la fonction d’agrégation, vous pouvez activer une actualisation rapide si la période de recherche arrière est supérieure à une semaine.
 
 ![La variable [!UICONTROL Actualisation rapide] est mise en surbrillance.](./images/ui/enable-fast-refresh.png)
 
-Une actualisation rapide vous permet de garder vos attributs à jour. L’activation de cette option vous permet d’actualiser quotidiennement vos attributs calculés, même pour des périodes de recherche en amont plus longues, ce qui vous permet de réagir rapidement aux activités de l’utilisateur.
+Une actualisation rapide vous permet de garder vos attributs à jour. L’activation de cette option vous permet d’actualiser quotidiennement vos attributs calculés, même pour des périodes de recherche en amont plus longues, ce qui vous permet de réagir rapidement aux activités de l’utilisateur ou de l’utilisatrice.
 
 Pour plus d’informations sur l’actualisation rapide, veuillez lire la section [section actualisation rapide](./overview.md#fast-refresh) de la présentation des attributs calculés.
 
@@ -154,4 +154,4 @@ Après avoir créé un attribut calculé, vous pouvez utiliser **publié** attri
 
 ## Étapes suivantes
 
-Pour en savoir plus sur les attributs calculés, veuillez lire le [présentation des attributs calculés](./overview.md). Pour plus d’informations sur la création et la configuration des attributs calculés à l’aide de l’API, veuillez lire le [guide de développement des attributs calculés](./api.md).
+Pour en savoir plus sur les attributs calculés, veuillez lire la [Vue d’ensemble sur les attributs calculés](./overview.md). Pour plus d’informations sur la création et la configuration des attributs calculés à l’aide de l’API, veuillez lire le [guide de développement des attributs calculés](./api.md).

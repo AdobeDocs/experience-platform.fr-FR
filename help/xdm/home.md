@@ -58,7 +58,7 @@ Pour plus d’informations sur la gestion et l’interaction avec les schémas d
 Les données pouvant être utilisées dans Experience Platform sont regroupées selon trois types de comportements :
 
 * **Enregistrement** : fournit des informations sur les attributs d’un sujet. Un sujet peut être une organisation ou un individu.
-* **Série temporelle** : fournit un instantané du système au moment où une action a été entreprise directement ou indirectement par un sujet enregistré.
+* **Série temporelle** : fournit un instantané du système au moment où une action a été entreprise directement ou indirectement par un objet d’enregistrement.
 * **Ad hoc** : capture les champs dont l’espace de noms n’est utilisable que par un seul jeu de données. Les schémas ad hoc sont utilisés dans plusieurs workflows d’ingestion de données pour Experience Platform, notamment dans l’ingestion de fichiers CSV et dans la création de certains types de connexions sources.
 
 Tous les schémas XDM décrivent des données pouvant être catégorisées en tant qu’enregistrement ou série temporelle. Le comportement des données d’un schéma est défini par la classe du schéma attribuée à celui-ci lorsqu’il est créé pour la première fois. Les classes XDM décrivent le plus petit nombre de propriétés qu’un schéma doit contenir pour représenter un comportement de données spécifique.
@@ -71,9 +71,9 @@ Bien que vous puissiez définir vos propres classes dans le [!DNL Schema Registr
 
 ### [!UICONTROL XDM Individual Profile] {#xdm-individual-profile}
 
-[!UICONTROL XDM Individual Profile] est une classe basée sur les enregistrements qui forme une représentation singulière des attributs des sujets identifiés et partiellement identifiés.  Les profils hautement identifiés peuvent être utilisés pour des communications personnelles ou des engagements ciblés et peuvent contenir des informations personnelles détaillées telles que le nom, le genre, la date de naissance, l’adresse et les coordonnées, y compris les numéros de téléphone et les adresses e-mail.
+[!UICONTROL XDM Individual Profile] est une classe basée sur les enregistrements qui forme une représentation singulière des attributs des sujet identifiés et partiellement identifiés.  Les profils hautement identifiés peuvent être utilisés pour des communications personnelles ou des engagements ciblés et peuvent contenir des informations personnelles détaillées telles que le nom, le genre, la date de naissance, l’adresse et les coordonnées, y compris les numéros de téléphone et les adresses e-mail.
 
-Les profils moins identifiés peuvent n’être constitués que de signaux comportementaux anonymes tels que les cookies de navigateur. Dans ce cas, les données de profil éparses sont utilisées pour constituer une base d’informations dans laquelle les intérêts et les préférences du profil anonyme sont rassemblés et stockés. Ces identifiants peuvent devenir plus détaillés avec le temps si le sujet s’inscrit pour recevoir des notifications, souscrit à des abonnements, effectue des achats, etc. Ce développement des attributs de profil peut permettre d’obtenir un sujet identifié et un degré plus élevé d’engagement ciblé.
+Les profils moins identifiés peuvent n’être constitués que de signaux comportementaux anonymes tels que les cookies de navigateur. Dans ce cas, les données de profil éparses sont utilisées pour constituer une base d’informations dans laquelle les intérêts et les préférences du profil anonyme sont rassemblés et stockés. Ces identifiants peuvent devenir plus détaillés avec le temps si l’objet s’inscrit pour recevoir des notifications, souscrit à des abonnements, effectue des achats, etc. Ce développement des attributs de profil peut permettre d’obtenir un objet identifié et un degré plus élevé d’engagement ciblé.
 
 Au fur et à mesure qu’un profil croît, il devient un solide référentiel des informations personnelles, des informations d’identification, des coordonnées et des préférences de communication d’une personne.
 
@@ -81,7 +81,7 @@ Pour plus d’informations sur la structure et le cas d’utilisation des champs
 
 ### [!UICONTROL XDM ExperienceEvent] {#xdm-experience-event}
 
-XDM ExperienceEvent est une classe basée sur une série temporelle utilisée pour capturer l’état du système lorsqu’un événement (ou un ensemble d’événements) se produit, y compris le moment et l’identité du sujet concerné. Les événements d’expérience sont des enregistrements factuels non modifiables de ce qui s’est produit à un moment précis, reprenant les faits sans aucune agrégation ni interprétation. Ils sont essentiels à l’analyse du domaine temporel, puisqu’ils peuvent être utilisés pour analyser les modifications survenant au cours d’une période donnée et pour comparer plusieurs périodes afin de suivre les tendances.
+XDM ExperienceEvent est une classe basée sur une série temporelle utilisée pour capturer l’état du système lorsqu’un événement (ou un ensemble d’événements) se produit, y compris le moment et l’identité du titulaire concerné. Les événements d’expérience sont des enregistrements factuels non modifiables de ce qui s’est produit à un moment précis, reprenant les faits sans aucune agrégation ni interprétation. Ils sont essentiels à l’analyse du domaine temporel, puisqu’ils peuvent être utilisés pour analyser les modifications survenant au cours d’une période donnée et pour comparer plusieurs périodes afin de suivre les tendances.
 
 Les événements d’expérience peuvent être explicites ou implicites. Les événements explicites sont des actions humaines directement observables qui ont lieu à un moment donné d’un parcours. Les événements implicites se produisent sans action humaine directe, mais restent liés à un individu. Les événements implicites incluent, par exemple, l’envoi planifié de newsletters par e-mail ou l’arrivée d’une batterie à un certain seuil de tension.
 

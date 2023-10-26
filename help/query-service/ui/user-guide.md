@@ -72,7 +72,7 @@ Pour activer les thèmes sombres ou lumineux, sélectionnez l’icône de param�
 
 L’édition améliorée de Query Editor vous permet d’écrire plusieurs requêtes dans Query Editor et d’exécuter toutes les requêtes de manière séquentielle.
 
-L’exécution de plusieurs requêtes dans une séquence génère chacune une entrée de journal. Toutefois, seuls les résultats de la première requête s’affichent dans la console de l’éditeur de requêtes. Vérifiez le journal des requêtes si vous devez résoudre ou confirmer les requêtes qui ont été exécutées. Voir [documentation sur les journaux de requête](./query-logs.md) pour plus d’informations.
+L’exécution de plusieurs requêtes dans une séquence génère chacune une entrée de journal. Toutefois, seuls les résultats de la première requête s’affichent dans la console de l’éditeur de requêtes. Vérifiez le journal des requêtes si vous devez résoudre ou confirmer les requêtes qui ont été exécutées.   Pour plus d’informations, consultez la [documentation sur les journaux de requêtes](./query-logs.md).
 
 >[!NOTE]
 > 

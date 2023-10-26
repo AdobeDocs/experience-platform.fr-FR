@@ -16,7 +16,7 @@ ht-degree: 26%
 
 >[!IMPORTANT]
 >
->Sources de diffusion en continu, telles que [Source de l’API HTTP](../../sources/connectors/streaming/http.md) ne sont actuellement pas pris en charge par le tableau de bord de surveillance. Actuellement, vous ne pouvez utiliser que le tableau de bord pour surveiller les sources de lots.
+>Les sources de diffusion en continu, telles que [Source de l’API HTTP](../../sources/connectors/streaming/http.md) ne sont actuellement pas pris en charge par le tableau de bord de surveillance. Actuellement, vous ne pouvez utiliser que le tableau de bord pour surveiller les sources de lots.
 
 Dans Adobe Experience Platform, les données sont ingérées à partir d’une grande variété de sources, analysées dans Experience Platform et activées vers un grand nombre de destinations. En offrant de la transparence au niveau des flux de données, Platform facilite le processus de suivi de ce flux de données potentiellement non linéaire.
 
@@ -29,11 +29,11 @@ Ce tutoriel décrit les étapes à suivre pour surveiller votre flux de données
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [Flux de données](../home.md) : les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Les flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, vers [!DNL Identity] et [!DNL Profile], et vers [!DNL Destinations].
-   * [Exécutions de flux de données](../../sources/notifications.md): Les exécutions de flux de données sont les tâches planifiées récurrentes en fonction de la configuration de fréquence des flux de données sélectionnés.
+   * [Exécutions de flux de données](../../sources/notifications.md): les exécutions de flux de données sont les tâches planifiées récurrentes en fonction de la configuration de fréquence des flux de données sélectionnés.
 * [Sources](../../sources/home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform.
 * [Service d’identités](../../identity-service/home.md) : obtenez une meilleure compréhension des clients individuels et de leurs comportements en reliant les identités entre les appareils et les systèmes.
 * [Profil client en temps réel](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ## Vue de surveillance agrégée {#aggregated-monitoring-view}
 
@@ -49,7 +49,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 >abstract="Le traitement des sources contient des informations sur l&#39;état de l&#39;activité des données et des mesures dans le service de lac de données, y compris les enregistrements ingérés et les enregistrements ayant échoué. Consultez le guide de définition des mesures pour en savoir plus sur les mesures et les graphiques."
 >text="Learn more in documentation"
 
-Dans le [Interface utilisateur de Platform](https://platform.adobe.com), sélectionnez **[!UICONTROL Surveillance]** dans le volet de navigation de gauche pour accéder à la fonction [!UICONTROL Surveillance] tableau de bord. Le [!UICONTROL Surveillance] Le tableau de bord contient des mesures et des informations sur tous les flux de données de sources, y compris des informations sur l’intégrité du trafic de données d’une source à [!DNL Identity Service]et à [!DNL Profile].
+Dans le [Interface utilisateur de Platform](https://platform.adobe.com), sélectionnez **[!UICONTROL Surveillance]** dans le volet de navigation de gauche pour accéder à la fonction [!UICONTROL Surveillance] tableau de bord. La variable [!UICONTROL Surveillance] Le tableau de bord contient des mesures et des informations sur tous les flux de données de sources, y compris des informations sur l’intégrité du trafic de données d’une source à [!DNL Identity Service]et à [!DNL Profile].
 
 Au centre du tableau de bord se trouve l’objet [!UICONTROL Ingestion source] qui contient des mesures et des graphiques qui affichent des données sur les enregistrements ingérés et en échec.
 
@@ -63,15 +63,15 @@ Une fenêtre contextuelle de calendrier s’affiche, vous permettant d’accéde
 
 ![réglage-période](../assets/ui/monitor-sources/adjust-timeframe.png)
 
-Les graphiques sont activés par défaut et vous pouvez les désactiver pour développer la liste des sources ci-dessous. Sélectionnez la **[!UICONTROL Mesures et graphiques]** pour désactiver les graphiques.
+Les graphiques sont activés par défaut et vous pouvez les désactiver pour développer la liste des sources ci-dessous. Sélectionnez la variable **[!UICONTROL Mesures et graphiques]** pour désactiver les graphiques.
 
 ![mesures-et-graphiques](../assets/ui/monitor-sources/metrics-graphs.png)
 
 | Ingestion source | Description |
 | ---------------- | ----------- |
-| [!UICONTROL Enregistrements ingérés ] | Nombre total d’enregistrements ingérés. |
+| [!UICONTROL Enregistrements ingérés] | Nombre total d’enregistrements ingérés. |
 | [!UICONTROL Échec des enregistrements] | Nombre total d’enregistrements qui n’ont pas été ingérés en raison d’erreurs dans les données. |
-| [!UICONTROL Total des flux de données ayant échoué] | Le nombre total de flux de données avec un `failed` statut. |
+| [!UICONTROL Nombre total de flux de données ayant échoué] | Le nombre total de flux de données avec un `failed` statut. |
 
 La liste d’ingestion source affiche toutes les sources qui contiennent au moins un compte existant. La liste inclut également des informations sur le taux d’ingestion de chaque source, le nombre d’enregistrements ayant échoué et le nombre total de flux de données ayant échoué en fonction de la période que vous avez appliquée.
 
@@ -85,7 +85,7 @@ Pour afficher tous les flux de données existants dans toutes les sources, séle
 
 ![view-all-dataflows](../assets/ui/monitor-sources/view-all-dataflows.png)
 
-Vous pouvez également entrer une source dans la barre de recherche pour isoler une source unique. Une fois votre source identifiée, sélectionnez l’icône de filtre ![filter](../assets/ui/monitor-sources/filter.png) en regard de pour afficher la liste de ses principaux flux de données.
+Vous pouvez également entrer une source dans la barre de recherche pour isoler une source unique. Une fois votre source identifiée, sélectionnez l’icône de filtre ![filter](../assets/ui/monitor-sources/filter.png) en regard de pour afficher la liste de ses flux de données actifs.
 
 ![recherche](../assets/ui/monitor-sources/search.png)
 
@@ -101,31 +101,31 @@ La page d’exécution du flux de données affiche des informations sur la date 
 
 ![dataflow-run-start](../assets/ui/monitor-sources/dataflow-run-start.png)
 
-Le [!UICONTROL Détails de l’exécution du flux de données] affiche des informations sur les métadonnées du flux de données, l’état d’ingestion partiel et le résumé de l’erreur. Le résumé de l’erreur contient l’erreur de niveau supérieur spécifique qui indique à quelle étape le processus d’ingestion a rencontré une erreur.
+La variable [!UICONTROL Détails de l’exécution du flux de données] affiche des informations sur les métadonnées du flux de données, l’état d’ingestion partiel et le résumé de l’erreur. Le résumé de l’erreur contient l’erreur de niveau supérieur spécifique qui indique à quelle étape le processus d’ingestion a rencontré une erreur.
 
 Faites défiler l’écran vers le bas pour afficher des informations plus spécifiques sur l’erreur qui s’est produite.
 
 ![dataflow-run-details](../assets/ui/monitor-sources/dataflow-run-details.png)
 
-Le [!UICONTROL Erreurs d’exécution du flux de données] panneau affiche le code d’erreur et d’erreur spécifique qui a entraîné l’échec de l’ingestion du flux de données. Dans ce scénario, une erreur de transformation du mappeur s’est produite, entraînant l’échec de 24 enregistrements.
+La variable [!UICONTROL Erreurs d’exécution du flux de données] panneau affiche le code d’erreur et d’erreur spécifique qui a entraîné l’échec de l’ingestion du flux de données. Dans ce scénario, une erreur de transformation du mappeur s’est produite, entraînant l’échec de 24 enregistrements.
 
 Sélectionner **[!UICONTROL Fichiers]** pour plus d’informations.
 
 ![dataflow-run-errors](../assets/ui/monitor-sources/dataflow-run-errors.png)
 
-Le [!UICONTROL Fichiers] contient des informations sur le nom et le chemin du fichier.
+La variable [!UICONTROL Fichiers] contient des informations sur le nom et le chemin du fichier.
 
 Pour une représentation plus granulaire de l’erreur, sélectionnez **[!UICONTROL Prévisualiser les diagnostics d’erreur]**.
 
 ![files](../assets/ui/monitor-sources/files.png)
 
-Le [!UICONTROL Aperçu des diagnostics d’erreur] s’affiche, affichant un aperçu des erreurs jusqu’à 100 dans le flux de données. Vous pouvez sélectionner **[!UICONTROL Télécharger]** pour récupérer une commande curl, qui permet ensuite de télécharger les diagnostics d’erreur.
+La variable [!UICONTROL Aperçu des diagnostics d’erreur] s’affiche, affichant un aperçu des erreurs jusqu’à 100 dans le flux de données. Vous pouvez sélectionner **[!UICONTROL Télécharger]** pour récupérer une commande curl, qui permet ensuite de télécharger les diagnostics d’erreur.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Fermer]**
 
 ![error-diagnostics](../assets/ui/monitor-sources/error-diagnostics.png)
 
-Vous pouvez utiliser le système de chemin de navigation dans l’en-tête supérieur pour revenir au [!UICONTROL Surveillance] tableau de bord. Sélectionner **[!UICONTROL Exécutez le démarrage : 2/14/2021, 21 h 47]** pour revenir à la page précédente, puis sélectionnez **[!UICONTROL Flux de données : Démonstration de l’ingestion des données de fidélité - Échec]** pour revenir à la page des flux de données.
+Vous pouvez utiliser le système de chemin de navigation dans l’en-tête supérieur pour revenir au [!UICONTROL Surveillance] tableau de bord. Sélectionner **[!UICONTROL Démarrage de l’exécution : 2/14/2021, 21 h 47]** pour revenir à la page précédente, puis sélectionnez **[!UICONTROL Flux de données : Démonstration de l’ingestion des données de fidélité - Échec]** pour revenir à la page des flux de données.
 
 ![chemin de navigation](../assets/ui/monitor-sources/breadcrumbs.png)
 

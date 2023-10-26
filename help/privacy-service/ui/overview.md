@@ -2,7 +2,7 @@
 keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
 title: Présentation de l’interface utilisateur de Privacy Service
-description: Commencez à utiliser l’interface utilisateur de Privacy Service pour coordonner et surveiller les demandes d’accès à des informations personnelles dans différentes applications Experience Cloud.
+description: Commencez à utiliser l’interface utilisateur du Privacy Service pour coordonner et surveiller les demandes d’accès à des informations personnelles dans différentes applications Experience Cloud.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt

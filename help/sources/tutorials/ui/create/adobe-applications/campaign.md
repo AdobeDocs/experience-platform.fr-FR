@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;campaign;campaign managed services
-title: Création d’une connexion source Adobe Campaign Managed Cloud Services à l’aide de l’interface utilisateur de Platform
+title: Créer une connexion source Adobe Campaign Managed Cloud Services à l’aide de l’interface utilisateur de Platform
 description: Découvrez comment connecter Adobe Experience Platform à Adobe Campaign Managed Cloud Services à l’aide de l’interface utilisateur de Platform.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
@@ -10,7 +10,7 @@ ht-degree: 47%
 
 ---
 
-# Création d’une connexion source Adobe Campaign Managed Cloud Services à l’aide de l’interface utilisateur de Platform
+# Créer une connexion source Adobe Campaign Managed Cloud Services à l’aide de l’interface utilisateur de Platform
 
 Ce tutoriel décrit les étapes à suivre pour créer une connexion source afin d’apporter vos données Adobe Campaign Managed Cloud Services à Adobe Experience Platform.
 
@@ -22,7 +22,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client. 
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
-* [Sandbox](../../../../../sandboxes/home.md) : Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ## Connexion de Adobe Campaign Managed Cloud Services à Platform
 
@@ -54,7 +54,7 @@ Sous , **[!UICONTROL Adobe des applications]** catégorie, sélectionnez **[!UIC
 >abstract="Nom de l’entité définie dans la base de données Adobe Campaign."
 >text="Learn more in documentation"
 
-Le [!UICONTROL Sélectionner des données] s’affiche, vous fournissant une interface pour configurer votre [!UICONTROL Instance Adobe Campaign], [!UICONTROL Mapping de ciblage], et [!UICONTROL Nom du schéma].
+La variable [!UICONTROL Sélectionner des données] s’affiche, vous fournissant une interface pour configurer votre [!UICONTROL Instance Adobe Campaign], [!UICONTROL Mapping de ciblage], et [!UICONTROL Nom du schéma].
 
 | Propriété | Description |
 | --- | --- |
@@ -70,7 +70,7 @@ Une fois que vous avez renseigné les valeurs de votre instance Campaign, du map
 
 ### Utiliser un jeu de données existant
 
-Le [!UICONTROL Détails du flux de données] vous permet de choisir si vous souhaitez utiliser un jeu de données existant ou configurer un nouveau jeu de données pour votre flux de données.
+La variable [!UICONTROL Détails du flux de données] vous permet de choisir si vous souhaitez utiliser un jeu de données existant ou configurer un nouveau jeu de données pour votre flux de données.
 
 Pour utiliser un jeu de données existant, sélectionnez **[!UICONTROL Jeu de données existant]**. Vous pouvez soit récupérer un jeu de données existant à l’aide de l’option de [!UICONTROL Recherche avancée], soit en faisant défiler la liste des jeux de données existants dans le menu déroulant.
 
@@ -96,11 +96,11 @@ Lorsque vous avez terminé de renseigner votre flux de données, sélectionnez *
 
 L’interface de [!UICONTROL mappage] fournit un outil complet pour mapper les champs sources de votre schéma source aux champs XDM cibles correspondants dans le schéma cible.
 
-Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, reportez-vous à la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
+Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, voir la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
 
 >[!IMPORTANT]
 >
->Lors du mappage de vos champs source aux champs XDM cible, vous devez vous assurer que vous mappez votre champ d’identité Principal désigné avec son champ XDM cible approprié.
+>Lors du mappage de vos champs source aux champs XDM cible, vous devez vous assurer que vous mappez votre champ d’identité principale désigné avec son champ XDM cible approprié.
 
 Une fois le mappage de vos données source réussi, sélectionnez **[!UICONTROL Suivant]**.
 

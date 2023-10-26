@@ -90,7 +90,7 @@ La composition de l’audience n’est actuellement pas intégrée à la fonctio
 
 Sélectionner **[!UICONTROL Audiences]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Compositions]**.
 
-![Le [!UICONTROL Compositions] dans le [!UICONTROL Audiences] workspace.](../images/ui/audiences.png)
+![La variable [!UICONTROL Compositions] dans le [!UICONTROL Audiences] workspace.](../images/ui/audiences.png)
 
 Sélectionnez ensuite les points de suspension (`...`) en regard de la première audience, puis sélectionnez **[!UICONTROL Supprimer]**.
 

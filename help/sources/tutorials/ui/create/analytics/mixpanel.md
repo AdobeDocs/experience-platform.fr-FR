@@ -73,7 +73,7 @@ Le fuseau horaire que vous avez désigné avant d’ingérer votre [!DNL Mixpane
 
 Au bout de quelques instants, l’interface appropriée se met à jour vers un panneau d’aperçu, ce qui vous permet d’examiner votre schéma avant de créer un flux de données. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
-![configuration](../../../../images/tutorials/create/mixpanel-export-events/authentication-configuration.png)
+![Configuration.](../../../../images/tutorials/create/mixpanel-export-events/authentication-configuration.png)
 
 ## Étapes suivantes
 

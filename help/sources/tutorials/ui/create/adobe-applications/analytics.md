@@ -57,7 +57,7 @@ La variable **[!UICONTROL Ajout de données à la source Analytics]** vous fourn
 
 Une suite de rapports est un conteneur de données qui constitue la base de [!DNL Analytics] création de rapports. Une organisation peut comporter de nombreuses suites de rapports, chacune contenant différents jeux de données.
 
-Vous pouvez ingérer des suites de rapports provenant de n’importe quelle région (États-Unis, Royaume-Uni ou Singapour) tant qu’elles sont mappées à la même organisation que l’instance de sandbox Experience Platform dans laquelle la connexion source est créée. Une suite de rapports peut être ingérée à l’aide d’un seul principal flux de données. Une suite de rapports qui n’est pas sélectionnable a déjà été ingérée, que ce soit dans l’environnement de test que vous utilisez ou dans un autre environnement de test.
+Vous pouvez ingérer des suites de rapports provenant de n’importe quelle région (États-Unis, Royaume-Uni ou Singapour) tant qu’elles sont mappées à la même organisation que l’instance de sandbox Experience Platform dans laquelle la connexion source est créée. Une suite de rapports peut être ingérée à l’aide d’un seul flux de données actif. Une suite de rapports qui n’est pas sélectionnable a déjà été ingérée, que ce soit dans l’environnement de test que vous utilisez ou dans un autre environnement de test.
 
 Plusieurs connexions entrantes peuvent être établies pour importer plusieurs suites de rapports dans le même environnement de test. Si les suites de rapports comportent des schémas différents pour les variables (comme les eVars ou les événements), elles doivent être mappées à des champs spécifiques dans les groupes de champs personnalisés et éviter les conflits de données en utilisant [Préparation de données](../../../../../data-prep/ui/mapping.md). Les suites de rapports ne peuvent être ajoutées qu’à un seul environnement de test.
 
@@ -227,7 +227,7 @@ Pour ajouter un nouveau conteneur, sélectionnez les ellipses (`...`) en haut à
 
 Une fois un nouveau conteneur ajouté, sélectionnez **[!UICONTROL Inclure]** puis sélectionnez **[!UICONTROL Exclure]** dans la fenêtre déroulante qui s’affiche.
 
-![exclusion](../../../../images/tutorials/create/analytics/exclude.png)
+![Exclusion](../../../../images/tutorials/create/analytics/exclude.png)
 
 Suivez la même procédure en faisant glisser les attributs de schéma et en ajoutant les valeurs correspondantes que vous souhaitez exclure du filtrage. Dans l’exemple ci-dessous, la variable [!DNL iPhone 12], [!DNL iPhone 12 mini], et [!DNL Google Pixel 5] sont tous filtrés à partir de l’exclusion de la variable **[!UICONTROL Modèle]** , paysage est exclu de la variable **[!UICONTROL Orientation de l’écran]**, et numéro de modèle [!DNL A1633] est exclu de **[!UICONTROL Numéro de modèle]**.
 

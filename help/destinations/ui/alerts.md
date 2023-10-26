@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées ; alertes, destinations
+keywords: Experience Platform;accueil;rubriques les plus consultées;alertes;destinations
 description: Vous pouvez vous abonner à des alertes lors de la création d’un flux de données pour recevoir des messages d’alerte concernant l’état, la réussite ou l’échec de votre exécution de flux.
 title: S’abonner aux alertes de destination contextuelles
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
@@ -22,9 +22,9 @@ Ce document décrit les étapes à suivre pour s’abonner à des messages d’a
 
 Ce document nécessite une compréhension pratique des composants suivants de Adobe Experience Platform :
 
-* [Destinations](../home.md): Intégrations prédéfinies avec des plateformes de destination qui permettent l’activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+* [Destinations](../home.md): intégrations prédéfinies avec des plateformes de destination qui permettent l’activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 * [Observability vous permet de surveiller les activités de Platform en utilisant des mesures statistiques et des notifications dʼévénement.](../../observability/home.md)[!DNL Observability Insights]
-   * [Alertes](../../observability/alerts/overview.md): Lorsqu’un certain ensemble de conditions de vos opérations Platform est atteint (par exemple, un problème potentiel lorsque le système enfreint un seuil), Platform peut envoyer des messages d’alerte à tous les utilisateurs de votre organisation qui se sont abonnés à eux.
+   * [Alertes](../../observability/alerts/overview.md): lorsqu’un certain ensemble de conditions est atteint dans vos opérations Platform (par exemple un problème potentiel lorsque le système dépasse un seuil), Platform peut envoyer des messages d’alerte à tous les utilisateurs de votre organisation qui se sont abonnés à eux.
 
 ## Abonnement aux alertes dans l’interface utilisateur {#subscribe-destination-alerts}
 
@@ -38,11 +38,11 @@ Ce document nécessite une compréhension pratique des composants suivants de Ad
 >
 >Vous devez activer les notifications instantanées des e-mails pour votre compte Platform afin de recevoir des notifications d’alerte par e-mail pour vos flux de données.
 
-Vous pouvez activer des alertes pour vos flux de données pendant la [!UICONTROL Configuration d’une nouvelle destination] de la [connexion à la destination](connect-destination.md) workflow.
+Vous pouvez activer des alertes pour vos flux de données au cours de la [!UICONTROL Configuration d’une nouvelle destination] de la [connexion à la destination](connect-destination.md) workflow.
 
 ![Image de l’interface utilisateur affichant la section des alertes de destination.](../assets/ui/alerts/destination-alerts.png)
 
-Sélectionnez les alertes auxquelles vous souhaitez vous abonner, puis sélectionnez **[!UICONTROL Suivant]** pour passer en revue et terminer votre flux de données.
+Sélectionnez les alertes auxquelles vous souhaitez vous abonner, puis sélectionnez **[!UICONTROL Suivant]** pour revoir et terminer votre flux de données.
 
 Les alertes disponibles pour les flux de données de destination sont décrites dans le tableau ci-dessous.
 
@@ -79,11 +79,11 @@ Sélectionnez le message d’alerte pour afficher des informations spécifiques 
 
 ![Image de l’interface utilisateur montrant comment sélectionner une notification](../assets/ui/alerts/select-alert-message.png)
 
-Le [!UICONTROL Détails de l’exécution du flux de données] s’affiche. La moitié supérieure de l’écran affiche un aperçu de votre flux de données, y compris des informations sur ses attributs, l’identifiant d’exécution de flux de données correspondant et un résumé d’erreur de haut niveau.
+La variable [!UICONTROL Détails de l’exécution du flux de données] s’affiche. La moitié supérieure de l’écran affiche un aperçu de votre flux de données, y compris des informations sur ses attributs, l’identifiant d’exécution de flux de données correspondant et un résumé d’erreur de haut niveau.
 
 ![Image de l’interface utilisateur affichant la page des détails de l’exécution du flux de données.](../assets/ui/alerts/dataflow-overview.png)
 
-La moitié inférieure de la page affiche toutes les [!UICONTROL Erreurs d’exécution du flux de données] qui se produisaient pendant l’étape d’exécution du flux de données. À partir de là, vous pouvez prévisualiser les diagnostics d’erreur ou utiliser le [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) pour télécharger les diagnostics d’erreur ou le manifeste de fichier correspondant à votre flux de données.
+La moitié inférieure de la page affiche toutes les [!UICONTROL Erreurs d’exécution du flux de données] qui se produisaient pendant l’étape d’exécution du flux de données. Vous pouvez y afficher un aperçu des diagnostics d’erreur ou utiliser le [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) pour télécharger les diagnostics d’erreur ou le manifeste de fichier correspondant à votre flux de données.
 
 ![Image de l’interface utilisateur montrant la page des détails de l’exécution du flux de données, avec un surlignage sur la section des erreurs.](../assets/ui/alerts/dataflow-run-error.png)
 

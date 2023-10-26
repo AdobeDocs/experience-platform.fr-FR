@@ -14,7 +14,7 @@ ht-degree: 22%
 
 >[!IMPORTANT]
 >
->Le **[!UICONTROL Exporter le fichier maintenant]** dans Adobe Experience Platform est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+>La variable **[!UICONTROL Exporter le fichier maintenant]** dans Adobe Experience Platform est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 >Contactez votre représentant Adobe pour accéder à cette fonctionnalité.
 
 >[!IMPORTANT]
@@ -28,9 +28,9 @@ ht-degree: 22%
 >title="Exporter le fichier maintenant"
 >abstract="Sélectionnez ce contrôle pour livrer une exportation complète de fichiers en plus des exportations précédemment programmées. L’exportation du fichier est déclenchée immédiatement et récupère les derniers résultats des exécutions de segmentation d’Experience Platform."
 
-Cet article explique comment utiliser l’interface utilisateur de l’Experience Platform pour exporter des fichiers à la demande vers des destinations par lots telles que [espace de stockage](/help/destinations/catalog/cloud-storage/overview.md) et [marketing par e-mail](/help/destinations/catalog/email-marketing/overview.md) destinations.
+Cet article explique comment utiliser l’interface utilisateur de l’Experience Platform pour exporter des fichiers à la demande vers des destinations par lots telles que [espace de stockage](/help/destinations/catalog/cloud-storage/overview.md) et [marketing par email](/help/destinations/catalog/email-marketing/overview.md) destinations.
 
-Le **[!UICONTROL Exporter le fichier maintenant]** Le contrôle permet d&#39;exporter un fichier complet sans interrompre le planning d&#39;export actuel d&#39;une audience précédemment planifiée. Cet export s&#39;effectue en plus des exports précédemment programmés et ne modifie pas la fréquence d&#39;export de l&#39;audience. L’exportation du fichier est déclenchée immédiatement et récupère les derniers résultats des exécutions de segmentation d’Experience Platform.
+La variable **[!UICONTROL Exporter le fichier maintenant]** Le contrôle permet d&#39;exporter un fichier complet sans interrompre le planning d&#39;export actuel d&#39;une audience précédemment planifiée. Cet export s&#39;effectue en plus des exports précédemment programmés et ne modifie pas la fréquence d&#39;export de l&#39;audience. L’exportation du fichier est déclenchée immédiatement et récupère les derniers résultats des exécutions de segmentation d’Experience Platform.
 
 Vous pouvez également utiliser les API Experience Platform à cet effet. Lire comment [activation d’audiences à la demande vers des destinations par lots via l’API d’activation ad hoc](/help/destinations/api/ad-hoc-activation-api.md).
 
@@ -46,9 +46,9 @@ Pour exporter des fichiers à la demande vers des destinations par lot, vous dev
 
 2. Sélectionnez la connexion de destination souhaitée pour inspecter le flux de données existant vers la destination.
 
-   ![Image mettant en surbrillance un flux de données filtré.](../assets/ui/activate-on-demand/filtered-dataflow.png)
+   ![Image mettant en évidence un flux de données filtré.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Sélectionnez la **[!UICONTROL Données d’activation]** et sélectionnez l&#39;audience pour laquelle vous souhaitez exporter un fichier à la demande, puis sélectionnez l&#39;option **[!UICONTROL Exporter le fichier maintenant]** pour déclencher une exportation unique qui diffusera un fichier vers votre destination de lot.
+3. Sélectionnez la variable **[!UICONTROL Données d’activation]** et sélectionnez l&#39;audience pour laquelle vous souhaitez exporter un fichier à la demande, puis sélectionnez l&#39;option **[!UICONTROL Exporter le fichier maintenant]** pour déclencher une exportation unique qui diffusera un fichier vers votre destination de lot.
 
    >[!IMPORTANT]
    >
@@ -76,7 +76,7 @@ Gardez à l’esprit les points suivants lors de l’utilisation de la variable 
 
 ## Messages d’erreur de l’interface utilisateur {#ui-error-messages}
 
-Lors de l’utilisation de la variable **[!UICONTROL Exporter le fichier maintenant]** , vous pouvez rencontrer l’un des messages d’erreur répertoriés ci-dessous. Consultez le tableau pour savoir comment y remédier lorsqu’il s’affiche.
+Lors de l’utilisation de la variable **[!UICONTROL Exporter le fichier maintenant]** , il se peut que vous rencontriez l’un des messages d’erreur répertoriés ci-dessous. Consultez le tableau pour savoir comment y remédier lorsqu’il s’affiche.
 
 | Message d’erreur | Résolution |
 |---------|----------|

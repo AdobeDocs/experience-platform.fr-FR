@@ -5,7 +5,7 @@ title: Gestion des politiques d’utilisation des données dans l’interface ut
 description: La gouvernance des données d’Adobe Experience Platform fournit une interface utilisateur qui vous permet de créer et de gérer des politiques d’utilisation des données. Ce document offre une vue d’ensemble des actions que vous pouvez effectuer dans l’espace de travail Politiques de l’interface utilisateur d’Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: ed9ab1f2a4b4466841b3bedef48a6e0a07ec3d10
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1788'
 ht-degree: 100%
 

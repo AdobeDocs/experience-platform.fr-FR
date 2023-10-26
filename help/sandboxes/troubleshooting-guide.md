@@ -15,7 +15,7 @@ ht-degree: 100%
 
 Ce document apporte des réponses aux questions fréquentes sur les sandbox dans Adobe Experience Platform. Pour les questions et le dépannage relatifs aux autres services Platform, consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
 
-Les sandbox divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique. Pour plus d’informations, consultez la [Présentation des sandbox](home.md).
+Les environnements de test divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale. Pour plus d’informations, consultez la [Présentation des sandbox](home.md).
 
 ## Qu’est-ce qu’un sandbox ?
 

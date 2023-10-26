@@ -2,18 +2,14 @@
 title: Outils Sandbox
 description: Exportez et importez en toute transparence des configurations Sandbox entre des environnements de test.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 1fd523b827a591fdc04ba64a558bc178f242a450
+source-git-commit: 58fcf3cbff242f65969193fd2e3d6eea0e6539aa
 workflow-type: tm+mt
-source-wordcount: '1834'
-ht-degree: 8%
+source-wordcount: '1820'
+ht-degree: 9%
 
 ---
 
-# [!BADGE Beta] Outils Sandbox
-
->[!IMPORTANT]
->
->La variable **Outils Sandbox** La fonctionnalité décrite ci-dessous n’est disponible que pour sélectionner les clients bêta.
+# Outils Sandbox
 
 >[!NOTE]
 >

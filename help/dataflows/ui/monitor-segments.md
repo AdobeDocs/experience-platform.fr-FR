@@ -22,11 +22,11 @@ Le tableau de bord de surveillance fournit une représentation visuelle de l’a
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 - [Flux de données](../home.md) : les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Les flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, vers [!DNL Identity] et [!DNL Profile], et vers [!DNL Destinations].
-   - [Exécutions de flux de données](../../sources/notifications.md): Les exécutions de flux de données sont les tâches planifiées récurrentes en fonction de la configuration de fréquence des flux de données sélectionnés.
-- [Segmentation](../../segmentation/home.md): La segmentation vous permet de créer des segments et des audiences à partir de vos données Real-time Customer Profile.
-   - [Tâches d’activation](../../destinations/ui/activation-overview.md): Une tâche d’activation est utilisée pour activer votre segment vers une destination spécifiée.
-   - [Tâches d’évaluation](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): Une tâche d’évaluation est un processus asynchrone qui s’exécute pour créer un segment d’audience basé sur le segment spécifié.
-   - [Tâches d’exportation](../../segmentation/api/export-jobs.md): Une tâche d’exportation est un processus asynchrone utilisé pour conserver les membres du segment d’audience dans les jeux de données.
+   - [Exécutions de flux de données](../../sources/notifications.md): les exécutions de flux de données sont les tâches planifiées récurrentes en fonction de la configuration de fréquence des flux de données sélectionnés.
+- [Segmentation](../../segmentation/home.md): la segmentation vous permet de créer des segments et des audiences à partir de vos données Real-time Customer Profile.
+   - [Tâches d’activation](../../destinations/ui/activation-overview.md): une tâche d’activation est utilisée pour activer votre segment vers une destination spécifiée.
+   - [Tâches d’évaluation](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): une tâche d’évaluation est un processus asynchrone qui s’exécute pour créer un segment d’audience basé sur le segment spécifié.
+   - [Tâches d’exportation](../../segmentation/api/export-jobs.md): une tâche d’exportation est un processus asynchrone utilisé pour conserver les membres des segments d’audience dans les jeux de données.
 - [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ## Tableau de bord des segments de surveillance {#monitoring-segments-dashboard}
@@ -56,10 +56,10 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | ------ | ----------- |
 | **[!UICONTROL Nom du segment]** | Nom du segment. |
 | **[!UICONTROL Dernier horodatage d’évaluation]** | Date et heure d’exécution de la dernière tâche d’évaluation du segment. |
-| **[!UICONTROL Dernier état d’évaluation]** | État de la dernière tâche d’évaluation du segment. Les valeurs possibles sont les suivantes : **[!UICONTROL Succès]**, **[!UICONTROL Aucune exécution]**, et **[!UICONTROL En échec]**. |
-| **[!UICONTROL Derniers profils d’évaluation]** | Nombre de profils qui ont été évalués dans la dernière tâche d’évaluation du segment. |
+| **[!UICONTROL Dernier état d’évaluation]** | État de la dernière tâche d’évaluation du segment. Les valeurs possibles incluent : **[!UICONTROL Succès]**, **[!UICONTROL Aucune exécution]**, et **[!UICONTROL En échec]**. |
+| **[!UICONTROL Derniers profils d’évaluation]** | Le nombre de profils qui ont été évalués dans la dernière tâche d’évaluation du segment. |
 | **[!UICONTROL Horodatage de la dernière activation]** | Date et heure de la dernière tâche d’activation du segment. |
-| **[!UICONTROL Dernier état d’activation]** | État de la dernière tâche d’activation du segment. Les valeurs possibles sont les suivantes : **[!UICONTROL Succès]**, **[!UICONTROL Aucune exécution]**, et **[!UICONTROL En échec]**. |
+| **[!UICONTROL Dernier état d’activation]** | État de la dernière tâche d’activation du segment. Les valeurs possibles incluent : **[!UICONTROL Succès]**, **[!UICONTROL Aucune exécution]**, et **[!UICONTROL En échec]**. |
 | **[!UICONTROL Dernières identités d’activation]** | Nombre d’identités qui ont été activées dans la dernière tâche d’activation du segment. |
 | **[!UICONTROL Destination de la dernière activation]** | Nom de la destination à laquelle la dernière tâche d’activation du segment a été activée. |
 
@@ -67,13 +67,13 @@ Vous pouvez filtrer les résultats sur un segment spécifique et afficher ses t�
 
 ![L’icône de filtre est mise en surbrillance. Cette sélection vous permet d’afficher les tâches de segmentation pour le segment spécifié.](../assets/ui/monitor-segments/filter-segment.png)
 
-Le tableau de bord des segments filtrés s’affiche. Le **[!UICONTROL Segments]** affiche l’état et la date de la dernière tâche d’évaluation et de la dernière tâche d’activation.
+Le tableau de bord des segments filtrés s’affiche. La variable **[!UICONTROL Segments]** affiche l’état et la date de la dernière tâche d’évaluation et de la dernière tâche d’activation.
 
 ![La carte Segments . Des informations sur la dernière tâche d’évaluation et la dernière tâche d’activation s’affichent.](../assets/ui/monitor-segments/specified-segment-card.png)
 
 Le tableau de bord lui-même affiche l’heure et l’état des dernières tâches d’évaluation et d’activation, un graphique indiquant le nombre de profils de l’évaluation du segment et les mesures des tâches de segmentation qui ont été exécutées. Par défaut, le tableau de bord affiche les mesures des tâches de segmentation pour les 24 dernières heures.
 
-![Tableau de bord des segments filtrés. Des informations sur les différentes tâches de segmentation exécutées pour ce segment s’affichent.](../assets/ui/monitor-segments/filter-specified-segment.png)
+![Tableau de bord des segments filtrés. Des informations sur les différentes tâches de segmentation qui ont été exécutées pour ce segment s’affichent.](../assets/ui/monitor-segments/filter-specified-segment.png)
 
 Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 
@@ -88,13 +88,13 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | **[!UICONTROL Nombre d’identités]** | Nombre d’identités activées par la tâche de segmentation. Chaque profil peut avoir plusieurs identités. Par exemple, un profil peut avoir un email, un numéro de téléphone et un numéro de fidélité comme identités. |
 | **[!UICONTROL Nom de la destination]** | Nom de la destination vers laquelle la tâche de segmentation est activée. |
 
-Vous pouvez filtrer davantage une tâche de segmentation spécifique et afficher ses détails en sélectionnant l’icône de filtre (![L’icône de filtre.](../assets/ui/monitor-segments/filter-icon.png)). Il existe deux types différents de tâches de segmentation qui peuvent être filtrées : tâches d’activation et d’évaluation.
+Vous pouvez filtrer davantage une tâche de segmentation spécifique et afficher ses détails en sélectionnant l’icône de filtre (![L’icône de filtre.](../assets/ui/monitor-segments/filter-icon.png)). Il existe deux types différents de tâches de segmentation qui peuvent être filtrées : les tâches d’activation et les tâches d’évaluation.
 
 ### Détails de la tâche d’activation {#activation-job-details}
 
 La page des détails de l’exécution du flux de données de la tâche d’activation affiche des informations sur les mesures de l’exécution, les erreurs d’exécution du flux de données et les segments liés à la tâche de segmentation. Une tâche d’activation est utilisée pour activer votre segment pour une destination spécifiée. Par défaut, la page de détails affiche les erreurs d’exécution du flux de données.
 
-![Tableau de bord des segments filtrés. Des informations sur les différentes tâches de segmentation exécutées pour ce segment s’affichent.](../assets/ui/monitor-segments/activation-job-details.png)
+![Tableau de bord des segments filtrés. Des informations sur les différentes tâches de segmentation qui ont été exécutées pour ce segment s’affichent.](../assets/ui/monitor-segments/activation-job-details.png)
 
 Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 
@@ -168,14 +168,14 @@ Pour la section des segments, les mesures suivantes sont disponibles :
 | **[!UICONTROL Nom]** | Nom du segment en cours d’évaluation. |
 | **[!UICONTROL Nombre de profils]** | Le nombre de profils en cours d’évaluation. |
 
-## Surveillance du tableau de bord des tâches de segmentation {#monitoring-segment-jobs-dashboard}
+## Tableau de bord des tâches de segmentation {#monitoring-segment-jobs-dashboard}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
 >title="Tâches de segmentation"
 >abstract="La vue des tâches de segmentation contient des informations sur les tâches d&#39;évaluation et d&#39;exportation pour tous vos segments."
 
-Pour accéder au **[!UICONTROL Tâches de segmentation]** tableau de bord, sélectionnez **[!UICONTROL Surveillance]** (![icône de surveillance](../assets/ui/monitor-destinations/monitoring-icon.png)) dans le volet de navigation de gauche. Une fois sur le [!UICONTROL Surveillance] page, sélectionnez **[!UICONTROL Tâches de segmentation]**. Le [!UICONTROL Surveillance] Le tableau de bord contient des mesures et des informations sur les tâches d’évaluation et d’exportation de segments.
+Pour accéder au **[!UICONTROL Tâches de segmentation]** tableau de bord, sélectionnez **[!UICONTROL Surveillance]** (![icône de surveillance](../assets/ui/monitor-destinations/monitoring-icon.png)) dans le volet de navigation de gauche. Une fois sur le [!UICONTROL Surveillance] page, sélectionnez **[!UICONTROL Tâches de segmentation]**. La variable [!UICONTROL Surveillance] Le tableau de bord contient des mesures et des informations sur les tâches d’évaluation et d’exportation de segments.
 
 >[!NOTE]
 >

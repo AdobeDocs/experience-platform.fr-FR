@@ -2,7 +2,7 @@
 keywords: Experience Platform;accueil;rubriques populaires;identité;Identité;graphiques XDM;identity service;Identity service
 solution: Experience Platform
 title: Présentation dʼIdentity Service
-description: Adobe Experience Platform Identity Service vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
+description: Adobe Experience Platform Identity Service vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
 workflow-type: tm+mt
@@ -13,9 +13,9 @@ ht-degree: 100%
 
 # Présentation d’[!DNL Identity Service]
 
-Proposer des expériences numériques pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre plusieurs systèmes, chaque client semble donc posséder plusieurs « identités ».
+Proposer des expériences digitales pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre plusieurs systèmes, chaque client semble donc posséder plusieurs « identités ».
 
-Adobe Experience Platform Identity Service vous offre la possibilité de mieux connaître vos clients et leur comportement en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
+Adobe Experience Platform Identity Service vous offre la possibilité de mieux connaître vos clients et leur comportement en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
 
 Avec [!DNL Identity Service], vous pouvez réaliser les actions suivantes :
 
@@ -133,7 +133,7 @@ Par exemple, en désignant les champs de numéro de téléphone comme des champs
 
 ### Configuration dʼun jeu de données pour [!DNL Identity Service]
 
-Pendant le processus dʼingestion par flux, [!DNL Identity Service ]extrait automatiquement les données dʼidentité des données dʼenregistrement et de série temporelle. Cependant, les données doivent être activées pour [!DNL Identity Service] avant de pouvoir être ingérées. Pour plus d’informations, consultez le tutoriel sur la [configuration d’un jeu de données pour le profil client en temps réel et le service d’identités à l’aide des API](../profile/tutorials/dataset-configuration.md).
+Pendant le processus dʼingestion par flux, [!DNL Identity Service]extrait automatiquement les données dʼidentité des données dʼenregistrement et de série temporelle. Cependant, les données doivent être activées pour [!DNL Identity Service] avant de pouvoir être ingérées. Pour plus d’informations, consultez le tutoriel sur la [configuration d’un jeu de données pour le profil client en temps réel et le service d’identités à l’aide des API](../profile/tutorials/dataset-configuration.md).
 
 ### Envoi de données à [!DNL Identity Service]
 

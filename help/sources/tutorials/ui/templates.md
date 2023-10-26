@@ -35,7 +35,7 @@ Avec les modèles, vous pouvez :
 * Minimiser les erreurs qui peuvent se produire pendant le processus d’ingestion manuelle des données.
 * Mettre à jour les ressources générées automatiquement à tout moment en fonction de vos cas d’utilisation.
 
-Le tutoriel suivant décrit les étapes à suivre pour utiliser des modèles dans l’interface utilisateur de Platform.
+Le tutoriel suivant explique comment utiliser des modèles dans l’interface utilisateur de Platform.
 
 ## Prise en main
 
@@ -92,7 +92,7 @@ Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fourn
 
 ### Sélectionner des modèles
 
-Une fois votre compte authentifié, vous pouvez désormais sélectionner le modèle que vous souhaitez utiliser pour votre flux de données.
+Une fois votre compte authentifié, vous pouvez désormais sélectionner le modèle à utiliser pour votre flux de données.
 
 +++[!DNL Marketo Engage] modèles Le tableau suivant décrit les modèles disponibles pour les [!DNL Marketo Engage] source.
 
@@ -189,13 +189,13 @@ Si vous sélectionnez un ou des éléments partiels dans la liste des modèles d
 
 ### Définissez un planning
 
-Le [!DNL Microsoft Dynamics] et le [!DNL Salesforce] les sources prennent toutes deux en charge la planification des flux de données.
+La variable [!DNL Microsoft Dynamics] et la variable [!DNL Salesforce] les sources prennent toutes deux en charge la planification des flux de données.
 
 Utilisez l’interface de planification pour configurer un planning d’ingestion pour vos flux de données. Définissez la fréquence d’ingestion sur **Une fois** pour créer une ingestion unique.
 
 ![Interface de planification pour les modèles Dynamics et Salesforce.](../../images/tutorials/templates/schedule.png)
 
-Vous pouvez également définir la fréquence d’ingestion sur **Minute**, **Heure**, **Jour** ou **Semaine**. Si vous planifiez votre flux de données pour plusieurs assimilations, vous devez définir un intervalle pour établir une période entre chaque ingestion. Par exemple, une fréquence d’ingestion définie sur **Heure** et un intervalle défini sur **15** signifie que votre flux de données est planifié pour ingérer des données chaque **15 heures**.
+Vous pouvez également définir la fréquence d’ingestion sur **Minute**, **Heure**, **Jour**, ou **Semaine**. Si vous planifiez votre flux de données pour plusieurs assimilations, vous devez définir un intervalle pour établir une période entre chaque ingestion. Par exemple, une fréquence d’ingestion définie sur **Heure** et un intervalle défini sur **15** signifie que votre flux de données est planifié pour ingérer des données chaque **15 heures**.
 
 Au cours de cette étape, vous pouvez également activer **renvoyer** et définissez une colonne pour l’ingestion incrémentielle des données. Le renvoi est utilisé pour ingérer des données historiques, tandis que la colonne que vous définissez pour l’ingestion incrémentielle permet de différencier les nouvelles données des données existantes.
 
@@ -228,13 +228,13 @@ Vous pouvez utiliser la vue de l’éditeur de schémas pour mettre à jour votr
 
 >[!TIP]
 >
->Vous pouvez accéder à votre flux de données de brouillon à l’aide du [!UICONTROL Flux de données] page catalogue dans l’espace de travail sources. Sélectionner **[!UICONTROL Flux de données]** dans l’en-tête supérieur, puis sélectionnez le flux de données à mettre à jour dans la liste.
+>Vous pouvez accéder à votre flux de données de brouillon via la [!UICONTROL Flux de données] page catalogue dans l’espace de travail sources. Sélectionner **[!UICONTROL Flux de données]** dans l’en-tête supérieur, puis sélectionnez le flux de données à mettre à jour dans la liste.
 >
 >![Liste des flux de données existants dans le catalogue des flux de données de l’espace de travail des sources.](../../images/tutorials/templates/dataflows.png)
 
 ### Publication de votre flux de données
 
-Commencez le processus de publication en parcourant le workflow des sources. Après avoir sélectionné [!UICONTROL Mise à jour du flux de données], vous êtes dirigé vers le *[!UICONTROL Ajouter des données]* de la procédure. Cliquez sur **[!UICONTROL Suivant]** pour continuer.
+Commencez le processus de publication en parcourant le workflow des sources. Après avoir sélectionné [!UICONTROL Mise à jour du flux de données], vous êtes dirigé vers la variable *[!UICONTROL Ajouter des données]* de l’étape du workflow. Cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
 ![Étape d’ajout de données pour un flux de données de brouillon](../../images/tutorials/templates/continue-draft.png)
 
@@ -244,9 +244,9 @@ Ensuite, confirmez les détails de votre flux de données et configurez les para
 
 >[!NOTE]
 >
->Vous pouvez sélectionner **[!UICONTROL Enregistrer en tant que brouillon]** à tout moment pour arrêter et enregistrer les modifications que vous avez apportées à votre flux de données.
+>Vous pouvez sélectionner **[!UICONTROL Enregistrer en tant que brouillon]** à tout moment pour arrêter et enregistrer les modifications apportées à votre flux de données.
 
-L’étape de mappage s’affiche. Au cours de cette étape, vous pouvez reconfigurer les configurations de mappage de votre flux de données. Pour obtenir un guide complet sur les fonctions de préparation de données utilisées pour le mappage, consultez la page [guide de l’interface utilisateur de la préparation de données](../../../data-prep/ui/mapping.md).
+L’étape de mappage s’affiche. Pendant cette étape, vous pouvez reconfigurer les configurations de mappage de votre flux de données. Pour obtenir un guide complet sur les fonctions de préparation de données utilisées pour le mappage, consultez la page [guide de l’interface utilisateur de la préparation de données](../../../data-prep/ui/mapping.md).
 
 ![L’étape de mappage d’un flux de données de brouillon.](../../images/tutorials/templates/mapping.png)
 
