@@ -4,9 +4,9 @@ type: Tutorial
 description: Découvrez comment utiliser des champs calculés pour exporter des tableaux dans des fichiers de schéma plats de Real-Time CDP vers des destinations de stockage dans le cloud.
 badge: Version Beta
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1497'
 ht-degree: 6%
 
 ---
@@ -216,8 +216,21 @@ Dans ce cas, votre fichier de sortie ressemble à ce qui suit, en exportant la p
 johndoe@acme.org,"1538097126","1664327526"
 ```
 
-### `md5` et `sha256` fonctions de hachage {#hashing-functions}
+### Fonctions de hachage {#hashing-functions}
 
-Outre les fonctions spécifiques à l’exportation de tableaux ou d’éléments à partir d’un tableau, vous pouvez utiliser des fonctions de hachage pour hacher des attributs. Par exemple, si vous disposez d’informations d’identification personnelle dans les attributs, vous pouvez hacher ces champs lors de leur exportation.
+Outre les fonctions spécifiques à l’exportation de tableaux ou d’éléments à partir d’un tableau, vous pouvez utiliser des fonctions de hachage pour hacher des attributs dans les fichiers exportés. Par exemple, si vous disposez d’informations d’identification personnelle dans les attributs, vous pouvez hacher ces champs lors de leur exportation.
 
-Vous pouvez hacher directement des valeurs de chaîne, par exemple `md5(personalEmail.address)`. Si vous le souhaitez, vous pouvez également hacher des éléments individuels des champs de tableau, comme ceci : `md5(purchaseTime[0])`
+Vous pouvez hacher directement des valeurs de chaîne, par exemple `md5(personalEmail.address)`. Si vous le souhaitez, vous pouvez également hacher des éléments individuels des champs de tableau, en supposant que les éléments du tableau soient des chaînes, comme ceci : `md5(purchaseTime[0])`
+
+Les fonctions de hachage prises en charge sont les suivantes :
+
+| Fonction | Exemple d’expression |
+|---------|----------|
+| `sha1` | `sha1(organizations[0])` |
+| `sha256` | `sha256(organizations[0])` |
+| `sha512` | `sha512(organizations[0])` |
+| `hash` | `hash("crc32", organizations[0], "UTF-8")` |
+| `md5` | `md5(organizations[0], "UTF-8")` |
+| `crc32` | `crc32(organizations[0])` |
+
+{style="table-layout:auto"}
