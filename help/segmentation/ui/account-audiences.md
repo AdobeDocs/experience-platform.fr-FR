@@ -2,10 +2,10 @@
 title: Audiences du compte
 description: Découvrez comment créer et utiliser des audiences de compte pour cibler des profils de compte dans des destinations en aval.
 badgeLimitedAvailability: label="Disponibilité limitée" type="Caution"
-badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html"
-source-git-commit: ecc60ec2e7bf2ea02bd721eac1b101b0dc412ba0
+badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+source-git-commit: 77ba3bd55c2f2ac217612880b83b731919aa14af
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '603'
 ht-degree: 5%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 5%
 
 # Audiences du compte
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->Notez que les audiences du compte ne sont disponibles que dans la variable [Édition B2B de Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). En outre, la fonctionnalité d’audience de compte figure actuellement dans **disponibilité limitée**.
+>Les audiences de compte ne sont disponibles que dans la variable [Édition B2B de Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). En outre, la fonctionnalité d’audience de compte figure actuellement dans **disponibilité limitée**. Contactez le service à la clientèle d’Adobe ou votre représentant d’Adobe pour demander l’accès à cette fonctionnalité.
 
 Grâce à la segmentation des comptes, Adobe Experience Platform vous permet d’offrir une expérience de segmentation marketing simplifiée et conviviale, allant des audiences basées sur les personnes aux audiences basées sur les comptes.
 
@@ -69,7 +69,7 @@ Sélectionnez l’audience que vous souhaitez activer, suivie de **[!UICONTROL A
 
 ![La variable [!UICONTROL Activer la destination] est mis en surbrillance dans le menu actions rapides de l’audience sélectionnée.](../images/ui/account-audiences/activate.png)
 
-La variable [!UICONTROL Activer la destination] s’affiche. Pour plus d’informations sur le processus d’activation, y compris des détails sur les mappages de champs, veuillez lire la section [présentation de l’activation](../../destinations/ui/activation-overview.md).
+La variable [!UICONTROL Activer la destination] s’affiche. Pour plus d’informations sur le processus d’activation, y compris les destinations prises en charge et les détails sur les mappages de champs, veuillez lire le [activation des audiences de compte](/help/destinations/ui/activate-account-audiences.md) tutoriel .
 
 ## Étapes suivantes {#next-steps}
 

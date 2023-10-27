@@ -4,9 +4,9 @@ title: Créer une connexion à une destination
 type: Tutorial
 description: Découvrez comment vous connecter à une destination dans Adobe Experience Platform, activer des alertes et configurer des actions marketing pour votre destination connectée.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
+source-git-commit: 28abc492dc3b2b89c3e79a0531b8d206af1e0590
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1146'
 ht-degree: 77%
 
 ---
@@ -84,9 +84,9 @@ Pour les destinations basées sur des fichiers, vous pouvez configurer divers pa
 
 ![Image montrant la sélection du type de fichier et diverses options pour les fichiers CSV.](/help/destinations/assets/ui/connect-destinations/file-formatting-options.png)
 
-### Configuration de la connexion de destination pour l’activation de l’audience, l’activation des prospects ou les exportations de jeux de données {#segment-activation-or-dataset-exports}
+### Configurer la connexion de destination pour l’activation de l’audience, l’activation du compte, l’activation des prospects ou les exportations de jeux de données {#segment-activation-or-dataset-exports}
 
-Certaines destinations basées sur des fichiers prennent en charge l’activation de l’audience pour des clients ou des prospects connus, ainsi que l’exportation de jeux de données. Pour ces destinations, vous pouvez choisir de créer une connexion qui vous permet de [activation des audiences](/help/destinations/ui/activate-batch-profile-destinations.md), [prospects](/help/destinations/ui/activate-prospect-audiences.md), ou [exportation de jeux de données](/help/destinations/ui/export-datasets.md).
+Certaines destinations basées sur des fichiers prennent en charge l’activation de l’audience pour les clients, les clients de compte ou les prospects connus, ainsi que les exportations de jeux de données. Pour ces destinations, vous pouvez choisir de créer une connexion qui vous permet de [activation des audiences](/help/destinations/ui/activate-batch-profile-destinations.md), [comptes](/help/destinations/ui/activate-account-audiences.md), [prospects](/help/destinations/ui/activate-prospect-audiences.md), ou [exportation de jeux de données](/help/destinations/ui/export-datasets.md).
 
 >[!WARNING]
 >
