@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2023 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a307f21ad9c72fd413c90cff1c92af8535d9b17b
+source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 44%
+source-wordcount: '954'
+ht-degree: 43%
 
 ---
 
@@ -15,11 +15,26 @@ ht-degree: 44%
 
 Mises à jour des fonctionnalités existantes dans Experience Platform :
 
+- [Tableaux de bord](#dashboards)
 - [Collecte de données](#data-collection)
 - [Destinations](#destinations)
 - [Sandbox](#sandboxes)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
+
+## Tableaux de bord {#dashboards}
+
+Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des informations importantes sur les données de votre organisation, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Mesures d’utilisation des destinations | De nouvelles mesures de mesure ont été ajoutées au tableau de bord de l’utilisation des licences. La variable **[!UICONTROL Taille de l’Audience Activation]** et **[!UICONTROL Taille de l’exportation des données]** Les mesures offrent un moyen pratique de suivre la quantité de données que vous avez exportées hors de Platform par rapport à vos droits d’utilisation de licence. Voir [mesures disponibles](../../dashboards/guides/license-usage.md#available-metrics) documentation pour obtenir des descriptions de ces mesures et d’autres mesures d’utilisation des licences. |
+
+{style="table-layout:auto"}
+
+Pour plus dʼinformations sur les tableaux de bord, notamment sur la manière dʼoctroyer des autorisations dʼaccès et de créer des widgets personnalisés, commencez par lire la [Présentation des tableaux de bord](../../dashboards/home.md).
 
 ## Collecte de données {#data-collection}
 
@@ -52,7 +67,8 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonction | Description |
 | ----------- | ----------- |
-| Prise en charge des fonctions de hachage dans les champs calculés | En plus des fonctions spécifiques à [exportation de tableaux](../../destinations/ui/export-arrays-calculated-fields.md) ou des éléments d’un tableau, vous pouvez désormais utiliser des [fonctions de hachage](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) pour hacher des attributs dans les fichiers exportés. Les fonctions de hachage prises en charge sont les suivantes : `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (Version bêta) Prise en charge des fonctions de hachage dans les champs calculés | En plus des fonctions spécifiques à [exportation de tableaux](../../destinations/ui/export-arrays-calculated-fields.md) ou des éléments d’un tableau, vous pouvez désormais utiliser des [fonctions de hachage](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) pour hacher des attributs dans les fichiers exportés. Les fonctions de hachage prises en charge sont les suivantes : `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (disponibilité générale limitée) Activation des audiences de compte vers certaines destinations | Les clients Real-Time CDP B2B peuvent désormais activer [audiences de compte](../../segmentation/ui/account-audiences.md) vers certaines destinations. Pour plus d’informations sur cette fonctionnalité, veuillez lire la section [tutoriel sur l’activation des audiences de compte](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 
