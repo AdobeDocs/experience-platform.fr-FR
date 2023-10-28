@@ -1,22 +1,22 @@
 ---
 title: Pipelines de fonctionnalités AI/ML
 description: Découvrez comment utiliser Data Distiller pour enrichir vos pipelines d’apprentissage automatique avec des fonctionnalités dérivées des données Adobe Experience Platform. Transformez les données brutes en fonctionnalités et diffusez les données de fonctionnalités pour former ou noter un modèle qui prend en charge vos cas d’utilisation marketing.
-source-git-commit: f8bba17df9673973cb2792658282c8db972d30d6
+source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '453'
 ht-degree: 3%
 
 ---
 
 # Pipelines de fonctionnalités AI/ML
 
-<!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided Python notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
+<!-- This guide illustrates a new workflow to enrich your preferred machine learning (ML) data pipelines with curated data from Adobe Experience Platform. The use case demonstrates how to transform raw data into features, and deliver the feature data to train or score a model that supports your marketing use cases. Use the provided [!DNL Python] notebooks in your machine learning environments to leverage Data Distiller capabilities and explore, curate, and access customer data from Adobe Experience Platform to enrich and enhance your AI/ML models.
 
 This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. -->
 
 <!--  -->
 
-Data Distiller permet aux spécialistes des données et aux ingénieurs d’enrichir leurs pipelines d’apprentissage automatique avec des données d’expérience client à forte valeur ajoutée qui ont été collectées et traitées dans Adobe Experience Platform. À partir d’un notebook Python dans n’importe quel environnement, vous pouvez explorer de manière interactive les données client dans l’Experience Platform, définir et calculer les fonctionnalités à partir des données, et lire les fonctionnalités calculées dans votre environnement d’apprentissage automatique pour la modélisation.
+Data Distiller permet aux spécialistes des données et aux ingénieurs d’enrichir leurs pipelines d’apprentissage automatique avec des données d’expérience client à forte valeur ajoutée qui ont été collectées et traitées dans Adobe Experience Platform. Depuis un [!DNL Python] dans n’importe quel environnement, vous pouvez explorer de manière interactive les données client dans l’Experience Platform, définir et calculer les fonctionnalités à partir des données et lire les fonctionnalités calculées dans votre environnement d’apprentissage automatique pour la modélisation.
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ Data Distiller permet aux spécialistes des données et aux ingénieurs d’enri
 
 Ce processus nécessite une compréhension pratique des différents aspects de Adobe Experience Platform. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux concepts suivants :
 
-- Comment [Authentification et accès aux API Experience Platform](../../../landing/api-authentication.md)
+- Comment [authentification et accès aux API Experience Platform](../../../landing/api-authentication.md).
 - Sandbox : [Autorisations de contrôle d’accès en fonction des attributs](../../../access-control/abac/overview.md) et comment créer et gérer des rôles, ainsi qu’affecter les autorisations de ressources souhaitées pour ces rôles.
 - Gouvernance des données : comment [appliquez des libellés d’utilisation des données aux jeux de données et aux champs, en classant chaque](../../../data-governance/labels/overview.md) conformément aux politiques de gouvernance des données et aux politiques de contrôle d’accès associées.
 
@@ -40,16 +40,16 @@ Ce processus nécessite une compréhension pratique des différents aspects de A
 
 En lisant ce document, vous avez découvert les concepts importants qui sous-tendent l’utilisation de vos outils d’apprentissage automatique préférés pour créer des modèles personnalisés qui prennent en charge vos cas d’utilisation marketing.
 
-Les documents inclus dans cette série de guides décrivent les étapes de base de la création de pipelines de fonctionnalités à partir d’Experience Platform pour alimenter des modèles personnalisés dans votre environnement d’apprentissage automatique. Vous êtes maintenant prêt à établir une connexion entre Data Distiller et votre notebook Jupyter.
+Les documents inclus dans cette série de guides décrivent les étapes de base de la création de pipelines de fonctionnalités à partir d’Experience Platform pour alimenter des modèles personnalisés dans votre environnement d’apprentissage automatique. Vous êtes maintenant prêt à établir une connexion entre Data Distiller et votre [!DNL Jupyter Notebook].
 
-- [Connexion à Data Distiller à partir d’un notebook Python](./establish-connection.md)
+- [Connexion à Data Distiller à partir d’un [!DNL Python] notebook](./establish-connection.md)
 - [Exploration et analyse des jeux de données](./exploratory-analysis.md)
 - [Fonctionnalités d’ingénierie pour l’apprentissage automatique](./feature-engineering.md)
 - [Exportation des jeux de données de fonctionnalités](./export-data.md)
 
 ## Ressources supplémentaires
 
-- [aepp](https://github.com/adobe/aepp): une bibliothèque Python Open Source gérée par l’Adobe pour envoyer des requêtes à Data Distiller et à d’autres services Experience Platform à partir du code Python.
+- [aepp](https://github.com/adobe/aepp): un open source géré par Adobe [!DNL Python] Bibliothèque pour envoyer des requêtes à Data Distiller et à d’autres services Experience Platform depuis [!DNL Python] code.
 
 <!-- Old content below -->
 

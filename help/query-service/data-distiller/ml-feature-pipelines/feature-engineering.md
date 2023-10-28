@@ -1,9 +1,9 @@
 ---
 title: Fonctionnalités de l’ingénieur pour l’apprentissage automatique
 description: Découvrez comment transformer des données dans Adobe Experience Platform en fonctionnalités ou en variables qui peuvent être utilisées par un modèle d’apprentissage automatique. Utilisez Data Distiller pour calculer des fonctionnalités ML à grande échelle et partager ces fonctionnalités avec votre environnement d’apprentissage automatique.
-source-git-commit: 12926f36514d289449cf0d141b5828df3fac37c2
+source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1161'
 ht-degree: 14%
 
 ---
@@ -67,7 +67,7 @@ Nombre de classes : 5000
 
 ### agréger des événements pour définir des fonctionnalités pour ML ; {#define-features}
 
-La requête suivante agrège les événements du jeu de données en fonctions numériques significatives qui peuvent être utilisées pour former un modèle de propension :
+Avec une requête appropriée, vous pouvez rassembler les événements du jeu de données en fonctionnalités numériques significatives qui peuvent être utilisées pour former un modèle de propension. Vous trouverez ci-dessous des exemples d’événements :
 
 - **Nombre d&#39;emails** qui ont été envoyés à des fins marketing et reçus par l’utilisateur.
 - Partie de ces emails qui étaient **ouvert**.
@@ -83,6 +83,8 @@ La requête suivante agrège les événements du jeu de données en fonctions nu
 - Nombre de minutes entre deux propositions avec lesquelles l’interaction a eu lieu.
 - Nombre de minutes entre deux propositions rejetées.
 - Nombre de minutes entre deux liens sélectionnés.
+
+La requête suivante agrège ces événements :
 
 +++Sélectionner pour afficher un exemple de requête
 

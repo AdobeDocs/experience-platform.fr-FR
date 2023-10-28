@@ -1,22 +1,22 @@
 ---
 title: Connexion à Data Distiller à partir d’un notebook Jupyter
 description: Découvrez comment vous connecter à Data Distiller à partir d’un notebook Jupyter.
-source-git-commit: 12926f36514d289449cf0d141b5828df3fac37c2
+source-git-commit: 60c5a624bfbe88329ab3e12962f129f03966ce77
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '693'
 ht-degree: 1%
 
 ---
 
-# Connexion à DD à partir d’un notebook Jupyter
+# Connexion à Data Distiller à partir d’un notebook Jupyter
 
-Pour enrichir vos pipelines d’apprentissage automatique avec des données d’expérience client de grande valeur, vous devez d’abord vous connecter à Data Distiller à partir de notebooks Jupyter. Ce document décrit les étapes à suivre pour se connecter à Data Distiller à partir d’un notebook Python dans votre environnement d’apprentissage automatique.
+Pour enrichir vos pipelines d’apprentissage automatique avec des données d’expérience client à forte valeur ajoutée, vous devez d’abord vous connecter à Data Distiller depuis [!DNL Jupyter Notebooks]. Ce document décrit les étapes à suivre pour se connecter à Data Distiller à partir d’un [!DNL Python] notebook dans votre environnement d’apprentissage automatique.
 
 ## Prise en main
 
-Ce guide suppose que vous connaissez les notebooks Python interactifs et que vous avez accès à un environnement de notebook. Le notebook peut être hébergé dans un environnement d’apprentissage automatique basé sur le cloud ou localement avec [Notebook Jupyter](https://jupyter.org/).
+Ce guide suppose que vous connaissez l’interactivité [!DNL Python] des notebooks et ont accès à un environnement de notebook. Le notebook peut être hébergé dans un environnement d’apprentissage automatique basé sur le cloud ou localement avec [[!DNL Jupyter Notebook]](https://jupyter.org/).
 
-### Obtention des informations d’identification de connexion
+### Obtention des informations d’identification de connexion {#obtain-credentials}
 
 Pour vous connecter à Data Distiller et à d’autres services Adobe Experience Platform, vous avez besoin d’informations d’identification d’API Experience Platform. Les informations d’identification de l’API peuvent être créées dans  [Console Adobe Developer](https://developer.adobe.com/console/home) par une personne disposant d’un accès Développeur à l’Experience Platform. Il est recommandé de créer des informations d’identification d’API Oauth2 spécifiquement pour les processus de science des données et de demander à un administrateur système d’Adobe de votre entreprise d’attribuer les informations d’identification à un rôle avec les autorisations appropriées.
 
@@ -24,16 +24,16 @@ Voir [Authentification et accès aux API Experience Platform](../../../landing/a
 
 Voici quelques-unes des autorisations recommandées pour la science des données :
 
-- Environnements de test qui seront utilisés pour la science des données (généralement prod)
-- Modélisation des données : Gestion des schémas
-- Gestion des données : gestion des jeux de données
-- Ingestion de données : afficher les sources
-- Destinations : gestion et activation des destinations de jeu de données
-- Query Service : gestion des requêtes
+- Environnements de test qui seront utilisés pour la science des données (généralement `prod`)
+- Modélisation des données : [!UICONTROL Gestion des schémas]
+- Data management : [!UICONTROL Gestion des jeux de données]
+- Ingestion de données : [!UICONTROL Afficher les sources]
+- Destinations : [!UICONTROL Gestion et activation des destinations de jeu de données]
+- Query Service : [!UICONTROL Gestion des requêtes]
 
 Par défaut, un rôle (et les informations d’identification d’API affectées à ce rôle) ne peuvent pas accéder aux données étiquetées. Sous réserve des politiques de gouvernance des données de l’organisation, un administrateur système peut accorder au rôle l’accès à certaines données étiquetées jugées appropriées pour l’utilisation de la science des données. Les clients de Platform sont chargés de gérer l’accès aux étiquettes et les stratégies de manière appropriée afin de se conformer aux réglementations et aux politiques organisationnelles pertinentes.
 
-### Stocker les informations d’identification dans un fichier de configuration distinct
+### Stocker les informations d’identification dans un fichier de configuration distinct {#store-credentials}
 
 Pour préserver la sécurité de vos informations d’identification, il est recommandé d’éviter d’écrire des informations d’identification directement dans votre code. Conservez plutôt les informations d’identification dans un fichier de configuration distinct et lisez les valeurs nécessaires pour vous connecter à l’Experience Platform et à Data Distiller.
 
@@ -49,7 +49,7 @@ scopes=openid, AdobeID, read_organizations, additional_info.projectedProductCont
 tech_acct_id=<YOUR_TECHNICAL_ACCOUNT_ID>
 ```
 
-Dans votre notebook, vous pouvez ensuite lire les informations d’identification en mémoire à l’aide de la variable `configParser` package de la bibliothèque Python standard :
+Dans votre notebook, vous pouvez ensuite lire les informations d’identification en mémoire à l’aide de la variable `configParser` du module standard [!DNL Python] bibliothèque :
 
 ```python
 from configparser import ConfigParser
@@ -66,9 +66,9 @@ Vous pouvez ensuite référencer des valeurs d’informations d’identification
 org_id = config.get('Credential', 'ims_org_id')
 ```
 
-## La variable `aepp` Bibliothèque Python
+## Installation de la bibliothèque aepp Python {#install-python-library}
 
-[aepp](https://github.com/adobe/aepp/tree/main) est une bibliothèque Python Open Source gérée par l’Adobe qui fournit des fonctions pour se connecter à Data Distiller et envoyer des requêtes, en tant que requêtes à d’autres services Experience Platform. La variable `aepp` La bibliothèque repose à son tour sur le package adaptateur de base de données PostgreSQL.  `psycopg2` pour les requêtes interactives Data Distiller. Il est possible de se connecter à Data Distiller et d’interroger des jeux de données Experience Platform avec `psycopg2` alone, mais `aepp` offre davantage de commodité et des fonctionnalités supplémentaires pour envoyer des requêtes à tous les services API Experience Platform.
+[aepp](https://github.com/adobe/aepp/tree/main) est un open source géré par l’Adobe [!DNL Python] qui fournit des fonctions pour se connecter à Data Distiller et envoyer des requêtes, comme envoyer des requêtes à d’autres services Experience Platform. La variable `aepp` La bibliothèque repose à son tour sur le package adaptateur de base de données PostgreSQL.  `psycopg2` pour les requêtes interactives Data Distiller. Il est possible de se connecter à Data Distiller et d’interroger des jeux de données Experience Platform avec `psycopg2` alone, mais `aepp` offre davantage de commodité et des fonctionnalités supplémentaires pour envoyer des requêtes à tous les services API Experience Platform.
 
 Pour installer ou mettre à niveau `aepp` et `psycopg2` dans votre environnement, vous pouvez utiliser la variable `%pip` commande magique dans votre notebook :
 
@@ -100,7 +100,7 @@ aepp.configure(
 )
 ```
 
-## Création d’une connexion à Data Distiller
+## Création d’une connexion à Data Distiller {#create-connection}
 
 Une fois `aepp` est configuré avec vos informations d’identification, vous pouvez utiliser le code suivant pour créer une connexion à Data Distiller et démarrer une session interactive comme suit :
 
@@ -119,7 +119,7 @@ simple_query = f'''SELECT * FROM {table_name} LIMIT 5'''
 dd_cursor.query(simple_query)
 ```
 
-### Connexion à un seul jeu de données pour des performances de requête plus rapides
+### Connexion à un seul jeu de données pour des performances de requête plus rapides {#connect-to-single-dataset}
 
 Par défaut, la connexion à Data Distiller se connecte à tous les jeux de données de votre environnement de test. Pour accélérer les requêtes et réduire l’utilisation des ressources, vous pouvez vous connecter à un jeu de données spécifique qui vous intéresse. Pour ce faire, modifiez la variable `dbname` dans l’objet de connexion de Data Distiller à `{sandbox}:{table_name}`:
 
@@ -136,4 +136,4 @@ dd_cursor = queryservice.InteractiveQuery2(dd_conn)
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez appris à vous connecter à Data Distiller à partir d’un notebook Python dans votre environnement d’apprentissage automatique. L’étape suivante de la création de pipelines de fonctionnalités à partir d’Experience Platform pour alimenter des modèles personnalisés dans votre environnement d’apprentissage automatique consiste à [explorer et analyser vos jeux de données](./exploratory-analysis.md).
+En lisant ce document, vous avez appris à vous connecter à Data Distiller à partir d’un [!DNL Python] notebook dans votre environnement d’apprentissage automatique. L’étape suivante de la création de pipelines de fonctionnalités à partir d’Experience Platform pour alimenter des modèles personnalisés dans votre environnement d’apprentissage automatique consiste à [explorer et analyser vos jeux de données](./exploratory-analysis.md).

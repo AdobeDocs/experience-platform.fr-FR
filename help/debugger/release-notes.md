@@ -7,13 +7,13 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 source-git-commit: 70abe974aa7f94ea172d7ab90aacaf765b88de0e
 workflow-type: tm+mt
 source-wordcount: '526'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform Debugger
 
-## Version 1.5.0 - 19 octobre 2023
+## Version 1.5.0 - 19 octobre 2023
 
 ### Nouvelles fonctionnalités
 
@@ -22,16 +22,16 @@ ht-degree: 82%
 ### Correctifs et améliorations
 
 * Correction d’un problème en raison duquel les données de résumé des balises n’étaient pas envoyées.
-* Correction d’un problème en raison duquel les sessions d’assurance généraient une erreur CORS.
+* Correction d’un problème en raison duquel les sessions d’Assurance généraient une erreur CORS.
 * Correction d’un problème qui empêchait l’affichage de Target Trace.
-* Correction du bouton &quot;Envoyer un retour&quot;.
-* Correction de l’absence de l’&quot;ID de flux de données&quot; dans le résumé du SDK Web pour la version ≥2.18.0.
+* Correction du bouton Envoyer des commentaires.
+* Correction de l’absence de l’ID de train de données dans le résumé du SDK Web pour la version ≥2.18.0.
 * Correction d’un problème en raison duquel les journaux Edge ne pouvaient pas faire l’objet de recherches.
-* Ajout d’une remarque concernant les profils supplémentaires pour certains types de compte.
+* Ajout d’une note concernant les profils supplémentaires pour certains types de compte.
 
-## Version 1.4.1 - 1er novembre 2022
+## Version 1.4.1 - 1 novembre 2022
 
-* Amélioration des performances sur les pages comportant de nombreux événements Adobe Experience Platform Assurance.
+* Amélioration des performances sur les pages comportant de nombreux événements Adobe Experience Platform Assurance.
 
 ## Version 1.4.0 - 3 octobre 2022
 
