@@ -1,13 +1,13 @@
 ---
 description: Cette page illustre comment l’appel API est utilisé pour supprimer une configuration de serveur de destination existante avec Adobe Experience Platform Destination SDK.
 title: Suppression d’une configuration de serveur de destination
-source-git-commit: acb7075f49b4194c31371d2de63709eea7821329
+exl-id: 2322a2ce-220e-4590-a553-b15152412752
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 100%
 
 ---
-
 
 # Suppression d’une configuration de serveur de destination
 
@@ -75,4 +75,3 @@ Pour en savoir plus sur les fonctionnalités offertes par ce point d’entrée, 
 * [Création d’une configuration de serveur de destination](create-destination-server.md)
 * [Récupération d’une configuration de serveur de destination](retrieve-destination-server.md)
 * [Mise à jour d’une configuration de serveur de destination](update-destination-server.md)
-

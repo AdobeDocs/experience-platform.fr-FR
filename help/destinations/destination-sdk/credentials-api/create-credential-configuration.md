@@ -1,13 +1,13 @@
 ---
 description: Cette page illustre comment l’appel API est utilisé pour créer une configuration d’informations d’identification avec Adobe Experience Platform Destination SDK.
 title: Création d’une configuration d’informations d’identification
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
+exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '559'
 ht-degree: 100%
 
 ---
-
 
 # Création d’une configuration d’informations d’identification
 

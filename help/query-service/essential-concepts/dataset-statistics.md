@@ -1,8 +1,9 @@
 ---
 title: Calcul des statistiques des jeux de données
 description: Ce document décrit comment calculer les statistiques au niveau des colonnes sur les jeux de données Azure Data Lake Storage (ADLS) avec des commandes SQL.
-source-git-commit: b94536be6e92354e237b99d36af13adf5a49afa7
-workflow-type: ht
+exl-id: 66f11cd4-b115-40b8-ba8a-c4bb3606bbbf
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
 source-wordcount: '1085'
 ht-degree: 100%
 

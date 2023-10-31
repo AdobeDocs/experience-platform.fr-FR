@@ -1,13 +1,13 @@
 ---
 description: Découvrez comment créer des champs d’entrée dans l’interface utilisateur d’Experience Platform qui permettent à vos utilisateurs de spécifier diverses informations relatives à la connexion et à l’exportation des données vers la destination.
 title: Champs de données client
-source-git-commit: cadffd60093eef9fb2dcf4562b1fd7611e61da94
+exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 91%
 
 ---
-
 
 # Configuration d’une entrée utilisateur avec les champs de données client
 
@@ -69,7 +69,7 @@ Pendant la création de vos propres champs de données client, vous pouvez utili
 
 Dans l’exemple ci-dessous, la section `customerDataFields` définit deux champs que les utilisateurs doivent compléter dans l’interface utilisateur de Platform au moment de la connexion à la destination :
 
-* `Account ID` : identifiant de compte utilisateur pour votre plateforme de destination.
+* `Account ID` : identifiant de compte d’utilisateur pour votre plateforme de destination.
 * `Endpoint region` : point d’entrée régional de l’API auquel ils se connectent. La section `enum` crée un menu déroulant avec les valeurs définies afin que les utilisateurs puissent les sélectionner.
 
 ```json

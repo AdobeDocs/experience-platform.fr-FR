@@ -1,7 +1,8 @@
 ---
 title: Guide de l’API des outils Sandbox
 description: Les outils Sandbox dans Adobe Experience Platform vous permettent d’exporter et d’importer un instantané des configurations des environnements de test entre les environnements de test.
-source-git-commit: e4e89c5250885bef177ba0d678629261a361a66d
+exl-id: 4bcc095b-5db1-4824-8b7c-c2ea5a393b98
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 14%

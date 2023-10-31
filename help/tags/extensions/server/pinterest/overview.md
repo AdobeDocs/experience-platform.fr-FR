@@ -3,7 +3,8 @@ keywords: extension de transfert d’événement;pinterest;extension de transfer
 title: Extension de transfert d’événement pinterest
 description: Cette extension de transfert d’événement Adobe Experience Platform vous permet d’ingérer des événements dans Pinterest en fonction de vos besoins.
 last-substantial-update: 2023-04-27T00:00:00Z
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+exl-id: 44f38a9b-0a28-4b51-bead-ee460eb8405e
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1548'
 ht-degree: 7%

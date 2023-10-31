@@ -3,13 +3,13 @@ keywords: destination Qualtrics en continu
 title: Automatisations Qualtrics
 description: Synchronisez les données d’expérience et des clients opérationnels pour déverrouiller la personnalisation à grande échelle. Utilisez l’agrégation de plusieurs sources de données opérationnelles dans Adobe Experience Platform en tant qu’entrée dans Qualtrics Experience ID pour mieux comprendre vos clients et permettre une communication ciblée pour combler le fossé en termes de compréhension des facteurs d’intention, d’émotion et d’expérience.
 last-substantial-update: 2023-10-25T00:00:00Z
-source-git-commit: 57d3e136902201f9ba9bd2f427ebe0f876900671
+exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1149'
 ht-degree: 32%
 
 ---
-
 
 # Automatisations Qualtrics
 

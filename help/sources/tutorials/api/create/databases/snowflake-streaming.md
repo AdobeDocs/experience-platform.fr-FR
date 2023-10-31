@@ -3,7 +3,8 @@ title: Connexion de votre compte de diffusion en continu de Snowflake à Adobe E
 description: Découvrez comment connecter Adobe Experience Platform à Snowflake Streaming à l’aide de l’API Flow Service.
 badgeBeta: label="Version Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-source-git-commit: f2c392704e0404aaff2ad569e388241c06fba902
+exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '867'
 ht-degree: 28%

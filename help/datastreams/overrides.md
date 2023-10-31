@@ -1,11 +1,11 @@
 ---
 title: Configurer les remplacements de trains de données
 description: Découvrez comment configurer les remplacements de trains de données dans l’interface utilisateur des trains de données et à les activer via le SDK Web.
-exl-id: 7829f411-acdc-49a1-a8fe-69834bcdb014
-source-git-commit: b0b53d9fcf410812eee3abdbbb6960d328fee99f
-workflow-type: ht
-source-wordcount: '1231'
-ht-degree: 100%
+exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
+source-git-commit: 5effb8a514100c28ef138ba1fc443cf29a64319a
+workflow-type: tm+mt
+source-wordcount: '1464'
+ht-degree: 78%
 
 ---
 
@@ -18,14 +18,17 @@ Vous pouvez ainsi déclencher des comportements de trains de données différent
 Le remplacement de la configuration du train de données comporte deux étapes :
 
 1. Tout d’abord, vous devez définir vos remplacements de configuration de trains de données sur la page de [configuration des trains de données](configure.md).
-2. Ensuite, vous devez envoyer les remplacements au réseau Edge par le biais d’une commande de SDK Web ou à l’aide de l’[extension de balise](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) du SDK Web.
+2. Ensuite, vous devez envoyer les remplacements au réseau Edge de l’une des manières suivantes :
+   * Par le biais de la `sendEvent` ou `configure` [SDK Web](#send-overrides-web-sdk) des commandes.
+   * Par le biais du SDK Web [extension de balise](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+   * Via le SDK Mobile [API sendEvent](#send-overrides-mobile-sdk) appelez .
 
 Cet article décrit le processus de remplacement de configuration des trains de données de bout en bout pour chaque type de remplacement pris en charge.
 
 >[!IMPORTANT]
 >
->Les remplacements de trains de données ne sont pris en charge que pour les intégrations du [SDK Web](../edge/home.md). Les intégrations du [SDK Mobile](https://developer.adobe.com/client-sdks/documentation/) et de l’[API Server](../server-api/overview.md) ne prennent actuellement pas en charge les remplacements de trains de données.
-><br><br>
+>Les remplacements de flux de données ne sont pris en charge que pour [SDK Web](../edge/home.md) et [SDK Mobile](https://developer.adobe.com/client-sdks/documentation/) intégrations. [API du serveur](../server-api/overview.md) les intégrations ne prennent actuellement pas en charge les remplacements de flux de données.
+><br>
 >Utilisez les remplacements de trains de données pour envoyer différentes données à différents trains de données. À l’inverse, ne les utilisez pas pour les cas d’utilisation de personnalisation ou les données de consentement.
 
 ## Cas d’utilisation {#use-cases}
@@ -111,7 +114,7 @@ Une fois que vous avez ajouté les remplacements souhaités, enregistrez les par
 
 Vous avez terminé la configuration des remplacements de conteneurs de synchronisation d’identifiants. Vous pouvez maintenant [envoyer les remplacements au réseau Edge via le SDK Web](#send-overrides).
 
-## Envoyer les remplacements au réseau Edge via le SDK Web {#send-overrides}
+## Envoyer les remplacements au réseau Edge via le SDK Web {#send-overrides-web-sdk}
 
 >[!NOTE]
 >
@@ -119,7 +122,7 @@ Vous avez terminé la configuration des remplacements de conteneurs de synchroni
 
 Une fois que vous avez terminé la [configuration des remplacements de trains de données](#configure-overrides) dans l’interface utilisateur de la collecte de données, vous pouvez envoyer les remplacements au réseau Edge, via le SDK Web.
 
-L’envoi des remplacements au réseau Edge via le SDK Web constitue la deuxième et dernière étape de l’activation des remplacements de configuration des trains de données.
+Si vous utilisez un SDK Web, envoyez les remplacements au réseau Edge via le `edgeConfigOverrides` est la deuxième et dernière étape d’activation des remplacements de configuration datastream.
 
 Les remplacements de configuration de trains de données sont envoyés au réseau Edge par l’intermédiaire de la commande `edgeConfigOverrides` du SDK Web. Cette commande crée des remplacements de trains de données qui sont transmis au [!DNL Edge Network] dans la commande suivante, ou, dans le cas de la commande `configure`, pour chaque requête.
 
@@ -135,7 +138,7 @@ Lorsqu’un remplacement de configuration est envoyé avec la commande `configur
 
 Les options spécifiées globalement peuvent être remplacées par l’option de configuration des commandes individuelles.
 
-### Envoyer des remplacements de configuration via la commande `sendEvent` {#send-event}
+### Envoi des remplacements de configuration via le SDK Web `sendEvent` command {#send-event}
 
 L’exemple ci-dessous illustre le remplacement d’une configuration à l’aide de la commande `sendEvent`.
 
@@ -149,7 +152,7 @@ alloy("sendEvent", {
     com_adobe_experience_platform: {
       datasets: {
         event: {
-          datasetId: "MyOverrideDataset"
+          datasetId: "SampleEventDatasetIdOverride"
         },
         profile: {
           datasetId: "www"
@@ -193,7 +196,7 @@ alloy("configure", {
     "com_adobe_experience_platform": {
       "datasets": {
         "event": { 
-          datasetId: "MyOverrideDataset"
+          datasetId: "SampleProfileDatasetIdOverride"
         },
         "profile": { 
           datasetId: "www"
@@ -218,9 +221,168 @@ alloy("configure", {
 };
 ```
 
-### Exemple de payload {#payload-example}
+## Envoi des remplacements au réseau Edge via le SDK Mobile {#send-overrides-mobile-sdk}
 
-Les exemples ci-dessus génèrent une payload [!DNL Edge Network] qui ressemble à ceci :
+Après [configuration des remplacements de la banque de données](#configure-overrides) Dans l’interface utilisateur de la collecte de données, vous pouvez désormais envoyer les remplacements au réseau Edge, via le SDK Mobile.
+
+Si vous utilisez le SDK Mobile, envoyez les remplacements au réseau Edge via le `sendEvent` L’API constitue la deuxième et dernière étape de l’activation des remplacements de configuration de la banque de données.
+
+Pour plus d’informations sur le SDK Mobile Experience Platform, voir [Documentation du SDK Mobile](https://developer.adobe.com/client-sdks/edge/edge-network/).
+
+### Remplacement de l’ID de flux de données par le biais du SDK Mobile {#id-override-mobile}
+
+Les exemples ci-dessous montrent à quoi pourrait ressembler un remplacement d’identifiant de flux de données sur une intégration de SDK Mobile. Sélectionnez les onglets ci-dessous pour afficher le [!DNL iOS] et [!DNL Android] exemples.
+
+>[!BEGINTABS]
+
+>[!TAB iOS (Swift)]
+
+Cet exemple montre à quoi ressemble un remplacement d’identifiant de flux de données dans un SDK Mobile [!DNL iOS] intégration.
+
+```swift
+// Create Experience event from dictionary
+var xdmData: [String: Any] = [
+  "eventType": "SampleXDMEvent",
+  "sample": "data",
+]
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamIdOverride: "SampleDatastreamId")
+
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
+```
+
+>[!TAB Android (Kotlin)]
+
+Cet exemple montre à quoi ressemble un remplacement d’identifiant de flux de données dans un SDK Mobile [!DNL Android] intégration.
+
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamIdOverride("SampleDatastreamId")
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
+```
+
+>[!ENDTABS]
+
+### Remplacement de la configuration du flux de données via le SDK Mobile {#config-override-mobile}
+
+Les exemples ci-dessous montrent à quoi pourrait ressembler un remplacement de configuration de flux de données sur une intégration de SDK Mobile. Sélectionnez les onglets ci-dessous pour afficher le [!DNL iOS] et [!DNL Android] exemples.
+
+>[!BEGINTABS]
+
+>[!TAB iOS (Swift)]
+
+Cet exemple montre à quoi ressemble un remplacement de configuration de flux de données dans un SDK Mobile [!DNL iOS] intégration.
+
+```swift
+// Create Experience event from dictionary
+var xdmData: [String: Any] = [
+  "eventType": "SampleXDMEvent",
+  "sample": "data",
+]
+
+let configOverrides: [String: Any] = [
+  "com_adobe_experience_platform": [
+    "datasets": [
+      "event": [
+        "datasetId": "SampleEventDatasetIdOverride"
+      ],
+      "profile": [
+        "datasetId": "SampleProfileDatasetIdOverride"
+      ],
+    ]
+  ],
+  "com_adobe_analytics": [
+  "reportSuites": [
+        "MyFirstOverrideReportSuite",
+          "MySecondOverrideReportSuite",
+          "MyThirdOverrideReportSuite"
+      ]
+  ],  
+  "com_adobe_identity": [
+    "idSyncContainerId": "1234567"
+  ],
+  "com_adobe_target": [
+    "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+ ],
+]
+
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamConfigOverride: configOverrides)
+
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
+```
+
+>[!TAB Android (Kotlin)]
+
+Cet exemple montre à quoi ressemble un remplacement de configuration de flux de données dans un SDK Mobile [!DNL Android] intégration.
+
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf < String, Any > ()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
+
+val configOverrides = mapOf(
+    "com_adobe_experience_platform"
+    to mapOf(
+        "datasets"
+        to mapOf(
+            "event"
+            to mapOf("datasetId"
+                to "SampleEventDatasetIdOverride"),
+            "profile"
+            to mapOf("datasetId"
+                to "SampleProfileDatasetIdOverride")
+        )
+    ),
+    "com_adobe_analytics"
+    to mapOf(
+        "reportSuites"
+        to listOf(
+            "MyFirstOverrideReportSuite",
+            "MySecondOverrideReportSuite",
+            "MyThirdOverrideReportSuite"
+        )
+    ),
+    "com_adobe_identity"
+    to mapOf(
+        "idSyncContainerId"
+        to "1234567"
+    ),
+    "com_adobe_target"
+    to mapOf(
+        "propertyToken"
+        to "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+    )
+)
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .setDatastreamConfigOverride(configOverrides)
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
+```
+
+>[!ENDTABS]
+
+## Exemple de payload {#payload-example}
+
+Les exemples ci-dessus génèrent une [!DNL Edge Network] charge utile similaire à celle ci-dessous.
 
 ```json
 {
@@ -229,7 +391,7 @@ Les exemples ci-dessus génèrent une payload [!DNL Edge Network] qui ressemble 
       "com_adobe_experience_platform": {
         "datasets": {
           "event": {
-            "datasetId": "MyOverrideDataset"
+            "datasetId": "SampleProfileDatasetIdOverride"
           },
           "profile": {
             "datasetId": "www"
@@ -252,13 +414,6 @@ Les exemples ci-dessus génèrent une payload [!DNL Edge Network] qui ressemble 
     },
     "state": {  }
   },
-  "events": [  ],
-  "query": {
-    "identity": {
-      "fetch": [
-        "ECID"
-      ]
-    }
-  }
+  "events": [  ]
 }
 ```

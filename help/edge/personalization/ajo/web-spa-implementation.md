@@ -1,13 +1,13 @@
 ---
 title: Implémentation d’applications monopages
 description: Découvrez comment mettre en oeuvre SPA vues dans Adobe Journey Optimizer
-source-git-commit: c91a3ef135937ec5c5f87741699ef216df5ac85a
+exl-id: 1883251b-2d59-46d3-ac74-b8657edd0325
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '859'
 ht-degree: 79%
 
 ---
-
 
 # Implémenter des applications monopages (SPA) {#web-spa-implementation}
 

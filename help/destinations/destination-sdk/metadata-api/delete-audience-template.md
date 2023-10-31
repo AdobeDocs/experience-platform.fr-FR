@@ -1,13 +1,13 @@
 ---
 description: Cette page illustre comment l’appel API est utilisé pour supprimer un modèle d’audience existant avec Adobe Experience Platform Destination SDK.
 title: Suppression d’un modèle d’audience
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
+exl-id: 6eb07e3c-3269-4368-9b11-04bd993cc4ab
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '287'
 ht-degree: 100%
 
 ---
-
 
 # Suppression d’un modèle d’audience
 

@@ -1,14 +1,15 @@
 ---
 title: Réengagement intelligent
-description: Diffusez des expériences attrayantes et connectées au cours des moments de conversion clés pour réengager intelligemment les clients les plus rares.
-source-git-commit: 79ba0e350d64f43558af9bc3c2ecd4ac13d11499
+description: Proposez des expériences attrayantes et connectées au cours des moments de conversion clés pour réengager intelligemment la clientèle moins fréquente.
+exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '3424'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
-# Réengagez intelligemment vos clients pour qu’ils reviennent
+# Réengager intelligemment vos clientes et clients pour qu’ils reviennent
 
 Réengager les clients qui ont abandonné une conversion avant de l’effectuer de manière intelligente et responsable. Engagez des clients obsolètes par le biais d’expériences plutôt que de rappels afin d’améliorer la conversion et de stimuler la croissance de la valeur de durée de vie du client.
 
@@ -26,7 +27,7 @@ Vous allez créer des schémas, des jeux de données et des audiences à mesure 
 
 ## Prérequis et planification {#prerequisites-and-planning}
 
-À mesure que vous réalisez les étapes de mise en oeuvre du cas d’utilisation, vous utiliserez les fonctionnalités et éléments d’interface utilisateur de Real-Time CDP suivants (répertoriés dans l’ordre dans lequel vous les utiliserez). Assurez-vous de disposer des autorisations de contrôle d’accès en fonction des attributs nécessaires pour toutes ces zones ou demandez à votre administrateur système de vous octroyer les autorisations nécessaires.
+À mesure que vous réalisez les étapes de mise en œuvre du cas d’utilisation, vous utiliserez les fonctionnalités et éléments suivants de l’interface utilisateur de Real-Time CDP (répertoriés dans leur ordre d’utilisation). Assurez-vous que vous disposez des autorisations de contrôle d’accès basées sur des attributs pour toutes ces zones ou demandez à votre administrateur ou administratrice système de vous accorder les autorisations nécessaires.
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) : intègre des données à l’échelle des sources de données pour alimenter la campagne. Ces données sont ensuite utilisées pour créer les audiences de campagne et faire apparaître les éléments de données personnalisés utilisés dans l&#39;email et les mosaïques de promotion web (par exemple, le nom ou les informations liées au compte). La plateforme de données clients (CDP) est également utilisée pour activer les audiences par courrier électronique et sur le web (via [!DNL Adobe Target]).
    * [Schémas](/help/xdm/home.md)
@@ -39,7 +40,7 @@ Vous allez créer des schémas, des jeux de données et des audiences à mesure 
    * [Audiences/Événements](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
    * [Actions de parcours](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=fr)
 
-### Comment réaliser le cas d’utilisation : aperçu de haut niveau {#achieve-the-use-case-high-level}
+### Comment réaliser le cas d’utilisation : vue d’ensemble de haut niveau {#achieve-the-use-case-high-level}
 
 Vous trouverez ci-dessous un aperçu général des trois exemples de parcours de réengagement.
 
@@ -87,7 +88,7 @@ Pour terminer chacune des étapes des présentations de haut niveau ci-dessus, c
 
 ### Fonctionnalités et éléments de l’interface utilisateur que vous utiliserez {#ui-functionality-and-elements}
 
-Lorsque vous terminerez les étapes de mise en oeuvre du cas d’utilisation, vous utiliserez les fonctionnalités de Real-Time CDP et les éléments d’IU répertoriés au début de ce document. Assurez-vous de disposer des autorisations de contrôle d’accès en fonction des attributs nécessaires pour toutes ces zones ou demandez à votre administrateur système de vous octroyer les autorisations nécessaires.
+Lorsque vous terminerez les étapes de mise en oeuvre du cas d’utilisation, vous utiliserez les fonctionnalités de Real-Time CDP et les éléments d’IU répertoriés au début de ce document. Assurez-vous que vous disposez des autorisations de contrôle d’accès basées sur des attributs pour toutes ces zones ou demandez à votre administrateur ou administratrice système de vous accorder les autorisations nécessaires.
 
 ### Création d’une conception de schéma et spécification de groupes de champs {#schema-design}
 
@@ -349,7 +350,7 @@ Pour plus d’informations sur la création d’un [dataset](/help/catalog/datas
 
 >[!NOTE]
 >
->Tout comme l’étape de création d’un schéma, vous devez activer l’inclusion du jeu de données dans le profil client en temps réel. Pour plus d’informations sur l’activation du jeu de données à utiliser dans Real-Time Customer Profile, consultez la section [tutoriel sur la création de schéma.](/help/xdm/tutorials/create-schema-ui.md#profile).
+>Tout comme l’étape de création d’un schéma, vous devez activer l’inclusion du jeu de données dans le profil client en temps réel. Pour plus d’informations sur l’activation du jeu de données à utiliser dans le profil client en temps réel, consultez le [tutoriel sur la création de schéma.](/help/xdm/tutorials/create-schema-ui.md#profile).
 
 ### Confidentialité, consentement et gouvernance des données {#privacy-consent}
 

@@ -1,10 +1,11 @@
 ---
 title: Flux de données de brouillon dans l’interface utilisateur
-description: Découvrez comment enregistrer vos flux de données en tant que brouillon et les publier ultérieurement, lors de l’utilisation de l’espace de travail des sources.
-source-git-commit: 5fc433f603c6e83c621df0f4a1d0aa27e18cd582
+description: Découvrez comment enregistrer vos flux de données en tant que brouillon et les publier ultérieurement, lorsque vous utilisez l’espace de travail des sources.
+exl-id: ee00798e-152a-4618-acb3-db40f2f55fae
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '591'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -50,9 +51,9 @@ Vous pouvez également accéder à vos flux de données de brouillon par le biai
 
 ![Liste de flux de données pour une organisation donnée.](../../images/tutorials/draft/catalog-access.png)
 
-## Publication du flux de données de brouillon
+## Publier votre brouillon de flux de données
 
-Vous revenez alors au [!UICONTROL Ajouter des données] de l’étape du workflow des sources, où vous pouvez confirmer à nouveau le format de vos données et continuer à progresser sur votre flux de données.
+Vous revenez alors à la variable [!UICONTROL Ajouter des données] de l’étape du workflow des sources, où vous pouvez confirmer à nouveau le format de vos données et continuer à progresser sur votre flux de données.
 
 Une fois que vous avez confirmé le formatage, le délimiteur et le type de compression de vos données, sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
@@ -64,13 +65,13 @@ Une fois les configurations terminées, sélectionnez **[!UICONTROL Suivant]** p
 
 ![L’étape de détail du flux de données du processus des sources.](../../images/tutorials/draft/dataflow-detail.png)
 
-L’étape [!UICONTROL Mappage] apparaît. Au cours de cette étape, vous pouvez reconfigurer les configurations de mappage de votre flux de données. Pour obtenir un guide complet sur les fonctions de préparation de données utilisées pour le mappage, consultez la page [guide de l’interface utilisateur de la préparation de données](../../../data-prep/ui/mapping.md).
+L’étape [!UICONTROL Mappage] apparaît. Pendant cette étape, vous pouvez reconfigurer les configurations de mappage de votre flux de données. Pour obtenir un guide complet sur les fonctions de préparation de données utilisées pour le mappage, consultez la page [guide de l’interface utilisateur de la préparation de données](../../../data-prep/ui/mapping.md).
 
 Une fois la reconfiguration du mapping terminée, sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![L’étape de mappage du workflow des sources.](../../images/tutorials/draft/mapping.png)
 
-Utilisez la variable [!UICONTROL Planification] pour établir un planning d’ingestion pour votre flux de données. Vous pouvez définir la fréquence d’ingestion sur `once`, `minute`, `hour`, `day`ou `week`. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Utilisez la variable [!UICONTROL Planification] étape pour établir un planning d’ingestion pour votre flux de données. Vous pouvez définir la fréquence d’ingestion sur `once`, `minute`, `hour`, `day`, ou `week`. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![L’étape de planification du workflow des sources.](../../images/tutorials/draft/scheduling.png)
 

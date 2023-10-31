@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’IU de Segmentation Service
 description: Découvrez comment créer et gérer des audiences et des définitions de segment dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 695a5c9b39def899c6b1f9cb169508ae0299686c
+source-git-commit: 692cdd3d8b30c3e5187a556e4f9ec80d675cb443
 workflow-type: tm+mt
-source-wordcount: '3822'
-ht-degree: 92%
+source-wordcount: '3910'
+ht-degree: 90%
 
 ---
 
@@ -72,17 +72,17 @@ Une icône de points de suspension se trouve à côté de chaque audience. Cette
 
 | Action | Origines | Description |
 | ------ | ------- | ----------- |
-| Modifier | Segmentation Service | Permet d’ouvrir le créateur de segments pour modifier votre audience. Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [Guide de l’interface utilisateur du créateur de segments](./segment-builder.md). |
-| Ouvrir la composition | Composition de l’audience | Permet d’ouvrir la composition d’audience pour afficher votre audience. Pour plus d’informations sur la composition d’audience, consultez le [Guide de l’interface utilisateur de la composition d’audience](./audience-composition.md). |
-| Activer vers la destination | Segmentation Service | Permet d’activer l’audience vers une destination. Pour plus d’informations sur l’activation d’une audience vers une destination, consultez la [vue d’ensemble de l’activation](../../destinations/ui/activation-overview.md). |
-| Partager avec les partenaires | Composition d’audience, chargement personnalisé, Segmentation Service | Permet de partager votre audience avec d’autres utilisateurs et utilisatrices de Platform. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble de la correspondance de segments](./segment-match/overview.md). |
-| Gérer les balises | Composition d’audience, chargement personnalisé, Segmentation Service | Permet de gérer les balises définies par l’utilisateur ou l’utilisatrice qui appartiennent à l’audience. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
-| Déplacer vers le dossier | Composition d’audience, chargement personnalisé, Segmentation Service | Permet de gérer le dossier auquel appartient l’audience. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
-| Copier | Composition d’audience, chargement personnalisé, Segmentation Service | Duplique l’audience sélectionnée. |
-| Appliquer les libellés d’accès | Composition d’audience, chargement personnalisé, Segmentation Service | Permet de gérer les libellés d’accès qui appartiennent à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
-| Archiver | Chargement personnalisé | Archive l’audience sélectionnée. |
-| Supprimer | Composition d’audience, chargement personnalisé, Segmentation Service | Supprime l’audience sélectionnée. |
-| Ajouter au package | Composition d’audience, chargement personnalisé, Segmentation Service | Permet de déplacer l’audience entre les environnements de test. Pour plus d’informations sur cette fonctionnalité, veuillez lire la section [guide d’outils sandbox](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Modifier] | Segmentation Service | Permet d’ouvrir le créateur de segments pour modifier votre audience. Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [Guide de l’interface utilisateur du créateur de segments](./segment-builder.md). |
+| [!UICONTROL Ouvrir la composition] | Composition de l’audience | Permet d’ouvrir la composition d’audience pour afficher votre audience. Pour plus d’informations sur la composition d’audience, consultez le [Guide de l’interface utilisateur de la composition d’audience](./audience-composition.md). |
+| [!UICONTROL Activer vers la destination] | Segmentation Service | Permet d’activer l’audience vers une destination. Pour plus d’informations sur l’activation d’une audience vers une destination, consultez la [vue d’ensemble de l’activation](../../destinations/ui/activation-overview.md). |
+| [!UICONTROL Partager avec les partenaires] | Composition d’audience, chargement personnalisé, Segmentation Service | Permet de partager votre audience avec d’autres utilisateurs et utilisatrices de Platform. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble de la correspondance de segments](./segment-match/overview.md). |
+| [!UICONTROL Gérer les balises] | Composition d’audience, chargement personnalisé, Segmentation Service | Permet de gérer les balises définies par l’utilisateur ou l’utilisatrice qui appartiennent à l’audience. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
+| [!UICONTROL Déplacer vers le dossier] | Composition d’audience, chargement personnalisé, Segmentation Service | Permet de gérer le dossier auquel appartient l’audience. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
+| [!UICONTROL Copier] | Composition d’audience, chargement personnalisé, Segmentation Service | Duplique l’audience sélectionnée. |
+| [!UICONTROL Appliquer les libellés d’accès] | Composition d’audience, chargement personnalisé, Segmentation Service | Permet de gérer les libellés d’accès qui appartiennent à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Archiver] | Chargement personnalisé | Archive l’audience sélectionnée. |
+| [!UICONTROL Supprimer] | Composition d’audience, chargement personnalisé, Segmentation Service | Supprime l’audience sélectionnée. |
+| [!UICONTROL Ajouter au package] | Composition d’audience, chargement personnalisé, Segmentation Service | Permet de déplacer l’audience entre les environnements de test. Pour plus d’informations sur cette fonctionnalité, veuillez lire la section [guide d’outils sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!NOTE]
 >
@@ -339,6 +339,8 @@ Après avoir sélectionné le fichier CSV à importer, une liste de données d�
 
 La page **[!UICONTROL Détails de l’audience]** s’affiche. Vous pouvez ajouter des informations sur votre audience, notamment son nom, sa description, son identité principale et sa valeur d’espace de noms d’identité.
 
+Lors de l&#39;import de l&#39;audience générée en externe, vous devez sélectionner l&#39;une des colonnes pour le champ d&#39;identité principal et spécifier la valeur de l&#39;espace de noms. Veuillez noter que tous les champs restants seront pris en compte. **attributs payload**. Ces attributs sont considérés comme **non durable**, car ils ne sont associés à cette audience qu’à des fins de personnalisation, et sont **not** connecté au profil.
+
 ![La page [!UICONTROL Détails de l’audience] s’affiche.](../images/ui/overview/import-audience-audience-details.png)
 
 Après avoir renseigné les détails de votre audience, sélectionnez **[!UICONTROL Suivant]**.
@@ -353,7 +355,9 @@ Une fois que les détails sont corrects, sélectionnez **[!UICONTROL Terminer]**
 
 >[!IMPORTANT]
 >
->Si votre audience générée en externe contient des informations sensibles et/ou liées à la santé, vous **must** appliquez les libellés d’utilisation des données nécessaires avant de l’activer vers n’importe quelle destination. Pour plus d’informations sur l’application des libellés d’utilisation des données, consultez la documentation sur [gestion des libellés](../../access-control/abac/ui/labels.md).
+>Par défaut, les audiences générées en externe ont une expiration de données de 30 jours. L’expiration des données est réinitialisée si l’audience est mise à jour ou modifiée de quelque manière que ce soit.
+>
+>De plus, si votre audience générée en externe contient des informations sensibles et/ou liées à la santé, vous **must** appliquez les libellés d’utilisation des données nécessaires avant de l’activer vers n’importe quelle destination. Pour plus d’informations sur l’application des libellés d’utilisation des données, consultez la documentation sur [gestion des libellés](../../access-control/abac/ui/labels.md).
 
 ## Segmentation planifiée {#scheduled-segmentation}
 

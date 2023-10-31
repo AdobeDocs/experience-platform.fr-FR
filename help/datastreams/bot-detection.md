@@ -3,13 +3,13 @@ title: Configuration de la détection des robots pour les flux de données
 description: Découvrez comment configurer la détection des robots pour les flux de données afin de différencier le trafic humain et non humain.
 hide: true
 hidefromtoc: true
-source-git-commit: 07b3ff85c1092614a60495e73575907df36d4158
+exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1361'
 ht-degree: 0%
 
 ---
-
 
 # Configuration de la détection des robots pour les flux de données
 
@@ -176,4 +176,3 @@ La règle affichée dans l’image ci-dessous identifie une demande d’origine 
 La demande provient de l’une des deux adresses IP, la variable `referer` L’en-tête commence par `www.adobe.com`, et la variable `sec-ch-ua-mobile` identifie la requête comme provenant d’un navigateur de bureau.
 
 ![Image de la règle de détection des robots basée sur plusieurs conditions.](assets/bot-detection/bot-detection-multiple.png)
-

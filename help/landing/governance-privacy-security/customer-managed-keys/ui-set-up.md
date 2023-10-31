@@ -1,7 +1,8 @@
 ---
 title: Configuration et configuration des clés gérées par le client à l’aide de l’interface utilisateur de Platform
 description: Découvrez comment configurer votre application CMK avec votre client Azure et envoyer votre ID de clé de chiffrement à Adobe Experience Platform.
-source-git-commit: a0df05cde19e97d4abdad7abd19eafea8efe1096
+exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1097'
 ht-degree: 22%

@@ -3,7 +3,8 @@ title: Présentation de la source RainFocus
 description: Découvrez comment importer des données d’analyse et de gestion d’événements de votre compte RainFocus vers Experience Platform
 last-substantial-update: 2023-06-21T00:00:00Z
 badge: Version Beta
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+exl-id: 88e333e3-2b93-4d66-8412-efadea58ac46
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '998'
 ht-degree: 8%
@@ -97,14 +98,14 @@ Pour créer votre schéma pour [!DNL RainFocus] pour savoir comment créer un sc
 >[!IMPORTANT]
 >
 >* Le schéma doit étendre la variable **Classe XDM ExperienceEvent.**
->* Vous devez vous assurer que le schéma comprend une **Principale identité**, et est **activé pour Profile**. Pour plus d’informations, consultez le guide sur [définition des champs d’identité dans l’interface utilisateur](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
+>* Vous devez vous assurer que le schéma comprend une **identité principale**, et est **activé pour Profile**. Pour plus d’informations, consultez le guide sur [définition des champs d’identité dans l’interface utilisateur](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
 >* Vous pouvez remplacer l’exemple d’identité (adresse électronique) par un autre identifiant approprié, tel qu’un e-mail sha256 ou un ECID.
 
 ### Création d’un profil d’intégration dans RainFocus {#create-an-integration-profile-in-rainfocus}
 
 Une fois votre compte de service et votre schéma XDM prêts, vous pouvez désormais activer la variable [!DNL Integration Profile] par le biais du [!DNL RainFocus] plateforme. La variable [!DNL Integration Profile] est chargé de la diffusion en continu des données vers l’Experience Platform.
 
-Connectez-vous au [[!DNL RainFocus] platform](https://app.rainfocus.com). Dans la navigation Principale, sélectionnez **[!DNL Libraries]** puis sélectionnez **[!DNL Integration Profiles]**
+Connectez-vous au [[!DNL RainFocus] platform](https://app.rainfocus.com). Dans la navigation principale, sélectionnez **[!DNL Libraries]** puis sélectionnez **[!DNL Integration Profiles]**
 
 ![L’interface utilisateur de RainFocus avec les bibliothèques et les profils d’intégration sélectionnés.](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile.png)
 

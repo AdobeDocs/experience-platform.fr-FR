@@ -4,10 +4,11 @@ type: Tutorial
 description: Découvrez comment activer les audiences de compte vers les destinations
 badgeLimitedAvailability: label="Disponibilité limitée" type="Caution"
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: 77ba3bd55c2f2ac217612880b83b731919aa14af
+exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
+source-git-commit: 0a572c5fe612b8e0cc866b4e2287ea53a4022b1a
 workflow-type: tm+mt
-source-wordcount: '788'
-ht-degree: 11%
+source-wordcount: '834'
+ht-degree: 10%
 
 ---
 
@@ -89,11 +90,11 @@ Lors de l’activation des audiences de compte dans la variable **[!UICONTROL (S
 | Champ source | Champ cible |
 |---------|----------|
 | `accountName` | `companyName` |
-| `accountKey.sourceKey` | `primaryId` (sélectionnez ce champ dans la **[!UICONTROL Sélectionner un espace de noms d’identité]** view) |
+| `accountKey.sourceKey` | `primaryId` (sélectionnez ce champ dans la **[!UICONTROL Sélectionner un espace de noms d’identité]** lors de la sélection de l’option **[!UICONTROL Champ cible]**). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences de compte vers les destinations.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences de compte vers les destinations."){width="100" zoomable="yes"} |
 
 ### Application de la gouvernance des données {#data-governance-enforcement}
 
-[Évaluation des stratégies de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) n’est actuellement pas pris en charge lors de l’activation des audiences de compte vers les destinations. Dans l’étape de révision du workflow d’activation, vous pouvez voir un contrôle hors zone grisé pour **[!UICONTROL Affichage des stratégies de consentement applicables]**.
+Le consentement est appliqué au niveau de la personne ou du profil pour *audiences de clients et de prospects*. Par conséquent,  [évaluation des stratégies de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) n’est actuellement pas pris en charge lors de l’activation des audiences de compte vers les destinations. Dans l’étape de révision du workflow d’activation, vous pouvez voir un contrôle hors zone grisé pour **[!UICONTROL Affichage des stratégies de consentement applicables]**.
 
 ![Consultez l’étape du workflow d’activation des audiences de compte avec le contrôle d’application du consentement grisé.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 

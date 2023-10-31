@@ -1,13 +1,13 @@
 ---
 description: Découvrez comment configurer les attributs de l’interface utilisateur, tels que le lien de documentation, la catégorie de carte de destination, ainsi que le type et la fréquence de connexion à la destination, pour les destinations créées avec Destination SDK.
 title: Attributs de l’interface utilisateur
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '755'
 ht-degree: 100%
 
 ---
-
 
 # Attributs de l’interface utilisateur
 

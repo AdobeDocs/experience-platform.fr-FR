@@ -4,7 +4,8 @@ description: Découvrez comment créer une connexion source et un flux de donné
 badgeBeta: label="Version Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: 054175bd3f3aaab73c8cca249eaf1a9cdbc8deab
+exl-id: ed937689-e844-487e-85fb-e3536c851fe5
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '710'
 ht-degree: 11%
@@ -82,4 +83,3 @@ Pour plus d’informations sur la gestion des rôles et des privilèges, voir [[
 Le tutoriel suivant décrit les étapes à suivre pour connecter votre [!DNL Snowflake] source de diffusion en continu vers l’Experience Platform à l’aide de l’API :
 
 * [Diffusion de données en continu à partir d’une [!DNL Snowflake] base de données à Experience Platform à l’aide de l’API Flow Service](../../tutorials/api/create/databases/snowflake-streaming.md)
-

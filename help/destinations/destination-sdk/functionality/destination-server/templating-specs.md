@@ -1,13 +1,13 @@
 ---
 description: Découvrez comment formater les requêtes HTTP envoyées à votre point d’entrée. Utilisez le point d’entrée /authoring/destination-servers pour configurer les spécifications de modèle de serveur de destination dans Adobe Experience Platform Destination SDK.
 title: Spécifications de modèle pour les destinations créées avec Destination SDK
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '523'
-ht-degree: 90%
+ht-degree: 93%
 
 ---
-
 
 # Spécifications de modèle pour les destinations créées avec Destination SDK
 
@@ -46,7 +46,7 @@ Adobe utilise un langage de modèle similaire à [Jinja](https://jinja.palletspr
 Pour plus d’informations sur la transformation, consultez les liens ci-dessous :
 
 * [Format des messages](message-format.md)
-* [Utilisation d’une langue de modèle pour les transformations d’identité, d’attributs et d’appartenance à une audience](message-format.md#using-templating)
+* [Utiliser une langue de modèle pour les transformations d’identité, d’attributs et d’appartenance aux audiences](message-format.md#using-templating)
 
 >[!TIP]
 >

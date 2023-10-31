@@ -1,7 +1,8 @@
 ---
 title: Prise en main de l’API des outils Sandbox
 description: Utilisez l’API de l’outil Sandbox pour examiner les artefacts, exporter et importer un instantané des configurations des environnements de test entre les environnements de test. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
-source-git-commit: bad6ad17a5f41e50b27ce44a6d52a79e2066c82f
+exl-id: 0b34d153-a603-4397-a375-9cc846efe23a
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 70%

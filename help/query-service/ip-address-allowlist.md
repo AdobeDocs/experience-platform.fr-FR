@@ -2,7 +2,8 @@
 keywords: Adresse IP, plage IP, liste autorisée, liste autorisée
 title: LISTE AUTORISÉE d’adresse IP pour Query Service
 description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée.
-source-git-commit: 89d04a98e983b5dc9f353a831cdbe21c7c7aaf36
+exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '175'
 ht-degree: 18%

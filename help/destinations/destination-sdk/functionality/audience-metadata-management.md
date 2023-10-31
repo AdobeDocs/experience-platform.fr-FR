@@ -1,13 +1,13 @@
 ---
 description: Utilisez les modèles de métadonnées d’audience pour créer, mettre à jour ou supprimer des audiences par programmation dans votre destination. Adobe fournit un modèle de métadonnées d’audience extensible que vous pouvez configurer en fonction des spécifications de votre API marketing. Une fois le modèle défini, testé et envoyé, il sera utilisé par Adobe pour structurer les appels API vers votre destination.
 title: Gérer les métadonnées d’audience
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: ht
+exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
 source-wordcount: '1037'
 ht-degree: 100%
 
 ---
-
 
 # Gérer les métadonnées d’audience
 

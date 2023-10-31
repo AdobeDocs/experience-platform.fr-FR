@@ -1,13 +1,13 @@
 ---
 description: Cette page illustre l’appel API utilisé pour mettre à jour une configuration de destination existante avec Adobe Experience Platform Destination SDK.
 title: Mise à jour d’une configuration de destination
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: d7f18689-9806-4f73-a63a-fa112569819c
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 100%
 
 ---
-
 
 # Mise à jour d’une configuration de destination
 

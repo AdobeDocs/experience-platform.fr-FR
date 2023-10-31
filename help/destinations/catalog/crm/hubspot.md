@@ -2,17 +2,17 @@
 title: Connexion à HubSpot
 description: La destination HubSpot vous permet de gérer les enregistrements de contact dans votre compte HubSpot.
 last-substantial-update: 2023-09-28T00:00:00Z
-source-git-commit: 9a8668a81927f22b03fed424c8df346f589da544
+exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1604'
-ht-degree: 39%
+ht-degree: 41%
 
 ---
 
-
 # Connexion [!DNL HubSpot]
 
-[[!DNL HubSpot]](https://www.hubspot.com) est une plateforme CRM avec tous les logiciels, intégrations et ressources dont vous avez besoin pour connecter le marketing, les ventes, la gestion de contenu et le service client. Il vous permet de connecter vos données, vos équipes et vos clients sur une seule plateforme CRM.
+[[!DNL HubSpot]](https://www.hubspot.com) est une plateforme CRM proposant l’ensemble des logiciels, intégrations et ressources dont vous avez besoin pour connecter les services marketing, ventes, gestion de contenu et clientèle. Elle vous permet de connecter vos données, vos équipes et votre clientèle sur une seule et même plateforme CRM.
 
 Ceci [!DNL Adobe Experience Platform] [destination](/help/destinations/home.md) tire parti de la fonction [[!DNL HubSpot] API de contacts](https://developers.hubspot.com/docs/api/crm/contacts), pour mettre à jour les contacts dans [!DNL HubSpot] d’une audience Experience Platform existante après activation.
 

@@ -1,13 +1,13 @@
 ---
 title: Extension du SDK Web dʼAdobe Experience Platform
 description: Découvrez lʼextension de balise SDK Web dʼAdobe Experience Platform.
-source-git-commit: 131c33d1049b018ba21898418abefc48e2200f3f
-workflow-type: ht
+exl-id: 987a6675-4d1f-4a5a-b721-991ae5a9a3f4
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
 source-wordcount: '127'
 ht-degree: 100%
 
 ---
-
 
 # Extension du SDK Web dʼAdobe Experience Platform
 

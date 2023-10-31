@@ -2,14 +2,14 @@
 solution: Experience Platform
 title: Créer, partager et réutiliser des instances de playbook
 description: Découvrez comment créer, partager et réutiliser des instances de playbook pour réaliser votre cas d’utilisation marketing.
-badgeBeta: label="Beta" type="Informative"
-source-git-commit: e61e200b148e4d17041b3711bd63c796a44b05c8
-workflow-type: ht
-source-wordcount: '724'
+badgeBeta: label="Version Beta" type="Informative"
+exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
+source-wordcount: '725'
 ht-degree: 100%
 
 ---
-
 
 # (Version bêta) Créer, partager et réutiliser des instances de playbook
 
@@ -44,7 +44,7 @@ Après avoir créé une instance basée sur un playbook, vous pouvez la personna
 Il est important de comprendre que les ressources générées varient selon le cas d’utilisation que vous activez :
 
 * Différentes ressources sont générées pour différents types de playbooks. Ces ressources sont créées spécifiquement pour le cas d’utilisation réalisé via le playbook. Par exemple, un playbook génère un schéma, un segment, un parcours et des messages. Un autre playbook génère un schéma, un segment et une destination vers lesquels activer les données.
-* Les ressources elles-mêmes varient d’un playbook à l’autre. Par exemple, pour le playbook **[!UICONTROL Envoyer un message d’anniversaire aux invités]**, l’audience créée comporte la règle `birthday=today AND year=any`.
+* Les ressources elles-mêmes varient d’un playbook à l’autre. Par exemple, pour le playbook **[!UICONTROL Envoyer un message d’anniversaire aux clients/clientes]**, l’audience créée comporte la règle `birthday=today AND year=any`.
 
 À titre d’exemple, pour le playbook **[!UICONTROL Panier abandonné : contenu]**, vous pouvez constater qu’un parcours spécifique est créé et contient les messages créés pour ce cas d’utilisation.
 

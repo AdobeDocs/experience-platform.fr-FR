@@ -2,10 +2,11 @@
 title: Créer une connexion source SAP Commerce dans l’interface utilisateur
 description: Découvrez comment créer une connexion source SAP Commerce à l’aide de l’interface utilisateur de Adobe Experience Platform.
 badge: Version Beta
-source-git-commit: a848ea11e388678ade780fd81ef3ff6a3477b741
+exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1010'
-ht-degree: 33%
+ht-degree: 34%
 
 ---
 
@@ -249,4 +250,3 @@ Voici un exemple de configurations de mappage pour [!DNL SAP Commerce] flux de d
 ![L’étape de mappage du workflow des sources.](../../../../images/tutorials/create/ecommerce/sap-commerce/mapping-contacts.png)
 
 >[!ENDTABS]
-

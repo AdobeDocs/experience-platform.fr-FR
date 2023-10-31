@@ -1,13 +1,13 @@
 ---
 description: Cette page illustre comment l’appel API est utilisé pour récupérer des détails sur une requête de publication de destination avec Adobe Experience Platform Destination SDK.
 title: Récupération d’une requête de publication de destination
-source-git-commit: 9e1ae44f83b886f0b5dd5a9fc9cd9b7db6154ff0
+exl-id: fceef12d-a52c-4259-a91e-7af88b132800
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '834'
 ht-degree: 100%
 
 ---
-
 
 # Récupération d’une requête de publication de destination
 

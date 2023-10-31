@@ -1,10 +1,11 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour d’août 2023 pour Adobe Experience Platform.
-source-git-commit: 384faa13154386ef2578da4c20ab47f171aefeda
+exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1750'
-ht-degree: 46%
+ht-degree: 51%
 
 ---
 
@@ -155,7 +156,7 @@ Adobe Experience Platform Identity Service vous offre la possibilité de mieux
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Modifications des limites des graphiques d’identités | D’ici la fin du mois de septembre, le graphique d’identités passera à 50 identités par graphique, et la dernière identité sera ingérée. Par conséquent, l’identité la plus ancienne sera supprimée en fonction de l’horodatage d’ingestion et du type d’identité, les types d’identité de cookie étant d’abord supprimés. Aujourd’hui, les graphiques d’identités sont limités à 150 identités par graphique. Une fois cette limite atteinte, les graphiques ne sont plus mis à jour. Contactez le représentant de votre compte pour demander un changement de type d’identité si votre environnement de test de production contient : <ul><li>un espace de noms personnalisé dans lequel les identifiants de personne (tels que les identifiants CRM) sont configurés en tant que type d’identité de cookie/appareil.</li><li>espace de noms personnalisé dans lequel les identifiants de cookie/d’appareil sont configurés en tant que type d’identité multi-appareils.</li></ul> L’ingénierie d’Adobe traitera manuellement ces demandes. Pour plus d’informations, consultez la section [Barrières de sécurité pour les données Identity Service](../../identity-service/guardrails.md). |
+| Modifications des limites des graphiques d’identités | D’ici la fin du mois de septembre, le graphique d’identités passera à 50 identités par graphique, et la dernière identité sera ingérée. Par conséquent, l’identité la plus ancienne sera supprimée en fonction de l’horodatage d’ingestion et du type d’identité, les types d’identité de cookie étant d’abord supprimés. Aujourd’hui, les graphiques d’identités sont limités à 150 identités par graphique. Une fois cette limite atteinte, les graphiques ne sont plus mis à jour. Contactez le représentant de votre compte pour demander un changement de type d’identité si votre environnement de test de production contient : <ul><li>Un espace de noms personnalisé dans lequel les identifiants de personne (tels que les identifiants CRM) sont configurés en tant que type d’identité Cookie/Périphérique.</li><li>Un espace de noms personnalisé dans lequel les identifiants de cookie/périphérique sont configurés en tant que type d’identité multi-périphérique.</li></ul> L’ingénierie d’Adobe traitera manuellement ces demandes. Pour plus d’informations, consultez les [mécanismes de sécurité pour les données du Service d’identités](../../identity-service/guardrails.md). |
 
 Pour plus d’informations, veuillez lire la [Présentation d’Identity Service](../../identity-service/home.md).
 
@@ -183,7 +184,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 | --- | --- |
 | Disponibilité générale des [!DNL SugarCRM] | [!DNL SugarCRM] Les sources sont désormais disponibles. Utilisez les [!DNL SugarCRM Accounts & Contacts] et les sources [!DNL SugarCRM Events] pour importer des données à partir de votre compte [!DNL SugarCRM] dans Experience Platform. Pour plus d’informations, consultez la [[!DNL SugarCRM] vue d’ensemble](../../sources/connectors/crm/sugarcrm.md). |
 | Prise en charge de l’ingestion à la demande pour les flux de données de sources dans l’interface utilisateur | Vous pouvez désormais créer des exécutions de flux à la demande pour un flux de données de sources existantes dans l’interface utilisateur. Pour plus d’informations, consultez le guide sur [création d’un flux à la demande pour les sources à l’aide de l’interface utilisateur](../../sources/tutorials/ui/on-demand-ingestion.md). |
-| Prise en charge de la nouvelle `correlationID` champ pour Adobe Analytics | La variable `_experience.decisioning.propositions.scopeDetails.correlationID` est maintenant disponible dans le schéma du connecteur source Adobe Analytics. Ce champ est utilisé pour prendre en charge les classifications A4T et sera renseigné à compter de septembre 2023. |
+| Prise en charge du nouveau champ `correlationID` pour Adobe Analytics | Le champ `_experience.decisioning.propositions.scopeDetails.correlationID` est maintenant disponible dans le schéma du connecteur source Adobe Analytics. Ce champ est utilisé pour prendre en charge les classifications A4T et sera renseigné à compter de septembre 2023. |
 
 {style="table-layout:auto"}
 

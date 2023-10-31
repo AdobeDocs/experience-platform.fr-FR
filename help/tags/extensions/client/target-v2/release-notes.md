@@ -3,7 +3,7 @@ title: Notes de mise à jour de l’extension Adobe Target v2
 description: Notes de mise à jour les plus récentes pour l’extension de balise Adobe Target v2 dans Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
 source-git-commit: 63839b8918d42bae91df9bac919c546c81be6363
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 100%
 

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de segmentation Edge
 description: Découvrez comment utiliser la segmentation Edge pour évaluer instantanément les définitions de segment dans Platform, en activant les cas d’utilisation de la personnalisation de la même page et de la page suivante.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
-workflow-type: ht
-source-wordcount: '932'
-ht-degree: 100%
+source-git-commit: 9f586b336f5cc232ac9b04a74846b7cfc2b46a71
+workflow-type: tm+mt
+source-wordcount: '942'
+ht-degree: 95%
 
 ---
 
@@ -41,7 +41,7 @@ Une requête peut être évaluée avec une segmentation Edge si elle répond à 
 | Événement unique qui fait référence à un profil | Toute définition de segment qui fait référence à un ou plusieurs attributs de profil et à un seul événement entrant sans restriction temporelle. | Personnes qui vivent aux États-Unis et qui ont visité la page d’accueil. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")])` |
 | Événement unique annulé avec un attribut de profil | Toute définition de segment qui fait référence à un seul événement entrant annulé et à un ou plusieurs attributs de profil | Personnes qui vivent aux Etats-Unis et qui n’ont **pas** visité la page d’accueil. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
 | Événement unique dans une fenêtre temporelle | Toute définition de segment qui fait référence à un seul événement entrant au cours d’une période donnée. | Personnes qui ont consulté la page d’accueil au cours des dernières 24 heures. | `chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 8 days before now)])` |
-| Événement unique avec un attribut de profil dans une fenêtre temporelle | Toute définition de segment qui fait référence à un ou plusieurs attributs de profil et à un seul événement entrant au cours d’une période donnée. | Personnes qui vivent aux États-Unis et qui ont visité la page d’accueil au cours des dernières 24 heures. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 8 days before now)])` |
+| Événement unique avec un attribut de profil dans une fenêtre de temps relatif inférieure à 24 heures | Toute définition de segment qui fait référence à un seul événement entrant, avec un ou plusieurs attributs de profil, et qui se produit dans une fenêtre de temps relative de moins de 24 heures. | Personnes qui vivent aux États-Unis et qui ont visité la page d’accueil au cours des dernières 24 heures. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 8 days before now)])` |
 | Événement unique annulé avec un attribut de profil dans une fenêtre temporelle | Toute définition de segment qui fait référence à un ou plusieurs attributs de profil et à un seul événement entrant annulé sur une période donnée. | Personnes qui vivent aux États-Unis et qui n’ont **pas** visité la page d’accueil au cours des dernières 24 heures. | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "homePageView") WHEN(< 8 days before now)]))` |
 | Événement de fréquence dans une fenêtre temporelle de 24 heures | Toute définition de segment qui fait référence à un événement qui se produit un certain nombre de fois dans une fenêtre temporelle de 24 heures. | Personnes ayant consulté la page d’accueil **au moins** cinq fois au cours des dernières 24 heures. | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
 | Événement de fréquence avec un attribut de profil dans une fenêtre temporelle de 24 heures | Toute définition de segment qui fait référence à un ou plusieurs attributs de profil et à un événement qui se produit un certain nombre de fois dans une fenêtre temporelle de 24 heures. | Personnes originaires des États-Unis qui ont visité la page d’accueil **au moins** cinq fois au cours des dernières 24 heures. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |

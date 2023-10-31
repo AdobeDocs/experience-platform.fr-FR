@@ -5,7 +5,7 @@ exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
 source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
 workflow-type: tm+mt
 source-wordcount: '899'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -65,7 +65,7 @@ Une icône en forme de crayon se trouve à côté du nom de modèle de chaque li
 
 ## Journaux des filtres {#filter-logs}
 
-Vous pouvez filtrer la liste des logs de requête en fonction de différents paramètres. Sélectionnez l’icône de filtre (![L’icône de filtre.](../images/ui/query-log/filter-icon.png)) en haut à gauche de l’espace de travail pour ouvrir un ensemble d’options de filtre dans le rail de gauche.
+Vous pouvez filtrer la liste des journaux de requêtes en fonction de différents paramètres. Sélectionnez l’icône de filtre (![L’icône de filtre.](../images/ui/query-log/filter-icon.png)) en haut à gauche de l’espace de travail pour ouvrir un ensemble d’options de filtre dans le rail de gauche.
 
 ![Espace de travail Journal des requêtes avec l’icône de filtre mise en surbrillance.](../images/ui/query-log/log-filter.png)
 

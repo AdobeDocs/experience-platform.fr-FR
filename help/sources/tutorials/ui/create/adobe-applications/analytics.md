@@ -2,10 +2,10 @@
 title: Créer une connexion source Adobe Analytics dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 358daa9511f647749a8198893b712d00a5cfbc5d
 workflow-type: tm+mt
-source-wordcount: '2298'
-ht-degree: 59%
+source-wordcount: '2481'
+ht-degree: 46%
 
 ---
 
@@ -264,33 +264,53 @@ L’écran de [!UICONTROL Révision] s’affiche, vous permettant dʼexaminer vo
 
 ![review](../../../../images/tutorials/create/analytics/review.png)
 
-### Surveiller votre flux de données
+## Surveiller votre flux de données {#monitor-your-dataflow}
 
-Une fois votre flux de données créé, vous pouvez surveiller les données ingérées par celui-ci. Sur l’écran [!UICONTROL Catalogue], sélectionnez **[!UICONTROL Flux de données]** pour afficher la liste des flux établis associés à votre compte Analytics.
+Une fois le flux de données terminé, sélectionnez **[!UICONTROL Flux de données]** dans le catalogue des sources pour surveiller l’activité et l’état de vos données.
 
-![select-dataflows](../../../../images/tutorials/create/analytics/select-dataflows.png)
+![Catalogue des sources avec l’onglet des flux de données sélectionné.](../../../../images/tutorials/create/analytics/select-dataflows.png)
 
-L’écran **Flux de données** s’affiche. Sur cette page, vous trouverez plusieurs flux de jeux de données, y compris des informations sur leur nom, les données sources, l’heure de création et le statut.
+Une liste des flux de données Analytics existants dans votre organisation s’affiche. À partir de là, sélectionnez un jeu de données cible pour afficher son activité d’ingestion respective.
 
-Le connecteur instancie deux flux de jeux de données. L’un représente les données de renvoi, l’autre les données actives. Les données de renvoi ne sont pas configurées pour le Profil, mais sont envoyées au lac de données à des fins d’analyse et de cas d’utilisation en science des données.
+![Liste des flux de données Adobe Analytics existants dans votre organisation.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-Pour plus d’informations sur le renvoi, les données actives et leurs latences respectives, consultez la section [Présentation du connecteur Analytics](../../../../connectors/adobe-applications/analytics.md).
+La variable [!UICONTROL Activité du jeu de données] fournit des informations sur la progression des données envoyées d’Analytics à Experience Platform. L’interface affiche des mesures telles que le nombre d’enregistrements ingérés, le nombre de lots ingérés et le nombre de lots en échec.
 
-Sélectionnez dans la liste le flux de jeu de données à afficher.
+La source instancie deux flux de jeux de données. L’un représente les données de renvoi, l’autre les données actives. Les données de renvoi ne sont pas configurées pour être ingérées dans Real-Time Customer Profile, mais sont envoyées au lac de données à des fins d’analyse et de cas d’utilisation en science des données.
 
-![select-target-dataset](../../../../images/tutorials/create/analytics/select-target-dataset.png)
+Pour plus d’informations sur le renvoi, les données actives et leurs latences respectives, consultez la section [Présentation de la source Analytics](../../../../connectors/adobe-applications/analytics.md).
 
-La page **[!UICONTROL Activité du jeu de données]** s’affiche. Cette page affiche le taux de consommation des messages sous la forme dʼun graphique. Sélectionnez **[!UICONTROL Gouvernance des données]** à partir de l’en-tête supérieur pour accéder aux champs de labellisation.
+![Page d’activité du jeu de données pour un jeu de données cible donné pour les données Adobe Analytics.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-![dataset-activity](../../../../images/tutorials/create/analytics/dataset-activity.png)
++++Affichage de lots individuels à l’aide de l’interface de surveillance héritée
 
-Vous pouvez afficher les libellés hérités d’un flux de jeux de données à partir de l’écran [!UICONTROL Gouvernance des données]. Pour plus d’informations sur la manière d’étiqueter les données provenant d’Analytics, consultez la page [Guide des libellés d’utilisation des données](../../../../../data-governance/labels/user-guide.md).
+La page d’activité du jeu de données n’affiche pas de liste de lots individuels. Pour afficher une liste de lots individuels, sélectionnez un graphique dans l’interface de l’activité du jeu de données.
 
-![data-gov](../../../../images/tutorials/create/analytics/data-gov.png)
+![Page de l’activité du jeu de données avec un graphique sélectionné.](../../../../images/tutorials/create/analytics/select-chart.png)
 
-Pour supprimer un flux de données, accédez à la page [!UICONTROL Flux de données], puis sélectionnez les ellipses (`...`) en regard du nom du flux de données et cliquez sur [!UICONTROL Supprimer].
+Vous accédez au tableau de bord Surveillance . Ensuite, sélectionnez **[!UICONTROL SEULS LES ÉCHECS D’INGÉRATION : OUI]** pour effacer le filtre et afficher une liste de lots individuels.
 
-![delete](../../../../images/tutorials/create/analytics/delete.png)
+![Le tableau de bord de surveillance avec le filtre d’échec sélectionné.](../../../../images/tutorials/create/analytics/clear-filter.png)
+
+L’interface se met à jour vers une liste de lots individuels, y compris des informations sur leurs mesures respectives.
+
+![Page de surveillance héritée pour les données par lots.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
+
+| Mesures | Description |
+| --- | --- |
+| ID de lot | L’identifiant d’un lot donné. Cette valeur est générée en interne. |
+| Nom du jeu de données | Nom d’un jeu de données donné utilisé pour les données Analytics. |
+| Source | Source des données ingérées. |
+| Mis à jour | Date de l’itération d’exécution de flux la plus récente. |
+| Enregistrements dans un jeu de données | Nombre total d’enregistrements dans le jeu de données. **Remarque**: ce paramètre affiche parfois l’état de `in-progress`. Ce statut indique que le processus d’ingestion des enregistrements n’est pas encore terminé. |
+| Nouveaux fragments de profil | Nombre total de nouveaux fragments de profil qui ont été ingérés. |
+| Fragments de profil existants | Comptage total des fragments de profil existants. |
+| Enregistrements d’identité assemblés | Comptage total des enregistrements d’identité assemblés après ingestion. |
+| Enregistrements dans le profil | Nombre total d’enregistrements ingérés dans Real-Time Customer Profile. |
+
+{style="table-layout:auto"}
+
++++
 
 ## Étapes suivantes et ressources supplémentaires
 

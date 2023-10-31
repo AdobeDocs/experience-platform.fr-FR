@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Effectuer une segmentation Edge à l’aide de l’API
 description: Ce document contient des exemples d’utilisation de la segmentation Edge avec l’API Segmentation Service Adobe Experience Platform.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 9f586b336f5cc232ac9b04a74846b7cfc2b46a71
 workflow-type: tm+mt
-source-wordcount: '1169'
-ht-degree: 92%
+source-wordcount: '1179'
+ht-degree: 90%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 92%
 >
 >Le document suivant indique comment effectuer une segmentation Edge à l’aide de l’API. Pour plus d’informations sur l’exécution de la segmentation Edge à l’aide de l’interface utilisateur, veuillez lire le [guide de l’interface utilisateur de segmentation Edge](../ui/edge-segmentation.md).
 >
->La segmentation Edge est désormais généralement disponible pour tous les utilisateurs et utilisatrices de Platform. Si vous avez créé des définitions de segment Edge au cours de la version bêta, ces définitions de segment continueront à fonctionner.
+>La segmentation Edge est désormais généralement disponible pour tous les utilisateurs et utilisatrices de Platform. Si vous avez créé des définitions de segments Edge au cours de la version Beta, ces définitions de segments continueront à fonctionner.
 
 La segmentation Edge permet d’évaluer instantanément les définitions de segment dans Adobe Experience Platform, en activant les cas d’utilisation de la personnalisation de la même page et de la page suivante.
 
@@ -31,7 +31,7 @@ La segmentation Edge permet d’évaluer instantanément les définitions de seg
 Ce guide de développement nécessite une connaissance pratique des divers services [!DNL Adobe Experience Platform] impliqués dans la segmentation Edge. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur en temps réel unifié sur base des données agrégées provenant de plusieurs sources.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permet de créer des audiences à partir de [!DNL Real-Time Customer Profile] data.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): permet de créer des audiences à partir de [!DNL Real-Time Customer Profile] data.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 
 Pour passer avec succès des appels à des points d’entrée d’API Experience Platform, consultez le guide sur la [prise en main des API Platform](../../landing/api-guide.md) pour en savoir plus sur les en-têtes requis et sur la lecture d’exemples d’appels d’API.
@@ -47,7 +47,7 @@ Pour qu’un segment soit évalué à l’aide de la segmentation Edge, la requ�
 | Événement unique qui fait référence à un profil | Toute définition de segment qui fait référence à un ou plusieurs attributs de profil et à un seul événement entrant sans restriction temporelle. | Personnes qui vivent aux États-Unis et qui ont visité la page d’accueil. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "addToCart")])` |
 | Événement unique annulé avec un attribut de profil | Toute définition de segment qui fait référence à un seul événement entrant annulé et à un ou plusieurs attributs de profil | Personnes qui vivent aux Etats-Unis et qui n’ont **pas** visité la page d’accueil. | `not(chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView")]))` |
 | Événement unique dans une fenêtre temporelle | Toute définition de segment qui fait référence à un seul événement entrant au cours d’une période donnée. | Personnes qui ont consulté la page d’accueil au cours des dernières 24 heures. | `chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
-| Événement unique avec un attribut de profil dans une fenêtre temporelle | Toute définition de segment qui fait référence à un ou plusieurs attributs de profil et à un seul événement entrant au cours d’une période donnée. | Personnes qui vivent aux États-Unis et qui ont visité la page d’accueil au cours des dernières 24 heures. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
+| Événement unique avec un attribut de profil dans une fenêtre de temps relatif inférieure à 24 heures | Toute définition de segment qui fait référence à un seul événement entrant, avec un ou plusieurs attributs de profil, et qui se produit dans une fenêtre de temps relative de moins de 24 heures. | Personnes qui vivent aux États-Unis et qui ont visité la page d’accueil au cours des dernières 24 heures. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)])` |
 | Événement unique annulé avec un attribut de profil dans une fenêtre temporelle | Toute définition de segment qui fait référence à un ou plusieurs attributs de profil et à un seul événement entrant annulé sur une période donnée. | Personnes qui vivent aux États-Unis et qui n’ont **pas** visité la page d’accueil au cours des dernières 24 heures. | `homeAddress.countryCode = "US" and not(chain(xEvent, timestamp, [X: WHAT(eventType = "addToCart") WHEN(< 8 days before now)]))` |
 | Événement de fréquence dans une fenêtre temporelle de 24 heures | Toute définition de segment qui fait référence à un événement qui se produit un certain nombre de fois dans une fenêtre temporelle de 24 heures. | Personnes ayant consulté la page d’accueil **au moins** cinq fois au cours des dernières 24 heures. | `chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |
 | Événement de fréquence avec un attribut de profil dans une fenêtre temporelle de 24 heures | Toute définition de segment qui fait référence à un ou plusieurs attributs de profil et à un événement qui se produit un certain nombre de fois dans une fenêtre temporelle de 24 heures. | Personnes originaires des États-Unis qui ont visité la page d’accueil **au moins** cinq fois au cours des dernières 24 heures. | `homeAddress.countryCode = "US" and chain(xEvent, timestamp, [A: WHAT(eventType = "homePageView") WHEN(< 24 hours before now) COUNT(5) ] )` |

@@ -6,7 +6,7 @@ exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
 source-git-commit: 7cd8c257f723e2e60058610bf845ee1fe8785de7
 workflow-type: tm+mt
 source-wordcount: '1699'
-ht-degree: 20%
+ht-degree: 22%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 20%
 >
 > Cette destination est disponible pour [Adobe Real-time Customer Data Platform Prime et Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) clients.
 
-Utilisez cette destination pour activer les audiences de Real-Time CDP vers Audience Manager et Adobe Analytics. Vous avez besoin d’une licence d’Audience Manager pour envoyer des audiences à Adobe Analytics.
+Utilisez cette destination pour activer les audiences de Real-Time CDP vers Audience Manager et Adobe Analytics. Vous avez besoin d’une licence Audience Manager pour envoyer des audiences à Adobe Analytics.
 
 Pour envoyer des audiences vers d’autres solutions Adobe, utilisez les connexions directes de Real-Time CDP vers [Adobe Target](../personalization/adobe-target-connection.md), [Adobe Advertising](../advertising/adobe-advertising-cloud-connection.md), [Adobe Campaign](../email-marketing/adobe-campaign.md) et [Marketo Engage](../adobe/marketo-engage.md).
 

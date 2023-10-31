@@ -1,7 +1,8 @@
 ---
 title: Ingestion à la demande pour les flux de données de sources dans l’interface utilisateur
 description: Découvrez comment créer des flux de données à la demande pour vos connexions source à l’aide de l’interface utilisateur Experience Platform.
-source-git-commit: cea12160656ba0724789db03e62213022bacd645
+exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '499'
 ht-degree: 11%

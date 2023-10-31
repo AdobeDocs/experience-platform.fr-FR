@@ -2,7 +2,8 @@
 title: Catégories d’intérêt Mailchimp
 description: Mailchimp (également appelé Intuit Mailchimp) est une plateforme de marketing automatisé populaire et un service de marketing par e-mail utilisé par les entreprises pour gérer et communiquer avec des contacts (clients, clients ou autres personnes intéressées) à l’aide de listes de diffusion et de campagnes de marketing par e-mail. Utilisez ce connecteur pour trier vos contacts en fonction de leurs centres d’intérêt et de leurs préférences.
 last-substantial-update: 2023-05-24T00:00:00Z
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '2392'
 ht-degree: 23%

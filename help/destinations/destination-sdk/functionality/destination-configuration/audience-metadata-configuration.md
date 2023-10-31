@@ -1,23 +1,23 @@
 ---
 description: Découvrez comment configurer les paramètres de métadonnées d’audience pour les destinations créées avec Destination SDK.
 title: Configuration des métadonnées d’audience
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+exl-id: ae71df4f-b753-4084-835f-03559b4986cb
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '405'
-ht-degree: 65%
+ht-degree: 91%
 
 ---
 
-
 # Configuration des métadonnées d’audience
 
-Lors de l’exportation de données d’Experience Platform vers votre destination, vous aurez peut-être besoin de métadonnées d’audience spécifiques, telles que les noms d’audience ou les ID d’audience, à partager entre l’Experience Platform et votre destination.
+Pendant l’exportation de données d’Experience Platform vers votre destination, vous aurez peut-être besoin de métadonnées d’audience spécifiques, telles que les noms ou les identifiants d’audience, à partager entre Experience Platform et votre destination.
 
 Destination SDK propose des outils que vous pouvez utiliser pour créer, mettre à jour ou supprimer des audiences par programmation dans la plateforme de destination.
 
 Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la section [options de configuration](../configuration-options.md) ou consulter le guide sur la manière d’effectuer [utiliser la Destination SDK pour configurer une destination de diffusion en continu ;](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
-Vous pouvez configurer le modèle de métadonnées d’audience via le point d’entrée `/authoring/audience-templates`. Après avoir créé la configuration de métadonnées d’audience, vous pouvez utiliser le point d’entrée `/authoring/destinations` pour configurer la section `audienceMetadataConfig`. Cette section indique à votre destination les métadonnées d’audience qu’elle doit mapper à votre modèle d’audience.
+Vous pouvez configurer le modèle de métadonnées d’audience via le point d’entrée `/authoring/audience-templates`. Après avoir créé la configuration de métadonnées d’audience, vous pouvez utiliser le point d’entrée `/authoring/destinations` pour configurer la section `audienceMetadataConfig`. Cette section indique à votre destination les métadonnées d’audience qu’elle doit mapper sur le modèle d’audience.
 
 Pour obtenir des exemples d’appels API détaillés dans lesquels vous pouvez configurer les composants affichés sur cette page, consultez les pages de référence de l’API suivantes.
 
@@ -41,7 +41,7 @@ Pour en savoir plus sur les types d’intégration qui prennent en charge les fo
 
 ## Paramètres pris en charge {#supported-parameters}
 
-Lors de la création de la configuration des métadonnées d’audience, vous pouvez utiliser les paramètres décrits dans le tableau ci-dessous pour configurer les paramètres de mappage d’audience.
+Pendant la création de la configuration des métadonnées d’audience, vous pouvez utiliser les paramètres décrits dans le tableau ci-dessous pour configurer les paramètres de mappage des audiences.
 
 ```json
   "audienceMetadataConfig":{
@@ -54,8 +54,8 @@ Lors de la création de la configuration des métadonnées d’audience, vous po
 
 | Paramètre | Type | Description |
 |---------|----------|------|
-| `mapExperiencePlatformSegmentName` | Booléen | Indique si la variable [[!UICONTROL ID de mappage]](../../../ui/activate-segment-streaming-destinations.md#scheduling) dans le workflow d’activation de destination, la valeur doit correspondre au nom de l’audience Experience Platform. |
-| `mapExperiencePlatformSegmentId` | Booléen | Indique si la variable [[!UICONTROL ID de mappage]](../../../ui/activate-segment-streaming-destinations.md#scheduling) dans le workflow d’activation de destination, la valeur doit correspondre à l’ID d’audience Experience Platform. |
+| `mapExperiencePlatformSegmentName` | Booléen | Indique si la valeur de l’[[!UICONTROL identifiant de mappage]](../../../ui/activate-segment-streaming-destinations.md#scheduling) dans le workflow d’activation de destination doit correspondre au nom de l’audience Experience Platform. |
+| `mapExperiencePlatformSegmentId` | Booléen | Indique si la valeur de l’[[!UICONTROL identifiant de mappage]](../../../ui/activate-segment-streaming-destinations.md#scheduling) dans le workflow d’activation de destination doit correspondre à l’identifiant de l’audience Experience Platform. |
 | `mapUserInput` | Booléen | Active ou désactive l’entrée utilisateur pour la valeur de l’[[!UICONTROL identifiant de mappage]](../../../ui/activate-segment-streaming-destinations.md#scheduling) dans le workflow d’activation de destination. S’il est défini sur `true`, `audienceTemplateId` ne peut pas être présent. |
 | `audienceTemplateId` | Booléen | `instanceId` du [modèle de métadonnées d’audience](../../metadata-api/create-audience-template.md) utilisé pour votre destination. |
 

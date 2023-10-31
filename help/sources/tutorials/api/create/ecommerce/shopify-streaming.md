@@ -1,9 +1,9 @@
 ---
 title: Création D’Une Connexion Source De Diffusion En Continu Et D’Un Flux De Données Pour Shopifier Les Données À L’Aide De L’API Flow Service
 description: Découvrez comment créer une connexion source en continu et un flux de données pour Shopify data à l’aide de l’API Flow Service.
-badge: Version bêta
-exl-id: d44414a1-48fb-41e2-8cec-23cad867ba7d
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+badge: Version Beta
+exl-id: 74660e27-49c0-415f-bd85-15f9d853daee
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 52%
@@ -14,9 +14,9 @@ ht-degree: 52%
 
 >[!NOTE]
 >
->Le [!DNL Shopify] source de diffusion en continu est en version bêta. Veuillez lire la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La variable [!DNL Shopify] source en continu est en version bêta. Veuillez lire la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Le tutoriel suivant décrit les étapes à suivre pour créer une connexion source en continu et un flux de données pour diffuser des données à partir de [[!DNL Shopify]](https://www.shopify.com/) vers Adobe Experience Platform à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Le tutoriel suivant décrit les étapes à suivre pour créer une connexion source en continu et un flux de données pour diffuser des données depuis [[!DNL Shopify]](https://www.shopify.com/) vers Adobe Experience Platform à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main {#getting-started}
 
@@ -45,7 +45,7 @@ POST /sourceConnections
 
 **Requête**
 
-La requête suivante crée une connexion source pour *VOTRE SOURCE*:
+La requête suivante crée une connexion source pour *YOURSOURCE*:
 
 ```shell
 curl -X POST \
@@ -232,7 +232,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ### Créer un flux {#flow}
 
-La dernière étape pour obtenir des données de [!DNL Shopify] à Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
+La dernière étape pour obtenir des données de [!DNL Shopify] vers Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
 
 * [ID de connexion source](#source-connection)
 * [ID de connexion cible](#target-connection)
@@ -304,11 +304,11 @@ Une réponse réussie renvoie l’identifiant (`id`) du flux de données nouvell
 }
 ```
 
-### Obtention de l’URL de votre point de terminaison de diffusion en continu
+### Obtention de l’URL de votre point de terminaison de diffusion
 
 Une fois votre flux de données créé, vous pouvez désormais récupérer l’URL de votre point de terminaison de diffusion en continu. Vous utiliserez cette URL de point de terminaison pour abonner votre source à un webhook, ce qui vous permettra de communiquer avec votre Experience Platform.
 
-Pour récupérer l’URL de votre point de terminaison de diffusion en continu, envoyez une demande de GET à la fonction `/flows` et indiquez l’identifiant de votre flux de données.
+Pour récupérer l’URL de votre point de terminaison de diffusion en continu, envoyez une demande de GET à la fonction `/flows` et fournissez l’identifiant de votre flux de données.
 
 **Format d’API**
 
@@ -659,7 +659,7 @@ Une fois votre flux de données créé, vous pouvez surveiller les données ing�
 
 ### Mettre à jour votre flux de données
 
-Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés, en envoyant une requête PATCH à la variable `/flows` point d’entrée du [!DNL Flow Service] API, tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre flux de données `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour des flux de données sources à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés, en envoyant une requête PATCH à la variable `/flows` point d’entrée du [!DNL Flow Service] API, tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre flux de données `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour des flux de données de sources à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
 ### Mettre à jour votre compte
 

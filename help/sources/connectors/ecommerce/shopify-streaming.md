@@ -1,10 +1,10 @@
 ---
 title: Shopify Streaming Source
 description: Découvrez comment créer une connexion source et un flux de données pour ingérer des données en continu de votre instance Shopify vers Adobe Experience Platform
-badge: Version bêta
+badge: Version Beta
 last-substantial-update: 2023-04-26T00:00:00Z
-exl-id: 4c83c08d-c744-4167-9e3b-ed9a995943f4
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 3%
@@ -25,11 +25,11 @@ La section suivante décrit les étapes préalables à suivre avant d’utiliser
 
 Vous devez disposer d’un [!DNL Shopify] compte du partenaire afin de se connecter à la variable [!DNL Shopify] API. Si vous ne disposez pas déjà d’un compte de partenaire, inscrivez-vous à l’aide de la variable [[!DNL Shopify] tableau de bord des partenaires](https://www.shopify.com/partners).
 
-### Créer votre application
+### Création de votre application
 
 Avec un [!DNL Shopify] compte partenaire, vous pouvez maintenant poursuivre et créer votre application à l’aide du tableau de bord des partenaires. Pour obtenir des instructions complètes sur la création de votre application dans [!DNL Shopify], lisez le [[!DNL Shopify] guide de prise en main](https://www.shopify.com/partners/blog/17056443-how-to-generate-a-shopify-api-token).
 
-Une fois votre application créée, récupérez votre **ID client** et **secret client** de la **informations d’identification client** de l’onglet [!DNL Shopify] tableau de bord des partenaires. L’ID client et le secret client seront utilisés dans les étapes suivantes pour récupérer votre code d’autorisation et votre jeton d’accès.
+Une fois votre application créée, récupérez votre **ID client** et **secret client** de la **informations d’identification client** de la [!DNL Shopify] tableau de bord des partenaires. L’ID client et le secret client seront utilisés dans les étapes suivantes pour récupérer votre code d’autorisation et votre jeton d’accès.
 
 ### Récupération de votre code d’autorisation
 
@@ -46,7 +46,7 @@ https://{SHOP}.myshopify.com/admin/oauth/authorize?client_id={API_KEY}&scope={SC
 | Paramètre | Description |
 | --- | --- |
 | `shop` | Votre sous-domaine `myshopify.com` URL. |
-| `api_key` | Votre [!DNL Shopify] ID client. Vous pouvez récupérer votre ID client à partir de la variable **informations d’identification client** de l’onglet [!DNL Shopify] tableau de bord des partenaires. |
+| `api_key` | Votre [!DNL Shopify] ID client. Vous pouvez récupérer votre ID client à partir de la variable **informations d’identification client** de la [!DNL Shopify] tableau de bord des partenaires. |
 | `scopes` | Type d’accès que vous souhaitez définir. Par exemple, vous pouvez définir des portées comme `scope=write_orders,read_customers` pour autoriser des autorisations de modification des commandes et de lecture des clients. |
 | `redirect_uri` | URL du script qui générera le jeton d’accès. |
 
@@ -66,7 +66,7 @@ https://www.acme.com/?code=k6j2palgrbljja228ou8c20fmn7w41gz&hmac=68c9163f772eecb
 
 ### Récupération de votre jeton d’accès
 
-Maintenant que vous disposez de votre ID client, de votre secret client et de votre code d’autorisation, vous pouvez récupérer votre jeton d’accès. Pour récupérer votre jeton d’accès, envoyez une demande de POST à la variable `myshopify.com` URL lors de l’ajout de cette URL avec [!DNL Shopify's] Point d’entrée de l’API : `/admin/oauth/access_token`.
+Maintenant que vous disposez de votre ID client, de votre secret client et de votre code d’autorisation, vous pouvez récupérer votre jeton d’accès. Pour récupérer votre jeton d’accès, envoyez une demande de POST à la variable `myshopify.com` URL lorsque vous ajoutez cette URL avec [!DNL Shopify's] Point d’entrée de l’API : `/admin/oauth/access_token`.
 
 **Format d’API**
 
@@ -127,7 +127,7 @@ curl -X POST \
 | Paramètre | Description |
 | --- | --- | 
 | `webhook.address` | Point de terminaison http où les messages en continu sont envoyés. |
-| `webhook.topic` | Rubrique de votre abonnement webhook. Pour plus d’informations, reportez-vous à la section [[!DNL Shopify] guide des rubriques des événements webhook](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
+| `webhook.topic` | Rubrique de votre abonnement webhook. Pour plus d’informations, consultez la section [[!DNL Shopify] guide des sujets relatifs aux événements webhook](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
 | `webhook.format` | Le format de vos données. |
 
 **Réponse**

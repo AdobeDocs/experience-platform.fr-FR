@@ -2,13 +2,13 @@
 title: Connexion au moteur
 description: Moengage est une plateforme d’engagement client qui optimise les interactions centrées sur les clients entre les consommateurs et les marques en temps réel.
 last-substantial-update: 2023-10-11T00:00:00Z
-source-git-commit: 6a80089f404057b5c98764b5e0166b9afaf1a7e4
+exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
+source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 41%
 
 ---
-
 
 # Connexion [!DNL Moengage]
 
@@ -150,4 +150,3 @@ Pour vérifier si les données ont bien été exportées vers la variable [!DNL 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
 Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experience Platform] se conforment aux politiques d’utilisation des données. Pour obtenir des informations détaillées sur la manière dont [!DNL Adobe Experience Platform] applique la gouvernance des données, consultez la [Présentation de la gouvernance des données](/help/data-governance/home.md).
-

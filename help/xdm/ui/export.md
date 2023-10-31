@@ -7,7 +7,7 @@ exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 source-git-commit: d25042e80ca5f655a50deac6a65ce9168225d6e6
 workflow-type: tm+mt
 source-wordcount: '582'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -209,7 +209,7 @@ La charge utile peut également être copiée en sélectionnant [!UICONTROL Plus
 >
 >Un schéma ne peut pas être supprimé s’il est activé pour Profile ou s’il comporte des jeux de données associés.
 
-![Éditeur de schémas avec [!UICONTROL Plus] et [!UICONTROL Copier vers JSON] surlignée.](../images/ui/export/schema-editor-copy-json.png)
+![[!UICONTROL Éditeur de schémas avec « Plus » et « Copier vers JSON » mis en surbrillance.]](../images/ui/export/schema-editor-copy-json.png)
 
 La charge utile prend la forme d’un tableau, chaque élément de tableau étant un objet qui représente une ressource XDM personnalisée à exporter. Dans l’exemple ci-dessus, le[!DNL Loyalty details]&quot; groupe de champs personnalisés et le &quot;[!DNL Loyalty Members]&quot; sont inclus. Les ressources de base utilisées par le schéma ne sont pas incluses dans l’exportation, car elles sont disponibles dans tous les environnements de test et toutes les organisations.
 

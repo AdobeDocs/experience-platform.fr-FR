@@ -2,7 +2,8 @@
 title: Connexion de votre compte RainFocus à un Experience Platform à l’aide de l’interface utilisateur
 description: Découvrez comment connecter votre compte RainFocus à Experience Platform à l’aide de l’interface utilisateur.
 badge: Version Beta
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+exl-id: a349e37e-9f2c-47ff-8360-ccbe578dce27
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 29%
@@ -110,7 +111,7 @@ Pour récupérer votre point de terminaison de diffusion en continu, accédez à
 
 Une fois votre flux de données terminé et que vous avez récupéré l’URL de votre point de terminaison de diffusion en continu, vous pouvez désormais activer la variable [!DNL Integration Profile] in [!DNL RainFocus].
 
-* Connectez-vous au [[!DNL RainFocus] platform](https://app.rainfocus.com). Dans la navigation Principale, sélectionnez **[!DNL Libraries]** et **[!DNL Integration Profiles]**
+* Connectez-vous au [[!DNL RainFocus] platform](https://app.rainfocus.com). Dans la navigation principale, sélectionnez **[!DNL Libraries]** et **[!DNL Integration Profiles]**
 * Ouvrez le [!DNL Integration Profile] que vous avez créé précédemment dans le cadre du [conditions préalables](../../../../connectors/analytics/rainfocus.md#create-an-integration-profile-in-rainfocus).
 * Collez le **Identifiant de flux de données** et **Point de terminaison de diffusion en continu** copié à partir du flux de données dans Experience Platform et sélectionnez **Enregistrer**
 

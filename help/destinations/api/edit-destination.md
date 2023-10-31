@@ -3,7 +3,8 @@ solution: Experience Platform
 title: Modification des connexions de destination à l’aide de l’API Flow Service
 type: Tutorial
 description: Découvrez comment modifier différents composants d’une connexion de destination à l’aide de l’API Flow Service.
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 33%
@@ -174,7 +175,7 @@ Une réponse réussie renvoie les détails actuels de votre flux de données, y 
 
 ## Modifier les composants de connexion cible (emplacement de stockage et autres composants) {#patch-target-connection}
 
-Les composants d’une connexion cible diffèrent par destination. Par exemple, pour [!DNL Amazon S3] destinations, vous pouvez mettre à jour le compartiment et le chemin d’accès où les fichiers sont exportés. Pour [!DNL Pinterest] destinations, vous pouvez mettre à jour vos [!DNL Pinterest Advertiser ID] et [!DNL Google Customer Match] vous pouvez mettre à jour votre [!DNL Pinterest Account ID].
+Les composants d’une connexion cible diffèrent par destination. Par exemple, pour [!DNL Amazon S3] destinations, vous pouvez mettre à jour le compartiment et le chemin d’accès où les fichiers sont exportés. Pour [!DNL Pinterest] destinations, vous pouvez mettre à jour vos [!DNL Pinterest Advertiser ID] et pour [!DNL Google Customer Match] vous pouvez mettre à jour votre [!DNL Pinterest Account ID].
 
 Pour mettre à jour les composants d’une connexion cible, effectuez une requête de PATCH au `/targetConnections/{TARGET_CONNECTION_ID}` point de terminaison tout en fournissant votre identifiant de connexion cible, la version et les nouvelles valeurs que vous souhaitez utiliser. Souvenez-vous que vous avez obtenu votre identifiant de connexion cible à l’étape précédente, lorsque vous avez inspecté un flux de données existant vers la destination souhaitée.
 
@@ -446,7 +447,7 @@ Une réponse réussie renvoie votre identifiant de connexion de base et une bali
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points de terminaison d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état d’API](/help/landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform pour plus d’informations sur l’interprétation des réponses d’erreur.
+Les points de terminaison d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API d’Experience Platform. Voir [Codes d’état d’API](/help/landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform pour plus d’informations sur l’interprétation des réponses d’erreur.
 
 ## Étapes suivantes {#next-steps}
 

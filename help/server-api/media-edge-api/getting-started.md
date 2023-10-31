@@ -2,13 +2,13 @@
 solution: Experience Platform
 title: Prise en main des API Media Edge
 description: Prise en main des API Media Edge
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+exl-id: 76022dea-408b-4d8e-abd4-1a6de81beceb
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '958'
 ht-degree: 100%
 
 ---
-
 
 # Prise en main de l’API Media Edge
 
@@ -292,5 +292,3 @@ Le tableau suivant affiche les codes de réponse possibles suite aux requêtes d
 
 * [Guide de dépannage de Media Edge](troubleshooting.md)
 * [Vue d’ensemble de l’API Media Edge](overview.md)
-
-

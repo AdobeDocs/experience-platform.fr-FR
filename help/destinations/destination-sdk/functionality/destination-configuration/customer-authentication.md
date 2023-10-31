@@ -1,13 +1,13 @@
 ---
 description: Découvrez comment configurer un mécanisme d’authentification pour la destination et déterminez ce que les utilisateurs verront dans l’interface utilisateur en fonction de la méthode d’authentification que vous sélectionnez.
 title: Configuration de l’authentification du client
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 100%
 
 ---
-
 
 # Configuration de l’authentification du client
 

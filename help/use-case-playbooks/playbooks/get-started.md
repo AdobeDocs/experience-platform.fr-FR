@@ -2,14 +2,14 @@
 solution: Experience Platform
 title: Commencer
 description: Commencez à utiliser la fonctionnalité des Playbooks de cas d’utilisation.
-badgeBeta: label="Beta" type="Informative"
-source-git-commit: 297dc9d6252d401f805fa5ebb5cf5111910286cf
-workflow-type: ht
-source-wordcount: '315'
+badgeBeta: label="Version Beta" type="Informative"
+exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+workflow-type: tm+mt
+source-wordcount: '316'
 ht-degree: 100%
 
 ---
-
 
 # (Version Beta) Commencer
 

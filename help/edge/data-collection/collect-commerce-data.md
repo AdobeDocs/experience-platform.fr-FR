@@ -1,13 +1,13 @@
 ---
 title: collecter des informations sur le commerce, les produits et les commandes à l’aide du SDK Web de Adobe Experience Platform ;
 description: Découvrez comment ajouter des données relatives aux produits ou à un panier à l’aide du SDK Web de Adobe Experience Platform.
-source-git-commit: cb47f70fe75eb0dfe26fb3c3557658cf6cff5a17
+exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
+source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
 source-wordcount: '1109'
 ht-degree: 27%
 
 ---
-
 
 # Collecte d’informations sur le commerce, les produits et les commandes
 
@@ -151,7 +151,7 @@ La liste de produits indique quels produits sont liés à l’action corresponda
 
 Développez les sections ci-dessous pour voir des exemples de commandes du SDK Web à l’aide de la fonction `productListItems` .
 
-+++`productListItems` exemple
++++`productListItems` example
 
 Un SDK Web `sendEvent` paramètre d’appel `productViews` pour plusieurs produits dans la variable `productListItems` tableau :
 
@@ -213,7 +213,7 @@ alloy("sendEvent",{
 
 +++
 
-+++`checkouts` exemple
++++`checkouts` example
 
 Un SDK Web `sendEvent` paramètre d’appel `checkouts` pour plusieurs produits dans `productListItems` tableau :
 
