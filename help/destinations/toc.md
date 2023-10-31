@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: e4c2fc3cc2ef1f6731c81becdd6a6e4149b769dd
+source-git-commit: 48acb9ec2ee093c4b22176785a693b1c1ea742bd
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 94%
+source-wordcount: '1201'
+ht-degree: 93%
 
 ---
 
@@ -41,6 +41,7 @@ ht-degree: 94%
       * [Activer les audiences vers des destinations d’export de profils en flux continu](./ui/activate-streaming-profile-destinations.md)
       * [Activer les audiences vers des destinations d’export de profils par lots](./ui/activate-batch-profile-destinations.md)
       * [Activer les audiences vers des destinations de personnalisation Edge](./ui/activate-edge-personalization-destinations.md)
+      * [Activation des audiences vers des destinations traitées en fonction des identifiants LiveRamp](./ui/activate-curated-destinations.md)
       * [Activer les audiences de prospects vers des destinations](./ui/activate-prospect-audiences.md)
       * [(Disponibilité limitée) Activation des audiences de compte vers les destinations](./ui/activate-account-audiences.md)
       * [(Version bêta) Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform](./ui/export-file-now.md)
