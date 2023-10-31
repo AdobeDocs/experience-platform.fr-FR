@@ -2,10 +2,10 @@
 title: Clés gérées par le client dans Adobe Experience Platform
 description: Découvrez comment configurer vos propres clés de chiffrement pour les données stockées dans Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: a81c3f220203d65ef810a92896edcfc489a0327a
+source-git-commit: 930c786db51063c55f731dc90f2ee66e98624555
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 37%
+source-wordcount: '763'
+ht-degree: 36%
 
 ---
 
@@ -18,6 +18,10 @@ Les données stockées sur Adobe Experience Platform sont chiffrées au repos 
 >Les données du lac de données Adobe Experience Platform et de la banque de profils sont chiffrées à l’aide de CMK. Ils sont considérés comme vos principaux entrepôts de données.
 
 Ce document fournit un aperçu général du processus d’activation de la fonctionnalité de clés gérées par le client (CMK) dans Platform, ainsi que les informations préalables requises pour effectuer ces étapes.
+
+>[!NOTE]
+>
+>Pour les clients Customer Journey Analytics, suivez les instructions de la section [Documentation du Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=en).
 
 ## Conditions préalables
 
