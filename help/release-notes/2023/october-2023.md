@@ -5,7 +5,7 @@ exl-id: e9cf5299-8350-4b40-8f56-05e598846875
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '954'
-ht-degree: 43%
+ht-degree: 85%
 
 ---
 
@@ -44,7 +44,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 
 | Type | Fonctionnalité | Description |
 | --- | --- | --- |
-| Extension | [!DNL Meta] Amélioration de l’API de conversion | Trois améliorations ont été apportées au [API des conversions de métadonnées](/help/tags/extensions/server/meta/overview.md) extension : <ul><li>Intégration avec [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): crée une expérience de connexion transparente en vous permettant de partager votre pixelID et votre jeton d’accès pour l’intégration de l’API Conversions avec Adobe.</li><li>Intégration avec [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): vous permet de diffuser de la publicité aux personnes qui sont plus susceptibles de terminer une action souhaitée et de lier l’action aux publicités diffusées.</li><li>Intégration avec [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): permet de transmettre l’RampID de LiveRamp dans le champ CIP, éliminant ainsi la nécessité de partager les informations d’identification personnelles directement avec des partenaires ou des métadonnées. </li></ul> |
+| Extension | Amélioration de l’API de conversions [!DNL Meta] | Trois améliorations ont été apportées à l&#39;extension [API de conversions de métadonnées](/help/tags/extensions/server/meta/overview.md) : <ul><li>Intégration avec [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe) : crée une expérience de connexion transparente en vous permettant de partager votre pixelID et votre jeton d’accès pour l’intégration de l’API de conversions avec Adobe.</li><li>Intégration avec [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq) : vous permet de diffuser des annonces publicitaires aux personnes qui sont plus susceptibles de terminer une action souhaitée et de relier l’action aux annonces diffusées.</li><li>Intégration avec [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha) : vous permet de transmettre le RampID de LiveRamp dans le champ CIP, éliminant ainsi la nécessité de partager les informations d&#39;identification personnelles directement avec des partenaires ou des métadonnées. </li></ul> |
 | Extension | [!DNL LinkedIn] API de conversion | La variable [[!DNL LinkedIn] API de conversion](../../tags/extensions/server/linkedin/overview.md) vous permet d’évaluer l’efficacité de vos campagnes marketing LinkedIn en transférant des données d’événement Experience Platform à LinkedIn. |
 | Secret | [!DNL LinkedIn] Secret OAuth 2 | La variable [[!DNL LinkedIn] Secret OAuth 2](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) vous permet d’envoyer des interactions serveur-serveur à [!DNL LinkedIn] dans le transfert d’événement. |
 
@@ -58,8 +58,8 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Nouveau ou mis à jour | Description |
 | ----------- |----------------|----------- |
-| [[!DNL MoEngage]](/help/destinations/catalog/mobile-engagement/moengage.md) | Nouveau  | Utilisez la destination Mobile pour connecter et mapper vos données d’Adobe (attributs utilisateur, segments et événements) à MoEngage en temps réel. Les clients peuvent alors agir sur ces données, en proposant des expériences ciblées et personnalisées. |
-| [[!DNL Qualtrics Automations]](/help/destinations/catalog/survey/qualtrics-automations.md) | Nouveau | Utilisez l’agrégation de plusieurs sources de données opérationnelles dans Adobe Experience Platform en tant qu’entrée dans Qualtrics Experience ID pour mieux comprendre vos clients et permettre une sensibilisation ciblée pour combler le fossé en matière de compréhension des facteurs d’intention, d’émotion et d’expérience. |
+| [[!DNL MoEngage]](/help/destinations/catalog/mobile-engagement/moengage.md) | Nouveau  | Utilisez la destination Moengage pour connecter et mapper vos données d’Adobe (attributs utilisateur, segments et événements) à MoEngage en temps réel. Les clients et clientes peuvent alors agir sur ces données, en proposant des expériences ciblées et personnalisées. |
+| [[!DNL Qualtrics Automations]](/help/destinations/catalog/survey/qualtrics-automations.md) | Nouveau | Utilisez l’agrégation de plusieurs sources de données opérationnelles dans Adobe Experience Platform en tant qu’entrée dans Qualtrics Experience ID pour mieux comprendre votre clientèle et permettre une sensibilisation ciblée afin de combler le fossé en matière de compréhension des facteurs d’intention, d’émotion et d’expérience. |
 
 {style="table-layout:auto"}
 
@@ -67,24 +67,24 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonction | Description |
 | ----------- | ----------- |
-| (Version bêta) Prise en charge des fonctions de hachage dans les champs calculés | En plus des fonctions spécifiques à [exportation de tableaux](../../destinations/ui/export-arrays-calculated-fields.md) ou des éléments d’un tableau, vous pouvez désormais utiliser des [fonctions de hachage](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) pour hacher des attributs dans les fichiers exportés. Les fonctions de hachage prises en charge sont les suivantes : `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (Version bêta) Prise en charge des fonctions de hachage dans les champs calculés | En plus des fonctions spécifiques à l&#39;[exportation de tableaux](../../destinations/ui/export-arrays-calculated-fields.md) ou d&#39;éléments d’un tableau, vous pouvez désormais utiliser des [fonctions de hachage](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) supplémentaires pour hacher des attributs dans les fichiers exportés. Les fonctions de hachage prises en charge sont les suivantes : `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
 | (disponibilité générale limitée) Activation des audiences de compte vers certaines destinations | Les clients Real-Time CDP B2B peuvent désormais activer [audiences de compte](../../segmentation/ui/account-audiences.md) vers certaines destinations. Pour plus d’informations sur cette fonctionnalité, veuillez lire la section [tutoriel sur l’activation des audiences de compte](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 
 **Correctifs et améliorations** {#destinations-fixes-and-enhancements}
 
-Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
+Pour obtenir des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
 ## Sandbox {#sandboxes}
 
-Adobe Experience Platform est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des environnements de test qui divisent une instance de Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+Adobe Experience Platform est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance de Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 **Nouvelle fonctionnalité**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Outils Sandbox | La fonctionnalité d’outil d’environnement de test vous permet d’améliorer la précision de la configuration dans les environnements de test et d’exporter et d’importer en toute transparence des configurations d’environnement de test entre les environnements de test. Vous pouvez utiliser la fonction d’outils des environnements de test pour sélectionner différents objets et les exporter dans un package. Pour plus d’informations, voir [guide de l’interface utilisateur de l’outil Sandbox](../../sandboxes/ui/sandbox-tooling.md). |
+| Outils sandbox | La fonctionnalité d’outils sandbox vous permet d’améliorer la précision de la configuration dans les sandbox et d’exporter et d’importer en toute transparence des configurations de sandbox entre les sandbox. Vous pouvez utiliser la fonction d’outils sandbox pour sélectionner différents objets et les exporter dans un package. Pour plus d’informations, consultez le [guide de l’interface utilisateur des outils sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
 Pour plus d’informations sur les sandbox, consultez la [présentation des sandbox](../../sandboxes/home.md).
 
@@ -96,7 +96,7 @@ Pour plus d’informations sur les sandbox, consultez la [présentation des sand
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Audiences de compte (disponibilité générale limitée) | Dans l’édition B2B de Real-time Customer Data Platform, vous pouvez désormais utiliser la segmentation de compte pour offrir une expérience de segmentation marketing aisée et sophistiquée, depuis les audiences basées sur les personnes vers les audiences basées sur les comptes. Pour plus d’informations sur cette fonctionnalité, veuillez lire la section [présentation des audiences de compte](../../segmentation/ui/account-audiences.md). |
+| Audiences de compte (disponibilité générale limitée) | Dans l’édition B2B de Real-time Customer Data Platform, vous pouvez désormais utiliser la segmentation de compte pour offrir une expérience complète de segmentation marketing simple et sophistiquée, depuis les audiences basées sur les personnes vers les audiences basées sur les comptes. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble des audiences de compte](../../segmentation/ui/account-audiences.md). |
 
 Pour en savoir plus sur Segmentation Service, consultez la [vue d’ensemble de Segmentation Service](../../segmentation/home.md).
 
@@ -108,7 +108,7 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Mise à jour de l’authentification pour la zone d’entrée des données | Vous pouvez désormais voir la date d’expiration désignée de votre zone d’entrée de données lors de l’affichage de vos informations d’identification. Vous devez actualiser votre jeton avant la date d’expiration afin de continuer à l’utiliser dans votre application. Si vous n’actualisez pas manuellement votre jeton avant la date d’expiration indiquée, celui-ci s’actualisera automatiquement et vous fournira un nouveau jeton la prochaine fois que vous récupérerez vos informations d’identification. Pour plus d’informations, consultez la documentation relative à [utilisation de la zone d’entrée des données](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). |
+| Mise à jour de l’authentification pour la zone d’atterrissage de données | Vous pouvez désormais voir la date d’expiration désignée de votre zone d’atterrissage de données lors de l’affichage de vos informations d’identification. Vous devez actualiser votre jeton avant la date d’expiration pour pouvoir continuer à l’utiliser dans votre application. Si vous n’actualisez pas manuellement votre jeton avant la date d’expiration indiquée, celui-ci s&#39;actualisera automatiquement et vous fournira un nouveau jeton la prochaine fois que vous récupérerez vos informations d’identification. Pour plus d’informations, consultez la documentation relative à l&#39;[utilisation de la zone d’atterrissage de données](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). |
 
 {style="table-layout:auto"}
 

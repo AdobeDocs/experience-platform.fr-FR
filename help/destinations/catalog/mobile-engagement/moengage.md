@@ -6,7 +6,7 @@ exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '1002'
-ht-degree: 41%
+ht-degree: 42%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 41%
 
 ## Présentation {#overview}
 
-Utilisez la variable [!DNL Moengage] destination pour connecter et mapper vos données d’Adobe (attributs utilisateur, segments et événements) à MoEngage en temps réel. Les clients peuvent alors agir sur ces données, en proposant des expériences ciblées et personnalisées.
+Utilisez la variable [!DNL Moengage] destination pour connecter et mapper vos données d’Adobe (attributs utilisateur, segments et événements) à MoEngage en temps réel. Les clients et clientes peuvent alors agir sur ces données, en proposant des expériences ciblées et personnalisées.
 
 Avec l’Adobe, l’intégration est très simple et intuitive. Il vous suffit de prendre n’importe quel profil utilisateur d’Adobe et de le mapper à un attribut utilisateur MoEngage.
 
