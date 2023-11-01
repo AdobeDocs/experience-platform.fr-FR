@@ -1,19 +1,19 @@
 ---
-title: Personnalisation par Offer decisioning
+title: Personnalisation via Offer Decisioning
 description: Découvrez comment utiliser l’API serveur pour diffuser et générer des expériences personnalisées via Offer Decisioning.
 exl-id: 5348cd3e-08db-4778-b413-3339cb56b35a
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 4%
+source-wordcount: '572'
+ht-degree: 7%
 
 ---
 
-# Personnalisation par Offer decisioning
+# Personnalisation via Offer Decisioning
 
 ## Vue d’ensemble {#overview}
 
-L’API du serveur réseau Edge peut fournir des expériences personnalisées gérées dans [offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=en) au canal web.
+L’API du serveur réseau Edge peut fournir des expériences personnalisées gérées dans [Offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=fr) au canal web.
 
 [!DNL Offer Decisioning] prend en charge une interface non visuelle pour créer, activer et diffuser vos activités et expériences de personnalisation.
 
@@ -23,7 +23,7 @@ Personnalisation via [!DNL Offer Decisioning] requiert que vous ayez accès à [
 
 ## Configuration de votre flux de données {#configure-your-datastream}
 
-Avant de pouvoir utiliser l’API serveur conjointement avec Offer Decisioning, vous devez activer la personnalisation Adobe Experience Platform sur votre configuration de flux de données et activer la variable **[!UICONTROL offer decisioning]** .
+Avant de pouvoir utiliser l’API serveur conjointement avec Offer Decisioning, vous devez activer la personnalisation Adobe Experience Platform sur votre configuration de flux de données et activer la variable **[!UICONTROL Offer decisioning]** .
 
 Voir [guide sur l’ajout de services à un flux de données](../datastreams/overview.md#adobe-experience-platform-settings), pour obtenir des informations détaillées sur l’activation d’Offer Decisioning.
 
@@ -35,13 +35,13 @@ Voir [guide sur l’ajout de services à un flux de données](../datastreams/ove
 
 ## Définition des portées de décision {#creating-decision-scopes}
 
-Le [!DNL Offer Decision Engine] utilise les données Adobe Experience Platform et [Profils client en temps réel](../profile/home.md), ainsi que la variable [!DNL Offer Library], afin de diffuser des offres aux bons clients et canaux au bon moment.
+La variable [!DNL Offer Decision Engine] utilise les données Adobe Experience Platform et [Profils client en temps réel](../profile/home.md), ainsi que la variable [!DNL Offer Library], afin de diffuser des offres aux bons clients et canaux au bon moment.
 
 Pour en savoir plus sur la variable [!DNL Offer Decisioning Engine], voir la section dédiée [documentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=fr).
 
 Après [configuration de votre flux de données](#configure-your-datastream), vous devez définir les portées de décision à utiliser dans votre campagne de personnalisation.
 
-[Portées de décision](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes) sont les chaînes JSON codées en Base64 contenant les identifiants d’activité et d’emplacement que vous souhaitez voir [!DNL Offer Decisioning Service] à utiliser lors de la proposition d’offres.
+[Portées de décision](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes) sont les chaînes JSON codées en Base64 contenant les identifiants d’activité et d’emplacement que vous souhaitez voir [!DNL Offer Decisioning Service] à utiliser lors de la proposition d’offres.
 
 **JSON d’étendue de décision**
 
@@ -58,7 +58,7 @@ Après [configuration de votre flux de données](#configure-your-datastream), vo
 "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
 ```
 
-Après avoir créé vos offres et collections, vous devez définir une [portée de la décision](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html?lang=en#add-decision-scopes).
+Après avoir créé vos offres et collections, vous devez définir une [portée de la décision](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/create-manage-activities/create-offer-activities.html#add-decision-scopes).
 
 Copiez la portée de décision codée en Base64. Vous l’utiliserez dans la variable `query` de la requête de l’API du serveur.
 
@@ -88,7 +88,7 @@ Vous trouverez ci-dessous une requête complète comprenant un objet XDM, un obj
 
 >[!NOTE]
 >
->Le `xdm` et `data` sont facultatifs et ne sont nécessaires à l’Offer decisioning que si vous avez créé des segments avec des conditions qui utilisent des champs dans l’un de ces objets.
+>La variable `xdm` et `data` sont facultatifs et ne sont nécessaires à l’Offer decisioning que si vous avez créé des segments avec des conditions qui utilisent des champs dans l’un de ces objets.
 
 ```shell
 curl -X POST 'https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_ID}' \
@@ -246,7 +246,7 @@ Le réseau Edge renvoie une réponse similaire à celle ci-dessous.
 
 Si le visiteur est admissible pour une activité de personnalisation en fonction des données envoyées à [!DNL Offer Decisioning], le contenu de l’activité concernée se trouve sous le `handle` , où le type est `personalization:decisions`.
 
-D’autres contenus seront renvoyés sous la variable `handle` également. D’autres types de contenu ne sont pas pertinents pour les [!DNL Offer Decisioning] personnalisation. Si le visiteur est admissible pour plusieurs activités, elles sont contenues dans un tableau .
+Un autre contenu est renvoyé sous la variable `handle` également. D’autres types de contenu ne sont pas pertinents pour les [!DNL Offer Decisioning] personnalisation. Si le visiteur est admissible pour plusieurs activités, elles sont contenues dans un tableau .
 
 Le tableau ci-dessous explique les éléments clés de cette partie de la réponse.
 
@@ -255,9 +255,9 @@ Le tableau ci-dessous explique les éléments clés de cette partie de la répon
 | `scope` | Portée de décision associée aux offres proposées qui ont été renvoyées. | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
 | `activity.id` | Identifiant unique de l’activité d’offre. | `"id": "xcore:offer-activity:11cfb1fa93381aca"` |
 | `placement.id` | Identifiant unique de l’emplacement de l’offre. | `"id": "xcore:offer-placement:1175009612b0100c"` |
-| `items.id` | Identifiant unique de l’offre proposée. | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
+| `items.id` | L’identifiant unique de l’offre proposée. | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
 | `schema` | Le schéma du contenu associé à l’offre proposée. | `"schema": "https://ns.adobe.com/experience/offer-management/content-component-html"` |
-| `data.id` | Identifiant unique de l’offre proposée. | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
+| `data.id` | L’identifiant unique de l’offre proposée. | `"id": "xcore:personalized-offer:124cc332095cfa74"` |
 | `format` | Format du contenu associé à l’offre proposée. | `"format": "text/html"` |
 | `language` | Tableau de langues associées au contenu de l’offre proposée. | `"language": [ "en-US" ]` |
 | `content` | Contenu associé à l’offre proposée au format d’une chaîne. | `"content": "<p style="color:red;">20% Off on shipping</p>"` |

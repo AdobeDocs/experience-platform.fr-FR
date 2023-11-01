@@ -2,27 +2,27 @@
 title: Création d’une connexion source et d’un flux de données pour les événements SugarCRM à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform aux événements SugarCRM à l’aide de l’API Flow Service.
 exl-id: 12d08010-569c-4111-ba95-697c6ce6f637
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2009'
+source-wordcount: '2005'
 ht-degree: 60%
 
 ---
 
-# (Version bêta) Création d’une connexion source et d’un flux de données pour [!DNL SugarCRM Events] utilisation de l’API Flow Service
+# (Version bêta) Créez une connexion source et un flux de données pour [!DNL SugarCRM Events] utilisation de l’API Flow Service
 
 >[!NOTE]
 >
 >La source [!DNL SugarCRM Events] est en version Beta. Voir [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Le tutoriel suivant vous guide tout au long des étapes de création d’un [!DNL SugarCRM Events] connexion source et créer un flux de données à importer [[!DNL SugarCRM]](https://www.sugarcrm.com/) Les données d’événement vers Adobe Experience Platform à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Le tutoriel suivant décrit les étapes à suivre pour créer un [!DNL SugarCRM Events] connexion source et créer un flux de données à importer [[!DNL SugarCRM]](https://www.sugarcrm.com/) Les données d’événement vers Adobe Experience Platform à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Experience Platform :
 
 * [Sources](../../../../home.md)[!DNL Platform] : Experience  permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL SugarCRM] en utilisant la variable [!DNL Flow Service] API.
 
@@ -36,7 +36,7 @@ Pour connecter [!DNL SugarCRM Events] à Platform, vous devez fournir des valeur
 | `username` | Nom d’utilisateur de votre compte de développeur SugarCRM. | `abc.def@example.com@sugarmarketdemo000.com` |
 | `password` | Votre mot de passe du compte de développeur SugarCRM. | `123456789` |
 
-## Connexion [!DNL SugarCRM Events] vers Platform à l’aide de [!DNL Flow Service] API
+## Connexion [!DNL SugarCRM Events] vers Platform à l’aide de la méthode [!DNL Flow Service] API
 
 Les étapes suivantes décrivent les étapes à suivre pour authentifier votre [!DNL SugarCRM] source, créez une connexion source et créez un flux de données pour importer vos données d’événement dans Experience Platform.
 
@@ -106,7 +106,7 @@ Une réponse réussie renvoie la nouvelle connexion de base, y compris son ident
 ### Explorer votre source {#explore}
 
 À l’aide de l’identifiant de connexion de base généré à l’étape précédente, vous pouvez explorer les fichiers et répertoires en exécutant des requêtes GET.
-Utilisez les appels suivants pour trouver le chemin d’accès au fichier que vous souhaitez importer. [!DNL Platform]:
+Utilisez les appels suivants pour trouver le chemin d’accès au fichier que vous souhaitez importer [!DNL Platform]:
 
 **Format d’API**
 
@@ -356,13 +356,13 @@ Pour que les données sources soient utilisées dans Platform, un schéma cible 
 
 Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, suivez le tutoriel sur la [création d’un schéma à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, suivez le tutoriel sur la [création d’un schéma à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### Créer un jeu de données cible {#target-dataset}
 
 Un jeu de données cible peut être créé en adressant une requête POST à l’[API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) et en fournissant l’identifiant du schéma cible dans la payload.
 
-Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, suivez le tutoriel sur la [création d’un jeu de données à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, suivez le tutoriel sur la [création d’un jeu de données à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
 ### Créer une connexion cible {#target-connection}
 
@@ -558,7 +558,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ### Créer un flux {#flow}
 
-La dernière étape pour obtenir des données de [!DNL SugarCRM Events] à Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
+La dernière étape pour obtenir des données de [!DNL SugarCRM Events] vers Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
 
 * [ID de connexion source](#source-connection)
 * [ID de connexion cible](#target-connection)
@@ -650,7 +650,7 @@ Une fois votre flux de données créé, vous pouvez surveiller les données ing�
 
 ### Mettre à jour votre flux de données
 
-Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés, en envoyant une requête PATCH à la variable `/flows` point d’entrée [!DNL Flow Service] API, tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre flux de données `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour des flux de données sources à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés, en envoyant une requête PATCH à la variable `/flows` point d’entrée de [!DNL Flow Service] API, tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre flux de données `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour des flux de données de sources à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
 ### Mettre à jour votre compte
 

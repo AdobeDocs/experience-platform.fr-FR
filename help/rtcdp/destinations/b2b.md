@@ -1,11 +1,11 @@
 ---
 title: Destinations dans Real-time Customer Data Platform version B2B
-description: Présentation du rôle des destinations dans l’édition B2B d’Adobe Real-time Customer Data Platform.
+description: Présentation du rôle des destinations dans Adobe Real-time Customer Data Platform Édition B2B.
 exl-id: 81b502dd-d1b2-409e-972c-652c0a01526c
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 4%
+source-wordcount: '239'
+ht-degree: 0%
 
 ---
 
@@ -25,4 +25,4 @@ Les documents suivants fournissent des informations supplémentaires sur l’uti
 
 - Pour plus d’informations sur l’une des destinations disponibles pour l’édition B2B de Real-time Customer Data Platform, accédez au [destinations](../../destinations/catalog/overview.md).
 - Pour plus d’informations sur les identités qui peuvent être exportées vers Marketo Engage, consultez la [Documentation sur la destination du Marketo Engage](../../destinations/catalog/adobe/marketo-engage.md).
-- Pour plus d’informations sur la connexion à la destination du Marketo Engage dans l’interface utilisateur de l’Experience Platform et l’exportation de données, consultez la rubrique [&quot;Envoyer un segment Adobe Experience Platform vers une liste statique Marketo&quot;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html?lang=fr).
+- Pour plus d’informations sur la connexion à la destination du Marketo Engage dans l’interface utilisateur de l’Experience Platform et l’exportation de données, consultez la rubrique [&quot;Envoi d’un segment Adobe Experience Platform vers une liste statique Marketo&quot;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-platform-segment-to-a-marketo-static-list.html).

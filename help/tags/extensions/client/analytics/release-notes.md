@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension Adobe Analytics
 description: Dernières notes de mise à jour pour lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: 80c46748d809fe0b0367cf779f41d7851e8e62db
-workflow-type: ht
-source-wordcount: '1394'
-ht-degree: 100%
+source-git-commit: e300e57df998836a8c388511b446e90499185705
+workflow-type: tm+mt
+source-wordcount: '1392'
+ht-degree: 99%
 
 ---
 
@@ -193,7 +193,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 
 **Fonctionnalités** :
 
-* Mise à jour de l’extension Adobe Analytics vers [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr#version-2.14.0) incluant un correctif pour un problème clearVars connu
+* Mise à jour de l’extension Adobe Analytics vers [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.14.0) incluant un correctif pour un problème clearVars connu
 * Ajout d’un lien Exchange à l’extension. Vous pouvez accéder à la liste Exchange en cliquant sur la liste déroulante et en sélectionnant « Informations sur l’extension »
 
 **Correctifs de bugs** :

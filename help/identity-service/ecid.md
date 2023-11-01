@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation d’ECID
 description: L’identifiant Experience Cloud (ECID) est le module côté client qui permet d’accéder à la gestion des identités et qui remplit trois fonctions principales.
 exl-id: da7717d2-da2e-414b-978d-2eab8ff2c5a0
-source-git-commit: ad9fb0bcc7bca55da432c72adc94d49e3c63ad6e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 100%
+source-wordcount: '271'
+ht-degree: 97%
 
 ---
 
@@ -30,7 +30,7 @@ L’identification de vos utilisateurs et utilisatrices en ligne nécessite l’
 La documentation suivante fournit d’autres ressources sur la compréhension de l’ECID dans différentes applications Platform et Experience Cloud :
 
 * Pour utiliser l’ECID avec l’implémentation de site web, consultez la documentation sur le [Service d’identités Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr).
-* Pour découvrir comment l’ECID est utilisé avec les applications et le contenu web mobile, consultez la documentation sur le [suivi des visiteurs entre une application et le web mobile](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html?lang=fr#sdk-reference-ios).
+* Pour découvrir comment l’ECID est utilisé avec les applications et le contenu web mobile, consultez la documentation sur le [suivi des visiteurs entre une application et le web mobile](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html#sdk-reference-ios).
 * Le déploiement de ces outils peut être simple et facile à gérer si vous utilisez des [balises](../tags/home.md).
 * Consultez la [Documentation de Privacy Service](../privacy-service/identity-data.md) pour plus d’informations sur l’utilisation de l’ECID afin de faciliter la conformité aux réglementations de confidentialité comme le RGPD.
 * Pour plus d’informations sur l’ECID dans le contexte de Platform, consultez la [présentation du Service d’identités](./home.md) et la [présentation des espaces de noms d’identité](./namespaces.md).

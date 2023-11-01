@@ -2,10 +2,10 @@
 title: Connexion Liste des Clients Pinterest
 description: Créez des audiences à partir des listes de clients, des personnes qui ont visité votre site ou des personnes qui ont déjà interagi avec votre contenu sur Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 52%
+source-wordcount: '727'
+ht-degree: 51%
 
 ---
 
@@ -26,7 +26,7 @@ Créez des audiences à partir des listes de clients, des personnes qui ont visi
 
 ## Identités prises en charge {#supported-identities}
 
-La variable [!DNL Pinterest Customer List] destination prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=fr#getting-started).
+La variable [!DNL Pinterest Customer List] destination prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 Dans le [étape de mappage](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) du workflow d’activation de destination, faites correspondre les identités de votre choix au champ cible. *pinterest_audience*. Les identités sont distinguées et résolues lors de l’ingestion de données dans Pinterest.
 

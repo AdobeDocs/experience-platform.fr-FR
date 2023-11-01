@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Prise en main des API Media Edge
 description: Prise en main des API Media Edge
 exl-id: 76022dea-408b-4d8e-abd4-1a6de81beceb
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '958'
-ht-degree: 100%
+source-wordcount: '946'
+ht-degree: 95%
 
 ---
 
@@ -42,12 +42,12 @@ Ce guide décrit comment effectuer le suivi des événements suivants après le 
 
 ## Mise en œuvre de l’API {#implement-api}
 
-Mis à part quelques différences mineures dans le modèle et les chemins appelés, l’API Media Edge partage l’implémentation de l’[API Media Collection](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html?lang=fr). Les détails de mise en oeuvre de l’API Media Collection restent valides pour l’API Media Edge, comme décrit dans la documentation suivante :
+Mis à part quelques différences mineures dans le modèle et les chemins appelés, l’API Media Edge partage l’implémentation de l’[API Media Collection](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-overview.html). Les détails de mise en oeuvre de l’API Media Collection restent valides pour l’API Media Edge, comme décrit dans la documentation suivante :
 
-* [Définition du type de requête HTTP dans votre lecteur](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=fr)
-* [Envoi d’événements ping](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html?lang=fr)
-* [Conditions d’expiration](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html?lang=fr)
-* [Contrôle de l’ordre des événements](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html?lang=fr)
+* [Définition du type de requête HTTP dans votre lecteur](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html)
+* [Envoi d’événements ping](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-sed-pings.html)
+* [Conditions d’expiration](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-timeout.html)
+* [Contrôle de l’ordre des événements](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/streaming-media-apis/mc-api-impl/mc-api-ctrl-order.html)
 
 ## Autorisation {#authorization}
 

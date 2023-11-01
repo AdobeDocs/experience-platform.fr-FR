@@ -2,10 +2,10 @@
 title: Paramètres d’exportation configurables et communs des destinations
 description: Découvrez quels paramètres d’exportation des destinations sont configurables au niveau de la destination et lesquels sont fixes et impossibles à modifier.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '845'
-ht-degree: 93%
+source-wordcount: '843'
+ht-degree: 92%
 
 ---
 
@@ -23,7 +23,7 @@ Cette page fournit des liens vers tous les paramètres d’exportation communs e
 
 ## Paramètres d’exportation communs pour les types de destination {#common-settings-across-destination-types}
 
-Le comportement d’exportation de destination est cohérent sur toutes les destinations appartenant à un type de destination concernant *ce qui déclenche une exportation de destination* et *ce qui est inclus dans les exportations de destination*. Les exportations de destination sont déclenchées par des notifications que le service de destinations reçoit du [service Real-time Customer Profile en amont](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=fr#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
+Le comportement d’exportation de destination est cohérent sur toutes les destinations appartenant à un type de destination concernant *ce qui déclenche une exportation de destination* et *ce qui est inclus dans les exportations de destination*. Les exportations de destination sont déclenchées par des notifications que le service de destinations reçoit du [service Real-time Customer Profile en amont](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
 
 Ce qui est inclus dans les exportations de destination varie légèrement d’un type de destination à l’autre. En savoir plus sur les [modèles communs de comportement d’exportation par type de destination](/help/destinations/how-destinations-work/profile-export-behavior.md). Ces paramètres ne peuvent pas être modifiés par les développeurs de destination ou les utilisateurs de Real-Time CDP.
 

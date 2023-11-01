@@ -3,16 +3,16 @@ title: Destination Marketo Measure Ultimate
 description: Découvrez comment connecter et activer des données vers la destination Marketo Measure Ultimate.
 last-substantial-update: 2023-03-07T00:00:00Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '652'
 ht-degree: 37%
 
 ---
 
 # Destination Marketo Measure Ultimate {#mmu-destination}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Marketo Measure (anciennement Bizible) permet aux marketeurs de savoir quels efforts marketing sont les plus efficaces pour générer des recettes et optimiser le retour sur investissement pour leur entreprise. Marketo Measure est une solution d’attribution marketing qui effectue automatiquement le suivi et les rapports sur les performances des canaux, ce qui vous permet d’identifier les canaux qui génèrent le plus d’engagement client et d’optimiser vos dépenses marketing en conséquence.
 
@@ -72,13 +72,13 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Gestion et activation des destinations de jeu de données]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Gestion et activation des destinations de jeu de données]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Lisez le [(Version bêta) Exportation de jeux de données](/help/destinations/ui/export-datasets.md) tutoriel pour obtenir des instructions détaillées sur l’exportation de jeux de données vers cette destination.
+Lisez la section [(Version bêta) Exportation de jeux de données](/help/destinations/ui/export-datasets.md) tutoriel pour obtenir des instructions détaillées sur l’exportation de jeux de données vers cette destination.
 
 ## Valider l’exportation des données {#exported-data}
 
-Pour valider une exportation réussie d’un jeu de données, vous pouvez vérifier que votre jeu de données a bien été transmis à votre [entrepôt de données Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=en).
+Pour valider une exportation réussie de jeux de données, vous pouvez vérifier que votre jeu de données a bien été transmis à votre [entrepôt de données Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

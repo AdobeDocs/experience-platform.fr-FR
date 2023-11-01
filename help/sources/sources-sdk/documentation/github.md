@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Utilisation de l’interface web GitHub pour créer une page de documentation sur les sources
 description: Ce document décrit les étapes à suivre pour utiliser l’interface web GitHub afin de créer de la documentation et d’envoyer une requête de tirage (PR).
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '624'
-ht-degree: 4%
+source-wordcount: '618'
+ht-degree: 5%
 
 ---
 
@@ -17,7 +17,7 @@ Ce document décrit les étapes à suivre pour utiliser l’interface web GitHub
 
 >[!TIP]
 >
->Vous pouvez utiliser les documents suivants du guide de contribution d’Adobe pour mieux prendre en charge votre processus de documentation : <ul><li>[Installation des outils de création Git et Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)</li><li>[Configuration locale du référentiel Git pour la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)</li><li>[Workflow de contributions GitHub pour les modifications majeures](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en)</li></ul>
+>Vous pouvez utiliser les documents suivants du guide de contribution d’Adobe pour mieux prendre en charge votre processus de documentation : <ul><li>[Installation des outils de création Git et Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configuration locale du référentiel Git pour la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Workflow de contributions GitHub pour les modifications majeures](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Configuration de votre environnement GitHub
 
@@ -33,7 +33,7 @@ Une fois le branchement terminé, sélectionnez **master** et saisissez le nom d
 
 ![create-branch](../assets/create-branch.png)
 
-Dans la structure de dossiers GitHub de votre référentiel dupliqué, accédez à [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) puis sélectionnez la catégorie appropriée à votre source dans la liste. Par exemple, si vous créez de la documentation pour une nouvelle source de gestion de la relation client, sélectionnez **crm**.
+Dans la structure de dossiers GitHub de votre référentiel dupliqué, accédez à [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) puis sélectionnez la catégorie appropriée à votre source dans la liste. Par exemple, si vous créez de la documentation pour une nouvelle source CRM, sélectionnez **crm**.
 
 >[!TIP]
 >
@@ -67,7 +67,7 @@ Une fois votre fichier validé, vous pouvez ouvrir une requête de tirage (PR) p
 
 ![compare-pr](../assets/compare-pr.png)
 
-Assurez-vous que les branches de base et de comparaison sont correctes. Ajoutez une note au communiqué, décrivant votre mise à jour, puis sélectionnez **Créer une requête d’extraction**. Cela ouvre une requête de tirage pour fusionner la branche opérationnelle de votre travail dans la branche principale du référentiel Adobe.
+Assurez-vous que les branches de base et de comparaison sont correctes. Ajoutez une note au communiqué, décrivant votre mise à jour, puis sélectionnez **Création d’une requête d’extraction**. Cela ouvre une requête de tirage pour fusionner la branche opérationnelle de votre travail dans la branche principale du référentiel Adobe.
 
 >[!TIP]
 >

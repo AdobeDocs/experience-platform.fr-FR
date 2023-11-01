@@ -3,10 +3,10 @@ title: Personnalisation hybride à l’aide du SDK Web et de l’API Edge Networ
 description: Cet article explique comment utiliser le SDK Web conjointement avec l’API du serveur pour déployer la personnalisation hybride sur vos propriétés web.
 keywords: personnalisation;hybride;api du serveur;côté serveur;implémentation hybride;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 100%
+source-wordcount: '828'
+ht-degree: 99%
 
 ---
 
@@ -39,7 +39,7 @@ Le diagramme de flux ci-dessous décrit l’ordre des étapes effectuées pour f
 1. L’API du serveur renvoie le contenu de personnalisation à votre serveur d’applications.
 1. Le serveur d’applications renvoie une réponse HTML au navigateur client, contenant les [cookies d’identité et de cluster](#cookies).
 1. Sur la page client, la commande [!DNL Web SDK] `applyResponse` est appelée, en transmettant les en-têtes et le corps de la réponse de l’[!UICONTROL API du serveur] de l’étape précédente.
-1. Le [!DNL Web SDK] effectue le rendu du chargement de page des offres du [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=fr) automatiquement, car l’indicateur `renderDecisions` est défini sur `true`.
+1. Le [!DNL Web SDK] effectue le rendu du chargement de page des offres du [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) automatiquement, car l’indicateur `renderDecisions` est défini sur `true`.
 1. Les offres [!DNL JSON] basées sur les formulaires sont appliquées manuellement par l’intermédiaire de la méthode `applyPersonalization`, pour mettre à jour le [!DNL DOM] en fonction de l’offre de personnalisation.
 1. Pour les activités basées sur des formulaires, les événements d’affichage doivent être envoyés manuellement pour indiquer le moment où l’offre a été affichée. Cela s’effectue via la commande `sendEvent`.
 

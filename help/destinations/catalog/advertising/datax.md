@@ -2,10 +2,10 @@
 title: Connexion à MediaYahoo DataX Verizon
 description: DataX, une infrastructure globale appartenant à Verizon Media/Yahoo, permet dʼhéberger différents composants et dʼéchanger des données avec les partenaires externes de Verizon Media/Yahoo, de manière sécurisée, automatisée et évolutive.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '817'
-ht-degree: 49%
+source-wordcount: '815'
+ht-degree: 48%
 
 ---
 
@@ -67,7 +67,7 @@ En savoir plus sur [Métadonnées de taxonomie](https://developer.verizonmedia.c
 
 ## Identités prises en charge {#supported-identities}
 
-[!DNL Verizon Media] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=fr#getting-started).
+[!DNL Verizon Media] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Identité cible | Description | Considérations |
 |---|---|---|

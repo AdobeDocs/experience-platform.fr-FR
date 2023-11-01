@@ -3,34 +3,34 @@ title: Utilisation d’Adobe Target avec le SDK Web Platform
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;champ de décision;fragment de code de masquage préalable;vec;compositeur d’expérience d’après les formulaires;xdm;audiences;décisions;portée;schéma;schéma;diagramme système;diagramme
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1316'
 ht-degree: 7%
 
 ---
 
-# Utilisation [!DNL Adobe Target] avec le [!DNL Platform Web SDK]
+# Utilisation [!DNL Adobe Target] avec la propriété [!DNL Platform Web SDK]
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] peut fournir et générer des expériences personnalisées gérées dans [!DNL Adobe Target] au canal web. Vous pouvez utiliser un éditeur WYSIWYG, appelé [Compositeur d’expérience visuelle](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC), ou une interface non visuelle, la variable [Compositeur d’expérience d’après les formulaires](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=fr), pour créer, activer et diffuser vos activités et expériences de personnalisation.
+[!DNL Adobe Experience Platform] [!DNL Web SDK] peut fournir et générer des expériences personnalisées gérées dans [!DNL Adobe Target] au canal web. Vous pouvez utiliser un éditeur WYSIWYG, appelé [Compositeur d’expérience visuelle](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC), ou une interface non visuelle, [Compositeur d’expérience d’après les formulaires](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=fr), pour créer, activer et diffuser vos activités et expériences de personnalisation.
 
 >[!IMPORTANT]
 >
->Découvrez comment migrer votre mise en oeuvre Target vers le SDK Web Platform à l’aide du [Migration de Target depuis at.js 2.x vers le SDK Web Platform](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=fr) tutoriel .
+>Découvrez comment migrer votre mise en oeuvre Target vers le SDK Web Platform avec le [Migration de Target depuis at.js 2.x vers le SDK Web Platform](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=fr) tutoriel .
 >
->Découvrez comment mettre en oeuvre Target pour la première fois avec le [Mise en oeuvre de Adobe Experience Cloud avec le SDK Web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=fr) tutoriel . Pour plus d’informations spécifiques à Target, reportez-vous à la section du tutoriel intitulée [Configuration de Target avec le SDK Web de Platform](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
+>Découvrez comment mettre en oeuvre Target pour la première fois avec le [Mise en oeuvre de Adobe Experience Cloud avec le SDK Web](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=fr) tutoriel . Pour plus d’informations spécifiques à Target, consultez la section du tutoriel intitulée [Configuration de Target avec le SDK Web de Platform](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
 
 
 Les fonctionnalités suivantes ont été testées et sont actuellement prises en charge dans [!DNL Target]:
 
 * [Tests A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
-* [Rapports d’impression et de conversion A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=fr)
+* [Rapports Impression et conversion A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=fr)
 * [Activités Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [Activités de ciblage d’expérience](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [Tests multivariés (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
 * activités de [recommandations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [Création de rapports d’impression et de conversion Target natifs](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
-* [Prise en charge du compositeur d’expérience visuelle](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
+* [Prise en charge de VEC](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
 ## [!DNL Platform Web SDK] diagramme de système
 
@@ -40,11 +40,11 @@ Le diagramme suivant vous aide à comprendre le workflow de [!DNL Target] et [!D
 
 | Appel | Détails |
 | --- | --- |
-| 1 | L’appareil charge la variable [!DNL Platform Web SDK]. Le [!DNL Platform Web SDK] envoie une requête au réseau Edge avec des données XDM, l’identifiant d’environnement des flux de données, les paramètres transmis et l’identifiant client (facultatif). La page (ou les conteneurs) est pré-masquée. |
+| 1 | L’appareil charge la variable [!DNL Platform Web SDK]. La variable [!DNL Platform Web SDK] envoie une requête au réseau Edge avec des données XDM, l’identifiant d’environnement des flux de données, les paramètres transmis et l’identifiant du client (facultatif). La page (ou les conteneurs) est pré-masquée. |
 | 2 | Le réseau Edge envoie la demande aux services Edge pour l’enrichir avec l’identifiant visiteur, le consentement et d’autres informations contextuelles sur le visiteur, telles que la géolocalisation et les noms conviviaux de l’appareil. |
 | 3 | Le réseau Edge envoie la demande de personnalisation enrichie au [!DNL Target] Edge avec l’identifiant visiteur et les paramètres transmis. |
 | 4 | Les scripts de profil s’exécutent, puis sont introduits dans [!DNL Target] stockage des profils. Le stockage des profils récupère les segments du [!UICONTROL Bibliothèque d’audiences] (par exemple, les segments partagés à partir de [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], la variable [!DNL Adobe Experience Platform]). |
-| 5 | En fonction des paramètres de requête d’URL et des données de profil, [!DNL Target] détermine les activités et expériences à afficher pour le visiteur pour la page vue actuelle et pour les futures vues prérécupérées. [!DNL Target] renvoie ensuite à edge network. |
+| 5 | En fonction des paramètres de requête d’URL et des données de profil, [!DNL Target] détermine les activités et expériences à afficher pour le visiteur pour la page vue actuelle et pour les futures vues prérécupérées. [!DNL Target] renvoie ensuite cette information au réseau Edge. |
 | 6 | a. Le réseau Edge renvoie la réponse de personnalisation à la page, y compris éventuellement les valeurs de profil pour une personnalisation supplémentaire. Le contenu personnalisé sur la page active est affiché aussi rapidement que possible sans scintillement du contenu par défaut.<br>b. Le contenu personnalisé pour les vues affichées à la suite d’actions de l’utilisateur dans une application d’une seule page (SPA) est mis en cache afin de pouvoir être appliqué instantanément sans appel au serveur supplémentaire lorsque les vues sont déclenchées. <br>c. Le réseau Edge envoie l’identifiant visiteur et d’autres valeurs dans les cookies, telles que le consentement, l’ID de session, l’identité, la vérification de cookies, la personnalisation, etc. |
 | 7 | En amont du réseau Edge [!UICONTROL Analytics pour Target] (A4T) des détails (métadonnées d’activité, d’expérience et de conversion) sur la variable [!DNL Analytics] edge. |
 
@@ -57,12 +57,12 @@ Pour activer [!DNL Target], procédez comme suit :
 
 Vous pouvez ensuite, éventuellement, ajouter les options suivantes :
 
-* **`decisionScopes`**: Récupérez des activités spécifiques (utiles pour les activités créées avec le compositeur d’après les formulaires) en ajoutant cette option à vos événements.
-* **[Prémasquer le fragment de code](../manage-flicker.md)**: Masquez uniquement certaines parties de la page.
+* **`decisionScopes`**: récupérez des activités spécifiques (utiles pour les activités créées avec le compositeur d’après les formulaires) en ajoutant cette option à vos événements.
+* **[Prémasquer le fragment de code](../manage-flicker.md)**: masquez uniquement certaines parties de la page.
 
 ## Utilisation du VEC d’Adobe Target
 
-Pour utiliser le compositeur d’expérience visuelle avec une [!DNL Platform Web SDK] implémentation, installez et activez l’une des options suivantes : [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) ou [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) Extension d’assistance du compositeur d’expérience visuelle.
+Pour utiliser le VEC avec une [!DNL Platform Web SDK] implémentation, installez et activez l’une des options suivantes : [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) ou [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) Extension d’assistance du compositeur d’expérience visuelle.
 
 Pour plus d’informations, voir [Extension d’assistance du compositeur d’expérience visuelle](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) dans le *Guide Adobe Target*.
 
@@ -85,7 +85,7 @@ Si vous avez [!DNL Target] les activités avec des audiences prédéfinies qui u
 * Sources de trafic
 * Période
 
-Pour plus d’informations, voir [Catégories d’audiences](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=en) dans le *Guide Adobe Target*.
+Pour plus d’informations, voir [Catégories d’audiences](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html) dans le *Guide Adobe Target*.
 
 ### Jetons de réponse
 
@@ -146,7 +146,7 @@ Lorsque le rendu automatique est activé, le tableau de propositions contient :
 #### Au chargement de la page :
 
 * Compositeur d’après les formulaires `propositions` avec `renderAttempted` indicateur défini sur `false`
-* Propositions basées sur le compositeur d’expérience visuelle avec `renderAttempted` indicateur défini sur `true`
+* Propositions basées sur le compositeur d’expérience visuelle `renderAttempted` indicateur défini sur `true`
 * Propositions basées sur le compositeur d’expérience visuelle pour une application d’une seule page avec `renderAttempted` indicateur défini sur `true`
 
 #### On View - change (pour les vues en mémoire cache) :
@@ -158,7 +158,7 @@ Lorsque le rendu automatique est désactivé, le tableau de propositions contien
 #### Au chargement de la page :
 
 * Compositeur d’après les formulaires `propositions` avec `renderAttempted` indicateur défini sur `false`
-* Propositions basées sur le compositeur d’expérience visuelle avec `renderAttempted` indicateur défini sur `false`
+* Propositions basées sur le compositeur d’expérience visuelle `renderAttempted` indicateur défini sur `false`
 * Propositions basées sur le compositeur d’expérience visuelle pour une application d’une seule page avec `renderAttempted` indicateur défini sur `false`
 
 #### On View - change (pour les vues en mémoire cache) :
@@ -167,7 +167,7 @@ Lorsque le rendu automatique est désactivé, le tableau de propositions contien
 
 ### Mise à jour d’un profil unique
 
-Le [!DNL Platform Web SDK] permet de mettre à jour le profil vers la fonction [!DNL Target] et au [!DNL Platform Web SDK] comme événement d’expérience.
+La variable [!DNL Platform Web SDK] permet de mettre à jour le profil vers la fonction [!DNL Target] et au [!DNL Platform Web SDK] comme événement d’expérience.
 
 Pour mettre à jour une [!DNL Target] , assurez-vous que les données de profil sont transmises avec les éléments suivants :
 

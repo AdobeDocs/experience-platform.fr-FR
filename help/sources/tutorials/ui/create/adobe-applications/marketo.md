@@ -2,9 +2,9 @@
 title: Création d’une connexion source Marketo Engage et d’un flux de données dans l’interface utilisateur
 description: Ce tutoriel décrit les étapes à suivre pour créer une connexion source Marketo Engage et un flux de données dans l’interface utilisateur afin d’importer des données B2B dans Adobe Experience Platform.
 exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
-source-git-commit: b271d28677543f773fe1ba471fc08574e7c5542b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1691'
 ht-degree: 76%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 76%
 
 >[!IMPORTANT]
 >
->Avant de créer un [!DNL Marketo Engage] connexion source et un flux de données, vous devez d’abord vous assurer que vous disposez de [mappage de votre ID d’organisation Adobe](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=en) in [!DNL Marketo]. De plus, vous devez vous assurer que vous avez terminé [auto-remplissage de votre [!DNL Marketo] Espaces de noms et schémas B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) avant de créer une connexion source et un flux de données.
+>Avant de créer un [!DNL Marketo Engage] connexion source et un flux de données, vous devez d’abord vous assurer que vous disposez de [mappage de votre ID d’organisation Adobe](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html) in [!DNL Marketo]. En outre, vous devez également vous assurer que vous avez terminé [auto-remplissage de votre [!DNL Marketo] Espaces de noms et schémas B2B](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) avant de créer une connexion source et un flux de données.
 
 Ce tutoriel décrit les étapes à suivre pour créer un connecteur source [!DNL Marketo Engage] (ci-après dénommé « [!DNL Marketo] ») dans l’interface utilisateur pour importer des données B2B dans Adobe Experience Platform.
 
@@ -21,13 +21,13 @@ Ce tutoriel décrit les étapes à suivre pour créer un connecteur source [!DNL
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [Espaces de noms B2B et utilitaire de génération automatique de schéma](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): Les espaces de noms B2B et l’utilitaire de génération automatique de schéma vous permettent d’utiliser [!DNL Postman] pour générer automatiquement des valeurs pour vos espaces de noms et vos schémas B2B. Vous devez d’abord renseigner vos espaces de noms et schémas B2B avant de créer une [!DNL Marketo] connexion source et flux de données.
+* [Espaces de noms B2B et utilitaire de génération automatique de schéma](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md): les espaces de noms B2B et l’utilitaire de génération automatique de schéma vous permettent d’utiliser [!DNL Postman] pour générer automatiquement des valeurs pour vos espaces de noms et vos schémas B2B. Vous devez d’abord renseigner vos espaces de noms et schémas B2B avant de créer une [!DNL Marketo] connexion source et flux de données.
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
 * [Modèle de données d’expérience (XDM)](../../../../../xdm/home.md) : framework normalisé selon lequel Experience Platform organise les données d’expérience client.
    * [Créer et modifier des schémas dans l’interface utilisateur](../../../../../xdm/ui/resources/schemas.md) : découvrez comment créer et modifier des schémas dans l’interface utilisateur.
 * [Espaces de noms d’identité](../../../../../identity-service/namespaces.md) : les espaces de noms d’identité sont des composants d’[!DNL Identity Service] qui servent d’indicateurs du contexte auquel une identité se rapporte. Une identité complète est composée d’une valeur d’identifiant et d’un espace de noms.
 * [[!DNL Real-Time Customer Profile]](/help/profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ### Collecter les informations d’identification requises
 
@@ -111,7 +111,7 @@ Le [!UICONTROL diagnostic d’erreur] permet de générer un message d’erreur 
 
 >[!IMPORTANT]
 >
->Le [!DNL Marketo] source utilise l’ingestion par lots pour ingérer tous les enregistrements historiques et utilise l’ingestion par flux pour les mises à jour en temps réel. Cela permet à la source de continuer la diffusion en continu tout en ingérant des enregistrements erronés. Activez le bouton (bascule) **[!UICONTROL Ingestion partielle]**, puis définissez le [!UICONTROL Seuil d’erreur %] au maximum pour empêcher l’échec du flux de données.
+>La variable [!DNL Marketo] source utilise l’ingestion par lots pour ingérer tous les enregistrements historiques et utilise l’ingestion par flux pour les mises à jour en temps réel. Cela permet à la source de continuer la diffusion en continu tout en ingérant des enregistrements erronés. Activez le bouton (bascule) **[!UICONTROL Ingestion partielle]**, puis définissez le [!UICONTROL Seuil d’erreur %] au maximum pour empêcher l’échec du flux de données.
 
 ![profile-and-errors](../../../../images/tutorials/create/marketo/profile-and-errors.png)
 
@@ -198,9 +198,9 @@ L’authentification sera refusée si votre [!DNL Munchkin ID] n’est pas mapp�
 
 ![Message d’erreur indiquant que l’instance Marketo n’est pas correctement mappée à l’organisation de l’Adobe.](../../../../images/tutorials/create/marketo/munchkin-not-mapped.png)
 
-#### Identité Principal manquante
+#### Identité du Principal manquante
 
-Un flux de données n’enregistre pas et n’ingère pas si une identité Principale est manquante. Assurez-vous que [une identité Principale existe dans votre schéma XDM](../../../../../xdm/tutorials/create-schema-ui.md), avant de tenter de configurer un flux de données.
+Un flux de données n’enregistre pas et n’ingère pas si une identité principale est manquante. Assurez-vous que [une identité principale existe dans votre schéma XDM](../../../../../xdm/tutorials/create-schema-ui.md), avant de tenter de configurer un flux de données.
 
-![Message d’erreur indiquant que l’identité Principale est absente du schéma XDM.](../../../../images/tutorials/create/marketo/no-primary-identity.png)
+![Message d’erreur indiquant que l’identité principale est absente du schéma XDM.](../../../../images/tutorials/create/marketo/no-primary-identity.png)
 

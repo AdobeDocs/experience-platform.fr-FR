@@ -3,9 +3,9 @@ keywords: crm;CRM;destinations crm;salesforce crm;destination Salesforce crm
 title: Connexion CRM à Salesforce
 description: La destination Salesforce CRM vous permet d’exporter les données de votre compte et de les activer dans Salesforce CRM pour vos besoins professionnels.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '3121'
+source-wordcount: '3117'
 ht-degree: 21%
 
 ---
@@ -33,7 +33,7 @@ En tant que professionnel du marketing, vous pouvez proposer des expériences pe
 
 ### Conditions préalables dans Experience Platform {#prerequisites-in-experience-platform}
 
-Avant d’activer les données vers la destination Salesforce CRM, vous devez disposer d’un [schema](/help/xdm/schema/composition.md), un [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr), et [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr) créé dans [!DNL Experience Platform].
+Avant d’activer les données vers la destination Salesforce CRM, vous devez disposer d’un [schema](/help/xdm/schema/composition.md), un [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr), et [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) créé dans [!DNL Experience Platform].
 
 ### Conditions préalables dans [!DNL Salesforce CRM] {#prerequisites-destination}
 

@@ -3,10 +3,10 @@ title: Suivi des événements à l’aide du SDK Web de Adobe Experience Platfor
 description: Découvrez comment effectuer le suivi des événements du SDK Web Adobe Experience Platform.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;envoyer la balise;documentUnloading;document Unloading;onBeforeEventSend;
 exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1194'
-ht-degree: 31%
+source-wordcount: '1192'
+ht-degree: 32%
 
 ---
 
@@ -41,7 +41,7 @@ alloy("sendEvent", {
 });
 ```
 
-Un certain temps peut s’écouler entre le moment où la variable `sendEvent` est exécutée et lorsque les données sont envoyées au serveur (par exemple, si la bibliothèque SDK Web n’a pas été entièrement chargée ou si le consentement n’a pas encore été reçu). Si vous envisagez de modifier une partie de la variable `xdm` après avoir exécuté l’objet `sendEvent` , il est vivement recommandé de cloner l’événement `xdm` objet _before_ en exécutant la fonction `sendEvent` . Par exemple :
+Un certain temps peut s’écouler entre le moment où la variable `sendEvent` est exécutée et lorsque les données sont envoyées au serveur (par exemple, si la bibliothèque SDK Web n’a pas été entièrement chargée ou si le consentement n’a pas encore été reçu). Si vous avez l’intention de modifier une partie de la variable `xdm` après avoir exécuté l’objet `sendEvent` , il est vivement recommandé de cloner l’événement `xdm` objet _before_ en exécutant la fonction `sendEvent` . Par exemple :
 
 ```javascript
 var clone = function(value) {
@@ -77,7 +77,7 @@ Dans cet exemple, la couche de données est clonée en la sérialisant au format
 
 ## Envoi de données autres que XDM
 
-Les données qui ne correspondent pas à un schéma XDM doivent être envoyées à l’aide de la variable `data` de l’option `sendEvent` . Cette fonctionnalité est prise en charge dans les versions 2.5.0 et ultérieures du SDK Web.
+Les données qui ne correspondent pas à un schéma XDM doivent être envoyées à l’aide de la variable `data` de l’ `sendEvent` . Cette fonctionnalité est prise en charge dans les versions 2.5.0 et ultérieures du SDK Web.
 
 Cela s’avère utile si vous devez mettre à jour un profil Adobe Target ou envoyer des attributs Recommendations Target. [En savoir plus sur ces fonctionnalités de Target.](../personalization/adobe-target/target-overview.md#single-profile-update)
 
@@ -103,7 +103,7 @@ alloy("sendEvent", {
 
 ### Définition de `eventType` {#event-types}
 
-Dans les schémas XDM ExperienceEvent, il existe une `eventType` champ . Il contient le type d’événement principal pour l’enregistrement. La définition d’un type d’événement peut vous aider à différencier les différents événements que vous enverrez. XDM fournit plusieurs types d’événements prédéfinis que vous pouvez utiliser ou vous créez toujours vos propres types d’événements personnalisés pour vos cas d’utilisation. Reportez-vous à la documentation XDM pour obtenir une [liste de tous les types d’événements prédéfinis](../../xdm/classes/experienceevent.md#eventType).
+Dans les schémas XDM ExperienceEvent, il existe une `eventType` champ . Il contient le type d’événement principal pour l’enregistrement. La définition d’un type d’événement peut vous aider à différencier les différents événements que vous enverrez. XDM fournit plusieurs types d’événements prédéfinis que vous pouvez utiliser ou vous créez toujours vos propres types d’événements personnalisés pour vos cas d’utilisation. Pour obtenir un [liste de tous les types d’événements prédéfinis](../../xdm/classes/experienceevent.md#eventType).
 
 Ces types d’événement s’affichent dans une liste déroulante si vous utilisez l’extension de balise ou si vous pouvez toujours les transmettre sans balise. Ils peuvent être transmis dans le cadre de la fonction `xdm` .
 
@@ -140,7 +140,7 @@ alloy("sendEvent", {
 
 >[!IMPORTANT]
 >
->Le `datasetId` l’option prise en charge par `sendEvent` était obsolète. Pour remplacer un identifiant de jeu de données, utilisez [remplacements de configuration](../../datastreams/overrides.md) au lieu de .
+>La variable `datasetId` l’option prise en charge par `sendEvent` était obsolète. Pour remplacer un identifiant de jeu de données, utilisez [remplacements de configuration](../../datastreams/overrides.md) au lieu de .
 
 Dans certains cas d’utilisation, vous pouvez envoyer un événement à un jeu de données autre que celui configuré dans l’interface utilisateur de configuration. Pour ce faire, vous devez définir la variable `datasetId` sur l’option `sendEvent` command :
 
@@ -156,7 +156,7 @@ alloy("sendEvent", {
 });
 ```
 
-### Ajout d’informations d’identité
+### Ajout d’informations sur l’identité
 
 Vous pouvez également ajouter des informations d’identité personnalisées à l’événement. Voir [Récupération de l’ID d’Experience Cloud](../identity/overview.md).
 
@@ -210,15 +210,15 @@ alloy("sendEvent", {
 ```
 
 
-### Le `result` objet
+### La variable `result` objet
 
-Le `sendEvent` renvoie une promesse résolue avec une `result` . Le `result` contient les propriétés suivantes :
+La variable `sendEvent` renvoie une promesse résolue avec une `result` . La variable `result` contient les propriétés suivantes :
 
-**propositions**: Les offres de personnalisation pour lesquelles le visiteur a rempli les critères. [En savoir plus sur les propositions.](../personalization/rendering-personalization-content.md#manually-rendering-content)
+**propositions**: les offres de personnalisation pour lesquelles le visiteur a rempli les critères. [En savoir plus sur les propositions.](../personalization/rendering-personalization-content.md#manually-rendering-content)
 
-**décisions**: Cette propriété est obsolète. Veuillez plutôt utiliser `propositions`.
+**décisions**: cette propriété est obsolète. Veuillez plutôt utiliser `propositions`.
 
-**destinations**: Segments de Adobe Experience Platform qui peuvent être partagés avec des plateformes de personnalisation externes, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur des sites web clients. [En savoir plus sur les destinations.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html?lang=en)
+**destinations**: segments de Adobe Experience Platform qui peuvent être partagés avec des plateformes de personnalisation externes, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications exécutés sur les sites web des clients. [En savoir plus sur les destinations.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html)
 
 >[!WARNING]
 >
@@ -264,7 +264,7 @@ Quelques notes sur le `onBeforeEventSend` callback :
   ```
 
 * Si le rappel renvoie une exception, le traitement de l’événement est interrompu et l’événement n’est pas envoyé.
-* Si le rappel renvoie la valeur booléenne de `false`, le traitement des événements s’interrompt, sans erreur, et l’événement n’est pas envoyé. Ce mécanisme permet d’ignorer facilement certains événements en examinant les données d’événement et en renvoyant `false` si l’événement ne doit pas être envoyé.
+* Si le rappel renvoie la valeur booléenne de `false`, le traitement des événements s’interrompt sans erreur et l’événement n’est pas envoyé. Ce mécanisme permet d’ignorer facilement certains événements en examinant les données d’événement et en renvoyant `false` si l’événement ne doit pas être envoyé.
 
   >[!NOTE]
   >Veillez à ne pas renvoyer la valeur false lors du premier événement d’une page. Le renvoi de la valeur false sur le premier événement peut avoir une incidence négative sur la personnalisation.

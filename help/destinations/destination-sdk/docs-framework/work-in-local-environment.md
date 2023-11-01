@@ -2,45 +2,44 @@
 title: Utiliser un éditeur de texte dans votre environnement local pour créer une page de documentation de destination
 description: Les instructions de cette page vous montrent comment utiliser un éditeur de texte pour travailler dans votre environnement local afin de créer une page de documentation pour votre destination Experience Platform et de l’envoyer pour révision.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: e239de97a26ea2ff36bb74390e249851a13d2e13
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '869'
 ht-degree: 6%
 
 ---
 
 # Utiliser un éditeur de texte dans votre environnement local pour créer une page de documentation de destination {#local-authoring}
 
-Les instructions de cette page vous montrent comment utiliser un éditeur de texte pour travailler dans votre environnement local afin de créer de la documentation et envoyer une requête de tirage (PR). Avant de passer en revue les étapes indiquées ici, veillez à lire [Document de votre destination dans les destinations Adobe Experience Platform](./documentation-instructions.md).
+Les instructions de cette page vous montrent comment utiliser un éditeur de texte pour travailler dans votre environnement local afin de créer de la documentation et envoyer une requête de tirage (PR). Avant de suivre les étapes indiquées ici, veillez à lire [Document de votre destination dans les destinations Adobe Experience Platform](./documentation-instructions.md).
 
 >[!TIP]
 >
 >Reportez-vous également à la documentation à l’appui du guide du contributeur d’Adobe :
->* [Installation des outils de création Git et Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)
->* [Configuration locale du référentiel Git pour la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)
->* [Workflow de contributions GitHub pour les modifications majeures](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en).
+>* [Installation des outils de création Git et Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
+>* [Configuration locale du référentiel Git pour la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
+>* [Workflow de contributions GitHub pour les modifications majeures](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
 
-
-## Connectez-vous à GitHub et configurez votre environnement de création local. {#set-up-environment}
+## Connexion à GitHub et configuration de votre environnement de création local {#set-up-environment}
 
 1. Dans votre navigateur, accédez à `https://github.com/AdobeDocs/experience-platform.en`
-2. À [double](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) le référentiel, cliquez sur **Branchement** comme illustré ci-dessous. Cela crée une copie du référentiel Experience Platform dans votre propre compte GitHub.
+2. À [double](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) le référentiel, cliquez sur **Branchement** comme illustré ci-dessous. Cela crée une copie du référentiel Experience Platform dans votre propre compte GitHub.
 
    ![Référentiel de documentation pour les Adobes de transfert](../assets/docs-framework/ssd-fork-repository.gif)
 
-3. Cloner le référentiel sur votre ordinateur local. Sélectionner **Code > HTTPS > Ouvrir avec l’appli de bureau GitHub**, comme illustré ci-dessous. Assurez-vous que vous avez [GitHub Desktop](https://desktop.github.com/) installé. Voir à ce sujet la section [Création d’un clone local du référentiel](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository) dans le guide du contributeur d’Adobe.
+3. Cloner le référentiel sur votre ordinateur local. Sélectionner **Code > HTTPS > Ouvrir avec GitHub Desktop**, comme illustré ci-dessous. Assurez-vous que [GitHub Desktop](https://desktop.github.com/) installé. Voir à ce sujet la section [Créer un clone local du référentiel](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository) dans le guide du contributeur d’Adobe.
 
    ![Cloner le référentiel de documentation d’Adobe vers l’environnement local](../assets/docs-framework/clone-local.png)
 
-4. Dans la structure de fichiers locale, accédez à `experience-platform.en/help/destinations/catalog/[...]`où `[...]` est la catégorie souhaitée pour votre destination. Par exemple, si vous ajoutez une destination de personnalisation à Experience Platform, sélectionnez la variable `personalization` dossier.
+4. Dans la structure de fichiers locale, accédez à `experience-platform.en/help/destinations/catalog/[...]`, où `[...]` est la catégorie souhaitée pour votre destination. Par exemple, si vous ajoutez une destination de personnalisation à Experience Platform, sélectionnez la variable `personalization` dossier.
 
 ## Créez la page de documentation de votre destination. {#author-documentation}
 
 1. Votre page de documentation repose sur les [modèle de destination en libre-service](../docs-framework/self-service-template.md). Téléchargez la [modèle de destination](../assets/docs-framework/yourdestination-template.zip). Décompressez-le et extrayez le fichier `yourdestination-template.md` vers le répertoire mentionné à l’étape 4 ci-dessus.  Renommer le fichier `YOURDESTINATION.md`, où YOURDESTINATION est le nom de votre destination dans Adobe Experience Platform. Par exemple, si votre société s’appelle Moviestar, vous nommerez votre fichier . `moviestar.md`.
-2. Ouvrez votre nouveau fichier dans votre [éditeur de texte de votre choix](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors). Adobe recommande d’utiliser [Visual Studio Code](https://code.visualstudio.com/) et installez l’extension Adobe Markdown Authoring. Pour installer l’extension, ouvrez Visual Studio Code, sélectionnez la variable **[!DNL Extensions]** dans la partie gauche de l’écran, puis recherchez `adobe markdown authoring`. Sélectionnez l’extension et cliquez sur **[!DNL Install]**.
+2. Ouvrez votre nouveau fichier dans votre [éditeur de texte de votre choix](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors). Adobe recommande d’utiliser [Visual Studio Code](https://code.visualstudio.com/) et installez l’extension Adobe Markdown Authoring. Pour installer l’extension, ouvrez Visual Studio Code, sélectionnez la variable **[!DNL Extensions]** dans la partie gauche de l’écran, puis recherchez `adobe markdown authoring`. Sélectionnez l’extension et cliquez sur **[!DNL Install]**.
    ![Installation de l’extension Adobe Markdown Author](../assets/docs-framework/install-adobe-markdown-extension.gif)
 3. Modifiez le modèle avec les informations pertinentes pour votre destination. Suivez les instructions du modèle.
-4. Pour toutes les captures d’écran ou images que vous prévoyez d’ajouter à votre documentation, accédez à `GitHub/experience-platform.en/help/destinations/assets/catalog/[...]`où `[...]` est la catégorie souhaitée pour votre destination. Par exemple, si vous ajoutez une destination de personnalisation à Experience Platform, sélectionnez la variable `personalization` dossier. Créez un dossier pour votre destination et enregistrez vos images ici. Vous devez leur créer un lien à partir de la page que vous créez. Voir [instructions pour créer un lien vers des images](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en#link-to-images).
+4. Pour toutes les captures d’écran ou images que vous prévoyez d’ajouter à votre documentation, accédez à `GitHub/experience-platform.en/help/destinations/assets/catalog/[...]`, où `[...]` est la catégorie souhaitée pour votre destination. Par exemple, si vous ajoutez une destination de personnalisation à Experience Platform, sélectionnez la variable `personalization` dossier. Créez un dossier pour votre destination et enregistrez vos images ici. Vous devez leur créer un lien à partir de la page que vous créez. Voir [instructions pour créer un lien vers des images](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images).
 5. Lorsque vous êtes prêt, enregistrez le fichier sur lequel vous travaillez.
 
 ## Soumettre votre documentation pour révision {#submit-review}
@@ -57,15 +56,15 @@ Les instructions de cette page vous montrent comment utiliser un éditeur de tex
 
    ![Validation en local](../assets/docs-framework/commit-local.png)
 
-1. Dans GitHub Desktop, [push](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#push) votre travail sur la [remote](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#remote) branche , comme illustré ci-dessous.
+1. Dans GitHub Desktop, [push](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#push) votre travail sur la page [remote](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#remote) branche , comme illustré ci-dessous.
 
    ![Push your commit](../assets/docs-framework/push-local-to-remote.png)
 
 1. Dans l’interface web GitHub, ouvrez une requête de tirage (PR) pour fusionner votre branche de travail dans la branche principale du référentiel de documentation d’Adobe. Assurez-vous que la branche sur laquelle vous avez travaillé est sélectionnée et sélectionnez **Contribution > Ouvrir la requête de tirage**.
 
-   ![Créer une requête d’extraction](../assets/docs-framework/ssd-create-pull-request-1.gif)
+   ![Création d’une requête d’extraction](../assets/docs-framework/ssd-create-pull-request-1.gif)
 
-1. Assurez-vous que les branches de base et de comparaison sont correctes. Ajoutez une note au document de présentation, décrivant votre mise à jour, puis sélectionnez **Créer une requête d’extraction**. Cela ouvre une requête de tirage pour fusionner la branche opérationnelle de votre double dans la branche principale du référentiel Adobe.
+1. Assurez-vous que les branches de base et de comparaison sont correctes. Ajoutez une note au document de présentation, décrivant votre mise à jour, puis sélectionnez **Création d’une requête d’extraction**. Cela ouvre une requête de tirage pour fusionner la branche opérationnelle de votre double dans la branche principale du référentiel Adobe.
    >[!TIP]
    >
    >Laissez le champ **Autorisation des modifications par les responsables** case à cocher sélectionnée afin que l’équipe de documentation d’Adobe puisse apporter des modifications au résiduel.
@@ -82,4 +81,4 @@ Les instructions de cette page vous montrent comment utiliser un éditeur de tex
 
 >[!TIP]
 >
->Pour ajouter des images et des liens à votre documentation, ainsi que toute autre question concernant Markdown, reportez-vous à la section [Utilisation de Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en) dans le guide d’écriture collaborative d’Adobe.
+>Pour ajouter des images et des liens à votre documentation, ainsi que toute autre question concernant Markdown, reportez-vous à la section [Utilisation de Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) dans le guide d’écriture collaborative d’Adobe.

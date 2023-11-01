@@ -1,16 +1,16 @@
 ---
 title: Données d’identité dans le SDK Web de Platform
 description: Découvrez comment récupérer et gérer les Adobe Experience Cloud ID (ECID) à l’aide du SDK Web de Adobe Experience Platform.
-keywords: Identité;identité propriétaire;service d’identité;identité tierce;migration des identifiants;identifiant visiteur;identité tierce;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;synchroniser les identités;syncIdentity;sendEvent;identityMap;Principal;ecid;espace de noms d’identité;idd’espace de noms;authenticationState;hashEnabled;
+keywords: Identité;identité propriétaire;service d’identité;identité tierce;migration des identifiants;identifiant visiteur;identité tierce;third-PartyCookiesEnabled;idMigrationEnabled;getIdentity;synchroniser les identités;syncIdentity;sendEvent;identityMap;primary;ecid;nom d’identité;ID d’espace de noms;authenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: 709996a837e722a79d695bf8573552f8f373850e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1418'
-ht-degree: 2%
+source-wordcount: '1414'
+ht-degree: 3%
 
 ---
 
-# Données d’identité dans le SDK Web Platform
+# Données d’identité dans le SDK web Platform
 
 Le SDK Web de Adobe Experience Platform tire parti des [Adobe Experience Cloud ID (ECID)](../../identity-service/ecid.md) pour effectuer le suivi du comportement des visiteurs. Grâce aux ECID, vous pouvez vous assurer que chaque appareil dispose d’un identifiant unique qui peut persister au cours de plusieurs sessions, en liant tous les accès qui surviennent pendant et entre les sessions web à un appareil spécifique.
 
@@ -80,7 +80,7 @@ alloy("getIdentity")
 
 ## Utilisation de `identityMap`
 
-Utilisation de XDM [`identityMap` field](../../xdm/schema/composition.md#identityMap), vous pouvez identifier un appareil/utilisateur à l’aide de plusieurs identités, définir son état d’authentification et décider quel identifiant est considéré comme Principal. Si aucun identifiant n’a été défini comme `primary`, la valeur par défaut Principale est la valeur `ECID`.
+Utilisation de XDM [`identityMap` field](../../xdm/schema/composition.md#identityMap), vous pouvez identifier un appareil/utilisateur à l’aide de plusieurs identités, définir son état d’authentification et décider quel identifiant est considéré comme l’identifiant principal. Si aucun identifiant n’a été défini comme `primary`, la valeur par défaut principale est la valeur `ECID`.
 
 `identityMap` Les champs sont mis à jour à l’aide de la fonction `sentEvent` .
 
@@ -102,14 +102,14 @@ alloy("sendEvent", {
 
 >[!NOTE]
 >
->Adobe recommande d’envoyer des espaces de noms représentant une personne, tels que `CRMID`, comme identité Principale.
+>Adobe recommande d’envoyer des espaces de noms représentant une personne, tels que `CRMID`, comme identité principale.
 
 
-Chaque propriété dans `identityMap` représente les identités appartenant à un [namespace d’identité](../../identity-service/namespaces.md). Le nom de la propriété doit être le symbole de l’espace de noms d’identité, que vous trouverez dans l’interface utilisateur de Adobe Experience Platform sous &quot;[!UICONTROL Identités]&quot;. La valeur de propriété doit être un tableau d’identités appartenant à cet espace de noms d’identité.
+Chaque propriété dans `identityMap` représente les identités appartenant à un [espace de noms d’identité](../../identity-service/namespaces.md). Le nom de la propriété doit être le symbole de l’espace de noms d’identité, que vous trouverez dans l’interface utilisateur de Adobe Experience Platform sous &quot;[!UICONTROL Identités]&quot;. La valeur de propriété doit être un tableau d’identités appartenant à cet espace de noms d’identité.
 
 >[!IMPORTANT]
 >
->L’ID d’espace de noms transmis dans la variable `identityMap` est sensible à la casse. Veillez à utiliser l’identifiant d’espace de noms correct pour éviter une collecte de données incomplète.
+>L’ID d’espace de noms transmis dans la variable `identityMap` est sensible à la casse Veillez à utiliser l’identifiant d’espace de noms correct pour éviter une collecte de données incomplète.
 
 Chaque objet d’identité du tableau identities contient les propriétés suivantes :
 
@@ -117,9 +117,9 @@ Chaque objet d’identité du tableau identities contient les propriétés suiva
 | --- | --- | --- |
 | `id` | Chaîne | **(Obligatoire)** L’identifiant que vous souhaitez définir pour l’espace de noms donné. |
 | `authenticationState` | Chaîne | **(Obligatoire)** L’état d’authentification de l’ID. Les valeurs possibles sont les suivantes : `ambiguous`, `authenticated` et `loggedOut`. |
-| `primary` | Booléen | Détermine si cette identité doit être utilisée comme Principal fragment dans le profil. Par défaut, l’ECID est défini comme identifiant Principal de l’utilisateur. Cette valeur est définie par défaut sur `false` si vous l’ignorez. |
+| `primary` | Booléen | Détermine si cette identité doit être utilisée comme fragment principal dans le profil. Par défaut, l’ECID est défini comme identifiant principal de l’utilisateur. Cette valeur est définie par défaut sur `false` si vous l’ignorez. |
 
-En utilisant la variable `identityMap` pour identifier les appareils ou les utilisateurs, le résultat obtenu est le même que pour l’utilisation de la variable [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=en) de la méthode [!DNL ID Service API]. Voir [Documentation de l’API du service d’ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=en) pour plus d’informations.
+En utilisant la variable `identityMap` pour identifier les appareils ou les utilisateurs, le résultat obtenu est le même que pour l’utilisation de la variable [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=fr) de la méthode [!DNL ID Service API]. Voir [Documentation de l’API du service d’ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) pour plus d’informations.
 
 ## Migration de l’API visiteur vers ECID
 
@@ -135,4 +135,4 @@ Lorsque des données au format XDM sont envoyées en Audience Manager, ces donn�
 
 ## Utilisation dans le transfert d’événement
 
-Si vous avez actuellement [transfert d’événement](../../tags/ui/event-forwarding/overview.md) activée et utilisent `appmeasurement.js` et `visitor.js`, vous pouvez conserver la fonction de transfert d’événement activée, ce qui ne posera aucun problème. Sur le serveur principal, Adobe récupère tous les segments AAM et les ajoute à l’appel à Analytics. Si l’appel à Analytics contient ces segments, Analytics n’appelle aucune Audience Manager pour transférer des données. Il n’y a donc pas de collecte de données double. Il n’est pas non plus nécessaire d’avoir des conseils sur l’emplacement lors de l’utilisation du SDK Web, car les mêmes points de fin de segmentation sont appelés dans le serveur principal.
+Si vous avez actuellement [transfert d’événement](../../tags/ui/event-forwarding/overview.md) activée et utilisent `appmeasurement.js` et `visitor.js`, vous pouvez conserver la fonction de transfert d’événement activée, ce qui ne posera aucun problème. Sur le serveur principal, Adobe récupère tous les segments AAM et les ajoute à l’appel à Analytics. Si l’appel à Analytics contient ces segments, Analytics n’appelle pas l’Audience Manager pour transférer aucune donnée. Il n’y a donc pas de collecte de données double. Il n’est pas non plus nécessaire d’avoir des conseils sur l’emplacement lors de l’utilisation du SDK Web, car les mêmes points de fin de segmentation sont appelés dans le serveur principal.

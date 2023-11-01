@@ -1,17 +1,17 @@
 ---
-title: Identifiants d’appareil propriétaires dans le SDK Web Platform
+title: Identifiants d’appareil propriétaire dans le SDK web Platform
 description: Découvrez comment configurer des identifiants d’appareil propriétaires (FPID) pour le SDK Web de Adobe Experience Platform.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1774'
-ht-degree: 1%
+source-wordcount: '1772'
+ht-degree: 2%
 
 ---
 
-# Identifiants d’appareil propriétaires dans le SDK Web Platform
+# Identifiants d’appareil propriétaire dans le SDK web Platform
 
-Le SDK Web de Adobe Experience Platform affecte [Adobe Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=en) aux visiteurs du site web grâce à l’utilisation de cookies, afin de suivre le comportement des utilisateurs. Pour tenir compte des restrictions du navigateur sur la durée de vie des cookies, vous pouvez choisir de définir et de gérer vos propres identifiants d’appareil à la place. Il s’agit d’identifiants d’appareil interne (FPID).
+Le SDK Web de Adobe Experience Platform affecte [Adobe Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=fr) aux visiteurs du site web grâce à l’utilisation de cookies, afin de suivre le comportement des utilisateurs. Pour tenir compte des restrictions du navigateur sur la durée de vie des cookies, vous pouvez choisir de définir et de gérer vos propres identifiants d’appareil à la place. Il s’agit d’identifiants d’appareil interne (FPID).
 
 >[!NOTE]
 >

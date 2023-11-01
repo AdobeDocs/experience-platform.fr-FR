@@ -2,10 +2,10 @@
 description: Cette page répertorie et décrit les étapes de configuration d’une destination basée sur des fichiers à l’aide de Destination SDK.
 title: Utilisation de Destination SDK pour configurer une destination basée sur des fichiers
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '683'
-ht-degree: 71%
+source-wordcount: '681'
+ht-degree: 70%
 
 ---
 
@@ -373,11 +373,11 @@ Selon que vous spécifiez `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `
    * [Authentification Amazon S3](../functionality/destination-configuration/customer-authentication.md#s3)
    * [Azure Blob](../functionality/destination-configuration/customer-authentication.md#blob)
    * [Azure Data Lake Storage](../functionality/destination-configuration/customer-authentication.md#adls)
-   * [Google Cloud Storage](../functionality/destination-configuration/customer-authentication.md#gcs)
+   * [Google Cloud Storage](../functionality/destination-configuration/customer-authentication.md#gcs)
    * [Authentification SFTP avec clé SSH](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [Authentification SFTP avec mot de passe](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
-* Si vous avez sélectionné `"authenticationRule": "PLATFORM_AUTHENTICATION"`, reportez-vous à la section [documentation de l’API de configuration des informations d’identification](../credentials-api/create-credential-configuration.md#when-to-use).
+* Si vous avez sélectionné `"authenticationRule": "PLATFORM_AUTHENTICATION"`, reportez-vous au [documentation de l’API de configuration des informations d’identification](../credentials-api/create-credential-configuration.md#when-to-use).
 
 
 ## Étape 5 : tester votre destination {#test-destination}
@@ -387,7 +387,7 @@ Une fois votre destination configurée à l’aide des points d’entrée de con
 Dans le cadre du processus de test de votre destination, vous devez utiliser l’interface utilisateur d’Experience Platform pour créer des segments que vous activerez vers votre destination. Reportez-vous aux deux ressources ci-dessous pour savoir comment créer des audiences dans Experience Platform :
 
 * [Création d’une page de documentation sur l’audience](/help/segmentation/ui/overview.md#create-segment)
-* [Présentation vidéo de la création d’une audience](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr)
+* [Présentation vidéo de la création d’une audience](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Étape 6 : publier votre destination {#publish-destination}
 
@@ -405,7 +405,7 @@ Une fois votre destination configurée et testée, utilisez l’[API de publicat
 
 Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une [intégration personnalisée](../overview.md#productized-custom-integrations), utilisez le [processus de documentation en libre-service](../docs-framework/documentation-instructions.md) pour créer une page de documentation du produit pour votre destination dans le [Catalogue des destinations Experience Platform](/help/destinations/catalog/overview.md).
 
-## Étape 8 : Envoyer la destination pour la révision de l’Adobe {#submit-for-review}
+## Étape 8 : envoi de la destination pour la révision de l’Adobe {#submit-for-review}
 
 >[!NOTE]
 >

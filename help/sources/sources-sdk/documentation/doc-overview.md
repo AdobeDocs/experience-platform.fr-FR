@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Document source
 description: La dernière étape avant que votre nouvelle source puisse être mise en ligne dans Adobe Experience Platform consiste à documenter votre nouvelle source.
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '407'
 ht-degree: 4%
 
 ---
 
-# Document de votre source
+# Document source
 
 La dernière étape avant de pouvoir définir votre nouvelle source en direct dans Adobe Experience Platform consiste à documenter votre nouvelle source.
 
@@ -19,15 +19,15 @@ Ce guide de documentation comprend :
 
 * Un tutoriel que vous pouvez suivre pour créer une page de documentation pour votre nouvelle source ;
 * un modèle de documentation à remplir pour votre nouvelle source ;
-* [Instructions sur l’utilisation de Markdown pour la rédaction de documentation technique](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en);
-* [Instructions sur la compréhension de la saveur Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en#custom-markdown-extensions).
+* [Instructions sur l’utilisation de Markdown pour la rédaction de documentation technique](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
+* [Instructions pour comprendre la saveur Adobe Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
 
 ## Conditions préalables
 
 Les éléments suivants sont requis pour pouvoir commencer à documenter votre nouvelle source :
 
-* **Un compte utilisateur GitHub valide**: Si vous ne disposez pas d’un compte GitHub existant, vous devez en créer un via la variable [Page d’inscription GitHub](https://github.com/);
-* **Accès à GitHub Desktop**: Vous devez utiliser la variable [Application de bureau GitHub](https://desktop.github.com/) afin de créer votre documentation source dans votre environnement local ;
+* **Un compte utilisateur GitHub valide**: si vous ne disposez pas d’un compte GitHub existant, vous devez en créer un via la variable [Page d’inscription GitHub](https://github.com/);
+* **Accès à GitHub Desktop**: vous devez utiliser la variable [Application de bureau GitHub](https://desktop.github.com/) afin de créer votre documentation source dans votre environnement local ;
 * Votre intégration à Adobe doit être dans une phase de test avec votre source déployée dans un environnement d’évaluation de Platform.
 
 ## Instructions générales pour créer la documentation de votre source dans Platform

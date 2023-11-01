@@ -2,10 +2,10 @@
 description: Cette page répertorie et décrit les étapes de configuration d’une destination de diffusion en continu à l’aide de Destination SDK.
 title: Utiliser Destination SDK pour configurer une destination de diffusion en continu
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 65%
+source-wordcount: '818'
+ht-degree: 64%
 
 ---
 
@@ -62,7 +62,7 @@ Pour connecter la configuration du serveur et du modèle de l’étape 1 à cet
 
 >[!IMPORTANT]
 >
->Pour créer une destination en temps réel (diffusion en continu) correctement configurée, vous devez : *must* ajouter au moins une identité cible dans `identityNamespaces`, comme illustré ci-dessous. Si aucune identité cible n’est configurée, les utilisateurs ne pourront pas aller plus loin que l’[Étape de mappage](../../ui/activate-segment-streaming-destinations.md#mapping) du workflow d’activation.
+>Pour créer une destination en temps réel (diffusion en continu) correctement configurée, vous *must* ajouter au moins une identité cible dans `identityNamespaces`, comme illustré ci-dessous. Si aucune identité cible n’est configurée, les utilisateurs ne pourront pas aller plus loin que l’[Étape de mappage](../../ui/activate-segment-streaming-destinations.md#mapping) du workflow d’activation.
 
 ```shell
 POST platform.adobe.io/data/core/activation/authoring/destinations
@@ -276,7 +276,7 @@ Une fois votre destination configurée à l’aide des points d’entrée de con
 Dans le cadre du processus de test de votre destination, vous devez utiliser l’interface utilisateur d’Experience Platform pour créer des segments que vous activerez vers votre destination. Reportez-vous aux deux ressources ci-dessous pour savoir comment créer des audiences dans Experience Platform :
 
 * [Création d’une page de documentation sur l’audience](/help/segmentation/ui/overview.md#create-segment)
-* [Présentation vidéo de la création d’une audience](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr)
+* [Présentation vidéo de la création d’une audience](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Étape 7 : publier votre destination {#publish-destination}
 
@@ -294,7 +294,7 @@ Une fois votre destination configurée et testée, utilisez l’[API de publicat
 
 Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une [intégration personnalisée](../overview.md#productized-custom-integrations), utilisez le [processus de documentation en libre-service](../docs-framework/documentation-instructions.md) pour créer une page de documentation du produit pour votre destination dans le [Catalogue des destinations Experience Platform](/help/destinations/catalog/overview.md).
 
-## Étape 9 : Envoyer la destination pour la révision de l’Adobe {#submit-for-review}
+## Étape 9 : envoi de la destination pour la révision de l’Adobe {#submit-for-review}
 
 >[!NOTE]
 >

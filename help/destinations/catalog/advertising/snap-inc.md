@@ -2,9 +2,9 @@
 title: Connexion d’accrochage Inc
 description: Découvrez comment vous connecter à la plateforme Snapchat Ads et exporter vos audiences depuis Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1028'
 ht-degree: 28%
 
 ---
@@ -128,7 +128,7 @@ Après activation des audiences dans la variable *Accrocher à* , vous pourrez v
 
 ![Audiences](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Veuillez noter que lorsqu’une audience par Adobe est activée pour la première fois à la fonction de gestion dynamique des balises, elle s’affiche initialement comme une audience vide. Cela est dû au fait que Adobe Experience Platform n’exporte pas les données de membre vers la fonction de veille à ce qu’elle évalue l’audience. Pour plus d’informations sur la manière dont les audiences sont évaluées en Experience Platform, reportez-vous à la section [Présentation de Segmentation Service](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=en#evaluate-segments).
+Veuillez noter que lorsqu’une audience par Adobe est activée pour la première fois à la fonction de gestion dynamique des balises, elle s’affiche initialement comme une audience vide. Cela est dû au fait que Adobe Experience Platform n’exporte pas les données de membre vers la fonction de veille à ce qu’elle évalue l’audience. Pour plus d’informations sur la manière dont les audiences sont évaluées en Experience Platform, reportez-vous à la section [Présentation de Segmentation Service](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

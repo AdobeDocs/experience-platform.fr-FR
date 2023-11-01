@@ -1,22 +1,22 @@
 ---
 keywords: bizible;extension bizible;destination bizible
 title: Extension Bizible
-description: L’extension Bizible est une destination d’e-mail dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Bizible est une destination d’e-mail dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 9e45416d-b951-411c-a59f-34f84529f721
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 60%
+source-wordcount: '444'
+ht-degree: 61%
 
 ---
 
 # Extension [!DNL Bizible] {#bizible-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 [!DNL Bizible] est la solution d’attribution B2B de pointe qui vous offre une visibilité inégalée sur vos données afin que vous puissiez prendre des décisions intelligentes qui favorisent la croissance.
 
-[!DNL Bizible] est une extension de messagerie dans Adobe Experience Platform. Pour plus d’informations sur Bizible, consultez [Attribution marketing](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=en) dans les ressources de présentation de Bizible.
+[!DNL Bizible] est une extension de messagerie dans Adobe Experience Platform. Pour plus d’informations sur Bizible, consultez [Attribution marketing](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html) dans les ressources de présentation de Bizible.
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir [Présentation des extensions de balise](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Bizible] extension :
+Pour installer l’extension [!DNL Bizible], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 
@@ -42,7 +42,7 @@ Sélectionnez la propriété de balise dans laquelle vous souhaitez installer l�
 
 Le workflow vous permet d’accéder à l’interface utilisateur de collecte de données pour terminer l’installation.
 
-Vous pouvez également installer l’extension directement dans l’[interface utilisateur de la collecte de données](https://experience.adobe.com/#/data-collection/). Consultez le guide sur la [ajout d’une nouvelle extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) pour plus d’informations.
+Vous pouvez également installer l’extension directement dans l’[interface utilisateur de la collecte de données](https://experience.adobe.com/#/data-collection/). Consultez le guide sur la [ajouter une nouvelle extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) pour plus d’informations.
 
 ## Utilisation de l’extension {#how-to-use}
 

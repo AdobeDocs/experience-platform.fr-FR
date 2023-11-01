@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2181'
+source-wordcount: '2179'
 ht-degree: 28%
 
 ---
@@ -129,13 +129,13 @@ Pour plus d’informations, reportez-vous à la [présentation des destinations]
 
 ## Intelligent Services {#intelligent-services}
 
-Intelligent Services permet aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et du machine learning dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d&#39;une entreprise en utilisant des configurations au niveau de l&#39;entreprise sans avoir besoin d&#39;expertise en sciences des données.
+Intelligent Services permet aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et du machine learning dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d’une entreprise en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données.
 
 **Fonctionnalités clés**
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Jeu de données d’événements d’expérience client (CEE) | La création d’un jeu de données CEE prend désormais en charge l’ajout de champs d’identité au jeu de données à l’aide de l’éditeur de schémas. Attribution AI et Customer AI utilisent l’identité Principale pour combiner des événements. |
+| Jeu de données d’événements d’expérience client (CEE) | La création d’un jeu de données CEE prend désormais en charge l’ajout de champs d’identité au jeu de données à l’aide de l’éditeur de schémas. Attribution AI et Customer AI utilisent l’identité principale pour combiner des événements. |
 
 Pour plus d’informations, veuillez lire la section sur [ajout de champs d’identité à un jeu de données](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) dans le guide de préparation des données d’Intelligent Services.
 

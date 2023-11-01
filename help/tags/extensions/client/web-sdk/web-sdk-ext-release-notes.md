@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
-workflow-type: ht
-source-wordcount: '1758'
-ht-degree: 100%
+source-git-commit: e300e57df998836a8c388511b446e90499185705
+workflow-type: tm+mt
+source-wordcount: '1756'
+ht-degree: 99%
 
 ---
 
@@ -192,7 +192,7 @@ Contient la version 2.5.0 de la bibliothèque SDK Web Adobe Experience Platfo
 
 Contient la version 2.4.0 de la bibliothèque SDK Web Adobe Experience Platform.
 
-* Ajout de la case à cocher [déchargement de document](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=fr#using-the-sendbeacon-api) à l’interface utilisateur de l’action Envoyer l’événement.
+* Ajout de la case à cocher [déchargement de document](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) à l’interface utilisateur de l’action Envoyer l’événement.
 * Ajout de la prise en charge d’une option `out` lors de la [configuration du consentement par défaut](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=fr#default-consent) qui supprime tous les événements jusqu’à ce que le consentement soit reçu (l’option `pending` existante met les événements en file d’attente et les envoie une fois le consentement reçu).
 * Ajout d’une info-bulle au champ de consentement par défaut.
 * Ajout de la prise en charge du [standard de consentement 2.0 d’Adobe](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?lang=fr#communicating-consent-preferences-via-the-adobe-standard).

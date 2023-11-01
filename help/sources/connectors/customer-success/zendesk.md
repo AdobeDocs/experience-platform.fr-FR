@@ -3,10 +3,10 @@ title: Présentation du connecteur source Zendesk
 description: Découvrez comment connecter Zendesk à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '367'
-ht-degree: 48%
+source-wordcount: '365'
+ht-degree: 47%
 
 ---
 
@@ -16,7 +16,7 @@ Adobe Experience Platform permet d’ingérer des données à partir de source
 
 Experience Platform prend en charge l’ingestion de données provenant d’une application de succès client tierce. La prise en charge des fournisseurs de succès client inclut [!DNL Zendesk].
 
-Cette Adobe Experience Platform [sources](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=fr) tire parti de [API de recherche Zendesk > Exporter les résultats de recherche](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) qui renvoie les informations sur les utilisateurs dans Experience Platform à partir de Zendesk pour un traitement ultérieur.
+Cette Adobe Experience Platform [sources](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=fr) tire parti de la fonction [API de recherche Zendesk > Exporter les résultats de recherche](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) qui renvoie les informations sur les utilisateurs dans Experience Platform à partir de Zendesk pour un traitement ultérieur.
 
 ## Liste autorisée d’adresses IP
 

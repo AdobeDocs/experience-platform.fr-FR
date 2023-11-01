@@ -3,10 +3,10 @@ title: Conseils sur le client de l’agent utilisateur
 description: Découvrez comment les conseils client de l’agent utilisateur fonctionnent dans le SDK Web. Les conseils aux clients permettent aux propriétaires de sites web d’accéder à une grande partie des mêmes informations disponibles dans la chaîne de l’agent utilisateur, mais de manière plus respectueuse de la vie privée.
 keywords: user-agent;conseils client ; chaîne ; chaîne user-agent ; faible entropie ; grande entropie
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: d856630d4c14387ad4d77a915585fe05803878fb
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1200'
-ht-degree: 9%
+source-wordcount: '1192'
+ht-degree: 7%
 
 ---
 
@@ -120,7 +120,7 @@ La variable [Système d’exploitation](https://experienceleague.adobe.com/docs/
 
 ### Caractéristiques d’Audience Manager reposant sur des indices client à forte entropie {#aam}
 
-[!DNL Google] a mis à jour la variable [!DNL Chrome] de la fonction du navigateur afin de minimiser les informations collectées via l’ `User-Agent` en-tête . Par conséquent, les clients Audience Manager qui utilisent [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=fr) ne recevra plus d’informations fiables sur les caractéristiques basées sur [clés au niveau de la plateforme](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=fr).
+[!DNL Google] a mis à jour la variable [!DNL Chrome] de la fonction du navigateur afin de minimiser les informations collectées via l’ `User-Agent` en-tête . Par conséquent, les clients Audience Manager qui utilisent [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=fr) ne recevra plus d’informations fiables sur les caractéristiques basées sur [clés au niveau de la plateforme](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
 
 Les clients Audiences Manager qui utilisent des clés au niveau de la plateforme pour le ciblage doivent passer à [SDK Web Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=fr) au lieu de [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=fr)et activez [Conseils client à forte entropie](#enabling-high-entropy-client-hints) pour continuer à recevoir des données de caractéristiques fiables.
 

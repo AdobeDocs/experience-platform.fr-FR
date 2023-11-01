@@ -3,9 +3,9 @@ title: Connexion à TikTok
 description: Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. Il peut s’agir de personnes qui ont visité votre site web ou interagi avec votre contenu. Poussez rapidement et en toute sécurité l’audience souhaitée de Adobe Experience Platform vers TikTok à l’aide de l’intégration en temps réel d’Adobe à TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1040'
 ht-degree: 44%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 44%
 
 ## Vue d’ensemble {#overview}
 
-Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. Il peut s’agir de personnes qui ont visité votre site web ou interagi avec votre contenu. Poussez rapidement et en toute sécurité l’audience souhaitée de Adobe Experience Platform vers TikTok à l’aide de l’intégration en temps réel d’Adobe à TikTok Ads Manager. Visite [Centre d’aide aux entreprises TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) pour plus d’informations.
+Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. Il peut s’agir de personnes qui ont visité votre site web ou interagi avec votre contenu. Poussez rapidement et en toute sécurité l’audience souhaitée de Adobe Experience Platform vers TikTok à l’aide de l’intégration en temps réel d’Adobe à TikTok Ads Manager. Visite [Centre d’aide aux entreprises TikTok](https://ads.tiktok.com/help/article/audiences) pour plus d’informations.
 
 >[!IMPORTANT]
 >
@@ -30,7 +30,7 @@ Une marque de vêtements d’athlétisme veut atteindre ses clients existants pa
 
 ## Conditions préalables {#prerequisites}
 
-Vous devez avoir [!DNL Admin] ou [!DNL Operator] accéder au compte TikTok Ads Manager auquel vous souhaitez envoyer des audiences. Vous trouverez plus d’instructions sur la page [Centre d’aide TikTok](https://ads.tiktok.com/help/article/add-users-tiktok-business-center?lang=en).
+Vous devez avoir [!DNL Admin] ou [!DNL Operator] accéder au compte TikTok Ads Manager auquel vous souhaitez envoyer des audiences. Vous trouverez plus d’instructions sur la page [Centre d’aide TikTok](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
 
 Avant d’envoyer des données à votre compte TikTok Ads Manager, vous devez autoriser Adobe Experience Platform à accéder à votre compte publicitaire pour la variable `Audience Management`. Cette autorisation peut être fournie par [saisie de votre identifiant Ads Manager](#authenticate) dans l’interface utilisateur de l’Experience Platform et en accordant l’autorisation après avoir été redirigé vers votre compte TikTok Ads Manager.
 
@@ -123,4 +123,4 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-Reportez-vous à [Page Centre d’aide TikTok](https://ads.tiktok.com/help/article/audiences?lang=en) pour plus d’informations.
+Reportez-vous à [Page Centre d’aide TikTok](https://ads.tiktok.com/help/article/audiences) pour plus d’informations.

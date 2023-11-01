@@ -2,9 +2,9 @@
 title: Questions fréquentes sur les attributs calculés
 description: Découvrez les réponses aux questions fréquentes sur l’utilisation des attributs calculés.
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
-source-git-commit: 48c728c183d6ad28cd291543a79902b16a247a5a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1090'
 ht-degree: 1%
 
 ---
@@ -99,4 +99,4 @@ Les attributs calculés dérivés automatiquement des libellés d’utilisation 
 
 ## Comment utiliser les attributs calculés avec Adobe Journey Optimizer ?
 
-Pour utiliser les attributs calculés dans les parcours, vous devez ajouter la variable `SystemComputedAttributes` groupe de champs vers la source de données Experience Platform. Pour plus d’informations sur la configuration de la source de données Experience Platform, veuillez lire le [Guide de source de données Adobe Experience Platform](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=en).
+Pour utiliser les attributs calculés dans les parcours, vous devez ajouter la variable `SystemComputedAttributes` groupe de champs vers la source de données Experience Platform. Pour plus d’informations sur la configuration de la source de données Experience Platform, veuillez lire le [Guide de source de données Adobe Experience Platform](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).

@@ -2,9 +2,9 @@
 title: Analyse et suivi du consentement
 description: Découvrez comment créer un tableau de bord d’analyse du consentement pour suivre les tendances du consentement des utilisateurs au fil du temps.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1921'
+source-wordcount: '1919'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ La variable [!UICONTROL Abonnements] s’affiche. Dans les options disponibles, 
 
 >[!NOTE]
 >
->Le nombre d’audiences que vous êtes invité à créer est limité. Vous trouverez plus d’informations dans la section [documentation sur les barrières de segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=en#segmentation-guardrails).
+>Le nombre d’audiences que vous êtes invité à créer est limité. Vous trouverez plus d’informations dans la section [documentation sur les barrières de segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails).
 
 ![La variable [!UICONTROL Valeur de choix] avec l’attribut [!UICONTROL Oui (inclusion)] en surbrillance dans le créateur de segments. Le nom et la description de l’audience sont également mis en surbrillance.](../images/insights-use-cases/consent-analysis/choice-value.png)
 

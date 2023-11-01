@@ -1,23 +1,23 @@
 ---
-title: Personnalisation via Adobe Target
+title: Personnalisation via Adobe Target
 description: Découvrez comment utiliser l’API serveur pour diffuser et générer des expériences personnalisées créées dans Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 3%
+source-wordcount: '616'
+ht-degree: 4%
 
 ---
 
-# Personnalisation via Adobe Target
+# Personnalisation via Adobe Target
 
 ## Vue d’ensemble {#overview}
 
-L’API Edge Network Server peut fournir et générer des expériences personnalisées créées dans Adobe Target, avec l’aide de la fonction [Compositeur d’expérience d’après les formulaires](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en).
+L’API Edge Network Server peut fournir et générer des expériences personnalisées créées dans Adobe Target, avec l’aide de la fonction [Compositeur d’expérience d’après les formulaires](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=fr).
 
 >[!IMPORTANT]
 >
->Expériences de personnalisation créées par l’intermédiaire de la fonction [Compositeur d’expérience visuelle de Target (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=fr) ne sont pas entièrement pris en charge par l’API serveur. L’API serveur peut **retrieve** les activités créées par le compositeur d’expérience visuelle, mais l’API du serveur ne peut pas **render** activités créées par le compositeur d’expérience visuelle. Si vous souhaitez effectuer le rendu des activités créées par VEC, implémentez . [personnalisation hybride](../edge/personalization/hybrid-personalization.md) à l’aide du SDK Web et de l’API Edge Network Server.
+>Expériences de personnalisation créées par le biais de la [Compositeur d’expérience visuelle de Target (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) ne sont pas entièrement pris en charge par l’API serveur. L’API du serveur peut **retrieve** les activités créées par le compositeur d’expérience visuelle, mais l’API du serveur ne peut pas **render** activités créées par VEC. Si vous souhaitez effectuer le rendu des activités créées par VEC, implémentez . [personnalisation hybride](../edge/personalization/hybrid-personalization.md) à l’aide du SDK Web et de l’API Edge Network Server.
 
 ## Configuration de votre flux de données {#configure-your-datastream}
 
@@ -57,7 +57,7 @@ Lors de la création d’audiences dans Target, les valeurs suivantes sont dispo
 
 ## Mises à jour des profils Target {#profile-update}
 
-Le [!DNL Server API] permet de mettre à jour le profil Target. Pour mettre à jour un profil Target, assurez-vous que les données de profil sont transmises dans la variable `data` partie de la requête au format suivant :
+La variable [!DNL Server API] permet de mettre à jour le profil Target. Pour mettre à jour un profil Target, assurez-vous que les données de profil sont transmises dans la variable `data` partie de la requête au format suivant :
 
 ```json
 "data":  {

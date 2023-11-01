@@ -2,7 +2,7 @@
 title: Présentation de l’extension Core
 description: Découvrez lʼextension de balise Core dans Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '5482'
 ht-degree: 96%
@@ -191,15 +191,15 @@ Lorsque vous sélectionnez cette option, les paramètres suivants deviennent dis
 
 * `property=value`
 
-   Indiquez la valeur de la propriété.
+  Indiquez la valeur de la propriété.
 
 * Regex
 
-   Activez si `property=value` est une expression régulière.
+  Activez si `property=value` est une expression régulière.
 
 * Add
 
-   Ajoutez une autre paire `property=value`.
+  Ajoutez une autre paire `property=value`.
 
 #### Advanced options (Bubbling)
 
@@ -323,11 +323,11 @@ Spécifiez le nom et la valeur de la variable JavaScript devant exister pour qu�
 
 ### Engagement
 
-#### Landing Page
+#### Page de destination
 
 Indiquez la page sur laquelle l’utilisateur doit entrer pour déclencher l’événement.
 
-1. Indiquez la page d’entrée.
+1. Indiquez la page de destination.
 1. (Facultatif) Activez les Regex s’il s’agit d’une expression régulière.
 
 #### New/Returning Visitor
@@ -356,7 +356,7 @@ Déclenchez l’action si le nombre de sessions de l’utilisateur respecte les 
 1. Indiquez si le nombre de sessions doit être supérieur, égal ou inférieur à la valeur indiquée.
 1. Indiquez le nombre de sessions qui déterminent si la condition est remplie.
 
-#### Time On Site
+#### Temps passé sur le site
 
 Déclenchez l’action si le nombre de sessions de l’utilisateur respecte les critères indiqués.
 
@@ -393,11 +393,11 @@ Sélectionnez un ou plusieurs navigateurs parmi les suivants :
 * Opera Mobile
 * Safari
 
-#### Device Type
+#### Type d’appareil
 
-Sélectionnez le type de périphérique que le visiteur doit utiliser pour que l’action soit déclenchée.
+Sélectionnez le type d’appareil que le visiteur doit utiliser pour que l’action soit déclenchée.
 
-Sélectionnez un ou plusieurs types de périphériques parmi les suivants :
+Sélectionnez un ou plusieurs types d’appareils parmi les suivants :
 
 * Android
 * BlackBerry
@@ -636,7 +636,7 @@ Cette action déclenche toutes les règles qui utilisent un [événement dʼappe
 
 ![Capture d’écran d’une action Déclencher lʼappel direct dans l’interface utilisateur de la collecte de données](../../../images/extensions/client/core/direct-call-action.png)
 
-L’action mappe directement à la méthode [`track`](../../../ui/client-side/satellite-object.md?lang=en#track) dans lʼobjet `satellite`, accessible par le code côté client.
+L’action mappe directement à la méthode [`track`](../../../ui/client-side/satellite-object.md#track) dans lʼobjet `satellite`, accessible par le code côté client.
 
 ## Types d’éléments de données de l’extension Core
 
@@ -721,7 +721,7 @@ Dans l’exemple ci-dessous, l’annotation contient une variable JavaScript nom
 
 Lorsque vous créez l’élément de données, fournissez simplement le chemin d’accès à cette variable.
 
-Si vous utilisez un objet collecteur de données dans votre couche de données, utilisez la notation point dans le chemin pour référencer l’objet et la propriété que vous souhaitez capturer dans l’élément de données, par exemple `_myData.pageName`ou `digitalData.pageName`, etc.
+Si vous utilisez un objet collecteur de données dans votre couche de données, utilisez la notation point dans le chemin pour référencer l’objet et la propriété que vous souhaitez capturer dans l’élément de données, par exemple `_myData.pageName`, ou `digitalData.pageName`, etc.
 
 #### Exemple :
 
@@ -842,7 +842,7 @@ Semblable aux informations sur la page, cet élément de données utilise des ty
 
 Sélectionnez l’un des attributs de comportement du visiteur suivants :
 
-* Landing page
+* Page de destination
 * Traffic source
 * Minutes on site
 * Session count
@@ -853,7 +853,7 @@ Sélectionnez l’un des attributs de comportement du visiteur suivants :
 Voici quelques cas d’utilisation courants :
 
 * Afficher une enquête une fois qu’un visiteur a consulté le site pendant cinq minutes
-* S’il s’agit de la page d’entrée de la visite, renseigner une mesure Analytics
+* S’il s’agit de la page de destination de la visite, renseigner une mesure Analytics
 * Afficher une nouvelle offre au visiteur après un nombre de sessions égal à X
 * Afficher un abonnement au bulletin d’information s’il s’agit d’un nouveau visiteur
 
@@ -875,9 +875,9 @@ Permet de sélectionner l’une des variables suivantes :
 * Event detail payload - Renvoie `event.detail` contenant la payload d’un événement personnalisé ou d’une règle d’appel direct.
 * Direct call identifier - Renvoie `event.identifier` contenant l’identifiant d’une règle d’appel direct.
 
-### Attributs de l’équipement
+### Attributs de l’appareil
 
-Renvoie l’un des attributs d’équipement du visiteur suivants :
+Renvoie l’un des attributs d’appareil du visiteur suivants :
 
 * Taille de la fenêtre du navigateur
 * Taille d’écran

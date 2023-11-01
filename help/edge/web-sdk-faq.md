@@ -2,9 +2,9 @@
 title: FAQ sur le SDK Web Adobe Experience Platform
 description: Obtenez des réponses aux questions fréquentes sur le SDK Web de Adobe Experience Platform.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2098'
 ht-degree: 3%
 
 ---
@@ -84,7 +84,7 @@ Alloy est le nom de code du SDK Web de Adobe Experience Platform. Il est utilis�
 
 Non. Tout client Adobe Digital Experience peut utiliser le SDK Web de Adobe Experience Platform gratuitement. Les clients qui souhaitent utiliser la variable [!DNL Web SDK] Vous devrez configurer les autorisations appropriées pour créer des schémas, des jeux de données, des espaces de noms d’identité et des flux de données dans l’interface utilisateur de la collecte de données ou l’interface utilisateur Experience Platform.
 
-Pour plus d’informations sur la configuration de ces autorisations, consultez notre documentation sur [gestion des autorisations de collecte de données](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=en).
+Pour plus d’informations sur la configuration de ces autorisations, consultez notre documentation sur [gestion des autorisations de collecte de données](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=fr).
 
 ## Qui doit utiliser le SDK Web ?
 
@@ -119,7 +119,7 @@ En d’autres termes, si vous décidez d’utiliser le SDK Web de Adobe Experien
 
 ## Puis-je migrer les ECID lorsque je commence à utiliser Alloy de sorte que les visiteurs de mon site web ne commencent pas à s’afficher comme de nouveaux visiteurs ?
 
-Oui, le SDK Web de Adobe Experience Platform fournit une fonctionnalité de migration des identités. Suivez les instructions de migration des identifiants dans la section [Documentation sur l’identité du SDK Web Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration) pour plus d’informations.
+Oui, le SDK Web de Adobe Experience Platform fournit une fonctionnalité de migration des identités. Suivez les instructions de migration des identifiants dans la section [Documentation sur l’identité du SDK Web Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#id-migration) pour plus d’informations.
 
 ## En quoi le SDK Web est-il différent des balises ?
 
@@ -161,7 +161,7 @@ Oui, le SDK Web utilise actuellement entre un et sept cookies en fonction de vot
 | **kndctr_orgid_cluster** | 1800 | 30 minutes | Ce cookie stocke la région réseau Edge qui traite les requêtes de l’utilisateur actuel. La région est utilisée dans le chemin d’URL afin que le réseau Edge puisse acheminer la requête vers la région appropriée. Ce cookie a une durée de vie de 30 minutes, de sorte que si un utilisateur se connecte à une autre adresse IP, la demande peut être acheminée vers la région la plus proche. |
 | **mbox** | 63072000 | 2 ans | Ce cookie s’affiche lorsque le paramètre de migration Target est défini sur true. Cela permet à Target de [cookie mbox](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) à définir par le SDK Web. |
 | **mboxEdgeCluster** | 1800 | 30 minutes | Ce cookie s’affiche lorsque le paramètre de migration Target est défini sur true. Ce cookie permet au SDK Web de communiquer la grappe Edge appropriée à at.js afin que les profils Target puissent rester synchronisés lorsque les utilisateurs naviguent sur un site. |
-| **AMCV_###@AdobeOrg** | 34128000 | 395 jours | Ce cookie s’affiche uniquement lorsque la migration des identifiants sur le SDK Web de Adobe Experience Platform est activée. Ce cookie est utile lors de la transition vers le SDK Web alors que certaines parties du site utilisent toujours visitor.js. Voir [Documentation idMigrationEnabled](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en#identity-options) pour en savoir plus sur ce paramètre. |
+| **AMCV_###@AdobeOrg** | 34128000 | 395 jours | Ce cookie s’affiche uniquement lorsque la migration des identifiants sur le SDK Web de Adobe Experience Platform est activée. Ce cookie est utile lors de la transition vers le SDK Web alors que certaines parties du site utilisent toujours visitor.js. Voir [Documentation idMigrationEnabled](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#identity-options) pour en savoir plus sur ce paramètre. |
 
 Lors de l’utilisation du SDK Web, le réseau Edge définit un ou plusieurs des cookies ci-dessus. Le réseau Edge définit tous les cookies avec la variable `secure` et `sameSite="none"` attributs.
 

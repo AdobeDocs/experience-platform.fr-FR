@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires;Adobe Campaign Manage
 title: Adobe Campaign Managed Cloud Services
 description: Découvrez comment connecter des Cloud Service gérés Campaign à Platform à l’aide de l’interface utilisateur
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: 39a503b14c731aeed279bbbfa8c814c2ec26ed92
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '757'
+source-wordcount: '753'
 ht-degree: 9%
 
 ---
@@ -30,7 +30,7 @@ Avant de pouvoir créer une connexion source pour amener votre Campaign v8 vers 
 
 >[!IMPORTANT]
 >
->Vous devez avoir accès à la console cliente Adobe Campaign v8 pour pouvoir visualiser vos données de journal dans Campaign. Visitez le [Documentation de Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=en) pour plus d’informations sur le téléchargement et l’installation de la console cliente.
+>Vous devez avoir accès à la console cliente Adobe Campaign v8 pour pouvoir visualiser vos données de journal dans Campaign. Visitez le [Documentation de Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html) pour plus d’informations sur le téléchargement et l’installation de la console cliente.
 
 Connectez-vous à votre instance Campaign v8 via la console cliente. Sous , [!DNL Explorer] onglet, sélectionnez [!DNL Administration] puis sélectionnez [!DNL Configuration]. Ensuite, sélectionnez [!DNL Data schemas] puis appliquez la variable `broadLog` filtre pour le nom ou le libellé. Dans la liste qui s&#39;affiche, sélectionnez le schéma source des logs de diffusion des destinataires avec le nom . `broadLogRcp`.
 

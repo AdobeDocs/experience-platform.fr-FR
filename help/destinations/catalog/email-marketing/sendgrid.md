@@ -3,10 +3,10 @@ keywords: e-mail;e-mail;destinations d’e-mail;sendgrid;destination sendgrid
 title: Connexion à SendGrid
 description: La destination SendGrid vous permet d’exporter vos données propriétaires et de les activer dans SendGrid en fonction des besoins de votre entreprise.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1577'
-ht-degree: 27%
+source-wordcount: '1571'
+ht-degree: 26%
 
 ---
 
@@ -34,7 +34,7 @@ Les éléments suivants sont requis avant de commencer à configurer la destinat
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Avant d’activer des données vers la destination SendGrid, vous devez disposer d’un [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=fr), un [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr), et [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=fr) créé dans [!DNL Experience Platform]. Voir également la section [limites](#limits) plus loin dans cette page.
+Avant d’activer des données vers la destination SendGrid, vous devez disposer d’un [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=fr), un [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr), et [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) créé dans [!DNL Experience Platform]. Voir également la section [limites](#limits) plus loin dans cette page.
 
 >[!IMPORTANT]
 >

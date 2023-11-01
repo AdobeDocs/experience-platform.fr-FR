@@ -1,9 +1,8 @@
 ---
-source-git-commit: 2dbd92efbd992b70f4f750b09e9d2e0626e71315
-workflow-type: ht
-translation-type: ht
-source-wordcount: '508'
-ht-degree: 100%
+source-git-commit: e300e57df998836a8c388511b446e90499185705
+workflow-type: tm+mt
+source-wordcount: '504'
+ht-degree: 98%
 
 ---
 # Contribuer au contenu
@@ -20,7 +19,7 @@ Consultez le [Guide du contributeur de documents Adobe](https://experienceleague
 
 Votre contribution dépend de qui vous êtes et du type de modifications auxquelles vous souhaitez contribuer :
 
-### Modifications mineures  ou demandes mineures
+### Modifications mineures ou demandes mineures
 
 Pour envoyer une requête, cliquez sur le lien **Signaler une issue** dans un article, ce qui ouvre un problème dans GitHub. Saisissez un titre et une description, puis cliquez sur **Envoyer une nouvelle issue**.
 
@@ -38,13 +37,13 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Modifications majeures ou nouveaux articles des employés Adobe
 
-Si vous êtes rédacteur technique, chef de programme ou développeur de l’équipe de produits en charge d’une solution Adobe Experience Cloud, et que votre travail implique de créer ou de contribuer à des articles techniques, utilisez le référentiel privé à l’adresse `https://git.corp.adobe.com/AdobeDocs`. Pour plus dʼinformations, voir le [guide de collaboration interne](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en).
+Si vous êtes rédacteur technique, chef de programme ou développeur de l’équipe de produits en charge d’une solution Adobe Experience Cloud, et que votre travail implique de créer ou de contribuer à des articles techniques, utilisez le référentiel privé à l’adresse `https://git.corp.adobe.com/AdobeDocs`. Pour plus dʼinformations, voir le [guide de collaboration interne](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html).
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
-## Contacter lʼéquipe de documentation Experience Platform
+## Contacter lʼéquipe de documentation Experience Platform
 
-Comme nous lʼavons indiqué plus haut, les membres de la communauté Adobe peuvent soumettre une question qui sera confiée au rédacteur approprié. Si vous êtes un employé Adobe, vous pouvez soumettre une question ou contacter directement lʼéquipe de documentation Experience Platform. Pour trouver le rédacteur principal concernant une section spécifique de Platform, consultez le [wiki de documentation dʼAdobe Experience Platform](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
+Comme nous lʼavons indiqué plus haut, les membres de la communauté Adobe peuvent soumettre une question qui sera confiée au rédacteur approprié. Si vous êtes un employé Adobe, vous pouvez soumettre une question ou contacter directement lʼéquipe de documentation Experience Platform. Pour trouver le rédacteur principal concernant une section spécifique de Platform, consultez le [wiki de documentation dʼAdobe Experience Platform](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
 
 ## Outils et configuration
 
@@ -65,5 +64,5 @@ Tous les articles de ce référentiel utilisent GitHub Flavored Markdown. Si vou
 
 Dans le référentiel public, des étiquettes automatisées sont assignées à des requêtes de tirage afin de nous aider à gérer le workflow de requête de tirage et à vous aider à savoir ce qui se passe avec votre requête de tirage :
 
-* **Modification envoyée à l’auteur** : l’auteur a été informé de la requête de tirage en attente.
-* **Prêt à fusionner** : prêt à être analysé par notre équipe d’analyse de demande de tirage.
+* **Change sent to author** : l’auteur a été informé de la requête de tirage en attente.
+* **ready-to-merge** : prêt à être analysé par notre équipe d’analyse de demande de tirage.

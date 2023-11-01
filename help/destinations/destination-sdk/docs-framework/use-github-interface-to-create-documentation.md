@@ -2,29 +2,28 @@
 title: Utiliser l’interface web GitHub pour créer une page de documentation de destination
 description: Les instructions de cette page vous montrent comment utiliser l’interface web GitHub pour créer une page de documentation pour votre destination Experience Platform et l’envoyer pour révision.
 exl-id: 4780e05e-3d1d-4f1b-8441-df28d09c1a88
-source-git-commit: e239de97a26ea2ff36bb74390e249851a13d2e13
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '768'
 ht-degree: 5%
 
 ---
 
 # Utiliser l’interface web GitHub pour créer une page de documentation de destination {#github-interface}
 
-Les instructions ci-dessous vous montrent comment utiliser l’interface web GitHub pour créer de la documentation et envoyer une requête de tirage (PR). Avant de passer en revue les étapes indiquées ici, veillez à lire [Document de votre destination dans les destinations Adobe Experience Platform](./documentation-instructions.md).
+Les instructions ci-dessous vous montrent comment utiliser l’interface web GitHub pour créer de la documentation et envoyer une requête de tirage (PR). Avant de suivre les étapes indiquées ici, veillez à lire [Document de votre destination dans les destinations Adobe Experience Platform](./documentation-instructions.md).
 
 >[!TIP]
 >
 >Reportez-vous également à la documentation à l’appui du guide du contributeur d’Adobe :
->* [Installation des outils de création Git et Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en)
->* [Configuration locale du référentiel Git pour la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en)
->* [Workflow de contributions GitHub pour les modifications majeures](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=en).
-
+>* [Installation des outils de création Git et Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
+>* [Configuration locale du référentiel Git pour la documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
+>* [Workflow de contributions GitHub pour les modifications majeures](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
 
 ## Configuration de votre environnement de création GitHub {#set-up-environment}
 
 1. Dans votre navigateur, accédez à la page suivante : `https://github.com/AdobeDocs/experience-platform.en`.
-2. À [double](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) le référentiel, cliquez sur **Branchement** comme illustré ci-dessous. Cela crée une copie du référentiel Experience Platform dans votre propre compte GitHub.
+2. À [double](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) le référentiel, cliquez sur **Branchement** comme illustré ci-dessous. Cela crée une copie du référentiel Experience Platform dans votre propre compte GitHub.
 
    ![Référentiel de documentation pour les Adobes de transfert](../assets/docs-framework/ssd-fork-repository.gif)
 
@@ -32,7 +31,7 @@ Les instructions ci-dessous vous montrent comment utiliser l’interface web Git
 
    ![Création d’une branche GitHub](../assets/docs-framework/new-branch-github.gif)
 
-4. Dans la structure de dossiers GitHub du référentiel dupliqué, accédez à `experience-platform.en/help/destinations/catalog/[...]`où `[...]` est la catégorie souhaitée pour votre destination. Par exemple, si vous ajoutez une destination de personnalisation à Experience Platform, sélectionnez la variable `personalization` catégorie. Sélectionner **Ajouter un fichier > Créer un fichier**.
+4. Dans la structure de dossiers GitHub du référentiel dupliqué, accédez à `experience-platform.en/help/destinations/catalog/[...]`, où `[...]` est la catégorie souhaitée pour votre destination. Par exemple, si vous ajoutez une destination de personnalisation à Experience Platform, sélectionnez la variable `personalization` catégorie. Sélectionner **Ajouter un fichier > Créer un fichier**.
 
    ![Ajouter un nouveau fichier](../assets/docs-framework/github-navigate-and-create-file.gif)
 
@@ -40,14 +39,14 @@ Les instructions ci-dessous vous montrent comment utiliser l’interface web Git
 
 ## Créez la page de documentation de votre destination. {#author-documentation}
 
-1. Vous allez créer le contenu de votre page de destination en fonction de la variable [modèle de libre-service de documentation](./self-service-template.md). **[Télécharger](../assets/docs-framework/yourdestination-template.zip)** le modèle et décompressez-le pour extraire le `.md` modèle de fichier.
+1. Vous allez créer le contenu de votre page de destination en fonction du [modèle de libre-service de documentation](./self-service-template.md). **[Télécharger](../assets/docs-framework/yourdestination-template.zip)** le modèle et décompressez-le pour extraire le `.md` modèle de fichier.
 2. Collez et modifiez le contenu du modèle avec les informations pertinentes pour votre destination dans un éditeur de balisage en ligne, tel que [dillinger.io](https://dillinger.io/). Suivez les instructions du modèle pour plus d’informations sur ce que vous devez remplir et les paragraphes qui peuvent être supprimés.
 
    >[!TIP]
    >
    >Vous pouvez fermer la fenêtre de votre navigateur à tout moment et la rouvrir ultérieurement. Votre travail est enregistré automatiquement et vous attend lorsque vous rouvrez le navigateur.
 3. Copiez le contenu de l’éditeur de Markdown dans votre nouveau fichier dans GitHub.
-4. Pour toutes les captures d’écran ou images que vous prévoyez d’utiliser, utilisez l’interface GitHub pour charger les fichiers dans `experience-platform.en/help/destinations/assets/catalog/[...]`où `[...]` est la catégorie souhaitée pour votre destination. Par exemple, si vous ajoutez une destination de personnalisation à Experience Platform, sélectionnez la variable `personalization` catégorie. Vous devez créer un lien vers les images de la page que vous créez. Voir [instructions pour créer un lien vers des images](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en#link-to-images).
+4. Pour toutes les captures d’écran ou images que vous prévoyez d’utiliser, utilisez l’interface GitHub pour charger les fichiers dans `experience-platform.en/help/destinations/assets/catalog/[...]`, où `[...]` est la catégorie souhaitée pour votre destination. Par exemple, si vous ajoutez une destination de personnalisation à Experience Platform, sélectionnez la variable `personalization` catégorie. Vous devez créer un lien vers les images de la page que vous créez. Voir [instructions pour créer un lien vers des images](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images).
 
    ![Chargement d’une image sur GitHub](../assets/docs-framework/upload-image.gif)
 
@@ -63,9 +62,9 @@ Les instructions ci-dessous vous montrent comment utiliser l’interface web Git
 
 1. Après avoir enregistré le fichier et téléchargé les images de votre choix, vous pouvez ouvrir une requête de tirage (PR) pour fusionner votre branche de travail dans la branche principale du référentiel de documentation Adobe. Assurez-vous que la branche sur laquelle vous avez travaillé est sélectionnée et sélectionnez **Contribution > Ouvrir la requête de tirage**.
 
-![Créer une requête d’extraction](../assets/docs-framework/ssd-create-pull-request-1.gif)
+![Création d’une requête d’extraction](../assets/docs-framework/ssd-create-pull-request-1.gif)
 
-1. Assurez-vous que les branches de base et de comparaison sont correctes. Ajoutez une note au document de présentation, décrivant votre mise à jour, puis sélectionnez **Créer une requête d’extraction**. Cela ouvre une requête de tirage pour fusionner la branche opérationnelle de votre double dans la branche principale du référentiel Adobe.
+1. Assurez-vous que les branches de base et de comparaison sont correctes. Ajoutez une note au document de présentation, décrivant votre mise à jour, puis sélectionnez **Création d’une requête d’extraction**. Cela ouvre une requête de tirage pour fusionner la branche opérationnelle de votre double dans la branche principale du référentiel Adobe.
 
    >[!TIP]
    >
@@ -83,4 +82,4 @@ Les instructions ci-dessous vous montrent comment utiliser l’interface web Git
 
 >[!TIP]
 >
->Pour ajouter des images et des liens à votre documentation, ainsi que toute autre question concernant Markdown, reportez-vous à la section [Utilisation de Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=en) dans le guide d’écriture collaborative d’Adobe.
+>Pour ajouter des images et des liens à votre documentation, ainsi que toute autre question concernant Markdown, reportez-vous à la section [Utilisation de Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) dans le guide d’écriture collaborative d’Adobe.

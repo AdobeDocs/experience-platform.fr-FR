@@ -1,31 +1,31 @@
 ---
 title: Création d’une connexion source et d’un flux de données pour Pinterest Ads à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à Pinterest Ads à l’aide de l’API Flow Service.
-badge: Version bêta
+badge: Version Beta
 hide: true
 hidefromtoc: true
 exl-id: 293a3ec9-38ea-4b71-a923-1f4e28a41236
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2333'
+source-wordcount: '2329'
 ht-degree: 60%
 
 ---
 
-# Création d’une connexion source et d’un flux de données pour [!DNL Pinterest Ads] en utilisant la variable [!DNL Flow Service] API
+# Créer une connexion source et un flux de données pour [!DNL Pinterest Ads] en utilisant la variable [!DNL Flow Service] API
 
 >[!NOTE]
 >
->La source [!DNL Pinterest Ads] est en version Beta. Lisez le [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La source [!DNL Pinterest Ads] est en version Beta. Lisez la section [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Le tutoriel suivant vous guide tout au long des étapes de création d’un [!DNL Pinterest Ads] connexion source et flux de données à importer [[!DNL Pinterest Ads]](https://ads.pinterest.com/) données vers Adobe Experience Platform à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Le tutoriel suivant décrit les étapes à suivre pour créer un [!DNL Pinterest Ads] connexion source et flux de données à importer [[!DNL Pinterest Ads]](https://ads.pinterest.com/) données vers Adobe Experience Platform à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main {#getting-started}
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL Pinterest Ads] en utilisant la variable [!DNL Flow Service] API.
 
@@ -39,7 +39,7 @@ Pour vous connecter [!DNL Pinterest Ads] pour Experience Platform, vous devez fo
 
 Pour plus d’informations sur ces propriétés de connexion, consultez la section [[!DNL Pinterest Ads] aperçu](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
 
-## Connexion [!DNL Pinterest Ads] vers Platform à l’aide de [!DNL Flow Service] API {#connect-platform-to-flow-api}
+## Connexion [!DNL Pinterest Ads] vers Platform à l’aide de la méthode [!DNL Flow Service] API {#connect-platform-to-flow-api}
 
 Les étapes suivantes décrivent les étapes à suivre pour se connecter [!DNL Pinterest Ads] à Experience Platform.
 
@@ -449,7 +449,7 @@ POST /sourceConnections
 
 **Requête**
 
-Le [!DNL Pinterest Ads] La source prend en charge plusieurs [!DNL Pinterest] Points d’entrée de l’API Analytics. Selon le type d’objet utilisé, la requête suivante crée une connexion source :
+La variable [!DNL Pinterest Ads] La source prend en charge plusieurs [!DNL Pinterest] Points d’entrée de l’API Analytics. Selon le type d’objet utilisé, la requête suivante crée une connexion source :
 
 >[!BEGINTABS]
 
@@ -592,13 +592,13 @@ Pour que les données sources soient utilisées dans Platform, un schéma cible 
 
 Un schéma XDM cible peut être créé en adressant une requête POST à l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
-Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, suivez le tutoriel sur la [création d’un schéma à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
+Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, suivez le tutoriel sur la [création d’un schéma à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### Créer un jeu de données cible {#target-dataset}
 
 Un jeu de données cible peut être créé en adressant une requête POST à l’[API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) et en fournissant l’identifiant du schéma cible dans la payload.
 
-Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, suivez le tutoriel sur la [création d’un jeu de données à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
+Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, suivez le tutoriel sur la [création d’un jeu de données à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
 ### Créer une connexion cible {#target-connection}
 
@@ -779,7 +779,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ### Créer un flux {#flow}
 
-La dernière étape pour obtenir des données de [!DNL Pinterest Ads] à Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
+La dernière étape pour obtenir des données de [!DNL Pinterest Ads] vers Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
 
 * [ID de connexion source](#source-connection)
 * [ID de connexion cible](#target-connection)
@@ -871,7 +871,7 @@ Une fois votre flux de données créé, vous pouvez surveiller les données ing�
 
 ### Mettre à jour votre flux de données {#update-dataflow}
 
-Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés, en envoyant une requête PATCH à la variable `/flows` point d’entrée [!DNL Flow Service] API, tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre flux de données `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour des flux de données sources à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés, en envoyant une requête PATCH à la variable `/flows` point d’entrée de [!DNL Flow Service] API, tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre flux de données `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour des flux de données de sources à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
 ### Mettre à jour votre compte {#update-account}
 

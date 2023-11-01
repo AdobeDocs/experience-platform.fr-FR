@@ -2,10 +2,10 @@
 title: Notes de mise à jour relatives aux balises et au transfert d’événements
 description: Dernières notes de mise à jour concernant les balises et le transfert d’événement dans Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
-workflow-type: ht
-source-wordcount: '841'
-ht-degree: 100%
+source-git-commit: e300e57df998836a8c388511b446e90499185705
+workflow-type: tm+mt
+source-wordcount: '835'
+ht-degree: 97%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 100%
 
 >[!IMPORTANT]
 >
->À l&#39;avenir, les balises et les notes de mise à jour du transfert d’événement ne seront plus fournis sur cette page. Consultez les dernières [notes de mise à jour d&#39;Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=fr#data-collection) pour obtenir des mises à jour détaillées sur les balises et le transfert d’événement.
+>À l&#39;avenir, les balises et les notes de mise à jour du transfert d’événement ne seront plus fournis sur cette page. Consultez les dernières [notes de mise à jour d&#39;Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html#data-collection) pour obtenir des mises à jour détaillées sur les balises et le transfert d’événement.
 
 ## 26 avril 2023
 
-* **Secret JWT OAuth** : le [secret JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=fr) permet aux clients et clientes d’utiliser des jetons Adobe et Google Service pour prendre en charge les interactions serveur à serveur dans le transfert d’événement.
+* **Secret JWT OAuth** : le [secret JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) permet aux clients et clientes d’utiliser des jetons Adobe et Google Service pour prendre en charge les interactions serveur à serveur dans le transfert d’événement.
 
 La nouvelle extension suivante a été publiée :
 
@@ -28,7 +28,7 @@ La nouvelle extension suivante a été publiée :
 **Workflows de démarrage rapide (Beta)**
 
 Accédez aux nouveaux workflows de démarrage rapide sous « Prise en main » à partir de l’écran d’accueil Collecte de données. Les workflows suivants sont désormais disponibles pour les clientes et clients sous la forme d’une version Beta publique.
-* **[API Meta Conversions](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=fr#quick-start)** : les clientes et clients utilisant le transfert d’événement peuvent collecter et transférer rapidement des données d’événement côté serveur vers les métadonnées pour les conversions publicitaires en quelques étapes simples.
+* **[API Meta Conversions](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start)** : les clientes et clients utilisant le transfert d’événement peuvent collecter et transférer rapidement des données d’événement côté serveur vers les métadonnées pour les conversions publicitaires en quelques étapes simples.
 * **[SDK mobile](https://developer.adobe.com/client-sdks/documentation/)** : les clientes et clients peuvent rapidement implémenter le SDK mobile et valider les événements mobiles de base en quelques étapes simples.
 
 De nouvelles extensions ont été publiées :

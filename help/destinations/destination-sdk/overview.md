@@ -1,10 +1,10 @@
 ---
-description: L’Adobe Experience Platform Destination SDK est un ensemble d’API de configuration qui vous permet de configurer des modèles d’intégration de destination pour qu’Experience Platform diffuse des données d’audience et de profil vers votre point de terminaison ou emplacement de stockage, en fonction des données et des formats d’authentification de votre choix. Les configurations sont stockées dans Experience Platform et peuvent être récupérées via lʼAPI pour des mises à jour supplémentaires.
+description: Adobe Experience Platform Destination SDK est un ensemble d’API de configuration qui vous permet de configurer des modèles d’intégration de destination pour qu’Experience Platform diffuse des données d’audience et de profil vers votre point de terminaison ou emplacement de stockage, en fonction des données et des formats d’authentification de votre choix. Les configurations sont stockées dans Experience Platform et peuvent être récupérées via lʼAPI pour des mises à jour supplémentaires.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: 118ff85a9fceb8ee81dbafe2c381d365b813da29
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '848'
 ht-degree: 42%
 
 ---
@@ -35,7 +35,7 @@ En tant que client Experience Platform, vous pouvez également créer votre prop
 
 ## Types d’intégration pris en charge {#supported-integration-types}
 
-### Intégrations en temps réel (diffusion en continu) {#real-time-integrations}
+### Intégrations en temps réel (streaming) {#real-time-integrations}
 
 Grâce à Destination SDK, Adobe Experience Platform prend en charge les intégrations en temps réel (également appelées flux) avec les destinations qui disposent d’un point d’entrée API REST. L’intégration en temps réel à Experience Platform prend en charge des fonctionnalités telles que :
 
