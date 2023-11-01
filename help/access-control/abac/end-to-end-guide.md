@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Guide de bout en bout du contrôle d’accès basé sur les attributs
 description: Ce document fournit un guide de bout en bout sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
+source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '1748'
-ht-degree: 26%
+source-wordcount: '1740'
+ht-degree: 24%
 
 ---
 
@@ -67,13 +67,13 @@ L’espace de travail Autorisations de l’interface utilisateur de Platform s�
 >id="platform_permissions_labels_about"
 >title="Que sont les libellés ?"
 >abstract="Les libellés vous permettent de classer les jeux de données et les champs en fonction des politiques d’utilisation qui s’appliquent à ces données. Platform fournit plusieurs libellés d&#39;utilisation des données « de base » définis par Adobe, qui couvrent un large éventail de restrictions courantes applicables à la gouvernance des données. Par exemple, les libellés « S » (Sensibles) tels que DSR (données réglementées en matière de santé) servent à catégoriser les données qui font référence aux informations de santé protégées (ISP). Vous pouvez également définir vos propres libellés personnalisés en fonction des besoins de votre entreprise."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels?lang=fr" text="Présentation des libellés d’utilisation des données"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="Présentation des libellés d’utilisation des données"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about_create"
 >title="Créer un libellé"
 >abstract="Vous pouvez créer vos propres libellés personnalisés selon les besoins de votre entreprise. Les libellés personnalisés peuvent être utilisés pour appliquer à vos données à la fois des configurations de gouvernance des données et de contrôle d&#39;accès."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=fr#manage-labels" text="Gérer les libellés personnalisés"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#manage-labels" text="Gérer les libellés personnalisés"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
@@ -85,7 +85,7 @@ L’espace de travail Autorisations de l’interface utilisateur de Platform s�
 >id="platform_permissions_roles_about_create"
 >title="Créer un rôle"
 >abstract="Vous pouvez créer un rôle pour mieux classer les utilisateurs qui ont accès à votre instance Platform. Par exemple, vous pouvez créer un rôle pour une équipe marketing interne et lui appliquer le libellé RHD. Cela permettra à l&#39;équipe d&#39;accéder aux informations de santé protégées (ISP). Vous pouvez également créer un rôle pour une agence externe et refuser l&#39;accès à ce rôle aux données ISP en vous abstenant d&#39;appliquer le libellé RHD à ce rôle."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=fr#create-a-new-role" text="Créer un rôle"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html#create-a-new-role" text="Créer un rôle"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_details"
@@ -179,19 +179,19 @@ La confirmation de l’activation de la stratégie est reçue et vous revenez à
 >id="platform_permissions_policies_about"
 >title="What are policies?"
 >abstract="Policies are statements that bring attributes together to establish permissible and impermissible actions. Every organization comes with a default policy that you must activate to define rules for resources like segments and schema fields. Default policies can neither be edited nor deleted. However, default policies can be activated or deactivated."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en" text="Manage policies"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html" text="Manage policies"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_about_create"
 >title="Create a policy"
 >abstract="Create a policy to define the actions that your users can and cannot take against your segments and schema fields."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#create-a-new-policy" text="Create a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#create-a-new-policy" text="Create a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_permitdeny"
 >title="Configure permissible and impermissible actions for a policy"
 >abstract="A <b>deny access to</b> policy will deny users access when the criteria is met. Combined with <b>The following being false</b> - all users will be denied access unless they meet the matching criteria set. This type of policy allows you to protect a sensitive resource and only allow access to users with matching labels. <br>A <b>permit access to</b> policy will permit users access when the criteria are met. When combined with <b>The following being true</b> - users will be given access if they meet the matching criteria set. This does not explicitly deny access to users, but adds a permit access. This type of policy allows you to give additional access to resource and in addition to those users who might already have access through role permissions."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html?lang=en#edit-a-policy" text="Edit a policy"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/policies.html#edit-a-policy" text="Edit a policy"
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_policies_edit_resource"
