@@ -2,7 +2,7 @@
 title: Activation des audiences vers des destinations traitées en fonction des identifiants LiveRamp
 type: Tutorial
 description: Découvrez comment activer les audiences de Adobe Experience Platform vers les destinations audio et TV connectées, ainsi que d’autres intégrations à l’aide de l’LiveRamp Ramp ID.
-source-git-commit: adc7e66fa17484ccb9527650f197acc29ef4d0f1
+source-git-commit: 25cda72508860b57bfa9ad0a729d0329d0f6bd1f
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 4%
@@ -48,7 +48,7 @@ Cet article explique le processus requis pour activer les audiences de Real-Time
 
 Vous activez des audiences vers des destinations audio et TV connectées en effectuant un processus en deux étapes, puis en utilisant la variable [LiveRamp - Intégration](../catalog/advertising/liveramp-onboarding.md) et la variable [LiveRamp - Distribution](../catalog/advertising/liveramp-distribution.md) destinations, comme illustré dans l’image ci-dessous.
 
-![Diagramme présentant le workflow d’activation des audiences de Real-Time CDP vers les destinations traitées, via LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png)
+![Diagramme présentant le workflow d’activation des audiences de Real-Time CDP vers les destinations traitées, via LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/workflow-diagram.png){width="1920" zoomable="yes"}
 
 Tout d’abord, vous exportez vos audiences de Real-Time CDP vers le [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) destination, sous la forme de fichiers CSV.
 
