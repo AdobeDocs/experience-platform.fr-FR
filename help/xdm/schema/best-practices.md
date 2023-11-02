@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Bonnes pratiques de modélisation des données
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '3042'
+source-wordcount: '3033'
 ht-degree: 89%
 
 ---
@@ -231,7 +231,7 @@ Pour Adobe Analytics, ECID est l’identité principale par défaut. Si une vale
 
 ## Champs de validation des données {#data-validation-fields}
 
-Pour empêcher l’ingestion de données incorrectes dans Platform, il est recommandé de définir les critères de validation au niveau du champ lors de la création de vos schémas. Pour définir des contraintes sur un champ spécifique, sélectionnez le champ dans l’éditeur de schémas pour ouvrir la [!UICONTROL Propriétés du champ] barre latérale. Consultez la documentation relative à [propriétés de champ spécifiques à un type](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/overview.html#type-specific-properties) pour obtenir une description exacte des champs disponibles.
+Pour empêcher l’ingestion de données incorrectes dans Platform, il est recommandé de définir les critères de validation au niveau du champ lors de la création de vos schémas. Pour définir des contraintes sur un champ spécifique, sélectionnez le champ dans l’éditeur de schémas pour ouvrir la [!UICONTROL Propriétés du champ] barre latérale. Consultez la documentation relative à [propriétés de champ spécifiques à un type](../ui/fields/overview.md#type-specific-properties) pour obtenir une description exacte des champs disponibles.
 
 ![L’éditeur de schémas avec les champs de contrainte mis en évidence dans la variable [!UICONTROL Propriétés du champ] barre latérale.](../images/best-practices/data-validation-fields.png)
 

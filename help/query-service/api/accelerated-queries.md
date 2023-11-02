@@ -2,9 +2,9 @@
 title: Point d’entrée de requêtes accélérées
 description: Découvrez comment accéder sans état à la boutique accélérée de requêtes pour renvoyer rapidement des résultats basés sur des données agrégées. Ce document fournit un exemple de requête HTTP et de réponse pour le point d’entrée de requêtes accélérées de Query Service.
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: aa209dce9268a15a91db6e3afa7b6066683d76ea
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '559'
 ht-degree: 97%
 
 ---
@@ -212,6 +212,6 @@ Une réponse réussie renvoie un statut HTTP 200 avec le schéma ad hoc créé p
 | `resultsMeta` | Cet objet contient les métadonnées pour chaque colonne renvoyée dans les résultats afin que les utilisateurs et utilisatrices connaissent le nom et le type de chaque colonne. |
 | `resultsMeta._adhoc` | Schéma de modèle de données d’expérience (XDM) ad hoc avec des champs dont l’espace de nom est réservé à une utilisation par un seul jeu de données. |
 | `resultsMeta._adhoc.type` | Type de données du schéma ad hoc. |
-| `resultsMeta._adhoc.meta:xdmType` | Il s’agit d’une valeur générée par le système pour le type de champ XDM. Pour plus d’informations sur les types disponibles, consultez la documentation sur les [types XDM disponibles](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/custom-fields-api.html?lang=fr). |
+| `resultsMeta._adhoc.meta:xdmType` | Il s’agit d’une valeur générée par le système pour le type de champ XDM. Pour plus d’informations sur les types disponibles, consultez la documentation sur les [types XDM disponibles](../../xdm/tutorials/custom-fields-api.md). |
 | `resultsMeta._adhoc.properties` | Il s’agit des noms des colonnes du jeu de données interrogé. |
 | `resultsMeta._adhoc.results` | Il s’agit des noms des lignes du jeu de données interrogé. Ils reflètent chacune des colonnes renvoyées. |

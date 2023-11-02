@@ -2,10 +2,10 @@
 title: Prise en charge du contrôle d’accès basé sur les attributs pour les schémas ad hoc
 description: Un guide pour restreindre l’accès aux champs de données dans les schémas ad hoc générés via Adobe Experience Platform Query Service.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 91f318596bf268aa93e8b2df9c13774aab76d13a
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1040'
-ht-degree: 9%
+source-wordcount: '1013'
+ht-degree: 7%
 
 ---
 
@@ -25,10 +25,10 @@ Ce document fournit un tutoriel pour gérer l’accès aux données sensibles en
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Système de modèle de données d’expérience (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=fr) : cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
-   * [[!DNL Schema Editor]](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/overview.html?lang=fr): Découvrez comment créer et gérer des schémas et d’autres ressources dans l’interface utilisateur de Platform.
-* [[!DNL Data Governance]](../../data-governance/home.md): Découvrez comment [!DNL Data Governance] vous permet de gérer les données client et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données.
-* [Contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md): Le contrôle d’accès basé sur les attributs est une fonctionnalité de Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs. Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ de schéma ad hoc ou ordinaire. Un administrateur définit des politiques d’accès qui comprennent des attributs afin de gérer les autorisations d’accès des utilisateurs.
+* [Système de modèle de données d’expérience (XDM)](../../xdm/home.md) : cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
+   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): découvrez comment créer et gérer des schémas et d’autres ressources dans l’interface utilisateur de Platform.
+* [[!DNL Data Governance]](../../data-governance/home.md): découvrez comment [!DNL Data Governance] vous permet de gérer les données client et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données.
+* [Contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md): le contrôle d’accès basé sur les attributs est une fonctionnalité de Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs. Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ de schéma ad hoc ou ordinaire. Un administrateur définit des politiques d’accès qui comprennent des attributs afin de gérer les autorisations d’accès des utilisateurs.
 
 ## Créer un schéma ad hoc
 
@@ -38,11 +38,11 @@ Pour ajouter une étiquette de données, accédez à [!UICONTROL Schémas] ongle
 
 >[!NOTE]
 >
->Les schémas ad hoc ne sont pas affichés par défaut dans l’inventaire des schémas.
+>Les schémas ad hoc ne s’affichent pas par défaut dans l’inventaire des schémas.
 
 ## Découvrez les schémas ad hoc dans l’inventaire des schémas de l’interface utilisateur de Platform {#discover-ad-hoc-schemas}
 
-Pour activer l’affichage des schémas ad hoc dans l’interface utilisateur de Platform, sélectionnez l’icône de filtre (![Une icône de filtre.](../images/data-governance/filter.png)) à gauche du champ de recherche, puis sélectionnez **[!UICONTROL Affichage des schémas ad hoc] dans le rail de gauche qui s’affiche.
+Pour activer l’affichage des schémas ad hoc dans l’interface utilisateur de Platform, sélectionnez l’icône de filtre (![Icône de filtre.](../images/data-governance/filter.png)) à gauche du champ de recherche, puis sélectionnez **[!UICONTROL Affichage des schémas ad hoc] dans le rail de gauche qui s’affiche.
 
 ![Le tableau de bord du schéma filtre les options du rail de gauche avec la bascule &quot;Afficher le schéma ad hoc&quot; activée.](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -58,7 +58,7 @@ Pour modifier les libellés de données de votre schéma ad hoc, sélectionnez l
 
 Pour modifier les libellés de l’ensemble du schéma, sélectionnez l’icône représentant un crayon (![Une icône en forme de crayon.](../images/data-governance/edit-icon.png)) sur le côté du nom du schéma sous la propriété [!UICONTROL Étiquettes] .
 
-![La vue des libellés dans l’espace de travail des schémas avec l’icône en forme de crayon mise en surbrillance.](../images/data-governance/edit-entire-schema-labels.png)
+![La vue des libellés dans l’espace de travail des schémas avec l’icône en forme de crayon surlignée.](../images/data-governance/edit-entire-schema-labels.png)
 
 Pour appliquer un libellé à un champ existant, sélectionnez un ou plusieurs champs dans la liste, puis choisissez [!UICONTROL Modification des étiquettes de gouvernance] dans la barre latérale droite.
 
@@ -66,11 +66,11 @@ Pour appliquer un libellé à un champ existant, sélectionnez un ou plusieurs c
 
 ## Fenêtre contextuelle Modifier les libellés
 
-Le [!UICONTROL Modifier les libellés] s’affiche. Dans cette vue, vous pouvez créer ou modifier des étiquettes de gouvernance existantes via l’interface utilisateur.
+La variable [!UICONTROL Modifier les libellés] s’affiche. Dans cette vue, vous pouvez créer ou modifier des étiquettes de gouvernance existantes via l’interface utilisateur.
 
 ![La fenêtre contextuelle Modifier les étiquettes .](../images/data-governance/edit-labels-popover.png)
 
-Consultez la documentation pour obtenir des conseils sur la manière de procéder [créer ou modifier des libellés pour le schéma ou le champ sélectionné](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/labels.html#edit-the-labels-for-the-schema-or-field).
+Consultez la documentation pour obtenir des conseils sur la manière de procéder. [créer ou modifier des libellés pour le schéma ou le champ sélectionné](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field).
 
 >[!NOTE]
 >
@@ -87,11 +87,11 @@ Une fois le niveau approprié de contrôle d’accès basé sur les attributs ap
 
 1. Si un utilisateur demande l’accès à un champ calculé, il doit avoir accès à tous les champs utilisés dans la composition, sinon le système lui refusera l’accès au champ calculé.
 
-Si une identité ou une identité Principale est définie sur un schéma ad hoc, le système honore automatiquement toutes les demandes d’hygiène des données associées et nettoie les données de ces jeux de données liés à la colonne d’identité.
+Si une identité ou une identité principale est définie sur un schéma ad hoc, le système honore automatiquement toutes les demandes d’hygiène de données associées et nettoie les données de ces jeux de données liés à la colonne d’identité.
 
 ## Étapes suivantes
 
 Après avoir lu ce document, vous comprenez mieux comment ajouter des libellés d’utilisation des données aux schémas ad hoc créés à l’aide de requêtes CTAS Query Service. Si vous ne l’avez pas déjà fait, les documents suivants sont utiles pour améliorer votre compréhension de la gouvernance des données dans Query Service :
 
 * [Identités de schéma ad hoc](./ad-hoc-schema-identities.md)
-* [Gouvernance des données](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=fr)
+* [Gouvernance des données](../../data-governance/home.md)

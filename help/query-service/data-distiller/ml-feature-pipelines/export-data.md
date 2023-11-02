@@ -2,16 +2,16 @@
 title: Exportation de données vers des environnements ML externes
 description: Découvrez comment partager un jeu de données de formation préparé, créé avec Data Distiller, vers un emplacement de stockage dans le cloud que votre environnement ML peut lire pour la formation et la notation de votre modèle.
 exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '537'
 ht-degree: 5%
 
 ---
 
 # Exportation de données dans des environnements ML externes
 
-Ce document explique comment partager un jeu de données de formation préparé créé avec Data Distiller vers un emplacement de stockage dans le cloud que votre environnement ML peut lire pour la formation et la notation de votre modèle. L’exemple ici exporte le jeu de données d’entraînement vers le [Zone d’entrée des données (DLZ)](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/cloud-storage/data-landing-zone.html). Vous pouvez modifier la destination de stockage selon les besoins pour travailler avec votre environnement d’apprentissage automatique.
+Ce document explique comment partager un jeu de données de formation préparé créé avec Data Distiller vers un emplacement de stockage dans le cloud que votre environnement ML peut lire pour la formation et la notation de votre modèle. L’exemple ici exporte le jeu de données d’entraînement vers le [Zone d’entrée des données (DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). Vous pouvez modifier la destination de stockage selon les besoins pour travailler avec votre environnement d’apprentissage automatique.
 
 La variable [Service de flux pour les destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/) est utilisé pour terminer le pipeline de fonctionnalités en déposant un jeu de données de fonctionnalités calculées dans un emplacement de stockage dans le cloud approprié.
 

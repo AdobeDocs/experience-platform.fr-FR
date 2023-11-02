@@ -2,23 +2,23 @@
 title: Renvoi et utilisation de variables de marchandisage à partir de données d’analyse
 description: Découvrez comment fournir des champs XDM et des exemples de requêtes pour accéder aux variables de marchandisage dans vos jeux de données Analytics.
 exl-id: 1e2ae095-4152-446f-8b66-dae5512d690e
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '1112'
-ht-degree: 15%
+source-wordcount: '1103'
+ht-degree: 14%
 
 ---
 
 # Renvoyer et utiliser des variables de marchandisage à partir de données d’analyse
 
-Utilisez Query Service pour gérer les données ingérées d’Adobe Analytics dans Adobe Experience Platform sous forme de jeux de données. Les sections suivantes contiennent des exemples de requêtes que vous pouvez utiliser pour accéder aux variables de marchandisage de vos jeux de données Analytics. Consultez la documentation pour plus d’informations sur [ingestion et mappage de données Adobe Analytics](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/mapping/analytics.html?lang=fr) par le biais de la source Analytics
+Utilisez Query Service pour gérer les données ingérées d’Adobe Analytics dans Adobe Experience Platform sous forme de jeux de données. Les sections suivantes contiennent des exemples de requêtes que vous pouvez utiliser pour accéder aux variables de marchandisage de vos jeux de données Analytics. Pour plus d’informations sur la [ingestion et mappage de données Adobe Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) via la source Analytics
 
 ## Variables de marchandisage {#merchandising-variables}
 
 Les variables de marchandisage peuvent se conformer à l’une des deux syntaxes suivantes :
 
-* **Syntaxe du produit**: Associe la valeur d’eVar à un produit. 
-* **Syntaxe de la variable de conversion**: Associe l’eVar à un produit uniquement si un événement de liaison se produit. Vous pouvez sélectionner les événements qui agissent comme des événements de liaison.
+* **Syntaxe du produit**: associe la valeur d’eVar à un produit. 
+* **Syntaxe de la variable de conversion**: associe l’eVar à un produit uniquement si un événement de liaison se produit. Vous pouvez sélectionner les événements qui agissent comme des événements de liaison.
 
 ## Syntaxe du produit {#product-syntax}
 
@@ -36,8 +36,8 @@ Les sections ci-dessous décrivent les champs XDM nécessaires pour accéder aux
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
-* `#`: Index du tableau auquel vous accédez.
-* `evar#`: La variable d’eVar spécifique à laquelle vous accédez.
+* `#`: index du tableau auquel vous accédez.
+* `evar#`: variable d’eVar spécifique à laquelle vous accédez.
 
 ### Événements personnalisés
 
@@ -45,8 +45,8 @@ productListItems[#]._experience.analytics.customDimensions.evars.evar#
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
-* `#`: Index du tableau auquel vous accédez.
-* `event#`: La variable d’événement personnalisé spécifique à laquelle vous accédez.
+* `#`: index du tableau auquel vous accédez.
+* `event#`: variable d’événement personnalisé spécifique à laquelle vous accédez.
 
 ## Cas d’utilisation de la syntaxe du produit {#product-use-cases}
 
@@ -70,7 +70,7 @@ LIMIT 10
 
 ### Développez le tableau productListItems et renvoyez l’eVar de marchandisage et l’événement pour chaque produit.
 
-Cette requête suivante fait exploser le `productListItems` et renvoie chaque eVar de marchandisage et chaque événement par produit. Le champ `_id` est inclus pour indiquer la relation avec le résultat d’origine. Le `_id` est une clé Principale unique pour le jeu de données.
+Cette requête suivante fait exploser le `productListItems` et renvoie chaque eVar de marchandisage et chaque événement par produit. Le champ `_id` est inclus pour indiquer la relation avec le résultat d’origine. La variable `_id` est une clé primaire unique pour le jeu de données.
 
 >[!NOTE]
 >
@@ -98,8 +98,7 @@ LIMIT 20
 >
 > Si vous tentez de récupérer un champ qui n’existe pas dans votre jeu de données actuel, l’erreur &quot;Aucun champ struct de ce type&quot; se produit. Évaluez le motif renvoyé dans le message d’erreur pour identifier un champ disponible, puis mettez à jour votre requête et relancez-la.
 >
->
-```console
+>```console
 >ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 >```
 
@@ -112,12 +111,12 @@ Par exemple, le scénario de recherche de produit ci-dessous illustre la manièr
 1. Un utilisateur effectue une recherche interne pour &quot;bonnet d’hiver&quot;, qui définit la syntaxe de conversion activée pour le marchandisage eVar6 sur &quot;recherche interne : bonnet d’hiver&quot;.
 2. L’utilisateur clique sur « bonnet à pompon » et accède à la page détaillée du produit.\
    a. Cet accès déclenche un événement `Product View` pour le « bonnet à pompon » à 12,99 €.\
-   b. Depuis `Product View` est configuré en tant qu’événement de liaison, le produit &quot;bonnet à pompon&quot; est désormais lié à la valeur eVar6 de &quot;recherche interne : bonnet d’hiver&quot;. Chaque fois que le produit &quot;bonnet à pompon&quot; est collecté, il est associé à &quot;recherche interne : bonnet d’hiver&quot;. Cela se produit jusqu’à ce que le paramètre d’expiration de l’eVar soit atteint ou qu’une nouvelle valeur d’eVar6 soit définie et que l’événement de liaison se produise à nouveau avec ce produit.
+   b. Depuis `Product View` est configuré comme un événement de liaison, le produit &quot;bonnet à pompon&quot; est désormais lié à la valeur eVar6 de &quot;recherche interne : bonnet d’hiver&quot;. Chaque fois que le produit &quot;bonnet à pompon&quot; est collecté, il est associé à &quot;recherche interne : bonnet d’hiver&quot;. Cela se produit jusqu’à ce que le paramètre d’expiration de l’eVar soit atteint ou qu’une nouvelle valeur d’eVar6 soit définie et que l’événement de liaison se produise à nouveau avec ce produit.
 3. L’utilisateur ajoute le produit à son panier, déclenchant l’événement `Cart Add`.
 4. L’utilisateur effectue une autre recherche interne pour &quot;T-shirt d’été&quot;, qui définit la syntaxe de conversion activée pour le marchandisage eVar6 sur &quot;recherche interne : T-shirt d’été&quot;.
 5. L’utilisateur sélectionne un &quot;T-shirt de sport&quot; et accède à la page des détails du produit.\
    a. Cet accès déclenche un événement `Product View` pour le « T-shirt de sport » à 19,99 €.\
-   b. Comme la variable `Product View` est l’événement de liaison, le produit &quot;T-shirt de sport&quot; est désormais lié à la valeur eVar6 de &quot;recherche interne : T-shirt d’été&quot;. Le produit précédent &quot;bonnet à pompon&quot; reste lié à une valeur eVar6 de &quot;recherche interne : bonnet à pompon&quot;.
+   b. En tant que `Product View` est l’événement de liaison, le produit &quot;T-shirt de sport&quot; est désormais lié à la valeur eVar6 de &quot;recherche interne : T-shirt d’été&quot;. Le produit précédent &quot;bonnet à pompon&quot; est toujours lié à une valeur eVar6 de &quot;recherche interne : bonnet à pompon&quot;.
 6. L’utilisateur ajoute le produit à son panier, déclenchant l’événement `Cart Add`.
 7. L’utilisateur procède au paiement des deux produits.
 
@@ -128,7 +127,7 @@ Dans les rapports, les commandes, les recettes, les consultations de produits et
 | recherche interne : T-shirt d’été | 19,99 | 1 | 1 | 1 |
 | recherche interne : bonnet d’hiver | 12,99 | 1 | 1 | 1 |
 
-Pour en savoir plus sur l’utilisation de la syntaxe de variable de conversion, consultez la documentation Adobe Analytics sur [implémentation d’eVars à l’aide de la syntaxe de variable de conversion](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
+Pour en savoir plus sur l’utilisation de la syntaxe de variable de conversion, consultez la documentation d’Adobe Analytics sur [implémentation d’eVars à l’aide de la syntaxe de variable de conversion](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
 
 Vous trouverez ci-dessous les champs XDM pour produire la syntaxe de variable de conversion dans votre [!DNL Analytics] dataset:
 
@@ -138,7 +137,7 @@ Vous trouverez ci-dessous les champs XDM pour produire la syntaxe de variable de
 _experience.analytics.customDimensions.evars.evar#
 ```
 
-* `evar#`: La variable d’eVar spécifique à laquelle vous accédez.
+* `evar#`: variable d’eVar spécifique à laquelle vous accédez.
 
 #### Produit
 
@@ -146,7 +145,7 @@ _experience.analytics.customDimensions.evars.evar#
 productListItems[#].sku
 ```
 
-* `#`: Index du tableau auquel vous accédez.
+* `#`: index du tableau auquel vous accédez.
 
 ## La variable de conversion utilise des cas {#conversion-variable-use-cases}
 
