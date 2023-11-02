@@ -4,14 +4,22 @@ description: Dernières notes de mise à jour pour Adobe Experience Platform 
 keywords: debugger ; extension experience cloud debugger ; chrome ; extension ; notes de mise à jour
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 70abe974aa7f94ea172d7ab90aacaf765b88de0e
+source-git-commit: 5b3bfc38a1b159d57c7be6733b9c2515ba72c3c6
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 100%
+source-wordcount: '564'
+ht-degree: 93%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform Debugger
+
+## Version 1.5.1 - 2 novembre 2023
+
+### Correctifs et améliorations
+
+* Correction de problèmes en raison desquels les événements Analytics étaient ignorés ou dupliqués.
+* Correction d’un problème en raison duquel la taille maximale de stockage d’état était dépassée.
+* Correction d’un problème en raison duquel la recherche des journaux Edge ne filtrait pas les événements.
 
 ## Version 1.5.0 - 19 octobre 2023
 
