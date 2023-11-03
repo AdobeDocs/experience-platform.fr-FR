@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Guide de Real-Time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: 5c556d6a846c8ec97bf3aa8b6a6a6d2a64a33be5
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 94%
+source-wordcount: '254'
+ht-degree: 89%
 
 ---
 
@@ -67,9 +67,10 @@ ht-degree: 94%
 * Cas d’utilisation {#use-cases}
    * Cas d’utilisation du réengagement intelligent {#intelligent-re-engagement}
       * [Réengager intelligemment vos clients](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
-   * Cas d’utilisation des données du partenaire {#partner-data}
-      * [Atteindre et acquérir une nouvelle clientèle à l’aide de la prise en charge de la prospection](/help/rtcdp/partner-data/prospecting.md)
+   * Acquisition client {#customer-acquisition}
+      * [Interagir et acquérir de nouveaux clients sans dépendre de cookies tiers](/help/rtcdp/partner-data/prospecting.md)
+      * [Personnaliser les expériences sur site pour les visiteurs et visiteuses inconnus à l’aide de la reconnaissance des visiteurs et visiteuses par les partenaires](/help/rtcdp/partner-data/onsite-personalization.md)
+   * Enrichissement de profil {#profile-enrichment}
       * [Complémenter les profils propriétaires avec des attributs fournis par le partenaire](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-      * [Utiliser la reconnaissance des visiteurs et visiteuses par les partenaires pour personnaliser les expériences sur site](/help/rtcdp/partner-data/onsite-personalization.md)
 * [Notes de mise à jour d’Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
 * [Glossaire Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/landing/glossary.html)

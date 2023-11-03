@@ -2,10 +2,10 @@
 title: Complémenter les profils propriétaires avec des attributs fournis par les partenaires
 description: Découvrez comment compléter les profils propriétaires avec des attributs de partenaires de données de confiance pour améliorer vos bases de données, obtenir de nouvelles informations sur votre base de clientes et de clients et optimiser l’audience.
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
 workflow-type: tm+mt
-source-wordcount: '1110'
-ht-degree: 90%
+source-wordcount: '1263'
+ht-degree: 79%
 
 ---
 
@@ -18,6 +18,16 @@ ht-degree: 90%
 Complétez les profils propriétaires avec les attributs des partenaires de données de confiance pour améliorer votre base de données, obtenir de nouvelles informations sur votre base de clientes et clients et optimiser l’audience.
 
 ![Enrichissez les profils avec des attributs fournis par les partenaires en utilisant le cas d’utilisation d’aperçu visuel de haut niveau.](/help/rtcdp/assets/partner-data/enrichment/enrichment-use-case-overview.png)
+
+## Pourquoi tenir compte de ce cas pratique ? {#why-this-use-case}
+
+La plupart des marques, même celles qui sont riches en données propriétaires, peuvent bénéficier de la rationalisation de leurs données et d’une compréhension plus nuancée des clients, de leurs comportements, de leurs modèles et de leurs préférences.
+
+Adobe Real-time Customer Data Platform peut aider les marques à compléter de manière responsable leurs données propriétaires avec des informations précieuses, des identifiants et des attributs d’un ou de plusieurs partenaires de confiance.
+
+Adobe comprend qu’il n’existe pas d’approche universelle unique et permet une interopérabilité transparente avec les partenaires de données et d’identité afin de favoriser un engagement personnalisé et réfléchi à toutes les étapes du cycle de vie des clients. Ces fonctionnalités sont étayées par un cadre de gouvernance des données de confiance, qui permet un contrôle nuancé sur l’emplacement et la manière dont les données des partenaires sont utilisées. Par exemple, vous pouvez utiliser les informations fournies par les partenaires pour la segmentation, mais pas pour la personnalisation.
+
+Par exemple, suivez les étapes décrites dans ce cas pratique lorsque vous devez enrichir vos dossiers client avec des signaux démographiques et d’intention.
 
 ## Prérequis et planification {#prerequisites-and-planning}
 
@@ -126,5 +136,5 @@ Notez que les limites suivantes s’appliquent lorsque vous utilisez le cas d’
 Explorez d’autres cas d’utilisation activés grâce à la prise en charge des données des partenaires dans Real-Time CDP :
 
 * Utilisez la prise en charge de données tierces dans Real-Time CDP pour [développer votre base de profils avec les profils de prospects des partenaires de données et interagissez avec eux pour acquérir ou atteindre une nouvelle clientèle](/help/rtcdp/partner-data/prospecting.md).
-* [Tirer parti de la reconnaissance assistée par les partenaires pour personnaliser les expériences sur site](/help/rtcdp/partner-data/onsite-personalization.md) pendant la visite sans que l’utilisateur s’authentifie ou n’ait un historique antérieur avec votre marque.
+* [Personnaliser les expériences sur site pour les visiteurs inconnus à l’aide de la reconnaissance des visiteurs avec l’aide de partenaires](/help/rtcdp/partner-data/onsite-personalization.md) pendant la visite sans que l’utilisateur s’authentifie ou n’ait un historique antérieur avec votre marque.
 * [Activation étendue des profils de prospects et des audiences de prospects](/help/destinations/ui/activate-prospect-audiences.md) pour sélectionner des destinations.

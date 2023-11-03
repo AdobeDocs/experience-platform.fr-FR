@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2023 pour Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: f2d0848952902d94b441566da677ef174518192e
 workflow-type: tm+mt
-source-wordcount: '954'
-ht-degree: 85%
+source-wordcount: '1068'
+ht-degree: 77%
 
 ---
 
@@ -44,9 +44,11 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 
 | Type | Fonctionnalité | Description |
 | --- | --- | --- |
-| Extension | Amélioration de l’API de conversions [!DNL Meta] | Trois améliorations ont été apportées à l&#39;extension [API de conversions de métadonnées](/help/tags/extensions/server/meta/overview.md) : <ul><li>Intégration avec [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe) : crée une expérience de connexion transparente en vous permettant de partager votre pixelID et votre jeton d’accès pour l’intégration de l’API de conversions avec Adobe.</li><li>Intégration avec [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq) : vous permet de diffuser des annonces publicitaires aux personnes qui sont plus susceptibles de terminer une action souhaitée et de relier l’action aux annonces diffusées.</li><li>Intégration avec [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha) : vous permet de transmettre le RampID de LiveRamp dans le champ CIP, éliminant ainsi la nécessité de partager les informations d&#39;identification personnelles directement avec des partenaires ou des métadonnées. </li></ul> |
-| Extension | [!DNL LinkedIn] API de conversion | La variable [[!DNL LinkedIn] API de conversion](../../tags/extensions/server/linkedin/overview.md) vous permet d’évaluer l’efficacité de vos campagnes marketing LinkedIn en transférant des données d’événement Experience Platform à LinkedIn. |
+| Extensions | Amélioration de l’API de conversions [!DNL Meta] | Trois améliorations ont été apportées à l&#39;extension [API de conversions de métadonnées](/help/tags/extensions/server/meta/overview.md) : <ul><li>Intégration avec [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe) : crée une expérience de connexion transparente en vous permettant de partager votre pixelID et votre jeton d’accès pour l’intégration de l’API de conversions avec Adobe.</li><li>Intégration avec [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq) : vous permet de diffuser des annonces publicitaires aux personnes qui sont plus susceptibles de terminer une action souhaitée et de relier l’action aux annonces diffusées.</li><li>Intégration avec [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha) : vous permet de transmettre le RampID de LiveRamp dans le champ CIP, éliminant ainsi la nécessité de partager les informations d&#39;identification personnelles directement avec des partenaires ou des métadonnées. </li></ul> |
+| Extensions | [!DNL LinkedIn] API de conversion | La variable [[!DNL LinkedIn] API de conversion](../../tags/extensions/server/linkedin/overview.md) vous permet d’évaluer l’efficacité de vos campagnes marketing LinkedIn en transférant des données d’événement Experience Platform à LinkedIn. |
 | Secret | [!DNL LinkedIn] Secret OAuth 2 | La variable [[!DNL LinkedIn] Secret OAuth 2](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) vous permet d’envoyer des interactions serveur-serveur à [!DNL LinkedIn] dans le transfert d’événement. |
+| Transfert dʼévénement | Mise à jour vers les balises et transfert d’événements | Pour conserver [Balises](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=fr) et [Transfert d’événement](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) les performances dans Platform, seules les versions de développement et d’évaluation les plus récentes, réussies et non performantes, seront conservées. Toutes les versions qui ne sont plus utilisées seront supprimées. En outre, le ralentissement et la limitation de débit ont été mis en oeuvre afin de s’assurer que quelques utilisations intensives de l’API ne dégradent pas les performances de l’API pour les autres. |
+| Extensions | Éléments, règles et extensions | [Eléments, règles et extensions](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=fr) sont désormais triées dans la sortie de bibliothèque afin d’assurer une plus grande cohérence entre plusieurs versions et déploiements d’une même bibliothèque. |
 
 Pour plus d’informations sur la collecte de données, consultez la [vue d’ensemble des collectes de données](../../tags/home.md).
 

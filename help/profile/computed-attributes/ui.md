@@ -2,9 +2,9 @@
 title: Guide de l’interface utilisateur des attributs calculés
 description: Découvrez comment créer, afficher et mettre à jour des attributs calculés à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: cf01c18c8ea710492c8a2c8542c8a4580d5f0dcf
 workflow-type: tm+mt
-source-wordcount: '1485'
+source-wordcount: '1567'
 ht-degree: 12%
 
 ---
@@ -147,6 +147,12 @@ Lors de la sélection d’un attribut calculé de version préliminaire, la vari
 ![La variable [!UICONTROL Modification des attributs calculés] s’affiche.](./images/ui/edit.png)
 
 ## Utilisation d’attributs calculés {#usage}
+
+>[!IMPORTANT]
+>
+>Si vous utilisez un attribut calculé avec la variable **Le plus récent** dans une définition de segment, vous **must** include **both** la valeur et la valeur d’horodatage dans l’objet attribut calculé.
+>
+>Par exemple, si vous créez une définition de segment qui recherche &quot;Tous les profils ayant une adresse électronique valide&quot; où le champ de l’adresse électronique est renseigné par un attribut calculé avec la fonction la plus récente, vous **must** inclure la valeur existe à la fois pour l’adresse électronique ; **et** l’horodatage de l’adresse électronique existe.
 
 Après avoir créé un attribut calculé, vous pouvez utiliser **publié** attributs calculés dans d’autres services en aval. Les attributs calculés étant des champs d’attribut de profil créés dans votre schéma d’union de profil, vous pouvez rechercher des valeurs d’attribut calculées pour un profil client en temps réel, les utiliser dans une audience, les activer vers une destination ou les utiliser pour la personnalisation dans parcours dans Adobe Journey Optimizer.
 

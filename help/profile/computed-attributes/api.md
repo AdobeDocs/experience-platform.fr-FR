@@ -2,7 +2,7 @@
 title: Point de terminaison de l’API Attributs calculés
 description: Découvrez comment créer, afficher, mettre à jour et supprimer des attributs calculés à l’aide de l’API Real-time Customer Profile.
 exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 94c94b8a3757aca1a04ff4ffc3c62e84602805cc
 workflow-type: tm+mt
 source-wordcount: '1654'
 ht-degree: 12%
@@ -50,7 +50,7 @@ Les paramètres de requête suivants peuvent être utilisés lors de la récupé
 | `limit` | Un paramètre qui spécifie le nombre maximal d’éléments renvoyés dans le cadre de la réponse. La valeur minimale de ce paramètre est 1 et la valeur maximale est 40. Si ce paramètre n’est pas inclus, 20 éléments sont renvoyés par défaut. | `limit=20` |
 | `offset` | Un paramètre qui spécifie le nombre d’éléments à ignorer avant de renvoyer les éléments. | `offset=5` |
 | `sortBy` | Un paramètre qui spécifie l’ordre dans lequel les éléments renvoyés sont triés. Les options disponibles incluent : `name`, `status`, `updateEpoch`, et `createEpoch`. Vous pouvez également choisir de trier dans l’ordre croissant ou décroissant en n’incluant pas ou en incluant un `-` devant l’option de tri. Par défaut, les éléments sont triés par `updateEpoch` dans l’ordre décroissant. | `sortBy=name` |
-| `property` | Paramètre permettant de filtrer les données selon différents champs d’attribut calculés. Les propriétés prises en charge incluent : `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, et `status`. Les opérations prises en charge dépendent de la propriété répertoriée. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contient()), `NOT_CONTAINS` (!=contient())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
+| `property` | Paramètre permettant de filtrer les données selon différents champs d’attribut calculés. Les propriétés prises en charge incluent : `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, et `status`. Les opérations prises en charge dépendent de la propriété répertoriée. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **Requête**
 

@@ -1,15 +1,15 @@
 ---
-title: Utiliser la reconnaissance des visiteurs et visiteuses par les partenaires pour personnaliser les expériences sur site
+title: Personnaliser les expériences sur site pour les visiteurs et visiteuses inconnus à l’aide de la reconnaissance des visiteurs et visiteuses par les partenaires
 description: Découvrez comment utiliser la reconnaissance des visiteurs et visiteuses par les partenaires pour personnaliser les expériences sur site de vos visiteurs et visiteuses.
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: de8aeb553066405424711e75480204f6136b52ff
+source-git-commit: 77eb2492259cc813db2d6c514d123fa2ad698f67
 workflow-type: tm+mt
-source-wordcount: '2580'
-ht-degree: 95%
+source-wordcount: '2696'
+ht-degree: 91%
 
 ---
 
-# Utiliser la reconnaissance des visiteurs et visiteuses par les partenaires pour personnaliser les expériences sur site
+# Personnaliser les expériences sur site pour les visiteurs et visiteuses inconnus à l’aide de la reconnaissance des visiteurs et visiteuses par les partenaires
 
 >[!AVAILABILITY]
 >
@@ -17,7 +17,15 @@ ht-degree: 95%
 
 Découvrez comment utiliser la reconnaissance par les partenaires pour offrir des expériences personnalisées aux visiteurs et visiteuses de vos propriétés web. Utilisez ce tutoriel pour comprendre la séquence d’implémentation de divers éléments dans les solutions Experience Platform et autres solutions Experience Cloud, afin d’afficher une expérience personnalisée pour les visiteurs et visiteuses authentifiés et non authentifiés.
 
-![Infographie décrivant comment utiliser les attributs fournis par les partenaires pour offrir des expériences personnalisées à vos visiteurs et visiteuses.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
+![Infographie décrivant comment utiliser les attributs fournis par les partenaires pour offrir des expériences personnalisées à vos visiteurs et visiteuses.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png)
+
+## Pourquoi tenir compte de ce cas pratique ? {#why-this-use-case}
+
+La fragmentation des expériences numériques, qui fait que les consommateurs interagissent avec les marques de nombreuses façons, est très réelle et devient de plus en plus difficile à résoudre. Les meilleures stratégies d’engagement des clients pour des expériences cohérentes, des recommandations ciblées et des interactions sur mesure sont toutes limitées par la reconnaissance des utilisateurs.
+
+C’est là que la reconnaissance en temps réel par les partenaires peut faire une différence significative. Adobe permet aux partenaires d’identité de se connecter à nos offres sophistiquées de collecte de données côté client et d’optimisation de l’expérience de pointe sur le marché, afin d’augmenter efficacement la barre de diffusion de l’expérience à partir de la première visite, sans historique préalable ni authentification.
+
+Cela est particulièrement utile pour les secteurs verticaux qui ont des taux d’authentification bas, comme les biens d’emballage de consommation, le commerce de détail en ligne, etc.
 
 ## Exemple de secteur {#industry-example}
 

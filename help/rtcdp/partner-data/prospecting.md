@@ -1,15 +1,15 @@
 ---
-title: Atteindre et acquérir une nouvelle clientèle à l’aide des cas d’utilisation de prospection
-description: Découvrez comment atteindre et acquérir une nouvelle clientèle à l’aide de cas d’utilisation de prospection activés par la prise en charge des données des partenaires dans Real-Time CDP.
+title: Interagir et acquérir de nouveaux clients sans dépendre de cookies tiers
+description: Découvrez comment interagir et acquérir de nouveaux clients grâce à des cas d’utilisation de prospection, sans recourir à des cookies tiers.
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: ec6375a025833027fda01c412124321132aefd65
+source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
 workflow-type: tm+mt
-source-wordcount: '1960'
-ht-degree: 93%
+source-wordcount: '2077'
+ht-degree: 85%
 
 ---
 
-# Atteindre et acquérir une nouvelle clientèle à l’aide des cas d’utilisation de prospection
+# Interagir et acquérir de nouveaux clients sans dépendre de cookies tiers
 
 >[!AVAILABILITY]
 >
@@ -19,9 +19,17 @@ Utilisez la prise en charge de données tierces dans Real-Time CDP pour dévelo
 
 ![Vue d’ensemble détaillée du cas d’utilisation de la prospection de clientèle.](/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png)
 
+## Pourquoi tenir compte de ce cas pratique ? {#why-this-use-case}
+
+Les marques font face simultanément à des défis intimidants liés à l’exécution responsable des cas d’utilisation d’acquisition client haut de gamme sans dépendance à l’égard des cookies tiers, à des budgets limités et à une demande plus élevée en matière de transparence et de retour sur dépenses publicitaires.
+
+Adobe Real-time Customer Data Platform peut aider les marques à passer en toute sécurité leurs cas d’utilisation pris en charge par la plateforme de gestion des données (DMP) à des solutions sans cookie et ce, d’une manière qui apporte toute la sophistication et la puissance de la segmentation en libre-service, du traitement de l’audience et de l’activation dans un seul système. Tout cela sans compromettre l&#39;insistance inébranlable de l&#39;Adobe sur une utilisation responsable des données via un cadre de gouvernance et de consentement des données breveté.
+
+Par exemple, suivez les étapes décrites dans ce cas pratique lorsque vous devez exécuter une campagne pour attirer des prospects afin qu’ils deviennent des utilisateurs ou des clients connus.
+
 ## Prérequis et planification {#prerequisites-and-planning}
 
-Lorsque vous envisagez de contacter et d’acquérir une nouvelle clientèle en utilisant la prise en charge des données des partenaires dans Real-Time CDP, tenez compte des conditions préalables suivantes dans votre processus de planification :
+Lorsque vous envisagez de contacter et d’acquérir de nouveaux clients, tenez compte des conditions préalables suivantes dans votre processus de planification :
 
 * Quelle est la cadence à laquelle vous prévoyez que les profils fournis par les partenaires soient introduits dans Real-Time CDP et actualisés ?
 * Quelles sont les identités requises par vos destinations en aval ?
@@ -219,5 +227,5 @@ Utilisez les audiences de prospects en les exportant vers des destinations. Actu
 Explorez d’autres cas d’utilisation activés grâce à la prise en charge des données des partenaires dans Real-Time CDP :
 
 * [Complétez les profils propriétaires avec les attributs des partenaires de données de confiance pour améliorer votre base de données, obtenir de nouvelles informations sur votre base de clientèle et optimiser l’audience.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* [Tirer parti de la reconnaissance assistée par les partenaires pour personnaliser les expériences sur site](/help/rtcdp/partner-data/onsite-personalization.md) pendant la visite sans que l’utilisateur s’authentifie ou n’ait un historique antérieur avec votre marque.
+* [Personnaliser les expériences sur site pour les visiteurs inconnus à l’aide de la reconnaissance des visiteurs avec l’aide de partenaires](/help/rtcdp/partner-data/onsite-personalization.md) pendant la visite sans que l’utilisateur s’authentifie ou n’ait un historique antérieur avec votre marque.
 * [Activation étendue des profils de prospects et des audiences de prospects](/help/destinations/ui/activate-prospect-audiences.md) pour sélectionner des destinations.
