@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension Adobe Target v2
 description: Notes de mise à jour les plus récentes pour l’extension de balise Adobe Target v2 dans Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: f235d210682feba7617b720e514361c2862512f9
+source-git-commit: a51bc1fb536347840eef113a8649b64fbf573287
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 97%
+source-wordcount: '776'
+ht-degree: 92%
 
 ---
 
@@ -17,18 +17,18 @@ ht-degree: 97%
 
 ## v0.20.1 (3 novembre 2023)
 
-- Mise à jour pour la prise en charge d’at.js 2.11.2.
+- Mise à jour de la prise en charge `at.js` 2.11.2.
 - Correction d’un bogue qui provoquait des incohérences dans les jetons de réponse envoyés sur des événements personnalisés.
 
 ## v0.20.0 (9 octobre 2023)
 
-- Mise à jour pour la prise en charge d’at.js 2.11.0.
+- Mise à jour de la prise en charge `at.js` 2.11.0.
 - Ajout de la prise en charge de la définition des sandboxId et sandboxName Adobe Experience Platform personnalisés dans targetGlobalSettings, qui seront transmis à l’API Delivery lors des appels getOffer/getOffers.
 - Correctif des sélecteurs DOM fantômes pour enchaîner :eq() dans le sélecteur.
 
 ## v0.19.3 (18 septembre 2023)
 
-- Mise à jour pour la prise en charge d’at.js v2.10.3.
+- Mise à jour de la prise en charge `at.js` v2.10.3
 - Correction d’un problème qui déclenchait à tort l’événement personnalisé at-content-rendering-succeeded, alors qu’aucune offre n’était générée. L’événement correct, at-content-rendering-no-offer, est maintenant déclenché.
 - Ajout d’eventToken et de responseTokens à l’objet d’erreur pour l’événement personnalisé at-content-rendering-failed.
 
@@ -66,6 +66,12 @@ ht-degree: 97%
 ## v0.16.0 (28 octobre 2021)
 
 - Mise à jour pour la prise en charge de `at.js` v2.7.0, désormais disponible en téléchargement depuis Adobe Target.
+
+## v0.15.2 (16 août 2021)
+
+- Mise à jour de la prise en charge `at.js` 2.6.1.
+- Initialisez la prise de décision sur le périphérique au démarrage, indépendamment de l’événement de chargement de page.
+- La prise de décision sur l’appareil peut désormais être utilisée lors de la première visite une fois l’artefact téléchargé.
 
 ## v0.15.1 (20 juillet 2021)
 
