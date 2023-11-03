@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f2d0848952902d94b441566da677ef174518192e
 workflow-type: tm+mt
 source-wordcount: '1068'
-ht-degree: 77%
+ht-degree: 90%
 
 ---
 
@@ -30,7 +30,7 @@ Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Mesures d’utilisation des destinations | De nouvelles mesures de mesure ont été ajoutées au tableau de bord de l’utilisation des licences. La variable **[!UICONTROL Taille de l’Audience Activation]** et **[!UICONTROL Taille de l’exportation des données]** Les mesures offrent un moyen pratique de suivre la quantité de données que vous avez exportées hors de Platform par rapport à vos droits d’utilisation de licence. Voir [mesures disponibles](../../dashboards/guides/license-usage.md#available-metrics) documentation pour obtenir des descriptions de ces mesures et d’autres mesures d’utilisation des licences. |
+| Mesures d’utilisation des destinations | De nouvelles mesures ont été ajoutées au tableau de bord de l’utilisation des licences. Les mesures **[!UICONTROL Taille de l’Audience Activation]** et **[!UICONTROL Taille de l’export des données]** offrent un moyen pratique de suivre la quantité de données que vous avez exportées hors de Platform par rapport à vos droits d’utilisation de licence. Consultez le document sur les [mesures disponibles](../../dashboards/guides/license-usage.md#available-metrics) pour obtenir des descriptions de ces mesures et d’autres mesures d’utilisation des licences. |
 
 {style="table-layout:auto"}
 
@@ -45,8 +45,8 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | Type | Fonctionnalité | Description |
 | --- | --- | --- |
 | Extensions | Amélioration de l’API de conversions [!DNL Meta] | Trois améliorations ont été apportées à l&#39;extension [API de conversions de métadonnées](/help/tags/extensions/server/meta/overview.md) : <ul><li>Intégration avec [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe) : crée une expérience de connexion transparente en vous permettant de partager votre pixelID et votre jeton d’accès pour l’intégration de l’API de conversions avec Adobe.</li><li>Intégration avec [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq) : vous permet de diffuser des annonces publicitaires aux personnes qui sont plus susceptibles de terminer une action souhaitée et de relier l’action aux annonces diffusées.</li><li>Intégration avec [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha) : vous permet de transmettre le RampID de LiveRamp dans le champ CIP, éliminant ainsi la nécessité de partager les informations d&#39;identification personnelles directement avec des partenaires ou des métadonnées. </li></ul> |
-| Extensions | [!DNL LinkedIn] API de conversion | La variable [[!DNL LinkedIn] API de conversion](../../tags/extensions/server/linkedin/overview.md) vous permet d’évaluer l’efficacité de vos campagnes marketing LinkedIn en transférant des données d’événement Experience Platform à LinkedIn. |
-| Secret | [!DNL LinkedIn] Secret OAuth 2 | La variable [[!DNL LinkedIn] Secret OAuth 2](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) vous permet d’envoyer des interactions serveur-serveur à [!DNL LinkedIn] dans le transfert d’événement. |
+| Extensions | API de conversions [!DNL LinkedIn] | L’extension [[!DNL LinkedIn] API de conversions](../../tags/extensions/server/linkedin/overview.md) vous permet d’évaluer l’efficacité de vos campagnes marketing LinkedIn en transférant des données d’événement Experience Platform à LinkedIn. |
+| Secret | Secret OAuth 2 [!DNL LinkedIn] | Le [[!DNL LinkedIn] secret OAuth 2](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) vous permet d’envoyer des interactions serveur à serveur à [!DNL LinkedIn] dans le transfert d’événement. |
 | Transfert dʼévénement | Mise à jour vers les balises et transfert d’événements | Pour conserver [Balises](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=fr) et [Transfert d’événement](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) les performances dans Platform, seules les versions de développement et d’évaluation les plus récentes, réussies et non performantes, seront conservées. Toutes les versions qui ne sont plus utilisées seront supprimées. En outre, le ralentissement et la limitation de débit ont été mis en oeuvre afin de s’assurer que quelques utilisations intensives de l’API ne dégradent pas les performances de l’API pour les autres. |
 | Extensions | Éléments, règles et extensions | [Eléments, règles et extensions](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html?lang=fr) sont désormais triées dans la sortie de bibliothèque afin d’assurer une plus grande cohérence entre plusieurs versions et déploiements d’une même bibliothèque. |
 
@@ -69,8 +69,8 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonction | Description |
 | ----------- | ----------- |
-| (Version bêta) Prise en charge des fonctions de hachage dans les champs calculés | En plus des fonctions spécifiques à l&#39;[exportation de tableaux](../../destinations/ui/export-arrays-calculated-fields.md) ou d&#39;éléments d’un tableau, vous pouvez désormais utiliser des [fonctions de hachage](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) supplémentaires pour hacher des attributs dans les fichiers exportés. Les fonctions de hachage prises en charge sont les suivantes : `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
-| (disponibilité générale limitée) Activation des audiences de compte vers certaines destinations | Les clients Real-Time CDP B2B peuvent désormais activer [audiences de compte](../../segmentation/ui/account-audiences.md) vers certaines destinations. Pour plus d’informations sur cette fonctionnalité, veuillez lire la section [tutoriel sur l’activation des audiences de compte](/help/destinations/ui/activate-account-audiences.md). |
+| (Beta) Prise en charge des fonctions de hachage dans les champs calculés | En plus des fonctions spécifiques à l&#39;[exportation de tableaux](../../destinations/ui/export-arrays-calculated-fields.md) ou d&#39;éléments d’un tableau, vous pouvez désormais utiliser des [fonctions de hachage](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) supplémentaires pour hacher des attributs dans les fichiers exportés. Les fonctions de hachage prises en charge sont les suivantes : `sha`, `sha256`, `sha512`, `hash`, `md5`, `crc32`. |
+| (disponibilité générale limitée) Activation des audiences de compte vers certaines destinations | Les clientes et clients Real-Time CDP B2B peuvent désormais activer les [audiences de compte](../../segmentation/ui/account-audiences.md) vers certaines destinations. Pour plus d’informations sur cette fonctionnalité, consultez le [tutoriel sur l’activation des audiences de compte](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 
