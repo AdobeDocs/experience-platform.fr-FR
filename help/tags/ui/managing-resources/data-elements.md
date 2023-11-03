@@ -2,10 +2,10 @@
 title: Éléments de données
 description: Les éléments de données sont les blocs de construction de votre dictionnaire de données (ou mappage de données). Utilisez des éléments de données pour recueillir, organiser et diffuser des données dans les technologies marketing et publicitaires.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 9d897602c0c83d06910b8b14a87351a9c25ab5f1
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 95%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -78,7 +78,7 @@ Les éléments de données constituent les blocs de construction des règles. Il
       * La valeur est maintenue dans une variable JavaScript jusqu’à ce que la page soit actualisée ou qu’une nouvelle page soit chargée.
       * Peut être créé et défini dans des scripts à l’aide de la syntaxe d’objet `_satellite` :
 
-         `_satellite.setVar('data_element_name')`
+        `_satellite.setVar('data_element_name')`
    * Session
       * Les valeurs persistent dans le stockage de session du navigateur jusqu’à ce que l’onglet du navigateur soit fermé.
       * Disponible tout au long de la visite du site.
@@ -174,7 +174,7 @@ Par exemple, supposons que vos balises contiennent une variable JavaScript nomm�
 
 Vous devez indiquer le chemin d’accès à cette variable lorsque vous créez l’élément de données.
 
-Si vous utilisez un objet collecteur de données dans votre couche de données, utilisez simplement la notation point dans le chemin pour faire référence à l’objet et la propriété que vous souhaitez capturer dans l’élément de données, par exemple `_myData.pageName` ou `digitalData.pageName`, etc.
+Si vous utilisez un objet collecteur de données dans votre couche de données, utilisez simplement la notation point dans le chemin pour référencer l’objet et la propriété que vous souhaitez capturer dans l’élément de données, par exemple `_myData.pageName`, ou `digitalData.pageName`, etc.
 
 #### Exemple :
 
@@ -240,7 +240,7 @@ Similaire aux informations sur la page, cet élément de données utilise des ty
 
 Sélectionnez l’un des attributs de comportement du visiteur suivants :
 
-* Landing page
+* Page de destination
 * Traffic source
 * Minutes on site
 * Session count
@@ -251,7 +251,7 @@ Sélectionnez l’un des attributs de comportement du visiteur suivants :
 Voici quelques cas d’utilisation courants :
 
 * Afficher une enquête une fois qu’un visiteur a consulté le site pendant cinq minutes
-* S’il s’agit de la page d’entrée de la visite, renseigner une mesure [!DNL Analytics]
+* S’il s’agit de la page de destination de la visite, renseigner une mesure [!DNL Analytics]
 * Afficher une nouvelle offre au visiteur après un nombre de sessions égal à X
 * Afficher un abonnement à la newsletter s’il s’agit d’un nouveau visiteur
 
