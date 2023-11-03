@@ -4,8 +4,8 @@ description: Les éléments de données sont les blocs de construction de votre 
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
 source-git-commit: 9d897602c0c83d06910b8b14a87351a9c25ab5f1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1622'
+ht-degree: 92%
 
 ---
 
