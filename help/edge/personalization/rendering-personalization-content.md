@@ -3,7 +3,7 @@ title: Rendu de contenu personnalisé à l’aide du SDK Web de Adobe Experience
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web de Adobe Experience Platform.
 keywords: personnalisation;renderDecisions;sendEvent;décisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 378f222b5c673632ce5792c52fc32410106def37
+source-git-commit: 5f205792a03c3c7dd9074827ce4a989fae2e45d9
 workflow-type: tm+mt
 source-wordcount: '962'
 ht-degree: 4%
@@ -12,13 +12,13 @@ ht-degree: 4%
 
 # Rendu de contenu personnalisé
 
-Le SDK Web de Adobe Experience Platform prend en charge la récupération de contenu personnalisé à partir des solutions de personnalisation d’Adobe, y compris [Adobe Target](https://business.adobe.com/fr/products/target/adobe-target.html), [offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=fr) et [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=fr).
+Le SDK Web de Adobe Experience Platform prend en charge la récupération de contenu personnalisé à partir des solutions de personnalisation d’Adobe, y compris [Adobe Target](https://business.adobe.com/fr/products/target/adobe-target.html), [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=fr) et [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=fr).
 
-En outre, le SDK Web offre des fonctionnalités de personnalisation de même page et page suivante par le biais de destinations de personnalisation Adobe Experience Platform, telles que [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) et le [connexion à la personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md). Pour savoir comment configurer Experience Platform pour la personnalisation de la même page et de la page suivante, reportez-vous à la section [guide dédié](../../destinations/ui/activate-edge-personalization-destinations.md).
+En outre, le SDK Web offre des fonctionnalités de personnalisation de la même page et de la page suivante via les destinations de personnalisation Adobe Experience Platform, telles que [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) et la variable [connexion à la personnalisation personnalisée](../../destinations/catalog/personalization/custom-personalization.md). Pour savoir comment configurer Experience Platform pour la personnalisation de la même page et de la page suivante, reportez-vous à la section [guide dédié](../../destinations/ui/activate-edge-personalization-destinations.md).
 
 Contenu créé dans Adobe Target [Compositeur d’expérience visuelle](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) et Adobe Journey Optimizer [Interface utilisateur de Campaign web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) peut être récupéré et rendu automatiquement par le SDK. Contenu créé dans Adobe Target [Compositeur d’expérience d’après les formulaires](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=fr) ou Offer decisioning ne peut pas être rendu automatiquement par le SDK. Vous devez plutôt demander ce contenu à l’aide du SDK, puis effectuer vous-même le rendu manuel du contenu.
 
-## Rendu automatique du contenu
+## Rendu automatique du contenu {#automatic}
 
 Lors de l’envoi d’événements au serveur, vous pouvez définir la variable `renderDecisions` option à `true`. Cela oblige le SDK à effectuer automatiquement le rendu de tout contenu personnalisé éligible au rendu automatique.
 
@@ -40,7 +40,7 @@ alloy("sendEvent", {
 
 Le rendu du contenu personnalisé est asynchrone. Vous ne devez donc pas faire d’hypothèses sur le moment où un élément de contenu particulier aura terminé le rendu.
 
-## Rendu manuel du contenu
+## Rendu manuel du contenu {#manual}
 
 Pour accéder à tout contenu de personnalisation, vous pouvez fournir une fonction de rappel qui sera appelée une fois que le SDK aura reçu une réponse réussie du serveur. Votre rappel reçoit une `result` , qui peut contenir un objet `propositions` contenant tout contenu de personnalisation renvoyé. Vous trouverez ci-dessous un exemple de la manière dont vous fournissez une fonction de rappel lors de l’envoi d’un événement.
 
@@ -56,7 +56,7 @@ alloy("sendEvent", {
 
 Dans cet exemple, `result.propositions`, s’il existe, est un tableau contenant des propositions de personnalisation liées à l’événement. Par défaut, elle ne comprend que les propositions éligibles au rendu automatique.
 
-Le `propositions` tableau peut ressembler à cet exemple :
+La variable `propositions` tableau peut ressembler à cet exemple :
 
 ```json
 [
@@ -105,7 +105,7 @@ Le `propositions` tableau peut ressembler à cet exemple :
 
 Dans l’exemple, la variable `renderDecisions` n’était pas définie sur `true` lorsque la variable `sendEvent` a été exécutée, de sorte que le SDK n’a pas tenté d’afficher automatiquement le contenu. Le SDK a toutefois récupéré automatiquement le contenu éligible au rendu automatique et vous l’a fourni pour effectuer un rendu manuel si vous le souhaitez. Notez que chaque objet de proposition a son `renderAttempted` définie sur `false`.
 
-Si vous avez plutôt défini la variable `renderDecisions` option à `true` lors de l’envoi de l’événement, le SDK aurait tenté d’effectuer le rendu de toutes les propositions éligibles pour le rendu automatique (comme décrit précédemment). Par conséquent, chaque objet de proposition aurait sa `renderAttempted` définie sur `true`. Dans ce cas, il n’est pas nécessaire d’effectuer le rendu manuel de ces propositions.
+Si vous avez plutôt défini la variable `renderDecisions` option à `true` lors de l’envoi de l’événement, le SDK aurait tenté d’effectuer le rendu de toutes les propositions éligibles pour le rendu automatique (comme décrit précédemment). Par conséquent, chaque objet de proposition aurait sa `renderAttempted` définie sur `true`. Dans ce cas, il n’est pas nécessaire de générer manuellement ces propositions.
 
 Jusqu’à présent, nous n’avons parlé que du contenu de personnalisation éligible au rendu automatique (c’est-à-dire tout contenu créé dans le compositeur d’expérience visuelle Adobe Target ou l’interface utilisateur de Adobe Journey Optimizer Web Campaign). Pour récupérer un contenu de personnalisation _not_ éligible au rendu automatique, vous devez demander le contenu en renseignant la variable `decisionScopes` lors de l’envoi de l’événement. Une portée est une chaîne qui identifie une proposition particulière que vous souhaitez récupérer du serveur.
 
@@ -122,7 +122,7 @@ alloy("sendEvent", {
   });
 ```
 
-Dans cet exemple, si des propositions sont trouvées sur le serveur correspondant au `salutation` ou `discount` , elles sont renvoyées et incluses dans la variable `result.propositions` tableau. Gardez à l’esprit que les propositions admissibles au rendu automatique continueront à être incluses dans la variable `propositions` , quelle que soit la manière dont vous configurez `renderDecisions` ou `decisionScopes` options. Le `propositions` dans ce cas, le tableau ressemble à l’exemple suivant :
+Dans cet exemple, si des propositions sont trouvées sur le serveur correspondant au `salutation` ou `discount` , elles sont renvoyées et incluses dans la variable `result.propositions` tableau. Gardez à l’esprit que les propositions admissibles au rendu automatique continueront à être incluses dans la variable `propositions` , quelle que soit la manière dont vous configurez `renderDecisions` ou `decisionScopes` options. La variable `propositions` dans ce cas, le tableau ressemble à l’exemple suivant :
 
 ```json
 [
@@ -220,7 +220,7 @@ Dans cet exemple, si des propositions sont trouvées sur le serveur correspondan
 ]
 ```
 
-À ce stade, vous pouvez générer le contenu des propositions à votre gré. Dans cet exemple, la proposition correspondant au `discount` scope est une proposition de HTML créée à l’aide du compositeur d’expérience d’après les formulaires Adobe Target. En supposant que votre page comporte un élément avec l’identifiant de `daily-special` et souhaitez effectuer le rendu du contenu à partir du `discount` dans la `daily-special` effectuez les opérations suivantes :
+À ce stade, vous pouvez générer le contenu des propositions à votre gré. Dans cet exemple, la proposition correspondant au `discount` scope est une proposition de HTML créée à l’aide du compositeur d’expérience d’après les formulaires Adobe Target. En supposant que votre page comporte un élément avec l’identifiant de `daily-special` et souhaitez effectuer le rendu du contenu à partir de la fonction `discount` dans la `daily-special` effectuez les opérations suivantes :
 
 1. Extraire les propositions des `result` .
 1. Parcourez chaque proposition, en recherchant la proposition avec un périmètre de `discount`.
@@ -295,23 +295,23 @@ alloy("sendEvent", {
 
 ### Gestion du scintillement
 
-Le SDK fournit des fonctionnalités pour les éléments suivants : [gérer le scintillement](../personalization/manage-flicker.md) pendant le processus de personnalisation.
+Le SDK fournit des fonctionnalités pour [gérer le scintillement](../personalization/manage-flicker.md) pendant le processus de personnalisation.
 
 ## Propositions de rendu dans les applications d’une seule page sans incrémenter de mesures {#applypropositions}
 
-Le `applyPropositions` vous permet de générer ou d’exécuter un tableau de propositions à partir de [!DNL Target] dans des applications d’une seule page, sans incrémenter la variable [!DNL Analytics] et [!DNL Target] mesures. Cela augmente la précision des rapports.
+La variable `applyPropositions` vous permet de générer ou d’exécuter un tableau de propositions à partir de [!DNL Target] dans des applications d’une seule page, sans incrémenter la variable [!DNL Analytics] et [!DNL Target] mesures. Cela augmente la précision des rapports.
 
 >[!IMPORTANT]
 >
->Si des propositions pour la `__view__` la portée (ou une surface web) étaient rendues au chargement de la page, leurs `renderAttempted` L’indicateur sera défini sur `true`. Le `applyPropositions` ne restituera pas à nouveau la variable `__view__` propositions de portée (ou de surface web) qui ont la variable `renderAttempted: true` Indicateur.
+>Si des propositions pour la `__view__` la portée (ou une surface web) étaient rendues au chargement de la page, leurs `renderAttempted` L’indicateur sera défini sur `true`. La variable `applyPropositions` ne restituera pas à nouveau la variable `__view__` propositions de portée (ou de surface web) qui ont la variable `renderAttempted: true` Indicateur.
 
-### Cas d’utilisation 1 : Rendre les propositions de vue d’application d’une seule page
+### Cas d’utilisation 1 : rendu des propositions de vue d’application d’une seule page
 
 Le cas d’utilisation décrit dans l’exemple ci-dessous restitue à nouveau les propositions d’affichage de panier récupérées et rendues précédemment sans envoyer de notifications d’affichage.
 
 Dans l’exemple ci-dessous, la variable `sendEvent` est déclenchée lors d’un changement d’affichage et enregistre l’objet résultant dans une constante.
 
-Ensuite, lorsque l’affichage ou un composant est mis à jour, la variable `applyPropositions` est appelée, avec les propositions de la précédente `sendEvent` pour réafficher les propositions d’affichage.
+Ensuite, lorsque l’affichage ou un composant est mis à jour, la variable `applyPropositions` est appelée, avec les propositions de la précédente `sendEvent` pour effectuer le rendu des propositions d’affichage.
 
 ```js
 var cartPropositions = alloy("sendEvent", {
@@ -336,7 +336,7 @@ alloy("applyPropositions", {
 });
 ```
 
-### Cas d’utilisation 2 : Propositions de rendu qui ne comportent pas de sélecteur
+### Cas d’utilisation 2 : Rendu des propositions qui ne comportent pas de sélecteur
 
 Ce cas pratique s’applique aux offres d’activité créées à l’aide de la méthode [!DNL Target Form-based Experience Composer].
 

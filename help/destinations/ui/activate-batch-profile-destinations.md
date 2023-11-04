@@ -62,7 +62,7 @@ Vous pouvez sélectionner plusieurs types d’audiences, selon leur origine :
 >
 >Sélection d’audiences provenant de **[!UICONTROL Chargements personnalisés]** active automatiquement la variable [Sélectionner les attributs d’enrichissement](#select-enrichment-attributes) étape .
 
-## Planification de l’exportation des audiences {#scheduling}
+## Planifier l’export d’audience {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
@@ -432,9 +432,9 @@ En tant que solution temporaire, si vous devez ajouter des espaces de noms d’i
 
 >[!IMPORTANT]
 > 
->Toutes les destinations de stockage dans le cloud du catalogue peuvent afficher une [[!UICONTROL Mappage] step](#mapping) qui remplace le **[!UICONTROL Sélectionner des attributs]** étape décrite dans cette section.
+Toutes les destinations de stockage dans le cloud du catalogue peuvent afficher une [[!UICONTROL Mappage] step](#mapping) qui remplace le **[!UICONTROL Sélectionner des attributs]** étape décrite dans cette section.
 >
->Ceci **[!UICONTROL Sélectionner des attributs]** L’étape s’affiche toujours pour les destinations Adobe Campaign, Oracle Responsys, Oracle Eloqua et Salesforce Marketing Cloud de marketing par e-mail.
+Ceci **[!UICONTROL Sélectionner des attributs]** L’étape s’affiche toujours pour les destinations Adobe Campaign, Oracle Responsys, Oracle Eloqua et Salesforce Marketing Cloud de marketing par e-mail.
 
 Pour les destinations basées sur un profil, vous devez sélectionner les attributs de profil à envoyer à la destination cible.
 
@@ -454,15 +454,15 @@ Pour les destinations basées sur un profil, vous devez sélectionner les attrib
 
 >[!NOTE]
 >
-> Adobe Experience Platform préremplit votre sélection avec quatre attributs recommandés couramment utilisés de votre schéma : `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+Adobe Experience Platform préremplit votre sélection avec quatre attributs recommandés couramment utilisés de votre schéma : `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
 ![Image montrant les attributs recommandés préremplis dans l’étape de mappage du workflow d’activation de l’audience.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
->En raison d’une limitation connue, vous ne pouvez actuellement pas utiliser la fenêtre **[!UICONTROL Sélectionner un champ]** pour ajouter `segmentMembership.status` à vos exportations de fichiers. Vous devez plutôt coller manuellement la valeur. `xdm: segmentMembership.status` dans le champ de schéma, comme illustré ci-dessous.
+En raison d’une limitation connue, vous ne pouvez actuellement pas utiliser la fenêtre **[!UICONTROL Sélectionner un champ]** pour ajouter `segmentMembership.status` à vos exportations de fichiers. Vous devez plutôt coller manuellement la valeur. `xdm: segmentMembership.status` dans le champ de schéma, comme illustré ci-dessous.
 >
->![Enregistrement de l’écran montrant la solution de contournement de l’appartenance à l’audience à l’étape de mappage du workflow d’activation.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+![Enregistrement de l’écran montrant la solution de contournement de l’appartenance à l’audience à l’étape de mappage du workflow d’activation.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 Les exportations de fichiers varient comme suit, selon que `segmentMembership.status` est sélectionné :
 * Si le champ `segmentMembership.status` est sélectionné, les fichiers exportés incluent les membres **[!UICONTROL actifs]** dans l’instantané complet initial ainsi que les membres **[!UICONTROL actifs]** et **[!UICONTROL expirés]** dans les exportations incrémentielles suivantes.
@@ -470,15 +470,15 @@ Les exportations de fichiers varient comme suit, selon que `segmentMembership.st
 
 ## Sélectionner les attributs d’enrichissement {#select-enrichment-attributes}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_exclude_enrichment_attributes"
->title="Exclure les attributs d’enrichissement"
->abstract="Activez cette option pour exporter les profils des audiences chargées personnalisées sélectionnées vers votre destination, tout en excluant leurs attributs."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=fr#select-enrichment-attributes" text="En savoir plus dans la documentation."
+[!CONTEXTUALHELP]
+id="platform_destinations_activate_exclude_enrichment_attributes"
+title="Exclure les attributs d’enrichissement"
+abstract="Activez cette option pour exporter les profils des audiences chargées personnalisées sélectionnées vers votre destination, tout en excluant leurs attributs."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=fr#select-enrichment-attributes" text="En savoir plus dans la documentation."
 
 >[!IMPORTANT]
 >
->Cette étape s’affiche uniquement si vous avez sélectionné **[!UICONTROL Chargement personnalisé]** audiences pendant la [sélection d’audiences](#select-audiences) étape .
+Cette étape s’affiche uniquement si vous avez sélectionné **[!UICONTROL Chargement personnalisé]** audiences pendant la [sélection d’audiences](#select-audiences) étape .
 
 Les attributs d’enrichissement correspondent à des audiences téléchargées personnalisées ingérées dans Experience Platform en tant que **[!UICONTROL Chargements personnalisés]**. Au cours de cette étape, vous pouvez sélectionner les attributs à exporter vers votre destination, pour chaque audience externe sélectionnée.
 
@@ -509,10 +509,10 @@ Sur la page **[!UICONTROL Vérifier]**, vous pouvez voir un résumé de votre s�
 
 ### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
->[!CONTEXTUALHELP]
->id="platform_governance_policies_viewApplicableConsentPolicies"
->title="Affichage des politiques de consentement applicables"
->abstract="Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. Ce contrôle est désactivé si votre entreprise n&#39;a pas accès aux SKU mentionnés ci-dessus."
+[!CONTEXTUALHELP]
+id="platform_governance_policies_viewApplicableConsentPolicies"
+title="Affichage des politiques de consentement applicables"
+abstract="Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. Ce contrôle est désactivé si votre entreprise n&#39;a pas accès aux SKU mentionnés ci-dessus."
 
 Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. En savoir plus [évaluation des stratégies de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) pour plus d’informations.
 

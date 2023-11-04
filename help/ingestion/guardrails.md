@@ -3,10 +3,10 @@ keywords: Experience Platform;dépannage;mécanismes de sécurisation;conseils;
 title: Mécanismes de sécurisation pour l’ingestion des données
 description: Ce document fournit des conseils sur les mécanismes de sécurisation pour l’ingestion de données dans Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 008537dffff4cc428de9070964446f4e7ebf039f
+source-git-commit: 0e609ce278af0c93503f05778887ad1bd881524a
 workflow-type: tm+mt
-source-wordcount: '496'
-ht-degree: 93%
+source-wordcount: '567'
+ht-degree: 79%
 
 ---
 
@@ -41,7 +41,10 @@ Le tableau suivant décrit les barrières de sécurité à prendre en compte lor
 
 ## Étapes suivantes
 
-Pour plus d’informations sur les mécanismes de sécurisation des données et du traitement dans Experience Platform, consultez la documentation suivante :
+Pour plus d’informations sur les barrières de sécurité des autres services Experience Platform, sur les informations de latence de bout en bout et les informations de licence des documents Description du produit Real-Time CDP, consultez la documentation suivante :
 
-* [Barrières de sécurité pour les données Real-time Customer Profile](../profile/guardrails.md)
-* [Mécanismes de sécurisation pour les données Identity Service](../identity-service/guardrails.md)
+* [Barrières de sécurité Real-Time CDP](/help/rtcdp/guardrails/overview.md)
+* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
+* [Real-time Customer Data Platform (Édition B2C - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide des informations d’identification de Query Service
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui permet d’écrire et d’exécuter des requêtes, d’afficher des requêtes précédemment exécutées et d’accéder aux requêtes enregistrées par les utilisateurs de votre entreprise.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: aed521bf50c301148c10b98021f1a3df0ed45278
+source-git-commit: 74e3dc2fa5fc84b5ce4b09e2adb0093ecb94bd82
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1517'
 ht-degree: 4%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 4%
 # Guide sur les informations d’identification
 
 Adobe Experience Platform Query Service vous permet de vous connecter à des clients externes. Vous pouvez vous connecter à ces clients externes à l’aide d’informations d’identification arrivant à expiration ou d’informations d’identification non arrivant à expiration.
+
+>[!NOTE]
+>
+>Le panneau Informations d’identification n’est pas automatiquement disponible pour tous les utilisateurs. Veuillez contacter votre équipe de compte d’Adobe pour demander la réponse [!UICONTROL Informations d’identification] à inclure dans l’espace de travail Query Service si nécessaire. Si nécessaire, ce changement est effectué à l’échelle de l’entreprise et par l’équipe d’ingénierie de l’Adobe. Il ne s’agit pas d’un paramètre contrôlé par les utilisateurs.
 
 ## Expiration des informations d’identification {#expiring-credentials}
 

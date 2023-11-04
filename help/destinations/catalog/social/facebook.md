@@ -175,7 +175,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
->title="Origine de l&#39;audience"
+>title="Origine de l’audience"
 >abstract="Choisissez la manière dont les données client de l’audience ont été collectées à l’origine. Les données s&#39;affichent dans Facebook lorsqu&#39;un utilisateur est ciblé par le segment."
 
 >[!CONTEXTUALHELP]

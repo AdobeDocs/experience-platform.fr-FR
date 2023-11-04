@@ -5,10 +5,10 @@ user-guide-title: Aide du SDK web d’Adobe Experience Platform
 breadcrumb-title: Guide du SDK web
 user-guide-description: Interagissez avec les services Experience Cloud via le réseau Edge.
 feature: Web SDK
-source-git-commit: f96c0a3b75239681f53ffec6184af64394e37a84
+source-git-commit: 2e47f12cde0f4c4dca89deddbf612ad3840628f0
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 93%
+source-wordcount: '181'
+ht-degree: 89%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 93%
    * [Configuration du SDK](fundamentals/configuring-the-sdk.md)
    * [Exécution des commandes](fundamentals/executing-commands.md)
    * [Suivi des événements](fundamentals/tracking-events.md)
+   * [Configuration des événements de haut et de bas de page](fundamentals/top-bottom-page-events.md)
    * [Débogage](fundamentals/debugging.md)
    * [Configuration d’un fichier CSP](fundamentals/configuring-a-csp.md)
    * [Interaction avec plusieurs propriétés](fundamentals/interacting-with-multiple-properties.md)

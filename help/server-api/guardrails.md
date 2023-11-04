@@ -1,18 +1,18 @@
 ---
-title: Protections des performances pour l’API Edge Network Server
+title: Protections des performances pour l’API du serveur réseau Edge
 description: Découvrez comment utiliser l’API du serveur dans des barrières de sécurité de performances optimales.
 keywords: collecte de données;collection;réseau Edge;api;sla;slt;niveaux de service
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 0e609ce278af0c93503f05778887ad1bd881524a
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 2%
+source-wordcount: '535'
+ht-degree: 6%
 
 ---
 
-# Protections des performances pour l’API Edge Network Server
+# Protections des performances pour l’API du serveur réseau Edge
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Les barrières de performance définissent les limites d’utilisation liées à vos cas d’utilisation de l’API de serveur. Le dépassement des barrières de performance décrites dans cet article peut entraîner une dégradation des performances.
 
@@ -64,3 +64,13 @@ Le tableau ci-dessous présente les valeurs limites par défaut. Si vous avez be
 >[!NOTE]
 >
 >En fonction de la charge utile elle-même, les formats binaires sont généralement 20 à 40 % plus compacts, ce qui vous permet de transmettre plus de données que vous ne le feriez avec le format JSON en texte brut. Contactez votre représentant de l’assistance clientèle si vous avez besoin d’une capacité supérieure pour vos flux de données.
+
+## Étapes suivantes
+
+Pour plus d’informations sur les barrières de sécurité des autres services Experience Platform, sur les informations de latence de bout en bout et les informations de licence des documents Description du produit Real-Time CDP, consultez la documentation suivante :
+
+* [Barrières de sécurité Real-Time CDP](/help/rtcdp/guardrails/overview.md)
+* [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
+* [Real-time Customer Data Platform (Édition B2C - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

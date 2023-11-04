@@ -174,7 +174,7 @@ Pour ajouter des attributs de cible, sélectionnez la variable **[!UICONTROL Ajo
 
 ![Enregistrement d’écran montrant comment sélectionner un attribut XDM à l’étape de mappage](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 
-## Planification de l’exportation des audiences {#scheduling}
+## Planifier l’export d’audience {#scheduling}
 
 Par défaut, la variable [!UICONTROL Planification de l’audience] n’affiche que les audiences nouvellement sélectionnées dans le flux d’activation actuel.
 

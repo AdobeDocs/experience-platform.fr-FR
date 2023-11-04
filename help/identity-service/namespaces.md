@@ -93,7 +93,7 @@ Les espaces de noms standard suivants sont fournis pour être utilisés par tout
 | TNTID | Espace de noms représentant Adobe Target. Consultez le document suivant sur [Cible](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=fr) pour plus d’informations. |
 | Windows AID | Espace de noms qui représente un identifiant Windows Advertising. Consultez le document suivant sur [Identifiant Windows Advertising](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) pour plus d’informations. |
 
-### Affichage des espaces de noms d’identité {#view-identity-namespaces}
+### Afficher des espaces de noms d’identités {#view-identity-namespaces}
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_view_integration_identities"

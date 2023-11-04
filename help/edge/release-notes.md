@@ -3,10 +3,10 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
 workflow-type: tm+mt
-source-wordcount: '1587'
-ht-degree: 100%
+source-wordcount: '1660'
+ht-degree: 96%
 
 ---
 
@@ -15,6 +15,20 @@ ht-degree: 100%
 
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.19.0 - 1 novembre 2023
+
+**Nouvelles fonctionnalités**
+
+* Ajout de la prise en charge du rendu des messages in-app de Adobe Journey Optimizer.
+* Ajout de la prise en charge des événements de haut et de bas de page.
+* Ajout de l’option &quot;defaultPersonalizationEnabled&quot; à la commande sendEvent pour contrôler la demande de la portée à l’échelle de la page et de la surface par défaut.
+
+**Correctifs et améliorations**
+
+* Combinaison d’événements d’affichage de personnalisation lors du rendu de plusieurs types de personnalisation.
+* Correction d’un problème en raison duquel les noms des vues d’application d’une seule page étaient sensibles à la casse.
+* Correction d’un problème lié aux sélecteurs d’offres personnalisés DOM fantôme.
 
 ## Version 2.18.0 - 31 juillet 2023
 

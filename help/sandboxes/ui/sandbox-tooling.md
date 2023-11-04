@@ -2,9 +2,9 @@
 title: Outils Sandbox
 description: Exportez et importez en toute transparence des configurations Sandbox entre des environnements de test.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 58fcf3cbff242f65969193fd2e3d6eea0e6539aa
+source-git-commit: 4cb570fbdb76e53dd0a8c4ee78c31d2a886e5dc1
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1849'
 ht-degree: 10%
 
 ---
@@ -237,6 +237,12 @@ La variable **[!UICONTROL Détails de l’importation]** La boîte de dialogue a
 >[!NOTE]
 >
 >Une fois l’importation terminée, vous recevez des notifications dans l’interface utilisateur de Platform. Vous pouvez accéder à ces notifications à partir de l’icône d’alertes. Vous pouvez accéder au dépannage à partir de là si une tâche échoue.
+
+## Tutoriel vidéo
+
+La vidéo suivante est destinée à vous aider à comprendre l’utilisation de l’environnement de test et explique comment créer un nouveau module, publier un module et importer un module.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Étapes suivantes
 

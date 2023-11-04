@@ -7,7 +7,7 @@ exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
 source-wordcount: '4313'
-ht-degree: 55%
+ht-degree: 56%
 
 ---
 
@@ -119,10 +119,10 @@ Un chargement de widget par défaut est fourni pour toutes les nouvelles instanc
 
 Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Pour ce faire, Customer AI analyse les données d’événement d’expérience client existantes afin de prédire **scores de propension à l’attrition ou à la conversion**. Ces modèles de propension des clients à haute précision permettent une segmentation et un ciblage plus précis. La variable [distribution des scores](#customer-ai-distribution-of-scores) et [résumé de notation](#customer-ai-scoring-summary) les insights montrent la division de votre audience. Ils mettent en évidence les profils qui correspondent à une propension élevée/faible/moyenne et la manière dont ils sont répartis dans les nombres de profils.
 
-* [[!UICONTROL Résumé de notation de Customer AI]](#customer-ai-scoring-summary)
-* [[!UICONTROL Distribution des scores par Customer AI]](#customer-ai-distribution-of-scores)
+* [[!UICONTROL Résumé des scores de l’IA dédiée aux clientes et aux clients]](#customer-ai-scoring-summary)
+* [[!UICONTROL Distribution des scores par l’IA dédiée aux clientes et aux clients]](#customer-ai-distribution-of-scores)
 
-### [!UICONTROL Distribution des scores par Customer AI] {#customer-ai-distribution-of-scores}
+### [!UICONTROL Distribution des scores par l’IA dédiée aux clientes et aux clients] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_distributionOfScores"
@@ -151,7 +151,7 @@ La page d’informations détaillées sur les modèles s’affiche.
 
 Pour plus d’informations sur Customer AI, voir [guide de l’interface utilisateur de discover insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
-### [!UICONTROL Résumé de notation de Customer AI] {#customer-ai-scoring-summary}
+### [!UICONTROL Résumé des scores de l’IA dédiée aux clientes et aux clients] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_scoringSummary"
@@ -190,7 +190,7 @@ Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez 
 * [[!UICONTROL Profils à identité unique]](#single-identity-profiles)
 * [[!UICONTROL Profils à identité unique par identité]](#single-identity-profiles-by-identity)
 * [[!UICONTROL Profils non segmentés]](#unsegmented-profiles)
-* [[!UICONTROL Les profils non segmentés changent de tendance]](#unsegmented-profiles-change-trend)
+* [[!UICONTROL Tendance de modification des profils non segmentés]](#unsegmented-profiles-change-trend)
 * [[!UICONTROL Profils non segmentés par identité]](#unsegmented-profiles-by-identity)
 * [[!UICONTROL Audiences]](#audiences)
 * [[!UICONTROL Audiences mappées au statut de destination]](#audiences-mapped-to-destination-status)
@@ -335,7 +335,7 @@ La variable [!UICONTROL Profils non segmentés] fournit le nombre total de tous 
 
 ![Widget Profils non segmentés.](../images/profiles/unsegmented-profiles.png)
 
-### [!UICONTROL Les profils non segmentés changent de tendance] {#unsegmented-profiles-change-trend}
+### [!UICONTROL Tendance de modification des profils non segmentés] {#unsegmented-profiles-change-trend}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_unsegmentedprofilestrend"

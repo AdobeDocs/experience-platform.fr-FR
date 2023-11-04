@@ -4,10 +4,10 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Guide de Real-Time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
-source-git-commit: 5c556d6a846c8ec97bf3aa8b6a6a6d2a64a33be5
+source-git-commit: 01fe1dd1d7df31458d4175c25928bfd12e01d654
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 89%
+source-wordcount: '318'
+ht-degree: 75%
 
 ---
 
@@ -37,6 +37,14 @@ ht-degree: 89%
 * Destinations {#destinations}
    * [Présentation des destinations](destinations/overview.md)
    * [Destinations dans l’édition B2B de Real-Time CDP](destinations/b2b.md)
+* Mécanismes de sécurisation {#guardrails}
+   * [Présentation des barrières de sécurité Real-Time CDP](/help/rtcdp/guardrails/overview.md){target="_blank"}
+   * [Barrières de sécurité pour l’ingestion de données](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [Barrières de sécurité pour les [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
+   * [Barrières de sécurité pour [!DNL Real-Time Customer Profile] données et segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=fr){target="_blank"}
+   * [Mécanismes de sécurisation pour les  [!DNL Identity Service] données](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [Barrières de sécurité pour [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+   * [Barrières de sécurité pour l’activation des données par le biais des destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * Identités {#identity}
    * [Identités et espaces de noms d’identité](profile/identities-overview.md)
 * Politiques de fusion {#merge-policies}

@@ -1,5 +1,5 @@
 ---
-title: (Version bêta) Utilisation de champs calculés pour exporter des tableaux dans des fichiers de schéma plats
+title: (Version bêta) Utiliser des champs calculés pour exporter des tableaux dans des fichiers de schéma plats
 type: Tutorial
 description: Découvrez comment utiliser des champs calculés pour exporter des tableaux dans des fichiers de schéma plats de Real-Time CDP vers des destinations de stockage dans le cloud.
 badge: Version Beta
@@ -7,11 +7,11 @@ exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
 workflow-type: tm+mt
 source-wordcount: '1497'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
-# (Version bêta) Utilisation de champs calculés pour exporter des tableaux dans des fichiers de schéma plats {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
+# (Version bêta) Utiliser des champs calculés pour exporter des tableaux dans des fichiers de schéma plats {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"

@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;c
 title: Mise à jour des spécifications de flux à l’aide de l’API Flow Service
 description: Le document suivant décrit les étapes à suivre pour récupérer et mettre à jour les spécifications de flux à l’aide de l’API Flow Service pour les sources en libre-service (SDK par lots).
 exl-id: 67a0cd3e-ac18-43a4-aa22-8f6376d5cc3f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 21bccacf3555881ae731d0e60ff7d7677f18732d
 workflow-type: tm+mt
 source-wordcount: '408'
 ht-degree: 17%
@@ -233,7 +233,7 @@ Une réponse réussie renvoie les détails de la spécification de flux interrog
 
 ## Mettre à jour une spécification de flux {#update}
 
-Vous pouvez mettre à jour les champs d’une spécification de connexion par le biais d’une opération de PUT. Lors de la mise à jour d’une spécification de connexion via une requête de PUT, le corps doit inclure tous les champs requis lors de la création d’une spécification de connexion dans une requête de POST.
+Vous pouvez mettre à jour les champs d’une spécification de connexion via une opération de PUT. Lors de la mise à jour d’une spécification de connexion via une requête de PUT, le corps doit inclure tous les champs requis lors de la création d’une spécification de connexion dans une requête de POST.
 
 >[!IMPORTANT]
 >
@@ -251,7 +251,7 @@ La requête suivante met à jour la spécification de flux de `6499120c-0b15-42d
 
 ```shell
 PUT -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6499120c-0b15-42dc-936e-847ea3c24d72' \
+  'https://platform.adobe.io/data/foundation/flowservice/flowSpecs/6499120c-0b15-42dc-936e-847ea3c24d72' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -610,4 +610,4 @@ Une réponse réussie renvoie les détails de la spécification de flux interrog
 
 ## Étapes suivantes
 
-Une fois la nouvelle spécification de connexion ajoutée à la spécification de flux appropriée, vous pouvez passer au test et envoyer votre nouvelle source. Consultez le guide sur la [test et envoi d’une nouvelle source](./submit.md) pour plus d’informations.
+Une fois la nouvelle spécification de connexion ajoutée à la spécification de flux appropriée, vous pouvez passer au test et envoyer votre nouvelle source. Consultez le guide sur la [tester et envoyer une nouvelle source](./submit.md) pour plus d’informations.

@@ -5,7 +5,7 @@ exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '841'
-ht-degree: 40%
+ht-degree: 41%
 
 ---
 
@@ -59,7 +59,7 @@ Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fo
 
 ![new](../../../../images/tutorials/create/mixpanel-export-events/new.png)
 
-## Sélectionner l’ID et le fuseau horaire du projet {#project-id-and-timezone}
+## Sélectionner l’ID et le fuseau horaire de votre projet {#project-id-and-timezone}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_mixpanel_timezone"

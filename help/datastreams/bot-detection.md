@@ -4,9 +4,9 @@ description: Découvrez comment configurer la détection des robots pour les flu
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 4881a82c0ce68d1efe85281d2a8c457a29531559
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1362'
 ht-degree: 0%
 
 ---
@@ -164,7 +164,7 @@ Cette règle vérifie si la demande provient d’une adresse IP spécifique et s
 
 ![Image de la règle de détection des robots basée sur l’adresse IP et l’en-tête de requête.](assets/bot-detection/bot-detection-header-ip.png)
 
-### Plusieurs conditions basées sur la détection de robots {#multiple-conditions}
+### Détection de robots selon plusieurs conditions {#multiple-conditions}
 
 Vous pouvez créer des règles de détection de robots basées sur les éléments suivants :
 

@@ -275,7 +275,7 @@ Après avoir appliqué vos modifications, le nouveau champ s’affiche sous l’
 
 ![Champ ajouté à l’objet standard](../../images/ui/resources/schemas/added-to-standard-object.png)
 
-## Activation d’un schéma pour Real-time Customer Profile {#profile}
+## Activer un schéma pour le profil client en temps réel {#profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"

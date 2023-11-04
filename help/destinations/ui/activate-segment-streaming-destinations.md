@@ -99,7 +99,7 @@ Quand vous mappez des attributs source non hachés avec des attributs cibles qui
 
 ![Mappage des identités](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
-## Planification de l’exportation des audiences {#scheduling}
+## Planifier l’export d’audience {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"

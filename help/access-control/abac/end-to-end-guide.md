@@ -6,7 +6,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '1740'
-ht-degree: 24%
+ht-degree: 25%
 
 ---
 
@@ -61,7 +61,7 @@ Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Exp
 
 L’espace de travail Autorisations de l’interface utilisateur de Platform s’affiche, s’ouvrant sur la fenêtre **[!UICONTROL Rôles]** page.
 
-## Application d’étiquettes à un rôle {#label-roles}
+## Appliquer des libellés à un rôle {#label-roles}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
@@ -153,7 +153,7 @@ La variable **[!UICONTROL Modifier les libellés]** s’affiche, vous permettant
 
 Répétez les étapes ci-dessus avec **[!UICONTROL Insuline &lt;50]**.
 
-## Activation de la stratégie de contrôle d’accès {#policy}
+## Activer la politique de contrôle d’accès {#policy}
 
 La stratégie de contrôle d’accès par défaut utilise des libellés pour définir les rôles utilisateur ayant accès à des ressources Platform spécifiques. Dans cet exemple, l’accès aux champs de schéma et aux segments sera refusé dans tous les environnements de test pour les utilisateurs qui ne sont pas dans un rôle dont les libellés correspondants sont dans le champ de schéma.
 

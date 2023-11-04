@@ -5,11 +5,11 @@ exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
 workflow-type: tm+mt
 source-wordcount: '841'
-ht-degree: 79%
+ht-degree: 80%
 
 ---
 
-# Parcourir les ordres de travail du cycle de vie des données {#browse-work-orders}
+# Parcourir les ordres de travail relatifs au cycle de vie des données {#browse-work-orders}
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_workorders"

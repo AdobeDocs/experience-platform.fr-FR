@@ -8,7 +8,7 @@ feature: Data Collection
 source-git-commit: ef77a14eb40db490682c4615d1cbafb90c7b42c2
 workflow-type: tm+mt
 source-wordcount: '99'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 97%
 # Documentation de l’API du serveur réseau Edge {#edge-network-server-api}
 
 * [Vue d’ensemble](overview.md)
-* [Protections des performances](guardrails.md)
+* [Mécanismes de sécurisation des performances](guardrails.md)
 * [Authentification](authentication.md)
 * Collecte de données {#data-collection}
    * [Collecte de données d’événement unique](interactive-data-collection.md)

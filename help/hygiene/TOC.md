@@ -7,7 +7,7 @@ feature: Data Hygiene
 source-git-commit: 35f598d3a03b459e2bbed58a006c7d020aba7dac
 workflow-type: tm+mt
 source-wordcount: '65'
-ht-degree: 60%
+ht-degree: 72%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 60%
 * [Présentation avancée de la gestion du cycle de vie des données](./home.md)
 * Interface utilisateur du cycle de vie des données {#ui}
    * [Vue d’ensemble](./ui/overview.md)
-   * [Expiration automatisée des jeux de données](./ui/dataset-expiration.md)
+   * [Expirations automatisées des jeux de données](./ui/dataset-expiration.md)
    * [(Version bêta) Suppression d’enregistrements](./ui/record-delete.md)
-   * [Parcourir les ordres de travail du cycle de vie des données](./ui/browse.md)
+   * [Parcourir les ordres de travail relatifs au cycle de vie des données](./ui/browse.md)
 * API Data Hygiene {#api}
    * [Présentation](./api/overview.md)
    * [Expirations de jeux de données](./api/dataset-expiration.md)

@@ -9,7 +9,7 @@ ht-degree: 53%
 
 ---
 
-# Expiration automatisée des jeux de données {#dataset-expiration}
+# Expirations automatisées des jeux de données {#dataset-expiration}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
