@@ -2,9 +2,9 @@
 title: Présentation de l’extension de l’API Meta Conversions
 description: Découvrez l’extension de l’API Meta Conversions pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: d55398f328f3f85ce6b32a2553e7a93df3584f02
+source-git-commit: b11aff782a44237e6e4ae87254163713883e3ded
 workflow-type: tm+mt
-source-wordcount: '2624'
+source-wordcount: '2595'
 ht-degree: 1%
 
 ---
@@ -67,9 +67,9 @@ L’intégration à Event Quality Match Score (EMQ) vous permet d’afficher fac
 
 ## Intégration à LiveRamp (Alpha) {#alpha}
 
-L’intégration à LiveRamp ajoute de nouveaux champs à la configuration des règles de l’API de métadonnées, ce qui facilite l’intégration des clients à l’API de conversions LiveRamp. Cette intégration évite d’avoir à partager les informations d’identification personnelles directement avec votre partenaire ou votre méta. En raison de la robustesse du graphique d’identités de LiveRamp, l’inclusion de [!UICONTROL Identifiant du partenaire (alpha)] peut améliorer la qualité de l’intégration en augmentant le taux de correspondance de l’utilisateur.
+[!DNL LiveRamp] des clients qui [!DNL LiveRamp]La solution de trafic authentifié (ATS) de’ peut choisir de partager les RampID en tant que paramètre d’informations client. Veuillez travailler avec votre [!DNL Meta] l’équipe du compte pour rejoindre le programme d’Alpha de cette fonctionnalité.
 
-![Le transfert des métadonnées [!UICONTROL Règle] mise en surbrillance de page de configuration [!UICONTROL Nom du partenaire (alpha)] et [!UICONTROL Identifiant du partenaire (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
+![Transfert d’événement Meta [!UICONTROL Règle] mise en surbrillance de page de configuration [!UICONTROL Nom du partenaire (alpha)] et [!UICONTROL Identifiant du partenaire (alpha)].](../../../images/extensions/server/meta/live-ramp.png)
 
 ## Configurer une règle de transfert d’événement {#rule}
 
