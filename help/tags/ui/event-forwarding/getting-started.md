@@ -3,9 +3,9 @@ title: Prise en main du transfert dʼévénements
 description: Suivez ce tutoriel détaillé pour commencer à utiliser le transfert d’événement dans Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 45d881a810782f734ed030fbf29e802fa535400a
+source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '870'
 ht-degree: 84%
 
 ---
@@ -20,7 +20,7 @@ Pour utiliser le transfert dʼévénements dans Adobe Experience Platform, les
 
 * [SDK web Adobe Experience Platform](../../extensions/client/web-sdk/overview.md)
 * [ SDK Mobile Adobe Experience Platform](https://sdkdocs.com)
-* [API serveur à serveur](/help/server-api/overview.md)
+* [API du serveur réseau Edge](/help/server-api/overview.md)
 
 >[!NOTE]
 >Le SDK web Platform et le SDK mobile Platform ne nécessitent pas de déploiement par le biais de balises dans Adobe Experience Platform. Toutefois, il est recommandé dʼutiliser des balises pour déployer ces SDK.
