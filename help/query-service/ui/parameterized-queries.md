@@ -2,23 +2,19 @@
 title: Requêtes paramétrées
 description: Découvrez comment utiliser des requêtes paramétrées dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
 workflow-type: tm+mt
-source-wordcount: '755'
-ht-degree: 11%
+source-wordcount: '734'
+ht-degree: 12%
 
 ---
 
-# Requêtes paramétrées (version limitée) {#parameterized-queries}
+# Requêtes paramétrées {#parameterized-queries}
 
 >[!CONTEXTUALHELP]
 >id="platform_queryService_queryEditor_parameterizedQueries"
 >title="Requêtes paramétrées"
 >abstract="Utilisez des requêtes paramétrées pour ajouter des valeurs de paramètre au moment de l’exécution. Vous pouvez ainsi travailler avec des données dynamiques et réutiliser des requêtes pour différents cas d’utilisation. Utilisez la préface `'$'` pour saisir un paramètre de requête dans l’éditeur de texte. Ajoutez ensuite une valeur pour la clé dans la section Paramètres de requête sous l’éditeur."
-
->[!IMPORTANT]
->
->La fonction d’IU de requête paramétrée est disponible dans une **version limitée uniquement** et n’est pas disponible pour tous les clients.
 
 Query Service prend en charge l’utilisation de requêtes paramétrées dans Query Editor. Avec les requêtes paramétrées, vous pouvez désormais utiliser des espaces réservés pour les paramètres et ajouter les valeurs de paramètre au moment de l’exécution. Les espaces réservés vous permettent d’utiliser des données dynamiques dans lesquelles vous ne savez pas quelles seront les valeurs tant que l’instruction n’est pas exécutée. Vous pouvez également préparer vos requêtes à l’avance et les réutiliser à des fins similaires. La réutilisation de requêtes permet d’économiser un effort considérable, car vous évitez de créer des requêtes SQL distinctes pour chaque cas d’utilisation.
 
