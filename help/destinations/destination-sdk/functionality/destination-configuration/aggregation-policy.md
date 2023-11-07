@@ -2,7 +2,7 @@
 description: Découvrez comment configurer une politique d’agrégation pour déterminer comment les requêtes HTTP vers la destination doivent être associées et regroupées par lot.
 title: Politique d’agrégation
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '995'
 ht-degree: 96%
@@ -127,7 +127,7 @@ Vous êtes arrivé au bout de cet article. À présent, vous devriez mieux compr
 Pour en savoir plus sur les autres composants de destination, consultez les articles suivants :
 
 * [Configuration de l’authentification du client](customer-authentication.md)
-* [Authentification OAuth 2](oauth2-authentication.md)
+* [Authentification OAuth 2](oauth2-authorization.md)
 * [Champs de données client](customer-data-fields.md)
 * [Attributs de l’interface utilisateur](ui-attributes.md)
 * [Configuration du schéma](schema-configuration.md)

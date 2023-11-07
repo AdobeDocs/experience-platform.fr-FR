@@ -2,7 +2,7 @@
 description: Découvrez les qualifications des historiques prises en charge par les destinations créées avec Destination SDK.
 title: Qualifications des profils historiques
 exl-id: 8880cff9-865b-4d45-a24d-a78e77419670
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 100%
@@ -45,7 +45,7 @@ Vous avez lu l’intégralité de cet article. À présent, vous devez savoir qu
 Pour en savoir plus sur les autres composants de destination, consultez les articles suivants :
 
 * [Authentification du client](customer-authentication.md)
-* [Authentification OAuth 2](oauth2-authentication.md)
+* [Authentification OAuth 2](oauth2-authorization.md)
 * [Champs de données client](customer-data-fields.md)
 * [Attributs de l’interface utilisateur](ui-attributes.md)
 * [Configuration du schéma](schema-configuration.md)

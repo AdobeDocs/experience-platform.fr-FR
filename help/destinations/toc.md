@@ -4,7 +4,7 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 48acb9ec2ee093c4b22176785a693b1c1ea742bd
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '1201'
 ht-degree: 94%
@@ -214,7 +214,7 @@ ht-degree: 94%
          * [Configuration du formatage des fichiers](./destination-sdk/functionality/destination-server/file-formatting.md)
       * Composants de configuration de destination {#destination-configuration}
          * [Configuration de l’authentification du client](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
-         * [Authentification OAuth 2](./destination-sdk/functionality/destination-configuration/oauth2-authentication.md)
+         * [Autorisation OAuth2](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
          * [Champs de données client](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
          * [Attributs de l’interface utilisateur](./destination-sdk/functionality/destination-configuration/ui-attributes.md)
          * [Configuration des schémas de partenaire](./destination-sdk/functionality/destination-configuration/schema-configuration.md)

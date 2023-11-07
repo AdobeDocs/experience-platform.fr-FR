@@ -2,7 +2,7 @@
 description: Cette page illustre l’appel API utilisé pour mettre à jour une configuration de destination existante avec Adobe Experience Platform Destination SDK.
 title: Mise à jour d’une configuration de destination
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 100%
@@ -20,7 +20,7 @@ Cette page illustre la requête d’API et la payload que vous pouvez utiliser p
 Pour une description détaillée des fonctionnalités de configuration de la destination, consultez les articles suivants :
 
 * [Configuration de l’authentification du client](../../functionality/destination-configuration/customer-authentication.md)
-* [Authentification OAuth 2](../../functionality/destination-configuration/oauth2-authentication.md)
+* [Authentification OAuth 2](../../functionality/destination-configuration/oauth2-authorization.md)
 * [Champs de données client](../../functionality/destination-configuration/customer-data-fields.md)
 * [Attributs de l’interface utilisateur](../../functionality/destination-configuration/ui-attributes.md)
 * [Configuration du schéma](../../functionality/destination-configuration/schema-configuration.md)

@@ -2,7 +2,7 @@
 title: Pipelines de fonctionnalités AI/ML
 description: Découvrez comment utiliser Data Distiller pour enrichir vos pipelines d’apprentissage automatique avec des fonctionnalités dérivées des données Adobe Experience Platform. Transformez les données brutes en fonctionnalités et diffusez les données de fonctionnalités pour former ou noter un modèle qui prend en charge vos cas d’utilisation marketing.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 3%
@@ -97,7 +97,7 @@ You are recommended to create an [!DNL Oauth2] API credential specifically for C
 
 <!-- 
 Is this the correct doc to link to about creating an Oauth2 API credential?:
-../../../destinations/destination-sdk/functionality/destination-configuration/oauth2-authentication.md
+../../../destinations/destination-sdk/functionality/destination-configuration/oauth2-authorization.md
  -->
 
 <!-- See [Authenticate and access Experience Platform APIs](../../../landing/api-authentication.md) detailed instructions instructions on creating an API credential. -->

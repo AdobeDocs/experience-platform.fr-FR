@@ -2,7 +2,7 @@
 description: Découvrez comment configurer les paramètres de diffusion de destination pour les destinations créées avec Destination SDK afin d’indiquer où vont les données exportées et quelle règle d’authentification est utilisée à l’emplacement où les données seront envoyées.
 title: Diffusion de destination
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 100%
@@ -108,7 +108,7 @@ Vous êtes arrivé au bout de cet article. À présent, vous devriez mieux compr
 Pour en savoir plus sur les autres composants de destination, consultez les articles suivants :
 
 * [Authentification du client](customer-authentication.md)
-* [Authentification OAuth 2](oauth2-authentication.md)
+* [Authentification OAuth 2](oauth2-authorization.md)
 * [Attributs de l’interface utilisateur](ui-attributes.md)
 * [Champs de données client](customer-data-fields.md)
 * [Configuration du schéma](schema-configuration.md)
