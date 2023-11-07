@@ -5,11 +5,11 @@ exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
 source-git-commit: 4cb570fbdb76e53dd0a8c4ee78c31d2a886e5dc1
 workflow-type: tm+mt
 source-wordcount: '1849'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
-# Outils sandbox
+# Outil Sandbox
 
 >[!NOTE]
 >
@@ -17,7 +17,7 @@ ht-degree: 10%
 
 Améliorez la précision de la configuration dans les environnements de test et exportez et importez en toute transparence les configurations des environnements de test entre les environnements de test grâce à la fonctionnalité d’outil d’environnement de test. Utilisez l’outil d’environnement de test pour réduire le temps de valorisation du processus de mise en oeuvre et déplacer les configurations réussies entre les environnements de test.
 
-Vous pouvez utiliser la fonction d’outils sandbox pour sélectionner différents objets et les exporter dans un package. Un package peut se composer d’un ou de plusieurs objets. <!--or an entire sandbox.-->Tous les objets inclus dans un package doivent provenir du même environnement de test.
+Vous pouvez utiliser la fonction d’outils sandbox pour sélectionner différents objets et les exporter dans un package. Un package peut se composer d’un ou de plusieurs objets. <!--or an entire sandbox.-->Tous les objets inclus dans un package doivent provenir du même sandbox.
 
 ## Objets pris en charge pour les outils Sandbox {#supported-objects}
 

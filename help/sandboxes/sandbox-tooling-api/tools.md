@@ -5,13 +5,13 @@ exl-id: 529cb7d6-6b3f-459c-be03-35fc28b891cf
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
 source-wordcount: '152'
-ht-degree: 3%
+ht-degree: 20%
 
 ---
 
 # Point de terminaison des outils
 
-L’outil Sandbox vous permet de sélectionner différents artefacts et de les exporter dans un package. Un package peut se composer d’un ou de plusieurs objets. Tous les objets inclus dans un package doivent provenir du même environnement de test.
+L’outil Sandbox vous permet de sélectionner différents artefacts et de les exporter dans un package. Un package peut se composer d’un ou de plusieurs objets. Tous les objets inclus dans un package doivent provenir du même sandbox.
 
 La variable `/tools` Le point de terminaison dans l’API des outils de test vous permet de répertorier et de récupérer les données JSON de la tâche.
 

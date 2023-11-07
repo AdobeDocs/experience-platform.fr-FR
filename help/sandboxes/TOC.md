@@ -18,7 +18,7 @@ ht-degree: 87%
 * Interface utilisateur des sandbox {#ui}
    * [Présentation de l’interface utilisateur des sandbox](ui/overview.md)
    * [Guide d’utilisation des sandbox](ui/user-guide.md)
-   * [Outils sandbox](ui/sandbox-tooling.md)
+   * [Outil Sandbox](ui/sandbox-tooling.md)
 * API Sandbox {#api}
    * [Aperçu](api/overview.md)
    * [Prise en main](api/getting-started.md)

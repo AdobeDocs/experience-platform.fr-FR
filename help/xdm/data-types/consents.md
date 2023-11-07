@@ -3,10 +3,10 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Type de données Consentements et Préférences
 description: Le type de données Consentement pour la confidentialité, la personnalisation et les préférences marketing est destiné à prendre en charge la collecte des autorisations et préférences client générées par les plateformes de gestion du consentement (CMP) et d’autres sources provenant de vos opérations de données.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 70ea0aa74f1874ea2772dd0d961c98d2ac1137e8
 workflow-type: tm+mt
-source-wordcount: '2033'
-ht-degree: 2%
+source-wordcount: '2294'
+ht-degree: 1%
 
 ---
 
@@ -295,23 +295,23 @@ Le tableau suivant décrit les valeurs acceptées pour `val`:
 
 ### Valeurs acceptées pour `preferred` {#preferred-values}
 
-Le tableau suivant décrit les valeurs acceptées pour `preferred`:
+Le tableau suivant décrit les valeurs acceptées pour `preferred`. La variable `preferred` les valeurs indiquent le canal préféré du client pour la réception de communications qui l’informerait sur la collecte de données, les politiques de confidentialité et les options de personnalisation.
 
 | Valeur | Description |
 | --- | --- |
-| `email` | Canal e-mail. |
-| `push` | Notifications push. |
-| `inApp` | Les messages in-app. |
-| `sms` | SMS. |
-| `phone` | Interactions d’appel téléphonique. |
-| `phyMail` | Courrier physique. |
-| `inVehicle` | Messages dans le véhicule. |
-| `inHome` | Messages internes. |
-| `iot` | L&#39;Internet des objets (IoT) des messages. |
-| `social` | Contenu des médias sociaux. |
-| `other` | Un canal qui ne correspond pas à une catégorie standard. |
-| `none` | Aucun canal préféré. |
-| `unknown` | Le canal préféré est inconnu. |
+| `email` | Cette préférence indique le consentement du client pour recevoir des messages par courrier électronique. |
+| `push` | Cette préférence indique le consentement du client pour recevoir des notifications push. Il s’agit de messages ou d’alertes envoyés directement à leur appareil, souvent à partir d’une application mobile. |
+| `inApp` | Cette préférence indique le consentement du client pour la réception de messages in-app. Ces messages sont diffusés dans une application mobile ou web et fournissent des informations pendant que l’utilisateur est activement impliqué dans l’application. |
+| `sms` | Cette préférence indique le consentement du client pour recevoir des messages par SMS (Short Message Service). Il s’agit de SMS envoyés à leur téléphone mobile. |
+| `phone` | Cette préférence indique le consentement du client pour recevoir des communications par le biais d’interactions d’appel téléphonique. |
+| `phyMail` | Cette préférence indique le consentement du client pour recevoir du matériel par courrier physique. |
+| `inVehicle` | Cette préférence indique le consentement du client pour recevoir des notifications lorsqu’il se trouve dans son véhicule. Ces messages peuvent être diffusés par le biais de systèmes d’information sur les véhicules ou d’autres canaux de communication internes au véhicule. |
+| `inHome` | Cette préférence indique le consentement du client pour recevoir les messages pendant son séjour à l’domicile. Ces messages peuvent être diffusés par le biais de périphériques d’accueil intelligents ou d’autres canaux de communication basés sur l’accueil. |
+| `iot` | Cette préférence indique le consentement du client pour recevoir des messages liés à l’Internet des objets (IoT). Ces messages peuvent être diffusés par le biais de périphériques et de systèmes connectés au sein de leur environnement. |
+| `social` | Cette préférence indique le consentement du client pour recevoir des communications par le biais des plateformes de médias sociaux. |
+| `other` | Cette préférence englobe les canaux qui ne correspondent pas aux catégories standard. Il représente des canaux de communication spécialisés ou alternatifs qui peuvent être spécifiques à une entreprise ou à un secteur d’activité particulier. |
+| `none` | Cette préférence indique que le client n’a pas de canal de communication préféré. |
+| `unknown` | Cette préférence signifie que le canal de communication préféré du client n’est pas connu ou n’a pas été spécifié. Cela peut se produire si le client n’a pas fourni d’informations de consentement ou de préférence explicites. |
 
 {style="table-layout:auto"}
 
