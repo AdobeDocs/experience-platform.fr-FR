@@ -2,10 +2,10 @@
 description: Le service de destinations dans Adobe Experience Platform utilise des points d’entrée de configuration pour plusieurs composants qui créent la fonctionnalité de destinations. Découvrez comment ces composants combinés permettent à Experience Platform de se connecter à des partenaires de destination, d’envoyer des messages personnalisés et d’activer des données de profil dans l’écosystème numérique.
 title: Options de configuration dans Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '828'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -39,7 +39,7 @@ Ce point d’entrée de configuration contient des informations de base et avanc
 Pour en savoir plus sur chacun des composants de configuration de destination, consultez la documentation ci-dessous. Vous pouvez configurer les fonctionnalités décrites ci-dessous via le [point d’entrée des destinations](../authoring-api/destination-configuration/create-destination-configuration.md).
 
 * [Configuration de l’authentification du client](destination-configuration/customer-authentication.md) : sélectionnez le mécanisme d’authentification qu’Experience Platform doit utiliser pour se connecter à la destination. Cette configuration génère la page [Configurer une nouvelle destination](../../ui/connect-destination.md) dans l’interface utilisateur d’Experience Platform, où les utilisateurs connectent Experience Platform aux comptes qu’ils possèdent avec la destination.
-* [Authentification OAuth 2](destination-configuration/oauth2-authorization.md) : découvrez tous les flux d’authentification [!DNL OAuth2] pris en charge par Destination SDK et obtenez des instructions pour configurer l’authentification [!DNL OAuth2] pour la destination.
+* [Autorisation OAuth2](destination-configuration/oauth2-authorization.md): découvrez tous les [!DNL OAuth2] flux d’authentification pris en charge par Destination SDK et obtenir des instructions pour configurer [!DNL OAuth2] l’authentification pour votre destination.
 * [Champs de données client](destination-configuration/customer-data-fields.md) : découvrez comment créer des champs d’entrée dans l’interface utilisateur d’Experience Platform qui permettent à vos utilisateurs de spécifier diverses informations relatives à la connexion et à l’exportation des données vers la destination.
 * [Attributs de l’interface utilisateur](destination-configuration/ui-attributes.md) : découvrez comment configurer les attributs de l’interface utilisateur, tels que le lien de documentation, la catégorie de carte de destination, ainsi que le type et la fréquence de connexion à la destination, pour les destinations créées avec Destination SDK.
 * [Configuration du schéma](destination-configuration/schema-configuration.md) : découvrez comment définir le schéma cible de la destination vers lequel les utilisateurs peuvent mapper les attributs et les identités de profil.

@@ -2,10 +2,10 @@
 description: Découvrez comment configurer les attributs de l’interface utilisateur, tels que le lien de documentation, la catégorie de carte de destination, ainsi que le type et la fréquence de connexion à la destination, pour les destinations créées avec Destination SDK.
 title: Attributs de l’interface utilisateur
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '755'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -121,7 +121,7 @@ Vous êtes arrivé au bout de cet article. À présent, vous devriez mieux compr
 Pour en savoir plus sur les autres composants de destination, consultez les articles suivants :
 
 * [Authentification du client](customer-authentication.md)
-* [Authentification OAuth 2](oauth2-authorization.md)
+* [Autorisation OAuth2](oauth2-authorization.md)
 * [Champs de données client](customer-data-fields.md)
 * [Configuration du schéma](schema-configuration.md)
 * [Configuration de l’espace de noms d’identité](identity-namespace-configuration.md)

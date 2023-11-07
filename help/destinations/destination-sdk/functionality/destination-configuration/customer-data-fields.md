@@ -2,10 +2,10 @@
 description: Découvrez comment créer des champs d’entrée dans l’interface utilisateur d’Experience Platform qui permettent à vos utilisateurs de spécifier diverses informations relatives à la connexion et à l’exportation des données vers la destination.
 title: Champs de données client
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1580'
-ht-degree: 91%
+ht-degree: 90%
 
 ---
 
@@ -568,7 +568,7 @@ Vous êtes arrivé au bout de cet article. À présent, vous devriez mieux compr
 Pour en savoir plus sur les autres composants de destination, consultez les articles suivants :
 
 * [Authentification du client](customer-authentication.md)
-* [Authentification OAuth 2](oauth2-authorization.md)
+* [Autorisation OAuth2](oauth2-authorization.md)
 * [Attributs de l’interface utilisateur](ui-attributes.md)
 * [Configuration du schéma](schema-configuration.md)
 * [Configuration de l’espace de noms d’identité](identity-namespace-configuration.md)

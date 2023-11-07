@@ -2,10 +2,10 @@
 description: Découvrez comment configurer un mécanisme d’authentification pour la destination et déterminez ce que les utilisateurs verront dans l’interface utilisateur en fonction de la méthode d’authentification que vous sélectionnez.
 title: Configuration de l’authentification du client
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '1094'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -26,7 +26,7 @@ Pendant la [création d’une destination](../../authoring-api/destination-confi
 
 * Pour les destinations qui utilisent un moyen d’[authentification de base](#basic), les utilisateurs doivent fournir un nom d’utilisateur et un mot de passe directement dans la page d’authentification de l’interface utilisateur Experience Platform.
 * Pour les destinations qui utilisent l’[authentification du porteur](#bearer), les utilisateurs doivent fournir un jeton porteur.
-* Pour les destinations qui utilisent l’[authentification OAuth 2](#oauth2), les utilisateurs sont redirigés vers la page de connexion de la destination, où ils peuvent se connecter à l’aide de leurs informations d’identification.
+* Pour les destinations qui utilisent [Autorisation OAuth2](#oauth2), les utilisateurs sont redirigés vers la page de connexion de votre destination, où ils peuvent se connecter à l’aide de leurs informations d’identification.
 * Pour les destinations [Amazon S3](#s3), les utilisateurs doivent fournir leurs clés d’accès et clé secrète [!DNL Amazon S3].
 * Pour les destinations [Azure Blob](#blob), les utilisateurs doivent fournir leur chaîne de connexion [!DNL Azure Blob].
 
@@ -233,7 +233,7 @@ Vous êtes arrivé au bout de cet article. À présent, vous devriez mieux compr
 
 Pour en savoir plus sur les autres composants de destination, consultez les articles suivants :
 
-* [Authentification OAuth 2](oauth2-authorization.md)
+* [Autorisation OAuth2](oauth2-authorization.md)
 * [Champs de données client](customer-data-fields.md)
 * [Attributs de l’interface utilisateur](ui-attributes.md)
 * [Configuration du schéma](schema-configuration.md)

@@ -2,10 +2,10 @@
 description: Découvrez comment configurer les paramètres de métadonnées d’audience pour les destinations créées avec Destination SDK.
 title: Configuration des métadonnées d’audience
 exl-id: ae71df4f-b753-4084-835f-03559b4986cb
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
 source-wordcount: '405'
-ht-degree: 91%
+ht-degree: 90%
 
 ---
 
@@ -68,7 +68,7 @@ Vous êtes arrivé au bout de cet article. À présent, vous devriez mieux compr
 Pour en savoir plus sur les autres composants de destination, consultez les articles suivants :
 
 * [Configuration de l’authentification du client](customer-authentication.md)
-* [Authentification OAuth 2](oauth2-authorization.md)
+* [Autorisation OAuth2](oauth2-authorization.md)
 * [Champs de données client](customer-data-fields.md)
 * [Attributs de l’interface utilisateur](ui-attributes.md)
 * [Configuration du schéma](schema-configuration.md)
