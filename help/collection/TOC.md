@@ -3,12 +3,12 @@ audience: user
 solution: Data Collection
 user-guide-title: Collecte de données
 breadcrumb-title: Collecte de données
-user-guide-description: Activez la collecte de données côté client pour Adobe Experience Platform Edge Network.
+user-guide-description: Découvrez comment activer la collecte de données côté client pour Adobe Experience Platform Edge Network et en savoir plus sur les technologies de collecte de données utilisées.
 feature: Data Collection
-source-git-commit: b7607907f811c22a7977598f63317ae974f2c4e3
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '33'
-ht-degree: 93%
+source-wordcount: '46'
+ht-degree: 45%
 
 ---
 

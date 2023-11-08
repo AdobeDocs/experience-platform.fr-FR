@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Aide Adobe Experience Platform Debugger
 breadcrumb-title: Guide d’Adobe Experience Platform Debugger
-user-guide-description: Parcourez vos pages web à la recherche de problèmes éventuels grâce à vos implémentations Experience Platform.
+user-guide-description: Parcourez vos pages web à la recherche de problèmes liés aux mises en oeuvre de vos Experience Platform à l’aide de l’Adobe Experience Platform Debugger pour Chrome et Firefox.
 feature: Debugger
-source-git-commit: 6362cef0dc33f4b1f9cf8560dae50e602ce6ad80
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '62'
-ht-degree: 100%
+source-wordcount: '72'
+ht-degree: 70%
 
 ---
 

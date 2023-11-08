@@ -3,11 +3,12 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;emplacement
 solution: Experience Platform
 title: Présentation des jeux de données
 description: Ce document présente de manière générale les jeux de données dans Experience Platform.
+user-guide-description: Consultez ce guide pour obtenir un aperçu général des jeux de données en Experience Platform. Découvrez ici comment les créer, imposer des contraintes aux données et ingérer des données dans des jeux de données.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: dca5c9df82434d75238a0a80f15e5562cf2fa412
+source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 83%
+source-wordcount: '870'
+ht-degree: 91%
 
 ---
 
@@ -43,7 +44,7 @@ La gouvernance des données d’Adobe Experience Platform vous permet de gére
 
 >[!IMPORTANT]
 >
->Les libellés ne peuvent plus être appliqués aux champs au niveau du jeu de données. Ce workflow a été abandonné au profit de l’application des libellés au niveau du schéma. Les libellés précédemment appliqués au niveau de l’objet du jeu de données seront toujours pris en charge par l’interface utilisateur de Platform jusqu’au 31 mai 2024. Pour garantir la cohérence de vos libellés sur tous les schémas, les libellés précédemment attachés aux champs au niveau du jeu de données doivent être migrés au niveau du schéma par vous au cours de l’année à venir. Voir la section sur [migration des libellés précédemment appliqués](../../data-governance/e2e.md#migrate-labels) pour obtenir des instructions sur la manière de procéder.
+>Les libellés ne peuvent plus être appliqués aux champs au niveau du jeu de données. Ce workflow a été abandonné au profit de l’application des libellés au niveau du schéma. Les libellés précédemment appliqués au niveau de l’objet du jeu de données seront toujours pris en charge par l’interface utilisateur de Platform jusqu’au 31 mai 2024. Pour garantir la cohérence de vos libellés sur tous les schémas, les libellés précédemment attachés aux champs au niveau du jeu de données doivent être migrés au niveau du schéma par vous-même au cours de l’année à venir. Consultez la section sur la [migration des libellés précédemment appliqués](../../data-governance/e2e.md#migrate-labels) pour connaitre la procédure à suivre.
 
 Pour plus d’informations sur ce service, consultez la [présentation de la gouvernance des données](../../data-governance/home.md). Pour savoir comment utiliser les étiquettes d’utilisation dans [!DNL Platform], reportez-vous aux guides suivants :
 
@@ -52,7 +53,7 @@ Pour plus d’informations sur ce service, consultez la [présentation de la gou
 
 ## Jeux de données dans les services [!DNL Platform] en aval
 
-Une fois que les jeux de données ont été utilisés pour stocker les données ingérées, ils sont utilisés par les services [!DNL Platform] en aval pour mettre à jour les profils clients, obtenir des insights grâce au machine learning, etc.
+Une fois que les jeux de données ont été utilisés pour stocker les données ingérées, ils sont utilisés par les services [!DNL Platform] en aval pour mettre à jour les profils clients, obtenir des informations grâce au machine learning, etc.
 
 Voici une liste des services en aval qui utilisent des jeux de données pour diverses opérations. Veuillez consulter la documentation de chaque service pour en savoir plus.
 
@@ -60,7 +61,7 @@ Voici une liste des services en aval qui utilisent des jeux de données pour div
 * [Service Adobe Experience Platform Identity](../../identity-service/home.md) : associe les identités des appareils et des systèmes, en liant les jeux de données en fonction des champs d’identité définis par les schémas XDM auxquels ils se conforment.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md) : tire parti de [!DNL Identity Service] pour créer des profils client détaillés à partir de vos jeux de données en temps réel. [!DNL Real-Time Customer Profile] extrait les données du [!DNL Data Lake] et conserve les profils clients dans sa propre banque de données distincte.
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) : permet de créer des segments et de générer des audiences à partir de vos données [!DNL Real-Time Customer Profile]. Ces audiences peuvent ensuite être exportées vers leurs propres jeux de données dans le [!DNL Data Lake].
-* [Espace de travail de science des données d’Adobe Experience Platform](../../data-science-workspace/home.md) : utilise le machine learning et l’intelligence artificielle pour découvrir des insights dans les jeux de données volumineux.
+* [Espace de travail de science des données d’Adobe Experience Platform](../../data-science-workspace/home.md) : utilise le machine learning et l’intelligence artificielle pour découvrir des informations dans les jeux de données volumineux.
 * [Adobe Experience Platform Query Service](../../query-service/home.md) : vous permet d’utiliser une requête SQL standard pour interroger les données dans [!DNL Experience Platform]. Il peut joindre n’importe quel jeu de données dans le [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser pour le reporting, [!DNL Data Science Workspace], ou [!DNL Real-Time Customer Profile].
 * [Service de destinations d’Adobe Experience Platform](../../destinations/home.md) : vous permet d’[exporter des jeux de données](/help/destinations/ui/export-datasets.md) vers les destinations de stockage dans le cloud ou de marketing par e-mail de votre choix, pour les activités de création de rapports ou de science des données.
 
