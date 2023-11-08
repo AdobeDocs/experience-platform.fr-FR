@@ -7,19 +7,19 @@ exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 source-git-commit: 5b3bfc38a1b159d57c7be6733b9c2515ba72c3c6
 workflow-type: tm+mt
 source-wordcount: '564'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform Debugger
 
-## Version 1.5.1 - 2 novembre 2023
+## Version 1.5.1 - 2 novembre 2023
 
 ### Correctifs et améliorations
 
-* Correction de problèmes en raison desquels les événements Analytics étaient ignorés ou dupliqués.
-* Correction d’un problème en raison duquel la taille maximale de stockage d’état était dépassée.
-* Correction d’un problème en raison duquel la recherche des journaux Edge ne filtrait pas les événements.
+* Correction de problèmes où les événements Analytics étaient ignorés ou dupliqués.
+* Correction d’un problème de dépassement de la taille maximale de stockage de l’état.
+* Correction d’un problème où la recherche des journaux Edge ne filtrait pas les événements.
 
 ## Version 1.5.0 - 19 octobre 2023
 

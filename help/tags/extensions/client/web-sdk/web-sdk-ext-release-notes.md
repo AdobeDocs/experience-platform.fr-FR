@@ -5,7 +5,7 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
 workflow-type: tm+mt
 source-wordcount: '1806'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -18,11 +18,11 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 
 **Nouvelles fonctionnalités**
 
-* Ajout `Request default personalization` pour envoyer une action d’événement.
+* Ajout de l’option `Request default personalization` pour envoyer une action d’événement.
 * Ajout de la prise en charge des événements de haut et de bas de page dans l’action d’événement d’envoi.
-* Ajout `Apply propositions` action.
-* Ajout `Evaluate rulesets` action et `Subscribe ruleset items` pour les messages in-app.
-* Ajout `Decision context` pour envoyer une action d’événement.
+* Ajout de l’action `Apply propositions`.
+* Ajout de l’action `Evaluate rulesets` et de l’événement `Subscribe ruleset items` pour les messages in-app.
+* Ajout de `Decision context` pour envoyer une action d’événement.
 
 **Correctifs et améliorations**
 
@@ -206,7 +206,7 @@ Contient la version 2.5.0 de la bibliothèque SDK Web Adobe Experience Platfo
 
 Contient la version 2.4.0 de la bibliothèque SDK Web Adobe Experience Platform.
 
-* Ajout de la case à cocher [déchargement de document](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#using-the-sendbeacon-api) à l’interface utilisateur de l’action Envoyer l’événement.
+* Ajout de la case à cocher [déchargement de document](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=fr#using-the-sendbeacon-api) à l’interface utilisateur de l’action Envoyer l’événement.
 * Ajout de la prise en charge d’une option `out` lors de la [configuration du consentement par défaut](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=fr#default-consent) qui supprime tous les événements jusqu’à ce que le consentement soit reçu (l’option `pending` existante met les événements en file d’attente et les envoie une fois le consentement reçu).
 * Ajout d’une info-bulle au champ de consentement par défaut.
 * Ajout de la prise en charge du [standard de consentement 2.0 d’Adobe](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?lang=fr#communicating-consent-preferences-via-the-adobe-standard).
