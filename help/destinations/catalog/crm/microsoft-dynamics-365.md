@@ -4,10 +4,10 @@ title: Connexion à Microsoft Dynamics 365
 description: La destination Microsoft Dynamics 365 vous permet d’exporter les données de votre compte et de les activer dans Microsoft Dynamics 365 pour répondre aux besoins de votre entreprise.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 29cf080f83adf0e7f8b3549104229e9f54c5b8d9
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 71%
+source-wordcount: '2183'
+ht-degree: 67%
 
 ---
 
@@ -86,7 +86,7 @@ La page [Limites et allocations de requêtes](https://docs.microsoft.com/fr-fr/p
 
 | Identité cible | Exemple | Description | Considérations |
 |---|---|---|---|
-| `contactId` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | Identifiant unique d’un contact. | **Obligatoire**. Reportez-vous à la documentation de [[!DNL Dynamics 365] ](https://docs.microsoft.com/fr-fr/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) pour plus d’informations. |
+| `contactid` | 7eb682f1-ca75-e511-80d4-00155d2a68d1 | Identifiant unique d’un contact. | **Obligatoire**. Reportez-vous à la documentation de [[!DNL Dynamics 365] ](https://docs.microsoft.com/fr-fr/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1) pour plus d’informations. |
 
 {style="table-layout:auto"}
 
@@ -162,30 +162,31 @@ Pour envoyer correctement vos données d’audience d’Adobe Experience Platf
 1. Dans l’étape **[!UICONTROL Mappage]**, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**. Une nouvelle ligne de mappage s’affichera à l’écran.
    ![Capture d’écran de l’interface utilisateur de Platform montrant l’ajout d’un nouveau mappage.](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
 
-1. Dans la fenêtre **[!UICONTROL Sélectionner le champ source]**, choisissez la catégorie **[!UICONTROL Sélectionner un espace de noms d’identité]** et sélectionnez `contactId`.
+1. Dans la fenêtre **[!UICONTROL Sélectionner le champ source]**, choisissez la catégorie **[!UICONTROL Sélectionner un espace de noms d’identité]** et sélectionnez `contactid`.
    ![Capture d’écran de l’interface utilisateur de Platform montrant le mappage source.](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
 
 1. Dans la fenêtre **[!UICONTROL Sélectionner le champ cible]**, sélectionnez le type de champ cible vers lequel vous souhaitez mapper votre champ source.
    * **[!UICONTROL Sélectionner un espace de noms d’identité]** : sélectionnez cette option pour mapper votre champ source vers un espace de noms d’identité de la liste.
-     ![Capture d’écran de l’interface utilisateur de Platform montrant le mapping de ciblage pour contactId.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
+     ![Copie d’écran de l’interface utilisateur de Platform montrant le mapping de ciblage pour contactid.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
    * Ajoutez le mappage suivant entre votre schéma de profil XDM et votre instance [!DNL Dynamics 365] :
 |Schéma de profil XDM|[!DNL Dynamics 365] Instance| Obligatoire|
-|—|—|—| |`contactId`|`contactId`| Oui |
+|—|—|—| |`contactid`|`contactid`| Oui |
 
    * **[!UICONTROL Sélectionner des attributs personnalisés]** : sélectionnez cette option pour mapper votre champ source vers un attribut personnalisé que vous définissez dans le champ **[!UICONTROL Nom de l’attribut]**. Pour une liste complète des attributs pris en charge, consultez la [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/fr-fr/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties).
-     ![Capture d’écran de l’interface utilisateur de Platform montrant le mapping de ciblage pour le nom de famille.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-lastname.png)
+     ![Copie d’écran de l’interface utilisateur de Platform montrant le mappage de Target pour le courrier électronique.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
 
      >[!IMPORTANT]
      >
-     >Si vous disposez d’un champ source de date ou d’horodatage mappé vers un champ cible [!DNL Dynamics 365] [date ou horodatage](https://docs.microsoft.com/fr-fr/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest), assurez-vous que la valeur mappée n’est pas vide. Si la valeur passée est vide, un message d’erreur *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* apparaîtra et les données ne seront pas mises à jour. Il s’agit d’une limitation de [!DNL Dynamics 365].
+     > * Les noms des champs cibles doivent se trouver dans `lowercase`.
+     > * De plus, si vous disposez d’un champ source de date ou d’horodatage mappé à un [!DNL Dynamics 365] [date ou horodatage](https://docs.microsoft.com/fr-fr/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) champ cible , assurez-vous que la valeur mappée n’est pas vide. Si la valeur du champ exporté est vide, un événement *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* et que les données ne seront pas mises à jour. Il s’agit d’une limitation de [!DNL Dynamics 365].
 
    * Par exemple, en fonction des valeurs que vous souhaitez mettre à jour, ajoutez le mappage suivant entre votre schéma de profil XDM et votre instance [!DNL Dynamics 365] :
 |Schéma de profil XDM|[!DNL Dynamics 365] Instance|
 |—|—|
-|`person.name.firstName`|`FirstName`|
-|`person.name.lastName`|`LastName`|
-|`personalEmail.address`|`Email`|
+|`person.name.firstName`|`firstname`|
+|`person.name.lastName`|`lastname`|
+|`personalEmail.address`|`emailaddress1`|
 
    * Un exemple d’utilisation de ces mappages est illustré ci-dessous :
      ![Capture d’écran de l’interface utilisateur de Platform montrant les mappings de ciblage.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
@@ -250,6 +251,7 @@ Cette section répertorie les nouvelles fonctionnalités et les mises à jour im
 
 | Mois de publication | Type de mise à jour | Description |
 |---|---|---|
+| Octobre 2023 | Mise à jour de la documentation | Mise à jour des conseils pour indiquer que tous les noms d’attributs de la cible doivent être en minuscules, dans la variable [Considérations sur le mappage et exemple](#mapping-considerations-example) étape . |
 | Août 2023 | Nouvelles fonctionnalités et mise à jour de la documentation | Ajout de la prise en charge de préfixes de champ personnalisés [!DNL Dynamics 365] pour les champs personnalisés qui n’ont pas été créés dans la solution par défaut dans [!DNL Dynamics 365]. Un nouveau champ de saisie, **[!UICONTROL Préfixe de personnalisation]**, a été ajouté à l’étape [Renseigner les détails de la destination. ](#destination-details) (PLATIR-31602). |
 | Nov 2022 | Version initiale | Version initiale de la destination et publication de la documentation. |
 
