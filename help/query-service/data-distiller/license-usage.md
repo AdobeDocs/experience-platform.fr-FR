@@ -2,45 +2,32 @@
 title: Surveillance de l’utilisation de la licence de requête par lots
 description: L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation de la licence Data Distiller de votre entreprise.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-hide: true
-hidefromtoc: true
 recommendations: noCatalog, display
-source-git-commit: fa573dcf03eb711e946afe40d107871f5166ff58
+source-git-commit: e55cada0975d771f225e829aeeeeeeb64b9acf4a
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 15%
+source-wordcount: '274'
+ht-degree: 0%
 
 ---
 
-# (Alpha) Surveillance de l’utilisation des licences de requête par lots {#monitor-license-usage}
+# Surveiller l’utilisation des licences de requête par lots {#monitor-license-usage}
 
->[!IMPORTANT]
+Le tableau de bord de l’utilisation des licences fournit des rapports granulaires sur l’utilisation des licences et les mesures d’utilisation de Query Service pour chaque produit acheté. Pour en savoir plus sur les mesures disponibles affichées dans le tableau de bord, consultez la page [guide de tableau de bord d’utilisation des licences](../../dashboards/guides/license-usage.md#available-metrics).
+
+Le tableau de bord fournit des mesures d’utilisation pour chaque produit acheté, l’utilisation consolidée des mesures dans tous les environnements de test de production ou de développement et les mesures d’utilisation d’un environnement de test spécifique. Les informations affichées ici sont capturées pendant un instantané quotidien de votre instance Platform.
+
+>[!NOTE]
 >
->La possibilité de surveiller l’utilisation des licences de requête par lots via l’interface utilisateur n’est pas encore disponible pour tous les utilisateurs. Cette fonctionnalité est en version alpha et est encore en cours de test. Ce document est sujet à modification.
-
-L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation de la licence Query Service de votre entreprise.
-
-Vous trouverez des instructions détaillées sur l’accès au tableau de bord d’utilisation de la licence et les interactions avec celui-ci dans l’interface utilisateur, ainsi que des informations sur les mesures disponibles affichées dans le tableau de bord, dans le [guide de tableau de bord d’utilisation de la licence](../../dashboards/guides/license-usage.md).
-
-Veuillez lire la [Présentation des tableaux de bord](../../dashboards/home.md) pour un résumé de toutes les fonctionnalités du tableau de bord dans Experience Platform.
-
-## Widgets {#widgets}
-
-Le tableau de bord de l’utilisation des licences est constitué de widgets qui affichent des mesures en lecture seule fournissant des informations importantes sur l’utilisation des licences de votre entreprise. Les mesures visibles dépendent des licences spécifiques à votre entreprise.
-
-Sélectionnez un bouton radio pour choisir un environnement de test à analyser et utilisez la liste déroulante pour sélectionner une période pour l’analyse. Les options disponibles sont une période de 30 jours, 90 jours, 12 mois, la dernière année, la période de contrat complète ou une date personnalisée.
+>Le tableau de bord de l’utilisation des licences n’est pas activé par défaut. Les utilisateurs doivent disposer de l’autorisation &quot;Afficher le tableau de bord de l’utilisation de la licence&quot; pour pouvoir afficher le tableau de bord. Pour connaître les étapes d’octroi des autorisations d’accès pour afficher le tableau de bord d’utilisation des licences, reportez-vous à la section [Guide des autorisations de tableau de bord](../../dashboards/permissions.md).
 
 ## Calculer les heures {#compute-hours}
 
-Le [!UICONTROL Calculer les heures] Le widget utilise un graphique linéaire pour visualiser le temps de traitement des requêtes par lots de votre entreprise chaque jour. Le widget affiche trois mesures indiquées par un nombre dans le coin supérieur gauche du widget. Voici les
+La variable [!UICONTROL Calculer les heures] ne s’applique qu’aux clients disposant de la licence Data Distiller pour les requêtes par lots. [!UICONTROL Calculer les heures] sont la mesure du temps nécessaire aux moteurs Query Service pour lire, traiter et écrire des données dans le lac de données lors de l’exécution d’une requête par lots.
 
-- [!UICONTROL Réels]: Nombre total d’heures de calcul pour la période choisie dans la liste déroulante de présentation. Cette mesure est également indiquée sur le graphique par une ligne continue.
-- [!UICONTROL Sous licence]: Nombre total d’heures de calcul autorisées par le contrat de licence de votre entreprise. Cette mesure est également indiquée sur le graphique par une ligne pointillée.
-- [!UICONTROL Utilisation]: Il s’agit du pourcentage de votre utilisation par rapport au nombre maximal d’heures de calcul convenu par votre licence.
-
->[!IMPORTANT]
+>[!NOTE]
 >
->Le [!UICONTROL Calculer les heures] ne s’applique qu’aux clients disposant de la licence Data Distiller pour les requêtes par lots.
+>**Les données sont disponibles avec des restrictions.**: les données commencent le 1er octobre 2023 sans évolution.<br>La variable **renvoyer** de données à partir de la date de début de votre contrat est un travail en cours. Elle devrait être disponible d’ici la fin de l’année civile.
 
-![Le tableau de bord de l’utilisation des licences avec le widget des heures de calcul en surbrillance.](../images/data-distiller/compute-hours.png)
+![Le tableau de bord de l’utilisation des licences avec la mesure Heures de calcul mise en surbrillance.](../images/data-distiller/compute-hours.png)
 
+Pour plus d’informations sur les mesures disponibles pour votre entreprise en fonction de la licence achetée de votre entreprise, voir la section [guide de tableau de bord d’utilisation des licences](../../dashboards/guides/license-usage.md).
