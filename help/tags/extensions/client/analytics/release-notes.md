@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension Adobe Analytics
 description: Dernières notes de mise à jour pour lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: a49e0fe6c99f2874a9ca8403c4b69428826a6365
 workflow-type: tm+mt
-source-wordcount: '1392'
-ht-degree: 100%
+source-wordcount: '1416'
+ht-degree: 98%
 
 ---
 
@@ -17,13 +17,22 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 >
 >L’extension de balises Analytics est régulièrement mise à jour en réponse aux mises à jour apportées à la [Bibliothèque JavaScript AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=fr). Voir [Notes de mise à jour d’AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr) pour plus d’informations sur les versions spécifiques mentionnées ci-dessous.
 
+## 15 septembre 2023
+
+**Extension Adobe Analytics 1.9.3**
+
+**Fonctionnalités** :
+
+* Mise à niveau vers [AppMeasurement à la version 2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
+
+
 ## 19 juillet 2023
 
 **Extension Adobe Analytics 1.9.2**
 
 **Fonctionnalités** :
 
-* Mise à niveau vers AppMeasurement v2.24.0.
+* Mise à niveau vers [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
 * Ajout d’une configuration facultative (paramètres par défaut de `decodeLinkParameters` = `false`) qui décode les URL de lien contenant des caractères codés sur deux octets.
 
 **Correctifs de bugs** :
