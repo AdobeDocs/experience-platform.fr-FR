@@ -2,10 +2,10 @@
 title: Guide d’informations sur les rapports de magasin accélérés de requête
 description: Découvrez comment créer un modèle de données d’informations sur les rapports via Query Service afin de l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
 workflow-type: tm+mt
-source-wordcount: '1033'
-ht-degree: 82%
+source-wordcount: '1034'
+ht-degree: 84%
 
 ---
 
@@ -23,11 +23,7 @@ Ce tutoriel utilise des tableaux de bord définis par l’utilisateur pour visua
 
 ## Prise en main
 
-Le SKU Data Distiller est nécessaire pour créer un modèle de données personnalisé pour vos rapports d’informations et pour étendre les modèles de données Real-time CDP qui contiennent des données Platform enrichies. Veuillez consulter la [packaging](../../packages.md) et [barrières de sécurité](../../guardrails.md#query-accelerated-store) documentation relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
-
-<!-- Document is hidden temporarily
-Please see the [packaging](../../packages.md), [guardrails](../../guardrails.md#query-accelerated-store), and [licensing](../../data-distiller/license-usage.md) documentation that relates to the Data Distiller SKU. 
--->
+Le SKU Data Distiller est nécessaire pour créer un modèle de données personnalisé pour vos rapports d’informations et pour étendre les modèles de données Real-time CDP qui contiennent des données Platform enrichies. Veuillez consulter le [packaging](../../packaging.md), les [mécanismes de sécurisation](../../guardrails.md#query-accelerated-store), et la documentation de la [licence](../../data-distiller/license-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
 
 ## Créer un modèle de données de rapport d’informations
 
@@ -37,7 +33,7 @@ Dès le départ, vous disposez d’un modèle de données initial issu de vos so
 
 ![Schéma relationnel d’entité (ERD) du modèle utilisateur d’informations sur l’audience.](../../images/query-accelerated-store/audience-insight-user-model.png)
 
-Dans cet exemple, le `externalaudiencereach` tableau/jeu de données est basé sur un identifiant et suit les limites inférieure et supérieure pour le nombre de correspondances. Le `externalaudiencemapping` table de dimensions/jeu de données mappe l’ID externe à une destination et à une audience sur Platform.
+Dans cet exemple, le `externalaudiencereach` tableau/jeu de données est basé sur un identifiant et suit les limites inférieure et supérieure pour le nombre de correspondances. La variable `externalaudiencemapping` table de dimensions/jeu de données mappe l’ID externe à une destination et à une audience sur Platform.
 
 ## Créer un modèle de rapport d’informations avec Data Distiller
 
