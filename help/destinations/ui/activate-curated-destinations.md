@@ -2,9 +2,9 @@
 title: Activation des audiences vers des destinations traitées en fonction des identifiants LiveRamp
 type: Tutorial
 description: Découvrez comment activer les audiences de Adobe Experience Platform vers les destinations audio et TV connectées, ainsi que d’autres intégrations à l’aide de l’LiveRamp Ramp ID.
-source-git-commit: 25cda72508860b57bfa9ad0a729d0329d0f6bd1f
+source-git-commit: 1eb422572d95426fa8b342dc6aa79fb6125e18a1
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '663'
 ht-degree: 4%
 
 ---
@@ -57,6 +57,12 @@ Une fois les audiences exportées, vous pouvez les activer à l’aide de la fon
 >[!TIP]
 >
 >Ce processus vous permet d’activer vos audiences vers des destinations telles que [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney), etc., directement depuis l’interface utilisateur de Real-Time CDP, sans avoir à se connecter à [!DNL LiveRamp] compte pour l’activation.
+
+### Tutoriel vidéo {#video}
+
+Regardez la vidéo ci-dessous pour obtenir une explication de bout en bout du processus décrit dans cette page.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425367)
 
 ### Étape 1 : envoyez vos audiences de l’Experience Platform vers LiveRamp, via le [!DNL LiveRamp - Onboarding] destination {#onboarding}
 
