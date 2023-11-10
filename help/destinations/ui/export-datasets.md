@@ -3,10 +3,10 @@ title: Exportation de jeux de données vers des destinations de stockage dans le
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7c68b6a3b08eb47fa8c3906468dc87f3715fbe99
 workflow-type: tm+mt
-source-wordcount: '1722'
-ht-degree: 58%
+source-wordcount: '1751'
+ht-degree: 57%
 
 ---
 
@@ -60,6 +60,12 @@ Identifiez dans le tableau ci-dessous les types de jeux de données que vous pou
   </tr>
 </tbody>
 </table>
+
+## Tutoriel vidéo {#video-tutorial}
+
+Regardez la vidéo ci-dessous pour obtenir une explication de bout en bout du workflow décrit sur cette page, les avantages de l’utilisation de la fonctionnalité d’exportation de jeux de données et quelques cas d’utilisation suggérés.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Destinations prises en charge {#supported-destinations}
 
