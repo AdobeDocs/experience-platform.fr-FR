@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestion des autorisations dʼun profil de produit
 description: Le contrôle d’accès dans Adobe Experience Platform vous permet de gérer les rôles et les autorisations pour diverses fonctionnalités de Platform à l’aide d’Adobe Admin Console. Ce document sert de guide pour gérer les autorisations dʼun profil de produit pour Platform.
 exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 1812af74e82f3071963177356b3cd4b23ea567f5
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 96%
+source-wordcount: '356'
+ht-degree: 92%
 
 ---
 
@@ -17,7 +17,7 @@ Immédiatement après la [création d’un nouveau profil de produit](#create-a-
 
 ![autorisations](../images/permissions.png)
 
-Les autorisations sont divisées en catégories et répertoriées sur cette page. La liste affiche le nom de la catégorie, le nombre d’autorisations qu’elle contient (et le nombre d’autorisations actives) ainsi que sa description.
+Les autorisations sont divisées en catégories et répertoriées sur cette page. La liste affiche le nom de la catégorie, le nombre d’autorisations qu’elle contient (et le nombre d’autorisations actives) ainsi que sa description. Consultez le tableau de la section [Autorisations des ressources](/help/access-control/home.md#permissions) pour obtenir une ventilation des autorisations disponibles pour chaque rôle.
 
 Sélectionnez nʼimporte quelle catégorie de la liste pour ouvrir la page **[!UICONTROL Modifier les autorisations]**.
 
