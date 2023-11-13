@@ -3,9 +3,9 @@ title: Notes de mise à jour de l’extension Adobe Target v2
 description: Notes de mise à jour les plus récentes pour l’extension de balise Adobe Target v2 dans Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
 source-git-commit: a51bc1fb536347840eef113a8649b64fbf573287
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '776'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -15,20 +15,20 @@ ht-degree: 92%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-## v0.20.1 (3 novembre 2023)
+## v0.20.1 (3 novembre 2023)
 
-- Mise à jour de la prise en charge `at.js` 2.11.2.
-- Correction d’un bogue qui provoquait des incohérences dans les jetons de réponse envoyés sur des événements personnalisés.
+- Mise à jour pour la prise en charge d’`at.js` 2.11.2.
+- Correction d’un bug qui provoquait des incohérences dans les jetons de réponse envoyés sur des événements personnalisés.
 
 ## v0.20.0 (9 octobre 2023)
 
-- Mise à jour de la prise en charge `at.js` 2.11.0.
+- Mise à jour pour la prise en charge d’`at.js` 2.11.0.
 - Ajout de la prise en charge de la définition des sandboxId et sandboxName Adobe Experience Platform personnalisés dans targetGlobalSettings, qui seront transmis à l’API Delivery lors des appels getOffer/getOffers.
 - Correctif des sélecteurs DOM fantômes pour enchaîner :eq() dans le sélecteur.
 
 ## v0.19.3 (18 septembre 2023)
 
-- Mise à jour de la prise en charge `at.js` v2.10.3
+- Mise à jour pour la prise en charge d’`at.js` v2.10.3.
 - Correction d’un problème qui déclenchait à tort l’événement personnalisé at-content-rendering-succeeded, alors qu’aucune offre n’était générée. L’événement correct, at-content-rendering-no-offer, est maintenant déclenché.
 - Ajout d’eventToken et de responseTokens à l’objet d’erreur pour l’événement personnalisé at-content-rendering-failed.
 
@@ -67,11 +67,11 @@ ht-degree: 92%
 
 - Mise à jour pour la prise en charge de `at.js` v2.7.0, désormais disponible en téléchargement depuis Adobe Target.
 
-## v0.15.2 (16 août 2021)
+## v0.15.2 (16 août 2021)
 
-- Mise à jour de la prise en charge `at.js` 2.6.1.
+- Mise à jour pour la prise en charge d’`at.js` 2.6.1.
 - Initialisez la prise de décision sur le périphérique au démarrage, indépendamment de l’événement de chargement de page.
-- La prise de décision sur l’appareil peut désormais être utilisée lors de la première visite une fois l’artefact téléchargé.
+- La prise de décision sur le périphérique peut désormais être utilisée lors de la première visite, une fois l’artefact téléchargé.
 
 ## v0.15.1 (20 juillet 2021)
 

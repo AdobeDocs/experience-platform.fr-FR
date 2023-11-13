@@ -5,7 +5,7 @@ keywords: debugger ; extension experience cloud debugger ; chrome ; extensi
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 source-git-commit: 5b3bfc38a1b159d57c7be6733b9c2515ba72c3c6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '564'
 ht-degree: 100%
 
