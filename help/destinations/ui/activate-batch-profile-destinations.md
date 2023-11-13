@@ -4,7 +4,7 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations basées sur un profil de lot.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: 28578a7e852cbefd3c644259a4bffaed29501a9e
 workflow-type: tm+mt
 source-wordcount: '3781'
 ht-degree: 61%
@@ -30,7 +30,7 @@ Cet article explique le processus requis pour activer les audiences dans les des
 
 Pour activer des audiences vers des destinations, vous devez avoir réussi [connecté à une destination](./connect-destination.md). Si vous ne l’avez pas déjà fait, accédez au [catalogue de destinations](../catalog/overview.md), parcourez les destinations prises en charge et configurez la destination que vous souhaitez utiliser.
 
-### Formats de fichiers pris en charge pour l’exportation {#supported-file-formats-export}
+## Formats de fichiers pris en charge pour l’exportation {#supported-file-formats-export}
 
 Les formats de fichiers suivants sont pris en charge lors de l’exportation d’audiences :
 
