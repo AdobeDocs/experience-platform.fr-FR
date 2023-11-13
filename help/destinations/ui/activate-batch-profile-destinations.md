@@ -4,10 +4,10 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations basées sur un profil de lot.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a854960b11cb3e56046dc9541f76c62a7e3f2f10
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '3720'
-ht-degree: 63%
+source-wordcount: '3781'
+ht-degree: 61%
 
 ---
 
@@ -29,6 +29,18 @@ Cet article explique le processus requis pour activer les audiences dans les des
 ## Conditions préalables {#prerequisites}
 
 Pour activer des audiences vers des destinations, vous devez avoir réussi [connecté à une destination](./connect-destination.md). Si vous ne l’avez pas déjà fait, accédez au [catalogue de destinations](../catalog/overview.md), parcourez les destinations prises en charge et configurez la destination que vous souhaitez utiliser.
+
+### Formats de fichiers pris en charge pour l’exportation {#supported-file-formats-export}
+
+Les formats de fichiers suivants sont pris en charge lors de l’exportation d’audiences :
+
+* CSV
+* JSON
+* Parquet
+
+Notez que l’exportation de fichiers CSV vous offre une plus grande flexibilité en termes de structure de vos fichiers exportés. En savoir plus sur [Configuration du formatage des fichiers pour les fichiers CSV](/help/destinations/ui/batch-destinations-file-formatting-options.md#file-configuration).
+
+Sélectionnez le format de fichier souhaité à exporter lors de la [création d’une connexion à la destination basée sur les fichiers](/help/destinations/ui/connect-destination.md).
 
 ## Sélectionner votre destination {#select-destination}
 
@@ -532,7 +544,7 @@ Si vous êtes satisfait de votre sélection et qu’aucune violation de stratég
 
 ## Vérification de l’activation de l’audience {#verify}
 
-Pour les destinations de marketing par e-mail et celles de stockage dans le cloud, Adobe Experience Platform crée un fichier `.csv` dans l’emplacement de stockage indiqué. Attendez-vous à ce qu’un nouveau fichier soit créé dans votre emplacement de stockage selon le planning défini dans le workflow. Le format de fichier par défaut est présenté ci-dessous, mais vous pouvez : [modifier les composants du nom de fichier ;](#file-names):
+Lors de l’exportation d’audiences vers des destinations de stockage dans le cloud, Adobe Experience Platform crée une `.csv`, `.json`, ou `.parquet` dans l’emplacement de stockage que vous avez fourni. Attendez-vous à ce qu’un nouveau fichier soit créé dans votre emplacement de stockage selon le planning défini dans le workflow. Le format de fichier par défaut est présenté ci-dessous, mais vous pouvez : [modifier les composants du nom de fichier ;](#file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Par exemple, si vous avez sélectionné une fréquence d’exportation quotidienne, les fichiers que vous recevrez pendant trois jours consécutifs peuvent ressembler à ceci :

@@ -2,10 +2,10 @@
 title: Paramètres d’exportation configurables et communs des destinations
 description: Découvrez quels paramètres d’exportation des destinations sont configurables au niveau de la destination et lesquels sont fixes et impossibles à modifier.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 92%
+source-wordcount: '842'
+ht-degree: 91%
 
 ---
 
@@ -58,7 +58,7 @@ En savoir plus sur les différentes options et étapes disponibles dans le workf
 * [Activer les données d’audience vers les destinations d’entreprise](/help/destinations/ui/activate-streaming-profile-destinations.md)
 * [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md)
 * [Exporter des fichiers à la demande vers des destinations par lots](/help/destinations/ui/export-file-now.md)
-* [(Version bêta) Exporter des jeux de données vers des destinations d’espace de stockage](/help/destinations/ui/export-datasets.md)
+* [Exportation des jeux de données vers des destinations de stockage dans le cloud](/help/destinations/ui/export-datasets.md)
 
 ## Étapes suivantes {#next-steps}
 
