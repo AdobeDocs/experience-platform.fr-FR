@@ -19,7 +19,7 @@ Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votr
 
 À l’aide d’API RESTful ou de l’interface utilisateur, vous pouvez créer des politiques de fusion, gérer des politiques existantes et définir une politique de fusion par défaut pour votre organisation dans l’interface utilisateur. Ce guide décrit les étapes à suivre pour utiliser les stratégies de fusion à l’aide de l’API.
 
-Pour utiliser des stratégies de fusion à l’aide de l’interface utilisateur, reportez-vous à la section [guide de l’interface utilisateur des stratégies de fusion](../merge-policies/ui-guide.md). Pour en savoir plus sur les stratégies de fusion en général et leur rôle dans Experience Platform, veuillez commencer par lire la [présentation des stratégies de fusion](../merge-policies/overview.md).
+Pour utiliser des stratégies de fusion à l’aide de l’interface utilisateur, reportez-vous au [guide de l’interface utilisateur des stratégies de fusion](../merge-policies/ui-guide.md). Pour en savoir plus sur les stratégies de fusion en général et leur rôle dans Experience Platform, veuillez commencer par lire la [présentation des stratégies de fusion](../merge-policies/overview.md).
 
 ## Prise en main
 
@@ -35,9 +35,9 @@ Bien que chaque organisation puisse avoir plusieurs stratégies de fusion par cl
 >
 >Lorsque vous définissez une nouvelle stratégie de fusion comme stratégie par défaut, toute stratégie de fusion précédemment définie comme stratégie par défaut ne sera plus utilisée comme stratégie par défaut.
 
-Pour garantir que tous les consommateurs de profils utilisent la même vue sur les bords, les politiques de fusion peuvent être marquées comme Active-on-Edge (actives sur le bord). Pour qu’une audience soit activée en périphérie (indiquée comme audience en périphérie), elle doit être liée à une stratégie de fusion marquée comme principale en périphérie. Si une audience est **not** liée à une stratégie de fusion marquée comme principale sur Edge, l’audience ne sera pas marquée comme principale sur Edge et sera marquée comme une audience en continu.
+Pour garantir que tous les consommateurs de profils utilisent la même vue sur les bords, les politiques de fusion peuvent être marquées comme Active-on-Edge (actives sur le bord). Pour qu’une audience soit activée en périphérie (indiquée comme audience en périphérie), elle doit être liée à une stratégie de fusion marquée comme active en périphérie. Si une audience est **not** liée à une stratégie de fusion marquée comme étant active sur Edge, l’audience ne sera pas marquée comme active sur Edge et sera marquée comme une audience en continu.
 
-En outre, chaque organisation ne peut avoir que **one** stratégie de fusion principale en périphérie. Si une stratégie de fusion est principale sur Edge, elle peut être utilisée pour d’autres systèmes sur Edge, tels que Edge Profile, Edge Segmentation et Destinations on Edge.
+En outre, chaque organisation ne peut avoir que **one** stratégie de fusion active sur Edge. Si une stratégie de fusion est active sur Edge, elle peut être utilisée pour d’autres systèmes sur Edge, tels que Edge Profile, Edge Segmentation et Destinations on Edge.
 
 ### Objet de politique de fusion complet
 
@@ -69,9 +69,9 @@ L’objet de politique de fusion complet est un ensemble de préférences contr�
 | Propriété | Description |
 |---|---|
 | `id` | Le système a généré un identifiant unique attribué au moment de la création. |
-| `name` | Nom convivial par lequel la politique de fusion peut être identifiée dans les affichages en liste. |
+| `name` | Nom convivial par lequel la politique de fusion peut être identifiée dans les vues Liste. |
 | `imsOrgId` | Identifiant d’organisation auquel appartient cette politique de fusion. |
-| `schema.name` | Partie de la variable [`schema`](#schema) , l’objet `name` contient la classe de schéma XDM à laquelle se rapporte la stratégie de fusion. Pour plus d’informations sur les schémas et les classes, veuillez lire le [Documentation XDM](../../xdm/home.md). |
+| `schema.name` | Partie de [`schema`](#schema) , `name` contient la classe de schéma XDM à laquelle se rapporte la stratégie de fusion. Pour plus d’informations sur les schémas et les classes, veuillez lire la section [Documentation XDM](../../xdm/home.md). |
 | `version` | [!DNL Platform]Version de la politique de fusion gérée par Cette valeur en lecture seule est incrémentée chaque fois qu’une politique de fusion est mise à jour. |
 | `identityGraph` | Objet de [graphique d’identités](#identity-graph) indiquant le graphique d’identités à partir duquel les identités associées seront obtenues. Les fragments de profil trouvés pour toutes les identités associées seront fusionnés. |
 | `attributeMerge` | [Fusion d’attributs](#attribute-merge) indiquant la manière dont la stratégie de fusion établit la priorité des attributs de profil en cas de conflit de données. |
@@ -141,9 +141,9 @@ Un fragment de profil correspond aux informations de profil d’une seule identi
 
 Où `{ATTRIBUTE_MERGE_TYPE}` peut prendre une de ces valeurs :
 
-* **`timestampOrdered`**: (par défaut) donne la priorité au profil qui a été mis à jour en dernier. Avec ce type de fusion, l’attribut `data` n’est pas obligatoire.
-* **`dataSetPrecedence`**: Donnez la priorité aux fragments de profil en fonction du jeu de données à partir duquel ils sont venus. Cela peut être utilisé lorsque les informations présentes dans un jeu de données sont préférées ou approuvées par rapport aux données d’un autre jeu de données. Lors de l’utilisation de ce type de fusion, l’attribut `order` est obligatoire, car il répertorie les jeux de données dans l’ordre de priorité.
-   * **`order`**: Lorsque &quot;dataSetPrecedence&quot; est utilisé, une `order` doit être fourni avec une liste de jeux de données. Les jeux de données qui ne font pas partie de la liste ne sont pas fusionnés. En d’autres termes, les jeux de données doivent être explicitement répertoriés pour être fusionnés dans un profil. Le tableau `order` répertorie les identifiants des jeux de données par ordre de priorité.
+* **`timestampOrdered`**: (par défaut) donne la priorité au dernier profil mis à jour. Avec ce type de fusion, l’attribut `data` n’est pas obligatoire.
+* **`dataSetPrecedence`**: donne la priorité aux fragments de profil en fonction du jeu de données à partir duquel ils sont venus. Cela peut être utilisé lorsque les informations présentes dans un jeu de données sont préférées ou approuvées par rapport aux données d’un autre jeu de données. Lors de l’utilisation de ce type de fusion, l’attribut `order` est obligatoire, car il répertorie les jeux de données dans l’ordre de priorité.
+   * **`order`**: lorsque &quot;dataSetPrecedence&quot; est utilisé, une `order` doit être fourni avec une liste de jeux de données. Les jeux de données qui ne font pas partie de la liste ne sont pas fusionnés. En d’autres termes, les jeux de données doivent être explicitement répertoriés pour être fusionnés dans un profil. Le tableau `order` répertorie les identifiants des jeux de données par ordre de priorité.
 
 #### Exemple `attributeMerge` objet `dataSetPrecedence` type
 
@@ -246,7 +246,7 @@ Une réponse réussie renvoie les détails de la politique de fusion.
 
 Pour en savoir plus sur chacun des éléments qui constituent une politique de fusion, reportez-vous à la section [Composants des politiques de fusion](#components-of-merge-policies) au début de ce document.
 
-### Récupération de plusieurs stratégies de fusion à l’aide de leurs identifiants
+### Récupération de plusieurs stratégies de fusion à l’aide de leurs ID
 
 Vous pouvez récupérer plusieurs stratégies de fusion en envoyant une requête de POST à la variable `/config/mergePolicies/bulk-get` point de terminaison et inclusion des identifiants des stratégies de fusion que vous souhaitez récupérer dans le corps de la requête.
 
@@ -360,7 +360,7 @@ GET /config/mergePolicies?{QUERY_PARAMS}
 | `default` | Valeur booléenne filtrant les résultats selon que les politiques de fusion sont ou non la valeur par défaut d’une classe de schémas. |
 | `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. Valeur par défaut : 20 |
 | `orderBy` | Spécifie le champ de référence pour classer les résultats comme dans `orderBy=name` ou `orderBy=+name` pour un tri par nom dans l’ordre croissant ou `orderBy=-name` pour un tri dans l’ordre décroissant. Si vous omettez cette valeur, le tri par défaut de `name` s’effectue dans l’ordre croissant. |
-| `isActiveOnEdge` | Valeurs booléennes qui filtrent les résultats selon que les stratégies de fusion sont principales ou non. |
+| `isActiveOnEdge` | Valeurs booléennes qui filtrent les résultats selon que les stratégies de fusion sont actives ou non sur le serveur Edge. |
 | `schema.name` | Nom du schéma pour lequel récupérer les politiques de fusion disponibles. |
 | `identityGraph.type` | Filtre les résultats par type de graphique d’identités. Les valeurs possibles sont &quot;none&quot; et &quot;pdg&quot; (graphique privé). |
 | `attributeMerge.type` | Filtre les résultats par type de fusion d’attributs utilisé. Les valeurs possibles sont &quot;timestampOrdered&quot; et &quot;dataSetPrecedence&quot;. |
@@ -502,11 +502,11 @@ curl -X POST \
 
 | Propriété | Description |
 |---|---|
-| `name` | Nom convivial par lequel la politique de fusion peut être identifiée dans les affichages en liste. |
+| `name` | Nom convivial par lequel la politique de fusion peut être identifiée dans les vues Liste. |
 | `identityGraph.type` | Type de graphique d’identités à partir duquel obtenir les identités connexes à fusionner. Valeurs possibles : &quot;none&quot; ou &quot;pdg&quot; (graphique privé). |
 | `attributeMerge` | Méthode de hiérarchisation des valeurs d’attribut de profil en cas de conflit de données. |
 | `schema` | Classe de schéma XDM associée à la politique de fusion. |
-| `isActiveOnEdge` | Indique si cette stratégie de fusion est principale ou non. |
+| `isActiveOnEdge` | Indique si cette stratégie de fusion est active sur Edge. |
 | `default` | Spécifie si cette politique de fusion est la politique par défaut pour le schéma. |
 
 Pour plus d’informations, reportez-vous à la section [Composants des politiques de fusion](#components-of-merge-policies).
@@ -680,11 +680,11 @@ curl -X PUT \
 
 | Propriété | Description |
 |---|---|
-| `name` | Nom convivial par lequel la politique de fusion peut être identifiée dans les affichages en liste. |
+| `name` | Nom convivial par lequel la politique de fusion peut être identifiée dans les vues Liste. |
 | `identityGraph` | Graphique d’identités à partir duquel obtenir les identités connexes à fusionner. |
 | `attributeMerge` | Méthode de hiérarchisation des valeurs d’attribut de profil en cas de conflit de données. |
 | `schema` | Classe de schéma XDM associée à la politique de fusion. |
-| `isActiveOnEdge` | Indique si cette stratégie de fusion est principale ou non. |
+| `isActiveOnEdge` | Indique si cette stratégie de fusion est active sur Edge. |
 | `default` | Spécifie si cette politique de fusion est la politique par défaut pour le schéma. |
 
 Pour plus d’informations, reportez-vous à la section [Composants des politiques de fusion](#components-of-merge-policies).

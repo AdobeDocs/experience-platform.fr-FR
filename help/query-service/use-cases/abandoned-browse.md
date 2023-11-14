@@ -16,7 +16,7 @@ Ce document et la présentation vidéo qui l’accompagne fournissent un workflo
 
 * L’importance essentielle du traitement des données pour maximiser le potentiel de Adobe Experience Platform.
 * Méthodes pour créer la requête en fonction de votre architecture de données existante.
-* Assurez-vous de la qualité des données en fonction de vos besoins et des méthodes permettant d’atténuer tout manque.
+* Assurez-vous de la qualité des données en fonction de vos besoins et des méthodes permettant d’atténuer tout manque à gagner.
 * Processus de planification de l’exécution d’une requête à une fréquence définie en vue de son utilisation en aval dans la segmentation et les destinations pour la personnalisation.
 * Facilité pour les marketeurs d’inclure des attributs dérivés dans leurs audiences grâce à la puissance de [!DNL Query Service].
 
@@ -24,7 +24,7 @@ Ce document et la présentation vidéo qui l’accompagne fournissent un workflo
 
 Cette démonstration de workflow repose sur plusieurs services Adobe Experience Platform. Si vous souhaitez poursuivre, il est recommandé de bien comprendre les fonctionnalités et services suivants :
 
-* Le [Principes de base de la composition des schémas du modèle de données d’expérience (XDM)](../../xdm/schema/composition.md)
+* La variable [Principes de base de la composition des schémas du modèle de données d’expérience (XDM)](../../xdm/schema/composition.md)
 * Comment [création de jeux de données et ingestion de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr)
 * Comment [ingestion de données à l’aide du connecteur source Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=fr)
 * [Segmentation](../../segmentation/home.md)
@@ -73,7 +73,7 @@ Adobe Experience Platform fournit un référentiel de données et les outils né
 
 ## Étapes suivantes
 
-En lisant ce document, vous devriez maintenant comprendre comment [!DNL Query Service] impacte non seulement la qualité de vos données et la facilité de la segmentation, mais également leur importance dans votre architecture de données pour l’ensemble du workflow de bout en bout. Pour des exemples SQL plus applicables qui utilisent Adobe Analytics avec [!DNL Query Service], reportez-vous à la section [Cas d’utilisation des variables de marchandisage Adobe Analytics](./merchandising-variables.md).
+En lisant ce document, vous devriez maintenant comprendre comment [!DNL Query Service] impacte non seulement la qualité de vos données et la facilité de la segmentation, mais également leur importance dans votre architecture de données pour l’ensemble du workflow de bout en bout. Pour des exemples SQL plus applicables qui utilisent Adobe Analytics avec [!DNL Query Service], voir [Cas d’utilisation des variables de marchandisage Adobe Analytics](./merchandising-variables.md).
 
 Autres documents présentant les avantages de [!DNL Query Service] Pour consulter les informations stratégiques de votre entreprise, reportez-vous à la section [cas d’utilisation du filtrage de robots](./bot-filtering.md) par exemple.
 

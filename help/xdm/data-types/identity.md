@@ -22,7 +22,7 @@ ht-degree: 15%
 | `namespace` | Objet | Objet contenant un seul champ de chaîne (`code`), qui indique l’espace de noms associé au fourni `id` attribut. |
 | `authenticatedState` | Chaîne | État authentifié de cette identité au moment de l’événement d’expérience observé. Voir [annexe](#authenticatedState) pour les valeurs et définitions acceptées. |
 | `id` | Chaîne | Identité du consommateur dans l’espace de noms associé. |
-| `primary` | Booléen | Indique s’il s’agit de l’identité Principale de l’individu. Chaque individu ne peut avoir qu&#39;une seule identité Principale. |
+| `primary` | Booléen | Indique s’il s’agit de l’identité principale de l’individu. Chaque individu ne peut avoir qu&#39;une seule identité principale. |
 | `xid` | Chaîne | Lorsqu’elle est présente, cette valeur représente un identifiant d’espace de noms croisé unique pour tous les identifiants d’espace de noms inclus dans tous les espaces de noms. |
 
 {style="table-layout:auto"}

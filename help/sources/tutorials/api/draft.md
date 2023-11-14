@@ -3,7 +3,7 @@ title: Créer des brouillons de votre API Flow Service Entities
 description: Découvrez comment créer des brouillons de votre connexion de base, connexion source, connexion cible et flux de données à l’aide de l’API Flow Service.
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
 source-git-commit: ebd650355a5a4c2a949739384bfd5c8df9577075
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 100%
 
@@ -22,7 +22,7 @@ Ce tutoriel décrit les étapes à suivre pour définir vos entités [!DNL Flow 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ### Utiliser les API Platform
 

@@ -67,7 +67,7 @@ Adobe recommande d’utiliser [Visual Studio Code](https://code.visualstudio.com
 
 Ensuite, saisissez `Adobe Markdown Authoring` dans la barre de recherche, puis sélectionnez **Installer** de la page qui s’affiche.
 
-![installation](../assets/install.png)
+![install](../assets/install.png)
 
 Lorsque votre ordinateur local est prêt, téléchargez le fichier [modèle de documentation sources](../assets/api-template.zip) et extrayez le fichier vers `experience-platform.en/help/sources/tutorials/api/create/...` avec [`...`] représentant la catégorie de votre choix. Par exemple, si vous créez une source de base de données, sélectionnez le dossier de base de données.
 

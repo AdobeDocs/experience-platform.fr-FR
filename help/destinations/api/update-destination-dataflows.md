@@ -14,7 +14,7 @@ ht-degree: 35%
 
 # Mettre à jour des flux de données de destination à l’aide de l’API Flow Service
 
-Ce tutoriel décrit les étapes de mise à jour d’un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des audiences et des attributs à l’aide du [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Pour plus d’informations sur la modification des flux de données de destination à l’aide de l’interface utilisateur de l’Experience Platform, reportez-vous à la section [Modification des flux d’activation](/help/destinations/ui/edit-activation.md).
+Ce tutoriel décrit les étapes de mise à jour d’un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des audiences et des attributs à l’aide du [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Pour plus d’informations sur la modification des flux de données de destination à l’aide de l’interface utilisateur de l’Experience Platform, consultez la rubrique [Modification des flux d’activation](/help/destinations/ui/edit-activation.md).
 
 ## Prise en main {#get-started}
 
@@ -404,7 +404,7 @@ Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité
 
 Lorsqu’il est activé, un flux de données exporte les profils vers la destination. Les flux de données sont activés par défaut, mais peuvent être désactivés pour suspendre les exportations de profils.
 
-Vous pouvez activer ou désactiver un flux de données de destination existant en adressant une requête de POST au [!DNL Flow Service] API et indiquer l’état vers lequel vous souhaitez mettre à jour le flux.
+Vous pouvez activer ou désactiver un flux de données de destination existant en adressant une requête de POST à la fonction [!DNL Flow Service] API et indiquer l’état vers lequel vous souhaitez mettre à jour le flux.
 
 **Format d’API**
 
@@ -518,7 +518,7 @@ Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité
 }
 ```
 
-## Suppression d’une audience d’un flux de données {#remove-segment}
+## Supprimer une audience d’un flux de données {#remove-segment}
 
 Pour supprimer une audience d’un flux de données de destination existant, effectuez une requête de PATCH à la fonction [!DNL Flow Service] API lors de la fourniture de l’ID de flux, de la version et du sélecteur d’index de l’audience que vous souhaitez supprimer. L’indexation commence à `0`. Par exemple, l’exemple de requête ci-dessous supprime les première et deuxième audiences du flux de données.
 
@@ -565,7 +565,7 @@ curl -X PATCH \
 | Propriété | Description |
 | --------- | ----------- |
 | `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour supprimer une audience d’un flux de données, utilisez la méthode `remove` opération. |
-| `path` | Spécifie l’audience existante à supprimer du flux de données de destination, en fonction de l’index du sélecteur d’audience. Pour récupérer l’ordre des audiences dans un flux de données, effectuez un appel GET à la fonction `/flows` et inspecter le `transformations.segmentSelectors` . Pour supprimer la première audience du flux de données, utilisez `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `path` | Spécifie l’audience existante à supprimer du flux de données de destination, en fonction de l’index du sélecteur d’audience. Pour récupérer l’ordre des audiences dans un flux de données, effectuez un appel GET à la fonction `/flows` et inspecter la variable `transformations.segmentSelectors` . Pour supprimer la première audience du flux de données, utilisez `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **Réponse**
@@ -669,7 +669,7 @@ L&#39;audience est exportée tous les jours à 16h00 UTC.
 }
 ```
 
-L’audience est exportée tous les jours à la fin de la tâche de segmentation par lots quotidienne.
+L’audience est exportée tous les jours une fois la tâche de segmentation par lots terminée.
 
 ```json
 {
@@ -746,7 +746,7 @@ Les fichiers exportés contiennent le nom de destination, l’identifiant de l�
 
 +++
 
-## Ajout d’un attribut de profil à un flux de données {#add-profile-attribute}
+## Ajouter un attribut de profil à un flux de données {#add-profile-attribute}
 
 Pour ajouter un attribut de profil au flux de données de destination, effectuez une requête de PATCH au [!DNL Flow Service] API lors de la fourniture de votre ID de flux, de votre version et de l’attribut de profil que vous souhaitez ajouter.
 
@@ -801,7 +801,7 @@ Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité
 
 ## Suppression d’un attribut de profil d’un flux de données {#remove-profile-attribute}
 
-Pour supprimer un attribut de profil d’un flux de données de destination existant, effectuez une requête de PATCH au [!DNL Flow Service] API lors de la fourniture de l’ID de flux, de la version et du sélecteur d’index de l’attribut de profil que vous souhaitez supprimer. L’indexation commence à `0`. Par exemple, l’exemple de requête ci-dessous supprime le cinquième attribut de profil du flux de données.
+Pour supprimer un attribut de profil d’un flux de données de destination existant, effectuez une requête de PATCH au [!DNL Flow Service] API lors de la fourniture de l’ID de flux, de la version et du sélecteur d’index de l’attribut de profil à supprimer. L’indexation commence à `0`. Par exemple, l’exemple de requête ci-dessous supprime le cinquième attribut de profil du flux de données.
 
 
 **Format d’API**
@@ -839,7 +839,7 @@ curl -X PATCH \
 | Propriété | Description |
 | --------- | ----------- |
 | `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour supprimer une audience d’un flux de données, utilisez la méthode `remove` opération. |
-| `path` | Indique quel attribut de profil existant doit être supprimé du flux de données de destination, en fonction de l’index du sélecteur d’audience. Pour récupérer l’ordre des attributs de profil dans un flux de données, effectuez un appel GET à la fonction `/flows` et inspecter le `transformations.profileSelectors` . Pour supprimer la première audience du flux de données, utilisez `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `path` | Indique quel attribut de profil existant doit être supprimé du flux de données de destination, en fonction de l’index du sélecteur d’audience. Pour récupérer l’ordre des attributs de profil dans un flux de données, effectuez un appel GET à la fonction `/flows` et inspecter la variable `transformations.profileSelectors` . Pour supprimer la première audience du flux de données, utilisez `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
 
 **Réponse**
@@ -855,7 +855,7 @@ Une réponse réussie renvoie votre identifiant de flux et une balise dʼentité
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points de terminaison d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état d’API](/help/landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform pour plus d’informations sur l’interprétation des réponses d’erreur.
+Les points de terminaison d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API d’Experience Platform. Voir [Codes d’état d’API](/help/landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform pour plus d’informations sur l’interprétation des réponses d’erreur.
 
 ## Étapes suivantes {#next-steps}
 

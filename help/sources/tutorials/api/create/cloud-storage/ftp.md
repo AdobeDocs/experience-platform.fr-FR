@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées ; Protocole de transfert de fichiers; protocole de transfert de fichiers
+keywords: Experience Platform;accueil;rubriques les plus consultées ; protocole de transfert de fichiers ; protocole de transfert de fichiers
 solution: Experience Platform
 title: Création d’une connexion de base FTP à l’aide de l’API Flow Service
 type: Tutorial

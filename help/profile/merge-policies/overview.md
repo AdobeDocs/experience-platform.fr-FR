@@ -22,7 +22,7 @@ Adobe Experience Platform permet de rassembler des données issues de plusieur
 Ce guide nécessite une compréhension pratique de plusieurs fonctions [!DNL Experience Platform] importantes. Avant de suivre ce guide et d’utiliser des politiques de fusion, consultez la documentation des services suivants :
 
 * [Profil client en temps réel](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [Service Adobe Experience Platform Identity](../../identity-service/home.md): Permet à Real-time Customer Profile de relier les identités de sources de données disparates ingérées dans [!DNL Platform].
+* [Service Adobe Experience Platform Identity](../../identity-service/home.md): active Real-time Customer Profile en rapprochant des identités de sources de données disparates ingérées dans [!DNL Platform].
 * [Modèle de données d’expérience (XDM)](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données d’expérience client.
 
 ## Comprendre les politiques de fusion

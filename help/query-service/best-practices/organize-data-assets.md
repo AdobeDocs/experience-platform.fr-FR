@@ -42,7 +42,7 @@ L&#39;exemple (légèrement tronqué pour la concision) illustre cette méthode 
 
 Une fois qu’un schéma a été créé pour agir comme conteneur pour les ressources de données, chaque jeu de données peut être associé à un ou plusieurs schémas de la base de données en utilisant la syntaxe SQL ALTER TABLE standard.
 
-L’exemple suivant ajoute : `dataset1`, `dataset2`, `dataset3` et `v1` au `databaseA.schema1` conteneur créé dans l’exemple précédent.
+L’exemple suivant ajoute : `dataset1`, `dataset2`, `dataset3` et `v1` à la fonction `databaseA.schema1` conteneur créé dans l’exemple précédent.
 
 ```SQL
 ALTER TABLE dataset1 ADD SCHEMA databaseA.schema1;
@@ -72,7 +72,7 @@ databaseB
 databaseC
 ```
 
-Liste de tous les schémas sous `dbname="all"` affiche les trois schémas liés à chaque base de données de l’environnement de test.
+Répertorier tous les schémas sous `dbname="all"` affiche les trois schémas liés à chaque base de données de l’environnement de test.
 
 ```SQL
 SHOW SCHEMAS;
@@ -138,7 +138,7 @@ ALTER VIEW databaseA.schema2.v1 REMOVE SCHEMA databaseA.schema2;
 
 ### Suppression de ressources de données
 
-Le [DROP TABLE](../sql/syntax.md#drop-table) supprime physiquement une ressource de données de la fonction [!DNL Data Lake] lorsqu’il existe une référence unique à la table dans toutes les bases de données de votre organisation.
+La variable [DROP TABLE](../sql/syntax.md#drop-table) supprime physiquement une ressource de données de la fonction [!DNL Data Lake] lorsqu’il existe une référence unique à la table dans toutes les bases de données de votre organisation.
 
 ```sql
 DROP TABLE databaseA.schema2.t1;

@@ -16,7 +16,7 @@ ht-degree: 35%
 
 >[!NOTE]
 >
->Le [!DNL Apache] Le connecteur HDFS est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
+>La variable [!DNL Apache] Le connecteur HDFS est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Connecteurs source dans [!DNL Adobe Experience Platform] offrir la possibilité d’ingérer des données provenant de l’extérieur sur une base planifiée ; Ce tutoriel décrit les étapes à suivre pour authentifier une [!DNL Apache Hadoop Distributed File System] (ci-après appelé &quot;HDFS&quot;) Connecteur source à l’aide de [!DNL Platform] de l’interface utilisateur.
 
@@ -37,13 +37,13 @@ Pour authentifier votre connecteur source HDFS, vous devez fournir des valeurs p
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `url` | L’URL définit les paramètres d’authentification requis pour se connecter à HDFS de manière anonyme. Pour plus d&#39;informations sur l&#39;obtention de cette valeur, consultez le document suivant sur [Authentification HTTPS pour HDFS](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
+| `url` | L’URL définit les paramètres d’authentification requis pour la connexion anonyme à HDFS. Pour plus d&#39;informations sur l&#39;obtention de cette valeur, consultez le document suivant sur [Authentification HTTPS pour HDFS](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
 
 ## Connexion à votre compte HDFS
 
 Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre compte HDFS à [!DNL Platform].
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au **[!UICONTROL Sources]** workspace. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Connexion à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au **[!UICONTROL Sources]** workspace. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
@@ -51,7 +51,7 @@ Sous , **[!UICONTROL Stockage dans le cloud]** catégorie, sélectionnez **[!UIC
 
 ![catalogue](../../../../images/tutorials/create/hdfs/catalog.png)
 
-Le **[!UICONTROL Connexion à HDFS]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La variable **[!UICONTROL Connexion à HDFS]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 

@@ -2,7 +2,7 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;IBM DB2;ibm db2;DB2;db2
 solution: Experience Platform
 title: Présentation du connecteur source IBM DB2
-description: Découvrez comment connecter IBM DB2 à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
+description: Découvrez comment connecter IBM DB2 à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
@@ -35,5 +35,5 @@ La documentation ci-dessous fournit des informations sur la connexion d’IBM DB
 
 ## Connectez IBM DB2 à [!DNL Platform] utilisation de l’interface utilisateur
 
-- [Création d’une connexion source IBM DB2 dans l’interface utilisateur](../../tutorials/ui/create/databases/ibm-db2.md)
-- [Création d’un flux de données pour une connexion à la source de la base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+- [Créer une connexion source IBM DB2 dans l’interface utilisateur](../../tutorials/ui/create/databases/ibm-db2.md)
+- [Création d’un flux de données pour une connexion source de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)

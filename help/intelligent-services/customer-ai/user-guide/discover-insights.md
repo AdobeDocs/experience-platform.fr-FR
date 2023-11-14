@@ -42,24 +42,24 @@ Sélectionnez un nom d’instance de service à commencer.
 
 Ensuite, la page d’insights de cette instance de service s’affiche avec l’option de sélection **[!UICONTROL Derniers scores]** ou **[!UICONTROL Synthèse des performances]**. Onglet par défaut **[!UICONTROL Derniers scores]** fournit des visualisations de vos données. Les visualisations et ce que vous pouvez faire avec ces données sont expliqués plus en détail dans ce guide.
 
-Le **[!UICONTROL Synthèse des performances]** affiche les taux de perte ou de conversion réels pour chaque compartiment de propension. Pour en savoir plus, consultez la section sur [mesures de synthèse des performances](#performance-metrics).
+La variable **[!UICONTROL Synthèse des performances]** affiche les taux de perte ou de conversion réels pour chaque compartiment de propension. Pour en savoir plus, consultez la section sur [mesures de synthèse des performances](#performance-metrics).
 
 ![page de configuration](../images/insights/landing_page_insights.png)
 
 ## Détails des instances de service
 
-Il existe deux façons d’afficher les détails de l’instance de service : depuis le tableau de bord ou au sein de l’instance de service.
+Il existe deux manières d’afficher les détails de l’instance de service : depuis le tableau de bord ou au sein de l’instance de service.
 
 ### Tableau de bord des instances de service
 
 Pour afficher un aperçu des détails de l’instance de service dans le tableau de bord, sélectionnez un conteneur d’instance de service, en évitant le lien hypertexte associé au nom. Cela ouvre un rail droit qui fournit des détails supplémentaires. Les contrôles contiennent les éléments suivants :
 
-- **[!UICONTROL Modifier]**: Sélection **[!UICONTROL Modifier]** permet de modifier une instance de service existante. Vous pouvez modifier le nom, la description et la fréquence de notation de l’instance.
-- **[!UICONTROL Cloner]**: Sélection **[!UICONTROL Cloner]** copie la configuration de l’instance de service actuellement sélectionnée. Vous pouvez ensuite modifier le workflow pour effectuer des ajustements mineurs et le renommer en nouvelle instance.
-- **[!UICONTROL Supprimer]**: Vous pouvez supprimer une instance de service, y compris les exécutions historiques.
-- **[!UICONTROL Source de données]**: Un lien vers le jeu de données utilisé par cette instance.
-- **[!UICONTROL Fréquence d’exécution]**: La fréquence d’une opération de notation et le moment auquel elle a lieu.
-- **[!UICONTROL Définition de score]**: Aperçu rapide de l’objectif que vous avez configuré pour cette instance.
+- **[!UICONTROL Modifier]**: sélection **[!UICONTROL Modifier]** permet de modifier une instance de service existante. Vous pouvez modifier le nom, la description et la fréquence de notation de l’instance.
+- **[!UICONTROL Cloner]**: sélection **[!UICONTROL Cloner]** copie la configuration de l’instance de service actuellement sélectionnée. Vous pouvez ensuite modifier le workflow pour effectuer des ajustements mineurs et le renommer en nouvelle instance.
+- **[!UICONTROL Supprimer]**: vous pouvez supprimer une instance de service, y compris les exécutions historiques.
+- **[!UICONTROL Source de données]**: lien vers le jeu de données utilisé par cette instance.
+- **[!UICONTROL Fréquence d’exécution]**: fréquence d’exécution d’une notation et moment auquel.
+- **[!UICONTROL Définition de score]**: aperçu rapide de l’objectif que vous avez configuré pour cette instance.
 
 ![](../images/user-guide/service-instance-panel.png)
 
@@ -99,14 +99,14 @@ La boîte de dialogue de modification s’affiche, vous permettant de modifier l
 
 Le bouton **[!UICONTROL Actions supplémentaires]** se trouve dans la navigation en haut à droite en regard de **[!UICONTROL Modifier]**. Sélection **[!UICONTROL Autres actions]** ouvre une liste déroulante qui vous permet de sélectionner l’une des opérations suivantes :
 
-- **[!UICONTROL Cloner]**: Sélection **[!UICONTROL Cloner]** copie la configuration de l’instance de service. Vous pouvez ensuite modifier le workflow pour effectuer des ajustements mineurs et le renommer en nouvelle instance.
+- **[!UICONTROL Cloner]**: sélection **[!UICONTROL Cloner]** copie la configuration de l’instance de service. Vous pouvez ensuite modifier le workflow pour effectuer des ajustements mineurs et le renommer en nouvelle instance.
 - **[!UICONTROL Supprimer]** : supprime l’instance.
-- **[!UICONTROL Accéder aux scores]**: Sélection **[!UICONTROL Accéder aux scores]** ouvre une boîte de dialogue fournissant un lien vers la fonction [téléchargement de scores pour Customer AI](./download-scores.md) tutoriel, la boîte de dialogue fournit également l’identifiant de jeu de données requis pour effectuer des appels API.
+- **[!UICONTROL Accéder aux scores]**: sélection **[!UICONTROL Accéder aux scores]** ouvre une boîte de dialogue fournissant un lien vers la fonction [téléchargement de scores pour Customer AI](./download-scores.md) tutoriel, la boîte de dialogue fournit également l’identifiant de jeu de données requis pour effectuer des appels API.
 - **[!UICONTROL Afficher l’historique d’exécution]** : fait apparaître une boîte de dialogue contenant une liste des exécutions de notation associées à l’instance de service.
 
 ![actions supplémentaires](../images/insights/more-actions.png)
 
-## Résumé de notation {#scoring-summary}
+## Résumé des scores {#scoring-summary}
 
 Le résumé de notation affiche le nombre total de profils notés et les classe en compartiments de propension élevée, moyenne et faible. Les compartiments de propension sont déterminés en fonction de la plage de scores : la propension faible est inférieure à 24, la propension moyenne est comprise entre 25 et 74, et la propension élevée est supérieure à 74. Chaque compartiment a une couleur en fonction de la légende.
 
@@ -134,7 +134,7 @@ Une carte est générée pour chaque compartiment de score, présentant les 10 
 
 ### Effondrement des facteurs d’influence
 
-Le survol de l’un des principaux facteurs d’influence ventile les données. Vous obtenez un aperçu des raisons pour lesquelles certains profils appartiennent à un compartiment de propension. Selon le facteur, vous pouvez recevoir des valeurs numériques, catégoriques ou booléennes. L’exemple ci-dessous affiche des valeurs catégoriques par région.
+Le survol de l’un des principaux facteurs d’influence ventile les données. Vous obtenez une vue d’ensemble des raisons pour lesquelles certains profils appartiennent à un compartiment de propension. Selon le facteur, vous pouvez recevoir des valeurs numériques, catégoriques ou booléennes. L’exemple ci-dessous affiche des valeurs catégoriques par région.
 
 ![capture d’écran de drilldown](../images/insights/drilldown.png)
 
@@ -142,7 +142,7 @@ En outre, en utilisant des analyses par analyse, vous pouvez comparer un facteur
 
 ![](../images/insights/drilldown-compare.png)
 
-Vous pouvez constater que les profils présentant une faible propension à la conversion ont moins de chance d’avoir effectué une visite récente sur les pages web adobe.com. Le facteur &quot;Jours depuis la dernière visite web&quot; n’a qu’une couverture de 8 % par rapport à 26 % dans les profils de propension moyens. En utilisant ces chiffres, vous pouvez comparer la distribution dans chaque intervalle pour le facteur. Ces informations peuvent être utilisées pour déduire que la récence des visites web n’a pas autant d’influence dans le compartiment à faible propension que dans le compartiment à propension moyenne.
+Vous pouvez constater que les profils présentant une faible propension à la conversion ont moins de chance d’avoir effectué une visite récente sur les pages web adobe.com . Le facteur &quot;Jours depuis la dernière visite web&quot; n’a qu’une couverture de 8 % par rapport à 26 % dans les profils de propension moyens. En utilisant ces chiffres, vous pouvez comparer la distribution dans chaque intervalle pour le facteur. Ces informations peuvent être utilisées pour déduire que la récence des visites web n’a pas autant d’influence dans le compartiment à faible propension que dans le compartiment à propension moyenne.
 
 ### Création d’un segment
 
@@ -150,7 +150,7 @@ En sélectionnant le **[!UICONTROL Créer un segment]** dans l’un des comparti
 
 >[!NOTE]
 >
->Le **[!UICONTROL Créer un segment]** n’est disponible que si Real-time Customer Profile est activé pour le jeu de données. Pour plus d’informations sur l’activation de Real-time Customer Profile, consultez la page [Présentation de Real-Time Customer Profile](../../../rtcdp/overview.md).
+>La variable **[!UICONTROL Créer un segment]** n’est disponible que si Real-time Customer Profile est activé pour le jeu de données. Pour plus d’informations sur l’activation de Real-time Customer Profile, consultez la page [Présentation de Real-Time Customer Profile](../../../rtcdp/overview.md).
 
 ![Cliquez sur Créer un segment](../images/insights/influential-factors-create-segment.png)
 
@@ -170,7 +170,7 @@ Pour afficher votre nouveau segment dans l’interface utilisateur de Platform, 
 
 ## Performance historique {#historical-performance}
 
-Le **[!UICONTROL Synthèse des performances]** affiche les taux d’attrition ou de conversion réels, séparés dans chacun des compartiments de propension notés par Customer AI.
+La variable **[!UICONTROL Synthèse des performances]** affiche les taux d’attrition ou de conversion réels, séparés dans chacun des compartiments de propension notés par Customer AI.
 
 ![Onglet Synthèse des performances](../images/insights/summary_tab.png)
 
@@ -180,7 +180,7 @@ Le survol des lignes avec le curseur affiche la date et le taux réel/attendu po
 
 ![Exemple de compartiment](../images/insights/churn_tab.png)
 
-Vous pouvez filtrer la période pour les taux prévus et réels affichés. Sélectionnez la **icône de calendrier** ![icon](../images/insights/calendar_icon.png)sélectionnez ensuite une nouvelle période. Les résultats de chacun des compartiments sont mis à jour pour s’afficher dans la nouvelle période.
+Vous pouvez filtrer la période pour les taux prévus et réels affichés. Sélectionnez la variable **icône de calendrier** ![icon](../images/insights/calendar_icon.png)sélectionnez ensuite une nouvelle période. Les résultats de chacun des compartiments sont mis à jour pour s’afficher dans la nouvelle période.
 
 ![Sélecteur de date](../images/insights/date_selector.png)
 
@@ -204,7 +204,7 @@ Le graphique de l’effet élévateur mesure l’amélioration de l’utilisatio
 
 Les indicateurs de modèle de haute qualité incluent :
 
-- Valeurs d’effet élévateur élevées dans les premiers déciles. Cela signifie que le modèle est bon pour identifier les utilisateurs ayant la plus forte propension à prendre des mesures d’intérêt.
+- Valeurs d’effet élévateur élevées dans les premiers déciles. Cela signifie que le modèle est doué pour identifier les utilisateurs ayant la plus forte propension à prendre des mesures d’intérêt.
 - Valeurs de l’effet élévateur descendant. Cela signifie que les clients ayant des scores plus élevés sont plus susceptibles d’effectuer une action d’intérêt que les personnes ayant des scores plus faibles.
 
 ### Graphique des gains

@@ -26,7 +26,7 @@ Vous pouvez supprimer des destinations de la variable [!DNL Platform] [!DNL UI].
 
 ## Suppression de destinations dans l’onglet Parcourir{#delete-browse-tab}
 
-Suivez les étapes ci-dessous pour supprimer une destination du [!UICONTROL Parcourir] .
+Pour supprimer une destination du [!UICONTROL Parcourir] .
 
 1. Connectez-vous à l’[interface utilisateur Experience Platform](https://platform.adobe.com/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Pour afficher vos destinations existantes, sélectionnez **[!UICONTROL Parcourir]** dans l’en-tête supérieur.
 
@@ -36,7 +36,7 @@ Suivez les étapes ci-dessous pour supprimer une destination du [!UICONTROL Parc
 
    ![Filtrage des destinations](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Sélectionnez la ![Bouton Plus](../assets/ui/delete-destinations/more-icon.png) dans la colonne Nom , puis sélectionnez ![Bouton Supprimer](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Supprimer]** pour supprimer une connexion de destination existante.
+3. Sélectionnez la variable ![Bouton Plus](../assets/ui/delete-destinations/more-icon.png) dans la colonne Nom , puis sélectionnez ![Bouton Supprimer](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Supprimer]** pour supprimer une connexion de destination existante.
    ![Supprimer les destinations](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. Sélectionner **[!UICONTROL Supprimer]** pour confirmer la suppression de la connexion à la destination.
@@ -73,7 +73,7 @@ Suivez les étapes ci-dessous pour supprimer une destination de la page de déta
 
 5. Sélectionner **[!UICONTROL Supprimer]** dans la boîte de dialogue de confirmation pour supprimer la destination.
 
-   ![Confirmation de suppression de la destination](..//assets/ui/delete-destinations/delete-destinations-delete.png)
+   ![Supprimer la confirmation de destination](..//assets/ui/delete-destinations/delete-destinations-delete.png)
 
    >[!NOTE]
    >

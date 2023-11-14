@@ -16,7 +16,7 @@ ht-degree: 63%
 
 >[!NOTE]
 >
->Le [!DNL Couchbase] Le connecteur est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
+>La variable [!DNL Couchbase] Le connecteur est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -85,7 +85,7 @@ curl -X POST \
 | Propriété | Description |
 | --------- | ----------- |
 | `auth.params.connectionString` | Chaîne de connexion utilisée pour se connecter à un [!DNL Couchbase] compte . Le modèle de chaîne de connexion est le suivant : `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
-| `connectionSpec.id` | Le [!DNL Couchbase] identifiant de spécification de connexion : `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `connectionSpec.id` | La variable [!DNL Couchbase] identifiant de spécification de connexion : `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 **Réponse**
 

@@ -70,7 +70,7 @@ Lorsque la fonction est activée pour votre organisation, les journaux d’audit
 
 Pour afficher et exporter les journaux d’audit, vous devez disposer de la variable **[!UICONTROL Afficher le journal d’activité utilisateur]** l’autorisation de contrôle d’accès accordée (trouvée sous [!UICONTROL Gouvernance des données] catégorie). Pour savoir comment gérer les autorisations individuelles pour les fonctionnalités de Platform, reportez-vous au [documentation sur le contrôle d’accès](../../../access-control/home.md).
 
-## Gestion des journaux d’audit dans l’interface utilisateur {#managing-audit-logs-in-the-ui}
+## Gérer les journaux d’audit dans l’interface utilisateur {#managing-audit-logs-in-the-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_instructions"

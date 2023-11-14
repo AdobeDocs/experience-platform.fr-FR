@@ -41,7 +41,7 @@ L’interface utilisateur de [!DNL Platform] offre plusieurs options de recherch
 
 ![Catalogue des destinations présentant quelques destinations publicitaires et de stockage dans le cloud.](../assets/ui/workspace/catalog.png)
 
-Les cartes de destination contiennent des options de commande principales et secondaires. Les contrôles Principaux incluent : [!UICONTROL Configuration], [!UICONTROL Activer], [!UICONTROL Activation des audiences]ou [!UICONTROL Exportation de jeux de données]. Les commandes secondaires permettent d’afficher des options. Ces commandes sont décrites ci-dessous :
+Les cartes de destination contiennent des options de commande principales et secondaires. Les contrôles principaux incluent : [!UICONTROL Configuration], [!UICONTROL Activer], [!UICONTROL Activation des audiences], ou [!UICONTROL Exportation de jeux de données]. Les commandes secondaires permettent d’afficher des options. Ces commandes sont décrites ci-dessous :
 
 | Commande | Description |
 |---------|----------|
@@ -106,7 +106,7 @@ L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles v
 | [!UICONTROL Destination] | La plateforme de destination que vous avez sélectionnée pour votre flux d’activation. |
 | [!UICONTROL Type de connexion] | Représente le type de connexion à votre compartiment de stockage ou à votre destination. <ul><li>Pour les destinations de marketing par e-mail : il peut s’agir de S3, FTP ou [!DNL Azure Blob].</li><li>Pour les destinations publicitaires en temps réel : serveur à serveur.</li><li>Pour les destinations en flux continu : il peut s’agir de [!DNL Azure Event Hubs] ou [!DNL Amazon Kinesis].</li></ul> |
 | [!UICONTROL Nom d’utilisateur] | Les informations d’identification de compte que vous avez sélectionnées pour le flux de destination. |
-| [!UICONTROL Données d’activation] | Indique le nombre d’audiences activées vers cette destination. Sélectionnez ce contrôle pour en savoir plus sur les audiences activées. Voir [Données d’activation](/help/destinations/ui/destination-details-page.md#activation-data) sur la page des détails de la destination pour plus d’informations sur les audiences activées. |
+| [!UICONTROL Données d’activation] | Indique le nombre d’audiences activées vers cette destination. Sélectionnez ce contrôle pour connaître les audiences activées. Voir [Données d’activation](/help/destinations/ui/destination-details-page.md#activation-data) sur la page des détails de la destination pour plus d’informations sur les audiences activées. |
 | [!UICONTROL Créé] | La date et l’heure (UTC) de création du flux d’activation vers la destination. Sélectionnez les flèches haut/bas pour trier les flux d’activation en fonction du plus récent ou du plus ancien. |
 | [!UICONTROL État] | `Enabled` ou `Disabled`. Indique si les données sont activées vers cette destination. |
 

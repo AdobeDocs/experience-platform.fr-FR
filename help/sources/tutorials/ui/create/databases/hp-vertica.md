@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;HP Vertica
 solution: Experience Platform
-title: Création d’une connexion source HP Vertica dans l’interface utilisateur
+title: Créer une connexion source HP Vertica dans l’interface utilisateur
 type: Tutorial
 description: Découvrez comment créer une connexion source HP Vertica à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: d7315ad4-9250-4e66-be33-016efabb512e
@@ -12,7 +12,7 @@ ht-degree: 39%
 
 ---
 
-# Créer un HP [!DNL Vertica] connexion source dans l’interface utilisateur
+# Création d’un HP [!DNL Vertica] connexion source dans l’interface utilisateur
 
 >[!NOTE]
 >
@@ -39,13 +39,13 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 | ---------- | ----------- |
 | `connectionString` | Chaîne de connexion utilisée pour se connecter à votre HP [!DNL Vertica] instance. Modèle de chaîne de connexion pour HP [!DNL Vertica] is `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
 
-Pour plus d’informations sur la prise en main, reportez-vous à la section [this HP [!DNL Vertica] document](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
+Pour plus d’informations sur la prise en main, voir [this HP [!DNL Vertica] document](https://www.vertica.com/docs/9.2.x/HTML/Content/Authoring/ConnectingToVertica/ClientJDBC/CreatingAndConfiguringAConnection.htm).
 
 ## Connectez-vous à HP [!DNL Vertica] account
 
 Une fois que vous avez rassemblé vos informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre HP. [!DNL Vertica] compte à [!DNL Platform].
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au **[!UICONTROL Sources]** workspace. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Connexion à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au **[!UICONTROL Sources]** workspace. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
@@ -53,7 +53,7 @@ Sous , **[!UICONTROL Bases de données]** catégorie, sélectionnez **[!UICONTRO
 
 ![catalogue](../../../../images/tutorials/create/hp-vertica/catalog.png)
 
-Le **[!UICONTROL Connexion à HP Vertica]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La variable **[!UICONTROL Connexion à HP Vertica]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 

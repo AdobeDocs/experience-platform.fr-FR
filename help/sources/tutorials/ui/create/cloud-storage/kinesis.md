@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '474'
 ht-degree: 44%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 44%
 
 >[!IMPORTANT]
 >
->Le [!DNL Amazon Kinesis] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+>La variable [!DNL Amazon Kinesis] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
 
 Les connecteurs source d’Adobe Experience Platform permettent d’ingérer des données externes selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour authentifier une [!DNL Amazon Kinesis] (ci-après dénommées [!DNL "Kinesis"]) du connecteur source à l’aide de la fonction [!DNL Platform] de l’interface utilisateur.
 
@@ -39,13 +39,13 @@ Pour authentifier votre [!DNL Kinesis] connecteur source, vous devez fournir des
 | `Secret access key` | La clé d’accès secrète de votre [!DNL Kinesis] compte . |
 | `region` | La région de votre serveur AWS. |
 
-Pour plus d’informations sur ces valeurs, reportez-vous à la section [this [!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
+Pour plus d’informations sur ces valeurs, voir [this [!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
 
 ## Connecter votre compte [!DNL Kinesis]
 
 Une fois les informations d’identification requises collectées, vous pouvez suivre les étapes ci-dessous pour lier votre compte [!DNL Kinesis] à [!DNL Platform].
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au **[!UICONTROL Sources]** workspace. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Connexion à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au **[!UICONTROL Sources]** workspace. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
@@ -53,11 +53,11 @@ Sous , **[!UICONTROL Stockage dans le cloud]** catégorie, sélectionnez **[!UIC
 
 ![](../../../../images/tutorials/create/kinesis/catalog.png)
 
-Le **[!UICONTROL Connexion à Amazon Kinesis]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La variable **[!UICONTROL Connexion à Amazon Kinesis]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et [!DNL Kinesis] informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion]** puis accorder un certain temps pour établir la nouvelle connexion.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**. Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et votre [!DNL Kinesis] informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion]** puis accorder un certain temps pour établir la nouvelle connexion.
 
 ![](../../../../images/tutorials/create/kinesis/new.png)
 

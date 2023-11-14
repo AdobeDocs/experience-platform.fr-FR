@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion;ingérer des données par lots;tutoriel;ingestion par lots;tutoriel;guide de l’interface utilisateur
+keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion;ingérer des données par lots;tutoriel;ingestion par lots;tutoriel;guide ui;
 solution: Experience Platform
-title: Ingestion de données dans un Experience Platform
+title: Ingestion de données dans Experience Platform
 type: Tutorial
 description: Adobe Experience Platform vous permet d’importer facilement des données sous forme de fichiers par lots sous la forme de fichiers Parquet ou de données conformes à un schéma de modèle de données d’expérience (XDM) connu.
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
@@ -84,9 +84,9 @@ Les jeux de données sont utilisés pour ingérer des données dans [!DNL Experi
 
 Par défaut, ce bouton est désactivé. Si vous choisissez d’activer [!DNL Profile], toutes les données ingérées dans le jeu de données seront utilisées pour aider à identifier un individu et à assembler ses [!DNL Real-Time Profile].
 
-Pour en savoir plus sur [!DNL Real-Time Customer Profile] et en utilisant des identités, veuillez consulter la section [Identity Service](../../identity-service/home.md) documentation.
+Pour en savoir plus sur [!DNL Real-Time Customer Profile] et en utilisant des identités, veuillez consulter la section [Identity Service](../../identity-service/home.md) la documentation.
 
-Pour activer le jeu de données pour [!DNL Real-Time Customer Profile], cliquez sur le bouton **[!UICONTROL Profil]** bascule dans le **[!UICONTROL Infos]** .
+Pour activer le jeu de données pour [!DNL Real-Time Customer Profile], cliquez sur le **[!UICONTROL Profil]** bascule dans le **[!UICONTROL Infos]** .
 
 ![Bascule des profils](../images/tutorials/ingest-batch-data/dataset-profile-toggle.png)
 
@@ -112,7 +112,7 @@ Pour commencer à ajouter des données au jeu de données, cliquez sur l’ongle
 
 ## Chargement d’un fichier {#upload-file}
 
-Une fois que vous avez fait glisser et déposé (ou parcouru et sélectionné) un fichier Parquet ou JSON que vous souhaitez charger, [!DNL Platform] commence immédiatement à traiter le fichier et un **[!UICONTROL Téléchargement]** s’affiche dans la boîte de dialogue **[!UICONTROL Ajouter des données]** de l’onglet indiquant la progression du téléchargement du fichier.
+Une fois que vous avez fait glisser et déposé (ou parcouru et sélectionné) un fichier Parquet ou JSON que vous souhaitez charger, [!DNL Platform] commence immédiatement à traiter le fichier et un **[!UICONTROL Téléchargement]** s’affiche sur la **[!UICONTROL Ajouter des données]** de l’onglet indiquant la progression du téléchargement du fichier.
 
 ![Boîte de dialogue de chargement](../images/tutorials/ingest-batch-data/uploading-file.png)
 

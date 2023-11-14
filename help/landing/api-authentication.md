@@ -6,8 +6,8 @@ description: Ce document fournit un tutoriel détaillé pour accéder à un comp
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
 workflow-type: tm+mt
-source-wordcount: '2205'
-ht-degree: 11%
+source-wordcount: '2204'
+ht-degree: 13%
 
 ---
 
@@ -154,11 +154,11 @@ Vous pouvez également utiliser un environnement et une collection Postman pour 
 
 >[!WARNING]
 >
-La méthode JWT pour générer des jetons d’accès a été abandonnée. Toutes les nouvelles intégrations doivent être créées à l’aide du [Méthode d’authentification OAuth serveur à serveur](#select-oauth-server-to-server). Adobe vous recommande également de migrer vos intégrations existantes vers la méthode OAuth. Lisez la documentation importante suivante :
+La méthode JWT de génération des jetons d’accès a été abandonnée. Toutes les nouvelles intégrations doivent être créées à l’aide de la [méthode d’authentification OAuth de serveur à serveur](#select-oauth-server-to-server). Adobe vous recommande également de migrer vos intégrations existantes vers la méthode OAuth. Lisez la documentation importante suivante :
 > 
 * [Guide de migration de vos applications de JWT vers OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
 * [Guide de mise en œuvre pour les nouvelles et les anciennes applications avec OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
-* [Avantages de l’utilisation de la méthode d’identification OAuth serveur à serveur](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
+* [Avantages de l’utilisation de la méthode d’identification OAuth de serveur à serveur](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials).
 
 +++ Affichage des informations obsolètes
 
@@ -220,7 +220,7 @@ Vous pouvez utiliser la même clé API, le même secret client et JWT pour gén�
 
 | Propriété | Description |
 | --- | --- |
-| `token_type` | Type de jeton renvoyé. Pour les jetons d’accès, cette valeur est toujours `bearer`. |
+| `token_type` | Le type of jeton en cours de renvoi. Pour les jetons d’accès, cette valeur est toujours `bearer`. |
 | `access_token` | La variable `{ACCESS_TOKEN}`. Cette valeur, précédée du mot `Bearer`, est requis en tant que `Authentication` en-tête de tous les appels API Platform. |
 | `expires_in` | Nombre de millisecondes restantes jusqu’à l’expiration du jeton d’accès. Une fois cette valeur atteinte, un nouveau jeton d’accès doit être généré pour continuer à utiliser les API Platform. |
 

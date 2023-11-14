@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;FTP;ftp
+keywords: Experience Platform;accueil;rubriques populaires;FTP;ftp
 solution: Experience Platform
 title: Création d’une connexion source FTP dans l’interface utilisateur
 type: Tutorial
@@ -45,7 +45,7 @@ Pour vous connecter à FTP, vous devez fournir des valeurs pour les propriétés
 
 Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour créer un compte FTP afin de vous connecter à Platform.
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au [!UICONTROL Sources] workspace. Le [!UICONTROL Catalogue] affiche diverses sources pour lesquelles vous pouvez créer un compte entrant.
+Connexion à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au [!UICONTROL Sources] workspace. La variable [!UICONTROL Catalogue] affiche diverses sources pour lesquelles vous pouvez créer un compte entrant.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
@@ -53,7 +53,7 @@ Sous , [!UICONTROL Stockage dans le cloud] catégorie, sélectionnez **[!UICONTR
 
 ![catalogue](../../../../images/tutorials/create/ftp/catalog.png)
 
-Le **[!UICONTROL Connexion à FTP]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La variable **[!UICONTROL Connexion à FTP]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 

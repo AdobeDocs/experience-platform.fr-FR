@@ -1,5 +1,5 @@
 ---
-title: Création d’un flux de données pour Zendesk à l’aide de l’API Flow Service
+title: Créez un flux de données pour Zendesk à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à Zendesk à l’aide de l’API Flow Service.
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
 source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
@@ -9,7 +9,7 @@ ht-degree: 64%
 
 ---
 
-# Création d’un flux de données pour [!DNL Zendesk] en utilisant la variable [!DNL Flow Service] API
+# Créer un flux de données pour [!DNL Zendesk] en utilisant la variable [!DNL Flow Service] API
 
 Le tutoriel suivant vous guide à travers les étapes de création dʼune connexion source et dʼun flux de données pour importer des données [!DNL Zendesk] dans Platform à l’aide de lʼ[[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
@@ -29,13 +29,13 @@ Pour accéder à [!DNL Zendesk] sur Platform, vous devez fournir des valeurs pou
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
 | `subdomain` | Domaine unique associé à votre compte. | `https://yoursubdomain.zendesk.com` |
-| `accessToken` | Jeton d’API Zendesk. | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
+| `accessToken` | Jeton API Zendesk. | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 Pour plus d’informations sur l’authentification [!DNL Zendesk] source, voir [[!DNL Zendesk] présentation de la source](../../../../connectors/customer-success/zendesk.md).
 
-## Connexion [!DNL Zendesk] vers Platform à l’aide de [!DNL Flow Service] API
+## Connexion [!DNL Zendesk] vers Platform à l’aide de la méthode [!DNL Flow Service] API
 
-Le tutoriel suivant vous guide tout au long des étapes de création d’un [!DNL Zendesk] connexion source et créer un flux de données à importer [!DNL Zendesk] données vers Platform à l’aide de la fonction [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Le tutoriel suivant décrit les étapes à suivre pour créer un [!DNL Zendesk] connexion source et créer un flux de données à importer [!DNL Zendesk] données vers Platform à l’aide de la fonction [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Créer une connexion de base {#base-connection}
 
@@ -102,7 +102,7 @@ Une réponse réussie renvoie la nouvelle connexion de base, y compris son ident
 ### Explorer votre source {#explore}
 
 À l’aide de l’identifiant de connexion de base généré à l’étape précédente, vous pouvez explorer les fichiers et répertoires en exécutant des requêtes GET.
-Utilisez les appels suivants pour trouver le chemin d’accès au fichier que vous souhaitez importer. [!DNL Platform]:
+Utilisez les appels suivants pour trouver le chemin d’accès au fichier que vous souhaitez importer [!DNL Platform]:
 
 **Format d’API**
 
@@ -762,7 +762,7 @@ Une fois votre flux de données créé, vous pouvez surveiller les données ing�
 
 ### Mettre à jour votre flux de données
 
-Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés, en envoyant une requête PATCH à la variable `/flows` point d’entrée [!DNL Flow Service] API, tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre flux de données `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour des flux de données sources à l’aide de l’API](../../update-dataflows.md).
+Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés, en envoyant une requête PATCH à la variable `/flows` point d’entrée de [!DNL Flow Service] API, tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre flux de données `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour des flux de données de sources à l’aide de l’API](../../update-dataflows.md).
 
 ### Mettre à jour votre compte
 

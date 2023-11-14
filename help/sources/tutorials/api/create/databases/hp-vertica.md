@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;Vertica;vertica
+keywords: Experience Platform;accueil;rubriques populaires;Vertica;vertica
 solution: Experience Platform
 title: Création d’une connexion de base HP Vertica à l’aide de l’API Flow Service
 type: Tutorial
@@ -16,7 +16,7 @@ ht-degree: 65%
 
 >[!NOTE]
 >
->Le [!DNL HP Vertica] Le connecteur est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
+>La variable [!DNL HP Vertica] Le connecteur est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -27,7 +27,7 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md)[!DNL Platform] : Experience  permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md)[!DNL Platform] : Experience  fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md)[!DNL Platform] : Experience  fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL HP Vertica] en utilisant la variable [!DNL Flow Service] API.
 
@@ -90,7 +90,7 @@ curl -X POST \
 | Paramètre | Description |
 | --------- | ----------- |
 | `auth.params.connectionString` | La chaîne de connexion associée à votre [!DNL HP Vertica] compte . Le modèle de chaîne de connexion pour [!DNL HP Vertica] est : `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | Le [!DNL HP Vertica] identifiant de spécification de connexion : `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
+| `connectionSpec.id` | La variable [!DNL HP Vertica] identifiant de spécification de connexion : `a8b6a1a4-5735-42b4-952c-85dce0ac38b5`. |
 
 **Réponse**
 

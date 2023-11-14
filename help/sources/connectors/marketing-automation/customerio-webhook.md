@@ -1,7 +1,7 @@
 ---
 title: Présentation de la source Customer.io
 description: Découvrez comment connecter Customer.io à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur en utilisant des webhooks
-badge: Version bêta
+badge: Version Beta
 exl-id: 0f4ee106-c22b-465c-9c5e-83709e8424f5
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
@@ -22,7 +22,7 @@ Experience Platform prend en charge l’ingestion de données à partir d’appl
 
 [[!DNL Customer.io]](https://customer.io/) est une plateforme de messagerie automatisée destinée aux marketeurs qui souhaitent plus de contrôle et de flexibilité pour concevoir et envoyer des emails pilotés par les données, des notifications push, des messages in-app et des SMS.
 
-Le [!DNL Customer.io] source vous permet d’ingérer les schémas d’événement webhook pris en charge et leurs données d’événement associées à partir de [!DNL Customer.io] en utilisant la variable [[!DNL Customer.io] Webhooks de création de rapports](https://customer.io/docs/api/webhooks/).
+La variable [!DNL Customer.io] source vous permet d’ingérer les schémas d’événement webhook pris en charge et leurs données d’événement associées à partir de [!DNL Customer.io] en utilisant la variable [[!DNL Customer.io] Webhooks de création de rapports](https://customer.io/docs/api/webhooks/).
 
 Les schémas d’événement webhook pris en charge sont les suivants :
 
@@ -34,7 +34,7 @@ Les schémas d’événement webhook pris en charge sont les suivants :
 * Événements de Slack
 * Événements Webhook
 
-Pour obtenir la liste des événements disponibles via des webhooks, reportez-vous à la section [[!DNL Customer.io] Reporting d’événements Webhook](https://customer.io/docs/webhooks/#events) documentation.
+Pour obtenir la liste des événements disponibles via des webhooks, reportez-vous à la section [[!DNL Customer.io] Reporting d’événements Webhook](https://customer.io/docs/webhooks/#events) la documentation.
 
 ## Conditions préalables {#prerequisites}
 
@@ -45,7 +45,7 @@ Avant de pouvoir créer un [!DNL Customer.io] connexion source, vous devez d’a
 
 ### Configuration [!DNL Customer.io] Webhook {#set-up-webhook}
 
-Une fois que vous avez créé votre flux de données, vous devez configurer un webhook de création de rapports pour informer Platform sur [!DNL Customer.io] événements . Les webhooks peuvent vous avertir immédiatement lorsque les attributs du client changent ou lorsque des personnes ouvrent vos messages, et envoyer ces informations à vos [!DNL Customer.io] source. Pour plus d’informations, consultez les tutoriels sur [obtention de l’URL de point de terminaison de diffusion en continu](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#get-streaming-endpoint) et [configuration d’un [!DNL Customer.io] Webhook](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#set-up-webhook).
+Une fois le flux de données créé, vous devez configurer un webhook de création de rapports pour informer Platform sur [!DNL Customer.io] événements . Les webhooks peuvent vous avertir immédiatement lorsque les attributs du client changent ou lorsque des personnes ouvrent vos messages, et envoyer ces informations à vos [!DNL Customer.io] source. Pour plus d’informations, consultez les tutoriels sur [obtention de l’URL de point de terminaison de diffusion en continu](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#get-streaming-endpoint) et [configuration d’un [!DNL Customer.io] Webhook](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#set-up-webhook).
 
 ## Connexion [!DNL Customer.io] vers Platform {#connect-to-platform}
 

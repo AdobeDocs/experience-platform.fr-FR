@@ -8,11 +8,11 @@ exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 8b5c1776804bbacad5c3d72dd48c1716380cca79
 workflow-type: tm+mt
 source-wordcount: '1161'
-ht-degree: 26%
+ht-degree: 27%
 
 ---
 
-# Définissez une relation un-à-un entre deux schémas à l’aide de la variable [!DNL Schema Editor] {#relationship-ui}
+# Définir une relation un-à-un entre deux schémas à l’aide de [!DNL Schema Editor] {#relationship-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_relationships"

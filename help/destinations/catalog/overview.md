@@ -31,7 +31,7 @@ Vous pouvez activer vos données dans différentes catégories de destination da
 - [[!UICONTROL Publicité] [!UICONTROL destinations] aperçu](advertising/overview.md)
 - [[!UICONTROL Analytics] [!UICONTROL destinations] aperçu](analytics/overview.md)
 - [[!UICONTROL Présentation des destinations de stockage dans le cloud]](cloud-storage/overview.md)
-- [[!UICONTROL Plateforme de gestion des données] (DMP) [!UICONTROL destinations] aperçu](data-management/overview.md)
+- [[!UICONTROL Plateforme de Data Management] (DMP) [!UICONTROL destinations] aperçu](data-management/overview.md)
 - [[!UICONTROL Présentation des destinations du marketing par e-mail]](email-marketing/overview.md)
 - [[!UICONTROL Présentation des destinations d’engagement mobile]](mobile-engagement/overview.md)
 - [[!UICONTROL Personnalisation] [!UICONTROL destinations] aperçu](personalization/overview.md)

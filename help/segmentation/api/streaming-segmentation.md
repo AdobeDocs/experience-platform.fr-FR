@@ -6,7 +6,7 @@ exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 source-git-commit: 23504dd0909488e2ee63bf356fba4c7f0f7320dc
 workflow-type: tm+mt
 source-wordcount: '1956'
-ht-degree: 69%
+ht-degree: 70%
 
 ---
 
@@ -450,6 +450,6 @@ Le nombre sous « X derniers jours » comprend **seulement** les audiences qua
 
 Par conséquent, si vous constatez que le nombre sous &quot;X derniers jours&quot; est nul et que le graphique linéaire signale également zéro, vous avez la valeur **not** diffusion en continu de tous les profils dans le système qui répondent aux critères de cette définition de segment.
 
-### Combien de temps faut-il pour qu’une définition de segment soit disponible ?
+### Combien de temps faut-il pour qu’une définition de segment soit disponible ?
 
 La disponibilité d’une définition de segment peut prendre jusqu’à une heure.

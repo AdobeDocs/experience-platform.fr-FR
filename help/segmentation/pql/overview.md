@@ -4,7 +4,7 @@ title: Vue d’ensemble de PQL (Profile Query Language)
 description: Ce guide présente un aperçu général de PQL, couvre les instructions de formatage et apporte des exemples d’expressions PQL.
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '706'
 ht-degree: 100%
 

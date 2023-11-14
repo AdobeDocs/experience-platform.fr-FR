@@ -11,7 +11,7 @@ ht-degree: 8%
 
 ---
 
-# Définition d’énumérations et de valeurs suggérées dans l’interface utilisateur {#enums-and-suggested-values}
+# Définir des énumérations et des valeurs suggérées dans l’interface utilisateur {#enums-and-suggested-values}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_enum_suggestedvalue"

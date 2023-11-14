@@ -12,7 +12,7 @@ ht-degree: 36%
 
 ---
 
-# Création d’une connexion source IBM DB2 dans l’interface utilisateur
+# Créer une connexion source IBM DB2 dans l’interface utilisateur
 
 >[!NOTE]
 >
@@ -42,13 +42,13 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 | `username` | Nom d’utilisateur utilisé pour se connecter à la base de données DB2. |
 | `password` | mot de passe du compte utilisateur que vous avez spécifié pour le nom d’utilisateur. |
 
-Pour plus d’informations sur la prise en main, reportez-vous à la section [ce document DB2 ;](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html).
+Pour plus d’informations sur la prise en main, voir [ce document DB2 ;](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html).
 
 ## Connexion à votre compte IBM DB2
 
 Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre compte DB2 à [!DNL Platform].
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au **[!UICONTROL Sources]** workspace. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Connexion à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au **[!UICONTROL Sources]** workspace. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
@@ -56,7 +56,7 @@ Sous , **[!UICONTROL Bases de données]** catégorie, sélectionnez **[!UICONTRO
 
 ![catalogue](../../../../images/tutorials/create/ibm-db2/catalog.png)
 
-Le **[!UICONTROL Connexion à IBM DB2]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La variable **[!UICONTROL Connexion à IBM DB2]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 

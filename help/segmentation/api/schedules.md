@@ -99,7 +99,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de plannings pou
 | `children.properties` | Objet contenant des propriétés supplémentaires liées au planning. |
 | `children.properties.segments` | L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
 | `children.schedule` | Chaîne contenant le planning de la tâche. L’exécution des tâches ne peut être planifiée qu’une fois par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution de plusieurs tâches sur une période de 24 heures. Pour plus d’informations sur les plannings cron, veuillez lire l’annexe sur la page [format d’expression cron](#appendix). Dans cet exemple, &quot;0 0 1 * *&quot; signifie que cette planification s’exécutera à 1h00 tous les jours. |
-| `children.state` | Chaîne contenant l’état du planning. Les deux états pris en charge sont &quot;principal&quot; et &quot;inactif&quot;. Par défaut, l’état est défini sur &quot;inactif&quot;. |
+| `children.state` | Chaîne contenant l’état du planning. Les deux états pris en charge sont &quot;actif&quot; et &quot;inactif&quot;. Par défaut, l’état est défini sur &quot;inactif&quot;. |
 
 ## Création d’un nouveau planning {#create}
 
@@ -141,7 +141,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `properties` | **Obligatoire.** Objet contenant des propriétés supplémentaires liées au planning. |
 | `properties.segments` | **Obligatoire lorsque `type` est égal à &quot;batch_segmentation&quot;.** L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
 | `schedule` | *Facultatif.* Chaîne contenant le planning de la tâche. L’exécution des tâches ne peut être planifiée qu’une fois par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution de plusieurs tâches sur une période de 24 heures. Pour plus d’informations sur les plannings cron, veuillez lire l’annexe sur la page [format d’expression cron](#appendix). Dans cet exemple, &quot;0 0 1 * *&quot; signifie que cette planification s’exécutera à 1h00 tous les jours. <br><br>Si cette chaîne n’est pas fournie, un planning généré automatiquement. |
-| `state` | *Facultatif.* Chaîne contenant l’état du planning. Les deux états pris en charge sont &quot;principal&quot; et &quot;inactif&quot;. Par défaut, l’état est défini sur &quot;inactif&quot;. |
+| `state` | *Facultatif.* Chaîne contenant l’état du planning. Les deux états pris en charge sont &quot;actif&quot; et &quot;inactif&quot;. Par défaut, l’état est défini sur &quot;inactif&quot;. |
 
 **Réponse**
 
@@ -183,7 +183,7 @@ GET /config/schedules/{SCHEDULE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | Le `id` valeur du planning que vous souhaitez récupérer. |
+| `{SCHEDULE_ID}` | La variable `id` valeur du planning que vous souhaitez récupérer. |
 
 **Requête**
 
@@ -234,13 +234,13 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 ## Mise à jour des détails d’un planning spécifique {#update}
 
-Vous pouvez mettre à jour un planning spécifique en envoyant une requête de PATCH au `/config/schedules` point de terminaison et en indiquant l’identifiant du planning que vous essayez de mettre à jour dans le chemin de requête.
+Vous pouvez mettre à jour un planning spécifique en envoyant une requête de PATCH au `/config/schedules` point de terminaison et en indiquant l’identifiant du planning que vous essayez de mettre à jour dans le chemin d’accès de la requête.
 
 La requête du PATCH vous permet de mettre à jour la variable [state](#update-state) ou le [planning cron](#update-schedule) pour un planning individuel.
 
 ### Mise à jour de l’état du planning {#update-state}
 
-Vous pouvez utiliser une opération de correctif JSON pour mettre à jour l’état du planning. Pour mettre à jour l’état, vous déclarez la variable `path` property as `/state` et définissez la variable `value` à `active` ou `inactive`. Pour plus d’informations sur le correctif JSON, veuillez lire la section [Correctif JSON](https://datatracker.ietf.org/doc/html/rfc6902) documentation.
+Vous pouvez utiliser une opération de correctif JSON pour mettre à jour l’état du planning. Pour mettre à jour l’état, vous déclarez la variable `path` property as `/state` et définissez la variable `value` à `active` ou `inactive`. Pour plus d’informations sur le correctif JSON, veuillez lire la section [Correctif JSON](https://datatracker.ietf.org/doc/html/rfc6902) la documentation.
 
 **Format d’API**
 
@@ -250,7 +250,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | Le `id` valeur du planning que vous souhaitez mettre à jour. |
+| `{SCHEDULE_ID}` | La variable `id` valeur du planning que vous souhaitez mettre à jour. |
 
 **Requête**
 
@@ -273,7 +273,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | Propriété | Description |
 | -------- | ----------- |
 | `path` | Chemin d’accès de la valeur que vous souhaitez mettre à jour. Dans ce cas, puisque vous mettez à jour l’état du planning, vous devez définir la valeur de `path` à &quot;/state&quot;. |
-| `value` | Valeur mise à jour de l’état du planning. Cette valeur peut être définie sur &quot;principal&quot; ou &quot;inactif&quot; pour activer ou désactiver le planning. Veuillez noter que vous **cannot** désactivez une planification si l’organisation a été activée pour la diffusion en continu. |
+| `value` | Valeur mise à jour de l’état du planning. Cette valeur peut être définie sur &quot;actif&quot; ou &quot;inactif&quot; pour activer ou désactiver le planning. Veuillez noter que vous **cannot** désactivez une planification si l’organisation a été activée pour la diffusion en continu. |
 
 **Réponse**
 
@@ -281,7 +281,7 @@ Une réponse réussie renvoie un état HTTP 204 (No Content).
 
 ### Mise à jour du planning cron {#update-schedule}
 
-Vous pouvez utiliser une opération de correctif JSON pour mettre à jour le planning cron. Pour mettre à jour le planning, vous devez déclarer la variable `path` property as `/schedule` et définissez la variable `value` à un planning cron valide. Pour plus d’informations sur le correctif JSON, veuillez lire la section [Correctif JSON](https://datatracker.ietf.org/doc/html/rfc6902) documentation. Pour plus d’informations sur les plannings cron, veuillez lire l’annexe sur la page [format d’expression cron](#appendix).
+Vous pouvez utiliser une opération de correctif JSON pour mettre à jour le planning cron. Pour mettre à jour le planning, vous devez déclarer la variable `path` property as `/schedule` et définissez la variable `value` à un planning cron valide. Pour plus d’informations sur le correctif JSON, veuillez lire la section [Correctif JSON](https://datatracker.ietf.org/doc/html/rfc6902) la documentation. Pour plus d’informations sur les plannings cron, veuillez lire l’annexe sur la page [format d’expression cron](#appendix).
 
 **Format d’API**
 
@@ -291,7 +291,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | Le `id` valeur du planning que vous souhaitez mettre à jour. |
+| `{SCHEDULE_ID}` | La variable `id` valeur du planning que vous souhaitez mettre à jour. |
 
 **Requête**
 
@@ -332,7 +332,7 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SCHEDULE_ID}` | Le `id` valeur du planning que vous souhaitez supprimer. |
+| `{SCHEDULE_ID}` | La variable `id` valeur du planning que vous souhaitez supprimer. |
 
 **Requête**
 

@@ -18,13 +18,13 @@ Il existe trois façons d’utiliser le SDK Web de Adobe Experience Platform pri
 1. Le SDK Web de Adobe Experience Platform est également disponible sur un réseau de diffusion de contenu (CDN) que vous pouvez utiliser.
 1. Utilisez la bibliothèque NPM qui exporte les modules EcmaScript 5 et EcmaScript 2015 (ES6).
 
-## Option 1 : Installation de l’extension de balise
+## Option 1 : installation de l’extension de balise
 
-Pour obtenir de la documentation sur l’extension de balise, reportez-vous à la section [Documentation sur les balises](../../tags/extensions/client/web-sdk/overview.md)
+Pour obtenir de la documentation sur l’extension de balise, voir [Documentation sur les balises](../../tags/extensions/client/web-sdk/overview.md)
 
-## Option 2 : Installation de la version autonome prédéfinie
+## Option 2 : installation de la version autonome prédéfinie
 
-La version prédéfinie est disponible sur un CDN. Vous pouvez référencer la bibliothèque sur le réseau de diffusion de contenu directement sur votre page, ou la télécharger et l’héberger sur votre propre infrastructure. Il est disponible dans des formats minimisés et non minimisés. La version non minimisée est utile à des fins de débogage.
+La version prédéfinie est disponible sur un réseau de diffusion de contenu. Vous pouvez référencer la bibliothèque sur le réseau de diffusion de contenu directement sur votre page, ou la télécharger et l’héberger sur votre propre infrastructure. Il est disponible dans des formats minimisés et non minimisés. La version non minimisée est utile à des fins de débogage.
 
 Structure de l’URL : https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OU alloy.js pour la version non minimisée.
 
@@ -71,7 +71,7 @@ Ce code de base, en plus de créer une fonction globale, charge également le co
 
 ### Prise en charge d’Internet Explorer {#support-internet-explore}
 
-Ce SDK utilise des promesses, qui sont une méthode de communication de l’achèvement des tâches asynchrones. Le [Promesse](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) La mise en oeuvre utilisée par le SDK est prise en charge en mode natif par tous les navigateurs cibles, à l’exception de [!DNL Internet Explorer]. Pour utiliser le SDK sur [!DNL Internet Explorer], vous devez avoir `window.Promise` [polyfillé](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+Ce SDK utilise des promesses, qui sont une méthode de communication de l’achèvement des tâches asynchrones. La variable [Promesse](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) La mise en oeuvre utilisée par le SDK est prise en charge en mode natif par tous les navigateurs cibles, à l’exception de [!DNL Internet Explorer]. Pour utiliser le SDK sur [!DNL Internet Explorer], vous devez `window.Promise` [polyfillé](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 Pour déterminer si `window.Promise` est déjà polyfillé :
 
@@ -111,17 +111,17 @@ Pour charger le fichier de manière synchrone plutôt qu’asynchrone, supprimez
 <script src="https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js"></script>
 ```
 
-## Option 3 : Utilisation du package NPM
+## Option 3 : utilisation du package NPM
 
-Le SDK Web Adobe Experience Platform est également disponible sous la forme d’un package NPM. [NPM](https://www.npmjs.com) est le gestionnaire de modules pour JavaScript. L’installation du package NPM vous permet de contrôler le processus de création pour le JavaScript du SDK Web Adobe Experience Platform. Le package NPM expose les modules EcmaScript version 5 ou les modules EcmaScript version 2015 (ES6) destinés à être exécutés dans le navigateur.
+Le SDK Web de Adobe Experience Platform est également disponible sous la forme d’un package NPM. [NPM](https://www.npmjs.com) est le gestionnaire de modules pour JavaScript. L’installation du package NPM vous permet de contrôler le processus de création pour le JavaScript du SDK Web Adobe Experience Platform. Le package NPM expose les modules EcmaScript version 5 ou les modules EcmaScript version 2015 (ES6) destinés à être exécutés dans le navigateur.
 
 ```bash
 npm install @adobe/alloy
 ```
 
-Le package NPM du SDK Web Adobe Experience Platform expose une `createInstance` fonction . Cette fonction est utilisée pour créer une instance. L’option de nom transmise à la fonction contrôle le préfixe utilisé dans la journalisation. Vous trouverez ci-dessous des exemples d’utilisation du module .
+Le package NPM du SDK Web Adobe Experience Platform expose une `createInstance` de la fonction Cette fonction est utilisée pour créer une instance. L’option de nom transmise à la fonction contrôle le préfixe utilisé dans la journalisation. Vous trouverez ci-dessous des exemples d’utilisation du module .
 
-### Utilisation du package en tant que module ECMAScript 2015 (ES6)
+### Utilisation du package comme module ECMAScript 2015 (ES6)
 
 ```javascript
 import { createInstance } from "@adobe/alloy";
@@ -132,7 +132,7 @@ alloy("sendEvent", { ... });
 
 >[!NOTE]
 >
->Le package NPM repose sur les modules CommonJS ; par conséquent, lors de l’utilisation d’un bundler, assurez-vous que le bundler prend en charge les modules CommonJS. Certains lots, tels que [Cumul](https://rollupjs.org), requiert une [plugin](https://www.npmjs.com/package/@rollup/plugin-commonjs) qui fournit la prise en charge de CommonJS.
+>Le package NPM repose sur des modules CommonJS ; par conséquent, lors de l’utilisation d’un bundler, assurez-vous que le bundler prend en charge les modules CommonJS. Certains lots, tels que [Cumul](https://rollupjs.org), requiert une [plugin](https://www.npmjs.com/package/@rollup/plugin-commonjs) qui fournit la prise en charge de CommonJS.
 
 ### Utilisation du package comme module ECMAScript 5
 
@@ -145,7 +145,7 @@ alloy("sendEvent", { ... });
 
 ### Prise en charge d’Internet Explorer
 
-Le SDK Adobe Experience Platform utilise des promesses, qui sont une méthode de communication de l’achèvement des tâches asynchrones. Le [Promesse](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) La mise en oeuvre utilisée par le SDK est prise en charge en mode natif par tous les navigateurs cibles, à l’exception de [!DNL Internet Explorer]. Pour utiliser le SDK sur [!DNL Internet Explorer], vous devez avoir `window.Promise` [polyfillé](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+Le SDK Adobe Experience Platform utilise des promesses, qui sont une méthode de communication de l’achèvement des tâches asynchrones. La variable [Promesse](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) La mise en oeuvre utilisée par le SDK est prise en charge en mode natif par tous les navigateurs cibles, à l’exception de [!DNL Internet Explorer]. Pour utiliser le SDK sur [!DNL Internet Explorer], vous devez `window.Promise` [polyfillé](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 Une bibliothèque que vous pouvez utiliser pour polyfiller la promesse est promesse-polyfill. Voir [documentation promo-polyfill](https://www.npmjs.com/package/promise-polyfill) pour plus d’informations sur la procédure d’installation avec NPM.
 

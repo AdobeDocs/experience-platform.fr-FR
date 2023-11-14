@@ -19,7 +19,7 @@ ht-degree: 66%
 
 Dans le cadre d’Intelligent Services, Customer AI permet aux spécialistes du marketing de générer des prédictions client au niveau individuel avec des explications.
 
-À l’aide de facteurs d’influence, Customer AI peut vous indiquer ce qu’un client est susceptible de faire et pourquoi. De plus, les professionnels du marketing peuvent tirer parti des prédictions et des informations de Customer AI pour personnaliser les expériences client en diffusant les offres et les messages les plus appropriés.
+À l’aide de facteurs d’influence, Customer AI peut vous indiquer ce qu’un client est susceptible de faire et pourquoi. De plus, les spécialistes marketing peuvent tirer parti des prédictions et des informations de Customer AI pour personnaliser les expériences client en diffusant les offres et les messages les plus appropriés.
 
 ## Fonctionnement de Customer AI
 

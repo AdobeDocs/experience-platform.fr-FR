@@ -30,7 +30,7 @@ Ce document nécessite une compréhension pratique des composants suivants de Ad
 * [Observability vous permet de surveiller les activités de Platform en utilisant des mesures statistiques et des notifications dʼévénement.](../../../observability/home.md)[!DNL Observability Insights]
    * [Alertes](../../../observability/alerts/overview.md): lorsqu’un certain ensemble de conditions est atteint dans vos opérations Platform (par exemple un problème potentiel lorsque le système dépasse un seuil), Platform peut envoyer des messages d’alerte à tous les utilisateurs de votre organisation qui se sont abonnés à eux.
 
-## Abonnement aux alertes dans l’interface utilisateur {#subscribe-sources-alerts}
+## S’abonner aux alertes dans l’interface utilisateur {#subscribe-sources-alerts}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_alerts_subscribe"

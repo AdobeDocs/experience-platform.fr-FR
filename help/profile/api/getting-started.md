@@ -17,17 +17,17 @@ ht-degree: 53%
 
 L’utilisation du guide de développement nécessite une compréhension pratique des différents services Adobe Experience Platform impliqués dans l’utilisation de [!DNL Profile] data. Avant de commencer à utiliser l’API [!DNL Real-Time Customer Profile], consultez la documentation relative aux services suivants :
 
-* [[!DNL Real-Time Customer Profile]](../home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-* [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): Obtenez une meilleure vue de vos clients et de leur comportement en rapprochant des identités entre les appareils et les systèmes.
-* [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md): Permet de créer des audiences à partir de données Real-time Customer Profile.
+* [[!DNL Real-Time Customer Profile]](../home.md): fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): profitez d’une meilleure vue d’ensemble de vos clients et de leur comportement en rapprochant des identités entre appareils et systèmes.
+* [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md): vous permet de créer des audiences à partir de données Real-time Customer Profile.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : framework normalisé selon lequel Platform organise les données de l’expérience client.
 * [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à [!DNL Profile] Points d’entrée API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à [!DNL Profile] Points de terminaison de l’API.
 
 ## Lecture d’exemples d’appels API
 
-Le [!DNL Real-Time Customer Profile] La documentation des API fournit des exemples d’appels API pour démontrer comment formater correctement les requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
+La variable [!DNL Real-Time Customer Profile] La documentation des API fournit des exemples d’appels API pour démontrer comment formater correctement les requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels d’API, voir la section concernant la [lecture d’exemples d’appels d’API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage[!DNL Experience Platform].
 
 ## En-têtes requis
 

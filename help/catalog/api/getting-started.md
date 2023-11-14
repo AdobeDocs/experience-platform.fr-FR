@@ -7,7 +7,7 @@ exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
 source-git-commit: 07451b8ab4bcb7ca43ad0c8a821478b2c9682894
 workflow-type: tm+mt
 source-wordcount: '595'
-ht-degree: 58%
+ht-degree: 61%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 58%
 
 Le [!DNL Catalog Service] est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. [!DNL Catalog] agit comme un magasin de métadonnées ou un &quot;catalogue&quot; dans lequel vous pouvez trouver des informations sur vos données dans [!DNL Experience Platform], sans avoir à accéder aux données elles-mêmes. Pour plus d’informations, consultez la [[!DNL Catalog] présentation](../home.md). 
 
-Ce guide du développeur décrit les étapes à suivre pour commencer à utiliser l&#39;API [!DNL Catalog]. Le guide fournit ensuite des exemples d’appels API pour effectuer des opérations clés à l’aide de [!DNL Catalog].
+Ce guide de développement décrit les étapes à suivre pour commencer à utiliser l’API [!DNL Catalog]. Le guide fournit ensuite des exemples d’appels API pour effectuer des opérations clés à l’aide de [!DNL Catalog].
 
 ## Conditions préalables
 
@@ -23,7 +23,7 @@ Ce guide du développeur décrit les étapes à suivre pour commencer à utilise
 
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 * [Ingestion par lots](../../ingestion/batch-ingestion/overview.md)[!DNL Experience Platform] : méthode d’ingestion et de stockage de données de fichiers, par exemple de type CSV et Parquet, dans 
-* [Ingestion par flux](../../ingestion/streaming-ingestion/overview.md): Comment [!DNL Experience Platform] ingère et stocke des données à partir de périphériques côté client et côté serveur en temps réel.
+* [Ingestion par flux](../../ingestion/streaming-ingestion/overview.md): comment [!DNL Experience Platform] ingère et stocke des données à partir de périphériques côté client et côté serveur en temps réel.
 
 Les sections suivantes contiennent des informations supplémentaires que vous devrez connaître ou dont vous devrez disposer pour passer avec succès des appels à la fonction [!DNL Catalog Service] API.
 
@@ -61,8 +61,8 @@ Comme certaines requêtes peuvent imposer une charge importante à l’API, des 
 
 ## Étapes suivantes
 
-Ce document couvrait les connaissances préalables requises pour effectuer des appels à la fonction [!DNL Catalog] API. Vous pouvez désormais procéder aux exemples d&#39;appel fournis dans ce guide de développement et suivre leurs instructions.
+Dans ce document, vous avez découvert les connaissances préalables requises pour effectuer des appels vers l’API [!DNL Catalog]. Vous pouvez désormais procéder aux exemples d&#39;appel fournis dans ce guide de développement et suivre leurs instructions.
 
-La plupart des exemples de ce guide utilisent la méthode `/dataSets` mais les principes peuvent s’appliquer à d’autres points de terminaison dans [!DNL Catalog] (par exemple, `/batches`). Consultez la [référence de l’API Catalog Service](https://www.adobe.io/experience-platform-apis/references/catalog/) pour obtenir une liste complète de tous les appels et opérations disponibles pour chaque point d’entrée.
+La plupart des exemples de ce guide utilisent la méthode `/dataSets` mais les principes peuvent s’appliquer à d’autres points de terminaison dans [!DNL Catalog] (par exemple `/batches`). Consultez la [référence de l’API Catalog Service](https://www.adobe.io/experience-platform-apis/references/catalog/) pour obtenir une liste complète de tous les appels et opérations disponibles pour chaque point d’entrée.
 
-Pour un workflow détaillé qui montre comment [!DNL Catalog] L’API est impliquée dans l’ingestion de données. Pour plus d’informations, consultez le tutoriel sur [création d’un jeu de données](../datasets/create.md).
+Pour un workflow détaillé qui montre comment la variable [!DNL Catalog] L’API est impliquée dans l’ingestion de données. Pour plus d’informations, consultez le tutoriel sur [création d’un jeu de données](../datasets/create.md).

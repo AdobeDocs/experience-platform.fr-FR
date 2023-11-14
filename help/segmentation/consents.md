@@ -25,14 +25,14 @@ Si un client a retiré ou refusé le consentement pour le partage de ses donnée
 Le respect des valeurs de consentement du client nécessite une compréhension des différentes [!DNL Adobe Experience Platform] les services impliqués. Avant de commencer ce tutoriel, assurez-vous de bien connaître les services suivants :
 
 * [[!DNL Experience Data Model (XDM)]](../xdm/home.md) : framework normalisé selon lequel Platform organise les données de l’expérience client.
-* [[!DNL Real-Time Customer Profile]](../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Permet de créer des audiences à partir de [!DNL Real-Time Customer Profile] data.
+* [[!DNL Real-Time Customer Profile]](../profile/home.md): fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): permet de créer des audiences à partir de [!DNL Real-Time Customer Profile] data.
 
 ## Champs de schéma de consentement
 
 Pour honorer les consentements et les préférences des clients, l’un des schémas qui fait partie de votre [!UICONTROL XDM Individual Profile] le schéma d’union doit contenir le groupe de champs standard **[!UICONTROL Consentements et préférences]**.
 
-Pour plus d’informations sur la structure et le cas d’utilisation prévu de chacun des attributs fournis par le groupe de champs, voir la section [Guide de référence des consentements et des préférences](../xdm/field-groups/profile/consents.md). Pour obtenir des instructions détaillées sur l’ajout d’un groupe de champs à un schéma, reportez-vous à la section [Guide de l’interface utilisateur XDM](../xdm/ui/resources/schemas.md#add-field-groups).
+Pour plus d’informations sur la structure et le cas d’utilisation prévu de chacun des attributs fournis par le groupe de champs, voir la section [Guide de référence des consentements et des préférences](../xdm/field-groups/profile/consents.md). Pour obtenir des instructions détaillées sur l’ajout d’un groupe de champs à un schéma, reportez-vous au [Guide de l’interface utilisateur XDM](../xdm/ui/resources/schemas.md#add-field-groups).
 
 Une fois que le groupe de champs a été ajouté à une [Schéma activé pour les profils](../xdm/ui/resources/schemas.md#profile) et ses champs ont été utilisés pour ingérer des données de consentement de votre application experience, vous pouvez utiliser les attributs de consentement collectés dans vos règles de segment.
 
@@ -47,7 +47,7 @@ Les étapes ci-dessous montrent comment ajouter les champs appropriés pour deux
 
 >[!NOTE]
 >
->Bien que ce guide se concentre sur les deux indicateurs d’exclusion ci-dessus, vous pouvez configurer vos définitions de segment afin d’incorporer des signaux de consentement supplémentaires. Le [Guide de référence des consentements et des préférences](../xdm/field-groups/profile/consents.md) fournit des informations supplémentaires sur chacune de ces options et sur les cas d’utilisation prévus.
+>Bien que ce guide se concentre sur les deux indicateurs d’exclusion ci-dessus, vous pouvez configurer vos définitions de segment afin d’incorporer des signaux de consentement supplémentaires. La variable [Guide de référence des consentements et des préférences](../xdm/field-groups/profile/consents.md) fournit des informations supplémentaires sur chacune de ces options et sur les cas d’utilisation prévus.
 
 Lors de la création d’une définition de segment dans l’interface utilisateur, sous **[!UICONTROL Attributs]**, accédez à **[!UICONTROL XDM Individual Profile]**, puis sélectionnez **[!UICONTROL Consentements et préférences]**. À partir de là, vous pouvez voir les options pour **[!UICONTROL Collecte de données]** et **[!UICONTROL Partager les données]**.
 
@@ -60,12 +60,12 @@ Commencez par sélectionner la variable **[!UICONTROL Collecte de données]** ca
 Une méthode consiste à exclure les clients qui ont choisi de ne pas collecter leurs données. Pour ce faire, définissez l’opérateur sur **[!UICONTROL n’est pas égal à]**, puis sélectionnez les valeurs suivantes :
 
 * **[!UICONTROL Non (opt-out)]**
-* **[!UICONTROL Valeur par défaut de Non (opt-out)]**
+* **[!UICONTROL Non par défaut (opt-out)]**
 * **[!UICONTROL Inconnu]** (si le consentement est supposé être refusé s’il est inconnu)
 
 ![](./images/opt-outs/collect.png)
 
-Sous **[!UICONTROL Attributs]** dans le rail de gauche, revenez à la **[!UICONTROL Consentements et préférences]** , puis sélectionnez **[!UICONTROL Partager les données]**. Faites glisser son correspondant **[!UICONTROL Valeur de choix]** dans la zone de travail, puis sélectionnez les mêmes valeurs que pour la [!UICONTROL Collecte de données] valeur de choix. Assurez-vous que la variable **[!UICONTROL Ou]** est établie entre les deux attributs.
+Sous **[!UICONTROL Attributs]** dans le rail de gauche, revenez à la **[!UICONTROL Consentements et préférences]** , puis sélectionnez **[!UICONTROL Partager les données]**. Faites glisser son correspondant **[!UICONTROL Valeur de choix]** dans la zone de travail, puis sélectionnez les mêmes valeurs que pour la variable [!UICONTROL Collecte de données] valeur de choix. Assurez-vous que la variable **[!UICONTROL Ou]** est établie entre les deux attributs.
 
 ![](./images/opt-outs/share.png)
 

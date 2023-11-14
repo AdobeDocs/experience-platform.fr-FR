@@ -19,7 +19,7 @@ Ce document couvre les concepts essentiels pour travailler avec les unions dans 
 
 ## Champs de schéma d’union
 
-Le [!DNL Schema Registry] inclut automatiquement trois champs clés dans un schéma d’union : `identityMap`, `timeSeriesEvents`, et `segmentMembership`.
+La variable [!DNL Schema Registry] inclut automatiquement trois champs clés dans un schéma d’union : `identityMap`, `timeSeriesEvents`, et `segmentMembership`.
 
 ### Mappage d’identités
 
@@ -31,11 +31,11 @@ Le tableau `timeSeriesEvents` est une liste d’événements de série temporell
 
 ### Mappage de l’adhésion aux segments
 
-Le `segmentMembership` map stocke les résultats de l’évaluation d’une définition de segment. Lorsque les tâches de segmentation sont exécutées avec succès à l’aide de l’[API Segmentation](https://www.adobe.io/experience-platform-apis/references/segmentation/), le mappage est mis à jour. `segmentMembership` stocke également toutes les audiences préévaluées ingérées dans Platform, ce qui permet l’intégration à d’autres solutions comme Adobe Audience Manager. Voir le tutoriel sur [création d’audiences à l’aide d’API](../../segmentation/tutorials/create-a-segment.md) pour plus d’informations.
+La variable `segmentMembership` map stocke les résultats de l’évaluation d’une définition de segment. Lorsque les tâches de segmentation sont exécutées avec succès à l’aide de l’[API Segmentation](https://www.adobe.io/experience-platform-apis/references/segmentation/), le mappage est mis à jour. `segmentMembership` stocke également toutes les audiences préévaluées ingérées dans Platform, ce qui permet l’intégration à d’autres solutions comme Adobe Audience Manager. Voir le tutoriel sur [création d’audiences à l’aide d’API](../../segmentation/tutorials/create-a-segment.md) pour plus d’informations.
 
 ## Récupération d’une liste d’unions {#list}
 
-Lorsque vous définissez la variable `union` sur un schéma, la balise [!DNL Schema Registry] ajoute automatiquement le schéma à l’union pour la classe sur laquelle le schéma est basé. S’il n’existe aucune union pour la classe en question, une nouvelle union est automatiquement créée. Le `$id` pour l’union est similaire à la norme `$id` d’autres [!DNL Schema Registry] ressources, à la seule différence près que est ajouté deux traits de soulignement et le mot &quot;union&quot; (`__union`).
+Lorsque vous définissez la variable `union` sur un schéma, la balise [!DNL Schema Registry] ajoute automatiquement le schéma à l’union pour la classe sur laquelle le schéma est basé. S’il n’existe aucune union pour la classe en question, une nouvelle union est automatiquement créée. La variable `$id` pour l’union est similaire à la norme `$id` d’autres [!DNL Schema Registry] ressources, à la seule différence près que est ajouté deux traits de soulignement et le mot &quot;union&quot; (`__union`).
 
 Vous pouvez afficher une liste des unions disponibles en adressant une demande de GET au `/tenant/unions` point de terminaison .
 
@@ -62,7 +62,7 @@ Le format de réponse dépend de la variable `Accept` en-tête envoyé dans la r
 | En-tête `Accept` | Description |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Renvoie un court résumé de chaque ressource. Il s’agit de l’en-tête recommandé pour répertorier les ressources. (Limite : 300) |
-| `application/vnd.adobe.xed+json` | Renvoie la classe JSON complète pour chaque ressource, avec l’élément d’origine `$ref` et `allOf` inclus. (Limite : 300) |
+| `application/vnd.adobe.xed+json` | Renvoie la classe JSON complète pour chaque ressource, avec l’objet original `$ref` et `allOf` inclus. (Limite : 300) |
 
 {style="table-layout:auto"}
 
@@ -194,7 +194,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 | Paramètre | Description |
 | --- | --- |
-| `{CLASS_ID}` | Le `$id` de la classe dont vous souhaitez répertorier les schémas activés pour l’union. |
+| `{CLASS_ID}` | La variable `$id` de la classe dont vous souhaitez répertorier les schémas activés pour l’union. |
 
 {style="table-layout:auto"}
 

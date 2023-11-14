@@ -9,7 +9,7 @@ ht-degree: 28%
 
 ---
 
-# Création d’une connexion source Google Ads dans l’interface utilisateur
+# Créer une connexion source Google Ads dans l’interface utilisateur
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ Sous , **[!UICONTROL Publicité]** catégorie, sélectionnez **[!UICONTROL Publi
 
 ![Catalogue de sources dans l’interface utilisateur de l’Experience Platform.](../../../../images/tutorials/create/ads/catalog.png).
 
-Le **[!UICONTROL Connexion à Google Ads]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La variable **[!UICONTROL Connexion à Google Ads]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 

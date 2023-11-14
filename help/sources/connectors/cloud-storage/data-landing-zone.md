@@ -36,7 +36,7 @@ Vous trouverez ci-dessous une liste des contraintes dont vous devez tenir compte
 
 Vous pouvez utiliser [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/fr-fr/products/storage/storage-explorer/) pour gérer le contenu de votre conteneur [!DNL Data Landing Zone].
 
-Dans le [!DNL Azure Storage Explorer] Dans l’interface utilisateur, sélectionnez l’icône de connexion dans le volet de navigation de gauche. La fenêtre **Sélectionner la ressource** s’affiche, vous permettant d’accéder à des options de connexion. Sélectionner **[!DNL Blob container]** pour se connecter à [!DNL Data Landing Zone].
+Dans le [!DNL Azure Storage Explorer] , sélectionnez l’icône de connexion dans le volet de navigation de gauche. La fenêtre **Sélectionner la ressource** s’affiche, vous permettant d’accéder à des options de connexion. Sélectionner **[!DNL Blob container]** pour se connecter à [!DNL Data Landing Zone].
 
 ![Sélection de ressource](../../images/tutorials/create/dlz/select-resource.png)
 
@@ -44,7 +44,7 @@ Ensuite, sélectionnez **URL de signature d’accès partagé (SAS)** comme mét
 
 ![Sélection d’une méthode de connexion](../../images/tutorials/create/dlz/select-connection-method.png)
 
-Après avoir sélectionné votre méthode de connexion, vous devez ensuite fournir un **nom d&#39;affichage** et le **[!DNL Blob]container SAS URL** qui correspond à votre [!DNL Data Landing Zone] conteneur.
+Après avoir sélectionné votre méthode de connexion, vous devez ensuite fournir un **nom d&#39;affichage** et la variable **[!DNL Blob]container SAS URL** qui correspond à votre [!DNL Data Landing Zone] conteneur.
 
 >[!TIP]
 >
@@ -81,7 +81,7 @@ Vous pouvez également utiliser l’interface de ligne de commande de votre pér
 
 ### Chargement d’un fichier à l’aide de Bash
 
-L’exemple suivant utilise Bash et cURL pour charger un fichier vers un [!DNL Data Landing Zone] avec le [!DNL Azure Blob Storage] API REST :
+L’exemple suivant utilise Bash et cURL pour charger un fichier vers un [!DNL Data Landing Zone] avec la propriété [!DNL Azure Blob Storage] API REST :
 
 ```shell
 # Set Azure Blob-related settings
@@ -140,7 +140,7 @@ L’exemple suivant utilise [!DNL Microsoft's] [!DNL AzCopy] pour télécharger 
 
 >[!TIP]
 >
->Bien que l’exemple ci-dessous utilise la variable `copy` , vous pouvez utiliser d’autres commandes et options pour charger un fichier dans votre [!DNL Data Landing Zone], à l’aide de [!DNL AzCopy]. Voir [[!DNL Microsoft AzCopy] document](https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy?toc=/azure/storage/blobs/toc.json) pour plus d’informations.
+>Bien que l’exemple ci-dessous utilise la variable `copy` , vous pouvez utiliser d’autres commandes et options pour charger un fichier dans votre [!DNL Data Landing Zone], en utilisant [!DNL AzCopy]. Voir [[!DNL Microsoft AzCopy] document](https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy?toc=/azure/storage/blobs/toc.json) pour plus d’informations.
 
 ```bat
 set sasUri=<FULL SAS URI, PROPERLY ESCAPED>

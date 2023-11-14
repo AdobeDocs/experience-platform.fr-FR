@@ -15,9 +15,9 @@ ht-degree: 11%
 
 ## Vue d’ensemble {#overview}
 
-Le **[!UICONTROL Comptes]** Cet onglet affiche des détails sur les connexions que vous avez établies avec différentes destinations. Reportez-vous à la section [Présentation des comptes](../ui/destinations-workspace.md#accounts) pour toutes les informations que vous pouvez obtenir sur chaque compte de destination.
+La variable **[!UICONTROL Comptes]** Cet onglet affiche des détails sur les connexions que vous avez établies avec différentes destinations. Voir [Présentation des comptes](../ui/destinations-workspace.md#accounts) pour toutes les informations disponibles sur chaque compte de destination.
 
-Ce tutoriel décrit les étapes à suivre pour mettre à jour les détails du compte de destination à l’aide de l’interface utilisateur de l’Experience Platform.
+Ce tutoriel décrit les étapes à suivre pour mettre à jour les détails du compte de destination à l’aide de l’interface utilisateur Experience Platform.
 
 Vous pouvez mettre à jour les détails du compte de destination afin d’actualiser et de réauthentifier les informations d’identification de vos comptes actuels ou expirés pour les destinations que vous utilisez actuellement. En règle générale, les jetons OAuth et porteur ont une durée de vie limitée, selon la plateforme de destination. Lorsque ces jetons expirent, vous pouvez les actualiser dans le workflow décrit ci-dessous. Ce workflow vous invite à passer par le workflow OAuth ou à réinsérer un jeton. De même, si un mot de passe ou un accès utilisateur a changé sur la plateforme en aval, vous pouvez actualiser les informations d’identification.
 
@@ -37,7 +37,7 @@ Suivez les étapes ci-dessous pour mettre à jour les détails de connexion vers
 
    ![Filtrage des comptes de destination](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Sélectionnez les ellipses (`...`) en regard du nom du compte que vous avez l’intention de mettre à jour. Un panneau contextuel s’affiche, fournissant des options pour **[!UICONTROL Activation des audiences]**, **[!UICONTROL Modifier les détails]**, et **[!UICONTROL Supprimer]** le compte. Sélectionnez la ![Bouton Modifier les détails](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Modifier les détails]** pour modifier les informations du compte.
+3. Sélectionnez les ellipses (`...`) en regard du nom du compte que vous souhaitez mettre à jour. Un panneau contextuel s’affiche, fournissant des options pour **[!UICONTROL Activation des audiences]**, **[!UICONTROL Modifier les détails]**, et **[!UICONTROL Supprimer]** le compte. Sélectionnez la variable ![Bouton Modifier les détails](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Modifier les détails]** pour modifier les informations du compte.
 
    ![Modifier le compte](../assets/ui/update-accounts/accounts-edit.png)
 
@@ -63,6 +63,6 @@ Suivez les étapes ci-dessous pour mettre à jour les détails de connexion vers
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez utilisé avec succès la méthode **[!UICONTROL destinations]** espace de travail pour mettre à jour les comptes existants.
+En suivant ce tutoriel, vous avez utilisé avec succès la méthode **[!UICONTROL destinations]** pour mettre à jour des comptes existants.
 
-Pour plus d’informations sur les destinations, reportez-vous à la section [présentation des destinations](../catalog/overview.md).
+Pour plus d’informations sur les destinations, voir [présentation des destinations](../catalog/overview.md).

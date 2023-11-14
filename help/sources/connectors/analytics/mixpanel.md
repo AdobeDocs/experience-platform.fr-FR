@@ -30,7 +30,7 @@ Cette section décrit les étapes préalables à l’authentification de votre c
 
 Pour créer une [!DNL Mixpanel] connexion source et flux de données, vous devez d’abord disposer d’un [!DNL Mixpanel] compte . Si vous n’avez pas de [!DNL Mixpanel] , voir [Enregistrement de panneau mixte](https://mixpanel.com/register/) pour créer votre compte.
 
-Une fois que vous avez créé une [!DNL Mixpanel] , accédez à la [!DNL Project Details] dans le [!DNL Project Seettings] de la [!DNL Mixpanel] Interface utilisateur permettant de récupérer l’ID de votre projet et de configurer votre fuseau horaire.
+Une fois que vous avez créé une [!DNL Mixpanel] , accédez à la [!DNL Project Details] dans le [!DNL Project Seettings] de la page [!DNL Mixpanel] Interface utilisateur permettant de récupérer l’ID de votre projet et de configurer votre fuseau horaire.
 
 ![mixpanel-project-settings](../../images/tutorials/create/mixpanel-export-events/mixpanel-project-settings.png)
 

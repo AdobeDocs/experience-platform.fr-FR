@@ -22,16 +22,16 @@ ht-degree: 13%
 
 | Propriété | Description |
 | --- | --- |
-| `_repo` | Un objet contenant les éléments suivants [!UICONTROL DateTime] fields : <ul><li>`createDate`: Date et heure de création de la ressource dans l’entrepôt de données, par exemple, date de la première ingestion des données.</li><li>`modifyDate`: Date et heure de la dernière modification de la ressource.</li></ul> |
+| `_repo` | Un objet contenant les éléments suivants [!UICONTROL DateTime] fields : <ul><li>`createDate`: date et heure de création de la ressource dans l’entrepôt de données, telles que le moment où les données ont été ingérées pour la première fois.</li><li>`modifyDate`: date et heure de la dernière modification de la ressource.</li></ul> |
 | `_id` | Identifiant de chaîne unique généré par le système pour l’enregistrement. Ce champ permet de suivre l’unicité d’un enregistrement individuel, d’éviter la duplication des données et de rechercher cet enregistrement dans les services en aval.<br><br>Ce champ étant généré par le système, il ne reçoit pas de valeur explicite lors de l’ingestion des données. Cependant, vous pouvez toujours choisir de fournir vos propres valeurs d’identifiant uniques si vous le souhaitez.<br><br>**** Il est important de distinguer que ce champ ne représente pas une identité liée à une personne individuelle, mais plutôt lʼenregistrement de données lui-même. Les données d’identité relatives à une personne doivent être reléguées à [champs d’identité](../schema/composition.md#identity) au lieu de . |
 | `createdByBatchID` | Identifiant du lot ingéré à l’origine de la création de l’enregistrement. |
 | `description` | Description de la définition de segment. |
 | `identityMap` | Champ de mappage contenant un ensemble d’identités d’espace de noms pour les individus auxquels s’applique l’audience. Pour plus d’informations sur les cas d’utilisation des mappages dʼidentités, consultez la section correspondante sur la page consacrée aux [principes de base de la composition des schémas](../schema/composition.md#identityMap). |
-| `modifiedByBatchID` | L’identifiant du dernier lot ingéré à l’origine de la mise à jour de l’enregistrement. |
+| `modifiedByBatchID` | L’identifiant du dernier lot ingéré qui a provoqué la mise à jour de l’enregistrement. |
 | `repositoryCreatedBy` | L’identifiant de l’utilisateur qui a créé l’enregistrement. |
 | `repositoryLastModifiedBy` | L’identifiant de l’utilisateur qui a modifié l’enregistrement pour la dernière fois. |
 | `segmentName` | **(Obligatoire)** Nom de la définition de segment. |
-| `segmentStatus` | État de l’audience à partir du système externe. Les valeurs suivantes sont acceptées : <ul><li>`ACTIVE`</li><li>`INACTIVE`</li><li>`DELETED`</li><li>`DRAFT`</li><li>`REVOKED`</li></ul> |
+| `segmentStatus` | État de l’audience du système externe. Les valeurs suivantes sont acceptées : <ul><li>`ACTIVE`</li><li>`INACTIVE`</li><li>`DELETED`</li><li>`DRAFT`</li><li>`REVOKED`</li></ul> |
 | `version` | Numéro de la dernière version de la définition de segment. |
 
 {style="table-layout:auto"}

@@ -5,8 +5,8 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 58%
+source-wordcount: '249'
+ht-degree: 59%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 58%
 
 >[!IMPORTANT]
 >
->Le [!DNL Amazon Redshift] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+>La variable [!DNL Amazon Redshift] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
@@ -34,5 +34,5 @@ La documentation ci-dessous fournit des informations sur la connexion d’[!DNL 
 
 ## Connecter [!DNL Amazon Redshift] à Platform à l’aide de l’interface utilisateur
 
-- [Création d’une connexion source Amazon Redshift dans l’interface utilisateur](../../tutorials/ui/create/databases/redshift.md)
-- [Création d’un flux de données pour une connexion à la source de la base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+- [Créer une connexion source Amazon Redshift dans l’interface utilisateur](../../tutorials/ui/create/databases/redshift.md)
+- [Création d’un flux de données pour une connexion source de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)

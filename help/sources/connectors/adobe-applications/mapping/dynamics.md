@@ -5,7 +5,7 @@ exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
 source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
 workflow-type: tm+mt
 source-wordcount: '524'
-ht-degree: 37%
+ht-degree: 38%
 
 ---
 
@@ -253,7 +253,7 @@ Vous pouvez utiliser les options suivantes pour mapper la variable `genderCode` 
 | --- | --- |
 | `decode(genderCode, "1", "male", "2", "female", "default")` | `person.gender` |
 
-Dans ce scénario, la valeur correspond à la clé, si elle figure dans les options, ou `default`, si `default` est présent et la clé est introuvable. La valeur correspond à `null` si options est `null` ou il n’y a pas de `default` et la clé est introuvable.
+Dans ce scénario, la valeur correspond à la clé, si elle figure dans les options, ou `default`, si `default` est présent et la clé est introuvable. La valeur correspond à `null` si options est `null` ou il n’y a pas `default` et la clé est introuvable.
 
 #### Utiliser un champ calculé
 

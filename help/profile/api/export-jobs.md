@@ -21,7 +21,7 @@ Ce document fournit des instructions étape par étape pour la création et la g
 >
 >Ce guide couvre l’utilisation des traitements d’exportation dans la variable [!DNL Profile API]. Pour plus d’informations sur la gestion des tâches d’exportation pour Adobe Experience Platform Segmentation Service, consultez le guide sur [tâches d’exportation dans l’API Segmentation](../../profile/api/export-jobs.md).
 
-Outre la création d’une tâche d’exportation, vous pouvez également accéder à [!DNL Profile] à l’aide de la variable `/entities` endpoint, également appelé &quot;[!DNL Profile Access]&quot;. Voir [guide de point d’entrée des entités](./entities.md) pour plus d’informations. Pour connaître les étapes d’accès [!DNL Profile] données à l’aide de l’interface utilisateur, voir [guide de l’utilisateur](../ui/user-guide.md).
+Outre la création d’une tâche d’exportation, vous pouvez également accéder à [!DNL Profile] à l’aide de la variable `/entities` endpoint, également appelé &quot;[!DNL Profile Access]&quot;. Voir [guide de point d’entrée des entités](./entities.md) pour plus d’informations. Pour connaître les étapes d’accès [!DNL Profile] données utilisant l’interface utilisateur, voir [guide de l’utilisateur](../ui/user-guide.md).
 
 ## Prise en main
 
@@ -135,7 +135,7 @@ curl -X POST \
 | `mergePolicy` | *(Facultatif)* Spécifie la politique de fusion pour régir les données exportées. Insérez ce paramètre lorsque plusieurs audiences sont exportées. |
 | `mergePolicy.id` | Identifiant de la politique de fusion. |
 | `mergePolicy.version` | La version spécifique de la politique de fusion à utiliser. Si vous omettez cette valeur, la version la plus récente sera utilisée par défaut. |
-| `additionalFields.eventList` | *(Facultatif)* Contrôle les champs d’événement de série temporelle exportés pour des objets enfants ou associés en fournissant un ou plusieurs des paramètres suivants :<ul><li>`eventList.fields` : contrôlent les champs à exporter.</li><li>`eventList.filter` : indique les critères qui limitent les résultats inclus dans les objets associés. Attend une valeur minimale requise pour l’exportation, généralement une date.</li><li>`eventList.filter.fromIngestTimestamp`: Filtre les événements de série temporelle par rapport à ceux qui ont été ingérés après l’horodatage fourni. Il ne s’agit pas de l’heure de l’événement, mais de l’heure de l’ingestion des événements.</li></ul> |
+| `additionalFields.eventList` | *(Facultatif)* Contrôle les champs d’événement de série temporelle exportés pour des objets enfants ou associés en fournissant un ou plusieurs des paramètres suivants :<ul><li>`eventList.fields` : contrôlent les champs à exporter.</li><li>`eventList.filter` : indique les critères qui limitent les résultats inclus dans les objets associés. Attend une valeur minimale requise pour l’exportation, généralement une date.</li><li>`eventList.filter.fromIngestTimestamp`: filtre les événements de série temporelle par rapport à ceux qui ont été ingérés après l’horodatage fourni. Il ne s’agit pas de l’heure de l’événement, mais de l’heure de l’ingestion des événements.</li></ul> |
 | `destination` | **(Obligatoire)** Informations de destination pour les données exportées :<ul><li>`destination.datasetId` : **(obligatoire)** identifiant du jeu de données vers lequel les données doivent être exportées.</li><li>`destination.segmentPerBatch` : *(facultatif)* valeur booléenne qui, si elle n’est pas fournie, est définie par défaut sur `false`. Une valeur de `false` exporte tous les identifiants de définition de segment dans un seul identifiant de lot. Une valeur de `true` exporte un identifiant de définition de segment dans un identifiant de lot. Notez que la définition de la valeur sur `true` peut affecter les performances d’exportation par lots.</li></ul> |
 | `schema.name` | **(Obligatoire)** Le nom du schéma associé au jeu de données vers lequel les données doivent être exportées. |
 
@@ -446,7 +446,7 @@ La section suivante contient des informations supplémentaires sur les tâches d
 
 ### Exemples supplémentaires de payload d’exportation
 
-L’exemple d’appel API présenté dans la section sur [lancement d’une tâche d’exportation](#initiate) crée une tâche qui contient à la fois des données de profil (enregistrement) et d’événement (série temporelle). Cette section fournit des exemples de payload de requête supplémentaires pour limiter votre exportation à contenir un type de données ou un autre.
+L’exemple d’appel API présenté dans la section sur [lancer une tâche d’exportation](#initiate) crée une tâche qui contient à la fois des données de profil (enregistrement) et d’événement (série temporelle). Cette section fournit des exemples de payload de requête supplémentaires pour limiter votre exportation à contenir un type de données ou un autre.
 
 La charge utile suivante crée une tâche d’exportation contenant uniquement des données de profil (aucun événement) :
 

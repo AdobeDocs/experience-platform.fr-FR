@@ -39,11 +39,11 @@ Pour accéder au compte [!DNL Salesforce Marketing Cloud] sur Platform, vous dev
 | Identifiant client | L’ID client associé à votre [!DNL Salesforce Marketing Cloud] application. |
 | Secret client | Le secret client associé à votre [!DNL Salesforce Marketing Cloud] application. |
 
-Pour plus d’informations sur l’authentification pour [!DNL Salesforce Marketing Cloud], rendez-vous sur la page [[!DNL Salesforce] documentation d’authentification](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
+Pour plus d’informations sur l’authentification pour [!DNL Salesforce Marketing Cloud], consultez la [[!DNL Salesforce] documentation d’authentification](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
 
 ## Connecter votre compte [!DNL Salesforce Marketing Cloud]
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Le [!UICONTROL Catalogue] affiche diverses sources prises en charge par Experience Platform.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. La variable [!UICONTROL Catalogue] affiche diverses sources prises en charge par Experience Platform.
 
 Vous pouvez sélectionner la catégorie appropriée dans la liste des catégories. Vous pouvez également utiliser la barre de recherche pour filtrer une source spécifique.
 
@@ -51,7 +51,7 @@ Sous , [!UICONTROL Automatisation du marketing] catégorie, sélectionnez **[!UI
 
 ![Catalogue des sources avec la source de Marketing Cloud Salesforce sélectionnée.](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
 
-Le **[!UICONTROL Connexion au Marketing Cloud Salesforce]** s’affiche. Sur cette page, vous pouvez créer un compte ou utiliser un compte existant.
+La variable **[!UICONTROL Connexion au Marketing Cloud Salesforce]** s’affiche. Sur cette page, vous pouvez créer un compte ou utiliser un compte existant.
 
 ### Nouveau compte
 

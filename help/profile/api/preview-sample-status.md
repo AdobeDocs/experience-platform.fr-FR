@@ -14,11 +14,11 @@ ht-degree: 5%
 
 Adobe Experience Platform vous permet d’ingérer des données client provenant de plusieurs sources afin de créer un profil robuste et unifié pour chacun de vos clients. Lorsque des données sont ingérées dans Platform, un exemple de tâche est exécuté pour mettre à jour le nombre de profils et d’autres mesures liées aux données de Real-Time Customer Profile.
 
-Les résultats de cet exemple de tâche peuvent être affichés à l’aide de la fonction `/previewsamplestatus` point de terminaison, qui fait partie de l’API Real-time Customer Profile. Ce point de terminaison peut également être utilisé pour répertorier les distributions de profil par jeu de données et espace de noms d’identité, ainsi que pour générer plusieurs rapports afin de mieux comprendre la composition de la banque de profils de votre entreprise. Ce guide décrit les étapes requises pour afficher ces mesures à l’aide de la variable `/previewsamplestatus` Point d’entrée de l’API.
+Les résultats de cet exemple de tâche peuvent être affichés à l’aide de la fonction `/previewsamplestatus` point de terminaison, qui fait partie de l’API Real-time Customer Profile. Ce point de terminaison peut également être utilisé pour répertorier les distributions de profil par jeu de données et espace de noms d’identité, ainsi que pour générer plusieurs rapports afin de mieux comprendre la composition de la banque de profils de votre entreprise. Ce guide décrit les étapes requises pour afficher ces mesures à l’aide du `/previewsamplestatus` Point d’entrée de l’API.
 
 >[!NOTE]
 >
->Des points de terminaison d’estimation et de prévisualisation sont disponibles dans le cadre de l’API Adobe Experience Platform Segmentation Service. Ils vous permettent d’afficher des informations de niveau résumé concernant les définitions de segment afin de vous assurer que vous isolez l’audience attendue. Pour obtenir des instructions détaillées sur l’utilisation des points de terminaison de prévisualisation et d’estimation, consultez la [guide d’aperçu et de point de fin d’estimation](../../segmentation/api/previews-and-estimates.md), partie de la fonction [!DNL Segmentation] Guide de développement d’API.
+>Des points de terminaison d’estimation et de prévisualisation sont disponibles dans le cadre de l’API Adobe Experience Platform Segmentation Service. Ils vous permettent d’afficher des informations de niveau résumé concernant les définitions de segment afin de vous assurer que vous isolez l’audience attendue. Pour obtenir des instructions détaillées sur l’utilisation des points de terminaison de prévisualisation et d’estimation, consultez la [guide des prévisualisations et des points de fin d’estimation](../../segmentation/api/previews-and-estimates.md), partie de la fonction [!DNL Segmentation] Guide de développement d’API.
 
 ## Prise en main
 
@@ -26,7 +26,7 @@ Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Rea
 
 ## Fragments de profil contre profils fusionnés
 
-Ce guide fait référence à la fois aux &quot;fragments de profil&quot; et aux &quot;profils fusionnés&quot;. Il est important de comprendre la différence entre ces termes avant de poursuivre.
+Ce guide fait référence aux &quot;fragments de profil&quot; et aux &quot;profils fusionnés&quot;. Il est important de comprendre la différence entre ces termes avant de poursuivre.
 
 Chaque profil client est composé de plusieurs fragments de profil qui ont été fusionnés dans le but de former une vue unique pour ce client. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, il est probable que votre entreprise dispose de plusieurs fragments de profil associés à ce client unique apparaissant dans plusieurs jeux de données.
 
@@ -99,7 +99,7 @@ La réponse inclut les détails du dernier exemple de tâche réussi qui a été
 | Propriété | Description |
 |---|---|
 | `numRowsToRead` | Le nombre total de profils fusionnés dans l’exemple. |
-| `sampleJobRunning` | Une valeur booléenne qui renvoie `true` lorsqu’un exemple de tâche est en cours. Fournit une transparence quant à la latence qui survient lorsqu’un fichier de lot est chargé dans lorsqu’il est réellement ajouté à la banque de profils. |
+| `sampleJobRunning` | Une valeur booléenne qui renvoie `true` lorsqu’un exemple de tâche est en cours. Fournit une transparence sur la latence qui survient lorsqu’un fichier de lot est chargé dans lorsqu’il est réellement ajouté à la banque de profils. |
 | `cosmosDocCount` | Nombre total de documents dans Cosmos. |
 | `totalFragmentCount` | Nombre total de fragments de profil dans la banque de profils. |
 | `lastSuccessfulBatchTimestamp` | Dernier horodatage d’ingestion par lots réussi. |
@@ -194,9 +194,9 @@ La réponse comprend une `data` contenant une liste d’objets de jeu de donnée
 | Propriété | Description |
 |---|---|
 | `sampleCount` | Le nombre total de profils fusionnés échantillonnés avec cet identifiant de jeu de données. |
-| `samplePercentage` | Le `sampleCount` en pourcentage du nombre total de profils fusionnés échantillonnés (le `numRowsToRead` comme indiqué dans la variable [dernier exemple d’état](#view-last-sample-status)), exprimé au format décimal. |
+| `samplePercentage` | La variable `sampleCount` en pourcentage du nombre total de profils fusionnés échantillonnés (le `numRowsToRead` comme indiqué dans la variable [dernier exemple d’état](#view-last-sample-status)), exprimé au format décimal. |
 | `fullIDsCount` | Le nombre total de profils fusionnés avec cet identifiant de jeu de données. |
-| `fullIDsPercentage` | Le `fullIDsCount` en pourcentage du nombre total de profils fusionnés (le `totalRows` comme indiqué dans la variable [dernier exemple d’état](#view-last-sample-status)), exprimé au format décimal. |
+| `fullIDsPercentage` | La variable `fullIDsCount` en pourcentage du nombre total de profils fusionnés (le `totalRows` comme indiqué dans la variable [dernier exemple d’état](#view-last-sample-status)), exprimé au format décimal. |
 | `name` | Nom du jeu de données, tel qu’il est fourni lors de la création du jeu de données. |
 | `description` | Description du jeu de données, tel qu’il est fourni lors de la création du jeu de données. |
 | `value` | L’identifiant du jeu de données. |
@@ -293,13 +293,13 @@ La réponse comprend une `data` avec des objets individuels contenant les détai
 | Propriété | Description |
 |---|---|
 | `sampleCount` | Nombre total de profils fusionnés échantillonnés dans l’espace de noms. |
-| `samplePercentage` | Le `sampleCount` en tant que pourcentage des profils fusionnés échantillonnés (le `numRowsToRead` comme indiqué dans la variable [dernier exemple d’état](#view-last-sample-status)), exprimé au format décimal. |
+| `samplePercentage` | La variable `sampleCount` en tant que pourcentage des profils fusionnés échantillonnés (le `numRowsToRead` comme indiqué dans la variable [dernier exemple d’état](#view-last-sample-status)), exprimé au format décimal. |
 | `reportTimestamp` | Horodatage du rapport. Si une `date` a été fourni pendant la requête, le rapport renvoyé correspond à la date fournie. Si non `date` est fourni, le rapport le plus récent est renvoyé. |
 | `fullIDsFragmentCount` | Nombre total de fragments de profil dans l’espace de noms. |
 | `fullIDsCount` | Le nombre total de profils fusionnés dans l’espace de noms. |
-| `fullIDsPercentage` | Le `fullIDsCount` en tant que pourcentage du total des profils fusionnés (le `totalRows` comme indiqué dans la variable [dernier exemple d’état](#view-last-sample-status)), exprimé au format décimal. |
-| `code` | Le `code` pour l’espace de noms. Vous pouvez le trouver lorsque vous utilisez des espaces de noms à l’aide de la variable [API Adobe Experience Platform Identity Service](../../identity-service/api/list-namespaces.md) et est également appelé [!UICONTROL Symbole d’identité] dans l’interface utilisateur de l’Experience Platform. Pour en savoir plus, rendez-vous sur la page [présentation de l’espace de noms d’identité](../../identity-service/namespaces.md). |
-| `value` | Le `id` pour l’espace de noms. Vous pouvez le trouver lorsque vous utilisez des espaces de noms à l’aide de la variable [API Identity Service](../../identity-service/api/list-namespaces.md). |
+| `fullIDsPercentage` | La variable `fullIDsCount` en tant que pourcentage du total des profils fusionnés (le `totalRows` comme indiqué dans la variable [dernier exemple d’état](#view-last-sample-status)), exprimé au format décimal. |
+| `code` | La variable `code` pour l’espace de noms. Vous pouvez le trouver lorsque vous utilisez des espaces de noms à l’aide de la variable [API Adobe Experience Platform Identity Service](../../identity-service/api/list-namespaces.md) et est également appelé [!UICONTROL Symbole d’identité] dans l’interface utilisateur de l’Experience Platform. Pour en savoir plus, consultez la [présentation de l’espace de noms d’identité](../../identity-service/namespaces.md). |
+| `value` | La variable `id` pour l’espace de noms. Vous pouvez le trouver lorsque vous utilisez des espaces de noms à l’aide de la variable [API Identity Service](../../identity-service/api/list-namespaces.md). |
 
 ## Génération du rapport de chevauchement de jeux de données
 
@@ -349,7 +349,7 @@ Une requête réussie renvoie un état HTTP 200 (OK) et le rapport de chevauchem
 
 | Propriété | Description |
 |---|---|
-| `data` | Le `data` contient des listes de jeux de données séparées par des virgules et leurs nombres de profils respectifs. |
+| `data` | La variable `data` contient des listes de jeux de données séparées par des virgules et leurs nombres de profils respectifs. |
 | `reportTimestamp` | Horodatage du rapport. Si une `date` a été fourni pendant la requête, le rapport renvoyé correspond à la date fournie. Si non `date` est fourni, le rapport le plus récent est renvoyé. |
 
 ### Interprétation du rapport de chevauchement de jeux de données
@@ -443,8 +443,8 @@ Une requête réussie renvoie un état HTTP 200 (OK) et le rapport de chevauchem
 
 | Propriété | Description |
 |---|---|
-| `data` | Le `data` contient des listes séparées par des virgules avec des combinaisons uniques de codes d’espace de noms d’identité et leurs nombres de profils respectifs. |
-| Codes d’espace de noms | Le `code` est un formulaire court pour chaque nom d’espace de noms d’identité. Mappage de chaque `code` à `name` se trouve à l’aide de la méthode [API Adobe Experience Platform Identity Service](../../identity-service/api/list-namespaces.md). Le `code` est également appelé [!UICONTROL Symbole d’identité] dans l’interface utilisateur de l’Experience Platform. Pour en savoir plus, rendez-vous sur la page [présentation de l’espace de noms d’identité](../../identity-service/namespaces.md). |
+| `data` | La variable `data` contient des listes séparées par des virgules avec des combinaisons uniques de codes d’espace de noms d’identité et leurs nombres de profils respectifs. |
+| Codes d’espace de noms | La variable `code` est un formulaire court pour chaque nom d’espace de noms d’identité. Mappage de chaque `code` à `name` se trouve à l’aide de la méthode [API Adobe Experience Platform Identity Service](../../identity-service/api/list-namespaces.md). La variable `code` est également appelé [!UICONTROL Symbole d’identité] dans l’interface utilisateur de l’Experience Platform. Pour en savoir plus, consultez la [présentation de l’espace de noms d’identité](../../identity-service/namespaces.md). |
 | `reportTimestamp` | Horodatage du rapport. Si une `date` a été fourni pendant la requête, le rapport renvoyé correspond à la date fournie. Si non `date` est fourni, le rapport le plus récent est renvoyé. |
 
 ### Interprétation du rapport de chevauchement des espaces de noms d’identité
@@ -461,7 +461,7 @@ Examinez l’extrait suivant de la `data` objet :
 
 Ce rapport fournit les informations suivantes :
 
-* Il y a 142 profils composés de `AAID`, `ECID`, et `Email` identités standard, ainsi qu’à partir d’une `crmid` espace de noms d’identité.
+* Il y a 142 profils composés de `AAID`, `ECID`, et `Email` identités standard, ainsi que depuis une `crmid` espace de noms d’identité.
 * Il y a 24 profils composés de `AAID` et `ECID` espaces de noms d’identité.
 * Il existe 6 565 profils qui incluent uniquement une `ECID` identité.
 
@@ -547,13 +547,13 @@ Une requête réussie renvoie un état HTTP 200 (OK) et le rapport des profils d
 
 | Propriété | Description |
 |---|---|
-| `data` | Le `data` contient les informations renvoyées pour le rapport des profils désassemblés. |
+| `data` | La variable `data` contient les informations renvoyées pour le rapport des profils désassemblés. |
 | `totalNumberOfProfiles` | Nombre total de profils uniques dans la banque de profils. Cela équivaut au nombre d’audiences adressables. Il comprend les profils connus et désassemblés. |
 | `totalNumberOfEvents` | Nombre total d’ExperienceEvents dans le magasin de profils. |
 | `unstitchedProfiles` | Objet contenant une ventilation des profils désassemblés par période. Le rapport Profils désassemblés fournit une ventilation des profils pour des périodes de 7, 30, 60, 90 et 120 jours. |
 | `countOfProfiles` | Le nombre de profils désassemblés pour la période ou le nombre de profils désassemblés pour l’espace de noms. |
 | `eventsAssociated` | Nombre d’ExperienceEvents pour la période ou nombre d’événements pour l’espace de noms. |
-| `nsDistribution` | Objet contenant des espaces de noms d’identité individuels avec la distribution de profils et d’événements désassemblés pour chaque espace de noms. Remarque : Ajouter ensemble le total `countOfProfiles` pour chaque espace de noms d’identité dans la variable `nsDistribution` est égal à `countOfProfiles` pour la période. Il en va de même pour `eventsAssociated` par espace de noms et le total `eventsAssociated` par période. |
+| `nsDistribution` | Objet contenant des espaces de noms d’identité individuels avec la distribution de profils et d’événements désassemblés pour chaque espace de noms. Remarque : Si vous additionnez le total `countOfProfiles` pour chaque espace de noms d’identité dans la variable `nsDistribution` est égal à `countOfProfiles` pour la période. Il en va de même pour `eventsAssociated` par espace de noms et le total `eventsAssociated` par période. |
 | `reportTimestamp` | Horodatage du rapport. |
 
 ### Interprétation du rapport des profils désassemblés

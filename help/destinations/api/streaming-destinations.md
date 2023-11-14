@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées ; Tutoriels sur les API ; API des destinations de diffusion en continu ; Plateforme
+keywords: Experience Platform;accueil;rubriques les plus consultées ; tutoriels sur les API ; API des destinations en flux continu ; plateforme
 solution: Experience Platform
 title: Connexion aux destinations en continu et activation des données à l’aide de l’API Flow Service dans Adobe Experience Platform
 description: Ce document couvre la création de destinations de diffusion en continu à l’aide de l’API Adobe Experience Platform.
@@ -20,13 +20,13 @@ ht-degree: 45%
 >
 >Pour activer les données, vous avez besoin des **[!UICONTROL autorisations de contrôle d’accès]** pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et [Afficher les segments](/help/access-control/home.md#permissions).
 >
->Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Ce tutoriel explique comment utiliser les appels API pour se connecter à vos données Adobe Experience Platform et créer une connexion à une destination de stockage dans le cloud en continu ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) ou [Centre d’événements Azure](../catalog/cloud-storage/azure-event-hubs.md)), créez un flux de données vers la nouvelle destination créée et activez les données vers la nouvelle destination créée.
 
 Ce tutoriel utilise la méthode [!DNL Amazon Kinesis] destination dans tous les exemples, mais les étapes sont identiques pour [!DNL Azure Event Hubs].
 
-![Présentation : étapes de création d’une destination de diffusion en continu et d’activation des audiences](../assets/api/streaming-destination/overview.png)
+![Présentation : étapes pour créer une destination de diffusion en continu et activer les audiences](../assets/api/streaming-destination/overview.png)
 
 Si vous préférez utiliser l’interface utilisateur de Platform pour vous connecter à une destination et activer des données, reportez-vous à la section [Connexion à une destination](../ui/connect-destination.md) et [Activation des données d’audience vers des destinations d’exportation d’audience par flux](../ui/activate-segment-streaming-destinations.md) tutoriels.
 
@@ -157,7 +157,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-* `{CONNECTION_SPEC_ID}`: Utilisation de l’identifiant de spécification de connexion pour Profile Service - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: utilisez l’identifiant de spécification de connexion pour Profile Service - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Réponse**
 
@@ -202,7 +202,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 * `{BASE_CONNECTION_ID}` : utilisez l’identifiant que vous avez obtenu à l’étape précédente.
-* `{CONNECTION_SPEC_ID}`: Utilisation de l’identifiant de spécification de connexion pour Profile Service - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+* `{CONNECTION_SPEC_ID}`: utilisez l’identifiant de spécification de connexion pour Profile Service - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Réponse**
 
@@ -275,7 +275,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{REGION}`: *Pour [!DNL Amazon Kinesis] connexions.* La région de votre [!DNL Amazon Kinesis] compte où Platform diffusera vos données.
 * `{SAS_KEY_NAME}`: *Pour [!DNL Azure Event Hubs] connexions.* Renseignez le nom de votre clé SAS. En savoir plus sur l’authentification à [!DNL Azure Event Hubs] avec les clés SAS dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * `{SAS_KEY}`: *Pour [!DNL Azure Event Hubs] connexions.* Renseignez votre clé SAS. En savoir plus sur l’authentification à [!DNL Azure Event Hubs] avec les clés SAS dans [Documentation Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* `{EVENT_HUB_NAMESPACE}`: *Pour [!DNL Azure Event Hubs] connexions.* Renseignez les [!DNL Azure Event Hubs] Espace de noms dans lequel Platform diffusera vos données. Pour plus d’informations, voir [Création d’un espace de noms Event Hubs](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) dans le [!DNL Microsoft] documentation.
+* `{EVENT_HUB_NAMESPACE}`: *Pour [!DNL Azure Event Hubs] connexions.* Renseignez les [!DNL Azure Event Hubs] Espace de noms dans lequel Platform diffusera vos données. Pour plus d’informations, voir [Création d’un espace de noms Event Hubs](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace) dans le [!DNL Microsoft] la documentation.
 
 **Réponse**
 
@@ -332,7 +332,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 * `{CONNECTION_SPEC_ID}` : utilisez la spécification de connexion que vous avez obtenue lors de l’étape [Obtention de la liste des destinations disponibles](#get-the-list-of-available-destinations).
 * `{NAME_OF_DATA_STREAM}`: *Pour [!DNL Amazon Kinesis] connexions.* Indiquez le nom de votre flux de données existant dans votre [!DNL Amazon Kinesis] compte . Platform exportera les données vers ce flux.
 * `{REGION}`: *Pour [!DNL Amazon Kinesis] connexions.* La région de votre compte Kinesis Amazon dans laquelle Platform diffusera vos données.
-* `{EVENT_HUB_NAME}`: *Pour [!DNL Azure Event Hubs] connexions.* Renseignez les [!DNL Azure Event Hub] Nom où Platform diffusera vos données. Pour plus d’informations, voir [Création d’un hub d’événements](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) dans le [!DNL Microsoft] documentation.
+* `{EVENT_HUB_NAME}`: *Pour [!DNL Azure Event Hubs] connexions.* Renseignez les [!DNL Azure Event Hub] Nom où Platform diffusera vos données. Pour plus d’informations, voir [Création d’un hub d’événements](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub) dans le [!DNL Microsoft] la documentation.
 
 **Réponse**
 
@@ -403,9 +403,9 @@ curl -X POST \
 }
 ```
 
-* `{FLOW_SPEC_ID}`: L’identifiant de spécification de flux pour les destinations basées sur les profils est : `71471eba-b620-49e4-90fd-23f1fa0174d8`. Utilisez cette valeur dans l’appel .
+* `{FLOW_SPEC_ID}`: l’identifiant de spécification de flux pour les destinations basées sur les profils est : `71471eba-b620-49e4-90fd-23f1fa0174d8`. Utilisez cette valeur dans l’appel .
 * `{SOURCE_CONNECTION_ID}` : utilisez l’identifiant de connexion source obtenu à l’étape [Connexion à Experience Platform](#connect-to-your-experience-platform-data).
-* `{TARGET_CONNECTION_ID}`: Utilisez l’identifiant de connexion cible obtenu à l’étape [Connexion à la destination de diffusion en continu](#connect-to-streaming-destination).
+* `{TARGET_CONNECTION_ID}`: utilisez l’identifiant de connexion cible obtenu à l’étape [Connexion à la destination de diffusion en continu](#connect-to-streaming-destination).
 
 **Réponse**
 
@@ -474,7 +474,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | Dans l’URL, utilisez l’identifiant du flux de données que vous avez créé à l’étape précédente. |
 | `{ETAG}` | Obtenez la variable `{ETAG}` de la réponse de l’étape précédente, [Création d’un flux de données](#create-dataflow). Le format de réponse de l’étape précédente comporte des guillemets d’échappement. Vous devez utiliser les valeurs sans séquence d’échappement dans l’en-tête de la requête. Voir l’exemple ci-dessous: <br> <ul><li>Exemple de réponse : `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Valeur à utiliser dans votre requête : `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> La valeur de la balise dʼentité est mise à jour à chaque mise à jour réussie d’un flux de données. |
-| `{SEGMENT_ID}` | Indiquez l’ID d’audience que vous souhaitez exporter vers cette destination. Pour récupérer les ID d’audience pour les audiences que vous souhaitez activer, voir [récupération d’une définition d’audience](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) dans la référence de l’API Experience Platform. |
+| `{SEGMENT_ID}` | Indiquez l’ID d’audience que vous souhaitez exporter vers cette destination. Pour récupérer les ID d’audience pour les audiences que vous souhaitez activer, voir [récupérer une définition d’audience](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) dans la référence de l’API Experience Platform. |
 | `{PROFILE_ATTRIBUTE}` | Par exemple : `"person.lastName"` |
 | `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour ajouter une audience à un flux de données, utilisez la méthode `add` opération. |
 | `path` | Définit la partie du flux à mettre à jour. Lors de l’ajout d’une audience à un flux de données, utilisez le chemin spécifié dans l’exemple. |
@@ -630,7 +630,7 @@ Pour vous connecter avec succès aux destinations à l’aide de la [!DNL Postma
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points de terminaison d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Voir [Codes d’état d’API](/help/landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform pour plus d’informations sur l’interprétation des réponses d’erreur.
+Les points de terminaison d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API d’Experience Platform. Voir [Codes d’état d’API](/help/landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform pour plus d’informations sur l’interprétation des réponses d’erreur.
 
 ## Étapes suivantes {#next-steps}
 

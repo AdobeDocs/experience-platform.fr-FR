@@ -11,7 +11,7 @@ ht-degree: 11%
 
 # Suivi des signaux de données pour générer la valeur de durée de vie de votre client
 
-Vous pouvez utiliser Real-time Customer Data Platform pour effectuer le suivi de la valeur de durée de vie des clients (CLV) et visualiser cette mesure à l’aide de tableaux de bord définis par l’utilisateur. Grâce au Distiller de données et aux tableaux de bord définis par l’utilisateur, vous pouvez mesurer l’importance d’un client pour votre entreprise dans l’ensemble de vos relations. Connaître le CLV peut vous aider à développer les stratégies de votre entreprise pour acquérir de nouveaux clients tout en conservant les clients existants et en maintenant les marges bénéficiaires.
+Vous pouvez utiliser Real-time Customer Data Platform pour effectuer le suivi de la valeur de durée de vie des clients et visualiser cette mesure à l’aide de tableaux de bord définis par l’utilisateur. Grâce au Distiller de données et aux tableaux de bord définis par l’utilisateur, vous pouvez mesurer l’importance d’un client pour votre entreprise dans l’ensemble de vos relations. Connaître le CLV peut vous aider à développer les stratégies de votre entreprise pour acquérir de nouveaux clients tout en conservant les clients existants et en maintenant les marges bénéficiaires.
 
 L’infographie suivante illustre le cycle de collecte, de manipulation, d’analyse et d’activation de données qui génère des données hautement performantes afin d’améliorer vos campagnes marketing.
 
@@ -27,8 +27,8 @@ Ce guide est conçu pour vous aider à mieux comprendre l’expérience client e
 
 Ce guide nécessite une compréhension pratique des composants suivants de Adobe Experience Platform :
 
-* [Query Service](../home.md): Fournit une interface utilisateur et une API RESTful dans lesquelles vous pouvez utiliser des requêtes SQL pour analyser et enrichir vos données.
-* [Segmentation Service](../../segmentation/home.md): Permet de générer des audiences à partir de vos données de profil client en temps réel.
+* [Query Service](../home.md): fournit une interface utilisateur et une API RESTful dans laquelle vous pouvez utiliser des requêtes SQL pour analyser et enrichir vos données.
+* [Segmentation Service](../../segmentation/home.md): vous permet de générer des audiences à partir de vos données de profil client en temps réel.
 
 ## Conditions préalables
 
@@ -42,7 +42,7 @@ La première étape de la création de votre CLV consiste à créer un attribut 
 * Utilisez Query Service pour créer des déciles.
 * Générez des jeux de données de décile.
 * Activez le schéma à utiliser dans Real-time Customer Profile.
-* Créez un espace de noms d’identité et marquez-le comme identifiant Principal.
+* Créez un espace de noms d’identité et marquez-le comme identifiant principal.
 * Créez une requête pour calculer les déciles sur une période de recherche arrière.
 
 ## Étendre le modèle de données d’insights et planifier les mises à jour {#extend-data-model-and-set-refresh-schedule}
@@ -91,7 +91,7 @@ Vérifiez les [présentation des destinations de marketing par e-mail](../../des
 
 ## Afficher les données d’analyse renvoyées de votre campagne {#post-campaign-data-analysis}
 
-Les données provenant de sources peuvent désormais être [traité de manière incrémentielle](../essential-concepts/incremental-load.md) dans le cadre d’une actualisation planifiée de votre modèle de données dans l’entrepôt de données accéléré. Tous les événements de réponse des clients peuvent être ingérés dans Adobe Experience Platform au fur et à mesure ou par lots. Votre modèle de données peut être actualisé une ou plusieurs fois par jour en fonction de vos paramètres ou des connecteurs source. Voir [Présentation de l’API d’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md) ou le [présentation de l’ingestion par flux](../../ingestion/streaming-ingestion/overview.md) pour plus d’informations.
+Les données provenant de sources peuvent désormais être [incrémentalement traité](../essential-concepts/incremental-load.md) dans le cadre d’une actualisation planifiée de votre modèle de données dans l’entrepôt de données accéléré. Tous les événements de réponse des clients peuvent être ingérés dans Adobe Experience Platform au fur et à mesure ou par lots. Votre modèle de données peut être actualisé une ou plusieurs fois par jour en fonction de vos paramètres ou des connecteurs source. Voir [Présentation de l’API d’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md) ou le [présentation de l’ingestion par flux](../../ingestion/streaming-ingestion/overview.md) pour plus d’informations.
 
 Une fois votre modèle de données mis à jour, vos widgets de tableau de bord personnalisés fournissent des signaux significatifs qui vous permettent de mesurer et de visualiser la valeur de durée de vie des clients.
 

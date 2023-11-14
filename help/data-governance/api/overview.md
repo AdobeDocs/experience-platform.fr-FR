@@ -5,7 +5,7 @@ title: Guide de l’API Policy Service
 description: L’API Policy Service permet aux développeurs de gérer les libellés et les politiques d’utilisation des données dans Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
 source-git-commit: 0c09db51d97bc0cf321c5d2fd57c42d194b25d5f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 100%
 

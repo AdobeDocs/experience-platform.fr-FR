@@ -35,7 +35,7 @@ La méthode de journalisation est déterminée par l’activation ou non d’Ado
 
 ## Étapes suivantes
 
-Ce document présente brièvement les différentes méthodes de journalisation des données A4T dans le SDK Web. Pour plus d’informations sur chacune de ces méthodes, consultez la documentation suivante :
+Ce document présente brièvement les différentes méthodes de journalisation des données A4T dans le SDK Web. Pour plus d&#39;informations sur chacune de ces méthodes, consultez la documentation suivante :
 
 * [Journalisation côté serveur des données A4T dans le SDK Web Platform](./server-side.md)
 * [Journalisation côté client des données A4T dans le SDK Web Platform](./client-side.md)

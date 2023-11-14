@@ -1,7 +1,7 @@
 ---
-keywords: Advertising Cloud, extension Advertising Cloud ; destination de cloud publicitaire
+keywords: Advertising Cloud, extension Advertising Cloud, destination Advertising Cloud
 title: Extension Adobe Advertising Cloud
-description: L’extension Adobe Advertising Cloud est une destination publicitaire de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Adobe Advertising Cloud est une destination publicitaire de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
@@ -14,7 +14,7 @@ ht-degree: 54%
 
 ## Vue d’ensemble {#overview}
 
-Il s’agit de la variable [!DNL Advertising Cloud] extension pour la mise en oeuvre [!DNL Advertising Cloud] balises de conversion et d’audience pour les DSP et la recherche (DCO n’est actuellement pas pris en charge).
+Il s’agit de la variable [!DNL Advertising Cloud] extension pour implémenter [!DNL Advertising Cloud] balises de conversion et d’audience pour les DSP et la recherche (DCO n’est actuellement pas pris en charge).
 
 Adobe Advertising Cloud est une extension publicitaire de Adobe Experience Platform.
 
@@ -42,7 +42,7 @@ Sélectionnez la propriété de balise dans laquelle vous souhaitez installer l�
 
 Le workflow vous permet d’accéder à l’interface utilisateur de collecte de données pour terminer l’installation.
 
-Vous pouvez également installer l’extension directement dans l’[interface utilisateur de la collecte de données](https://experience.adobe.com/#/data-collection/). Consultez le guide sur la [ajout d’une nouvelle extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) pour plus d’informations.
+Vous pouvez également installer l’extension directement dans l’[interface utilisateur de la collecte de données](https://experience.adobe.com/#/data-collection/). Consultez le guide sur la [ajouter une nouvelle extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) pour plus d’informations.
 
 ## Utilisation de l’extension {#how-to-use}
 

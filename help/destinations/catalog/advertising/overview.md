@@ -22,7 +22,7 @@ Lors de la connexion à une destination publicitaire, vos audiences sont envoyé
 
 Actuellement, Experience Platform prend en charge les destinations publicitaires répertoriées ci-dessous.
 
-Pour comprendre la différence entre les connexions et les extensions, voir [Connexions](../../destination-types.md#connections) dans la page Types et catégories de destination .
+Pour comprendre la différence entre les connexions et les extensions, voir [Connexions](../../destination-types.md#connections) sur la page Types et catégories de destination .
 
 ### Connexions
 
@@ -30,7 +30,7 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Con
 * [Connexion Amazon Ads (Beta)](amazon-ads.md)
 * [(Version bêta) Connexion Criteo](criteo.md)
 * [Connexion Google Display &amp; Video 360](google-dv360.md)
-* [Connexion Google Ads](google-ads-destination.md)
+* [Connexion Google Ads](google-ads-destination.md)
 * [Connexion Google Ad Manager](google-ad-manager.md)
 * [(Version bêta) Connexion à Google Ad Manager 360](google-ad-manager-360-connection.md)
 * [Connexion à Google Customer Match](google-customer-match.md)

@@ -5,13 +5,13 @@ exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
 source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
 source-wordcount: '913'
-ht-degree: 3%
+ht-degree: 24%
 
 ---
 
 # Configurer des options de formatage de fichier pour les destinations basées sur des fichiers
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Destination SDK vous permet d’ajuster considérablement les options de formatage et de compression de vos fichiers exportés, afin de répondre à toutes les exigences en aval de votre emplacement de stockage.
 
@@ -19,12 +19,12 @@ Cette page décrit comment utiliser la Destination SDK pour configurer les optio
 
 ## Conditions préalables {#prerequisites}
 
-Avant de passer aux étapes décrites ci-dessous, veuillez lire la section [Prise en main de la Destination SDK](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification d’Adobe I/O nécessaires et d’autres conditions préalables requises pour utiliser les API Destination SDK.
+Avant de passer aux étapes décrites ci-dessous, veuillez lire la section [Prise en main de Destination SDK](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification d’Adobe I/O nécessaires et d’autres conditions préalables requises pour utiliser les API Destination SDK.
 
 Adobe vous recommande également de lire et de vous familiariser avec la documentation suivante avant de poursuivre :
 
 * Chaque option de mise en forme de fichier disponible est documentée en détail dans la section [configuration du formatage de fichier](../../functionality/destination-server/file-formatting.md) .
-* Suivez les étapes pour [configuration d’une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md) en utilisant Destination SDK.
+* Suivez les étapes pour [configuration d’une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md) à l’aide de Destination SDK.
 
 ## Création d’une configuration de serveur et de fichier {#create-server-file-configuration}
 
@@ -116,9 +116,9 @@ Au cours de cette étape, vous pouvez regrouper les options affichées dans l’
 
 ### Classer les options de formatage du fichier {#ordering}
 
-L’ordre dans lequel vous ajoutez les options de formatage de fichier en tant que champs de données client dans la configuration de destination est reflété dans l’interface utilisateur. Par exemple, la configuration ci-dessous est reflétée en conséquence dans l’interface utilisateur, les options s’affichant dans l’ordre. **[!UICONTROL Délimiteur]**, **[!UICONTROL Caractère de citation]**, **[!UICONTROL Caractère d’échappement]**, **[!UICONTROL Valeur vide]**, **[!UICONTROL Valeur nulle]**.
+L’ordre dans lequel vous ajoutez les options de formatage de fichier en tant que champs de données client dans la configuration de destination est reflété dans l’interface utilisateur. Par exemple, la configuration ci-dessous est reflétée en conséquence dans l’interface utilisateur, avec les options affichées dans l’ordre. **[!UICONTROL Délimiteur]**, **[!UICONTROL Caractère de citation]**, **[!UICONTROL Caractère d’échappement]**, **[!UICONTROL Valeur vide]**, **[!UICONTROL Valeur nulle]**.
 
-![Image indiquant l’ordre des options de formatage de fichier dans l’interface utilisateur de l’Experience Platform.](../../assets/guides/batch/file-formatting-order.png)
+![Image indiquant l’ordre des options de formatage de fichier dans l’interface utilisateur d’Experience Platform.](../../assets/guides/batch/file-formatting-order.png)
 
 ```json
         {
@@ -283,9 +283,9 @@ Pour ce faire, utilisez `"type": "object"` pour créer le groupe et collecter le
 
 ### Création de sélecteurs de liste déroulante pour les options de formatage de fichier {#dropdown-selectors}
 
-Dans les cas où vous souhaitez permettre aux utilisateurs de sélectionner plusieurs options, par exemple le caractère qui doit être utilisé pour délimiter les champs dans les fichiers CSV, vous pouvez ajouter des champs de liste déroulante à l’interface utilisateur.
+Dans les cas où vous souhaitez permettre aux utilisateurs de sélectionner plusieurs options (par exemple, le caractère qui doit être utilisé pour délimiter les champs dans les fichiers CSV), vous pouvez ajouter des champs de liste déroulante à l’interface utilisateur.
 
-Pour ce faire, utilisez la méthode `namedEnum` comme illustré ci-dessous et configurez un objet `default` pour les options que l’utilisateur peut sélectionner.
+Pour ce faire, utilisez l’objet `namedEnum` comme illustré ci-dessous et configurez une valeur `default` pour les options que l’utilisateur peut sélectionner.
 
 ```json {line-numbers="true" start-number="100" highlight="114-124"}
 [...]
@@ -324,13 +324,13 @@ Pour ce faire, utilisez la méthode `namedEnum` comme illustré ci-dessous et co
 ]
 ```
 
-![Enregistrement d’écran montrant un exemple de sélecteurs de liste déroulante créés avec la configuration affichée ci-dessus.](../../assets/guides/batch/dropdown-options-file-formatting.gif)
+![Enregistrement d’écran montrant un exemple de sélecteurs de liste déroulante créée avec la configuration affichée ci-dessus.](../../assets/guides/batch/dropdown-options-file-formatting.gif)
 
 ### Création d’options de mise en forme de fichier conditionnelle {#conditional-options}
 
-Vous pouvez créer des options de mise en forme de fichier conditionnel qui s’affichent dans le workflow d’activation uniquement lorsque l’utilisateur sélectionne un certain type de fichier à exporter. Par exemple, la configuration ci-dessous crée un regroupement conditionnel pour les options de fichier CSV. Les options de fichier CSV s’affichent uniquement lorsque l’utilisateur sélectionne CSV comme type de fichier souhaité pour l’exportation.
+Vous pouvez créer des options de mise en forme de fichier conditionnel qui s’affichent dans le workflow d’activation uniquement lorsque l’utilisateur sélectionne un certain type de fichier à exporter. Par exemple, la configuration ci-dessous crée un regroupement conditionnel pour les options de fichier CSV. Les options de fichier CSV s’affichent uniquement quand l’utilisateur sélectionne CSV comme type de fichier souhaité pour l’exportation.
 
-Pour définir un champ comme conditionnel, utilisez le `conditional` comme illustré ci-dessous :
+Pour définir un champ comme conditionnel, utilisez le paramètre `conditional` comme illustré ci-dessous :
 
 ```json
             "conditional": {
@@ -340,7 +340,7 @@ Pour définir un champ comme conditionnel, utilisez le `conditional` comme illus
             }
 ```
 
-Dans un contexte plus large, vous pouvez voir la variable `conditional` champ utilisé dans la configuration de destination ci-dessous, avec le champ `fileType` et la chaîne `csvOptions` dans lequel elle est définie.
+Dans un contexte plus large, vous pouvez voir le champ `conditional` utilisé dans la configuration de destination ci-dessous, avec le champ `fileType` et l’objet `csvOptions` dans lequel il est défini.
 
 ```json
         {
@@ -483,9 +483,9 @@ Dans un contexte plus large, vous pouvez voir la variable `conditional` champ ut
         }
 ```
 
-Vous trouverez ci-dessous l’écran de l’interface utilisateur qui en résulte, en fonction de la configuration ci-dessus. Lorsque l’utilisateur sélectionne le type de fichier CSV, d’autres options de mise en forme de fichier faisant référence au type de fichier CSV s’affichent dans l’interface utilisateur.
+Vous trouverez ci-dessous l’écran de l’interface utilisateur qui en résulte, en fonction de la configuration ci-dessus. Quand l’utilisateur sélectionne le type de fichier CSV, d’autres options de mise en forme de fichier faisant référence au type de fichier CSV s’affichent dans l’interface utilisateur.
 
-![Enregistrement d’écran affichant l’option de mise en forme de fichier conditionnelle pour les fichiers CSV.](../../assets/guides/batch/conditional-file-formatting.gif)
+![Enregistrement d’écran affichant l’option de formatage de fichier conditionnel pour les fichiers CSV.](../../assets/guides/batch/conditional-file-formatting.gif)
 
 ### Demande d’API complète incluant toutes les options ci-dessus
 

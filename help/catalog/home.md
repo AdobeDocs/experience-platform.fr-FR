@@ -5,7 +5,7 @@ title: Présentation de Catalog service
 description: Le Catalog Service est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous forme de fichiers et de répertoires, le catalogue renferme les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
 source-git-commit: 0ebe9eadb1bce6252b43a50af009ce1b0f6e5d6e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '694'
 ht-degree: 100%
 

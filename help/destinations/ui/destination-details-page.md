@@ -32,7 +32,7 @@ Suivez les étapes ci-dessous pour afficher plus de détails sur une destination
 
    ![Filtrage des destinations](../assets/ui/details-page/filter-destinations.png)
 
-1. Sélectionnez le nom de la destination à afficher.
+1. Sélectionnez le nom de la destination que vous souhaitez afficher.
 
    ![Sélectionnez des destinations](../assets/ui/details-page/destination-select.png)
 
@@ -58,9 +58,9 @@ Le tableau suivant couvre les contrôles et les détails fournis par le rail de 
 | [!UICONTROL Statut] | Indique si la destination est activée ou désactivée. |
 | [!UICONTROL Actions marketing] | Indique les actions marketing (cas d’utilisation) qui s’appliquent à cette destination à des fins de gouvernance des données. |
 | [!UICONTROL Catégorie] | Indique le type de destination. Voir [destinations](../catalog/overview.md) pour plus d’informations. |
-| [!UICONTROL Type de connexion] | Indique le formulaire par lequel vos audiences sont envoyées vers la destination. Les valeurs possibles sont les suivantes : [!UICONTROL Cookie] et [!UICONTROL Basé sur les profils]. |
-| [!UICONTROL Fréquence] | Indique la fréquence d’envoi des audiences vers la destination. Les valeurs possibles sont les suivantes : [!UICONTROL Diffusion en continu] et [!UICONTROL Lot]. |
-| [!UICONTROL Identité] | Représente l’espace de noms d’identité accepté par la destination, tel que `GAID`, `IDFA`ou `email`. Pour plus d’informations sur les espaces de noms d’identité acceptés, voir [présentation de l’espace de noms d’identité](../../identity-service/namespaces.md). |
+| [!UICONTROL Type de connexion] | Indique le formulaire par lequel vos audiences sont envoyées vers la destination. Les valeurs possibles incluent : [!UICONTROL Cookie] et [!UICONTROL Basé sur les profils]. |
+| [!UICONTROL Fréquence] | Indique la fréquence d’envoi des audiences vers la destination. Les valeurs possibles incluent : [!UICONTROL Diffusion en continu] et [!UICONTROL Lot]. |
+| [!UICONTROL Identité] | Représente l’espace de noms d’identité accepté par la destination, tel que `GAID`, `IDFA`, ou `email`. Pour plus d’informations sur les espaces de noms d’identité acceptés, voir [présentation de l’espace de noms d’identité](../../identity-service/namespaces.md). |
 | [!UICONTROL Créé par] | Indique l’utilisateur qui a créé cette destination. |
 | [!UICONTROL Créé] | Indique la date et l’heure (UTC) de création de cette destination. |
 
@@ -74,7 +74,7 @@ Vous pouvez utiliser la variable **[!UICONTROL Activé]/[!UICONTROL Désactivé]
 
 ## [!UICONTROL Exécutions de flux de données] {#dataflow-runs}
 
-Le [!UICONTROL Exécutions de flux de données] fournit des données de mesure sur vos flux de données s’exécutent sur des destinations par lot et en flux continu. Voir [Surveiller les flux de données](monitor-dataflows.md) pour plus d’informations et de définitions de mesures.
+La variable [!UICONTROL Exécutions de flux de données] fournit des données de mesure sur vos flux de données s’exécutent sur des destinations par lot et en flux continu. Voir [Surveiller les flux de données](monitor-dataflows.md) pour plus d’informations et de définitions de mesures.
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ Lorsque la variable **[!UICONTROL Durée de traitement]** indiqué pour la plupa
 
 ![Image de la page Exécution du flux de données avec la colonne Temps de traitement mise en surbrillance pour une destination de diffusion en continu.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
 
-Pour plus d’informations, reportez-vous à la section [le flux de données s’exécute dans les destinations de diffusion en continu.](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) dans la documentation de surveillance.
+Pour plus d’informations, reportez-vous aux [le flux de données s’exécute dans les destinations de diffusion en continu.](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-streaming-destinations) dans la documentation de surveillance.
 
 ### Destinations basées sur des fichiers {#file-based}
 
@@ -101,11 +101,11 @@ Pour les flux de données qui s’exécutent sur des destinations basées sur de
 
 ![Image de la page Flux de données s’exécutant avec la colonne Temps de traitement mise en surbrillance pour une destination basée sur un fichier.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-file-based.png)
 
-Pour plus d’informations, reportez-vous à la section [le flux de données s’exécute dans des destinations par lots (basées sur des fichiers).](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) dans la documentation de surveillance.
+Pour plus d’informations, reportez-vous aux [le flux de données s’exécute dans des destinations par lots (basées sur des fichiers).](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) dans la documentation de surveillance.
 
 ## [!UICONTROL Données d’activation] {#activation-data}
 
-Le [!UICONTROL Données d’activation] affiche une liste des audiences qui ont été mappées à la destination, y compris leur date de début et de fin (le cas échéant), ainsi que d’autres informations pertinentes pour l’exportation des données, telles que le type d’exportation, la planification et la fréquence. Pour afficher les détails d’une audience spécifique, sélectionnez son nom dans la liste.
+La variable [!UICONTROL Données d’activation] affiche une liste des audiences qui ont été mappées à la destination, y compris leur date de début et de fin (le cas échéant), ainsi que d’autres informations pertinentes pour l’exportation des données, telles que le type d’exportation, la planification et la fréquence. Pour afficher les détails d’une audience spécifique, sélectionnez son nom dans la liste.
 
 >[!TIP]
 >

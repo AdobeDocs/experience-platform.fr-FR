@@ -4,7 +4,7 @@ description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe�
 keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 source-git-commit: 3e572458907bf745ee8f0fb7e2db37caae79f712
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1660'
 ht-degree: 100%
 

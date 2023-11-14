@@ -1,6 +1,6 @@
 ---
 title: Présentation de l’extension Mailchimp
-description: Utilisez le transfert d’événement pour déclencher les emails des chimpanzés de courrier électronique.
+description: Utilisez le transfert d’événement pour déclencher les emails des chimpanzés de messagerie.
 type: Documentation
 feature: Data Collection, Event Forwarding
 level: Beginner
@@ -43,29 +43,29 @@ En fonction de votre forfait de compte Mailchimp, vous avez peut-être un accès
 
 ### Préfixe de domaine
 
-Après vous être connecté à Mailchimp et avoir accédé à la vue Tableau de bord, la barre d’adresse de votre navigateur doit afficher une URL telle que `https://us11.admin.mailchimp.com` ou juste `us11.admin.mailchimp.com`. Dans cet exemple, le préfixe `us11` est simplement un espace réservé et votre valeur sera différente. Enregistrez votre URL avec votre préfixe pour une étape ultérieure.
+Après vous être connecté à Mailchimp et avoir accédé à la vue Tableau de bord, la barre d’adresse de votre navigateur doit afficher une URL telle que `https://us11.admin.mailchimp.com` ou juste `us11.admin.mailchimp.com`. Dans cet exemple, le préfixe `us11` n’est qu’un espace réservé et votre valeur sera différente. Enregistrez votre URL avec votre préfixe pour une étape ultérieure.
 
 ### Clé API
 
-Pour trouver la clé d’API de votre compte, sélectionnez l’icône de votre profil dans l’interface utilisateur de messagerie, puis cliquez sur **Profil**. Vous devriez voir une URL telle que `https://us11.admin.mailchimp.com/account/profile/` mais avec **your** préfixe au lieu de `us11`.
+Pour trouver la clé API de votre compte, sélectionnez l’icône de votre profil dans l’interface utilisateur de messagerie, puis cliquez sur **Profil**. Vous devriez voir une URL comme `https://us11.admin.mailchimp.com/account/profile/` mais avec **your** préfixe au lieu de `us11`.
 
 Sélectionner **Extras**, puis **Clés API**:
 
 ![Menu Extraits, lien Clés API](../../../images/extensions/server/mailchimp/menu-API-keys.png)
 
-Sous **Vos clés d’API**, vous pouvez choisir une clé existante ou sélectionner **Créer Une Clé** pour en créer un. Vous pouvez créer une clé à utiliser spécifiquement avec cette extension. Copiez la clé API et enregistrez-la pour une étape ultérieure. Pour plus d’informations, consultez la documentation de Mailchimp sur la façon de [générer votre clé API ;](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
+Sous **Vos clés d’API**, vous pouvez choisir une clé existante ou sélectionner **Création D’Une Clé** pour en créer un. Vous pouvez créer une clé à utiliser spécifiquement avec cette extension. Copiez la clé API et enregistrez-la pour une étape ultérieure. Pour plus d’informations, consultez la documentation de Mailchimp sur la façon de [générer votre clé API ;](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
 
 ### ID d’audience et adresse de l’expéditeur
 
-Sélectionner **Audience** dans le volet de navigation de gauche, puis **Tableau de bord Audience**. Sélectionnez ensuite l’audience que vous prévoyez d’utiliser avec cette extension. Pour en savoir plus, consultez le document Mailchimp sur [création d’une audience](https://mailchimp.com/help/create-audience/).
+Sélectionner **Audience** dans la navigation de gauche, puis **Tableau de bord Audience**. Sélectionnez ensuite l’audience que vous prévoyez d’utiliser avec cette extension. Pour en savoir plus, consultez le document Mailchimp sur [création d’une audience](https://mailchimp.com/help/create-audience/).
 
 Une fois votre audience créée et sélectionnée, sélectionnez la variable **Gestion de l’audience** menu déroulant et choisissez **Paramètres**. Cet écran affiche divers paramètres pour votre audience.
 
 Au bas de l’écran Paramètres, vous devriez voir `Unique id for audience [audience name]` where `[audience name]` est le nom de votre audience réelle. Copiez l’ID d’audience et enregistrez-le pour une étape ultérieure.
 
-Sélectionner **Nom et valeurs par défaut de l’audience** et confirmez que **Adresse électronique de l’expéditeur par défaut** a la valeur correcte pour vos campagnes. Notez que l’ID d’audience est également répertorié en haut de cette page et qu’il s’agit de la même valeur que celle que vous avez copiée à l’étape précédente.
+Sélectionner **Nom et valeurs par défaut de l’audience** et confirmez que **Adresse électronique de l’expéditeur par défaut** a la valeur correcte pour vos campagnes. Notez que l’ID d’audience est également répertorié en haut de cette page et est la même valeur que celle que vous avez copiée à l’étape précédente.
 
-## Automatisation des emails
+## Automatisations de Mailchimp
 
 Selon votre forfait Mailchimp et si vous utilisez des emails transactionnels, des Parcours client ou d’autres automatisations Mailchimp, vos paramètres de parcours spécifiques peuvent varier.
 
@@ -103,7 +103,7 @@ L’extension est maintenant installée et configurée pour être utilisée dans
 
 ## Collecte de données
 
-Lors de l’utilisation de cette extension dans une [règle](../../../ui/managing-resources/rules.md), il existe plusieurs valeurs de données que l’extension envoie à Mailchimp avec chaque événement. Pour une mise en oeuvre type, vous pouvez configurer la variable [Extension SDK Web Adobe Experience Platform](../../client/web-sdk/overview.md) pour envoyer ces données à [!DNL Platform Edge Network] à utiliser par l’extension dans la propriété de transfert d’événement.
+Lorsque vous utilisez cette extension dans une [règle](../../../ui/managing-resources/rules.md), il existe plusieurs valeurs de données que l’extension envoie à Mailchimp avec chaque événement. Pour une mise en oeuvre type, vous pouvez configurer la variable [Extension SDK Web Adobe Experience Platform](../../client/web-sdk/overview.md) pour envoyer ces données à [!DNL Platform Edge Network] à utiliser par l’extension dans la propriété de transfert d’événement.
 
 Les données requises par cette extension peuvent être envoyées à partir du SDK Web sous forme de données XDM ou de données non XDM. Consultez la documentation pour en savoir plus sur [envoi de données XDM](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
 
@@ -119,18 +119,18 @@ Le tableau ci-dessous fournit des détails supplémentaires pour chaque valeur p
 
 | Nom | Exemple de chemin | Type | Description | Obligatoire | Limites |
 |:---|:---:|:---:|:---|:---:|:---|
-| `email` | `arc.event.xdm._tenant.emailId`<br /> ou<br /> `arc.event.data._tenant.emailId` | Chaîne | Adresse de réception du courrier électronique | **Oui** | Doit exister dans l’audience Mailchimp |
-| `listId` | `arc.event.xdm._tenant.listId`<br /> ou<br /> `arc.event.data._tenant.listid` | Chaîne | Audience ID | **Oui** | Doit correspondre à un ID d’audience existant |
+| `email` | `arc.event.xdm._tenant.emailId`<br /> ou<br /> `arc.event.data._tenant.emailId` | Chaîne | Adresse de réception de l’email | **Oui** | Doit exister dans l’audience Mailchimp |
+| `listId` | `arc.event.xdm._tenant.listId`<br /> ou<br /> `arc.event.data._tenant.listid` | Chaîne | ID d’audience | **Oui** | Doit correspondre à un ID d’audience existant |
 | `name` | `arc.event.xdm._tenant.name`<br /> ou<br /> `arc.event.data._tenant.name` | Chaîne | Nom de l’événement | **Oui** | 2 à 30 caractères de longueur |
-| `properties` | `arc.event.xdm._tenant.properties`<br /> ou<br /> `arc.event.data._tenant.properties` | Objet | Liste facultative des propriétés au format JSON avec des détails sur l’événement. | Non |  |
-| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> ou<br /> `arc.event.data._tenant.isSyncing` | booléen | Événements créés avec `is_syncing` défini sur `true` **ne sera pas** automates de déclenchement | Non |  |
+| `properties` | `arc.event.xdm._tenant.properties`<br /> ou<br /> `arc.event.data._tenant.properties` | Objet | Une liste facultative de propriétés au format JSON avec des détails sur l’événement. | Non |  |
+| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> ou<br /> `arc.event.data._tenant.isSyncing` | booléen | Événements créés avec `is_syncing` défini sur `true` **will not** automates de déclenchement | Non |  |
 | `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> ou `arc.event.data._tenant.occuredAt`. | Chaîne | Horodatage ISO 8601 du moment où l’événement s’est produit | Non |  |
 
 {style="table-layout:auto"}
 
 >[!IMPORTANT]
 >  
->Le **Exemple de chemin** les valeurs ci-dessus ne sont que des exemples. Les noms des champs et [paths](../../../ui/event-forwarding/overview.md#data-element-path) les éléments de données référencés dans ces éléments peuvent être différents dans votre propriété, selon la manière dont vous avez nommé et configuré le SDK Web dans les étapes ci-dessus.
+>La variable **Exemple de chemin** les valeurs ci-dessus ne sont que des exemples. Les noms des champs et [paths](../../../ui/event-forwarding/overview.md#data-element-path) les éléments de données référencés dans ces éléments peuvent être différents dans votre propriété, selon la manière dont vous avez nommé et configuré le SDK Web dans les étapes ci-dessus.
 
 Dans la propriété de transfert d’événement, vous pouvez créer un élément de données pour chacun des champs décrits ci-dessus. Une fois créés, vous pouvez référencer les éléments de données dans le [!UICONTROL Ajouter un événement] de cette extension.
 
@@ -140,8 +140,8 @@ Vous pouvez maintenant utiliser cette extension et l’action Ajouter un événe
 
 ## Validation des données
 
-Lorsque vous utilisez des extensions de transfert d’événement, la variable [Débogueur Adobe Experience Platform](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) est très utile. Dans la section Logs (Journaux), sous Edge logs, vous pouvez voir les requêtes effectuées par vos règles de transfert d’événement après leur déclenchement. Les captures d’écran suivantes présentent une demande envoyée à l’API Mailchimp par l’extension.
+Lorsque vous utilisez des extensions de transfert d’événement, la variable [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) est très utile. Dans la section Logs (Journaux), sous Edge logs, vous pouvez voir les requêtes effectuées par vos règles de transfert d’événement après leur déclenchement. Les captures d’écran suivantes présentent une demande envoyée à l’API Mailchimp par l’extension.
 
-![Débogueur Adobe Experience Platform](../../../images/extensions/server/mailchimp/debugger-edge-logs.png)
+![Adobe Experience Platform Debugger](../../../images/extensions/server/mailchimp/debugger-edge-logs.png)
 
 Dans le tableau de bord Mailchimp, dans la vue Flux d’activité de votre audience ou membre d’audience, une liste d’événements pour ce membre d’audience ou d’audience est fournie. Cela doit correspondre aux événements envoyés par l’extension et afficher toutes les données facultatives envoyées, ainsi que l’email ou la campagne qu’ils ont reçu. Voir [Guides d’aide sur l’automatisation des emails](https://mailchimp.com/help/automation/) pour plus d’informations.

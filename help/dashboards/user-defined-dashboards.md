@@ -37,7 +37,7 @@ La variable [!UICONTROL Créer un tableau de bord] s’affiche. Saisissez un nom
 
 Le tableau de bord vierge nouvellement créé s’affiche avec le nom de votre choix dans le coin supérieur gauche de la vue.
 
-## Création d’un widget {#create-widget}
+## Créer un widget {#create-widget}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"

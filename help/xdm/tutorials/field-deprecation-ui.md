@@ -3,7 +3,7 @@ title: Rendre obsolète un champ XDM dans l’IU
 description: Découvrez comment rendre obsolètes les champs de modèle de données d’expérience (XDM) à l’aide de l’éditeur de schémas dans Experience Platform.
 exl-id: f4c5f58a-5190-47d7-8bfc-b33ed238bf25
 source-git-commit: 4fa98df9dcc296ba7cb141cb22df116524a0eb0c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 100%
 

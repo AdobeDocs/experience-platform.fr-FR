@@ -103,7 +103,7 @@ Dans le cas où plusieurs identités sont disponibles dans un espace de noms, ve
 
 >[!NOTE]
 >
-> S’il n’existe aucun type d’identité (espace de noms) valide pour un jeu de données, vous devez définir une identité Principale et l’affecter à un espace de noms d’identité à l’aide de la variable [éditeur de schéma](../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la page [Espaces de noms Identity Service](../../identity-service/namespaces.md) la documentation.
+> S’il n’existe aucun type d’identité (espace de noms) valide pour un jeu de données, vous devez définir une identité principale et l’affecter à un espace de noms d’identité à l’aide de la variable [éditeur de schéma](../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la page [Espaces de noms Identity Service](../../identity-service/namespaces.md) la documentation.
 
 ## Mappage du canal média et des champs de campagne {#aai-mapping}
 

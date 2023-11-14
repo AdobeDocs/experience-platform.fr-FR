@@ -15,7 +15,7 @@ ht-degree: 18%
 
 ## Vue d’ensemble {#overview}
 
-Le **[!UICONTROL Comptes]** Cet onglet affiche des détails sur les connexions que vous avez établies avec différentes destinations. Reportez-vous à la section [Présentation des comptes](../ui/destinations-workspace.md#accounts) pour toutes les informations que vous pouvez obtenir sur chaque compte de destination.
+La variable **[!UICONTROL Comptes]** Cet onglet affiche des détails sur les connexions que vous avez établies avec différentes destinations. Voir [Présentation des comptes](../ui/destinations-workspace.md#accounts) pour toutes les informations disponibles sur chaque compte de destination.
 
 Ce tutoriel décrit les étapes à suivre pour supprimer les comptes de destination qui ne sont plus nécessaires à l’aide de l’interface utilisateur de l’Experience Platform.
 
@@ -25,7 +25,7 @@ Ce tutoriel décrit les étapes à suivre pour supprimer les comptes de destinat
 
 >[!TIP]
 >
->Avant de supprimer le compte de destination, vous devez d’abord supprimer tout flux de données existant associé au compte de destination. Pour supprimer des flux de données de destination existants, reportez-vous au tutoriel sur [suppression des flux de données de destination dans l’interface utilisateur](./delete-destinations.md).
+>Avant de supprimer le compte de destination, vous devez d’abord supprimer tout flux de données existant associé au compte de destination. Pour supprimer des flux de données de destination existants, consultez le tutoriel sur [suppression des flux de données de destination dans l’interface utilisateur](./delete-destinations.md).
 
 Suivez les étapes ci-dessous pour supprimer des comptes de destination existants.
 
@@ -37,7 +37,7 @@ Suivez les étapes ci-dessous pour supprimer des comptes de destination existant
 
    ![Filtrage des destinations](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. Sélectionnez les ellipses (`...`) en regard du nom du compte que vous avez l’intention de supprimer. Un panneau contextuel s’affiche, fournissant des options pour **[!UICONTROL Activation des audiences]**, **[!UICONTROL Modifier les détails]**, et **[!UICONTROL Supprimer]** le compte. Sélectionnez la ![Bouton Supprimer](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Supprimer]** pour supprimer le compte de votre choix.
+3. Sélectionnez les ellipses (`...`) en regard du nom du compte que vous souhaitez supprimer. Un panneau contextuel s’affiche, fournissant des options pour **[!UICONTROL Activation des audiences]**, **[!UICONTROL Modifier les détails]**, et **[!UICONTROL Supprimer]** le compte. Sélectionnez la variable ![Bouton Supprimer](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Supprimer]** pour supprimer le compte de votre choix.
 
    ![Suppression du compte de destination](../assets/ui/delete-accounts/delete-accounts.png)
 

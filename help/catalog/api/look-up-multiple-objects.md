@@ -50,7 +50,7 @@ Une réponse réussie renvoie une liste des jeux de données spécifiés contena
 
 >[!NOTE]
 >
->Si un objet renvoyé ne contient pas une ou plusieurs des propriétés demandées indiquées par la variable `properties` , la réponse renvoie uniquement les propriétés demandées qu’elle inclut, comme indiqué dans la section ***`Sample Dataset 3`*** et ***`Sample Dataset 4`*** ci-dessous.
+>Si un objet renvoyé ne contient pas une ou plusieurs des propriétés demandées indiquées par la variable `properties` , la réponse renvoie uniquement les propriétés demandées qu’elle inclut, comme indiqué dans la section ***`Sample Dataset 3`*** et ***`Sample Dataset 4`*** ci-dessous
 
 ```json
 {

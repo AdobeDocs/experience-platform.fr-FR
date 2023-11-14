@@ -1,15 +1,15 @@
 ---
-title: Authentification et accès à l’API du Privacy Service
+title: S’authentifier et accéder à l’API Privacy Service
 description: Découvrez comment vous authentifier auprès de l’API du Privacy Service et comment interpréter des exemples d’appels API dans la documentation.
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
 source-wordcount: '862'
-ht-degree: 17%
+ht-degree: 19%
 
 ---
 
-# Authentification et accès à l’API du Privacy Service
+# S’authentifier et accéder à l’API Privacy Service
 
 Ce guide présente les concepts de base que vous devez connaître avant d’effectuer des appels vers l’API Adobe Experience Platform Privacy Service.
 
@@ -19,7 +19,7 @@ Ce guide nécessite une compréhension pratique de [Privacy Service](../home.md)
 
 Afin de créer des informations d’identification d’accès pour l’API, un administrateur de votre entreprise doit avoir préalablement configuré les profils de produit pour Privacy Service dans Adobe Admin Console. Le profil de produit que vous affectez à une intégration d’API détermine les autorisations dont dispose l’intégration lors de l’accès aux fonctionnalités de Privacy Service. Consultez le guide sur la [gestion des autorisations de Privacy Service](../permissions.md) pour plus d’informations.
 
-## Collecte des valeurs des en-têtes requis {#gather-values-required-headers}
+## Collecter des valeurs pour les en-têtes requis {#gather-values-required-headers}
 
 Pour passer des appels à l’API du Privacy Service, vous devez d’abord rassembler vos informations d’identification d’accès à utiliser dans les en-têtes requis :
 
@@ -41,19 +41,19 @@ Une fois que vous avez créé un projet, sélectionnez **[!UICONTROL Ajouter au 
 
 #### Sélection de l’API du Privacy Service {#select-privacy-service-api}
 
-L’écran **[!UICONTROL Ajouter une API]** s’affiche. Sélectionner **[!UICONTROL Experience Cloud]** pour réduire la liste des API disponibles, puis sélectionnez la carte pour **[!UICONTROL API Privacy Service]** avant de sélectionner **[!UICONTROL Suivant]**.
+L’écran **[!UICONTROL Ajouter une API]** s’affiche. Sélectionner **[!UICONTROL Experience Cloud]** pour réduire la liste des API disponibles, puis sélectionnez la carte pour **[!UICONTROL API PRIVACY SERVICE]** avant de sélectionner **[!UICONTROL Suivant]**.
 
 ![La carte API du Privacy Service sélectionnée dans la liste des API disponibles](../images/api/getting-started/add-privacy-service-api.png)
 
 >[!TIP]
 >
->Sélectionnez la **[!UICONTROL Affichage des documents]** pour accéder à la [Documentation de référence de l’API Privacy Service](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).
+>Sélectionnez la variable **[!UICONTROL Affichage des documents]** pour accéder à la [Documentation de référence de l’API Privacy Service](https://developer.adobe.com/experience-platform-apis/references/privacy-service/).
 
 Sélectionnez ensuite le type d&#39;authentification pour générer les jetons d&#39;accès et accéder à l&#39;API du Privacy Service.
 
 >[!IMPORTANT]
 >
->Sélectionnez la **[!UICONTROL OAuth serveur à serveur]** car il s’agira de la seule méthode prise en charge à l’avenir. Le **[!UICONTROL Compte de service (JWT)]** est obsolète. Bien que les intégrations utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe recommande vivement de migrer les intégrations existantes vers la nouvelle méthode OAuth Server-to-Server avant cette date. Pour plus d’informations, reportez-vous à la section [!BADGE Obsolète]{type=negative}[Génération d’un jeton Web JSON (JWT)](/help/landing/api-authentication.md#jwt).
+>Sélectionnez la variable **[!UICONTROL OAuth serveur à serveur]** , car il s’agira de la seule méthode prise en charge à l’avenir. La variable **[!UICONTROL Compte de service (JWT)]** est obsolète. Bien que les intégrations utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe recommande vivement de migrer les intégrations existantes vers la nouvelle méthode OAuth Server-to-Server avant cette date. Pour plus d’informations, consultez la section [!BADGE Obsolète]{type=negative}[Génération d’un jeton Web JSON (JWT)](/help/landing/api-authentication.md#jwt).
 
 ![Sélectionnez la méthode d’authentification Oauth Server-to-Server.](/help/privacy-service/images/api/getting-started/select-oauth-authentication.png)
 
@@ -69,7 +69,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer l’API conf
 
 ![Un profil de produit unique sélectionné dans la liste avant d’enregistrer la configuration](../images/api/getting-started/select-product-profiles.png)
 
-Une fois l’API ajoutée au projet, la variable **[!UICONTROL API Privacy Service]** La page du projet affiche les informations d’identification suivantes, requises dans tous les appels aux API du Privacy Service :
+Une fois l’API ajoutée au projet, la variable **[!UICONTROL API PRIVACY SERVICE]** La page du projet affiche les informations d’identification suivantes, requises dans tous les appels aux API du Privacy Service :
 
 * `{API_KEY}` ([!UICONTROL Identifiant client])
 * `{ORG_ID}` ([!UICONTROL ID d’organisation])

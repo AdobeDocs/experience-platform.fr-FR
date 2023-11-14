@@ -27,7 +27,7 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->Le `DELETE /batches/{ID}` Le point de terminaison a été abandonné. Pour supprimer un lot, vous devez utiliser la variable [API Batch Ingestion](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>La variable `DELETE /batches/{ID}` Le point de terminaison a été abandonné. Pour supprimer un lot, vous devez utiliser la variable [API Batch Ingestion](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | Paramètre | Description |
 | --- | --- |

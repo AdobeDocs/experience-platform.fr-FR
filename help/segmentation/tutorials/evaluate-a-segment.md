@@ -19,8 +19,8 @@ Ce document fournit un tutoriel sur l’évaluation des définitions de segment 
 
 Ce tutoriel nécessite une compréhension pratique des différentes [!DNL Adobe Experience Platform] services impliqués dans la création d’audiences. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permet de créer des audiences à partir de [!DNL Real-Time Customer Profile] data.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): permet de créer des audiences à partir de [!DNL Real-Time Customer Profile] data.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : framework normalisé selon lequel Platform organise les données de l’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
 - [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
@@ -128,11 +128,11 @@ L’exemple suivant illustre l’attribut `segmentMembership` pour chaque enregi
 | Propriété | Description |
 | -------- | ----------- |
 | `lastQualificationTime` | Horodatage au moment où l’affirmation de l’appartenance au segment a été faite et où le profil a entré ou quitté la définition de segment. |
-| `status` | État de participation de la définition de segment dans le cadre de la requête actuelle. Doit être égal à l’une des valeurs connues suivantes : <ul><li>`realized`: L’entité est admissible pour la définition de segment.</li><li>`exited`: L’entité quitte la définition de segment.</li></ul> |
+| `status` | État de participation de la définition de segment dans le cadre de la requête actuelle. Doit être égal à l’une des valeurs connues suivantes : <ul><li>`realized`: l’entité est admissible pour la définition de segment.</li><li>`exited`: l’entité quitte la définition de segment.</li></ul> |
 
 >[!NOTE]
 >
->Toute adhésion au segment qui figure dans la variable `exited` de plus de 30 jours, en fonction de la variable `lastQualificationTime`, sera sujet à suppression.
+>Toute adhésion au segment qui figure dans la variable `exited` de plus de 30 jours, en fonction de la variable `lastQualificationTime`, sera sujette à suppression.
 
 ## Accès aux résultats de la tâche de segmentation
 

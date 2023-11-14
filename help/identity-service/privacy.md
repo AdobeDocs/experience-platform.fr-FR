@@ -5,8 +5,8 @@ description: Adobe Experience Platform Privacy Service traite les demandes d
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
 source-git-commit: 74ef1e24c2b40103ac6cafdfd22cb6036cdbfd3e
 workflow-type: tm+mt
-source-wordcount: '1015'
-ht-degree: 67%
+source-wordcount: '1016'
+ht-degree: 65%
 
 ---
 
@@ -18,7 +18,7 @@ Ce document couvre les concepts essentiels associés au traitement des demandes 
 
 >[!NOTE]
 >
->Ce guide porte uniquement sur la manière d’effectuer des demandes d’accès à des informations personnelles pour la banque de données d’identité dans Experience Platform. Si vous prévoyez également d’effectuer des demandes d’accès à des informations personnelles pour le lac de données de Platform ou [!DNL Real-Time Customer Profile], reportez-vous au guide sur la [traitement des demandes d’accès à des informations personnelles dans le lac de données](../catalog/privacy.md) et au guide sur [traitement des demandes d’accès à des informations personnelles pour Profile](../profile/privacy.md) en plus de ce tutoriel.
+>Ce guide porte uniquement sur la manière d’effectuer des demandes d’accès à des informations personnelles pour la banque de données d’identité dans Experience Platform. Si vous prévoyez également d’effectuer des demandes d’accès à des informations personnelles pour le lac de données Platform ou [!DNL Real-Time Customer Profile], reportez-vous au guide sur la [traitement des demandes d’accès à des informations personnelles dans le lac de données](../catalog/privacy.md) et au guide sur [traitement des demandes d’accès à des informations personnelles pour Profile](../profile/privacy.md) en plus de ce tutoriel.
 >
 >Pour savoir comment effectuer des demandes d’accès à des informations personnelles pour d’autres applications Adobe Experience Cloud, reportez-vous à la [documentation du Privacy Service](../privacy-service/experience-cloud-apps.md).
 
@@ -115,8 +115,8 @@ Selon que vous avez également inclus ou non Real-time Customer Profile (`Profil
 | `identity` et `aepDataLake` | L’identité fournie est supprimée dès que Platform envoie la confirmation que la demande de suppression a été reçue. Le profil construit à partir de ce graphique d’identités reste, mais ne sera pas mis à jour lorsque de nouvelles données seront ingérées, car les associations d’identités sont désormais supprimées.<br><br>Lorsque le produit du lac de données répond que la demande a été reçue et qu’il est en cours de traitement, les données associées au profil sont supprimées de manière réversible et ne sont donc accessibles à aucun [!DNL Platform] service. Une fois la tâche terminée, les données sont complètement supprimées du lac de données. |
 | `identity`, `ProfileService`, et `aepDataLake` | L’identité fournie est supprimée dès que Platform envoie la confirmation que la demande de suppression a été reçue.<br><br>Lorsque le produit du lac de données répond que la demande a été reçue et qu’il est en cours de traitement, les données associées au profil sont supprimées de manière réversible et ne sont donc accessibles à aucun [!DNL Platform] service. Une fois la tâche terminée, les données sont complètement supprimées du lac de données. |
 
-Reportez-vous à la section [[!DNL Privacy Service] documentation](../privacy-service/home.md#monitor) pour plus d’informations sur les états des tâches de suivi.
+Voir [[!DNL Privacy Service] documentation](../privacy-service/home.md#monitor) pour plus d’informations sur les états des tâches de suivi.
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez découvert les concepts importants liés au traitement des demandes d’accès à des informations personnelles dans [!DNL Identity Service]. Pour plus d’informations sur le traitement des demandes d’accès à des informations personnelles pour d’autres applications [!DNL Experience Cloud], voir le document sur les [[!DNL Privacy Service] and [!DNL Experience Cloud] applications](../privacy-service/experience-cloud-apps.md).
+En lisant ce document, vous avez découvert les concepts importants liés au traitement des demandes d’accès à des informations personnelles dans [!DNL Identity Service]. Pour plus d’informations sur le traitement des requêtes de confidentialité pour d’autres [!DNL Experience Cloud] applications, voir le document sur [[!DNL Privacy Service] et [!DNL Experience Cloud] applications](../privacy-service/experience-cloud-apps.md).

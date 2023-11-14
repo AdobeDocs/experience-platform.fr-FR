@@ -12,29 +12,29 @@ ht-degree: 29%
 
 # Guide de l’API [!DNL Real-Time Customer Profile]
 
-[!DNL Real-Time Customer Profile] vous permet d’obtenir une vue d’ensemble de chaque client dans Adobe Experience Platform. [!DNL Profile] vous permet de consolider diverses données clients provenant de plusieurs canaux, comme les données en ligne, hors ligne, CRM et tierces, en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+[!DNL Real-Time Customer Profile] vous permet d’obtenir une vue d’ensemble de chacun de vos clients dans Adobe Experience Platform. [!DNL Profile] vous permet de consolider diverses données clients provenant de plusieurs canaux, comme les données en ligne, hors ligne, CRM et tierces, en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 
-Le [!DNL Real-Time Customer Profile] L’API comprend plusieurs points de terminaison, décrits ci-dessous. Consultez le guide de chaque point d’entrée pour plus de détails et reportez-vous au [guide de prise en main](getting-started.md) pour obtenir des informations importantes sur les en-têtes nécessaires, la lecture des exemples d’appels d’API, etc.
+La variable [!DNL Real-Time Customer Profile] L’API comprend plusieurs points de terminaison, décrits ci-dessous. Consultez le guide de chaque point d’entrée pour plus de détails et reportez-vous au [guide de prise en main](getting-started.md) pour obtenir des informations importantes sur les en-têtes nécessaires, la lecture des exemples d’appels d’API, etc.
 
-Pour afficher tous les points de terminaison disponibles et les opérations CRUD, rendez-vous sur la page [Échange de référence de l’API Real-Time Customer Profile](https://www.adobe.com/go/profile-apis-en).
+Pour afficher tous les points de terminaison disponibles et les opérations CRUD, consultez la [Échange de référence de l’API Real-Time Customer Profile](https://www.adobe.com/go/profile-apis-en).
 
-Pour obtenir un guide sur l’utilisation de [!DNL Real-Time Customer Profile] des [!DNL Experience Platform] Interface utilisateur, reportez-vous à la section [Guide d’utilisation de Profile](../ui/user-guide.md).
+Pour obtenir un guide sur l’utilisation de [!DNL Real-Time Customer Profile] des données de la variable [!DNL Experience Platform] Interface utilisateur, reportez-vous à la section [Guide d’utilisation de Profile](../ui/user-guide.md).
 
 ## [!BADGE Beta]{type=Informative} Attributs calculés {#computed-attributes}
 
 >[!IMPORTANT]
 >
->La fonctionnalité d’attribut calculé est en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et la fonctionnalité peuvent faire l’objet de modifications.
+La fonctionnalité d’attribut calculé est en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et la fonctionnalité peuvent faire l’objet de modifications.
 
 Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation.
 
 Chaque attribut calculé contient une expression, ou &quot;règle&quot;, qui évalue les données entrantes et stocke la valeur obtenue dans un attribut de profil. Ces calculs vous aident à répondre facilement aux questions liées à des éléments tels que la valeur d’achat de durée de vie, le temps écoulé entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que ces informations sont nécessaires. Ces valeurs d’attribut calculées peuvent ensuite être visualisées dans un profil, utilisées pour créer une audience ou accessibles via plusieurs modèles d’accès différents.
 
-Vous pouvez créer, afficher, modifier et supprimer des attributs calculés à l’aide du `ca/attributes/` point de terminaison . Pour savoir comment utiliser des attributs calculés, reportez-vous à la section [présentation des attributs calculés](../computed-attributes/overview.md). Pour les opérations d’API, consultez la [guide de point d’entrée de l’API des attributs calculés](../computed-attributes/api.md).
+Vous pouvez créer, afficher, modifier et supprimer des attributs calculés à l’aide du `ca/attributes/` point de terminaison . Pour savoir comment utiliser des attributs calculés, reportez-vous à la section [présentation des attributs calculés](../computed-attributes/overview.md). Pour les opérations d’API, consultez la page [guide de point d’entrée de l’API des attributs calculés](../computed-attributes/api.md).
 
 ## Projections de périphérie {#edge-projections}
 
-Adobe Experience Platform permet de personnaliser en temps réel les expériences client en rendant les données facilement accessibles sur des serveurs situés stratégiquement, appelés « périphéries ». Le [!DNL Real-Time Customer Profile] L’API fournit des points de terminaison pour utiliser les périphéries à travers des composants appelés &quot;projections&quot;. Cela inclut des configurations de projection permettant de définir quelles données doivent être projetées sur chaque périphérie, ainsi que des destinations de projection permettant de déterminer la direction d’une projection. Pour obtenir des informations détaillées sur l’utilisation des projections de périphérie, veuillez consulter la section [guide des configurations de projection et des points de fin de destinations](edge-projections.md).
+Adobe Experience Platform permet de personnaliser en temps réel les expériences client en rendant les données facilement accessibles sur des serveurs situés stratégiquement, appelés « périphéries ». La variable [!DNL Real-Time Customer Profile] L’API fournit des points de terminaison pour utiliser les périphéries à travers des composants appelés &quot;projections&quot;. Cela inclut des configurations de projection permettant de définir quelles données doivent être projetées sur chaque périphérie, ainsi que des destinations de projection permettant de déterminer la direction d’une projection. Pour obtenir des informations détaillées sur l’utilisation des projections de périphérie, veuillez consulter la section [guide des configurations de projection et des points d’entrée de destinations](edge-projections.md).
 
 ## Entités (accès au [!DNL Profile]) {#entities}
 
@@ -52,7 +52,7 @@ Pour en savoir plus sur les stratégies de fusion et leur rôle dans Platform, v
 
 ## Prévisualisation des exemples de statut (prévisualisation du [!DNL Profile]) {#profile-preview}
 
-Lorsque des données sont ingérées dans Platform, un exemple de tâche est exécuté pour mettre à jour le nombre de profils et d’autres mesures liées aux données de Real-Time Customer Profile. Les résultats de cet exemple de tâche peuvent être affichés à l’aide de la fonction `/previewsamplestatus` point de terminaison, qui fait partie de l’API Real-time Customer Profile. Ce point de terminaison peut également être utilisé pour répertorier les distributions de profil par jeu de données et espace de noms d’identité, ainsi que pour générer plusieurs rapports afin de mieux comprendre la composition de la banque de profils de votre entreprise.  Pour commencer à utiliser la méthode `/profilepreviewstatus` point de fin, reportez-vous à la section [prévisualisation d’un exemple de guide de point de terminaison d’état](preview-sample-status.md).
+Lorsque des données sont ingérées dans Platform, un exemple de tâche est exécuté pour mettre à jour le nombre de profils et d’autres mesures liées aux données de Real-Time Customer Profile. Les résultats de cet exemple de tâche peuvent être affichés à l’aide de la fonction `/previewsamplestatus` point de terminaison, qui fait partie de l’API Real-time Customer Profile. Ce point de terminaison peut également être utilisé pour répertorier les distributions de profil par jeu de données et espace de noms d’identité, ainsi que pour générer plusieurs rapports afin de mieux comprendre la composition de la banque de profils de votre entreprise.  Pour commencer à utiliser la méthode `/profilepreviewstatus` point de fin, voir [prévisualisation d’un exemple de guide de point de terminaison d’état](preview-sample-status.md).
 
 ## Tâches de système Profile {#profile-system-jobs}
 

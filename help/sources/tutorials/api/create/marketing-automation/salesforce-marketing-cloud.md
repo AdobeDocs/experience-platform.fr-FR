@@ -24,7 +24,7 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ### Utiliser les API Platform
 
@@ -91,7 +91,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.clientId` | L’ID client associé à votre [!DNL Salesforce Marketing Cloud] application. |
 | `auth.params.clientSecret` | Le secret client associé à votre [!DNL Salesforce Marketing Cloud] application. |
-| `connectionSpec.id` | Le [!DNL Salesforce Marketing Cloud] identifiant de spécification de connexion : `ea1c2a08-b722-11eb-8529-0242ac130003`. |
+| `connectionSpec.id` | La variable [!DNL Salesforce Marketing Cloud] identifiant de spécification de connexion : `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
 **Réponse**
 

@@ -16,7 +16,7 @@ ht-degree: 59%
 
 >[!NOTE]
 >
->Le [!DNL Apache Spark] on [!DNL Azure HDInsights] Le connecteur est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
+>La variable [!DNL Apache Spark] on [!DNL Azure HDInsights] Le connecteur est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -42,7 +42,7 @@ Pour connecter [!DNL Flow Service] à [!DNL Spark], vous devez fournir des valeu
 | `password` | Mot de passe correspondant à l’utilisateur. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Spark] est : `6a8d82bc-1caf-45d1-908d-cadabc9d63a6` |
 
-Pour plus d’informations sur la prise en main, reportez-vous à la section [ce document Spark](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview).
+Pour plus d’informations sur la prise en main, voir [ce document Spark ;](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-overview).
 
 ### Utiliser les API Platform
 
@@ -93,10 +93,10 @@ curl -X POST \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `auth.params.host` | L’hôte de la variable [!DNL Spark] serveur. |
+| `auth.params.host` | L’hôte du [!DNL Spark] serveur. |
 | `auth.params.username` | Le nom d’utilisateur associé à votre [!DNL Spark] connexion. |
 | `auth.params.password` | Le mot de passe associé à votre [!DNL Spark] connexion. |
-| `connectionSpec.id` | Le [!DNL Spark] identifiant de spécification de connexion : `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`. |
+| `connectionSpec.id` | La variable [!DNL Spark] identifiant de spécification de connexion : `6a8d82bc-1caf-45d1-908d-cadabc9d63a6`. |
 
 **Réponse**
 

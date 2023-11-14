@@ -82,7 +82,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `predicateExpression` | L’expression PQL qui servira à effectuer la requête sur les données. |
 | `predicateType` | Type de prédicat pour l’expression de requête sous `predicateExpression`. Actuellement, la seule valeur acceptée pour cette propriété est `pql/text`. |
 | `predicateModel` | Nom de la variable [!DNL Experience Data Model] Classe de schéma (XDM) sur laquelle les données de profil sont basées. |
-| `graphType` | Type de graphique à partir duquel vous souhaitez obtenir la grappe. Les valeurs prises en charge sont les suivantes : `none` (n’effectue aucune combinaison d’identités) et `pdg` (réalise des combinaisons d’identités en fonction de votre graphique d’identités privé). |
+| `graphType` | Type de graphique à partir duquel vous souhaitez obtenir la grappe. Les valeurs prises en charge sont : `none` (n’effectue aucune combinaison d’identités) et `pdg` (réalise des combinaisons d’identités en fonction de votre graphique d’identités privé). |
 
 **Réponse**
 
@@ -115,7 +115,7 @@ GET /preview/{PREVIEW_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{PREVIEW_ID}` | Le `previewId` valeur de l’aperçu que vous souhaitez récupérer. |
+| `{PREVIEW_ID}` | La variable `previewId` valeur de l’aperçu que vous souhaitez récupérer. |
 
 **Requête**
 
@@ -248,4 +248,4 @@ Une réponse réussie renvoie un état HTTP 200 avec des détails concernant la
 
 ## Étapes suivantes
 
-Après avoir lu ce guide, vous devriez mieux comprendre comment utiliser les prévisualisations et les estimations à l’aide de l’API Segmentation. Pour savoir comment accéder aux mesures liées à vos données de profil client en temps réel, telles que le nombre total de fragments de profil et de profils fusionnés dans des espaces de noms spécifiques ou l’entrepôt de données de profil dans son ensemble, rendez-vous sur la page [aperçu du profil (`/previewsamplestatus`Guide de point de terminaison )](../../profile/api/preview-sample-status.md).
+Après avoir lu ce guide, vous devriez mieux comprendre comment utiliser les prévisualisations et les estimations à l’aide de l’API Segmentation. Pour savoir comment accéder aux mesures liées à vos données de profil client en temps réel, telles que le nombre total de fragments de profil et de profils fusionnés dans des espaces de noms spécifiques ou l’entrepôt de données de profil dans son ensemble, consultez la [aperçu du profil (`/previewsamplestatus`Guide de point de terminaison )](../../profile/api/preview-sample-status.md).

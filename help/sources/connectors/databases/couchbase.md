@@ -2,7 +2,7 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;couchbase;Couchbase
 solution: Experience Platform
 title: Présentation du connecteur source Couchbase
-description: Découvrez comment connecter Couchbase à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
+description: Découvrez comment connecter Couchbase à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
@@ -15,7 +15,7 @@ ht-degree: 40%
 
 >[!NOTE]
 >
->Le [!DNL Couchbase] Le connecteur est en version bêta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
+>La variable [!DNL Couchbase] Le connecteur est en version bêta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Adobe Experience Platform fournit une connectivité native aux fournisseurs de base de données tels que [!DNL Microsoft], MySQL et [!DNL Azure], ce qui vous permet d’importer vos données de ces systèmes. Différents types de bases de données tierces sont pris en charge, y compris les entrepôts de données relationnels, NoSQL ou de données. La prise en charge des fournisseurs de base de données inclut [!DNL Couchbase].
 
@@ -34,4 +34,4 @@ La documentation ci-dessous fournit des informations sur la connexion d’[!DNL 
 ## Connecter [!DNL Couchbase] à [!DNL Platform] à lʼaide de l’interface utilisateur
 
 - [Création d’une connexion source Couchbase dans l’interface utilisateur](../../tutorials/ui/create/databases/couchbase.md)
-- [Création d’un flux de données pour une connexion à la source de la base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+- [Création d’un flux de données pour une connexion source de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)

@@ -5,7 +5,7 @@ title: Gestion des étiquettes dʼutilisation des données pour les jeux de donn
 description: LʼAPI Dataset Service vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 100%
 
@@ -143,7 +143,7 @@ Une réponse réussie renvoie le jeu de libellés mis à jour pour le jeu de don
 
 >[!IMPORTANT]
 >
->L’utilisation de la propriété `optionalLabels` dans les requêtes POST a été abandonnée. Il n’est plus possible d’ajouter des libellés de données aux champs du jeu de données. L’opération POST renvoie une erreur si une valeur `optionalLabel` est présente. Cependant, vous pouvez supprimer des libellés de champs individuels à l’aide d’une requête PUT et de la propriété `optionalLabels`. Pour plus d’informations, consultez la section consacrée à la [suppression de libellés d’un jeu de données](#remove).
+>L’utilisation de la propriété `optionalLabels` dans les requêtes POST a été abandonnée. Il n’est plus possible d’ajouter des étiquettes de données aux champs du jeu de données. L’opération POST renvoie une erreur si une valeur `optionalLabel` est présente. Cependant, vous pouvez supprimer des libellés de champs individuels à l’aide d’une requête PUT et de la propriété `optionalLabels`. Pour plus d’informations, consultez la section consacrée à la [suppression de libellés d’un jeu de données](#remove).
 
 ```json
 {

@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '396'
 ht-degree: 36%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 36%
 
 >[!IMPORTANT]
 >
->Le [!DNL Google BigQuery] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+>La variable [!DNL Google BigQuery] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
@@ -35,8 +35,8 @@ Pour se connecter [!DNL Google BigQuery] Pour Platform, vous devez générer des
 | Informations d’identification | Description |
 | ---------- | ----------- |
 | `project` | Le projet est l’entité organisatrice de base pour votre [!DNL Google Cloud] ressources, y compris [!DNL Google BigQuery]. |
-| `clientID` | L’ID client représente la moitié de votre [!DNL Google BigQuery] Informations d’identification OAuth 2.0. |
-| `clientSecret` | Le secret client est l’autre moitié de votre [!DNL Google BigQuery] Informations d’identification OAuth 2.0. |
+| `clientID` | L’ID client représente la moitié de votre [!DNL Google BigQuery] Identifiants OAuth 2.0. |
+| `clientSecret` | Le secret client est l’autre moitié de votre [!DNL Google BigQuery] Identifiants OAuth 2.0. |
 | `refreshToken` | Le jeton d’actualisation vous permet d’obtenir de nouveaux jetons d’accès pour votre API. Les jetons d’accès ont des durées de vie limitées et peuvent expirer au cours du projet. Vous pouvez utiliser le jeton d’actualisation pour vous authentifier et demander des jetons d’accès ultérieurs pour votre projet, si nécessaire. |
 | `largeResultsDataSetId` | La variable  [!DNL Google BigQuery] identifiant du jeu de données requis pour activer la prise en charge des jeux de résultats volumineux. |
 
@@ -54,5 +54,5 @@ La documentation ci-dessous fournit des informations sur la connexion de [!DNL G
 
 ### Utilisation de l’interface utilisateur
 
-- [Création d’une connexion source Google BigQuery dans l’interface utilisateur](../../tutorials/ui/create/databases/bigquery.md)
-- [Création d’un flux de données pour une connexion à la source de la base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+- [Créer une connexion source Google BigQuery dans l’interface utilisateur](../../tutorials/ui/create/databases/bigquery.md)
+- [Création d’un flux de données pour une connexion source de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)

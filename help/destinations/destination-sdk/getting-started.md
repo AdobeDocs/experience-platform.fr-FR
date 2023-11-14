@@ -77,8 +77,8 @@ En suivant les étapes décrites dans cet article, vous avez obtenu des informat
 
 * Consultez les guides de configuration suivants, en fonction du type de destination :
 
-   * [Utiliser Destination SDK pour configurer une destination de diffusion en continu](guides/configure-destination-instructions.md)
-   * [Utiliser Destination SDK pour configurer une destination basée sur des fichiers](guides/configure-file-based-destination-instructions.md)
+   * [Utiliser Destination SDK pour configurer une destination de diffusion en streaming](guides/configure-destination-instructions.md)
+   * [Utilisation de Destination SDK pour configurer une destination basée sur des fichiers](guides/configure-file-based-destination-instructions.md)
 
 * Pour toutes les opérations, reportez-vous à la section [Documentation de l’API de création de destinations](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
 * Utilisez la [Collection Postman de l’API de création de destinations](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) pour configurer votre destination à l’aide des points d’entrée de l’API Destination SDK. Pour commencer à utiliser Postman, suivez les [étapes dʼimportation des environnements et des collections](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) et consultez le [Guide vidéo de création de l’environnement Postman](https://video.tv.adobe.com/v/28832).

@@ -107,7 +107,7 @@ Si les opérations de données de votre entreprise relèvent des juridictions l�
 
 ### Comment puis-je prendre en charge les demandes d’accès à des informations personnelles des clients si je conserve des données couvertes par les réglementations de confidentialité ?
 
-Une fois que vous avez pris les mesures nécessaires pour authentifier les clients qui appartiennent aux juridictions appropriées, Adobe Experience Platform Privacy Service vous permet d’envoyer des demandes d’accès à des informations personnelles des clients à des applications Experience Cloud compatibles. Pour plus d’informations, consultez la [[!DNL Privacy Service] présentation](../home.md). Pour plus d’informations sur la manière dont vos applications Experience Cloud spécifiques peuvent répondre aux demandes de confidentialité, reportez-vous au guide sur les [applications Privacy Service et Experience Cloud](../experience-cloud-apps.md).
+Une fois que vous avez pris les mesures nécessaires pour authentifier les clients qui appartiennent aux juridictions appropriées, Adobe Experience Platform Privacy Service vous permet de soumettre des demandes d’accès à des informations personnelles des clients à des applications Experience Cloud compatibles. Pour plus d’informations, consultez la [[!DNL Privacy Service] présentation](../home.md). Pour plus d’informations sur la manière dont vos applications Experience Cloud spécifiques peuvent répondre aux demandes de confidentialité, reportez-vous au guide sur les [applications Privacy Service et Experience Cloud](../experience-cloud-apps.md).
 
 >[!NOTE]
 >

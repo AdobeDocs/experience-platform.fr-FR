@@ -27,23 +27,23 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide [Prise en main des API Platform](../../../../../landing/api-guide.md).
 
 ### Collecter les informations d’identification requises
 
-Pour [!DNL Flow Service] pour vous connecter à [!DNL Generic REST API], vous devez fournir des informations d’identification valides pour le type d’authentification de votre choix. [!DNL Generic REST API] prend en charge le code d’actualisation OAuth 2 et l’authentification de base. Consultez les tableaux suivants pour plus d’informations sur les informations d’identification des deux types d’authentification pris en charge.
+Pour [!DNL Flow Service] pour vous connecter à [!DNL Generic REST API], vous devez fournir des identifiants valides pour le type d’authentification de votre choix. [!DNL Generic REST API] prend en charge le code d’actualisation OAuth 2 et l’authentification de base. Consultez les tableaux suivants pour plus d’informations sur les informations d’identification des deux types d’authentification pris en charge.
 
 #### Code d’actualisation OAuth 2
 
 | Informations d’identification | Description |
 | --- | --- |
-| `host` | URL d’hôte de la source à laquelle vous effectuez votre demande. Cette valeur est requise et ne peut pas être ignorée à l’aide de `requestParameterOverride`. |
+| `host` | URL de l’hôte de la source à laquelle vous effectuez votre demande. Cette valeur est requise et ne peut pas être ignorée à l’aide de `requestParameterOverride`. |
 | `authorizationTestUrl` | (Facultatif) L’URL du test d’autorisation est utilisée pour valider les informations d’identification lors de la création d’une connexion de base. Si elles ne sont pas fournies, les informations d’identification sont automatiquement vérifiées à l’étape de création de la connexion source. |
 | `clientId` | (Facultatif) Identifiant client associé à votre compte utilisateur. |
 | `clientSecret` | (Facultatif) Le secret client associé à votre compte utilisateur. |
-| `accessToken` | Informations d’identification d’authentification Principales utilisées pour accéder à votre application. Le jeton d’accès représente l’autorisation de votre application, pour accéder à certains aspects des données d’un utilisateur. Cette valeur est requise et ne peut pas être ignorée à l’aide de `requestParameterOverride`. |
+| `accessToken` | Informations d’identification d’authentification principales utilisées pour accéder à votre application. Le jeton d’accès représente l’autorisation de votre application, pour accéder à certains aspects des données d’un utilisateur. Cette valeur est requise et ne peut pas être ignorée à l’aide de `requestParameterOverride`. |
 | `refreshToken` | (Facultatif) Jeton utilisé pour générer un nouveau jeton d’accès, lorsque le jeton d’accès a expiré. |
 | `expirationDate` | (Facultatif) Une valeur masquée qui définit la date d’expiration de votre jeton d’accès. |
 | `accessTokenUrl` | (Facultatif) Le point de terminaison URL utilisé pour récupérer votre jeton d’accès. |
@@ -54,7 +54,7 @@ Pour [!DNL Flow Service] pour vous connecter à [!DNL Generic REST API], vous de
 
 | Informations d’identification | Description |
 | --- | --- |
-| `host` | URL d’hôte de la source à laquelle vous effectuez votre demande. |
+| `host` | URL de l’hôte de la source à laquelle vous effectuez votre demande. |
 | `username` | Nom d’utilisateur correspondant à votre compte d’utilisateur. |
 | `password` | Mot de passe correspondant à votre compte utilisateur. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Generic REST API] est `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
@@ -126,7 +126,7 @@ Une réponse réussie renvoie la nouvelle connexion de , y compris son identifia
 
 ### Créer une connexion de base [!DNL Generic REST API] à l’aide de l’authentification de base
 
-Pour créer une [!DNL Generic REST API] connexion de base à l’aide de l’authentification de base, effectuez une requête de POST à l’adresse `/connections` point d’entrée [!DNL Flow Service] API lors de la fourniture de vos informations d’authentification de base.
+Pour créer une [!DNL Generic REST API] connexion de base à l’aide de l’authentification de base, effectuez une requête de POST à l’adresse `/connections` point d’entrée de [!DNL Flow Service] API lors de la fourniture de vos informations d’authentification de base.
 
 **Format d’API**
 

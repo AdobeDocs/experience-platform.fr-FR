@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;HP Vertica;hp vertica
+keywords: Experience Platform;accueil;rubriques populaires;HP Vertica;hp vertica
 solution: Experience Platform
 title: Présentation du connecteur source HP Vertica
 description: Découvrez comment connecter HP Vertica à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
@@ -15,7 +15,7 @@ ht-degree: 39%
 
 >[!NOTE]
 >
->Le [!DNL HP Vertica] Le connecteur est en version bêta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
+>La variable [!DNL HP Vertica] Le connecteur est en version bêta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Adobe Experience Platform fournit une connectivité native aux fournisseurs de base de données tels que [!DNL Microsoft], MySQL et [!DNL Azure]. Vous pouvez importer vos données de ces systèmes dans [!DNL Platform].
 
@@ -35,5 +35,5 @@ La documentation ci-dessous fournit des informations sur la connexion d’[!DNL 
 
 ## Connecter [!DNL HP Vertica] à [!DNL Platform] à lʼaide de l’interface utilisateur
 
-- [Création d’une connexion source HP Vertica dans l’interface utilisateur](../../tutorials/ui/create/databases/hp-vertica.md)
-- [Création d’un flux de données pour une connexion à la source de la base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+- [Créer une connexion source HP Vertica dans l’interface utilisateur](../../tutorials/ui/create/databases/hp-vertica.md)
+- [Création d’un flux de données pour une connexion source de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)

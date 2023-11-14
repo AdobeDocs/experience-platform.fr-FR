@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;API REST générique
-title: Création d’une connexion à la source de l’API REST générique dans l’interface utilisateur
+title: Création d’une connexion source de l’API REST générique dans l’interface utilisateur
 type: Tutorial
 description: Découvrez comment créer une connexion source de l’API REST générique à l’aide de l’interface utilisateur de Adobe Experience Platform.
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
@@ -23,7 +23,7 @@ Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Generic REST API
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Platform : 
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ### Collecter les informations d’identification requises
 
@@ -33,11 +33,11 @@ Pour accéder à [!DNL Generic REST API] sur Platform, vous devez fournir des in
 
 | Informations d’identification | Description |
 | --- | --- |
-| Hôte | URL d’hôte de la source à laquelle vous effectuez votre demande. Cette valeur est requise et ne peut pas être ignorée à l’aide du remplacement du paramètre de requête. |
+| Hôte | URL de l’hôte de la source à laquelle vous effectuez votre demande. Cette valeur est requise et ne peut pas être ignorée à l’aide du remplacement du paramètre de requête. |
 | URL du test d’autorisation | (Facultatif) L’URL du test d’autorisation est utilisée pour valider les informations d’identification lors de la création d’une connexion de base. Si elles ne sont pas fournies, les informations d’identification sont automatiquement vérifiées à l’étape de création de la connexion source. |
 | Identifiant client | (Facultatif) Identifiant client associé à votre compte utilisateur. |
 | Secret client | (Facultatif) Le secret client associé à votre compte utilisateur. |
-| Jeton d’accès | Informations d’identification d’authentification Principales utilisées pour accéder à votre application. Le jeton d’accès représente l’autorisation de votre application, pour accéder à certains aspects des données d’un utilisateur. Cette valeur est requise et ne peut pas être ignorée à l’aide du remplacement du paramètre de requête. |
+| Jeton d’accès | Informations d’identification d’authentification principales utilisées pour accéder à votre application. Le jeton d’accès représente l’autorisation de votre application, pour accéder à certains aspects des données d’un utilisateur. Cette valeur est requise et ne peut pas être ignorée à l’aide du remplacement du paramètre de requête. |
 | Jeton d’actualisation | (Facultatif) Jeton utilisé pour générer un nouveau jeton d’accès, lorsque le jeton d’accès a expiré. |
 | URL du jeton d’accès | (Facultatif) Le point de terminaison URL utilisé pour récupérer votre jeton d’accès. |
 | Remplacement du paramètre de requête | (Facultatif) Une propriété qui vous permet de spécifier les paramètres d’identification à remplacer. |
@@ -47,7 +47,7 @@ Pour accéder à [!DNL Generic REST API] sur Platform, vous devez fournir des in
 
 | Informations d’identification | Description |
 | --- | --- |
-| Hôte | URL d’hôte de la source à laquelle vous effectuez votre demande. |
+| Hôte | URL de l’hôte de la source à laquelle vous effectuez votre demande. |
 | Nom d’utilisateur | Nom d’utilisateur correspondant à votre compte d’utilisateur. |
 | Mot de passe | Mot de passe correspondant à votre compte utilisateur. |
 
@@ -61,7 +61,7 @@ Sous , [!UICONTROL Protocoles] catégorie, sélectionnez **[!UICONTROL API REST 
 
 ![catalogue](../../../../images/tutorials/create/generic-rest/catalog.png)
 
-Le **[!UICONTROL Connexion à l’API REST générique]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La variable **[!UICONTROL Connexion à l’API REST générique]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 

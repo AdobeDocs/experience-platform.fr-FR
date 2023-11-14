@@ -1,23 +1,23 @@
 ---
-title: Modèle de données Real-time Customer Data Platform Insights
+title: Modèle de données d’informations Real-Time Customer Data Platform
 description: Découvrez comment utiliser les requêtes SQL avec les modèles de données Real-time Customer Data Platform Insights pour personnaliser vos propres rapports Real-Time CDP pour vos cas d’utilisation de marketing et d’indicateurs de performance clés.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
 source-git-commit: e55bbba92b0e3b9c86a9962ffa0131dfb7c15e77
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
-# Modèle de données Real-time Customer Data Platform Insights
+# Modèle de données d’informations Real-Time Customer Data Platform
 
 La fonction Modèle de données Real-time Customer Data Platform Insights présente les modèles de données et SQL qui alimentent les insights pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL afin de créer des rapports Real-Time CDP pour vos cas d’utilisation d’indicateurs de performance clés (IPC) et marketing. Ces informations peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur. Pour en savoir plus, consultez la documentation sur les informations sur les rapports de magasin accélérés de requête . [comment créer un modèle de données d’informations sur les rapports via Query Service pour l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
 
 ## Conditions préalables
 
-Ce guide nécessite une compréhension pratique de la fonction [fonction de tableaux de bord définis par l’utilisateur](./user-defined-dashboards.md). Veuillez lire la documentation avant de poursuivre avec ce guide.
+Ce guide nécessite une compréhension pratique des [fonction de tableaux de bord définis par l’utilisateur](./user-defined-dashboards.md). Veuillez lire la documentation avant de poursuivre avec ce guide.
 
-## Rapports d’informations sur Real-Time CDP et cas d’utilisation
+## Rapports et cas d’utilisation Real-Time CDP
 
 Les rapports Real-Time CDP fournissent des informations sur vos données de profil et sur leurs relations avec les audiences et les destinations. Divers modèles de schémas étoiles ont été développés pour répondre à divers cas d’utilisation marketing courants et chaque modèle de données peut prendre en charge plusieurs cas d’utilisation.
 
@@ -25,7 +25,7 @@ Les rapports Real-Time CDP fournissent des informations sur vos données de prof
 >
 >Les données utilisées pour les rapports Real-Time CDP sont exactes pour une stratégie de fusion choisie et pour l’instantané quotidien le plus récent.
 
-### Modèle de profil {#profile-model}
+### Modèle Profile {#profile-model}
 
 Le modèle de profil se compose de trois jeux de données :
 
@@ -39,7 +39,7 @@ L’image ci-dessous contient les champs de données appropriés dans chaque jeu
 
 #### Cas pratique du nombre de profils
 
-La logique utilisée pour le widget de comptage des profils renvoie le nombre total de profils fusionnés dans la banque de profils au moment où l’instantané a été pris. Voir [[!UICONTROL Nombre de profils] documentation du widget](./guides/profiles.md#profile-count) pour plus d’informations.
+La logique utilisée pour le widget de comptage des profils renvoie le nombre total de profils fusionnés dans la banque de profils au moment où l’instantané a été pris. Voir [[!UICONTROL Nombre de profils] documentation sur les widgets](./guides/profiles.md#profile-count) pour plus d’informations.
 
 Le SQL qui génère la variable [!UICONTROL Nombre de profils] Le widget est visible dans la section réductible ci-dessous.
 
@@ -59,7 +59,7 @@ GROUP BY adwh_dim_merge_policies.merge_policy_name;
 
 #### Cas d’utilisation des profils d’identité unique
 
-La logique utilisée pour la variable [!UICONTROL Profils d’identité uniques] Le widget fournit un décompte des profils de votre organisation qui ne disposent que d’un seul type d’ID qui crée leur identité. Voir[[!UICONTROL Profils d’identité uniques] documentation du widget](./guides/profiles.md#single-identity-profiles) pour plus d’informations.
+La logique utilisée pour la variable [!UICONTROL Profils d’identité uniques] Le widget fournit un décompte des profils de votre organisation qui ne disposent que d’un seul type d’ID qui crée leur identité. Voir[[!UICONTROL Profils d’identité uniques] documentation sur les widgets](./guides/profiles.md#single-identity-profiles) pour plus d’informations.
 
 Le SQL qui génère la variable [!UICONTROL Profils d’identité uniques] Le widget est visible dans la section réductible ci-dessous.
 
@@ -92,7 +92,7 @@ L’image ci-dessous contient les champs de données appropriés dans chaque jeu
 
 #### Profils par cas d’utilisation d’identité
 
-Le widget [!UICONTROL Profils par identité] affiche la répartition des identités pour tous les profils fusionnés de votre banque de profils. Voir [[!UICONTROL Profils par identité] documentation du widget](./guides/profiles.md#profiles-by-identity) pour plus d’informations.
+Le widget [!UICONTROL Profils par identité] affiche la répartition des identités pour tous les profils fusionnés de votre banque de profils. Voir [[!UICONTROL Profils par identité] documentation sur les widgets](./guides/profiles.md#profiles-by-identity) pour plus d’informations.
 
 Le SQL qui génère la variable [!UICONTROL Profils par identité] Le widget est visible dans la section réductible ci-dessous.
 
@@ -162,7 +162,7 @@ L’image ci-dessous contient les champs de données appropriés dans chaque jeu
 
 #### Cas d’utilisation de la taille d’audience
 
-La logique utilisée pour la variable [!UICONTROL Taille de l’audience] widget renvoie le nombre total de profils fusionnés dans l’audience sélectionnée au moment de l’instantané le plus récent. Voir [[!UICONTROL Taille de l’audience] documentation du widget](./guides/audiences.md#audience-size) pour plus d’informations.
+La logique utilisée pour la variable [!UICONTROL Taille de l’audience] widget renvoie le nombre total de profils fusionnés dans l’audience sélectionnée au moment de l’instantané le plus récent. Voir [[!UICONTROL Taille de l’audience] documentation sur les widgets](./guides/audiences.md#audience-size) pour plus d’informations.
 
 Le SQL qui génère la variable [!UICONTROL Taille de l’audience] Le widget est visible dans la section réductible ci-dessous.
 
@@ -191,7 +191,7 @@ LIMIT 20;
 
 #### Cas d’utilisation de la tendance de modification de la taille de l’audience
 
-La logique utilisée pour la variable [!UICONTROL Tendance de changement de la taille de l’audience] widget fournit un graphique linéaire qui illustre la différence entre le nombre total de profils qualifiés pour une audience donnée et les instantanés quotidiens les plus récents. Voir [[!UICONTROL Tendance de changement de la taille de l’audience] documentation du widget](./guides/audiences.md#audience-size-change-trend) pour plus d’informations.
+La logique utilisée pour la variable [!UICONTROL Tendance de changement de la taille de l’audience] widget fournit un graphique linéaire qui illustre la différence entre le nombre total de profils qualifiés pour une audience donnée et les instantanés quotidiens les plus récents. Voir [[!UICONTROL Tendance de changement de la taille de l’audience] documentation sur les widgets](./guides/audiences.md#audience-size-change-trend) pour plus d’informations.
 
 Le SQL qui génère la variable [!UICONTROL Tendance de changement de la taille de l’audience] Le widget est visible dans la section réductible ci-dessous.
 
@@ -239,7 +239,7 @@ FROM
 
 #### Cas d’utilisation des audiences récemment activées
 
-La logique de la variable [!UICONTROL Audiences récemment activées] fournit une liste des audiences mappées le plus récemment à une destination. Cette liste fournit un instantané des audiences et des destinations activement utilisées dans le système et peut vous aider à résoudre les problèmes de mappages erronés. Voir [[!UICONTROL Audiences récemment activées] documentation du widget](./guides/destinations.md#recently-activated-audiences) pour plus d’informations.
+La logique de la variable [!UICONTROL Audiences récemment activées] fournit une liste des audiences mappées le plus récemment à une destination. Cette liste fournit une capture instantanée des audiences et des destinations utilisées activement dans le système et peut aider à corriger les mappages erronés. Voir [[!UICONTROL Audiences récemment activées] documentation sur les widgets](./guides/destinations.md#recently-activated-audiences) pour plus d’informations.
 
 Le SQL qui génère la variable [!UICONTROL Audiences récemment activées] Le widget est visible dans la section réductible ci-dessous.
 
@@ -274,7 +274,7 @@ L’image ci-dessous contient les champs de données appropriés dans chaque jeu
 
 #### Profils par identité pour un cas d’utilisation d’audience
 
-La logique utilisée dans la variable [!UICONTROL Profils par identité] Ce widget fournit une ventilation des identités pour tous les profils fusionnés de votre banque de profils pour une audience donnée. Voir [[!UICONTROL Profils par identité] documentation du widget](./guides/audiences.md#profiles-by-identity) pour plus d’informations.
+La logique utilisée dans la variable [!UICONTROL Profils par identité] Ce widget fournit une ventilation des identités pour tous les profils fusionnés de votre banque de profils pour une audience donnée. Voir [[!UICONTROL Profils par identité] documentation sur les widgets](./guides/audiences.md#profiles-by-identity) pour plus d’informations.
 
 Le SQL qui génère la variable [!UICONTROL Profils par identité] Le widget est visible dans la section réductible ci-dessous.
 

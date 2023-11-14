@@ -1,15 +1,15 @@
 ---
-title: Interaction avec Adobe Analytics
+title: Interagir avec Adobe Analytics
 description: Découvrez comment utiliser l’API Edge Network Server pour interagir avec Adobe Analytics.
 exl-id: b5e7a4d0-9aea-4e70-a7d6-b9aad09aaddf
 source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
 workflow-type: tm+mt
 source-wordcount: '179'
-ht-degree: 2%
+ht-degree: 9%
 
 ---
 
-# Interaction avec Adobe Analytics
+# Interagir avec Adobe Analytics
 
 ## Vue d’ensemble {#overview}
 
@@ -21,7 +21,7 @@ Pour permettre à Adobe Analytics de recevoir des données de l’API serveur, v
 
 ![Configuration des flux de données Adobe Analytics](assets/analytics-datastream.png)
 
-## Interaction avec Adobe Analytics {#interacting-analytics}
+## Interagir avec Adobe Analytics {#interacting-analytics}
 
 ### Format d’API {#format}
 

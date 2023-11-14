@@ -1,18 +1,18 @@
 ---
 keywords: Activer des destinations de profils;activer des destinations;activer des données;activer des destinations de marketing par e-mail;activer des destinations d’espace de stockage dans le cloud
-title: Activation des audiences vers des destinations d’exportation de profils en continu
+title: Activer les audiences vers des destinations d’export de profils en flux continu
 type: Tutorial
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en envoyant des audiences vers des destinations basées sur un profil en continu.
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
 source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
 workflow-type: tm+mt
 source-wordcount: '760'
-ht-degree: 28%
+ht-degree: 30%
 
 ---
 
 
-# Activation des audiences vers des destinations d’exportation de profils en continu
+# Activer les audiences vers des destinations d’export de profils en flux continu
 
 >[!IMPORTANT]
 > 
@@ -33,11 +33,11 @@ Pour activer des données vers des destinations, vous devez avoir réussi à vou
 
 1. Accédez à **[!UICONTROL Connexions et destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**.
 
-   ![Image montrant l’onglet Catalogue de destinations.](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
+   ![Image affichant l’onglet Catalogue de destinations.](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
 1. Sélectionner **[!UICONTROL Activation des audiences]** sur la carte correspondant à la destination à laquelle vous souhaitez activer vos audiences, comme illustré dans l’image ci-dessous.
 
-   ![Image mettant en surbrillance le contrôle Activer les audiences dans l’onglet Catalogue de destinations .](../assets/ui/activate-streaming-profile-destinations/activate-audiences-button.png)
+   ![Image mettant en surbrillance le contrôle d’activation des audiences dans l’onglet Catalogue de destinations .](../assets/ui/activate-streaming-profile-destinations/activate-audiences-button.png)
 
 1. Sélectionnez la connexion de destination à utiliser pour activer vos audiences, puis sélectionnez **[!UICONTROL Suivant]**.
 
@@ -51,9 +51,9 @@ Pour sélectionner les audiences que vous souhaitez activer vers la destination,
 
 Vous pouvez sélectionner plusieurs types d’audiences, selon leur origine :
 
-* **[!UICONTROL Segmentation Service]**: Audiences générées dans Experience Platform par le service de segmentation. Voir [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
-* **[!UICONTROL Chargement personnalisé]**: Audiences générées en dehors de l’Experience Platform et chargées dans Platform sous la forme de fichiers CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [import d&#39;une audience](../../segmentation/ui/overview.md#import-audience).
-* Autres types d’audiences, provenant d’autres solutions d’Adobe, telles que [!DNL Audience Manager].
+* **[!UICONTROL Segmentation Service]**: audiences générées dans Experience Platform par le service de segmentation. Voir [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
+* **[!UICONTROL Chargement personnalisé]**: audiences générées en dehors de l’Experience Platform et chargées dans Platform sous la forme de fichiers CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [import d&#39;une audience](../../segmentation/ui/overview.md#import-audience).
+* Autres types d’audiences, provenant d’autres solutions Adobe, telles que [!DNL Audience Manager].
 
 ![Image mettant en surbrillance la sélection des cases à cocher à l’étape Sélectionner les audiences du workflow d’activation.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
 
@@ -87,7 +87,7 @@ Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &
 
 ### Vérifications des stratégies d’utilisation des données {#data-usage-policy-checks}
 
-Dans le **[!UICONTROL Réviser]** , Experience Platform recherche également les violations de stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la politique. Vous ne pouvez pas terminer le workflow d’activation de l’audience tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, reportez-vous à la section [violations de la stratégie d’utilisation des données](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la section documentation sur la gouvernance des données .
+Dans le **[!UICONTROL Réviser]** , Experience Platform recherche également les violations de stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la politique. Vous ne pouvez pas terminer le workflow d’activation de l’audience tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, reportez-vous à la section [violations de la stratégie d’utilisation des données](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la section de documentation sur la gouvernance des données .
 
 ![violation de la politique de données](../assets/common/data-policy-violation.png)
 
@@ -101,7 +101,7 @@ Si vous êtes satisfait de votre sélection et qu’aucune violation de stratég
 
 ## Vérification de l’activation de l’audience {#verify}
 
-Votre exportation [!DNL Experience Platform] Les données arrivent dans votre destination cible au format JSON. Par exemple, l’événement ci-dessous contient l’attribut d’adresse email d’un profil qui s’est qualifié pour une certaine audience et qui a quitté une autre audience. Les identités de ce prospect sont `ECID` et `email_lc_sha256`.
+Votre exportation [!DNL Experience Platform] Les données arrivent dans votre destination cible au format JSON. Par exemple, l’événement ci-dessous contient l’attribut d’adresse email d’un profil qui s’est qualifié pour une certaine audience et qui a quitté une autre audience. Les identités de ce prospect sont les suivantes : `ECID` et `email_lc_sha256`.
 
 ```json
 {

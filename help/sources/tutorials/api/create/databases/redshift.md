@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
 source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '509'
 ht-degree: 58%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 58%
 
 >[!IMPORTANT]
 >
->Le [!DNL Amazon Redshift] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+>La variable [!DNL Amazon Redshift] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -39,7 +39,7 @@ Pour [!DNL Flow Service] pour vous connecter à [!DNL Amazon Redshift], vous dev
 | `port` | Le port TCP qu’un [!DNL Amazon Redshift] Le serveur utilise pour écouter les connexions client. |
 | `username` | Le nom d’utilisateur associé à votre [!DNL Amazon Redshift] compte . |
 | `password` | Le mot de passe associé à votre [!DNL Amazon Redshift] compte . |
-| `database` | Le [!DNL Amazon Redshift] base de données à laquelle vous accédez. |
+| `database` | La variable [!DNL Amazon Redshift] la base de données à laquelle vous accédez. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Amazon Redshift] is `3416976c-a9ca-4bba-901a-1f08f66978ff`. |
 
 Pour plus d’informations sur la prise en main, reportez-vous à cette section [[!DNL Amazon Redshift] document](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).

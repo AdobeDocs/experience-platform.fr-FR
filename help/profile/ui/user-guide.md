@@ -18,8 +18,8 @@ ht-degree: 7%
 
 Ce guide de l’interface utilisateur nécessite une compréhension des différentes [!DNL Experience Platform] services impliqués dans la gestion [!DNL Real-Time Customer Profiles]. Avant de lire ce guide ou de travailler dans l’interface utilisateur, consultez la documentation relative aux services suivants :
 
-* [[!DNL Real-Time Customer Profile] aperçu](../home.md): Fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
-* [[!DNL Identity Service]](../../identity-service/home.md): Active [!DNL Real-Time Customer Profile] en rapprochant des identités de sources de données disparates lors de leur ingestion dans [!DNL Platform].
+* [[!DNL Real-Time Customer Profile] aperçu](../home.md): fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Identity Service]](../../identity-service/home.md): activables [!DNL Real-Time Customer Profile] en rapprochant des identités de sources de données disparates lors de leur ingestion dans [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 
 ## [!UICONTROL Vue d’ensemble]
@@ -28,21 +28,21 @@ Dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UIC
 
 >[!NOTE]
 >
->Si votre entreprise est une nouvelle entreprise de Platform et qu’elle ne dispose pas encore de jeux de données Profile principaux ni de stratégies de fusion créés, la variable [!UICONTROL Profils] tableau de bord n’est pas visible. Au lieu de cela, la variable [!UICONTROL Présentation] Cet onglet affiche des liens et de la documentation pour vous aider à prendre en main Real-time Customer Profile.
+>Si votre organisation découvre Platform et ne dispose pas encore de jeux de données Profile actifs ni de stratégies de fusion, la variable [!UICONTROL Profils] tableau de bord n’est pas visible. Au lieu de cela, la variable [!UICONTROL Présentation] Cet onglet affiche des liens et de la documentation pour vous aider à prendre en main Real-time Customer Profile.
 
 ### Tableau de bord du profil {#profile-dashboard}
 
 Le tableau de bord du profil décrit les mesures clés liées aux données de profil de votre entreprise.
 
-Pour en savoir plus, rendez-vous sur la page [guide du tableau de bord de profil](../../dashboards/guides/profiles.md).
+Pour en savoir plus, consultez la [guide du tableau de bord de profil](../../dashboards/guides/profiles.md).
 
 ![Le tableau de bord Profil s’affiche.](../../dashboards/images/profiles/dashboard-overview.png)
 
-## [!UICONTROL Parcourir] mesures des onglets
+## [!UICONTROL Parcourir] mesures d’onglets
 
-Sélectionnez la **[!UICONTROL Parcourir]** pour afficher plusieurs mesures liées aux données de profil de votre entreprise. Vous pouvez également utiliser cet onglet pour parcourir la banque de profils à l’aide d’une stratégie de fusion ou d’une identité, comme indiqué dans la section suivante de ce guide.
+Sélectionnez la variable **[!UICONTROL Parcourir]** pour afficher plusieurs mesures liées aux données de profil de votre entreprise. Vous pouvez également utiliser cet onglet pour parcourir la banque de profils à l’aide d’une stratégie de fusion ou d’une identité, comme indiqué dans la section suivante de ce guide.
 
-Sur le côté droit du **[!UICONTROL Parcourir]** est l’onglet [nombre de profils](#profile-count) ainsi qu’une liste de [profils par espace de noms](#profiles-by-namespace).
+Sur le côté droit du **[!UICONTROL Parcourir]** est l’onglet [nombre de profils](#profile-count) ainsi qu’une liste [profils par espace de noms](#profiles-by-namespace).
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ Lorsque l’ingestion d’enregistrements dans la variable [!DNL Profile] store 
 
 ### [!UICONTROL Profils par espace de noms] {#profiles-by-namespace}
 
-Le **[!UICONTROL Profils par espace de noms]** mesure affiche le nombre total et la ventilation des espaces de noms sur tous les profils fusionnés de votre banque de profils. Le nombre total de profils par espace de noms (c’est-à-dire en additionnant les valeurs affichées pour chaque espace de noms) sera toujours supérieur à la mesure du nombre de profils, car plusieurs espaces de noms peuvent y être associés. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms seront associés à ce client individuel.
+La variable **[!UICONTROL Profils par espace de noms]** mesure affiche le nombre total et la ventilation des espaces de noms sur tous les profils fusionnés de votre banque de profils. Le nombre total de profils par espace de noms (c’est-à-dire en additionnant les valeurs affichées pour chaque espace de noms) sera toujours supérieur à la mesure du nombre de profils, car plusieurs espaces de noms peuvent y être associés. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms seront associés à ce client individuel.
 
 #### Mise à jour de la [!UICONTROL Profils par espace de noms] metric
 
@@ -78,7 +78,7 @@ Sur le **[!UICONTROL Parcourir]** vous pouvez afficher des exemples de profils �
 
 ### Parcourir par [!UICONTROL Stratégie de fusion]
 
-Le **[!UICONTROL Parcourir]** est défini par défaut sur la stratégie de fusion par défaut de votre organisation. Pour choisir une autre stratégie de fusion, sélectionnez l’option `X` en regard du nom de la stratégie de fusion, puis utilisez le sélecteur pour ouvrir la **[!UICONTROL Sélectionner une stratégie de fusion]** boîte de dialogue.
+La variable **[!UICONTROL Parcourir]** est défini par défaut sur la stratégie de fusion par défaut de votre organisation. Pour choisir une autre stratégie de fusion, sélectionnez la variable `X` en regard du nom de la stratégie de fusion, puis utilisez le sélecteur pour ouvrir la **[!UICONTROL Sélectionner une stratégie de fusion]** boîte de dialogue.
 
 >[!NOTE]
 >
@@ -104,11 +104,11 @@ Sur le **[!UICONTROL Parcourir]** vous pouvez utiliser un espace de noms d’ide
 
 ![Le sélecteur de politique de fusion est mis en surbrillance.](../images/user-guide/browse-by-merge-policy.png)
 
-Si nécessaire, utilisez la méthode **[!UICONTROL Stratégie de fusion]** pour ouvrir le **[!UICONTROL Sélectionner une stratégie de fusion]** et sélectionnez la stratégie de fusion à utiliser.
+Si nécessaire, utilisez la méthode **[!UICONTROL Stratégie de fusion]** pour ouvrir le sélecteur **[!UICONTROL Sélectionner une stratégie de fusion]** et choisissez la stratégie de fusion que vous souhaitez utiliser.
 
 ![Une boîte de dialogue dans laquelle vous pouvez sélectionner la stratégie de fusion à filtrer s’affiche.](../images/user-guide/select-merge-policy.png)
 
-Ensuite, utilisez le **[!UICONTROL Espace de noms d’identité]** pour ouvrir le **[!UICONTROL Sélectionner un espace de noms d’identité]** et choisissez l’espace de noms par lequel vous souhaitez effectuer une recherche. Si votre organisation dispose de nombreux espaces de noms, vous pouvez utiliser la barre de recherche dans la boîte de dialogue pour commencer à saisir le nom d’un espace de noms.
+Ensuite, utilisez la méthode **[!UICONTROL Espace de noms d’identité]** pour ouvrir le sélecteur **[!UICONTROL Sélectionner un espace de noms d’identité]** et choisissez l’espace de noms par lequel vous souhaitez effectuer une recherche. Si votre organisation dispose de nombreux espaces de noms, vous pouvez utiliser la barre de recherche dans la boîte de dialogue pour commencer à saisir le nom d’un espace de noms.
 
 Vous pouvez sélectionner un espace de noms pour afficher des détails supplémentaires ou sélectionner le bouton radio pour choisir un espace de noms. Vous pouvez ensuite utiliser **[!UICONTROL Sélectionner]** pour continuer.
 
@@ -120,9 +120,9 @@ Après avoir sélectionné une [!UICONTROL Espace de noms d’identité] et de r
 >
 >Cette valeur est spécifique à un profil client individuel et doit être une entrée valide pour l’espace de noms fourni. Par exemple, la sélection de l’espace de noms d’identité &quot;E-mail&quot; nécessite une valeur d’identité sous la forme d’une adresse électronique valide.
 
-![La valeur d’identité par laquelle vous souhaitez filtrer est mise en surbrillance.](../images/user-guide/filter-identity-value.png)
+![La valeur d’identité à filtrer est mise en surbrillance.](../images/user-guide/filter-identity-value.png)
 
-Une fois qu’une valeur a été saisie, sélectionnez **[!UICONTROL Affichage]** et un seul profil correspondant à la valeur est renvoyé. Sélectionnez la **[!UICONTROL Identifiant de profil]** pour afficher les détails du profil.
+Une fois qu’une valeur a été saisie, sélectionnez **[!UICONTROL Affichage]** et un seul profil correspondant à la valeur est renvoyé. Sélectionnez la variable **[!UICONTROL Identifiant de profil]** pour afficher les détails du profil.
 
 ![Le profil correspondant à la valeur d’identité est mis en surbrillance.](../images/user-guide/filtered-identity-value.png)
 
@@ -138,15 +138,15 @@ Vous pouvez afficher des informations supplémentaires relatives au profil clien
 
 ### Onglet Attributs
 
-Le **[!UICONTROL Attributs]** L’onglet fournit une vue de liste résumant tous les attributs associés à un seul profil, une fois la stratégie de fusion spécifiée appliquée.
+La variable **[!UICONTROL Attributs]** L’onglet fournit une vue de liste résumant tous les attributs associés à un seul profil, une fois la stratégie de fusion spécifiée appliquée.
 
-Ces attributs peuvent également être affichés sous la forme d’un objet JSON en sélectionnant pour **[!UICONTROL Afficher JSON]**. Cela s’avère utile pour les utilisateurs qui souhaitent mieux comprendre comment les attributs de profil sont ingérés dans Platform.
+Ces attributs peuvent également être affichés sous forme d’objet JSON en sélectionnant pour **[!UICONTROL Afficher JSON]**. Cela s’avère utile pour les utilisateurs qui souhaitent mieux comprendre comment les attributs de profil sont ingérés dans Platform.
 
 ![L’onglet Attributs est surligné. Les attributs de profil s’affichent.](../images/user-guide/attributes.png)
 
 ### Onglet Événements
 
-Le **[!UICONTROL Événements]** Cet onglet contient les données des 100 événements d’expérience les plus récents associés au client. Ces données peuvent inclure les ouvertures de courrier électronique, les activités de panier et les pages vues. Sélection **[!UICONTROL Afficher tout]** pour chaque événement individuel fournit des champs et des valeurs supplémentaires capturés dans le cadre de l’événement.
+La variable **[!UICONTROL Événements]** Cet onglet contient les données des 100 événements d’expérience les plus récents associés au client. Ces données peuvent inclure les ouvertures de courrier électronique, les activités de panier et les pages vues. Sélection **[!UICONTROL Afficher tout]** pour chaque événement individuel fournit des champs et des valeurs supplémentaires capturés dans le cadre de l’événement.
 
 Les événements peuvent également être affichés sous la forme d’un objet JSON en sélectionnant pour **[!UICONTROL Afficher JSON]**. Cela s’avère utile pour comprendre comment les événements sont capturés dans Platform.
 
@@ -154,9 +154,9 @@ Les événements peuvent également être affichés sous la forme d’un objet J
 
 ### Onglet abonnement à l’audience
 
-Le **[!UICONTROL abonnement à l’audience]** affiche une liste avec le nom et la description des audiences auxquelles appartient actuellement le profil client individuel. Cette liste est mise à jour automatiquement lorsque le profil est admissible ou expire à partir des audiences. Le nombre total d&#39;audiences pour lesquelles le profil est actuellement qualifié s&#39;affiche sur le côté droit de l&#39;onglet.
+La variable **[!UICONTROL abonnement à l’audience]** affiche une liste avec le nom et la description des audiences auxquelles appartient actuellement le profil client individuel. Cette liste est mise à jour automatiquement lorsque le profil est admissible ou expire à partir des audiences. Le nombre total d&#39;audiences pour lesquelles le profil est actuellement qualifié s&#39;affiche sur le côté droit de l&#39;onglet.
 
-Pour plus d’informations sur la segmentation dans Experience Platform, reportez-vous à la section [Documentation d’Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
+Pour plus d’informations sur la segmentation dans Experience Platform, reportez-vous au [Documentation d’Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
 
 ![L’onglet Appartenance à une audience est mis en surbrillance. Les détails de l’appartenance à l’audience du profil s’affichent.](../images/user-guide/segment-membership.png)
 
@@ -186,4 +186,4 @@ IMAGE
 
 ## Étapes suivantes
 
-En lisant ce guide, vous savez comment afficher et gérer les données de profil de votre entreprise à l’aide de l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’utilisation des données de profil à l’aide des API Experience Platform, reportez-vous à la section [Guide de l’API Real-Time Customer Profile](../api/overview.md).
+En lisant ce guide, vous savez comment afficher et gérer les données de profil de votre entreprise à l’aide de l’interface utilisateur d’Experience Platform. Pour plus d’informations sur l’utilisation des données de profil à l’aide des API Experience Platform, reportez-vous au [Guide de l’API Real-Time Customer Profile](../api/overview.md).

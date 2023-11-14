@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;publicités Google;publicités Google
+keywords: Experience Platform;accueil;rubriques populaires;publicités Google;publicités Google
 title: Présentation de la source Google Ads
 description: Découvrez comment connecter Google Ads à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
@@ -36,5 +36,5 @@ La documentation ci-dessous fournit des informations sur la connexion de [!DNL G
 
 ### Utilisation de l’interface utilisateur
 
-* [Création d’une connexion source Google Ads dans l’interface utilisateur](../../tutorials/ui/create/advertising/ads.md)
+* [Créer une connexion source Google Ads dans l’interface utilisateur](../../tutorials/ui/create/advertising/ads.md)
 * [Création d’un flux de données pour une connexion à une source publicitaire dans l’interface utilisateur](../../tutorials/ui/dataflow/advertising.md)

@@ -1,11 +1,11 @@
 ---
 description: Découvrez comment utiliser des modèles dans l’interface utilisateur de Adobe Experience Platform pour accélérer votre processus d’ingestion de données pour les données B2B.
 title: Créer un flux de données de sources à l’aide de modèles dans l’interface utilisateur
-badge1: "Beta"
+badge1: « Version bêta »
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
-source-wordcount: '2258'
+source-wordcount: '2259'
 ht-degree: 44%
 
 ---

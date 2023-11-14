@@ -31,7 +31,7 @@ Suivez les étapes ci-dessous pour modifier les flux de données d’activation 
 
    ![Sélectionnez des destinations](../assets/ui/edit-activation/destination-select.png)
 
-4. Le **[!UICONTROL Exécutions de flux de données]** pour la destination s’affiche, affichant ses commandes disponibles. À ce stade, vous pouvez modifier plusieurs composants du flux de données de destination :
+4. La variable **[!UICONTROL Exécutions de flux de données]** pour la destination s’affiche, affichant ses commandes disponibles. À ce stade, vous pouvez modifier plusieurs composants du flux de données de destination :
 
    * Sélectionner **[!UICONTROL Activation des audiences]** dans le rail de droite pour modifier les audiences ou les attributs de profil à envoyer à la destination. Cette action vous conduit au workflow d’activation, qui varie en fonction du type de destination. Pour plus d’informations, consultez les guides sur :
       * [activation des données d’audience vers des destinations de diffusion en continu d’audience](./activate-segment-streaming-destinations.md) (par exemple, Facebook ou Twitter) ;
@@ -45,6 +45,6 @@ Suivez les étapes ci-dessous pour modifier les flux de données d’activation 
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez utilisé avec succès la méthode **[!UICONTROL destinations]** espace de travail pour mettre à jour les flux de données de destination existants.
+En suivant ce tutoriel, vous avez utilisé avec succès la méthode **[!UICONTROL destinations]** Workspace pour mettre à jour les flux de données de destination existants.
 
-Pour plus d’informations sur les destinations, reportez-vous à la section [présentation des destinations](../catalog/overview.md).
+Pour plus d’informations sur les destinations, voir [présentation des destinations](../catalog/overview.md).

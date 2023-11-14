@@ -4,7 +4,7 @@ title: Guide de l’interface utilisateur des contraintes de temps de la segment
 description: Le créateur de segments offre un vaste espace de travail qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '286'
 ht-degree: 100%
 

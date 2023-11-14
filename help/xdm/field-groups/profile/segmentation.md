@@ -75,14 +75,14 @@ Voici un exemple : `segmentMembership` mappage renseigné par le système pour u
 | `xdm:version` | Version du segment pour lequel ce profil s’est qualifié. |
 | `xdm:lastQualificationTime` | Date et heure de la dernière qualification de ce profil pour le segment. |
 | `xdm:validUntil` | Horodatage indiquant le moment où l’appartenance au segment ne doit plus être considérée comme valide. Pour les audiences externes, si ce champ n’est pas défini, l’appartenance au segment sera conservée uniquement pendant 30 jours à partir de la variable `lastQualificationTime`. |
-| `xdm:status` | Un champ de chaîne qui indique si l’appartenance à un segment a été réalisée dans le cadre de la requête actuelle. Les valeurs suivantes sont acceptées : <ul><li>`realized`: Le profil est admissible pour le segment.</li><li>`exited` : le profil quitte le segment dans le cadre de la requête actuelle.</li></ul> |
-| `xdm:payload` | Certaines adhésions aux segments incluent une payload qui décrit les valeurs supplémentaires directement liées à l’appartenance. Un seul payload d’un type donné peut être fourni pour chaque appartenance. `xdm:payloadType` indique le type de payload (`boolean`, `number`, `propensity`ou `string`), tandis que sa propriété frère fournit la valeur du type de charge utile. |
+| `xdm:status` | Un champ de chaîne qui indique si l’appartenance à un segment a été réalisée dans le cadre de la requête actuelle. Les valeurs suivantes sont acceptées : <ul><li>`realized`: le profil est admissible pour le segment.</li><li>`exited` : le profil quitte le segment dans le cadre de la requête actuelle.</li></ul> |
+| `xdm:payload` | Certaines adhésions aux segments incluent une payload qui décrit les valeurs supplémentaires directement liées à l’appartenance. Un seul payload d’un type donné peut être fourni pour chaque appartenance. `xdm:payloadType` indique le type de payload (`boolean`, `number`, `propensity`, ou `string`), tandis que sa propriété frère fournit la valeur du type de charge utile. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->Toute adhésion au segment qui figure dans la variable `exited` de plus de 30 jours, en fonction de la variable `lastQualificationTime`, sera sujet à suppression.
+>Toute adhésion au segment qui figure dans la variable `exited` de plus de 30 jours, en fonction de la variable `lastQualificationTime`, sera sujette à suppression.
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 

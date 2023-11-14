@@ -21,7 +21,7 @@ Adobe Experience Platform permet d’ingérer des données à partir de source
 
 Platform prend en charge l’ingestion de données à partir d’applications de protocoles, y compris [!DNL Generic REST API].
 
-Le [!DNL Generic REST API] source vous permet d’importer dans Platform des données provenant d’applications REST. [!DNL Generic REST API] prend en charge l’authentification de base et l’authentification basée sur le code d’actualisation OAuth 2.
+La variable [!DNL Generic REST API] source vous permet d’importer dans Platform des données provenant d’applications REST. [!DNL Generic REST API] prend en charge l’authentification de base et l’authentification basée sur le code d’actualisation OAuth 2.
 
 ## Liste autorisée d’adresses IP
 

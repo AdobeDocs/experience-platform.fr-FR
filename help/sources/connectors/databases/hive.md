@@ -36,4 +36,4 @@ La documentation ci-dessous fournit des informations sur la connexion. [!DNL Apa
 ## Connexion [!DNL Apache Hive] on [!DNL Azure HDInsights] to [!DNL Platform] utilisation de l’interface utilisateur
 
 - [Création d’une connexion source Apache Hive sur Azure HDInsights dans l’interface utilisateur](../../tutorials/ui/create/databases/hive.md)
-- [Création d’un flux de données pour une connexion à la source de la base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+- [Création d’un flux de données pour une connexion source de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)

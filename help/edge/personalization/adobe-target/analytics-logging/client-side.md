@@ -16,7 +16,7 @@ ht-degree: 5%
 
 ## Vue d’ensemble {#overview}
 
-Le SDK Web de Adobe Experience Platform vous permet de collecter des données [Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=fr) données côté client de votre application web.
+Le SDK Web de Adobe Experience Platform vous permet de collecter des données [Adobe Analytics for Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=fr) données du côté client de votre application web.
 
 La journalisation côté client signifie que [!DNL Target] Les données sont renvoyées côté client, ce qui vous permet de les collecter et de les partager avec Analytics. Cette option doit être activée si vous envisagez d’envoyer manuellement des données à Analytics à l’aide de la variable [API d’insertion de données](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html).
 
@@ -208,7 +208,7 @@ Toutes les valeurs de `scopeDetails.characteristics.analyticsToken`, ainsi que `
 
 >[!IMPORTANT]
 >
->Le `analyticsToken`, `analyticsDisplayToken`, `analyticsClickToken` Les propriétés peuvent contenir plusieurs jetons, concaténés en une seule chaîne délimitée par des virgules.
+>La variable `analyticsToken`, `analyticsDisplayToken`, `analyticsClickToken` Les propriétés peuvent contenir plusieurs jetons, concaténés en une seule chaîne délimitée par des virgules.
 >
 >Dans les exemples d’implémentation fournis dans la section suivante, plusieurs jetons Analytics sont collectés de manière itérative. Pour concaténer un tableau de jetons Analytics, utilisez une fonction similaire à celle-ci :
 >
@@ -428,7 +428,7 @@ En résumé, les étapes suivantes doivent être exécutées lors de l’applica
 1. Envoyez la variable `decisioning.propositionDisplay` événement de notification ;
 1. Collectez les jetons d’affichage Analytics à partir de la réponse du SDK et créez un payload pour l’accès Analytics ;
 1. Envoyez la payload à Analytics à l’aide de la variable [API d’insertion de données](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
-1. S’il existe des mesures de clics dans les propositions diffusées, les écouteurs de clics doivent être configurés de sorte que lorsqu’un clic est effectué, l’événement envoie la variable `decisioning.propositionInteract` événement de notification . Le `onBeforeEventSend` Le gestionnaire doit être configuré de sorte que lors de l’interception `decisioning.propositionInteract` , les actions suivantes se produisent :
+1. S’il existe des mesures de clics dans les propositions diffusées, les écouteurs de clics doivent être configurés de sorte que lorsqu’un clic est effectué, l’événement envoie la variable `decisioning.propositionInteract` événement de notification . La variable `onBeforeEventSend` Le gestionnaire doit être configuré de sorte que lors de l’interception `decisioning.propositionInteract` , les actions suivantes se produisent :
    1. Collecte des jetons Analytics de clic `xdm._experience.decisioning.propositions`
    1. Envoi de l’accès de clic Analytics avec la charge utile Analytics collectée via [API d’insertion de données](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
 
@@ -511,9 +511,9 @@ alloy("sendEvent", {
 
 ### Utilisation `onBeforeEventSend` pour gérer les mesures de page {#using-onbeforeeventsend}
 
-Les activités Adobe Target vous permettent de configurer différentes mesures sur la page, soit en les joignant manuellement au DOM, soit en les joignant automatiquement au DOM (activités créées par le VEC). Les deux types sont une interaction différée entre l’utilisateur final et la page web.
+À l’aide des activités Adobe Target, vous pouvez configurer différentes mesures sur la page, soit associées manuellement au DOM, soit associées automatiquement au DOM (activités créées par le VEC). Les deux types sont une interaction différée entre l’utilisateur final et la page web.
 
-Pour en tenir compte, la bonne pratique consiste à collecter les charges utiles Analytics à l’aide de la variable `onBeforeEventSend` crochet du SDK Web de Adobe Experience Platform. Le `onBeforeEventSend` hook doit être configuré à l’aide de la variable `configure` et seront reflétés dans tous les événements envoyés par le biais du flux de données.
+Pour en tenir compte, la bonne pratique consiste à collecter les charges utiles Analytics à l’aide de la variable `onBeforeEventSend` crochet du SDK Web de Adobe Experience Platform. La variable `onBeforeEventSend` hook doit être configuré à l’aide de la variable `configure` et seront reflétés dans tous les événements envoyés par le biais du flux de données.
 
 Voici un exemple de la manière dont `onBeforeEventSent` peut être configuré pour déclencher des accès Analytics :
 

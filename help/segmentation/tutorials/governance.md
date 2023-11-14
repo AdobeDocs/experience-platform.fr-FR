@@ -21,11 +21,11 @@ Ce tutoriel nécessite une connaissance pratique des composants suivants de [!DN
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] est un magasin d’entités de recherche générique utilisé pour gérer les [!DNL Experience Data Model (XDM)] données dans [!DNL Platform]. Profile fusionne les données de divers actifs de données d’entreprise et permet d’accéder à ces données dans une présentation unifiée.
    - [Politiques de fusion](../../profile/api/merge-policies.md)[!DNL Real-Time Customer Profile] : politiques utilisées par pour déterminer quelles données peuvent être fusionnées en une vue unifiée dans certains cas. Les politiques de fusion peuvent être configurées à des fins de gouvernance des données.
-- [[!DNL Segmentation]](../home.md): Comment [!DNL Real-Time Customer Profile] divise un grand groupe d’individus contenus dans la banque de profils en groupes plus petits partageant des caractéristiques similaires et réagissant de la même manière aux stratégies marketing.
-- [Gouvernance des données](../../data-governance/home.md): La gouvernance des données fournit l’infrastructure pour l’étiquetage et l’application de l’utilisation des données, à l’aide des composants suivants :
+- [[!DNL Segmentation]](../home.md): comment [!DNL Real-Time Customer Profile] divise un grand groupe d’individus contenus dans la banque de profils en groupes plus petits partageant des caractéristiques similaires et réagissant de la même manière aux stratégies marketing.
+- [Gouvernance des données](../../data-governance/home.md): la gouvernance des données fournit l’infrastructure pour l’étiquetage et l’application de l’utilisation des données, à l’aide des composants suivants :
    - [Libellés d’utilisation des données](../../data-governance/labels/user-guide.md) : libellés utilisés pour décrire les jeux de données et les champs en fonction du niveau de sensibilité avec lequel traiter leurs données respectives.
    - [Politiques d’utilisation des données](../../data-governance/policies/overview.md) : configurations indiquant quelles actions marketing sont autorisées sur les données classées selon des libellés d’utilisation de données particulières.
-   - [Application des stratégies](../../data-governance/enforcement/overview.md): Permet d’appliquer des stratégies d’utilisation des données et d’empêcher les opérations de données qui constituent des violations de stratégie.
+   - [Application des stratégies](../../data-governance/enforcement/overview.md): vous permet d’appliquer des stratégies d’utilisation des données et d’empêcher les opérations de données qui constituent des violations de stratégie.
 - [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à la fonction [!DNL Platform] API.
@@ -184,7 +184,7 @@ Une réponse réussie renvoie les détails de la politique de fusion.
 
 >[!NOTE]
 >
-> Cette étape suppose que vous disposez au moins d’une stratégie d’utilisation des données principale qui empêche l’exécution d’actions marketing spécifiques sur les données contenant certains libellés. Si vous ne disposez d’aucune stratégie d’utilisation applicable pour les jeux de données évalués, veuillez suivre la [tutoriel sur la création de stratégies](../../data-governance/policies/create.md) pour en créer un avant de poursuivre cette étape.
+> Cette étape suppose que vous disposez au moins d’une stratégie d’utilisation des données active qui empêche l’exécution d’actions marketing spécifiques sur les données contenant certains libellés. Si vous ne disposez d’aucune stratégie d’utilisation applicable pour les jeux de données évalués, veuillez suivre la [tutoriel sur la création de stratégies](../../data-governance/policies/create.md) pour en créer un avant de poursuivre cette étape.
 
 Une fois que vous avez obtenu les identifiants des jeux de données source de la stratégie de fusion, vous pouvez utiliser la variable [API Policy Service](https://www.adobe.io/experience-platform-apis/references/policy-service/) pour évaluer ces jeux de données par rapport à des actions marketing spécifiques afin de rechercher les violations de stratégie d’utilisation des données.
 
@@ -203,7 +203,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 **Requête**
 
-La requête suivante teste la variable `exportToThirdParty` action marketing par rapport aux jeux de données obtenus dans la variable [étape précédente](#datasets). Le payload de requête est un tableau contenant les identifiants de chaque jeu de données.
+La requête suivante teste la variable `exportToThirdParty` action marketing par rapport aux jeux de données obtenus dans [étape précédente](#datasets). Le payload de requête est un tableau contenant les identifiants de chaque jeu de données.
 
 ```shell
 curl -X POST \
@@ -366,7 +366,7 @@ En utilisant les données renvoyées dans la réponse de l’API, vous pouvez co
 
 ## Filtrage des champs de données
 
-Si votre définition de segment ne réussit pas l’évaluation, vous pouvez ajuster les données incluses dans la définition de segment par l’une des deux méthodes décrites ci-dessous.
+Si votre définition de segment ne réussit pas l’évaluation, vous pouvez ajuster les données incluses dans la définition de segment à l’aide de l’une des deux méthodes décrites ci-dessous.
 
 ### Mise à jour de la politique de fusion de la définition de segment
 

@@ -33,15 +33,15 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 * [Modèle de données d’expérience (XDM)](../../../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données d’expérience client.
    * [Notions de base de la composition du schéma](../../../../xdm/schema/composition.md) : en savoir plus sur les blocs de création de base des schémas XDM.
-* [Profil client en temps réel](../../../../profile/home.md): Consolidation des données client provenant de sources disparates dans une vue complète et unifiée tout en offrant un compte horodaté et exploitable de chaque interaction client.
+* [Profil client en temps réel](../../../../profile/home.md): consolide les données client provenant de sources disparates dans une vue complète et unifiée tout en offrant un compte horodaté et exploitable de chaque interaction client.
 
 >[!IMPORTANT]
 >
->Ce tutoriel suppose que vous connaissez le [!DNL Profile] schéma dans Platform que vous souhaitez utiliser pour capturer les informations d’attributs du client. Quelle que soit la méthode utilisée pour collecter les données de consentement, ce schéma doit être [activée pour Real-time Customer Profile](../../../../xdm/ui/resources/schemas.md#profile). En outre, l’identité Principale du schéma ne peut pas être un champ directement identifiable qui ne peut pas être utilisé dans des publicités basées sur des intérêts, telles qu’une adresse électronique. Consultez votre service juridique si vous ne savez pas quels champs sont restreints.
+>Ce tutoriel suppose que vous connaissez la variable [!DNL Profile] schéma dans Platform que vous souhaitez utiliser pour capturer les informations d’attributs du client. Quelle que soit la méthode utilisée pour collecter les données de consentement, ce schéma doit être [activée pour Real-time Customer Profile](../../../../xdm/ui/resources/schemas.md#profile). En outre, l’identité principale du schéma ne peut pas être un champ directement identifiable qui ne peut pas être utilisé dans des publicités basées sur des intérêts, telles qu’une adresse électronique. Consultez votre service juridique si vous ne savez pas quels champs sont restreints.
 
 ## [!UICONTROL Détails du consentement et des préférences] structure du groupe de champs {#structure}
 
-Le [!UICONTROL Détails du consentement et des préférences] le groupe de champs fournit des champs de consentement normalisés à un schéma. Actuellement, ce groupe de champs n’est compatible qu’avec les schémas basés sur la variable [!DNL XDM Individual Profile] classe .
+La variable [!UICONTROL Détails du consentement et des préférences] le groupe de champs fournit des champs de consentement normalisés à un schéma. Actuellement, ce groupe de champs n’est compatible qu’avec les schémas basés sur la variable [!DNL XDM Individual Profile] classe .
 
 Le groupe de champs fournit un champ de type objet unique, `consents`, dont les sous-propriétés capturent un ensemble de champs de consentement normalisés. Le fichier JSON suivant est un exemple du type de données `consents` attend lors de l’ingestion des données :
 
@@ -99,7 +99,7 @@ Pour collecter des données de consentement à l’aide de la norme Adobe, vous 
 * [!UICONTROL Détails du consentement et des préférences]
 * [!UICONTROL IdentityMap] (obligatoire si vous utilisez le SDK Web ou Mobile Platform pour envoyer des signaux de consentement)
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche, puis sélectionnez l’option **[!UICONTROL Parcourir]** pour afficher une liste des schémas existants. À partir de là, sélectionnez le nom de la variable [!DNL Profile]schéma activé auquel vous souhaitez ajouter des champs de consentement. Les captures d’écran de cette section utilisent le schéma &quot;Loyalty Members&quot; créé dans la variable [tutoriel sur la création de schéma](../../../../xdm/tutorials/create-schema-ui.md) par exemple.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche, puis sélectionnez l’option **[!UICONTROL Parcourir]** pour afficher une liste des schémas existants. À partir de là, sélectionnez le nom du [!DNL Profile]schéma activé auquel vous souhaitez ajouter des champs de consentement. Les captures d’écran de cette section utilisent le schéma &quot;Loyalty Members&quot; créé dans la variable [tutoriel sur la création de schéma](../../../../xdm/tutorials/create-schema-ui.md) par exemple.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/select-schema.png)
 
@@ -107,11 +107,11 @@ Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas
 >
 >Vous pouvez utiliser les fonctionnalités de recherche et de filtrage de l’espace de travail pour faciliter la recherche de votre schéma. Consultez le guide sur la [exploration des ressources XDM](../../../../xdm/ui/explore.md) pour plus d’informations.
 
-Le [!DNL Schema Editor] s’affiche, indiquant la structure du schéma dans la zone de travail. Sur le côté gauche de la zone de travail, sélectionnez **[!UICONTROL Ajouter]** sous le **[!UICONTROL Groupes de champs]** .
+La variable [!DNL Schema Editor] s’affiche, indiquant la structure du schéma dans la zone de travail. Sur le côté gauche de la zone de travail, sélectionnez **[!UICONTROL Ajouter]** sous le **[!UICONTROL Groupes de champs]** .
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-field-group.png)
 
-Le **[!UICONTROL Ajouter un groupe de champs]** s’affiche. À partir de là, sélectionnez **[!UICONTROL Détails du consentement et des préférences]** dans la liste. Vous pouvez éventuellement utiliser la barre de recherche pour affiner les résultats afin de localiser plus facilement le groupe de champs.
+La variable **[!UICONTROL Ajouter un groupe de champs]** s’affiche. À partir de là, sélectionnez **[!UICONTROL Détails du consentement et des préférences]** dans la liste. Vous pouvez éventuellement utiliser la barre de recherche pour affiner les résultats afin de localiser plus facilement le groupe de champs.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-group-dialog.png)
 
@@ -119,7 +119,7 @@ Recherchez ensuite le **[!UICONTROL IdentityMap]** groupe de champs dans la list
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/identitymap.png)
 
-La zone de travail réapparaît, indiquant que la variable `consents` et `identityMap` ont été ajoutés à la structure du schéma. Si vous avez besoin de champs de consentement et de préférence supplémentaires qui ne sont pas capturés par le groupe de champs standard, reportez-vous à la section de l’annexe sur [ajout de champs de consentement et de préférence personnalisés au schéma](#custom-consent). Sinon, sélectionnez **[!UICONTROL Enregistrer]** pour finaliser les modifications apportées au schéma.
+La zone de travail réapparaît, indiquant que la variable `consents` et `identityMap` ont été ajoutés à la structure du schéma. Si vous avez besoin de champs de consentement et de préférence supplémentaires non capturés par le groupe de champs standard, reportez-vous à la section de l’annexe sur [ajout de champs de consentement et de préférence personnalisés au schéma](#custom-consent). Sinon, sélectionnez **[!UICONTROL Enregistrer]** pour finaliser les modifications apportées au schéma.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
@@ -141,7 +141,7 @@ Sur la page suivante, sélectionnez **[!UICONTROL Création d’un jeu de donné
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/from-schema.png)
 
-Le **[!UICONTROL Création d’un jeu de données à partir d’un schéma]** s’affiche, en commençant par **[!UICONTROL Sélectionner un schéma]** étape . Dans la liste fournie, recherchez l’un des schémas de consentement que vous avez créés précédemment. Vous pouvez éventuellement utiliser la barre de recherche pour affiner les résultats et faciliter la localisation de votre schéma. Sélectionnez le bouton radio en regard du schéma souhaité, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+La variable **[!UICONTROL Création d’un jeu de données à partir d’un schéma]** s’affiche, en commençant par **[!UICONTROL Sélectionner un schéma]** étape . Dans la liste fournie, recherchez l’un des schémas de consentement que vous avez créés précédemment. Vous pouvez éventuellement utiliser la barre de recherche pour affiner les résultats et faciliter la localisation de votre schéma. Sélectionnez le bouton radio en regard du schéma souhaité, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/select-dataset-schema.png)
 
@@ -177,7 +177,7 @@ Si vous devez capturer des signaux de consentement supplémentaires en dehors de
 
 >[!IMPORTANT]
 >
->Les SDK Web et Mobile Platform ne prennent pas en charge les champs personnalisés dans leurs commandes de modification du consentement. Actuellement, le seul moyen d’ingérer des champs de consentement personnalisés dans Profile est de [ingestion par lots](../../../../ingestion/batch-ingestion/overview.md) ou [connexion source](../../../../sources/home.md).
+>Les SDK Web et Mobile Platform ne prennent pas en charge les champs personnalisés dans leurs commandes de modification du consentement. Actuellement, le seul moyen d’ingérer des champs de consentement personnalisés dans Profile est de passer par [ingestion par lots](../../../../ingestion/batch-ingestion/overview.md) ou [connexion source](../../../../sources/home.md).
 
 Il est vivement recommandé d’utiliser la variable [!UICONTROL Détails du consentement et des préférences] groupe de champs comme ligne de base pour la structure de vos données de consentement et ajoutez des champs supplémentaires si nécessaire, plutôt que d’essayer de créer entièrement la structure.
 
@@ -185,11 +185,11 @@ Pour ajouter des champs personnalisés à la structure d’un groupe de champs s
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field-group.png)
 
-Le [!DNL Schema Editor] réapparaît avec le nouveau groupe de champs personnalisé sélectionné dans le rail de gauche. Dans la zone de travail, des contrôles s’affichent pour vous permettre d’ajouter des champs personnalisés à la structure du schéma. Pour ajouter un nouveau champ de consentement ou de préférence, sélectionnez la variable **plus (+)** en regard de l’icône `consents` .
+La variable [!DNL Schema Editor] réapparaît avec le nouveau groupe de champs personnalisé sélectionné dans le rail de gauche. Dans la zone de travail, des contrôles s’affichent pour vous permettre d’ajouter des champs personnalisés à la structure du schéma. Pour ajouter un nouveau champ de consentement ou de préférence, sélectionnez la variable **plus (+)** en regard de l’icône `consents` .
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field.png)
 
-Un nouveau champ s’affiche dans la `consents` . Puisque vous ajoutez un champ personnalisé à un objet XDM standard, le nouveau champ est créé sous un objet dont l’espace de noms est associé à votre ID de tenant.
+Un nouveau champ s’affiche dans la variable `consents` . Puisque vous ajoutez un champ personnalisé à un objet XDM standard, le nouveau champ est créé sous un objet dont l’espace de noms est associé à votre ID de tenant.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/nested-tenantId.png)
 

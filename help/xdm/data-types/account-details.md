@@ -18,12 +18,12 @@ ht-degree: 19%
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `annualRevenue` | [[!UICONTROL Devise]](./currency.md) | Montant estimé des recettes annuelles de l’organisation. |
-| `DUNSNumber` | Chaîne | Dun &amp; Bradstreet D-U-N-S Number de l&#39;organisation. Il s’agit d’un nombre à neuf chiffres non indicatif attribué à chaque emplacement commercial dans la base de données de Dun &amp; Bradstreet, qui fonctionne de manière unique, distincte et distincte. Il est conservé uniquement par Dun &amp; Bradstreet. |
+| `DUNSNumber` | Chaîne | Dun &amp; Bradstreet D-U-N-S Number de l&#39;organisation. Il s’agit d’un nombre à neuf chiffres non indicatif attribué à chaque emplacement commercial dans la base de données de Dun &amp; Bradstreet, qui possède une fonction unique, distincte et distincte. Il est conservé uniquement par Dun &amp; Bradstreet. |
 | `NAICSCode` | Chaîne | La classification de l’organisation dans le Système de classification des industries de l’Amérique du Nord. |
 | `NAICSDescription` | Chaîne | Brève description du secteur d’activité d’une organisation, basée sur son code NAICS. |
 | `SICCode` | Chaîne | Code SIC (Standard Industrial Classification) de l’organisation. Il s’agit d’un code à quatre chiffres qui classe le secteur auquel appartiennent les entreprises en fonction de leurs activités commerciales. |
 | `SICDescription` | Chaîne | Brève description du secteur d’activité d’une organisation, en fonction de son code SIC. |
-| `companyProductAndServices` | Chaîne | Les produits et services dans lesquels l’organisation traite ou traite. |
+| `companyProductAndServices` | Chaîne | Les produits et services dans lesquels l’organisation traite ou traite des affaires. |
 | `facebookPageUrl` | Chaîne | Lien vers le compte Facebook de l’organisation. |
 | `industry` | Chaîne | Le secteur dans lequel cette organisation fait partie. Il s’agit d’un champ de forme libre, et il est conseillé d’utiliser une valeur structurée pour les requêtes ou d’utiliser la propriété `xdm:classifier`. |
 | `jigsaw` | Chaîne | Clé Data.com de l’organisation. |
@@ -32,10 +32,10 @@ ht-degree: 19%
 | `marketSegment` | Chaîne | audience de marché nommée à laquelle l’organisation participe. Il s’agit d’un champ de forme libre, et il est conseillé d’utiliser une valeur structurée pour les requêtes ou d’utiliser la propriété `xdm:identifier`. |
 | `numberOfEmployees` | Nombre entier | Nombre d’employés de l’organisation. |
 | `organizationType` | Chaîne | Libellé décrivant le type d’organisation. |
-| `primaryEmailDomain` | Chaîne | Domaine de messagerie Principal utilisé par l’organisation pour son personnel. |
+| `primaryEmailDomain` | Chaîne | Domaine de messagerie principal utilisé par l’organisation pour son personnel. |
 | `rating` | Double | Score calculé ou nombre d’étoiles pour cette organisation. `1` indique la note maximale possible, et `0` est la note minimale possible. |
 | `tickerSymbol` | Chaîne | Le symbole boursier de ce compte. 20 caractères maximum. |
-| `twitterHandleUrl` | Chaîne | Lien vers le gestionnaire twitter de l’organisation. |
+| `twitterHandleUrl` | Chaîne | Lien vers le twitter de l’organisation du site web. |
 | `website` | Chaîne | URL du site web de l’organisation. |
 
 {style="table-layout:auto"}

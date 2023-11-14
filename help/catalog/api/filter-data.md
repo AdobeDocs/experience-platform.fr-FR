@@ -13,9 +13,9 @@ ht-degree: 86%
 
 # Filtrer [!DNL Catalog] données à l’aide des paramètres de requête
 
-Le [!DNL Catalog Service] L’API permet de filtrer les données de réponse à l’aide de paramètres de requête de requête de requête. Une partie des bonnes pratiques pour [!DNL Catalog] est d’utiliser des filtres dans tous les appels API, car ils réduisent la charge de l’API et contribuent à améliorer les performances globales.
+La variable [!DNL Catalog Service] L’API permet de filtrer les données de réponse à l’aide de paramètres de requête de requête de requête. Une partie des bonnes pratiques pour [!DNL Catalog] est d’utiliser des filtres dans tous les appels API, car ils réduisent la charge de l’API et contribuent à améliorer les performances globales.
 
-Ce document décrit les méthodes de filtrage les plus courantes [!DNL Catalog] dans l’API. Il vous est recommandé de vous référer à ce document lors de la lecture du [guide de développement du catalogue](getting-started.md) pour en savoir plus sur la manière d’interagir avec l’API [!DNL Catalog] Pour plus d’informations générales sur [!DNL Catalog Service], reportez-vous à la section [[!DNL Catalog] aperçu](../home.md).
+Ce document décrit les méthodes de filtrage les plus courantes [!DNL Catalog] dans l’API. Il vous est recommandé de vous référer à ce document lors de la lecture du [guide de développement du catalogue](getting-started.md) pour en savoir plus sur la manière d’interagir avec l’API [!DNL Catalog] Pour plus d’informations générales sur [!DNL Catalog Service], voir [[!DNL Catalog] aperçu](../home.md).
 
 ## Limiter les objets renvoyés
 
@@ -79,7 +79,7 @@ Même lorsque le nombre d’objets renvoyés est filtré à l’aide du paramèt
 
 Le paramètre `properties` filtre les objets de réponse pour renvoyer uniquement un ensemble de propriétés spécifiées. Ce paramètre peut être défini pour renvoyer une ou plusieurs propriétés.
 
-Le `properties` peut accepter n’importe quelle propriété d’objet de niveau. `sampleKey` peuvent être extraites à l’aide de `?properties=subItem.sampleKey`.
+La variable `properties` peut accepter n’importe quelle propriété d’objet de niveau. `sampleKey` peuvent être extraites à l’aide de `?properties=subItem.sampleKey`.
 
 ```json
 {
@@ -524,7 +524,7 @@ Une réponse réussie contient une liste de jeux de données excluant ceux dont 
 
 Le paramètre de requête `property` offre plus de flexibilité pour le filtrage basé sur les propriétés que les filtres simples. En complément du filtrage selon qu’une propriété possède ou non une valeur spécifique, le paramètre `property`peut utiliser d’autres opérateurs de comparaison (tels que « more-than »,`>`, et « less-than », `<`), ainsi que des expressions régulières pour filtrer selon les valeurs de propriété. Il peut également filtrer selon l’existence ou l’absence d’une propriété, quelle que soit sa valeur.
 
-Le `property` peut accepter n’importe quelle propriété d’objet de niveau. `sampleKey` peut être utilisé pour le filtrage à l’aide de `?properties=subItem.sampleKey`.
+La variable `property` peut accepter n’importe quelle propriété d’objet de niveau. `sampleKey` peut être utilisé pour le filtrage à l’aide de `?properties=subItem.sampleKey`.
 
 ```json
 {

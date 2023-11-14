@@ -87,7 +87,7 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `auth.params.connectionString` | Chaîne de connexion utilisée pour se connecter à votre [!DNL Teradata Vantage] instance. Le modèle de chaîne de connexion pour [!DNL Teradata Vantage] is `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
-| `connectionSpec.id` | Le [!DNL Teradata Vantage] identifiant de spécification de connexion : `2fa8af9c-2d1a-43ea-a253-f00a00c74412`. |
+| `connectionSpec.id` | La variable [!DNL Teradata Vantage] identifiant de spécification de connexion : `2fa8af9c-2d1a-43ea-a253-f00a00c74412`. |
 
 **Réponse**
 

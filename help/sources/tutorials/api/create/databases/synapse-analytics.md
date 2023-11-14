@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
 source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '482'
 ht-degree: 62%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 62%
 
 >[!IMPORTANT]
 >
->Le [!DNL Azure Synapse Analytics] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+>La variable [!DNL Azure Synapse Analytics] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -35,10 +35,10 @@ Pour connecter [!DNL Flow Service] à [!DNL Synapse], vous devez fournir des val
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `connectionString` | Chaîne de connexion utilisée pour la connexion à [!DNL Synapse]. Le [!DNL Synapse] le modèle de chaîne de connexion est `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
+| `connectionString` | Chaîne de connexion utilisée pour la connexion à [!DNL Synapse]. La variable [!DNL Synapse] le modèle de chaîne de connexion est `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Synapse] est : `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 
-Pour plus d’informations sur l’obtention d’une chaîne de connexion, reportez-vous à la section [ce document Synapse](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&amp;bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&amp;tabs=azure-powershell).
+Pour plus d’informations sur l’obtention d’une chaîne de connexion, voir [ce document Synapse](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-aad-authentication-configure?toc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Ftoc.json&amp;bc=%2Fazure%2Fsynapse-analytics%2Fsql-data-warehouse%2Fbreadcrumb%2Ftoc.json&amp;tabs=azure-powershell).
 
 ### Utiliser les API Platform
 
@@ -86,7 +86,7 @@ curl -X POST \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `auth.params.connectionString` | Chaîne de connexion utilisée pour la connexion à [!DNL Synapse]. Le [!DNL Synapse] le modèle de chaîne de connexion est `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
+| `auth.params.connectionString` | Chaîne de connexion utilisée pour la connexion à [!DNL Synapse]. La variable [!DNL Synapse] le modèle de chaîne de connexion est `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30`. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion [!DNL Synapse] est : `a49bcc7d-8038-43af-b1e4-5a7a089a7d79`. |
 
 **Réponse**

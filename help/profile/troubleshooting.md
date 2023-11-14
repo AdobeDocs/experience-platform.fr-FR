@@ -5,7 +5,7 @@ type: Documentation
 description: Ce document fournit des réponses aux questions fréquentes sur le profil client en temps réel, ainsi qu’un guide de dépannage pour les erreurs courantes lors de l’utilisation des données de profil à l’aide d’Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
 source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 100%
 

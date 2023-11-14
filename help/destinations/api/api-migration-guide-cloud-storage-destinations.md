@@ -52,7 +52,7 @@ Bien que ces destinations avec des fonctionnalités améliorées aient été ini
 
 Si vous utilisez déjà la variable [API de service de flux](https://developer.adobe.com/experience-platform-apis/references/destinations/) pour exporter des profils vers les destinations de stockage dans le cloud Amazon S3, Azure Blob ou SFTP, ce guide de migration des API s’applique à vous.
 
-Si des scripts sont en cours d’exécution dans votre [!DNL Amazon S3], [!DNL Azure Blob], ou les emplacements de stockage dans le cloud SFTP en plus des fichiers exportés à partir d’Experience Platform, sachez que certains paramètres changent en ce qui concerne les spécifications de connexion et de flux des nouvelles cartes, ainsi que l’étape de mappage.
+Si des scripts sont exécutés dans votre [!DNL Amazon S3], [!DNL Azure Blob], ou les emplacements de stockage dans le cloud SFTP en plus des fichiers exportés à partir d’Experience Platform, sachez que certains paramètres changent en ce qui concerne les spécifications de connexion et de flux des nouvelles cartes, ainsi que l’étape de mappage.
 
 Par exemple, si vous utilisiez un script pour filtrer les flux de données de destination vers la variable [!DNL Amazon S3] destination, en fonction de la spécification de connexion de la variable [!DNL Amazon S3] destination, gardez à l’esprit que la spécification de connexion va changer afin que vous devrez mettre à jour vos filtres.
 
@@ -80,12 +80,12 @@ Avec la migration vers les nouvelles destinations, tous vos flux de données exi
 
 Les modifications incompatibles en amont pour les utilisateurs de l’API sont une mise à jour `connection spec ID` et `flow spec ID` comme illustré dans le tableau ci-dessous :
 
-| [!DNL Amazon S3] | hérité | Nouveau  |
+| [!DNL Amazon S3] | hérité | Nouveau |
 |---------|----------|---------|
 | Spécification de flux | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 1a0514a6-33d4-4c7f-aff8-594799c47549 |
 | Spécification de connexion | 4890fc95-5a1f-4983-94bb-e060c08e3f81 | 4fce964d-3f37-408f-9778-e597338a21ee |
 
-Affichez l’ensemble des exemples de connexion héritée et nouvelle base et cible pour [!DNL Amazon S3] dans les onglets ci-dessous. Paramètres requis pour créer des connexions de base [!DNL Amazon S3] les destinations ne changent pas.
+Affichez l’ensemble des exemples de connexion héritée et nouvelle base et cible pour [!DNL Amazon S3] dans les onglets ci-dessous. Paramètres requis pour créer des connexions de base pour [!DNL Amazon S3] les destinations ne changent pas.
 
 De même, il n’existe aucune modification incompatible avec l’arrière-plan des paramètres requis pour créer des connexions cibles.
 
@@ -252,7 +252,7 @@ De même, il n’existe aucune modification incompatible avec l’arrière-plan 
 
 Les modifications incompatibles en amont pour les utilisateurs de l’API sont une mise à jour `connection spec ID` et `flow spec ID` comme illustré dans le tableau ci-dessous :
 
-| [!DNL Azure Blob] | hérité | Nouveau  |
+| [!DNL Azure Blob] | hérité | Nouveau |
 |---------|----------|---------|
 | Spécification de flux | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 752d422f-b16f-4f0d-b1c6-26e448e3b388 |
 | Spécification de connexion | e258278b-a4cf-43ac-b158-4fa0ca0d948b | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
@@ -424,7 +424,7 @@ De même, il n’existe aucune modification incompatible avec l’arrière-plan 
 
 Les modifications incompatibles en amont pour les utilisateurs de l’API sont une mise à jour `connection spec ID` et `flow spec ID` comme illustré dans le tableau ci-dessous :
 
-| SFTP | hérité | Nouveau  |
+| SFTP | hérité | Nouveau |
 |---------|----------|---------|
 | Spécification de flux | 71471eba-b620-49e4-90fd-23f1fa0174d8 | fd36aaa4-bf2b-43fb-9387-43785eeeb799 |
 | Spécification de connexion | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
@@ -748,7 +748,7 @@ Obtenir des informations complètes sur la configuration de la variable `profile
 
 +++Afficher un exemple de paramètres de transformation après la migration
 
-Remarquez dans l’exemple de configuration ci-dessous comment `profileSelectors` ont été remplacés par un `profileMapping` .
+Remarquez dans l’exemple de configuration ci-dessous comment `profileSelectors` Les champs ont été remplacés par un `profileMapping` .
 
 ```json {line-numbers="true" start-line="1" highlight="4-12, 18-20"}
 {
@@ -790,9 +790,9 @@ Vous recevrez des e-mails de rappel d’Adobe à l’approche de la date de migr
 
 En vue de la migration du [!DNL Amazon S3], [!DNL Azure Blob], ainsi que les destinations de stockage dans le cloud SFTP vers les nouvelles cartes, préparez-vous à mettre à jour vos scripts et vos appels d’API automatisés, comme suggéré ci-dessous.
 
-1. Mise à jour de scripts ou d’appels d’API automatisés pour tous les [!DNL Amazon S3], [!DNL Azure Blob]ou destinations de stockage dans le cloud SFTP d’ici le 26 juillet 2023. Tous les appels ou scripts d’API automatisés qui utilisent les spécifications de connexion ou les spécifications de flux héritées doivent être mis à jour vers les nouvelles spécifications de connexion ou de flux.
+1. Mise à jour de scripts ou d’appels d’API automatisés pour tout script existant [!DNL Amazon S3], [!DNL Azure Blob]ou destinations de stockage dans le cloud SFTP d’ici le 26 juillet 2023. Tous les appels ou scripts d’API automatisés qui utilisent les spécifications de connexion ou les spécifications de flux héritées doivent être mis à jour vers les nouvelles spécifications de connexion ou de flux.
 2. Contactez votre représentant de compte d’Adobe lorsque vos scripts ont été mis à jour avant le 26 juillet.
-3. Par exemple, la variable `targetConnectionSpecId` peut être utilisé comme indicateur pour déterminer si le flux de données a été migré vers la nouvelle carte de destination. Vous pouvez mettre à jour vos scripts à l’aide d’une `if` pour examiner les spécifications de connexion Target héritées et mises à jour dans `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` et déterminez si votre flux de données a été migré. Vous pouvez voir les identifiants hérités et nouveaux attributs de connexion dans les sections spécifiques de cette page pour chaque destination.
+3. Par exemple, la variable `targetConnectionSpecId` peut être utilisé comme indicateur pour déterminer si le flux de données a été migré vers la nouvelle carte de destination. Vous pouvez mettre à jour vos scripts avec une `if` pour examiner les spécifications de connexion Target héritées et mises à jour dans `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` et déterminez si votre flux de données a été migré. Vous pouvez voir les identifiants hérités et nouveaux attributs de connexion dans les sections spécifiques de cette page pour chaque destination.
 4. Votre équipe de compte d’Adobe vous renverra des informations supplémentaires sur le moment où vos flux de données seront migrés.
 5. Après le 26 juillet, tous les flux de données seront migrés. Tous vos flux de données existants auront désormais de nouvelles entités de flux (spécifications de connexion, spécifications de flux, connexions de base et connexions cibles). Tout script ou appel d’API de votre côté qui utilise les entités de flux héritées cessera de fonctionner.
 

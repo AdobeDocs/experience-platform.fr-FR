@@ -32,18 +32,18 @@ Les autorisations sous Adobe Experience Platform incluent l’accès aux jeux de
 | Catégorie | Autorisation | Description |
 | --- | --- | --- |
 | Sandbox | (S/O) | Selon le [sandbox](../sandboxes/home.md) qui ont été créés sous votre organisation, vous pouvez contrôler l’accès à chacun d’eux par le biais de cette catégorie d’autorisations dans Admin Console. |
-| Modélisation des données | Gestion des schémas | Permet d’afficher, de créer et de modifier des [Schémas de modèle de données d’expérience (XDM)](../xdm/home.md). |
+| Modélisation des données | Gestion des schémas | Permet d’afficher, de créer et de modifier [Schémas XDM (Experience Data Model)](../xdm/home.md). |
 | Modélisation des données | Affichage des schémas | Accorde l’accès en lecture seule aux schémas. |
-| Identity Management | Gestion des espaces de noms d’identité | Permet d’afficher, de créer et de modifier des [espaces de noms d’identité](../identity-service/namespaces.md). |
+| Identity Management | Gestion des espaces de noms d’identité | Permet d’afficher, de créer et de modifier [espaces de noms d’identité](../identity-service/namespaces.md). |
 | Identity Management | Affichages des espaces de noms d’identité | Accorde l’accès en lecture seule aux espaces de noms d’identité. |
-| Collecte de données | Gestion des flux de données | Permet d’afficher, de créer et de modifier des [datastreams](../datastreams/overview.md). |
+| Collecte de données | Gestion des flux de données | Permet d’afficher, de créer et de modifier [datastreams](../datastreams/overview.md). |
 | Collecte de données | Affichage des flux de données | Accorde l’accès en lecture seule aux flux de données. |
 
 {style="table-layout:auto"}
 
 ### Autorisations de collecte de données Adobe Experience Platform
 
-Les autorisations de la collecte de données Adobe Experience Platform contrôlent l’accès aux balises et aux fonctionnalités de transfert d’événement, y compris les propriétés, les extensions et les environnements. Pour obtenir des instructions sur la configuration des autorisations de la collecte de données Adobe Experience Platform, reportez-vous à la section [section ci-dessous](#manage).
+Les autorisations de la collecte de données Adobe Experience Platform contrôlent l’accès aux balises et aux fonctionnalités de transfert d’événement, y compris les propriétés, les extensions et les environnements. Pour obtenir des instructions sur la configuration des autorisations de la collecte de données Adobe Experience Platform, voir [section](#manage).
 
 | Catégorie | Autorisation | Description |
 | --- | --- | --- |

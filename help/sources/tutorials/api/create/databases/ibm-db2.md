@@ -39,7 +39,7 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 | `password` | mot de passe du compte utilisateur que vous avez spécifié pour le nom d’utilisateur. |
 | `connectionSpec.id` | Identifiant unique nécessaire pour créer une connexion. L’identifiant de spécification de connexion pour [!DNL IBM DB2] is `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
 
-Pour plus d’informations sur la prise en main, reportez-vous à la section [this [!DNL IBM DB2] document](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html).
+Pour plus d’informations sur la prise en main, voir [this [!DNL IBM DB2] document](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html).
 
 ### Utiliser les API Platform
 
@@ -92,7 +92,7 @@ curl -X POST \
 | Paramètre | Description |
 | --------- | ----------- |
 | `auth.params.connectionString` | La chaîne de connexion associée à votre [!DNL IBM DB2] compte . |
-| `connectionSpec.id` | Le [!DNL IBM DB2] identifiant de spécification de connexion : `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
+| `connectionSpec.id` | La variable [!DNL IBM DB2] identifiant de spécification de connexion : `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
 
 **Réponse**
 

@@ -15,7 +15,7 @@ ht-degree: 42%
 
 >[!NOTE]
 >
->Le [!DNL Apache Spark] on [!DNL Azure HDInsights] Le connecteur est en version bêta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
+>La variable [!DNL Apache Spark] on [!DNL Azure HDInsights] Le connecteur est en version bêta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
@@ -35,5 +35,5 @@ La documentation ci-dessous fournit des informations sur la connexion. [!DNL Apa
 
 ## Connexion [!DNL Apache Spark] on [!DNL Azure HDInsights] to [!DNL Platform] utilisation de l’interface utilisateur
 
-- [Création d’une connexion source Apache Spark sur Azure HDInsights dans l’interface utilisateur](../../tutorials/ui/create/databases/spark.md)
-- [Création d’un flux de données pour une connexion à la source de la base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+- [Créer une connexion source Apache Spark sur Azure HDInsights dans l’interface utilisateur](../../tutorials/ui/create/databases/spark.md)
+- [Création d’un flux de données pour une connexion source de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)

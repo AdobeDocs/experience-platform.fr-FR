@@ -17,7 +17,7 @@ Real-Time Customer Profile offre une vue d’ensemble de chaque client, en combi
 
 Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez afficher ces profils en lecture seule et afficher des informations importantes sur chacun de vos clients, notamment leurs préférences, leurs événements passés, leurs interactions et les audiences auxquelles ils appartiennent.
 
-Adobe Real-time Customer Data Platform repose sur Adobe Experience Platform et peut ainsi utiliser les fonctionnalités d’affichage des profils dans l’interface utilisateur de l’Experience Platform. Pour obtenir un guide détaillé sur l’affichage des profils client dans l’interface utilisateur de Platform, reportez-vous à la section [Guide d’utilisation de Real-Time Customer Profile](../../profile/ui/user-guide.md).
+Adobe Real-time Customer Data Platform repose sur Adobe Experience Platform et permet ainsi d’utiliser les fonctionnalités d’affichage des profils dans l’interface utilisateur de l’Experience Platform. Pour obtenir un guide détaillé sur l’affichage des profils client dans l’interface utilisateur de Platform, reportez-vous à la section [Guide d’utilisation de Real-Time Customer Profile](../../profile/ui/user-guide.md).
 
 ## Améliorations des profils pour Real-Time CDP, édition B2B
 
@@ -37,13 +37,13 @@ Le détail du profil inclut l’accès à [!UICONTROL Comptes], [!UICONTROL Oppo
 
 Sélectionner **[!UICONTROL Comptes]** pour afficher la liste des comptes liés au profil. Cette liste comprend des informations de base du profil du compte, telles que le nom, le site web et le secteur industriel du compte, ainsi qu’un lien vers le profil du compte.
 
-Pour plus d’informations sur l’affichage et l’exploration des profils de compte, commencez par lire la [présentation des profils de compte](../accounts/account-profile-overview.md).
+Pour plus d’informations sur l’affichage et l’exploration des profils de compte, commencez par lire la section [présentation des profils de compte](../accounts/account-profile-overview.md).
 
 ![](images/b2b-profile-accounts.png)
 
 ### Onglet Opportunités
 
-Le **[!UICONTROL Opportunités]** fournit des détails sur les opportunités ouvertes et fermées liées au compte. Ces opportunités peuvent être ingérées dans Experience Platform à partir de sources multiples. Toutefois, Real-Time CDP, version B2B, permet aux marketeurs de voir facilement toutes ces opportunités ensemble au même endroit.
+La variable **[!UICONTROL Opportunités]** fournit des détails sur les opportunités ouvertes et fermées liées au compte. Ces opportunités peuvent être ingérées dans Experience Platform à partir de sources multiples. Toutefois, Real-Time CDP, version B2B, permet aux marketeurs de voir facilement toutes ces opportunités ensemble au même endroit.
 
 Chaque opportunité inclut des informations telles que son nom, son montant, son avancée et si elle est ouverte, clôturée, gagnée ou perdue.
 
@@ -51,6 +51,6 @@ Chaque opportunité inclut des informations telles que son nom, son montant, son
 
 ### Onglet Enregistrements source
 
-Le **[!UICONTROL Enregistrements source]** vous permet d’afficher facilement les multiples enregistrements source provenant de sources de votre entreprise qui contribuent au profil client unique. En plus de la variable [!UICONTROL Clé source de la personne] et adresse électronique, chaque enregistrement source fournit également le type d’enregistrement (par exemple, un enregistrement &quot;contact&quot; ou &quot;piste&quot;), ainsi que la source.
+La variable **[!UICONTROL Enregistrements source]** vous permet d’afficher facilement les multiples enregistrements source provenant de sources de votre entreprise qui contribuent au profil client unique. En plus de la variable [!UICONTROL Clé source de la personne] et adresse électronique, chaque enregistrement source fournit également le type d’enregistrement (par exemple, un enregistrement &quot;contact&quot; ou &quot;piste&quot;), ainsi que la source.
 
 ![](images/b2b-profile-source-records.png)

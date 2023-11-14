@@ -13,17 +13,17 @@ ht-degree: 4%
 
 # Définition des champs XDM dans l’interface utilisateur
 
-Le [!DNL Schema Editor] Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez définir vos propres champs dans les classes XDM (Experience Data Model) personnalisées et les groupes de champs de schéma. Ce guide décrit les étapes de définition des champs XDM dans l’interface utilisateur, y compris les options de configuration disponibles pour chaque type de champ.
+La variable [!DNL Schema Editor] Dans l’interface utilisateur de Adobe Experience Platform, vous pouvez définir vos propres champs dans les classes XDM (Experience Data Model) personnalisées et les groupes de champs de schéma. Ce guide décrit les étapes de définition des champs XDM dans l’interface utilisateur, y compris les options de configuration disponibles pour chaque type de champ.
 
 ## Conditions préalables
 
-Ce guide nécessite une compréhension pratique du système XDM. Reportez-vous à la section [Présentation de XDM](../../home.md) pour une présentation du rôle de XDM dans l’écosystème Experience Platform, et de [principes de base de la composition des schémas](../../schema/composition.md) pour découvrir comment les classes et les groupes de champs contribuent aux champs des schémas XDM.
+Ce guide nécessite une compréhension pratique du système XDM. Voir [Présentation de XDM](../../home.md) pour une présentation du rôle de XDM dans l’écosystème Experience Platform, et la variable [principes de base de la composition des schémas](../../schema/composition.md) pour découvrir comment les classes et les groupes de champs contribuent aux champs des schémas XDM.
 
 Bien que ce guide ne soit pas obligatoire, il est recommandé de suivre également le tutoriel sur [composition d’un schéma dans l’interface utilisateur](../../tutorials/create-schema-ui.md) pour vous familiariser avec les différentes capacités de la fonction [!DNL Schema Editor].
 
 ## Sélectionner une ressource à laquelle ajouter des champs {#select-resource}
 
-Pour définir de nouveaux champs XDM dans l’interface utilisateur, vous devez d’abord ouvrir un schéma dans le [!DNL Schema Editor]. Selon les schémas actuellement disponibles dans la variable [!DNL Schema Library], vous pouvez choisir de [créer un nouveau schéma](../resources/schemas.md#create) ou [sélectionner un schéma existant à modifier ;](../resources/schemas.md#edit).
+Pour définir de nouveaux champs XDM dans l’interface utilisateur, vous devez d’abord ouvrir un schéma dans le [!DNL Schema Editor]. Selon les schémas actuellement disponibles dans la variable [!DNL Schema Library], vous pouvez choisir [créer un nouveau schéma ;](../resources/schemas.md#create) ou [sélectionner un schéma existant à modifier ;](../resources/schemas.md#edit).
 
 Une fois que vous avez [!DNL Schema Editor] ouvert, les contrôles pour ajouter des champs s’affichent dans la zone de travail. Ces commandes s’affichent en regard du nom du schéma, ainsi que des champs de type objet qui ont été définis sous la classe ou le groupe de champs sélectionné.
 
@@ -44,7 +44,7 @@ Selon que vous ajoutez directement un champ à un schéma ou à sa classe consti
 
 ## Définition des propriétés d’un champ {#define}
 
-Après avoir sélectionné la variable **plus (+)** , une **[!UICONTROL Champ sans titre]** un espace réservé apparaît dans la zone de travail.
+Après avoir sélectionné **plus (+)** , une **[!UICONTROL Champ sans titre]** un espace réservé apparaît dans la zone de travail.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
@@ -52,7 +52,7 @@ Dans le rail de droite sous **[!UICONTROL Propriétés du champ]**, vous pouvez 
 
 | Propriété du champ | Description |
 | --- | --- |
-| [!UICONTROL Nom du champ] | Nom explicite unique du champ. Notez que le nom du champ ne peut pas être modifié une fois le schéma enregistré. Cette valeur est utilisée pour identifier et référencer le champ dans le code et dans d’autres applications en aval.<br><br>Le nom doit idéalement être écrit en CamelCase. Il peut contenir des caractères alphanumériques, des tirets ou des traits de soulignement, mais il **may not** commencer par un trait de soulignement.<ul><li>**Correct**: `fieldName`</li><li>**Acceptable :** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorrect**: `_fieldName`</li></ul> |
+| [!UICONTROL Nom du champ] | Nom descriptif et unique du champ. Notez que le nom du champ ne peut pas être modifié une fois le schéma enregistré. Cette valeur est utilisée pour identifier et référencer le champ dans le code et dans d’autres applications en aval.<br><br>Le nom doit idéalement être écrit en CamelCase. Il peut contenir des caractères alphanumériques, des tirets ou des traits de soulignement, mais il **may not** commencer par un trait de soulignement.<ul><li>**Correct**: `fieldName`</li><li>**Acceptable :** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorrect**: `_fieldName`</li></ul> |
 | [!UICONTROL Nom d’affichage] | Nom d’affichage du champ. Il s’agit du nom qui sera utilisé pour représenter le champ dans le canevas de l’éditeur de schémas. Le nom du champ peut être remplacé par le nom d’affichage à l’aide de la variable [bascule du nom d’affichage](../resources/schemas.md#display-name-toggle). |
 | [!UICONTROL Type] | Le type de données que le champ contiendra. Dans ce menu déroulant, vous pouvez sélectionner l’une des options suivantes : [types scalaires standard](../../schema/field-constraints.md) pris en charge par XDM ou l’un des champs multiples [types de données](../resources/data-types.md) qui ont été précédemment définis dans la variable [!DNL Schema Registry].<br><br>Vous pouvez également sélectionner **[!UICONTROL Recherche de type avancé]** pour rechercher et filtrer les types de données existants et localiser plus facilement le type souhaité. |
 
@@ -80,7 +80,7 @@ Vous pouvez continuer à suivre les étapes ci-dessus pour ajouter d’autres ch
 >
 >Toutes les modifications que vous apportez aux groupes de champs ou à la classe d’un schéma seront répercutées dans tous les autres schémas qui les utilisent.
 
-## Propriétés de champ spécifiques au type {#type-specific-properties}
+## Propriétés de champ spécifiques à un type {#type-specific-properties}
 
 Lors de la définition d’un nouveau champ, d’autres options de configuration peuvent s’afficher dans le rail de droite selon le **[!UICONTROL Type]** vous choisissez le champ. Le tableau suivant décrit ces propriétés de champ supplémentaires, ainsi que leurs types compatibles :
 

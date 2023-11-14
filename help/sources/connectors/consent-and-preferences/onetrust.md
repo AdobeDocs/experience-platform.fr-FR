@@ -16,7 +16,7 @@ ht-degree: 55%
 
 >[!NOTE]
 >
->Le [!DNL OneTrust Integration] source ne prend en charge que l’ingestion des données de consentement et de préférences, et non les cookies.
+>La variable [!DNL OneTrust Integration] source ne prend en charge que l’ingestion des données de consentement et de préférences, et non les cookies.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
@@ -31,4 +31,4 @@ La documentation ci-dessous fournit des informations sur la connexion d’[!DNL 
 ## Connecter [!DNL OneTrust Integration] à Platform à l’aide de l’interface utilisateur
 
 - [Créer une connexion source  [!DNL OneTrust Integration]  dans l’interface utilisateur](../../tutorials/ui/create/consent-and-preferences/onetrust.md)
-- [Création d’un flux de données pour une connexion source de consentement et de préférences dans l’interface utilisateur](../../tutorials/ui/dataflow/consent-and-preferences.md)
+- [Créer un flux de données pour une connexion source de consentement et de préférences dans l’interface utilisateur](../../tutorials/ui/dataflow/consent-and-preferences.md)

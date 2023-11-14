@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 5b94ae74-e5a7-40e9-a952-41eddf06dcde
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '246'
 ht-degree: 57%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 57%
 
 >[!IMPORTANT]
 >
->Le [!DNL Azure Synapse Analytics] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+>La variable [!DNL Azure Synapse Analytics] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
@@ -34,5 +34,5 @@ La documentation ci-dessous fournit des informations sur la connexion d’[!DNL 
 
 ## Connecter [!DNL Azure Synapse Analytics] à [!DNL Platform] à lʼaide de l’interface utilisateur
 
-- [Création d’une connexion source Analytics d’Azure synapse dans l’interface utilisateur](../../tutorials/ui/create/databases/synapse-analytics.md)
-- [Création d’un flux de données pour une connexion à la source de la base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+- [Création d’une connexion source Azure synapse Analytics dans l’interface utilisateur](../../tutorials/ui/create/databases/synapse-analytics.md)
+- [Création d’un flux de données pour une connexion source de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)

@@ -5,7 +5,7 @@ exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
 source-wordcount: '1644'
-ht-degree: 86%
+ht-degree: 90%
 
 ---
 
@@ -208,7 +208,7 @@ v1.4.2
 
 ## 8 novembre 2018
 
-* **Option Persist Cohort** : l’option de conservation d’une cohorte a été ajoutée à la condition de l’échantillonnage. Cela a pour effet de conserver un utilisateur dans ou hors de la cohorte de l’échantillon d’une session à l’autre. Par exemple, si la case &quot;Conserver la cohorte&quot; est cochée et que la condition renvoie true (vrai) la première fois qu’elle est exécutée pour un visiteur donné, elle renvoie true (vrai) sur toutes les exécutions suivantes de la condition pour le même visiteur. De même, si la case &quot;Conserver la cohorte&quot; est cochée et que la condition renvoie false la première fois qu’elle est exécutée pour un visiteur donné, elle renvoie false sur toutes les exécutions suivantes de la condition pour le même visiteur.
+* **Option Persist Cohort** : l’option de conservation d’une cohorte a été ajoutée à la condition de l’échantillonnage. Cela a pour effet de conserver un utilisateur dans ou hors de la cohorte de l’échantillon d’une session à l’autre. Par exemple, si la case « Conserver la cohorte » est cochée et que la condition renvoie « true » lors de sa première exécution pour une personne donnée, elle renvoie « true » sur toutes les exécutions suivantes de la condition pour la même personne. De même, si la case « Conserver la cohorte » est cochée et que la condition renvoie « false » lors de sa première exécution pour une personne donnée, elle renvoie « false » sur toutes les exécutions suivantes de la condition pour la même personne.
 * **Correctif** : correction d’un bug par lequel une règle utilisant un événement Page Bottom et une action Custom Code (Code personnalisé) sur une page où les balises étaient chargées de manière synchrone, mais installées de manière incorrecte (aucun appel à `_satellite.pageBottom()`) effaçait le contenu du site Web.
 * **Bug Fix** - Correction d’un problème en raison duquel la fenêtre d’affichage Enters ne fonctionnait pas si la bibliothèque de balises était chargée de manière asynchrone et que le chargement se terminait après le déclenchement de l’événement DOMContentLoaded du navigateur.
 

@@ -2,7 +2,7 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;publicités Pinterest
 title: Présentation de la source pinterest Ads
 description: Découvrez comment connecter Pinterest Ads à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
-badge: Version bêta
+badge: Version Beta
 hide: true
 hidefromtoc: true
 exl-id: 8edbcb26-0a18-47f1-8012-ca209d99d7a6
@@ -17,7 +17,7 @@ ht-degree: 13%
 
 >[!NOTE]
 >
->La source [!DNL Pinterest Ads] est en version Beta. Lisez le [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
+>La source [!DNL Pinterest Ads] est en version Beta. Lisez la section [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
@@ -29,7 +29,7 @@ Avec [!DNL Pinterest Ads], vous pouvez atteindre les utilisateurs par le biais d
 
 ## [!DNL Pinterest] API {#pinterest-apis}
 
-Le [!DNL Pinterest Ads] tire parti de la source [!DNL Pinterest] API pour récupérer vos [!DNL Pinterest Ads] données, ainsi que toutes les performances et mesures. Les points d’entrée d’API pris en charge sont les suivants :
+La variable [!DNL Pinterest Ads] tire parti de la source [!DNL Pinterest] API pour récupérer vos [!DNL Pinterest Ads] données, ainsi que toutes les performances et mesures. Les points d’entrée d’API pris en charge sont les suivants :
 
 * [Analyse de campagne](https://developers.pinterest.com/docs/api/v5/#operation/campaigns/analytics)
 * [Analyse des groupes publicitaires](https://developers.pinterest.com/docs/api/v5/#operation/ad_groups/analytics)
@@ -39,7 +39,7 @@ Utilisez la variable [!DNL Pinterest Ads] source pour importer vos données [!DN
 
 ## Conditions préalables {#prerequisites}
 
-Première étape de la création d’un [!DNL Pinterest Ads] la connexion source permet de vous assurer que vous disposez d’un compte de développeur Pinterest. Si vous n’en avez pas déjà un, rendez-vous sur la page [inscription](https://www.pinterest.com/business/create/?next=https://developers.pinterest.com/account-setup/) pour enregistrer et créer votre compte.
+Première étape de la création d’un [!DNL Pinterest Ads] la connexion source permet de vous assurer que vous disposez d’un compte de développeur Pinterest. Si vous n’en avez pas déjà un, consultez la page [inscription](https://www.pinterest.com/business/create/?next=https://developers.pinterest.com/account-setup/) pour enregistrer et créer votre compte.
 
 ### Configuration [!DNL Pinterest] et générer un jeton d’accès {#create-app-and-generate-token}
 
@@ -55,13 +55,13 @@ Pour connecter [!DNL Pinterest Ads] à Platform, vous devez fournir des valeurs 
 
 | Informations d’identification | Description |
 | --- | --- |
-| Jeton d’accès | Le [!DNL Pinterest Ads] jeton d’accès pour votre compte d’utilisateur. Le compte utilisateur du jeton doit être le propriétaire de l’objet spécifié [!DNL Pinterest Ad] ou qui disposent de l’un des rôles nécessaires qui leur sont attribués via Accès professionnel : Administrateur, Analyste ou Gestionnaire de campagnes. Pour plus d’informations sur le jeton d’accès, reportez-vous à la section [[!DNL Pinterest] guide de génération de votre jeton d’accès](https://developers.pinterest.com/docs/getting-started/set-up-app/). |
+| Jeton d’accès | La variable [!DNL Pinterest Ads] jeton d’accès pour votre compte d’utilisateur. Le compte utilisateur du jeton doit être le propriétaire de l’objet spécifié [!DNL Pinterest Ad] ou avoir l’un des rôles nécessaires qui leur sont attribués via Accès Entreprise : administrateur, Analyste ou Gestionnaire de campagnes. Pour plus d’informations sur le jeton d’accès, reportez-vous au [[!DNL Pinterest] guide de génération de votre jeton d’accès](https://developers.pinterest.com/docs/getting-started/set-up-app/). |
 | Identifiant du compte publicitaire | Le rapport [!DNL Pinterest Ads] ID de compte publicitaire de votre unité opérationnelle. Pour plus d’informations sur la récupération de votre ID de compte publicitaire. Visitez le [[!DNL Pinterest] guide sur la recherche d’ID dans Ads Manager](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager). |
-| Identifiant de campagne, de groupe publicitaire ou de publicité | Le `campaign`, `ad group`ou `ad` ID correspondant à votre ID de compte publicitaire. Pour obtenir les ID requis, accédez à la [!DNL Pinterest] page pour **Pinterest Business Hub** > **Résumé du compte publicitaire** > **Campagnes** / **Groupes publicitaires** / **Publicités** et copiez les identifiants requis mentionnés juste en dessous de chacun de leurs noms. |
+| Identifiant de campagne, de groupe publicitaire ou de publicité | La variable `campaign`, `ad group`, ou `ad` ID correspondant à votre ID de compte publicitaire. Pour obtenir les ID requis, accédez à la [!DNL Pinterest] page pour **Pinterest Business Hub** > **Résumé du compte publicitaire** > **Campagnes** / **Groupes publicitaires** / **Publicités** et copiez les identifiants requis mentionnés juste en dessous de chacun de leurs noms. |
 
 >[!NOTE]
 >
->Le [!DNL Pinterest] L’API fournit des API individuelles pour récupérer les données associées à chaque ID. Par conséquent, vous devez transmettre uniquement les identifiants correspondants pour le type d’identifiant qui vous intéresse.
+>La variable [!DNL Pinterest] L’API fournit des API individuelles pour récupérer les données associées à chaque ID. Par conséquent, vous devez transmettre uniquement les identifiants correspondants pour le type d’identifiant qui vous intéresse.
 
 ## Mécanismes de sécurisation {#guardrails}
 
@@ -69,10 +69,10 @@ Les sections suivantes fournissent des informations sur les barrières de sécur
 
 ### [!DNL Pinterest] période {#pinterest-date-range}
 
-Le [!DNL Pinterest] L’API prend en charge `start_date` et un `end_date` pour récupérer les données d’analyse entre une période donnée.
+La variable [!DNL Pinterest] API prend en charge `start_date` et un `end_date` pour récupérer les données d’analyse entre une période donnée.
 
-* Le `start_date` ne peut pas dépasser 90 jours avant la date actuelle.
-* Le `end_date` ne peut pas être supérieure à 90 jours après l’événement `start_date`.
+* La variable `start_date` ne peut pas dépasser 90 jours avant la date actuelle.
+* La variable `end_date` ne peut pas dépasser 90 jours après la `start_date`.
 
 Lors de la planification de votre flux de données, vous devez configurer l’un des paramètres de fréquence et d’intervalle suivants :
 
@@ -85,7 +85,7 @@ Par exemple, si l’ingestion est définie le 15 mars 2023 avec une fréquence e
 
 ### [!DNL Pinterest] période {#pinterest-time-range}
 
-Le [!DNL Pinterest] L’API prend en charge différents types de granularité temporelle pour la manière dont les données peuvent être récupérées :
+La variable [!DNL Pinterest] L’API prend en charge différents types de granularité temporelle pour la manière dont les données peuvent être récupérées :
 
 | Granularité du temps | Description |
 | --- | --- |
@@ -95,7 +95,7 @@ Le [!DNL Pinterest] L’API prend en charge différents types de granularité te
 | **HEBDOMADAIRE** | Les mesures des données sont ventilées sur une base hebdomadaire. |
 | **MENSUEL** | Les mesures des données sont ventilées sur une base mensuelle. |
 
-Pour Platform, la variable [!DNL Pinterest Ads] La source est configurée en interne sur `Day`, ce qui signifie que les données seront agrégées quotidiennement. Par exemple, en utilisant `impressions recorded` comme mesure, puisque la granularité est configurée en tant que `DAY`, vous obtiendriez `xx` impressions sur `day 1`, `yy` impressions sur `day 2` etc.
+Pour Platform, la variable [!DNL Pinterest Ads] La source est configurée en interne sur `Day`, ce qui signifie que les données seront agrégées quotidiennement. Par exemple, en utilisant `impressions recorded` comme mesure, puisque la granularité est configurée comme `DAY`, vous obtiendriez `xx` impressions sur `day 1`, `yy` impressions sur `day 2` etc.
 
 >[!IMPORTANT]
 >

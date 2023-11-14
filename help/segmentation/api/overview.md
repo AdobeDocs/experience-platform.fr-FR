@@ -13,7 +13,7 @@ ht-degree: 5%
 
 Adobe Experience Platform [!DNL Segmentation Service] vous permet de créer des audiences par le biais de définitions de segment ou d’autres sources dans Adobe Experience Platform à partir de vos [!DNL Real-Time Customer Profile] data.
 
-Le [!DNL Segmentation Service] L’API fournit plusieurs points de terminaison qui vous permettent de gérer par programmation vos opérations de segmentation dans [!DNL Experience Platform]. Ce document de présentation présente de manière détaillée chacun de ces points de terminaison et fournit des liens vers les guides des points de terminaison associés pour plus de détails. Avant de lire les guides des différents points de terminaison, reportez-vous à la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, lire des exemples d’appels API, etc.
+La variable [!DNL Segmentation Service] API fournit plusieurs points de terminaison qui vous permettent de gérer par programmation vos opérations de segmentation dans [!DNL Experience Platform]. Ce document de présentation présente de manière détaillée chacun de ces points de terminaison et fournit des liens vers les guides des points de terminaison associés pour plus de détails. Avant de lire les guides des différents points de terminaison, reportez-vous à la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes requis, lire des exemples d’appels API, etc.
 
 Pour afficher tous les points de terminaison disponibles et les opérations CRUD, reportez-vous à la section [Référence de l’API Segmentation Service](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
@@ -35,7 +35,7 @@ Les aperçus fournissent une liste paginée de profils admissibles pour une déf
 
 Les estimations fournissent des informations statistiques sur les définitions de segment, telles que la taille prévue de l’audience, l’intervalle de confiance et l’écart type d’erreur. Vous pouvez utiliser la variable `/estimate` point d’entrée pour afficher une estimation d’une définition de segment.
 
-Pour plus d’informations sur l’utilisation de ces points de terminaison, veuillez lire la section [guide d’aperçu et de point de fin d’estimation](./previews-and-estimates.md).
+Pour plus d’informations sur l’utilisation de ces points de terminaison, veuillez lire la section [guide des prévisualisations et des points de fin d’estimation](./previews-and-estimates.md).
 
 ## Plannings
 
@@ -57,8 +57,8 @@ Pour plus d’informations sur l’utilisation de ce point de terminaison, veuil
 
 ## Recherche de segments
 
-La recherche de segments permet de rechercher des champs contenus dans diverses sources de données et de les renvoyer en temps quasi réel. Pour commencer à utiliser la recherche de segments, reportez-vous à la section [guide de point de terminaison de recherche](segment-search.md)
+La recherche de segments permet de rechercher des champs contenus dans diverses sources de données et de les renvoyer en temps quasi réel. Pour commencer à utiliser la recherche de segments, voir [guide de point de terminaison de recherche](segment-search.md)
 
 ## Étapes suivantes
 
-Pour commencer à utiliser la méthode [!DNL Segmentation Service] API, passez en revue les différents guides des points de terminaison pour obtenir des instructions détaillées sur la manière d’effectuer des appels vers les différents points de terminaison du service. Pour en savoir plus sur l’utilisation des segments à l’aide de la variable [!DNL Platform] Dans l’interface utilisateur, reportez-vous à la section [Guide d’utilisation de la segmentation](../ui/overview.md).
+Pour commencer à utiliser la méthode [!DNL Segmentation Service] API, passez en revue les différents guides des points de terminaison pour obtenir des instructions détaillées sur la manière d’effectuer des appels vers les différents points de terminaison du service. Pour en savoir plus sur l’utilisation des segments à l’aide de la variable [!DNL Platform] Dans l’interface utilisateur, voir [Guide d’utilisation de la segmentation](../ui/overview.md).

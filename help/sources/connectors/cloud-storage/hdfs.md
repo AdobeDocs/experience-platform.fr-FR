@@ -46,5 +46,5 @@ La documentation ci-dessous fournit des informations sur la connexion. [!DNL Apa
 
 ### Utiliser l’interface utilisateur
 
-- [Création d’une connexion source Apache HDFS dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/hdfs.md)
+- [Créer une connexion source Apache HDFS dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/hdfs.md)
 - [Créer un flux de données pour une connexion de stockage dans le cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)

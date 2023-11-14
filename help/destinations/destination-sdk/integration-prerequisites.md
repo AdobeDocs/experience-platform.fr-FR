@@ -24,7 +24,7 @@ Pour utiliser Destination SDK, veillez à respecter les conditions préalables t
 
 ## Conditions préalables techniques pour les destinations par lots {#batch-prerequisites}
 
-1. Vous disposez d’un emplacement de destination hébergé sur [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage], [!DNL SFTP], [!DNL Google Cloud], ou un [!DNL Data Landing Zone], où vous pouvez recevoir les fichiers exportés hors d’Experience Platform.
+1. Votre emplacement de destination est hébergé sur [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage], [!DNL SFTP], [!DNL Google Cloud], ou une propriété privée [!DNL Data Landing Zone], où vous pouvez recevoir les fichiers exportés hors d’Experience Platform.
 2. Votre plateforme de destination peut ingérer des fichiers au format configuré via le [options de formatage de fichier](functionality/destination-server/file-formatting.md) en Destination SDK pour les destinations par lots.
 3. (Facultatif) Vous avez une audience à créer/récupérer/mettre à jour/supprimer ([!DNL CRUD]) API ou point d’entrée API pour la gestion programmatique des métadonnées.
 

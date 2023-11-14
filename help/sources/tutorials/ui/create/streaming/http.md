@@ -33,7 +33,7 @@ Sous , **[!UICONTROL Diffusion en continu]** catégorie, sélectionnez **[!UICON
 
 ![catalogue](../../../../images/tutorials/create/http/catalog.png)
 
-Le **[!UICONTROL Connexion au compte d’API HTTP]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La variable **[!UICONTROL Connexion au compte d’API HTTP]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
@@ -66,9 +66,9 @@ Une fois les données chargées, vous pouvez utiliser le côté droit de l’int
 
 ## Mappage des champs de données à un schéma XDM
 
-Le [!UICONTROL Mappage] s’affiche, fournissant une interface pour mapper les données source à un jeu de données Platform.
+La variable [!UICONTROL Mappage] s’affiche, fournissant une interface pour mapper les données source à un jeu de données Platform.
 
-Le [!DNL HTTP API] source prend en charge l’ingestion de fichiers JSON. Les fichiers JSON ne nécessitent pas de configuration manuelle s’ils sont marqués comme XDM-réclamation. Si ce n’est pas le cas, vous devez configurer explicitement le mappage.
+La variable [!DNL HTTP API] source prend en charge l’ingestion de fichiers JSON. Les fichiers JSON ne nécessitent pas de configuration manuelle s’ils sont marqués comme XDM-réclamation. Dans le cas contraire, vous devez configurer explicitement le mappage.
 
 Sélectionnez un jeu de données dans lequel ingérer les données entrantes. Vous pouvez utiliser un jeu de données existant ou en créer un nouveau.
 
@@ -86,7 +86,7 @@ Pour utiliser un jeu de données existant, sélectionnez **[!UICONTROL Jeu de do
 
 ### Mappage des champs standard
 
-Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, reportez-vous à la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
+Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, voir la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
 
 Pour ajouter un nouveau champ source, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**.
 
@@ -96,7 +96,7 @@ Un nouveau couplage champ source et champ cible s’affiche. Pour ajouter un nou
 
 ![select-source-field](../../../../images/tutorials/create/http/select-source-field.png)
 
-Le [!UICONTROL Sélectionner des attributs] vous permet d’explorer votre hiérarchie de fichiers et de sélectionner un champ source spécifique à mapper à un champ XDM cible. Une fois que vous avez sélectionné le champ source à mapper, sélectionnez **[!UICONTROL Sélectionner]** pour continuer.
+La variable [!UICONTROL Sélectionner des attributs] vous permet d’explorer votre hiérarchie de fichiers et de sélectionner un champ source spécifique à mapper à un champ XDM cible. Une fois que vous avez sélectionné le champ source à mapper, sélectionnez **[!UICONTROL Sélectionner]** pour continuer.
 
 ![select-attributes](../../../../images/tutorials/create/http/select-attributes.png)
 
@@ -104,7 +104,7 @@ Lorsqu’un champ source est sélectionné, vous pouvez désormais identifier le
 
 ![select-target-field](../../../../images/tutorials/create/http/select-target-field.png)
 
-Le [!UICONTROL Faire correspondre le champ source au champ cible] s’affiche, vous fournissant une interface pour explorer le schéma de votre jeu de données cible. Sélectionnez le champ cible correspondant à votre champ source, puis sélectionnez **[!UICONTROL Sélectionner]** pour continuer.
+La variable [!UICONTROL Faire correspondre le champ source au champ cible] s’affiche, vous fournissant une interface pour explorer le schéma de votre jeu de données cible. Sélectionnez le champ cible correspondant à votre champ source, puis sélectionnez **[!UICONTROL Sélectionner]** pour continuer.
 
 ![map-to-target-field](../../../../images/tutorials/create/http/map-to-target-field.png)
 
@@ -114,7 +114,7 @@ Une fois que vos champs sources sont tous mappés à leurs champs XDM cibles app
 
 ## Détails du flux de données
 
-Le **[!UICONTROL Détails du flux de données]** s’affiche. Sur cette page, vous pouvez fournir des détails sur le flux de données créé en attribuant un nom et une description facultative.
+La variable **[!UICONTROL Détails du flux de données]** s’affiche. Sur cette page, vous pouvez fournir des détails sur le flux de données créé en attribuant un nom et une description facultative.
 
 Après avoir fourni des détails sur le flux de données, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -122,10 +122,10 @@ Après avoir fourni des détails sur le flux de données, sélectionnez **[!UICO
 
 ## Révision
 
-Le **[!UICONTROL Réviser]** s’affiche, ce qui vous permet de consulter les détails de votre flux de données avant qu’il ne soit créé. Les détails sont regroupés dans les catégories suivantes :
+La variable **[!UICONTROL Réviser]** s’affiche, ce qui vous permet de consulter les détails de votre flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
-- **[!UICONTROL Connexion]**: Affiche le nom du compte, la plateforme source et le nom de la source.
-- **[!UICONTROL Attribution de champs de jeu de données et de mappage]**: Affiche le jeu de données cible et le schéma auquel le jeu de données adhère.
+- **[!UICONTROL Connexion]**: affiche le nom du compte, la plateforme source et le nom de la source.
+- **[!UICONTROL Attribution de champs de jeu de données et de mappage]**: affiche le jeu de données cible et le schéma auquel le jeu de données adhère.
 
 Une fois que les détails sont corrects, sélectionnez **[!UICONTROL Terminer]**.
 

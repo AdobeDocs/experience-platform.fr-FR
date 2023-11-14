@@ -155,7 +155,7 @@ Dans l’exemple ci-dessous, les conditions sont appliquées uniquement à la s�
 
 ### Prévisualiser vos données
 
-Vous pouvez prévisualiser vos données en adressant une requête de GET au `/explore` point d’entrée du [!DNL Flow Service] API lors de la fourniture `filters` dans le cadre de vos paramètres de requête et de la spécification de vos conditions d’entrée PQL dans [!DNL Base64].
+Vous pouvez prévisualiser vos données en adressant une requête de GET au `/explore` point d’entrée du [!DNL Flow Service] API lors de la fourniture `filters` dans les paramètres de requête et en spécifiant vos conditions d’entrée PQL dans [!DNL Base64].
 
 **Format d’API**
 
@@ -165,7 +165,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 | Paramètre | Description |
 | --- | --- |
-| `{BASE_CONNECTION_ID}` | Identifiant de connexion de base de votre source. |
+| `{BASE_CONNECTION_ID}` | L’identifiant de connexion de base de votre source. |
 | `{TABLE_PATH}` | La propriété path de la table que vous souhaitez inspecter. |
 | `{FILTERS}` | Vos conditions de filtrage PQL codées dans [!DNL Base64]. |
 
@@ -328,7 +328,7 @@ Une requête réussie renvoie la réponse suivante.
 }
 ```
 
-### Création d’une connexion source pour les données filtrées
+### Créer une connexion source pour les données filtrées
 
 Pour créer une connexion source et ingérer des données filtrées, envoyez une requête de POST à la variable `/sourceConnections` point de terminaison tout en fournissant vos conditions de filtrage dans le cadre de vos paramètres de corps.
 

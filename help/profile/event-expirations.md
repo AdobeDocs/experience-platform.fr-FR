@@ -48,7 +48,7 @@ Si possible, vous devez essayer de conserver la même valeur d’expiration d’
 
 La section suivante répertorie les questions fréquentes sur l’expiration des données d’Experience Event :
 
-### En quoi l’expiration des données d’événement d’expérience diffère-t-elle de l’expiration des données de profil anonyme ?
+### En quoi l’expiration des données d’événement d’expérience diffère-t-elle de l’expiration des données de profil pseudonyme ?
 
 L’expiration des données d’événement d’expérience et l’expiration des données de profil pseudonyme sont des fonctionnalités complémentaires.
 

@@ -5,7 +5,7 @@ title: Application automatique des politiques
 description: Ce document présente l’application automatique des politiques d’utilisation de données lors de l’activation d’audiences vers des destinations dans Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1899'
 ht-degree: 100%
 
@@ -108,7 +108,7 @@ Vous pouvez également utiliser l’icône **[!UICONTROL Filtre]** (![](../image
 
 ![](../images/enforcement/lineage-filter.png)
 
-Sélectionnez **[!UICONTROL Mode Liste]** pour afficher la parenté des données sous forme de liste. Pour revenir au graphique visuel, sélectionnez **[!UICONTROL Chemin parcouru]**.
+Sélectionnez **[!UICONTROL Vue Liste]** pour afficher la parenté des données sous forme de liste. Pour revenir au graphique visuel, sélectionnez **[!UICONTROL Chemin parcouru]**.
 
 ![](../images/enforcement/list-view.png)
 

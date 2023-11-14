@@ -5,7 +5,7 @@ title: Questions fréquentes
 description: Ce document contient les questions les plus fréquentes et les réponses associées concernant Query Service. Les rubriques incluent l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '4309'
 ht-degree: 100%
 

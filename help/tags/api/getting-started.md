@@ -1,15 +1,15 @@
 ---
-title: Authentification et accès à l’API Reactor
+title: S’authentifier et accéder à l’API Reactor
 description: Découvrez comment commencer à utiliser l’API Reactor, y compris les étapes de génération des informations d’identification d’accès requises.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
 source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
 workflow-type: tm+mt
 source-wordcount: '921'
-ht-degree: 50%
+ht-degree: 51%
 
 ---
 
-# Authentification et accès à l’API Reactor
+# S’authentifier et accéder à l’API Reactor
 
 Pour utiliser la variable [API Reactor](https://developer.adobe.com/experience-platform-apis/references/reactor/) pour créer et gérer les extensions Balises, chaque requête doit inclure les en-têtes d’authentification suivants :
 
@@ -43,7 +43,7 @@ Une fois que vous avez créé un projet, sélectionnez **Ajouter une API** dans 
 
 ![](../images/api/getting-started/add-api-button.png)
 
-L’écran **Ajouter une API** s’affiche. Sélectionner **API Experience Platform Launch** dans la liste des API disponibles avant de sélectionner **Suivant**.
+L’écran **Ajouter une API** s’affiche. Sélectionner **API EXPERIENCE PLATFORM LAUNCH** dans la liste des API disponibles avant de sélectionner **Suivant**.
 
 ![](../images/api/getting-started/add-launch-api.png)
 
@@ -51,7 +51,7 @@ Sélectionnez ensuite le type d&#39;authentification pour générer les jetons d
 
 >[!IMPORTANT]
 >
->Sélectionnez la **[!UICONTROL OAuth serveur à serveur]** car il s’agira de la seule méthode prise en charge à l’avenir. Le **[!UICONTROL Compte de service (JWT)]** est obsolète. Bien que les intégrations utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe recommande vivement de migrer les intégrations existantes vers la nouvelle méthode OAuth Server-to-Server avant cette date. Pour plus d’informations, reportez-vous à la section [!BADGE Obsolète]{type=negative}[Génération d’un jeton Web JSON (JWT)](/help/landing/api-authentication.md#jwt) dans le tutoriel sur l’authentification de l’API Platform.
+>Sélectionnez la variable **[!UICONTROL OAuth serveur à serveur]** , car il s’agira de la seule méthode prise en charge à l’avenir. La variable **[!UICONTROL Compte de service (JWT)]** est obsolète. Bien que les intégrations utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe recommande vivement de migrer les intégrations existantes vers la nouvelle méthode OAuth Server-to-Server avant cette date. Pour plus d’informations, consultez la section [!BADGE Obsolète]{type=negative}[Génération d’un jeton Web JSON (JWT)](/help/landing/api-authentication.md#jwt) dans le tutoriel sur l’authentification de l’API Platform.
 
 Sélectionnez **Suivant** pour continuer.
 
@@ -69,16 +69,16 @@ Sélectionnez les profils de produit souhaités dans la liste, puis sélectionne
 
 ### Collectez les informations d’identification de . {#gather-credentials}
 
-Une fois l’API ajoutée au projet, la variable **[!UICONTROL API Experience Platform]** La page du projet affiche les informations d’identification suivantes, requises dans tous les appels aux API Experience Platform :
+Une fois l’API ajoutée au projet, la variable **[!UICONTROL API EXPERIENCE PLATFORM]** La page du projet affiche les informations d’identification suivantes, requises dans tous les appels aux API Experience Platform :
 
 * `{API_KEY}` ([!UICONTROL Identifiant client])
 * `{ORG_ID}` ([!UICONTROL ID d’organisation])
 
 ![Informations sur l’intégration après l’ajout d’une API dans Developer Console.](/help/tags/images/api/getting-started/api-integration-information.png)
 
-### Génération d’un jeton d’accès {#generate-access-token}
+### Générer un jeton d’accès {#generate-access-token}
 
-L’étape suivante consiste à générer une `{ACCESS_TOKEN}` informations d’identification à utiliser dans les appels API Platform. Contrairement aux valeurs de `{API_KEY}` et `{ORG_ID}`, un nouveau jeton doit être généré toutes les 24 heures pour continuer à utiliser les API de Platform.
+L’étape suivante consiste à générer une `{ACCESS_TOKEN}` informations d’identification à utiliser dans les appels d’API Platform. Contrairement aux valeurs de `{API_KEY}` et `{ORG_ID}`, un nouveau jeton doit être généré toutes les 24 heures pour continuer à utiliser les API de Platform.
 
 >[!TIP]
 >
@@ -93,7 +93,7 @@ Selon votre cas d’utilisation, vous disposez de deux options pour générer vo
 
 Pour générer manuellement une nouvelle `{ACCESS_TOKEN}`, accédez à **[!UICONTROL Informations d’identification]** > **[!UICONTROL OAuth serveur à serveur]** et sélectionnez **[!UICONTROL Générer un jeton d’accès]**, comme illustré ci-dessous.
 
-![Enregistrement d’écran de la manière dont et du jeton d’accès sont générés dans l’interface utilisateur de Developer Console.](/help/tags/images/api/getting-started/generate-access-token.gif)
+![Enregistrement d’écran de la génération du jeton d’accès et dans l’interface utilisateur de Developer Console.](/help/tags/images/api/getting-started/generate-access-token.gif)
 
 Un nouveau jeton d’accès est généré et un bouton permettant de copier le jeton dans le presse-papiers est fourni. Cette valeur est utilisée pour l’en-tête d’autorisation requis et doit être fournie au format . `Bearer {ACCESS_TOKEN}`.
 

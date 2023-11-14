@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
-title: Création d’une connexion source Pinterest Ads dans l’interface utilisateur
+title: Créer une connexion source Pinterest Ads dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Pinterest Ads à l’aide de l’interface utilisateur de Adobe Experience Platform.
-badge: Version bêta
+badge: Version Beta
 hide: true
 hidefromtoc: true
 exl-id: ca7b99c8-f1d9-4120-85d5-720f5b9ad41a
@@ -17,7 +17,7 @@ ht-degree: 29%
 
 >[!NOTE]
 >
->La source [!DNL Pinterest Ads] est en version Beta. Lisez le [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La source [!DNL Pinterest Ads] est en version Beta. Lisez la section [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Pinterest Ads] connecteur source à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
@@ -25,7 +25,7 @@ Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Pinterest Ads] c
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform : 
 
-* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md): Cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
+* [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md): cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
    * [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
@@ -34,8 +34,8 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 Pour vous connecter [!DNL Pinterest Ads] pour Experience Platform, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
-* Le [!DNL Pinterest] jeton d’accès.
-* Le [!DNL Pinterest] ID du compte publicitaire.
+* La variable [!DNL Pinterest] jeton d’accès.
+* La variable [!DNL Pinterest] ID du compte publicitaire.
 * Un de [!DNL Pinterest] des identifiants de campagne, de groupe publicitaire ou d’annonce selon les besoins.
 
 Pour plus d’informations sur ces propriétés de connexion, consultez la section [[!DNL Pinterest Ads] aperçu](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
@@ -50,7 +50,7 @@ Pour obtenir la liste des champs pris en charge par le [!DNL Pinterest] API de c
 
 ## Connecter votre compte [!DNL Pinterest Ads] {#connect-account}
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Le [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. La variable [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
@@ -58,7 +58,7 @@ Sous , *Publicité* catégorie, sélectionnez **[!UICONTROL Publicités pinteres
 
 ![Catalogue des sources sur Experience Platform.](../../../../images/tutorials/create/advertising/pinterest-ads/catalog.png)
 
-Le **[!UICONTROL Connexion au compte Pinterest Ads]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La variable **[!UICONTROL Connexion au compte Pinterest Ads]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant {#existing-account}
 
@@ -76,12 +76,12 @@ Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fo
 
 ## Sélectionner les données {#select-data}
 
-Le **[!UICONTROL Sélectionner des données]** s’affiche, fournissant une interface vous permettant de saisir les informations qui seraient transmises aux API pour importer les données que vous souhaitez vers Platform.
+La variable **[!UICONTROL Sélectionner des données]** s’affiche, fournissant une interface vous permettant de saisir les informations qui seraient transmises aux API pour importer les données que vous souhaitez vers Platform.
 
 | Champ | Description |
 | --- | --- |
-| [!UICONTROL ad_account_id] | Votre [!DNL Pinterest Ads] ID du compte publicitaire. Reportez-vous à la section [[!DNL Pinterest] guide sur la recherche d’ID dans Ads Manager](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) si vous avez besoin de conseils. |
-| [!UICONTROL object_type] | Sélectionnez l’un des **campagnes**, **groupes publicitaires** ou **publicités** selon l’élément [!DNL Pinterest] API Analytics à partir desquelles vous souhaitez obtenir des informations. |
+| [!UICONTROL ad_account_id] | Votre [!DNL Pinterest Ads] ID du compte publicitaire. Voir [[!DNL Pinterest] guide sur la recherche d’ID dans Ads Manager](https://help.pinterest.com/en/business/article/find-ids-in-ads-manager) si vous avez besoin de conseils. |
+| [!UICONTROL object_type] | Sélectionnez l’un des **campagnes**, **groupes publicitaires** ou **publicités** en fonction de l’élément [!DNL Pinterest] API Analytics à partir desquelles vous souhaitez obtenir des informations. |
 | [!UICONTROL object_ids] | Les identifiants de l’objet sélectionné. Accédez au [!DNL Pinterest] page pour **Pinterest Business Hub** > **Résumé du compte publicitaire** > **Campagnes** / **Groupes publicitaires** / **Publicités** et copiez les identifiants requis mentionnés juste en dessous de chacun de leurs noms. |
 
 >[!TIP]
@@ -121,7 +121,7 @@ Pour vérifier que vous avez correctement configuré la source et [!DNL Pinteres
 
 Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Afficher les flux de données]** en regard de la variable [!DNL Pinterest Ads] du menu Carte sur la page du catalogue. Vous pouvez ensuite sélectionner [!UICONTROL Prévisualisation d’un jeu de données] pour vérifier les données ingérées.
 
-![Capture d’écran de l’interface utilisateur de Platform pour le jeu de données d’aperçu de Pinterest Ads.](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
+![Capture d’écran de l’interface utilisateur de Platform pour le jeu de données d’aperçu de publicités Pinterest.](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
 
 Vous pouvez vérifier les données par rapport aux nombres visibles dans la variable [!DNL Pinterest] Interface utilisateur
 

@@ -16,7 +16,7 @@ ht-degree: 13%
 
 >[!IMPORTANT]
 >
->Une fois la phase bêta terminée, la variable [!DNL ad-hoc activation API] est désormais disponible (GA) pour tous les clients Experience Platform. Dans la version GA, l’API a été mise à niveau vers la version 2. Étape 4 ([Obtention du dernier ID de tâche d’exportation d’audience](#segment-export-id)) n’est plus requis, car l’API ne nécessite plus l’ID d’exportation.
+>Une fois la phase bêta terminée, la variable [!DNL ad-hoc activation API] est désormais disponible en général (GA) pour tous les clients Experience Platform. Dans la version GA, l’API a été mise à niveau vers la version 2. Étape 4 ([Obtention du dernier ID de tâche d’exportation d’audience](#segment-export-id)) n’est plus requis, car l’API ne nécessite plus l’ID d’exportation.
 >
 >Voir [Exécution de la tâche d’activation ad hoc](#activation-job) plus loin dans ce tutoriel pour plus d’informations.
 
@@ -58,7 +58,7 @@ Gardez à l’esprit les barrières de sécurité suivantes lors de l’utilisat
 
 Adobe Experience Platform exécute des tâches de segmentation planifiées toutes les 24 heures. L’API d’activation ad hoc s’exécute en fonction des derniers résultats de segmentation.
 
-## Étape 1 : Conditions préalables {#prerequisites}
+## Etape 1 : Conditions préalables {#prerequisites}
 
 Avant de pouvoir appeler les API Adobe Experience Platform, assurez-vous de respecter les conditions préalables suivantes :
 
@@ -66,7 +66,7 @@ Avant de pouvoir appeler les API Adobe Experience Platform, assurez-vous de resp
 * Votre compte d’Experience Platform a la variable `developer` et `user` rôles activés pour le profil de produit de l’API Adobe Experience Platform. Contactez votre [Admin Console](../../access-control/home.md) pour activer ces rôles pour votre compte.
 * Vous avez une Adobe ID. Si vous ne possédez pas d’Adobe ID, accédez à la [Console Adobe Developer](https://developer.adobe.com/console) et créez un compte.
 
-## Étape 2 : Collecte des informations d’identification {#credentials}
+## Étape 2 : collecte des informations d’identification {#credentials}
 
 Pour lancer des appels aux API Platform, vous devez d’abord suivre le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans tous les appels API Experience Platform, comme illustré ci-dessous :
 
@@ -86,7 +86,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 * Content-Type: `application/json`
 
-## Étape 3 : Création d’un flux d’activation dans l’interface utilisateur de Platform {#activation-flow}
+## Étape 3 : création d’un flux d’activation dans l’interface utilisateur de Platform {#activation-flow}
 
 Avant de pouvoir activer des audiences via l’API d’activation ad hoc, vous devez d’abord configurer un flux d’activation dans l’interface utilisateur de Platform, pour la destination choisie.
 
@@ -120,13 +120,13 @@ L’ID de la tâche d’exportation d’audience se trouve dans la variable `id`
 ![ID de tâche d’exportation d’audience](../assets/api/ad-hoc-activation/segment-export-job-id.png)
 
 
-## Étape 5 : Exécution de la tâche d’activation ad hoc {#activation-job}
+## Étape 5 : exécution de la tâche d’activation ad hoc {#activation-job}
 
 Adobe Experience Platform exécute des tâches de segmentation planifiées toutes les 24 heures. L’API d’activation ad hoc s’exécute en fonction des derniers résultats de segmentation.
 
 >[!IMPORTANT]
 >
->Notez la contrainte ponctuelle suivante : Avant d’exécuter une tâche d’activation ad hoc, assurez-vous qu’au moins 20 minutes se sont écoulées entre le moment où l’audience a été activée pour la première fois selon le planning défini dans [Étape 3 - Création du flux d’activation dans l’interface utilisateur de Platform](#activation-flow).
+>Notez la contrainte ponctuelle suivante : avant d’exécuter une tâche d’activation ad hoc, assurez-vous qu’au moins 20 minutes se sont écoulées entre le moment où l’audience a été activée pour la première fois, selon le planning défini dans [Étape 3 - Création du flux d’activation dans l’interface utilisateur de Platform](#activation-flow).
 
 Avant d’exécuter une tâche d’activation ad hoc, assurez-vous que la tâche d’exportation d’audience planifiée pour vos audiences est terminée. Voir [surveillance des flux de données de destination](../../dataflows/ui/monitor-destinations.md) pour plus d’informations sur la manière de surveiller l’état des flux d’activation. Par exemple, si votre flux de données d’activation affiche une **[!UICONTROL Traitement]** , attendez qu’il se termine avant d’exécuter la tâche d’activation ad hoc pour exporter un fichier complet.
 
@@ -166,7 +166,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 
 | Propriété | Description |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Les identifiants des instances de destination vers lesquelles vous souhaitez activer les audiences. Vous pouvez obtenir ces ID à partir de l’interface utilisateur de Platform en accédant à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]** et cliquez sur la ligne de destination souhaitée pour afficher l’ID de destination dans le rail de droite. Pour plus d’informations, reportez-vous à la section [documentation de l’espace de travail des destinations](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Les identifiants des instances de destination vers lesquelles vous souhaitez activer les audiences. Vous pouvez obtenir ces ID à partir de l’interface utilisateur de Platform en accédant à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]** et cliquez sur la ligne de destination de votre choix pour afficher l’ID de destination dans le rail de droite. Pour plus d’informations, consultez la section [documentation de l’espace de travail des destinations](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Les identifiants des audiences que vous souhaitez activer vers la destination sélectionnée. |
 
 {style="table-layout:auto"}
@@ -203,7 +203,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Propriété | Description |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Les identifiants des instances de destination vers lesquelles vous souhaitez activer les audiences. Vous pouvez obtenir ces ID à partir de l’interface utilisateur de Platform en accédant à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]** et cliquez sur la ligne de destination souhaitée pour afficher l’ID de destination dans le rail de droite. Pour plus d’informations, reportez-vous à la section [documentation de l’espace de travail des destinations](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Les identifiants des instances de destination vers lesquelles vous souhaitez activer les audiences. Vous pouvez obtenir ces ID à partir de l’interface utilisateur de Platform en accédant à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]** et cliquez sur la ligne de destination de votre choix pour afficher l’ID de destination dans le rail de droite. Pour plus d’informations, consultez la section [documentation de l’espace de travail des destinations](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Les identifiants des audiences que vous souhaitez activer vers la destination sélectionnée. |
 | <ul><li>`exportId1`</li></ul> | L’ID renvoyé dans la réponse de la variable [export d&#39;audience](../../segmentation/api/export-jobs.md#retrieve-list) tâche. Voir [Étape 4 : Obtention du dernier ID de tâche d’exportation d’audience](#segment-export-id) pour obtenir des instructions sur la manière de trouver cet identifiant. |
 

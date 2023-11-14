@@ -16,7 +16,7 @@ ht-degree: 58%
 
 >[!NOTE]
 >
->Le [!DNL Apache Hive] on [!DNL Azure HDInsights] Le connecteur est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
+>La variable [!DNL Apache Hive] on [!DNL Azure HDInsights] Le connecteur est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -42,7 +42,7 @@ Pour connecter [!DNL Flow Service] à [!DNL Hive], vous devez fournir des valeur
 | `password` | Mot de passe correspondant à l’utilisateur. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Hive] est : `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
 
-Pour plus d’informations sur la prise en main, reportez-vous à la section [ce document Hive](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
+Pour plus d’informations sur la prise en main, voir [ce document Hive](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
 
 ### Utiliser les API Platform
 
@@ -91,7 +91,7 @@ curl -X POST \
 | Paramètre | Description |
 | --------- | ----------- |
 | `auth.params.connectionString` | La chaîne de connexion associée à votre [!DNL Hive] compte . |
-| `connectionSpec.id` | Le [!DNL Hive] identifiant de spécification de connexion : `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`. |
+| `connectionSpec.id` | La variable [!DNL Hive] identifiant de spécification de connexion : `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`. |
 
 **Réponse**
 

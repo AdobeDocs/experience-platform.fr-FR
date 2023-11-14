@@ -15,7 +15,7 @@ ht-degree: 38%
 >
 >La prise en charge de la nouvelle tentative d’exécutions de flux de données ayant échoué est disponible pour les sources par lots. Vous pouvez uniquement réessayer les exécutions de flux de données qui ont échoué.
 
-Ce tutoriel décrit les étapes à suivre pour tenter de relancer des exécutions de flux de données ayant échoué à l’aide de la méthode [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour tenter de relancer des exécutions de flux de données ayant échoué à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 

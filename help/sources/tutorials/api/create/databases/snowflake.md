@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
 source-git-commit: 669b47753a9c9400f22aa81d08a4d25bb5e414c5
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '590'
 ht-degree: 47%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 47%
 
 >[!IMPORTANT]
 >
->Le [!DNL Snowflake] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+>La variable [!DNL Snowflake] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -40,8 +40,8 @@ Pour [!DNL Flow Service] pour vous connecter à [!DNL Snowflake], vous devez fou
 | Informations d’identification | Description |
 | --- | --- |
 | `account` | Le nom complet du compte associé à votre [!DNL Snowflake] compte . Une personne entièrement qualifiée [!DNL Snowflake] nom du compte inclut le nom de votre compte, votre région et votre plateforme cloud. Par exemple : `cj12345.east-us-2.azure`. Pour plus d&#39;informations sur les noms de compte, reportez-vous à cette section [[!DNL Snowflake document on account identifiers]](https://docs.snowflake.com/en/user-guide/admin-account-identifier.html). |
-| `warehouse` | Le [!DNL Snowflake] l’entrepôt gère le processus d’exécution des requêtes de l’application. Chaque [!DNL Snowflake] L’entrepôt est indépendant l’un de l’autre et doit être accessible individuellement lors de l’importation de données vers Platform. |
-| `database` | Le [!DNL Snowflake] La base de données contient les données que vous souhaitez importer dans Platform. |
+| `warehouse` | La variable [!DNL Snowflake] l’entrepôt gère le processus d’exécution des requêtes de l’application. Chaque [!DNL Snowflake] L’entrepôt est indépendant l’un de l’autre et doit être accessible individuellement lors de l’importation de données vers Platform. |
+| `database` | La variable [!DNL Snowflake] La base de données contient les données que vous souhaitez importer dans Platform. |
 | `username` | Nom d’utilisateur de la variable [!DNL Snowflake] compte . |
 | `password` | Le mot de passe du [!DNL Snowflake] compte utilisateur. |
 | `role` | Le rôle de contrôle d’accès par défaut à utiliser dans la variable [!DNL Snowflake] session. Le rôle doit être un rôle existant qui a déjà été attribué à l’utilisateur spécifié. Le rôle par défaut est `PUBLIC`. |
@@ -97,7 +97,7 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `auth.params.connectionString` | Chaîne de connexion utilisée pour se connecter à votre [!DNL Snowflake] instance. Le modèle de chaîne de connexion pour [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
-| `connectionSpec.id` | Le [!DNL Snowflake] identifiant de spécification de connexion : `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
+| `connectionSpec.id` | La variable [!DNL Snowflake] identifiant de spécification de connexion : `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 **Réponse**
 

@@ -21,7 +21,7 @@ Ce tutoriel est directement lié aux étapes décrites dans le tutoriel sur [év
 
 ## Prise en main
 
-Pour exporter une audience, le jeu de données doit être basé sur la variable [!DNL XDM Individual Profile Union Schema]. Un schéma d’union est un schéma en lecture seule généré par le système qui agrège les champs de tous les schémas qui partagent la même classe. Pour plus d’informations sur les schémas d’union, consultez le guide sur les [les principes de base de la composition des schémas ;](../../xdm/schema/composition.md#union).
+Pour exporter une audience, le jeu de données doit être basé sur la variable [!DNL XDM Individual Profile Union Schema]. Un schéma d’union est un schéma en lecture seule généré par le système qui agrège les champs de tous les schémas qui partagent la même classe. Pour plus d’informations sur les schémas d’union, consultez le guide sur les [les bases de la composition des schémas ;](../../xdm/schema/composition.md#union).
 
 Pour afficher les schémas d’union dans l’interface utilisateur, sélectionnez **[!UICONTROL Profils]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Schéma d’union]** comme illustré ci-dessous.
 
@@ -29,7 +29,7 @@ Pour afficher les schémas d’union dans l’interface utilisateur, sélectionn
 
 ## Espace de travail des jeux de données
 
-Le [!UICONTROL Jeux de données] workspace vous permet d’afficher et de gérer tous les jeux de données de votre entreprise.
+La variable [!UICONTROL Jeux de données] workspace vous permet d’afficher et de gérer tous les jeux de données de votre entreprise.
 
 Sélectionner **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour accéder à l’espace de travail, sélectionnez **[!UICONTROL Parcourir]**. Cet onglet affiche une liste des jeux de données et leurs détails. Selon la largeur de chaque colonne, vous devrez peut-être faire défiler vers la gauche ou la droite pour toutes les afficher.
 

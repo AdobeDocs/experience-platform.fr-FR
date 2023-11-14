@@ -21,7 +21,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 * [Ingestion par lots](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] vous permet d’ingérer des données sous forme de fichiers de lot.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
-* [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à la fonction [!DNL Platform] API.
 
@@ -252,7 +252,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 201 (Created) et un objet de réponse. L’objet de réponse est un tableau contenant l’identifiant du lot nouvellement créé au format `"@/batches/{BATCH_ID}"`. L’identifiant de lot est une chaîne en lecture seule générée par le système et utilisée pour référencer le lot dans les appels API.
+Une réponse réussie renvoie un état HTTP 201 (Created) et un objet de réponse. L’objet de réponse est un tableau contenant l’identifiant du lot nouvellement créé au format . `"@/batches/{BATCH_ID}"`. L’identifiant de lot est une chaîne en lecture seule générée par le système et utilisée pour référencer le lot dans les appels API.
 
 ```JSON
 {
@@ -326,7 +326,7 @@ Un fichier chargé renvoie un corps de réponse vide et un état HTTP 200 (OK).
 
 ## Signalement de la fin du lot
 
-Après avoir chargé tous les fichiers de données dans le lot, vous pouvez signaler que le lot est terminé. Le signalement de la fin entraîne la création du service. [!DNL Catalog] `DataSetFile` entrées pour les fichiers chargés et les associer au lot généré précédemment. Le [!DNL Catalog] Le lot est marqué comme réussi, ce qui déclenche tous les flux en aval qui peuvent ensuite fonctionner sur les données désormais disponibles.
+Après avoir chargé tous les fichiers de données dans le lot, vous pouvez signaler que le lot est terminé. Le signalement de la fin entraîne la création du service. [!DNL Catalog] `DataSetFile` entrées pour les fichiers chargés et les associer au lot généré précédemment. La variable [!DNL Catalog] Le lot est marqué comme réussi, ce qui déclenche tous les flux en aval qui peuvent ensuite fonctionner sur les données désormais disponibles.
 
 **Format d’API**
 
@@ -353,7 +353,7 @@ Un lot terminé renvoie un corps de réponse vide et un état HTTP 200 (OK).
 
 ## Surveillance de l’ingestion
 
-La durée d’ingestion des lots varie en fonction de la taille des données. Vous pouvez surveiller l’état d’un lot en ajoutant l’identifiant d’un lot à une `GET /batches` requête.
+La durée d’ingestion des lots varie en fonction de la taille des données. Vous pouvez surveiller l’état d’un lot en ajoutant son identifiant à une `GET /batches` requête.
 
 **Format d’API**
 

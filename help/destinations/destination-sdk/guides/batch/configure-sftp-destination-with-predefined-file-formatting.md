@@ -11,7 +11,7 @@ ht-degree: 14%
 
 # Configurer une destination SFTP avec des options de formatage de fichiers prédéfinies et une configuration de noms de fichiers personnalisée
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Cette page décrit l’utilisation de la Destination SDK pour configurer une destination SFTP avec des paramètres prédéfinis par défaut. [options de formatage de fichier](configure-file-formatting-options.md) et une [configuration du nom de fichier](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
 
@@ -21,7 +21,7 @@ Pour obtenir des descriptions détaillées des paramètres utilisés ci-dessous,
 
 ## Conditions préalables {#prerequisites}
 
-Avant de passer aux étapes décrites ci-dessous, veuillez lire la section [Prise en main de la Destination SDK](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification d’Adobe I/O nécessaires et d’autres conditions préalables requises pour utiliser les API Destination SDK.
+Avant de passer aux étapes décrites ci-dessous, veuillez lire la section [Prise en main de Destination SDK](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification d’Adobe I/O nécessaires et d’autres conditions préalables requises pour utiliser les API Destination SDK.
 
 ## Étape 1 : créer une configuration de serveur et de fichier {#create-server-file-configuration}
 
@@ -36,7 +36,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Requête**
 
 La requête suivante crée une nouvelle configuration de serveur de destination, configurée en fonction des paramètres fournis dans la payload.
-La payload ci-dessous inclut une configuration SFTP générique, avec une valeur par défaut prédéfinie. [Formatage des fichiers CSV](../../functionality/destination-server/file-formatting.md) paramètres de configuration que les utilisateurs peuvent définir dans l’interface utilisateur de l’Experience Platform.
+La payload ci-dessous inclut une configuration SFTP générique, avec prédéfinie par défaut. [Formatage des fichiers CSV](../../functionality/destination-server/file-formatting.md) paramètres de configuration que les utilisateurs peuvent définir dans l’interface utilisateur de l’Experience Platform.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -268,12 +268,12 @@ Lorsque vous renseignez des détails sur la destination, notez comment les champ
 Lors de la planification des intervalles d’exportation, notez comment les champs apparaissaient sont les champs que vous configurez dans la variable `batchConfig` configuration.
 ![options de planification d’exportation](../../assets/guides/batch/file-export-scheduling.png)
 
-Lors de l’affichage des options de configuration du nom de fichier, notez comment les champs affichés représentent le `filenameConfig` options que vous configurez dans la configuration.
+Lors de l’affichage des options de configuration du nom de fichier, notez comment les champs affichés représentent la variable `filenameConfig` options que vous configurez dans la configuration.
 ![options de configuration du nom de fichier](../../assets/guides/batch/file-naming-options.gif)
 
-Si vous souhaitez ajuster l’un des champs mentionnés ci-dessus, répétez l’opération. [étapes 1](#create-server-file-configuration) et [two](#create-destination-configuration) pour modifier les configurations selon vos besoins.
+Si vous souhaitez ajuster l’un des champs mentionnés ci-dessus, répétez l’opération. [étapes 1](#create-server-file-configuration) et [two](#create-destination-configuration) pour modifier les configurations en fonction de vos besoins.
 
-## Étape 4 : (Facultatif) Publiez votre destination {#publish-destination}
+## Étape 4 : (facultative) Publier votre destination {#publish-destination}
 
 >[!NOTE]
 >
@@ -281,7 +281,7 @@ Si vous souhaitez ajuster l’un des champs mentionnés ci-dessus, répétez l�
 
 Après avoir configuré votre destination, utilisez la variable [API de publication de destination](../../publishing-api/create-publishing-request.md) pour envoyer votre configuration à Adobe en vue de la révision.
 
-## Étape 5 : (Facultatif) Document de votre destination {#document-destination}
+## Étape 5 : (facultative) documenter votre destination {#document-destination}
 
 >[!NOTE]
 >

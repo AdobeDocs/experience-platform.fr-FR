@@ -85,7 +85,7 @@ curl -X POST \
 | Propriété | Description |
 | --------- | ----------- |
 | `auth.params.url` | L’URL qui définit les paramètres d’authentification requis pour la connexion à [!DNL HDFS] anonymement |
-| `connectionSpec.id` | Le [!DNL HDFS] identifiant de spécification de connexion : `54e221aa-d342-4707-bcff-7a4bceef0001`. |
+| `connectionSpec.id` | La variable [!DNL HDFS] identifiant de spécification de connexion : `54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
 **Réponse**
 

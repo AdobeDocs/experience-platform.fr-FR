@@ -35,4 +35,4 @@ La documentation ci-dessous fournit des informations sur la connexion d’[!DNL 
 ## Connecter [!DNL Teradata Vantage] à Platform à l’aide de l’interface utilisateur
 
 - [Création d’une connexion source Teradata Vantage dans l’interface utilisateur](../../tutorials/ui/create/databases/teradata-vantage.md)
-- [Création d’un flux de données pour une connexion à la source de la base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+- [Création d’un flux de données pour une connexion source de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)

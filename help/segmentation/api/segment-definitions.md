@@ -12,7 +12,7 @@ ht-degree: 40%
 
 # Point d’entrée des définitions de segment
 
-Adobe Experience Platform vous permet de créer des définitions de segment qui définissent un groupe d’attributs ou de comportements spécifiques à partir d’un groupe de profils. Une définition de segment est un objet qui encapsule une requête écrite dans [!DNL Profile Query Language] (PQL). Les définitions de segment sont appliquées aux profils pour créer des audiences. Cet objet (définition de segment) est également appelé prédicat PQL. Les prédicats PQL définissent les règles de la définition de segment en fonction des conditions liées à tout enregistrement ou série temporelle que vous fournissez. [!DNL Real-Time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
+Adobe Experience Platform vous permet de créer des définitions de segment qui définissent un groupe d’attributs ou de comportements spécifiques à partir d’un groupe de profils. Une définition de segment est un objet qui contient une requête écrite dans [!DNL Profile Query Language] (PQL). Les définitions de segment sont appliquées aux profils pour créer des audiences. Cet objet (définition de segment) est également appelé prédicat PQL. Les prédicats PQL définissent les règles de la définition de segment en fonction des conditions liées à tout enregistrement ou série temporelle que vous fournissez. [!DNL Real-Time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
 
 Ce guide fournit des informations pour vous aider à mieux comprendre les définitions de segment et inclut des exemples d’appels API pour effectuer des actions de base à l’aide de l’API.
 
@@ -40,7 +40,7 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 | `start` | Indique le décalage de début pour les définitions de segment renvoyées. | `start=4` |
 | `limit` | Indique le nombre de définitions de segment renvoyées par page. | `limit=20` |
 | `page` | Indique à partir de quelle page commencent les résultats des définitions de segment. | `page=5` |
-| `sort` | Indique le champ d’après lequel les résultats doivent être triés. Est écrit au format suivant : `[attributeName]:[desc|asc]`. | `sort=updateTime:desc` |
+| `sort` | Indique le champ d’après lequel trier les résultats. Est écrit au format suivant : `[attributeName]:[desc|asc]`. | `sort=updateTime:desc` |
 | `evaluationInfo.continuous.enabled` | Indique si la définition de segment est activée dans le flux. | `evaluationInfo.continuous.enabled=true` |
 
 **Requête**
@@ -198,7 +198,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 | Propriété | Description |
 | -------- | ----------- |
-| `name` | Nom unique qui fait référence à la définition de segment. |
+| `name` | Un nom unique qui fait référence à la définition de segment. |
 | `description` | (Facultatif.) Description de la définition de segment que vous créez. |
 | `evaluationInfo` | (Facultatif.) Le type de définition de segment que vous créez. Si vous souhaitez créer un segment par lot, définissez `evaluationInfo.batch.enabled` pour être vrai. Si vous souhaitez créer un segment en continu, définissez `evaluationInfo.continuous.enabled` pour être vrai. Si vous souhaitez créer un segment Edge, définissez `evaluationInfo.synchronous.enabled` pour être vrai. Si ce champ n’est pas renseigné, la définition de segment est créée sous la forme d’une **batch** segment. |
 | `schema` | Le schéma associé aux entités du segment. Se compose d’un champ `id` ou `name`. |
@@ -261,7 +261,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la défini
 
 | Propriété | Description |
 | -------- | ----------- |
-| `id` | Identifiant généré par le système de la définition de segment que vous venez de créer. |
+| `id` | Identifiant généré par le système de votre définition de segment nouvellement créée. |
 | `evaluationInfo` | Objet qui indique le type d’évaluation que la définition de segment va subir. Il peut s’agir d’une segmentation par lots, par flux (également appelée continue) ou par périphérie (également appelée synchrone). |
 
 ## Récupération d’une définition de segment spécifique {#get}
@@ -276,7 +276,7 @@ GET /segment/definitions/{SEGMENT_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | Le `id` valeur de la définition de segment que vous souhaitez récupérer. |
+| `{SEGMENT_ID}` | La variable `id` valeur de la définition de segment que vous souhaitez récupérer. |
 
 **Requête**
 
@@ -337,7 +337,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les informations détaill�
 | Propriété | Description |
 | -------- | ----------- |
 | `id` | Identifiant en lecture seule généré par le système de la définition de segment. |
-| `name` | Nom unique qui fait référence à la définition de segment. |
+| `name` | Un nom unique qui fait référence à la définition de segment. |
 | `schema` | Le schéma associé aux entités du segment. Se compose d’un champ `id` ou `name`. |
 | `expression` | Une entité qui contient des champs d’informations à propos de la définition de segment. |
 | `expression.type` | Indique le type d’expression. Actuellement, seul « PQL » est pris en charge. |
@@ -470,7 +470,7 @@ Une réponse réussie renvoie un état HTTP 207 avec les définitions de segment
 | Propriété | Description |
 | -------- | ----------- |
 | `id` | Identifiant en lecture seule généré par le système de la définition de segment. |
-| `name` | Nom unique qui fait référence à la définition de segment. |
+| `name` | Un nom unique qui fait référence à la définition de segment. |
 | `schema` | Le schéma associé aux entités du segment. Se compose d’un champ `id` ou `name`. |
 | `expression` | Une entité qui contient des champs d’informations à propos de la définition de segment. |
 | `expression.type` | Indique le type d’expression. Actuellement, seul « PQL » est pris en charge. |
@@ -523,7 +523,7 @@ PATCH /segment/definitions/{SEGMENT_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{SEGMENT_ID}` | Le `id` valeur de la définition de segment que vous souhaitez mettre à jour. |
+| `{SEGMENT_ID}` | La variable `id` valeur de la définition de segment que vous souhaitez mettre à jour. |
 
 **Requête**
 

@@ -24,7 +24,7 @@ Ce tutoriel suppose que vous avez déjà déterminé comment générer des donn�
 
 Ce guide suit le processus de configuration du SDK à l’aide de l’extension de balise dans l’interface utilisateur. Si vous ne souhaitez pas utiliser l’extension et que vous préférez incorporer directement la version autonome du SDK sur votre site, reportez-vous aux documents suivants au lieu de ce guide :
 
-* [Configurer un train de données](../../../datastreams/overview.md)
+* [Configurer un trains de données](../../../datastreams/overview.md)
 * [Installation du SDK](../../../edge/fundamentals/installing-the-sdk.md)
 * [Configuration du SDK pour les commandes de consentement](../../../edge/consent/supporting-consent.md)
 
@@ -46,7 +46,7 @@ Après avoir créé un nouveau flux de données ou sélectionné un flux existan
 | --- | --- |
 | [!UICONTROL Sandbox] | Nom de la plateforme [sandbox](../../../sandboxes/home.md) qui contient la connexion en continu et les jeux de données requis pour configurer le flux de données. |
 | [!UICONTROL Jeu de données d’événement] | Un [!DNL XDM ExperienceEvent] jeu de données que vous prévoyez d’envoyer des données d’événement à à l’aide du SDK. Bien que vous soyez tenu de fournir un jeu de données d’événement pour créer un flux de données Platform, notez que les données de consentement envoyées par le biais d’événements ne sont pas honorées dans les workflows d’application en aval. |
-| [!UICONTROL Jeu de données de profil] | Le [!DNL Profile]Jeu de données activé avec les champs de consentement du client que vous avez créés [previous](#prerequisites). |
+| [!UICONTROL Jeu de données de profil] | La variable [!DNL Profile]Jeu de données activé avec les champs de consentement du client que vous avez créés [previous](#prerequisites). |
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** en bas de l’écran et continuez à suivre les autres invites pour terminer la configuration.
 
@@ -62,14 +62,14 @@ Lors de la configuration du SDK, sous **[!UICONTROL Configurations d’Edge]**, 
 
 Sélectionner **[!UICONTROL Enregistrer]** pour installer l’extension .
 
-### Création d’un élément de données pour définir le consentement par défaut
+### Créer un élément de données pour définir le consentement par défaut
 
 Une fois l’extension SDK installée, vous avez la possibilité de créer un élément de données représentant la valeur de consentement de collecte de données par défaut (`collect.val`) pour vos utilisateurs. Cela peut s’avérer utile si vous souhaitez avoir différentes valeurs par défaut en fonction de l’utilisateur, telles que `pending` pour les utilisateurs de l’Union européenne et `in` pour les utilisateurs nord-américains.
 
 Dans ce cas d’utilisation, vous pouvez mettre en oeuvre les éléments suivants pour définir le consentement par défaut en fonction de la région de l’utilisateur :
 
 1. Déterminez la région de l’utilisateur sur le serveur web.
-1. Avant le `script` (code incorporé) sur la page web, effectue le rendu d’une balise distincte `script` qui définit une balise `adobeDefaultConsent` selon la région de l’utilisateur.
+1. Avant le `script` (code incorporé) sur la page web, effectue le rendu d’une balise distincte `script` qui définit une balise `adobeDefaultConsent` en fonction de la région de l’utilisateur.
 1. Configurez un élément de données qui utilise la variable `adobeDefaultConsent` et utilisez cet élément de données comme valeur de consentement par défaut pour l’utilisateur.
 
 Si la région de l’utilisateur est déterminée par une CMP, vous pouvez plutôt utiliser les étapes suivantes :
@@ -84,19 +84,19 @@ Pour créer un élément de données dans l’interface utilisateur, sélectionn
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/data-element.png)
 
-Une fois l’élément de données créé, revenez à la page de configuration de l’extension SDK Web. Sous , [!UICONTROL Confidentialité] , sélectionnez **[!UICONTROL Fourni par l’élément de données]** et utilisez la boîte de dialogue fournie pour sélectionner l’élément de données de consentement par défaut que vous avez créé précédemment.
+Une fois l’élément de données créé, revenez à la page de configuration de l’extension SDK Web. Sous , [!UICONTROL Privacy] , sélectionnez **[!UICONTROL Fourni par l’élément de données]** et utilisez la boîte de dialogue fournie pour sélectionner l’élément de données de consentement par défaut que vous avez créé précédemment.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/default-consent.png)
 
 ### Déployer l’extension sur votre site web
 
-Une fois que vous avez terminé de configurer l’extension, elle peut être intégrée à votre site web. Reportez-vous à la section [guide de publication](../../../tags/ui/publishing/overview.md) dans la documentation sur les balises pour obtenir des informations détaillées sur le déploiement de la version de bibliothèque mise à jour.
+Une fois que vous avez terminé de configurer l’extension, elle peut être intégrée à votre site web. Voir [guide de publication](../../../tags/ui/publishing/overview.md) dans la documentation sur les balises pour obtenir des informations détaillées sur le déploiement de la version de bibliothèque mise à jour.
 
 ## Exécution de commandes de changement de consentement {#commands}
 
 Une fois que vous avez intégré l’extension SDK à votre site web, vous pouvez commencer à utiliser le SDK Web Platform. `setConsent` pour envoyer des données de consentement à Platform.
 
-Le `setConsent` exécute deux actions :
+La variable `setConsent` exécute deux actions :
 
 1. Met à jour les attributs de profil de l’utilisateur directement dans la banque de profils. Cela n’envoie aucune donnée au lac de données.
 1. Crée une [Événement d’expérience](../../../xdm/classes/experienceevent.md) qui enregistre un compte horodaté de l’événement de modification du consentement. Ces données sont envoyées directement au lac de données et peuvent être utilisées pour suivre les changements de préférences de consentement au fil du temps.
@@ -114,10 +114,10 @@ Il existe deux scénarios où `setConsent` doit être appelé sur votre site :
 >
 >Pour une présentation de la syntaxe commune aux commandes du SDK Platform, consultez le document sur [exécution des commandes](../../../edge/fundamentals/executing-commands.md).
 
-Le `setConsent` La commande attend deux arguments :
+La variable `setConsent` La commande attend deux arguments :
 
 1. Chaîne indiquant le type de commande (ici : `"setConsent"`)
-1. Objet de payload contenant une seule propriété de type tableau : `consent`. Le `consent` Le tableau doit contenir au moins un objet qui fournit les champs de consentement requis pour la norme Adobe.
+1. Objet de payload contenant une seule propriété de type tableau : `consent`. La variable `consent` Le tableau doit contenir au moins un objet qui fournit les champs de consentement requis pour la norme Adobe.
 
 Les champs de consentement requis pour la norme Adobe sont présentés dans l’exemple suivant : `setConsent` call:
 
@@ -149,12 +149,12 @@ alloy("setConsent", {
 | Propriété Payload | Description |
 | --- | --- |
 | `standard` | La norme de consentement utilisée. Pour la norme Adobe, cette valeur doit être définie sur `Adobe`. |
-| `version` | Numéro de version de la norme de consentement indiquée sous `standard`. Cette valeur doit être définie sur `2.0` pour le traitement du consentement standard par Adobe. |
+| `version` | Le numéro de version de la norme de consentement indiquée sous `standard`. Cette valeur doit être définie sur `2.0` pour le traitement du consentement standard par Adobe. |
 | `value` | Informations de consentement mises à jour du client, fournies sous la forme d’un objet XDM conforme à la structure des champs de consentement du jeu de données activé par Profile. |
 
 >[!NOTE]
 >
->Si vous utilisez d’autres normes de consentement conjointement avec `Adobe` (par exemple, `IAB TCF`), vous pouvez ajouter d’autres objets au `consent` pour chaque standard. Chaque objet doit contenir les valeurs appropriées pour `standard`, `version`, et `value` pour la norme de consentement qu’ils représentent.
+>Si vous utilisez d’autres normes de consentement conjointement avec `Adobe` (par exemple `IAB TCF`), vous pouvez ajouter d’autres objets au `consent` pour chaque standard. Chaque objet doit contenir les valeurs appropriées pour `standard`, `version`, et `value` pour la norme de consentement qu’ils représentent.
 
 Le code JavaScript suivant illustre une fonction qui gère les modifications des préférences de consentement sur un site web, qui peuvent être utilisées comme rappel dans un écouteur d’événement ou un crochet de CMP :
 

@@ -9,7 +9,7 @@ ht-degree: 63%
 
 ---
 
-# Création d’une connexion source et d’un flux de données pour [!DNL Mixpanel] en utilisant la variable [!DNL Flow Service] API
+# Créer une connexion source et un flux de données pour [!DNL Mixpanel] en utilisant la variable [!DNL Flow Service] API
 
 Le tutoriel suivant décrit les étapes à suivre pour créer une connexion source et un flux de données à importer [!DNL Mixpanel] données vers Adobe Experience Platform à l’aide de la variable [API de service de flux](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
@@ -18,7 +18,7 @@ Le tutoriel suivant décrit les étapes à suivre pour créer une connexion sour
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL Mixpanel] en utilisant la variable [!DNL Flow Service] API.
 
@@ -30,7 +30,7 @@ Pour connecter [!DNL Mixpanel] à Platform, vous devez fournir des valeurs pour 
 | --- | --- | --- |
 | `username` | Le nom d’utilisateur du compte de service qui correspond à votre [!DNL Mixpanel] compte . Voir [[!DNL Mixpanel] documentation sur les comptes de service](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) pour plus d’informations. | `Test8.6d4ee7.mp-service-account` |
 | `password` | mot de passe du compte de service qui correspond à votre [!DNL Mixpanel] compte . | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
-| `projectId` | Votre [!DNL Mixpanel] ID de projet. Cet identifiant est nécessaire pour créer une connexion source. Voir [[!DNL Mixpanel] documentation sur les paramètres du projet](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) et le [[!DNL Mixpanel] guide de création et de gestion des projets](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) pour plus d’informations. | `2384945` |
+| `projectId` | Votre [!DNL Mixpanel] ID de projet. Cet identifiant est nécessaire pour créer une connexion source. Voir [[!DNL Mixpanel] documentation sur les paramètres du projet](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) et la variable [[!DNL Mixpanel] guide de création et de gestion des projets](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) pour plus d’informations. | `2384945` |
 | `timezone` | Le fuseau horaire correspondant à votre [!DNL Mixpanel] projet. Le fuseau horaire est requis pour créer une connexion source. Voir [Documentation sur les paramètres du projet Mixpanel](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) pour plus d’informations. | `Pacific Standard Time` |
 
 Pour plus d’informations sur l’authentification [!DNL Mixpanel] source, voir [[!DNL Mixpanel] présentation de la source](../../../../connectors/analytics/mixpanel.md).
@@ -118,7 +118,7 @@ Lors de l’exécution de requêtes GET pour explorer la structure et le contenu
 | `{OBJECT}` | Ce paramètre est requis uniquement lors de l’affichage d’un répertoire spécifique. Sa valeur représente le chemin dʼaccès au répertoire que vous souhaitez explorer. Pour cette source, la valeur serait `json`. |
 | `fileType=json` | Type de fichier du fichier que vous souhaitez importer dans Platform. Actuellement, `json` est le seul type de fichier pris en charge. |
 | `{PREVIEW}` | Valeur booléenne qui définit si le contenu de la connexion prend en charge la prévisualisation. |
-| `{SOURCE_PARAMS}` | Définit les paramètres du fichier source que vous souhaitez importer dans Platform. Pour récupérer le type de format accepté pour `{SOURCE_PARAMS}`, vous devez coder l’intégralité de la chaîne `{"projectId":"2671127","timezone":"Pacific Standard Time"}` en base64. **Remarque**: Dans l’exemple ci-dessous, `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` encodé en base64 équivaut à `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. |
+| `{SOURCE_PARAMS}` | Définit les paramètres du fichier source que vous souhaitez importer dans Platform. Pour récupérer le type de format accepté pour `{SOURCE_PARAMS}`, vous devez coder l’intégralité de la chaîne `{"projectId":"2671127","timezone":"Pacific Standard Time"}` en base64. **Remarque**: dans l’exemple ci-dessous, `"{"projectId":"2671127","timezone":"Pacific Standard Time"}"` encodé en base64 équivaut à `eyJwcm9qZWN0SWQiOiIyNjcxMTI3IiwidGltZXpvbmUiOiJQYWNpZmljIFN0YW5kYXJkIFRpbWUifQ==`. |
 
 
 **Requête**
@@ -581,7 +581,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ## Créer un flux {#flow}
 
-La dernière étape pour obtenir des données de [!DNL Mixpanel] à Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
+La dernière étape pour obtenir des données de [!DNL Mixpanel] vers Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
 
 * [ID de connexion source](#source-connection)
 * [ID de connexion cible](#target-connection)
@@ -674,7 +674,7 @@ Une fois votre flux de données créé, vous pouvez surveiller les données ing�
 
 ### Mettre à jour votre flux de données
 
-Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés, en envoyant une requête PATCH à la variable `/flows` point d’entrée [!DNL Flow Service] API, tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre flux de données `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour des flux de données sources à l’aide de l’API](../../update-dataflows.md).
+Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés, en envoyant une requête PATCH à la variable `/flows` point d’entrée de [!DNL Flow Service] API, tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre flux de données `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour des flux de données de sources à l’aide de l’API](../../update-dataflows.md).
 
 ### Mettre à jour votre compte
 

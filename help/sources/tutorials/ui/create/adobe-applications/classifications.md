@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées ; analytics;classifications
+keywords: Experience Platform;accueil;rubriques les plus consultées;analytics;classifications
 description: Découvrez comment créer un connecteur source Adobe Analytics dans l’interface utilisateur pour importer des données de classification dans Adobe Experience Platform.
 solution: Experience Platform
 title: Création d’une connexion source Adobe Analytics pour les données de classification dans l’interface utilisateur
@@ -12,7 +12,7 @@ ht-degree: 19%
 
 ---
 
-# Création d’une connexion source Adobe Analytics pour les données de classification dans l’interface utilisateur
+# Créer une connexion source Adobe Analytics pour les données de classification dans l’interface utilisateur
 
 Ce tutoriel décrit les étapes à suivre pour créer une connexion à la source de données Adobe Analytics Classifications dans l’interface utilisateur afin d’importer des données de classification dans Adobe Experience Platform.
 
@@ -28,7 +28,7 @@ Le connecteur de données des classifications Analytics nécessite que vos donn�
 
 ## Sélectionner vos classifications
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail des sources. Le **[!UICONTROL Catalogue]** écran affiche les sources disponibles pour créer des connexions entrantes avec . Chaque carte source affiche une option permettant de configurer un nouveau compte ou d’ajouter des données à un compte existant.
+Connexion à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail des sources. La variable **[!UICONTROL Catalogue]** écran affiche les sources disponibles pour créer des connexions entrantes avec . Chaque carte source affiche une option permettant de configurer un nouveau compte ou d’ajouter des données à un compte existant.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
@@ -38,7 +38,7 @@ Sous , **[!UICONTROL Adobe des applications]** , sélectionnez la catégorie **[
 
 L’écran permettant dʼ&#x200B;**[!UICONTROL Ajouter des données à la source Analytics]** s’affiche. Sélectionner **[!UICONTROL Classifications]** dans l’en-tête supérieur pour afficher une liste de [!DNL Classifications] jeux de données, y compris des informations sur leur ID de dimension, le nom de la suite de rapports et l’identifiant de la suite de rapports.
 
-Chaque page affiche jusqu’à dix pages différentes. [!DNL Classifications] jeux de données que vous pouvez choisir. Sélectionner **[!UICONTROL Suivant]** au bas de la page pour rechercher d’autres options. Le panneau de droite affiche le nombre total de [!DNL Classifications] jeux de données que vous avez sélectionnés, ainsi que leurs noms. Ce panneau vous permet également de supprimer les [!DNL Classifications] jeux de données que vous avez peut-être sélectionnés par erreur ou effacer toutes les sélections avec une action.
+Chaque page affiche jusqu’à dix pages différentes [!DNL Classifications] jeux de données que vous pouvez choisir. Sélectionner **[!UICONTROL Suivant]** au bas de la page pour rechercher d’autres options. Le panneau de droite affiche le nombre total de [!DNL Classifications] jeux de données que vous avez sélectionnés, ainsi que leurs noms. Ce panneau vous permet également de supprimer les [!DNL Classifications] jeux de données que vous avez peut-être sélectionnés par erreur ou effacer toutes les sélections avec une action.
 
 Vous pouvez sélectionner jusqu’à 30 [!DNL Classifications] jeux de données à importer [!DNL Platform].
 
@@ -48,13 +48,13 @@ Une fois que vous avez sélectionné votre [!DNL Classifications] jeux de donné
 
 ## Vérification des classifications
 
-Le **[!UICONTROL Réviser]** s’affiche, ce qui vous permet de consulter la [!DNL Classifications] jeux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
+La variable **[!UICONTROL Réviser]** s’affiche, ce qui vous permet de consulter la [!DNL Classifications] jeux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
-* **[!UICONTROL Connexion]**: Affiche la plateforme source et l’état de la connexion.
-* **[!UICONTROL Type de données]**: Affiche le nombre de [!DNL Classifications].
-* **[!UICONTROL Planification]**: Affiche la fréquence de synchronisation des [!DNL Classifications] data.
+* **[!UICONTROL Connexion]**: affiche la plateforme source et l’état de la connexion.
+* **[!UICONTROL Type de données]**: affiche le nombre de [!DNL Classifications].
+* **[!UICONTROL Planification]**: indique la fréquence de synchronisation pour [!DNL Classifications] data.
 
-Une fois que vous avez examiné votre flux de données, cliquez sur **[!UICONTROL Terminer]** et accorder un certain temps pour la création du flux de données.
+Une fois le flux de données examiné, cliquez sur **[!UICONTROL Terminer]** et accorder un certain temps pour la création du flux de données.
 
 ![](../../../../images/tutorials/create/classifications/review.png)
 
@@ -66,11 +66,11 @@ Une fois votre flux de données créé, vous pouvez surveiller les données ing�
 
 L’écran **[!UICONTROL Flux de données]** s’affiche. Cette page contient une liste de flux de données, y compris des informations sur leur nom, les données source et l’état d’exécution de flux de données. Sur la droite, se trouve le **[!UICONTROL Propriétés]** qui contient des métadonnées relatives à votre [!DNL Classifications] dataflow.
 
-Sélectionnez la **[!UICONTROL Jeu de données cible]** vous souhaitez y accéder.
+Sélectionnez la variable **[!UICONTROL Jeu de données cible]** vous souhaitez y accéder.
 
 ![](../../../../images/tutorials/create/classifications/list-of-dataflows.png)
 
-Le **[!UICONTROL Activité du jeu de données]** page affiche des informations sur le jeu de données cible que vous avez sélectionné, y compris des détails sur son état de lot, son identifiant de jeu de données et son schéma.
+La variable **[!UICONTROL Activité du jeu de données]** page affiche des informations sur le jeu de données cible que vous avez sélectionné, y compris des détails sur son état de lot, son identifiant de jeu de données et son schéma.
 
 ![](../../../../images/tutorials/create/classifications/dataset.png)
 
@@ -79,5 +79,5 @@ Le **[!UICONTROL Activité du jeu de données]** page affiche des informations s
 En suivant ce tutoriel, vous avez créé un connecteur de données Analytics Classifications qui apporte [!DNL Classifications] données dans [!DNL Platform]. Consultez les documents suivants pour plus d’informations sur [!DNL Analytics] et [!DNL Classifications] data:
 
 * [Présentation du connecteur de données Analytics](../../../../connectors/adobe-applications/analytics.md)
-* [Création d’une connexion aux données Analytics dans l’interface utilisateur](./analytics.md)
+* [Créer une connexion aux données Analytics dans l’interface utilisateur](./analytics.md)
 * [À propos des classifications](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=fr)

@@ -29,7 +29,7 @@ Pour accéder à [!DNL Zendesk] sur Platform, vous devez fournir des valeurs pou
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
 | Sous-domaine | Domaine unique spécifique à votre compte créé lors du processus d’enregistrement. | `yoursubdomain` |
-| Jeton d’accès | Jeton d’API Zendesk. | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
+| Jeton d’accès | Jeton API Zendesk. | `0lZnClEvkJSTQ7olGLl7PMhVq99gu26GTbJtf` |
 
 Pour plus d’informations sur l’authentification [!DNL Zendesk] source, voir [[!DNL Zendesk] présentation de la source](../../../../connectors/customer-success/zendesk.md).
 
@@ -39,7 +39,7 @@ Pour plus d’informations sur l’authentification [!DNL Zendesk] source, voir 
 
 Avant de créer un [!DNL Zendesk] connexion source, vous devez également vous assurer de créer au préalable un schéma Platform à utiliser pour votre source. Voir le tutoriel sur [création d’un schéma Platform](../../../../../xdm/schema/composition.md) pour obtenir des instructions complètes sur la création d’un schéma.
 
-Pour plus d’informations sur votre [!DNL Zendesk] schéma requis pour la [!DNL Zendesk Search API], reportez-vous à la section [limites](#limits) ci-dessous.
+Pour plus d’informations sur votre [!DNL Zendesk] schéma requis pour la [!DNL Zendesk Search API], reportez-vous au [limites](#limits) ci-dessous.
 
 ![Création d’un schéma](../../../../images/tutorials/create/zendesk/schema.png)
 
@@ -53,7 +53,7 @@ Sous , *Succès des clients* catégorie, sélectionnez **[!UICONTROL Zendesk]**,
 
 ![catalogue](../../../../images/tutorials/create/zendesk/catalog.png)
 
-Le **[!UICONTROL Connexion au compte Zendesk]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La variable **[!UICONTROL Connexion au compte Zendesk]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
@@ -83,9 +83,9 @@ Les sections ci-dessous contiennent des ressources supplémentaires auxquelles v
 
 ### Validation {#validation}
 
-La section suivante décrit les étapes que vous pouvez suivre pour vérifier que vous avez bien connecté votre [!DNL Zendesk] source et [!DNL Zendesk] les profils sont ingérés dans Platform.
+La section suivante décrit les étapes que vous pouvez suivre pour vérifier que vous avez bien connecté votre [!DNL Zendesk] source et cela [!DNL Zendesk] les profils sont ingérés dans Platform.
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour accéder à la fonction [!UICONTROL Jeux de données] workspace. Le [!UICONTROL Activité du jeu de données] affiche les détails des exécutions.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour accéder à la fonction [!UICONTROL Jeux de données] workspace. La variable [!UICONTROL Activité du jeu de données] affiche les détails des exécutions.
 
 ![Page d’activité](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
@@ -152,7 +152,7 @@ Le tableau ci-dessous répertorie les mappages pris en charge qui doivent être 
 
 ### Limites {#limits}
 
-* Le [API de recherche Zendesk > Exporter les résultats de recherche](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) renvoie un maximum de 1 000 enregistrements par page.
+* La variable [API de recherche Zendesk > Exporter les résultats de recherche](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) renvoie un maximum de 1 000 enregistrements par page.
    * La valeur de la variable ``filter[type]`` est défini sur ``user`` et par conséquent, la connexion Zendesk renvoie uniquement les utilisateurs.
    * Le nombre de résultats par page est géré par la variable ``page[size]`` . La valeur est définie sur ``100``. Cela permet de réduire l&#39;impact des contraintes de réduction de vitesse définies par Zendesk.
    * Voir [Limites](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#limits) et [Pagination](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#pagination-1).

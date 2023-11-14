@@ -1,5 +1,5 @@
 ---
-keywords: extensions de balise;extension de balise;destinations de lancement extensions de balises Platform;extension de balises Platform;destinations de platform launch
+keywords: extensions de balises;extension de balises;destinations de lancement;extensions de balises de plateforme;extension de balises de plateforme;destinations de platform launch
 title: Extensions de balises dans Adobe Experience Platform
 description: Adobe Experience Platform offre la nouvelle génération de fonctionnalités de gestion des balises d’Adobe. Platform vous offre un moyen simple de déployer et de gérer toutes les balises d’analyse, de marketing et de publicité nécessaires pour offrir des expériences client pertinentes.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
@@ -43,7 +43,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 -->
 
-## Avantages des extensions de balise {#extensions-benefits}
+## Avantages de l’utilisation des extensions de balise {#extensions-benefits}
 
 Les fonctionnalités de balise de Platform sont gratuites pour les clients Experience Cloud existants. Le système simplifie le déploiement des balises sur votre site web au moyen d’extensions conviviales que vous pouvez installer, configurer, mettre à jour et supprimer. Les balises n’ont qu’une faible empreinte sur votre site web et vous permettent de charger rapidement vos pages.
 

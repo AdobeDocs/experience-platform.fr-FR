@@ -3,7 +3,7 @@ title: Notes de mise à jour d’Adobe Experience Platform - Avril 2022
 description: Les notes de mise à jour d’avril 2022 pour Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
 source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2904'
 ht-degree: 100%
 

@@ -15,9 +15,9 @@ ht-degree: 63%
 
 Adobe Experience Platform [!DNL Segmentation Service] vous permet de créer des audiences par le biais de définitions de segment ou d’autres sources dans Adobe Experience Platform à partir de vos [!DNL Real-Time Customer Profile] data.
 
-Le guide de développement nécessite une compréhension pratique des différentes [!DNL Experience Platform] services impliqués dans l’utilisation [!DNL Segmentation Service].
+Le guide de développement nécessite une compréhension pratique des différentes [!DNL Experience Platform] services impliqués dans l’utilisation de [!DNL Segmentation Service].
 
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): Permet de créer des audiences à partir de [!DNL Real-Time Customer Profile] data.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): permet de créer des audiences à partir de [!DNL Real-Time Customer Profile] data.
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 - [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.

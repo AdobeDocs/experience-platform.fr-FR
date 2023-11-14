@@ -6,32 +6,32 @@ exl-id: 3f28e2bc-2c4b-4400-8f69-c7316449ff4f
 source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
 workflow-type: tm+mt
 source-wordcount: '424'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
-# Utilisation [!DNL Adobe Journey Optimizer] avec le [!DNL Platform Web SDK]
+# Utilisation [!DNL Adobe Journey Optimizer] avec la propriété [!DNL Platform Web SDK]
 
 [!DNL Adobe Experience Platform] [!DNL Web SDK] peut fournir et générer des expériences personnalisées gérées dans [!DNL Adobe Journey Optimizer] au canal web. Vous pouvez utiliser un éditeur WYSIWYG, [!DNL Adobe Journey Optimizer] [Interface utilisateur de Campaign web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), pour créer, activer et diffuser vos [!DNL Journey Optimizer Web] campagnes et expériences de personnalisation.
 
 >[!IMPORTANT]
 >
->Lisez le [Documentation sur le canal web Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html) pour plus d’informations sur la prise en main de [!DNL Journey Optimizer Web] création d’expériences et création de rapports.
+>Lisez la section [Documentation sur le canal web Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html?lang=fr) pour plus d’informations sur la prise en main de [!DNL Journey Optimizer Web] création d’expériences et création de rapports.
 
 ## Terminologie {#terminology}
 
-**[!UICONTROL Surface]**: Une surface web est une propriété web identifiée par une URL où la propriété [!DNL Adobe Journey Optimizer] le contenu de l’expérience sera diffusé.
+**[!UICONTROL Surface]**: une surface web est une propriété web identifiée par une URL dans laquelle la propriété [!DNL Adobe Journey Optimizer] le contenu de l’expérience sera diffusé.
 
-**[!UICONTROL Propositions]**: Dans [!DNL Adobe Journey Optimizer], les propositions correspondent à l’expérience sélectionnée dans un [!DNL Journey Optimizer Campaign].
+**[!UICONTROL Propositions]**: dans [!DNL Adobe Journey Optimizer], les propositions correspondent à l’expérience sélectionnée dans un [!DNL Journey Optimizer Campaign].
 
 ## Activation [!DNL Adobe Journey Optimizer] {#enable-ajo}
 
-Pour commencer à utiliser [!DNL Adobe Journey Optimizer], procédez comme suit.
+Pour commencer à [!DNL Adobe Journey Optimizer], suivez les étapes ci-dessous.
 
 1. Accédez au [conditions préalables](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) de la [!DNL Adobe Journey Optimizer] [Guide des expériences web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), en particulier :
    * Configurer [!DNL Adobe Experience Cloud Visual Editing Helper].
    * Activer [!DNL Adobe Journey Optimizer] dans votre [datastream](../../../datastreams/overview.md).
-   * Activez la variable [!UICONTROL Stratégie de fusion principale sur le périphérique] .
+   * Activez la variable [!UICONTROL Stratégie de fusion Active-On-Edge] .
 
 2. Ajoutez la variable `renderDecisions` à vos événements. Définir `renderDecisions` to `true` pour le rendu automatique des propositions de contenu Journey Optimizer diffusées sur les surfaces de votre page web.
 
@@ -42,7 +42,7 @@ Pour commencer à utiliser [!DNL Adobe Journey Optimizer], procédez comme suit.
    })
    ```
 
-3. Vous pouvez éventuellement spécifier des surfaces supplémentaires dans vos événements. Par défaut, le SDK Web génère automatiquement la surface web de la page web actuelle et l’inclut dans la requête au réseau Edge. Si nécessaire, d’autres surfaces peuvent être incluses dans la requête en les spécifiant dans la variable `personalization.surfaces` de l’option `sendEvent` ou dans la commande correspondante **[!UICONTROL Surfaces]** [[!UICONTROL Envoyer un événement] action](../../../tags/extensions/client/web-sdk/action-types.md#send-event) configuration de l’extension SDK Web.
+3. Vous pouvez éventuellement spécifier des surfaces supplémentaires dans vos événements. Par défaut, le SDK Web génère automatiquement la surface web de la page web actuelle et l’inclut dans la requête au réseau Edge. Si nécessaire, d’autres surfaces peuvent être incluses dans la requête en les spécifiant dans la variable `personalization.surfaces` de l’ `sendEvent` ou dans la **[!UICONTROL Surfaces]** [[!UICONTROL Envoyer un événement] action](../../../tags/extensions/client/web-sdk/action-types.md#send-event) configuration de l’extension SDK Web.
 
    ```javascript
    alloy("sendEvent", {
@@ -55,7 +55,7 @@ Pour commencer à utiliser [!DNL Adobe Journey Optimizer], procédez comme suit.
 
    ![extension-add-surface](./assets/extension-add-surface.png)
 
-   Les surfaces d’événement sont incluses dans la variable `query.personalization.surfaces` champ de requête :
+   Les surfaces d’événement sont incluses dans `query.personalization.surfaces` champ de requête :
 
    ```json
    {
@@ -145,6 +145,6 @@ Exemple de proposition de contenu Journey Optimizer :
 
 ## Débogage {#debugging}
 
-Pour déboguer les implémentations de personnalisation Adobe Journey Optimizer, utilisez [[!DNL Web SDK] débogage](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html). [!DNL Adobe Journey Optimizer] des traces de débogage sont disponibles lors de la résolution des problèmes à l’aide de [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/). Recherchez des événements avec la variable `AJO:` préfixe.
+Pour déboguer les implémentations de personnalisation de Adobe Journey Optimizer, utilisez [[!DNL Web SDK] débogage](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html). [!DNL Adobe Journey Optimizer] des traces de débogage sont disponibles lors de la résolution des problèmes à l’aide de [[!DNL Adobe Experience Platform Assurance]](https://developer.adobe.com/client-sdks/documentation/platform-assurance/). Recherchez des événements avec la variable `AJO:` préfixe.
 
 ![assurance-ajo-trace](./assets/assurance-ajo-trace.png)

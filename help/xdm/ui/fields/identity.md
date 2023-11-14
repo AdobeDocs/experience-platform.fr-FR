@@ -7,7 +7,7 @@ exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
 source-wordcount: '609'
-ht-degree: 15%
+ht-degree: 16%
 
 ---
 
@@ -23,7 +23,7 @@ Les champs d’identité sont un composant essentiel de la manière dont les gra
    * [Espaces de noms d’identité](../../../identity-service/namespaces.md) : définissent les différents types d’informations d’identité qui peuvent être associés à une seule personne et constituent un composant obligatoire pour chaque champ d’identité.
 * [Profil client en temps réel](../../../profile/home.md): exploite des graphiques d’identités client pour fournir un profil client unifié basé sur des données agrégées provenant de plusieurs sources, mis à jour en temps quasi réel.
 
-## Définition d’un champ d’identité {#define-a-identity-field}
+## Définir un champ d’identité {#define-a-identity-field}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identityField_primaryIdentityRestriction"

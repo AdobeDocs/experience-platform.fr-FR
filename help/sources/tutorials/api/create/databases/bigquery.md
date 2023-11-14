@@ -5,8 +5,8 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 58%
+source-wordcount: '535'
+ht-degree: 59%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 58%
 
 >[!IMPORTANT]
 >
->Le [!DNL Google BigQuery] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+>La variable [!DNL Google BigQuery] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -25,7 +25,7 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL Google BigQuery] en utilisant la variable [!DNL Flow Service] API.
 
@@ -98,7 +98,7 @@ curl -X POST \
 | `auth.params.clientId` | La valeur d’identifiant utilisée pour générer le jeton d’actualisation. |
 | `auth.params.clientSecret` | La valeur client utilisée pour générer le jeton d’actualisation. |
 | `auth.params.refreshToken` | Jeton d’actualisation obtenu à partir de [!DNL Google] utilisé pour autoriser l’accès à [!DNL Google BigQuery]. |
-| `connectionSpec.id` | Le [!DNL Google BigQuery] identifiant de spécification de connexion : `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
+| `connectionSpec.id` | La variable [!DNL Google BigQuery] identifiant de spécification de connexion : `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
 
 **Réponse**
 

@@ -20,7 +20,7 @@ Adobe Experience Platform [!DNL Identity Service] gère l’identification de vo
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 - [[!DNL Identity Service]](../home.md) : résout le problème fondamental posé par la fragmentation des données de profil des clients. Pour ce faire, il associe les identités entre les appareils et les systèmes sur lesquels les clients interagissent avec votre marque.
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md): fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 
 Les sections suivantes contiennent des informations supplémentaires que vous devrez connaître ou dont vous devrez disposer pour passer avec succès des appels à la fonction [!DNL Identity Service] API.
@@ -51,7 +51,7 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ### Acheminement basé sur la région
 
-Le [!DNL Identity Service] L’API utilise des points de terminaison spécifiques à une région qui nécessitent l’inclusion d’un `{REGION}` dans le chemin d’accès de la requête. Pendant la mise en service de votre organisation, une région est déterminée et stockée dans votre profil d’organisation. L’utilisation de la région appropriée avec chaque point de terminaison garantit que toutes les requêtes effectuées à l’aide de la variable [!DNL Identity Service] Les API sont acheminées vers la région appropriée.
+La variable [!DNL Identity Service] L’API utilise des points de terminaison spécifiques à une région qui nécessitent l’inclusion d’un `{REGION}` dans le chemin d’accès de la requête. Pendant la mise en service de votre organisation, une région est déterminée et stockée dans votre profil d’organisation. L’utilisation de la région appropriée avec chaque point de terminaison garantit que toutes les requêtes effectuées à l’aide de la variable [!DNL Identity Service] Les API sont acheminées vers la région appropriée.
 
 Deux régions sont actuellement prises en charge par [!DNL Identity Service] API : VA7 et NLD2.
 

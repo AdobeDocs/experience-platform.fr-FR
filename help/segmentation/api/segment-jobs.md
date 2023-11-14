@@ -167,7 +167,7 @@ Si moins de 1 500 définitions de segment sont exécutées dans votre tâche de 
 
 **Plus de 1 500 définitions de segment**
 
-Si plus de 1 500 définitions de segment sont exécutées dans votre tâche de segmentation, la variable `children.segments` l’attribut s’affiche `*`, indiquant que toutes les définitions de segment sont évaluées.
+Si plus de 1 500 définitions de segment sont exécutées dans votre tâche de segmentation, la variable `children.segments` L’attribut s’affiche `*`, indiquant que toutes les définitions de segment sont évaluées.
 
 >[!NOTE]
 >
@@ -271,9 +271,9 @@ Si plus de 1 500 définitions de segment sont exécutées dans votre tâche de s
 | `metrics.totalTime` | Objet contenant des informations sur les heures de début et de fin de la tâche de segmentation, ainsi que le temps total nécessaire. |
 | `metrics.profileSegmentationTime` | Objet contenant des informations sur les heures de début et de fin de l’évaluation de segmentation, ainsi que le temps total nécessaire. |
 | `metrics.segmentProfileCounter` | Nombre de profils qualifiés par segment. |
-| `metrics.segmentedProfileByNamespaceCounter` | Nombre de profils qualifiés pour chaque espace de noms d’identité sur une base de définition de segment. |
+| `metrics.segmentedProfileByNamespaceCounter` | Le nombre de profils qualifiés pour chaque espace de noms d’identité sur une base de définition de segment. |
 | `metrics.segmentProfileByStatusCounter` | Nombre de profils pour chaque état. Les trois états suivants sont pris en charge : <ul><li>&quot;réalisé&quot; : nombre de profils qui remplissent les critères de la définition de segment.</li><li>&quot;exited&quot; : nombre de profils qui n’existent plus dans la définition de segment.</li></ul> |
-| `metrics.totalProfilesByMergePolicy` | Nombre total de profils fusionnés par stratégie de fusion. |
+| `metrics.totalProfilesByMergePolicy` | Le nombre total de profils fusionnés par stratégie de fusion. |
 
 ## Création d’une tâche de segmentation {#create}
 
@@ -404,7 +404,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur la tâ
 
 | Propriété | Description |
 | -------- | ----------- |
-| `id` | Identifiant en lecture seule généré par le système pour la tâche de segmentation que vous venez de créer. |
+| `id` | Identifiant en lecture seule généré par le système pour la nouvelle tâche de segmentation. |
 | `status` | État actuel de la tâche de segmentation. Comme la tâche de segmentation vient d’être créée, l’état est toujours &quot;NEW&quot; (Nouvelle). |
 | `segments` | Objet contenant des informations sur les définitions de segment pour lesquelles cette tâche de segmentation est en cours d’exécution. |
 | `segments.segment.id` | L’identifiant de la définition de segment que vous avez fournie. |
@@ -524,10 +524,10 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la tâche 
 
 | Propriété | Description |
 | -------- | ----------- |
-| `id` | Identifiant en lecture seule généré par le système pour la tâche de segmentation que vous venez de créer. |
+| `id` | Identifiant en lecture seule généré par le système pour la nouvelle tâche de segmentation. |
 | `status` | État actuel de la tâche de segmentation. La tâche de segmentation étant nouvellement créée, l’état sera toujours `NEW`. |
 | `segments` | Objet contenant des informations sur les définitions de segment pour lesquelles cette tâche de segmentation est en cours d’exécution. |
-| `segments.segment.id` | Le `*` signifie que cette tâche de segmentation s’exécute pour toutes les définitions de segment de votre organisation. |
+| `segments.segment.id` | La variable `*` signifie que cette tâche de segmentation s’exécute pour toutes les définitions de segment de votre organisation. |
 
 ## Récupération d’une tâche de segmentation spécifique {#get}
 
@@ -623,7 +623,7 @@ Si moins de 1 500 définitions de segment sont exécutées dans votre tâche de 
 
 **Plus de 1 500 définitions de segment**
 
-Si plus de 1 500 définitions de segment sont exécutées dans votre tâche de segmentation, la variable `children.segments` l’attribut s’affiche `*`, indiquant que toutes les définitions de segment sont évaluées.
+Si plus de 1 500 définitions de segment sont exécutées dans votre tâche de segmentation, la variable `children.segments` L’attribut s’affiche `*`, indiquant que toutes les définitions de segment sont évaluées.
 
 ```json
 {

@@ -3,7 +3,7 @@ title: Guide complet sur la gouvernance des données
 description: Suivez la procédure complète permettant d’appliquer des contraintes d’utilisation des données aux champs et jeux de données dans Adobe Experience Platform.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
 source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1881'
 ht-degree: 100%
 
@@ -70,7 +70,7 @@ Sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche, p
 >
 >![Image montrant un lien vers le schéma d’un jeu de données.](./images/e2e/schema-from-dataset.png)
 
-La structure du schéma s’affiche dans l’éditeur de schémas. Dans cet écran, sélectionnez l’onglet **[!UICONTROL Libellés]** pour afficher une vue en mode liste des champs du schéma et des libellés qui y ont déjà été appliqués. Cochez les cases en regard des champs auxquels vous souhaitez ajouter des libellés, puis sélectionnez **[!UICONTROL Appliquez l’accès et les libellés de gouvernance des données]** dans le rail de droite.
+La structure du schéma s’affiche dans l’éditeur de schémas. Dans cet écran, sélectionnez l’onglet **[!UICONTROL Libellés]** pour afficher une vue Liste des champs du schéma et des libellés qui y ont déjà été appliqués. Cochez les cases en regard des champs auxquels vous souhaitez ajouter des libellés, puis sélectionnez **[!UICONTROL Appliquez l’accès et les libellés de gouvernance des données]** dans le rail de droite.
 
 ![Onglets Libellés de l’espace de travail Schéma avec un champ de schéma unique sélectionné et Appliquer l’accès et les libellés de gouvernance des données en surbrillance.](./images/e2e/schema-field-label.png)
 
