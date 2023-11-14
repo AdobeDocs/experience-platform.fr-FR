@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '794'
 ht-degree: 5%
 
 ---
@@ -150,5 +150,6 @@ At `timestamp=4`, un client utilise la même tablette, se connecte à son compte
 Pour plus d’informations sur les règles de liaison des graphiques d’identités, consultez la documentation suivante :
 
 * [Présentation des règles de liaison de graphiques d’identités](./overview.md)
+* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
 * [Exemples de scénarios de configuration des règles de liaison de graphiques d’identités](./example-scenarios.md)
 * [Identity Service et Real-time Customer Profile](identity-and-profile.md)

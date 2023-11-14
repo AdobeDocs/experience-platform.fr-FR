@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 09961b8e-f736-4fcc-ac53-88b55cca7d55
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '708'
 ht-degree: 2%
 
 ---
@@ -74,5 +74,6 @@ Identity Service n’ingère que les champs désignés comme identité. Identity
 Pour plus d’informations sur les règles de liaison des graphiques d’identités, consultez la documentation suivante :
 
 * [Présentation des règles de liaison de graphiques d’identités](./overview.md)
+* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
 * [Exemples de scénarios de configuration des règles de liaison de graphiques d’identités](./example-scenarios.md)
 * [Logique de liaison d’identités](./identity-linking-logic.md)

@@ -3,10 +3,10 @@ title: Connecteur source Adobe Commerce
 description: Découvrez comment utiliser la source Adobe Commerce pour importer vos données commerciales dans Experience Platform.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 8313e3d5-5c3d-448c-883c-b9386dbbb2f5
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 5eaa5e518de72b452d43a9abca3082efe9e4cb32
 workflow-type: tm+mt
-source-wordcount: '540'
-ht-degree: 5%
+source-wordcount: '535'
+ht-degree: 4%
 
 ---
 
@@ -36,10 +36,10 @@ Pour connecter Adobe Commerce à Experience Platform, vous devez disposer des é
 
 Pour intégrer entièrement votre compte source Adobe Commerce, suivez les étapes décrites ci-dessous avec la documentation correspondante.
 
-* [Installation de l’extension Experience Platform Connector](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/install.html) pour Adobe Commerce. Vous pouvez télécharger l’extension de connecteur à partir de [Adobe Marketplace](https://commercemarketplace.adobe.com/magento-experience-platform-connector.html).
+* [Installez le [!DNL Data Connection] extension](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/install.html) pour Adobe Commerce. Vous pouvez télécharger l’extension de connecteur à partir de [Adobe Marketplace](https://commercemarketplace.adobe.com/magento-experience-platform-connector.html).
 * Une fois que vous avez installé l’extension de connecteur, connectez-vous à votre compte Adobe dans Experience Cloud et [confirmer votre ID d’organisation ;](https://experienceleague.adobe.com/docs/core-services/interface/administration/organizations.html?lang=fr#concept_EA8AEE5B02CF46ACBDAD6A8508646255). Cet identifiant est associé à votre société d’Experience Cloud configurée. Il est formaté sous la forme d’une chaîne alphanumérique de 24 caractères et comprend un paramètre obligatoire `@AdobeOrg`.
-* Ensuite, créez ou mettez à jour votre schéma de modèle de données d’expérience (XDM) avec vos groupes de champs spécifiques au commerce. Pour obtenir des instructions détaillées sur la manière d’ajouter des groupes de champs spécifiques à Commerce à votre schéma XDM, consultez le guide sur [ajout de groupes de champs à un schéma XDM](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/update-xdm.html?lang=fr).
+* Ensuite, créez ou mettez à jour votre schéma de modèle de données d’expérience (XDM) avec vos groupes de champs spécifiques au commerce. Pour obtenir des instructions détaillées sur la manière d’ajouter des groupes de champs spécifiques à Commerce à votre schéma XDM, consultez le guide sur [ajout de groupes de champs à un schéma XDM](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html).
 * Une fois votre schéma configuré, vous devez créer un jeu de données basé sur votre nouveau schéma. Ce jeu de données contiendra alors la variable [!DNL Commerce] données que vous envoyez. Pour obtenir des instructions détaillées sur la création d’un jeu de données pour [!DNL Commerce] data, lisez le guide sur [envoi de données à l’Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/experience-cloud/platform.html#create-a-dataset).
 * Créez ensuite un flux de données et sélectionnez le schéma XDM contenant vos groupes de champs spécifiques à Commerce. Pour plus d’informations sur les flux de données, consultez la section [présentation des jeux de données](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html?lang=fr).
 * Ensuite, vous devez connecter votre instance Adobe Commerce à l’événement [Connecteur Commerce Services](https://experienceleague.adobe.com/docs/commerce-merchant-services/user-guides/integration-services/saas.html). Cela permet à votre instance Commerce d’être déployée en tant que SaaS (Software as a Service).
-* Toutes les configurations ci-dessus étant terminées, vous pouvez désormais vous connecter à Experience Platform en configurant le connecteur Commerce Services et le connecteur Experience Platform à l’aide de l’événement [!DNL Commerce Admin]. Pour plus d’informations sur cette dernière étape, consultez le guide sur [connexion des données commerciales à l’Experience Platform](https://experienceleague.adobe.com/docs/commerce-merchant-services/experience-platform-connector/fundamentals/connect-data.html).
+* Toutes les configurations ci-dessus étant terminées, vous pouvez désormais vous connecter à Experience Platform en configurant le connecteur Commerce Services et le connecteur [!DNL Data Connection] à l’aide de la fonction [!DNL Commerce Admin]. Pour plus d’informations sur cette dernière étape, consultez le guide sur [connexion des données commerciales à l’Experience Platform](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/connect-data.html).

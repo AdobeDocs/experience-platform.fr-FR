@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 20b8433cee719329bce562069c328adb906697a0
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '913'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 1%
 ## Table des matières 
 
 * [Vue d’ensemble](./overview.md)
+* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
 * [Exemples de scénarios](./example-scenarios.md)
 * [Identity Service et Real-time Customer Profile](identity-and-profile.md)
 * [Logique de liaison d’identités](./identity-linking-logic.md)
@@ -39,13 +40,12 @@ Pour plus d’informations sur les scénarios de cas d’utilisation des règles
 
 Avec les règles de liaison de graphiques d’identités, vous pouvez :
 
-* Configurez des limites pour empêcher la fusion de deux identifiants de personnes disparates dans un graphique d’identités, de sorte qu’un seul graphique d’identités ne représente qu’une seule personne.
-   * Les limites que vous configurez sont ensuite appliquées par l’algorithme d’optimisation des identités.
-* Configurez les priorités pour associer des événements en ligne conduits par la personne authentifiée à un utilisateur donné.
+* Créez un graphique d’identités/profil fusionné unique pour chaque utilisateur en configurant des espaces de noms (limites) uniques, ce qui empêchera deux identifiants de personnes disparates de se fusionner en un seul graphique d’identités.
+* Associer des événements authentifiés en ligne à la personne en configurant les priorités
 
 ### Limites
 
-Vous pouvez utiliser des limites d’espace de noms pour définir le nombre maximal d’identités pouvant exister dans un graphique en fonction d’un espace de noms donné. Vous pouvez, par exemple, définir votre graphique pour n’avoir qu’une seule identité avec un espace de noms d’identifiant CRM, ce qui empêche la fusion de deux identifiants de personne disparates dans le même graphique.
+Un espace de noms unique est un identifiant qui représente un individu, tel que l’identifiant CRM, l’identifiant de connexion et le courrier électronique haché. Si un espace de noms est désigné comme unique, un graphique ne peut avoir qu’une seule identité avec cet espace de noms (`limit=1`). Cela empêchera la fusion de deux identifiants de personnes disparates dans le même graphique.
 
 * Si aucune limite n’est configurée, il peut en résulter des fusions de graphiques indésirables, telles que deux identités avec un espace de noms d’identifiant CRM dans un graphique.
 * Si aucune limite n’est configurée, le graphique peut ajouter autant d’espaces de noms que nécessaire tant que le graphique se trouve dans les barrières de sécurité (50 identités/graphiques).
@@ -60,6 +60,8 @@ Voici une liste des implications de l’algorithme sur l’association d’évé
 * L’ECID sera associé au dernier utilisateur authentifié si les conditions suivantes sont remplies :
    * Si les identifiants CRM sont fusionnés par ECID (appareil partagé).
    * Si des limites sont configurées sur un seul identifiant CRM.
+
+Pour plus d’informations, lisez le document sur [algorithme d’optimisation des identités](./identity-optimization-algorithm.md).
 
 ### Priorité
 
@@ -106,6 +108,7 @@ Si les événements d’expérience suivants sont ingérés dans Experience Plat
 
 Pour plus d’informations sur les règles de liaison des graphiques d’identités, consultez la documentation suivante :
 
+* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
 * [Exemples de scénarios de configuration des règles de liaison de graphiques d’identités](./example-scenarios.md)
 * [Identity Service et Real-time Customer Profile](identity-and-profile.md)
 * [Logique de liaison d’identités](./identity-linking-logic.md)
