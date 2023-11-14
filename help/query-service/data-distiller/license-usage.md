@@ -2,9 +2,9 @@
 title: Surveillance de l’utilisation de la licence de requête par lots
 description: L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation de la licence Data Distiller de votre entreprise.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: a3a2377a873c0e54ba43a60e28f922e0cb9e9d01
+source-git-commit: f33629d73e9bc7273e6ee5170294618f3e9731a8
 workflow-type: tm+mt
-source-wordcount: '274'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ La variable [!UICONTROL Calculer les heures] ne s’applique qu’aux clients di
 
 >[!NOTE]
 >
->**Les données sont disponibles avec des restrictions.**: les données commencent le 1er octobre 2023 sans évolution.<br>La variable **renvoyer** de données à partir de la date de début de votre contrat est un travail en cours. Elle devrait être disponible d’ici la fin de l’année civile.
+>**La variable [!UICONTROL Calculer les heures] Les données sont disponibles avec des restrictions**: les données commencent le 1er octobre 2023 sans évolution.<br>La variable **renvoyer** de données à partir de la date de début de votre contrat est un travail en cours. Elle devrait être disponible d’ici la fin de l’année civile.
 
 ![Le tableau de bord de l’utilisation des licences avec la mesure Heures de calcul mise en surbrillance.](../images/data-distiller/compute-hours.png)
 
