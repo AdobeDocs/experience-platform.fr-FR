@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des jeux de données
 description: Découvrez comment exécuter des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 25f57b1bfbcb2ec95f88afb69386a10deb600125
+source-git-commit: 859b8432986e7426b8fdcfedf1242c3269eae5f1
 workflow-type: tm+mt
-source-wordcount: '2745'
+source-wordcount: '2769'
 ht-degree: 17%
 
 ---
@@ -264,6 +264,10 @@ Vous pouvez effectuer une sélection sur un seul **[!UICONTROL Identifiant de lo
 ![Les détails du lot sélectionné s’affichent. Cela inclut le nombre d’enregistrements ingérés, le nombre d’enregistrements ayant échoué, l’état du lot, la taille du fichier, les heures de début et de fin de l’ingestion, le jeu de données et les identifiants de lot, l’identifiant de l’organisation, le nom du jeu de données et les informations d’accès.](../images/datasets/user-guide/batch-overview.png)
 
 Si vous souhaitez supprimer le lot, sélectionnez **[!UICONTROL Supprimer le lot]** près du coin supérieur droit du tableau de bord. La suppression d’un lot supprime également ses enregistrements du jeu de données auquel le lot a été ingéré à l’origine.
+
+>[!NOTE]
+>
+>Si les données ingérées ont été activées pour Profile et traitées, la suppression d’un lot ne supprime pas ces données de la banque de profils.
 
 ![Le bouton Supprimer le lot est mis en surbrillance sur la page des détails du jeu de données.](../images/datasets/user-guide/delete-batch.png)
 
