@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;connexion e
 title: Création d’une connexion en continu d’API HTTP à l’aide de l’API Flow Service
 description: Ce tutoriel explique comment créer une connexion en continu à l’aide de la source d’API HTTP pour les données brutes et XDM à l’aide de l’API Flow Service.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 7ff297973f951d7bfd940983bf4fa39dcc9f1542
+source-git-commit: f94a51e22731977e120351c3b3598570666a624d
 workflow-type: tm+mt
-source-wordcount: '1544'
-ht-degree: 39%
+source-wordcount: '1552'
+ht-degree: 38%
 
 ---
 
@@ -21,8 +21,8 @@ Ce tutoriel utilise la méthode [[!DNL Flow Service] API](https://www.adobe.io/e
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): Le cadre normalisé selon lequel [!DNL Platform] organise les données d’expérience.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): cadre normalisé selon lequel [!DNL Platform] organise les données d’expérience.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
 
 En outre, la création d’une connexion en continu nécessite que vous disposiez d’un schéma XDM cible et d’un jeu de données. Pour savoir comment les créer, consultez le tutoriel sur [données d’enregistrement en continu](../../../../../ingestion/tutorials/streaming-record-data.md) ou du tutoriel sur [diffusion en continu de données de série temporelle](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
@@ -125,7 +125,7 @@ Une réponse réussie renvoie un état HTTP 201 avec les détails de la nouvelle
 
 | Propriété | Description |
 | -------- | ----------- |
-| `id` | Le `id` de la connexion de base que vous venez de créer. |
+| `id` | La variable `id` de votre nouvelle connexion de base. |
 | `etag` | Identifiant attribué à la connexion, spécifiant la version de la connexion de base. |
 
 ### Connexion authentifiée
@@ -562,7 +562,6 @@ Une réponse réussie renvoie un état HTTP 201 avec les détails du nouveau flu
 }
 ```
 
-
 ## Données de publication à ingérer dans Platform {#ingest-data}
 
 Maintenant que vous avez créé votre flux, vous pouvez envoyer votre message JSON au point de terminaison de diffusion que vous avez précédemment créé.
@@ -576,6 +575,7 @@ POST /collection/{INLET_URL}
 | Paramètre | Description |
 | --------- | ----------- |
 | `{INLET_URL}` | Votre URL de point de terminaison de diffusion en continu. Vous pouvez récupérer cette URL en effectuant une requête de GET à la variable `/connections` point de terminaison tout en fournissant votre identifiant de connexion de base. |
+| `{FLOW_ID}` | Identifiant du flux de données de diffusion en continu de votre API HTTP. |
 
 **Requête**
 
@@ -584,9 +584,8 @@ POST /collection/{INLET_URL}
 >[!TAB XDM]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
   -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
   -d '{
         "header": {
           "schemaRef": {
@@ -625,9 +624,8 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
 >[!TAB Données brutes]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
   -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
   -d '{
       "name": "Johnson Smith",
       "location": {
