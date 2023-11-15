@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 09d17f6dad7bd7b1eda491e4fbd92e298243f3c3
+source-git-commit: e204e1cc70f0c87632f7d259194d34276f6fab72
 workflow-type: tm+mt
-source-wordcount: '2524'
+source-wordcount: '2571'
 ht-degree: 1%
 
 ---
@@ -63,19 +63,19 @@ Sélectionnez la variable **[!UICONTROL Icône Assistant]** de l’en-tête au p
 
 ![Page d’accueil de l’interface utilisateur Experience Platform avec l’icône Assistant sélectionnée.](./images/ai-assistant/ai-assistant.png)
 
-+++Utiliser le mode immersif
+<!-- +++Use immersive mode
 
-Pour utiliser [!DNL Immersive mode] sélectionnez l’icône mise au point dans la navigation de l’en-tête de l’assistant.
+To use [!DNL Immersive mode] select the focus icon in the header navigation of the Assistant.
 
 ![select-immersive](./images/ai-assistant/select-immersive.png)
 
-Une fenêtre contextuelle dédiée à l’assistant s’affiche au centre de votre écran.
+A dedicated pop-up interface for Assistant appears at the center of your screen.
 
 ![immersive-mode](./images/ai-assistant/immersive-mode.png)
 
 +++
 
-A partir de là, vous pouvez saisir votre question dans la zone de texte et dans l’assistant de requêtes pour connaître les concepts relatifs aux données ou aux audiences. Vous pouvez également poser des questions sur vos objets de données afin de mieux comprendre comment les utiliser dans vos cas d’utilisation respectifs.
+From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
 
 ### Exemple de cas pratique : utilisation de l’assistant pour accélérer le processus de création de schéma
 
@@ -97,25 +97,45 @@ Une réponse donnée fournit des liens hypertexte vers les entités référencé
 
 L’assistant vous permet de valider votre réponse en affichant sa source. Les liens vers la documentation sont fournis pour les questions de concept, tandis que les questions d’utilisation des données peuvent être vérifiées avec une requête SQL qui montre comment la réponse a été calculée.
 
-![Options fournies par l’assistant après le renvoi d’une réponse.](./images/ai-assistant/options-post-answer.png)
-
-#### Suggestions connexes
-
-Vous pouvez également approfondir le sujet de votre requête en sélectionnant l’une des suggestions associées fournies par l’assistant.
-
-![Suggestions connexes.](./images/ai-assistant/related-suggestions.png)
+![Options fournies par l’assistant après le renvoi d’une réponse.](./images/ai-assistant/options.png)
 
 #### Question de relance
 
++++Sélectionner pour afficher un exemple de question de relance
+
 Vous pouvez en savoir plus sur un sujet particulier en posant une question suivante. Dans l’exemple suivant, on demande à l’assistant comment eventType peut être utilisé dans la segmentation.
 
-![Une question et une réponse s’affichent ensuite dans l’assistant d’Experience Platform.](./images/ai-assistant/follow-up-answer.png)
+![Une question et une réponse s’affichent ensuite dans l’assistant d’Experience Platform.](./images/ai-assistant/follow-up-question.png)
+
++++
 
 #### Question d’utilisation des données
 
++++Sélectionner pour afficher un exemple de question d’utilisation des données
+
 Vous pouvez également poser des questions à l’assistant concernant l’utilisation de vos données. Pour toute question concernant l’utilisation des données, vous devez être dans un environnement de test actif afin que l’assistant puisse répondre à votre requête.
 
+Pour les réponses qui impliquent des informations sur l’utilisation des données, l’assistant fournit des liens vers les entités en question. En outre, l’assistant vous fournit une explication sur la façon dont il a calculé sa réponse.
+
 ![Une question sur l’utilisation des données, qui demande combien de segments un utilisateur possède.](./images/ai-assistant/data-usage-question.png)
+
++++
+
+#### Utilisation de la saisie automatique
+
++++Sélectionner pour afficher un exemple de saisie automatique
+
+Vous pouvez utiliser la fonction de saisie semi-automatique pour recevoir la liste des objets de données qui existent dans votre environnement de test. Les recommandations de saisie semi-automatique sont disponibles pour les domaines suivants : segments, schémas, jeux de données, sources et destinations.
+
+Pour utiliser la saisie automatique, saisissez un symbole plus (**`+`**) dans le cadre de votre question. Vous pouvez également sélectionner le symbole plus (**`+`**) dans la zone de saisie de texte. Ensuite, une fenêtre s’affiche avec une liste des objets de données recommandés présents dans votre environnement de test.
+
+![](./images/ai-assistant/autocomplete-options.png)
+
+Sélectionnez ensuite l&#39;objet de données à interroger pour terminer votre question, puis envoyez votre question.
+
+![](./images/ai-assistant/autocomplete-question.png)
+
++++
 
 ## Portée
 
@@ -168,13 +188,9 @@ Vous pouvez vérifier la réponse renvoyée par l’assistant de différentes ma
 
 À chaque réponse, l’assistant vous fournit des citations auxquelles vous pouvez vous référer à des fins de vérification ou d’informations supplémentaires.
 
-Sélectionner **[!UICONTROL Afficher la source]** pour obtenir la liste des liens vers la documentation à laquelle l’assistant référence pour calculer sa réponse.
+Sélectionner **[!UICONTROL Afficher la source]** pour obtenir la liste des liens vers la documentation à laquelle l’assistant référence pour calculer sa réponse. Lorsque vous sélectionnez un lien vers la documentation référencée, vous accédez à la section correspondante de cette page, avec les informations spécifiques en surbrillance.
 
-![Liens vers la source affichée dans l’assistant.](./images/ai-assistant/sources.png)
-
-Pour les réponses qui impliquent des informations sur l’utilisation des données, l’assistant fournit des liens vers les entités en question. En outre, l’assistant vous fournit une explication sur la façon dont il a calculé sa réponse.
-
-![explication](./images/ai-assistant/explanation.png)
+![Liens vers la source affichée dans l’assistant.](./images/ai-assistant/show-sources.png)
 
 ## Fournir des commentaires
 
@@ -208,7 +224,7 @@ Sélectionnez l’icône de menu déroulant pour fournir des commentaires sur le
 
 Sélectionnez l’icône d’indicateur pour fournir d’autres rapports sur votre expérience à l’aide de l’assistant.
 
-![La fenêtre des résultats du rapport.](./images/ai-assistant/report-results.png)
+![La fenêtre des résultats du rapport.](./images/ai-assistant/flag.png)
 
 >[!ENDTABS]
 
