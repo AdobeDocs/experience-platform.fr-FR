@@ -3,10 +3,10 @@ keywords: Experience Platform;identité;service d’identité;dépannage;garde-f
 title: Barrières de sécurité pour Identity Service
 description: Ce document fournit des informations sur l’utilisation et les limites de taux pour les données Identity Service afin de vous aider à optimiser l’utilisation du graphique d’identités.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 01fe1dd1d7df31458d4175c25928bfd12e01d654
+source-git-commit: 614fc9af8c774a1f79d0ab52527e32b2381487fa
 workflow-type: tm+mt
-source-wordcount: '1171'
-ht-degree: 57%
+source-wordcount: '1233'
+ht-degree: 54%
 
 ---
 
@@ -32,6 +32,7 @@ Le tableau suivant décrit les limites statiques appliquées aux données d’id
 | Mécanisme de sécurisation | Limite | Notes |
 | --- | --- | --- |
 | Nombre d’identités dans un graphique | 50 | Lorsqu’un graphique comportant 50 identités liées est mis à jour, Identity Service applique un mécanisme « premier entré, premier sorti » et supprime l’identité la plus ancienne afin de libérer de l’espace pour la nouvelle identité. La suppression est basée sur le type d’identité et sur la date et l’heure. La limite est appliquée au niveau de la sandbox. Pour plus d’informations, consultez la section sur [compréhension de la logique de suppression](#deletion-logic). |
+| Nombre de liens vers une identité pour une ingestion par lots unique | 50 | Un seul lot peut contenir des identités anormales qui entraînent des fusions de graphiques indésirables. Pour éviter cela, Identity Service n’ingère pas d’identités déjà liées à 50 identités ou plus. |
 | Nombre d’identités dans un enregistrement XDM | 20 | Le nombre minimum d’enregistrements XDM requis est de deux. |
 | Nombre d’espaces de noms personnalisés | Aucun | Vous pouvez créer autant d’espaces de noms personnalisés que vous le souhaitez. |
 | Nombre de caractères présents dans le nom d’affichage d’un espace de noms ou un symbole d’identité | Aucun | Le nombre de caractères dans le nom d’affichage d’un espace de noms ou un symbole d’identité est illimité. |
@@ -42,7 +43,7 @@ Le tableau suivant décrit les règles à suivre pour garantir la validation de 
 
 | Espace de noms | Règle de validation | Comportement du système en cas de violation de règle |
 | --- | --- | --- |
-| ECID | <ul><li>La valeur d’identité d’un ECID doit comporter exactement 38 caractères.</li><li>La valeur d’identité d’un ECID ne doit être composée que de chiffres.</li></ul> | <ul><li>Si la valeur d’identité d’un ECID ne comporte pas exactement 38 caractères, l’enregistrement est ignoré.</li><li>Si la valeur d’identité d’un ECID contient des caractères non numériques, l’enregistrement est ignoré.</li></ul> |
+| ECID | <ul><li>La valeur d’identité d’un ECID doit comporter exactement 38 caractères.</li><li>La valeur d’identité d’un ECID ne doit être composée que de chiffres.</li><li>Les valeurs d’identité ne peuvent pas être &quot;null&quot;, &quot;anonymous&quot;, &quot;invalid&quot; ou être une chaîne vide (par exemple : &quot;&quot;, &quot;&quot;, &quot;&quot;).</li></ul> | <ul><li>Si la valeur d’identité d’un ECID ne comporte pas exactement 38 caractères, l’enregistrement est ignoré.</li><li>Si la valeur d’identité d’un ECID contient des caractères non numériques, l’enregistrement est ignoré.</li><li>L’identité sera bloquée de l’ingestion.</li></ul> |
 | Non-ECID | La valeur d’identité ne peut pas dépasser 1 024 caractères. | Le cas échéant, l’enregistrement est ignoré. |
 
 ### Ingestion des espaces de noms d’identité
@@ -114,6 +115,8 @@ Si vous souhaitez conserver vos événements authentifiés par rapport à l’id
 
 * [Configuration de la carte d’identité pour les balises Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Données d’identité dans le SDK Web Experience Platform](../edge/identity/overview.md#using-identitymap)
+
+
 
 ## Étapes suivantes
 
