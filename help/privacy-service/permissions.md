@@ -2,20 +2,14 @@
 title: Gérer les autorisations pour Privacy Service
 description: Découvrez comment gérer les autorisations utilisateur pour Adobe Experience Platform Privacy Service à l’aide d’Adobe Admin Console.
 exl-id: 6aa81850-48d7-4fff-95d1-53b769090649
-source-git-commit: 1e164166f58540cbaaa4ad789b10cdfc40fa8a70
+source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
 workflow-type: tm+mt
-source-wordcount: '1634'
-ht-degree: 100%
+source-wordcount: '1504'
+ht-degree: 95%
 
 ---
 
 # Gérer les autorisations pour Privacy Service
-
->[!IMPORTANT]
->
->Les autorisations pour Adobe Experience Platform Privacy Service ont été améliorées afin d’augmenter leur niveau de granularité. Ces modifications permettent aux administrateurs et administratrices de l’organisation d’accorder l’accès à plus d’utilisateurs et d’utilisatrices avec le rôle et le niveau d’autorisation souhaités.Les utilisateurs et utilisatrices de comptes techniques doivent mettre à jour leurs autorisations de Privacy Service, car cette mise à jour imminente constitue une modification irréversible.L’application de la modification de ces autorisations aura lieu le **13 avril 2023**. Consultez la documentation relative à la [migration des informations d’identification d’API héritées](#migrate-tech-accounts) pour obtenir des conseils sur la résolution de ce problème.
->
->Les comptes techniques sont disponibles pour les clientes et clients d’entreprise et créés via l’Adobe Developers Console. L’Adobe ID d’une personne titulaire de compte technique se termine par `@techacct.adobe.com`. Si vous ne savez pas si vous êtes titulaire d’un compte technique, contactez l’administrateur ou l’administratrice de votre organisation.
 
 L’accès à [Adobe Experience Platform Privacy Service](./home.md) est contrôlé par des autorisations granulaires en fonction du rôle dans Adobe Admin Console. En créant des profils de produit qui attribuent des autorisations à des groupes d’utilisateurs, vous pouvez déterminer qui a accès aux fonctionnalités de l’[Interface utilisateur](./ui/overview.md) et des [API](./api/overview.md) de Privacy Service.
 
@@ -53,17 +47,17 @@ Le tableau suivant décrit les autorisations disponibles pour Privacy Service a
 
 Pour gérer les autorisations de Privacy Service, connectez-vous à [Admin Console](https://adminconsole.adobe.com/) et sélectionnez **[!UICONTROL Produits]** dans la barre de navigation supérieure. À partir de là, sélectionnez **[!UICONTROL Adobe Experience Platform Privacy Service]**.
 
-![Image montrant la carte de produit de Privacy Service dans Admin Console.](./images/permissions/privacy-service-card.png)
+![Le Admin Console avec la carte de produit du Privacy Service est surligné.](./images/permissions/privacy-service-card.png)
 
 ### Sélectionner ou créer un profil de produit
 
 L’écran suivant affiche une liste des profils de produits disponibles pour Privacy Service sous votre organisation. S’il n’existe aucun profil de produit, sélectionnez **[!UICONTROL Nouveau profil]** pour en créer un. Si votre organisation compte plusieurs rôles ou groupes d’utilisateurs et d’utilisatrices nécessitant différents niveaux d’accès, vous devez créer un profil de produit distinct pour chacun d’eux.
 
-![Image montrant les profils de produit pour Privacy Service dans Admin Console.](./images/permissions/select-or-create-profile.png)
+![Le Admin Console avec le profil de produit du Privacy Service est mis en surbrillance.](./images/permissions/select-or-create-profile.png)
 
 Après avoir sélectionné un profil de produit, vous pouvez utiliser l’onglet **[!UICONTROL Autorisations]** pour démarrer la [modification des autorisations](#edit-permissions) pour le profil, ou sélectionner l’onglet **[!UICONTROL Utilisateurs]** pour démarrer l’[attribution d’utilisateurs](#assign-users) au profil.
 
-![Image montrant l’onglet Autorisations d’un profil de produit dans Admin Console.](./images/permissions/users-permissions-tabs.png)
+![Onglet Autorisations pour un Admin Console de profil de produit.](./images/permissions/users-permissions-tabs.png)
 
 ### Modifier les autorisations pour le profil {#edit-permissions}
 
@@ -71,25 +65,25 @@ Sur l’onglet **[!UICONTROL Autorisations]**, sélectionnez l’une des catégo
 
 Lors de l’édition des autorisations d’un profil, les autorisations disponibles sont répertoriées dans la colonne de gauche tandis que celles qui sont incluses dans le profil sont répertoriées dans la colonne de droite. Sélectionnez les autorisations répertoriées pour les déplacer entre les colonnes.
 
-![Image montrant les colonnes d’autorisations disponibles et incluses.](./images/permissions/edit-permissions.png)
+![Les colonnes d’autorisation disponibles et incluses.](./images/permissions/edit-permissions.png)
 
 Les autorisations sont organisées en catégories. Pour passer d’une catégorie à l’autre, sélectionnez la catégorie souhaitée dans le volet de navigation de gauche.
 
-![Image montrant la section [!UICONTROL Désinscription de la vente] sous autorisations.](./images/permissions/switch-category.png)
+![La variable [!UICONTROL Exclusion de la vente] sous autorisations.](./images/permissions/switch-category.png)
 
 Sélectionnez **[!UICONTROL Enregistrer]** une fois que vous avez terminé de configurer les autorisations.
 
-![Image montrant la configuration des autorisations en cours d’enregistrement pour le profil de produit.](./images/permissions/save-permissions.png)
+![Configuration des autorisations pour le profil de produit avec l’option Enregistrer mise en surbrillance.](./images/permissions/save-permissions.png)
 
 La vue Profil de produit réapparaît avec les autorisations ajoutées reflétées.
 
-![Image montrant les autorisations ajoutées pour le profil de produit.](./images/permissions/permissions-added.png)
+![Ajout d’autorisations pour le profil de produit.](./images/permissions/permissions-added.png)
 
 ### Attribution d’utilisateurs et d’utilisatrices au profil {#assign-users}
 
 Pour affecter des utilisateurs et utilisatrices au profil de produit (et leur accorder les autorisations configurées du profil), sélectionnez l’onglet **[!UICONTROL Utilisateurs]**, suivi de **[!UICONTROL Ajouter un utilisateur]**.
 
-![Image montrant l’onglet utilisateurs d’un profil de produit dans Admin Console.](./images/permissions/manage-users.png)
+![Onglet Utilisateurs d’un profil de produit dans Admin Console.](./images/permissions/manage-users.png)
 
 Pour plus d’informations sur la gestion des utilisateurs et utilisatrices pour un profil de produit, voir la [Documentation concernant Admin Console](https://helpx.adobe.com/fr/enterprise/using/manage-product-profiles.html).
 
