@@ -5,7 +5,7 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 source-git-commit: a49e0fe6c99f2874a9ca8403c4b69428826a6365
 workflow-type: tm+mt
 source-wordcount: '1416'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 
 **Fonctionnalités** :
 
-* Mise à niveau vers [AppMeasurement à la version 2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
+* Mise à niveau vers [AppMeasurement v2.25.0](https://github.com/adobe/appmeasurement/releases/tag/v2.25.0).
 
 
 ## 19 juillet 2023
@@ -32,7 +32,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 
 **Fonctionnalités** :
 
-* Mise à niveau vers [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
+* Mise à niveau vers [AppMeasurement v2.24.0](https://github.com/adobe/appmeasurement/releases/tag/v2.24.0).
 * Ajout d’une configuration facultative (paramètres par défaut de `decodeLinkParameters` = `false`) qui décode les URL de lien contenant des caractères codés sur deux octets.
 
 **Correctifs de bugs** :
