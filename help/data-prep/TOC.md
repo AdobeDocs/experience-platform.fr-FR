@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Guide de préparation des données
-user-guide-description: Préparez vos données pour l’ingestion dans Adobe Experience Platform et découvrez comment la préparation de données peut vous aider à mapper, transformer et valider les données dès aujourd’hui.
+user-guide-description: Préparez vos données pour l’ingestion dans Adobe Experience Platform et découvrez comment la préparation de données peut vous aider à mapper, transformer et valider les données dès aujourd’hui.
 feature: Data Prep
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '64'
-ht-degree: 60%
+ht-degree: 96%
 
 ---
 

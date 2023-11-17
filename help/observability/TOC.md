@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Guide des Insights d’observabilité
-user-guide-description: Découvrez comment surveiller les activités de Platform à l’aide de mesures statistiques et de notifications d’événement provenant de Adobe Experience Platform Observability Insights.
+user-guide-description: Découvrez comment surveiller les activités de Platform à l’aide de mesures statistiques et de notifications d’événement provenant d’Adobe Experience Platform Observability Insights.
 feature: Observability
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
 source-wordcount: '62'
-ht-degree: 67%
+ht-degree: 100%
 
 ---
 
