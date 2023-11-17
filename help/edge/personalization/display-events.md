@@ -1,9 +1,9 @@
 ---
 title: Gestion des événements d’affichage dans le SDK Web
-description: Cet article décrit les événements d’affichage et leur fonctionnement dans le SDK Web.
-source-git-commit: 221a9348803e111a1842b3abf2e74f7408da5994
+description: Cet article explique ce que sont les événements d’affichage et comment les utiliser dans le SDK Web.
+source-git-commit: da506cd5de69047e326790d0fae56f76c728e7a5
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
