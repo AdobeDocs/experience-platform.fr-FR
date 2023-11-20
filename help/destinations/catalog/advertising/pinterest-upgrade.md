@@ -3,14 +3,18 @@ title: Migration de la destination pinterest vers une nouvelle API. Action du cl
 description: Pinterest rend obsolète l’API de l’annonceur v4 actuellement utilisée par la destination Pinterest dans Real-Time CDP. Comprenez vos éléments d’action afin de passer facilement à la nouvelle API sans perturber vos campagnes Pinterest.
 hide: true
 hidefromtoc: true
-source-git-commit: dbbdb62c996466499b70990decba58ecaf1be901
+source-git-commit: 57097b785da3b516b5ce6670c0a376bd1d0fe479
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '748'
 ht-degree: 0%
 
 ---
 
 # Mise à niveau de la destination pinterest vers la nouvelle API. Action client requise d’ici le 15 décembre 2023
+
+>[!IMPORTANT]
+>
+>Les éléments d’action du client de cette page s’appliquent à vous si votre entreprise a configuré des flux de données pour exporter des données vers Pinterest avant le 16 novembre 2023, date à laquelle la variable **[!UICONTROL (Nouveau) Pinterest]** destination, à l’aide de la dernière API Pinterest, a été ajoutée au catalogue des destinations.
 
 ## Que se passe-t-il ?
 
@@ -26,7 +30,7 @@ Adobe publie une nouvelle carte de destination Pinterest qui utilise l’API Pin
 
 ## Dois-je faire quoi que ce soit pour que mes audiences activées fonctionnent ?
 
-Oui, une fois que l’Adobe a terminé la mise à niveau et publié la nouvelle destination Pinterest, vous devez vous reconnecter à Pinterest avec votre compte publicitaire Pinterest dans Real-Time CDP. Consultez les instructions détaillées ci-dessous.
+Oui, après le 16 novembre 2023, vous devez vous authentifier à la nouvelle destination Pinterest avec votre compte publicitaire Pinterest dans Real-Time CDP. Consultez les instructions détaillées ci-dessous.
 
 ### Réauthentification à Pinterest {#reauthenticate}
 
