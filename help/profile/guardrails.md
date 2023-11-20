@@ -1,18 +1,18 @@
 ---
-title: Barrières de sécurité par défaut pour les données de profil client en temps réel
+title: Barrières de sécurité par défaut pour la segmentation et les données de profil client en temps réel
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Adobe Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel. Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données de profil afin d’optimiser les performances du système.
+description: Découvrez les performances et les barrières de sécurité appliquées par le système pour les données de profil et la segmentation afin de garantir une utilisation optimale des fonctionnalités de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 554763cc444da0d1459b22f3f37d22b528b290e1
 workflow-type: tm+mt
-source-wordcount: '2153'
-ht-degree: 69%
+source-wordcount: '2202'
+ht-degree: 66%
 
 ---
 
-# Mécanismes de sécurisation par défaut pour les données [!DNL Real-Time Customer Profile]
+# Barrières de sécurité par défaut pour [!DNL Real-Time Customer Profile] données et segmentation
 
 Adobe Experience Platform vous permet de proposer des expériences cross-canal personnalisées basées sur des informations comportementales et des attributs du client sous la forme de profils client en temps réel. Pour prendre en charge cette nouvelle approche des profils, Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel.
 
@@ -108,16 +108,17 @@ Les mécanismes de sécurisation suivants se rapportent à la taille des donnée
 
 {style="table-layout:auto"}
 
-## Mécanismes de sécurisation de la segmentation
+## Mécanismes de sécurisation de la segmentation {#segmentation-guardrails}
 
 Les barrières de sécurité décrites dans cette section font référence au nombre et à la nature des audiences qu’une organisation peut créer dans un Experience Platform, ainsi qu’au mappage et à l’activation d’audiences vers des destinations.
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Audiences par environnement de test | 4 000 | Protecteur des performances | Une organisation peut avoir plus de 4 000 audiences au total, à condition qu’il y ait moins de 4 000 audiences dans chaque environnement de test individuel. Toute tentative de création d’audiences supplémentaires peut affecter les performances du système. |
-| Audiences Edge par environnement de test | 150 | Protecteur des performances | Une organisation peut avoir plus de 150 audiences de périphérie au total, à condition qu’il y ait moins de 150 audiences de périphérie dans chaque environnement de test individuel. Toute tentative de création d’audiences Edge supplémentaires peut avoir une incidence sur les performances du système. |
-| Audiences par environnement de test en flux continu | 500 | Protecteur des performances | Une organisation peut avoir plus de 500 audiences en continu au total, à condition qu’il y ait moins de 500 audiences en continu dans chaque environnement de test individuel. Toute tentative de création d’audiences en continu supplémentaires peut affecter les performances du système. |
+| Audiences par environnement de test | 4 000 | Protecteur des performances | Une organisation peut avoir plus de 4 000 audiences au total, à condition qu’il y ait moins de 4 000 audiences dans chaque environnement de test individuel. Toute tentative de création d’audiences supplémentaires peut affecter les performances du système. En savoir plus sur [création d&#39;audiences](/help/segmentation/ui/segment-builder.md) par le biais du créateur de segments. |
+| Audiences Edge par environnement de test | 150 | Protecteur des performances | Une organisation peut avoir plus de 150 audiences de périphérie au total, à condition qu’il y ait moins de 150 audiences de périphérie dans chaque environnement de test individuel. Toute tentative de création d’audiences Edge supplémentaires peut avoir une incidence sur les performances du système. En savoir plus sur [audiences de périphérie](/help/segmentation/ui/edge-segmentation.md). |
+| Audiences par environnement de test en flux continu | 500 | Protecteur des performances | Une organisation peut avoir plus de 500 audiences en continu au total, à condition qu’il y ait moins de 500 audiences en continu dans chaque environnement de test individuel. Toute tentative de création d’audiences en continu supplémentaires peut affecter les performances du système. En savoir plus sur [audiences en continu](/help/segmentation/ui/streaming-segmentation.md). |
 | Audiences par environnement de test par lot | 4 000 | Protecteur des performances | Une organisation peut avoir plus de 4 000 audiences par lots au total, à condition qu’il y ait moins de 4 000 audiences par lots dans chaque environnement de test individuel. Toute tentative de création d’audiences par lots supplémentaires peut affecter les performances du système. |
+| Audiences du compte par environnement de test | 50 | Barrière de sécurité mise en place par le système | Vous ne pouvez pas créer plus de 50 audiences de compte dans un environnement de test. Une fois que vous avez atteint 50 audiences dans un environnement de test, la variable **[!UICONTROL Créer une audience]** Le contrôle est désactivé lors de la création d’une audience de compte. En savoir plus sur [audiences de compte](/help/segmentation/ui/account-audiences.md). |
 
 {style="table-layout:auto"}
 

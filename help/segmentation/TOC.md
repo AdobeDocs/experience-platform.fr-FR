@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Guide de Segmentation Service
 user-guide-description: Créez des audiences à partir de vos données de profil client en temps réel à l’aide des définitions de segment générées par Adobe Experience Platform ou de sources externes.
 feature: Segments
-source-git-commit: dd6cb79431ed6c0bb2326e60f1de3a6a4e435ed6
+source-git-commit: 0063f08c16ca0be629684319856bb42d0dd1536d
 workflow-type: tm+mt
-source-wordcount: '182'
-ht-degree: 97%
+source-wordcount: '191'
+ht-degree: 94%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 97%
 
 - [Présentation de Segmentation Service](home.md)
 - [Types de données de segmentation](data-types.md)
+- [Mécanismes de sécurisation de la segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - API Segmentation {#api}
    - [Aperçu](api/overview.md)
    - [Prise en main](api/getting-started.md)
