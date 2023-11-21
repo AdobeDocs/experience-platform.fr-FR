@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: e204e1cc70f0c87632f7d259194d34276f6fab72
+source-git-commit: afc61a5809b1dfb59b87731d835cf8a1668f79df
 workflow-type: tm+mt
-source-wordcount: '2571'
+source-wordcount: '2183'
 ht-degree: 1%
 
 ---
@@ -121,6 +121,22 @@ Pour les réponses qui impliquent des informations sur l’utilisation des donn�
 
 +++
 
+#### Multi-tour
+
++++Sélectionner pour afficher un exemple de multi-tour
+
+Vous pouvez utiliser les fonctionnalités à plusieurs volets de l’assistant pour avoir une conversation plus naturelle au cours de votre expérience. L’assistant peut répondre à des questions de suivi, étant donné que le contexte peut être déduit d’une interaction antérieure.
+
+Dans l’exemple ci-dessous, l’assistant est invité à répertorier les segments existants dans l’organisation, comme suite à une requête antérieure sur le nombre total de segments.
+
+![](./images/ai-assistant/multi-turn-one.png)
+
+Ensuite, l’assistant reçoit une autre demande de suivi. Cette fois-ci, l’assistant répond en répertoriant les segments existants classés selon leur taille respective.
+
+![](./images/ai-assistant/multi-turn-two.png)
+
++++
+
 #### Utilisation de la saisie automatique
 
 +++Sélectionner pour afficher un exemple de saisie automatique
@@ -174,9 +190,9 @@ Vous devrez vous connecter à un environnement de test pour obtenir des informat
 
 | Type de question | Description | Exemples |
 | --- | --- | --- | 
-| Parenté des données | Suivi de l’utilisation d’un ou de plusieurs objets sur d’autres objets Experience Platform | <ul><li>Quels jeux de données utilisent ? {SCHEMA_NAME} schéma ?</li><li>Combien de jeux de données ont été ingérés à l’aide du même schéma ?</li><li>Quels jeux de données ont été utilisés dans les segments activés ?</li><li>Liste des schémas dont les attributs sont utilisés dans les segments activés.</li><li>Afficher les segments activés pour {DESTINATION_ACCOUNT_NAME} et ont plus de 1000 profils.</li><li>Afficher les attributs utilisés dans les segments activés qui ont été modifiés après janvier 2023.</li><li>Liste des schémas associés aux segments activés et créés au cours de l’année écoulée.</li></ul> |
-| Distribution et agrégations | Questions récapitulatives sur l’utilisation des objets Experience Platform | <ul><li>Quel est le pourcentage des segments activés ?</li><li>Combien de champs sont utilisés dans la segmentation ?</li><li>Quels segments sont activés pour le plus grand nombre de destinations ?</li><li>Liste des segments en double.</li><li>Afficher les segments activés pour {DESTINATION_ACCOUNT_NAME} et les classer par taille de profil.</li><li>Quel est le pourcentage des segments qui n’ont pas été activés mais qui comportent plus de 100 profils. Montrez-moi leurs noms.</li><li>Listez-moi les 5 premiers attributs utilisés dans les segments activés en fonction de leur occurrence.</li></ul> |
-| Recherche d’objet | Récupérez ou accédez à un objet Experience Platform ou à ses propriétés. | <ul><li>Les jeux de données auxquels aucun schéma n’est associé</li><li>Liste des attributs utilisés pour {SEGMENT_NAME}?</li><li>Indiquez-moi la liste des schémas dont le profil est activé mais qui n’ont pas été modifiés depuis leur création.</li><li>Quels segments ont été modifiés la semaine dernière ?</li><li>Listez-moi les segments qui ont les mêmes définitions de segment avec leur date de création.</li><li>Les jeux de données activés pour le profil et incluant le nombre de segments créés à partir de chaque jeu de données.</li><li>M’afficher la date de définition et de modification du segment de {SEGMENT_NAME}.</li></ul> |
+| Parenté des données | Suivi de l’utilisation d’un ou de plusieurs objets sur d’autres objets Experience Platform | <ul><li>Quels jeux de données utilisent ? {SCHEMA_NAME} schéma ?</li><li>Combien de jeux de données ont été ingérés à l’aide du même schéma ?</li><li>Quels jeux de données ont été utilisés dans les segments activés ?</li><li>Liste des schémas dont les attributs sont utilisés dans les segments activés.</li><li>Afficher les segments activés pour {DESTINATION_ACCOUNT_NAME} et ont plus de 1000 profils.</li><li>Afficher les attributs utilisés dans les segments activés qui ont été modifiés après janvier 2023.</li><li>Quels sont les jeux de données ingérés via ? {SOURCE_NAME}?</li><li>Les flux de données associés à {DATAFLOW_NAME}</li><li>Liste des schémas associés aux segments activés et créés au cours de l’année écoulée.</li></ul> |
+| Distribution et agrégations | Questions récapitulatives sur l’utilisation des objets Experience Platform | <ul><li>Quel est le pourcentage des segments activés ?</li><li>Combien de champs sont utilisés dans la segmentation ?</li><li>Quels segments sont activés pour le plus grand nombre de destinations ?</li><li>Liste des segments en double.</li><li>Afficher les segments activés pour {DESTINATION_ACCOUNT_NAME} et les classer par taille de profil.</li><li>Quel est le pourcentage des segments qui n’ont pas été activés mais qui comportent plus de 100 profils. Montrez-moi leurs noms.</li><li>Liste des 3 connecteurs source qui ingèrent des données dans mes jeux de données.</li><li>Listez-moi les 5 premiers attributs utilisés dans les segments activés en fonction de leur occurrence.</li></ul> |
+| Recherche d’objet | Récupérez ou accédez à un objet Experience Platform ou à ses propriétés. | <ul><li>Les jeux de données auxquels aucun schéma n’est associé</li><li>Liste des attributs utilisés pour {SEGMENT_NAME}?</li><li>Indiquez-moi la liste des schémas dont le profil est activé mais qui n’ont pas été modifiés depuis leur création.</li><li>Quels segments ont été modifiés la semaine dernière ?</li><li>Listez-moi les segments qui ont les mêmes définitions de segment avec leur date de création.</li><li>Les jeux de données activés pour le profil et incluant le nombre de segments créés à partir de chaque jeu de données.</li><li>Quels comptes sources sont associés au jeu de données XYZ ?</li><li>M’afficher la date de définition et de modification du segment de {SEGMENT_NAME}.</li></ul> |
 
 +++
 
@@ -237,56 +253,56 @@ Pour plus d’informations sur l’assistant d’Experience Platform, reportez-v
 ### Avertissements et restrictions
 
 La section suivante présente les mises en garde et les limites à prendre en compte lors de l’utilisation de l’assistant.
+<!-- 
+#### Conversational experience
 
-#### Expérience de conversation
-
-Lorsque vous interrogez l’assistant, vous devez tenir compte de plusieurs nuances relatives à l’expérience conversationnelle.
+You must consider several nuances regarding the conversational experience when querying the Assistant.
 
 >[!NOTE]
 >
->Ces limites sont temporaires et sont améliorées tout au long de l’alpha.
+>These limitations are temporary and are being improved upon throughout the course of the alpha.
 
 >[!BEGINTABS]
 
->[!TAB Impossible de déduire le contexte de la discussion préalable]
+>[!TAB Unable to infer context from prior discussion]
 
-Actuellement, l’assistant ne peut pas faire référence à des discussions antérieures comme contexte pour une question donnée. Consultez le tableau ci-dessous pour obtenir des exemples :
+The Assistant currently cannot reference prior discussions as context for a given question. See the table below for examples:
 
-| Question ambiguë | Effacer la question | Remarque |
+| Ambiguous question | Clear question | Note |
 | --- | --- | --- |
-| <ul><li>Première question : Qu’est-ce qu’un segment ?</li><li>Question de suivi : &quot;Y a-t-il différents types ?&quot;</li></ul> | <ul><li>Première question : Qu’est-ce qu’un segment ?</li><li>Question de suivi : &quot;Existe-t-il différents types de **segments**?&quot;</li></ul> | L&#39;assistant ne peut pas déduire ce que &quot;eux&quot; signifie. |
-| <ul><li>Première question : Qu’est-ce qu’un segment ?</li><li>Question de relance : &quot;Pouvez-vous développer plus ?&quot;</li></ul> | <ul><li>Première question : Qu’est-ce qu’un segment ?</li><li>Question de suivi : &quot;Expliquer en détail un segment&quot;</li></ul> | L’assistant ne peut pas référencer intelligemment la documentation en fonction de &quot;plus&quot;. |
-| <ul><li>Première question : Qu’est-ce qu’un segment ?</li><li>Question de relance : &quot;Pouvez-vous me donner un exemple ?&quot;</li></ul> | <ul><li>Première question : Qu’est-ce qu’un segment ?</li><li>Question suivante : &quot;Pouvez-vous me donner un exemple de segment ?&quot;</li></ul> | L’assistant ne peut pas déduire ce que vous souhaitez d’un exemple. |
-| <ul><li>Première question : &quot;Qu’est-ce qu’un segment par lot ?&quot;</li><li>Question de suivi : &quot;Comment se compare-t-il à un segment en continu ?&quot;</li></ul> | <ul><li>Première question : &quot;Qu’est-ce qu’un segment par lot ?&quot;</li><li>Question de suivi : &quot;Pouvez-vous comparer un segment en continu à un segment par lot ?&quot;</li></ul> | L’assistant ne peut pas déduire à quel &quot;il&quot; fait référence et ne peut donc pas comparer le segment de diffusion en continu. |
-| <ul><li>Première question : &quot;Combien de segments ai-je ?&quot;</li><li>Question suivante : &quot;Combien d’entre eux utilisent Facebook comme destination ?&quot;</li></ul> | <ul><li>Première question : &quot;Combien de segments ai-je ?&quot;</li><li>Question de relance : &quot;Combien de segments que j’ai utilisent Facebook comme destination ?&quot;</li></ul> | L’assistant ne peut pas déduire à quoi &quot;eux&quot; fait référence. |
+| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of them?"</li></ul>| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Are there different types of **segments**?"</li></ul> | The Assistant cannot infer what "them" means. |
+| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you elaborate more?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Explain what a segment is in depth"</li></ul> | The Assistant cannot intelligently reference documentation based on "more". |
+| <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of one?"</li></ul> | <ul><li>First question: "What is a segment?"</li><li>Follow up question: "Can you give me an example of a segment?"</li></ul> | The Assistant cannot infer what you want an example of.|
+| <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "How does it compare to a streaming segment?"</li></ul> | <ul><li>First question: "What is a batch segment?"</li><li>Follow up question: "Can you compare a streaming segment to a batch segment?"</li></ul> | The Assistant cannot infer what "it" is referring to and thus cannot compare the streaming segment. |
+| <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of them use Facebook as a destination?"</li></ul> | <ul><li>First question: "How many segments do I have?"</li><li>Follow up question: "How many of the segments that I have are using Facebook as a destination?"</li></ul> | The Assistant is cannot infer what "them" is referring to. |
 
 {style="table-layout:auto"}
 
->[!TAB Impossible de déduire le contexte d’une page]
+>[!TAB Unable to infer context from a page]
 
-Lorsque vous posez à l’assistant des questions sur un élément particulier de la page de l’interface utilisateur de l’Experience Platform sur lequel vous vous trouvez, vous devez définir clairement l’élément spécifique dans votre question.
+When asking the Assistant about a particular element of the Experience Platform UI page that you are on, you must clearly define the specific element within your question. 
 
-| Question ambiguë | Effacer la question | Remarque |
+| Ambiguous question | Clear question | Note |
 | --- | --- | --- |
-| &quot;Qu&#39;est-ce que ça fait ?&quot; | &quot;What {PAGE_NAME} le faire ? | L’assistant ne peut pas déduire à quoi &quot;ceci&quot; fait référence. Vous devez fournir l’élément de page spécifique sur lequel vous interrogez. |
-| &quot;Pourquoi ne le sauverait-il pas ?&quot; | &quot;Pourquoi ne puis-je pas enregistrer un nouvel environnement de test appelé {NAME}?&quot; | L’assistant ne peut pas déduire à quel &quot;il&quot; fait référence et ne peut pas savoir que vous rencontrez des problèmes avec une entité. |
+| "What does this do?" | "What does {PAGE_NAME} do? | The Assistant cannot infer what "this" is referring to. You must provide the specific page element that you are querying about. |
+| "Why won't it save?" | "Why can't I save a new sandbox called {NAME}?" | The Assistant cannot infer what "it" is referring to and cannot know that you are having issues with an entity. |
 
 {style="table-layout:auto"}
 
-En outre, l’assistant ne peut répondre qu’aux questions concernant les messages d’erreur, étant donné que l’erreur est documentée dans Experience League.
+Furthermore, the Assistant can only answer questions regarding error messages, given that the error is documented in Experience League.
 
->[!TAB Ambiguïté]
+>[!TAB Ambiguity]
 
-Vous devez formuler clairement vos questions et les placer dans un produit, une application ou un domaine, car l’assistant ne peut actuellement pas les résoudre.
+You must phrase your questions clearly and scope them within a product, application, or domain, as the Assistant currently cannot disambiguate questions.
 
-| Question ambiguë | Effacer la question | Remarque |
+| Ambiguous question | Clear question | Note |
 | --- | --- | --- |
-| &quot;Comment créer un filtre ? | Comment créer un filtre dans le langage de requête de profil ? | Vous devez spécifier la fonction pour laquelle vous effectuez un filtrage, car diverses fonctionnalités Experience Platform prennent en charge le filtrage. |
-| &quot;Comment puis-je commencer ? | Comment commencer à utiliser les destinations ? | Vous devez clarifier vos objectifs et votre cas d’utilisation, car des concepts trop généraux peuvent donner lieu à des réponses génériques ou inutilement spécifiques. |
+| "How do I create a filter? | How do I create a filter in Profile Query Language? | You must specify the feature that which you are filtering for because a variety of Experience Platform features support filtering. |
+| "How do I get started? | How do I get started using destinations? | You must provide clarity on your goals and use case because overly broad concepts may result in generic or unnecessarily specific answers. |
 
 {style="table-layout:auto"}
 
->[!ENDTABS]
+>[!ENDTABS] -->
 
 #### Petite discussion limitée
 
