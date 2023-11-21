@@ -3,10 +3,10 @@ title: Personnalisation hybride à l’aide du SDK Web et de l’API Edge Networ
 description: Cet article explique comment utiliser le SDK Web conjointement avec l’API du serveur pour déployer la personnalisation hybride sur vos propriétés web.
 keywords: personnalisation;hybride;api du serveur;côté serveur;implémentation hybride;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 33e69f34934b505e2ee434bc957f278486a97642
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 99%
+source-wordcount: '846'
+ht-degree: 96%
 
 ---
 
@@ -70,7 +70,7 @@ Lorsque vous [configurez un flux de données](../../datastreams/overview.md) dan
 L’exemple de cette mise en œuvre utilise deux flux de données différents :
 
 * Un flux de données configuré pour Analytics. Ce flux de données est utilisé pour les interactions du SDK Web.
-* Un second flux de données sans configuration Analytics. Ce flux de données est utilisé pour les demandes d’API du serveur.
+* Un second flux de données sans configuration Analytics. Ce flux de données est utilisé pour les demandes d’API du serveur. Vous devez configurer ce flux de données avec la même configuration de destination que celle que vous avez configurée pour Analytics.
 
 Ainsi, la requête côté serveur n’enregistre aucun événement Analytics, contrairement aux requêtes côté client. Cela entraîne un comptage précis des requêtes Analytics.
 
