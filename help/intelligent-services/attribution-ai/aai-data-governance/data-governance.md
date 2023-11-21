@@ -5,14 +5,14 @@ feature: Attribution AI
 title: Gouvernance des données dans Attribution AI
 description: Adobe Experience Platform fournit plusieurs services et outils qui vous permettent de contrôler en toute confiance vos données d’expérience collectées afin de respecter vos pratiques commerciales, vos obligations légales et votre processus de développement.
 exl-id: 70b04061-0cb0-4b3e-9dfa-d49cc0ef1be0
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 100%
+source-wordcount: '224'
+ht-degree: 98%
 
 ---
 
-# Attribution AI et gouvernance des données
+# Attribution AI et gouvernance des données dans Attribution AI
 
 Tous les paramètres liés à la gouvernance des données dans Attribution AI sont hérités d’Adobe Experience Platform.
 

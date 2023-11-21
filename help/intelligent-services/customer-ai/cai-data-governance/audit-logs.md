@@ -3,14 +3,14 @@ keywords: insights;IA dédiée aux clients;insights sur l’IA dédié aux clien
 title: Vue d’ensemble des journaux d’audit dans l’IA dédiée aux clients
 description: Découvrez comment afficher et gérer les journaux d’audit dans l’IA dédiée aux clients.
 exl-id: f5b2d0b0-b6ae-4ccc-b4c9-ac9cc6078d81
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 100%
+source-wordcount: '282'
+ht-degree: 98%
 
 ---
 
-# Journaux d’audit
+# Journaux d’audit dans Customer AI
 
 Pour accroître la transparence et la visibilité des activités exécutées dans le système, l’activité des utilisateurs et des utilisatrices dans le workflow de l’IA dédiée aux clients est désormais capturée dans les journaux d’audit afin de comprendre toute modification apportée par les utilisateurs et les utilisatrices aux modèles de l’IA dédiée aux clients. Ces journaux constituent un journal d’audit qui peut vous aider à résoudre les problèmes et à respecter efficacement les politiques de gestion des données de l’entreprise et les exigences réglementaires.  Si vous êtes soumis à la Loi sur la responsabilité et la portabilité de l’assurance-maladie (HIPAA) et que vous créez, recevez, conservez ou transmettez des données personnelles sensibles autorisées par le biais de l’IA dédiée à lattribution ou de l’IA dédiée aux clients, vous êtes responsable de l’exécution d’une BAA avec Adobe et une licence Healthcare Shield.
 

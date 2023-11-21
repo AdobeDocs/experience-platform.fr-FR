@@ -3,14 +3,14 @@ keywords: insights;ia dédiée à l’attributon;insights sur l’IA dédiée à
 title: Clés gérées par le client
 description: Découvrez comment configurer les clés gérées par le client ou la cliente pour l’IA dédiée à l’attribution.
 exl-id: c00bf1a0-cc4c-4a34-83f1-d93829576866
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 100%
+source-wordcount: '171'
+ht-degree: 98%
 
 ---
 
-# Clés gérées par le client
+# Clés gérées par le client dans Attribution AI
 
 L’IA dédiée à l’attribution propose l’option aux clientes et clients [Healthcare Shield](https://www.adobe.com/trust/compliance/hipaa-ready.html) et Privacy &amp; Security Shield d’utiliser les clés gérées par les clientes et clients Azure (CMK) et de les appliquer à vos données IA dédiée à l’attribution. Le processus de configuration est similaire à la [configuration des CMK dans Adobe Experience Platform](../../../landing/governance-privacy-security/customer-managed-keys/overview.md) et vous pouvez y suivre les étapes décrites.
 
