@@ -3,9 +3,9 @@ title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Plat
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1833'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -20,9 +20,9 @@ Contient la version 2.19.1 du SDK web d’Adobe Experience Platform.
 
 **Correctifs et améliorations**
 
-* Correction d’un problème en raison duquel le tableau de propositions disponible dans `Send event complete` était toujours vide.
+* Correction d’un problème en raison duquel le tableau de propositions disponible dans les événements `Send event complete` était toujours vide.
 
-## Version 2.21.2 - 1 novembre 2023
+## Version 2.21.2 - 1er novembre 2023
 
 **Nouvelles fonctionnalités**
 

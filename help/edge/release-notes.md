@@ -4,9 +4,9 @@ description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe�
 keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1678'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 **Correctifs et améliorations**
 
-* Correction d’un problème en raison duquel le tableau de propositions renvoyait de `sendEvent` Les appels étaient toujours vides.
+* Correction d’un problème en raison duquel le tableau de propositions renvoyé depuis les appels `sendEvent` était toujours vide.
 
 ## Version 2.19.0 - 1 novembre 2023
 
