@@ -2,8 +2,9 @@
 keywords: gouvernance des données rtcdp;gouvernance des données rtcdp;gouvernance des données de profil client en temps réel
 title: Présentation de la gouvernance des données
 description: La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données.
+feature: Get Started, Data Governance
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 32%
@@ -16,7 +17,7 @@ ht-degree: 32%
 
 La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Il joue un rôle clé dans Real-Time CDP. Il vous permet de définir des stratégies d’utilisation, de classer vos données en fonction de ces stratégies et de rechercher les violations de stratégie lors de l’exécution de certaines actions marketing.
 
-Real-Time CDP repose sur Adobe Experience Platform. Par conséquent, la plupart des fonctionnalités de gouvernance des données sont abordées dans la section [!DNL Experience Platform] documentation. Ce document est destiné à compléter la section [Présentation de la gouvernance des données](../../data-governance/home.md) pour [!DNL Experience Platform]et décrit les fonctionnalités de gouvernance disponibles dans Real-Time CDP. Les sujets suivants sont abordés :
+Real-Time CDP repose sur Adobe Experience Platform. Par conséquent, la plupart des fonctionnalités de gouvernance des données sont abordées dans la section [!DNL Experience Platform] la documentation. Ce document est destiné à compléter la section [Présentation de la gouvernance des données](../../data-governance/home.md) pour [!DNL Experience Platform]et décrit les fonctionnalités de gouvernance disponibles dans Real-Time CDP. Les sujets suivants sont abordés :
 
 * [Application des libellés d’utilisation aux données ](#labels)
 * [Gestion des politiques d’utilisation des données ](#policies)
@@ -34,7 +35,7 @@ Vous pouvez définir des restrictions d’utilisation des données sur une desti
 
 >[!NOTE]
 >
->Pour plus d’informations sur les actions marketing et leur utilisation dans les stratégies d’utilisation des données, voir [présentation des stratégies d’utilisation des données](../../data-governance/policies/overview.md) dans le [!DNL Experience Platform] documentation.
+>Pour plus d’informations sur les actions marketing et leur utilisation dans les stratégies d’utilisation des données, voir [présentation des stratégies d’utilisation des données](../../data-governance/policies/overview.md) dans le [!DNL Experience Platform] la documentation.
 
 La définition d’actions marketing sur les destinations vous permet de vous assurer que les profils ou segments envoyés vers ces destinations sont conformes aux politiques d’utilisation des données. Vous devez donc ajouter des actions marketing appropriées à vos destinations en fonction des besoins de votre entreprise pour appliquer des restrictions de stratégie à l’activation.
 
@@ -44,13 +45,13 @@ Les actions marketing ne peuvent être sélectionnées que lors de la configurat
 
 Les politiques d’utilisation des données doivent être définies et activées pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur les données de Real-Time CDP. Voir la section &quot;Stratégies d’utilisation des données&quot; dans la section [!DNL Experience Platform] [Présentation de la gouvernance des données](../../data-governance/home.md) pour plus d’informations.
 
-Adobe Experience Platform propose plusieurs politiques principales pour les cas d’utilisation courants de l’expérience client. Ces stratégies peuvent être visualisées dans l’interface utilisateur en accédant à la variable **[!UICONTROL Stratégies]** l’espace de travail et en sélectionnant **[!UICONTROL Parcourir]** . Voir [guide d’utilisation des stratégies](../../data-governance/policies/user-guide.md) dans le [!DNL Experience Platform] documentation pour obtenir des instructions plus détaillées sur l’utilisation des stratégies dans l’interface utilisateur, y compris sur la création de vos propres stratégies personnalisées.
+Adobe Experience Platform propose plusieurs politiques principales pour les cas d’utilisation courants de l’expérience client. Ces stratégies peuvent être visualisées dans l’interface utilisateur en accédant à la **[!UICONTROL Stratégies]** l’espace de travail et en sélectionnant **[!UICONTROL Parcourir]** . Voir [guide d’utilisation des stratégies](../../data-governance/policies/user-guide.md) dans le [!DNL Experience Platform] documentation pour obtenir des instructions plus détaillées sur l’utilisation des stratégies dans l’interface utilisateur, y compris sur la création de vos propres stratégies personnalisées.
 
 ## Appliquer des stratégies d’utilisation des données {#enforce}
 
 Une fois que les données sont étiquetées et que les politiques d’utilisation sont définies, vous pouvez appliquer les politiques d’utilisation des données. Lors de l’activation des segments d’audience vers des destinations dans Real-Time CDP, la gouvernance des données applique automatiquement les stratégies d’utilisation en cas de violation.
 
-Consultez le document sur [application automatique des stratégies](../../data-governance/enforcement/auto-enforcement.md) pour plus d’informations.
+Consultez le document sur [application automatique de la stratégie](../../data-governance/enforcement/auto-enforcement.md) pour plus d’informations.
 
 ## Étapes suivantes
 

@@ -2,27 +2,29 @@
 title: Comptes associés dans Real-Time CDP B2B Edition
 type: Documentation
 description: Présentation et informations supplémentaires sur la fonction des comptes associés dans Real-Time CDP Experience Platform B2B.
+feature: Get Started, Profiles, B2B
+badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 5d1488b26391d8ac758a2968194a6d070ad5b561
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '430'
-ht-degree: 22%
+source-wordcount: '441'
+ht-degree: 21%
 
 ---
 
 # Comptes associés dans Real-Time CDP B2B Edition
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Les entreprises B2B ont souvent leurs informations client stockées dans plusieurs systèmes, chacun ne contenant que des données partielles, voire conflictuelles, pour la même entité commerciale physique. Il est donc très difficile d’avoir une visualisation précise de leurs clients, ce qui réduit l’efficacité et l’efficience de leurs efforts de marketing et de vente B2B.
 
-| Identifiant | Nom | Site web | Secteur industriel | State (État) | Téléphone | A une opportunité ouverte avec quantité > `$1 million` |
+| Identifiant | Nom | Site web | Secteur industriel | État | Téléphone | A une opportunité ouverte avec quantité > `$1 million` |
 |---|---|---|---|---|---|---|
-| 1 | Acme | acme.com | Logiciels | CA | (408)536-6000 |  |
+| 1 | Acme | acme.com | Logiciels | CA | (408)536-6000 |   |
 | 2 | Acme | acm.com | Logiciels | CA | 4085366000 | x |
-| 3 | Acme Inc |  |  | CA | (408)5366000 |  |
+| 3 | Acme Inc |   |   | CA | (408)5366000 |   |
 | 4 | Service de conseil Acme | `http://www.acme.com/consulting` | Conseil technologique | NY | (212)471-0904 | x |
-| 5 | Acm IT |  |  | CA |  |  |
+| 5 | Acm IT |   |   | CA |   |   |
 
 {style="table-layout:auto"}
 
@@ -36,11 +38,11 @@ Utilisez cette fonction pour afficher les profils de compte associés pour un pr
 
 Pour activer le service, sélectionnez **[!UICONTROL Profils]** dans la barre latérale suivie de **[!UICONTROL Paramètres]**.
 
-![Interface utilisateur de l’Experience Platform qui met en surbrillance les profils et les paramètres.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+![Interface utilisateur de l’Experience Platform qui surligne les profils et les paramètres.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
 
 Sélectionner le bouton bascule en regard de [!UICONTROL Activation des comptes associés] pour activer le service, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
-![L’écran Paramètres du compte met en surbrillance la bascule et l’enregistrement.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
+![L’écran Paramètres du compte met en surbrillance le bouton bascule et l’enregistrement.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
 ## Fonctionnement {#how-it-works}
 

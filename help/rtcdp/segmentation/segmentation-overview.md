@@ -2,8 +2,9 @@
 keywords: segmentation;segmentation rtcdp;segmentation de real time customer data platform
 title: Service de segmentation de Real-Time Customer Data Platform
 description: Real-Time Customer Data Platform d’Adobe repose sur Adobe Experience Platform et utilise de nombreux services et fonctionnalités d’Experience Platform. Grâce au service de segmentation, vous pouvez proposer un marketing sur mesure en divisant vos clients en groupes restreints aux caractéristiques similaires.
+feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 100%
@@ -43,7 +44,7 @@ L’IA dédiée aux clients se trouve dans l’onglet **[!UICONTROL Services]** 
 
 ### Prise en main de Customer AI
 
-Pour commencer à utiliser l’IA dédiée aux clients, vous devez suivre le [tutoriel sur la préparation des données](../../intelligent-services/data-preparation.md) et configurer le schéma d’entrée en fonction de votre cas d’utilisation. Ensuite, vous devrez [configurer une instance IA dédiée aux clients](../../intelligent-services/customer-ai/user-guide/configure.md). Après la configuration d’une instance, un modèle est généré, où vous pouvez [afficher vos insights et vos scores](../../intelligent-services/customer-ai/user-guide/discover-insights.md). En utilisant les données générées à partir de votre modèle, vous pouvez créer des segments pour l’activation pilotée par les données.
+Pour commencer à utiliser l’IA dédiée aux clients, vous devez suivre le [tutoriel sur la préparation des données](../../intelligent-services/data-preparation.md) et configurer le schéma d’entrée en fonction de votre cas d’utilisation. Ensuite, vous devrez [configurer une instance IA dédiée aux clients](../../intelligent-services/customer-ai/user-guide/configure.md). Après la configuration d’une instance, un modèle est généré, où vous pouvez [afficher vos informations et vos scores](../../intelligent-services/customer-ai/user-guide/discover-insights.md). En utilisant les données générées à partir de votre modèle, vous pouvez créer des segments pour l’activation pilotée par les données.
 
 Pour en savoir plus sur l’IA dédiée aux clients, commencez par consulter la [présentation de l’IA dédiée aux clients](../../intelligent-services/customer-ai/overview.md). En outre, la vidéo suivante montre comment l’IA dédiée aux clients enrichit les profils clients avec des propensions basées sur l’IA et renforce la segmentation et le ciblage des clients.
 

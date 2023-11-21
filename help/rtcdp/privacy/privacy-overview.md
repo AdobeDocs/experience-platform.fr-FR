@@ -2,8 +2,9 @@
 keywords: gouvernance des données rtcdp;gouvernance des données rtcdp;gouvernance des données et profil client en temps réel;rtcdp et confidentialité;rtcdp et confidentialité
 title: Confidentialité dans Adobe Real-Time Customer Data Platform
 description: Adobe Real-Time Customer Data Platform vous permet de rationaliser le processus de mise en conformité de vos opérations de données avec les règles de confidentialité.
+feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 100%

@@ -1,10 +1,12 @@
 ---
 title: Sources dans Real-time Customer Data Platform version B2B
-description: Présentation du rôle des sources dans l’édition B2B d’Adobe Real-time Customer Data Platform.
+description: Présentation du rôle des sources dans Adobe Real-time Customer Data Platform Édition B2B.
+feature: Sources, Data Ingestion, Get Started, B2B
+badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '261'
 ht-degree: 0%
 
 ---

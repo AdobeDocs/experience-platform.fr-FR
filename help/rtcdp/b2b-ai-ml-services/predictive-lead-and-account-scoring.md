@@ -2,11 +2,13 @@
 title: Score prédictif de piste et de compte dans Real-Time CDP B2B
 type: Documentation
 description: Présentation et informations supplémentaires sur la fonctionnalité de notation de compte et de piste prédictive dans la plateforme CDP B2B Experience Platform.
+feature: Profiles, B2B
+badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: d3afbabb-005d-4537-831a-857c88043759
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '858'
-ht-degree: 12%
+source-wordcount: '869'
+ht-degree: 14%
 
 ---
 
@@ -78,7 +80,7 @@ Plusieurs modèles sont pris en charge, avec les limites strictes suivantes déf
 
 Les exigences de qualité des données sont les suivantes :
 
-* Idéalement, il existe deux ans de données les plus récentes à des fins de formation.
+* Idéalement, il y a deux ans de données les plus récentes à des fins de formation.
 * La durée minimale de données requise est de six mois plus la fenêtre de prédiction.
 * Pour chaque objectif de prédiction, au moins 10 événements de conversion qualifiés sont requis.
 
@@ -88,7 +90,7 @@ Consultez la documentation pour plus d’informations sur la manière de [gestio
 
 ## Affichage des résultats prédictifs de piste et de notation de compte {#how-to-view}
 
-Après l’exécution de la tâche, les résultats sont enregistrés dans un nouveau jeu de données système pour chaque modèle sous le nom . `LeadsAI.Scores` - ***nom du score***. Chaque groupe de champs de score peut se trouver à l’adresse `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`.
+Après l’exécution de la tâche, les résultats sont enregistrés dans un nouveau jeu de données système pour chaque modèle sous le nom `LeadsAI.Scores` - ***nom du score***. Chaque groupe de champs de score peut se trouver à l’adresse `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`.
 
 | Attribut | Description |
 | --- | --- |
@@ -96,7 +98,7 @@ Après l’exécution de la tâche, les résultats sont enregistrés dans un nou
 | Percentile | Cette valeur fournit des informations concernant la performance d’un profil par rapport à d’autres profils aux notes similaires. Les percentiles sont compris entre 1 et 100. |
 | Type de modèle | Le type de modèle sélectionné indique s’il s’agit d’un score de personne ou de compte. |
 | Date de la note | Date à laquelle la notation a eu lieu. |
-| Facteurs d’influence | Raisons prévues de la probabilité de conversion d’un profil. Les facteurs se composent des attributs suivants :<ul><li>Code : Le profil ou l’attribut comportemental qui influence positivement le score prévu d’un profil.</li><li>Valeur : la valeur du profil ou de l’attribut comportemental.</li><li>Importance : Indique le poids que le profil ou l’attribut comportemental a sur le score prévu (faible, moyen, élevé).</li></ul> |
+| Facteurs d’influence | Raisons prévues de la probabilité de conversion d’un profil. Les facteurs se composent des attributs suivants :<ul><li>Code : le profil ou l’attribut comportemental qui influencent positivement le score prévu d’un profil.</li><li>Valeur : la valeur du profil ou de l’attribut comportemental.</li><li>Importance : indique le poids que le profil ou l’attribut comportemental a sur le score prévu (faible, moyen, élevé).</li></ul> |
 
 ### Affichage des scores du profil client
 
@@ -106,7 +108,7 @@ Sélectionnez ensuite le profil dans la liste.
 
 ![Profil client](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
-Le **[!UICONTROL Détail]** inclut désormais les scores prédictifs. Cliquez sur l’icône de graphique en regard du score prédictif.
+La variable **[!UICONTROL Détail]** inclut désormais les scores prédictifs. Cliquez sur l’icône de graphique en regard du score prédictif.
 
 ![Score prédictif du profil client](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 

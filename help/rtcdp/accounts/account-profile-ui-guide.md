@@ -2,11 +2,13 @@
 keywords: profil rtcdp;profils rtcdp;identités rtcdp;politiques de fusion rtcdp;profil client en temps réel
 title: Guide de l’interface utilisateur des profils de compte
 description: Grâce aux profils de compte, l’édition B2B d’Adobe Real-time Customer Data Platform permet d’unifier les informations de compte provenant de plusieurs sources. Ce guide fournit des détails sur l’interaction avec les profils de compte dans l’interface utilisateur d’Adobe Experience Platform.
+badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '1625'
-ht-degree: 58%
+source-wordcount: '1636'
+ht-degree: 57%
 
 ---
 
@@ -38,7 +40,7 @@ Pour configurer la correspondance de pistes et de comptes, sélectionnez **[!UIC
 
 ![Sélectionner les paramètres](images/b2b-configuring-accounts-profile.png)
 
-Le **[!UICONTROL Paramètres du compte]** s’ouvre. À partir de là, sélectionnez la variable **[!UICONTROL Activation de la mise en correspondance de pistes/comptes]** pour activer la fonction. Utilisez le menu déroulant pour sélectionner **[!UICONTROL Quotidien]** pour le **[!UICONTROL Correspondance de cadence]** . Enfin, sélectionnez la **[!UICONTROL Critères de correspondance]** options suivies de **[!UICONTROL Enregistrer]** pour confirmer vos paramètres et revenir au **[!UICONTROL Profils de compte]** écran.
+La variable **[!UICONTROL Paramètres du compte]** s’ouvre. À partir de là, sélectionnez la variable **[!UICONTROL Activation de la mise en correspondance de pistes/comptes]** pour activer la fonction. Utilisez le menu déroulant pour sélectionner **[!UICONTROL Qualité]** pour le **[!UICONTROL Correspondance de cadence]** . Enfin, sélectionnez la **[!UICONTROL Critères de correspondance]** options suivies de **[!UICONTROL Enregistrer]** pour confirmer vos paramètres et revenir au **[!UICONTROL Profils de compte]** écran.
 
 >[!NOTE]
 >
@@ -144,13 +146,12 @@ Chaque opportunité inclut des informations telles que son nom, son montant, son
 
 ## Onglet Comptes associés {#related-accounts-tab}
 
-Le **[!UICONTROL Comptes associés]** fournit des informations sur d’autres comptes susceptibles d’être liés au compte que vous parcourez. Pour obtenir des informations détaillées sur la fonctionnalité, reportez-vous à la section [présentation des comptes liés](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
+La variable **[!UICONTROL Comptes associés]** fournit des informations sur d’autres comptes susceptibles d’être liés au compte que vous parcourez. Pour obtenir des informations détaillées sur la fonctionnalité, reportez-vous à la section [présentation des comptes liés](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
 
 >[!NOTE]
 >
 >* Un groupe de comptes associés peut comporter 30 profils de compte au maximum. Si plus de 30 profils de compte ont été trouvés associés, ils sont arbitrairement divisés en plusieurs groupes, chacun ne comptant pas plus de 30 membres. Le groupe Comptes associés d’un profil de compte s’inclut toujours.
->* Le [!UICONTROL Comptes associés] affiche actuellement une liste de 25 comptes associés au compte que vous parcourez. Il s’agit d’une limitation qui sera corrigée dans une prochaine mise à jour. Malgré cette limite de l’interface utilisateur, lorsque vous utilisez des comptes associés dans des définitions de segment, pour les groupes de 30 profils de compte associés, tous les profils sont utilisés pour le ciblage.
-
+>* La variable [!UICONTROL Comptes associés] affiche actuellement une liste de 25 comptes associés au compte que vous parcourez. Il s’agit d’une limitation qui sera corrigée lors d’une prochaine mise à jour. Malgré cette limite de l’interface utilisateur, lorsque vous utilisez des comptes associés dans des définitions de segment, pour les groupes de 30 profils de compte associés, tous les profils sont utilisés pour le ciblage.
 
 Chaque compte associé comprend des informations telles que l’identifiant et le nom du profil du compte, sa clé de source de compte, ainsi que d’autres informations relatives à la page d’accueil, à l’adresse, au compte parent, au téléphone, au secteur industriel et aux recettes annuelles.
 

@@ -1,8 +1,9 @@
 ---
 title: Interagir et acquérir de nouveaux clients sans dépendre de cookies tiers
 description: Découvrez comment interagir et acquérir de nouveaux clientes et clients grâce à des cas d’utilisation de prospection, sans recourir à des cookies tiers.
+feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: 645295958ea6f94a9f9da13517b0fa1d02010b52
+source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
 workflow-type: tm+mt
 source-wordcount: '2077'
 ht-degree: 86%

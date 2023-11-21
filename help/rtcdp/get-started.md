@@ -2,11 +2,12 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;plateforme de données client en temps réel;cdp en temps réel;cdp;rtcdp
 title: Prise en main de Real-time Customer Data Platform
 description: Utilisez cet exemple de scénario comme exemple lors de la configuration de votre implémentation d’Adobe Real-Time Customer Data Platform.
+feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '2333'
-ht-degree: 78%
+ht-degree: 68%
 
 ---
 
@@ -24,7 +25,7 @@ Cet exemple illustre la puissance de Real-time Customer Data Platform, optimisé
 
 Luma, une entreprise de vêtements de sport, cherche constamment à améliorer son expérience client. L’entreprise a lancé une nouvelle initiative pour augmenter les ventes de cadeaux. Elle souhaite également réduire la surexposition, notamment les publicités intempestives que les clients reçoivent en permanence.
 
-Actuellement, elle consacre une trop grande partie de son budget pour les médias qui reciblent le client pour des articles qu’il n’achètera plus. Par exemple, Luma ne souhaite pas recibler une personne ayant acheté un article pour quelqu’un d’autre de manière ponctuelle.
+Actuellement, ils dépensent trop sur les médias qui reciblent des articles que le visiteur n’achètera plus. Par exemple, Luma ne souhaite pas recibler une personne ayant acheté un article pour une autre personne.
 
 Actuellement, les données de Luma sont dispersées dans plusieurs sources. Elle fait donc face à des défis importants :
 
@@ -71,11 +72,11 @@ De nombreux visiteurs du site web sont probablement des clients réguliers qui o
 
 ### Première visite d’un nouveau client
 
-Par exemple, un visiteur non identifié accède à la section Hommes du site de Luma et consulte plusieurs sweats pour la course à pied.
+Par exemple, un visiteur non identifié accède à la section Hommes sur le site Luma et affiche deux sweat-shirts pour la course à pied.
 
 ![image](assets/luma-sweatshirts.png)
 
-À mesure que le client navigue pour en savoir plus sur ces produits, ces consultations de produit sont collectées dans Adobe Analytics et envoyées à [!DNL Experience Platform].
+Lorsque le client navigue pour en savoir plus sur ces produits, ces consultations de produit sont collectées dans Adobe Analytics et envoyées à [!DNL Experience Platform].
 
 <!--![image](assets/luma-shirt-detail.png)-->
 
@@ -108,7 +109,7 @@ Elle accède à la page d’accueil pour en parcourir d’autres.
 
 Sarah bénéficie d’une expérience de page d’accueil personnalisée diffusée dynamiquement en fonction de ses [!DNL Real-Time Customer Profile] dans Adobe Experience Platform.
 
-Elle voit le contenu pertinent, grâce à la personnalisation optimisée par Adobe Sensei dans Adobe Target, qui prend en compte ses achats précédents et son intérêt pour les vêtements et l’équipement de course à pied. Luma adapte également le contenu du catalogue pour hommes à l’équipement de course pour hommes sur la base de ses dernières recherches.
+Elle voit le contenu pertinent, grâce à la personnalisation optimisée par Adobe Sensei dans Adobe Target, qui prend en compte ses achats précédents et son intérêt pour les vêtements et l’équipement de course à pied. Luma adapte également le contenu du catalogue pour hommes à l’équipement de course pour hommes en fonction de sa navigation la plus récente.
 
 Plus bas sur la page, Sarah découvre les produits phares, ainsi que de nouvelles suggestions basées sur les derniers articles consultés.
 
@@ -145,7 +146,7 @@ Utilisation [!DNL Real-Time Customer Data Platform] pour importer de nouvelles s
 
 ![image](assets/luma-source-cat.png)
 
-Par exemple, pour ingérer les données CRM de Luma, filtrez le catalogue par *CRM*. Tous les connecteurs prêts à l’emploi contenant *CRM* sont alors répertoriés. Pour ajouter [!DNL Microsoft Dynamics CRM] data:
+Par exemple, pour ingérer les données CRM de Luma, filtrez le catalogue selon *CRM* et tous les connecteurs prêts à l’emploi contenant *CRM* sont répertoriées. Pour ajouter [!DNL Microsoft Dynamics CRM] data:
 
 1. Autorisez la connexion.
 
@@ -199,11 +200,11 @@ L’équipe marketing peut l’utiliser de manière améliorée, [!DNL Real-Time
 
 ## Segments
 
-Les puissantes fonctionnalités de segmentation de Adobe Experience Platform permettent aux marketeurs de combiner des attributs, des événements et des segments existants, en fonction des données capturées dans la variable [!DNL Real-Time Customer Profile].
+Les puissantes fonctionnalités de segmentation de Adobe Experience Platform permettent aux marketeurs de combiner des attributs, des événements et des segments existants, en fonction des données capturées dans [!DNL Real-Time Customer Profile].
 
 <!-- ![image](assets/luma-segments.png) -->
 
-Dans ce scénario, les interactions récentes de Sarah sur le site montrent un comportement différent de ses actions passées. Elle achète habituellement des vêtements pour femmes. Cependant, l’article dans son panier est un sweat pour homme de taille L.
+Dans ce scénario, les interactions récentes de Sarah sur le site montrent un comportement différent de ses actions passées. Elle achète habituellement des vêtements pour femmes. Cependant, l&#39;article dans son panier est un sweat pour homme de grande taille.
 
 L’équipe de science des données de Luma a créé des modèles autour de la propension à acheter. Un modèle indique un changement soudain de catégorie de vêtements (hommes/femmes, par exemple) ou de taille pour le consommateur existant. Le changement de comportement d’achat de Sarah suggère qu’elle n’achète pas pour elle-même.
 
@@ -230,7 +231,7 @@ Comme Sarah a ajouté un article qui semble être un cadeau dans le panier et l�
 
 ## Destinations
 
-Lorsque vous avez ajouté le segment « Personnes abandonnant un panier contenant un cadeau », vous pouvez consulter le nombre approximatif de personnes qui font partie de ce segment. Vous pouvez prendre des mesures et proposer une personnalisation par le biais de différents canaux.
+Lorsque vous avez ajouté le segment &quot;Abandons de panier à cadeau&quot;, vous pouvez déterminer le nombre approximatif de personnes qui font partie de ce segment. Vous pouvez prendre des mesures et proposer une personnalisation par le biais de différents canaux.
 
 Sélectionner **[!UICONTROL Envoi aux destinations]**.
 
@@ -244,8 +245,7 @@ Nous voyons ici toutes les destinations disponibles auxquelles Luma peut envoyer
 Dans ce scénario, Luma souhaite recibler cette audience avec personnalisation sur ces destinations :
 
 * Google, pour le display
-
-   <!--* Facebook -->
+  <!--* Facebook -->
 * Adobe Campaign, pour le courrier électronique
 
 <!-- ![image](assets/luma-sched-dest.png) -->
@@ -260,7 +260,7 @@ Vous pouvez également choisir un moment précis pour planifier le début ou la 
 
 Sélectionner **[!UICONTROL Enregistrer]** pour accéder à la page suivante.
 
-Lorsqu’un client de cette audience effectue un achat, son appartenance à cette audience est supprimée en temps réel. Il n’est plus qualifié, puisque son statut a changé.
+Lorsqu’un client de cette audience effectue un achat, son appartenance à cette audience est supprimée en temps réel. Ils ne sont plus éligibles parce que leur statut a changé.
 
 Le responsable de l’équipe des médias de Luma peut ainsi économiser des centaines de milliers d’euros en n’utilisant pas l’inventaire pour une audience qui n’est pas qualifiée.
 
@@ -270,7 +270,7 @@ Adobe Experience Platform comprend des contrôles de confidentialité et de s�
 
 Si votre activité enfreint la politique, un avertissement s’affiche. Cet avertissement contient des informations de lignage de données qui peuvent vous aider à identifier la raison de la violation de la politique et ce que vous pouvez faire pour résoudre la violation.
 
-Grâce à ces contrôles, [!DNL Experience Platform] aide Luma à se conformer aux réglementations et à effectuer un marketing responsable. Ces contrôles sont souples et peuvent être modifiés pour répondre aux besoins des équipes de sécurité et de gouvernance de Luma. Elles peuvent ainsi respecter en toute confiance les exigences régionales et organisationnelles de gestion des données clients connues et inconnues.
+Grâce à ces contrôles, [!DNL Experience Platform] aide Luma à se conformer aux réglementations et à effectuer un marketing responsable. Ces contrôles sont flexibles et peuvent être modifiés pour répondre aux exigences des équipes de sécurité et de gouvernance de Luma, ce qui leur permet de répondre en toute confiance aux exigences régionales et organisationnelles de gestion des données clients connues et inconnues.
 
 ### Canevas de flux de données
 
@@ -287,8 +287,8 @@ Plus tard dans la journée, elle ouvre sa messagerie et découvre les e-mails re
 Ce lien la dirige sur la page d’accueil mobile de Luma, où elle bénéficie d’une expérience hautement personnalisée optimisée par Adobe Target.
 
 * Elle est accueillie en tant que membre Bronze.
-* Elle voit le message « Cadeau ».
-* Elle voit aussi le message « Emballage cadeau gratuit », qui fait partie des avantages offerts pour son statut Bronze.
+* Elle voit le message &quot;Cadeau&quot;.
+* Elle voit également le message &quot;Encapsule cadeau gratuit&quot;, qui fait partie des avantages offerts pour son statut Bronze.
 * Elle est toujours ciblée sur l’image à forte identification en raison de son intérêt pour la course à pied.
 
 Elle achète le sweat, ajoute un emballage cadeau et rédige un message pour accompagner le cadeau. Elle peut aussi choisir de recevoir un rappel l’année prochaine pour se souvenir d’acheter un cadeau à l’occasion de cet événement. Elle choisit d’activer cette option et une campagne par e-mail est prévue l’année suivante pour lui rappeler d’acheter un autre cadeau.
@@ -299,6 +299,6 @@ Grâce aux possibilités de suppression d’audience, Sarah ne sera plus ciblée
 
 Les spécialistes du marketing Luma utilisent Adobe Experience Platform pour examiner le segment des fournisseurs de cadeaux dans le tableau de bord Real-Time CDP. Ils observent les résultats de cette initiative au fil du temps et constatent qu’elle se développe. Les clients réagissent aux offres et dépensent plus d’argent.
 
-Ces informations permettent aux marketeurs de réagir à ce signal, qui a été alimenté par la disponibilité de ces données dans la plateforme des données clients et l’association de clients comme Sarah à ce segment.
+Ces informations permettent aux spécialistes marketing de réagir à ce signal, qui a été alimenté par la disponibilité de ces données dans la plateforme des données clients et l’association de clients comme Sarah à ce segment.
 
 Luma utilise les données de cette plateforme pour accroître la fidélité et la satisfaction de ses clients.

@@ -2,8 +2,9 @@
 keywords: afficher les profils rtcdp;vue de profil rtcdp;profils rtcdp
 title: Parcourir les profils dans Real-time Customer Data Platform
 description: Adobe Real-time Customer Data Platform vous permet de parcourir les données de Real-time Customer Profile à l’aide de l’interface utilisateur de Adobe Experience Platform.
+feature: Get Started, Profiles
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '535'
 ht-degree: 12%

@@ -2,8 +2,9 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;plateforme de données client en temps réel;cdp en temps réel;cdp;Customer AI
 title: Présentation de Real-Time Customer Data Platform
 description: Présentation d’Adobe Real-time Customer Data Platform
+feature: Get Started
 exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
 source-wordcount: '422'
 ht-degree: 41%
@@ -29,7 +30,7 @@ Avec Real-time Customer Data Platform, vous pouvez :
 
 Il existe également une autre version de Real-Time CDP disponible pour répondre aux besoins de l’entreprise par rapport à l’entreprise. L’édition B2B de Real-Time CDP est conçue spécifiquement pour étendre les fonctionnalités de Real-Time CDP aux marketeurs. Elle dispose de différentes fonctionnalités activées dans l’écosystème Adobe Experience Platform pour mieux s’adapter au fonctionnement d’un modèle de service business-to-business.
 
-L’édition B2B de Real-Time CDP permet aux marketeurs de créer des profils holistiques pour les personnes et les comptes. Plus précisément, vous pouvez enrichir, segmenter et exporter toutes vos données inter-sources à partir d’un magasin centralisé de profils de compte unifiés. Ces données peuvent être gérées à l’aide d’outils de gouvernance des données disponibles à chaque étape du processus de centralisation. 
+Real-Time CDP B2B Edition permet aux marketeurs de créer des profils holistiques pour les personnes et les comptes. Plus précisément, vous pouvez enrichir, segmenter et exporter toutes vos données inter-sources à partir d’un magasin centralisé de profils de compte unifiés. Ces données peuvent être gérées à l’aide d’outils de gouvernance des données disponibles à chaque étape du processus de centralisation. 
 
 Voir [Présentation de Real-Time CDP B2B Edition](./b2b-overview.md) pour obtenir des informations plus complètes.
 
