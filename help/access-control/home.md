@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation du contrôle d’accès
 description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans l’Admin Console, liant les utilisateurs et utilisatrices à des autorisations et des sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: ded4df4062197fb69b54b71ab19fa1684ce17a58
+source-git-commit: 866e84e5f7fe5df7444c83756a893964dcd3ed3d
 workflow-type: tm+mt
-source-wordcount: '1703'
-ht-degree: 91%
+source-wordcount: '1702'
+ht-degree: 89%
 
 ---
 
@@ -85,8 +85,8 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL Alerts] | [!UICONTROL Gérer les alertes] | Accès à la lecture, la création, la modification et la suppression de l’historique des alertes. |
 | [!DNL Computed Attributes] | [!UICONTROL Affichage des attributs calculés] | Accès en lecture seule à l’onglet Attributs calculés, à l’inventaire et aux détails. |
 | [!DNL Computed Attributes] | [!UICONTROL Gestion des attributs calculés] | Accès à la lecture, la création, la suppression de brouillons et la désactivation des attributs calculés. |
-| [!DNL Data Hygiene] | [!UICONTROL Afficher l’hygiène des données] | Accès en lecture seule à l’hygiène des données. |
-| [!DNL Data Hygiene] | [!UICONTROL Gérer l’hygiène des données] | Accès à la lecture, la création, la modification et la suppression de lʼhygiène des données. |
+| [!DNL Data Lifecycle] | [!UICONTROL Afficher le cycle de vie des données] | Accès en lecture seule au cycle de vie des données. |
+| [!DNL Data Lifecycle] | [!UICONTROL Gérer le cycle de vie des données] | Accès à la lecture, la création, la modification et la suppression du cycle de vie des données. |
 | [!DNL Data Modeling] | [!UICONTROL Gestion des schémas] | Accès pour lire, créer, modifier et supprimer des schémas et des ressources associées. |
 | [!DNL Data Modeling] | [!UICONTROL Affichage des schémas] | Accès en lecture seule aux schémas et aux ressources associées. |
 | [!DNL Data Modeling] | [!UICONTROL Gestion des relations] | Accès à la lecture, la création, la modification et la suppression des relations de schéma. |
@@ -123,7 +123,7 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Accès à la création, lʼacceptation et le refus de négociations entre partenaires afin de connecter deux organisations et d’activer les flux [!DNL Segment Match]. |
 | [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Accès à la lecture, la création, la modification et la publication de flux [!DNL Segment Match] avec des partenaires actifs. |
 | [!DNL Data Science Workspace] | [!UICONTROL Gestion de l’espace de travail de science des données] | Accès à la lecture, la création, la modification et la suppression dans [!DNL Data Science Workspace]. |
-| Gouvernance des données | [!UICONTROL Application dʼétiquettes dʼutilisation des données] | Accès à la lecture, la création et la suppression des étiquettes dʼutilisation des données. |
+| Gouvernance des données | [!UICONTROL Gestion des étiquettes d’utilisation] | Accès à la lecture, la création et la suppression des étiquettes dʼutilisation des données. |
 | Gouvernance des données | [!UICONTROL Gestion des politiques dʼutilisation des données] | Accès à la lecture, la création, la modification et la suppression des politiques dʼutilisation des données. |
 | Gouvernance des données | [!UICONTROL Affichage des politiques dʼutilisation des données] | Accès en lecture seule pour les politiques dʼutilisation des données appartenant à votre organisation. |
 | Gouvernance des données | [!UICONTROL Afficher le journal d’activité de l’utilisateur] | Accès en lecture seule pour afficher les [journaux d’audit](../landing/governance-privacy-security/audit-logs/overview.md) enregistrés des activités de Platform. |
