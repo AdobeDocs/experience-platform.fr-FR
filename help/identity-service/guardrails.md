@@ -3,10 +3,10 @@ keywords: Experience Platform;identité;service d’identité;dépannage;garde-f
 title: Barrières de sécurité pour Identity Service
 description: Ce document fournit des informations sur l’utilisation et les limites de taux pour les données Identity Service afin de vous aider à optimiser l’utilisation du graphique d’identités.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 614fc9af8c774a1f79d0ab52527e32b2381487fa
+source-git-commit: 614f48e53e981e479645da9cc48c946f3af0db26
 workflow-type: tm+mt
-source-wordcount: '1233'
-ht-degree: 54%
+source-wordcount: '1509'
+ht-degree: 44%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 54%
 
 Ce document traite de l’utilisation et des limites de débit des données [!DNL Identity Service] afin de vous aider à optimiser l’utilisation du graphique d’identité. Lors de la révision des mécanismes de sécurisation suivants, on suppose que vous avez correctement modélisé les données. Si vous avez des questions sur la manière de modéliser vos données, contactez votre représentant du service client.
 
-## Prise en main
+## Commencer
 
 Les services Experience Platform suivants sont impliqués dans la modélisation des données d’identités :
 
@@ -72,23 +72,6 @@ Lorsqu’un graphique complet est mis à jour avec une nouvelle identité, les d
 >
 >Si l’identité à supprimer est liée à plusieurs autres identités du graphique, les liens reliant cette identité sont également supprimés.
 
->[!BEGINSHADEBOX]
-
-**Représentation visuelle de la logique de suppression**
-
-![Exemple de suppression de l’identité la plus ancienne afin d’incorporer l’identité la plus récente](./images/graph-limits-v3.png)
-
-*Diagram note :*
-
-* `t` = date et heure.
-* La valeur d’un horodatage correspond à la récence d’une identité donnée. Par exemple : `t1` représente la première identité liée (la plus ancienne) et `t51` représente l’identité liée la plus récente.
-
-Dans cet exemple, avant que le graphique de gauche ne puisse être mis à jour avec une nouvelle identité, Identity Service supprime d’abord l’identité existante avec l’horodatage le plus ancien. Cependant, comme l’identité la plus ancienne est un ID d’appareil, Identity Service ignore cette identité et cherche à supprimer un espace de noms avec un type plus élevé dans la liste de priorité de suppression, en l’occurrence `ecid-3`. Une fois la suppression de l’identité la plus ancienne avec un type de priorité de suppression plus élevé effectuée, le graphique est mis à jour avec un nouveau lien, `ecid-51`.
-
-* Dans le rare cas où il existe deux identités avec le même horodatage et le même type d’identité, Identity Service triera les identifiants en fonction des [XID](./api/list-native-id.md) et effectuer la suppression.
-
->[!ENDSHADEBOX]
-
 ### Implications sur la mise en oeuvre
 
 Les sections suivantes décrivent les implications de la logique de suppression sur Identity Service, Real-Time Customer Profile et WebSDK.
@@ -116,7 +99,83 @@ Si vous souhaitez conserver vos événements authentifiés par rapport à l’id
 * [Configuration de la carte d’identité pour les balises Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Données d’identité dans le SDK Web Experience Platform](../edge/identity/overview.md#using-identitymap)
 
+### Exemples de scénarios
 
+#### Exemple 1 : graphique grand type
+
+*Diagram note :*
+
+* `t` = date et heure.
+* La valeur d’un horodatage correspond à la récence d’une identité donnée. Par exemple : `t1` représente la première identité liée (la plus ancienne) et `t51` représente l’identité liée la plus récente.
+
+Dans cet exemple, avant que le graphique de gauche ne puisse être mis à jour avec une nouvelle identité, Identity Service supprime d’abord l’identité existante avec l’horodatage le plus ancien. Cependant, comme l’identité la plus ancienne est un ID d’appareil, Identity Service ignore cette identité et cherche à supprimer un espace de noms avec un type plus élevé dans la liste de priorité de suppression, en l’occurrence `ecid-3`. Une fois la suppression de l’identité la plus ancienne avec un type de priorité de suppression plus élevé effectuée, le graphique est mis à jour avec un nouveau lien, `ecid-51`.
+
+* Dans le rare cas où il existe deux identités avec le même horodatage et le même type d’identité, Identity Service triera les identifiants en fonction des [XID](./api/list-native-id.md) et effectuer la suppression.
+
+![Exemple de suppression de l’identité la plus ancienne afin d’incorporer l’identité la plus récente](./images/graph-limits-v3.png)
+
+#### Exemple 2 : &quot;split graphique&quot;
+
+>[!BEGINTABS]
+
+>[!TAB Événement entrant]
+
+*Diagram note :*
+
+* Le diagramme suivant suppose que à `timestamp=50`, il existe 50 identités dans le graphique d’identités.
+* `(...)` désigne les autres identités déjà liées dans le graphique.
+
+Dans cet exemple, ECID:32110 est ingéré et lié à un graphique volumineux à l’adresse `timestamp=51`, dépassant ainsi la limite de 50 identités.
+
+![](./images/guardrails/before-split.png)
+
+>[!TAB Processus de suppression]
+
+Par conséquent, Identity Service supprime l’identité la plus ancienne en fonction de l’horodatage et du type d’identité. Dans ce cas, ECID:35577 est supprimé.
+
+![](./images/guardrails/during-split.png)
+
+>[!TAB Sortie graphique]
+
+Suite à la suppression de ECID:35577, les périphéries qui liaient l’ID CRM:60013 et l’ID CRM:25212 avec l’ECID:35577 désormais supprimé sont également supprimées. Ce processus de suppression entraîne la division du graphique en deux graphiques plus petits.
+
+![](./images/guardrails/after-split.png)
+
+>[!ENDTABS]
+
+#### Exemple 3 : &quot;hub-and-speak&quot;
+
+>[!BEGINTABS]
+
+>[!TAB Événement entrant]
+
+*Diagram note :*
+
+* Le diagramme suivant suppose que à `timestamp=50`, il existe 50 identités dans le graphique d’identités.
+* `(...)` désigne les autres identités déjà liées dans le graphique.
+
+En vertu de la logique de suppression, certaines identités &quot;hub&quot; peuvent également être supprimées. Ces identités de hub font référence à des noeuds liés à plusieurs identités individuelles qui seraient sinon dissociées.
+
+Dans l’exemple ci-dessous, ECID:21011 est ingéré et lié au graphique à l’adresse `timestamp=51`, dépassant ainsi la limite de 50 identités.
+
+![](./images/guardrails/hub-and-spoke-start.png)
+
+>[!TAB Processus de suppression]
+
+Par conséquent, Identity Service supprime l’identité la plus ancienne, qui dans ce cas est ECID:35577. La suppression de ECID:35577 entraîne également la suppression des éléments suivants :
+
+* Le lien entre l’ID de gestion de la relation client : 60013 et l’ECID:35577 désormais supprimé, ce qui entraîne un scénario de partage de graphique.
+* IDFA : 32110, IDFA : 02383, et les identités restantes représentées par `(...)`. Ces identités sont supprimées car, individuellement, elles ne sont liées à aucune autre identité et ne peuvent donc pas être représentées dans un graphique.
+
+![](./images/guardrails/hub-and-spoke-process.png)
+
+>[!TAB Sortie graphique]
+
+Enfin, le processus de suppression génère deux graphiques plus petits.
+
+![](./images/guardrails/hub-and-spoke-result.png)
+
+>[!ENDTABS]
 
 ## Étapes suivantes
 
