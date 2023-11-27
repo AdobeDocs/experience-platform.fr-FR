@@ -2,9 +2,9 @@
 title: Identifiants d’appareil propriétaire dans le SDK web Platform
 description: Découvrez comment configurer des identifiants d’appareil propriétaires (FPID) pour le SDK Web de Adobe Experience Platform.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ffcd428f84a4dcbbc95560cb4da5fd1c6d858a28
 workflow-type: tm+mt
-source-wordcount: '1772'
+source-wordcount: '1779'
 ht-degree: 2%
 
 ---
@@ -210,6 +210,10 @@ Si vous migrez vers l’utilisation de FPID à partir d’une mise en oeuvre pr�
 Pour illustrer ce processus, imaginez un scénario impliquant un client qui a déjà visité votre site et quel impact une migration FPID aurait sur la manière dont ce client est identifié dans les solutions Adobe.
 
 ![Diagramme montrant comment les valeurs d’identifiant d’un client sont mises à jour entre les visites après la migration vers les FPID](../assets/identity/tracking/visits.png)
+
+>[!IMPORTANT]
+>
+>La variable `ECID` le cookie est toujours prioritaire par rapport au `FPID`.
 
 | Visite | Description |
 | --- | --- |
