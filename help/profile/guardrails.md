@@ -5,10 +5,10 @@ product: experience platform
 type: Documentation
 description: Découvrez les performances et les barrières de sécurité appliquées par le système pour les données de profil et la segmentation afin de garantir une utilisation optimale des fonctionnalités de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 554763cc444da0d1459b22f3f37d22b528b290e1
+source-git-commit: 1bc770ad078f2db3199f799403d96a676b73f4de
 workflow-type: tm+mt
-source-wordcount: '2202'
-ht-degree: 66%
+source-wordcount: '2228'
+ht-degree: 65%
 
 ---
 
@@ -119,6 +119,7 @@ Les barrières de sécurité décrites dans cette section font référence au no
 | Audiences par environnement de test en flux continu | 500 | Protecteur des performances | Une organisation peut avoir plus de 500 audiences en continu au total, à condition qu’il y ait moins de 500 audiences en continu dans chaque environnement de test individuel. Toute tentative de création d’audiences en continu supplémentaires peut affecter les performances du système. En savoir plus sur [audiences en continu](/help/segmentation/ui/streaming-segmentation.md). |
 | Audiences par environnement de test par lot | 4 000 | Protecteur des performances | Une organisation peut avoir plus de 4 000 audiences par lots au total, à condition qu’il y ait moins de 4 000 audiences par lots dans chaque environnement de test individuel. Toute tentative de création d’audiences par lots supplémentaires peut affecter les performances du système. |
 | Audiences du compte par environnement de test | 50 | Barrière de sécurité mise en place par le système | Vous ne pouvez pas créer plus de 50 audiences de compte dans un environnement de test. Une fois que vous avez atteint 50 audiences dans un environnement de test, la variable **[!UICONTROL Créer une audience]** Le contrôle est désactivé lors de la création d’une audience de compte. En savoir plus sur [audiences de compte](/help/segmentation/ui/account-audiences.md). |
+| Compositions publiées par environnement de test | 10 | Protecteur des performances | Un environnement de test ne peut pas contenir plus de 10 compositions publiées. En savoir plus sur [composition d’audiences dans le guide de l’interface utilisateur](/help/segmentation/ui/audience-composition.md). |
 
 {style="table-layout:auto"}
 
