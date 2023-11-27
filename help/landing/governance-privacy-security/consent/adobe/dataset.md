@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Configuration d’un jeu de données pour capturer les données de consentement et de préférences
 description: Découvrez comment configurer un schéma et un jeu de données de modèle de données d’expérience (XDM) pour capturer les données de consentement et de préférence dans Adobe Experience Platform.
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: 3f559601b50293723f601960dbd56fddf0285148
 workflow-type: tm+mt
 source-wordcount: '1573'
 ht-degree: 5%
@@ -96,8 +96,8 @@ Le groupe de champs fournit un champ de type objet unique, `consents`, dont les 
 
 Pour collecter des données de consentement à l’aide de la norme Adobe, vous devez disposer d’un schéma activé par Profile qui contient les deux groupes de champs suivants :
 
-* [!UICONTROL Détails du consentement et des préférences]
-* [!UICONTROL IdentityMap] (obligatoire si vous utilisez le SDK Web ou Mobile Platform pour envoyer des signaux de consentement)
+* [[!UICONTROL Détails du consentement et des préférences]](../../../../xdm/field-groups/profile/consents.md)
+* [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (obligatoire si vous utilisez le SDK Web ou Mobile Platform pour envoyer des signaux de consentement)
 
 Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche, puis sélectionnez l’option **[!UICONTROL Parcourir]** pour afficher une liste des schémas existants. À partir de là, sélectionnez le nom du [!DNL Profile]schéma activé auquel vous souhaitez ajouter des champs de consentement. Les captures d’écran de cette section utilisent le schéma &quot;Loyalty Members&quot; créé dans la variable [tutoriel sur la création de schéma](../../../../xdm/tutorials/create-schema-ui.md) par exemple.
 

@@ -4,9 +4,9 @@ title: Parcourir les profils dans Real-time Customer Data Platform
 description: Adobe Real-time Customer Data Platform vous permet de parcourir les données de Real-time Customer Profile à l’aide de l’interface utilisateur de Adobe Experience Platform.
 feature: Get Started, Profiles
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: ea785ffa1dfa0f7c684fe536796a4b7409882159
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '557'
 ht-degree: 12%
 
 ---
@@ -33,6 +33,8 @@ Pour explorer ces améliorations, commencez par suivre les étapes décrites dan
 Le détail du profil inclut l’accès à [!UICONTROL Comptes], [!UICONTROL Opportunités], et [!UICONTROL Enregistrements source] onglets en plus des informations standard fournies dans le profil client qui ont également été améliorées avec les événements et attributs B2B.
 
 ![](images/b2b-profile-detail.png)
+
+Pour en savoir plus sur les détails de profil fournis dans l’interface utilisateur de Platform, reportez-vous à la section [section détails de la documentation du tableau de bord Profils](../../dashboards/guides/profiles.md#browse-profiles).
 
 ### Onglet Comptes
 
