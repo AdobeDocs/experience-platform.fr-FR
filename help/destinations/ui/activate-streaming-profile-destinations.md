@@ -1,13 +1,13 @@
 ---
-keywords: Activer des destinations de profils;activer des destinations;activer des données;activer des destinations de marketing par e-mail;activer des destinations d’espace de stockage dans le cloud
 title: Activer les audiences vers des destinations d’export de profils en flux continu
 type: Tutorial
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en envoyant des audiences vers des destinations basées sur un profil en continu.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 37819b5a6480923686d327e30b1111ea29ae71da
+source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
 workflow-type: tm+mt
-source-wordcount: '760'
-ht-degree: 30%
+source-wordcount: '761'
+ht-degree: 24%
 
 ---
 
@@ -23,7 +23,13 @@ ht-degree: 30%
 
 ## Présentation {#overview}
 
-Cet article explique le processus requis pour activer les données d’audience dans des destinations basées sur des profils de diffusion en continu Adobe Experience Platform, telles qu’Amazon Kinesis.
+Cet article explique le processus requis pour activer les données d’audience dans Adobe Experience Platform vers des destinations basées sur des profils en continu (également appelées [destinations d’entreprise](/help/destinations/destination-types.md#streaming-profile-export)).
+
+Cet article s’applique aux trois destinations suivantes :
+
+* [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
+* [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Destination de l’API HTTP](/help/destinations/catalog/streaming/http-destination.md).
 
 ## Conditions préalables {#prerequisites}
 
@@ -83,7 +89,15 @@ Sur la page **[!UICONTROL Vérifier]**, vous pouvez voir un résumé de votre s�
 
 ### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
-Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. En savoir plus [évaluation des stratégies de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) pour plus d’informations.
+[Évaluation des stratégies de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) n’est actuellement pas pris en charge dans les exportations vers les trois destinations d’entreprise : Amazon Kinesis, Azure Event Hubs et API HTTP.
+
+Cela signifie que les profils qui n&#39;ont pas consenti à être ciblés *sont inclus* dans les exportations vers ces trois destinations.
+
+<!--
+
+If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & Security Shield**, select **[!UICONTROL View applicable consent policies]** to see which consent policies are applied and how many profiles are included in the activation as a result of them. Read about [consent policy evaluation](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) for more information.
+
+-->
 
 ### Vérifications des stratégies d’utilisation des données {#data-usage-policy-checks}
 
