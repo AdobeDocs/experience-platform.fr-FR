@@ -4,7 +4,7 @@ user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
-source-git-commit: 037ea8d11bb94e3b4f71ea301a535677b3cccdbd
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 91%
@@ -52,6 +52,15 @@ ht-degree: 91%
    - [Renvoyer et utiliser des variables de marchandisage à partir de données d’analyse](use-cases/merchandising-variables.md)
    - [Afficher le rapport de cumul pour un visiteur ou une visiteuse](use-cases/roll-up-report-of-a-visitor.md)
    - [Informations sur les analyses web et mobiles](use-cases/analytics-insights.md)
+- Principaux concepts {#key-concepts}
+   - [Utilisation de structures de données imbriquées](key-concepts/nested-data-structures.md)
+   - [Aplatir les structures de données imbriquées](key-concepts/flatten-nested-data.md)
+   - [Bloc anonyme](key-concepts/anonymous-block.md)
+   - [Modèle intégré](key-concepts/inline-templates.md)
+   - [Chargement incrémentiel](key-concepts/incremental-load.md)
+   - [Dédoublonnage des données](key-concepts/deduplication.md)
+   - [Échantillon de jeux de données](key-concepts/dataset-samples.md)
+   - [Calcul des statistiques des jeux de données](key-concepts/dataset-statistics.md)
 - Connexion des clients à Query Service {#clients}
    - [Présentation de la connexion des clients](clients/overview.md)
    - [Modes SSL](./clients/ssl-modes.md)
@@ -91,15 +100,6 @@ ht-degree: 91%
 - Bonnes pratiques {#best-practices}
    - [Exécution de la requête](best-practices/writing-queries.md)
    - [Organisation des ressources de données](./best-practices/organize-data-assets.md)
-- Concepts essentiels {#essential-concepts}
-   - [Utilisation de structures de données imbriquées](essential-concepts/nested-data-structures.md)
-   - [Aplatir les structures de données imbriquées](essential-concepts/flatten-nested-data.md)
-   - [Bloc anonyme](essential-concepts/anonymous-block.md)
-   - [Modèle intégré](essential-concepts/inline-templates.md)
-   - [Chargement incrémentiel](essential-concepts/incremental-load.md)
-   - [Dédoublonnage des données](essential-concepts/deduplication.md)
-   - [Échantillon de jeux de données](essential-concepts/dataset-samples.md)
-   - [Calcul des statistiques des jeux de données](essential-concepts/dataset-statistics.md)
 - Référence SQL {#sql}
    - [Présentation de SQL](sql/overview.md)
    - [Syntaxe SQL](sql/syntax.md)

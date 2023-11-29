@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Février 2023
 description: Les notes de mise à jour de février 2023 pour Adobe Experience Platform.
 exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1293'
 ht-degree: 100%
@@ -105,7 +105,7 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 | Activer les jeux de données pour les profils avec SQL | [Utilisez des libellés dans les requêtes CTAS afin qu’un jeu de données soit « activé pour le profil »](../../query-service/sql/syntax.md#create-table-as-select), ou utilisez Modifier pour mettre à jour les jeux de données existants à activer pour le profil. Vous pouvez utiliser cette structure SQL étendue pour offrir une prise en charge transparente des attributs dérivés pour vos cas d’utilisation professionnels de profil client en temps réel. Consultez le [document sur le flux SQL transparent pour les attributs dérivés](../../query-service/data-distiller/derived-attributes/seamless-sql-flow.md) pour plus d’informations. |
 | Surveiller les requêtes planifiées | Utilisez l’[onglet Requêtes planifiées](../../query-service/ui/monitor-queries.md) pour trouver des informations importantes sur les exécutions de vos requêtes et vous abonner aux alertes. Surveillez les requêtes pour connaître les détails du planning, le statut et les messages ou codes d’erreur en cas d’échec. |
 | Activer la fonction de saisie automatique | Éliminez certaines commandes de métadonnées et améliorez les temps de traitement en [activant la fonction de saisie automatique de Query Editor](../../query-service/ui/user-guide.md#auto-complete). Cette fonctionnalité suggère automatiquement des mots-clés SQL potentiels ainsi que des détails de table pour la requête au fur et à mesure que vous l’écrivez. |
-| Échantillons de jeux de données | Spécifiez un taux d’échantillonnage dans votre requête et [utilisez des échantillons de jeux de données pour créer un exemple aléatoire uniforme](../../query-service/essential-concepts/dataset-samples.md), ou créez des échantillons conditionnels en fonction de critères spécifiques. |
+| Échantillons de jeux de données | Spécifiez un taux d’échantillonnage dans votre requête et [utilisez des échantillons de jeux de données pour créer un exemple aléatoire uniforme](../../query-service/key-concepts/dataset-samples.md), ou créez des échantillons conditionnels en fonction de critères spécifiques. |
 
 {style="table-layout:auto"}
 
@@ -114,7 +114,7 @@ Pour plus d’informations sur Query Service, consultez la section [présentati
 
 ## Édition B2B de Real-Time Customer Data Platform {#b2b}
 
-Basée sur Real-time Customer Data Platform (Real-time CDP), l’édition B2B de Real-time CDP a été conçue pour les professionnels du marketing travaillant dans un modèle de service business-to-business. Elle rassemble des données provenant de sources multiples et les combine en une vue unique des profils de comptes et d’utilisateurs. Ces données unifiées permettent aux professionnels du marketing de cibler précisément des audiences spécifiques afin de stimuler leur engagement sur tous les canaux disponibles.
+Basée sur Real-time Customer Data Platform (Real-time CDP), l’édition B2B de Real-time CDP a été conçue pour les professionnels du marketing travaillant dans un modèle de service business-to-business. Elle rassemble des données provenant de sources multiples et les combine en une vue unique des profils de comptes et d’utilisateurs. Ces données unifiées permettent aux spécialistes marketing de cibler précisément des audiences spécifiques afin de stimuler leur engagement sur tous les canaux disponibles.
 
 **Fonctionnalités mises à jour**
 

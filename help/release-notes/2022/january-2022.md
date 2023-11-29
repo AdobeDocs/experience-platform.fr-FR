@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2022
 description: Les notes de mise à jour de janvier 2022 pour Adobe Experience Platform.
 exl-id: 734ce1b3-e270-4c37-958c-88bcc39fbf20
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '1340'
 ht-degree: 97%
@@ -91,7 +91,7 @@ Pour des informations plus générales sur les destinations, reportez-vous à la
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Bloc anonyme | La structure SQL du bloc anonyme permet de ventiler les tâches de préparation des données à grande échelle dans Query Service en tâches plus petites, puis de les réutiliser et de les exécuter en séquence pour le chargement incrémentiel des données. Pour plus d’informations, consultez la [documentation sur les exemples de requêtes pour les blocs anonymes](../../query-service/essential-concepts/anonymous-block.md). |
+| Bloc anonyme | La structure SQL du bloc anonyme permet de ventiler les tâches de préparation des données à grande échelle dans Query Service en tâches plus petites, puis de les réutiliser et de les exécuter en séquence pour le chargement incrémentiel des données. Pour plus d’informations, consultez la [documentation sur les exemples de requêtes pour les blocs anonymes](../../query-service/key-concepts/anonymous-block.md). |
 | Organisation des jeux de données | Fournit une structure de données cohérente et logique pour organiser vos ressources de données à utiliser avec Query Service à mesure que la quantité de ressources de données dans le sandbox augmente. Pour plus d’informations, consultez la [documentation sur l’organisation des ressources de données](../../query-service/best-practices/organize-data-assets.md). |
 
 Pour plus d’informations sur Query Service [!DNL Query Service], consultez la [[!DNL Query Service] présentation](../../query-service/home.md) de Query Service.

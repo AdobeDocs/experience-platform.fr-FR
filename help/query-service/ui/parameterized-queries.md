@@ -2,7 +2,7 @@
 title: Requêtes paramétrées
 description: Découvrez comment utiliser des requêtes paramétrées dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: a78f7499b55dcedbe379e917b94946948c66e6e5
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '734'
 ht-degree: 12%
@@ -24,7 +24,7 @@ Avant de poursuivre avec ce guide, lisez le [Guide de l’interface utilisateur 
 
 >[!NOTE]
 >
->Dans l’interface utilisateur de Adobe Experience Platform, les requêtes paramétrées ne sont prises en charge qu’au niveau parent des modèles intégrés. Cela signifie que les requêtes paramétrées ne fonctionnent que lorsqu’elles sont utilisées dans le modèle d’origine. Les modèles enfants doivent être un modèle statique et ne peuvent pas comporter de paramètres dynamiques. Voir [documentation sur les modèles en ligne](../essential-concepts/inline-templates.md) pour en savoir plus.
+>Dans l’interface utilisateur de Adobe Experience Platform, les requêtes paramétrées ne sont prises en charge qu’au niveau parent des modèles intégrés. Cela signifie que les requêtes paramétrées ne fonctionnent que lorsqu’elles sont utilisées dans le modèle d’origine. Les modèles enfants doivent être un modèle statique et ne peuvent pas comporter de paramètres dynamiques. Voir [documentation sur les modèles en ligne](../key-concepts/inline-templates.md) pour en savoir plus.
 
 ## Syntaxe de requête paramétrée {#syntax}
 

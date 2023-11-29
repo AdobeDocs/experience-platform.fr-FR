@@ -2,7 +2,7 @@
 title: Suivi des signaux de données pour générer la valeur de durée de vie client
 description: Ce guide fournit une démonstration de bout en bout sur l’utilisation de Data Distiller et de tableaux de bord définis par l’utilisateur avec Real-time Customer Data Platform pour mesurer et visualiser la valeur de durée de vie des clients.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1269'
 ht-degree: 11%
@@ -91,7 +91,7 @@ Vérifiez les [présentation des destinations de marketing par e-mail](../../des
 
 ## Afficher les données d’analyse renvoyées de votre campagne {#post-campaign-data-analysis}
 
-Les données provenant de sources peuvent désormais être [incrémentalement traité](../essential-concepts/incremental-load.md) dans le cadre d’une actualisation planifiée de votre modèle de données dans l’entrepôt de données accéléré. Tous les événements de réponse des clients peuvent être ingérés dans Adobe Experience Platform au fur et à mesure ou par lots. Votre modèle de données peut être actualisé une ou plusieurs fois par jour en fonction de vos paramètres ou des connecteurs source. Voir [Présentation de l’API d’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md) ou le [présentation de l’ingestion par flux](../../ingestion/streaming-ingestion/overview.md) pour plus d’informations.
+Les données provenant de sources peuvent désormais être [incrémentalement traité](../key-concepts/incremental-load.md) dans le cadre d’une actualisation planifiée de votre modèle de données dans l’entrepôt de données accéléré. Tous les événements de réponse des clients peuvent être ingérés dans Adobe Experience Platform au fur et à mesure ou par lots. Votre modèle de données peut être actualisé une ou plusieurs fois par jour en fonction de vos paramètres ou des connecteurs source. Voir [Présentation de l’API d’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md) ou le [présentation de l’ingestion par flux](../../ingestion/streaming-ingestion/overview.md) pour plus d’informations.
 
 Une fois votre modèle de données mis à jour, vos widgets de tableau de bord personnalisés fournissent des signaux significatifs qui vous permettent de mesurer et de visualiser la valeur de durée de vie des clients.
 

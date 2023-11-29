@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connecter Power BI à Query Service
 description: Ce document décrit les étapes à suivre pour connecter Power BI à Adobe Experience Platform Query Service.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 100%
@@ -51,7 +51,7 @@ Le champ **[!DNL Database]** peut être « all » ou un nom de table de jeu de
 
 >[!IMPORTANT]
 >
->Les structures de données imbriquées dans des outils de BI tiers peuvent être aplaties afin d’améliorer leur utilisation et réduire la charge de travail requise pour récupérer, analyser, transformer et présenter des données. Consultez la documentation relative à la[`FLATTEN` fonctionnalité](../essential-concepts/flatten-nested-data.md) pour savoir comment activer ce paramètre lors de la connexion à une base de données.
+>Les structures de données imbriquées dans des outils de BI tiers peuvent être aplaties afin d’améliorer leur utilisation et réduire la charge de travail requise pour récupérer, analyser, transformer et présenter des données. Consultez la documentation relative à la[`FLATTEN` fonctionnalité](../key-concepts/flatten-nested-data.md) pour savoir comment activer ce paramètre lors de la connexion à une base de données.
 
 ### Mode Connectivité des données {#data-connectivity-mode}
 

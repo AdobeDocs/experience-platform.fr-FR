@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Syntaxe SQL dans Query Service
 description: Ce document présente la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 95d1aec09477480532d4df1bdc7488d3f5a39394
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '4134'
 ht-degree: 9%
@@ -765,7 +765,7 @@ La sortie de la console s’affiche comme illustré ci-dessous.
 (1 row)
 ```
 
-Vous pouvez alors interroger directement les statistiques calculées en référençant l’`Statistics ID`. L’exemple d’instruction ci-dessous permet d’afficher la sortie complète lorsque vous l’utilisez avec l’`Statistics ID` ou le nom d’alias. Pour en savoir plus sur cette fonctionnalité, voir [documentation sur les noms d’alias](../essential-concepts/dataset-statistics.md#alias-name).
+Vous pouvez alors interroger directement les statistiques calculées en référençant l’`Statistics ID`. L’exemple d’instruction ci-dessous permet d’afficher la sortie complète lorsque vous l’utilisez avec l’`Statistics ID` ou le nom d’alias. Pour en savoir plus sur cette fonctionnalité, voir [documentation sur les noms d’alias](../key-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
@@ -788,7 +788,7 @@ demo_table_stats_1    |  demo_table   |    (*)    |       ((age > 25))          
 age_stats             | castedtitanic |   (age)   | ((age > 25) AND (age < 40)) | 25/06/2023 09:22:26
 ```
 
-Voir [documentation sur les statistiques des jeux de données](../essential-concepts/dataset-statistics.md) pour plus d’informations.
+Voir [documentation sur les statistiques des jeux de données](../key-concepts/dataset-statistics.md) pour plus d’informations.
 
 #### TABLESAMPLE {#tablesample}
 
@@ -806,7 +806,7 @@ ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
 ANALYZE TABLE tableName FILTERCONTEXT (timestamp >= to_timestamp('2023-01-01')) TABLESAMPLE SAMPLERATE 5:
 ```
 
-Voir [documentation sur les exemples de jeux de données](../essential-concepts/dataset-samples.md) pour plus d’informations.
+Voir [documentation sur les exemples de jeux de données](../key-concepts/dataset-samples.md) pour plus d’informations.
 
 ### BEGIN
 

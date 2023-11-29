@@ -2,7 +2,7 @@
 title: Surveillance des requêtes planifiées
 description: Découvrez comment surveiller les requêtes via l’interface utilisateur de Query Service.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: fa871529a4136263399bad3200ee3888049d06a5
+source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
 workflow-type: tm+mt
 source-wordcount: '1818'
 ht-degree: 39%
@@ -161,7 +161,7 @@ Les requêtes qui utilisent des blocs anonymes pour comprendre leurs instruction
 >
 >Les détails d&#39;exécution d&#39;un bloc anonyme qui utilise la commande DROP sont **not** être signalée en tant que sous-requête distincte. Des détails d’exécution distincts sont disponibles pour les requêtes CTAS, les requêtes ITAS et les instructions COPY utilisées comme sous-requêtes de bloc anonymes. Les détails d’exécution de la commande DROP ne sont actuellement pas pris en charge.
 
-Les blocs anonymes sont identifiés à l’aide d’une `$$` avant la requête. Pour en savoir plus sur les blocs anonymes dans le service de requête, voir la section [document de bloc anonyme](../essential-concepts/anonymous-block.md).
+Les blocs anonymes sont identifiés à l’aide d’une `$$` avant la requête. Pour en savoir plus sur les blocs anonymes dans le service de requête, voir la section [document de bloc anonyme](../key-concepts/anonymous-block.md).
 
 Les sous-requêtes de bloc anonymes ont des onglets à gauche de l’état d’exécution. Sélectionnez un onglet pour afficher les détails de l’exécution.
 

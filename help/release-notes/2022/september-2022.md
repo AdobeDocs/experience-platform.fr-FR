@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2022
 description: Les notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
 workflow-type: tm+mt
 source-wordcount: '2938'
 ht-degree: 99%
@@ -215,7 +215,7 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 | Fonctionnalité | Description |
 | --- | --- |
 | API d’abonnement aux alertes | Adobe Experience Platform Query Service vous permet de vous abonner à des alertes pour les requêtes ad hoc et planifiées. Les alertes peuvent être reçues par e-mail, dans l’interface utilisateur de Platform ou les deux. Actuellement, il n’est possible de s’abonner aux alertes de requêtes qu’à l’aide de l’[API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/). |
-| Exemples de jeux de données | Les échantillons de jeux de données Query Service vous permettent de mener des requêtes exploratoires sur les données volumineuses avec un temps de traitement considérablement réduit, mais au prix de la précision des requêtes. Pour en savoir plus, consultez le [guide d’échantillons de jeux de données](../../query-service/essential-concepts/dataset-samples.md). |
+| Exemples de jeux de données | Les échantillons de jeux de données Query Service vous permettent de mener des requêtes exploratoires sur les données volumineuses avec un temps de traitement considérablement réduit, mais au prix de la précision des requêtes. Pour en savoir plus, consultez le [guide d’échantillons de jeux de données](../../query-service/key-concepts/dataset-samples.md). |
 
 Pour plus d’informations sur Query Service [!DNL Query Service], consultez la [[!DNL Query Service] présentation](../../query-service/home.md) de Query Service.
 

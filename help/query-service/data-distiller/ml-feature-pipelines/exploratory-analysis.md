@@ -2,7 +2,7 @@
 title: Analyse des données exploratoires
 description: Découvrez comment utiliser Data Distiller pour explorer et analyser les données d’un notebook Python.
 exl-id: 1dd4cf6e-f7cc-4f4b-afbd-bfc1d342a2c3
-source-git-commit: f9c49dbcc1820cf70c85368114c2a1ab30b87807
+source-git-commit: 27834417a1683136a173996cff1fd422305e65b9
 workflow-type: tm+mt
 source-wordcount: '808'
 ht-degree: 18%
@@ -42,7 +42,7 @@ df
 
 ## Création d’une version échantillonnée de jeux de données volumineux {#create-dataset-sample}
 
-Si le jeu de données que vous souhaitez interroger est très volumineux ou si les résultats exacts des requêtes exploratoires ne sont pas nécessaires, utilisez la variable [fonctionnalité d’échantillonnage](../../essential-concepts/dataset-samples.md) disponible pour les requêtes Data Distiller. Il s’agit d’un processus en deux étapes :
+Si le jeu de données que vous souhaitez interroger est très volumineux ou si les résultats exacts des requêtes exploratoires ne sont pas nécessaires, utilisez la variable [fonctionnalité d’échantillonnage](../../key-concepts/dataset-samples.md) disponible pour les requêtes Data Distiller. Il s’agit d’un processus en deux étapes :
 
 - Tout d’abord, **analyser** le jeu de données pour créer une version échantillonnée avec un ratio d’échantillonnage spécifié ;
 - Ensuite, interrogez la version échantillonnée du jeu de données. Selon les fonctions que vous appliquez au jeu de données échantillonné, vous pouvez mettre à l’échelle la sortie avec les nombres dans le jeu de données complet.

@@ -5,7 +5,7 @@ title: Directives générales pour l’exécution de requête dans Query Service
 type: Tutorial
 description: Ce document présente les détails importants à connaître lors de l’écriture de requêtes dans Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: adf8da46d09c60b86df16493043efeacbdd24fe2
+source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 47%
@@ -24,7 +24,7 @@ Adobe Experience Platform [!DNL Query Service] comporte deux modèles d’exécu
 
 ### Exécution de requête interactive
 
-Les requêtes peuvent être exécutées de manière interactive en les envoyant via l’ [!DNL Query Service] Interface utilisateur ou [par l’intermédiaire d’un client connecté](../clients/overview.md). En cours d’exécution [!DNL Query Service] via un client connecté, une session principale s’exécute entre le client et [!DNL Query Service] jusqu’à ce que la requête envoyée soit renvoyée ou expire.
+Les requêtes peuvent être exécutées de manière interactive en les envoyant via l’ [!DNL Query Service] Interface utilisateur ou [par l’intermédiaire d’un client connecté](../clients/overview.md). En cours d’exécution [!DNL Query Service] via un client connecté, une session active s’exécute entre le client et [!DNL Query Service] jusqu’à ce que la requête envoyée soit renvoyée ou expire.
 
 L’exécution de requête interactive présente les limites suivantes :
 
@@ -38,7 +38,7 @@ L’exécution de requête interactive présente les limites suivantes :
 >
 >Pour contourner la limite de lignes maximale, incluez `LIMIT 0` dans votre requête. Le délai d’expiration de 10 minutes s’applique toujours.
 
-Par défaut, les résultats des requêtes interactives sont renvoyés au client et **ne sont pas** conservés. Pour conserver les résultats sous la forme d’un jeu de données dans [!DNL Experience Platform], la requête doit utiliser la variable `CREATE TABLE AS SELECT` syntaxe.
+Par défaut, les résultats des requêtes interactives sont renvoyés au client et **ne sont pas** conservés. Pour conserver les résultats sous forme de jeu de données dans [!DNL Experience Platform], la requête doit utiliser la variable `CREATE TABLE AS SELECT` syntaxe.
 
 ### Exécution de requête non interactive
 
@@ -201,11 +201,11 @@ Les accents graves **ne sont pas** nécessaires si vous utilisez la notation par
 
 ## Affichage des informations relatives aux tableaux
 
-Après la connexion à Query Service, vous pouvez voir toutes vos tables disponibles sur Platform à l’aide de l’une des fonctionnalités suivantes : `\d` ou `SHOW TABLES` des commandes.
+Après la connexion à Query Service, vous pouvez voir toutes vos tables disponibles sur Platform à l’aide de l’option `\d` ou `SHOW TABLES` des commandes.
 
 ### Affichage de tableau standard
 
-Le `\d` affiche la commande standard [!DNL PostgreSQL] pour répertorier les tables. Vous trouverez ci-dessous un exemple de sortie de cette commande :
+La variable `\d` affiche la commande standard [!DNL PostgreSQL] pour répertorier les tables. Vous trouverez ci-dessous un exemple de sortie de cette commande :
 
 ```sql
              List of relations
@@ -311,7 +311,7 @@ LIMIT 50;
 
 ## Déduplication
 
-Query Service prend en charge le dédoublonnage des données ou la suppression des doublons de lignes des données. Pour plus d’informations sur la déduplication, veuillez lire la section [Guide de déduplication de Query Service](../essential-concepts/deduplication.md).
+Query Service prend en charge le dédoublonnage des données ou la suppression des doublons de lignes des données. Pour plus d’informations sur la déduplication, veuillez lire la section [Guide de déduplication de Query Service](../key-concepts/deduplication.md).
 
 ## Calcul des fuseaux horaires dans Query Service
 
