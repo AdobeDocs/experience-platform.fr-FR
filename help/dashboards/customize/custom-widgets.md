@@ -3,10 +3,10 @@ keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;profils
 title: Création de widgets personnalisés pour les tableaux de bord
 description: Ce guide fournit des instructions détaillées sur la création de widgets personnalisés à utiliser dans les tableaux de bord Adobe Experience Platform.
 exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
-source-git-commit: 386d805eadf335b95b6eac92c7663fcee17b4b2d
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 91%
+source-wordcount: '975'
+ht-degree: 90%
 
 ---
 
@@ -16,11 +16,11 @@ Adobe Experience Platform vous permet d’afficher les données de votre organ
 
 Ce guide fournit des instructions détaillées sur la création et l’ajout de widgets personnalisés aux tableaux de bord [!UICONTROL Profils], [!UICONTROL Segments] et [!UICONTROL Destinations] dans l’interface utilisateur de Platform.
 
-Pour en savoir plus sur les widgets standard, reportez-vous au guide relatif à l’[ajout de widgets standard à vos tableaux de bord](standard-widgets.md).
-
 >[!NOTE]
 >
->Les widgets affichés dans le tableau de bord [!UICONTROL Utilisation des licences] ne peuvent pas être personnalisés. Pour en savoir plus sur ce tableau de bord unique, consultez la [documentation du tableau de bord d’utilisation des licences](../guides/license-usage.md).
+>Toutes les mises à jour apportées aux tableaux de bord sont effectuées par organisation et par environnement de test.
+
+Pour en savoir plus sur les widgets standard, reportez-vous au guide relatif à l’[ajout de widgets standard à vos tableaux de bord](standard-widgets.md).
 
 ## Bibliothèque de widgets {#widget-library}
 
@@ -42,7 +42,7 @@ Sélectionnez l’onglet **[!UICONTROL Personnalisé]** pour commencer à créer
 
 Pour créer un widget personnalisé, sélectionnez **[!UICONTROL Créer un widget]** dans le coin supérieur droit de la bibliothèque de widgets ou, s’il s’agit du premier widget personnalisé de votre organisation, sélectionnez **[!UICONTROL Créer]** au centre de la bibliothèque de widgets.
 
-![Onglet Personnalisé de l’espace de travail de la bibliothèque de widgets avec l’option Créer mise en surbrillance.](../images/customization/create-widget.png)
+![Onglet Personnalisé de l’espace de travail de la bibliothèque de widgets en surbrillance.](../images/customization/create-widget.png)
 
 Dans la boîte de dialogue **[!UICONTROL Créer un widget]**, fournissez un titre et une description pour votre nouveau widget. Choisissez ensuite l’attribut que vous souhaitez que le widget affiche.
 

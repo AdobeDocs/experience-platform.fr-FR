@@ -3,10 +3,10 @@ keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau
 title: Présentation de la personnalisation des tableaux de bord
 description: Découvrez comment personnaliser les données affichées dans vos tableaux de bord Adobe Experience Platform.
 exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 89%
+source-wordcount: '468'
+ht-degree: 86%
 
 ---
 
@@ -16,7 +16,7 @@ Les tableaux de bord des profils, des segments et des destinations disponibles d
 
 >[!NOTE]
 >
->Les widgets affichés dans le tableau de bord [!UICONTROL Utilisation des licences] ne peuvent pas être personnalisés. Pour en savoir plus sur ce tableau de bord unique, consultez la [documentation du tableau de bord d’utilisation des licences](../guides/license-usage.md).
+>Toutes les mises à jour apportées aux tableaux de bord sont effectuées par organisation et par environnement de test.
 
 ## Modifier le tableau de bord
 

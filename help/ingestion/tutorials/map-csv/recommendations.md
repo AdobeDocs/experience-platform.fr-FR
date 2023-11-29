@@ -2,10 +2,10 @@
 title: Mappage d’un fichier CSV à un schéma XDM à l’aide de Recommendations généré par l’IA
 description: Ce tutoriel explique comment mapper un fichier CSV à un schéma XDM à l’aide de recommandations générées par l’IA.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: df6f76be6beba962b1795bd33dc753ef04267734
+source-git-commit: 6632086641004c2b788a28cbc47ac6d8bd4eace3
 workflow-type: tm+mt
-source-wordcount: '1014'
-ht-degree: 97%
+source-wordcount: '1102'
+ht-degree: 90%
 
 ---
 
@@ -71,6 +71,10 @@ Une fois le fichier chargé, une section de données d’exemple s’affiche. El
 Les modèles ML sont exécutés pour générer un nouveau schéma basé sur votre configuration de flux de données et votre fichier CSV chargé. Une fois le processus terminé, l’étape [!UICONTROL Mappage] est renseignée pour afficher les mappages de chaque champ individuel avec une vue entièrement navigable de la structure de schéma générée.
 
 ![L’étape [!UICONTROL Mappage] dans l’interface utilisateur, affichant tous les champs CSV mappés et la structure de schéma résultante.](../../images/tutorials/map-csv-recommendations/schema-generated.png)
+
+>[!NOTE]
+>
+>Vous pouvez filtrer tous les champs de votre schéma en fonction de divers critères lors du workflow de mappage des champs source vers cible. Le comportement par défaut est d’afficher tous les champs mappés. Pour modifier les champs affichés, sélectionnez l’icône de filtrage en regard du champ de saisie de la recherche et choisissez dans la liste déroulante des options.<br> ![L’étape de mappage du workflow de création de schéma CSV vers XDM avec l’icône de filtre et le menu déroulant mis en surbrillance.](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "L’étape de mappage du workflow de création de schéma CSV vers XDM avec l’icône de filtre et le menu déroulant mis en surbrillance."){width="100" zoomable="yes"}
 
 À partir de là, vous pouvez éventuellement [modifier les mappages des champs](#edit-mappings) ou [modifier les groupes de champs auxquels ils sont associés](#edit-schema) selon vos besoins. Lorsque vous êtes satisfait(e), sélectionnez **[!UICONTROL Terminer]** pour terminer le mappage et lancer le flux de données que vous avez configuré précédemment. Les données CSV sont ingérées dans le système et renseignent un jeu de données en se basant sur la structure de schéma générée, qui sera prêt à être utilisé par les services Platform en aval.
 

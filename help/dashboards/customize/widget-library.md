@@ -3,10 +3,10 @@ keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau
 title: Présentation de la bibliothèque de widgets des tableaux de bord
 description: Ce guide fournit des instructions détaillées pour accéder à la bibliothèque de widgets dans Adobe Experience Platform.
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
-source-git-commit: 09f212741321f17372d52fee507a96d2d2834e85
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 56%
+source-wordcount: '504'
+ht-degree: 53%
 
 ---
 
@@ -16,11 +16,11 @@ L’interface utilisateur d’Adobe Experience Platform vous permet d’affich
 
 Ce guide fournit des instructions détaillées pour accéder à la [!UICONTROL bibliothèque de widgets] dans Experience Platform, où vous pouvez sélectionner des widgets standard et créer des widgets personnalisés pour changer les informations affichées dans vos tableaux de bord.
 
-Pour plus d’informations sur la manière de modifier l’emplacement et la taille des widgets déjà affichés dans vos tableaux de bord, reportez-vous au [guide de modification des tableaux de bord](modify.md).
-
 >[!NOTE]
 >
->Les widgets affichés dans le tableau de bord [!UICONTROL Utilisation des licences] ne peuvent pas être personnalisés. Pour en savoir plus sur ce tableau de bord unique, consultez la [documentation du tableau de bord d’utilisation des licences](../guides/license-usage.md).
+>Toutes les mises à jour apportées aux tableaux de bord sont effectuées par organisation et par environnement de test.
+
+Pour plus d’informations sur la manière de modifier l’emplacement et la taille des widgets déjà affichés dans vos tableaux de bord, reportez-vous au [guide de modification des tableaux de bord](modify.md).
 
 ## Accès à la bibliothèque de widgets {#access}
 

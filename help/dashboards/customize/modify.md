@@ -3,10 +3,10 @@ keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau
 title: Modification des tableaux de bord Platform dans l’interface utilisateur
 description: Ce guide fournit des instructions détaillées pour personnaliser l’affichage des données Adobe Experience Platform de votre organisation dans les tableaux de bord.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: 338aa6849f58b3c0fd6c871f1e199ebf6a73d115
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 91%
+source-wordcount: '496'
+ht-degree: 88%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 91%
 
 L’interface utilisateur (IU) d’Adobe Experience Platform vous permet d’afficher les données de votre organisation et d’interagir avec elles à l’aide de plusieurs tableaux de bord. Les widgets et mesures par défaut affichés dans les tableaux de bord peuvent être ajustés au niveau de chaque utilisateur afin d’afficher les données préférées. Les widgets peuvent également être créés et partagés entre les utilisateurs d’une même organisation.
 
-Ce guide fournit des instructions détaillées pour personnaliser l’affichage des données dans les tableaux de bord [!UICONTROL Profils], [!UICONTROL Segments] et [!UICONTROL Destinations] dans l’interface utilisateur de Platform.
-
 >[!NOTE]
 >
->Les widgets affichés dans le tableau de bord de l’utilisation des licences ne peuvent pas être personnalisés. Pour en savoir plus sur ce tableau de bord unique, consultez la [documentation du tableau de bord d’utilisation des licences](../guides/license-usage.md).
+>Toutes les mises à jour apportées aux tableaux de bord sont effectuées par organisation et par environnement de test.
+
+Ce guide fournit des instructions détaillées pour personnaliser l’affichage des données dans les tableaux de bord [!UICONTROL Profils], [!UICONTROL Segments] et [!UICONTROL Destinations] dans l’interface utilisateur de Platform.
 
 ## Prise en main
 

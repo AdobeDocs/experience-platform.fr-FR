@@ -3,10 +3,10 @@ keywords: Experience Platform;interface utilisateur;UI;tableaux de bord;tableau
 title: Widgets de tableaux de bord standard
 description: Ce guide fournit des instructions détaillées sur l’ajout de widgets standard à vos tableaux de bord Adobe Experience Platform.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 75%
+source-wordcount: '436'
+ht-degree: 82%
 
 ---
 
@@ -14,18 +14,13 @@ ht-degree: 75%
 
 Adobe Experience Platform vous permet d’afficher les données de votre organisation et d’interagir avec elles à l’aide de plusieurs tableaux de bord. Vous pouvez également mettre à jour certains tableaux de bord en ajoutant de nouveaux widgets à l’affichage de votre tableau de bord. Adobe propose une sélection de widgets standard que vous pouvez ajouter à vos tableaux de bord.
 
-La variable [!UICONTROL Profils], [!UICONTROL Audiences], et [!UICONTROL Destinations] Les tableaux de bord comportent chacun un chargement de widget par défaut lors de la création d’une instance Platform. Ce guide fournit des instructions détaillées sur l’ajout de widgets standard pour personnaliser la variable [!UICONTROL Profils], [!UICONTROL Audiences], et [!UICONTROL Destinations] Tableaux de bord dans l’interface utilisateur de Platform.
+La variable [[!UICONTROL Profils]](../guides/profiles.md#default-widgets), [[!UICONTROL Audiences]](../guides/audiences.md#default-widgets), et [[!UICONTROL Destinations]](../guides/destinations.md#default-widgets) Les tableaux de bord comportent chacun un chargement de widget par défaut lors de la création d’une instance Platform. Ce guide fournit des instructions détaillées sur l’ajout de widgets standard pour personnaliser la variable [!UICONTROL Profils], [!UICONTROL Audiences], et [!UICONTROL Destinations] Tableaux de bord dans l’interface utilisateur de Platform.
 
 >[!NOTE]
 >
->Depuis le 26 juillet 2023, [!UICONTROL Profils], [!UICONTROL Audiences], et [!UICONTROL Destinations] Les tableaux de bord Aperçu ont été réinitialisés à un nouveau chargement de widget par défaut pour tous les utilisateurs qui n’ont pas modifié leurs vues au cours des six derniers mois.
->Reportez-vous à la documentation du [Profils](../guides/profiles.md#default-widgets), [Audiences](../guides/audiences.md#default-widgets), et [Destinations](../guides/destinations.md#default-widgets) sections de widget par défaut pour plus d’informations sur les widgets qui sont inclus dans les chargements de widgets par défaut.
+>Toutes les mises à jour apportées aux tableaux de bord sont effectuées par organisation et par environnement de test.
 
 Pour en savoir plus sur les widgets personnalisés, consultez le guide de [création de widgets personnalisés](custom-widgets.md).
-
->[!NOTE]
->
->Les widgets affichés dans le tableau de bord [!UICONTROL Utilisation des licences] ne peuvent pas être personnalisés. Pour en savoir plus sur ce tableau de bord unique, consultez la [documentation du tableau de bord d’utilisation des licences](../guides/license-usage.md).
 
 ## Bibliothèque de widgets {#widget-library}
 

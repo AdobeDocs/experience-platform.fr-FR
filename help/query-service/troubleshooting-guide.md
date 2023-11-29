@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Questions fréquentes
 description: Ce document contient les questions les plus fréquentes et les réponses associées concernant Query Service. Les rubriques incluent l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 8f60d53c1adaf29ce2dce7c3af84f8b39998f7d0
 workflow-type: tm+mt
-source-wordcount: '4309'
-ht-degree: 100%
+source-wordcount: '4384'
+ht-degree: 98%
 
 ---
 
@@ -583,6 +583,16 @@ Oui, le contrôle d’accès basé sur les attributs est appliqué s’il est co
 
 +++Réponse
 Non, Query Service ne prend pas en charge la commande « INSERT OVERWRITE INTO ».
++++
+
+### À quelle fréquence les données d’utilisation du tableau de bord d’utilisation des licences sont-elles mises à jour pour les heures de calcul de Data Distiller ?
+
++++Réponse Le tableau de bord d’utilisation des licences pour les heures d’ordinateur de Data Distiller est mis à jour quatre fois par jour, toutes les six heures.
++++
+
+### Puis-je utiliser la commande CREATE VIEW sans accès à Data Distiller ?
+
++++Répondre Oui, vous pouvez utiliser `CREATE VIEW` sans accès à Data Distiller. Cette commande offre une vue logique des données, mais ne les réécrit pas dans le lac de données.
 +++
 
 ## Exportation des données {#exporting-data}
