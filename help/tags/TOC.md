@@ -5,9 +5,9 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: f63d171354e15a23c29c1e579ce816750dea3c97
+source-git-commit: 7b957aeff6f60665841013619d70ee962fc4c449
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1030'
 ht-degree: 99%
 
 ---
@@ -248,7 +248,8 @@ ht-degree: 99%
          * [Aperçu](./extensions/server/splunk/overview.md)
       * [!DNL Twitter] {#twitter}
          * [Aperçu](./extensions/server/twitter/overview.md)
-      * [[!DNL Tiktok] API des événements web](https://exchange.adobe.com/apps/ec/109834)
+      * [!DNL Tiktok] API des événements web {#tiktok}
+         * [Aperçu](./extensions/server/tiktok/overview.md)
       * API des événements [!DNL Zendesk] {#zendesk}
          * [Aperçu](./extensions/server/zendesk/overview.md)
 * Développement d’extension {#extension-dev}
