@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Présentation de la prise en compte des données dans les classeurs de cas d’utilisation
 description: Découvrez comment accélérer le temps de valorisation en copiant les ressources générées dans l’environnement de test d’inspiration finale vers d’autres environnements de test.
 badgeBeta: label="Version Beta" type="Informative"
-source-git-commit: 5b6b69d69a088f58d10f41debde859294285360d
+source-git-commit: cbf5f2aaf9bb8113ad5eadac888e9b4f85b199b8
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '843'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Présentation de la prise en compte des données dans les classeurs de cas d’utilisation
 
-Les scénarios d’utilisation sont des modèles marketing conçus pour générer des ressources telles que des audiences, des schémas ou des parcours pour des cas d’utilisation marketing courants. Dans Adobe Experience Platform, ces modèles font référence à plusieurs champs et groupes de champs standard. Cependant, dans certains cas, vous avez peut-être déjà configuré vos propres schémas, champs et groupes de champs. Cela peut rendre certaines des ressources générées par les modèles de cas d’utilisation, comme les parcours, incompatibles avec vos données. Lisez ce tutoriel pour comprendre comment utiliser la fonctionnalité de sensibilisation aux données pour mieux aligner et compléter les ressources générées avec vos ressources existantes.
+Les scénarios d’utilisation sont des modèles marketing conçus pour générer des ressources telles que des audiences, des schémas ou des parcours pour des cas d’utilisation marketing courants. Dans Adobe Experience Platform, ces modèles font référence à plusieurs champs et groupes de champs standard. Cependant, dans certains cas, vous avez peut-être déjà configuré vos propres schémas, champs et groupes de champs. Cela peut rendre certaines des ressources générées par les modèles de cas d’utilisation, comme les parcours, incompatibles avec vos données. Pour comprendre comment utiliser la fonctionnalité de sensibilisation aux données pour mieux aligner et compléter les ressources générées avec vos ressources existantes, lisez ce tutoriel.
 
 ## Conditions préalables {#prerequisites}
 
@@ -31,7 +31,7 @@ La création d’une instance génère un ensemble de ressources telles que des 
 
    ![Un modal pour créer un package](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 
-3. Accédez au **Environnements de test** dans le volet de navigation de gauche, puis sélectionnez l’option **Packages** , recherchez votre package et publiez-le. Pour publier un module qui est à l’état de brouillon, suivez les étapes de la section [outil sandbox](/help/sandboxes/ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish) document.
+3. Accédez au **Environnements de test** dans le volet de navigation de gauche, puis sélectionnez l’option **Packages** , recherchez votre package et publiez-le. Pour publier un module dont l’état est en version préliminaire, procédez comme suit : [outil sandbox](/help/sandboxes/ui/sandbox-tooling.md#add-an-object-to-an-existing-package-and-publish) document.
 
    ![Module dans un état de brouillon ou non publié](/help/use-case-playbooks/assets/playbooks/data-awareness/draft-mode.png)
 
@@ -45,7 +45,7 @@ La création d’une instance génère un ensemble de ressources telles que des 
    >
    > Le package ne peut pas être importé tant qu’il est toujours en mode préliminaire. Ouvrez donc la page des détails du package et publiez le package.
 
-5. Sélectionnez la variable **+** pour démarrer le workflow afin d’importer les ressources générées par le cas d’utilisation playbook dans la variable **[!UICONTROL Environnement de test Target]**. Sélectionnez un environnement de test cible et confirmez le nom du module à importer à l’aide de la liste déroulante. Ajoutez les détails de la tâche, tels que le nom et la description de la tâche, avant de passer à l’étape suivante.
+5. Sélectionnez la variable **+** contrôler et démarrer le workflow pour importer les ressources générées par le manuel du cas d’utilisation dans la **[!UICONTROL Environnement de test Target]**. Sélectionnez un environnement de test cible et confirmez le nom du module à importer à l’aide de la liste déroulante. Ajoutez les détails de la tâche, tels que le nom et la description de la tâche, avant de passer à l’étape suivante.
 
    ![Lancez le workflow d&#39;import, sélectionnez target, confirmez le package, ajoutez les détails de la tâche.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
 
@@ -59,7 +59,7 @@ La création d’une instance génère un ensemble de ressources telles que des 
 
 ### Mappage des schémas {#map-schemas}
 
-1. Mappez le premier schéma. La boîte de dialogue de mappage de schéma affiche une liste déroulante pour sélectionner le schéma cible. Si le schéma source est un schéma de profil, il n’existe aucune autre option de schéma cible en dehors de la variable [schéma de profil d’union individuel](/help/xdm/classes/individual-profile.md). Vous pouvez voir les recommandations de mappage générées automatiquement entre les données source et les champs cibles lors du premier affichage de la page. Vous pouvez éditer les mappages en sélectionnant le champ cible, puis en sélectionnant un nouveau champ. Si vous apportez des modifications aux mappages suggérés, utilisez la variable **Valider** pour valider les nouveaux mappages et afficher les erreurs pouvant être liées aux nouveaux mappages. Sélectionner **Enregistrer** une fois le mappage terminé.
+1. Mappez le premier schéma. La boîte de dialogue de mappage de schéma affiche une liste déroulante pour sélectionner le schéma cible. Si le schéma source est un schéma de profil, il n’existe aucune autre option de schéma cible en dehors de la variable [schéma de profil d’union individuel](/help/xdm/classes/individual-profile.md). Vous pouvez voir les recommandations de mappage générées automatiquement entre les données source et les champs cibles lors du premier affichage de la page. Vous pouvez éditer les mappages en sélectionnant le champ cible, puis en sélectionnant un nouveau champ. Si vous modifiez les mappages proposés, utilisez la méthode **Valider** pour valider les nouveaux mappages et afficher les erreurs pouvant être liées aux nouveaux mappages. Sélectionner **Enregistrer** une fois le mappage terminé.
 
    ![Boîte de dialogue de mappage de schéma avec une liste déroulante pour sélectionner un schéma cible.](/help/use-case-playbooks/assets/playbooks/data-awareness/map-to-existing-fields.png)
 
@@ -81,7 +81,7 @@ La création d’une instance génère un ensemble de ressources telles que des 
 
    >[!NOTE]
    >
-   > Vous ne pouvez agir sur aucune ressource, à l’exception des schémas, car il s’agit d’un environnement de test inspirant, mais ils apparaissent car il s’agit de dépendances du module.
+   > Vous ne pouvez modifier aucune ressource, à l’exception des schémas, car il s’agit d’un environnement de test inspirant, mais ils s’affichent car il s’agit de dépendances du module.
 
 ### Statut de l’importation {#import-status}
 
@@ -89,7 +89,7 @@ La création d’une instance génère un ensemble de ressources telles que des 
 
    ![Page affichant la progression de l&#39;import](/help/use-case-playbooks/assets/playbooks/data-awareness/import-progress.png)
 
-2. Pendant l’importation du package, les actifs du package sont créés dans l’environnement de test cible. Une fois l’opération terminée, les champs auxquels vous venez de mapper sont référencés dans le processus d’importation. Le processus est maintenant terminé et les ressources de l’environnement de test inspirant sont désormais également présentes dans votre environnement de test cible pour que vous puissiez le tester.
+2. Pendant l’importation du package, les actifs du package sont créés dans l’environnement de test cible. Une fois l’importation terminée, ils font référence aux champs que vous avez mappés pendant le processus d’importation. Le processus est maintenant terminé et les ressources de l’environnement de test inspirant sont désormais également présentes dans votre environnement de test cible pour que vous puissiez le tester.
 
    ![Ressources générées dans l’environnement de test cible](/help/use-case-playbooks/assets/playbooks/data-awareness/packages.png)
 
