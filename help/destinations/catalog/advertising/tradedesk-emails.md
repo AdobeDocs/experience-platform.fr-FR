@@ -3,9 +3,9 @@ title: (Version bêta) Le bureau de commerce - connexion CRM
 description: Activez les profils dans votre compte de bureau Commerce pour le ciblage et la suppression des audiences en fonction des données CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3680341c5ca4012ae33df32aa901467d1048b702
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1130'
 ht-degree: 22%
 
 ---
@@ -49,7 +49,7 @@ Adobe Experience Platform prend en charge le texte brut et les adresses e-mail
 | Identité cible | Description | Considérations |
 |---|---|---|
 | E-mail | Adresses électroniques (texte en clair) | Entrée `email` comme identité cible lorsque votre identité source est un espace de noms ou un attribut Email. |
-| Email_LC_SHA256 | Les adresses électroniques doivent être hachées à l’aide de SHA256 et mises en minuscules. Veillez à suivre les [normalisation des emails](https://github.com/UnifiedID2/uid2docs/tree/main/api#email-address-normalization) règles requises. Vous ne pourrez pas modifier ce paramètre ultérieurement. | Entrée `hashed_email` comme identité cible lorsque votre identité source est un espace de noms ou un attribut Email_LC_SHA256. |
+| Email_LC_SHA256 | Les adresses électroniques doivent être hachées à l’aide de SHA256 et mises en minuscules. Vous ne pourrez pas modifier ce paramètre ultérieurement. | Entrée `hashed_email` comme identité cible lorsque votre identité source est un espace de noms ou un attribut Email_LC_SHA256. |
 
 {style="table-layout:auto"}
 
