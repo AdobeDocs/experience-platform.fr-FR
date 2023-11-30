@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;prép de do
 title: Envoyer Des Mises À Jour Partielles De Ligne À Real-Time Customer Profile À L’Aide De La Préparation De Données
 description: Découvrez comment envoyer des mises à jour de lignes partielles à Real-time Customer Profile à l’aide de la préparation de données.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c432bcb3c625b569ec5abbe4a77d683b7509e709
 workflow-type: tm+mt
-source-wordcount: '1174'
-ht-degree: 12%
+source-wordcount: '1225'
+ht-degree: 11%
 
 ---
 
@@ -15,6 +15,10 @@ ht-degree: 12%
 La diffusion en flux continu d’upserts dans [!DNL Data Prep] permet d’envoyer des mises à jour de ligne partielles aux données [!DNL Real-Time Customer Profile] tout en créant et en établissant de nouveaux liens d’identité avec une seule requête API.
 
 En diffusant en continu des upserts, vous pouvez conserver le format de vos données tout en convertissant ces données en [!DNL Real-Time Customer Profile] Demandes de PATCH pendant l’ingestion. En fonction des entrées que vous fournissez, [!DNL Data Prep] vous permet d’envoyer une seule charge utile API et de traduire les données dans les deux [!DNL Real-Time Customer Profile] PATCH et [!DNL Identity Service] CRÉEZ des requêtes.
+
+>[!WARNING]
+>
+>L’ingestion sur les messages de mise à jour d’entité du modèle de données d’expérience (XDM) (avec les opérations du PATCH JSON) pour les mises à jour de profil via l’inlet du DCS a été abandonnée. En tant qu’alternative, vous pouvez [ingestion de données brutes dans l’inlet DCS](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) et spécifiez les mappages de données nécessaires pour transformer vos données en messages compatibles XDM pour les mises à jour de Profile.
 
 Ce document fournit des informations sur la diffusion en continu de upserts dans [!DNL Data Prep].
 
