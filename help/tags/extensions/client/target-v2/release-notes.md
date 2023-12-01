@@ -2,7 +2,7 @@
 title: Notes de mise à jour de l’extension Adobe Target v2
 description: Notes de mise à jour les plus récentes pour l’extension de balise Adobe Target v2 dans Adobe Experience Platform.
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
-source-git-commit: 538dfdb9776fde9c888be8cc8d899fac07e15b92
+source-git-commit: edef000bfe6c4de69a037e2ad6871759c1404580
 workflow-type: tm+mt
 source-wordcount: '794'
 ht-degree: 98%
@@ -15,7 +15,7 @@ ht-degree: 98%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-## v0.20.1 (29 novembre 2023)
+## v0.20.2 (29 novembre 2023)
 
 - Mise à jour pour la prise en charge d’`at.js` 2.11.3
 - Correction d’un bogue qui empêchait l’envoi des jetons de réponse sur les événements at-content-rendering-failed .
