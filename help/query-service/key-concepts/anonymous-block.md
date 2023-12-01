@@ -2,10 +2,10 @@
 title: Bloc anonyme dans Query Service
 description: Le bloc anonyme est une syntaxe SQL prise en charge par Adobe Experience Platform Query Service, qui permet d’exécuter efficacement une séquence de requêtes.
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: b7de5d3b2ceba27f5e86d48078be484dcb6f7c4b
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 100%
+source-wordcount: '647'
+ht-degree: 74%
 
 ---
 
@@ -60,8 +60,28 @@ END
 $$;
 ```
 
+## Bloc anonyme avec clients tiers {#third-party-clients}
+
+Certains clients tiers peuvent avoir besoin d’un identifiant distinct avant et après un bloc SQL pour indiquer qu’une partie du script doit être traitée comme une seule instruction. Si vous recevez un message d’erreur lors de l’utilisation de Query Service avec un client tiers, vous devez vous référer à la documentation du client tiers concernant l’utilisation d’un bloc SQL.
+
+Par exemple : **DbVisualizer** nécessite que le délimiteur soit le seul texte sur la ligne. Dans DbVisualizer, la valeur par défaut de l’identifiant de début est `--/` et pour l’identifiant de fin, il est `/`. Vous trouverez ci-dessous un exemple de bloc anonyme dans DbVisualizer :
+
+```SQL
+--/
+$$ BEGIN
+    CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
+    ....
+    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
+    EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
+END
+$$;
+/
+```
+
+Pour DbVisualizer en particulier, il existe également une option dans l’interface utilisateur de &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Voir [Documentation de DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) pour plus d’informations.
+
 ## Étapes suivantes
 
-En lisant ce document, vous avez aquis une compréhension claire des blocs anonymes et de leur structure. [Pour plus d’informations sur l’exécution de requêtes](../best-practices/writing-queries.md), consultez le guide sur l’exécution de requêtes dans Query Service.
+En lisant ce document, vous avez aquis une compréhension claire des blocs anonymes et de leur structure. Veuillez lire la [guide d&#39;exécution de requête](../best-practices/writing-queries.md) pour plus d’informations sur l’écriture de requêtes.
 
-Vous devez également en savoir plus sur [la manière dont le bloc anonyme est utilisé avec le modèle de conception de chargement incrémentiel](./incremental-load.md) pour augmenter l’efficacité des requêtes.
+Vous devez également consulter les [utilisation des blocs anonymes avec le modèle de conception de charge incrémentielle](./incremental-load.md) pour augmenter l’efficacité des requêtes.
