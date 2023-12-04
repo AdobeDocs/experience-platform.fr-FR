@@ -2,10 +2,10 @@
 title: Configuration de l’extension de balise du SDK Web
 description: Découvrez comment configurer l’extension de balise SDK Web Experience Platform dans l’interface utilisateur des balises.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ac3362fa5e8a314f85f3bb659047f77fb56c1a7c
 workflow-type: tm+mt
-source-wordcount: '1456'
-ht-degree: 11%
+source-wordcount: '1546'
+ht-degree: 6%
 
 ---
 
@@ -85,13 +85,25 @@ Cette section vous permet de définir le comportement du SDK Web lorsqu’il s�
 
 ## Configuration des paramètres de personnalisation {#personalization}
 
-Cette section vous permet de configurer le mode de masquage de certaines parties d’une page lors du chargement du contenu personnalisé.
-
-Vous pouvez spécifier les éléments à masquer dans l’éditeur de style de prémasquage. Vous pouvez ensuite copier le fragment de code de masquage préalable par défaut qui vous a été fourni et le coller dans le `<head>` élément du site [!DNL HTML] code.
+Cette section vous permet de configurer le mode de masquage de certaines parties d’une page lors du chargement du contenu personnalisé. Cela garantit que vos visiteurs ne voient que la page personnalisée.
 
 ![Image montrant les paramètres de personnalisation de l’extension de balise SDK Web dans l’interface utilisateur des balises](assets/web-sdk-ext-personalization.png)
 
 * **[!UICONTROL Migration de Target depuis at.js vers le SDK Web]**: utilisez cette option pour activer [!DNL Web SDK] pour lire et écrire l’héritage `mbox` et `mboxEdgeCluster` cookies utilisés par at.js `1.x` ou `2.x` bibliothèques. Vous pouvez ainsi conserver le profil du visiteur lors du passage d’une page qui utilise le SDK Web à une page qui utilise at.js. `1.x` ou `2.x` et vice versa.
+
+### Style de prémasquage {#prehiding-style}
+
+L’éditeur de style de prémasquage vous permet de définir des règles CSS personnalisées pour masquer des sections spécifiques d’une page. Lorsque la page est chargée, le SDK Web utilise ce style pour masquer les sections à personnaliser, récupère la personnalisation, puis annule le masquage des sections de page personnalisées. Ainsi, vos visiteurs voient les pages déjà personnalisées, sans voir le processus de récupération de personnalisation.
+
+### Prémasquer le fragment de code {#prehiding-snippet}
+
+Le fragment de code de masquage préalable est utile lorsque la bibliothèque SDK Web est chargée de manière asynchrone. Dans ce cas, pour éviter le scintillement, nous vous recommandons de masquer le contenu avant le chargement de la bibliothèque SDK Web.
+
+Pour utiliser le fragment de code de masquage préalable, copiez-le et collez-le dans le `<head>` de votre page.
+
+>[!IMPORTANT]
+>
+>Lors de l’utilisation du fragment de code de masquage préalable, Adobe recommande d’utiliser le même [!DNL CSS] comme celle utilisée par la variable [style de prémasquage](#prehiding-style).
 
 ## Configuration des paramètres de collecte de données {#data-collection}
 
