@@ -3,10 +3,10 @@ title: Présentation du connecteur source Azure Event Hub
 description: Découvrez comment connecter Azure Event Hubs à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
-source-git-commit: 087100b23f95cef527a507fb11440467feb78c9e
+source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
 workflow-type: tm+mt
-source-wordcount: '538'
-ht-degree: 19%
+source-wordcount: '517'
+ht-degree: 20%
 
 ---
 
@@ -36,7 +36,7 @@ Pour augmenter la vitesse d’ingestion du côté Platform, Platform doit augmen
 
 ## Utiliser un réseau virtuel pour se connecter à [!DNL Event Hubs] vers Platform
 
-Vous pouvez configurer un réseau virtuel pour vous connecter. [!DNL Event Hubs] à Platform lorsque vos mesures de pare-feu sont activées. Pour configurer un réseau virtuel, procédez comme suit : [[!DNL Event Hubs] document d’ensemble de règles réseau](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set#code-try-0) et procédez comme suit :
+Vous pouvez configurer un réseau virtuel pour vous connecter. [!DNL Event Hubs] à Platform lorsque vos mesures de pare-feu sont activées. Pour configurer un réseau virtuel, procédez comme suit : [[!DNL Event Hubs] document d’ensemble de règles réseau](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) et procédez comme suit :
 
 * Sélectionner **Essayer** dans le panneau API REST ;
 * Authentifiez votre [!DNL Azure] compte à l’aide de vos informations d’identification dans le même navigateur ;
@@ -117,7 +117,7 @@ Consultez la liste ci-dessous pour différentes régions des sous-réseaux Platf
 }
 ```
 
-Voir ce qui suit [[!DNL Event Hubs] document](https://docs.microsoft.com/en-us/rest/api/eventhub/preview/namespaces-network-rule-set/create-or-update-network-rule-set) pour plus d’informations sur les ensembles de règles réseau.
+Voir ce qui suit [[!DNL Event Hubs] document](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) pour plus d’informations sur les ensembles de règles réseau.
 
 ## Connecter [!DNL Event Hubs] à Platform
 

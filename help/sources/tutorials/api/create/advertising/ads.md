@@ -2,9 +2,9 @@
 title: Création d’une connexion de base Google Ads à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à Google Ads à l’aide de l’API Flow Service.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '727'
 ht-degree: 27%
 
 ---
@@ -35,7 +35,7 @@ Pour [!DNL Flow Service] pour vous connecter à Google Ads, vous devez fournir d
 | Informations d’identification | Description |
 | ---------- | ----------- |
 | `clientCustomerId` | L’ID client est le numéro de compte correspondant au compte client Google Ads que vous souhaitez gérer avec l’API Google Ads. Cet identifiant suit le modèle de `123-456-7890`. |
-| `loginCustomerId` | L’ID de client de connexion est le numéro de compte qui correspond à votre compte de gestionnaire de publicités Google et qui est utilisé pour récupérer les données de rapport d’un client opérationnel spécifique. Pour plus d’informations sur l’ID de client de connexion, consultez la section [Documentation de l’API Google Ads](https://developers.google.com/google-ads/api/docs/migration/login-customer-id). |
+| `loginCustomerId` | L’ID de client de connexion est le numéro de compte qui correspond à votre compte de gestionnaire de publicités Google et qui est utilisé pour récupérer les données de rapport d’un client opérationnel spécifique. Pour plus d’informations sur l’ID de client de connexion, consultez la section [Documentation de l’API Google Ads](https://developers.google.com/search-ads/reporting/concepts/login-customer-id). |
 | `developerToken` | Le jeton de développement vous permet d’accéder à l’API Google Ads. Vous pouvez utiliser le même jeton de développement pour effectuer des requêtes sur tous vos comptes Google Ads. Récupération du jeton de développement par [connexion à votre compte de gestionnaire](https://ads.google.com/home/tools/manager-accounts/) puis en accédant à la [!DNL API Center] page. |
 | `refreshToken` | Le jeton d’actualisation fait partie de [!DNL OAuth2] authentification. Ce jeton vous permet de régénérer vos jetons d’accès après leur expiration. |
 | `clientId` | L’ID client est utilisé en tandem avec le secret client dans le cadre de [!DNL OAuth2] authentification. Ensemble, l’ID client et le secret client permettent à votre application d’opérer pour le compte de votre compte en identifiant votre application à Google. |
