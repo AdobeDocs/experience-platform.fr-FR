@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Présentation du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 36e38824963139414f2803ef4127706d1e521d1a
+source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
 workflow-type: tm+mt
-source-wordcount: '1847'
-ht-degree: 94%
+source-wordcount: '1840'
+ht-degree: 87%
 
 ---
 
@@ -46,7 +46,7 @@ Le contrôle d’accès basé sur les attributs comprend les composants suivants
 
 >[!IMPORTANT]
 >
->Quand votre organisation a activé le contrôle d’accès basé sur les attributs, vous pouvez commencer à utiliser les autorisations sur Adobe Experience Cloud, au lieu des profils de produit dans Adobe Admin Console, pour gérer les autorisations des utilisateurs, les fonctionnalités, les libellés et autres ressources de votre organisation.
+>Une fois que votre organisation est activée pour le contrôle d’accès basé sur les attributs, vous pouvez commencer à utiliser les autorisations sur Adobe Experience Cloud, au lieu des rôles dans Adobe Admin Console, pour gérer les autorisations pour les utilisateurs, les fonctionnalités, les étiquettes et d’autres ressources de votre organisation.
 
 La zone dédiée aux autorisations dans Experience Cloud permet aux administrateurs de définir des rôles d’utilisateur et des politiques d’accès. Ils peuvent ainsi gérer les autorisations d’accès aux fonctionnalités et objets dans une application de produit.
 
@@ -62,7 +62,7 @@ Les sections suivantes fournissent des informations sur la manière dont le cont
 
 ### Contrôle d’accès
 
-Platform exploite les profils de produit [Adobe Admin Console](https://adminconsole.adobe.com) pour lier les utilisateurs à des autorisations et des sandbox. Les autorisations contrôlent l’accès à de nombreuses fonctionnalités de Platform, notamment la modélisation des données, la gestion des profils et l’administration des sandbox. Quand votre organisation a activé le contrôle d’accès basé sur les attributs, vous pouvez commencer à utiliser les autorisations sur Adobe Experience Cloud, au lieu des profils de produit dans Adobe Admin Console, pour gérer les autorisations des utilisateurs, les fonctionnalités, les libellés et autres ressources de votre organisation.
+Utilisation des plateformes [Adobe Admin Console](https://adminconsole.adobe.com) rôles pour lier les utilisateurs à des autorisations et des environnements de test. Les autorisations contrôlent l’accès à de nombreuses fonctionnalités de Platform, notamment la modélisation des données, la gestion des profils et l’administration des sandbox. Une fois que votre organisation est activée pour le contrôle d’accès basé sur les attributs, vous pouvez commencer à utiliser les autorisations sur Adobe Experience Cloud, au lieu des rôles dans Adobe Admin Console, pour gérer les autorisations pour les utilisateurs, les fonctionnalités, les étiquettes et d’autres ressources de votre organisation.
 
 La disponibilité du contrôle d’accès basé sur les attributs est limitée pour les clients qui achètent des offres Healthcare et/ou Privacy Shield. Cette fonctionnalité inclut les éléments suivants :
 
@@ -74,7 +74,7 @@ Les workflows d’administration pour toutes les applications Experience Platfor
 
 >[!IMPORTANT]
 >
->Les profils de produit sont automatiquement migrés vers l’interface d’autorisations lorsque votre organisation est activée. Les profils de produit dans Admin Console resteront inchangés pour l’instant. **Ne pas** modifier les profils de produit une fois que votre organisation a été activée.
+>Vos rôles sont automatiquement migrés vers l’interface Autorisations lorsque votre organisation est activée. Les rôles en Admin Console resteront inchangés pour l’instant. Veuillez **ne pas** modifiez vos rôles une fois que votre organisation a été activée.
 
 Pour plus d’informations sur le contrôle d’accès, consultez la [présentation du contrôle d’accès](../home.md).
 
