@@ -2,10 +2,10 @@
 title: Présentation d’Identity Namespace
 description: Découvrez les espaces de noms d’identité dans Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 98482bfdd54b70cde73c3512f8237c7862e41281
 workflow-type: tm+mt
-source-wordcount: '1691'
-ht-degree: 24%
+source-wordcount: '1787'
+ht-degree: 18%
 
 ---
 
@@ -18,16 +18,29 @@ Lisez le document suivant pour en savoir plus sur ce que vous pouvez faire avec 
 Les espaces de noms d’identité nécessitent une compréhension des différents services Adobe Experience Platform. Avant de commencer à travailler avec les espaces de noms d’identité, veuillez consulter la documentation relative aux services suivants :
 
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
-* [[!DNL Identity Service]](./home.md) : profitez d’une meilleure compréhension de vos clients et de leurs comportements en rapprochant des identités entre appareils et systèmes.
+* [[!DNL Identity Service]](./home.md): profitez d’une meilleure vue d’ensemble des clients et de leur comportement en rapprochant des identités entre appareils et systèmes.
 * [[!DNL Privacy Service]](../privacy-service/home.md): les espaces de noms d’identité sont utilisés dans les demandes de conformité pour les réglementations de confidentialité juridiques telles que le Règlement général sur la protection des données (RGPD). Chaque demande d’accès à des informations personnelles est relative à un espace de noms afin d’identifier les données des consommateurs qui doivent être affectées.
 
 ## Compréhension des espaces de noms d’identité
+
+![Illustration d’un processus de données avec Identity Service.](images/identity-service-stitching.png)
 
 Une identité entièrement qualifiée comprend deux composants : une **valeur d’identité** et un **espace de noms d’identité**. Par exemple, si la valeur d’une identité est `scott@acme.com`, puis un espace de noms fournit du contexte à cette valeur en la distinguant comme adresse électronique. De même, un espace de noms peut distinguer `555-123-456` comme numéro de téléphone ; et `3126ABC` comme identifiant CRM. Essentiellement, **un espace de noms fournit un contexte à une identité donnée ;**. Lors de la mise en correspondance de données d’enregistrement entre des fragments de profil, comme lorsque [!DNL Real-Time Customer Profile] fusionne les données de profil ; la valeur d’identité et l’espace de noms doivent correspondre.
 
 Par exemple, deux fragments de profil peuvent contenir des identifiants principaux différents, mais ils partagent la même valeur pour l’espace de noms &quot;Email&quot;. Par conséquent, l’Experience Platform peut voir que ces fragments sont en fait la même personne et rassemble les données dans le graphique d’identités de la personne.
 
-![](images/identity-service-stitching.png)
+>[!BEGINSHADEBOX]
+
+**Identity namespace expliqué**
+
+Une autre manière de mieux comprendre le concept d’espace de noms consiste à prendre en compte des exemples du monde réel tels que les villes et leurs états correspondants. Par exemple, Portland, Maine et Portland, Oregon, sont deux endroits différents aux États-Unis. Bien que les villes portent le même nom, l&#39;État agit comme un espace de noms et fournit le contexte nécessaire pour distinguer les deux villes l&#39;une de l&#39;autre.
+
+Application de la même logique à Identity Service :
+
+* En un coup d’oeil, la valeur d’identité de : `1-234-567-8900` peut ressembler à un numéro de téléphone. Cependant, du point de vue du système, cette valeur peut avoir été configurée en tant qu’identifiant CRM. Identity Service n’aurait aucun moyen d’appliquer le contexte nécessaire à cette valeur d’identité sans un espace de noms correspondant.
+* Autre exemple : la valeur d’identité de : `john@gmail.com`. Bien que cette valeur d’identité puisse facilement être considérée comme un e-mail, il est tout à fait possible qu’elle soit configurée en tant qu’identifiant CRM d’espace de noms personnalisé. Avec l’espace de noms, vous pouvez distinguer `Email:john@gmail.com` de `CRM ID:john@gmail.com`.
+
+>[!ENDSHADEBOX]
 
 ### Composants d’un espace de noms
 
@@ -57,11 +70,11 @@ Les types d’identité suivants sont disponibles dans Experience Platform :
 
 | Type d’identité | Description |
 | --- | --- |
-| Cookie Identifiant | Les ID de cookie identifient les navigateurs Web. Ces identités sont essentielles à l’expansion et constituent la majorité du graphique d’identités. Cependant, par nature, elles se désintègrent rapidement et perdent leur valeur au fil du temps. |
+| ID de cookie | Les ID de cookie identifient les navigateurs Web. Ces identités sont essentielles à l’expansion et constituent la majorité du graphique d’identités. Cependant, par nature, ils se désintègrent rapidement et perdent leur valeur au fil du temps. |
 | Identifiant multi-appareils | Les identifiants multi-appareils identifient un individu et lient généralement d’autres identifiants ensemble. Par exemple, un identifiant de connexion, un identifiant CRM et un identifiant de fidélité. Cela indique que [!DNL Identity Service] pour gérer la valeur avec précaution. |
 | ID d’appareil | Les identifiants d’appareil identifient les appareils matériels, tels qu’IDFA (iPhone et iPad), GAID (Android) et RIDA (Roku), et peuvent être partagés par plusieurs personnes dans des foyers. |
 | Adresse e-mail | Les adresses électroniques sont souvent associées à une seule personne et peuvent donc être utilisées pour identifier cette personne sur différents canaux. Les identités de ce type comprennent des informations d’identification personnelle (PII). Cela indique que [!DNL Identity Service] pour gérer la valeur avec précaution. |
-| Identifiant non-humain | Les identifiants non-personnes sont utilisés pour stocker les identifiants qui nécessitent des espaces de noms, mais ne sont pas connectés à un cluster de personnes. Par exemple, un SKU de produit, des données liées aux produits, aux organisations ou aux magasins. |
+| Identifiant de non-personne | Les identifiants non-personnes sont utilisés pour stocker les identifiants qui nécessitent des espaces de noms, mais ne sont pas connectés à un cluster de personnes. Par exemple, un SKU de produit, des données liées aux produits, aux organisations ou aux magasins. |
 | Identifiant du partenaire | <ul><li>Les identifiants de partenaire sont des identifiants utilisés par les partenaires de données pour représenter des personnes. Les identifiants de partenaire sont souvent pseudonymes afin de ne pas révéler la véritable identité d&#39;une personne, et peuvent être probabilistes. Dans Real-time Customer Data Platform, les identifiants de partenaire sont principalement utilisés pour l’activation étendue de l’audience et l’enrichissement des données, et non pour la création de liens entre graphiques d’identités.</li><li>Les graphiques d’identités ne sont pas générés lors de l’ingestion d’une identité contenant un espace de noms d’identité spécifié comme type d’identifiant de partenaire.</li><li>Si vous n’ingérez pas de données de partenaire à l’aide du type d’identité de l’identifiant de partenaire, vous risquez d’atteindre les limites des graphiques système sur Identity Service, ainsi que de fusionner des profils indésirables.</li><ul> |
 | Numéro de téléphone | Les numéros de téléphone sont souvent associés à une seule personne et peuvent donc être utilisés pour identifier cette personne sur différents canaux. Les identités de ce type incluent des informations d’identification personnelle. Cela indique que [!DNL Identity Service] pour gérer la valeur avec précaution. |
 
@@ -69,7 +82,7 @@ Les types d’identité suivants sont disponibles dans Experience Platform :
 
 ### Espaces de noms standard {#standard}
 
- Experience Platform fournit plusieurs espaces de noms d’identité disponibles pour toutes les organisations. Ils sont appelés espaces de noms standard et sont visibles à l’aide de la variable [!DNL Identity Service] API ou via l’interface utilisateur de Platform.
+Experience Platform fournit plusieurs espaces de noms d’identité disponibles pour toutes les organisations. Ils sont appelés espaces de noms standard et sont visibles à l’aide de la variable [!DNL Identity Service] API ou via l’interface utilisateur de Platform.
 
 Les espaces de noms standard suivants sont fournis pour être utilisés par toutes les organisations au sein de Platform :
 
