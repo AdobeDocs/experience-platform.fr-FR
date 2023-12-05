@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Traitement du consentement dans Adobe Experience Platform
 description: Découvrez comment traiter les signaux de consentement des clients dans Adobe Experience Platform à l’aide de la norme Adobe 2.0.
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '1568'
+source-wordcount: '1557'
 ht-degree: 1%
 
 ---
@@ -93,7 +93,7 @@ Une fois que vous avez configuré votre CMP pour écouter les événements de mo
 
 Si des préférences de consentement du client sont requises dans votre application mobile, vous pouvez intégrer le SDK Mobile Experience Platform pour récupérer et mettre à jour les paramètres de consentement, en les envoyant à Platform chaque fois que l’API de consentement est appelée.
 
-Reportez-vous à la documentation du SDK Mobile pour [configuration de l’extension mobile Consent](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) et [utilisation de l’API de consentement](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Pour plus d’informations sur la gestion des problèmes de confidentialité à l’aide du SDK Mobile, reportez-vous à la section . [Confidentialité et RGPD](https://developer.adobe.com/client-sdks/documentation/resources/privacy-and-gdpr/).
+Reportez-vous à la documentation du SDK Mobile pour [configuration de l’extension mobile Consent](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) et [utilisation de l’API de consentement](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Pour plus d’informations sur la gestion des problèmes de confidentialité à l’aide du SDK Mobile, reportez-vous à la section . [Confidentialité et RGPD](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/).
 
 ### Ingestion directe des données de consentement conformes à XDM {#batch}
 

@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2023
 description: Notes de mise à jour de janvier 2023 pour Adobe Experience Platform.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '2408'
-ht-degree: 98%
+source-wordcount: '2224'
+ht-degree: 99%
 
 ---
 
@@ -149,7 +149,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 | Type de données | [[!UICONTROL Détails de la proposition de décision]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/proposition-detail.schema.json) | Ajout d’un champ `selectionStrategy` qui capture les détails d’une stratégie de sélection. |
 | Groupe de champs | [[!UICONTROL Événement d’expérience - Interactions de propositions]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/decisioning/experienceevent-proposition-interaction.schema.json) | Le groupe de champs est désormais compatible avec la classe [!UICONTROL Événement d’étape de parcours]. |
 | Type de données | [[!UICONTROL Informations détaillés sur les erreurs]](https://github.com/adobe/xdm/blob/master/components/datatypes/errordetails.schema.json) | Le champ `ID` a été renommé `name`. |
-| Type de données | [[!UICONTROL Informations sur les médias]](https://github.com/adobe/xdm/blob/master/components/datatypes/media.schema.json) | Annulation d’une modification du modèle de la propriété de segment vidéo. |
+| Type de données | [[!UICONTROL Informations sur les médias]](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/media.schema.json) | Annulation d’une modification du modèle de la propriété de segment vidéo. |
 | Type de données | [[!UICONTROL Informations détaillées sur les données de la QoE]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Le champ `droppedFrameCount` a été supprimé. |
 | Type de données | [[!UICONTROL Informations détaillées sur la session]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | Le champ `isAuthorized` a été renommé `authorized`, et son `type`  a été mis à jour en tant que chaîne plutôt qu’en tant que booléen. |
 | Type de données | [[!UICONTROL Expédition]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Plusieurs nouveaux champs ajoutés : `shipDate`, `trackingNumber`, et `trackingURL`. |

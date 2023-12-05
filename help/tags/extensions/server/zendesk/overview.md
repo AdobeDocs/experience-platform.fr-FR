@@ -2,10 +2,10 @@
 title: Extension de transfert d’événement Zendesk
 description: Extension de transfert d’événement Zendesk pour Adobe Experience Platform.
 exl-id: 22e94699-5b84-4a73-b007-557221d3e223
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '1271'
-ht-degree: 100%
+source-wordcount: '1170'
+ht-degree: 99%
 
 ---
 
@@ -86,7 +86,7 @@ Les clés suivantes peuvent être référencées dans l’objet `event` lors du 
 
 ### `profile` keys
 
-`profile` est un objet JSON représentant l’utilisateur qui a déclenché l’événement. Reportez-vous au document Zendesk sur l’[anatomie d’un profil](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/) pour plus d’informations sur les propriétés capturées par l’objet `profile`.
+`profile` est un objet JSON représentant l’utilisateur qui a déclenché l’événement. Reportez-vous au document Zendesk sur l’[anatomie d’un profil](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/) pour plus d’informations sur les propriétés capturées par l’objet `profile`.
 
 Les clés suivantes peuvent être référencées dans l’objet `profile` lors du mappage à des éléments de données :
 
@@ -96,8 +96,8 @@ Les clés suivantes peuvent être référencées dans l’objet `profile` lors d
 | `type` | Chaîne | `arc.event.xdm._extconndev.profile_type` | Un nom pour le type de profil. Vous pouvez utiliser ce champ pour créer différents types de profils pour une source donnée. Par exemple, vous pouvez créer un ensemble de profils d’entreprise pour les clients et un autre pour les employés. | Oui | La longueur du type de profil ne doit pas dépasser 40 caractères. |
 | `name` | Chaîne | `arc.event.xdm._extconndev.name` | Le nom de la personne du profil. | Non | (S/O) |
 | `user_id` | Chaîne | `arc.event.xdm._extconndev.user_id` | L’identifiant utilisateur de la personne dans Zendesk. | Non | (S/O) |
-| `identifiers` | Tableau | `arc.event.xdm._extconndev.identifiers` | Un tableau contenant au moins un identifiant. Chaque identifiant se compose d’un type et d’une valeur. | Oui | Reportez-vous à la [documentation Zendesk](https://developer.zendesk.com/api-reference/custom-data/profiles_api/profiles_api/#identifiers-array) pour plus d’informations sur le tableau `identifiers`. Tous les champs et valeurs doivent être uniques. |
-| `attributes` | Objet | `arc.event.xdm._extconndev.attrbutes` | Objet contenant des propriétés définies par l’utilisateur à propos de la personne. | Non | Reportez-vous à la [documentation Zendesk](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/#attributes) pour plus d’informations sur les attributs de profil. |
+| `identifiers` | Tableau | `arc.event.xdm._extconndev.identifiers` | Un tableau contenant au moins un identifiant. Chaque identifiant se compose d’un type et d’une valeur. | Oui | Reportez-vous à la [documentation Zendesk](https://developer.zendesk.com/api-reference/ticketing/users/profiles_api/profiles_api/#identifiers-array) pour plus d’informations sur le tableau `identifiers`. Tous les champs et valeurs doivent être uniques. |
+| `attributes` | Objet | `arc.event.xdm._extconndev.attrbutes` | Objet contenant des propriétés définies par l’utilisateur à propos de la personne. | Non | Reportez-vous à la [documentation Zendesk](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/#attributes) pour plus d’informations sur les attributs de profil. |
 
 {style="table-layout:auto"}
 
@@ -148,9 +148,9 @@ Lors de l’utilisation ou de la configuration de l’extension, les erreurs ci-
 Ce document explique comment installer et configurer l’extension de transfert d’événement Zendesk dans l’interface utilisateur. Pour plus d’informations sur la collecte de données d’événement dans Zendesk, consultez la documentation officielle :
 
 * [Prise en main des événements](https://developer.zendesk.com/documentation/custom-data/events/getting-started-with-events/)
-* [API d’événements Zendesk](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/)
+* [API d’événements Zendesk](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/)
 * [À propos de l’API d’événements Zendesk](https://developer.zendesk.com/documentation/custom-data/events/about-the-events-api/)
 * [Anatomie d’un événement](https://developer.zendesk.com/documentation/custom-data/events/anatomy-of-an-event/)
-* [API de profils Zendesk](https://developer.zendesk.com/api-reference/custom-data/events-api/events-api/#profile-object)
-* [À propos de l’API de profils](https://developer.zendesk.com/documentation/custom-data/profiles/about-the-profiles-api/)
-* [Anatomie d’un profil](https://developer.zendesk.com/documentation/custom-data/profiles/anatomy-of-a-profile/)
+* [API de profils Zendesk](https://developer.zendesk.com/api-reference/ticketing/users/events-api/events-api/#profile-object)
+* [À propos de l’API de profils](https://developer.zendesk.com/documentation/ticketing/profiles/about-the-profiles-api/)
+* [Anatomie d’un profil](https://developer.zendesk.com/documentation/ticketing/profiles/anatomy-of-a-profile/)

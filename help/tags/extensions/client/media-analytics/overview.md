@@ -2,10 +2,10 @@
 title: Présentation de l’extension Adobe Media Analytics for Audio and Video
 description: Découvrez lʼextension de balise Adobe Media Analytics for Audio and Video dans Adobe Experience Platform.
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 100%
+source-wordcount: '949'
+ht-degree: 99%
 
 ---
 
@@ -121,18 +121,19 @@ L’extension MA expose les modules partagés `get-instance` et `media-heartbeat
 
    * Un objet délégué valide exposant ces fonctions :
 
-      | Méthode |  Description   |
-      | :--- | :--- |
-      | `getQoSObject()` | Retourne l’instance `MediaObject` contenant les informations actuelles sur la qualité de service QoS. Cette méthode est appelée à plusieurs reprises au cours d’une session de lecture. La mise en œuvre du lecteur doit toujours retourner les plus récentes données QoS disponibles. |
-      | `getCurrentPlaybackTime()` | Renvoie la position actuelle du curseur de lecture. Pour le suivi VOD, la valeur est indiquée en secondes à partir du début de l’élément média. Pour le suivi LIVE/LIVE, la valeur est indiquée en secondes à partir du début du programme. |
+     | Méthode |  Description   |
+     | :--- | :--- |
+     | `getQoSObject()` | Retourne l’instance `MediaObject` contenant les informations actuelles sur la qualité de service QoS. Cette méthode est appelée à plusieurs reprises au cours d’une session de lecture. La mise en œuvre du lecteur doit toujours retourner les plus récentes données QoS disponibles. |
+     | `getCurrentPlaybackTime()` | Renvoie la position actuelle du curseur de lecture. Pour le suivi VOD, la valeur est indiquée en secondes à partir du début de l’élément média. Pour le suivi LIVE/LIVE, la valeur est indiquée en secondes à partir du début du programme. |
 
    * Un objet de configuration facultatif exposant ces propriétés :
 
-      | Propriété | Description | Obligatoire |
-      | :--- | :--- | :--- |
-      | Online Video Provider | Nom de la plateforme vidéo en ligne sur laquelle le contenu est distribué. | Non. Le cas échéant, remplace la valeur définie pendant la configuration de l’extension. |
-      | Nom du lecteur | Le nom du lecteur multimédia en cours d’utilisation (par exemple, « AVPlayer », « Lecteur HTML5 », « Mon lecteur personnalisé ») | Non. Le cas échéant, remplace la valeur définie pendant la configuration de l’extension. |
-      | Canal | Propriété du nom de canal | Non. Le cas échéant, remplace la valeur définie pendant la configuration de l’extension. |
+     | Propriété | Description | Obligatoire |
+     | :--- | :--- | :--- |
+     | Online Video Provider | Nom de la plateforme vidéo en ligne sur laquelle le contenu est distribué. | Non. Le cas échéant, remplace la valeur définie pendant la configuration de l’extension. |
+     | Nom du lecteur | Le nom du lecteur multimédia en cours d’utilisation (par exemple, « AVPlayer », « Lecteur HTML5 », « Mon lecteur personnalisé ») | Non. Le cas échéant, remplace la valeur définie pendant la configuration de l’extension. |
+     | Canal | Propriété du nom de canal | Non. Le cas échéant, remplace la valeur définie pendant la configuration de l’extension. |
+
    **Valeur renvoyée** : une promesse qui est résolue avec une instance `MediaHeartbeat` ou rejetée avec un message d’erreur.
 
 1. **Accéder aux constantes MediaHeartbeat** `media-heartbeat` : module partagé
@@ -173,7 +174,7 @@ L’extension MA expose les modules partagés `get-instance` et `media-heartbeat
    ...
    ```
 
-1. À l’aide de l’instance Pulsations multimédia, consultez la [documentation JS du SDK multimédia](https://experienceleague.adobe.com/docs/media-analytics/using/sdk-implement/setup/setup-javascript/set-up-js-2.html?lang=fr) et la [documentation de l’API JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) pour mettre en œuvre le suivi multimédia.
+1. À l’aide de l’instance Pulsations multimédia, consultez la [documentation JS du SDK multimédia](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) et la [documentation de l’API JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) pour mettre en œuvre le suivi multimédia.
 
 >[!NOTE]
 >
