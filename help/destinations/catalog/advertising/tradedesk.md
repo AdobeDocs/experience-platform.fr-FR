@@ -3,10 +3,10 @@ keywords: publicité, bureau de commerce, bureau de publicité
 title: Connexion à The Trade Desk
 description: Le bureau commercial est une plateforme en libre-service permettant aux acheteurs de publicités d’exécuter le reciblage et d’exécuter des campagnes numériques ciblées sur l’affichage, la vidéo et les sources d’inventaire mobiles.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 49%
+source-wordcount: '739'
+ht-degree: 45%
 
 ---
 
@@ -26,9 +26,9 @@ En tant que marketeur, je souhaite pouvoir utiliser des audiences composées de 
 
 ## Identités prises en charge {#supported-identities}
 
-[!DNL The Trade Desk] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
+[!DNL The Trade Desk] prend en charge l’activation des audiences en fonction des identités affichées dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
 
-| Identité cible | Description |
+| Identité | Description |
 |---|---|
 | GAID | [!DNL Google Advertising ID] |
 | IDFA | [!DNL Apple ID for Advertisers] |
@@ -53,7 +53,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Export d’audience]** | Vous exportez toutes les personnes membres d’une audience vers la destination  |
+| Type d’exportation | **[!UICONTROL Export d’audience]** | Vous exportez tous les membres d’une audience vers la destination. |
 | Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}

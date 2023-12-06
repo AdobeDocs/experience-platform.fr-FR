@@ -3,10 +3,10 @@ keywords: DoubleClick Bid Manager;gestionnaire d’offres DoubleClick;DoubleClic
 title: Connexion Google Display & Video 360
 description: Display & Video 360, anciennement appelé DoubleClick Bid Manager, est un outil utilisé pour exécuter le reciblage et des campagnes numériques ciblées dans des sources d’inventaire Display, Video et Mobile.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
 workflow-type: tm+mt
-source-wordcount: '1020'
-ht-degree: 85%
+source-wordcount: '1000'
+ht-degree: 81%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 85%
 
 ## Présentation {#overview}
 
-[!DNL Display & Video 360], connu précédemment sous le nom de , est un outil utilisé pour exécuter le reciblage et des campagnes numériques ciblées dans des sources d’inventaire Display, Video et Mobile.[!DNL DoubleClick Bid Manager]
+[!DNL Display & Video 360], anciennement connu sous le nom de [!DNL DoubleClick Bid Manager], est un outil utilisé pour exécuter le reciblage et des campagnes numériques ciblées dans des sources d’inventaire Display, Video et Mobile.
 
 ## Spécificités de la destination {#specifics}
 
@@ -29,12 +29,12 @@ Notez les détails suivants qui sont spécifiques aux destinations [!DNL Google 
 
 ## Identités prises en charge {#supported-identities}
 
-[!DNL Google Display & Video 360] prend en charge l’activation des identités décrites dans le tableau ci-dessous.
+[!DNL Google Display & Video 360] prend en charge l’activation des audiences en fonction des identités affichées dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
 
-| Identité cible | Description | Considérations |
+| Identité | Description | Considérations |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | Sélectionnez cette identité cible lorsque votre identité source est un espace de noms GAID. |
-| IDFA | [!DNL Apple ID for Advertisers] | Sélectionnez cette identité cible lorsque votre identité source est un espace de noms IDFA. |
+| GAID | [!DNL Google Advertising ID] |  |
+| IDFA | [!DNL Apple ID for Advertisers] |  |
 | UUID AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=fr), également appelé [!DNL Device ID]. Identifiant numérique à 38 chiffres associé par Audience Manager à chaque appareil avec lequel il interagit. | Google utilise [UUID AAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=fr) pour cibler les utilisateurs en Californie et l’ID de cookie Google pour tous les autres utilisateurs. |
 | ID de cookie [!DNL Google] | ID de cookie [!DNL Google] | [!DNL Google] utilise cet identifiant pour cibler les utilisateurs situés en dehors de la Californie. |
 | RIDA | ID Roku pour la publicité. Cet identifiant identifie de manière unique les appareils Roku. |  |

@@ -3,10 +3,10 @@ keywords: la publicité;
 title: Connexion Microsoft Bing
 description: Avec la destination de connexion Microsoft Bing, vous pouvez exécuter le reciblage et l’audience de campagnes numériques ciblées sur l’ensemble du réseau Microsoft Advertising, y compris la publicité display, la recherche et les campagnes natives.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 093ddd1651e15bebf73d007fb05042fbcf02c675
+source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
 workflow-type: tm+mt
-source-wordcount: '690'
-ht-degree: 59%
+source-wordcount: '684'
+ht-degree: 57%
 
 ---
 
@@ -26,9 +26,9 @@ En tant que marketeur, je souhaite pouvoir utiliser des audiences composées de 
 
 ## Identités prises en charge {#supported-identities}
 
-[!DNL Microsoft Bing] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
+[!DNL Microsoft Bing] prend en charge l’activation des audiences en fonction des identités affichées dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
 
-| Identité cible | Description |
+| Identité | Description |
 |---|---|
 | MAID | Microsoft Advertising ID |
 
