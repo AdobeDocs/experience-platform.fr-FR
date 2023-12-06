@@ -4,14 +4,27 @@ description: Dernières notes de mise à jour pour Adobe Experience Platform 
 keywords: debugger ; extension experience cloud debugger ; chrome ; extension ; notes de mise à jour
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 5b3bfc38a1b159d57c7be6733b9c2515ba72c3c6
+source-git-commit: 5ec61e3822cf42bdb89b24a17782b40cbd9dab37
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 100%
+source-wordcount: '660'
+ht-degree: 90%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform Debugger
+
+## Version 1.5.3 - jeudi 6 décembre 2023
+
+### Nouvelles fonctionnalités
+
+* Ajout d’un &quot;verrouillage sur l’onglet actif lors de l’ouverture du paramètre Debugger&quot;.
+
+### Correctifs et améliorations
+
+* Correction d’un problème en raison duquel les demandes Analytics étaient absentes sur les domaines privés.
+* Correction d’un problème en raison duquel les données de Activity Map manquaient dans le tableau de requêtes Analytics.
+* Correction d’un problème en raison duquel l’affichage de Target Trace provoquait un blocage.
+* Ajout d’un avertissement lorsque le débogueur ne parvient pas à configurer l’infrastructure sur la page dans Firefox.
 
 ## Version 1.5.1 - 2 novembre 2023
 
