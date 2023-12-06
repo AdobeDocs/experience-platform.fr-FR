@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Développement d’intégrations ETL pour Adobe Experience Platform
 description: Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour Experience Platform et l’ingestion de données dans Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
 workflow-type: tm+mt
-source-wordcount: '4081'
+source-wordcount: '3978'
 ht-degree: 100%
 
 ---
@@ -40,7 +40,7 @@ Plusieurs composants d’Experience Platform sont impliqués dans les intégrat
 - **Adobe IDentity Management System (IMS)** — Fournit une structure d’authentification pour les services Adobe.
 - **Organisation IMS** — Personne morale pouvant posséder ou accorder une licence pour des produits et des services et en permettre l’accès à ses membres.
 - **Utilisateur IMS** — Membres d’une organisation IMS. La relation Organisation-utilisateur est une relation many to many.
-- **[!DNL Sandbox]** - Une partition virtuelle d’une instance de [!DNL Platform] unique, qui aide au développement et à l’évolution des applications d’expérience numérique.
+- **[!DNL Sandbox]** - Une partition virtuelle d’une instance de [!DNL Platform] unique, qui aide au développement et à l’évolution des applications d’expérience digitale.
 - **Découverte de données** — Enregistre les métadonnées des données ingérées et transformées dans [!DNL Experience Platform].
 - **[!DNL Data Access]** - Fournit aux utilisateurs une interface pour accéder à leurs données dans [!DNL Experience Platform].
 - **[!DNL Data Ingestion]** - Envoie les données à [!DNL Experience Platform] avec les API [!DNL Data Ingestion].
@@ -319,7 +319,7 @@ La réponse comprend un jeu de données (`limit=1`) présentant la propriété �
 ```json
 {
   "5bf479a6a8c862000050e3c7": {
-    "files": "@/dataSets/5bf479a6a8c862000050e3c7/views/5bf479a654f52014cfffe7f1/files"
+    "files": "@/dataSetFiles?dataSetId=5bf479a6a8c862000050e3c7"
   }
 }
 ```
