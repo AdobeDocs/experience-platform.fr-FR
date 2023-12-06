@@ -3,10 +3,10 @@ title: Utilisation de l’Offer decisioning avec le SDK Web Platform
 description: Le SDK Web de Adobe Experience Platform peut diffuser et générer des offres personnalisées gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur ou de l’API Offer Decisioning.
 keywords: offer decisioning;prise de décision;SDK Web;SDK Web Platform;offres personnalisées;diffuser des offres;diffusion d’offres;personnalisation des offres ;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '863'
-ht-degree: 18%
+source-wordcount: '849'
+ht-degree: 13%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 18%
 >
 >L’utilisation d’Offer Decisioning dans le SDK Web de Adobe Experience Platform est disponible en accès anticipé pour certains utilisateurs. Cette fonctionnalité n’est pas disponible pour toutes les organisations 
 
-Adobe Experience Platform [!DNL Web SDK] peut diffuser et générer des offres personnalisées gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets connexes en utilisant l’interface utilisateur (UI) ou les API d’Offer Decisioning.
+Adobe Experience Platform [!DNL Web SDK] peut diffuser et générer des offres personnalisées gérées dans Offer Decisioning. Vous pouvez créer vos offres et d’autres objets associés à l’aide de l’interface utilisateur (IU) ou des API d’Offer decisioning.
 
 ## Conditions préalables
 
@@ -51,7 +51,7 @@ Il est important de comprendre la terminologie suivante lorsque vous utilisez Of
   >
   >Vous pouvez copier la valeur de la portée de décision à partir de la variable **Présentation de l’activité** dans l’interface utilisateur.
 
-  ![](assets/decision-scope-copy.png)
+  ![Paramètres de copie de décision.](assets/decision-scope-copy.png)
 
 * **Datastreams :** Pour plus d’informations, veuillez lire la [datastreams](../../../datastreams/overview.md) la documentation.
 
@@ -104,7 +104,7 @@ Pour activer l’Offer decisioning, procédez comme suit :
 
            ![send-event-action-décisionScopes](./assets/send-event-action-decisionScopes.png)
 
-      1. [](../../../tags/ui/publishing/libraries.md)Créez et publiez une bibliothèque contenant toutes les règles, éléments de données et extensions pertinents que vous avez configurés
+      1. [Création et publication d’une bibliothèque](../../../tags/ui/publishing/libraries.md) contenant toutes les règles, éléments de données et extensions que vous avez configurés appropriés.
 
 ## Exemples de requêtes et de réponses
 

@@ -2,16 +2,16 @@
 title: Traitement des erreurs
 description: Découvrez les erreurs que vous pouvez rencontrer lors de l’exécution de requêtes d’API vers l’API Adobe Experience Platform Edge Network Server.
 exl-id: f6b8435c-b163-4046-b5fb-50a13a897637
-source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 4%
+source-wordcount: '766'
+ht-degree: 9%
 
 ---
 
 # Traitement des erreurs
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Les erreurs d’API dans l’API Adobe Experience Platform Edge Network Server peuvent avoir diverses causes, internes (Edge Network lui-même) ou externes (entrée, configuration ou lien en amont).
 
@@ -79,8 +79,8 @@ Tous les objets d’erreur ont une `type`, `status`, `title`, `detail` et `repor
 
 Les erreurs non fatales peuvent être ventilées par :
 
-* Erreurs : Problèmes qui se sont produits lors du traitement de la requête, mais qui n’ont pas entraîné le rejet de l’intégralité de la requête (par exemple, un échec en amont non critique).
-* Avertissements : Messages des services en amont qui peuvent signaler un traitement partiel de la demande.
+* Erreurs : problèmes qui se sont produits lors du traitement de la requête, mais qui n’ont pas entraîné le rejet de l’ensemble de la requête (par exemple, un échec en amont non critique).
+* Avertissements : messages provenant de services en amont qui peuvent signaler un traitement partiel de la demande.
 
 En cas d’erreurs non fatales (à l’exclusion des avertissements), la variable [!DNL Server API] change l’état de la réponse en `207 Multi-Status`.
 
@@ -118,12 +118,11 @@ Les erreurs non fatales sont représentées dans la variable _Détails du probl�
 
 ## Gestion `4xx` et `5xx` Réponses
 
-
 | Code d’erreur | Description |
 |---|---|
 | `4xx Bad Request` | Le plus `4xx` Les erreurs, telles que 400, 403, 404, ne doivent pas être retentées pour le compte du client, sauf pour `429`. Il s’agit d’erreurs du client qui échoueront. Le client doit corriger l’erreur avant de retenter la requête. |
 | `429 Too Many Requests` | `429` Le code de réponse HTTP indique que Adobe Experience Platform Edge Network ou un service en amont limite le débit des requêtes. Dans ce cas, l’appelant doit respecter la variable `Retry-After` en-tête de la réponse. Toutes les réponses renvoyées doivent comporter le code de réponse HTTP avec un code d’erreur spécifique au domaine. |
-| `500 Internal Server Error` | `500` les erreurs sont génériques, des erreurs fourre-tout. `500` Les erreurs ne doivent pas être retentées, sauf pour `502` et `503`. Les intermédiaires doivent répondre avec une `500` et peut répondre avec un code/message d’erreur générique, ou un code/message d’erreur spécifique au domaine. |
+| `500 Internal Server Error` | Les erreurs `500` sont des erreurs génériques « fourre-tout ». `500` Les erreurs ne doivent pas être retentées, à l’exception de `502` et `503`. Les intermédiaires doivent répondre avec une `500` et peut répondre avec un code/message d’erreur générique, ou un code/message d’erreur spécifique au domaine. |
 | `502 Bad Gateway` | Indique que le réseau Adobe Experience Platform Edge a reçu une réponse non valide des serveurs en amont. Cela peut être dû à des problèmes réseau entre les serveurs. Le problème de réseau temporaire peut être résolu. Par conséquent, une nouvelle tentative peut résoudre le problème, de sorte que les destinataires de `502` les erreurs peuvent réessayer la requête après un certain temps. |
 | `503 Service Unavailable` | Ce code d’erreur indique que le service est temporairement indisponible. Cela peut se produire pendant les périodes de maintenance. Destinataires de `503` Les erreurs peuvent réessayer la requête, mais doivent respecter la variable `Retry-After` en-tête . |
 | `504 Gateway Timeout` | Indique que la demande Adobe Experience Platform Edge Network aux serveurs en amont a expiré. Cela peut être dû à des problèmes réseau entre les serveurs, des problèmes liés aux DNS ou d’autres problèmes de réseau. Les problèmes réseau temporaires peuvent être résolus après un certain temps et une nouvelle tentative peut résoudre le problème. |

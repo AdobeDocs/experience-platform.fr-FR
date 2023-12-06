@@ -1,14 +1,14 @@
 ---
 title: Protections des performances pour l’API du serveur réseau Edge
 description: Découvrez comment utiliser l’API du serveur dans des barrières de sécurité de performances optimales.
-keywords: collecte de données;collection;réseau Edge;api;sla;slt;niveaux de service
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 0e609ce278af0c93503f05778887ad1bd881524a
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '535'
-ht-degree: 6%
+source-wordcount: '508'
+ht-degree: 5%
 
 ---
+
 
 # Protections des performances pour l’API du serveur réseau Edge
 

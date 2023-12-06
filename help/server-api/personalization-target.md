@@ -2,10 +2,10 @@
 title: Personnalisation via Adobe Target
 description: Découvrez comment utiliser l’API serveur pour diffuser et générer des expériences personnalisées créées dans Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 4%
+source-wordcount: '591'
+ht-degree: 3%
 
 ---
 
@@ -28,7 +28,6 @@ Voir [guide sur l’ajout de services à un flux de données](../datastreams/ove
 Lors de la configuration de votre flux de données, vous pouvez (éventuellement) fournir des valeurs pour [!DNL Property Token], [!DNL Target Environment ID], et [!DNL Target Third Party ID Namespace].
 
 ![Image de l’interface utilisateur affichant l’écran de configuration du service de flux de données, avec Adobe Target sélectionné](assets/target-datastream.png)
-
 
 ## Paramètres personnalisés {#custom-parameters}
 

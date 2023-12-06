@@ -3,12 +3,13 @@ solution: Experience Platform
 title: Prise en main des API Media Edge
 description: Prise en main des API Media Edge
 exl-id: 76022dea-408b-4d8e-abd4-1a6de81beceb
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 95%
+source-wordcount: '806'
+ht-degree: 97%
 
 ---
+
 
 # Prise en main de l’API Media Edge
 
@@ -284,7 +285,7 @@ Le tableau suivant affiche les codes de réponse possibles suite aux requêtes d
 | État | Description |
 | ---------- | --------- |
 | 200 | La session a été créée. |
-| 207 | L’un des services qui se connectent à  Edge Network rencontre un problème (pour plus d’informations, consultez le [guide de dépannage](troubleshooting.md)) |
+| 207 | Problème avec l’un des services qui se connectent à Edge Network (voir plus dans la section [guide de dépannage](troubleshooting.md)) |
 | 400-level | Requête incorrecte |
 | 500-level | Erreur du serveur |
 

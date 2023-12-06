@@ -2,10 +2,10 @@
 title: Implémentation d’applications monopages
 description: Découvrez comment mettre en oeuvre SPA vues dans Adobe Journey Optimizer
 exl-id: 1883251b-2d59-46d3-ac74-b8657edd0325
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '859'
-ht-degree: 79%
+source-wordcount: '866'
+ht-degree: 77%
 
 ---
 
@@ -61,7 +61,7 @@ Les vues XDM peuvent être exploitées dans Adobe Journey Optimizer pour permett
 
 Pour effectuer une configuration de développeur ou développeuse unique, procédez comme suit :
 
-1. Installez le [SDK Web Adobe Experience Platform](../../fundamentals/installing-the-sdk.md) et vérifiez la page [Conditions préalables pour le canal web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html).
+1. Installer [SDK Web Adobe Experience Platform](../../fundamentals/installing-the-sdk.md) et vérifiez la variable [conditions préalables pour le canal web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html) page.
 
 2. Déterminez toutes les vues XDM de votre application monopage que vous souhaitez personnaliser.
 
@@ -92,7 +92,7 @@ Cette section présente deux exemples montrant comment invoquer la fonction `sen
 
 L’équipe marketing souhaite exécuter des tests A/B sur l’ensemble de la page d’accueil.
 
-![](assets/web-spa-home.png)
+![Exemple de page d’application d’une seule page.](assets/web-spa-home.png)
 
 Pour exécuter des tests A/B sur l’ensemble du site d’accueil, `sendEvent()` doit être appelé avec `viewName` XDM défini sur `home` :
 
@@ -137,7 +137,7 @@ history.listen(onViewChange);
 
 L’équipe marketing souhaite personnaliser la deuxième ligne de produits en définissant la couleur du libellé du prix en rouge après qu’un utilisateur ou une utilisatrice a cliqué pour afficher tous les produits Hommes.
 
-![](assets/web-spa-men-products.png)
+![Page d’exemple d’application d’une seule page avec des produits personnalisés.](assets/web-spa-men-products.png)
 
 ```js
 function onViewChange(viewName) {

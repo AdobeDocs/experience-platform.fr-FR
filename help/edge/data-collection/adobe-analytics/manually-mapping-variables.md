@@ -4,10 +4,10 @@ description: Découvrez comment mapper manuellement des variables dans Adobe Ana
 seo-description: Manually map variables into Adobe Analytics using processing rules with Web SDK
 keywords: adobe analytics;analytics;variables;variables de mappage;variables map;contextData;données contextuelles;règles de traitement;règles;xdm;schéma;
 exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
-source-git-commit: 9392a90b70699b79949095e178ea77dd34d313a3
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 25%
+source-wordcount: '333'
+ht-degree: 12%
 
 ---
 
@@ -50,10 +50,9 @@ Vous pouvez également utiliser un ensemble d’actions et de listes de produits
 
 Toutes les données collectées par le réseau Edge sont accessibles via des [règles de traitement](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html?lang=fr). Dans [!DNL Analytics], vous pouvez utiliser des règles de traitement pour incorporer des données contextuelles dans [!DNL Analytics] .
 
-Par exemple, dans la règle suivante, Adobe Analytics est défini pour renseigner la variable **Termes de recherche interne (eVar2)** avec les données associées à **a.x._atag.search.term(Context Data)**.
+Par exemple, dans la règle suivante, Adobe Analytics est défini pour renseigner **Termes de recherche interne (eVar2)** avec les données associées à **a.x._atag.search.term(Context Data)**.
 
-![](assets/examplerule.png)
-
+![Image de l’interface utilisateur d’Analytics montrant un exemple de règle.](assets/examplerule.png)
 
 ## Schéma XDM
 

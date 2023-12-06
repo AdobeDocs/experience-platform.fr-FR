@@ -3,10 +3,10 @@ title: Comparaison d’at.js au SDK Web Experience Platform
 description: Découvrez comment comparer les fonctionnalités d’at.js au SDK Web Experience Platform
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;champ de décision;fragment de code de masquage préalable;vec;compositeur d’expérience d’après les formulaires;xdm;audiences;décisions;portée;schéma;schéma;diagramme système;diagramme
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
 workflow-type: tm+mt
-source-wordcount: '2257'
-ht-degree: 8%
+source-wordcount: '2167'
+ht-degree: 7%
 
 ---
 
@@ -216,7 +216,7 @@ Le SDK Web Experience Platform envoie automatiquement une notification avec les 
 
 Il existe deux façons de déclencher un appel à Target Edge qui récupérera les offres pour le chargement de la page.
 
-Exemple 1:
+Exemple 1 :
 
 ```javascript
 adobe.target.getOffer({
@@ -226,7 +226,7 @@ adobe.target.getOffer({
 });
 ```
 
-Exemple 2:
+Exemple 2 :
 
 ```javascript
 adobe.target.getOffers({
@@ -297,7 +297,7 @@ alloy("sendEvent", {
 
 Vous pouvez récupérer les activités du compositeur d’après les formulaires à l’aide de la fonction `getOffer` function:
 
-Exemple 1:
+Exemple 1 :
 
 ```javascript
 adobe.target.getOffer({
@@ -307,7 +307,7 @@ adobe.target.getOffer({
 });
 ```
 
-Exemple 2:
+Exemple 2 :
 
 ```javascript
 adobe.target.getOffers({
@@ -857,7 +857,7 @@ Charge utile Analytics (`tnta` ) doit être inclus dans l’accès Analytics à 
 La journalisation côté serveur Analytics peut être activée en définissant `analyticsLogging: server_side` dans les paramètres at.js ou en remplaçant la variable `window.targetglobalSettings` .
 Ensuite, les données s’enchaînent comme suit :
 
-![](assets/a4t-server-side-atjs.png)
+![Diagramme présentant le workflow Journalisation côté serveur Analytics](assets/a4t-server-side-atjs.png)
 
 [En savoir plus](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
@@ -872,7 +872,7 @@ Le SDK Web prend également en charge :
 
 La journalisation côté client d’Analytics est activée lorsqu’Adobe Analytics est désactivé pour cette configuration de DataStream.
 
-![](assets/analytics-disabled-datastream-config.png)
+![Diagramme affichant le workflow de journalisation côté client Analytics](assets/analytics-disabled-datastream-config.png)
 
 Le client a accès au jeton Analytics (`tnta`) qui doivent être partagées avec Analytics à l’aide de [API d’insertion de données](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
 en enchaînant la variable `sendEvent` et effectuez une itération sur le tableau de propositions obtenu.
@@ -910,19 +910,19 @@ alloy("sendEvent", {
 
 Voici un diagramme qui montre comment les données circulent lorsque Analytics côté client est activé :
 
-![](assets/analytics-client-side-logging.png)
+![Diagramme de flux de données dans la journalisation côté client Analytics](assets/analytics-client-side-logging.png)
 
 #### Journalisation côté serveur Analytics
 
 La journalisation côté serveur d’Analytics est activée lorsqu’Analytics est activé pour cette configuration de DataStream.
 
-![](assets/analytics-enabled-datastream-config.png)
+![Interface utilisateur des flux de données présentant les paramètres Analytics.](assets/analytics-enabled-datastream-config.png)
 
 Lorsque la journalisation Analytics côté serveur est activée, la charge utile A4T qui doit être partagée avec Analytics afin que les rapports Analytics présentent les impressions et conversions correctes soient partagées au niveau du réseau Edge, de sorte que le client n’ait pas à effectuer de traitement supplémentaire.
 
 Voici comment les données s’enchaînent dans nos systèmes lorsque la journalisation Analytics côté serveur est activée :
 
-![](assets/analytics-server-side-logging.png)
+![Diagramme affichant le flux de données dans la journalisation Analytics côté serveur](assets/analytics-server-side-logging.png)
 
 ## Comment définir les paramètres globaux de Target
 
@@ -1130,9 +1130,9 @@ Le SDK Web prend en charge l’identifiant tiers Target. Toutefois, cela nécess
 La carte des identités permet aux clients d’envoyer plusieurs identités. Toutes les identités sont des espaces de noms. Chaque espace de noms peut avoir une ou plusieurs identités. Une identité particulière peut être marquée comme identité principale.
 En gardant ces connaissances à l’esprit, nous pouvons voir quelles sont les étapes nécessaires pour configurer le sdk web afin d’utiliser l’identifiant tiers Target.
 
-1. Configurez l’espace de noms qui contiendra l’identifiant tiers Target dans la vue Configuration du flux de données :
+1. Configurez l’espace de noms qui contiendra l’identifiant tiers Target dans la page de configuration du flux de données :
 
-![](assets/mbox-3-party-id-setup.png)
+![Interface utilisateur des flux de données présentant le champ Espace de noms de l’identifiant tiers Target](assets/mbox-3-party-id-setup.png)
 
 1. Envoyez cet espace de noms d’identité dans chaque commande sendEvent comme suit :
 
@@ -1180,8 +1180,8 @@ window.targetPageParams = function() {
 
 ### Utilisation du SDK Web
 
-Avec le SDK Web, les clients peuvent configurer la propriété à un niveau supérieur, lors de la configuration du flux de données, sous l’espace de noms Adobe Target :
-![](assets/at-property-setup.png)
+Grâce au SDK Web, les clients peuvent configurer la propriété à un niveau supérieur, lors de la configuration de la chaîne de données, sous l’espace de noms Adobe Target :
+![Interface utilisateur des flux de données présentant les paramètres d’Adobe Target.](assets/at-property-setup.png)
 Cela signifie que chaque appel Target pour cette configuration de flux de données spécifique va contenir ce jeton de propriété.
 
 ## Comment prérécupérer les mbox
