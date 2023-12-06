@@ -1,9 +1,9 @@
 ---
 title: Suivi des événements à l’aide du SDK Web de Adobe Experience Platform
 description: Découvrez comment effectuer le suivi des événements du SDK Web Adobe Experience Platform.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1167'
 ht-degree: 21%
 
 ---
@@ -76,11 +76,9 @@ Dans cet exemple, la couche de données est clonée en la sérialisant au format
 
 ## Envoi de données autres que XDM
 
-Les données qui ne correspondent pas à un schéma XDM doivent être envoyées à l’aide de la variable `data` de l’ `sendEvent` . Cette fonctionnalité est prise en charge dans les versions 2.5.0 et ultérieures du SDK Web.
+Les données qui ne correspondent pas à un schéma XDM doivent être envoyées à l’aide de la variable `data` de l’ `sendEvent` . Cette fonctionnalité est prise en charge dans les versions 2.5.0 et ultérieures du SDK Web. Lorsque vous utilisez cette option, les données doivent être mappées à un schéma XDM pris en charge côté serveur via [Préparation de données pour la collecte de données](../../datastreams/data-prep.md#create-mapping).
 
-Cela s’avère utile si vous devez mettre à jour un profil Adobe Target ou envoyer des attributs Recommendations Target. [En savoir plus sur ces fonctionnalités de Target.](../personalization/adobe-target/target-overview.md#single-profile-update)
-
-À l’avenir, vous pourrez envoyer la couche de données complète sous le `data` et l’associer au serveur XDM.
+Cette fonctionnalité est également utile si vous devez mettre à jour un profil Adobe Target ou envoyer des attributs Target Recommendations. En savoir plus sur [Personnalisation de Target](../personalization/adobe-target/target-overview.md#single-profile-update).
 
 **Comment envoyer des attributs Profile et Recommendations à Adobe Target :**
 

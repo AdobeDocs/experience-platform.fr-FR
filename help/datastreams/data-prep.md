@@ -1,16 +1,40 @@
 ---
 title: Préparation des données pour la collecte de données
 description: Découvrez comment mapper vos données à un schéma d’événement du modèle de données d’expérience (XDM) lors de la configuration d’un flux de données pour les SDK web et mobile d’Adobe Experience Platform.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
 workflow-type: tm+mt
-source-wordcount: '906'
-ht-degree: 85%
+source-wordcount: '1201'
+ht-degree: 64%
 
 ---
+
 
 # Préparation des données pour la collecte de données
 
 La préparation des données est un service Adobe Experience Platform qui vous permet de mapper, transformer et valider des données depuis et vers le [modèle de données d’expérience (XDM)](../xdm/home.md). Lors de la configuration d’un [flux de données](./overview.md) compatible avec Platform, vous pouvez utiliser les fonctionnalités de préparation des données pour mapper vos données source à XDM lors de leur envoi à Platform Edge Network.
+
+Toutes les données envoyées à partir d’une page web doivent atterrir en Experience Platform sous la forme XDM. Il existe 3 manières de traduire les données d’une couche de données sur la page vers le XDM accepté par l’Experience Platform :
+
+1. Reformétez la couche de données dans XDM sur la page web elle-même.
+2. Utilisez la fonctionnalité Balises - Éléments de données natifs pour reformater le format de couche de données existant d’une page web en XDM.
+3. Reformater le format de couche de données d’une page web dans XDM via le réseau Edge, à l’aide de la préparation de données pour la collecte de données.
+
+Ce guide se concentre sur la 3e option.
+
+## Quand utiliser la préparation de données pour la collecte de données {#when-to-use-data-prep}
+
+Dans deux cas d’utilisation, la préparation des données pour la collecte de données est utile :
+
+1. Le site web dispose d’une couche de données bien formée, bien gérée et bien gérée. Il est préférable de l’envoyer directement au réseau Edge plutôt que d’utiliser une manipulation JavaScript pour le convertir au format XDM sur la page (soit par le biais d’éléments de données de balises, soit par une manipulation JavaScript manuelle).
+2. Un système de balisage autre que Balises est déployé sur le site.
+
+## Envoi d’une couche de données existante vers le réseau Edge via WebSDK {#send-datalayer-via-websdk}
+
+La couche de données existante doit être envoyée à l’aide de la variable `data` de l’ `sendEvent` comme décrit dans la section [Documentation du SDK Web](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#sending-non-xdm-data).
+
+Si vous utilisez des balises, vous devez utiliser la variable **[!UICONTROL Données]** du champ **[!UICONTROL Envoyer un événement]** type d’action, comme décrit dans la section [Documentation sur l’extension de balise SDK Web](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html).
+
+Le reste de ce guide se concentrera sur la manière de mapper la couche de données aux normes XDM une fois qu’elle a été envoyée par le SDK WebSDK.
 
 >[!NOTE]
 >
@@ -131,6 +155,10 @@ Les mêmes règles s’appliquent à l’objet JSON pour capturer les propriét�
 Vous pouvez sélectionner l’option pour charger l’objet sous forme de fichier ou coller l’objet brut dans la zone de texte fournie. Si le fichier JSON est valide, un schéma d’aperçu s’affiche dans le panneau de droite. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![Exemple JSON de données entrantes attendues](assets/data-prep/select-data.png)
+
+>[!NOTE]
+>
+> Utilisez un exemple d’objet JSON qui représente chaque élément de couche de données pouvant être utilisé sur n’importe quelle page. Par exemple, toutes les pages n’utilisent pas les éléments de couche de données du panier. Toutefois, les éléments de couche de données du panier doivent être inclus dans cet exemple d’objet JSON.
 
 ## [!UICONTROL Mappage]
 
