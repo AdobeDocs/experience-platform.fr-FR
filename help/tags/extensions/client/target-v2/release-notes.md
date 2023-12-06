@@ -4,8 +4,8 @@ description: Notes de mise à jour les plus récentes pour l’extension de bali
 exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
 source-git-commit: edef000bfe6c4de69a037e2ad6871759c1404580
 workflow-type: tm+mt
-source-wordcount: '794'
-ht-degree: 98%
+source-wordcount: '813'
+ht-degree: 99%
 
 ---
 
@@ -15,10 +15,10 @@ ht-degree: 98%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-## v0.20.2 (29 novembre 2023)
+## v0.20.2 (29 novembre 2023)
 
 - Mise à jour pour la prise en charge d’`at.js` 2.11.3
-- Correction d’un bogue qui empêchait l’envoi des jetons de réponse sur les événements at-content-rendering-failed .
+- Correction d’un bug qui empêchait l’envoi des jetons de réponse sur les événements at-content-rendering-failed.
 
 ## v0.20.1 (3 novembre 2023)
 
@@ -66,7 +66,7 @@ ht-degree: 98%
 
 ## v0.17.0 (7 janvier 2022)
 
-- Mise à jour afin de prendre en charge `at.js` v2.8.0, qui collecte désormais des données télémétriques sur l’utilisation des fonctionnalités et les performances.  Les données personnelles ne sont pas collectées. Pour vous désinscrire de cette fonctionnalité, définissez `telemetryEnabled` sur `false` dans `targetGlobalSettings`.
+- Mise à jour afin de prendre en charge `at.js` v2.8.0, qui collecte désormais des données télémétriques sur l’utilisation des fonctionnalités et les performances.  Les données personnelles ne sont pas collectées. Pour indiquer votre opt-out pour cette fonctionnalité, définissez `telemetryEnabled` sur `false` dans `targetGlobalSettings`.
 
 ## v0.16.0 (28 octobre 2021)
 
