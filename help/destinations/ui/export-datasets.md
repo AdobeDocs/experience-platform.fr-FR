@@ -3,10 +3,10 @@ title: Exportation de jeux de données vers des destinations de stockage dans le
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 7c68b6a3b08eb47fa8c3906468dc87f3715fbe99
+source-git-commit: 9a149b86f34f5c7cae6a1bf2ae797a256e212f30
 workflow-type: tm+mt
-source-wordcount: '1751'
-ht-degree: 57%
+source-wordcount: '1735'
+ht-degree: 53%
 
 ---
 
@@ -54,7 +54,7 @@ Identifiez dans le tableau ci-dessous les types de jeux de données que vous pou
     <td>Voir <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> la documentation.</td>
   </tr>
   <tr>
-    <td>Data Distiller</td>
+    <td>Distiller de données</td>
     <td>Distiller de données (module complémentaire)</td>
     <td>Jeux de données dérivés créés via Query Service.</td>
   </tr>
@@ -136,11 +136,11 @@ Utilisez les cases à cocher situées à gauche des jeux de données pour sélec
 
 Dans le **[!UICONTROL Planification]** vous pouvez définir une date de début et une cadence d’exportation pour vos exportations de jeux de données.
 
-L’option **[!UICONTROL Exporter des fichiers incrémentiels]** est automatiquement sélectionnée. Cela déclenche une exportation où le premier fichier est un instantané complet du jeu de données et les fichiers suivants sont des ajouts incrémentiels du jeu de données depuis l’exportation précédente.
+L’option **[!UICONTROL Exporter des fichiers incrémentiels]** est automatiquement sélectionnée. Cela déclenche l’exportation d’un ou de plusieurs fichiers représentant un instantané complet du jeu de données. Les fichiers suivants sont des ajouts incrémentiels au jeu de données depuis l’exportation précédente.
 
 >[!IMPORTANT]
 >
->Le premier fichier incrémentiel exporté inclut toutes les données existantes dans le jeu de données, agissant comme un renvoi.
+>La première exportation de fichier incrémentiel inclut toutes les données existantes dans le jeu de données, en tant que renvoi. L’exportation peut contenir un ou plusieurs fichiers.
 
 ![Workflow d’exportation de jeu de données présentant l’étape de planification.](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
 
@@ -167,7 +167,7 @@ Sur la page **[!UICONTROL Vérifier]**, vous pouvez voir un résumé de votre s�
 
 ## Vérifier l’exportation réussie d’un jeu de données {#verify}
 
-Lors de l’exportation de jeux de données, Experience Platform crée un fichier `.json` ou `.parquet` dans l’emplacement de stockage que vous avez fourni. Attendez-vous à ce qu’un nouveau fichier soit déposé dans votre emplacement de stockage en fonction du planning d’exportation que vous avez fourni.
+Lors de l’exportation de jeux de données, Experience Platform en crée un ou plusieurs `.json` ou `.parquet` dans l’emplacement de stockage que vous avez fourni. Attendez-vous à ce que les nouveaux fichiers soient déposés dans votre emplacement de stockage en fonction du planning d’exportation que vous avez fourni.
 
 Experience Platform crée une structure de dossiers dans l’emplacement de stockage que vous avez spécifié, où il dépose les fichiers de jeu de données exportés. Un nouveau dossier est créé pour chaque heure d’exportation, selon le modèle ci-dessous :
 
