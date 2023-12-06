@@ -1,11 +1,10 @@
 ---
 title: Préparation des données pour la collecte de données
 description: Découvrez comment mapper vos données à un schéma d’événement du modèle de données d’expérience (XDM) lors de la configuration d’un flux de données pour les SDK web et mobile d’Adobe Experience Platform.
-exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 4c9abcefb279c6e8a90744b692d86746a4896d0a
-workflow-type: ht
-source-wordcount: '914'
-ht-degree: 100%
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+workflow-type: tm+mt
+source-wordcount: '906'
+ht-degree: 85%
 
 ---
 
@@ -31,7 +30,7 @@ Pour une démonstration rapide du processus de préparation des données pour la
 
 Une fois la configuration de base d’un flux de données terminée, sélectionnez **[!UICONTROL Enregistrer et Ajouter un mappage]** pour passer à l’étape **[!UICONTROL Sélectionner les données]**. Ensuite, vous devez fournir un exemple d’objet JSON qui représente la structure des données que vous prévoyez d’envoyer à Platform.
 
-Pour capturer les propriétés directement à partir de la couche de données, l’objet JSON doit comporter une seule propriété racine `data`. Les sous-propriétés de l’objet `data` doivent ensuite être structurées de manière à correspondre aux propriétés de la couche de données que vous souhaitez capturer. Sélectionnez la section ci-dessous pour afficher un exemple d’objet JSON correctement formaté avec une racine `data`.
+Pour capturer les propriétés directement à partir de la couche de données, l’objet JSON doit comporter une seule propriété racine `data`. Les sous-propriétés de la propriété `data` doit ensuite être construit de manière à correspondre aux propriétés de couche de données que vous souhaitez capturer. Sélectionnez la section ci-dessous pour afficher un exemple d’objet JSON correctement formaté avec une racine `data`.
 
 +++Fichier JSON Sample avec une racine `data`
 
@@ -137,12 +136,12 @@ Vous pouvez sélectionner l’option pour charger l’objet sous forme de fichie
 
 L’étape **[!UICONTROL Mappage]** s’affiche et vous permet de mapper les champs de vos données source à ceux du schéma d’événement cible dans Platform. Ensuite, vous pouvez configurer le mappage de deux manières :
 
-* [Créer des règles de mappage](#create-mapping) pour ce flux de données via un processus manuel.
+* [Création de règles de mappage](#create-mapping) pour ce flux de données via un processus manuel.
 * [Importer des règles de mappage](#import-mapping) d’un flux de données existant.
 
-### Créer un mappage {#create-mapping}
+### Création de règles de mappage {#create-mapping}
 
-Pour commencer, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]** afin de créer une ligne de mappage.
+Pour créer une règle de mappage, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**.
 
 ![Ajouter un nouveau mappage](assets/data-prep/add-new-mapping.png)
 
@@ -194,9 +193,9 @@ L’écran suivant affiche un aperçu des règles de mappage enregistrées pour 
 
 ### Terminer le mappage
 
-Continuez à suivre les étapes ci-dessus pour mapper le reste des champs au schéma cible. Bien que vous ne deviez pas mapper tous les champs source disponibles, vous devez mapper tous les champs du schéma cible qui sont obligatoires afin de terminer cette étape. Le compteur **[!UICONTROL Champs obligatoires]** indique le nombre de champs obligatoires qui ne sont pas encore mappés dans la configuration actuelle.
+Continuez à suivre les étapes ci-dessus pour mapper le reste des champs au schéma cible. Bien que vous n’ayez pas à mapper tous les champs source disponibles, tous les champs du schéma cible définis selon les besoins doivent être mappés pour terminer cette étape. Le compteur **[!UICONTROL Champs obligatoires]** indique le nombre de champs obligatoires qui ne sont pas encore mappés dans la configuration actuelle.
 
-Une fois que le nombre de champs obligatoires atteint zéro et que le mappage vous convient, sélectionnez **[!UICONTROL Enregistrer]** pour finaliser les modifications.
+Une fois que le nombre de champs requis est nul et que vous êtes satisfait de votre mappage, sélectionnez **[!UICONTROL Enregistrer]** pour finaliser vos modifications.
 
 ![Mappage terminé](assets/data-prep/mapping-complete.png)
 

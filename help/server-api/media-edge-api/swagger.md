@@ -3,12 +3,13 @@ solution: Experience Platform
 title: Media Edge Open API, spécification
 description: Ce document comprend une référence OAS (YAML Open API Specification) ou "Swagger". Vous pouvez copier et coller cette spécification dans un outil de rendu, tel que editor.swagger.io, pour afficher les informations de l’API Media Edge. Cette spécification inclut des paramètres, des exemples et un schéma pour chaque point d’entrée.
 exl-id: 14395fa4-14a6-4487-8645-1a19e5695349
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 034498e662ed55112f22751d44cf3ecf75d38d61
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 72%
 
 ---
+
 
 # Utilisation du fichier de spécification Open API pour les API Media Edge
 

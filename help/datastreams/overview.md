@@ -1,19 +1,17 @@
 ---
-title: Présentation des flux de données
-description: Connectez votre intégration SDK Experience Platform côté client à des produits Adobe et à des destinations tierces.
-keywords: configuration;flux de données;datastreamId;edge;identifiant de flux de données;Paramètres d’environnement;edgeConfigId;identité;synchronisation des identifiants activée;Identifiant de conteneur de synchronisation d’identifiant;Sandbox;Diffusion d’entrée;Jeu de données d’événement;target;code client;Jeton de propriété;Identifiant d’environnement Target;Destinations de cookie;Destinations d’url;identifiant de suite de rapports de blocs de paramètres Analytics;Préparation des données pour la collecte de données;Préparation des données;Mappeur;Mappeur XDM;Mappeur sur Edge;
-exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 5f2358c2e102c66a13746004ad73e2766e933705
-workflow-type: ht
-source-wordcount: '780'
-ht-degree: 100%
+title: Présentation des trains de données
+description: Découvrez comment les flux de données vous aident à connecter l’intégration de votre SDK Experience Platform côté client à des produits Adobe et à des destinations tierces.
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+workflow-type: tm+mt
+source-wordcount: '728'
+ht-degree: 77%
 
 ---
 
 
 # Présentation des flux de données
 
-Un flux de données représente la configuration côté serveur lors de la mise en œuvre des SDK web et mobile d’Adobe Experience Platform. Lorsque la [commande de configuration](../edge/fundamentals/configuring-the-sdk.md) dans le SDK contrôle les éléments qui doivent être gérés sur le client (comme `edgeDomain`), les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une requête est envoyée à Adobe Experience Platform Edge Network, `edgeConfigId` est utilisé pour référencer le flux de données. Cela vous permet de mettre à jour la configuration côté serveur sans devoir modifier le code du site web.
+Un flux de données représente la configuration côté serveur lors de la mise en œuvre des SDK web et mobile d’Adobe Experience Platform. Lorsque la variable [configure](../edge/fundamentals/configuring-the-sdk.md) dans le SDK contrôle les éléments qui doivent être gérés sur le client (comme la fonction `edgeDomain`), les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une requête est envoyée à Adobe Experience Platform Edge Network, `edgeConfigId` est utilisé pour référencer le flux de données. Cela vous permet de mettre à jour la configuration côté serveur sans devoir modifier le code du site web.
 
 Vous pouvez créer et gérer des trains de données en sélectionnant **[!UICONTROL Trains de données]** dans le volet de navigation de gauche de l’interface utilisateur d’Adobe Experience Platform ou de l’interface utilisateur de collecte des données.
 
@@ -25,7 +23,7 @@ Pour plus d’informations sur la configuration d’un train de données dans l�
 
 >[!IMPORTANT]
 >
->Le contenu de ce document ne constitue pas un avis juridique et n’est pas destiné à s’y substituer. Veuillez consulter le service juridique de votre entreprise pour obtenir des conseils concernant la gestion des données sensibles.
+>Le contenu de ce document ne constitue pas un avis juridique et n’est pas destiné à s’y substituer. Consultez le service juridique de votre entreprise pour obtenir des conseils concernant la gestion des données sensibles.
 
 Les politiques de gestion des données d’entreprise et les exigences réglementaires augmentent les restrictions quant à la manière dont les données sensibles des clientes et des clients peuvent être collectées, traitées et utilisées. Cela concerne la collecte, le traitement et l’utilisation des données de santé protégées, qui sont soumises à des règlements comme la loi sur la portabilité et la responsabilité des assurances-maladie (Health Insurance Portability and Accountability Act, HIPAA).
 
@@ -41,7 +39,7 @@ Toutes les données en transit par le réseau Edge sont transmises sur des conne
 
 ### Gouvernance des données {#governance}
 
-Les trains de données utilisent les fonctionnalités de gouvernance des données intégrées d’Experience Platform pour empêcher l’envoi de données sensibles à des services non conformes à la loi HIPAA. En étiquetant des champs spécifiques qui contiennent des données sensibles dans vos schémas de trains de données, vous pouvez contrôler de manière granulaire quels champs de données peuvent être utilisés à des fins spécifiques.
+Les flux de données utilisent les fonctionnalités de gouvernance des données intégrées de l’Experience Platform pour empêcher l’envoi de données sensibles à des services non compatibles avec les HIPAA. En étiquetant des champs spécifiques qui contiennent des données sensibles dans vos schémas de trains de données, vous pouvez contrôler de manière granulaire quels champs de données peuvent être utilisés à des fins spécifiques.
 
 La vidéo suivante présente une brève vue d’ensemble de la manière dont les restrictions d’utilisation des données sont configurées et appliquées pour les trains de données dans l’interface utilisateur :
 
@@ -53,13 +51,13 @@ Dans Experience Platform, vous pouvez appliquer des [libellés d’utilisation 
 >
 >Pour plus d’informations sur la manière d’appliquer des libellés d’utilisation des données dans l’onglet [!UICONTROL Schémas] de l’interface utilisateur d’Experience Platform ou de l’interface utilisateur de collecte des données, consultez le [tutoriel sur l’étiquetage des schémas](../xdm/tutorials/labels.md).
 
-Lors de la création d’un nouveau train de données, si le schéma sélectionné contient des libellés d’utilisation de données sensibles, le train de données ne peut être configuré que pour envoyer ces données vers des destinations conformes à la loi HIPAA. Actuellement, Adobe Experience Platform est la seule destination conforme à la loi HIPAA prise en charge par les trains de données. Les autres services de destination, notamment Adobe Target, Adobe Analytics, Adobe Audience Manager, le transfert d’événement et les destinations Edge, sont désactivés pour les trains de données contenant des libellés d’utilisation des données sensibles.
+Lorsque vous créez un flux de données, si le schéma sélectionné contient des libellés d’utilisation des données sensibles, vous pouvez uniquement configurer le flux de données pour envoyer ces données vers des destinations prêtes pour le HIPAA. Actuellement, Adobe Experience Platform est la seule destination conforme à la loi HIPAA prise en charge par les trains de données. Les autres services de destination, notamment Adobe Target, Adobe Analytics, Adobe Audience Manager, le transfert d’événement et les destinations Edge, sont désactivés pour les trains de données contenant des libellés d’utilisation des données sensibles.
 
-Si un schéma est utilisé dans un train de données existant avec des services non conformes à la loi HIPAA, la tentative d’ajout d’un libellé d’utilisation des données sensibles au schéma génère un message de violation de politique et empêche l’action. Le message spécifie quel train de données a déclenché la violation et suggère de supprimer du train de données tous les services non conformes à la loi HIPAA pour résoudre le problème.
+Si un schéma est utilisé dans un train de données existant avec des services non conformes à la loi HIPAA, la tentative d’ajout d’un libellé d’utilisation des données sensibles au schéma génère un message de violation de politique et empêche l’action. Le message spécifie quel flux de données a déclenché la violation et suggère de supprimer tout service non compatible avec HIPAA du flux de données pour résoudre le problème.
 
 ### Journaux d’audit
 
-Dans Experience Platform, les activités du train de données peuvent être surveillées sous la forme de journaux d’audit. Un journal d’audit indique **qui** a effectué **quoi** et **quand**, ainsi que d’autres données contextuelles qui peuvent vous aider à résoudre les problèmes liés aux trains de données, pour que votre entreprise puisse se conformer aux politiques de gestion des données d’entreprise et aux exigences réglementaires.
+Dans Experience Platform, les activités du train de données peuvent être surveillées sous la forme de journaux d’audit. Les journaux d’audit indiquent **who** performance **what** et **when**, ainsi que d’autres données contextuelles qui peuvent vous aider à résoudre les problèmes liés aux flux de données pour aider votre entreprise à se conformer aux politiques de gestion des données d’entreprise et aux exigences réglementaires.
 
 Chaque fois qu’un utilisateur ou une utilisatrice crée, met à jour ou supprime un train de données, un journal d’audit est créé pour enregistrer l’action. Il en va de même lorsqu’un utilisateur ou une utilisatrice crée, met à jour ou supprime un mappage par le biais de la [Préparation de données pour la collecte de données](./data-prep.md). Qu’il s’agisse d’un train de données ou d’un mappage mis à jour, le journal d’audit résultant est classé sous le type de ressource [!UICONTROL Trains de données].
 

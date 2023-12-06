@@ -1,18 +1,17 @@
 ---
 title: Suivi des événements à l’aide du SDK Web de Adobe Experience Platform
 description: Découvrez comment effectuer le suivi des événements du SDK Web Adobe Experience Platform.
-keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;envoyer la balise;documentUnloading;document Unloading;onBeforeEventSend;
-exl-id: 8b221cae-3490-44cb-af06-85be4f8d280a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 32%
+source-wordcount: '1163'
+ht-degree: 21%
 
 ---
 
+
 # Suivi des événements
 
-Pour envoyer des données d’événement à Adobe Experience Cloud, utilisez la variable `sendEvent` . La commande `sendEvent` constitue le principal moyen pour envoyer des données à et pour récupérer du contenu personnalisé, des identités et des destinations d’audience.[!DNL Experience Cloud]
+Pour envoyer des données d’événement à Adobe Experience Cloud, utilisez la variable `sendEvent` . La variable `sendEvent` est le moyen principal d’envoyer des données à la variable [!DNL Experience Cloud]et pour récupérer du contenu personnalisé, des identités et des destinations d’audience.
 
 Les données envoyées à Adobe Experience Cloud entrent dans deux catégories :
 
@@ -21,7 +20,7 @@ Les données envoyées à Adobe Experience Cloud entrent dans deux catégories
 
 ## Envoi de données XDM
 
-Les données XDM sont un objet dont le contenu et la structure correspondent à un schéma que vous avez créé dans Adobe Experience Platform. [En savoir plus sur la création d’un schéma.](../../xdm/tutorials/create-schema-ui.md)
+Les données XDM sont un objet dont le contenu et la structure correspondent à un schéma que vous avez créé dans Adobe Experience Platform. [En savoir plus sur la création d’un schéma.](../../xdm/tutorials/create-schema-ui.md)
 
 Toutes les données XDM que vous souhaitez intégrer à vos analyses, à votre personnalisation, à vos audiences ou à vos destinations doivent être envoyées à l’aide de la variable `xdm` .
 
@@ -81,7 +80,7 @@ Les données qui ne correspondent pas à un schéma XDM doivent être envoyées 
 
 Cela s’avère utile si vous devez mettre à jour un profil Adobe Target ou envoyer des attributs Recommendations Target. [En savoir plus sur ces fonctionnalités de Target.](../personalization/adobe-target/target-overview.md#single-profile-update)
 
-À l’avenir, vous pourrez envoyer votre couche de données complète sous la variable `data` et l’associer au serveur XDM.
+À l’avenir, vous pourrez envoyer la couche de données complète sous le `data` et l’associer au serveur XDM.
 
 **Comment envoyer des attributs Profile et Recommendations à Adobe Target :**
 
@@ -103,9 +102,9 @@ alloy("sendEvent", {
 
 ### Définition de `eventType` {#event-types}
 
-Dans les schémas XDM ExperienceEvent, il existe une `eventType` champ . Il contient le type d’événement principal pour l’enregistrement. La définition d’un type d’événement peut vous aider à différencier les différents événements que vous enverrez. XDM fournit plusieurs types d’événements prédéfinis que vous pouvez utiliser ou vous créez toujours vos propres types d’événements personnalisés pour vos cas d’utilisation. Pour obtenir un [liste de tous les types d’événements prédéfinis](../../xdm/classes/experienceevent.md#eventType).
+Dans les schémas XDM ExperienceEvent, il existe une `eventType` champ . Il contient le type d’événement principal pour l’enregistrement. La définition d’un type d’événement peut vous aider à différencier les différents événements que vous envoyez. XDM fournit plusieurs types d’événements prédéfinis que vous pouvez utiliser ou vous créez toujours vos propres types d’événements personnalisés pour vos cas d’utilisation. Pour obtenir un [liste de tous les types d’événements prédéfinis](../../xdm/classes/experienceevent.md#eventType).
 
-Ces types d’événement s’affichent dans une liste déroulante si vous utilisez l’extension de balise ou si vous pouvez toujours les transmettre sans balise. Ils peuvent être transmis dans le cadre de la fonction `xdm` .
+Ces types d’événement sont affichés dans une liste déroulante si vous utilisez l’extension de balise ou si vous pouvez toujours les transmettre sans balise. Ils peuvent être transmis dans le cadre de la fonction `xdm` .
 
 
 ```javascript
@@ -162,8 +161,9 @@ Vous pouvez également ajouter des informations d’identité personnalisées à
 
 ## Utilisation de l’API sendBeacon
 
-Il peut s’avérer difficile d’envoyer des données d’événement juste avant que l’utilisateur ne quitte une page web. Si la requête prend trop de temps, le navigateur peut l’annuler. Certains navigateurs ont implémenté une API web appelée `sendBeacon` pour faciliter la collecte des données pendant cette période. Lors de l’utilisation de `sendBeacon`, le navigateur effectue la demande web dans le contexte de navigation globale. Cela signifie que le navigateur effectue la demande de balise en arrière-plan et n’interrompt pas la navigation dans la page. Pour indiquer à Adobe Experience Platform [!DNL Web SDK] pour utiliser `sendBeacon`, ajoutez l’option `"documentUnloading": true` à la commande d’événement.  Voici un exemple :
+Il peut s’avérer difficile d’envoyer des données d’événement juste avant que l’utilisateur ne quitte une page web. Si la requête prend trop de temps, le navigateur peut l’annuler. Certains navigateurs ont implémenté une API web appelée `sendBeacon` pour faciliter la collecte des données pendant cette période. Lors de l’utilisation de `sendBeacon`, le navigateur effectue la demande web dans le contexte de navigation globale. Cela signifie que le navigateur effectue la demande de balise en arrière-plan et ne retient pas la navigation dans la page. Pour indiquer à Adobe Experience Platform [!DNL Web SDK] pour utiliser `sendBeacon`, ajoutez l’option `"documentUnloading": true` à la commande d’événement.
 
+**Exemple**
 
 ```javascript
 alloy("sendEvent", {
@@ -214,19 +214,19 @@ alloy("sendEvent", {
 
 La variable `sendEvent` renvoie une promesse résolue avec une `result` . La variable `result` contient les propriétés suivantes :
 
-**propositions**: les offres de personnalisation pour lesquelles le visiteur a rempli les critères. [En savoir plus sur les propositions.](../personalization/rendering-personalization-content.md#manually-rendering-content)
-
-**décisions**: cette propriété est obsolète. Veuillez plutôt utiliser `propositions`.
-
-**destinations**: segments de Adobe Experience Platform qui peuvent être partagés avec des plateformes de personnalisation externes, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications exécutés sur les sites web des clients. [En savoir plus sur les destinations.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html)
+| Propriété | Description |
+|---------|----------|
+| `propositions` | Les offres de personnalisation pour lesquelles le visiteur a rempli les critères. [En savoir plus sur les propositions.](../personalization/rendering-personalization-content.md#manually-rendering-content) |
+| `decisions` | Cette propriété est obsolète. Utilisez `propositions` à la place. |
+| `destinations` | Audiences de Adobe Experience Platform qui peuvent être partagées avec des plateformes de personnalisation externes, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications exécutées sur des sites web clients. [En savoir plus sur les destinations.](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/custom-personalization.html) |
 
 >[!WARNING]
 >
->`destinations` est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+>La variable `destinations` est en version bêta. La documentation et les fonctionnalités peuvent changer.
 
 ## Modification globale des événements {#modifying-events-globally}
 
-Si vous souhaitez ajouter, supprimer ou modifier des champs d’événements globalement, vous pouvez configurer un rappel `onBeforeEventSend`.  Ce rappel est appelé chaque fois qu’un événement est envoyé.  Il est transmis dans un objet d’événement avec un champ `xdm`.  Modifier `content.xdm` pour modifier les données envoyées avec l’événement.
+Si vous souhaitez ajouter, supprimer ou modifier des champs de l’événement globalement, vous pouvez configurer une `onBeforeEventSend` rappel. Ce rappel est appelé chaque fois qu’un événement est envoyé. Ce rappel est transmis dans un objet d’événement avec une `xdm` champ . Pour modifier les données envoyées avec l’événement, modifiez `content.xdm`.
 
 
 ```javascript
@@ -246,8 +246,8 @@ alloy("configure", {
 
 Les champs `xdm` sont définis dans l’ordre suivant :
 
-1. Valeurs transmises sous forme d’options à la commande d’événement `alloy("sendEvent", { xdm: ... });`
-2. Valeurs collectées automatiquement  (voir [Informations automatiques](../data-collection/automatic-information.md))
+1. Valeurs transmises sous forme d’options à la commande d’événement `alloy("sendEvent", { xdm: ... });`.
+2. Valeurs collectées automatiquement. Voir [Informations automatiques](../data-collection/automatic-information.md).
 3. Modifications apportées dans le rappel `onBeforeEventSend`
 
 Quelques notes sur le `onBeforeEventSend` callback :

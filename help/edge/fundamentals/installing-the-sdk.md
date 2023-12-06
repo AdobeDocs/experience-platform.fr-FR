@@ -1,18 +1,17 @@
 ---
 title: Installation du SDK Web de Adobe Experience Platform
-description: Découvrez la procédure d’installation du SDK Web d’Experience Platform.
-keywords: installation du sdk web;installation du sdk web;internet explorer;promesse;package npm
-exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+description: Découvrez comment installer le SDK Web Experience Platform.
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 31%
+source-wordcount: '864'
+ht-degree: 26%
 
 ---
 
-# Installation du SDK {#installing-the-sdk}
 
-Il existe trois façons d’utiliser le SDK Web de Adobe Experience Platform prises en charge :
+# Installation du SDK Web {#installing-the-sdk}
+
+Il existe trois méthodes prises en charge pour installer le SDK Web de Adobe Experience Platform :
 
 1. La méthode recommandée pour utiliser le SDK Web de Adobe Experience Platform consiste à utiliser l’interface utilisateur de collecte de données ou l’interface utilisateur Experience Platform.
 1. Le SDK Web de Adobe Experience Platform est également disponible sur un réseau de diffusion de contenu (CDN) que vous pouvez utiliser.
@@ -29,7 +28,6 @@ La version prédéfinie est disponible sur un réseau de diffusion de contenu. V
 Structure de l’URL : https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OU alloy.js pour la version non minimisée.
 
 Par exemple :
-
 
 * Minified : [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.min.js)
 * Non minimisé : [https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js](https://cdn1.adoberesources.net/alloy/2.14.0/alloy.js)
@@ -77,7 +75,7 @@ Pour déterminer si `window.Promise` est déjà polyfillé :
 
 1. Ouvrez votre site web dans [!DNL Internet Explorer].
 1. Ouvrez la console de débogage du navigateur.
-1. Saisissez `window.Promise` dans la console, puis appuyez sur Entrée.
+1. Type `window.Promise` dans la console, puis appuyez sur Entrée.
 
 Si autre chose que `undefined` s’affiche, `window.Promise` est déjà polyfillé. Une autre façon de déterminer si `window.Promise` est polyfillé consiste à charger votre site web après avoir suivi les instructions d’installation ci-dessus. Si le SDK renvoie une erreur à propos d’une promesse, il est probable que `window.Promise` n’ait pas été polyfillé.
 
@@ -97,7 +95,7 @@ Cette balise charge un script qui s’assure que `window.Promise` est une implé
 
 Comme expliqué dans la section [Ajout du code](#adding-the-code), le code de base que vous avez copié et collé dans le HTML de votre site web charge un fichier externe. Le fichier externe contient les principales fonctionnalités du SDK. Toute commande que vous tentez d’exécuter pendant le chargement de ce fichier est mise en file d’attente, puis traitée une fois le fichier chargé. Le chargement asynchrone du fichier est la méthode d’installation la plus performante.
 
-Dans certaines circonstances, toutefois, vous pouvez vouloir charger le fichier de manière synchrone \(des informations supplémentaires sur ces circonstances seront documentées ultérieurement\). Cela empêche le reste du HTML d’être analysé et rendu par le navigateur jusqu’à ce que le fichier externe ait été chargé et exécuté. Ce délai supplémentaire avant l’affichage du contenu principal pour les utilisateurs est généralement déconseillé, mais peut être pertinent en fonction des circonstances.
+Dans certains cas, vous pouvez toutefois charger le fichier de manière synchrone. Cela empêche le reste du HTML d’être analysé et rendu par le navigateur jusqu’à ce que le fichier externe ait été chargé et exécuté. Ce délai supplémentaire avant l’affichage du contenu principal pour les utilisateurs est généralement déconseillé, mais peut être pertinent en fonction des circonstances.
 
 Pour charger le fichier de manière synchrone plutôt qu’asynchrone, supprimez l’attribut `async` de la deuxième balise `script`, comme illustré ci-dessous :
 

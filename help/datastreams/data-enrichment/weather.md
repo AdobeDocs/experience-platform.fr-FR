@@ -1,36 +1,36 @@
 ---
-title: Utiliser des données météorologiques de The Weather Channel
-description: Utilisez les données météorologiques de The Weather Channel pour améliorer les données que vous collectez par le biais des trains de données.
-exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
-source-git-commit: 4c9abcefb279c6e8a90744b692d86746a4896d0a
-workflow-type: ht
-source-wordcount: '672'
-ht-degree: 100%
+title: Amélioration de la collecte des données avec les données météorologiques provenant de DNL Le canal météo
+description: Améliorez les données que vous collectez par le biais de flux de données avec les données météorologiques issues de DNL The Weather Channel.
+source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+workflow-type: tm+mt
+source-wordcount: '674'
+ht-degree: 68%
 
 ---
 
-# Utiliser les données météorologiques de [!DNL The Weather Channel]
 
-Adobe s’est associé à [!DNL [The Weather Company]](https://www.ibm.com/weather) afin d’apporter le contexte supplémentaire de la météo des États-Unis aux données collectées par le biais des trains de données. Vous pouvez utiliser ces données pour les analyses, le ciblage et la création de segments dans Experience Platform.
+# Amélioration de la collecte des données avec les données météorologiques de [!DNL The Weather Channel]
 
-Il existe trois types de données disponibles depuis [!DNL The Weather Channel] :
+Adobe s’est associé à [!DNL [The Weather Company]](https://www.ibm.com/weather) afin d’apporter le contexte supplémentaire de la météo des États-Unis aux données collectées par le biais des trains de données. Vous pouvez utiliser ces données pour la création d’analyses, de ciblage et d’audiences dans Experience Platform.
 
-* **[!UICONTROL Météo actuelle]** : conditions météorologiques actuelles pour l’utilisateur ou l’utilisatrice, en fonction de sa position. Ces données affichent la température actuelle, les précipitations, la couverture nuageuse, etc.
-* **[!UICONTROL Météo prévue]** : prévisions à 1, 2, 3, 5, 7 et 10 jours de la position de l’utilisateur ou de l’utilisatrice.
+Il existe trois types de données disponibles à partir de [!DNL The Weather Channel]:
+
+* **[!UICONTROL Météo actuelle]** : conditions météorologiques actuelles pour l’utilisateur ou l’utilisatrice, en fonction de sa position. Cela inclut la température actuelle, les précipitations, la couverture nuageuse, etc.
+* **[!UICONTROL Météo prévue]**: la prévision inclut les prévisions de 1, 2, 3, 5, 7 et 10 jours pour l’emplacement de l’utilisateur.
 * **[!UICONTROL Déclencheurs]** : combinaisons spécifiques qui correspondent à différentes conditions météorologiques sémantiques. Il existe trois types de déclencheurs météorologiques :
 
    * **[!UICONTROL Déclencheurs météo]** : conditions sémantiquement significatives, telles qu’un temps froid ou pluvieux. Leurs définitions peuvent varier selon les climats.
-   * **[!UICONTROL Déclencheurs de produits]** : conditions qui conduiraient à l’achat de différents types de produits. Par exemple, les prévisions de périodes de froid augmentent la probabilité d’achat de manteaux.
+   * **[!UICONTROL Déclencheurs de produits]** : conditions qui conduiraient à l’achat de différents types de produits. Par exemple, les prévisions météorologiques de froid pourraient signifier que les achats de manteaux de pluie sont plus probables.
    * **[!UICONTROL Déclencheurs de conditions météorologiques extrêmes]** : alertes de conditions météorologiques extrêmes, comme les alertes de tempête hivernale ou d’ouragan.
 
 ## Conditions préalables {#prerequisites}
 
 Avant d’utiliser les données météorologiques, assurez-vous de respecter les conditions préalables suivantes :
 
-* Vous devez obtenir une licence pour les données météorologiques que vous utiliserez, auprès de [!DNL The Weather Channel]. Elle sera ensuite activé sur votre compte.
-* Les données météorologiques ne sont disponibles que par le biais de trains de données. Pour utiliser les données météorologiques, vous devez utiliser [!DNL Web SDK], [!DNL Mobile Edge Extension] ou l’[API Server](../../server-api/overview.md) pour exploiter ces données.
+* Vous devez acquérir sous licence les données météorologiques que vous utiliserez. [!DNL The Weather Channel]. Elle sera ensuite activé sur votre compte.
+* Les données météorologiques ne sont disponibles que par le biais de trains de données. Pour utiliser les données météorologiques, vous devez utiliser [!DNL Web SDK], [!DNL Mobile Edge Extension] ou le [API du serveur](../../server-api/overview.md) pour inclure ces données.
 * La [[!UICONTROL géolocalisation]](../configure.md#advanced-options) doit être activée dans votre train de données.
-* Ajoutez le [groupe de champs météorologique](#schema-configuration) au schéma que vous utilisez.
+* Ajoutez la variable [groupe de champs météo](#schema-configuration) au schéma que vous utilisez.
 
 ## Approvisionnement {#provisioning}
 
@@ -62,15 +62,15 @@ Vous trouverez la liste des champs que vous pouvez mapper dans la page [référe
 
 ### Adobe Customer Journey Analytics {#cja}
 
-Dans [!DNL Adobe Customer Journey Analytics], les données météorologiques sont disponibles dans le jeu de données spécifié dans le train de données. Tant que les attributs météorologiques sont [ajoutés à votre schéma](#prerequisites-prerequisites), ils pourront [être ajoutés à une vue de données](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=fr) dans [!DNL Customer Journey Analytics].
+Dans [!DNL Adobe Customer Journey Analytics], les données météorologiques sont disponibles dans le jeu de données spécifié dans le train de données. Tant que les attributs météorologiques sont [ajouté à votre schéma ;](#prerequisites-prerequisites), ils sont disponibles pour [ajouter à une vue de données](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=fr) in [!DNL Customer Journey Analytics].
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-Les données météorologiques sont disponibles dans [Real-time Customer Data Platform](../../rtcdp/overview.md), à utiliser dans les segments. Les données météorologiques sont associées aux événements.
+Les données météorologiques sont disponibles dans la variable [Real-time Customer Data Platform](../../rtcdp/overview.md), à utiliser dans les audiences. Les données météorologiques sont associées aux événements.
 
 ![Créateur de segments affichant les événements météorologiques](../assets/data-enrichment/weather/schema-builder.png)
 
-Comme les conditions météorologiques changent souvent, Adobe vous recommande de définir des contraintes de temps sur les segments, comme illustré dans l’exemple ci-dessus. Une journée froide la veille ou l’avant-veille est beaucoup plus important qu’une journée froide il y a 6 mois.
+Comme les conditions météorologiques changent fréquemment, Adobe vous recommande de définir des contraintes de temps sur les audiences, comme illustré dans l’exemple ci-dessus. Une journée froide la veille ou l’avant-veille est beaucoup plus important qu’une journée froide il y a 6 mois.
 
 Voir [référence météo](weather-reference.md) pour les champs disponibles.
 
