@@ -3,14 +3,14 @@ keywords: Experience Platform;identité;service d’identité;dépannage;garde-f
 title: Barrières de sécurité pour Identity Service
 description: Ce document fournit des informations sur l’utilisation et les limites de taux pour les données Identity Service afin de vous aider à optimiser l’utilisation du graphique d’identités.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 614f48e53e981e479645da9cc48c946f3af0db26
+source-git-commit: d33be97fcb935a53a8776d2a1993ad9d2b50e913
 workflow-type: tm+mt
-source-wordcount: '1509'
-ht-degree: 44%
+source-wordcount: '1507'
+ht-degree: 43%
 
 ---
 
-# Mécanismes de sécurisation pour les [!DNL Identity Service]données
+# Barrières de sécurité pour [!DNL Identity Service] data
 
 Ce document traite de l’utilisation et des limites de débit des données [!DNL Identity Service] afin de vous aider à optimiser l’utilisation du graphique d’identité. Lors de la révision des mécanismes de sécurisation suivants, on suppose que vous avez correctement modélisé les données. Si vous avez des questions sur la manière de modéliser vos données, contactez votre représentant du service client.
 
@@ -37,14 +37,18 @@ Le tableau suivant décrit les limites statiques appliquées aux données d’id
 | Nombre d’espaces de noms personnalisés | Aucun | Vous pouvez créer autant d’espaces de noms personnalisés que vous le souhaitez. |
 | Nombre de caractères présents dans le nom d’affichage d’un espace de noms ou un symbole d’identité | Aucun | Le nombre de caractères dans le nom d’affichage d’un espace de noms ou un symbole d’identité est illimité. |
 
+{style="table-layout:auto"}
+
 ### Validation de la valeur d’identité
 
 Le tableau suivant décrit les règles à suivre pour garantir la validation de votre valeur d’identité.
 
 | Espace de noms | Règle de validation | Comportement du système en cas de violation de règle |
 | --- | --- | --- |
-| ECID | <ul><li>La valeur d’identité d’un ECID doit comporter exactement 38 caractères.</li><li>La valeur d’identité d’un ECID ne doit être composée que de chiffres.</li><li>Les valeurs d’identité ne peuvent pas être &quot;null&quot;, &quot;anonymous&quot;, &quot;invalid&quot; ou être une chaîne vide (par exemple : &quot;&quot;, &quot;&quot;, &quot;&quot;).</li></ul> | <ul><li>Si la valeur d’identité d’un ECID ne comporte pas exactement 38 caractères, l’enregistrement est ignoré.</li><li>Si la valeur d’identité d’un ECID contient des caractères non numériques, l’enregistrement est ignoré.</li><li>L’identité sera bloquée de l’ingestion.</li></ul> |
-| Non-ECID | La valeur d’identité ne peut pas dépasser 1 024 caractères. | Le cas échéant, l’enregistrement est ignoré. |
+| ECID | <ul><li>La valeur d’identité d’un ECID doit comporter exactement 38 caractères.</li><li>La valeur d’identité d’un ECID ne doit être composée que de chiffres.</li></ul> | <ul><li>Si la valeur d’identité d’un ECID ne comporte pas exactement 38 caractères, l’enregistrement est ignoré.</li><li>Si la valeur d’identité d’un ECID contient des caractères non numériques, l’enregistrement est ignoré.</li></ul> |
+| Non-ECID | <ul><li>La valeur d’identité ne peut pas dépasser 1 024 caractères.</li><li>Les valeurs d’identité ne peuvent pas être &quot;null&quot;, &quot;anonymous&quot;, &quot;invalid&quot; ou être une chaîne vide (par exemple : &quot;&quot;, &quot;&quot;, &quot;&quot;).</li></ul> | <ul><li>Le cas échéant, l’enregistrement est ignoré.</li><li>L’identité sera bloquée de l’ingestion.</li></ul> |
+
+{style="table-layout:auto"}
 
 ### Ingestion des espaces de noms d’identité
 
@@ -105,7 +109,7 @@ Si vous souhaitez conserver vos événements authentifiés par rapport à l’id
 
 *Diagram note :*
 
-* `t` = date et heure.
+* `t` = horodatage.
 * La valeur d’un horodatage correspond à la récence d’une identité donnée. Par exemple : `t1` représente la première identité liée (la plus ancienne) et `t51` représente l’identité liée la plus récente.
 
 Dans cet exemple, avant que le graphique de gauche ne puisse être mis à jour avec une nouvelle identité, Identity Service supprime d’abord l’identité existante avec l’horodatage le plus ancien. Cependant, comme l’identité la plus ancienne est un ID d’appareil, Identity Service ignore cette identité et cherche à supprimer un espace de noms avec un type plus élevé dans la liste de priorité de suppression, en l’occurrence `ecid-3`. Une fois la suppression de l’identité la plus ancienne avec un type de priorité de suppression plus élevé effectuée, le graphique est mis à jour avec un nouveau lien, `ecid-51`.
@@ -182,7 +186,7 @@ Enfin, le processus de suppression génère deux graphiques plus petits.
 Pour plus d’informations sur [!DNL Identity Service], consultez la documentation suivante :
 
 * [Vue d’ensemble des [!DNL Identity Service]](home.md)
-* [Graphique d’identités observateur](ui/identity-graph-viewer.md)
+* [Visionneuse de graphique d’identités](ui/identity-graph-viewer.md)
 
 Pour plus d’informations sur les barrières de sécurité des autres services Experience Platform, sur les informations de latence de bout en bout et les informations de licence des documents Description du produit Real-Time CDP, consultez la documentation suivante :
 
