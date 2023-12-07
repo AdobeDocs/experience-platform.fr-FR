@@ -4,10 +4,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
-source-git-commit: 7f9a0965419a85894bd2cab4e78dd336874a5933
+source-git-commit: 4c8e80c5ec61aebd84064ac2a667188b8b5ddb8c
 workflow-type: tm+mt
-source-wordcount: '989'
-ht-degree: 100%
+source-wordcount: '993'
+ht-degree: 98%
 
 ---
 
@@ -91,6 +91,8 @@ ht-degree: 100%
       - [Connecteur de streaming Snowflake](connectors/databases/snowflake-streaming.md)
       - [Connecteur Snowflake](connectors/databases/snowflake.md)
       - [Connecteur Teradata Vantage](connectors/databases/teradata-vantage.md)
+   - Partenaire de données {#data-partner}
+      - [Résolution des identités d’entreprise Merkury](connectors/data-partners/merkury.md)
    - eCommerce {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -166,7 +168,7 @@ ht-degree: 100%
          - [Oracle](tutorials/api/create/databases/oracle.md)
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
-         - [Snowflake Streaming](tutorials/api/create/databases/snowflake-streaming.md)
+         - [Diffusion en continu des Snowflake](tutorials/api/create/databases/snowflake-streaming.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
@@ -289,6 +291,8 @@ ht-degree: 100%
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
+      - Partenaire de données {#data-partner}
+         - [Résolution des identités d’entreprise Merkury](tutorials/ui/create/data-partners/merkury.md)
       - eCommerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
