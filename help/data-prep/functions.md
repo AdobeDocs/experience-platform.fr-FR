@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Fonctions de mappage de prép de données
 description: Ce document présente les fonctions de mappage utilisées avec Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: dbd287087d04b10f79c8b6ae441371181d806739
+source-git-commit: ff61ec7bc1e67191a46f7d9bb9af642e9d601c3a
 workflow-type: tm+mt
-source-wordcount: '5221'
-ht-degree: 13%
+source-wordcount: '5080'
+ht-degree: 10%
 
 ---
 
@@ -41,18 +41,18 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 
 >[!NOTE]
 >
->Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+>Faites défiler vers la gauche ou vers la droite pour afficher l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | concat | Concatène les chaînes données. | <ul><li>STRING : chaînes qui seront concaténées.</li></ul> | concat(STRING_1, STRING_2) | concat(&quot;Hi, &quot;, &quot;there&quot;, &quot;!&quot;) | `"Hi, there!"` |
-| explode | Divise la chaîne sur base d’un regex et renvoie un tableau de parties. Peut éventuellement inclure une expression régulière pour fractionner la chaîne. Par défaut, la division est résolue sur &quot;,&quot;. Les délimiteurs suivants **need** à échapper avec `\`: `+, ?, ^, \|, ., [, (, {, ), *, $, \` Si vous incluez plusieurs caractères comme délimiteur, le délimiteur est traité comme un délimiteur à plusieurs caractères. | <ul><li>STRING: **Obligatoire** Chaîne à fractionner.</li><li>REGEX : *Facultatif* Expression régulière pouvant être utilisée pour fractionner la chaîne.</li></ul> | explode(STRING, REGEX) | explode(&quot;Hi, there!&quot;, &quot; &quot;) | `["Hi,", "there"]` |
+| explode | Divise la chaîne en fonction d’un regex et renvoie un tableau de parties. Peut éventuellement inclure une expression régulière pour fractionner la chaîne. Par défaut, la division est résolue sur &quot;,&quot;. Les délimiteurs suivants **need** à échapper avec `\`: `+, ?, ^, \|, ., [, (, {, ), *, $, \` Si vous incluez plusieurs caractères comme délimiteur, le délimiteur est traité comme un délimiteur à plusieurs caractères. | <ul><li>STRING: **Obligatoire** Chaîne à fractionner.</li><li>REGEX : *Facultatif* Expression régulière pouvant être utilisée pour fractionner la chaîne.</li></ul> | explode(STRING, REGEX) | explode(&quot;Hi, there!&quot;, &quot; &quot;) | `["Hi,", "there"]` |
 | instr | Renvoie l’emplacement/l’index d’une sous-chaîne. | <ul><li>INPUT : **Obligatoire** Chaîne en cours de recherche.</li><li>SUBSTRING : **Obligatoire** Sous-chaîne recherchée dans la chaîne.</li><li>START_POSITION : *Facultatif* Emplacement où commencer la recherche dans la chaîne.</li><li>OCCURRENCE : *Facultatif* La énième occurrence à rechercher à partir de la position de départ. Par défaut, elle est définie sur 1. </li></ul> | instr(INPUT, SUBSTRING, START_POSITION, OCCURRENCE) | instr(&quot;adobe.com&quot;, &quot;com&quot;) | 6 |
 | replacestr | Remplace la chaîne de recherche si elle est présente dans la chaîne d’origine. | <ul><li>INPUT : **Obligatoire** Chaîne d’entrée.</li><li>TO_FIND : **Obligatoire** Chaîne à rechercher dans l’entrée.</li><li>TO_REPLACE : **Obligatoire** Chaîne qui remplacera la valeur dans &quot;TO_FIND&quot;.</li></ul> | replacester(INPUT, TO_FIND, TO_REPLACE) | replacestr(&quot;This is a string re test&quot;, &quot;re&quot;, &quot;replace&quot;) | &quot;This is a string replace test&quot; |
 | substr | Renvoie une sous-chaîne d’une longueur donnée. | <ul><li>INPUT : **Obligatoire** Chaîne d’entrée.</li><li>START_INDEX : **Obligatoire** Index de la chaîne d’entrée où la sous-chaîne commence.</li><li>LONGUEUR : **Obligatoire** Durée de la sous-chaîne.</li></ul> | substr(INPUT, START_INDEX, LENGTH) | substr(&quot;This is a substring test&quot;, 7, 8) | &quot; a subst&quot; |
 | lower /<br>lcase | Convertit une chaîne en minuscules. | <ul><li>INPUT : **Obligatoire** Chaîne qui sera convertie en minuscules.</li></ul> | lower(INPUT) | lower(&quot;HeLLo&quot;)<br>lcase(&quot;HeLLo&quot;) | &quot;hello&quot; |
 | upper /<br>ucase | Convertit une chaîne en majuscules. | <ul><li>INPUT : **Obligatoire** Chaîne qui sera convertie en majuscules.</li></ul> | upper(INPUT) | upper(&quot;HeLLo&quot;)<br>ucase(&quot;HeLLo&quot;) | &quot;HELLO&quot; |
-| split | Divise une chaîne d’entrée sur un séparateur. Le séparateur suivant **requests** à échapper avec `\`: `\`. Si vous incluez plusieurs délimiteurs, la chaîne sera fractionnée sur **any** des délimiteurs présents dans la chaîne. | <ul><li>INPUT : **Obligatoire** Chaîne d’entrée qui va être fractionnée.</li><li>SEPAROR : **Obligatoire** Chaîne utilisée pour fractionner l’entrée.</li></ul> | split(INPUT, SEPAROR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
+| split | Divise une chaîne d’entrée sur un séparateur. Le séparateur suivant **requests** à échapper avec `\`: `\`. Si vous incluez plusieurs délimiteurs, la chaîne sera fractionnée sur **any** des délimiteurs présents dans la chaîne. **Remarque :** Cette fonction renvoie uniquement les index non nuls de la chaîne, indépendamment de la présence du séparateur. Si tous les index, y compris les valeurs nulles, sont requis dans le tableau obtenu, utilisez plutôt la fonction &quot;explode&quot;. | <ul><li>INPUT : **Obligatoire** Chaîne d’entrée qui va être fractionnée.</li><li>SEPAROR : **Obligatoire** Chaîne utilisée pour fractionner l’entrée.</li></ul> | split(INPUT, SEPAROR) | split(&quot;Hello world&quot;, &quot; &quot;) | `["Hello", "world"]` |
 | join | Joint une liste d’objets à l’aide du séparateur. | <ul><li>SEPAROR : **Obligatoire** Chaîne qui sera utilisée pour joindre les objets.</li><li>OBJETS : **Obligatoire** Tableau de chaînes qui seront jointes.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", to_array(true, "Hello", "world"))` | &quot;Hello world&quot; |
 | lpad | Ajoute le côté gauche d’une chaîne à l’autre chaîne donnée. | <ul><li>INPUT : **Obligatoire** Chaîne qui va être complétée. Cette chaîne peut être nulle.</li><li>COUNT : **Obligatoire** Taille de la chaîne à ajouter.</li><li>PADDING : **Obligatoire** Chaîne avec laquelle remplir l’entrée. S’il est nul ou vide, il est traité comme un espace unique.</li></ul> | lpad(INPUT, COUNT, PADDING) | lpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;yzyzyzybat&quot; |
 | rpad | Ajoute le côté droit d’une chaîne à l’autre chaîne donnée. | <ul><li>INPUT : **Obligatoire** Chaîne qui va être complétée. Cette chaîne peut être nulle.</li><li>COUNT : **Obligatoire** Taille de la chaîne à ajouter.</li><li>PADDING : **Obligatoire** Chaîne avec laquelle remplir l’entrée. S’il est nul ou vide, il est traité comme un espace unique.</li></ul> | rpad(INPUT, COUNT, PADDING) | rpad(&quot;bat&quot;, 8, &quot;yz&quot;) | &quot;batyzyzy&quot; |
@@ -79,7 +79,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 
 >[!NOTE]
 >
->Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+>Faites défiler vers la gauche ou vers la droite pour afficher l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -95,7 +95,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 
 >[!NOTE]
 >
->Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+>Faites défiler vers la gauche ou vers la droite pour afficher l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -113,7 +113,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 
 >[!NOTE]
 >
->Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau. En savoir plus sur la variable `date` se trouve dans la section dates de la fonction [guide de gestion des formats de données](./data-handling.md#dates).
+>Faites défiler vers la gauche ou vers la droite pour afficher l’intégralité du tableau. En savoir plus sur la variable `date` se trouve dans la section dates de la fonction [guide de gestion des formats de données](./data-handling.md#dates).
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -136,7 +136,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 
 >[!NOTE]
 >
->Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+>Faites défiler vers la gauche ou vers la droite pour afficher l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -160,7 +160,7 @@ Pour plus d’informations sur la fonction de copie d’objet, voir la section [
 
 >[!NOTE]
 >
->Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+>Faites défiler vers la gauche ou vers la droite pour afficher l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -171,8 +171,8 @@ Pour plus d’informations sur la fonction de copie d’objet, voir la section [
 | join_arrays | Combine les tableaux les uns avec les autres. | <ul><li>ARRAY : **Obligatoire** Le tableau auquel vous ajoutez des éléments.</li><li>VALEURS : tableau(s) que vous souhaitez ajouter au tableau parent.</li></ul> | join_arrays &#x200B;(ARRAY, VALES) | join_arrays &#x200B;([&#39;a&#39;, &#39;b&#39;], [&quot;c&quot;], [&#39;d&#39;, &#39;e&#39;]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;] |
 | to_array | Prend une liste d’entrées et la convertit en tableau. | <ul><li>INCLUDE_NULLS : **Obligatoire** Valeur boolean indiquant s’il faut inclure ou non les valeurs nulles dans le tableau de réponse.</li><li>VALEURS : **Obligatoire** Les éléments à convertir en tableau.</li></ul> | to_array &#x200B;(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]` |
 | size_of | Renvoie la taille de l’entrée. | <ul><li>INPUT : **Obligatoire** L&#39;objet dont vous essayez de trouver la taille.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
-| upsert_array_append | Cette fonction est utilisée pour ajouter tous les éléments du tableau d’entrée entier à la fin du tableau dans Profile. Cette fonction est **only** applicable pendant les mises à jour. Si elle est utilisée dans le contexte d’insertions, cette fonction renvoie l’entrée telle quelle. | <ul><li>ARRAY : **Obligatoire** Tableau à ajouter au tableau dans le profil.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
-| upsert_array_replace | Cette fonction est utilisée pour remplacer des éléments d’un tableau. Cette fonction est **only** applicable pendant les mises à jour. Si elle est utilisée dans le contexte d’insertions, cette fonction renvoie l’entrée telle quelle. | <ul><li>ARRAY : **Obligatoire** Le tableau à remplacer dans le profil.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
+| upsert_array_append | Cette fonction est utilisée pour ajouter tous les éléments du tableau d’entrée entier à la fin du tableau dans Profile. Cette fonction est **only** applicable pendant les mises à jour. Si elle est utilisée dans le contexte d’insertions, cette fonction renvoie l’entrée telle quelle. | <ul><li>ARRAY : **Obligatoire** Tableau à ajouter au tableau dans le profil.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123 456] |
+| upsert_array_replace | Cette fonction est utilisée pour remplacer des éléments d’un tableau. Cette fonction est **only** applicable pendant les mises à jour. Si elle est utilisée dans le contexte d’insertions, cette fonction renvoie l’entrée telle quelle. | <ul><li>ARRAY : **Obligatoire** Le tableau à remplacer dans le profil.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123 456] |
 
 {style="table-layout:auto"}
 
@@ -180,7 +180,7 @@ Pour plus d’informations sur la fonction de copie d’objet, voir la section [
 
 >[!NOTE]
 >
->Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+>Faites défiler vers la gauche ou vers la droite pour afficher l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -193,7 +193,7 @@ Pour plus d’informations sur la fonction de copie d’objet, voir la section [
 
 >[!NOTE]
 >
->Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+>Faites défiler vers la gauche ou vers la droite pour afficher l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -206,13 +206,13 @@ Pour plus d’informations sur la fonction de copie d’objet, voir la section [
 
 >[!NOTE]
 >
->Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+>Faites défiler vers la gauche ou vers la droite pour afficher l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| to_bigint | Convertit une chaîne en BigInteger. | <ul><li>STRING: **Obligatoire** Chaîne à convertir en BigInteger.</li></ul> | to_bigint(STRING) | to_bigint &#x200B;(&quot;1000000.34&quot;) | 1000000.34 |
-| to_decimal | Convertit une chaîne en double. | <ul><li>STRING: **Obligatoire** Chaîne à convertir en double.</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20.5 |
-| to_float | Convertit une chaîne en chaîne flottante. | <ul><li>STRING: **Obligatoire** Chaîne à convertir en flottante.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12.34566 |
+| to_bigint | Convertit une chaîne en BigInteger. | <ul><li>STRING: **Obligatoire** Chaîne à convertir en BigInteger.</li></ul> | to_bigint(STRING) | to_bigint &#x200B;(&quot;1000000.34&quot;) | 1000000,34 |
+| to_decimal | Convertit une chaîne en double. | <ul><li>STRING: **Obligatoire** Chaîne à convertir en double.</li></ul> | to_decimal(STRING) | to_decimal(&quot;20.5&quot;) | 20,5 |
+| to_float | Convertit une chaîne en chaîne flottante. | <ul><li>STRING: **Obligatoire** Chaîne à convertir en flottante.</li></ul> | to_float(STRING) | to_float(&quot;12.3456&quot;) | 12,34566 |
 | to_integer | Convertit une chaîne en entier. | <ul><li>STRING: **Obligatoire** Chaîne à convertir en entier.</li></ul> | to_integer(STRING) | to_integer(&quot;12&quot;) | 12 |
 
 {style="table-layout:auto"}
@@ -221,7 +221,7 @@ Pour plus d’informations sur la fonction de copie d’objet, voir la section [
 
 >[!NOTE]
 >
->Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+>Faites défiler vers la gauche ou vers la droite pour afficher l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -233,7 +233,7 @@ Pour plus d’informations sur la fonction de copie d’objet, voir la section [
 
 >[!NOTE]
 >
->Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+>Faites défiler vers la gauche ou vers la droite pour afficher l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -253,7 +253,7 @@ Pour plus d’informations sur les valeurs de champ d’appareil, veuillez lire 
 
 >[!NOTE]
 >
->Faites défiler vers la gauche ou vers la droite pour consulter l’intégralité du tableau.
+>Faites défiler vers la gauche ou vers la droite pour afficher l’intégralité du tableau.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
@@ -261,7 +261,7 @@ Pour plus d’informations sur les valeurs de champ d’appareil, veuillez lire 
 | ua_os_version_major | Extrait la version principale du système d’exploitation de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_os_version_major &#x200B;(USER_AGENT) | ua_os_version_major &#x200B; s(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | IOS 5 |
 | ua_os_version | Extrait la version du système d’exploitation de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_os_version &#x200B;(USER_AGENT) | ua_os_version &#x200B;(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1.1 |
 | ua_os_name_version | Extrait le nom et la version du système d’exploitation de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_os_name_version &#x200B;(USER_AGENT) | ua_os_name_version &#x200B;(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | iOS 5.1.1 |
-| ua_agent_version | Extrait la version de l’agent de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_agent_version &#x200B;(USER_AGENT) | ua_agent_version &#x200B;(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5.1 |
+| ua_agent_version | Extrait la version de l’agent de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_agent_version &#x200B;(USER_AGENT) | ua_agent_version &#x200B;(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | 5,1 |
 | ua_agent_version_major | Extrait le nom de l’agent et la version majeure de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_agent_version_major &#x200B;(USER_AGENT) | ua_agent_version_major &#x200B;(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
 | ua_agent_name | Extrait le nom de l’agent de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_agent_name &#x200B;(USER_AGENT) | ua_agent_name &#x200B;(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
 | ua_device_class | Extrait la classe device de la chaîne user agent. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_device_class &#x200B;(USER_AGENT) | ua_device_class &#x200B;(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Téléphone |
