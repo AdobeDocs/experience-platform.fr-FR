@@ -4,10 +4,10 @@ title: Extension de transfert d’événement de braze
 description: Cette extension de transfert d’événement Adobe Experience Platform envoie les événements Edge Network à Braze.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 297f48f8-2c3b-41c2-8820-35f4558c67b3
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '1861'
-ht-degree: 6%
+source-wordcount: '1692'
+ht-degree: 4%
 
 ---
 
@@ -51,7 +51,7 @@ L’extension utilise deux des [!DNL Braze]Les API de d’ et leurs limites sont
 
 ### Points de données facturables
 
-Envoyer des attributs personnalisés supplémentaires à [!DNL Braze] peut augmenter votre [!DNL Braze] consommation des points de données. Consultez votre [!DNL Braze] gestionnaire de compte avant d’envoyer des attributs personnalisés supplémentaires. Voir [!DNL Braze] documentation sur [points de données facturables](https://www.braze.com/docs/user_guide/onboarding_with_braze/data_points/#billable-data-points) pour plus d’informations.
+Envoyer des attributs personnalisés supplémentaires à [!DNL Braze] peut augmenter votre [!DNL Braze] consommation des points de données. Consultez votre [!DNL Braze] gestionnaire de compte avant d’envoyer des attributs personnalisés supplémentaires. Voir [!DNL Braze] documentation sur [points de données facturables](https://www.braze.com/docs/user_guide/data_and_analytics/data_points/?tab=billable) pour plus d’informations.
 
 ### Collecte des détails de configuration requis {#configuration-details}
 
@@ -60,7 +60,7 @@ Pour connecter le réseau Edge à [!DNL Braze], les entrées suivantes sont requ
 | Type de clé | Description | Exemple |
 | --- | --- | --- |
 | [!DNL Braze] Instance | Le point de terminaison REST associé à la variable [!DNL Braze] compte . Voir [!DNL Braze] documentation sur [instances](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) pour obtenir des conseils. | `https://rest.iad-03.braze.com` |
-| Clé API | La variable [!DNL Braze] Clé API associée à [!DNL Braze] compte . <br/>Voir [!DNL Braze] la documentation relative à la [Clé API REST](https://www.braze.com/docs/api/basics/#rest-api-key) pour obtenir des conseils. | `YOUR-BRAZE-REST-API-KEY` |
+| Clé API | La variable [!DNL Braze] Clé API associée à [!DNL Braze] compte . <br/>Voir [!DNL Braze] la documentation relative à la [Clé API REST](https://www.braze.com/docs/api/basics/#rest-api-key) pour obtenir des conseils. | `YOUR-BRAZE-REST-API-KEY` |
 
 ### Créer un secret
 
@@ -72,7 +72,7 @@ Pour installer l’extension, [création d’une propriété de transfert d’é
 
 Sélectionner **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Dans le **[!UICONTROL Catalogue]** onglet, sélectionnez **[!UICONTROL Installer]** sur la carte de la variable [!DNL Braze] extension .
 
-![[!DNL Braze]Installation l’extension.](../../../images/extensions/server/braze/install-extension.png)
+![Installez le [!DNL Braze] extension .](../../../images/extensions/server/braze/install-extension.png)
 
 Dans l’écran suivant, saisissez ce qui suit : [valeurs de configuration](#configuration-details) que vous avez précédemment rassemblé à partir de [!DNL Braze]:
 
@@ -126,7 +126,7 @@ Les attributs utilisateur peuvent être un objet JSON contenant des champs qui c
 | --- | --- |
 | [!UICONTROL Prénom] | |
 | [!UICONTROL Nom] | |
-| [!UICONTROL Téléphone] | |
+| [!UICONTROL Phone] | |
 | [!UICONTROL E-mail.] | |
 | [!UICONTROL Genre] | Une des chaînes suivantes : &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (autre), &quot;N&quot; (non applicable), &quot;P&quot; (préférez ne pas dire). |
 | [!UICONTROL Ville] | |
@@ -163,10 +163,10 @@ Après avoir installé l’extension, créez un transfert d’événement. [règ
 
 | Entrée | Description | Obligatoire |
 | --- | --- | --- |
-| [!UICONTROL ID de produit &#x200B;] | Identifiant de l’achat. (par exemple, Nom du produit ou Catégorie de produit) | Oui |
+| [!UICONTROL &#x200B; d’ID de produit] | Identifiant de l’achat. (par exemple, Nom du produit ou Catégorie de produit) | Oui |
 | [!UICONTROL Temps d’achat] | Date-time sous forme de chaîne dans ISO 8601 ou dans `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. | Oui |
-| [!UICONTROL Devise &#x200B;] | Devise en tant que chaîne dans [ISO 4217](https://fr.wikipedia.org/wiki/ISO_4217) Format de code de devise alphabétique. | Oui |
-| [!UICONTROL Prix &#x200B;] | Prix. | Oui |
+| [!UICONTROL &#x200B; de devise] | Devise en tant que chaîne dans [ISO 4217](https://fr.wikipedia.org/wiki/ISO_4217) Format de code de devise alphabétique. | Oui |
+| [!UICONTROL &#x200B; des prix] | Prix. | Oui |
 | [!UICONTROL Quantité &#x200B;] | Si elle n’est pas fournie, la valeur par défaut est 1. La valeur maximale doit être inférieure à 100. | |
 | [!UICONTROL Identifiant de l’application] | L’identifiant de l’application ou <strong>app_id</strong> est un paramètre qui associe une activité à une application spécifique de votre groupe d’applications. Il désigne l’application dans le groupe d’applications avec lequel vous interagissez. En savoir plus sur les [Types d’identificateur d’API](https://www.braze.com/docs/api/identifier_types/). | |
 | [!UICONTROL Propriétés d’achat &#x200B;] | Objet JSON contenant les propriétés personnalisées de l’achat. |  |
@@ -185,7 +185,7 @@ Les attributs utilisateur peuvent être un objet JSON contenant des champs qui c
 | --- | --- |
 | [!UICONTROL Prénom] | |
 | [!UICONTROL Nom] | |
-| [!UICONTROL Téléphone] | |
+| [!UICONTROL Phone] | |
 | [!UICONTROL E-mail.] | |
 | [!UICONTROL Genre] | Une des chaînes suivantes : &quot;M&quot;, &quot;F&quot;, &quot;O&quot; (autre), &quot;N&quot; (non applicable), &quot;P&quot; (préférez ne pas dire). |
 | [!UICONTROL Ville] | |

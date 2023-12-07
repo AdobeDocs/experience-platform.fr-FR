@@ -1,21 +1,21 @@
 ---
 description: Experience Platform Debugger examine vos pages web et vous aide à résoudre les problèmes liés à la mise en oeuvre des solutions Experience Cloud.
 keywords: debugger;extension Experience Platform Debugger;chrome;extension
-seo-description: Technical documentation for the Adobe Experience Platform Debugger Chrome and Firefox Extension - examine your web pages and understand problems with your Experience Cloud solution mplementations
-seo-title: Adobe Experience Platform Debugger Chrome and Firefox Extension
+seo-description: Technical documentation for the Adobe Experience Platform Debugger Chrome Extension - examine your web pages and understand problems with your Experience Cloud solution mplementations
+seo-title: Adobe Experience Platform Debugger Chrome Extension
 title: Extension Adobe Experience Platform Debugger
 uuid: 42e2c8a2-548a-4a3f-b57d-532535a0e7b9
 exl-id: e02bc318-fbff-4a19-980a-d5c0a21ca300
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '260'
-ht-degree: 11%
+source-wordcount: '242'
+ht-degree: 5%
 
 ---
 
-# Présentation de Adobe Experience Platform Debugger
+# Adobe Experience Platform Debugger - Aperçu
 
-Extension Adobe Experience Platform Debugger pour [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj) et [Firefox](https://addons.mozilla.org/fr/firefox/addon/adobe-experience-platform-dbg/) examine vos pages web et vous aide à résoudre les problèmes liés à la mise en oeuvre des solutions Adobe Experience Cloud.
+L’extension Adobe Experience Platform Debugger pour [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) examine vos pages web et vous aide à résoudre les problèmes liés à la mise en oeuvre des solutions Adobe Experience Cloud.
 
 Vous pouvez utiliser Platform Debugger avec les autres solutions d’activation d’Adobe pour effectuer les opérations suivantes :
 
@@ -33,9 +33,9 @@ Vous pouvez exécuter Platform Debugger sur n’importe quelle page web et l’e
 
 Vous pouvez utiliser les informations collectées par Platform Debugger pour mieux comprendre comment vos solutions Experience Cloud sont mises en oeuvre. Par exemple :
 
-* **Balises**: Déterminez la propriété, l’environnement et la version déployés sur une page.
-* **Adobe Target**: Identifiez les activités pour lesquelles vous remplissez les critères ou non et pourquoi.
-* **Adobe Analytics**: Identifier les suites de rapports principales sur la page active.
+* **Balises**: découvrez la propriété, l’environnement et la version déployés sur une page.
+* **Adobe Target**: découvrez les activités pour lesquelles vous remplissez les critères ou non et pourquoi.
+* **Adobe Analytics**: voir les suites de rapports actives sur la page active.
 
 ## Tutoriel vidéo
 

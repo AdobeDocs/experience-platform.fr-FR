@@ -3,9 +3,9 @@ title: Débogage dans le SDK Web de Adobe Experience Platform
 description: Découvrez comment activer/désactiver les fonctionnalités de débogage dans le SDK Web Experience Platform.
 keywords: débogage du sdk web;débogage;configurer;commande de configuration;commande de débogage;edgeConfigId;setDebug;debugEnabled;debug;
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '516'
 ht-degree: 50%
 
 ---
@@ -19,7 +19,7 @@ Le débogage est désactivé par défaut, mais peut être activé de quatre mani
 * Commande `configure`
 * Commande `setDebug`
 * Paramètre de chaîne de requête
-* Activation/désactivation du débogage dans Adobe Experience Platform Debugger. Adobe Experience Platform est un outil puissant qui examine vos pages web et vous aide à déboguer les problèmes d’implémentation avec vos produits Experience Cloud. Adobe Experience Platform Debugger est disponible sous la forme d’une [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) et [Firefox](https://addons.mozilla.org/fr/firefox/addon/adobe-experience-platform-dbg/) extension . Le débogage peut être activé à partir de l’onglet de configuration de la section SDK Web AEP.
+* Activation/désactivation du débogage dans Adobe Experience Platform Debugger. Adobe Experience Platform est un outil puissant qui examine vos pages web et vous aide à déboguer les problèmes d’implémentation avec vos produits Experience Cloud. Adobe Experience Platform Debugger est disponible sous la forme d’un [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) extension . Le débogage peut être activé à partir de l’onglet de configuration de la section SDK Web AEP.
 
 ![Image de l’interface utilisateur du débogueur Experience Platform affichant l’écran de configuration.](../assets/enable-debugging.png)
 

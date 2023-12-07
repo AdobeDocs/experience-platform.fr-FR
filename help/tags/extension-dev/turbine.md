@@ -2,10 +2,10 @@
 title: Variable sans Turbine
 description: Découvrez l’objet turbine, une variable libre qui fournit des informations et des utilitaires spécifiques à l’exécution de balise d’Adobe Experience Platform.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: 27dd38cc509040ea9dc40fc7030dcdec9a182d55
+source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 100%
+source-wordcount: '606'
+ht-degree: 97%
 
 ---
 
@@ -112,7 +112,7 @@ Récupère un module qui a été partagé depuis une autre extension. Si aucun m
 turbine.logger.error('Error!');
 ```
 
-Lʼutilitaire de journalisation est utilisé pour consigner les messages dans la console. Les messages s’affichent uniquement dans la console si le débogage est activé par l’utilisateur. La méthode recommandée pour activer le débogage consiste à utiliser [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?src=propaganda). Lʼutilisateur peut également exécuter la commande suivante `_satellite.setDebug(true)` dans la console de développeur du navigateur. La journalisation utilise les méthodes suivantes :
+Lʼutilitaire de journalisation est utilisé pour consigner les messages dans la console. Les messages s’affichent uniquement dans la console si le débogage est activé par l’utilisateur. La méthode recommandée pour activer le débogage consiste à utiliser la variable [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob). Lʼutilisateur peut également exécuter la commande suivante `_satellite.setDebug(true)` dans la console de développeur du navigateur. La journalisation utilise les méthodes suivantes :
 
 * `logger.log(message: string)` : consigne un message sur la console.
 * `logger.info(message: string)` : consigne un message d’information dans la console.
@@ -137,8 +137,8 @@ Un objet contenant les paramètres suivants définis par lʼutilisateur pour la 
 
 * `propertySettings.domains: Array<String>`
 
-   Tableau de domaines couverts par la propriété.
+  Tableau de domaines couverts par la propriété.
 
 * `propertySettings.undefinedVarsReturnEmpty: boolean`
 
-   Les développeurs d’extensions ne doivent pas se préoccuper de ce paramètre.
+  Les développeurs d’extensions ne doivent pas se préoccuper de ce paramètre.
