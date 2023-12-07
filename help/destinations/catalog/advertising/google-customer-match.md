@@ -3,9 +3,9 @@ keywords: correspondance client Google;correspondance client Google;correspondan
 title: Connexion à Google Customer Match
 description: La correspondance client Google vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et interagir avec eux dans les propriétés détenues et exploitées de Google, telles que la recherche, le shopping, Gmail et YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1788'
 ht-degree: 23%
 
 ---
@@ -52,7 +52,7 @@ Certaines destinations en Experience Platform ont certaines règles et obligatio
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
+Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
 
 | Origine de l’audience | Pris en charge | Description |
 ---------|----------|----------|
@@ -82,7 +82,7 @@ Ensuite, assurez-vous que la variable [!DNL Google] est configuré pour un compt
 
 Avant de créer la variable [!DNL Google Customer Match] dans Experience Platform, assurez-vous que la variable [!DNL Google Ads] est conforme au [[!DNL Google Customer Match] policy](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
-Les clients disposant de comptes conformes sont automatiquement autorisés à être répertoriés par Google.
+Les clients disposant de comptes conformes sont automatiquement placés sur la liste autorisée par Google.
 
 ## Exigences de correspondance des identifiants {#id-matching-requirements}
 
@@ -132,6 +132,12 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
+## Vue d’ensemble des vidéos {#video-overview}
+
+Regardez la vidéo ci-dessous pour obtenir des explications sur les avantages et sur la manière d’activer les données vers la correspondance client Google.
+
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
+
 ## Se connecter à la destination {#connect}
 
 >[!IMPORTANT]
@@ -169,9 +175,9 @@ Voir [Activer les données d’audience vers des destinations d’export d’aud
 
 Dans le **[!UICONTROL Planification du segment]** , vous devez fournir la variable [!UICONTROL ID de l’application] lors de l’envoi [!DNL IDFA] ou [!DNL GAID] audiences vers [!DNL Google Customer Match].
 
-![ID de l’application de correspondance client Google](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
+![Le champ ID de l’application de correspondance client Google est mis en surbrillance à l’étape Planificateur de segment du workflow d’activation.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-Pour plus d’informations sur la manière de trouver le [!DNL App ID], reportez-vous au [Documentation officielle de Google](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
+Pour plus d’informations sur la manière de trouver le [!DNL App ID], reportez-vous au [Documentation officielle de Google](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) ou contactez votre représentant Google.
 
 ### Exemple de mappage : activation des données d’audience dans [!DNL Google Customer Match] {#example-gcm}
 
@@ -194,17 +200,17 @@ Sélection des champs cibles :
 * Sélectionnez la variable `IDFA` ou `GAID` les espaces de noms comme identité cible lorsque vos espaces de noms sources `IDFA` ou `GAID`.
 * Sélectionnez la variable `User_ID` espace de noms comme identité cible lorsque votre espace de noms source est personnalisé.
 
-![Mappage des identités](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
+![Mappage des identités entre les champs source et cible affiché à l’étape Mappage du workflow d’activation.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
 
 Les données des espaces de noms non hachés sont automatiquement hachées par [!DNL Platform] lors de l’activation.
 
 Les données de la source d’attributs ne sont pas automatiquement hachées. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l’activation.
 
-![Transformation du mapping des identités](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+![Appliquez le contrôle de transformation mis en surbrillance à l&#39;étape Mappage du workflow d&#39;activation.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
 ## Vérification de la réussite de l’activation de l’audience {#verify-activation}
 
-Une fois le flux d’activation terminé, passez à la **[!UICONTROL Publicités Google]** compte . Les audiences activées s’affichent dans votre compte Google sous forme de listes de clients. En fonction de la taille de votre audience, certaines audiences ne sont pas renseignées, sauf s’il y a plus de 100 utilisateurs actifs à diffuser.
+Une fois le flux d’activation terminé, passez à la **[!UICONTROL Publicités Google]** compte . Les audiences activées s’affichent dans votre compte Google sous forme de listes de clients. Selon la taille de votre audience, certaines audiences ne sont pas renseignées, à moins qu’il y ait plus de 100 utilisateurs actifs à diffuser.
 
 Lors du mappage d’une audience à la fois [!DNL IDFA] et [!DNL GAID] les identifiants mobiles, [!DNL Google Customer Match] crée une audience distincte pour chaque mappage d’ID. Votre [!DNL Google Ads] Le compte affiche deux segments différents, l’un pour la variable [!DNL IDFA], et un pour le [!DNL GAID] mappage.
 
@@ -217,8 +223,3 @@ Lors de la configuration de cette destination, vous risquez de recevoir l’erre
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
 Cette erreur se produit lorsque les comptes clients ne sont pas conformes aux [conditions préalables](#google-account-prerequisites). Pour résoudre ce problème, contactez Google et assurez-vous que votre compte est sur liste autorisée et est configuré pour une [!DNL Standard] ou niveau d’autorisation supérieur. Voir [Documentation sur Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) pour plus d’informations.
-
-## Ressources supplémentaires {#additional-resources}
-
-* [Intégrer [!DNL Google Customer Match] - Tutoriel vidéo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html?lang=fr)
-

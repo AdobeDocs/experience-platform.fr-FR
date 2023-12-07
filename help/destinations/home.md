@@ -2,16 +2,16 @@
 title: Présentation des destinations
 description: Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. Vous pouvez utiliser les destinations dans Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 661ef040398a9e2ef8dd9cebdf7bd27d4268636b
+source-git-commit: d3c7b416317034c8d57663e0c05c9dc4dbe6d2d4
 workflow-type: tm+mt
-source-wordcount: '956'
-ht-degree: 96%
+source-wordcount: '1001'
+ht-degree: 79%
 
 ---
 
 # Présentation des [!DNL Destinations] {#overview}
 
-![Bannière de présentation des destinations](./assets/overview/destinations-overview-banner.png)
+![Bannière de présentation des destinations.](./assets/overview/destinations-overview-banner.png)
 
 Les **[!DNL Destinations]** sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
@@ -29,7 +29,7 @@ L’une des principales fonctionnalités de Platform consiste à ingérer vos do
 ## Étapes des destinations {#steps}
 
 * Effectuez un choix parmi un [catalogue en libre-service](./catalog/overview.md) de toutes les destinations disponibles dans Platform.
-* Utilisez les destinations pour envoyer des profils ou des audiences aux plateformes d’automatisation marketing, de publicité numérique, etc.
+* Utilisez les destinations pour envoyer des audiences ou des jeux de données aux plateformes d’automatisation marketing, de publicité numérique, etc.
 * Planifiez régulièrement des exportations de données vers les destinations de votre choix.
 
 ## Commandes {#controls}
@@ -39,12 +39,13 @@ Les commandes de l’[espace de travail des destinations](./ui/destinations-work
 * parcourir le catalogue des plateformes de destination dans lesquelles vous pouvez activer vos données ;
 * créer, modifier, activer et désactiver des flux de données vers les destinations du catalogue ;
 * créer un compte dans un emplacement de stockage ou lier Platform au compte dans la plateforme des destinations ;
-* sélectionner les audiences à activer vers les destinations ;
-* sélectionner les [champs Modèle de données d’expérience (XDM)](../xdm/home.md) à exporter lors de l’activation d’audiences vers des destinations de marketing par e-mail.
+* Sélectionnez les audiences ou les jeux de données qui doivent être activés vers les destinations.
+* Sélectionnez laquelle [Champs du modèle de données d’expérience (XDM)](../xdm/home.md) à exporter lors de l’activation d’audiences vers certaines destinations telles que les destinations de marketing par e-mail, les plateformes CRM, les emplacements de stockage dans le cloud, etc.
+* Activez différents types de profils et d’audiences vers les destinations : les personnes, les comptes et les prospects.
 
 ## Types et catégories de destination {#types-and-categories}
 
-Avec Experience Platform, vous pouvez activer des données vers différents types de destinations, afin de répondre à vos cas d’utilisation d’activation. Les destinations vont des intégrations basées sur les API aux intégrations avec les systèmes de réception de fichiers, en passant par les destinations de recherche de profil, etc. Pour plus d’informations sur toutes les destinations disponibles, voir [Présentation des types et catégories de destination](./destination-types.md).
+Avec Experience Platform, vous pouvez activer des données vers différents types de destinations, afin de répondre à vos cas d’utilisation d’activation. Les destinations vont des intégrations basées sur les API aux intégrations avec les systèmes de réception de fichiers, en passant par les destinations de recherche de profil, etc. Pour plus d’informations sur toutes les destinations disponibles, consultez la [Types et catégories de destination - Aperçu](./destination-types.md).
 
 ## Destinations créées par Adobe et les partenaires {#adobe-and-partner-built-destinations}
 
@@ -54,7 +55,7 @@ Pour les connecteurs créés et gérés par un partenaire, les problèmes liés 
 
 ## Destinations et contrôles d’accès {#access-controls}
 
-La fonctionnalité de destinations de Platform fonctionne avec les autorisations de contrôle d’accès d’Adobe Experience Platform. Selon le niveau d’autorisation de l’utilisateur, vous pouvez afficher, gérer et activer les destinations. Pour plus d’informations sur les autorisations individuelles, consultez [Contrôle d’accès dans Adobe Experience Platform](../access-control/home.md) et faites défiler la page vers le bas.
+La fonctionnalité de destinations de Platform fonctionne avec les autorisations de contrôle d’accès d’Adobe Experience Platform. Selon le niveau d’autorisation de l’utilisateur, vous pouvez afficher, gérer et activer les destinations. Pour plus d’informations sur les autorisations individuelles, voir [contrôle d’accès dans Adobe Experience Platform](../access-control/home.md) et faites défiler jusqu’au tableau au bas de la page.
 
 Le tableau suivant décrit les autorisations et combinaisons d’autorisations requises pour effectuer certaines actions sur les destinations :
 
@@ -81,7 +82,9 @@ Pour plus d’informations sur le fonctionnement des destinations avec les contr
 
 Après avoir établi une connexion à une destination et terminé le workflow d’activation, vous pouvez surveiller les exportations de données vers votre système de réception. Lisez le [guide sur la surveillance des flux de données vers les destinations dans l’interface utilisateur](/help/dataflows/ui/monitor-destinations.md) pour plus d’informations.
 
-Vous pouvez également vérifier si les données arrivent à votre destination. La plupart des pages de documentation des destinations du catalogue ont une *section Valider l’exportation des données*, qui indique comment vous pouvez vérifier dans la plateforme de destination que les données sont importées depuis Experience Platform.
+![Exemple de page de surveillance des destinations.](./assets/overview/monitoring-page-example.png)
+
+Vous pouvez également vérifier si les données arrivent à votre destination. La plupart des pages de documentation de destination du catalogue ont une *Validation de la section d’exportation des données*, qui indique comment vous pouvez archiver la plateforme de destination sur laquelle les données sont importées depuis l’Experience Platform. Affichez un exemple de cette section pour le [Destination Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
 
 ## Restrictions de gouvernance des données concernant l’activation des données vers les destinations {#data-governance}
 

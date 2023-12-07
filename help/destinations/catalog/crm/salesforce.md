@@ -3,9 +3,9 @@ keywords: crm;CRM;destinations crm;salesforce crm;destination Salesforce crm
 title: Connexion CRM à Salesforce
 description: La destination Salesforce CRM vous permet d’exporter les données de votre compte et de les activer dans Salesforce CRM pour vos besoins professionnels.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '3117'
+source-wordcount: '2818'
 ht-degree: 21%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 21%
 
 ## Présentation {#overview}
 
-[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) est une plateforme de gestion de la relation client (CRM) populaire qui prend en charge les éléments suivants :
+[[!DNL Salesforce CRM]](https://www.salesforce.com/crm/) est une plateforme de gestion de la relation client (CRM) populaire qui prend en charge les types de profils décrits ci-dessous :
 
 * [Pistes](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) - Un prospect est le nom d’une personne ou d’une société qui peut (ou non) être intéressée par les produits ou services que vous vendez.
 * [Contacts](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_contact.htm) - Un contact est une personne avec laquelle l’un de vos représentants a établi une relation et a été qualifié de client potentiel.
@@ -27,7 +27,7 @@ When [activation des segments](#activate), vous pouvez choisir entre des pistes 
 
 ## Cas d’utilisation {#use-cases}
 
-En tant que professionnel du marketing, vous pouvez proposer des expériences personnalisées à vos utilisateurs en fonction des attributs de leurs profils Adobe Experience Platform. Vous pouvez créer des audiences à partir de vos données hors ligne et envoyer ces audiences à Salesforce CRM, afin qu’elles s’affichent dans les flux des utilisateurs dès que les audiences et les profils sont mis à jour dans Adobe Experience Platform.
+En tant que professionnel du marketing, vous pouvez proposer des expériences personnalisées à vos utilisateurs en fonction des attributs de leurs profils Adobe Experience Platform. Vous pouvez créer des audiences à partir de vos données hors ligne et envoyer ces audiences à Salesforce CRM, afin de mettre à jour l’appartenance CRM dès que les audiences et les profils sont mis à jour dans Adobe Experience Platform.
 
 ## Conditions préalables {#prerequisites}
 
@@ -100,7 +100,7 @@ Exemple de création de champ personnalisé dans [!DNL Salesforce], *Etape 2 - S
 
 #### Collectez les informations d’identification de [!DNL Salesforce CRM]. {#gather-credentials}
 
-Notez les éléments ci-dessous avant de vous authentifier à la destination [!DNL Salesforce CRM] :
+Notez les éléments ci-dessous avant de vous authentifier à la variable [!DNL Salesforce CRM] destination :
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
@@ -152,7 +152,7 @@ Dans **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**, recherchez [!DN
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-Pour vous authentifier à la destination, renseignez les champs obligatoires ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]**. Reportez-vous à la section [ [!DNL Salesforce CRM] Collecter des informations d’identification ](#gather-credentials) pour obtenir des conseils.
+Pour vous authentifier à la destination, renseignez les champs obligatoires ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]**. Voir [Collecte [!DNL Salesforce CRM] informations](#gather-credentials) pour obtenir des conseils.
 | Credential | Description | | — | — | | **[!UICONTROL Nom d’utilisateur]** | Votre [!DNL Salesforce] nom d’utilisateur du compte. | | **[!UICONTROL Password]** | Chaîne concaténée composée de votre [!DNL Salesforce] mot de passe du compte ajouté à votre [!DNL Salesforce] Jeton de sécurité.<br>La valeur concaténée prend la forme `{PASSWORD}{TOKEN}`.<br> Notez que n’utilisez pas d’accolades ni d’espaces.<br>Par exemple, si la variable [!DNL Salesforce] Le mot de passe est `MyPa$$w0rd123` et [!DNL Salesforce] Le jeton de sécurité est `TOKEN12345....0000`, la valeur concaténée que vous utiliserez dans la variable **[!UICONTROL Password]** est `MyPa$$w0rd123TOKEN12345....0000`. | | **[!UICONTROL Domaine personnalisé]** | Votre [!DNL Salesforce] préfixe de domaine. <br>Par exemple, si votre domaine est *`d5i000000isb4eak-dev-ed`.my.salesforce.com*, vous devez fournir `d5i000000isb4eak-dev-ed` comme valeur. | | **[!UICONTROL ID client]** | Votre [!DNL Salesforce] application connectée `Consumer Key`. | | **[!UICONTROL Secret du client]** | Votre [!DNL Salesforce] application connectée `Consumer Secret`. |
 
 ![Capture d’écran montrant comment s’authentifier sur l’interface utilisateur de Platform.](../../assets/catalog/crm/salesforce/authenticate-destination.png)
@@ -187,7 +187,7 @@ Consultez la section [Activer les profils et les audiences vers les destinations
 
 ### Considérations sur le mappage et exemple {#mapping-considerations-example}
 
-Pour envoyer correctement vos données d’audience d’Adobe Experience Platform vers la destination [!DNL Salesforce CRM], vous devez passer par l’étape de mappage des champs. Le mappage consiste à créer un lien entre vos champs de schéma de modèle de données d’expérience (XDM) dans votre compte Platform et leurs équivalents issus de la destination cible.
+Pour envoyer correctement vos données d’audience d’Adobe Experience Platform vers la destination [!DNL Salesforce CRM], vous devez passer par l’étape de mappage des champs. Le mappage consiste à créer un lien entre vos champs de schéma de modèle de données d’expérience (XDM) dans votre compte Platform et leurs équivalents de la destination cible.
 
 Attributs spécifiés dans la variable **[!UICONTROL Champ cible]** doit être nommé exactement comme décrit dans le tableau mappings d’attributs , car ces attributs forment le corps de la requête.
 
@@ -211,7 +211,7 @@ Pour mapper correctement vos champs XDM vers les champs de destination [!DNL (AP
    * Un exemple d’utilisation de ces mappages est illustré ci-dessous :
      ![Capture d’écran de l’interface utilisateur de Platform montrant les mappings de ciblage.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
 
-   **Utilisation des prospects**
+   **Utilisation de pistes**
 
    * Si vous utilisez des *Pistes* dans votre segment, reportez-vous à la référence d’objet dans Salesforce pour [prospect](https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_lead.htm) pour définir les mappages des champs à mettre à jour.
    * Vous pouvez identifier les champs obligatoires en recherchant le mot *Obligatoire*, qui est mentionné dans la description des champs du lien ci-dessus.
@@ -270,7 +270,7 @@ Pour vérifier que vous avez correctement configuré la destination, procédez c
    * Sélectionnez une *Contact* et vérifiez si les champs sont mis à jour. Vous pouvez voir que chaque état d’audience dans [!DNL Salesforce CRM] a été mis à jour avec l’état d’audience correspondant de Platform, en fonction de la variable **[!UICONTROL ID de mappage]** valeur fournie pendant la [planification des audiences](#schedule-segment-export-example).
      ![Capture d’écran Salesforce CRM affichant la page Détails du contact avec les statuts d’audience mis à jour.](../../assets/catalog/crm/salesforce/contact-info.png)
 
-   **Utilisation des prospects**
+   **Utilisation de pistes**
 
    * Si vous avez sélectionné *Pistes* dans votre segment Platform, puis accédez au **[!DNL Apps]** > **[!DNL Leads]** page.
      ![Capture d’écran Salesforce CRM affichant la page Pistes avec les profils du segment.](../../assets/catalog/crm/salesforce/leads.png)

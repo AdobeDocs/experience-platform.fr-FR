@@ -1,24 +1,24 @@
 ---
 keywords: e-mail;e-mail;destinations d’e-mail;oracle eloqua;oracle
 title: Connexion Oracle Eloqua (Fichiers)
-description: Oracle Eloqua est une plateforme de logiciel en tant que service (SaaS, Software as a service) pour l’automatisation du marketing proposée par Oracle, qui vise à aider les spécialistes marketing et les entreprises B2B à gérer les campagnes marketing et la génération de pistes commerciales.
+description: Oracle Eloqua est une plateforme de logiciel en tant que service (SaaS, Software as a service) pour l’automatisation du marketing proposée par Oracle, qui vise à aider les spécialistes marketing et les entreprises B2B à gérer les campagnes marketing et la génération de leads.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '731'
-ht-degree: 55%
+source-wordcount: '717'
+ht-degree: 49%
 
 ---
 
 # Connexion [!DNL (Files) Oracle Eloqua]
 
-[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/)[!DNL Oracle] est une plateforme de logiciel en tant que service (SaaS, Software as a service) pour l’automatisation du marketing proposée par , qui vise à aider les spécialistes marketing et les entreprises B2B à gérer les campagnes marketing et la génération de pistes commerciales.
+[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) est une plateforme de logiciel en tant que service (SaaS) pour l’automatisation du marketing proposée par [!DNL Oracle] qui vise à aider les spécialistes du marketing et les organisations B2B à gérer les campagnes marketing et la génération de pistes commerciales.
 
 Pour envoyer des données d’audience à [!DNL Oracle Eloqua], vous devez d’abord [connecter la destination](#connect-destination) dans Adobe Experience Platform, puis [configurer un import de données](#import-data-into-eloqua) de votre emplacement de stockage dans [!DNL Oracle Eloqua].
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
+Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
 
 | Origine de l’audience | Pris en charge | Description |
 ---------|----------|----------|
@@ -48,7 +48,7 @@ Voir [LISTE AUTORISÉE d’adresses IP pour les destinations SFTP](../cloud-stor
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous devez disposer de l’[autorisation de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Gérer les destinations]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises
+>Pour vous connecter à la destination, vous devez disposer de l’[autorisation de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Gérer les destinations]**. Lisez la section [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 

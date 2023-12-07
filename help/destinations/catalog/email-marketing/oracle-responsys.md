@@ -3,10 +3,10 @@ keywords: e-mail;e-mail;destinations d’e-mail;destination de réponse d’orac
 title: Connexion Oracle Responsys
 description: Responsys est un outil de marketing par e-mail d’entreprise proposé par Oracle dans le cadre de campagnes marketing sur plusieurs canaux. Il permet de personnaliser les interactions entre e-mails, terminaux mobiles, écrans et réseaux sociaux.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '714'
-ht-degree: 54%
+source-wordcount: '704'
+ht-degree: 51%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 54%
 
 ## Présentation {#overview}
 
-[Responsys](https://www.oracle.com/cx/marketing/campaign-management/)[!DNL Oracle] est un outil de marketing par e-mail d’entreprise proposé par dans le cadre de campagnes marketing sur plusieurs canaux. Il permet de personnaliser les interactions entre e-mails, terminaux mobiles, écrans et réseaux sociaux.
+[Responsys](https://www.oracle.com/cx/marketing/campaign-management/) est un outil de marketing par e-mail d’entreprise proposé par [!DNL Oracle] pour personnaliser les interactions entre courrier électronique, mobile, affichage et réseaux sociaux.
 
 Pour envoyer des données d’audience à [!DNL Oracle Responsys], vous devez d’abord [se connecter à la destination](#connect-destination) dans Adobe Experience Platform, puis [configurer un import de données](#import-data-into-responsys) de votre emplacement de stockage dans [!DNL Oracle Responsys].
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
+Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
 
 | Origine de l’audience | Pris en charge | Description |
 ---------|----------|----------|

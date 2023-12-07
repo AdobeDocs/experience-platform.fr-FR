@@ -3,7 +3,7 @@ keywords: la publicité;
 title: Connexion Microsoft Bing
 description: Avec la destination de connexion Microsoft Bing, vous pouvez exécuter le reciblage et l’audience de campagnes numériques ciblées sur l’ensemble du réseau Microsoft Advertising, y compris la publicité display, la recherche et les campagnes natives.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
 source-wordcount: '684'
 ht-degree: 57%
@@ -36,7 +36,7 @@ En tant que marketeur, je souhaite pouvoir utiliser des audiences composées de 
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
+Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
 
 | Origine de l’audience | Pris en charge | Description |
 ---------|----------|----------|

@@ -3,9 +3,9 @@ keywords: mobile, braser, messagerie;
 title: Connexion Braze
 description: Braze est une plateforme d’engagement client complète qui optimise les expériences pertinentes et mémorables entre les clients et les marques qu’ils aiment.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1132'
+source-wordcount: '1122'
 ht-degree: 34%
 
 ---
@@ -46,7 +46,7 @@ En tant que marketeur, je souhaite cibler les utilisateurs dans une destination 
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
+Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
 
 | Origine de l’audience | Pris en charge | Description |
 ---------|----------|----------|
@@ -155,7 +155,7 @@ Supposons que votre schéma de profil XDM et votre [!DNL Braze] contiennent les 
 |  | Schéma de profil XDM | [!DNL Braze] Instance |
 |---|---|---|
 | Attributs | <ul><li><code>person.name.firstName</code></li><li><code>person.name.lastName</code></li><li><code>mobilePhone.number</code></li></ul> | <ul><li><code>FirstName</code></li><li><code>LastName</code></li><li><code>PhoneNumber</code></li></ul> |
-| Identités | <ul><li><code>E-mail</code></li><li><code>Google Ad ID (GAID)</code></li><li><code>Apple ID For Advertisers (IDFA)</code></li></ul> | <ul><li><code>external_id</code></li></ul> |
+| Identités | <ul><li><code>Email</code></li><li><code>Google Ad ID (GAID)</code></li><li><code>Apple ID For Advertisers (IDFA)</code></li></ul> | <ul><li><code>external_id</code></li></ul> |
 
 Le mappage correct se présente comme suit :
 

@@ -3,10 +3,10 @@ keywords: personnalisation personnalisée;destination;destination personnalisée
 title: Connexion de personnalisation personnalisée
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer les informations d’audience de Adobe Experience Platform. Cette destination fournit une personnalisation en temps réel basée sur l’appartenance à l’audience du profil utilisateur.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 65%
+source-wordcount: '907'
+ht-degree: 64%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 65%
 
 >[!IMPORTANT]
 >
->Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, la variable **[!UICONTROL Personnalisation personnalisée]** La destination requiert que vous utilisiez la variable [API du serveur réseau Edge](/help/server-api/overview.md) lors de la configuration de la destination pour la personnalisation basée sur les attributs. Tous les appels de l’API du serveur doivent être effectués dans une [contexte authentifié](../../../server-api/authentication.md).
+>Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, vous devez utiliser la variable [API du serveur réseau Edge](/help/server-api/overview.md) lors de la configuration de la variable **[!UICONTROL Personnalisation personnalisée]** destination pour la personnalisation basée sur les attributs. Tous les appels de l’API du serveur doivent être effectués dans une [contexte authentifié](../../../server-api/authentication.md).
 >
 ><br>Si vous utilisez déjà le SDK Web ou le SDK mobile pour votre intégration, vous pouvez récupérer les attributs via l’API serveur en ajoutant une intégration côté serveur.
 >
@@ -31,7 +31,7 @@ ht-degree: 65%
 
 ## Vue d’ensemble {#overview}
 
-Cette destination permet de récupérer les informations sur l’audience de Adobe Experience Platform vers des plateformes de personnalisation externes, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications exécutées sur les sites web des clients.
+Configurez cette destination pour permettre aux plateformes de personnalisation externes, aux systèmes de gestion de contenu, aux serveurs de publicités et aux autres applications qui s’exécutent sur les sites web des clients de récupérer les informations d’audience de Adobe Experience Platform.
 
 ## Conditions préalables {#prerequisites}
 
@@ -43,7 +43,7 @@ Cette intégration est optimisée par le [SDK web Adobe Experience Platform](../
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
+Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
 
 | Origine de l’audience | Pris en charge | Description |
 ---------|----------|----------|
@@ -65,7 +65,7 @@ Cette section décrit le type d’audiences que vous pouvez exporter vers cette 
 >id="platform_destinations_custom_personalization_datastream"
 >title="À propos des identifiants de flux de données"
 >abstract="Cette option détermine dans quel train de données de collecte de données les audiences seront inclues dans la réponse à la page. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration de destination est activée. Vous devez configurer un flux de données avant de pouvoir configurer votre destination."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=fr" text="Découvrez comment configurer un flux de données"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=fr" text="Découvrez comment configurer un train de données"
 
 >[!IMPORTANT]
 > 

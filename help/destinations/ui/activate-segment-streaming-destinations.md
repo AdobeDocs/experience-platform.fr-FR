@@ -1,13 +1,12 @@
 ---
-keywords: activation des destinations de diffusion en continu d’audience ; activation des destinations de diffusion en continu d’audience ; activation des données
 title: Activation des données d’audience vers des destinations de diffusion en continu
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les mappant aux destinations de diffusion en continu.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1065'
-ht-degree: 24%
+source-wordcount: '1121'
+ht-degree: 20%
 
 ---
 
@@ -34,15 +33,15 @@ Pour activer des audiences vers des destinations, vous devez avoir réussi [conn
 
 1. Accédez à **[!UICONTROL Connexions et destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**.
 
-   ![Onglet Catalogue de destinations](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
+   ![Onglet Catalogue de destinations présentant diverses destinations de diffusion en continu.](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
 1. Sélectionner **[!UICONTROL Activation des audiences]** sur la carte correspondant à la destination à laquelle vous souhaitez activer vos audiences, comme illustré dans l’image ci-dessous.
 
-   ![Boutons Activer](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
+   ![Activez le contrôle mis en surbrillance dans le catalogue des destinations.](../assets/ui/activate-segment-streaming-destinations/activate-audiences-button.png)
 
 1. Sélectionnez la connexion de destination à utiliser pour activer vos audiences, puis sélectionnez **[!UICONTROL Suivant]**.
 
-   ![Sélectionnez des destinations](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
+   ![Une connexion de destination mise en surbrillance à l’étape Sélectionner la destination .](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
 1. Accédez à la section suivante pour [sélectionner vos audiences](#select-audiences).
 
@@ -56,7 +55,7 @@ Vous pouvez sélectionner plusieurs types d’audiences, selon leur origine :
 * **[!UICONTROL Chargement personnalisé]**: audiences générées en dehors de l’Experience Platform et chargées dans Platform sous la forme de fichiers CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [import d&#39;une audience](../../segmentation/ui/overview.md#import-audience).
 * Autres types d’audiences, provenant d’autres solutions Adobe, telles que [!DNL Audience Manager].
 
-![Sélection des audiences](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
+![Plusieurs audiences mises en surbrillance à l’étape Sélectionner les audiences .](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
 ## Mapper les attributs et les identités {#mapping}
 
@@ -68,25 +67,25 @@ Certaines destinations de diffusion en continu d’audience nécessitent que vou
 
 1. Dans le **[!UICONTROL Mappage]** page, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**.
 
-   ![Ajouter un nouveau mappage](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
+   ![Ajoutez un nouveau contrôle de mappage en surbrillance.](../assets/ui/activate-segment-streaming-destinations/add-new-mapping.png)
 
 1. Sélectionnez la flèche située à droite de l’entrée **[!UICONTROL Champ source]**.
 
-   ![Sélectionner le champ source](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
+   ![Sélectionnez le contrôle du champ source en surbrillance.](../assets/ui/activate-segment-streaming-destinations/select-source-field.png)
 
 1. Dans le **[!UICONTROL Sélectionner le champ source]** , utilisez la méthode **[!UICONTROL Sélectionner des attributs]** ou le **[!UICONTROL Sélectionner un espace de noms d’identité]** pour basculer entre les deux catégories de champs sources disponibles. À partir de la [!DNL XDM] attributs de profil et espaces de noms d’identité, sélectionnez ceux que vous souhaitez mapper à la destination, puis choisissez **[!UICONTROL Sélectionner]**.
 
-   ![Sélectionner la page du champ source](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
+   ![Sélectionnez la page du champ source qui affiche plusieurs champs source disponibles.](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
 
 1. Sélectionnez le bouton situé à droite du **[!UICONTROL Champ cible]** entrée .
 
-   ![Sélectionner le champ cible](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
+   ![Sélectionnez le champ cible en surbrillance.](../assets/ui/activate-segment-streaming-destinations/select-target-field.png)
 
 1. Dans le **[!UICONTROL Sélectionner le champ cible]** , sélectionnez l’espace de noms de l’identité cible auquel vous souhaitez mapper le champ source, puis choisissez **[!UICONTROL Sélectionner]**.
 
-   ![Sélectionner la page de champ cible](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
+   ![Sélectionnez la page de champ cible affichant les options disponibles pour les mappages de champ cible.](../assets/ui/activate-segment-streaming-destinations/target-field-page.png)
 
-1. Pour ajouter d’autres mappages, répétez les étapes 1 à 5.
+1. Pour ajouter d’autres mappages, répétez les étapes 1 à 5.
 
 ### Appliquer la transformation {#apply-transformation}
 
@@ -97,7 +96,7 @@ Certaines destinations de diffusion en continu d’audience nécessitent que vou
 
 Quand vous mappez des attributs source non hachés avec des attributs cibles qui sont censés être hachés (par exemple, `email_lc_sha256` ou `phone_sha256`), cochez l’option **Apply transformation** (Appliquer la transformation) pour qu’Adobe Experience Platform hache automatiquement les attributs source au moment de l’activation.
 
-![Mappage des identités](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![Appliquez le contrôle de transformation mis en surbrillance à l’étape Mappage des identités .](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Planifier l’export d’audience {#scheduling}
 
@@ -114,19 +113,19 @@ Pour afficher toutes les audiences activées vers votre destination, utilisez l�
 
 1. Sur le **[!UICONTROL Planification de l’audience]** , sélectionnez chaque audience, puis utilisez la méthode **[!UICONTROL Date de début]** et **[!UICONTROL Date de fin]** sélecteurs pour configurer l’intervalle d’envoi des données à votre destination.
 
-   ![Planification de l’audience](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
+   ![Filtre de planification de l’audience mis en surbrillance.](../assets/ui/activate-segment-streaming-destinations/audience-schedule.png)
 
    * Pour certaines destinations, vous devez sélectionner la variable **[!UICONTROL Origine de l’audience]** pour chaque audience, à l’aide du menu déroulant sous les sélecteurs de calendrier. Si votre destination n’inclut pas ce sélecteur, ignorez cette étape.
 
-     ![Identifiant de mappage](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
+     ![Menu déroulant ID de mappage mis en surbrillance.](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
    * Certaines destinations nécessitent une mise en correspondance manuelle. [!DNL Platform] audiences à leur contrepartie dans la destination cible. Pour ce faire, sélectionnez chaque audience, puis saisissez l’identifiant de l’audience correspondant à partir de la plateforme de destination dans la variable **[!UICONTROL ID de mappage]** champ . Si votre destination n’inclut pas ce champ, ignorez cette étape.
 
-     ![Identifiant de mappage](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
+     ![Origine de la liste déroulante d’audience mise en surbrillance.](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
    * Pour certaines destinations, vous devez entrer une **[!UICONTROL ID de l’application]** lors de l’activation [!DNL IDFA] ou [!DNL GAID] audiences. Si votre destination n’inclut pas ce champ, ignorez cette étape.
 
-     ![ID d’application](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
+     ![Liste déroulante ID d’application mise en surbrillance.](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
 
 1. Sélectionner **[!UICONTROL Suivant]** pour accéder au [!UICONTROL Réviser] page.
 
@@ -144,7 +143,7 @@ Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &
 
 Dans le **[!UICONTROL Réviser]** , Experience Platform recherche également les violations de stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la politique. Vous ne pouvez pas terminer le workflow d’activation de l’audience tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, reportez-vous à la section [violations de la stratégie d’utilisation des données](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la section de documentation sur la gouvernance des données .
 
-![violation de la politique de données](../assets/common/data-policy-violation.png)
+![Exemple de violation de politique des données affichée dans le workflow d’activation.](../assets/common/data-policy-violation.png)
 
 ### Filtrage des audiences {#filter-audiences}
 

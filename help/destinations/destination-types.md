@@ -3,10 +3,10 @@ keywords: destinations;destination;types de destinations
 title: Types et catégories de destination
 description: Découvrez les différents types et catégories de destinations dans Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
 workflow-type: tm+mt
-source-wordcount: '717'
-ht-degree: 71%
+source-wordcount: '776'
+ht-degree: 65%
 
 ---
 
@@ -16,11 +16,11 @@ Lisez cette page pour comprendre les différentes catégories et types de destin
 
 ## Types de destinations {#destination-types}
 
-Dans Adobe Experience Platform, nous faisons la distinction entre différents types de destination : connexions, exportations de jeux de données et extensions. Il existe plusieurs types de destinations de connexion, qui vous permettent d’exporter des données vers des destinations basées sur l’API, .
+Dans Adobe Experience Platform, nous faisons la distinction entre différents types de destination : connexions, exportations de jeux de données et extensions. Il existe plusieurs types de destinations de connexion, qui vous permettent d’exporter des données vers des destinations basées sur l’API, des destinations sociales, des plateformes CRM, etc.
 
 Enfin, les connexions peuvent également être distinguées entre les destinations publiques disponibles dans toutes les organisations du catalogue des destinations et les destinations privées que les clients Real-Time CDP Ultimate peuvent créer pour répondre à leurs cas d’utilisation spécifiques à l’exportation.
 
-![Diagramme Types de destinations.](./assets/destination-types/types-of-destinations-no-highlight.png)
+![Schéma des types de destinations.](./assets/destination-types/types-of-destinations-no-highlight.png)
 
 ## Connexions {#connections}
 
@@ -68,6 +68,21 @@ En savoir plus sur la façon de [configurer des destinations de personnalisation
 La vidéo ci-dessous vous montre les particularités des deux types de destinations :
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+
+## Types d&#39;audiences exportées {#exported-audiences-types}
+
+Vous pouvez exporter trois types d’audiences d’Experience Platform vers différentes destinations :
+
+* Audiences de personnes
+* Audiences du compte
+* Audiences de prospects
+
+En savoir plus sur les [différents types d’audience ;](/help/segmentation/ui/account-audiences.md#terminology).
+
+Un symbole sur la carte de destination indique les types d’audiences que vous pouvez exporter vers chaque destination.
+
+![Exemple de carte de destination avec des symboles indiquant quels types d’audience peuvent être exportés.](/help/destinations/assets/destination-types/types-of-audiences.png)
+
 
 ## Destinations d’exportation de jeux de données {#dataset-export-destinations}
 

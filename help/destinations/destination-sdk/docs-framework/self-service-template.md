@@ -2,10 +2,10 @@
 title: Modèle de libre-service de documentation // Remplacer par le nom de votre destination
 description: Utilisez ce modèle pour créer une documentation publique pour votre destination dans le catalogue Adobe Experience Platform. // Remplacer par le paragraphe dans la section Aperçu
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: afcb5f80edaa4d68ba167123feb2ba9060469243
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
 source-wordcount: '1640'
-ht-degree: 38%
+ht-degree: 37%
 
 ---
 
@@ -76,7 +76,7 @@ Pour mieux comprendre comment et à quel moment utiliser la variable *YourDestin
 
 *Ajoutez des informations dans cette section sur les audiences prises en charge par votre destination. Nous avons prérempli le tableau avec certaines valeurs standard. Utilisez la variable `✓` et `X` des caractères pour indiquer si votre type d’audience est pris en charge par cette destination.*
 
-Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
+Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
 
 | Origine de l’audience | Pris en charge | Description |
 ---------|----------|----------|

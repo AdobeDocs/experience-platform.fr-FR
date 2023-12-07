@@ -1,12 +1,11 @@
 ---
-keywords: DoubleClick Bid Manager;gestionnaire d’offres DoubleClick;DoubleClick;Display & Video 360;display 360;video 360;Video 360;Display 360;display et video
 title: Connexion Google Display & Video 360
-description: Display & Video 360, anciennement appelé DoubleClick Bid Manager, est un outil utilisé pour exécuter le reciblage et des campagnes numériques ciblées dans des sources d’inventaire Display, Video et Mobile.
+description: Display & Video 360, anciennement appelé DoubleClick Bid Manager, est un outil utilisé pour exécuter le reciblage et des campagnes numériques ciblées dans des sources d’inventaire Display, Video et Mobile.
 exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
-source-git-commit: a7dbb5e274058a059ae1231281fd9efd509b029f
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 81%
+source-wordcount: '974'
+ht-degree: 69%
 
 ---
 
@@ -21,11 +20,11 @@ ht-degree: 81%
 Notez les détails suivants qui sont spécifiques aux destinations [!DNL Google Display & Video 360] :
 
 * Les audiences activées sont créées par programmation dans la plateforme Google.
-* L’activation des renvoi d’audience vers le [!DNL Google Display & Video 360] La destination doit se produire entre 24 et 48 heures après le premier mappage d’une audience à une connexion de destination. Cette mise à jour répond à la stratégie de Google consistant à attendre 24 heures avant d’ingérer des données. Elle est destinée à améliorer les taux de correspondance entre Real-Time CDP et [!DNL Google Display & Video 360]. Notez qu’il s’agit d’une configuration de serveur principal applicable uniquement à cette destination et qui n’est liée à aucune option de planification configurable par le client ou la cliente dans l’interface utilisateur.
+* L’activation des renvoi d’audience vers le [!DNL Google Display & Video 360] La destination doit se produire entre 24 et 48 heures après le premier mappage d’une audience à une connexion de destination. Cette mise à jour répond à la stratégie de Google consistant à attendre 24 heures avant d’ingérer des données. Elle est destinée à améliorer les taux de correspondance entre Real-Time CDP et [!DNL Google Display & Video 360]. Il s’agit d’une configuration de serveur principal applicable uniquement à cette destination et qui n’est liée à aucune option de planification configurable par le client dans l’interface utilisateur.
 
 >[!IMPORTANT]
 >
->Si vous cherchez à créer votre première destination avec Google Display &amp; Video 360 et que vous n’avez pas activé la [fonctionnalité de synchronisation des identifiants](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=fr) dans le service Experience Cloud ID par le passé (dans Adobe Audience Manager ou dans d’autres applications), veuillez contacter Adobe Consulting ou l’assistance clientèle pour activer les synchronisations des identifiants. Si vous avez configuré précédemment des intégrations Google dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers Platform.
+>Si vous souhaitez créer votre première destination avec Google Display &amp; Video 360 et que vous n’avez pas activé la variable [fonctionnalité de synchronisation des identifiants](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=fr) dans le service d’ID Experience Cloud par le passé (avec Adobe Audience Manager ou d’autres applications), contactez le service de conseil d’Adobe ou l’assistance clientèle pour activer la synchronisation des identifiants. Si vous avez configuré précédemment des intégrations Google dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers Platform.
 
 ## Identités prises en charge {#supported-identities}
 
@@ -43,7 +42,7 @@ Notez les détails suivants qui sont spécifiques aux destinations [!DNL Google 
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
+Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
 
 | Origine de l’audience | Pris en charge | Description |
 ---------|----------|----------|
@@ -67,10 +66,10 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!NOTE]
 >
->La liste autorisée est obligatoire avant de configurer votre première destination [!DNL Google Display & Video 360] dans Platform. Veuillez vous assurer que [!DNL Google] a bien complété le processus de liste autorisée décrit ci-dessous avant de créer une destination.
+>La liste autorisée est obligatoire avant de configurer votre première destination [!DNL Google Display & Video 360] dans Platform. Assurez-vous que le processus de mise sur liste autorisée décrit ci-dessous a été terminé par [!DNL Google] avant de créer une destination.
 >Une exception à cette règle s’applique aux clients d’[Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=fr). Si vous avez déjà créé une connexion à cette destination Google dans Audience Manager, il n’est pas nécessaire de passer à nouveau par le processus de liste autorisée et vous pouvez passer directement aux étapes suivantes.
 
-Avant de créer la variable [!DNL Google Display & Video 360] dans Platform, vous devez contacter Google pour demander que l’Adobe soit ajouté à la liste des fournisseurs de données autorisés et que votre compte soit ajouté à la liste autorisée. Contactez Google et fournissez les informations suivantes :
+Avant de créer la variable [!DNL Google Display & Video 360] dans Platform, vous devez contacter Google pour demander que l’Adobe soit placé sur la liste des fournisseurs de données autorisés et que votre compte soit ajouté à la liste autorisée. Contactez Google et fournissez les informations suivantes :
 
 * **Identifiant de compte** : l’identifiant du compte Adobe avec Google. Identifiant de compte : 87933855.
 * **Identifiant client** : l’identifiant client d’Adobe avec Google. Identifiant client : 89690775.
@@ -97,7 +96,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 
 >[!NOTE]
 >
->Lorsque vous configurez une destination [!DNL Google Display & Video 360], collaborez avec votre [!DNL Google Account Manager] ou votre représentant Adobe pour comprendre le type de compte dont vous disposez.
+>Lors de la configuration d’une [!DNL Google Display & Video 360] destination, utilisez vos [!DNL Google Account Manager] ou représentant de l’Adobe pour déterminer le type de compte dont vous disposez.
 
 ### Activer les alertes {#enable-alerts}
 

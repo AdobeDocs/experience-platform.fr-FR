@@ -1,20 +1,19 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;comptes de contrôle;flux de données de surveillance;flux de données;destinations
 description: Les destinations vous permettent d’activer vos données de Adobe Experience Platform vers d’innombrables partenaires externes. Ce tutoriel explique comment surveiller les flux de données pour vos destinations à l’aide de l’interface utilisateur de l’Experience Platform.
 solution: Experience Platform
 title: Surveillance des flux de données pour les destinations dans l’interface utilisateur
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '3227'
-ht-degree: 12%
+source-wordcount: '3290'
+ht-degree: 11%
 
 ---
 
 # Surveillance des flux de données pour les destinations dans l’interface utilisateur
 
-Les destinations vous permettent d’activer vos données de Adobe Experience Platform vers d’innombrables partenaires externes. Platform facilite le processus de suivi du flux de données vers vos destinations en fournissant de la transparence avec les flux de données.
+Utilisez les différentes destinations du catalogue des Experience Platform pour activer vos données de Platform vers d’innombrables partenaires externes. Platform facilite le processus de suivi du flux de données vers vos destinations en fournissant de la transparence avec les flux de données.
 
 Le tableau de bord de surveillance fournit une représentation visuelle du parcours d’un flux de données, y compris la destination vers laquelle les données sont activées. Ce tutoriel explique comment surveiller les flux de données directement dans l’espace de travail des destinations ou utiliser le tableau de bord de surveillance pour surveiller les flux de données pour vos destinations à l’aide de l’interface utilisateur Experience Platform.
 
@@ -31,7 +30,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 Dans le **[!UICONTROL Destinations]** dans l’interface utilisateur de Platform, accédez à la **[!UICONTROL Parcourir]** et sélectionnez le nom d’une destination que vous souhaitez afficher.
 
-![Sélectionner la vue de destination](../assets/ui/monitor-destinations/select-destination.png)
+![Sélection de l’affichage de destination avec une connexion de destination mise en surbrillance](../assets/ui/monitor-destinations/select-destination.png)
 
 Une liste des flux de données existants s’affiche. Sur cette page se trouve une liste de flux de données affichables, y compris des informations sur leur destination, leur nom d’utilisateur, le nombre de flux de données et leur état.
 
@@ -44,12 +43,12 @@ Pour plus d’informations sur les états, reportez-vous au tableau suivant :
 | En cours de traitement | La variable `Processing` Le statut indique qu’un flux de données n’est pas encore actif. Cet état est souvent rencontré immédiatement après la création d’un nouveau flux de données. |
 | Erreur | La variable `Error` Le statut indique que le processus d’activation d’un flux de données a été interrompu. |
 
-### Exécutions de flux de données pour les destinations de diffusion en continu {#dataflow-runs-for-streaming-destinations}
+### Exécutions de flux de données pour les destinations de diffusion en flux continu {#dataflow-runs-for-streaming-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="Détails de l&#39;exécution du flux de données"
->abstract="Les détails de l&#39;exécution du flux de données de destination contiennent des informations sur le statut d&#39;activation du segment et des mesures provenant du profil client en temps réel pour générer des identités uniques. Pour en savoir plus, consultez le guide des définitions des mesures."
+>abstract="Les détails de l&#39;exécution du flux de données de destination contiennent des informations sur le statut d&#39;activation du segment et des mesures provenant du profil client en temps réel pour générer des identités uniques. Pour en savoir plus, consultez le guide des définitions de mesures."
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
@@ -73,7 +72,7 @@ Pour plus d’informations sur les états, reportez-vous au tableau suivant :
 
 Pour les destinations de diffusion en continu, la variable [!UICONTROL Exécutions de flux de données] Cet onglet fournit une mise à jour horaire des données de mesure sur vos exécutions de flux de données. Les statistiques les plus en vue sont celles portant sur les identités.
 
-Les identités représentent les différentes facettes d’un profil. Par exemple, si un profil contient à la fois un numéro de téléphone et une adresse électronique, il aura deux identités.
+Les identités représentent les différentes facettes d’un profil. Par exemple, si un profil contient à la fois un numéro de téléphone et une adresse électronique, il possède deux identités.
 
 Une liste des exécutions individuelles et de leurs mesures spécifiques s’affiche, ainsi que les totaux suivants pour les identités :
 
@@ -81,7 +80,7 @@ Une liste des exécutions individuelles et de leurs mesures spécifiques s’aff
 - **[!UICONTROL Identités exclues]**: nombre total d’identités de profil qui sont ignorées pour activation en fonction des attributs manquants et de la violation du consentement.
 - **[!UICONTROL Identités en échec]**: nombre total d’identités de profil qui ne sont pas activées vers la destination en raison d’erreurs.
 
-![Détails des exécutions de flux de données pour les destinations de diffusion en continu](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
+![Le flux de données exécute les détails des destinations de diffusion en continu.](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
 
 Chaque exécution de flux de données individuelle affiche les détails suivants :
 
@@ -94,25 +93,25 @@ Chaque exécution de flux de données individuelle affiche les détails suivants
 - **[!UICONTROL Identités exclues]**: nombre total d’identités de profil qui sont exclues de l’activation en fonction d’attributs manquants et de la violation du consentement.
 - **[!UICONTROL Identités en échec]** Nombre total d’identités de profil qui ne sont pas activées vers la destination en raison d’erreurs.
 - **[!UICONTROL Taux d&#39;activation]**: pourcentage d’identités reçues qui ont été activées ou ignorées avec succès. La formule suivante illustre le mode de calcul de cette valeur :
-  ![Formule de taux d&#39;activation](../assets/ui/monitor-destinations/activation-rate-formula.png)
+  ![Formule de taux d&#39;activation.](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL État]**: représente l’état du flux de données : soit [!UICONTROL Terminé] ou [!UICONTROL Traitement]. [!UICONTROL Terminé] signifie que toutes les identités de l’exécution de flux de données correspondante ont été exportées au cours de la période d’une heure. [!UICONTROL Traitement] signifie que l’exécution du flux de données n’est pas encore terminée.
 
 Pour afficher les détails d’une exécution de flux de données spécifique, sélectionnez l’heure de début de l’exécution dans la liste.
 
 La page des détails d’une exécution de flux de données contient des informations supplémentaires telles que le nombre de profils reçus, le nombre d’identités activées, le nombre d’identités ayant échoué et le nombre d’identités exclues.
 
-![Détails du flux de données pour les destinations de diffusion en continu](../assets/ui/monitor-destinations/dataflow-details-stream.png)
+![Détails du flux de données pour les destinations de diffusion en continu.](../assets/ui/monitor-destinations/dataflow-details-stream.png)
 
 La page Détails affiche également une liste des identités qui ont échoué et des identités qui ont été exclues. Les informations relatives aux identités ayant échoué et exclues s’affichent, notamment le code d’erreur, le nombre d’identités et la description. Par défaut, la liste affiche les identités ayant échoué. Pour afficher les identités ignorées, sélectionnez la variable **[!UICONTROL Identités exclues]** bascule.
 
-![Enregistrements de flux de données pour les destinations de diffusion en continu](../assets/ui/monitor-destinations/dataflow-records-stream.png)
+![Enregistrements de flux de données pour les destinations de diffusion en continu avec un message d’erreur surligné.](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-### Les flux de données s’exécutent pour les destinations par lots. {#dataflow-runs-for-batch-destinations}
+### Exécutions de flux de données pour les destinations par lots {#dataflow-runs-for-batch-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Détails de l&#39;exécution du flux de données"
->abstract="Les détails de l&#39;exécution du flux de données de destination contiennent des informations sur le statut d&#39;activation du segment et des mesures provenant du profil client en temps réel pour générer des identités uniques. Pour en savoir plus, consultez le guide des définitions des mesures."
+>abstract="Les détails de l&#39;exécution du flux de données de destination contiennent des informations sur le statut d&#39;activation du segment et des mesures provenant du profil client en temps réel pour générer des identités uniques. Pour en savoir plus, consultez le guide des définitions de mesures."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations?lang=fr" text="Exécutions de flux de données pour les destinations de diffusion en continu"
 
 >[!CONTEXTUALHELP]
@@ -135,7 +134,7 @@ Pour les destinations par lot, la variable [!UICONTROL Exécutions de flux de do
 - **[!UICONTROL Identités activées]**: nombre total d’identités de profil activées vers la destination sélectionnée. Cette mesure inclut les identités qui sont créées, mises à jour et supprimées depuis les segments exportés.
 - **[!UICONTROL Identités exclues]**: nombre d’identités de profil individuelles exclues de l’activation pour la destination sélectionnée, en fonction des attributs manquants et de la violation du consentement.
 
-![Le flux de données s’exécute en vue des destinations par lots](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
+![Le flux de données exécute une vue pour les destinations par lots.](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
 
 Chaque exécution de flux de données individuelle affiche les détails suivants :
 
@@ -159,11 +158,11 @@ La page de détails d’un flux de données, en plus des détails affichés dans
 - **[!UICONTROL Fichiers totaux]**: nombre total de fichiers exportés dans le flux de données.
 - **[!UICONTROL Dernière mise à jour]**: heure de la dernière mise à jour du flux de données.
 
-![Détails de l’exécution du flux de données pour les destinations par lots](../assets/ui/monitor-destinations/dataflow-batch.png)
+![Détails de l’exécution du flux de données pour les destinations par lots.](../assets/ui/monitor-destinations/dataflow-batch.png)
 
 La page Détails affiche également une liste des identités qui ont échoué et des identités qui ont été exclues. Les informations relatives aux identités ayant échoué et exclues s’affichent, y compris le code d’erreur et la description. Par défaut, la liste affiche les identités ayant échoué. Pour afficher les identités exclues, sélectionnez la variable **[!UICONTROL Identités exclues]** bascule.
 
-![Enregistrements de flux de données pour les destinations par lots](../assets/ui/monitor-destinations/dataflow-records-batch.png)
+![Enregistrements de flux de données pour les destinations par lots avec un message d’erreur surligné.](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
 ## Tableau de bord de surveillance des destinations {#monitoring-destinations-dashboard}
 
@@ -183,7 +182,7 @@ Utilisez la variable [!UICONTROL Destinations] tableau de bord pour obtenir une 
 
 Au centre du tableau de bord se trouve l’objet [!UICONTROL Activation] qui contient des mesures et des graphiques qui affichent des données sur le taux d’activation des données exportées vers des destinations de diffusion en continu, ainsi que sur les exécutions de flux de données par lots ayant échoué vers des destinations par lot.
 
-![Graphiques d’activation par flux et par lot](../assets/ui/monitor-destinations/dashboard-graph.png)
+![Graphiques d’activation par flux et par lot mis en évidence dans la vue de surveillance.](../assets/ui/monitor-destinations/dashboard-graph.png)
 
 
 Par défaut, les données affichées contiennent les informations d&#39;activation des dernières 24 heures. Sélectionner **[!UICONTROL 24 dernières heures]** pour ajuster la période des enregistrements affichés. Les options disponibles incluent : **[!UICONTROL 24 dernières heures]**, **[!UICONTROL 7 derniers jours]**, et **[!UICONTROL 30 derniers jours]**. Vous pouvez également sélectionner les dates dans la fenêtre contextuelle du calendrier qui s’affiche. Une fois les dates sélectionnées, sélectionnez **[!UICONTROL Appliquer]** pour ajuster la période des informations affichées.
@@ -192,14 +191,14 @@ Par défaut, les données affichées contiennent les informations d&#39;activati
 >
 >La capture d’écran suivante montre le taux d’activation et le flux de données par lots s’exécutent pendant les 30 derniers jours au lieu des 24 dernières heures. Vous pouvez ajuster la période en sélectionnant **[!UICONTROL 30 derniers jours]**.
 
-![Modification de la période de recherche en amont pour les destinations activées](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
+![Modifier le contrôle de la période de recherche en amont mis en surbrillance pour les destinations activées](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
 Utilisez l’icône de flèche (![icône de flèche](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) pour développer ou ignorer les cartes en haut de l’écran, qui affichent des informations en un coup d’oeil sur les détails de l’activation, en fonction du type de destination (diffusion en continu ou lot) :
 
 - **[!UICONTROL Taux d’activation par flux]**: représente le pourcentage d’identités reçues qui ont été activées ou ignorées avec succès. La formule utilisée pour calculer ce pourcentage est décrite plus haut sur cette page, dans la variable [Exécutions de flux de données pour les destinations de diffusion en continu](#dataflow-runs-for-streaming-destinations) .
 - **[!UICONTROL Exécution de flux de données en échec du lot]**: représente le nombre d’exécutions de flux de données ayant échoué dans l’intervalle de temps sélectionné.
 
-![Afficher ou ignorer les cartes en haut de la page](../assets/ui/monitor-destinations/monitoring-destinations-toggle-arrow.gif)
+![Afficher ou ignorer les cartes en haut de la page.](../assets/ui/monitor-destinations/monitoring-destinations-toggle-arrow.gif)
 
 La variable **[!UICONTROL Activation]** le graphique s’affiche par défaut et vous pouvez le désactiver pour développer la liste des destinations ci-dessous. Sélectionnez la variable **[!UICONTROL Mesures et graphiques]** pour désactiver les graphiques.
 
@@ -209,13 +208,13 @@ La variable **[!UICONTROL Activation]** affiche une liste des destinations qui c
 ---------|----------|
 | **[!UICONTROL Profils reçus]** | Diffusion en continu et par lots |
 | **[!UICONTROL Identités activées]** | Diffusion en continu et par lots |
-| **[!UICONTROL Identités ayant échoué]** | Diffusion en continu |
+| **[!UICONTROL Identités en échec]** | Diffusion en continu |
 | **[!UICONTROL Identités exclues]** | Diffusion en continu et par lots |
 | **[!UICONTROL Taux d&#39;activation]** | Diffusion en continu |
 | **[!UICONTROL Nombre total de flux de données ayant échoué]** | Lot |
 | **[!UICONTROL Dernière mise à jour]** | Diffusion en continu et par lots |
 
-![Tableau de bord de toutes les destinations activées](../assets/ui/monitor-destinations/dashboard-destinations.png)
+![Tableau de bord de surveillance avec toutes les destinations activées en surbrillance.](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
 Vous pouvez également filtrer votre liste de destinations pour n’afficher que la catégorie sélectionnée de destinations. Sélectionnez la variable **[!UICONTROL Mes destinations]** , puis sélectionnez la variable [catégorie de destination](/help/destinations/destination-types.md#categories) que vous souhaitez filtrer.
 
@@ -223,13 +222,13 @@ Vous pouvez également filtrer votre liste de destinations pour n’afficher que
 
 De plus, vous pouvez saisir une destination dans la barre de recherche pour l’isoler vers une seule destination. Si vous souhaitez afficher les flux de données de la destination, vous pouvez sélectionner le filtre ![filter](../assets/ui/monitor-destinations/filter-add.png) en regard de pour afficher la liste de ses flux de données actifs.
 
-![Filtrage des destinations à l’aide de la barre de recherche](../assets/ui/monitor-destinations/filtered-destinations.png)
+![Filtrez les destinations à l’aide de la barre de recherche mise en surbrillance dans la vue de surveillance.](../assets/ui/monitor-destinations/filtered-destinations.png)
 
 Si vous souhaitez afficher tous les flux de données existants sur toutes les destinations, sélectionnez **[!UICONTROL Flux de données]**.
 
 Une liste de flux de données s’affiche, triée par la dernière exécution de flux de données. Vous pouvez afficher des détails supplémentaires pour un flux de données spécifique en recherchant la destination à surveiller, en sélectionnant le filtre ![filter](../assets/ui/monitor-destinations/filter-add.png) en regard de l’élément, puis en sélectionnant le filtre ![filter](../assets/ui/monitor-destinations/filter-add.png) en regard du flux de données dont vous souhaitez obtenir plus d’informations.
 
-![Tous les flux de données mis en surbrillance dans le tableau de bord de surveillance](../assets/ui/monitor-destinations/dashboard-dataflows.png)
+![Tous les flux de données mis en surbrillance dans le tableau de bord de surveillance.](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
 Une fois que vous avez sélectionné un flux de données pour une inspection plus approfondie, la page des détails du flux de données contient un bouton d’activation qui vous permet de voir les données activées dans le flux de données, ventilées par exécutions ou segments de flux de données.
 
@@ -243,11 +242,11 @@ When **[!UICONTROL Exécutions de flux de données]** est sélectionné, vous po
 >
 >Pour les flux de données vers les destinations par lot, chaque segment a une exécution de flux de données correspondante générée, en fonction de la fréquence planifiée de l’activation du segment. Par exemple, si vous configurez une activation planifiée quotidienne pour cinq segments dans le même flux de données de destination, cinq exécutions de flux de données distinctes seront générées chaque jour.
 
-![Panneau d’exécutions de flux](../assets/ui/monitor-destinations/dashboard-flow-runs-view.png)
+![Panneau Exécutions du flux de données avec plusieurs exécutions surlignées.](../assets/ui/monitor-destinations/dashboard-flow-runs-view.png)
 
 Utilisez la variable **[!UICONTROL Afficher uniquement les échecs]** bascule pour afficher uniquement les exécutions ayant échoué pour un flux de données.
 
-![Exécutions de flux de données : bascule Afficher les échecs uniquement](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
+![Le flux de données exécute l’affichage avec les échecs d’affichage uniquement mis en surbrillance](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
 
 ### Vue au niveau du segment {#segment-level-view}
 
@@ -261,7 +260,7 @@ Par exemple, vous activez un segment appelé &quot;Loyalty Members in California
 >- Actuellement, la vue au niveau du segment n’est disponible que pour les destinations par lot.
 >- Les mesures au niveau du segment sont actuellement enregistrées uniquement pour les exécutions de flux de données réussies. Ils ne sont pas enregistrés pour les exécutions de flux de données ayant échoué et les enregistrements exclus.
 
-![Segments dans le panneau du flux de données](../assets/ui/monitor-destinations/dashboard-segments-view.png)
+![Segments surlignés dans le panneau du flux de données.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
 Dans la vue au niveau du segment, les mesures sont agrégées sur plusieurs exécutions de flux de données au cours de la période sélectionnée. S’il existe plusieurs exécutions de flux de données, vous pouvez descendre au niveau du segment afin d’afficher la ventilation pour chaque exécution de flux de données, filtrée selon le segment sélectionné.
 Utiliser le bouton de filtrage ![filter](../assets/ui/monitor-destinations/filter-add.png) pour accéder à la vue d’exécution du flux de données pour chaque segment du flux de données.
@@ -276,11 +275,11 @@ Lorsque vous explorez la page d’exécution du flux de données à partir du [v
 - **[!UICONTROL Le flux de données s’exécute avec des identités ignorées.]**: pour le segment sélectionné, cette option répertorie toutes les exécutions de flux de données où certaines identités n’ont pas été entièrement activées et certains profils ont été ignorés. Pour examiner pourquoi les identités d’une certaine exécution de flux de données ont été ignorées, voir la section [page des détails de l’exécution du flux de données](#dataflow-run-details-page) pour cette exécution de flux de données.
 - **[!UICONTROL Le flux de données s’exécute avec les identités activées.]**: pour le segment sélectionné, cette option répertorie toutes les exécutions de flux de données avec des identités qui ont été activées avec succès.
 
-![Filtrage des exécutions de flux de données pour les segments](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
+![Boutons radio montrant comment filtrer les exécutions de flux de données pour les segments.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
 Pour afficher plus d’informations sur une exécution de flux de données spécifique, sélectionnez le filtre . ![filter](../assets/ui/monitor-destinations/filter-add.png) en regard de l’heure de début d’exécution du flux de données pour afficher la page détails d’exécution du flux de données.
 
-![Filtre des exécutions de flux de données dans le tableau de bord de surveillance](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
+![Le filtre des exécutions de flux de données dans le tableau de bord de surveillance permet d’analyser plus d’informations pour une certaine exécution de flux de données.](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
 
 ### Page Détails de l’exécution du flux de données {#dataflow-run-details-page}
 
@@ -294,12 +293,12 @@ La page Détails comporte également un bouton bascule permettant de basculer en
 
 La vue des erreurs d’exécution du flux de données affiche une liste des identités qui ont échoué et des identités qui ont été exclues. Les informations relatives aux identités ayant échoué et exclues s’affichent, notamment le code d’erreur, le nombre d’identités et la description. Par défaut, la liste affiche les identités ayant échoué. Pour afficher les identités ignorées, sélectionnez la variable **[!UICONTROL Identités exclues]** bascule.
 
-![Bascule des identités exclues](../assets/ui/monitor-destinations/identities-excluded.png)
+![Bascule des identités exclues surligné dans la vue de surveillance](../assets/ui/monitor-destinations/identities-excluded.png)
 
 When **[!UICONTROL Segments]** est sélectionné, une liste des segments qui ont été activés dans l’exécution de flux de données sélectionnée s’affiche. Cet écran comprend des informations au niveau du segment sur les identités activées, les identités exclues, ainsi que l’état et l’heure de la dernière exécution du flux de données.
 
-![Exécution du flux de données - vue des segments](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
+![Vue Segments dans l’écran des détails de l’exécution du flux de données.](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce guide, vous savez maintenant comment surveiller les flux de données pour les destinations par lots et en flux continu, y compris toutes les informations pertinentes telles que le temps de traitement, le taux d’activation et l’état. Pour en savoir plus sur les flux de données dans Platform, veuillez lire le [présentation des flux de données](../home.md). Pour en savoir plus sur les destinations, veuillez lire le [présentation des destinations](../../destinations/home.md).
+En suivant ce guide, vous savez maintenant comment surveiller les flux de données pour les destinations par lots et en flux continu, y compris toutes les informations pertinentes telles que le temps de traitement, le taux d’activation et l’état. Pour en savoir plus sur les flux de données dans Platform, lisez le [présentation des flux de données](../home.md). Pour en savoir plus sur les destinations, lisez le [présentation des destinations](../../destinations/home.md).

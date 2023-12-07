@@ -3,10 +3,10 @@ title: Destination de Data Landing Zone
 description: Découvrez comment vous connecter à Data Landing Zone pour activer des audiences et exporter des jeux de données.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: a1b3e59e0d5b1312b7bc22885ee679775c2a4d78
+source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
-source-wordcount: '1481'
-ht-degree: 53%
+source-wordcount: '1509'
+ht-degree: 50%
 
 ---
 
@@ -32,7 +32,7 @@ Platform applique une durée de vie (TTL) stricte de sept jours sur tous les fic
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
+Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
 
 | Origine de l’audience | Pris en charge | Description |
 ---------|----------|----------|
@@ -58,15 +58,15 @@ Notez les conditions préalables suivantes qui doivent être remplies pour pouvo
 
 ### Connectez-vous à [!DNL Data Landing Zone] conteneur à [!DNL Azure Storage Explorer]
 
-Vous pouvez utiliser [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) pour gérer le contenu de votre conteneur [!DNL Data Landing Zone]. Pour commencer à [!DNL Data Landing Zone], vous devez d’abord récupérer vos informations d’identification, puis les entrer dans [!DNL Azure Storage Explorer], puis connectez vos [!DNL Data Landing Zone] conteneur à [!DNL Azure Storage Explorer].
+Vous pouvez utiliser [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) pour gérer le contenu de votre [!DNL Data Landing Zone] conteneur. Pour commencer à [!DNL Data Landing Zone], vous devez d’abord récupérer vos informations d’identification, puis les entrer dans [!DNL Azure Storage Explorer], puis connectez vos [!DNL Data Landing Zone] conteneur à [!DNL Azure Storage Explorer].
 
 Dans l’interface utilisateur [!DNL Azure Storage Explorer], sélectionnez l’icône de connexion dans la barre de navigation de gauche. La fenêtre **Sélectionner la ressource** s’affiche, vous permettant d’accéder à des options de connexion. Sélectionnez **[!DNL Blob container]** pour vous connecter à votre espace de stockage [!DNL Data Landing Zone].
 
-![Sélection de ressource](/help/sources/images/tutorials/create/dlz/select-resource.png)
+![Sélectionnez la ressource mise en surbrillance dans l’interface utilisateur Azure.](/help/sources/images/tutorials/create/dlz/select-resource.png)
 
 Ensuite, sélectionnez **URL de signature d’accès partagé (SAS)** comme méthode de connexion, puis sélectionnez **Suivant**.
 
-![Sélection d’une méthode de connexion](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
+![Sélectionnez la méthode de connexion mise en surbrillance dans l’interface utilisateur Azure.](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
 Après avoir sélectionné votre méthode de connexion, vous devez fournir un **nom d’affichage** et l’URL du conteneur SAS **[!DNL Blob]** qui correspond à votre conteneur [!DNL Data Landing Zone].
 
@@ -171,15 +171,15 @@ La réponse suivante renvoie les valeurs mises à jour pour votre `SASToken` et 
 
 Indiquez votre nom d’affichage (`containerName`) et [!DNL Data Landing Zone] URL SAS, comme renvoyée dans l’appel API décrit ci-dessus, puis sélectionnez **Suivant**.
 
-![Saisie des informations de connexion](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
+![Saisissez les informations de connexion mises en surbrillance dans l’interface utilisateur Azure.](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
 La fenêtre **Résumé** s’affiche, vous donnant ainsi une présentation de vos paramètres, y compris des informations sur votre point d’entrée et vos autorisations [!DNL Blob]. Quand vous avez terminé, sélectionnez **Se connecter**.
 
-![Résumé](/help/sources/images/tutorials/create/dlz/summary.png)
+![Résumé des paramètres affichés dans l’interface utilisateur Azure.](/help/sources/images/tutorials/create/dlz/summary.png)
 
 Une connexion réussie met à jour l’interface utilisateur [!DNL Azure Storage Explorer] avec votre conteneur [!DNL Data Landing Zone].
 
-![Conteneur utilisateur DLZ](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
+![Résumé du conteneur utilisateur DLZ mis en surbrillance dans l’interface utilisateur Azure.](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
 Avec votre conteneur [!DNL Data Landing Zone] connecté à [!DNL Azure Storage Explorer], vous pouvez maintenant commencer à exporter des fichiers d’Experience Platform vers votre conteneur [!DNL Data Landing Zone]. Pour exporter des fichiers, vous devez établir une connexion au [!DNL Data Landing Zone] destination dans l’interface utilisateur de l’Experience Platform, comme décrit dans la section ci-dessous.
 
@@ -203,7 +203,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 * **[!UICONTROL Description]** : facultatif. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination.
 * **[!UICONTROL Chemin d’accès au dossier]** : saisissez le chemin d’accès au dossier de destination qui héberge les fichiers exportés.
 * **[!UICONTROL Type de fichier]**: sélectionnez le format que l’Experience Platform doit utiliser pour les fichiers exportés. Lorsque vous sélectionnez la variable [!UICONTROL CSV] , vous pouvez également [configuration des options de formatage de fichier](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Format de compression]** : sélectionnez le type de compression qu’Experience Platform doit utiliser pour les fichiers exportés.
+* **[!UICONTROL Format de compression]**: sélectionnez le type de compression que l’Experience Platform doit utiliser pour les fichiers exportés.
 * **[!UICONTROL Inclure le fichier manifeste]**: activez cette option si vous souhaitez que les exportations incluent un fichier JSON manifeste contenant des informations sur l’emplacement de l’exportation, la taille de l’exportation, etc. Le manifeste est nommé au format `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Afficher un [exemple de fichier manifeste](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Le fichier de manifeste comprend les champs suivants :
    * `flowRunId`: la variable [exécution du flux de données](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) qui a généré le fichier exporté.
    * `scheduledTime`: heure en UTC à laquelle le fichier a été exporté.
@@ -234,7 +234,7 @@ Dans l’étape **[!UICONTROL Planifier]**, vous pouvez [configurer le planning 
 
 Dans l’étape **[!UICONTROL Mappage]**, vous pouvez sélectionner les champs d’attribut et d’identité à exporter pour vos profils. Vous pouvez également choisir de remplacer les en-têtes du fichier exporté par un nom convivial de votre choix. Pour plus d’informations, voir l’[étape de mappage](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) dans le tutoriel Activer l’interface utilisateur des destinations par lot.
 
-## Exporter les jeux de données {#export-datasets}
+## Exportation de jeux de données {#export-datasets}
 
 Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez les tutoriels :
 

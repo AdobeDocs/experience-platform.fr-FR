@@ -3,10 +3,10 @@ keywords: Connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion Facebook
 description: Activez les profils de vos campagnes Facebook pour le ciblage, la personnalisation et la suppression des audiences en fonction des courriers électroniques hachés.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 05e996f9e33e0d8be3d15a9ab3baaaf6d8152b5a
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1941'
-ht-degree: 33%
+source-wordcount: '1949'
+ht-degree: 32%
 
 ---
 
@@ -18,7 +18,7 @@ Activez les profils pour votre [!DNL Facebook] des campagnes pour le ciblage, la
 
 Vous pouvez utiliser cette destination pour le ciblage des audiences sur l’ensemble des [!DNL Facebook's] famille d’applications prises en charge par [!DNL Custom Audiences], y compris [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], et [!DNL Messenger]. La sélection de l’application sur laquelle vous souhaitez exécuter la campagne est indiquée au niveau de l’emplacement dans [!DNL Facebook Ads Manager].
 
-![Destination facebook dans l’interface utilisateur de Adobe Experience Platform](../../assets/catalog/social/facebook/catalog.png)
+![Destination facebook dans l’interface utilisateur de Adobe Experience Platform.](../../assets/catalog/social/facebook/catalog.png)
 
 ## Cas d’utilisation
 
@@ -30,7 +30,7 @@ Un détaillant en ligne souhaite atteindre des clients existants par le biais de
 
 ### Cas d’utilisation #2
 
-Une compagnie aérienne possède différents niveaux de clients (Bronze, Argent et Or) et souhaite fournir à chacun des niveaux des offres personnalisées via des plateformes sociales. Cependant, tous les clients n’utilisent pas l’application mobile de la compagnie aérienne et certains d’entre eux ne se sont pas connectés au site web de la société. Les seuls identifiants de membre et d’adresse électronique de l’entreprise concernant ces clients sont les identifiants de membre et les adresses électroniques.
+Une compagnie aérienne possède différents niveaux de clients (Bronze, Argent et Or) et souhaite fournir à chacun des niveaux des offres personnalisées via des plateformes sociales. Cependant, tous les clients n’utilisent pas l’application mobile de la compagnie aérienne et certains d’entre eux ne se sont pas connectés au site web de la société. Les seuls identifiants dont dispose la société concernant ces clients sont les identifiants d’adhésion et les adresses électroniques.
 
 Pour les cibler sur les réseaux sociaux, ils peuvent intégrer les données client de leur CRM dans Adobe Experience Platform, en utilisant les adresses email comme identifiants.
 
@@ -50,7 +50,7 @@ Ensuite, ils peuvent utiliser leurs données hors ligne, y compris les identifia
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
+Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
 
 | Origine de l’audience | Pris en charge | Description |
 ---------|----------|----------|
@@ -74,7 +74,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 Avant d’envoyer vos audiences à [!DNL Facebook], assurez-vous de respecter les conditions suivantes :
 
-* Votre [!DNL Facebook] le compte utilisateur doit disposer d’un accès complet à la variable [!DNL Facebook Business Account] qui détient le compte publicitaire que vous utiliserez.
+* Votre [!DNL Facebook] le compte utilisateur doit disposer d’un accès complet à la variable [!DNL Facebook Business Account] qui détient le compte publicitaire que vous utilisez.
 * Votre [!DNL Facebook] Le compte utilisateur doit avoir la variable **[!DNL Manage campaigns]** autorisation activée pour le compte publicitaire que vous prévoyez d’utiliser.
 * La variable **Adobe Experience Cloud** votre compte professionnel doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Voir [Ajout de partenaires à votre compte Business Manager](https://www.facebook.com/business/help/1717412048538897) pour plus d’informations, voir la documentation de Facebook .
   >[!IMPORTANT]
@@ -123,7 +123,7 @@ Si vous choisissez de hacher vous-même les adresses électroniques, veillez à 
 > Les données de la source d’attributs ne sont pas automatiquement hachées. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l’activation.
 > La variable **[!UICONTROL Appliquer la transformation]** ne s’affiche que lorsque vous sélectionnez des attributs comme champs source. Il ne s’affiche pas lorsque vous choisissez des espaces de noms.
 
-![Transformation du mapping des identités](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![Appliquez le contrôle de transformation mis en surbrillance à l’étape de mappage.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## Utilisation d’espaces de noms personnalisés {#custom-namespaces}
 
@@ -149,7 +149,7 @@ La vidéo ci-dessous présente également les étapes de configuration d’une [
 
 1. Recherchez la destination Facebook dans le catalogue des destinations et sélectionnez **[!UICONTROL Configuration]**.
 2. Sélectionner **[!UICONTROL Se connecter à la destination]**.
-   ![Authentification à Facebook](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
+   ![L’étape Authentification à Facebook s’affiche dans le workflow d’activation.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Saisissez vos informations d’identification Facebook et sélectionnez **Connexion**.
 
 ### Renseigner les détails de la destination {#destination-details}
@@ -176,7 +176,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Origine de l’audience"
->abstract="Choisissez la manière dont les données client de l’audience ont été collectées à l’origine. Les données s&#39;affichent dans Facebook lorsqu&#39;un utilisateur est ciblé par le segment."
+>abstract="Choisissez la manière dont les données client de l’audience ont été collectées à l’origine. Les données s’affichent dans Facebook lorsqu’un utilisateur est ciblé par le segment."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
@@ -202,7 +202,7 @@ Voir [Activer les données d’audience vers des destinations d’export d’aud
 
 Dans le **[!UICONTROL Planification du segment]** , vous devez fournir la variable [!UICONTROL Origine de l’audience] lors de l’envoi d’audiences à [!DNL Facebook Custom Audiences].
 
-![Origine facebook de l’audience](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![Liste déroulante Origine de l’audience affichée à l’étape d’activation de Facebook.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ### Exemple de mappage : activation des données d’audience dans [!DNL Facebook Custom Audience] {#example-facebook}
 
@@ -231,7 +231,7 @@ Sélection des champs cibles :
 > 
 >Les données de la source d’attributs ne sont pas automatiquement hachées. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l’activation.
 
-![Mappage des identités](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+![Appliquez le contrôle de transformation mis en surbrillance à l’étape de mappage.](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Données exportées {#exported-data}
 
@@ -251,4 +251,4 @@ Lors de la configuration de cette destination, vous risquez de recevoir l’erre
 
 Cette erreur se produit lorsque les clients utilisent des comptes nouvellement créés et que la variable [!DNL Facebook] les autorisations ne sont pas encore actives.
 
-Si vous recevez la variable `400 Bad Request` message d’erreur après avoir suivi les étapes de la section [Conditions préalables au compte facebook](#facebook-account-prerequisites), veuillez prévoir quelques jours pour la variable [!DNL Facebook] les autorisations pour qu’elles entrent en vigueur.
+Si vous recevez la variable `400 Bad Request` message d’erreur après avoir suivi les étapes de la section [Conditions préalables au compte facebook](#facebook-account-prerequisites), prévoyez quelques jours pour la variable [!DNL Facebook] les autorisations pour qu’elles entrent en vigueur.

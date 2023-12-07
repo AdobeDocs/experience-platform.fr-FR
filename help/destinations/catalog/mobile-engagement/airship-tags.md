@@ -3,10 +3,10 @@ keywords: balises d’avion;destination du navire d’aviation
 title: Connexion Balises Airship
 description: Transmettez en toute transparence les données d’audience Adobe à Airship en tant que balises d’audience pour le ciblage dans Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 72225ac673ed921b5857a14070660134949e7e3e
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '984'
-ht-degree: 39%
+source-wordcount: '967'
+ht-degree: 35%
 
 ---
 
@@ -23,7 +23,7 @@ Pour en savoir plus sur [!DNL Airship], voir [Documents de navigation](https://d
 
 >[!TIP]
 >
->L’équipe [!DNL Airship] est responsable de la création et de la maintenance du connecteur de destination et de la page de documentation. Pour toute demande d’information ou de mise à jour, contactez-les directement à l’adresse [support.airship.com](https://support.airship.com/).
+>Cette page de documentation et de connecteur de destination est créée et conservée par [!DNL Airship] l&#39;équipe. Pour toute demande d’information ou de mise à jour, contactez-les directement à l’adresse [support.airship.com](https://support.airship.com/).
 
 ## Conditions préalables
 
@@ -38,7 +38,7 @@ Avant d’envoyer vos audiences Adobe Experience Platform à [!DNL Airship], vou
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
+Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
 
 | Origine de l’audience | Pris en charge | Description |
 ---------|----------|----------|
@@ -82,7 +82,7 @@ Cliquez sur **[!UICONTROL Créer un jeton]** et enregistrez les informations com
 
 ## Cas d’utilisation
 
-Pour découvrir les avantages de la destination [!DNL Airship Tags] et son utilisation, consultez les exemples de cas d’utilisation ci-dessous que la clientèle Adobe Experience Platform peut résoudre.
+Pour mieux comprendre comment et à quel moment utiliser la variable [!DNL Airship Tags] destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 
 ### Cas d’utilisation #1
 

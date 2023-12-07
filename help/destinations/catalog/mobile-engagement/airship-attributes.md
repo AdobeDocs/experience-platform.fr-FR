@@ -3,10 +3,10 @@ keywords: attributs de navire d’aviation;destination du navire d’aviation
 title: Connexion Attributs Airship
 description: Transférez en toute transparence les données d’audience Adobe à Airship en tant qu’attributs d’audience pour le ciblage au sein de Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 8e37ff057ec0fb750bc7b4b6f566f732d9fe5d68
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '1048'
-ht-degree: 38%
+source-wordcount: '1036'
+ht-degree: 34%
 
 ---
 
@@ -22,7 +22,7 @@ Pour en savoir plus sur [!DNL Airship], voir [Documents de navigation](https://d
 
 >[!TIP]
 >
->L’équipe [!DNL Airship] est responsable de la création et de la maintenance du connecteur de destination et de la page de documentation. Pour toute demande d’information ou de mise à jour, contactez-les directement à l’adresse [support.airship.com](https://support.airship.com/).
+>Cette page de documentation et de connecteur de destination est créée et conservée par [!DNL Airship] l&#39;équipe. Pour toute demande d’information ou de mise à jour, contactez-les directement à l’adresse [support.airship.com](https://support.airship.com/).
 
 ## Conditions préalables {#prerequisites}
 
@@ -37,7 +37,7 @@ Avant d’envoyer vos audiences à [!DNL Airship], vous devez :
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
+Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
 
 | Origine de l’audience | Pris en charge | Description |
 ---------|----------|----------|
@@ -75,7 +75,7 @@ Cliquez sur **[!UICONTROL Créer un jeton]** et enregistrez les informations com
 
 ## Cas d’utilisation {#use-cases}
 
-Pour découvrir les avantages de la destination [!DNL Airship Attributes] et son utilisation, consultez les exemples de cas d’utilisation ci-dessous que la clientèle Adobe Experience Platform peut résoudre.
+Pour mieux comprendre comment et à quel moment utiliser la variable [!DNL Airship Attributes] destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 
 ### Cas d’utilisation #1
 
@@ -139,7 +139,7 @@ Pour les identifiants qui doivent être mappés à un canal, c’est-à-dire un 
 
 **Mappage d’identité**
 
-Sélectionner le champ source:
+Sélectionner le champ source :
 
 ![Connexion aux attributs des navires](../../assets/catalog/mobile-engagement/airship/select-source-identity.png)
 

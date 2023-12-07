@@ -4,10 +4,10 @@ title: Connexion API HTTP
 description: Utilisez la destination API HTTP dans Adobe Experience Platform pour envoyer des données de profil vers un point d’entrée HTTP tiers afin d’exécuter vos propres analyses ou toute autre opération dont vous pourriez avoir besoin sur les données de profil exportées hors d’Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 3e2dc51e768d6bcfeedbc26e04997dc46c852e4d
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '2483'
-ht-degree: 85%
+source-wordcount: '2480'
+ht-degree: 79%
 
 ---
 
@@ -31,7 +31,7 @@ Les points d’entrée HTTP peuvent être les systèmes des client(e)s ou des so
 
 ## Audiences prises en charge {#supported-audiences}
 
-Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
+Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
 
 | Origine de l’audience | Pris en charge | Description |
 ---------|----------|----------|
@@ -65,7 +65,7 @@ Pour utiliser la destination d’API HTTP pour exporter des données en dehors d
 
 ## Liste autorisée d’adresses IP {#ip-address-allowlist}
 
-Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste des adresses IP statiques que vous pouvez inscrire sur la liste autorisée pour la destination de l’API HTTP. Reportez-vous à la [liste autorisée d’adresses IP pour les destinations en flux continu](/help/destinations/catalog/streaming/ip-address-allow-list.md) pour la liste complète des adresses IP à autoriser.
+Pour répondre aux exigences de sécurité et de conformité des clients, Experience Platform fournit une liste des adresses IP statiques que vous pouvez inscrire sur la liste autorisée pour la destination de l’API HTTP. Voir [LISTE AUTORISÉE d’adresses IP pour les destinations de diffusion en continu](/help/destinations/catalog/streaming/ip-address-allow-list.md) pour obtenir la liste complète des adresses IP à placer sur la liste autorisée.
 
 ## Types d’authentification pris en charge {#supported-authentication-types}
 
@@ -73,7 +73,7 @@ La destination API HTTP prend en charge plusieurs types d’authentification à 
 
 * Point d’entrée HTTP sans authentification ;
 * Authentification par jeton porteur ;
-* Authentification à l’aide des [informations d’identification du client OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) avec le formulaire de corps, avec [!DNL client ID], [!DNL client secret] et [!DNL grant type] dans le corps de la requête HTTP, comme illustré dans l’exemple ci-dessous.
+* [Identifiants du client OAuth 2.0](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) authentification avec le formulaire de corps, avec [!DNL client ID], [!DNL client secret], et [!DNL grant type] dans le corps de la requête HTTP, comme illustré dans l’exemple ci-dessous.
 
 ```shell
 curl --location --request POST '<YOUR_API_ENDPOINT>' \
@@ -113,7 +113,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Si vous sélectionnez le type d’authentification **[!UICONTROL Jeton porteur]** pour vous connecter à votre point d’entrée HTTP, saisissez les champs ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]** :
 
-![Image de l’écran de l’interface utilisateur où vous pouvez vous connecter à la destination API HTTP, à l’aide de l’authentification par jeton porteur](../../assets/catalog/http/http-api-authentication-bearer.png)
+![Image de l’écran de l’interface utilisateur où vous pouvez vous connecter à la destination de l’API HTTP, à l’aide de l’authentification par jeton porteur.](../../assets/catalog/http/http-api-authentication-bearer.png)
 
 * **[!UICONTROL Jeton porteur]** : insérez le jeton porteur pour l’authentification à votre emplacement HTTP.
 
@@ -121,7 +121,7 @@ Si vous sélectionnez le type d’authentification **[!UICONTROL Jeton porteur]*
 
 Si vous sélectionnez le type d’authentification **[!UICONTROL Aucune]** pour vous connecter à votre point d’entrée HTTP :
 
-![Image de l’écran de l’interface utilisateur où vous pouvez vous connecter à la destination API HTTP, sans utiliser d’authentification](../../assets/catalog/http/http-api-authentication-none.png)
+![Image de l’écran de l’interface utilisateur où vous pouvez vous connecter à la destination de l’API HTTP, sans authentification.](../../assets/catalog/http/http-api-authentication-none.png)
 
 Lorsque vous sélectionnez cette ouverture d’authentification, il vous suffit de sélectionner **[!UICONTROL Se connecter à la destination]** et la connexion à votre point d’entrée est établie.
 
@@ -129,7 +129,7 @@ Lorsque vous sélectionnez cette ouverture d’authentification, il vous suffit 
 
 Si vous sélectionnez le type d’authentification **[!UICONTROL Mot de passe OAuth 2]** pour vous connecter à votre point d’entrée HTTP, saisissez les champs ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]** :
 
-![Image de l’écran de l’interface utilisateur où vous pouvez vous connecter à la destination API HTTP, en utilisant l’authentification par mot de passe OAuth 2](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+![Image de l’écran de l’interface utilisateur où vous pouvez vous connecter à la destination de l’API HTTP, à l’aide d’OAuth 2 avec authentification par mot de passe.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
 * **[!UICONTROL URL du jeton d’accès]** : URL de votre côté qui émet des jetons d’accès et, éventuellement, actualise les jetons.
 * **[!UICONTROL Identifiant client]** : l’[!DNL client ID] que votre système attribue à Adobe Experience Platform.
@@ -141,7 +141,7 @@ Si vous sélectionnez le type d’authentification **[!UICONTROL Mot de passe OA
 
 Si vous sélectionnez le type d’authentification **[!UICONTROL Informations d’identification du client OAuth 2]** pour vous connecter à votre point d’entrée HTTP, saisissez les champs ci-dessous et sélectionnez **[!UICONTROL Se connecter à la destination]** :
 
-![Image de l’écran de l’interface utilisateur où vous pouvez vous connecter à la destination API HTTP, à l’aide de l’authentification OAuth 2 avec des informations d’identification du client](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
+![Image de l’écran de l’interface utilisateur où vous pouvez vous connecter à la destination de l’API HTTP, à l’aide d’OAuth 2 avec authentification des informations d’identification du client.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 * **[!UICONTROL URL du jeton d’accès]** : URL de votre côté qui émet des jetons d’accès et, éventuellement, actualise les jetons.
 * **[!UICONTROL Identifiant client]** : l’[!DNL client ID] que votre système attribue à Adobe Experience Platform.
@@ -179,7 +179,7 @@ Si vous sélectionnez le type d’authentification **[!UICONTROL Informations d�
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-![Image de l’écran de l’interface utilisateur affichant les champs remplis pour les détails de destination HTTP](../../assets/catalog/http/http-api-destination-details.png)
+![Image de l’écran de l’interface utilisateur affichant les champs remplis pour les détails de destination HTTP.](../../assets/catalog/http/http-api-destination-details.png)
 
 * **[!UICONTROL Nom]** : saisissez un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : saisissez une description qui vous aidera à identifier cette destination à l’avenir.
@@ -212,13 +212,13 @@ Lors de l’étape [[!UICONTROL Sélectionner des attributs]](../../ui/activate-
 
 Experience Platform optimise le comportement d’exportation de profils vers votre destination d’API HTTP, afin de n’exporter les données vers votre point de terminaison d’API que lorsque des mises à jour pertinentes d’un profil se sont produites à la suite de la qualification de l’audience ou d’autres événements significatifs. Les profils sont exportés vers votre destination dans les situations suivantes :
 
-* La mise à jour du profil a été déterminée par une modification de l’appartenance à une audience pour au moins une des audiences mappées à la destination. Par exemple, le profil est éligible à l’une des audiences mappées à la destination ou a quitté l’une de ces audiences.
+* La mise à jour du profil a été déterminée par un changement de l’appartenance à l’audience pour au moins une des audiences mappées à la destination. Par exemple, le profil est éligible à l’une des audiences mappées à la destination ou a quitté l’une de ces audiences.
 * La mise à jour du profil a été déterminée par une modification dans le [mappage d’identités](/help/xdm/field-groups/profile/identitymap.md). Par exemple, une nouvelle identité a été ajoutée dans l’attribut de mappage d’identités à un profil qui était déjà éligible à l’une des audiences mappées à la destination.
 * La mise à jour du profil a été déterminée par une modification des attributs pour au moins un des attributs mappés à la destination. Par exemple, l’un des attributs mappés à la destination dans l’étape de mappage est ajouté à un profil.
 
 Dans tous les cas décrits ci-dessus, seuls les profils pour lesquels des mises à jour pertinentes se sont produites sont exportés vers votre destination. Par exemple, si une audience mappée au flux de destination comporte cent membres et que cinq nouveaux profils sont éligibles à ce segment, l’exportation vers votre destination est incrémentielle et inclut uniquement les cinq nouveaux profils.
 
-Remarque : tous les attributs mappés sont exportés pour un profil, quel que soit l’emplacement des modifications. Ainsi, dans l’exemple ci-dessus, tous les attributs mappés pour ces cinq nouveaux profils seront exportés même si les attributs eux-mêmes restent inchangés.
+Notez que tous les attributs mappés sont exportés pour un profil, quel que soit l’emplacement des modifications. Ainsi, dans l’exemple ci-dessus, tous les attributs mappés pour ces cinq nouveaux profils seront exportés même si les attributs eux-mêmes restent inchangés.
 
 ### Ce qui détermine une exportation de données et ce qui est inclus dans l’exportation {#what-determines-export-what-is-included}
 
@@ -232,7 +232,7 @@ Concernant les données exportées pour un profil donné, il est important de co
 
 Prenons l’exemple d’un flux de données vers une destination HTTP dans lequel trois audiences sont sélectionnées et quatre attributs sont mappés à la destination.
 
-![Flux de données à destination d’une API HTTP](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
+![Exemple de flux de données de destination d’API HTTP.](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
 Une exportation de profil vers la destination peut être déterminée par un profil éligible ou sortant de l’un des *trois segments mappés*. Toutefois, dans l’exportation des données, dans la variable `segmentMembership` (voir [Données exportées](#exported-data) ci-dessous), d’autres audiences non mappées peuvent apparaître si ce profil particulier en est membre et si elles partagent la même stratégie de fusion que l’audience qui a déclenché l’exportation. Si un profil est admissible pour la variable **Client avec des voitures DeLorean** , mais est également membre de la fonction **&quot;Retour vers l&#39;avenir&quot;** film et **Fans de science-fiction** , ces deux autres audiences seront également présentes dans la variable `segmentMembership` de l’exportation des données, même si elles ne sont pas mappées dans le flux de données, si elles partagent la même stratégie de fusion avec l’objet **Client avec des voitures DeLorean** segment.
 

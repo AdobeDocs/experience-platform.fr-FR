@@ -3,9 +3,9 @@ title: Exportation de jeux de données vers des destinations de stockage dans le
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 9a149b86f34f5c7cae6a1bf2ae797a256e212f30
+source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
 workflow-type: tm+mt
-source-wordcount: '1735'
+source-wordcount: '1739'
 ht-degree: 53%
 
 ---
@@ -71,7 +71,7 @@ Regardez la vidéo ci-dessous pour obtenir une explication de bout en bout du wo
 
 Actuellement, vous pouvez exporter des jeux de données vers les destinations de stockage dans le cloud mises en évidence dans la capture d’écran et répertoriées ci-dessous.
 
-![Destinations qui prennent en charge les exportations de jeux de données](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
+![Page du catalogue des destinations présentant les destinations qui prennent en charge les exportations de jeux de données.](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
 
 * [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md)
 * [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md)
@@ -221,7 +221,7 @@ Consultez les documents de description du produit pour comprendre la quantité d
 
 Notez que les droits à l’exportation des données pour différentes applications ne sont pas additifs. Par exemple, cela signifie que si vous achetez Real-Time CDP Ultimate et Adobe Journey Optimizer Ultimate, les droits d’exportation de profil seront les plus grands des deux droits, selon les descriptions de produit. Vos droits sur le volume sont calculés en prenant le nombre total de profils sous licence et en multipliant par 500 Ko pour Real-Time CDP Prime ou 700 Ko pour Real-Time CDP Ultimate afin de déterminer le volume de données auquel vous avez droit.
 
-D’un autre côté, si vous achetez des modules complémentaires tels que Data Distiller, la limite d’exportation des données à laquelle vous avez droit représente la somme du niveau produit et du module complémentaire.
+D’un autre côté, si vous avez acheté des modules complémentaires tels que Data Distiller, la limite d’exportation des données à laquelle vous avez droit représente la somme du niveau produit et du module complémentaire.
 
 Dans le tableau de bord des licences, vous pouvez consulter et suivre vos exportations de profils par rapport à vos limites contractuelles.
 

@@ -2,10 +2,10 @@
 description: Adobe Experience Platform Destination SDK est un ensemble d’API de configuration qui vous permet de configurer des modèles d’intégration de destination pour qu’Experience Platform diffuse des données d’audience et de profil vers votre point de terminaison ou emplacement de stockage, en fonction des données et des formats d’authentification de votre choix. Les configurations sont stockées dans Experience Platform et peuvent être récupérées via lʼAPI pour des mises à jour supplémentaires.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
 workflow-type: tm+mt
-source-wordcount: '848'
-ht-degree: 42%
+source-wordcount: '808'
+ht-degree: 28%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 42%
 
 Adobe Experience Platform Destination SDK est une suite d’API de configuration qui vous permet de configurer des modèles d’intégration de destination pour qu’Experience Platform diffuse des données d’audience et de profil vers votre point de terminaison ou emplacement de stockage, en fonction des données et des formats d’authentification de votre choix. Les configurations sont stockées dans Experience Platform et peuvent être récupérées via lʼAPI pour des mises à jour supplémentaires.
 
-La documentation du Destination SDK fournit des instructions pour utiliser Adobe Experience Platform Destination SDK afin de configurer, de tester et de publier une intégration de destination personnalisée avec Adobe Experience Platform. Votre destination pourra ensuite rejoindre le catalogue des destinations en constante évolution. En utilisant Destination SDK, vous pouvez également créer votre propre destination privée personnalisée pour exporter des données adaptées à vos besoins.
+La documentation sur les Destinations SDK vous explique comment utiliser le Adobe Experience Platform Destination SDK pour configurer, tester et publier une intégration de destination productisée avec Adobe Experience Platform et faire en sorte que votre destination soit intégrée au catalogue des destinations en constante augmentation. En utilisant Destination SDK, vous pouvez également créer votre propre destination privée personnalisée pour exporter des données adaptées à vos besoins.
 
-![Capture d’écran de l’interface utilisateur Experience Platform affichant le catalogue des destinations](assets/destinations-catalog-overview.png)
+![Capture d’écran de l’interface utilisateur de l’Experience Platform, affichant le catalogue des destinations.](assets/destinations-catalog-overview.png)
 
 ## Intégrations standardisées et personnalisées {#productized-custom-integrations}
 
@@ -61,7 +61,7 @@ L’accès aux Destinations SDK varie en fonction de votre statut de partenaire 
 | Type de partenaire ou de client | Accéder à Destination SDK |
 ---------|----------|
 | Fournisseur de logiciels indépendant (ISV) | Rejoindre le [Programme Partenaires en technologie Adobe](https://partners.adobe.com/technologyprogram/experiencecloud.html) et demandez à obtenir un environnement de test Experience Platform configuré pour accéder à Destination SDK. |
-| Intégrateur système (SI) | Vous devez être au niveau Or ou Platine dans le [Programme Partenaires en solutions Adobe](https://solutionpartners.adobe.com/home.html) pour obtenir un sandbox Experience Platform configuré ainsi quʼun accès à Destination SDK. |
+| Intégrateur système (SI) | Vous devez être au niveau Or ou Platine dans le [Programme Partenaires en solutions Adobe](https://solutionpartners.adobe.com/home.html) pour obtenir un environnement de test Experience Platform configuré et l’accès à Destination SDK. |
 | Client Experience Platform sur la [Package Real-Time CDP Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) | Par défaut, vous avez accès aux environnements de test et à la Destination SDK Experience Platform, ce qui vous permet de créer des destinations privées pour votre organisation. |
 
 {style="table-layout:auto"}
@@ -75,7 +75,7 @@ Pour configurer votre destination dans Experience Platform, procédez comme sui
 3. Créez votre intégration. Suivez les instructions de la documentation du produit pour configurer [destinations de diffusion en continu](guides/configure-destination-instructions.md) ou [destinations basées sur des fichiers](guides/configure-file-based-destination-instructions.md).
 4. Testez votre intégration. Suivez les instructions de la documentation du produit pour tester [destinations de diffusion en continu](testing-api/streaming-destinations/streaming-destination-testing-overview.md) ou [destinations basées sur des fichiers](testing-api/batch-destinations/file-based-destination-testing-overview.md).
 5. Si vous êtes un logiciel de développement logiciel ou si vous créez une [intégration productive](./overview.md#productized-custom-integrations), [soumettre votre intégration](guides/submit-destination.md) pour la révision par l’Adobe (le temps de réponse standard est de cinq jours ouvrables).
-6. Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une intégration personnalisée, utilisez le [processus de documentation en libre-service](docs-framework/documentation-instructions.md) pour créer une page de documentation du produit sur Experience League pour votre destination.
+6. Si vous êtes un logiciel de détection des intrusions ou si vous créez une intégration productisée, utilisez la variable [processus de documentation en libre-service](docs-framework/documentation-instructions.md) pour créer une page de documentation du produit sur Experience League pour votre destination.
 7. Pour les intégrations productives, une fois approuvées par Adobe, votre intégration s’affichera dans la variable [Catalogue des Experience Platform](../catalog/overview.md).
 8. Si vous souhaitez mettre à jour votre intégration, procédez de la même manière.
 
