@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;activation;dépannage;mécanismes de sécurisation;instructions;limite
-title: Mécanismes de sécurisation par défaut pour les données d’activation
+title: Barrières de sécurité par défaut pour l’activation des données
 solution: Experience Platform
 product: experience platform
 type: Documentation
 description: En savoir plus sur l’utilisation par défaut de l’activation des données et les limites de débit.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 34ae6f0f791a40584c2d476ed715bb7c5b733c42
+source-git-commit: c425d1016bed80113b879a683114861d839b79eb
 workflow-type: tm+mt
 source-wordcount: '1662'
 ht-degree: 52%
 
 ---
 
-# Mécanismes de sécurisation pour les données d’activation
+# Barrières de sécurité pour l’activation des données
 
 Cette page fournit les limites d’utilisation et de débit par défaut en ce qui concerne le comportement d’activation. Lors de la révision des mécanismes de sécurisation suivants, on suppose que vous avez correctement [connecté aux destinations](/help/destinations/ui/connect-destination.md).
 
