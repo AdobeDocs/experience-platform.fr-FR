@@ -2,9 +2,9 @@
 title: Connexion de votre compte de Marketing Cloud Salesforce à un Experience Platform via l’interface utilisateur
 description: Découvrez comment connecter votre compte de Marketing Cloud Salesforce à Experience Platform via l’interface utilisateur.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 997a9dc70145a8cfd5d6da20ba788a4610e5c257
+source-git-commit: 635ab266fac9d3dc232307d7cb49f83904197782
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '500'
 ht-degree: 27%
 
 ---
@@ -14,7 +14,6 @@ ht-degree: 27%
 >[!IMPORTANT]
 >
 >L’ingestion d’objets personnalisés n’est actuellement pas prise en charge par la fonction [!DNL Salesforce Marketing Cloud] intégration de la source.
-
 
 Ce tutoriel décrit les étapes à suivre pour connecter votre [!DNL Salesforce Marketing Cloud] compte vers Adobe Experience Platform via l’interface utilisateur.
 
@@ -35,7 +34,7 @@ Pour accéder au compte [!DNL Salesforce Marketing Cloud] sur Platform, vous dev
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| Hôte | Serveur hôte de votre application. Il s’agit souvent de votre sous-domaine. **Remarque :** Lorsque vous saisissez votre `host` , il vous suffit de spécifier le sous-domaine et non l’URL entière. Par exemple, si l’URL d’hôte est `https://abcd-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, il vous suffit de saisir `abcd-ab12c3d4e5fg6hijk7lmnop8qrst` comme valeur d’hôte. |
+| Hôte | Serveur hôte de votre application. Il s’agit souvent de votre sous-domaine. **Remarque :** Lorsque vous saisissez votre `host` , vous devez spécifier la variable `{subdomain}.rest.marketingcloudapis.com`. Par exemple, si l’URL d’hôte est `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, il vous suffit de saisir `acme-ab12c3d4e5fg6hijk7lmnop8qrstauth.marketingcloudapis.com/` comme valeur d’hôte. |
 | Identifiant client | L’ID client associé à votre [!DNL Salesforce Marketing Cloud] application. |
 | Secret client | Le secret client associé à votre [!DNL Salesforce Marketing Cloud] application. |
 
