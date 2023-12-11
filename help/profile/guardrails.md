@@ -5,10 +5,10 @@ product: experience platform
 type: Documentation
 description: Découvrez les performances et les mécanismes de sécurisation appliqués par le système pour les données de profil et la segmentation, afin de garantir une utilisation optimale des fonctionnalités de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 56ed0d777d9a7d489cde2e40340fee4ca0ad8c03
+source-git-commit: c7537959b1cc53998acafbccaa2f39686afd9f15
 workflow-type: tm+mt
-source-wordcount: '2230'
-ht-degree: 66%
+source-wordcount: '2282'
+ht-degree: 64%
 
 ---
 
@@ -120,6 +120,7 @@ Les barrières de sécurité décrites dans cette section font référence au no
 | Audiences par environnement de test par lot | 4 000 | Protecteur des performances | Une organisation peut avoir plus de 4 000 audiences par lots au total, à condition qu’il y ait moins de 4 000 audiences par lots dans chaque environnement de test individuel. Toute tentative de création d’audiences par lots supplémentaires peut affecter les performances du système. |
 | Audiences du compte par environnement de test | 50 | Barrière de sécurité mise en place par le système | Vous pouvez créer un maximum de 50 audiences de compte dans un environnement de test. Une fois que vous avez atteint 50 audiences dans un environnement de test, la variable **[!UICONTROL Créer une audience]** Le contrôle est désactivé lors de la création d’une audience de compte. En savoir plus sur [audiences de compte](/help/segmentation/ui/account-audiences.md). |
 | Compositions publiées par environnement de test | 10 | Protecteur des performances | Un environnement de test peut contenir un maximum de 10 compositions publiées. En savoir plus sur [composition d’audiences dans le guide de l’interface utilisateur](/help/segmentation/ui/audience-composition.md). |
+| Taille maximale de l’audience | 30 % | Protecteur des performances | Le nombre maximal recommandé d’appartenance à une audience est de 30 % du nombre total de profils dans le système. La création d’audiences avec plus de 30 % des profils en tant que membres ou plusieurs audiences volumineuses est possible, mais aura une incidence sur les performances du système. |
 
 {style="table-layout:auto"}
 
@@ -129,7 +130,7 @@ Cette section fournit des détails supplémentaires sur les limites de ce docume
 
 ### Types d’entités
 
-Le modèle de la banque de données [!DNL Profile] se compose de deux types d’entités principales : [entités primaires](#primary-entity) et [entités de dimension](#dimension-entity).
+La variable [!DNL Profile] le modèle de données de magasin se compose de deux types d’entité principaux : [entités primaires](#primary-entity) et [entités de dimension](#dimension-entity).
 
 #### Entité de Principal
 
@@ -141,7 +142,7 @@ Les attributs indépendants du temps, également appelés « données d’enreg
 
 #### Entité de Dimension
 
-Bien que la banque de données de profil conservant les données de profil ne soit pas une banque de données relationnelle, Profile permet l’intégration à de petites entités de dimension afin de créer des audiences d’une manière simplifiée et intuitive. Cette intégration est connue sous le nom de [segmentation d’entités multiples](../segmentation/multi-entity-segmentation.md).
+Bien que la banque de données de profil conservant les données de profil ne soit pas une banque de données relationnelle, Profile permet l’intégration à de petites entités de dimension afin de créer des audiences d’une manière simplifiée et intuitive. Cette intégration est connue sous le nom [segmentation d’entités multiples](../segmentation/multi-entity-segmentation.md).
 
 Votre entreprise peut également définir des classes XDM pour décrire des éléments autres que des individus, tels que des magasins, des produits ou des propriétés. Ces variables[!DNL XDM Individual Profile] Les schémas sont appelés &quot;entités de dimension&quot; (également appelées &quot;entités de recherche&quot;) et ne contiennent pas de données de série temporelle. Les schémas qui représentent des entités de dimension sont liés à des entités de profil grâce à l’utilisation de [relations de schéma](../xdm/tutorials/relationship-ui.md).
 
