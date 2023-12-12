@@ -1,8 +1,9 @@
 ---
 title: Création d’une connexion source de résolution d’identité d’entreprise Merkury et d’un flux de données dans l’interface utilisateur
 description: Découvrez comment créer une connexion source de résolution d’identité d’entreprise Merkury à l’aide de l’interface utilisateur de Adobe Experience Platform.
+last-substantial-update: 2023-12=12
 badge: Version Beta
-source-git-commit: 12f73ac2578b6c5b024cc4ebdd75cd945c7b55c9
+source-git-commit: d862a53c7a8880e86648c05cf94e37e1a1779c9e
 workflow-type: tm+mt
 source-wordcount: '2015'
 ht-degree: 30%
