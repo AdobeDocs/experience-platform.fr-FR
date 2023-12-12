@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;diffusion en continu;connecteur de stockage dans le cloud;espace de stockage dans le cloud
+keywords: Experience Platform;accueil;rubriques populaires;diffusion en continu;connecteur de stockage dans le cloud;espace de stockage dans le cloud
 solution: Experience Platform
 title: Création d’un flux de données en continu pour une source de stockage dans le cloud dans l’interface utilisateur
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel décrit les étapes de configuration d’un nouveau flux de données à l’aide de votre connecteur de base de stockage dans le cloud.
 exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 6419ae7648a91dc7f9432281c1960beccc65bdb0
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 25%
+source-wordcount: '1071'
+ht-degree: 23%
 
 ---
 
@@ -27,13 +27,17 @@ Avant de lancer ce tutoriel, vous devez établir une connexion valide et authent
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
 - [Flux de données](../../../../../dataflows/home.md) : les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Les flux de données sont configurés entre différents services, des sources aux [!DNL Identity Service], à [!DNL Profile]et à [!DNL Destinations].
-- [Préparation de données](../../../../../data-prep/home.md) : la préparation des données permet aux ingénieur(e)s de données de mapper, de transformer et de valider les données vers et à partir du modèle de données d’expérience (XDM). La préparation des données apparaît comme étape de « mappage » dans les processus dʼingestion de données, y compris le workflow dʼingestion de données CSV.
+- [Préparation de données](../../../../../data-prep/home.md): la préparation de données permet aux ingénieurs de données de mapper, de transformer et de valider des données vers et depuis le modèle de données d’expérience (XDM). La préparation des données apparaît comme étape de « mappage » dans les processus dʼingestion de données, y compris le workflow dʼingestion de données CSV.
 - [[!DNL Experience Data Model (XDM)] Système](../../../../../xdm/home.md) : le cadre normalisé en fonction duquel [!DNL Experience Platform] organise les données d’expérience client.
    - [Principes de base de la composition des schémas](../../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    - [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 - [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
 ## Ajouter des données
+
+>[!NOTE]
+>
+>Vous ne pouvez créer qu’un seul flux de données source par groupe de consommateurs pour un Hub d’événements donné.
 
 Après avoir créé votre authentification pour votre compte de stockage dans le cloud de diffusion en continu, la variable **[!UICONTROL Sélectionner des données]** s’affiche, fournissant une interface vous permettant de sélectionner le flux de données que vous allez apporter à Platform.
 
@@ -58,7 +62,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Mappage
 
-Le **[!UICONTROL Mappage]** s’affiche, fournissant une interface pour mapper les données source à un jeu de données Platform.
+La variable **[!UICONTROL Mappage]** s’affiche, fournissant une interface pour mapper les données source à un jeu de données Platform.
 
 Sélectionnez un jeu de données dans lequel ingérer les données entrantes. Vous pouvez utiliser un jeu de données existant ou en créer un nouveau.
 
@@ -68,13 +72,13 @@ Pour ingérer des données dans un nouveau jeu de données, sélectionnez **[!UI
 
 ![new-dataset](../../../../images/tutorials/dataflow/cloud-storage/streaming/new-dataset.png)
 
-Le [!UICONTROL Sélectionner un schéma] s’affiche, vous indiquant la liste des schémas disponibles à utiliser. Sélectionnez un schéma dans la liste pour mettre à jour le rail droit afin d’afficher les détails spécifiques au schéma que vous avez sélectionné, y compris des informations sur l’activation ou non du schéma. [!DNL Profile].
+La variable [!UICONTROL Sélectionner un schéma] s’affiche, vous indiquant la liste des schémas disponibles à utiliser. Sélectionnez un schéma dans la liste pour mettre à jour le rail droit afin d’afficher les détails spécifiques au schéma que vous avez sélectionné, y compris des informations sur l’activation ou non du schéma. [!DNL Profile].
 
 Une fois que vous avez identifié et sélectionné le schéma que vous souhaitez utiliser, sélectionnez **[!UICONTROL Terminé]**.
 
 ![select-schema](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-schema.png)
 
-Le [!UICONTROL Jeu de données cible] mises à jour de page avec votre schéma sélectionné affiché dans le cadre du jeu de données. Au cours de cette étape, vous pouvez activer votre jeu de données pour [!DNL Profile] et créer une vision globale des attributs et des comportements d’une entité. Les données de tous les jeux de données activés seront incluses dans [!DNL Profile] les modifications et sont appliquées lorsque vous enregistrez votre flux de données.
+La variable [!UICONTROL Jeu de données cible] mises à jour de page avec votre schéma sélectionné affiché dans le cadre du jeu de données. Pendant cette étape, vous pouvez activer votre jeu de données pour [!DNL Profile] et créer une vision globale des attributs et des comportements d’une entité. Les données de tous les jeux de données activés seront incluses dans [!DNL Profile] les modifications et sont appliquées lorsque vous enregistrez votre flux de données.
 
 Activez/désactivez la variable **[!UICONTROL Jeu de données de profil]** pour activer votre jeu de données cible [!DNL Profile].
 
@@ -86,7 +90,7 @@ Pour ingérer des données dans un jeu de données existant, sélectionnez **[!U
 
 ![existing-dataset](../../../../images/tutorials/dataflow/cloud-storage/streaming/existing-dataset.png)
 
-Le **[!UICONTROL Sélectionner un jeu de données]** s’affiche, vous indiquant la liste des jeux de données disponibles. Sélectionnez un jeu de données dans la liste pour mettre à jour le rail droit afin d’afficher les détails spécifiques au jeu de données que vous avez sélectionné, y compris des informations sur l’activation ou non du jeu de données. [!DNL Profile].
+La variable **[!UICONTROL Sélectionner un jeu de données]** s’affiche, vous indiquant la liste des jeux de données disponibles. Sélectionnez un jeu de données dans la liste pour mettre à jour le rail droit afin d’afficher les détails spécifiques au jeu de données que vous avez sélectionné, y compris des informations sur l’activation ou non du jeu de données. [!DNL Profile].
 
 Une fois que vous avez identifié et sélectionné le jeu de données à utiliser, sélectionnez **[!UICONTROL Terminé]**.
 
@@ -104,7 +108,7 @@ Une fois votre jeu de données et votre schéma créés, la variable **[!UICONTR
 >
 >Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation.
 
-Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, reportez-vous à la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
+Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, voir la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
 
 Une fois les données source mappées, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -112,7 +116,7 @@ Une fois les données source mappées, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Détails du flux de données
 
-Le **[!UICONTROL Détails du flux de données]** s’affiche, ce qui vous permet de nommer et de décrire brièvement votre nouveau flux de données.
+La variable **[!UICONTROL Détails du flux de données]** s’affiche, ce qui vous permet de nommer et de décrire brièvement votre nouveau flux de données.
 
 Indiquez des valeurs pour le flux de données et sélectionnez **[!UICONTROL Suivant]**.
 
@@ -122,8 +126,8 @@ Indiquez des valeurs pour le flux de données et sélectionnez **[!UICONTROL Sui
 
 L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexaminer votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
-- **[!UICONTROL Connexion]**: Affiche le nom de votre compte, le type de source et d’autres informations diverses spécifiques à la source de stockage dans le cloud de diffusion en continu que vous utilisez.
-- **[!UICONTROL Attribution de champs de jeu de données et de mappage]**: Affiche le jeu de données et le schéma cible que vous utilisez pour votre flux de données.
+- **[!UICONTROL Connexion]**: affiche le nom de votre compte, le type de source et d’autres informations diverses spécifiques à la source de stockage dans le cloud de diffusion en continu que vous utilisez.
+- **[!UICONTROL Attribution de champs de jeu de données et de mappage]**: affiche le jeu de données et le schéma cible que vous utilisez pour votre flux de données.
 
 Une fois que vous avez vérifié votre flux de données, sélectionnez **[!UICONTROL Terminer]** et patientez quelques instants le temps que le flux de données soit créé.
 

@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;données de stockage cloud;diffusion en continu de données;diffusion en continu
+keywords: Experience Platform;accueil;rubriques les plus consultées;données de stockage dans le cloud;données en continu;diffusion en continu
 solution: Experience Platform
 title: Création d’un flux de données en flux continu pour les données brutes à l’aide de l’API Flow Service
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données en continu et les introduire dans Platform à l’aide des connecteurs source et des API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: 9034cd965dff59d6c304b9a7c38d3860311614fe
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 54%
+source-wordcount: '1138'
+ht-degree: 46%
 
 ---
 
@@ -41,7 +41,7 @@ Ce tutoriel nécessite également que vous disposiez d’un identifiant de conne
 
 ## Créer un schéma XDM cible {#target-schema}
 
-Pour que les données sources soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Platform contenant les données sources. Ce schéma XDM cible étend également le XDM. [!DNL Individual Profile] classe .
+Pour que les données sources soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données Platform dans lequel les données source sont contenues. Ce schéma XDM cible étend également le XDM. [!DNL Individual Profile] classe .
 
 Pour créer un schéma XDM cible, envoyez une requête de POST à la fonction `/schemas` point d’entrée du [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -325,7 +325,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ## Récupération d’une liste de spécifications de flux de données {#specs}
 
-Un flux de données est chargé de collecter des données à partir de sources et de les importer dans Platform. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en effectuant une requête GET à l’API [!DNL Flow Service]. 
+Un flux de données est chargé de collecter des données à partir de sources et de les importer dans Platform. Pour créer un flux de données, vous devez d’abord obtenir les spécifications du flux de données en adressant une demande de GET à la fonction [!DNL Flow Service] API.
 
 **Format d’API**
 
@@ -481,6 +481,86 @@ Une réponse réussie renvoie l’identifiant (`id`) du flux de données nouvell
     "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
+
+## Données de publication pour l’ingestion
+
+Consultez l’exemple de charge utile ci-dessous pour obtenir des exemples de code json brut ou compatible XDM que vous pouvez envoyer pour ingestion.
+
+>[!TIP]
+>
+>Les exemples suivants s’appliquent à chacun des trois :
+>
+>- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+>- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+>- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
+
+>[!BEGINTABS]
+
+>[!TAB Données brutes]
+
+```json
+'{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!TAB Données XDM]
+
+```json
+{
+  "header": {
+    "schemaRef": {
+      "id": "https://ns.adobe.com/aepstreamingservicesint/schemas/73cae7e6db06ebca535cd973e3ece85e66253962f504e7d8",
+      "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+    }
+  },
+  "body": {
+    "xdmMeta": {
+      "schemaRef": {
+        "id": "https://ns.adobe.com/aepstreamingservicesint/schemas/73cae7e6db06ebca535cd973e3ece85e66253962f504e7d8",
+        "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.0"
+      }
+    },
+    "xdmEntity": {
+      "_id": "acme",
+      "workEmail": {
+        "address": "mike@acme.com",
+        "primary": true,
+        "type": "work",
+        "status": "active"
+      },
+      "person": {
+        "gender": "male",
+        "name": {
+          "firstName": "Mike",
+          "lastName": "Wazowski"
+        },
+        "birthDate": "1985-01-01"
+      },
+      "identityMap": {
+        "ecid": [
+          {
+            "id": "01262118050522051420082102000000000000"
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+>[!ENDTABS]
 
 ## Étapes suivantes
 
