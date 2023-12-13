@@ -1,25 +1,25 @@
 ---
-title: Cas d’utilisation des attributs dérivés basés sur des déciles
-description: Ce guide décrit les étapes requises pour utiliser Query Service afin de créer des attributs dérivés basés sur des déciles à utiliser avec vos données de profil.
+title: Cas d’utilisation des jeux de données dérivés basés sur des déciles
+description: Ce guide décrit les étapes requises pour utiliser Query Service afin de créer des jeux de données dérivés basés sur des déciles à utiliser avec vos données Profile.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 3%
+source-wordcount: '1511'
+ht-degree: 2%
 
 ---
 
-# Cas d’utilisation des attributs dérivés basés sur un décile
+# Cas d’utilisation des jeux de données dérivés basés sur le décile
 
-Les attributs dérivés facilitent les cas d’utilisation complexes pour l’analyse de données à partir du lac de données qui peuvent être utilisées avec d’autres services Platform en aval ou publiées dans vos données Real-time Customer Profile.
+Les jeux de données dérivés facilitent des cas d’utilisation complexes pour l’analyse de données provenant du lac de données qui peuvent être utilisées avec d’autres services Platform en aval ou publiées dans vos données Real-time Customer Profile.
 
-Cet exemple de cas d’utilisation montre comment créer des attributs dérivés basés sur des déciles à utiliser avec vos données Real-time Customer Profile. En prenant l’exemple d’un scénario de fidélité des compagnies aériennes, ce guide vous explique comment créer un jeu de données qui utilise des déciles catégoriques pour segmenter et créer des audiences en fonction d’attributs de classement.
+Cet exemple de cas d’utilisation montre comment créer des jeux de données dérivés basés sur des déciles à utiliser avec vos données Real-time Customer Profile. En prenant l’exemple d’un scénario de fidélité des compagnies aériennes, ce guide vous explique comment créer un jeu de données qui utilise des déciles catégoriques pour segmenter et créer des audiences en fonction d’attributs de classement.
 
 Les concepts clés suivants sont illustrés :
 
 * Création de schémas pour le groupement des déciles.
 * Création catégorielle de décile.
-* Création d’attributs dérivés complexes.
+* Création de jeux de données dérivés complexes.
 * Calcul des déciles sur une période de recherche arrière.
 * Exemple de requête pour démontrer l’agrégation, le classement et l’ajout d’identités uniques afin de permettre la génération d’audiences sur la base de ces compartiments déciles.
 
@@ -27,16 +27,16 @@ Les concepts clés suivants sont illustrés :
 
 Ce guide nécessite une compréhension pratique de [exécution de requête dans Query Service](../best-practices/writing-queries.md) et les composants suivants de Adobe Experience Platform :
 
-* [Présentation de Real-Time Customer Profile](../../profile/home.md): Fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
-* [Principes de base de la composition des schémas](../../xdm/schema/composition.md): Cette section présente les schémas de modèle de données d’expérience (XDM) et les blocs de création, les principes et les bonnes pratiques pour la composition de schémas.
-* [Comment activer un schéma pour Real-time Customer Profile](../../profile/tutorials/add-profile-data.md): Ce tutoriel décrit les étapes nécessaires à l’ajout de données à Real-time Customer Profile.
-* [Définition d’un type de données personnalisé](../../xdm/api/data-types.md): Les types de données sont utilisés comme champs de type référence dans des classes ou des groupes de champs de schéma et permettent l’utilisation cohérente d’une structure à plusieurs champs qui peut être incluse n’importe où dans le schéma.
+* [Présentation de Real-Time Customer Profile](../../profile/home.md): fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
+* [Principes de base de la composition des schémas](../../xdm/schema/composition.md): présentation des schémas de modèle de données d’expérience (XDM) et des blocs de création, principes et bonnes pratiques pour la composition de schémas.
+* [Comment activer un schéma pour Real-time Customer Profile](../../profile/tutorials/add-profile-data.md): ce tutoriel décrit les étapes nécessaires à l’ajout de données à Real-time Customer Profile.
+* [Définition d’un type de données personnalisé](../../xdm/api/data-types.md): les types de données sont utilisés comme champs de type référence dans les classes ou les groupes de champs de schéma et permettent l’utilisation cohérente d’une structure à plusieurs champs qui peut être incluse n’importe où dans le schéma.
 
 ## Objectifs
 
-L’exemple donné dans ce document utilise des déciles pour créer des attributs dérivés pour classer les données d’un schéma de fidélité des compagnies aériennes. Les attributs dérivés permettent d’optimiser l’utilité de vos données en identifiant une audience en fonction du n % supérieur pour une catégorie choisie.
+L’exemple donné dans ce document utilise des déciles pour créer des jeux de données dérivés afin de classer les données d’un schéma de fidélité des compagnies aériennes. Les jeux de données dérivés vous permettent de maximiser l’utilité de vos données en identifiant une audience en fonction du n % supérieur pour une catégorie choisie.
 
-## Création d’attributs dérivés basés sur des déciles
+## Création de jeux de données dérivés basés sur des déciles
 
 Pour définir le classement des déciles en fonction d’une dimension spécifique et d’une mesure correspondante, un schéma doit être conçu pour permettre le groupement des déciles.
 
@@ -46,17 +46,17 @@ Ce guide utilise un jeu de données de fidélité des compagnies aériennes pour
 
 Grâce à Query Service, vous pouvez créer un jeu de données contenant des déciles catégoriels, qui peuvent ensuite être segmentés pour créer des audiences en fonction du classement des attributs. Les concepts affichés dans les exemples suivants peuvent être appliqués pour créer d’autres jeux de données de compartiment à décile, à condition qu’une catégorie soit définie et qu’une mesure soit disponible.
 
-L’exemple de données sur la fidélité des compagnies aériennes utilise une variable [Classe XDM ExperienceEvents](../../xdm/classes/experienceevent.md). Chaque événement est un enregistrement d’une transaction commerciale pour le kilométrage, qu’il soit crédité ou débité, et l’état de fidélité de l’appartenance à &quot;flyer&quot;, &quot;Fréquent&quot;, &quot;Argent&quot; ou &quot;Or&quot;. Le champ d’identité Principal est : `membershipNumber`.
+L’exemple de données sur la fidélité des compagnies aériennes utilise une variable [Classe XDM ExperienceEvents](../../xdm/classes/experienceevent.md). Chaque événement est un enregistrement d’une transaction commerciale pour le kilométrage, qu’il soit crédité ou débité, et l’état de fidélité de l’appartenance à &quot;flyer&quot;, &quot;Fréquent&quot;, &quot;Argent&quot; ou &quot;Or&quot;. Le champ d’identité principale est `membershipNumber`.
 
 ### Exemples de jeux de données
 
-Le jeu de données initial sur la fidélité des compagnies aériennes pour cet exemple est &quot;Données sur la fidélité des compagnies aériennes&quot; et comporte le schéma suivant. Notez que l’identité Principale du schéma est `_profilefoundationreportingstg.membershipNumber`.
+Le jeu de données initial sur la fidélité des compagnies aériennes pour cet exemple est &quot;Données sur la fidélité des compagnies aériennes&quot; et comporte le schéma suivant. Notez que l’identité principale du schéma est `_profilefoundationreportingstg.membershipNumber`.
 
 ![Schéma des données de fidélité des compagnies aériennes.](../images/use-cases/airline-loyalty-data.png)
 
-**Données d’exemple**
+**Exemples de données**
 
-Le tableau suivant affiche les exemples de données contenus dans la variable `_profilefoundationreportingstg` utilisé pour cet exemple. Il fournit un contexte pour l’utilisation de compartiments déciles pour créer des attributs dérivés complexes.
+Le tableau suivant affiche les exemples de données contenus dans la variable `_profilefoundationreportingstg` utilisé pour cet exemple. Il fournit un contexte pour l’utilisation de compartiments déciles pour créer des jeux de données dérivés complexes.
 
 >[!NOTE]
 >
@@ -88,11 +88,11 @@ Les données ingérées dans Experience Platform pour être utilisées par Real-
 
 Créez ensuite un type de données à réutiliser pour tous les groupes de champs liés aux déciles. La création du groupe de champs de décile est une étape unique par environnement de test. Il peut également être réutilisé pour tous les schémas en décile.
 
-### Créer un espace de noms d’identité et le marquer comme identifiant Principal {#identity-namespace}
+### Créer un espace de noms d’identité et le marquer comme identifiant principal {#identity-namespace}
 
-Une identité Principale doit être affectée à tout schéma créé pour être utilisé avec des déciles. Vous pouvez [définition d’un champ d’identité dans l’interface utilisateur des schémas Adobe Experience Platform](../../xdm/ui/fields/identity.md#define-an-identity-field)ou au moyen de la fonction [API Schema Registry](../../xdm/api/descriptors.md#create).
+Une identité principale doit être affectée à tout schéma créé pour utilisation avec des déciles. Vous pouvez [définition d’un champ d’identité dans l’interface utilisateur des schémas Adobe Experience Platform](../../xdm/ui/fields/identity.md#define-an-identity-field)ou au moyen de la fonction [API Schema Registry](../../xdm/api/descriptors.md#create).
 
-Query Service vous permet également de définir une identité ou une identité Principale pour les champs de jeu de données de schémas ad hoc directement via SQL. Consultez la documentation relative à [définition d’une identité secondaire et d’une identité Principale dans les identités de schéma ad hoc](../data-governance/ad-hoc-schema-identities.md) pour plus d’informations.
+Query Service vous permet également de définir une identité ou une identité principale pour les champs de jeux de données de schémas ad hoc directement via SQL. Consultez la documentation relative à [définition d’une identité secondaire et d’une identité principale dans les identités de schéma ad hoc](../data-governance/ad-hoc-schema-identities.md) pour plus d’informations.
 
 ### Créer une requête pour calculer les déciles sur une période de recherche arrière {#create-a-query}
 
@@ -295,8 +295,8 @@ Une corrélation entre le numéro de classement et le centile est garantie dans 
 
 ### Exécuter le modèle de requête
 
-Exécutez la requête pour renseigner le jeu de données de décile. Vous pouvez également enregistrer la requête en tant que modèle et la planifier pour qu’elle s’exécute à un rythme. Lors de l’enregistrement en tant que modèle, la requête peut également être mise à jour afin d’utiliser le modèle de création et d’insertion qui fait référence au modèle `table_exists` . Informations supplémentaires sur l’utilisation de la variable `table_exists`se trouve dans la fonction [Guide de syntaxe SQL](../sql/syntax.md#table-exists).
+Exécutez la requête pour renseigner le jeu de données de décile. Vous pouvez également enregistrer la requête en tant que modèle et la planifier pour qu’elle s’exécute à un rythme. Lors de l’enregistrement en tant que modèle, la requête peut également être mise à jour afin d’utiliser le modèle de création et d’insertion qui fait référence au modèle `table_exists` . Plus d’informations sur l’utilisation de la variable `table_exists`se trouve dans la fonction [Guide de syntaxe SQL](../sql/syntax.md#table-exists).
 
 ## Étapes suivantes
 
-L’exemple de cas d’utilisation fourni ci-dessus met en évidence les étapes à suivre pour rendre les attributs de décile disponibles dans Real-Time Customer Profile. Cela permet à Segmentation Service, soit par le biais d’une interface utilisateur, soit via une API RESTful, de générer des audiences en fonction de ces compartiments déciles. Voir [Présentation de Segmentation Service](../../segmentation/home.md) pour plus d’informations sur la création, l’évaluation et l’accès aux segments.
+L’exemple de cas d’utilisation fourni ci-dessus met en évidence les étapes permettant de rendre des jeux de données dérivés de déciles disponibles dans Real-time Customer Profile. Cela permet à Segmentation Service, soit par le biais d’une interface utilisateur, soit via une API RESTful, de générer des audiences en fonction de ces compartiments déciles. Voir [Présentation de Segmentation Service](../../segmentation/home.md) pour plus d’informations sur la création, l’évaluation et l’accès aux segments.

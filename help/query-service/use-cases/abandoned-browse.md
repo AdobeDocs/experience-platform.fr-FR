@@ -3,10 +3,10 @@ keywords: Experience Platform;service de requête;service de requête;requête
 title: Exemple de cas d’utilisation pour Adobe Experience Platform Query Service
 description: Exemple de bout en bout montrant la versatilité et les avantages de Adobe Experience Platform Query Service.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 79966442f5333363216da17342092a71335a14f0
+source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 3%
+source-wordcount: '695'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,7 @@ Ce document et la présentation vidéo qui l’accompagne fournissent un workflo
 * Méthodes pour créer la requête en fonction de votre architecture de données existante.
 * Assurez-vous de la qualité des données en fonction de vos besoins et des méthodes permettant d’atténuer tout manque à gagner.
 * Processus de planification de l’exécution d’une requête à une fréquence définie en vue de son utilisation en aval dans la segmentation et les destinations pour la personnalisation.
-* Facilité pour les marketeurs d’inclure des attributs dérivés dans leurs audiences grâce à la puissance de [!DNL Query Service].
+* Facilité pour les marketeurs d’inclure des jeux de données dérivés dans leurs audiences grâce à la puissance de [!DNL Query Service].
 
 ## Objectifs {#objectives}
 

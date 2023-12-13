@@ -2,10 +2,10 @@
 title: Suivi des signaux de données pour générer la valeur de durée de vie client
 description: Ce guide fournit une démonstration de bout en bout sur l’utilisation de Data Distiller et de tableaux de bord définis par l’utilisateur avec Real-time Customer Data Platform pour mesurer et visualiser la valeur de durée de vie des clients.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
 workflow-type: tm+mt
-source-wordcount: '1269'
-ht-degree: 11%
+source-wordcount: '1263'
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ L’infographie suivante illustre le cycle de collecte, de manipulation, d’ana
 
 ![Infographie de parcours aller-retour des données de l’observation à l’analyse en action.](../images/use-cases/infographic-use-case-cycle.png)
 
-Ce cas pratique de bout en bout montre comment les signaux de données peuvent être capturés et modifiés pour calculer l’attribut dérivé de la valeur de durée de vie du client. Ces attributs dérivés peuvent ensuite être appliqués à vos données de profil Real-Time CDP et peuvent être utilisés avec des tableaux de bord définis par l’utilisateur pour créer un tableau de bord en vue de l’analyse des informations. Grâce à Data Distiller, vous pouvez étendre le modèle de données d’insights Real-Time CDP et utiliser l’attribut dérivé de la ligne de commande et les insights de tableau de bord pour créer une nouvelle audience et l’activer vers une destination souhaitée. Ces audiences hautement performantes peuvent ensuite être utilisées pour alimenter votre prochaine campagne marketing.
+Ce cas pratique de bout en bout montre comment les signaux de données peuvent être capturés et modifiés pour calculer l’attribut dérivé de la valeur de durée de vie du client. Ces jeux de données dérivés peuvent ensuite être appliqués à vos données de profil Real-Time CDP et peuvent être utilisés avec des tableaux de bord définis par l’utilisateur pour créer un tableau de bord en vue de l’analyse des informations. Grâce à Data Distiller, vous pouvez étendre le modèle de données d’insights Real-Time CDP et utiliser les jeux de données et les informations de tableau de bord dérivés du CLV pour créer une nouvelle audience et l’activer vers une destination souhaitée. Ces audiences hautement performantes peuvent ensuite être utilisées pour alimenter votre prochaine campagne marketing.
 
 Ce guide est conçu pour vous aider à mieux comprendre l’expérience client en mesurant les signaux de données sur les points de contact clés qui pilotent la ligne de commande et en mettant en oeuvre un cas d’utilisation similaire dans votre environnement. L’ensemble du processus est résumé dans l’image ci-dessous.
 
@@ -34,9 +34,9 @@ Ce guide nécessite une compréhension pratique des composants suivants de Adobe
 
 Ce guide nécessite que vous disposiez de la variable [Distiller de données](../data-distiller/overview.md) SKU dans le cadre de votre offre de package. Si vous n’êtes pas certain d’avoir reçu cette notification, contactez votre représentant Adobe.
 
-## Création d’un attribut dérivé {#create-derived-attribute}
+## Création d’un jeu de données dérivé {#create-derived-dataset}
 
-La première étape de la création de votre CLV consiste à créer un attribut dérivé à partir des signaux de données capturés à partir des actions de l’utilisateur. Ce cas d’utilisation particulier est capturé dans un document distinct sur un schéma de fidélité des compagnies aériennes. Consultez le guide pour savoir comment [Utilisez Query Service pour créer des attributs dérivés basés sur des déciles à utiliser avec vos données de profil.](./deciles-use-case.md). Des exemples complets et des explications sont fournis dans le document qui explique les étapes suivantes :
+La première étape de la création de votre CLV consiste à créer un jeu de données dérivé à partir des signaux de données capturés à partir des actions de l’utilisateur. Ce cas d’utilisation particulier est capturé dans un document distinct sur un schéma de fidélité des compagnies aériennes. Consultez le guide pour savoir comment [Utilisez Query Service pour créer des jeux de données dérivés basés sur des déciles à utiliser avec vos données de profil.](./deciles-use-case.md). Des exemples complets et des explications sont fournis dans le document qui explique les étapes suivantes :
 
 * Créez un schéma pour permettre le groupement des déciles.
 * Utilisez Query Service pour créer des déciles.
@@ -49,11 +49,11 @@ La première étape de la création de votre CLV consiste à créer un attribut 
 
 Ensuite, vous devez créer un modèle de données personnalisé ou étendre un modèle de données Adobe Real-Time CDP existant pour interagir avec vos informations de création de rapports CLV. Consultez la documentation pour savoir comment [créer un modèle de données d’informations sur les rapports via Query Service afin de l’utiliser avec les données de magasin accélérées et les tableaux de bord définis par l’utilisateur.](../data-distiller/query-accelerated-store/reporting-insights-data-model.md#build-a-reporting-insights-data-model). Ce tutoriel couvre les étapes suivantes :
 
-* Créer un modèle de rapport d’informations avec Data Distiller.
+* Créez un modèle pour créer des rapports d’informations avec Data Distiller.
 * Créer des tableaux, des relations et renseigner des données.
-* Interroger le modèle de données de rapport d’informations.
+* Interrogez le modèle de données d’informations sur les rapports.
 * Étendez votre modèle de données avec le modèle de données d’insights Real-Time CDP.
-* Créer des tableaux des dimensions pour étendre votre modèle de rapport d’informations.
+* Créez des tableaux de dimension pour étendre votre modèle d’informations sur les rapports.
 * Interroger votre modèle de données d’informations de rapports de magasin accéléré et étendu
 
 Consultez la documentation du modèle de données Real-time Customer Data Platform Insights pour savoir comment [personnaliser vos modèles de requête SQL pour créer des rapports Real-Time CDP pour vos cas d’utilisation de marketing et d’indicateurs clés de performance (ICP)](../../dashboards/cdp-insights-data-model.md).
@@ -62,7 +62,7 @@ Veillez à définir un planning pour actualiser votre modèle de données person
 
 ## Création d’un tableau de bord pour recueillir des informations {#build-a-custom-dashboard}
 
-Maintenant que vous avez créé votre modèle de données personnalisé, vous êtes prêt à visualiser vos données à l’aide de requêtes personnalisées et de tableaux de bord définis par l’utilisateur. Consultez la présentation des tableaux de bord définis par l’utilisateur pour obtenir des conseils complets sur la manière de procéder. [création d’un tableau de bord personnalisé](../../dashboards/user-defined-dashboards.md). Le guide de l’interface utilisateur comprend des détails sur :
+Maintenant que vous avez créé votre modèle de données personnalisé, vous êtes prêt à visualiser vos données avec des requêtes personnalisées et des tableaux de bord définis par l’utilisateur. Consultez la présentation des tableaux de bord définis par l’utilisateur pour obtenir des conseils complets sur la manière de procéder. [création d’un tableau de bord personnalisé](../../dashboards/user-defined-dashboards.md). Le guide de l’interface utilisateur comprend des détails sur :
 
 * Comment créer un widget.
 * Comment utiliser le compositeur de widgets.

@@ -1,16 +1,16 @@
 ---
-title: Personnaliser les expériences sur site pour les visiteurs et visiteuses inconnus à l’aide de la reconnaissance des visiteurs et visiteuses par les partenaires
+title: Personnaliser les expériences sur site pour les visiteurs inconnus à l’aide de la reconnaissance des visiteurs avec l’aide de partenaires
 description: Découvrez comment utiliser la reconnaissance des visiteurs et visiteuses par les partenaires pour personnaliser les expériences sur site de vos visiteurs et visiteuses.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
 workflow-type: tm+mt
-source-wordcount: '2696'
-ht-degree: 91%
+source-wordcount: '2673'
+ht-degree: 89%
 
 ---
 
-# Personnaliser les expériences sur site pour les visiteurs et visiteuses inconnus à l’aide de la reconnaissance des visiteurs et visiteuses par les partenaires
+# Personnaliser les expériences sur site pour les visiteurs inconnus à l’aide de la reconnaissance des visiteurs avec l’aide de partenaires
 
 >[!AVAILABILITY]
 >
@@ -39,7 +39,7 @@ Cette marque choisit d’exploiter la technologie de reconnaissance des partenai
 Lorsque vous envisagez d’utiliser des attributs fournis par les partenaires pour offrir des expériences personnalisées à vos visiteurs et visiteuses authentifiés et non authentifiés, tenez compte des conditions préalables suivantes dans votre processus de planification :
 
 * Quelles entrées sont attendues par la technologie de reconnaissance de votre partenaire afin de pouvoir superposer des attributs supplémentaires ?
-* Dans quelle mesure êtes-vous à l’aise avec la personnalisation sur différents canaux et pour différents cas d’utilisation basés sur des attributs dérivés probabilistes, par rapport à des attributs confirmés déterministes ?
+* Dans quelle mesure êtes-vous à l’aise pour fournir de la personnalisation sur différents canaux et pour différents cas d’utilisation basés sur des jeux de données dérivés de manière probabiliste, par rapport à des attributs confirmés déterministes ?
 * Comment l’expérience d’une personne visiteuse préauthentifiée mais reconnue doit-elle changer lorsqu’elle s’authentifie ?
 
 ### Fonctionnalités de l’interface utilisateur, composants Platform et produits Experience Cloud que vous allez utiliser {#ui-functionality-and-elements}

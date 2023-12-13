@@ -4,10 +4,10 @@ user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
-source-git-commit: cd97165d4e4d8ed984c4705f614c8d77eb750ed6
+source-git-commit: f319f05d600dfd2bc4840ff56aefb8098dbfb7aa
 workflow-type: tm+mt
 source-wordcount: '309'
-ht-degree: 89%
+ht-degree: 86%
 
 ---
 
@@ -22,13 +22,13 @@ ht-degree: 89%
 - Data Distiller {#data-distiller}
    - [Aperçu](data-distiller/overview.md)
    - [Utilisation des licences](data-distiller/license-usage.md)
+   - Jeux de données dérivés {#derived-datasets}
+      - [Vue d’ensemble](data-distiller/derived-datasets/overview.md)
+      - [Flux SQL transparent](data-distiller/derived-datasets/seamless-sql-flow.md)
+      - [Création de jeux de données dérivés basés sur des déciles](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - Magasin de requêtes accélérées {#query-accelerated-store}
       - [Envoi de requêtes accélérées](data-distiller/query-accelerated-store/send-accelerated-queries.md)
       - [Guide sur le modèle de données d’insights de rapports](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
-   - Attributs dérivés {#derived-attributes}
-      - [Aperçu](data-distiller/derived-attributes/overview.md)
-      - [Flux SQL transparent](data-distiller/derived-attributes/seamless-sql-flow.md)
-      - [Créer des attributs dérivés basés sur des déciles](data-distiller/derived-attributes/decile-based-derived-attributes.md)
    - Pipelines de fonctionnalités AI/ML {#ml-feature-pipelines}
       - [Vue d’ensemble](data-distiller/ml-feature-pipelines/overview.md)
       - [Connexion aux notebooks Jupyter](data-distiller/ml-feature-pipelines/establish-connection.md)
@@ -43,7 +43,7 @@ ht-degree: 89%
    - [Créer un rapport de tendance d’événements](use-cases/trended-report-of-events.md)
    - [Analyse du consentement](use-cases/consent-analysis.md)
    - [Valeur durée de vie client](use-cases/customer-lifetime-value.md)
-   - [Attributs dérivés basés sur les déciles](use-cases/deciles-use-case.md)
+   - [Jeux de données dérivés basés sur le décile](use-cases/deciles-use-case.md)
    - [Correspondance approximative](use-cases/fuzzy-match.md)
    - [Répertorier les pages vues d’un utilisateur ou d’une utilisatrice](use-cases/list-visitor-sessions.md)
    - [Répertorier les visiteurs et visiteuses selon leurs vues de page](use-cases/visitors-by-number-of-page-views.md)
