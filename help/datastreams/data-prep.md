@@ -1,13 +1,13 @@
 ---
 title: Préparation des données pour la collecte de données
 description: Découvrez comment mapper vos données à un schéma d’événement du modèle de données d’expérience (XDM) lors de la configuration d’un flux de données pour les SDK web et mobile d’Adobe Experience Platform.
-source-git-commit: 935881ee8c8aedb672bbd6233ea22aa7b26b28a6
+exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 64%
+source-wordcount: '1192'
+ht-degree: 59%
 
 ---
-
 
 # Préparation des données pour la collecte de données
 
@@ -154,7 +154,7 @@ Les mêmes règles s’appliquent à l’objet JSON pour capturer les propriét�
 
 Vous pouvez sélectionner l’option pour charger l’objet sous forme de fichier ou coller l’objet brut dans la zone de texte fournie. Si le fichier JSON est valide, un schéma d’aperçu s’affiche dans le panneau de droite. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
-![Exemple JSON de données entrantes attendues](assets/data-prep/select-data.png)
+![Exemple JSON de données entrantes attendues.](assets/data-prep/select-data.png)
 
 >[!NOTE]
 >
@@ -171,25 +171,25 @@ L’étape **[!UICONTROL Mappage]** s’affiche et vous permet de mapper les cha
 
 Pour créer une règle de mappage, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**.
 
-![Ajouter un nouveau mappage](assets/data-prep/add-new-mapping.png)
+![Ajout d’un nouveau mappage.](assets/data-prep/add-new-mapping.png)
 
 Sélectionnez l’icône de source (![icône de source](assets/data-prep/source-icon.png)) et, dans la boîte de dialogue qui s’affiche, sélectionnez le champ source que vous souhaitez mapper dans la zone de travail fournie. Une fois que vous avez choisi un champ, utilisez le bouton **[!UICONTROL Sélectionner]** pour continuer.
 
-![Sélection du champ à mapper dans le schéma source](assets/data-prep/source-mapping.png)
+![Sélection du champ à mapper dans le schéma source.](assets/data-prep/source-mapping.png)
 
 Ensuite, sélectionnez l’icône de schéma (![icône de schéma](assets/data-prep/schema-icon.png)) pour ouvrir une boîte de dialogue similaire pour le schéma d’événement cible. Sélectionnez le champ vers lequel vous souhaitez mapper les données avant de confirmer à l’aide du bouton **[!UICONTROL Sélectionner]**.
 
-![Sélection du champ à mapper dans le schéma cible](assets/data-prep/target-mapping.png)
+![Sélection du champ à mapper dans le schéma cible.](assets/data-prep/target-mapping.png)
 
 La page de mappage réapparaît et affiche le mappage des champs terminé. La section **[!UICONTROL Progression du mappage]** est mise à jour pour refléter le nombre total de champs qui ont été mappés.
 
-![Progression reflétée du champ mappé](assets/data-prep/field-mapped.png)
+![Champ mappé avec succès et progression reflétée.](assets/data-prep/field-mapped.png)
 
 >[!TIP]
 >
 >Si vous souhaitez mapper un tableau d’objets (dans le champ source) à un tableau d’objets différents (dans le champ cible), ajoutez `[*]` après le nom du tableau dans les chemins d’accès aux champs source et de destination, comme illustré ci-dessous.
 >
->![Mappage d’objet de tableau](assets/data-prep/array-object-mapping.png)
+>![Mappage d’objet Array.](assets/data-prep/array-object-mapping.png)
 
 ### Importer les règles de mappage existantes {#import-mapping}
 
@@ -201,11 +201,11 @@ Si vous avez déjà créé un flux de données, vous pouvez réutiliser ses règ
 
 Pour commencer, sélectionnez **[!UICONTROL Importer le mappage]**.
 
-![Image illustrant le bouton [!UICONTROL Importer le mappage] sélectionné](assets/data-prep/import-mapping-button.png).
+![Bouton Mappage d’importation en cours de sélection.](assets/data-prep/import-mapping-button.png)
 
 Dans la boîte de dialogue qui s’affiche, sélectionnez le flux de données dont vous souhaitez importer les règles de mappage. Une fois le flux de données choisi, sélectionnez **[!UICONTROL Aperçu]**.
 
-![Image illustrant un flux de données existant sélectionné](assets/data-prep/select-mapping-rules.png).
+![Sélection d’un flux de données existant.](assets/data-prep/select-mapping-rules.png)
 
 >[!NOTE]
 >
@@ -213,7 +213,7 @@ Dans la boîte de dialogue qui s’affiche, sélectionnez le flux de données do
 
 L’écran suivant affiche un aperçu des règles de mappage enregistrées pour le flux de données sélectionné. Assurez-vous que les mappages affichés vous conviennent, puis sélectionnez **[!UICONTROL Importer]** pour confirmer et ajouter les mappages au nouveau flux de données.
 
-![Image illustrant les règles de mappage à importer](assets/data-prep/import-mapping-rules.png).
+![Règles de mappage à importer.](assets/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >

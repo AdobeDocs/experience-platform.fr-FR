@@ -2,10 +2,10 @@
 title: Création et configuration des flux de données
 description: Découvrez comment connecter votre intégration SDK Web côté client à d’autres produits Adobe et destinations tierces.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
 workflow-type: tm+mt
-source-wordcount: '2725'
-ht-degree: 58%
+source-wordcount: '2707'
+ht-degree: 56%
 
 ---
 
@@ -44,7 +44,7 @@ La géolocalisation et les paramètres de recherche réseau vous aident à défi
 
 Développez l’objet **[!UICONTROL Géolocalisation et recherche de réseau]** pour configurer les paramètres décrits ci-dessous.
 
-![Capture d’écran de l’interface utilisateur de Platform montrant l’écran de configuration de la banque de données avec les paramètres de géolocalisation et de recherche réseau mis en surbrillance.](assets/configure/geolookup.png)
+![Écran de configuration des flux de données avec les paramètres de géolocalisation et de recherche réseau mis en surbrillance.](assets/configure/geolookup.png)
 
 | Paramètre | Description |
 | --- | --- |
@@ -63,7 +63,7 @@ La variable **[!UICONTROL Recherche de périphérique]** vous permettent de sél
 
 Développez l’objet **[!UICONTROL Recherche de périphérique]** pour configurer les paramètres décrits ci-dessous.
 
-![Capture d’écran de l’interface utilisateur de Platform montrant l’écran de configuration de la banque de données avec les paramètres de recherche de périphérique mis en surbrillance.](assets/configure/device-lookup.png)
+![Écran de configuration des flux de données avec les paramètres de recherche d’appareil surlignés.](assets/configure/device-lookup.png)
 
 >[!IMPORTANT]
 >
@@ -109,7 +109,7 @@ Ensuite, si vous configurez le flux de données d’Experience Platform, suivez 
 
 Après avoir configuré un nouveau flux de données ou sélectionné un flux de données existant à afficher, sa page de détails s’affiche. Vous y trouverez des informations supplémentaires sur le flux de données, y compris son identifiant.
 
-![Page de détails d’un flux de données créé](assets/configure/view-details.png)
+![Page de détails des flux de données.](assets/configure/view-details.png)
 
 À partir de l’écran de détails du flux de données, vous pouvez [ajouter des services](#add-services) pour activer les fonctionnalités des produits Adobe Experience Cloud auxquels vous avez accès. Vous pouvez également modifier la [configuration de base](#create) du flux de données, mettre à jour ses [règles de mappage](./data-prep.md), [copier le flux de données](#copy) ou le supprimer entièrement.
 
@@ -117,11 +117,11 @@ Après avoir configuré un nouveau flux de données ou sélectionné un flux de 
 
 Sur la page de détails d’un flux de données, sélectionnez **[!UICONTROL Ajouter un service]** pour commencer à ajouter les services disponibles à ce flux de données.
 
-![Sélectionner Ajouter un service pour continuer](assets/configure/add-service.png)
+![Sélectionnez Ajouter un service pour continuer.](assets/configure/add-service.png)
 
 Sur l’écran suivant, utilisez le menu déroulant pour sélectionner un service à configurer pour ce flux de données. Seuls les services auxquels vous avez accès sont répertoriés dans cette liste.
 
-![Sélectionner un service dans la liste](assets/configure/service-selection.png)
+![Sélectionnez un service dans la liste.](assets/configure/service-selection.png)
 
 Sélectionnez le service souhaité, renseignez les options de configuration qui s’affichent, puis sélectionnez **[!UICONTROL Enregistrer]** pour ajouter le service au flux de données. Tous les services ajoutés s’affichent dans la vue des détails du flux de données.
 
@@ -137,7 +137,7 @@ Les sous-sections ci-dessous décrivent les options de configuration de chaque s
 
 Ce service contrôle si et comment les données sont envoyées à Adobe Analytics. Vous trouverez des informations supplémentaires dans le guide sur l’[envoi de données à Analytics](../edge/data-collection/adobe-analytics/analytics-overview.md).
 
-![Bloc de paramètres d’Adobe Analytics](assets/configure/analytics-config.png)
+![Paramètres de flux de données Adobe Analytics.](assets/configure/analytics-config.png)
 
 | Paramètre | Description |
 | --- | --- |
@@ -148,7 +148,7 @@ Ce service contrôle si et comment les données sont envoyées à Adobe Analytic
 
 Ce service contrôle si et comment les données sont envoyées à Adobe Audience Manager. Il suffit d’activer cette section pour envoyer des données à Audience Manager. Les autres paramètres sont facultatifs, mais recommandés.
 
-![Bloc de paramètres d’Adobe Audience Manager](assets/configure/audience-manager-config.png)
+![Adobe des paramètres d’Audience Manager.](assets/configure/audience-manager-config.png)
 
 | Paramètre | Description |
 | --- | --- |
@@ -167,7 +167,7 @@ Ce service contrôle si et comment les données sont envoyées à Adobe Audience
 
 Ce service contrôle si et comment les données sont envoyées à Adobe Experience Platform.
 
-![Bloc de paramètres d’Adobe Experience Platform](assets/configure/platform-config.png)
+![Paramètres du flux de données Adobe Experience Platform.](assets/configure/platform-config.png)
 
 | Paramètre | Description |
 |---| --- |
@@ -182,7 +182,7 @@ Ce service contrôle si et comment les données sont envoyées à Adobe Experien
 
 Ce service contrôle si et comment les données sont envoyées à Adobe Target.
 
-![Bloc de paramètres d’Adobe Target](assets/configure/target-config.png)
+![Paramètres de flux de données Adobe Target.](assets/configure/target-config.png)
 
 | Paramètre | Description |
 | --- | --- |
@@ -195,7 +195,7 @@ Ce service contrôle si et comment les données sont envoyées à Adobe Target.
 
 Ce service contrôle si et comment les données sont envoyées au [transfert d’événement](../tags/ui/event-forwarding/overview.md).
 
-![Section Transfert d’événement de l’interface utilisateur de configuration](assets/configure/event-forwarding-config.png)
+![section Transfert d’événement de l’écran de configuration du flux de données.](assets/configure/event-forwarding-config.png)
 
 | Paramètre | Description |
 | --- | --- |
@@ -216,15 +216,15 @@ Vous pouvez créer une copie d’un flux de données existant et en modifier les
 
 À partir de la page principale de l’espace de travail [!UICONTROL Flux de données], sélectionnez les points de suspension (**....**) pour le flux de données en question, puis sélectionnez **[!UICONTROL Copier]**.
 
-![Image illustrant l’option [!UICONTROL Copier] sélectionnée dans la vue Liste du flux de données](assets/configure/copy-datastream-list.png).
+![Image montrant l’option Copier sélectionnée dans la vue de liste des flux de données.](assets/configure/copy-datastream-list.png)
 
 Vous pouvez également sélectionner **[!UICONTROL Copier le flux de données]** dans la vue des détails d’un flux de données particulier.
 
-![Image illustrant l’option [!UICONTROL Copier] sélectionnée dans la vue des détails du flux de données](assets/configure/copy-datastream-details.png).
+![Option de copie en cours de sélection dans la vue des détails du flux de données.](assets/configure/copy-datastream-details.png)
 
 Une boîte de dialogue de confirmation s’affiche, vous invitant à fournir un nom unique pour la création du flux de données, ainsi que des détails sur les options de configuration qui seront copiées. Une fois prêt, sélectionnez **[!UICONTROL Copier]**.
 
-![Image de la boîte de dialogue de confirmation pour la copie d’un flux de données](assets/configure/copy-datastream-confirm.png)
+![Boîte de dialogue de confirmation pour copier un flux de données.](assets/configure/copy-datastream-confirm.png)
 
 La page principale de l’espace de travail [!UICONTROL Flux de données] réapparaît avec le nouveau flux de données répertorié.
 
