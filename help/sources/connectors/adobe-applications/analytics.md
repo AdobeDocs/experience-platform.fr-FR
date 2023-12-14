@@ -2,10 +2,10 @@
 title: Connecteur source Adobe Analytics pour les données d’une suite de rapports
 description: Ce document fournit un aperçu d’Analytics et décrit les cas d’utilisation des données Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 251b00e0f0e063859f8d0a0e188fa805c7bf3f87
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 16%
+source-wordcount: '1110'
+ht-degree: 10%
 
 ---
 
@@ -21,13 +21,13 @@ Ce document présente les [!DNL Analytics] et décrit les cas d’utilisation po
 
 ![Graphique illustrant le parcours de données provenant de différentes applications Adobe, y compris Adobe Analytics.](./images/analytics-data-experience-platform.png)
 
-à un niveau élevé, [!DNL Analytics] collecte des données à partir de divers canaux numériques et de plusieurs centres de données dans le monde entier. Une fois les données collectées, les règles VISTA (Visitor Identification, Segmentation and Transformation Architecture) et les règles de traitement sont appliquées pour façonner les données entrantes. Une fois que les données brutes ont subi ce traitement léger, elles sont alors considérées comme prêtes à être utilisées par [!DNL Real-Time Customer Profile]. Dans un processus parallèle mentionné ci-dessus, les mêmes données traitées sont microtraitées par lot et ingérées dans des jeux de données Platform pour être utilisées par [!DNL Data Science Workspace], [!DNL Query Service]et d’autres applications de découverte de données.
+à un niveau élevé, [!DNL Analytics] collecte des données à partir de divers canaux numériques et de plusieurs centres de données dans le monde entier. Une fois les données collectées, les règles VISTA (Visitor Identification, Segmentation and Transformation Architecture) et les règles de traitement sont appliquées pour façonner les données entrantes. Une fois que les données brutes ont subi ce traitement léger, elles sont alors considérées comme prêtes à être utilisées par [!DNL Real-Time Customer Profile]. Dans un processus parallèle mentionné ci-dessus, les mêmes données traitées sont microtraitées par lot et ingérées dans des jeux de données Platform pour être utilisées par [!DNL Query Service]et d’autres applications de découverte de données.
 
 Voir [présentation des règles de traitement](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=fr) pour plus d’informations sur les règles de traitement.
 
 ## Modèle de données d’expérience (XDM)
 
-XDM est une spécification documentée publiquement qui fournit des structures et des définitions courantes pour qu’une application puisse communiquer avec des services sur  Experience Platform.
+XDM est une spécification documentée publiquement qui fournit des structures et des définitions courantes pour qu’une application puisse communiquer avec des services sur Experience Platform.
 
 Le respect des normes XDM permet d’intégrer uniformément les données, ce qui facilite la diffusion des données et la collecte des informations.
 
@@ -45,13 +45,13 @@ Pour plus d’informations sur le mappage des champs entre [!DNL Analytics] et E
 
 ## Quelle est la latence attendue sur Platform pour les données Analytics ?
 
-Le tableau ci-dessous décrit la latence attendue des données Analytics sur Platform. La latence varie selon la configuration client, les volumes de données et les applications clients. Par exemple, si l’implémentation d’Analytics est configurée avec `A4T`, la latence du pipeline passera à 5-10 minutes.
+Le tableau ci-dessous décrit la latence attendue des données Analytics sur Platform. La latence varie en fonction de la configuration client, des volumes de données et des applications client. Par exemple, si l’implémentation d’Analytics est configurée avec `A4T`, la latence du pipeline passera à 5-10 minutes.
 
 | Données Analytics | Latence attendue |
 | -------------- | ---------------- |
 | Nouvelles données pour [!DNL Real-Time Customer Profile] (A4T) **not** enabled) | &lt; 2 minutes |
 | Nouvelles données pour [!DNL Real-Time Customer Profile] (A4T) **is** enabled) | jusqu’à 30 minutes |
-| Nouvelles données pour le lac de données | &lt; 90 minutes |
+| Nouvelles données pour le lac de données | &lt; 90 minutes |
 | Renvoi de moins de 10 milliards d’événements | &lt; 4 semaines |
 
 Le renvoi Analytics pour les environnements de test de production est défini par défaut sur 13 mois. Pour les données Analytics dans les environnements de test hors production, le renvoi est défini sur trois mois. La limite de 10 milliards d&#39;événements mentionnée dans le tableau ci-dessus est strictement en ce qui concerne la latence attendue.
@@ -91,7 +91,7 @@ Ces champs ne sont pas marqués comme des identités. Au lieu de cela, les même
 * `{ "key": "ECID", "value": [ { "id": "<identity>", "primary": <true or false> } ] }`
 * `{ "key": "AACUSTOMID", "value": [ { "id": "<identity>", "primary": false } ] }`
 
-Dans la carte d’identité, si ECID est présent, il est marqué comme identité principale de l’événement. Dans ce cas, AAID peut être basé sur ECID en raison de la variable [Période de grâce d’Identity Service](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). Dans le cas contraire, l’AAID est marqué comme étant l’identité principale de l’événement. L’AACUSTOMID n’est jamais marqué comme l’ID principal de l’événement. Cependant, si AACUSTOMID est présent, AAID est basé sur AACUSTOMID en raison de l’ordre des opérations Experience Cloud.
+Dans la carte d’identité, si ECID est présent, il est marqué comme identité principale de l’événement. Dans ce cas, AAID peut être basé sur ECID en raison de la variable [Période de grâce d’Identity Service](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/grace-period.html). Dans le cas contraire, AAID est marqué comme identité principale de l’événement. L’AACUSTOMID n’est jamais marqué comme l’ID principal de l’événement. Cependant, si AACUSTOMID est présent, AAID est basé sur AACUSTOMID en raison de l’ordre des opérations Experience Cloud.
 
 >[!NOTE]
 >
