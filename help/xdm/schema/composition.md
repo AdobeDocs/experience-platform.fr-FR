@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Principes de base de la composition des schémas
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 139d6a6632532b392fdf8d69c5c59d1fd779a6d1
+source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
 workflow-type: tm+mt
-source-wordcount: '4141'
-ht-degree: 30%
+source-wordcount: '4143'
+ht-degree: 27%
 
 ---
 
@@ -157,7 +157,7 @@ Pour ingérer des données dans [!DNL Experience Platform], un jeu de données d
 
 ## Blocs de création d’un schéma
 
-[!DNL Experience Platform] utilise une approche de composition dans laquelle des blocs de création standard sont associés pour créer des schémas. Cette approche favorise la réutilisation de composants existants et conditionne la normalisation dans le secteur pour soutenir les schémas et les composants fournisseurs dans [!DNL Platform].
+[!DNL Experience Platform] utilise une approche de composition dans laquelle des blocs de création standard sont combinés pour créer des schémas. Cette approche favorise la réutilisation des composants existants et entraîne la normalisation dans l’ensemble du secteur pour prendre en charge les schémas et les composants fournisseurs dans [!DNL Platform].
 
 Les schémas sont composés à l’aide de la formule suivante :
 
@@ -222,7 +222,11 @@ Pour obtenir la liste la plus récente des groupes de champs XDM standard dispon
 
 Les types de données sont utilisés comme types de champ de référence dans des classes ou des schémas de la même manière que des champs littéraux de base. La principale différence réside dans le fait que les types de données peuvent définir plusieurs sous-champs. Ils peuvent définir plusieurs sous-champs de la même manière que les groupes de champs, mais la principale différence est que les types de données peuvent être inclus n’importe où dans un schéma en l’ajoutant comme &quot;type de données&quot; d’un champ. Bien que les groupes de champs ne soient compatibles qu’avec certaines classes, les types de données peuvent être inclus dans n’importe quelle classe parent ou groupe de champs.
 
-[!DNL Experience Platform] fournit un certain nombre de types de données courants dans le cadre du [!DNL Schema Registry] pour prendre en charge l’utilisation de modèles standard pour la description de structures de données courantes. Cela est expliqué plus en détail dans la section [!DNL Schema Registry] des tutoriels, où il devient plus clair lorsque vous parcourez les étapes de définition des types de données.
+>[!NOTE]
+>
+>Si un champ est défini comme un type de données spécifique, vous ne pouvez pas créer le même champ avec un type de données différent dans un autre schéma. Cette contrainte s’applique à l’ensemble du client de votre entreprise.
+
+[!DNL Experience Platform] fournit un certain nombre de types de données courants dans le cadre du [!DNL Schema Registry] pour prendre en charge l’utilisation de modèles standard pour la description de structures de données courantes. Cela est expliqué plus en détail dans la section [Tutoriels sur le registre des schémas](../tutorials/create-schema-api.md), où il devient plus clair lorsque vous passez en revue les étapes de définition des types de données.
 
 La capture d’écran suivante montre comment les types de données sont représentés dans l’interface utilisateur de Platform. Un des champs fournis par la variable [!UICONTROL Détails démographiques] Le groupe de champs utilise le paramètre &quot;[!UICONTROL Objet]&quot; type de données, comme indiqué par le texte qui suit la barre verticale (`|`) en regard du nom du champ. Ce type de données particulier fournit plusieurs sous-champs relatifs au nom d’une personne, un concept qui peut être réutilisé pour d’autres champs où le nom d’une personne doit être capturé.
 
@@ -257,7 +261,7 @@ Les plages valides de ces types scalaires peuvent être limitées davantage à c
 
 >[!NOTE]
 >
->Le type de champ « map » permet des données de paires clé-valeur, y compris plusieurs valeurs pour une clé unique. Les mappages sont disponibles dans les classes XDM standard et les groupes de champs, mais vous pouvez également définir des mappages personnalisés à l’aide de l’API Schema Registry. Voir le tutoriel sur [définition de champs personnalisés](../tutorials/custom-fields-api.md#custom-maps) pour plus d’informations.
+>Le type de champ &quot;map&quot; permet des données de paires clé-valeur, y compris plusieurs valeurs pour une clé unique. Les mappages sont disponibles dans les classes XDM standard et les groupes de champs, mais vous pouvez également définir des mappages personnalisés à l’aide de l’API Schema Registry. Voir le tutoriel sur [définition de champs personnalisés](../tutorials/custom-fields-api.md#custom-maps) pour plus d’informations.
 
 ## Exemple de composition
 
@@ -315,7 +319,7 @@ Les sections suivantes contiennent des informations supplémentaires sur les pri
 
 Lorsque vous travaillez avec des bases de données relationnelles, les bonnes pratiques consistent à normaliser les données ou à prendre une entité et à la diviser en éléments individuels qui sont ensuite affichés sur plusieurs tableaux. Pour pouvoir lire les données dans leur ensemble ou mettre à jour l’entité, des opérations de lecture et d’écriture doivent être effectuées sur plusieurs tableaux individuels à l’aide de la fonction REJOINDRE.
 
-Grâce aux objets intégrés, les schémas XDM peuvent représenter directement des données complexes et les stocker dans des documents autonomes avec une structure hiérarchique. L’un des principaux avantages de cette structure est qu’elle vous permet d’effectuer des requêtes sur des données sans avoir à reconstruire l’entité par des liaisons onéreuses sur plusieurs tableaux dénormalisés. Il n’existe aucune restriction stricte quant au nombre de niveaux pouvant être autorisés dans votre hiérarchie de schémas.
+Grâce aux objets intégrés, les schémas XDM peuvent représenter directement des données complexes et les stocker dans des documents autonomes avec une structure hiérarchique. L’un des principaux avantages de cette structure est qu’elle vous permet d’interroger les données sans avoir à reconstruire l’entité par des jointures onéreuses sur plusieurs tables dénormalisées. Il n’existe aucune restriction stricte quant au nombre de niveaux pouvant être autorisés dans votre hiérarchie de schémas.
 
 ### Schémas et Big Data {#big-data}
 

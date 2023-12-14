@@ -2,9 +2,9 @@
 title: Gestion des étiquettes d’utilisation des données pour un schéma
 description: Découvrez comment ajouter des libellés d’utilisation des données aux champs de schéma du modèle de données d’expérience (XDM) dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: c35c270afca57cb96228cea29fd5a39ec6615332
+source-git-commit: 6fe11b909369797e96d8fa52542ebd5761a27b03
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '806'
 ht-degree: 10%
 
 ---
@@ -43,6 +43,10 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 Pour commencer à ajouter des libellés, vous devez d’abord [sélectionner un schéma existant à modifier ;](../ui/resources/schemas.md#edit) ou [créer un nouveau schéma ;](../ui/resources/schemas.md#create) pour afficher sa structure dans l’éditeur de schémas.
 
 Pour modifier les libellés d’un champ, vous pouvez sélectionner le champ dans la zone de travail, puis sélectionner **[!UICONTROL Gérer l’accès]** dans le rail de droite.
+
+>[!IMPORTANT]
+>
+>300 libellés au maximum peuvent être appliqués à n’importe quel schéma.
 
 ![Sélectionnez un champ dans le canevas de l’éditeur de schémas](../images/tutorials/labels/manage-access.png)
 
