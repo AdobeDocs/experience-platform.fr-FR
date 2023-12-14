@@ -3,10 +3,10 @@ keywords: destinations publicitaires;destinations;destinations de plateforme
 title: Présentation des destinations publicitaires
 description: Connectez Adobe Experience Platform à une plateforme publicitaire tierce (par ex. DSP, réseau publicitaire, SSP) et partagez des audiences pseudonymes sur ces plateformes.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 58%
+source-wordcount: '263'
+ht-degree: 51%
 
 ---
 
@@ -36,6 +36,7 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Con
 * [Connexion à Google Customer Match](google-customer-match.md)
 * [Connexion Microsoft Bing](bing.md)
 * [Connexion Liste des Clients Pinterest](pinterest.md)
+* [Destination PubMatic Connect](pubmatic.md)
 * [(Version bêta) Connexion à Snapchat Ads](snap-inc.md)
 * [Connexion à The Trade Desk](tradedesk.md)
 * [(Version bêta) Connexion CRM à The Trade Desk](tradedesk-emails.md)
@@ -46,7 +47,7 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Con
 * [Extension Adobe Advertising Cloud](adobe-advertising-cloud.md)
 * [Extension Awin Advertising Conversion Tag](awin-conversiontag.md)
 * [Extension Awin Advertising Mastertag](awin-mastertag.md)
-* [Extension Bing Ads Universal Event Tracking](bing-ads.md)
+* [Extension de suivi des événements universels Bing Ads](bing-ads.md)
 * [Extension Branch](branch.md)
 * [Extension DoubleClick Floodlight](doubleclick-floodlight.md)
 * [Extension Pixel Facebook](facebook-pixel.md)

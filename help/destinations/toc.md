@@ -4,10 +4,10 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: e5e9eb262df1591f91b3b23359162236f898db8c
+source-git-commit: 2e8aac316f5e5edf169181b9e371dcd91e81c40d
 workflow-type: tm+mt
-source-wordcount: '1204'
-ht-degree: 94%
+source-wordcount: '1188'
+ht-degree: 92%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 94%
    * [Comportement d’exportation de profils selon les types de destinations](./how-destinations-work/profile-export-behavior.md)
    * [Gestion des identités dans le workflow d’activation des destinations](./how-destinations-work/identity-handling.md)
 * Tutoriels sur les API {#api}
-   * [Activer des données vers des destinations basées sur des fichiers à l’aide de l’API de service de flux](/help/destinations/api/activate-segments-file-based-destinations.md)
+   * [Activation des données vers des destinations basées sur des fichiers à l’aide de l’API Flow Service](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Se connecter aux destinations de diffusion en continu et activer les données à l’aide de l’API Flow Service](./api/streaming-destinations.md)
    * [Connectez-vous aux destinations de marketing par e-mail basées sur des fichiers et activez les données à l’aide de l’API Flow Service](./api/connect-activate-batch-destinations.md)
    * [(Version Beta) Activer les audiences vers des destinations par lots via l’API d’activation ad hoc](./api/ad-hoc-activation-api.md)
@@ -30,7 +30,7 @@ ht-degree: 94%
    * [Mettre à jour les flux de données de destination](./api/update-destination-dataflows.md)
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
-   * [Exporter les jeux de données](/help/destinations/api/export-datasets.md)
+   * [Exportation de jeux de données](/help/destinations/api/export-datasets.md)
    * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
@@ -54,7 +54,7 @@ ht-degree: 94%
    * [Modifier des flux de données d’activation](./ui/edit-activation.md)
    * [Supprimer les destinations](./ui/delete-destinations.md)
    * [Surveiller les flux de données](./ui/monitor-dataflows.md)
-   * [Configurer des options de formatage de fichier pour les destinations basées sur des fichiers](./ui/batch-destinations-file-formatting-options.md)
+   * [Configuration des options de formatage de fichier pour les destinations basées sur des fichiers](./ui/batch-destinations-file-formatting-options.md)
    * [S’abonner aux alertes de destination contextuelles](ui/alerts.md)
 * Catalogue des destinations {#catalog}
    * [Présentation du catalogue des destinations](./catalog/overview.md)
@@ -91,6 +91,7 @@ ht-degree: 94%
       * [Extension Pinterest Conversion Tracking](./catalog/advertising/pinterest-extension.md)
       * [Connexion Liste des Clients Pinterest](./catalog/advertising/pinterest.md)
       * [Mise à niveau de la connexion pinterest](./catalog/advertising/pinterest-upgrade.md)
+      * [Connexion à PubMatic](./catalog/advertising/pubmatic.md)
       * [Connexion Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [Connexion à The Trade Desk](./catalog/advertising/tradedesk.md)
       * [(Version bêta) Connexion CRM à The Trade Desk](./catalog/advertising/tradedesk-emails.md)
@@ -123,7 +124,7 @@ ht-degree: 94%
       * [Connexion Amazon S3](./catalog/cloud-storage/amazon-s3.md)
       * [Connexion Azure Blob](./catalog/cloud-storage/azure-blob.md)
       * [Azure Data Lake Storage Gen2](./catalog/cloud-storage/adls-gen2.md)
-      * [Azure Event Hubs Connexion](./catalog/cloud-storage/azure-event-hubs.md)
+      * [Connexion Azure Event Hubs](./catalog/cloud-storage/azure-event-hubs.md)
       * [Zone d’atterrissage des données](./catalog/cloud-storage/data-landing-zone.md)
       * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [Connexion SFTP](./catalog/cloud-storage/sftp.md)
@@ -204,7 +205,7 @@ ht-degree: 94%
 * Destination SDK {#destination-sdk}
    * [Vue d’ensemble](./destination-sdk/overview.md)
    * [Conditions préalables à l’intégration](./destination-sdk/integration-prerequisites.md)
-   * [Prise en main  de Destination SDK](./destination-sdk/getting-started.md)
+   * [Prise en main de Destination SDK](./destination-sdk/getting-started.md)
    * Fonction {#functionality}
       * [Options de configuration](./destination-sdk/functionality/configuration-options.md)
       * Composants du serveur de destination {#destination-server}
