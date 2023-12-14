@@ -3,10 +3,10 @@ keywords: insights;ia dédiée à l’attributon;insights sur l’IA dédiée à
 title: Clés gérées par le client
 description: Découvrez comment configurer les clés gérées par le client ou la cliente pour l’IA dédiée à l’attribution.
 exl-id: c00bf1a0-cc4c-4a34-83f1-d93829576866
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: a59c86d1f1d426d4954071032ddaff1bbc9f2781
 workflow-type: tm+mt
-source-wordcount: '171'
-ht-degree: 98%
+source-wordcount: '158'
+ht-degree: 88%
 
 ---
 
@@ -18,6 +18,6 @@ Vous pouvez lire la documentation relative aux [Clés gérées par le client dan
 
 >[!NOTE]
 >
->Les [!DNL Customer Managed Keys] sont actuellement disponibles uniquement pour les organisations qui ont acheté l’offre complémentaire [[!DNL Healthcare Shield or Privacy & Security Shield]](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/vertical-blueprints/healthcare-vertical.html?lang=fr).
+>[!DNL Customer Managed Keys] sont actuellement disponibles uniquement pour les organisations qui ont acheté la variable [!DNL Healthcare Shield or Privacy & Security Shield] offre complémentaire.
 
 Toutes les données utilisées par Platform sont chiffrées en transit et au repos pour garantir leur sécurité, avec ou sans CMK. Pour plus d’informations sur le chiffrement d’Adobe Experience Platform, consultez la documentation sur le [chiffrement des données](../../../landing/governance-privacy-security/encryption.md).
