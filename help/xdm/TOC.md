@@ -4,10 +4,10 @@ user-guide-title: Aide du système de modèle de données d’expérience (XDM)
 breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Découvrez une vue d’ensemble du système de modèle de données d’expérience (XDM) dans Experience Platform et apprenez à utiliser les classes et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: 4f819dcbdf67dc0305b397c54de2b1149cff398d
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 100%
+source-wordcount: '561'
+ht-degree: 93%
 
 ---
 
@@ -80,6 +80,7 @@ ht-degree: 100%
       * [Réservation de vol](./field-groups/event/flight-reservation.md)
       * [Consentement IAB TCF 2.0](./field-groups/event/iab.md)
       * [Réservation de logement](./field-groups/event/lodging-reservation.md)
+      * [Détails de l’interaction MediaAnalytics](./field-groups/event/mediaanalytics-interaction.md)
       * [Détails de la demande de devis](./field-groups/event/quote-request-details.md)
       * [Informations sur la réservation](./field-groups/event/reservation-details.md)
       * [Informations sur l’outil de site](./field-groups/event/sitetool-details.md)
@@ -104,17 +105,22 @@ ht-degree: 100%
 * Types de données {#data-types}
    * [Détails du compte](./data-types/account-details.md)
    * [Coupure publicitaire](./data-types/ad-break.md)
+   * [Informations détaillées sur la publicité](./data-types/advertising-details-information.md)
+   * [Informations détaillées sur la capsule publicitaire](./data-types/advertising-pod-details-information.md)
    * [Application](./data-types/application.md)
    * [Repère](./data-types/beacon.md)
    * [Informations sur le navigateur](./data-types/browser-details.md)
    * [Source B2B](./data-types/b2b-source.md)
+   * [Informations sur le chapitre](./data-types/chapter-details-information.md)
    * [Commerce](./data-types/commerce.md)
    * [Chaîne de consentement](./data-types/consent-string.md)
    * [Consentements et préférences](./data-types/consents.md)
    * [Devise](./data-types/currency.md)
+   * [Informations détaillées sur les métadonnées personnalisées](./data-types/custom-metadata-details-information.md)
    * [Appareil](./data-types/device.md)
    * [Adresse e-mail](./data-types/email-address.md)
    * [Environnement](./data-types/environment.md)
+   * [Informations sur les erreurs](./data-types/error-details-information.md)
    * [Canal d’expérience](./data-types/experience-channel.md)
    * [Attributs d’audit du système de source externe](./data-types/external-source-system-audit-attributes.md)
    * [Compte financier](./data-types/financial-account.md)
@@ -134,17 +140,22 @@ ht-degree: 100%
    * [Paire clé-valeur](./data-types/key-value-pair.md)
    * [Marketing](./data-types/marketing.md)
    * [Mesure](./data-types/measure.md)
+   * [Informations sur le média](./data-types/media-details-information.md)
+   * [Informations sur l’événement multimédia](./data-types/media-event-information.md)
    * [Commande](./data-types/order.md)
    * [Moyen de paiement](./data-types/payment-item.md)
    * [Personne](./data-types/person.md)
    * [Nom de la personne](./data-types/person-name.md)
    * [Numéro de téléphone](./data-types/phone-number.md)
    * [Contexte de l’emplacement](./data-types/place-context.md)
+   * [Informations sur l’état du lecteur](./data-types/player-state-data-information.md)
    * [Informations sur les points d’intérêt](./data-types/poi-details.md)
    * [Interaction du point d’intérêt](./data-types/poi-interaction.md)
    * [Adresse postale](./data-types/postal-address.md)
    * [Élément de liste de produits](./data-types/product-list-item.md)
+   * [Informations détaillées sur les données QoE](./data-types/qoe-data-details-information.md)
    * [Recherche](./data-types/search.md)
+   * [Informations sur la session](./data-types/session-details-information.md)
    * [Abonnement](./data-types/subscription.md)
    * [Abonnement aux télécommunications](./data-types/telecom-subscription.md)
    * [Transaction](./data-types/transaction.md)
