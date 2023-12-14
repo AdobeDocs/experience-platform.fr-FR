@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;schéma;Schéma;XDM;p
 title: Groupe de champs de schéma IdentityMap
 description: Ce document présente la classe XDM Individual Profile.
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: 43b3b79a4d24fd92c7afbf9ca9c83b0cbf80e2c2
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 100%
+source-wordcount: '143'
+ht-degree: 81%
 
 ---
 
@@ -18,6 +18,24 @@ ht-degree: 100%
 
 [!UICONTROL IdentityMap] est un groupe de champs de schéma standard pour la classe [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md). Le groupe de champs fournit un champ de mappage unique, qui contient un ensemble d’identités utilisateur saisies par espace de noms.
 
-<img src="../../images/field-groups/identitymap.png" width="600" /><br />
+![Un diagramme de [!UICONTROL IdentityMap] groupe de champs de schéma](../../images/field-groups/identitymap.png)
 
 Pour plus d’informations sur les cas d’utilisation des mappages dʼidentités et leurs avantages et inconvénients, consultez la section correspondante sur la page consacrée aux [principes de base de la composition des schémas](../../schema/composition.md#identityMap).
+
+**exemple**
+
+```JSON
+{
+    "identityMap":{
+        "ECID":[
+            {
+                "id":"83238819066235616291057085344313877718",
+                "authenticatedState":"ambiguous",
+                "primary":true
+            }
+        ]
+    }
+}
+```
+
+Pour plus d’informations sur le groupe de champs, reportez-vous au [schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/identitymap.schema.json) dans le référentiel XDM public.
