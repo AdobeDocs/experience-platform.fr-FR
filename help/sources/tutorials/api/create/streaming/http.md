@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;connexion e
 title: Création d’une connexion en continu d’API HTTP à l’aide de l’API Flow Service
 description: Ce tutoriel explique comment créer une connexion en continu à l’aide de la source d’API HTTP pour les données brutes et XDM à l’aide de l’API Flow Service.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: f94a51e22731977e120351c3b3598570666a624d
+source-git-commit: fe2e93b9595d9df9a088d627d696b559f259e80d
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 38%
+source-wordcount: '1568'
+ht-degree: 37%
 
 ---
 
@@ -563,6 +563,10 @@ Une réponse réussie renvoie un état HTTP 201 avec les détails du nouveau flu
 ```
 
 ## Données de publication à ingérer dans Platform {#ingest-data}
+
+>[!NOTE]
+>
+>Vous devez ajouter un délai d’au moins ~5 minutes entre la création du flux de données et l’ingestion des données en continu. Cela permet au flux de données d’être entièrement activé avant toute ingestion de données.
 
 Maintenant que vous avez créé votre flux, vous pouvez envoyer votre message JSON au point de terminaison de diffusion que vous avez précédemment créé.
 

@@ -5,10 +5,10 @@ title: Création d’un flux de données en flux continu pour les données brute
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données en continu et les introduire dans Platform à l’aide des connecteurs source et des API.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 9034cd965dff59d6c304b9a7c38d3860311614fe
+source-git-commit: 39b5a2b76c28033b9e98dcefc4cdcaa9964f4d2e
 workflow-type: tm+mt
-source-wordcount: '1138'
-ht-degree: 46%
+source-wordcount: '1169'
+ht-degree: 44%
 
 ---
 
@@ -486,13 +486,15 @@ Une réponse réussie renvoie l’identifiant (`id`) du flux de données nouvell
 
 Consultez l’exemple de charge utile ci-dessous pour obtenir des exemples de code json brut ou compatible XDM que vous pouvez envoyer pour ingestion.
 
->[!TIP]
+>[!NOTE]
 >
->Les exemples suivants s’appliquent à chacun des trois :
->
->- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
->- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
->- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
+>Vous devez ajouter un délai d’au moins ~5 minutes entre la création du flux de données et l’ingestion des données en continu. Cela permet au flux de données d’être entièrement activé avant toute ingestion de données.
+
+Les exemples suivants s’appliquent à tous les :
+
+- [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
+- [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 >[!BEGINTABS]
 
