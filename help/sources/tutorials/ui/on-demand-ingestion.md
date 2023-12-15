@@ -2,10 +2,10 @@
 title: Ingestion à la demande pour les flux de données de sources dans l’interface utilisateur
 description: Découvrez comment créer des flux de données à la demande pour vos connexions source à l’aide de l’interface utilisateur Experience Platform.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 38da1c1d5e563ea3f66cc25a69ad726f709784d0
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 11%
+source-wordcount: '522'
+ht-degree: 10%
 
 ---
 
@@ -24,6 +24,10 @@ Les exécutions de flux représentent une instance d’exécution de flux de don
 >[!ENDSHADEBOX]
 
 ## Prise en main
+
+>[!NOTE]
+>
+>Pour créer une exécution de flux, vous devez d’abord disposer de l’identifiant de flux d’un flux de données planifié pour une ingestion unique.
 
 Ce document nécessite une compréhension pratique des composants suivants de l’Experience Platform :
 
