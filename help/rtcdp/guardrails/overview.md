@@ -3,10 +3,10 @@ title: Barrières de sécurité Real-Time CDP
 description: Découvrez les barrières de sécurité des données dans les différents services et zones de Real-Time CDP.
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: af37aca17f4b365b52215b8c886e733f00c4a4e8
 workflow-type: tm+mt
-source-wordcount: '391'
-ht-degree: 11%
+source-wordcount: '369'
+ht-degree: 7%
 
 ---
 
@@ -19,13 +19,15 @@ Commencez ici et suivez les liens ci-dessous pour comprendre toutes les barrièr
 * [Barrières de sécurité pour l’ingestion de données](/help/ingestion/guardrails.md)
 * [Barrières de sécurité pour les [!DNL Edge Network Server API]](/help/server-api/guardrails.md)
 * [Barrières de sécurité pour [!DNL Real-Time Customer Profile] données et segmentation](/help/profile/guardrails.md)
-* [Mécanismes de sécurisation pour les  [!DNL Identity Service] données](/help/identity-service/guardrails.md)
+* [Barrières de sécurité pour [!DNL Identity Service] data](/help/identity-service/guardrails.md)
 * [Barrières de sécurité pour [!DNL Query Service]](/help/query-service/guardrails.md)
 * [Barrières de sécurité pour l’activation des données par le biais des destinations](/help/destinations/guardrails.md)
+* [Barrières de sécurité pour Real-Time CDP B2B](/help/rtcdp/b2b-guardrails.md)
 
 >[!TIP]
 >
->En outre, voir [cette page](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) pour plus d’informations sur les barrières de sécurité pour d’autres applications Experience Platform, telles que [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=fr) et [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=fr), et [diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
+>En outre, visite [les plans directeurs de l’expérience numérique ;](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) pour obtenir des informations supplémentaires, telles que [diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
+
 
 ## Types de protection {#guardrail-types}
 
@@ -46,6 +48,13 @@ En outre, reportez-vous aux liens de description du produit ci-dessous pour obte
 * [Real-time Customer Data Platform (Édition B2C - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (Édition B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
 * [Real-time Customer Data Platform (Édition B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+
+## Barrières de sécurité pour les autres applications Experience Platform  {#guardrails-other-aep-apps}
+
+Il existe des barrières de sécurité similaires pour d’autres applications Experience Platform. Pour plus d’informations, consultez les liens ci-dessous :
+
+* [Barrières de sécurité Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
+* [Protections des Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
 
 ## Étapes suivantes
 
