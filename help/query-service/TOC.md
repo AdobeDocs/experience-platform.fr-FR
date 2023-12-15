@@ -4,10 +4,10 @@ user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
-source-git-commit: f319f05d600dfd2bc4840ff56aefb8098dbfb7aa
+source-git-commit: fbb627787580c6a4ffd1deb0009105f1ba821b6f
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 86%
+source-wordcount: '313'
+ht-degree: 84%
 
 ---
 
@@ -26,9 +26,10 @@ ht-degree: 86%
       - [Vue d’ensemble](data-distiller/derived-datasets/overview.md)
       - [Flux SQL transparent](data-distiller/derived-datasets/seamless-sql-flow.md)
       - [Création de jeux de données dérivés basés sur des déciles](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - Magasin de requêtes accélérées {#query-accelerated-store}
-      - [Envoi de requêtes accélérées](data-distiller/query-accelerated-store/send-accelerated-queries.md)
-      - [Guide sur le modèle de données d’insights de rapports](data-distiller/query-accelerated-store/reporting-insights-data-model.md)
+   - Informations personnalisables pour la création de rapports d’application étendue {#customizable-insights}
+      - [Vue d’ensemble](data-distiller/customizable-insights/overview.md)
+      - [Envoi de requêtes accélérées](data-distiller/customizable-insights/send-accelerated-queries.md)
+      - [Guide sur le modèle de données d’insights de rapports](data-distiller/customizable-insights/reporting-insights-data-model.md)
    - Pipelines de fonctionnalités AI/ML {#ml-feature-pipelines}
       - [Vue d’ensemble](data-distiller/ml-feature-pipelines/overview.md)
       - [Connexion aux notebooks Jupyter](data-distiller/ml-feature-pipelines/establish-connection.md)

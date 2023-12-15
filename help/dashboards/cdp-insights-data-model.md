@@ -2,16 +2,16 @@
 title: Modèle de données d’informations Real-Time Customer Data Platform
 description: Découvrez comment utiliser les requêtes SQL avec les modèles de données Real-time Customer Data Platform Insights pour personnaliser vos propres rapports Real-Time CDP pour vos cas d’utilisation de marketing et d’indicateurs de performance clés.
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: e55bbba92b0e3b9c86a9962ffa0131dfb7c15e77
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
 source-wordcount: '1109'
-ht-degree: 8%
+ht-degree: 4%
 
 ---
 
 # Modèle de données d’informations Real-Time Customer Data Platform
 
-La fonction Modèle de données Real-time Customer Data Platform Insights présente les modèles de données et SQL qui alimentent les insights pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL afin de créer des rapports Real-Time CDP pour vos cas d’utilisation d’indicateurs de performance clés (IPC) et marketing. Ces informations peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur. Pour en savoir plus, consultez la documentation sur les informations sur les rapports de magasin accélérés de requête . [comment créer un modèle de données d’informations sur les rapports via Query Service pour l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur](../query-service/data-distiller/query-accelerated-store/reporting-insights-data-model.md).
+La fonction Modèle de données Real-time Customer Data Platform Insights présente les modèles de données et SQL qui alimentent les insights pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL afin de créer des rapports Real-Time CDP pour vos cas d’utilisation d’indicateurs de performance clés (IPC) et marketing. Ces informations peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur. Pour en savoir plus, consultez la documentation sur les informations sur les rapports de magasin accélérés de requête . [comment créer un modèle de données d’informations sur les rapports via Query Service pour l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur](../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
 
 ## Conditions préalables
 
@@ -239,7 +239,7 @@ FROM
 
 #### Cas d’utilisation des audiences récemment activées
 
-La logique de la variable [!UICONTROL Audiences récemment activées] fournit une liste des audiences mappées le plus récemment à une destination. Cette liste fournit une capture instantanée des audiences et des destinations utilisées activement dans le système et peut aider à corriger les mappages erronés. Voir [[!UICONTROL Audiences récemment activées] documentation sur les widgets](./guides/destinations.md#recently-activated-audiences) pour plus d’informations.
+La logique de la variable [!UICONTROL Audiences récemment activées] fournit une liste des audiences mappées le plus récemment à une destination. Cette liste fournit un instantané des audiences et des destinations activement utilisées dans le système et peut vous aider à résoudre les problèmes de mappages erronés. Voir [[!UICONTROL Audiences récemment activées] documentation sur les widgets](./guides/destinations.md#recently-activated-audiences) pour plus d’informations.
 
 Le SQL qui génère la variable [!UICONTROL Audiences récemment activées] Le widget est visible dans la section réductible ci-dessous.
 

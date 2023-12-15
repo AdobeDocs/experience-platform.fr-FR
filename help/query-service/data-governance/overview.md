@@ -2,10 +2,10 @@
 title: Gouvernance des données dans Query Service
 description: Cette présentation couvre les principaux éléments de la gouvernance des données dans Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 260ba98f920c8006ab3ed7fb2519a8c1720916c8
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
-source-wordcount: '3132'
-ht-degree: 3%
+source-wordcount: '3129'
+ht-degree: 2%
 
 ---
 
@@ -20,7 +20,7 @@ Les organisations qui effectuent régulièrement le traitement des données doiv
 Les catégories suivantes sont essentielles pour respecter les réglementations de conformité des données lors de l’utilisation de Query Service :
 
 1. Sécurité
-1. Audit
+1. Journal
 1. Utilisation des données
 1. Confidentialité   
 1. Hygiène des données
@@ -93,7 +93,7 @@ La variable `CREATE VIEW` keyword définit une vue d’une requête, mais la vue
 
 #### Création de restrictions d’accès basées sur les champs sur les jeux de données accélérés {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-Avec la variable [fonctionnalité de contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) vous pouvez définir des portées d’utilisation des données ou de l’organisation sur les jeux de données de faits et de dimensions dans la variable [boutique accélérée](../data-distiller/query-accelerated-store/send-accelerated-queries.md). Cela permet aux administrateurs de gérer l’accès à des segments spécifiques et de mieux gérer l’accès attribué aux utilisateurs ou groupes d’utilisateurs.
+Avec la variable [fonctionnalité de contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) vous pouvez définir des portées d’utilisation des données ou de l’organisation sur les jeux de données de faits et de dimensions dans la variable [boutique accélérée](../data-distiller/customizable-insights/send-accelerated-queries.md). Cela permet aux administrateurs de gérer l’accès à des segments spécifiques et de mieux gérer l’accès attribué aux utilisateurs ou groupes d’utilisateurs.
 
 Pour créer des restrictions d’accès basées sur les champs sur des jeux de données accélérés, vous pouvez utiliser les requêtes CTAS de Query Service pour créer des jeux de données accélérés et structurer ces jeux de données en fonction de schémas XDM ou de schémas ad hoc existants. Les administrateurs peuvent alors [ajout et modification des libellés d’utilisation des données pour le schéma](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) ou [schéma ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Vous pouvez appliquer, créer et modifier des libellés à vos schémas à partir du [!UICONTROL Étiquettes] de l’espace de travail [!UICONTROL Schémas] Interface utilisateur.
 
@@ -140,9 +140,9 @@ La conformité des données de Query Service garantit que les données sont touj
 Les données en transit sont toujours conformes au protocole HTTPS. De même, lorsque les données sont au repos dans le lac de données, le chiffrement est effectué avec la clé de gestion client (CMK), qui est déjà prise en charge par Data Lake Management. La version actuellement prise en charge est TLS1.2. Voir [Documentation sur les clés gérées par le client (CMK)](../../landing/governance-privacy-security/customer-managed-keys/overview.md) pour savoir comment configurer vos propres clés de chiffrement pour les données stockées dans Adobe Experience Platform.
 
 
-## Audit {#audit}
+## Journal {#audit}
 
-Query Service enregistre l’activité de l’utilisateur et classe cette activité dans différents types de journaux. Informations d’approvisionnement des journaux sur **who** performance **what** et **when**. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’ID d’e-mail de l’utilisateur ou de l’utilisatrice qui a exécuté l’action et des attributs supplémentaires liés au type d’action.
+Query Service enregistre l’activité de l’utilisateur et classe cette activité dans différents types de journaux. Informations d’approvisionnement des journaux sur **who** performance **what** et **when**. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’ID d’e-mail de l’utilisateur qui a exécuté l’action et des attributs supplémentaires liés au type d’action.
 
 Toutes les catégories de journaux peuvent être demandées selon vos besoins par un utilisateur de Platform. Cette section fournit des détails sur le type d’informations capturées pour Query Service et l’emplacement d’accès à ces informations.
 

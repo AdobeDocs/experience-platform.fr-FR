@@ -2,7 +2,7 @@
 title: Suivi des signaux de données pour générer la valeur de durée de vie client
 description: Ce guide fournit une démonstration de bout en bout sur l’utilisation de Data Distiller et de tableaux de bord définis par l’utilisateur avec Real-time Customer Data Platform pour mesurer et visualiser la valeur de durée de vie des clients.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 7%
@@ -47,7 +47,7 @@ La première étape de la création de votre CLV consiste à créer un jeu de do
 
 ## Étendre le modèle de données d’insights et planifier les mises à jour {#extend-data-model-and-set-refresh-schedule}
 
-Ensuite, vous devez créer un modèle de données personnalisé ou étendre un modèle de données Adobe Real-Time CDP existant pour interagir avec vos informations de création de rapports CLV. Consultez la documentation pour savoir comment [créer un modèle de données d’informations sur les rapports via Query Service afin de l’utiliser avec les données de magasin accélérées et les tableaux de bord définis par l’utilisateur.](../data-distiller/query-accelerated-store/reporting-insights-data-model.md#build-a-reporting-insights-data-model). Ce tutoriel couvre les étapes suivantes :
+Ensuite, vous devez créer un modèle de données personnalisé ou étendre un modèle de données Adobe Real-Time CDP existant pour interagir avec vos informations de création de rapports CLV. Consultez la documentation pour savoir comment [créer un modèle de données d’informations sur les rapports via Query Service afin de l’utiliser avec les données de magasin accélérées et les tableaux de bord définis par l’utilisateur.](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). Ce tutoriel couvre les étapes suivantes :
 
 * Créez un modèle pour créer des rapports d’informations avec Data Distiller.
 * Créer des tableaux, des relations et renseigner des données.
