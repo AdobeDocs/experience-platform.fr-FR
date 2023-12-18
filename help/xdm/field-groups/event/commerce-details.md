@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;groupe de champs;groupe de champs;
 solution: Experience Platform
 title: Groupe de champs de schéma de détails du commerce
-description: Ce document fournit un aperçu du groupe de champs de schéma Détails du commerce .
+description: Découvrez le groupe de champs de schéma Détails du commerce .
 exl-id: 36aba186-fadb-4abb-a94f-7e151ff3f744
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 13%
+source-wordcount: '158'
+ht-degree: 15%
 
 ---
 

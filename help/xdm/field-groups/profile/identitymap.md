@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;schéma;Schéma;XDM;profil individuel;champs;schémas;Schémas;identityMap;mappage d’identités;Mappage d’identités;conception de schéma;mappage;Mappage;schéma d’union;union
 title: Groupe de champs de schéma IdentityMap
-description: Ce document présente la classe XDM Individual Profile.
+description: Découvrez la classe XDM Individual Profile.
 exl-id: c9928e85-ef1e-4739-ba1d-80505a9e60c3
-source-git-commit: 43b3b79a4d24fd92c7afbf9ca9c83b0cbf80e2c2
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 81%
+source-wordcount: '139'
+ht-degree: 76%
 
 ---
 

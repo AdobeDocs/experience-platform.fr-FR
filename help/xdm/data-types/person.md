@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;personne;type de données;type de données;type de données
 solution: Experience Platform
-title: Type de données Personne
-description: Ce document présente un aperçu du type de données XDM (Person Experience Data Model).
+title: Type de données de personne
+description: Découvrez le type de données du modèle de données d’expérience de personne (XDM).
 exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 20%
+source-wordcount: '318'
+ht-degree: 7%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 20%
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `name` | [[!UICONTROL Nom de la personne]](./person-name.md) | Décrit les détails du nom complet de la personne. |
-| `birthDate` | Date | Date de naissance complète d’une personne. Le format de date (sans heure) doit suivre le [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standard. |
+| `birthDate` | Date | Date complète de naissance d’une personne. Le format de date (sans heure) doit suivre le [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standard. |
 | `birthDayAndMonth` | Chaîne | Jour et mois de naissance d’une personne, au format MM-JJ. Ce champ doit être utilisé lorsque le jour et le mois de naissance d’une personne sont connus, mais pas l’année. Le format de cette propriété doit être conforme à cette expression régulière. `[0-1][0-9]-[0-9][0-9]`. |
 | `birthYear` | Nombre entier | L’année de naissance d’une personne, y compris le siècle (par exemple, `1983`). Ce champ doit être utilisé lorsque seul l’âge de la personne est connu et non la date de naissance complète. Cette valeur doit être comprise entre 1 et 32767. |
 | `gender` | Chaîne | Identité de genre de la personne. La valeur de cette propriété doit être égale à l’une des valeurs d’énumération connues suivantes. <li> `female` </li> <li> `male` </li> <li> `not_specified` </li> <li> `non_specific` </li> La valeur par défaut de cette valeur est `not_specified`. |
@@ -30,7 +30,7 @@ ht-degree: 20%
 
 {style="table-layout:auto"}
 
-Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
+Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person.schema.json)

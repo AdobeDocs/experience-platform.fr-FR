@@ -1,10 +1,10 @@
 ---
 title: Groupe de champs de schéma de détails de mise à niveau
-description: Ce document présente un aperçu du groupe de champs de schéma Détails de la mise à niveau .
+description: Découvrez le groupe de champs Détails de la mise à niveau .
 exl-id: cd3f4cd9-ee0e-4bdf-a630-dd2c3c3cc8c7
-source-git-commit: afdac5ce2ed967b4688d456a586c946bc2cf4179
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '126'
 ht-degree: 3%
 
 ---

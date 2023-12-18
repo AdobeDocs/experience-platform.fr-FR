@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;profil individuel;champs;schémas;schémas;détails de fidélité;conception de schéma;groupe de champs;groupe de champs;groupe de champs;
 solution: Experience Platform
 title: Groupe de champs de schéma des détails de fidélité
-description: Ce document présente un aperçu du groupe de champs de schéma Détails du programme de fidélité .
+description: En savoir plus sur le groupe de champs de schéma Loyalty Details .
 exl-id: 12c9fef5-4f9e-49b5-894f-f4938bb95c23
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 10%
+source-wordcount: '281'
+ht-degree: 11%
 
 ---
 
@@ -23,13 +23,13 @@ ht-degree: 10%
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `pointsExpiration` | Tableau d’objets | Répertorie tous les points de fidélité (ou groupes de points de fidélité) qui vont expirer et les dates auxquelles ils vont expirer. Chaque élément du tableau doit être un objet qui contient les deux propriétés suivantes : <ul><li>`pointsExpirationDate`: Date et heure ISO 8601 d’expiration des points.</li><li>`pointsExpiring`: Le solde des points arrivant à expiration à partir de la date d’expiration associée.</li></ul> |
+| `pointsExpiration` | Tableau d’objets | Répertorie tous les points (ou groupes de points de fidélité) qui vont expirer et les dates auxquelles ils vont expirer. Chaque élément du tableau doit être un objet qui contient les deux propriétés suivantes : <ul><li>`pointsExpirationDate`: date et heure ISO 8601 d’expiration des points.</li><li>`pointsExpiring`: le solde des points expirant à compter de la date d’expiration associée.</li></ul> |
 | `joinDate` | DateTime | Date et heure ISO 8601 du moment où la personne a rejoint le programme de fidélité. |
 | `loyaltyID` | Tableau de chaînes | Représente le ou les identifiants du programme de fidélité associés au membre du programme de fidélité. |
 | `points` | Double | L’équilibre actuel des points de fidélité ou des récompenses pour le membre du programme de fidélité. |
 | `pointsRedeemed` | Double | Nombre de points que le membre du programme de fidélité a appliqués à un achat ou qu’il a consommé d’une autre manière. |
 | `program` | Chaîne | Nom du programme de fidélité dans lequel la personne est inscrite. |
-| `status` | Chaîne | État actuel de l’appartenance à la fidélité de la personne, tel que `active`, `disabled`ou `suspended`. |
+| `status` | Chaîne | État actuel de l’appartenance à la fidélité de la personne, tel que `active`, `disabled`, ou `suspended`. |
 | `tier` | Chaîne | Capture le niveau du programme de fidélité dans lequel la personne est inscrite. |
 | `upgradeDate` | Chaîne | Date à laquelle le membre du programme de fidélité a été mis à niveau vers son niveau le plus récent. |
 

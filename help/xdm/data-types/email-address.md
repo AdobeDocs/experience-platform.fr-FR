@@ -2,11 +2,11 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;emailAddress;xdm:emailAddress;email;adresse électronique;type de données;type de données;type de données;
 solution: Experience Platform
 title: Type de données de l’adresse électronique
-description: Ce document fournit un aperçu du type de données XDM Adresse électronique.
+description: Découvrez le type de données XDM Adresse électronique.
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 | --- | --- |
 | `address` | Adresse technique de l’email telle que généralement définie dans la norme RFC2822 et les normes ultérieures (par exemple : `name@domain.com`).<br><br>Dans XDM, les adresses électroniques doivent contenir un domaine de niveau supérieur valide pour passer la validation. Reportez-vous aux [document](https://data.iana.org/TLD/tlds-alpha-by-domain.txt) pour obtenir une liste complète des domaines de niveau supérieur valides tels que définis par l’Internet Assigned Numbers Authority (IANA). |
 | `label` | Informations d’affichage supplémentaires qui peuvent être disponibles. Par exemple, si un courrier électronique contient une adresse Microsoft Outlook enrichie de `John Smith smithjr@company.uk`, `John Smith` serait placé dans ce champ. |
-| `primary` | Indique s’il s’agit de l’adresse électronique Principale de l’individu. Un profil ne peut avoir qu’un seul `primary` adresse électronique à un moment donné. |
+| `primary` | Indique s’il s’agit de l’adresse électronique principale de l’individu. Un profil ne peut avoir qu’un seul `primary` adresse électronique à un moment donné. |
 | `status` | Indique si l’adresse électronique peut être actuellement utilisée. |
 | `statusReason` | Description de la variable active `status`. |
 | `type` | La façon dont le compte est associé à la personne (par exemple `work` ou `personal`). |

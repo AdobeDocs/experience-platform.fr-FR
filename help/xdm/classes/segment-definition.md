@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
 title: Classe de définition de segment
-description: Ce document présente la classe de définition de segment dans le modèle de données d’expérience (XDM).
+description: Découvrez la classe de définition de segment dans le modèle de données d’expérience (XDM).
 exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
-source-git-commit: 55f86fdd4fd36d21dcbd575d6da83df18abb631d
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 13%
+source-wordcount: '370'
+ht-degree: 1%
 
 ---
 
@@ -23,10 +23,10 @@ ht-degree: 13%
 | Propriété | Description |
 | --- | --- |
 | `_repo` | Un objet contenant les éléments suivants [!UICONTROL DateTime] fields : <ul><li>`createDate`: date et heure de création de la ressource dans l’entrepôt de données, telles que le moment où les données ont été ingérées pour la première fois.</li><li>`modifyDate`: date et heure de la dernière modification de la ressource.</li></ul> |
-| `_id` | Identifiant de chaîne unique généré par le système pour l’enregistrement. Ce champ permet de suivre l’unicité d’un enregistrement individuel, d’éviter la duplication des données et de rechercher cet enregistrement dans les services en aval.<br><br>Ce champ étant généré par le système, il ne reçoit pas de valeur explicite lors de l’ingestion des données. Cependant, vous pouvez toujours choisir de fournir vos propres valeurs d’identifiant uniques si vous le souhaitez.<br><br>**** Il est important de distinguer que ce champ ne représente pas une identité liée à une personne individuelle, mais plutôt lʼenregistrement de données lui-même. Les données d’identité relatives à une personne doivent être reléguées à [champs d’identité](../schema/composition.md#identity) au lieu de . |
+| `_id` | Identifiant de chaîne unique généré par le système pour l’enregistrement. Ce champ permet de suivre l’unicité d’un enregistrement individuel, d’éviter la duplication des données et de rechercher cet enregistrement dans les services en aval.<br><br>Ce champ étant généré par le système, il ne reçoit pas de valeur explicite lors de l’ingestion des données. Cependant, vous pouvez toujours choisir de fournir vos propres valeurs d’identifiant uniques si vous le souhaitez.<br><br>Il est important de distinguer que ce champ **ne fait pas** représentent une identité liée à une personne individuelle, mais plutôt l’enregistrement des données lui-même. Les données d’identité relatives à une personne doivent être reléguées à [champs d’identité](../schema/composition.md#identity) au lieu de . |
 | `createdByBatchID` | Identifiant du lot ingéré à l’origine de la création de l’enregistrement. |
 | `description` | Description de la définition de segment. |
-| `identityMap` | Champ de mappage contenant un ensemble d’identités d’espace de noms pour les individus auxquels s’applique l’audience. Pour plus d’informations sur les cas d’utilisation des mappages dʼidentités, consultez la section correspondante sur la page consacrée aux [principes de base de la composition des schémas](../schema/composition.md#identityMap). |
+| `identityMap` | Champ de mappage contenant un ensemble d’identités d’espace de noms pour les individus auxquels s’applique l’audience. Consultez la section sur les mappages d’identité dans la [principes de base de la composition des schémas](../schema/composition.md#identityMap) pour plus d’informations sur leur cas d’utilisation. |
 | `modifiedByBatchID` | L’identifiant du dernier lot ingéré qui a provoqué la mise à jour de l’enregistrement. |
 | `repositoryCreatedBy` | L’identifiant de l’utilisateur qui a créé l’enregistrement. |
 | `repositoryLastModifiedBy` | L’identifiant de l’utilisateur qui a modifié l’enregistrement pour la dernière fois. |

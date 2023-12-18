@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;groupe de champs;réservation;repas;
 title: Définition du groupe de champs de schéma de réservation
-description: Ce document présente un aperçu du groupe de champs de schéma Réservation pour le dîner.
+description: Découvrez le groupe de champs Définition du schéma de réservation .
 exl-id: 672b7a77-c433-4502-a1ad-a17c811b253e
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '435'
 ht-degree: 6%
 
 ---
@@ -18,7 +18,7 @@ Le groupe de champs est une extension de la variable [!UICONTROL Détails de la 
 
 >[!NOTE]
 >
->Ce document couvre les détails de la variable `diningReservations` tableau. Pour plus d’informations sur les autres champs fournis sous le `reservations` , reportez-vous à la section [[!UICONTROL Détails de la réservation] référence de groupe de champs](./reservation-details.md).
+>Ce document couvre les détails du `diningReservations` tableau. Pour plus d’informations sur les autres champs fournis sous le `reservations` , reportez-vous à la section [[!UICONTROL Détails de la réservation] référence de groupe de champs](./reservation-details.md).
 
 ![Définition de la structure de réservation](../../images/field-groups/dining-reservation/structure.png)
 
@@ -44,7 +44,7 @@ La structure de chaque objet fournie sous `diningReservations` est fourni ci-des
 | `length` | Nombre entier | Nombre total de jours pour la réservation. |
 | `loyaltyID` | Chaîne | L’identifiant du programme de fidélité de l’invité répertorié dans la réservation. |
 | `modification` | Nombre entier | Cette valeur est capturée lorsqu’une réservation a été modifiée. |
-| `modificationDate` | DateTime | Heure à laquelle la réservation a été modifiée pour la dernière fois. |
+| `modificationDate` | DateTime | Heure de la dernière modification de la réservation. |
 | `numberOfAdults` | Nombre entier | Nombre d’adultes associés à la réservation. |
 | `numberOfChildren` | Nombre entier | Nombre d’enfants associés à la réservation. |
 | `numberOfRooms` | Nombre entier | Nombre de chambres associées à la réservation. |

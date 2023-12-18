@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;balise;détails d’interaction;type de données;type de données;type de données
 solution: Experience Platform
 title: Type de données de balise
-description: Ce document présente la classe XDM Individual Profile.
+description: Découvrez la classe XDM Individual Profile.
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 16%
+source-wordcount: '233'
+ht-degree: 4%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 16%
 
 {style="table-layout:auto"}
 
-Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
+Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/beacon-interaction-details.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/beacon-interaction-details.schema.json)

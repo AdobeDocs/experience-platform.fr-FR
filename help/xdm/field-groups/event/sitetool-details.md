@@ -1,11 +1,11 @@
 ---
 title: Groupe de champs de schéma Détails du site
-description: Ce document présente un aperçu du groupe de champs de schéma Détails du site.
+description: Découvrez le groupe de champs de schéma Détails du site.
 exl-id: 472c0a3f-efda-49af-9490-f2de90b348c0
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '195'
-ht-degree: 12%
+source-wordcount: '181'
+ht-degree: 6%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 12%
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `dataGatheringEvent` | Objet | Indique si cet événement est un événement de collecte de données, ainsi que d’autres détails connexes. Contient les propriétés suivantes :<ul><li>`data`: (Carte) Contient les données JSON qui sont collectées et envoyées dans le cadre d’un événement d’envoi de questionnaire, d’enquête ou de sondage.</li><li>`isTrue`: (Booléen) Indique s’il s’agit d’un événement de collecte de données comme un questionnaire, une enquête ou un sondage.</li><li>`score`: (Entier) Score obtenu par l’acteur en fonction des réponses de l’événement.</li></ul> |
+| `dataGatheringEvent` | Objet | Indique si cet événement est un événement de collecte de données, ainsi que d’autres détails connexes. Contient les propriétés suivantes :<ul><li>`data`: (carte) contient les données JSON qui sont collectées et envoyées dans le cadre d’un événement d’envoi de questionnaire, d’enquête ou de sondage.</li><li>`isTrue`: (booléen). Indique s’il s’agit d’un événement de collecte de données comme un questionnaire, une enquête ou un sondage.</li><li>`score`: (entier). Score obtenu par l’acteur en fonction des réponses de l’événement.</li></ul> |
 | `actor` | Chaîne | Personne/membre ayant effectué l’action. |
 | `actorID` | Chaîne | Identifiant unique de la personne/du membre qui a effectué l’action. |
 | `isKeyEvent` | Booléen | Indique si cet événement est un événement clé. |
@@ -26,4 +26,4 @@ ht-degree: 12%
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le groupe de champs, reportez-vous à la section [référentiel XDM public](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json).
+Pour plus d’informations sur le groupe de champs, reportez-vous au [référentiel XDM public](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-healthcare-sitetool.schema.json).

@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;schéma;schéma;XDM;champs;schémas;schémas;détails de page web;type de données;type de données;page web
 solution: Experience Platform
 title: Type de données du canal d’expérience
-description: Ce document présente un aperçu du type de données XDM (Experience Channel Data Model).
+description: Découvrez le type de données Experience Channel Data Model (XDM).
 exl-id: 209654f7-0bde-439a-989c-ce2e41599105
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 23%
+source-wordcount: '244'
+ht-degree: 20%
 
 ---
 
@@ -33,7 +33,7 @@ Il existe plusieurs canaux d’expérience, chacun avec des contraintes différe
 
 {style="table-layout:auto"}
 
-Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
+Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.schema.json)

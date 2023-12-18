@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;profil individuel;champs;schémas;schéma;conception de schéma;groupe de champs;iab;tcf;consentement
 solution: Experience Platform
 title: Groupe de champs de consentement du TCF 2.0 de l’IAB pour les schémas de profil
-description: Ce document fournit un aperçu du groupe de champs de schéma de consentement IAB TCF 2.0 pour la classe XDM Individual Profile.
+description: Découvrez le groupe de champs de schéma de consentement IAB TCF 2.0 pour la classe XDM Individual Profile.
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 5%
+source-wordcount: '321'
+ht-degree: 1%
 
 ---
 
@@ -58,7 +58,7 @@ Comme le montre l’exemple, chaque clé de niveau racine de `xdm:identityPrivac
 
 Pour chaque valeur d’identité, une `identityIABConsent` doit être fournie, ce qui fournit la valeur de consentement TCF pour l’identité. La valeur de cette propriété doit être conforme à la propriété [[!UICONTROL Chaîne de consentement] type de données](../../data-types/consent-string.md).
 
-Consultez le guide sur la [Prise en charge du TCF 2.0 de l’IAB dans Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) pour plus d’informations sur le cas d’utilisation de ce groupe de champs. Pour plus d’informations sur le groupe de champs lui-même, consultez le référentiel XDM public:
+Consultez le guide sur la [Prise en charge du TCF 2.0 de l’IAB dans Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) pour plus d’informations sur le cas d’utilisation de ce groupe de champs. Pour plus d’informations sur le groupe de champs lui-même, reportez-vous au référentiel XDM public :
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

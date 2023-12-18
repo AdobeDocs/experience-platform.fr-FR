@@ -1,17 +1,17 @@
 ---
 title: Classe de médicaments
-description: Ce document présente la classe de médicaments dans le modèle de données d’expérience (XDM).
+description: Découvrez la classe de médicaments dans le modèle de données d’expérience (XDM).
 exl-id: e5786241-dd6e-450f-98c8-2de46affb3e2
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '145'
 ht-degree: 4%
 
 ---
 
 # [!UICONTROL Médicaments] class
 
-Dans le modèle de données d’expérience (XDM), la variable [!UICONTROL Médicaments] La classe capture l&#39;ensemble minimal de propriétés qui définissent une substance utilisée pour un traitement médical, en particulier un médicament ou un médicament.
+Dans le modèle de données d’expérience (XDM), le [!UICONTROL Médicaments] La classe capture l&#39;ensemble minimal de propriétés qui définissent une substance utilisée pour un traitement médical, en particulier un médicament ou un médicament.
 
 ![Structure de classe](../images/classes/medication.png)
 

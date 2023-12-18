@@ -1,10 +1,10 @@
 ---
 title: Classe XDM Individual Prospect
-description: Ce document présente la classe XDM Individual Prospect Profile dans le modèle de données d’expérience (XDM).
+description: Découvrez la classe XDM Individual Prospect Profile dans Experience Data Model (XDM).
 exl-id: 10fd9d16-4123-4ad4-971f-b715231ee6a9
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '356'
 ht-degree: 12%
 
 ---

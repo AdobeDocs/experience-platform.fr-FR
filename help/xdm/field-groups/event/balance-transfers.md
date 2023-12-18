@@ -1,11 +1,11 @@
 ---
 title: Groupe de champs de schéma des transferts de solde
-description: Ce document présente la vue d'ensemble du groupe de champs du schéma Transferts de solde .
+description: Découvrez le groupe de champs de schéma Transferts de solde .
 exl-id: be0d2ed6-6547-432a-af2f-409c33e268d4
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 7%
+source-wordcount: '101'
+ht-degree: 3%
 
 ---
 
@@ -23,4 +23,4 @@ ht-degree: 7%
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le groupe de champs, reportez-vous à la section [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-balance-transfers.schema.json).
+Pour plus d’informations sur le groupe de champs, reportez-vous au [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/industry-verticals/experienceevent-balance-transfers.schema.json).

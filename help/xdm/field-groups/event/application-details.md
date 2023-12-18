@@ -1,11 +1,11 @@
 ---
 title: Groupe de champs de schéma des détails de l’application
-description: Ce document présente un aperçu du groupe de champs de schéma Détails de l’application .
+description: Découvrez le groupe de champs de schéma Détails de l’application .
 exl-id: 5df99f9a-b36a-4c2b-a4a4-d3cf054f09b8
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 3%
+source-wordcount: '123'
+ht-degree: 4%
 
 ---
 
@@ -21,4 +21,4 @@ ht-degree: 3%
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le groupe de champs, reportez-vous à la section [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-application.schema.json).
+Pour plus d’informations sur le groupe de champs, reportez-vous au [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-application.schema.json).

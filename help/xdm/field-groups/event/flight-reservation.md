@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;groupe de champs;réservation;vol;
 title: Groupe de champs de schéma de réservation de vol
-description: Ce document présente un aperçu du groupe de champs du schéma de réservation de vol.
+description: Découvrez le groupe de champs du schéma de réservation de vols.
 exl-id: df4bb525-c2d3-4e1d-921f-903142a570ac
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '649'
-ht-degree: 4%
+source-wordcount: '625'
+ht-degree: 5%
 
 ---
 
@@ -18,7 +18,7 @@ Le groupe de champs est une extension de la variable [!UICONTROL Détails de la 
 
 >[!NOTE]
 >
->Ce document couvre les détails de la variable `flightReservations` tableau. Pour plus d’informations sur les autres champs fournis sous le `reservations` , reportez-vous à la section [[!UICONTROL Détails de la réservation] référence de groupe de champs](./reservation-details.md).
+>Ce document couvre les détails du `flightReservations` tableau. Pour plus d’informations sur les autres champs fournis sous le `reservations` , reportez-vous à la section [[!UICONTROL Détails de la réservation] référence de groupe de champs](./reservation-details.md).
 
 ![Structure de la réservation de vol](../../images/field-groups/flight-reservation/structure.png)
 
@@ -32,8 +32,8 @@ La structure de chaque objet fournie sous `flightReservations` est fourni ci-des
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `flightCheckIn` | Objet | Capture les détails de l’enregistrement en vol. L’objet comprend les propriétés suivantes :<ul><li>`arrivalAirportCode`: (Chaîne) Code d’aéroport de la ville d’arrivée.</li><li>`boardingGroup`: (Chaîne) Indicateur de commande d’embarquement spécifique à la compagnie aérienne.</li><li>`checkInMethod`: (Chaîne) Méthode utilisée pour l’archivage, comme le compteur, en ligne, le kiosque ou le libre-service.</li><li>`checkedBags`: (Nombre entier) Nombre de sacs vérifiés pour le vol.</li><li>`checkedPassengers`: (Nombre entier) Nombre de passagers enregistrés pour le vol, s’il existe plusieurs passagers pour le même numéro de réservation.</li><li>`confirmationNumber`: (Chaîne) Numéro de confirmation de réservation ou identifiant.</li><li>`departureAirportCode`: (Chaîne) Code d’aéroport de la ville de départ.</li><li>`flightNumber`: (Chaîne) Numéro de vol du vol réservé.</li></ul> |
-| `flightStatusSearch` | Objet | Capture les détails renvoyés lors de la recherche de l’état du vol. L’objet comprend les propriétés suivantes :<ul><li>`arrivalAirportCode`: (Chaîne) Code d’aéroport de la ville d’arrivée.</li><li>`boardingGroup`: (Chaîne) Indicateur de commande d’embarquement spécifique à la compagnie aérienne.</li><li>`departureAirportCode`: (Chaîne) Code d’aéroport de la ville de départ.</li><li>`departureDate`: (DateTime) Date de départ du vol réservé.</li><li>`flightNumber`: (Chaîne) Numéro de vol du vol réservé.</li><li>`searchCount`: (Entier) Le nombre de fois où le statut du vol réservé a été recherché.</li></ul> |
+| `flightCheckIn` | Objet | Capture les détails de l’enregistrement en vol. L’objet comprend les propriétés suivantes :<ul><li>`arrivalAirportCode`: (chaîne). Code de l’aéroport de la ville d’arrivée.</li><li>`boardingGroup`: (chaîne). Indicateur spécifique à la compagnie aérienne de la commande d’embarquement.</li><li>`checkInMethod`: (chaîne). Méthode utilisée pour l’archivage, comme le compteur, en ligne, le kiosque ou le libre-service.</li><li>`checkedBags`: (nombre entier) nombre de sacs vérifiés pour le vol.</li><li>`checkedPassengers`: (Nombre entier) Nombre de passagers enregistrés pour le vol, s’il existe plusieurs passagers pour le même numéro de réservation.</li><li>`confirmationNumber`: (chaîne). Numéro ou identifiant de confirmation de réservation.</li><li>`departureAirportCode`: (chaîne). Code de l’aéroport de la ville de départ.</li><li>`flightNumber`: (chaîne). Numéro de vol du vol réservé.</li></ul> |
+| `flightStatusSearch` | Objet | Capture les détails renvoyés lors de la recherche du statut du vol. L’objet comprend les propriétés suivantes :<ul><li>`arrivalAirportCode`: (chaîne). Code de l’aéroport de la ville d’arrivée.</li><li>`boardingGroup`: (chaîne). Indicateur spécifique à la compagnie aérienne de la commande d’embarquement.</li><li>`departureAirportCode`: (chaîne). Code de l’aéroport de la ville de départ.</li><li>`departureDate`: (DateTime) Date de départ du vol réservé.</li><li>`flightNumber`: (chaîne). Numéro de vol du vol réservé.</li><li>`searchCount`: (Nombre entier) nombre de fois où le statut du vol réservé a été recherché.</li></ul> |
 | `agentID` | Chaîne | L’agent ou la personne chargée de la réservation, le cas échéant. |
 | `aircraftID` | Chaîne | Un identifiant de l&#39;appareil. |
 | `aircraftType` | Chaîne | Le type d&#39;avion. |
@@ -50,7 +50,7 @@ La structure de chaque objet fournie sous `flightReservations` est fourni ci-des
 | `length` | Nombre entier | Nombre total de jours pour la réservation. |
 | `loyaltyID` | Chaîne | Identifiant du programme de fidélité ou de récompense pour le passager répertorié dans la réservation. |
 | `modification` | Nombre entier | Cette valeur est capturée lorsqu’une réservation a été modifiée. |
-| `modificationDate` | DateTime | Heure à laquelle la réservation a été modifiée pour la dernière fois. |
+| `modificationDate` | DateTime | Heure de la dernière modification de la réservation. |
 | `numberOfAdults` | Nombre entier | Nombre d’adultes associés à la réservation. |
 | `numberOfChildren` | Nombre entier | Nombre d’enfants associés à la réservation. |
 | `passengerID` | Chaîne | Informations sur les passagers associées à la réservation. |

@@ -1,11 +1,11 @@
 ---
 title: Type de données de paires clé-valeur
-description: Ce document offre un aperçu du type de données des modèles de données d’expérience (XDM) des paires clé-valeur.
+description: Découvrez le type de données XDM (Key Value Pair Experience Data Model).
 exl-id: 2a1a7537-9019-4cf2-bfa1-9c760f9656dd
-source-git-commit: 1d023ce6184e54693401eb68a04ceeb1464dcaa0
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 100%
+source-wordcount: '104'
+ht-degree: 88%
 
 ---
 

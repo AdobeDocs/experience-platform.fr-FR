@@ -2,11 +2,11 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;groupe de champs;environnement;détails de l’environnement;
 solution: Experience Platform
 title: Groupe de champs de schéma Détails de l’environnement
-description: Ce document présente un aperçu du groupe de champs Détails de l’environnement ExperienceEvent .
+description: Découvrez le groupe de champs Détails de l’environnement ExperienceEvent .
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '189'
 ht-degree: 13%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 13%
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `device` | [Appareil](../../data-types/device.md) | Décrit un périphérique, une application ou une instance de navigateur d’appareil identifié qui peut faire l’objet d’un suivi entre plusieurs sessions, généralement par des cookies. |
+| `device` | [Appareil](../../data-types/device.md) | Décrit un appareil, une application ou une instance de navigateur d’appareil identifié qui peut faire l’objet d’un suivi entre plusieurs sessions, généralement par des cookies. |
 | `environment` | [Environnement](../../data-types/environment.md) | Décrit les informations sur le contexte situationnel de l’observation de l’événement, en particulier des informations transitoires telles que les versions du réseau ou des logiciels. |
 | `placeContext` | [Contexte de l’emplacement](../../data-types/place-context.md) | Décrit les circonstances transitoires liées à l’observation de l’événement. Par exemple, des informations spécifiques à un paramètre régional telles que la météo, l’heure locale, le trafic, le jour de la semaine, le jour de travail par rapport aux jours fériés et les heures de travail. |
 

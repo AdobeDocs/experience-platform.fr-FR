@@ -1,11 +1,11 @@
 ---
 title: Groupe de champs de schéma du catalogue de produits
-description: Ce document présente un aperçu du groupe de champs de schéma du catalogue de produits.
+description: Découvrez le groupe de champs de schéma du catalogue de produits.
 exl-id: 91971a0c-a93a-4032-a2f2-0a99e4940bac
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '84'
-ht-degree: 7%
+source-wordcount: '70'
+ht-degree: 8%
 
 ---
 
@@ -22,4 +22,4 @@ ht-degree: 7%
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le groupe de champs, reportez-vous à la section [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json).
+Pour plus d’informations sur le groupe de champs, reportez-vous au [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/product/product-catalog.schema.json).

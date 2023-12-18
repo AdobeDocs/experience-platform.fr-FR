@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
 title: Type de données de chaîne de consentement
-description: Ce document fournit un aperçu du type de données XDM Chaîne de consentement.
+description: Découvrez le type de données XDM Chaîne de consentement.
 exl-id: 288ec79e-074a-4d72-9c5f-e9cd8485b804
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '198'
-ht-degree: 11%
+source-wordcount: '176'
+ht-degree: 5%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 11%
 
 {style="table-layout:auto"}
 
-Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
+Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consentstring.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consentstring.schema.json)

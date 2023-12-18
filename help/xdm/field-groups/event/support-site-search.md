@@ -1,11 +1,11 @@
 ---
 title: Prise en charge du groupe de champs de schéma de recherche de site
-description: Ce document présente un aperçu du groupe de champs de schéma Recherche de site d’assistance .
+description: Découvrez le groupe de champs de schéma de recherche de site d’assistance .
 exl-id: 7bd442f0-f85c-491f-91ad-8b14b4b431eb
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '91'
-ht-degree: 7%
+source-wordcount: '77'
+ht-degree: 5%
 
 ---
 
@@ -17,8 +17,8 @@ ht-degree: 7%
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `supportSiteSearch` | [[!UICONTROL Recherche interne au site]](../../data-types/internal-site-search.md) | Capture les détails de l’événement de recherche. |
+| `supportSiteSearch` | [[!UICONTROL Recherche de site interne]](../../data-types/internal-site-search.md) | Capture les détails de l’événement de recherche. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le groupe de champs, reportez-vous à la section [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json).
+Pour plus d’informations sur le groupe de champs, reportez-vous au [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-support-site-search.schema.json).

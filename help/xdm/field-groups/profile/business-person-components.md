@@ -1,28 +1,28 @@
 ---
 title: Groupe de champs de schéma des composants de personne professionnelle XDM
-description: Ce document fournit un aperçu du groupe de champs de schéma XDM Business Person Components.
+description: Découvrez le groupe de champs de schéma XDM Business Person Components.
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 6%
+source-wordcount: '514'
+ht-degree: 4%
 
 ---
 
 # [!UICONTROL Composants de personne active XDM] groupe de champs de schéma
 
-[!UICONTROL Composants de personne active XDM] est un groupe de champs de schéma standard pour la variable [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) qui capture plusieurs enregistrements source pour une personne, ainsi que d’autres attributs requis pour la segmentation des personnes.
+[!UICONTROL Composants de personne active XDM] est un groupe de champs de schéma standard pour la variable [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) qui capture plusieurs enregistrements source pour une personne et d’autres attributs requis pour la segmentation des personnes.
 
 Lorsqu’un profil est créé pour une personne au moyen de la fonction [Profil client en temps réel](../../../profile/home.md) dans l’édition B2B de Real-Time CDP, les informations utilisées pour créer ce profil peuvent potentiellement provenir de nombreux enregistrements source. Par exemple, si une personne travaille pour deux sociétés différentes, de nombreux systèmes de gestion de la relation client créent intentionnellement une copie en double de cette personne afin qu’une copie soit liée à la Société A, tandis que l’autre est liée à la Société B. Lorsque vous incorporez ces données dans Adobe Experience Platform, ce groupe de champs est utilisé pour fusionner ces différents enregistrements source en une seule représentation.
 
-Le groupe de champs fournit un niveau racine `personComponents` qui est un tableau d’objets. Chaque objet du tableau représente un enregistrement source différent.
+Le groupe de champs fournit un niveau racine `personComponents` , qui est un tableau d’objets. Chaque objet du tableau représente un enregistrement source différent.
 
 >[!IMPORTANT]
 >
 >Vous devez suivre les modèles d’ingestion décrits dans la section [documentation sur les sources](../../../rtcdp/sources/b2b.md). Il n’est pas garanti que les autres méthodes de mappage de champs fonctionnent.
 >
 >Par exemple, chaque objet de la fonction `personComponents` est envoyée individuellement pendant les schémas d’ingestion standard, puis ajoutée au tableau par Platform. L’ajout manuel d’un tableau d’objets au composant Personne active renvoie une erreur.
->Vous devez utiliser l’utilitaire de génération automatique lors de la création de schémas pour vos données B2B. Consultez la documentation pour obtenir des instructions sur l’utilisation de la variable [Espace de noms B2B et utilitaire de génération automatique de schéma](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). Si vous n’utilisez pas l’utilitaire de génération automatique et envisagez de mapper manuellement votre modèle de données, veillez à lire la documentation sur la variable [Classes XDM de l’édition B2B d’Adobe Real-time Customer Data Platform](../../../rtcdp/schemas/b2b.md) avant de mapper vos données.
+>Vous devez utiliser l’utilitaire de génération automatique lors de la création de schémas pour vos données B2B. Consultez la documentation pour obtenir des instructions sur l’utilisation de la variable [Espace de noms B2B et utilitaire de génération automatique de schéma](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). Si vous n’utilisez pas l’utilitaire de génération automatique et envisagez de mapper manuellement votre modèle de données, veillez à lire la documentation sur la variable [Classes XDM d’Adobe Real-time Customer Data Platform B2B Edition](../../../rtcdp/schemas/b2b.md) avant de mapper vos données.
 >
 >Voir [tutoriel de bout en bout](../../../rtcdp/b2b-tutorial.md) pour plus d’informations sur les workflows recommandés pour les données B2B.
 
@@ -34,7 +34,7 @@ Le groupe de champs fournit un niveau racine `personComponents` qui est un table
 | `sourceConvertedContactKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Identifiant composite du contact associé si ce prospect a été converti. |
 | `sourceExternalKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Identifiant composite du système source d’où proviennent les données de la personne. |
 | `sourcePersonKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Identifiant composite de la personne. |
-| `workEmail` | [[!UICONTROL Adresse e-mail]](../../data-types/b2b-source.md) | ID de l’adresse électronique professionnelle de la personne. |
+| `workEmail` | [[!UICONTROL Adresse électronique]](../../data-types/b2b-source.md) | ID de l’adresse électronique professionnelle de la personne. |
 | `personGroupID` | Chaîne | Identifiant de groupe de la personne. |
 | `personScore` | Chaîne | Score généré pour la personne par un système CRM. |
 | `personSource` | Chaîne | Identifiant unique basé sur des chaînes pour le système source d’où proviennent les données de la personne. |

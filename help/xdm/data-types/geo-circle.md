@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;géo;cercle;type de données;type de données;type de données;
 solution: Experience Platform
 title: Type de données du cercle géographique
-description: Ce document fournit un aperçu du type de données XDM Geo Circle.
+description: Découvrez le type de données XDM Geo Circle.
 exl-id: fa041f4f-9955-44e9-b235-a643e07d402c
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 21%
+source-wordcount: '124'
+ht-degree: 12%
 
 ---
 
@@ -21,5 +21,5 @@ ht-degree: 21%
 | --- | --- | --- |
 | `_schema.coordinates` | [[!UICONTROL Coordonnées géographiques]](./geo-coordinates.md) | Décrit les coordonnées géographiques du centre du cercle. |
 | `_schema.description` | Chaîne | Description de ce que contient le cercle. |
-| `_schema.radius` | Double | Longueur du rayon du cercle. Cette valeur est conforme à la référence [WGS84](https://gisgeography.com/wgs84-world-geodetic-system/) et elle est mesurée en mètres. |
+| `_schema.radius` | Double | Longueur du rayon du cercle. Cette valeur est conforme à la variable [WGS84](https://gisgeography.com/wgs84-world-geodetic-system/) datum et est mesuré en mètres. |
 | `_id` | Chaîne | Identifiant unique généré par le système pour le cercle. |

@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;balise;détails d’interaction;type de données;type de données;type de données
 solution: Experience Platform
 title: Type de données Détails de l’interaction géographique
-description: Ce document présente le type de données XDM Détails de l’interaction géographique .
+description: Découvrez le type de données XDM Détails de l’interaction géographique .
 exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 13%
+source-wordcount: '135'
+ht-degree: 4%
 
 ---
 
@@ -19,13 +19,13 @@ ht-degree: 13%
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `geoShape` | [[!UICONTROL Forme géographique]](./geo-shape.md) | Décrit la forme géographique de la zone avec laquelle l’interaction s’est déroulée. Ce champ peut décrire une boîte, un cercle ou un polygone. |
+| `geoShape` | [[!UICONTROL Forme géographique]](./geo-shape.md) | Décrit la forme géographique de la zone avec laquelle l’interaction a lieu. Ce champ peut décrire une boîte, un cercle ou un polygone. |
 | `deviceGeoAccuracy` | Double | Précision de l’appareil ou du mécanisme de géolocalisation, mesuré en mètres. |
 | `distanceToCenter` | Double | Distance au centre de la zone géographique dans le cas d’un cercle géographique, mesurée en mètres. |
 
 {style="table-layout:auto"}
 
-Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
+Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/geo-interaction-details.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/geo-interaction-details.schema.json)

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;groupe de champs;réservation;détails de réservation;;page d’accueil;schéma;schéma;schéma;schéma;schéma;groupe de champs;groupe de champs;groupe de réservation;détails de réservation
 title: Groupe de champs de schéma Détails de la réservation
-description: Ce document présente un aperçu du groupe de champs de schéma Détails de la réservation.
+description: Découvrez le groupe de champs Détails de la réservation.
 exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '334'
-ht-degree: 7%
+source-wordcount: '310'
+ht-degree: 8%
 
 ---
 
@@ -30,7 +30,7 @@ Le groupe de champs fournit un champ de type objet unique, `reservations`. Les p
 | `endDate` | DateTime | Date de fin d’abandon, de retour ou d’extraction pour la réservation. |
 | `length` | Nombre entier | Nombre total de jours pour la réservation. |
 | `modification` | Nombre entier | Cette valeur est capturée lorsqu’une réservation a été modifiée. |
-| `modificationDate` | DateTime | Heure à laquelle la réservation a été modifiée pour la dernière fois. |
+| `modificationDate` | DateTime | Heure de la dernière modification de la réservation. |
 | `numberOfAdults` | Nombre entier | Nombre d’adultes associés à la réservation. |
 | `numberOfChildren` | Nombre entier | Nombre d’enfants associés à la réservation. |
 | `purpose` | Chaîne | L’objet de la réservation, généralement professionnel ou personnel. |
@@ -46,7 +46,7 @@ Pour plus d’informations sur le groupe de champs, reportez-vous au référenti
 
 ## Groupes de champs de réservation spécifiques au secteur
 
-Il existe plusieurs autres groupes de champs standard qui étendent la variable [!UICONTROL Détails de la réservation] schéma pour les cas d’utilisation spécifiques au secteur. Pour plus d’informations, consultez la documentation suivante :
+Il existe plusieurs autres groupes de champs standard qui étendent le [!UICONTROL Détails de la réservation] schéma pour les cas d’utilisation spécifiques au secteur. Pour plus d’informations, consultez la documentation suivante :
 
 * [[!UICONTROL Réservation de restaurant]](./dining-reservation.md)
 * [[!UICONTROL Réservation de vol]](./flight-reservation.md)

@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;iab;tcf;consentement;groupe de champs;schéma;schéma;schéma;schéma;schéma;schéma;schéma
+keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;iab;tcf;consentement;groupe de champs;schéma;schéma;schéma;schéma;schéma;schéma;schéma;groupe de champs;iab;tcf;consentement
 solution: Experience Platform
 title: Groupe de champs de consentement du TCF 2.0 de l’IAB pour les schémas d’événement
-description: Ce document fournit un aperçu du groupe de champs de schéma de consentement IAB TCF 2.0 pour la classe XDM ExperienceEvent.
+description: Découvrez le groupe de champs de schéma de consentement du TCF 2.0 de l’IAB pour la classe XDM ExperienceEvent.
 exl-id: c236d0d4-27bd-45d7-a912-d0e93a609254
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '250'
-ht-degree: 7%
+source-wordcount: '233'
+ht-degree: 1%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 7%
 
 {style="table-layout:auto"}
 
-Consultez le guide sur la [Prise en charge du TCF 2.0 de l’IAB dans Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) pour plus d’informations sur le cas d’utilisation de ce groupe de champs. Pour plus d’informations sur le groupe de champs lui-même, consultez le référentiel XDM public:
+Consultez le guide sur la [Prise en charge du TCF 2.0 de l’IAB dans Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) pour plus d’informations sur le cas d’utilisation de ce groupe de champs. Pour plus d’informations sur le groupe de champs lui-même, reportez-vous au référentiel XDM public :
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-privacy.schema.json)

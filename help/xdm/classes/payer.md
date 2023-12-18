@@ -1,17 +1,17 @@
 ---
 title: Classe de prière
-description: Ce document présente la classe de lecteur dans le modèle de données d’expérience (XDM).
+description: Découvrez la classe Payer dans le modèle de données d’expérience (XDM).
 exl-id: 8d3e0a6d-41eb-4ffe-81dd-c7b7d532a531
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '129'
 ht-degree: 5%
 
 ---
 
 # [!UICONTROL Payer] class
 
-Dans le modèle de données d’expérience (XDM), la variable [!UICONTROL Payer] capture l’ensemble minimal de propriétés qui définissent une entité commerciale payante qui collecte des données relatives aux compagnies d’assurance (telles que l’assurance maladie).
+Dans le modèle de données d’expérience (XDM), le [!UICONTROL Payer] capture l’ensemble minimal de propriétés qui définissent une entité commerciale payante qui collecte des données relatives aux compagnies d’assurance (telles que l’assurance maladie).
 
 ![Structure de classe](../images/classes/payer.png)
 

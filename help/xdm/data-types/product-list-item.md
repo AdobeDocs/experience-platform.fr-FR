@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;adresse;xdm:address;datatype;type de données;type de données;
 solution: Experience Platform
 title: Type de données d’élément de liste de produits
-description: Ce document fournit un aperçu du type de données XDM de l’élément de liste de produits.
+description: Découvrez le type de données XDM de l’élément de liste de produits.
 exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '367'
-ht-degree: 14%
+source-wordcount: '342'
+ht-degree: 7%
 
 ---
 
@@ -21,17 +21,17 @@ Les valeurs capturées dans ce type de données peuvent différer de l’enregis
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `selectedOptions` | Tableau d’objets | Contient les options personnalisées sélectionnées pour un produit configurable. Chaque élément de liste est un objet avec les propriétés suivantes :<ul><li>`attribute`: Nom de l’attribut configurable.</li><li>`value`: La valeur de l’attribut .</li></ul> |
+| `selectedOptions` | Tableau d’objets | Contient les options personnalisées sélectionnées pour un produit configurable. Chaque élément de liste est un objet avec les propriétés suivantes :<ul><li>`attribute`: nom de l’attribut configurable.</li><li>`value`: valeur de l’attribut .</li></ul> |
 | `SKU` | [!UICONTROL Chaîne] | Unité de gestion des stocks (SKU), l’identifiant unique d’un produit défini par le fournisseur. |
 | `_id` | [!UICONTROL Chaîne] | Identifiant de l’élément de ligne pour cette entrée de produit. Le produit lui-même est identifié via `product`. |
-| `currencyCode` | [!UICONTROL Chaîne] | Le [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) code de devise alphabétique utilisé pour évaluer le produit. |
+| `currencyCode` | [!UICONTROL Chaîne] | La variable [ISO 4217](https://www.iso.org/iso-4217-currency-codes.html) code de devise alphabétique utilisé pour évaluer le produit. |
 | `discountAmount` | [!UICONTROL Double] | Si le produit est actualisé, cela représente la différence entre le prix normal et le prix spécial du produit. |
 | `name` | [!UICONTROL Chaîne] | Nom d’affichage du produit tel qu’il est présenté à l’utilisateur pour cette consultation de produit. |
 | `priceTotal` | [!UICONTROL Double] | Prix total de l’article de ligne de produit. |
 | `product` | [!UICONTROL Chaîne] (URI) | L’URI `$id` du schéma XDM qui capture le produit lui-même. |
-| `productAddMethod` | [!UICONTROL Chaîne] | Méthode utilisée par le visiteur pour ajouter un produit à la liste. |
+| `productAddMethod` | [!UICONTROL Chaîne] | Méthode utilisée par le visiteur pour ajouter un élément de produit à la liste. |
 | `productImageUrl` | [!UICONTROL Chaîne] | URL de l’image principale du produit. |
-| `quantity` | [!UICONTROL Nombre entier] | Nombre d’unités du produit que le client a indiqué. |
+| `quantity` | [!UICONTROL Entier] | Nombre d’unités du produit que le client a indiqué. |
 | `unitOfMeasureCode` | [!UICONTROL Chaîne] | Le standard [code unité de mesure](https://ucum.org/ucum) pour le produit, en fonction de la variable `quantity` . |
 
 {style="table-layout:auto"}

@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;schéma;schéma;XDM;champs;schémas;schémas;fullName;xdm:fullName;nom de personne;nom;type de données;type de données;type de données;type de données
 solution: Experience Platform
 title: Type de données du nom de personne
-description: Ce document fournit un aperçu du type de données XDM du nom de personne.
+description: Découvrez le type de données XDM du nom de la personne.
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 20%
+source-wordcount: '230'
+ht-degree: 6%
 
 ---
 
@@ -21,10 +21,10 @@ En outre, le type de données fournit un certain nombre de propriétés facultat
 
 | Propriété | Description |
 | --- | --- |
-| `courtesyTitle` | Abréviation du titre, du titre ou de la formule de salutation d’une personne (par exemple : `Mr.`, `Miss.`ou `Dr.`). |
-| `firstName` | Premier segment du nom dans l’ordre d’écriture et le plus communément accepté dans la langue du nom. |
+| `courtesyTitle` | Abréviation du titre, du titre ou de la formule de salutation d’une personne (par exemple : `Mr.`, `Miss.`, ou `Dr.`). |
+| `firstName` | Premier segment du nom dans l’ordre d’écriture le plus communément accepté dans la langue du nom. |
 | `fullName` | Nom complet de la personne, dans l’ordre d’écriture le plus communément accepté dans la langue du nom. |
-| `lastName` | Dernier segment du nom dans l’ordre d’écriture et le plus communément accepté dans la langue du nom. |
+| `lastName` | Dernier segment du nom dans l’ordre d’écriture le plus communément accepté dans la langue du nom. |
 | `middleName` | Nom intermédiaire, nom alternatif ou noms supplémentaires présents entre le prénom et le nom. |
 | `suffix` | Groupe de lettres fourni après le nom d’une personne pour fournir des informations supplémentaires (telles que `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III`, etc.). |
 

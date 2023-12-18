@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;adresse;xdm:address;datatype;type de données;type de données;
 solution: Experience Platform
 title: Type de données d’adresse postale
-description: Ce document fournit un aperçu du type de données XDM Postal Address (Adresse postale).
+description: Découvrez le type de données XDM Adresse postale .
 exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '338'
-ht-degree: 22%
+source-wordcount: '313'
+ht-degree: 21%
 
 ---
 
@@ -30,14 +30,14 @@ ht-degree: 22%
 | `msaID` | Zone statistique métropolitaine aux États-Unis où l’observation s’est produite. |
 | `postOfficeBox` | Boîte postale de l’adresse. |
 | `postalCode` | Code postal de l’emplacement. Les codes postaux ne sont pas disponibles pour tous les pays. Dans certains pays, ce champ ne contiendra qu’une partie du code postal. |
-| `primary` | Valeur boolean qui indique s’il s’agit de l’adresse Principale de l’individu. Un profil ne peut avoir qu’un seul `primary` adresse à un moment donné. |
+| `primary` | Une valeur booléenne qui indique s’il s’agit de l’adresse principale de l’individu. Un profil ne peut avoir qu’un seul `primary` adresse à un moment donné. |
 | `region` | Partie de l’adresse qui indique la région, le département ou le district. |
 | `repositoryCreatedBy` | L’identifiant de l’utilisateur qui a créé l’enregistrement. |
 | `repositoryLastModifiedBy` | L’identifiant de l’utilisateur qui a modifié l’enregistrement pour la dernière fois. |
-| `stateProvince` | Partie de l’état ou de la province de l’observation. Le format est conforme à la norme [ISO 3166-2 (pays et subdivisions)](https://www.unece.org/cefact/locode/subdivisions.html). |
+| `stateProvince` | Partie de l’état ou de la province de l’observation. Le format suit le [ISO 3166-2 (pays et subdivisions)](https://www.unece.org/cefact/locode/subdivisions.html) standard. |
 | `status` | Indique si l’adresse peut être actuellement utilisée. |
 | `statusReason` | Description de la variable active `status`. |
-| `street1` - `street4` | Ces quatre champs sont destinés à contenir des informations Principales sur les rues, le numéro d’appartement, le numéro de rue et le nom de la rue. `street2` to `street4` sont facultatives. |
+| `street1` - `street4` | Ces quatre champs sont destinés à contenir des informations principales sur la rue, le numéro d’appartement, le numéro de rue et le nom de la rue. `street2` to `street4` sont facultatives. |
 
 {style="table-layout:auto"}
 

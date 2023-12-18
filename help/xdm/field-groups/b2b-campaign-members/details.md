@@ -1,11 +1,11 @@
 ---
 title: Groupe de champs de schéma des détails des membres de la campagne commerciale XDM
-description: Ce document présente un aperçu du groupe de champs Détails du membre XDM Business Campaign.
+description: Découvrez le groupe de champs Détails du membre XDM Business Campaign.
 exl-id: 597629c8-7f41-4c1c-95b6-aed5e16cee72
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 5%
+source-wordcount: '335'
+ht-degree: 4%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 5%
 | `firstRespondedDate` | [!UICONTROL DateTime] | Date et heure ISO 8601 de la première réponse de la personne à la campagne. |
 | `hasReachedSuccess` | [!UICONTROL Booléen] | Indique si ce membre de campagne a généré une conversion réussie. |
 | `hasResponded` | [!UICONTROL Booléen] | Indique si ce membre de campagne a répondu à la campagne. |
-| `isDeleted` | [!UICONTROL Booléen] | Indique si ce membre de campagne a été supprimé dans Marketo Engage.<br><br>Lors de l’utilisation de la variable [Connecteur source Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), les enregistrements supprimés dans Marketo sont automatiquement répercutés dans Real-time Customer Profile. Cependant, les enregistrements relatifs à ces profils peuvent toujours persister dans le lac de données. En définissant `isDeleted` to `true`, vous pouvez utiliser ce champ pour filtrer les enregistrements qui ont été supprimés de vos sources lors de l’interrogation du lac de données. |
+| `isDeleted` | [!UICONTROL Booléen] | Indique si ce membre de campagne a été supprimé dans Marketo Engage.<br><br>Lors de l’utilisation de la variable [Connecteur source Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tous les enregistrements supprimés dans Marketo sont automatiquement répercutés dans Real-time Customer Profile. Cependant, les enregistrements relatifs à ces profils peuvent toujours persister dans le lac de données. En définissant `isDeleted` to `true`, vous pouvez utiliser ce champ pour filtrer les enregistrements qui ont été supprimés de vos sources lors de l’interrogation du lac de données. |
 | `isExhausted` | [!UICONTROL Booléen] | Indique si ce membre de campagne a épuisé toutes les interactions de campagne. |
 | `lastStatus` | [!UICONTROL Chaîne] | Dernier état du membre de la campagne. |
 | `memberStatus` | [!UICONTROL Chaîne] | État actuel du membre de la campagne. |

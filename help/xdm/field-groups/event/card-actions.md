@@ -1,11 +1,11 @@
 ---
 title: Groupe de champs de schéma d’actions de carte
-description: Ce document présente un aperçu du groupe de champs de schéma Actions carte .
+description: Découvrez le groupe de champs de schéma Actions carte .
 exl-id: 49851544-9118-4b73-b1d1-4cf49b3f1dee
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 7%
+source-wordcount: '176'
+ht-degree: 8%
 
 ---
 
@@ -31,4 +31,4 @@ ht-degree: 7%
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le groupe de champs, reportez-vous à la section [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-card-actions.schema.json).
+Pour plus d’informations sur le groupe de champs, reportez-vous au [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-card-actions.schema.json).

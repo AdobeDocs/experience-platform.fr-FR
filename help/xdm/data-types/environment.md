@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;environnement;type de données;type de données;type de données
 solution: Experience Platform
 title: Type de données d’environnement
-description: Ce document fournit un aperçu du type de données XDM d’environnement.
+description: Découvrez le type de données XDM d’environnement.
 exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 18%
+source-wordcount: '440'
+ht-degree: 14%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 18%
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `_dc` | Objet | Un objet contenant un seul champ, `language`, qui indique la langue de l’environnement pour représenter les préférences linguistiques, géographiques ou culturelles de l’utilisateur pour la présentation des données. Les langues sont spécifiées dans le code de langue comme défini dans [IETF RFC 3066](https://www.ietf.org/rfc/rfc3066.txt). |
-| `browserDetails` | [Informations sur le navigateur](./browser-details.md) | Décrit les détails spécifiques au navigateur de l’environnement, tels que le nom du navigateur, la version, la version JavaScript, la chaîne de l’agent utilisateur et le langage d’acceptation. |
+| `browserDetails` | [Détails du navigateur](./browser-details.md) | Décrit les détails spécifiques au navigateur de l’environnement, tels que le nom du navigateur, la version, la version JavaScript, la chaîne de l’agent utilisateur et le langage d’acceptation. |
 | `ISP` | Chaîne | Nom du fournisseur d’accès Internet de l’utilisateur. |
 | `carrier` | Chaîne | Nom de l’opérateur de réseau mobile ou MNO (également appelé fournisseur de service sans fil, opérateur de réseau sans fil, entreprise de téléphonie mobile ou opérateur de réseau mobile) qui vend et fournit des services de communication à l’utilisateur. |
 | `colorDepth` | Nombre entier | Nombre de bits utilisés pour chaque composant de couleur d’un seul pixel. |
@@ -41,7 +41,7 @@ ht-degree: 18%
 
 {style="table-layout:auto"}
 
-Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
+Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.schema.json)

@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;appareil;type de données;type de données;type de données;devise;
 solution: Experience Platform
 title: Type de données de devise
-description: Ce document fournit un aperçu du type de données XDM de devise.
+description: Découvrez le type de données XDM de devise.
 exl-id: eaf4812e-32ec-4b07-82ef-60777f03623d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 5%
+source-wordcount: '104'
+ht-degree: 6%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `amount` | Double | Le montant de la devise tel que défini par la variable `currencyCode`. |
+| `amount` | Double | Montant de la devise définie par la variable `currencyCode`. |
 | `conversionDate` | DateTime | Horodatage du moment où la conversion de devise a été effectuée. |
 | `currencyCode` | Chaîne | Un code ISO 4217 indiquant le type de devise qui `amount` représente . |
 

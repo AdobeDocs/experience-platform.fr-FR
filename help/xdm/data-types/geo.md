@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;géo;type de données;type de données;type de données
 solution: Experience Platform
-title: Type de données géographiques
-description: Ce document présente le type de données Geo XDM.
+title: Type de données géo
+description: Découvrez le type de données Geo XDM.
 exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '199'
-ht-degree: 43%
+source-wordcount: '174'
+ht-degree: 35%
 
 ---
 
@@ -26,11 +26,11 @@ ht-degree: 43%
 | `dmaID` | Nombre entier | Zone de marché désignée pour la recherche sur les médias Nielsen. |
 | `msaID` | Nombre entier | Zone statistique métropolitaine aux États-Unis où l’observation s’est produite. |
 | `postalCode` | Chaîne | Code postal de l’emplacement. Les codes postaux ne sont pas disponibles pour tous les pays. Dans certains pays, ce champ ne contiendra qu’une partie du code postal. |
-| `stateProvince` | Chaîne | Partie de l’état ou de la province de l’observation. Le format est conforme à la norme [ISO 3166-2 (pays et subdivisions)](https://www.unece.org/cefact/locode/subdivisions.html). |
+| `stateProvince` | Chaîne | Partie de l’état ou de la province de l’observation. Le format suit le [ISO 3166-2 (pays et subdivisions)](https://www.unece.org/cefact/locode/subdivisions.html) standard. |
 
 {style="table-layout:auto"}
 
-Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
+Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.schema.json)

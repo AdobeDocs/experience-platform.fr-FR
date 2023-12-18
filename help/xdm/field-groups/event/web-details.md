@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;groupe de champs;groupe de champs;
 solution: Experience Platform
 title: Groupe de champs de schéma de détails web
-description: Ce document présente un aperçu du groupe de champs de schéma Détails web .
+description: Découvrez le groupe de champs de schéma Détails web .
 exl-id: eb42606b-ade4-4d72-b601-c560009c98e8
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 18%
+source-wordcount: '118'
+ht-degree: 20%
 
 ---
 

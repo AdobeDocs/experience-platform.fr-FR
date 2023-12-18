@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;profil individuel;champs;schémas;schéma;conception de schéma;groupe de champs;groupe de champs;personne;détails de personne de profil;personne;personne
 solution: Experience Platform
 title: Groupe de champs de schéma de détails démographiques
-description: Ce document fournit un aperçu du groupe de champs de schéma Détails démographiques .
+description: Découvrez le groupe de champs de schéma Détails démographiques .
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 29%
+source-wordcount: '261'
+ht-degree: 30%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 29%
 | `person.gender` | Chaîne | Identité de genre de la personne. |
 | `person.martialStatus` | Chaîne | Décrit la relation d’une personne avec une autre significative. |
 | `person.nationality` | Chaîne | La relation juridique entre une personne et son état représentée à l’aide du code ISO 3166-1 Alpha-2. |
-| `person.taxId` | Chaîne | ID fiscal de la personne, comme le TIN aux États-Unis ou le CIF/NIF en Espagne. |
+| `person.taxId` | Chaîne | ID fiscal de la personne, comme la TIN aux États-Unis ou la CIF/NIF en Espagne. |
 
 {style="table-layout:auto"}
 

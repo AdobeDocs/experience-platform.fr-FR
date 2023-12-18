@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;groupe de champs;groupe de champs;
 solution: Experience Platform
 title: Groupe de champs de schéma Détails du marketing de Campaign
-description: Ce document présente un aperçu du groupe de champs Détails du marketing Campaign .
+description: Découvrez le groupe de champs Détails du marketing Campaign .
 exl-id: be08b38b-68a0-4a74-9b8f-0344a0637395
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '147'
-ht-degree: 17%
+source-wordcount: '124'
+ht-degree: 20%
 
 ---
 

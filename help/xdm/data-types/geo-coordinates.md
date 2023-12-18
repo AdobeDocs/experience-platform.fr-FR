@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;géo;coordonnées;type de données;type de données;type de données
 solution: Experience Platform
 title: Type de données Coordonnées géographiques
-description: Ce document présente le type de données XDM Coordonnées géographiques.
+description: Découvrez le type de données XDM Coordonnées géographiques.
 exl-id: 3c80eb44-852f-4a95-bd13-b6197ffe62da
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '131'
-ht-degree: 12%
+source-wordcount: '122'
+ht-degree: 13%
 
 ---
 

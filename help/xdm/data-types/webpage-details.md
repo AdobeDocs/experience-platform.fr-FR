@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;schéma;schéma;XDM;champs;schémas;schémas;détails de page web;type de données;type de données;page web
 solution: Experience Platform
 title: Type de données Détails de la page web
-description: Ce document fournit un aperçu du type de données XDM (Experience Data Model) des détails de la page web.
+description: Découvrez le type de données du modèle de données d’expérience (XDM) relatif aux détails de la page web.
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 13%
+source-wordcount: '383'
+ht-degree: 3%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 13%
 
 [!UICONTROL Détails des pages web] est un type de données XDM (Experience Data Model) standard qui décrit les détails d’une page web qui vient d’être chargée et affichée, tels qu’enregistrés par un ExperienceEvent.
 
-Le type de données est destiné aux détails complets de la page et aux chargements initiaux de pages des applications web d’une seule page (SPA). Pour les interactions qui se produisent sur une page chargée et qui ne déclenchent pas de nouveau chargement de page, reportez-vous à la section [interaction web](./web-interaction.md) type de données.
+Le type de données est destiné aux détails complets de la page et aux chargements initiaux de pages des applications web d’une seule page (SPA). Pour les interactions qui se produisent sur une page chargée et qui ne déclenchent pas de nouveau chargement de page, voir la section [interaction web](./web-interaction.md) type de données.
 
 <img src="../images/data-types/web-page-details.PNG" width="500" /><br />
 
@@ -32,7 +32,7 @@ Le type de données est destiné aux détails complets de la page et aux chargem
 
 {style="table-layout:auto"}
 
-Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
+Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webpagedetails.example.2.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webpagedetails.schema.json)

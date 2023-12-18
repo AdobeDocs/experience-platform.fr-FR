@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;schéma;XDM;champs;schémas;schémas;recherche;type de données;type de données;type de données
 solution: Experience Platform
 title: Type de données de recherche
-description: Ce document présente un aperçu du type de données XDM (Search Experience Data Model).
+description: Découvrez le type de données Search Experience Data Model (XDM).
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 23%
+source-wordcount: '160'
+ht-degree: 18%
 
 ---
 
@@ -25,11 +25,11 @@ ht-degree: 23%
 | `position` | Nombre entier | Position ou classement de la liste dans la page des résultats de recherche. |
 | `searchEngine` | Chaîne | Moteur de recherche utilisé pour la recherche. |
 | `searchEngineID` | Chaîne | Identifiant spécifique à l’application utilisé pour identifier le moteur de recherche. |
-| `slot` | Chaîne | Section nommée de la page dans laquelle le résultat de la recherche s’est affiché. La valeur de cette propriété doit être égale à l’une des valeurs d’énumération connues que vous définissez, par exemple : `top`, `side`ou `bottom`. |
+| `slot` | Chaîne | Section nommée de la page dans laquelle le résultat de la recherche s’est affiché. La valeur de cette propriété doit être égale à l’une des valeurs d’énumération connues que vous définissez, par exemple `top`, `side`, ou `bottom`. |
 
 {style="table-layout:auto"}
 
-Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
+Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/search.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/search.schema.json)

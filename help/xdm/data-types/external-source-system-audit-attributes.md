@@ -1,11 +1,11 @@
 ---
 title: Type de données Attributs d’audit du système de source externe
-description: Ce document présente un aperçu du type de données XDM (Extend Source Audit System Attributes) du modèle de données d’expérience (XDM).
+description: Découvrez le type de données Modèle de données d’expérience (XDM) des attributs d’audit du système source externe.
 exl-id: ebdd8707-9675-4232-a5b7-4e4a481d706a
-source-git-commit: a7e6ebfe09566e6e027b13efc95dda97ff8f0315
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 14%
+source-wordcount: '168'
+ht-degree: 7%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 14%
 
 {style="table-layout:auto"}
 
-Pour obtenir plus d’informations sur ce type de données, reportez-vous au référentiel XDM public:
+Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
 * [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/auditing/external-source-system-audit.schema.json)

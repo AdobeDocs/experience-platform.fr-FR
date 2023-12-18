@@ -1,11 +1,11 @@
 ---
 title: Groupe de champs du schéma des médicaments pour le secteur de la santé
-description: Ce document présente un aperçu du groupe de champs Schéma des médicaments pour les soins de santé .
+description: Découvrez le groupe de champs Schéma des médicaments pour les soins de santé .
 exl-id: 3423d067-fe8c-44e5-a6f9-ce0458d26ebc
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 11%
+source-wordcount: '197'
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 11%
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `ingredients` | Tableau d’objets | Répertorie les ingrédients présents dans le médicament. Chaque objet comprend les propriétés suivantes : <ul><li>`isActive`: (booléen) Indique si cet ingrédient est toujours activement utilisé dans ce médicament.</li><li>`name`: (Chaîne) Nom de l’ingrédient.</li><li>`quantity`: (Chaîne) La quantité de l’ingrédient présent dans le médicament.</li></ul> |
+| `ingredients` | Tableau d’objets | Répertorie les ingrédients présents dans le médicament. Chaque objet comprend les propriétés suivantes : <ul><li>`isActive`: (booléen). Indique si cet ingrédient est toujours activement utilisé dans ce médicament.</li><li>`name`: (chaîne). Nom de l’ingrédient.</li><li>`quantity`: (chaîne). La quantité de l’ingrédient présent dans le médicament.</li></ul> |
 | `brandName` | Chaîne | Nom de la marque du médicament. |
 | `codes` | Tableau de chaînes | Une liste de codes qui identifient ce médicament. |
 | `dosageUnitNumber` | Double | Numéro de l’unité de dosage du médicament. |
@@ -27,9 +27,9 @@ ht-degree: 11%
 | `lotNumber` | Chaîne | Identifiant unique du lot du médicament. |
 | `manufacturerName` | Chaîne | Nom du fabricant du médicament. |
 | `quantity` | Double | La quantité de médicament dans le paquet. |
-| `status` | Chaîne | Un état général indiquant si le médicament ou le médicament est principal ou non. |
+| `status` | Chaîne | État général indiquant si le médicament ou le médicament est actif ou non. |
 | `volume` | Double | Le volume du médicament. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le groupe de champs, reportez-vous à la section [référentiel XDM public](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json).
+Pour plus d’informations sur le groupe de champs, reportez-vous au [référentiel XDM public](https://github.com/adobe/xdm/blob/master/components/fieldgroups/medication/healthcare-medication.schema.json).

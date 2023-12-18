@@ -1,11 +1,11 @@
 ---
 title: Groupe de champs de schéma d’extension complète Adobe Analytics ExperienceEvent
-description: Ce document présente un aperçu du groupe de champs de schéma d’extension complète Adobe Analytics ExperienceEvent.
+description: Découvrez le groupe de champs Extension complète du schéma d’Adobe Analytics ExperienceEvent.
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '888'
-ht-degree: 100%
+source-wordcount: '811'
+ht-degree: 95%
 
 ---
 
@@ -17,7 +17,7 @@ Ce document décrit la structure et le cas d’utilisation du groupe de champs d
 
 >[!NOTE]
 >
->En raison de la taille et du nombre d’éléments répétés dans ce groupe de champs, de nombreux champs présentés dans ce guide ont été réduits pour gagner de l’espace. Pour explorer la structure complète de ce groupe de champs, vous pouvez le [consulter dans l’interface utilisateur de Platform](../../ui/explore.md) ou afficher le schéma complet dans le [référentiel XDM public](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
+>En raison de la taille et du nombre d’éléments répétés dans ce groupe de champs, de nombreux champs présentés dans ce guide ont été réduits pour gagner de l’espace. Pour explorer la structure complète de ce groupe de champs, vous pouvez : [Recherche dans l’interface utilisateur de Platform](../../ui/explore.md) ou consulter le schéma complet dans la [référentiel XDM public](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
 
 ## Structure du groupe de champs
 

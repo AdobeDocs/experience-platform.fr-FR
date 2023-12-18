@@ -1,11 +1,11 @@
 ---
 title: Groupe de champs de schéma des détails de publicité
-description: Ce document fournit un aperçu du groupe de champs de schéma Détails de publicité .
+description: Découvrez le groupe de champs de schéma Détails de la publicité .
 exl-id: 25de09bd-eedd-489c-9cd5-8acd0c52ddbe
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '1004'
-ht-degree: 21%
+source-wordcount: '992'
+ht-degree: 15%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 21%
 
 ## `adAssetReference` {#adAssetReference}
 
-Le `adAssetReference` capture les informations sur les ressources de la publicité.
+La variable `adAssetReference` capture les informations sur les ressources de la publicité.
 
 ![Structure adAssetReference](../../images/field-groups/advertising-details/adAssetReference.png)
 
@@ -46,17 +46,17 @@ Le `adAssetReference` capture les informations sur les ressources de la publicit
 | `_xmpDM.duration` | Nombre entier | Durée ou durée de la ressource en secondes. |
 | `_id` | Chaîne | Identifiant unique de la ressource publicitaire, selon la variable [Ad-ID standard](https://datatracker.ietf.org/doc/html/rfc8107). |
 | `advertiser` | Chaîne | Entreprise ou marque dont le produit apparaît dans la publicité. |
-| `campaign` | Chaîne | ID de la campagne publicitaire. |
-| `creativeID` | Chaîne | ID de l’élément créatif publicitaire. |
+| `campaign` | Chaîne | Identifiant de la campagne publicitaire. |
+| `creativeID` | Chaîne | Identifiant de l’élément créatif publicitaire. |
 | `creativeURL` | Chaîne | URL de l’élément créatif publicitaire. |
 | `placementID` | Chaîne | Identifiant de référencement de la publicité. |
-| `siteID` | Chaîne | ID du site publicitaire. |
+| `siteID` | Chaîne | Identifiant du site de la publicité. |
 
 {style="table-layout:auto"}
 
 ## `adAssetViewDetails` {#adAssetViewDetails}
 
-Le `adAssetViewDetails` capture les détails d’affichage de la lecture de publicité.
+La variable `adAssetViewDetails` capture les détails d’affichage de la lecture de publicité.
 
 ![Structure adAssetViewDetails](../../images/field-groups/advertising-details/adAssetViewDetails.png)
 
@@ -70,13 +70,13 @@ Le `adAssetViewDetails` capture les détails d’affichage de la lecture de publ
 
 ## `adViewability` {#adViewability}
 
-Le `adViewability` capture le nombre d’impressions vues par les utilisateurs finaux, telles que le volume du lecteur, la version de la bibliothèque, l’état de la fenêtre et les dimensions de la fenêtre d’affichage des publicités.
+La variable `adViewability` capture le nombre d’impressions vues par les utilisateurs finaux, telles que le volume du lecteur, la version de la bibliothèque, l’état de la fenêtre et les dimensions de la fenêtre d’affichage des publicités.
 
 ![structure adViewability](../../images/field-groups/advertising-details/adViewability.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `implementationDetails` | [[!UICONTROL Détails d’implémentation]](../../data-types/implementation-details.md) | Nom et version de la bibliothèque instrumentée pour évaluer les mesures de visibilité. |
+| `implementationDetails` | [[!UICONTROL Détails de mise en œuvre]](../../data-types/implementation-details.md) | Nom et version de la bibliothèque instrumentée pour évaluer les mesures de visibilité. |
 | `measuredAdNotVisible` | [[!UICONTROL Mesure]](../../data-types/measure.md) | Indique que la publicité n’est pas visible comme mesuré par une bibliothèque de visibilité au moment de l’impression. |
 | `measuredMuted` | [[!UICONTROL Mesure]](../../data-types/measure.md) | Indique que la publicité est mutée comme mesurée par une bibliothèque de visibilité au moment de l’impression. |
 | `unmeasurableIframe` | [[!UICONTROL Mesure]](../../data-types/measure.md) | Indique que la publicité s’affiche dans une fenêtre inactive comme mesuré par une bibliothèque de visibilité au moment de l’impression. |
@@ -87,7 +87,7 @@ Le `adViewability` capture le nombre d’impressions vues par les utilisateurs f
 | `viewableImpressions` | [[!UICONTROL Mesure]](../../data-types/measure.md) | Impressions d’une publicité destinée à un utilisateur final jugée visible après deux secondes de lecture par une bibliothèque de visibilité. |
 | `viewableMidpoints` | [[!UICONTROL Mesure]](../../data-types/measure.md) | Points médians d’une publicité destinée à un utilisateur final jugée visible au milieu de la lecture par une bibliothèque de visibilité. |
 | `viewableThirdQuartiles` | [[!UICONTROL Mesure]](../../data-types/measure.md) | Troisième quartile d’une publicité destinée à un utilisateur final jugée visible au troisième quartile de lecture par une bibliothèque de visibilité. |
-| `activeWindow` | Booléen | Indique si la publicité a été affichée dans la principale fenêtre de l’appareil de l’utilisateur. |
+| `activeWindow` | Booléen | Indique si la publicité a été affichée dans la fenêtre active de l’appareil de l’utilisateur. |
 | `adHeight` | Nombre entier | Nombre de pixels verticaux du lecteur, mesuré au moment de l’exécution. Cette taille peut être supérieure à la taille de la publicité si le lecteur dispose de commandes ou de miniatures en supplément. |
 | `adUnitDepth` | Nombre entier | Les éditeurs peuvent incorporer des unités publicitaires dans des conteneurs (iFrames) afin de limiter l’accès de la publicité uniquement au code de la page. Cette valeur décrit le nombre de conteneurs dans lesquels l’unité publicitaire est affichée. |
 | `adWidth` | Nombre entier | Nombre de pixels horizontaux du lecteur, mesuré au moment de l’exécution. Cette taille peut être supérieure à la taille de la publicité si le lecteur dispose de commandes ou de miniatures en supplément. |
@@ -100,4 +100,4 @@ Le `adViewability` capture le nombre d’impressions vues par les utilisateurs f
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le groupe de champs, reportez-vous à la section [référentiel XDM public](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-advertising.schema.json).
+Pour plus d’informations sur le groupe de champs, reportez-vous au [référentiel XDM public](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-advertising.schema.json).

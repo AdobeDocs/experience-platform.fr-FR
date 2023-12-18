@@ -1,11 +1,11 @@
 ---
 title: Type de données du compte financier
-description: Ce document présente un aperçu du type de données XDM du compte financier.
+description: Découvrez le type de données XDM du compte financier.
 exl-id: badf9b20-d397-4b46-b045-19c69806fe8e
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 7%
+source-wordcount: '90'
+ht-degree: 8%
 
 ---
 
@@ -24,4 +24,4 @@ ht-degree: 7%
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le type de données, reportez-vous à la section [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/financial-account.schema.json).
+Pour plus d’informations sur le type de données, reportez-vous au [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/financial-account.schema.json).

@@ -1,17 +1,17 @@
 ---
 title: Classe du fournisseur
-description: Ce document présente la classe Provider dans le modèle de données d’expérience (XDM).
+description: Découvrez la classe Provider dans le modèle de données d’expérience (XDM).
 exl-id: acb9b8a3-f911-49c5-9d2a-3a0d6aeebef9
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 5%
+source-wordcount: '146'
+ht-degree: 4%
 
 ---
 
 # [!UICONTROL Fournisseur] class
 
-Dans le modèle de données d’expérience (XDM), la variable [!UICONTROL Fournisseur] capture l’ensemble minimal de propriétés qui définissent une entité commerciale fournisseur (telle qu’un fournisseur de services de santé ou un fournisseur d’assurance).
+Dans le modèle de données d’expérience (XDM), le [!UICONTROL Fournisseur] capture l’ensemble minimal de propriétés qui définissent une entité commerciale du fournisseur (telle qu’un fournisseur de services de santé ou un fournisseur d’assurance).
 
 ![Structure de classe](../images/classes/provider.png)
 

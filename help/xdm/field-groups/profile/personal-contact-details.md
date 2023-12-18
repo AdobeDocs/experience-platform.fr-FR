@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;schéma;schéma;XDM;profil individuel;champs;schémas;schémas;détails personnels;conception de schéma;groupe de champs;groupe de champs;groupe de champs;
 solution: Experience Platform
 title: Groupe de champs de schéma Détails du contact personnel
-description: Ce document présente un aperçu du groupe de champs de schéma Détails du contact personnel .
+description: Découvrez le groupe de champs Détails du contact personnel .
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 20%
+source-wordcount: '143'
+ht-degree: 18%
 
 ---
 
@@ -25,10 +25,10 @@ ht-degree: 20%
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `faxPhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Décrit le numéro de fax de la personne. |
-| `homeAddress` | [Adresse postale](../../data-types/postal-address.md) | Décrit l’adresse résidentielle de la personne. |
+| `homeAddress` | [Adresse postale](../../data-types/postal-address.md) | Décrit l’adresse de la personne. |
 | `homePhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Décrit le numéro de téléphone de la personne. |
 | `mobilePhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Décrit le numéro de téléphone portable de la personne. |
-| `personalEmail` | [Adresse e-mail](../../data-types/email-address.md) | Décrit l’adresse électronique de la personne. |
+| `personalEmail` | [Adresse électronique](../../data-types/email-address.md) | Décrit l’adresse électronique de la personne. |
 
 {style="table-layout:auto"}
 

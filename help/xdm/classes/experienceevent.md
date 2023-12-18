@@ -2,11 +2,11 @@
 keywords: Experience Platform;accueil;rubriques populaires;schéma;Schéma;XDM;champs;schémas;Schémas;identityMap;mappage dʼidentités;Mappage dʼidentités;Conception du schéma;mappage;Mappage;modélisation des événements;modélisation d’événements;bonnes pratiques;événement;événements;
 solution: Experience Platform
 title: Classe XDM ExperienceEvent
-description: Ce document présente la classe XDM ExperienceEvent et décrit les bonnes pratiques pour la modélisation des données d’événement.
+description: Découvrez la classe XDM ExperienceEvent et les bonnes pratiques pour la modélisation des données d’événement.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
-source-git-commit: ac504f588b34961dff6887167e2cd07bc0eda453
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '2663'
+source-wordcount: '2659'
 ht-degree: 43%
 
 ---

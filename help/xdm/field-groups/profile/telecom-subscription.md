@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;profil individuel;champs;schémas;schémas;télécommunications;abonnement;télécommunications;conception de schéma;groupe de champs;groupe de champs;groupe de champs;
 solution: Experience Platform
 title: Groupe de champs de schéma d’abonnement aux télécommunications
-description: Ce document présente un aperçu du groupe de champs Schéma d'abonnement aux télécommunications .
+description: Découvrez le groupe de champs Schéma d'abonnement aux télécommunications .
 exl-id: 00c20081-09d0-425c-9894-0f957558bd43
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '715'
-ht-degree: 10%
+source-wordcount: '692'
+ht-degree: 9%
 
 ---
 
@@ -25,13 +25,13 @@ Le groupe de champs fournit un champ de type objet unique, `telecomSubscription`
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `internetSubscription` | Tableau d’objets | Décrit les détails du plan d’abonnement Internet, tels que la limite de données, le type de connexion et les détails de vitesse. Voir [section ci-dessous](#internetSubscription) pour plus d’informations. |
-| `landlineSubscription` | Tableau d’objets | Décrit les détails du plan d’abonnement fixe, y compris les fonctionnalités, les minutes et les plans de numérotation sélectionnés. Voir [section ci-dessous](#landlineSubscription) pour plus d’informations. |
-| `mediaSubscription` | Tableau d’objets | Décrit les détails du plan d’abonnement au média, y compris le nombre de canaux et les services de diffusion en continu inclus. Voir [section ci-dessous](#mediaSubscription) pour plus d’informations. |
-| `mobileSubscription` | Tableau d’objets | Décrit les détails du plan d’abonnement mobile, notamment le nombre de lignes, les taux de données, le coût, etc. Voir [section ci-dessous](#mobileSubscription) pour plus d’informations. |
+| `internetSubscription` | Tableau d’objets | Décrit les détails du plan d’abonnement Internet, tels que la limite de données, le type de connexion et les détails de vitesse. Voir [section](#internetSubscription) pour plus d’informations. |
+| `landlineSubscription` | Tableau d’objets | Décrit les détails du plan d’abonnement fixe, y compris les fonctionnalités, les minutes et les plans de numérotation sélectionnés. Voir [section](#landlineSubscription) pour plus d’informations. |
+| `mediaSubscription` | Tableau d’objets | Décrit les détails du plan d’abonnement au média, y compris le nombre de canaux et les services de diffusion en continu inclus. Voir [section](#mediaSubscription) pour plus d’informations. |
+| `mobileSubscription` | Tableau d’objets | Décrit les détails du plan d’abonnement mobile, notamment le nombre de lignes, les taux de données, le coût, etc. Voir [section](#mobileSubscription) pour plus d’informations. |
 | `primarySubscriber` | [[!UICONTROL Personne]](../../data-types/person.md) | Décrit le propriétaire de l’abonnement. |
 | `bundleName` | Chaîne | Capture le nom de tout type de regroupement d’abonnement auquel le client est inscrit, tel que `Internet + Media`. |
-| `primaryPartyID` | Chaîne | Identifiant de la Principale personne responsable de l’abonnement, qui peut généralement être son numéro de téléphone d’appareil. |
+| `primaryPartyID` | Chaîne | Identifiant de la personne principale responsable de l’abonnement, qui peut généralement être son numéro de téléphone d’appareil. |
 
 {style="table-layout:auto"}
 
@@ -88,7 +88,7 @@ Pour plus d’informations sur le groupe de champs, reportez-vous au référenti
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `streamingServices` | Tableau d’objets | Liste de tous les services de diffusion en continu inclus dans l’abonnement. Chaque élément de tableau comprend les propriétés suivantes : <ul><li>`promotionLength`: Durée de la promotion, en mois, si le service de diffusion en continu a été ajouté dans le cadre d’une promotion.</li><li>`promotionalAddition`: Indique si le service de diffusion en continu a été ajouté dans le cadre d’une promotion.</li><li>`serviceName`: Nom du service de diffusion en continu.</li></ul> |
+| `streamingServices` | Tableau d’objets | Liste de tous les services de diffusion en continu inclus dans l’abonnement. Chaque élément de tableau comprend les propriétés suivantes : <ul><li>`promotionLength`: durée de la promotion, en mois, si le service de diffusion en continu a été ajouté dans le cadre d’une promotion.</li><li>`promotionalAddition`: indique si le service de diffusion en continu a été ajouté dans le cadre d’une promotion.</li><li>`serviceName`: nom du service de diffusion en continu.</li></ul> |
 | `subscriptionDetails` | [[!UICONTROL Abonnement aux télécommunications]](../../data-types/telecom-subscription.md) | Décrit les détails généraux de l’abonnement, notamment la durée de l’abonnement, les frais, l’état, etc. |
 | `channels` | Nombre entier | Nombre de canaux inclus dans l’abonnement au média. |
 

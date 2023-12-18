@@ -1,17 +1,17 @@
 ---
 title: Classe de produits
-description: Ce document présente la classe Product dans le modèle de données d’expérience (XDM).
+description: Découvrez la classe Product dans le modèle de données d’expérience (XDM).
 exl-id: 911680ae-b761-4945-9ad3-0233eaea89b0
-source-git-commit: fdd68e5a94d841992a6f8abe10f3cffe0ebb6794
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 20%
+source-wordcount: '200'
+ht-degree: 15%
 
 ---
 
 # [!UICONTROL Produit] class
 
-Dans le modèle de données d’expérience (XDM), la variable [!UICONTROL Produit] capture l’ensemble minimal de propriétés qui définissent un produit de vente au détail.
+Dans le modèle de données d’expérience (XDM), le [!UICONTROL Produit] capture l’ensemble minimal de propriétés qui définissent un produit de vente au détail.
 
 ![](../images/classes/product.png)
 

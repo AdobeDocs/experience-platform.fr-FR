@@ -1,10 +1,10 @@
 ---
 title: Groupe de champs de schéma Détails de la requête entre guillemets
-description: Ce document présente un aperçu du groupe de champs Détails de la demande de devis .
+description: Découvrez le groupe de champs Détails de la demande de devis .
 exl-id: 19be76fa-d212-4b00-815a-d3869c1054e2
-source-git-commit: f5df893260f0772ad54ccdb00d99ed8f328d35a9
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '133'
 ht-degree: 6%
 
 ---
@@ -25,4 +25,4 @@ ht-degree: 6%
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le groupe de champs, reportez-vous à la section [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-quote-request-details.schema.json).
+Pour plus d’informations sur le groupe de champs, reportez-vous au [référentiel XDM public](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/experience-event/experienceevent-quote-request-details.schema.json).

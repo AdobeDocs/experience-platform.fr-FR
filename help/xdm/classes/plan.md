@@ -1,17 +1,17 @@
 ---
 title: Classe Plan
-description: Ce document présente la classe Plan dans le modèle de données d’expérience (XDM).
+description: Découvrez la classe Plan dans le modèle de données d’expérience (XDM).
 exl-id: ccff962d-3104-482c-8d65-d2bd2602a9be
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '145'
 ht-degree: 4%
 
 ---
 
-# [!UICONTROL Plan] class
+# [!UICONTROL Planifier] class
 
-Dans le modèle de données d’expérience (XDM), la variable [!UICONTROL Plan] capture l’ensemble minimal de propriétés qui définissent un plan, comme un plan d’assurance ou un plan d’assurance.
+Dans le modèle de données d’expérience (XDM), le [!UICONTROL Planifier] capture l’ensemble minimal de propriétés qui définissent un plan, comme un plan d’assurance ou un plan d’assurance.
 
 ![Structure de classe](../images/classes/plan.png)
 
@@ -23,4 +23,4 @@ Dans le modèle de données d’expérience (XDM), la variable [!UICONTROL Plan]
 
 {style="table-layout:auto"}
 
-La classe peut être étendue à l’aide de la fonction [[!UICONTROL Détails du plan de soins de santé] groupe de champs](../field-groups/plan/healthcare-plan-details.md) pour décrire plus en détail un régime d’assurance maladie.
+La classe peut être étendue à l’aide de la fonction [[!UICONTROL Détails du plan de santé] groupe de champs](../field-groups/plan/healthcare-plan-details.md) pour décrire plus en détail un régime d’assurance maladie.

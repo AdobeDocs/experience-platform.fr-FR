@@ -1,11 +1,11 @@
 ---
 title: Groupe de champs de schéma des détails de campagne commerciale XDM
-description: Ce document présente un aperçu du groupe de champs Détails de la campagne XDM Business.
+description: Découvrez le groupe de champs Détails de la campagne XDM.
 exl-id: 3ef6c0b9-cba1-449e-8868-46446c00465f
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '363'
-ht-degree: 6%
+source-wordcount: '353'
+ht-degree: 5%
 
 ---
 
@@ -28,11 +28,11 @@ ht-degree: 6%
 | `channelName` | [!UICONTROL Chaîne] | Nom du canal associé à cette campagne. |
 | `expectedResponse` | [!UICONTROL Chaîne] | Réponse attendue pour la campagne. |
 | `integrationPartnerName` | [!UICONTROL Chaîne] | Nom du partenaire qui a intégré cette campagne. |
-| `isActive` | [!UICONTROL Booléen] | Indique si cette campagne est principale. |
-| `isDeleted` | [!UICONTROL Booléen] | Indique si cette campagne a été supprimée dans Marketo Engage.<br><br>Lors de l’utilisation de la variable [Connecteur source Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), les enregistrements supprimés dans Marketo sont automatiquement répercutés dans Real-time Customer Profile. Cependant, les enregistrements relatifs à ces profils peuvent toujours persister dans le lac de données. En définissant `isDeleted` to `true`, vous pouvez utiliser ce champ pour filtrer les enregistrements qui ont été supprimés de vos sources lors de l’interrogation du lac de données. |
+| `isActive` | [!UICONTROL Booléen] | Indique si cette campagne est active. |
+| `isDeleted` | [!UICONTROL Booléen] | Indique si cette campagne a été supprimée dans Marketo Engage.<br><br>Lors de l’utilisation de la variable [Connecteur source Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tous les enregistrements supprimés dans Marketo sont automatiquement répercutés dans Real-time Customer Profile. Cependant, les enregistrements relatifs à ces profils peuvent toujours persister dans le lac de données. En définissant `isDeleted` to `true`, vous pouvez utiliser ce champ pour filtrer les enregistrements qui ont été supprimés de vos sources lors de l’interrogation du lac de données. |
 | `lastActivityDate` | [!UICONTROL DateTime] | Horodatage ISO 8601 de la dernière activité associée à la campagne. |
 | `timeZone` | [!UICONTROL Chaîne] | Fuseau horaire dans lequel la campagne fonctionne. |
-| `timeZoneDelivery` | [!UICONTROL Chaîne] | Fuseau horaire de la diffusion dans laquelle la campagne fonctionne. |
+| `timeZoneDelivery` | [!UICONTROL Chaîne] | Fuseau horaire de la diffusion dans laquelle la campagne opère. |
 | `timeZoneName` | [!UICONTROL Chaîne] | Nom du fuseau horaire dans lequel la campagne fonctionne. |
 | `webinarHistorySyncDate` | [!UICONTROL DateTime] | Horodatage ISO 8601 de la dernière synchronisation de l’historique des webinaires pour cette campagne. |
 | `webinarHistorySyncStatus` | [!UICONTROL Chaîne] | État de la synchronisation de l’historique des webinaires pour cette campagne. |
@@ -41,4 +41,4 @@ ht-degree: 6%
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le groupe de champs, reportez-vous à la section [référentiel XDM public](https://github.com/adobe/xdm/blob/master/components/fieldgroups/campaign/campaign-details.schema.json).
+Pour plus d’informations sur le groupe de champs, reportez-vous au [référentiel XDM public](https://github.com/adobe/xdm/blob/master/components/fieldgroups/campaign/campaign-details.schema.json).

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;ExperienceEvent;champs;schémas;schémas;conception de schéma;groupe de champs;groupe de champs;réservation;hébergement;
 title: Groupe de champs de schéma de réservation d’hébergement
-description: Ce document présente un aperçu du groupe de champs Schéma de réservation de logement .
+description: Découvrez le groupe de champs Schéma de réservation de logement .
 exl-id: f0eafc83-21f1-483d-9397-1133e3777699
-source-git-commit: afbbdfff4346ab5240927f5703d3a06676776ea8
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 7%
+source-wordcount: '655'
+ht-degree: 6%
 
 ---
 
@@ -18,7 +18,7 @@ Le groupe de champs est une extension de la variable [!UICONTROL Détails de la 
 
 >[!NOTE]
 >
->Ce document couvre les détails de la variable `lodgingReservations` tableau. Pour plus d’informations sur les autres champs fournis sous le `reservations` , reportez-vous à la section [[!UICONTROL Détails de la réservation] référence de groupe de champs](./reservation-details.md).
+>Ce document couvre les détails du `lodgingReservations` tableau. Pour plus d’informations sur les autres champs fournis sous le `reservations` , reportez-vous à la section [[!UICONTROL Détails de la réservation] référence de groupe de champs](./reservation-details.md).
 
 ![Logement Structure de la réservation](../../images/field-groups/lodging-reservation/structure.png)
 
@@ -32,11 +32,11 @@ La structure de chaque objet fournie sous `lodgingReservations` est fourni ci-de
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `averageDailyPrice` | [[!UICONTROL Devise]](../../data-types/currency.md) | Prix moyen journalier de la chambre d&#39;hôtel. |
-| `lodgingCheckIn` | Objet | Objet décrivant les détails de l’archivage. Inclut les valeurs suivantes :<ul><li>`digitalKey`: (Entier) Indique lorsqu’un invité sélectionne l’utilisation d’une clé numérique lors de son archivage.</li><li>`earlyCheckInRequested`: (Entier) Indique lorsqu’un invité demande à s’archiver avant les heures d’archivage normales.</li><li>`lateCheckInRequested`: (Entier) Indique lorsqu’un invité demande à s’archiver plus tard que les heures d’enregistrement normales.</li><li>`noRoomCheckIn`: (Entier) Cette valeur est capturée lorsqu’un invité termine son archivage lorsqu’il n’y a aucune pièce disponible à ce moment.</li><li>`oneRoomCheckIn`: (Entier) Cette valeur est capturée lorsqu’un invité termine son enregistrement lorsqu’une seule pièce est disponible à ce moment.</li><li>`roomKeys`: (Entier) Nombre de clés de chambre standard fournies lors de l’archivage.</li><li>`userSelectedRoom`: (Booléen) Indique si l’invité a sélectionné sa chambre à l’enregistrement.</li></ul> |
+| `averageDailyPrice` | [[!UICONTROL Devise]](../../data-types/currency.md) | Le prix moyen journalier de la chambre d&#39;hôtel. |
+| `lodgingCheckIn` | Objet | Objet décrivant les détails de l’archivage. Inclut les valeurs suivantes :<ul><li>`digitalKey`: (nombre entier) indique lorsqu’un invité sélectionne l’utilisation d’une clé numérique lors de son archivage.</li><li>`earlyCheckInRequested`: (nombre entier) indique lorsqu’un invité demande à s’archiver avant les heures d’archivage normales.</li><li>`lateCheckInRequested`: (nombre entier) indique lorsqu’un invité demande à s’archiver plus tard que les heures d’enregistrement normales.</li><li>`noRoomCheckIn`: (entier). Cette valeur est capturée lorsqu’un invité termine son archivage lorsqu’aucune pièce n’est disponible à ce moment-là.</li><li>`oneRoomCheckIn`: (entier). Cette valeur est capturée lorsqu’un invité termine son enregistrement lorsqu’une seule pièce est disponible à ce moment-là.</li><li>`roomKeys`: (nombre entier) nombre de clés de chambre standard fournies lors de l’archivage.</li><li>`userSelectedRoom`: (booléen). Indique si l’invité a sélectionné sa chambre à l’enregistrement.</li></ul> |
 | `rackrate` | [[!UICONTROL Devise]](../../data-types/currency.md) | Le coût d’une réservation le même jour sans réservation préalable. |
 | `ID` | Chaîne | Numéro ou identifiant de la réservation. |
-| `agentID` | Chaîne | L’ID d’agent associé à la réservation de l’hôtel. |
+| `agentID` | Chaîne | ID d’agent associé à la réservation de l’hôtel. |
 | `basePrice` | Chaîne | Le prix de base avant toute remise. |
 | `bookingID` | Chaîne | ID de réservation associé à la réservation de l’hôtel. |
 | `cancellation` | Nombre entier | Cette valeur est capturée lorsqu’une réservation a été annulée. |
@@ -52,7 +52,7 @@ La structure de chaque objet fournie sous `lodgingReservations` est fourni ci-de
 | `length` | Nombre entier | Nombre total de jours pour la réservation. |
 | `loyaltyID` | Chaîne | L’identifiant du programme de fidélité de l’invité répertorié dans la réservation. |
 | `modification` | Nombre entier | Cette valeur est capturée lorsqu’une réservation a été modifiée. |
-| `modificationDate` | DateTime | Heure à laquelle la réservation a été modifiée pour la dernière fois. |
+| `modificationDate` | DateTime | Heure de la dernière modification de la réservation. |
 | `numberOfAdults` | Nombre entier | Nombre d’adultes associés à la réservation. |
 | `numberOfChildren` | Nombre entier | Nombre d’enfants associés à la réservation. |
 | `numberOfRooms` | Nombre entier | Nombre de chambres associées à la réservation. |

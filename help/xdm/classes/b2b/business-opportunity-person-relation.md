@@ -1,11 +1,11 @@
 ---
 title: Classe de relation d’une personne avec une opportunité commerciale XDM
-description: Ce document présente la classe XDM Business Opportunity Person Relation dans Experience Data Model (XDM).
+description: Découvrez la classe XDM Business Opportunity Person Relation dans Experience Data Model (XDM).
 exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 6%
+source-wordcount: '354'
+ht-degree: 3%
 
 ---
 
@@ -26,8 +26,8 @@ ht-degree: 6%
 | `opportunityPersonKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Identifiant composite de l’entité de relation opportunité-personne. |
 | `personKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Identifiant composite de la personne dans la relation opportunité-personne. |
 | `_id` | Chaîne | Identifiant unique de l’enregistrement. Il s’agit d’une valeur générée par le système qui est distincte des autres champs d’ID capturés par la classe . |
-| `isDeleted` | Booléen | Indique si cette entité de liste marketing a été supprimée dans Marketo Engage.<br><br>Lors de l’utilisation de la variable [Connecteur source Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), les enregistrements supprimés dans Marketo sont automatiquement répercutés dans Real-time Customer Profile. Cependant, les enregistrements relatifs à ces profils peuvent toujours persister dans le lac de données. En définissant `isDeleted` to `true`, vous pouvez utiliser ce champ pour filtrer les enregistrements qui ont été supprimés de vos sources lors de l’interrogation du lac de données. |
-| `isPrimary` | Booléen | Indique si la personne est le contact Principal pour cette opportunité. |
+| `isDeleted` | Booléen | Indique si cette entité de liste marketing a été supprimée dans Marketo Engage.<br><br>Lors de l’utilisation de la variable [Connecteur source Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tous les enregistrements supprimés dans Marketo sont automatiquement répercutés dans Real-time Customer Profile. Cependant, les enregistrements relatifs à ces profils peuvent toujours persister dans le lac de données. En définissant `isDeleted` to `true`, vous pouvez utiliser ce champ pour filtrer les enregistrements qui ont été supprimés de vos sources lors de l’interrogation du lac de données. |
+| `isPrimary` | Booléen | Indique si la personne est le premier contact pour cette opportunité. |
 | `opportunityID` | Chaîne | Identifiant unique de l’opportunité dans la relation opportunité-personne. |
 | `opportunityPersonID` | Chaîne | Identifiant unique de l’entité de relation opportunité-personne |
 | `personID` | Chaîne | Identifiant unique de la personne dans la relation opportunité-personne. |

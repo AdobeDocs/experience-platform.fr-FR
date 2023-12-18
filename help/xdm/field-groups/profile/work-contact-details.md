@@ -2,11 +2,11 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma;XDM;profil individuel;champs;schémas;schémas;conception de schéma;mixin;mixins;détails de travail;travail de profil;
 solution: Experience Platform
 title: Groupe de champs de schéma Détails du contact professionnel
-description: Ce document présente un aperçu du groupe de champs de schéma Détails du contact du travail .
+description: Découvrez le groupe de champs Détails du contact du travail .
 exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '167'
 ht-degree: 15%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 15%
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `workAddress` | [Adresse postale](../../data-types/postal-address.md) | Décrit l’adresse professionnelle de la personne. |
-| `workEmail` | [Adresse e-mail](../../data-types/email-address.md) | Décrit l’adresse électronique professionnelle de la personne. |
+| `workEmail` | [Adresse électronique](../../data-types/email-address.md) | Décrit l’adresse électronique professionnelle de la personne. |
 | `workPhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Décrit le numéro de téléphone professionnel de la personne. |
 | `organizations` | Chaîne (tableau) | Tableau de chaînes de forme libre représentant les organisations dont la personne est membre. |
 
