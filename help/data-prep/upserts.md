@@ -3,22 +3,26 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;prép de do
 title: Envoyer Des Mises À Jour Partielles De Ligne À Real-Time Customer Profile À L’Aide De La Préparation De Données
 description: Découvrez comment envoyer des mises à jour de lignes partielles à Real-time Customer Profile à l’aide de la préparation de données.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: c432bcb3c625b569ec5abbe4a77d683b7509e709
+source-git-commit: db6a0b45d600d16b24f7f749e414dfd0998fbf5e
 workflow-type: tm+mt
-source-wordcount: '1225'
-ht-degree: 11%
+source-wordcount: '1242'
+ht-degree: 5%
 
 ---
 
 # Envoi de mises à jour de lignes partielles à [!DNL Real-Time Customer Profile] using [!DNL Data Prep]
 
-La diffusion en flux continu d’upserts dans [!DNL Data Prep] permet d’envoyer des mises à jour de ligne partielles aux données [!DNL Real-Time Customer Profile] tout en créant et en établissant de nouveaux liens d’identité avec une seule requête API.
-
-En diffusant en continu des upserts, vous pouvez conserver le format de vos données tout en convertissant ces données en [!DNL Real-Time Customer Profile] Demandes de PATCH pendant l’ingestion. En fonction des entrées que vous fournissez, [!DNL Data Prep] vous permet d’envoyer une seule charge utile API et de traduire les données dans les deux [!DNL Real-Time Customer Profile] PATCH et [!DNL Identity Service] CRÉEZ des requêtes.
-
 >[!WARNING]
 >
 >L’ingestion sur les messages de mise à jour d’entité du modèle de données d’expérience (XDM) (avec les opérations du PATCH JSON) pour les mises à jour de profil via l’inlet du DCS a été abandonnée. En tant qu’alternative, vous pouvez [ingestion de données brutes dans l’inlet DCS](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) et spécifiez les mappages de données nécessaires pour transformer vos données en messages compatibles XDM pour les mises à jour de Profile.
+
+Diffusion en continu des upserts dans [!DNL Data Prep] vous permet d’envoyer des mises à jour de ligne partielles à [!DNL Real-Time Customer Profile] lors de la création et de l’établissement de nouveaux liens d’identité avec une seule requête API.
+
+En diffusant en continu des upserts, vous pouvez conserver le format de vos données tout en convertissant ces données en [!DNL Real-Time Customer Profile] Demandes de PATCH pendant l’ingestion. En fonction des entrées que vous fournissez, [!DNL Data Prep] vous permet d’envoyer une seule charge utile API et de traduire les données dans les deux [!DNL Real-Time Customer Profile] PATCH et [!DNL Identity Service] CRÉEZ des requêtes.
+
+>[!NOTE]
+>
+>Pour tirer parti de la fonctionnalité de restauration, il est recommandé de désactiver les configurations compatibles XDM lors de l’ingestion des données et de remapper la charge utile entrante à l’aide de [Mappage de préparation des données](./ui/mapping.md).
 
 Ce document fournit des informations sur la diffusion en continu de upserts dans [!DNL Data Prep].
 
@@ -26,8 +30,8 @@ Ce document fournit des informations sur la diffusion en continu de upserts dans
 
 Cette présentation d’ nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Data Prep]](./home.md): [!DNL Data Prep] permet aux ingénieurs de données de mapper, transformer et valider des données vers et à partir du modèle de données d’expérience (XDM).
-* [[!DNL Identity Service]](../identity-service/home.md) : profitez d’une meilleure compréhension de vos clients et de leurs comportements en rapprochant des identités entre appareils et systèmes.
+* [[!DNL Data Prep]](./home.md): [!DNL Data Prep] permet aux ingénieurs de données de mapper, de transformer et de valider des données vers et depuis le modèle de données d’expérience (XDM).
+* [[!DNL Identity Service]](../identity-service/home.md): profitez d’une meilleure vue d’ensemble des clients et de leur comportement en rapprochant des identités entre appareils et systèmes.
 * [Real-Time Customer Profile](../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [Sources](../sources/home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform.
 
@@ -58,7 +62,7 @@ Si de nouvelles identités doivent être liées, vous devez créer et transmettr
 
 #### Champs obligatoires dans les schémas associés au jeu de données d’identité {#identity-dataset-required-fileds}
 
-Si votre schéma contient des champs obligatoires, la validation du jeu de données doit être supprimée pour permettre [!DNL Identity Service] pour ne recevoir que les identités. Vous pouvez supprimer la validation en appliquant le `disabled` à la valeur `acp_validationContext` . Voir l’exemple ci-dessous:
+Si votre schéma contient des champs obligatoires, la validation du jeu de données doit être supprimée pour permettre [!DNL Identity Service] pour ne recevoir que les identités. Vous pouvez supprimer la validation en appliquant le `disabled` à la valeur `acp_validationContext` . Voir l’exemple ci-dessous :
 
 ```shell
 curl -X POST 'https://platform.adobe.io/data/foundation/catalog/dataSets/62257bef7a75461948ebcaaa' \
