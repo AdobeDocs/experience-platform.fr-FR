@@ -4,27 +4,42 @@ description: Dernières notes de mise à jour pour Adobe Experience Platform 
 keywords: debugger ; extension experience cloud debugger ; chrome ; extension ; notes de mise à jour
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: 5ec61e3822cf42bdb89b24a17782b40cbd9dab37
+source-git-commit: a381760d3f19e04a70581d4adbb8095c92fb2e56
 workflow-type: tm+mt
-source-wordcount: '660'
-ht-degree: 90%
+source-wordcount: '704'
+ht-degree: 95%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform Debugger
 
-## Version 1.5.3 - jeudi 6 décembre 2023
-
-### Nouvelles fonctionnalités
-
-* Ajout d’un &quot;verrouillage sur l’onglet actif lors de l’ouverture du paramètre Debugger&quot;.
+## Version 1.5.4 - mercredi 19 décembre 2023
 
 ### Correctifs et améliorations
 
-* Correction d’un problème en raison duquel les demandes Analytics étaient absentes sur les domaines privés.
-* Correction d’un problème en raison duquel les données de Activity Map manquaient dans le tableau de requêtes Analytics.
-* Correction d’un problème en raison duquel l’affichage de Target Trace provoquait un blocage.
+* Correction d’un problème en raison duquel les paramètres n’étaient pas conservés.
+* Correction d’un problème en raison duquel le débogueur se bloquait lors de l’affichage des accès Analytics après traitement.
+
+## Version 1.5.3 - 6 décembre 2023
+
+### Nouvelles fonctionnalités
+
+* Ajout d’un paramètre « Verrouillage sur l’onglet actif lors de l’ouverture du débogueur ».
+
+### Correctifs et améliorations
+
+* Correction d’un problème en raison duquel les requêtes Analytics étaient absentes sur les domaines privés.
+* Correction d’un problème en raison duquel les données Activity Map manquaient dans le tableau des requêtes Analytics.
+* Correction d’un problème en raison duquel l’affichage de Target Trace provoquait un blocage.
 * Ajout d’un avertissement lorsque le débogueur ne parvient pas à configurer l’infrastructure sur la page dans Firefox.
+
+## Version 1.5.2 - samedi 10 novembre 2023
+
+(Firefox uniquement)
+
+### Correctifs et améliorations
+
+* Mise à jour de l’organisation des fichiers.
 
 ## Version 1.5.1 - 2 novembre 2023
 
