@@ -2,10 +2,10 @@
 title: Présentation de l’extension de l’API Meta Conversions
 description: Découvrez l’extension de l’API Meta Conversions pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: b11aff782a44237e6e4ae87254163713883e3ded
+source-git-commit: e7d63ff86cdc1718129d0a8e4861b6a8c4631f75
 workflow-type: tm+mt
-source-wordcount: '2595'
-ht-degree: 1%
+source-wordcount: '2565'
+ht-degree: 0%
 
 ---
 
@@ -115,6 +115,12 @@ Lors de l’envoi d’événements partagés, veillez à inclure un identifiant 
 >* La fonction de démarrage rapide est disponible pour les clients qui ont acheté le package Real-Time CDP Prime et Ultimate. Pour plus dʼinformations, contactez votre représentant commercial Adobe.
 >* Cette fonctionnalité est destinée aux nouvelles mises en oeuvre et ne prend actuellement pas en charge l’installation automatique d’extensions et de configurations sur les balises existantes et les propriétés de transfert d’événement.
 
+>[!NOTE]
+>
+>Tout client existant peut utiliser les workflows de démarrage rapide pour créer une implémentation de référence qui peut être utilisée pour les éléments suivants :
+>* Utilisez-le comme début d’une toute nouvelle mise en oeuvre.
+>* Profitez-en comme implémentation de référence que vous pouvez examiner pour voir comment il a été configuré, puis répliqué dans vos implémentations de production actuelles.
+
 La fonction de démarrage rapide vous permet de configurer facilement et efficacement l’API des conversions de métadonnées et les extensions de pixel de métadonnées. Cet outil automatise plusieurs étapes effectuées dans les balises Adobe et le transfert d’événement, réduisant considérablement le temps de configuration.
 
 Cette fonctionnalité installe et configure automatiquement l’API des conversions de métadonnées et les extensions de pixel de métadonnées sur une nouvelle propriété de transfert d’événement et de balises générées automatiquement avec les règles et les éléments de données nécessaires. De plus, il installe et configure automatiquement le SDK Web et la banque de données Experience Platform. Enfin, la fonction de démarrage rapide publie automatiquement la bibliothèque à l’URL désignée dans un environnement de développement, ce qui permet la collecte de données côté client et le transfert d’événements côté serveur en temps réel via Event Forwarding et Experience Platform Edge Network.
@@ -152,7 +158,7 @@ Dans la **[!UICONTROL Ajout de code sur votre site]** Copiez le code fourni à l
 
 ![Ajout de code dans la boîte de dialogue de votre site](../../../images/extensions/server/meta/add-code-on-your-site.png)
 
-La variable [!UICONTROL Résultats de la validation] affiche les résultats de la mise en oeuvre de l’extension Meta. Sélectionnez **[!UICONTROL Suivant]**. Vous pouvez également afficher des résultats de validation supplémentaires en sélectionnant **[!UICONTROL Assurance]** lien.
+La variable [!UICONTROL Résultats de la validation] affiche les résultats de la mise en oeuvre de l’extension Meta. Sélectionner **[!UICONTROL Suivant]**. Vous pouvez également afficher des résultats de validation supplémentaires en sélectionnant **[!UICONTROL Assurance]** lien.
 
 ![Boîte de dialogue des résultats de test affichant les résultats de mise en oeuvre](../../../images/extensions/server/meta/test-results.png)
 
