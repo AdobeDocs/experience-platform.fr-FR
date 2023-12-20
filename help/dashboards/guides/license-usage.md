@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;interface utilisateur;interface utilisateur;personnalisation;tableau de bord d’utilisation de la licence;tableau de bord;utilisation des licences;droits;consommation
-title: Tableau de bord d’utilisation de la licence Guide
+title: Guide de tableau de bord de l’utilisation de licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: fc0cb582d74f5ab52410991f65aa14ba05df3f97
+source-git-commit: e80577cb190e77624a2dc32f8343fc4b82a24a03
 workflow-type: tm+mt
-source-wordcount: '2027'
-ht-degree: 9%
+source-wordcount: '2108'
+ht-degree: 5%
 
 ---
 
@@ -16,7 +16,14 @@ ht-degree: 9%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="Tableau de bord d’utilisation des licences"
->abstract="Le tableau de bord d’utilisation des licences donne des informations sur les produits Adobe Experience Platform que vous avez achetés. La vue d’ensemble du tableau de bord affiche les mesures principales pour vos produits, notamment votre utilisation pour chacune d’entre elles et la quantité de licences contractées. L’espace de travail des détails affiche une répartition de vos mesures pour chaque produit dans des sandbox spécifiques."
+>abstract="Le tableau de bord de l’utilisation des licences donne des informations sur les produits Adobe Experience Platform que vous avez achetés. La présentation du tableau de bord affiche les mesures principales pour vos produits, y compris votre utilisation pour chacune des mesures principales et le montant de votre licence. L’espace de travail des détails affiche une répartition de vos mesures pour chaque produit dans des sandbox spécifiques."
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage_prediction"
+>title="Tableau de bord d’utilisation des licences"
+>abstract="Le tableau de bord de l’utilisation des licences donne des informations sur les produits Adobe Experience Platform que vous avez achetés. La présentation du tableau de bord affiche les mesures principales pour vos produits, y compris votre utilisation pour chacune des mesures principales et le montant de votre licence. L’espace de travail des détails affiche une répartition de vos mesures pour chaque produit dans des sandbox spécifiques.<br>Les prédictions d’utilisation sont actualisées chaque mois à la fin du mois et prévoient votre utilisation pour la période de six mois à venir. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes pour les environnements de test et les jeux de données."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Expirations de jeux de données"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données des profils pseudonymes"
 
 Vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise via Adobe Experience Platform [!UICONTROL Utilisation des licences] tableau de bord. Les informations affichées ici sont capturées pendant un instantané quotidien de votre instance Platform.
 
@@ -36,7 +43,7 @@ Les données de ce tableau de bord s’affichent exactement comme elles apparais
 >
 >Les modifications ou mises à jour apportées aux données depuis la prise dʼun instantané ne seront pas reflétées dans le tableau de bord avant la prise de lʼinstantané suivant.
 
-## Exploration du tableau de bord d’utilisation des licences {#explore}
+## Exploration du tableau de bord de l’utilisation des licences {#explore}
 
 Pour accéder au tableau de bord de l’utilisation des licences dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Utilisation des licences]** dans le rail de gauche. La variable [!UICONTROL Présentation] s’ouvre, affichant une liste des produits disponibles.
 
@@ -46,7 +53,7 @@ Pour accéder au tableau de bord de l’utilisation des licences dans l’interf
 
 ![Onglet Aperçu de l’utilisation de la licence , avec l’utilisation de la licence mise en surbrillance dans la barre de navigation de gauche.](../images/license-usage/dashboard-overview.png)
 
-## [!UICONTROL Onglet Aperçu] {#overview-tab}
+## [!UICONTROL Présentation] tab {#overview-tab}
 
 Ce tableau de bord affiche sous forme de tableau tous les produits Adobe Experience Platform sous licence, y compris les modules complémentaires. Le tableau fournit des informations clés sur l’utilisation de votre licence pour tous les profils disponibles.
 
@@ -64,7 +71,7 @@ Ce tableau de bord affiche sous forme de tableau tous les produits Adobe Experie
 
 Le tableau indique la mesure principale de chaque produit, car chaque produit peut effectuer le suivi de nombreuses mesures.
 
-## [!UICONTROL Onglet Résumé] {#summary-tab}
+## [!UICONTROL Résumé] tab {#summary-tab}
 
 Pour afficher d’autres mesures et des informations détaillées sur l’utilisation de votre licence de produit, sélectionnez un nom de produit dans la liste. La variable [!UICONTROL Résumé] s’affiche pour ce produit. Toutes les mesures disponibles s’affichent sur la page [!UICONTROL Résumé] . Les mesures disponibles dépendent du produit sous licence. Cette vue fournit **une vue consolidée de toutes les mesures pour tous les environnements de test de production ou de développement ;**. Le même niveau d’analyse est fourni pour les environnements de test de production et de développement.
 
@@ -72,7 +79,7 @@ Pour afficher d’autres mesures et des informations détaillées sur l’utilis
 
 Dans l’onglet Résumé, le tableau comprend la variable [!UICONTROL Mesure] colonne . Ces descriptions lisibles par l’utilisateur indiquent toutes les mesures utilisées pour ce type d’environnement de test.
 
-### Sélectionner un sandbox {#select-sandbox}
+### Sélection d’un environnement de test {#select-sandbox}
 
 Pour modifier l’affichage entre les types d’environnements de test de production et de développement, sélectionnez l’une des options suivantes : [!UICONTROL Environnements de test de production] ou [!UICONTROL Environnements de test de développement]. Le type d’environnement de test sélectionné est indiqué par le bouton radio en regard du nom de l’environnement de test.
 
@@ -102,7 +109,7 @@ Chaque widget de visualisation comprend les aspects suivants :
 
 - Graphique linéaire qui suit le changement de mesure au fil du temps
 - Clé du graphique linéaire.
-- Le nom du sandbox
+- Nom de l’environnement de test
 - Menu déroulant permettant d’ajuster la période du graphique linéaire.
 
 Les graphiques linéaires comparent les chiffres d’utilisation de votre entreprise au total disponible avec les licences de votre entreprise et fournissent un pourcentage de l’utilisation totale.
@@ -145,7 +152,7 @@ Le tableau de bord de l’utilisation des licences répertorie plusieurs mesures
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
-La disponibilité de ces mesures et la définition spécifique de chacune d’elles varient en fonction des licences achetées par l’entreprise. Pour obtenir des définitions détaillées de chaque mesure, reportez-vous à la documentation Description du produit appropriée :
+La disponibilité de ces mesures et la définition spécifique de chacune d’elles varient en fonction des licences achetées par votre entreprise. Pour obtenir des définitions détaillées de chaque mesure, reportez-vous à la documentation Description du produit appropriée :
 
 | Licence | Description du produit |
 |---|---|
