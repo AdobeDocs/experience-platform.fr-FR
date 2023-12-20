@@ -2,10 +2,10 @@
 description: Cette page décrit les différents flux d’autorisation OAuth 2 pris en charge par Destination SDK et fournit des instructions pour configurer l’autorisation OAuth 2 pour votre destination.
 title: Autorisation OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 7ba9971b44410e609c64f4dcf956a1976207353e
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 80%
+source-wordcount: '2181'
+ht-degree: 78%
 
 ---
 
@@ -33,11 +33,16 @@ Pour en savoir plus sur les types d’intégration qui prennent en charge les fo
 
 ### Conditions préalables dans votre système {#prerequisites}
 
-Pour commencer, vous devez créer une application dans votre système pour Adobe Experience Platform ou enregistrer Experience Platform dans votre système. L’objectif est de générer un identifiant client et un secret client, qui sont nécessaires pour authentifier Experience Platform à la destination. Dans le cadre de cette configuration, vous avez besoin des adresses URL de redirection/rappel OAuth 2 d’Adobe Experience Platform, que vous pouvez obtenir à partir de la liste ci-dessous.
+Pour commencer, vous devez créer une application dans votre système pour Adobe Experience Platform ou enregistrer Experience Platform dans votre système. L’objectif est de générer un ID client et un secret client, qui sont nécessaires pour authentifier l’Experience Platform sur votre destination.
+
+Dans le cadre de cette configuration, vous avez besoin des adresses URL de redirection/rappel OAuth 2 d’Adobe Experience Platform, que vous pouvez obtenir à partir de la liste ci-dessous.
 
 * `https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-aus5.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-can2.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-gbr9.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform.adobe.io/data/core/activation/oauth/api/v1/callback`
 
 >[!IMPORTANT]
 >
