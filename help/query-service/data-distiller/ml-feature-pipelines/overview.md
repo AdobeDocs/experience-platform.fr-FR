@@ -2,9 +2,9 @@
 title: Pipelines de fonctionnalités AI/ML
 description: Découvrez comment utiliser Data Distiller pour enrichir vos pipelines d’apprentissage automatique avec des fonctionnalités dérivées des données Adobe Experience Platform. Transformez les données brutes en fonctionnalités et diffusez les données de fonctionnalités pour former ou noter un modèle qui prend en charge vos cas d’utilisation marketing.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 641f507210071ee8efeb3562eec78afd0468d4f2
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '473'
 ht-degree: 3%
 
 ---
@@ -25,9 +25,9 @@ Data Distiller permet aux spécialistes des données et aux ingénieurs d’enri
 
 ![Infographie détaillant le pipeline de fonctionnalités AI-ML.](../../images/data-distiller/ai-ml-feature-pipeline.png)
 
-1. Data Distiller vous permet d’extraire des fonctionnalités de requête puissantes des riches données comportementales disponibles dans l’Experience Platform et d’importer les données de fonction distillée dans votre environnement d’apprentissage automatique sans avoir à copier un grand nombre de données d’événement en dehors de l’Experience Platform.
-2. Lisez le jeu de données de fonctionnalités préparé dans vos outils d’apprentissage automatique préférés et combinez-le à d’autres fonctionnalités dérivées des données d’entreprise pour former, tester, ajuster et déployer des modèles personnalisés adaptés à votre entreprise.
-3. Générez des scores, des prédictions ou des recommandations à partir de vos modèles et renvoyez la sortie à l’Experience Platform afin d’optimiser les expériences client via Real-time Customer Data Platform et Adobe Journey Optimizer.
+- Data Distiller de puissantes fonctionnalités de requête, vous pouvez extraire des fonctionnalités significatives des riches données comportementales disponibles dans l’Experience Platform. Vous pouvez ensuite importer les données de fonction distillée dans votre environnement d’apprentissage automatique sans avoir à copier un grand volume de données d’événement en dehors de l’Experience Platform.
+- Lisez le jeu de données de fonctionnalités préparé dans vos outils d’apprentissage automatique préférés et combinez-le à d’autres fonctionnalités dérivées des données d’entreprise pour former, tester, ajuster et déployer des modèles personnalisés adaptés à votre entreprise.
+- Générez des scores, des prédictions ou des recommandations à partir de vos modèles et renvoyez la sortie à l’Experience Platform afin d’optimiser les expériences client via Real-time Customer Data Platform et Adobe Journey Optimizer.
 
 ## Conditions préalables {#prerequisites}
 
@@ -43,10 +43,13 @@ En lisant ce document, vous avez découvert les concepts importants qui sous-ten
 
 Les documents inclus dans cette série de guides décrivent les étapes de base de la création de pipelines de fonctionnalités à partir d’Experience Platform pour alimenter des modèles personnalisés dans votre environnement d’apprentissage automatique. Vous êtes maintenant prêt à établir une connexion entre Data Distiller et votre [!DNL Jupyter Notebook].
 
-- [Connexion à Data Distiller à partir d’un [!DNL Python] notebook](./establish-connection.md)
-- [Exploration et analyse des jeux de données](./exploratory-analysis.md)
-- [Fonctionnalités d’ingénierie pour l’apprentissage automatique](./feature-engineering.md)
-- [Exportation des jeux de données de fonctionnalités](./export-data.md)
+- **Configuration**: [Connexion à Data Distiller à partir d’un [!DNL Python] notebook](./establish-connection.md)
+
+La documentation liée ci-dessous correspond aux étapes indiquées dans l&#39;infographie ci-dessus.
+
+- **Étape 1**: [Exploration et analyse des jeux de données](./exploratory-analysis.md)
+- **Étape 2**: [Fonctionnalités d’ingénierie pour l’apprentissage automatique](./feature-engineering.md)
+- **Étape 3**: [Exportation des jeux de données de fonctionnalités](./export-data.md)
 
 ## Ressources supplémentaires
 
