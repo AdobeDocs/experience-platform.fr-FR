@@ -4,26 +4,26 @@ solution: Experience Platform
 title: Bonnes pratiques de modélisation des données
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: cdb98f7512d290ed23867f2c081cf4ce432d18ca
 workflow-type: tm+mt
-source-wordcount: '3033'
-ht-degree: 89%
+source-wordcount: '3096'
+ht-degree: 71%
 
 ---
 
 # Bonnes pratiques de modélisation des données
 
-[!DNL Experience Data Model] (XDM) est le cadre de base qui normalise les données d’expérience client en fournissant des structures et des définitions communes à utiliser dans les services Adobe Experience Platform en aval. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées à une représentation commune qui vous permet d’obtenir des informations précieuses à partir des actions de la clientèle, de définir des audiences de clientèle par le biais de segments et d’exprimer les attributs de clientèle à des fins de personnalisation.
+[!DNL Experience Data Model] (XDM) est le cadre de base qui normalise les données d’expérience client en fournissant des structures et des définitions communes à utiliser dans les services Adobe Experience Platform en aval. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées à une représentation commune et utilisées pour obtenir des informations précieuses à partir des actions du client, définir des audiences de client et exprimer les attributs du client à des fins de personnalisation.
 
-XDM étant extrêmement polyvalent et personnalisable par sa conception, il est donc important de suivre les bonnes pratiques de modélisation des données lors de la conception de vos schémas. Ce document couvre les principales décisions et considérations à prendre lors du mappage de vos données d’expérience client vers XDM.
+Étant donné que XDM est extrêmement polyvalent et personnalisable par sa conception, il est important de suivre les bonnes pratiques de modélisation des données lors de la conception de vos schémas. Ce document couvre les principales décisions et considérations à prendre lors du mappage des données d’expérience client à XDM.
 
 ## Prise en main
 
-Avant de lire ce guide, consultez la section [Présentation du système XDM](../home.md) pour une présentation détaillée de XDM et de son rôle dans Experience Platform.
+Avant de lire ce guide, consultez la section [Présentation du système XDM](../home.md) pour une présentation de haut niveau de XDM et de son rôle dans Experience Platform.
 
-En outre, ce guide se concentre exclusivement sur les considérations principales concernant la conception de schéma. Il est donc vivement recommandé de vous référer aux [principes de base de la composition des schémas](./composition.md) pour des explications détaillées des éléments de schéma individuels mentionnés tout au long de ce guide.
+Comme ce guide se concentre exclusivement sur les points clés de la conception de schéma, il est vivement recommandé de lire la section [principes de base de la composition des schémas](./composition.md) pour des explications détaillées des éléments de schéma individuels mentionnés tout au long de ce guide.
 
-## Résumé des bonnes pratiques
+## Résumé des bonnes pratiques {#summary}
 
 L’approche recommandée pour concevoir votre modèle de données à utiliser dans Experience Platform peut être résumée comme suit :
 
@@ -33,17 +33,17 @@ L’approche recommandée pour concevoir votre modèle de données à utiliser d
 1. Créez un diagramme de relation d’entité détaillé (ERD) pour les sources de données qui ont été identifiées.
 1. Convertissez l’ERD détaillé en un ERD centré sur [!DNL Platform] (y compris les profils, les événements d’expérience et les entités de recherche).
 
-Les étapes relatives à l’identification des sources de données applicables requises pour exécuter vos cas d’utilisation professionnels varient d’une organisation à l’autre. Bien que le reste des sections de ce document se concentre sur les dernières étapes d’organisation et de construction d’un ERD une fois les sources de données identifiées, les explications des différents composants du diagramme peuvent vous éclairer sur les décisions à prendre concernant les sources de données qui devraient être migrées vers [!DNL Platform].
+Les étapes relatives à l’identification des sources de données applicables requises pour exécuter vos cas d’utilisation métier varient d’une organisation à l’autre. Bien que le reste des sections de ce document se concentre sur les dernières étapes d’organisation et de construction d’un ERD une fois les sources de données identifiées, les explications des différents composants du diagramme peuvent vous éclairer sur les décisions à prendre concernant les sources de données qui devraient être migrées vers [!DNL Platform].
 
-## Créer un ERD détaillé
+## Créer un ERD détaillé {#create-an-erd}
 
-Une fois que vous avez déterminé les sources de données que vous souhaitez importer dans [!DNL Platform], créez un ERD détaillé pour vous aider à orienter le processus de mappage de vos données vers les schémas XDM.
+Une fois que vous avez déterminé les sources de données à importer [!DNL Platform], créez un ERD de haut niveau pour vous aider à orienter le processus de mappage de vos données aux schémas XDM.
 
 L’exemple ci-dessous représente un ERD simplifié pour une entreprise qui souhaite importer des données dans [!DNL Platform]. Le diagramme présente les entités essentielles qui doivent être triées en classes XDM, notamment les comptes clients, les hôtels, les adresses et plusieurs événements e-commerce courants.
 
-![](../images/best-practices/erd.png)
+![Diagramme relationnel d’entité qui met en évidence les entités essentielles qui doivent être triées en classes XDM pour l’ingestion de données.](../images/best-practices/erd.png)
 
-## Trier les entités en catégories de profil, de recherche et d’événement
+## Trier les entités en catégories de profil, de recherche et d’événement {#sort-entities}
 
 Une fois que vous avez créé un ERD pour identifier les entités essentielles que vous souhaitez importer dans [!DNL Platform], ces entités doivent être triées en catégories de profil, de recherche et d’événement :
 
@@ -51,15 +51,15 @@ Une fois que vous avez créé un ERD pour identifier les entités essentielles q
 | --- | --- |
 | Entités de profil | Les entités de profil représentent les attributs relatifs à une personne, généralement un client ou une cliente. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur la classe **[!DNL XDM Individual Profile]**. |
 | Entités de recherche | Les entités de recherche représentent des concepts qui peuvent être associés à une personne, mais qui ne peuvent pas être directement utilisés pour identifier la personne. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur des **classes personnalisées**, et sont liées à des profils et des événements au moyen de [relations de schéma](../tutorials/relationship-ui.md). |
-| Entités d’événement | Les entités d’événement représentent des concepts liés aux actions qu’un client ou un cliente peut entreprendre, aux événements système ou à tout autre concept dans lequel vous souhaitez peut-être suivre les modifications au fil du temps. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur la classe **[!DNL XDM ExperienceEvent]**. |
+| Entités d’événement | Les entités d’événement représentent des concepts liés aux actions qu’un client peut entreprendre, aux événements système ou à tout autre concept dans lequel vous souhaitez peut-être suivre les modifications au fil du temps. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur la classe **[!DNL XDM ExperienceEvent]**. |
 
 {style="table-layout:auto"}
 
-### Considérations pour le tri des entités
+### Considérations pour le tri des entités {#considerations}
 
 Les sections ci-dessous fournissent des conseils supplémentaires sur la manière de trier vos entités dans les catégories ci-dessus.
 
-#### Données mutables et immuables
+#### Données mutables et immuables {#mutable-and-immutable-data}
 
 Une principale méthode de tri entre les catégories d’entités consiste à déterminer si les données capturées sont mutables ou non.
 
@@ -69,7 +69,7 @@ En revanche, les données d’événement sont généralement immuables. Puisque
 
 En résumé, les profils et les entités de recherche contiennent des attributs mutables et représentent les informations les plus récentes sur les objets qu’ils capturent, tandis que les événements sont des enregistrements non modifiables du système à un moment spécifique.
 
-#### Attributs du client
+#### Attributs du client {#customer-attributes}
 
 Si une entité contient des attributs liés à un client ou une cliente en particulier, il s’agit probablement d’une entité de profil. Voici quelques exemples d’attributs :
 
@@ -77,7 +77,7 @@ Si une entité contient des attributs liés à un client ou une cliente en parti
 * Informations de localisation telles que les adresses et les informations GPS.
 * Coordonnées telles que les numéros de téléphone et les adresses e-mail.
 
-#### Suivi des données au fil du temps
+#### Suivi des données au fil du temps {#track-data}
 
 Si vous souhaitez analyser la manière dont certains attributs au sein d’une entité changent au fil du temps, il s’agit probablement d’une entité d’événement. Par exemple, l’ajout d’articles à un panier peut être suivi en tant qu’événement ajouter-au-panier dans [!DNL Platform] :
 
@@ -90,7 +90,7 @@ Si vous souhaitez analyser la manière dont certains attributs au sein d’une e
 
 {style="table-layout:auto"}
 
-#### Cas d’utilisation de segmentation
+#### Cas d’utilisation de segmentation {#segmentation-use-cases}
 
 Lors de la catégorisation de vos entités, il est important de réfléchir aux audiences que vous pourriez vouloir créer pour répondre aux cas d’utilisation particuliers de votre entreprise.
 
@@ -99,25 +99,25 @@ Prenons l’exemple d’une entreprise qui souhaite connaître toutes les person
 * « Gold » et « Platinum » représentent des statuts de fidélité applicables à une personne cliente particulière. Puisque la logique de segmentation ne concerne que le statut de fidélité actuel de la clientèle, ces données peuvent être modélisées dans le cadre d’un schéma de profil. Si vous souhaitez suivre les modifications du statut de fidélité au fil du temps, vous pouvez également créer un schéma d’événement supplémentaire pour les modifications du statut de fidélité.
 * Les achats sont des événements qui se produisent à un moment donné et la logique de segmentation concerne les événements d’achat dans une fenêtre temporelle spécifiée. Ces données doivent donc être modélisées en tant que schéma d’événement.
 
-#### Cas d’utilisation d’activation
+#### Cas d’utilisation d’activation {#activation-use-cases}
 
-Outre les considérations relatives aux cas d’utilisation de segmentation, vous devez également examiner les cas d’utilisation d’activation pour ces audiences afin d’identifier d’autres attributs pertinents.
+Outre les considérations relatives aux cas d’utilisation de la segmentation, vous devez également examiner les cas d’utilisation de l’activation pour ces audiences afin d’identifier d’autres attributs pertinents.
 
 Par exemple, une entreprise a créé une audience basée sur la règle stipulant que `country = US`. Ensuite, lors de l’activation de cette audience vers certaines cibles en aval, l’entreprise souhaite filtrer tous les profils exportés en fonction de l’État d’origine. Par conséquent, un attribut `state` doit également être capturé dans l’entité de profil applicable.
 
-#### Valeurs agrégées
+#### Valeurs agrégées {#aggregated-values}
 
 En fonction du cas d’utilisation et de la granularité de vos données, vous devez décider si certaines valeurs doivent être pré-agrégées avant d’être incluses dans un profil ou une entité d’événement.
 
-Par exemple, une entreprise souhaite créer une audience en fonction du nombre d’achats. Vous pouvez choisir d’incorporer ces données avec la granularité la plus faible en incluant chaque événement d’achat horodaté comme une entité à part entière. Cependant, cela peut parfois augmenter de façon exponentielle le nombre d’événements enregistrés. Pour réduire le nombre d’événements ingérés, vous pouvez choisir de créer une valeur agrégée `numberOfPurchases` sur une période d’une semaine ou d’un mois. D’autres fonctions d’agrégation telles que MIN et MAX peuvent également s’appliquer à ces situations.
+Par exemple, une entreprise souhaite créer une audience en fonction du nombre d’achats. Vous pouvez choisir d’incorporer ces données avec la granularité la plus faible en incluant chaque événement d’achat horodaté comme une entité à part entière. Cependant, cela peut parfois augmenter de façon exponentielle le nombre d’événements enregistrés. Pour réduire le nombre d’événements ingérés, vous pouvez choisir de créer une valeur agrégée. `numberOfPurchases` sur une période d’une semaine ou d’un mois. D’autres fonctions d’agrégation telles que MIN et MAX peuvent également s’appliquer à ces situations.
 
 >[!CAUTION]
 >
 >Experience Platform n’effectue actuellement pas d’agrégation automatique de valeurs, bien que cela soit prévu pour les prochaines versions. Si vous choisissez d’utiliser des valeurs agrégées, vous devez effectuer les calculs en externe avant d’envoyer les données à [!DNL Platform].
 
-#### Cardinalité
+#### Cardinalité {#cardinality}
 
-Les cardinalités établies dans votre ERD peuvent également fournir des indices sur la manière de classer vos entités. S’il existe une relation un-à-plusieurs entre deux entités, l’entité qui représente le « plusieurs » sera probablement une entité d’événement. Cependant, il existe également des cas où le « plusieurs » est un ensemble d’entités de recherche fournies sous forme de tableau dans une entité de profil.
+Les cardinalités établies dans votre ERD peuvent également fournir des indices sur la manière de classer vos entités. S’il existe une relation de type &quot;un à plusieurs&quot; entre deux entités, l’entité qui représente le &quot;nombre&quot; est susceptible d’être une entité d’événement. Cependant, il existe également des cas où le « plusieurs » est un ensemble d’entités de recherche fournies sous forme de tableau dans une entité de profil.
 
 >[!NOTE]
 >
@@ -128,7 +128,7 @@ Le tableau suivant décrit certaines relations d’entité courantes et les cat�
 | Relation | Cardinalité | Catégories d’entité |
 | --- | --- | --- |
 | Clients et passages en caisse | Un à plusieurs | Un seul client peut avoir plusieurs passages en caisse, c’est-à-dire des événements qui peuvent être suivis au fil du temps. Les clients seraient donc une entité de profil, tandis que les passages en caisse seraient une entité d’événement. |
-| Clients et comptes de fidélité | Un à un | Un seul client ne peut avoir qu’un seul compte de fidélité, et vice versa. Comme il s’agit d’une relation un-à-un, les clients et les comptes de fidélité représentent tous deux des entités de profil. |
+| Clients et comptes de fidélité | Un à un | Un seul client ne peut avoir qu’un seul compte de fidélité et un compte de fidélité ne peut appartenir qu’à un seul client. Comme il s’agit d’une relation un-à-un, les clients et les comptes de fidélité représentent tous deux des entités de profil. |
 | Clients et abonnements | Un à plusieurs | Un seul client peut avoir plusieurs abonnements. Puisque l’entreprise ne s’intéresse qu’aux abonnements actuels d’un client, les clients sont une entité de profil, tandis que les abonnements sont une entité de recherche. |
 
 {style="table-layout:auto"}
@@ -148,23 +148,23 @@ Dans ce scénario, l’entreprise dispose de deux options potentielles pour repr
 
 La première approche consiste à inclure un tableau des abonnements en tant qu’attributs au sein de l’entité de profil pour les clients. Les objets de ce tableau contiendront des champs pour `category`, `status`, `planName`, `startDate` et `endDate`.
 
-<img src="../images/best-practices/profile-schema.png" width="800"><br>
+![Schéma des clients dans l’éditeur de schémas avec la classe et la structure en surbrillance](../images/best-practices/profile-schema.png)
 
 **Avantages**
 
 * La segmentation est possible dans le cas d’utilisation prévu.
-* Le schéma ne conserve que les derniers enregistrements d’abonnement pour un client.
+* Le schéma conserve uniquement les derniers enregistrements d’abonnement pour un client.
 
 **Inconvénients**
 
 * Le tableau entier doit être redémarré chaque fois que des modifications sont apportées à un champ du tableau.
-* Si différentes sources de données ou unités opérationnelles alimentent le tableau en données, il sera difficile de garder le dernier tableau mis à jour synchronisé sur tous les canaux.
+* Si différentes sources de données ou unités opérationnelles alimentent des données dans le tableau, il devient difficile de synchroniser le dernier tableau mis à jour sur tous les canaux.
 
 #### Approche 2 : utilisation des entités d’événement {#event-approach}
 
 La seconde approche consiste à utiliser des schémas d’événement pour représenter les abonnements. Cela implique l’ingestion des mêmes champs d’abonnement que pour la première approche, avec l’ajout d’un ID d’abonnement, d’un ID de client et de la date et de l’heure auxquelles l’événement d’abonnement s’est produit.
 
-<img src="../images/best-practices/event-schema.png" width="800"><br>
+![Schéma du schéma Événements d’abonnement avec la classe XDM Experience Event et la structure des abonnements mise en surbrillance.](../images/best-practices/event-schema.png)
 
 **Avantages**
 
@@ -173,14 +173,14 @@ La seconde approche consiste à utiliser des schémas d’événement pour repr�
 
 **Inconvénients**
 
-* La segmentation devient plus complexe pour le cas d’utilisation original prévu (identification du statut des abonnements les plus récents des clients). L’audience a désormais besoin d’une logique supplémentaire pour indiquer le dernier événement d’abonnement pour un client ou une cliente afin de vérifier son statut.
+* La segmentation devient plus complexe pour le cas d’utilisation original prévu (identification du statut des abonnements les plus récents des clients). L’audience a désormais besoin d’une logique supplémentaire pour marquer le dernier événement d’abonnement pour qu’un client puisse vérifier son état.
 * Les événements risquent davantage d’expirer automatiquement et d’être purgés de la banque de profils. Pour plus d’informations, consultez le guide sur les [expirations des événements d’expérience](../../profile/event-expirations.md).
 
-## Créer des schémas en fonction de vos entités classées
+## Créer des schémas en fonction de vos entités classées {#schemas-for-categorized-entities}
 
 Une fois que vous avez trié vos entités en catégories de profil, de recherche et d’événement, vous pouvez commencer à convertir votre modèle de données en schémas XDM. À des fins de démonstration, l’exemple de modèle de données illustré précédemment a été trié en catégories appropriées dans le diagramme suivant :
 
-<img src="../images/best-practices/erd-sorted.png" width="800"><br>
+![Schéma des schémas contenus dans les entités de profil, de recherche et d’événement](../images/best-practices/erd-sorted.png)
 
 La catégorie sous laquelle une entité a été triée doit déterminer la classe XDM sur laquelle baser son schéma. Réitération :
 
@@ -196,19 +196,19 @@ La catégorie sous laquelle une entité a été triée doit déterminer la class
 
 Les sections ci-dessous fournissent des conseils généraux sur la création de schémas basés sur votre ERD.
 
-### Adopter une approche de modélisation itérative
+### Adopter une approche de modélisation itérative {#iterative-modeling}
 
 Les [règles d’évolution des schémas](./composition.md#evolution) dictent que seules les modifications non destructives peuvent être apportées aux schémas une fois qu’ils ont été implémentés. En d’autres termes, une fois que vous avez ajouté un champ à un schéma et que les données ont été ingérées par rapport à ce champ, le champ ne peut plus être supprimé. Il est donc essentiel d’adopter une approche de modélisation itérative lorsque vous créez vos schémas pour la première fois, en commençant par une mise en oeuvre simplifiée qui gagne progressivement en complexité au fil du temps.
 
 Si vous ne savez pas si un champ particulier est nécessaire pour l’inclure dans un schéma, la bonne pratique consiste à l’exclure. S’il est déterminé par la suite que le champ est nécessaire, il peut toujours être ajouté à l’itération suivante du schéma.
 
-### Champs d’identité
+### Champs d’identité {#identity-fields}
 
-Dans Experience Platform, les champs XDM marqués comme identités sont utilisés pour rassembler des informations sur les clients individuels provenant de plusieurs sources de données. Bien qu’un schéma puisse comporter plusieurs champs marqués comme identités, une seule identité principale doit être définie pour que le schéma soit activé pour une utilisation dans [!DNL Real-Time Customer Profile]. Voir la section sur les [champs d’identité](./composition.md#identity) dans les principes de base de la composition des schémas pour plus d’informations sur le cas d’utilisation de ces champs.
+Dans Experience Platform, les champs XDM marqués comme identités sont utilisés pour rassembler des informations sur les clients individuels provenant de plusieurs sources de données. Bien qu’un schéma puisse comporter plusieurs champs marqués comme identités, une seule identité principale doit être définie pour que le schéma puisse être utilisé dans [!DNL Real-Time Customer Profile]. Voir la section sur les [champs d’identité](./composition.md#identity) dans les principes de base de la composition des schémas pour plus d’informations sur le cas d’utilisation de ces champs.
 
-Lors de la conception de vos schémas, toute clé principale dans vos tableaux de base de données relationnelle sera probablement candidate pour des identités principales. Les autres exemples de champs d’identité applicables sont les adresses électroniques du client, les numéros de téléphone, les ID de compte et les [ECID](../../identity-service/ecid.md).
+Lors de la conception de vos schémas, toutes les clés primaires de vos tableaux de base de données relationnelle sont probablement candidates à des identités primaires. Les autres exemples de champs d’identité applicables sont les adresses électroniques du client, les numéros de téléphone, les ID de compte et les [ECID](../../identity-service/ecid.md).
 
-### Groupes de champs de schéma d’application Adobe
+### Groupes de champs de schéma d’application Adobe {#adobe-application-schema-field-groups}
 
 Experience Platform fournit plusieurs groupes de champs de schéma XDM prêts à l’emploi pour la capture de données liées aux applications Adobe suivantes :
 
@@ -217,9 +217,9 @@ Experience Platform fournit plusieurs groupes de champs de schéma XDM prêts à
 * Adobe Campaign
 * Adobe Target
 
-Par exemple, le groupe de schémas [[!UICONTROL Modèle ExperienceEvent Adobe Analytics]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) vous permet de mapper les champs spécifiques à [!DNL Analytics] à vos schémas XDM. Selon les applications d’Adobe que vous utilisez, vous devez utiliser ces groupes de champs fournis par Adobe dans vos schémas.
+Par exemple, vous pouvez utiliser la variable [[!UICONTROL Modèle ExperienceEvent Adobe Analytics] groupe de champs](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) to map [!DNL Analytics]Champs spécifiques à vos schémas XDM. Selon les applications d’Adobe que vous utilisez, vous devez utiliser ces groupes de champs fournis par Adobe dans vos schémas.
 
-<img src="../images/best-practices/analytics-field-group.png" width="700"><br>
+![Schéma du [!UICONTROL Modèle ExperienceEvent Adobe Analytics].](../images/best-practices/analytics-field-group.png)
 
 Les groupes de champs d’application Adobe attribuent automatiquement une identité principale par défaut grâce à l’utilisation du champ `identityMap`, qui est un objet généré par le système et en lecture seule qui mappe les valeurs d’identité standard pour un client individuel.
 
@@ -237,7 +237,7 @@ Pour empêcher l’ingestion de données incorrectes dans Platform, il est recom
 
 >[!TIP]
 >
->Vous trouverez ci-dessous un ensemble de suggestions pour la modélisation des données lors de la création d’un schéma :<br><ul><li>**Considérer les identités principales**: pour les produits Adobe tels que le SDK web, le SDK mobile, Adobe Analytics et Adobe Journey Optimizer, la variable `identityMap` sert souvent d’identité principale. Évitez de désigner des champs supplémentaires comme identités principales pour ce schéma.</li><li>**Éviter d’utiliser `_id` comme identité**: évitez d’utiliser la variable `_id` dans les schémas d’événement d’expérience en tant qu’identité. Il est destiné à une unicité record, et non à une utilisation en tant qu&#39;identité.</li><li>**Définir des contraintes de longueur**: il est recommandé de définir des longueurs minimales et maximales sur les champs marqués comme identités. Ces limites permettent de maintenir la cohérence et la qualité des données.</li><li>**Application de modèles pour des valeurs homogènes**: si vos valeurs d’identité suivent un modèle spécifique, utilisez la variable [!UICONTROL Modèle] pour appliquer cette contrainte. Ce paramètre peut inclure des règles telles que des chiffres uniquement, des majuscules, des minuscules ou des combinaisons de caractères spécifiques. Utilisez des expressions régulières pour faire correspondre des modèles dans vos chaînes.</li><li>**Limitation des eVars dans le schéma Analytics**: en règle générale, un schéma Analytics ne doit comporter qu’un seul eVar désigné comme identité. Si vous envisagez d’utiliser plusieurs eVars comme identité, vous devez vérifier deux fois si la structure de données peut être optimisée.</li><li>**Garantir l’unicité d’un champ sélectionné**: le champ de votre choix doit être unique par rapport à l’identité principale du schéma. Dans le cas contraire, ne le marquez pas comme une identité. Par exemple, si plusieurs clients peuvent fournir la même adresse électronique, cet espace de noms n’est pas une identité appropriée. Ce principe s’applique également à d’autres espaces de noms d’identité tels que les numéros de téléphone.</li></ul>
+>Voici une collection de suggestions pour la modélisation des données lors de la création d’un schéma :<br><ul><li>**Considérer les identités principales**: pour les produits Adobe tels que le SDK web, le SDK mobile, Adobe Analytics et Adobe Journey Optimizer, la variable `identityMap` sert souvent d’identité principale. Évitez de désigner des champs supplémentaires comme identités principales pour ce schéma.</li><li>**Éviter d’utiliser `_id` comme identité**: évitez d’utiliser la variable `_id` dans les schémas d’événement d’expérience en tant qu’identité. Il est destiné à une unicité record, et non à une utilisation en tant qu&#39;identité.</li><li>**Définir des contraintes de longueur**: il est recommandé de définir des longueurs minimales et maximales sur les champs marqués comme identités. Ces limites permettent de maintenir la cohérence et la qualité des données.</li><li>**Application de modèles pour des valeurs homogènes**: si vos valeurs d’identité suivent un modèle spécifique, utilisez la variable [!UICONTROL Modèle] pour appliquer cette contrainte. Ce paramètre peut inclure des règles telles que des chiffres uniquement, des majuscules, des minuscules ou des combinaisons de caractères spécifiques. Utilisez des expressions régulières pour faire correspondre des modèles dans vos chaînes.</li><li>**Limitation des eVars dans le schéma Analytics**: en règle générale, un schéma Analytics ne doit comporter qu’un seul eVar désigné comme identité. Si vous envisagez d’utiliser plusieurs eVars comme identité, vous devez vérifier deux fois si la structure de données peut être optimisée.</li><li>**Garantir l’unicité d’un champ sélectionné**: le champ de votre choix doit être unique par rapport à l’identité principale du schéma. Dans le cas contraire, ne le marquez pas comme une identité. Par exemple, si plusieurs clients peuvent fournir la même adresse électronique, cet espace de noms n’est pas une identité appropriée. Ce principe s’applique également à d’autres espaces de noms d’identité tels que les numéros de téléphone.</li></ul>
 
 ## Étapes suivantes
 

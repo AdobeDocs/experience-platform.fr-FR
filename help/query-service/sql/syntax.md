@@ -2,22 +2,22 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;service de requête;Query service;syntaxe sql;sql;ctas;CTAS;Créer une table comme sélection
 solution: Experience Platform
 title: Syntaxe SQL dans Query Service
-description: Ce document présente la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
+description: Ce document décrit et explique la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: 42f4d8d7a03173aec703cf9bc7cccafb21df0b69
 workflow-type: tm+mt
-source-wordcount: '4134'
-ht-degree: 9%
+source-wordcount: '4111'
+ht-degree: 5%
 
 ---
 
 # Syntaxe SQL dans Query Service
 
-Adobe Experience Platform Query Service permet d’utiliser le langage SQL ANSI standard pour `SELECT` des instructions et autres commandes limitées. Ce document couvre la syntaxe SQL prise en charge par [!DNL Query Service].
+Vous pouvez utiliser le langage SQL ANSI standard pour `SELECT` instructions et autres commandes limitées dans Adobe Experience Platform Query Service. Ce document couvre la syntaxe SQL prise en charge par [!DNL Query Service].
 
 ## SELECT requêtes {#select-queries}
 
-La syntaxe suivante définit une requête `SELECT` compatible avec [!DNL Query Service]:
+La syntaxe suivante définit une `SELECT` requête prise en charge par [!DNL Query Service]:
 
 ```sql
 [ WITH with_query [, ...] ]
@@ -35,7 +35,11 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ OFFSET start ]
 ```
 
-where `from_item` peut être l’une des options suivantes :
+La section onglets ci-dessous fournit les options disponibles pour les mots-clés FROM, GROUP et WITH .
+
+>[!BEGINTABS]
+
+>[!TAB `from_item`]
 
 ```sql
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
@@ -53,7 +57,7 @@ with_query_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
 from_item [ NATURAL ] join_type from_item [ ON join_condition | USING ( join_column [, ...] ) ]
 ```
 
-et `grouping_element` peut être l’une des options suivantes :
+>[!TAB `grouping_element`]
 
 ```sql
 ( )
@@ -79,11 +83,13 @@ CUBE ( { expression | ( expression [, ...] ) } [, ...] )
 GROUPING SETS ( grouping_element [, ...] )
 ```
 
-et `with_query` correspond à :
+>[!TAB `with_query`]
 
 ```sql
  with_query_name [ ( column_name [, ...] ) ] AS ( select | values )
 ```
+
+>[!ENDTABS]
 
 Les sous-sections suivantes fournissent des détails sur les clauses supplémentaires que vous pouvez utiliser dans vos requêtes, à condition qu’elles suivent le format indiqué ci-dessus.
 
@@ -113,13 +119,13 @@ SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C
 SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
 ```
 
-Veuillez noter qu’une `SNAPSHOT` fonctionne avec un alias de table ou de table, mais pas sur une sous-requête ou une vue. A `SNAPSHOT` fonctionne partout où une clause `SELECT` sur une table peut être appliquée.
+A `SNAPSHOT` fonctionne avec un alias de table ou de table, mais pas sur une sous-requête ou une vue. A `SNAPSHOT` fonctionne partout où une clause `SELECT` sur une table peut être appliquée.
 
-En outre, vous pouvez utiliser `HEAD` et `TAIL` comme valeurs de décalage spéciales pour les clauses d’instantané. Utilisation `HEAD` fait référence à un décalage avant le premier instantané, tandis que `TAIL` fait référence à un décalage après le dernier instantané.
+Vous pouvez également utiliser `HEAD` et `TAIL` comme valeurs de décalage spéciales pour les clauses d’instantané. Utilisation `HEAD` fait référence à un décalage avant le premier instantané, tandis que `TAIL` fait référence à un décalage après le dernier instantané.
 
 >[!NOTE]
 >
->Si vous interrogez entre deux ID d’instantané et que l’instantané de début a expiré, les deux scénarios suivants peuvent se produire, selon que l’indicateur de comportement de secours facultatif (`resolve_fallback_snapshot_on_failure`) est défini :
+>Si vous interrogez deux ID d’instantané, les deux scénarios suivants peuvent se produire si l’instantané de début a expiré et que l’indicateur de comportement de secours facultatif (`resolve_fallback_snapshot_on_failure`) est défini :
 >
 >- Si l’indicateur facultatif de comportement de secours est défini, Query Service choisit l’instantané disponible le plus ancien, le définit comme instantané de début et renvoie les données entre l’instantané disponible le plus ancien et l’instantané de fin spécifié. Ces données sont **inclusif** de l’instantané disponible le plus ancien.
 >
@@ -183,7 +189,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 | Paramètres | Description |
 | ----- | ----- |
 | `schema` | Titre du schéma XDM. Utilisez cette clause uniquement si vous souhaitez utiliser un schéma XDM existant pour le nouveau jeu de données créé par la requête CTAS. |
-| `rowvalidation` | (Facultatif) Indique si l’utilisateur souhaite une validation au niveau des lignes de tous les nouveaux lots ingérés pour le jeu de données nouvellement créé. La valeur par défaut est `true`. |
+| `rowvalidation` | (Facultatif) Indique si l’utilisateur souhaite une validation au niveau des lignes de chaque nouveau lot ingéré pour le jeu de données nouvellement créé. La valeur par défaut est `true`. |
 | `label` | Lorsque vous créez un jeu de données avec une requête CTAS, utilisez ce libellé avec la valeur de `profile` pour étiqueter votre jeu de données comme étant activé pour profile. Cela signifie que votre jeu de données est automatiquement marqué pour le profil lors de sa création. Consultez le document d’extension d’attribut dérivé pour plus d’informations sur l’utilisation de `label`. |
 | `select_query` | A `SELECT` . La syntaxe de la variable `SELECT` se trouve dans la variable [Section SELECT query](#select-queries). |
 
@@ -199,7 +205,7 @@ CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 
 >[!NOTE]
 >
->L’instruction `SELECT` doit posséder un alias pour les fonctions d’agrégation telles que `COUNT`, `SUM`, `MIN`, etc. En outre, la variable `SELECT` peut être fournie avec ou sans parenthèses (). Vous pouvez fournir un `SNAPSHOT` pour lire les deltas incrémentiels dans la table cible.
+>La variable `SELECT` L’instruction doit comporter un alias pour les fonctions d’agrégat, telles que `COUNT`, `SUM`, `MIN`, etc. En outre, la variable `SELECT` peut être fournie avec ou sans parenthèses (). Vous pouvez fournir un `SNAPSHOT` pour lire les deltas incrémentiels dans la table cible.
 
 ## INSERT INTO
 
@@ -228,7 +234,7 @@ INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 
 >[!INFO]
 > 
-> La variable `SELECT` statement **must not** entre parenthèses (). En outre, le schéma du résultat de la variable `SELECT` doit être conforme à celle de la table définie dans la variable `INSERT INTO` . Vous pouvez fournir un `SNAPSHOT` pour lire les deltas incrémentiels dans la table cible.
+>Do **not** encadrez la fonction `SELECT` entre parenthèses (). En outre, le schéma du résultat du `SELECT` doit être conforme à celle de la table définie dans la variable `INSERT INTO` . Vous pouvez fournir un `SNAPSHOT` pour lire les deltas incrémentiels dans la table cible.
 
 La plupart des champs d’un schéma XDM réel sont introuvables au niveau racine et SQL n’autorise pas l’utilisation de la notation par points. Pour obtenir un résultat réaliste en utilisant des champs imbriqués, vous devez mapper chaque champ de votre `INSERT INTO` chemin.
 
@@ -290,9 +296,9 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 | Paramètres | Description |
 | ------ | ------ |
-| `IF EXISTS` | Si celle-ci est spécifiée, aucune exception n’est générée si le schéma le fait **not** existent. |
-| `RESTRICT` | Valeur par défaut du mode. Si celle-ci est spécifiée, le schéma ne sera supprimé que s’il **does not** contiennent tous les tableaux. |
-| `CASCADE` | Si celle-ci est spécifiée, le schéma sera déposé avec toutes les tables présentes dans le schéma. |
+| `IF EXISTS` | Si ce paramètre est spécifié et que le schéma le fait **not** existe, aucune exception n’est générée. |
+| `RESTRICT` | La valeur par défaut du mode. Si spécifié, le schéma ne disparaît que s’il l’est. **not** contiennent tous les tableaux. |
+| `CASCADE` | Si spécifié, le schéma est déposé avec toutes les tables présentes dans le schéma. |
 
 ## CREATE VIEW
 
@@ -326,7 +332,7 @@ CREATE OR REPLACE VIEW db_name.schema_name.view_name AS select_query
 
 | Paramètres | Description |
 | ------ | ------ |
-| `db_name` | Le nom de la base de données. |
+| `db_name` | Nom de la base de données. |
 | `schema_name` | Nom du schéma. |
 | `view_name` | Nom de la vue à créer. |
 | `select_query` | A `SELECT` . La syntaxe de la variable `SELECT` se trouve dans la variable [Section SELECT query](#select-queries). |
@@ -416,7 +422,7 @@ $$END;
 
 La structure de contrôle IF-THEN-ELSE permet l’exécution conditionnelle d’une liste d’instructions lorsqu’une condition est évaluée comme TRUE. Cette structure de contrôle ne s&#39;applique qu&#39;à l&#39;intérieur d&#39;un bloc anonyme. Si cette structure est utilisée comme commande autonome, une erreur de syntaxe s’affiche (&quot;Commande non valide en dehors du bloc anonyme&quot;).
 
-Le fragment de code ci-dessous illustre le format correct des instructions conditionnelles IF-THEN-ELSE dans un bloc anonyme.
+Le fragment de code ci-dessous illustre le format correct d’une instruction conditionnelle IF-THEN-ELSE dans un bloc anonyme.
 
 ```javascript
 IF booleanExpression THEN
@@ -451,7 +457,7 @@ $$BEGIN
  END$$;
 ```
 
-Cette structure peut être utilisée en combinaison avec `raise_error();` pour renvoyer un message d’erreur personnalisé. Le bloc de code illustré ci-dessous met fin au bloc anonyme avec &quot;message d’erreur personnalisé&quot;.
+Cette structure peut être utilisée avec `raise_error();` pour renvoyer un message d’erreur personnalisé. Le bloc de code illustré ci-dessous met fin au bloc anonyme avec &quot;message d’erreur personnalisé&quot;.
 
 **Exemple**
 
@@ -609,11 +615,11 @@ ALTER TABLE t1 ADD PRIMARY KEY (c1) NOT ENFORCED;
 ALTER TABLE t2 ADD FOREIGN KEY (c1) REFERENCES t1(c1) NOT ENFORCED;
 ```
 
-Consultez le guide sur la [organisation logique des ressources de données](../best-practices/organize-data-assets.md) pour plus d’informations sur les bonnes pratiques de Query Service.
+Voir [organisation logique des ressources de données](../best-practices/organize-data-assets.md) Guide pour une explication plus détaillée des bonnes pratiques de Query Service.
 
 ## Le tableau existe
 
-La variable `table_exists` La commande SQL permet de confirmer si une table existe actuellement dans le système. La commande renvoie une valeur booléenne : `true` si le tableau **existe** et `false` si le tableau **n’existe pas.**
+La variable `table_exists` La commande SQL permet de confirmer si une table existe actuellement dans le système. La commande renvoie une valeur booléenne : `true` si le tableau **does** existent et `false` si le tableau fonctionne **not** existent.
 
 En validant l’existence d’un tableau avant d’exécuter les instructions, la variable `table_exists` Cette fonctionnalité simplifie le processus d’écriture d’un bloc anonyme pour couvrir à la fois les `CREATE` et `INSERT INTO` cas d’utilisation.
 
@@ -682,7 +688,7 @@ Les valeurs provenant de la variable `source_dataset` sont utilisés pour rempli
 
 | SKU | _experience | quantity | priceTotal |
 |---------------------|-----------------------------------|----------|--------------|
-| product-id-1 | (&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;) | 5 | 10.5 |
+| product-id-1 | (&quot;(&quot;(&quot;(A,pass,B,NULL)&quot;)&quot;)&quot;) | 5 | 10,5 |
 | product-id-5 | (&quot;(&quot;(&quot;(A, pass, B,NULL)&quot;)&quot;)&quot;) |          |              |
 | product-id-2 | (&quot;(&quot;(&quot;(AF, C, D, NULL)&quot;)&quot;))&quot;) | 6 | 40 |
 | product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;)&quot;) | 3 | 12 |
@@ -706,9 +712,9 @@ SET property_key = property_value
 
 Pour renvoyer la valeur d’un paramètre, utilisez `SET [property key]` sans `property_value`.
 
-## [!DNL PostgreSQL] commands
+## [!DNL PostgreSQL] Commandes
 
-Les sous-sections ci-dessous couvrent la [!DNL PostgreSQL] Commandes prises en charge par Query Service.
+Les sous-sections ci-dessous couvrent la variable [!DNL PostgreSQL] Commandes prises en charge par Query Service.
 
 ### ANALYSER LE TABLEAU {#analyze-table}
 
@@ -742,7 +748,7 @@ Voici une liste de calculs statistiques disponibles après l’utilisation de la
 
 Vous pouvez maintenant calculer les statistiques au niveau des colonnes sur [!DNL Azure Data Lake Storage] (ADLS) des jeux de données avec la variable `COMPUTE STATISTICS` Commande SQL. Calculez les statistiques des colonnes sur l’ensemble du jeu de données, un sous-ensemble d’un jeu de données, toutes les colonnes ou un sous-ensemble de colonnes.
 
-`COMPUTE STATISTICS` étend la propriété `ANALYZE TABLE` . Toutefois, la variable `COMPUTE STATISTICS`, `FILTERCONTEXT`, et `FOR COLUMNS` Les commandes ne sont pas prises en charge sur les tables de magasin accélérées. Ces extensions pour la commande `ANALYZE TABLE` ne sont actuellement prises en charge que pour les tables ADLS.
+`COMPUTE STATISTICS` étend la propriété `ANALYZE TABLE` . Toutefois, la variable `COMPUTE STATISTICS`, `FILTERCONTEXT`, et `FOR COLUMNS` Les commandes ne sont pas prises en charge sur les tables de magasin accélérées. Ces extensions pour la variable `ANALYZE TABLE` ne sont actuellement prises en charge que pour les tables ADLS.
 
 **Exemple**
 
@@ -754,7 +760,7 @@ La variable `FILTER CONTEXT` calcule les statistiques sur un sous-ensemble du je
 
 >[!NOTE]
 >
->La variable `Statistics ID` et les statistiques générées ne sont valides que pour chaque session et ne sont pas accessibles dans différentes sessions PSQL.<br><br>Limites:<ul><li>La génération de statistiques n’est pas prise en charge pour les types de données de tableau ou de mappage.</li><li>Les statistiques calculées sont **not** persistaient entre les sessions.</li></ul><br><br>Options:<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>Par défaut, l’indicateur est défini sur « true ». Par conséquent, lorsque des statistiques sont demandées sur un type de données qui n’est pas pris en charge, il n’échoue pas, mais ignore silencieusement les champs avec les types de données non pris en charge.<br>Pour activer les notifications d’erreurs lorsque des statistiques sont demandées sur un type de données non pris en charge, utilisez : `SET skip_stats_for_complex_datatypes = false`.
+>La variable `Statistics ID` et les statistiques générées ne sont valides que pour chaque session et ne sont pas accessibles dans différentes sessions PSQL.<br><br>Limites :<ul><li>La génération de statistiques n’est pas prise en charge pour les types de données de tableau ou de mappage.</li><li>Les statistiques calculées sont **not** persistaient entre les sessions.</li></ul><br><br>Options :<br><ul><li>`skip_stats_for_complex_datatypes`</li></ul><br>Par défaut, l’indicateur est défini sur true. Par conséquent, lorsque des statistiques sont demandées sur un type de données qui n’est pas pris en charge, il n’échoue pas, mais ignore silencieusement les champs avec les types de données non pris en charge.<br>Pour activer les notifications d’erreurs lorsque des statistiques sont demandées sur un type de données non pris en charge, utilisez : `SET skip_stats_for_complex_datatypes = false`.
 
 La sortie de la console s’affiche comme illustré ci-dessous.
 
@@ -765,7 +771,7 @@ La sortie de la console s’affiche comme illustré ci-dessous.
 (1 row)
 ```
 
-Vous pouvez alors interroger directement les statistiques calculées en référençant l’`Statistics ID`. L’exemple d’instruction ci-dessous permet d’afficher la sortie complète lorsque vous l’utilisez avec l’`Statistics ID` ou le nom d’alias. Pour en savoir plus sur cette fonctionnalité, voir [documentation sur les noms d’alias](../key-concepts/dataset-statistics.md#alias-name).
+Vous pouvez ensuite interroger directement les statistiques calculées en référençant la variable `Statistics ID`. Utilisez la variable `Statistics ID` ou le nom d’alias tel qu’affiché dans l’exemple d’instruction ci-dessous, pour afficher la sortie dans son intégralité. Pour en savoir plus sur cette fonctionnalité, voir [documentation sur les noms d’alias](../key-concepts/dataset-statistics.md#alias-name).
 
 ```sql
 -- This statement gets the statistics generated for `alias adc_geometric_stats_1`.
@@ -792,14 +798,15 @@ Voir [documentation sur les statistiques des jeux de données](../key-concepts/d
 
 #### TABLESAMPLE {#tablesample}
 
-Adobe Experience Platform Query Service fournit des échantillons de jeux de données dans le cadre de ses fonctionnalités approximatives de traitement des requêtes.
-Il est préférable d’utiliser des exemples de jeux de données lorsque vous n’avez pas besoin d’une réponse exacte pour une opération d’agrégat sur un jeu de données. Cette fonctionnalité vous permet de lancer des requêtes exploratoires plus efficaces sur des jeux de données volumineux en émettant une requête approximative pour renvoyer une réponse approximative.
+Adobe Experience Platform Query Service fournit des jeux de données d’exemple dans le cadre de ses fonctionnalités approximatives de traitement des requêtes.
+
+Il est préférable d’utiliser des exemples de jeux de données lorsque vous n’avez pas besoin d’une réponse exacte pour une opération d’agrégat sur un jeu de données. Pour effectuer des requêtes exploratoires plus efficaces sur des jeux de données volumineux en émettant une requête approximative pour renvoyer une réponse approximative, utilisez la méthode `TABLESAMPLE` fonction .
 
 Des exemples de jeux de données sont créés avec des exemples aléatoires uniformes issus de [!DNL Azure Data Lake Storage] Jeux de données (ADLS), utilisant uniquement un pourcentage d’enregistrements de l’original. L’exemple de fonction de jeu de données étend la fonction `ANALYZE TABLE` avec la commande `TABLESAMPLE` et `SAMPLERATE` Commandes SQL.
 
-Dans les exemples ci-dessous, la première ligne montre comment calculer un échantillon de 5 % du tableau. La deuxième ligne montre comment calculer un échantillon de 5 % à partir d’une vue filtrée des données du tableau.
+Dans l’exemple ci-dessous, la première ligne montre comment calculer un échantillon de 5 % du tableau. La deuxième ligne montre comment calculer un échantillon de 5 % à partir d’une vue filtrée des données du tableau.
 
-**exemple**
+**Exemple**
 
 ```sql {line-numbers="true"}
 ANALYZE TABLE tableName TABLESAMPLE SAMPLERATE 5;
@@ -827,18 +834,18 @@ CLOSE name
 CLOSE ALL
 ```
 
-If `CLOSE name` est utilisé, `name` représente le nom d’un curseur ouvert qui doit être fermé. If `CLOSE ALL` est utilisée, tous les curseurs ouverts seront fermés.
+If `CLOSE name` est utilisé, `name` représente le nom d’un curseur ouvert qui doit être fermé. If `CLOSE ALL` est utilisée, tous les curseurs ouverts sont fermés.
 
 ### DEALLOCATE
 
-La variable `DEALLOCATE` vous permet de désaffecter une instruction SQL préparée précédemment. Si vous ne désaffectez pas explicitement une instruction préparée, elle est désaffectée en fin de session. Vous trouverez plus d’informations sur les instructions préparées dans la section [PREPARE, commande](#prepare) .
+Pour désaffecter une instruction SQL préparée précédemment, utilisez la méthode `DEALLOCATE` . Si vous n’avez pas explicitement désaffecté une instruction préparée, elle est désaffectée à la fin de la session. Vous trouverez plus d’informations sur les instructions préparées dans la section [PREPARE, commande](#prepare) .
 
 ```sql
 DEALLOCATE name
 DEALLOCATE ALL
 ```
 
-If `DEALLOCATE name` est utilisé, `name` représente le nom de l’instruction préparée qui doit être désaffectée. If `DEALLOCATE ALL` est utilisée, toutes les instructions préparées seront désaffectées.
+If `DEALLOCATE name` est utilisé, `name` représente le nom de l’instruction préparée qui doit être désaffectée. If `DEALLOCATE ALL` est utilisée, toutes les instructions préparées sont désaffectées.
 
 ### DECLARE
 
@@ -855,7 +862,7 @@ DECLARE name CURSOR FOR query
 
 ### EXECUTE
 
-La variable `EXECUTE` sert à exécuter une instruction préparée au préalable. Comme les instructions préparées existent uniquement pour la durée d’une session, l’instruction préparée doit avoir été créée par une `PREPARE` exécutée plus tôt dans la session en cours. Vous trouverez plus d’informations sur l’utilisation des instructions préparées dans la section [`PREPARE` command](#prepare) .
+La variable `EXECUTE` sert à exécuter une instruction préparée au préalable. Comme les instructions préparées n’existent que pendant une session, l’instruction préparée doit avoir été créée par une `PREPARE` exécutée plus tôt dans la session en cours. Vous trouverez plus d’informations sur l’utilisation des instructions préparées dans la section [`PREPARE` command](#prepare) .
 
 Si la variable `PREPARE` qui a créé l’instruction spécifiait certains paramètres, un ensemble compatible de paramètres doit être transmis à l’instruction `EXECUTE` . Si ces paramètres ne sont pas transmis, une erreur s’affiche.
 
@@ -866,17 +873,17 @@ EXECUTE name [ ( parameter ) ]
 | Paramètres | Description |
 | ------ | ------ |
 | `name` | Nom de l’instruction préparée à exécuter. |
-| `parameter` | La valeur réelle d’un paramètre de l’instruction préparée. Ce paramètre doit être une expression donnant une valeur compatible avec le type de données de ce paramètre, tel que déterminé lors de la création de l’instruction préparée.  S’il existe plusieurs paramètres pour l’instruction préparée, ils sont séparés par des virgules. |
+| `parameter` | La valeur réelle d’un paramètre de l’instruction préparée. Il doit s’agir d’une expression donnant une valeur compatible avec le type de données de ce paramètre, tel que déterminé lors de la création de l’instruction préparée. S’il existe plusieurs paramètres pour l’instruction préparée, ils sont séparés par des virgules. |
 
 ### EXPLAIN
 
-La variable `EXPLAIN` affiche le plan d’exécution de l’instruction fournie. Le plan d’exécution indique comment les tables référencées par l’instruction seront analysées.  Si plusieurs tableaux sont référencés, les algorithmes de jointure utilisés pour rassembler les lignes requises de chaque tableau d’entrée s’affichent.
+La variable `EXPLAIN` affiche le plan d’exécution de l’instruction fournie. Le plan d’exécution indique comment les tables référencées par l’instruction seront analysées. Si plusieurs tableaux sont référencés, il indique les algorithmes de jointure utilisés pour rassembler les lignes requises de chaque tableau d’entrée.
 
 ```sql
 EXPLAIN statement
 ```
 
-Utilisez la variable `FORMAT` avec le mot-clé `EXPLAIN` pour définir le format de la réponse.
+Pour définir le format de la réponse, utilisez la méthode `FORMAT` avec le mot-clé `EXPLAIN` .
 
 ```sql
 EXPLAIN FORMAT { TEXT | JSON } statement
@@ -923,7 +930,7 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 
 La variable `PREPARE` permet de créer une instruction préparée. Une instruction préparée est un objet côté serveur qui peut être utilisé pour modéliser des instructions SQL similaires.
 
-Les instructions préparées peuvent prendre des paramètres, qui sont des valeurs qui sont substituées dans l’instruction lors de son exécution. Les paramètres sont référencés par position, en utilisant $1, $2, etc., lors de l’utilisation d’instructions préparées.
+Les instructions préparées peuvent prendre des paramètres, qui sont des valeurs qui sont substituées dans l’instruction lors de son exécution. Les paramètres sont référencés par position, à l’aide de $1, $2, etc., lors de l’utilisation d’instructions préparées.
 
 Vous pouvez éventuellement spécifier une liste de types de données de paramètre. Si le type de données d’un paramètre n’est pas répertorié, le type peut être déduit du contexte.
 
@@ -971,8 +978,8 @@ Vous trouverez plus d’informations sur les paramètres de requête SELECT stan
 
 | Paramètres | Description |
 | ------ | ------ |
-| `TEMPORARY` ou `TEMP`. | Paramètre facultatif. Si spécifié, la table créée sera une table temporaire. |
-| `UNLOGGED` | Paramètre facultatif. Si spécifié, la table créée sera une table non enregistrée. Vous trouverez plus d’informations sur les tables non enregistrées dans la section [[!DNL PostgreSQL] documentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
+| `TEMPORARY` ou `TEMP`. | Paramètre facultatif. Si le paramètre est spécifié, la table créée est une table temporaire. |
+| `UNLOGGED` | Paramètre facultatif. Si le paramètre est spécifié, la table créée est une table non enregistrée. Vous trouverez plus d’informations sur les tables non enregistrées dans la section [[!DNL PostgreSQL] documentation](https://www.postgresql.org/docs/current/sql-createtable.html). |
 | `new_table` | Nom de la table à créer. |
 
 **Exemple**
@@ -1029,11 +1036,11 @@ COPY query
 
 >[!NOTE]
 >
->Le chemin de sortie complet sera : `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
+>Le chemin de sortie complet est : `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
 
 ### ALTER TABLE {#alter-table}
 
-La variable `ALTER TABLE` vous permet d&#39;ajouter ou de déposer des contraintes de clé primaire ou étrangère, ainsi que d&#39;ajouter des colonnes dans le tableau.
+La variable `ALTER TABLE` permet d&#39;ajouter ou de déposer des contraintes de clé primaire ou étrangère et d&#39;ajouter des colonnes dans la table.
 
 #### AJOUTER OU DÉPOSER UNE CONTRAINTE
 
@@ -1086,14 +1093,13 @@ ALTER TABLE table_name DROP CONSTRAINT IDENTITY ( column_name )
 | `referenced_table_name` | Nom de la table référencée par la clé étrangère. |
 | `primary_column_name` | Nom de la colonne référencée par la clé étrangère. |
 
-
 >[!NOTE]
 >
 >Le schéma de la table doit être unique et ne pas être partagé entre plusieurs tables. En outre, l’espace de noms est obligatoire pour les contraintes de clé primaire, d’identité principale et d’identité.
 
 #### Ajout ou suppression d’identités primaires et secondaires
 
-La variable `ALTER TABLE` vous permet d’ajouter ou de supprimer des contraintes pour les colonnes de la table d’identités principale et secondaire directement via SQL.
+Pour ajouter ou supprimer des contraintes pour les colonnes de tableau d’identités principal et secondaire, utilisez la variable `ALTER TABLE` .
 
 Les exemples suivants ajoutent une identité principale et une identité secondaire en ajoutant des contraintes.
 
@@ -1109,7 +1115,7 @@ ALTER TABLE t1 DROP CONSTRAINT PRIMARY IDENTITY (c1) ;
 ALTER TABLE t1 DROP CONSTRAINT IDENTITY (c1) ;
 ```
 
-Consultez le document sur [définition des identités dans des jeux de données ad hoc](../data-governance/ad-hoc-schema-identities.md) pour plus d’informations.
+Pour plus d’informations, voir le document sur [définition des identités dans des jeux de données ad hoc](../data-governance/ad-hoc-schema-identities.md).
 
 #### AJOUTER UNE COLONNE
 
@@ -1205,7 +1211,7 @@ SHOW FOREIGN KEYS
 
 ### AFFICHER LES GROUPES DE DONNÉES
 
-La variable `SHOW DATAGROUPS` renvoie une table de toutes les bases de données associées. Pour chaque base de données, le tableau comprend le schéma, le type de groupe, le type enfant, le nom enfant et l’ID enfant.
+La variable `SHOW DATAGROUPS` renvoie une table de toutes les bases de données associées. Pour chaque base de données, le tableau comprend le schéma, le type de groupe, le type enfant, le nom de l’enfant et l’ID enfant.
 
 ```sql
 SHOW DATAGROUPS
@@ -1223,7 +1229,7 @@ SHOW DATAGROUPS
 
 ### AFFICHER LES GROUPES DE DONNÉES POUR LE tableau
 
-La variable `SHOW DATAGROUPS FOR` La commande &#39;table_name&#39; renvoie une table de toutes les bases de données associées contenant le paramètre comme son enfant. Pour chaque base de données, le tableau comprend le schéma, le type de groupe, le type enfant, le nom enfant et l’ID enfant.
+La variable `SHOW DATAGROUPS FOR 'table_name'` renvoie une table de toutes les bases de données associées contenant le paramètre comme son enfant. Pour chaque base de données, le tableau comprend le schéma, le type de groupe, le type enfant, le nom de l’enfant et l’ID enfant.
 
 ```sql
 SHOW DATAGROUPS FOR 'table_name'

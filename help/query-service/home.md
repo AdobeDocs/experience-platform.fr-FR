@@ -2,56 +2,58 @@
 keywords: Experience Platform;accueil;rubriques populaires;query service;Query service;requête
 solution: Experience Platform
 title: Présentation de Query Service
-description: Ce document donne une vue d’ensemble du rôle de Query Service dans Experience Platform.
+description: Découvrez le rôle de Query Service dans Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: e59def7a05862ad880d0b6ada13b1c69c655ff90
+source-git-commit: e06519978ed9c6128be53a15cef3046a0dbc2a16
 workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 100%
+source-wordcount: '837'
+ht-degree: 25%
 
 ---
 
-# Présentation d’[!DNL Query Service]
+# Présentation de Query Service
 
-Adobe Experience Platform ingère des données à partir de sources diverses. Le grand défi qui attend les spécialistes du marketing : comprendre ces données afin de découvrir des informations sur leurs clients. Adobe Experience Platform [!DNL Query Service] vous facilite la tâche en vous permettant dʼutiliser le langage SQL standard pour interroger des données dans [!DNL Platform]. Grâce à [!DNL Query Service], vous pouvez joindre nʼimporte quel jeu de données dans [!DNL Data Lake] et capturer les résultats de la requête sous forme dʼun nouveau jeu de données à utiliser dans un compte rendu des performances, dans le cadre du machine learning ou pour être ingéré dans [!DNL Real-Time Customer Profile]. Ce document donne une vue dʼensemble du rôle de [!DNL Query Service] dans [!DNL Experience Platform].
+Adobe Experience Platform ingère des données à partir de sources diverses. Les marketeurs doivent comprendre ces données afin d’obtenir des informations sur leurs clients. Pour interroger des données dans Platform, vous pouvez utiliser SQL standard et Adobe Experience Platform Query Service. Vous pouvez utiliser Query Service pour joindre n’importe quel jeu de données dans le lac de données et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, l’apprentissage automatique ou pour ingestion dans . [!DNL Real-Time Customer Profile]. Ce document donne une vue d’ensemble du rôle de Query Service dans Experience Platform.
 
-[!DNL Query Service] permet aux marques de relier le parcours client en ligne et hors ligne et de comprendre lʼattribution omnicanale. La vidéo suivante montre comment une entreprise orientée expérience peut tirer parti de [!DNL Query Service] pour traiter les cas dʼutilisation clés et la manière dont [!DNL Query Service] fonctionne.
+Vous pouvez utiliser Query Service pour connecter le parcours client en ligne à hors ligne et comprendre l’attribution omnicanal de votre marque. La vidéo suivante montre comment une entreprise d’expérience peut utiliser Query Service pour traiter des cas d’utilisation clés et comment fonctionne Query Service.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29795?quality=12&learn=on)
 
-## Utilisation de [!DNL Query Service]
+## Utilisation de Query Service {#usage}
 
-[!DNL Query Service] fournit une interface utilisateur et une API RESTful à partir desquelles vous pouvez créer des requêtes SQL pour mieux analyser vos données. L’interface utilisateur vous permet d’écrire et d’exécuter des requêtes, de visualiser des requêtes précédemment exécutées et d’accéder à des requêtes enregistrées par des utilisateurs et utilisatrices au sein de votre organisation. L’interface utilisateur est conçue pour être utilisée en tant que sandbox pour vos requêtes avant de les exécuter sur votre jeu de données plus vaste. Pour plus dʼinformations sur lʼutilisation du service interactif dans [!DNL Platform], consultez le [guide de lʼinterface utilisateur de Query Service](ui/overview.md). L’API RESTful offre une expérience similaire vous permettant d’écrire et d’exécuter par programmation des requêtes, de planifier des requêtes pour les utiliser et les répéter plus tard, ainsi que de créer des modèles pour les requêtes que vous souhaitez écrire. Pour plus dʼinformations sur lʼutilisation de lʼAPI [!DNL Query Service], reportez-vous au [guide de développement de Query Service](api/getting-started.md).
+Pour analyser vos données, vous pouvez utiliser l’interface utilisateur de Query Service et une API RESTful, à partir de laquelle vous pouvez créer des requêtes SQL. L’interface utilisateur vous permet d’écrire et d’exécuter des requêtes, de visualiser des requêtes précédemment exécutées et d’accéder à des requêtes enregistrées par des utilisateurs et utilisatrices au sein de votre organisation. Vous pouvez utiliser l’éditeur de requêtes comme un environnement de test pour tester vos requêtes avant de les exécuter sur votre jeu de données plus vaste. Voir [Guide de l’interface utilisateur de Query Service](ui/overview.md) pour plus d’informations sur l’utilisation de l’interface utilisateur. L’API RESTful offre une expérience similaire. Vous pouvez utiliser l’API Query Service pour écrire et exécuter des requêtes par programmation, planifier des requêtes pour une utilisation et une répétition futures, ainsi que créer des modèles pour les requêtes que vous souhaitez écrire. Pour plus d’informations sur l’utilisation de l’API de Query Service, reportez-vous au [guide de développement de Query Service](api/getting-started.md).
 
-## [!DNL Query Service] et les services de [!DNL Experience Platform]
+## Query Service et services Experience Platform {#experience-platform-services}
 
-[!DNL Query Service] interagit et peut être utilisé conjointement avec plusieurs services dʼ[!DNL Experience Platform]. Afin de tirer le meilleur parti des fonctionnalités de [!DNL Query Service's], il est recommandé de se familiariser avec ces services et de connaître leurs interactions avec [!DNL Query Service].
+Query Service interagit et peut être utilisé avec plusieurs services Experience Platform. Pour tirer le meilleur parti des fonctionnalités de Query Service, vous devez vous familiariser avec ces services et avec leur interaction avec Query Service. La variable [Page d’entrée de la documentation Experience Platform](https://experienceleague.adobe.com/docs/experience-platform.html?lang=fr) fournit des résumés et des liens vers les fonctionnalités de la plateforme.
 
-### [!DNL Data Science Workspace]
+### [!DNL Data Science Workspace] {#data-science-workspace}
 
-Adobe Experience Platform [!DNL Data Science Workspace] utilise le machine learning et lʼintelligence artificielle pour obtenir des informations à partir des données stockées dans [!DNL Experience Platform]. [!DNL Data Science Workspace] permet aux scientifiques de données de créer des recettes basées sur des données d’enregistrement et de séries temporelles concernant les clients et leur activité, ce qui facilite les prédictions telles que la propension à acheter et les offres recommandées que l’individu est susceptible d’apprécier et de saisir. Vous pouvez utiliser SQL dans [!DNL Data Science Workspace] en intégrant [!DNL Query Service] dans [!DNL JupyterLab], ce qui vous permettra dʼexplorer, de transformer et dʼanalyser les données dʼAdobe Analytics. Consultez la présentation de [!DNL Data Science Workspace] pour obtenir plus dʼinformations sur [!DNL Data Science Workspace], et le guide dʼintégration de [!DNL Query Service] pour plus dʼinformations sur les interactions entre [!DNL Data Science Workspace] et [!DNL Query Service].
+Adobe Experience Platform [!DNL Data Science Workspace] utilise l’apprentissage automatique et l’intelligence artificielle pour obtenir des informations à partir des données stockées dans Experience Platform. Les spécialistes des données peuvent utiliser la variable [!DNL Data Science Workspace] pour créer des recettes basées sur des données d’enregistrement et de série temporelle concernant les clients et leurs activités. Ces recettes facilitent les prédictions telles que la propension à acheter et les offres recommandées que l’individu est susceptible d’apprécier et d’utiliser. Vous pouvez utiliser SQL dans [!DNL Data Science Workspace] en intégrant Query Service à [!DNL JupyterLab] pour explorer, transformer et analyser les données Adobe Analytics. Lisez la section [[!DNL Data Science Workspace] aperçu](../data-science-workspace/home.md) et la variable [Guide de connexion Jypiter Notebook](./clients/jupyter-notebook.md) pour plus d’informations sur la manière dont [!DNL Data Science Workspace] interagit avec Query Service.
 
-### [!DNL Segmentation Service]
+### [!DNL Segmentation Service] {#segmentation}
 
-Adobe Experience Platform [!DNL Segmentation Service] permet aux utilisateurs de diviser leurs clients en plus petits groupes partageant des caractéristiques similaires. Ces audiences peuvent ensuite être évaluées afin de fournir une meilleure analyse de vos données [!DNL Real-Time Customer Profile]. [!DNL Query Service] peut être utilisé pour fournir cette analyse en exécutant des requêtes sur cette audience de données dans le [!DNL Data Lake]. Pour plus dʼinformations sur la segmentation, reportez-vous à la vue d’ensemble de [!DNL Segmentation Service] et au guide de [!DNL Profile Query Language] (PQL) pour plus dʼinformations sur lʼanalyse des audiences.
+Utilisez Adobe Experience Platform Segmentation Service pour diviser vos clients en groupes plus petits partageant des caractéristiques similaires. Ces audiences peuvent ensuite être évaluées afin de fournir une meilleure analyse de vos données Real-time Customer Profile. Vous pouvez utiliser Query Service pour exécuter des requêtes sur ces données d’audience dans le lac de données et fournir l’analyse. Lisez la section [Présentation de Segmentation Service](../segmentation/home.md) et la variable [[!DNL Profile Query Language] Guide (PQL)](../segmentation/pql/overview.md) pour plus d’informations sur l’analyse des audiences.
 
-## Cas d’utilisation
+## Cas d’utilisation {#use-cases}
 
-[!DNL Query Service] offre une approche flexible du traitement des données qui répond à de nombreux objectifs. Il peut, entre autres, soulager les spécialistes marketing de la charge de la segmentation et contribuer à générer des audiences exploitables et des informations commerciales significatives. Les cas d’utilisation suivants présentent des exemples plus détaillés de la puissance de [!DNL Query Service].
+Query Service offre une approche flexible de votre traitement des données qui a de nombreux objectifs. Entre autres, elle peut alléger le fardeau de la segmentation des spécialistes du marketing et contribuer à générer des audiences exploitables et des informations commerciales significatives. Les cas d’utilisation suivants présentent des exemples plus détaillés de la puissance de Query Service.
 
-### Abandon de la navigation dans Adobe Analytics
+### Abandon de la navigation dans Adobe Analytics {#abandon-browse}
 
-Cet [exemple d’abandon de la navigation est centré sur l’utilisation des données Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) pour créer une audience exploitable particulière. [!DNL Query Service] prend en charge une logique complexe de segmentation afin de calculer divers attributs personnalisés à utiliser en aval ou de simplifier considérablement la création de vos audiences.
+Cet [exemple d’abandon de la navigation est centré sur l’utilisation des données Adobe [!DNL Analytics]](./use-cases/abandoned-browse.md) pour créer une audience exploitable particulière. Query Service prend en charge une logique complexe de segmentation afin de calculer divers attributs personnalisés à utiliser en aval ou de simplifier considérablement la création de vos audiences.
 
-### Tableaux de bord Looker BI
+## Génération d’informations avec des tableaux de bord personnalisés {#custom-dashboards}
 
-Adobe Experience Platform vous permet dʼingérer, de stocker, de structurer et dʼextraire tous les jeux de données stockés, y compris les données comportementales, de gestion de la relation client et de point de vente. [!DNL Experience Platform's Query Service] vous permet dʼinterroger ces jeux de données et de répondre à des questions spécifiques sur lʼentreprise, puis de commencer à générer des informations pertinentes. La vidéo suivante montre lʼutilité de la création de tableaux de bord dans les outils de Business Intelligence (BI) à lʼaide de [!DNL Query Service].
-
->[!VIDEO](https://video.tv.adobe.com/v/28981?quality=12&learn=on)
+Adobe Experience Platform vous permet dʼingérer, de stocker, de structurer et dʼextraire tous les jeux de données stockés, y compris les données comportementales, de gestion de la relation client et de point de vente. [!DNL Experience Platform's Query Service] vous permet dʼinterroger ces jeux de données et de répondre à des questions spécifiques sur lʼentreprise, puis de commencer à générer des informations pertinentes. Découvrez comment créer et gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser des mesures clés avec [tableaux de bord définis par l’utilisateur](../dashboards/user-defined-dashboards.md). Vous pouvez même [personnaliser vos propres rapports Real-Time CDP ;](../dashboards/cdp-insights-data-model.md) pour vos cas d’utilisation marketing et IPC en utilisant des requêtes SQL avec les modèles de données Real-time Customer Data Platform Insights.
 
 ## Étapes suivantes et ressources supplémentaires
 
-Ce document vous a initié à [!DNL Query Service] et à son fonctionnement dans le cadre plus vaste dʼ[!DNL Experience Platform]. Pour plus dʼinformations sur les interactions avec divers points d’entrée dans lʼAPI [!DNL Query Service], consultez le [guide de développement de Query Service](api/getting-started.md). Pour plus dʼinformations sur lʼutilisation du service interactif dans [!DNL Platform], reportez-vous au [guide de lʼinterface utilisateur de Query Service](ui/overview.md). Pour une liste exhaustive portant sur la connexion des clients externes à [!DNL Query Service], reportez-vous à la [présentation des clients de Query Service](clients/overview.md).
+Ce document vous a initié à Query Service et à son fonctionnement dans le cadre plus vaste d’Experience Platform. Pour continuer à découvrir les fonctionnalités de Query Service, nous vous recommandons de lire les documents suivants :
+
+- La variable [Guide de développement de Query Service](api/getting-started.md): pour plus d’informations sur l’interaction avec divers points de terminaison dans l’API Query Service.
+- La variable [Guide de l’interface utilisateur de Query Service](ui/overview.md): pour plus d’informations sur l’utilisation de Query Editor et de l’interface utilisateur.
+- La variable [Présentation des clients de Query Service](clients/overview.md): pour obtenir une liste complète des clients externes à qui se connecter à Query Service.
 
 Pour mieux vous préparer à exécuter des requêtes, regardez la vidéo suivante. Cette vidéo présente des conseils et des bonnes pratiques pour lʼexécution de requêtes dans lʼinterface de lʼéditeur de requêtes, les clients PSQL, les solutions Business Intelligence (BI) et lʼAPI HTTP.
 
