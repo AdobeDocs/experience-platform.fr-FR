@@ -5,15 +5,15 @@ keywords: debugger ; extension experience cloud debugger ; chrome ; extensi
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 source-git-commit: a381760d3f19e04a70581d4adbb8095c92fb2e56
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '704'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform Debugger
 
-## Version 1.5.4 - mercredi 19 décembre 2023
+## Version 1.5.4 - 19 décembre 2023
 
 ### Correctifs et améliorations
 
@@ -33,7 +33,7 @@ ht-degree: 95%
 * Correction d’un problème en raison duquel l’affichage de Target Trace provoquait un blocage.
 * Ajout d’un avertissement lorsque le débogueur ne parvient pas à configurer l’infrastructure sur la page dans Firefox.
 
-## Version 1.5.2 - samedi 10 novembre 2023
+## Version 1.5.2 - 10 novembre 2023
 
 (Firefox uniquement)
 
