@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de dépannage de Privacy Service
 description: Ce document fournit des réponses aux questions fréquentes sur Privacy Service, ainsi que des informations sur les erreurs courantes rencontrées dans l’API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c6507a39ba5ae5ca6aa2bf02cf8844a4592152ac
 workflow-type: tm+mt
-source-wordcount: '916'
-ht-degree: 100%
+source-wordcount: '1028'
+ht-degree: 89%
 
 ---
 
@@ -69,7 +69,7 @@ Adobe n’est pas compatible avec l’utilisation de [!DNL Privacy Service] comm
 
 Les requêtes d’accès à des informations personnelles sont sensibles au facteur temps et sont effectuées en fonction des lois de confidentialité applicables. L’envoi de requêtes autres que les requêtes relatives à l’accès ou à la suppression de titulaires de données ou de clientes et clients a des répercussions sur les clientes et clients de [!DNL Privacy Service] et sur la capacité de [!DNL Privacy Service] à respecter les délais légaux appropriés. Une limite de chargement quotidienne stricte est maintenant en place pour prévenir les abus du service.
 
-Veuillez contacter votre équipe de compte Adobe pour coordonner vos efforts et fournir un niveau de service adéquat en matière de suppression des données personnelles identifiables (PII) ou des problèmes relatifs aux données.
+Veuillez contacter votre équipe Adobe en charge des comptes pour coordonner vos efforts et fournir un niveau de service adéquat en matière de suppression des données personnelles identifiables (PII) ou des problèmes relatifs aux données.
 
 ## Comment puis-je obtenir des informations sur le statut d’une requête ou d’une tâche de confidentialité ?
 
@@ -97,7 +97,7 @@ Pour plus d’informations, reportez-vous à la section relative à la [recherch
 
 Dans le tableau de bord de l’interface utilisateur de [!DNL Privacy Service], recherchez la tâche à télécharger dans le widget **Requêtes de tâche**. Sélectionnez l’identifiant de la tâche pour ouvrir la page Détails de la tâche. Ensuite, sélectionnez **Télécharger** dans le coin supérieur droit pour télécharger le fichier ZIP. Consultez le [guide d’utilisation de Privacy Service](ui/user-guide.md) pour obtenir des instructions plus détaillées.
 
-## Messages d’erreurs courantes
+## Messages d’erreurs courantes {#common-error-messages}
 
 Le tableau suivant présente quelques erreurs courantes dans [!DNL Privacy Service], avec des descriptions pour aider à résoudre leurs problèmes respectifs.
 
@@ -111,3 +111,4 @@ Le tableau suivant présente quelques erreurs courantes dans [!DNL Privacy Servi
 | Des accès et des autorisations sont requis. | Des accès et des autorisations sont requis pour utiliser [!DNL Privacy Service]. Contactez votre administrateur pour obtenir un accès. |
 | Un problème est survenu lors du chargement et de l’archivage des données d’accès. | Lorsque cette erreur se produit, rechargez les données d’accès, puis réessayez. |
 | Dépassement de la charge de travail pour la limite de taux de documents actuelle. | Lorsque cette erreur se produit, réduisez le taux d’envoi, puis réessayez. |
+| Trop de requêtes<br>(Erreurs HTTP 429) | Si vos modèles d’envoi dépassent la limite surveillée des tâches de sujet de données autorisées, vous recevrez une erreur HTTP 429 en réponse au trafic continu de votre entreprise. Privacy Service est destiné au traitement des demandes d’accès à des informations personnelles des titulaires de données. Il ne doit pas être utilisé pour le nettoyage des données. Si vous recevez des erreurs HTTP 429, des limites de limitation et de requête sont mises en oeuvre pour protéger l’Adobe des abus qui pourraient mettre en danger le travail de conformité légitime.<br>Des méthodes alternatives pour réduire vos données sont fournies par [définition des calendriers d’expiration des jeux de données](../hygiene/ui/dataset-expiration.md) et en utilisant la variable [fonction de suppression d’enregistrement](../hygiene/ui/record-delete.md). Pour plus d’informations sur l’application de ces fonctionnalités, consultez leur documentation respective. |
