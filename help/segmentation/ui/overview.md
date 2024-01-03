@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’IU de Segmentation Service
 description: Découvrez comment créer et gérer des audiences et des définitions de segment dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 692cdd3d8b30c3e5187a556e4f9ec80d675cb443
+source-git-commit: 7ee39a39aecdfc0516f63e6a9c9a06c6c4b22996
 workflow-type: tm+mt
-source-wordcount: '3910'
-ht-degree: 90%
+source-wordcount: '3933'
+ht-degree: 87%
 
 ---
 
@@ -62,7 +62,7 @@ Pour en savoir plus, consultez le [guide du tableau de bord Audiences](../../das
 >title="Ajouter toutes les audiences à planifier"
 >abstract="Activez cette option pour inclure toutes les audiences évaluées à l’aide de la segmentation par lots dans la mise à jour planifiée quotidienne. Désactivez cette option pour supprimer toutes les audiences de la mise à jour planifiée."
 
-Sélectionnez l’onglet **[!UICONTROL Parcourir]** pour afficher la liste de toutes les audiences de votre organisation. Cette vue répertorie des informations sur les audiences, notamment le nombre de profils, l’origine, la date de création, la date de dernière modification, les balises et la répartition.
+Sélectionnez la variable **[!UICONTROL Parcourir]** pour afficher la liste de toutes les audiences de votre organisation. Cette vue répertorie des informations sur les audiences, notamment le nombre de profils, l’origine, la date de création, la date de dernière modification, les balises et la répartition.
 
 ![L’écran de navigation s’affiche. Une liste de toutes les audiences appartenant à l’organisation s’affiche.](../images/ui/overview/audience-browse.png)
 
@@ -72,17 +72,17 @@ Une icône de points de suspension se trouve à côté de chaque audience. Cette
 
 | Action | Origines | Description |
 | ------ | ------- | ----------- |
-| [!UICONTROL Modifier] | Segmentation Service | Permet d’ouvrir le créateur de segments pour modifier votre audience. Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [Guide de l’interface utilisateur du créateur de segments](./segment-builder.md). |
-| [!UICONTROL Ouvrir la composition] | Composition de l’audience | Permet d’ouvrir la composition d’audience pour afficher votre audience. Pour plus d’informations sur la composition d’audience, consultez le [Guide de l’interface utilisateur de la composition d’audience](./audience-composition.md). |
-| [!UICONTROL Activer vers la destination] | Segmentation Service | Permet d’activer l’audience vers une destination. Pour plus d’informations sur l’activation d’une audience vers une destination, consultez la [vue d’ensemble de l’activation](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Partager avec les partenaires] | Composition d’audience, chargement personnalisé, Segmentation Service | Permet de partager votre audience avec d’autres utilisateurs et utilisatrices de Platform. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble de la correspondance de segments](./segment-match/overview.md). |
-| [!UICONTROL Gérer les balises] | Composition d’audience, chargement personnalisé, Segmentation Service | Permet de gérer les balises définies par l’utilisateur ou l’utilisatrice qui appartiennent à l’audience. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
-| [!UICONTROL Déplacer vers le dossier] | Composition d’audience, chargement personnalisé, Segmentation Service | Permet de gérer le dossier auquel appartient l’audience. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
+| [!UICONTROL Modifier] | Segmentation Service | Ouvre le créateur de segments pour modifier votre audience. Notez que si votre audience a été créée par le biais de l’API, vous allez **not** Vous pouvez le modifier à l’aide du créateur de segments. Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [Guide de l’interface utilisateur du créateur de segments](./segment-builder.md). |
+| [!UICONTROL Composition ouverte] | Composition de l’audience | Ouvre la composition d’audience pour afficher votre audience. Pour plus d’informations sur la composition d’audience, consultez le [Guide de l’interface utilisateur de la composition d’audience](./audience-composition.md). |
+| [!UICONTROL Activer la destination] | Segmentation Service | Active l’audience vers une destination. Pour plus d’informations sur l’activation d’une audience vers une destination, consultez la [vue d’ensemble de l’activation](../../destinations/ui/activation-overview.md). |
+| [!UICONTROL Partager avec les partenaires] | Composition d’audience, chargement personnalisé, Segmentation Service | Partage votre audience avec d’autres utilisateurs de Platform. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble de la correspondance de segments](./segment-match/overview.md). |
+| [!UICONTROL Gestion des balises] | Composition d’audience, chargement personnalisé, Segmentation Service | Gère les balises définies par l’utilisateur qui appartiennent à l’audience. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
+| [!UICONTROL Déplacer vers le dossier] | Composition d’audience, chargement personnalisé, Segmentation Service | Gère le dossier auquel l’audience appartient. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
 | [!UICONTROL Copier] | Composition d’audience, chargement personnalisé, Segmentation Service | Duplique l’audience sélectionnée. |
-| [!UICONTROL Appliquer les libellés d’accès] | Composition d’audience, chargement personnalisé, Segmentation Service | Permet de gérer les libellés d’accès qui appartiennent à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Appliquer les libellés d’accès] | Composition d’audience, chargement personnalisé, Segmentation Service | Gère les étiquettes d’accès qui appartiennent à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Archiver] | Chargement personnalisé | Archive l’audience sélectionnée. |
 | [!UICONTROL Supprimer] | Composition d’audience, chargement personnalisé, Segmentation Service | Supprime l’audience sélectionnée. |
-| [!UICONTROL Ajouter au package] | Composition d’audience, chargement personnalisé, Segmentation Service | Permet de déplacer l’audience entre les environnements de test. Pour plus d’informations sur cette fonctionnalité, veuillez lire la section [guide d’outils sandbox](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Ajouter au package] | Composition d’audience, chargement personnalisé, Segmentation Service | Déplace l’audience entre les environnements de test. Pour plus d’informations sur cette fonctionnalité, veuillez lire la section [guide d’outils sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!NOTE]
 >
