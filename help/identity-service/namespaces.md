@@ -2,9 +2,9 @@
 title: Présentation d’Identity Namespace
 description: Découvrez les espaces de noms d’identité dans Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 98482bfdd54b70cde73c3512f8237c7862e41281
+source-git-commit: 44e4e83d80302f64854f6c8f9531da913a2f0942
 workflow-type: tm+mt
-source-wordcount: '1787'
+source-wordcount: '1779'
 ht-degree: 18%
 
 ---
@@ -22,8 +22,6 @@ Les espaces de noms d’identité nécessitent une compréhension des différent
 * [[!DNL Privacy Service]](../privacy-service/home.md): les espaces de noms d’identité sont utilisés dans les demandes de conformité pour les réglementations de confidentialité juridiques telles que le Règlement général sur la protection des données (RGPD). Chaque demande d’accès à des informations personnelles est relative à un espace de noms afin d’identifier les données des consommateurs qui doivent être affectées.
 
 ## Compréhension des espaces de noms d’identité
-
-![Illustration d’un processus de données avec Identity Service.](images/identity-service-stitching.png)
 
 Une identité entièrement qualifiée comprend deux composants : une **valeur d’identité** et un **espace de noms d’identité**. Par exemple, si la valeur d’une identité est `scott@acme.com`, puis un espace de noms fournit du contexte à cette valeur en la distinguant comme adresse électronique. De même, un espace de noms peut distinguer `555-123-456` comme numéro de téléphone ; et `3126ABC` comme identifiant CRM. Essentiellement, **un espace de noms fournit un contexte à une identité donnée ;**. Lors de la mise en correspondance de données d’enregistrement entre des fragments de profil, comme lorsque [!DNL Real-Time Customer Profile] fusionne les données de profil ; la valeur d’identité et l’espace de noms doivent correspondre.
 

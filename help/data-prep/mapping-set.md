@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des jeux de mappages
 description: Découvrez comment utiliser les jeux de mappages avec la préparation de données Adobe Experience Platform.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: 660948b7a43ed3c18feb74cccf8f9c607470759c
 workflow-type: tm+mt
 source-wordcount: '959'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -74,8 +74,8 @@ Le fichier JSON suivant est un exemple de jeu de mappages type :
 | `outputSchema` | Le schéma XDM des données d’entrée sera transformé pour être conforme. |
 | `mappings` | Tableau de mappages champ à champ du schéma source au schéma de destination. |
 | `sourceType` | Pour chaque mappage répertorié, son attribut `sourceType` indique le type de source à mapper. Peut être l’une des valeurs suivantes : `ATTRIBUTE`, `STATIC` ou `EXPRESSION` : <ul><li> `ATTRIBUTE` est utilisé pour toute valeur trouvée dans le chemin d’accès source. </li><li>`STATIC` est utilisé pour les valeurs injectées dans le chemin d’accès de destination. Cette valeur reste constante et n’est pas affectée par le schéma source.</li><li> `EXPRESSION` est utilisé pour une expression qui sera résolue au moment de l’exécution. Vous trouverez une liste des expressions disponibles dans le [guide des fonctions de mappage](./functions.md).</li> </ul> |
-| `source` | Pour chaque mappage répertorié, l’attribut `source` indique le champ que vous souhaitez mapper. Vous trouverez plus d’informations sur la configuration de votre source dans la [section sources](#sources). |
-| `destination` | Pour chaque mappage répertorié, l’attribut `destination` indique le champ, ou le chemin d’accès au champ, où sera placée la valeur extraite du champ `source`. Vous trouverez plus d’informations sur la configuration de vos destinations dans la [section destination](#destination). |
+| `source` | Pour chaque mappage répertorié, l’attribut `source` indique le champ que vous souhaitez mapper. Vous trouverez plus d’informations sur la configuration de votre source dans la section [présentation des sources](../sources/home.md). |
+| `destination` | Pour chaque mappage répertorié, l’attribut `destination` indique le champ, ou le chemin d’accès au champ, où sera placée la valeur extraite du champ `source`. Pour plus d’informations sur la configuration de vos destinations, voir [présentation de la destination](../destinations/home.md). |
 | `mappings.name` | (*Facultatif*) Nom du mappage. |
 | `mappings.description` | (*Facultatif*) Description du mappage. |
 

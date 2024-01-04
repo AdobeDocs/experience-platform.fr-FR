@@ -2,10 +2,10 @@
 title: Suppressions dans Identity Service
 description: Ce document présente les différents mécanismes que vous pouvez utiliser pour supprimer vos données d’identité dans Experience Platform et explique clairement comment les graphiques d’identités peuvent être affectés.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 44e4e83d80302f64854f6c8f9531da913a2f0942
 workflow-type: tm+mt
-source-wordcount: '1198'
-ht-degree: 100%
+source-wordcount: '1199'
+ht-degree: 97%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 100%
 
 Adobe Experience Platform Identity Service génère des graphiques d’identités en liant de manière déterministe les identités entre les appareils et les systèmes pour une personne individuelle. Les liens des graphiques d’identités sont établis lorsque plusieurs identités marquées sont reçues au sein de la même ligne de données.
 
-Les graphiques d’identités sont utilisés par le profil client en temps réel pour créer une vue d’ensemble exhaustive et unique de vos attributs et comportements client, ce qui vous permet de fournir des expériences numériques personnelles et percutantes en temps réel, aux personnes et non aux appareils.
+Les graphiques d’identités sont utilisés par Real-time Customer Profile pour créer une vue d’ensemble exhaustive et unique de vos attributs et comportements client, ce qui vous permet de fournir des expériences digitales personnelles et percutantes en temps réel, aux personnes et non aux appareils.
 
 Ce document présente les différents mécanismes que vous pouvez utiliser pour supprimer vos données d’identité dans Experience Platform et explique clairement comment les graphiques d’identités peuvent être affectés.
 
@@ -37,7 +37,7 @@ Les sections ci-dessous décrivent les mécanismes que vous pouvez utiliser pour
 
 ### Suppression d’une identité unique dans Privacy Service
 
-Privacy Service traite les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente, ou les effacer comme le stipulent les réglementations de confidentialité telles que le Règlement général sur la protection des données (RGPD) et le California Consumer Privacy Act (CCPA). Avec Privacy Service, vous pouvez envoyer des requêtes de traitement à l’aide de l’API ou de l’interface utilisateur. Lorsqu’Experience Platform reçoit une demande de suppression de la part de Privacy Service, Platform envoie une confirmation à Privacy Service pour confirmer que la demande a été reçue et que les données concernées ont été marquées pour suppression. La suppression de l’identité individuelle est basée sur l’espace de noms et/ou la valeur d’identifiant fournis. En outre, la suppression a lieu pour tous les sandbox associés à une organisation donnée. Pour plus d’informations, consultez le guide sur le [traitement des demandes d’accès à des informations personnelles dans Identiy Service](privacy.md).
+Privacy Service traite les demandes des clients en matière dʼaccès, d’opt-out de vente ou de suppression de leurs données personnelles conformément aux réglementations de confidentialité telles que le Règlement général sur la protection des données (RGPD) et le California Consumer Privacy Act (CCPA). Avec Privacy Service, vous pouvez envoyer des requêtes de traitement à l’aide de l’API ou de l’interface utilisateur. Lorsqu’Experience Platform reçoit une demande de suppression de la part de Privacy Service, Platform envoie une confirmation à Privacy Service pour confirmer que la demande a été reçue et que les données concernées ont été marquées pour suppression. La suppression de l’identité individuelle est basée sur l’espace de noms et/ou la valeur d’identifiant fournis. En outre, la suppression a lieu pour tous les sandbox associés à une organisation donnée. Pour plus d’informations, consultez le guide sur le [traitement des demandes d’accès à des informations personnelles dans Identiy Service](privacy.md).
 
 Le tableau ci-dessous fournit une répartition de la suppression d’identité unique dans Privacy Service :
 
