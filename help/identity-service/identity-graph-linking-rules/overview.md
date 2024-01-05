@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 20b8433cee719329bce562069c328adb906697a0
+source-git-commit: 07771956c22a3fee92bd76ae061b07e1e0f98b49
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '1040'
 ht-degree: 1%
 
 ---
@@ -69,12 +69,16 @@ Pour plus d’informations, lisez le document sur [algorithme d’optimisation d
 >
 >Les priorités des espaces de noms ne sont actuellement pas disponibles pour alpha.
 
-Vous pouvez utiliser la priorité d’espace de noms pour définir les espaces de noms les plus importants que les autres. La hiérarchie que vous définissez pour vos espaces de noms est ensuite utilisée pour définir les identités primaires et stocker les fragments de profil. Si les paramètres de priorité sont configurés, le paramètre d’identité principal sur le SDK Web ne sera plus utilisé pour déterminer les fragments de profil stockés.
+Vous pouvez utiliser la priorité d’espace de noms pour définir les espaces de noms les plus importants que les autres. La priorité que vous définissez pour vos espaces de noms est ensuite utilisée pour définir les identités principales, qui est l’identité qui stocke les fragments de profil (données d’attribut et d’événement) dans Real-time Customer Profile. Si les paramètres de priorité sont configurés, le paramètre d’identité principal sur le SDK Web ne sera plus utilisé pour déterminer les fragments de profil stockés.
 
 * Les limites et la priorité sont des configurations indépendantes. **not** se répercutent :
    * Limites est une configuration de graphique d’identités dans Identity Service.
    * La priorité est une configuration de fragment de profil sur Real-time Customer Profile.
    * La priorité est **not** affectent les barrières de sécurité du système de graphique d’identités.
+* **La priorité de l’espace de noms est une valeur numérique** affecté à un espace de noms indiquant son importance relative. Il s’agit d’une propriété d’un espace de noms.
+* **L’identité du Principal est l’identité par laquelle un fragment de profil est stocké.**. Un fragment de profil est un enregistrement de données qui stocke des informations sur un utilisateur spécifique : des attributs (généralement ingérés via des enregistrements CRM) ou des événements (généralement ingérés à partir d’événements d’expérience ou de données en ligne).
+* La priorité d’espace de noms détermine l’identité principale des événements d’expérience.
+   * Pour les enregistrements de profil, vous pouvez utiliser l’espace de travail des schémas de l’interface utilisateur de l’Experience Platform pour définir les champs d’identité, y compris l’identité principale. Lisez le guide sur [définition des champs d’identité dans l’interface utilisateur](../../xdm/ui/fields/identity.md) pour plus d’informations.
 
 >[!BEGINSHADEBOX]
 
