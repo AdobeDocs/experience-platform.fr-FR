@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestion des utilisateurs pour un profil de produit
 description: Ce document vous explique comment gérer les utilisateurs dʼun profil de produit dans lʼinterface utilisateur dʼAdobe Experience Platform.
 exl-id: 1a35f2e4-cb33-4625-92ec-98e615607a8b
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 100%
+source-wordcount: '228'
+ht-degree: 82%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 Pour attribuer ou supprimer des utilisateurs d’un profil de produits, ouvrez la page des détails du profil et accédez à l’onglet **[!UICONTROL Utilisateurs]**. Sélectionnez ensuite **[!UICONTROL Ajouter utilisateur]**.
 
-![add-user](../images/add-user.png)
+![La page des détails du profil de produit qui affiche les utilisateurs répertoriés dans la [!UICONTROL Utilisateurs] .](../images/add-user.png)
 
 La boîte de dialogue **[!UICONTROL Ajouter un utilisateur]** s’affiche. Le champ de recherche vous permet de rechercher des utilisateurs à ajouter par nom ou par adresse e-mail. Lorsque vous tapez, les utilisateurs correspondants s’affichent dans une fenêtre de saisie semi-automatique sous la zone de texte.
 
@@ -25,7 +25,11 @@ La boîte de dialogue **[!UICONTROL Ajouter un utilisateur]** s’affiche. Le ch
 
 Une fois que vous avez sélectionné un utilisateur, cliquez sur **[!UICONTROL Enregistrer]** pour l’ajouter au profil du produit.
 
-![save-user](../images/save-user.png)
+![Ajoutez des utilisateurs à la page du profil de produit pour mettre en évidence les détails de l’utilisateur.](../images/save-user.png)
+
+La vidéo suivante est destinée à vous aider à comprendre comment gérer les administrateurs d’un profil de produit.
+
+>[!VIDEO](https://video.tv.adobe.com/v/333860/?learn=on)
 
 ## Étapes suivantes
 

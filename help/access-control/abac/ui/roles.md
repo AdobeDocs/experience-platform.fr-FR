@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;ABAC
-title: 'Contrôle d’accès basé sur les attributs : création d’un rôle'
+title: 'Contrôle d’accès basé sur les attributs : créer un rôle'
 description: Ce document fournit des informations sur la gestion des rôles par le biais de l’interface Autorisations dans Adobe Experience Cloud.
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: d8f72bb5ae56daf5a41c763f821ca6306514bc48
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '531'
 ht-degree: 16%
 
 ---
@@ -20,7 +20,7 @@ Pour créer un nouveau rôle, sélectionnez le **[!UICONTROL Rôles]** dans la b
 
 ![flac-new-role](../../images/flac-ui/flac-new-role.png)
 
-Le **[!UICONTROL Création d’un rôle]** s’affiche, vous invitant à saisir un nom et une description facultative.
+La variable **[!UICONTROL Création d’un nouveau rôle]** s’affiche, vous invitant à saisir un nom et une description facultative.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Confirmer]**.
 
@@ -46,7 +46,11 @@ Le nouveau rôle a été créé avec succès et vous êtes redirigé vers la fon
 
 ![flac-role-saved](../../images/flac-ui/flac-role-saved.png)
 
-Reportez-vous aux sections de la section [gestion des autorisations pour un rôle](#manage-permissions-for-a-role) pour plus d’informations sur la gestion des autorisations de rôle une fois qu’elles ont été créées.
+Consultez les sections sur [gestion des autorisations pour un rôle](#manage-permissions-for-a-role) pour plus d’informations sur la gestion des autorisations de rôle une fois qu’elles ont été créées.
+
+La vidéo suivante est destinée à vous aider à comprendre comment créer un nouveau rôle et gérer les utilisateurs pour ce rôle.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## Dupliquer un rôle
 
@@ -58,11 +62,11 @@ Ensuite, sélectionnez **[!UICONTROL Dupliquer]** en haut à droite de l’écra
 
 ![flac-duplicate](../../images/flac-ui/flac-duplicate.png)
 
-Le **[!UICONTROL Duplication du rôle]** s’affiche, vous invitant à confirmer la duplication.
+La variable **[!UICONTROL Duplication du rôle]** s’affiche, vous invitant à confirmer la duplication.
 
 ![flac-duplicate-confirm](../../images/flac-ui/flac-duplicate-confirm.png)
 
-Ensuite, vous accédez à la page des détails du rôle dans laquelle vous pouvez modifier le nom et les autorisations du rôle. Les environnements Détails, Étiquettes et Sandbox sont dupliqués à partir du rôle précédent. Les utilisateurs doivent être ajoutés depuis l&#39;onglet Utilisateurs . Vous pouvez afficher la variable [gestion des autorisations pour un rôle](permissions.md) document pour en savoir plus sur l’ajout de détails, de libellés, d’environnements de test et d’utilisateurs à un rôle.
+Ensuite, vous accédez à la page des détails du rôle dans laquelle vous pouvez modifier le nom et les autorisations du rôle. Les environnements Détails, Étiquettes et Sandbox sont dupliqués à partir du rôle précédent. Les utilisateurs doivent être ajoutés depuis l&#39;onglet Utilisateurs . Vous pouvez afficher la [gestion des autorisations pour un rôle](permissions.md) document pour en savoir plus sur l’ajout de détails, de libellés, d’environnements de test et d’utilisateurs à un rôle.
 
 Cliquez sur la flèche gauche pour revenir au **[!UICONTROL Rôles]** .
 
@@ -72,13 +76,13 @@ Le nouveau rôle apparaîtra dans la liste de la fonction **[!UICONTROL Rôles]*
 
 ![flac-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
 
-## Suppression d’un rôle
+## Supprimer un rôle
 
-Sélectionnez les points de suspension (`…`) en regard du nom d’un rôle et une liste déroulante affiche les commandes permettant de modifier, supprimer ou dupliquer le rôle. Sélectionnez Supprimer dans la liste déroulante.
+Sélectionnez les points de suspension (`…`) en regard du nom d’un rôle, et une liste déroulante affiche les commandes permettant de modifier, supprimer ou dupliquer le rôle. Sélectionnez Supprimer dans la liste déroulante.
 
 ![flac-role-delete](../../images/flac-ui/flac-role-delete.png)
 
-Le **[!UICONTROL Suppression d’un rôle utilisateur]** s’affiche, vous invitant à confirmer la suppression.
+La variable **[!UICONTROL Suppression d’un rôle utilisateur]** s’affiche, vous invitant à confirmer la suppression.
 
 ![flac-confirm-role-delete](../../images/flac-ui/flac-confirm-role-delete.png)
 
