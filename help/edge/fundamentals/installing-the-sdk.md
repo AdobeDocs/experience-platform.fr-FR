@@ -1,13 +1,13 @@
 ---
 title: Installation du SDK Web de Adobe Experience Platform
 description: Découvrez comment installer le SDK Web Experience Platform.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: b1de7ca1-d0d2-4661-a273-a1acf29afcd5
+source-git-commit: a8b1aa87ecd85c530188e520db2f17136a63ae44
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '886'
 ht-degree: 26%
 
 ---
-
 
 # Installation du SDK Web {#installing-the-sdk}
 
@@ -68,6 +68,10 @@ Dans cet exemple, la fonction globale est renommée `mycustomname`, au lieu de `
 Ce code de base, en plus de créer une fonction globale, charge également le code supplémentaire contenu dans un fichier externe \(`alloy.js`\) hébergé sur un serveur. Par défaut, ce code est chargé de manière asynchrone pour permettre à votre page web d’être aussi performante que possible. Il s’agit de l’implémentation recommandée.
 
 ### Prise en charge d’Internet Explorer {#support-internet-explore}
+
+>[!IMPORTANT]
+>
+>Fin avril 2024, le SDK Web de Adobe Experience Platform supprimera la prise en charge de toutes les versions d’Internet Explorer.
 
 Ce SDK utilise des promesses, qui sont une méthode de communication de l’achèvement des tâches asynchrones. La variable [Promesse](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) La mise en oeuvre utilisée par le SDK est prise en charge en mode natif par tous les navigateurs cibles, à l’exception de [!DNL Internet Explorer]. Pour utiliser le SDK sur [!DNL Internet Explorer], vous devez `window.Promise` [polyfillé](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
