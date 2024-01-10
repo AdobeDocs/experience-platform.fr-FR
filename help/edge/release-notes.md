@@ -3,10 +3,10 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 8cec606849489ef1e8845254117d184d5dc3c70a
+source-git-commit: e46ac94a2328b045d7270b2498d6cb7ef5f0464b
 workflow-type: tm+mt
-source-wordcount: '1678'
-ht-degree: 100%
+source-wordcount: '1740'
+ht-degree: 96%
 
 ---
 
@@ -15,6 +15,14 @@ ht-degree: 100%
 
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.19.2 - jeudi 10 janvier 2024
+
+**Correctifs et améliorations**
+
+* Correction d’un problème en raison duquel les erreurs d’identité masquaient d’autres erreurs et transformaient les erreurs d’identité en avertissements.
+* Correction d’un problème en raison duquel le bas des appels de page n’était jamais envoyé lorsqu’un appel de haut de page avec renderDecisions défini sur false.
+* Correction d’un problème en raison duquel le SDK Web ne pouvait pas lire les identités inter-domaines en présence de plusieurs paramètres de chaîne de requête adobe_mc.
 
 ## Version 2.19.1 - 10 novembre 2023
 
