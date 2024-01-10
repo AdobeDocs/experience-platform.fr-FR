@@ -5,10 +5,10 @@ product: experience platform
 type: Documentation
 description: Découvrez les performances et les mécanismes de sécurisation appliqués par le système pour les données de profil et la segmentation, afin de garantir une utilisation optimale des fonctionnalités de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: c7537959b1cc53998acafbccaa2f39686afd9f15
+source-git-commit: 17aa9029dc83454133847352c21aa9ac68f23be8
 workflow-type: tm+mt
-source-wordcount: '2282'
-ht-degree: 64%
+source-wordcount: '2430'
+ht-degree: 61%
 
 ---
 
@@ -114,13 +114,27 @@ Les barrières de sécurité décrites dans cette section font référence au no
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Audiences par environnement de test | 4 000 | Protecteur des performances | Une organisation peut avoir plus de 4 000 audiences au total, à condition qu’il y ait moins de 4 000 audiences dans chaque environnement de test individuel. Toute tentative de création d’audiences supplémentaires peut affecter les performances du système. En savoir plus sur [création d&#39;audiences](/help/segmentation/ui/segment-builder.md) par le biais du créateur de segments. |
+| Audiences par environnement de test | 4 000 | Protecteur des performances | Une organisation peut avoir plus de 4 000 audiences au total, à condition qu’il y ait moins de 4 000 audiences dans chaque environnement de test individuel. Cela inclut les audiences par lots, par flux et en périphérie. Toute tentative de création d’audiences supplémentaires peut affecter les performances du système. En savoir plus sur [création d&#39;audiences](/help/segmentation/ui/segment-builder.md) par le biais du créateur de segments. |
 | Audiences Edge par environnement de test | 150 | Protecteur des performances | Une organisation peut avoir plus de 150 audiences de périphérie au total, à condition qu’il y ait moins de 150 audiences de périphérie dans chaque environnement de test individuel. Toute tentative de création d’audiences Edge supplémentaires peut avoir une incidence sur les performances du système. En savoir plus sur [audiences de périphérie](/help/segmentation/ui/edge-segmentation.md). |
-| Audiences par environnement de test en flux continu | 500 | Protecteur des performances | Une organisation peut avoir plus de 500 audiences en continu au total, à condition qu’il y ait moins de 500 audiences en continu dans chaque environnement de test individuel. Toute tentative de création d’audiences en continu supplémentaires peut affecter les performances du système. En savoir plus sur [audiences en continu](/help/segmentation/ui/streaming-segmentation.md). |
+| Débit Edge sur tous les environnements de test | 1 500 RPS | Protecteur des performances | La segmentation Edge prend en charge jusqu’à 1 500 événements entrants par seconde entrant dans Adobe Experience Platform Edge Network. La segmentation Edge peut prendre jusqu’à 350 millisecondes pour traiter un événement entrant après son entrée dans le réseau Edge Adobe Experience Platform. En savoir plus sur [audiences de périphérie](/help/segmentation/ui/edge-segmentation.md). |
+| Audiences par environnement de test en flux continu | 500 | Protecteur des performances | Une organisation peut avoir plus de 500 audiences en continu au total, à condition qu’il y ait moins de 500 audiences en continu dans chaque environnement de test individuel. Cela inclut les audiences en continu et les audiences de périphérie. Toute tentative de création d’audiences en continu supplémentaires peut affecter les performances du système. En savoir plus sur [audiences en continu](/help/segmentation/ui/streaming-segmentation.md). |
+| Débit en flux continu sur tous les environnements de test | 1 500 RPS | Protecteur des performances | La segmentation par flux prend en charge jusqu’à 1 500 événements entrants par seconde. La segmentation par flux peut prendre jusqu’à 5 minutes pour qualifier un profil pour l’appartenance à un segment. En savoir plus sur [audiences en continu](/help/segmentation/ui/streaming-segmentation.md). |
 | Audiences par environnement de test par lot | 4 000 | Protecteur des performances | Une organisation peut avoir plus de 4 000 audiences par lots au total, à condition qu’il y ait moins de 4 000 audiences par lots dans chaque environnement de test individuel. Toute tentative de création d’audiences par lots supplémentaires peut affecter les performances du système. |
 | Audiences du compte par environnement de test | 50 | Barrière de sécurité mise en place par le système | Vous pouvez créer un maximum de 50 audiences de compte dans un environnement de test. Une fois que vous avez atteint 50 audiences dans un environnement de test, la variable **[!UICONTROL Créer une audience]** Le contrôle est désactivé lors de la création d’une audience de compte. En savoir plus sur [audiences de compte](/help/segmentation/ui/account-audiences.md). |
 | Compositions publiées par environnement de test | 10 | Protecteur des performances | Un environnement de test peut contenir un maximum de 10 compositions publiées. En savoir plus sur [composition d’audiences dans le guide de l’interface utilisateur](/help/segmentation/ui/audience-composition.md). |
 | Taille maximale de l’audience | 30 % | Protecteur des performances | Le nombre maximal recommandé d’appartenance à une audience est de 30 % du nombre total de profils dans le système. La création d’audiences avec plus de 30 % des profils en tant que membres ou plusieurs audiences volumineuses est possible, mais aura une incidence sur les performances du système. |
+
+{style="table-layout:auto"}
+
+## Disponibilité attendue
+
+La section suivante décrit les **attendu** Disponibilité pour les audiences et stratégies de fusion dans les services en aval tels que les destinations Real-Time CDP :
+
+| Type de sandbox | Heure |
+| ------------ | ---- |
+| Environnements de test existants | 1 heure |
+| Nouveaux environnements de test | 2 heures |
+| Réinitialisation récente des environnements de test | 2 heures |
 
 {style="table-layout:auto"}
 
