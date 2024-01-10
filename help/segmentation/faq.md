@@ -2,10 +2,10 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: 696dad52af4f927969fac38f78341f4e3c8c6607
 workflow-type: tm+mt
-source-wordcount: '1935'
-ht-degree: 52%
+source-wordcount: '2714'
+ht-degree: 34%
 
 ---
 
@@ -27,11 +27,36 @@ Dans la version la plus récente de l’application, seules les audiences basée
 
 Oui, les audiences préconfigurées générées en externe sont prises en charge par le portail d’audience. Dans la version la plus récente de l’application, vous pouvez importer une audience générée en externe par le biais d’un fichier CSV. Dans une version ultérieure, vous pourrez ajouter des audiences par le biais de connecteurs source par lots ou en flux continu.
 
-### Puis-je associer des données d’audience générées en externe à un profil existant dans Platform ?
+### Quelles autorisations dois-je posséder pour charger des audiences générées en externe ?
 
-Oui, l’audience générée en externe sera fusionnée avec le profil existant dans Platform si les identifiants principaux correspondent. L’intégration des données peut prendre jusqu’à 24 heures. Si les données de profil n’existent pas déjà, un profil est créé lors de l’ingestion des données.
+Pour charger des audiences générées en externe, vous devez disposer des autorisations &quot;Gérer les audiences/segments&quot; et &quot;Gérer les jeux de données&quot;. Aucun contrôle spécifique basé sur les rôles n’est nécessaire pour charger des audiences générées en externe.
 
-## Puis-je utiliser une audience générée en externe pour créer d’autres audiences ?
+### Que se passe-t-il lorsque je charge une audience générée en externe ?
+
+Lorsque vous téléchargez une audience générée de l’extérieur, les éléments suivants sont créés :
+
+- Jeu de données
+   - Le jeu de données sera visible dans l’inventaire du jeu de données et le nom du jeu de données sera **same** comme nom de l’audience générée en externe que vous avez chargée.
+- Tâche par lots
+   - Une tâche par lot est **automatiquement** s’exécute lorsque vous chargez une audience générée de l’extérieur. Cela signifie que vous le faites **not** vous devez attendre que la tâche de segmentation quotidienne s’exécute afin d’activer l’audience générée en externe.
+- Schéma ad hoc
+   - A **new** Le schéma XDM sera créé pour être utilisé avec l’audience générée en externe. Les champs de ce schéma XDM peuvent être utilisés avec le jeu de données qui a également été créé.
+
+### Qu’est-ce qu’une audience générée en externe comprend et qu’advient-il de ces données lorsqu’elles sont importées dans Platform ?
+
+Lors du workflow d&#39;import d&#39;audience externe, vous devez indiquer la colonne du fichier CSV correspondant au **Identité du Principal**. Un exemple d’identité principale inclut une adresse électronique, un ECID ou un espace de noms d’identité personnalisée spécifique à l’organisation.
+
+Les données associées à cette colonne d’identité principale renseignent la variable **only** données jointes au profil. Si aucun profil existant ne correspond aux données de la colonne Identité principale, un nouveau profil est créé. Cependant, ce profil est essentiellement un profil orphelin, car **non** des attributs ou des événements d’expérience sont associés à ce profil.
+
+Toutes les autres données de l’audience générée en externe sont prises en compte. **attributs payload**. Ces attributs peuvent **only** être utilisé pour la personnalisation et l’enrichissement lors de l’activation ; et sont **not** joint à un profil. Ces attributs sont toutefois stockés dans le lac de données.
+
+Bien que l’audience générée en externe puisse être référencée lors de la création d’audiences à l’aide du créateur de segments, les attributs de profil individuels **cannot** à utiliser.
+
+### Puis-je réconcilier des données d’audience générées en externe avec un profil existant dans Platform ?
+
+Oui, l’audience générée en externe sera fusionnée avec le profil existant dans Platform si les identifiants principaux correspondent. La réconciliation des données peut prendre jusqu’à 24 heures. Si les données de profil n’existent pas déjà, un profil est créé lors de l’ingestion des données.
+
+### Puis-je utiliser une audience générée en externe pour créer d’autres audiences ?
 
 Oui, les audiences générées en externe apparaîtront dans l’inventaire des audiences. elles peuvent être utilisés lors de la création d’audiences dans le [Créateur de segments](./ui/segment-builder.md).
 
@@ -45,13 +70,33 @@ Cependant, lorsque vous mappez vos audiences vers des destinations par lots ou b
 
 Pour en savoir plus sur cette fonctionnalité, consultez le guide de l’[activation des données d’audience vers des destinations d’exportation de profils par lots](../destinations/ui/activate-batch-profile-destinations.md#mapping).
 
-### Puis-je activer les audiences générées en externe dans Adobe Journey Optimizer ?
+### Existe-t-il une stratégie de fusion spécifique pour les audiences générées en externe ?
 
-À ce stade, non. Cette fonctionnalité sera disponible dans un avenir proche.
+La stratégie de fusion par défaut propre à l’organisation est automatiquement appliquée lors du téléchargement d’audiences générées en externe. Vous pouvez toutefois modifier la stratégie de fusion appliquée à l’audience générée en externe au cours du workflow d’import d’audience.
+
+### Où puis-je activer les audiences générées en externe vers ?
+
+Une audience générée en externe peut être mappée à n’importe quelle destination RTCDP et peut être utilisée dans des campagnes Adobe Journey Optimizer.
+
+### Dans combien de temps les audiences générées en externe sont-elles prêtes à être activées ?
+
+Si cette option est activée vers une destination de diffusion en continu, les données de l’audience générée en externe sont disponibles dans les deux heures.
+
+S’il est activé sur une destination par lot, les données de l’audience générée en externe seront synchronisées avec la tâche de segmentation de 24 heures suivante.
 
 ### Puis-je supprimer une audience générée en externe ?
 
-À ce stade, non. Comme solution de contournement, désactivez ou archivez l’audience. Notez que les profils **restent** disponibles dans les applications en aval. La prise en charge de la suppression des audiences générées en externe sera assurée dans une version ultérieure.
+À ce stade, vous ne pouvez désactiver qu’une audience générée de l’extérieur. Notez que les profils **restent** disponibles dans les applications en aval. La prise en charge de la suppression des audiences générées en externe sera assurée dans une version ultérieure.
+
+### Que dois-je faire si j’ai téléchargé accidentellement une audience générée en externe ?
+
+Si vous avez accidentellement chargé une audience générée en externe et que vous souhaitez supprimer les données, vous pouvez effacer les profils associés à l’audience en chargeant un fichier CSV avec une ligne et aucune donnée.
+
+### Combien de temps durent les audiences générées en externe ?
+
+L’expiration actuelle des données pour les audiences générées en externe est la suivante : **30 jours**. Cette expiration de données a été choisie pour réduire la quantité de données excédentaires stockées au sein de votre organisation.
+
+Une fois la période d’expiration des données écoulée, le jeu de données associé sera toujours visible dans l’inventaire des jeux de données, mais vous pourrez **not** être en mesure d’activer l’audience et le nombre de profils s’affichera comme nul.
 
 ### Que représentent les différents états du cycle de vie ?
 
@@ -61,7 +106,7 @@ Le graphique suivant explique les différents états du cycle de vie, ce qu’il
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Brouillon | Une audience dans le **Version préliminaire** state est une audience qui est encore en cours de développement et qui n’est pas encore prête à être utilisée dans d’autres services. | Oui, mais peut être caché. | Non | Oui | Peuvent être importées ou mises à jour pendant le processus d’affinage. | Peuvent être évaluées afin d’obtenir des comptes de publication précis. | Oui, mais non recommandé. |
 | Publié | Une audience dans le **Publié** state est une audience prête à être utilisée sur tous les services en aval. | Oui | Oui | Oui | Peut être importé ou mis à jour. | Évalués à l’aide de la segmentation par lots, par flux ou par périphérie. | Oui |
-| Inactif | Une audience dans le **Inactif** state est une audience qui n’est actuellement pas utilisée. Il existe toujours dans Platform, mais il le sera **not** être utilisable jusqu’à ce qu’il soit marqué comme brouillon ou publié. | Non, mais peut être affiché. | Non | Non | Non mise à jour plus longue. | N’est plus évalué ou mis à jour par Platform. | Oui |
+| Inactif | Une audience dans le **Inactif** state est une audience qui n’est actuellement pas utilisée. Il existe toujours dans Platform, mais il le sera **not** être utilisable jusqu’à ce qu’il soit marqué comme brouillon ou publié. | Non, mais peut être affiché. | Non | Non | N’est plus mis à jour. | N’est plus évalué ou mis à jour par Platform. | Oui |
 | Supprimé | Une audience dans le **Supprimé** state est une audience qui a été supprimée. L’exécution de la suppression des données peut prendre jusqu’à quelques minutes. | Non | Non | Non | Les données sous-jacentes sont supprimées. | Aucune évaluation ou exécution des données n’a lieu une fois la suppression terminée. | Non |
 
 ### Comment le portail d’audience et la composition d’audience interagiront-ils avec les données du partenaire Real-Time CDP ?
@@ -124,13 +169,13 @@ La section suivante répertorie les questions relatives à la composition de l�
 
 La composition de l’audience et le créateur de segments ont des rôles importants dans la création d’audiences dans Platform.
 
-Le créateur de segments est plus adapté à l’audience **création** (pour créer une audience à partir de zéro), tandis que la composition de l’audience est plus adaptée à l’audience **traitement** (pour créer de nouvelles audiences basées sur une audience existante).
+Le créateur de segments est plus adapté à l’audience **création** (pour créer une audience à partir de zéro), tandis que la composition de l’audience est plus adaptée à l’audience **traitement et personnalisation** (pour créer de nouvelles audiences basées sur une audience existante).
 
 Le tableau suivant illustre la différence entre les deux services :
 
 | Créateur de segments | Composition de l’audience |
 | --------------- | -------------------- |
-| <ul><li>Génération d’audiences à un seul niveau</li><li>Crée les blocs de base d’audiences à partir de données de profil, de séries temporelles et multi-entités.</li><li>Utilisé pour créer **one** audience</li></ul> | <ul><li>Génération d’audiences à plusieurs étapes, à l’aide d’opérations basées sur des ensembles</li><li>Utilise les audiences créées par le créateur de segments et applique les options d’enrichissement de données telles que le classement des attributs de profil</li><li>Utilisé pour créer **multiple** audiences à la fois</li></ul> |
+| <ul><li>Génération d’audiences à un seul niveau</li><li>Crée les blocs de base d’audiences à partir de données de profil, de séries temporelles et multi-entités.</li><li>Utilisé pour créer **one** audience</li></ul> | <ul><li>Génération d’audiences à plusieurs étapes, à l’aide d’opérations basées sur des ensembles</li><li>Utilise les audiences créées par le créateur de segments et applique les options d’enrichissement de données telles que le classement des attributs de profil et la division en sous-audiences</li><li>Utilisé pour créer **multiple** audiences à la fois</li></ul> |
 
 Pour en savoir plus sur le créateur de segments, veuillez lire le [Guide du créateur de segments](./ui/segment-builder.md). Pour en savoir plus sur la composition de l’audience, veuillez lire le [Guide sur la composition de l’audience](./ui/audience-composition.md).
 
@@ -152,11 +197,35 @@ Le placement du composant de composition suit une structure rigide comme suit :
 
 1. Vous commencez **toujours** par le bloc [!UICONTROL Audience] pour sélectionner votre activité de départ. Vous pouvez avoir un maximum d’**un** bloc [!UICONTROL Audience].
 2. Vous pouvez éventuellement ajouter un bloc [!UICONTROL Exclure] qui suit le bloc [!UICONTROL Audience].
-3. Vous pouvez éventuellement ajouter un bloc [!UICONTROL Enrichir] qui suit le bloc [!UICONTROL Exclure].
+3. Vous pouvez éventuellement ajouter une [!UICONTROL Enrichir] qui suit le bloc [!UICONTROL Exclure] bloque. Vous pouvez uniquement utiliser **one** [!UICONTROL Enrichir] par composition.
 4. Vous pouvez éventuellement ajouter un bloc [!UICONTROL Classer] ou [!UICONTROL Partager]. Vous pouvez **uniquement** avoir l’un de ces blocs par composition.
 5. Vous terminez **toujours** par un bloc [!UICONTROL Enregistrer] pour enregistrer votre audience.
 
+En outre, les restrictions suivantes(?) appliquer lors de l’utilisation de ces blocs :
+
+- Bloc de partage
+   - Ce bloc ne prend en charge que **Chaîne** types de données. Le bloc de partage fonctionne **not** prend en charge le type de données date ou booléen.
+   - En outre, ce bloc fait **not** prendre en charge les attributs d’enrichissement.
+- Exclure le bloc
+   - Ce bloc fait ce qui suit : **not** prend en charge le type de données date ou booléen.
+- Bloc de classement
+   - Ce bloc fait ce qui suit : **not** prendre en charge les attributs d’enrichissement.
+
 Pour plus d’informations sur l’utilisation de la composition de l’audience, lisez le [Guide de l’interface utilisateur de la composition d’audience](./ui/audience-composition.md).
+
+### Quand les audiences sont-elles créées à l’aide de la composition de l’audience enregistrée et évaluée ?
+
+Les audiences sont automatiquement enregistrées lors de leur création dans la composition de l’audience. L’heure de création de l’audience sera la première fois que cet enregistrement automatique se produit.
+
+Une fois l’audience créée, l’évaluation peut prendre jusqu’à 24 heures.
+
+### Quand puis-je utiliser l’audience que j’ai créée ?
+
+L’audience créée dans la composition de l’audience **immédiatement** s’affichent dans Audience Portal. Toutefois, pour l’utiliser dans Adobe Journey Optimizer, vous devez attendre au moins 24 heures après l’évaluation.
+
+### Les tâches d’évaluation sont-elles visibles dans la section de surveillance ?
+
+Actuellement, les tâches d’évaluation sont **not** s’affichaient dans l’interface utilisateur de surveillance.
 
 ### Puis-je utiliser une composition d’audience dans une autre composition ?
 
@@ -164,7 +233,11 @@ Non, les audiences créées à l’aide de la composition de l’audience **ne p
 
 ### Comment le partage fonctionne-t-il dans la composition de l’audience ?
 
-Le partage de l’audience vous permet de créer davantage de sous-ensembles de votre audience sous la forme de groupes plus petits. Ce partage force l’exclusivité mutuelle entre les groupes. Cela signifie que si un enregistrement répond aux critères de plusieurs chemins de partage, le **premier** chemin à partir de la gauche lui sera attribué et **pas** l’un des autres chemins.
+Le fractionnement de l’audience vous permet de sous-définir davantage votre audience en groupes plus petits.
+
+En se divisant par attribut, il existe une exclusivité mutuelle entre les groupes. Cela signifie que si un enregistrement répond aux critères de plusieurs chemins de partage, le **premier** chemin à partir de la gauche lui sera attribué et **pas** l’un des autres chemins.
+
+Lors d’une division par pourcentage, les divisions sont **de manière aléatoire** terminé. Cela signifie que les profils seront affectés de manière aléatoire à chaque chemin d’accès. La division est **not** persistant, de sorte que le profil puisse se trouver dans une sous-audience différente sur chaque évaluation.
 
 Pour plus d’informations sur le bloc Partage, lisez le [Guide de l’interface utilisateur de composition d’audience](./ui/audience-composition.md#split).
 

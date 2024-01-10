@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
 description: La Composition d’audience dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 820ba6c9cedcb85db7ff9bc199a67e56ee628c93
+source-git-commit: 5262b5e894cc6bfa2db79afcda8bfda4b496f7d5
 workflow-type: tm+mt
-source-wordcount: '1780'
-ht-degree: 99%
+source-wordcount: '1789'
+ht-degree: 97%
 
 ---
 
@@ -28,7 +28,7 @@ La fenêtre contextuelle **[!UICONTROL Propriétés de la composition]** s’aff
 
 >[!NOTE]
 >
->Si vous **ne donnez pas** de titre à votre composition, celle-ci aura le titre Composition, suivi de la date et de l’heure de création par défaut.
+>Si vous **not** Si vous donnez un titre à votre composition, celle-ci aura le titre &quot;Composition&quot; suivi de la date et de l’heure de création par défaut. De plus, chaque composition **must** ont son propre nom unique.
 
 Après avoir mis à jour les détails de votre composition, sélectionnez **[!UICONTROL Enregistrer]** pour confirmer ces mises à jour. La zone de travail de composition de l’audience réapparaît.
 
@@ -36,7 +36,7 @@ La zone de travail de composition de l’audience se compose de quatre types de
 
 ## [!UICONTROL Audience] {#audience-block}
 
-Le type de bloc **[!UICONTROL Audience]** permet d’ajouter les sous-audiences de votre choix pour composer votre nouvelle audience plus grande. Par défaut, un bloc **[!UICONTROL Audience]** est inclus dans la partie supérieure du canevas de composition.
+Le type de bloc **[!UICONTROL Audience]** permet d’ajouter les sous-audiences de votre choix pour composer votre nouvelle audience plus grande. Par défaut, un bloc **[!UICONTROL Audience]** est inclus dans la partie supérieure de la zone de travail de composition.
 
 Lorsque vous sélectionnez le bloc **[!UICONTROL Audience]**, le rail de droite affiche des commandes d’étiquetage de l’audience, d’ajout d’audiences au bloc et de création de règles personnalisées pour le bloc d’audience.
 
