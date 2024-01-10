@@ -2,16 +2,16 @@
 description: Découvrez comment configurer les attributs de l’interface utilisateur, tels que le lien de documentation, la catégorie de carte de destination, ainsi que le type et la fréquence de connexion à la destination, pour les destinations créées avec Destination SDK.
 title: Attributs de l’interface utilisateur
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 995e464ca43e0738c16dd4e0ec928d27e5a8b029
 workflow-type: tm+mt
-source-wordcount: '755'
-ht-degree: 99%
+source-wordcount: '800'
+ht-degree: 85%
 
 ---
 
 # Attributs de l’interface utilisateur
 
-Les attributs de l’interface utilisateur définissent les éléments visuels qu’Adobe doit afficher pour votre carte de destination dans l’interface utilisateur d’Adobe Experience Platform, tels que le logo de la plateforme de destination, un lien vers la page de documentation, une description de destination et sa catégorie et son type.
+Les attributs de l’interface utilisateur définissent les éléments visuels que l’Adobe doit afficher pour votre carte de destination dans l’interface utilisateur de Adobe Experience Platform, tels qu’un logo, un lien vers la page de documentation, une description de destination et sa catégorie et son type.
 
 Pour comprendre la place de ce composant dans une intégration créée avec Destination SDK, consultez le diagramme de la documentation [Options de configuration](../configuration-options.md) ou consultez les pages de vue d’ensemble de la configuration de destination suivantes :
 
@@ -21,10 +21,10 @@ Pour comprendre la place de ce composant dans une intégration créée avec Dest
 Pendant la [création d’une destination](../../authoring-api/destination-configuration/create-destination-configuration.md) avec Destination SDK, la section `uiAttributes` définit les propriétés visuelles suivantes de votre carte de destination :
 
 * URL de votre page de documentation de destination dans le [catalogue de destination](../../../catalog/overview.md).
-* URL dans laquelle vous avez hébergé l’icône à afficher dans la carte du catalogue des destinations.
 * La catégorie sous laquelle la destination sera visible dans l’interface utilisateur de Platform.
 * Fréquence d’exportation des données pour la destination.
 * Type de connexion de destination, tel qu’Amazon S3, Azure Blob, etc.
+* URL dans laquelle vous avez hébergé l’icône à afficher dans la carte du catalogue des destinations.
 
 Vous pouvez configurer les attributs de l’interface utilisateur via le point d’entrée `/authoring/destinations`. Pour obtenir des exemples d’appels API détaillés dans lesquels vous pouvez configurer les composants affichés sur cette page, consultez les pages de référence de l’API suivantes.
 
@@ -82,14 +82,6 @@ Les utilisateurs peuvent voir la liste des catégories de destination sur le cô
 
 ![Image de l’interface utilisateur de montrant l’emplacement du lien vers l’emplacement de la catégorie.](../../assets/functionality/destination-configuration/ui-attributes-category.png)
 
-<!-- ### `iconUrl` {#icon-url}
-
-`iconUrl` is a string parameter that refers to the URL where you hosted the icon to be displayed in the destinations catalog card. For private custom integrations, this is not required. For productized configurations, you need to share an icon with the Adobe team when you [submit the destination for review](../../guides/submit-destination.md#logo).
-
-Users can see the icon on your destination card, as shown in the image below.
-
-![UI image showing the icon location.](../../assets/functionality/destination-configuration/ui-attributes-icon.png) -->
-
 ### `connectionType` {#connection-type}
 
 `connectionType` est un paramètre de chaîne qui fait référence au type de connexion en fonction de la destination. Valeurs prises en charge : <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul>
@@ -114,9 +106,17 @@ Pour ce faire, vous pouvez utiliser le paramètre `isBeta: "true"` dans la secti
 
 ![Image de l’interface utilisateur montrant une carte de destination marquée comme bêta.](../../assets/functionality/destination-configuration/ui-attributes-isbeta.png)
 
+### `icon` {#icon}
+
+Vous pouvez ajouter une icône de logo à votre destination, comme illustré dans l’image ci-dessous.
+
+![Image de l’interface utilisateur indiquant l’emplacement de l’icône.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
+
+Pour ajouter un logo à votre carte de destination, vous devez partager l’image de votre choix avec l’équipe d’Adobe lorsque vous [envoyer la destination pour révision ;](../../guides/submit-destination.md#logo).
+
 ## Étapes suivantes {#next-steps}
 
-Vous êtes arrivé au bout de cet article. À présent, vous devriez mieux comprendre quels attributs d’interface utilisateur vous pouvez configurer pour la destination et où les utilisateurs les verront dans l’interface utilisateur de Platform.
+Après avoir lu cet article, vous devriez mieux comprendre quels attributs d’interface utilisateur vous pouvez configurer pour votre destination et où les utilisateurs les verront dans l’interface utilisateur de Platform.
 
 Pour en savoir plus sur les autres composants de destination, consultez les articles suivants :
 
