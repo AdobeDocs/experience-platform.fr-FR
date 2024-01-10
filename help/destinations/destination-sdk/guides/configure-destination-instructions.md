@@ -2,10 +2,10 @@
 description: Cette page répertorie et décrit les étapes de configuration d’une destination de diffusion en continu à l’aide de Destination SDK.
 title: Utiliser Destination SDK pour configurer une destination de diffusion en continu
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 8f430fa3949c19c22732ff941e8c9b07adb37e1f
+source-git-commit: 52be44ece950ee57a66a13ab7962907b2b7c0fb1
 workflow-type: tm+mt
-source-wordcount: '818'
-ht-degree: 64%
+source-wordcount: '865'
+ht-degree: 58%
 
 ---
 
@@ -17,7 +17,7 @@ Cette page décrit comment utiliser les informations dans la section [Options de
 
 ## Conditions préalables {#prerequisites}
 
-Avant dʼeffectuer les étapes illustrées ci-dessous, consultez la page [Prise en main de Destination SDK](../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification Adobe I/O nécessaires et d’autres conditions préalables requises pour utiliser les API Destination SDK. Cela suppose que vous avez rempli les conditions préalables au partenariat et à l’autorisation et que vous êtes prêt à commencer à développer votre destination.
+Avant de passer aux étapes illustrées ci-dessous, veuillez lire la section [Prise en main de Destination SDK](../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification d’Adobe I/O nécessaires et d’autres conditions préalables requises pour utiliser les API Destination SDK. Cela suppose que vous avez rempli les conditions préalables au partenariat et à l’autorisation et que vous êtes prêt à commencer à développer votre destination.
 
 ## Étapes à suivre pour utiliser les options de configuration de Destination SDK afin de configurer votre destination. {#steps}
 
@@ -264,6 +264,10 @@ Si vous utilisez une configuration de métadonnées d’audience, vous devez la 
 ## Étape 5 : configurer l’authentification {#set-up-authentication}
 
 Selon que vous spécifiez `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `"authenticationRule": "PLATFORM_AUTHENTICATION"` dans la configuration de destination ci-dessus, vous pouvez configurer l’authentification pour votre destination à l’aide du point d’entrée `/destination` ou `/credentials`.
+
+>[!NOTE]
+>
+>`CUSTOMER_AUTHENTICATION` est la plus courante des deux règles d’authentification. Elle est à utiliser si vous demandez aux utilisateurs de fournir une forme d’authentification à votre destination avant de pouvoir configurer une connexion et exporter des données.
 
 Si vous avez sélectionné `"authenticationRule": "CUSTOMER_AUTHENTICATION"` dans la configuration de destination et votre destination prend en charge la méthode d’authentification OAuth 2, lisez [Authentification OAuth 2](../functionality/destination-configuration/oauth2-authorization.md).
 
