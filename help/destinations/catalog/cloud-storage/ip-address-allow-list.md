@@ -3,10 +3,10 @@ title: Destinations SFTP de liste autorisée d’adresses IP
 type: Documentation
 description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée afin d’exporter en toute sécurité des données d’Experience Platform vers votre serveur SFTP.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 3d870975593313062d796601f0e19a0a3aec7854
+source-git-commit: 52186e03ba2a9d8b105d01ebfcd9be7666bfb6ff
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 17%
+source-wordcount: '189'
+ht-degree: 8%
 
 ---
 
@@ -33,9 +33,17 @@ Adobe recommande d’ajouter les plages d’adresses IP suivantes à une liste a
 
 * `52.252.71.64/29`
 
+## Clients canadiens
+
+* `20.220.135.16/29`
+
 ## Clients EMEA
 
 * `51.137.8.208/29`
+
+## Clients britanniques
+
+* `20.26.133.96/29`
 
 ## Clients APAC
 
