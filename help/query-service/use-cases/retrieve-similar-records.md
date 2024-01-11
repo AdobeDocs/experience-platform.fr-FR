@@ -1,14 +1,15 @@
 ---
 title: Exemple de fonction Lambda - Récupération d’enregistrements similaires
 description: Découvrez comment identifier et récupérer des enregistrements similaires ou connexes d’un ou de plusieurs jeux de données en fonction d’une mesure de similarité et d’un seuil de similarité. Ce workflow peut mettre en évidence des relations ou des chevauchements significatifs entre des jeux de données disparates.
-source-git-commit: 55af6c8de72e9b60eb9423dda568681e7c84245f
+exl-id: 4810326a-a613-4e6a-9593-123a14927214
+source-git-commit: 20624b916bcb3c17e39a402d9d9df87d0585d4b8
 workflow-type: tm+mt
 source-wordcount: '4011'
 ht-degree: 3%
 
 ---
 
-# Exemple de fonction Lambda : récupération d’enregistrements similaires
+# Exemple de fonction Lambda : Récupération d’enregistrements similaires
 
 Résolvez plusieurs cas d’utilisation courants en utilisant les fonctions lambda de Data Distiller pour identifier et récupérer des enregistrements similaires ou associés d’un ou de plusieurs jeux de données. Vous pouvez utiliser ce guide pour identifier les produits provenant de différents jeux de données présentant une similarité significative de leurs caractéristiques ou attributs. La méthodologie de ce document fournit des solutions pour : déduplication des données, liaison d’enregistrements, systèmes de recommandation, récupération d’informations et analyse de texte, entre autres.
 

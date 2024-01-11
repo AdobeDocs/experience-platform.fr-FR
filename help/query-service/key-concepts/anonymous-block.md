@@ -2,10 +2,10 @@
 title: Bloc anonyme dans Query Service
 description: Le bloc anonyme est une syntaxe SQL prise en charge par Adobe Experience Platform Query Service, qui permet d’exécuter efficacement une séquence de requêtes.
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: b7de5d3b2ceba27f5e86d48078be484dcb6f7c4b
+source-git-commit: 9193ba821409806cd7b4667c5de73a0cf2660c66
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 74%
+source-wordcount: '616'
+ht-degree: 73%
 
 ---
 
@@ -14,10 +14,6 @@ ht-degree: 74%
 Adobe Experience Platform Query Service prend en charge les blocs anonymes. La fonction de bloc anonyme vous permet d’enchaîner une ou plusieurs instructions SQL exécutées de manière séquentielle. Les blocs anonymes permettent également de gérer les exceptions.
 
 La fonction de bloc anonyme est un moyen efficace d’effectuer une séquence d’opérations ou de requêtes. La chaîne de requêtes au sein du bloc peut être enregistrée comme modèle et planifiée pour s’exécuter à un moment ou à un intervalle spécifique. Ces requêtes peuvent être utilisées pour écrire et ajouter des données afin de créer un jeu de données. Elles sont généralement utilisées avec une dépendance.
-
->[!IMPORTANT]
->
->La planification des requêtes à l’aide de blocs anonymes n’est actuellement possible que via l’API [!DNL Query Service]. Consultez la documentation pour accéder à des [instructions complètes sur la planification de requêtes via l’API](../api/scheduled-queries.md).
 
 Le tableau ci-dessous présente la répartition des principales sections du bloc : exécution et gestion des exceptions. Les sections sont définies par les mots-clés `BEGIN`, `END` et `EXCEPTION`.
 
