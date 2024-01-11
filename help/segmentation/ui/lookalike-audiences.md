@@ -2,11 +2,10 @@
 solution: Experience Platform
 title: Audiences similaires
 description: Découvrez comment cibler de nouvelles audiences à forte valeur ajoutée dans Adobe Experience Platform à l’aide d’audiences look-alike.
-badgeLimitedAvailability: label="Disponibilité limitée" type=Caution
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: fe2bb709a7ee56323492fed381c447e6a79fd5f8
 workflow-type: tm+mt
-source-wordcount: '2121'
+source-wordcount: '2212'
 ht-degree: 10%
 
 ---
@@ -15,7 +14,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->Notez que les insights semblables et les audiences semblables sont dans **disponibilité limitée**.
+>Les insights semblables et les audiences semblables ne sont disponibles que dans la variable **Modification B2C**.
 
 Dans Adobe Experience Platform, les audiences look-alike fournissent des insights intelligents sur chacune de vos audiences, en exploitant les insights basés sur l’apprentissage automatique pour identifier et cibler les clients à forte valeur ajoutée dans vos campagnes marketing.
 
@@ -29,6 +28,15 @@ Avant de commencer avec les audiences look-alike, veillez à comprendre les conc
 - **Modèle analogue**: un modèle analogue est un modèle d’apprentissage automatique formé sur chaque audience de base éligible sans aucune entrée client. Chaque modèle analogue crée des facteurs d’influence et des graphiques de similarité. Un modèle analogue fait **not** on obtient un score.
 - **Audience analogue**: une audience analogue est l’audience créée lorsqu’un modèle analogue avec un seuil de similarité sélectionné est appliqué à l’audience de base. Vous pouvez créer plusieurs audiences look-alike à l’aide du même modèle look-alike. L&#39;audience analogue est ce qui obtient un score.
 - **Taille totale de l’audience adressable**: la taille totale de l’audience adressable est le nombre total de profils au cours des 30 derniers jours, moins la population de base de l’audience au cours des 30 derniers jours. Par exemple, si un client a 10 millions de profils au cours des 30 derniers jours et que l’audience de base a 1 million de profils au cours des 30 derniers jours, la taille totale de l’audience adressable est de 9 millions de profils.
+
+## Admissibilité {#eligibility}
+
+Pour utiliser des insights semblables, l’audience de base **must** répondent aux critères d&#39;éligibilité suivants :
+
+- L’audience de base **must** être créé dans Platform.
+   - Les audiences générées de l’extérieur sont **not** éligible aux insights semblables.
+- L’audience de base **must** se trouve sur la stratégie de fusion par défaut.
+- L’audience de base **must** n’utilisez pas de champs qui sont limités par la gouvernance des données.
 
 ## Détails du modèle analogue {#details}
 
@@ -177,13 +185,19 @@ La page Détails de l’audience s’affiche. Pour plus d’informations sur cet
 
 ## Exclusion des champs de données de la modélisation analogue {#exclude}
 
+>[!IMPORTANT]
+>
+> **You** sont chargés de s’assurer que les données, y compris les données sensibles, sont correctement étiquetées et que les stratégies d’utilisation des données ont été définies et activées pour se conformer aux obligations légales et réglementaires en vertu desquelles vous opérez. Vous devez également savoir que les champs de données ou les appartenances aux segments qui sont **not** la corrélation directe avec les champs de données généralement associés à des types de données sensibles ou protégés peut être une source de biais potentiel. **You** sont chargés d’analyser vos données afin d’identifier, d’étiqueter et d’appliquer les stratégies d’utilisation des données appropriées à vos données, y compris les champs de données susceptibles de représenter des types de données sensibles ou protégés et qui doivent être exclus de la modélisation.
+
 Les audiences semblables peuvent être configurées pour exclure les champs de données qui sont restreints à l’action marketing &quot;Science des données&quot; en appliquant les libellés et stratégies d’utilisation des données appropriés. Les données étiquetées comme étant interdites d’utilisation pour la science des données seront supprimées lors de la formation d’un modèle d’audience analogue et de la génération d’une audience analogue à partir du modèle formé. 
+
+>[!NOTE]
+>
+>Les modifications apportées aux libellés d’utilisation des données sur l’audience de base peuvent prendre jusqu’à 48 heures pour prendre effet.
 
 L’étiquette &quot;C9&quot; standard peut être utilisée pour étiqueter les données qui ne doivent pas être utilisées pour la science des données et qui peuvent être appliquées en activant la politique standard &quot;Limiter la science des données&quot;. Vous pouvez également créer des stratégies supplémentaires pour limiter les données aux autres étiquettes, y compris les étiquettes sensibles, à partir de l’utilisation de la science des données. Pour plus d’informations sur la gestion des stratégies d’utilisation des données, consultez la section [Guide d’utilisation des stratégies de données](../../data-governance/policies/user-guide.md). Pour plus d’informations sur la gestion des libellés d’utilisation des données, consultez la section [Guide d’utilisation des libellés d’utilisation des données](../../data-governance/labels/user-guide.md).
 
 Par défaut, le processus de modélisation pour les audiences look-alike exclut **any** champ, jeu de données ou audience en fonction de la politique de confidentialité activée pour votre entreprise. Si l’audience de base ne comporte pas de libellés de contrat, le processus de modélisation exclura **any** champ, jeu de données ou audience en fonction de la politique de confidentialité activée pour votre entreprise.
-
-Veuillez noter que **you** sont chargés de s’assurer que les données, y compris les données sensibles, sont correctement étiquetées et que les stratégies d’utilisation des données ont été définies et activées pour se conformer aux obligations légales et réglementaires en vertu desquelles vous opérez. Vous devez également savoir que les champs de données ou les appartenances aux segments qui sont **not** la corrélation directe avec les champs de données généralement associés à des types de données sensibles ou protégés peut être une source de biais potentiel. **You** sont chargés d’analyser vos données afin d’identifier, d’étiqueter et d’appliquer les stratégies d’utilisation des données appropriées à vos données, y compris les champs de données susceptibles de représenter des types de données sensibles ou protégés et qui doivent être exclus de la modélisation.
 
 ## Étapes suivantes
 
