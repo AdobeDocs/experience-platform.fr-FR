@@ -4,23 +4,24 @@ solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Guide de Real-Time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
-source-git-commit: c76a6267230599dfab905524e613f9721b928211
+source-git-commit: 19bde5079c8f1a916bec775b64fa743e80e4e1b1
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 74%
+source-wordcount: '287'
+ht-degree: 71%
 
 ---
 
 
 # Aide sur Real-Time Customer Data Platform {#rtcdp}
 
-* [Présentation de Real-Time CDP](overview.md)
-* [Présentation de l’édition B2B de Real-Time CDP](b2b-overview.md)
+* [Documentation Real-Time CDP](home.md)
 * Prise en main {#intro}
    * Real-Time CDP {#rtcdp-intro}
+      * [Présentation de Real-Time CDP](overview.md)
       * [Commencer avec Real-Time CDP](get-started.md)
       * [Page d’accueil](home-page-dashboards.md)
    * Édition B2B de Real-Time CDP {#rtcdpb2b-intro}
+      * [Présentation de l’édition B2B de Real-Time CDP](b2b-overview.md)
       * [Exemple de cas d’utilisation](./b2b-use-case.md)
       * [Tutoriel de bout en bout](./b2b-tutorial.md)
       * [Barrières de sécurité de l’édition B2B de Real-Time CDP](b2b-guardrails.md)
@@ -37,12 +38,12 @@ ht-degree: 74%
 * Destinations {#destinations}
    * [Présentation des destinations](destinations/overview.md)
    * [Destinations dans l’édition B2B de Real-Time CDP](destinations/b2b.md)
-* Mécanismes de sécurisation {#guardrails}
+* Barrières de sécurité {#guardrails}
    * [Présentation des barrières de sécurité Real-Time CDP](guardrails/overview.md)
-   * [Barrières de sécurité pour l’ingestion de données](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [Barrières de sécurité pour l’ingestion des données](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
    * [Barrières de sécurité pour les [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
    * [Barrières de sécurité pour [!DNL Real-Time Customer Profile] données et segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=fr){target="_blank"}
-   * [Mécanismes de sécurisation pour les  [!DNL Identity Service] données](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [Barrières de sécurité pour [!DNL Identity Service] data](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
    * [Barrières de sécurité pour [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
    * [Barrières de sécurité pour l’activation des données par le biais des destinations](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * Identités {#identity}
@@ -73,11 +74,12 @@ ht-degree: 74%
    * [Présentation des sources](sources/sources-overview.md)
    * [Sources dans l’édition B2B de Real-Time CDP](sources/b2b.md)
 * Cas d’utilisation {#use-cases}
+   * [Présentation des cas pratiques pris en charge](/help/rtcdp/use-case-guides/overview.md)
    * Personnalisation, statistiques et engagement {#personalization-insights-engagement}
       * [Réengager intelligemment vos clients](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
    * Acquisition client {#customer-acquisition}
       * [Interagir et acquérir de nouveaux clients sans dépendre de cookies tiers](/help/rtcdp/partner-data/prospecting.md)
-      * [Personnaliser les expériences sur site pour les visiteurs et visiteuses inconnus à l’aide de la reconnaissance des visiteurs et visiteuses par les partenaires](/help/rtcdp/partner-data/onsite-personalization.md)
+      * [Personnaliser les expériences sur site pour les visiteurs inconnus à l’aide de la reconnaissance des visiteurs avec l’aide de partenaires](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Reciblage hors site des utilisateurs non authentifiés](./partner-data/offsite-retargeting.md)
    * Enrichissement de profil {#profile-enrichment}
       * [Complémenter les profils propriétaires avec des attributs fournis par le partenaire](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
