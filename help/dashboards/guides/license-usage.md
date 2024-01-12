@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: fabc6611baec68e7948ed2539c496b5a0125cd72
 workflow-type: tm+mt
 source-wordcount: '2108'
-ht-degree: 5%
+ht-degree: 10%
 
 ---
 
@@ -16,14 +16,14 @@ ht-degree: 5%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
 >title="Tableau de bord d’utilisation des licences"
->abstract="Le tableau de bord de l’utilisation des licences donne des informations sur les produits Adobe Experience Platform que vous avez achetés. La présentation du tableau de bord affiche les mesures principales pour vos produits, y compris votre utilisation pour chacune des mesures principales et le montant de votre licence. L’espace de travail des détails affiche une répartition de vos mesures pour chaque produit dans des sandbox spécifiques."
+>abstract="Le tableau de bord d’utilisation des licences donne des informations sur les produits Adobe Experience Platform que vous avez achetés. La vue d’ensemble du tableau de bord affiche les mesures principales pour vos produits, notamment votre utilisation pour chacune d’entre elles et la quantité de licences contractées. L’espace de travail des détails affiche une répartition de vos mesures pour chaque produit dans des sandbox spécifiques."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Tableau de bord d’utilisation des licences"
->abstract="Le tableau de bord de l’utilisation des licences donne des informations sur les produits Adobe Experience Platform que vous avez achetés. La présentation du tableau de bord affiche les mesures principales pour vos produits, y compris votre utilisation pour chacune des mesures principales et le montant de votre licence. L’espace de travail des détails affiche une répartition de vos mesures pour chaque produit dans des sandbox spécifiques.<br><br>Les prédictions d’utilisation sont actualisées chaque mois à la fin du mois et prévoient votre utilisation pour la période de six mois à venir. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes pour les environnements de test et les jeux de données."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Expirations de jeux de données"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données des profils pseudonymes"
+>abstract="Le tableau de bord d’utilisation des licences donne des informations sur les produits Adobe Experience Platform que vous avez achetés. La vue d’ensemble du tableau de bord affiche les mesures principales pour vos produits, notamment votre utilisation pour chacune d’entre elles et la quantité de licences contractées. L’espace de travail des détails affiche une répartition de vos mesures pour chaque produit dans des sandbox spécifiques.<br><br>Les prédictions d’utilisation sont actualisées mensuellement à la fin du mois et prévoient votre utilisation pour la période des six mois à venir. Pour réduire l’utilisation, configurez l’expiration des données de jeux de données ou de profils pseudonymes pour les sandbox et les jeux de données."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html?lang=fr" text="Expirations de jeux de données"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données de profils pseudonymes"
 
 Vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise via Adobe Experience Platform [!UICONTROL Utilisation des licences] tableau de bord. Les informations affichées ici sont capturées pendant un instantané quotidien de votre instance Platform.
 

@@ -7,7 +7,7 @@ exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
 source-git-commit: 8c08b3d62d58d061f62c3b0abb23de0d826e3985
 workflow-type: tm+mt
 source-wordcount: '3290'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -48,7 +48,7 @@ Pour plus d’informations sur les états, reportez-vous au tableau suivant :
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"
 >title="Détails de l&#39;exécution du flux de données"
->abstract="Les détails de l&#39;exécution du flux de données de destination contiennent des informations sur le statut d&#39;activation du segment et des mesures provenant du profil client en temps réel pour générer des identités uniques. Pour en savoir plus, consultez le guide des définitions de mesures."
+>abstract="Les détails de l&#39;exécution du flux de données de destination contiennent des informations sur le statut d&#39;activation du segment et des mesures provenant du profil client en temps réel pour générer des identités uniques. Pour en savoir plus, consultez le guide des définitions des mesures."
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_streaming"
@@ -111,7 +111,7 @@ La page Détails affiche également une liste des identités qui ont échoué et
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Détails de l&#39;exécution du flux de données"
->abstract="Les détails de l&#39;exécution du flux de données de destination contiennent des informations sur le statut d&#39;activation du segment et des mesures provenant du profil client en temps réel pour générer des identités uniques. Pour en savoir plus, consultez le guide des définitions de mesures."
+>abstract="Les détails de l&#39;exécution du flux de données de destination contiennent des informations sur le statut d&#39;activation du segment et des mesures provenant du profil client en temps réel pour générer des identités uniques. Pour en savoir plus, consultez le guide des définitions des mesures."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations?lang=fr" text="Exécutions de flux de données pour les destinations de diffusion en continu"
 
 >[!CONTEXTUALHELP]
