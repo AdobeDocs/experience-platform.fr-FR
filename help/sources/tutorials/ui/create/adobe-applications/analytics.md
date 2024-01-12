@@ -2,10 +2,10 @@
 title: Créer une connexion source Adobe Analytics dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: c38e25a939319fa3b3301af36482c8efe6c3dd5f
 workflow-type: tm+mt
-source-wordcount: '2477'
-ht-degree: 47%
+source-wordcount: '2695'
+ht-degree: 41%
 
 ---
 
@@ -26,9 +26,9 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 Il est important de comprendre les termes clés suivants utilisés dans ce document :
 
 * **Attribut standard :** les attributs standard sont tous les attributs prédéfinis par Adobe. Ils renferment la même signification pour tous les clients et sont disponibles dans les groupes de champs des données sources [!DNL Analytics] et du schéma [!DNL Analytics].
-* **Attribut personnalisé :** les attributs personnalisés sont tout attribut de la hiérarchie des variables personnalisées dans [!DNL Analytics]. Les attributs personnalisés sont utilisés dans une mise en oeuvre Adobe Analytics pour capturer des informations spécifiques dans une suite de rapports. Leur utilisation peut différer d’une suite de rapports à l’autre. Les attributs personnalisés comprennent les eVars, les props et les listes. Pour plus d’informations sur les eVars, consultez la [[!DNL Analytics] documentation sur les variables de conversion](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=fr).
+* **Attribut personnalisé :** les attributs personnalisés sont tout attribut de la hiérarchie des variables personnalisées dans [!DNL Analytics]. Les attributs personnalisés sont utilisés dans une mise en oeuvre Adobe Analytics pour capturer des informations spécifiques dans une suite de rapports. Leur utilisation peut différer d’une suite de rapports à l’autre. Les attributs personnalisés comprennent les eVars, les props et les listes. Pour plus d’informations sur les eVars, consultez la [[!DNL Analytics] documentation sur les variables de conversion](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html).
 * **Tout attribut dans les groupes de champs personnalisés :** les attributs qui proviennent de groupes de champs créés par les clients sont tous définis par l’utilisateur et sont considérés comme des attributs ni standard ni personnalisés.
-* **Noms conviviaux :** les noms conviviaux sont des libellés fournis par l’utilisateur pour les variables personnalisées dans le cadre dʼune implémentation [!DNL Analytics]. Pour plus d’informations sur les noms conviviaux, consultez la [[!DNL Analytics] documentation sur les variables de conversion](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=fr).
+* **Noms conviviaux :** les noms conviviaux sont des libellés fournis par l’utilisateur pour les variables personnalisées dans le cadre dʼune implémentation [!DNL Analytics]. Pour plus d’informations sur les noms conviviaux, consultez la [[!DNL Analytics] documentation sur les variables de conversion](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html).
 
 ## Créer une connexion source avec Adobe Analytics
 
@@ -177,11 +177,30 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 Une fois que vous avez terminé les mappages pour vos [!DNL Analytics] données de suite de rapports, vous pouvez appliquer des règles et des conditions de filtrage pour inclure ou exclure de manière sélective des données de l’ingestion dans Real-time Customer Profile. La prise en charge du filtrage est uniquement disponible pour [!DNL Analytics] Les données et les données ne sont filtrées que lors de la saisie de [!DNL Profile.] Toutes les données sont ingérées dans le lac de données.
 
+>[!BEGINSHADEBOX]
+
+**Informations supplémentaires sur la préparation des données et le filtrage des données Analytics pour Real-Time Customer Profile**
+
+* Vous pouvez utiliser la fonctionnalité de filtrage pour les données qui vont dans Profile, mais pas pour les données qui vont dans le lac de données.
+* Vous pouvez utiliser le filtrage des données actives, mais vous ne pouvez pas filtrer les données de renvoi.
+   * La variable [!DNL Analytics] La source ne renverse pas les données dans Profile.
+* Si vous utilisez des configurations de préparation de données lors de la configuration initiale d’une [!DNL Analytics] , ces modifications sont également appliquées au renvoi automatique de 13 mois.
+   * Cependant, ce n’est pas le cas pour le filtrage, car celui-ci est réservé uniquement aux données actives.
+* La préparation de données est appliquée aux chemins d’ingestion par lots et en flux continu. Si vous modifiez une configuration de prépréparation de données existante, ces modifications sont ensuite appliquées aux nouvelles données entrantes sur les chemins de diffusion en continu et d’ingestion par lots.
+   * Toutefois, les configurations de prép de données ne s’appliquent pas aux données qui ont déjà été ingérées dans Experience Platform, qu’il s’agisse de données en flux continu ou de données par lots.
+* Les attributs standard d’Analytics sont toujours mappés automatiquement. Par conséquent, vous ne pouvez pas appliquer de transformations aux attributs standard.
+   * Cependant, vous pouvez filtrer les attributs standard tant qu’ils ne sont pas requis dans Identity Service ou dans Profile.
+* Vous ne pouvez pas utiliser le filtrage au niveau des colonnes pour filtrer les champs obligatoires et les champs d’identité.
+* Bien que vous puissiez filtrer les identités secondaires, en particulier AAID et AACustomID, vous ne pouvez pas exclure ECID.
+* Lorsqu’une erreur de transformation se produit, la colonne correspondante génère une valeur NULL.
+
+>[!ENDSHADEBOX]
+
 #### Filtrage au niveau de la ligne
 
 >[!IMPORTANT]
 >
->Utilisez le filtrage au niveau des lignes pour appliquer des conditions et dicter les données à **inclure lors de l&#39;ingestion de profils**. Utilisez le filtrage au niveau des colonnes pour sélectionner les colonnes de données à **exclure lors de l&#39;ingestion de profils**.
+>Utilisez le filtrage au niveau des lignes pour appliquer des conditions et dicter les données à **inclure lors de l&#39;ingestion de profils**. Utilisez le filtrage au niveau des colonnes pour sélectionner les colonnes de données à sélectionner. **exclusion de l’ingestion de profils**.
 
 Vous pouvez filtrer les données pour [!DNL Profile] ingestion au niveau des lignes et des colonnes. Le filtrage au niveau des lignes vous permet de définir des critères tels que chaîne contenant, égal à, commence ou se termine par. Vous pouvez également utiliser le filtrage au niveau des lignes pour joindre des conditions à l’aide de `AND` ainsi que `OR`et annuler les conditions à l’aide de `NOT`.
 
@@ -206,9 +225,9 @@ La liste des conditions configurables inclut :
 * [!UICONTROL commence par]
 * [!UICONTROL se termine par]
 * [!UICONTROL ne se termine pas par]
-* [!UICONTROL contient]
+* [!UICONTROL contains]
 * [!UICONTROL ne contient pas]
-* [!UICONTROL existe]
+* [!UICONTROL exists]
 * [!UICONTROL n’existe pas]
 
 ![conditions](../../../../images/tutorials/create/analytics/conditions.png)
@@ -227,7 +246,7 @@ Pour ajouter un nouveau conteneur, sélectionnez les ellipses (`...`) en haut à
 
 Une fois un nouveau conteneur ajouté, sélectionnez **[!UICONTROL Inclure]** puis sélectionnez **[!UICONTROL Exclure]** dans la fenêtre déroulante qui s’affiche.
 
-![Exclusion](../../../../images/tutorials/create/analytics/exclude.png)
+![exclude](../../../../images/tutorials/create/analytics/exclude.png)
 
 Suivez la même procédure en faisant glisser les attributs de schéma et en ajoutant les valeurs correspondantes que vous souhaitez exclure du filtrage. Dans l’exemple ci-dessous, la variable [!DNL iPhone 12], [!DNL iPhone 12 mini], et [!DNL Google Pixel 5] sont tous filtrés à partir de l’exclusion de la variable **[!UICONTROL Modèle]** , paysage est exclu de la variable **[!UICONTROL Orientation de l’écran]**, et numéro de modèle [!DNL A1633] est exclu de **[!UICONTROL Numéro de modèle]**.
 
@@ -298,7 +317,7 @@ L’interface se met à jour vers une liste de lots individuels, y compris des i
 
 | Mesures | Description |
 | --- | --- |
-| ID de lot | L’identifiant d’un lot donné. Cette valeur est générée en interne. |
+| Identifiant de lot | L’identifiant d’un lot donné. Cette valeur est générée en interne. |
 | Nom du jeu de données | Nom d’un jeu de données donné utilisé pour les données Analytics. |
 | Source | Source des données ingérées. |
 | Mis à jour | Date de l’itération d’exécution de flux la plus récente. |
