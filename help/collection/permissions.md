@@ -2,10 +2,10 @@
 title: Gestion des autorisations pour la collecte de données dans Experience Platform
 description: Présentation générale de la gestion des autorisations et du contrôle de l’accès aux fonctionnalités de collecte de données dans Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: dd0856075867b5fc226068fa856942edcbe4a7a6
 workflow-type: tm+mt
-source-wordcount: '1274'
-ht-degree: 30%
+source-wordcount: '1285'
+ht-degree: 29%
 
 ---
 
@@ -58,7 +58,8 @@ Les autorisations de la collecte de données Adobe Experience Platform contrôle
 | Droits de propriété | Gérer les extensions | Permet de gérer le [extensions](../tags/ui/managing-resources/extensions/overview.md) pour les propriétés auxquelles un utilisateur a accès. |
 | Droits de propriété | Publier | Permet de publier une version de bibliothèque dans le cadre du [flux de publication](../tags/ui/publishing/publishing-flow.md). |
 | Droits d’entreprise | Développement dʼextensions | Permet de créer et de modifier des modules d’extension dont votre organisation est propriétaire, y compris les versions privées et les demandes de publication publique. |
-| Droits d’entreprise | Gérer les extensions | Cette autorisation n’est applicable que si vous disposez d’une licence pour Adobe Journey Optimizer ou une autre solution qui accorde l’accès aux messages in-app et push mobiles. Cela vous permet de gérer les applications dont Adobe Experience Cloud a connaissance, ainsi que les informations d’identification push nécessaires pour communiquer avec le service Firebase Cloud Messaging et le service Apple Push Notification. |
+| Droits d’entreprise | Gérer les configurations d’application | Cette autorisation n’est applicable que si vous disposez d’une licence pour Adobe Journey Optimizer ou une autre solution qui accorde l’accès aux messages in-app et push mobiles. Cela vous permet de gérer les applications dont Adobe Experience Cloud a connaissance, ainsi que les informations d’identification push nécessaires pour communiquer avec le service Firebase Cloud Messaging et le service Apple Push Notification. |
+| Droits d’entreprise | Gérer les propriétés | Permet de créer et de gérer des balises (propriété web), le transfert d’événement (propriété Edge) et les propriétés mobiles. |
 
 {style="table-layout:auto"}
 
