@@ -2,10 +2,10 @@
 title: Outils Sandbox
 description: Exportez et importez en toute transparence des configurations Sandbox entre des environnements de test.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 4cb570fbdb76e53dd0a8c4ee78c31d2a886e5dc1
+source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
 workflow-type: tm+mt
-source-wordcount: '1849'
-ht-degree: 11%
+source-wordcount: '1859'
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 11%
 
 Améliorez la précision de la configuration dans les environnements de test et exportez et importez en toute transparence les configurations des environnements de test entre les environnements de test grâce à la fonctionnalité d’outil d’environnement de test. Utilisez l’outil d’environnement de test pour réduire le temps de valorisation du processus de mise en oeuvre et déplacer les configurations réussies entre les environnements de test.
 
-Vous pouvez utiliser la fonction d’outils sandbox pour sélectionner différents objets et les exporter dans un package. Un package peut se composer d’un ou de plusieurs objets. <!--or an entire sandbox.-->Tous les objets inclus dans un package doivent provenir du même sandbox.
+Vous pouvez utiliser la fonction d’outils sandbox pour sélectionner différents objets et les exporter dans un package. Un package peut se composer d’un ou de plusieurs objets. <!--or an entire sandbox.-->Tous les objets inclus dans un package doivent provenir du même environnement de test.
 
 ## Objets pris en charge pour les outils Sandbox {#supported-objects}
 
@@ -67,19 +67,14 @@ Les types d’identité personnalisés ne sont pas pris en charge en tant qu’o
 >Toutes les actions d’exportation sont enregistrées dans les journaux d’audit.
 
 >[!CONTEXTUALHELP]
->id="platform_sandbox_tooling_exit_package"
->title="Enregistrer et quitter le package"
->abstract="Pour quitter le package et enregistrer, les utilisateurs et utilisatrices peuvent simplement utiliser l’option Retour."
-
->[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
 >title="Supprimer un objet"
->abstract="La personne doit sélectionner la ligne, puis utiliser l’option de suppression (disponible lors de la sélection) pour la supprimer."
+>abstract="Pour supprimer un objet du package, sélectionnez la ligne à supprimer, puis utilisez l’option de suppression, disponible lors de la sélection. Notez que vous ne pouvez pas supprimer des objets des modules publiés."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
 >title="Paramètres d’expiration du package"
->abstract="La date est fixée à 90 jours à partir d’aujourd’hui. Cette date continue de changer jusqu’à la publication du package. Si un utilisateur ou une utilisatrice consulte le package ayant le statut de brouillon demain, la date passe à +1 jour (sauf si elle est définie par l’utilisateur ou l’utilisatrice)."
+>abstract="Les packages sont définis pour expirer après une période d’inactivité dans le statut de brouillon. La date par défaut est définie sur 90 jours à partir d’aujourd’hui. Cette date continue de changer jusqu’à la publication du package. Si vous consultez le package en état de brouillon demain, la date est déplacée de +1 jour, sauf si vous définissez cela manuellement."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"
