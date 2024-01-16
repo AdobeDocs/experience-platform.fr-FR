@@ -6,10 +6,10 @@ description: Adobe Experience Platform utilise un modèle de données hybride 
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 7c455b546b6a98936d60e6cd481cae8610c8be17
 workflow-type: tm+mt
-source-wordcount: '1662'
-ht-degree: 59%
+source-wordcount: '1675'
+ht-degree: 58%
 
 ---
 
@@ -66,6 +66,7 @@ Les barrières de sécurité suivantes fournissent des limites recommandées lor
 | Aucune relation héritée imbriquée | 0 | Soft | Vous ne devez pas créer de relation entre deux schémas non-[!DNL XDM Individual Profile]. La possibilité de créer des relations n’est pas recommandée pour les schémas qui ne font pas partie du schéma d’union [!DNL Profile]. |
 | Seuls les objets B2B peuvent participer à des relations multiples-à-un | 0 | Hard | Le système ne prend en charge que les relations multiples-à-un entre les objets B2B. Pour plus d’informations sur les relations multiples-à-un, consultez le tutoriel sur la [définition des relations de schéma B2B](../xdm/tutorials/relationship-b2b.md). |
 | Profondeur maximale des relations imbriquées entre les objets B2B | 3 | Hard | La profondeur maximale des relations imbriquées entre les objets B2B est de 3. Cela signifie que dans un schéma fortement imbriqué, vous ne devez pas avoir de relation entre des objets B2B imbriqués à plus de 3 niveaux. |
+| Schéma unique pour chaque entité de dimension | 1 | Hard | Chaque entité de dimension doit comporter un seul schéma. Toute tentative d’utilisation d’entités de dimension créées à partir de plusieurs schémas peut avoir un impact sur les résultats de la segmentation. Différentes entités de dimension doivent comporter des schémas distincts. |
 
 ## Limites de taille des données
 
@@ -119,7 +120,7 @@ Cette section fournit des détails supplémentaires sur les limites de ce docume
 
 ### Types d’entités
 
-Le modèle de la banque de données [!DNL Profile] se compose de deux types d’entités principales : [entités primaires](#primary-entity) et [entités de dimension](#dimension-entity).
+La variable [!DNL Profile] le modèle de données de magasin se compose de deux types d’entité principaux : [entités primaires](#primary-entity) et [entités de dimension](#dimension-entity).
 
 #### Entité de Principal
 
@@ -131,7 +132,7 @@ Les attributs indépendants du temps, également appelés « données d’enreg
 
 #### Entité de Dimension
 
-Bien que la banque de données de profil conservant les données de profil ne soit pas un magasin relationnel, Profile permet l’intégration à de petites entités de dimension afin de créer des segments d’une manière simplifiée et intuitive. Cette intégration est connue sous le nom de [segmentation d’entités multiples](../segmentation/multi-entity-segmentation.md).
+Bien que la banque de données de profil conservant les données de profil ne soit pas un magasin relationnel, Profile permet l’intégration à de petites entités de dimension afin de créer des segments d’une manière simplifiée et intuitive. Cette intégration est connue sous le nom [segmentation d’entités multiples](../segmentation/multi-entity-segmentation.md).
 
 Votre entreprise peut également définir des classes XDM pour décrire des éléments autres que des individus, tels que des magasins, des produits ou des propriétés. Ces variables[!DNL XDM Individual Profile] Les schémas sont appelés &quot;entités de dimension&quot; (également appelées &quot;entités de recherche&quot;) et ne contiennent pas de données de série temporelle. Les schémas qui représentent des entités de dimension sont liés à des entités de profil grâce à l’utilisation de [relations de schéma](../xdm/tutorials/relationship-ui.md).
 
