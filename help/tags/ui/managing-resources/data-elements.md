@@ -2,10 +2,10 @@
 title: Éléments de données
 description: Les éléments de données sont les blocs de construction de votre dictionnaire de données (ou mappage de données). Utilisez des éléments de données pour recueillir, organiser et diffuser des données dans les technologies marketing et publicitaires.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 9d897602c0c83d06910b8b14a87351a9c25ab5f1
+source-git-commit: 0956a28a8ff6eacb3a55f7c333293ed5b6c81cce
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 92%
+source-wordcount: '1614'
+ht-degree: 91%
 
 ---
 
@@ -91,13 +91,15 @@ Lors de la création ou de la modification d’éléments, vous pouvez enregistr
 
 ## Types d’éléments de données {#types-of-data-elements}
 
-Les types d’éléments de données sont déterminés par l’extension. Les types qui peuvent être créés ne sont pas limités.
+>[!NOTE]
+>
+>Les types d’éléments de données sont déterminés par l’extension. Les types qui peuvent être créés ne sont pas limités.
 
-Les sections suivantes décrivent les types d’éléments de données disponibles dans l’extension Core. D’autres extensions utilisent d’autres types d’éléments de données.
+Les sections suivantes décrivent les types d’éléments de données disponibles dans la variable **Extension Core**. D’autres extensions utilisent d’autres types d’éléments de données.
 
 ### Cookie
 
-N’importe quel cookie de domaine disponible peut être référencé dans le champ de nom du cookie.
+Tout cookie de domaine disponible peut être référencé dans le champ du nom du cookie.
 
 #### Exemple :
 
@@ -196,7 +198,7 @@ Vous pouvez sélectionner l’un des attributs de page suivants à utiliser dans
 
 * URL
 * Hostname
-* Pathname
+* Nom du chemin
 * Protocol
 * Référent
 * Title
