@@ -1,13 +1,13 @@
 ---
 title: Identifiants d’appareil propriétaires dans le SDK Web
 description: Découvrez comment configurer des identifiants d’appareil propriétaires (FPID) pour le SDK Web de Adobe Experience Platform.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
+source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1734'
 ht-degree: 0%
 
 ---
-
 
 # Identifiants d’appareil propriétaires dans le SDK Web
 
@@ -16,6 +16,11 @@ Le SDK Web de Adobe Experience Platform affecte [Adobe Experience Cloud ID (ECID
 >[!NOTE]
 >
 >La prise en charge des identifiants d’appareil propriétaires n’est disponible que lors de l’envoi de données à Platform Edge Network via le SDK Web Platform.
+
+>[!IMPORTANT]
+>
+>Les identifiants d’appareil propriétaires ne sont pas compatibles avec la variable [cookies tiers](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) dans le SDK Web.
+>Vous pouvez utiliser des identifiants d’appareil propriétaires ou des cookies tiers, mais vous ne pouvez pas utiliser les deux fonctionnalités simultanément.
 
 Ce document explique comment configurer des identifiants d’appareil propriétaires pour votre mise en oeuvre du SDK Web Platform.
 

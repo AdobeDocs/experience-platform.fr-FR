@@ -2,9 +2,9 @@
 title: Configuration de l’extension de balise du SDK Web
 description: Découvrez comment configurer l’extension de balise SDK Web Experience Platform dans l’interface utilisateur des balises.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: ac3362fa5e8a314f85f3bb659047f77fb56c1a7c
+source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1580'
 ht-degree: 6%
 
 ---
@@ -83,6 +83,10 @@ Cette section vous permet de définir le comportement du SDK Web lorsqu’il s�
 * **[!UICONTROL Migration de l’ECID depuis VisitorAPI]**: cette option est activée par défaut. Lorsque cette fonction est activée, le SDK peut lire la variable `AMCV` et `s_ecid` et définissez la variable `AMCV` cookie utilisé par [!DNL Visitor.js]. Cette fonctionnalité est importante lors de la migration vers le SDK Web, car certaines pages utilisent toujours [!DNL Visitor.js]. Cette option permet au SDK de continuer à utiliser la même [!DNL ECID] afin que les utilisateurs ne soient pas identifiés comme deux utilisateurs distincts.
 * **[!UICONTROL Utilisation de cookies tiers]**: lorsque cette option est activée, le SDK Web tente de stocker un identifiant d’utilisateur dans un cookie tiers. En cas de réussite, l’utilisateur est identifié comme un utilisateur unique lorsqu’il navigue sur plusieurs domaines, plutôt que comme un utilisateur distinct sur chaque domaine. Si cette option est activée, le SDK peut toujours ne pas pouvoir stocker l’identifiant de l’utilisateur dans un cookie tiers si le navigateur ne prend pas en charge les cookies tiers ou s’il a été configuré par l’utilisateur pour ne pas autoriser les cookies tiers. Dans ce cas, le SDK stocke uniquement l’identifiant dans le domaine propriétaire.
 
+  >[!IMPORTANT]
+  >>Les cookies tiers ne sont pas compatibles avec la variable [identifiant d’appareil propriétaire](../../../../edge/identity/first-party-device-ids.md) dans le SDK Web.
+Vous pouvez utiliser des identifiants d’appareil propriétaires ou des cookies tiers, mais vous ne pouvez pas utiliser les deux fonctionnalités simultanément.
+  >
 ## Configuration des paramètres de personnalisation {#personalization}
 
 Cette section vous permet de configurer le mode de masquage de certaines parties d’une page lors du chargement du contenu personnalisé. Cela garantit que vos visiteurs ne voient que la page personnalisée.
@@ -103,7 +107,7 @@ Pour utiliser le fragment de code de masquage préalable, copiez-le et collez-le
 
 >[!IMPORTANT]
 >
->Lors de l’utilisation du fragment de code de masquage préalable, Adobe recommande d’utiliser le même [!DNL CSS] comme celle utilisée par la variable [style de prémasquage](#prehiding-style).
+Lors de l’utilisation du fragment de code de masquage préalable, Adobe recommande d’utiliser le même [!DNL CSS] comme celle utilisée par la variable [style de prémasquage](#prehiding-style).
 
 ## Configuration des paramètres de collecte de données {#data-collection}
 
@@ -130,7 +134,7 @@ Au lieu de transmettre les remplacements par le biais d’une commande SDK Web, 
 
 >[!IMPORTANT]
 >
-> Les remplacements de flux de données doivent être configurés par environnement. Les environnements de développement, d’évaluation et de production ont tous des remplacements distincts. Vous pouvez copier les paramètres entre eux à l’aide des options dédiées affichées dans l’écran ci-dessous.
+Les remplacements de flux de données doivent être configurés par environnement. Les environnements de développement, d’évaluation et de production ont tous des remplacements distincts. Vous pouvez copier les paramètres entre eux à l’aide des options dédiées affichées dans l’écran ci-dessous.
 
 ![Image montrant les remplacements de la configuration de la banque de données dans la page de l’extension de balise du SDK Web.](assets/datastream-overrides.png)
 
