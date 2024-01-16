@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation dʼIdentity Service
 description: Adobe Experience Platform Identity Service vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 4d7470a15a7cc9c9a3bcc56f5f783a967021242f
+source-git-commit: 484b1c2d37291afd02fe58723121325c837061aa
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1524'
 ht-degree: 8%
 
 ---
@@ -33,7 +33,7 @@ Avant de vous plonger dans les détails d’Identity Service, veuillez lire le t
 | --- | --- |
 | Identité | Une identité est une donnée propre à une entité. En règle générale, il s’agit d’un objet réel, tel qu’une personne, un périphérique matériel ou un navigateur web (représenté par un cookie). Une identité entièrement qualifiée se compose de deux éléments : une **espace de noms d’identité** et un **valeur d’identité**. |
 | Espace de noms d’identité | Un espace de noms d’identité est le contexte d’une identité donnée. Par exemple, un espace de noms `Email` peut correspondre à **julien<span>@acme.com**. De même, un espace de noms de `Phone` peut correspondre à `555-555-1234`. Pour plus d’informations, consultez la section [présentation de l’espace de noms d’identité](./namespaces.md) |
-| Valeur de l’identité | Une valeur d’identité est une chaîne qui représente une entité du monde réel et qui est classée dans Identity Service par le biais d’un espace de noms. Par exemple, l’email **julien<span>@acme.com** peut être classé comme `Email` espace de noms. |
+| Valeur de l’identité | Une valeur d’identité est une chaîne qui représente une entité du monde réel et qui est classée dans Identity Service par le biais d’un espace de noms. Par exemple, la valeur d’identité (chaîne) **julien<span>@acme.com** peut être classé comme `Email` espace de noms. |
 | Type d’identité | Un type d’identité est un composant d’un espace de noms d’identité. Le type d’identité indique si les données d’identité sont liées ou non dans un graphique d’identités. |
 | Lien | Un lien ou une liaison est une méthode permettant d’établir que deux identités disparates représentent la même entité. Par exemple, un lien entre &quot;`Email` = julien<span>@acme.com&quot; et &quot;`Phone` = 555-555-1234&quot; signifie que les deux identités représentent la même entité. Cela suggère que le client qui a interagi avec votre marque avec l’adresse email de julien<span>@acme.com et le numéro de téléphone de 555-555-1234 est le même. |
 | Identity Service | Identity Service est un service d’Experience Platform qui lie (ou annule les liens) les identités pour gérer les graphiques d’identités. |
@@ -91,7 +91,7 @@ Examinez lʼexemple suivant :
 * Ensuite, si vous vous connectez avec les mêmes informations d’identification au même site web d’e-commerce, mais que vous utilisez le navigateur web sur votre téléphone au lieu du navigateur web sur votre ordinateur portable, un nouvel ECID est enregistré dans Identity Service.
 * En arrière-plan, Identity Service traite ce nouvel événement comme `{CRM_ID:ABC, ECID:456}`, où CRM_ID : ABC représente votre ID client authentifié et ECID : 456 représente le navigateur web sur votre appareil mobile.
 
-Dans les scénarios ci-dessus, Identity Service établit un lien entre `CRM_ID:ABC, ECID:123`, ainsi que `{CRM_ID:ABC, ECID:456}`. Cela génère un graphique d’identités dans lequel vous &quot;possédez&quot; trois identités : une pour l’identifiant de personne (ID CRM) et deux pour les identifiants de cookie (ECID).
+Dans les scénarios ci-dessus, Identity Service établit un lien entre `{CRM_ID:ABC, ECID:123}`, ainsi que `{CRM_ID:ABC, ECID:456}`. Cela génère un graphique d’identités dans lequel vous &quot;possédez&quot; trois identités : une pour l’identifiant de personne (ID CRM) et deux pour les identifiants de cookie (ECID).
 
 ## Graphiques d’identités
 
