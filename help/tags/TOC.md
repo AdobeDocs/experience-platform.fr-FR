@@ -5,10 +5,10 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: 7b957aeff6f60665841013619d70ee962fc4c449
+source-git-commit: 30152a95a46db06948620b881092fb21df734f9d
 workflow-type: tm+mt
-source-wordcount: '1030'
-ht-degree: 99%
+source-wordcount: '770'
+ht-degree: 98%
 
 ---
 
@@ -321,10 +321,5 @@ ht-degree: 99%
 * [FAQ](./faq.md)
 * [Mises à jour de terminologie](./term-updates.md)
 * [Obsolescence de la prise en charge d’Internet Explorer 10 et 11](./ie-deprecation.md)
-* Notes de mise à jour {#release-notes}
-   * [Plus récent](./release-notes/current.md)
-   * [Notes de mise à jour 2021](./release-notes/2021.md)
-   * [Notes de mise à jour 2020](./release-notes/2020.md)
-   * [Notes de mise à jour 2019](./release-notes/2019.md)
-   * [Notes de mise à jour 2018](./release-notes/2018.md)
+* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=fr)
 
