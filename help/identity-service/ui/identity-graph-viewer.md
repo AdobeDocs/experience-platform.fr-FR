@@ -2,14 +2,14 @@
 title: Visionneuse de graphique d’identités
 description: Un graphique d’identités est une carte des relations entre différentes identités pour un client spécifique, qui vous fournit une représentation visuelle de la manière dont votre client interagit avec votre marque sur différents canaux.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 4bf939011e6246a553f67805ff99a70610782ea6
+source-git-commit: d4ed36bd036218fcc3428ef420490b68c9cdb121
 workflow-type: tm+mt
-source-wordcount: '1388'
-ht-degree: 7%
+source-wordcount: '1402'
+ht-degree: 5%
 
 ---
 
-# Graphique d’identités observateur
+# Visionneuse de graphique d’identités
 
 Un graphique d’identités est une carte des relations entre différentes identités pour un client spécifique, qui vous fournit une représentation visuelle de la manière dont votre client interagit avec votre marque sur différents canaux. Tous les graphiques d’identités client sont gérés et mis à jour collectivement par le Service d’identités d’Adobe Experience Platform en temps quasi réel, en réponse à l’activité du client.
 
@@ -27,8 +27,8 @@ La vidéo suivante est destinée à vous aider à comprendre la visionneuse de g
 
 L’utilisation de la visionneuse de graphiques d’identités nécessite une compréhension des différents services Adobe Experience Platform impliqués. Avant de commencer à utiliser la visionneuse de graphiques d’identités, veuillez consulter la documentation relative aux services suivants :
 
-- [[!DNL Identity Service]](../home.md) : profitez d’une meilleure compréhension de vos clients et de leurs comportements en rapprochant des identités entre appareils et systèmes.
-- [Profil client en temps réel](../../profile/home.md): Les graphiques d’identités sont utilisés par Real-time Customer Profile pour créer une vue d’ensemble complète et unique de vos attributs et comportements clients.
+- [[!DNL Identity Service]](../home.md): profitez d’une meilleure vue d’ensemble des clients et de leur comportement en rapprochant des identités entre appareils et systèmes.
+- [Profil client en temps réel](../../profile/home.md): les graphiques d’identités sont utilisés par Real-time Customer Profile pour créer une vue d’ensemble complète et unique de vos attributs et comportements clients.
 
 ### Terminologie
 
@@ -46,7 +46,7 @@ Pour afficher un graphique d’identités, fournissez un espace de noms d’iden
 
 >[!TIP]
 >
->Icône Sélectionner le tableau ![icône de tableau](../images/identity-graph-viewer/table-icon.png) pour afficher un panneau avec une liste de tous les espaces de noms d’identité disponibles dans votre organisation. Vous pouvez utiliser n’importe quel espace de noms d’identité tant qu’une valeur d’identité valide y est connectée. Pour plus d’informations, reportez-vous à la section [guide d’espace de noms d’identité](../namespaces.md).
+>Icône Sélectionner le tableau ![icône de tableau](../images/identity-graph-viewer/table-icon.png) pour afficher un panneau avec une liste de tous les espaces de noms d’identité disponibles dans votre organisation. Vous pouvez utiliser n’importe quel espace de noms d’identité tant qu’une valeur d’identité valide y est connectée. Pour plus d’informations, consultez la section [guide d’espace de noms d’identité](../namespaces.md).
 
 ![Un espace de noms d’identité et sa valeur correspondante, fournis dans l’écran de recherche du graphique d’identités.](../images/graph-viewer/namespace-and-value.png)
 
@@ -56,11 +56,11 @@ L’interface de la visionneuse de graphiques d’identités est composée de pl
 
 ![Interface de la visionneuse de graphiques d’identités.](../images/graph-viewer/identity-graph-viewer-main.png)
 
-Le graphique d’identités affiche toutes les identités liées à la combinaison espace de noms et valeur d’identité que vous avez saisie. Chaque noeud se compose d’un espace de noms d’identité et de sa valeur correspondante. Vous pouvez sélectionner, maintenir enfoncé et faire glisser n’importe quel noeud pour interagir avec le graphique. Vous pouvez également placer le pointeur de la souris sur un noeud pour afficher des informations sur sa valeur d’identité correspondante. Sélectionner **[!UICONTROL Afficher le graphique]** pour masquer ou afficher le graphique.
+Le graphique d’identités affiche toutes les identités liées à la combinaison espace de noms et valeur d’identité que vous avez saisie. Chaque noeud se compose d’un espace de noms d’identité et de sa valeur correspondante. Vous pouvez sélectionner, maintenir enfoncé et faire glisser n’importe quel noeud pour interagir avec le graphique. Vous pouvez également survoler un noeud avec la souris pour afficher des informations sur sa valeur d’identité correspondante. Sélectionner **[!UICONTROL Afficher le graphique]** pour masquer ou afficher le graphique.
 
 >[!IMPORTANT]
 >
->Un graphique d’identités requiert au minimum deux identités liées et une combinaison valide d’espace de noms et de valeurs d’identité. Le nombre maximal d’identités que la visionneuse de graphiques peut afficher est de 150. Voir [annexe](#appendix) pour plus d’informations.
+>Un graphique d’identités requiert au minimum deux identités liées et une combinaison valide d’espace de noms et de valeurs d’identité. Le nombre maximal d’identités que la visionneuse de graphiques peut afficher est de 50. Voir [annexe](#appendix) pour plus d’informations.
 
 ![Visionneuse de graphique d’identités avec cinq identités liées.](../images/graph-viewer/graph.png)
 
@@ -68,7 +68,7 @@ Sélectionnez un lien dans le graphique pour afficher le jeu de données et l’
 
 ![Lien d’identité entre le courrier électronique et les noeuds GAID sélectionnés.](../images/graph-viewer/identity-link.png)
 
-Le [!UICONTROL Identités] Le tableau fournit une vue différente de vos données d’identité, répertoriant l’espace de noms d’identité et la combinaison de valeurs d’identité dans un format tabulaire. La sélection d’un noeud dans le graphique met à jour l’élément de ligne surligné dans le [!UICONTROL Identités] table.
+La variable [!UICONTROL Identités] Le tableau fournit une vue différente de vos données d’identité, répertoriant l’espace de noms d’identité et la combinaison de valeurs d’identité dans un format tabulaire. La sélection d’un noeud dans le graphique met à jour l’élément de ligne surligné dans le [!UICONTROL Identités] table.
 
 ![Le tableau Identités avec la liste des identités liées dans le graphique.](../images/graph-viewer/identities-table.png)
 
@@ -82,7 +82,7 @@ Le tableau suivant fournit des informations supplémentaires sur les propriété
 
 | Source de données | Description |
 | --- | --- | 
-| ID de lot | Identifiant généré automatiquement qui correspond à vos données de lot. |
+| Identifiant de lot | Identifiant généré automatiquement qui correspond à vos données de lot. |
 | Identifiant du jeu de données | L’identifiant généré automatiquement qui correspond à votre jeu de données. |
 | Nom du jeu de données | Nom du jeu de données qui contient vos données de lot. |
 | Nom du schéma | Nom du schéma. Le schéma fournit un ensemble de règles qui représentent et valident la structure et le format des données. |
@@ -103,7 +103,7 @@ Réglez le curseur pour voir qu’un autre lien d’identité (courrier électro
 
 Vous pouvez également ajuster le curseur pour afficher la première itération du graphique. Dans l’exemple ci-dessous, la visionneuse de graphiques d’identités indique que le graphique a été créé pour la première fois sur **[!UICONTROL 08/19/2020, 4:11:16 h]**, avec ses premiers liens comme ECID, Email et Téléphone.
 
-![Le curseur d’horodatage de la visionneuse de graphiques a été adapté au premier nouveau lien établi.](../images/graph-viewer/slider-three.png)
+![Le curseur d’horodatage de la visionneuse de graphiques a été ajusté au premier nouveau lien établi.](../images/graph-viewer/slider-three.png)
 
 ## Annexe
 
@@ -115,13 +115,13 @@ Des erreurs peuvent se produire lors de l’accès à la visionneuse de graphiqu
 
 - Une valeur d’identité doit exister dans l’espace de noms sélectionné.
 - La visionneuse de graphiques d’identités requiert au moins deux identités liées à générer. Il est possible qu’il n’existe qu’une seule valeur d’identité et aucune identité liée. Dans ce cas, la valeur n’existerait que dans [!DNL Profile] visionneuse.
-- La visionneuse de graphiques d’identités ne peut pas dépasser 150 identités au maximum.
+- La visionneuse de graphiques d’identités ne peut pas dépasser 50 identités au maximum.
 
 ![error-screen](../images/graph-viewer/error-screen.png)
 
 ### Accès à la visionneuse de graphiques d’identités à partir de jeux de données
 
-Vous pouvez également accéder à la visionneuse de graphiques d’identités à l’aide de l’interface des jeux de données. À partir des jeux de données [!UICONTROL Parcourir] , sélectionnez un jeu de données avec lequel interagir, puis sélectionnez **[!UICONTROL Prévisualisation d’un jeu de données]**
+Vous pouvez également accéder à la visionneuse de graphiques d’identités à l’aide de l’interface des jeux de données. Des jeux de données [!UICONTROL Parcourir] , sélectionnez un jeu de données avec lequel interagir, puis sélectionnez **[!UICONTROL Prévisualisation d’un jeu de données]**
 
 ![preview-dataset](../images/identity-graph-viewer/preview-dataset.png)
 
@@ -131,11 +131,11 @@ Dans la fenêtre d’aperçu, sélectionnez une icône d’empreinte digitale po
 >
 >L’icône d’empreinte ne s’affiche que si le jeu de données comporte deux identités ou plus.
 
-![empreinte digitale](../images/identity-graph-viewer/fingerprint.png)
+![empreinte](../images/identity-graph-viewer/fingerprint.png)
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez appris à explorer les graphiques d’identités de vos clients dans l’interface utilisateur de Platform. Pour plus d’informations sur les identités dans Platform, reportez-vous à la section [Présentation d’Identity Service](../home.md)
+En lisant ce document, vous avez appris à explorer les graphiques d’identités de vos clients dans l’interface utilisateur de Platform. Pour plus d’informations sur les identités dans Platform, reportez-vous au [Présentation d’Identity Service](../home.md)
 
 ## Journal des modifications
 
