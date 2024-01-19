@@ -5,7 +5,7 @@ product: experience platform
 type: Documentation
 description: Découvrez les performances et les mécanismes de sécurisation appliqués par le système pour les données de profil et la segmentation, afin de garantir une utilisation optimale des fonctionnalités de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: ec47f07f20e0f4ccda4c791882361bdc7a77aa98
+source-git-commit: 0542e618dfb6e5571845387fed9eced4200179b6
 workflow-type: tm+mt
 source-wordcount: '2434'
 ht-degree: 60%
@@ -36,7 +36,7 @@ Les services Experience Platform suivants sont impliqués dans la modélisation 
 Ce document comprend deux types de limites par défaut :
 
 | Type de protection | Description |
-|----------|---------|
+| -------------- | ----------- |
 | **Barrière de sécurité des performances (limite de soft)** | Les barrières de performance sont des limites d’utilisation liées à la portée de vos cas d’utilisation. Lorsque vous dépassez les barrières de performance, vous pouvez rencontrer une dégradation des performances et une latence. Adobe n’est pas responsable d’une telle dégradation des performances. Les clients qui dépassent systématiquement une barrière de performance peuvent choisir d’acquérir une capacité supplémentaire afin d’éviter une dégradation des performances. |
 | **Barrières de sécurité appliquées par le système (limite stricte)** | Les barrières de sécurité appliquées par le système sont appliquées par l’interface utilisateur ou l’API de Real-Time CDP. Il s’agit de limites que vous ne pouvez pas dépasser, car l’interface utilisateur et l’API vous empêcheront de le faire ou renverront une erreur. |
 
@@ -55,7 +55,7 @@ Les barrières de sécurité suivantes fournissent des limites recommandées lor
 ### Mécanismes de sécurisation pour les entités principales
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Jeux de données de classe XDM Indivdual Profile | 20 | Protecteur des performances | Il est recommandé d’utiliser au maximum 20 jeux de données qui exploitent la classe XDM Individual Profile. |
 | Jeux de données de classe XDM ExperienceEvent | 20 | Protecteur des performances | Il est recommandé d’utiliser au maximum 20 jeux de données qui exploitent la classe XDM ExperienceEvent. |
 | Jeux de données de suites de rapports Adobe Analytics activés pour Profil | 1 | Protecteur des performances | Un (1) jeu de données de suite de rapports Analytics maximum doit être activé pour Profil. Toute tentative d’activation de plusieurs jeux de données de suite de rapports Analytics pour Profil peut avoir des conséquences imprévues sur la qualité des données. Pour plus d’informations, voir la section sur les [Jeux de données Adobe Analytics](#aa-datasets) dans l’Annexe. |
@@ -70,7 +70,7 @@ Les barrières de sécurité suivantes fournissent des limites recommandées lor
 ### Mécanismes de sécurisation de l’entité de dimension
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Aucune donnée de série temporelle n’est autorisée pour les entités non [!DNL XDM Individual Profile]. | 0 | Barrière de sécurité mise en place par le système | **Les données de série temporelle ne sont pas autorisées pour les entités non [!DNL XDM Individual Profile] dans le service Profil.** Si un jeu de données de série temporelle est associé à un ID non [!DNL XDM Individual Profile], le jeu de données ne doit pas être activé pour [!DNL Profile]. |
 | Aucune relation imbriquée | 0 | Protecteur des performances | Vous ne devez pas créer de relation entre deux schémas non-[!DNL XDM Individual Profile]. La possibilité de créer des relations n’est pas recommandée pour les schémas qui ne font pas partie du schéma d’union [!DNL Profile]. |
 | Profondeur JSON du champ de l’ID principal | 4 | Protecteur des performances | La profondeur JSON maximale recommandée pour le champ de l’ID principal est de 4. Cela signifie que dans un schéma fortement imbriqué, vous ne devez pas choisir un champ comme identifiant principal qui est imbriqué à plus de 4 niveaux de profondeur. Un champ qui est au quatrième niveau d’imbrication peut être utilisé comme ID principal. |
@@ -88,7 +88,7 @@ Les mécanismes de sécurisation suivants se rapportent à la taille des donnée
 ### Mécanismes de sécurisation pour les entités principales
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Taille maximale d’ExperienceEvent | 10 Ko | Barrière de sécurité mise en place par le système | **La taille maximale d’un événement est de 10 Ko.** L’ingestion se poursuit, mais tous les événements de plus de 10 Ko seront ignorés. |
 | Taille maximale d’enregistrement de profil | 100 Ko | Barrière de sécurité mise en place par le système | **La taille maximale d’un enregistrement de profil est de 100 Mo.** L’ingestion se poursuit, mais les enregistrements de profil supérieurs à 100 Ko seront ignorés. |
 | Taille maximale du fragment de profil | 50 Mo | Barrière de sécurité mise en place par le système | **La taille maximale d’un fragment de profil est de 50 Mo.** La segmentation, les exportations et les recherches peuvent échouer pour tout [fragment de profil](#profile-fragments) qui dépasse 50 Mo. |
@@ -101,7 +101,7 @@ Les mécanismes de sécurisation suivants se rapportent à la taille des donnée
 ### Mécanismes de sécurisation de l’entité de dimension
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Taille totale pour toutes les entités de dimension | 5 Go | Protecteur des performances | La taille totale recommandée pour toutes les entités dimensionnelles est de 5 Go. L’ingestion d’entités de dimension volumineuses peut affecter les performances du système. Par exemple, il n’est pas recommandé de charger un catalogue de produits de 10 Go en tant qu’entité de dimension. |
 | Jeux de données par schéma d’entité dimensionnelle | 5 | Protecteur des performances | Il est recommandé d’associer un maximum de 5 jeux de données à chaque schéma d’entité dimensionnelle. Par exemple, si vous créez un schéma pour les « produits » et ajoutez cinq jeux de données de contribution, vous ne devez pas créer un sixième jeu de données lié au schéma de produits. |
 | Lots d’entités de dimension ingérés par jour | 4 par entité | Protecteur des performances | Le nombre maximal recommandé de lots d’entités de dimension ingérés par jour est de 4 par entité. Par exemple, vous pouvez ingérer des mises à jour à un catalogue de produits jusqu’à 4 fois par jour. L’ingestion de lots d’entités de dimension supplémentaires pour la même entité peut affecter les performances du système. |
@@ -113,7 +113,7 @@ Les mécanismes de sécurisation suivants se rapportent à la taille des donnée
 Les barrières de sécurité décrites dans cette section font référence au nombre et à la nature des audiences qu’une organisation peut créer dans un Experience Platform, ainsi qu’au mappage et à l’activation d’audiences vers des destinations.
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
-| --- | --- | --- | --- |
+| --------- | ----- | ---------- | ----------- |
 | Audiences par environnement de test | 4 000 | Protecteur des performances | Une organisation peut avoir plus de 4 000 audiences au total, à condition qu’il y ait moins de 4 000 audiences dans chaque environnement de test individuel. Cela inclut les audiences par lots, par flux et en périphérie. Toute tentative de création d’audiences supplémentaires peut affecter les performances du système. En savoir plus sur [création d&#39;audiences](/help/segmentation/ui/segment-builder.md) par le biais du créateur de segments. |
 | Audiences Edge par environnement de test | 150 | Protecteur des performances | Une organisation peut avoir plus de 150 audiences de périphérie au total, à condition qu’il y ait moins de 150 audiences de périphérie dans chaque environnement de test individuel. Toute tentative de création d’audiences Edge supplémentaires peut avoir une incidence sur les performances du système. En savoir plus sur [audiences de périphérie](/help/segmentation/ui/edge-segmentation.md). |
 | Débit Edge sur tous les environnements de test | 1 500 RPS | Protecteur des performances | La segmentation Edge prend en charge un pic de 1 500 événements entrants par seconde entrant dans le réseau Edge Adobe Experience Platform. La segmentation Edge peut prendre jusqu’à 350 millisecondes pour traiter un événement entrant après son entrée dans le réseau Edge Adobe Experience Platform. En savoir plus sur [audiences de périphérie](/help/segmentation/ui/edge-segmentation.md). |
