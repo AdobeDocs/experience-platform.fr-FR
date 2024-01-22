@@ -2,21 +2,16 @@
 title: Connexion Liste des Clients Pinterest
 description: Créez des audiences à partir des listes de clients, des personnes qui ont visité votre site ou des personnes qui ont déjà interagi avec votre contenu sur Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 5cef3bbc7f2246a91ecca807825d830f240c8d45
+source-git-commit: 02110e4b4156774c2961803f78ae1c3fc9d6240a
 workflow-type: tm+mt
-source-wordcount: '844'
-ht-degree: 45%
+source-wordcount: '719'
+ht-degree: 48%
 
 ---
 
 # Connexion [!DNL Pinterest Customer List]
 
->[!IMPORTANT]
->
->* Depuis le 16 novembre 2023, deux cartes Pinterest s’affichent côte à côte dans le catalogue des destinations. Cela est dû à une mise à niveau de l’API de l’annonceur Pinterest utilisée pour exporter des données vers Pinterest. Le connecteur de destination Pinterest existant a été renommé en **[!UICONTROL pinterest (obsolète)]** et une nouvelle carte **[!UICONTROL (Nouveau) Pinterest]** est désormais disponible.
->* Utilisez la variable **[!UICONTROL (Nouveau) Pinterest]** connexion dans le catalogue pour toutes les campagnes vers Pinterest. Si vous avez des flux de données actifs vers la variable **[!UICONTROL pinterest (obsolète)]** destination, lisez la [documentation de mise à niveau](/help/destinations/catalog/advertising/pinterest-upgrade.md) pour comprendre vos éléments d’action afin de ne pas perturber vos campagnes.
-
-## Vue d’ensemble {#overview}
+## Présentation {#overview}
 
 Créez des audiences à partir des listes de clients, des personnes qui ont visité votre site ou des personnes qui ont déjà interagi avec votre contenu sur Pinterest.
 
@@ -56,7 +51,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 ## Cas d’utilisation {#use-cases}
 
-Pour découvrir les avantages de la destination [!DNL Pinterest Customer List] et son utilisation, consultez les exemples de cas d’utilisation ci-dessous que la clientèle Adobe Experience Platform peut résoudre.
+Pour mieux comprendre comment et à quel moment utiliser la variable [!DNL Pinterest Customer List] destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 
 ### Cas d’utilisation 1
 
