@@ -4,10 +4,10 @@ title: Identités dans Real-time Customer Data Platform
 description: Identity Service d’Adobe Experience Platform vous permet de mieux connaître vos clients et leurs comportements en rapprochant des identités entre appareils et systèmes.
 feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 1d2c67a2015f57238bdbb0e14c676601e092ef5f
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 100%
+source-wordcount: '422'
+ht-degree: 81%
 
 ---
 
@@ -23,9 +23,9 @@ Les espaces de noms d’identité sont des composants d’[!DNL Identity Service
 
 ## Graphiques d’identités
 
-Un graphique d’identités est une carte des relations entre différents espaces de noms d’identité. Il permet de visualiser la façon dont un client interagit avec votre marque sur différents canaux. Tous les graphiques dʼidentité clients sont gérés et mis à jour collectivement par [!DNL Identity Service] en temps quasi réel, en réponse à lʼactivité du client.
+Un graphique d’identités est une carte des relations entre différentes identités, qui vous fournit une représentation visuelle de la manière dont votre client interagit avec votre marque sur différents canaux. Tous les graphiques d’identités client sont gérés et mis à jour collectivement par Identity Service, en réponse à l’activité des clients.
 
-[!DNL Identity Service] gère un graphique d’identité visible par votre entreprise uniquement et basé sur vos données. Il est appelé graphique privé. [!DNL Identity Service] augmente le graphique privé lorsqu’un enregistrement de données ingérées contient plusieurs identités, ajoutant ainsi une relation entre les identités trouvées.
+[!DNL Identity Service] gère un graphique d’identités visible uniquement par votre entreprise et basé sur vos données. [!DNL Identity Service] augmente le graphique lorsqu’un enregistrement de données ingéré contient plusieurs identités, ajoutant ainsi une relation entre les identités trouvées.
 
 ## Étapes suivantes
 
