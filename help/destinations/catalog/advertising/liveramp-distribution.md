@@ -2,10 +2,10 @@
 title: LiveRamp - Connexion de distribution
 description: Découvrez comment utiliser le connecteur LiveRamp - Distribution pour orchestrer et activer les audiences précédemment intégrées dans LiveRamp, vers les destinations publicitaires en aval.
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
-source-wordcount: '2716'
-ht-degree: 46%
+source-wordcount: '2722'
+ht-degree: 45%
 
 ---
 
@@ -65,7 +65,7 @@ Une fois les audiences intégrées à LiveRamp, continuez le processus d’activ
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous devez disposer de l’[autorisation de contrôle d’accès](/help/access-control/home.md#permissions) **[!UICONTROL Gérer les destinations]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -136,7 +136,7 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_ampersand_company_name"
 >title="Nom de votre société"
->abstract="Nom de votre société, tel que vous souhaitez le présenter au partenaire de destination. N&#39;utilisez ni espaces ni caractères spéciaux."
+>abstract="Nom de votre société, tel que vous souhaitez le présenter au partenaire de destination. N’utilisez ni espaces ni caractères spéciaux."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
@@ -195,7 +195,7 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 
 * **[!UICONTROL Contrat des termes de destination des données du annonceur]**: saisissez `I AGREE` pour confirmer l’accusé de réception et l’accord avec les termes de données de l’annonceur Disney.
 * **[!UICONTROL Nom du client]**: saisissez le nom de votre société tel que vous souhaitez le présenter au partenaire de destination.
-* **[!UICONTROL Adresse électronique]**: saisissez une adresse électronique liée à un individu. Cette adresse e-mail sert de signature pour l’accord des conditions de données des annonceurs.
+* **[!UICONTROL Adresse électronique]**: saisissez une adresse électronique liée à un individu. Cette adresse électronique sert de signature au contrat de termes de données de l’annonceur.
 
 ### [!DNL iHeartMedia] {#iheartmedia}
 
@@ -215,13 +215,13 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_index_advertiseraccountname"
 >title="Nom de compte"
->abstract="Nom de votre compte clientèle Index Exchange. N&#39;utilisez ni espaces ni caractères spéciaux."
+>abstract="Nom de votre compte clientèle Index Exchange. N’utilisez ni espaces ni caractères spéciaux."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
 ![Image de l’interface utilisateur de Platform montrant les champs de données client pour la destination d’échange d’index.](../../assets/catalog/advertising/liveramp-distribution/LR_IndexExchange_DestSpecific.png)
 
-* **[!UICONTROL Nom du compte]**: nom de votre compte client Index Exchange. N&#39;utilisez ni espaces ni caractères spéciaux.
+* **[!UICONTROL Nom du compte]**: nom de votre compte client Index Exchange. N’utilisez ni espaces ni caractères spéciaux.
 
 ### [!DNL Magnite CTV Platform] {#magnite}
 
@@ -291,13 +291,13 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_fox_client"
 >title="client"
->abstract="Nom de votre société/compte de distribution tel que vous souhaitez le voir apparaître pour le partenaire. Contactez le représentant ou la représentante de votre compte partenaire si vous ne savez pas quel nom utiliser. N&#39;utilisez ni espaces ni caractères spéciaux."
+>abstract="Nom de votre société/compte de distribution tel que vous souhaitez le voir apparaître pour le partenaire. Contactez le représentant ou la représentante de votre compte partenaire si vous ne savez pas quel nom utiliser. N’utilisez ni espaces ni caractères spéciaux."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
 ![Image de l’interface utilisateur de Platform montrant les champs de données client pour la destination One Fox.](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
 
-* **[!UICONTROL Client]**: nom de votre société/compte de distribution tel que vous souhaitez le voir apparaître dans le partenaire. Par défaut, utilisez le nom de votre société. Contactez le représentant ou la représentante de votre compte partenaire si vous ne savez pas quel nom utiliser. N&#39;utilisez ni espaces ni caractères spéciaux.
+* **[!UICONTROL Client]**: nom de votre société/compte de distribution tel que vous souhaitez le voir apparaître dans le partenaire. Par défaut, utilisez le nom de votre société. Contactez le représentant ou la représentante de votre compte partenaire si vous ne savez pas quel nom utiliser. N’utilisez ni espaces ni caractères spéciaux.
 
 ### [!DNL Pandora] {#pandora}
 
@@ -431,7 +431,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin des [autorisations de contrôle d’accès](/help/access-control/home.md#permissions) pour les fonctions **[!UICONTROL Gérer les destinations]**, **[!UICONTROL Activer les destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Afficher les segments]**. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 La variable [!DNL LiveRamp - Distribution] La connexion active les audiences qui ont déjà été intégrées à votre compte LiveRamp via le [LiveRamp - Intégration](liveramp-onboarding.md) connexion.
 

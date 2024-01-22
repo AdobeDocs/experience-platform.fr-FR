@@ -3,10 +3,10 @@ title: Activer les audiences de prospects vers des destinations
 type: Tutorial
 description: Découvrez comment activer les audiences de prospects vers les destinations
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: fdb9d7b168d6323fddaab1ac7abc44d3a390afea
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 28%
+source-wordcount: '619'
+ht-degree: 25%
 
 ---
 
@@ -27,11 +27,11 @@ Accédez à **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, puis s
 ## Conditions préalables {#prerequisites}
 
 * Vous devez d’abord ingérer [profils de prospect](/help/profile/ui/prospect-profile.md) et créez [audiences prospects](/help/segmentation/ui/prospect-audience.md) avant de pouvoir les activer vers les destinations en aval.
-* Pour activer les audiences de prospects vers les destinations, vous devez avoir réussi à vous connecter à une destination. Si vous ne l’avez pas déjà fait, accédez au [catalogue de destinations](../catalog/overview.md), parcourez les destinations prises en charge et configurez la destination que vous souhaitez utiliser. Lisez le tutoriel de l’interface utilisateur sur [connexion aux destinations](./connect-destination.md) pour plus d’informations.
+* Pour activer les audiences de prospects vers les destinations, vous devez avoir réussi à vous connecter à une destination. Si vous ne l’avez pas déjà fait, accédez au [destinations](../catalog/overview.md), parcourez les destinations prises en charge et configurez la destination que vous souhaitez utiliser. Lisez le tutoriel de l’interface utilisateur sur [connexion aux destinations](./connect-destination.md) pour plus d’informations.
 
 ### Autorisations nécessaires {#permissions}
 
-Pour activer les audiences de prospects, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+Pour activer les audiences de prospects, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Activation des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour vous assurer que vous disposez des autorisations nécessaires pour activer les audiences du prospect, parcourez le catalogue des destinations. Si une destination comporte une variable **[!UICONTROL Activer]** contrôlez, puis vous disposez des autorisations appropriées.
 

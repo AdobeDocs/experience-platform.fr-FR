@@ -5,10 +5,10 @@ description: Découvrez comment activer les audiences de compte vers les destina
 badgeLimitedAvailability: label="Disponibilité limitée" type="Caution"
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 0a572c5fe612b8e0cc866b4e2287ea53a4022b1a
+source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 10%
+source-wordcount: '827'
+ht-degree: 7%
 
 ---
 
@@ -29,11 +29,11 @@ Accédez à **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, puis s
 ## Conditions préalables {#prerequisites}
 
 * Vous devez d’abord ingérer [profils de compte](/help/rtcdp/accounts/account-profile-overview.md) et créez [audiences de compte](/help/segmentation/ui/account-audiences.md) avant de pouvoir les activer vers les destinations en aval.
-* Pour activer les audiences du compte vers des destinations, vous devez avoir réussi à vous connecter à une destination. Si vous ne l’avez pas déjà fait, accédez au [catalogue de destinations](../catalog/overview.md), parcourez les destinations prises en charge et configurez la destination que vous souhaitez utiliser. Lisez le tutoriel de l’interface utilisateur sur [connexion aux destinations](./connect-destination.md) pour plus d’informations.
+* Pour activer les audiences du compte vers des destinations, vous devez avoir réussi à vous connecter à une destination. Si vous ne l’avez pas déjà fait, accédez au [destinations](../catalog/overview.md), parcourez les destinations prises en charge et configurez la destination que vous souhaitez utiliser. Lisez le tutoriel de l’interface utilisateur sur [connexion aux destinations](./connect-destination.md) pour plus d’informations.
 
 ### Autorisations nécessaires {#permissions}
 
-Pour activer les audiences de compte, vous avez besoin de l’événement **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+Pour activer les audiences de compte, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Activation des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour vous assurer que vous disposez des autorisations nécessaires pour activer les audiences de compte, parcourez le catalogue des destinations. Si une destination comporte une variable **[!UICONTROL Activer]** contrôlez, puis vous disposez des autorisations appropriées.
 
