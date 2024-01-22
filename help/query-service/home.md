@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de Query Service
 description: Découvrez le rôle de Query Service dans Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: e06519978ed9c6128be53a15cef3046a0dbc2a16
+source-git-commit: ad1827284b7070f73421d10c49e1e86e282839eb
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 25%
@@ -29,7 +29,7 @@ Query Service interagit et peut être utilisé avec plusieurs services Experienc
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 
-Adobe Experience Platform [!DNL Data Science Workspace] utilise l’apprentissage automatique et l’intelligence artificielle pour obtenir des informations à partir des données stockées dans Experience Platform. Les spécialistes des données peuvent utiliser la variable [!DNL Data Science Workspace] pour créer des recettes basées sur des données d’enregistrement et de série temporelle concernant les clients et leurs activités. Ces recettes facilitent les prédictions telles que la propension à acheter et les offres recommandées que l’individu est susceptible d’apprécier et d’utiliser. Vous pouvez utiliser SQL dans [!DNL Data Science Workspace] en intégrant Query Service à [!DNL JupyterLab] pour explorer, transformer et analyser les données Adobe Analytics. Lisez la section [[!DNL Data Science Workspace] aperçu](../data-science-workspace/home.md) et la variable [Guide de connexion Jypiter Notebook](./clients/jupyter-notebook.md) pour plus d’informations sur la manière dont [!DNL Data Science Workspace] interagit avec Query Service.
+Adobe Experience Platform [!DNL Data Science Workspace] utilise l’apprentissage automatique et l’intelligence artificielle pour obtenir des informations à partir des données stockées dans Experience Platform. Les spécialistes des données peuvent utiliser la variable [!DNL Data Science Workspace] pour créer des recettes basées sur des données d’enregistrement et de série temporelle concernant les clients et leurs activités. Ces recettes facilitent les prédictions telles que la propension à acheter et les offres recommandées que l’individu est susceptible d’apprécier et d’utiliser. Vous pouvez utiliser SQL dans [!DNL Data Science Workspace] en intégrant Query Service à [!DNL JupyterLab] pour explorer, transformer et analyser les données Adobe Analytics. Lisez la section [[!DNL Data Science Workspace] aperçu](../data-science-workspace/home.md) et la variable [Guide de connexion Jupyter Notebook](./clients/jupyter-notebook.md) pour plus d’informations sur la manière dont [!DNL Data Science Workspace] interagit avec Query Service.
 
 ### [!DNL Segmentation Service] {#segmentation}
 
