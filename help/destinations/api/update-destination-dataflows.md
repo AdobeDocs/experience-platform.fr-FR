@@ -5,10 +5,10 @@ title: Mettre à jour des flux de données de destination à l’aide de l’API
 type: Tutorial
 description: Ce tutoriel décrit les étapes de mise à jour d’un flux de données de destination. Découvrez comment activer ou désactiver le flux de données, mettre à jour ses informations de base ou ajouter et supprimer des audiences et des attributs à l’aide de l’API Flow Service.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
+source-git-commit: c1d4a0586111d9cd8a66f4239f67f2f7e6ac8633
 workflow-type: tm+mt
-source-wordcount: '2408'
-ht-degree: 35%
+source-wordcount: '2404'
+ht-degree: 33%
 
 ---
 
@@ -26,7 +26,7 @@ Pour suivre ce tutoriel, vous devez disposer d’un identifiant de flux valide. 
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. ](../home.md)[!DNL Destinations] Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+* [Destinations](../home.md): [!DNL Destinations] sont des intégrations prédéfinies avec des plateformes de destination qui permettent l’activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 * [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour mettre à jour votre flux de données avec succès à l’aide de la variable [!DNL Flow Service] API.
@@ -499,12 +499,12 @@ curl -X PATCH \
 | `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
 | `id` | Indiquez l’identifiant de l’audience que vous ajoutez au flux de données de destination. |
 | `name` | **(Facultatif)**. Indiquez le nom de l’audience que vous ajoutez au flux de données de destination. Notez que ce champ n’est pas obligatoire et que vous pouvez ajouter une audience au flux de données de destination sans fournir son nom. |
-| `filenameTemplate` | Pour *destinations par lot* uniquement. Ce champ n’est requis que lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots comme Amazon S3, SFTP ou Azure Blob. <br> Ce champ détermine le format du nom des fichiers exportés vers votre destination. <br>Les options suivantes sont disponibles :<br> <ul><li>`%DESTINATION_NAME%` : obligatoire. Les fichiers exportés contiennent le nom de destination.</li><li>`%SEGMENT_ID%` : obligatoire. Les fichiers exportés contiennent l&#39;identifiant de l&#39;audience exportée.</li><li>`%SEGMENT_NAME%`: **(Facultatif)**. Les fichiers exportés contiennent le nom de l’audience exportée.</li><li>`DATETIME(YYYYMMdd_HHmmss)` ou `%TIMESTAMP%`: **(Facultatif)**. Sélectionnez l’une de ces deux options pour que vos fichiers incluent l’heure à laquelle ils sont générés par Experience Platform.</li><li>`custom-text`: **(Facultatif)**. Remplacez cet espace réservé par tout texte personnalisé que vous souhaitez ajouter à la fin de vos noms de fichier.</li></ul> <br> Pour plus d’informations sur la configuration des noms de fichier, reportez-vous à la section [Configurer des noms de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) dans le tutoriel consacré à l’activation des destinations par lot. |
+| `filenameTemplate` | Pour *destinations par lot* uniquement. Ce champ n’est requis que lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots comme Amazon S3, SFTP ou Azure Blob. <br> Ce champ détermine le format du nom de fichier des fichiers exportés vers votre destination. <br>Les options suivantes sont disponibles :<br> <ul><li>`%DESTINATION_NAME%` : obligatoire. Les fichiers exportés contiennent le nom de destination.</li><li>`%SEGMENT_ID%` : obligatoire. Les fichiers exportés contiennent l&#39;identifiant de l&#39;audience exportée.</li><li>`%SEGMENT_NAME%`: **(Facultatif)**. Les fichiers exportés contiennent le nom de l’audience exportée.</li><li>`DATETIME(YYYYMMdd_HHmmss)` ou `%TIMESTAMP%`: **(Facultatif)**. Sélectionnez l’une de ces deux options pour que vos fichiers incluent l’heure à laquelle ils sont générés par Experience Platform.</li><li>`custom-text`: **(Facultatif)**. Remplacez cet espace réservé par tout texte personnalisé que vous souhaitez ajouter à la fin de vos noms de fichier.</li></ul> <br> Pour plus d’informations sur la configuration des noms de fichier, reportez-vous à la section [Configurer des noms de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) dans le tutoriel consacré à l’activation des destinations par lot. |
 | `exportMode` | Pour *destinations par lot* uniquement. Ce champ n’est requis que lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots comme Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. |
 | `startDate` | Sélectionnez la date à laquelle l’audience doit commencer à exporter les profils vers votre destination. |
 | `frequency` | Pour *destinations par lot* uniquement. Ce champ n’est requis que lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots comme Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. <br> <ul><li>Pour le mode d’exportation `"DAILY_FULL_EXPORT"`, vous pouvez sélectionner `ONCE` ou `DAILY`.</li><li>Pour le mode d’exportation `"FIRST_FULL_THEN_INCREMENTAL"`, vous pouvez sélectionner `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"` ou `"EVERY_12_HOURS"`.</li></ul> |
 | `triggerType` | Pour *destinations par lot* uniquement. Ce champ est obligatoire uniquement lors de la sélection de la variable `"DAILY_FULL_EXPORT"` dans le `frequency` sélecteur. <br> Obligatoire. <br> <ul><li>Sélectionner `"AFTER_SEGMENT_EVAL"` pour que la tâche d’activation s’exécute immédiatement une fois la tâche de segmentation par lots quotidienne de Platform terminée. Ainsi, lorsque la tâche d’activation s’exécute, les profils les plus récents sont exportés vers votre destination.</li><li>Sélectionner `"SCHEDULED"` pour que la tâche d’activation s’exécute à un moment donné. Cela permet de garantir que les données de profil Experience Platform sont exportées simultanément chaque jour, mais les profils que vous exportez peuvent ne pas être les plus à jour, selon que la tâche de segmentation par lots est terminée ou non avant le début de la tâche d’activation. Lorsque vous sélectionnez cette option, vous devez également ajouter une `startTime` pour indiquer à quel moment en UTC les exportations quotidiennes doivent avoir lieu.</li></ul> |
-| `endDate` | Pour *destinations par lot* uniquement. Ce champ n’est requis que lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots comme Amazon S3, SFTP ou Azure Blob. <br> Non applicable lors de la sélection de `"exportMode":"DAILY_FULL_EXPORT"` et `"frequency":"ONCE"`. <br> Définit la date à laquelle les membres de l’audience cessent d’être exportés vers la destination. |
+| `endDate` | Pour *destinations par lot* uniquement. Ce champ n’est requis que lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots comme Amazon S3, SFTP ou Azure Blob. <br> Non applicable lors de la sélection `"exportMode":"DAILY_FULL_EXPORT"` et `"frequency":"ONCE"`. <br> Définit la date à laquelle les membres de l’audience cessent d’être exportés vers la destination. |
 | `startTime` | Pour *destinations par lot* uniquement. Ce champ n’est requis que lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots comme Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. Sélectionnez l’heure à laquelle les fichiers contenant des membres de l’audience doivent être générés et exportés vers votre destination. |
 
 **Réponse**
@@ -543,7 +543,7 @@ curl -X PATCH \
     -d '[
 {
    "op":"remove",
-   "path":"transformations/0/params/segmentSelectors/selectors/0/",
+   "path":"/transformations/0/params/segmentSelectors/selectors/0",
    "value":{
       "type":"PLATFORM_SEGMENT",
       "value":{
@@ -552,7 +552,7 @@ curl -X PATCH \
 },
 {
    "op":"remove",
-   "path":"transformations/0/params/segmentSelectors/selectors/1/",
+   "path":"/transformations/0/params/segmentSelectors/selectors/1",
    "value":{
       "type":"PLATFORM_SEGMENT",
       "value":{
@@ -565,7 +565,7 @@ curl -X PATCH \
 | Propriété | Description |
 | --------- | ----------- |
 | `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour supprimer une audience d’un flux de données, utilisez la méthode `remove` opération. |
-| `path` | Spécifie l’audience existante à supprimer du flux de données de destination, en fonction de l’index du sélecteur d’audience. Pour récupérer l’ordre des audiences dans un flux de données, effectuez un appel GET à la fonction `/flows` et inspecter la variable `transformations.segmentSelectors` . Pour supprimer la première audience du flux de données, utilisez `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
+| `path` | Spécifie l’audience existante à supprimer du flux de données de destination, en fonction de l’index du sélecteur d’audience. Pour récupérer l’ordre des audiences dans un flux de données, effectuez un appel GET à la fonction `/flows` et inspecter la variable `transformations.segmentSelectors` . Pour supprimer la première audience du flux de données, utilisez `"path":"/transformations/0/params/segmentSelectors/selectors/0"`. |
 
 
 **Réponse**
