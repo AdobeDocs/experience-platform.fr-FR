@@ -3,10 +3,10 @@ solution: Experience Platform
 title: API Media Edge
 description: Vue d’ensemble des API Media Edge
 exl-id: 55c952de-caab-4301-acf2-f7b64cebbb1c
-source-git-commit: 034498e662ed55112f22751d44cf3ecf75d38d61
+source-git-commit: b247790a155c04301215b03dad2f2765a1afd8fe
 workflow-type: tm+mt
 source-wordcount: '331'
-ht-degree: 92%
+ht-degree: 85%
 
 ---
 
@@ -42,7 +42,7 @@ Le tableau suivant présente un service possible d’API Adobe pour divers cas d
 
 >[!NOTE]
 >
-> Le service d’API Media Collection pour Analytics reçoit toujours des données XDM mais n’est pas optimisé dans la mesure où le service Media Edge l’est. Selon les données envoyées à partir du lecteur multimédia, certaines données Analytics uniquement peuvent également être acheminées via le service d’API Media Edge.
+> Le service d’API Media Collection pour Analytics reçoit toujours des données XDM, mais n’est pas optimisé dans la mesure où le service Media Edge l’est. Selon les données envoyées à partir du lecteur multimédia, certaines données Analytics uniquement peuvent également être acheminées via le service d’API Media Edge.
 
 Le graphique suivant montre les flux de données des deux services d’API :
 
