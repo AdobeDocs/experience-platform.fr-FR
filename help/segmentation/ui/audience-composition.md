@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
 description: La Composition d’audience dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 5262b5e894cc6bfa2db79afcda8bfda4b496f7d5
+source-git-commit: e8f838c3cf8988f6028901df76ed040e7f08cb98
 workflow-type: tm+mt
-source-wordcount: '1789'
-ht-degree: 97%
+source-wordcount: '1844'
+ht-degree: 94%
 
 ---
 
@@ -115,6 +115,10 @@ Si vous excluez par attribut, vous pouvez sélectionner les attributs à exclure
 Une liste d’attributs de profil s’affiche. Sélectionnez le type d’attribut à exclure, puis **[!UICONTROL Sélectionner]** pour l’ajouter à votre bloc d’exclusion.
 
 ![Une liste d’attributs s’affiche.](../images/ui/audience-composition/select-attribute-exclude.png)
+
+>[!IMPORTANT]
+>
+>Lorsque vous excluez par attribut, vous pouvez uniquement spécifier **one** à exclure. L’utilisation de n’importe quel séparateur, tel qu’une virgule ou un point-virgule, n’entraîne que l’exclusion de cette valeur exacte. Par exemple, la définition de la valeur sur `red, blue` se traduira par l’exclusion du terme `red, blue` à partir de l’attribut , mais **not** en excluant soit le terme `red` ou `blue`.
 
 ## [!UICONTROL Enrichir] {#enrich-block}
 

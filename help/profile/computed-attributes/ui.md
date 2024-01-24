@@ -2,10 +2,10 @@
 title: Guide de l’interface utilisateur des attributs calculés
 description: Découvrez comment créer, afficher et mettre à jour des attributs calculés à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: cf01c18c8ea710492c8a2c8542c8a4580d5f0dcf
+source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
 workflow-type: tm+mt
-source-wordcount: '1567'
-ht-degree: 12%
+source-wordcount: '1576'
+ht-degree: 8%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 12%
 >
 >Pour accéder aux attributs calculés, vous devez disposer des autorisations appropriées (**Affichage des attributs calculés** et **Gestion des attributs calculés**). Pour plus d’informations sur les autorisations requises, consultez la section [documentation sur le contrôle d’accès](../../access-control/home.md). Pour savoir comment appliquer ces autorisations, veuillez lire le [guide de gestion des autorisations](../../access-control/ui/permissions.md).
 
-Dans Adobe Experience Platform, les attributs calculés sont des fonctions utilisées pour agréger les données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation.
+Dans Adobe Experience Platform, les attributs calculés sont des fonctions utilisées pour agréger les données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées pour la segmentation, l’activation et la personnalisation.
 
 Ce document fournit un guide sur la création et la mise à jour des attributs calculés à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
@@ -112,7 +112,7 @@ Lors de l’application de la fonction d’agrégation, vous pouvez activer une 
 
 ![La variable [!UICONTROL Actualisation rapide] est mise en surbrillance.](./images/ui/enable-fast-refresh.png)
 
-Une actualisation rapide vous permet de garder vos attributs à jour. L’activation de cette option vous permet d’actualiser quotidiennement vos attributs calculés, même pour des périodes de recherche en amont plus longues, ce qui vous permet de réagir rapidement aux activités de l’utilisateur ou de l’utilisatrice.
+Une actualisation rapide vous permet de garder vos attributs à jour. L’activation de cette option vous permet d’actualiser quotidiennement vos attributs calculés, même pour des périodes de recherche en amont plus longues, ce qui vous permet de réagir rapidement aux activités de l’utilisateur.
 
 Pour plus d’informations sur l’actualisation rapide, veuillez lire la section [section actualisation rapide](./overview.md#fast-refresh) de la présentation des attributs calculés.
 
@@ -156,8 +156,12 @@ Lors de la sélection d’un attribut calculé de version préliminaire, la vari
 
 Après avoir créé un attribut calculé, vous pouvez utiliser **publié** attributs calculés dans d’autres services en aval. Les attributs calculés étant des champs d’attribut de profil créés dans votre schéma d’union de profil, vous pouvez rechercher des valeurs d’attribut calculées pour un profil client en temps réel, les utiliser dans une audience, les activer vers une destination ou les utiliser pour la personnalisation dans parcours dans Adobe Journey Optimizer.
 
+>[!NOTE]
+>
+>Attributs calculés **cannot** être utilisé dans l’audience **compositions**.
+
 ![Le créateur de segments s’affiche, présentant un attribut calculé dans le cadre de la composition des définitions de segment.](./images/ui/use-ca.png)
 
 ## Étapes suivantes
 
-Pour en savoir plus sur les attributs calculés, veuillez lire la [Vue d’ensemble sur les attributs calculés](./overview.md). Pour plus d’informations sur la création et la configuration des attributs calculés à l’aide de l’API, veuillez lire le [guide de développement des attributs calculés](./api.md).
+Pour en savoir plus sur les attributs calculés, veuillez lire le [présentation des attributs calculés](./overview.md). Pour plus d’informations sur la création et la configuration des attributs calculés à l’aide de l’API, veuillez lire le [guide de développement des attributs calculés](./api.md).
