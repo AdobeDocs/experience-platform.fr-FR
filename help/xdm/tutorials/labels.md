@@ -2,10 +2,10 @@
 title: Gestion des étiquettes d’utilisation des données pour un schéma
 description: Découvrez comment ajouter des libellés d’utilisation des données aux champs de schéma du modèle de données d’expérience (XDM) dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 6fe11b909369797e96d8fa52542ebd5761a27b03
+source-git-commit: 27842e7e07b6fc5884587fb75cc89bcfb4320938
 workflow-type: tm+mt
-source-wordcount: '806'
-ht-degree: 10%
+source-wordcount: '913'
+ht-degree: 9%
 
 ---
 
@@ -39,6 +39,12 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 >id="platform_schemas_editgovernancelabels"
 >title="Modifier les libellés de gouvernance"
 >abstract="Appliquez un libellé à un champ de schéma pour indiquer les stratégies d&#39;utilisation qui s&#39;appliquent aux données contenues dans ce champ."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_labelusageacknowledgement"
+>title="Utilisation des libellés"
+>abstract="Avant de modifier les libellés de cet objet, prenez note des effets en aval suivants :<br>Stratégies de gouvernance : utilisez des étiquettes pour déterminer si les données peuvent être activées vers les destinations en aval. Une utilisation incorrecte des libellés peut empêcher l’accès des données en aval.<br>Stratégies de consentement : utilisez des étiquettes pour appliquer les consentements et les préférences des clients lors de l’inclusion de profils dans des segments. Une utilisation incorrecte des libellés peut empêcher l’accès des données en aval.<br>Stratégie d’accès : le contrôle d’accès basé sur les attributs utilise des étiquettes pour déterminer les rôles utilisateur pouvant accéder à des ressources spécifiques. Une utilisation inattendue des libellés peut empêcher certaines personnes de votre entreprise d’utiliser des ressources auxquelles elles avaient auparavant accès."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/overview.html?lang=fr" text="Présentation du contrôle d’accès basé sur les attributs"
 
 Pour commencer à ajouter des libellés, vous devez d’abord [sélectionner un schéma existant à modifier ;](../ui/resources/schemas.md#edit) ou [créer un nouveau schéma ;](../ui/resources/schemas.md#create) pour afficher sa structure dans l’éditeur de schémas.
 
