@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires;service de requête;s
 title: Options SSL de Query Service
 description: Découvrez la prise en charge du protocole SSL pour les connexions tierces à Adobe Experience Platform Query Service et comment vous connecter à l’aide du mode SSL vérification-full.
 exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
-source-git-commit: 75e97efcb68439f1b837af93b62c96f43e5d7a31
+source-git-commit: 229ce98da8f1c97e421ef413826b0d23754d16df
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '1017'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ Les différentes `sslmode` les valeurs de paramètre offrent différents niveaux
 >
 > La valeur SSL `disable` n’est pas pris en charge par Adobe Experience Platform en raison de la conformité requise en matière de protection des données.
 
-| sslmode | Protection des écouteurs | Protection MITM | Description |
+| sslmode | Protection contre les écoutes | Protection MITM | Description |
 |---|---|---|---|
 | `allow` | Partiel | Non | La sécurité n’est pas une priorité, la vitesse et une faible surcharge de traitement sont plus importantes. Ce mode opte uniquement pour le cryptage si le serveur insiste dessus. |
 | `prefer` | Partiel | Non | Le chiffrement n’est pas nécessaire, mais la communication sera chiffrée si le serveur le prend en charge. |
@@ -40,9 +40,13 @@ Les différentes `sslmode` les valeurs de paramètre offrent différents niveaux
 >
 >La différence entre `verify-ca` et `verify-full` dépend de la stratégie de l’autorité de certification racine (CA). Si vous avez créé votre propre autorité de certification locale pour émettre des certificats privés pour vos applications, utilisez `verify-ca` offre souvent une protection suffisante. Si vous utilisez une autorité de certification publique, `verify-ca` permet les connexions à un serveur que quelqu’un d’autre peut avoir enregistré auprès de l’autorité de certification. `verify-full` doit toujours être utilisé avec une autorité de certification racine publique.
 
-Lors de l’établissement d’une connexion tierce à une base de données Platform, il est recommandé d’utiliser `sslmode=require` au minimum pour garantir une connexion sécurisée pour vos données en cours. Le `verify-full` Le mode SSL est recommandé pour une utilisation dans la plupart des environnements sensibles à la sécurité.
+Lors de l’établissement d’une connexion tierce à une base de données Platform, il est recommandé d’utiliser `sslmode=require` au minimum pour garantir une connexion sécurisée pour vos données en cours. La variable `verify-full` Le mode SSL est recommandé pour une utilisation dans la plupart des environnements sensibles à la sécurité.
 
 ## Configuration d’un certificat racine pour la vérification du serveur {#root-certificate}
+
+>[!IMPORTANT]
+>
+>Les certificats TLS/SSL sur les environnements de production pour l’API Postgres interactives de Query Service ont été actualisés le mercredi 24 janvier 2024.<br>Bien qu’il s’agisse d’une exigence annuelle, le certificat racine dans la chaîne a également changé à mesure que le fournisseur de certificats TLS/SSL de l’Adobe a mis à jour sa hiérarchie de certificats. Cela peut avoir un impact sur certains clients Postgres si leur liste d’autorités de certification ne comporte pas le certificat racine. Par exemple, un client de ligne de commande PSQL peut avoir besoin que les certs racine soient ajoutés à un fichier explicite. `~/postgresql/root.crt`, sinon cela peut entraîner une erreur. Par exemple : `psql: error: SSL error: certificate verify failed`. Voir [documentation officielle de PostgreSQL](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) pour plus d’informations sur ce problème.<br>Le certificat racine à ajouter peut être téléchargé à partir de [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
 
 Pour garantir une connexion sécurisée, l’utilisation du protocole SSL doit être configurée sur le client et sur le serveur avant que la connexion ne soit établie. Si le protocole SSL est uniquement configuré sur le serveur, le client peut envoyer des informations sensibles telles que des mots de passe avant qu’il ne soit établi que le serveur requiert une sécurité élevée.
 
@@ -61,7 +65,7 @@ Si vous avez besoin d’un contrôle de sécurité plus strict que `sslmode=requ
 >De nombreuses options sont disponibles pour obtenir un certificat SSL. En raison d’une tendance croissante des certificats frauduleux, DigiCert est utilisé dans ce guide, car il s’agit d’un fournisseur mondial de confiance de solutions TLS/SSL, PKI, IoT et de signature haute assurance.
 
 1. Accédez à [la liste des certificats racine DigiCert disponibles ;](https://www.digicert.com/kb/digicert-root-certificates.htm)
-1. Recherchez &quot;[!DNL DigiCert Global Root CA]&quot; dans la liste des certificats disponibles.
+1. Recherchez &quot;[!DNL DigiCert Global Root G2]&quot; dans la liste des certificats disponibles.
 1. Sélectionner [!DNL **Télécharger PEM**] pour télécharger le fichier sur votre ordinateur local.
    ![La liste des certificats racine DigiCert disponibles avec l’option Télécharger PEM mise en surbrillance.](../images/clients/ssl-modes/digicert.png)
 1. Renommez le fichier de certificat de sécurité en `root.crt`.
@@ -73,7 +77,7 @@ Si vous avez besoin d’un contrôle de sécurité plus strict que `sslmode=requ
 >
 >Pour rechercher votre `%appdata%` emplacement du fichier sur un système d’exploitation Windows, appuyez sur ⊞ **Win + R** et entrée `%appdata%` dans le champ de recherche.
 
-Après la [!DNL DigiCert Global Root CA] Le fichier CRT est disponible dans votre [!DNL PostgreSQL] dossier auquel vous pouvez vous connecter [!DNL Query Service] en utilisant la variable `sslmode=verify-full` ou `sslmode=verify-ca` .
+Après la [!DNL DigiCert Global Root G2] Le fichier CRT est disponible dans votre [!DNL PostgreSQL] dossier, auquel vous pouvez vous connecter [!DNL Query Service] en utilisant la variable `sslmode=verify-full` ou `sslmode=verify-ca` .
 
 ## Étapes suivantes
 

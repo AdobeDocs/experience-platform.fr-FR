@@ -4,16 +4,20 @@ solution: Experience Platform
 title: Connexion des clients à Query Service
 description: Ce document explique comment se connecter à Query Service à partir de diverses applications clientes de bureau et comment vérifier ces connexions.
 exl-id: 2ba20179-5adb-4259-a120-231a40e78054
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: 778c65c6310ed4a627be0fd3ae076784cfc8495b
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 25%
+source-wordcount: '229'
+ht-degree: 3%
 
 ---
 
 # Connexion des clients à [!DNL Query Service]
 
-Cette section explique comment se connecter à [!DNL Query Service] depuis diverses applications clientes de bureau et comment vérifier ces connexions. [!DNL Query Service] utilise le protocole , c’est pourquoi les instructions de cette section expliquent comment utiliser les outils et les pilots pour se connecter et écrire des requêtes.[!DNL PostgreSQL][!DNL PostgreSQL]
+Cette section explique comment se connecter à [!DNL Query Service] depuis diverses applications clientes de bureau et comment vérifier ces connexions. [!DNL Query Service] utilise la variable [!DNL PostgreSQL] , donc les instructions de cette section expliquent comment utiliser [!DNL PostgreSQL] outils et pilotes pour se connecter et écrire des requêtes.
+
+>[!IMPORTANT]
+>
+>Les certificats TLS/SSL sur les environnements de production pour l’API Postgres interactives de Query Service ont été actualisés le mercredi 24 janvier 2024.<br>Bien qu’il s’agisse d’une exigence annuelle, le certificat racine dans la chaîne a également changé à mesure que le fournisseur de certificats TLS/SSL de l’Adobe a mis à jour sa hiérarchie de certificats. Cela peut avoir un impact sur certains clients Postgres si leur liste d’autorités de certification ne comporte pas le certificat racine. Par exemple, un client de ligne de commande PSQL peut avoir besoin que les certs racine soient ajoutés à un fichier explicite. `~/postgresql/root.crt`, sinon cela peut entraîner une erreur. Par exemple : `psql: error: SSL error: certificate verify failed`. Voir [documentation officielle de PostgreSQL](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) pour plus d’informations sur ce problème.<br>Le certificat racine à ajouter peut être téléchargé à partir de [https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem).
 
 Les instructions concernent les clients suivants :
 
