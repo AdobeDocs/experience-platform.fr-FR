@@ -4,10 +4,10 @@ title: Page d’accueil et tableaux de bord Real-time Customer Data Platform
 description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: f7f49e4158f3aa95c3e96d3687642392e237aabc
 workflow-type: tm+mt
-source-wordcount: '802'
-ht-degree: 17%
+source-wordcount: '850'
+ht-degree: 7%
 
 ---
 
@@ -32,7 +32,13 @@ La variable [!UICONTROL Prise en main de Real-time Customer Profile] Le widget e
 
 ![Page d’accueil de l’interface utilisateur de Platform affichant le widget de prise en main](assets/platform-home/getting-started-widget.png)
 
-## Tableau de bord des mesures
+## Tableau de bord des mesures {#metrics-dashboard}
+
+>[!CONTEXTUALHELP]
+>id="platform_home_metrics_totalProfiles"
+>title="Nombre total de profils"
+>abstract="Nombre total de profils de votre organisation dans Experience Platform. Ce nombre est basé sur la stratégie de fusion de votre organisation et n’inclut pas les fragments de profil. Le nombre de profils est mis à jour une fois toutes les 24 heures."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count" text="En savoir plus dans la documentation."
 
 Le tableau de bord des mesures affiche des informations à jour sur les données de votre Experience Platform. Le tableau de bord est divisé en deux sections :
 
@@ -44,7 +50,7 @@ Le tableau de classement indique le nombre total actuel de schémas, de jeux de 
 
 * **Schémas totaux**: la variable **Total des schémas** compteur affiche le nombre de schémas dans le système. Ce compteur est mis à jour lors de la création d’un schéma. Pour plus d’informations, consultez la section [présentation des schémas](../xdm/home.md).
 * **Nombre total de jeux de données**: la variable **Jeux de données totaux** Le compteur affiche le nombre de jeux de données dans le système et la quantité de données dans [!DNL Platform]. Ce compteur est mis à jour lors de la création d’un jeu de données. Pour plus d’informations sur les jeux de données, consultez la section [présentation des jeux de données](../catalog/datasets/overview.md).
-* **Profils totaux**: la variable **Profils** count affiche le nombre total de personnes avec des profils dans la variable [!DNL Real-Time Customer Profile]. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale. Ce compte utilise la [politique de fusion](profile/merge-policies.md) par défaut telle que définie dans la configuration de la politique de fusion du profil unifié. Le nombre de profils est mis à jour une fois toutes les 24 heures. Pour plus d’informations sur les profils, consultez la [Présentation de Real-Time Customer Profile](../profile/home.md).
+* **Profils totaux**: la variable **Profils** count indique le nombre total de profils de votre organisation dans Experience Platform. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale. Ce comptage utilise la valeur par défaut [stratégie de fusion](profile/merge-policies.md) comme défini dans la configuration de la stratégie de fusion de Real-Time Customer Profile. Le nombre de profils est mis à jour une fois toutes les 24 heures. Pour plus d’informations sur les profils, consultez la [Présentation de Real-Time Customer Profile](../profile/home.md).
 * **Segments totaux**: **Segments** affiche le nombre total de segments créés pour l’organisation. Ce nombre est mis à jour lors de la création de segments. Pour plus d’informations sur les segments, consultez la section [Présentation de Segmentation Service](../segmentation/home.md).
 
 ### Éléments récents
