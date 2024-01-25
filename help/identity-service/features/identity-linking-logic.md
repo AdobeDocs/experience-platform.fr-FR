@@ -2,9 +2,9 @@
 title: Logique de liaison d’Identity Service
 description: Découvrez comment Identity Service relie des identités disparates pour créer une vue d’ensemble complète d’un client.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 45170c78b9d15c7cc9d71f2d0dab606ea988a783
+source-git-commit: 2b6700b2c19b591cf4e60006e64ebd63b87bdb2a
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '980'
 ht-degree: 1%
 
 ---
@@ -17,6 +17,17 @@ Deux types d’identités sont liés :
 
 * **Enregistrements de profil**: ces identités proviennent généralement de systèmes CRM.
 * **Événements d’expérience**: ces identités proviennent généralement de la mise en oeuvre de WebSDK ou de la source Adobe Analytics.
+
+## Signification sémantique de l’établissement de liens
+
+Une identité représente une entité réelle. S’il existe un lien établi entre deux identités, cela signifie que les deux identités sont associées l’une à l’autre. Voici quelques exemples illustrant ce concept :
+
+| Action | Liens établis | Signification |
+| --- | --- | --- |
+| Un utilisateur final se connecte à l’aide d’un ordinateur. | L’identifiant CRM et l’ECID sont liés. | Une personne (identifiant CRM) possède un appareil avec un navigateur (ECID). |
+| Un utilisateur final navigue anonymement à l’aide d’iPhone . | IDFA est lié à ECID. | L’appareil matériel Apple (IDFA), tel qu’iPhone, est associé au navigateur (ECID). |
+| Un utilisateur final se connecte à l’aide de Google Chrome, puis de Firefox. | L’identifiant CRM est lié à deux ECID différents. | Une personne (identifiant CRM) est associée à 2 navigateurs web (**Remarque**: chaque navigateur aura son propre ECID). |
+| Un ingénieur de données ingère un enregistrement CRM qui comprend deux champs marqués comme identité : Identifiant CRM et Courrier électronique. | L&#39;identifiant CRM et l&#39;email sont liés. | Une personne (identifiant CRM) est associée à l’adresse email. |
 
 ## Présentation de la logique de liaison d’Identity Service
 
@@ -85,10 +96,13 @@ Vous avez également implémenté WebSDK et ingéré un jeu de données WebSDK (
 | `t=3` | ECID:44675 | Afficher la page d’accueil |
 | `t=4` | ECID : 44675, ID CRM : 31260XYZ | Afficher l’historique des achats |
 
+L’identité principale de chaque événement est déterminée en fonction de [configuration des types d’éléments de données](../../tags/extensions/client/web-sdk/data-element-types.md).
+
 >[!NOTE]
 >
->* `*` - Indique le champ marqué comme identité, avec ECID marqué comme principal.
->* Par défaut, l’identifiant de personne (dans ce cas, l’identifiant CRM) est désigné comme identité principale. Si l’identifiant de personne n’existe pas, l’identifiant du cookie (dans ce cas, l’ECID) devient l’identité principale.
+>* Si vous sélectionnez l’identifiant CRM comme principal, les événements authentifiés (événements avec carte d’identité contenant l’identifiant CRM et l’ECID) auront une identité principale de l’identifiant CRM. Pour les événements non authentifiés (les événements dont la carte d’identité contient uniquement un ECID) auront une identité principale d’ECID. Adobe recommande cette option.
+>
+>* Si vous sélectionnez l’ECID comme identité principale, quel que soit l’état d’authentification, l’ECID devient l’identité principale.
 
 Dans cet exemple :
 
