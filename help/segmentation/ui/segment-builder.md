@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b028bf86bb8596c6fc97829d6d27eec498c4ef11
 workflow-type: tm+mt
-source-wordcount: '3352'
-ht-degree: 99%
+source-wordcount: '3426'
+ht-degree: 95%
 
 ---
 
@@ -35,7 +35,7 @@ Vous pouvez voir ces blocs de création dans la section **[!UICONTROL Champs]** 
 
 ### Attributs
 
-L’onglet **[!UICONTROL Attributs]** vous permet de parcourir les attributs [!DNL Profile] appartenant à la classe [!DNL XDM Individual Profile]. Chaque dossier peut être développé pour afficher des attributs supplémentaires, où chaque attribut est une mosaïque qui peut être glissée sur le canevas du créateur de règles au centre de l’espace de travail. Le [canevas du créateur de règles](#rule-builder-canvas) est abordé plus en détail dans la suite de ce guide.
+L’onglet **[!UICONTROL Attributs]** vous permet de parcourir les attributs [!DNL Profile] appartenant à la classe [!DNL XDM Individual Profile]. Chaque dossier peut être développé pour afficher des attributs supplémentaires, où chaque attribut est une mosaïque qui peut être glissée sur la zone de travail du créateur de règles au centre de l’espace de travail. La [zone de travail du créateur de règles](#rule-builder-canvas) est abordée plus en détail dans la suite de ce guide.
 
 ![La section Attributs des champs du créateur de segments est mise en surbrillance.](../images/ui/segment-builder/attributes.png)
 
@@ -113,13 +113,13 @@ Vous pouvez passer la souris sur l’option ⓘ située à côté d’une audien
 
 Vous pouvez également rechercher des audiences à l’aide de la barre de recherche, laquelle utilise la [syntaxe de recherche Lucene](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax). Dans l’onglet **[!UICONTROL Audiences]**, si vous sélectionnez un dossier de niveau supérieur, la barre de recherche s’affiche et vous permet de faire une recherche dans ce dossier. Les résultats de la recherche ne commencent à s’afficher que lorsque des mots entiers sont saisis. Par exemple, pour trouver une audience nommée `Online Shoppers`, commencez à taper « Online » dans la barre de recherche. Une fois que le mot « Online » a été complètement saisi, les résultats de la recherche contenant ce mot apparaissent.
 
-## Canevas du créateur de règles {#rule-builder-canvas}
+## Zone de travail du créateur de règles {#rule-builder-canvas}
 
-Une définition de segment est un ensemble de règles utilisées pour décrire les caractéristiques ou les comportements clés d’une audience cible. Ces règles sont créées à l’aide du canevas du créateur de règles, situé au centre du [!DNL Segment Builder].
+Une définition de segment est un ensemble de règles utilisées pour décrire les caractéristiques ou les comportements clés d’une audience cible. Ces règles sont créées à l’aide de la zone de travail du créateur de règles, au centre du [!DNL Segment Builder].
 
-Pour ajouter une nouvelle règle à votre définition de segment, faites glisser une mosaïque depuis l’onglet **[!UICONTROL Champs]** et déposez-la sur le canevas du créateur de règles. Des options spécifiques au contexte vous seront ensuite présentées en fonction du type de données ajouté. Les types de données disponibles sont les suivants : chaînes, dates, [!DNL ExperienceEvents], [!UICONTROL types d’événement], et audiences.
+Pour ajouter une nouvelle règle à votre définition de segment, faites glisser une mosaïque depuis l’onglet **[!UICONTROL Champs]** et déposez-la sur la zone de travail du créateur de règles. Des options spécifiques au contexte vous seront ensuite présentées en fonction du type de données ajouté. Les types de données disponibles sont les suivants : chaînes, dates, [!DNL ExperienceEvents], [!UICONTROL types d’événement], et audiences.
 
-![Canevas du créateur de règles vierge.](../images/ui/segment-builder/rule-builder-canvas.png)
+![Zone de travail du créateur de règles vide.](../images/ui/segment-builder/rule-builder-canvas.png)
 
 >[!IMPORTANT]
 >
@@ -151,7 +151,7 @@ Veuillez noter qu’un maximum de 250 valeurs est autorisé. Si vous dépassez 
 
 ### Ajout d’audiences
 
-Vous pouvez faire glisser une audience depuis l’onglet **[!UICONTROL Audience]** sur le canevas du créateur de règles pour référencer l’appartenance à l’audience dans la nouvelle définition de segment. Cela vous permet d’inclure ou d’exclure l’appartenance à une audience en tant qu’attribut dans les nouvelles règles de définition de segment.
+Vous pouvez faire glisser une audience depuis l’onglet **[!UICONTROL Audience]** sur la zone de travail du créateur de règles pour référencer l’appartenance à l’audience dans la nouvelle définition de segment. Cela vous permet d’inclure ou d’exclure l’appartenance à une audience en tant qu’attribut dans les nouvelles règles de définition de segment.
 
 Pour les [!DNL Platform]audiences créées à l’aide du [!DNL Segment Builder], vous avez la possibilité de convertir l’audience en un ensemble de règles utilisées dans la définition de segment pour cette audience. Cette conversion effectue une copie de la logique de règle, qui peut ensuite être modifiée sans affecter la définition de segment d’origine. Assurez-vous d’avoir enregistré les modifications récentes apportées à votre définition de segment avant de la convertir en logique de règle.
 
@@ -209,7 +209,7 @@ La fonction de comptage est maintenant ajoutée. Vous pouvez maintenant sélecti
 
 Les règles de segmentation sont évaluées dans l’ordre dans lequel elles sont répertoriées. Les conteneurs permettent de contrôler l’ordre d’exécution grâce à l’utilisation de requêtes imbriquées.
 
-Une fois que vous avez ajouté au moins une mosaïque au canevas du créateur de règles, vous pouvez commencer à ajouter des conteneurs. Pour créer un nouveau conteneur, sélectionnez les points de suspension (...) dans le coin supérieur droit du volet, puis sélectionnez **[!UICONTROL Ajouter un conteneur]**.
+Une fois que vous avez ajouté au moins une mosaïque à la zone de travail du créateur de règles, vous pouvez commencer à ajouter des conteneurs. Pour créer un nouveau conteneur, sélectionnez les points de suspension (...) dans le coin supérieur droit du volet, puis sélectionnez **[!UICONTROL Ajouter un conteneur]**.
 
 ![Le bouton « Ajouter un conteneur » est mis en surbrillance, ce qui vous permet d’ajouter un conteneur en tant qu’enfant du premier conteneur.](../images/ui/segment-builder/add-container.png)
 
@@ -265,7 +265,11 @@ Au fur et à mesure que vous continuez à créer votre définition de segment, v
 
 >[!NOTE]
 >
->Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour. S’il y a moins d’un million d’entités dans votre banque de profils, l’ensemble des données est utilisé. Entre 1 et 20 millions d’entités, 1 million d’entités sont utilisées. Et pour plus de 20 millions d’entités, 5 % du total des entités sont utilisés. Vous trouverez plus d’informations sur la génération d’estimations de définitions de segments dans la [section Génération d’estimations](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) du tutoriel sur la création de définitions de segments.
+>Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour. S’il y a moins d’un million d’entités dans votre banque de profils, l’ensemble des données est utilisé ; entre 1 et 20 millions d’entités, 1 million d’entités sont utilisées ; et pour plus de 20 millions d’entités, 5 % du total des entités sont utilisés.
+>
+>En outre, cette estimation est basée sur la date de la dernière exécution de l’exemple de tâche de profil. Cela signifie que si vous utilisez une fonction de date relative telle que &quot;Aujourd’hui&quot; ou &quot;Cette semaine&quot;, l’estimation basera ses calculs sur le dernier exemple de temps d’exécution de tâche de profil. Par exemple, si nous sommes aujourd’hui le 24 janvier et que le dernier exemple de tâche de profil s’est exécuté le 22 janvier, la fonction de date relative &quot;Hier&quot; sera basée sur le 21 janvier et non le 23 janvier.
+>
+>Vous trouverez plus d’informations sur la génération d’estimations de définitions de segments dans la [section Génération d’estimations](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) du tutoriel sur la création de définitions de segments.
 
 Vous pouvez également sélectionner votre méthode d’évaluation. Si vous savez quelle méthode d’évaluation vous voulez utiliser, vous pouvez sélectionner la méthode d’évaluation souhaitée à l’aide de la liste déroulante. Si vous souhaitez savoir pour quels types d’évaluation cette définition de segment est admissible, vous pouvez sélectionner l’icône Parcourir ![icône de dossier avec une loupe](../images/ui/segment-builder/segment-evaluation-select-icon.png) pour voir la liste des méthodes d’évaluation de définition de segment disponibles.
 
@@ -284,7 +288,7 @@ Vous trouverez plus d’informations sur les différentes méthodes d’évaluat
 Le créateur de segments fournit un workflow complet qui vous permet d’isoler les audiences commercialisables des données [!DNL Real-Time Customer Profile]. Après avoir lu ce guide, vous devriez maintenant pouvoir :
 
 - créer des définitions de segment en utilisant une combinaison d’attributs, d’événements et d’audiences existants comme blocs de création ;
-- utiliser les conteneurs et les canevas du créateur de règles pour contrôler l’ordre d’exécution des règles de segmentation ;
+- utiliser les conteneurs et les zones de travail du créateur de règles pour contrôler l’ordre d’exécution des règles de segmentation ;
 - visualiser les estimations de votre audience potentielle, ce qui vous permet d’ajuster vos définitions de segment selon vos besoins ;
 - activer toutes les définitions de segment pour la segmentation planifiée ;
 - activer des définitions de segment spécifiques pour la segmentation par flux.
