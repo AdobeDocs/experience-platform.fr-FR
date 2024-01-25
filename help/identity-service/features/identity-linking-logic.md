@@ -1,22 +1,15 @@
 ---
 title: Logique de liaison d’Identity Service
 description: Découvrez comment Identity Service relie des identités disparates pour créer une vue d’ensemble complète d’un client.
-hide: true
-hidefromtoc: true
-badge: Alpha
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: f21b5519440f7ffd272361954c9e32ccca2ec2bc
+source-git-commit: 45170c78b9d15c7cc9d71f2d0dab606ea988a783
 workflow-type: tm+mt
-source-wordcount: '789'
-ht-degree: 2%
+source-wordcount: '772'
+ht-degree: 1%
 
 ---
 
 # Logique de liaison d’Identity Service
-
->[!IMPORTANT]
->
->Les règles de liaison de graphiques d’identités sont actuellement en Alpha. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
 
 Un lien entre deux identités est établi lorsque l’espace de noms de l’identité et les valeurs d’identité correspondent.
 
