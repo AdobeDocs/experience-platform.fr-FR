@@ -5,7 +5,7 @@ exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
 source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
 workflow-type: tm+mt
 source-wordcount: '1859'
-ht-degree: 7%
+ht-degree: 11%
 
 ---
 
@@ -69,12 +69,12 @@ Les types d’identité personnalisés ne sont pas pris en charge en tant qu’o
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_remove_object"
 >title="Supprimer un objet"
->abstract="Pour supprimer un objet du package, sélectionnez la ligne à supprimer, puis utilisez l’option de suppression, disponible lors de la sélection. Notez que vous ne pouvez pas supprimer des objets des modules publiés."
+>abstract="Pour supprimer un objet du package, sélectionnez la ligne à supprimer, puis utilisez l’option Supprimer, disponible lors de la sélection. Notez que vous ne pouvez pas supprimer des objets de packages publiés."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_package_expiry"
 >title="Paramètres d’expiration du package"
->abstract="Les packages sont définis pour expirer après une période d’inactivité dans le statut de brouillon. La date par défaut est définie sur 90 jours à partir d’aujourd’hui. Cette date continue de changer jusqu’à la publication du package. Si vous consultez le package en état de brouillon demain, la date est déplacée de +1 jour, sauf si vous définissez cela manuellement."
+>abstract="Les packages sont paramétrés pour expirer après une période d’inactivité lorsqu’ils sont au statut de brouillon. La date par défaut est fixée à 90 jours à partir d’aujourd’hui. Cette date continue de changer jusqu’à la publication du package. Si vous consultez le package au statut de brouillon demain, la date sera décalée de +1 jour (sauf si vous définissez ce paramètre manuellement)."
 
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"

@@ -5,7 +5,7 @@ exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
 workflow-type: tm+mt
 source-wordcount: '1863'
-ht-degree: 20%
+ht-degree: 22%
 
 ---
 
@@ -26,13 +26,13 @@ Les espaces de noms d’identité nécessitent une compréhension des différent
 >[!CONTEXTUALHELP]
 >id="platform_identity_namespace"
 >title="Espaces de noms d’identité"
->abstract="Un espace de noms d’identité est le contexte d’une identité donnée. Par exemple, un espace de noms `Email` peut correspondre à **name<span>@acme.com**. De même, un espace de noms de `Phone` peut correspondre à `555-555-1234`."
+>abstract="Un espace de noms d’identité est le contexte d’une identité donnée. Par exemple, un espace de noms `Email` peut correspondre à **name<span>@acme.com**. De la même manière, un espace de noms `Phone` peut correspondre à `555-555-1234`."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_identity_value"
 >title="Valeurs d’identité"
->abstract="Une valeur d’identité est un identifiant qui représente un individu, une organisation ou une ressource unique. Le contexte ou le type d’identité représenté par la valeur est défini par un espace de noms d’identités correspondant. Lors de la mise en correspondance des données d’enregistrement entre les fragments de profil, l’espace de noms et la valeur d’identité doivent correspondre. Lors de la mise en correspondance des données d’enregistrement entre les fragments de profil, l’espace de noms et la valeur d’identité doivent correspondre."
+>abstract="Une valeur d’identité est un identifiant qui représente un individu, une organisation ou une ressource unique. Le contexte ou le type d’identité représenté par la valeur est défini par un espace de noms d’identités correspondant. Lors de la mise en correspondance de données d’enregistrement avec des fragments de profil, l’espace de noms et la valeur d’identité doivent correspondre. Lors de la mise en correspondance de données d’enregistrement avec des fragments de profil, l’espace de noms et la valeur d’identité doivent correspondre."
 >text="Learn more in documentation"
 
 Une identité entièrement qualifiée comprend deux composants : une **valeur d’identité** et un **espace de noms d’identité**. Par exemple, si la valeur d’une identité est `scott@acme.com`, puis un espace de noms fournit du contexte à cette valeur en la distinguant comme adresse électronique. De même, un espace de noms peut distinguer `555-123-456` comme numéro de téléphone ; et `3126ABC` comme identifiant CRM. Essentiellement, **un espace de noms fournit un contexte à une identité donnée ;**. Lors de la mise en correspondance de données d’enregistrement entre des fragments de profil, comme lorsque [!DNL Real-Time Customer Profile] fusionne les données de profil ; la valeur d’identité et l’espace de noms doivent correspondre.
