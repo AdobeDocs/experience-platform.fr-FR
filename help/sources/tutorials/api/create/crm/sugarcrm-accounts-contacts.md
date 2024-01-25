@@ -2,10 +2,10 @@
 title: Créez une connexion source et un flux de données pour les comptes et contacts SugarCRM à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform aux comptes et contacts SugarCRM à l’aide de l’API Flow Service.
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 0edc7a6a68ee4dc5ea24f16a8bc12aba85af0dff
 workflow-type: tm+mt
-source-wordcount: '2160'
-ht-degree: 55%
+source-wordcount: '2104'
+ht-degree: 54%
 
 ---
 
@@ -101,7 +101,7 @@ Une réponse réussie renvoie la nouvelle connexion de base, y compris son ident
 
 ### Explorer votre source {#explore}
 
-À l’aide de l’identifiant de connexion de base généré à l’étape précédente, vous pouvez explorer les fichiers et répertoires en exécutant des requêtes GET.
+À l’aide de l’identifiant de connexion de base que vous avez généré à l’étape précédente, vous pouvez explorer les fichiers et répertoires en exécutant des requêtes GET.
 Utilisez les appels suivants pour trouver le chemin d’accès au fichier que vous souhaitez importer dans Platform :
 
 **Format d’API**
@@ -117,10 +117,10 @@ Lors de l’exécution de requêtes GET pour explorer la structure et le contenu
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | Identifiant de connexion de base généré à l’étape précédente. |
 | `objectType=rest` | Type d’objet que vous souhaitez explorer. Actuellement, cette valeur est toujours définie sur `rest`. |
-| `{OBJECT}` | Ce paramètre est requis uniquement lors de l’affichage d’un répertoire spécifique. Sa valeur représente le chemin dʼaccès au répertoire que vous souhaitez explorer. Pour cette source, la valeur serait `json`. |
+| `{OBJECT}` | Ce paramètre est requis uniquement lors de l’affichage d’un répertoire spécifique. Sa valeur représente le chemin du répertoire que vous souhaitez explorer. Pour cette source, la valeur serait `json`. |
 | `fileType=json` | Type de fichier du fichier que vous souhaitez importer dans Platform. Actuellement, `json` est le seul type de fichier pris en charge. |
 | `{PREVIEW}` | Valeur booléenne qui définit si le contenu de la connexion prend en charge la prévisualisation. |
-| `{SOURCE_PARAMS}` | Définit les paramètres du fichier source que vous souhaitez importer dans Platform. Pour récupérer le type de format accepté pour `{SOURCE_PARAMS}`, vous devez coder l’intégralité de la chaîne  en base64. <br> [!DNL SugarCRM Accounts & Contacts] prend en charge plusieurs API. Selon le type d’objet que vous utilisez, transmettez l’un des types suivants : <ul><li>`accounts` : entreprises avec lesquelles votre organisation entretient une relation.</li><li>`contacts` : personnes avec lesquelles votre organisation entretient une relation établie.</li></ul> |
+| `{SOURCE_PARAMS}` | Définit les paramètres du fichier source que vous souhaitez importer dans Platform. Pour récupérer le type de format accepté pour `{SOURCE_PARAMS}`, vous devez coder la chaîne entière en base64. <br> [!DNL SugarCRM Accounts & Contacts] prend en charge plusieurs API. Selon le type d’objet que vous utilisez, transmettez l’un des types suivants : <ul><li>`accounts` : entreprises avec lesquelles votre organisation entretient une relation.</li><li>`contacts` : personnes avec lesquelles votre organisation entretient une relation établie.</li></ul> |
 
 La variable [!DNL SugarCRM Accounts & Contacts] prend en charge plusieurs API. Selon le type d’objet utilisé pour l’envoi de la requête, procédez comme suit :
 
@@ -350,6 +350,8 @@ Une réponse réussie renvoie une structure comme ci-dessous.
 ```
 
 >[!TAB Contacts]
+
+Une réponse réussie renvoie une structure comme ci-dessous.
 
 ```json
 {
