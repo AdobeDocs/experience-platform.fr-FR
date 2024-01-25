@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
-source-git-commit: 8f61840ad60b7d24c980b218b6f742485f5ebfdd
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1135'
-ht-degree: 97%
+source-wordcount: '1137'
+ht-degree: 95%
 
 ---
 
@@ -32,13 +32,13 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 
 ## Tableaux de bord (Beta) {#dashboards}
 
-Adobe Experience Platform propose de nombreux tableaux de bord qui vous permettent d’afficher des informations importantes concernant les données de votre entreprise. Celles-ci sont présentées telles qu’elles sont capturées lors d’aperçus quotidiens.
+Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des informations importantes sur les données de votre entreprise, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Tableaux de bord relatifs aux profils, aux segments, aux destinations et à l’utilisation des licences (Beta) | **Remarque : la fonctionnalité Tableaux de bord est actuellement en version Beta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.**<br/><br/> Les tableaux de bord proposent un compte rendu des performances prêt à l’emploi sur les données de votre organisation. Ils sont directement intégrés au workflow du spécialiste marketing dans Platform. La mise à disposition de ces tableaux de bord ne nécessite pas d’assistance informatique supplémentaire. En outre, ils offrent un gain de temps et d’effort en évitant de recourir à l’exportation et au traitement des données avec une conception et une implémentation d’entreposage de données supplémentaires. |
+| Tableaux de bord relatifs aux profils, aux segments, aux destinations et à l’utilisation des licences (Beta) | **Remarque : la fonctionnalité Tableaux de bord est actuellement en version Beta et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.**<br/><br/> Les tableaux de bord fournissent des rapports d’usine sur les données de votre entreprise et sont directement intégrés au workflow du spécialiste du marketing dans Platform. La mise à disposition de ces tableaux de bord ne nécessite pas d’assistance informatique supplémentaire. En outre, ils offrent un gain de temps et d’effort en évitant de recourir à l’exportation et au traitement des données avec une conception et une implémentation d’entreposage de données supplémentaires. |
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -94,15 +94,15 @@ Pour des informations plus générales sur XDM, reportez-vous à la [présentati
 
 ## [!DNL Identity Service] {#identity}
 
-Proposer des expériences numériques pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre plusieurs systèmes, chaque client semble donc posséder plusieurs « identités ».
+Proposer des expériences digitales pertinentes nécessite une compréhension complète de votre client. Cela devient plus difficile lorsque les données de vos clients sont fragmentées entre plusieurs systèmes, chaque client semble donc posséder plusieurs « identités ».
 
-Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
+Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Graphique d’identités observateur | L’observateur de graphique d’identités vous permet de valider et de visualiser les identités assemblées dans l’interface utilisateur, ce qui permet d’améliorer le débogage et la transparence. Pour plus d’informations, consultez le [document sur l’observateur de graphique d’identités](../../identity-service/ui/identity-graph-viewer.md). |
+| Visionneuse de graphique d’identités | L’observateur de graphique d’identités vous permet de valider et de visualiser les identités assemblées dans l’interface utilisateur, ce qui permet d’améliorer le débogage et la transparence. Pour plus d’informations, consultez le [document sur l’observateur de graphique d’identités](../../identity-service/features/identity-graph-viewer.md). |
 
 Pour des informations plus générales sur le [!DNL Identity Service], reportez-vous à la [présentation du service d’identités](../../identity-service/home.md).
 
@@ -114,7 +114,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Attributs calculés (Alpha) | ***Remarque : cette fonctionnalité est actuellement en version Alpha et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.*** <br/><br/>Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Vous pouvez ensuite utiliser les agrégats dans la segmentation, l’activation et la personnalisation. Ces fonctions incluent notamment le nombre, la somme, la moyenne, les valeurs min. et max. ou encore la valeur vrai/faux. Les attributs calculés sont actuellement disponibles uniquement par le biais de l’API. |
+| Attributs calculés (Alpha) | ***Remarque : cette fonctionnalité est actuellement en version Alpha et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.*** <br/><br/>Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Vous pouvez ensuite utiliser les agrégats dans la segmentation, l’activation et la personnalisation. Ces fonctions incluent notamment le nombre, la somme, la moyenne, les valeurs min. et max. ou encore la valeur vrai/faux. Les attributs calculés sont actuellement disponibles via l’API uniquement. |
 
 Pour plus d’informations sur Real-time Customer Profile, notamment des tutoriels et des bonnes pratiques pour travailler avec [!DNL Profile] data, veuillez commencer par lire la [Présentation de Real-Time Customer Profile](../../profile/home.md).
 

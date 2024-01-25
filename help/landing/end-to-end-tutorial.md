@@ -3,16 +3,16 @@ keywords: Experience Platform;accueil;rubriques populaires;CJA;journey analytic
 title: Exemple de workflow de bout en bout Adobe Experience Platform
 description: Découvrez le workflow de base de bout en bout pour Adobe Experience Platform à un niveau élevé.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1836'
-ht-degree: 14%
+source-wordcount: '1832'
+ht-degree: 10%
 
 ---
 
 # Exemple de workflow de bout en bout Adobe Experience Platform
 
-Adobe Experience Platform est l’un des meilleurs systèmes ouverts, flexibles et performants du marché permettant de créer et de gérer des solutions complètes qui optimisent l’expérience client.  Platform permet aux entreprises de centraliser et de normaliser les données et le contenu des clients à partir de n’importe quel système et d’appliquer la science des données et le machine learning afin d’améliorer considérablement la conception et la diffusion d’expériences riches et personnalisées.
+Adobe Experience Platform est l’un des meilleurs systèmes ouverts, flexibles et performants du marché permettant de créer et de gérer des solutions complètes qui optimisent l’expérience client. Platform permet aux entreprises de centraliser et de normaliser les données et le contenu des clients à partir de n’importe quel système et d’appliquer la science des données et l’apprentissage automatique afin d’améliorer considérablement la conception et la diffusion d’expériences riches et personnalisées.
 
 Basée sur les API RESTful, Platform expose toutes les fonctionnalités du système aux développeurs, ce qui facilite l’intégration des solutions d’entreprise à l’aide d’outils courants. Platform vous permet d’obtenir une vue d’ensemble de vos clients en ingérant vos données client, en segmentant vos données vers les audiences que vous souhaitez cibler et en activant ces audiences vers une destination externe. Le tutoriel suivant présente un workflow de bout en bout, qui montre toutes les étapes, de l’ingestion via les sources à l’activation de l’audience via les destinations.
 
@@ -23,26 +23,26 @@ Basée sur les API RESTful, Platform expose toutes les fonctionnalités du syst�
 Ce workflow de bout en bout utilise plusieurs services Adobe Experience Platform. Voici une liste des services utilisés dans ce workflow avec des liens vers leurs vues d’ensemble :
 
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../xdm/schema/best-practices.md).
-- [[!DNL Identity Service]](../identity-service/home.md): Fournit une vue d’ensemble complète de vos clients et de leur comportement en rapprochant des identités entre appareils et systèmes.
+- [[!DNL Identity Service]](../identity-service/home.md): vous offre une vue d’ensemble complète de vos clients et de leur comportement en rapprochant des identités entre appareils et systèmes.
 - [Sources ](../sources/home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 - [[!DNL Segmentation Service]](../segmentation/home.md) : [!DNL Segmentation Service] permet de diviser les données stockées dans [!DNL Experience Platform] qui se rapportent aux individus (tels que les client(e)s, les prospects, les utilisateurs et utilisatrices ou les organisations) en groupes plus petits.
 - [[!DNL Real-Time Customer Profile]](../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-- [Jeu de données](../catalog/datasets/overview.md) : la structure de stockage et de gestion pour la persistance des données dans [!DNL Experience Platform].
-- [Destinations](../destinations/home.md): Les destinations sont des intégrations préconfigurées aux applications courantes qui permettent l’activation transparente des données de Platform pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+- [Jeux de données](../catalog/datasets/overview.md): construction de stockage et de gestion pour la persistance des données dans [!DNL Experience Platform].
+- [Destinations](../destinations/home.md): les destinations sont des intégrations préconfigurées aux applications courantes qui permettent l’activation transparente des données de Platform pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
 ## Créer un schéma XDM
 
 Avant d’ingérer des données dans Platform, vous devez d’abord créer un schéma XDM pour décrire la structure de ces données. Lorsque vous ingérez vos données à l’étape suivante, vous mappez vos données entrantes avec ce schéma. Pour savoir comment créer un exemple de schéma XDM, consultez le tutoriel sur [création d’un schéma à l’aide de l’éditeur de schémas](../xdm/tutorials/create-schema-ui.md).
 
-Le tutoriel ci-dessus montre comment définir des champs d’identité pour vos schémas. Un champ d’identité représente un champ qui peut être utilisé pour identifier une personne individuelle liée à un événement d’enregistrement ou de série temporelle. Les champs d’identité sont un composant essentiel de la manière dont les graphiques d’identités client sont créés dans Platform, ce qui affecte finalement la manière dont Real-Time Customer Profile fusionne des fragments de données disparates pour obtenir une vue d’ensemble complète du client. Pour plus d’informations sur l’affichage des graphiques d’identités dans Platform, consultez le tutoriel sur [utilisation de la visionneuse de graphiques d’identités](../identity-service/ui/identity-graph-viewer.md).
+Le tutoriel ci-dessus montre comment définir des champs d’identité pour vos schémas. Un champ d’identité représente un champ qui peut être utilisé pour identifier une personne individuelle liée à un événement d’enregistrement ou de série temporelle. Les champs d’identité sont un composant essentiel de la manière dont les graphiques d’identités client sont créés dans Platform, ce qui affecte finalement la manière dont Real-Time Customer Profile fusionne des fragments de données disparates pour obtenir une vue d’ensemble complète du client. Pour plus d’informations sur l’affichage des graphiques d’identités dans Platform, consultez le tutoriel sur [utilisation de la visionneuse de graphiques d’identités](../identity-service/features/identity-graph-viewer.md).
 
 Vous devez activer votre schéma pour l’utiliser dans Real-time Customer Profile afin que les profils client puissent être créés à partir des données basées sur votre schéma. Voir la section sur [activation d’un schéma pour Profile](../xdm/ui/resources/schemas.md#profile) pour plus d’informations, voir le guide de l’interface utilisateur des schémas .
 
-## Ingestion de données dans  Platform
+## Ingestion de vos données dans Platform
 
 Une fois que vous avez créé un schéma XDM, vous pouvez commencer à intégrer vos données dans le système.
 
-Toutes les données importées dans Platform sont stockées dans des jeux de données individuels lors de l’ingestion. Un jeu de données est un ensemble d’enregistrements de données qui correspondent à un schéma XDM spécifique. Avant que vos données puissent être utilisées par [!DNL Real-Time Customer Profile], le jeu de données en question doit être spécifiquement configuré. Pour obtenir des instructions complètes sur l’activation d’un jeu de données pour Profile, reportez-vous à la section [Guide de l’interface utilisateur des jeux de données](../catalog/datasets/user-guide.md#enable-profile) et le [tutoriel sur l’API de configuration des jeux de données](../profile/tutorials/dataset-configuration.md). Une fois que le jeu de données a été configuré, vous pouvez commencer l’ingestion de données.
+Toutes les données importées dans Platform sont stockées dans des jeux de données individuels lors de l’ingestion. Un jeu de données est un ensemble d’enregistrements de données qui correspondent à un schéma XDM spécifique. Avant que vos données puissent être utilisées par [!DNL Real-Time Customer Profile], le jeu de données en question doit être spécifiquement configuré. Pour obtenir des instructions complètes sur l’activation d’un jeu de données pour Profile, voir [Guide de l’interface utilisateur des jeux de données](../catalog/datasets/user-guide.md#enable-profile) et la variable [tutoriel sur l’API de configuration des jeux de données](../profile/tutorials/dataset-configuration.md). Une fois le jeu de données configuré, vous pouvez commencer à y ingérer des données.
 
 Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, les stockages dans le cloud, les bases de données, etc. Par exemple, vous pouvez ingérer vos données à l’aide de la fonction [Amazon S3](../sources/tutorials/api/create/cloud-storage/s3.md). Vous trouverez une liste complète des sources disponibles dans le [Présentation des connecteurs source](../sources/home.md).
 
@@ -88,7 +88,7 @@ Avant de créer une tâche d’exportation, vous devez d’abord créer un jeu d
 
 Vous pouvez également, après avoir créé votre tâche de segmentation ponctuelle ou votre planification en cours, exporter les résultats vers une destination. Une destination est un point de terminaison, par exemple une application d’Adobe sur un service externe, où une audience peut être activée et diffusée. Vous trouverez une liste complète des destinations disponibles dans le [destinations](../destinations/catalog/overview.md).
 
-Pour plus d’informations sur l’activation des données vers des destinations de marketing par lots ou par e-mail, consultez le tutoriel sur [Comment activer les données d’audience vers des destinations d’exportation de profils par lots à l’aide de l’interface utilisateur de Platform](../destinations/ui/activate-batch-profile-destinations.md) et le [guide sur la connexion aux destinations par lots et l’activation des données à l’aide de l’API Flow Service](../destinations/api/connect-activate-batch-destinations.md).
+Pour plus d’informations sur l’activation des données vers des destinations de marketing par lots ou par e-mail, consultez le tutoriel sur [Comment activer les données d’audience vers des destinations d’exportation de profils par lots à l’aide de l’interface utilisateur de Platform](../destinations/ui/activate-batch-profile-destinations.md) et la variable [guide sur la connexion aux destinations par lots et l’activation des données à l’aide de l’API Flow Service](../destinations/api/connect-activate-batch-destinations.md).
 
 ## Surveillance de vos activités de données Platform
 
@@ -98,4 +98,4 @@ Vous pouvez également surveiller les activités de Platform à l’aide de mesu
 
 ## Étapes suivantes
 
-En lisant ce tutoriel, vous avez reçu une introduction de base à un flux de bout en bout simple pour Platform. Pour en savoir plus sur Adobe Platform, commencez par lire la [Présentation dʼExperience Platform](./home.md). Pour en savoir plus sur l’utilisation de l’interface utilisateur de Platform et de l’API de Platform, veuillez lire le [Guide de l’interface utilisateur de Platform](./ui-guide.md) et le [Guide de l’API Platform](./api-guide.md) respectivement.
+En lisant ce tutoriel, vous avez reçu une introduction de base à un flux de bout en bout simple pour Platform. Pour en savoir plus sur Adobe Experience Platform, veuillez lire le [Présentation de Platform](./home.md). Pour en savoir plus sur l’utilisation de l’interface utilisateur de Platform et de l’API de Platform, veuillez lire le [Guide de l’interface utilisateur de Platform](./ui-guide.md) et la variable [Guide de l’API Platform](./api-guide.md) respectivement.

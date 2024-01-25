@@ -3,7 +3,7 @@ keywords: publicité, bureau de commerce, bureau de publicité
 title: Connexion à The Trade Desk
 description: Le bureau commercial est une plateforme en libre-service permettant aux acheteurs de publicités d’exécuter le reciblage et d’exécuter des campagnes numériques ciblées sur l’affichage, la vidéo et les sources d’inventaire mobiles.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '742'
 ht-degree: 41%
@@ -26,7 +26,7 @@ En tant que marketeur, je souhaite pouvoir utiliser des audiences composées de 
 
 ## Identités prises en charge {#supported-identities}
 
-[!DNL The Trade Desk] prend en charge l’activation des audiences en fonction des identités affichées dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
+[!DNL The Trade Desk] prend en charge l’activation des audiences en fonction des identités affichées dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
 
 | Identité | Description |
 |---|---|

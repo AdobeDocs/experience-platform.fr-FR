@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Création de jeux de données pour la capture des données de consentement IAB TCF 2.0
 description: Ce document décrit les étapes de configuration des deux jeux de données requis pour collecter les données de consentement du TCF 2.0 de l’IAB.
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1655'
-ht-degree: 4%
+source-wordcount: '1674'
+ht-degree: 3%
 
 ---
 
-# Création de jeux de données pour la capture des données de consentement du TCF 2.0 de l’IAB
+# Création de jeux de données pour la capture des données de consentement IAB TCF 2.0
 
 Pour que Adobe Experience Platform traite les données de consentement des clients conformément à l’IAB [!DNL Transparency & Consent Framework] (TCF) 2.0, ces données doivent être envoyées aux jeux de données dont les schémas contiennent des champs de consentement TCF 2.0.
 
@@ -32,13 +32,13 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 * [Modèle de données d’expérience (XDM)](../../../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données d’expérience client.
    * [Notions de base de la composition du schéma](../../../../xdm/schema/composition.md) : en savoir plus sur les blocs de création de base des schémas XDM.
-* [Service Adobe Experience Platform Identity](../../../../identity-service/home.md): Permet de lier les identités des clients à partir de vos sources de données disparates entre appareils et systèmes.
-   * [Espaces de noms d’identité](../../../../identity-service/namespaces.md): Les données d’identité du client doivent être fournies sous un espace de noms d’identité spécifique reconnu par Identity Service.
-* [Profil client en temps réel](../../../../profile/home.md): Exploitation [!DNL Identity Service] pour vous permettre de créer des profils client détaillés à partir de vos jeux de données en temps réel. [!DNL Real-Time Customer Profile] Profile extrait les données du lac de données et conserve les profils clients dans sa propre banque de données distincte.
+* [Service Adobe Experience Platform Identity](../../../../identity-service/home.md): vous permet de lier les identités client de vos sources de données disparates entre appareils et systèmes.
+   * [Espaces de noms d’identité](../../../../identity-service/features/namespaces.md): les données d’identité du client doivent être fournies sous un espace de noms d’identité spécifique reconnu par Identity Service.
+* [Profil client en temps réel](../../../../profile/home.md): exploitation [!DNL Identity Service] pour vous permettre de créer des profils client détaillés à partir de vos jeux de données en temps réel. [!DNL Real-Time Customer Profile] extrait les données du lac de données et conserve les profils client dans sa propre banque de données distincte.
 
 ## Groupes de champs TCF 2.0 {#field-groups}
 
-Le [!UICONTROL Détails du consentement IAB TCF 2.0] Le groupe de champs de schéma fournit les champs de consentement du client qui sont requis pour la prise en charge de TCF 2.0. Il existe deux versions de ce groupe de champs : un compatible avec la fonction [!DNL XDM Individual Profile] et l’autre avec la propriété [!DNL XDM ExperienceEvent] classe .
+La variable [!UICONTROL Détails du consentement IAB TCF 2.0] Le groupe de champs de schéma fournit les champs de consentement du client qui sont requis pour la prise en charge de TCF 2.0. Il existe deux versions de ce groupe de champs : une compatible avec la fonction [!DNL XDM Individual Profile] et l’autre avec la propriété [!DNL XDM ExperienceEvent] classe .
 
 Les sections ci-dessous expliquent la structure de chacun de ces groupes de champs, notamment les données attendues lors de l’ingestion.
 
@@ -60,13 +60,13 @@ Voir [guide de référence](../../../../xdm/field-groups/event/iab.md) pour ce g
 
 Pour créer des jeux de données qui capturent des données de consentement, vous devez d’abord créer des schémas XDM pour baser ces jeux de données.
 
-Comme mentionné dans la section précédente, un schéma qui utilise la variable [!UICONTROL XDM Individual Profile] est requise pour appliquer le consentement dans les workflows Platform en aval. Vous pouvez également, si vous le souhaitez, créer un schéma distinct basé sur [!UICONTROL XDM ExperienceEvent] si vous souhaitez effectuer le suivi des modifications du consentement au fil du temps. Les deux schémas doivent contenir un `identityMap` et un groupe de champs TCF 2.0 approprié.
+Comme mentionné dans la section précédente, un schéma qui utilise la variable [!UICONTROL XDM Individual Profile] est requise pour appliquer le consentement dans les workflows Platform en aval. Vous pouvez également créer un schéma distinct basé sur [!UICONTROL XDM ExperienceEvent] si vous souhaitez effectuer le suivi des modifications du consentement au fil du temps. Les deux schémas doivent contenir un `identityMap` et un groupe de champs TCF 2.0 approprié.
 
 Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche pour ouvrir la [!UICONTROL Schémas] workspace. À partir de là, suivez les étapes des sections ci-dessous pour créer chaque schéma requis.
 
 >[!NOTE]
 >
->Si vous souhaitez utiliser des schémas XDM existants pour capturer des données de consentement à la place, vous pouvez modifier ces schémas au lieu d’en créer de nouveaux. Cependant, si un schéma existant a été activé pour une utilisation dans Real-Time Customer Profile, son identité Principale ne peut pas être un champ directement identifiable qui est interdit d’utilisation dans des publicités basées sur des intérêts, telles qu’une adresse électronique. Consultez votre service juridique si vous ne savez pas quels champs sont restreints.
+>Si vous souhaitez utiliser des schémas XDM existants pour capturer des données de consentement à la place, vous pouvez modifier ces schémas au lieu d’en créer de nouveaux. Cependant, si un schéma existant a été activé pour une utilisation dans Real-Time Customer Profile, son identité principale ne peut pas être un champ directement identifiable qui n’est pas interdit d’utilisation dans des publicités basées sur des intérêts, telles qu’une adresse électronique. Consultez votre service juridique si vous ne savez pas quels champs sont restreints.
 >
 >En outre, lors de la modification de schémas existants, seules des modifications additive (insécables) peuvent être effectuées. Consultez la section sur la [principes d’évolution des schémas](../../../../xdm/schema/composition.md#evolution) pour plus d’informations.
 
@@ -76,7 +76,7 @@ Sélectionner **[!UICONTROL Créer un schéma]**, puis choisissez **[!UICONTROL 
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-profile.png)
 
-Le **[!UICONTROL Ajouter des groupes de champs]** s’affiche, ce qui vous permet de commencer immédiatement à ajouter des groupes de champs au schéma. À partir de là, sélectionnez **[!UICONTROL Détails du consentement IAB TCF 2.0]** dans la liste. Vous pouvez éventuellement utiliser la barre de recherche pour affiner les résultats afin de localiser plus facilement le groupe de champs.
+La variable **[!UICONTROL Ajouter des groupes de champs]** s’affiche, ce qui vous permet de commencer immédiatement à ajouter des groupes de champs au schéma. À partir de là, sélectionnez **[!UICONTROL Détails du consentement IAB TCF 2.0]** dans la liste. Vous pouvez éventuellement utiliser la barre de recherche pour affiner les résultats afin de localiser plus facilement le groupe de champs.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
@@ -104,15 +104,15 @@ Pour que Platform associe les données de consentement qu’il reçoit à des pr
 
 >[!NOTE]
 >
->L’exemple de schéma présenté dans cette section utilise son `identityMap` comme son Principale identité. Si vous souhaitez définir un autre champ comme identité Principale, veillez à utiliser un identifiant indirect comme un identifiant de cookie, et non un champ directement identifiable qui est interdit d’utilisation dans des publicités basées sur des intérêts, telles qu’une adresse électronique. Consultez votre service juridique si vous ne savez pas quels champs sont restreints.
+>L’exemple de schéma présenté dans cette section utilise son `identityMap` comme son identité principale. Si vous souhaitez définir un autre champ comme identité principale, veillez à utiliser un identifiant indirect comme un identifiant de cookie et non un champ directement identifiable qui est interdit d’utilisation dans des publicités basées sur des intérêts, telles qu’une adresse électronique. Consultez votre service juridique si vous ne savez pas quels champs sont restreints.
 >
->Pour savoir comment définir un champ d’identité Principal pour un schéma, reportez-vous à la section [[!UICONTROL Schémas] Guide de l’interface utilisateur](../../../../xdm/ui/fields/identity.md).
+>Vous trouverez les étapes de définition d’un champ d’identité principal pour un schéma dans la section [[!UICONTROL Schémas] Guide de l’interface utilisateur](../../../../xdm/ui/fields/identity.md).
 
 Pour activer le schéma pour [!DNL Profile], sélectionnez le nom du schéma dans le rail de gauche pour ouvrir le **[!UICONTROL Propriétés du schéma]** . À partir de là, sélectionnez le **[!UICONTROL Profil]** bouton bascule .
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-enable-profile.png)
 
-Une fenêtre contextuelle s’affiche, indiquant l’absence d’une identité Principale. Cochez la case pour utiliser une autre identité Principale, car l’identité Principale sera contenue dans la variable `identityMap` champ .
+Une fenêtre contextuelle s’affiche, indiquant l’absence d’une identité principale. Cochez la case pour utiliser une autre identité principale, car l’identité principale sera contenue dans la variable `identityMap` champ .
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/missing-primary-identity.png)
 
@@ -130,7 +130,7 @@ Dans le **[!UICONTROL Schémas]** espace de travail, sélectionnez **[!UICONTROL
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-event.png)
 
-Le **[!UICONTROL Ajouter des groupes de champs]** s’affiche. À partir de là, sélectionnez **[!UICONTROL Détails du consentement IAB TCF 2.0]** dans la liste. Vous pouvez éventuellement utiliser la barre de recherche pour affiner les résultats afin de localiser plus facilement le groupe de champs.
+La variable **[!UICONTROL Ajouter des groupes de champs]** s’affiche. À partir de là, sélectionnez **[!UICONTROL Détails du consentement IAB TCF 2.0]** dans la liste. Vous pouvez éventuellement utiliser la barre de recherche pour affiner les résultats afin de localiser plus facilement le groupe de champs.
 
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
@@ -167,7 +167,7 @@ Sur la page suivante, sélectionnez **[!UICONTROL Création d’un jeu de donné
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-create-from-schema.png)
 
-Le **[!UICONTROL Création d’un jeu de données à partir d’un schéma]** s’affiche, en commençant par **[!UICONTROL Sélectionner un schéma]** étape . Dans la liste fournie, recherchez l’un des schémas de consentement que vous avez créés précédemment. Vous pouvez éventuellement utiliser la barre de recherche pour affiner les résultats et faciliter la localisation de votre schéma. Sélectionnez le bouton radio en regard du schéma souhaité, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+La variable **[!UICONTROL Création d’un jeu de données à partir d’un schéma]** s’affiche, en commençant par **[!UICONTROL Sélectionner un schéma]** étape . Dans la liste fournie, recherchez l’un des schémas de consentement que vous avez créés précédemment. Vous pouvez éventuellement utiliser la barre de recherche pour affiner les résultats et faciliter la localisation de votre schéma. Sélectionnez le bouton radio en regard du schéma souhaité, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-select-schema.png)
 

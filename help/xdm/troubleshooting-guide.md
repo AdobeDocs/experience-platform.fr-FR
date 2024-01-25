@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de dépannage du système XDM
 description: Trouvez des réponses aux questions fréquentes sur le modèle de données d’expérience (XDM), y compris les étapes pour résoudre les erreurs d’API courantes.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2073'
+source-wordcount: '1947'
 ht-degree: 100%
 
 ---
@@ -136,7 +136,6 @@ Cette erreur s’affiche lorsque le système n’a pas pu trouver une ressource 
 >* `http://ns.adobe.com/aep/errors/XDM-1016-404`
 >* `http://ns.adobe.com/aep/errors/XDM-1017-404`
 
-
 Pour plus d’informations sur la création de chemins de recherche dans l’API, consultez les sections sur les [conteneurs](./api/getting-started.md#container) et l’[identification des ressources](api/getting-started.md#resource-identification) dans le guide du développement de [!DNL Schema Registry].
 
 ### Titre non unique
@@ -189,7 +188,6 @@ Les ressources définies par votre organisation doivent doter leurs champs d’u
 >* `http://ns.adobe.com/aep/errors/XDM-1023-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1024-400`
 
-
 Vous trouverez des exemples détaillés de structures de données appropriées pour les ressources XDM dans le guide de l’API Schema Registry :
 
 * [Créer une classe personnalisée](./api/classes.md#create)
@@ -225,7 +223,6 @@ Selon le point d’entrée que vous utilisez, la propriété `detailed-message` 
 >* `http://ns.adobe.com/aep/errors/XDM-1007-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1008-400`
 >* `http://ns.adobe.com/aep/errors/XDM-1009-400`
-
 
 Pour obtenir la liste des en-têtes Accept compatibles pour les différentes requêtes API, veuillez vous référer aux sections correspondantes dans le [guide de développement du registre des schémas](./api/overview.md).
 
@@ -277,7 +274,7 @@ Pour pouvoir activer des schémas contenant des descripteurs de relation à util
 
 Pour résoudre ce problème, il faut s’assurer que la valeur `xdm:namespace` du champ d’identité du schéma de référence correspond à celle de la propriété `xdm:identityNamespace` dans le descripteur d’identité de référence du champ source.
 
-Pour obtenir une liste des codes d’espaces de noms d’identité standard, consultez la section sur les [espaces de noms standard](../identity-service/namespaces.md) dans la présentation des espaces de noms d’identité.
+Pour obtenir une liste des codes d’espaces de noms d’identité standard, consultez la section sur les [espaces de noms standard](../identity-service/features/namespaces.md) dans la présentation des espaces de noms d’identité.
 
 #### Le schéma doit inclure un identityMap ou une identité principale.
 

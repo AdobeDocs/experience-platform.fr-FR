@@ -1,17 +1,17 @@
 ---
 title: Données d’identité dans le SDK Web
 description: Découvrez comment récupérer et gérer les Adobe Experience Cloud ID (ECID) à l’aide du SDK Web de Adobe Experience Platform.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 03060cdb-becc-430a-b527-60c055c2a906
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
 source-wordcount: '1339'
 ht-degree: 2%
 
 ---
 
-
 # Données d’identité dans le SDK Web
 
-Le SDK Web de Adobe Experience Platform utilise [Adobe Experience Cloud ID (ECID)](../../identity-service/ecid.md) pour effectuer le suivi du comportement des visiteurs. Grâce aux ECID, vous pouvez vous assurer que chaque appareil dispose d’un identifiant unique qui peut persister au cours de plusieurs sessions, en liant tous les accès qui surviennent pendant et entre les sessions web à un appareil spécifique.
+Le SDK Web de Adobe Experience Platform utilise [Adobe Experience Cloud ID (ECID)](../../identity-service/features/ecid.md) pour effectuer le suivi du comportement des visiteurs. Grâce aux ECID, vous pouvez vous assurer que chaque appareil dispose d’un identifiant unique qui peut persister au cours de plusieurs sessions, en liant tous les accès qui surviennent pendant et entre les sessions web à un appareil spécifique.
 
 Ce document présente la gestion des ECID à l’aide du SDK Web Platform.
 
@@ -104,7 +104,7 @@ alloy("sendEvent", {
 >Adobe recommande d’envoyer des espaces de noms représentant une personne, tels que `CRMID`, comme identité principale.
 
 
-Chaque propriété dans `identityMap` représente les identités appartenant à un [espace de noms d’identité](../../identity-service/namespaces.md). Le nom de la propriété doit être le symbole de l’espace de noms d’identité, que vous trouverez dans l’interface utilisateur de Adobe Experience Platform sous &quot;[!UICONTROL Identités]&quot;. La valeur de propriété doit être un tableau d’identités appartenant à cet espace de noms d’identité.
+Chaque propriété dans `identityMap` représente les identités appartenant à un [espace de noms d’identité](../../identity-service/features/namespaces.md). Le nom de la propriété doit être le symbole de l’espace de noms d’identité, que vous trouverez dans l’interface utilisateur de Adobe Experience Platform sous &quot;[!UICONTROL Identités]&quot;. La valeur de propriété doit être un tableau d’identités appartenant à cet espace de noms d’identité.
 
 >[!IMPORTANT]
 >

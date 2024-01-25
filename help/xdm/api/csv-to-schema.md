@@ -2,22 +2,22 @@
 title: Modèle CSV vers point de terminaison de l’API de conversion de schéma
 description: Le point d’entrée de schéma /rpc/csv2 dans l’API Schema Registry vous permet d’utiliser des modèles CSV pour créer automatiquement des schémas de modèle de données d’expérience (XDM).
 exl-id: cf08774a-db94-4ea1-a22e-bb06385f8d0e
-source-git-commit: b4c186c8c40d1372fb5011f49979523e1201fb0b
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '849'
 ht-degree: 6%
 
 ---
 
 # Modèle CSV vers point d’entrée de l’API de conversion de schéma
 
-Le `/rpc/csv2schema` du point de terminaison [!DNL Schema Registry] L’API vous permet de créer automatiquement un schéma de modèle de données d’expérience (XDM) à l’aide d’un fichier CSV comme modèle. À l’aide de ce point de terminaison, vous pouvez créer des modèles pour importer en bloc des champs de schéma et réduire le travail manuel de l’API ou de l’interface utilisateur.
+La variable `/rpc/csv2schema` du point de terminaison [!DNL Schema Registry] L’API vous permet de créer automatiquement un schéma de modèle de données d’expérience (XDM) à l’aide d’un fichier CSV comme modèle. À l’aide de ce point de terminaison, vous pouvez créer des modèles pour importer en bloc des champs de schéma et réduire le travail manuel de l’API ou de l’interface utilisateur.
 
 ## Prise en main
 
-Le `/rpc/csv2schema` Le point de terminaison fait partie de la variable [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d’appels API de ce document, ainsi que des informations importantes concernant les en-têtes requis pour réussir les appels à une API Adobe Experience Platform.
+La variable `/rpc/csv2schema` Le point de terminaison fait partie de la variable [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation connexe, un guide de lecture des exemples d’appels API de ce document, ainsi que des informations importantes concernant les en-têtes requis pour réussir les appels à une API Adobe Experience Platform.
 
-Le `/rpc/csv2schema` Le point d’entrée fait partie des appels de procédure distants (RPC) pris en charge par la fonction [!DNL Schema Registry]. Contrairement aux autres points de terminaison dans la variable [!DNL Schema Registry] API, les points de terminaison RPC ne nécessitent pas d’en-têtes supplémentaires comme `Accept` ou `Content-Type`, et n’utilisez pas d’événement `CONTAINER_ID`. Ils doivent plutôt utiliser la variable `/rpc` , comme illustré dans les appels API ci-dessous.
+La variable `/rpc/csv2schema` Le point d’entrée fait partie des appels de procédure distants (RPC) pris en charge par la fonction [!DNL Schema Registry]. Contrairement aux autres points de terminaison dans la variable [!DNL Schema Registry] API, les points de terminaison RPC ne nécessitent pas d’en-têtes supplémentaires comme `Accept` ou `Content-Type`, et n’utilisez pas de `CONTAINER_ID`. Ils doivent plutôt utiliser la variable `/rpc` , comme illustré dans les appels API ci-dessous.
 
 ## Exigences relatives aux fichiers CSV
 
@@ -32,12 +32,12 @@ Pour utiliser ce point de terminaison, vous devez d’abord créer un fichier CS
 | 5 | `fieldPath` | Obligatoire | Chemin d’accès complet à la notation par points XED pour le champ. Pour inclure tous les champs d’un groupe de champs standard (comme indiqué sous `fieldGroupName`), définissez la valeur sur `ALL`. |
 | 6 | `displayName` | Facultatif | Titre ou nom d’affichage convivial du champ. Peut également être un alias pour le titre, le cas échéant. |
 | 7 | `fieldDescription` | Facultatif | Description du champ. Peut également être un alias pour la description, le cas échéant. |
-| 8 | `dataType` | (Voir description) | Indique la variable [type de données de base](../schema/field-constraints.md#basic-types) pour le champ . Requis pour tous les champs personnalisés.<br><br>If `dataType` est défini sur `object`, soit `properties` ou `$ref` doit également être définie pour la même ligne, mais pas les deux. |
+| 8 | `dataType` | (Voir description) | Indique que la variable [type de données de base](../schema/field-constraints.md#basic-types) pour le champ . Requis pour tous les champs personnalisés.<br><br>If `dataType` est défini sur `object`, soit `properties` ou `$ref` doit également être définie pour la même ligne, mais pas les deux. |
 | 9 | `isRequired` | Facultatif | Indique si le champ est requis pour l’ingestion des données. |
 | 10 | `isArray` | Facultatif | Indique si le champ est un tableau de ce qui est indiqué `dataType`. |
 | 11 | `isIdentity` | Facultatif | Indique si le champ est un champ d’identité. |
-| 12 | `identityNamespace` | Obligatoire si `isIdentity` est vrai | Le [namespace d’identité](../../identity-service/namespaces.md) pour le champ d’identité. |
-| 13 | `isPrimaryIdentity` | Facultatif | Indique si le champ est l’identité Principale du schéma. |
+| 12 | `identityNamespace` | Obligatoire si `isIdentity` est vrai | La variable [espace de noms d’identité](../../identity-service/features/namespaces.md) pour le champ d’identité. |
+| 13 | `isPrimaryIdentity` | Facultatif | Indique si le champ est l’identité principale du schéma. |
 | 14 | `minimum` | Facultatif | (Pour les champs numériques uniquement) Valeur minimale du champ. |
 | 15 | `maximum` | Facultatif | (Pour les champs numériques uniquement) Valeur maximale du champ. |
 | 16 | `enum` | Facultatif | Une liste de valeurs d’énumération pour le champ, exprimée sous la forme d’un tableau (par ex. `[value1,value2,value3]`). |
@@ -83,7 +83,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `csv-file` | Chemin d’accès au modèle CSV stocké sur votre ordinateur local. |
-| `schema-class-id` | Le `$id` de XDM [class](../schema/composition.md#class) que ce schéma utilisera. |
+| `schema-class-id` | La variable `$id` de XDM [class](../schema/composition.md#class) que ce schéma utilisera. |
 | `schema-name` | Nom d’affichage du schéma. |
 | `schema-description` | Description du schéma. |
 

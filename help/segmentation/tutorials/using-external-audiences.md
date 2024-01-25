@@ -5,10 +5,10 @@ description: Suivez ce tutoriel pour découvrir comment utiliser des audiences e
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: c83070d85177c72b2e4c4ae472b89c08c20ee743
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1722'
-ht-degree: 5%
+source-wordcount: '1724'
+ht-degree: 4%
 
 ---
 
@@ -26,7 +26,7 @@ Ce tutoriel nécessite une compréhension pratique des différentes [!DNL Adobe 
 
 - [Segmentation Service](../home.md): vous permet de créer des audiences à partir de données Real-time Customer Profile.
 - [Profil client en temps réel](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-- [Modèle de données d’expérience (XDM)](../../xdm/home.md) : cadre normalisé selon lequel Experience Platform organise les données d’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
+- [Modèle de données d’expérience (XDM)](../../xdm/home.md): cadre normalisé selon lequel Platform organise les données d’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
 - [Jeu de données](../../catalog/datasets/overview.md) : la structure de stockage et de gestion pour la persistance des données dans Experience Platform.
 - [Ingestion par flux](../../ingestion/streaming-ingestion/overview.md): méthode d’ingestion et de stockage de données par Experience Platform à partir de périphériques côté client et côté serveur en temps réel.
 
@@ -46,7 +46,7 @@ Les définitions de segment incluent des informations telles que le nom, la desc
 
 La première étape de l’utilisation d’audiences externes consiste à créer un espace de noms d’identité. Les espaces de noms d’identité permettent à Platform d’associer l’origine d’une audience.
 
-Pour créer un espace de noms d’identité, suivez les instructions de la section [guide d’espace de noms d’identité](../../identity-service/namespaces.md#manage-namespaces). Lors de la création de votre espace de noms d’identité, ajoutez les détails sources à l’espace de noms d’identité et marquez son [!UICONTROL Type] as a **[!UICONTROL Identifiant de non-personne]**.
+Pour créer un espace de noms d’identité, suivez les instructions de la section [guide d’espace de noms d’identité](../../identity-service/features/namespaces.md#manage-namespaces). Lors de la création de votre espace de noms d’identité, ajoutez les détails sources à l’espace de noms d’identité et marquez son [!UICONTROL Type] as a **[!UICONTROL Identifiant de non-personne]**.
 
 ![L’identifiant de non-personne est mis en surbrillance dans le modal Créer un espace de noms d’identité .](../images/tutorials/external-audiences/identity-namespace-info.png)
 

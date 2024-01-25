@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour de septembre 2023 pour Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 76ac65730512e589e518095f9496bb309365b0c9
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2283'
+source-wordcount: '2257'
 ht-degree: 100%
 
 ---
@@ -190,7 +190,7 @@ Adobe Experience Platform Identity Service vous offre la possibilité de mieux
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Améliorations de l’interface utilisateur de Service d’identités | Utilisez l’outil amélioré de création d’espaces de noms personnalisés dans l’interface utilisateur Experience Platform pour mieux gérer vos espaces de noms personnalisés et leurs types d’identités correspondants. L’interface utilisateur améliorée de Service d’identités vous offre les fonctionnalités suivantes : <ul><li>Expérience contextuelle : indices visuels, clarté et contexte relatifs à l’espace de noms d’identité et aux types d’identité.</li><li>Précision : meilleure gestion des erreurs, sans noms d’identité en double.</li><li>Capacité de découverte : accès à la documentation depuis une boîte de dialogue intégrée au produit.</li></ul> Pour plus d’informations, consultez le guide sur la [création d’espaces de noms personnalisés](../../identity-service/namespaces.md#create-namespaces). |
+| Améliorations de l’interface utilisateur de Service d’identités | Utilisez l’outil amélioré de création d’espaces de noms personnalisés dans l’interface utilisateur Experience Platform pour mieux gérer vos espaces de noms personnalisés et leurs types d’identités correspondants. L’interface utilisateur améliorée de Service d’identités vous offre les fonctionnalités suivantes : <ul><li>Expérience contextuelle : indices visuels, clarté et contexte relatifs à l’espace de noms d’identité et aux types d’identité.</li><li>Précision : meilleure gestion des erreurs, sans noms d’identité en double.</li><li>Capacité de découverte : accès à la documentation depuis une boîte de dialogue intégrée au produit.</li></ul> Pour plus d’informations, consultez le guide sur la [création d’espaces de noms personnalisés](../../identity-service/features/namespaces.md#create-namespaces). |
 | Modifications des limites des graphiques d’identités | La limite des graphiques d’identités est passée de 150 identités à 50 identités. Lorsqu’une nouvelle identité est ingérée dans un graphique complet, l’identité la plus ancienne basée sur la date et heure d’ingestion et le type d’identité est supprimée. Les types d’identité Cookie sont prioritaires pour la suppression. Contactez votre équipe Adobe en charge des comptes pour demander un changement de type d’identité si votre sandbox de production contient : <ul><li>Un espace de noms personnalisé dans lequel les identifiants de personne (tels que les identifiants CRM) sont configurés en tant que type d’identité Cookie/Périphérique.</li><li>Un espace de noms personnalisé dans lequel les identifiants de cookie/périphérique sont configurés en tant que type d’identité multi-périphérique.</li></ul> L’ingénierie d’Adobe traitera manuellement ces demandes. Pour plus d’informations, consultez la section [Barrières de sécurité pour les données Identity Service](../../identity-service/guardrails.md) et le guide des [bonnes pratiques relatives aux droits de licence de gestion de données](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
 
 {style="table-layout:auto"}

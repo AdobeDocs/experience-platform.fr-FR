@@ -3,7 +3,7 @@ keywords: crm;CRM;destinations crm;portée globale;destination crm de diffusion
 title: Connexion sortante
 description: La destination de diffusion vous permet d’exporter les données de votre compte et de les activer dans le cadre d’Outreach pour vos besoins professionnels.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 43%
@@ -71,7 +71,7 @@ Voir [[!DNL Outreach] documentation](https://api.outreach.io/api/v2/docs#rate-li
 
 ## Identités prises en charge {#supported-identities}
 
-[!DNL Outreach] prend en charge la mise à jour des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
+[!DNL Outreach] prend en charge la mise à jour des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
 
 | Identité cible | Description | Considérations |
 |---|---|---|

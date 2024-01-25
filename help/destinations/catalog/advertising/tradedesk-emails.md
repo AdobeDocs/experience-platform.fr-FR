@@ -3,7 +3,7 @@ title: (Version bêta) Le bureau de commerce - connexion CRM
 description: Activez les profils dans votre compte de bureau Commerce pour le ciblage et la suppression des audiences en fonction des données CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1122'
 ht-degree: 18%
@@ -38,11 +38,11 @@ Avant d’activer des audiences vers [!DNL The Trade Desk], vous devez contacter
 
 ## Exigences de correspondance des identifiants {#id-matching-requirements}
 
-Selon le type d’ID que vous ingérez dans Adobe Experience Platform, vous devez respecter les exigences correspondantes. Veuillez lire la [Présentation d’Identity Namespace](/help/identity-service/namespaces.md) pour plus d’informations.
+Selon le type d’ID que vous ingérez dans Adobe Experience Platform, vous devez respecter les exigences correspondantes. Veuillez lire la [Présentation d’Identity Namespace](/help/identity-service/features/namespaces.md) pour plus d’informations.
 
 ## Identités prises en charge {#supported-identities}
 
-[!DNL The Trade Desk] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
+[!DNL The Trade Desk] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
 
 Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. Suivez les instructions de la section Exigences de correspondance des identifiants et utilisez les espaces de noms appropriés pour le texte brut et les adresses électroniques hachées, respectivement.
 

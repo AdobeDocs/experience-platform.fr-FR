@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Bonnes pratiques de modélisation des données
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: cdb98f7512d290ed23867f2c081cf4ce432d18ca
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
 source-wordcount: '3096'
 ht-degree: 71%
@@ -206,7 +206,7 @@ Si vous ne savez pas si un champ particulier est nécessaire pour l’inclure da
 
 Dans Experience Platform, les champs XDM marqués comme identités sont utilisés pour rassembler des informations sur les clients individuels provenant de plusieurs sources de données. Bien qu’un schéma puisse comporter plusieurs champs marqués comme identités, une seule identité principale doit être définie pour que le schéma puisse être utilisé dans [!DNL Real-Time Customer Profile]. Voir la section sur les [champs d’identité](./composition.md#identity) dans les principes de base de la composition des schémas pour plus d’informations sur le cas d’utilisation de ces champs.
 
-Lors de la conception de vos schémas, toutes les clés primaires de vos tableaux de base de données relationnelle sont probablement candidates à des identités primaires. Les autres exemples de champs d’identité applicables sont les adresses électroniques du client, les numéros de téléphone, les ID de compte et les [ECID](../../identity-service/ecid.md).
+Lors de la conception de vos schémas, toutes les clés primaires de vos tableaux de base de données relationnelle sont probablement candidates à des identités primaires. Les autres exemples de champs d’identité applicables sont les adresses électroniques du client, les numéros de téléphone, les ID de compte et les [ECID](../../identity-service/features/ecid.md).
 
 ### Groupes de champs de schéma d’application Adobe {#adobe-application-schema-field-groups}
 

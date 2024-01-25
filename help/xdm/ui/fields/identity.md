@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Définition des champs d’identité dans l’interface utilisateur
 description: Découvrez comment définir un champ d’identité dans l’interface utilisateur de l’Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 16%
@@ -20,7 +20,7 @@ Dans le modèle de données d’expérience (XDM), un champ d’identité repré
 Les champs d’identité sont un composant essentiel de la manière dont les graphiques d’identités client sont créés dans Platform, ce qui affecte finalement la manière dont Real-Time Customer Profile fusionne des fragments de données disparates pour obtenir une vue d’ensemble complète du client. Avant de définir des champs d’identité dans vos schémas, reportez-vous à la documentation suivante pour en savoir plus sur les services clés et les concepts liés aux champs d’identité :
 
 * [Adobe Experience Platform Identity Service](../../../identity-service/home.md) : associe les identités des appareils et des systèmes, en liant les jeux de données en fonction des champs d’identité définis par les schémas XDM auxquels ils se conforment.
-   * [Espaces de noms d’identité](../../../identity-service/namespaces.md) : définissent les différents types d’informations d’identité qui peuvent être associés à une seule personne et constituent un composant obligatoire pour chaque champ d’identité.
+   * [Espaces de noms d’identité](../../../identity-service/features/namespaces.md) : définissent les différents types d’informations d’identité qui peuvent être associés à une seule personne et constituent un composant obligatoire pour chaque champ d’identité.
 * [Profil client en temps réel](../../../profile/home.md): exploite des graphiques d’identités client pour fournir un profil client unifié basé sur des données agrégées provenant de plusieurs sources, mis à jour en temps quasi réel.
 
 ## Définir un champ d’identité {#define-a-identity-field}
@@ -56,6 +56,6 @@ Si vous avez défini une identité principale pour le schéma, vous pouvez maint
 
 ## Étapes suivantes
 
-Ce guide explique comment définir un champ d’identité dans l’interface utilisateur. Lorsque les données sont ingérées à l’aide de ce schéma, les graphiques d’identités client sont mis à jour pour refléter les champs d’identité du schéma. Consultez le guide sur la [visionneuse de graphiques d’identités](../../../identity-service/ui/identity-graph-viewer.md) pour savoir comment explorer le graphique privé de votre entreprise dans l’interface utilisateur.
+Ce guide explique comment définir un champ d’identité dans l’interface utilisateur. Lorsque les données sont ingérées à l’aide de ce schéma, les graphiques d’identités client sont mis à jour pour refléter les champs d’identité du schéma. Consultez le guide sur la [visionneuse de graphiques d’identités](../../../identity-service/features/identity-graph-viewer.md) pour savoir comment explorer le graphique privé de votre entreprise dans l’interface utilisateur.
 
 Consultez la présentation sur [définition des champs dans l’interface utilisateur](./overview.md#special) pour savoir comment définir d’autres types de champ XDM dans [!DNL Schema Editor].

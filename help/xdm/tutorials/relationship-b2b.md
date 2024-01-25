@@ -2,14 +2,14 @@
 title: Définition d’une relation entre deux schémas dans Real-time Customer Data Platform B2B Edition
 description: Découvrez comment définir une relation de type "plusieurs à un" entre deux schémas dans Adobe Real-time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1391'
-ht-degree: 19%
+source-wordcount: '1363'
+ht-degree: 18%
 
 ---
 
-# Définition d’une relation multiple-à-un entre deux schémas dans Real-time Customer Data Platform B2B Edition {#relationship-b2b}
+# Définir une relation plusieurs-à-un entre deux schémas dans l’édition B2B de Real-time Customer Data Platform {#relationship-b2b}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
@@ -61,9 +61,9 @@ Pour ce faire, toutes les classes B2B standard contiennent des champs &quot;clé
 
 >[!NOTE]
 >
->When [définition d’un champ XDM comme identité](../ui/fields/identity.md), vous devez fournir un espace de noms d’identité pour définir l’identité sous . Il peut s’agir d’un espace de noms standard fourni par Adobe ou d’un espace de noms personnalisé défini par votre organisation. En pratique, l’espace de noms est simplement une chaîne contextuelle et peut être définie sur n’importe quelle valeur, à condition qu’il soit significatif pour votre organisation pour la classification du type d’identité. Consultez la présentation sur [espaces de noms d’identité](../../identity-service/namespaces.md) pour plus d’informations.
+>When [définition d’un champ XDM comme identité](../ui/fields/identity.md), vous devez fournir un espace de noms d’identité pour définir l’identité sous . Il peut s’agir d’un espace de noms standard fourni par Adobe ou d’un espace de noms personnalisé défini par votre organisation. En pratique, l’espace de noms est simplement une chaîne contextuelle et peut être définie sur n’importe quelle valeur, à condition qu’il soit significatif pour votre organisation pour la classification du type d’identité. Consultez la présentation sur [espaces de noms d’identité](../../identity-service/features/namespaces.md) pour plus d’informations.
 
-À titre de référence, les sections suivantes décrivent la structure de chaque schéma utilisé dans ce tutoriel avant de définir une relation. Prenez note de l’emplacement où les identités primaires ont été définies dans la structure du schéma et les espaces de noms personnalisés qu’elles utilisent.
+À titre de référence, les sections suivantes décrivent la structure de chaque schéma utilisé dans ce tutoriel avant la définition d’une relation. Prenez note de l’emplacement où les identités primaires ont été définies dans la structure du schéma et les espaces de noms personnalisés qu’elles utilisent.
 
 ### [!DNL Opportunities] schema
 
@@ -79,7 +79,7 @@ Le schéma de référence &quot;[!DNL Accounts]&quot; est basé sur la variable 
 
 ![Schéma des comptes](../images/tutorials/relationship-b2b/accounts.png)
 
-## Définition d’un champ de relation pour le schéma source {#relationship-field}
+## Définir un champ de relation pour le schéma source {#relationship-field}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_relationship_name_current"

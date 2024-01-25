@@ -4,7 +4,7 @@ title: Activation des audiences vers des destinations basées sur des fichiers �
 description: Découvrez comment utiliser l’API Flow Service pour exporter des fichiers avec des profils qualifiés vers des destinations de stockage dans le cloud.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '4335'
 ht-degree: 11%
@@ -3424,7 +3424,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ Affichage des identités disponibles à utiliser dans le schéma d’entrée
 
-La réponse renvoie les identités que vous pouvez utiliser lors de la création du schéma d’entrée. Notez que cette réponse renvoie les deux [standard](/help/identity-service/namespaces.md#standard) et [custom](/help/identity-service/namespaces.md#manage-namespaces) espaces de noms d’identité que vous configurez dans Experience Platform.
+La réponse renvoie les identités que vous pouvez utiliser lors de la création du schéma d’entrée. Notez que cette réponse renvoie les deux [standard](/help/identity-service/features/namespaces.md#standard) et [custom](/help/identity-service/features/namespaces.md#manage-namespaces) espaces de noms d’identité que vous configurez dans Experience Platform.
 
 ```json
 [

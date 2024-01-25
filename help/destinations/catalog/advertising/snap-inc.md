@@ -2,7 +2,7 @@
 title: Connexion d’accrochage Inc
 description: Découvrez comment vous connecter à la plateforme Snapchat Ads et exporter vos audiences depuis Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 26%
@@ -37,7 +37,7 @@ Pour utiliser cette destination, vous devez disposer d’un compte Snapchat Ads.
 
 ## Identités prises en charge {#supported-identities}
 
-La variable *Accrocher à* destination prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
+La variable *Accrocher à* destination prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
 
 Tous les identifiants envoyés à la variable *Accrocher à* destination doit être hachée au format SHA-256. Pour hacher les identifiants en texte brut avant de les envoyer à la destination, cochez la case **[!UICONTROL Appliquer la transformation]** lors du mappage des identifiants de cible pour la destination.
 

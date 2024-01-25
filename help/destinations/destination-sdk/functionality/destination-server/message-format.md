@@ -2,9 +2,9 @@
 description: Cette page traite du format du message et de la transformation des profils dans les données exportées d’Adobe Experience Platform vers les destinations.
 title: Format des messages
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: b42ef11681bb50141c7f3dc76d8c79d71e55e73c
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2502'
+source-wordcount: '2489'
 ht-degree: 87%
 
 ---
@@ -380,7 +380,7 @@ Profil 2 :
 
 ### Identités {#identities}
 
-Pour en savoir plus sur les identités dans Experience Platform, consultez la [vue d’ensemble de l’espace de noms d’identité](../../../../identity-service/namespaces.md).
+Pour en savoir plus sur les identités dans Experience Platform, consultez la [vue d’ensemble de l’espace de noms d’identité](../../../../identity-service/features/namespaces.md).
 
 **Entrée**
 

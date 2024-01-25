@@ -4,7 +4,7 @@ title: Connexion LINE
 description: La destination LINE vous permet d’ajouter des profils à votre audience Platform et de fournir des expériences personnalisées aux utilisateurs connectés.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1190'
 ht-degree: 41%
@@ -54,7 +54,7 @@ Voir [[!DNL LINE] documentation](https://developers.line.biz/en/docs/messaging-a
 
 ## Identités prises en charge {#supported-identities}
 
-[!DNL LINE] prend en charge la mise à jour et l’exportation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
+[!DNL LINE] prend en charge la mise à jour et l’exportation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
 
 | Identité cible | Description |
 |---|---|

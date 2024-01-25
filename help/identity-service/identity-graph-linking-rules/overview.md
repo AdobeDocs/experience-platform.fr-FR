@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 07771956c22a3fee92bd76ae061b07e1e0f98b49
+source-git-commit: f21b5519440f7ffd272361954c9e32ccca2ec2bc
 workflow-type: tm+mt
-source-wordcount: '1040'
+source-wordcount: '1022'
 ht-degree: 1%
 
 ---
@@ -23,8 +23,6 @@ ht-degree: 1%
 * [Vue d’ensemble](./overview.md)
 * [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
 * [Exemples de scénarios](./example-scenarios.md)
-* [Identity Service et Real-time Customer Profile](identity-and-profile.md)
-* [Logique de liaison d’identités](./identity-linking-logic.md)
 
 Avec Adobe Experience Platform Identity Service et Real-time Customer Profile, il est facile de supposer que vos données sont parfaitement ingérées et que tous les profils fusionnés représentent une seule personne par le biais d’un identifiant de personne, tel qu’un identifiant CRM. Cependant, il existe des scénarios possibles où certaines données peuvent tenter de fusionner plusieurs profils disparates en un seul profil (&quot;effondrement de profil&quot;). Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par le biais des règles de liaison des graphiques d’identités et permettre une personnalisation précise pour vos utilisateurs.
 
@@ -114,5 +112,3 @@ Pour plus d’informations sur les règles de liaison des graphiques d’identit
 
 * [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
 * [Exemples de scénarios de configuration des règles de liaison de graphiques d’identités](./example-scenarios.md)
-* [Identity Service et Real-time Customer Profile](identity-and-profile.md)
-* [Logique de liaison d’identités](./identity-linking-logic.md)

@@ -2,9 +2,9 @@
 description: Découvrez comment configurer les identités cibles prises en charge pour les destinations créées avec Destination SDK.
 title: Configuration de l’espace de noms d’identité
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '842'
 ht-degree: 95%
 
 ---
@@ -17,13 +17,13 @@ Pendant la création d’une destination avec Destination SDK, vous pouvez non s
 
 Dans ce cas, les utilisateurs ont également la possibilité de sélectionner des identités cibles, en plus des attributs de profil cible.
 
-Pour en savoir plus sur les espaces de noms d’identité dans Experience Platform, consultez la [documentation relative aux espaces de noms d’identité](../../../../identity-service/namespaces.md).
+Pour en savoir plus sur les espaces de noms d’identité dans Experience Platform, consultez la [documentation relative aux espaces de noms d’identité](../../../../identity-service/features/namespaces.md).
 
 Pendant la configuration des espaces de noms d’identité pour la destination, vous pouvez affiner le mapping de ciblage d’identité pris en charge par la destination, par exemple :
 
 * Permettre aux utilisateurs de mapper des attributs XDM aux espaces de noms d’identité.
-* Autoriser les utilisateurs à mapper les [espaces de noms d’identité standard](../../../../identity-service/namespaces.md#standard) à vos propres espaces de noms d’identité.
-* Autoriser les utilisateurs à mapper les [espaces de noms d’identité personnalisés](../../../../identity-service/namespaces.md#manage-namespaces) à vos propres espaces de noms d’identité.
+* Autoriser les utilisateurs à mapper les [espaces de noms d’identité standard](../../../../identity-service/features/namespaces.md#standard) à vos propres espaces de noms d’identité.
+* Autoriser les utilisateurs à mapper les [espaces de noms d’identité personnalisés](../../../../identity-service/features/namespaces.md#manage-namespaces) à vos propres espaces de noms d’identité.
 
 Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la section [options de configuration](../configuration-options.md) ou consulter le guide sur la manière d’effectuer [utiliser la Destination SDK pour configurer une destination basée sur des fichiers ;](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
@@ -55,7 +55,7 @@ Pendant la définition des identités cibles prises en charge par la destination
 |---------|----------|---|------|
 | `acceptsAttributes` | Booléen | Facultatif | Indique si la clientèle peut mapper des attributs de profil standard à l’identité que vous configurez. |
 | `acceptsCustomNamespaces` | Booléen | Facultatif | Indique si la clientèle peut mapper des espaces de noms d’identité personnalisés à l’espace de noms d’identité que vous configurez. |
-| `acceptedGlobalNamespaces` | - | Facultatif | Indique quels [espaces de noms d’identité standard](../../../../identity-service/namespaces.md#standard) (par exemple, la clientèle [!UICONTROL IDFA]) peut mapper l’identité que vous configurez. |
+| `acceptedGlobalNamespaces` | - | Facultatif | Indique quels [espaces de noms d’identité standard](../../../../identity-service/features/namespaces.md#standard) (par exemple, la clientèle [!UICONTROL IDFA]) peut mapper l’identité que vous configurez. |
 | `transformation` | Chaîne | Facultatif | Affiche la case [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) (Appliquer la transformation) dans l’interface utilisateur de Platform, quand le champ source est un attribut XDM ou un espace de noms d’identité personnalisée. Utilisez cette option pour permettre aux utilisateurs de hacher les attributs sources au moment de l’exportation. Pour activer cette option, définissez la valeur sur `sha256(lower($))`. |
 | `requiredTransformation` | Chaîne | Facultatif | Quand la clientèle sélectionne cet espace de noms d’identité source, la case [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) (Appliquer la transformation) est automatiquement cochée pour le mappage et il n’est pas possible de la décocher. Pour activer cette option, définissez la valeur sur `sha256(lower($))`. |
 
@@ -83,7 +83,7 @@ Vous devez indiquer quelles identités [!DNL Platform] les clients peuvent expor
 
 Une correspondance 1 à 1 entre [!DNL Platform] et votre destination n’est pas obligatoire dans les espaces de noms d’identités. Par exemple, les clients peuvent mapper un espace de nom [!DNL Platform] [!DNL IDFA] à un espace de noms [!DNL IDFA] depuis votre destination ou mapper le même espace de noms [!DNL Platform] [!DNL IDFA] à un espace de noms [!DNL Customer ID] dans votre destination.
 
-Apprenez-en plus sur les identités dans la [présentation des espaces de noms d’identité](../../../../identity-service/namespaces.md).
+Apprenez-en plus sur les identités dans la [présentation des espaces de noms d’identité](../../../../identity-service/features/namespaces.md).
 
 ## Considérations relatives au mappage
 

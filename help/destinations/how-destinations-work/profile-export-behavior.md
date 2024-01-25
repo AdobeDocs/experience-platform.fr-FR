@@ -2,9 +2,9 @@
 title: Comportement d’exportation de profils
 description: Découvrez comment le comportement d’exportation de profils varie entre les différents modèles d’intégration pris en charge dans les destinations Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: e6545dfaf5c43ac854986cfdc4f5cb153a07405b
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '2924'
+source-wordcount: '2931'
 ht-degree: 97%
 
 ---
@@ -109,7 +109,7 @@ Concernant les données exportées pour un profil donné, il est important de co
 
 | Ce qui détermine une exportation de destination | Éléments inclus dans l’exportation de destination |
 |---------|----------|
-| <ul><li>Les attributs et audiences mappés servent de repère pour un export de destination. Cela signifie que si une audience mappée change de statut (de `null` à `realized` ou de `realized` à `exiting`) ou qu’un attribut mappé est mis à jour, une destination est exportée.</li><li>La modification du mappage d’identités correspond à une identité ajoutée/supprimée pour le [graphique d’identités](/help/identity-service/ui/identity-graph-viewer.md) du profil, pour les espaces de noms d’identité mappés pour l’exportation.</li><li>La modification d’un attribut correspond à toute mise à jour de l’attribut, pour les attributs mappés à la destination.</li></ul> | <ul><li>Les audiences qui sont mappées à la destination et qui ont été modifiées seront incluses dans l’objet `segmentMembership`. Dans certains scénarios, ils peuvent être exportés à l’aide de plusieurs appels. En outre, dans certains scénarios, certaines audiences qui n’ont pas été modifiées peuvent également être incluses dans l’appel. Dans tous les cas, seules les audiences mappées sont exportées.</li><li>Toutes les identités des espaces de noms qui sont mappés à la destination dans l’objet `identityMap` sont également inclus.</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
+| <ul><li>Les attributs et audiences mappés servent de repère pour un export de destination. Cela signifie que si une audience mappée change de statut (de `null` à `realized` ou de `realized` à `exiting`) ou qu’un attribut mappé est mis à jour, une destination est exportée.</li><li>La modification du mappage d’identités correspond à une identité ajoutée/supprimée pour le [graphique d’identités](/help/identity-service/features/identity-graph-viewer.md) du profil, pour les espaces de noms d’identité mappés pour l’exportation.</li><li>La modification d’un attribut correspond à toute mise à jour de l’attribut, pour les attributs mappés à la destination.</li></ul> | <ul><li>Les audiences qui sont mappées à la destination et qui ont été modifiées seront incluses dans l’objet `segmentMembership`. Dans certains scénarios, ils peuvent être exportés à l’aide de plusieurs appels. En outre, dans certains scénarios, certaines audiences qui n’ont pas été modifiées peuvent également être incluses dans l’appel. Dans tous les cas, seules les audiences mappées sont exportées.</li><li>Toutes les identités des espaces de noms qui sont mappés à la destination dans l’objet `identityMap` sont également inclus.</li><li>Seuls les attributs mappés sont inclus dans l’exportation de destination.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -147,7 +147,7 @@ Dans l’une des situations d’exportation ci-dessus, les fichiers exportés in
 
 Toutes les mises à jour d’un profil n’entraînent pas l’inclusion de celui-ci dans les exportations de fichiers incrémentiels. Par exemple, si un attribut a été ajouté à un profil ou supprimé de celui-ci, le profil n’est pas inclus dans l’exportation. Seuls les profils pour lesquels l’attribut `segmentMembership` a changé seront inclus dans les fichiers exportés. En d’autres termes, ce n’est que si le profil fait partie de l’audience ou est supprimé de celle-ci qu’il est inclus dans les exports de fichiers incrémentiels.
 
-De même, si une nouvelle identité (nouvelle adresse e-mail, nouveau numéro de téléphone, nouvel ECID, etc.) est ajoutée à un profil dans le [graphique d’identité](/help/identity-service/ui/identity-graph-viewer.md), cela ne représente pas une raison d’inclure le profil dans une nouvelle exportation de fichiers incrémentiels.
+De même, si une nouvelle identité (nouvelle adresse e-mail, nouveau numéro de téléphone, nouvel ECID, etc.) est ajoutée à un profil dans le [graphique d’identité](/help/identity-service/features/identity-graph-viewer.md), cela ne représente pas une raison d’inclure le profil dans une nouvelle exportation de fichiers incrémentiels.
 
 Si une nouvelle audience est ajoutée à un mappage de destination, cela n’a aucune incidence sur les qualifications et les exportations d’un autre segment. Les plannings d’export sont configurés individuellement par audience et les fichiers sont exportés séparément pour chaque segment, même si les audiences ont été ajoutées au même flux de données de destination.
 

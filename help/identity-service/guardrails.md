@@ -3,7 +3,7 @@ keywords: Experience Platform;identité;service d’identité;dépannage;garde-f
 title: Barrières de sécurité pour Identity Service
 description: Ce document fournit des informations sur l’utilisation et les limites de taux pour les données Identity Service afin de vous aider à optimiser l’utilisation du graphique d’identités.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: d33be97fcb935a53a8776d2a1993ad9d2b50e913
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '1507'
 ht-degree: 43%
@@ -186,7 +186,7 @@ Enfin, le processus de suppression génère deux graphiques plus petits.
 Pour plus d’informations sur [!DNL Identity Service], consultez la documentation suivante :
 
 * [Vue d’ensemble des [!DNL Identity Service]](home.md)
-* [Visionneuse de graphique d’identités](ui/identity-graph-viewer.md)
+* [Visionneuse de graphique d’identités](features/identity-graph-viewer.md)
 
 Pour plus d’informations sur les barrières de sécurité des autres services Experience Platform, sur les informations de latence de bout en bout et les informations de licence des documents Description du produit Real-Time CDP, consultez la documentation suivante :
 

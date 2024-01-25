@@ -4,16 +4,16 @@ feature: Attribution AI
 title: Guide de l’interface utilisateur Attribution AI
 description: Ce document sert de guide pour interagir avec Attribution AI dans l’interface utilisateur d’Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2442'
-ht-degree: 36%
+source-wordcount: '2450'
+ht-degree: 29%
 
 ---
 
 # Guide de l’interface utilisateur Attribution AI
 
-Dans le cadre d’Intelligent Services, Attribution AI est un service d’attribution algorithmique à plusieurs canaux qui calcule l’influence et l’impact incrémentiel des interactions des clients par rapport à des résultats spécifiés. Grâce à Attribution AI, les professionnels du marketing peuvent mesurer et optimiser les dépenses publicitaires et marketing en comprenant l’impact de chaque interaction client sur chaque phase du parcours des clients.
+Dans le cadre d’Intelligent Services, Attribution AI est un service d’attribution algorithmique à plusieurs canaux qui calcule l’influence et l’impact incrémentiel des interactions des clients par rapport à des résultats spécifiés. Grâce à Attribution AI, les marketeurs peuvent mesurer et optimiser les dépenses publicitaires et marketing en comprenant l’impact de chaque interaction client sur chaque phase du parcours des clients.
 
 Ce document sert de guide pour interagir avec Attribution AI dans l’interface utilisateur d’Intelligent Services.
 
@@ -61,7 +61,7 @@ Par conception, Attribution AI peut utiliser les données Adobe Analytics, Evén
 
 Après avoir sélectionné les jeux de données que vous souhaitez utiliser, sélectionnez la variable **[!UICONTROL Ajouter]** pour ajouter les jeux de données au volet d’aperçu du jeu de données.
 
-![Sélectionner des jeux de données](./images/user-guide/select-datasets.png)
+![Sélection de jeux de données](./images/user-guide/select-datasets.png)
 
 Icône Sélectionner l’information ![icône info](./images/user-guide/info-icon.png) en regard d’un jeu de données, la fenêtre contextuelle d’aperçu du jeu de données s’ouvre.
 
@@ -103,7 +103,7 @@ Dans le cas où plusieurs identités sont disponibles dans un espace de noms, ve
 
 >[!NOTE]
 >
-> S’il n’existe aucun type d’identité (espace de noms) valide pour un jeu de données, vous devez définir une identité principale et l’affecter à un espace de noms d’identité à l’aide de la variable [éditeur de schéma](../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la page [Espaces de noms Identity Service](../../identity-service/namespaces.md) la documentation.
+> S’il n’existe aucun type d’identité (espace de noms) valide pour un jeu de données, vous devez définir une identité principale et l’affecter à un espace de noms d’identité à l’aide de la variable [éditeur de schéma](../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la page [Espaces de noms Identity Service](../../identity-service/features/namespaces.md) la documentation.
 
 ## Mappage du canal média et des champs de campagne {#aai-mapping}
 
@@ -133,7 +133,7 @@ Une fois qu’un événement est sélectionné, un nouveau menu déroulant s’a
 
 >[!NOTE]
 >
->Une chaîne sous votre *nom de conversion* est mise à jour au fur et à mesure que vous définissez votre événement.
+>Une chaîne sous votre *nom de la conversion* est mis à jour au fur et à mesure que vous définissez votre événement.
 
 ![aucun menu déroulant](./images/user-guide/conversion_event_1.png)
 
@@ -143,7 +143,7 @@ Les boutons **[!UICONTROL Ajouter un événement]** et **[!UICONTROL Ajouter un 
 
 ![ajouter un événement](./images/user-guide/add_event.png)
 
-Sélection **[!UICONTROL Ajouter un événement]** crée des champs supplémentaires qui peuvent être remplis en utilisant la même méthode que celle décrite ci-dessus. Cela permet d’ajouter une instruction ET à la définition de la chaîne sous le nom de la conversion. Sélectionnez la variable **x** pour supprimer un événement qui a été ajouté.
+Sélection **[!UICONTROL Ajouter un événement]** crée des champs supplémentaires qui peuvent être remplis en utilisant la même méthode que celle décrite ci-dessus. Cela permet d’ajouter une instruction ET à la définition de chaîne sous le nom de conversion. Sélectionnez la variable **x** pour supprimer un événement qui a été ajouté.
 
 ![menu ajouter un événement](./images/user-guide/add_event_result.png)
 
@@ -175,7 +175,7 @@ Une fois qu’un opérateur pour un point de contact est sélectionné, *Saisir 
 
 >[!NOTE]
 >
->Les opérateurs « exists » et « not exists » ne sont pas associés à des valeurs de champ.
+>Les opérateurs &quot;exists&quot; et &quot;not exists&quot; ne sont pas associés à des valeurs de champ.
 
 ![menu déroulant du point de contact](./images/user-guide/touchpoint_dropdown.png)
 
@@ -191,7 +191,7 @@ Sélection **Ajouter un groupe** vous donne la possibilité de créer des champs
 
 >[!NOTE]
 >
->Utilisez la chaîne sous le *nom du point de contact* pour avoir un aperçu rapide de votre point de contact. Notez que la chaîne correspond au nom du point de contact.
+>Utilisez la chaîne sous *Nom du point de contact* pour un aperçu rapide de votre point de contact. Notez que la chaîne correspond au nom du point de contact.
 
 ![](./images/user-guide/touchpoint_string.png)
 
@@ -221,7 +221,7 @@ Pour modifier l’heure de la journée où vous souhaitez que la notation soit e
 
 >[!NOTE]
 >
->Chaque processus de notation peut prendre jusqu’à 24 heures.
+>Chaque processus de notation peut prendre jusqu’à 24 heures.
 
 ![icône de l’horloge](./images/user-guide/time_of_day.png)
 
@@ -247,7 +247,7 @@ Pour finir, saisissez le code pays dans le menu déroulant **[!UICONTROL Saisir 
 
 >[!NOTE]
 >
->Les codes pays se composent de deux caractères. Vous trouverez ci-contre une liste complète de ces codes [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
+>Les codes pays comportent deux caractères. Vous trouverez ci-contre une liste complète de ces codes [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
 ![région](./images/user-guide/region-based.png)
 
@@ -257,7 +257,7 @@ Pour vous assurer d’obtenir le modèle le plus précis possible, il est import
 
 >[!NOTE]
 >
->Une période de formation plus courte est plus réceptive aux tendances récentes, tandis qu’une période de formation plus longue crée un modèle plus robuste et est moins sensible aux tendances récentes.
+>Une période de formation plus courte est plus sensible aux tendances récentes, tandis qu’une période de formation plus longue crée un modèle plus robuste et est moins sensible aux tendances récentes.
 
 ![période de formation](./images/user-guide/training_window.png)
 
@@ -267,7 +267,7 @@ Une fois la fenêtre de formation sélectionnée, sélectionnez **[!UICONTROL Te
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez réussi à créer une instance de service dans Attribution AI. Une fois que la notation avec l’instance est terminée (compter jusqu’à 24 heures), vous êtes prêt à [découvrir les informations d’Attribution AI](./discover-insights.md). De plus, si vous souhaitez télécharger les résultats de la notation, visitez le [téléchargement de scores](./download-scores.md) la documentation.
+En suivant ce tutoriel, vous avez réussi à créer une instance de service dans Attribution AI. Une fois que la notation de l’instance est terminée (compter jusqu’à 24 heures), vous êtes prêt à [découvrir les insights d’Attribution AI](./discover-insights.md). De plus, si vous souhaitez télécharger les résultats de la notation, visitez le [téléchargement de scores](./download-scores.md) la documentation.
 
 ## Ressources supplémentaires
 

@@ -5,10 +5,10 @@ title: Définition d’une relation entre deux schémas à l’aide de l’édit
 description: Ce document fournit un tutoriel sur la définition d’une relation entre deux schémas à l’aide de l’éditeur de schémas dans l’interface utilisateur de l’Experience Platform.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: 8b5c1776804bbacad5c3d72dd48c1716380cca79
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 27%
+source-wordcount: '1158'
+ht-degree: 26%
 
 ---
 
@@ -73,11 +73,11 @@ Le schéma source &quot;[!DNL Loyalty Members]&quot; est basé sur la variable [
 
 Le schéma de référence &quot;[!DNL Hotels]&quot; est basé sur un[!DNL Hotels]&quot; et contient des champs qui décrivent un hôtel. Pour participer à une relation, une identité principale doit également être définie pour le schéma de référence et activée pour [!UICONTROL Profil]. Dans ce cas, `_tenantId.hotelId`agit comme l’identité principale du schéma, à l’aide d’un &quot; personnalisé&quot;[!DNL Hotel ID]&quot; identity namespace.
 
-![Activez pour le Profil](../images/tutorials/relationship/hotels.png)
+![Activation pour Profile](../images/tutorials/relationship/hotels.png)
 
 >[!NOTE]
 >
->Pour savoir comment créer des espaces de noms d’identité personnalisés, reportez-vous à la section [Documentation d’Identity Service](../../identity-service/namespaces.md#manage-namespaces).
+>Pour savoir comment créer des espaces de noms d’identité personnalisés, reportez-vous à la section [Documentation d’Identity Service](../../identity-service/features/namespaces.md#manage-namespaces).
 
 ## Création d’un groupe de champs de relation
 
@@ -103,7 +103,7 @@ La mise à jour `preferredHotel` apparaît dans la zone de travail, située sous
 
 ![](../images/tutorials/relationship/relationship-field-save.png)
 
-## Définition d’un champ de relation pour le schéma source {#relationship-field}
+## Définir un champ de relation pour le schéma source {#relationship-field}
 
 Une fois que le champ de référence dédié de votre schéma source est défini, vous pouvez le désigner comme champ de relation.
 

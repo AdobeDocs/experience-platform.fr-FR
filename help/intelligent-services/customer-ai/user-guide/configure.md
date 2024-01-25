@@ -5,10 +5,10 @@ feature: Customer AI
 title: Configuration d’une instance Customer AI
 description: Les services AI/ML fournissent Customer AI en tant que service Adobe Sensei simple d’utilisation pouvant être configuré pour différents cas d’utilisation. Les sections suivantes décrivent les étapes de configuration d’une instance de Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: 973a9cae711780448e5c708622a71ba928695beb
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2824'
-ht-degree: 8%
+source-wordcount: '2827'
+ht-degree: 7%
 
 ---
 
@@ -70,7 +70,7 @@ Par conception, Customer AI utilise Adobe Analytics, Adobe Audience Manager, les
 
 Après avoir sélectionné les jeux de données que vous souhaitez utiliser, sélectionnez la variable **[!UICONTROL Ajouter]** pour ajouter les jeux de données au volet d’aperçu du jeu de données.
 
-![Sélectionner des jeux de données](../images/user-guide/select-datasets.png)
+![Sélection de jeux de données](../images/user-guide/select-datasets.png)
 
 Icône Sélectionner l’information ![icône info](../images/user-guide/info-icon.png) en regard du jeu de données, la fenêtre contextuelle d’aperçu du jeu de données s’ouvre.
 
@@ -113,7 +113,7 @@ Dans le cas où plusieurs identités sont disponibles dans un espace de noms, ve
 
 >[!NOTE]
 >
-> S’il n’existe aucun type d’identité (espace de noms) valide pour un jeu de données, vous devez définir une identité principale et l’affecter à un espace de noms d’identité à l’aide de la variable [éditeur de schéma](../../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la page [Espaces de noms Identity Service](../../../identity-service/namespaces.md) la documentation.
+> S’il n’existe aucun type d’identité (espace de noms) valide pour un jeu de données, vous devez définir une identité principale et l’affecter à un espace de noms d’identité à l’aide de la variable [éditeur de schéma](../../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la page [Espaces de noms Identity Service](../../../identity-service/features/namespaces.md) la documentation.
 
 ## Définition d’un objectif {#define-a-goal}
 
@@ -243,7 +243,7 @@ Si l’instance est créée avec succès, une opération de prédiction se décl
 
 >[!NOTE]
 >
->Selon le volume des données d’entrée, les opérations de prédiction peuvent durer jusqu’à 24 heures.
+>Selon la taille des données d’entrée, les opérations de prédiction peuvent prendre jusqu’à 24 heures.
 
 En suivant cette section, vous avez configuré une instance de Customer AI et exécuté une opération de prédiction. Une fois l’exécution terminée, les insights notés renseignent automatiquement les profils avec les scores prévus si le bouton bascule du profil est activé. Veuillez patienter jusqu’à 24 heures avant de passer à la section suivante de ce tutoriel.
 

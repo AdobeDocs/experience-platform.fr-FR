@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation du connecteur source des attributs du client
 description: Découvrez comment connecter les attributs du client à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 23%
+source-wordcount: '381'
+ht-degree: 19%
 
 ---
 
@@ -25,7 +25,7 @@ La variable [!DNL Customer Attributes] source crée automatiquement le jeu de do
 
 ## Identités
 
-L’identité principale d’un jeu de données est contenue dans la première colonne du fichier CSV des données source. La variable [!DNL Customer Attributes] source suppose que l’identité est toujours mappée à la variable [`CORE` namespace](../../../identity-service/namespaces.md), un espace de noms généré par le système qui est pris en charge par [[!DNL Identity Service]](../../../identity-service/home.md).
+L’identité principale d’un jeu de données est contenue dans la première colonne du fichier CSV des données source. La variable [!DNL Customer Attributes] source suppose que l’identité est toujours mappée à la variable [`CORE` namespace](../../../identity-service/features/namespaces.md), un espace de noms généré par le système qui est pris en charge par [[!DNL Identity Service]](../../../identity-service/home.md).
 
 Vous ne pouvez pas sélectionner un espace de noms existant pour l’identité lors de l’utilisation de [!DNL Customer Attributes] source car [!DNL Customer Attributes] suppose que l’identité principale du schéma figure toujours dans la carte d’identité. [!DNL Customer Attributes] crée ensuite le mappage de l’ID source à l’UUID de carte d’identité de manière automatisée.
 

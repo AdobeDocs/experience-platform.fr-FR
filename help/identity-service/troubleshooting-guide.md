@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de dépannage d’Identity Service
 description: Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform Identity Service, ainsi qu’un guide de dépannage pour les erreurs courantes.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
-source-wordcount: '2176'
+source-wordcount: '2166'
 ht-degree: 100%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform [!DNL Identity Service] ainsi qu’un guide de dépannage pour les erreurs courantes. Pour toute question ou tout dépannage concernant les API de [!DNL Platform] en général, reportez-vous au [guide de dépannage des API d’Adobe Experience Platform](../landing/troubleshooting.md).
 
-Les données qui identifient un client unique sont souvent fragmentées sur les différents appareils et systèmes qu’il utilise pour interagir avec votre marque. [!DNL Identity Service] rassemble ces identités fragmentées, ce qui permet une compréhension complète du comportement des clients afin que vous puissiez offrir des expériences numériques percutantes en temps réel. Pour plus d’informations, voir la [Présentation d’Identity Service](./home.md).
+Les données qui identifient un client unique sont souvent fragmentées sur les différents appareils et systèmes qu’il utilise pour interagir avec votre marque. [!DNL Identity Service] rassemble ces identités fragmentées, ce qui permet une compréhension complète du comportement des clients afin que vous puissiez offrir des expériences digitales percutantes en temps réel. Pour plus d’informations, voir la [Présentation d’Identity Service](./home.md).
 
 ## FAQ
 
@@ -27,7 +27,7 @@ Les données d’identité sont les données pouvant être utilisées pour ident
 
 ## Quel est l’avantage de l’étiquetage des champs de données comme identités ?
 
-L’étiquetage de certains champs de données comme identités dans vos données d’enregistrement et de série temporelle vous permet de mettre en correspondance les relations d’identité dans la structure naturelle de vos données et de concilier les duplicatas de données entre les canaux. Pour plus d’informations, voir la [Présentation d’Identity Service](./home.md).
+L’étiquetage de certains champs de données comme identités dans vos données d’enregistrement et de série temporelle vous permet de mettre en correspondance les relations d’identité dans la structure naturelle de vos données et de réconcilier les duplicatas de données entre les canaux. Pour plus d’informations, voir la [Présentation d’Identity Service](./home.md).
 
 ## Que sont les identités connues et anonymes ?
 
@@ -73,7 +73,7 @@ Pour obtenir des instructions détaillées sur la définition d’un espace de n
 
 ## Quels sont les espaces de noms d’identité standards fournis par Experience Platform ? {#standard-namespaces}
 
-Les espaces de noms d’identité standard sont des espaces de noms disponibles pour toutes les organisations. Pour obtenir une liste des espaces de noms standard disponibles, consultez la [présentation des espaces de noms d’identité](./namespaces.md).
+Les espaces de noms d’identité standard sont des espaces de noms disponibles pour toutes les organisations. Pour obtenir une liste des espaces de noms standard disponibles, consultez la [présentation des espaces de noms d’identité](./features/namespaces.md).
 
 ## Où trouver la liste des espaces de noms d’identité disponibles pour mon organisation ?
 

@@ -3,7 +3,7 @@ title: Personnaliser les expériences sur site pour les visiteurs inconnus à l�
 description: Découvrez comment utiliser la reconnaissance des visiteurs et visiteuses par les partenaires pour personnaliser les expériences sur site de vos visiteurs et visiteuses.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 89%
@@ -51,7 +51,7 @@ Pour mettre en œuvre ce cas d’utilisation avec succès, vous devez utiliser p
    * [Balises](/help/tags/home.md)
    * [Flux de données](/help/datastreams/overview.md)
 * Gestion des données sur Real-Time CDP
-   * [Identités](/help/identity-service/namespaces.md)
+   * [Identités](/help/identity-service/features/namespaces.md)
    * [Schémas](/help/xdm/home.md)
    * [Libellés d’utilisation des données](/help/data-governance/labels/overview.md)
    * [Jeux de données](/help/catalog/datasets/overview.md)
@@ -279,7 +279,7 @@ Vous pouvez maintenant intégrer un moteur de personnalisation pour afficher du 
 
 Notez que les limites suivantes s’appliquent lorsque vous utilisez le cas d’utilisation décrit sur cette page :
 
-* Si vous utilisez des ID de partenaire, sachez que ceux-ci ne sont pas utilisés lors de la création de votre [graphique d’identité](/help/identity-service/ui/identity-graph-viewer.md).
+* Si vous utilisez des ID de partenaire, sachez que ceux-ci ne sont pas utilisés lors de la création de votre [graphique d’identité](/help/identity-service/features/identity-graph-viewer.md).
 
 ## Autres cas d’utilisation réalisés grâce à la prise en charge des données des partenaires {#other-use-cases}
 

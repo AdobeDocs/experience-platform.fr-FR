@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de dépannage de l’ingestion en flux continu
 description: Ce document répond aux questions les plus fréquentes sur l’ingestion en flux continu sur Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1026'
 ht-degree: 100%
 
 ---
@@ -97,6 +97,6 @@ Le fichier JSON suivant est un exemple d’objet de réponse pour une requête d
 
 Si [!DNL Real-Time Customer Profile] rejette un message, cela est probablement dû à des informations d’identité incorrectes. Cela peut être le résultat d’une valeur ou d’un espace de noms d’identité non valide.
 
-Il existe deux types d’espace de noms d’identité : par défaut et personnalisé. Lors de l’utilisation d’espaces de noms personnalisés, assurez-vous que l’espace de noms a été enregistré dans [!DNL Identity Service]. Pour plus d’informations sur l’utilisation des espaces de noms par défaut et personnalisés, consultez la [présentation des espaces de noms d’identité](../../identity-service/namespaces.md).
+Il existe deux types d’espace de noms d’identité : par défaut et personnalisé. Lors de l’utilisation d’espaces de noms personnalisés, assurez-vous que l’espace de noms a été enregistré dans [!DNL Identity Service]. Pour plus d’informations sur l’utilisation des espaces de noms par défaut et personnalisés, consultez la [présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md).
 
 Vous pouvez utiliser l’[[!DNL Experience Platform UI]](https://platform.adobe.com) pour afficher plus d’informations sur les raisons pour lesquelles un message a échoué lors de l’ingestion. Cliquez sur **[!UICONTROL Surveillance]** dans le volet de navigation de gauche, puis consultez l’onglet **[!UICONTROL Diffusion en continu de bout en bout]** pour voir les lots de messages diffusés au cours d’une période sélectionnée.

@@ -3,7 +3,7 @@ title: Connexion à TikTok
 description: Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. Il peut s’agir de personnes qui ont visité votre site web ou interagi avec votre contenu. Poussez rapidement et en toute sécurité l’audience souhaitée de Adobe Experience Platform vers TikTok à l’aide de l’intégration en temps réel d’Adobe à TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 39%
@@ -36,7 +36,7 @@ Avant d’envoyer des données à votre compte TikTok Ads Manager, vous devez au
 
 ## Identités prises en charge {#supported-identities}
 
-TikTok prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
+TikTok prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
 
 | Identité cible | Description | Considérations |
 |---|---|---|

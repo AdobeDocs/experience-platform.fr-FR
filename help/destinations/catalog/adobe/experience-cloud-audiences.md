@@ -3,7 +3,7 @@ title: Audiences Experience Cloud
 description: Découvrez comment partager des audiences de Real-time Customer Data Platform vers différentes applications Experience Cloud.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
 workflow-type: tm+mt
 source-wordcount: '1678'
 ht-degree: 16%
@@ -106,11 +106,11 @@ Les métadonnées, telles que les noms d’audience, sont disponibles en Audienc
 
 ## Identités prises en charge {#supported-identities}
 
-Profils exportés vers le [!UICONTROL Audiences Experience Cloud] Les destinations sont mappées aux identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
+Profils exportés vers le [!UICONTROL Audiences Experience Cloud] Les destinations sont mappées aux identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| ECID | Experience Cloud ID | Espace de noms qui représente l’ECID. Cet espace de noms peut également être référencé par les alias suivants : « ID Adobe Marketing Cloud », « ID Adobe Experience Cloud », « ID Adobe Experience Platform ». Consultez le document suivant sur [ECID](/help/identity-service/ecid.md) pour plus d’informations. |
+| ECID | Experience Cloud ID | Espace de noms qui représente l’ECID. Cet espace de noms peut également être référencé par les alias suivants : « ID Adobe Marketing Cloud », « ID Adobe Experience Cloud », « ID Adobe Experience Platform ». Consultez le document suivant sur [ECID](/help/identity-service/features/ecid.md) pour plus d’informations. |
 | GAID | Google Advertising ID | Les profils ingérés dans Real-Time CDP avec une identité principale de Google Advertising ID (GAID) peuvent être exportés vers cette destination. |
 | IDFA | Identifiant Apple pour les annonceurs | Les profils ingérés dans Real-Time CDP avec une identité principale d’Apple ID for Advertisers (IDFA) peuvent être exportés vers cette destination. |
 | email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Les profils ingérés dans Real-Time CDP avec une identité principale d’adresse électronique hachée peuvent être exportés vers cette destination. |

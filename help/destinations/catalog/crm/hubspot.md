@@ -3,7 +3,7 @@ title: Connexion à HubSpot
 description: La destination HubSpot vous permet de gérer les enregistrements de contact dans votre compte HubSpot.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1543'
 ht-degree: 38%
@@ -64,7 +64,7 @@ Si vous ne disposez pas d’une application privée, suivez la documentation pou
 
 ## Identités prises en charge {#supported-identities}
 
-[!DNL HubSpot] prend en charge la mise à jour des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
+[!DNL HubSpot] prend en charge la mise à jour des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
 
 | Identité cible | Exemple | Description | Considérations |
 |---|---|---|---|

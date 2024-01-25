@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Présentation du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 44ffcc09edcfe35bdd456b509fac6f096ef8e022
+source-git-commit: 0d111241658b4014d1ca2e6013d21a4782d81be9
 workflow-type: tm+mt
 source-wordcount: '1840'
 ht-degree: 87%
@@ -103,7 +103,7 @@ Pour plus d’informations sur les [!DNL Destinations], consultez la [[!DNL Dest
 
 Adobe Experience Platform [!DNL Identity Service] vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
 
-Dans le cadre du contrôle d’accès basé sur les attributs, l’autorisation `view-identity-graph` vous permet de déterminer quels utilisateurs et utilisatrices de votre organisation peuvent accéder au graphique d’identité par le biais de l’interface utilisateur ou des API. Pour plus dʼinformations, consultez le guide sur lʼ[utilisation de la visionneuse de graphiques dʼidentité](../../identity-service/ui/identity-graph-viewer.md).
+Dans le cadre du contrôle d’accès basé sur les attributs, l’autorisation `view-identity-graph` vous permet de déterminer quels utilisateurs et utilisatrices de votre organisation peuvent accéder au graphique d’identité par le biais de l’interface utilisateur ou des API. Pour plus dʼinformations, consultez le guide sur lʼ[utilisation de la visionneuse de graphiques dʼidentité](../../identity-service/features/identity-graph-viewer.md).
 
 Pour plus d’informations sur [!DNL Identity Service], consultez la [[!DNL Identity Service] présentation](../../identity-service/home.md).
 

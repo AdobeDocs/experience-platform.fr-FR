@@ -2,18 +2,18 @@
 keywords: Experience Platform;accueil;rubriques populaires;confidentialité du lac de données;espaces de noms dʼidentité;confidentialité;lac de données
 solution: Experience Platform
 title: Traitement des demandes dʼaccès à des informations personnelles dans le lac de données
-description: Adobe Experience Platform Privacy Service traite les demandes des clients dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité. Ce document couvre les concepts essentiels liés au traitement des demandes d’accès à des informations personnelles pour les données clients stockées dans le lac de données.
+description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, d’opt-out de vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité. Ce document couvre les concepts essentiels liés au traitement des demandes d’accès à des informations personnelles pour les données clients stockées dans le lac de données.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1429'
 ht-degree: 73%
 
 ---
 
 # Traitement des demandes d’accès à des informations personnelles dans le lac de données
 
-Adobe Experience Platform [!DNL Privacy Service] traite les demandes des clients dʼaccès, de retrait du consentement à la vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité.
+Adobe Experience Platform [!DNL Privacy Service] traite les demandes des clients en matière dʼaccès, d’opt-out de vente ou de suppression de leurs données personnelles conformément aux réglementations légales et organisationnelles en matière de confidentialité.
 
 Ce document couvre les concepts essentiels liés au traitement des demandes d’accès à des informations personnelles pour les données clients stockées dans le lac de données.
 
@@ -36,9 +36,9 @@ Une connaissance concrète des services [!DNL Experience Platform] suivants est 
 
 Adobe Experience Platform [!DNL Identity Service] rapproche les données dʼidentité client entre les systèmes et les appareils. [!DNL Identity Service] utilise les espaces de noms d’identité pour fournir un contexte aux valeurs d’identité en les reliant à leur système d’origine. Un espace de noms peut représenter un concept générique tel qu’une adresse e-mail (« E-mail ») ou associer l’identité à une application spécifique telle qu’un identifiant Adobe Advertising Cloud ID (« AdCloud ») ou un identifiant Adobe Target (« TNTID »).
 
-[!DNL Identity Service] conserve un stock d’espaces de nom d’identité définis globalement (standard) et par l’utilisateur (personnalisés). Les espaces de noms standard sont disponibles pour toutes les organisations (par exemple, « E-mail » et « ECID »), tandis que votre organisation peut aussi créer des espaces de noms personnalisés adaptés à ses besoins spécifiques.
+[!DNL Identity Service] conserve un stock d’espaces de noms d’identité définis globalement (standard) et par l’utilisateur (personnalisés). Les espaces de noms standard sont disponibles pour toutes les organisations (par exemple, « E-mail » et « ECID »), tandis que votre organisation peut aussi créer des espaces de noms personnalisés adaptés à ses besoins spécifiques.
 
-Pour plus dʼinformations sur les espaces de noms dʼidentité dans [!DNL Experience Platform], consultez la [présentation de lʼespace de noms dʼidentité](../identity-service/namespaces.md).
+Pour plus dʼinformations sur les espaces de noms dʼidentité dans [!DNL Experience Platform], consultez la [présentation de lʼespace de noms dʼidentité](../identity-service/features/namespaces.md).
 
 ## Ajouter des données dʼidentité aux jeux de données
 
@@ -61,7 +61,7 @@ Il existe deux méthodes pour ajouter un descripteur dʼidentité à un schéma 
 
 ### Utilisation de l’interface utilisateur {#identity-ui}
 
-Dans lʼinterface utilisateur dʼ[!DNL Experience Platform ], lʼespace de travail **[!UICONTROL Schémas]** vous permet de modifier vos schémas XDM existants. Pour ajouter un descripteur dʼidentité à un schéma, sélectionnez le schéma dans la liste et suivez les étapes pour [définir un champ de schéma en tant que champ dʼidentité](../xdm/tutorials/create-schema-ui.md#identity-field) dans le tutoriel de [!DNL Schema Editor].
+Dans lʼinterface utilisateur dʼ[!DNL Experience Platform], lʼespace de travail **[!UICONTROL Schémas]** vous permet de modifier vos schémas XDM existants. Pour ajouter un descripteur dʼidentité à un schéma, sélectionnez le schéma dans la liste et suivez les étapes pour [définir un champ de schéma en tant que champ dʼidentité](../xdm/tutorials/create-schema-ui.md#identity-field) dans le tutoriel de [!DNL Schema Editor].
 
 Une fois que vous avez défini les champs appropriés dans le schéma en tant que champs dʼidentité, vous pouvez passer à la section suivante sur lʼ[envoi de demandes dʼaccès à des informations personnelles](#submit).
 
@@ -153,7 +153,7 @@ Lors de la création de requêtes de tâche dans l’interface utilisateur, veil
 
 ### Utilisation de l’API
 
-Lors de la création de requêtes de tâche dans l’API, tout `userIDs` fourni doit utiliser un `namespace` et un `type` spécifiques en fonction de la banque de données concernée. Les identifiants du lac de données doivent utiliser `unregistered` pour leur `type` et une `namespace` qui correspond à l’une des valeurs [étiquettes de confidentialité](#privacy-labels) qui ont été ajoutés aux jeux de données applicables.
+Lors de la création de requêtes de tâche dans l’API, tout `userIDs` fourni doit utiliser un `namespace` et un `type` spécifiques en fonction de la banque de données concernée. Les identifiants du lac de données doivent utiliser `unregistered` pour leur `type` et une valeur `namespace` qui correspond à l’une des valeurs [étiquettes de confidentialité](#privacy-labels) qui ont été ajoutés aux jeux de données applicables.
 
 En outre, le tableau `include` de la payload de requête doit inclure les valeurs de produit pour les différentes banques de données vers lesquelles la requête est effectuée. Lors de l’envoi de requêtes au lac de données, le tableau doit inclure la valeur `aepDataLake`.
 

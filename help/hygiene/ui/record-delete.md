@@ -2,10 +2,10 @@
 title: Suppression d’enregistrements
 description: Découvrez comment supprimer des enregistrements dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 6e97b3a6b3830cf88802a8dd89944b6ce8791f02
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 26%
+source-wordcount: '1557'
+ht-degree: 25%
 
 ---
 
@@ -27,7 +27,7 @@ La suppression d’enregistrements nécessite une compréhension pratique du fon
 Pour plus d’informations sur les identités dans Platform, consultez la documentation suivante :
 
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md) : associe les identités des appareils et des systèmes, en liant les jeux de données en fonction des champs d’identité définis par les schémas XDM auxquels ils se conforment.
-* [Espaces de noms d’identité](../../identity-service/namespaces.md): les espaces de noms d’identité définissent les différents types. of informations d’identité pouvant être liées à une seule personne et qui sont un composant requis pour chaque champ d’identité.
+* [Espaces de noms d’identité](../../identity-service/features/namespaces.md): les espaces de noms d’identité définissent les différents types. of informations d’identité pouvant être liées à une seule personne et qui sont un composant requis pour chaque champ d’identité.
 * [Profil client en temps réel](../../profile/home.md): utilise des graphiques d’identités pour fournir des profils consommateurs unifiés basés sur des données agrégées provenant de plusieurs sources, mis à jour en temps quasi réel.
 * [Modèle de données d’expérience (XDM)](../../xdm/home.md) : fournit des structures et des définitions standard pour les données de Platform à l’aide de schémas. Tous les jeux de données de Platform sont conformes à un schéma XDM spécifique et le schéma définit les champs qui sont des identités.
 * [Champs d’identité](../../xdm/ui/fields/identity.md) : découvrez la définition d’un champ d’identité dans un schéma XDM.
@@ -125,7 +125,7 @@ Pour saisir les identités manuellement, sélectionnez **[!UICONTROL Ajouter une
 
 ![Le workflow de création de la requête avec la fonction [!UICONTROL Ajouter une identité] en surbrillance.](../images/ui/record-delete/add-identity.png)
 
-Les commandes qui s’affichent vous permettent de saisir des identités une par une. Sous **[!UICONTROL Identité principale]**, utilisez le menu déroulant pour sélectionner le type d’identité. Under **[!UICONTROL Valeur d’identité]**, indiquez la valeur d’identité principale de l’enregistrement.
+Les commandes qui s’affichent vous permettent de saisir des identités une par une. Sous **[!UICONTROL Identité du Principal]**, utilisez le menu déroulant pour sélectionner le type d’identité. Under **[!UICONTROL Valeur d’identité]**, indiquez la valeur d’identité principale de l’enregistrement.
 
 ![Le workflow de création de requête avec un champ d’identité ajouté manuellement.](../images/ui/record-delete/identity-added.png)
 

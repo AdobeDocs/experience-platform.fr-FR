@@ -5,7 +5,7 @@ title: Exploration des ressources de schéma dans l’interface utilisateur
 description: Découvrez comment explorer les schémas, classes, groupes de champs de schéma et types de données existants dans l’interface utilisateur de l’Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: f08aa017b7f971a54197b95023e9331832ecb7f1
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '993'
 ht-degree: 0%
@@ -86,7 +86,7 @@ Si le champ que vous inspectez est un champ d’énumération, le rail droit aff
 
 Lors de l’inspection des schémas qui contiennent des champs d’identité, ces champs sont répertoriés dans le rail de gauche sous la classe ou le groupe de champs qui les fournit au schéma. Sélectionnez le nom du champ d’identité dans le rail de gauche pour afficher le champ dans la zone de travail, quelle que soit la profondeur d’imbrication.
 
-Les champs d’identité sont mis en surbrillance dans la zone de travail avec une icône d’empreinte digitale (![Image d’empreinte digitale](../images/ui/explore/identity-symbol.png)). Si vous sélectionnez le nom du champ d’identité, vous pouvez afficher des informations supplémentaires, telles que la variable [espace de noms d’identité](../../identity-service/namespaces.md) et si le champ est ou non l’identité principale du schéma.
+Les champs d’identité sont mis en surbrillance dans la zone de travail avec une icône d’empreinte digitale (![Image d’empreinte digitale](../images/ui/explore/identity-symbol.png)). Si vous sélectionnez le nom du champ d’identité, vous pouvez afficher des informations supplémentaires, telles que la variable [espace de noms d’identité](../../identity-service/features/namespaces.md) et si le champ est ou non l’identité principale du schéma.
 
 ![](../images/ui/explore/identity-field.png)
 

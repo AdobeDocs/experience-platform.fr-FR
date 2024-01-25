@@ -3,9 +3,9 @@ keywords: destinations;destination;page des détails des destinations;page des d
 title: Afficher les détails de la destination
 description: La page de détails d’une destination individuelle fournit un aperçu des détails de destination. Les détails de la destination incluent le nom de destination, l’identifiant, les audiences mappées à la destination et les contrôles permettant de modifier l’activation et d’activer et désactiver le flux de données.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '925'
 ht-degree: 12%
 
 ---
@@ -60,7 +60,7 @@ Le tableau suivant couvre les contrôles et les détails fournis par le rail de 
 | [!UICONTROL Catégorie] | Indique le type de destination. Voir [destinations](../catalog/overview.md) pour plus d’informations. |
 | [!UICONTROL Type de connexion] | Indique le formulaire par lequel vos audiences sont envoyées vers la destination. Les valeurs possibles incluent : [!UICONTROL Cookie] et [!UICONTROL Basé sur les profils]. |
 | [!UICONTROL Fréquence] | Indique la fréquence d’envoi des audiences vers la destination. Les valeurs possibles incluent : [!UICONTROL Diffusion en continu] et [!UICONTROL Lot]. |
-| [!UICONTROL Identité] | Représente l’espace de noms d’identité accepté par la destination, tel que `GAID`, `IDFA`, ou `email`. Pour plus d’informations sur les espaces de noms d’identité acceptés, voir [présentation de l’espace de noms d’identité](../../identity-service/namespaces.md). |
+| [!UICONTROL Identité] | Représente l’espace de noms d’identité accepté par la destination, tel que `GAID`, `IDFA`, ou `email`. Pour plus d’informations sur les espaces de noms d’identité acceptés, voir [présentation de l’espace de noms d’identité](../../identity-service/features/namespaces.md). |
 | [!UICONTROL Créé par] | Indique l’utilisateur qui a créé cette destination. |
 | [!UICONTROL Créé] | Indique la date et l’heure (UTC) de création de cette destination. |
 

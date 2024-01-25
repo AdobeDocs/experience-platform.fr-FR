@@ -3,9 +3,9 @@ title: Interagir et acquérir de nouveaux clients sans dépendre de cookies tier
 description: Découvrez comment interagir et acquérir de nouveaux clientes et clients grâce à des cas d’utilisation de prospection, sans recourir à des cookies tiers.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2074'
 ht-degree: 86%
 
 ---
@@ -65,7 +65,7 @@ Parcourez les sections ci-dessous, qui contiennent des liens vers d’autres doc
 
 À mesure que vous réalisez les étapes de mise en œuvre du cas d’utilisation, vous utiliserez les fonctionnalités et éléments suivants de l’interface utilisateur de Real-Time CDP (répertoriés dans leur ordre d’utilisation). Assurez-vous de disposer des autorisations de contrôle d’accès en fonction des attributs nécessaires pour toutes ces zones ou demandez à votre administrateur ou administratrice système de vous accorder les autorisations nécessaires.
 
-* [Identités](/help/identity-service/namespaces.md)
+* [Identités](/help/identity-service/features/namespaces.md)
 * [Schémas](/help/xdm/home.md)
 * [Libellés d’utilisation des données](/help/data-governance/labels/overview.md)
 * [Jeux de données](/help/catalog/datasets/overview.md)
@@ -95,7 +95,7 @@ Commencez par créer un type d’identité pour les profils que vous recevrez du
 
 ![Création d’un espace de noms d’identité Identifiant de partenaire.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
-* En savoir plus sur l’identifiant de partenaire dans la [section Types d’identité](/help/identity-service/namespaces.md).
+* En savoir plus sur l’identifiant de partenaire dans la [section Types d’identité](/help/identity-service/features/namespaces.md).
 * Découvrez [comment définir des champs d’identité](/help/xdm/ui/fields/identity.md) dans l’interface utilisateur d’Experience Platform.
 
 #### Créer un schéma avec la classe **[!UICONTROL XDM Individual Prospect Profile]**

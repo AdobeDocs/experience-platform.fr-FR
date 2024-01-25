@@ -2,7 +2,7 @@
 title: Connexion à Medallia
 description: Activez les profils pour les enquêtes et la collecte de commentaires Medallia ciblées afin de mieux comprendre les besoins et les attentes des clients.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1135'
 ht-degree: 33%
@@ -44,7 +44,7 @@ Consultez votre équipe de diffusion Medallia pour obtenir ces détails.
 
 ## Identités prises en charge {#supported-identities}
 
-Medallia prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
+Medallia prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
 
 | Identité cible | Description | Considérations |
 |---|---|---|

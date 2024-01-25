@@ -3,7 +3,7 @@ keywords: mobile, braser, messagerie;
 title: Connexion Braze
 description: Braze est une plateforme d’engagement client complète qui optimise les expériences pertinentes et mémorables entre les clients et les marques qu’ils aiment.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 31%
@@ -40,7 +40,7 @@ En tant que marketeur, je souhaite cibler les utilisateurs dans une destination 
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| external_id | Personnalisé [!DNL Braze] identifiant qui prend en charge le mappage de n’importe quelle identité. | Vous pouvez envoyer n’importe quel [identité](../../../identity-service/namespaces.md) à la fonction [!DNL Braze] tant que vous le mappez à la variable [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
+| external_id | Personnalisé [!DNL Braze] identifiant qui prend en charge le mappage de n’importe quelle identité. | Vous pouvez envoyer n’importe quel [identité](../../../identity-service/features/namespaces.md) à la fonction [!DNL Braze] tant que vous le mappez à la variable [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation). |
 
 {style="table-layout:auto"}
 

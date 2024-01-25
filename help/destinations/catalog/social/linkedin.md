@@ -3,7 +3,7 @@ keywords: connexion linkedin;connexion linkedin;destinations linkedin;linkedin;
 title: Connexion à des audiences mises en correspondance Linkedin
 description: Activez les profils de vos campagnes LinkedIn pour le ciblage, la personnalisation et la suppression des audiences, en fonction des courriers électroniques hachés.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1099'
 ht-degree: 37%
@@ -26,7 +26,7 @@ Une société de logiciels organise une conférence et souhaite rester en contac
 
 ## Identités prises en charge {#supported-identities}
 
-[!DNL LinkedIn Matched Audiences] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/namespaces.md).
+[!DNL LinkedIn Matched Audiences] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
 
 | Identité cible | Description | Considérations |
 |---|---|---|

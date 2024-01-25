@@ -3,9 +3,9 @@ title: Complémenter les profils propriétaires avec des attributs fournis par l
 description: Découvrez comment compléter les profils propriétaires avec des attributs de partenaires de données de confiance pour améliorer vos bases de données, obtenir de nouvelles informations sur votre base de clientes et de clients et optimiser l’audience.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 3353866aa2d52c784663f355183e940e727b2af7
+source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1256'
 ht-degree: 79%
 
 ---
@@ -56,7 +56,7 @@ Consultez le tutoriel vidéo ci-dessous pour une présentation détaillée de la
 1. En tant que **client ou cliente**, vous obtenez les attributs sous licence du **partenaire de données**.
 2. En tant que **client ou cliente**, vous étendez vos données de profil et votre modèle de gouvernance afin de prendre en compte les attributs fournis par le **partenaire**.
 3. En tant que **client ou cliente**, vous intégrez les audiences que vous souhaitez enrichir avec le partenaire de données. En règle générale, ces audiences sont composées d’identifiants d’entrée comme des éléments d’informations d’identification personnelle (PII) tels que l’e-mail, le nom, l’adresse ou autres.
-4. Le **partenaire** ajoute des attributs sous licence pour les profils avec lesquels il peut établir une correspondance. Si vous le souhaitez, un [Identifiant de partenaire](/help/identity-service/namespaces.md) peut être inclus et ingéré dans l’espace de noms de l’ID de portée du partenaire.
+4. Le **partenaire** ajoute des attributs sous licence pour les profils avec lesquels il peut établir une correspondance. Si vous le souhaitez, un [Identifiant de partenaire](/help/identity-service/features/namespaces.md) peut être inclus et ingéré dans l’espace de noms de l’ID de portée du partenaire.
 5. En tant que **client ou cliente**, vous chargez des attributs du partenaire de données dans les profils client de Real-Time CDP.
 
 ## Comment réaliser le cas d’utilisation : instructions détaillées {#step-by-step-instructions}
@@ -99,9 +99,9 @@ Au cours de cette étape, réfléchissez également à la manière dont votre mo
 
 >[!TIP]
 >
->Si vous choisissez de compléter vos profils client avec un identifiant basé sur la personne du fournisseur de données, vous pouvez créer un type d’identité du type **[[!UICONTROL Identifiant de partenaire]](/help/identity-service/namespaces.md)**.
+>Si vous choisissez de compléter vos profils client avec un identifiant basé sur la personne du fournisseur de données, vous pouvez créer un type d’identité du type **[[!UICONTROL Identifiant de partenaire]](/help/identity-service/features/namespaces.md)**.
 >
->En savoir plus sur l’identifiant de partenaire dans la [section Types d’identité](/help/identity-service/namespaces.md).
+>En savoir plus sur l’identifiant de partenaire dans la [section Types d’identité](/help/identity-service/features/namespaces.md).
 >Découvrez [comment définir des champs d’identité](/help/xdm/ui/fields/identity.md) dans l’interface utilisateur d’Experience Platform.
 
 ### Exportez les audiences que vous souhaitez enrichir en saisissant des informations d’identification personnelles (PII) ou hachées {#export-audiences}
@@ -130,7 +130,7 @@ Voici quelques connecteurs source recommandés à cette fin :
 
 Notez que les limites suivantes s’appliquent lorsque vous utilisez le cas d’utilisation décrit sur cette page :
 
-* Si vous choisissez d’utiliser des identifiants de partenaire, sachez que ceux-ci ne sont pas utilisés lors de la création de votre [graphique d’identité](/help/identity-service/ui/identity-graph-viewer.md).
+* Si vous choisissez d’utiliser des identifiants de partenaire, sachez que ceux-ci ne sont pas utilisés lors de la création de votre [graphique d’identité](/help/identity-service/features/identity-graph-viewer.md).
 
 ## Autres cas d’utilisation réalisés grâce à la prise en charge des données des partenaires {#other-use-cases}
 

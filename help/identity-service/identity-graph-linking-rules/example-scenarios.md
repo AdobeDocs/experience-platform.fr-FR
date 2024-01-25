@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: Alpha
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: 20b8433cee719329bce562069c328adb906697a0
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '437'
 ht-degree: 3%
 
 ---
@@ -70,5 +70,5 @@ Pour plus d’informations sur les règles de liaison des graphiques d’identit
 
 * [Présentation des règles de liaison de graphiques d’identités](./overview.md)
 * [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
-* [Identity Service et Real-time Customer Profile](identity-and-profile.md)
-* [Logique de liaison d’identités](./identity-linking-logic.md)
+* [Identity Service et Real-time Customer Profile](../identity-and-profile.md)
+* [Logique de liaison d’identités](../features/identity-linking-logic.md)

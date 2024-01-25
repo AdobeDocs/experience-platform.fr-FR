@@ -1,10 +1,10 @@
 ---
 title: Guide de mise en oeuvre d’Identity Service
 description: Découvrez comment les données fournies à Adobe Experience Platform sont traitées avant d’être utilisées par Identity Service pour créer des graphiques d’identités.
-source-git-commit: bdda234c44b63999d7582857975afa64fdb93605
+source-git-commit: f1273c1deac32559e214d1d99d10f6ca25fe4264
 workflow-type: tm+mt
-source-wordcount: '566'
-ht-degree: 66%
+source-wordcount: '581'
+ht-degree: 64%
 
 ---
 
@@ -22,7 +22,7 @@ En fonction de la stratégie de collecte de données de votre entreprise, les ch
 
 ## Création d’espaces de noms d’identité supplémentaires
 
-Bien qu’Experience Platform offre de nombreux espaces de noms standard, vous devrez peut-être créer des espaces de noms supplémentaires pour classer correctement vos identités. Pour plus d’informations, consultez le guide sur [création d’espaces de noms personnalisés pour votre organisation](./namespaces.md).
+Bien qu’Experience Platform offre de nombreux espaces de noms standard, vous devrez peut-être créer des espaces de noms supplémentaires pour classer correctement vos identités. Pour plus d’informations, consultez le guide sur [création d’espaces de noms personnalisés pour votre organisation](./features/namespaces.md).
 
 >[!NOTE]
 >
@@ -45,6 +45,8 @@ Par exemple, en désignant les champs de numéro de téléphone comme des champs
 >
 >* Les champs de type tableau et mappage ne sont pas pris en charge et ne peuvent pas être marqués et libellés comme des champs dʼidentité.
 >* L’espace de noms des identités résultantes est fourni au moment où le champ est libellé.
+
+Pour plus d’informations, consultez le guide sur [définition des champs d’identité dans l’interface utilisateur](../xdm/ui/fields/identity.md).
 
 ## Configuration d’un jeu de données pour Identity Service
 

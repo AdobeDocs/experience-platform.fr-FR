@@ -2,7 +2,7 @@
 title: Gestion des autorisations pour la collecte de données dans Experience Platform
 description: Présentation générale de la gestion des autorisations et du contrôle de l’accès aux fonctionnalités de collecte de données dans Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: dd0856075867b5fc226068fa856942edcbe4a7a6
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '1285'
 ht-degree: 29%
@@ -34,7 +34,7 @@ Les autorisations sous Adobe Experience Platform incluent l’accès aux jeux de
 | Sandbox | (S/O) | Selon le [sandbox](../sandboxes/home.md) qui ont été créés sous votre organisation, vous pouvez contrôler l’accès à chacun d’eux par le biais de cette catégorie d’autorisations dans Admin Console. |
 | Modélisation des données | Gestion des schémas | Permet d’afficher, de créer et de modifier [Schémas XDM (Experience Data Model)](../xdm/home.md). |
 | Modélisation des données | Affichage des schémas | Accorde l’accès en lecture seule aux schémas. |
-| Identity Management | Gestion des espaces de noms d’identité | Permet d’afficher, de créer et de modifier [espaces de noms d’identité](../identity-service/namespaces.md). |
+| Identity Management | Gestion des espaces de noms d’identité | Permet d’afficher, de créer et de modifier [espaces de noms d’identité](../identity-service/features/namespaces.md). |
 | Identity Management | Affichages des espaces de noms d’identité | Accorde l’accès en lecture seule aux espaces de noms d’identité. |
 | Collecte de données | Gestion des flux de données | Permet d’afficher, de créer et de modifier [datastreams](../datastreams/overview.md). |
 | Collecte de données | Affichage des flux de données | Accorde l’accès en lecture seule aux flux de données. |

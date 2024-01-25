@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Groupe de champs de schéma de contenu et de préférences
 description: Découvrez le groupe de champs de schéma Contenus et Préférences .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -106,7 +106,7 @@ Le fichier JSON suivant illustre un exemple du type de données que la variable 
 >* Si le client s’est désabonné au niveau du canal, tous les consentements ou préférences équivalents dans `idSpecific` sont ignorées.
 >* Si le consentement ou la préférence au niveau du canal n’est pas définie ou si le client s’est inscrit, alors les consentements ou préférences équivalents dans `idSpecific` sont honorés.
 
-Chaque clé dans la variable `idSpecific` représente un espace de noms d’identité spécifique reconnu par le service Adobe Experience Platform Identity. Bien que vous puissiez définir vos propres espaces de noms personnalisés pour classer différents identifiants, il est recommandé d’utiliser l’un des espaces de noms standard fournis par Identity Service pour réduire les tailles de stockage pour Real-Time Customer Profile. Pour plus d’informations sur les espaces de noms d’identité, voir [présentation de l’espace de noms d’identité](../../../identity-service/namespaces.md) dans la documentation d’Identity Service.
+Chaque clé dans la variable `idSpecific` représente un espace de noms d’identité spécifique reconnu par le service Adobe Experience Platform Identity. Bien que vous puissiez définir vos propres espaces de noms personnalisés pour classer différents identifiants, il est recommandé d’utiliser l’un des espaces de noms standard fournis par Identity Service pour réduire les tailles de stockage pour Real-Time Customer Profile. Pour plus d’informations sur les espaces de noms d’identité, voir [présentation de l’espace de noms d’identité](../../../identity-service/features/namespaces.md) dans la documentation d’Identity Service.
 
 Les clés de chaque objet d’espace de noms représentent les valeurs d’identité uniques pour lesquelles le client a défini des préférences. Chaque valeur d’identité peut contenir un ensemble complet de consentements et de préférences, formatés de la même manière que `consents`.
 

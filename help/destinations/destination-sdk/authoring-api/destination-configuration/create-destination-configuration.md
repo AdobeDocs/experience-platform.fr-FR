@@ -2,10 +2,10 @@
 description: Découvrez comment structurer un appel API pour créer une configuration de destination avec Adobe Experience Platform Destination SDK.
 title: Création d’une configuration de destination
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '1205'
-ht-degree: 98%
+source-wordcount: '1194'
+ht-degree: 99%
 
 ---
 
@@ -208,9 +208,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `uiAttributes.connectionType` | Chaîne | Type de connexion en fonction de la destination. Valeurs prises en charge : <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul> |
 | `uiAttributes.frequency` | Chaîne | Fait référence au type d’exportation des données pris en charge par la destination. Définissez-le sur `Streaming` quand les intégrations sont basées sur des API, ou sur `Batch` lorsque vous exportez des fichiers vers les destinations. |
 | `identityNamespaces.externalId.acceptsAttributes` | Booléen | Indique si la clientèle peut mapper des attributs de profil standard à l’identité que vous configurez. |
-| `identityNamespaces.externalId.acceptsCustomNamespaces` | Booléen | Indique s’il est possible de mapper des identités appartenant à des [espaces de noms personnalisés](/help/identity-service/namespaces.md#manage-namespaces) à l’identité que vous êtes en train de configurer. |
+| `identityNamespaces.externalId.acceptsCustomNamespaces` | Booléen | Indique s’il est possible de mapper des identités appartenant à des [espaces de noms personnalisés](/help/identity-service/features/namespaces.md#manage-namespaces) à l’identité que vous êtes en train de configurer. |
 | `identityNamespaces.externalId.transformation` | Chaîne | _Non affiché dans l’exemple de configuration_. Utilisé, par exemple, lorsque le client [!DNL Platform] dispose d’adresses e-mail simples en tant qu’attribut et que votre plateforme accepte les e-mails hachés uniquement. C’est ici que vous devez fournir la transformation à appliquer (transformer l’adresse e-mail en minuscules, puis la hacher, par exemple). |
-| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Indique quels [espaces de noms d’identité standard](/help/identity-service/namespaces.md#standard) (par exemple, IDFA) la clientèle peut mapper à l’identité que vous configurez. <br> Lorsque vous utilisez `acceptedGlobalNamespaces`, vous pouvez employer `"requiredTransformation":"sha256(lower($))"` pour mettre en minuscules ou hacher des adresses e-mails ou des numéros de téléphone. |
+| `identityNamespaces.externalId.acceptedGlobalNamespaces` | - | Indique quels [espaces de noms d’identité standard](/help/identity-service/features/namespaces.md#standard) (par exemple, IDFA) la clientèle peut mapper à l’identité que vous configurez. <br> Lorsque vous utilisez `acceptedGlobalNamespaces`, vous pouvez employer `"requiredTransformation":"sha256(lower($))"` pour mettre en minuscules ou hacher des adresses e-mails ou des numéros de téléphone. |
 | `destinationDelivery.authenticationRule` | Chaîne | Indique comment la clientèle [!DNL Platform] se connecte à votre destination. Les valeurs acceptées sont les suivantes : `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Utilisez `CUSTOMER_AUTHENTICATION` si les clients Platform se connectent à votre système par le biais d’un nom d’utilisateur et d’un mot de passe, d’un jeton porteur ou d’une autre méthode d’authentification. Par exemple, sélectionnez cette option si vous avez également sélectionné `authType: OAUTH2` ou `authType:BEARER` dans `customerAuthenticationConfigurations`. </li><li> Utilisez `PLATFORM_AUTHENTICATION` s’il existe un système d’authentification global entre Adobe et votre destination et que la clientèle [!DNL Platform] n’a pas besoin de fournir d’informations d’authentification pour se connecter à votre destination. Dans ce cas, vous devez créer des informations d’identification à l’aide de la configuration des [informations d’identification API](../../credentials-api/create-credential-configuration.md). </li><li>Utilisez `NONE` si aucune authentification n’est requise pour envoyer des données à votre plateforme de destination. </li></ul> |
 | `destinationDelivery.destinationServerId` | Chaîne | `instanceId` du [modèle de serveur de destination](../destination-server/create-destination-server.md) utilisé pour cette destination. |
 | `backfillHistoricalProfileData` | Booléen | Contrôle si les données de profil historiques sont exportées quand les audiences sont activées vers la destination. Définissez toujours ce paramètre sur `true`. |

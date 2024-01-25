@@ -4,7 +4,7 @@ title: Identités dans Real-time Customer Data Platform
 description: Identity Service d’Adobe Experience Platform vous permet de mieux connaître vos clients et leurs comportements en rapprochant des identités entre appareils et systèmes.
 feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
-source-git-commit: 1d2c67a2015f57238bdbb0e14c676601e092ef5f
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
 source-wordcount: '422'
 ht-degree: 81%
@@ -19,7 +19,7 @@ Désormais, plutôt que d’avoir cinq clients distincts interagissant avec votr
 
 ## Espaces de noms d’identité
 
-Les espaces de noms d’identité sont des composants d’[!DNL Identity Service] et servent d’indicateurs pour donner un contexte supplémentaire aux identités client. Un exemple d’espace de noms d’ID couramment utilisé serait « E-mail », l’utilisation d’une même adresse e-mail sur plusieurs sites web permettant de rassembler plusieurs identités, chacune associée à un ID client unique, comme appartenant au même client. [!DNL Experience Platform] permet d’utiliser des espaces de noms d’ID pour rechercher des profils individuels dans l’interface utilisateur. Pour plus d’informations sur l’affichage des profils, consultez la [présentation de la vue d’ensemble des profils](profile-browse.md). Pour en savoir plus les espaces de noms d’identité, consultez la [présentation des espaces de noms d’identité](../../identity-service/namespaces.md).
+Les espaces de noms d’identité sont des composants d’[!DNL Identity Service] et servent d’indicateurs pour donner un contexte supplémentaire aux identités client. Un exemple d’espace de noms d’ID couramment utilisé serait « E-mail », l’utilisation d’une même adresse e-mail sur plusieurs sites web permettant de rassembler plusieurs identités, chacune associée à un ID client unique, comme appartenant au même client. [!DNL Experience Platform] permet d’utiliser des espaces de noms d’ID pour rechercher des profils individuels dans l’interface utilisateur. Pour plus d’informations sur l’affichage des profils, consultez la [présentation de la vue d’ensemble des profils](profile-browse.md). Pour en savoir plus les espaces de noms d’identité, consultez la [présentation des espaces de noms d’identité](../../identity-service/features/namespaces.md).
 
 ## Graphiques d’identités
 

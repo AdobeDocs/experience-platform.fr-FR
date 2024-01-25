@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation dʼIdentity Service
 description: Adobe Experience Platform Identity Service vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 484b1c2d37291afd02fe58723121325c837061aa
+source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1554'
 ht-degree: 8%
 
 ---
@@ -32,12 +32,12 @@ Avant de vous plonger dans les détails d’Identity Service, veuillez lire le t
 | Terme | Définition |
 | --- | --- |
 | Identité | Une identité est une donnée propre à une entité. En règle générale, il s’agit d’un objet réel, tel qu’une personne, un périphérique matériel ou un navigateur web (représenté par un cookie). Une identité entièrement qualifiée se compose de deux éléments : une **espace de noms d’identité** et un **valeur d’identité**. |
-| Espace de noms d’identité | Un espace de noms d’identité est le contexte d’une identité donnée. Par exemple, un espace de noms `Email` peut correspondre à **julien<span>@acme.com**. De même, un espace de noms de `Phone` peut correspondre à `555-555-1234`. Pour plus d’informations, consultez la section [présentation de l’espace de noms d’identité](./namespaces.md) |
+| Espace de noms d’identité | Un espace de noms d’identité est le contexte d’une identité donnée. Par exemple, un espace de noms `Email` peut correspondre à **julien<span>@acme.com**. De même, un espace de noms de `Phone` peut correspondre à `555-555-1234`. Pour plus d’informations, consultez la section [présentation de l’espace de noms d’identité](./features/namespaces.md) |
 | Valeur de l’identité | Une valeur d’identité est une chaîne qui représente une entité du monde réel et qui est classée dans Identity Service par le biais d’un espace de noms. Par exemple, la valeur d’identité (chaîne) **julien<span>@acme.com** peut être classé comme `Email` espace de noms. |
 | Type d’identité | Un type d’identité est un composant d’un espace de noms d’identité. Le type d’identité indique si les données d’identité sont liées ou non dans un graphique d’identités. |
 | Lien | Un lien ou une liaison est une méthode permettant d’établir que deux identités disparates représentent la même entité. Par exemple, un lien entre &quot;`Email` = julien<span>@acme.com&quot; et &quot;`Phone` = 555-555-1234&quot; signifie que les deux identités représentent la même entité. Cela suggère que le client qui a interagi avec votre marque avec l’adresse email de julien<span>@acme.com et le numéro de téléphone de 555-555-1234 est le même. |
 | Identity Service | Identity Service est un service d’Experience Platform qui lie (ou annule les liens) les identités pour gérer les graphiques d’identités. |
-| Graphique d’identités | Le graphique d’identités est un ensemble d’identités qui représentent un seul client. Pour plus d’informations, consultez le guide sur [utilisation de la visionneuse de graphiques d’identités](./ui/identity-graph-viewer.md). |
+| Graphique d’identités | Le graphique d’identités est un ensemble d’identités qui représentent un seul client. Pour plus d’informations, consultez le guide sur [utilisation de la visionneuse de graphiques d’identités](./features/identity-graph-viewer.md). |
 | Profil client en temps réel | Real-Time Customer Profile est un service de Adobe Experience Platform qui : <ul><li>Fusionne des fragments de profil pour créer un profil, sur la base d’un graphique d’identités.</li><li>Segmente les profils afin qu’ils puissent ensuite être envoyés à la destination pour les activations.</li></ul> |
 | Profile | Un profil est une représentation d’un sujet, d’une organisation ou d’un individu. Un profil est composé de quatre éléments : <ul><li>Attributs : les attributs fournissent des informations telles que le nom, l’âge ou le sexe.</li><li>Comportement : les comportements fournissent des informations sur les activités d’un profil donné. Par exemple, un comportement de profil peut déterminer si un profil donné &quot;recherchait des sandales&quot; ou &quot;commandait des t-shirts&quot;.</li><li>Identités : pour un profil fusionné, cette option fournit des informations sur toutes les identités associées à la personne. Les identités peuvent être classées en trois catégories : Personne (CRMID, email, téléphone), appareil (IDFA, GAID) et cookie (ECID, AAID).</li><li>Adhésions à l’audience : groupes auxquels le profil appartient (utilisateurs fidèles, utilisateurs résidant en Californie, etc.)</li></ul> |
 
@@ -93,9 +93,11 @@ Examinez lʼexemple suivant :
 
 Dans les scénarios ci-dessus, Identity Service établit un lien entre `{CRM_ID:ABC, ECID:123}`, ainsi que `{CRM_ID:ABC, ECID:456}`. Cela génère un graphique d’identités dans lequel vous &quot;possédez&quot; trois identités : une pour l’identifiant de personne (ID CRM) et deux pour les identifiants de cookie (ECID).
 
+Pour plus d’informations, consultez le guide sur la [Comment Identity Service lie les identités](./features/identity-linking-logic.md).
+
 ## Graphiques d’identités
 
-Un graphique d’identités est une carte des relations entre différents espaces de noms d’identité, ce qui vous permet de visualiser et de mieux comprendre les identités de client qui sont regroupées, ainsi que la manière dont elles sont regroupées. Lisez le tutoriel sur [utilisation de la visionneuse de graphiques d’identités](./ui/identity-graph-viewer.md) pour plus d’informations.
+Un graphique d’identités est une carte des relations entre différents espaces de noms d’identité, ce qui vous permet de visualiser et de mieux comprendre les identités de client qui sont regroupées, ainsi que la manière dont elles sont regroupées. Lisez le tutoriel sur [utilisation de la visionneuse de graphiques d’identités](./features/identity-graph-viewer.md) pour plus d’informations.
 
 La vidéo suivante est destinée à étayer votre compréhension des identités et des graphiques dʼidentité.
 
@@ -108,7 +110,7 @@ Identity Service joue un rôle essentiel dans Experience Platform. Voici quelque
 * [Schémas](../xdm/home.md): dans un schéma donné, les champs de schéma marqués comme identité permettent de créer des graphiques d’identités.
 * [Jeux de données](../catalog/datasets/overview.md): lorsqu’un jeu de données est activé pour ingestion dans Real-time Customer Profile, des graphiques d’identité sont générés à partir du jeu de données, étant donné que le jeu de données correspond à au moins deux champs marqués comme identité.
 * [SDK Web](../edge/home.md): le SDK Web envoie des événements d’expérience à Adobe Experience Platform et Identity Service génère un graphique lorsque plusieurs identités existent dans l’événement.
-* [Profil client en temps réel](../profile/home.md): avant la fusion des attributs et événements d’un profil donné, Real-Time Customer Profile peut référencer le graphique d’identités.
+* [Profil client en temps réel](../profile/home.md): avant la fusion des attributs et événements d’un profil donné, Real-Time Customer Profile peut référencer le graphique d’identités. Pour plus d’informations, consultez le guide sur [compréhension de la relation entre Identity Service et Real-time Customer Profile](./identity-and-profile.md).
 * [Destinations](../destinations/home.md): les destinations peuvent envoyer des informations de profil à d’autres systèmes en fonction d’un espace de noms d’identité, comme un courrier électronique haché.
 * [Correspondance de segment](../segmentation/ui/segment-match/overview.md): la correspondance de segment correspond à deux profils sur deux environnements de test différents qui possèdent le même espace de noms d’identité et la même valeur d’identité.
 * [Privacy Service](../privacy-service/home.md): si la demande de suppression inclut `identity`, la combinaison de l’espace de noms et de la valeur d’identité spécifiée peut être supprimée d’Identity Service à l’aide de la fonctionnalité de traitement des demandes d’accès à des informations personnelles de Privacy Service.

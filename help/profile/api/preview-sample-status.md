@@ -3,9 +3,9 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Aperçu de l’exemple d’état (aperçu du profil), point de terminaison de l’API
 description: L’aperçu de l’exemple de point de terminaison d’état de l’API Real-time Customer Profile vous permet de prévisualiser le dernier échantillon réussi de vos données de profil, de répertorier la distribution du profil par jeu de données et par identité, et de générer des rapports montrant le chevauchement des jeux de données, le chevauchement d’identités et les profils désassemblés.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
 workflow-type: tm+mt
-source-wordcount: '2868'
+source-wordcount: '2906'
 ht-degree: 5%
 
 ---
@@ -208,7 +208,7 @@ La réponse comprend une `data` contenant une liste d’objets de jeu de donnée
 
 Vous pouvez exécuter une requête de GET sur la variable `/previewsamplestatus/report/namespace` point de terminaison pour afficher la ventilation par espace de noms d’identité pour tous les profils fusionnés dans votre banque de profils. Cela inclut les identités standard fournies par Adobe, ainsi que les identités personnalisées définies par votre organisation.
 
-Les espaces de noms d’identité sont un composant important de Adobe Experience Platform Identity Service qui sert d’indicateurs du contexte auquel les données client se rapportent. Pour en savoir plus, commencez par lire le [présentation de l’espace de noms d’identité](../../identity-service/namespaces.md).
+Les espaces de noms d’identité sont un composant important de Adobe Experience Platform Identity Service qui sert d’indicateurs du contexte auquel les données client se rapportent. Pour en savoir plus, commencez par lire le [présentation de l’espace de noms d’identité](../../identity-service/features/namespaces.md).
 
 >[!NOTE]
 >
@@ -298,7 +298,7 @@ La réponse comprend une `data` avec des objets individuels contenant les détai
 | `fullIDsFragmentCount` | Nombre total de fragments de profil dans l’espace de noms. |
 | `fullIDsCount` | Le nombre total de profils fusionnés dans l’espace de noms. |
 | `fullIDsPercentage` | La variable `fullIDsCount` en tant que pourcentage du total des profils fusionnés (le `totalRows` comme indiqué dans la variable [dernier exemple d’état](#view-last-sample-status)), exprimé au format décimal. |
-| `code` | La variable `code` pour l’espace de noms. Vous pouvez le trouver lorsque vous utilisez des espaces de noms à l’aide de la variable [API Adobe Experience Platform Identity Service](../../identity-service/api/list-namespaces.md) et est également appelé [!UICONTROL Symbole d’identité] dans l’interface utilisateur de l’Experience Platform. Pour en savoir plus, consultez la [présentation de l’espace de noms d’identité](../../identity-service/namespaces.md). |
+| `code` | La variable `code` pour l’espace de noms. Vous pouvez le trouver lorsque vous utilisez des espaces de noms à l’aide de la variable [API Adobe Experience Platform Identity Service](../../identity-service/api/list-namespaces.md) et est également appelé [!UICONTROL Symbole d’identité] dans l’interface utilisateur de l’Experience Platform. Pour en savoir plus, consultez la [présentation de l’espace de noms d’identité](../../identity-service/features/namespaces.md). |
 | `value` | La variable `id` pour l’espace de noms. Vous pouvez le trouver lorsque vous utilisez des espaces de noms à l’aide de la variable [API Identity Service](../../identity-service/api/list-namespaces.md). |
 
 ## Génération du rapport de chevauchement de jeux de données
@@ -444,7 +444,7 @@ Une requête réussie renvoie un état HTTP 200 (OK) et le rapport de chevauchem
 | Propriété | Description |
 |---|---|
 | `data` | La variable `data` contient des listes séparées par des virgules avec des combinaisons uniques de codes d’espace de noms d’identité et leurs nombres de profils respectifs. |
-| Codes d’espace de noms | La variable `code` est un formulaire court pour chaque nom d’espace de noms d’identité. Mappage de chaque `code` à `name` se trouve à l’aide de la méthode [API Adobe Experience Platform Identity Service](../../identity-service/api/list-namespaces.md). La variable `code` est également appelé [!UICONTROL Symbole d’identité] dans l’interface utilisateur de l’Experience Platform. Pour en savoir plus, consultez la [présentation de l’espace de noms d’identité](../../identity-service/namespaces.md). |
+| Codes d’espace de noms | La variable `code` est un formulaire court pour chaque nom d’espace de noms d’identité. Mappage de chaque `code` à `name` se trouve à l’aide de la méthode [API Adobe Experience Platform Identity Service](../../identity-service/api/list-namespaces.md). La variable `code` est également appelé [!UICONTROL Symbole d’identité] dans l’interface utilisateur de l’Experience Platform. Pour en savoir plus, consultez la [présentation de l’espace de noms d’identité](../../identity-service/features/namespaces.md). |
 | `reportTimestamp` | Horodatage du rapport. Si une `date` a été fourni pendant la requête, le rapport renvoyé correspond à la date fournie. Si non `date` est fourni, le rapport le plus récent est renvoyé. |
 
 ### Interprétation du rapport de chevauchement des espaces de noms d’identité
