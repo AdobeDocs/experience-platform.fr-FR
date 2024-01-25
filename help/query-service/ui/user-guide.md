@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de Query Editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 79214671acdb0d48182423ad658be2a8b1cbc0c2
+source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
 workflow-type: tm+mt
-source-wordcount: '2382'
-ht-degree: 54%
+source-wordcount: '2313'
+ht-degree: 56%
 
 ---
 
@@ -26,13 +26,6 @@ Pour plus d’informations sur les concepts et les fonctionnalités de [!DNL Que
 [!DNL Query Editor] permet une exécution flexible des requêtes en se connectant à [!DNL Query Service], et les requêtes ne s’exécutent que lorsque cette connexion est active.
 
 ## Accéder à [!DNL Query Editor] {#accessing-query-editor}
-
->[!CONTEXTUALHELP]
->id="platform_queryservice_create_datagovernance"
->title="Obligation de gouvernance des données"
->abstract="N’oubliez pas qu’il vous incombe à vous seul de respecter les politiques de gouvernance des données de votre entreprise et de respecter vos exigences réglementaires. Experience Platform fournit des outils de gouvernance des données qui vous permettent de gérer vos obligations en matière d’utilisation des données. Appliquez les libellés d’utilisation des données appropriés avant d’interroger ou de traiter les données. Consultez la documentation pour en savoir plus sur les outils de gouvernance des données et les bonnes pratiques."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=fr" text="Présentation de la gouvernance des données"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=fr" text="Présentation des libellés de gouvernance des données"
 
 Pour ouvrir l’espace de travail [!DNL Query Service], cliquez sur **[!UICONTROL Requêtes]** dans le menu de navigation à gauche de l’interface utilisateur d’[!DNL Experience Platform]. Ensuite, pour commencer à écrire des requêtes, sélectionnez **[!UICONTROL Créer une requête]** en haut à droite de l’écran. Ce lien est disponible depuis n’importe quelle page de l’espace de travail [!DNL Query Service].
 
