@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Mappage des champs pour le connecteur source Adobe Analytics
 description: Mappez les champs Adobe Analytics aux champs XDM à l’aide du connecteur source Analytics.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: bb07d45df3ca585b2ca4af07cc991ac0b1e4df12
+source-git-commit: 6cbd902c6a1159d062fb38bf124a09bb18ad1ba8
 workflow-type: tm+mt
-source-wordcount: '2367'
-ht-degree: 75%
+source-wordcount: '2388'
+ht-degree: 73%
 
 ---
 
@@ -38,7 +38,7 @@ Certains champs sont directement mappés d’Adobe Analytics au modèle de donn
 | `m_keywords` | `search.keywords` | chaîne | Variable utilisée dans la dimension Mot-clé. |
 | `m_os` | `_experience.analytics.environment.`<br/>`operatingSystemID` | entier | Identifiant numérique représentant le système d’exploitation du visiteur. Dépend de la colonne user_agent. |
 | `m_page_url` | `web.webPageDetails.URL` | chaîne | URL de l’accès à la page. |
-| `m_pagename_no_url` | `web.webPageDetails.name` | chaîne | Variable utilisée pour remplir la dimension Pages. |
+| `m_pagename` | `web.webPageDetails.pageViews.value` | chaîne | Est égal à 1 sur les accès qui ont un nom de page. Ceci est similaire à la mesure Pages vues d’Adobe Analytics. |
 | `m_referrer` | `web.webReferrer.URL` | chaîne | URL de la page précédente. |
 | `m_search_page_num` | `search.pageDepth` | entier | Variable utilisée par la dimension Classification globale des pages de recherche. Indique la page des résultats de recherche sur laquelle votre site est apparu avant que l’utilisateur n’ait cliqué sur votre site. |
 | `m_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | chaîne | Variable d’état. |
@@ -152,7 +152,7 @@ Certains champs provenant d’ADC doivent être transformés, ce qui nécessite 
 | `m_page_event_var1` | `web.webInteraction.URL` | chaîne | Variable utilisée uniquement dans les demandes d’image de suivi de liens. Cette variable contient l’URL du lien de téléchargement, de sortie ou personnalisé sur lequel a cliqué l’utilisateur. |
 | `m_page_event_var2` | `web.webInteraction.name` | chaîne | Variable utilisée uniquement dans les demandes d’image de suivi de liens. Répertorie le nom personnalisé du lien, s’il est spécifié. |
 | `m_page_type` | `web.webPageDetails.isErrorPage` | booléen | Variable utilisée pour remplir la dimension Pages introuvables. Cette variable doit être vide ou contenir « ErrorPage ». |
-| `m_pagename_no_url` | `web.webPageDetails.pageViews.value` | nombre | Nom de la page (s’il est défini). Si aucune page n’est spécifiée, cette valeur n’est pas renseignée. |
+| `m_pagename_no_url` | `web.webPageDetails.name` | nombre | Nom de la page (s’il est défini). Si aucune page n’est spécifiée, cette valeur n’est pas renseignée. |
 | `m_paid_search` | `search.isPaid` | booléen | Indicateur défini si l’accès correspond à la détection des référencements payants. |
 | `m_product_list` | `productListItems[].items` | tableau | Liste de produits, telle qu’elle est transmise par l’intermédiaire de la variable des produits. | {SKU (string), quantity (integer), priceTotal (number)} |
 | `m_ref_type` | `web.webReferrer.type` | chaîne | Identifiant numérique représentant le type de référence pour l’accès.<br/>`1`: sur votre site<br/>`2`: autres sites web<br/>`3`: moteurs de recherche<br/>`4`: disque dur<br/>`5`: USENET<br/>`6`: tapé/marqué (aucun référent)<br/>`7`: email<br/>`8`: pas de JavaScript<br/>`9`: Réseaux sociaux |
@@ -203,7 +203,7 @@ Pour en savoir plus sur l’exécution de ces transformations à l’aide de Que
 | `post_first_hit_pagename` | `_experience.analytics.endUser.`<br/>`firstWeb.webPageDetails.name` | chaîne | Variable utilisée dans la dimension Page d’accès originale. Nom de page de la page d’accès du visiteur. |
 | `post_keywords` | `search.keywords` | chaîne | Mots-clés collectés pour l’accès. |
 | `post_page_url` | `web.webPageDetails.URL` | chaîne | URL de l’accès à la page. |
-| `post_pagename_no_url` | `web.webPageDetails.name` | chaîne | Variable utilisée pour remplir la dimension Pages. |
+| `post_pagename` | `web.webPageDetails.pageViews.value` | chaîne | Est égal à 1 sur les accès qui ont un nom de page. Ceci est similaire à la mesure Pages vues d’Adobe Analytics. |
 | `post_purchaseid` | `commerce.order.purchaseID` | chaîne | Variable utilisée pour identifier de manière unique les achats. |
 | `post_referrer` | `web.webReferrer.URL` | chaîne | URL de la page précédente. |
 | `post_state` | `_experience.analytics.customDimensions.`<br/>`stateProvince` | chaîne | Variable d’état. |
@@ -233,11 +233,11 @@ Pour en savoir plus sur l’exécution de ces transformations à l’aide de Que
 | `post_latitude` | `placeContext.geo._schema.latitude` | nombre | <!-- MISSING --> |
 | `post_longitude` | `placeContext.geo._schema.longitude` | nombre | <!-- MISSING --> |
 | `post_page_event` | `web.webInteraction.type` | chaîne | Le type d’accès qui est envoyé dans la demande d’image (accès standard, lien de téléchargement, lien de sortie ou lien personnalisé sur lequel le visiteur a cliqué). |
-| `post_page_event` | `web.webInteraction.linkClicks.value` | nombre | Le type d’accès qui est envoyé dans la demande d’image (accès standard, lien de téléchargement, lien de sortie ou lien personnalisé sur lequel le visiteur a cliqué). |
+| `post_page_event` | `web.webInteraction.linkClicks.value` | nombre | Est égal à 1 si l’accès est un clic sur les liens. Ceci est similaire à la mesure Événements de page dans Adobe Analytics. |
 | `post_page_event_var1` | `web.webInteraction.URL` | chaîne | Variable utilisée uniquement dans les demandes d’image de suivi de liens. Il s’agit de l’URL du lien de téléchargement, de sortie ou personnalisé sur lequel a cliqué l’utilisateur. |
 | `post_page_event_var2` | `web.webInteraction.name` | chaîne | Variable utilisée uniquement dans les demandes d’image de suivi de liens. Il s’agit du nom personnalisé du lien. |
 | `post_page_type` | `web.webPageDetails.isErrorPage` | booléen | Utilisé pour remplir la dimension Pages introuvables. Cette variable doit être vide ou contenir « ErrorPage ». |
-| `post_pagename_no_url` | `web.webPageDetails.pageViews.value` | nombre | Nom de la page (s’il est défini). Si aucune page n’est spécifiée, cette valeur n’est pas renseignée. |
+| `post_pagename_no_url` | `web.webPageDetails.name` | nombre | Nom de la page (s’il est défini). Si aucune page n’est spécifiée, cette valeur n’est pas renseignée. |
 | `post_product_list` | `productListItems[].items` | tableau | Liste de produits, telle qu’elle est transmise par l’intermédiaire de la variable des produits. | {SKU (string), quantity (integer), priceTotal (number)} |
 | `post_search_engine` | `search.searchEngine` | chaîne | Identifiant numérique représentant le moteur de recherche qui a renvoyé le visiteur sur votre site. |
 | `mvvar1_instances` | `.list.items[]` | objet | Liste de valeurs variables. Contient une liste délimitée de valeurs personnalisées, selon l’implémentation. |
