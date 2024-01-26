@@ -4,10 +4,10 @@ title: Trouver le bon playbook
 description: Découvrez le playbook approprié pour votre cas d’utilisation.
 badgeBeta: label="Version Beta" type="Informative"
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ba5a539603da656117c95d19c9e989ef0e252f82
+source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 96%
+source-wordcount: '776'
+ht-degree: 91%
 
 ---
 
@@ -51,6 +51,11 @@ Le mind mapping commence par une définition de la personne ciblée dans le parc
 
 
 ### Résumé {#summary}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_assets"
+>title="Assets"
+>abstract="Il s’agit des ressources générées par ce manuel de lecture. Après avoir créé une instance du manuel de lecture, vous pouvez afficher les ressources dans l’environnement de test inspirant et les convertir dans d’autres environnements de test, suivant vos besoins."
 
 Consultez la section de résumé pour identifier les ressources qui sont générées une fois que vous avez créé des instances à partir du playbook. Les ressources générées pour chaque playbook sont adaptées au cas d’utilisation activé par le playbook. Obtenez plus d’informations ci-dessous sur tous les éléments de la section de résumé.
 
