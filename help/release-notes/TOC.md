@@ -5,7 +5,7 @@ breadcrumb-title: Notes de mise à jour de Platform
 user-guide-description: Trouvez les notes de mise à jour mensuelles pour Adobe Experience Platform.
 source-git-commit: 9c6eec3d6cbaf19911a3aa38118be2aa22c0f9f5
 workflow-type: tm+mt
-source-wordcount: '80'
+source-wordcount: '130'
 ht-degree: 100%
 
 ---
