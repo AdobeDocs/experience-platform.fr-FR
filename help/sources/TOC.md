@@ -4,9 +4,9 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
-source-git-commit: 4d9c04909cba29b0c6685c357dbb84af9fa14b47
+source-git-commit: 8a9cf0547720927018d728d7cecbf377a1282f6f
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1008'
 ht-degree: 97%
 
 ---
@@ -303,6 +303,7 @@ ht-degree: 97%
       - Système local {#local-system}
          - [Téléchargement de fichiers locaux](tutorials/ui/create/local-system/local-file-upload.md)
       - Automatisation du marketing {#marketing-automation}
+         - [Braze](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
