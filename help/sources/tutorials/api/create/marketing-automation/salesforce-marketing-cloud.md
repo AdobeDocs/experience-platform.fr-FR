@@ -2,7 +2,7 @@
 title: Création d’une connexion de base de Marketing Cloud Salesforce à l’aide de l’API Flow Service
 description: Découvrez comment authentifier votre compte de Marketing Cloud Salesforce par rapport à Experience Platform à l’aide de l’API Flow Service.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 635ab266fac9d3dc232307d7cb49f83904197782
+source-git-commit: 5bb95c2823ce7baa09cbc84c2f1ccf70a0796549
 workflow-type: tm+mt
 source-wordcount: '491'
 ht-degree: 58%
@@ -38,7 +38,7 @@ Pour [!DNL Flow Service] pour vous connecter à [!DNL Salesforce Marketing Cloud
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `host` | Serveur hôte de votre application. Il s’agit souvent de votre sous-domaine. **Remarque :** Lorsque vous saisissez votre `host` , vous devez spécifier la variable `{subdomain}.rest.marketingcloudapis.com`. Par exemple, si l’URL d’hôte est `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, il vous suffit de saisir `acme-ab12c3d4e5fg6hijk7lmnop8qrstauth.marketingcloudapis.com/` comme valeur d’hôte. |
+| `host` | Serveur hôte de votre application. Il s’agit souvent de votre sous-domaine. **Remarque :** Lorsque vous saisissez votre `host` , vous devez spécifier la variable `{subdomain}.rest.marketingcloudapis.com`. Par exemple, si l’URL d’hôte est `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/`, il vous suffit de saisir `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` comme valeur d’hôte. |
 | `clientId` | L’ID client associé à votre [!DNL Salesforce Marketing Cloud] application. |
 | `clientSecret` | Le secret client associé à votre [!DNL Salesforce Marketing Cloud] application. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Salesforce Marketing Cloud] est `ea1c2a08-b722-11eb-8529-0242ac130003`. |
