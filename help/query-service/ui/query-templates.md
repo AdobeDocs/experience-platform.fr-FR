@@ -2,10 +2,10 @@
 title: Modèles de requête
 description: Les modèles de requête sont des requêtes SQL enregistrées réutilisables qui peuvent être réutilisées par d’autres utilisateurs et utilisatrices pour économiser du temps et des efforts. Ils peuvent être créés à l’aide de Query Editor ou de l’API Query Service et peuvent être utilisés sur tous les jeux de données Experience Platform.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: d5d69134627b1a162691bda95732d989bd6e3469
+source-git-commit: 1a44be939a4678078b414658199472e07dee153b
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 86%
+source-wordcount: '590'
+ht-degree: 73%
 
 ---
 
@@ -27,6 +27,10 @@ Vous pouvez créer des modèles de requête par le biais de deux méthodes, en a
 
 Consultez la documentation pour obtenir des instructions sur l’utilisation de Query Editor pour [écrire](./user-guide.md#query-authoring) et [enregistrer des requêtes](./user-guide.md#saving-queries). Une fois que vous avez nommé et enregistré votre requête, elle peut être réutilisée en tant que modèle de requête à partir de l’onglet [!UICONTROL Modèles].
 
+>[!TIP]
+>
+>Lorsque vous enregistrez une requête dans l’éditeur de requêtes, un message de confirmation s’affiche pour vous informer de la réussite de l’action. Ce message contextuel contient un lien qui permet d’accéder facilement à l’espace de travail de planification des requêtes. Voir [documentation sur les requêtes de planification](./query-schedules.md) pour savoir comment exécuter des requêtes sur une cadence personnalisée.
+
 ## Parcourir les modèles de requête {#browse}
 
 Dans l’espace de travail Requêtes de l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Modèles]** pour afficher la liste des requêtes enregistrées disponibles.
@@ -37,10 +41,11 @@ Pour trouver les informations de modèle pertinentes, sélectionnez un modèle d
 
 ![Panneau de détails de l’espace de travail des requêtes avec l’identifiant de requête en surbrillance.](../images/ui/query-templates/details-panel.png)
 
-Dans le panneau Détails, vous pouvez exécuter quatre actions distinctes :
+Dans le panneau Détails, vous pouvez exécuter les actions suivantes :
 
-* Sélectionner **[!UICONTROL Jeu de données de sortie]** pour modifier le jeu de données de sortie pour le modèle sélectionné.
-* Sélectionner **[!UICONTROL Afficher le planning]** pour accéder au [!UICONTROL Planifications] . Cette vue contient toutes les informations de planification associées à la requête.
+* Sélectionner **[!UICONTROL Exécuter comme CTAS]** pour créer un tableau en sélectionnant les données d’une ou de plusieurs tables existantes. Cette option n’est disponible que si vous avez une requête SELECT.
+* Sélectionner **[!UICONTROL Ajouter un planning]** pour commencer à modifier votre planning pour votre modèle de requête.
+* Sélectionner **[!UICONTROL Afficher le planning]** pour accéder au [!UICONTROL Planifications] de l’éditeur de requêtes. Cette vue contient toutes les informations de planification associées à la requête.
 * Sélectionner **[!UICONTROL Supprimer la requête]** pour supprimer le modèle.
 * Sélectionnez le nom du modèle pour accéder à l’éditeur de requêtes dans lequel le code SQL est prérenseigné pour modification.
 

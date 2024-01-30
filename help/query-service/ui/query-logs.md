@@ -2,10 +2,10 @@
 title: Journaux de requête
 description: Les logs de requête sont générés automatiquement chaque fois qu’une requête est exécutée et sont disponibles via l’interface utilisateur pour faciliter la résolution des problèmes. Ce document explique comment utiliser et parcourir la section Journaux de Query Service de l’interface utilisateur.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 88498a1382202bed057b8dc52d09359ba02748ea
+source-git-commit: 445738f78f44ab8eb1632dbda82c4dd69dbebefd
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 5%
+source-wordcount: '931'
+ht-degree: 3%
 
 ---
 
@@ -41,9 +41,13 @@ Chaque ligne représente les données du journal d’une exécution de requête 
 
 ![L&#39;espace de travail Journal des requêtes avec une ligne sélectionnée et les données du journal dans la barre latérale droite sont surlignées.](../images/ui/query-log/log-details.png)
 
-Dans le panneau des détails du journal, vous pouvez sélectionner un nouveau jeu de données de sortie et voir ou copier la requête SQL complète utilisée dans l’exécution.
+Dans le panneau des détails du journal, vous pouvez effectuer diverses actions. Vous pouvez exécuter la requête sous la forme CTAS, qui crée un nouveau jeu de données de sortie, voir ou copier la requête SQL complète qui a été utilisée dans l’exécution, ou supprimer la requête.
 
-![Espace de travail Journal des requêtes avec une ligne sélectionnée et le jeu de données de sortie et la requête SQL mise en surbrillance.](../images/ui/query-log/edit-output-dataset.png)
+>[!NOTE]
+>
+>L’option pour [!UICONTROL Exécuter comme CTAS] n’est disponible que pour une requête SELECT.
+
+![L&#39;espace de travail Journal des requêtes avec une ligne sélectionnée, Exécuter en tant que CTAS, Supprimer la requête et l&#39;icône Copier SQL est mise en surbrillance.](../images/ui/query-log/edit-output-dataset.png)
 
 >[!IMPORTANT]
 >
@@ -65,7 +69,7 @@ Une icône en forme de crayon se trouve à côté du nom de modèle de chaque li
 
 ## Journaux des filtres {#filter-logs}
 
-Vous pouvez filtrer la liste des journaux de requêtes en fonction de différents paramètres. Sélectionnez l’icône de filtre (![L’icône de filtre.](../images/ui/query-log/filter-icon.png)) en haut à gauche de l’espace de travail pour ouvrir un ensemble d’options de filtre dans le rail de gauche.
+Vous pouvez filtrer la liste des logs de requête en fonction de différents paramètres. Sélectionnez l’icône de filtre (![L’icône de filtre.](../images/ui/query-log/filter-icon.png)) en haut à gauche de l’espace de travail pour ouvrir un ensemble d’options de filtre dans le rail de gauche.
 
 ![Espace de travail Journal des requêtes avec l’icône de filtre mise en surbrillance.](../images/ui/query-log/log-filter.png)
 

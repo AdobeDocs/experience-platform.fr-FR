@@ -2,10 +2,10 @@
 title: Requêtes paramétrées
 description: Découvrez comment utiliser des requêtes paramétrées dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: 1e9d6b0c43461902c5b966aa1d0576103e872e0c
+source-git-commit: 9cf8dabfdf3f20f4032a79ba191bd2dc8123a369
 workflow-type: tm+mt
-source-wordcount: '734'
-ht-degree: 12%
+source-wordcount: '690'
+ht-degree: 13%
 
 ---
 
@@ -47,21 +47,17 @@ SELECT
 
 Pour créer votre requête paramétrée dans l’interface utilisateur, accédez à l’éditeur de requêtes. Voir la section sur [Accès à Query Editor](./user-guide.md#accessing-query-editor) pour plus d’instructions.
 
-Utilisez la préface `'$'` pour saisir un paramètre de requête dans l’éditeur de texte. Ajoutez ensuite la valeur manquante pour la clé dans la variable [!UICONTROL Paramètres de requête] sous l’éditeur. La requête ne peut pas être exécutée si vous négligez d’ajouter une valeur à l’une des clés requises. Icône d’alerte (![Icône d’alerte.](../images/ui/parameterized-queries/alert-icon.png)) apparaît dans la section Paramètres de requête en regard de tout élément vide [!UICONTROL Valeur] champs de saisie.
+Utilisez la préface `'$'` pour saisir un paramètre de requête dans l’éditeur de texte. Sélectionnez ensuite le **[!UICONTROL Paramètres de requête]** en regard de l’onglet [!UICONTROL Console] ajoutez la valeur manquante pour la clé. La requête ne peut pas être exécutée si vous négligez d’ajouter une valeur à l’une des clés requises. Icône d’alerte (![Icône d’alerte.](../images/ui/parameterized-queries/alert-icon.png)) apparaît dans la section Paramètres de requête en regard de tout élément vide [!UICONTROL Valeur] champs de saisie.
+
+>[!NOTE]
+>
+>Si votre requête ne prend pas de paramètres, vous pouvez toujours saisir des paramètres inutiles dans l’éditeur de requêtes. L’éditeur de requêtes ignore toutes les paires clé-valeur inutiles et elles n’ont aucun effet sur l’exécution ou les résultats de la requête.
 
 ![L’éditeur de requêtes avec une requête paramétrée est mis en surbrillance et la section Paramètres de requête est mise en surbrillance.](../images/ui/parameterized-queries/parameterized-query.png)
 
 >[!TIP]
 >
 >Modifier les onglets depuis [!UICONTROL Paramètres de requête] to [!UICONTROL Console] pour visualiser la sortie console de la requête.
-
-Si vous supprimez un paramètre et tentez de relancer la requête après son exécution, un message d’erreur s’affiche dans la variable [!UICONTROL Paramètres de requête] pour vous alerter.
-
->[!NOTE]
->
->Si votre requête ne prend pas de paramètres, vous pouvez toujours saisir des paramètres inutiles dans l’éditeur de requêtes. L’éditeur de requêtes ignore toutes les paires clé-valeur inutiles et elles n’ont aucun effet sur l’exécution ou les résultats de la requête.
-
-![L’éditeur de requêtes avec un champ de valeur vide et l’erreur des paramètres de requête mise en surbrillance.](../images/ui/parameterized-queries/query-parameter-error.png)
 
 ## Utiliser les détails des logs de requête pour vérifier les valeurs des paramètres {#check-parameter-values}
 

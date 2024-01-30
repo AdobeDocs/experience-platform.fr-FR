@@ -5,10 +5,10 @@ title: Génération de jeux de données de sortie à partir des résultats de re
 type: Tutorial
 description: Query Service d’Adobe Experience Platform permet de créer des jeux de données à partir de l’interface utilisateur. Une fois qu’un jeu de données est créé, il est possible d’y accéder comme à tout autre jeu de données du lac de données et de l’utiliser pour divers cas d’utilisation.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: 59d2d74b2d77f3bbaca381af908de5295af24e5b
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 94%
+source-wordcount: '497'
+ht-degree: 84%
 
 ---
 
@@ -24,15 +24,15 @@ Pour créer des jeux de données à partir de l’interface utilisateur d’Adob
 
 2. Dans l’interface utilisateur de Platform, accédez à **[!UICONTROL Requêtes]** puis à l’onglet **[!UICONTROL Modèles]** et sélectionnez la requête que vous avez créée. Pour plus d’informations sur la manière d’afficher les requêtes qui ont été créées et enregistrées pour votre organisation dans l’interface utilisateur de Platform, lisez la [[!DNL Query Service] présentation](./overview.md#browse).
 
-3. Dans le panneau Détails de la requête, sélectionnez **[!UICONTROL Jeu de données de sortie]**.
+3. Dans le panneau Détails de la requête, sélectionnez **[!UICONTROL Exécuter comme CTAS]**.
 
-   ![L’onglet Modèles de l’espace de travail Requêtes avec l’option Sélectionner un jeu de données de sortie mise en surbrillance.](../images/ui/create-datasets/output-dataset.png)
+   ![Espace de travail Requêtes [!UICONTROL Modèles] avec l’onglet Sélectionner [!UICONTROL Exécuter comme CTAS] surlignée.](../images/ui/create-datasets/run-as-ctas.png)
 
 4. Dans la boîte de dialogue qui s’affiche, saisissez un nom de jeu de données précédé de votre identifiant LDAP. Le nom du jeu de données ne doit pas nécessairement être unique ou compatible avec SQL. Notez que le nom du tableau de votre jeu de données sera généré en fonction du nom du jeu de données que vous créez ici.
 
-5. Ensuite, saisissez une description pour votre jeu de données dans le champ [!UICONTROL Description] et sélectionnez **[!UICONTROL Exécuter la requête]**.
+5. Ensuite, saisissez une description pour votre jeu de données dans le [!UICONTROL Description] champ et sélectionnez **[!UICONTROL Exécuter comme CTAS]**.
 
-   ![La boîte de dialogue Jeu de données de sortie avec les détails du jeu de données et la requête exécutée en surbrillance](../images/ui/create-datasets/run-query.png)
+   ![Boîte de dialogue Jeu de données de sortie avec les détails du jeu de données et [!UICONTROL Exécuter comme CTAS] mis en évidence](../images/ui/create-datasets/run-query.png)
 
 6. Une fois l’exécution de la requête terminée, accédez à **[!UICONTROL Jeux de données]** pour afficher le jeu de données que vous avez créé. Pour en savoir plus sur l’exécution d’actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Platform, voir le [guide de l’interface utilisateur des jeux de données](../../catalog/datasets/user-guide.md).
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de Query Editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
+source-git-commit: 202bd42596608d27f99baea9e0a4a6ec92cf469f
 workflow-type: tm+mt
-source-wordcount: '2313'
-ht-degree: 56%
+source-wordcount: '2550'
+ht-degree: 46%
 
 ---
 
@@ -85,13 +85,13 @@ L’exécution de plusieurs requêtes dans une séquence génère chacune une en
 ### Exécuter la requête sélectionnée {#execute-selected-query}
 
 Si vous avez écrit plusieurs requêtes mais que vous ne devez exécuter qu’une seule requête, vous pouvez mettre en surbrillance la requête choisie et sélectionner l’événement
-[!UICONTROL Exécuter la requête sélectionnée] Icône Cette icône est désactivée par défaut, sauf si vous sélectionnez une requête dans l’éditeur.
+[!UICONTROL Exécuter la requête sélectionnée] Icône Cette icône est désactivée par défaut jusqu’à ce que vous sélectionniez la syntaxe de la requête dans l’éditeur.
 
 ![L’éditeur de requêtes avec la variable [!UICONTROL Exécuter la requête sélectionnée] en surbrillance.](../images/ui/query-editor/run-selected-query.png)
 
 ### Résultats count {#result-count}
 
-L’éditeur de requêtes dispose d’une sortie de ligne maximale de 50 000 lignes. Toutefois, seules 50 lignes s’affichent à la fois dans la console de l’éditeur de requêtes. Pour modifier le nombre de lignes affichées dans la console, sélectionnez l’option **[!UICONTROL Résultats count]** et choisissez 50, 100, 150, 300 et 500 valeurs.
+L’éditeur de requêtes dispose d’une sortie de ligne maximale de 50 000 lignes. Vous pouvez choisir le nombre de lignes affichées simultanément dans la console de l’éditeur de requêtes. Pour modifier le nombre de lignes affichées dans la console, sélectionnez l’option **[!UICONTROL Résultats count]** et sélectionnez l’une des options 50, 100, 150, 300 et 500.
 
 ![La liste déroulante Query Editor avec le nombre de résultats est mise en surbrillance.](../images/ui/query-editor/result-count.png)
 
@@ -101,7 +101,7 @@ L’éditeur de requêtes dispose d’une sortie de ligne maximale de 50 000 lig
 
 ![Query Editor avec le champ d’entrée SQL et le bouton Lire en surbrillance.](../images/ui/query-editor/editor.png)
 
-Pour réduire le temps de développement, nous vous recommandons de développer vos requêtes en fixant des limites sur les lignes renvoyées. Par exemple : `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Une fois que vous avez vérifié que votre requête produit la sortie attendue, supprimez les limites et exécutez la requête avec `CREATE TABLE tablename AS SELECT`, afin de générer un jeu de données avec la sortie.
+Pour réduire le temps de développement, il est recommandé de développer vos requêtes avec des limites sur le nombre de lignes renvoyées. Par exemple : `SELECT fields FROM table WHERE conditions LIMIT number_of_rows`. Une fois que vous avez vérifié que votre requête produit la sortie attendue, supprimez les limites et exécutez la requête avec `CREATE TABLE tablename AS SELECT`, afin de générer un jeu de données avec la sortie.
 
 ## Outils d’écriture dans le [!DNL Query Editor] {#writing-tools}
 
@@ -123,6 +123,12 @@ La variable [!UICONTROL Texte du format] rend votre requête plus lisible en ajo
 
 ![L’éditeur de requêtes avec [!UICONTROL Texte du format] et les instructions SQL mises en surbrillance.](../images/ui/query-editor/format-text.png)
 
+<!-- ### Undo text {#undo-text}
+
+If you format your SQL in the Query Editor, you can undo the formatting applied by the [!UICONTROL Format text] feature. To return your SQL back to its original form, select **[!UICONTROL Undo text]**.
+
+![The Query Editor with [!UICONTROL Undo text] and the SQL statements highlighted.](../images/ui/query-editor/undo-text.png) -->
+
 ### Copier SQL {#copy-sql}
 
 Sélectionnez l’icône Copier pour copier SQL à partir de Query Editor dans le presse-papiers. Cette fonctionnalité de copie est disponible à la fois pour les modèles de requête et les requêtes nouvellement créées dans Query Editor.
@@ -134,6 +140,10 @@ Sélectionnez l’icône Copier pour copier SQL à partir de Query Editor dans l
 Le [!DNL Query Editor] suggère automatiquement des mots-clés SQL potentiels ainsi que des détails de tableau ou de colonne pour la requête au fur et à mesure que vous l’écrivez. La fonction de saisie automatique est activée par défaut et peut être désactivée ou activée à tout moment en cliquant sur le bouton (bascule) [!UICONTROL Saisie automatique de la syntaxe] dans la partie supérieure droite du Query Editor.
 
 Le paramètre de configuration de saisie automatique est défini par utilisateur et mémorisé pour les connexions consécutives de l’utilisateur.
+
+>[!NOTE]
+>
+>Le bouton d’activation/désactivation de la saisie automatique de la syntaxe n’est disponible que pour la version héritée de Query Editor.
 
 ![Query Editor avec le bouton (bascule) de saisie automatique de la syntaxe mis en surbrillance.](../images/ui/query-editor/auto-complete-toggle.png)
 
@@ -159,21 +169,47 @@ Pour désactiver la fonction de saisie semi-automatique, sélectionnez l’optio
 
 [!DNL Query Editor] valide automatiquement la requête au fur et à mesure que vous l’écrivez grâce à une validation SQL générique et une validation d’exécution spécifique. Si un trait de soulignement rouge apparaît sous la requête (comme illustré dans l’image ci-dessous), il indique une erreur dans la requête.
 
+<!-- ... Image below needs updating couldn't replicate the effect -->
+
 ![Entrée de Query Editor affichant le style SQL souligné en rouge pour indiquer une erreur.](../images/ui/query-editor/syntax-error-highlight.png)
 
 Lorsque des erreurs sont détectées, vous pouvez afficher les messages d’erreur spécifiques en survolant le code SQL avec la souris.
+
+<!-- ... Image below needs updating couldn't replicate the effect -->
 
 ![Boîte de dialogue contenant un message d’erreur.](../images/ui/query-editor/linting-error.png)
 
 ### Détails de la requête {#query-details}
 
-Pour afficher une requête dans l’éditeur de requêtes, sélectionnez un modèle enregistré dans le [!UICONTROL Modèles] . Le panneau des détails de la requête fournit plus d’informations et d’outils pour gérer la requête sélectionnée.
+Pour afficher une requête dans l’éditeur de requêtes, sélectionnez un modèle enregistré dans le [!UICONTROL Modèles] . Le panneau Détails de la requête fournit des informations et des outils supplémentaires pour gérer la requête sélectionnée. Il affiche également des métadonnées utiles telles que la dernière fois où la requête a été modifiée et qui l’a modifiée, le cas échéant.
+
+>[!NOTE]
+>
+>La variable [!UICONTROL Afficher le planning], [!UICONTROL Ajouter un planning] et [!UICONTROL Supprimer la requête] Les options ne sont disponibles qu’après l’enregistrement de la requête en tant que modèle. La variable [!UICONTROL Ajouter un planning] Cette option vous permet d’accéder directement au créateur de planification à partir de l’éditeur de requêtes. La variable [!UICONTROL Afficher le planning] permet d’accéder directement à l’inventaire des planifications pour cette requête. Consultez la documentation sur les plannings de requête pour savoir comment [création de calendriers de requête dans l’interface utilisateur](./query-schedules.md#create-schedule).
 
 ![Query Editor avec le panneau des détails de la requête mis en surbrillance.](../images/ui/query-editor/query-details.png)
 
-Ce panneau vous permet de générer un jeu de données de sortie directement à partir de l’interface utilisateur, de supprimer ou de nommer la requête affichée, et d’ajouter un planning à la requête.
+Dans le panneau Détails, vous pouvez générer un jeu de données de sortie directement à partir de l’interface utilisateur, supprimer ou nommer la requête affichée, afficher le planning d’exécution de la requête et ajouter la requête à un planning.
 
-Ce panneau affiche également des métadonnées utiles, telles que la dernière fois où la requête a été modifiée et qui l’a modifiée, le cas échéant. Pour générer un jeu de données, sélectionnez **[!UICONTROL Jeu de données de sortie]**. La boîte de dialogue **[!UICONTROL Jeu de données de sortie]** s’affiche. Saisissez un nom et une description, puis sélectionnez **[!UICONTROL Exécuter la requête]**. Le nouveau jeu de données s’affiche dans l’onglet **[!UICONTROL Jeux de données]** de l’interface utilisateur [!DNL Query Service] dans [!DNL Platform].
+Pour générer un jeu de données de sortie, sélectionnez **[!UICONTROL Exécuter comme CTAS]**. La variable **[!UICONTROL Entrer les détails du jeu de données de sortie]** s’affiche. Saisissez un nom et une description, puis sélectionnez **[!UICONTROL Exécuter comme CTAS]**. Le nouveau jeu de données s’affiche dans la variable **[!UICONTROL Jeux de données]** Onglet Parcourir . Voir [la documentation d’affichage des jeux de données](../../catalog/datasets/user-guide.md#view-datasets) pour en savoir plus sur les jeux de données disponibles pour votre organisation.
+
+>[!NOTE]
+>
+>La variable [!UICONTROL Exécuter comme CTAS] n’est disponible que si la requête contient **not** a été planifié.
+
+![La variable [!UICONTROL Entrer les détails du jeu de données de sortie] boîte de dialogue.](../images/ui/query-editor/output-dataset-details.png)
+
+Après avoir exécuté la variable **[!UICONTROL Exécuter comme CTAS]** , un message de confirmation s’affiche pour vous informer de l’action réussie. Ce message contextuel contient un lien qui permet d’accéder facilement à l’espace de travail des logs de requête. Voir [documentation sur les journaux de requête](./query-logs.md) pour plus d’informations sur les logs de requête.
+
+### Enregistrement des requêtes {#saving-queries}
+
+Le [!DNL Query Editor] offre une fonction de sauvegarde qui vous permet d’enregistrer une requête et d’y revenir ultérieurement. Pour enregistrer une requête, sélectionnez **[!UICONTROL Enregistrer]** dans le coin supérieur droit de [!DNL Query Editor]. Avant de pouvoir enregistrer une requête, vous devez lui donner un nom à l’aide du panneau **[!UICONTROL Détails sur la requête]**.
+
+>[!NOTE]
+>
+>Les requêtes nommées et enregistrées dans à l’aide du Query Editor sont disponibles sous forme de modèles dans l’onglet [!UICONTROL Modèles] du tableau de bord Requête. Pour plus d’informations, consultez la [documentation sur les modèles](./query-templates.md).
+
+Lorsque vous enregistrez une requête dans l’éditeur de requêtes, un message de confirmation s’affiche pour vous informer de la réussite de l’action. Ce message contextuel contient un lien qui permet d’accéder facilement à l’espace de travail de planification des requêtes. Voir [documentation sur les requêtes de planification](./query-schedules.md) pour savoir comment exécuter des requêtes sur une cadence personnalisée.
 
 ### Requêtes planifiées {#scheduled-queries}
 
@@ -185,13 +221,6 @@ Consultez la documentation sur les plannings de requête pour savoir comment [cr
 
 Toutes les requêtes planifiées sont ajoutées à la liste dans la variable [!UICONTROL Requêtes planifiées] . Depuis cet espace de travail, vous pouvez surveiller l’état de toutes les tâches de requête planifiées via l’interface utilisateur. Sur le [!UICONTROL Requêtes planifiées] , vous pouvez trouver des informations importantes sur les exécutions de requête et vous abonner aux alertes. Les informations disponibles incluent l’état, les détails de planification et les messages/codes d’erreur en cas d’échec de l’exécution. Voir [Surveiller le document des requêtes planifiées](./monitor-queries.md) pour plus d’informations.
 
-### Enregistrement des requêtes {#saving-queries}
-
-Le [!DNL Query Editor] offre une fonction de sauvegarde qui vous permet d’enregistrer une requête et d’y revenir ultérieurement. Pour enregistrer une requête, sélectionnez **[!UICONTROL Enregistrer]** dans le coin supérieur droit de [!DNL Query Editor]. Avant de pouvoir enregistrer une requête, vous devez lui donner un nom à l’aide du panneau **[!UICONTROL Détails sur la requête]**.
-
->[!NOTE]
->
->Les requêtes nommées et enregistrées dans à l’aide du Query Editor sont disponibles sous forme de modèles dans l’onglet [!UICONTROL Modèles] du tableau de bord Requête. Pour plus d’informations, consultez la [documentation sur les modèles](./query-templates.md).
 
 ### Accès aux requêtes précédentes {#previous-queries}
 
@@ -219,7 +248,7 @@ La console fournit des informations sur le statut et le fonctionnement de [!DNL 
 
 ### Résultats de requête {#query-results}
 
-Une fois une requête terminée, les résultats sont affichés dans l’onglet **[!UICONTROL Résultats]**, en regard de l’onglet **[!UICONTROL Console]**. Cet affichage indique la sortie tabulaire de votre requête (jusqu’à 100 lignes). Il vous permet de vérifier que votre requête produit la sortie attendue. Pour générer un jeu de données avec votre requête, supprimez les limites sur les lignes renvoyées, puis exécutez la requête avec `CREATE TABLE tablename AS SELECT` pour générer un jeu de données avec la sortie. Consultez le [tutoriel sur la génération de jeux de données](./create-datasets.md) pour apprendre à générer un jeu de données à partir des résultats de requête dans [!DNL Query Editor].
+Une fois une requête terminée, les résultats sont affichés dans l’onglet **[!UICONTROL Résultats]**, en regard de l’onglet **[!UICONTROL Console]**. Cette vue affiche la sortie tabulaire de votre requête, qui affiche entre 50 et 500 lignes de résultats selon le choix que vous avez effectué. [comptage des résultats](#result-count). Il vous permet de vérifier que votre requête produit la sortie attendue. Pour générer un jeu de données avec votre requête, supprimez les limites sur les lignes renvoyées, puis exécutez la requête avec `CREATE TABLE tablename AS SELECT` pour générer un jeu de données avec la sortie. Consultez le [tutoriel sur la génération de jeux de données](./create-datasets.md) pour apprendre à générer un jeu de données à partir des résultats de requête dans [!DNL Query Editor].
 
 ![L’onglet Résultats de la console du Query Editor affiche les résultats de l’exécution d’une requête.](../images/ui/query-editor/query-results.png)
 

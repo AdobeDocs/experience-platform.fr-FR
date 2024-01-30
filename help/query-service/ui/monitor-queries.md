@@ -2,10 +2,10 @@
 title: Surveillance des requêtes planifiées
 description: Découvrez comment surveiller les requêtes via l’interface utilisateur de Query Service.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
+source-git-commit: 7e0259f8807e96118dbcd1085d8b3b3186fc8317
 workflow-type: tm+mt
 source-wordcount: '1818'
-ht-degree: 39%
+ht-degree: 37%
 
 ---
 
@@ -35,8 +35,8 @@ Le tableau ci-dessous décrit chaque colonne disponible.
 | **[!UICONTROL Fréquence d’exécution]** | La cadence d’exécution de votre requête. Les valeurs disponibles sont `Run once` et `Scheduled`. Les requêtes peuvent être filtrées en fonction de leur fréquence d’exécution. |
 | **[!UICONTROL Créé par]** | Nom de la personne qui a créé la requête. |
 | **[!UICONTROL Créé]** | La date et l’heure de création de la requête, au format UTC. |
-| **[!UICONTROL La date et l’heure de la dernière exécution]** | La date et l’heure les plus récentes auxquelles la requête a été exécutée. Cette colonne met en évidence si une requête a été exécutée conformément à son planning actuel. |
-| **[!UICONTROL Statut de la dernière exécution]** | Statut de la dernière exécution de la requête. Les valeurs d’état sont les suivantes : `Success`, `Failed`, `In progress`, et `No runs`. |
+| **[!UICONTROL Horodatage de la dernière exécution]** | La date et l’heure les plus récentes auxquelles la requête a été exécutée. Cette colonne met en évidence si une requête a été exécutée conformément à son planning actuel. |
+| **[!UICONTROL État de la dernière exécution]** | Statut de la dernière exécution de la requête. Les valeurs d’état sont les suivantes : `Success`, `Failed`, `In progress`, et `No runs`. |
 | **[!UICONTROL État de la planification]** | État actuel de la requête planifiée. Il existe cinq valeurs potentielles, [!UICONTROL Enregistrement], [!UICONTROL Actif], [!UICONTROL Inactif], [!UICONTROL Supprimé]et un trait d’union. <ul><li>Le trait d’union indique que la requête planifiée est une requête ponctuelle non récurrente.</li><li>La variable [!UICONTROL Enregistrement] Le statut indique que le système traite toujours la création du nouveau planning pour la requête. Remarque : vous ne pouvez pas désactiver ou supprimer une requête planifiée lors de son enregistrement.</li><li>La variable [!UICONTROL Actif] le statut indique que la requête planifiée possède **pas encore passé** date et heure d’achèvement.</li><li>La variable [!UICONTROL Inactif] le statut indique que la requête planifiée possède **transmis** date et heure d’achèvement.</li><li>La variable [!UICONTROL Supprimé] Le statut indique que le planning de requête a été supprimé.</li></ul> |
 
 >[!TIP]
@@ -125,7 +125,7 @@ Ces informations apparaissent dans un tableau à cinq colonnes. Chaque ligne ind
 
 | Nom de la colonne | Description |
 |---|---|
-| **[!UICONTROL ID d’exécution de requête]** | ID pour l’exécution de requête quotidienne. Sélectionnez la variable **[!UICONTROL Identifiant d’exécution de requête]** pour accéder au [!UICONTROL Présentation de l’exécution de requête]. |
+| **[!UICONTROL Identifiant d’exécution de requête]** | Identifiant d’exécution de requête pour l’exécution quotidienne. Sélectionnez la variable **[!UICONTROL Identifiant d’exécution de requête]** pour accéder au [!UICONTROL Présentation de l’exécution de requête]. |
 | **[!UICONTROL Démarrage de l’exécution de requête]** | Date et heure de l’exécution de la requête. L’horodatage est au format UTC. |
 | **[!UICONTROL Fin de l’exécution de requête]** | Date et heure de la fin de la requête. L’horodatage est au format UTC. |
 | **[!UICONTROL Statut]** | Statut de la dernière exécution de la requête. Les trois valeurs de statut sont les suivantes : `successful` `failed` ou `in progress`. |
@@ -174,9 +174,3 @@ En cas d’échec d’une requête bloquée anonyme, vous pouvez trouver le code
 Sélectionnez **[!UICONTROL Requête]** pour revenir à l’écran des détails du planning, ou **[!UICONTROL Requêtes planifiées]** pour revenir à l’onglet [!UICONTROL Requêtes planifiées].
 
 ![L’écran des détails de l’exécution avec la requête mise en surbrillance.](../images/ui/monitor-queries/return-navigation.png)
-
-<!-- Details required to complete this section below:
-### Run details for queries with parameterized queries {#parameterized-queries}
-
-Queries that use parameterized values to make up the SQL statement are ... 
--->
