@@ -2,18 +2,19 @@
 solution: Experience Platform
 title: Présentation de la prise en compte des données dans les classeurs de cas d’utilisation
 description: Découvrez comment accélérer le temps de valorisation en copiant les ressources générées dans l’environnement de test d’inspiration finale vers d’autres environnements de test.
-badgeBeta: label="Version Beta" type="Informative"
-source-git-commit: cbf5f2aaf9bb8113ad5eadac888e9b4f85b199b8
+exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
+source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
 workflow-type: tm+mt
-source-wordcount: '843'
+source-wordcount: '921'
 ht-degree: 0%
 
 ---
 
-
 # Présentation de la prise en compte des données dans les classeurs de cas d’utilisation
 
-Les scénarios d’utilisation sont des modèles marketing conçus pour générer des ressources telles que des audiences, des schémas ou des parcours pour des cas d’utilisation marketing courants. Dans Adobe Experience Platform, ces modèles font référence à plusieurs champs et groupes de champs standard. Cependant, dans certains cas, vous avez peut-être déjà configuré vos propres schémas, champs et groupes de champs. Cela peut rendre certaines des ressources générées par les modèles de cas d’utilisation, comme les parcours, incompatibles avec vos données. Pour comprendre comment utiliser la fonctionnalité de sensibilisation aux données pour mieux aligner et compléter les ressources générées avec vos ressources existantes, lisez ce tutoriel.
+Les scénarios d’utilisation sont des modèles marketing conçus pour générer des ressources telles que des audiences, des schémas ou des parcours pour des cas d’utilisation marketing courants. Vous pouvez tester les ressources créées par des livres de jeu dans l’environnement de test inspirant. Lorsque vous êtes prêt, vous pouvez importer les ressources dans d’autres environnements de test de développement pour effectuer d’autres tests avec les données disponibles dans ces environnements de test. Lorsque vous êtes satisfait des tests, vous pouvez ensuite déplacer les ressources des environnements de test de développement vers les environnements de test de production.
+
+Cependant, dans certains cas, vous avez peut-être déjà configuré vos propres schémas, champs et groupes de champs dans d’autres environnements de test de développement. Cela peut rendre certaines des ressources générées par les modèles de cas d’utilisation, comme les parcours, incompatibles avec vos données. Pour comprendre comment utiliser la fonctionnalité de sensibilisation aux données pour mieux aligner et compléter les ressources générées avec vos ressources existantes, lisez ce tutoriel.
 
 ## Conditions préalables {#prerequisites}
 
@@ -22,6 +23,10 @@ Avant de lire ce tutoriel, parcourez les [modèles de manuel d’utilisation dis
 La création d’une instance génère un ensemble de ressources telles que des parcours, des segments, des schémas et des messages dans l’environnement de test d’inspiration. Lisez la suite pour découvrir comment copier ces ressources dans d’autres environnements de test.
 
 ### Création et publication d’un module {#create-publish-package}
+
+>[!NOTE]
+>
+> Vous ne pouvez importer des packages que dans d’autres environnements de développement. Une fois que vous avez apporté toutes les modifications ou mises à jour nécessaires, vous pouvez importer en production les ressources ou les modules de ces environnements de test de développement. Vous ne pouvez pas importer directement depuis les environnements de test des cahiers de travail du cas d’utilisation en production.
 
 1. Pour importer des objets de l’environnement de test d’inspiration dans un autre environnement de test, accédez à l’instance souhaitée d’un manuel de cas d’utilisation, puis sélectionnez **[!UICONTROL Publication sur un autre environnement de test]** pour exporter les artefacts sous la forme d’un package.
 
@@ -48,10 +53,6 @@ La création d’une instance génère un ensemble de ressources telles que des 
 5. Sélectionnez la variable **+** contrôler et démarrer le workflow pour importer les ressources générées par le manuel du cas d’utilisation dans la **[!UICONTROL Environnement de test Target]**. Sélectionnez un environnement de test cible et confirmez le nom du module à importer à l’aide de la liste déroulante. Ajoutez les détails de la tâche, tels que le nom et la description de la tâche, avant de passer à l’étape suivante.
 
    ![Lancez le workflow d&#39;import, sélectionnez target, confirmez le package, ajoutez les détails de la tâche.](/help/use-case-playbooks/assets/playbooks/data-awareness/import-package-import-settings.png)
-
-   >[!NOTE]
-   >
-   > Vous ne pouvez importer des packages que dans d’autres environnements de développement. L’environnement de test de production est désactivé pour ces importations.
 
 6. Dans le **[!UICONTROL Afficher les dépendances]** vous pouvez mapper des schémas et copier d’autres ressources à partir de l’environnement de test d’inspiration dans l’environnement de test cible. La variable **[!UICONTROL Terminer]** est désactivé tant que vous n’avez pas mappé chaque schéma.
 
@@ -96,3 +97,7 @@ La création d’une instance génère un ensemble de ressources telles que des 
 ## Étapes suivantes
 
 Après avoir lu ce guide, vous comprenez mieux comment utiliser les classeurs de cas d’utilisation avec [outil sandbox](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) pour créer des parcours exécutables qui référencent vos schémas. En savoir plus sur les [Cas d’utilisation Real-Time CDP](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
+
+### Plus d’aide sur ce sujet
+
+[Outil Sandbox](/help/sandboxes/ui/sandbox-tooling.md)

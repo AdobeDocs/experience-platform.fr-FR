@@ -2,20 +2,15 @@
 solution: Experience Platform
 title: Trouver le bon playbook
 description: Découvrez le playbook approprié pour votre cas d’utilisation.
-badgeBeta: label="Version Beta" type="Informative"
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
+source-git-commit: 0decef848fe90e5c60352aeb42aabdd678eeb8f8
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '752'
 ht-degree: 91%
 
 ---
 
-# (Version Beta) Découvrez le playbook approprié.
-
->[!AVAILABILITY]
->
->Cette fonctionnalité est actuellement en version bêta et nʼest pas disponible pour tous les utilisateurs et utilisatrices. La documentation et les fonctionnalités peuvent changer.
+# Trouver le bon playbook
 
 Pour utiliser un playbook, accédez à **[!UICONTROL Playbooks de cas d’utilisation] > [!UICONTROL Playbooks]**. Parcourez et utilisez les différentes options de recherche et de filtrage de la page pour sélectionner et commencer à utiliser un playbook spécifique.
 
@@ -48,7 +43,6 @@ Utilisez la section Mind mapping d’un playbook pour comprendre les étapes du 
 Le mind mapping commence par une définition de la personne ciblée dans le parcours utilisateur et décrit à chaque étape si quelque chose est diffusé par Adobe, comme un nouveau message ou un rappel, ou s’il s’agit d’une chose que la personne ciblée a faite qui déclenche le message ou l’événement suivant.
 
 ![Mind mapping du playbook mis en surbrillance.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
-
 
 ### Résumé {#summary}
 

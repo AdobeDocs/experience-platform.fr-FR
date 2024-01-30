@@ -2,20 +2,15 @@
 solution: Experience Platform
 title: Créer, partager et réutiliser des instances de playbook
 description: Découvrez comment créer, partager et réutiliser des instances de playbook pour réaliser votre cas d’utilisation marketing.
-badgeBeta: label="Version Beta" type="Informative"
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: f477cb4d410058b8bf2692a7afde70bf23a5aac7
+source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
 workflow-type: tm+mt
-source-wordcount: '745'
-ht-degree: 97%
+source-wordcount: '740'
+ht-degree: 86%
 
 ---
 
-# (Version bêta) Créer, partager et réutiliser des instances de playbook
-
->[!AVAILABILITY]
->
->Cette fonctionnalité est actuellement en version bêta et nʼest pas disponible pour tous les utilisateurs et utilisatrices. La documentation et les fonctionnalités peuvent changer.
+# Créer, partager et réutiliser des instances de playbook
 
 Pour utiliser un playbook, accédez à **[!UICONTROL Playbooks de cas d’utilisation] > [!UICONTROL Playbooks]**. Parcourez et utilisez les différentes options de recherche et de filtrage de la page pour sélectionner et commencer à utiliser un playbook spécifique.
 
@@ -48,7 +43,7 @@ Après avoir créé une instance basée sur un playbook, vous pouvez la personna
 
 Il est important de comprendre que les ressources générées varient selon le cas d’utilisation que vous activez :
 
-* Différentes ressources sont générées pour différents types de playbooks. Ces ressources sont créées spécifiquement pour le cas d’utilisation réalisé via le playbook. Par exemple, un playbook génère un schéma, un segment, un parcours et des messages. Un autre playbook génère un schéma, un segment et une destination vers lesquels activer les données.
+* Différentes ressources sont générées pour différents types de playbooks. Ces ressources sont créées spécifiquement pour le cas d’utilisation réalisé via le playbook. Par exemple, un playbook génère un schéma, une audience, un parcours et des messages. Un autre playbook génère un schéma, une audience et une destination vers laquelle activer les données.
 * Les ressources elles-mêmes varient d’un playbook à l’autre. Par exemple, pour le playbook **[!UICONTROL Envoyer un message d’anniversaire aux clients/clientes]**, l’audience créée comporte la règle `birthday=today AND year=any`.
 
 À titre d’exemple, pour le playbook **[!UICONTROL Panier abandonné : contenu]**, vous pouvez constater qu’un parcours spécifique est créé et contient les messages créés pour ce cas d’utilisation.
@@ -67,7 +62,7 @@ Le comportement décrit ci-dessus est valable pour toutes les ressources qui son
 >
 >Effectuez des tests dans le sandbox de développement et passez en production lorsque vous êtes prêt(e).
 >
->Une fois les objets générés, vous pouvez continuer à les tester dans les sandbox de développement en y rajoutant des données. Vous pouvez tester les ressources tant que vous le souhaitez dans le sandbox de développement et vous pouvez répliquer la logique des ressources (définitions de segment, parcours, schémas, etc.) dans le sandbox de production lorsque vous êtes prêt(e).
+>Une fois les objets générés, vous pouvez continuer à les tester dans les sandbox de développement en y rajoutant des données. Vous pouvez tester les ressources tant que vous le souhaitez dans l’environnement de test de développement et vous pouvez répliquer la logique des ressources (définitions d’audience, parcours, schémas, etc.) dans l’environnement de test de production lorsque vous êtes prêt. Vous pouvez passer à l’environnement de test de développement, puis à l’environnement de test de production à l’aide de la variable [fonctionnalité de sensibilisation aux données](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Réutiliser des playbooks {#reuse-playbooks}
 
