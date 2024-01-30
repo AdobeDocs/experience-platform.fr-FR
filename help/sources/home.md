@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 12f73ac2578b6c5b024cc4ebdd75cd945c7b55c9
+source-git-commit: 632cff3ee4ca82d391e9a1df0cb38d903e8a5428
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1526'
 ht-degree: 75%
 
 ---
@@ -161,11 +161,13 @@ Experience Platform prend en charge l’ingestion de données à partir de votre
 
 Experience Platform prend en charge l’ingestion de données provenant d’un système tiers d’automatisation du marketing. Consultez les documents connexes suivants pour plus d’informations sur des connecteurs source spécifiques :
 
+- [[!DNL Braze]](tutorials/ui/create/marketing-automation/braze.md) [!BADGE Diffusion en continu]{type=Positive}
 - [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE Diffusion en continu]{type=Positive}
 - [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) [!BADGE Diffusion en continu]{type=Positive}
 - [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) [!BADGE Lot]{type=Informative}
 - [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE Lot]{type=Informative}
 - [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE Lot]{type=Informative}
+- [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE Lot]{type=Informative}
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE Lot]{type=Informative}
 <!-- 
 - [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)

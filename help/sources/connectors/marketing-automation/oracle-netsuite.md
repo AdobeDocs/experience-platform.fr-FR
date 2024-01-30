@@ -1,10 +1,9 @@
 ---
 title: Présentation de la source Oracle NetSuite
 description: Découvrez comment connecter Oracle NetSuite à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
-hide: true
-hidefromtoc: true
+last-substantial-update: 2024-01-30T00:00:00Z
 badge: Version Beta
-source-git-commit: 053cf0af327b39830f025686e0f8f67c27f1c45c
+source-git-commit: 632cff3ee4ca82d391e9a1df0cb38d903e8a5428
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 21%
