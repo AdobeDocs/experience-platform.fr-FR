@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès
 title: Gestion des autorisations de rôle du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur la configuration des autorisations pour un rôle dans l’interface Autorisations d’Adobe Experience Cloud.
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
+source-git-commit: c1c7a851315214e2362085d3283d144066d4dd8a
 workflow-type: tm+mt
-source-wordcount: '986'
-ht-degree: 95%
+source-wordcount: '984'
+ht-degree: 93%
 
 ---
 
@@ -155,9 +155,9 @@ Le boîte de dialogue de **[!UICONTROL Suppression d’un groupe d’utilisateur
 
 Vous revenez sur l’onglet **[!UICONTROL Groupes d’utilisateurs]**.
 
-## Ajout d’utilisateurs à Experience Platform via un profil de produit
+## Ajout d’utilisateurs à un Experience Platform par le biais d’un rôle
 
-Pour ajouter un utilisateur à un profil de produit, connectez-vous a Admin Console et sélectionnez **[!UICONTROL Ajouter des utilisateurs]**.
+Pour ajouter un utilisateur à un rôle, connectez-vous au Admin Console et sélectionnez **[!UICONTROL Ajout d’utilisateurs]**
 
 ![Ajout d’utilisateurs à un profil de produit](../../images/flac-ui/product-profile-add-users.png)
 

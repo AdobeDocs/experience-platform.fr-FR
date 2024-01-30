@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Point de terminaison de l’API Access Control Policies
 description: Le point de terminaison /policies de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les stratégies dans Adobe Experience Platform.
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: 01574f37593c707f092a8b4aa03d3d67e8c20780
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1433'
 ht-degree: 10%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 10%
 >
 >Si un jeton utilisateur est transmis, l’utilisateur du jeton doit disposer d’un rôle &quot;d’administrateur org&quot; pour l’organisation demandée.
 
-Les politiques de contrôle d&#39;accès sont des déclarations qui rassemblent les attributs pour établir les actions permises et non autorisées. Ces politiques peuvent être locales ou globales et peuvent remplacer d’autres politiques. Le `/policies` Le point de terminaison de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les stratégies, y compris des informations sur les règles qui les régissent, ainsi que leurs conditions d’objet respectives.
+Les politiques de contrôle d&#39;accès sont des déclarations qui rassemblent les attributs pour établir les actions permises et non autorisées. Ces politiques peuvent être locales ou globales et peuvent remplacer d’autres politiques. La variable `/policies` Le point de terminaison de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les stratégies, y compris des informations sur les règles qui les régissent, ainsi que leurs conditions d’objet respectives.
 
 >[!IMPORTANT]
 >
@@ -135,15 +135,15 @@ Une réponse réussie renvoie une liste des stratégies existantes.
 | `id` | Identifiant qui correspond à une stratégie. Cet identifiant est généré automatiquement et peut être utilisé pour rechercher, mettre à jour et supprimer une stratégie. |
 | `imsOrgId` | L’organisation dans laquelle la stratégie interrogée est accessible. |
 | `createdBy` | L’identifiant de l’utilisateur qui a créé la stratégie. |
-| `createdAt` | Heure à laquelle la stratégie a été créée. Le `createdAt` s’affiche dans l’horodatage d’époque unix. |
+| `createdAt` | Heure de création de la stratégie. La variable `createdAt` s’affiche dans l’horodatage d’époque unix. |
 | `modifiedBy` | ID de l’utilisateur qui a mis à jour la stratégie pour la dernière fois. |
-| `modifiedAt` | Heure de la dernière mise à jour de la stratégie. Le `modifiedAt` s’affiche dans l’horodatage d’époque unix. |
+| `modifiedAt` | Heure de la dernière mise à jour de la stratégie. La variable `modifiedAt` s’affiche dans l’horodatage d’époque unix. |
 | `name` | Nom de la stratégie. |
 | `description` | (Facultatif) Une propriété qui peut être ajoutée pour fournir des informations supplémentaires sur une stratégie spécifique. |
 | `status` | État actuel dʼune politique. Cette propriété définit si une stratégie est actuellement `active` ou `inactive`. |
 | `subjectCondition` | Conditions appliquées à un sujet. Un sujet est un utilisateur avec certains attributs qui demande l’accès à une ressource pour effectuer une action. Dans ce cas, `subjectCondition` sont des conditions de type requête appliquées aux attributs d’objet. |
 | `rules` | Ensemble de règles qui définissent une stratégie. Les règles définissent les combinaisons d’attributs autorisées pour que le sujet exécute correctement une action sur la ressource. |
-| `rules.effect` | Effet résultant de la prise en compte des valeurs pour `action`, `condition` et `resource`. Les valeurs possibles sont les suivantes : `permit`, `deny`ou `indeterminate`. |
+| `rules.effect` | Effet résultant de la prise en compte des valeurs pour `action`, `condition` et `resource`. Les valeurs possibles sont les suivantes : `permit`, `deny`, ou `indeterminate`. |
 | `rules.resource` | Ressource ou objet auquel un sujet peut ou ne peut pas accéder.  Les ressources peuvent être des fichiers, des applications, des serveurs ou même des API. |
 | `rules.condition` | Conditions appliquées à une ressource. Par exemple, si une ressource est un schéma, certains libellés peuvent lui être appliqués, ce qui contribue à déterminer si une action contre ce schéma est admissible ou non. |
 | `rules.action` | Action autorisée d’un sujet par rapport à une ressource interrogée. Les valeurs possibles sont les suivantes : `read`, `create`, `edit`, et `delete`. |
@@ -180,35 +180,49 @@ Une requête réussie renvoie des informations sur l’ID de stratégie interrog
 
 ```json
 {
-    "id": "13138ef6-c007-495d-837f-0a248867e219",
-    "imsOrgId": "{IMS_ORG}",
-    "createdBy": "{CREATED_BY}",
-    "createdAt": 1652859368555,
-    "modifiedBy": "{MODIFIED_BY}",
-    "modifiedAt": 1652890780206,
-    "name": "Documentation-Copy",
-    "description": "xyz",
-    "status": "active",
-    "subjectCondition": null,
-    "rules": [
+  "policies": [
+    {
+      "id": "7019068e-a3a0-48ce-b56b-008109470592",
+      "imsOrgId": "5555467B5D8013E50A494220@AdobeOrg",
+      "createdBy": "example@AdobeID",
+      "createdAt": 1652892767559,
+      "modifiedBy": "example@AdobeID",
+      "modifiedAt": 1652895736367,
+      "name": "schema-field",
+      "description": "schema-field",
+      "status": "inactive",
+      "subjectCondition": null,
+      "rules": [
         {
-            "effect": "Permit",
-            "resource": "orgs/{IMS_ORG}/sandboxes/ro-sand/schemas/*/schema-fields/*",
-            "condition": "{\"!\":[{\"or\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"and\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}]}]}",
-            "actions": [
-                "com.adobe.action.read"
-            ]
+          "effect": "Deny",
+          "resource": "/orgs/5555467B5D8013E50A494220@AdobeOrg/sandboxes/xql/schemas/*/schema-fields/*",
+          "condition": "{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}",
+          "actions": [
+            "com.adobe.action.read",
+            "com.adobe.action.write",
+            "com.adobe.action.view"
+          ]
         },
         {
-            "effect": "Deny",
-            "resource": "orgs/{IMS_ORG}/sandboxes/*/segments/*",
-            "condition": "{\"!\":[{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"custom/\",{\"var\":\"resource.labels\"}]}]}]}",
-            "actions": [
-                "com.adobe.action.read"
-            ]
+          "effect": "Permit",
+          "resource": "/orgs/5555467B5D8013E50A494220@AdobeOrg/sandboxes/*/schemas/*/schema-fields/*",
+          "condition": "{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}",
+          "actions": [
+            "com.adobe.action.delete"
+          ]
+        },
+        {
+          "effect": "Deny",
+          "resource": "/orgs/5555467B5D8013E50A494220@AdobeOrg/sandboxes/delete-sandbox-adfengine-test-8/segments/*",
+          "condition": "{\"!\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"custom/\",{\"var\":\"resource.labels\"}]}]}",
+          "actions": [
+            "com.adobe.action.write"
+          ]
         }
-    ],
-    "_etag": "\"0300d43c-0000-0200-0000-62851c9c0000\""
+      ],
+      "etag": "\"0300593f-0000-0200-0000-62852ff80000\""
+    }
+  ]
 }
 ```
 
@@ -217,15 +231,15 @@ Une requête réussie renvoie des informations sur l’ID de stratégie interrog
 | `id` | Identifiant qui correspond à une stratégie. Cet identifiant est généré automatiquement et peut être utilisé pour rechercher, mettre à jour et supprimer une stratégie. |
 | `imsOrgId` | L’organisation dans laquelle la stratégie interrogée est accessible. |
 | `createdBy` | L’identifiant de l’utilisateur qui a créé la stratégie. |
-| `createdAt` | Heure à laquelle la stratégie a été créée. Le `createdAt` s’affiche dans l’horodatage d’époque unix. |
+| `createdAt` | Heure de création de la stratégie. La variable `createdAt` s’affiche dans l’horodatage d’époque unix. |
 | `modifiedBy` | ID de l’utilisateur qui a mis à jour la stratégie pour la dernière fois. |
-| `modifiedAt` | Heure de la dernière mise à jour de la stratégie. Le `modifiedAt` s’affiche dans l’horodatage d’époque unix. |
+| `modifiedAt` | Heure de la dernière mise à jour de la stratégie. La variable `modifiedAt` s’affiche dans l’horodatage d’époque unix. |
 | `name` | Nom de la stratégie. |
 | `description` | (Facultatif) Une propriété qui peut être ajoutée pour fournir des informations supplémentaires sur une stratégie spécifique. |
 | `status` | État actuel dʼune politique. Cette propriété définit si une stratégie est actuellement `active` ou `inactive`. |
 | `subjectCondition` | Conditions appliquées à un sujet. Un sujet est un utilisateur avec certains attributs qui demande l’accès à une ressource pour effectuer une action. Dans ce cas, `subjectCondition` sont des conditions de type requête appliquées aux attributs d’objet. |
 | `rules` | Ensemble de règles qui définissent une stratégie. Les règles définissent les combinaisons d’attributs autorisées pour que le sujet exécute correctement une action sur la ressource. |
-| `rules.effect` | Effet résultant de la prise en compte des valeurs pour `action`, `condition` et `resource`. Les valeurs possibles sont les suivantes : `permit`, `deny`ou `indeterminate`. |
+| `rules.effect` | Effet résultant de la prise en compte des valeurs pour `action`, `condition` et `resource`. Les valeurs possibles sont les suivantes : `permit`, `deny`, ou `indeterminate`. |
 | `rules.resource` | Ressource ou objet auquel un sujet peut ou ne peut pas accéder.  Les ressources peuvent être des fichiers, des applications, des serveurs ou même des API. |
 | `rules.condition` | Conditions appliquées à une ressource. Par exemple, si une ressource est un schéma, certains libellés peuvent lui être appliqués, ce qui contribue à déterminer si une action contre ce schéma est admissible ou non. |
 | `rules.action` | Action autorisée d’un sujet par rapport à une ressource interrogée. Les valeurs possibles sont les suivantes : `read`, `create`, `edit`, et `delete`. |
@@ -261,7 +275,7 @@ curl -X POST \
           "resource": "/orgs/{IMS_ORG}/sandboxes/*",
           "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
           "actions": [
-            "read"
+            "com.adobe.action.read"
           ]
         }
       ]
@@ -274,7 +288,7 @@ curl -X POST \
 | `description` | (Facultatif) Une propriété qui peut être ajoutée pour fournir des informations supplémentaires sur une stratégie spécifique. |
 | `imsOrgId` | L’organisation qui contient la stratégie. |
 | `rules` | Ensemble de règles qui définissent une stratégie. Les règles définissent les combinaisons d’attributs autorisées pour que le sujet exécute correctement une action sur la ressource. |
-| `rules.effect` | Effet résultant de la prise en compte des valeurs pour `action`, `condition` et `resource`. Les valeurs possibles sont les suivantes : `permit`, `deny`ou `indeterminate`. |
+| `rules.effect` | Effet résultant de la prise en compte des valeurs pour `action`, `condition` et `resource`. Les valeurs possibles sont les suivantes : `permit`, `deny`, ou `indeterminate`. |
 | `rules.resource` | Ressource ou objet auquel un sujet peut ou ne peut pas accéder.  Les ressources peuvent être des fichiers, des applications, des serveurs ou même des API. |
 | `rules.condition` | Conditions appliquées à une ressource. Par exemple, si une ressource est un schéma, certains libellés peuvent lui être appliqués, ce qui contribue à déterminer si une action contre ce schéma est admissible ou non. |
 | `rules.action` | Action autorisée d’un sujet par rapport à une ressource interrogée. Les valeurs possibles sont les suivantes : `read`, `create`, `edit`, et `delete`. |
@@ -301,7 +315,7 @@ Une requête réussie renvoie la nouvelle stratégie, y compris son identifiant 
             "resource": "/orgs/{IMS_ORG}/sandboxes/*",
             "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
             "actions": [
-                "read"
+                "com.adobe.action.read"
             ]
         }
     ],
@@ -314,7 +328,7 @@ Une requête réussie renvoie la nouvelle stratégie, y compris son identifiant 
 | `id` | Identifiant qui correspond à une stratégie. Cet identifiant est généré automatiquement et peut être utilisé pour rechercher, mettre à jour et supprimer une stratégie. |
 | `name` | Nom d’une stratégie. |
 | `rules` | Ensemble de règles qui définissent une stratégie. Les règles définissent les combinaisons d’attributs autorisées pour que le sujet exécute correctement une action sur la ressource. |
-| `rules.effect` | Effet résultant de la prise en compte des valeurs pour `action`, `condition` et `resource`. Les valeurs possibles sont les suivantes : `permit`, `deny`ou `indeterminate`. |
+| `rules.effect` | Effet résultant de la prise en compte des valeurs pour `action`, `condition` et `resource`. Les valeurs possibles sont les suivantes : `permit`, `deny`, ou `indeterminate`. |
 | `rules.resource` | Ressource ou objet auquel un sujet peut ou ne peut pas accéder.  Les ressources peuvent être des fichiers, des applications, des serveurs ou même des API. |
 | `rules.condition` | Conditions appliquées à une ressource. Par exemple, si une ressource est un schéma, certains libellés peuvent lui être appliqués, ce qui contribue à déterminer si une action contre ce schéma est admissible ou non. |
 | `rules.action` | Action autorisée d’un sujet par rapport à une ressource interrogée. Les valeurs possibles sont les suivantes : `read`, `create`, `edit`, et `delete`. |
@@ -352,7 +366,7 @@ curl -X PUT \
         "resource": "/orgs/{IMS_ORG}/sandboxes/*",
         "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
         "actions": [
-          "read"
+          "com.adobe.action.read"
         ]
       }
     ]
@@ -381,7 +395,7 @@ Une réponse réussie renvoie la stratégie mise à jour.
             "resource": "/orgs/{IMS_ORG}/sandboxes/*",
             "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
             "actions": [
-                "read"
+                "com.adobe.action.read"
             ]
         }
     ],
@@ -452,7 +466,7 @@ Une réponse réussie renvoie l’identifiant de stratégie interrogé avec une 
             "resource": "/orgs/{IMS_ORG}/sandboxes/*",
             "condition": "{\"or\":[{\"adobe.match_any_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]},{\"!\":[{\"adobe.match_all_labels_by_prefix\":[{\"var\":\"subject.roles.labels\"},\"core/\",{\"var\":\"resource.labels\"}]}]}]}",
             "actions": [
-                "read"
+                "com.adobe.action.read"
             ]
         }
     ],
