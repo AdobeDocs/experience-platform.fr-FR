@@ -7,7 +7,7 @@ exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
 workflow-type: tm+mt
 source-wordcount: '1623'
-ht-degree: 62%
+ht-degree: 66%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 62%
 >[!CONTEXTUALHELP]
 >id="platform_datagovernance_framework"
 >title="Obligation de gouvernance des données"
->abstract="N’oubliez pas qu’il vous incombe à vous seul de respecter les politiques de gouvernance des données de votre entreprise et de respecter vos exigences réglementaires. Experience Platform fournit des outils de gouvernance des données qui vous permettent de gérer vos obligations en matière d’utilisation des données. Appliquez les libellés d’utilisation des données appropriés avant d’interroger ou de traiter les données. Consultez la documentation pour en savoir plus sur les outils de gouvernance des données et les bonnes pratiques."
+>abstract="N’oubliez pas qu’il vous incombe, à vous uniquement, de respecter les politiques de gouvernance des données de votre organisation et de satisfaire vos exigences réglementaires. Experience Platform fournit des outils de gouvernance des données qui vous permettent de gérer vos obligations en matière d’utilisation des données. Appliquez les libellés d’utilisation des données appropriés avant d’interroger ou de traiter des données. Consultez la documentation pour en savoir plus sur les outils de gouvernance des données et les bonnes pratiques."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=fr" text="Présentation de la gouvernance des données"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=fr" text="Présentation des libellés de gouvernance des données"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=fr" text="Vue d’ensemble des libellés de gouvernance des données"
 
 L’une des principales fonctionnalités d’Adobe Experience Platform est de rassembler des données issues de plusieurs systèmes d’entreprise afin de permettre aux spécialistes marketing d’identifier, de comprendre et d’impliquer les clients avec plus d’efficacité. Ces données peuvent être soumises à des restrictions d’utilisation définies par votre organisation ou par des réglementations juridiques. Il est donc important de s’assurer que vos opérations de données au sein de [!DNL Platform] sont conformes aux politiques d’utilisation des données.
 

@@ -7,7 +7,7 @@ exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
 source-git-commit: f7f49e4158f3aa95c3e96d3687642392e237aabc
 workflow-type: tm+mt
 source-wordcount: '850'
-ht-degree: 7%
+ht-degree: 11%
 
 ---
 
@@ -37,8 +37,8 @@ La variable [!UICONTROL Prise en main de Real-time Customer Profile] Le widget e
 >[!CONTEXTUALHELP]
 >id="platform_home_metrics_totalProfiles"
 >title="Nombre total de profils"
->abstract="Nombre total de profils de votre organisation dans Experience Platform. Ce nombre est basé sur la stratégie de fusion de votre organisation et n’inclut pas les fragments de profil. Le nombre de profils est mis à jour une fois toutes les 24 heures."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html#profile-count" text="En savoir plus dans la documentation."
+>abstract="Nombre total de profils de votre organisation dans Experience Platform. Ce nombre est basé sur la politique de fusion de votre organisation et n’inclut pas les fragments de profil. Le nombre de profils est mis à jour une fois toutes les 24 heures."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/ui/user-guide.html?lang=fr#profile-count" text="En savoir plus dans la documentation."
 
 Le tableau de bord des mesures affiche des informations à jour sur les données de votre Experience Platform. Le tableau de bord est divisé en deux sections :
 
