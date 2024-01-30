@@ -4,10 +4,10 @@ title: Guide du tableau de bord Profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 57f4b365f510935f75f3ef92d71d66fe255269b4
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '4900'
-ht-degree: 50%
+source-wordcount: '4996'
+ht-degree: 49%
 
 ---
 
@@ -27,7 +27,7 @@ Les données de lʼinstantané montrent les données exactement comme elles appa
 >
 >Les modifications ou mises à jour apportées aux données depuis la prise dʼun instantané ne seront pas reflétées dans le tableau de bord avant la prise de lʼinstantané suivant.
 
-## Explorer le tableau de bord Profils
+## Exploration du tableau de bord Profils {#explore-dashboard}
 
 Pour accéder au tableau de bord Profils dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Profils]** dans le rail de gauche, puis sélectionnez l’onglet **[!UICONTROL Présentation]** pour afficher le tableau de bord.
 
@@ -37,7 +37,7 @@ Pour accéder au tableau de bord Profils dans l’interface utilisateur de Platf
 
 ![Le tableau de bord Profils Experience Platform avec les options Profils et Aperçu en surbrillance.](../images/profiles/dashboard-overview.png)
 
-### Modifier le tableau de bord Profils
+### Modification du tableau de bord Profils {#modify-dashboard}
 
 Vous pouvez modifier l’aspect du tableau de bord Profils en sélectionnant **[!UICONTROL Modifier le tableau de bord]**. Vous pouvez déplacer, ajouter, redimensionner et supprimer des widgets du tableau de bord, ainsi que d’accéder au **[!UICONTROL Bibliothèque de widgets]** pour explorer les widgets disponibles et créer des widgets personnalisés pour votre organisation.
 
@@ -50,6 +50,10 @@ Sélectionnez **[!UICONTROL Ajouter un widget]** pour accéder à la bibliothèq
 ![La présentation du tableau de bord Profils avec Ajouter un widget mis en surbrillance.](../images/profiles/profiles-overview-add-widget.png)
 
 Dans la bibliothèque de widgets, vous pouvez parcourir la sélection de widgets d’audience standard et personnalisés. Pour plus d’informations sur l’ajout de widgets, consultez la documentation de la bibliothèque de widgets sur la manière d’[ajouter un widget](../customize/widget-library.md#add-widgets).
+
+### Afficher SQL {#view-sql}
+
+Vous pouvez afficher le code SQL qui génère les insights visualisés sur votre tableau de bord avec une bascule sur le [!UICONTROL Présentation] workspace. Vous pouvez vous inspirer du SQL de vos insights existants pour créer de nouvelles requêtes qui obtiennent des insights uniques à partir des données Platform en fonction des besoins de votre entreprise. Pour en savoir plus sur cette fonctionnalité, voir [Afficher le guide de l’interface utilisateur SQL](../view-sql.md).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 

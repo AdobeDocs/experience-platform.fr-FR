@@ -4,16 +4,16 @@ title: Guide du tableau de bord Audiences
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les audiences que votre entreprise a créées.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: cd57ca50537d928025a5164b6a7d0ead490162ba
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '3053'
-ht-degree: 41%
+source-wordcount: '3133'
+ht-degree: 40%
 
 ---
 
 # Tableau de bord des [!UICONTROL Audiences] {#audiences-dashboard}
 
-L’interface utilisateur (IU) d’Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos audiences, présentées ainsi lors d’un instantané quotidien. Ce guide explique comment accéder à et utiliser le [!UICONTROL Audiences] tableau de bord dans l’interface utilisateur et fournit des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
+L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos audiences, telles qu’elles sont capturées lors d’un instantané quotidien. Ce guide explique comment accéder à et utiliser le [!UICONTROL Audiences] tableau de bord dans l’interface utilisateur et fournit des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
 
 Pour obtenir un aperçu de toutes les fonctionnalités du service de segmentation d’Adobe Experience Platform au sein de l’interface utilisateur de la plateforme, veuillez consulter le [Guide de l’interface utilisateur du service de segmentation](../../segmentation/ui/overview.md).
 
@@ -50,6 +50,10 @@ Sélectionnez **[!UICONTROL Ajouter un widget]** pour accéder à la bibliothèq
 ![La variable [!UICONTROL Audiences] présentation du tableau de bord avec [!UICONTROL Ajouter un widget] surlignée.](../images/audiences/audiences-overview-add-widget.png)
 
 Dans la bibliothèque de widgets, vous pouvez parcourir la sélection de widgets d’audience standard et personnalisés. Pour plus d’informations sur l’ajout de widgets, consultez la documentation de la bibliothèque de widgets sur la manière d’[ajouter un widget](../customize/widget-library.md#add-widgets).
+
+### Afficher SQL {#view-sql}
+
+Vous pouvez afficher le code SQL qui génère les insights visualisés sur votre tableau de bord avec une bascule sur le [!UICONTROL Présentation] workspace. Vous pouvez vous inspirer du SQL de vos insights existants pour créer de nouvelles requêtes qui obtiennent des insights uniques à partir des données Platform en fonction des besoins de votre entreprise. Pour en savoir plus sur cette fonctionnalité, voir [Afficher le guide de l’interface utilisateur SQL](../view-sql.md).
 
 ## Sélection d’une audience {#select-audience}
 
@@ -91,10 +95,10 @@ Un chargement de widget par défaut est fourni pour toutes les nouvelles instanc
 
 Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Pour ce faire, Customer AI analyse les données d’événement d’expérience client existantes afin de prédire **scores de propension à l’attrition ou à la conversion**. Ces modèles de propension des clients à haute précision permettent une segmentation et un ciblage plus précis. La variable [distribution des scores](#customer-ai-distribution-of-scores) et [résumé de notation](#customer-ai-scoring-summary) les insights montrent la division de votre audience. Ils mettent en évidence les profils qui correspondent à une propension élevée/faible/moyenne et la manière dont ils sont répartis dans les nombres de profils.
 
-* [[!UICONTROL Résumé de notation de Customer AI]](#customer-ai-scoring-summary)
-* [[!UICONTROL Distribution des scores par Customer AI]](#customer-ai-distribution-of-scores)
+* [[!UICONTROL Résumé des scores de l’IA dédiée aux clientes et aux clients]](#customer-ai-scoring-summary)
+* [[!UICONTROL Distribution des scores par l’IA dédiée aux clientes et aux clients]](#customer-ai-distribution-of-scores)
 
-### [!UICONTROL Distribution des scores par Customer AI] {#customer-ai-distribution-of-scores}
+### [!UICONTROL Distribution des scores par l’IA dédiée aux clientes et aux clients] {#customer-ai-distribution-of-scores}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_distributionOfScores"
@@ -123,7 +127,7 @@ La page d’informations détaillées sur les modèles s’affiche.
 
 Pour plus d’informations sur Customer AI, voir [guide de l’interface utilisateur de discover insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
-### [!UICONTROL Résumé de notation de Customer AI] {#customer-ai-scoring-summary}
+### [!UICONTROL Résumé des scores de l’IA dédiée aux clientes et aux clients] {#customer-ai-scoring-summary}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_scoringSummary"
@@ -209,7 +213,7 @@ Ce widget illustre la tendance de taille de l’audience pour une audience spéc
 
 ### [!UICONTROL Ordre d’activation de l’audience] {#audience-activation-order}
 
-Le widget [!UICONTROL Ordre d’activation de l’audience] génère un tableau à trois colonnes qui répertorie le nom de la destination, la plateforme et la date d’activation de l’audience. La liste est classée en fonction de la date en commençant par la plus récente et peut contenir jusqu’à 10 lignes.
+La variable [!UICONTROL Ordre d’activation de l’audience] widget fournit un tableau à trois colonnes qui répertorie le nom de destination, la plateforme et la date d’activation de l’audience. La liste est classée en fonction de la date en commençant par la plus récente et peut contenir jusqu’à 10 lignes.
 
 ![Le widget Ordre d’activation de l’audience.](../images/audiences/audience-activation-order.png)
 

@@ -4,10 +4,10 @@ title: Guide du tableau de bord des destinations
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les destinations actives de votre organisation.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: d9ce17bbe17df175db30d283387d8fa569b97dee
+source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
 workflow-type: tm+mt
-source-wordcount: '3171'
-ht-degree: 63%
+source-wordcount: '3244'
+ht-degree: 61%
 
 ---
 
@@ -50,6 +50,10 @@ Sélectionnez **[!UICONTROL Ajouter un widget]** pour accéder à la bibliothèq
 ![Aperçu du tableau de bord des destinations avec le bouton Ajouter un widget en surbrillance.](../images/destinations/destinations-overview-add-widget.png)
 
 Dans la bibliothèque de widgets, vous pouvez parcourir la sélection de widgets d’audience standard et personnalisés. Pour plus d’informations sur l’ajout de widgets, consultez la documentation de la bibliothèque de widgets sur la manière d’[ajouter un widget](../customize/widget-library.md#add-widgets).
+
+### Afficher SQL {#view-sql}
+
+Vous pouvez afficher le code SQL qui génère les insights visualisés sur votre tableau de bord avec une bascule sur le [!UICONTROL Présentation] workspace. Vous pouvez vous inspirer du SQL de vos insights existants pour créer de nouvelles requêtes qui obtiennent des insights uniques à partir des données Platform en fonction des besoins de votre entreprise. Pour en savoir plus sur cette fonctionnalité, voir [Afficher le guide de l’interface utilisateur SQL](../view-sql.md).
 
 ## Widgets par défaut {#default-widgets}
 
@@ -290,7 +294,7 @@ Le widget [!UICONTROL Audiences activées sur toutes les destinations] fournit l
 
 ![Le widget Audiences activées dans toutes les destinations.](../images/destinations/activated-audiences-across-all-destinations.png)
 
-Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet [!UICONTROL Parcourir] des destinations. Cette page fournit une liste de toutes les destinations activées, ainsi que diverses mesures pertinentes. Consultez la documentation pour en savoir plus sur l’onglet [[!UICONTROL Parcourir]](../../destinations/ui/destinations-workspace.md#browse).
+Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet [!UICONTROL Parcourir] des destinations. Cette page fournit une liste de toutes les destinations activées, ainsi que diverses mesures pertinentes. Pour plus d’informations sur la variable [[!UICONTROL Parcourir] tab](../../destinations/ui/destinations-workspace.md#browse).
 
 Consultez la section Conditions préalables pour [définitions des termes utilisés](#prerequisites) dans cette description.
 
