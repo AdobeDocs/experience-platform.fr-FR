@@ -2,9 +2,9 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
+source-git-commit: dbc14c639ef02b8504cc9895c6aacb6e205549b2
 workflow-type: tm+mt
-source-wordcount: '2739'
+source-wordcount: '2746'
 ht-degree: 34%
 
 ---
@@ -29,7 +29,7 @@ Oui, les audiences préconfigurées générées en externe sont prises en charge
 
 ### Quelles autorisations dois-je posséder pour charger des audiences générées en externe ?
 
-Pour charger des audiences générées en externe, vous devez disposer des autorisations &quot;Gérer les audiences/segments&quot; et &quot;Gérer les jeux de données&quot;. Aucun contrôle spécifique basé sur les rôles n’est nécessaire pour charger des audiences générées en externe.
+Pour charger des audiences générées en externe, vous devez disposer des autorisations &quot;Afficher les audiences/segments&quot;, &quot;Gérer les audiences/segments&quot;, &quot;Afficher les jeux de données&quot;, &quot;Gérer les jeux de données&quot;, &quot;Afficher les sources&quot; et &quot;Gérer les sources&quot;. Aucun contrôle spécifique basé sur les rôles n’est nécessaire pour charger des audiences générées en externe.
 
 ### Que se passe-t-il lorsque je charge une audience générée en externe ?
 
