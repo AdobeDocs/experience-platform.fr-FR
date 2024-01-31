@@ -4,10 +4,10 @@ title: Page d’accueil et tableaux de bord Real-time Customer Data Platform
 description: Tableaux de bord, page d’accueil et première expérience client d’Adobe Experience Platform
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: f7f49e4158f3aa95c3e96d3687642392e237aabc
+source-git-commit: d052f307d91890f89d6cb3f18525fe395c116f95
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 11%
+source-wordcount: '915'
+ht-degree: 10%
 
 ---
 
@@ -25,10 +25,10 @@ Ce document présente la page d’accueil de Real-Time CDP et le tableau de bord
 
 La variable [!UICONTROL Prise en main de Real-time Customer Profile] Le widget est divisé en quatre sections :
 
-* **Ingestion de données dans Platform**: ce widget vous dirige vers le catalogue de sources. Utilisez le catalogue de sources pour sélectionner une source et ingérer vos données vers Experience Platform. Pour plus d’informations, consultez la section [présentation des sources](../sources/home.md)
-* **Structures de données de modèle**: ce widget vous dirige vers la présentation des schémas. Utilisez la présentation des schémas pour rechercher des schémas existants ou créer des blocs de création qui décrivent la structure de vos données. Pour plus d’informations, consultez la section [présentation des schémas](../xdm/home.md).
-* **Segmenter les audiences**: ce widget vous redirige vers le [!DNL Segment Builder] dans l’interface utilisateur. Utilisez la variable [!DNL Segment Builder] pour interagir avec les éléments de données Profile et définir des règles pour vos segments. Pour plus d’informations, consultez la section [Présentation de Segmentation Service](../segmentation/home.md).
-* **Envoi de données vers des destinations**: ce widget vous dirige vers le catalogue des destinations. Utilisez le catalogue des destinations pour sélectionner une destination à laquelle vous pouvez vous connecter et envoyer des segments. Pour plus d’informations, consultez la section [présentation des destinations](../destinations/home.md)
+* **Ingestion de données dans Platform**: ce widget vous dirige vers le catalogue de sources. Utilisez le catalogue de sources pour sélectionner une source et ingérer vos données vers Experience Platform. Sélectionner **[Configuration des sources]** pour accéder au catalogue des sources. Pour plus d’informations, consultez la section [présentation des sources](../sources/home.md).
+* **Structures de données de modèle**: ce widget vous dirige vers la présentation des schémas. Utilisez la présentation des schémas pour rechercher des schémas existants ou créez un plan directeur qui décrit la structure de vos données. Sélectionner **[!UICONTROL Créer un schéma]** pour accéder à l’interface de création de schéma. Pour plus d’informations, consultez la section [présentation des schémas](../xdm/home.md).
+* **Création d’audiences**: ce widget vous dirige vers le créateur de segments dans l’interface utilisateur. Utilisez le créateur de segments pour interagir avec les éléments de données de profil et définir les critères de votre définition de segment. Sélectionner **[!UICONTROL Créer une audience]** pour accéder au créateur de segments. Pour plus d’informations, consultez la section [Présentation de Segmentation Service](../segmentation/home.md).
+* **Envoi de données vers des destinations**: ce widget vous dirige vers le catalogue des destinations. Utilisez le catalogue des destinations pour sélectionner une destination à laquelle vous pouvez vous connecter et envoyer des segments. Sélectionner **[!UICONTROL Configuration des destinations]** pour accéder au catalogue des destinations. Pour plus d’informations, consultez la section [présentation des destinations](../destinations/home.md).
 
 ![Page d’accueil de l’interface utilisateur de Platform affichant le widget de prise en main](assets/platform-home/getting-started-widget.png)
 
@@ -48,10 +48,10 @@ Le tableau de classement indique le nombre total actuel de schémas, de jeux de 
 
 ![La section du tableau de classement de la page d’accueil de l’interface utilisateur de Platform.](assets/platform-home/leaderboard.png)
 
-* **Schémas totaux**: la variable **Total des schémas** compteur affiche le nombre de schémas dans le système. Ce compteur est mis à jour lors de la création d’un schéma. Pour plus d’informations, consultez la section [présentation des schémas](../xdm/home.md).
-* **Nombre total de jeux de données**: la variable **Jeux de données totaux** Le compteur affiche le nombre de jeux de données dans le système et la quantité de données dans [!DNL Platform]. Ce compteur est mis à jour lors de la création d’un jeu de données. Pour plus d’informations sur les jeux de données, consultez la section [présentation des jeux de données](../catalog/datasets/overview.md).
-* **Profils totaux**: la variable **Profils** count indique le nombre total de profils de votre organisation dans Experience Platform. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale. Ce comptage utilise la valeur par défaut [stratégie de fusion](profile/merge-policies.md) comme défini dans la configuration de la stratégie de fusion de Real-Time Customer Profile. Le nombre de profils est mis à jour une fois toutes les 24 heures. Pour plus d’informations sur les profils, consultez la [Présentation de Real-Time Customer Profile](../profile/home.md).
-* **Segments totaux**: **Segments** affiche le nombre total de segments créés pour l’organisation. Ce nombre est mis à jour lors de la création de segments. Pour plus d’informations sur les segments, consultez la section [Présentation de Segmentation Service](../segmentation/home.md).
+* **Schémas totaux**: la variable **Schémas totaux** compteur affiche le nombre de schémas dans le système. Ce compteur est mis à jour lors de la création d’un schéma. Pour plus d’informations, consultez la section [présentation des schémas](../xdm/home.md).
+* **Nombre total de jeux de données**: la variable **Nombre total de jeux de données** Le compteur indique le nombre de jeux de données dans le système et la quantité de données dans Experience Platform. Ce compteur est mis à jour lors de la création d’un jeu de données. Pour plus d’informations sur les jeux de données, consultez la section [présentation des jeux de données](../catalog/datasets/overview.md).
+* **Profils totaux**: la variable **Profils** count indique le nombre total de profils de votre organisation dans Experience Platform. Il n’inclut pas les fragments de profil. Il s’agit de votre audience adressable totale. Ce comptage utilise la valeur par défaut [stratégie de fusion](profile/merge-policies.md) comme défini dans la configuration de la stratégie de fusion de Real-Time Customer Profile. Le nombre de profils est mis à jour une fois toutes les 24 heures. Sélectionner **[!UICONTROL Profils]** pour accéder à la page d’aperçu des profils et afficher toutes vos mesures de profil. Pour plus d’informations sur les profils, consultez la [Présentation de Real-Time Customer Profile](../profile/home.md).
+* **Audiences totales**: la variable **Audiences totales** Le compteur indique le nombre total d’audiences créées pour votre organisation. Ce nombre est mis à jour lors de la création de nouvelles audiences. Pour plus d’informations sur les audiences, consultez la [Présentation de Segmentation Service](../segmentation/home.md).
 
 ### Éléments récents
 
