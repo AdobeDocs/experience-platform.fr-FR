@@ -3,10 +3,10 @@ keywords: Experience Platform;identité;service d’identité;dépannage;garde-f
 title: Barrières de sécurité pour Identity Service
 description: Ce document fournit des informations sur l’utilisation et les limites de taux pour les données Identity Service afin de vous aider à optimiser l’utilisation du graphique d’identités.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 1576405e6f1d674a75446f887c2912c4480d0e28
 workflow-type: tm+mt
-source-wordcount: '1507'
-ht-degree: 43%
+source-wordcount: '1526'
+ht-degree: 41%
 
 ---
 
@@ -31,7 +31,7 @@ Le tableau suivant décrit les limites statiques appliquées aux données d’id
 
 | Mécanisme de sécurisation | Limite | Notes |
 | --- | --- | --- |
-| Nombre d’identités dans un graphique | 50 | Lorsqu’un graphique comportant 50 identités liées est mis à jour, Identity Service applique un mécanisme « premier entré, premier sorti » et supprime l’identité la plus ancienne afin de libérer de l’espace pour la nouvelle identité. La suppression est basée sur le type d’identité et sur la date et l’heure. La limite est appliquée au niveau de la sandbox. Pour plus d’informations, consultez la section sur [compréhension de la logique de suppression](#deletion-logic). |
+| Nombre d’identités dans un graphique | 50 | Lorsqu’un graphique comportant 50 identités liées est mis à jour, Identity Service applique un mécanisme &quot;premier entré, premier sorti&quot; et supprime l’identité la plus ancienne afin de libérer de l’espace pour la nouvelle identité de ce graphique (**Remarque**: Real-Time Customer Profile n’est pas affecté). La suppression est basée sur le type d’identité et sur la date et l’heure. La limite est appliquée au niveau de la sandbox. Pour plus d’informations, consultez la section sur [compréhension de la logique de suppression](#deletion-logic). |
 | Nombre de liens vers une identité pour une ingestion par lots unique | 50 | Un seul lot peut contenir des identités anormales qui entraînent des fusions de graphiques indésirables. Pour éviter cela, Identity Service n’ingère pas d’identités déjà liées à 50 identités ou plus. |
 | Nombre d’identités dans un enregistrement XDM | 20 | Le nombre minimum d’enregistrements XDM requis est de deux. |
 | Nombre d’espaces de noms personnalisés | Aucun | Vous pouvez créer autant d’espaces de noms personnalisés que vous le souhaitez. |
@@ -135,7 +135,7 @@ Dans cet exemple, ECID:32110 est ingéré et lié à un graphique volumineux à 
 
 >[!TAB Processus de suppression]
 
-Par conséquent, Identity Service supprime l’identité la plus ancienne en fonction de l’horodatage et du type d’identité. Dans ce cas, ECID:35577 est supprimé.
+Par conséquent, Identity Service supprime l’identité la plus ancienne en fonction de l’horodatage et du type d’identité. Dans ce cas, ECID:35577 est supprimé uniquement du graphique d’identités.
 
 ![](./images/guardrails/during-split.png)
 
@@ -166,7 +166,7 @@ Dans l’exemple ci-dessous, ECID:21011 est ingéré et lié au graphique à l�
 
 >[!TAB Processus de suppression]
 
-Par conséquent, Identity Service supprime l’identité la plus ancienne, qui dans ce cas est ECID:35577. La suppression de ECID:35577 entraîne également la suppression des éléments suivants :
+Par conséquent, Identity Service supprime uniquement l’identité la plus ancienne du graphique d’identités, qui dans ce cas est ECID:35577. La suppression de ECID:35577 entraîne également la suppression des éléments suivants :
 
 * Le lien entre l’ID de gestion de la relation client : 60013 et l’ECID:35577 désormais supprimé, ce qui entraîne un scénario de partage de graphique.
 * IDFA : 32110, IDFA : 02383, et les identités restantes représentées par `(...)`. Ces identités sont supprimées car, individuellement, elles ne sont liées à aucune autre identité et ne peuvent donc pas être représentées dans un graphique.
