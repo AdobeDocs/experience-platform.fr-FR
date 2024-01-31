@@ -3,9 +3,9 @@ title: Documentation du produit Real-Time CDP
 description: Découvrez comment utiliser Adobe Real-Time CDP.
 solution: Real-Time Customer Data Platform
 product: Real-Time Customer Data Platform
-source-git-commit: 697f785e939b9817f80a31dfd0070f9dadd48baf
+source-git-commit: d5a8faa7b854f6d0b4ef36dc86bd78bf4e6ad6f4
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1071'
 ht-degree: 6%
 
 ---
@@ -20,29 +20,29 @@ Découvrez les dernières améliorations apportées au produit et à la document
 
 >[!BEGINTABS]
 
+>[!TAB Cas d’utilisation des classeurs]
+
+La variable [!UICONTROL Cas d’utilisation des classeurs] Cette fonctionnalité est désormais disponible pour tous les clients Real-Time CDP et Adobe Journey Optimizer. [!UICONTROL Cas d’utilisation des classeurs] sont conçues pour aider les utilisateurs à surmonter les défis lorsqu’ils commencent à utiliser Real-time Customer Data Platform ou Adobe Journey Optimizer. Lorsque vous ne savez pas où commencer ou comment créer les ressources appropriées pour les cas d’utilisation souhaités, les classeurs de cas d’utilisation vous inspirent et créent différentes ressources que vous pouvez tester et importer dans des environnements de production lorsque vous êtes prêt.
+
+[![Image.](assets/do-not-localize/learn-more-button.svg)](/help/use-case-playbooks/playbooks/overview.md)
+
 >[!TAB Outil Sandbox]
 
 Utilisez la fonction d’outil d’environnement de test pour améliorer la précision de la configuration dans les environnements de test et exporter et importer en toute transparence des configurations entre les environnements de test. Vous pouvez utiliser la fonction d’outils des environnements de test pour sélectionner différents objets et les exporter dans un package.
 
-[![image](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
-
->[!TAB (disponibilité générale limitée) Activation des audiences de compte]
-
-Les clients Real-Time CDP B2B peuvent désormais activer [audiences de compte](/help/segmentation/ui/account-audiences.md) vers certaines destinations.
-
-[![image](assets/do-not-localize/learn-more-button.svg)](/help/destinations/ui/activate-account-audiences.md)
+[![Image.](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
 
 >[!TAB Attributs calculés]
 
 Résumez facilement les données d’événement dans les attributs de profil à l’aide d’une interface utilisateur intuitive afin d’améliorer la segmentation, la personnalisation et l’activation basées sur le comportement. Grâce à cette fonctionnalité, vous pouvez créer des attributs calculés en libre-service, les gérer et les utiliser dans la segmentation, les destinations Real-Time CDP ou Adobe Journey Optimizer. En outre, les attributs calculés simplifient la segmentation et les workflows de parcours pour vous aider à fournir facilement des expériences pertinentes.
 
-[![image](assets/do-not-localize/learn-more-button.svg)](/help/profile/computed-attributes/overview.md)
+[![Image.](assets/do-not-localize/learn-more-button.svg)](/help/profile/computed-attributes/overview.md)
 
 >[!TAB Exports de données]
 
 La fonctionnalité d’exportation des jeux de données est désormais disponible dans l’ensemble. Découvrez [les jeux de données que vous pouvez exporter en fonction de l’application Experience Platform](../destinations/ui/export-datasets.md#datasets-to-export) que vous avez achetée, puis vérifiez les [mécanismes de sécurité pour l’export des jeux de données](/help/destinations/guardrails.md#dataset-exports).
 
-[![image](assets/do-not-localize/learn-more-button.svg)](../destinations/ui/export-datasets.md)
+[![Image.](assets/do-not-localize/learn-more-button.svg)](../destinations/ui/export-datasets.md)
 
 >[!TAB Prise en charge des données du partenaire]
 
@@ -202,4 +202,4 @@ Consultez ces trois vidéos d’introduction pour mieux comprendre Real-Time CDP
 </tr></table>
 
 <table style="table-layout:auto"><tr style="border: 0;"><td><img src="assets/do-not-localize/newsletter.png"></td><td>
-<b>Restez informé, contribuez à la communauté et validez votre expérience Adobe Real-Time CDP !</b><br/>Consultez la communauté Real-time Customer Data Platform pour discuter des fonctionnalités avec d’autres utilisateurs. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">Rejoignez la communauté aujourd'hui !</a></td></tr></table>
+<b>Restez informé, contribuez à la communauté et validez votre expérience Adobe Real-Time CDP !</b><br/>Consultez la communauté Real-time Customer Data Platform pour discuter des fonctionnalités avec d’autres utilisateurs. <a href="https://experienceleaguecommunities.adobe.com/t5/real-time-customer-data-platform/ct-p/Real-time-CDP">Rejoignez la communauté aujourd’hui !</a></td></tr></table>

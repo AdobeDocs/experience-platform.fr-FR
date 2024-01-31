@@ -2,7 +2,7 @@
 title: Exemples de cas d’utilisation dans Real-Time CDP
 description: Consultez des exemples de cas d’utilisation inter-services pour tirer le meilleur parti de votre mise en oeuvre Real-Time CDP.
 feature: Use Cases
-source-git-commit: f342020a0e821172a7ceca95265a9d71f64f5347
+source-git-commit: a58476e0a52cce763a114b2b4f4314fdb2e3f4c9
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 6%
@@ -76,11 +76,11 @@ Les exemples de cas d’utilisation peuvent être regroupés en cas d’acquisit
 <table style="margin-top: 0 !important">
 <tr>
   <td>
-    <a href="../partner-data/prospecting.md">
+    <a href="../partner-data/supplement-first-party-profiles.md">
       <img alt="Complémenter les profils propriétaires avec des attributs fournis par le partenaire" src="/help/rtcdp/assets/partner-data/prospecting/prospecting-use-case-overview.png" />
     </a>
     <div>
-      <a href="../partner-data/prospecting.md">
+      <a href="../partner-data/supplement-first-party-profiles.md">
     <strong>Compléter les profils propriétaires avec les attributs fournis par les partenaires</strong>
     </a>
     </div>
