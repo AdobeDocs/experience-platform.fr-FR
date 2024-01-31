@@ -3,10 +3,10 @@ title: Reciblage hors site des visiteurs non authentifiés
 description: Découvrez comment recibler des utilisateurs non authentifiés à l’aide d’identifiants de prospect pour créer un attribut calculé qui peut être utilisé pour créer une audience d’utilisateurs non authentifiés.
 feature: Use Cases, Customer Acquisition
 exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: 0ef76fd950ef2e82e390cb39e2cd984004a140f2
 workflow-type: tm+mt
-source-wordcount: '1449'
-ht-degree: 3%
+source-wordcount: '1462'
+ht-degree: 1%
 
 ---
 
@@ -67,7 +67,7 @@ La variable **[!UICONTROL Création d’un attribut calculé]** s’affiche. Sur
 
 Pour ce cas d’utilisation, vous pouvez créer un attribut calculé qui, si l’ID de partenaire existe, obtient la valeur la plus récente de l’ID de partenaire au cours des dernières 24 heures.
 
-À l’aide de la barre de recherche, vous pouvez rechercher et ajouter l’événement &quot;Identifiant de partenaire&quot; au canevas d’attribut calculé.
+Dans la barre de recherche, vous pouvez rechercher et ajouter l’événement &quot;Identifiant de partenaire&quot; qui [vous avez créé lors du cas d’utilisation de la personnalisation sur site](#get-data-in) sur le canevas d’attribut calculé.
 
 ![La variable [!UICONTROL Événements] et la barre de recherche sont mises en surbrillance.](../assets/offsite-retargeting/ca-add-partner-id.png)
 
@@ -89,7 +89,7 @@ Pour créer une audience, sélectionnez **[!UICONTROL Audiences]**, suivie de **
 
 Une boîte de dialogue s’affiche, vous demandant de choisir entre [!UICONTROL Composer l’audience] et [!UICONTROL Créer une règle]. Sélectionner **[!UICONTROL Créer une règle]** suivie de **[!UICONTROL Créer]**.
 
-![Le bouton Créer une règle est mis en surbrillance.](../assets/offsite-retargeting/select-build-rule.png)
+![La variable [!UICONTROL Créer une règle] est mise en surbrillance.](../assets/offsite-retargeting/select-build-rule.png)
 
 La page Créateur de segments s’affiche. Sur cette page, vous pouvez utiliser les composants pour créer votre audience.
 
@@ -109,7 +109,7 @@ Sélectionnez le nouveau **[!UICONTROL Page vue]** . Modifier la période de rec
 
 Après avoir ajouté votre événement, vous devez ajouter un attribut . Puisque vous travaillez avec des visiteurs non authentifiés, vous pouvez ajouter l’attribut calculé que vous venez de créer. Cet attribut calculé nouvellement créé vous permet de lier des identifiants de partenaire à une audience.
 
-Pour ajouter l’attribut calculé, sous **[!UICONTROL Attributs]**, sélectionnez **[!UICONTROL XDM Individual Profile]**, suivie de **[!UICONTROL _atag]**, **[!UICONTROL SystemComputedAttributes]**, et **[!UICONTROL PartnerID]**. Maintenant, ajoutez le **[!UICONTROL Valeur]** de l’attribut calculé à la section attributs du canevas.
+Pour ajouter l’attribut calculé, sous **[!UICONTROL Attributs]**, sélectionnez **[!UICONTROL XDM Individual Profile]**, suivie de **[ID de tenant de votre organisation](../../xdm/api/getting-started.md#know-your-tenant-id).**, **[!UICONTROL SystemComputedAttributes]**, et **[!UICONTROL PartnerID]**. Maintenant, ajoutez le **[!UICONTROL Valeur]** de l’attribut calculé à la section attributs du canevas.
 
 ![Le cheminement de dossier pour accéder à l’attribut calculé s’affiche.](../assets/offsite-retargeting/access-computed-attribute.png)
 
@@ -129,7 +129,7 @@ Vous avez maintenant créé avec succès une audience qui recherche les visiteur
 
 Une fois votre audience créée, vous pouvez désormais l’activer vers les destinations en aval. Sélectionner **[!UICONTROL Audiences]** dans le rail de navigation de gauche, recherchez l’audience que vous venez de créer, cliquez sur l’icône représentant des points de suspension, puis sélectionnez **[!UICONTROL Activer la destination]**.
 
-![Le bouton Activer à la destination est mis en surbrillance.](../assets/offsite-retargeting/activate-to-destination.png)
+![La variable [!UICONTROL Activer la destination] est mise en surbrillance.](../assets/offsite-retargeting/activate-to-destination.png)
 
 >[!NOTE]
 >
