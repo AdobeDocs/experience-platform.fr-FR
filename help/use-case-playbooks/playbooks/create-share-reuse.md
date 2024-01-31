@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: Créer, partager et réutiliser des instances de playbook
 description: Découvrez comment créer, partager et réutiliser des instances de playbook pour réaliser votre cas d’utilisation marketing.
+role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
+source-git-commit: c4be3864c680a569166d53f18ec0ee28a52c9ea7
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 86%
+source-wordcount: '787'
+ht-degree: 81%
 
 ---
 
@@ -73,6 +74,12 @@ En créant plusieurs instances du même playbook, vous pouvez mettre en œuvre l
 Vous pouvez partager l’instance et les ressources générées avec d’autres membres de l’équipe. Pour ce faire, copiez le lien URL du navigateur et partagez-le avec votre équipe afin de lui donner un aperçu des ressources générées.
 
 ![URL mise en surbrillance dans une vue playbook de cas d’utilisation.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-url.png)
+
+## Présentation vidéo du processus de lecture de bout en bout
+
+Regardez cette vidéo pour découvrir, créer, publier et dépanner des instances d’un manuel de cas d’utilisation de bout en bout, ainsi que pour copier les ressources générées par le manuel dans d’autres environnements de test configurés dans votre entreprise.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427058/?learn=on)
 
 ## Étapes suivantes {#next-steps}
 

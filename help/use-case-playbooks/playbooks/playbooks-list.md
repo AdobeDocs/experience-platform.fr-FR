@@ -2,9 +2,10 @@
 solution: Experience Platform
 title: Cas d’utilisation disponibles des classeurs pour Real-time Customer Data Platform et Adobe Journey Optimizer.
 description: Liste de tous les playbooks dans Real-time Customer Data Platform et Adobe Journey Optimizer.
-source-git-commit: bf6bcbe3314e87cd3162afe23068cfff12aa78a8
+role: User
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '753'
 ht-degree: 0%
 
 ---
@@ -55,17 +56,17 @@ Lisez cette page pour obtenir un aperçu de tous les playbooks disponibles que v
 | Nom du manuel | Description |
 | ------------- | ----------- |
 | Panier abandonné : Marchandisage - Pour activation | Reciblez les fans après qu’ils ont quitté votre site web ou votre application après avoir ajouté la marchandise au panier. |
-| Panier abandonné : produit - pour activation | Reciblez les acheteurs une fois qu’ils ont quitté votre site web ou votre application après avoir ajouté des produits au panier. |
-| Panier abandonné : réservation - Pour activation | Reciblez les invités après qu’ils ont quitté votre site web ou votre application après avoir ajouté une nouvelle réservation au panier. |
-| Promotion de la destination - Pour activation | Ciblez les invités à effectuer une réservation lors d’une promotion de destination de voyage en cours. |
-| Promotion du jeu - Pour activation | Ciblez les fans d’acheter des billets pour un jeu à venir. |
+| Panier abandonné : produit pour activation | Reciblez les acheteurs une fois qu’ils ont quitté votre site web ou votre application après avoir ajouté des produits au panier. |
+| Panier abandonné : réservation pour activation | Reciblez les invités après qu’ils ont quitté votre site web ou votre application après avoir ajouté une nouvelle réservation au panier. |
+| Promotion de destination : pour activation | Ciblez les invités à effectuer une réservation lors d’une promotion de destination de voyage en cours. |
+| Promotion du jeu : pour activation | Ciblez les fans d’acheter des billets pour un jeu à venir. |
 | Augmentation des achats de marchandises au cours du jeu - Pour l’activation | Ciblez les fans pour acheter des marchandises lorsqu’ils se trouvent près du site de jeu. |
-| Augmenter l’achat de produit lors de la visite du magasin - Pour l’activation | Ciblez les acheteurs d’acheter des produits lorsqu’ils se trouvent près du magasin. |
+| Augmenter l’achat de produits au cours de la visite du magasin pour l’activation | Ciblez les acheteurs d’acheter des produits lorsqu’ils se trouvent près du magasin. |
 | Augmenter les achats de produits et de services pendant le séjour - Pour l’activation | Ciblez les invités à acheter des produits et des services lorsqu’ils se trouvent dans la propriété. |
-| Promotion du produit - Pour activation | Ciblez les acheteurs à acheter des produits au cours d’une campagne de promotion de produits en cours. |
-| Envoyer Un Message D’Anniversaire Aux Fans - Pour Activation | Ciblez les fans le jour de leur anniversaire avec un message &quot;Joyeux anniversaire&quot; et une offre exclusive. |
-| Envoyer un message d’anniversaire aux invités - Pour activation | Ciblez les invités le jour de leur anniversaire avec un message &quot;Joyeux anniversaire&quot; et une offre exclusive. |
-| Envoyer un message d’anniversaire aux acheteurs - Pour activation | Ciblez les acheteurs le jour de leur anniversaire avec un message &quot;Joyeux anniversaire&quot; et une offre exclusive. |
+| Promotion de produit : pour activation | Ciblez les acheteurs à acheter des produits au cours d’une campagne de promotion de produits en cours. |
+| Envoyer Un Message D’Anniversaire Aux Fans Pour Activation | Ciblez les fans le jour de leur anniversaire avec un message &quot;Joyeux anniversaire&quot; et une offre exclusive. |
+| Envoyer un message d’anniversaire aux invités—Pour activation | Ciblez les invités le jour de leur anniversaire avec un message &quot;Joyeux anniversaire&quot; et une offre exclusive. |
+| Envoyer un message d’anniversaire aux acheteurs pour activation | Ciblez les acheteurs le jour de leur anniversaire avec un message &quot;Joyeux anniversaire&quot; et une offre exclusive. |
 
 {style="table-layout:auto"}
 

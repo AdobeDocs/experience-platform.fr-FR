@@ -4,8 +4,7 @@ user-guide-title: Playbooks de cas d’utilisation d’Adobe Experience Platfo
 breadcrumb-title: Playbooks de cas d’utilisation d’Adobe Experience Platform
 user-guide-description: Utilisez les playbooks dans Adobe Experience Platform pour générer des ressources et commencer divers cas pratiques marketing.
 feature: Playbooks
-hide: true
-source-git-commit: 3db5a24f970d6778ec737857ab5d06beaabfc18a
+source-git-commit: 93b28a2cf89cac811d17bb990fc78fa87ee86969
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 81%

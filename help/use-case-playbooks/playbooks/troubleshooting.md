@@ -2,10 +2,11 @@
 solution: Experience Platform
 title: Limites connues et résolution des problèmes liés aux livres de lecture
 description: En savoir plus sur les problèmes connus et les problèmes courants liés aux playbooks et comment les résoudre
+role: User, Developer, Admin
 exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '395'
 ht-degree: 2%
 
 ---
@@ -13,7 +14,11 @@ ht-degree: 2%
 
 # Dépannage et limites connues {#troubleshooting-known-limitations}
 
+Découvrez comment résoudre les erreurs lors de l’utilisation de classeurs de cas d’utilisation et comprendre les limites connues de la version de disponibilité générale.
+
 ## Dépannage {#troubleshooting}
+
+Affichage des suggestions de dépannage pour les erreurs courantes lors de l’utilisation de classeurs de cas d’utilisation
 
 ### Surfaces Adobe Journey Optimizer non configurées
 
@@ -35,7 +40,7 @@ Deux limites connues s’affichent lorsque vous créez une instance d’un playb
 
 * Lors de l’utilisation de la variable [fonctionnalité de sensibilisation aux données](/help/use-case-playbooks/playbooks/data-awareness.md) pour promouvoir le schéma de l’environnement de test d’inspiration vers l’environnement de test de développement, vous pouvez voir des erreurs similaires à celles ci-dessous :
 
-![schema-errors](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png)
+![Erreurs affichées dans le workflow de mappage de schéma.](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
 
 En effet, certains des champs générés à partir de votre schéma ne sont pas présents dans le schéma de l’environnement de test de développement vers lequel vous effectuez la copie. Cherchez ces champs. Ensuite, revenez à l’environnement de test de développement dans lequel vous pouvez :
 

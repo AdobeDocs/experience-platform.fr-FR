@@ -2,15 +2,16 @@
 solution: Experience Platform
 title: Présentation de la prise en compte des données dans les classeurs de cas d’utilisation
 description: Découvrez comment accélérer le temps de valorisation en copiant les ressources générées dans l’environnement de test d’inspiration finale vers d’autres environnements de test.
+role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
-source-git-commit: d6be5d3e21ea924ff98c400b972709b1f60c25eb
+source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '912'
 ht-degree: 0%
 
 ---
 
-# Présentation de la prise en compte des données dans les classeurs de cas d’utilisation
+# Publication de ressources générées par le livre de lecture sur d’autres environnements de test {#publish-to-other-sandboxes}
 
 Les scénarios d’utilisation sont des modèles marketing conçus pour générer des ressources telles que des audiences, des schémas ou des parcours pour des cas d’utilisation marketing courants. Vous pouvez tester les ressources créées par des livres de jeu dans l’environnement de test inspirant. Lorsque vous êtes prêt, vous pouvez importer les ressources dans d’autres environnements de test de développement pour effectuer d’autres tests avec les données disponibles dans ces environnements de test. Lorsque vous êtes satisfait des tests, vous pouvez ensuite déplacer les ressources des environnements de test de développement vers les environnements de test de production.
 
@@ -97,7 +98,3 @@ La création d’une instance génère un ensemble de ressources telles que des 
 ## Étapes suivantes
 
 Après avoir lu ce guide, vous comprenez mieux comment utiliser les classeurs de cas d’utilisation avec [outil sandbox](/help/sandboxes/ui/sandbox-tooling.md#monitor-import-jobs-and-view-import-objects-details) pour créer des parcours exécutables qui référencent vos schémas. En savoir plus sur les [Cas d’utilisation Real-Time CDP](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md).
-
-### Plus d’aide sur ce sujet
-
-[Outil Sandbox](/help/sandboxes/ui/sandbox-tooling.md)
