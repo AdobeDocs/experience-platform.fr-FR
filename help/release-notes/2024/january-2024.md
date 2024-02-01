@@ -1,7 +1,7 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2024
 description: Notes de mise à jour de janvier 2024 pour Adobe Experience Platform.
-source-git-commit: 88dc2fc84002ae4400e4a11370ac3354cd38cd0e
+source-git-commit: a4d6c72cc2c3f5f547a3c66e509d520d3fed29ea
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 41%
@@ -45,7 +45,7 @@ La préparation des données permet aux personnes travaillant dans l’ingénier
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Nouvelles fonctions du mappeur | <ul><li>`object_to_map`: utilisez la variable `object_to_map` pour créer des types de données de mappage. Cette fonction prend en charge plusieurs syntaxes différentes. Pour plus d’informations, consultez le guide sur [fonctions pour les hiérarchies - objets](../../data-prep/functions.md#objects). </li><li>`to_map`: utilisez la variable `to_map` pour créer une map avec des paires nom-valeur de champ données à l’aide d’objets. Pour plus d’informations, consultez le guide sur [fonctions pour les hiérarchies - mappages](../../data-prep/functions.md#objects). </li><li>`array_to_map`: utilisez la variable `array_to_map` pour créer une map avec des paires nom-valeur de champ données à l’aide de tableaux d’objets. Pour plus d’informations, consultez le guide sur [fonctions pour les hiérarchies - mappages](../../data-prep/functions.md#objects). |
+| Nouvelles fonctions du mappeur | <ul><li>`object_to_map`: utilisez la variable `object_to_map` pour créer des types de données de mappage. Cette fonction prend en charge plusieurs syntaxes différentes. Pour plus d’informations, consultez le guide sur [fonctions pour les hiérarchies - objets](../../data-prep/functions.md#objects). </li><li>`to_map`: utilisez la variable `to_map` pour créer une map avec des paires nom-valeur de champ données à l’aide d’objets. Pour plus d’informations, consultez le guide sur [fonctions pour les hiérarchies - mappages](../../data-prep/functions.md#map). </li><li>`array_to_map`: utilisez la variable `array_to_map` pour créer une map avec des paires nom-valeur de champ données à l’aide de tableaux d’objets. Pour plus d’informations, consultez le guide sur [fonctions pour les hiérarchies - mappages](../../data-prep/functions.md#map). |
 
 {style="table-layout:auto"}
 
