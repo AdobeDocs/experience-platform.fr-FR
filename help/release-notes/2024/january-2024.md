@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2024
 description: Notes de mise à jour de janvier 2024 pour Adobe Experience Platform.
-source-git-commit: a4d6c72cc2c3f5f547a3c66e509d520d3fed29ea
+source-git-commit: fc7183cbc1ca3e27999d0ddd64c83ee19ccb1200
 workflow-type: tm+mt
-source-wordcount: '976'
-ht-degree: 41%
+source-wordcount: '1038'
+ht-degree: 39%
 
 ---
 
@@ -74,6 +74,14 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Destination | Description |
 | ----------- | ----------- |
 | [Connexion publique](../../destinations/catalog/advertising/pubmatic.md) | Utilisez cette destination pour envoyer des données d’audience à la variable [!DNL PubMatic Connect] plateforme. |
+
+{style="table-layout:auto"}
+
+**Fonctionnalités nouvelles ou mises à jour** {#destinations-new-updated-functionality}
+
+| Fonction | Description |
+| ----------- | ----------- |
+| Nouveau **rôle assumé** type d’authentification pour les destinations Amazon S3 | Utilisez le nouveau type d’authentification de rôle assumé lors de la connexion d’Experience Platform à vos compartiments Amazon S3 si vous ne souhaitez pas partager les clés de compte et les clés secrètes avec Experience Platform. En savoir plus sur la nouvelle méthode d’authentification dans la section [section d&#39;authentification](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication) de la documentation d’Amazon S3. |
 
 {style="table-layout:auto"}
 

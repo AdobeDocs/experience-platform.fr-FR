@@ -2,10 +2,10 @@
 title: Connexion Amazon S3
 description: Créez une connexion sortante active vers votre stockage Amazon Web Services (AWS) S3 pour exporter régulièrement des fichiers de données CSV depuis Adobe Experience Platform vers vos propres compartiments S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: c126e6179309ccfbedfbfe2609cfcfd1ea45f870
 workflow-type: tm+mt
-source-wordcount: '1055'
-ht-degree: 59%
+source-wordcount: '1354'
+ht-degree: 48%
 
 ---
 
@@ -13,12 +13,17 @@ ht-degree: 59%
 
 ## Journal des modifications de destination {#changelog}
 
-Avec la version Experience Platform de juillet 2023, la variable [!DNL Amazon S3] destination offre de nouvelles fonctionnalités, comme indiqué ci-dessous :
++++ Afficher le journal des modifications
 
-* [Prise en charge de l’exportation des jeux de données](/help/destinations/ui/export-datasets.md).
-* [Options de dénomination de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) supplémentaires.
-* Possibilité de définir des en-têtes de fichier personnalisés dans vos fichiers exportés via l’[étape de mappage améliorée](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
-* [Possibilité de personnaliser le formatage des fichiers de données CSV exportés](/help/destinations/ui/batch-destinations-file-formatting-options.md).
+
+| Mois de publication | Type de mise à jour | Description |
+|---|---|---|
+| Janvier 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | Le connecteur de destination Amazon S3 prend désormais en charge un nouveau type d’authentification de rôle supposé. Pour en savoir plus, voir la section [section d&#39;authentification](#assumed-role-authentication). |
+| Juillet 2023 | Nouvelles fonctionnalités et mise à jour de la documentation | Avec la version Experience Platform de juillet 2023, la variable [!DNL Amazon S3] destination offre de nouvelles fonctionnalités, comme indiqué ci-dessous : <br><ul><li>[Prise en charge de l’exportation des jeux de données](/help/destinations/ui/export-datasets.md)</li><li>[Options de dénomination de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) supplémentaires.</li><li>Possibilité de définir des en-têtes de fichier personnalisés dans vos fichiers exportés via l’[étape de mappage améliorée](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Possibilité de personnaliser le formatage des fichiers de données CSV exportés](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> |
+
+{style="table-layout:auto"}
+
++++
 
 ## Se connecter à [!DNL Amazon S3] stockage via l’API ou l’interface utilisateur {#connect-api-or-ui}
 
@@ -64,12 +69,37 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 >title="Clé publique RSA"
 >abstract="Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Affichez un exemple de clé correctement formatée dans le lien de documentation ci-dessous."
 
-Pour vous authentifier auprès de la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
+Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**. La destination Amazon S3 prend en charge deux méthodes d’authentification :
+
+* Authentification par clé d’accès et clé secrète
+* Authentification par rôle supposé
+
+#### Authentification par clé d’accès et clé secrète
+
+Utilisez cette méthode d’authentification lorsque vous souhaitez saisir votre clé d’accès Amazon S3 et votre clé secrète pour permettre à l’Experience Platform d’exporter des données vers vos propriétés Amazon S3.
+
+![Image des champs requis lors de la sélection de l&#39;authentification par clé d&#39;accès et clé secrète.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
 
 * **[!DNL Amazon S3]Clé d’accès** et **[!DNL Amazon S3]clé secrète** : dans [!DNL Amazon S3], générez une paire `access key - secret access key` pour accorder à Platform l’accès à votre compte [!DNL Amazon S3]. En savoir plus dans la [Documentation Amazon Web Services](https://docs.aws.amazon.com/fr_fr/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Clé de chiffrement]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
 
   ![Image illustrant un exemple de clé PGP correctement formatée dans l’interface utilisateur.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+
+#### Rôle supposé {#assumed-role-authentication}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_connect_s3_assumed_role"
+>title="Authentification par rôle supposé"
+>abstract="Utilisez ce type d’authentification si vous préférez ne pas partager les clés de compte et les clés secrètes avec Adobe. Experience Platform se connecte plutôt à votre emplacement Amazon S3 à l’aide d’un accès basé sur les rôles. Collez l’ARN du rôle que vous avez créé dans AWS pour l’utilisateur Adobe. Le modèle est similaire à `arn:aws:iam::800873819705:role/destinations-role-customer` "
+
+![Image des champs requis lors de la sélection de l’authentification de rôle assumé.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
+
+Utilisez ce type d’authentification si vous préférez ne pas partager les clés de compte et les clés secrètes avec Adobe. Experience Platform se connecte plutôt à votre emplacement Amazon S3 à l’aide d’un accès basé sur les rôles.
+
+Pour ce faire, vous devez créer dans la console AWS un utilisateur désigné pour l’Adobe avec le [autorisations requises](#required-s3-permission) pour écrire dans vos compartiments Amazon S3. Créez un **[!UICONTROL Entité approuvée]** dans AWS avec le compte Adobe **[!UICONTROL 670664943635]**. Pour plus d’informations, voir la section [Documentation AWS sur la création de rôles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+
+* **[!DNL Role]**: collez l’ARN du rôle que vous avez créé dans AWS pour l’utilisateur Adobe. Le modèle est similaire à `arn:aws:iam::800873819705:role/destinations-role-customer`.
+* **[!UICONTROL Clé de chiffrement]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
 
 ### Renseigner les détails de la destination {#destination-details}
 
