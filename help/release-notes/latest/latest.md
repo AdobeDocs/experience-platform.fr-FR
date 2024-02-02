@@ -5,13 +5,13 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 7691e2dd434e13f3cff715fcba9431d985b2be60
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 41%
+ht-degree: 66%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de publication : mercredi 30 janvier 2024**
+**Date de publication : 30 janvier 2024**
 
 Nouvelles fonctionnalités d’Adobe Experience Platform :
 
@@ -64,11 +64,11 @@ La préparation des données permet aux personnes travaillant dans l’ingénier
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Nouvelles fonctions du mappeur | <ul><li>`object_to_map`: utilisez la variable `object_to_map` pour créer des types de données de mappage. Cette fonction prend en charge plusieurs syntaxes différentes. Pour plus d’informations, consultez le guide sur [fonctions pour les hiérarchies - objets](../../data-prep/functions.md#objects). </li><li>`to_map`: utilisez la variable `to_map` pour créer une map avec des paires nom-valeur de champ données à l’aide d’objets. Pour plus d’informations, consultez le guide sur [fonctions pour les hiérarchies - mappages](../../data-prep/functions.md#map). </li><li>`array_to_map`: utilisez la variable `array_to_map` pour créer une map avec des paires nom-valeur de champ données à l’aide de tableaux d’objets. Pour plus d’informations, consultez le guide sur [fonctions pour les hiérarchies - mappages](../../data-prep/functions.md#map). |
+| Nouvelles fonctions du mappeur | <ul><li>`object_to_map` : utilisez la fonction `object_to_map` pour créer des types de données de mappage. Cette fonction prend en charge plusieurs syntaxes différentes. Pour plus d’informations, consultez le guide sur les [fonctions pour les hiérarchies - objets](../../data-prep/functions.md#objects). </li><li>`to_map` : utilisez la fonction `to_map` pour créer un mappage avec des paires nom/valeur de champ données à l’aide d’objets. Pour plus d’informations, consultez le guide sur les [fonctions pour les hiérarchies - mappages](../../data-prep/functions.md#map). </li><li>`array_to_map` : utilisez la fonction `array_to_map` pour créer un mappage avec des paires nom/valeur de champ données à l’aide de tableaux d’objets. Pour plus d’informations, consultez le guide sur les [fonctions pour les hiérarchies - mappages](../../data-prep/functions.md#map). |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur la préparation des données, consultez la section [Aperçu de la préparation des données](../../data-prep/home.md).
+Pour plus d’informations sur la préparation des données, consultez la [présentation de la préparation des données](../../data-prep/home.md).
 
 ## Tableaux de bord {#dashboards}
 
@@ -78,11 +78,11 @@ Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Afficher SQL | Vous pouvez désormais afficher le code SQL derrière vos profils, audiences, destinations et informations personnalisées, puis exécuter la requête à la demande via l’éditeur de requêtes. Tirer parti du SQL de plus de 40 insights existants pour créer de nouvelles requêtes qui obtiennent des insights uniques à partir des données de Platform en fonction des besoins de votre entreprise. Pour plus d’informations, consultez le guide sur [affichage d’informations SQL](../../dashboards/view-sql.md). |
+| Afficher le SQL | Vous pouvez désormais afficher le code SQL derrière vos profils, audiences, destinations et insights personnalisés, puis exécuter la requête à la demande via l’éditeur de requêtes. Tirez parti du code SQL de plus de 40 insights existants pour créer de nouvelles requêtes qui obtiennent des insights uniques à partir des données de Platform en fonction des besoins de votre entreprise. Pour plus d’informations, consultez le guide sur l’[affichage des insights SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
-Pour plus dʼinformations sur les tableaux de bord, notamment sur la manière dʼoctroyer des autorisations dʼaccès et de créer des widgets personnalisés, commencez par lire la [Présentation des tableaux de bord](../../dashboards/home.md).
+Pour plus dʼinformations sur les tableaux de bord, notamment sur la manière dʼoctroyer des autorisations dʼaccès et de créer des widgets personnalisés, commencez par lire la [présentation des tableaux de bord](../../dashboards/home.md).
 
 ## Destinations {#destinations}
 
@@ -92,7 +92,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | ----------- | ----------- |
-| [Connexion publique](../../destinations/catalog/advertising/pubmatic.md) | Utilisez cette destination pour envoyer des données d’audience à la variable [!DNL PubMatic Connect] plateforme. |
+| [Connexion Pubmatic](../../destinations/catalog/advertising/pubmatic.md) | Utilisez cette destination pour envoyer des données d’audience à la plateforme [!DNL PubMatic Connect]. |
 
 {style="table-layout:auto"}
 
@@ -104,7 +104,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 {style="table-layout:auto"}
 
-Pour obtenir des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
+Pour obtenir plus d’informations générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
 ## Identity Service {#identity-service}
 
@@ -128,7 +128,7 @@ Basée sur Experience Platform, Real-time Customer Data Platform ([!DNL Real-Ti
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Mises à jour du [Page d’accueil Real-Time CDP](https://experience.adobe.com) | <ul><li>**Widget de profils**: vous pouvez désormais utiliser le widget Profils pour accéder à la page d’aperçu des profils et afficher les mesures de profil de votre entreprise.</li><li>**Carte des mesures de profil**: la carte Mesures des profils du tableau de bord de la page d’accueil affiche désormais le nombre total de profils de votre organisation, en fonction de votre stratégie de fusion respective.</li><li>**Widget de schémas**: vous pouvez désormais utiliser le widget de schémas pour accéder au workflow de création de schémas dans l’interface utilisateur.</li></ul> |
+| Mises à jour de la [page d’accueil du profil client en temps réel](https://experience.adobe.com) | <ul><li>**Widget de profils** : vous pouvez désormais utiliser le widget de profils pour accéder à la page de la vue d’ensemble des profils et afficher les mesures de profil de votre organisation.</li><li>**Carte des mesures de profil** : la carte des mesures de profil du tableau de bord de la page d’accueil affiche désormais le nombre total de profils de votre organisation, en fonction de votre politique de fusion respective.</li><li>**Widget de schémas** : vous pouvez désormais utiliser le widget de schémas pour accéder au workflow de création de schémas dans l’interface utilisateur.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -155,7 +155,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 
 {style="table-layout:auto"}
 
-Pour en savoir plus sur Real-time Customer Profile, lisez la section [Présentation des profils](../../profile/home.md)
+Pour en savoir plus sur le profil client en temps réel, lisez d’abord la [présentation des profils](../../profile/home.md).
 
 ## Sources {#sources}
 
@@ -165,9 +165,9 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE Version Beta]{type=Informative}[!DNL Oracle NetSuite] sources | Utilisez la variable [!DNL Oracle NetSuite] intégrations dans le catalogue de sources pour importer des données de votre [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) et [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) comptes à Experience Platform. |
-| [!BADGE Version bêta]{type=Informative}[!DNL Braze Currents] source | Utilisez la variable [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) intégration dans le catalogue de sources pour importer les données de votre [!DNL Braze] compte à Experience Platform. |
-| Prise en charge de l’authentification par paire de clés pour [!DNL Snowflake] source du lot | Vous pouvez désormais utiliser l’authentification par paire de clés lors de la création d’une nouvelle [!DNL Snowflake] pour les données de lot. Pour plus d’informations, consultez le guide sur [création d’un [!DNL Snowflake] compte utilisant l’API](../../sources/tutorials/api/create/databases/snowflake.md) ou le guide sur [création d’un [!DNL Snowflake] compte utilisant l’interface utilisateur](../../sources/tutorials/ui/create/databases/snowflake.md). |
+| [!BADGE Version Beta]{type=Informative}Sources [!DNL Oracle NetSuite] | Utilisez les intégrations [!DNL Oracle NetSuite] dans le catalogue de sources pour importer des données depuis vos comptes [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) et [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) dans Experience Platform. |
+| [!BADGE Version bêta]{type=Informative}Source [!DNL Braze Currents] | Utilisez l’intégration [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) dans le catalogue de sources pour importer des données depuis votre compte [!DNL Braze] dans Experience Platform. |
+| Prise en charge de l’authentification par paire de clés pour la source de lots [!DNL Snowflake] | Vous pouvez désormais utiliser l’authentification par paire de clés lors de la création d’un nouveau compte [!DNL Snowflake] pour les données de lots. Pour plus d’informations, consultez le guide sur la [création d’un compte  [!DNL Snowflake]  à l’aide de l’API](../../sources/tutorials/api/create/databases/snowflake.md) ou le guide sur la [création d’un compte  [!DNL Snowflake]  à l’aide de l’interface utilisateur](../../sources/tutorials/ui/create/databases/snowflake.md). |
 
 {style="table-layout:auto"}
 
