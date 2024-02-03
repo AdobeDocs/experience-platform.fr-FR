@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Notes de mise à jour de janvier 2024 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7691e2dd434e13f3cff715fcba9431d985b2be60
+source-git-commit: 7b694ad1b064279fcc0dd09bd1e8761e734e7556
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 66%
+source-wordcount: '1551'
+ht-degree: 60%
 
 ---
 
@@ -78,7 +78,7 @@ Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Afficher le SQL | Vous pouvez désormais afficher le code SQL derrière vos profils, audiences, destinations et insights personnalisés, puis exécuter la requête à la demande via l’éditeur de requêtes. Tirez parti du code SQL de plus de 40 insights existants pour créer de nouvelles requêtes qui obtiennent des insights uniques à partir des données de Platform en fonction des besoins de votre entreprise. Pour plus d’informations, consultez le guide sur l’[affichage des insights SQL](../../dashboards/view-sql.md). |
+| Afficher le SQL | Vous pouvez désormais afficher le code SQL derrière vos profils, audiences, destinations et informations personnalisées à l’aide du bouton bascule Afficher le code SQL , puis exécuter la requête à la demande via l’éditeur de requêtes. L’accès au code SQL qui alimente vos insights Real-time Customer Data Platform vous permet de comprendre la logique derrière l’analyse de votre modèle de données. Grâce à cette transparence, vos données CDP en temps réel Adobe sont plus accessibles, plus compréhensibles et plus pertinentes pour la prise de décision.<br>Tirer parti du SQL de plus de 40 insights existants pour créer de nouvelles requêtes qui obtiennent des insights uniques à partir des données de Platform en fonction des besoins de votre entreprise. Le langage SQL est également disponible pour votre [Profils](../../dashboards/insights/profiles.md), [Audiences](../../dashboards/insights/audiences.md), et [Destinations](../../dashboards/insights/destinations.md) informations dans la documentation de l’Experience League. Ces documents mettent en évidence les cas d’utilisation professionnels auxquels des informations standard peuvent répondre. Pour plus d’informations, consultez le guide sur l’[affichage des insights SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
