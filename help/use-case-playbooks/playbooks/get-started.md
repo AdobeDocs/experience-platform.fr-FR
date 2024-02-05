@@ -4,9 +4,9 @@ title: Commencer
 description: Commencez à utiliser la fonctionnalité des Playbooks de cas d’utilisation.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 785e32b27372cef9d23761f648bcbaa431448ce7
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '943'
 ht-degree: 15%
 
 ---
@@ -29,6 +29,11 @@ Regardez cette vidéo pour en savoir plus sur les étapes nécessaires à la cr�
 ## Créer une sandbox de développement {#create-development-sandbox}
 
 Les classeurs de cas d’utilisation utilisent un type spécial d’environnement de test de développement. Pour commencer à utiliser la fonctionnalité des [[!UICONTROL Playbooks de cas d’utilisation]](/help/use-case-playbooks/playbooks/overview.md), [créez une sandbox de développement](/help/sandboxes/ui/user-guide.md#create) (assurez-vous de ne pas sélectionner de sandbox de production) et indiquez dans le suffixe du nom (et non du titre) `-ucp` ou `-UCP`, comme illustré ci-dessous.
+
+>[!IMPORTANT]
+>
+>Lorsque vous créez un environnement de test de développement, assurez-vous que le nom contient `-ucp` ou `-UCP` dans le suffixe.
+
 
 ![Créer une sandbox de développement pour les playbooks de cas d’utilisation](/help/use-case-playbooks/assets/playbooks/get-started/create-sandbox-ucp.png)
 
