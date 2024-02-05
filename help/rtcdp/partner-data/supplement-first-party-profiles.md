@@ -3,7 +3,7 @@ title: Complémenter les profils propriétaires avec des attributs fournis par l
 description: Découvrez comment compléter les profils propriétaires avec des attributs de partenaires de données de confiance pour améliorer vos bases de données, obtenir de nouvelles informations sur votre base de clientes et de clients et optimiser l’audience.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 9737508bd8435f4edf0e60a3559c1b4352ccb29f
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 79%
@@ -30,7 +30,7 @@ Adobe comprend qu’il n’existe pas d’approche universelle unique et permet 
 
 Par exemple, suivez les étapes décrites dans ce cas pratique lorsque vous devez enrichir vos dossiers client avec des signaux démographiques et d’intention.
 
-## Prérequis et planification {#prerequisites-and-planning}
+## Prérequis et planification
 
 Lorsque vous envisagez de compléter vos propres profils propriétaires avec des attributs des partenaires de données, vous devez discuter et traiter des détails suivants concernant la boucle d’enrichissement des données avec le partenaire de données :
 

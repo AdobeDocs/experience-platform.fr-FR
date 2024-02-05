@@ -3,9 +3,9 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations basées sur un profil de lot.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: a66c4397a02da81e4b3304f3bc975f725f8f8d76
 workflow-type: tm+mt
-source-wordcount: '3765'
+source-wordcount: '3797'
 ht-degree: 59%
 
 ---
@@ -142,7 +142,12 @@ Utilisez l’option **[!UICONTROL Planifié]** pour que la tâche d’activation
 
 4. Sélectionnez **[!UICONTROL Créer]** pour enregistrer le planning.
 
-### Exporter des fichiers incrémentiels {#export-incremental-files}
+### Exporter des fichiers incrémentiels
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_something"
+>title="Configurer le nom d’un fichier"
+>abstract="Pour les destinations basées sur des fichiers, un nom de fichier unique est généré par audience. Utilisez l’éditeur de nom de fichier pour créer et modifier un nom de fichier unique ou conserver le nom par défaut."
 
 Sélectionner **[!UICONTROL Exportation de fichiers incrémentiels]** pour déclencher une exportation où le premier fichier est un instantané complet de toutes les qualifications de profil pour l’audience sélectionnée, et les fichiers suivants sont des qualifications de profil incrémentielles depuis l’exportation précédente.
 
@@ -167,7 +172,7 @@ Sélectionner **[!UICONTROL Exportation de fichiers incrémentiels]** pour décl
 
 4. Sélectionnez **[!UICONTROL Créer]** pour enregistrer le planning.
 
-### Configurer les noms de fichiers {#file-names}
+### Configurer les noms de fichiers
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
