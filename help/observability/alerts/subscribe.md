@@ -4,7 +4,7 @@ title: Abonnement aux notifications dʼévénement Adobe I/O
 description: Ce document décrit la procédure à suivre pour sʼabonner aux notifications dʼévénement Adobe I/O pour les services Adobe Experience Platform. Des informations de référence concernant les types dʼévénement disponibles sont également fournies, ainsi que des liens vers la documentation supplémentaire sur la manière dʼinterpréter les données dʼévénement renvoyées pour chaque service  [!DNL Platform]  applicable.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: eccd53a8b2076fe23a65aa2e933a7cb871e97f72
+source-git-commit: 06ea57d41269e98ddd984c898f41c478ddefc618
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 90%
@@ -41,7 +41,7 @@ Accédez à [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) 
 
 >[!NOTE]
 >
->La notification d’ingestion des données sera abandonnée de l’abonnement à Adobe IO. Vous devez plutôt utiliser la variable **Informations sur l’exécution du flux de sources** Événement I/O.
+>L’événement de notification d’ingestion de données a été abandonné dans Adobe I/O. Vous devez plutôt utiliser la variable **Informations sur l’exécution du flux de sources** Événement I/O.
 
 Une fois que vous avez créé un projet, accédez à lʼécran dʼaperçu de ce projet. Sélectionnez ensuite **[!UICONTROL Ajouter un événement]**.
 
