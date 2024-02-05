@@ -7,7 +7,7 @@ exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
 workflow-type: tm+mt
 source-wordcount: '752'
-ht-degree: 91%
+ht-degree: 96%
 
 ---
 
@@ -50,7 +50,7 @@ Le mind mapping commence par une définition de la personne ciblée dans le parc
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_assets"
 >title="Assets"
->abstract="Il s’agit des ressources générées par ce manuel de lecture. Après avoir créé une instance du manuel de lecture, vous pouvez afficher les ressources dans l’environnement de test inspirant et les convertir dans d’autres environnements de test, suivant vos besoins."
+>abstract="Voici les ressources générées par ce playbook. Après avoir créé une instance du playbook, vous pouvez afficher les ressources dans le sandbox d’inspiration et les convertir dans d’autres sandbox selon vos besoins."
 
 Consultez la section de résumé pour identifier les ressources qui sont générées une fois que vous avez créé des instances à partir du playbook. Les ressources générées pour chaque playbook sont adaptées au cas d’utilisation activé par le playbook. Obtenez plus d’informations ci-dessous sur tous les éléments de la section de résumé.
 
