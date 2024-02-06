@@ -2,10 +2,10 @@
 title: Connexion à Adobe Campaign Managed Cloud Services
 description: Adobe Campaign Managed Cloud Services offre une plateforme pour concevoir des expériences client cross-canal et un environnement pour l’orchestration visuelle des campagnes, la gestion des interactions en temps réel et l’exécution cross-canal.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 9757931f03f57b722c47955d83cb074629d9a883
 workflow-type: tm+mt
-source-wordcount: '1550'
-ht-degree: 35%
+source-wordcount: '1589'
+ht-degree: 34%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 35%
 Adobe Campaign Managed Cloud Services offre une plateforme pour concevoir des expériences client cross-canal ainsi qu’un environnement pour l’orchestration visuelle de campagnes, la gestion d’interactions en temps réel et l’exécution cross-canal. [Prise en main de Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=fr)
 
 En utilisant Campaign, vous pouvez :
+
 * Stimuler la personnalisation et l&#39;engagement au travers d&#39;une vue accessible unique du client,
 * Intégrer les canaux email, mobile, en ligne et hors ligne dans le parcours client,
 * Automatisez la diffusion de messages et d’offres pertinents et en temps voulu.
@@ -32,6 +33,7 @@ En utilisant Campaign, vous pouvez :
 >* Pour chaque segment, vous pouvez ajouter jusqu’à 20 champs à la variable [map](#map) vers Adobe Campaign,
 >* Conservation des données sur la zone d’entrée des données de stockage Azure Blob (DLZ) : 7 jours,
 >* La fréquence d&#39;activation est d&#39;au moins 3 heures.
+>* La longueur maximale de nom de fichier prise en charge par cette connexion est de 255 caractères. Lorsque vous [configuration du nom du fichier exporté](../../ui/activate-batch-profile-destinations.md#configure-file-names), veillez à ce que le nom de fichier ne dépasse pas 255 caractères. Le dépassement de la longueur maximale du nom de fichier entraîne des erreurs d’activation.
 
 ## Cas d’utilisation {#use-cases}
 
