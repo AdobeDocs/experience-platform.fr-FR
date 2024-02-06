@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Bonnes pratiques de modélisation des données
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 8e13918abe9a63b186970b24b87bf85d1c73c3a8
 workflow-type: tm+mt
-source-wordcount: '3096'
-ht-degree: 71%
+source-wordcount: '3245'
+ht-degree: 68%
 
 ---
 
@@ -231,13 +231,27 @@ Pour Adobe Analytics, ECID est l’identité principale par défaut. Si une vale
 
 ## Champs de validation des données {#data-validation-fields}
 
-Pour empêcher l’ingestion de données incorrectes dans Platform, il est recommandé de définir les critères de validation au niveau du champ lors de la création de vos schémas. Pour définir des contraintes sur un champ spécifique, sélectionnez le champ dans l’éditeur de schémas pour ouvrir la [!UICONTROL Propriétés du champ] barre latérale. Consultez la documentation relative à [propriétés de champ spécifiques à un type](../ui/fields/overview.md#type-specific-properties) pour obtenir une description exacte des champs disponibles.
+Lorsque vous ingérez des données dans le lac de données, la validation des données n’est appliquée que pour les champs limités. Pour valider un champ particulier lors de l’ingestion par lots, vous devez le marquer comme limité dans le schéma XDM. Pour empêcher l’ingestion de données incorrectes dans Platform, il est recommandé de définir les critères de validation au niveau du champ lors de la création de vos schémas.
+
+>[!IMPORTANT]
+>
+>La validation ne s’applique pas aux colonnes imbriquées. Si le format du champ se trouve dans une colonne de tableau, les données ne seront pas validées.
+
+Pour définir des contraintes sur un champ spécifique, sélectionnez le champ dans l’éditeur de schémas pour ouvrir la **[!UICONTROL Propriétés du champ]** barre latérale. Consultez la documentation relative à [propriétés de champ spécifiques à un type](../ui/fields/overview.md#type-specific-properties) pour obtenir une description exacte des champs disponibles.
 
 ![L’éditeur de schémas avec les champs de contrainte mis en évidence dans la variable [!UICONTROL Propriétés du champ] barre latérale.](../images/best-practices/data-validation-fields.png)
 
->[!TIP]
->
->Voici une collection de suggestions pour la modélisation des données lors de la création d’un schéma :<br><ul><li>**Considérer les identités principales**: pour les produits Adobe tels que le SDK web, le SDK mobile, Adobe Analytics et Adobe Journey Optimizer, la variable `identityMap` sert souvent d’identité principale. Évitez de désigner des champs supplémentaires comme identités principales pour ce schéma.</li><li>**Éviter d’utiliser `_id` comme identité**: évitez d’utiliser la variable `_id` dans les schémas d’événement d’expérience en tant qu’identité. Il est destiné à une unicité record, et non à une utilisation en tant qu&#39;identité.</li><li>**Définir des contraintes de longueur**: il est recommandé de définir des longueurs minimales et maximales sur les champs marqués comme identités. Ces limites permettent de maintenir la cohérence et la qualité des données.</li><li>**Application de modèles pour des valeurs homogènes**: si vos valeurs d’identité suivent un modèle spécifique, utilisez la variable [!UICONTROL Modèle] pour appliquer cette contrainte. Ce paramètre peut inclure des règles telles que des chiffres uniquement, des majuscules, des minuscules ou des combinaisons de caractères spécifiques. Utilisez des expressions régulières pour faire correspondre des modèles dans vos chaînes.</li><li>**Limitation des eVars dans le schéma Analytics**: en règle générale, un schéma Analytics ne doit comporter qu’un seul eVar désigné comme identité. Si vous envisagez d’utiliser plusieurs eVars comme identité, vous devez vérifier deux fois si la structure de données peut être optimisée.</li><li>**Garantir l’unicité d’un champ sélectionné**: le champ de votre choix doit être unique par rapport à l’identité principale du schéma. Dans le cas contraire, ne le marquez pas comme une identité. Par exemple, si plusieurs clients peuvent fournir la même adresse électronique, cet espace de noms n’est pas une identité appropriée. Ce principe s’applique également à d’autres espaces de noms d’identité tels que les numéros de téléphone.</li></ul>
+### Conseils pour préserver l’intégrité des données {#data-integrity-tips}
+
+Vous trouverez ci-dessous un ensemble de suggestions pour préserver l’intégrité des données lors de la création d’un schéma.
+
+* **Considérer les identités principales**: pour les produits Adobe tels que le SDK web, le SDK mobile, Adobe Analytics et Adobe Journey Optimizer, la variable `identityMap` sert souvent d’identité principale. Évitez de désigner des champs supplémentaires comme identités principales pour ce schéma.
+* **Éviter d’utiliser `_id` comme identité**: évitez d’utiliser la variable `_id` dans les schémas d’événement d’expérience en tant qu’identité. Il est destiné à une unicité record, et non à une utilisation en tant qu&#39;identité.
+* **Définir des contraintes de longueur**: il est recommandé de définir des longueurs minimales et maximales sur les champs marqués comme identités. Un avertissement se déclenche si vous essayez d’attribuer un espace de noms personnalisé à un champ d’identité sans respecter les contraintes de longueur minimale et maximale. Ces limites permettent de maintenir la cohérence et la qualité des données.
+* **Application de modèles pour des valeurs homogènes**: si vos valeurs d’identité suivent un modèle spécifique, utilisez la variable **[!UICONTROL Modèle]** pour appliquer cette contrainte. Ce paramètre peut inclure des règles telles que des chiffres uniquement, des majuscules, des minuscules ou des combinaisons de caractères spécifiques. Utilisez des expressions régulières pour faire correspondre des modèles dans vos chaînes.
+* **Limitation des eVars dans les schémas Analytics**: en règle générale, un schéma Analytics ne doit comporter qu’un seul eVar désigné comme identité. Si vous envisagez d’utiliser plusieurs eVars comme identité, vous devez vérifier deux fois si la structure de données peut être optimisée.
+* **Garantir l’unicité d’un champ sélectionné**: le champ de votre choix doit être unique par rapport à l’identité principale du schéma. Dans le cas contraire, ne le marquez pas comme une identité. Par exemple, si plusieurs clients peuvent fournir la même adresse électronique, cet espace de noms n’est pas une identité appropriée. Ce principe s’applique également à d’autres espaces de noms d’identité tels que les numéros de téléphone.
+* **Avertissements de déclenchement de contraintes pour les champs d’espace de noms personnalisés**: définissez des contraintes pour déclencher un avertissement lorsqu’un champ de schéma est marqué avec un espace de noms personnalisé sans spécifier de longueur minimale et maximale. Cet avertissement constitue un avertissement important pour le maintien de l’intégrité des données. Voir [propriétés de champ spécifiques à un type](../ui/fields/overview.md#type-specific-properties) documentation pour plus d’informations sur la manière de définir des contraintes sur un champ particulier.
 
 ## Étapes suivantes
 
