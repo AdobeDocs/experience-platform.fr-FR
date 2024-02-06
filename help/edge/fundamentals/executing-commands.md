@@ -3,10 +3,10 @@ title: Exécution des commandes du SDK Web Adobe Experience Platform
 description: Découvrez comment exécuter les commandes du SDK Web d’Experience Platform
 keywords: exécuter des commandes;commandName;Promesses;getLibraryInfo;objets de réponse;consentement;
 exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
-source-git-commit: f3344c9c9b151996d94e40ea85f2b0cf9c9a6235
+source-git-commit: ffc60e83285188bc5b0f6eb7a20fafee16d51d4d
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 71%
+source-wordcount: '405'
+ht-degree: 70%
 
 ---
 
@@ -35,7 +35,7 @@ Chaque fois qu’une commande est exécutée, une promesse est renvoyée. La pro
 alloy("commandName", options)
   .then(function(result) {
     // The command succeeded.
-    // "value" is whatever the command returned
+    // "result" is whatever the command returned
   })
   .catch(function(error) {
     // The command failed.
@@ -78,4 +78,4 @@ alloy("getLibraryInfo")
 
 ### Consentement
 
-Si un utilisateur n’a pas donné son consentement dans un but particulier, la promesse sera toujours résolue ; cependant, l’objet de réponse ne contient que les informations qui peuvent être fournies dans le contexte de ce à quoi l’utilisateur a consenti.
+Si un utilisateur n’a pas donné son consentement dans un but particulier, la promesse sera toujours résolue. Cependant, l’objet de réponse ne contiendra que les informations qui peuvent être fournies dans le contexte de ce à quoi l’utilisateur a consenti.
