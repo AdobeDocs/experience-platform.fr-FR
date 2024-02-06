@@ -1,9 +1,9 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2024
 description: Notes de mise à jour de janvier 2024 pour Adobe Experience Platform.
-source-git-commit: 7b694ad1b064279fcc0dd09bd1e8761e734e7556
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1655'
 ht-degree: 60%
 
 ---
@@ -25,6 +25,7 @@ Mises à jour des fonctionnalités existantes dans Experience Platform :
 - [Identity Service](#identity-service)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [Profil client en temps réel](#profile)
+- [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
 ## Cas d’utilisation des classeurs {#use-case-playbooks}
@@ -155,6 +156,21 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 {style="table-layout:auto"}
 
 Pour en savoir plus sur le profil client en temps réel, lisez d’abord la [présentation des profils](../../profile/home.md).
+
+## Segmentation Service {#segmentation}
+
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Chargement d’audience généré en externe | Le nombre maximum de colonnes a été augmenté pour **25**. |
+| Estimations du créateur de segments | Les estimations et les profils qualifiés s’affichent désormais dans la section des propriétés de l’audience. Pour plus d’informations sur cette modification, consultez la section [Guide de l’interface utilisateur du créateur de segments](../../segmentation/ui/segment-builder.md). |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations sur [!DNL Segmentation Service], consultez la [présentation de la segmentation](../../segmentation/home.md).
 
 ## Sources {#sources}
 

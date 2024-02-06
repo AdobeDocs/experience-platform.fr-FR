@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: b028bf86bb8596c6fc97829d6d27eec498c4ef11
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
-source-wordcount: '3426'
-ht-degree: 95%
+source-wordcount: '3562'
+ht-degree: 90%
 
 ---
 
@@ -255,9 +255,17 @@ Pour sélectionner une politique de fusion pour votre définition de segment, s�
 >abstract="Vous pouvez actualiser les estimations de votre définition de segment pour afficher immédiatement un aperçu du nombre de profils admissibles pour la définition de segment proposé. Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=fr#estimate-and-preview-an-audience" text="Estimation et prévisualisation d’une audience"
 
-Lors de la création d’une définition de segment, la section **[!UICONTROL Propriétés du segment]** située à droite de l’espace de travail affiche une estimation de la taille de la définition de segment obtenue, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
+Lors de la création d’une définition de segment, la variable **[!UICONTROL Propriétés d’audience]** sur le côté droit de l’espace de travail, la section affiche une estimation de la taille de la définition de segment résultante, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
 
-La section **[!UICONTROL Propriétés du segment]** vous permet également de spécifier des informations importantes sur votre définition de segment, y compris son nom, sa description et son type d’évaluation. Les noms des définitions de segment sont utilisés pour identifier votre définition de segment parmi celles définies par votre organisation et doivent donc être descriptifs, concis et uniques.
+**[!UICONTROL Profils qualifiés]** indique que la variable **réel** nombre de profils qui correspondent aux règles de la définition de segment. Ce nombre est mis à jour toutes les 24 heures, après l’exécution de la tâche d’évaluation de segment.
+
+L’horodatage des profils qualifiés indique la plus récente **batch** tâche d’évaluation de segment et est **not** affiché pour les définitions de segment évaluées à l’aide de la segmentation par flux ou de périphérie. Si vous modifiez la définition de segment, le nombre de profils qualifiés reste le même jusqu’à l’exécution de la tâche d’évaluation de segment suivante.
+
+**[!UICONTROL Profils estimés]** indique qu’une **approximatif** nombre de profils en fonction de la variable **exemple de tâche**. Vous pouvez voir une version mise à jour de cette valeur après avoir ajouté de nouvelles règles ou conditions et sélectionné **[!UICONTROL Actualiser l’estimation]**. La sélection de la bulle d’informations donne le seuil d’erreur et l’exemple de temps de tâche le plus récent.
+
+![Les profils qualifiés et les profils estimés sont mis en surbrillance dans la section Propriétés de l’audience .](../images/ui/segment-builder/audience-estimates.png)
+
+La variable **[!UICONTROL Propriétés d’audience]** vous permet également de spécifier des informations importantes sur votre définition de segment, notamment son nom, sa description et son type d’évaluation. Les noms des définitions de segment sont utilisés pour identifier votre définition de segment parmi celles définies par votre organisation et doivent donc être descriptifs, concis et uniques.
 
 Au fur et à mesure que vous continuez à créer votre définition de segment, vous pouvez visualiser un aperçu paginé de l’audience en sélectionnant **[!UICONTROL Afficher les profils]**.
 

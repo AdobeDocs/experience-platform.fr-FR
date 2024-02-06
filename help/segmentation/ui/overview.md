@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guide de l’IU de Segmentation Service
 description: Découvrez comment créer et gérer des audiences et des définitions de segment dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 7ee39a39aecdfc0516f63e6a9c9a06c6c4b22996
+source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
 workflow-type: tm+mt
 source-wordcount: '3933'
 ht-degree: 87%
@@ -331,7 +331,7 @@ Le workflow **[!UICONTROL Importer un fichier CSV d’audience]** s’affiche. V
 
 >[!NOTE]
 >
->L’audience générée en externe **doit** être au format CSV, disposer d’un **maximum** de 11 colonnes et être inférieure à 1 Go.
+>L’audience générée en externe **doit** être au format CSV, disposer d’un **maximum** de 25 colonnes et être inférieure à 1 Go.
 
 Après avoir sélectionné le fichier CSV à importer, une liste de données d’exemple s’affiche pour cette audience générée en externe. Après avoir confirmé que les données d’exemple sont correctes, sélectionnez **[!UICONTROL Suivant]**.
 
