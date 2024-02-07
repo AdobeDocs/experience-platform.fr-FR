@@ -6,8 +6,8 @@ description: Découvrez comment utiliser l’interface utilisateur du Privacy Se
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
 workflow-type: tm+mt
-source-wordcount: '1475'
-ht-degree: 68%
+source-wordcount: '1456'
+ht-degree: 59%
 
 ---
 
@@ -38,18 +38,18 @@ Le tableau de bord de la variable [!DNL Privacy Service] L’interface utilisate
 
 | Libellé de l’interface utilisateur | Régulation |
 | --- | --- |
-| [!UICONTROL APA_AUS] | La variable [!DNL Australia Privacy Act (Privacy Act)] |
-| [!UICONTROL CPA] | La variable [!DNL Colorado Privacy Act] |
-| [!UICONTROL CCPA] | La variable [!DNL California Consumer Privacy Act] |
-| [!UICONTROL CPRA_USA] | La variable [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL CTDPA] | La variable [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL APA_AUS] | [!DNL Australia Privacy Act (Privacy Act)] |
+| [!UICONTROL CPA] | [!DNL Colorado Privacy Act] |
+| [!UICONTROL CCPA] | [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPRA_USA] | [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL CTDPA] | [!DNL Connecticut Data Privacy Act] |
 | [!UICONTROL RGPD] | L&#39;Union européenne [!DNL General Data Protection Regulation] |
-| [!UICONTROL HIPAA_AUS] | La variable [!DNL Health Insurance Portability and Accountability Act] |
+| [!UICONTROL HIPAA_AUS] | [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | Le Brésil [!DNL Lei Geral de Proteção de Dados] |
 | [!UICONTROL NZPA_NZL] | La Nouvelle-Zélande [!DNL Privacy Act] |
 | [!UICONTROL PDPA_THA] | Thaïlande [!DNL Personal Data Protection Act] |
-| [!UICONTROL UCPA] | La variable [!DNL Utah Consumer Privacy Act] |
-| [!UICONTROL VCDPA_USA] | La variable [!DNL Virginia Consumer Data Protection Act] |
+| [!UICONTROL UCPA] | [!DNL Utah Consumer Privacy Act] |
+| [!UICONTROL VCDPA_USA] | [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
 
@@ -95,7 +95,7 @@ Le widget Requêtes de tâche liste toutes les requêtes de tâche disponibles d
 
 >[!NOTE]
 >
->Les données relatives aux tâches créées précédemment sont uniquement accessibles pendant 30 jours à compter de la date d’achèvement.
+>Les données relatives aux tâches créées précédemment ne sont accessibles que pendant 30 jours à compter de la date d’achèvement.
 
 Vous pouvez filtrer la liste en saisissant des mots-clés dans la barre de recherche sous le titre de Requêtes de tâche. La liste est automatiquement filtrée au fur et à mesure de votre saisie, et affiche les requêtes qui contiennent des valeurs correspondant aux termes recherchés. Vous pouvez également utiliser le menu déroulant **[!UICONTROL Demandé le]** afin de sélectionner une période pour les tâches répertoriées.
 
@@ -120,7 +120,7 @@ Pour télécharger l’ensemble des données de tâche sous forme de fichier CSV
 
 >[!NOTE]
 >
->Pour créer une requête de tâche de confidentialité, vous devez fournir des informations d’identité aux clients spécifiques qui souhaitent accéder à leurs données ou les supprimer. Avant de poursuivre la lecture de cette section, consultez le document concernant les [informations d’identité pour les demandes d’accès à des informations personnelles](../identity-data.md).
+>Pour créer une requête de tâche de confidentialité, vous devez fournir des informations d’identité aux clients spécifiques dont les données doivent être consultées ou supprimées. Avant de poursuivre la lecture de cette section, consultez le document concernant les [informations d’identité pour les demandes d’accès à des informations personnelles](../identity-data.md).
 
 La variable [!DNL Privacy Service] L’interface utilisateur propose deux méthodes pour créer de nouvelles requêtes de tâche :
 
@@ -145,15 +145,15 @@ Sélectionnez la variable **[!UICONTROL Type de tâche]** de la requête (&quot;
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 
-Sous **[!UICONTROL Type d’espace de nom]**, sélectionnez le type d’espace de nom approprié pour les identifiants de client envoyés à [!DNL Privacy Service].
+Sous **[!UICONTROL Type d’espace de noms]**, sélectionnez le type d’espace de noms approprié pour les ID de client envoyés à [!DNL Privacy Service].
 
 <img src="../images/user-guide/namespace-type.png" width="500" /><br/>
 
-Lors de l’utilisation du type d’espace de nom standard, sélectionnez un espace de nom dans le menu déroulant (adresse e-mail, ECID ou AAID), puis saisissez les valeurs d’identifiant dans la zone de texte à droite, en appuyant sur **\&lt;enter>** pour chaque identifiant afin de l’ajouter à la liste.
+Lors de l’utilisation du type d’espace de noms standard, sélectionnez un espace de noms dans le menu déroulant (adresse électronique, ECID ou AAID), puis saisissez les valeurs d’identifiant dans la zone de texte à droite, en appuyant sur **\&lt;enter>** pour chaque ID à ajouter à la liste.
 
 <img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
 
-Lors de l’utilisation du type d’espace de noms personnalisé, vous devez saisir manuellement l’espace de nom avant de fournir les valeurs d’identifiant plus bas.
+Lors de l’utilisation du type d’espace de noms personnalisé, vous devez saisir manuellement l’espace de noms avant de fournir les valeurs d’identifiant ci-dessous.
 
 <img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
 
@@ -183,7 +183,7 @@ Si vous ne disposez pas d’un fichier JSON à charger, sélectionnez **[!UICONT
 
 Trouvez le fichier JSON sur votre ordinateur et faites-le glisser dans la fenêtre de dialogue. Si le chargement est réussi, le nom du fichier s’affiche dans la boîte de dialogue. Vous pouvez continuer à ajouter d’autres fichiers JSON si nécessaire en les faisant glisser dans la boîte de dialogue.
 
-Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**. La boîte de dialogue disparaît et la ou les nouvelles tâches sont répertoriées dans le widget Requêtes de tâche, où s’affiche également leur état de traitement actuel.
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Créer]**. La boîte de dialogue disparaît et la ou les nouvelles tâches sont répertoriées dans le widget Requêtes de tâche, où s’affiche également leur état de traitement actuel.
 
 ### Étapes suivantes
 

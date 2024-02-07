@@ -6,12 +6,12 @@ description: Découvrez comment créer et modifier des classes dans l’interfac
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 source-git-commit: 640d3ca0d3c227306436f2e653ef66fdc8ebd31c
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1458'
 ht-degree: 8%
 
 ---
 
-# Création et modification de classes dans l’interface utilisateur {#ui-create-and-edit}
+# Créer et modifier des classes dans l’interface utilisateur {#ui-create-and-edit}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class_filter"

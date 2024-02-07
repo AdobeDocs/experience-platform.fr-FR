@@ -6,7 +6,7 @@ exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
 source-wordcount: '1149'
-ht-degree: 47%
+ht-degree: 46%
 
 ---
 
@@ -39,7 +39,7 @@ Sous , **[!UICONTROL Adobe des applications]** catégorie, sélectionnez **[!UIC
 >[!CONTEXTUALHELP]
 >id="platform_sources_campaign_instance"
 >title="Instance d&#39;environnement Adobe Campaign"
->abstract="Nom de l’environnement Adobe Campaign que vous souhaitez utiliser."
+>abstract="Nom de l&#39;environnement Adobe Campaign que vous souhaitez utiliser."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]

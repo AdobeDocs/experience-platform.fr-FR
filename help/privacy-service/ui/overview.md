@@ -6,8 +6,8 @@ description: Commencez à utiliser l’interface utilisateur du Privacy Service 
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 source-git-commit: 20a737cf36bf08415a15db78599f36659207ace1
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 31%
+source-wordcount: '226'
+ht-degree: 20%
 
 ---
 
@@ -43,4 +43,4 @@ Si vous avez accès à l’interface utilisateur de Adobe Experience Platform, v
 
 ## Étapes suivantes
 
-Maintenant que vous avez réussi à vous connecter, veuillez vous reporter au [guide d’utilisation](user-guide.md) pour obtenir la procédure permettant de réaliser diverses opérations à l’aide de l’interface utilisateur [!DNL Privacy Service]
+Maintenant que vous êtes connecté, reportez-vous à la section [guide de l’utilisateur](user-guide.md) pour connaître les étapes de réalisation de différentes opérations à l’aide de la fonction [!DNL Privacy Service] Interface utilisateur.

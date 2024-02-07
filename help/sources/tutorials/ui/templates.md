@@ -5,7 +5,7 @@ badge1: « Version bêta »
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
 workflow-type: tm+mt
-source-wordcount: '2259'
+source-wordcount: '2241'
 ht-degree: 44%
 
 ---
@@ -187,7 +187,7 @@ Si vous sélectionnez un ou des éléments partiels dans la liste des modèles d
 
 ![La liste des modèles avec le modèle Rôle de contact d’opportunité sélectionné.](../../images/tutorials/templates/select-template.png)
 
-### Définissez un planning
+### Définition d’un planning
 
 La variable [!DNL Microsoft Dynamics] et la variable [!DNL Salesforce] les sources prennent toutes deux en charge la planification des flux de données.
 

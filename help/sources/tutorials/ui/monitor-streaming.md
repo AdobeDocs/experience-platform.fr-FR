@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;comptes de contrôle;flux de données de surveillance;flux de données
-description: Les connecteurs source d’Adobe Experience Platform permettent d’ingérer des données externes selon un calendrier précis. Ce tutoriel décrit les étapes de surveillance des flux de données en continu à partir de l’espace de travail Sources .
+description: Les connecteurs source de Adobe Experience Platform permettent d’ingérer des données provenant de l’extérieur selon un calendrier précis. Ce tutoriel décrit les étapes de surveillance des flux de données en continu à partir de l’espace de travail Sources .
 title: Surveillance des flux de données pour les sources de flux dans l’interface utilisateur
 exl-id: b080e398-e71f-40bd-aea1-7ea3ce86b55d
 source-git-commit: 647f2780798dcf55a68e156af3318924c352a442
 workflow-type: tm+mt
-source-wordcount: '1034'
-ht-degree: 26%
+source-wordcount: '1037'
+ht-degree: 24%
 
 ---
 
