@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Guide du profil client en temps réel
 user-guide-description: Fusionnez les données client pour créer une vue unifiée des interactions client entre les canaux.
 feature: Profiles
-source-git-commit: c630eb0e13c7d4c1b8f649816402fae0d4a79326
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 98%
+source-wordcount: '129'
+ht-degree: 93%
 
 ---
 
@@ -23,7 +23,6 @@ ht-degree: 98%
 * [!DNL Profile] API {#api}
    * [Présentation](api/overview.md)
    * [Prise en main](api/getting-started.md)
-   * [Projections de périphérie](api/edge-projections.md)
    * [Entités (accès au [!DNL Profile])](api/entities.md)
    * [Tâches d’exportation (exportation de [!DNL Profile])](api/export-jobs.md)
    * [Prévisualisation des exemples de statut (prévisualisation du [!DNL Profile])](api/preview-sample-status.md)
@@ -33,8 +32,8 @@ ht-degree: 98%
    * [Personnalisation détaillée du [!DNL Profile]](ui/profile-customization.md)
    * [Profils de prospects](ui/prospect-profile.md)
 * Attributs calculés {#computed-attributes}
-   * [Présentation](computed-attributes/overview.md)
-   * [API des attributs calculés guide](computed-attributes/api.md)
+   * [Vue d’ensemble](computed-attributes/overview.md)
+   * [Guide de l’API des attributs calculés](computed-attributes/api.md)
    * [Guide de l’interface utilisateur des attributs calculés](computed-attributes/ui.md)
    * [Questions fréquentes](computed-attributes/faq.md)
 * Politiques de fusion {#merge-policies}

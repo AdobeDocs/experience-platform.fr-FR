@@ -3,16 +3,16 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Guide de l’API Real-Time Customer Profile
 description: L’API Real-time Customer Profile permet aux développeurs d’explorer et d’utiliser les données de profil, notamment d’afficher les profils, de créer et de mettre à jour des stratégies de fusion, d’exporter ou d’échantillonner des données de profil, ainsi que de supprimer les données de profil qui ne sont plus requises ou qui ont été ajoutées par erreur. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 29%
+source-wordcount: '881'
+ht-degree: 20%
 
 ---
 
 # Guide de l’API [!DNL Real-Time Customer Profile]
 
-[!DNL Real-Time Customer Profile] vous permet d’obtenir une vue d’ensemble de chacun de vos clients dans Adobe Experience Platform. [!DNL Profile] vous permet de consolider diverses données clients provenant de plusieurs canaux, comme les données en ligne, hors ligne, CRM et tierces, en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
+[!DNL Real-Time Customer Profile] vous permet d’obtenir une vue d’ensemble de chacun de vos clients dans Adobe Experience Platform. [!DNL Profile] permet de consolider des données clients disparates provenant de plusieurs canaux, tels que des données en ligne, hors ligne, CRM et tierces, dans une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
 
 La variable [!DNL Real-Time Customer Profile] L’API comprend plusieurs points de terminaison, décrits ci-dessous. Consultez le guide de chaque point d’entrée pour plus de détails et reportez-vous au [guide de prise en main](getting-started.md) pour obtenir des informations importantes sur les en-têtes nécessaires, la lecture des exemples d’appels d’API, etc.
 
@@ -26,15 +26,11 @@ Pour obtenir un guide sur l’utilisation de [!DNL Real-Time Customer Profile] d
 >
 La fonctionnalité d’attribut calculé est en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et la fonctionnalité peuvent faire l’objet de modifications.
 
-Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation.
+Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées pour la segmentation, l’activation et la personnalisation.
 
 Chaque attribut calculé contient une expression, ou &quot;règle&quot;, qui évalue les données entrantes et stocke la valeur obtenue dans un attribut de profil. Ces calculs vous aident à répondre facilement aux questions liées à des éléments tels que la valeur d’achat de durée de vie, le temps écoulé entre les achats ou le nombre d’ouvertures de l’application, sans que vous ayez à effectuer manuellement des calculs complexes chaque fois que ces informations sont nécessaires. Ces valeurs d’attribut calculées peuvent ensuite être visualisées dans un profil, utilisées pour créer une audience ou accessibles via plusieurs modèles d’accès différents.
 
 Vous pouvez créer, afficher, modifier et supprimer des attributs calculés à l’aide du `ca/attributes/` point de terminaison . Pour savoir comment utiliser des attributs calculés, reportez-vous à la section [présentation des attributs calculés](../computed-attributes/overview.md). Pour les opérations d’API, consultez la page [guide de point d’entrée de l’API des attributs calculés](../computed-attributes/api.md).
-
-## Projections de périphérie {#edge-projections}
-
-Adobe Experience Platform permet de personnaliser en temps réel les expériences client en rendant les données facilement accessibles sur des serveurs situés stratégiquement, appelés « périphéries ». La variable [!DNL Real-Time Customer Profile] L’API fournit des points de terminaison pour utiliser les périphéries à travers des composants appelés &quot;projections&quot;. Cela inclut des configurations de projection permettant de définir quelles données doivent être projetées sur chaque périphérie, ainsi que des destinations de projection permettant de déterminer la direction d’une projection. Pour obtenir des informations détaillées sur l’utilisation des projections de périphérie, veuillez consulter la section [guide des configurations de projection et des points d’entrée de destinations](edge-projections.md).
 
 ## Entités (accès au [!DNL Profile]) {#entities}
 

@@ -2,9 +2,9 @@
 title: Vue d’ensemble du profil client en temps réel
 description: Le profil client en temps réel fusionne des données provenant de diverses sources et permet d’accéder à ces données sous la forme de profils clients individuels et d’événements de séries temporelles associés. Cette fonctionnalité permet aux spécialistes marketing d’offrir à leur audience des expériences coordonnées, cohérentes et pertinentes sur plusieurs canaux.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 5dad03dd33855b225bb67391dbc51e5b31bf4d5e
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '1973'
+source-wordcount: '1821'
 ht-degree: 100%
 
 ---
@@ -104,10 +104,6 @@ Le [!DNL Segmentation Service] d’Adobe Experience Platform fournit les audie
 ### Ingestion par flux et segmentation par flux
 
 L’entrée en temps réel est possible grâce à un processus appelé ingestion par flux. À mesure que les données de profil et de série temporelle sont ingérées, le [!DNL Real-Time Customer Profile] décide automatiquement d’inclure ou d’exclure ces données des audiences par le biais d’un processus continu appelé la segmentation par flux, avant de les fusionner avec les données existantes et de mettre à jour la vue d’union. Par conséquent, vous pouvez instantanément effectuer des calculs et prendre des décisions pour offrir aux clients de meilleures expériences personnalisées lorsqu’ils interagissent avec votre marque. Lors de l’ingestion, les données sont également soumises à un processus de validation pour s’assurer qu’elles sont correctement ingérées et conformes au schéma sur lequel le jeu de données est basé. Pour plus d’informations sur la validation effectuée lors de l’ingestion, commencez par lire la [présentation de la qualité d’ingestion des données](../ingestion/quality/overview.md).
-
-## Projections de périphérie
-
-Afin d’offrir à vos clients des expériences coordonnées, cohérentes et personnalisées sur plusieurs canaux en temps réel, les bonnes données doivent être facilement disponibles et mises à jour en continu, au fur et à mesure des changements. Adobe Experience Platform permet cet accès aux données en temps réel grâce à l’utilisation de ce que l’on appelle les périphéries. Une périphérie est un serveur réparti géographiquement qui stocke les données et les rend facilement accessibles aux applications. Par exemple, les applications Adobe telles qu’Adobe Target et Adobe Campaign utilisent des périphéries afin d’offrir des expériences client personnalisées en temps réel. Les données sont acheminées vers une périphérie par projection, une destination de projection définissant la périphérie vers laquelle les données sont envoyées, et une configuration de projection définissant les informations spécifiques rendues disponibles dans la périphérie. Pour en savoir plus sur les projections et commencer à les utiliser à l’aide de l’API du [!DNL Real-Time Customer Profile], reportez-vous au [guide des points d’entrée de projection de périphérie](api/edge-projections.md).
 
 ## Ingestion de données dans le [!DNL Profile]
 

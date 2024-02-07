@@ -2,10 +2,10 @@
 title: Profils Edge
 description: Découvrez les profils Edge, ainsi que la terminologie associée, les régions disponibles pour les profils Edge et les services disponibles pour les profils Edge.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 5%
+source-wordcount: '795'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 Dans Adobe Experience Platform, Real-Time Customer Profile est la source unique de vérité pour les données d’entité. Ces données de profil se trouvent dans un hub central et permettent d’utiliser des cas d’utilisation qui reposent sur l’exhaustivité et l’exhaustivité de vos données. Toutefois, dans les cas d’utilisation en temps réel où le respect du temps est plus important, les profils de périphérie sont l’option préférée. Les profils Edge sont des profils légers qui se trouvent en périphérie et qui aident à des cas d’utilisation de la personnalisation en temps réel.
 
-Par exemple, les applications Adobe telles qu’Adobe Target, la destination de personnalisation personnalisée et Adobe Campaign utilisent des périphéries afin de fournir des expériences client personnalisées en temps réel. Les données sont acheminées vers une périphérie par projection, une destination de projection définissant la périphérie vers laquelle les données sont envoyées, et une configuration de projection définissant les informations spécifiques rendues disponibles dans la périphérie.
+Par exemple, les applications Adobe telles qu’Adobe Target, la destination de personnalisation personnalisée et Adobe Campaign utilisent des périphéries afin de fournir des expériences client personnalisées en temps réel. Les données sont acheminées vers une périphérie par une projection, avec une destination de projection qui définit la périphérie vers laquelle les données seront envoyées, et une configuration de projection qui définit les informations spécifiques qui seront rendues disponibles sur la périphérie.
 
 ## Terminologie {#terminology}
 
@@ -61,7 +61,7 @@ Le service de profil express (XPS) récupère les profils sur les différentes p
 
 ## Étapes suivantes
 
-Après avoir lu ce guide, vous devez avoir une compréhension de base des profils Edge, y compris des informations sur les régions et services disponibles pour les profils Edge. Pour plus d’informations sur les projections de périphérie, veuillez lire la section [guide de point de terminaison des projections de périphérie](./api/edge-projections.md). Pour plus d’informations sur Adobe Experience Edge, veuillez lire le [Présentation d’Edge](../edge/home.md).
+Après avoir lu ce guide, vous devez avoir une compréhension de base des profils Edge, y compris des informations sur les régions et services disponibles pour les profils Edge. Pour plus d’informations sur Adobe Experience Edge, veuillez lire le [Présentation d’Edge](../edge/home.md).
 
 ## Annexe
 
@@ -77,6 +77,4 @@ De plus, chaque profil de périphérie comporte un attribut de schéma appelé r
 
 ### Comment l’expiration des données fonctionne-t-elle avec les profils Edge ?
 
-Pour les profils Edge, l’expiration des données détermine la durée pendant laquelle le profil restera sur Edge avant sa suppression. L’expiration des données est **roller**, ce qui signifie qu’à chaque accès au profil, le délai d’expiration des données est réinitialisé.
-
-Vous pouvez ajouter l’expiration des données à vos profils en les ajoutant à la variable [projection de périphérie](./api/edge-projections.md). Par défaut, l’expiration des données dure 14 jours, mais peut être définie sur un minimum d’1 heure et un maximum de 90 jours.
+Pour les profils Edge, l’expiration des données détermine la durée pendant laquelle le profil restera sur Edge avant sa suppression. L’expiration des données est **roller**, ce qui signifie qu’à chaque accès au profil, le délai d’expiration des données est réinitialisé. Par défaut, l’expiration des données dure 14 jours.
