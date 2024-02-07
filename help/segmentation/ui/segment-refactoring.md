@@ -3,27 +3,40 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des contraintes de temps de la segmentation refactorisées
 description: Le créateur de segments offre un vaste espace de travail qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 665bbd1904e857336a4fb677230389d7977f6b60
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 100%
+source-wordcount: '354'
+ht-degree: 19%
 
 ---
 
-# Refactorisation des contraintes de temps
+# Refactorisation des contraintes de temps {#refactorization}
 
-La version d’octobre 2020 d’Adobe Experience Platform a introduit des modifications de performances dans Adobe Experience Platform Segmentation Service, qui ajoutent de nouvelles restrictions à l’utilisation des opérateurs logiques OR et AND. Ces modifications concerneront les segments nouvellement créés ou modifiés à l’aide de l’interface utilisateur du créateur de segments. Ce guide explique comment atténuer ces modifications.
+>[!CONTEXTUALHELP]
+>id="platform_audiences_segmentBuilder_constraints"
+>title="Refactorisation des contraintes de temps"
+>abstract="Les contraintes de temps au niveau de la règle et au niveau du groupe ont été supprimées afin de clarifier l’utilisation des contraintes de temps. Réécrivez votre contrainte en tant que contrainte de niveau zone de travail ou carte."
 
-Avant la version d’octobre 2020, toutes les contraintes de temps au niveau des règles, des groupes et des événements faisaient référence de manière redondante à la même date et heure. Afin de clarifier l’utilisation des contraintes de temps, les contraintes de temps au niveau des règles et des groupes ont été supprimées. Pour tenir compte de ce changement, toutes les contraintes de temps doivent être réécrites en tant que contraintes de temps au niveau des événements.
+La version de janvier 2024 de Adobe Experience Platform a introduit des modifications dans le service de segmentation de Adobe Experience Platform qui ajoutent de nouvelles restrictions aux endroits où des contraintes de temps peuvent être définies. Ces modifications affectent les segments nouvellement créés ou modifiés effectués à l’aide de l’interface utilisateur du créateur de segments. Ce guide explique comment atténuer ces modifications.
 
-Auparavant, un événement individuel pouvait être associé à plusieurs règles de contrainte de temps.
+Avant la version de janvier 2024, toutes les contraintes temporelles de niveau règle, de niveau groupe et de niveau canevas faisaient référence de manière redondante au même horodatage. Afin de clarifier l’utilisation des contraintes de temps, les contraintes de temps au niveau des règles et des groupes ont été supprimées. Pour tenir compte de cette modification, toutes les contraintes de temps **must** être réécrit en tant que **niveau de la zone de travail** ou **niveau carte** contraintes de temps.
 
-![L’ancien style des contraintes de temps est mis en surbrillance dans le créateur de segments.](../images/ui/segment-refactoring/former-time-constraint.png)
+Auparavant, plusieurs règles de contrainte temporelle pouvaient être associées à un événement individuel. Avec cette mise à jour récente, la tentative d’ajout d’une contrainte temporelle à une règle entraîne désormais une **error**.
 
-Comme vous pouvez le constater, ce segment présente deux contraintes au niveau de la règle : Un pour « [!UICONTROL Aujourd’hui] » et l’autre pour « [!UICONTROL Hier] ».
+![La contrainte temporelle au niveau de la règle est mise en surbrillance. L’erreur qui se produit par la suite est également mise en surbrillance. ](../images/ui/segment-refactoring/rule-time-constraint.png)
 
-Le segment précédent est équivalent au segment suivant : les deux contraintes de temps au niveau de l’événement ont été connectées à l’aide d’un opérateur AND. La première contrainte de temps au niveau de l’événement fait référence à un événement de clic dont le nom est « Training » et qui se produit aujourd’hui, tandis que la deuxième contrainte de temps au niveau de l’événement fait référence à un événement de clic dont le nom est « Pets » et qui s’est produit hier.
+Les contraintes de temps ne peuvent désormais être appliquées qu’au niveau de la zone de travail ou de la carte.
 
-![Le nouveau style des contraintes de temps est mis en surbrillance dans le créateur de segments.](../images/ui/segment-refactoring/time-constraint-1.png) ![Le nouveau style des contraintes de temps est mis en surbrillance dans le créateur de segments.](../images/ui/segment-refactoring/time-constraint-2.png)
+Lors de l’application d’une contrainte temporelle au niveau de la zone de travail, vous pouvez toujours sélectionner toutes les contraintes temporelles disponibles.
 
-Cette refactorisation des contraintes de temps affecte également les contraintes de temps qui sont connectées à l’aide d’un opérateur OR.
+>[!NOTE]
+>
+>Si la variable **one** sur la zone de travail, l’application de la contrainte temporelle à la carte est **équivalent** pour appliquer la contrainte temporelle au niveau de la zone de travail.
+>
+>S’il existe des **multiple** sur les cartes de la zone de travail, l’application de la contrainte temporelle au niveau de la zone de travail applique cette contrainte temporelle à **all** cartes sur la zone de travail.
+
+![La contrainte temporelle au niveau de la zone de travail est mise en surbrillance.](../images/ui/segment-refactoring/canvas-time-constraint.png)
+
+Pour appliquer une contrainte temporelle au niveau de la carte, sélectionnez la carte spécifique à laquelle vous souhaitez appliquer la contrainte temporelle. La variable **[!UICONTROL Règles d’événement]** s’affiche. Vous pouvez maintenant sélectionner la contrainte temporelle à appliquer à la carte.
+
+![La contrainte temporelle au niveau de la carte est mise en surbrillance.](../images/ui/segment-refactoring/card-time-constraint.png)
