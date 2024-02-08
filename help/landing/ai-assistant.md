@@ -5,9 +5,9 @@ badge: Alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: a0395c4d3514693d3200571496eff47768da52ba
+source-git-commit: 5bdfc5282e71d05ff0db39c32fc02c60fd8d1c34
 workflow-type: tm+mt
-source-wordcount: '2183'
+source-wordcount: '2383'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 >
 >L’assistant pour Adobe Experience Platform est actuellement en Alpha. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
 
-L’assistant pour Adobe Experience Platform est une fonction de l’interface utilisateur que vous pouvez utiliser pour parcourir et comprendre les concepts d’Experience Platform et de Real-time Customer Data Platform, ainsi que les informations d’utilisation relatives à vos objets.
+L’assistant est une fonction de l’interface utilisateur que vous pouvez utiliser pour parcourir et comprendre les concepts de Adobe Experience Platform et Real-time Customer Data Platform ainsi que les informations d’utilisation relatives à vos objets.
 
 Vous pouvez interroger l’assistant pour obtenir des informations telles que :
 
@@ -26,7 +26,7 @@ Vous pouvez interroger l’assistant pour obtenir des informations telles que :
 * Statuts et mesures des objets de données existants dans votre entreprise.
 * Utilisez des exemples de cas et des nuances pour mieux comprendre vos objets de données, notamment les attributs, les jeux de données, les destinations, les schémas, les segments et les sources.
 
-Ce document fournit des informations sur l’accès et l’utilisation de l’assistant pour poser des questions et obtenir des réponses sur les concepts Experience Platform et Real-Time CDP.
+Lisez le guide ci-dessous pour savoir comment utiliser l’assistant pour vous aider à parcourir et à comprendre vos workflows Experience Platform et Real-Time CDP.
 
 >[!BEGINSHADEBOX]
 
@@ -55,85 +55,93 @@ Il existe deux catégories de questions à prendre en compte avant d’interroge
 
 >[!ENDSHADEBOX]
 
-## Assistant d’accès pour les Experience Platform dans l’interface utilisateur
+## Assistant d’accès dans l’interface utilisateur d’Experience Platform
 
-Vous pouvez accéder à l’assistant à partir de la navigation de l’en-tête dans l’interface utilisateur de l’Experience Platform.
+Pour lancer l’assistant, sélectionnez la **[!UICONTROL Icône Assistant]** dans l’en-tête supérieur de l’interface utilisateur de l’Experience Platform.
 
-Sélectionnez la variable **[!UICONTROL Icône Assistant]** de l’en-tête au panneau Assistant de lancement.
+![Page d’accueil de l’Experience Platform, avec l’icône Assistant sélectionnée et l’interface de l’assistant ouverte.](./images/ai-assistant/ai-assistant.png)
 
-![Page d’accueil de l’interface utilisateur Experience Platform avec l’icône Assistant sélectionnée.](./images/ai-assistant/ai-assistant.png)
+L’interface Assistant s’affiche, vous fournissant immédiatement des informations pour commencer. Vous pouvez utiliser les options fournies sous [!UICONTROL Idées de démarrage] pour répondre à des questions et à des commandes telles que :
 
-<!-- +++Use immersive mode
+* [!UICONTROL Quels segments sont activés ?]
+* [!UICONTROL Qu’est-ce qu’un schéma ?]
+* [!UICONTROL Indiquez-moi quelques cas d’utilisation courants pour Real-Time CDP]
 
-To use [!DNL Immersive mode] select the focus icon in the header navigation of the Assistant.
+![La section &quot;idées de prise en main&quot; de l’assistant.](./images/ai-assistant/ideas-to-get-started.png)
 
-![select-immersive](./images/ai-assistant/select-immersive.png)
+Pour interagir avec l’assistant, saisissez vos requêtes ou commandes à l’aide de la zone de saisie. Vous pouvez également utiliser la variable (**`+`**) pour utiliser la fonction de saisie semi-automatique et l’icône en forme de signet afin d’accéder à vos requêtes et commandes marquées d’un signet.
 
-A dedicated pop-up interface for Assistant appears at the center of your screen.
+![La zone de saisie de l’assistant est mise en surbrillance.](./images/ai-assistant/interact.png)
 
-![immersive-mode](./images/ai-assistant/immersive-mode.png)
-
-+++
-
-From here, you can input your question in the text box and query Assistant for concepts regarding data or audiences. You can also ask questions about your data objects to better understand how you can use them for your respective use case.  -->
-
-### Exemple de cas pratique : utilisation de l’assistant pour accélérer le processus de création de schéma {#example-use-case}
+## Exemple de cas pratique : utilisation de l’assistant pour accélérer le processus de création de schéma
 
 >[!NOTE]
 >
->L’exemple de workflow suivant utilise le processus de création de schémas ExperienceEvent pour illustrer l’utilisation de l’assistant lors de l’utilisation de l’interface utilisateur Experience Platform.
+>Le workflow suivant est un exemple qui utilise le processus de création de schémas d’événements d’expérience pour illustrer l’utilisation de l’assistant lors de l’utilisation de l’interface utilisateur d’Experience Platform.
 
-Prenons un cas d’utilisation où vous créez une **Commerce des périphériques dans le schéma d’événement**. Au cours du processus de création de schéma ExperienceEvent, vous rencontrez le `eventType` champ . À ce stade, vous pouvez quitter votre workflow et consulter la documentation de la section [principes de base de la composition d’un schéma](../xdm/schema/composition.md)ou vous pouvez utiliser l’assistant pour obtenir des réponses immédiates à vos questions.
+Prenons un cas d’utilisation où vous créez une **Commerce des périphériques dans le schéma d’événement**. Au cours du processus de création de schéma d’événement d’expérience, vous rencontrez le `eventType` champ . &quot;À ce stade, vous avez la possibilité de quitter votre workflow et de vous reporter à la section [principes de base de la composition d’un schéma](../xdm/schema/composition.md) ou vous pouvez utiliser l’assistant pour obtenir des réponses à vos questions et trouver des ressources supplémentaires grâce aux liens vers la documentation recommandés par l’assistant.&quot;
 
 Pour commencer, saisissez votre question dans la zone de texte fournie à cet effet. Dans l’exemple ci-dessous, l’assistant répond à la question suivante : &quot;**Quel est le champ eventType dans un schéma ExperienceEvent ?**&quot;
 
-![L’assistant de l’Experience Platform avec la question suivante est préparé pour l’interrogation : &quot;Quel est le champ eventType dans un schéma ExperienceEvent ?](./images/ai-assistant/question.png)
+![Assistant d’Experience Platform avec la question suivante, préparé pour interrogation : &quot;Quel est le champ eventType dans un schéma ExperienceEvent ?](./images/ai-assistant/question.png)
 
 L&#39;assistant interroge ensuite sa base de connaissances et calcule une réponse. Après quelques instants, l’assistant renvoie une réponse et des suggestions associées que vous pouvez utiliser comme invites de suivi.
 
-Une réponse donnée fournit des liens hypertexte vers les entités référencées. Dans l’exemple ci-dessous, sélectionnez **[!UICONTROL Schémas]** pour afficher la liste des schémas référencés, ou **[!UICONTROL Segments]** pour afficher la liste des segments référencés.
-
 ![Assistant d’Experience Platform avec une réponse à la requête précédente.](./images/ai-assistant/answer.png)
 
-L’assistant vous permet de valider votre réponse en affichant sa source. Les liens vers la documentation sont fournis pour les questions de concept, tandis que les questions d’utilisation des données peuvent être vérifiées avec une requête SQL qui montre comment la réponse a été calculée.
+Après avoir reçu une réponse de l’assistant, vous pouvez choisir parmi plusieurs options pour décider comment procéder.
 
-![Options fournies par l’assistant après le renvoi d’une réponse.](./images/ai-assistant/options.png)
+### Enregistrer votre requête {#save-your-query}
 
-### Question de relance {#follow-up-question}
++++Sélectionner pour afficher un exemple d’enregistrement d’une requête
 
-+++Sélectionner pour afficher un exemple de question de relance
+Pour enregistrer votre requête, sélectionnez l’icône de signet en regard de votre question.
 
-Vous pouvez en savoir plus sur un sujet particulier en posant une question suivante. Dans l’exemple suivant, on demande à l’assistant comment eventType peut être utilisé dans la segmentation.
+![Capture d’écran d’un signet sélectionné.](./images/ai-assistant/save-your-query.png)
 
-![Une question et une réponse s’affichent ensuite dans l’assistant d’Experience Platform.](./images/ai-assistant/follow-up-question.png)
+Pour accéder à vos requêtes enregistrées, sélectionnez l’icône de signet située sous la zone de saisie, puis sélectionnez la requête que vous souhaitez exécuter.
 
-+++
-
-### Question d’utilisation des données {#data-usage-question}
-
-+++Sélectionner pour afficher un exemple de question d’utilisation des données
-
-Vous pouvez également poser des questions à l’assistant concernant l’utilisation de vos données. Pour toute question concernant l’utilisation des données, vous devez être dans un environnement de test actif afin que l’assistant puisse répondre à votre requête.
-
-Pour les réponses qui impliquent des informations sur l’utilisation des données, l’assistant fournit des liens vers les entités en question. En outre, l’assistant vous fournit une explication sur la façon dont il a calculé sa réponse.
-
-![Une question sur l’utilisation des données, qui demande combien de segments un utilisateur possède.](./images/ai-assistant/data-usage-question.png)
+![Capture d’écran de l’icône de signet d’une liste de requêtes enregistrées.](./images/ai-assistant/bookmarks.png)
 
 +++
 
-### Multi-tour {#multi-turn}
+### Affichage des données dans votre environnement de test {#view-data-in-your-sandbox}
 
-+++Sélectionner pour afficher un exemple de multi-tour
++++Sélectionner pour afficher l’exemple
 
-Vous pouvez utiliser les fonctionnalités à plusieurs volets de l’assistant pour avoir une conversation plus naturelle au cours de votre expérience. L’assistant peut répondre à des questions de suivi, étant donné que le contexte peut être déduit d’une interaction antérieure.
+Selon votre requête, l’assistant fournit des informations supplémentaires concernant les données de votre environnement de test. Pour voir comment la réponse à votre requête s’applique à votre environnement de test, sélectionnez **[!UICONTROL Dans votre environnement de test].**
 
-Dans l’exemple ci-dessous, l’assistant est invité à répertorier les segments existants dans l’organisation, comme suite à une requête antérieure sur le nombre total de segments.
+Au cours de cette étape, l’assistant peut fournir des liens directs vers les pages de l’interface utilisateur de certains objets en question. Dans l’exemple ci-dessous, l’assistant fournit des liens directs vers la fonction [!UICONTROL Schémas] et [!UICONTROL Segments] Pages de l’interface utilisateur.
 
-![](./images/ai-assistant/multi-turn-one.png)
+![Capture d’écran de l’option &quot;Dans votre environnement de test&quot;.](./images/ai-assistant/in-your-sandbox.png)
 
-Ensuite, l’assistant reçoit une autre demande de suivi. Cette fois-ci, l’assistant répond en répertoriant les segments existants classés selon leur taille respective.
++++
 
-![](./images/ai-assistant/multi-turn-two.png)
+### Vérification de la réponse {#verify-the-response}
+
++++Sélectionner pour afficher un exemple d’affichage des sources
+
+Pour afficher les citations et valider la réponse de l’assistant, sélectionnez **[!UICONTROL Afficher les sources]**. L’assistant fournit des liens vers la documentation qui corroborent sa réponse. Vous pouvez également utiliser les requêtes fournies par l’assistant sous [!UICONTROL Suggestions connexes] pour explorer plus en détail les sujets liés à votre requête d’origine.
+
+![Capture d&#39;écran de &quot;Show sources&quot;.](./images/ai-assistant/show-sources.png)
+
++++
+
+### Utilisation et visualisation des données {#data-usage-and-visualization}
+
++++Sélectionner pour afficher un exemple de questions d’utilisation des données et de visualisation des données
+
+Renseignez-vous auprès de l’assistant pour en savoir plus sur l’utilisation des données. Vous devez être dans un environnement de test actif pour que l’assistant puisse répondre à une question sur l’utilisation des données concernant les données de votre entreprise.
+
+![Suivez la question sur l’utilisation des données.](./images/ai-assistant/data-usage-question.png)
+
+Lorsque vous y êtes invité avec une question sur l’utilisation des données, l’assistant fournit également une explication de la manière dont il a calculé la réponse. Dans l’exemple ci-dessous, l’assistant décrit les étapes à suivre pour afficher les segments comportant plus de 1 000 profils et leur état d’activation respectif.
+
+![Suivez la question sur les segments illustrant comment l’assistant a calculé la réponse.](./images/ai-assistant/results-explained.png)
+
+En outre, l’assistant génère des graphiques pour visualiser vos données. Vous pouvez également fournir des filtres et des modifications à vos requêtes, et vous pouvez demander à l’assistant de rendre ses résultats en fonction des filtres que vous incluez. Vous pouvez, par exemple, demander à l’assistant de vous afficher une tendance des segments de comptage dans l’ordre de leur date de création, supprimer les segments avec zéro total de profils et utiliser des noms de mois plutôt que des entiers lors de l’affichage des données.
+
+![Suivez la question illustrant la visualisation des données.](./images/ai-assistant/data-visualization.png)
 
 +++
 
@@ -143,13 +151,29 @@ Ensuite, l’assistant reçoit une autre demande de suivi. Cette fois-ci, l’as
 
 Vous pouvez utiliser la fonction de saisie semi-automatique pour recevoir la liste des objets de données qui existent dans votre environnement de test. Les recommandations de saisie semi-automatique sont disponibles pour les domaines suivants : segments, schémas, jeux de données, sources et destinations.
 
-Pour utiliser la saisie automatique, saisissez un symbole plus (**`+`**) dans le cadre de votre question. Vous pouvez également sélectionner le symbole plus (**`+`**) dans la zone de saisie de texte. Ensuite, une fenêtre s’affiche avec une liste des objets de données recommandés présents dans votre environnement de test.
+Vous pouvez utiliser la saisie automatique en incluant le symbole plus (**`+`**) dans votre requête. Vous pouvez également sélectionner le signe plus (**`+`**) située au bas de la zone de saisie de texte. Une fenêtre s’affiche avec une liste des objets de données recommandés de votre environnement de test.
 
-![](./images/ai-assistant/autocomplete-options.png)
+![Exemple de saisie automatique](./images/ai-assistant/auto-complete-one.png)
 
 Sélectionnez ensuite l&#39;objet de données à interroger pour terminer votre question, puis envoyez votre question.
 
-![](./images/ai-assistant/autocomplete-question.png)
+![Exemple de saisie semi-automatique avec question et réponse](./images/ai-assistant/auto-complete-two.png)
+
++++
+
+### Utiliser le multi-tour {#use-multi-turn}
+
++++Sélectionner pour afficher un exemple de multi-tour
+
+Vous pouvez utiliser les fonctionnalités à plusieurs volets de l’assistant pour avoir une conversation plus naturelle au cours de votre expérience. L’assistant peut répondre aux questions de suivi, si besoin est. ce contexte peut être déduit d’une interaction antérieure.
+
+Dans l’exemple ci-dessous, l’assistant est invité à indiquer le nombre total de flux de données dans l’organisation actuelle.
+
+![Exemple de multi-tour](./images/ai-assistant/multi-turn-one.png)
+
+Ensuite, l’assistant reçoit une autre demande de suivi. Cette fois, l’assistant répond en répertoriant les flux de données qui existent actuellement dans votre organisation.
+
+![Exemple de multi-tour avec question et réponse](./images/ai-assistant/multi-turn-two.png)
 
 +++
 
@@ -195,18 +219,6 @@ Vous devrez vous connecter à un environnement de test pour obtenir des informat
 | Recherche d’objet | Récupérez ou accédez à un objet Experience Platform ou à ses propriétés. | <ul><li>Les jeux de données auxquels aucun schéma n’est associé</li><li>Liste des attributs utilisés pour {SEGMENT_NAME}?</li><li>Indiquez-moi la liste des schémas dont le profil est activé mais qui n’ont pas été modifiés depuis leur création.</li><li>Quels segments ont été modifiés la semaine dernière ?</li><li>Listez-moi les segments qui ont les mêmes définitions de segment avec leur date de création.</li><li>Les jeux de données activés pour le profil et incluant le nombre de segments créés à partir de chaque jeu de données.</li><li>Quels comptes sources sont associés au jeu de données XYZ ?</li><li>M’afficher la date de définition et de modification du segment de {SEGMENT_NAME}.</li></ul> |
 
 +++
-
-## Vérification de la réponse {#verify-the-response}
-
-Vous pouvez vérifier la réponse renvoyée par l’assistant de différentes manières.
-
-### Citations pour la documentation {#citations}
-
-À chaque réponse, l’assistant vous fournit des citations auxquelles vous pouvez vous référer à des fins de vérification ou d’informations supplémentaires.
-
-Sélectionner **[!UICONTROL Afficher la source]** pour obtenir la liste des liens vers la documentation à laquelle l’assistant référence pour calculer sa réponse. Lorsque vous sélectionnez un lien vers la documentation référencée, vous accédez à la section correspondante de cette page, avec les informations spécifiques en surbrillance.
-
-![Liens vers la source affichée dans l’assistant.](./images/ai-assistant/show-sources.png)
 
 ## Fournir des commentaires {#feedback}
 
