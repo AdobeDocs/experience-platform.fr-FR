@@ -2,10 +2,10 @@
 title: Point de terminaison de l’API des modules d’outils Sandbox
 description: Le point de terminaison /packages de l’API Sandbox Tooling vous permet de gérer les packages par programmation dans Adobe Experience Platform.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 8ff9c50b4999a49413f8c45274815225ba58361c
 workflow-type: tm+mt
-source-wordcount: '1553'
-ht-degree: 9%
+source-wordcount: '1531'
+ht-degree: 8%
 
 ---
 
@@ -493,7 +493,7 @@ GET /packages/?{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --- | --- |
-| {QUERY_PARAMS} | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Voir la section sur [paramètres de requête](./appendix.md) pour plus d’informations. |
+| {QUERY_PARAMS} | Paramètres de requête facultatifs pour filtrer les résultats. Voir la section sur [paramètres de requête](./appendix.md) pour plus d’informations. |
 
 **Requête**
 
@@ -747,11 +747,11 @@ POST /packages/import
 
 **Requête**
 
-La requête suivante récupère le module à l’aide de la fonction {PACKAGE_ID} fourni. La payload est une carte des substitutions où, si une entrée existe, la clé est la `artifactId` fourni par le package et l’alternative est la valeur . Si la carte ou la charge utile est **empty**, aucune substitution n’est effectuée.
+La requête suivante récupère les packages à importer. La payload est une carte des substitutions où, si une entrée existe, la clé est la `artifactId` fourni par le package et l’alternative est la valeur . Si la carte ou la charge utile est **empty**, aucune substitution n’est effectuée.
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
+  https://platform.adobe.io/data/foundation/exim/packages/import/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -775,7 +775,6 @@ curl -X POST \
 
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
-| `id` | L’identifiant du package. | Chaîne | Oui |
 | `alternatives` | `alternatives` représente le mappage des artefacts sandbox source aux artefacts sandbox cible existants. Comme elles sont déjà présentes, la tâche d’importation évite de créer ces artefacts dans l’environnement de test cible. | Chaîne | Non |
 
 **Réponse**
@@ -1039,7 +1038,7 @@ GET /packages/jobs?{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --- | --- |
-| {QUERY_PARAMS} | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Voir la section sur [paramètres de requête](./appendix.md) pour plus d’informations. |
+| {QUERY_PARAMS} | Paramètres de requête facultatifs pour filtrer les résultats. Voir la section sur [paramètres de requête](./appendix.md) pour plus d’informations. |
 
 **Requête**
 
