@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation dʼIdentity Service
 description: Adobe Experience Platform Identity Service vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: ed2c9824d4c2f7bf8dd6a2f8431e93fe833c899c
 workflow-type: tm+mt
-source-wordcount: '1554'
-ht-degree: 8%
+source-wordcount: '1560'
+ht-degree: 9%
 
 ---
 
@@ -32,11 +32,11 @@ Avant de vous plonger dans les détails d’Identity Service, veuillez lire le t
 | Terme | Définition |
 | --- | --- |
 | Identité | Une identité est une donnée propre à une entité. En règle générale, il s’agit d’un objet réel, tel qu’une personne, un périphérique matériel ou un navigateur web (représenté par un cookie). Une identité entièrement qualifiée se compose de deux éléments : une **espace de noms d’identité** et un **valeur d’identité**. |
-| Espace de noms d’identité | Un espace de noms d’identité est le contexte d’une identité donnée. Par exemple, un espace de noms `Email` peut correspondre à **julien<span>@acme.com**. De même, un espace de noms de `Phone` peut correspondre à `555-555-1234`. Pour plus d’informations, consultez la section [présentation de l’espace de noms d’identité](./features/namespaces.md) |
+| Espace de noms d’identité | Un espace de noms d’identité est le contexte d’une identité donnée. Par exemple, un espace de noms `Email` peut correspondre à la valeur d’identité : **julien<span>@acme.com**. De même, un espace de noms de `Phone` peut correspondre à la valeur d’identité : `555-555-1234`. Pour plus d’informations, consultez la section [présentation de l’espace de noms d’identité](./features/namespaces.md). |
 | Valeur de l’identité | Une valeur d’identité est une chaîne qui représente une entité du monde réel et qui est classée dans Identity Service par le biais d’un espace de noms. Par exemple, la valeur d’identité (chaîne) **julien<span>@acme.com** peut être classé comme `Email` espace de noms. |
 | Type d’identité | Un type d’identité est un composant d’un espace de noms d’identité. Le type d’identité indique si les données d’identité sont liées ou non dans un graphique d’identités. |
 | Lien | Un lien ou une liaison est une méthode permettant d’établir que deux identités disparates représentent la même entité. Par exemple, un lien entre &quot;`Email` = julien<span>@acme.com&quot; et &quot;`Phone` = 555-555-1234&quot; signifie que les deux identités représentent la même entité. Cela suggère que le client qui a interagi avec votre marque avec l’adresse email de julien<span>@acme.com et le numéro de téléphone de 555-555-1234 est le même. |
-| Identity Service | Identity Service est un service d’Experience Platform qui lie (ou annule les liens) les identités pour gérer les graphiques d’identités. |
+| Service d’identités | Identity Service est un service d’Experience Platform qui lie (ou annule les liens) les identités pour gérer les graphiques d’identités. |
 | Graphique d’identités | Le graphique d’identités est un ensemble d’identités qui représentent un seul client. Pour plus d’informations, consultez le guide sur [utilisation de la visionneuse de graphiques d’identités](./features/identity-graph-viewer.md). |
 | Profil client en temps réel | Real-Time Customer Profile est un service de Adobe Experience Platform qui : <ul><li>Fusionne des fragments de profil pour créer un profil, sur la base d’un graphique d’identités.</li><li>Segmente les profils afin qu’ils puissent ensuite être envoyés à la destination pour les activations.</li></ul> |
 | Profile | Un profil est une représentation d’un sujet, d’une organisation ou d’un individu. Un profil est composé de quatre éléments : <ul><li>Attributs : les attributs fournissent des informations telles que le nom, l’âge ou le sexe.</li><li>Comportement : les comportements fournissent des informations sur les activités d’un profil donné. Par exemple, un comportement de profil peut déterminer si un profil donné &quot;recherchait des sandales&quot; ou &quot;commandait des t-shirts&quot;.</li><li>Identités : pour un profil fusionné, cette option fournit des informations sur toutes les identités associées à la personne. Les identités peuvent être classées en trois catégories : Personne (CRMID, email, téléphone), appareil (IDFA, GAID) et cookie (ECID, AAID).</li><li>Adhésions à l’audience : groupes auxquels le profil appartient (utilisateurs fidèles, utilisateurs résidant en Californie, etc.)</li></ul> |
