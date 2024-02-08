@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension de couche de données Google
 description: Notes de mise à jour les plus récentes pour l’extension de balise de la couche de données Google dans Adobe Experience Platform.
 exl-id: 740b6e3a-d469-475d-9523-03b0b48b11c8
-source-git-commit: 0b9fa104777f21fc9bc893784ae3155d887a48d2
+source-git-commit: c1bad7d5414e62f4d77f7d5903f4b2bf4d9081f8
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 1%
+source-wordcount: '265'
+ht-degree: 5%
 
 ---
 
@@ -37,3 +37,7 @@ Une amélioration significative et une version de correctif de bogues résultant
 * Correction d’un bogue qui provoquait une erreur lors de l’enregistrement d’un élément de données dans certains cas.
 * Ajoute une documentation à la boîte de dialogue d’événement expliquant l’utilisation de l’objet d’événement Balises.
 * Ajoute un avertissement à propos des boucles infinies dans la boîte de dialogue d’événement.
+
+## Version 1.2.2
+
+* Ajoute la prise en charge des événements gtag() Google Analytics.

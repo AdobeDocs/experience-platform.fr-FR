@@ -2,22 +2,18 @@
 title: Extension de couche de données Google
 description: Découvrez l’extension de balise de la couche de données client Google dans Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: 9c608f69f6ba219f9cb4e938a77bd4838158d42c
+source-git-commit: c61afdc2c3df98a0ef815d7cb034ba2907c52908
 workflow-type: tm+mt
-source-wordcount: '867'
-ht-degree: 15%
+source-wordcount: '937'
+ht-degree: 12%
 
 ---
 
 # Extension de la couche de données Google
 
-L’extension de la couche de données Google vous permet d’utiliser une couche de données Google lorsque vous implémentez des balises. L’extension peut être utilisée indépendamment ou simultanément avec les solutions Google et avec Google open source [Bibliothèque d’assistance de couche de données](https://github.com/google/data-layer-helper).
+L’extension de couche de données Google vous permet d’utiliser une couche de données Google dans votre implémentation des balises. L’extension peut être utilisée indépendamment ou simultanément avec les solutions Google et avec Google open source [Bibliothèque d’assistance de couche de données](https://github.com/google/data-layer-helper).
 
-La bibliothèque d’assistance fournit des fonctionnalités similaires, pilotées par des événements, au lecteur de données client Adobe (ACDL). Les éléments de données, les règles et les actions de l’extension de la couche de données Google fournissent des fonctionnalités similaires à celles du [Extension ACDL](../client-data-layer/overview.md).
-
-## Maturité
-
-La version 1.2.x est une version bêta tardive en cours d’utilisation en production.
+La bibliothèque d’assistance fournit des fonctionnalités similaires, pilotées par des événements, à la couche de données client Adobe (ACDL). Les éléments de données, les règles et les actions de l’extension de la couche de données de Google fournissent des fonctionnalités similaires à celles de la variable [Extension ACDL](../client-data-layer/overview.md).
 
 ## Installation
 
@@ -29,7 +25,7 @@ Une fois installée, l’extension crée ou accède à une couche de données à
 
 La configuration de l’extension peut être utilisée pour définir le nom de la couche de données utilisée par l’extension. Si aucune couche de données avec le nom configuré n’est présente lors du chargement des balises Adobe Experience Platform, l’extension en crée une.
 
-La valeur par défaut du nom de couche de données est le nom par défaut de Google. `dataLayer`.
+Le nom de couche de données par défaut est le nom par défaut de Google. `dataLayer`.
 
 >[!NOTE]
 >
@@ -44,15 +40,24 @@ La valeur par défaut du nom de couche de données est le nom par défaut de Goo
 > - Événements JavaScript.
 > - Données transmises à la couche de données avec la variable _event_ mot-clé.
 
-
 L’extension vous permet d’écouter les modifications apportées à la couche de données.
 
 >[!NOTE]
 >
->Il est important de comprendre l’utilisation de la variable _event_ mot-clé lorsque des données sont transmises à une couche de données Google, comme la couche de données client Adobe. Le _event_ change le comportement de la couche de données Google et donc de cette extension.\
+>Il est important de comprendre l’utilisation de la variable _event_ mot-clé lorsque des données sont transmises à une couche de données Google, comme la couche de données client Adobe. La variable _event_ change le comportement de la couche de données Google et donc de cette extension.\
 > Veuillez lire la documentation de Google ou effectuer des recherches si vous n’êtes pas sûr de ce point.
 
-### Prêtez attention à toutes les transmissions vers la couche de données
+### Types d’événement Google
+
+Google prend en charge deux moyens de pousser les événements : Google Tag Manager, à l’aide de la méthode `push()` et les Google Analytics 4, à l’aide de la méthode `gtag()` .
+
+Les versions de l’extension de la couche de données Google antérieures à la version 1.2.1 ne prenaient en charge que les événements créés par `push()`, comme illustré dans les exemples de code de cette page.
+
+Événements de prise en charge 1.2.1 et versions ultérieures créés à l’aide de `gtag()`.  Cette option est facultative et peut être activée dans la boîte de dialogue Configuration de l’extension .
+
+Pour plus d’informations sur `push()` et `gtag()` , voir [Documentation Google](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  Des informations sont également fournies dans les boîtes de dialogue de configuration et de règle de l’extension.
+
+### Écoute de toutes les transmissions vers la couche de données
 
 Si vous sélectionnez cette option, votre écouteur d’événement écoute toute modification apportée à la couche de données.
 
@@ -113,19 +118,19 @@ dataLayer.push({"event":"myEvent2"})
 
 ### Push to Data Layer (Envoi vers couche de données) {#push-to-data-layer}
 
-L’extension vous fournit deux actions pour envoyer JSON vers la couche de données ; un champ de texte libre pour créer manuellement le fichier JSON à transmettre, et à partir de la version 1.2.0, une boîte de dialogue multichamp de valeur clé.
+L’extension vous fournit deux actions pour pousser JSON vers la couche de données ; un champ de texte libre pour créer manuellement le JSON à transmettre, et à partir de la version 1.2.0, une boîte de dialogue multichamp valeur-clé.
 
 #### JSON de texte libre
 
-L’action de texte libre permet d’utiliser des éléments de données directement dans le fichier JSON. Dans l’éditeur JSON, les éléments de données doivent être référencés à l’aide de la notation de pourcentage. Par exemple : `%dataElementName%`.
+L’action de texte libre permet d’utiliser des éléments de données directement dans le fichier JSON. Dans l’éditeur JSON, les éléments de données doivent être référencés à l’aide de la notation de pourcentage. Par exemple : `%dataElementName%`.
 
 ```json
 {
-    "page": {
-        "url": "%url%",
-        "previous_url": "%previous_url%",
-        "concatenated_values": "static string %dataElement%"
-    }
+  "page": {
+    "url": "%url%",
+    "previous_url": "%previous_url%",
+    "concatenated_values": "static string %dataElement%"
+  }
 }
 ```
 
