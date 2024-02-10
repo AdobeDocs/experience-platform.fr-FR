@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de Query Service
 description: Découvrez le rôle de Query Service dans Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: ad1827284b7070f73421d10c49e1e86e282839eb
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 25%
+source-wordcount: '860'
+ht-degree: 20%
 
 ---
 
@@ -21,7 +21,16 @@ Vous pouvez utiliser Query Service pour connecter le parcours client en ligne à
 
 ## Utilisation de Query Service {#usage}
 
-Pour analyser vos données, vous pouvez utiliser l’interface utilisateur de Query Service et une API RESTful, à partir de laquelle vous pouvez créer des requêtes SQL. L’interface utilisateur vous permet d’écrire et d’exécuter des requêtes, de visualiser des requêtes précédemment exécutées et d’accéder à des requêtes enregistrées par des utilisateurs et utilisatrices au sein de votre organisation. Vous pouvez utiliser l’éditeur de requêtes comme un environnement de test pour tester vos requêtes avant de les exécuter sur votre jeu de données plus vaste. Voir [Guide de l’interface utilisateur de Query Service](ui/overview.md) pour plus d’informations sur l’utilisation de l’interface utilisateur. L’API RESTful offre une expérience similaire. Vous pouvez utiliser l’API Query Service pour écrire et exécuter des requêtes par programmation, planifier des requêtes pour une utilisation et une répétition futures, ainsi que créer des modèles pour les requêtes que vous souhaitez écrire. Pour plus d’informations sur l’utilisation de l’API de Query Service, reportez-vous au [guide de développement de Query Service](api/getting-started.md).
+Pour analyser vos données, créez et exécutez des requêtes SQL avec l’interface utilisateur de Query Service ou l’API RESTful.
+Grâce à l’interface utilisateur de Query Service, vous pouvez écrire, exécuter et planifier des requêtes, afficher les requêtes précédemment exécutées et accéder aux requêtes enregistrées par les utilisateurs de votre entreprise. Vous pouvez également tester vos requêtes avant de les exécuter sur votre jeu de données plus large à l’aide de Query Editor. Voir [Guide de l’interface utilisateur de Query Service](ui/overview.md) pour un aperçu de la fonctionnalité de l’interface utilisateur.
+
+L’API RESTful offre une expérience similaire. Vous pouvez utiliser l’API Query Service pour écrire et exécuter des requêtes par programmation, créer et enregistrer des modèles pour les requêtes que vous souhaitez adapter ou planifier des requêtes pour une exécution automatisée. Voir [Guide de développement de Query Service](api/getting-started.md) pour plus d’informations sur l’utilisation de l’API Query Service.
+
+Pour commencer rapidement à utiliser les fonctionnalités de Query Service, il est recommandé de lire les documents suivants :
+
+- [Directives générales pour l’exécution des requêtes](./best-practices/writing-queries.md)
+- [Syntaxe SQL dans Query Service](./sql/syntax.md)
+- [Création de jeux de données dérivés avec SQL](./data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
 ## Query Service et services Experience Platform {#experience-platform-services}
 

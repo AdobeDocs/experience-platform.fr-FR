@@ -4,10 +4,10 @@ user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
-source-git-commit: fbb627787580c6a4ffd1deb0009105f1ba821b6f
+source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 84%
+source-wordcount: '315'
+ht-degree: 83%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 84%
    - [Utilisation des licences](data-distiller/license-usage.md)
    - Jeux de données dérivés {#derived-datasets}
       - [Vue d’ensemble](data-distiller/derived-datasets/overview.md)
-      - [Flux SQL transparent](data-distiller/derived-datasets/seamless-sql-flow.md)
+      - [Création de jeux de données dérivés avec SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [Création de jeux de données dérivés basés sur des déciles](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - Informations personnalisables pour la création de rapports d’application étendue {#customizable-insights}
       - [Vue d’ensemble](data-distiller/customizable-insights/overview.md)
