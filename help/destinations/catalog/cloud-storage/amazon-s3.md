@@ -5,7 +5,7 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 source-git-commit: c126e6179309ccfbedfbfe2609cfcfd1ea45f870
 workflow-type: tm+mt
 source-wordcount: '1354'
-ht-degree: 48%
+ht-degree: 53%
 
 ---
 
@@ -72,7 +72,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**. La destination Amazon S3 prend en charge deux méthodes d’authentification :
 
 * Authentification par clé d’accès et clé secrète
-* Authentification par rôle supposé
+* Authentification du rôle assumé
 
 #### Authentification par clé d’accès et clé secrète
 
@@ -85,12 +85,12 @@ Utilisez cette méthode d’authentification lorsque vous souhaitez saisir votre
 
   ![Image illustrant un exemple de clé PGP correctement formatée dans l’interface utilisateur.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### Rôle supposé {#assumed-role-authentication}
+#### Rôle assumé {#assumed-role-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
->title="Authentification par rôle supposé"
->abstract="Utilisez ce type d’authentification si vous préférez ne pas partager les clés de compte et les clés secrètes avec Adobe. Experience Platform se connecte plutôt à votre emplacement Amazon S3 à l’aide d’un accès basé sur les rôles. Collez l’ARN du rôle que vous avez créé dans AWS pour l’utilisateur Adobe. Le modèle est similaire à `arn:aws:iam::800873819705:role/destinations-role-customer` "
+>title="Authentification du rôle assumé"
+>abstract="Utilisez ce type d’authentification si vous préférez ne pas partager les clés de compte et les clés secrètes avec Adobe. Au lieu de cela, Experience Platform se connecte à votre emplacement Amazon S3 en utilisant un accès basé sur les rôles. Collez l’ARN (nom de ressource Amazon) du rôle que vous avez créé dans AWS pour l’utilisateur ou l’utilisatrice Adobe. Le modèle est similaire à `arn:aws:iam::800873819705:role/destinations-role-customer`. "
 
 ![Image des champs requis lors de la sélection de l’authentification de rôle assumé.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
