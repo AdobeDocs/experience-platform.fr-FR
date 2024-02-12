@@ -3,10 +3,10 @@ title: Exportation de jeux de données vers des destinations de stockage dans le
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: c4169d9371d329e445db7c83820b870ccbba238b
+source-git-commit: 4d662bc8ec8729654589c8675c5e598b94957ed7
 workflow-type: tm+mt
-source-wordcount: '1739'
-ht-degree: 53%
+source-wordcount: '1838'
+ht-degree: 51%
 
 ---
 
@@ -52,6 +52,11 @@ Identifiez dans le tableau ci-dessous les types de jeux de données que vous pou
   <tr>
     <td>Ultimate</td>
     <td>Voir <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a> la documentation.</td>
+  </tr>
+  <tr>
+    <td>Customer Journey Analytics</td>
+    <td>Toutes</td>
+    <td> Jeux de données Profile et Experience Event créés dans l’interface utilisateur de l’Experience Platform après ingestion ou collecte de données par le biais de sources, SDK web, SDK mobile, Analytics Data Connector et Audience Manager. Découvrez les autorisations requises dans la section <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/cja-access-control.html#product-admin-additional-permissions"> Documentation du Customer Journey Analytics</a>.  <br> <b>Remarque sur la disponibilité :</b> La possibilité d’exporter des jeux de données vers le cloud se trouve dans la phase de test limité de la version et peut ne pas encore être disponible dans votre environnement. Cette note sera supprimée lorsque la fonctionnalité sera disponible. Pour plus d’informations sur le processus de mise à jour du Customer Journey Analytics, voir <a href="https://experienceleague.adobe.com/docs/analytics-platform/using/releases/releases.html"> Versions des fonctionnalités de Customer Journey Analytics</a>. </td>
   </tr>
   <tr>
     <td>Distiller de données</td>
