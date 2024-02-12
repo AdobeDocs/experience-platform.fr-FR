@@ -4,10 +4,10 @@ title: Solutions d’accessibilité personnalisées pour Experience Platform
 type: Documentation
 description: En savoir plus sur les solutions d’accessibilité personnalisées dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: 2cf28acb5b0ddb4965b2d5120333659e0ac460bf
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 94%
+source-wordcount: '1663'
+ht-degree: 92%
 
 ---
 
@@ -76,13 +76,13 @@ Vous pouvez également naviguer dans la boîte de dialogue de la vidéo intégr�
 
 Dans Experience Platform, toutes les zones de glisser-déposer de sélection de fichier sont accessibles à l’aide du clavier. L’utilisation de la touche de **tabulation** pour mettre en surbrillance le bouton **[!UICONTROL Choisir des fichiers]** ainsi que l’utilisation de la touche **Entrée ou de la barre d’espacement** afin de le sélectionner invoquent l’interface utilisateur de sélection de fichier du système d’exploitation.
 
-Une fois le fichier transféré, une icône de suppression devient accessible à l’aide du clavier. Cela permet de supprimer le fichier sélectionné et d’en transférer un nouveau. Les utilisateurs peuvent utiliser la touche de **tabulation** pour placer le focus sur l’icône de suppression, puis appuyer sur **Entrée ou la barre d’espacement** pour la sélectionner. Une fois le fichier supprimé, le focus se trouve automatiquement sur le bouton **[!UICONTROL Choisir des fichiers]**, qui peut être sélectionné.
+Une fois le fichier chargé, une icône de suppression devient accessible à l’aide du clavier. Cela permet de supprimer le fichier sélectionné et d’en charger un nouveau. Les utilisateurs peuvent utiliser la touche de **tabulation** pour placer le focus sur l’icône de suppression, puis appuyer sur **Entrée ou la barre d’espacement** pour la sélectionner. Une fois le fichier supprimé, le focus se trouve automatiquement sur le bouton **[!UICONTROL Choisir des fichiers]**, qui peut être sélectionné.
 
-Si le fichier transféré n’est pas au bon format, une icône d’erreur apparaît accompagnée d’un message d’erreur. Le focus se trouve alors sur le bouton **[!UICONTROL Choisir des fichiers]**, qui peut être sélectionné.
+Si le fichier chargé n’est pas au bon format, une icône d’erreur apparaît accompagnée d’un message d’erreur. Le focus se trouve alors sur le bouton **[!UICONTROL Choisir des fichiers]**, qui peut être sélectionné.
 
 ![Zone de glisser-déposer de fichier avec un message d’erreur et focus sur le bouton Choisir des fichiers.](images/drag-and-drop.png)
 
-Sélectionner une zone de glisser-déposer à l’aide de la souris invoque également l’interface utilisateur de sélection de fichier. Par ailleurs, l’utilisateur peut sélectionner un fichier et le faire glisser sur la zone pour démarrer le transfert.
+Sélectionner une zone de glisser-déposer à l’aide de la souris invoque également l’interface utilisateur de sélection de fichier. Par ailleurs, l’utilisateur peut sélectionner un fichier et le faire glisser sur la zone pour démarrer le chargement.
 
 ![Focus sur la zone de glisser-déposer de fichier lorsqu’un utilisateur fait glisser un fichier dans la zone avec la souris.](images/drag-and-drop-mouse-over.png)
 
@@ -142,6 +142,10 @@ Les fonctionnalités d’accessibilité suivantes sont disponibles dans l’édi
 
 * Le contraste des couleurs dans l’interface utilisateur de l’éditeur de Query Service respecte la conformité en matière d’accessibilité.
 * La navigation au clavier est prise en charge en dehors de l’interface utilisateur de l’éditeur. L’interface utilisateur de l’éditeur est un miroir de code incorporé.
+
+>[!NOTE]
+>
+>L’éditeur de requêtes ne gère pas la variable **Onglet** clé par défaut. Pour appeler **Onglet** lorsque vous vous trouvez dans l’éditeur, vous devez appuyer sur la touche **Échappement** appuyez sur , puis appuyez sur **Onglet** directement après. Presse **Onglet** une fois de plus, pour déplacer l’accent au-delà de l’éditeur.
 
 ## Onglet Vue du système dans Sources et Destinations
 
