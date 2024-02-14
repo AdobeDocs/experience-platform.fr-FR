@@ -3,9 +3,9 @@ title: Exportation de jeux de données vers des destinations de stockage dans le
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 2fd721084ff8b3cf24b585a2179b1efe34de4c83
+source-git-commit: 1881e66c795c548bac08e09b4ec00852fdbc51c3
 workflow-type: tm+mt
-source-wordcount: '1826'
+source-wordcount: '1849'
 ht-degree: 51%
 
 ---
@@ -239,3 +239,4 @@ Gardez à l’esprit les limites suivantes relatives à la disponibilité géné
 * Les jeux de données créés via l’API ne sont actuellement pas disponibles pour l’exportation.
 * Actuellement, l’interface utilisateur ne vous empêche pas de supprimer un jeu de données en cours d’exportation vers une destination. Ne supprimez aucun jeu de données en cours d’exportation vers des destinations. [Supprimez le jeu de données](#remove-dataset) d’un flux de données de destination avant de le supprimer.
 * Les mesures de surveillance des exportations de jeux de données sont actuellement combinées avec les chiffres des exportations de profils afin qu’elles ne reflètent pas les vrais chiffres d’exportation.
+* Les données dont l’horodatage est antérieur à 365 jours sont exclues des exportations de jeux de données. Pour plus d’informations, voir la [barrières de sécurité pour les exportations planifiées de jeux de données](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
