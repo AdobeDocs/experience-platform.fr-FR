@@ -4,10 +4,10 @@ user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platfor
 breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
-source-git-commit: 8a9cf0547720927018d728d7cecbf377a1282f6f
+source-git-commit: 345cd259cba2faa2b2b4bafd8ef9d2691d101fd1
 workflow-type: tm+mt
-source-wordcount: '1008'
-ht-degree: 97%
+source-wordcount: '1012'
+ht-degree: 96%
 
 ---
 
@@ -296,6 +296,7 @@ ht-degree: 97%
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - Partenaire de données {#data-partner}
          - [Résolution des identités d’entreprise Merkury](tutorials/ui/create/data-partners/merkury.md)
+         - [Importation des données de prospection Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
       - eCommerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
