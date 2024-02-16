@@ -2,9 +2,9 @@
 title: Connecteur source Adobe Analytics pour les données d’une suite de rapports
 description: Ce document fournit un aperçu d’Analytics et décrit les cas d’utilisation des données Analytics.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
-source-git-commit: ae88ce6f24db669577941b59fdaf18f43e32768f
+source-git-commit: 7812cfa44e1fcbe71d7b6231dc0b31c727c93a31
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1145'
 ht-degree: 10%
 
 ---
@@ -52,11 +52,11 @@ Le tableau ci-dessous décrit la latence attendue des données Analytics sur Pla
 | Nouvelles données pour [!DNL Real-Time Customer Profile] (A4T) **not** enabled) | &lt; 2 minutes |
 | Nouvelles données pour [!DNL Real-Time Customer Profile] (A4T) **is** enabled) | jusqu’à 30 minutes |
 | Nouvelles données pour le lac de données | &lt; 2,25 heures |
-| Nouvelles données pour CJA sans [groupement](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en) | &lt; 3,75 heures |
-| Nouvelles données pour CJA avec groupement | &lt; 7 heures |
+| Nouvelles données à Customer Journey Analytics sans [groupement](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en) | &lt; 3,75 heures |
+| Nouvelles données à Customer Journey Analytics avec groupement | &lt; 7 heures |
 | Renvoi de moins de 10 milliards d’événements | &lt; 4 semaines |
 
-Pour plus d’informations sur les latences CJA, voir : [Barrières de sécurité du Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
+Pour plus d’informations sur les latences des Customer Journey Analytics, voir : [Barrières de sécurité du Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=en).
 
 Le renvoi Analytics pour les environnements de test de production est défini par défaut sur 13 mois. Pour les données Analytics dans les environnements de test hors production, le renvoi est défini sur trois mois. La limite de 10 milliards d&#39;événements mentionnée dans le tableau ci-dessus est strictement en ce qui concerne la latence attendue.
 
