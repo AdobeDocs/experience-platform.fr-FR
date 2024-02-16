@@ -3,7 +3,7 @@ description: Découvrez comment utiliser des modèles dans l’interface utilisa
 title: Créer un flux de données de sources à l’aide de modèles dans l’interface utilisateur
 badge1: « Version bêta »
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: deca8300ebbada548a409de9c6a7b7178d0032e0
+source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 44%
@@ -51,7 +51,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 >id="platform_sources_templates_accounttype"
 >title="Sélectionner le type d’entreprise"
 >abstract="Sélectionnez le type d’entreprise approprié à votre cas d’utilisation. Votre accès peut varier en fonction de votre compte d’abonnement Real-time Customer Data Platform."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=fr" text="Présentation de Real-Time CDP"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Présentation de Real-Time CDP"
 
 Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à la fonction [!UICONTROL Sources] workspace et afficher un catalogue de sources disponibles dans Experience Platform.
 
