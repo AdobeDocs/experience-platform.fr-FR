@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Fonctions de mappage de prép de données
 description: Ce document présente les fonctions de mappage utilisées avec Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: f250d8e6e5368a785dcb154dbe0b611baed73a4c
+source-git-commit: 5525e81afe0945716c510ff7a0b06cc7e4d5ee6c
 workflow-type: tm+mt
-source-wordcount: '5459'
-ht-degree: 9%
+source-wordcount: '5908'
+ht-degree: 8%
 
 ---
 
@@ -282,6 +282,27 @@ Pour plus d’informations sur les valeurs de champ d’appareil, veuillez lire 
 | ua_agent_version_major | Extrait le nom de l’agent et la version majeure de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_agent_version_major &#x200B;(USER_AGENT) | ua_agent_version_major &#x200B;(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari 5 |
 | ua_agent_name | Extrait le nom de l’agent de la chaîne de l’agent utilisateur. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_agent_name &#x200B;(USER_AGENT) | ua_agent_name &#x200B;(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Safari |
 | ua_device_class | Extrait la classe device de la chaîne user agent. | <ul><li>USER_AGENT : **Obligatoire** Chaîne de l’agent utilisateur.</li></ul> | ua_device_class &#x200B;(USER_AGENT) | ua_device_class &#x200B;(&quot;Mozilla/5.0 (iPhone ; CPU iPhone OS 5_1_1 comme Mac OS X) AppleWebKit/534.46 (KHTML, comme Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3&quot;) | Téléphone |
+
+{style="table-layout:auto"}
+
+### Fonctions Analytics {#analytics}
+
+>[!NOTE]
+>
+>Faites défiler vers la gauche ou vers la droite pour afficher l’intégralité du tableau.
+
+| Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
+| -------- | ----------- | ---------- | -------| ---------- | ------------- |
+| get_event_id | Extrait l’ID d’événement d’une chaîne d’événement Analytics. | <ul><li>EVENT_STRING : **Obligatoire** Chaîne d’événement Analytics séparée par des virgules.</li><li>EVENT_NAME : **Obligatoire** Nom de l’événement à partir duquel extraire l’identifiant et l’identifiant.</li></ul> | get_event_id(EVENT_STRING, EVENT_NAME) | get_event_id(&quot;event101=5:123456,scOpen&quot;, &quot;event101&quot;) | 123456 |
+| get_event_value | Extrait la valeur d’événement d’une chaîne d’événement Analytics. Si la valeur de l’événement n’est pas spécifiée, 1 est renvoyé. | <ul><li>EVENT_STRING : **Obligatoire** Chaîne d’événement Analytics séparée par des virgules.</li><li>EVENT_NAME : **Obligatoire** Nom de l’événement duquel extraire une valeur.</li></ul> | get_event_value(EVENT_STRING, EVENT_NAME) | get_event_value(&quot;event101=5:123456,scOpen&quot;, &quot;event101&quot;) | 5 |
+| get_product_categories | Extrait la catégorie de produits d’une chaîne de produits Analytics. | <ul><li>PRODUCTS_STRING : **Obligatoire** Chaîne de produits Analytics.</li></ul> | get_product_categories(PRODUCTS_STRING) | get_product_categories(&quot;;Exemple de produit 1;1;3.50,Exemple de catégorie 2;Exemple de produit 2;1;5.99&quot;) | [null,&quot;Exemple de catégorie 2&quot;] |
+| get_product_names | Extrait le nom du produit d’une chaîne de produits Analytics. | <ul><li>PRODUCTS_STRING : **Obligatoire** Chaîne de produits Analytics.</li></ul> | get_product_names(PRODUCTS_STRING) | get_product_names(&quot;;Exemple de produit 1;1;3.50,Exemple de catégorie 2;Exemple de produit 2;1;5.99&quot;) | [&quot;Exemple de produit 1&quot;,&quot;Exemple de produit 2&quot;] |
+| get_product_quantités | Extrait les quantités d’une chaîne de produits Analytics. | <ul><li>PRODUCTS_STRING : **Obligatoire** Chaîne de produits Analytics.</li></ul> | get_product_grandeurs(PRODUCTS_STRING) | get_product_quantités(&quot;;Exemple de produit 1;1;3.50,Exemple de catégorie 2;Exemple de produit 2&quot;) | [&quot;1&quot;, null] |
+| get_product_prix | Extrait le prix d’une chaîne de produits Analytics. | <ul><li>PRODUCTS_STRING : **Obligatoire** Chaîne de produits Analytics.</li></ul> | get_product_prix(PRODUCTS_STRING) | get_product_price(&quot;;Exemple de produit 1;1;3.50,Exemple de catégorie 2;Exemple de produit 2&quot;) | [&quot;3,50&quot;, null] |
+| get_product_events | Extrait un événement nommé de la chaîne products sous la forme d’un tableau d’objets. | <ul><li>PRODUCTS_STRING : **Obligatoire** Chaîne de produits Analytics.</li><li>EVENT_NAME : **Obligatoire** Nom de l’événement à partir duquel extraire les valeurs.</li></ul> | get_product_events(PRODUCTS_STRING, EVENT_NAME) | get_product_events(&quot;;Exemple de produit 1;1;4.20;event1=2.3\|event2=5:1,;Exemple de produit 2;1;4.20;event1=3\|event2=2:2&quot;, &quot;event2&quot;) | [`{"id": "1","value", "5"}`, `{"id": "2","value", "1"}`] |
+| get_product_event_ids | Extrait les identifiants de l’événement nommé de la chaîne products sous la forme d’un tableau de chaînes. | <ul><li>PRODUCTS_STRING : **Obligatoire** Chaîne de produits Analytics.</li><li>EVENT_NAME : **Obligatoire** Nom de l’événement à partir duquel extraire les valeurs.</li></ul> | get_product_events_ids(PRODUCTS_STRING, EVENT_NAME) | get_product_event_ids(&quot;;Exemple produit 1;1;4.20;event1=2.3\|event2=5:1,;Exemple produit 2;1;4.20;event1=3\|event2=2:2&quot;, &quot;event2&quot;) | [&quot;1&quot;, &quot;2&quot;] |
+| get_product_event_values | Extrait les valeurs de l’événement nommé de la chaîne products sous la forme d’un tableau de chaînes. | <ul><li>PRODUCTS_STRING : **Obligatoire** Chaîne de produits Analytics.</li><li>EVENT_NAME : **Obligatoire** Nom de l’événement à partir duquel extraire les valeurs.</li></ul> | get_product_events_values(PRODUCTS_STRING, EVENT_NAME) | get_product_event_values(&quot;;Exemple produit 1;1;4.20;event1=2.3\|event2=5:1,;Exemple produit 2;1;4.20;event1=3\|event2=2:2&quot;, &quot;event1&quot;) | [&quot;2.3&quot;, &quot;3&quot;] |
+| get_product_evars | Extrait les valeurs evar de l’événement nommé de la chaîne products sous la forme d’un tableau de chaînes. | <ul><li>PRODUCTS_STRING : **Obligatoire** Chaîne de produits Analytics.</li><li>EVAR_NAME : **Obligatoire** Nom de l’eVar à extraire.</li></ul> | get_product_evars(PRODUCTS_STRING, EVENT_NAME) | get_product_evars(&quot;;Exemple de produit;1;6.69;;eVar1=Valeur de marchandisage&quot;, &quot;eVar1&quot;) | [&quot;Valeur de marchandisage&quot;] |
 
 {style="table-layout:auto"}
 
