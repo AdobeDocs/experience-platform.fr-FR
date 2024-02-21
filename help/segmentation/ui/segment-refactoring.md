@@ -6,7 +6,7 @@ exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
 source-git-commit: 665bbd1904e857336a4fb677230389d7977f6b60
 workflow-type: tm+mt
 source-wordcount: '354'
-ht-degree: 19%
+ht-degree: 26%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 19%
 >[!CONTEXTUALHELP]
 >id="platform_audiences_segmentBuilder_constraints"
 >title="Refactorisation des contraintes de temps"
->abstract="Les contraintes de temps au niveau de la règle et au niveau du groupe ont été supprimées afin de clarifier l’utilisation des contraintes de temps. Réécrivez votre contrainte en tant que contrainte de niveau zone de travail ou carte."
+>abstract="Les contraintes de temps au niveau de la règle et au niveau du groupe ont été supprimées afin de clarifier l’utilisation des contraintes de temps. Réécrivez votre contrainte en tant que contrainte de temps au niveau de la zone de travail ou de la carte."
 
 La version de janvier 2024 de Adobe Experience Platform a introduit des modifications dans le service de segmentation de Adobe Experience Platform qui ajoutent de nouvelles restrictions aux endroits où des contraintes de temps peuvent être définies. Ces modifications affectent les segments nouvellement créés ou modifiés effectués à l’aide de l’interface utilisateur du créateur de segments. Ce guide explique comment atténuer ces modifications.
 
