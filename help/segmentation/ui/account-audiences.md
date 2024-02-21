@@ -4,10 +4,10 @@ description: Découvrez comment créer et utiliser des audiences de compte pour 
 badgeLimitedAvailability: label="Disponibilité limitée" type="Caution"
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 1ff4cb004b7c2f474e2d64f4bcc239c7060f9439
 workflow-type: tm+mt
-source-wordcount: '603'
-ht-degree: 5%
+source-wordcount: '1050'
+ht-degree: 3%
 
 ---
 
@@ -74,3 +74,101 @@ La variable [!UICONTROL Activer la destination] s’affiche. Pour plus d’infor
 ## Étapes suivantes {#next-steps}
 
 Après avoir lu ce guide, vous comprenez mieux comment créer et utiliser les audiences de votre compte dans Adobe Experience Platform. Pour savoir comment utiliser d’autres types d’audiences dans Platform, veuillez lire le [Guide de l’interface utilisateur de Segmentation Service](./overview.md).
+
+## Annexe {#appendix}
+
+La section suivante fournit des informations supplémentaires sur les audiences de compte.
+
+### Validation de la segmentation du compte {#validation}
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_eventLookbackWindow"
+>title="Erreur maximale de la fenêtre rétroactive"
+>abstract="La période de recherche arrière maximale pour les événements d’expérience est de 30 jours."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_combinationMaxDepth"
+>title="Erreur maximale de profondeur de conteneur imbriqué"
+>abstract="La profondeur maximale des conteneurs imbriqués est **5**. Cela signifie que vous **cannot** contiennent plus de cinq conteneurs imbriqués lors de la création de votre audience."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_combinationMaxBreadth"
+>title="Erreur de quantité maximale des règles"
+>abstract="Le nombre maximal de règles dans un seul conteneur est **5**. Cela signifie que vous **cannot** avoir plus de cinq règles dans un seul conteneur lors de la création de votre audience ;"
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_crossEntityMaxDepth"
+>title="Erreur de quantité maximale entre les entités"
+>abstract="Le nombre maximal d’entités croisées pouvant être utilisées dans une seule audience est **5**. Une entité croisée est lorsque vous changez entre différentes entités au sein de votre audience. Par exemple, passer d’un compte à une personne à une liste marketing."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowCustomEntity"
+>title="Erreur d’entité personnalisée"
+>abstract="Les entités personnalisées **not** autorisé."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_b2bBuiltInEntities"
+>title="Erreur d’entité B2B non valide"
+>abstract="Seules les entités B2B suivantes sont autorisées à être utilisées : `_xdm.context.account`, `_xdm.content.opportunity`, `_xdm.context.profile`, `_xdm.context.experienceevent`, `_xdm.context.account-person`, `_xdm.classes.opportunity-person`, `_xdm.classes.marketing-list-member`, `_xdm.classes.marketing-list`, `_xdm.context.campaign-member`, et `_xdm.classes.campaign`."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_rhsMaxOptions"
+>title="Erreur des valeurs maximales"
+>abstract="Le nombre maximal de valeurs pouvant être vérifiées pour un seul champ est **50**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowInSegmentByReference"
+>title="Erreur d’événement inSegment"
+>abstract="Les événements inSegment sont **not** autorisé."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowInSegmentByValue"
+>title="Erreur d’événement inSegment"
+>abstract="Les événements inSegment sont **not** autorisé."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowSequentialEvents"
+>title="Erreur d’événement séquentiel"
+>abstract="Les événements séquentiels sont **not** autorisé."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_allowMaps"
+>title="Erreur de propriété de type Map"
+>abstract="Les propriétés de type Carte sont **not** autorisé."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_maxNestedAggregationDepth"
+>title="Erreur maximale de profondeur d’entité imbriquée"
+>abstract="La profondeur maximale des tableaux imbriqués est **5**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_maxObjectNestingLevel"
+>title="Limite maximale de l’erreur de quantité d’objet imbriqué"
+>abstract="Le nombre maximal d’objets imbriqués autorisés est **10**."
+
+>[!CONTEXTUALHELP]
+>id="platform_audiences_account_constraint_generic"
+>title="Violation de contrainte"
+>abstract="L’audience enfreint une contrainte. Pour plus d’informations, veuillez lire le document associé."
+
+Lors de l’utilisation des audiences du compte, l’audience **must** respecter les contraintes suivantes :
+
+>[!NOTE]
+>
+>La liste suivante répertorie les **default** contraintes pour les audiences de compte. Ces valeurs **may** change, selon les paramètres implémentés par l’administrateur de votre entreprise.
+
+- La période de recherche arrière maximale pour les événements d’expérience est : **30 jours**.
+- La profondeur maximale des conteneurs imbriqués est **5**.
+   - Cela signifie que vous **cannot** contiennent plus de cinq conteneurs imbriqués lors de la création de votre audience.
+- Le nombre maximal de règles dans un seul conteneur est **5**.
+   - Cela signifie que votre audience **cannot** comportent plus de cinq règles qui composent votre audience.
+- Le nombre maximal d’entités croisées pouvant être utilisées est **5**.
+   - Une entité croisée est lorsque vous changez entre différentes entités au sein de votre audience. Par exemple, passer d’un compte à une personne à une liste marketing.
+- Entités personnalisées **cannot** à utiliser.
+- Le nombre maximal de valeurs pouvant être vérifiées pour un seul champ est **50**.
+   - Par exemple, si vous avez un champ &quot;Nom de ville&quot;, vous pouvez comparer cette valeur à 50 noms de ville.
+- Audiences du compte **cannot** use `inSegment` événements .
+- Audiences du compte **cannot** utilisez des événements séquentiels.
+- Audiences du compte **cannot** utiliser des cartes.
+- La profondeur maximale des tableaux imbriqués est **5**.
+- Le nombre maximal d’objets imbriqués est **10**.
