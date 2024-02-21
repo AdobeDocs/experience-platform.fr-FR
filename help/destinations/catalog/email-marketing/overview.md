@@ -2,12 +2,12 @@
 keywords: email;E-mail;e-mail;destinations d’email
 title: Présentation des destinations du marketing par e-mail
 type: Tutorial
-description: Les fournisseurs de service e-mail (ESP, Email Service Providers) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes par e-mail promotionnelles. Découvrez quels ESP sont pris en charge en tant que destinations Experience Platform.
+description: Les fournisseurs de services de messagerie électronique (ESP) vous permettent de gérer vos activités de marketing par e-mail, comme l’envoi de campagnes promotionnelles par e-mail. Découvrez quels ESP sont pris en charge en tant que destinations Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 66%
+source-wordcount: '376'
+ht-degree: 60%
 
 ---
 
@@ -24,6 +24,7 @@ Adobe Experience Platform prend en charge les destinations de marketing par e-ma
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)
 * [Catégories d’intérêt Mailchimp](mailchimp-interest-categories.md)
+* [Balises Mailchimp](mailchimp-tags.md)
 * [(API) Oracle Eloqua](oracle-eloqua-api.md)
 * [(API) [!DNL Salesforce Marketing Cloud]](salesforce-marketing-cloud-exact-target.md)
 * [(Fichiers) Oracle Eloqua](oracle-eloqua.md)

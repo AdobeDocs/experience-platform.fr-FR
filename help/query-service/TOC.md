@@ -4,10 +4,10 @@ user-guide-title: Aide d’Adobe Experience Platform Query Service
 breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: ad3b739f300aa51f6f12c566ab49fafedb90be23
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 83%
+source-wordcount: '317'
+ht-degree: 82%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 83%
    - [Répertorier les pages vues d’un utilisateur ou d’une utilisatrice](use-cases/list-visitor-sessions.md)
    - [Répertorier les visiteurs et visiteuses selon leurs vues de page](use-cases/visitors-by-number-of-page-views.md)
    - [Score de propension](use-cases/propensity-score.md)
-   - [Exemple de fonction Lambda : Récupération d’enregistrements similaires](use-cases/retrieve-similar-records.md)
+   - [Récupération d’enregistrements similaires avec des fonctions d’ordre supérieur](use-cases/retrieve-similar-records.md)
    - [Renvoyer et utiliser des variables de marchandisage à partir de données d’analyse](use-cases/merchandising-variables.md)
    - [SQLAlchemy](use-cases/sqlalchemy.md)
    - [Afficher le rapport de cumul pour un visiteur ou une visiteuse](use-cases/roll-up-report-of-a-visitor.md)
@@ -106,6 +106,7 @@ ht-degree: 83%
    - [Présentation de SQL](sql/overview.md)
    - [Syntaxe SQL](sql/syntax.md)
    - [Fonctions définies par Adobe](sql/adobe-defined-functions.md)
+   - [Fonctions d’ordre supérieur](sql/higher-order-functions.md)
    - [Fonctions Spark SQL](sql/spark-sql-functions.md)
    - [Commandes de métadonnées](sql/metadata.md)
    - [Instructions préparées](sql/prepared-statements.md)

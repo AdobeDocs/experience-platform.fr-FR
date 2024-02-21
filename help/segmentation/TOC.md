@@ -4,10 +4,10 @@ user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Guide de Segmentation Service
 user-guide-description: Créez des audiences à partir de vos données de profil client en temps réel à l’aide des définitions de segment générées par Adobe Experience Platform ou de sources externes.
 feature: Segments
-source-git-commit: 0063f08c16ca0be629684319856bb42d0dd1536d
+source-git-commit: d0bd7990f0d77cd5f8d30da735b89c188e13c780
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 94%
+source-wordcount: '183'
+ht-degree: 89%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 94%
 
 - [Présentation de Segmentation Service](home.md)
 - [Types de données de segmentation](data-types.md)
-- [Mécanismes de sécurisation de la segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [Protections de la segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - API Segmentation {#api}
    - [Aperçu](api/overview.md)
    - [Prise en main](api/getting-started.md)
@@ -39,7 +39,8 @@ ht-degree: 94%
    - [Audiences de prospects](ui/prospect-audience.md)
    - [Segmentation Edge](ui/edge-segmentation.md)
    - [Segmentation en flux continu](ui/streaming-segmentation.md)
-   - [Segmentation en flux continu (Vidéo)](video/streaming-segmentation-overview.md)
+   - [Segmentation par flux (vidéo)](video/streaming-segmentation-overview.md)
+   - [Ignorer la mise à jour des contraintes temporelles d’une année](ui/ignore-year.md)
    - [Remaniement des contraintes de temps](ui/segment-refactoring.md)
    - Correspondance de segments {#segment-match}
       - [Vue d’ensemble de la correspondance de segments](ui/segment-match/overview.md)
@@ -62,7 +63,7 @@ ht-degree: 94%
    - [Fonctions diverses](pql/misc-functions.md)
 - Tutoriels {#tutorials}
    - [Création d’un segment](tutorials/create-a-segment.md)
-   - [Création d’un segment (Vidéo)](video/create-segment.md)
+   - [Création d’un segment (vidéo)](video/create-segment.md)
    - [Créer un segment dynamique (vidéo)](video/create-a-dynamic-segment.md)
    - [Créer un segment d’entités multiples (vidéo)](video/create-multi-entity-segments.md)
    - [Évaluation d’un segment](tutorials/evaluate-a-segment.md)

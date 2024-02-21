@@ -1,19 +1,21 @@
 ---
-title: Exemple de fonction Lambda - Récupération d’enregistrements similaires
+title: Récupération d’enregistrements similaires avec des fonctions d’ordre supérieur
 description: Découvrez comment identifier et récupérer des enregistrements similaires ou connexes d’un ou de plusieurs jeux de données en fonction d’une mesure de similarité et d’un seuil de similarité. Ce workflow peut mettre en évidence des relations ou des chevauchements significatifs entre des jeux de données disparates.
 exl-id: 4810326a-a613-4e6a-9593-123a14927214
-source-git-commit: 20624b916bcb3c17e39a402d9d9df87d0585d4b8
+source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
 workflow-type: tm+mt
-source-wordcount: '4011'
+source-wordcount: '4031'
 ht-degree: 3%
 
 ---
 
-# Exemple de fonction Lambda : Récupération d’enregistrements similaires
+# Récupération d’enregistrements similaires avec des fonctions d’ordre supérieur
 
-Résolvez plusieurs cas d’utilisation courants en utilisant les fonctions lambda de Data Distiller pour identifier et récupérer des enregistrements similaires ou associés d’un ou de plusieurs jeux de données. Vous pouvez utiliser ce guide pour identifier les produits provenant de différents jeux de données présentant une similarité significative de leurs caractéristiques ou attributs. La méthodologie de ce document fournit des solutions pour : déduplication des données, liaison d’enregistrements, systèmes de recommandation, récupération d’informations et analyse de texte, entre autres.
+Utilisez les fonctions d’ordre supérieur de Data Distiller pour résoudre divers cas d’utilisation courants. Pour identifier et récupérer des enregistrements similaires ou associés d’un ou plusieurs jeux de données, utilisez le filtre, la transformation et la réduction des fonctions comme décrit dans ce guide. Pour découvrir comment utiliser des fonctions d’ordre supérieur pour traiter des types de données complexes, consultez la documentation sur la manière de [gestion des types de données de tableau et de mappage](../sql/higher-order-functions.md).
 
-Le document décrit le processus d’implémentation d’une jointure par analogie, puis utilise des fonctions lambda de Data Distiller pour calculer la similarité entre des ensembles de données et les filtrer selon des attributs sélectionnés. Des fragments de code SQL et des explications sont fournis pour chaque étape du processus. Le workflow met en oeuvre des jointures par similarité à l’aide de la mesure de similarité Jaccard et de la segmentation en jetons à l’aide des fonctions lambda de Data Distiller. Ces méthodes sont ensuite utilisées pour identifier et récupérer des enregistrements similaires ou associés d’un ou plusieurs jeux de données basés sur une mesure de similarité. Les sections clés du processus sont les suivantes : [segmentation en unités à l’aide des fonctions lambda](#data-transformation), la variable [jointure croisée d’éléments uniques](#cross-join-unique-elements), la variable [Calcul de la similarité Jaccard](#compute-the-jaccard-similarity-measure), et la variable [filtrage par seuil](#similarity-threshold-filter).
+Utilisez ce guide pour identifier les produits provenant de différents jeux de données présentant une similarité significative de leurs caractéristiques ou attributs. Cette méthodologie fournit des solutions pour : déduplication des données, liaison d’enregistrements, systèmes de recommandation, récupération d’informations et analyse de texte, entre autres.
+
+Le document décrit le processus d’implémentation d’une jointure par analogie, qui utilise ensuite les fonctions d’ordre supérieur de Data Distiller pour calculer la similarité entre des jeux de données et les filtrer selon des attributs sélectionnés. Des fragments de code SQL et des explications sont fournis pour chaque étape du processus. Le workflow met en oeuvre des jointures par similarité à l’aide de la mesure de similarité Jaccard et de la segmentation en jetons à l’aide des fonctions d’ordre supérieur de Data Distiller. Ces méthodes sont ensuite utilisées pour identifier et récupérer des enregistrements similaires ou associés d’un ou plusieurs jeux de données basés sur une mesure de similarité. Les sections clés du processus sont les suivantes : [segmentation en unités lexicales à l’aide de fonctions d’ordre supérieur](#data-transformation), la variable [jointure croisée d’éléments uniques](#cross-join-unique-elements), la variable [Calcul de la similarité Jaccard](#compute-the-jaccard-similarity-measure), et la variable [filtrage par seuil](#similarity-threshold-filter).
 
 ## Conditions préalables
 
@@ -24,11 +26,11 @@ Avant de poursuivre ce document, vous devez connaître les concepts suivants :
    - **Seuil**: un seuil de similarité est utilisé pour déterminer quand les deux enregistrements sont considérés comme suffisamment similaires pour être inclus dans le résultat de la jointure. Les enregistrements avec un score de similarité supérieur au seuil sont considérés comme des correspondances.
 - La variable **Similarité de Jaccard** L’index, ou mesure Jaccard similarité, est une statistique utilisée pour évaluer la similarité et la diversité des ensembles d’échantillons. Il est défini comme la taille de l’intersection divisée par la taille de l’union des ensembles d’échantillons. La mesure similarité Jaccard est comprise entre zéro et un. Une similitude Jaccard de zéro indique qu’il n’y a aucune similitude entre les ensembles, et une similitude Jaccard de un indique que les ensembles sont identiques.
   ![Diagramme de Venn pour illustrer la mesure de similarité Jaccard.](../images/use-cases/jaccard-similarity.png)
-- **Fonctions Lambda** dans Data Distiller, les fonctions intégrées anonymes peuvent être définies et utilisées dans des instructions SQL. Ils sont fréquemment utilisés avec des fonctions d’ordre supérieur en raison de leur capacité à créer des fonctions concises à la volée qui peuvent être transmises sous forme de données. Les fonctions Lambda sont souvent utilisées avec des fonctions d’ordre supérieur comme `transform`, `filter`, et `array_sort`. Les fonctions Lambda sont particulièrement utiles dans les cas où la définition d’une fonction complète n’est pas nécessaire et où une fonction unique brève peut être utilisée en ligne.
+- **Fonctions d’ordre supérieur** Dans Data Distiller, les outils en ligne dynamiques traitent et transforment les données directement dans les instructions SQL. Ces fonctions polyvalentes éliminent la nécessité de plusieurs étapes dans la manipulation des données, en particulier lorsque [gestion de types complexes tels que les tableaux et les cartes](../sql/higher-order-functions.md). En améliorant l’efficacité des requêtes et en simplifiant les transformations, des fonctions d’ordre supérieur contribuent à une analyse plus agile et à une meilleure prise de décision dans divers scénarios commerciaux.
 
 ## Prise en main
 
-Le SKU de Data Distiller est nécessaire pour exécuter les fonctions lambda sur vos données Adobe Experience Platform. Si vous ne possédez pas le SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
+Le SKU de Data Distiller est nécessaire pour exécuter les fonctions d’ordre supérieur sur vos données Adobe Experience Platform. Si vous ne possédez pas le SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
 
 ## Établir une similarité {#establish-similarity}
 
@@ -319,7 +321,7 @@ Les résultats sont présentés dans le tableau ci-dessous :
 
 +++
 
-### Vérification de la longueur du jeton définie
+### Vérification de la longueur du jeton définie {#ensure-set-token-length}
 
 Des conditions supplémentaires peuvent être ajoutées à l’instruction pour s’assurer que les séquences générées ont une longueur spécifique. L’instruction SQL suivante s’étend à la logique de génération de jeton en effectuant l’appel `transform` est plus complexe. L’instruction utilise la variable `filter` fonction dans `transform` pour vous assurer que les séquences générées ont une longueur de six caractères. Il gère les cas où cela n’est pas possible en attribuant des valeurs NULL à ces positions.
 
@@ -355,11 +357,11 @@ Les résultats sont présentés dans le tableau ci-dessous :
 
 +++
 
-## Exploration des solutions à l’aide des fonctions lambda de Data Distiller {#lambda-function-solutions}
+## Exploration des solutions à l’aide des fonctions d’ordre supérieur de Data Distiller {#higher-order-function-solutions}
 
-Les fonctions Lambda sont des constructions puissantes qui vous permettent de mettre en oeuvre une &quot;programmation&quot; comme la syntaxe dans Data Distiller. Ils peuvent être utilisés pour itérer une fonction sur plusieurs valeurs d’un tableau.
+Les fonctions d’ordre supérieur sont des constructions puissantes qui vous permettent de mettre en oeuvre une &quot;programmation&quot; comme la syntaxe dans Data Distiller. Ils peuvent être utilisés pour itérer une fonction sur plusieurs valeurs d’un tableau.
 
-Dans le contexte de Data Distiller, les fonctions lambda sont adaptées à la création d’n-grammes et à l’itération sur des séquences de caractères.
+Dans le contexte de Data Distiller, les fonctions d’ordre supérieur sont idéales pour créer des n-grammes et itérer sur des séquences de caractères.
 
 La variable `reduce` , en particulier lorsqu’elle est utilisée dans des séquences générées par `transform`, permet d’obtenir des valeurs cumulatives ou des agrégats, qui peuvent être essentiels dans divers processus d’analyse et de planification.
 
@@ -371,7 +373,7 @@ SELECT transform(
     x -> reduce(
         sequence(1, x),  
         0,  -- Initial accumulator value
-        (acc, y) -> acc + y  -- Lambda function to add numbers
+        (acc, y) -> acc + y  -- Higher-order function to add numbers
     )
 ) AS sum_result;
 ```
@@ -381,17 +383,17 @@ Voici une analyse de l’instruction SQL :
 - Ligne 1 : `transform` applique la fonction `x -> reduce` sur chaque élément généré dans la séquence.
 - Ligne 2 : `sequence(1, 5)` génère une séquence de nombres de un à cinq.
 - Ligne 3 : `x -> reduce(sequence(1, x), 0, (acc, y) -> acc + y)` exécute une opération de réduction pour chaque élément x de la séquence (de 1 à 5).
-   - La variable `reduce` prend une valeur d’accumulateur initiale de 0, une séquence de 1 à la valeur actuelle de `x`, et une fonction lambda `(acc, y) -> acc + y` pour ajouter les nombres.
-   - Fonction lambda `acc + y` accumule la somme en ajoutant la valeur actuelle ; `y` à l’accumulateur `acc`.
+   - La variable `reduce` prend une valeur d’accumulateur initiale de 0, une séquence de 1 à la valeur actuelle de `x`et une fonction d’ordre supérieur `(acc, y) -> acc + y` pour ajouter les nombres.
+   - Fonction de l’ordre supérieur `acc + y` accumule la somme en ajoutant la valeur actuelle ; `y` à l’accumulateur `acc`.
 - Ligne 8 : `AS sum_result` renomme la colonne obtenue en tant que sum_result.
 
-Pour résumer, cette fonction lambda utilise deux paramètres (`acc` et `y`) et définit l’opération à effectuer, qui, dans ce cas, ajoute `y` à l’accumulateur `acc`. Cette fonction lambda est exécutée pour chaque élément de la séquence pendant le processus de réduction.
+Pour résumer, cette fonction d’ordre supérieur prend deux paramètres (`acc` et `y`) et définit l’opération à effectuer, qui, dans ce cas, ajoute `y` à l’accumulateur `acc`. Cette fonction d’ordre supérieur est exécutée pour chaque élément de la séquence pendant le processus de réduction.
 
 La sortie de cette instruction est une seule colonne (`sum_result`) qui contient les sommes cumulées de nombres compris entre un et cinq.
 
-### La valeur des fonctions lambda {#value-of-lambda-functions}
+### La valeur des fonctions d’ordre supérieur {#value-of-higher-order-functions}
 
-Cette section analyse une version abrégée d’une instruction SQL à trois grammes afin de mieux comprendre la valeur des fonctions lambda dans Data Distiller pour créer des n-grammes plus efficacement.
+Cette section analyse une version abrégée d’une instruction SQL à trois grammes afin de mieux comprendre la valeur des fonctions d’ordre supérieur dans Data Distiller pour créer des n-grammes plus efficacement.
 
 L’instruction ci-dessous fonctionne sur la variable `ProductName` dans la colonne `featurevector1` table. Elle produit un ensemble de sous-chaînes de trois caractères dérivées des noms de produits modifiés dans le tableau, à l’aide de positions obtenues à partir de la séquence générée.
 
@@ -407,11 +409,11 @@ FROM
 
 Voici une analyse de l’instruction SQL :
 
-- Ligne 2 : `transform` applique une fonction lambda à chaque entier de la séquence.
+- Ligne 2 : `transform` applique une fonction d’ordre supérieur à chaque entier de la séquence.
 - Ligne 3 : `sequence(1, length(lower(replace(ProductName, ' ', ''))) - 2)` génère une séquence d’entiers à partir de `1` sur la longueur du nom du produit modifié moins deux.
    - `length(lower(replace(ProductName, ' ', '')))` calcule la longueur de la variable `ProductName` après l’avoir fait en minuscules et après avoir supprimé des espaces.
    - `- 2` soustrait deux de la longueur pour s’assurer que la séquence génère des positions de départ valides pour les sous-chaînes de 3 caractères. Si vous soustrayez 2, vous aurez suffisamment de caractères après chaque position de départ pour extraire une sous-chaîne de 3 caractères. La fonction de sous-chaîne ici fonctionne comme un opérateur de recherche en amont.
-- Ligne 4 : `i -> substring(lower(replace(ProductName, ' ', '')), i, 3)` est une fonction lambda qui fonctionne sur chaque entier ; `i` dans la séquence générée.
+- Ligne 4 : `i -> substring(lower(replace(ProductName, ' ', '')), i, 3)` est une fonction d’ordre supérieur qui fonctionne sur chaque entier. `i` dans la séquence générée.
    - La variable `substring(...)` extrait une sous-chaîne de 3 caractères de la fonction `ProductName` colonne .
    - Avant d’extraire la sous-chaîne, `lower(replace(ProductName, ' ', ''))` convertit le `ProductName` en minuscules et supprime les espaces pour garantir la cohérence.
 
@@ -707,6 +709,10 @@ Les résultats de cette requête donnent les colonnes pour la jointure par analo
 
 ### Étapes suivantes {#next-steps}
 
-En lisant ce document, vous pouvez désormais utiliser cette logique pour mettre en évidence des relations ou des chevauchements significatifs entre des jeux de données disparates. La possibilité d’identifier des produits provenant de différents jeux de données présentant une similarité significative de leurs caractéristiques ou attributs comporte de nombreuses applications réelles. Cette logique peut être utilisée pour des scénarios tels que la mise en correspondance des produits (pour regrouper ou recommander des produits similaires aux clients), la normalisation des données (pour améliorer la qualité des données) et l’analyse du panier de marché (pour fournir des informations sur le comportement des clients, les préférences et les opportunités de ventes croisées potentielles).
+En lisant ce document, vous pouvez désormais utiliser cette logique pour mettre en évidence des relations ou des chevauchements significatifs entre des jeux de données disparates. La possibilité d’identifier des produits provenant de différents jeux de données présentant une similarité significative de leurs caractéristiques ou attributs comporte de nombreuses applications réelles. Cette logique peut être utilisée pour des scénarios tels que :
+
+- Correspondance de produits : pour regrouper ou recommander des produits similaires aux clients.
+- Nettoyage des données : pour améliorer la qualité des données.
+- Analyse du panier de marché : pour fournir des informations sur le comportement, les préférences et les opportunités de ventes croisées potentielles des clients.
 
 Si vous ne l’avez pas déjà fait, il est recommandé de lire la [Présentation du pipeline de fonctionnalités AI/ML](../data-distiller/ml-feature-pipelines/overview.md). Utilisez cet aperçu pour découvrir comment Data Distiller et votre apprentissage automatique préféré peuvent créer des modèles de données personnalisés qui prennent en charge vos cas d’utilisation marketing avec des données Experience Platform.

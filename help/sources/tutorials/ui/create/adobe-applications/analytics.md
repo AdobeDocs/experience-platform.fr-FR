@@ -2,10 +2,10 @@
 title: Créer une connexion source Adobe Analytics dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: c38e25a939319fa3b3301af36482c8efe6c3dd5f
+source-git-commit: f177a8058f6533151978bfd7b8bba4845792f5ed
 workflow-type: tm+mt
-source-wordcount: '2695'
-ht-degree: 41%
+source-wordcount: '2755'
+ht-degree: 40%
 
 ---
 
@@ -168,7 +168,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png) -->
 
-### Filtrage pour le profil client en temps réel {#filtering-for-profile}
+## Filtrage pour le profil client en temps réel {#filtering-for-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_analytics_filtering"
@@ -196,7 +196,7 @@ Une fois que vous avez terminé les mappages pour vos [!DNL Analytics] données 
 
 >[!ENDSHADEBOX]
 
-#### Filtrage au niveau de la ligne
+### Filtrage au niveau de la ligne
 
 >[!IMPORTANT]
 >
@@ -254,7 +254,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ![exclude-examples](../../../../images/tutorials/create/analytics/exclude-examples.png)
 
-#### Filtrage au niveau des colonnes
+### Filtrage au niveau des colonnes
 
 Sélectionner **[!UICONTROL Filtre Colonnes]** à partir de l’en-tête pour appliquer un filtrage au niveau des colonnes.
 
@@ -267,6 +267,14 @@ Par défaut, tous les [!DNL Analytics] accéder à [!DNL Profile] et ce processu
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ![colonnes sélectionnées](../../../../images/tutorials/create/analytics/columns-selected.png)
+
+### Filtrage des identités secondaires
+
+Utilisez un filtre de colonne pour exclure les identités secondaires de l’ingestion des profils. Pour filtrer les identités secondaires, sélectionnez **[!UICONTROL Filtre Colonnes]** puis sélectionnez **[!UICONTROL _identities]**.
+
+Le filtre s’applique uniquement lorsqu’une identité est marquée comme secondaire. Si des identités sont sélectionnées, mais qu’un événement arrive avec l’une des identités marquées comme primaires, elles ne sont pas filtrées.
+
+![identités secondaires](../../../../images/tutorials/create/analytics/secondary-identities.png)
 
 ### Fournir des détails sur le flux de données
 
