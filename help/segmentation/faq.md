@@ -2,10 +2,10 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: dbc14c639ef02b8504cc9895c6aacb6e205549b2
+source-git-commit: b129efacb077af0148a743e43ec23f9f8b8d7d3e
 workflow-type: tm+mt
-source-wordcount: '2746'
-ht-degree: 34%
+source-wordcount: '3122'
+ht-degree: 30%
 
 ---
 
@@ -246,6 +246,26 @@ Pour plus d’informations sur le bloc Partage, lisez le [Guide de l’interface
 
 Oui, tous les types de segmentation ([segmentation par lots, segmentation en flux continu et segmentation Edge](./home.md#evaluate-segments)) sont pris en charge dans le workflow Composition de l’audience. Toutefois, comme les compositions ne sont actuellement exécutées qu’une seule fois par jour, même si des audiences évaluées par Edge ou en flux continu sont incluses, le résultat sera basé sur l’appartenance à l’audience au moment de l’exécution de la composition.
 
-## Comment puis-je confirmer l’appartenance d’un profil à une audience ?
+## Appartenance à une audience
+
+La section suivante répertorie les questions relatives à l’appartenance à une audience.
+
+### Comment puis-je confirmer l’appartenance d’un profil à une audience ?
 
 Pour confirmer l’appartenance à l’audience d’un profil, consultez la page des détails de profil du profil que vous souhaitez confirmer. Sélectionnez **[!UICONTROL Attributs]**, puis **[!UICONTROL Afficher JSON]**, et vous pouvez confirmer que l’objet `segmentMembership` contient l’identifiant de l’audience.
+
+### Comment la segmentation par lots résout-elle l’appartenance à un profil ?
+
+Les audiences évaluées à l’aide de la segmentation par lots se résolvent tous les jours, les résultats de l’adhésion à l’audience étant enregistrés dans la variable `segmentMembership` attribut. Les recherches de profil génèrent une nouvelle version du profil au moment de la recherche, mais elles le font **not** actualisez les résultats de la segmentation par lots.
+
+Par conséquent, lorsque des modifications sont apportées au profil, comme la fusion de deux profils ensemble, ces modifications **will** apparaissent dans le profil lors de la recherche, mais **not** est reflété dans la variable `segmentMembership` jusqu’à ce que la tâche d’évaluation de segment soit exécutée à nouveau.
+
+Par exemple, supposons que vous ayez créé deux audiences mutuellement exclusives : l’audience A est destinée aux personnes qui vivent à Washington et l’audience B est destinée aux personnes qui le font. **not** habite à Washington. Il existe deux profils : le profil 1 pour une personne qui vit à Washington et le profil 2 pour une personne qui vit dans l’Oregon.
+
+Lorsque la tâche d’évaluation de la segmentation par lots s’exécute, le profil 1 accède à l’audience A, tandis que le profil 2 passe à l’audience B. Plus tard, mais avant que la tâche d’évaluation de la segmentation par lots du lendemain ne s’exécute, un événement qui réconcilie les deux profils entre dans Platform. Par conséquent, un seul profil fusionné contenant les profils 1 et 2 est créé.
+
+Jusqu’à l’exécution de la tâche d’évaluation de segment par lot suivante, le nouveau profil fusionné sera associé à l’audience dans **both** profil 1 et profil 2. Par conséquent, cela signifie qu’il sera membre de **both** Audience A et Audience B, bien que ces audiences aient des définitions contradictoires. Pour l’utilisateur final, il s’agit de la variable **situation identique** comme avant les profils étaient connectés, puisqu&#39;il n&#39;y avait toujours que la seule personne impliquée, et Platform l&#39;a fait. **not** disposer de suffisamment d&#39;informations pour connecter les deux profils.
+
+Si vous utilisez la recherche de profil pour récupérer le profil nouvellement créé et examinez son appartenance à l’audience, elle indique qu’il est membre de **both** Audience A et Audience B, bien que ces deux audiences aient des définitions contradictoires. Une fois la tâche d’évaluation de la segmentation par lots exécutée quotidiennement, l’appartenance à l’audience est mise à jour pour refléter cet état mis à jour des données de profil.
+
+Si vous avez besoin d’une résolution d’audience plus élevée en temps réel, utilisez la segmentation par flux ou en périphérie.
