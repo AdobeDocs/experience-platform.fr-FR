@@ -2,10 +2,10 @@
 title: Espaces de noms et schémas B2B
 description: Ce document fournit un aperçu des espaces de noms personnalisés requis lors de la création d’un connecteur source B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5e8bb04ca18159eab98b2f7f0bba8cb1488a1f26
 workflow-type: tm+mt
-source-wordcount: '1622'
-ht-degree: 11%
+source-wordcount: '1620'
+ht-degree: 10%
 
 ---
 
@@ -68,7 +68,7 @@ Une requête réussie crée les espaces de noms et les schémas requis pour B2B.
 
 ## Espaces de noms B2B
 
-Les espaces de noms d’identité sont un composant de [[!DNL Identity Service]](../../../../identity-service/home.md) qui servent à distinguer le contexte ou le type d’identité. Une identité complète est composée d’une valeur d’identifiant et d’un espace de noms. Voir [présentation des espaces de noms](../../../../identity-service/features/namespaces.md) pour plus d’informations.
+Les espaces de noms d’identité sont un composant de [[!DNL Identity Service]](../../../../identity-service/home.md) qui servent à distinguer le contexte d’une identité. Une identité entièrement qualifiée comprend une valeur d’identité et un espace de noms. Lisez la section [présentation des espaces de noms](../../../../identity-service/features/namespaces.md) pour plus d’informations.
 
 Les espaces de noms B2B sont utilisés dans l’identité principale de l’entité.
 
