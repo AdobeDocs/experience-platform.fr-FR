@@ -3,10 +3,10 @@ title: Extension de transfert d’événement de l’API Conversions liées
 description: Cette extension de transfert d’événement Adobe Experience Platform vous permet de mesurer les performances de votre campagne marketing Linkedin.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: 0d6ade1a0b6c00a4f87395d476dd7e7915489ea5
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 4%
+source-wordcount: '790'
+ht-degree: 3%
 
 ---
 
@@ -16,11 +16,11 @@ ht-degree: 4%
 
 ## Conditions préalables {#prerequisites}
 
-Vous devez créer une règle de conversion dans votre [!DNL LinkedIn] compte publicités de campagne. [!DNL Adobe] recommande d’inclure &quot;CAPI&quot; au début du nom de la règle de conversation pour la différencier des autres types de règles de conversion que vous avez peut-être configurés.
+Vous devez [création d’une règle de conversion](https://www.linkedin.com/help/lms/answer/a1657171) dans votre [!DNL LinkedIn Campaign Manager] compte . [!DNL Adobe] recommande d’inclure &quot;CAPI&quot; au début du nom de la règle de conversation pour la différencier des autres types de règles de conversion que vous avez peut-être configurés.
 
 ### Créer un secret et un élément de données
 
-Créer [!DNL LinkedIn] [secret de transfert d’événement](../../../ui/event-forwarding/secrets.md) et indiquez-lui un nom unique qui signifie membre d’authentification. Elle sera utilisée pour authentifier la connexion à votre compte tout en conservant la valeur en sécurité.
+Créer [!DNL LinkedIn] [secret de transfert d’événement](../../../ui/event-forwarding/secrets.md) et indiquez-lui un nom unique qui signifie le membre authentifiant. Elle sera utilisée pour authentifier la connexion à votre compte tout en conservant la valeur en sécurité.
 
 Ensuite, [créer un élément de données ;](../../../ui/managing-resources/data-elements.md#create-a-data-element) en utilisant la variable [!UICONTROL Core] et une [!UICONTROL Secret] type d’élément de données pour référencer la variable `LinkedIn` secret que vous venez de créer.
 
@@ -40,7 +40,7 @@ Dans l’écran suivant, saisissez le secret de l’élément de données que vo
 
 Une fois tous vos éléments de données configurés, vous pouvez commencer à créer des règles de transfert d’événement qui déterminent quand et comment vos événements seront envoyés à [!DNL LinkedIn].
 
-Création d’un transfert d’événement [règle](../../../ui/managing-resources/rules.md) dans la propriété de transfert d’événement. Sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL LinkedIn]**. Ensuite, sélectionnez **[!UICONTROL Envoyer la conversion web]** pour le **[!UICONTROL Type d’action]**.
+Création d’un transfert d’événement [règle](../../../ui/managing-resources/rules.md) dans la propriété de transfert d’événement. Sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL LinkedIn]**. Ensuite, sélectionnez **[!UICONTROL Envoyer la conversion]** pour le **[!UICONTROL Type d’action]**.
 
 ![La vue Règles de propriété de transfert d’événement , avec les champs requis pour ajouter une configuration d’action de règle de transfert d’événement mise en surbrillance.](../../../images/extensions/server/linkedin/linkedin-event-action.png)
 
@@ -62,11 +62,11 @@ Une fois la sélection effectuée, d’autres commandes s’affichent pour confi
 
 | Entrée | Description |
 | --- | --- |
-| [!UICONTROL Conversion] | L’identifiant de la règle de conversion créée dans [LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a1657171) ou [!DNL LinkedIn Campaign Manager]. |
+| [!UICONTROL Conversion] | L’identifiant de la règle de conversion créée dans [LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a1657171). Sélectionnez la règle de conversion pour obtenir l’identifiant, puis copiez l’identifiant à partir de l’URL du navigateur (par exemple, `/campaignmanager/accounts/508111232/conversions/15588877`) as `/conversions/<id>`. |
 | [!UICONTROL Temps de conversion] | Horodatage en millisecondes au cours duquel l’événement de conversion s’est produit. <br><br> Remarque : Si votre source enregistre l’horodatage de conversion en secondes, insérez 000 à la fin pour le transformer en millisecondes. |
 | [!UICONTROL Devise] | Code de devise au format ISO. |
 | [!UICONTROL Quantité] | Valeur de la conversion dans la chaîne décimale (par exemple, &quot;100.05&quot;). |
-| [!UICONTROL Identifiant d’événement] | Identifiant unique généré par les annonceurs pour indiquer chaque événement. Il s’agit d’un champ facultatif qui est utilisé pour le dédoublonnage. |
+| [!UICONTROL Identifiant d’événement] | Identifiant unique généré par les annonceurs pour indiquer chaque événement. Il s’agit d’un champ facultatif qui sert à [déduplication](https://learn.microsoft.com/en-us/linkedin/marketing/conversions/deduplication?view=li-lms-2024-02). |
 
 {style="table-layout:auto"}
 
@@ -86,4 +86,6 @@ Une fois la sélection effectuée, d’autres commandes s’affichent pour confi
 
 ## Étapes suivantes
 
-Ce guide explique comment envoyer des données à [!DNL LinkedIn] en utilisant la variable [!DNL LinkedIn Conversions API] extension de transfert d’événement. Pour plus d’informations sur les fonctionnalités de transfert d’événement dans [!DNL Adobe Experience Platform], reportez-vous au [transfert d’événement - Aperçu](../../../ui/event-forwarding/overview.md).
+Ce guide explique comment envoyer des données à [!DNL LinkedIn] en utilisant la variable [!DNL LinkedIn Conversions API] extension de transfert d’événement. Pour plus d’informations sur les fonctionnalités de transfert d’événement dans [!DNL Adobe Experience Platform], lisez le [transfert d’événement - Aperçu](../../../ui/event-forwarding/overview.md).
+
+Pour plus d’informations sur la façon de déboguer votre implémentation à l’aide de l’outil Experience Platform Debugger et Event Forwarding Monitoring, consultez la section [Adobe Experience Platform Debugger - Aperçu](../../../../debugger/home.md) et [Surveillance des activités dans le transfert d’événement](../../../ui/event-forwarding/monitoring.md).
