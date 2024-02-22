@@ -2,10 +2,10 @@
 title: Outils Sandbox
 description: Exportez et importez en toute transparence des configurations Sandbox entre des environnements de test.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 1f7b7f0486d0bb2774f16a766c4a5af6bbb8848a
+source-git-commit: 888608bdf3ccdfc56edd41c164640e258a4c5dd7
 workflow-type: tm+mt
-source-wordcount: '1859'
-ht-degree: 11%
+source-wordcount: '1961'
+ht-degree: 10%
 
 ---
 
@@ -30,10 +30,11 @@ Le tableau ci-dessous répertorie [!DNL Adobe Real-Time Customer Data Platform] 
 | Plateforme | Objet | Détails |
 | --- | --- | --- |
 | Plateforme de données clients | Sources | Les informations d’identification du compte source ne sont pas répliquées dans l’environnement de test cible pour des raisons de sécurité et devront être mises à jour manuellement. Par défaut, le flux de données source est copié dans un état de brouillon. |
-| Plateforme de données clients | Audiences | Seule la variable **[!UICONTROL Public du client]** type **[!UICONTROL Service de segmentation]** est prise en charge. Les étiquettes existantes pour le consentement et la gouvernance seront copiées dans la même tâche d’importation. |
+| Plateforme de données clients | Audiences | Seule la variable **[!UICONTROL Public du client]** type **[!UICONTROL Service de segmentation]** est prise en charge. Les étiquettes existantes pour le consentement et la gouvernance seront copiées dans la même tâche d’importation. Le système sélectionne automatiquement la stratégie de fusion par défaut dans l’environnement de test cible avec la même classe XDM lors de la vérification des dépendances de stratégie de fusion. |
 | Plateforme de données clients | Identités | Le système dédupliquera automatiquement les espaces de noms d’identité standard Adobe lors de la création dans l’environnement de test cible. Les audiences ne peuvent être copiées que lorsque tous les attributs des règles d’audience sont activés dans le schéma d’union. Les schémas nécessaires doivent d’abord être déplacés et activés pour le profil unifié. |
-| Plateforme de données clients | Schémas | Les étiquettes existantes pour le consentement et la gouvernance seront copiées dans la même tâche d’importation. L’état du profil unifié du schéma sera copié tel quel depuis l’environnement de test source. Si le schéma est activé pour le profil unifié dans l’environnement de test source, tous les attributs sont déplacés vers le schéma d’union. Les cas de périphérie des relations de schéma ne sont pas inclus dans le package. |
+| Plateforme de données clients | Schémas | Les étiquettes existantes pour le consentement et la gouvernance seront copiées dans la même tâche d’importation. L’utilisateur peut importer des schémas sans l’option Profil unifié activée. Les cas de périphérie des relations de schéma ne sont pas inclus dans le package. |
 | Plateforme de données clients | Jeux de données | Les jeux de données sont copiés avec le paramètre de profil unifié désactivé par défaut. |
+| Plateforme de données clients | Stratégies de consentement et de gouvernance | Ajoutez des stratégies personnalisées créées par un utilisateur à un module et déplacez-les dans des environnements de test. |
 
 Les objets suivants sont importés, mais leur état est brouillon ou désactivé :
 
@@ -52,6 +53,7 @@ Le tableau ci-dessous répertorie [!DNL Adobe Journey Optimizer] les objets actu
 | --- | --- | --- |
 | [!DNL Adobe Journey Optimizer] | Audience | Une audience peut être copiée en tant qu’objet dépendant de l’objet parcours. Vous pouvez sélectionner Créer une audience ou réutiliser une audience existante dans l’environnement de test cible. |
 | [!DNL Adobe Journey Optimizer] | Schéma | Les schémas utilisés dans le parcours peuvent être copiés en tant qu’objets dépendants. Vous pouvez sélectionner Créer un nouveau schéma ou en réutiliser un existant dans l’environnement de test cible. |
+| [!DNL Adobe Journey Optimizer] | Politique de fusion | Les stratégies de fusion utilisées dans le parcours peuvent être copiées en tant qu’objets dépendants. Dans le sandbox cible, vous **cannot** créer une nouvelle stratégie de fusion, vous ne pouvez utiliser qu’une stratégie existante. |
 | [!DNL Adobe Journey Optimizer] | Parcours : détails de la zone de travail | La représentation du parcours sur la zone de travail inclut les objets du parcours, tels que les conditions, les actions, les événements, les audiences de lecture, etc., qui sont copiés. L’activité de saut est exclue de la copie. |
 | [!DNL Adobe Journey Optimizer] | Événement | Les événements et les détails de l’événement utilisés dans le parcours sont copiés. Il crée toujours une nouvelle version dans l’environnement de test cible. |
 | [!DNL Adobe Journey Optimizer] | Action | Les messages électroniques et push utilisés dans le parcours peuvent être copiés en tant qu’objets dépendants. Les activités d’action de canal utilisées dans les champs de parcours, qui sont utilisées pour la personnalisation dans le message, ne sont pas vérifiées pour être complètes. Les blocs de contenu ne sont pas copiés.<br><br>L’action de mise à jour du profil utilisée dans le parcours peut être copiée. Les actions personnalisées et les détails des actions utilisées dans le parcours sont également copiés. Il crée toujours une nouvelle version dans l’environnement de test cible. |
@@ -135,19 +137,23 @@ Pour importer le package dans un environnement de test cible, accédez aux envir
 
 ![Environnements de test **[!UICONTROL Parcourir]** surligner la sélection du package d&#39;import.](../images/ui/sandbox-tooling/browse-sandboxes.png)
 
-Dans le menu déroulant, sélectionnez la variable **[!UICONTROL Nom du module]** vous souhaitez importer dans l’environnement de test ciblé. Ajouter une **[!UICONTROL Job name]**, qui sera utilisé pour la surveillance future, puis sélectionnez **[!UICONTROL Suivant]**.
+Dans le menu déroulant, sélectionnez la variable **[!UICONTROL Nom du module]** vous souhaitez importer dans l’environnement de test ciblé. Ajouter une **[!UICONTROL Job name]**, qui sera utilisé pour la surveillance future. Par défaut, le profil unifié sera désactivé lors de l’import des schémas du package. Basculer **Activation des schémas pour le profil** pour activer cette fonction, puis sélectionnez **[!UICONTROL Suivant]**.
 
 ![La page de détails de l’importation affiche la variable [!UICONTROL Nom du module] sélection de liste déroulante](../images/ui/sandbox-tooling/import-package-to-sandbox.png)
 
-La variable [!UICONTROL Objet de package et dépendances] fournit une liste de toutes les ressources incluses dans ce module. Le système détecte automatiquement les objets dépendants requis pour réussir l’importation des objets parents sélectionnés.
+La variable [!UICONTROL Objet de package et dépendances] fournit une liste de toutes les ressources incluses dans ce module. Le système détecte automatiquement les objets dépendants requis pour réussir l’importation des objets parents sélectionnés. Tous les attributs manquants sont affichés en haut de la page. Sélectionner **[!UICONTROL Afficher les détails]** pour une ventilation plus détaillée.
 
-![La variable [!UICONTROL Objet de package et dépendances] affiche la liste des ressources incluses dans le module.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+![La variable [!UICONTROL Objet de package et dépendances] affiche les attributs manquants.](../images/ui/sandbox-tooling/missing-attributes.png)
 
 >[!NOTE]
 >
 >Les objets dépendants peuvent être remplacés par des objets existants dans l’environnement de test cible, ce qui vous permet de réutiliser des objets existants plutôt que de créer une nouvelle version. Par exemple, lorsque vous importez un package comprenant des schémas, vous pouvez réutiliser des groupes de champs personnalisés et des espaces de noms d’identité existants dans l’environnement de test cible. Vous pouvez également réutiliser des segments existants dans l’environnement de test cible lorsque vous importez un package comprenant des Parcours.
 
-Pour utiliser un objet existant, sélectionnez l’icône en forme de crayon en regard de l’objet dépendant. Les options de création ou d’utilisation d’éléments existants s’affichent. Sélectionner **[!UICONTROL Utiliser existant]**.
+Pour utiliser un objet existant, sélectionnez l’icône en forme de crayon en regard de l’objet dépendant.
+
+![La variable [!UICONTROL Objet de package et dépendances] affiche la liste des ressources incluses dans le module.](../images/ui/sandbox-tooling/package-objects-and-dependencies.png)
+
+Les options de création ou d’utilisation d’éléments existants s’affichent. Sélectionner **[!UICONTROL Utiliser existant]**.
 
 ![La variable [!UICONTROL Objet de package et dépendances] page affichant les options d’objet dépendant [!UICONTROL Créer] et [!UICONTROL Utiliser existant].](../images/ui/sandbox-tooling/use-existing-object.png)
 
