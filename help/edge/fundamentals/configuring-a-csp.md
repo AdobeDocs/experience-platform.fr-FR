@@ -5,18 +5,18 @@ description: Découvrez comment configurer une CSP pour le SDK Web Experience Pl
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
 keywords: configuration;configuration;SDK;edge;SDK Web;configuration;contexte;web;périphérique;environnement;paramètres du sdk web;stratégie de sécurité du contenu;
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
-source-git-commit: 0085306a2f5172eb19590cc12bc9645278bd2b42
+source-git-commit: 099f87acded9eca31c31555e63c0ea49ae2d1719
 workflow-type: tm+mt
-source-wordcount: '333'
-ht-degree: 2%
+source-wordcount: '339'
+ht-degree: 0%
 
 ---
 
 # Configuration d’une CSP
 
-A [Stratégie de sécurité du contenu](https://developer.mozilla.org/fr/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) est utilisé pour restreindre les ressources qu’un navigateur est autorisé à utiliser. La CSP peut également limiter les fonctionnalités des ressources de script et de style. Le SDK Web de Adobe Experience Platform ne nécessite pas de stratégie de sécurité du contenu, mais l’ajout d’une solution peut réduire la surface d’attaque afin de prévenir les attaques malveillantes.
+A [Stratégie de sécurité du contenu](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) est utilisé pour restreindre les ressources qu’un navigateur est autorisé à utiliser. La CSP peut également limiter les fonctionnalités des ressources de script et de style. Le SDK Web de Adobe Experience Platform ne nécessite pas de stratégie de sécurité du contenu, mais l’ajout d’une solution peut réduire la surface d’attaque afin de prévenir les attaques malveillantes.
 
-La stratégie de sécurité du contenu doit refléter comment [!DNL Platform Web SDK] est déployé et configuré. La CSP suivante indique les modifications qui peuvent s’avérer nécessaires au bon fonctionnement du SDK. D’autres paramètres CSP seront probablement requis, selon votre environnement spécifique.
+La stratégie de sécurité du contenu doit refléter comment [!DNL Platform Web SDK] est déployé et configuré. La CSP suivante indique les modifications qui peuvent être nécessaires au bon fonctionnement du SDK. D’autres paramètres CSP seront probablement requis, selon votre environnement spécifique.
 
 ## Exemple de stratégie de sécurité du contenu
 
@@ -50,7 +50,7 @@ En outre, la valeur à usage unique CSP doit être ajoutée en tant qu’attribu
 </script>
 ```
 
-Si une valeur à usage unique n’est pas utilisée, l’autre option consiste à ajouter `unsafe-inline` au `script-src` et `style-src` Directives CSP :
+Si une valeur à usage unique n’est pas utilisée, l’autre option consiste à ajouter `unsafe-inline` à la fonction `script-src` et `style-src` Directives CSP :
 
 ```
 script-src 'unsafe-inline'
@@ -60,3 +60,11 @@ style-src 'unsafe-inline'
 >[!NOTE]
 >
 >L’Adobe fait **not** recommandation, spécification `unsafe-inline` car il permet à n’importe quel script de s’exécuter sur la page, ce qui limite les avantages de la CSP.
+
+## Configuration d’une CSP pour la messagerie in-app {#in-app-messaging}
+
+Lorsque vous configurez [Messagerie in-app web](../personalization/web-in-app-messaging.md), vous devez inclure la directive suivante dans votre CSP :
+
+```
+default-src  blob:;
+```
