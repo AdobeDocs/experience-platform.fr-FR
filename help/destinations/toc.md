@@ -4,9 +4,9 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: 767ebd1ef693f9484e11facc7e8b73d91f632956
+source-git-commit: 05ff789d71c693854fb84d1661c2bef8aba0bff8
 workflow-type: tm+mt
-source-wordcount: '1203'
+source-wordcount: '1201'
 ht-degree: 91%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 91%
       * [Activer les audiences vers des destinations de personnalisation Edge](./ui/activate-edge-personalization-destinations.md)
       * [Activation des audiences vers des destinations traitées en fonction des identifiants LiveRamp](./ui/activate-curated-destinations.md)
       * [Activer les audiences de prospects vers des destinations](./ui/activate-prospect-audiences.md)
-      * [(Disponibilité limitée) Activation des audiences de compte vers les destinations](./ui/activate-account-audiences.md)
+      * [Activation des audiences de compte vers les destinations](./ui/activate-account-audiences.md)
       * [(Version bêta) Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform](./ui/export-file-now.md)
       * [Exportation de jeux de données à l’aide de l’interface utilisateur Experience Platform](./ui/export-datasets.md)
       * [(Version bêta) Utiliser l’attribut XDM de l’heure de la dernière qualification dans les nouvelles destinations de stockage dans le cloud en version bêta](./ui/activate-last-qualification-time.md)

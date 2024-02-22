@@ -2,12 +2,12 @@
 title: Activation des audiences de compte vers les destinations
 type: Tutorial
 description: Découvrez comment activer les audiences de compte vers les destinations
-badgeLimitedAvailability: label="Disponibilité limitée" type="Caution"
-badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="Édition B2B" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Édition B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f07eb12b4625bce117e1fe524727c00b7188aa5e
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '810'
 ht-degree: 7%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->La fonctionnalité d’activation des audiences du compte vers les destinations n’est disponible que dans la variable [Édition B2B de Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). En outre, la fonctionnalité d’audience de compte figure actuellement dans **disponibilité limitée**. Contactez le service à la clientèle d’Adobe ou votre représentant d’Adobe pour demander l’accès à cette fonctionnalité.
+>La fonctionnalité d’activation des audiences de compte vers les destinations est disponible pour les entreprises qui achètent la variable [Entreprise à entreprise](/help/rtcdp/overview.md#rtcdp-b2b) et [Entreprise à personne](/help/rtcdp/overview.md#rtcdp-b2b) éditions de Real-time Customer Data Platform.
 
 Cet article explique le workflow requis pour l’exportation [audiences de compte](/help/segmentation/ui/account-audiences.md) de Adobe Experience Platform à votre destination préférée.
 
@@ -79,7 +79,7 @@ Pour le reste du workflow d’activation permettant d’exporter les audiences d
 
 ## Légendes importantes et limites connues {#important-callouts-known-limitations}
 
-Notez les légendes importantes et les limites connues suivantes pour la disponibilité limitée de la fonctionnalité d’activation des audiences de compte.
+Notez les légendes importantes et les limites connues suivantes pour la mise à jour générale de la fonctionnalité d’activation des audiences de compte.
 
 ### Paires de mappage requises à l’étape de mappage lors de l’activation des audiences de compte vers le **[!UICONTROL (Sociétés) Audiences mappées LinkedIn]** destination {#required-mappings}
 
