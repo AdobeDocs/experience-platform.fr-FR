@@ -3,9 +3,7 @@ title: Importation des données de prospection Acxiom
 description: Découvrez comment connecter les données de prospection Acxiom à Adobe Experience Platform et Adobe Real-time Customer Data Platform à l’aide de l’interface utilisateur.
 last-substantial-update: 2024-02-21T00:00:00Z
 badge: Version Beta
-hide: true
-hidefromtoc: true
-source-git-commit: 5457c2fcb6045338d042d3910752b962912b6397
+source-git-commit: bf7e2e08d54f113c6e2cc5060f51725555c2c049
 workflow-type: tm+mt
 source-wordcount: '1752'
 ht-degree: 13%
