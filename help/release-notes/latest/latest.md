@@ -2,88 +2,64 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Notes de mise à jour de janvier 2024 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: b41a69244c7eb1111759b2af5c1ae6a0fb90be32
 workflow-type: tm+mt
-source-wordcount: '1657'
-ht-degree: 89%
+source-wordcount: '1242'
+ht-degree: 29%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de publication : 30 janvier 2024**
-
-Nouvelles fonctionnalités d’Adobe Experience Platform :
-
-- [Playbooks de cas d’utilisation](#use-case-playbooks)
+**Date de mise à jour : jeudi 21 février 2024**
 
 Mises à jour des fonctionnalités existantes dans Experience Platform :
 
-- [Contrôle d’accès basé sur les attributs](#abac)
-- [Préparation de données](#data-prep)
-- [Tableaux de bord](#dashboards)
+- [Alertes](#alerts)
+- [Collecte de données](#data-collection)
+<!-- - [Data Prep](#data-prep) -->
 - [Destinations](#destinations)
-- [Service d’identités](#identity-service)
-- [Real-Time Customer Data Platform](#rtcdp)
-- [Profil client en temps réel](#profile)
+- [Sandbox](#sandboxes)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
-## Playbooks de cas d’utilisation {#use-case-playbooks}
+## Alertes {#alerts}
 
-La fonctionnalité [!UICONTROL Playbooks de cas d’utilisation] est désormais disponible pour les clientes et les clients Real-Time CDP et Adobe Journey Optimizer. Les [!UICONTROL Playbooks de cas d’utilisation] sont conçus pour aider les utilisateurs et les utilisatrices à surmonter les défis lorsqu’ils commencent à utiliser Real-time Customer Data Platform ou Adobe Journey Optimizer. Lorsque vous ne savez pas par où commencer ou comment créer les ressources appropriées pour les cas d’utilisation souhaités, les Paybooks de cas d’utilisation sont une source d’inspiration et créent différentes ressources que vous pouvez tester et importer dans des environnements de production lorsque vous le souhaitez.
-
-Pour commencer à utiliser les [!UICONTROL Playbooks de cas d’utilisation], consultez les pages de documentation suivantes :
-
-- Consultez la [page de vue d’ensemble](/help/use-case-playbooks/playbooks/overview.md) pour comprendre l’objectif, les informations de disponibilité et obtenir une démonstration de bout en bout du fonctionnement des playbooks, de la découverte à la création d’instances, en passant par l’import de ressources générées dans d’autres environnements de sandbox.
-- Obtenez une liste de tous les [playbooks disponibles](/help/use-case-playbooks/playbooks/playbooks-list.md), regroupés par produit (Real-Time CDP ou Journey Optimizer).
-- Obtenez des informations sur toutes les [autorisations requises](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) pour utiliser les playbooks et les ressources générées par les playbooks.
-- Comprenez la [fonctionnalité de sensibilisation aux données](/help/use-case-playbooks/playbooks/data-awareness.md) qui vous permet de copier des ressources générées vers d’autres environnements de sandbox.
-- Obtenez des [conseils de dépannage](/help/use-case-playbooks/playbooks/troubleshooting.md) si vous rencontrez des erreurs ou des difficultés lors de l’utilisation des Playbooks de cas d’utilisation.
-
-## Contrôle d’accès basé sur les attributs {#abac}
-
-Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adobe Experience Platform qui offre une plus grande flexibilité dans la gestion de l’accès utilisateur. Elle est destinée aux marques veillant à garantir un haut niveau de confidentialité. Les objets individuels tels que les champs de schéma et les segments peuvent être affectés à des rôles d’utilisateur. Cette fonctionnalité vous permet d’accorder ou de révoquer l’accès à des objets individuels pour des utilisateurs Platform spécifiques au sein de votre organisation.
-
-Grâce au contrôle d’accès basé sur les attributs, les administrateurs de votre organisation peuvent contrôler l’accès des utilisateurs aux données personnelles sensibles (SPD), aux informations d’identification personnelle (PII) et à d’autres types de données personnalisées sur l’ensemble des workflows et ressources de Platform. Les administrateurs et administratrices peuvent définir des rôles d’utilisateur ou d’utilisatrice qui n’ont accès qu’à des champs spécifiques et aux données correspondant à ces champs.
-
-**Documentation nouvelle ou mise à jour**
-
-| Mise à jour de la documentation | Description |
-| --- | --- |
-| Nouveaux points d’entrée API documentés pour le contrôle d’accès basé sur les attributs | La [documentation de référence de l’API de contrôle d’accès](https://developer.adobe.com/experience-platform-apis/references/access-control/) comprend désormais des rôles d’API de contrôle d’accès basés sur des attributs, des politiques et des points d’entrée de produit. Ces points d’entrée peuvent être utilisés pour récupérer des rôles, des politiques et des produits pertinents pour un utilisateur ou une utilisatrice sur des ressources données dans un sandbox spécifié. |
+Experience Platform vous permet de vous abonner à des alertes basées sur des événements pour diverses activités de Platform. Vous pouvez vous abonner à différentes règles d’alerte à l’aide du [!UICONTROL Alertes] dans l’interface utilisateur de Platform et peut choisir de recevoir des messages d’alerte dans l’interface utilisateur elle-même ou par le biais de notifications par e-mail.
+**Fonctionnalités nouvelles ou mises à jour**
+| Fonctionnalité | Description | | — | — | | Onglet Historique des alertes | En tant qu’administrateur Experience Platform, vous pouvez utiliser la fonction gérer les abonnés aux alertes pour affecter une alerte à un identifiant utilisateur, une adresse électronique externe ou une liste de groupes de messagerie Adobe. Pour plus d’informations, voir [Documentation de l’interface utilisateur des alertes](../../observability/alerts/ui.md) pour plus d’informations sur l’onglet history . |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le contrôle d’accès basé sur les attributs, consultez la [présentation du contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md). Pour consulter un guide complet sur le workflow de contrôle d’accès basé sur les attributs, reportez-vous au [guide complet du contrôle d’accès basé sur les attributs](../../access-control/abac/end-to-end-guide.md).
+Pour en savoir plus sur les alertes, lisez le [[!DNL Observability Insights] aperçu](../../observability/home.md).
 
-## Préparation de données {#data-prep}
+## Collecte de données {#data-collection}
 
-La préparation des données permet aux personnes travaillant dans l’ingénierie de données de mapper, de transformer et de valider les données vers et à partir du modèle de données d’expérience (XDM).
+Adobe Experience Platform fournit une suite de technologies qui vous permettent de collecter des données d’expérience client côté client. Vous pouvez ensuite les envoyer à Adobe Experience Platform Edge Network pour les enrichir, les transformer et les distribuer vers des destinations Adobe ou autres qu’Adobe.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Nouvelles fonctions du mappeur | <ul><li>`object_to_map` : utilisez la fonction `object_to_map` pour créer des types de données de mappage. Cette fonction prend en charge plusieurs syntaxes différentes. Pour plus d’informations, consultez le guide sur les [fonctions pour les hiérarchies - objets](../../data-prep/functions.md#objects). </li><li>`to_map` : utilisez la fonction `to_map` pour créer un mappage avec des paires nom/valeur de champ données à l’aide d’objets. Pour plus d’informations, consultez le guide sur les [fonctions pour les hiérarchies - mappages](../../data-prep/functions.md#map). </li><li>`array_to_map` : utilisez la fonction `array_to_map` pour créer un mappage avec des paires nom/valeur de champ données à l’aide de tableaux d’objets. Pour plus d’informations, consultez le guide sur les [fonctions pour les hiérarchies - mappages](../../data-prep/functions.md#map). |
+| [Prise en charge de la messagerie web in-app dans le SDK web](../../edge/personalization/web-in-app-messaging.md) | Le SDK Web de Adobe Experience Platform prend désormais en charge la configuration de la messagerie Web In-App pour les campagnes Adobe Journey Optimizer. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur la préparation des données, consultez la [présentation de la préparation des données](../../data-prep/home.md).
+Pour en savoir plus sur les collections de données, veuillez consulter la [vue d’ensemble des collections de données](../../tags/home.md).
 
-## Tableaux de bord {#dashboards}
+<!-- ## Data Prep {#data-prep}
 
-Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des informations importantes sur les données de votre organisation, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
+Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
-**Fonctionnalités nouvelles ou mises à jour**
+**New or updated features**
 
-| Fonctionnalité | Description |
+| Feature | Description |
 | --- | --- |
-| Afficher le SQL | Vous pouvez désormais afficher le code SQL derrière vos profils, audiences, destinations et informations personnalisées à l’aide du bouton bascule Afficher le code SQL , puis exécuter la requête à la demande via l’éditeur de requêtes. L’accès au code SQL qui alimente vos insights Real-time Customer Data Platform vous permet de comprendre la logique derrière l’analyse de votre modèle de données. Grâce à cette transparence, vos données CDP en temps réel Adobe sont plus accessibles, plus compréhensibles et plus pertinentes pour la prise de décision.<br>Tirer parti du SQL de plus de 40 insights existants pour créer de nouvelles requêtes qui obtiennent des insights uniques à partir des données de Platform en fonction des besoins de votre entreprise. Le langage SQL est également disponible pour votre [Profils](../../dashboards/insights/profiles.md), [Audiences](../../dashboards/insights/audiences.md), et [Destinations](../../dashboards/insights/destinations.md) informations dans la documentation de l’Experience League. Ces documents mettent en évidence les cas d’utilisation professionnels auxquels des informations standard peuvent répondre. Pour plus d’informations, consultez le guide sur l’[affichage des insights SQL](../../dashboards/view-sql.md). |
+| New mapper functions for Adobe Analytics | You can now use the following functions to extract event data from Adobe Analytics: <ul><li>`aa_get_event_id`</li><li>`aa_get_event_value`</li><li>`aa_get_product_categories`</li><li>`aa_get_product_names`</li><li>`aa_get_product_quantities`</li><li>`aa_get_product_prices`</li><li>`aa_get_product_event_values`</li><li>`aa_get_product_evars`</li></ul> For more information on these functions, read the [Data Prep functions guide](../../data-prep/functions.md) |
 
 {style="table-layout:auto"}
 
-Pour plus dʼinformations sur les tableaux de bord, notamment sur la manière dʼoctroyer des autorisations dʼaccès et de créer des widgets personnalisés, commencez par lire la [présentation des tableaux de bord](../../dashboards/home.md).
+For more information on Data Prep, read the [Data Prep overview](../../data-prep/home.md). -->
 
 ## Destinations {#destinations}
 
@@ -93,7 +69,9 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | ----------- | ----------- |
-| [Connexion Pubmatic](../../destinations/catalog/advertising/pubmatic.md) | Utilisez cette destination pour envoyer des données d’audience à la plateforme [!DNL PubMatic Connect]. |
+| [Connexion de Gainsight PX](../../destinations/catalog/analytics/gainsight-px.md) | Gainsight PX est une plateforme d’expérience de produit qui permet aux équipes produit de comprendre comment les utilisateurs utilisent leurs produits, collectent des commentaires et créent des engagements in-app tels que des consultations produit pour stimuler l’intégration des utilisateurs et l’adoption des produits. |
+| [Connexion aux balises Mailchimp](../../destinations/catalog/email-marketing/mailchimp-tags.md) | Mailchimp est une plateforme de marketing et de marketing par e-mail populaire. Vous pouvez utiliser le connecteur Mailchimp Tags pour structurer, étiqueter ou classer vos contacts. |
+| [Connexion SAP Commerce](../../destinations/catalog/ecommerce/sap-commerce.md) | SAP Commerce est une solution de plateforme de commerce électronique basée sur le cloud pour les entreprises B2B et B2C, disponible dans le cadre du portefeuille d’expérience client SAP. Vous pouvez utiliser cette destination pour mettre à jour les détails de vos clients dans SAP Commerce à partir d’une audience Experience Platform existante. |
 
 {style="table-layout:auto"}
 
@@ -101,77 +79,42 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonction | Description |
 | ----------- | ----------- |
-| Nouveau type d’authentification de **rôle assumé** pour les destinations Amazon S3 | Utilisez le nouveau type d’authentification de rôle assumé lors de la connexion d’Experience Platform à vos compartiments Amazon S3 si vous ne souhaitez pas partager les clés de compte et les clés secrètes avec Experience Platform. Pour en savoir plus sur la nouvelle méthode d’authentification dans la [section d’authentification](/help/destinations/catalog/cloud-storage/amazon-s3.md#assumed-role-authentication), consultez la documentation d’Amazon S3. |
+| Activer les audiences de compte disponibles | La fonctionnalité d’activation des audiences de compte vers certaines destinations est désormais disponible en général pour les entreprises qui achètent la variable [Entreprise à entreprise](/help/rtcdp/overview.md#rtcdp-b2b) et [Entreprise à personne](/help/rtcdp/overview.md#rtcdp-b2b) éditions de Real-time Customer Data Platform. Lisez le tutoriel sur [activation des audiences de compte](/help/destinations/ui/activate-account-audiences.md) pour obtenir des informations complètes, y compris les destinations prises en charge. |
+| Outils d’application du consentement de la loi sur les marchés numériques pour les destinations Google | Google publie des modifications apportées à la variable [API Google Ads](https://developers.google.com/google-ads/api/docs/start), [Correspondance client](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), et la variable [API Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) afin de prendre en charge les exigences de conformité et de consentement définies sous la rubrique [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) dans l’Union européenne ([Stratégie de consentement de l’utilisateur de l’UE](https://www.google.com/about/company/user-consent-policy/)). L’application de ces modifications aux exigences de consentement devrait entrer en vigueur à compter du 6 mars 2024. <br/><br/> Pour respecter la politique de consentement des utilisateurs de l’UE et continuer à créer des listes d’audiences pour les utilisateurs de l’Espace économique européen (EEE), les publicitaires et les partenaires doivent s’assurer qu’ils transmettent le consentement de l’utilisateur final lors du transfert des données d’audience. En tant que partenaire Google, Adobe vous fournit les outils nécessaires pour vous conformer à ces exigences de consentement en vertu de la DMA dans l’Union européenne.<br/><br/>Clients ayant acheté Adobe Privacy &amp; Security Shield et ayant configuré une [stratégie de consentement](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) pour filtrer les profils non autorisés, il n’est pas nécessaire d’effectuer une action.<br/><br/>Les clients qui n’ont pas acheté Adobe Privacy &amp; Security Shield doivent utiliser la variable [définition de segment](../../segmentation/home.md#segment-definitions) fonctionnalités dans [Créateur de segments](../../segmentation/ui/segment-builder.md) pour filtrer les profils non autorisés afin de continuer à utiliser les destinations Google Real-Time CDP existantes sans interruption. |
+| [!BADGE Beta]{type=Informative} Réorganiser les champs de mappage pour les destinations par lots | Vous pouvez désormais modifier l’ordre des colonnes dans vos exportations CSV en faisant glisser les champs de mappage dans la variable [mapping](../../destinations/ui/activate-batch-profile-destinations.md#mapping) étape . L’ordre des champs mappés dans l’interface utilisateur se reflète dans l’ordre des colonnes du fichier CSV exporté, de haut en bas, la rangée supérieure étant la colonne la plus à gauche du fichier CSV. <br/><br/> Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe. |
+| [!BADGE Beta]{type=Informative} Planifications d’exportation par défaut présélectionnées pour les destinations par lot | Experience Platform définit désormais automatiquement un planning par défaut pour chaque export de fichier. Consultez la documentation relative à [planification des exports d’audience](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) pour savoir comment modifier le planning par défaut. <br/><br/> Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe. |
+| [!BADGE Beta]{type=Informative} Modification en masse des plannings d’activation de l’audience pour les destinations par lots | Vous pouvez désormais modifier en bloc le planning d’activation de plusieurs audiences, à partir du [Données d’activation](../../destinations/ui/destination-details-page.md#bulk-edit-schedule) page. <br/><br/> Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe. |
+| [!BADGE Beta]{type=Informative} Exportation de fichiers en bloc à la demande vers des destinations par lot | Vous pouvez désormais exporter des audiences en bloc vers les destinations par lot, au moyen de l’option [exporter des fichiers à la demande](../../destinations/ui/export-file-now.md) . <br/><br/> Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe. |
 
 {style="table-layout:auto"}
 
-Pour obtenir plus d’informations générales sur les destinations, consultez la [vue d’ensemble des destinations](../../destinations/home.md).
+Pour obtenir des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
 
-## Service d’identités {#identity-service}
+## Sandbox {#sandboxes}
 
-Adobe Experience Platform Identity Service vous offre la possibilité de mieux connaître vos clients et clientes ainsi que leur comportement en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
-
-**Documentation nouvelle ou mise à jour**
-
-| Mise à jour de la documentation | Description |
-| --- | --- |
-| Restructuration de la documentation | La documentation du service d’identités a été restructurée afin d’améliorer la présentation et la clarté des concepts au sein du service d’identités :<ul><li>Visitez la [page de vue d’ensemble du service d’identités](../../identity-service/home.md) pour un guide terminologique plus complet, un exemple de cas d’utilisation détaillant un parcours client type, une ventilation de la manière dont le service d’identités relie les identités entre elles, et un résumé du rôle que Ie service d’identités joue dans l’écosystème Experience Platform.</li><li>Consultez le guide sur la [compréhension de la relation entre le service d’identités et le profil client en temps réel](../../identity-service/identity-and-profile.md) pour un résumé détaillé de la façon dont les deux services fonctionnent ensemble et des différences entre leurs objectifs, leurs processus, leurs entrées et leurs sorties.</li><li>Consultez le [guide sur la logique de liaison du service d’identités](../../identity-service/features/identity-linking-logic.md) pour obtenir des explications et des visualisations sur le comportement du graphique d’identité en fonction de différents scénarios et horodatages.</li></ul> |
-
-{style="table-layout:auto"}
-
-Pour en savoir plus sur le service d’identités, consultez la [vue d’ensemble du service d’identités](../../identity-service/home.md).
-
-## Real-Time Customer Data Platform {#rtcdp}
-
-Basée sur Experience Platform, Real-time Customer Data Platform ([!DNL Real-Time CDP]) aide les entreprises à rassembler des données connues et inconnues pour activer les profils des clients et clientes avec une prise de décision intelligente tout au long du parcours client. [!DNL Real-Time CDP] associe plusieurs sources de données d’entreprise pour créer des profils client en temps réel. Les segments créés à partir de ces profils peuvent ensuite être envoyés vers des destinations en aval afin de fournir des expériences personnalisées et individuelles aux clients et clientes sur tous les canaux et appareils.
+Adobe Experience Platform est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance de Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Mises à jour de la [page d’accueil du profil client en temps réel](https://experience.adobe.com) | <ul><li>**Widget de profils** : vous pouvez désormais utiliser le widget de profils pour accéder à la page de la vue d’ensemble des profils et afficher les mesures de profil de votre organisation.</li><li>**Carte des mesures de profil** : la carte des mesures de profil du tableau de bord de la page d’accueil affiche désormais le nombre total de profils de votre organisation, en fonction de votre politique de fusion respective.</li><li>**Widget de schémas** : vous pouvez désormais utiliser le widget de schémas pour accéder au workflow de création de schémas dans l’interface utilisateur.</li></ul> |
+| Outils sandbox | Outre la prise en charge désormais des types d’objets pour les règles de consentement et de gouvernance, utilisez l’outil de test pour importer des schémas sans activation des profils unifiés, recherchez les attributs manquants dans l’environnement de test cible lors de l’importation d’un segment et utilisez par défaut la stratégie de fusion existante. Pour plus d’informations sur ces fonctionnalités, voir [guide de l’interface utilisateur de l’outil Sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
 {style="table-layout:auto"}
 
-**Documentation nouvelle ou mise à jour**
-
-| Mise à jour de la documentation | Description |
-| --- | --- |
-| Nouvelle page d’accueil de la documentation Real-Time CDP | Visitez la [nouvelle page d’accueil de la documentation Real-Time CDP](/help/rtcdp/home.md) pour obtenir des informations en un coup d’oeil sur la prise en main du produit, les mécanismes de sécurisation, les exemples de cas d’utilisation, etc. |
-| Vue d’ensemble d’exemples de cas d’utilisation Real-Time CDP | Visitez la [nouvelle page de vue d’ensemble d’exemples de cas d’utilisation](/help/rtcdp/use-case-guides/overview.md) pour un ensemble d’exemples de cas d’utilisation que votre entreprise peut réaliser avec Real-Time CDP. |
-
-{style="table-layout:auto"}
-
-Pour en savoir plus sur Real-Time CDP, consultez la [vue d’ensemble Real-Time CDP](../../rtcdp/overview.md).
-
-## Profil client en temps réel {#profile}
-
-Adobe Experience Platform vous permet d’offrir aux clients des expériences coordonnées, cohérentes et pertinentes, quel que soit l’endroit ou le moment où ils interagissent avec votre marque. Le profil client en temps réel offre une vue holistique de chaque client qui combine des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Le Profil vous permet de consolider vos données client en une vue unifiée offrant un compte horodaté et exploitable de chaque interaction client.
-
-**Fonctionnalités mises à jour**
-
-| Fonctionnalité | Description |
-| --- | --- |
-| Améliorations de la localisation des cartes de tableau de bord par défaut de la visionneuse de profils | Les cartes de profil par défaut auront désormais des noms localisés dynamiquement. Les cartes de profil personnalisées peuvent toujours comporter des noms personnalisés qui peuvent être modifiés. |
-
-{style="table-layout:auto"}
-
-Pour en savoir plus sur le profil client en temps réel, lisez d’abord la [présentation des profils](../../profile/home.md).
+Pour plus d’informations sur les environnements de test, lisez la section [Présentation des environnements de test](../../sandboxes/home.md).
 
 ## Segmentation Service {#segmentation}
 
-[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+[!DNL Segmentation Service] permet de segmenter en audiences les données stockées dans [!DNL Experience Platform] qui se rapportent aux personnes (tels que les clientes et clients, les prospects, les utilisateurs et utilisatrices ou les organisations). Vous pouvez créer des audiences par le biais de définitions de segment ou d’autres sources à partir de vos données [!DNL Real-Time Customer Profile]. Ces audiences sont configurées et conservées de manière centralisée sur [!DNL Platform] et sont facilement accessibles à partir de n’importe quelle solution Adobe.
 
-**Fonctionnalités nouvelles ou mises à jour**
+**Nouvelle fonctionnalité**
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Chargement d’audience généré en externe | Le nombre maximum de colonnes a été augmenté pour **25**. |
-| Estimations du créateur de segments | Les estimations et les profils qualifiés s’affichent désormais dans la section des propriétés de l’audience. Pour plus d’informations sur cette modification, consultez la section [Guide de l’interface utilisateur du créateur de segments](../../segmentation/ui/segment-builder.md). |
+| Audiences du compte | Les audiences de compte sont désormais disponibles en général ! Vous pouvez désormais utiliser la segmentation des comptes pour offrir une expérience de segmentation marketing simplifiée et conviviale à partir d’audiences basées sur des personnes et d’audiences basées sur des comptes dans les éditions B2B et B2P de la plateforme client en temps réel. Cette version vous permet d’utiliser les audiences basées sur les personnes comme prédicat pour les audiences basées sur les comptes, d’ajouter des fonctionnalités de recherche, de prendre en charge l’utilisation d’entités personnalisées et d’être conforme à la gouvernance des données. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble des audiences de compte](../../segmentation/ui/account-audiences.md). |
 
 {style="table-layout:auto"}
-
-Pour plus d’informations sur [!DNL Segmentation Service], consultez la [présentation de la segmentation](../../segmentation/home.md).
 
 ## Sources {#sources}
 
@@ -181,10 +124,8 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite] sources | Utilisez les intégrations [!DNL Oracle NetSuite] dans le catalogue de sources pour importer des données depuis vos comptes [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) et [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) dans Experience Platform. |
-| [!BADGE Beta]{type=Informative} [!DNL Braze Currents] source | Utilisez l’intégration [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) dans le catalogue de sources pour importer des données depuis votre compte [!DNL Braze] dans Experience Platform. |
-| Prise en charge de l’authentification par paire de clés pour la source de lots [!DNL Snowflake] | Vous pouvez désormais utiliser l’authentification par paire de clés lors de la création d’un nouveau compte [!DNL Snowflake] pour les données de lots. Pour plus d’informations, consultez le guide sur la [création d’un compte  [!DNL Snowflake]  à l’aide de l’API](../../sources/tutorials/api/create/databases/snowflake.md) ou le guide sur la [création d’un compte  [!DNL Snowflake]  à l’aide de l’interface utilisateur](../../sources/tutorials/ui/create/databases/snowflake.md). |
+| [!BADGE Beta]{type=Informative} [!DNL Acxiom] source | Utilisez la variable [[!DNL Acxiom Prospecting Data Import] source](../../sources/tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) pour récupérer et mapper des données à partir de [!DNL Acxiom] service prospect à Experience Platform. |
 
 {style="table-layout:auto"}
 
-Pour en savoir plus sur les sources, lisez la [présentation des sources](../../sources/home.md).
+Pour plus d’informations sur les sources, consultez la [présentation des sources](../../sources/home.md).
