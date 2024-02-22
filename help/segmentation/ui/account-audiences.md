@@ -1,13 +1,13 @@
 ---
 title: Audiences du compte
 description: Découvrez comment créer et utiliser des audiences de compte pour cibler des profils de compte dans des destinations en aval.
-badgeLimitedAvailability: label="Disponibilité limitée" type="Caution"
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 1ff4cb004b7c2f474e2d64f4bcc239c7060f9439
+source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
 workflow-type: tm+mt
-source-wordcount: '1050'
-ht-degree: 3%
+source-wordcount: '1039'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->Les audiences de compte ne sont disponibles que dans la variable [Édition B2B de Real-time Customer Data Platform](../../rtcdp/b2b-overview.md). En outre, la fonctionnalité d’audience de compte figure actuellement dans **disponibilité limitée**. Contactez le service à la clientèle d’Adobe ou votre représentant d’Adobe pour demander l’accès à cette fonctionnalité.
+>Les audiences de compte ne sont disponibles que dans la variable [Édition B2B de Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) et la variable [Édition B2P de Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
 
 Grâce à la segmentation des comptes, Adobe Experience Platform vous permet d’offrir une expérience de segmentation marketing simplifiée et conviviale, allant des audiences basées sur les personnes aux audiences basées sur les comptes.
 
