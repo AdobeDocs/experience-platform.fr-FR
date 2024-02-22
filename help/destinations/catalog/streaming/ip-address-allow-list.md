@@ -4,9 +4,9 @@ title: Liste autorisée d’adresses IP pour les destinations en flux continu
 type: Documentation
 description: Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée afin d’exporter en toute sécurité des données d’Experience Platform vers votre point de terminaison API REST HTTP, Amazon Kinesis ou votre instance Azure Event Hubs.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: d4833821105433518ee30415fe08f281effa5616
+source-git-commit: ccb0f80334241afd3f8d8b6ce2833cfd39b223ac
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '275'
 ht-degree: 9%
 
 ---
@@ -140,3 +140,31 @@ Adobe vous recommande d’ajouter les plages d’adresses IP suivantes à une li
 `20.200.93.180`
 `20.200.94.116`
 `20.200.94.83`
+
+## GBR9 : clients de Grande-Bretagne {#gbr}
+
+`20.254.3.48/28`
+`20.254.4.0/28`
+`20.26.128.247`
+`20.254.1.128/28`
+`20.254.2.32/28`
+`20.26.64.208/28`
+`20.254.2.208/28`
+`20.254.3.176/28`
+`20.254.4.64/28`
+`20.254.3.32/28`
+`20.254.3.144/28`
+`20.26.64.240/28`
+`20.254.4.16/28`
+`20.254.3.240/28`
+`20.26.65.0/28`
+`20.254.4.32/28`
+`20.254.3.112/28`
+`20.254.4.96/28`
+`20.108.202.84`
+`20.108.119.100`
+`20.254.2.128/28`
+`20.26.131.71`
+`20.26.130.226`
+`20.26.64.112/28`
+`20.254.3.192/28`
