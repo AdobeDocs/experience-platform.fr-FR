@@ -4,9 +4,9 @@ user-guide-title: Guide des destinations
 user-guide-description: Activez vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
-source-git-commit: c2e446ed89ef8a2c4496cd1d442d0204843dab2e
+source-git-commit: 767ebd1ef693f9484e11facc7e8b73d91f632956
 workflow-type: tm+mt
-source-wordcount: '1202'
+source-wordcount: '1203'
 ht-degree: 91%
 
 ---
@@ -107,7 +107,7 @@ ht-degree: 91%
       * [Extension Decibel](./catalog/analytics/decibel.md)
       * [Extension Demandbase](./catalog/analytics/demandbase.md)
       * [Extension DialogTech](./catalog/analytics/dialogtech.md)
-      * [Gainsight PX](./catalog/analytics/gainsight-px.md)
+      * [Connexion de Gainsight PX](./catalog/analytics/gainsight-px.md)
       * [Extension Google Global Site Tag](./catalog/analytics/gtag-analytics.md)
       * [Extension Google Universal Analytics](./catalog/analytics/google-universal-analytics.md)
       * [Extension JW Player Analytics (version Beta)](./catalog/analytics/jw-player-analytics.md)
