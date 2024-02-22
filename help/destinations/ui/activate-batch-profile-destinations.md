@@ -3,10 +3,10 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations basées sur un profil de lot.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: a66c4397a02da81e4b3304f3bc975f725f8f8d76
+source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
 workflow-type: tm+mt
-source-wordcount: '3797'
-ht-degree: 59%
+source-wordcount: '3879'
+ht-degree: 58%
 
 ---
 
@@ -73,6 +73,10 @@ Vous pouvez sélectionner plusieurs types d’audiences, selon leur origine :
 >
 >Sélection d’audiences provenant de **[!UICONTROL Chargements personnalisés]** active automatiquement la variable [Sélectionner les attributs d’enrichissement](#select-enrichment-attributes) étape .
 
+>[!TIP]
+>
+>Vous pouvez supprimer des audiences des flux d’activation existants du **[!UICONTROL Données d’activation]** page. Voir [documentation dédiée](../ui/destination-details-page.md#bulk-remove) pour plus d’informations.
+
 ## Planifier l’export d’audience {#scheduling}
 
 >[!CONTEXTUALHELP]
@@ -80,17 +84,21 @@ Vous pouvez sélectionner plusieurs types d’audiences, selon leur origine :
 >title="Planning"
 >abstract="Utilisez l’icône en forme de crayon pour définir le type d’exportation de fichier (fichiers complets ou incrémentiels) et la fréquence d’exportation."
 
-[!DNL Adobe Experience Platform] exporte les données pour les destinations de marketing par e-mail et de stockage dans le cloud en tant que [types de fichiers différents](#supported-file-formats-export). Dans le **[!UICONTROL Planification]** , vous pouvez configurer le planning et les noms des fichiers pour chaque audience que vous exportez. La configuration du planning est obligatoire, mais la configuration du nom de fichier est facultative.
+[!DNL Adobe Experience Platform] exporte les données pour les destinations de marketing par e-mail et de stockage dans le cloud en tant que [types de fichiers différents](#supported-file-formats-export). Dans le **[!UICONTROL Planification]** , vous pouvez configurer le planning et les noms des fichiers pour chaque audience que vous exportez.
+
+Experience Platform définit automatiquement un planning par défaut pour chaque export de fichier. Vous pouvez modifier la planification par défaut selon vos besoins, en cliquant sur l’icône en forme de crayon en regard de chaque planification, puis en définissant une planification personnalisée.
+
+![Modifier le contrôle de planification en surbrillance à l’étape Planification .](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
+
+>[!TIP]
+>
+>Vous pouvez modifier les plannings d’activation de l’audience pour les flux d’activation existants à partir du **[!UICONTROL Données d’activation]** page. Consultez la documentation relative à [modification en masse des calendriers d’activation](../ui/destination-details-page.md#bulk-edit-schedule) pour plus d’informations.
 
 >[!IMPORTANT]
 >
 >[!DNL Adobe Experience Platform] divise automatiquement les fichiers d’exportation à 5 millions d’enregistrements (lignes) par fichier. Chaque ligne représente un profil.
 >
 >Les noms de fichiers fractionnés sont ajoutés avec un nombre indiquant que le fichier fait partie d’une exportation plus importante, comme : `filename.csv`, `filename_2.csv`, `filename_3.csv`.
-
-Sélectionnez la variable **[!UICONTROL Créer un planning]** contrôle correspondant à l’audience que vous souhaitez envoyer à votre destination.
-
-![Créez un contrôle de planification en surbrillance à l’étape Planification .](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Exporter des fichiers complets {#export-full-files}
 
@@ -247,6 +255,14 @@ Au cours de cette étape, vous devez sélectionner les attributs de profil à aj
 1. Le champ que vous avez sélectionné pour l’exportation apparaît désormais dans la vue de mappage et affiche l’en-tête modifié dans le fichier exporté.
 
    ![Fenêtre modale présentant les attributs de profil qui peuvent être exportés vers la destination.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
+
+1. [!BADGE Version bêta]{type=Informative}
+
+   >[!NOTE]
+   >
+   >Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe.
+
+   ![Enregistrement affichant les champs de mappage réorganisés par glisser-déposer.](../assets/ui/activate-batch-profile-destinations/reorder-fields.gif)
 
 1. (Facultatif) Vous pouvez sélectionner le champ exporté en tant que [clé obligatoire](#mandatory-keys) ou [clé de déduplication](#deduplication-keys).
 

@@ -3,10 +3,10 @@ title: (Version bêta) Exporter des fichiers à la demande vers des destinations
 type: Tutorial
 description: Découvrez comment exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur de l’Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: 64833e29d062225bc774a14ae60b102b293bb5c4
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 20%
+source-wordcount: '722'
+ht-degree: 21%
 
 ---
 
@@ -48,13 +48,9 @@ Pour exporter des fichiers à la demande vers des destinations par lot, vous dev
 
    ![Image mettant en évidence un flux de données filtré.](../assets/ui/activate-on-demand/filtered-dataflow.png)
 
-3. Sélectionnez la variable **[!UICONTROL Données d’activation]** et sélectionnez l&#39;audience pour laquelle vous souhaitez exporter un fichier à la demande, puis sélectionnez l&#39;option **[!UICONTROL Exporter le fichier maintenant]** pour déclencher une exportation unique qui diffusera un fichier vers votre destination de lot.
+3. Sélectionnez la variable **[!UICONTROL Données d’activation]** et sélectionnez les audiences pour lesquelles vous souhaitez exporter des fichiers à la demande, puis sélectionnez **[!UICONTROL Exporter le fichier maintenant]** pour déclencher une exportation unique qui diffusera un fichier pour chaque audience sélectionnée vers votre destination de lot.
 
-   >[!IMPORTANT]
-   >
-   >La sélection de plusieurs audiences pour exporter des fichiers à la demande en bloc n’est actuellement pas prise en charge dans l’interface utilisateur. Utilisez la variable [API d’activation ad hoc](/help/destinations/api/ad-hoc-activation-api.md) à cette fin.
-
-   ![Image mettant en surbrillance le bouton Exporter le fichier maintenant .](../assets/ui/activate-on-demand/activate-segment-on-demand.png)
+   ![Image mettant en surbrillance le bouton Exporter le fichier maintenant .](../assets/ui/activate-on-demand/bulk-export-file-now.png)
 
 4. Sélectionner **[!UICONTROL Oui]** pour confirmer et déclencher l’exportation du fichier.
 

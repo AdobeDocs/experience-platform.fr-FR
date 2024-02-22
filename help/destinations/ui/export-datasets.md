@@ -3,10 +3,10 @@ title: Exportation de jeux de données vers des destinations de stockage dans le
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 1881e66c795c548bac08e09b4ec00852fdbc51c3
+source-git-commit: 5d9384f57765126709f6bfcc005334ba4120595a
 workflow-type: tm+mt
-source-wordcount: '1849'
-ht-degree: 51%
+source-wordcount: '1857'
+ht-degree: 49%
 
 ---
 
@@ -195,9 +195,9 @@ Notez la différence de format de fichier entre les deux types de fichiers, lors
 * Lors de l’exportation de fichiers JSON compressés, le format de fichier exporté est `json.gz`
 * Lors de l’exportation de fichiers parquet compressés, le format de fichier exporté est `gz.parquet`
 
-## Supprimer un jeu de données de la destination {#remove-dataset}
+## Suppression des jeux de données des destinations {#remove-dataset}
 
-Pour supprimer un jeu de données d’un flux de données existant, procédez comme suit :
+Pour supprimer des jeux de données d’un flux de données existant, procédez comme suit :
 
 1. Connectez-vous à l’[interface utilisateur Experience Platform](https://experience.adobe.com/platform/) et sélectionnez **[!UICONTROL Destinations]** dans la barre de navigation de gauche. Sélectionnez **[!UICONTROL Parcourir]** dans l’en-tête supérieur pour afficher vos flux de données de destination existants.
 
@@ -211,14 +211,19 @@ Pour supprimer un jeu de données d’un flux de données existant, procédez co
 
    ![L’option de navigation des jeux de données disponibles est affichée en surbrillance dans la colonne Données d’activation.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-1. La page **[!UICONTROL Données d’activation]** pour la destination s’affiche. Sélectionnez **[!UICONTROL Supprimer un jeu de données]** dans le rail de droite pour déclencher la boîte de dialogue de confirmation de suppression du jeu de données.
+1. La page **[!UICONTROL Données d’activation]** pour la destination s’affiche. Sélectionnez le jeu de données à supprimer, puis sélectionnez **[!UICONTROL Supprimer un jeu de données]** dans le rail de droite pour déclencher la boîte de dialogue de confirmation de suppression du jeu de données.
 
    ![Boîte de dialogue Supprimer le jeu de données présentant la commande Supprimer le jeu de données dans le rail de droite.](../assets/ui/export-datasets/remove-dataset-control.png)
+
+<!-- USE THIS FOR BULK REMOVE RELEASE
+
+1. The **[!UICONTROL Activation data]** page for the destination appears. Use the checkboxes on the left side of the dataset list to select the datasets which you want to remove, then select **[!UICONTROL Remove datasets]** in the right rail to trigger the remove dataset confirmation dialog. 
+
+    ![Remove dataset dialog showing the Remove dataset control in the right rail.](../assets/ui/export-datasets/bulk-remove-datasets.png) -->
 
 1. Dans la boîte de dialogue de confirmation, sélectionnez **[!UICONTROL Supprimer]** pour supprimer immédiatement le jeu de données des exportations vers la destination.
 
    ![Boîte de dialogue présentant l’option Confirmer la suppression du jeu de données du flux de données.](../assets/ui/export-datasets/remove-dataset-confirm.png)
-
 
 ## Droits d’exportation des jeux de données {#licensing-entitlement}
 

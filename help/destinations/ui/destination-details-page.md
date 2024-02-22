@@ -3,10 +3,10 @@ keywords: destinations;destination;page des détails des destinations;page des d
 title: Afficher les détails de la destination
 description: La page de détails d’une destination individuelle fournit un aperçu des détails de destination. Les détails de la destination incluent le nom de destination, l’identifiant, les audiences mappées à la destination et les contrôles permettant de modifier l’activation et d’activer et désactiver le flux de données.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
 workflow-type: tm+mt
-source-wordcount: '925'
-ht-degree: 12%
+source-wordcount: '1100'
+ht-degree: 10%
 
 ---
 
@@ -115,6 +115,32 @@ La variable [!UICONTROL Données d’activation] affiche une liste des audiences
 
 ![Destination de la diffusion en continu de l’affichage des données d’activation](../assets/ui/details-page/activation-data-streaming.png)
 
+<!-- ### Remove multiple audiences from activation flows {#bulk-remove}
+
+To remove multiple audiences from existing activation flows, select the audiences and then select **[!UICONTROL Remove audiences]**.
+
+![Activation data screen highlighting the Remove audiences option.](../assets/ui/details-page/bulk-remove-audiences.png) -->
+
+### [!BADGE Beta]{type=Informative} Exporter plusieurs fichiers à la demande vers des destinations par lot {#bulk-export}
+
 >[!NOTE]
 >
->Pour plus d’informations sur l’exploration de la page de détails d’une audience, reportez-vous à la section [Présentation de l’interface utilisateur de segmentation](../../segmentation/ui/overview.md#segment-details).
+Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe.
+
+Vous pouvez [exporter plusieurs fichiers à la demande](../ui/export-file-now.md) de la **[!UICONTROL Données d’activation]** page. Pour cela, sélectionnez les audiences pour lesquelles vous souhaitez exporter des fichiers à la demande et sélectionnez l&#39;option **[!UICONTROL Exporter le fichier maintenant]** pour déclencher une exportation unique qui diffusera un fichier pour chaque audience sélectionnée vers votre destination de lot.
+
+![Image mettant en surbrillance le bouton Exporter le fichier maintenant .](../assets/ui/details-page/bulk-export-file-now.png)
+
+### [!BADGE Beta]{type=Informatif} Modifier les plannings d’activation de plusieurs audiences exportées vers des destinations par lots {#bulk-edit-schedule}
+
+>[!NOTE]
+>
+Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe.
+
+Pour modifier le planning d’activation existant de plusieurs audiences en même temps, sélectionnez les audiences de votre choix, puis sélectionnez **[!UICONTROL Modifier le planning]**. Pour plus d’informations sur la définition ou la modification d’un planning d’exportation, consultez la section [planifier l’exportation d’audiences](../ui/activate-batch-profile-destinations.md#scheduling) .
+
+![L’écran de données d’activation met en surbrillance l’option permettant de modifier les plannings d’activation pour plusieurs audiences.](../assets/ui/details-page/bulk-edit-schedule.png)
+
+>[!NOTE]
+>
+Pour plus d’informations sur l’exploration de la page de détails d’une audience, reportez-vous à la section [Présentation de l’interface utilisateur de segmentation](../../segmentation/ui/overview.md#segment-details).
