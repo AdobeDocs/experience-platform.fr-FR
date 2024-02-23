@@ -3,7 +3,7 @@ keywords: correspondance client Google;correspondance client Google;correspondan
 title: Connexion à Google Customer Match
 description: La correspondance client Google vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et interagir avec eux dans les propriétés détenues et exploitées de Google, telles que la recherche, le shopping, Gmail et YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: d5a22d4692226c865f6489c821366b4ce8bc2887
+source-git-commit: 7d43abd507b5cee2b5c5d90af253d3e9290013a2
 workflow-type: tm+mt
 source-wordcount: '1972'
 ht-degree: 19%
@@ -15,11 +15,11 @@ ht-degree: 19%
 >[!IMPORTANT]
 >
 > Google publie des modifications apportées à la variable [API Google Ads](https://developers.google.com/google-ads/api/docs/start), [Correspondance client](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html), et la variable [API Display &amp; Video 360](https://developers.google.com/display-video/api/guides/getting-started/overview) afin de prendre en charge les exigences de conformité et de consentement définies sous la rubrique [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) dans l’Union européenne ([Stratégie de consentement de l’utilisateur de l’UE](https://www.google.com/about/company/user-consent-policy/)). L’application de ces modifications aux exigences de consentement devrait entrer en vigueur à compter du 6 mars 2024.
-><br/><br/>
+><br/>
 >Pour respecter la politique de consentement des utilisateurs de l’UE et continuer à créer des listes d’audiences pour les utilisateurs de l’Espace économique européen (EEE), les publicitaires et les partenaires doivent s’assurer qu’ils transmettent le consentement de l’utilisateur final lors du transfert des données d’audience. En tant que partenaire Google, Adobe vous fournit les outils nécessaires pour vous conformer à ces exigences de consentement en vertu de la DMA dans l’Union européenne.
-><br/><br/>
+><br/>
 >Clients ayant acheté Adobe Privacy &amp; Security Shield et ayant configuré une [stratégie de consentement](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) pour filtrer les profils non autorisés, il n’est pas nécessaire d’effectuer une action.
-><br/><br/>
+><br/>
 >Les clients qui n’ont pas acheté Adobe Privacy &amp; Security Shield doivent utiliser la variable [définition de segment](../../../segmentation/home.md#segment-definitions) fonctionnalités dans [Créateur de segments](../../../segmentation/ui/segment-builder.md) pour filtrer les profils non autorisés afin de continuer à utiliser sans interruption les destinations Google Real-Time CDP existantes.
 
 [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et les réengager dans les propriétés détenues et exploitées de Google, telles que : [!DNL Search], [!DNL Shopping], [!DNL Gmail], et [!DNL YouTube].
