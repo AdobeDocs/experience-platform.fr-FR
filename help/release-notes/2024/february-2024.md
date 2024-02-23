@@ -27,7 +27,7 @@ Experience Platform vous permet de vous abonner à des alertes basées sur des 
 **Fonctionnalités nouvelles ou mises à jour**
 | Fonctionnalité | Description | | — | — | | Onglet Historique des alertes | En tant qu’administrateur Experience Platform, vous pouvez utiliser la fonction gérer les abonnés aux alertes pour affecter une alerte à un identifiant utilisateur, une adresse électronique externe ou une liste de groupes de messagerie Adobe. Pour plus d’informations, voir [Documentation de l’interface utilisateur des alertes](../../observability/alerts/ui.md) pour plus d’informations sur l’onglet history . |
 
-{style="table-layout:auto"}
+
 
 Pour en savoir plus sur les alertes, lisez le [[!DNL Observability Insights] aperçu](../../observability/home.md).
 
