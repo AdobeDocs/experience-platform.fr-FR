@@ -1,7 +1,7 @@
 ---
 title: Configuration de la prise en charge de la messagerie web in-app dans le SDK web
 description: Découvrez comment configurer l’extension de balise du SDK Web pour prendre en charge la messagerie in-app web.
-source-git-commit: 82eede9e59338e8438c361d58b476960b7faa5cb
+source-git-commit: a020f880be2606024c6a986dc468d70a2fbdc30f
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 0%
