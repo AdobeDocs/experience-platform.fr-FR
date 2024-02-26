@@ -81,7 +81,7 @@ Les types d’identité personnalisés ne sont pas pris en charge en tant qu’o
 >[!CONTEXTUALHELP]
 >id="platform_sandbox_tooling_package_status"
 >title="Statut du package"
->abstract="Par défaut, le statut est défini sur brouillon. Une fois le package publié, le statut devient publié. Aucune modification ne peut être apportée une fois le package publié."
+>abstract="Par défaut, le statut est défini sur brouillon. Une fois le package publié, le statut devient Publié. Aucune modification ne peut être apportée une fois le package publié."
 
 >[!NOTE]
 >

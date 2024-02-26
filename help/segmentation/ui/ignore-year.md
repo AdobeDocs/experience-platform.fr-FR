@@ -5,17 +5,17 @@ description: Découvrez comment résoudre un problème avec la contrainte d’an
 source-git-commit: d0bd7990f0d77cd5f8d30da735b89c188e13c780
 workflow-type: tm+mt
 source-wordcount: '208'
-ht-degree: 0%
+ht-degree: 9%
 
 ---
 
 
-# Ignorer la mise à jour des contraintes temporelles d’une année {#ignore-year}
+# Mise à jour de la contrainte temporelle Ignorer l’année {#ignore-year}
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_segmentBuilder_ignoreYear"
->title="Ignorer la mise à jour de l’année"
->abstract="Mise à jour de la contrainte de délai d’année d’exclusion. Veuillez réenregistrer votre audience."
+>title="Mise à jour de Ignorer l’année"
+>abstract="La contrainte temporelle Ignorer l’année a été mise à jour. Réenregistrez votre audience."
 
 La version de février 2024 pour Adobe Experience Platform a introduit des modifications dans le service de segmentation Adobe Experience Platform, qui résout un problème lié à l’option &quot;ignorer l’année&quot; dans la création et l’évaluation d’audiences.
 
