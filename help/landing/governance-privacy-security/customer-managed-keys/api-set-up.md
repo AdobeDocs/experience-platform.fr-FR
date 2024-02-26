@@ -2,9 +2,9 @@
 title: Configuration et configuration des clés gérées par le client à l’aide de l’API
 description: Découvrez comment configurer votre application CMK avec votre client Azure et envoyer votre ID de clé de chiffrement à Adobe Experience Platform.
 exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '1012'
+source-wordcount: '1002'
 ht-degree: 49%
 
 ---
@@ -24,7 +24,7 @@ Pour activer le CMK, votre [[!DNL Azure] Key Vault doit être configuré](./azur
 * [Activer la protection contre le vidage](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Activation de la suppression progressive](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
 * [Configurer l’accès à l’aide de [!DNL Azure] contrôle d’accès en fonction du rôle](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
-* [Configurer un coffre  [!DNL Azure]  Key Vault](./azure-key-vault-config.md)
+* [Configurez une [!DNL Azure] Key Vault](./azure-key-vault-config.md)
 
 ## Configurer l’application CMK {#register-app}
 
@@ -77,6 +77,10 @@ Une fois le processus d’authentification terminé, revenez au coffre de clés 
 ![Le tableau de bord Azure Microsoft avec [!DNL Add] et [!DNL Add role assignment] surlignée.](../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
 L’écran suivant vous invite à choisir un rôle pour cette affectation. Sélectionnez **[!DNL Key Vault Crypto Service Encryption User]** avant de sélectionner **[!DNL Next]** pour continuer.
+
+>[!NOTE]
+>
+>Si vous avez le [!DNL Managed-HSM Key Vault] , vous devez sélectionner la variable **[!DNL Managed HSM Crypto Service Encryption User]** rôle de l’utilisateur.
 
 ![Le tableau de bord Azure de Microsoft avec la variable [!DNL Key Vault Crypto Service Encryption User] surlignée.](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
@@ -133,7 +137,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Un nom pour la configuration. Veillez à mémoriser cette valeur, car il est nécessaire de vérifier l’état de la configuration à l’adresse [étape ultérieure](#check-status). La valeur respecte la casse. |
 | `type` | Le type de configuration. Cette propriété doit être définie sur `BYOK_CONFIG`. |
-| `imsOrgId` | Votre identifiant d’organisation. Cet identifiant doit être la même valeur que celle fournie sous la variable `x-gw-ims-org-id` en-tête . |
+| `imsOrgId` | ID d’organisation. Cet identifiant doit être la même valeur que celle fournie sous la variable `x-gw-ims-org-id` en-tête . |
 | `configData` | Cette propriété contient les détails suivants sur la configuration :<ul><li>`providerType` : Cette propriété doit être définie sur `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier` : URI de coffre de clés que vous avez copié [précédemment](#send-to-adobe).</li></ul> |
 
 +++

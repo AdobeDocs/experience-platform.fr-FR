@@ -2,20 +2,20 @@
 title: Configuration d’Azure Key Vault
 description: Découvrez comment créer un compte d’entreprise avec Azure ou utiliser un compte d’entreprise existant et créer le Key Vault.
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: 4ec87482c5a38404217ecd910b6a27ee2d0e00eb
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 36%
+source-wordcount: '561'
+ht-degree: 24%
 
 ---
 
 # Configurer un coffre [!DNL Azure] Key Vault
 
-Les clés gérées par le client (CMK) ne prennent en charge que les clés d’une [!DNL Microsoft Azure] Key Vault. Pour commencer, vous devez utiliser [!DNL Azure] pour créer un compte d’entreprise ou utiliser un compte d’entreprise existant, puis suivre les étapes ci-dessous pour créer le coffre de clés.
+Les clés gérées par le client (CMK) ne prennent en charge que les clés d’une [!DNL Microsoft Azure] Key Vault. Pour commencer, vous devez utiliser [!DNL Azure] pour créer un compte d’entreprise ou utiliser un compte d’entreprise existant et suivre les étapes ci-dessous pour créer le Key Vault.
 
 >[!IMPORTANT]
 >
->Seuls les niveaux de service Premium et Standard d’[!DNL Azure] Key Vault sont pris en charge. [!DNL Azure Managed HSM], [!DNL Azure Dedicated HSM] et [!DNL Azure Payments HSM] ne sont pas pris en charge. Reportez-vous à la documentation d’[[!DNL Azure] ](https://learn.microsoft.com/fr-fr/azure/security/fundamentals/key-management#azure-key-management-services) pour plus d’informations sur les services de gestion de clés proposés.
+>Seuls les niveaux HSM standard, Premium et gérés pour [!DNL Azure] Key Vault est pris en charge. [!DNL Azure Dedicated HSM] et [!DNL Azure Payments HSM] ne sont pas prises en charge. Reportez-vous à la documentation d’[[!DNL Azure] ](https://learn.microsoft.com/fr-fr/azure/security/fundamentals/key-management#azure-key-management-services) pour plus d’informations sur les services de gestion de clés proposés.
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ Une fois que vous avez créé un KeyVault, vous pouvez en générer une nouvelle
 
 ![La variable [!DNL Keys] de [!DNL Azure] avec [!DNL Generate import] surlignée.](../../images/governance-privacy-security/customer-managed-keys/view-keys.png)
 
-Utilisez le formulaire fourni pour attribuer un nom à la clé, puis sélectionnez **RSA** pour le type de clé. Au minimum, la variable **[!DNL RSA key size]** doit être au moins **3072** bits requis par [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] est également compatible avec RSA 3027.
+Utilisez le formulaire fourni pour attribuer un nom à la clé et sélectionnez l’une des options suivantes : **RSA** ou **RSA-HSM** pour le type de clé. Au minimum, la variable **[!DNL RSA key size]** doit être au moins **3072** bits requis par [!DNL Cosmos DB]. [!DNL Azure Data Lake Storage] est également compatible avec RSA 3027.
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Utilisez le formulaire fourni pour attribuer un nom à la clé, puis sélectionn
 
 Utilisez les commandes restantes pour configurer la clé que vous souhaitez générer ou importer selon vos besoins. Lorsque vous avez terminé, sélectionnez **[!DNL Create]**.
 
-![Créez un tableau de bord de clés avec [!DNL 3072] bits surlignés.](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
+![La variable [!DNL Create a key] tableau de bord avec [!DNL 3072] bits surlignés.](../../images/governance-privacy-security/customer-managed-keys/configure-key.png)
 
 La clé configurée apparaît dans la liste des clés du coffre.
 

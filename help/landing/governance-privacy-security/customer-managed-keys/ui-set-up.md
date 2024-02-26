@@ -2,10 +2,10 @@
 title: Configuration et configuration des clés gérées par le client à l’aide de l’interface utilisateur de Platform
 description: Découvrez comment configurer votre application CMK avec votre client Azure et envoyer votre ID de clé de chiffrement à Adobe Experience Platform.
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4f08e8fcc8d53b981af60226f1397a1d1ac4d8dc
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 22%
+source-wordcount: '1090'
+ht-degree: 20%
 
 ---
 
@@ -24,7 +24,7 @@ Pour activer le CMK, votre [[!DNL Azure] Key Vault doit être configuré](./azur
 * [Activer la protection contre le vidage](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Activation de la suppression progressive](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
 * [Configurer l’accès à l’aide de [!DNL Azure] contrôle d’accès en fonction du rôle](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
-* [Configurer un coffre  [!DNL Azure]  Key Vault](./azure-key-vault-config.md)
+* [Configurez une [!DNL Azure] Key Vault](./azure-key-vault-config.md)
 
 ## Configurer l’application CMK {#register-app}
 
@@ -46,7 +46,7 @@ Sélectionnez l’icône de copie (![Icône Copier.](../../images/governance-pri
 
 ![La variable [!UICONTROL Configuration des clés gérées par le client] avec la section URL d’authentification de l’application mise en surbrillance.](../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 
-Copiez et collez le [!UICONTROL URL d’authentification de l’application] dans un navigateur pour ouvrir une boîte de dialogue d’authentification. Sélectionnez **[!DNL Accept]** pour ajouter le principal de service de l’application CMK à votre client [!DNL Azure]. Confirmer l’authentification vous redirige vers la page d’entrée de l’Experience Cloud.
+Copiez et collez le [!UICONTROL URL d’authentification de l’application] dans un navigateur pour ouvrir une boîte de dialogue d’authentification. Sélectionner **[!DNL Accept]** pour ajouter l’entité de service de l’application CMK à votre [!DNL Azure] client. Confirmer l’authentification vous redirige vers la page d’entrée de l’Experience Cloud.
 
 ![Boîte de dialogue de demande d’autorisation Microsoft avec [!UICONTROL Accepter] surlignée.](../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
@@ -61,6 +61,10 @@ Une fois le processus d’authentification terminé, revenez au coffre de clés 
 ![La variable [!DNL Microsoft Azure] tableau de bord avec [!DNL Add] et [!DNL Add role assignment] surlignée.](../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
 L’écran suivant vous invite à choisir un rôle pour cette affectation. Sélectionnez **[!DNL Key Vault Crypto Service Encryption User]** avant de sélectionner **[!DNL Next]** pour continuer.
+
+>[!NOTE]
+>
+>Si vous avez le [!DNL Managed-HSM Key Vault] , vous devez sélectionner la variable **[!DNL Managed HSM Crypto Service Encryption User]** rôle de l’utilisateur.
 
 ![La variable [!DNL Microsoft Azure] tableau de bord avec la variable [!DNL Key Vault Crypto Service Encryption User] surlignée.](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
