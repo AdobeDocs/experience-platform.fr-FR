@@ -3,9 +3,9 @@ title: Audiences Experience Cloud
 description: Découvrez comment partager des audiences de Real-time Customer Data Platform vers différentes applications Experience Cloud.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: 2bdbcda3-2efb-4a4e-9702-4fd9991e9461
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 188398e3483541ca482f5c1cfdce307160ada2da
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1703'
 ht-degree: 16%
 
 ---
@@ -95,6 +95,7 @@ Notez les limites connues et les légendes importantes suivantes lors de l’uti
 * Actuellement, une seule destination Audiences Experience Cloud est prise en charge. Toute tentative de configuration d’une seconde connexion de destination entraîne une erreur.
 * Lorsque vous vous connectez à la destination, vous pouvez voir une option permettant d’accéder à [activation des alertes de flux de données](../../ui/alerts.md). Bien qu’elle soit visible dans l’interface utilisateur, la variable **l’option activer les alertes n’est actuellement pas prise en charge**.
 * **Prise en charge du renvoi d’audience**: le premier export vers Audience Manager ou d’autres solutions Experience Cloud comprend une population historique des audiences. Utilisateurs de la variable [intégration du partage d’audience héritée](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) qui configurent cette destination doit s’attendre à une différence de renvoi d’environ six heures.
+* Audiences provenant d’ [Composition de l’audience](../../../segmentation/ui/audience-composition.md) ne sont pas directement prises en charge. Pour activer les audiences composites vers cette destination, vous devez créer une définition d’audience via [Créateur de segments](../../../segmentation/ui/segment-builder.md) en fonction de votre audience composite et activez l’audience nouvellement créée.
 
 ### Latence lors de l’activation des audiences {#audience-activation-latency}
 
@@ -199,4 +200,4 @@ Les audiences et les caractéristiques de l’Audience Manager sont soumises aux
 
 Les audiences exportées à partir de Real-Time CDP sont affectées à une source de données spécifique dans l’Audience Manager appelée **[!UICONTROL Segments Experience Platform]**.
 
-Pour autoriser uniquement certains utilisateurs à accéder aux audiences, vous pouvez appliquer des contrôles d’accès aux audiences appartenant à la source de données. Définissez de nouvelles autorisations de contrôle d’accès dans Audience Manager pour ces audiences et caractéristiques créées à partir des segments Real-Time CDP.
+Pour autoriser uniquement certains utilisateurs à accéder aux audiences, utilisez [Contrôles d’accès en fonction du rôle](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) pour configurer l’accès des utilisateurs aux audiences et aux caractéristiques créées à partir des audiences Real-Time CDP.
