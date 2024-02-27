@@ -1,8 +1,8 @@
 ---
-title: Exemple de Luma pour le réengagement intelligent
+title: Exemples de Luma de réengagement intelligent
 description: Exemples de vidéos pour le cas d’utilisation du réengagement intelligent.
 feature: Use Cases
-source-git-commit: eaa71bb93a08e8f0a9afe7f6b05929dae93cb670
+source-git-commit: ffa049f1650e9592bda934822cce8565db40c013
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 1%
