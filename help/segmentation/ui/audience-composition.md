@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
 description: La Composition d’audience dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: e8f838c3cf8988f6028901df76ed040e7f08cb98
+source-git-commit: 10079216cbfa5ace68127d1529d47e83f4448049
 workflow-type: tm+mt
 source-wordcount: '1844'
-ht-degree: 94%
+ht-degree: 91%
 
 ---
 
@@ -220,9 +220,9 @@ Une liste d’attributs de profil s’affiche. Dans cette fenêtre contextuelle,
 
 Après avoir sélectionné l’attribut, vous pouvez sélectionner l’ordre de classement. Il s’agit d’un ordre croissant (du plus bas au plus élevé) ou décroissant (du plus élevé au plus bas).
 
-En outre, vous pouvez limiter le nombre d’audiences renvoyées en activant le bouton **[!UICONTROL Ajouter une limite de profil]**. Lorsque ce bouton est activé, vous pouvez définir le nombre maximal d’audiences renvoyées dans le champ **[!UICONTROL Profils inclus]**.
+En outre, vous pouvez limiter le nombre de profils renvoyés en activant la variable **[!UICONTROL Ajout d’une limite de profil]** bascule. Lorsque ce bouton est activé, vous pouvez définir le nombre maximal de profils renvoyés dans la variable **[!UICONTROL Profils inclus]** champ .
 
-![Le bouton« Ajouter une limite de profil » est mis en surbrillance, ce qui vous permet de limiter le nombre d’audiences renvoyées.](../images/ui/audience-composition/add-profile-limit.png)
+![Le bouton d&#39;activation/désactivation Ajouter une limite de profil est mis en surbrillance, ce qui permet de limiter le nombre de profils renvoyés.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Fractionner] {#split-block}
 
