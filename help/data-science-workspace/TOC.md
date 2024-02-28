@@ -5,9 +5,10 @@ breadcrumb-title: Guide de Data Science Workspace
 user-guide-description: Utilisez le machine learning pour développer, entraîner et évaluer des modèles et des recettes avec des ordinateurs portables équipés d’Adobe Sensei et de JupyterLab.
 feature: Data Science Workspace
 solution: Experience Platform
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+role: User, Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '225'
 ht-degree: 100%
 
 ---
@@ -58,7 +59,7 @@ ht-degree: 100%
    * [Notation d’un modèle (interface utilisateur)](models-recipes/score-model-ui.md)
    * [Notation d’un modèle (API)](models-recipes/score-model-api.md)
    * [Optimisation d’un modèle](models-recipes/optimize-model.md)
-   * [Enrichir le profil client en temps réel avec des insights de machine learning](models-recipes/enrich-profile.md)
+   * [Enrichir Real-Time Customer Profile avec des informations de machine learning](models-recipes/enrich-profile.md)
    * [Publication d’un modèle en tant que service (interface utilisateur)](models-recipes/publish-model-service-ui.md)
    * [Publication d’un modèle en tant que service (API)](models-recipes/publish-model-service-api.md)
    * [Planification de la formation et de la notation automatisées d’un service (interface utilisateur)](models-recipes/schedule-models-ui.md)

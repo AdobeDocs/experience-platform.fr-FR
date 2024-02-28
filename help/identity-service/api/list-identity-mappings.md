@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;identité;identité
+keywords: Experience Platform;accueil;rubriques populaires;identité;identité
 solution: Experience Platform
 title: Mappages d’identités de liste
 description: Un mappage est un ensemble regroupant toutes les identités d’un cluster pour un espace de noms spécifié.
+role: Developer
 exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 96%
+source-wordcount: '278'
+ht-degree: 92%
 
 ---
 
@@ -66,7 +67,7 @@ Afin de récupérer les mappages pour plusieurs identités, utilisez la méthode
 
 >[!NOTE]
 >
->La requête ne doit pas indiquer plus de 1 000 identités. Les requêtes dépassant les 1 000 identités se traduiront par un code d’état 400.
+>La requête ne doit pas indiquer plus de 1 000 identités. Les requêtes dépassant les 1 000 identités se traduiront par un code d’état 400.
 
 **Format d’API**
 

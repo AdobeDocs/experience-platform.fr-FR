@@ -3,11 +3,12 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Point d’entrée de l’API des tâches de système de profil
 type: Documentation
 description: Adobe Experience Platform vous permet de supprimer un jeu de données ou un lot de la banque de profils afin de supprimer les données Real-Time Customer Profile devenues inutiles ou ajoutées par erreur. Pour ce faire, vous devez utiliser l’API Profile afin de créer une tâche de système Profile ou de supprimer une requête.
+role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1316'
-ht-degree: 69%
+source-wordcount: '1313'
+ht-degree: 64%
 
 ---
 
@@ -17,7 +18,7 @@ Adobe Experience Platform vous permet d’ingérer des données provenant de p
 
 >[!NOTE]
 >
->Si vous essayez de supprimer des jeux de données ou des lots de la variable [!DNL Data Lake], rendez-vous sur la page [Présentation du service de catalogue](../../catalog/home.md) pour plus d’informations.
+>Si vous essayez de supprimer des jeux de données ou des lots de la variable [!DNL Data Lake], veuillez consulter la [Présentation du service de catalogue](../../catalog/home.md) pour plus d’informations.
 
 ## Prise en main
 
@@ -92,7 +93,7 @@ La réponse comprend un tableau « enfants » avec un objet pour chaque requê
 | Propriété | Description |
 |---|---|
 | `_page.count` | Nombre total de requêtes. Cette réponse a été tronquée pour l’espace. |
-| `_page.next` | S’il existe une page supplémentaire de résultats, la page suivante de résultats s’affiche en remplaçant la valeur d’identifiant dans une [requête de recherche](#view-a-specific-delete-request) avec le `"next"` valeur fournie. |
+| `_page.next` | S’il existe une page supplémentaire de résultats, la page suivante de résultats s’affiche en remplaçant la valeur d’identifiant dans une [requête de recherche](#view-a-specific-delete-request) avec la propriété `"next"` valeur fournie. |
 | `jobType` | Type de tâche en cours de création. Dans ce cas, il renverra toujours `"DELETE"`. |
 | `status` | État de la requête de suppression. Les valeurs possibles sont `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
 | `metrics` | Un objet qui inclut le nombre d’enregistrements qui ont été traités (`"recordsProcessed"`) et la durée (en secondes) pendant laquelle la requête a été traitée, ou la durée (temps) de la requête (`"timeTakenInSec"`). |
@@ -103,7 +104,7 @@ L’exécution d’une nouvelle requête de suppression se fait par le biais d�
 
 ### Suppression d’un jeu de données
 
-Pour supprimer un jeu de données de la banque de profils, l’identifiant du jeu de données doit être inclus dans le corps de la requête du POST. Cette action supprimera TOUTES les données d’un jeu de données. [!DNL Experience Platform] vous permet de supprimer des jeux de données en fonction des schémas d’enregistrement et des séries temporelles.
+Pour supprimer un jeu de données de la banque de profils, l’identifiant du jeu de données doit être inclus dans le corps de la requête du POST. Cette action supprimera TOUTES les données d’un jeu de données. [!DNL Experience Platform] vous permet de supprimer des jeux de données en fonction de schémas d’enregistrement et de séries temporelles.
 
 **Format d’API**
 
@@ -188,7 +189,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de la requête de suppression créée, y compris un identifiant unique généré par le système et en lecture seule pour la requête. Vous pouvez l’utiliser pour rechercher la requête et en vérifier l’état. Le `"status"` pour la requête au moment de sa création est `"NEW"` jusqu’à ce qu’elle commence à être traitée. Le `"batchId"` La valeur de la réponse doit correspondre à la variable `"batchId"` valeur envoyée dans la requête.
+Une réponse réussie renvoie les détails de la requête de suppression créée, y compris un identifiant unique généré par le système et en lecture seule pour la requête. Vous pouvez l’utiliser pour rechercher la requête et en vérifier l’état. Le `"status"` pour la requête au moment de sa création est `"NEW"` jusqu’à ce qu’elle commence à être traitée. La variable `"batchId"` La valeur de la réponse doit correspondre à la variable `"batchId"` valeur envoyée dans la requête.
 
 ```json
 {
@@ -271,11 +272,11 @@ La réponse fournit les détails de la requête de suppression, y compris son é
 | `status` | État de la requête de suppression. Valeurs possibles : `"NEW"`, `"PROCESSING"`, `"COMPLETED"`, `"ERROR"`. |
 | `metrics` | Un tableau qui inclut le nombre d’enregistrements qui ont été traités (`"recordsProcessed"`) et la durée (en secondes) pendant laquelle la requête a été traitée, ou la durée (temps) de la requête (`"timeTakenInSec"`). |
 
-Une fois que l’état de la requête de suppression est `"COMPLETED"` vous pouvez confirmer que les données ont été supprimées en tentant d’accéder aux données supprimées à l’aide de l’API Data Access. Pour savoir comment utiliser l’API Data Access pour accéder aux jeux de données et aux lots, consultez la [documentation sur Data Access](../../data-access/home.md).
+Lorsque l’état de la requête de suppression est `"COMPLETED"` vous pouvez confirmer que les données ont été supprimées en tentant d’accéder aux données supprimées à l’aide de l’API Data Access. Pour savoir comment utiliser l’API Data Access pour accéder aux jeux de données et aux lots, consultez la [documentation sur Data Access](../../data-access/home.md).
 
 ## Suppression d’une requête de suppression
 
-[!DNL Experience Platform] vous permet de supprimer une requête, ce qui peut s’avérer utile pour plusieurs raisons, notamment si la tâche de suppression n’a pas été terminée ou est restée bloquée en cours de traitement. Pour supprimer une requête de suppression, vous pouvez exécuter une requête DELETE sur le point d’entrée `/system/jobs` et inclure l’identifiant de la requête de suppression que vous souhaitez supprimer dans le chemin de la requête.
+[!DNL Experience Platform] permet de supprimer une requête précédente, ce qui peut s’avérer utile pour plusieurs raisons, notamment si la tâche de suppression n’a pas été terminée ou s’est retrouvée bloquée dans l’étape de traitement. Pour supprimer une requête de suppression, vous pouvez exécuter une requête DELETE sur le point d’entrée `/system/jobs` et inclure l’identifiant de la requête de suppression que vous souhaitez supprimer dans le chemin de la requête.
 
 **Format d’API**
 

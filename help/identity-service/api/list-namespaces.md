@@ -3,8 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires;liste d’espaces de 
 solution: Experience Platform
 title: Liste des espaces de noms d’identité disponibles
 description: Répertorier tous les espaces de noms disponibles.
+role: Developer
 exl-id: b65e5f86-143d-4ca5-8b3f-2c0a24433bbf
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 44%

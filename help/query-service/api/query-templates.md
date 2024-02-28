@@ -3,11 +3,12 @@ keywords: Experience Platform;accueil;rubriques populaires;service de requête;m
 solution: Experience Platform
 title: Point de terminaison de l’API de modèles de requête
 description: Ce guide décrit les différents appels d’API de modèle de requête que vous pouvez effectuer à l’aide de l’API Query Service.
+role: Developer
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '969'
-ht-degree: 54%
+source-wordcount: '977'
+ht-degree: 44%
 
 ---
 
@@ -47,7 +48,7 @@ Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour
 
 **Requête**
 
-La requête suivante récupère le dernier modèle de requête créé pour votre organisation 
+La requête suivante récupère le dernier modèle de requête créé pour votre organisation.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limit=1
@@ -59,7 +60,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/query-templates?limi
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec une liste de modèles de requête pour l’organisation spécifiée. La réponse suivante renvoie le dernier modèle de requête créé pour votre organisation 
+Une réponse réussie renvoie un état HTTP 200 avec une liste de modèles de requête pour l’organisation spécifiée. La réponse suivante renvoie le dernier modèle de requête créé pour votre organisation.
 
 ```json
 {
@@ -108,7 +109,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de modèles de re
 
 >[!NOTE]
 >
->Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer votre modèle de requête](#delete-a-specified-query-template).
+>Vous pouvez utiliser la valeur `_links.delete` to [supprimer votre modèle de requête](#delete-a-specified-query-template).
 
 ### Création d’un modèle de requête
 
@@ -175,7 +176,7 @@ Une réponse réussie renvoie un état HTTP 202 (Accepted) avec les détails du
 
 >[!NOTE]
 >
->Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer votre modèle de requête](#delete-a-specified-query-template).
+>Vous pouvez utiliser la valeur `_links.delete` to [supprimer votre modèle de requête](#delete-a-specified-query-template).
 
 ### Récupération d’un modèle de requête spécifié
 
@@ -233,7 +234,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de votre mod�
 
 >[!NOTE]
 >
->Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer votre modèle de requête](#delete-a-specified-query-template).
+>Vous pouvez utiliser la valeur `_links.delete` to [supprimer votre modèle de requête](#delete-a-specified-query-template).
 
 ### Mise à jour d’un modèle de requête spécifié
 
@@ -253,7 +254,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 >[!NOTE]
 >
->La requête PUT exige que les champs sql et de nom soient remplis, et **remplace** le contenu actuel de ce modèle de requête.
+>La requête du PUT nécessite que le champ sql et le champ de nom soient renseignés. **overwrite** le contenu actuel de ce modèle de requête.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -309,7 +310,7 @@ Une réponse réussie renvoie un état HTTP 202 (Accepted) avec les information
 
 >[!NOTE]
 >
->Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer votre modèle de requête](#delete-a-specified-query-template).
+>Vous pouvez utiliser la valeur `_links.delete` to [supprimer votre modèle de requête](#delete-a-specified-query-template).
 
 ### Suppression d’un modèle de requête spécifié
 

@@ -3,11 +3,12 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;service de 
 solution: Experience Platform
 title: Point de terminaison de l’API de requêtes
 description: Les sections suivantes passent en revue les appels que vous pouvez effectuer à l’aide du point de terminaison /query de l’API Query Service.
+role: Developer
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 54%
+source-wordcount: '950'
+ht-degree: 48%
 
 ---
 
@@ -15,7 +16,7 @@ ht-degree: 54%
 
 ## Exemples d’appels API
 
-Les sections suivantes passent en revue les appels que vous pouvez effectuer à l’aide du point d’entrée `/queries` dans l’API [!DNL Query Service] Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+Les sections suivantes passent en revue les appels que vous pouvez effectuer à l’aide de la variable `/queries` du point de terminaison [!DNL Query Service] API. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
 ### Récupération d’une liste de requêtes
 
@@ -46,7 +47,7 @@ Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour
 
 **Requête**
 
-La requête suivante renvoie la dernière requête créée pour votre organisation 
+La requête suivante récupère la dernière requête créée pour votre organisation.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
@@ -58,7 +59,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/queries?limit=1 \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec une liste de requêtes pour l’organisation spécifiée sous la forme JSON. La réponse suivante renvoie la dernière requête créée pour votre organisation 
+Une réponse réussie renvoie un état HTTP 200 avec une liste de requêtes pour l’organisation spécifiée sous la forme JSON. La réponse suivante renvoie la dernière requête créée pour votre organisation.
 
 ```json
 {
@@ -222,7 +223,7 @@ Une réponse réussie renvoie un état HTTP 202 (Accepted) avec les détails de
 
 >[!NOTE]
 >
->Vous pouvez utiliser la valeur de `_links.cancel` pour [annuler la requête créée](#cancel-a-query).
+>Vous pouvez utiliser la valeur `_links.cancel` to [annuler la requête créée ;](#cancel-a-query).
 
 ### Récupération d’une requête par identifiant
 
@@ -293,7 +294,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 >[!NOTE]
 >
->Vous pouvez utiliser la valeur de `_links.cancel` pour [annuler la requête créée](#cancel-a-query).
+>Vous pouvez utiliser la valeur `_links.cancel` to [annuler la requête créée ;](#cancel-a-query).
 
 ### Annulation ou suppression différée d’une requête
 

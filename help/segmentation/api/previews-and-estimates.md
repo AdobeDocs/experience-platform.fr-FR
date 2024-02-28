@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: Points de terminaison de l’API d’aperçu et d’estimation
 description: Au fur et à mesure que la définition de segment est développée, vous pouvez utiliser les outils d’estimation et de prévisualisation dans Adobe Experience Platform pour afficher des informations de niveau résumé afin de vous assurer que vous isolez l’audience attendue.
+role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 23%
+source-wordcount: '971'
+ht-degree: 21%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 23%
 
 Au fur et à mesure que vous développez une définition de segment, vous pouvez utiliser les outils d’estimation et de prévisualisation dans Adobe Experience Platform pour afficher des informations de niveau résumé afin de vous assurer que vous isolez l’audience attendue.
 
-* **Les prévisualisations fournissent des listes paginées des profils admissibles pour une définition de segment, ce qui vous permet de comparer les résultats avec vos attentes.**
+* **Aperçu** fournissent des listes paginées de profils admissibles pour une définition de segment, ce qui vous permet de comparer les résultats avec ce que vous attendez.
 
 * **Estimations** fournissent des informations statistiques sur une définition de segment, telles que la taille prévue de l’audience, l’intervalle de confiance et l’écart type d’erreur.
 
@@ -24,7 +25,7 @@ Au fur et à mesure que vous développez une définition de segment, vous pouvez
 
 ## Prise en main
 
-Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
+Les points de terminaison utilisés dans ce guide font partie de la variable [!DNL Adobe Experience Platform Segmentation Service] API. Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
 
 ## Comment sont générées les estimations
 

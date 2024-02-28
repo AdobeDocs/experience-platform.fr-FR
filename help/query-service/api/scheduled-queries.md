@@ -3,11 +3,12 @@ keywords: Experience Platform;accueil;rubriques populaires;service de requête;s
 solution: Experience Platform
 title: Point de terminaison des planifications
 description: Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer pour les requêtes planifiées avec l’API Query Service.
+role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 958d5c322ff26f7372f8ab694a70ac491cbff56c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1212'
-ht-degree: 64%
+source-wordcount: '1214'
+ht-degree: 59%
 
 ---
 
@@ -45,7 +46,7 @@ Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour
 
 **Requête**
 
-La requête suivante renvoie la dernière requête planifiée créée pour votre organisation 
+La requête suivante récupère la dernière requête planifiée créée pour votre organisation.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
@@ -57,7 +58,7 @@ curl -X GET https://platform.adobe.io/data/foundation/query/schedules?limit=1
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec une liste de requêtes planifiées pour l’organisation spécifiée. La réponse suivante renvoie la dernière requête planifiée créée pour votre organisation 
+Une réponse réussie renvoie un état HTTP 200 avec une liste de requêtes planifiées pour l’organisation spécifiée. La réponse suivante renvoie la dernière requête planifiée créée pour votre organisation.
 
 ```json
 {
@@ -123,7 +124,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de requêtes plan
 
 ### Création d’une requête planifiée
 
-Vous pouvez créer une requête planifiée en effectuant une requête POST vers le point d’entrée `/schedules`. Lorsque vous créez une requête planifiée dans l’API, vous pouvez également la voir dans l’éditeur de requêtes. Pour plus d’informations sur les requêtes planifiées dans l’interface utilisateur, veuillez lire le [Documentation de Query Editor](../ui/user-guide.md#scheduled-queries).
+Vous pouvez créer une requête planifiée en adressant une requête de POST au `/schedules` point de terminaison . Lorsque vous créez une requête planifiée dans l’API, vous pouvez également la voir dans l’éditeur de requêtes. Pour plus d’informations sur les requêtes planifiées dans l’interface utilisateur, veuillez lire le [Documentation de Query Editor](../ui/user-guide.md#scheduled-queries).
 
 **Format d’API**
 
@@ -218,7 +219,7 @@ Une réponse réussie renvoie un état HTTP 202 (Accepted) avec les détails de
 
 >[!NOTE]
 >
->Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer la requête planifiée créée](#delete-a-specified-scheduled-query).
+>Vous pouvez utiliser la valeur `_links.delete` to [supprimer la requête planifiée créée ;](#delete-a-specified-scheduled-query).
 
 ### Demande des détails d’une requête planifiée spécifiée
 
@@ -301,7 +302,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la requêt
 
 >[!NOTE]
 >
->Vous pouvez utiliser la valeur de `_links.delete` pour [supprimer la requête planifiée créée](#delete-a-specified-scheduled-query).
+>Vous pouvez utiliser la valeur `_links.delete` to [supprimer la requête planifiée créée ;](#delete-a-specified-scheduled-query).
 
 ### Mise à jour des détails d’une requête planifiée spécifiée
 
@@ -420,7 +421,7 @@ Vous pouvez supprimer une requête planifiée spécifiée en effectuant une requ
 
 >[!NOTE]
 >
->Le planning **doit** être désactivé avant d’être supprimé.
+>Le planning **must** être désactivé avant d’être supprimé.
 
 **Format d’API**
 

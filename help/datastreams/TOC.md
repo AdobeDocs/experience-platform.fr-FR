@@ -5,7 +5,8 @@ user-guide-title: Aide concernant les trains de données Adobe Experience Plat
 breadcrumb-title: Guide des flux de données
 user-guide-description: Découvrez comment configurer des flux de données dans Adobe Experience Platform.
 feature: Datastreams
-source-git-commit: 6423b6a85873c9c767264ca0e29fbebb62a14b34
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 90%

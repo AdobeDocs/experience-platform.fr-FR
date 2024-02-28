@@ -3,11 +3,12 @@ keywords: Experience Platform;accueil;rubriques populaires;répertorier les envi
 solution: Experience Platform
 title: Point de terminaison de l’API Sandbox disponible
 description: Vous pouvez répertorier les environnements de test disponibles pour l’utilisateur actuel en envoyant une requête de GET au point de terminaison des environnements de test disponibles.
+role: Developer
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
-source-git-commit: 130f3a9b65befc1cc8cf400b8ca8ca4d6e7f71e4
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '256'
-ht-degree: 41%
+ht-degree: 30%
 
 ---
 
@@ -15,7 +16,7 @@ ht-degree: 41%
 
 >[!NOTE]
 >
->Contrairement aux autres points d’entrée fournis dans l’API Sandbox, ce point d’entrée est disponible pour tous les utilisateurs, y compris ceux ne disposant pas des autorisations d’accès à Sandbox Administration.
+>Contrairement aux autres points de terminaison fournis dans l’API Sandbox, ce point de terminaison est disponible pour tous les utilisateurs, y compris ceux qui ne disposent pas des autorisations d’accès à Sandbox Administration.
 
 Vous pouvez répertorier les environnements de test disponibles pour l’utilisateur actuel en envoyant une requête de GET au point de terminaison des environnements de test disponibles.
 
@@ -27,7 +28,7 @@ GET /{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Voir [document de l’annexe](./appendix.md#query) pour une liste de paramètres disponibles. |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour filtrer les résultats. Voir [document de l’annexe](./appendix.md#query) pour une liste de paramètres disponibles. |
 
 **Requête**
 

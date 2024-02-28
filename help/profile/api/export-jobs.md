@@ -3,11 +3,12 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Point de terminaison de l’API des tâches d’exportation de profils
 type: Documentation
 description: Real-Time Customer Profile vous permet de créer une vue unique de clients individuels dans Adobe Experience Platform en rassemblant des données provenant de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données de profil peuvent ensuite être exportées vers un jeu de données en vue d’un traitement ultérieur.
+role: Developer
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1518'
-ht-degree: 54%
+source-wordcount: '1512'
+ht-degree: 53%
 
 ---
 
@@ -25,7 +26,7 @@ Outre la création d’une tâche d’exportation, vous pouvez également accéd
 
 ## Prise en main
 
-Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL Real-Time Customer Profile]API. Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
+Les points de terminaison d’API utilisés dans ce guide font partie du [!DNL Real-Time Customer Profile] API. Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
 ## Création d’une tâche d’exportation
 
@@ -194,7 +195,7 @@ GET /export/jobs?{QUERY_PARAMETERS}
 | `start` | Décalez la page des résultats renvoyée, selon l’heure de création de la requête. Exemple : `start=4` |
 | `limit` | Limitez le nombre de résultats renvoyés. Exemple : `limit=10` |
 | `page` | Renvoyez une page de résultats spécifique, selon l’heure de création de la requête. Exemple : `page=2` |
-| `sort` | Triez les résultats selon un champ spécifique dans l’ordre croissant (**`asc`**) ou décroissant (**`desc`**). Le paramètre de tri ne fonctionne pas lors du renvoi de plusieurs pages de résultats. Exemple : `sort=updateTime:asc` |
+| `sort` | Tri des résultats selon un champ spécifique dans une valeur ascendante ( **`asc`** ) ou descendant ( **`desc`** ). Le paramètre de tri ne fonctionne pas lors du renvoi de plusieurs pages de résultats. Exemple : `sort=updateTime:asc` |
 
 **Requête**
 

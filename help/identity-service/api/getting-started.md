@@ -3,11 +3,12 @@ keywords: Experience Platform;accueil;rubriques populaires;api identity service;
 solution: Experience Platform
 title: Guide de l’API Identity Service
 description: L’API Identity Service permet aux développeurs de gérer l’identification inter-appareils, cross-canal et en temps quasi réel de vos clients à l’aide de graphiques d’identités dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
+role: Developer
 exl-id: d612af38-4648-4c3e-8cfd-3f306c9370e1
-source-git-commit: 9f8ed1cc6460dacef7ca91b500a45c059ed1a295
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '764'
-ht-degree: 68%
+source-wordcount: '753'
+ht-degree: 61%
 
 ---
 
@@ -19,7 +20,7 @@ Adobe Experience Platform [!DNL Identity Service] gère l’identification de vo
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-- [[!DNL Identity Service]](../home.md) : résout le problème fondamental posé par la fragmentation des données de profil des clients. Pour ce faire, il associe les identités entre les appareils et les systèmes sur lesquels les clients interagissent avec votre marque.
+- [[!DNL Identity Service]](../home.md): résout le problème fondamental posé par la fragmentation des données de profil client. Pour ce faire, il associe les identités entre les appareils et les systèmes sur lesquels les clients interagissent avec votre marque.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 
@@ -82,7 +83,7 @@ Les exemples de ce document ne couvrent pas toutes les fonctionnalités de la fo
 
 >[!NOTE]
 >
->Toutes les identités renvoyées seront compilées dans un formulaire XID natif lorsque le XID natif est utilisé dans la requête. Il est recommandé d’utiliser le formulaire d’identifiant ou d’espace de noms. Pour plus d’informations, voir la section relative à l’[obtention du XID d’une identité](./create-custom-namespace.md).
+>Toutes les identités renvoyées seront dans un formulaire XID natif lorsque le XID natif est utilisé dans la requête. Il est recommandé d’utiliser le formulaire d’identifiant ou d’espace de noms. Pour plus d’informations, voir la section relative à l’[obtention du XID d’une identité](./create-custom-namespace.md).
 
 ## Étapes suivantes
 

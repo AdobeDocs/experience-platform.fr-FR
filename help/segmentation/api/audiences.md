@@ -1,11 +1,12 @@
 ---
 title: Point de terminaison de l’API Audiences
 description: Utilisez le point de terminaison audiences dans l’API Adobe Experience Platform Segmentation Service pour créer, gérer et mettre à jour par programmation les audiences de votre entreprise.
+role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 9277ad00f72b44d7e75e444f034c38f000e7909f
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1879'
-ht-degree: 9%
+ht-degree: 7%
 
 ---
 
@@ -15,7 +16,7 @@ Une audience est un groupe de personnes qui partagent des comportements et/ou de
 
 ## Prise en main
 
-Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
+Les points de terminaison utilisés dans ce guide font partie de la variable [!DNL Adobe Experience Platform Segmentation Service] API. Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
 
 ## Récupération d’une liste d’audiences {#list}
 
@@ -195,7 +196,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste des audiences cr�
 
 +++
 
-## Création d’une audience {#create}
+## Créer une nouvelle audience {#create}
 
 Vous pouvez créer une audience en adressant une requête de POST à la fonction `/audiences` point de terminaison .
 
@@ -209,7 +210,7 @@ POST /audiences
 
 >[!BEGINTABS]
 
->[!TAB Audience générée par Platform]
+>[!TAB Audience générée par la plateforme]
 
 +++ Exemple de requête pour créer une audience générée par Platform
 
@@ -305,7 +306,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur votre 
 
 >[!BEGINTABS]
 
->[!TAB Audience générée par Platform]
+>[!TAB Audience générée par la plateforme]
 
 +++Exemple de réponse lors de la création d’une audience générée par Platform.
 
@@ -450,7 +451,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur l’au
 
 >[!BEGINTABS]
 
->[!TAB Audience générée par Platform]
+>[!TAB Audience générée par la plateforme]
 
 +++Exemple de réponse lors de la récupération d’une audience générée par Platform.
 
@@ -722,7 +723,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `namespace` | Espace de noms de l’audience. |
 | `description` | Description de l’audience. |
 | `type` | Champ généré par le système qui affiche si l’audience est générée par Platform ou est générée en externe. Les valeurs possibles incluent : `SegmentDefinition` et `ExternalSegment`. A `SegmentDefinition` fait référence à une audience qui a été générée dans Platform, tandis qu’une `ExternalSegment` fait référence à une audience qui n’a pas été générée dans Platform. |
-| `lifecycleState` | Statut de l’audience. Les valeurs possibles sont les suivantes : `draft`, `published` et `inactive`. `draft` représente le moment où l’audience est créée, `published` lorsque l’audience est publiée, et `inactive` lorsque l’audience n’est plus active. |
+| `lifecycleState` | Statut de l’audience. Les valeurs possibles incluent : `draft`, `published`, et `inactive`. `draft` représente le moment où l’audience est créée, `published` lorsque l’audience est publiée, et `inactive` lorsque l’audience n’est plus active. |
 | `datasetId` | L’identifiant du jeu de données que les données d’audience peuvent être trouvées. |
 | `labels` | Utilisation des données au niveau de l’objet et libellés de contrôle d’accès basés sur des attributs pertinents pour l’audience. |
 

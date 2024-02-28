@@ -2,17 +2,18 @@
 keywords: Experience Platform;accueil;rubriques populaires;Query Service;Query Service;alert;
 title: Point de terminaison des abonnements des alertes
 description: Ce guide fournit des exemples de requêtes et de réponses HTTP pour les différents appels API que vous pouvez effectuer au point d’entrée des abonnements aux alertes avec l’API Query Service.
+role: Developer
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '2661'
-ht-degree: 89%
+source-wordcount: '2666'
+ht-degree: 88%
 
 ---
 
 # Point d’entrée des abonnements des alertes
 
-Adobe Experience Platform Query Service vous permet de vous abonner à des alertes pour les requêtes ad hoc et planifiées. Les alertes peuvent être reçues par e-mail, dans l’interface utilisateur de Platform ou les deux. Le contenu de la notification est le même pour les alertes sur Platform et les alertes par e-mail. Actuellement, les alertes de requête ne peuvent être abonnées qu’à l’aide du [API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/).
+Adobe Experience Platform Query Service vous permet de vous abonner à des alertes pour les requêtes ad hoc et planifiées. Les alertes peuvent être reçues par e-mail, dans l’interface utilisateur de Platform ou les deux. Le contenu de la notification est le même pour les alertes sur Platform et les alertes par e-mail. Actuellement, les alertes de requête ne peuvent être abonnées qu’à l’aide de la variable [API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/).
 
 >[!IMPORTANT]
 >
@@ -63,10 +64,10 @@ Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `orderby` | Champ qui spécifie l’ordre des résultats. Les champs `created` et `updated` sont pris en charge. Ajoutez le nom de la propriété en préfixe `+` pour les variables ascendantes et `-` pour l’ordre décroissant. La valeur par défaut est de `-created`. Notez que le signe plus (`+`) doit être échappé avec `%2B`. Par exemple `%2Bcreated` est la valeur d’un ordre créé croissant. |
+| `orderby` | Champ qui spécifie l’ordre des résultats. Les champs `created` et `updated` sont pris en charge. Ajoutez le nom de la propriété en préfixe `+` pour les variables ascendantes et `-` pour l’ordre décroissant. La valeur par défaut est de `-created`. Notez que le signe plus (`+`) doit être échappé avec `%2B`. Par exemple `%2Bcreated` est la valeur d’un ordre créé croissant. |
 | `pagesize` | Utilisez ce paramètre pour contrôler le nombre d’enregistrements que vous souhaitez récupérer de l’appel API par page. La limite par défaut est définie sur le maximum de 50 enregistrements par page. |
 | `page` | Indiquez le numéro de page des résultats renvoyés pour lesquels vous souhaitez afficher les enregistrements. |
-| `property` | Filtrez les résultats selon les champs sélectionnés. Les filtres **doivent** être précédés d’une séquence d’échappement HTML. Des virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les propriétés suivantes permettent de filtrer : <ul><li>identifiant</li><li>assetId</li><li>statut</li><li>alertType</li></ul> Les opérateurs pris en charge sont les suivants : `==` (égal à). Par exemple : `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` renvoie l’alerte avec un ID correspondant. |
+| `property` | Filtrez les résultats selon les champs sélectionnés. Les filtres **doivent** être précédés d’une séquence d’échappement HTML. Des virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les propriétés suivantes permettent de filtrer : <ul><li>identifiant</li><li>assetId</li><li>statut</li><li>alertType</li></ul> Les opérateurs pris en charge sont : `==` (égal à). Par exemple : `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` renvoie l’alerte avec un ID correspondant. |
 
 **Requête**
 
@@ -387,10 +388,10 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 | Paramètres | Description |
 | -------- | ----------- |
 | `{EMAIL_ID}` | Adresse électronique enregistrée dans un compte Adobe permettant d’identifier les utilisateurs et utilisatrices abonnés aux alertes. |
-| `orderby` | Champ qui spécifie l’ordre des résultats. Les champs `created` et `updated` sont pris en charge. Ajoutez le nom de la propriété en préfixe `+` pour les variables ascendantes et `-` pour l’ordre décroissant. La valeur par défaut est de `-created`. Notez que le signe plus (`+`) doit être échappé avec `%2B`. Par exemple `%2Bcreated` est la valeur d’un ordre créé croissant. |
+| `orderby` | Champ qui spécifie l’ordre des résultats. Les champs `created` et `updated` sont pris en charge. Ajoutez le nom de la propriété en préfixe `+` pour les variables ascendantes et `-` pour l’ordre décroissant. La valeur par défaut est de `-created`. Notez que le signe plus (`+`) doit être échappé avec `%2B`. Par exemple `%2Bcreated` est la valeur d’un ordre créé croissant. |
 | `pagesize` | Utilisez ce paramètre pour contrôler le nombre d’enregistrements que vous souhaitez récupérer de l’appel API par page. La limite par défaut est définie sur le maximum de 50 enregistrements par page. |
 | `page` | Indiquez le numéro de page des résultats renvoyés pour lesquels vous souhaitez afficher les enregistrements. |
-| `property` | Filtrez les résultats selon les champs sélectionnés. Les filtres **doivent** être précédés d’une séquence d’échappement HTML. Des virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les propriétés suivantes permettent de filtrer : <ul><li>identifiant</li><li>assetId</li><li>statut</li><li>alertType</li></ul> Les opérateurs pris en charge sont les suivants : `==` (égal à). Par exemple : `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` renvoie l’alerte avec un ID correspondant. |
+| `property` | Filtrez les résultats selon les champs sélectionnés. Les filtres **doivent** être précédés d’une séquence d’échappement HTML. Des virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les propriétés suivantes permettent de filtrer : <ul><li>identifiant</li><li>assetId</li><li>statut</li><li>alertType</li></ul> Les opérateurs pris en charge sont : `==` (égal à). Par exemple : `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` renvoie l’alerte avec un ID correspondant. |
 
 **Requête**
 

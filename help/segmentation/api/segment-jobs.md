@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: Point de terminaison de l’API de tâches de segmentation
 description: Le point de terminaison des tâches de segmentation de l’API Adobe Experience Platform Segmentation Service vous permet de gérer par programmation les tâches de segmentation pour votre organisation.
+role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1505'
-ht-degree: 24%
+source-wordcount: '1524'
+ht-degree: 17%
 
 ---
 
@@ -18,7 +19,7 @@ Ce guide fournit des informations pour vous aider à mieux comprendre les tâche
 
 ## Prise en main
 
-Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
+Les points de terminaison utilisés dans ce guide font partie de la variable [!DNL Adobe Experience Platform Segmentation Service] API. Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
 
 ## Obtention d’une liste de tâches de segmentation {#retrieve-list}
 
@@ -26,7 +27,7 @@ Vous pouvez récupérer une liste de toutes les tâches de segmentation pour vot
 
 **Format d’API**
 
-Le point d’entrée `/segment/jobs` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est vivement recommandée pour réduire les frais généraux élevés. Un appel à ce point d’entrée sans paramètre permet de récupérer toutes les tâches d’exportation disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
+Le point d’entrée `/segment/jobs` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est vivement recommandée pour réduire les frais généraux élevés. Un appel à ce point de terminaison sans paramètres permet de récupérer toutes les tâches d’exportation disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
 
 ```http
 GET /segment/jobs
@@ -55,7 +56,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec une liste de tâches de segmentation pour l’organisation spécifiée comme JSON. Cependant, la réponse sera différente, selon le nombre de définitions de segment dans la tâche de segmentation.
+Une réponse réussie renvoie un état HTTP 200 avec une liste de tâches de segmentation pour l’organisation spécifiée sous JSON. Cependant, la réponse sera différente, selon le nombre de définitions de segment dans la tâche de segmentation.
 
 **Valeur inférieure ou égale à 1 500 définitions de segment dans votre tâche de segmentation**
 
@@ -555,7 +556,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la tâche de segmentation spécifiée.  Cependant, la réponse varie en fonction du nombre de définitions de segment dans la tâche de segmentation.
+Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la tâche de segmentation spécifiée.  Cependant, la réponse varie en fonction du nombre de définitions de segment dans la tâche de segmentation.
 
 **Valeur inférieure ou égale à 1 500 définitions de segment dans votre tâche de segmentation**
 

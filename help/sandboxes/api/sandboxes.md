@@ -3,17 +3,18 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;guide de d�
 solution: Experience Platform
 title: Point de terminaison de l’API de gestion des environnements de test
 description: Le point de terminaison /sandbox dans l’API Sandbox vous permet de gérer par programmation les environnements de test dans Adobe Experience Platform.
+role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1488'
-ht-degree: 55%
+source-wordcount: '1474'
+ht-degree: 51%
 
 ---
 
 # Point d’entrée de gestion des environnements de test
 
-Les sandbox d’Adobe Experience Platform fournissent des environnements de développement isolés qui vous permettent de tester des fonctionnalités, d’exécuter des opérations et de créer des configurations personnalisées sans affecter votre environnement de production. Le `/sandboxes` du point de terminaison [!DNL Sandbox] L’API vous permet de gérer par programmation les environnements de test dans Platform.
+Les environnements de test de Adobe Experience Platform fournissent des environnements de développement isolés qui vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter votre environnement de production. La variable `/sandboxes` du point de terminaison [!DNL Sandbox] L’API vous permet de gérer par programmation les environnements de test dans Platform.
 
 ## Prise en main
 
@@ -21,7 +22,7 @@ Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL San
 
 ## Récupération d’une liste d’environnements de test {#list}
 
-Vous pouvez répertorier tous les environnements de test appartenant à votre organisation (principal ou non) en adressant une GET à la variable `/sandboxes` point de terminaison .
+Vous pouvez répertorier tous les environnements de test appartenant à votre organisation (actifs ou non) en adressant une requête GET à la variable `/sandboxes` point de terminaison .
 
 **Format d’API**
 
@@ -31,7 +32,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Voir la section sur [paramètres de requête](./appendix.md#query) pour plus d’informations. |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour filtrer les résultats. Voir la section sur [paramètres de requête](./appendix.md#query) pour plus d’informations. |
 
 **Requête**
 
@@ -129,7 +130,7 @@ Une réponse réussie renvoie une liste de sandbox appartenant à votre organisa
 | --- | --- |
 | `name` | Le nom du sandbox. Cette propriété est utilisée à des fins de recherche dans les appels API. |
 | `title` | Le nom d’affichage du sandbox. |
-| `state` | L’état de traitement actuel du sandbox. Un sandbox peut avoir l’un des états suivants : <br/><ul><li>`creating`: L’environnement de test a été créé, mais le système continue de le configurer.</li><li>`active`: L’environnement de test est créé et principal.</li><li>`failed`: En raison d’une erreur, le système n’a pas pu configurer l’environnement de test et est désactivé.</li><li>`deleted`: L’environnement de test a été désactivé manuellement.</li></ul> |
+| `state` | L’état de traitement actuel du sandbox. Un sandbox peut avoir l’un des états suivants : <br/><ul><li>`creating`: l’environnement de test a été créé, mais le système continue de le configurer.</li><li>`active`: l’environnement de test est créé et actif.</li><li>`failed`: en raison d’une erreur, le système n’a pas pu configurer l’environnement de test et est désactivé.</li><li>`deleted`: l’environnement de test a été désactivé manuellement.</li></ul> |
 | `type` | Type d’environnement de test. Les types d’environnements de test actuellement pris en charge sont les suivants : `development` et `production`. |
 | `isDefault` | Une propriété booléenne indiquant si cet environnement de test est l’environnement de test de production par défaut pour l’organisation. |
 | `eTag` | L’identifiant d’une version spécifique du sandbox. Utilisée pour le contrôle des versions et une mise en cache efficace, cette valeur est mise à jour chaque fois que le sandbox est modifié. |
@@ -189,7 +190,7 @@ Une réponse réussie renvoie les détails du sandbox, y compris son `name`, `ti
 | `isDefault` | Une propriété booléenne indiquant s’il s’agit du sandbox par défaut de l’organisation. Il s’agit généralement du sandbox de production. |
 | `eTag` | L’identifiant d’une version spécifique du sandbox. Utilisée pour le contrôle des versions et une mise en cache efficace, cette valeur est mise à jour chaque fois que le sandbox est modifié. |
 
-## Création d’un sandbox {#create}
+## Créer un sandbox {#create}
 
 >[!NOTE]
 >
@@ -197,7 +198,7 @@ Une réponse réussie renvoie les détails du sandbox, y compris son `name`, `ti
 
 Vous pouvez créer un environnement de test de développement ou de production en adressant une requête de POST à la variable `/sandboxes` point de terminaison .
 
-### Création d’un environnement de test de développement
+### Créer une sandbox de développement
 
 Pour créer un environnement de test de développement, vous devez fournir un `type` avec la valeur de `development` dans le payload de la requête.
 
@@ -247,7 +248,7 @@ Une réponse réussie renvoie les détails du nouveau sandbox, indiquant que son
 
 >[!NOTE]
 >
->Les environnements de test prennent environ 30 secondes pour être configurés par le système, après quoi leurs `state` deviendra &quot;principal&quot; ou &quot;échec&quot;.
+>Les environnements de test prennent environ 30 secondes pour être configurés par le système, après quoi leurs `state` deviendra &quot;actif&quot; ou &quot;échec&quot;.
 
 ### Création d’un environnement de test de production
 
@@ -300,7 +301,7 @@ Une réponse réussie renvoie les détails du nouveau sandbox, indiquant que son
 
 >[!NOTE]
 >
->Les environnements de test prennent environ 30 secondes pour être configurés par le système, après quoi leurs `state` deviendra &quot;principal&quot; ou &quot;échec&quot;.
+>Les environnements de test prennent environ 30 secondes pour être configurés par le système, après quoi leurs `state` deviendra &quot;actif&quot; ou &quot;échec&quot;.
 
 ## Mise à jour d’un sandbox {#put}
 
@@ -308,7 +309,7 @@ Vous pouvez mettre à jour un ou plusieurs champs d’un sandbox en effectuant u
 
 >[!NOTE]
 >
->Actuellement, seule la propriété `title` d’un sandbox peut être mise à jour.
+>Actuellement, seul un environnement de test `title` peut être mise à jour.
 
 **Format d’API**
 
@@ -485,7 +486,7 @@ Vous pouvez supprimer un sandbox en effectuant une requête DELETE qui inclut le
 
 >[!NOTE]
 >
->L’appel de cette API met à jour la propriété `status` du sandbox sur « supprimé » et la désactive. Les requêtes GET peuvent toujours récupérer les détails du sandbox après sa suppression.
+>L’appel de cette API met à jour l’environnement de test `status` à &quot;supprimé&quot; et la désactive. Les requêtes GET peuvent toujours récupérer les détails du sandbox après sa suppression.
 
 **Format d’API**
 

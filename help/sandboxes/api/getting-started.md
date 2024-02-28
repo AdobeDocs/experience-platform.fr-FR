@@ -3,10 +3,11 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;guide de d�
 solution: Experience Platform
 title: Prise en main de l’API Sandbox
 description: L’API Sandbox permet aux développeurs de gérer par programmation les environnements de test dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
+role: Developer
 exl-id: 1ae27f30-2f89-4bfa-887d-a5def17b5cbc
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '372'
 ht-degree: 85%
 
 ---
@@ -19,7 +20,7 @@ Ce guide de développement décrit les étapes à suivre pour utiliser l’API S
 
 ## Conditions préalables
 
-Pour gérer les environnements de test pour votre organisation, vous devez disposer des autorisations Sandbox Administration. Les utilisateurs ne disposant pas d’autorisations d’accès peuvent uniquement utiliser la variable [point d’entrée sandbox disponible](./available.md) pour répertorier les environnements de test principaux de l’utilisateur actuel. Pour plus d’informations sur l’attribution des autorisations Sandbox pour Experience Platform, reportez-vous à la [présentation du contrôle d’accès](../../access-control/home.md).
+Pour gérer les environnements de test pour votre organisation, vous devez disposer des autorisations Sandbox Administration. Les utilisateurs ne disposant pas d’autorisations d’accès peuvent uniquement utiliser la variable [point d’entrée sandbox disponible](./available.md) pour répertorier les environnements de test actifs de l’utilisateur actuel. Pour plus d’informations sur l’attribution des autorisations Sandbox pour Experience Platform, reportez-vous à la [présentation du contrôle d’accès](../../access-control/home.md).
 
 ### Lecture d’exemples d’appels API
 

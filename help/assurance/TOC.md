@@ -4,7 +4,8 @@ user-guide-title: Assurance d’Adobe Experience Platform Assurance
 breadcrumb-title: Guide d’Assurance
 user-guide-description: Adobe Experience Platform permet de contrôler, de tester, de simuler et de valider la manière dont vous collectez les données ou dont les expériences sont accomplies dans vos applications mobiles.
 feature: Assurance
-source-git-commit: f707554ea89731fbd3f013d6065fde27ba7fa811
+role: Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '69'
 ht-degree: 60%

@@ -3,11 +3,12 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;api;API;env
 solution: Experience Platform
 title: Annexe du guide de l’API Sandbox
 description: Ce document fournit des informations supplémentaires sur l’utilisation de l’API Sandbox.
+role: Developer
 exl-id: 48ffea01-f1b4-48c6-a6f5-c321074023d3
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 8%
+source-wordcount: '122'
+ht-degree: 4%
 
 ---
 
@@ -17,11 +18,11 @@ Ce document fournit des informations supplémentaires relatives à l’utilisati
 
 ## Utilisation des paramètres de requête {#query}
 
-Le [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) prend en charge l’utilisation de paramètres de requête pour la page et le filtrage des résultats lors de la liste des environnements de test.
+La variable [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox) prend en charge l’utilisation de paramètres de requête pour la page et le filtrage des résultats lors de la liste des environnements de test.
 
 >[!NOTE]
 >
->Le `limit` et `offset` les paramètres de requête doivent être spécifiés ensemble. Si vous n’en spécifiez qu’une seule, l’API renvoie une erreur. Si vous n’indiquez aucun paramètre, la limite par défaut est de 50 et le décalage est de 0.
+>La variable `limit` et `offset` les paramètres de requête doivent être spécifiés ensemble. Si vous n’en spécifiez qu’une seule, l’API renvoie une erreur. Si vous n’indiquez aucun paramètre, la limite par défaut est de 50 et le décalage est de 0.
 
 | Paramètre | Description |
 | --- | --- |

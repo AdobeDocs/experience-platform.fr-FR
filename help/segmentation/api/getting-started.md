@@ -3,11 +3,12 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;segmentatio
 solution: Experience Platform
 title: Prise en main de l’API Segmentation Service
 description: La documentation suivante fournit des informations supplémentaires dont vous avez besoin pour travailler avec l’API Segmentation.
+role: Developer
 exl-id: 41c0e50b-afed-45b8-85d7-a0c84ae090f5
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '355'
-ht-degree: 63%
+source-wordcount: '352'
+ht-degree: 62%
 
 ---
 

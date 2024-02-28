@@ -3,11 +3,12 @@ keywords: Experience Platform;accueil;rubriques populaires;service de requête;e
 solution: Experience Platform
 title: Point de terminaison de l’API des exécutions de requête planifiées
 description: Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer pour exécuter des requêtes planifiées avec l’API Query Service.
+role: Developer
 exl-id: 1e69b467-460a-41ea-900c-00348c3c923c
-source-git-commit: e9639cb90a561adc59388ac77984edaf90f4bfdd
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '774'
-ht-degree: 78%
+source-wordcount: '782'
+ht-degree: 76%
 
 ---
 
@@ -148,7 +149,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste d’exécutions 
 
 >[!NOTE]
 >
->Vous pouvez utiliser la valeur de `_links.cancel` pour [arrêter une exécution pour une requête planifiée spécifiée](#immediately-stop-a-run-for-a-specific-scheduled-query).
+>Vous pouvez utiliser la valeur `_links.cancel` to [arrêter une exécution pour une requête planifiée spécifiée ;](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
 ### Déclenchement immédiat d’une exécution pour une requête planifiée spécifique
 

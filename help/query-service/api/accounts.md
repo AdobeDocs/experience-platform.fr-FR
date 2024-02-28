@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;service de requête;guide api;service de requête;comptes de service de requête;comptes ;
+keywords: Experience Platform;accueil;rubriques les plus consultées;service de requête;guide api;service de requête;comptes de service de requête;comptes ;
 solution: Experience Platform
 title: Point de terminaison de l’API Comptes
 description: Vous pouvez créer un compte Query Service pour le compte persistant .
+role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '498'
 ht-degree: 5%
 
 ---
@@ -19,7 +20,7 @@ Dans Adobe Experience Platform Query Service, les comptes sont utilisés pour cr
 
 Les points de terminaison utilisés dans ce guide font partie de l’API Query Service. Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
 
-## Création d’un compte
+## Créer un compte
 
 Vous pouvez créer un compte d’intégration de Query Service en adressant une requête de POST à la fonction `/accounts` point de terminaison .
 

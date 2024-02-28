@@ -3,11 +3,12 @@ keywords: Experience Platform;guide de développement;point de terminaison;Data 
 solution: Experience Platform
 title: Point de terminaison de l’API d’expériences
 description: Le développement et la formation de modèle se déroulent au niveau de l’expérience qui se compose d’une instance MLInstance ainsi que d’exécutions de formation et de notation.
+role: Developer
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '783'
-ht-degree: 97%
+ht-degree: 89%
 
 ---
 
@@ -21,7 +22,7 @@ Vous pouvez créer une expérience en exécutant une requête POST tout en fourn
 
 >[!NOTE]
 >
->Contrairement à la formation de modèle dans l’interface utilisateur, la création d’une expérience via un appel API explicite ne crée pas et n’exécute pas de formation automatiquement.
+>Contrairement à la formation de modèle dans l’interface utilisateur, la création d’une expérience par le biais d’un appel API explicite ne crée pas et n’exécute pas de formation automatiquement.
 
 **Format d’API**
 
@@ -306,7 +307,7 @@ Vous pouvez mettre à jour une expérience existante en écrasant ses propriét�
 
 >[!TIP]
 >
->Afin de garantir le succès de cette requête PUT, il est conseillé d’exécuter une requête GET en premier lieu pour [récupérer l’expérience en fonction de son identifiant](#retrieve-specific). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié en tant que payload de la requête PUT.
+>Afin de garantir le succès de cette requête de PUT, il est conseillé d’effectuer d’abord une requête de GET à la fonction [récupération de l’expérience par identifiant](#retrieve-specific). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié en tant que payload de la requête PUT.
 
 L’exemple d’appel API suivant met à jour le nom d’une expérience lorsque les propriétés initiales sont les suivantes :
 

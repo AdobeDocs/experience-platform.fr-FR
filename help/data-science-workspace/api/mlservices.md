@@ -3,11 +3,12 @@ keywords: Experience Platform;guide de développement;point de terminaison;Data 
 solution: Experience Platform
 title: Point d’entrée de l’API MLServices
 description: Un MLService est un modèle formé publié qui permet à votre organisation d’accéder aux modèles précédemment développés et de les réutiliser. L’une des principales caractéristiques de MLServices est sa capacité d’automatiser la formation et la notation selon un calendrier précis. Les exécutions de formation planifiées peuvent contribuer à préserver l’efficacité et la précision d’un modèle, tandis que les exécutions de notation planifiées peuvent garantir que de nouvelles informations sont générées de manière cohérente.
+role: Developer
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 97%
+source-wordcount: '887'
+ht-degree: 94%
 
 ---
 
@@ -214,7 +215,7 @@ Vous pouvez mettre à jour un MLService existant en écrasant ses propriétés p
 
 >[!TIP]
 >
->Afin de garantir le succès de cette requête PUT, il est conseillé d’effectuer en premier lieu une requête GET pour [récupérer le MLService par son identifiant](#retrieve-a-specific-mlservice). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié en tant que payload de la requête PUT.
+>Afin de garantir le succès de cette requête de PUT, il est conseillé d’effectuer d’abord une requête de GET à la fonction [récupération du MLService par son identifiant](#retrieve-a-specific-mlservice). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié en tant que payload de la requête PUT.
 
 **Format d’API**
 

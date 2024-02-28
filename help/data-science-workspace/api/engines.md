@@ -3,11 +3,12 @@ keywords: Experience Platform;guide de développement;point de terminaison;Data 
 solution: Experience Platform
 title: Point de terminaison de l’API Moteurs
 description: Les moteurs sont le fondement des modèles de machine learning dans l’espace de travail de science des données. Ils contiennent des algorithmes de machine learning qui permettent de résoudre des problèmes spécifiques, des pipelines de fonctionnalités permettant de concevoir des fonctionnalités, ou les deux.
+role: Developer
 exl-id: 7c670abd-636c-47d8-bd8c-5ce0965ce82f
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1165'
-ht-degree: 69%
+ht-degree: 65%
 
 ---
 
@@ -19,7 +20,7 @@ Les moteurs sont le fondement des modèles de machine learning dans l’espace d
 
 >[!TIP]
 >
->Si vous ne disposez pas d’une URL Docker, rendez-vous sur la page [Regroupement des fichiers source dans une recette](../models-recipes/package-source-files-recipe.md) tutoriel pour une présentation détaillée de la création d’une URL d’hôte Docker.
+>Si vous ne disposez pas d’une URL Docker, consultez la page [Regroupement des fichiers source dans une recette](../models-recipes/package-source-files-recipe.md) tutoriel pour une présentation détaillée de la création d’une URL hôte Docker.
 
 Les informations d’identification de votre registre Docker sont nécessaires pour charger un fichier de recette empaqueté, y compris l’URL de votre hôte Docker, votre nom d’utilisateur et votre mot de passe. Vous pouvez rechercher ces informations en exécutant la requête GET suivante :
 
@@ -45,7 +46,7 @@ Une réponse réussie renvoie un payload contenant les détails de votre registr
 
 >[!NOTE]
 >
->Votre mot de passe Docker change chaque fois que votre `{ACCESS_TOKEN}` est mis à jour.
+>Votre mot de passe Docker change chaque fois que votre `{ACCESS_TOKEN}` est mise à jour.
 
 ```json
 {
@@ -386,7 +387,7 @@ Vous pouvez modifier et mettre à jour un moteur existant en écrasant ses propr
 
 >[!NOTE]
 >
->Afin de garantir le succès de cette requête PUT, il est conseillé d’exécuter en premier lieu une requête GET pour [récupérer le moteur par son identifiant](#retrieve-specific). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié en tant que payload de la requête PUT.
+>Afin de garantir le succès de cette requête de PUT, il est conseillé d’effectuer d’abord une requête de GET à la fonction [récupération du moteur par son identifiant](#retrieve-specific). Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié en tant que payload de la requête PUT.
 
 L’exemple d’appel API suivant met à jour le nom et la description d’un moteur lorsque les propriétés initiales sont les suivantes :
 

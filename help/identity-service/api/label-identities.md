@@ -2,9 +2,10 @@
 keywords: Experience Platform;accueil;rubriques populaires;identités des étiquettes
 solution: Experience Platform
 title: Étiquetage d’un champ comme identité
-description: Vous pouvez étiqueter des champs contenant des informations d’identification personnelle (PII) en tant que champs d’identité. Identity Service interprète comme identité les valeurs fournies dans un champ d’identité. L’espace de noms de l’identité est précisé dans le cadre de l’étiquetage du champ.
+description: Vous pouvez étiqueter des champs contenant des informations d’identification personnelle (PII) en tant que champs d’identité. Le service d’identités interprète comme identité les valeurs fournies dans un champ d’identité. L’espace de noms de l’identité est précisé dans le cadre de l’étiquetage du champ.
+role: Developer
 exl-id: f0b3f18b-7302-4a0b-b444-2d4b59787681
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 73%

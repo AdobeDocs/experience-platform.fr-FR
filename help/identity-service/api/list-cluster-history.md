@@ -2,18 +2,19 @@
 keywords: Experience Platform;accueil;rubriques les plus consultées;identités;historique des clusters
 solution: Experience Platform
 title: Obtention de l’historique des clusters d’une identité
-description: Les identités peuvent déplacer des clusters au cours de différentes opérations de graphiques d’appareil. Identity Service offre une visibilité sur les associations de cluster d’une identité donnée au fil du temps.
+description: Les identités peuvent déplacer des clusters au cours de différentes opérations de graphiques d’appareil. Le service d’identités offre une visibilité sur les associations de cluster d’une identité donnée au fil du temps.
+role: Developer
 exl-id: e52edb15-e3d6-4085-83d5-212bbd952632
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 95%
+source-wordcount: '345'
+ht-degree: 78%
 
 ---
 
 # Obtention de l’historique des clusters d’une identité
 
-Les identités peuvent déplacer des clusters au cours de différentes opérations de graphiques d’appareil. [!DNL Identity Service] offre une visibilité sur les associations de cluster d’une identité donnée au fil du temps.
+Les identités peuvent déplacer des clusters au cours de différentes opérations de graphiques d’appareil. [!DNL Identity Service] offre une visibilité sur les associations de clusters d’une identité donnée au fil du temps.
 
 Utilisez le paramètre `graph-type` facultatif pour indiquer le type de sortie à partir duquel obtenir le cluster. Les options sont les suivantes :
 
@@ -69,7 +70,7 @@ Afin de renvoyer les historiques de clusters pour plusieurs identités, utilisez
 
 >[!NOTE]
 >
->La requête ne doit pas indiquer plus de 1 000 identités. Les requêtes dépassant les 1 000 identités se traduiront par un code d’état 400.
+>La requête ne doit pas indiquer plus de 1 000 identités. Les requêtes dépassant les 1 000 identités se traduiront par un code d’état 400.
 
 **Format d’API**
 

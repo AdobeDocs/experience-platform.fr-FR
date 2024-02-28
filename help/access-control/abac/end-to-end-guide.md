@@ -2,11 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;contrôle d’accès basé sur les attributs;
 title: Guide de bout en bout du contrôle d’accès basé sur les attributs
 description: Ce document fournit un guide de bout en bout sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform
+role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 2b3c4a7aed804a1059708a698f3ba5edfb007926
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1739'
-ht-degree: 26%
+source-wordcount: '1714'
+ht-degree: 24%
 
 ---
 
@@ -51,7 +52,7 @@ Vous allez :
 
 [!UICONTROL Autorisations] est la zone de l’Experience Cloud dans laquelle les administrateurs peuvent définir des rôles utilisateur et des stratégies afin de gérer les autorisations pour les fonctionnalités et les objets au sein d’une application de produit.
 
-Via [!UICONTROL Autorisations], vous pouvez créer et gérer des rôles et attribuer les autorisations de ressources souhaitées pour ces rôles. [!UICONTROL Les autorisations vous permettent également de gérer les libellés, les sandbox et les utilisateurs associés à un rôle spécifique.]
+Via [!UICONTROL Autorisations], vous pouvez créer et gérer des rôles et attribuer les autorisations de ressources souhaitées pour ces rôles. [!UICONTROL Autorisations] vous permet également de gérer les libellés, les environnements de test et les utilisateurs associés à un rôle spécifique.
 
 Contactez votre administrateur système pour obtenir un accès si vous ne disposez pas de droits d’administrateur.
 

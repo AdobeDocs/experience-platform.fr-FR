@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques les plus consultées ;
+keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques les plus consultées
 solution: Experience Platform
 title: Guide de l’API d’apprentissage automatique Sensei
 description: Les sections suivantes fournissent des informations de référence pour différentes fonctionnalités de l’API Sensei Machine Learning.
+role: Developer
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '330'
-ht-degree: 80%
+ht-degree: 66%
 
 ---
 
@@ -17,7 +18,7 @@ Les sections suivantes contiennent des informations de référence sur les diff�
 
 ## Paramètres de requête pour la récupération de ressources {#query}
 
-Le [!DNL Sensei Machine Learning] L’API prend en charge les paramètres de requête pour la récupération des ressources. Les paramètres de requête disponibles et leurs utilisations sont décrits dans le tableau suivant :
+La variable [!DNL Sensei Machine Learning] L’API prend en charge les paramètres de requête pour la récupération des ressources. Les paramètres de requête disponibles et leurs utilisations sont décrits dans le tableau suivant :
 
 | Paramètre de requête | Description | Valeur par défaut |
 | --------------- | ----------- | ------- |
@@ -69,7 +70,7 @@ L’exemple suivant présente une configuration qui précise l’utilisation d�
 
 >[!NOTE]
 >
->Les valeurs `cpus` et `gpus` ne représentent pas le nombre de processeurs ou de processeurs graphiques, mais plutôt le nombre de machines physiques. Ces valeurs sont acceptablement `"1"` et renverront une exception dans le cas contraire.
+>Les valeurs de `cpus` et `gpus` ne représente pas le nombre de processeurs ou de processeurs graphiques, mais plutôt le nombre de machines physiques. Ces valeurs sont acceptablement `"1"` et renverront une exception dans le cas contraire.
 
 ## Configurations des ressources PySpark et Spark {#resource-config}
 

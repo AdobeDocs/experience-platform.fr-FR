@@ -2,10 +2,11 @@
 keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès basé sur les attributs;contrôle d’accès basé sur les attributs
 title: Prise en main de l’API de contrôle d’accès basé sur les attributs
 description: L’API Attribute Access Control vous permet de gérer par programmation les rôles et les stratégies d’accès dans Adobe Experience Platform. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
+role: Developer
 exl-id: d1a66afa-dff4-49d7-b57c-527f05977155
-source-git-commit: 54e15234d1b1050ea2cdb8b7d37c79a133a339f1
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '327'
 ht-degree: 69%
 
 ---

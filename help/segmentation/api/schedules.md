@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: Point de terminaison de l’API Schedules
 description: Les planifications sont un outil qui peut être utilisé pour exécuter automatiquement des tâches de segmentation par lots une fois par jour.
+role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1996'
-ht-degree: 23%
+source-wordcount: '2040'
+ht-degree: 16%
 
 ---
 
@@ -16,7 +17,7 @@ Les planifications sont un outil qui peut être utilisé pour exécuter automati
 
 ## Prise en main
 
-Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
+Les points de terminaison utilisés dans ce guide font partie de la variable [!DNL Adobe Experience Platform Segmentation Service] API. Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
 
 ## Obtention d’une liste de plannings {#retrieve-list}
 
@@ -24,7 +25,7 @@ Vous pouvez récupérer une liste de tous les plannings de votre organisation en
 
 **Format d’API**
 
-Le point d’entrée `/config/schedules` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est vivement recommandée pour réduire les frais généraux élevés. En passant un appel vers ce point d’entrée sans paramètres, vous récupérerez tous les plannings disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
+Le point d’entrée `/config/schedules` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est vivement recommandée pour réduire les frais généraux élevés. Un appel à ce point de terminaison sans paramètres permet de récupérer toutes les plannings disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
 
 ```http
 GET /config/schedules
@@ -51,7 +52,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec une liste de plannings pour l’organisation spécifiée en tant que JSON.
+Une réponse réussie renvoie un état HTTP 200 avec une liste de plannings pour l’organisation spécifiée comme JSON.
 
 >[!NOTE]
 >
@@ -97,7 +98,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de plannings pou
 | `children.name` | Nom du planning sous forme de chaîne. |
 | `children.type` | Type de tâche sous forme de chaîne. Les deux types pris en charge sont &quot;batch_segmentation&quot; et &quot;export&quot;. |
 | `children.properties` | Objet contenant des propriétés supplémentaires liées au planning. |
-| `children.properties.segments` | L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
+| `children.properties.segments` | Utilisation `["*"]` s’assure que tous les segments sont inclus. |
 | `children.schedule` | Chaîne contenant le planning de la tâche. L’exécution des tâches ne peut être planifiée qu’une fois par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution de plusieurs tâches sur une période de 24 heures. Pour plus d’informations sur les plannings cron, veuillez lire l’annexe sur la page [format d’expression cron](#appendix). Dans cet exemple, &quot;0 0 1 * *&quot; signifie que cette planification s’exécutera à 1h00 tous les jours. |
 | `children.state` | Chaîne contenant l’état du planning. Les deux états pris en charge sont &quot;actif&quot; et &quot;inactif&quot;. Par défaut, l’état est défini sur &quot;inactif&quot;. |
 
@@ -228,7 +229,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 | `name` | Nom du planning sous forme de chaîne. |
 | `type` | Type de tâche sous forme de chaîne. Les deux types pris en charge sont `batch_segmentation` et `export`. |
 | `properties` | Objet contenant des propriétés supplémentaires liées au planning. |
-| `properties.segments` | L’utilisation de `["*"]` permet de s’assurer que tous les segments sont inclus. |
+| `properties.segments` | Utilisation `["*"]` s’assure que tous les segments sont inclus. |
 | `schedule` | Chaîne contenant le planning de la tâche. Vous ne pouvez planifier qu’une seule exécution de tâche par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution d’une tâche plus d’une fois au cours d’une période de 24 heures. Pour plus d’informations sur les plannings cron, veuillez lire l’annexe sur la page [format d’expression cron](#appendix). Dans cet exemple, &quot;0 0 1 * *&quot; signifie que cette planification s’exécutera à 1h00 tous les jours. |
 | `state` | Chaîne contenant l’état du planning. Les deux états pris en charge sont `active` et `inactive`. Par défaut, l’état est défini sur `inactive`. |
 
@@ -366,8 +367,8 @@ Dans une chaîne d’expression cron, le premier champ représente les secondes,
 
 | Nom du champ | Obligatoire | Valeurs possibles | Caractères spéciaux autorisés |
 | ---------- | -------- | --------------- | -------------------------- |
-| Seconds | Oui | 0-59 | `, - * /` |
-| Minutes | Oui | 0-59 | `, - * /` |
+| Seconds | Oui | 0 à 59 | `, - * /` |
+| Minutes | Oui | 0 à 59 | `, - * /` |
 | Heures | Oui | 0-23 | `, - * /` |
 | Jour du mois | Oui | 1-31 | `, - * ? / L W` |
 | Mois | Oui | 1-12, JAN-DEC | `, - * /` |

@@ -2,22 +2,23 @@
 keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques les plus consultées;informations;api d’apprentissage automatique sensei
 solution: Experience Platform
 title: Point de terminaison de l’API Insights
-description: Les insights contiennent des mesures qui permettent à un scientifique de données d’évaluer et de choisir des modèles ML optimaux en affichant les mesures d’évaluation appropriées.
+description: Les informations contiennent des mesures qui permettent à un scientifique de données d’évaluer et de choisir des modèles ML optimaux en affichant les mesures d’évaluation appropriées.
+role: Developer
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '514'
 ht-degree: 96%
 
 ---
 
 # Point d’entrée Insights
 
-Les insights contiennent des mesures qui permettent à un scientifique de données d’évaluer et de choisir des modèles ML optimaux en affichant les mesures d’évaluation appropriées.
+Les informations contiennent des mesures qui permettent à un scientifique de données d’évaluer et de choisir des modèles ML optimaux en affichant les mesures d’évaluation appropriées.
 
-## Récupération d’une liste d’insights
+## Récupération d’une liste d’informations
 
-Vous pouvez récupérer une liste d’insights en effectuant une requête GET unique sur le point d’entrée des insights.  Pour vous aider à filtrer les résultats, vous pouvez spécifier des paramètres de requête dans le chemin de requête. Pour obtenir une liste des requêtes disponibles, reportez-vous à la section de l’annexe concernant les [paramètres de requête pour la récupération des ressources](./appendix.md#query).
+Vous pouvez récupérer une liste d’informations en effectuant une requête GET unique sur le point de terminaison des informations.  Pour vous aider à filtrer les résultats, vous pouvez spécifier des paramètres de requête dans le chemin de requête. Pour obtenir une liste des requêtes disponibles, reportez-vous à la section de l’annexe concernant les [paramètres de requête pour la récupération des ressources](./appendix.md#query).
 
 **Format d’API**
 
@@ -38,7 +39,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un payload incluant une liste d’insights, et chaque insight dispose d’un identifiant unique ( `id` ). De plus, vous recevrez le champ `context` incluant les identifiants uniques associés à cet insight spécifique ainsi que les événements d’insights et les données de mesures.
+Une réponse réussie renvoie un payload incluant une liste d’informations, et chaque information dispose d’un identifiant unique ( `id` ). De plus, vous recevrez le champ `context` incluant les identifiants uniques associés à cette information spécifique ainsi que les événements d’informations et les données de mesures.
 
 ```json
 {
@@ -100,14 +101,14 @@ Une réponse réussie renvoie un payload incluant une liste d’insights, et cha
 
 | Propriété | Description |
 | --- | --- |
-| `id` | L’identifiant correspondant à l’insight. |
+| `id` | L’identifiant correspondant à l’information. |
 | `experimentId` | Un identifiant d’expérience valide. |
 | `experimentRunId` | Un identifiant d’exécution d’expérience valide. |
 | `modelId` | Un identifiant de modèle valide. |
 
-## Récupération d’un insight spécifique
+## Récupération d’une information spécifique
 
-Pour rechercher un insight spécifique, effectuez une requête GET et fournissez un `{INSIGHT_ID}` valide dans le chemin d’accès de la requête. Pour vous aider à filtrer les résultats, vous pouvez spécifier des paramètres de requête dans le chemin de requête. Pour obtenir une liste des requêtes disponibles, reportez-vous à la section de l’annexe concernant les [paramètres de requête pour la récupération des ressources](./appendix.md#query).
+Pour rechercher une information spécifique, effectuez une requête GET et fournissez un `{INSIGHT_ID}` valide dans le chemin d’accès de la requête. Pour vous aider à filtrer les résultats, vous pouvez spécifier des paramètres de requête dans le chemin de requête. Pour obtenir une liste des requêtes disponibles, reportez-vous à la section de l’annexe concernant les [paramètres de requête pour la récupération des ressources](./appendix.md#query).
 
 **Format d’API**
 
@@ -117,7 +118,7 @@ GET /insights/{INSIGHT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{INSIGHT_ID}` | L’identifiant unique d’un insight Sensei. |
+| `{INSIGHT_ID}` | L’identifiant unique d’une information Sensei. |
 
 **Requête**
 
@@ -132,7 +133,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un payload incluant l’identifiant unique d’insight (`id`). De plus, vous recevrez le champ `context` incluant les identifiants uniques associés à cet insight spécifique ainsi que les événements d’insights et les données de mesures.
+Une réponse réussie renvoie un payload incluant l’identifiant unique d’information (`id`). De plus, vous recevrez le champ `context` incluant les identifiants uniques associés à cette information spécifique ainsi que les événements d’informations et les données de mesures.
 
 ```json
 {
@@ -163,14 +164,14 @@ Une réponse réussie renvoie un payload incluant l’identifiant unique d’ins
 
 | Propriété | Description |
 | --- | --- |
-| `id` | L’identifiant correspondant à l’insight. |
+| `id` | L’identifiant correspondant à l’information. |
 | `experimentId` | Un identifiant d’expérience valide. |
 | `experimentRunId` | Un identifiant d’exécution d’expérience valide. |
 | `modelId` | Un identifiant de modèle valide. |
 
-## Ajout d’un nouvel insight de modèle
+## Ajout d’une nouvelle information de modèle
 
-Vous pouvez créer un insight de modèle en effectuant une requête POST et un payload fournissant le contexte, les événements et les mesures du nouvel insight de modèle. Le champ de contexte utilisé pour créer un insight de modèle n’est pas nécessaire pour associer les services existants à l’insight, mais vous pouvez choisir de créer l’insight de modèle avec les services existants en fournissant un ou plusieurs des identifiants correspondants :
+Vous pouvez créer une information de modèle en effectuant une requête POST et un payload fournissant le contexte, les événements et les mesures de la nouvelle information de modèle. Le champ de contexte utilisé pour créer une information de modèle n’est pas nécessaire pour associer les services existants à l’information, mais vous pouvez choisir de créer l’information de modèle avec les services existants en fournissant un ou plusieurs des identifiants correspondants :
 
 ```json
 "context": {
@@ -259,7 +260,7 @@ Une réponse réussie renvoie un payload incluant un `{INSIGHT_ID}` et tous les 
 
 | Propriété | Description |
 | --- | --- |
-| `insightId` | L’ID unique créé pour cet insight spécifique en cas de requête POST réussie. |
+| `insightId` | L’ID unique créé pour cette information spécifique en cas de requête POST réussie. |
 
 ## Récupération d’une liste de mesures par défaut pour les algorithmes
 

@@ -3,11 +3,12 @@ keywords: Experience Platform;guide de développement;point de terminaison;Data 
 solution: Experience Platform
 title: Point de terminaison de l’API Modèles
 description: Un modèle est une instance d’une recette de machine learning entraînée à l’aide de données historiques et de configurations dans le but de résoudre un cas d’usage commercial.
+role: Developer
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '864'
-ht-degree: 65%
+ht-degree: 62%
 
 ---
 
@@ -221,7 +222,7 @@ Vous pouvez mettre à jour un modèle existant en écrasant ses propriétés par
 
 >[!TIP]
 >
->Afin de garantir le succès de cette requête PUT, il est conseillé d’effectuer en premier lieu une requête GET pour récupérer le modèle par son identifiant. Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié en tant que payload de la requête PUT.
+>Afin de garantir le succès de cette requête de PUT, il est conseillé d’effectuer d’abord une requête de GET pour récupérer le modèle par son identifiant. Ensuite, modifiez et mettez à jour l’objet JSON renvoyé et appliquez l’intégralité de l’objet JSON modifié en tant que payload de la requête PUT.
 
 **Format d’API**
 

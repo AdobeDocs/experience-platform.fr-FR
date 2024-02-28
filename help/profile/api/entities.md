@@ -3,10 +3,11 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Point d’entrée de l’API Entités (accès au profil)
 type: Documentation
 description: Adobe Experience Platform vous permet d’accéder aux données de Real-time Customer Profile à l’aide des API RESTful ou de l’interface utilisateur. Ce guide explique comment accéder aux entités, plus communément appelées "profils", à l’aide de l’API Profile.
+role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1734'
 ht-degree: 89%
 
 ---
@@ -887,7 +888,7 @@ Les résultats sont paginés lors de la récupération des événements de séri
 
 ## Étapes suivantes
 
-En suivant ce guide, vous avez réussi à accéder à [!DNL Real-Time Customer Profile] champs de données, profils et données de série temporelle. Pour savoir comment accéder à d’autres ressources de données stockées dans [!DNL Platform], reportez-vous à la section [Présentation de Data Access](../../data-access/home.md).
+En suivant ce guide, vous avez réussi à accéder à [!DNL Real-Time Customer Profile] champs de données, profils et données de série temporelle. Pour savoir comment accéder à d’autres ressources de données stockées dans [!DNL Platform], voir [Présentation de Data Access](../../data-access/home.md).
 
 ## Annexe {#appendix}
 

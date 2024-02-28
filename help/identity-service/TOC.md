@@ -1,10 +1,11 @@
 ---
 audience: user
-user-guide-title: Adobe Experience Platform Identity Service
+user-guide-title: Service d’identités d’Adobe Experience Platform
 breadcrumb-title: Guide de Platform Identity Service
 user-guide-description: Associez les identités des clients, quel que soit l’appareil ou le système utilisé, afin d’offrir des expériences digitales personnalisées.
 feature: Identities
-source-git-commit: 0d111241658b4014d1ca2e6013d21a4782d81be9
+role: Admin,Developer
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 79%
@@ -12,19 +13,19 @@ ht-degree: 79%
 ---
 
 
-# Adobe Experience Platform Identity Service {#identity}
+# Service d’identités d’Adobe Experience Platform {#identity}
 
-- [Présentation d’Identity Service](home.md)
+- [Présentation du service d’identités](home.md)
 - [Identity Service et Real-time Customer Profile](identity-and-profile.md)
 - Fonctionnalités {#features}
    - [Espace de noms d’identité](./features/namespaces.md)
    - [Logique de liaison d’identités](./features/identity-linking-logic.md)
    - [Visionneuse de graphique d’identités](./features/identity-graph-viewer.md)
-   - [Suppressions dans Identity Service](./features/deletion.md)
+   - [Suppressions dans le service d’identités](./features/deletion.md)
    - [Présentation d’ECID](./features/ecid.md)
 - [Guide de mise en oeuvre](implementation.md)
 - [Barrières de sécurité pour les données Identity ](guardrails.md)
-- API Identity Service {#api}
+- API Service d’identités {#api}
    - [Prise en main](api/getting-started.md)
    - [Étiquetage d’un champ comme identité](api/label-identities.md)
    - [Répertorier les identités d’un cluster](api/list-cluster-identites.md)

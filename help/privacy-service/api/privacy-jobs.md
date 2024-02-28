@@ -3,11 +3,12 @@ keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
 title: Point de terminaison de l’API Privacy Jobs
 description: Découvrez comment gérer les tâches de confidentialité pour les applications Experience Cloud à l’aide de l’API Privacy Service.
+role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 8e21bcc7b9d7fe3f4d26f80f953d454f090b0928
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1546'
-ht-degree: 63%
+source-wordcount: '1552'
+ht-degree: 57%
 
 ---
 
@@ -74,22 +75,22 @@ Pour récupérer le jeu suivant de résultats dans une réponse paginée, vous d
 >
 >Une limite de chargement quotidienne stricte est maintenant en place pour prévenir les abus du service. Les utilisateurs et utilisatrices qui abusent du système verront leur accès au service désactivé. Une réunion ultérieure sera ensuite organisée avec ces utilisateurs et utilisatrices afin d’aborder leurs actions et de discuter de l’utilisation acceptable de Privacy Service.
 
-Avant de créer une nouvelle requête de tâche, vous devez d’abord collecter des informations d’identification concernant les titulaires des données auxquelles vous souhaitez accéder, supprimer ou exclure de la vente. Une fois que vous disposez des données requises, elles doivent être fournies dans le payload d’une requête de POST à la variable `/jobs` point de terminaison .
+Avant de créer une nouvelle demande de tâche, vous devez collecter des informations d’identification concernant les titulaires des données auxquelles vous souhaitez accéder, que vous voulez supprimer ou dont vous souhaitez refuser la vente. Une fois que vous disposez des données requises, elles doivent être fournies dans le payload d’une requête de POST à la variable `/jobs` point de terminaison .
 
 >[!NOTE]
 >
->Les applications Adobe Experience Cloud compatibles utilisent des valeurs d’identification des titulaires de données différentes. Pour plus d’informations sur les identifiants requis pour votre ou vos applications, consultez le guide sur [les applications Privacy Service et Experience Cloud](../experience-cloud-apps.md). Pour obtenir des instructions plus générales sur la détermination des ID à envoyer [!DNL Privacy Service], voir le document sur [données d’identité dans les demandes d’accès à des informations personnelles](../identity-data.md).
+>Les applications Adobe Experience Cloud compatibles utilisent des valeurs différentes pour identifier les titulaires de données. Consultez le guide sur la [Applications Privacy Service et Experience Cloud](../experience-cloud-apps.md) pour plus d’informations sur les identifiants requis pour votre ou vos applications. Pour obtenir des instructions plus générales sur la détermination des ID à envoyer [!DNL Privacy Service], voir le document sur [données d’identité dans les demandes d’accès à des informations personnelles](../identity-data.md).
 
 La variable [!DNL Privacy Service] L’API prend en charge deux types de requêtes de tâche pour les données personnelles :
 
 * [Accès et/ou suppression](#access-delete) : accédez (lisez) ou supprimez les données personnelles.
-* [Exclusion de la vente](#opt-out) : marquez les données personnelles comme ne pouvant pas être vendues.
+* [Opt-out de la vente](#opt-out) : marquez les données personnelles comme ne pouvant pas être vendues.
 
 >[!IMPORTANT]
 >
->Bien qu’il soit possible d’associer les requêtes d’accès et de suppression dans un appel API unique, les demandes d’exclusion doivent être effectuées séparément.
+>Bien que les demandes d’accès et de suppression puissent être combinées sous la forme d’un seul appel API, les demandes d’exclusion doivent être effectuées séparément.
 
-### Création d’une tâche d’accès ou de suppression {#access-delete}
+### Créer une tâche d’accès/de suppression {#access-delete}
 
 Cette section explique comment effectuer une requête de tâche d’accès ou de suppression à l’aide de l’API.
 
@@ -234,7 +235,7 @@ Vous pouvez récupérer des informations sur une tâche spécifique, telles que 
 
 >[!IMPORTANT]
 >
->Les données relatives aux tâches créées précédemment en sont disponibles à la récupération que pendant les 30 jours à compter de la date d’achèvement de la tâche.
+>Les données relatives aux tâches créées précédemment ne peuvent être récupérées que dans les 30 jours suivant la date d’achèvement de la tâche.
 
 **Format d’API**
 

@@ -3,10 +3,11 @@ keywords: Experience Platform;accueil;rubriques populaires Application des poli
 solution: Experience Platform
 title: Point d’entrée de l’API des politiques de gouvernance des données
 description: Les politiques de gouvernance des données sont des règles adoptées par votre organisation qui décrivent les types d’actions marketing que vous êtes autorisé(e) ou non à effectuer sur les données dans Experience Platform. Le point d’entrée « /policies » est utilisé pour tous les appels d’API liés à lʼaffichage, la création, la mise à jour ou la suppression des politiques de gouvernance des données.
+role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1865'
+source-wordcount: '1863'
 ht-degree: 100%
 
 ---

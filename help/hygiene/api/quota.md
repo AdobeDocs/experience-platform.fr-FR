@@ -1,11 +1,12 @@
 ---
 title: Point d’entrée de l’API Quota
 description: Le point d’entrée /quota de l’API Data Hygiene vous permet de surveiller l’utilisation de la gestion avancée du cycle de vie des données par rapport aux limites mensuelles des quotas pour chaque type de tâche.
+role: Developer
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '327'
-ht-degree: 58%
+ht-degree: 57%
 
 ---
 
@@ -39,7 +40,7 @@ GET /quota?quotaType={QUOTA_TYPE}
 
 | Paramètre | Description |
 | --- | --- |
-| `{QUOTA_TYPE}` | Paramètre de requête facultatif qui spécifie le type de quota à récupérer. Si aucun paramètre `quotaType` n’est fourni, toutes les valeurs de quota sont renvoyées dans la réponse de l’API. Les valeurs de type acceptées sont les suivantes :<ul><li>`expirationDatasetQuota` : expirations de jeux de données</li><li>`deleteIdentityWorkOrderDatasetQuota`: Suppressions d’enregistrements</li><li>`fieldUpdateWorkOrderDatasetQuota`: enregistrer les mises à jour</li></ul> |
+| `{QUOTA_TYPE}` | Paramètre de requête facultatif qui spécifie le type de quota à récupérer. Si aucun paramètre `quotaType` n’est fourni, toutes les valeurs de quota sont renvoyées dans la réponse de l’API. Les valeurs de type acceptées sont les suivantes :<ul><li>`expirationDatasetQuota` : expirations de jeux de données</li><li>`deleteIdentityWorkOrderDatasetQuota`: supprime les enregistrements</li><li>`fieldUpdateWorkOrderDatasetQuota`: enregistrer les mises à jour</li></ul> |
 
 **Requête**
 
@@ -77,6 +78,6 @@ Une réponse réussie renvoie les détails des quotas de cycle de vie des donné
 
 | Propriété | Description |
 | --- | --- |
-| `quotas` | Répertorie les informations de quota pour chaque type de tâche de cycle de vie des données. Chaque objet Quota contient les propriétés suivantes :<ul><li>`name`: type de tâche du cycle de vie des données :<ul><li>`expirationDatasetQuota` : expirations de jeux de données</li><li>`deleteIdentityWorkOrderDatasetQuota`: Suppressions d’enregistrements</li></ul></li><li>`description`: description du type de tâche du cycle de vie des données.</li><li>`consumed` : le nombre de traitements de ce type s’exécutent sur la période mensuelle en cours.</li><li>`quota` : limite de quota pour ce type de traitement. Pour les suppressions et mises à jour d’enregistrement, cela représente le nombre de tâches pouvant être exécutées pour chaque période mensuelle. Pour les expirations de jeux de données, cela représente le nombre de traitements pouvant être simultanément actifs à un moment donné.</li></ul> |
+| `quotas` | Répertorie les informations de quota pour chaque type de tâche de cycle de vie des données. Chaque objet Quota contient les propriétés suivantes :<ul><li>`name`: type de tâche du cycle de vie des données :<ul><li>`expirationDatasetQuota` : expirations de jeux de données</li><li>`deleteIdentityWorkOrderDatasetQuota`: supprime les enregistrements</li></ul></li><li>`description`: description du type de tâche du cycle de vie des données.</li><li>`consumed` : le nombre de traitements de ce type s’exécutent sur la période mensuelle en cours.</li><li>`quota` : limite de quota pour ce type de traitement. Pour les suppressions et mises à jour d’enregistrement, cela représente le nombre de tâches pouvant être exécutées pour chaque période mensuelle. Pour les expirations de jeux de données, cela représente le nombre de traitements pouvant être simultanément actifs à un moment donné.</li></ul> |
 
 {style="table-layout:auto"}

@@ -3,11 +3,12 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Prise en main de l’API Real-time Customer Profile
 type: Documentation
 description: Le guide de prise en main de l’API Profile décrit les concepts clés et les fonctionnalités de base dont vous avez besoin pour utiliser les points de terminaison de l’API Real-Time Customer Profile afin d’effectuer des opérations CRUD de base sur les données de Profile.
+role: Developer
 exl-id: 7e30610a-a7e7-43ab-a45d-fd84ef6e36ef
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '410'
-ht-degree: 53%
+source-wordcount: '407'
+ht-degree: 50%
 
 ---
 
@@ -20,7 +21,7 @@ L’utilisation du guide de développement nécessite une compréhension pratiqu
 * [[!DNL Real-Time Customer Profile]](../home.md): fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
 * [[!DNL Adobe Experience Platform Identity Service]](../../identity-service/home.md): profitez d’une meilleure vue d’ensemble de vos clients et de leur comportement en rapprochant des identités entre appareils et systèmes.
 * [[!DNL Adobe Experience Platform Segmentation Service]](../../segmentation/home.md): vous permet de créer des audiences à partir de données Real-time Customer Profile.
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : framework normalisé selon lequel Platform organise les données de l’expérience client.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): cadre normalisé selon lequel Platform organise les données d’expérience client.
 * [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à [!DNL Profile] Points de terminaison de l’API.

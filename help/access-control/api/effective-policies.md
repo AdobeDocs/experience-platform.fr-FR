@@ -3,8 +3,9 @@ keywords: Experience Platform;accueil;rubriques populaires;politiques effective
 solution: Experience Platform
 title: Point d’entrée de lʼAPI Effective Policies
 description: Découvrez comment afficher des stratégies d’accès efficaces à l’aide de l’API Access Control for Adobe Experience Platform.
+role: Developer
 exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
-source-git-commit: 16d85a2a4ee8967fc701a3fe631c9daaba9c9d70
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 74%
@@ -68,7 +69,7 @@ Une réponse réussie renvoie des informations sur les autorisations et les type
 
 ## Étapes suivantes
 
-Ce document décrit comment effectuer des appels à la fonction [!DNL Access Control] API pour renvoyer des informations sur les autorisations principales et les stratégies d’accès associées pour les types de ressources. Pour plus dʼinformations sur le contrôle dʼaccès dʼ[!DNL Experience Platform], consultez la [présentation du contrôle dʼaccès](../home.md).
+Ce document décrit comment effectuer des appels à la fonction [!DNL Access Control] API pour renvoyer des informations sur les autorisations actives et les stratégies d’accès associées pour les types de ressources. Pour plus dʼinformations sur le contrôle dʼaccès dʼ[!DNL Experience Platform], consultez la [présentation du contrôle dʼaccès](../home.md).
 
 ## Annexe
 

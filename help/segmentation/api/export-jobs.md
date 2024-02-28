@@ -2,11 +2,12 @@
 solution: Experience Platform
 title: Point de terminaison de l’API des tâches d’exportation de segments
 description: Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres du segment d’audience dans des jeux de données. Vous pouvez utiliser le point de terminaison /export/jobs dans l’API Adobe Experience Platform Segmentation Service, qui vous permet de récupérer, créer et annuler des tâches d’exportation par programmation.
+role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '1617'
-ht-degree: 35%
+source-wordcount: '1615'
+ht-degree: 32%
 
 ---
 
@@ -20,7 +21,7 @@ Les tâches d’exportation sont des processus asynchrones utilisés pour conser
 
 ## Prise en main
 
-Les points d’entrée d’API utilisés dans ce guide font partie de l’[!DNL Adobe Experience Platform Segmentation Service]. Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
+Les points de terminaison utilisés dans ce guide font partie de la variable [!DNL Adobe Experience Platform Segmentation Service] API. Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
 
 ## Récupération d’une liste de tâches d’exportation {#retrieve-list}
 
@@ -28,7 +29,7 @@ Vous pouvez récupérer une liste de toutes les tâches d’exportation pour vot
 
 **Format d’API**
 
-Le point d’entrée `/export/jobs` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est vivement recommandée pour réduire les frais généraux élevés. Un appel à ce point d’entrée sans paramètre permet de récupérer toutes les tâches d’exportation disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
+Le point d’entrée `/export/jobs` prend en charge plusieurs paramètres de requête pour vous aider à filtrer vos résultats. Bien que ces paramètres soient facultatifs, leur utilisation est vivement recommandée pour réduire les frais généraux élevés. Un appel à ce point de terminaison sans paramètres permet de récupérer toutes les tâches d’exportation disponibles pour votre organisation. Plusieurs paramètres peuvent être inclus et séparés par des esperluettes (`&`).
 
 ```http
 GET /export/jobs
@@ -197,7 +198,7 @@ La réponse suivante renvoie un état HTTP 200 avec une liste des tâches d’ex
 | Propriété | Description |
 | -------- | ----------- |
 | `destination` | Informations de destination pour les données exportées :<ul><li>`datasetId`: identifiant du jeu de données vers lequel les données ont été exportées.</li><li>`segmentPerBatch`: valeur booléenne qui indique si les identifiants de segment sont consolidés ou non. Une valeur &quot;false&quot; signifie que tous les identifiants de segment sont exportés dans un seul identifiant de lot. Une valeur &quot;true&quot; signifie qu’un identifiant de segment est exporté dans un identifiant de lot. **Remarque :** La définition de la valeur sur true peut affecter les performances d’exportation par lots.</li></ul> |
-| `fields` | Une liste des champs exportés, séparés par des virgules. |
+| `fields` | Liste des champs exportés, séparés par des virgules. |
 | `schema.name` | Nom du schéma associé au jeu de données dans lequel les données doivent être exportées. |
 | `filter.segments` | Segments exportés. Les champs suivants sont inclus :<ul><li>`segmentId`: identifiant du segment vers lequel les profils seront exportés.</li><li>`segmentNs`: espace de noms du segment pour le donné `segmentID`.</li><li>`status`: un tableau de chaînes fournissant un filtre d’état pour la variable `segmentID`. Par défaut, `status` possède la valeur `["realized"]` qui représente tous les profils appartenant au segment à l’heure actuelle. Les valeurs possibles sont les suivantes : `realized` et `exited`. Une valeur de `realized` signifie que le profil est admissible pour le segment. Une valeur de `exiting` signifie que le profil quitte le segment.</li></ul> |
 | `mergePolicy` | Fusionner les informations de stratégie pour les données exportées. |
@@ -467,7 +468,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 | Propriété | Description |
 | -------- | ----------- |
 | `destination` | Informations de destination pour les données exportées :<ul><li>`datasetId`: identifiant du jeu de données vers lequel les données ont été exportées.</li><li>`segmentPerBatch`: valeur booléenne qui indique si les identifiants de segment sont consolidés ou non. Une valeur de `false` signifie que tous les identifiants de segment se trouvaient dans un seul identifiant de lot. Une valeur de `true` signifie qu’un identifiant de segment est exporté dans un identifiant de lot.</li></ul> |
-| `fields` | Une liste des champs exportés, séparés par des virgules. |
+| `fields` | Liste des champs exportés, séparés par des virgules. |
 | `schema.name` | Nom du schéma associé au jeu de données dans lequel les données doivent être exportées. |
 | `filter.segments` | Segments exportés. Les champs suivants sont inclus :<ul><li>`segmentId`: identifiant du segment pour les profils à exporter.</li><li>`segmentNs`: espace de noms du segment pour le donné `segmentID`.</li><li>`status`: un tableau de chaînes fournissant un filtre d’état pour la variable `segmentID`. Par défaut, `status` possède la valeur `["realized"]` qui représente tous les profils appartenant au segment à l’heure actuelle. Les valeurs possibles sont les suivantes : `realized` et `exited`.  Une valeur de `realized` signifie que le profil est admissible pour le segment. Une valeur de `exiting` signifie que le profil quitte le segment.</li></ul> |
 | `mergePolicy` | Fusionner les informations de stratégie pour les données exportées. |

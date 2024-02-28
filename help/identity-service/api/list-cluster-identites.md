@@ -3,11 +3,12 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;identités 
 solution: Experience Platform
 title: Liste de toutes les identités d’un cluster
 description: Les identités qui sont liées dans un graphique d’identités, et ce quel que soit l’espace de noms, sont considérées comme faisant partie du même « cluster » dans ce graphique d’identités. Les options ci-dessous permettent d’accéder à tous les membres du cluster.
+role: Developer
 exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
-source-git-commit: 6d01bb4c5212ed1bb69b9a04c6bfafaad4b108f9
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 95%
+source-wordcount: '365'
+ht-degree: 83%
 
 ---
 
@@ -71,7 +72,7 @@ Utilisez `POST` comme équivalent de lot de la méthode `GET` décrite ci-dessus
 
 >[!NOTE]
 >
->La requête ne doit pas indiquer plus de 1 000 identités. Les requêtes dépassant les 1 000 identités se traduiront par un code d’état 400.
+>La requête ne doit pas indiquer plus de 1 000 identités. Les requêtes dépassant les 1 000 identités se traduiront par un code d’état 400.
 
 **Format d’API**
 

@@ -3,8 +3,9 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;api;contrô
 solution: Experience Platform
 title: Point de terminaison de l’API Access Control Policies
 description: Le point de terminaison /policies de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les stratégies dans Adobe Experience Platform.
+role: Developer
 exl-id: 07690f43-fdd9-4254-9324-84e6bd226743
-source-git-commit: 01574f37593c707f092a8b4aa03d3d67e8c20780
+source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
 workflow-type: tm+mt
 source-wordcount: '1433'
 ht-degree: 10%
