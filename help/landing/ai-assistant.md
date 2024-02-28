@@ -1,13 +1,13 @@
 ---
 title: Assistant pour Adobe Experience Platform
 description: Découvrez comment utiliser l’assistant pour parcourir et comprendre les concepts Experience Platform et Real-time Customer Data Platform, ainsi que les informations d’utilisation relatives à vos objets.
-badge: Alpha
+badge: Version alpha
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: 5bdfc5282e71d05ff0db39c32fc02c60fd8d1c34
+source-git-commit: aba148f4155ff5403e89039a9c59acd4d450539e
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2369'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ Vous pouvez interroger l’assistant pour obtenir des informations telles que :
 
 * Conseils sur l’exécution des tâches relatives aux données et aux audiences.
 * Statuts et mesures des objets de données existants dans votre entreprise.
-* Utilisez des exemples de cas et des nuances pour mieux comprendre vos objets de données, notamment les attributs, les jeux de données, les destinations, les schémas, les segments et les sources.
+* Utilisez des exemples de cas et des nuances pour mieux comprendre vos objets de données, notamment les attributs, les flux de données, les jeux de données, les destinations, les schémas, les segments et les sources.
 
 Lisez le guide ci-dessous pour savoir comment utiliser l’assistant pour vous aider à parcourir et à comprendre vos workflows Experience Platform et Real-Time CDP.
 
@@ -131,17 +131,25 @@ Pour afficher les citations et valider la réponse de l’assistant, sélectionn
 
 +++Sélectionner pour afficher un exemple de questions d’utilisation des données et de visualisation des données
 
-Renseignez-vous auprès de l’assistant pour en savoir plus sur l’utilisation des données. Vous devez être dans un environnement de test actif pour que l’assistant puisse répondre à une question sur l’utilisation des données concernant les données de votre entreprise.
+Pour que l’assistant réponde à une requête sur l’utilisation des données au sein de votre entreprise, vous devez être dans un environnement de test actif.
+
+Dans l’exemple ci-dessous, Assistant reçoit la requête suivante : **&quot;Afficher des définitions de segments avec plus de 1 000 profils et inclure l’état d’activation.&quot;** L’assistant répond ensuite avec un graphique qui visualise vos données de segment et de profil.
 
 ![Suivez la question sur l’utilisation des données.](./images/ai-assistant/data-usage-question.png)
 
-Lorsque vous y êtes invité avec une question sur l’utilisation des données, l’assistant fournit également une explication de la manière dont il a calculé la réponse. Dans l’exemple ci-dessous, l’assistant décrit les étapes à suivre pour afficher les segments comportant plus de 1 000 profils et leur état d’activation respectif.
+Vous pouvez placer le pointeur de la souris sur une barre pour afficher des données spécifiques. Vous pouvez également cliquer sur l’icône Développer pour agrandir l’affichage du graphique.
+
+![Suivez la question illustrant la visualisation des données.](./images/ai-assistant/data-visualization.png)
+
+Une vue développée de la visualisation s’affiche. Vous pouvez utiliser le modal développé pour inspecter davantage vos données et est particulièrement utile lorsque la visualisation revient avec un grand nombre de colonnes.
+
+![Graphique développé.](./images/ai-assistant/chart-expanded.png)
+
+Lorsque vous y êtes invité avec une question sur l’utilisation des données, l’assistant vous explique comment il a calculé la réponse. Dans l’exemple ci-dessous, l’assistant décrit les étapes nécessaires pour afficher les définitions de segments avec plus de 1 000 profils et leurs états d’activation respectifs.
 
 ![Suivez la question sur les segments illustrant comment l’assistant a calculé la réponse.](./images/ai-assistant/results-explained.png)
 
-En outre, l’assistant génère des graphiques pour visualiser vos données. Vous pouvez également fournir des filtres et des modifications à vos requêtes, et vous pouvez demander à l’assistant de rendre ses résultats en fonction des filtres que vous incluez. Vous pouvez, par exemple, demander à l’assistant de vous afficher une tendance des segments de comptage dans l’ordre de leur date de création, supprimer les segments avec zéro total de profils et utiliser des noms de mois plutôt que des entiers lors de l’affichage des données.
-
-![Suivez la question illustrant la visualisation des données.](./images/ai-assistant/data-visualization.png)
+Vous pouvez également fournir des filtres et des modifications à vos requêtes, et vous pouvez demander à l’assistant de rendre ses résultats en fonction des filtres que vous incluez. Par exemple, vous pouvez demander à l’assistant de vous afficher une tendance des définitions de segment de comptage dans l’ordre de leur date de création, de supprimer les définitions de segment avec zéro total de profils et d’utiliser des noms de mois plutôt que des entiers lors de l’affichage des données.
 
 +++
 
@@ -177,27 +185,18 @@ Ensuite, l’assistant reçoit une autre demande de suivi. Cette fois, l’assis
 
 +++
 
-## Portée {#scope}
-
-L’assistant peut répondre à des questions concernant Real-Time CDP et les concepts d’Experience Platform, ainsi que sur l’utilisation des données propres à votre compte d’utilisateur. L’assistant peut également déduire le contexte en fonction de la page de l’interface utilisateur dans laquelle vous vous trouvez. Il peut identifier :
-
-* Le compte utilisateur que vous utilisez.
-* L’organisation à laquelle vous appartenez.
-* Page que vous affichez à l’écran.
-* La ressource (y compris le type et l’identifiant) que vous affichez à l’écran.
-* Étant donné que vous êtes en cours de traitement d’un Experience Platform ou d’un workflow Real-Time CDP spécifique, l’assistant peut déduire vos intentions.
-
-### Documentation {#documentation}
+## Documentation {#documentation}
 
 Actuellement, l’index de documentation couvre Adobe Experience Platform (Real-Time CDP et Audiences). L’index est mis à jour régulièrement.
 
 Le modèle de récupération de documentation est formé sur Experience Platform (Real-Time CDP et Audiences). Il n’est pas possible de répondre à des questions en dehors du cadre de Adobe Experience Platform, telles que des questions sur d’autres produits Adobe tels qu’Adobe Target et la suite de Creative Cloud.
 
-### Utilisation des données {#data-usage}
+## Utilisation des données {#data-usage}
 
 Vous pouvez également poser des questions à l’assistant sur l’utilisation de vos données dans les domaines suivants :
 
 * Attributs
+* Flux de données
 * Jeux de données
 * Destinations _(Pour l’instant, il n’est pas possible de répondre aux questions concernant les comptes et à certaines questions concernant le flux de données.)_
 * Schémas _(Pour l’instant, il n’est pas possible de répondre aux questions concernant les groupes de champs.)_
