@@ -4,9 +4,9 @@ description: Découvrez comment créer et utiliser des audiences de compte pour 
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: 7d630c3673304060ad26375955602440a495f354
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1130'
 ht-degree: 2%
 
 ---
@@ -41,19 +41,29 @@ La variable [!UICONTROL Parcourir] s’affiche, avec la liste de toutes les audi
 
 Cette vue répertorie des informations sur l’audience, notamment le nom, le nombre de profils, l’origine, l’état du cycle de vie, la date de création et la date de dernière mise à jour.
 
+Vous pouvez également utiliser la fonctionnalité de recherche et de filtrage pour rechercher et trier rapidement des audiences de compte spécifiques. Pour plus d’informations sur cette fonctionnalité, voir [guide de l’interface utilisateur de segmentation](./overview.md#manage-audiences).
+
 ## Créer une audience {#create}
+
+>[!NOTE]
+>
+>Les audiences de compte sont évaluées à l’aide de **batch** et sera évaluée toutes les 24 heures.
 
 Pour créer une audience de compte, sélectionnez **[!UICONTROL Créer une audience]** sur le [!UICONTROL Parcourir] page.
 
 ![La variable [!UICONTROL Créer une audience] est mis en surbrillance sur la page de navigation de l’audience du compte.](../images/ui/account-audiences/select-create-audience.png)
 
-Le créateur de segments s’affiche. Les attributs de compte s’affichent dans la barre de navigation de gauche.
+Le créateur de segments s’affiche. Les attributs de compte et les audiences s’affichent dans la barre de navigation de gauche. Sous , [!UICONTROL Attributs] , vous pouvez ajouter des attributs personnalisés et créés par Platform.
 
-![Le créateur de segments s’affiche. Notez que seuls les attributs sont affichés.](../images/ui/account-audiences/segment-builder.png)
+![Le créateur de segments s’affiche. Notez que seuls les attributs et les audiences sont affichés.](../images/ui/account-audiences/segment-builder.png)
 
 Lors de la création d’audiences de compte, notez que les événements sont répertoriés sous **[!UICONTROL Personnes]**, plutôt que d’être leur propre onglet, car ces attributs sont associés à des personnes.
 
 ![L’emplacement où trouver les événements, qui se trouve dans la variable [!UICONTROL Personnes] , est mis en surbrillance.](../images/ui/account-audiences/attributes.png)
+
+Sous , [!UICONTROL Audiences] vous pouvez ajouter des audiences basées sur des personnes créées précédemment à partir desquelles créer votre propre audience de compte.
+
+![L’onglet Audiences du créateur de segments est mis en surbrillance.](../images/ui/account-audiences/audiences.png)
 
 Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [Guide de l’interface utilisateur du créateur de segments](./segment-builder.md).
 
