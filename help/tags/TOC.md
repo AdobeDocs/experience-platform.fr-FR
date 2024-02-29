@@ -5,9 +5,9 @@ breadcrumb-title: Balises
 user-guide-description: Découvrez comment déployer et gérer des balises d’analyse, de marketing et de publicité pour améliorer les expériences clients.
 feature: Tags
 solution: Data Collection
-source-git-commit: 30152a95a46db06948620b881092fb21df734f9d
+source-git-commit: 1e61b2258f943a09cba30aa1c0bc1c6647b9fd16
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '773'
 ht-degree: 98%
 
 ---
@@ -53,6 +53,7 @@ ht-degree: 98%
    * [Déploiement de balises JavaScript pour la gestion du consentement client](./ui/client-side/consent.md)
    * [Prise en charge de la politique de sécurité du contenu (CSP)](./ui/client-side/content-security-policy.md)
    * [Prise en charge de l’intégrité des sous-ressources (SRI)](./ui/client-side/sri.md)
+   * [Transport Layer Security (sécurité de la couche de transport)](./ui/client-side/transport-layer-security.md)
 * Transfert d’événement {#event-forwarding}
    * [Aperçu](./ui/event-forwarding/overview.md)
    * [Prise en main](./ui/event-forwarding/getting-started.md)
