@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologie des règlements sur la confidentialité
 description: Ce document fournit des définitions des termes clés liés aux réglementations de confidentialité prises en charge par Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '1796'
+source-wordcount: '1842'
 ht-degree: 4%
 
 ---
@@ -100,6 +100,8 @@ Ce document fournit des définitions des termes clés liés aux réglementations
 ## M
 
 **Siège principal**: lieu au sein de l’Union où les principales décisions concernant le traitement des données sont prises, à l’égard de l’entité de traitement des données.
+
+**MHMDAa**: la variable [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) améliore les droits à la confidentialité pour les consommateurs concernant leurs données de santé. Elle exige la divulgation, le consentement des consommateurs et les droits de suppression des données de santé, et interdit la vente de données de santé sans autorisation. En outre, la loi interdit l&#39;utilisation de la géoclôture autour des établissements de santé.
 
 ## N
 

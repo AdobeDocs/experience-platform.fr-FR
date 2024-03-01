@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Glossaire Adobe Experience Platform
 description: Glossaire reprenant la terminologie principale d’Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 9d05752f3db78d9d10fd91fd0d3fed924217199c
+source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
 workflow-type: tm+mt
-source-wordcount: '7979'
-ht-degree: 13%
+source-wordcount: '7996'
+ht-degree: 12%
 
 ---
 
@@ -75,7 +75,7 @@ ht-degree: 13%
 
 **Identifiant de lot**: un identifiant de lot est un identifiant généré par l’Adobe pour un lot de données.
 
-**Ingestion par lots**: l’ingestion par lots vous permet d’ingérer des données dans Experience Platform en tant que fichiers de lot. Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en tant qu’unité unique.
+**Ingestion par lots**: l’ingestion par lots vous permet d’ingérer des données dans Experience Platform en tant que fichiers de lot. Les lots sont des unités de données composées d’un ou de plusieurs fichiers à ingérer en une seule unité.
 
 **Segmentation par lots**: la segmentation par lots est une alternative à un processus de sélection de données en cours et déplace toutes les données de profil à la fois par le biais de définitions de segment pour produire les audiences correspondantes. Une fois créé, ce segment est enregistré et stocké afin de pouvoir être exporté en vue de son utilisation.
 
@@ -91,7 +91,7 @@ ht-degree: 13%
 
 **[!DNL Catalog Service]**: [!DNL Catalog Service] (parfois appelé [!DNL Catalog]) est le système d’enregistrement de l’emplacement et de la traçabilité des données dans Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous la forme de fichiers et de répertoires, [!DNL Catalog] contient les métadonnées et la description de ces fichiers et répertoires à des fins de recherche, de surveillance et de gouvernance des données.
 
-**CCPA**: la variable [[!DNL California Consumer Privacy Act (CCPA)]](https://oag.ca.gov/privacy/ccpa) améliore les droits à la vie privée et la protection des consommateurs pour les résidents de Californie, aux États-Unis. Le CCPA accorde plusieurs nouveaux droits à la confidentialité des données aux résidents de Californie, y compris le droit d’accéder et de supprimer leurs données personnelles, de savoir si ces données personnelles sont vendues ou divulguées (et à qui) et le droit de refuser que ces données soient vendues à des tiers.
+**CCPA**: la variable [[!DNL California Consumer Privacy Act (CCPA)]](https://oag.ca.gov/privacy/ccpa) améliore les droits à la vie privée et la protection des consommateurs pour les résidents de Californie, aux États-Unis. Le CCPA accorde plusieurs nouveaux droits à la confidentialité des données aux résidents de Californie, y compris le droit d’accéder et de supprimer leurs données personnelles, de savoir si ces données personnelles sont vendues ou divulguées (et à qui) et le droit de refuser (opt-out) que ces données soient vendues à des tiers.
 
 **Classe**: dans le modèle de données d’expérience (XDM), une classe définit le plus petit ensemble de champs utilisé pour créer un schéma et définit le comportement de base de l’objet commercial représenté par le schéma.
 
@@ -223,7 +223,7 @@ ht-degree: 13%
 
 **Événement**: dans le contexte des balises, un événement est un type spécifique de composant de règle, qui est un déclencheur qui se produit sur un appareil client pour commencer l’exécution d’une règle.
 
-**Entités d’événement**: dans le cadre de la modélisation des données, les entités d’événement représentent des concepts liés aux actions qu’un client peut entreprendre, aux événements système ou à tout autre concept sur lequel vous souhaitez peut-être suivre les modifications au fil du temps. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur la classe [!DNL XDM ExperienceEvent].
+**Entités d’événement**: dans le cadre de la modélisation des données, les entités d’événement représentent des concepts liés aux actions qu’un client peut entreprendre, aux événements système ou à tout autre concept sur lequel vous souhaitez peut-être suivre les modifications au fil du temps. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur la variable [!DNL XDM ExperienceEvent] classe .
 
 **Événements**: les événements sont les données de comportement associées à un profil.
 
@@ -345,6 +345,8 @@ ht-degree: 13%
 
 **Stratégie de fusion**: les stratégies de fusion sont des règles utilisées par Experience Platform pour déterminer comment les fragments de données client provenant de plusieurs sources seront combinés afin de créer un profil individuel. Lorsqu’un conflit de données se produit, la stratégie de fusion détermine les données qui doivent être incluses en priorité dans le profil.
 
+**MHMDAa**: la variable [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) améliore les droits à la confidentialité pour les consommateurs concernant leurs données de santé. Elle exige la divulgation, le consentement des consommateurs et les droits de suppression des données de santé, et interdit la vente de données de santé sans autorisation. En outre, la loi interdit l&#39;utilisation de la géoclôture autour des établissements de santé.
+
 **Mixin**: voir &quot;Groupe de champs de schéma&quot;.
 
 **Module**: dans le contexte des balises, un module est un fragment de code JavaScript exécutable fourni par une extension, qui exécute des actions dans un environnement client sans avoir à créer de règle.
@@ -413,7 +415,7 @@ ht-degree: 13%
 
 **banque de données de profil**: la banque de données Profile (parfois appelée banque de données Profile) est un système de stockage de données distinct du lac de données, utilisé par Real-Time Customer Profile pour créer et stocker des profils.
 
-**Entités de profil**: les entités de profil représentent les attributs relatifs à une personne, généralement un client. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur la classe [!DNL XDM Individual Profile]. Voir aussi : Accès aux profils
+**Entités de profil**: les entités de profil représentent les attributs relatifs à une personne, généralement un client. Les entités appartenant à cette catégorie doivent être représentées par des schémas basés sur la variable [!DNL XDM Individual Profile] classe . Voir aussi : Accès aux profils
 
 **Export de profil**: [!DNL Profile] export est l’un des deux types de destinations dans Experience Platform. [!DNL Profile] export génère un fichier contenant des profils et des attributs et utilise des données d’informations d’identification personnelles brutes avec les emails afin de s’intégrer aux plateformes de marketing et d’automatisation des emails.
 

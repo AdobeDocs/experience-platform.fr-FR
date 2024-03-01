@@ -5,10 +5,10 @@ title: Point de terminaison de l’API Privacy Jobs
 description: Découvrez comment gérer les tâches de confidentialité pour les applications Experience Cloud à l’aide de l’API Privacy Service.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 0ffc9648fbc6e6aa3c43a7125f25a98452e8af9a
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 57%
+source-wordcount: '1857'
+ht-degree: 47%
 
 ---
 
@@ -26,25 +26,34 @@ Vous pouvez afficher une liste de toutes les tâches de confidentialité disponi
 
 **Format d’API**
 
-Ce format de requête utilise une `regulation` le paramètre de requête sur le `/jobs` point de fin, par conséquent, il commence par un point d’interrogation (`?`), comme illustré ci-dessous. La réponse est paginée, ce qui vous permet d’utiliser d’autres paramètres de requête (`page` et `size`) pour filtrer la réponse. Vous pouvez séparer plusieurs paramètres à l’aide d’esperluettes (`&`).
+Ce format de requête utilise une `regulation` le paramètre de requête sur le `/jobs` point de fin, par conséquent, il commence par un point d’interrogation (`?`), comme illustré ci-dessous. Lors de la mise en liste des ressources, l’API du Privacy Service renvoie jusqu’à 1 000 tâches et pagine la réponse. Utiliser d’autres paramètres de requête (`page`, `size`et les filtres de date) pour filtrer la réponse. Vous pouvez séparer plusieurs paramètres à l’aide d’esperluettes (`&`).
+
+>[!TIP]
+>
+>Utilisez des paramètres de requête supplémentaires pour filtrer davantage les résultats de requêtes spécifiques. Vous pouvez, par exemple, découvrir le nombre de tâches de confidentialité qui ont été soumises au cours d’une période donnée et leur état d’utilisation de la variable `status`, `fromDate`, et `toDate` paramètres de requête.
 
 ```http
 GET /jobs?regulation={REGULATION}
 GET /jobs?regulation={REGULATION}&page={PAGE}
 GET /jobs?regulation={REGULATION}&size={SIZE}
 GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
+GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={STATUS}
 ```
 
 | Paramètre | Description |
 | --- | --- |
-| `{REGULATION}` | Le type de réglementation pour lequel vous souhaitez effectuer une requête. Les valeurs acceptées sont les suivantes : <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consultez la présentation sur [réglementations prises en charge](../regulations/overview.md) pour plus d’informations sur les réglementations de confidentialité que représentent les valeurs ci-dessus. |
+| `{REGULATION}` | Le type de réglementation pour lequel vous souhaitez effectuer une requête. Les valeurs acceptées sont les suivantes : <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa`</li><li>`cpra_usa`</li><li>`ctdpa`</li><li>`ctdpa_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consultez la présentation sur [réglementations prises en charge](../regulations/overview.md) pour plus d’informations sur les réglementations de confidentialité que représentent les valeurs ci-dessus. |
 | `{PAGE}` | La page de données à afficher à l’aide d’une numérotation basée sur 0. La valeur par défaut est de `0`. |
-| `{SIZE}` | Le nombre de résultats à afficher sur chaque page. `1` est la valeur par défaut et `100` est le maximum. Dépasser le maximum entraîne le code d’erreur 400 dans l’API. |
+| `{SIZE}` | Le nombre de résultats à afficher sur chaque page. `100` est la valeur par défaut et `1000` est le maximum. Dépasser le maximum entraîne le code d’erreur 400 dans l’API. |
+| `{status}` | Le comportement par défaut consiste à inclure tous les états. Si vous spécifiez un type d’état, la requête renvoie uniquement les tâches de confidentialité correspondant à ce type d’état. Les valeurs acceptées sont les suivantes : <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
+| `{toDate}` | Ce paramètre limite les résultats aux résultats traités avant une date spécifiée. À partir de la date de la demande, le système peut revenir 45 jours en arrière. Toutefois, la période ne peut pas dépasser 30 jours.<br>Il accepte le format AAAA-MM-JJ. La date que vous fournissez est interprétée comme la date de fin exprimée en heure moyenne de Greenwich (GMT).<br>Si vous ne fournissez pas ce paramètre (et un `fromDate`), le comportement par défaut renvoie les tâches qui remontent aux sept derniers jours. Si vous utilisez `toDate`, vous devez également utiliser la variable `fromDate` paramètre de requête. Si vous n’utilisez pas les deux, l’appel renvoie une erreur 400. |
+| `{fromDate}` | Ce paramètre limite les résultats aux résultats traités après une date spécifiée. À partir de la date de la demande, le système peut revenir 45 jours en arrière. Toutefois, la période ne peut pas dépasser 30 jours.<br>Il accepte le format AAAA-MM-JJ. La date que vous fournissez est interprétée comme la date d’origine de la demande exprimée en heure moyenne de Greenwich (GMT).<br>Si vous ne fournissez pas ce paramètre (et un `toDate`), le comportement par défaut renvoie les tâches qui remontent aux sept derniers jours. Si vous utilisez `fromDate`, vous devez également utiliser la variable `toDate` paramètre de requête. Si vous n’utilisez pas les deux, l’appel renvoie une erreur 400. |
+| `{filterDate}` | Ce paramètre limite les résultats aux résultats traités à une date spécifiée. Il accepte le format AAAA-MM-JJ. Le système peut revenir sur les 45 derniers jours. |
 
 {style="table-layout:auto"}
 
 <!-- Not released yet:
-<li>`pdpd_vnm`</li>
+<li>`pdpd_vnm`</li> 
  -->
 
 **Requête**
