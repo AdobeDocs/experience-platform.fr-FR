@@ -5,9 +5,9 @@ description: Découvrez comment activer les audiences de compte vers les destina
 badgeB2B: label="Édition B2B" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="Édition B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '834'
 ht-degree: 7%
 
 ---
@@ -25,6 +25,12 @@ Cet article explique le workflow requis pour l’exportation [audiences de compt
 Accédez à **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**. Utilisez la variable **[!UICONTROL Types de données]** filtrer et sélectionner **[!UICONTROL Comptes]** pour afficher les destinations qui prennent en charge l’activation des audiences de compte. Actuellement, l’exportation d’audiences de compte n’est disponible que pour certaines destinations de stockage dans le cloud ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Stockage Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Zone d’entrée des données](/help/destinations/catalog/cloud-storage/data-landing-zone.md), et [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) et la variable [(Sociétés) Audiences mappées LinkedIn](/help/destinations/catalog/social/linkedin.md) destination.
 
 ![Destinations qui prennent en charge les audiences de compte.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
+
+## Vue d’ensemble des vidéos
+
+Consultez la vidéo ci-dessous pour une vue d’ensemble de la création et de l’activation d’audiences de compte, ainsi que des cas d’utilisation pris en charge lors de l’activation d’audiences de compte.
+
+>[!VIDEO](https://video.tv.adobe.com/v/338252/?learn=on)
 
 ## Conditions préalables {#prerequisites}
 

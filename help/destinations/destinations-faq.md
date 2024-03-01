@@ -3,10 +3,10 @@ keywords: destinations ; questions ; questions fréquentes ; faq ; faq sur les d
 title: Questions fréquentes
 description: Réponses aux questions les plus fréquemment posées sur les destinations Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
-source-wordcount: '1634'
-ht-degree: 5%
+source-wordcount: '1673'
+ht-degree: 4%
 
 ---
 
@@ -48,6 +48,15 @@ Vous réactivez l’audience mise à jour vers la même destination, mais comme 
 Pour vous assurer que tous les profils sont envoyés à votre destination, vous devez créer une nouvelle audience avec la nouvelle configuration, puis l’activer vers votre destination.
 
 +++
+
+### Lorsqu’une audience est supprimée d’une destination, y a-t-il un signal envoyé à la destination indiquant que l’audience est supprimée ?
+
++++Réponse
+
+Non, il n’existe aucune dépendance entre la destination de l’Experience Platform et l’instance du client du système cible. Du côté récepteur, la seule indication que le système cible verrait est qu’il a cessé de recevoir ces données d’audience.
+
++++
+
 <!--
 ## [!DNL Experience Cloud Audiences] {#eca-faq}
 

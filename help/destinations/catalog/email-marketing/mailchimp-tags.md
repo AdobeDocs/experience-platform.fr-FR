@@ -1,7 +1,8 @@
 ---
 title: Balises Mailchimp
 description: La destination Balises Mailchimp vous permet d’exporter les données de votre compte et de les activer dans Mailchimp pour interagir avec des contacts.
-source-git-commit: b32d619b78502e38e98a410bd14379992543c63c
+last-substantial-update: 2024-02-20T00:00:00Z
+source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 27%
