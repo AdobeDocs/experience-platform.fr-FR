@@ -5,10 +5,10 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 73785443a9d07dfde3ef1060f7886dfed484925b
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 91%
+source-wordcount: '1209'
+ht-degree: 90%
 
 ---
 
@@ -247,6 +247,7 @@ ht-degree: 91%
          * [Configurer une destination Azure Data Lake Storage avec des options de formatage de fichiers personnalisées et une configuration des noms de fichiers personnalisée](../destinations/destination-sdk/guides/batch/configure-adls-destination-with-custom-file-formatting.md)
          * [Configurer une destination Data Landing Zone (DLZ) avec des options de formatage de fichiers personnalisées et une configuration des noms de fichiers personnalisée](../destinations/destination-sdk/guides/batch/configure-dlz-destination-with-custom-file-formatting.md)
          * [Configurer une destination SFTP avec des options de formatage de fichiers prédéfinies et une configuration de noms de fichiers personnalisée](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
+         * [Configuration d’une destination basée sur des fichiers pour exporter des audiences de prospects](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
    * Référence de l’API de création de destinations {#authoring-api}
       * [Référence de l’API Destination SDK (création de destinations)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * Opérations du serveur de destination {#server-operations}
