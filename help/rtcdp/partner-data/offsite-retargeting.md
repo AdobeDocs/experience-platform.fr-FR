@@ -3,7 +3,7 @@ title: Reciblage hors site des visiteurs non authentifiés
 description: Découvrez comment recibler des utilisateurs non authentifiés à l’aide d’identifiants de prospect pour créer un attribut calculé qui peut être utilisé pour créer une audience d’utilisateurs non authentifiés.
 feature: Use Cases, Customer Acquisition
 exl-id: cffa3873-d713-445a-a3e1-1edf1aa8eebb
-source-git-commit: 0ef76fd950ef2e82e390cb39e2cd984004a140f2
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1462'
 ht-degree: 1%
@@ -39,7 +39,7 @@ En outre, pour mettre en oeuvre le cas d’utilisation, vous utiliserez les fonc
 - [Audiences](../../segmentation/home.md)
 - [Attributs calculés](../../profile/computed-attributes/overview.md)
 - [Destinations](../../destinations/home.md)
-- [SDK Web](../../edge/home.md)
+- [SDK Web](../../web-sdk/home.md)
 
 ## Obtention de données de partenaire dans Real-Time CDP {#get-data-in}
 

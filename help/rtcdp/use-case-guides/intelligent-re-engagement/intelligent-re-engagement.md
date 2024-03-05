@@ -3,14 +3,14 @@ title: Réengagement intelligent
 description: Proposez des expériences attrayantes et connectées au cours des moments de conversion clés pour réengager intelligemment la clientèle moins fréquente.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: ea0f53339d8549152a54267d537b04326f9164df
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
 source-wordcount: '3772'
 ht-degree: 4%
 
 ---
 
-# Réengager intelligemment vos clientes et clients pour qu’ils reviennent
+# Réengager intelligemment le retour de vos clientes et clients
 
 >[!NOTE]
 >
@@ -147,7 +147,7 @@ Ce groupe de champs vous permet de tester votre parcours avant sa publication, �
 
 #### Schéma des transactions numériques client
 
-Ce schéma est utilisé pour structurer et référencer les données d’événement qui constituent l’activité de votre client sur votre site web ou les plateformes numériques associées. Ces données sont généralement ingérées dans [!DNL Adobe Experience Platform] via [SDK Web](/help/edge/home.md) et est nécessaire pour référencer les différents événements de navigation et de conversion utilisés pour le déclenchement des parcours, l’analyse client détaillée en ligne et les fonctionnalités d’audience améliorées.
+Ce schéma est utilisé pour structurer et référencer les données d’événement qui constituent l’activité de votre client sur votre site web ou les plateformes numériques associées. Ces données sont généralement ingérées dans [!DNL Adobe Experience Platform] via [SDK Web](/help/web-sdk/home.md) et est nécessaire pour référencer les différents événements de navigation et de conversion utilisés pour le déclenchement des parcours, l’analyse client détaillée en ligne et les fonctionnalités d’audience améliorées.
 
 Le schéma des transactions numériques client est représenté par une [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) classe .
 
@@ -244,7 +244,7 @@ Les attributs d’audit du système de source externe sont un type de données X
 >
 >Il s’agit d’une implémentation facultative si vous utilisez le [[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md).
 
-Ce schéma est utilisé pour structurer et référencer les données d’événement qui constituent l’activité de votre client sur votre site web ou les plateformes numériques associées. Ce schéma est similaire au schéma des transactions numériques client, mais il est différent dans la mesure où il est destiné à être utilisé lors de la [SDK Web](/help/edge/home.md) n’est pas une option de collecte de données ; ce schéma est donc nécessaire lorsque vous utilisez la méthode [!DNL Adobe Analytics Source Connector] pour envoyer vos données en ligne dans [!DNL Adobe Experience Platform] en tant que flux de données principal ou secondaire.
+Ce schéma est utilisé pour structurer et référencer les données d’événement qui constituent l’activité de votre client sur votre site web ou les plateformes numériques associées. Ce schéma est similaire au schéma des transactions numériques client, mais il est différent dans la mesure où il est destiné à être utilisé lors de la [SDK Web](/help/web-sdk/home.md) n’est pas une option de collecte de données ; ce schéma est donc nécessaire lorsque vous utilisez la méthode [!DNL Adobe Analytics Source Connector] pour envoyer vos données en ligne dans [!DNL Adobe Experience Platform] en tant que flux de données principal ou secondaire.
 
 La variable [!DNL Adobe] le schéma du connecteur web est représenté par une [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) classe .
 
@@ -297,7 +297,7 @@ Pour plus d’informations sur la création d’un [dataset](/help/catalog/datas
 >
 >Disposer aux clients de la possibilité de se désabonner de la réception des communications d’une marque et veiller au respect de ce choix est une obligation légale. En savoir plus sur la législation applicable dans la section [Présentation des réglementations sur la confidentialité](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-#### Stratégies de consentement
+#### Politiques de consentement
 
 Lors de la création d’un chemin de réengagement, pensez à ajouter les éléments suivants : [stratégies de consentement](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html):
 

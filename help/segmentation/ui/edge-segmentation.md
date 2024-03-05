@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de segmentation Edge
 description: Découvrez comment utiliser la segmentation Edge pour évaluer instantanément les définitions de segment dans Platform, en activant les cas d’utilisation de la personnalisation de la même page et de la page suivante.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: d3c0e5ed596661f11191bbcd8d51c888bbd4c1d2
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '958'
 ht-degree: 95%
@@ -16,7 +16,7 @@ ht-degree: 95%
 >
 >La segmentation Edge est désormais généralement disponible pour tous les utilisateurs et utilisatrices de Platform. Si vous avez créé des définitions de segments Edge au cours de la version Beta, ces définitions de segments continueront à fonctionner.
 
-La segmentation Edge permet d’évaluer les segments dans Adobe Experience Platform instantanément [sur le serveur Edge](../../edge/home.md), en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
+La segmentation Edge permet d’évaluer les segments dans Adobe Experience Platform instantanément [sur le serveur Edge](../../web-sdk/home.md), en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
 
 >[!IMPORTANT]
 >

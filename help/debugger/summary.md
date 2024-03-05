@@ -6,10 +6,10 @@ seo-description: Experience Platform Debugger Summary Screen
 seo-title: Summary Tab
 uuid: 46b17eaa-b611-43cf-8c6a-67b2e9b9d940
 exl-id: 91234125-15c4-4111-9ee4-f3af093a3c4d
-source-git-commit: f94bba7eb4763230dae6794eb70a75f53a853c53
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '909'
-ht-degree: 76%
+source-wordcount: '711'
+ht-degree: 83%
 
 ---
 
@@ -77,19 +77,19 @@ Experience Platform Debugger affiche les informations suivantes pour chaque so
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Nom </p> </td> 
-   <td colname="col2"> <p>Nom de la balise <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html" format="https" scope="external"> property</a> </p> </td> 
+   <td colname="col2"> <p>Nom de la balise <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=fr" format="https" scope="external"> property</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Version </p> </td> 
-   <td colname="col2"> <p>Version de Turbine.</a> </p> </td> 
+   <td colname="col2"> <p>Version de Turbine</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Date de version </p> </td> 
-   <td colname="col2"> <p>La balise <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html" format="https" scope="external"> bibliothèque</a> date de création </p> </td> 
+   <td colname="col2"> <p>La balise <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html?lang=fr" format="https" scope="external"> bibliothèque</a> date de création </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Environnement </p> </td> 
-   <td colname="col2"> <p>Le <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=fr" format="https" scope="external"> environnement</a> utilisé par la bibliothèque de balises </p> </td> 
+   <td colname="col2"> <p>La variable <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=fr" format="https" scope="external"> environnement</a> utilisé par la bibliothèque de balises </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Extensions </p> </td> 
@@ -104,7 +104,7 @@ Experience Platform Debugger affiche les informations suivantes pour chaque so
  <tbody> 
   <tr> 
    <td colname="col1"> <p>Version de la bibliothèque </p> </td> 
-   <td colname="col2"> <p>Numéro de <a href="https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-ext-release-notes.html" format="html" scope="external">version de la bibliothèque</a> SDK web Adobe Experience Platform. </p> </td> 
+   <td colname="col2"> <p>Numéro de <a href="https://experienceleague.adobe.com/docs/experience-platform/web-sdk/extension/web-sdk-ext-release-notes.html" format="html" scope="external">version de la bibliothèque</a> SDK web Adobe Experience Platform. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Namespace (Espace de nom du visiteur)</p> </td> 

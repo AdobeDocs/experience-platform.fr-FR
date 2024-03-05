@@ -3,10 +3,10 @@ keywords: personnalisation personnalisée;destination;destination personnalisée
 title: Connexion de personnalisation personnalisée
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer les informations d’audience de Adobe Experience Platform. Cette destination fournit une personnalisation en temps réel basée sur l’appartenance à l’audience du profil utilisateur.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '910'
-ht-degree: 60%
+source-wordcount: '906'
+ht-degree: 58%
 
 ---
 
@@ -35,7 +35,7 @@ Configurez cette destination pour permettre aux plateformes de personnalisation 
 
 ## Conditions préalables {#prerequisites}
 
-Cette intégration est optimisée par le [SDK web Adobe Experience Platform](../../../edge/home.md) ou le [SDK mobile Adobe Experience Platform](https://developer.adobe.com/client-sdks/documentation/). Pour utiliser cette destination, vous devez utiliser l’un de ces SDK.
+Cette intégration est optimisée par le [SDK web Adobe Experience Platform](/help/web-sdk/home.md) ou le [SDK mobile Adobe Experience Platform](https://developer.adobe.com/client-sdks/documentation/). Pour utiliser cette destination, vous devez utiliser l’un de ces SDK.
 
 >[!IMPORTANT]
 >
@@ -120,7 +120,7 @@ Voici un exemple de valeur pour la variable `event.destinations` :
 ]
 ```
 
-Si vous n’utilisez pas de [balises](../../../tags/home.md) pour déployer le SDK web Experience Platform, utilisez la fonctionnalité [Gestion des réponses d’événements](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) pour afficher les données exportées.
+Si vous n’utilisez pas [Balises](/help/tags/home.md) pour déployer le SDK Web Experience Platform, utilisez [réponses de commande](/help/web-sdk/commands/command-responses.md) pour afficher les données exportées.
 
 Vous pouvez analyser la réponse JSON d’Adobe Experience Platform pour trouver l’alias d’intégration correspondant à l’application que vous intégrez dans Adobe Experience Platform. Les identifiants d’audience peuvent être transmis dans le code de l’application en tant que paramètres de ciblage. Vous trouverez ci-dessous un exemple de ce à quoi cela ressemblerait dans le cas spécifique de la réponse de destination.
 

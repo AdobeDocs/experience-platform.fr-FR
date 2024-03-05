@@ -2,9 +2,9 @@
 title: Configuration de l’extension de balise du SDK Web
 description: Découvrez comment configurer l’extension de balise SDK Web Experience Platform dans l’interface utilisateur des balises.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: dea75b92847320284e1dc1b939f3ae11a12077a8
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1552'
 ht-degree: 6%
 
 ---
@@ -84,7 +84,7 @@ Cette section vous permet de définir le comportement du SDK Web lorsqu’il s�
 * **[!UICONTROL Utilisation de cookies tiers]**: lorsque cette option est activée, le SDK Web tente de stocker un identifiant d’utilisateur dans un cookie tiers. En cas de réussite, l’utilisateur est identifié comme un utilisateur unique lorsqu’il navigue sur plusieurs domaines, plutôt que comme un utilisateur distinct sur chaque domaine. Si cette option est activée, le SDK peut toujours ne pas pouvoir stocker l’identifiant de l’utilisateur dans un cookie tiers si le navigateur ne prend pas en charge les cookies tiers ou s’il a été configuré par l’utilisateur pour ne pas autoriser les cookies tiers. Dans ce cas, le SDK stocke uniquement l’identifiant dans le domaine propriétaire.
 
   >[!IMPORTANT]
-  >>Les cookies tiers ne sont pas compatibles avec la variable [identifiant d’appareil propriétaire](../../../../edge/identity/first-party-device-ids.md) dans le SDK Web.
+  >>Les cookies tiers ne sont pas compatibles avec la variable [identifiant d’appareil propriétaire](../../../../web-sdk/identity/first-party-device-ids.md) dans le SDK Web.
 Vous pouvez utiliser des identifiants d’appareil propriétaires ou des cookies tiers, mais vous ne pouvez pas utiliser les deux fonctionnalités simultanément.
   >
 ## Configuration des paramètres de personnalisation {#personalization}
@@ -113,9 +113,9 @@ Lors de l’utilisation du fragment de code de masquage préalable, Adobe recomm
 
 ![Image présentant les paramètres de collecte de données de l’extension de balise SDK Web dans l’interface utilisateur des balises](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL Fonction de rappel]**: la fonction de rappel fournie dans l’extension est également appelée [`onBeforeEventSend` function](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=fr) dans la bibliothèque. Cette fonction vous permet de modifier les événements de manière globale avant qu’ils ne soient envoyés au réseau Edge. Vous trouverez des informations plus détaillées sur l’utilisation de cette fonction [here](../../../../edge/fundamentals/tracking-events.md#modifying-events-globally).
+* **[!UICONTROL Fonction de rappel]**: la fonction de rappel fournie dans l’extension est également appelée [`onBeforeEventSend` function](/help/web-sdk/commands/configure/onbeforeeventsend.md) dans la bibliothèque. Cette fonction vous permet de modifier les événements de manière globale avant qu’ils ne soient envoyés au réseau Edge.
 * **[!UICONTROL Activer la collecte de données de clic]**: le SDK Web peut automatiquement collecter des informations sur les clics sur les liens. Cette fonctionnalité est activée par défaut, mais elle peut être désactivée à l’aide de cette option. Les liens sont également étiquetés comme liens de téléchargement s’ils contiennent l’une des expressions de téléchargement répertoriées dans la variable [!UICONTROL Télécharger le qualificateur de lien] textbox. Adobe vous fournit quelques qualificateurs de lien de téléchargement par défaut. Vous pouvez les modifier en fonction de vos besoins.
-* **[!UICONTROL Données contextuelles collectées automatiquement]**: par défaut, le SDK Web collecte certaines données contextuelles concernant l’appareil, le web, l’environnement et le contexte de lieu. Si vous souhaitez voir une liste des informations collectées par l&#39;Adobe, vous pouvez la trouver. [here](../../../../edge/data-collection/automatic-information.md). Si vous ne souhaitez pas que ces données soient collectées ou que certaines catégories de données soient uniquement collectées, sélectionnez **[!UICONTROL Informations contextuelles spécifiques]** et sélectionnez les données à collecter.
+* **[!UICONTROL Données contextuelles collectées automatiquement]**: par défaut, le SDK Web collecte certaines données contextuelles concernant l’appareil, le web, l’environnement et le contexte de lieu. Si vous ne souhaitez pas que ces données soient collectées ou que certaines catégories de données soient uniquement collectées, sélectionnez **[!UICONTROL Informations contextuelles spécifiques]** et sélectionnez les données à collecter. Voir [`context`](/help/web-sdk/commands/configure/context.md) pour plus d’informations.
 
 ## Configurer les remplacements de trains de données {#datastream-overrides}
 
@@ -125,10 +125,10 @@ Vous pouvez ainsi déclencher des comportements de trains de données différent
 
 Le remplacement de la configuration du train de données comporte deux étapes :
 
-1. Tout d’abord, vous devez définir vos remplacements de configuration de trains de données sur la page de [configuration des trains de données](../../../../datastreams/configure.md).
+1. Tout d’abord, vous devez définir vos remplacements de configuration de trains de données sur la page de [configuration des trains de données](/help/datastreams/configure.md).
 2. Ensuite, vous devez envoyer les remplacements au réseau Edge par le biais d’une commande de SDK Web ou à l’aide de l’extension de balise du SDK Web.
 
-Voir la structure de données [la documentation de remplacement de configuration](../../../../datastreams/overrides.md) pour obtenir des instructions détaillées sur la façon de remplacer les configurations datastream.
+Voir la structure de données [la documentation de remplacement de configuration](/help/datastreams/overrides.md) pour obtenir des instructions détaillées sur la façon de remplacer les configurations datastream.
 
 Au lieu de transmettre les remplacements par le biais d’une commande SDK Web, vous pouvez configurer les remplacements dans l’écran d’extension de balise illustré ci-dessous.
 
@@ -136,10 +136,10 @@ Au lieu de transmettre les remplacements par le biais d’une commande SDK Web, 
 >
 Les remplacements de flux de données doivent être configurés par environnement. Les environnements de développement, d’évaluation et de production ont tous des remplacements distincts. Vous pouvez copier les paramètres entre eux à l’aide des options dédiées affichées dans l’écran ci-dessous.
 
-![Image montrant les remplacements de la configuration de la banque de données dans la page de l’extension de balise du SDK Web.](assets/datastream-overrides.png)
+![Image montrant le remplacement de la configuration de la banque de données à l’aide de la page de l’extension de balise SDK Web.](assets/datastream-overrides.png)
 
 ## Configuration des paramètres avancés
 
 Utilisez la variable **[!UICONTROL Chemin de base Edge]** si vous devez modifier le chemin de base utilisé pour interagir avec le réseau Edge. Cela ne doit pas nécessiter de mise à jour, mais dans le cas où vous participez à une version bêta ou alpha, l’Adobe peut vous demander de modifier ce champ.
 
-![Image montrant les paramètres avancés dans la page de l’extension de balise du SDK Web.](assets/advanced-settings.png)
+![Image présentant les paramètres avancés à l’aide de la page de l’extension de balise SDK Web.](assets/advanced-settings.png)

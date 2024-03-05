@@ -4,9 +4,9 @@ description: Découvrez comment configurer la détection des robots pour les flu
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1320'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Le trafic provenant d’entités non humaines, telles que les programmes automatisés, les web-scrapers, les araignées, les scanneurs à scripts, peut rendre plus difficile l’identification des événements provenant de visiteurs humains. Ce type de trafic peut avoir une incidence négative sur les mesures commerciales importantes, ce qui entraîne des rapports de trafic incorrects.
 
-La détection des robots vous permet d’identifier les événements générés par [[!DNL Web SDK]](../edge/home.md), [[!DNL Mobile SDK]](https://developer.adobe.com/client-sdks/home/) et [[!DNL Server API]](../server-api/overview.md) comme étant généré par des araignées et des robots connus.
+La détection des robots vous permet d’identifier les événements générés par la variable[SDK Web](../web-sdk/home.md), [SDK Mobile](https://developer.adobe.com/client-sdks/home/) et [[!DNL Server API]](../server-api/overview.md) comme étant généré par des araignées et des robots connus.
 
 En configurant la détection des robots pour vos flux de données, vous pouvez identifier des adresses IP, des plages d’adresses IP et des en-têtes de requête spécifiques que vous souhaitez classer comme événements de robots.
 

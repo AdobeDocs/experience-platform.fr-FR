@@ -3,9 +3,9 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;prép de do
 title: Envoyer Des Mises À Jour Partielles De Ligne À Real-Time Customer Profile À L’Aide De La Préparation De Données
 description: Découvrez comment envoyer des mises à jour de lignes partielles à Real-time Customer Profile à l’aide de la préparation de données.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: db6a0b45d600d16b24f7f749e414dfd0998fbf5e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1242'
+source-wordcount: '1241'
 ht-degree: 5%
 
 ---
@@ -265,7 +265,7 @@ Vous trouverez ci-dessous une liste des limites connues à prendre en compte lor
 
 * La méthode de mise à jour en continu ne doit être utilisée que lors de l’envoi de mises à jour de lignes partielles à [!DNL Real-Time Customer Profile]. Les mises à jour des lignes partielles sont **not** consommé par le lac de données.
 * La méthode de diffusion en continu upserts ne prend pas en charge la mise à jour, le remplacement et la suppression des identités. De nouvelles identités sont créées si elles n’existent pas. D’où `identity` doit toujours être définie pour créer. Si une identité existe déjà, l’opération est un &quot;no-op&quot;.
-* La méthode de mise en service en continu ne prend actuellement pas en charge [SDK Web Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=fr) et [SDK Adobe Experience Platform Mobile](https://developer.adobe.com/client-sdks/documentation/).
+* La méthode de mise en service en continu ne prend actuellement pas en charge [SDK Web Adobe Experience Platform](/help/web-sdk/home.md) et [SDK Adobe Experience Platform Mobile](https://developer.adobe.com/client-sdks/documentation/).
 
 ## Étapes suivantes
 

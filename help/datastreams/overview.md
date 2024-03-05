@@ -1,17 +1,17 @@
 ---
 title: Présentation des trains de données
 description: Découvrez comment les flux de données vous aident à connecter l’intégration de votre SDK Experience Platform côté client à des produits Adobe et à des destinations tierces.
-source-git-commit: 68174928d3b005d1e5a31b17f3f287e475b5dc86
+exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '727'
 ht-degree: 77%
 
 ---
 
-
 # Présentation des flux de données
 
-Un flux de données représente la configuration côté serveur lors de la mise en œuvre des SDK web et mobile d’Adobe Experience Platform. Lorsque la variable [configure](../edge/fundamentals/configuring-the-sdk.md) dans le SDK contrôle les éléments qui doivent être gérés sur le client (comme la fonction `edgeDomain`), les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une requête est envoyée à Adobe Experience Platform Edge Network, `edgeConfigId` est utilisé pour référencer le flux de données. Cela vous permet de mettre à jour la configuration côté serveur sans devoir modifier le code du site web.
+Un flux de données représente la configuration côté serveur lors de la mise en œuvre des SDK web et mobile d’Adobe Experience Platform. Lorsque la variable [`configure`](/help/web-sdk/commands/configure/overview.md) dans le SDK contrôle les éléments qui doivent être gérés sur le client (comme la fonction `edgeDomain`), les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une requête est envoyée à Adobe Experience Platform Edge Network, `edgeConfigId` est utilisé pour référencer le flux de données. Cela vous permet de mettre à jour la configuration côté serveur sans devoir modifier le code du site web.
 
 Vous pouvez créer et gérer des trains de données en sélectionnant **[!UICONTROL Trains de données]** dans le volet de navigation de gauche de l’interface utilisateur d’Adobe Experience Platform ou de l’interface utilisateur de collecte des données.
 

@@ -1,0 +1,39 @@
+---
+title: documentUnloading
+description: Utilisez l’API sendBeacon de JavaScript pour envoyer des données à Adobe.
+source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 2%
+
+---
+
+# `documentUnloading`
+
+La variable `documentUnloading` vous permet d’utiliser les [`sendBeacon`](https://developer.mozilla.org/fr-FR/docs/Web/API/Navigator/sendBeacon) pour envoyer des données à Adobe. Si une requête type prend trop de temps, le navigateur peut annuler la requête. Vous pouvez indiquer au SDK Web d’utiliser `sendBeacon` afin que la requête s’exécute en arrière-plan une fois que vous avez quitté la page. Activez cette propriété pour empêcher les demandes de données d’être annulées par le navigateur lors du déchargement.
+
+Plusieurs navigateurs imposent une limite de 64 Ko à la quantité de données pouvant être envoyée avec `sendBeacon` à la fois. Si le navigateur rejette l’événement car la charge utile est trop importante, le SDK Web reprend l’utilisation de sa méthode de transport normale.
+
+## Configuration du déchargement de documents à l’aide de l’extension de balise SDK Web
+
+Activez la variable **[!UICONTROL Le document sera déchargé.]** dans les actions d’une règle de balise.
+
+1. Connexion à [experience.adobe.com](https://experience.adobe.com) à l’aide de vos informations d’identification Adobe ID.
+1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
+1. Sélectionnez la propriété de balise de votre choix.
+1. Accédez à **[!UICONTROL Règles]**, puis sélectionnez la règle de votre choix.
+1. Sous [!UICONTROL Actions], sélectionnez une action existante ou créez-en une.
+1. Définissez la variable [!UICONTROL Extension] du champ déroulant vers **[!UICONTROL SDK Web Adobe Experience Platform]**, puis définissez la variable [!UICONTROL Type d’action] to **[!UICONTROL Envoyer un événement]**.
+1. Activez la variable **[!UICONTROL Le document sera déchargé.]** dans la [!UICONTROL Données] .
+1. Cliquez sur **[!UICONTROL Conserver les modifications]**, puis exécutez votre workflow de publication.
+
+## Configuration du déchargement des documents à l’aide de la bibliothèque JavaScript du SDK Web
+
+Définissez la variable `documentUnloading` booléen lors de l’exécution de la variable `sendEvent` . Sa valeur par défaut est `false`. Définissez cette propriété sur `true` si vous souhaitez utiliser la variable `sendBeacon` pour envoyer des données à Adobe.
+
+```js
+alloy("sendEvent", {
+  "xdm": adobeDataLayer.getState(reference),
+  "documentUnloading": true
+});
+```

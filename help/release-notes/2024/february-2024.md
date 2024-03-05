@@ -1,7 +1,7 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Février 2024
 description: Les notes de mise à jour de février 2024 pour Adobe Experience Platform.
-source-git-commit: 3c0b7c4eee7c790a8ffae95c05a8db6ba7c3b285
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 30%
@@ -27,7 +27,7 @@ Experience Platform vous permet de vous abonner à des alertes basées sur des 
 **Fonctionnalités nouvelles ou mises à jour**
 | Fonctionnalité | Description | | — | — | | Onglet Historique des alertes | En tant qu’administrateur Experience Platform, vous pouvez utiliser la fonction gérer les abonnés aux alertes pour affecter une alerte à un identifiant utilisateur, une adresse électronique externe ou une liste de groupes de messagerie Adobe. Pour plus d’informations, voir [Documentation de l’interface utilisateur des alertes](../../observability/alerts/ui.md) pour plus d’informations sur l’onglet history . |
 
-
+{style="table-layout:auto"}
 
 Pour en savoir plus sur les alertes, lisez le [[!DNL Observability Insights] aperçu](../../observability/home.md).
 
@@ -39,7 +39,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [Prise en charge de la messagerie web in-app dans le SDK web](../../edge/personalization/web-in-app-messaging.md) | Le SDK Web de Adobe Experience Platform prend désormais en charge la configuration de la messagerie Web In-App pour les campagnes Adobe Journey Optimizer. |
+| [Prise en charge de la messagerie web in-app dans le SDK web](../../web-sdk/personalization/web-in-app-messaging.md) | Le SDK Web de Adobe Experience Platform prend désormais en charge la configuration de la messagerie Web In-App pour les campagnes Adobe Journey Optimizer. |
 
 {style="table-layout:auto"}
 

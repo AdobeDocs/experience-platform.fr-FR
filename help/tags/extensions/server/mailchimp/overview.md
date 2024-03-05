@@ -7,10 +7,10 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: 12bd4c6c1993afc438b75a3e5163ebe2fe8a8dd0
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 7%
+source-wordcount: '1267'
+ht-degree: 6%
 
 ---
 
@@ -105,7 +105,7 @@ L’extension est maintenant installée et configurée pour être utilisée dans
 
 Lorsque vous utilisez cette extension dans une [règle](../../../ui/managing-resources/rules.md), il existe plusieurs valeurs de données que l’extension envoie à Mailchimp avec chaque événement. Pour une mise en oeuvre type, vous pouvez configurer la variable [Extension SDK Web Adobe Experience Platform](../../client/web-sdk/overview.md) pour envoyer ces données à [!DNL Platform Edge Network] à utiliser par l’extension dans la propriété de transfert d’événement.
 
-Les données requises par cette extension peuvent être envoyées à partir du SDK Web sous forme de données XDM ou de données non XDM. Consultez la documentation pour en savoir plus sur [envoi de données XDM](../../../../edge/fundamentals/tracking-events.md#sending-non-xdm-data).
+Les données requises par cette extension peuvent être envoyées à partir du SDK Web sous la forme de données XDM (à l’aide de la variable [`xdm`](/help/web-sdk/commands/sendevent/xdm.md) ) ou des données autres que XDM (à l’aide de l’objet [`data`](/help/web-sdk/commands/sendevent/data.md) ).
 
 Par exemple, si un client effectue un achat ou s’inscrit pour un événement sur votre site, vous pouvez envoyer un email de confirmation par le biais de Mailchimp avec cette extension. Une fois que vous avez envoyé les informations requises du SDK Web vers le réseau Edge, l’extension déclenche le courrier électronique avec Mailchimp.
 
@@ -123,7 +123,7 @@ Le tableau ci-dessous fournit des détails supplémentaires pour chaque valeur p
 | `listId` | `arc.event.xdm._tenant.listId`<br /> ou<br /> `arc.event.data._tenant.listid` | Chaîne | ID d’audience | **Oui** | Doit correspondre à un ID d’audience existant |
 | `name` | `arc.event.xdm._tenant.name`<br /> ou<br /> `arc.event.data._tenant.name` | Chaîne | Nom de l’événement | **Oui** | 2 à 30 caractères de longueur |
 | `properties` | `arc.event.xdm._tenant.properties`<br /> ou<br /> `arc.event.data._tenant.properties` | Objet | Une liste facultative de propriétés au format JSON avec des détails sur l’événement. | Non |  |
-| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> ou<br /> `arc.event.data._tenant.isSyncing` | booléen | Événements créés avec `is_syncing` défini sur `true` **will not** automates de déclenchement | Non |  |
+| `isSyncing` | `arc.event.xdm._tenant.isSyncing`<br /> ou<br /> `arc.event.data._tenant.isSyncing` | Booléen | Événements créés avec `is_syncing` défini sur `true` **will not** automates de déclenchement | Non |  |
 | `occurredAt` | `arc.event.xdm._tenant.occuredAt`<br /> ou `arc.event.data._tenant.occuredAt`. | Chaîne | Horodatage ISO 8601 du moment où l’événement s’est produit | Non |  |
 
 {style="table-layout:auto"}

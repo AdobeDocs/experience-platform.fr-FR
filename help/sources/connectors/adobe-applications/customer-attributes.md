@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation du connecteur source des attributs du client
 description: Découvrez comment connecter les attributs du client à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur
 exl-id: 63765ecd-ddb5-4992-a3de-d53f054bfb28
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '380'
 ht-degree: 19%
 
 ---
@@ -31,7 +31,7 @@ Vous ne pouvez pas sélectionner un espace de noms existant pour l’identité l
 
 Pour [!DNL Customer Attributes] données à lier à d’autres [!DNL Profile] les jeux de données, ses données et ses identités doivent pouvoir être associés à un identifiant Experience Cloud.
 
-Vous pouvez définir la variable `CORE` en définissant l’ID d’Experience Cloud du visiteur à l’aide de [SDK Web](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=fr), [SDK Mobile](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/), ou la variable [API du service d’ID Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=fr).
+Vous pouvez définir la variable `CORE` en définissant l’ID d’Experience Cloud du visiteur à l’aide de [SDK Web](/help/web-sdk/identity/overview.md), [SDK Mobile](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/), ou la variable [API du service d’ID Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=fr).
 
 La variable [!DNL Customer Attributes] ne renseigne aucune autre relation d’identité. Par exemple, si une variable [!DNL Customer Attributes] Le jeu de données source contient un **Email** et un **Loyalty ID** , ces champs doivent ensuite être étiquetés comme champs d’identité dans le schéma pour être traités dans [!DNL Identity Service].
 

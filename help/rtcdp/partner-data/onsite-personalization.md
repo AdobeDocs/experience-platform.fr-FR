@@ -3,7 +3,7 @@ title: Personnaliser les expériences sur site pour les visiteurs inconnus à l�
 description: Découvrez comment utiliser la reconnaissance des visiteurs et visiteuses par les partenaires pour personnaliser les expériences sur site de vos visiteurs et visiteuses.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '2673'
 ht-degree: 89%
@@ -47,7 +47,7 @@ Lorsque vous envisagez d’utiliser des attributs fournis par les partenaires po
 Pour mettre en œuvre ce cas d’utilisation avec succès, vous devez utiliser plusieurs zones de Real-time Customer Data Platform et d’autres solutions Experience Cloud. Assurez-vous que vous disposez des [autorisations de contrôle d’accès basées sur des attributs](/help/access-control/abac/overview.md) pour toutes ces zones ou demandez à votre administrateur ou administratrice système de vous accorder les autorisations nécessaires.
 
 * Collecte de données
-   * [SDK Web Adobe Experience Platform](/help/edge/home.md)
+   * [SDK Web Adobe Experience Platform](/help/web-sdk/home.md)
    * [Balises](/help/tags/home.md)
    * [Flux de données](/help/datastreams/overview.md)
 * Gestion des données sur Real-Time CDP

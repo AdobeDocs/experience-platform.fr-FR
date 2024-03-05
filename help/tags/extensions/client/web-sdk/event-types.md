@@ -3,24 +3,24 @@ title: Types d’événement dans l’extension SDK Web Adobe Experience Platfor
 description: Découvrez comment utiliser les types d’événements fournis par l’extension SDK Web Adobe Experience Platform dans Adobe Experience Platform Launch.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: 2772660936444e39124a75deda6f78d97f7793f2
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 1%
+source-wordcount: '1006'
+ht-degree: 0%
 
 ---
 
 # Types d’événements 
 
-Cette page décrit les types d’événements Adobe Experience Platform fournis par l’extension de balise du SDK Web de Adobe Experience Platform. Ils sont utilisés pour [règles de création](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) et ne doit pas être confondu avec la variable [`eventType` champ dans XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=fr).
+Cette page décrit les types d’événements Adobe Experience Platform fournis par l’extension de balise du SDK Web de Adobe Experience Platform. Ils sont utilisés pour [règles de création](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) et ne doit pas être confondu avec la variable `eventType` dans le champ [`xdm` objet](/help/web-sdk/commands/sendevent/xdm.md).
 
-## [!UICONTROL Envoyer l’événement terminé]
+## [!UICONTROL Envoi de l’événement terminé]
 
-En règle générale, votre propriété comporte une ou plusieurs règles utilisant la variable [[!UICONTROL Envoyer un événement] action](action-types.md#send-event) pour envoyer des événements à Adobe Experience Platform Edge Network. Chaque fois qu’un événement est envoyé à Edge Network, une réponse est renvoyée au navigateur avec des données utiles. Sans le [!UICONTROL Envoyer l’événement terminé] type d’événement , vous n’auriez pas accès à ces données renvoyées.
+En règle générale, votre propriété comporte une ou plusieurs règles utilisant la variable [[!UICONTROL Envoyer un événement] action](action-types.md#send-event) pour envoyer des événements à Adobe Experience Platform Edge Network. Chaque fois qu’un événement est envoyé à Edge Network, une réponse est renvoyée au navigateur avec des données utiles. Sans le [!UICONTROL Envoi de l’événement terminé] type d’événement , vous n’auriez pas accès à ces données renvoyées.
 
-Pour accéder aux données renvoyées, créez une règle distincte, puis ajoutez une [!UICONTROL Envoyer l’événement terminé] à la règle. Cette règle est déclenchée chaque fois qu’une réponse réussie est reçue du serveur suite à une [!UICONTROL Envoyer un événement] action.
+Pour accéder aux données renvoyées, créez une règle distincte, puis ajoutez une [!UICONTROL Envoi de l’événement terminé] à la règle. Cette règle est déclenchée chaque fois qu’une réponse réussie est reçue du serveur suite à une [!UICONTROL Envoyer un événement] action.
 
-Lorsqu’une [!UICONTROL Envoyer l’événement terminé] déclenche une règle, il fournit les données renvoyées par le serveur qui peuvent s’avérer utiles pour accomplir certaines tâches. En règle générale, vous ajouterez une [!UICONTROL Code personnalisé] (de l’objet [!UICONTROL Core] ) à la même règle que celle qui contient la variable [!UICONTROL Envoyer l’événement terminé] . Dans le [!UICONTROL Code personnalisé] , votre code personnalisé aura accès à une variable nommée `event`. Ceci `event` contient les données renvoyées par le serveur.
+Lorsqu’une [!UICONTROL Envoi de l’événement terminé] déclenche une règle, il fournit les données renvoyées par le serveur qui peuvent s’avérer utiles pour accomplir certaines tâches. En règle générale, vous ajouterez une [!UICONTROL Code personnalisé] (de l’objet [!UICONTROL Core] ) à la même règle que celle qui contient la variable [!UICONTROL Envoi de l’événement terminé] . Dans le [!UICONTROL Code personnalisé] , votre code personnalisé aura accès à une variable nommée `event`. Ceci `event` contient les données renvoyées par le serveur.
 
 Votre règle de gestion des données renvoyées par Edge Network peut ressembler à ceci :
 
@@ -38,13 +38,13 @@ var propositions = event.propositions;
 
 If `event.propositions` existe, il s’agit d’un tableau contenant des objets de proposition de personnalisation. Les propositions incluses dans le tableau sont déterminées, en grande partie, par la manière dont l’événement a été envoyé au serveur.
 
-Pour ce premier scénario, supposons que vous n’ayez pas coché la variable [!UICONTROL Rendu des décisions] , mais n’ont fourni aucun [!UICONTROL portées de décision] à l’intérieur de [!UICONTROL Envoyer un événement] action responsable de l’envoi de l’événement.
+Pour ce premier scénario, supposons que vous n’ayez pas coché la variable [!UICONTROL Rendu des décisions] , mais n’ont fourni aucun [!UICONTROL portées de décision] dans la variable [!UICONTROL Envoyer un événement] l’action responsable de l’envoi de l’événement.
 
 ![img.png](assets/send-event-render-unchecked-without-scopes.png)
 
 Dans cet exemple, la variable `propositions` contient uniquement les propositions relatives à l’événement qui peuvent faire l’objet d’un rendu automatique.
 
-Le `propositions` tableau peut ressembler à cet exemple :
+La variable `propositions` tableau peut ressembler à cet exemple :
 
 ```json
 [
@@ -85,17 +85,17 @@ Le `propositions` tableau peut ressembler à cet exemple :
 ]
 ```
 
-Lors de l’envoi de l’événement, la variable [!UICONTROL Rendu des décisions] n’étant pas cochée, le SDK n’a pas tenté d’afficher automatiquement le contenu. Cependant, le SDK a toujours récupéré automatiquement le contenu éligible au rendu automatique et vous a fourni un rendu manuel si vous le souhaitez. Notez que chaque objet de proposition a son `renderAttempted` définie sur `false`.
+Lors de l’envoi de l’événement, la variable [!UICONTROL Rendu des décisions] n’étant pas cochée, le SDK n’a pas tenté d’afficher automatiquement le contenu. Cependant, le SDK a toujours récupéré automatiquement le contenu éligible au rendu automatique et vous a fourni le rendu manuel si vous le souhaitez. Notez que chaque objet de proposition a son `renderAttempted` définie sur `false`.
 
-Si vous avez plutôt coché la variable [!UICONTROL Rendu des décisions] lors de l’envoi de l’événement, le SDK aurait tenté d’effectuer le rendu de toutes les propositions éligibles pour le rendu automatique. Par conséquent, chaque objet de proposition aurait sa `renderAttempted` définie sur `true`. Dans ce cas, il n’est pas nécessaire d’effectuer le rendu manuel de ces propositions.
+Si vous avez plutôt coché la variable [!UICONTROL Rendu des décisions] lors de l’envoi de l’événement, le SDK aurait tenté d’effectuer le rendu de toutes les propositions éligibles pour le rendu automatique. Par conséquent, chaque objet de proposition aurait sa `renderAttempted` définie sur `true`. Dans ce cas, il n’est pas nécessaire de générer manuellement ces propositions.
 
 Jusqu’à présent, vous n’avez examiné que le contenu de personnalisation éligible au rendu automatique (par exemple, tout contenu créé dans le compositeur d’expérience visuelle Adobe Target). Pour récupérer un contenu de personnalisation _not_ éligible au rendu automatique, demandez le contenu en fournissant des portées de décision à l’aide de la variable [!UICONTROL Portées de décision] dans le champ [!UICONTROL Envoyer un événement] action. Une portée est une chaîne qui identifie une proposition particulière que vous souhaitez récupérer du serveur.
 
-Le [!UICONTROL Envoyer un événement] L’action se présenterait comme suit :
+La variable [!UICONTROL Envoyer un événement] L’action se présenterait comme suit :
 
 ![img.png](assets/send-event-render-unchecked-with-scopes.png)
 
-Dans cet exemple, si des propositions sont trouvées sur le serveur correspondant au `salutation` ou `discount` , elles sont renvoyées et incluses dans la variable `propositions` tableau. Gardez à l’esprit que les propositions admissibles au rendu automatique continueront à être incluses dans la variable `propositions` , quelle que soit la manière dont vous configurez la variable [!UICONTROL Rendu des décisions] ou [!UICONTROL Portées de décision] dans le champ [!UICONTROL Envoyer un événement] action. Le `propositions` dans ce cas, le tableau ressemble à l’exemple suivant :
+Dans cet exemple, si des propositions sont trouvées sur le serveur correspondant au `salutation` ou `discount` , elles sont renvoyées et incluses dans la variable `propositions` tableau. Gardez à l’esprit que les propositions admissibles au rendu automatique continueront à être incluses dans la variable `propositions` , quelle que soit la manière dont vous configurez la variable [!UICONTROL Rendu des décisions] ou [!UICONTROL Portées de décision] dans le champ [!UICONTROL Envoyer un événement] action. La variable `propositions` dans ce cas, le tableau ressemble à l’exemple suivant :
 
 ```json
 [
@@ -169,7 +169,7 @@ Dans cet exemple, si des propositions sont trouvées sur le serveur correspondan
 ]
 ```
 
-À ce stade, vous pouvez générer le contenu des propositions à votre gré. Dans cet exemple, la proposition correspondant au `discount` scope est une proposition de HTML créée à l’aide du compositeur d’expérience d’après les formulaires Adobe Target. Supposons que votre page comporte un élément avec l’identifiant de `daily-special` et souhaitez effectuer le rendu du contenu à partir du `discount` dans la `daily-special` élément . Procédez comme suit :
+À ce stade, vous pouvez générer le contenu des propositions à votre gré. Dans cet exemple, la proposition correspondant au `discount` scope est une proposition de HTML créée à l’aide du compositeur d’expérience d’après les formulaires Adobe Target. Supposons que votre page comporte un élément avec l’identifiant de `daily-special` et souhaitez effectuer le rendu du contenu à partir de la fonction `discount` dans la `daily-special` élément . Procédez comme suit :
 
 1. Extraire les propositions des `event` .
 1. Parcourez chaque proposition, en recherchant la proposition avec un périmètre de `discount`.

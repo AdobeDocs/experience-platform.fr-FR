@@ -2,10 +2,10 @@
 title: Traiter les données de consentement du client à l’aide du SDK Web de Adobe Experience Platform
 description: Découvrez comment intégrer le SDK Web de Adobe Experience Platform pour traiter les données de consentement des clients dans Adobe Experience Platform.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1349'
-ht-degree: 3%
+source-wordcount: '1311'
+ht-degree: 2%
 
 ---
 
@@ -24,15 +24,15 @@ Ce tutoriel suppose que vous avez déjà déterminé comment générer des donn�
 
 Ce guide suit le processus de configuration du SDK à l’aide de l’extension de balise dans l’interface utilisateur. Si vous ne souhaitez pas utiliser l’extension et que vous préférez incorporer directement la version autonome du SDK sur votre site, reportez-vous aux documents suivants au lieu de ce guide :
 
-* [Configurer un trains de données](../../../datastreams/overview.md)
-* [Installation du SDK](../../../edge/fundamentals/installing-the-sdk.md)
-* [Configuration du SDK pour les commandes de consentement](../../../edge/consent/supporting-consent.md)
+* [Configurer un trains de données](/help/datastreams/overview.md)
+* [Installation du SDK](/help/web-sdk/install/overview.md)
+* [Configuration du SDK pour les commandes de consentement](/help/web-sdk/commands/configure/defaultconsent.md)
 
 Les étapes d’installation de ce guide nécessitent une compréhension pratique des extensions de balise et de leur installation dans les applications web. Pour plus d’informations, reportez-vous à la documentation suivante :
 
-* [Présentation des balises](../../../tags/home.md)
-* [Guide de démarrage rapide](../../../tags/quick-start/quick-start.md)
-* [Présentation de la publication](../../../tags/ui/publishing/overview.md)
+* [Présentation des balises](/help/tags/home.md)
+* [Guide de démarrage rapide](/help/tags/quick-start/quick-start.md)
+* [Présentation de la publication](/help/tags/ui/publishing/overview.md)
 
 ## Configurer un flux de données
 
@@ -110,14 +110,7 @@ Il existe deux scénarios où `setConsent` doit être appelé sur votre site :
 
 ### `setConsent` syntaxe
 
->[!NOTE]
->
->Pour une présentation de la syntaxe commune aux commandes du SDK Platform, consultez le document sur [exécution des commandes](../../../edge/fundamentals/executing-commands.md).
-
-La variable `setConsent` La commande attend deux arguments :
-
-1. Chaîne indiquant le type de commande (ici : `"setConsent"`)
-1. Objet de payload contenant une seule propriété de type tableau : `consent`. La variable `consent` Le tableau doit contenir au moins un objet qui fournit les champs de consentement requis pour la norme Adobe.
+La variable [`setConsent`](/help/web-sdk/commands/setconsent.md) La commande attend un objet payload contenant une seule propriété de type tableau : `consent`. La variable `consent` Le tableau doit contenir au moins un objet qui fournit les champs de consentement requis pour la norme Adobe.
 
 Les champs de consentement requis pour la norme Adobe sont présentés dans l’exemple suivant : `setConsent` call:
 
@@ -139,7 +132,7 @@ alloy("setConsent", {
         }
       },
       metadata: {
-        time: "2020-10-12T15:52:25+00:00"
+        time: "YYYY-10-12T15:52:25+00:00"
       }
     }
   }]
@@ -200,7 +193,7 @@ var setConsent = function () {
 
 ## Gestion des réponses du SDK
 
-Tous [!DNL Platform SDK] Les commandes renvoient des promesses indiquant si l’appel a réussi ou échoué. Vous pouvez ensuite utiliser ces réponses pour une logique supplémentaire, telle que l’affichage des messages de confirmation au client. Voir la section sur [gestion de la réussite ou de l’échec](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) dans le guide sur l’exécution des commandes du SDK pour des exemples spécifiques.
+Tous [!DNL Platform SDK] Les commandes renvoient des promesses indiquant si l’appel a réussi ou échoué. Vous pouvez ensuite utiliser ces réponses pour une logique supplémentaire, telle que l’affichage des messages de confirmation au client. Voir [Réponses de commande](/help/web-sdk/commands/command-responses.md) pour plus d’informations.
 
 Une fois que vous avez effectué `setConsent` avec le SDK, vous pouvez utiliser la visionneuse de profils dans l’interface utilisateur de Platform pour vérifier si les données arrivent dans la banque de profils. Voir la section sur [navigation des profils par identité](../../../profile/ui/user-guide.md#browse-identity) pour plus d’informations.
 

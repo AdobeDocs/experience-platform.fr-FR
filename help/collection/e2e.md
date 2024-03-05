@@ -2,16 +2,16 @@
 title: Présentation complète de la collecte de données
 description: Présentation générale de l’envoi de données d’événement aux solutions Adobe Experience Cloud à l’aide des fonctionnalités de collecte de données Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '2621'
-ht-degree: 95%
+source-wordcount: '2616'
+ht-degree: 93%
 
 ---
 
 # Présentation complète de la collecte de données
 
-Adobe Experience Platform collecte et transfère vos données vers d’autres produits Adobe et destinations tierces. Pour envoyer des données d’événement de votre application à  Experience Platform Edge Network, il est important de comprendre ces technologies de base et de bien les configurer afin de fournir vos données aux destinations dont vous avez besoin, lorsque vous en avez besoin.
+Adobe Experience Platform collecte et transfère vos données vers d’autres produits Adobe et destinations tierces. Pour envoyer des données d’événement de votre application au réseau Edge Experience Platform, il est important de comprendre ces technologies de base et de les configurer afin de fournir vos données aux destinations dont vous avez besoin, lorsque vous en avez besoin.
 
 Ce guide fournit un tutoriel général sur la manière d’envoyer un événement par le biais du réseau Edge à l’aide des fonctionnalités de collecte de données de Platform. Plus précisément, le tutoriel décrit les étapes à suivre pour installer et configurer l’extension de balise SDK Web Adobe Experience Platform dans l’interface utilisateur de collecte de données (anciennement Adobe Experience Platform Launch).
 
@@ -113,8 +113,8 @@ Une fois que vous avez créé un schéma et un flux de données, l’étape suiv
 >
 >Cette section utilise l’interface utilisateur de collecte de données pour configurer l’extension de balise du SDK Web, mais vous pouvez également l’installer et la configurer à l’aide du code brut. Consultez les guides suivants pour plus d’informations :
 >
->* [Installation du SDK](../edge/fundamentals/installing-the-sdk.md)
->* [Configuration du SDK](../edge/fundamentals/configuring-the-sdk.md)
+>* [Installation du SDK](/help/web-sdk/install/overview.md)
+>* [Configuration du SDK](/help/web-sdk/commands/configure/overview.md)
 >
 >Notez également que même si vous souhaitez uniquement utiliser le transfert d’événement, vous devez tout de même installer et configurer le SDK comme décrit précédemment avant de configurer le transfert d’événement à une [étape ultérieure](#event-forwarding).
 

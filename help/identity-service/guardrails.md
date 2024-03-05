@@ -3,7 +3,7 @@ keywords: Experience Platform;identité;service d’identité;dépannage;garde-f
 title: Barrières de sécurité pour Identity Service
 description: Ce document fournit des informations sur l’utilisation et les limites de taux pour les données Identity Service afin de vous aider à optimiser l’utilisation du graphique d’identités.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 1576405e6f1d674a75446f887c2912c4480d0e28
+source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1526'
 ht-degree: 41%
@@ -52,11 +52,11 @@ Le tableau suivant décrit les règles à suivre pour garantir la validation de 
 
 ### Ingestion des espaces de noms d’identité
 
-Depuis le 31 mars 2023, Identity Service bloque l’ingestion des identifiants Adobe Analytics (AAID) pour les nouveaux clientes et clients. L’ingestion de cette identité s’effectue généralement par la [source Adobe Analytics](../sources/connectors/adobe-applications/analytics.md). La [source Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) est redondante, car l’ECID représente le même navigateur web. Si vous souhaitez modifier cette configuration par défaut, contactez votre équipe Adobe en charge des comptes.
+Depuis le 31 mars 2023, le service d’identités bloque l’ingestion des identifiants Adobe Analytics (AAID) pour les nouvelles clientes et les nouveaux clients. L’ingestion de cette identité s’effectue généralement par la [source Adobe Analytics](../sources/connectors/adobe-applications/analytics.md). La [source Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) est redondante, car l’ECID représente le même navigateur web. Si vous souhaitez modifier cette configuration par défaut, contactez votre équipe Adobe en charge des comptes.
 
 ## Comprendre la logique de suppression lorsqu’un graphique d’identités à la capacité est mis à jour {#deletion-logic}
 
-Lorsqu’un graphique d’identité complet est mis à jour, Identity Service supprime l’identité la plus ancienne du graphique avant d’ajouter la dernière identité. Cela permet de garantir l’exactitude et la pertinence des données d’identité. Le processus de suppression suit les deux règles suivantes :
+Lorsqu’un graphique d’identité complet est mis à jour, le service d’identités supprime l’identité la plus ancienne du graphique avant d’ajouter la dernière identité. Cela permet de garantir l’exactitude et la pertinence des données d’identité. Le processus de suppression suit les deux règles suivantes :
 
 ### Règle 1 : la priorité de suppression dépend du type d’identité d’un espace de noms
 
@@ -68,9 +68,9 @@ La priorité de suppression est comme suit :
 
 ### Règle 2 : la suppression est basée sur la date et l’heure stockées sur l’identité
 
-Chaque identité liée d’un graphique possède une date et une heure correspondantes qui lui sont propres. Lorsqu’un graphique complet est mis à jour, Identity Service supprime l’identité dont la date et l’heure sont les plus anciennes.
+Chaque identité liée d’un graphique possède une date et une heure correspondantes qui lui sont propres. Lorsqu’un graphique complet est mis à jour, le service d’identités supprime l’identité dont la date et l’heure sont les plus anciennes.
 
-Lorsqu’un graphique complet est mis à jour avec une nouvelle identité, les deux règles agissent de concert pour désigner l’ancienne identité à supprimer. Identity Service supprime d’abord l’ID de cookie le plus ancien, puis l’ID d’appareil le plus ancien et enfin l’ID/e-mail/téléphone sur l’ensemble des appareils le plus ancien.
+Lorsqu’un graphique complet est mis à jour avec une nouvelle identité, les deux règles agissent de concert pour désigner l’ancienne identité à supprimer. Le service d’identités supprime d’abord l’ID de cookie le plus ancien, puis l’ID d’appareil le plus ancien et enfin l’ID/e-mail/téléphone sur l’ensemble des appareils le plus ancien.
 
 >[!NOTE]
 >
@@ -101,7 +101,7 @@ La suppression se produit uniquement pour les données d’Identity Service et n
 Si vous souhaitez conserver vos événements authentifiés par rapport à l’identifiant CRM, il est recommandé de modifier vos identifiants principaux ECID en identifiant CRM. Lisez les documents suivants pour connaître les étapes de mise en oeuvre de cette modification :
 
 * [Configuration de la carte d’identité pour les balises Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Données d’identité dans le SDK Web Experience Platform](../edge/identity/overview.md#using-identitymap)
+* [Données d’identité dans le SDK Web Experience Platform](../web-sdk/identity/overview.md#using-identitymap)
 
 ### Exemples de scénarios
 
@@ -112,7 +112,7 @@ Si vous souhaitez conserver vos événements authentifiés par rapport à l’id
 * `t` = horodatage.
 * La valeur d’un horodatage correspond à la récence d’une identité donnée. Par exemple : `t1` représente la première identité liée (la plus ancienne) et `t51` représente l’identité liée la plus récente.
 
-Dans cet exemple, avant que le graphique de gauche ne puisse être mis à jour avec une nouvelle identité, Identity Service supprime d’abord l’identité existante avec l’horodatage le plus ancien. Cependant, comme l’identité la plus ancienne est un ID d’appareil, Identity Service ignore cette identité et cherche à supprimer un espace de noms avec un type plus élevé dans la liste de priorité de suppression, en l’occurrence `ecid-3`. Une fois la suppression de l’identité la plus ancienne avec un type de priorité de suppression plus élevé effectuée, le graphique est mis à jour avec un nouveau lien, `ecid-51`.
+Dans cet exemple, avant que le graphique de gauche ne puisse être mis à jour avec une nouvelle identité, Identity Service supprime d’abord l’identité existante avec l’horodatage le plus ancien. Cependant, comme l’identité la plus ancienne est un ID d’appareil, le service d’identités ignore cette identité et cherche à supprimer un espace de noms avec un type plus élevé dans la liste de priorité de suppression, en l’occurrence `ecid-3`. Une fois la suppression de l’identité la plus ancienne avec un type de priorité de suppression plus élevé effectuée, le graphique est mis à jour avec un nouveau lien, `ecid-51`.
 
 * Dans le rare cas où il existe deux identités avec le même horodatage et le même type d’identité, Identity Service triera les identifiants en fonction des [XID](./api/list-native-id.md) et effectuer la suppression.
 

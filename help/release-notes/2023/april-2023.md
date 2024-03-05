@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2023
 description: Les notes de mise à jour d’avril 2023 pour Adobe Experience Platform.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
 workflow-type: tm+mt
-source-wordcount: '2082'
+source-wordcount: '2038'
 ht-degree: 98%
 
 ---
@@ -43,7 +43,7 @@ Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels
 
 Pour plus dʼinformations sur les tableaux de bord, notamment sur la manière dʼoctroyer des autorisations dʼaccès et de créer des widgets personnalisés, commencez par lire la [Présentation des tableaux de bord](../../dashboards/home.md).
 
-## Préparation des données {#data-prep}
+## Préparation de données {#data-prep}
 
 La préparation des données permet aux personnes travaillant dans l’ingénierie de données de mapper, de transformer et de valider les données vers et à partir du modèle de données d’expérience (XDM).
 
@@ -67,7 +67,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | Fonctionnalité | Description |
 | --- | --- |
 | Obscurcissement des adresses IP pour les trains de données | Vous pouvez désormais définir des options d’obscurcissement d’IP au niveau d’un train de données partiel ou complet dans l’[interface utilisateur de configuration des trains de données](../../datastreams/configure.md). <br><br>Le paramètre d’obscurcissement de l’adresse IP au niveau du train de données est prioritaire par rapport à tout obscurcissement d’adresse IP configuré dans Adobe Target et Audience Manager. <br><br>Les données envoyées à Adobe Analytics ne sont pas affectées par le paramètre [!UICONTROL Obscurcissement d’adresses IP] au niveau du train de données. Adobe Analytics reçoit actuellement des adresses IP non obscurcies. Pour qu’Analytics reçoive des adresses IP obscurcies, vous devez configurer l’obscurcissement des adresses IP séparément, dans Adobe Analytics. Ce comportement sera mis à jour dans les prochaines versions.<br><br> Pour plus d’informations sur l’obscurcissement des adresses IP et pour obtenir des instructions sur la façon de le configurer, voir la [documentation sur la configuration des trains de données](../../datastreams/configure.md#advanced-options). |
-| [Remplacements de la configuration des trains de données](../../datastreams/overrides.md) | Vous pouvez désormais définir des options de configuration supplémentaires pour les trains de données, que vous utiliserez pour remplacer des paramètres spécifiques, tels que les jeux de données d’événement, les jetons de propriété Target, les conteneurs de synchronisation d’identifiants et les suites de rapports Analytics. <br><br>Le remplacement des configurations de trains de données est un processus en deux étapes : <ol><li>Tout d’abord, vous devez définir vos remplacements de configuration de trains de données sur la page de [configuration des trains de données](../../datastreams/configure.md).</li><li>Ensuite, vous devez envoyer les remplacements au réseau Edge par le biais d’une commande de SDK Web ou à l’aide de l’[extension de balise](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) du SDK Web.</li></ol> |
+| [Remplacements de la configuration des trains de données](../../datastreams/overrides.md) | Vous pouvez désormais définir des options de configuration supplémentaires pour les trains de données, que vous utiliserez pour remplacer des paramètres spécifiques, tels que les jeux de données d’événement, les jetons de propriété Target, les conteneurs de synchronisation d’identifiants et les suites de rapports Analytics. <br><br>Le remplacement des configurations de trains de données est un processus en deux étapes : <ol><li>Tout d’abord, vous devez définir vos remplacements de configuration de trains de données sur la page de [configuration des trains de données](../../datastreams/configure.md).</li><li>Ensuite, vous devez envoyer les remplacements au réseau Edge par le biais d’une commande de SDK Web ou à l’aide de l’[extension de balise](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) du SDK Web.</li></ol> |
 | Secret JWT OAuth | Le [secret JWT OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=fr) permet aux clients et clientes d’utiliser des jetons Adobe et Google Service pour prendre en charge les interactions serveur à serveur dans le transfert d’événement. |
 | Extension [!DNL Pinterest Conversions API] | L’extension de transfert d’événement [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=fr) vous permet de tirer parti des données capturées dans le réseau Edge d’Adobe Experience Platform et de les envoyer à [!DNL Pinterest] sous la forme d’événements côté serveur à l’aide de l’[!DNL Pinterest Conversions API]. |
 

@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;identité;Identité;graphiques XDM;identity service;Identity service
+keywords: Experience Platform;accueil;rubriques populaires;identité;Identité;graphiques XDM;service d’identités;Service d’identités
 solution: Experience Platform
-title: Présentation dʼIdentity Service
-description: Adobe Experience Platform Identity Service vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
+title: Présentation du service d’identités
+description: Le service d’identités d’Adobe Experience Platform vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: ed2c9824d4c2f7bf8dd6a2f8431e93fe833c899c
+source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 9%
 
 ---
 
-# Adobe Experience Platform Identity Service
+# Service d’identités d’Adobe Experience Platform
 
 Pour offrir des expériences numériques pertinentes, vous avez besoin d’une représentation complète et exacte des entités du monde réel qui constituent votre base de clients.
 
@@ -109,7 +109,7 @@ Identity Service joue un rôle essentiel dans Experience Platform. Voici quelque
 
 * [Schémas](../xdm/home.md): dans un schéma donné, les champs de schéma marqués comme identité permettent de créer des graphiques d’identités.
 * [Jeux de données](../catalog/datasets/overview.md): lorsqu’un jeu de données est activé pour ingestion dans Real-time Customer Profile, des graphiques d’identité sont générés à partir du jeu de données, étant donné que le jeu de données correspond à au moins deux champs marqués comme identité.
-* [SDK Web](../edge/home.md): le SDK Web envoie des événements d’expérience à Adobe Experience Platform et Identity Service génère un graphique lorsque plusieurs identités existent dans l’événement.
+* [SDK Web](../web-sdk/home.md): le SDK Web envoie des événements d’expérience à Adobe Experience Platform et Identity Service génère un graphique lorsque plusieurs identités existent dans l’événement.
 * [Profil client en temps réel](../profile/home.md): avant la fusion des attributs et événements d’un profil donné, Real-Time Customer Profile peut référencer le graphique d’identités. Pour plus d’informations, consultez le guide sur [compréhension de la relation entre Identity Service et Real-time Customer Profile](./identity-and-profile.md).
 * [Destinations](../destinations/home.md): les destinations peuvent envoyer des informations de profil à d’autres systèmes en fonction d’un espace de noms d’identité, comme un courrier électronique haché.
 * [Correspondance de segment](../segmentation/ui/segment-match/overview.md): la correspondance de segment correspond à deux profils sur deux environnements de test différents qui possèdent le même espace de noms d’identité et la même valeur d’identité.

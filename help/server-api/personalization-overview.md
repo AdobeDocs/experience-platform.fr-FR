@@ -2,10 +2,10 @@
 title: Vue d’ensemble de la personnalisation
 description: Découvrez comment utiliser l’API Adobe Experience Platform Edge Network Server pour récupérer du contenu personnalisé à partir des solutions de personnalisation d’Adobe.
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 11%
+source-wordcount: '729'
+ht-degree: 10%
 
 ---
 
@@ -15,7 +15,7 @@ Avec la variable [!DNL Server API], vous pouvez récupérer du contenu personnal
 
 En outre, la variable [!DNL Server API] optimise les fonctionnalités de personnalisation de la même page et de la page suivante grâce aux destinations de personnalisation Adobe Experience Platform, telles que [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) et la variable [connexion à la personnalisation personnalisée](../destinations/catalog/personalization/custom-personalization.md). Pour savoir comment configurer Experience Platform pour la personnalisation de la même page et de la page suivante, reportez-vous à la section [guide dédié](../destinations/ui/activate-edge-personalization-destinations.md).
 
-Lors de l’utilisation de l’API serveur, vous devez intégrer la réponse fournie par le moteur de personnalisation à la logique utilisée pour effectuer le rendu du contenu sur votre site. Contrairement à la variable [SDK Web](../edge/home.md), la variable [!DNL Server API] ne dispose pas d’un mécanisme pour appliquer automatiquement le contenu renvoyé par [!DNL Adobe Target] et [!DNL Offer Decisioning].
+Lors de l’utilisation de l’API serveur, vous devez intégrer la réponse fournie par le moteur de personnalisation à la logique utilisée pour effectuer le rendu du contenu sur votre site. Contrairement à la variable [SDK Web](../web-sdk/home.md), la variable [!DNL Server API] ne dispose pas d’un mécanisme pour appliquer automatiquement le contenu renvoyé par [!DNL Adobe Target] et [!DNL Offer Decisioning].
 
 ## Terminologie {#terminology}
 

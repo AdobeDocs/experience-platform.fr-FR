@@ -2,9 +2,9 @@
 title: Mises à jour de terminologie
 description: Liste complète des termes et éléments d’interface utilisateur concernés par les modifications apportées à Adobe Experience Platform Launch.
 exl-id: 93dc0abf-c80d-4a67-bf0c-3fb09ca915a2
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 5de1ec17b78c97be21c0d2afd6f0b119a6074b6f
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '127'
 ht-degree: 100%
 
 ---
@@ -21,4 +21,4 @@ Le tableau suivant décrit les termes qui ont été mis à jour dans la document
 |---|---|
 | Platform Launch (côté client) | [Balises](./home.md) |
 | Platform Launch côté serveur | [Transfert d’événement](./ui/event-forwarding/overview.md) |
-| Configurations Edge | [Flux de données](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=fr) |
+| Configurations Edge | [Flux de données](/help/datastreams/overview.md) |

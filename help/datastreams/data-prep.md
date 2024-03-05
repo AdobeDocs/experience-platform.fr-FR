@@ -2,10 +2,10 @@
 title: Préparation des données pour la collecte de données
 description: Découvrez comment mapper vos données à un schéma d’événement du modèle de données d’expérience (XDM) lors de la configuration d’un flux de données pour les SDK web et mobile d’Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: 50dcfa41905c0d94ef764278a538c0c332eb3780
+source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
 workflow-type: tm+mt
-source-wordcount: '1192'
-ht-degree: 59%
+source-wordcount: '1183'
+ht-degree: 60%
 
 ---
 
@@ -30,9 +30,9 @@ Dans deux cas d’utilisation, la préparation des données pour la collecte de 
 
 ## Envoi d’une couche de données existante vers le réseau Edge via WebSDK {#send-datalayer-via-websdk}
 
-La couche de données existante doit être envoyée à l’aide de la variable `data` de l’ `sendEvent` comme décrit dans la section [Documentation du SDK Web](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html#sending-non-xdm-data).
+La couche de données existante doit être envoyée à l’aide de la variable [`data`](/help/web-sdk/commands/sendevent/data.md) dans l’objet `sendEvent` .
 
-Si vous utilisez des balises, vous devez utiliser la variable **[!UICONTROL Données]** du champ **[!UICONTROL Envoyer un événement]** type d’action, comme décrit dans la section [Documentation sur l’extension de balise SDK Web](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/web-sdk/action-types.html).
+Si vous utilisez des balises, vous devez utiliser la variable **[!UICONTROL Données]** du champ **[!UICONTROL Envoyer un événement]** type d’action, comme décrit dans la section [Documentation sur l’extension de balise SDK Web](/help/tags/extensions/client/web-sdk/action-types.md).
 
 Le reste de ce guide se concentrera sur la manière de mapper la couche de données aux normes XDM une fois qu’elle a été envoyée par le SDK WebSDK.
 
