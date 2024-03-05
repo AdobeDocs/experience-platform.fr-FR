@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: a16f4e8d97a3ab195bd48803980b257c9ec3bfe1
 workflow-type: tm+mt
-source-wordcount: '3562'
-ht-degree: 90%
+source-wordcount: '3629'
+ht-degree: 88%
 
 ---
 
@@ -282,6 +282,8 @@ Au fur et à mesure que vous continuez à créer votre définition de segment, v
 Vous pouvez également sélectionner votre méthode d’évaluation. Si vous savez quelle méthode d’évaluation vous voulez utiliser, vous pouvez sélectionner la méthode d’évaluation souhaitée à l’aide de la liste déroulante. Si vous souhaitez savoir pour quels types d’évaluation cette définition de segment est admissible, vous pouvez sélectionner l’icône Parcourir ![icône de dossier avec une loupe](../images/ui/segment-builder/segment-evaluation-select-icon.png) pour voir la liste des méthodes d’évaluation de définition de segment disponibles.
 
 L’[!UICONTROL Éligibilité de la méthode d’évaluation] s’affiche. Cette fenêtre contextuelle affiche les méthodes d’évaluation disponibles, à savoir par lots, en flux continu et Edge. La fenêtre contextuelle affiche les méthodes d’évaluation éligibles et non éligibles. Selon les paramètres que vous avez utilisés dans votre définition de segment, il se peut qu’elle ne soit pas admissible pour certaines méthodes d’évaluation. Pour plus d’informations sur les exigences de chaque méthode d’évaluation, veuillez lire les présentations sur la [segmentation en flux continu](./streaming-segmentation.md#query-types) ou la [segmentation Edge](./edge-segmentation.md#query-types).
+
+Vous pouvez également modifier la méthode d’évaluation de la définition de segment une fois que vous avez fini de la créer. Si vous changez la méthode d’évaluation d’Edge ou de Streaming en Batch, vous obtiendrez **not** peuvent le redéfinir sur Edge ou Streaming. Le changement apporté à la méthode d’évaluation sera **only** prend effet une fois que vous avez sélectionné **[!UICONTROL Enregistrer]** dans la fenêtre contextuelle. Annuler la boîte de dialogue **keep** la méthode d’évaluation d’origine.
 
 ![La fenêtre contextuelle d’éligibilité de la méthode d’évaluation s’affiche. Elle affiche les méthodes d’évaluation éligibles et non éligibles pour la définition de segment.](../images/ui/segment-builder/select-evaluation-method.png)
 
