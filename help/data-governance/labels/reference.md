@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossaire des étiquettes dʼutilisation des données
 description: Ce document décrit toutes les étiquettes dʼutilisation des données actuellement prises en charge par Adobe Experience Platform.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: c55ad6c592be95b01cf7fe0b39635b478bc98be6
+source-git-commit: 6f3f08203242843ce703de5e4546a537dff82270
 workflow-type: tm+mt
-source-wordcount: '2250'
+source-wordcount: '2254'
 ht-degree: 96%
 
 ---
@@ -37,7 +37,7 @@ Les étiquettes Contrat « C » sont utilisées pour catégoriser des données
 | [C6](#c6) | Les données ne peuvent pas être utilisées pour le ciblage d’annonces sur site. |
 | [C7](#c7) | Les données ne peuvent pas être utilisées pour le ciblage de contenu sur site. |
 | [C8](#c8) | Les données ne peuvent pas être utilisées pour mesurer les sites web ou les applications de votre organisation. |
-| [C9](#c9) | Les données ne peuvent pas être utilisées dans les workflows Data Science. |
+| [C9](#c9) | Les données ne peuvent pas être utilisées dans les workflows de science des données. |
 | [C10](#c10) | Les données ne peuvent pas être utilisées pour lʼactivation de lʼidentité assemblée. |
 | [C11](#c11) | Les données ne peuvent pas être partagées avec les partenaires de correspondance de segment. |
 | [C12](#c12) | Les données ne peuvent pas être exportées de quelque manière que ce soit. |
