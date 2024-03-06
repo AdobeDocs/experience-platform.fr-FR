@@ -2,9 +2,9 @@
 title: Création et configuration des flux de données
 description: Découvrez comment connecter votre intégration SDK Web côté client à d’autres produits Adobe et destinations tierces.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e82da728c86225ccb089ca5a2506d7c24f18b8f8
 workflow-type: tm+mt
-source-wordcount: '2700'
+source-wordcount: '2737'
 ht-degree: 55%
 
 ---
@@ -142,6 +142,7 @@ Ce service contrôle si et comment les données sont envoyées à Adobe Analytic
 | Paramètre | Description |
 | --- | --- |
 | [!UICONTROL Identifiant de suite de rapports] | **(Obligatoire)** L’identifiant de la suite de rapports Analytics à laquelle vous souhaitez envoyer des données. Cet identifiant se trouve dans l’interface utilisateur d’Adobe Analytics sous [!UICONTROL Administration] > [!UICONTROL Suites de rapports]. Si plusieurs suites de rapports sont spécifiées, les données sont copiées dans chaque suite de rapports. |
+| [!UICONTROL Espace de noms de l’identifiant visiteur] | (Facultatif) Espace de noms que vous souhaitez utiliser pour Adobe Analytics [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=fr). Lorsque vous envoyez un événement avec une valeur spécifiée pour cet espace de noms, il sera automatiquement utilisé comme `visitorID` dans Analytics. |
 | [!UICONTROL Remplacements de suites de rapports] | Dans cette section, vous pouvez ajouter d’autres identifiants de suites de rapports que vous pouvez utiliser pour remplacer celui par défaut. |
 
 ### Paramètres d’Adobe Audience Manager {#audience-manager}
