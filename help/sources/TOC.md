@@ -5,10 +5,10 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5e31c127344aeb1a9d3d19b98c43d1502a4af623
 workflow-type: tm+mt
-source-wordcount: '1012'
-ht-degree: 96%
+source-wordcount: '1021'
+ht-degree: 95%
 
 ---
 
@@ -92,7 +92,8 @@ ht-degree: 96%
       - [Connecteur de streaming Snowflake](connectors/databases/snowflake-streaming.md)
       - [Connecteur Snowflake](connectors/databases/snowflake.md)
       - [Connecteur Teradata Vantage](connectors/databases/teradata-vantage.md)
-   - Partenaire de données {#data-partner}
+   - Partenaire de données et d’identité {#data-partner}
+      - [Importation des données de prospection Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Résolution des identités d’entreprise Merkury](connectors/data-partners/merkury.md)
    - eCommerce {#ecommerce}
       - [SAP Commerce](connectors/ecommerce/sap-commerce.md)
@@ -101,6 +102,7 @@ ht-degree: 96%
    - Système local {#local-system}
       - [Connecteur de téléchargement de fichiers locaux](connectors/local-system/local-file-upload.md)
    - Automatisation du marketing {#marketing-automation}
+      - [Courants de braquage](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
       - [Customer.io](connectors/marketing-automation/customerio-webhook.md)
       - [Connecteur HubSpot](connectors/marketing-automation/hubspot.md)
@@ -295,7 +297,7 @@ ht-degree: 96%
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
-      - Partenaire de données {#data-partner}
+      - Partenaire de données et d’identité {#data-partner}
          - [Résolution des identités d’entreprise Merkury](tutorials/ui/create/data-partners/merkury.md)
          - [Importation des données de prospection Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
       - eCommerce {#ecommerce}
@@ -305,7 +307,7 @@ ht-degree: 96%
       - Système local {#local-system}
          - [Téléchargement de fichiers locaux](tutorials/ui/create/local-system/local-file-upload.md)
       - Automatisation du marketing {#marketing-automation}
-         - [Braze](tutorials/ui/create/marketing-automation/braze.md)
+         - [Courants de braquage](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/ui/create/marketing-automation/customerio-webhook.md)
          - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)

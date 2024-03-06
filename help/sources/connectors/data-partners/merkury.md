@@ -1,9 +1,9 @@
 ---
 title: Présentation de la source de résolution d’identité Merkury Enterprise
 description: Découvrez comment connecter Merkury Enterprise Identity Resolution à Adobe Experience Platform à l’aide de l’interface utilisateur.
-last-substantial-update: 2023-12=12
+last-substantial-update: 2023-12-12T00:00:00Z
 badge: Version Beta
-source-git-commit: d862a53c7a8880e86648c05cf94e37e1a1779c9e
+source-git-commit: 2f277e835333343ea22e52e05aa84a63f1d3d8ec
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 44%

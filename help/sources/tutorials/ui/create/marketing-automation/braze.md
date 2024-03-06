@@ -3,18 +3,18 @@ title: Création d’un flux de données pour les données de Braze dans l’int
 description: Découvrez comment créer un flux de données pour votre compte Braze à l’aide de l’interface utilisateur de Adobe Experience Platform.
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Version Beta
-source-git-commit: 632cff3ee4ca82d391e9a1df0cb38d903e8a5428
+source-git-commit: bfcea2a30a0ecadcafaddf7660eef90952dcade6
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '689'
 ht-degree: 23%
 
 ---
 
-# Créer une connexion source [!DNL Braze] dans l’interface utilisateur
+# Créer une connexion source [!DNL Braze Currents] dans l’interface utilisateur
 
 >[!NOTE]
 >
->La source [!DNL Braze] est en version Beta. Veuillez lire la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La source [!DNL Braze Currents] est en version Beta. Veuillez lire la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 [!DNL Braze] alimente en temps réel les interactions centrées sur les clients entre les consommateurs et les marques. [!DNL Braze Currents] est un flux de données en temps réel d’événements d’engagement de la plateforme Braze, qui constitue l’exportation la plus robuste mais la plus granulaire de la [!DNL Braze] plateforme.
 
@@ -44,7 +44,7 @@ Si vous disposez déjà d’une [!DNL Braze] vous pouvez ignorer le reste de ce 
 
 Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous , *Automatisation du marketing* catégorie, sélectionnez **[!UICONTROL Braze]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Sous , *Automatisation du marketing* catégorie, sélectionnez **[!UICONTROL Courants de braquage]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 ![Catalogue des sources sur l’interface utilisateur Experience Platform avec la source Courants de braze sélectionnée.](../../../../images/tutorials/create/braze/catalog.png)
 
@@ -67,16 +67,16 @@ Ensuite, configurez le mappage pour vos données à l’aide de l’interface de
 
 ### Collecter les informations d’identification requises
 
-Une fois votre connexion créée, vous devez collecter les valeurs d’informations d’identification suivantes, que vous fournissez ensuite dans le tableau de bord Braser pour envoyer des données à [!DNL Platform]. Pour plus d’informations, consultez la section [!DNL Braze] [guide sur la navigation vers les courants](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+Une fois votre connexion créée, vous devez collecter les valeurs d’informations d’identification suivantes, que vous fournissez ensuite dans le tableau de bord Braze pour envoyer des données à Experience Platform. Pour plus d’informations, consultez la section [!DNL Braze] [guide sur la navigation vers les courants](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 | Champ | Description |
-| ---------- | ----------- |
-| `Client ID` | L’ID client associé à votre [!DNL Platform] source. |
-| `Client Secret` | Le secret client associé à votre [!DNL Platform] source. |
-| `Tenant ID` | L’identifiant du client associé à votre [!DNL Platform] source. |
-| `Sandbox Name` | L’environnement de test associé à votre [!DNL Platform] source. |
-| `Dataflow ID` | L’identifiant de flux de données associé à votre [!DNL Platform] source. |
-| `Streaming Endpoint` | Le point de terminaison de diffusion en continu associé à votre [!DNL Platform] source. Notez que Braze convertira automatiquement cette information vers le point de terminaison de la diffusion par lots. |
+| --- | --- |
+| Identifiant client | ID client associé à la source de votre Experience Platform. |
+| Secret client | Le secret client associé à la source de votre Experience Platform. |
+| Identifiant du client | Identifiant du tenant associé à la source de votre Experience Platform. |
+| Nom du sandbox | Environnement de test associé à la source de votre Experience Platform. |
+| Identifiant de flux de données | Identifiant de flux de données associé à la source de votre Experience Platform. |
+| Point de terminaison de diffusion en continu | Point de terminaison de diffusion en continu associé à votre source Experience Platform. **Remarque**: [!DNL Braze] convertit automatiquement ce paramètre au point de terminaison de la diffusion par lots. |
 
 ### Configurer [!DNL Braze Currents] pour diffuser des données vers votre source de données
 
