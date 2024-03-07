@@ -2,9 +2,9 @@
 title: Présentation d’Identity Namespace
 description: Découvrez les espaces de noms d’identité dans Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
+source-git-commit: 6ae3626c2e0f7e58968b5582ca1895bd03ab1c32
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1920'
 ht-degree: 22%
 
 ---
@@ -134,6 +134,10 @@ Un répertoire des espaces de noms de votre organisation s’affiche, affichant 
 Selon les données de votre organisation et les cas d’utilisation, vous pouvez avoir besoin d’espaces de noms personnalisés. Les espaces de noms personnalisés peuvent être créés à l’aide de la variable [[!DNL Identity Service]](../api/create-custom-namespace.md) API ou via l’interface utilisateur.
 
 Pour créer un espace de noms personnalisé, sélectionnez **[!UICONTROL Créer un espace de noms d’identité]**.
+
+>[!TIP]
+>
+>Les identités d’intégration sont des espaces de noms utilisés pour se connecter à d’autres systèmes. Ils ne sont pas utilisés dans la résolution de l’identité et ne sont pas utilisés pour assembler des identités. Sélectionner **[!UICONTROL Affichage des identités d’intégration]** pour mettre à jour la liste et inclure les identités d’intégration. Cependant, les identités d’intégration sont masquées par défaut, car elles sont en lecture seule et vous n’êtes pas tenu de les configurer.
 
 ![Bouton Créer un espace de noms d’identité dans l’espace de travail des identités.](../images/namespace/create-identity-namespace.png)
 
