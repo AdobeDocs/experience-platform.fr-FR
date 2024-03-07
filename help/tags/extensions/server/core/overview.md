@@ -3,10 +3,10 @@ title: Présentation de lʼextension Core Event Forwarding
 description: Découvrez lʼextension Core Event Forwarding dans Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 2ba02f94ff20281953d74b3213033e5f0a7fa111
 workflow-type: tm+mt
-source-wordcount: '1724'
-ht-degree: 100%
+source-wordcount: '1715'
+ht-degree: 99%
 
 ---
 
@@ -26,7 +26,7 @@ Cette section décrit les types de conditions disponibles dans l’extension Cor
 
 ### Custom code
 
-Spécifiez un Custom Code qui doit exister comme condition de l’événement. Utilisez l’éditeur de code intégré pour saisir le code personnalisé. Le transfert dʼévénements dans Adobe Experience Platform prend en charge ES6.
+Spécifiez un Custom Code qui doit exister comme condition de l’événement. Utilisez l’éditeur de code intégré pour saisir le code personnalisé. Le transfert d’événements dans Adobe Experience Platform prend en charge ES13.
 
 1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
 1. Saisissez le Custom Code.
@@ -155,7 +155,7 @@ Cette section décrit les types d’actions disponibles dans l’extension Core.
 
 ### Custom Code
 
-Fournissez le code qui s’exécute une fois que l’événement est déclenché et que les conditions sont évaluées. Le transfert dʼévénements dans Adobe Experience Platform prend en charge ES6.
+Fournissez le code qui s’exécute une fois que l’événement est déclenché et que les conditions sont évaluées. Le transfert d’événements dans Adobe Experience Platform prend en charge ES13.
 
 1. Nommez le code d’action.
 1. Sélectionnez **[!UICONTROL Ouvrir l’éditeur]**.
@@ -199,7 +199,7 @@ getDataElementValue('productName')
 return getDataElementValue('section').concat(getDataElementValue('pName')); 
 ```
 
-#### Path
+#### Chemin
 
 Un chemin vers une paire clé-valeur sur un événement envoyé à Adobe Experience Platform Edge Network peut être référencé à l’aide du type d’élément de données Path.
 
