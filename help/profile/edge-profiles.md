@@ -2,9 +2,9 @@
 title: Profils Edge
 description: Découvrez les profils Edge, ainsi que la terminologie associée, les régions disponibles pour les profils Edge et les services disponibles pour les profils Edge.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '827'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Le service de profil express (XPS) récupère les profils sur les différentes p
 
 ## Étapes suivantes
 
-Après avoir lu ce guide, vous devez avoir une compréhension de base des profils Edge, y compris des informations sur les régions et services disponibles pour les profils Edge. Pour plus d’informations sur Adobe Experience Edge, veuillez lire le [Présentation d’Edge Network](../web-sdk/home.md).
+Après avoir lu ce guide, vous devez avoir une compréhension de base des profils Edge, y compris des informations sur les régions et services disponibles pour les profils Edge. Pour plus d’informations sur Adobe Experience Edge, veuillez lire le [Présentation d’Edge Network](../web-sdk/home.md#edge-network).
 
 ## Annexe
 
@@ -78,3 +78,7 @@ De plus, chaque profil de périphérie comporte un attribut de schéma appelé r
 ### Comment l’expiration des données fonctionne-t-elle avec les profils Edge ?
 
 Pour les profils Edge, l’expiration des données détermine la durée pendant laquelle le profil restera sur Edge avant sa suppression. L’expiration des données est **roller**, ce qui signifie qu’à chaque accès au profil, le délai d’expiration des données est réinitialisé. Par défaut, l’expiration des données dure 14 jours.
+
+### Quelles données sont stockées sur le profil Edge ?
+
+Le profil Edge stocke les attributs de profil, les identifiants de profil, ainsi que les identifiants d’audience qualifiés. Par défaut, l’expiration des données dure 14 jours.

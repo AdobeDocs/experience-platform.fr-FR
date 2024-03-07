@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: a16f4e8d97a3ab195bd48803980b257c9ec3bfe1
+source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
 workflow-type: tm+mt
-source-wordcount: '3629'
+source-wordcount: '3633'
 ht-degree: 88%
 
 ---
@@ -103,7 +103,7 @@ Une fois les suites de rapports mappées, vous pouvez utiliser ces nouveaux cham
 >
 >Pour les audiences créées dans Platform, seules les audiences qui ont la variable **same** la stratégie de fusion s’affiche.
 
-L’onglet **[!UICONTROL Audiences]** répertorie toutes les audiences importées de sources externes, telles qu’Adobe Audience Manager, ainsi que les audiences créées dans [!DNL Experience Platform].
+La variable **[!UICONTROL Audiences]** répertorie toutes les audiences importées à partir de sources externes, telles que Adobe Audience Manager ou Customer Journey Analytics, ainsi que les audiences créées dans [!DNL Experience Platform].
 
 Dans l’onglet **[!UICONTROL Audiences]**, vous pouvez voir toutes les sources disponibles sous la forme d’un groupe de dossiers. En sélectionnant ces dossiers, vous pouvez voir les sous-dossiers et les audiences disponibles. De plus, vous pouvez sélectionner l’icône du dossier (comme indiqué dans l’image située à l’extrême droite) afin de visualiser la structure des dossiers (une coche indique le dossier dans lequel vous vous trouvez actuellement) et de parcourir facilement les dossiers en sélectionnant le nom d’un dossier dans l’arborescence.
 
