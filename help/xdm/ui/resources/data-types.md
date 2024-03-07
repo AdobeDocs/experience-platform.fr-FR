@@ -5,7 +5,7 @@ title: Création et modification de types de données à l’aide de l’interfa
 type: Tutorial
 description: Découvrez comment créer et modifier des types de données dans l’interface utilisateur de l’Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '1384'
 ht-degree: 6%
@@ -29,7 +29,7 @@ Adobe Experience Platform fournit de nombreux types de données standard qui peu
 
 Ce tutoriel décrit les étapes de création et de modification des types de données personnalisés dans l’interface utilisateur de Platform.
 
-## Conditions préalables
+## Conditions préalables {#prerequisites}
 
 Ce guide nécessite une compréhension pratique du système XDM. Voir [Présentation de XDM](../../home.md) pour une présentation du rôle de XDM dans l’écosystème Experience Platform, et la variable [principes de base de la composition des schémas](../../schema/composition.md) pour savoir comment les types de données contribuent aux schémas XDM.
 
@@ -105,7 +105,7 @@ Cela montre à quel point les types de données peuvent être flexibles pour dé
 
 Une fois que vous avez terminé d’ajouter des champs au type de données, sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer vos modifications et ajouter le type de données au [!DNL Schema Library].
 
-## Ajout du type de données à un schéma
+## Ajout du type de données à un schéma {#add-data-type}
 
 Une fois que vous avez créé un type de données, vous pouvez commencer à l’utiliser dans vos schémas. Les schémas XDM étant composés d’une classe et de zéro ou plusieurs groupes de champs, les champs fournis par un type de données ne peuvent pas être ajoutés directement à un schéma. Ils doivent être inclus dans une classe ou un groupe de champs.
 
@@ -123,7 +123,7 @@ Le canevas met à jour le type de données du champ à partir de &quot;[!UICONTR
 
 ![](../../images/ui/resources/data-types/converted.png)
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
 Ce guide explique comment créer et modifier des types de données à l’aide de l’interface utilisateur de Platform. Pour plus d’informations sur les fonctionnalités de la variable [!UICONTROL Schémas] workspace, voir [[!UICONTROL Schémas] présentation de workspace](../overview.md).
 

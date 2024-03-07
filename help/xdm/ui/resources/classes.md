@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création et modification de classes dans l’interface utilisateur
 description: Découvrez comment créer et modifier des classes dans l’interface utilisateur de l’Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 640d3ca0d3c227306436f2e653ef66fdc8ebd31c
+source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 8%
@@ -24,13 +24,13 @@ Adobe fournit plusieurs classes standard (&quot;core&quot;) Experience Data Mode
 
 Ce document présente la création, la modification et la gestion des classes personnalisées dans l’interface utilisateur de l’Experience Platform.
 
-## Conditions préalables
+## Conditions préalables {#prerequisites}
 
 Ce guide nécessite une compréhension pratique du système XDM. Voir [Présentation de XDM](../../home.md) pour une présentation du rôle de XDM dans l’écosystème Experience Platform, et la variable [principes de base de la composition des schémas](../../schema/composition.md) pour découvrir comment les classes contribuent aux schémas XDM.
 
 Bien que ce guide ne soit pas obligatoire, il est recommandé de suivre également le tutoriel sur [composition d’un schéma dans l’interface utilisateur](../../tutorials/create-schema-ui.md) pour vous familiariser avec les différentes fonctionnalités de l’éditeur de schémas.
 
-## Prise en main
+## Prise en main {#getting-started}
 
 Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche pour ouvrir la [!UICONTROL Schémas] espace de travail, puis sélectionnez **[!UICONTROL Classes]** . Une liste des classes disponibles s’affiche.
 
@@ -121,7 +121,7 @@ Si vous avez déjà créé des schémas qui utilisent cette classe, les champs n
 Vous pouvez modifier la classe du schéma à tout moment pendant le processus de création initial avant qu’il ne soit enregistré. Cela doit être fait avec précaution, car les groupes de champs ne sont compatibles qu’avec certaines classes. La modification de la classe réinitialise le canevas et tous les champs que vous avez ajoutés.
 Consultez le guide sur la [création et édition de schémas](./schemas.md#change-class) pour plus d’informations.
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
 Ce document explique comment créer et modifier des classes à l’aide de l’interface utilisateur de Platform. Pour plus d’informations sur les fonctionnalités de la variable [!UICONTROL Schémas] workspace, voir [[!UICONTROL Schémas] présentation de workspace](../overview.md).
 

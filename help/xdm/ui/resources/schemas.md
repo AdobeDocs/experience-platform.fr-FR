@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les principes de base de la création et de l’édition de schémas dans l’interface utilisateur de l’Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 5e57df3fbc22baa1c7abbb02a003ad8663aad040
+source-git-commit: 021cd2f2127dee1618335585da01ea1c5a5e9696
 workflow-type: tm+mt
 source-wordcount: '3671'
 ht-degree: 3%
@@ -21,7 +21,7 @@ Ce guide explique comment créer, modifier et gérer des schémas de modèle de 
 >
 >Pour une visite complète du processus de création de schéma, suivez le [tutoriel sur la création de schéma](../../tutorials/create-schema-ui.md) pour créer un schéma d’exemple complet et vous familiariser avec les nombreuses fonctionnalités de la variable [!DNL Schema Editor].
 
-## Conditions préalables
+## Conditions préalables {#prerequisites}
 
 Ce guide nécessite une compréhension pratique du système XDM. Voir [Présentation de XDM](../../home.md) pour une présentation du rôle de XDM dans l’écosystème Experience Platform, et la variable [principes de base de la composition des schémas](../../schema/composition.md) pour un aperçu de la création des schémas.
 
@@ -350,7 +350,7 @@ Une nouvelle boîte de dialogue s’ouvre, vous demandant de confirmer que vous 
 
 Après avoir confirmé la modification de classe, le canevas est réinitialisé et toute progression de la composition est perdue.
 
-## Étapes suivantes
+## Étapes suivantes {#next-steps}
 
 Ce document couvrait les principes de base de la création et de la modification de schémas dans l’interface utilisateur de Platform. Il est vivement recommandé de consulter la section [tutoriel sur la création de schéma](../../tutorials/create-schema-ui.md) pour un processus complet de création d’un schéma complet dans l’interface utilisateur, notamment la création de groupes de champs personnalisés et de types de données pour des cas d’utilisation uniques.
 

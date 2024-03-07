@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestion des tâches liées à la confidentialité dans l’interface utilisateur du Privacy Service
 description: Découvrez comment utiliser l’interface utilisateur du Privacy Service pour coordonner et surveiller les demandes d’accès à des informations personnelles dans différentes applications Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: 93d9e5965e0f5556ff2b584c8b66bd7a7be15d23
 workflow-type: tm+mt
-source-wordcount: '1458'
-ht-degree: 59%
+source-wordcount: '1511'
+ht-degree: 57%
 
 ---
 
@@ -143,6 +143,8 @@ La boîte de dialogue **[!UICONTROL Créer une requête]** s’ouvre et affiche 
 <img src="../images/user-guide/request-builder.png" width="500" /><br/>
 
 Sélectionnez la variable **[!UICONTROL Type de tâche]** de la requête (&quot;Supprimer&quot; ou &quot;Accéder&quot;) et d’un ou plusieurs produits disponibles dans la liste.
+
+Privacy Service prend en charge deux types de requêtes de tâche pour les données personnelles : [!UICONTROL Accès] (lecture) et/ou [!UICONTROL Supprimer]. Vous pouvez soit envoyer une demande de réception de toutes les informations contenues dans le produit qui se rapportent au sujet de l&#39;enquête, soit demander la suppression de toutes les informations relatives au sujet de l&#39;enquête.
 
 <img src="../images/user-guide/type-and-products.png" width="500" /><br/>
 

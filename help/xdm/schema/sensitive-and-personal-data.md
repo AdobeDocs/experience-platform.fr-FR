@@ -2,9 +2,9 @@
 title: Informations sensibles et personnelles dans XDM
 description: Découvrez les principales considérations relatives aux informations personnelles sensibles (SPI) et aux informations d’identification personnelle (PII) dans le modèle de données d’expérience (XDM).
 exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
-source-git-commit: 9785b252b7c9cb3513858476753b6b4f71277ed7
+source-git-commit: 302dca9a9f834dba1fd3fdac15284ea4e2fba282
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '567'
 ht-degree: 2%
 
 ---
@@ -45,6 +45,10 @@ Platform vous permet de définir vos propres groupes de champs et types de donn�
 * Remove fields from standard field groups pre-ingestion
 * Deprecate fields post-ingestion
 -->
+
+>[!IMPORTANT]
+>
+>SPI et PII ne doivent être enregistrés que dans la variable [XDM Individual Profile](../classes/individual-profile.md) et [XDM ExperienceEvent](../classes/experienceevent.md) classes. En tant que bonne pratique à des fins de suppression des données, de confidentialité et de gouvernance, n’enregistrez pas SPI et PII dans aucune autre classe XDM personnalisée ou standard.
 
 ## Étapes suivantes
 
