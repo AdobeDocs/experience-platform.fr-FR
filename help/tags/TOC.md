@@ -6,9 +6,9 @@ user-guide-description: Découvrez comment déployer et gérer des balises d’a
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 091aee1a5bb81d86925cbcde7c2ae3b354a3aebe
+source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '761'
 ht-degree: 98%
 
 ---
@@ -196,7 +196,6 @@ ht-degree: 98%
       * [SDI Survey](https://exchange.adobe.com/apps/ec/102991)
       * [SDI Toolkit](https://exchange.adobe.com/apps/ec/101460)
       * [SessionCam](https://exchange.adobe.com/apps/ec/100517)
-      * [Événement Modifier la vue SPA](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.105867.html)
       * [Storage Spanner](https://exchange.adobe.com/apps/ec/102990)
       * [TAGS by Loop Horizon](https://exchange.adobe.com/apps/ec/106092)
       * [Tealium Collect](https://exchange.adobe.com/apps/ec/104217)
@@ -222,7 +221,6 @@ ht-degree: 98%
       * [!DNL Braze] {#braze}
          * [Aperçu](./extensions/server/braze/overview.md)
       * [Connecteur cloud pour Google Analytics](https://exchange.adobe.com/apps/ec/106542)
-      * [Connecteur cloud pour Google Analytics](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)
       * Base {#core}
          * [Aperçu](./extensions/server/core/overview.md)
       * [API d’événement Epsilon](https://exchange.adobe.com/apps/ec/109127)
