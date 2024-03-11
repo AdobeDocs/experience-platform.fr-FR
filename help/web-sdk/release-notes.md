@@ -3,10 +3,10 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: cf6df4d005486aa297dcced7c8811f87f5e988c2
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '1723'
-ht-degree: 92%
+source-wordcount: '1725'
+ht-degree: 90%
 
 ---
 
@@ -213,8 +213,8 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 ## Version 2.2.0 - Octobre 2020
 
-* Correction de bug : l’objet  « Opt-in » empêchait « Alloy » d’effectuer des appels lorsque `idMigrationEnabled` était défini sur `true`.
-* Correction de bug : sensibilisation d’Alloy aux requêtes qui doivent renvoyer des offres de personnalisation afin d’éviter des problèmes de scintillement.
+* Bug Fix : l’objet Opt-in empêchait le SDK web d’effectuer des appels lorsque `idMigrationEnabled` is `true`.
+* Bug Fix : faites prendre conscience au SDK Web des requêtes qui doivent renvoyer des offres de personnalisation pour éviter un problème de scintillement.
 
 ## Version 2.1.0 - Août 2020
 
@@ -222,5 +222,5 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 * Prise en charge de la norme de consentement IAB 2.0.
 * Prise en charge de la transmission d’identifiants supplémentaires dans la commande `setConsent`.
 * Prise en charge du remplacement de l’`datasetId` dans la commande `sendEvent`.
-* Prise en charge des contrôles Alloy ([En savoir plus](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)).
+* Hooks de surveillance de l’assistance ([En savoir plus](https://github.com/adobe/alloy/wiki/Monitoring-Hooks))
 * Transmission de `environment: browser` dans les données contextuelles des détails d’implémentation.

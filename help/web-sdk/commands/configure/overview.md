@@ -1,9 +1,10 @@
 ---
 title: Configuration du SDK Web de Adobe Experience Platform
 description: Utilisez la commande configure pour définir les paramètres requis lors de l’utilisation du SDK Web.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 05ba98ae-c004-4b7b-b55b-38290ca62cfa
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '205'
 ht-degree: 0%
 
 ---
@@ -12,20 +13,25 @@ ht-degree: 0%
 
 La configuration du SDK Web s’effectue à l’aide de la fonction `configure` . La configuration du SDK Web est une étape essentielle et requise qui doit se produire chaque fois que la bibliothèque ou l’extension de balise est utilisée.
 
-## Paramètres de configuration à l’aide de l’extension de balise SDK Web
+## Configuration du SDK Web à l’aide de l’extension de balise {#configure-tag-extension}
 
-Accédez au [page de configuration de l’extension de balise](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Suivez les étapes ci-dessous pour configurer le SDK Web via l’extension de balise.
 
 1. Connexion à [experience.adobe.com](https://experience.adobe.com) à l’aide de vos informations d’identification Adobe ID.
 1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
 1. Accédez à **[!UICONTROL Extensions]**, puis cliquez sur **[!UICONTROL Configurer]** sur le [!UICONTROL SDK Web Adobe Experience Platform] carte.
+1. Accédez au [Page de configuration de l’extension de balise SDK Web](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) pour obtenir des informations détaillées sur toutes les options de configuration.
 
 Ces paramètres de configuration sont définis chaque fois que vous utilisez l’extension pour envoyer des données à Adobe.
 
-## Paramètres de configuration à l’aide de la bibliothèque JavaScript du SDK Web
+## Configuration du SDK Web à l’aide de la bibliothèque JavaScript {#configure-js}
 
-Exécutez la variable `configure` . Cette commande est nécessaire avant de pouvoir appeler toute autre commande du SDK Web, telle que [`sendEvent`](../sendevent/overview.md). Propriétés [`edgeConfigId`](edgeconfigid.md) et [`orgId`](orgid.md) sont obligatoires. Toutes les autres propriétés sont facultatives, selon les exigences de mise en oeuvre de votre entreprise.
+Exécutez la variable `configure` . Cette commande est nécessaire avant de pouvoir appeler toute autre commande du SDK Web, telle que [`sendEvent`](../sendevent/overview.md).
+
+La variable [`edgeConfigId`](edgeconfigid.md) et [`orgId`](orgid.md) Les propriétés sont requises. Toutes les autres propriétés sont facultatives, selon les exigences de mise en oeuvre de votre entreprise.
+
+Consultez la table des matières de ce guide d’utilisation pour plus d’informations sur chacune des commandes prises en charge.
 
 ```js
 alloy("configure", {

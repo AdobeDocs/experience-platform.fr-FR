@@ -1,17 +1,17 @@
 ---
 title: Installation du SDK Web à l’aide de la bibliothèque JavaScript
 description: Référencez la bibliothèque SDK Web à l’aide d’un fichier CDN autonome.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
 
-
 # Installation du SDK Web à l’aide de la bibliothèque JavaScript
 
-Une option pour installer le SDK Web consiste à référencer la bibliothèque JavaScript hébergée sur un CDN. Vous pouvez référencer la bibliothèque directement ou la télécharger et l’héberger sur votre propre infrastructure. Il est disponible dans des formats réduits et complets.
+Une alternative à l’installation du SDK Web sans [utilisation de l’extension de balise](extension.md) est pour référencer la bibliothèque JavaScript hébergée sur un CDN. Vous pouvez référencer la bibliothèque directement ou la télécharger et l’héberger sur votre propre infrastructure. Il est disponible dans des formats réduits et complets.
 
 La bibliothèque SDK Web est disponible à l’aide de la structure d’URL suivante :
 

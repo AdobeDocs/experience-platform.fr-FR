@@ -1,13 +1,13 @@
 ---
 title: Installation du SDK Web à l’aide de l’extension de balise
 description: Référencez la bibliothèque SDK Web à l’aide de la collecte de données Adobe Experience Cloud.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: ba8348c9-f642-4230-9f7f-4496d4154d83
+source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
-
 
 # Installation du SDK Web à l’aide de l’extension de balise
 
@@ -23,6 +23,8 @@ Une fois que vous avez rencontré le [conditions préalables](overview.md), vous
 1. Accédez à **[!UICONTROL Extensions]**, puis sélectionnez la variable **[!UICONTROL Catalogue]** .
 1. Recherchez et installez le **[!UICONTROL SDK Web Adobe Experience Platform]** extension .
 1. Sélectionnez l’environnement de test et le flux de données appropriés pour chaque environnement, puis cliquez sur **[!UICONTROL Enregistrer]**.
+
+Consultez la documentation sur la manière de [configuration de l’extension de balise SDK Web](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) pour plus d’informations.
 
 ## Publier le code de balise dans le développement
 
