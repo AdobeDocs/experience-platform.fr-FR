@@ -3,10 +3,10 @@ title: Connexion à Google Cloud Storage
 description: Découvrez comment vous connecter à Google Cloud Storage et activer des audiences ou exporter des jeux de données.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1105'
-ht-degree: 68%
+source-wordcount: '1199'
+ht-degree: 63%
 
 ---
 
@@ -42,6 +42,19 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 | Fréquence des exportations | **[!UICONTROL Lot]** | Les destinations par lots exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
+
+## Exportation de jeux de données {#export-datasets}
+
+Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez les tutoriels :
+
+* Comment [exportation de jeux de données à l’aide de l’interface utilisateur de Platform](/help/destinations/ui/export-datasets.md).
+* Comment [exporter des jeux de données par programmation à l’aide de l’API Flow Service](/help/destinations/api/export-datasets.md).
+
+## Format de fichier des données exportées {#file-format}
+
+Lors de l’exportation *données d&#39;audience*, Platform crée une `.csv`, `parquet`, ou `.json` dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Formats de fichiers pris en charge pour l’exportation](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) dans le tutoriel sur l’activation de l’audience.
+
+Lors de l’exportation *jeux de données*, Platform crée une `.parquet` ou `.json` dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [vérification de l’exportation réussie du jeu de données](../../ui/export-datasets.md#verify) dans le tutoriel sur l’exportation des jeux de données .
 
 ## Configuration requise pour connecter votre compte [!DNL Google Cloud Storage] {#prerequisites}
 
@@ -119,13 +132,10 @@ Dans l’étape **[!UICONTROL Planifier]**, vous pouvez [configurer le planning 
 
 Dans l’étape **[!UICONTROL Mappage]**, vous pouvez sélectionner les champs d’attribut et d’identité à exporter pour vos profils. Vous pouvez également choisir de remplacer les en-têtes du fichier exporté par un nom convivial de votre choix. Pour plus d’informations, voir l’[étape de mappage](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) dans le tutoriel Activer l’interface utilisateur des destinations par lot.
 
-## Exportation de jeux de données {#export-datasets}
-
-Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez les tutoriels :
-
-* Comment [exportation de jeux de données à l’aide de l’interface utilisateur de Platform](/help/destinations/ui/export-datasets.md).
-* Comment [exporter des jeux de données par programmation à l’aide de l’API Flow Service](/help/destinations/api/export-datasets.md).
-
 ## Valider l’exportation des données avec succès {#exported-data}
 
 Pour contrôler que l’exportation des données a bien réussi, vérifiez votre compartiment [!DNL Google Cloud Storage] et assurez-vous que les fichiers exportés contiennent les populations de profils attendues.
+
+## Liste autorisée d’adresses IP {#ip-address-allow-list}
+
+Voir [LISTE AUTORISÉE d’adresses IP](ip-address-allow-list.md) article si vous devez ajouter des adresses IP d’Adobe à une liste autorisée.

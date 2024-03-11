@@ -3,10 +3,10 @@ title: Connexion Azure Data Lake Storage Gen2
 description: Découvrez comment vous connecter à Azure Data Lake Storage Gen2 pour activer les audiences et exporter des jeux de données.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: d265a02d-c901-4b39-8714-fe9ecdbb5bb1
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 60%
+source-wordcount: '954'
+ht-degree: 55%
 
 ---
 
@@ -43,7 +43,18 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 {style="table-layout:auto"}
 
-## Conditions préalables {#prerequisites}
+## Exportation de jeux de données {#export-datasets}
+
+Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez les tutoriels :
+
+* Comment [exportation de jeux de données à l’aide de l’interface utilisateur de Platform](/help/destinations/ui/export-datasets.md).
+* Comment [exporter des jeux de données par programmation à l’aide de l’API Flow Service](/help/destinations/api/export-datasets.md).
+
+## Format de fichier des données exportées {#file-format}
+
+Lors de l’exportation *données d&#39;audience*, Platform crée une `.csv`, `parquet`, ou `.json` dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Formats de fichiers pris en charge pour l’exportation](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) dans le tutoriel sur l’activation de l’audience.
+
+Lors de l’exportation *jeux de données*, Platform crée une `.parquet` ou `.json` dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [vérification de l’exportation réussie du jeu de données](../../ui/export-datasets.md#verify) dans le tutoriel sur l’exportation des jeux de données .
 
 ## Se connecter à la destination {#connect}
 
@@ -103,13 +114,6 @@ Dans l’étape **[!UICONTROL Planifier]**, vous pouvez [configurer le planning 
 ### Mapper les attributs et les identités {#map}
 
 Dans l’étape **[!UICONTROL Mappage]**, vous pouvez sélectionner les champs d’attribut et d’identité à exporter pour vos profils. Vous pouvez également choisir de remplacer les en-têtes du fichier exporté par un nom convivial de votre choix. Pour plus d’informations, voir l’[étape de mappage](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) dans le tutoriel Activer l’interface utilisateur des destinations par lot.
-
-## Exportation de jeux de données {#export-datasets}
-
-Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez les tutoriels :
-
-* Comment [exportation de jeux de données à l’aide de l’interface utilisateur de Platform](/help/destinations/ui/export-datasets.md).
-* Comment [exporter des jeux de données par programmation à l’aide de l’API Flow Service](/help/destinations/api/export-datasets.md).
 
 ## Valider l’exportation des données avec succès {#exported-data}
 

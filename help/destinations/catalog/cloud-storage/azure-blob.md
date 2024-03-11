@@ -2,10 +2,10 @@
 title: Connexion Azure Blob
 description: Créez une connexion sortante active vers votre stockage Blob Azure afin d’exporter régulièrement des fichiers de données CSV à partir d’Adobe Experience Platform.
 exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1048'
-ht-degree: 59%
+source-wordcount: '1089'
+ht-degree: 55%
 
 ---
 
@@ -62,11 +62,18 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 {style="table-layout:auto"}
 
-## Formats de fichiers pris en charge {#file-formats}
+## Exportation de jeux de données {#export-datasets}
 
-[!DNL Experience Platform] prend en charge le format de fichier suivant à exporter vers [!DNL Azure Blob] :
+Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez les tutoriels :
 
-* Valeurs séparées par des virgules (CSV) : la prise en charge des fichiers de données exportés est actuellement limitée aux valeurs séparées par des virgules.
+* Comment [exportation de jeux de données à l’aide de l’interface utilisateur de Platform](/help/destinations/ui/export-datasets.md).
+* Comment [exporter des jeux de données par programmation à l’aide de l’API Flow Service](/help/destinations/api/export-datasets.md).
+
+## Format de fichier des données exportées {#file-format}
+
+Lors de l’exportation *données d&#39;audience*, Platform crée une `.csv`, `parquet`, ou `.json` dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Formats de fichiers pris en charge pour l’exportation](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) dans le tutoriel sur l’activation de l’audience.
+
+Lors de l’exportation *jeux de données*, Platform crée une `.parquet` ou `.json` dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [vérification de l’exportation réussie du jeu de données](../../ui/export-datasets.md#verify) dans le tutoriel sur l’exportation des jeux de données .
 
 ## Se connecter à la destination {#connect}
 
@@ -123,13 +130,6 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 Voir [Activation des données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
-## Exportation de jeux de données {#export-datasets}
+## Valider l’exportation des données avec succès {#exported-data}
 
-Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez les tutoriels :
-
-* Comment [exportation de jeux de données à l’aide de l’interface utilisateur de Platform](/help/destinations/ui/export-datasets.md).
-* Comment [exporter des jeux de données par programmation à l’aide de l’API Flow Service](/help/destinations/api/export-datasets.md).
-
-## Données exportées {#exported-data}
-
-Pour les destinations [!DNL Azure Blob Storage], [!DNL Platform] crée un fichier `.csv` à l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Activation des données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md) dans le tutoriel sur l’activation de l’audience.
+Pour vérifier si l’exportation des données a réussi, vérifiez le stockage [!DNL Azure Blob] et assurez-vous que les fichiers exportés contiennent les populations de profils attendues.

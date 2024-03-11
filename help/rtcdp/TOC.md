@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Guide de Real-Time Customer Data Platform
 user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
 role: Admin
-source-git-commit: 267857cfdcc75310c7e490fdbae3494ecd5a8fb7
+source-git-commit: 472852b383f117281fd235ad39dedba401df7679
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 69%
@@ -76,14 +76,14 @@ ht-degree: 69%
    * [Sources dans l’édition B2B de Real-Time CDP](sources/b2b.md)
 * Cas d’utilisation {#use-cases}
    * [Présentation des exemples de cas d’utilisation](/help/rtcdp/use-case-guides/overview.md)
-   * Personnalisation, statistiques et engagement {#personalization-insights-engagement}
-      * [Réengager intelligemment vos clients](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
-      * [Réengager intelligemment vos clients : exemples Luma](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
    * Acquisition client {#customer-acquisition}
       * [Interagir et acquérir de nouveaux clients sans dépendre de cookies tiers](/help/rtcdp/partner-data/prospecting.md)
       * [Personnaliser les expériences sur site pour les visiteurs inconnus à l’aide de la reconnaissance des visiteurs avec l’aide de partenaires](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Reciblage hors site des utilisateurs non authentifiés](./partner-data/offsite-retargeting.md)
    * Enrichissement de profil {#profile-enrichment}
       * [Complémenter les profils propriétaires avec des attributs fournis par le partenaire](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
+   * Personnalisation, statistiques et engagement {#personalization-insights-engagement}
+      * [Réengager intelligemment vos clients](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
+      * [Réengager intelligemment vos clients : exemples Luma](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
 * [Notes de mise à jour d’Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
 * [Glossaire Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/landing/glossary.html)

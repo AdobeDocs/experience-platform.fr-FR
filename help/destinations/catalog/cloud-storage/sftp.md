@@ -2,10 +2,10 @@
 title: Connexion SFTP
 description: Créez une connexion sortante active à votre serveur SFTP afin d’exporter périodiquement des fichiers de données délimités à partir d’Adobe Experience Platform.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 8771aa0df001e8ef81d4ad712f4d1f9661b405b2
 workflow-type: tm+mt
-source-wordcount: '1025'
-ht-degree: 49%
+source-wordcount: '1091'
+ht-degree: 45%
 
 ---
 
@@ -56,6 +56,19 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 {style="table-layout:auto"}
 
 ![Type d’exportation SFTP basé sur les profils mis en surbrillance dans le catalogue des destinations.](../../assets/catalog/cloud-storage/sftp/catalog.png)
+
+## Exportation de jeux de données {#export-datasets}
+
+Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez les tutoriels :
+
+* Comment [exportation de jeux de données à l’aide de l’interface utilisateur de Platform](/help/destinations/ui/export-datasets.md).
+* Comment [exporter des jeux de données par programmation à l’aide de l’API Flow Service](/help/destinations/api/export-datasets.md).
+
+## Format de fichier des données exportées {#file-format}
+
+Lors de l’exportation *données d&#39;audience*, Platform crée une `.csv`, `parquet`, ou `.json` dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Formats de fichiers pris en charge pour l’exportation](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) dans le tutoriel sur l’activation de l’audience.
+
+Lors de l’exportation *jeux de données*, Platform crée une `.parquet` ou `.json` dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [vérification de l’exportation réussie du jeu de données](../../ui/export-datasets.md#verify) dans le tutoriel sur l’exportation des jeux de données .
 
 ## Se connecter à la destination {#connect}
 
@@ -129,17 +142,10 @@ Après avoir établi la connexion d’authentification à l’emplacement SFTP, 
 
 Voir [Activation des données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
-## Exportation de jeux de données {#export-datasets}
+## Valider l’exportation des données avec succès {#exported-data}
 
-Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez les tutoriels :
-
-* Comment [exportation de jeux de données à l’aide de l’interface utilisateur de Platform](/help/destinations/ui/export-datasets.md).
-* Comment [exporter des jeux de données par programmation à l’aide de l’API Flow Service](/help/destinations/api/export-datasets.md).
-
-## Données exportées {#exported-data}
-
-Pour les destinations [!DNL SFTP], Platform crée un fichier `.csv` à l’emplacement de stockage que vous avez indiqué. Pour plus d’informations sur les fichiers, voir [Activation des données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md) dans le tutoriel sur l’activation de l’audience.
+Pour vérifier si les données ont bien été exportées, vérifiez votre stockage SFTP et assurez-vous que les fichiers exportés contiennent les populations de profils attendues.
 
 ## Liste autorisée d’adresses IP {#ip-address-allow-list}
 
-Voir [LISTE AUTORISÉE des adresses IP pour les destinations SFTP](ip-address-allow-list.md) si vous devez ajouter des adresses IP d’Adobe à une liste autorisée.
+Voir [LISTE AUTORISÉE d’adresses IP](ip-address-allow-list.md) article si vous devez ajouter des adresses IP d’Adobe à une liste autorisée.
