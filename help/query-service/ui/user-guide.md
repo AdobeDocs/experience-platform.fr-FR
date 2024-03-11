@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de Query Editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 29a33dd5823ac425cc567e948a5def948aedb44e
+source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
 workflow-type: tm+mt
-source-wordcount: '2576'
-ht-degree: 46%
+source-wordcount: '2647'
+ht-degree: 44%
 
 ---
 
@@ -255,6 +255,10 @@ La console fournit des informations sur le statut et le fonctionnement de [!DNL 
 Une fois une requête terminée, les résultats sont affichés dans l’onglet **[!UICONTROL Résultats]**, en regard de l’onglet **[!UICONTROL Console]**. Cette vue affiche la sortie tabulaire de votre requête, qui affiche entre 50 et 500 lignes de résultats selon le choix que vous avez effectué. [comptage des résultats](#result-count). Il vous permet de vérifier que votre requête produit la sortie attendue. Pour générer un jeu de données avec votre requête, supprimez les limites sur les lignes renvoyées, puis exécutez la requête avec `CREATE TABLE tablename AS SELECT` pour générer un jeu de données avec la sortie. Consultez le [tutoriel sur la génération de jeux de données](./create-datasets.md) pour apprendre à générer un jeu de données à partir des résultats de requête dans [!DNL Query Editor].
 
 ![L’onglet Résultats de la console du Query Editor affiche les résultats de l’exécution d’une requête.](../images/ui/query-editor/query-results.png)
+
+## Cas d’utilisation {#use-cases}
+
+Query Service fournit des solutions à divers cas d’utilisation dans différents secteurs d’activité et scénarios commerciaux. Ces exemples pratiques montrent la flexibilité et l&#39;impact du service pour répondre à divers besoins. À [Découvrez comment Query Service peut répondre à vos besoins spécifiques.](../use-cases/overview.md), explorez la collection complète de documents de cas d’utilisation. Découvrez comment utiliser Query Service pour fournir des insights et des solutions pour une efficacité opérationnelle et une réussite commerciale améliorées.
 
 ## Exécuter des requêtes avec le tutoriel vidéo sur [!DNL Query Service] {#query-tutorial-video}
 

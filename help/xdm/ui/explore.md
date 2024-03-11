@@ -5,9 +5,9 @@ title: Exploration des ressources de schéma dans l’interface utilisateur
 description: Découvrez comment explorer les schémas, classes, groupes de champs de schéma et types de données existants dans l’interface utilisateur de l’Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '1078'
 ht-degree: 0%
 
 ---
@@ -53,6 +53,14 @@ Lorsque vous sélectionnez une ressource, sa structure s’ouvre dans la zone de
 Tous les champs de type objet contenant des sous-propriétés sont réduits par défaut lorsqu’ils apparaissent pour la première fois dans la zone de travail. Pour afficher les sous-propriétés d’un champ, sélectionnez l’icône en regard de son nom.
 
 ![](../images/ui/explore/field-expand.png)
+
+### Indicateur de classe standard et de groupe de champs {#standard-class-and-field-group-indicator}
+
+Dans l’éditeur de schémas, les classes standard (générées par un Adobe) et les groupes de champs sont indiqués par l’icône de cadenas (![Icône de cadenas.](../images/ui/explore/padlock-icon.png). Le cadenas s’affiche dans le rail de gauche en regard du nom de la classe ou du groupe de champs, ainsi qu’en regard de tout champ du diagramme de schéma qui fait partie d’une ressource générée par le système.
+
+![L’éditeur de schéma avec l’icône de cadenas mise en surbrillance](../images/ui/explore/schema-editor-padlock-icon.png)
+
+Voir [Ajout de champs personnalisés aux groupes de champs standard](./resources/schemas.md) documentation à titre indicatif. Vous ne pouvez pas modifier une classe standard.
 
 ### Champs générés par le système {#system-fields}
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les principes de base de la création et de l’édition de schémas dans l’interface utilisateur de l’Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 021cd2f2127dee1618335585da01ea1c5a5e9696
+source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
 workflow-type: tm+mt
-source-wordcount: '3671'
+source-wordcount: '3732'
 ht-degree: 3%
 
 ---
@@ -126,6 +126,12 @@ Une fois les groupes de champs sélectionnés, sélectionnez **[!UICONTROL Ajout
 La variable [!DNL Schema Editor] réapparaît avec les champs fournis par le groupe de champs représentés dans la zone de travail.
 
 ![La variable [!DNL Schema Editor] avec un exemple de schéma affiché.](../../images/ui/resources/schemas/field-groups-added.png)
+
+>[!NOTE]
+>
+>Dans l’éditeur de schémas, les classes standard (générées par un Adobe) et les groupes de champs sont indiqués par l’icône de cadenas (![Icône de cadenas.](../../images/ui/explore/padlock-icon.png). Le cadenas s’affiche dans le rail de gauche en regard du nom de la classe ou du groupe de champs, ainsi qu’en regard de tout champ du diagramme de schéma qui fait partie d’une ressource générée par le système.
+>
+>![L’éditeur de schéma avec l’icône de cadenas mise en surbrillance](../../images/ui/explore/schema-editor-padlock-icon.png)
 
 Après avoir ajouté un groupe de champs à un schéma, vous pouvez éventuellement [supprimer des champs existants](#remove-fields) ou [ajout de nouveaux champs personnalisés](#add-fields) à ces groupes, en fonction de vos besoins.
 
