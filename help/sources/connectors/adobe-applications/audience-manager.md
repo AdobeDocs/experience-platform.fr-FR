@@ -4,14 +4,21 @@ solution: Experience Platform
 title: Présentation de la source d’Audience Manager
 description: La source Adobe Audience Manager diffuse les données propriétaires collectées dans Audience Manager vers Adobe Experience Platform.
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 8ef9fedcc77f39707ef5191988a5b7360e1118cc
 workflow-type: tm+mt
-source-wordcount: '1059'
-ht-degree: 22%
+source-wordcount: '1127'
+ht-degree: 17%
 
 ---
 
 # Source Audience Manager
+
+>[!IMPORTANT]
+>
+>Lors de la configuration initiale, la source Adobe Audience Manager renvoie un message d’erreur qui explique qu’un espace de noms d’identité avec un `namespaceCode={VALUE}` n’existe pas. **Remarque**: en arrière-plan, `namespaceCode` est utilisé pour faire référence au symbole d’identité. Pour terminer votre intégration, vous devez :
+>
+>- [Création d’un espace de noms personnalisé dans Identity Service](../../../identity-service/features/namespaces.md#create-custom-namespaces) avec le symbole d’identité spécifié (`VALUE`) .
+>- ingérez à nouveau vos données.
 
 La source Adobe Audience Manager diffuse les données propriétaires collectées dans Adobe Audience Manager pour activation dans Adobe Experience Platform. La source d’Audience Manager ingère deux types de données vers Platform :
 
@@ -42,7 +49,7 @@ Vous trouverez ci-dessous des exemples de structure Audience Manager mappés à
 
 ![](images/aam-profile-xdm-for-profile-data.png)
 
-Pour plus d’informations sur la façon dont les champs sont mappés d’Audience Manager à XDM, consultez la documentation sur [Champs de mappage des Audiences Manager](./mapping/audience-manager.md).
+Pour plus d’informations sur le mappage des champs d’Audience Manager à XDM, consultez la documentation sur [Champs de mappage des Audiences Manager](./mapping/audience-manager.md).
 
 ## Gestion des données dans Platform
 
@@ -59,17 +66,17 @@ Par défaut, les jeux de données d’Audience Manager sont désactivés pour Pr
 | Nom du jeu de données | Description | Classe |
 | --- | --- | --- |
 | AAM temps réel | Ce jeu de données contient les données collectées à la suite d’accès directs aux points d’entrée DCS d’Audience Manager et aux mappages d’identités pour les profils Audience Manager. Conservez ce jeu de données activé pour l’ingestion dans Profile. | Événement d’expérience |
-| AAM mises à jour de profil en temps réel | Ce jeu de données permet le ciblage en temps réel des caractéristiques et des segments d’Audience Manager. Il contient des informations pour le routage régional, les caractéristiques et l’adhésion aux segments Edge. Conservez ce jeu de données activé pour l’ingestion dans Profile. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer la variable **[!UICONTROL Profil]** pour ingérer directement les données dans Profile. | Enregistrement |
-| Données de périphériques AAM | Les données de l’appareil avec leurs ECID et les réalisations de segment correspondantes rassemblées dans Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer la variable **[!UICONTROL Profil]** pour ingérer directement les données dans Profile. | Enregistrement |
+| AAM mises à jour de profil en temps réel | Ce jeu de données permet le ciblage en temps réel des caractéristiques et des segments d’Audience Manager. Il contient des informations pour le routage régional, les caractéristiques et l’adhésion aux segments Edge. Conservez ce jeu de données activé pour l’ingestion de profils. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer la variable **[!UICONTROL Profil]** pour ingérer directement les données dans Profile. | Enregistrement |
+| Données de périphériques AAM | Données de l’appareil avec des ECID et réalisations de segment correspondantes agrégées dans l’Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer la variable **[!UICONTROL Profil]** pour ingérer directement les données dans Profile. | Enregistrement |
 | AAM des données de profil de périphérique | Utilisé pour les diagnostics de connecteur d’Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer la variable **[!UICONTROL Profil]** pour ingérer directement les données dans Profile. | Enregistrement |
-| AAM Profils authentifiés | Ce jeu de données contient des profils authentifiés Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer la variable **[!UICONTROL Profil]** pour ingérer directement les données dans Profile. | Enregistrement |
-| AAM métadonnées des profils authentifiés | Utilisé pour les diagnostics de connecteur d’Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer la variable **[!UICONTROL Profil]** pour ingérer directement les données dans Profile. | Enregistrement |
-| Renvoi de données de périphériques AAM | Jeu de données d’importation de données d’appareils antérieures. Contient les ECID et les réalisations de segment correspondantes agrégées dans l’Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer la variable **[!UICONTROL Profil]** pour ingérer directement les données dans Profile. | Enregistrement |
+| AAM Profils authentifiés | Ce jeu de données contient des profils authentifiés de l’Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer la variable **[!UICONTROL Profil]** pour ingérer directement les données dans Profile. | Enregistrement |
+| AAM métadonnées des profils authentifiés | Utilisé pour les diagnostics de connecteur d’Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer la variable **[!UICONTROL Profil]** pour ingérer directement les données dans Profile. | Enregistrement |
+| Renvoi de données de périphériques AAM | Jeu de données issu de l’introduction de données d’appareils antérieures. Contient les ECID et les réalisations de segment correspondantes agrégées dans l’Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer la variable **[!UICONTROL Profil]** pour ingérer directement les données dans Profile. | Enregistrement |
 | AAM renvoi des profils authentifiés | Jeu de données à partir de l’introduction de données authentifiées antérieures. Contient les profils authentifiés de l’Audience Manager. Les données ne sont pas visibles en tant que lots dans le jeu de données. Vous pouvez activer la variable **[!UICONTROL Profil]** pour ingérer directement les données dans Profile. | Enregistrement |
 
 ### Connexions
 
-Adobe Audience Manager crée une connexion dans le catalogue : connexion Audience Manager. Le catalogue est le système d’enregistrements pour l’emplacement et la liaison des données au sein d’Adobe Experience Platform. Une connexion est un objet Catalog qui est une instance de connecteurs spécifique au client. Veuillez lire la [Présentation du service de catalogue](../../../catalog/home.md) pour plus d’informations sur le catalogue, les connexions et les connecteurs.
+Adobe Audience Manager crée une connexion dans le catalogue : connexion à l’Audience Manager. Le catalogue est le système d’enregistrements pour l’emplacement et la liaison des données au sein d’Adobe Experience Platform. Une connexion est un objet Catalog qui est une instance de connecteurs spécifique au client. Veuillez lire la [Présentation du service de catalogue](../../../catalog/home.md) pour plus d’informations sur le catalogue, les connexions et les connecteurs.
 
 ### Impact de la population de segments sur le profil
 
@@ -81,6 +88,6 @@ Vous pouvez également vérifier l’utilisation du profil dont votre compte dis
 
 | Données Audience Manager | Type | Latence | Remarques |
 | --- | --- | --- | --- |
-| Données en temps réel | Événements | &lt;25 minutes | Temps nécessaire pour que la capture sur le noeud Audience Manager Edge apparaisse dans le lac de données. |
-| Données en temps réel | Mises à jour des profils | &lt;10 minutes | Temps d’accès dans Real-time Customer Profile. |
+| Données en temps réel | Événements | &lt;25 minutes | Temps nécessaire pour que la capture sur le noeud Audience Manager Edge apparaisse dans le lac de données. |
+| Données en temps réel | Mises à jour des profils | &lt;10 minutes | Temps d’accès dans Real-time Customer Profile. |
 | Données en temps réel et intégrées | Mises à jour des profils | 24 à 36 heures | Temps écoulé entre la capture via les données Edge DCS/PCS et les données intégrées, en cours de traitement dans un profil utilisateur, et l’affichage dans Real-time Customer Profile. Actuellement, ces données ne se trouvent pas directement dans le lac de données. Le basculement de profil peut être activé pour que les jeux de données de profil d’Audience Manager assimilent directement ces données dans Real-time Customer Profile. |
