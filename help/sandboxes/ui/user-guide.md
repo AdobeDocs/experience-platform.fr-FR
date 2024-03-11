@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des sandbox
 description: Ce document fournit la procédure à suivre pour réaliser différentes opérations associées aux sandbox dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: 70bbfd4e2971367c9b7b88bd4bc7985d9e6fbb1e
+source-git-commit: 0db23e475d6546ebb886a56d5915d023ea215125
 workflow-type: tm+mt
-source-wordcount: '940'
-ht-degree: 85%
+source-wordcount: '929'
+ht-degree: 80%
 
 ---
 
@@ -49,7 +49,7 @@ Une fois qu’un sandbox est sélectionné, l’écran actualise le sandbox que 
 
 >[!NOTE]
 >
->Lorsqu’un nouveau sandbox est créé, vous devez d’abord l’ajouter à votre profil de produit dans [Adobe Admin Console](https://adminconsole.adobe.com/) avant de commencer à utiliser le nouveau sandbox. Consultez la documentation relative à la [gestion des autorisations pour un profil de produit](../../access-control/ui/permissions.md) pour plus d’informations sur la configuration d’un sandbox en fonction d’un profil de produit.
+>La création d’un nouvel environnement de test nécessite que vous l’ajoutiez à un rôle dans [[!UICONTROL Autorisations]](../../access-control/abac/ui/permissions.md) avant de pouvoir commencer à l’utiliser. Pour savoir comment configurer un environnement de test pour un rôle, reportez-vous à la section [gestion des environnements de test pour un rôle](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) la documentation.
 
 La vidéo suivante présente un aperçu rapide de l’utilisation des sandbox dans Experience Platform.
 
