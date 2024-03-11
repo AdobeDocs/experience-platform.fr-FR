@@ -3,10 +3,11 @@ title: Documentation du produit Real-Time CDP
 description: Découvrez comment utiliser Adobe Real-Time CDP.
 solution: Real-Time Customer Data Platform
 product: Real-Time Customer Data Platform
-source-git-commit: d5a8faa7b854f6d0b4ef36dc86bd78bf4e6ad6f4
+exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
+source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 6%
+source-wordcount: '1090'
+ht-degree: 13%
 
 ---
 
@@ -20,9 +21,9 @@ Découvrez les dernières améliorations apportées au produit et à la document
 
 >[!BEGINTABS]
 
->[!TAB Cas d’utilisation des classeurs]
+>[!TAB Playbooks de cas d’utilisation]
 
-La variable [!UICONTROL Cas d’utilisation des classeurs] Cette fonctionnalité est désormais disponible pour tous les clients Real-Time CDP et Adobe Journey Optimizer. [!UICONTROL Cas d’utilisation des classeurs] sont conçues pour aider les utilisateurs à surmonter les défis lorsqu’ils commencent à utiliser Real-time Customer Data Platform ou Adobe Journey Optimizer. Lorsque vous ne savez pas où commencer ou comment créer les ressources appropriées pour les cas d’utilisation souhaités, les classeurs de cas d’utilisation vous inspirent et créent différentes ressources que vous pouvez tester et importer dans des environnements de production lorsque vous êtes prêt.
+La fonctionnalité [!UICONTROL Playbooks de cas d’utilisation] est désormais disponible pour les clientes et les clients Real-Time CDP et Adobe Journey Optimizer. Les [!UICONTROL Playbooks de cas d’utilisation] sont conçus pour aider les utilisateurs et les utilisatrices à surmonter les défis lorsqu’ils commencent à utiliser Real-time Customer Data Platform ou Adobe Journey Optimizer. Lorsque vous ne savez pas par où commencer ou comment créer les ressources appropriées pour les cas d’utilisation souhaités, les Paybooks de cas d’utilisation sont une source d’inspiration et créent différentes ressources que vous pouvez tester et importer dans des environnements de production lorsque vous le souhaitez.
 
 [![Image.](assets/do-not-localize/learn-more-button.svg)](/help/use-case-playbooks/playbooks/overview.md)
 
@@ -30,19 +31,19 @@ La variable [!UICONTROL Cas d’utilisation des classeurs] Cette fonctionnalité
 
 Utilisez la fonction d’outil d’environnement de test pour améliorer la précision de la configuration dans les environnements de test et exporter et importer en toute transparence des configurations entre les environnements de test. Vous pouvez utiliser la fonction d’outils des environnements de test pour sélectionner différents objets et les exporter dans un package.
 
-[![Image.](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
+[![image](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
 
 >[!TAB Attributs calculés]
 
 Résumez facilement les données d’événement dans les attributs de profil à l’aide d’une interface utilisateur intuitive afin d’améliorer la segmentation, la personnalisation et l’activation basées sur le comportement. Grâce à cette fonctionnalité, vous pouvez créer des attributs calculés en libre-service, les gérer et les utiliser dans la segmentation, les destinations Real-Time CDP ou Adobe Journey Optimizer. En outre, les attributs calculés simplifient la segmentation et les workflows de parcours pour vous aider à fournir facilement des expériences pertinentes.
 
-[![Image.](assets/do-not-localize/learn-more-button.svg)](/help/profile/computed-attributes/overview.md)
+[![image](assets/do-not-localize/learn-more-button.svg)](/help/profile/computed-attributes/overview.md)
 
 >[!TAB Exports de données]
 
 La fonctionnalité d’exportation des jeux de données est désormais disponible dans l’ensemble. Découvrez [les jeux de données que vous pouvez exporter en fonction de l’application Experience Platform](../destinations/ui/export-datasets.md#datasets-to-export) que vous avez achetée, puis vérifiez les [mécanismes de sécurité pour l’export des jeux de données](/help/destinations/guardrails.md#dataset-exports).
 
-[![Image.](assets/do-not-localize/learn-more-button.svg)](../destinations/ui/export-datasets.md)
+[![image](assets/do-not-localize/learn-more-button.svg)](../destinations/ui/export-datasets.md)
 
 >[!TAB Prise en charge des données du partenaire]
 
@@ -192,9 +193,11 @@ Consultez ces trois vidéos d’introduction pour mieux comprendre Real-Time CDP
 
 ## Ressources supplémentaires {#additional-resources}
 
+Consultez les liens ci-dessous pour mieux comprendre les cas d’utilisation, les services et bien plus encore de Real-Time CDP.
+
 <table style="table-layout:fixed"><tr style="border: 0;">
 <td><strong>Real-Time CDP</strong><br/>
-<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=fr" target="_blank">Tutorials</a> - <a href="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">Description du produit Real-Time CDP version B2C</a> - <a href="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">Édition B2B</a> - <a href="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">Édition B2B</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">Présentation de la sécurité (PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=fr" target="_blank">Plans directeurs de mise en oeuvre</a>
+<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=fr" target="_blank">Tutorials</a> - <a href="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">Description du produit Real-Time CDP version B2C</a> - <a href="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">Édition B2B</a> - <a href="https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank">Édition B2B</a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank">Présentation de la sécurité (PDF)</a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=fr" target="_blank">Plans directeurs de mise en oeuvre</a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=fr" target="_blank">Glossaire</a>
 </td>
 <td><strong>Adobe Experience Platform</strong><br/>
 <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=fr" target="_blank">Documentation</a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank">Référence d’API - <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html" target="_blank">Cours : Présentation de l’Experience Platform</a></a>

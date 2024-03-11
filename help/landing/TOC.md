@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Présentation d’Adobe Experience Platform
 breadcrumb-title: Présentation d’Experience Platform
 user-guide-description: Découvrez comment Experience Platform permet de fournir des expériences personnalisées à vos clientes et clients en temps réel, grâce à des guides, de la documentation et des tutoriels.
-source-git-commit: af37aca17f4b365b52215b8c886e733f00c4a4e8
+source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '282'
 ht-degree: 87%
 
 ---
@@ -47,6 +47,7 @@ ht-degree: 87%
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=fr)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=fr)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=fr)
+   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
    * [Intégrations de Platform avec Experience Cloud (vidéo)](video/experience-cloud-integrations.md)
 * Gouvernance, confidentialité et sécurité {#governance-privacy-security}
    * [Présentation](./governance-privacy-security/overview.md)
