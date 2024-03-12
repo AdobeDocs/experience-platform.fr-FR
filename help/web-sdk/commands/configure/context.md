@@ -1,10 +1,11 @@
 ---
 title: contexte
 description: Collecte automatique des données d’appareil, d’environnement ou de lieu.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 911cabec-2afb-4216-b413-80533f826b0e
+source-git-commit: dc2a2ecf7b602d2fcfd3b6c93cecdb6f3368a3f9
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 13%
+source-wordcount: '900'
+ht-degree: 14%
 
 ---
 
@@ -59,8 +60,34 @@ La variable `"placeContext"` collecte des informations sur l’emplacement de l�
 | --- | --- | --- | --- |
 | Heure locale | Horodatage local pour l’utilisateur final dans l’extension simplifiée [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) format. | `xdm.placeContext.localTime` | `YYYY-08-07T15:47:17.129-07:00` |
 | Décalage du fuseau horaire local | Le nombre de minutes pendant lesquelles l’utilisateur est décalé par rapport à GMT. | `xdm.placeContext.localTimezoneOffset` | `360` |
+| Code pays | Code pays de l’utilisateur final. | `xdm.placeContext.geo.countryCode` | `US` |
+| Province de l&#39;État | Code de province d’état de l’utilisateur final. | `xdm.placeContext.geo.stateProvince` | `CA` |
+| Latitude | Latitude de l’emplacement de l’utilisateur final. | `xdm.placeContext.geo._schema.latitude` | `37.3307447` |
+| Longitude | Longitude de la position de l’utilisateur final. | `xdm.placeContext.geo._schema.longitude` | `-121.8945965` |
 
 {style="table-layout:auto"}
+
+
+### Date et heure
+
+La variable `timestamp` Le mot-clé collecte des informations sur l’horodatage de l’événement. Cette partie du contexte ne peut pas être supprimée.
+
+| Dimension | Description | Chemin XDM | Exemple de valeur |
+| --- | --- | --- | --- |
+| Horodatage de l’événement | Horodatage UTC pour l’utilisateur final en étendu simplifié [ISO 8601](https://datatracker.ietf.org/doc/html/rfc3339#section-5.6) format. | `xdm.timestamp` | `2019-08-07T22:47:17.129Z` |
+
+{style="table-layout:auto"}
+
+### Détails d’implémentation
+
+La variable `implementationDetails` Le mot-clé collecte des informations sur la version du SDK utilisée pour collecter l’événement.
+
+| Dimension | Description | Chemin XDM | Exemple de valeur |
+| --- | --- | --- | --- |
+| Nom | Identifiant du kit de développement logiciel (SDK). Ce champ utilise un URI pour améliorer l’unicité entre les identifiants fournis par différentes bibliothèques de logiciels. | `xdm.implementationDetails.name` | Lorsque la bibliothèque autonome est utilisée, la valeur est `https://ns.adobe.com/experience/alloy`. Lorsque la bibliothèque est utilisée dans le cadre de l’extension de balise, la valeur est `https://ns.adobe.com/experience/alloy+reactor`. |
+| Version | Version du kit de développement logiciel (SDK). | `xdm.implementationDetails.version` | Lorsque la bibliothèque autonome est utilisée, la valeur est la version de la bibliothèque. Lorsque la bibliothèque est utilisée dans le cadre de l’extension de balise, la valeur est la version de la bibliothèque et la version de l’extension de balise associée à une `+`. Par exemple, si la version de la bibliothèque est `2.1.0` et la version de l’extension de balise est `2.1.3`, la valeur serait `2.1.0+2.1.3`. |
+| Environnement | Environnement dans lequel les données ont été collectées. Cette variable est toujours définie sur `browser`. | `xdm.implementationDetails.environment` | `browser` |
+
 
 ### Conseils client à forte entropie
 
