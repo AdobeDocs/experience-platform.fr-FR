@@ -1,14 +1,23 @@
 ---
 title: thirdPartyCookiesEnabled
 description: Permet l’utilisation de cookies tiers pour identifier les visiteurs.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: f241a9ae-a892-46a5-b0dd-5ac72a44d4ac
+source-git-commit: bc48f45bd6b9b7f7cc446ae84d712376292718d2
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
 
+
 # `thirdPartyCookiesEnabled`
+
+>[!IMPORTANT]
+>
+>Google [hasannonce](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) prévoit d’interrompre la prise en charge des cookies tiers par Chrome au cours du deuxième semestre 2024. Par conséquent, les cookies tiers ne seront plus pris en charge dans aucun des principaux navigateurs.
+>
+>Une fois cette modification mise en oeuvre, l’Adobe arrêtera la prise en charge de la variable `demdex` cookie actuellement pris en charge dans le SDK Web.
+
 
 La variable `thirdPartyCookiesEnabled` est une valeur booléenne qui détermine si le SDK Web définit les cookies dans un contexte tiers. L’activation de cette option s’avère utile si vous souhaitez identifier les visiteurs entre les sous-domaines ou les domaines dont votre entreprise est propriétaire. Cependant, de nombreux navigateurs modernes limitent la définition et l’expiration des cookies tiers.
 

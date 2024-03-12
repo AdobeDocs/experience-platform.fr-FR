@@ -3,10 +3,10 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
+source-git-commit: bc48f45bd6b9b7f7cc446ae84d712376292718d2
 workflow-type: tm+mt
-source-wordcount: '1725'
-ht-degree: 90%
+source-wordcount: '1777'
+ht-degree: 87%
 
 ---
 
@@ -15,6 +15,12 @@ ht-degree: 90%
 
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+>[!IMPORTANT]
+>
+>Google [hasannonce](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) prévoit d’interrompre la prise en charge des cookies tiers par Chrome au cours du deuxième semestre 2024. Par conséquent, les cookies tiers ne seront plus pris en charge dans aucun des principaux navigateurs.
+>
+>Une fois cette modification mise en oeuvre, l’Adobe arrêtera la prise en charge de la variable `demdex` cookie actuellement pris en charge dans le SDK Web.
 
 ## Version 2.19.2 - 10 janvier 2024
 
