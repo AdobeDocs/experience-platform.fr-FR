@@ -2,12 +2,13 @@
 title: Identifiants d’appareil propriétaires dans le SDK Web
 description: Découvrez comment configurer des identifiants d’appareil propriétaires (FPID) pour le SDK Web de Adobe Experience Platform.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 9f10d48357b7fb28dc54375a4d077d0a1961a746
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1990'
 ht-degree: 0%
 
 ---
+
 
 # Identifiants d’appareil propriétaires dans le SDK Web
 
@@ -47,6 +48,28 @@ Pour envoyer un FPID pour un visiteur de site web vers Platform Edge Network, vo
 Le réseau Platform Edge n’accepte que les identifiants conformes au [Format UUIDv4](https://datatracker.ietf.org/doc/html/rfc4122). Les ID d’appareil qui ne sont pas au format UUIDv4 seront rejetés.
 
 La génération d’un UUID entraîne presque toujours un identifiant unique et aléatoire, la probabilité qu’une collision se produise étant négligeable. UUIDv4 ne peut pas être transféré à l’aide d’adresses IP ou d’autres informations d’identification personnelles (PII). Les UUID sont omniprésents et des bibliothèques sont disponibles pour pratiquement tous les langages de programmation pour les générer.
+
+## Définition d’un cookie d’identifiant propriétaire dans l’interface utilisateur des flux de données {#setting-cookie-datastreams}
+
+Vous pouvez spécifier un nom de cookie dans l’interface utilisateur des flux de données, où la variable [!DNL FPID] peut résider, plutôt que d’avoir à lire la valeur du cookie et à inclure le FPID dans la carte d’identité.
+
+>[!IMPORTANT]
+>
+>Cette fonctionnalité nécessite que vous ayez [Collecte de données propriétaires](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) activée.
+
+Voir [documentation sur les datastreams](../../datastreams/configure.md) pour obtenir des informations détaillées sur la configuration d’un flux de données.
+
+Lors de la configuration de votre flux de données, activez la variable **[!UICONTROL Cookie d’identifiant propriétaire]** . Ce paramètre indique au réseau Edge de faire référence à un cookie spécifié lors de la recherche d’un identifiant d’appareil propriétaire, plutôt que de rechercher cette valeur dans la variable [Carte des identités](#identityMap).
+
+Consultez la documentation relative à [cookies propriétaires](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=fr) pour plus d’informations sur leur utilisation avec Adobe Experience Cloud.
+
+![Image de l’interface utilisateur de Platform montrant la configuration du flux de données mettant en surbrillance le paramètre Cookie d’identifiant propriétaire](../assets/first-party-id-datastreams.png)
+
+Lorsque vous activez ce paramètre, vous devez indiquer le nom du cookie dans lequel l’ID doit être stocké.
+
+Lorsque vous utilisez des identifiants propriétaires, vous ne pouvez pas effectuer de synchronisation d’identifiants tiers. Les synchronisations des identifiants tiers reposent sur la variable [!DNL Visitor ID] et le `UUID` générés par ce service. Lors de l’utilisation de la fonctionnalité d’identifiant propriétaire, l’ECID est généré sans utiliser la variable [!DNL Visitor ID] , ce qui rend impossible la synchronisation d’identifiants tiers.
+
+Lorsque vous utilisez des identifiants propriétaires, les fonctionnalités d’Audience Manager ciblées vers l’activation dans les plateformes partenaires ne sont pas prises en charge, étant donné que les synchronisations des identifiants partenaires d’Audience Manager sont principalement basées sur des `UUIDs` ou `DIDs`. L’ECID dérivé d’un identifiant propriétaire n’est pas lié à un `UUID`, ce qui le rend non adressable.
 
 ## Définition d’un cookie à l’aide de votre propre serveur
 
