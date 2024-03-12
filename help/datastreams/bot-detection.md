@@ -4,9 +4,9 @@ description: Découvrez comment configurer la détection des robots pour les flu
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 7757cd869607bf25bff1e9861732cf4b80b38966
 workflow-type: tm+mt
-source-wordcount: '1320'
+source-wordcount: '1367'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,8 @@ Ce score de robot permet aux solutions qui reçoivent la demande d’identifier 
 >[!IMPORTANT]
 >
 >La détection des robots ne supprime aucune requête de robot. Il met uniquement à jour le schéma XDM avec la notation de robot et transfère l’événement vers la variable [service datastream](configure.md) que vous avez configuré.
+>
+>Les solutions Adobe peuvent gérer la notation des robots de différentes manières. Par exemple, Adobe Analytics utilise son propre [service de filtrage de robots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) et n’utilise pas le score défini par le réseau Edge. Les deux services utilisent le même [Liste de robots IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), le score du robot est donc identique.
 
 Les règles de détection de robots peuvent prendre jusqu’à 15 minutes pour se propager sur le réseau Edge après avoir été créées.
 
