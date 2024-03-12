@@ -2,7 +2,7 @@
 title: Configuration des événements de haut et de bas de page dans le SDK Web
 description: Cet article explique comment utiliser les événements de haut et de bas de page dans le SDK Web.
 exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: 4d0895c6ad38523f5527c9630931c3c0b8ef83c0
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 2%
@@ -222,4 +222,4 @@ alloy("sendEvent", {
 
 ## Exemple GitHub {#github-sample}
 
-L’exemple trouvé à l’adresse [cette adresse](https://github.com/adobe/alloy-samples/tree/main/top-and-bottom) montre comment utiliser Experience Platform et le SDK Web pour demander de la personnalisation en haut de la page et envoyer des mesures d’analyse en bas de la page. Vous pouvez télécharger l’exemple et l’exécuter localement pour comprendre le fonctionnement des événements de haut et de bas de page.
+L’exemple trouvé à l’adresse [cette adresse](https://github.com/adobe/alloy-samples/tree/main/target/top-and-bottom) montre comment utiliser Experience Platform et le SDK Web pour demander de la personnalisation en haut de la page et envoyer des mesures d’analyse en bas de la page. Vous pouvez télécharger l’exemple et l’exécuter localement pour comprendre le fonctionnement des événements de haut et de bas de page.
