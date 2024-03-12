@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Expiration des données de profils pseudonymes
 description: Ce document fournit des conseils généraux sur la configuration de l’expiration des données de profils pseudonymes dans Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: b6a79952d616a6f8e6ea4b2341c24d74c482c4b8
+source-git-commit: 63ea5f112a304259cbf2aee1cc8e4ae01f002a17
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 93%
+source-wordcount: '1004'
+ht-degree: 90%
 
 ---
 
@@ -77,9 +77,10 @@ Dans un cas d’utilisation standard, définissez l’expiration de vos données
 
 - L’expiration des données de profils pseudonymes s’exécute au niveau du **sandbox**. Vous pouvez appliquer différentes configurations pour les sandbox de production et de développement.
 - Une fois la fonctionnalité activée, la suppression des profils est **permanente**. Vous ne pouvez **pas** annuler la suppression ou restaurer un profil supprimé.
-- Il ne s’agit **pas** d’une tâche de suppression ponctuelle. L’expiration des données de profils pseudonymes s’effectue en continu une fois par jour et supprime les profils qui correspondent aux données saisies par le client ou la cliente.
+- Il ne s’agit **pas** d’une tâche de suppression ponctuelle. L’expiration des données de profil anonymes s’exécute une fois par jour et supprime les profils qui correspondent à l’entrée du client.
 - **Tous** les profils définis comme des profils pseudonymes sont sujets à l’expiration des données de profils pseudonymes. **Peu importe** si le profil est uniquement un événement d’expérience ou ne contient que des attributs de profil.
 - La suppression se produit **uniquement** au niveau du profil. Il se peut que le service d’identités continue à afficher les identités supprimées dans le graphique si le profil possède plusieurs identités pseudonymes associées (telles que `AAID` et `ECID`). Nous apporterons une solution à cette incohérence dans une prochaine mise à jour.
+- L’expiration des données de profil pseudonyme fait l’objet d’un **not** s’exécuter immédiatement et le traitement peut prendre jusqu’à trois jours.
 
 ### Comment l’expiration des données de profils pseudonymes interagit-elle avec les barrières de sécurité pour les données Identity Service ?
 
