@@ -3,7 +3,7 @@ title: Réengagement intelligent
 description: Proposez des expériences attrayantes et connectées au cours des moments de conversion clés pour réengager intelligemment la clientèle moins fréquente.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 151695e348764a25f2b2e986dcbdc1970a67ad47
 workflow-type: tm+mt
 source-wordcount: '3772'
 ht-degree: 4%
@@ -60,7 +60,7 @@ Vous trouverez ci-dessous un aperçu général des trois exemples de scénarios 
 Le scénario de navigation du produit abandonné cible la navigation du produit abandonné sur le site web et dans l’application mobile. Ce scénario est déclenché lorsqu’un produit a été consulté, mais n’a pas été acheté ni ajouté au panier. Dans cet exemple, l’engagement de la marque est déclenché au bout de trois jours s’il n’y a pas d’ajouts de liste au cours des dernières 24 heures.<p>![Présentation visuelle de haut niveau du scénario de navigation des produits abandonnés par l’intelligence client.](../intelligent-re-engagement/images/re-engagement-journey.png "Présentation visuelle de haut niveau du scénario de navigation des produits abandonnés par l’intelligence client."){width="1920" zoomable="yes"}</p>
 
 1. Vous créez des schémas et des jeux de données, puis vous activez pour [!UICONTROL Profil].
-2. Vous ingérez des données dans Experience Platform via le SDK Web, le SDK Mobile ou l’API. Le connecteur de données Analytics peut également être utilisé, mais peut entraîner une latence de parcours.
+2. Vous ingérez des données dans Experience Platform via le SDK Web, le SDK Mobile ou l’API. Le connecteur source Analytics peut également être utilisé, mais peut entraîner une latence de parcours.
 3. Vous ingérez des données de profil supplémentaires, qui peuvent être liées aux visiteurs de l’application web et mobile authentifiés par le biais de graphiques d’identités.
 4. Vous créez des audiences ciblées à partir de la liste des profils pour vérifier si un **client** a fait un engagement au cours des trois derniers jours.
 5. Vous créez un parcours de navigation de produit abandonné dans [!DNL Adobe Journey Optimizer].
@@ -72,7 +72,7 @@ Le scénario de navigation du produit abandonné cible la navigation du produit 
 Le scénario de panier abandonné s’applique lorsque des produits ont été placés dans le panier mais n’ont pas encore été achetés sur le site web et sur l’application mobile. En outre, les campagnes de médias payants sont lancées et arrêtées à l’aide de cette méthode.<p>![Présentation visuelle de haut niveau du scénario Panier abandonné par le client.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Présentation visuelle de haut niveau du scénario Panier abandonné par le client."){width="1920" zoomable="yes"}</p>
 
 1. Vous créez des schémas et des jeux de données, l’option activer pour [!UICONTROL Profil].
-2. Vous ingérez des données dans Experience Platform via le SDK Web, le SDK Mobile ou l’API. Le connecteur de données Analytics peut également être utilisé, mais peut entraîner une latence de parcours.
+2. Vous ingérez des données dans Experience Platform via le SDK Web, le SDK Mobile ou l’API. Le connecteur source Analytics peut également être utilisé, mais peut entraîner une latence de parcours.
 3. Vous ingérez des données de profil supplémentaires, qui peuvent être liées aux visiteurs de l’application web et mobile authentifiés par le biais de graphiques d’identités.
 4. Vous créez des audiences ciblées à partir de la liste des profils pour vérifier si un **client** a placé un élément dans son panier mais n’a pas terminé l’achat. La variable **[!UICONTROL Ajouter au panier]** démarre un minuteur qui attend pendant 30 minutes, puis vérifie l’achat. Si aucun achat n’a été effectué, la variable **client** est ajouté à la variable **[!UICONTROL Abandonner le panier]** audiences.
 5. Vous créez un parcours de panier abandonné dans [!DNL Adobe Journey Optimizer].
@@ -84,7 +84,7 @@ Le scénario de panier abandonné s’applique lorsque des produits ont été pl
 Le scénario de confirmation de commande se concentre sur les achats de produits effectués par le biais du site web et de l’application mobile.<p>![Présentation visuelle de haut niveau du scénario de confirmation de commande du client.](../intelligent-re-engagement/images/order-confirmation-journey.png "Présentation visuelle de haut niveau du scénario de confirmation de commande du client."){width="1920" zoomable="yes"}</p>
 
 1. Vous créez des schémas et des jeux de données, puis vous activez pour [!UICONTROL Profil].
-2. Vous ingérez des données dans Experience Platform via le SDK Web, le SDK Mobile ou l’API. Le connecteur de données Analytics peut également être utilisé, mais peut entraîner une latence de parcours.
+2. Vous ingérez des données dans Experience Platform via le SDK Web, le SDK Mobile ou l’API. Le connecteur source Analytics peut également être utilisé, mais peut entraîner une latence de parcours.
 3. Vous ingérez des données de profil supplémentaires, qui peuvent être liées aux visiteurs de l’application web et mobile authentifiés par le biais de graphiques d’identités.
 4. Vous créez un parcours de confirmation dans [!DNL Adobe Journey Optimizer].
 5. [!DNL Adobe Journey Optimizer] envoie un message de confirmation de commande à l’aide du canal préféré.
