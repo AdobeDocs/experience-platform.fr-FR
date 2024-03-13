@@ -5,10 +5,10 @@ title: Création d’une connexion de base Salesforce à l’aide de l’API Flo
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à un compte Salesforce à l’aide de l’API Flow Service.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
+source-git-commit: 27ad8812137502d0a636345852f0cae5d01c7b23
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 62%
+source-wordcount: '511'
+ht-degree: 60%
 
 ---
 
@@ -37,7 +37,7 @@ Pour que [!DNL Flow Service] puisse se connecter à [!DNL Salesforce], vous deve
 | `username` | Nom d’utilisateur de la variable [!DNL Salesforce] compte utilisateur. |
 | `password` | Le mot de passe du [!DNL Salesforce] compte utilisateur. |
 | `securityToken` | Jeton de sécurité pour la variable [!DNL Salesforce] compte utilisateur. |
-| `apiVersion` | (Facultatif) La version de l’API REST de la variable [!DNL Salesforce] que vous utilisez. Si ce champ n’est pas renseigné, Experience Platform utilisera automatiquement la dernière version disponible. |
+| `apiVersion` | (Facultatif) La version de l’API REST de la variable [!DNL Salesforce] que vous utilisez. La valeur de la version d’API doit être formatée avec une valeur décimale. Par exemple, si vous utilisez la version d’API `52`, vous devez saisir la valeur sous la forme `52.0` Si ce champ n’est pas renseigné, Experience Platform utilisera automatiquement la dernière version disponible. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Salesforce] est `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 Pour plus d’informations sur la prise en main, voir [ce document Salesforce ;](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).

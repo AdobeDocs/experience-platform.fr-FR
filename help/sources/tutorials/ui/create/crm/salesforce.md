@@ -2,10 +2,10 @@
 title: Connexion de votre compte Salesforce à l’aide de l’interface utilisateur Experience Platform
 description: Découvrez comment connecter votre compte Salesforce et importer vos données CRM dans Experience Platform à l’aide de l’interface utilisateur.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 57cdcbd5018e7f57261f09c6bddf5e2a8dcfd0d5
+source-git-commit: a5ecd4ab1c543805870b846cfe0fccc5474333d4
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 31%
+source-wordcount: '542'
+ht-degree: 23%
 
 ---
 
@@ -34,7 +34,7 @@ Pour authentifier votre [!DNL Salesforce] par rapport à Experience Platform, vo
 | `username` | Nom d’utilisateur de la variable [!DNL Salesforce] compte utilisateur. |
 | `password` | Le mot de passe du [!DNL Salesforce] compte utilisateur. |
 | `securityToken` | Jeton de sécurité pour la variable [!DNL Salesforce] compte utilisateur. |
-| `apiVersion` | (Facultatif) La version de l’API REST de la variable [!DNL Salesforce] que vous utilisez. Si ce champ n’est pas renseigné, Experience Platform utilisera automatiquement la dernière version disponible. |
+| `apiVersion` | (Facultatif) La version de l’API REST de la variable [!DNL Salesforce] que vous utilisez. La valeur de la version d’API doit être formatée avec une valeur décimale. Par exemple, si vous utilisez la version d’API `52`, vous devez saisir la valeur sous la forme `52.0` Si ce champ n’est pas renseigné, Experience Platform utilisera automatiquement la dernière version disponible. |
 
 Pour plus d’informations sur l’authentification, reportez-vous à la section [this [!DNL Salesforce] guide d&#39;authentification](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
 
@@ -70,4 +70,4 @@ Pour utiliser un nouveau compte, sélectionnez **[!UICONTROL Nouveau compte]** e
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL Salesforce]. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données dans [!DNL Platform]](../../dataflow/crm.md).
+En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL Salesforce]. Vous pouvez maintenant passer au tutoriel suivant et [configuration d’un flux de données pour importer des données [!DNL Platform]](../../dataflow/crm.md).
