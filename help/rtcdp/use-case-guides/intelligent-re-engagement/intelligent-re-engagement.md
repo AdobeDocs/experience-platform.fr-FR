@@ -3,9 +3,9 @@ title: Réengagement intelligent
 description: Proposez des expériences attrayantes et connectées au cours des moments de conversion clés pour réengager intelligemment la clientèle moins fréquente.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: 151695e348764a25f2b2e986dcbdc1970a67ad47
+source-git-commit: 6991bad03b298373a0d55258dacc60ea8d797fd8
 workflow-type: tm+mt
-source-wordcount: '3772'
+source-wordcount: '3894'
 ht-degree: 4%
 
 ---
@@ -147,7 +147,7 @@ Ce groupe de champs vous permet de tester votre parcours avant sa publication, �
 
 #### Schéma des transactions numériques client
 
-Ce schéma est utilisé pour structurer et référencer les données d’événement qui constituent l’activité de votre client sur votre site web ou les plateformes numériques associées. Ces données sont généralement ingérées dans [!DNL Adobe Experience Platform] via [SDK Web](/help/web-sdk/home.md) et est nécessaire pour référencer les différents événements de navigation et de conversion utilisés pour le déclenchement des parcours, l’analyse client détaillée en ligne et les fonctionnalités d’audience améliorées.
+Ce schéma est utilisé pour structurer et référencer les données d’événement qui constituent l’activité de votre client sur votre site web ou les plateformes numériques associées. Ces données sont généralement ingérées dans [!DNL Adobe Experience Platform] via [SDK Web](/help/web-sdk/home.md) et est nécessaire pour référencer les différents événements de navigation et de conversion utilisés pour le déclenchement des parcours, l’analyse détaillée des clients en ligne, les fonctionnalités d’audience améliorées et la messagerie personnalisée.
 
 Le schéma des transactions numériques client est représenté par une [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) classe .
 
@@ -178,6 +178,25 @@ La variable [Détails de l’identifiant utilisateur final](/help/xdm/field-grou
 
 +++
 
++++Détails du commerce (groupe de champs)
+
+La variable [Détails du commerce](/help/xdm/field-groups/event/commerce-details.md) Le groupe de champs est utilisé pour décrire les données commerciales telles que les informations sur les produits (SKU, nom, quantité) et les opérations standard sur les paniers (commande, passage en caisse, abandon).
+
+| Champs | Description |
+| --- | --- |
+| `commerce.cart.cartID` | Identifiant du panier. |
+| `commerce.order.orderType` | Objet décrivant le type de commande de produit. |
+| `commerce.order.payments.paymentAmount` | Objet décrivant le montant du paiement de la commande de produit. |
+| `commerce.order.payments.paymentType` | Objet décrivant le type de paiement de la commande de produit. |
+| `commerce.order.payments.transactionID` | Identifiant de transaction de commande de produit objet. |
+| `commerce.order.purchaseID` | Identifiant d’achat de commande de produit objet. |
+| `productListItems.name` | Liste de noms d’éléments représentant le ou les produits sélectionnés par un client. |
+| `productListItems.priceTotal` | Prix total de la liste d’articles représentant le ou les produits sélectionnés par un client. |
+| `productListItems.product` | Le ou les produits sélectionnés. |
+| `productListItems.quantity` | La quantité de la liste d’éléments représentant le ou les produits sélectionnés par un client. |
+
++++
+
 +++Détails de l’audit du système source externe (groupe de champs)
 
 Les attributs d’audit du système de source externe sont un type de données XDM (Experience Data Model) standard qui capture les détails d’audit d’un système de source externe.
@@ -186,7 +205,7 @@ Les attributs d’audit du système de source externe sont un type de données X
 
 #### Schéma des transactions hors ligne client
 
-Ce schéma est utilisé pour structurer et référencer les données d’événement qui constituent l’activité de votre client sur les plateformes en dehors de votre site web. Ces données sont généralement ingérées dans [!DNL Adobe Experience Platform] d’un point de contact (ou d’un système similaire) et le plus souvent diffusé en continu dans Platform via une connexion API. Son objectif est de référencer les différents événements de conversion hors ligne utilisés pour le déclenchement des parcours, une analyse client en ligne et hors ligne approfondie et des fonctionnalités d’audience améliorées.
+Ce schéma est utilisé pour structurer et référencer les données d’événement qui constituent l’activité de votre client sur les plateformes en dehors de votre site web. Ces données sont généralement ingérées dans [!DNL Adobe Experience Platform] d’un point de contact (ou d’un système similaire) et le plus souvent diffusé en continu dans Platform via une connexion API. Son objectif est de référencer les différents événements de conversion hors ligne utilisés pour le déclenchement des parcours, une analyse client en ligne et hors ligne approfondie, des fonctionnalités d’audience améliorées et une messagerie personnalisée.
 
 Le schéma des transactions hors ligne du client est représenté par une [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) classe .
 
@@ -346,7 +365,7 @@ L’événement suivant est utilisé pour le scénario de navigation des produit
 Les champs et conditions suivants sont requis lors de la configuration de cette audience :
 
 * `eventType: commerce.productViews`
-* Et `THEN` (événement séquentiel) exclude `eventType: commerce.productListAdds` ou `application.launch` ou `web.webpagedetails.pageViews` ou `commerce.purchases` (y compris en ligne et hors ligne)
+* Et `THEN` (événement séquentiel) exclude `eventType: commerce.productListAdds` ET `application.launch` ET `web.webpagedetails.pageViews` ET `commerce.purchases` (y compris en ligne et hors ligne)
    * `Timestamp: > 3 days after productView`
 * `Timestamp: > 4 days`
 
@@ -359,7 +378,7 @@ L’événement suivant est utilisé pour le scénario de navigation des produit
 Les champs et conditions suivants sont requis lors de la configuration de cette audience :
 
 * `eventType: commerce.productViews`
-* Et `THEN` (événement séquentiel) inclut `eventType: commerce.productListAdds` ou `application.launch` ou `web.webpagedetails.pageViews` ou `commerce.purchases` (y compris en ligne et hors ligne)
+* Et `THEN` (événement séquentiel) inclut `eventType: commerce.productListAdds` OU `application.launch` OU `web.webpagedetails.pageViews` OU `commerce.purchases` (y compris en ligne et hors ligne)
    * `Timestamp: > 3 days after productView`
 * `Timestamp: > 4 days`
 +++
@@ -370,7 +389,7 @@ L’événement suivant est utilisé pour le scénario de navigation des produit
 
 Les champs et conditions suivants sont requis lors de la configuration de cette audience :
 
-* `eventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `eventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
    * `Timestamp: in last 1 day` (Diffusion en continu)
 
 +++
@@ -381,7 +400,7 @@ L’événement suivant est utilisé pour le scénario de navigation des produit
 
 Les champs et conditions suivants sont requis lors de la configuration de cette audience :
 
-* `EventType: commerce.productListAdds or application.launch or web.webpagedetails.pageViews or commerce.purchases`
+* `EventType: commerce.productListAdds OR application.launch OR web.webpagedetails.pageViews OR commerce.purchases`
    * `Timestamp: in last 3 days` (Lot)
 
 +++
@@ -395,7 +414,7 @@ Les événements suivants sont utilisés pour le scénario de panier abandonné 
 Les champs et conditions suivants sont requis lors de la configuration de cette audience :
 
 * `eventType: commerce.productListAdds`
-   * `Timestamp: >= 1 days before now and <= 4 days before now `
+   * `Timestamp: >= 1 days before now AND <= 4 days before now `
 * `eventType: commerce.purchases`
    * `Timestamp: <= 4 days before now`
 * `eventType: commerce.productListRemovals`
