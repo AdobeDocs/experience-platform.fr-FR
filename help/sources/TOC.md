@@ -5,9 +5,9 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 5e31c127344aeb1a9d3d19b98c43d1502a4af623
+source-git-commit: c05bdceb5092278f6fefb2cb286bf25d97716cf7
 workflow-type: tm+mt
-source-wordcount: '1021'
+source-wordcount: '1027'
 ht-degree: 95%
 
 ---
@@ -93,6 +93,7 @@ ht-degree: 95%
       - [Connecteur Snowflake](connectors/databases/snowflake.md)
       - [Connecteur Teradata Vantage](connectors/databases/teradata-vantage.md)
    - Partenaire de données et d’identité {#data-partner}
+      - [Ingestion des données par l’intermédiaire d’Acxiom](connectors/data-partners/acxiom-data-ingestion.md)
       - [Importation des données de prospection Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Résolution des identités d’entreprise Merkury](connectors/data-partners/merkury.md)
    - eCommerce {#ecommerce}
@@ -298,8 +299,9 @@ ht-degree: 95%
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - Partenaire de données et d’identité {#data-partner}
-         - [Résolution des identités d’entreprise Merkury](tutorials/ui/create/data-partners/merkury.md)
+         - [Ingestion des données par l’intermédiaire d’Acxiom](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Importation des données de prospection Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Résolution des identités d’entreprise Merkury](tutorials/ui/create/data-partners/merkury.md)
       - eCommerce {#ecommerce}
          - [SAP Commerce](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
