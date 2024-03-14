@@ -2,9 +2,9 @@
 title: Personnalisation via Adobe Target
 description: Découvrez comment utiliser l’API serveur pour diffuser et générer des expériences personnalisées créées dans Adobe Target.
 exl-id: c9e2f7ef-5022-4dc4-82b4-ecc210f27270
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ddffe9bf30741b457f7de1099b50ac1624fca927
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '664'
 ht-degree: 3%
 
 ---
@@ -287,3 +287,9 @@ Le tableau ci-dessous explique les éléments clés de cette partie de la répon
 | `items[].data.id` | L’identifiant de l’offre proposée. | `"id": "282484"` |
 | `items[].data.format` | Format du contenu associé à l’offre proposée. | `"format: "application/json` |
 | `items[].data.content` | Contenu associé à l’offre proposée. Il sera utilisé pour la personnalisation du contenu de l&#39;application appelante. | `"content": "<CONTENT CONFIGURED IN TARGET>"` |
+
+## Exemple d’application de personnalisation côté serveur {#sample}
+
+L’exemple d’application trouvé dans [cette URL](https://github.com/adobe/alloy-samples/tree/main/target/personalization-server-side) illustre l’utilisation de Adobe Experience Platform pour obtenir du contenu de personnalisation à partir d’Adobe Target. La page web change en fonction du contenu de personnalisation renvoyé.
+
+Cet exemple : _not_ repose sur les bibliothèques côté client, telles que [!DNL Web SDK] pour obtenir du contenu de personnalisation. Il utilise plutôt les API Adobe Experience Platform pour récupérer le contenu de personnalisation. Ensuite, l’implémentation génère le HTML côté serveur en fonction du contenu de personnalisation renvoyé.
