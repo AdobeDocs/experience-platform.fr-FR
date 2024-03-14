@@ -5,7 +5,7 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 5db7e1a88373dcc5dd266f6c082985f4055a1b0f
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '1215'
 ht-degree: 90%
@@ -296,4 +296,4 @@ ht-degree: 90%
       * [Modèle de libre-service de documentation](./destination-sdk/docs-framework/self-service-template.md)
       * [Bonnes pratiques de création](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Questions fréquentes](./destinations-faq.md)
-* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=fr)
+* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

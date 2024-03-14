@@ -4,7 +4,7 @@ user-guide-title: Guide du profil client en temps réel
 user-guide-description: Fusionnez les données client pour créer une vue unifiée des interactions client entre les canaux.
 feature: Profiles
 role: User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 93%
@@ -53,4 +53,4 @@ ht-degree: 93%
 * [Traitement des demandes d’accès à des informations personnelles](privacy.md)
 * [Guide de dépannage du [!DNL Profile]](troubleshooting.md)
 * [Référence de l’API Profile](https://www.adobe.com/go/profile-apis-en)
-* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=fr)
+* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

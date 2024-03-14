@@ -2,10 +2,10 @@
 audience: user
 user-guide-title: Accessibilité d’Adobe Experience Platform
 user-guide-description: Découvrez l’engagement d’Experience Platform à fournir des fonctionnalités accessibles et inclusives à tout le monde.
-source-git-commit: 2790ae0b0bbba454ded1a6a8f73e05500f531cda
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
-source-wordcount: '50'
-ht-degree: 100%
+source-wordcount: '41'
+ht-degree: 97%
 
 ---
 
@@ -17,4 +17,4 @@ ht-degree: 100%
 * [Accessibilité personnalisée pour Platform](custom.md)
 * [Documentation de Platform](https://experienceleague.adobe.com/docs/experience-platform.html?lang=fr)
 * [Présentation de Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=fr)
-* [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

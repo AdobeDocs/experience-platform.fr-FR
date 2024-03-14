@@ -5,10 +5,10 @@ breadcrumb-title: Guide des tableaux de bord
 user-guide-description: Découvrez comment visualiser les données dans Experience Platform via des tableaux de bord personnalisables.
 feature: Dashboards
 role: Developer,User
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '90'
-ht-degree: 88%
+ht-degree: 87%
 
 ---
 
@@ -44,4 +44,4 @@ ht-degree: 88%
 * [Jeux de données de tableau de bord des requêtes](query.md)
 * [Modèle de données d’informations Real-Time Customer Data Platform](cdp-insights-data-model.md)
 * [Afficher les informations SQL](view-sql.md)
-* [Notes de mise à jour de Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

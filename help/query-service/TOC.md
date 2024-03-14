@@ -5,10 +5,10 @@ breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '320'
-ht-degree: 83%
+ht-degree: 82%
 
 ---
 
@@ -115,4 +115,4 @@ ht-degree: 83%
 - [Questions fréquentes](troubleshooting-guide.md)
 - [Liste autorisée d’adresses IP](ip-address-allowlist.md)
 - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=fr)
+- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

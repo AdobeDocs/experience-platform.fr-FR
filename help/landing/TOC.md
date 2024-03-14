@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Présentation d’Adobe Experience Platform
 breadcrumb-title: Présentation d’Experience Platform
 user-guide-description: Découvrez comment Experience Platform permet de fournir des expériences personnalisées à vos clientes et clients en temps réel, grâce à des guides, de la documentation et des tutoriels.
-source-git-commit: 8838fc59685f287a3e66a37c87b0b9c55e29c71e
+source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 87%
+ht-degree: 86%
 
 ---
 
@@ -81,4 +81,4 @@ ht-degree: 87%
 * [Guide de dépannage](troubleshooting.md)
 * [Migration du lac de données Gen2](adls2-gen2-migration.md)
 * [Glossaire](glossary.md)
-* [Notes de mise à jour](https://docs.adobe.com/content/help/fr-FR/experience-platform/release-notes/latest.html)
+* [Notes de mise à jour](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
