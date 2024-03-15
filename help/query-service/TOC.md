@@ -5,9 +5,9 @@ breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 61b20f2a618ed4305351b2fe6ff771a45d759de1
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '318'
 ht-degree: 82%
 
 ---
@@ -39,7 +39,7 @@ ht-degree: 82%
       - [Exportation des données dans des environnements ML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Workflow d’enrichissement de pipeline de données AI/ML de bout en bout](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
 - Cas d’utilisation {#use-cases}
-   - [Cas d’utilisation pris en charge](use-cases/overview.md)
+   - [Vue d’ensemble](use-cases/overview.md)
    - [Navigation abandonnée](use-cases/abandoned-browse.md)
    - [Analyse de l’attribution](use-cases/attribution-analysis.md)
    - [Filtrage des robots](use-cases/bot-filtering.md)

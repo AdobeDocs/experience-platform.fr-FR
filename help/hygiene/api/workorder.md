@@ -3,7 +3,7 @@ title: Point de terminaison de l’API Work Order
 description: Le point d’entrée /workorder de l’API Data Hygiene vous permet de gérer par programmation les tâches de suppression pour les identités.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
 workflow-type: tm+mt
 source-wordcount: '1281'
 ht-degree: 56%
@@ -126,9 +126,9 @@ Une réponse réussie renvoie les détails de la suppression de l’enregistreme
 
 {style="table-layout:auto"}
 
-## Récupération de l’état d’une suppression d’enregistrement (#lookup)
+## Récupération de l’état d’une suppression d’enregistrement {#lookup}
 
-Après [création d’une requête de suppression d’enregistrement](#create), vous pouvez vérifier son état à l’aide d’une requête de GET.
+Après vous [créer une requête de suppression d’enregistrement](#create), vous pouvez vérifier son état à l’aide d’une requête de GET.
 
 **Format d’API**
 

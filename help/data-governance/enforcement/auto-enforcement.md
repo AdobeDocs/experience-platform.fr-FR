@@ -4,24 +4,24 @@ solution: Experience Platform
 title: Application automatique des politiques
 description: Ce document présente l’application automatique des politiques d’utilisation de données lors de l’activation d’audiences vers des destinations dans Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: f4f4deda02c96e567cbd0815783f192d1c54096c
+source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
 workflow-type: tm+mt
-source-wordcount: '1899'
-ht-degree: 100%
+source-wordcount: '2012'
+ht-degree: 90%
 
 ---
 
 # Application automatique des politiques
 
+Les libellés et stratégies d’utilisation des données sont disponibles pour tous les utilisateurs de Adobe Experience Platform. Définissez des stratégies d’utilisation des données et appliquez des libellés d’utilisation des données afin de vous assurer que toutes les données sensibles, identifiables ou contractuelles sont traitées avec précision. Ces mesures permettent d’appliquer les règles de gouvernance des données de votre entreprise sur la manière dont les données peuvent être consultées, traitées, stockées et partagées.
+
+Pour vous aider à protéger votre organisation contre les risques et passifs potentiels, Platform applique automatiquement les stratégies d’utilisation en cas de violation lors de l’activation d’audiences vers des destinations.
+
 >[!IMPORTANT]
 >
->L’application automatique des politiques n’est actuellement disponible que pour les organisations qui ont acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**.
+>Les stratégies de consentement et l’application automatique des stratégies de consentement ne sont disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**.
 
-Une fois que les données sont libellées et que les politiques d’utilisation sont définies, vous pouvez appliquer les politiques d’utilisation des données. Lors de l’activation des audiences vers les destinations, Adobe Experience Platform applique automatiquement les politiques d’utilisation en cas de violation.
-
->[!NOTE]
->
->Ce document se concentre sur l’application des politiques de gouvernance des données et de consentement. Pour plus d’informations sur les politiques de contrôle d’accès, consultez la documentation sur le [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md).
+Ce document se concentre sur l’application des politiques de gouvernance des données et de consentement. Pour plus d’informations sur les politiques de contrôle d’accès, consultez la documentation sur le [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md).
 
 ## Conditions préalables
 
@@ -94,27 +94,31 @@ Si une violation de politique se produit lors de la tentative d’activation d�
 
 Sélectionnez une violation de politique dans la colonne de gauche de la fenêtre contextuelle pour afficher les détails de celle-ci.
 
-![](../images/enforcement/violation-policy-select.png)
+![Une boîte de dialogue indiquant qu’une violation de stratégie s’est produite avec le nom de la stratégie mis en surbrillance.](../images/enforcement/violation-policy-select.png)
 
 Le message relatif à la violation présente un résumé de la politique enfreinte, y compris les conditions configurées pour être vérifiées par la politique, l’action spécifique qui a déclenché la violation ainsi qu’une liste de résolutions possibles pour le problème.
 
-![](../images/enforcement/violation-summary.png)
+![Une boîte de dialogue de violation de politique avec le résumé de la violation mis en surbrillance.](../images/enforcement/violation-summary.png)
 
 Un graphique relatif à la parenté des données s’affiche sous le résumé de la violation. Cela vous permet de visualiser les jeux de données, les politiques de fusion, les audiences et les destinations impliqués dans la violation de la politique. L’entité que vous modifiez actuellement est mise en surbrillance dans le graphique, ce qui indique le point du flux à l’origine de la violation. Vous pouvez sélectionner un nom d’entité dans le graphique pour ouvrir la page de détails de l’entité en question.
 
-![](../images/enforcement/data-lineage.png)
+![Une boîte de dialogue de violation de stratégie avec le graphique de lignage des données mis en surbrillance.](../images/enforcement/data-lineage.png)
 
 Vous pouvez également utiliser l’icône **[!UICONTROL Filtre]** (![](../images/enforcement/filter.png)) pour filtrer les entités affichées par catégorie. Au moins deux catégories doivent être sélectionnées pour que les données s’affichent.
 
-![](../images/enforcement/lineage-filter.png)
+![Une boîte de dialogue de violation de stratégie avec le filtre de traçabilité des données et le menu déroulant mis en surbrillance.](../images/enforcement/lineage-filter.png)
 
 Sélectionnez **[!UICONTROL Vue Liste]** pour afficher la parenté des données sous forme de liste. Pour revenir au graphique visuel, sélectionnez **[!UICONTROL Chemin parcouru]**.
 
-![](../images/enforcement/list-view.png)
+![Une boîte de dialogue de violation de stratégie avec la vue de chemin de lignage des données mise en surbrillance.](../images/enforcement/list-view.png)
 
 ### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
-Si vous avez [créé des politiques de consentement](../policies/user-guide.md#consent-policy) et que vous activez une audience vers une destination, vous pouvez voir comment vos politiques de consentement affectent le pourcentage de profils inclus dans l’activation.
+Lorsque vous activez une audience vers une destination, vous pouvez voir comment votre [stratégies de consentement](../policies/user-guide.md#consent-policy) affectent différents pourcentages de profils inclus dans l’activation.
+
+>[!NOTE]
+>
+>Les politiques de consentement ne sont disponibles que pour les organisations qui ont acheté Adobe Healthcare Shield ou Adobe Privacy &amp; Security Shield.
 
 #### Amélioration de la stratégie de consentement pour les médias achetés {#consent-policy-enhancement}
 
