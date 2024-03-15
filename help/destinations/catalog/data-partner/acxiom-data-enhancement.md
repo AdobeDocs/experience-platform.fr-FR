@@ -1,12 +1,12 @@
 ---
 title: Amélioration des données d’Acrobat
-description: Utilisez ce connecteur pour activer les profils d’Adobe propriétaires dans Real-Time CDP vers Acrobat à des fins d’enrichissement et d’utilisation sur les canaux marketing.
+description: Utilisez ce connecteur pour activer les profils d’Adobe propriétaires dans Real-Time CDP vers Acrobat afin d’enrichir les données et de les utiliser sur les canaux marketing. Vous pouvez ensuite utiliser la source Acxiom pour importer les profils contenant des données améliorées et travailler avec eux dans Real-Time CDP.
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: Version Beta
-source-git-commit: 6f272ce0ad619f835920ab9d25d0946d7709d7cb
+source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
 workflow-type: tm+mt
-source-wordcount: '1312'
-ht-degree: 27%
+source-wordcount: '1346'
+ht-degree: 28%
 
 ---
 
@@ -18,30 +18,29 @@ ht-degree: 27%
 
 ## Vue d’ensemble {#overview}
 
-Utilisez le connecteur d’amélioration des données Acxiom pour fournir des données descriptives supplémentaires à vos profils d’Adobe, à utiliser dans les applications d’analyse, de segmentation et de ciblage. Avec des centaines d’éléments disponibles, cela permet aux utilisateurs de mieux segmenter et modéliser les données, ce qui se traduit par un ciblage et une modélisation prédictive plus précis.
+Utilisez la variable [!DNL Acxiom Data Enhancement] connecteur pour fournir des données descriptives supplémentaires à vos profils client, à utiliser dans les applications d’analyse, de segmentation et de ciblage. Avec des centaines d’éléments disponibles, vous pouvez ainsi mieux segmenter et modéliser les données, ce qui se traduit par un ciblage et une modélisation prédictive plus précis.
 
 ![Diagramme marketing pour exporter des données propriétaires vers Acxiom, puis réimporter des données enrichies dans Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow-data-enhancement.png)
 
-Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Acxiom Data Enhancement] connexion de destination et flux de données à l’aide de l’interface utilisateur de Adobe Experience Platform.  Ce connecteur est utilisé pour diffuser des données vers le service d’amélioration d’Acrobat à l’aide d’Amazon S3 comme point de dépôt.
+Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Acxiom Data Enhancement] connexion de destination et flux de données à l’aide de l’interface utilisateur de Adobe Experience Platform. Ce connecteur est utilisé pour diffuser des données vers le service d’amélioration d’Acrobat à l’aide d’Amazon S3 comme point de dépôt.
 
 ![Le catalogue des destinations avec la destination Acxiom sélectionnée.](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-catalog.png)
 
 ## Cas d’utilisation {#use-cases}
 
-Pour vous aider à mieux comprendre comment et à quel moment utiliser la destination d’amélioration des données Acxiom, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
+Pour mieux comprendre comment et à quel moment utiliser la variable [!DNL Acxiom Data Enhancement] destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 
 ### Amélioration des données client {#enhance-customer-data}
 
-Ce connecteur doit être utilisé par les professionnels du marketing visant à améliorer l’efficacité de leurs stratégies de diffusion en ajoutant des éléments descriptifs sélectionnés à leurs profils d’Adobe et en les utilisant pour mieux cibler les campagnes.
+Ce connecteur doit être utilisé par les professionnels du marketing visant à améliorer l’efficacité de leurs stratégies de sensibilisation en ajoutant des éléments descriptifs sélectionnés à leurs profils clients et en les utilisant pour mieux cibler les campagnes.
 
 Par exemple, en tant que marketeur, vous pouvez approfondir votre compréhension de vos audiences existantes en enrichissant leurs profils avec des données supplémentaires. Cela permettra d’améliorer la segmentation et les stratégies de ciblage, ce qui stimulera la personnalisation et la conversion des campagnes.
 
 Le cas d’utilisation est exécuté par une combinaison de connecteurs source et de destination.
 
-
 Vous commencez par exporter vos enregistrements de client existants pour enrichissement à l’aide de ce connecteur de destination. Le service d’Acxiom recherche le fichier, le récupère, l’enrichit avec les données d’Acxiom et génère un fichier.
 
-Le client utilisera alors la carte source d’ingestion de données Acxiom correspondante pour ingérer à nouveau les profils client hydratés dans Adobe Real-Time CDP.
+Le client utilisera alors la variable [Ingestion des données par l’intermédiaire d’Acxiom](/help/sources/connectors/data-partners/acxiom-data-ingestion.md) carte source pour réingérer les profils client hydratés dans Adobe Real-Time CDP.
 
 ## Conditions préalables {#prerequisites}
 
@@ -77,7 +76,9 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion et activation des destinations de jeu de données]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion et activation des destinations de jeu de données]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+
+Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 ### S’authentifier auprès de la destination {#authenticate}
 
@@ -99,7 +100,7 @@ Pour définir un nouvel emplacement Acxiom Managed S3 :
 
 ### Compte existant
 
-Les comptes déjà définis à l’aide de la carte d’amélioration des données d’Acrobat s’affichent dans une fenêtre contextuelle de liste. Lorsqu’ils sont sélectionnés, ils fournissent des détails sur le compte.  Vous trouverez ci-dessous l’exemple de l’interface utilisateur lorsque vous accédez à **Destinations** > **Comptes**;
+Comptes déjà définis à l’aide de la variable [!DNL Acxiom Data Enhancement] La destination apparaît dans une fenêtre contextuelle de liste. Lorsque cette option est sélectionnée, les détails du compte s’affichent dans le rail de droite. Affichez l’exemple dans l’interface utilisateur lorsque vous accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Comptes]**;
 
 ![Compte existant](../../assets/catalog/data-partner/acxiom/image-destination-enhancement-account.png)
 
@@ -144,14 +145,14 @@ Les suggestions de mappage sont fournies dans le tableau ci-dessous, qui répert
 
 | Champ cible | Description source |
 |--------------|-------------------------------------------------------------|
-| nom | La valeur person.name.fullName dans Experience Platform. |
-| Prénom | La valeur person.name.firstName dans Experience Platform. |
-| Nom | La valeur person.name.lastName dans Experience Platform. |
-| address1 | La valeur mailAddress.street1 dans Experience Platform. |
-| address2 | La valeur mailAddress.street2 dans Experience Platform. |
-| ville | La valeur mailAddress.city dans Experience Platform. |
-| state | La valeur mailAddress.state dans Experience Platform. |
-| zip | La valeur mailAddress.postalCode dans Experience Platform. |
+| nom | La variable `person.name.fullName` dans Experience Platform. |
+| Prénom | La variable `person.name.firstName` dans Experience Platform. |
+| Nom | La variable `person.name.lastName` dans Experience Platform. |
+| address1 | La variable `mailingAddress.street1` dans Experience Platform. |
+| address2 | La variable `mailingAddress.street2` dans Experience Platform. |
+| ville | La variable `mailingAddress.city` dans Experience Platform. |
+| state | La variable `mailingAddress.state` dans Experience Platform. |
+| zip | La variable `mailingAddress.postalCode` dans Experience Platform. |
 
 >[!NOTE]
 >

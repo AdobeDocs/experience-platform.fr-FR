@@ -5,10 +5,10 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
 workflow-type: tm+mt
-source-wordcount: '1215'
-ht-degree: 90%
+source-wordcount: '1218'
+ht-degree: 89%
 
 ---
 
@@ -142,6 +142,7 @@ ht-degree: 90%
       * [Extension Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
    * Data &amp; Identity Partner {#data-partner}
       * [Suppression des prospects Acxiom](./catalog/data-partner/acxiom-prospect-suppression.md)
+      * [Amélioration des données d’Acrobat](./catalog/data-partner/acxiom-data-enhancement.md)
    * Destinations de commerce électronique {#ecommerce}
       * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
    * Destinations dʼe-mail {#email}
