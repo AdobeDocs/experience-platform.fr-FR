@@ -5,10 +5,10 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 780d1ad0886d474d2584050ab763259ba8fb8a83
+source-git-commit: f10716ea10c4e3962cb2d4be70c34ca048d3a869
 workflow-type: tm+mt
-source-wordcount: '1027'
-ht-degree: 95%
+source-wordcount: '1031'
+ht-degree: 94%
 
 ---
 
@@ -115,6 +115,7 @@ ht-degree: 95%
    - Paiements {#payments}
       - [Connecteur PayPal](connectors/payments/paypal.md)
       - [Connecteur Square](connectors/payments/square.md)
+      - [Connecteur Stripe](connectors/payments/stripe.md)
    - Protocoles {#protocols}
       - [Connecteur OData générique](connectors/protocols/odata.md)
       - [Connecteur API REST générique](connectors/protocols/generic-rest.md)
@@ -195,6 +196,7 @@ ht-degree: 95%
       - Paiements {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
          - [Square](tutorials/api/create/payments/square.md)
+         - [Stripe](tutorials/api/create/payments/stripe.md)
       - Protocoles {#protocols}
          - [OData générique](tutorials/api/create/protocols/odata.md)
          - [REST API générique](tutorials/api/create/protocols/generic-rest.md)
@@ -323,6 +325,7 @@ ht-degree: 95%
       - Paiements {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
          - [Square](tutorials/ui/create/payments/square.md)
+         - [Stripe](tutorials/ui/create/payments/stripe.md)
       - Protocoles {#protocols}
          - [OData générique](tutorials/ui/create/protocols/odata.md)
       - Diffusion en continu {#streaming}
