@@ -1,13 +1,11 @@
 ---
 title: Tester Et Envoyer Votre Source
 description: Le document suivant décrit les étapes à suivre pour tester et vérifier une nouvelle source à l’aide de l’API Flow Service et intégrer une nouvelle source par le biais de sources en libre-service (SDK de diffusion en continu).
-hide: true
-hidefromtoc: true
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '1249'
-ht-degree: 23%
+source-wordcount: '1245'
+ht-degree: 22%
 
 ---
 
@@ -22,7 +20,7 @@ Le document suivant décrit les étapes à suivre pour tester et déboguer votre
 * Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide [Prise en main des API Platform](../../../landing/api-guide.md).
 * Pour plus d’informations sur la génération de vos informations d’identification pour les API Platform, consultez le tutoriel sur [authentification et accès aux API Experience Platform](../../../landing/api-authentication.md).
 * Pour plus d’informations sur la configuration [!DNL Postman] pour les API Platform, consultez le tutoriel sur [configuration de Developer Console et [!DNL Postman]](../../../landing/postman.md).
-* Pour faciliter le processus de test et de débogage, téléchargez la [Collecte et environnement de vérification des sources en libre-service ici](../assets/sdk-verification.zip) et suivez les étapes décrites ci-dessous.
+* Pour faciliter le processus de test et de débogage, téléchargez le fichier [Collecte et environnement de vérification des sources en libre-service ici](../assets/sdk-verification.zip) et suivez les étapes décrites ci-dessous.
 
 ## Test de votre source à l’aide de l’API
 
@@ -41,25 +39,25 @@ Pour commencer le test, vous devez d’abord configurer la collection et l’env
 | `authorizationToken` | Jeton d’autorisation requis pour terminer les appels vers les API Experience Platform. Voir le tutoriel sur [authentification et accès aux API Experience Platform](../../../landing/api-authentication.md) pour plus d’informations sur la manière de récupérer votre `authorizationToken`. | `Bearer authorizationToken` |
 | `schemaId` | Pour que les données sources soient utilisées dans Platform, un schéma cible doit être créé pour structurer les données sources en fonction de vos besoins. Pour obtenir des instructions détaillées sur la création d’un schéma XDM cible, suivez le tutoriel sur la [création d’un schéma à l’aide de l’API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `schemaVersion` | La version unique qui correspond à votre schéma. | `application/vnd.adobe.xed-full-notext+json; version=1` |
-| `schemaAltId` | Le `meta:altId` qui est renvoyé avec le  `schemaId` lors de la création d’un nouveau schéma. | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
+| `schemaAltId` | La variable `meta:altId` qui est renvoyé avec le  `schemaId` lors de la création d’un nouveau schéma. | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `dataSetId` | Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, suivez le tutoriel sur la [création d’un jeu de données à l’aide de l’API](../../../catalog/api/create-dataset.md). | `5f3c3cedb2805c194ff0b69a` |
 | `mappings` | Les jeux de mappages peuvent être utilisés pour définir la façon dont les données d’un schéma source sont mappées à celui d’un schéma de destination. Pour obtenir des instructions détaillées sur la création d’un mappage, consultez le tutoriel sur [création d’un jeu de mappages à l’aide de l’API](../../../data-prep/api/mapping-set.md). | `[{"destinationXdmPath":"person.name.firstName","sourceAttribute":"email.email_id","identity":false,"version":0},{"destinationXdmPath":"person.name.lastName","sourceAttribute":"email.activity.action","identity":false,"version":0}]` |
 | `mappingId` | L’identifiant unique qui correspond à votre jeu de mappages. | `bf5286a9c1ad4266baca76ba3adc9366` |
 | `connectionSpecId` | L’identifiant de spécification de connexion qui correspond à votre source. Il s’agit de l’identifiant que vous avez généré après [création d’une nouvelle spécification de connexion](./create.md). | `2e8580db-6489-4726-96de-e33f5f60295f` |
-| `flowSpecificationId` | L’identifiant de spécification de flux de `GenericStreamingAEP`. **Il s’agit d’une valeur fixe**. | `e77fde5a-22a8-11ed-861d-0242ac120002` |
-| `targetConnectionSpecId` | L’identifiant de connexion cible du lac de données dans lequel les données ingérées se trouvent. **Il s’agit d’une valeur fixe**. | `c604ff05-7f1a-43c0-8e18-33bf874cb11c` |
+| `flowSpecificationId` | L’identifiant de spécification de flux de `GenericStreamingAEP`. **Ceci est une valeur fixe**. | `e77fde5a-22a8-11ed-861d-0242ac120002` |
+| `targetConnectionSpecId` | L’identifiant de connexion cible du lac de données dans lequel les données ingérées se trouvent. **Ceci est une valeur fixe**. | `c604ff05-7f1a-43c0-8e18-33bf874cb11c` |
 | `verifyWatTimeInSecond` | Intervalle de temps désigné à suivre lors de la vérification de la fin d’une exécution de flux. | `40` |
 | `startTime` | Heure de début désignée pour votre flux de données. L’heure de début doit être formatée en heure unique. | `1597784298` |
 
-Une fois que vous avez fourni toutes vos variables d’environnement, vous pouvez commencer à exécuter la collection à l’aide de la variable [!DNL Postman] . Dans le [!DNL Postman] , sélectionnez les ellipses (**...**) en regard de [!DNL Sources SSSs Verification Collection] puis sélectionnez **Exécution de la collection**.
+Une fois que vous avez fourni toutes vos variables d’environnement, vous pouvez commencer à exécuter la collection à l’aide de la variable [!DNL Postman] . Dans le [!DNL Postman] , sélectionnez les ellipses (**..**) en regard de [!DNL Sources SSSs Verification Collection] puis sélectionnez **Exécution de la collection**.
 
 ![coureur](../assets/runner.png)
 
-Le [!DNL Runner] s’affiche, ce qui vous permet de configurer l’ordre d’exécution de votre flux de données. Sélectionner **Exécution de la collection de vérification SSS** pour exécuter la collection.
+La variable [!DNL Runner] s’affiche, vous permettant de configurer l’ordre d’exécution de votre flux de données. Sélectionner **Exécution de la collection de vérification SSS** pour exécuter la collection.
 
 >[!NOTE]
 >
->Vous pouvez désactiver **Supprimer le flux** dans la liste de contrôle de l’ordre d’exécution si vous préférez utiliser le tableau de bord de surveillance des sources dans l’interface utilisateur de Platform. Cependant, une fois le test terminé, vous devez vous assurer que vos flux de test sont supprimés.
+>Vous pouvez désactiver **Flux de suppression** dans la liste de contrôle de l’ordre d’exécution si vous préférez utiliser le tableau de bord de surveillance des sources dans l’interface utilisateur de Platform. Cependant, une fois le test terminé, vous devez vous assurer que vos flux de test sont supprimés.
 
 ![run-collection](../assets/run-collection.png)
 
@@ -71,7 +69,7 @@ Maintenant que votre nouvelle source est disponible dans votre environnement de 
 
 ![Catalogue des sources affichant la nouvelle source de diffusion en continu.](../assets/testing/catalog-test.png)
 
-L’étape [!UICONTROL Ajouter les données] apparaît. Pour vérifier que votre source peut diffuser des données en continu, utilisez le côté gauche de l’interface pour télécharger [un exemple de données JSON ;](../assets/testing/raw.json.zip). Une fois vos données chargées, le côté droit de l’interface se met à jour en un aperçu de la hiérarchie de fichiers de vos données. Cliquez sur **[!UICONTROL Suivant]** pour continuer.
+L’étape [!UICONTROL Ajouter les données] apparaît. Pour vérifier que votre source peut diffuser des données en continu, utilisez le côté gauche de l’interface pour télécharger [un exemple de données JSON](../assets/testing/raw.json.zip). Une fois vos données chargées, le côté droit de l’interface se met à jour en un aperçu de la hiérarchie de fichiers de vos données. Cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
 ![L’étape d’ajout de données dans le workflow des sources où vous pouvez charger et prévisualiser vos données avant l’ingestion.](../assets/testing/add-data-test.png)
 
@@ -85,7 +83,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 L’interface de [!UICONTROL mappage] fournit un outil complet pour mapper les champs sources de votre schéma source aux champs XDM cibles correspondants dans le schéma cible.
 
-Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, reportez-vous à la section [Guide de l’interface utilisateur de la préparation de données](../../../data-prep/ui/mapping.md)
+Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, voir la section [Guide de l’interface utilisateur de la préparation de données](../../../data-prep/ui/mapping.md)
 
 Une fois le mappage de vos données source réussi, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -93,14 +91,14 @@ Une fois le mappage de vos données source réussi, sélectionnez **[!UICONTROL 
 
 L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexaminer votre nouveau flux de données avant sa création. Les détails sont regroupés dans les catégories suivantes :
 
-* **[!UICONTROL Connexion]**: Affiche le nom de votre compte, le type de source et d’autres informations diverses spécifiques à la source de stockage dans le cloud de diffusion en continu que vous utilisez.
-* **[!UICONTROL Attribution de champs de jeu de données et de mappage]**: Affiche le jeu de données et le schéma cible que vous utilisez pour votre flux de données.
+* **[!UICONTROL Connexion]**: affiche le nom de votre compte, le type de source et d’autres informations diverses spécifiques à la source de stockage dans le cloud de diffusion en continu que vous utilisez.
+* **[!UICONTROL Attribution de champs de jeu de données et de mappage]**: affiche le jeu de données et le schéma cible que vous utilisez pour votre flux de données.
 
 Une fois que vous avez vérifié votre flux de données, sélectionnez **[!UICONTROL Terminer]** et patientez quelques instants le temps que le flux de données soit créé.
 
 ![L’étape de révision du processus des sources.](../assets/testing/review-test.png)
 
-Enfin, vous devez récupérer le point de terminaison de diffusion en continu de votre flux de données. Ce point de terminaison sera utilisé pour s’abonner à votre webhook, ce qui permet à votre source de diffusion en continu de communiquer avec l’Experience Platform. Pour récupérer votre point de terminaison de diffusion en continu, accédez à [!UICONTROL Activité Flux de données] de la page du flux de données que vous venez de créer et de copier le point de terminaison depuis le bas de la page [!UICONTROL Propriétés] du panneau.
+Enfin, vous devez récupérer le point de terminaison de diffusion en continu de votre flux de données. Ce point de terminaison sera utilisé pour s’abonner à votre webhook, ce qui permet à votre source de diffusion en continu de communiquer avec l’Experience Platform. Pour récupérer votre point de terminaison de diffusion en continu, accédez à la [!UICONTROL Activité Flux de données] de la page du flux de données que vous venez de créer et de copier le point de terminaison depuis le bas de la page [!UICONTROL Propriétés] du panneau.
 
 ![Point de terminaison de diffusion en continu dans l’activité de flux de données.](../assets/testing/endpoint-test.png)
 

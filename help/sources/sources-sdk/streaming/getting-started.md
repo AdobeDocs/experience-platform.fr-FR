@@ -1,13 +1,11 @@
 ---
 title: Prise en main des sources en libre-service (SDK de diffusion en continu)
 description: Ce document présente les informations prérequises que vous devez connaître avant de tenter de créer une source à l’aide de sources en libre-service (SDK de diffusion).
-hide: true
-hidefromtoc: true
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 36%
+source-wordcount: '523'
+ht-degree: 35%
 
 ---
 
@@ -42,14 +40,14 @@ Vous pouvez également télécharger les modèles de documentation ci-dessous :
 
 >[!IMPORTANT]
 >
->Pour envoyer des mises à jour, la source que vous intégrez à Experience Platform doit pouvoir prendre en charge un webhook auquel un point de terminaison peut être abonné.
+>Pour envoyer des mises à jour, la source intégrée à Experience Platform doit pouvoir prendre en charge un webhook auquel un point de terminaison peut être abonné.
 
 Pour utiliser des sources en libre-service (SDK de diffusion en continu), vous devez vous assurer que vous avez accès à une organisation d’environnement de test configurée avec des sources Adobe Experience Platform.
 
 Ce guide nécessite également une compréhension pratique des composants suivants de Adobe Experience Platform :
 
 * [Sources](../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ## Lecture d’exemples d’appels API
 
@@ -69,7 +67,7 @@ Toutes les ressources de Platform, y compris celles appartenant à [!DNL Flow Se
 
 >[!NOTE]
 >
->Pour plus d’informations sur les environnements de test dans Platform, voir [documentation sandbox](../../../sandboxes/home.md).
+>Pour plus d’informations sur les environnements de test dans Platform, voir [documentation des environnements de test](../../../sandboxes/home.md).
 
 Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-tête supplémentaire :
 

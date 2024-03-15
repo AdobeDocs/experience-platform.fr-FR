@@ -1,13 +1,11 @@
 ---
 title: Modèle de documentation en libre-service pour l’API du SDK de diffusion en continu
 description: Découvrez comment importer des données en continu d’une source vers Adobe Experience Platform à l’aide de l’API Flow Service.
-hide: true
-hidefromtoc: true
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '1700'
-ht-degree: 42%
+source-wordcount: '1637'
+ht-degree: 43%
 
 ---
 

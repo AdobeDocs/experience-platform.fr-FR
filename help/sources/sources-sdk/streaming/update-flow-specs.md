@@ -1,10 +1,8 @@
 ---
 title: Mise à jour des spécifications de flux pour le SDK de diffusion en continu à l’aide de l’API Flow Service
 description: Le document suivant décrit les étapes à suivre pour récupérer et mettre à jour les spécifications de flux à l’aide de l’API Flow Service pour les sources en libre-service (SDK de diffusion en continu).
-hide: true
-hidefromtoc: true
 exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
 source-wordcount: '403'
 ht-degree: 14%
@@ -17,7 +15,7 @@ Une fois que vous avez généré un nouvel identifiant de spécification de conn
 
 Les spécifications de flux contiennent des informations qui définissent un flux, notamment les identifiants de connexion source et cible pris en charge, les spécifications de transformation nécessaires à l’application aux données et les paramètres de planification requis pour générer un flux. Vous pouvez modifier les spécifications de flux en utilisant la méthode `/flowSpecs` point de terminaison .
 
-Le document suivant décrit les étapes à suivre pour récupérer et mettre à jour les spécifications de flux à l’aide du [!DNL Flow Service] API pour les sources en libre-service (SDK de diffusion en continu).
+Le document suivant décrit les étapes à suivre pour récupérer et mettre à jour les spécifications de flux à l’aide du [!DNL Flow Service] API pour les sources en libre-service (SDK de diffusion).
 
 ## Prise en main
 
@@ -147,7 +145,7 @@ Une réponse réussie renvoie les détails de la spécification de flux interrog
 
 ## Mettre à jour une spécification de flux {#update}
 
-Vous pouvez mettre à jour les champs d’une spécification de flux par le biais d’une opération de PUT. Lors de la mise à jour d’une spécification de flux via une requête de PUT, le corps doit inclure tous les champs requis lors de la création d’une spécification de flux dans une requête de POST.
+Vous pouvez mettre à jour les champs d’une spécification de flux via une opération de PUT. Lors de la mise à jour d’une spécification de flux via une requête de PUT, le corps doit inclure tous les champs requis lors de la création d’une spécification de flux dans une requête de POST.
 
 >[!IMPORTANT]
 >
@@ -365,4 +363,4 @@ Une réponse réussie renvoie les détails de la spécification de flux interrog
 
 ## Étapes suivantes
 
-Une fois la nouvelle spécification de connexion ajoutée à la spécification de flux appropriée, vous pouvez passer au test et envoyer votre nouvelle source. Consultez le guide sur la [test et envoi d’une nouvelle source](./submit.md) pour plus d’informations.
+Une fois la nouvelle spécification de connexion ajoutée à la spécification de flux appropriée, vous pouvez passer au test et envoyer votre nouvelle source. Consultez le guide sur la [tester et envoyer une nouvelle source](./submit.md) pour plus d’informations.

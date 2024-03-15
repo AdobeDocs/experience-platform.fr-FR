@@ -1,12 +1,10 @@
 ---
 title: Création d’une spécification de connexion pour le SDK de diffusion en continu à l’aide de l’API Flow Service
 description: Le document suivant décrit les étapes à suivre pour créer une spécification de connexion à l’aide de l’API Flow Service et intégrer une nouvelle source par le biais de sources en libre-service.
-hide: true
-hidefromtoc: true
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '736'
 ht-degree: 37%
 
 ---
@@ -38,8 +36,8 @@ Une fois fourni, vous devez structurer votre référentiel Git privé comme suit
 
 | Artefacts (noms de fichier) | Description | Exemple |
 | --- | --- | --- |
-| {your_source} | Nom de votre source. Ce dossier doit contenir tous les artefacts liés à votre source, dans votre référentiel Git privé. | `medallia` |
-| {your_source}-category.txt | Catégorie à laquelle appartient votre source, formatée en tant que fichier texte. **Remarque**: Si vous pensez que votre source ne correspond à aucune des catégories ci-dessus, veuillez contacter votre représentant d’Adobe pour en discuter. | `medallia-category.txt` Dans le fichier, veuillez spécifier la catégorie de votre source, par exemple : `streaming`. |
+| {your_source} | Nom de la source. Ce dossier doit contenir tous les artefacts liés à votre source, dans votre référentiel Git privé. | `medallia` |
+| {your_source}-category.txt | Catégorie à laquelle appartient votre source, formatée en tant que fichier texte. **Remarque**: si vous pensez que votre source ne correspond à aucune des catégories ci-dessus, contactez votre représentant d’Adobe pour discuter. | `medallia-category.txt` Dans le fichier, veuillez spécifier la catégorie de votre source, par exemple : `streaming`. |
 | {your_source}-description.txt | Brève description de votre source. | [!DNL Medallia] est la source d’automatisation du marketing que vous pouvez utiliser pour apporter. [!DNL Medallia] données à Experience Platform. |
 | {your_source}-icon.svg | L’image à utiliser pour représenter votre source dans le catalogue de sources Experience Platform. Cette icône doit être un fichier de SVG. |
 | {your_source}-label.txt | Le nom de votre source tel qu’il doit apparaître dans le catalogue des sources Experience Platform. | Medallia |
