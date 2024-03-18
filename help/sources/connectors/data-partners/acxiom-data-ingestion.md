@@ -2,7 +2,7 @@
 title: Ingestion des données par l’intermédiaire d’Acxiom
 description: Découvrez comment ingérer [!DNL Acxiom] données à Real-time Customer Data Platform, enrichissez les profils propriétaires, améliorez les audiences et activez-les sur l’ensemble des canaux marketing.
 badge: Version Beta
-source-git-commit: 9419da451616ca7f087ecea7aa66a6c10a474fb3
+source-git-commit: d841975249262fa5908a408e4c27c5f76b92d96e
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 42%
@@ -54,3 +54,4 @@ Les restrictions répertoriées ci-dessous doivent être prises en compte lors d
 ## Étapes suivantes
 
 En lisant ce document, vous avez terminé la configuration préalable nécessaire pour importer les données de votre [!DNL Acxiom] compte à Experience Platform. Vous pouvez maintenant passer au guide sur la [connexion [!DNL Acxiom Data Ingestion] Experience Platform à l’aide de l’interface utilisateur](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).
+
