@@ -5,10 +5,10 @@ breadcrumb-title: Guide du contrôle d’accès
 user-guide-description: Utilisez les profils de produit dans Adobe Admin Console pour gérer les autorisations utilisateurs. Découvrez comment affecter des utilisateurs aux produits et aux sandbox.
 feature: Access Control
 role: Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: e27695a96d7b61e2552387611c4eb63ebc6daf47
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 93%
+source-wordcount: '127'
+ht-degree: 85%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 93%
 * Contrôle d’accès basé sur les attributs {#abac}
    * [Vue d’ensemble](abac/overview.md)
    * [Guide complet](abac/end-to-end-guide.md)
+   * [Utilisation des étiquettes d’accès pour gérer l’accès des utilisateurs aux flux de données de destination](/help/access-control/abac/apply-access-labels-destinations.md)
    * Autorisations {#permissions-ui}
       * [Parcourir](abac/ui/browse.md)
       * [Libellés](abac/ui/labels.md)
