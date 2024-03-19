@@ -5,9 +5,9 @@ breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Découvrez une vue d’ensemble du système de modèle de données d’expérience (XDM) dans Experience Platform et apprenez à utiliser les classes et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: a3b23c67847765692144459939afec23fd15c2a5
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '590'
 ht-degree: 89%
 
 ---
@@ -186,12 +186,13 @@ ht-degree: 89%
       * [Types de données](./ui/resources/data-types.md)
    * Définir des champs {#fields}
       * [Aperçu](./ui/fields/overview.md)
-      * [Champs obligatoires](./ui/fields/required.md)
-      * [Champs d’objet](./ui/fields/object.md)
       * [Champs de tableau](./ui/fields/array.md)
       * [Champs d’énumération](./ui/fields/enum.md)
       * [Champs d’identité](./ui/fields/identity.md)
+      * [Carte](./ui/fields/map.md)
+      * [Champs d’objet](./ui/fields/object.md)
       * [Champs de relation](./ui/fields/relationship.md)
+      * [Champs obligatoires](./ui/fields/required.md)
    * [Workflows basés sur des champs](./ui/field-based-workflows.md)
    * [Générer des exemples de données XDM](./ui/sample.md)
    * [Exporter des schémas XDM](./ui/export.md)

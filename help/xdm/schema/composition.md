@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Principes de base de la composition des schémas
 description: Découvrez les schémas de modèle de données d’expérience (XDM) et les blocs de création, les principes et les bonnes pratiques pour la composition de schémas dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
+source-git-commit: 1b3d20610a48fc48c84dc4901d7b09db4bb8fa1f
 workflow-type: tm+mt
-source-wordcount: '4229'
+source-wordcount: '4236'
 ht-degree: 25%
 
 ---
@@ -261,7 +261,7 @@ Les plages valides de ces types scalaires peuvent être limitées davantage à c
 
 >[!NOTE]
 >
->Le type de champ &quot;map&quot; permet des données de paires clé-valeur, y compris plusieurs valeurs pour une clé unique. Les mappages sont disponibles dans les classes XDM standard et les groupes de champs, mais vous pouvez également définir des mappages personnalisés à l’aide de l’API Schema Registry. Voir le tutoriel sur [définition de champs personnalisés](../tutorials/custom-fields-api.md#custom-maps) pour plus d’informations.
+>Le type de champ &quot;map&quot; permet des données de paires clé-valeur, y compris plusieurs valeurs pour une clé unique. Les mappages se trouvent dans les classes XDM standard et les groupes de champs, mais vous pouvez également définir des mappages personnalisés. Consultez le tutoriel sur l’API sur [définition des champs de mappage personnalisés](../tutorials/custom-fields-api.md#custom-maps) ou le guide sur [définition des champs map dans l’interface utilisateur](../ui/fields/map.md) pour plus d’informations.
 
 ## Exemple de composition {#composition-example}
 

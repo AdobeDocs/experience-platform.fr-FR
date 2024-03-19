@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des jeux de données
 description: Découvrez comment exécuter des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 859b8432986e7426b8fdcfedf1242c3269eae5f1
+source-git-commit: aee82356f1f519398f381e161be14789532561f1
 workflow-type: tm+mt
-source-wordcount: '2769'
-ht-degree: 17%
+source-wordcount: '2932'
+ht-degree: 14%
 
 ---
 
@@ -19,7 +19,7 @@ Ce guide d’utilisation fournit des instructions permettant d’exécuter des a
 
 Ce guide d’utilisation nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Jeu de données](overview.md) : la structure de stockage et de gestion pour la persistance des données dans [!DNL Experience Platform].
+* [Jeux de données](overview.md): construction de stockage et de gestion pour la persistance des données dans [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
    * [Principes de base de la composition des schémas](../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Éditeur de schéma](../../xdm/tutorials/create-schema-ui.md): découvrez comment créer vos propres schémas XDM personnalisés à l’aide du [!DNL Schema Editor] dans la fonction [!DNL Platform] de l’interface utilisateur.
@@ -41,12 +41,36 @@ Ce guide d’utilisation nécessite une compréhension professionnelle des compo
 
 Dans le [!DNL Experience Platform] Interface utilisateur, sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour ouvrir la **[!UICONTROL Jeux de données]** tableau de bord. Le tableau de bord répertorie tous les jeux de données disponibles pour votre organisation. Des détails s’affichent pour chaque jeu de données répertorié, notamment son nom, le schéma auquel le jeu de données adhère et l’état de l’exécution d’ingestion la plus récente.
 
-![Image qui met en surbrillance l’élément Jeux de données dans la barre de navigation de gauche.](../images/datasets/user-guide/browse-datasets.png)
+![L’interface utilisateur de Platform avec l’élément Jeux de données surligné dans la barre de navigation de gauche.](../images/datasets/user-guide/browse-datasets.png)
 
 Sélectionnez le nom d’un jeu de données dans la [!UICONTROL Parcourir] pour accéder à ses **[!UICONTROL Activité du jeu de données]** et afficher les détails du jeu de données que vous avez sélectionné. L’onglet activité contient un graphique qui permet de visualiser le taux de messages consommé ainsi qu’une liste des lots réussis et en échec.
 
-![Les détails du jeu de données sélectionné sont mis en surbrillance.](../images/datasets/user-guide/dataset-activity-1.png)
-![Les exemples de lots appartenant à votre jeu de données sélectionné sont mis en surbrillance.](../images/datasets/user-guide/dataset-activity-2.png)
+![Les mesures et les visualisations du jeu de données sélectionné sont mises en surbrillance.](../images/datasets/user-guide/dataset-activity-1.png)
+![Les exemples de lots qui se rapportent à votre jeu de données sélectionné sont mis en surbrillance.](../images/datasets/user-guide/dataset-activity-2.png)
+
+## Actions supplémentaires {#more-actions}
+
+Vous pouvez [!UICONTROL Supprimer] ou [!UICONTROL Activation d’un jeu de données pour Profile] de la [!UICONTROL Jeu de données] vue détails. Pour afficher les actions disponibles, sélectionnez **[!UICONTROL .. Plus]** en haut à droite de l’interface utilisateur. Le menu déroulant s’affiche.
+
+![L’espace de travail des jeux de données avec le [!UICONTROL .. Plus] menu déroulant en surbrillance.](../images/datasets/user-guide/more-actions.png)
+
+Si vous sélectionnez **[!UICONTROL Activation d’un jeu de données pour Profile]**, une boîte de dialogue de confirmation s’affiche. Sélectionner **[!UICONTROL Activer]** pour confirmer votre choix.
+
+>[!NOTE]
+>
+>Pour activer un jeu de données pour Profile, le schéma auquel le jeu de données adhère doit être compatible pour être utilisé dans Real-time Customer Profile. Voir [Activation d’un jeu de données pour Profile](#enable-profile) pour plus d’informations.
+
+![La boîte de dialogue de confirmation Activer le jeu de données .](../images/datasets/user-guide/profile-enable-confirmation-dialog.png)
+
+Si vous sélectionnez **[!UICONTROL Supprimer]**, la variable [!UICONTROL Suppression d’un jeu de données] la boîte de dialogue de confirmation s’affiche. Sélectionner **[!UICONTROL Supprimer]** pour confirmer votre choix.
+
+>[!NOTE]
+>
+>Vous ne pouvez pas supprimer les jeux de données système.
+
+Vous pouvez également supprimer un jeu de données ou ajouter un jeu de données à utiliser avec Real-time Customer Profile à partir des actions intégrées figurant sur la page [!UICONTROL Parcourir] . Voir [section actions en ligne](#inline-actions) pour plus d’informations.
+
+![Boîte de dialogue de confirmation de suppression du jeu de données.](../images/datasets/user-guide/delete-confirmation-dialog.png)
 
 ## Actions de jeux de données intégrés {#inline-actions}
 
@@ -135,14 +159,14 @@ Pour des méthodes plus robustes d’accès à vos données, [!DNL Experience Pl
 
 ## Créer un jeu de données {#create}
 
-Pour créer un jeu de données, commencez par sélectionner **[!UICONTROL Créer un jeu de données]** dans le tableau de bord Jeux de données.****
+Pour créer un jeu de données, commencez par sélectionner **[!UICONTROL Création d’un jeu de données]** dans le **[!UICONTROL Jeux de données]** tableau de bord.
 
 ![Le bouton Créer un jeu de données est mis en surbrillance.](../images/datasets/user-guide/select-create.png)
 
 Sur l’écran suivant, les deux options de création d’un nouveau jeu de données suivantes vous sont proposées :
 
-* [Créer un jeu de données à partir d’un schéma](#schema)
-* [Créer un jeu de données à partir d’un fichier CSV](#csv)
+* [Création d’un jeu de données à partir d’un schéma](#schema)
+* [Création d’un jeu de données à partir d’un fichier CSV](#csv)
 
 ### Création d’un jeu de données à partir d’un schéma existant {#schema}
 

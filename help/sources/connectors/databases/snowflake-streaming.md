@@ -5,7 +5,7 @@ badgeBeta: label="Version Beta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-05-25T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: c80535cbb5dda55f1cf145f9f40bbcd40c78e63e
 workflow-type: tm+mt
 source-wordcount: '710'
 ht-degree: 11%
@@ -47,7 +47,6 @@ Pour [!DNL Flow Service] pour vous connecter à [!DNL Snowflake], vous devez fou
 | `role` | (Facultatif) Rôle personnalisé pouvant être fourni à un utilisateur, pour une connexion donnée. Si elle n’est pas fournie, cette valeur est définie par défaut sur `public`. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Snowflake] is `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
 
-Pour plus d&#39;informations sur l&#39;authentification, reportez-vous à cette section [[!DNL Snowflake] document](<https://docs.snowflake.com/en/user-guide/key-pair-auth.html>).
 
 ### Configuration des paramètres des rôles {#configure-role-settings}
 
@@ -83,3 +82,4 @@ Pour plus d’informations sur la gestion des rôles et des privilèges, voir [[
 Le tutoriel suivant décrit les étapes à suivre pour connecter votre [!DNL Snowflake] source de diffusion en continu vers l’Experience Platform à l’aide de l’API :
 
 * [Diffusion de données en continu à partir d’une [!DNL Snowflake] base de données à Experience Platform à l’aide de l’API Flow Service](../../tutorials/api/create/databases/snowflake-streaming.md)
+* [Diffusion de données en continu à partir d’une [!DNL Snowflake] base de données à Experience Platform à l’aide de l’espace de travail sources dans l’interface utilisateur Experience Platform](../../tutorials/ui/create/databases/snowflake-streaming.md)

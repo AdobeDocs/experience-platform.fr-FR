@@ -1,10 +1,8 @@
 ---
 title: Ingestion des données de paiement à partir de vos [!DNL Stripe] compte à Experience Platform à l’aide des API
 description: Découvrez comment ingérer des données de paiement de votre compte de Stripe vers Experience Platform à l’aide de l’API Flow Service
-hide: true
-hidefromtoc: true
 badge: Version Beta
-source-git-commit: b5e791882ddb7cb8c87c15d4812470b3bbc9a72e
+source-git-commit: f8df3ddb96ad0810a7a46b0a55125336c427aebd
 workflow-type: tm+mt
 source-wordcount: '1998'
 ht-degree: 45%

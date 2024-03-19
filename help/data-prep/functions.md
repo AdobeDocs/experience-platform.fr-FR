@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Fonctions de mappage de prép de données
 description: Ce document présente les fonctions de mappage utilisées avec Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: ac90dc055a1e4d1d8127899f668e619deab2d19e
 workflow-type: tm+mt
-source-wordcount: '5789'
+source-wordcount: '5792'
 ht-degree: 9%
 
 ---
@@ -289,7 +289,7 @@ Pour plus d’informations sur les valeurs de champ d’appareil, veuillez lire 
 
 >[!NOTE]
 >
->Vous ne pouvez utiliser que les fonctions d’analyse suivantes pour l’ingestion par flux.
+>Vous ne pouvez utiliser que les fonctions d’analyse suivantes pour les flux WebSDK et Adobe Analytics.
 
 | Fonction | Description | Paramètres | Syntaxe | Expression | Exemple de résultat |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’IU de Segmentation Service
 description: Découvrez comment créer et gérer des audiences et des définitions de segment dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c6d471d7bb8cb9d5e376cc49c9c89c39e663d7f9
+source-git-commit: 0e8147a9e4589747b212ce1dd0f0bc215f3bab4c
 workflow-type: tm+mt
-source-wordcount: '3933'
-ht-degree: 87%
+source-wordcount: '4018'
+ht-degree: 86%
 
 ---
 
@@ -212,6 +212,18 @@ La liste des filtres disponibles s’affiche.
 | [!UICONTROL Date de modification] | Permet de filtrer en fonction la date de dernière modification de l’audience. Vous pouvez choisir une période pour filtrer la date de la dernière modification de l’audience. |
 
 ![Les filtres disponibles sont affichés et mis en surbrillance sur la page d’accès aux audiences.](../images/ui/overview/filter-audiences.png)
+
+**Actions en bloc** {#bulk-actions}
+
+En outre, vous pouvez sélectionner jusqu’à 25 audiences différentes et effectuer diverses actions sur ces audiences. Ces actions incluent : [déplacement vers un dossier](#folders), [modification ou application d’une balise](#tags), [application des libellés d’accès](../../access-control/abac/ui/labels.md), et [suppression](#browse).
+
+![Les options disponibles pour les actions en bloc sont mises en surbrillance.](../images/ui/overview/bulk-actions.png)
+
+Lorsque vous appliquez des actions en bloc à ces audiences, les conditions suivantes s’appliquent :
+
+- You **can** sélectionner des audiences à partir de différentes pages ;
+- You **cannot** supprimer une audience utilisée dans une activation de destination.
+- Si vous sélectionnez un filtre, les audiences sélectionnées **will** réinitialiser.
 
 ### Détails de l’audience {#audience-details}
 

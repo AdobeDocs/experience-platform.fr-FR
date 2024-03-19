@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: c05bdceb5092278f6fefb2cb286bf25d97716cf7
+source-git-commit: f8df3ddb96ad0810a7a46b0a55125336c427aebd
 workflow-type: tm+mt
-source-wordcount: '1529'
+source-wordcount: '1530'
 ht-degree: 75%
 
 ---
@@ -181,6 +181,7 @@ Experience Platform prend en charge l’ingestion de données provenant d’un 
 
 - [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE Lot]{type=Informative}
 - [[!DNL Square]](connectors/payments/square.md) [!BADGE Lot]{type=Informative}
+- [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE Lot]{type=Informative}
 
 ### Diffusion en continu {#streaming}
 
