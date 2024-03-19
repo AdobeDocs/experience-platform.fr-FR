@@ -1,10 +1,9 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform
-description: Notes de mise à jour de janvier 2024 pour Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+title: Notes de mise à jour d’Adobe Experience Platform - Mars 2024
+description: Les notes de mise à jour de mars 2024 pour Adobe Experience Platform.
 source-git-commit: 53424842fb93315ed71f4245f04141bccfb2a8ac
 workflow-type: tm+mt
-source-wordcount: '1041'
+source-wordcount: '1043'
 ht-degree: 35%
 
 ---
@@ -117,3 +116,4 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 {style="table-layout:auto"}
 
 Pour plus d’informations sur les sources, consultez la [présentation des sources](../../sources/home.md).
+
