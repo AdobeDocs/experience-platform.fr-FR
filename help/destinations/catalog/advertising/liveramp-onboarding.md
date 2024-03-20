@@ -3,10 +3,10 @@ title: LiveRamp - Connexion pour l’intégration
 description: Découvrez comment utiliser le connecteur LiveRamp pour intégrer des audiences d’Adobe Real-time Customer Data Platform vers LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: a235f9a66ea15fc5e72dd6ed03e4a6a384fd30a4
 workflow-type: tm+mt
-source-wordcount: '1759'
-ht-degree: 96%
+source-wordcount: '1941'
+ht-degree: 89%
 
 ---
 
@@ -70,6 +70,9 @@ Pour vous authentifier à la destination, renseignez les champs requis et sélec
 
 ![Exemple de capture d’écran montrant comment s’authentifier à la destination à l’aide du SFTP avec un mot de passe](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png)
 
+* **[!UICONTROL Port]**: port utilisé pour votre [!DNL LiveRamp - Onboarding] emplacement de stockage.  Utilisez le port correspondant à votre emplacement géographique, comme décrit ci-dessous :
+   * **[!UICONTROL NA]**: utiliser le port `22`
+   * **[!UICONTROL AU]**: utiliser le port `2222`
 * **[!UICONTROL Nom d’utilisateur]** : nom d’utilisateur de votre emplacement de stockage [!DNL LiveRamp - Onboarding].
 * **[!UICONTROL Mot de passe]** : mot de passe de votre emplacement de stockage [!DNL LiveRamp - Onboarding].
 * **[!UICONTROL Clé de chiffrement PGP/GPG]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
@@ -80,6 +83,8 @@ Pour vous authentifier à la destination, renseignez les champs requis et sélec
 
 ![Exemple de capture d’écran montrant comment s’authentifier à la destination à l’aide de la clé SSH](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png)
 
+* **[!UICONTROL Port]**: port utilisé pour votre [!DNL LiveRamp - Onboarding] emplacement de stockage.  Utilisez le port correspondant à votre emplacement géographique, comme décrit ci-dessous :
+   * **[!UICONTROL UE]**: utiliser le port `4222`
 * **[!UICONTROL Nom d’utilisateur]** : nom d’utilisateur de votre emplacement de stockage [!DNL LiveRamp - Onboarding].
 * **[!UICONTROL Clé SSH]** : la clé privée [!DNL SSH] utilisée pour se connecter à votre emplacement de stockage [!DNL LiveRamp - Onboarding]. La clé privée doit être formatée sous la forme d’une chaîne codée en [!DNL Base64] et ne doit pas être protégée par un mot de passe.
 
@@ -99,10 +104,11 @@ Pour vous authentifier à la destination, renseignez les champs requis et sélec
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-![Capture d’écran de l’interface utilisateur de Platform montrant comment remplir les détails pour votre destination](../../assets/catalog/advertising/liveramp-onboarding/liveramp-connection-details.png)
+![Capture d’écran de l’interface utilisateur de Platform montrant comment remplir les détails pour votre destination](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
+* **[!UICONTROL Région]**: région géographique de votre instance du stockage SFTP LiveRamp.
 * **[!UICONTROL Chemin du dossier]** : saisissez le sous-dossier `uploads` de [!DNL LiveRamp] qui hébergera les fichiers exportés. Le préfixe `uploads` est automatiquement ajouté au chemin du dossier. [!DNL LiveRamp] recommande de créer un sous-dossier dédié pour les diffusions d’Adobe Real-Time CDP afin de séparer les fichiers des autres flux existants et de garantir le bon fonctionnement de l’automatisation.
    * Par exemple, si vous souhaitez exporter vos fichiers vers `uploads/my_export_folder`, saisissez `my_export_folder` dans le champ **[!UICONTROL Chemin du dossier]**.
 * **[!UICONTROL Format de compression]** : sélectionnez le type de compression qu’Experience Platform doit utiliser pour les fichiers exportés. Les options disponibles sont **[!UICONTROL GZIP]** ou **[!UICONTROL Aucun]**.
@@ -179,6 +185,8 @@ Une fois que vous avez ajouté tous les mappages souhaités, sélectionnez **[!U
 
 Vos données sont exportées vers l’emplacement de stockage [!DNL LiveRamp - Onboarding] que vous avez configuré, sous forme de fichiers CSV.
 
+La taille maximale des fichiers exportés est de 10 millions de lignes. Experience Platform génère plusieurs fichiers par diffusion si les audiences sélectionnées dépassent 10 millions de lignes. Si vous prévoyez de dépasser la limite du fichier unique, contactez votre [!DNL LiveRamp] représentez-vous et demandez-leur de configurer l’ingestion par lots pour vous.
+
 Lors de l’exportation de fichiers vers la destination [!DNL LiveRamp - Onboarding], Platform génère un fichier CSV pour chaque [ID de stratégie de fusion](../../../profile/merge-policies/overview.md).
 
 Prenons par exemple les audiences suivantes :
@@ -238,3 +246,18 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 ## Ressources supplémentaires {#additional-resources}
 
 Pour plus d’informations sur la configuration de votre stockage [!DNL LiveRamp - Onboarding], consultez la [documentation officielle](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html).
+
+## Journal des modifications {#changelog}
+
+Cette section répertorie les nouvelles fonctionnalités et les mises à jour importantes de la documentation consacrée au connecteur de destination.
+
++++ Afficher le journal des modifications
+
+| Mois de publication | Type de mise à jour | Description |
+|---|---|---|
+| Mars 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | <ul><li>Ajout de la prise en charge des diffusions en Europe et en Australie [!DNL LiveRamp] [!DNL SFTP] instances.</li><li>Mise à jour de la documentation afin de décrire les configurations spécifiques pour les régions nouvellement prises en charge.</li><li>Augmentation de la taille de fichier maximale à 10 millions de lignes (contre 5 millions auparavant).</li><li>Mise à jour de la documentation pour prendre en compte l’augmentation de la taille des fichiers.</li></ul> |
+| Juillet 2023 | Version initiale | Publication de la destination initiale et de la documentation. |
+
+{style="table-layout:auto"}
+
++++

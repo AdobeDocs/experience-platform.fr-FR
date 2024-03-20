@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2024
 description: Les notes de mise à jour de mars 2024 pour Adobe Experience Platform.
-source-git-commit: 7c913d0cbab0f4f9d2b7b5a476076b0c87795a0d
+source-git-commit: 33952028a4323b2292cdd313da290a5dd079c93f
 workflow-type: tm+mt
-source-wordcount: '1177'
-ht-degree: 36%
+source-wordcount: '1211'
+ht-degree: 35%
 
 ---
 
@@ -81,6 +81,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | [(Version bêta) Connexion d’amélioration des données Acrobat](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | Nouveau | Utilisez ce connecteur pour activer les profils propriétaires de Real-Time CDP vers Acxiom afin d’enrichir les données et de les utiliser sur les canaux marketing. Vous pouvez ensuite utiliser la source Acxiom pour importer les profils contenant des données améliorées et travailler avec eux dans Real-Time CDP. |
 | [(Version Bêta) Connexion de suppression de prospects Acxiom](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Nouveau | Exportez vos audiences propriétaires vers la destination Acxiom pour permettre à Acxiom de supprimer les clients connus ou convertis. Ensuite, utilisez le [Importation de données de prospection dans Acrobat](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) connecteur source pour ingérer et activer des listes de prospects à partir d’Acxiom, vos clients connus ou convertis étant supprimés. |
 | [Connexion Amazon Ads](../../destinations/catalog/advertising/amazon-ads.md) | Mise à jour  | Lors de l’exportation de données vers la destination Amazon Ads, vous pouvez désormais acheminer les données vers la DSP Amazon ou le Marketing Cloud Amazon (nouveau). |
+| [Connexion à l’intégration LiveRamp](../../destinations/catalog/advertising/liveramp-onboarding.md) | Mise à jour  | La destination d’intégration LiveRamp prend désormais en charge les diffusions vers l’Europe et l’Australie [!DNL LiveRamp] [!DNL SFTP] instances. La taille maximale du fichier exporté a également été augmentée à 10 millions de lignes (contre 5 millions auparavant). |
 
 {style="table-layout:auto"}
 
