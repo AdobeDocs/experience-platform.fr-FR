@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour de mars 2024 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 709bb15f75bfee5380b779d595b3487080cbb97a
+source-git-commit: 7c913d0cbab0f4f9d2b7b5a476076b0c87795a0d
 workflow-type: tm+mt
-source-wordcount: '1061'
-ht-degree: 34%
+source-wordcount: '1175'
+ht-degree: 36%
 
 ---
 
@@ -20,6 +20,7 @@ ht-degree: 34%
 Mises à jour des fonctionnalités existantes dans Experience Platform :
 
 - [Catalog Service](#catalog-service)
+- [Collecte de données](#data-collection)
 - [Préparation des données](#data-prep)
 - [Destinations](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
@@ -55,6 +56,20 @@ La préparation des données permet aux personnes travaillant dans l’ingénier
 {style="table-layout:auto"}
 
 Pour plus d’informations sur la préparation des données, consultez la [présentation de la préparation des données](../../data-prep/home.md).
+
+## Collecte de données {#data-collection}
+
+Adobe Experience Platform fournit une suite de technologies qui vous permettent de collecter des données d’expérience client côté client. Vous pouvez ensuite les envoyer à Adobe Experience Platform Edge Network pour les enrichir, les transformer et les distribuer vers des destinations Adobe ou autres qu’Adobe.
+
+**Nouvelles fonctionnalités**
+
+| Type | Fonctionnalité | Description |
+| --- | --- | --- |
+| Extensions | [!DNL Merkury] Extension de balise | La variable [[!DNL Merkury] extension de balise](https://exchange.adobe.com/apps/ec/600027/merkury-tag) fournit des taux de correspondance de pointe pour les visiteurs anonymes de site web à une [!DNL Merkury] ID. Les marques peuvent tirer parti de la puissance de [!DNL Merkury] marquer et Adobe pour offrir des expériences de site web personnalisées en temps réel. En outre, la variable [!DNL Merkury] La balise permet la croissance de données numériques propriétaires avec des profils clients en ligne et hors ligne connectés. |
+
+{style="table-layout:auto"}
+
+Pour en savoir plus sur la collecte de données, consultez la [vue d’ensemble des collectes de données](../../tags/home.md).
 
 ## Destinations {#destinations}
 
