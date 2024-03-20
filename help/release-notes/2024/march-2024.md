@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2024
 description: Les notes de mise à jour de mars 2024 pour Adobe Experience Platform.
-source-git-commit: 53424842fb93315ed71f4245f04141bccfb2a8ac
+source-git-commit: 709bb15f75bfee5380b779d595b3487080cbb97a
 workflow-type: tm+mt
-source-wordcount: '1043'
-ht-degree: 35%
+source-wordcount: '1063'
+ht-degree: 34%
 
 ---
 
@@ -28,6 +28,10 @@ Mises à jour des fonctionnalités existantes dans Experience Platform :
 ## Catalog Service {#catalog-service}
 
 Le Catalog Service est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous la forme de fichiers et de répertoires, le catalogue contient les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
+
+>[!NOTE]
+>
+>Nous nous rendons compte et travaillons à résoudre un problème d’affichage où une syntaxe inutile est rendue en regard des images dans les tableaux.
 
 | Fonctionnalité | Description |
 | --- | --- |
