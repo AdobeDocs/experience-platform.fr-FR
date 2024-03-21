@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation du contrôle d’accès
 description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans l’Admin Console, liant les utilisateurs et utilisatrices à des autorisations et des sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: df24799e4644a98941b707bb216a4ad434f5ebf9
 workflow-type: tm+mt
-source-wordcount: '1706'
-ht-degree: 84%
+source-wordcount: '1707'
+ht-degree: 83%
 
 ---
 
@@ -27,7 +27,7 @@ Un workflow de haut niveau d’obtention et d’attribution d’autorisations d�
 
 - Après lʼattribution dʼune licence pour Adobe Experience Platform, ou pour une application/un service applicatif qui utilise Experience Platform, un e-mail est envoyé à lʼadministrateur spécifié lors de lʼattribution de la licence.
 - L’administrateur ou l’administratrice se connecte à [Adobe Admin Console](#adobe-admin-console) et sélectionne **Adobe Experience Platform** depuis la liste de produits sur la page de la vue d’ensemble.
-- Pour accorder l’accès à Experience Platform, l’administrateur ou administratrice doit ajouter des utilisateurs et utilisatrices au profil de produit par défaut : `AEP-Default-All-Users`.
+- Pour accorder l’accès à Experience Platform, il est recommandé que l’administrateur ajoute des utilisateurs au profil de produit par défaut : `AEP-Default-All-Users`.
 - Dans Autorisations dans Experience Platform, l’administrateur ou administratrice peut créer de nouveaux rôles ou modifier les autorisations et les utilisateurs et utilisatrices pour tous les rôles existants.
 - Lors de la création ou de la modification dʼun rôle, lʼadministrateur ou administratrice ajoute les utilisateurs et utilisatrices au rôle à lʼaide de lʼonglet **[!UICONTROL Utilisateurs]**, et accorde des autorisations à ces utilisateurs et utilisatrices (comme « [!UICONTROL Lecture des jeux de données] » ou « [!UICONTROL Gestion des schémas] ») en modifiant les autorisations des rôles. De même, l’administrateur ou administratrice peut attribuer des accès aux sandbox à l’aide de la même option de modification.
 - Lorsque les utilisateurs et utilisatrices se connectent à l’interface utilisateur Experience Platform, leur accès aux fonctionnalités d’Experience Platform est géré par les autorisations qui leur ont été accordées à l’étape précédente. Par exemple, si un utilisateur ou une utilisatrice ne dispose pas de lʼautorisation « [!UICONTROL Affichage des jeux de données] », lʼonglet **[!UICONTROL Jeux de données]** nʼapparaîtra pas dans le menu latéral pour cet utilisateur ou utilisatrice.
