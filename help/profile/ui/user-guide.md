@@ -3,9 +3,9 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Guide de l’interface utilisateur de Real-Time Customer Profile
 description: Real-Time Customer Profile offre une vue d’ensemble de chaque client, en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec Real-time Customer Profile dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 8cf3771145e09aa8b59a5d569f4f3a7c4820811d
 workflow-type: tm+mt
-source-wordcount: '2008'
+source-wordcount: '2103'
 ht-degree: 7%
 
 ---
@@ -102,7 +102,7 @@ Pour en savoir plus sur les stratégies de fusion et leur rôle dans Platform, v
 
 Sur le **[!UICONTROL Parcourir]** vous pouvez utiliser un espace de noms d’identité afin de rechercher un profil spécifique en fonction d’une valeur d’identité. Pour naviguer selon une identité, vous devez fournir une stratégie de fusion, un espace de noms d’identité et une valeur d’identité.
 
-![Le sélecteur de politique de fusion est mis en surbrillance.](../images/user-guide/browse-by-merge-policy.png)
+![Le sélecteur de stratégie de fusion est mis en surbrillance.](../images/user-guide/browse-by-merge-policy.png)
 
 Si nécessaire, utilisez la méthode **[!UICONTROL Stratégie de fusion]** pour ouvrir le sélecteur **[!UICONTROL Sélectionner une stratégie de fusion]** et choisissez la stratégie de fusion que vous souhaitez utiliser.
 
@@ -144,6 +144,12 @@ Ces attributs peuvent également être affichés sous forme d’objet JSON en s�
 
 ![L’onglet Attributs est surligné. Les attributs de profil s’affichent.](../images/user-guide/attributes.png)
 
+Pour afficher les attributs disponibles sur l’Edge, sélectionnez **[!UICONTROL Edge]** sur le sélecteur d’emplacement des données.
+
+![Le sélecteur d’emplacement de données dans l’onglet Attributs est mis en surbrillance.](../images/user-guide/attributes-select.png)
+
+Pour plus d’informations sur les profils Edge, veuillez lire la section [documentation sur les profils Edge](../edge-profiles.md).
+
 ### Onglet Événements
 
 La variable **[!UICONTROL Événements]** Cet onglet contient les données des 100 événements d’expérience les plus récents associés au client. Ces données peuvent inclure les ouvertures de courrier électronique, les activités de panier et les pages vues. Sélection **[!UICONTROL Afficher tout]** pour chaque événement individuel fournit des champs et des valeurs supplémentaires capturés dans le cadre de l’événement.
@@ -158,7 +164,11 @@ La variable **[!UICONTROL abonnement à l’audience]** affiche une liste avec l
 
 Pour plus d’informations sur la segmentation dans Experience Platform, reportez-vous au [Documentation d’Adobe Experience Platform Segmentation Service](../../segmentation/home.md).
 
-![L’onglet Appartenance à une audience est mis en surbrillance. Les détails de l’appartenance à l’audience du profil s’affichent.](../images/user-guide/segment-membership.png)
+![L’onglet Appartenance à une audience est mis en surbrillance. Les détails de l’appartenance à l’audience du profil s’affichent.](../images/user-guide/audience-membership.png)
+
+Pour afficher l’appartenance à l’audience des profils disponibles sur Edge, sélectionnez **[!UICONTROL Edge]** dans le sélecteur d’emplacement des données. Vous trouverez plus d’informations sur la segmentation Edge dans la section [guide de segmentation Edge](../../segmentation/ui/edge-segmentation.md).
+
+![Le sélecteur d’emplacement de données dans l’onglet abonnement de l’audience est mis en surbrillance.](../images/user-guide/audience-membership-select.png)
 
 ## Politiques de fusion
 
