@@ -3,7 +3,7 @@ title: Amazon Ads
 description: Amazon Ads offre toute une gamme de solutions pour vous aider à atteindre vos objectifs publicitaires. Les partenaires de vente enregistrés, les vendeurs et vendeuses, les marchands de livres, les auteures et auteurs Kindle Direct Publishing (KDP), les personnes développant des applications et/ou les agences peuvent tirer parti du connecteur. L’intégration d’Amazon Ads à Adobe Experience Platform offre une intégration clé en main aux produits Amazon Ads, y compris Amazon DSP (ADSP). À l’aide de la destination Amazon Ads dans Adobe Experience Platform, les utilisateurs et utilisatrices peuvent définir des audiences d’annonceurs pour le ciblage et l’activation sur Amazon DSP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 24f7463f7005f77f8d93e7cb2c04efc0fb4e3a0b
+source-git-commit: ba768b3148d57e9df12a34f0324c086a17a6d45a
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 55%
@@ -16,7 +16,7 @@ ht-degree: 55%
 
 [!DNL Amazon Ads] offre toute une gamme d’options pour vous aider à atteindre vos objectifs publicitaires pour les vendeurs enregistrés, les vendeurs, les vendeurs de livres, les auteurs de publication directe Kindle (KDP), les développeurs d’applications et/ou les agences.
 
-La variable [!DNL Amazon Ads] l’intégration à Adobe Experience Platform permet une intégration clé en main à [!DNL Amazon Ads] produits, y compris Amazon DSP (ADSP) et Amazon Marketing Cloud (AMC).
+La variable [!DNL Amazon Ads] l’intégration à Adobe Experience Platform permet une intégration clé en main à [!DNL Amazon Ads] les produits, y compris le DSP Amazon (ADSP) et le Marketing Cloud Amazon (AMC).
 
 En utilisant la variable [!DNL Amazon Ads] dans Adobe Experience Platform, les utilisateurs peuvent définir des audiences d’annonceurs pour le ciblage et l’activation sur la DSP Amazon.  En outre, les utilisateurs peuvent charger leurs données vers [!DNL Amazon Marketing Cloud] pour comprendre les performances par audience, dimensions fournies par l’annonceur, appartenance à des segments Amazon ou autres signaux disponibles dans AMC. Après avoir téléchargé les audiences des annonceurs vers AMC, les utilisateurs peuvent utiliser [!DNL Amazon Marketing Cloud] pour modifier, améliorer ou ajouter des données aux membres de l’audience à l’aide de signaux Amazon depuis l’intérieur de [!DNL Amazon Marketing Cloud].
 
@@ -171,7 +171,7 @@ Cette section répertorie les nouvelles fonctionnalités et les mises à jour im
 
 | Mois de publication | Type de mise à jour | Description |
 |---|---|---|
-| Février 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | Ajout de la possibilité d’exporter les audiences à utiliser dans [!DNL Amazon Marketing Cloud] (AMC). |
+| Mars 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | Ajout de la possibilité d’exporter les audiences à utiliser dans [!DNL Amazon Marketing Cloud] (AMC). |
 | Mai 2023 | Nouvelles fonctionnalités et mise à jour de la documentation | <ul><li>Ajout de la prise en charge de la sélection de la zone géographique de l’annonceur dans le [workflow de connexion de destination](#destination-details).</li><li>Nouvelle documentation sur la fonctionnalité de sélection de la zone géographique de l’annonceur. Pour plus d’informations sur la sélection de la zone géographique de l’annonceur appropriée, consultez la [documentation d’Amazon](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | Mars 2023 | Version initiale | Publication de la destination initiale et de la documentation. |
 
