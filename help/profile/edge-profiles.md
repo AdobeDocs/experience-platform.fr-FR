@@ -2,9 +2,9 @@
 title: Profils Edge
 description: Découvrez les profils Edge, ainsi que la terminologie associée, les régions disponibles pour les profils Edge et les services disponibles pour les profils Edge.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
+source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
@@ -13,17 +13,16 @@ ht-degree: 0%
 
 Dans Adobe Experience Platform, Real-Time Customer Profile est la source unique de vérité pour les données d’entité. Ces données de profil se trouvent dans un hub central et permettent d’utiliser des cas d’utilisation qui reposent sur l’exhaustivité et l’exhaustivité de vos données. Toutefois, dans les cas d’utilisation en temps réel où le respect du temps est plus important, les profils de périphérie sont l’option préférée. Les profils Edge sont des profils légers qui se trouvent en périphérie et qui aident à des cas d’utilisation de la personnalisation en temps réel.
 
-Par exemple, les applications Adobe telles qu’Adobe Target, la destination de personnalisation personnalisée et Adobe Campaign utilisent des périphéries afin de fournir des expériences client personnalisées en temps réel. Les données sont acheminées vers une périphérie par une projection, avec une destination de projection qui définit la périphérie vers laquelle les données seront envoyées, et une configuration de projection qui définit les informations spécifiques qui seront rendues disponibles sur la périphérie.
+Par exemple, les applications Adobe telles qu’Adobe Target, la destination de personnalisation personnalisée et Adobe Campaign utilisent des périphéries afin de fournir des expériences client personnalisées en temps réel. Les données sont acheminées vers une périphérie par une projection, avec une destination de projection qui définit la périphérie vers laquelle les données seront envoyées.
 
 ## Terminologie {#terminology}
 
 Lorsque vous utilisez des bords, veillez à comprendre les concepts suivants :
 
 - **Edge**: une périphérie est un serveur géographiquement placé qui stocke les données et les rend facilement accessibles aux applications.
-- **Configuration de la projection**: une configuration de projection décrit comment une entité donnée doit être répliquée en périphérie pour un client donné et dans quelles conditions. Par exemple, pour Luma (un exemple de client), seuls les champs dont l’âge et le sexe correspondent au jeu de données suivant le schéma de profil doivent se propager aux périphéries.
-- **projection de périphérie**: une projection de périphérie est l’application d’une configuration de projection sur un bord spécifique à un élément de données avec un identifiant unique conforme à un schéma donné pour un client donné. Par exemple, une entité respectant le schéma de profil avec l’ID `CJsDEAMaEAHmCKwPCQYNvzxD9JGDHZ8`, visiteur du site web Luma, répliqué vers le centre de données VA6, contenant les champs `age = 35` et `gender = male`.
+- **projection de périphérie**: une projection Edge est la vue de projection système du profil sur un serveur Edge spécifique pour représenter les données de profil avec un identifiant unique conforme à un schéma donné pour un client donné. Par exemple, une entité respectant le schéma de profil avec l’ID `CJsDEAMaEAHmCKwPCQYNvzxD9JGDHZ8`, visiteur du site web Luma, répliqué vers le centre de données VA6, contenant les champs `age = 35` et `gender = male`.
 
-En d’autres termes, les données sont acheminées vers une périphérie par une projection, avec la variable **destination de la projection** définition **which** Edge les données seront envoyées à et la variable **configuration de projection** définition **what** Les données sont envoyées à la périphérie spécifiée.
+En d’autres termes, les données sont acheminées vers une périphérie par une projection, avec la variable **destination de la projection** définition **which** Edge les données seront envoyées à .
 
 ## Régions disponibles {#regions}
 
@@ -43,13 +42,8 @@ Toutes ces régions sont des options valides pour que les profils puissent y acc
 
 Les services suivants sont activés pour la recherche de profil en périphérie :
 
-- [Service de configuration de profil Edge](#edge-profile-configuration-service)
 - [Service de traitement de projection](#mepw)
 - [Service de profil express](#xps)
-
-### Service de configuration de profil Edge {#edge-profile-configuration-service}
-
-Le service de configuration de profil Edge expose les API des solutions et applications en aval pour créer des configurations de projection. Vous pouvez utiliser ces API pour spécifier les attributs et les audiences d’un profil qui doit être envoyé aux périphéries, ainsi que les régions périphériques où la projection doit être envoyée. À ce stade, vous pouvez spécifier **any** des régions périphériques pour les projections.
 
 ### Service de traitement de projection {#mepw}
 
@@ -70,8 +64,6 @@ La section suivante répertorie les questions fréquentes sur les profils Edge :
 ### Quelles régions peuvent accueillir les profils en périphérie ?
 
 Les profils Edge peuvent atterrir dans différentes régions en fonction de la situation à portée de main.
-
-Pour les configurations de projection, toutes les modifications apportées au profil seront propagées à toutes les régions mentionnées dans la configuration du profil.
 
 De plus, chaque profil de périphérie comporte un attribut de schéma appelé région d’activité utilisateur (UAR). Toutes les périphéries visitées par ce profil au cours des 14 derniers jours sont répertoriées dans cet attribut de profil. Par conséquent, lorsque cet attribut est présent dans un profil, toutes les modifications apportées au profil sont également envoyées à toutes les régions répertoriées dans l’UAR.
 
