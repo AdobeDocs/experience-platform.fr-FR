@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des sandbox
 description: Les sandbox constituent des partitions virtuelles au sein d’une instance d’Experience Platform unique, ce qui permet une intégration transparente au processus de développement de vos applications d’expérience digitale.
 exl-id: b760a979-8134-4a44-8433-ec6fb49bc508
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 06f1b64d5c4dfa6e0ca1f6da171ece8e9db9e693
 workflow-type: tm+mt
-source-wordcount: '1002'
-ht-degree: 100%
+source-wordcount: '991'
+ht-degree: 97%
 
 ---
 
@@ -42,7 +42,7 @@ Enfin, la sandbox de production par défaut est la première sandbox de producti
 Pour résumer, les sandbox offrent les avantages suivants :
 
 * **Gestion du cycle de vie des applications** : créez des environnements virtuels distincts pour développer et faire évoluer des applications d’expérience digitale.
-* **Gestion de projet et de marque** : permet à plusieurs projets de fonctionner en parallèle au sein de la même organisation, tout en maintenant l’isolement et le contrôle d’accès. Les prochaines versions prendront en charge l’assistance au déploiement dans plusieurs régions.
+* **Gestion de projet et de marque**: permet à plusieurs projets de s’exécuter en parallèle au sein de la même organisation, tout en fournissant un isolement et un contrôle d’accès.
 * **Écosystème de développement flexible** : proposez des sandbox de manière transparente, évolutive et économique pour l’exploration, l’activation et la démonstration.
 
 ## Contrôle d’accès pour les sandbox
