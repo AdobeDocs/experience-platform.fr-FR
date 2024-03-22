@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;connexion e
 title: Création d’une connexion en continu d’API HTTP à l’aide de l’API Flow Service
 description: Ce tutoriel explique comment créer une connexion en continu à l’aide de la source d’API HTTP pour les données brutes et XDM à l’aide de l’API Flow Service.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: fe2e93b9595d9df9a088d627d696b559f259e80d
+source-git-commit: afe632181295cc1460b3489d9b0306ef9342abfe
 workflow-type: tm+mt
-source-wordcount: '1568'
-ht-degree: 37%
+source-wordcount: '1658'
+ht-degree: 34%
 
 ---
 
@@ -456,9 +456,6 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 }
 ```
 
-| Propriété | Description |
-| --- | --- |
-
 ## Créer un flux de données
 
 Une fois vos connexions source et cible créées, vous pouvez désormais créer un flux de données. Le flux de données est chargé de planifier et de collecter les données d’une source. Vous pouvez créer un flux de données en adressant une requête de POST au `/flows` point de terminaison .
@@ -579,16 +576,16 @@ POST /collection/{INLET_URL}
 | Paramètre | Description |
 | --------- | ----------- |
 | `{INLET_URL}` | Votre URL de point de terminaison de diffusion en continu. Vous pouvez récupérer cette URL en effectuant une requête de GET à la variable `/connections` point de terminaison tout en fournissant votre identifiant de connexion de base. |
-| `{FLOW_ID}` | Identifiant du flux de données de diffusion en continu de votre API HTTP. |
+| `{FLOW_ID}` | Identifiant du flux de données de diffusion en continu de votre API HTTP. Cet identifiant est requis pour les données XDM et RAW. |
 
 **Requête**
 
 >[!BEGINTABS]
 
->[!TAB XDM]
+>[!TAB Envoi de données XDM]
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
   -H 'Content-Type: application/json' \
   -d '{
         "header": {
@@ -625,10 +622,36 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
       }'
 ```
 
->[!TAB Données brutes]
+>[!TAB Envoi de données brutes avec un ID de flux en tant qu’en-tête HTTP]
+
+Lors de l’envoi de données brutes, vous pouvez spécifier votre identifiant de flux comme paramètre de requête ou dans le cadre de votre en-tête HTTP. L’exemple suivant spécifie l’ID de flux comme en-tête HTTP.
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=e5895dc9-b0c8-4431-bab7-bb0d2b4be5db \
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec \
+  -H 'Content-Type: application/json' 
+  -H 'x-adobe-flow-id=f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male",
+      "birthday": {
+          "year": 1984,
+          "month": 6,
+          "day": 9
+      }
+  }'
+```
+
+>[!TAB Envoi de données brutes avec l’ID de flux comme paramètre de requête]
+
+Lors de l’envoi de données brutes, vous pouvez spécifier votre identifiant de flux comme paramètre de requête ou en tant qu’en-tête HTTP. L’exemple suivant spécifie l’ID de flux comme paramètre de requête.
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20afa727cc8d8373e51da18b62e1b985ec?x-adobe-flow-id=f2ae0194-8bd8-4a40-a4d9-f07bdc3e6ce2 \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "Johnson Smith",
