@@ -3,7 +3,7 @@ title: Amazon Ads
 description: Amazon Ads offre toute une gamme de solutions pour vous aider à atteindre vos objectifs publicitaires. Les partenaires de vente enregistrés, les vendeurs et vendeuses, les marchands de livres, les auteures et auteurs Kindle Direct Publishing (KDP), les personnes développant des applications et/ou les agences peuvent tirer parti du connecteur. L’intégration d’Amazon Ads à Adobe Experience Platform offre une intégration clé en main aux produits Amazon Ads, y compris Amazon DSP (ADSP). À l’aide de la destination Amazon Ads dans Adobe Experience Platform, les utilisateurs et utilisatrices peuvent définir des audiences d’annonceurs pour le ciblage et l’activation sur Amazon DSP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: ba768b3148d57e9df12a34f0324c086a17a6d45a
+source-git-commit: 8e34e5488ab80cd1f3c8086bf7c16d3f22527540
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 55%
@@ -38,7 +38,7 @@ Cette intégration avec Amazon DSP permet [!DNL Amazon Ads] les annonceurs doive
 
 Cette intégration avec [!DNL Amazon Marketing Cloud] (AMC) permet [!DNL Amazon Ads] les publicitaires pour transmettre des segments CDP du formulaire Adobe Experience Platform à AMC. Les annonceurs peuvent alors joindre les entrées CDP avec [!DNL Amazon Ads] signaux et effectuez des analyses personnalisées sur des sujets tels que l’impact multimédia, les segments d’audience et les parcours client dans un format conforme à la confidentialité. Par exemple, un annonceur peut charger une liste de ses clients existants pour comprendre les performances agrégées des campagnes publicitaires ou des statistiques agrégées d’événements de conversion on-Amazon, telles que l’affichage d’une page des détails d’un produit, l’ajout d’un produit à un panier ou l’achat d’un produit.
 
-### Optimisation de la publicité :
+### Optimisation des publicités
 
 Cette intégration avec [!DNL Amazon Marketing Cloud] (AMC) permet aux annonceurs de télécharger leurs propres listes de clients et d’utiliser [!DNL Amazon Marketing Cloud] SQL, effectuez de manière récurrente des analyses, suppressions, ajouts ou optimisations de chevauchement auprès des audiences avant de créer une audience prête pour l’activation dans Amazon DSP pour le ciblage.
 
