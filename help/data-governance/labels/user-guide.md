@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestion des libellés d’utilisation des données dans l’interface utilisateur
 description: Ce guide détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 663d1e20a7b8a56b1395047124fdf4b6fc3c214b
+source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
 workflow-type: tm+mt
-source-wordcount: '1465'
-ht-degree: 100%
+source-wordcount: '1538'
+ht-degree: 93%
 
 ---
 
@@ -29,6 +29,14 @@ Veuillez consulter le guide sur la façon de [configurer des autorisations](http
 ## Gérer les libellés au niveau du schéma
 
 Vous pouvez ajouter des libellés directement à un schéma ou à des champs de ce schéma. Tous les champs appliqués au niveau du schéma se propagent à tous les jeux de données basés sur ce schéma.
+
+>[!NOTE]
+>
+>Si vos stratégies d’utilisation des données ont été créées avant que vous n’ayez étiqueté votre champ, vous risquez de rencontrer une boîte de dialogue de violation de stratégie de gouvernance lorsque vous appliquez des libellés à votre nouveau schéma. Cette boîte de dialogue indique que l’application de ce libellé violera une stratégie d’utilisation existante. Utilisez le diagramme de lignage de données pour comprendre les autres modifications de configuration à effectuer avant de pouvoir ajouter le libellé à votre champ de schéma.
+>
+>![La violation de la politique de gouvernance des données a détecté la boîte de dialogue avec le résumé de la violation et le diagramme de lignage des données mis en surbrillance.](../images/labels/policy-violation-dialog.png)
+>
+>Voir [documentation sur les violations de stratégies d’utilisation des données](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/auto-enforcement#data-usage-violation) pour plus d’informations sur les violations de stratégie partielles.
 
 Pour gérer les libellés d’utilisation des données au niveau du schéma, vous devez sélectionner un schéma existant ou en créer un nouveau. Après votre connexion à Adobe Experience Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche pour ouvrir l’espace de travail **[!UICONTROL Schémas]**. Cette page répertorie tous les schémas créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque schéma.
 

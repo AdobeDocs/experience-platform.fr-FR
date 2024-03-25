@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Application automatique des politiques
 description: Ce document présente l’application automatique des politiques d’utilisation de données lors de l’activation d’audiences vers des destinations dans Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
+source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
 workflow-type: tm+mt
-source-wordcount: '2012'
-ht-degree: 90%
+source-wordcount: '2109'
+ht-degree: 84%
 
 ---
 
@@ -92,7 +92,7 @@ Les sections ci-dessous décrivent les différents messages d’application de p
 
 Si une violation de politique se produit lors de la tentative d’activation d’une audience (ou de la [modification d’une audience déjà activée](#policy-enforcement-for-activated-audiences)), l’action est bloquée et une fenêtre contextuelle s’affiche indiquant qu’une ou plusieurs politiques ont été violées. Une fois qu’une violation a été déclenchée, le bouton **[!UICONTROL Enregistrer]** est désactivé pour l’entité à modifier jusqu’à ce que les composants appropriés soient mis à jour pour se conformer aux politiques d’utilisation des données.
 
-Sélectionnez une violation de politique dans la colonne de gauche de la fenêtre contextuelle pour afficher les détails de celle-ci.
+Sélectionnez un nom de stratégie pour afficher les détails de cette violation.
 
 ![Une boîte de dialogue indiquant qu’une violation de stratégie s’est produite avec le nom de la stratégie mis en surbrillance.](../images/enforcement/violation-policy-select.png)
 
@@ -104,13 +104,21 @@ Un graphique relatif à la parenté des données s’affiche sous le résumé de
 
 ![Une boîte de dialogue de violation de stratégie avec le graphique de lignage des données mis en surbrillance.](../images/enforcement/data-lineage.png)
 
-Vous pouvez également utiliser l’icône **[!UICONTROL Filtre]** (![](../images/enforcement/filter.png)) pour filtrer les entités affichées par catégorie. Au moins deux catégories doivent être sélectionnées pour que les données s’affichent.
+Vous pouvez également utiliser la variable **[!UICONTROL Filtrer]** icône (![Icône de filtre.](../images/enforcement/filter.png)) pour filtrer les entités affichées par catégorie. Au moins deux catégories doivent être sélectionnées pour que les données s’affichent.
 
 ![Une boîte de dialogue de violation de stratégie avec le filtre de traçabilité des données et le menu déroulant mis en surbrillance.](../images/enforcement/lineage-filter.png)
 
 Sélectionnez **[!UICONTROL Vue Liste]** pour afficher la parenté des données sous forme de liste. Pour revenir au graphique visuel, sélectionnez **[!UICONTROL Chemin parcouru]**.
 
 ![Une boîte de dialogue de violation de stratégie avec la vue de chemin de lignage des données mise en surbrillance.](../images/enforcement/list-view.png)
+
+#### Étiquettes correctement appliquées {#labels-successfully-applied}
+
+Si vous créez des stratégies d’utilisation des données avant de libeller vos champs de schéma, vous risquez de rencontrer une boîte de dialogue de violation de stratégie de gouvernance dès que vous appliquez des libellés à votre schéma. Dans ce cas, vous pouvez étiqueter une partie de votre schéma. La variable [!UICONTROL Étiquettes correctement appliquées] tab indique les libellés qui ont été appliqués avec succès, car il n’existe aucune restriction de stratégie pour ce champ.
+
+Utilisez le diagramme de lignage de données pour comprendre les autres modifications de configuration à effectuer avant de pouvoir ajouter le libellé à votre champ de schéma.
+
+![Boîte de dialogue de violation de stratégie avec [!UICONTROL Étiquettes correctement appliquées] en surbrillance.](../images/enforcement/labels-successfully-applied.png)
 
 ### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
