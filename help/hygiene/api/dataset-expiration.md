@@ -3,10 +3,10 @@ title: Point d’entrée de l’API d’expiration du jeu de données
 description: Le point d’entrée /ttl de l’API Data Hygiene vous permet de planifier par programmation l’expiration des jeux de données dans Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 0d59f159e12ad83900e157a3ce5ab79a2f08d0c1
 workflow-type: tm+mt
-source-wordcount: '1726'
-ht-degree: 76%
+source-wordcount: '2083'
+ht-degree: 63%
 
 ---
 
@@ -130,8 +130,6 @@ curl -X GET \
 
 Une réponse réussie renvoie les détails de l’expiration du jeu de données.
 
-<!-- Is there a different response from making a GET request to either '/ttl/{DATASET_ID}?include=history' or '/ttl/{TTL_ID}'? If so please can you provide the response for both (or just the ttl endpoint itf it differs from teh example) -->
-
 ```json
 {
     "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
@@ -186,29 +184,105 @@ Le fichier JSON suivant représente une réponse tronquée pour les détails d�
 }
 ```
 
-## Créer ou mettre à jour une expiration de jeu de données {#create-or-update}
+## Créer une expiration de jeu de données {#create}
 
-Créez ou mettez à jour une date d’expiration pour un jeu de données par le biais d’une requête de PUT. La requête du PUT utilise l’une des méthodes suivantes : `datasetId` ou le `ttlId`.
+Pour vous assurer que les données sont supprimées du système après une période spécifiée, planifiez une expiration pour un jeu de données spécifique en fournissant l’identifiant du jeu de données ainsi que la date et l’heure d’expiration au format ISO 8601.
+
+Pour créer une expiration de jeu de données, effectuez une requête de POST comme illustré ci-dessous et fournissez les valeurs mentionnées ci-dessous dans la payload.
 
 **Format d’API**
 
 ```http
-PUT /ttl/{DATASET_ID}
-PUT /ttl/{TTL_ID}
+POST /ttl
 ```
-
-| Paramètre | Description |
-| --- | --- |
-| `{DATASET_ID}` | Identifiant du jeu de données pour lequel vous souhaitez planifier une d’expiration. |
-| `{TTL_ID}` | Identifiant de l’expiration du jeu de données. |
 
 **Requête**
 
-La requête suivante planifie la suppression d’un jeu de données `5b020a27e7040801dedbf46e` à la fin de 2022 (heure de Greenwich). Si aucune expiration existante n’est trouvée pour le jeu de données, une nouvelle expiration sera créée. Si le jeu de données a déjà une expiration en attente, cette expiration sera mise à jour avec la nouvelle valeur `expiry`.
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/hygiene/ttl \
+  -H `Authorization: Bearer {ACCESS_TOKEN}`
+  -H `x-gw-ims-org-id: {ORG_ID}`
+  -H `x-api-key: {API_KEY}`
+  -H `Accept: application/json`
+  -d {
+      "datasetId": "5b020a27e7040801dedbf46e",
+      "expiry": "2030-12-31T23:59:59Z"
+      "displayName": "Delete Acme Data before 2025",
+      "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+      }
+```
+
+| Propriété | Description |
+| --- | --- |
+| `datasetId` | **Obligatoire** L’identifiant du jeu de données cible pour lequel vous souhaitez planifier une expiration. |
+| `expiry` | **Obligatoire** Date et heure au format ISO 8601. Si la chaîne n’a pas de décalage de fuseau horaire explicite, le fuseau horaire est supposé être UTC. La durée de vie des données du système est définie en fonction de la valeur d’expiration fournie.<br>Remarque :<ul><li>La requête échoue si une expiration de jeu de données existe déjà pour le jeu de données.</li><li>Cette date et cette heure doivent au moins être **24 heures dans le futur**.</li></ul> |
+| `displayName` | Nom d’affichage facultatif pour la demande d’expiration de jeu de données. |
+| `description` | Une description facultative de la requête d’expiration. |
+
+**Réponse**
+
+Une réponse réussie renvoie un état HTTP 201 (Created) et le nouvel état de l’expiration du jeu de données, en l’absence d’expiration de jeu de données préexistant.
+
+```json
+{
+  "ttlId":       "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
+  "datasetId":   "5b020a27e7040801dedbf46e",
+  "datasetName": "Acme licensed data",
+  "sandboxName": "prod",
+  "imsOrg":      "{ORG_ID}",
+  "status":      "pending",
+  "expiry":      "2030-12-31T23:59:59Z",
+  "updatedAt":   "2021-08-19T11:14:16Z",
+  "updatedBy":   "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
+  "displayName": "Delete Acme Data before 2031",
+  "description": "The Acme information in this dataset is licensed for our use through the end of 2030."
+}
+```
+
+| Propriété | Description |
+| --- | --- |
+| `ttlId` | Identifiant de l’expiration du jeu de données. |
+| `datasetId` | Identifiant du jeu de données auquel cette expiration s’applique. |
+| `datasetName` | Le nom d’affichage du jeu de données auquel cette expiration s’applique. |
+| `sandboxName` | Le nom du sandbox sous lequel se trouve le jeu de données cible. |
+| `imsOrg` | Identifiant de l’organisation. |
+| `status` | Statut actuel de l’expiration du jeu de données. |
+| `expiry` | Date et heure planifiées de suppression du jeu de données. |
+| `updatedAt` | Date et heure de la dernière mise à jour de l’expiration. |
+| `updatedBy` | Dernier utilisateur à avoir mis à jour l’expiration. |
+| `displayName` | Un nom d’affichage de la requête d’expiration. |
+| `description` | Description de la demande d’expiration. |
+
+Un état HTTP 400 (Bad Request) se produit si une expiration de jeu de données existe déjà pour le jeu de données. Une réponse manquée renvoie un état HTTP 404 (Introuvable) si aucune expiration de ce jeu de données n’existe (ou si vous n’y avez pas accès).
+
+## Mettre à jour l’expiration d’un jeu de données {#update}
+
+Pour mettre à jour la date d’expiration d’un jeu de données, utilisez une requête de PUT et le `ttlId`. Vous pouvez mettre à jour la variable `displayName`, `description`, et/ou `expiry` informations.
+
+>[!NOTE]
+>
+>Si vous modifiez la date et l’heure d’expiration, celles-ci doivent être définies sur au moins 24 heures à l’avenir. Ce délai forcé vous permet d’annuler ou de planifier à nouveau l’expiration et d’éviter toute perte accidentelle de données.
+
+**Format d’API**
+
+```http
+PUT /ttl/{TTL_ID}
+```
+
+<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
+
+| Paramètre | Description |
+| --- | --- |
+| `{TTL_ID}` | L’identifiant de l’expiration du jeu de données que vous souhaitez modifier. |
+
+**Requête**
+
+La requête suivante replanifie une expiration de jeu de données. `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` à fin 2024 (heure de Greenwich). Si l’expiration du jeu de données existant est trouvée, cette expiration est mise à jour avec le nouveau `expiry` .
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/core/hygiene/ttl/5b020a27e7040801dedbf46e \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -223,7 +297,7 @@ curl -X PUT \
 
 | Propriété | Description |
 | --- | --- |
-| `expiry` | Date et heure au format ISO 8601. Si la chaîne n’a pas de décalage de fuseau horaire explicite, le fuseau horaire est supposé être UTC. La durée de vie des données du système est définie en fonction de la valeur d’expiration fournie. Tout horodatage d’expiration précédent pour le même jeu de données est remplacé par la nouvelle valeur d’expiration que vous avez fournie. |
+| `expiry` | **Obligatoire** Date et heure au format ISO 8601. Si la chaîne n’a pas de décalage de fuseau horaire explicite, le fuseau horaire est supposé être UTC. La durée de vie des données du système est définie en fonction de la valeur d’expiration fournie. Tout horodatage d’expiration précédent pour le même jeu de données est remplacé par la nouvelle valeur d’expiration que vous avez fournie. Cette date et cette heure doivent au moins être **24 heures dans le futur**. |
 | `displayName` | Un nom d’affichage de la requête d’expiration. |
 | `description` | Une description facultative de la requête d’expiration. |
 
@@ -231,7 +305,7 @@ curl -X PUT \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de l’expiration du jeu de données, avec le statut HTTP 200 (OK) si une expiration préexistante a été mise à jour ou 201 (Created) en l’absence d’expiration préexistante.
+Une réponse réussie renvoie le nouvel état de l’expiration du jeu de données et un état HTTP 200 (OK) si une expiration préexistante a été mise à jour.
 
 ```json
 {
@@ -258,6 +332,8 @@ Une réponse réussie renvoie les détails de l’expiration du jeu de données,
 | `updatedBy` | Dernier utilisateur à avoir mis à jour l’expiration. |
 
 {style="table-layout:auto"}
+
+Une réponse manquée renvoie un état HTTP 404 (Introuvable) si aucune expiration de ce jeu de données n’existe.
 
 ## Annuler l’expiration d’un jeu de données {#delete}
 
