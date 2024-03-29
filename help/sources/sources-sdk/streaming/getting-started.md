@@ -2,14 +2,19 @@
 title: Prise en main des sources en libre-service (SDK de diffusion en continu)
 description: Ce document présente les informations prérequises que vous devez connaître avant de tenter de créer une source à l’aide de sources en libre-service (SDK de diffusion).
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Version Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 35%
+source-wordcount: '543'
+ht-degree: 34%
 
 ---
 
 # Prise en main des sources en libre-service (SDK de diffusion en continu)
+
+>[!NOTE]
+>
+>Le SDK de diffusion en continu des sources en libre-service est en version bêta. Veuillez lire la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Les sources en libre-service (SDK de diffusion en continu) vous permettent d’intégrer votre propre source pour importer des données en continu dans Adobe Experience Platform. Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels au [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 

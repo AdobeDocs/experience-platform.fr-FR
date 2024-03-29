@@ -2,14 +2,19 @@
 title: Création d’une spécification de connexion pour le SDK de diffusion en continu à l’aide de l’API Flow Service
 description: Le document suivant décrit les étapes à suivre pour créer une spécification de connexion à l’aide de l’API Flow Service et intégrer une nouvelle source par le biais de sources en libre-service.
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Version Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '736'
-ht-degree: 37%
+source-wordcount: '756'
+ht-degree: 36%
 
 ---
 
 # Créez une nouvelle spécification de connexion à l’aide du [!DNL Flow Service] API
+
+>[!NOTE]
+>
+>Le SDK de diffusion en continu des sources en libre-service est en version bêta. Veuillez lire la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Une spécification de connexion représente la structure d’une source. Elle contient des informations sur les exigences d’authentification d’une source, définit la manière dont les données sources peuvent être explorées et inspectées et fournit des informations sur les attributs d’une source donnée. Le point dʼentrée `/connectionSpecs` de l’API [!DNL Flow Service] vous permet de gérer par programmation les spécifications de connexion au sein de votre organisation.
 

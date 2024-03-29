@@ -2,14 +2,19 @@
 title: Mise à jour d’une spécification de connexion pour le SDK de diffusion en continu à l’aide de l’API Flow Service
 description: Le document suivant décrit les étapes à suivre pour établir une spécification de connexion à l’aide de l’API Flow Service pour les sources en libre-service (SDK de diffusion en continu).
 exl-id: 89f96ae1-81d0-47a3-9e21-7dae810ee823
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Version Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '163'
 ht-degree: 4%
 
 ---
 
 # Mise à jour d’une spécification de connexion à l’aide de l’API Flow Service
+
+>[!NOTE]
+>
+>Le SDK de diffusion en continu des sources en libre-service est en version bêta. Veuillez lire la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Vous pouvez mettre à jour les propriétés d’une spécification de connexion par le biais d’une opération de PUT. Lors de la mise à jour d’une spécification de connexion via une requête de PUT, le corps doit inclure tous les champs requis lors de la création d’une spécification de connexion dans une requête de POST.
 

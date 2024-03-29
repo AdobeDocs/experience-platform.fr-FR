@@ -2,14 +2,19 @@
 title: Tester Et Envoyer Votre Source
 description: Le document suivant décrit les étapes à suivre pour tester et vérifier une nouvelle source à l’aide de l’API Flow Service et intégrer une nouvelle source par le biais de sources en libre-service (SDK de diffusion en continu).
 exl-id: 2ae0c3ad-1501-42ab-aaaa-319acea94ec2
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Version Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1265'
 ht-degree: 22%
 
 ---
 
 # Test et envoi de la source
+
+>[!NOTE]
+>
+>Le SDK de diffusion en continu des sources en libre-service est en version bêta. Veuillez lire la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 Les dernières étapes pour intégrer votre nouvelle source à Adobe Experience Platform à l’aide de sources en libre-service (SDK de diffusion en continu) consistent à tester et à envoyer votre nouvelle source. Une fois que vous avez terminé la spécification de connexion et mis à jour la spécification du flux de diffusion en continu, vous pouvez commencer à tester la fonctionnalité de votre source via l’API ou l’interface utilisateur. En cas de réussite, vous pouvez envoyer votre nouvelle source en contactant votre représentant d’Adobe.
 

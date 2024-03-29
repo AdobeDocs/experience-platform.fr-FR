@@ -2,14 +2,19 @@
 title: Document Your Source (SDK de diffusion)
 description: La dernière étape avant que votre nouvelle source puisse être mise en ligne dans Adobe Experience Platform consiste à documenter votre nouvelle source.
 exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
-source-git-commit: 36de441a68a7cb9248d058e12e6ca3ed60f899ef
+badge: Version Beta
+source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
-source-wordcount: '389'
+source-wordcount: '409'
 ht-degree: 2%
 
 ---
 
 # Documenter votre source (SDK de streaming)
+
+>[!NOTE]
+>
+>Le SDK de diffusion en continu des sources en libre-service est en version bêta. Veuillez lire la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
 La dernière étape avant de pouvoir définir votre nouvelle source en direct dans Adobe Experience Platform consiste à documenter votre nouvelle source.
 
