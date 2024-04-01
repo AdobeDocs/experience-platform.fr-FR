@@ -2,20 +2,20 @@
 title: Vue d’ensemble de la personnalisation
 description: Découvrez comment utiliser l’API Adobe Experience Platform Edge Network Server pour récupérer du contenu personnalisé à partir des solutions de personnalisation d’Adobe.
 exl-id: 11be9178-54fe-49d0-b578-69e6a8e6ab90
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: ae6c6d21b1eea900d01be3287827296071429d30
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '735'
 ht-degree: 10%
 
 ---
 
 # Vue d’ensemble de la personnalisation
 
-Avec la variable [!DNL Server API], vous pouvez récupérer du contenu personnalisé à partir des solutions de personnalisation d’Adobe, y compris [Adobe Target](https://business.adobe.com/fr/products/target/adobe-target.html) et [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=fr).
+Avec la variable [!DNL Server API], vous pouvez récupérer du contenu personnalisé à partir des solutions de personnalisation d’Adobe, y compris [Adobe Target](https://business.adobe.com/fr/products/target/adobe-target.html), [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home), et [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=fr).
 
 En outre, la variable [!DNL Server API] optimise les fonctionnalités de personnalisation de la même page et de la page suivante grâce aux destinations de personnalisation Adobe Experience Platform, telles que [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) et la variable [connexion à la personnalisation personnalisée](../destinations/catalog/personalization/custom-personalization.md). Pour savoir comment configurer Experience Platform pour la personnalisation de la même page et de la page suivante, reportez-vous à la section [guide dédié](../destinations/ui/activate-edge-personalization-destinations.md).
 
-Lors de l’utilisation de l’API serveur, vous devez intégrer la réponse fournie par le moteur de personnalisation à la logique utilisée pour effectuer le rendu du contenu sur votre site. Contrairement à la variable [SDK Web](../web-sdk/home.md), la variable [!DNL Server API] ne dispose pas d’un mécanisme pour appliquer automatiquement le contenu renvoyé par [!DNL Adobe Target] et [!DNL Offer Decisioning].
+Lors de l’utilisation de l’API serveur, vous devez intégrer la réponse fournie par le moteur de personnalisation à la logique utilisée pour effectuer le rendu du contenu sur votre site. Contrairement à la variable [SDK Web](../web-sdk/home.md), la variable [!DNL Server API] ne dispose pas d’un mécanisme pour appliquer automatiquement le contenu renvoyé par les solutions de personnalisation Adobe.
 
 ## Terminologie {#terminology}
 
@@ -34,24 +34,30 @@ La récupération de contenu personnalisé nécessite un objet de requête de re
 
 ```json
 {
-   "query":{
-      "personalization":{
-         "schemas":[
-            "https://ns.adobe.com/personalization/html-content-item",
-            "https://ns.adobe.com/personalization/json-content-item",
-            "https://ns.adobe.com/personalization/redirect-item",
-            "https://ns.adobe.com/personalization/dom-action"
-         ],
-         "decisionScopes":[
-            "alloyStore",
-            "siteWide",
-            "__view__",
-            "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ"
-         ]
-      }
-   }
+  "query": {
+    "personalization": {
+      "schemas": [
+        "https://ns.adobe.com/personalization/html-content-item",
+        "https://ns.adobe.com/personalization/json-content-item",
+        "https://ns.adobe.com/personalization/redirect-item",
+        "https://ns.adobe.com/personalization/dom-action"
+      ],
+      "decisionScopes": [
+        "alloyStore",
+        "siteWide",
+        "__view__",
+        "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ"
+      ],
+      "surfaces": [
+        "web://mywebpage.html/",
+        "web://mywebpage.html/#sample-json-content"
+      ]
+    }
+  }
 }
 ```
+
+
 
 | Attribut | Type | Obligatoire / Facultatif | Description |
 | --- | --- | --- | ---|
