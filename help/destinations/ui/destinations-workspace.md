@@ -3,10 +3,10 @@ keywords: platform;destinations;espace de travail des destinations;espace de tra
 title: Espace de travail des destinations
 description: 'L’espace de travail des destinations se compose de cinq sections : Vue d’ensemble, Catalogue, Parcourir, Comptes et Vue du système. Elles sont décrites dans les sections ci-dessous.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: dad07add8c5f9cc98a187c2e2222a51611dbd1a2
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 84%
+source-wordcount: '1231'
+ht-degree: 81%
 
 ---
 
@@ -100,7 +100,7 @@ L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles v
 
 | Élément | Description |
 |---------|----------|
-| Nom | Le nom que vous avez fourni pour votre flux d’activation vers cette destination. La même colonne comprend deux commandes : [!UICONTROL Activer ] et [!UICONTROL Supprimer la destination]. |
+| Nom | Le nom que vous avez fourni pour votre flux d’activation vers cette destination. La même colonne comprend deux contrôles : [!UICONTROL Activer] et [!UICONTROL Supprimer la destination]. |
 | [!UICONTROL Statut de la dernière exécution de flux] | Statut de la dernière exécution du flux de données. Consultez [Afficher les détails de la destination](destination-details-page.md) pour plus d’informations sur les exécutions de flux de données. |
 | [!UICONTROL Date d’exécution du dernier flux] | Date et heure de la dernière exécution du flux de données. Consultez [Afficher les détails de destination](destination-details-page.md) pour plus d’informations sur les exécutions de flux de données. |
 | [!UICONTROL Destination] | La plateforme de destination que vous avez sélectionnée pour votre flux d’activation. |
@@ -110,7 +110,7 @@ L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles v
 | [!UICONTROL Créé] | La date et l’heure (UTC) de création du flux d’activation vers la destination. Sélectionnez les flèches haut/bas pour trier les flux d’activation en fonction du plus récent ou du plus ancien. |
 | [!UICONTROL État] | `Enabled` ou `Disabled`. Indique si les données sont activées vers cette destination. |
 
-Cliquez sur une ligne de destination pour afficher plus d’informations sur la destination dans le rail de droite.
+Cliquez sur une ligne de destination pour afficher plus d’informations sur la destination dans le rail de droite, telles que l’ID de destination, la description, le nombre d’audiences activées, etc.
 
 ![Cliquer sur la ligne de destination](../assets/ui/workspace/click-destination-row.png)
 
