@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de l’API Batch Ingestion
 description: L’API Batch Ingestion de Adobe Experience Platform vous permet d’ingérer des données dans Platform sous forme de fichiers de lot. Les données en cours d’ingestion peuvent être les données de profil d’un fichier plat dans un système CRM (par exemple un fichier Parquet) ou les données conformes à un schéma connu dans le registre Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 76ef5638316a89aee1c6fb33370af943228b75e1
+source-git-commit: 9d3a8aac120119ce0361685f9cb8d3bfc28dc7fd
 workflow-type: tm+mt
-source-wordcount: '1387'
-ht-degree: 75%
+source-wordcount: '1388'
+ht-degree: 65%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 75%
 
 L’API Batch Ingestion de Adobe Experience Platform vous permet d’ingérer des données dans Platform sous forme de fichiers de lot. Les données en cours d’ingestion peuvent être des données de profil provenant d’un fichier plat (un fichier Parquet, par exemple) ou des données conformes à un schéma connu dans la variable [!DNL Experience Data Model] Registre (XDM).
 
-Le [Référence de l’API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) fournit des informations supplémentaires sur ces appels API.
+La variable [Référence de l’API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) fournit des informations supplémentaires sur ces appels API.
 
 Le diagramme suivant décrit le processus d’ingestion par lots :
 
@@ -23,7 +23,7 @@ Le diagramme suivant décrit le processus d’ingestion par lots :
 
 ## Prise en main
 
-Les points de terminaison d’API utilisés dans ce guide font partie de la variable [API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Les points de terminaison d’API utilisés dans ce guide font partie du [API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 ### Conditions préalables de [!DNL Data Ingestion]
 
@@ -44,7 +44,7 @@ L’ingestion de données par lots présente certaines contraintes :
 - Nombre maximal de fichiers par lot : 1 500
 - Taille maximale du lot : 100 Go
 - Nombre maximal de propriétés ou de champs par ligne : 10 000
-- Nombre maximal de lots par minute, par utilisateur : 138
+- Nombre maximal de lots par minute sur le lac de données, par utilisateur : 138
 
 >[!NOTE]
 >
@@ -54,7 +54,7 @@ L’ingestion de données par lots présente certaines contraintes :
 
 Lors de l’ingestion de données, il est important de comprendre comment [!DNL Experience Data Model] Les schémas (XDM) fonctionnent. Pour plus d’informations sur la façon dont les types de champs XDM sont associés à différents formats, reportez-vous au [guide de développement du registre des schémas](../../xdm/api/getting-started.md).
 
-L’ingestion de données offre une certaine souplesse : si un type ne correspond pas à ce qui se trouve dans le schéma cible, les données seront converties dans le type cible précisé. Si cette conversion est impossible, le lot échouera avec `TypeCompatibilityException`.
+L’ingestion de données offre une certaine flexibilité : si un type ne correspond pas à ce qui se trouve dans le schéma cible, les données sont converties vers le type cible exprimé. Si cette conversion est impossible, le lot échouera avec `TypeCompatibilityException`.
 
 Par exemple, ni JSON ni CSV ne comportent de `date` ou `date-time` type. Par conséquent, ces valeurs sont exprimées à l’aide de [Chaînes formatées ISO 8061](https://www.iso.org/fr/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) ou heure Unix formatée en millisecondes (1531263959000) et convertie au moment de l’ingestion vers le type XDM cible.
 
@@ -62,16 +62,16 @@ Le tableau ci-dessous illustre les conversions prises en charge lors de l’inge
 
 | Entrant (ligne) / Cible (colonne) | Chaîne | Octet | Court | Entier | Long | Double | Date | Date et heure | Objet | Map |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Chaîne | X | X | X | X | X | X | X | X |  |  |
-| Octet | X | X | X | X | X | X |  |  |  |  |
-| Court | X | X | X | X | X | X |  |  |  |  |
-| Entier | X | X | X | X | X | X |  |  |  |  |
-| Long | X | X | X | X | X | X | X | X |  |  |
-| Double | X | X | X | X | X | X |  |  |  |  |
-| Date |  |  |  |  |  |  | X |  |  |  |
-| Date et heure |  |  |  |  |  |  |  | X |  |  |
-| Objet |  |  |  |  |  |  |  |  | X | X |
-| Map |  |  |  |  |  |  |  |  | X | X |
+| Chaîne | X | X | X | X | X | X | X | X |   |   |
+| Octet | X | X | X | X | X | X |   |   |   |   |
+| Court | X | X | X | X | X | X |   |   |   |   |
+| Entier | X | X | X | X | X | X |   |   |   |   |
+| Long | X | X | X | X | X | X | X | X |   |   |
+| Double | X | X | X | X | X | X |   |   |   |   |
+| Date |   |   |   |   |   |   | X |   |   |   |
+| Date et heure |   |   |   |   |   |   |   | X |   |   |
+| Objet |   |   |   |   |   |   |   |   | X | X |
+| Map |   |   |   |   |   |   |   |   | X | X |
 
 >[!NOTE]
 >
@@ -79,7 +79,7 @@ Le tableau ci-dessous illustre les conversions prises en charge lors de l’inge
 
 ## Utilisation de l’API
 
-Le [!DNL Data Ingestion] L’API vous permet d’ingérer des données sous forme de lots (une unité de données composée d’un ou de plusieurs fichiers à ingérer en une seule unité) dans [!DNL Experience Platform] en trois étapes de base :
+La variable [!DNL Data Ingestion] L’API vous permet d’ingérer des données sous forme de lots (une unité de données composée d’un ou de plusieurs fichiers à ingérer en une seule unité) dans [!DNL Experience Platform] en trois étapes de base :
 
 1. Création d’un nouveau filtre.
 2. Chargez des fichiers vers un jeu de données spécifique qui correspond au schéma XDM des données.
@@ -142,7 +142,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 Une fois le nouveau lot créé avec succès pour le chargement, les fichiers peuvent désormais être chargés dans le jeu de données spécifique.
 
-Vous pouvez charger des fichiers à l’aide de l’API Small File Upload. Toutefois, si vos fichiers sont trop volumineux et que la limite de la passerelle est dépassée (par exemple, délais d’expiration étendus, demandes de taille de corps dépassés et autres contraintes), vous pouvez passer à l’API Large File Upload. Cette API charge le fichier par blocs et assemble les données à l’aide de l’appel à l’API Large File Upload Complete.
+Vous pouvez charger des fichiers à l’aide de l’API Small File Upload. Cependant, si vos fichiers sont trop volumineux et que la limite de la passerelle est dépassée (par exemple, délais d’expiration étendus, demandes de taille de corps dépassés et autres contraintes), vous pouvez passer à l’API Large File Upload. Cette API charge le fichier par blocs et assemble les données à l’aide de l’appel de l’API Large File Upload Complete .
 
 >[!NOTE]
 >
@@ -257,7 +257,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Signalement de la fin du lot
 
-Une fois que tous les fichiers ont été chargés dans le lot, il peut être marqué comme étant terminé. Cette action crée les entrées [!DNL Catalog]DataSetFile de pour les fichiers terminés et les associe au lot généré ci-dessus. Le lot de [!DNL Catalog] est marqué comme réussi, ce qui déclenche les flux en aval afin d’ingérer les données disponibles.
+Une fois que tous les fichiers ont été chargés dans le lot, il peut être marqué comme étant terminé. En procédant comme suit, la variable [!DNL Catalog] Les entrées DataSetFile sont créées pour les fichiers terminés et associées au lot généré ci-dessus. Le lot de [!DNL Catalog] est marqué comme réussi, ce qui déclenche les flux en aval afin d’ingérer les données disponibles.
 
 **Requête**
 
@@ -409,7 +409,7 @@ Le champ `"status"` indique l’état actuel du lot demandé. Les lots peuvent a
 | ------ | ----------- |
 | Abandonné | Le lot ne s’est pas terminé dans le délai prévu. |
 | Interrompu | Une opération pour interrompre l’opération a été **explicitement** appelée (via l’API Batch Ingest) pour le lot spécifié. Une fois que le lot est à l’état &quot;Chargé&quot;, il ne peut pas être abandonné. |
-| Actif | Le lot a été converti avec succès et est disponible pour la consommation en aval. Cet état peut être utilisé de manière interchangeable avec &quot;Succès&quot;. |
+| Actif | Le lot a été converti avec succès et est disponible pour la consommation en aval. Cet état peut être interchangeable avec &quot;Succès&quot;. |
 | Supprimé | Les données du lot ont été entièrement supprimées. |
 | Échoué | État final résultant d’une configuration incorrecte et/ou de mauvaises données. Les données d’un lot qui a échoué **ne s’affichent pas**. Cet état peut être utilisé de manière interchangeable avec &quot;Échec&quot;. |
 | Inactif | La conversion du lot a réussi, mais a été annulée ou a expiré. Le lot n’est plus disponible pour la consommation en aval. |
