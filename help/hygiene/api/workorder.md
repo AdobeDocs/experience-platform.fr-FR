@@ -1,24 +1,25 @@
 ---
 title: Point de terminaison de l’API Work Order
 description: Le point d’entrée /workorder de l’API Data Hygiene vous permet de gérer par programmation les tâches de suppression pour les identités.
+badgeBeta: label="Version Beta" type="Informative"
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 4e92b6937c4fa383b398ec99faa6d97907c128d6
+source-git-commit: 59585ce832b10dfc28474e498c9308453da86d0c
 workflow-type: tm+mt
-source-wordcount: '1281'
+source-wordcount: '1277'
 ht-degree: 56%
 
 ---
 
-# [!BADGE Beta]{type=Informative} Point d’entrée de l’ordre de travail {#work-order-endpoint}
+# Point d’entrée de l’ordre de travail {#work-order-endpoint}
 
 La variable `/workorder` Le point de terminaison de l’API Data Hygiene vous permet de gérer par programmation les demandes de suppression d’enregistrements dans Adobe Experience Platform.
 
 >[!IMPORTANT]
 > 
-La fonction de suppression d’enregistrement est actuellement en version bêta et disponible uniquement dans un **version limitée**. Il n’est pas disponible pour tous les clients. Les demandes de suppression d’enregistrements ne sont disponibles que pour les organisations de la version limitée.
+>La fonction de suppression d’enregistrement est actuellement en version bêta et disponible uniquement dans un **version limitée**. Il n’est pas disponible pour tous les clients. Les demandes de suppression d’enregistrements ne sont disponibles que pour les organisations de la version limitée.
 >
-Les suppressions d’enregistrements sont destinées au nettoyage des données, à la suppression des données anonymes ou à la minimisation des données. Elles ne sont **pas** destinées aux demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez plutôt [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
+>Les suppressions d’enregistrements sont destinées au nettoyage des données, à la suppression des données anonymes ou à la minimisation des données. Elles ne sont **pas** destinées aux demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez plutôt [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
 
 ## Prise en main
 
@@ -30,7 +31,7 @@ Vous pouvez supprimer une ou plusieurs identités d’un seul jeu de données ou
 
 >[!IMPORTANT]
 > 
-Il existe différentes limites pour le nombre total de suppressions d’enregistrement d’identité unique qui peuvent être envoyées chaque mois. Ces limites sont basées sur votre contrat de licence. Les organisations qui ont acheté toutes les éditions d’Adobe Real-time Customer Data Platform et de Adobe Journey Optimizer peuvent envoyer jusqu’à 100 000 enregistrements d’identité supprimés chaque mois. Organisations ayant effectué des achats **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité** peut envoyer jusqu’à 600 000 enregistrements d’identité supprimés chaque mois.<br>Une seule [demande de suppression d’enregistrement via l’interface utilisateur](../ui/record-delete.md) vous permet d’envoyer 10 000 identifiants à la fois. La méthode d’API pour supprimer des enregistrements permet l’envoi simultané de 100 000 identifiants.<br>Il est recommandé d’envoyer autant d’ID par demande que possible, jusqu’à votre limite d’ID. Lorsque vous envisagez de supprimer un volume élevé d’identifiants, il est préférable d’éviter d’envoyer un volume faible ou une seule demande de suppression d’identifiant par enregistrement.
+>Il existe différentes limites pour le nombre total de suppressions d’enregistrement d’identité unique qui peuvent être envoyées chaque mois. Ces limites sont basées sur votre contrat de licence. Les organisations qui ont acheté toutes les éditions d’Adobe Real-time Customer Data Platform et de Adobe Journey Optimizer peuvent envoyer jusqu’à 100 000 enregistrements d’identité supprimés chaque mois. Organisations ayant effectué des achats **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité** peut envoyer jusqu’à 600 000 enregistrements d’identité supprimés chaque mois.<br>Une seule [demande de suppression d’enregistrement via l’interface utilisateur](../ui/record-delete.md) vous permet d’envoyer 10 000 identifiants à la fois. La méthode d’API pour supprimer des enregistrements permet l’envoi simultané de 100 000 identifiants.<br>Il est recommandé d’envoyer autant d’ID par demande que possible, jusqu’à votre limite d’ID. Lorsque vous envisagez de supprimer un volume élevé d’identifiants, il est préférable d’éviter d’envoyer un volume faible ou une seule demande de suppression d’identifiant par enregistrement.
 
 **Format d’API**
 
@@ -40,7 +41,7 @@ POST /workorder
 
 >[!NOTE]
 >
-Les requêtes de cycle de vie des données peuvent uniquement modifier des jeux de données en fonction d’identités principales ou d’une carte d’identité. Une requête doit spécifier l’identité principale ou fournir une carte d’identité.
+>Les requêtes de cycle de vie des données peuvent uniquement modifier des jeux de données en fonction d’identités principales ou d’une carte d’identité. Une requête doit spécifier l’identité principale ou fournir une carte d’identité.
 
 **Requête**
 

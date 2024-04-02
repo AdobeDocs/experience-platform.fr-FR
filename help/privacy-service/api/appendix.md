@@ -5,10 +5,10 @@ title: Annexe du guide de l’API Privacy Service
 description: Ce document contient des informations supplémentaires sur l’utilisation de l’API Privacy Service.
 role: Developer
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 644e85fe5c9b1a37f69c75755713e929736c2e89
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 59%
+source-wordcount: '496'
+ht-degree: 57%
 
 ---
 
@@ -62,18 +62,24 @@ Lorsque vous spécifiez une `namespace` dans la variable [!DNL Privacy Service] 
 
 Le tableau suivant indique les valeurs acceptées pour la spécification d’un produit Adobe dans l’attribut `include` d’une requête de création de tâche.
 
+>[!NOTE]
+>
+>Les valeurs de la liste de produits ne sont pas sensibles à la casse. La casse Camel est recommandée mais n’est pas appliquée.
+
 | Produit | Valeur à utiliser dans l’attribut `include` |
 | --- | --- |
 | Adobe Advertising Cloud | `adCloud` |
 | Adobe Analytics | `analytics` |
-| Adobe Audience Manager | `AudienceManager` |
+| Adobe Audience Manager | `audienceManager` |
 | Adobe Campaign | `campaign` |
 | Adobe Experience Platform (lac de données) | `aepDataLake` |
 | Adobe Experience Platform (profil client en temps réel) | `profileService` |
 | Authentification Adobe Pass | `primetimeAuthentication` |
 | Adobe Target | `target` |
 | Attributs du client (CRS) | `CRS` |
+| Gestion des Parcours clients | `cjm` |
 | Service d’identités | `identity` |
 | Marketo Engage | `marketo` |
+| Marketo Measure | `marketomeasure` |
 
 {style="table-layout:auto"}
