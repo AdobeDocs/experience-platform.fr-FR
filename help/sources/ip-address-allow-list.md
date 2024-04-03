@@ -4,7 +4,7 @@ description: Les adresses IP doivent être ajoutées à une liste autorisée ava
 solution: Experience Platform
 title: Liste autorisée d’adresses IP pour les connexions source
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 908cc5c4ff290efdb07cf33cdaa1577280802f9a
+source-git-commit: 4fd23af603296fb7201925029dd5acc196156420
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 98%
@@ -29,7 +29,7 @@ Vous pouvez définir des contrôles d’accès réseau via votre pare-feu résea
 - `20.49.102.16/29`
 - `40.70.148.160/28`
 - `52.167.107.224/28`
-- `52.138.119.167`
+- `20.98.198.224/29`
 
 ## NLD2 : Europe
 
