@@ -2,10 +2,10 @@
 description: Découvrez comment configurer les identités cibles prises en charge pour les destinations créées avec Destination SDK.
 title: Configuration de l’espace de noms d’identité
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 20fb966c4cc8a2b09ea64da3e688688b34a0b5d1
 workflow-type: tm+mt
-source-wordcount: '842'
-ht-degree: 95%
+source-wordcount: '892'
+ht-degree: 83%
 
 ---
 
@@ -13,9 +13,11 @@ ht-degree: 95%
 
 Experience Platform utilise des espaces de noms d’identité pour décrire le type d’identités spécifiques. Par exemple, un espace de noms d’identité intitulé `Email` identifie une valeur telle que `name@email.com` en tant qu’adresse électronique.
 
-Pendant la création d’une destination avec Destination SDK, vous pouvez non seulement [configurer un schéma de partenaire](schema-configuration.md) auquel les utilisateurs peuvent mapper des attributs de profil et des identités, mais aussi définir des espaces de noms d’identité pris en charge par votre plateforme de destination.
+Lors de la création de destinations en temps réel (diffusion en continu) via Destination SDK, en plus des [configuration d&#39;un schéma de partenaire](schema-configuration.md) pour que les utilisateurs puissent mapper des attributs de profil et des identités à, vous devez également définir des espaces de noms d’identité pris en charge par votre plateforme de destination. Par exemple, si votre plateforme de destination accepte des courriers électroniques hachés et [!DNL IDFA], vous devez définir ces deux identités comme [décrit plus loin dans ce document](#supported-parameters).
 
-Dans ce cas, les utilisateurs ont également la possibilité de sélectionner des identités cibles, en plus des attributs de profil cible.
+Lors de l’activation d’audiences vers des destinations de diffusion en continu, les utilisateurs doivent également mapper des identités cibles, en plus des attributs de profil cible. Sinon, les audiences ne seront pas activées sur la plateforme de destination.
+
+Lors de la création d’une destination basée sur des fichiers via Destination SDK, la configuration des espaces de noms d’identité est facultative.
 
 Pour en savoir plus sur les espaces de noms d’identité dans Experience Platform, consultez la [documentation relative aux espaces de noms d’identité](../../../../identity-service/features/namespaces.md).
 
@@ -44,8 +46,8 @@ Pour en savoir plus sur les types d’intégration qui prennent en charge les fo
 
 | Type d’intégration | Fonctionnalité de prise en charge |
 |---|---|
-| Intégrations en temps réel (streaming) | Oui |
-| Intégrations basées sur des fichiers (par lots) | Oui |
+| Intégrations en temps réel (streaming) | Oui (obligatoire) |
+| Intégrations basées sur des fichiers (par lots) | Oui (facultatif) |
 
 ## Paramètres pris en charge {#supported-parameters}
 
