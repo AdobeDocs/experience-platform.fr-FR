@@ -2,9 +2,9 @@
 title: Présentation de l’extension Adobe Analytics Product String
 description: Découvrez l’extension de balise Adobe Analytics Product String présente dans Adobe Experience Platform.
 exl-id: a49feb4e-f166-41d2-9f85-639f6ff8bb8f
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 36ca1e63c043baa776f27b627cdbe493b2ced674
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '516'
 ht-degree: 100%
 
 ---
@@ -89,7 +89,7 @@ Si votre mise en œuvre utilise des événements personnalisés ou des eVars de 
 
 Cette action doit s’accompagner d’une action « Adobe Analytics - Définir les variables » définissant les événements de succès correspondants, ainsi que d’une action « Adobe Analytics - Envoyer une balise ». La séquence d’actions appropriée est illustrée ci-dessous.
 
-![Champs standard](./images/screenshot-price-type.png)
+![Champs standard](./images/screenshot-action-type.png)
 
 ### Conditions
 
