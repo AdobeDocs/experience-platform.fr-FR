@@ -4,10 +4,10 @@ title: Création d’une définition de segment à l’aide de l’API Segmentat
 type: Tutorial
 description: Suivez ce tutoriel pour découvrir comment développer, tester, prévisualiser et enregistrer une définition de segment à l’aide de l’API Adobe Experience Platform Segmentation Service.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 9966385968540701f66acbb70c0810906650b7e1
 workflow-type: tm+mt
-source-wordcount: '940'
-ht-degree: 59%
+source-wordcount: '1066'
+ht-degree: 44%
 
 ---
 
@@ -55,7 +55,7 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 La première étape de la segmentation consiste à définir une définition de segment. Une définition de segment est un objet qui contient une requête écrite dans [!DNL Profile Query Language] (PQL). Cet objet est également appelé prédicat PQL. Les prédicats PQL définissent les règles de la définition de segment en fonction des conditions liées à tout enregistrement ou série temporelle que vous fournissez. [!DNL Real-Time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
 
-Vous pouvez créer une nouvelle définition de segment en envoyant une requête POST au point de terminaison `/segment/definitions` de l’API [!DNL Segmentation] L’exemple suivant décrit comment formater une requête de définition, y compris les informations requises pour qu’une définition de segment soit définie avec succès.
+Vous pouvez créer une définition de segment en adressant une requête de POST à la fonction `/segment/definitions` du point de terminaison [!DNL Segmentation] API. L’exemple suivant décrit comment formater une requête de définition, y compris les informations requises pour qu’une définition de segment soit définie avec succès.
 
 Pour obtenir une explication détaillée sur la définition d’une définition de segment, veuillez lire le [guide de développement de la définition de segment](../api/segment-definitions.md#create).
 
@@ -72,7 +72,12 @@ Deux étapes sont nécessaires pour prévisualiser ou obtenir une estimation de 
 
 ### Comment sont générées les estimations
 
-Des exemples de données sont utilisés pour évaluer les définitions de segment et estimer le nombre de profils admissibles. De nouvelles données sont chargées dans la mémoire chaque matin (entre 0 h et 2 h PT, soit entre 7 h et 9 h UTC) et toutes les requêtes de segmentation sont estimées à l’aide des exemples de données de cette journée. Par conséquent, tous les nouveaux champs ajoutés ou toutes les données supplémentaires recueillies seront pris en compte dans les estimations du lendemain.
+Les données activées pour Real-Time Customer Profile étant ingérées dans Platform, elles sont stockées dans la banque de données Profile. Lorsque l’ingestion d’enregistrements dans la banque de profils augmente ou diminue le nombre total de profils de plus de 5 %, une tâche d’échantillonnage est déclenchée pour mettre à jour le nombre. Si le nombre de profils ne varie pas de plus de 5 %, la tâche d’échantillonnage s’exécute automatiquement toutes les semaines.
+
+La manière dont l’échantillon est déclenché dépend du type d’ingestion utilisé :
+
+- Pour les workflows de données en flux continu, une vérification est effectuée sur une base horaire afin de déterminer si le seuil de 5 % d’augmentation ou de diminution a été atteint. Si ce seuil a été atteint, un exemple de tâche est automatiquement déclenché pour mettre à jour le décompte.
+- Pour l’ingestion par lots, dans les 15 minutes suivant l’ingestion réussie d’un lot dans la banque de profils, si le seuil de 5 % d’augmentation ou de diminution est atteint, une tâche est exécutée pour mettre à jour le nombre. À l’aide de l’API Profile, vous pouvez prévisualiser le dernier exemple de tâche réussi, ainsi que répertorier la distribution du profil par jeu de données et par espace de noms d’identité.
 
 La taille de l’échantillon dépend du nombre total d’entités dans votre banque de profils. Ces tailles d’échantillon sont représentées dans le tableau suivant :
 
