@@ -2,9 +2,9 @@
 title: Packages de Query Service
 description: Le document suivant décrit le regroupement des fonctionnalités et des produits disponibles pour Query Service et met en évidence les différences entre les requêtes ad hoc et les requêtes par lots.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 0f55a836321e974b3f29d2285c38cc8461636f39
+source-git-commit: 58d961e26874bf5be421fc24cf6c9d7e8855d64b
 workflow-type: tm+mt
-source-wordcount: '963'
+source-wordcount: '980'
 ht-degree: 5%
 
 ---
@@ -52,9 +52,11 @@ Le tableau suivant décrit les principaux droits de Query Service en fonction de
 
 Le contrôle d’accès de l’Experience Platform est géré à l’aide de la variable [Adobe Admin Console](https://adminconsole.adobe.com/) où les profils de produit lient les utilisateurs à des autorisations et des environnements de test. Pour plus d’informations, consultez la [présentation du contrôle d’accès](../access-control/home.md).
 
-Pour utiliser Query Service, la variable [!DNL Manage Queries] l’autorisation doit être activée dans Admin Console. Cette autorisation permet aux utilisateurs d’exécuter des requêtes ad hoc et par lots. Instructions détaillées sur la demande d’accès au profil de produit [!DNL Manage Queries] ont été décrites dans la section [gestion des autorisations d’un profil de produit](../access-control/ui/permissions.md) et [gestion des utilisateurs pour un profil de produit](../access-control/ui/users.md) documents.
+Voir [Gestion des autorisations d’un profil de produit](../access-control/ui/permissions.md) et [Gestion des utilisateurs pour un profil de produit](../access-control/ui/users.md) documents pour obtenir des instructions détaillées sur la demande d’accès aux autorisations de profil de produit
 
-Après avoir acheté la variable [!DNL Data Distiller] module complémentaire, le [!DNL Write Dataset] La permission doit être accordée. Cette autorisation permet [!DNL Data Distiller] utilisateurs pour exécuter des requêtes par lots.
+### Autorisations de Query Service pertinentes {#query-service-permissions}
+
+Pour utiliser Query Service, la méthode **[!DNL Manage Queries]** l’autorisation doit être activée dans Admin Console. Cette autorisation permet aux utilisateurs d’exécuter des requêtes ad hoc et par lots.
 
 Le tableau suivant décrit les effets de la variable [!DNL Manage Queries] autorisation :
 
@@ -62,6 +64,17 @@ Le tableau suivant décrit les effets de la variable [!DNL Manage Queries] autor
 |---|---|
 | [!DNL Manage Queries] (sans autorisation d’écriture de données) | Permet d’accéder à l’exécution de requêtes ad hoc |
 | [!DNL Manage Queries] (avec autorisation pour écrire des données) | Permet d’accéder à l’exécution de requêtes par lots |
+
+{style="table-layout:auto"}
+
+### Autorisations de statistiques personnalisables pertinentes {#customizable-insights-permissions}
+
+Pour créer Data Distiller [Informations personnalisables](./data-distiller/customizable-insights/overview.md) dans les tableaux de bord, les autorisations suivantes **must** être activé dans Admin Console.
+
+| Autorisation | Fonction |
+|---|---|
+| [!DNL View Custom Dashboard] | Permet d’accéder aux tableaux de bord définis par l’utilisateur |
+| [!DNL Manage Custom Dashboard] | Permet de gérer l’accès aux tableaux de bord définis par l’utilisateur |
 
 {style="table-layout:auto"}
 
