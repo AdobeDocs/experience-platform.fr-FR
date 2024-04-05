@@ -4,10 +4,10 @@ title: Évaluer les événements en temps quasi réel grâce à la segmentation 
 description: Ce document contient des exemples d’utilisation de la segmentation par diffusion en flux continu avec l’API du service de segmentation Adobe Experience Platform.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 2afd0ff97478938f4101e5a4b583e56a760840a2
 workflow-type: tm+mt
-source-wordcount: '1962'
-ht-degree: 70%
+source-wordcount: '2038'
+ht-degree: 67%
 
 ---
 
@@ -454,3 +454,7 @@ Par conséquent, si vous constatez que le nombre sous &quot;X derniers jours&quo
 ### Combien de temps faut-il pour qu’une définition de segment soit disponible ?
 
 La disponibilité d’une définition de segment peut prendre jusqu’à une heure.
+
+### Existe-t-il des limites aux données diffusées en continu ?
+
+Pour que les données en flux continu soient utilisées dans la segmentation par flux, cet élément **must** espacement entre les événements diffusés en continu. Si trop d’événements sont diffusés en continu dans la même seconde, Platform traite ces événements comme des données générées par des robots et ils seront ignorés. Pour respecter les bonnes pratiques, vous devez disposer des **au moins** cinq secondes entre les données d’événement afin de s’assurer que les données sont correctement utilisées.

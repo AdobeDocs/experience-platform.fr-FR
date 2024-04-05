@@ -2,10 +2,10 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: b129efacb077af0148a743e43ec23f9f8b8d7d3e
+source-git-commit: 81e1ce90b1778bb29c770e1468461949a1ea468c
 workflow-type: tm+mt
-source-wordcount: '3122'
-ht-degree: 30%
+source-wordcount: '3189'
+ht-degree: 29%
 
 ---
 
@@ -269,3 +269,10 @@ Jusqu’à l’exécution de la tâche d’évaluation de segment par lot suivan
 Si vous utilisez la recherche de profil pour récupérer le profil nouvellement créé et examinez son appartenance à l’audience, elle indique qu’il est membre de **both** Audience A et Audience B, bien que ces deux audiences aient des définitions contradictoires. Une fois la tâche d’évaluation de la segmentation par lots exécutée quotidiennement, l’appartenance à l’audience est mise à jour pour refléter cet état mis à jour des données de profil.
 
 Si vous avez besoin d’une résolution d’audience plus élevée en temps réel, utilisez la segmentation par flux ou en périphérie.
+
+### Combien de temps faut-il pour que les données en continu soient disponibles dans les workflows de segmentation par lots ?
+
+Il peut s’écouler jusqu’à trois heures avant que les données en continu ne soient disponibles dans les workflows de segmentation par lots.
+
+Par exemple, si une tâche de segmentation par lots s’exécute à 21 h, elle contient certainement des données ingérées par flux. **jusqu’à** 18 heures. Diffusion en continu des données ingérées après 18h00 et avant 21h00 **may** être inclus.
+
