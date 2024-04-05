@@ -2,7 +2,7 @@
 title: Packages de Query Service
 description: Le document suivant décrit le regroupement des fonctionnalités et des produits disponibles pour Query Service et met en évidence les différences entre les requêtes ad hoc et les requêtes par lots.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 58d961e26874bf5be421fc24cf6c9d7e8855d64b
+source-git-commit: 1e18a60478e2755f49d37d4d3bf4bd3ca6dbf23b
 workflow-type: tm+mt
 source-wordcount: '980'
 ht-degree: 5%
@@ -85,3 +85,4 @@ Les sandbox sont des partitions virtuelles au sein d’une instance unique d’E
 ## Étapes suivantes
 
 En lisant ce document, vous devez mieux comprendre les différents types de packages et les fonctionnalités d’exécution de requêtes disponibles dans Query Service. Pour en savoir plus sur Query Service, comme les cas d’utilisation connus du secteur, lisez la section [documentation sur les cas d’utilisation](./use-cases/abandoned-browse.md). Pour obtenir des informations plus générales, consultez la [Présentation de Query Service](./home.md).
+
