@@ -5,9 +5,9 @@ description: Découvrez le playbook approprié pour votre cas d’utilisation.
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
 source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '752'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ Pour utiliser un playbook, accédez à **[!UICONTROL Playbooks de cas d’utilis
 
 Utilisez la fenêtre de recherche et les filtres disponibles sur la page pour trouver le playbook approprié à votre cas d’utilisation.
 
-Vous pouvez, par exemple, filtrer les playbooks que vous utilisez en fonction de l’étape dans l’entonnoir marketing que vous souhaitez cibler : conversion, engagement ou fidélisation. Vous pouvez également filtrer les playbooks affichés selon le secteur dans lequel vous vous trouvez ou le droit au produit auquel vous avez accès : Adobe Journey Optimizer ou Real-Time CDP.
+Vous pouvez, par exemple, filtrer les playbooks que vous utilisez en fonction de l’étape dans l’entonnoir marketing que vous souhaitez cibler : conversion, engagement ou fidélisation. Vous pouvez également filtrer les playbooks affichés selon le secteur dans lequel vous vous trouvez ou le droit au produit auquel vous avez accès : Adobe Journey Optimizer ou Real-Time CDP.
 
 ![Filtrer les playbooks par entonnoir marketing, secteur ou produit](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
 
@@ -49,7 +49,7 @@ Le mind mapping commence par une définition de la personne ciblée dans le parc
 
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_assets"
->title="Assets"
+>title="Ressources"
 >abstract="Voici les ressources générées par ce playbook. Après avoir créé une instance du playbook, vous pouvez afficher les ressources dans le sandbox d’inspiration et les convertir dans d’autres sandbox selon vos besoins."
 
 Consultez la section de résumé pour identifier les ressources qui sont générées une fois que vous avez créé des instances à partir du playbook. Les ressources générées pour chaque playbook sont adaptées au cas d’utilisation activé par le playbook. Obtenez plus d’informations ci-dessous sur tous les éléments de la section de résumé.
