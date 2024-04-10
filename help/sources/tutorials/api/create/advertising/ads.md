@@ -2,14 +2,18 @@
 title: Création d’une connexion de base Google Ads à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à Google Ads à l’aide de l’API Flow Service.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: 12ddf87d594b7e25a0356cd419e990b262c1734e
+source-git-commit: ce3dabe4ab08a41e581b97b74b3abad352e3267c
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '741'
 ht-degree: 27%
 
 ---
 
 # Créez une connexion de base Google Ads à l’aide du [!DNL Flow Service] API
+
+>[!WARNING]
+>
+>La variable [!DNL Google Ads] source est temporairement indisponible. Adobe s’efforce de résoudre les problèmes liés à cette source.
 
 >[!NOTE]
 >
