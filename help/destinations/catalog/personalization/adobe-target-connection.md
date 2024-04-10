@@ -83,7 +83,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 >id="platform_destinations_target_datastream"
 >title="À propos des identifiants de flux de données"
 >abstract="Cette option détermine dans quel train de données de collecte de données les audiences seront inclues. Le menu déroulant affiche uniquement les trains de données pour lesquels la configuration cible est activée. Pour utiliser la segmentation Edge, vous devez sélectionner un identifiant de train de données. Si vous sélectionnez Aucun, tous les cas d&#39;utilisation qui utilisent la segmentation Edge sont désactivés."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters?lang=fr" text="En savoir plus sur la sélection des trains de données"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html?lang=fr#parameters" text="En savoir plus sur la sélection des trains de données"
 
 >[!IMPORTANT]
 > 

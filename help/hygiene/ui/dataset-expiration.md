@@ -4,8 +4,8 @@ description: Découvrez comment planifier l’expiration d’un jeu de données 
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
 source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 53%
+source-wordcount: '820'
+ht-degree: 52%
 
 ---
 
@@ -33,13 +33,13 @@ Ce document explique comment planifier et automatiser les expirations de jeux de
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_instructions"
 >title="Instructions"
->abstract="<ul><li>Sélectionnez <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=fr">Cycle de vie des données</a> dans le volet de navigation de gauche, puis <b>Créer une requête</b>.</li><li>Si vous souhaitez supprimer des enregistrements :</li>   <li>Sélectionnez <b>Enregistrement</b>.</li>   <li>Sélectionnez un jeu de données spécifique à partir duquel supprimer des enregistrements ou choisissez l’option permettant de les supprimer de tous les jeux de données.</li>   <li>Indiquez les identités des consommateurs et des consommatrices dont les enregistrements doivent être supprimés. Sélectionnez <b>Ajouter une identité</b> pour fournir les identités une par une ou sélectionnez <b>Choisir les fichiers</b> pour charger un fichier JSON d’identités à la place.</li>   <li>Si nécessaire, sélectionnez <b>Modèle</b> pour afficher le format attendu du fichier JSON.</li><li>Consultez la documentation pour obtenir des instructions si vous souhaitez <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html#schedule-dataset-expiration">planifier des dates d’expiration des jeux de données</a>.</li></ul>"
+>abstract="<ul><li>Sélectionnez <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/overview.html?lang=fr">Cycle de vie des données</a> dans le volet de navigation de gauche, puis <b>Créer une requête</b>.</li><li>Si vous souhaitez supprimer des enregistrements :</li>   <li>Sélectionnez <b>Enregistrement</b>.</li>   <li>Sélectionnez un jeu de données spécifique à partir duquel supprimer des enregistrements ou choisissez l’option permettant de les supprimer de tous les jeux de données.</li>   <li>Indiquez les identités des consommateurs et des consommatrices dont les enregistrements doivent être supprimés. Sélectionnez <b>Ajouter une identité</b> pour fournir les identités une par une ou sélectionnez <b>Choisir les fichiers</b> pour charger un fichier JSON d’identités à la place.</li>   <li>Si nécessaire, sélectionnez <b>Modèle</b> pour afficher le format attendu du fichier JSON.</li><li>Consultez la documentation pour obtenir des instructions si vous souhaitez <a href="https://experienceleague.adobe.com/docs/experience-platform/hygiene/ui/dataset-expiration.html?lang=fr#schedule-dataset-expiration">planifier des dates d’expiration des jeux de données</a>.</li></ul>"
 
 Pour créer une requête, sélectionnez **[!UICONTROL Créer une requête]** de la page principale de l’espace de travail.
 
 >[!IMPORTANT]
 >
-Les utilisateurs de Real-Time CDP, Adobe Journey Optimizer et de Customer Journey Analytics disposent de 20 commandes de travail d’expiration de jeu de données planifiées en attente. Les utilisateurs de Healthcare Shield et de Privacy and Security Shield disposent de 50 commandes d’expiration de jeu de données en attente. Cela signifie que 20 ou 50 jeux de données peuvent être supprimés simultanément.<br>Par exemple, si vous disposez de 20 expirations de jeux de données planifiées et qu’un jeu de données doit être supprimé demain, vous ne pouvez plus définir d’expirations avant qu’après cette suppression du jeu de données.
+>Les utilisateurs de Real-Time CDP, Adobe Journey Optimizer et de Customer Journey Analytics disposent de 20 commandes de travail d’expiration de jeu de données planifiées en attente. Les utilisateurs de Healthcare Shield et de Privacy and Security Shield disposent de 50 commandes d’expiration de jeu de données en attente. Cela signifie que 20 ou 50 jeux de données peuvent être supprimés simultanément.<br>Par exemple, si vous disposez de 20 expirations de jeux de données planifiées et qu’un jeu de données doit être supprimé demain, vous ne pouvez plus définir d’expirations avant qu’après cette suppression du jeu de données.
 
 ![La variable [!UICONTROL Cycle de vie des données] Workspace avec [!UICONTROL Créer une requête] surlignée.](../images/ui/ttl/create-request-button.png)
 
@@ -59,7 +59,7 @@ Ensuite, sous **[!UICONTROL Détails du jeu de données]**, sélectionnez l’ic
 
 >[!NOTE]
 >
-Seuls les jeux de données appartenant au sandbox actuel s’affichent.
+>Seuls les jeux de données appartenant au sandbox actuel s’affichent.
 
 ### Envoyer la requête {#submit-request}
 
@@ -73,7 +73,7 @@ Une fois la demande envoyée, un ordre de travail est créé et s’affiche sur 
 
 >[!NOTE]
 >
-Consultez la section de présentation sur [la chronologie et la transparence](../home.md#dataset-expiration-transparency) pour plus d’informations sur le traitement des expirations des jeux de données une fois qu’elles sont exécutées.
+>Consultez la section de présentation sur [la chronologie et la transparence](../home.md#dataset-expiration-transparency) pour plus d’informations sur le traitement des expirations des jeux de données une fois qu’elles sont exécutées.
 
 ## Modifier ou annuler l’expiration d’un jeu de données {#edit-or-cancel}
 
