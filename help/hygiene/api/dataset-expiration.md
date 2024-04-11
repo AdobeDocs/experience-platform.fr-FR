@@ -3,10 +3,10 @@ title: Point d’entrée de l’API d’expiration du jeu de données
 description: Le point d’entrée /ttl de l’API Data Hygiene vous permet de planifier par programmation l’expiration des jeux de données dans Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 04d49282d60b2e886a6d2dae281b98b60e6ce9b3
+source-git-commit: 0c6e6d23be42b53eaf1fca365745e6502197c329
 workflow-type: tm+mt
-source-wordcount: '2083'
-ht-degree: 63%
+source-wordcount: '2141'
+ht-degree: 60%
 
 ---
 
@@ -22,7 +22,7 @@ L’expiration d’un jeu de données n’est rien d’autre qu’une opération
 
 Avant que la suppression du jeu de données ne soit réellement lancée, vous pouvez annuler l’expiration ou modifier son heure de déclenchement. Après l’annulation de l’expiration d’un jeu de données, vous pouvez la rouvrir en définissant une nouvelle expiration.
 
-Une fois que la suppression du jeu de données est lancée, sa tâche d’expiration est marquée comme étant `executing` et ne peut plus être modifiée. Le jeu de données lui-même peut être récupéré pendant un maximum de sept jours, mais uniquement par le biais d’un processus manuel initié par une demande de service Adobe. Lorsque la requête s’exécute, le lac de données, Identity Service et Real-Time Customer Profile commencent des processus distincts pour supprimer le contenu du jeu de données de leurs services respectifs. Une fois les données supprimées des trois services, la tâche d’expiration est marquée comme étant `executed`.
+Une fois que la suppression du jeu de données est lancée, sa tâche d’expiration est marquée comme étant `executing` et ne peut plus être modifiée. Le jeu de données lui-même peut être récupéré pendant un maximum de sept jours, mais uniquement par le biais d’un processus manuel initié par une demande de service Adobe. Lorsque la requête s’exécute, le lac de données, Identity Service et Real-Time Customer Profile commencent des processus distincts pour supprimer le contenu du jeu de données de leurs services respectifs. Une fois les données supprimées des trois services, la tâche d’expiration est marquée comme étant `completed`.
 
 >[!WARNING]
 >
@@ -56,7 +56,7 @@ GET /ttl?{QUERY_PARAMETERS}
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%Jane Doe%25 \
+  https://platform.adobe.io/data/core/hygiene/ttl?updatedToDate=2021-08-01&author=LIKE%20%25Jane%20Doe%25 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -66,6 +66,10 @@ curl -X GET \
 **Réponse**
 
 Une réponse réussie répertorie les expirations de jeux de données obtenues. L’exemple suivant a été tronqué pour des raisons d’espace.
+
+>[!IMPORTANT]
+>
+>La variable `ttlId` dans la réponse est également appelée `{DATASET_EXPIRATION_ID}`. Tous deux font référence à l’identifiant unique pour l’expiration du jeu de données.
 
 ```json
 {
@@ -90,26 +94,30 @@ Une réponse réussie répertorie les expirations de jeux de données obtenues. 
 
 | Propriété | Description |
 | --- | --- |
-| `totalRecords` | Le nombre d’expirations de jeux de données qui correspondaient aux paramètres de l’appel de liste. |
-| `ttlDetails` | Contient les détails des expirations de jeux de données renvoyées. Pour plus d’informations sur les propriétés d’une expiration de jeu de données, consultez la section de réponse pour effectuer un [appel de recherche](#lookup). |
+| `total_count` | Le nombre d’expirations de jeux de données qui correspondaient aux paramètres de l’appel de liste. |
+| `results` | Contient les détails des expirations de jeux de données renvoyées. Pour plus d’informations sur les propriétés d’une expiration de jeu de données, consultez la section de réponse pour effectuer un [appel de recherche](#lookup). |
 
 {style="table-layout:auto"}
 
 ## Rechercher l’expiration d’un jeu de données {#lookup}
 
-Pour rechercher une expiration de jeu de données, effectuez une requête GET avec l’une des options suivantes : `datasetId` ou le `ttlId`.
+Pour rechercher une expiration de jeu de données, effectuez une requête GET avec l’une des options suivantes : `{DATASET_ID}` ou le `{DATASET_EXPIRATION_ID}`.
+
+>[!IMPORTANT]
+>
+>La variable `{DATASET_EXPIRATION_ID}` est appelé `ttlId` dans la réponse. Tous deux font référence à l’identifiant unique pour l’expiration du jeu de données.
 
 **Format d’API**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}
 ```
 
 | Paramètre | Description |
 | --- | --- |
 | `{DATASET_ID}` | L’identifiant du jeu de données dont vous souhaitez rechercher l’expiration. |
-| `{TTL_ID}` | Identifiant de l’expiration du jeu de données. |
+| `{DATASET_EXPIRATION_ID}` | Identifiant de l’expiration du jeu de données. |
 
 {style="table-layout:auto"}
 
@@ -222,7 +230,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 201 (Created) et le nouvel état de l’expiration du jeu de données, en l’absence d’expiration de jeu de données préexistant.
+Une réponse réussie renvoie un état HTTP 201 (Created) et le nouvel état de l’expiration du jeu de données.
 
 ```json
 {
@@ -254,7 +262,7 @@ Une réponse réussie renvoie un état HTTP 201 (Created) et le nouvel état de 
 | `displayName` | Un nom d’affichage de la requête d’expiration. |
 | `description` | Description de la demande d’expiration. |
 
-Un état HTTP 400 (Bad Request) se produit si une expiration de jeu de données existe déjà pour le jeu de données. Une réponse manquée renvoie un état HTTP 404 (Introuvable) si aucune expiration de ce jeu de données n’existe (ou si vous n’y avez pas accès).
+Un état HTTP 400 (Bad Request) se produit si une expiration de jeu de données existe déjà pour le jeu de données. Une réponse manquée renvoie un état HTTP 404 (Introuvable) si aucune expiration de ce jeu de données n’existe (ou si vous n’avez pas accès au jeu de données).
 
 ## Mettre à jour l’expiration d’un jeu de données {#update}
 
@@ -267,14 +275,12 @@ Pour mettre à jour la date d’expiration d’un jeu de données, utilisez une 
 **Format d’API**
 
 ```http
-PUT /ttl/{TTL_ID}
+PUT /ttl/{DATASET_EXPIRATION_ID}
 ```
-
-<!-- We should be avoiding usage of TTL, Can I change that to {EXPIRY_ID} or {EXPIRATION_ID} instead? -->
 
 | Paramètre | Description |
 | --- | --- |
-| `{TTL_ID}` | L’identifiant de l’expiration du jeu de données que vous souhaitez modifier. |
+| `{DATASET_EXPIRATION_ID}` | L’identifiant de l’expiration du jeu de données que vous souhaitez modifier. Remarque : On parle alors de `ttlId` dans la réponse. |
 
 **Requête**
 
@@ -297,7 +303,7 @@ curl -X PUT \
 
 | Propriété | Description |
 | --- | --- |
-| `expiry` | **Obligatoire** Date et heure au format ISO 8601. Si la chaîne n’a pas de décalage de fuseau horaire explicite, le fuseau horaire est supposé être UTC. La durée de vie des données du système est définie en fonction de la valeur d’expiration fournie. Tout horodatage d’expiration précédent pour le même jeu de données est remplacé par la nouvelle valeur d’expiration que vous avez fournie. Cette date et cette heure doivent au moins être **24 heures dans le futur**. |
+| `expiry` | **Obligatoire** Date et heure au format ISO 8601. Si la chaîne n’a pas de décalage de fuseau horaire explicite, le fuseau horaire est supposé être UTC. La durée de vie des données du système est définie en fonction de la valeur d’expiration fournie. Tout horodatage d’expiration précédent pour le même jeu de données doit être remplacé par la nouvelle valeur d’expiration que vous avez fournie. Cette date et cette heure doivent au moins être **24 heures dans le futur**. |
 | `displayName` | Un nom d’affichage de la requête d’expiration. |
 | `description` | Une description facultative de la requête d’expiration. |
 
@@ -374,19 +380,19 @@ Une réponse réussie renvoie un statut HTTP 204 (No Content), et l’attribut
 
 ## Récupérer l’historique du statut d’expiration d’un jeu de données {#retrieve-expiration-history}
 
-Vous pouvez rechercher l’historique du statut d’expiration d’un jeu de données spécifique à l’aide du paramètre de requête `include=history` dans une requête de recherche. Le résultat comprend des informations sur la création de l’expiration du jeu de données, les mises à jour qui ont été appliquées et son annulation ou son exécution (le cas échéant). Vous pouvez également utiliser la variable `ttlId` de l’expiration du jeu de données.
+Pour rechercher l’historique de l’état d’expiration d’un jeu de données spécifique, utilisez la variable `{DATASET_ID}` et `include=history` paramètre de requête dans une requête de recherche. Le résultat comprend des informations sur la création de l’expiration du jeu de données, les mises à jour qui ont été appliquées et son annulation ou son exécution (le cas échéant). Vous pouvez également utiliser la variable `{DATASET_EXPIRATION_ID}` pour récupérer l’historique des états d’expiration du jeu de données.
 
 **Format d’API**
 
 ```http
 GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{TTL_ID}
+GET /ttl/{DATASET_EXPIRATION_ID}?include=history
 ```
 
 | Paramètre | Description |
 | --- | --- |
 | `{DATASET_ID}` | L’identifiant du jeu de données dont vous souhaitez consulter l’historique des expirations. |
-| `{TTL_ID}` | Identifiant de l’expiration du jeu de données. |
+| `{DATASET_EXPIRATION_ID}` | L’identifiant de l’expiration du jeu de données. Remarque : On parle alors de `ttlId` dans la réponse. |
 
 {style="table-layout:auto"}
 
