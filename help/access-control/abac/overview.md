@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Présentation du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 91631c056fc9d7ceab9eeecdba5733b64f6e869b
+source-git-commit: 900e0dc323e9055a92313788a4a191c615d0b8cd
 workflow-type: tm+mt
-source-wordcount: '1844'
-ht-degree: 87%
+source-wordcount: '1866'
+ht-degree: 84%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 87%
 
 Le contrôle d’accès basé sur les attributs est une fonctionnalité d’Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs. Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ ou à un segment de schéma. Un administrateur définit des politiques d’accès qui comprennent des attributs afin de gérer les autorisations d’accès des utilisateurs.
 
-Cette fonctionnalité vous permet d’étiqueter les champs de schéma d’un modèle de données d’expérience (XDM) avec des libellés définissant l’utilisation de l’organisation ou des données. En parallèle, les administrateurs peuvent utiliser l’interface d’administration des utilisateurs et des rôles pour définir des politiques d’accès relatives aux champs de schéma XDM. Cela permet ainsi une meilleure gestion des accès accordés aux utilisateurs ou aux groupes d’utilisateurs (utilisateurs internes, externes ou tiers). Enfin, le contrôle d’accès basé sur les attributs permet aux administrateurs de gérer l’accès à des segments spécifiques.
+Utilisez cette fonctionnalité pour étiqueter les champs de schéma du modèle de données d’expérience (XDM) avec des libellés qui définissent les portées d’utilisation des données ou de l’organisation. En parallèle, les administrateurs peuvent utiliser l’interface d’administration des utilisateurs et des rôles pour définir des politiques d’accès relatives aux champs de schéma XDM. Cela permet ainsi une meilleure gestion des accès accordés aux utilisateurs ou aux groupes d’utilisateurs (utilisateurs internes, externes ou tiers). Enfin, le contrôle d’accès basé sur les attributs permet aux administrateurs de gérer l’accès à des segments spécifiques.
 
 >[!IMPORTANT]
 >
@@ -73,7 +73,7 @@ La disponibilité du contrôle d’accès basé sur les attributs est limitée p
 
 * Interface des autorisations : permet de définir les rôles utilisateur, les autorisations et les politiques pour le contrôle d’accès basé sur les attributs.
 
-* Étiquetage : permet d’ajouter, de modifier et de supprimer les libellés des rôles utilisateur, des champs de schéma, des segments et d’autres objets pris en charge, afin d’exploiter les politiques de contrôle d’accès.
+* Étiquetage : ajoutez, modifiez et supprimez des étiquettes pour les rôles utilisateur, les champs de schéma, les segments et d’autres objets pris en charge afin d’exploiter les stratégies de contrôle d’accès. **Remarque :** Tout segment qui utilise un attribut étiqueté doit également être étiqueté si vous souhaitez que les mêmes restrictions d’accès s’y appliquent.
 
 Les workflows d’administration pour toutes les applications Experience Platform exécutées depuis Admin Console sont en cours de basculement vers la nouvelle interface d’autorisations.
 

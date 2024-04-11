@@ -4,9 +4,9 @@ title: Guide de bout en bout du contrôle d’accès basé sur les attributs
 description: Ce document fournit un guide de bout en bout sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: c89ae9befa3befbffab9d6468f3c207ab8e7b74f
 workflow-type: tm+mt
-source-wordcount: '1714'
+source-wordcount: '1736'
 ht-degree: 24%
 
 ---
@@ -132,6 +132,10 @@ La variable **[!UICONTROL Modifier les libellés]** s’affiche, vous permettant
 >Lorsqu’un libellé est ajouté à un champ, il est appliqué à la ressource parent de ce champ (une classe ou un groupe de champs). Si la classe ou le groupe de champs parent est utilisé par d’autres schémas, ces derniers hériteront du même libellé.
 
 ## Application d’étiquettes aux segments
+
+>[!NOTE]
+>
+>Tout segment qui utilise un attribut étiqueté doit également être étiqueté si vous souhaitez que les mêmes restrictions d’accès s’y appliquent.
 
 Une fois les champs de schéma libellés, vous pouvez commencer à les libeller.
 
