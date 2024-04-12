@@ -5,10 +5,10 @@ description: Présentation et informations supplémentaires sur la fonction des 
 feature: Get Started, Profiles, B2B
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 21%
+source-wordcount: '435'
+ht-degree: 14%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 21%
 
 ## Vue d’ensemble {#overview}
 
-Les entreprises B2B ont souvent leurs informations client stockées dans plusieurs systèmes, chacun ne contenant que des données partielles, voire conflictuelles, pour la même entité commerciale physique. Il est donc très difficile d’avoir une visualisation précise de leurs clients, ce qui réduit l’efficacité et l’efficience de leurs efforts de marketing et de vente B2B.
+Les entreprises B2B ont souvent leurs informations client stockées dans plusieurs systèmes, chacun ne contenant que des données partielles, voire conflictuelles, pour la même entité commerciale physique. Cela crée un énorme défi : parvenir à une vue exacte de ses clients, réduisant ainsi l’efficacité et l’efficience de leurs efforts marketing et de vente B2B.
 
 | Identifiant | Nom | Site web | Secteur industriel | État | Téléphone | A une opportunité ouverte avec quantité > `$1 million` |
 |---|---|---|---|---|---|---|
@@ -32,7 +32,7 @@ Avec les comptes associés, [!DNL Real-Time CDP B2B] affiche désormais la liste
 
 ![Écran affichant les comptes associés dans l’interface utilisateur de l’Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
-Utilisez cette fonction pour afficher les profils de compte associés pour un profil de compte dans l’interface utilisateur de l’Experience Platform, puis inclure les comptes associés dans vos définitions de segment afin d’élargir votre portée ou d’appliquer des critères plus larges dans vos segments.
+Utilisez cette fonction pour afficher les profils de compte associés à un profil de compte dans l’interface utilisateur de l’Experience Platform, puis inclure les comptes associés dans vos définitions de segment afin d’élargir votre portée ou d’appliquer des critères plus larges à vos audiences.
 
 ## Activation du service de comptes associé {#enable}
 
@@ -64,6 +64,6 @@ Pour plus d’informations sur la variable [comment trouver des comptes associé
 
 ## Utilisation de comptes liés {#how-to-use}
 
-Vous pouvez utiliser des comptes et des comptes associés dans la segmentation. La décision d’utiliser des comptes associés dans vos définitions de segment dépend de votre cas d’utilisation marketing. Par exemple, vous pouvez utiliser des comptes associés pour les campagnes de marketing par e-mail ou de publicité, dans lesquels vous pouvez accepter une précision moindre en échange d’une portée plus large.
+Vous pouvez utiliser des comptes et des comptes associés dans la segmentation. La décision d’utiliser des comptes associés dans vos définitions de segment dépend de votre cas d’utilisation marketing. Par exemple, vous pouvez utiliser des comptes associés pour les campagnes de marketing par e-mail ou de publicité, dans lesquels vous pouvez accepter une précision moindre dans exchange pour une portée plus large.
 
 Voir [exemple de segmentation](/help/rtcdp/segmentation/b2b.md#related-accounts) qui utilise des comptes associés.

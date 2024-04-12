@@ -5,10 +5,10 @@ description: Cet exemple de scénario fournit un exemple de configuration de vot
 feature: Get Started, Use Cases, B2B
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '1146'
-ht-degree: 83%
+source-wordcount: '1151'
+ht-degree: 76%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 83%
 L’édition B2B de Real-time Customer Data Platform développe les offres Real-Time CDP et Adobe Experience Platform existantes pour prendre en charge les données et les workflows B2B. Ce document fournit un exemple de cas d’utilisation qui illustre les avantages supplémentaires fournis par l’édition B2B. Ce sont :
 
 - Associez les données de comptes et d’utilisateurs provenant de différentes sources de données compartimentées afin de produire une vue d’ensemble offrant une meilleure compréhension des clients et permettant une segmentation plus précise. Pour plus d’informations, consultez la documentation sur la [création de relations de schémas XDM](./schemas/b2b.md) à utiliser avec des sources B2B variées.
-- Segmentez une audience sur la base d’attributs d’entités liées. Cela comprend les comptes, les opportunités, les campagnes et les listes marketing. Les segments ne sont plus limités aux attributs de personne et aux événements d’expérience. Consultez la [documentation sur la segmentation B2B](./segmentation/b2b.md) pour obtenir plus d’exemples de création d’audiences spécifiques au B2B.
+- Segmentez une audience sur la base d’attributs d’entités liées. Cela comprend les comptes, les opportunités, les campagnes et les listes marketing. Les audiences ne se limitent plus aux attributs de personne et aux événements d’expérience. Consultez la [documentation sur la segmentation B2B](./segmentation/b2b.md) pour obtenir plus d’exemples de création d’audiences spécifiques au B2B.
 - Profitez de la prise en charge native du cas d’utilisation d’une personne liée à plusieurs comptes.
 
 ## Cas d’utilisation
@@ -50,9 +50,9 @@ Les informations pertinentes au sujet de Townsend étant enregistrées comme Com
 
 Cela empêche l’équipe marketing de Bodea de cibler efficacement les contacts commerciaux spécifiques de ces entreprises avec cette nouvelle opportunité.
 
-À ce jour, Townsend a dépensé plus d’un million de dollars cumulés en produits Bodea sur l’ensemble de ses comptes. Cependant, un segment créé à l’aide de son ancien système n’incluait personne de Townsend, à moins que le total des dépenses dans un seul système de vente ne dépasse 1 million de dollars. Cela s’explique par le fait que les données relatives au chiffre d’affaires sont compartimentées dans des comptes relevant de différents systèmes de vente.
+À ce jour, Townsend a dépensé plus d’un million de dollars cumulés en produits Bodea sur l’ensemble de ses comptes. Cependant, une audience créée à l’aide de leur ancien système n’inclurait personne de Townsend, à moins que le total dépensé dans un seul système de vente ne totalise plus d’1 million de dollars. Cela s’explique par le fait que les données relatives au chiffre d’affaires sont compartimentées dans des comptes relevant de différents systèmes de vente.
 
-Comme les dépenses de Townsend sont fractionnées entre différents systèmes de vente et ne dépassent pas individuellement un million, le segment ne trouve aucune correspondance dans Marketo 1 ou Marketo 2.
+Les dépenses de Townsend étant réparties entre différents systèmes de vente et ne totalisant pas individuellement plus d’un million, la définition de segment ne trouverait personne qualifié dans Marketo 1 ou Marketo 2.
 
 ### Comment Real-Time CDP B2B Edition résout le problème
 
@@ -77,7 +77,7 @@ Pour des raisons de simplicité et dans le cadre de cet exemple, les utilisateur
 | Opportunité 1, 200 000 $ |
 | Opportunité 2, 900 000 $ |
 
-- Créez des segments uniques en utilisant ces données agrégées pour différentes initiatives marketing. Dans cet exemple, le segment recherche tous les utilisateurs qui :
+- Créez des audiences uniques à l’aide de ces données agrégées pour diverses initiatives marketing. Dans cet exemple, la définition de segment trouve toutes les personnes qui :
 
    - Disposent d’opportunités associées (sur TOUS les comptes) dont la valeur dépasse 1 million de dollars
    - ET

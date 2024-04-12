@@ -6,10 +6,10 @@ description: Utilisez cet exemple de scénario comme exemple lors de la configur
 feature: Get Started, B2B
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '1216'
-ht-degree: 81%
+source-wordcount: '1174'
+ht-degree: 67%
 
 ---
 
@@ -76,33 +76,33 @@ Le connecteur source du Marketo Engage fournit une fonctionnalité de mappage a
 
 Le spécialiste marketing Bodea vérifie que tous les groupes de champs sont correctement mappés et poursuit le processus de configuration des sources en initialisant un flux de données. En créant un flux de données pour importer les données Marketo, les données entrantes peuvent être utilisées par les services Platform en aval. Au cours du processus d’ingestion initial, les données sont importées dans Experience Platform sous la forme d’un lot. Ensuite, les données ingérées suivantes sont diffusées en continu dans Profile avec des mises à jour en temps quasi réel. 
 
-## Création d’un segment pour évaluer vos données
+## Création d’une audience pour évaluer vos données
 
 La tâche suivante consiste à créer une audience pour la nouvelle campagne de marketing par e-mail de Bodea en fonction d’attributs spécifiques des entités associées dans les données source. Dans l’interface utilisateur de Platform, le spécialiste marketing Bodea commence par sélectionner **[!UICONTROL Segments]** dans le volet de navigation de gauche, puis **[!UICONTROL Créer un segment]**.
 
-Dans cet exemple, le segment trouve toutes les personnes qui travaillent dans le service des ventes et qui sont liées à n’importe quel compte ayant au moins une opportunité ouverte. Ce segment nécessite un lien entre la classe XDM Individual Profile, la classe XDM Business Account et la classe XDM Business Opportunity. 
+Dans cet exemple, l’audience trouve toutes les personnes qui travaillent dans le service des ventes et qui sont liées à n’importe quel compte ayant au moins une opportunité ouverte. Ces audiences nécessitent un lien entre la classe XDM Individual Profile, la classe XDM Business Account et la classe XDM Business Opportunity.
 
 ![Segment de cas d’utilisation](./assets/b2b-tutorial/use-case-segment.png)
 
 >[!NOTE]
 > 
->Pour plus d’informations sur la création de segments afin d’évaluer vos données, consultez le [guide de l’interface utilisateur du créateur de segments](../segmentation/ui/segment-builder.md). Pour des cas d’utilisation de la segmentation B2B plus spécifiques, reportez-vous à la section [présentation de la segmentation pour Real-Time CDP B2B Edition](./segmentation/b2b.md).
+>Pour obtenir des instructions sur la création d’audiences pour évaluer vos données, voir [Guide de l’interface utilisateur du créateur de segments](../segmentation/ui/segment-builder.md). Pour des cas d’utilisation de la segmentation B2B plus spécifiques, reportez-vous à la section [présentation de la segmentation pour Real-Time CDP B2B Edition](./segmentation/b2b.md).
 
 Le créateur de segments vous permet de créer une audience vendable à partir des données de Real-Time Customer Profile et d’afficher les estimations de votre audience potentielle en fonction de la combinaison des attributs, événements et audiences existantes que vous avez définies.
 
 ## Activation de vos données évaluées vers une destination
 
-Une fois le segment créé avec succès, un résumé est fourni dans la section [!UICONTROL Détails] de l’espace de travail. Comme aucune destination n’est actuellement activée pour le segment, le spécialiste marketing Bodea doit exporter l’audience vers un jeu de données où elle peut être accessible et sur lequel il peut agir.
+Une fois l’audience créée, un résumé est fourni dans la variable [!UICONTROL Détails] de l’espace de travail. Comme aucune destination n’est actuellement activée pour la définition de segment, le spécialiste du marketing de la boîte doit exporter l’audience vers un jeu de données où elle peut être accessible et sur lequel elle peut agir.
 
 Dans l’espace de travail [!UICONTROL Segments] de l’interface utilisateur de Platform, le spécialiste marketing Bodea sélectionne **[!UICONTROL Activer vers la destination]**.
 
-![Activation du segment vers une destination](./assets/b2b-tutorial/activate-to-destination.png)
+![Activation de l’audience vers une destination](./assets/b2b-tutorial/activate-to-destination.png)
 
 >[!NOTE]
 > 
->Consultez le tutoriel sur l’[activation d’un segment vers une destination](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=fr) pour obtenir des instructions complètes sur la manière d’y parvenir. 
+>Voir le tutoriel sur [activation d’une audience vers une destination](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=fr) pour obtenir des instructions complètes sur la manière d’y parvenir.
 
-Le spécialiste marketing Bodea active le segment vers la destination Marketo, ce qui lui permet de transférer les données de segment de Platform vers Marketo Engage sous la forme d’une liste statique. Consultez le guide sur la [Destination Marketo](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html?lang=fr) pour plus d’informations.
+Le spécialiste du marketing de boîte active l’audience vers la destination Marketo, ce qui lui permet de transférer les données d’audience de Platform vers Marketo Engage sous la forme d’une liste statique. Consultez le guide sur la [Destination Marketo](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html?lang=fr) pour plus d’informations.
 
 ## Étapes suivantes
 

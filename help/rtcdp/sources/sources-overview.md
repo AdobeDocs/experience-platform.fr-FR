@@ -4,15 +4,15 @@ title: Sources dans Real-time Customer Data Platform
 description: Ce document présente les sources dans Adobe Real-time Customer Data Platform
 feature: Sources, Data Ingestion, Get Started
 exl-id: 15b3ee9b-6faf-4091-9641-e653e4cdd7fb
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 43%
+source-wordcount: '103'
+ht-degree: 0%
 
 ---
 
 # Sources dans Real-time Customer Data Platform
 
-[!DNL Adobe Real-Time Customer Data Platform] permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez envoyer des données à partir de différentes sources, notamment les solutions Adobe, le stockage dans le cloud, des logiciels tiers et la gestion de la relation client.
+[!DNL Adobe Real-Time Customer Data Platform] vous permet d’ingérer des données provenant de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services. Vous pouvez ingérer des données à partir de diverses sources telles que des applications d’Adobe, le stockage dans le cloud, des logiciels tiers, votre système de gestion de la relation client, etc.
 
 Pour une présentation plus détaillée des sources, y compris une liste des sources disponibles et des liens vers les tutoriels, veuillez lire la [documentation sur les sources](../../sources/home.md).

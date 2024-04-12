@@ -4,9 +4,9 @@ description: Présentation du rôle des sources dans Adobe Real-time Customer Da
 feature: Sources, Data Ingestion, Get Started, B2B
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: a8c9543bb003a99dcd85712d202482511c0a5608
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,6 @@ Voir [Présentation des connecteurs source](../../sources/home.md) pour plus d�
 Les documents suivants fournissent des informations supplémentaires sur l’utilisation de [!DNL Marketo] pour importer des données B2B dans Platform :
 
 * Pour plus d’informations sur la connexion à votre [!DNL Marketo] data to Platform, consultez le tutoriel sur [création d’un connecteur source Marketo dans l’interface utilisateur](../../sources/tutorials/ui/create/adobe-applications/marketo.md).
-* Pour plus d’informations sur la configuration sous-jacente des espaces de noms et des schémas B2B utilisés avec [!DNL Marketo], voir la documentation pour [Espaces de noms et schémas B2B](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
+* Pour plus d’informations sur la configuration sous-jacente des espaces de noms et des schémas B2B, consultez la documentation pour [Espaces de noms et schémas B2B](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 * Pour plus d’informations sur la recherche de [!DNL Marketo] Munchkin ID et la génération de vos informations d’identification, voir [[!DNL Marketo] guide d&#39;authentification](../../sources/connectors/adobe-applications/marketo/marketo-auth.md).
 * Pour plus d’informations sur les règles de mappage spécifiques qui s’appliquent à [!DNL Marketo] jeux de données, consultez la documentation sur [[!DNL Marketo] mappages de champs](../../sources/connectors/adobe-applications//mapping/marketo.md).

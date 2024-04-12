@@ -6,10 +6,10 @@ description: Adobe Experience Platform utilise un modèle de données hybride 
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: f6cfe2de5f2f485cbd42c83b539fb458b505d260
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
 source-wordcount: '1794'
-ht-degree: 49%
+ht-degree: 47%
 
 ---
 
@@ -102,7 +102,7 @@ Les mécanismes de sécurisation suivants se rapportent à la taille des donnée
 
 ## Mécanismes de sécurisation de la segmentation
 
-Les mécanismes de sécurisation décrits dans cette section font référence au nombre et à la nature des segments qu’une organisation peut créer dans Experience Platform, ainsi qu’au mappage et à l’activation de segments vers des destinations.
+Les barrières de sécurité décrites dans cette section font référence au nombre et à la nature des audiences qu’une organisation peut créer dans un Experience Platform, ainsi qu’au mappage et à l’activation d’audiences vers des destinations.
 
 >[!NOTE]
 >
@@ -134,7 +134,7 @@ Les attributs indépendants du temps, également appelés « données d’enreg
 
 #### Entité de Dimension
 
-Bien que la banque de données de profil conservant les données de profil ne soit pas un magasin relationnel, Profile permet l’intégration à de petites entités de dimension afin de créer des segments d’une manière simplifiée et intuitive. Cette intégration est connue sous le nom [segmentation d’entités multiples](../segmentation/multi-entity-segmentation.md).
+Bien que la banque de données de profil conservant les données de profil ne soit pas une banque de données relationnelle, Profile permet l’intégration à de petites entités de dimension afin de créer des audiences d’une manière simplifiée et intuitive. Cette intégration est connue sous le nom [segmentation d’entités multiples](../segmentation/multi-entity-segmentation.md).
 
 Votre entreprise peut également définir des classes XDM pour décrire des éléments autres que des individus, tels que des magasins, des produits ou des propriétés. Ces variables[!DNL XDM Individual Profile] Les schémas sont appelés &quot;entités de dimension&quot; (également appelées &quot;entités de recherche&quot;) et ne contiennent pas de données de série temporelle. Les schémas qui représentent des entités de dimension sont liés à des entités de profil grâce à l’utilisation de [relations de schéma](../xdm/tutorials/relationship-ui.md).
 

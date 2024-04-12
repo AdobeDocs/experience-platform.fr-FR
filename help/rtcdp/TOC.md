@@ -3,12 +3,12 @@ product: adobe experience platform
 solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Guide de Real-Time Customer Data Platform
-user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des segments d’audience à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
+user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs sources d’entreprise afin de créer des profils client, de créer des audiences à partir de ces profils et d’activer ces audiences vers des destinations tierces.
 role: Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 69%
+source-wordcount: '294'
+ht-degree: 59%
 
 ---
 
@@ -33,6 +33,11 @@ ht-degree: 69%
    * [Guide de l’interface utilisateur des profils de compte](accounts/account-profile-ui-guide.md)
 * Administration {#admin}
    * [Présentation de l’administration](administration/admin-overview.md)
+* Audiences et segmentation {#segmentation}
+   * [Présentation de la segmentation](segmentation/segmentation-overview.md)
+   * [Guide du créateur de segments](segmentation/segment-builder-guide.md)
+   * [Segmentation dans l’édition B2B de Real-Time CDP](segmentation/b2b.md)
+   * [IA dédiée aux clients](segmentation/customer-ai.md)
 * Jeux de données {#datasets}
    * [Jeux de données](datasets/dataset.md)
    * [Qualité des données sur la plateforme](datasets/data-quality.md)
@@ -66,11 +71,6 @@ ht-degree: 69%
 * Schémas {#schemas}
    * [Présentation des schémas](schemas/overview.md)
    * [Schémas dans l’édition B2B de Real-Time CDP](schemas/b2b.md)
-* Segments {#segmentation}
-   * [Présentation de la segmentation](segmentation/segmentation-overview.md)
-   * [Guide du créateur de segments](segmentation/segment-builder-guide.md)
-   * [Segmentation dans l’édition B2B de Real-Time CDP](segmentation/b2b.md)
-   * [IA dédiée aux clients](segmentation/customer-ai.md)
 * Sources {#sources}
    * [Présentation des sources](sources/sources-overview.md)
    * [Sources dans l’édition B2B de Real-Time CDP](sources/b2b.md)

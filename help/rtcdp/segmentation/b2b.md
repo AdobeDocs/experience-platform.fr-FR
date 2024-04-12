@@ -4,9 +4,9 @@ description: Présentation des différents cas d’utilisation de l’édition B
 feature: Get Started, Audiences, Segments, B2B
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1422'
 ht-degree: 1%
 
 ---
@@ -24,9 +24,9 @@ Ce document fournit des exemples de définitions de segment dans l’édition B2
 Avant de pouvoir utiliser les attributs de segmentation pour les classes B2B, vous devez effectuer les étapes suivantes :
 
 1. Créez des schémas qui utilisent les classes B2B. Les classes Édition B2B comprennent Compte, Campagne, Opportunité, Liste marketing, etc. Pour plus d’informations sur [Configuration de schémas à utiliser avec des classes B2B](../schemas/b2b.md) consultez la documentation du schéma.
-1. Créez des relations entre vos schémas B2B de modèle de données d’expérience (XDM). Les segments basés sur les attributs de l’édition B2B nécessitent des relations entre les classes pour utiliser pleinement la fonctionnalité étendue de segmentation B2B. Consultez la documentation relative à [comment définir une relation entre deux schémas B2B](../../xdm/tutorials/relationship-b2b.md) pour plus d’informations.
-1. Ingérez des données à l’aide de jeux de données basés sur vos schémas B2B. Consultez la documentation des sources pour [informations sur l’ingestion de données](../../sources/connectors/adobe-applications/marketo/marketo.md).
-1. Lisez la section [Guide d’utilisation du créateur de segments](../../segmentation/ui/segment-builder.md) pour obtenir des conseils plus détaillés sur la création d’audiences.
+2. Créez des relations entre vos schémas B2B de modèle de données d’expérience (XDM). Les audiences basées sur les attributs de l’édition B2B nécessitent des relations entre les classes pour utiliser pleinement la fonctionnalité étendue de segmentation B2B. Consultez la documentation relative à [comment définir une relation entre deux schémas B2B](../../xdm/tutorials/relationship-b2b.md) pour plus d’informations.
+3. Ingérez des données à l’aide de jeux de données basés sur vos schémas B2B. Consultez la documentation des sources pour [informations sur l’ingestion de données](../../sources/connectors/adobe-applications/marketo/marketo.md).
+4. Lisez la section [Guide d’utilisation du créateur de segments](../../segmentation/ui/segment-builder.md) pour obtenir des conseils plus détaillés sur la création d’audiences.
 
 Une fois ces exigences respectées, vous pouvez combiner ces attributs pour les cas d’utilisation B2B courants.
 
@@ -54,7 +54,7 @@ Cette relation est reflétée dans le créateur de segments grâce à l’utilis
 
 Reportez-vous à [schémas dans la documentation de Real-time Customer Data Platform B2B Edition](../schemas/b2b.md) pour plus d’informations sur les classes B2B disponibles.
 
-Les cas d’utilisation ci-dessous fournissent des informations sur les classes utilisées pour établir des relations entre les différents schémas afin d’obtenir ces résultats. Ces exemples peuvent vous aider à créer vos propres segments.
+Les cas d’utilisation ci-dessous fournissent des informations sur les classes utilisées pour établir des relations entre les différents schémas afin d’obtenir ces résultats. Ces exemples peuvent vous aider à créer vos propres audiences.
 
 ## Exemples de différents cas d’utilisation de la segmentation {#use-cases}
 

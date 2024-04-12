@@ -3,7 +3,7 @@ title: Barrières de sécurité Real-Time CDP
 description: Découvrez les barrières de sécurité des données dans les différents services et zones de Real-Time CDP.
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
-source-git-commit: af37aca17f4b365b52215b8c886e733f00c4a4e8
+source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 7%
@@ -27,7 +27,6 @@ Commencez ici et suivez les liens ci-dessous pour comprendre toutes les barrièr
 >[!TIP]
 >
 >En outre, visite [les plans directeurs de l’expérience numérique ;](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) pour obtenir des informations supplémentaires, telles que [diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
-
 
 ## Types de protection {#guardrail-types}
 

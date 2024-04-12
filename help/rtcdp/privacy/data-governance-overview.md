@@ -4,10 +4,10 @@ title: Présentation de la gouvernance des données
 description: La gouvernance des données vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données.
 feature: Get Started, Data Governance
 exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
 workflow-type: tm+mt
-source-wordcount: '690'
-ht-degree: 32%
+source-wordcount: '689'
+ht-degree: 30%
 
 ---
 
@@ -37,7 +37,7 @@ Vous pouvez définir des restrictions d’utilisation des données sur une desti
 >
 >Pour plus d’informations sur les actions marketing et leur utilisation dans les stratégies d’utilisation des données, voir [présentation des stratégies d’utilisation des données](../../data-governance/policies/overview.md) dans le [!DNL Experience Platform] la documentation.
 
-La définition d’actions marketing sur les destinations vous permet de vous assurer que les profils ou segments envoyés vers ces destinations sont conformes aux politiques d’utilisation des données. Vous devez donc ajouter des actions marketing appropriées à vos destinations en fonction des besoins de votre entreprise pour appliquer des restrictions de stratégie à l’activation.
+La définition d’actions marketing sur les destinations vous permet de vous assurer que les profils ou les audiences envoyés vers ces destinations sont conformes aux politiques d’utilisation des données. Vous devez donc ajouter des actions marketing appropriées à vos destinations en fonction des besoins de votre entreprise pour appliquer des restrictions de stratégie à l’activation.
 
 Les actions marketing ne peuvent être sélectionnées que lors de la configuration d’une destination pour la première fois. Selon le type de destination que vous utilisez, la possibilité de configurer des actions marketing s’affiche à différents points du workflow de configuration. Voir [documentation sur les destinations](../destinations/overview.md) pour savoir comment configurer votre destination spécifique.
 
@@ -45,11 +45,11 @@ Les actions marketing ne peuvent être sélectionnées que lors de la configurat
 
 Les politiques d’utilisation des données doivent être définies et activées pour que les libellés d’utilisation des données prennent en charge efficacement la conformité des données. Les stratégies d’utilisation des données sont des règles qui décrivent les types d’actions marketing que vous êtes autorisé ou non à effectuer sur les données de Real-Time CDP. Voir la section &quot;Stratégies d’utilisation des données&quot; dans la section [!DNL Experience Platform] [Présentation de la gouvernance des données](../../data-governance/home.md) pour plus d’informations.
 
-Adobe Experience Platform propose plusieurs politiques principales pour les cas d’utilisation courants de l’expérience client. Ces stratégies peuvent être visualisées dans l’interface utilisateur en accédant à la **[!UICONTROL Stratégies]** l’espace de travail et en sélectionnant **[!UICONTROL Parcourir]** . Voir [guide d’utilisation des stratégies](../../data-governance/policies/user-guide.md) dans le [!DNL Experience Platform] documentation pour obtenir des instructions plus détaillées sur l’utilisation des stratégies dans l’interface utilisateur, y compris sur la création de vos propres stratégies personnalisées.
+Adobe Experience Platform fournit plusieurs stratégies de base pour les cas d’utilisation courants de l’expérience client. Ces stratégies peuvent être visualisées dans l’interface utilisateur en accédant à la **[!UICONTROL Stratégies]** l’espace de travail et en sélectionnant **[!UICONTROL Parcourir]** . Voir [guide d’utilisation des stratégies](../../data-governance/policies/user-guide.md) dans le [!DNL Experience Platform] documentation pour obtenir des instructions plus détaillées sur l’utilisation des stratégies dans l’interface utilisateur, y compris sur la création de vos propres stratégies personnalisées.
 
 ## Appliquer des stratégies d’utilisation des données {#enforce}
 
-Une fois que les données sont étiquetées et que les politiques d’utilisation sont définies, vous pouvez appliquer les politiques d’utilisation des données. Lors de l’activation des segments d’audience vers des destinations dans Real-Time CDP, la gouvernance des données applique automatiquement les stratégies d’utilisation en cas de violation.
+Une fois que les données sont étiquetées et que les politiques d’utilisation sont définies, vous pouvez appliquer les politiques d’utilisation des données. Lors de l’activation d’audiences vers des destinations dans Real-Time CDP, la gouvernance des données applique automatiquement les stratégies d’utilisation en cas de violation.
 
 Consultez le document sur [application automatique de la stratégie](../../data-governance/enforcement/auto-enforcement.md) pour plus d’informations.
 
