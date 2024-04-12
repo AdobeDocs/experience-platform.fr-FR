@@ -2,10 +2,10 @@
 title: Présentation de la gestion avancée du cycle de vie des données
 description: La gestion avancée du cycle de vie des données vous permet de gérer le cycle de vie de vos données en mettant à jour ou en purgeant des enregistrements obsolètes ou inexacts.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
+source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
 workflow-type: tm+mt
-source-wordcount: '589'
-ht-degree: 62%
+source-wordcount: '583'
+ht-degree: 58%
 
 ---
 
@@ -36,7 +36,7 @@ La variable [!UICONTROL Cycle de vie des données] L’interface utilisateur rep
 
 ## Chronologie et transparence
 
-[Les requêtes de suppression d’enregistrements et d’expiration de jeux de données disposent chacune de leur propre chronologie de traitement et fournissent des mises à jour de transparence à des points clés de leurs workflows respectifs.](./ui/record-delete.md)
+[Suppression d’enregistrements](./ui/record-delete.md) et les demandes d’expiration de jeux de données ont chacune leur propre chronologie de traitement et fournissent des mises à jour de transparence à des points clés de leurs workflows respectifs.
 
 <!-- ### Dataset expirations {#dataset-expiration-transparency} -->
 
@@ -70,4 +70,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## Étapes suivantes
 
-Ce document fournit un aperçu des fonctionnalités du cycle de vie des données de Platform. Pour commencer à effectuer des demandes d’hygiène des données dans l’interface utilisateur, reportez-vous au [guide de l’interface utilisateur](./ui/overview.md). Pour savoir comment créer des tâches de cycle de vie des données par programmation, reportez-vous à la section [Guide de l’API d’hygiène des données](./api/overview.md)
+Ce document fournit un aperçu des fonctionnalités du cycle de vie des données de Platform. Pour commencer à effectuer des demandes d’hygiène des données dans l’interface utilisateur, reportez-vous au [guide de l’interface utilisateur](./ui/overview.md). Pour savoir comment créer des tâches du cycle de vie des données par programmation, reportez-vous à la section [Guide de l’API d’hygiène des données](./api/overview.md)

@@ -3,10 +3,10 @@ title: Point d’entrée de l’API d’expiration du jeu de données
 description: Le point d’entrée /ttl de l’API Data Hygiene vous permet de planifier par programmation l’expiration des jeux de données dans Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 0c6e6d23be42b53eaf1fca365745e6502197c329
+source-git-commit: 20d616463469a4d78fe0e7b6be0ec76b293789d6
 workflow-type: tm+mt
-source-wordcount: '2141'
-ht-degree: 60%
+source-wordcount: '2166'
+ht-degree: 59%
 
 ---
 
@@ -197,6 +197,10 @@ Le fichier JSON suivant représente une réponse tronquée pour les détails d�
 Pour vous assurer que les données sont supprimées du système après une période spécifiée, planifiez une expiration pour un jeu de données spécifique en fournissant l’identifiant du jeu de données ainsi que la date et l’heure d’expiration au format ISO 8601.
 
 Pour créer une expiration de jeu de données, effectuez une requête de POST comme illustré ci-dessous et fournissez les valeurs mentionnées ci-dessous dans la payload.
+
+>[!NOTE]
+>
+>Si vous recevez une erreur 404, assurez-vous que la requête ne comporte aucune barre oblique. Une barre oblique de fin peut entraîner l’échec d’une demande de POST.
 
 **Format d’API**
 

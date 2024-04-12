@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour de septembre 2023 pour Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
 workflow-type: tm+mt
-source-wordcount: '2257'
-ht-degree: 100%
+source-wordcount: '2263'
+ht-degree: 98%
 
 ---
 
@@ -98,7 +98,7 @@ Experience Platform offre toute une gamme de fonctionnalités d’hygiène des 
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE Version Beta]{type=Informative} | Gérez le cycle de vie de données dans toutes les banques de données afin de respecter les engagements auprès de votre clientèle et les contrats de licence, grâce à des fonctionnalités avancées de gestion du cycle de vie des données d’Adobe Experience Platform : expiration automatisée du jeu de données et suppression des enregistrements.<br>Avec l’expiration automatisée des jeux de données, vous pouvez supprimer des jeux de données entiers et définir une date et une heure pour le jeu de données à supprimer.<br>La suppression d’enregistrements vous permet de supprimer des profils de clientèle individuels en ciblant leurs identités principales. Vous pouvez fournir les identités principales individuellement par le biais de l’interface utilisateur ou via le chargement de fichier CSV/JSON. Pour plus d’informations, voir la [documentation sur la suppression des enregistrements](../../hygiene/ui/record-delete.md) |
+| [!BADGE Beta]{type=Informative} Suppression d’enregistrements (version limitée) | Gérez votre cycle de vie des données dans tous les entrepôts de données afin de respecter les engagements des clients et les contrats de licence avec les fonctionnalités avancées de gestion du cycle de vie des données de Adobe Experience Platform : expiration et suppression automatisées des jeux de données.<br>Avec l’expiration automatisée des jeux de données, vous pouvez supprimer des jeux de données entiers et définir une date et une heure pour le jeu de données à supprimer.<br>La suppression d’enregistrements vous permet de supprimer des profils de clientèle individuels en ciblant leurs identités principales. Vous pouvez fournir les identités principales individuellement par le biais de l’interface utilisateur ou via le chargement de fichier CSV/JSON. Pour plus d’informations, voir la [documentation sur la suppression des enregistrements](../../hygiene/ui/record-delete.md) |
 | Expirations de jeux de données | Limitez vos données et gardez le contrôle de vos contrats de licence avec l’expiration automatisée du jeu de données. Réduisez les volumes de données en supprimant des jeux de données entiers et en définissant une date et une heure pour le jeu de données à supprimer. Pour plus d’informations, consultez la [documentation sur l’expiration des jeux de données](../../hygiene/ui/dataset-expiration.md). |
 
 {style="table-layout:auto"}
@@ -182,16 +182,16 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 Pour plus d’informations sur XDM dans Platform, consultez la [vue d’ensemble du système XDM](../../xdm/home.md)
 
-## Identity Service {#identity-service}
+## Service d’identités {#identity-service}
 
-Adobe Experience Platform Identity Service vous offre la possibilité de mieux connaître vos clients et clientes ainsi que leur comportement en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
+Le service d’identités d’Adobe Experience Platform vous offre la possibilité de mieux connaître vos clients et leur comportement en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
 | Améliorations de l’interface utilisateur de Service d’identités | Utilisez l’outil amélioré de création d’espaces de noms personnalisés dans l’interface utilisateur Experience Platform pour mieux gérer vos espaces de noms personnalisés et leurs types d’identités correspondants. L’interface utilisateur améliorée de Service d’identités vous offre les fonctionnalités suivantes : <ul><li>Expérience contextuelle : indices visuels, clarté et contexte relatifs à l’espace de noms d’identité et aux types d’identité.</li><li>Précision : meilleure gestion des erreurs, sans noms d’identité en double.</li><li>Capacité de découverte : accès à la documentation depuis une boîte de dialogue intégrée au produit.</li></ul> Pour plus d’informations, consultez le guide sur la [création d’espaces de noms personnalisés](../../identity-service/features/namespaces.md#create-namespaces). |
-| Modifications des limites des graphiques d’identités | La limite des graphiques d’identités est passée de 150 identités à 50 identités. Lorsqu’une nouvelle identité est ingérée dans un graphique complet, l’identité la plus ancienne basée sur la date et heure d’ingestion et le type d’identité est supprimée. Les types d’identité Cookie sont prioritaires pour la suppression. Contactez votre équipe Adobe en charge des comptes pour demander un changement de type d’identité si votre sandbox de production contient : <ul><li>Un espace de noms personnalisé dans lequel les identifiants de personne (tels que les identifiants CRM) sont configurés en tant que type d’identité Cookie/Périphérique.</li><li>Un espace de noms personnalisé dans lequel les identifiants de cookie/périphérique sont configurés en tant que type d’identité multi-périphérique.</li></ul> L’ingénierie d’Adobe traitera manuellement ces demandes. Pour plus d’informations, consultez la section [Barrières de sécurité pour les données Identity Service](../../identity-service/guardrails.md) et le guide des [bonnes pratiques relatives aux droits de licence de gestion de données](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
+| Modifications des limites des graphiques d’identités | La limite des graphiques d’identités est passée de 150 identités à 50 identités. Lorsqu’une nouvelle identité est ingérée dans un graphique complet, l’identité la plus ancienne basée sur la date et heure d’ingestion et le type d’identité est supprimée. Les types d’identité Cookie sont prioritaires pour la suppression. Contactez votre équipe Adobe en charge des comptes pour demander un changement de type d’identité si votre sandbox de production contient : <ul><li>Un espace de noms personnalisé dans lequel les identifiants de personne (tels que les identifiants CRM) sont configurés en tant que type d’identité Cookie/Périphérique.</li><li>Un espace de noms personnalisé dans lequel les identifiants de cookie/périphérique sont configurés en tant que type d’identité multi-périphérique.</li></ul> L’ingénierie d’Adobe traitera manuellement ces demandes. Pour plus d’informations, consultez la section [Mécanismes de sécurisation pour les données du service d’identités](../../identity-service/guardrails.md) et le guide des [bonnes pratiques relatives aux droits de licence de gestion de données](../../landing/license-usage-and-guardrails/data-management-best-practices.md). |
 
 {style="table-layout:auto"}
 
