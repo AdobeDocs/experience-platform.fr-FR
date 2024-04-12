@@ -5,10 +5,10 @@ title: Créer un flux de données pour les sources de publicité à l’aide de 
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application publicitaire tierce et les ingérer dans Platform à l’aide des connecteurs source et de l’API Flow Service.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1347'
-ht-degree: 92%
+source-wordcount: '1340'
+ht-degree: 90%
 
 ---
 
@@ -18,7 +18,8 @@ Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une 
 
 >[!NOTE]
 >
->Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source publicitaire. Si vous ne disposez pas de cet identifiant, reportez-vous au [présentation des sources](../../../home.md#advertising) pour obtenir une liste des sources publicitaires avec lesquelles vous pouvez créer une connexion de base.
+>* Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source publicitaire. Si vous ne disposez pas de cet identifiant, reportez-vous au [présentation des sources](../../../home.md#advertising) pour obtenir une liste des sources publicitaires avec lesquelles vous pouvez créer une connexion de base.
+>* Pour que l’Experience Platform puisse ingérer des données, les fuseaux horaires de toutes les sources par lots basées sur un tableau doivent être configurés en UTC.
 
 ## Prise en main
 

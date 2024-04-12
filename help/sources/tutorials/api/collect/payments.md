@@ -5,10 +5,10 @@ title: Créez un flux de données pour les sources de paiements à l’aide de l
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application de paiements et les ingérer dans Platform à l’aide des connecteurs source et des API.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1370'
-ht-degree: 92%
+source-wordcount: '1363'
+ht-degree: 90%
 
 ---
 
@@ -18,7 +18,8 @@ Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une 
 
 >[!NOTE]
 >
->Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de paiements. Si vous ne disposez pas de cet identifiant, reportez-vous au [présentation des sources](../../../home.md#payments) pour obtenir une liste des sources de paiement avec lesquelles vous pouvez créer une connexion de base.
+>* Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de paiements. Si vous ne disposez pas de cet identifiant, reportez-vous au [présentation des sources](../../../home.md#payments) pour obtenir une liste des sources de paiement avec lesquelles vous pouvez créer une connexion de base.
+>* Pour que l’Experience Platform puisse ingérer des données, les fuseaux horaires de toutes les sources par lots basées sur un tableau doivent être configurés en UTC.
 
 ## Prise en main
 

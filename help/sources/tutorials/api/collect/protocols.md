@@ -5,10 +5,10 @@ title: Créer un flux de données pour les sources de protocoles à l’aide de 
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une application de protocoles et les ingérer dans Platform à l’aide de connecteurs source et dʼAPI.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1338'
-ht-degree: 92%
+source-wordcount: '1314'
+ht-degree: 91%
 
 ---
 
@@ -18,7 +18,7 @@ Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une 
 
 >[!NOTE]
 >
->Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de protocoles. Si vous ne disposez pas de cet identifiant, reportez-vous au [présentation des sources](../../../home.md#protocols) pour obtenir une liste des sources de protocoles avec lesquelles vous pouvez créer une connexion de base.
+>* Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de protocoles. Si vous ne disposez pas de cet identifiant, reportez-vous au [présentation des sources](../../../home.md#protocols) pour obtenir une liste des sources de protocoles avec lesquelles vous pouvez créer une connexion de base.
 
 ## Prise en main
 

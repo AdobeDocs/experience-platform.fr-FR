@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;schéma crm;crm;CRM;flux de données;flux de données
 solution: Experience Platform
-title: Création d’un flux de données à l’aide d’une source CRM dans l’interface utilisateur
+title: Créer un flux de données à l’aide d’une source CRM dans l’interface utilisateur
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel explique comment créer un flux de données pour une source CRM à l’aide de l’interface utilisateur de Platform.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1425'
-ht-degree: 48%
+source-wordcount: '1444'
+ht-degree: 45%
 
 ---
 
@@ -18,18 +18,19 @@ Un flux de données est une tâche planifiée qui récupère et ingère des donn
 
 >[!NOTE]
 >
->Pour créer un flux de données, vous devez déjà disposer d’un compte authentifié avec une source CRM. Vous trouverez la liste des tutoriels relatifs à la création de différents comptes source CRM dans l’interface utilisateur dans la section [présentation des sources](../../../home.md#crm).
+>* Pour créer un flux de données, vous devez déjà disposer d’un compte authentifié avec une source CRM. Vous trouverez la liste des tutoriels relatifs à la création de différents comptes source CRM dans l’interface utilisateur dans la section [présentation des sources](../../../home.md#crm).
+>* Pour que l’Experience Platform puisse ingérer des données, les fuseaux horaires de toutes les sources par lots basées sur un tableau doivent être configurés en UTC.
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Platform : 
+Ce tutoriel nécessite une compréhension pratique des composants suivants de Platform :
 
 * [Sources](../../../home.md) : Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)] Système](../../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client. 
    * [Principes de base de la composition des schémas](../../../../xdm/schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
    * [Tutoriel sur l’éditeur de schémas](../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 * [[!DNL Real-Time Customer Profile]](../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-* [[!DNL Data Prep]](../../../../data-prep/home.md): Permet aux ingénieurs de données de mapper, de transformer et de valider des données vers et depuis le modèle de données d’expérience (XDM).
+* [[!DNL Data Prep]](../../../../data-prep/home.md): permet aux ingénieurs de données de mapper, de transformer et de valider des données vers et depuis le modèle de données d’expérience (XDM).
 
 ## Ajouter des données
 
@@ -84,7 +85,7 @@ Lorsque vous avez terminé de renseigner votre flux de données, sélectionnez *
 
 L’interface de [!UICONTROL mappage] fournit un outil complet pour mapper les champs sources de votre schéma source aux champs XDM cibles correspondants dans le schéma cible.
 
-Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, reportez-vous à la section [Guide de l’interface utilisateur de la préparation de données](../../../../data-prep/ui/mapping.md).
+Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, voir la section [Guide de l’interface utilisateur de la préparation de données](../../../../data-prep/ui/mapping.md).
 
 >[!NOTE]
 >
@@ -96,15 +97,15 @@ Une fois le mappage de vos données source réussi, sélectionnez **[!UICONTROL 
 
 ## Planification des exécutions d’ingestion
 
-Le [!UICONTROL Planification] s’affiche, ce qui vous permet de configurer un planning d’ingestion pour ingérer automatiquement les données source sélectionnées à l’aide des mappages configurés. Par défaut, la planification est définie sur `Once`. Pour régler la fréquence d’ingestion, sélectionnez **[!UICONTROL Fréquence]** puis sélectionnez une option dans le menu déroulant.
+La variable [!UICONTROL Planification] s’affiche, ce qui vous permet de configurer un planning d’ingestion pour ingérer automatiquement les données source sélectionnées à l’aide des mappages configurés. Par défaut, la planification est définie sur `Once`. Pour régler la fréquence d’ingestion, sélectionnez **[!UICONTROL Fréquence]** puis sélectionnez une option dans le menu déroulant.
 
 >[!TIP]
 >
 >L’intervalle et le renvoi ne sont pas visibles lors d’une ingestion unique.
 
-![scheduling](../../../images/tutorials/dataflow/table-based/scheduling.png)
+![planification](../../../images/tutorials/dataflow/table-based/scheduling.png)
 
-Si vous définissez votre fréquence d’ingestion sur `Minute`, `Hour`, `Day`ou `Week`, vous devez ensuite définir un intervalle pour établir une période définie entre chaque ingestion. Par exemple, une fréquence d’ingestion définie sur `Day` et un intervalle défini sur `15` signifie que votre flux de données est planifié pour ingérer des données tous les 15 jours.
+Si vous définissez votre fréquence d’ingestion sur `Minute`, `Hour`, `Day`, ou `Week`, vous devez ensuite définir un intervalle pour établir une période définie entre chaque ingestion. Par exemple, une fréquence d’ingestion définie sur `Day` et un intervalle défini sur `15` signifie que votre flux de données est planifié pour ingérer des données tous les 15 jours.
 
 Au cours de cette étape, vous pouvez également activer **renvoyer** et définissez une colonne pour l’ingestion incrémentielle des données. Le renvoi est utilisé pour ingérer des données historiques, tandis que la colonne que vous définissez pour l’ingestion incrémentielle permet de différencier les nouvelles données des données existantes.
 
@@ -116,7 +117,7 @@ Consultez le tableau ci-dessous pour plus d’informations sur les configuration
 | Intervalle | Entier qui définit l’intervalle pour la fréquence sélectionnée. La valeur de l’intervalle doit être un entier non nul et doit être définie sur supérieur ou égal à 15. |
 | Heure de début | Horodatage UTC indiquant quand la toute première ingestion est configurée pour se produire. L’heure de début doit être supérieure ou égale à l’heure UTC actuelle. |
 | Renvoi | Valeur boolean qui détermine les données ingérées initialement. Si le renvoi est activé, tous les fichiers actuels du chemin spécifié seront ingérés lors de la première ingestion planifiée. Si le renvoi est désactivé, seuls les fichiers chargés entre la première exécution de l’ingestion et l’heure de début seront ingérés. Les fichiers chargés avant l’heure de début ne seront pas ingérés. |
-| Chargement des données incrémentielles par | Une option avec un ensemble filtré de champs de schéma source de type, date ou heure. Ce champ sert à différencier les données nouvelles des données existantes. Les données incrémentielles seront ingérées en fonction de la date et de l’heure de la colonne sélectionnée. |
+| Chargement des données incrémentielles par | Une option avec un ensemble filtré de champs de schéma source de type, date ou heure. Ce champ sert à différencier les données nouvelles des données existantes. Les données incrémentielles seront ingérées en fonction de l’horodatage de la colonne sélectionnée. |
 
 ![renvoyer](../../../images/tutorials/dataflow/table-based/backfill.png)
 
@@ -126,7 +127,7 @@ L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexamine
 
 * **[!UICONTROL Connexion]** : affiche le type de source, le chemin d’accès correspondant au fichier source choisi et le nombre de colonnes au sein de ce fichier source.
 * **[!UICONTROL Attribuer des champs de jeu de données et de mappage]** : affiche le jeu de données dans lequel les données sources sont ingérées, y compris le schéma auquel le jeu de données se conforme.
-* **[!UICONTROL Planification]**: Affiche la période, la fréquence et l’intervalle principaux du planning d’ingestion.
+* **[!UICONTROL Planification]**: indique la période, la fréquence et l’intervalle actifs du planning d’ingestion.
 
 Une fois que vous avez vérifié votre flux de données, sélectionnez **[!UICONTROL Terminer]** et patientez quelques instants le temps que le flux de données soit créé.
 

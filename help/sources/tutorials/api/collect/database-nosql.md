@@ -5,10 +5,10 @@ title: Créez un flux de données pour les sources de base de données à l’ai
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une base de données et les ingérer dans Platform à l’aide des connecteurs source et des API.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1408'
-ht-degree: 92%
+source-wordcount: '1416'
+ht-degree: 90%
 
 ---
 
@@ -18,7 +18,8 @@ Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une 
 
 >[!NOTE]
 >
->Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de base de données. Si vous ne disposez pas de cet identifiant, reportez-vous au [présentation des sources](../../../home.md#database) pour obtenir la liste des sources de base de données avec lesquelles vous pouvez créer une connexion de base.
+>* Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de base de données. Si vous ne disposez pas de cet identifiant, reportez-vous au [présentation des sources](../../../home.md#database) pour obtenir la liste des sources de base de données avec lesquelles vous pouvez créer une connexion de base.
+>* Pour que l’Experience Platform puisse ingérer des données, les fuseaux horaires de toutes les sources par lots basées sur un tableau doivent être configurés en UTC. Le seul horodatage pris en charge pour la variable [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md) est TIMESTAMP_NTZ avec heure UTC.
 
 ## Prise en main
 

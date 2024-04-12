@@ -5,10 +5,10 @@ title: Création d’un flux de données à l’aide d’une source de succès c
 type: Tutorial
 description: Un flux de données est une tâche planifiée qui récupère et ingère des données d’une source vers un jeu de données Platform. Ce tutoriel explique comment créer un flux de données pour une source de succès client à l’aide de l’interface utilisateur de Platform.
 exl-id: d348a7f8-6302-45f1-9961-bab56ad0407e
-source-git-commit: 62ca31bc8499e822e0da25270bd4fe8871520f9b
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1441'
-ht-degree: 47%
+source-wordcount: '1461'
+ht-degree: 44%
 
 ---
 
@@ -18,11 +18,12 @@ Un flux de données est une tâche planifiée qui récupère et ingère des donn
 
 >[!NOTE]
 >
->Pour créer un flux de données, vous devez déjà disposer d’un compte authentifié avec une source de succès client. Vous trouverez une liste de tutoriels pour créer différents comptes de source de succès client dans l’interface utilisateur de la section [présentation des sources](../../../home.md#customer-success).
+>* Pour créer un flux de données, vous devez déjà disposer d’un compte authentifié avec une source de succès client. Vous trouverez une liste de tutoriels pour créer différents comptes de source de succès client dans l’interface utilisateur de la section [présentation des sources](../../../home.md#customer-success).
+>* Pour que l’Experience Platform puisse ingérer des données, les fuseaux horaires de toutes les sources par lots basées sur un tableau doivent être configurés en UTC.
 
 ## Prise en main
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Platform : 
+Ce tutoriel nécessite une compréhension pratique des composants suivants de Platform :
 
 * [Sources](../../../home.md) : Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)] Système](../../../../xdm/home.md) : Cadre normalisé selon lequel Experience Platform organise les données d’expérience client. 
@@ -98,7 +99,7 @@ La variable [!UICONTROL Planification] s’affiche, ce qui vous permet de config
 >
 >L’intervalle et le renvoi ne sont pas visibles lors d’une ingestion unique.
 
-![scheduling](../../../images/tutorials/dataflow/table-based/scheduling.png)
+![planification](../../../images/tutorials/dataflow/table-based/scheduling.png)
 
 Si vous définissez votre fréquence d’ingestion sur `Minute`, `Hour`, `Day`, ou `Week`, vous devez ensuite définir un intervalle pour établir une période définie entre chaque ingestion. Par exemple, une fréquence d’ingestion définie sur `Day` et un intervalle défini sur `15` signifie que votre flux de données est planifié pour ingérer des données tous les 15 jours.
 

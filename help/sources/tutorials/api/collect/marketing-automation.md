@@ -5,10 +5,10 @@ title: Créer un flux de données pour les sources d’automatisation marketing 
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’un système d’automatisation marketing et les importer dans Adobe Experience Platform à l’aide des connecteurs source et des API.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
-source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
+source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 91%
+source-wordcount: '1349'
+ht-degree: 90%
 
 ---
 
@@ -18,7 +18,8 @@ Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une 
 
 >[!NOTE]
 >
->Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source d’automatisation marketing. Si vous ne disposez pas de cet identifiant, reportez-vous au [présentation des sources](../../../home.md#marketing-automation) pour obtenir la liste des sources d’automatisation marketing avec lesquelles vous pouvez créer une connexion de base.
+>* Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source d’automatisation marketing. Si vous ne disposez pas de cet identifiant, reportez-vous au [présentation des sources](../../../home.md#marketing-automation) pour obtenir la liste des sources d’automatisation marketing avec lesquelles vous pouvez créer une connexion de base.
+>* Pour que l’Experience Platform puisse ingérer des données, les fuseaux horaires de toutes les sources par lots basées sur un tableau doivent être configurés en UTC.
 
 ## Prise en main
 
