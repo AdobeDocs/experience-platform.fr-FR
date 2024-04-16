@@ -2,9 +2,9 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 81e1ce90b1778bb29c770e1468461949a1ea468c
+source-git-commit: f9235763746e12bd62f19094372dcff41cb41d65
 workflow-type: tm+mt
-source-wordcount: '3189'
+source-wordcount: '3161'
 ht-degree: 29%
 
 ---
@@ -86,7 +86,7 @@ S’il est activé sur une destination par lot, les données de l’audience gé
 
 ### Puis-je supprimer une audience générée en externe ?
 
-À ce stade, vous ne pouvez désactiver qu’une audience générée de l’extérieur. Notez que les profils **restent** disponibles dans les applications en aval. La prise en charge de la suppression des audiences générées en externe sera assurée dans une version ultérieure.
+Oui! Les audiences générées de manière externe peuvent être supprimées dans Audience Portal.
 
 ### Que dois-je faire si j’ai téléchargé accidentellement une audience générée en externe ?
 
