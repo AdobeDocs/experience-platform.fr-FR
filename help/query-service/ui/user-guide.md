@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de Query Editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ab2ebc5e2ba63d415ef39feba0392d08026050ba
+source-git-commit: ce937f1335283382189fa40f65aa268735c02715
 workflow-type: tm+mt
-source-wordcount: '2647'
+source-wordcount: '2661'
 ht-degree: 44%
 
 ---
@@ -49,7 +49,7 @@ Avec [!DNL Query Editor], vous pouvez écrire, exécuter et enregistrer des requ
 
 >[!IMPORTANT]
 >
->L’ancien éditeur sera retiré les 30 avril-2024 et ne sera plus disponible.
+>Du 30 avril au 2024, l’éditeur de requêtes amélioré sera l’éditeur par défaut pour tous les utilisateurs. L’ancien éditeur sera abandonné les 30 et 30 mai 2024 et ne sera plus disponible.
 
 ## Bouton (bascule) de l’Éditeur de requête amélioré {#enhanced-editor-toggle}
 
