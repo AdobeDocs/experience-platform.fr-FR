@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;Amazon Redshift;Amazon redshift;Redshift;Redshift;Redshift
-solution: Experience Platform
 title: Présentation du connecteur source Snowflake
 description: Découvrez comment connecter Snowflake à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 8b0f6eca87deedd8090830e3375d5099bfb0dfc0
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 57%
+source-wordcount: '303'
+ht-degree: 48%
 
 ---
 
-# [!DNL Snowflake] source
+# Source [!DNL Snowflake]
 
 >[!IMPORTANT]
 >
->La variable [!DNL Snowflake] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+>* La variable [!DNL Snowflake] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+>* Par défaut, la variable [!DNL Snowflake] interpréteurs source `null` comme chaîne vide. Contactez votre représentant Adobe pour vous assurer que votre `null` sont correctement écrites sous la forme `null` dans Adobe Experience Platform.
+>* Pour que l’Experience Platform puisse ingérer des données, les fuseaux horaires de toutes les sources par lots basées sur un tableau doivent être configurés en UTC. Le seul horodatage pris en charge pour la variable [!DNL Snowflake] La source est TIMESTAMP_NTZ avec l’heure UTC.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
@@ -30,11 +30,11 @@ La documentation ci-dessous fournit des informations sur la connexion d’[!DNL 
 
 ## Connecter [!DNL Snowflake] à Platform à l’aide d’API
 
-- [Création d’une connexion de base de Snowflake à l’aide de l’API Flow Service](../../tutorials/api/create/databases/snowflake.md)
-- [Explorer des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
-- [Création d’un flux de données pour une source de base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)
+* [Création d’une connexion de base de Snowflake à l’aide de l’API Flow Service](../../tutorials/api/create/databases/snowflake.md)
+* [Explorer des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
+* [Création d’un flux de données pour une source de base de données à l’aide de l’API Flow Service](../../tutorials/api/collect/database-nosql.md)
 
 ## Connecter [!DNL Snowflake] à Platform à l’aide de l’interface utilisateur
 
-- [Création d’une connexion source de Snowflake dans l’interface utilisateur](../../tutorials/ui/create/databases/snowflake.md)
-- [Création d’un flux de données pour une connexion source de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
+* [Création d’une connexion source de Snowflake dans l’interface utilisateur](../../tutorials/ui/create/databases/snowflake.md)
+* [Création d’un flux de données pour une connexion source de base de données dans l’interface utilisateur](../../tutorials/ui/dataflow/databases.md)
