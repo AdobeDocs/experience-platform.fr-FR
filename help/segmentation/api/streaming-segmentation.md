@@ -4,9 +4,9 @@ title: Évaluer les événements en temps quasi réel grâce à la segmentation 
 description: Ce document contient des exemples d’utilisation de la segmentation par diffusion en flux continu avec l’API du service de segmentation Adobe Experience Platform.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 2afd0ff97478938f4101e5a4b583e56a760840a2
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '2038'
+source-wordcount: '2050'
 ht-degree: 67%
 
 ---
@@ -87,6 +87,7 @@ Une définition de segment ne sera **pas** activée pour la segmentation en flux
 - La définition de segment comprend plusieurs entités (requêtes d’entités multiples).
 - La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment`.
    - Toutefois, si le segment contenu dans l’événement `inSegment` est un segment de profil uniquement, la définition de segment **sera activée** pour la segmentation en flux continu.
+- La définition de segment utilise &quot;Ignorer l’année&quot; dans le cadre de ses contraintes temporelles.
 
 Veuillez noter que les instructions suivantes s’appliquent lors de la segmentation en flux continu :
 

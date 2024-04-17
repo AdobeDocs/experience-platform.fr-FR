@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de la segmentation en flux continu
 description: La segmentation en flux continu sur Adobe Experience Platform vous permet d’effectuer une segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données entrent dans Platform, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segment peuvent désormais être évaluées au fur et à mesure que les données sont transmises à Platform, ce qui signifie que l’appartenance à un segment sera maintenue à jour sans avoir à exécuter des tâches de segmentation planifiée.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 88f2c8723ef16ff5601dc7e45a9f77b25f45acfd
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '1529'
-ht-degree: 92%
+source-wordcount: '1541'
+ht-degree: 91%
 
 ---
 
@@ -48,6 +48,7 @@ Une définition de segment ne sera **pas** activée pour la segmentation en flux
 - La définition de segment comprend plusieurs entités (requêtes d’entités multiples).
 - La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment`.
    - Toutefois, si la définition de segment contenue dans l’événement `inSegment` est un segment de profil uniquement, la définition de segment **sera activée** pour la segmentation en flux continu.
+- La définition de segment utilise &quot;Ignorer l’année&quot; dans le cadre de ses contraintes temporelles.
 
 Veuillez noter que les instructions suivantes s’appliquent lors de la segmentation en flux continu :
 

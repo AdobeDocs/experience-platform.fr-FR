@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de segmentation Edge
 description: Découvrez comment utiliser la segmentation Edge pour évaluer instantanément les définitions de segment dans Platform, en activant les cas d’utilisation de la personnalisation de la même page et de la page suivante.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '958'
-ht-degree: 95%
+source-wordcount: '970'
+ht-degree: 94%
 
 ---
 
@@ -55,6 +55,7 @@ Une définition de segment ne sera **pas** activée pour la segmentation Edge da
 
 - La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment`.
    - Toutefois, si la définition de segment contenue dans l’événement `inSegment` est un segment de profil uniquement, la définition de segment **sera** activée pour la segmentation Edge.
+- La définition de segment utilise &quot;Ignorer l’année&quot; dans le cadre de ses contraintes temporelles.
 
 ## Étapes suivantes
 

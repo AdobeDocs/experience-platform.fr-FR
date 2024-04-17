@@ -4,10 +4,10 @@ title: Effectuer une segmentation Edge à l’aide de l’API
 description: Ce document contient des exemples d’utilisation de la segmentation Edge avec l’API Segmentation Service Adobe Experience Platform.
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
 workflow-type: tm+mt
-source-wordcount: '1195'
-ht-degree: 90%
+source-wordcount: '1207'
+ht-degree: 89%
 
 ---
 
@@ -64,6 +64,7 @@ Une définition de segment ne sera **pas** activée pour la segmentation Edge da
 
 - La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment`.
    - Toutefois, si le segment contenu dans l’événement `inSegment` est un segment de profil uniquement, la définition de segment **sera** activée pour la segmentation Edge.
+- La définition de segment utilise &quot;Ignorer l’année&quot; dans le cadre de ses contraintes temporelles.
 
 ## Récupérer tous les segments activés pour la segmentation Edge
 
