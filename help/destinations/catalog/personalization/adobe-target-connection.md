@@ -3,10 +3,10 @@ keywords: personnalisation cible;destination;destination cible Experience Platfo
 title: Connexion Adobe Target
 description: Adobe Target est une application qui permet la personnalisation et l’expérimentation en temps réel, grâce à l’IA, au niveau de toutes les interactions avec les clients entrants sur les sites web, les applications mobiles, etc.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 92238ee94149b3cb4293d726d08dc4927e2dedb5
 workflow-type: tm+mt
-source-wordcount: '1142'
-ht-degree: 47%
+source-wordcount: '1182'
+ht-degree: 45%
 
 ---
 
@@ -106,6 +106,11 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 * **Nom** : renseignez le nom de votre choix pour cette destination.
 * **Description** : saisissez une description pour votre destination. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination. Ce champ est facultatif.
 * **Identifiant du flux de données**: détermine dans quel jeu de données de collecte de données les audiences seront incluses. Le menu déroulant affiche uniquement les flux de données pour lesquels les services Target et Adobe Experience Platform sont activés. Voir [configuration d’un flux de données](../../../datastreams/configure.md#aep) pour obtenir des informations détaillées sur la configuration d’un flux de données pour Adobe Experience Platform et Adobe Target.
+
+  >[!IMPORTANT]
+  >
+  >L’identifiant de flux de données est unique pour chaque connexion de destination Adobe Target. Si vous devez mapper les mêmes audiences à plusieurs flux de données, vous devez [créer une connexion de destination ;](../../ui/connect-destination.md) pour chaque identifiant de flux de données, et accédez au [flux d’activation d’audience](#activate).
+
    * **[!UICONTROL Aucun]**: sélectionnez cette option si vous devez configurer la personnalisation Adobe Target mais que vous ne pouvez pas mettre en oeuvre la variable [SDK Web Experience Platform](/help/web-sdk/home.md). Lorsque vous utilisez cette option, les audiences exportées d’Experience Platform vers Target ne prennent en charge que la personnalisation de la prochaine session, et la segmentation Edge est désactivée. Pour plus d’informations, consultez le tableau ci-dessous.
 
   | Mise en oeuvre d’Adobe Target (sans SDK Web) | Implémentation du SDK Web |
