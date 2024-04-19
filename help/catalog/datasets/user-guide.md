@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des jeux de données
 description: Découvrez comment exécuter des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: aee82356f1f519398f381e161be14789532561f1
+source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
 workflow-type: tm+mt
-source-wordcount: '2932'
+source-wordcount: '2943'
 ht-degree: 14%
 
 ---
@@ -273,9 +273,9 @@ Une boîte de confirmation s’affiche alors. Sélectionner **[!UICONTROL Suppri
 
 ## Suppression d’un jeu de données activé par Profile
 
-Si un jeu de données est activé pour Profile, la suppression de ce jeu de données via l’interface utilisateur le supprime du lac de données, d’Identity Service et de la banque de données Profile dans Platform.
+Si un jeu de données est activé pour Profile, la suppression de ce jeu de données via l’interface utilisateur le supprime du lac de données, d’Identity Service, ainsi que de toutes les données de profil associées à ce jeu de données dans la banque de données Profile.
 
-Vous pouvez supprimer un jeu de données du [!DNL Profile] ne stocker que (en laissant les données dans le lac de données) à l’aide de l’API Real-time Customer Profile. Pour plus d’informations, consultez le [guide relatif au point d’entrée de l’API du système de profils](../../profile/api/profile-system-jobs.md).
+Vous pouvez supprimer des données de profil associées à un jeu de données de la variable [!DNL Profile] stocker (en laissant les données dans le lac de données) à l’aide de l’API Real-time Customer Profile ; Pour plus d’informations, consultez le [guide relatif au point d’entrée de l’API du système de profils](../../profile/api/profile-system-jobs.md).
 
 ## Surveiller l’ingestion des données
 

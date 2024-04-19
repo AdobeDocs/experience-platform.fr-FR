@@ -4,9 +4,9 @@ title: Guide de l’API Real-Time Customer Profile
 description: L’API Real-time Customer Profile permet aux développeurs d’explorer et d’utiliser les données de profil, notamment d’afficher les profils, de créer et de mettre à jour des stratégies de fusion, d’exporter ou d’échantillonner des données de profil, ainsi que de supprimer les données de profil qui ne sont plus requises ou qui ont été ajoutées par erreur. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: b033f96002ed6da25cd6eb7012c397405dd85896
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '883'
 ht-degree: 20%
 
 ---
@@ -53,7 +53,7 @@ Lorsque des données sont ingérées dans Platform, un exemple de tâche est ex�
 
 ## Tâches de système Profile {#profile-system-jobs}
 
-Données activées pour les profils ingérées dans [!DNL Platform] est stocké dans la variable [!DNL Data Lake] ainsi que la variable [!DNL Real-Time Customer Profile] entrepôt de données. Il peut parfois être nécessaire de supprimer un jeu de données ou un lot du [!DNL Profile] stocker afin de supprimer les données dont vous n’avez plus besoin ou qui ont été ajoutées par erreur. Cela nécessite l’utilisation de l’API pour créer une [!DNL Profile System Job], également appelé &quot;[!DNL delete request]&quot;, qui peut être modifié, surveillé ou supprimé si nécessaire. Pour savoir comment utiliser les requêtes de suppression à l’aide de la méthode `/system/jobs` du point de terminaison [!DNL Real-Time Customer Profile] API, suivez les étapes décrites dans la section [guide de point d’entrée des tâches du système de profil](profile-system-jobs.md).
+Données activées pour les profils ingérées dans [!DNL Platform] est stocké dans la variable [!DNL Data Lake] ainsi que la variable [!DNL Real-Time Customer Profile] entrepôt de données. Il peut parfois être nécessaire de supprimer de la banque de données Profile les données de profil associées à un jeu de données afin de supprimer les données devenues inutiles ou ajoutées par erreur. Cela nécessite l’utilisation de l’API pour créer une [!DNL Profile System Job], également appelé &quot;[!DNL delete request]&quot;, qui peut être modifié, surveillé ou supprimé si nécessaire. Pour savoir comment utiliser les requêtes de suppression à l’aide de la méthode `/system/jobs` du point de terminaison [!DNL Real-Time Customer Profile] API, suivez les étapes décrites dans la section [guide de point d’entrée des tâches du système de profil](profile-system-jobs.md).
 
 ## Mise à jour des attributs de profil {#update-profile}
 

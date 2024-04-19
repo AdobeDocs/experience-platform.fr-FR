@@ -5,16 +5,16 @@ type: Documentation
 description: Adobe Experience Platform vous permet de supprimer un jeu de données ou un lot de la banque de profils afin de supprimer les données Real-Time Customer Profile devenues inutiles ou ajoutées par erreur. Pour ce faire, vous devez utiliser l’API Profile afin de créer une tâche de système Profile ou de supprimer une requête.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 42c83c7449a14eec5b91f82811bce4234e47cb51
 workflow-type: tm+mt
-source-wordcount: '1313'
-ht-degree: 64%
+source-wordcount: '1327'
+ht-degree: 61%
 
 ---
 
 # Point de terminaison des tâches du système Profile (requêtes de suppression)
 
-Adobe Experience Platform vous permet d’ingérer des données provenant de plusieurs sources et de créer des profils fiables pour les clients individuels. Données ingérées dans [!DNL Platform] est stocké dans la variable [!DNL Data Lake], et si les jeux de données ont été activés pour Profile, ces données sont stockées dans la variable [!DNL Real-Time Customer Profile] entrepôt de données également. Il peut parfois être nécessaire de supprimer un jeu de données ou un lot de la banque de données Profile pour supprimer les données devenues inutiles ou ajoutées par erreur. Cela nécessite l’utilisation de la variable [!DNL Real-Time Customer Profile] API pour créer une [!DNL Profile] tâche système, ou `delete request`, qui peut également être modifié, surveillé ou supprimé si nécessaire.
+Adobe Experience Platform vous permet d’ingérer des données provenant de plusieurs sources et de créer des profils fiables pour les clients individuels. Données ingérées dans [!DNL Platform] est stocké dans la variable [!DNL Data Lake], et si les jeux de données ont été activés pour Profile, ces données sont stockées dans la variable [!DNL Real-Time Customer Profile] entrepôt de données également. Il peut parfois être nécessaire de supprimer de la banque de données Profile les données de profil associées à un jeu de données afin de supprimer les données devenues inutiles ou ajoutées par erreur. Cela nécessite l’utilisation de la variable [!DNL Real-Time Customer Profile] API pour créer une [!DNL Profile] tâche système, ou `delete request`, qui peut également être modifié, surveillé ou supprimé si nécessaire.
 
 >[!NOTE]
 >
@@ -102,9 +102,9 @@ La réponse comprend un tableau « enfants » avec un objet pour chaque requê
 
 L’exécution d’une nouvelle requête de suppression se fait par le biais d’une requête POST au point d’entrée `/systems/jobs`, où l’identifiant du jeu de données ou du lot à supprimer est fourni dans le corps de la requête.
 
-### Suppression d’un jeu de données
+### Suppression d’un jeu de données et des données de profil associées
 
-Pour supprimer un jeu de données de la banque de profils, l’identifiant du jeu de données doit être inclus dans le corps de la requête du POST. Cette action supprimera TOUTES les données d’un jeu de données. [!DNL Experience Platform] vous permet de supprimer des jeux de données en fonction de schémas d’enregistrement et de séries temporelles.
+Pour supprimer un jeu de données et toutes les données de profil associées au jeu de données de la banque de données Profile, l’identifiant du jeu de données doit être inclus dans le corps de la requête du POST. Cette action supprimera TOUTES les données d’un jeu de données. [!DNL Experience Platform] vous permet de supprimer des jeux de données en fonction de schémas d’enregistrement et de séries temporelles.
 
 **Format d’API**
 
