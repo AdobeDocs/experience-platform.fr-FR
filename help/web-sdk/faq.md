@@ -2,7 +2,7 @@
 title: FAQ sur le SDK Web Adobe Experience Platform
 description: Obtenez des réponses aux questions fréquentes sur le SDK Web de Adobe Experience Platform.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
+source-git-commit: 002a57d1d5cfb2e7bdbd9b587e77ca4487a28f65
 workflow-type: tm+mt
 source-wordcount: '2268'
 ht-degree: 5%
@@ -18,7 +18,7 @@ Ce guide répond aux questions fréquentes sur le SDK Web de Adobe Experience Pl
 
 Le SDK Web de Adobe Experience Platform est une bibliothèque JavaScript côté client qui vous permet d’interagir avec les différents services de Adobe Experience Cloud.
 
-Le SDK Web envoie les données de manière indépendante de la solution (XDM) au réseau Edge Experience Platform, qui les mappe ensuite aux formats et destinations spécifiques à une solution et les envoie en temps réel.
+Le SDK Web envoie les données de manière indépendante de la solution (XDM) à l’Edge Network Experience Platform, qui mappe ensuite les données aux formats et destinations spécifiques à une solution et les envoie en temps réel.
 
 Pour plus d’informations sur le SDK Web, visionnez la vidéo suivante : [Rencontrez Alloy.js et ne plus jamais baliser pour un eVar ou une mbox](https://www.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html).
 
@@ -46,7 +46,7 @@ En outre, il n’existe actuellement aucune bibliothèque JavaScript qui envoie 
 
 ### Avec SDK Web Experience Platform
 
-Le nouveau SDK Web envoie des données pour les solutions suivantes vers une seule destination (réseau Edge Experience Platform) et résout les cas d’utilisation de solution les plus courants mentionnés ci-dessus.
+Le nouveau SDK Web envoie des données pour les solutions suivantes vers une seule destination (Edge Network Experience Platform) et résout les cas d’utilisation de solution susmentionnés les plus courants.
 
 * Adobe Analytics
 * Adobe Audience Manager
@@ -62,17 +62,17 @@ Le SDK Web de Adobe Experience Platform peut également envoyer des données dir
 
 **Performances :** Le SDK web est plus petit que l’utilisation de toutes les bibliothèques d’Adobe actuelles et permet de charger les pages beaucoup plus rapidement.
 
-**Simplicité :** La combinaison de XDM, de SDK Web, de balises, de réseau Edge, de solutions Adobe Experience Cloud et de Adobe Experience Platform crée un récit de collecte de données facile à comprendre et simple à suivre.
+**Simplicité :** La combinaison de XDM, de SDK Web, de balises, d’Edge Network, de solutions Adobe Experience Cloud et de Adobe Experience Platform crée un article de collecte de données facile à comprendre et simple à suivre.
 
 * **XDM :** Schéma indépendant de la solution que vous utilisez pour envoyer des données à Adobe. Plus de balisage pour les eVars ou les mbox.
-* **SDK Web :** Facilite l’envoi et la réception de données vers Adobe Experience Platform Edge Network.
+* **SDK Web :** Facilite l’envoi et la réception de données à Adobe Experience Platform Edge Network.
 * **Balises :** Simplifie le déploiement et la configuration du SDK Web (et de toute autre balise JavaScript) sur un site.
-* **Edge Network :** acheminez facilement les données vers Adobe Experience Platform et les solutions au format dont elles ont besoin.
+* **EDGE NETWORK :** acheminez facilement les données vers Adobe Experience Platform et les solutions au format dont elles ont besoin.
 * **Solutions Adobe Experience Platform et Adobe :** Activez leur proposition de valeur.
 
 **Contrôle :** Comme toutes les données utilisent un seul flux de données connecté, vous pouvez logiquement suivre et contrôler à quoi ressemblent les données à chaque milliseconde de son parcours, depuis et vers les applications.
 
-**Moderne et prêt pour l&#39;avenir :** Le SDK web et sa connexion au réseau Edge ont permis à Adobe de moderniser de manière significative la manière dont l’Adobe traite la collecte de données, la personnalisation, le consentement et l’avenir des cookies tiers. (Il active un domaine propriétaire, géré par Adobe.)
+**Moderne et prêt pour l&#39;avenir :** Le SDK Web et sa connexion à l’Edge Network ont permis à l’Adobe de moderniser de manière significative la manière dont l’Adobe traite la collecte de données, la personnalisation, le consentement et l’avenir des cookies tiers. (Il active un domaine propriétaire, géré par Adobe.)
 
 **Durée à valeur :** Adobe a travaillé dur (et continuera) pour faciliter au maximum le déploiement du SDK Web par le biais de balises et de la mise en correspondance des données côté client avec XDM. Une fois ce travail effectué, toutes les autres solutions d’Adobe et tous les services Adobe Experience Platform peuvent être activés ou désactivés côté serveur. Par exemple, si vous l’utilisez pour Adobe Analytics et que vous souhaitez activer Target ou l’Experience Platform, vous pouvez simplement basculer sur la configuration de la chaîne de données et éclairer ces cas d’utilisation.
 
@@ -114,7 +114,7 @@ Le SDK Web évolue rapidement. D’autres cas pratiques sont en cours de traitem
 
 Tout dépend. Le SDK Web de Adobe Experience Platform peut être déployé dans deux styles différents. Un futur document de migration fournira des détails supplémentaires.
 
-* **Juste une autre balise :** Si le site est déjà balisé pour les solutions et que vous ne pouvez pas le remarquer, mais que vous souhaitez envoyer des données à Adobe Experience Platform Edge Network pour les cas d’utilisation Experience Platform ou les fonctions de transfert d’événement à venir (voir ci-dessous), vous pouvez ajouter la variable `alloy.js` sur le site, où fonctionne comme &quot;juste une autre balise&quot;.
+* **Juste une autre balise :** Si le site est déjà balisé pour les solutions et que vous ne pouvez pas le remarquer, mais que vous souhaitez envoyer des données à Adobe Experience Platform Edge Network pour les cas d’utilisation des Experience Platform ou les fonctions de transfert d’événement à venir (voir ci-dessous), vous pouvez ajouter la variable `alloy.js` sur le site, où fonctionne comme &quot;juste une autre balise&quot;.
 
 * **La seule balise :** Si vous souhaitez utiliser le SDK Web pour une solution Experience Cloud, vous devez l’utiliser pour _all_ des solutions de cette page. Par exemple, si votre site est déjà balisé pour Adobe Analytics et que vous souhaitez l’utiliser pour Target, vous devez l’utiliser pour , ainsi que pour tout autre site à l’avenir.
 
@@ -146,7 +146,7 @@ Toutefois :
 
 ## Qu’est-ce que le transfert d’événement ?
 
-Si vous utilisez nos SDK et envoyez XDM au réseau Edge, ces nouvelles fonctionnalités de transfert d’événement vous permettent d’installer de nouvelles extensions côté serveur et de mapper ces données à n’importe quel élément (et de les envoyer n’importe où) de notre réseau Edge. Considérez-le comme une &quot;collecte de données en tant que service&quot;. Cette option est disponible pour un coût et pour être regroupée dans le cadre de Adobe Experience Platform.
+Si vous utilisez nos SDK et envoyez XDM à l’Edge Network, le transfert d’événement de ces nouvelles fonctionnalités vous permet d’installer de nouvelles extensions côté serveur et de mapper ces données à n’importe quel élément (et de les envoyer n’importe où) de notre réseau Edge. Considérez-le comme une &quot;collecte de données en tant que service&quot;. Cette option est disponible pour un coût et pour être regroupée dans le cadre de Adobe Experience Platform.
 
 ## Qu’est-ce qu’un CNAME ou un domaine propriétaire et pourquoi est-ce important ?
 
@@ -159,16 +159,16 @@ Oui, le SDK Web utilise actuellement entre un et sept cookies en fonction de vot
 | **Nom** | **maxAge** | **Page conviviale** | **Description** |
 |---|---|---|---|
 | **kndct_orgid_identity** | 34128000 | 395 jours | Le cookie d’identité stocke l’ECID, ainsi que d’autres informations relatives à l’ECID. |
-| **kndctr_orgid_consent_check** | 7200 | 2 heures | Ce cookie stocke les préférences de consentement de l’utilisateur pour le site web. |
-| **kndctr_orgid_consent** | 15552000 | 180 jours | Ce cookie basé sur une session indique au serveur de rechercher les préférences de consentement côté serveur. |
-| **kndctr_orgid_cluster** | 1800 | 30 minutes | Ce cookie stocke la région réseau Edge qui traite les requêtes de l’utilisateur actuel. La région est utilisée dans le chemin d’URL afin que le réseau Edge puisse acheminer la requête vers la région appropriée. Ce cookie a une durée de vie de 30 minutes, de sorte que si un utilisateur se connecte à une autre adresse IP, la demande peut être acheminée vers la région la plus proche. |
+| **kndctr_orgid_consent_check** | 7200 | 2 heures | Ce cookie basé sur une session indique au serveur de rechercher les préférences de consentement côté serveur. |
+| **kndctr_orgid_consent** | 15552000 | 180 jours | Ce cookie stocke les préférences de consentement de l’utilisateur pour le site web. |
+| **kndctr_orgid_cluster** | 1800 | 30 minutes | Ce cookie stocke la région de l’Edge Network qui traite les requêtes de l’utilisateur actuel. La région est utilisée dans le chemin de l’URL afin que l’Edge Network puisse acheminer la requête vers la région appropriée. Ce cookie a une durée de vie de 30 minutes, de sorte que si un utilisateur se connecte à une autre adresse IP, la demande peut être acheminée vers la région la plus proche. |
 | **mbox** | 63072000 | 2 ans | Ce cookie s’affiche lorsque le paramètre de migration Target est défini sur true. Cela permet à Target de [cookie mbox](https://developer.adobe.com/target/implement/client-side/atjs/atjs-cookies/) à définir par le SDK Web. |
 | **mboxEdgeCluster** | 1800 | 30 minutes | Ce cookie s’affiche lorsque le paramètre de migration Target est défini sur true. Ce cookie permet au SDK Web de communiquer la grappe Edge appropriée à at.js afin que les profils Target puissent rester synchronisés lorsque les utilisateurs naviguent sur un site. |
 | **AMCV_##@AdobeOrg** | 34128000 | 395 jours | Ce cookie s’affiche uniquement lorsque la migration des identifiants sur le SDK Web de Adobe Experience Platform est activée. Ce cookie est utile lors de la transition vers le SDK Web alors que certaines parties du site utilisent toujours visitor.js. Voir [`idMigrationEnabled`](/help/web-sdk/commands/configure/idmigrationenabled.md) pour plus d’informations. |
 
-Lors de l’utilisation du SDK Web, le réseau Edge définit un ou plusieurs des cookies ci-dessus. Le réseau Edge définit tous les cookies avec la variable `secure` et `sameSite="none"` attributs.
+Lors de l’utilisation du SDK Web, l’Edge Network définit un ou plusieurs des cookies ci-dessus. L’Edge Network définit tous les cookies avec la variable `secure` et `sameSite="none"` attributs.
 
-Si votre site web comporte actuellement des sections sécurisées et non sécurisées, cela peut interférer avec l’identification de l’utilisateur. Lorsqu’un utilisateur passe d’une section sécurisée du site à une section non sécurisée, le réseau Edge génère une nouvelle `ECID` avec la requête .
+Si votre site web comporte actuellement des sections sécurisées et non sécurisées, cela peut interférer avec l’identification de l’utilisateur. Lorsqu’un utilisateur passe d’une section sécurisée du site à une section non sécurisée, l’Edge Network génère une nouvelle `ECID` avec la requête .
 
 ## Quels sont les navigateurs pris en charge par le SDK Web de Adobe Experience Platform ?
 
