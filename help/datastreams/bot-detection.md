@@ -4,7 +4,7 @@ description: Découvrez comment configurer la détection des robots pour les flu
 hide: true
 hidefromtoc: true
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 7757cd869607bf25bff1e9861732cf4b80b38966
+source-git-commit: c7853855ade1867cf33ea935a8a776080be2e5ab
 workflow-type: tm+mt
 source-wordcount: '1367'
 ht-degree: 0%
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 Le trafic provenant d’entités non humaines, telles que les programmes automatisés, les web-scrapers, les araignées, les scanneurs à scripts, peut rendre plus difficile l’identification des événements provenant de visiteurs humains. Ce type de trafic peut avoir une incidence négative sur les mesures commerciales importantes, ce qui entraîne des rapports de trafic incorrects.
 
-La détection des robots vous permet d’identifier les événements générés par la variable[SDK Web](../web-sdk/home.md), [SDK Mobile](https://developer.adobe.com/client-sdks/home/) et [[!DNL Server API]](../server-api/overview.md) comme étant généré par des araignées et des robots connus.
+La détection des robots vous permet d’identifier les événements générés par la variable [SDK Web](../web-sdk/home.md), [SDK Mobile](https://developer.adobe.com/client-sdks/home/) et [[!DNL Server API]](../server-api/overview.md) comme étant généré par des araignées et des robots connus.
 
 En configurant la détection des robots pour vos flux de données, vous pouvez identifier des adresses IP, des plages d’adresses IP et des en-têtes de requête spécifiques que vous souhaitez classer comme événements de robots.
 
 L’identification du trafic de robots peut vous fournir une mesure plus précise de l’activité des utilisateurs sur votre site ou application mobile.
 
-Lorsqu’une requête au réseau Edge correspond à l’une des règles de détection de robots, le schéma XDM est mis à jour avec un score de robot (toujours défini sur 1), comme illustré ci-dessous.
+Lorsqu’une requête à l’Edge Network correspond à l’une des règles de détection de robots, le schéma XDM est mis à jour avec une notation de robot (toujours définie sur 1), comme illustré ci-dessous.
 
 ```json
 {
@@ -37,9 +37,9 @@ Ce score de robot permet aux solutions qui reçoivent la demande d’identifier 
 >
 >La détection des robots ne supprime aucune requête de robot. Il met uniquement à jour le schéma XDM avec la notation de robot et transfère l’événement vers la variable [service datastream](configure.md) que vous avez configuré.
 >
->Les solutions Adobe peuvent gérer la notation des robots de différentes manières. Par exemple, Adobe Analytics utilise son propre [service de filtrage de robots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) et n’utilise pas le score défini par le réseau Edge. Les deux services utilisent le même [Liste de robots IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), le score du robot est donc identique.
+>Les solutions Adobe peuvent gérer la notation des robots de différentes manières. Par exemple, Adobe Analytics utilise son propre [service de filtrage de robots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) et n’utilise pas le score défini par l’Edge Network. Les deux services utilisent le même [Liste de robots IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), le score du robot est donc identique.
 
-Les règles de détection de robots peuvent prendre jusqu’à 15 minutes pour se propager sur le réseau Edge après avoir été créées.
+Les règles de détection de robots peuvent prendre jusqu’à 15 minutes pour se propager dans l’Edge Network après sa création.
 
 ## Conditions préalables {#prerequisites}
 
