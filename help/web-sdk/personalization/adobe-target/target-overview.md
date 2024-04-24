@@ -2,9 +2,9 @@
 title: Utilisation d’Adobe Target avec le SDK Web pour la personnalisation
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 0b662b4c1801a6d6f6fc2c6ade92d259b821ab23
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1173'
 ht-degree: 5%
 
 ---
@@ -27,7 +27,7 @@ Les fonctionnalités suivantes ont été testées et sont actuellement prises en
 * [Activités Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [Activités de ciblage d’expérience](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [Tests multivariés (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
-* [Activités Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
+* [Activités Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=fr)
 * [Création de rapports d’impression et de conversion Target natifs](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [Prise en charge de VEC](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
@@ -35,17 +35,18 @@ Les fonctionnalités suivantes ont été testées et sont actuellement prises en
 
 Le diagramme suivant vous aide à comprendre le workflow de [!DNL Target] et [!DNL Web SDK] prise de décision Edge.
 
-![Diagramme de prise de décision Adobe Target Edge avec le SDK Web Platform](./assets/target-platform-web-sdk.png)
+![Diagramme de prise de décision Adobe Target Edge avec le SDK Web Platform](assets/target-platform-web-sdk-new.png)
 
 | L’appel | Détails |
 | --- | --- |
-| 1 | L’appareil charge la variable [!DNL Web SDK]. La variable [!DNL Web SDK] envoie une requête au réseau Edge avec des données XDM, l’identifiant d’environnement des flux de données, les paramètres transmis et l’identifiant du client (facultatif). La page (ou les conteneurs) est pré-masquée. |
-| 2 | Le réseau Edge envoie la demande aux services Edge pour l’enrichir avec l’identifiant visiteur, le consentement et d’autres informations contextuelles sur le visiteur, telles que la géolocalisation et les noms conviviaux de l’appareil. |
-| 3 | Le réseau Edge envoie la demande de personnalisation enrichie au [!DNL Target] Edge avec l’identifiant visiteur et les paramètres transmis. |
+| 1 | L’appareil charge la variable [!DNL Web SDK]. La variable [!DNL Web SDK] envoie une requête à l’Edge Network avec les données XDM, l’identifiant d’environnement des flux de données, les paramètres transmis et l’identifiant client (facultatif). La page (ou les conteneurs) est pré-masquée. |
+| 2 | L’Edge Network envoie la demande aux services Edge pour l’enrichir avec l’identifiant visiteur, le consentement et d’autres informations contextuelles sur le visiteur, telles que la géolocalisation et les noms conviviaux de l’appareil. |
+| 3 | L’Edge Network envoie la demande de personnalisation enrichie au [!DNL Target] Edge avec l’identifiant visiteur et les paramètres transmis. |
 | 4 | Les scripts de profil s’exécutent, puis sont introduits dans [!DNL Target] stockage des profils. Le stockage des profils récupère les segments du [!UICONTROL Bibliothèque d’audiences] (par exemple, les segments partagés à partir de [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], la variable [!DNL Adobe Experience Platform]). |
-| 5 | En fonction des paramètres de requête d’URL et des données de profil, [!DNL Target] détermine les activités et expériences à afficher pour le visiteur pour la page vue actuelle et pour les futures vues prérécupérées. [!DNL Target] renvoie ensuite cette information au réseau Edge. |
-| 6 | a. Le réseau Edge renvoie la réponse de personnalisation à la page, y compris éventuellement les valeurs de profil pour une personnalisation supplémentaire. Le contenu personnalisé sur la page active est affiché aussi rapidement que possible sans scintillement du contenu par défaut.<br>b. Le contenu personnalisé pour les vues affichées à la suite d’actions de l’utilisateur dans une application d’une seule page (SPA) est mis en cache afin de pouvoir être appliqué instantanément sans appel au serveur supplémentaire lorsque les vues sont déclenchées. <br>. Le réseau Edge envoie l’identifiant visiteur et d’autres valeurs dans les cookies, telles que le consentement, l’ID de session, l’identité, la vérification de cookie et la personnalisation. |
-| 7 | En amont du réseau Edge [!UICONTROL Analytics pour Target] (A4T) des détails (métadonnées d’activité, d’expérience et de conversion) sur la variable [!DNL Analytics] edge. |
+| 5 | En fonction des paramètres de requête d’URL et des données de profil, [!DNL Target] détermine les activités et expériences à afficher pour le visiteur pour la page vue actuelle et pour les futures vues prérécupérées. [!DNL Target] puis renvoie l’Edge Network. |
+| 6 | a. L’Edge Network renvoie la réponse de personnalisation à la page, y compris éventuellement les valeurs de profil pour une personnalisation supplémentaire. Le contenu personnalisé sur la page active est affiché aussi rapidement que possible sans scintillement du contenu par défaut.<br>b. Le contenu personnalisé pour les vues affichées à la suite d’actions de l’utilisateur dans une application d’une seule page (SPA) est mis en cache afin de pouvoir être appliqué instantanément sans appel au serveur supplémentaire lorsque les vues sont déclenchées. <br>c. L’Edge Network envoie l’identifiant visiteur et d’autres valeurs dans les cookies, telles que le consentement, l’ID de session, l’identité, la vérification de cookie, la personnalisation. |
+| 7 | Le SDK Web envoie la notification de l’appareil à l’Edge Network. |
+| 8 | L’Edge Network en avant [!UICONTROL Analytics pour Target] (A4T) des détails (métadonnées d’activité, d’expérience et de conversion) sur la variable [!DNL Analytics] edge. |
 
 ## Activation [!DNL Adobe Target]
 
