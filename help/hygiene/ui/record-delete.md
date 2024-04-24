@@ -3,7 +3,7 @@ title: Suppression d’enregistrements
 description: Découvrez comment supprimer des enregistrements dans l’interface utilisateur de Adobe Experience Platform.
 badgeBeta: label="Version Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 86cf250b2915a49d994fee0ab9d9ddbf65f6f836
+source-git-commit: d9d2ab2da87adce45242cbb0c4132a4d17fcc4a6
 workflow-type: tm+mt
 source-wordcount: '1566'
 ht-degree: 34%
@@ -140,7 +140,7 @@ Une fois que vous avez terminé d’ajouter des identités à la requête, sous 
 
 >[!IMPORTANT]
 > 
->Il existe différentes limites pour le nombre total de suppressions d’enregistrement d’identité unique qui peuvent être envoyées chaque mois. Ces limites sont basées sur votre contrat de licence. Les organisations qui ont acheté toutes les éditions d’Adobe Real-time Customer Data Platform et de Adobe Journey Optimizer peuvent envoyer jusqu’à 100 000 enregistrements d’identité supprimés chaque mois. Organisations ayant effectué des achats **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité** peut envoyer jusqu’à 600 000 enregistrements d’identité supprimés chaque mois.<br>Une seule requête de suppression d’enregistrement via l’interface utilisateur vous permet d’envoyer 10 000 identifiants à la fois. La variable [Méthode d’API pour supprimer des enregistrements](../api/workorder.md#create) permet l’envoi simultané de 100 000 identifiants.<br>Il est recommandé d’envoyer autant d’ID par demande que possible, jusqu’à votre limite d’ID. Lorsque vous envisagez de supprimer un volume élevé d’identifiants, il est préférable d’éviter d’envoyer un volume faible ou une seule demande de suppression d’identifiant par enregistrement.
+>Il existe différentes limites pour le nombre total de suppressions d’enregistrement d’identité unique qui peuvent être envoyées chaque mois. Ces limites sont basées sur votre contrat de licence. Les organisations qui ont acheté toutes les éditions d’Adobe Real-time Customer Data Platform ou de Adobe Journey Optimizer peuvent envoyer jusqu’à 100 000 enregistrements d’identité supprimés chaque mois. Organisations ayant effectué des achats **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité** peut envoyer jusqu’à 600 000 enregistrements d’identité supprimés chaque mois.<br>Une seule requête de suppression d’enregistrement via l’interface utilisateur vous permet d’envoyer 10 000 identifiants à la fois. La variable [Méthode d’API pour supprimer des enregistrements](../api/workorder.md#create) permet l’envoi simultané de 100 000 identifiants.<br>Il est recommandé d’envoyer autant d’ID par demande que possible, jusqu’à votre limite d’ID. Lorsque vous envisagez de supprimer un volume élevé d’identifiants, il est préférable d’éviter d’envoyer un volume faible ou une seule demande de suppression d’identifiant par enregistrement.
 
 ![Le paramètre de requête [!UICONTROL Nom] et [!UICONTROL Description] champs avec [!UICONTROL Envoyer] surlignée.](../images/ui/record-delete/submit.png)
 
