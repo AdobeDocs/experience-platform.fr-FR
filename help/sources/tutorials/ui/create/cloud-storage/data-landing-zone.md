@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;Zone d’en
 title: Connexion de la zone d’entrée des données à Platform à l’aide de l’interface utilisateur
 description: Découvrez comment créer un connecteur source de zone d’entrée de données à l’aide de l’interface utilisateur de Platform.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: 9cffd508c1bff7ce133f84ca686c414e997343b8
+source-git-commit: 9372e6f961015c989bfcb0d1e2b0129da965c522
 workflow-type: tm+mt
-source-wordcount: '672'
-ht-degree: 20%
+source-wordcount: '747'
+ht-degree: 18%
 
 ---
 
@@ -60,23 +60,41 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 Pour obtenir un guide détaillé et détaillé sur la création d’un flux de données pour une source de stockage dans le cloud, consultez le tutoriel sur [création d’un flux de données de stockage dans le cloud pour importer des données dans Platform](../../dataflow/batch/cloud-storage.md).
 
-## Récupérer et actualiser votre [!DNL Data Landing Zone] informations
+## Récupérez vos [!DNL Data Landing Zone] informations
 
-[!DNL Data Landing Zone] est une source prête à l’emploi fournie avec votre licence Sources Adobe Experience Platform. [!DNL Data Landing Zone] utilise une authentification SAS URI et SAS Token. Vous pouvez récupérer et actualiser vos informations d’authentification à partir du [!UICONTROL Catalogue de sources] page.
+[!DNL Data Landing Zone] est une source fournie avec votre licence Sources de Adobe Experience Platform. [!DNL Data Landing Zone] utilise une authentification SAS URI et SAS Token. Vous pouvez récupérer vos informations d’authentification à partir du [!UICONTROL Catalogue de sources] page.
 
-Dans le [!UICONTROL Catalogue de sources], sous [!UICONTROL Stockage dans le cloud] , sélectionnez les ellipses (**..**) de la variable **[!UICONTROL Zone d’entrée des données]** carte. Dans le menu déroulant qui s’affiche, sélectionnez **[!UICONTROL Affichage des informations d’identification]**.
+Pour récupérer vos informations d’identification, sélectionnez la variable **[!UICONTROL Zone d’entrée des données]** puis copiez vos informations d’identification dans le rail de droite qui s’affiche.
 
-![Liste des options d’affichage pour la zone d’entrée des données.](../../../../images/tutorials/create/dlz/options.png)
+![Liste des options d’affichage pour la zone d’entrée des données.](../../../../images/tutorials/create/dlz/view-credentials.png)
 
 Une fenêtre contextuelle s’affiche, indiquant le nom du conteneur, le jeton SAS, le nom du compte de stockage, l’URI SAS et la date d’expiration.
 
-Sélectionner **[!UICONTROL Actualiser les informations d’identification]** et comptez quelques secondes pour que vos informations d’identification mises à jour soient traitées.
+## Actualisez vos [!DNL Data Landing Zone] informations
 
->[!TIP]
->
->Votre [!DNL Data Landing Zone] les informations d’identification sont définies pour expirer automatiquement après 90 jours et vous devez utiliser de nouvelles informations d’identification pour vous reconnecter à [!DNL Data Landing Zone] après expiration. Vos flux de données dans Platform ne sont pas affectés par l’expiration des informations d’identification et vous pouvez continuer à utiliser les nouveaux flux de données existants avec vos nouvelles informations d’identification.
+Votre [!DNL Data Landing Zone] les informations d’identification sont définies pour expirer automatiquement après 90 jours et vous devez utiliser de nouvelles informations d’identification pour vous reconnecter à [!DNL Data Landing Zone] après expiration. Vos flux de données dans Experience Platform ne sont pas affectés par l’expiration des informations d’identification et vous pouvez continuer à travailler avec les nouveaux flux de données existants avec vos nouvelles informations d’identification.
 
-![Les informations d’identification associées à un compte Data Landing Zone donné.](../../../../images/tutorials/create/dlz/view-credentials.png)
+Il existe deux façons d’actualiser votre [!DNL Data Landing Zone] informations d’identification :
+
+>[!BEGINTABS]
+
+>[!TAB Utilisation de la carte source]
+
+Pour actualiser vos informations d’identification à partir de la page du catalogue des sources, sélectionnez les ellipses (**`...`**) dans la variable [!DNL Data Landing Zone] puis sélectionnez **[!UICONTROL Actualiser les informations d’identification]**.
+
+![Actualisez les informations d’identification à l’aide de la carte source.](../../../../images/tutorials/create/dlz/refresh-with-card.png)
+
+Une fenêtre contextuelle s’affiche, vous invitant à confirmer votre choix avant de pouvoir continuer. Lorsque vous êtes prêt, sélectionnez **[!UICONTROL Actualiser les informations d’identification]**.
+
+![La fenêtre de confirmation de l’actualisation des informations d’identification.](../../../../images/tutorials/create/dlz/confirm.png)
+
+>[!TAB Utilisation du rail de droite]
+
+Pour actualiser vos informations d’identification à l’aide du rail de droite, sélectionnez l’option **[!UICONTROL Zone d’entrée des données]** carte source, puis sélectionnez **[!UICONTROL Autres actions]**. Ensuite, sélectionnez **[!UICONTROL Actualiser les informations d’identification]** puis confirmez l’utilisation de la fenêtre contextuelle qui s’affiche.
+
+![Actualisez les informations d’identification à l’aide du rail de droite.](../../../../images/tutorials/create/dlz/refresh-with-right-rail.png)
+
+>[!ENDTABS]
 
 ## Étapes suivantes
 
