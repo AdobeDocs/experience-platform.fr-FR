@@ -3,18 +3,14 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;Teradata Va
 title: Création d’une connexion de base de Teradata Vantage à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à Teradata Vantage à l’aide de l’API Flow Service.
 exl-id: 88707dca-3c7a-43c7-9d71-473ad9715fc6
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '450'
 ht-degree: 57%
 
 ---
 
-# (Version bêta) Créez un [!DNL Teradata Vantage] connexion de base à l’aide de [!DNL Flow Service] API
-
->[!NOTE]
->
->La source [!DNL Teradata Vantage] est en version Beta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+# Créez une connexion de base à [!DNL Teradata Vantage] à l’aide de l’API [!DNL Flow Service].
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -91,7 +87,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie la nouvelle connexion de , y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
+Une réponse réussie renvoie la connexion nouvellement créée, y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
 
 ```json
 {

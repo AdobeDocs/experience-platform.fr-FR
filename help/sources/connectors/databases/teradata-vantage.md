@@ -3,18 +3,14 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;teradata;te
 title: Présentation du connecteur source Teradata Vantage
 description: Découvrez comment connecter Teradata Vantage à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: f498a704-437a-4fc6-b50d-b6a1ce7ab264
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
 workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 59%
+source-wordcount: '238'
+ht-degree: 61%
 
 ---
 
-# (Version bêta) source [!DNL Teradata Vantage]
-
->[!NOTE]
->
->La source [!DNL Teradata Vantage] est en version bêta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+# Source [!DNL Teradata Vantage]
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
