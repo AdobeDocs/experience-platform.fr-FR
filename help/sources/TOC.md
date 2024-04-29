@@ -5,9 +5,9 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 18f6c253aec6815cf84272cbce340a9aa7ed8ab9
+source-git-commit: 58239a1d2db7be48cedd4467cb2f94913e387031
 workflow-type: tm+mt
-source-wordcount: '1036'
+source-wordcount: '1039'
 ht-degree: 94%
 
 ---
@@ -348,6 +348,7 @@ ht-degree: 94%
       - [Flux de données de connexion aux paiements](tutorials/ui/dataflow/payments.md)
       - [Flux de données de connexion au protocole](tutorials/ui/dataflow/protocols.md)
    - [Créer un flux de données de sources à l’aide de modèles dans l’interface utilisateur](tutorials/ui/templates.md)
+   - [Filtrage des objets de sources](tutorials/ui/filter.md)
    - [Ingestion à la demande](tutorials/ui/on-demand-ingestion.md)
    - [Surveiller les flux de données par lots](tutorials/ui/monitor.md)
    - [Surveiller les flux de données de diffusion en continu](tutorials/ui/monitor-streaming.md)
@@ -393,4 +394,4 @@ ht-degree: 94%
 - [Liste autorisée d’adresses IP](ip-address-allow-list.md)
 - [Questions fréquentes](./troubleshooting.md)
 - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
