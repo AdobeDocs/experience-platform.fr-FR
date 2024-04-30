@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de Query Editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ce937f1335283382189fa40f65aa268735c02715
+source-git-commit: 02ecc6bd2ff85d2d837ffe25b090fd65043779a9
 workflow-type: tm+mt
-source-wordcount: '2661'
-ht-degree: 44%
+source-wordcount: '2794'
+ht-degree: 42%
 
 ---
 
@@ -88,6 +88,16 @@ Si vous avez écrit plusieurs requêtes mais que vous ne devez exécuter qu’un
 [!UICONTROL Exécuter la requête sélectionnée] Icône Cette icône est désactivée par défaut jusqu’à ce que vous sélectionniez la syntaxe de la requête dans l’éditeur.
 
 ![L’éditeur de requêtes avec la variable [!UICONTROL Exécuter la requête sélectionnée] en surbrillance.](../images/ui/query-editor/run-selected-query.png)
+
+### Annuler la session de l’éditeur de requêtes {#cancel-query}
+
+Contrôlez l’exécution des requêtes et améliorez votre productivité en annulant les requêtes longues. Cette action efface l’éditeur de requêtes lors d’une exécution de requête. Gardez à l’esprit que la requête continue de s’exécuter en arrière-plan. S’il s’agit d’une requête CTAS, elle génère toujours un jeu de données de sortie. Pour annuler l’exécution dans l’éditeur et continuer à composer une instruction SQL, sélectionnez **[!UICONTROL Annuler la requête]** après l’exécution d’une requête.
+
+![L’éditeur de requêtes avec [!UICONTROL Annuler la requête] surlignée.](../images/ui/query-editor/cancel-query-run.png)
+
+Une boîte de dialogue de confirmation s’affiche. Sélectionner **[!UICONTROL Confirmer]** pour annuler la requête exécutée.
+
+![La boîte de dialogue de confirmation de requête Annuler avec l’option Confirmer est mise en surbrillance.](../images/ui/query-editor/cancel-query-confirmation-dialog.png)
 
 ### Résultats count {#result-count}
 
@@ -219,7 +229,11 @@ Lorsque vous enregistrez une requête dans l’éditeur de requêtes, un message
 
 Les requêtes qui ont été enregistrées en tant que modèle peuvent être planifiées à partir de l’éditeur de requêtes. La planification des requêtes vous permet d’automatiser les exécutions de requête sur une cadence personnalisée. Vous pouvez planifier des requêtes en fonction de la fréquence, de la date et de l’heure, et choisir également un jeu de données de sortie pour vos résultats, si nécessaire. Les plannings de requête peuvent également être désactivés ou supprimés via l’interface utilisateur.
 
-Les planifications sont définies dans l’éditeur de requêtes. Lorsque vous utilisez Query Editor, vous ne pouvez ajouter qu’un planning à une requête qui a déjà été créée, enregistrée et exécutée. La même limitation ne s’applique pas au [!DNL Query Service] API :
+Les planifications sont définies dans l’éditeur de requêtes. Lorsque vous utilisez Query Editor, vous ne pouvez ajouter qu’un planning à une requête qui a déjà été créée, enregistrée et exécutée. La même limitation ne s’applique pas au [!DNL Query Service] API.
+
+>[!NOTE]
+>
+>Les requêtes planifiées qui échouent lors de dix exécutions consécutives sont automatiquement placées dans une [!UICONTROL Quarantiné] statut. Une requête avec ce statut nécessite votre intervention avant toute autre exécution. Voir [requêtes mises en quarantaine](./monitor-queries.md#quarantined-queries) pour plus d’informations.
 
 Consultez la documentation sur les plannings de requête pour savoir comment [création de calendriers de requête dans l’interface utilisateur](./query-schedules.md). Pour savoir comment ajouter des plannings à l’aide de l’API, vous pouvez également lire le [guide de point de terminaison des requêtes planifiées](../api/scheduled-queries.md).
 

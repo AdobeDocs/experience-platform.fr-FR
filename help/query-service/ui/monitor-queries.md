@@ -2,10 +2,10 @@
 title: Surveillance des requêtes planifiées
 description: Découvrez comment surveiller les requêtes via l’interface utilisateur de Query Service.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 7e0259f8807e96118dbcd1085d8b3b3186fc8317
+source-git-commit: e63e3344dd530fc9111f29948f2dfbd4daedf28c
 workflow-type: tm+mt
-source-wordcount: '1818'
-ht-degree: 37%
+source-wordcount: '2030'
+ht-degree: 32%
 
 ---
 
@@ -32,12 +32,12 @@ Le tableau ci-dessous décrit chaque colonne disponible.
 | **[!UICONTROL Nom]** | Le champ nom correspond soit au nom du modèle, soit aux premiers caractères de votre requête SQL. Toute requête créée à l’aide de l’interface utilisateur avec le Query Editor est nommée dès le départ. Si la requête a été créée via l’API, son nom devient un fragment de code SQL initial utilisé pour créer la requête. Pour afficher la liste de toutes les exécutions associées à la requête, sélectionnez un élément dans la [!UICONTROL Nom] colonne . Pour plus d’informations, voir [détails du planning des exécutions de requête](#query-runs) . |
 | **[!UICONTROL Modèle]** | Nom du modèle de la requête. Sélectionnez un nom de modèle pour accéder à l’éditeur de requêtes. Le modèle de requête est affiché dans l’éditeur de requêtes pour plus de commodité. S’il n’existe aucun nom de modèle, la ligne est marquée d’un trait d’union et il n’est pas possible d’effectuer une redirection vers l’éditeur de requêtes pour afficher la requête. |
 | **[!UICONTROL SQL]** | Fragment de la requête SQL. |
-| **[!UICONTROL Fréquence d’exécution]** | La cadence d’exécution de votre requête. Les valeurs disponibles sont `Run once` et `Scheduled`. Les requêtes peuvent être filtrées en fonction de leur fréquence d’exécution. |
+| **[!UICONTROL Fréquence d’exécution]** | La cadence d’exécution de votre requête. Les valeurs disponibles sont les suivantes : `Run once` et `Scheduled`. |
 | **[!UICONTROL Créé par]** | Nom de la personne qui a créé la requête. |
 | **[!UICONTROL Créé]** | La date et l’heure de création de la requête, au format UTC. |
 | **[!UICONTROL Horodatage de la dernière exécution]** | La date et l’heure les plus récentes auxquelles la requête a été exécutée. Cette colonne met en évidence si une requête a été exécutée conformément à son planning actuel. |
 | **[!UICONTROL État de la dernière exécution]** | Statut de la dernière exécution de la requête. Les valeurs d’état sont les suivantes : `Success`, `Failed`, `In progress`, et `No runs`. |
-| **[!UICONTROL État de la planification]** | État actuel de la requête planifiée. Il existe cinq valeurs potentielles, [!UICONTROL Enregistrement], [!UICONTROL Actif], [!UICONTROL Inactif], [!UICONTROL Supprimé]et un trait d’union. <ul><li>Le trait d’union indique que la requête planifiée est une requête ponctuelle non récurrente.</li><li>La variable [!UICONTROL Enregistrement] Le statut indique que le système traite toujours la création du nouveau planning pour la requête. Remarque : vous ne pouvez pas désactiver ou supprimer une requête planifiée lors de son enregistrement.</li><li>La variable [!UICONTROL Actif] le statut indique que la requête planifiée possède **pas encore passé** date et heure d’achèvement.</li><li>La variable [!UICONTROL Inactif] le statut indique que la requête planifiée possède **transmis** date et heure d’achèvement.</li><li>La variable [!UICONTROL Supprimé] Le statut indique que le planning de requête a été supprimé.</li></ul> |
+| **[!UICONTROL État de la planification]** | État actuel de la requête planifiée. Il existe six valeurs potentielles, [!UICONTROL Enregistrement], [!UICONTROL Actif], [!UICONTROL Inactif], [!UICONTROL Supprimé], un trait d’union et [!UICONTROL Quarantiné].<ul><li>La variable **[!UICONTROL Enregistrement]** Le statut indique que le système traite toujours la création du nouveau planning pour la requête. Remarque : vous ne pouvez pas désactiver ou supprimer une requête planifiée lors de son enregistrement.</li><li>La variable **[!UICONTROL Actif]** le statut indique que la requête planifiée possède **pas encore passé** date et heure d’achèvement.</li><li>La variable **[!UICONTROL Inactif]** le statut indique que la requête planifiée possède **transmis** sa date et son heure d’achèvement ou a été marquée par un utilisateur comme étant inactif.</li><li>La variable **[!UICONTROL Supprimé]** Le statut indique que le planning de requête a été supprimé.</li><li>Le trait d’union indique que la requête planifiée est une requête ponctuelle non récurrente.</li><li>La variable **[!UICONTROL Quarantiné]** Le statut indique que la requête a échoué dix exécutions consécutives et nécessite votre intervention avant que d’autres exécutions ne puissent avoir lieu.</li></ul> |
 
 >[!TIP]
 >
@@ -63,15 +63,19 @@ Activez/désactivez les cases à cocher appropriées pour supprimer ou ajouter u
 
 ## Gestion des requêtes planifiées avec des actions intégrées {#inline-actions}
 
-La variable [!UICONTROL Requêtes planifiées] view propose diverses actions intégrées pour gérer toutes vos requêtes planifiées à partir d’un seul emplacement. Les actions intégrées sont indiquées par des points de suspension dans chaque ligne. Sélectionnez les points de suspension d’une requête planifiée que vous souhaitez gérer pour afficher les options disponibles dans un menu contextuel. Les options disponibles incluent [[!UICONTROL Désactiver le planning]](#disable) ou [!UICONTROL Activation du planning], [[!UICONTROL Supprimer le planning]](#delete), et [[!UICONTROL Abonner]](#alert-subscription) pour interroger des alertes.
+La variable [!UICONTROL Requêtes planifiées] view propose diverses actions intégrées pour gérer toutes vos requêtes planifiées à partir d’un seul emplacement. Les actions intégrées sont indiquées par des points de suspension dans chaque ligne. Sélectionnez les points de suspension d’une requête planifiée que vous souhaitez gérer pour afficher les options disponibles dans un menu contextuel. Les options disponibles incluent [[!UICONTROL Désactiver le planning]](#disable) ou [!UICONTROL Activation du planning], [[!UICONTROL Supprimer le planning]](#delete), [[!UICONTROL Abonner]](#alert-subscription) pour interroger des alertes, et [Activez ou [!UICONTROL Désactiver la mise en quarantaine]](#quarantined-queries).
 
-![L’onglet Requêtes planifiées avec les ellipses d’action intégrées et le menu contextuel en surbrillance.](../images/ui/monitor-queries/disable-inline.png)
+![L’onglet Requêtes planifiées avec les ellipses d’action intégrées et le menu contextuel en surbrillance.](../images/ui/monitor-queries/inline-actions.png)
 
 ### Désactivation ou activation d’une requête planifiée {#disable}
 
 Pour désactiver une requête planifiée, sélectionnez les points de suspension d’une requête planifiée que vous souhaitez gérer, puis sélectionnez **[!UICONTROL Désactiver le planning]** dans les options du menu contextuel. Une boîte de dialogue s’affiche pour confirmer votre action. Sélectionner **[!UICONTROL Désactiver]** pour confirmer votre paramètre.
 
 Une fois qu’une requête planifiée est désactivée, vous pouvez activer le planning par le biais du même processus. Sélectionnez les points de suspension, puis sélectionnez **[!UICONTROL Activation du planning]** dans les options disponibles.
+
+>[!NOTE]
+>
+>Si une requête a été mise en quarantaine, vous devez consulter le code SQL du modèle avant d’activer son planning. Cela permet d’éviter le gaspillage d’heures de calcul si la requête de modèle présente toujours des problèmes.
 
 ### Suppression d’une requête planifiée {#delete}
 
@@ -91,6 +95,10 @@ La variable [!UICONTROL Alertes] s’ouvre. La variable [!UICONTROL Alertes] vou
 
 ![Boîte de dialogue d’abonnement aux alertes.](../images/ui/monitor-queries/alert-subscription-dialog.png)
 
+>[!NOTE]
+>
+>Pour être informé de la mise en quarantaine des exécutions de requête, vous devez d’abord inscrire les exécutions de requête planifiées dans la variable [fonction de mise en quarantaine](#quarantined-queries).
+
 Voir [documentation de l’API d’abonnements des alertes](../api/alert-subscriptions.md) pour plus d’informations.
 
 ### Afficher les détails de la requête {#query-details}
@@ -98,6 +106,16 @@ Voir [documentation de l’API d’abonnements des alertes](../api/alert-subscri
 Sélectionnez l’icône d’information (![Icône d’informations.](../images/ui/monitor-queries/information-icon.png)) pour afficher le panneau des détails de la requête. Le panneau Détails contient toutes les informations pertinentes sur la requête, au-delà des faits inclus dans le tableau des requêtes planifiées. Les informations supplémentaires incluent l’identifiant de la requête, la date de dernière modification, le code SQL de la requête, l’identifiant de planification et le planning défini actuel.
 
 ![L’onglet Requêtes planifiées avec l’icône d’informations et le panneau Détails surligné.](../images/ui/monitor-queries/details-panel.png)
+
+### Requêtes en quarantaine {#quarantined-queries}
+
+Lorsqu’elle est inscrite dans la fonction de quarantaine, toute requête planifiée qui échoue à dix exécutions consécutives est automatiquement placée dans une [!UICONTROL Quarantiné] statut. Une requête avec ce statut devient inactive et ne s’exécute pas à sa cadence planifiée. Il nécessite ensuite votre intervention avant toute autre exécution. Cela permet de protéger les ressources système, car vous devez examiner et corriger les problèmes liés à votre SQL avant d’autres exécutions.
+
+Pour activer une requête planifiée pour la fonction de quarantaine, sélectionnez les ellipses (`...`) suivie de [!UICONTROL Activer la mise en quarantaine] dans le menu déroulant qui s’affiche.
+
+![L’onglet Requêtes planifiées avec les points de suspension et Activer la quarantaine mis en surbrillance dans le menu déroulant des actions en ligne .](../images/ui/monitor-queries/inline-enable.png)
+
+Les requêtes peuvent également être inscrites dans la fonction de quarantaine lors du processus de création du planning. Voir [documentation sur les plannings de requête](./query-schedules.md#quarantine) pour plus d’informations.
 
 ## Filtrer des requêtes {#filter}
 
@@ -128,7 +146,7 @@ Ces informations apparaissent dans un tableau à cinq colonnes. Chaque ligne ind
 | **[!UICONTROL Identifiant d’exécution de requête]** | Identifiant d’exécution de requête pour l’exécution quotidienne. Sélectionnez la variable **[!UICONTROL Identifiant d’exécution de requête]** pour accéder au [!UICONTROL Présentation de l’exécution de requête]. |
 | **[!UICONTROL Démarrage de l’exécution de requête]** | Date et heure de l’exécution de la requête. L’horodatage est au format UTC. |
 | **[!UICONTROL Fin de l’exécution de requête]** | Date et heure de la fin de la requête. L’horodatage est au format UTC. |
-| **[!UICONTROL Statut]** | Statut de la dernière exécution de la requête. Les trois valeurs de statut sont les suivantes : `successful` `failed` ou `in progress`. |
+| **[!UICONTROL Statut]** | Statut de la dernière exécution de la requête. Les valeurs d’état sont les suivantes : `Success`, `Failed`, `In progress`, ou `Quarantined`. |
 | **[!UICONTROL Jeu de données]** | Jeu de données présent dans l’exécution. |
 
 Les détails de la requête en cours de planification sont visibles dans le panneau [!UICONTROL Propriétés]. Ce panneau comprend l’ID de requête initial, le type de client, le nom du modèle, la requête SQL et la cadence du planning.

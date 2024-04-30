@@ -2,10 +2,10 @@
 title: Planifications de requête
 description: Découvrez comment automatiser les exécutions de requêtes planifiées, supprimer ou désactiver un planning de requêtes et utiliser les options de planification disponibles via l’interface utilisateur de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 7d2027bf315ae6e354c906e4aabf6371a92e4148
+source-git-commit: 8d307b9c1c80c7b1672f2bf6b7acb4b85c4dae1b
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 39%
+source-wordcount: '1573'
+ht-degree: 18%
 
 ---
 
@@ -39,15 +39,17 @@ Vous pouvez également sélectionner la variable **[!UICONTROL Planifications]**
 
 ![Query Editor avec l’onglet Plannings en surbrillance.](../images/ui/query-schedules/schedules-tab.png)
 
-L’espace de travail des plannings s’affiche. Sélectionnez **[!UICONTROL Ajouter un planning]** pour créer un planning.
+L’espace de travail des plannings s’affiche. L’interface utilisateur affiche la liste des exécutions planifiées auxquelles le modèle est associé. Sélectionnez **[!UICONTROL Ajouter un planning]** pour créer un planning.
 
 ![Espace de travail Planning du Query Editor avec l’option Ajouter un planning mise en surbrillance.](../images/ui/query-schedules/add-schedule.png)
 
-### Modifier les détails du planning {#schedule-details}
+### Ajout des détails du planning {#schedule-details}
 
-La page Détails du planning s’affiche. Sur cette page, vous pouvez choisir la fréquence de la requête planifiée, la date de début et de fin, le jour de la semaine où la requête planifiée sera exécutée, ainsi que le jeu de données vers lequel exporter la requête.
+La page Détails du planning s’affiche. Sur cette page, vous pouvez modifier divers détails pour la requête planifiée. Les détails incluent [fréquence et jour de semaine de la requête planifiée](#scheduled-query-frequency) run, les dates de début et de fin, le jeu de données vers lequel exporter les résultats et [alertes d&#39;état des requêtes](#alerts-for-query-status).
 
 ![Le panneau Détails du planning est mis en surbrillance.](../images/ui/query-schedules/schedule-details.png)
+
+#### Fréquence de requête planifiée {#scheduled-query-frequency}
 
 Vous pouvez choisir les options suivantes pour **[!UICONTROL Fréquence]** :
 
@@ -57,31 +59,65 @@ Vous pouvez choisir les options suivantes pour **[!UICONTROL Fréquence]** :
 - **[!UICONTROL Mensuel]** : la requête sélectionnée s’exécute tous les mois au jour, à l’heure et à la période que vous avez sélectionnés. Notez que l’heure sélectionnée est indiquée en **UTC**, et non dans votre fuseau horaire local.
 - **[!UICONTROL Annuel]** : la requête sélectionnée s’exécute chaque année au jour, au mois, à l’heure et à la période que vous avez sélectionnés. Notez que l’heure sélectionnée est indiquée en **UTC**, et non dans votre fuseau horaire local.
 
-Pour le jeu de données de sortie, vous avez la possibilité d’utiliser l’option Ajouter dans un jeu de données existant ou créer et ajouter dans un nouveau jeu de données. La deuxième option signifie que si vous exécutez une requête pour la première fois et créez un jeu de données, toutes les exécutions suivantes continueront à insérer des données dans ce jeu de données.
+### Fournir des détails sur les jeux de données {#dataset-details}
+
+Gérez les résultats de la requête en ajoutant les données à un jeu de données existant ou en créant un nouveau jeu de données et en y ajoutant les données.
+
+Sélectionner **[!UICONTROL Création et ajout dans un nouveau jeu de données]** pour créer un jeu de données lors de la première exécution d’une requête. Les exécutions suivantes continuent à insérer des données dans ce jeu de données. Enfin, fournissez un nom et une description pour le jeu de données.
 
 >[!IMPORTANT]
 >
 > Puisque vous utilisez un jeu de données existant ou que vous en créez un nouveau, vous n’avez **pas** besoin d’inclure `INSERT INTO` ou `CREATE TABLE AS SELECT` dans le cadre de la requête, puisque les jeux de données sont déjà définis. L’inclusion de `INSERT INTO` ou `CREATE TABLE AS SELECT` dans le cadre de vos requêtes planifiées entraînera une erreur.
 
-Si vous n’avez pas accès aux requêtes paramétrées, passez à la [suppression ou désactivation d’une planification](#delete-schedule) .
+![Le panneau Détails de la planification avec les détails du jeu de données et la variable [!UICONTROL Création et ajout dans un nouveau jeu de données] options surlignées.](../images/ui/query-schedules/dataset-details-create-and-append.png)
+
+Vous pouvez également sélectionner **[!UICONTROL Ajouter à un jeu de données existant]** suivi de l’icône du jeu de données (![Icône du jeu de données.](../images/ui/query-schedules/dataset-icon.png)).
+
+![Le panneau Détails de la planification avec les détails du jeu de données et l’option Ajouter au jeu de données existant est mis en surbrillance.](../images/ui/query-schedules/dataset-details-existing.png)
+
+La variable **[!UICONTROL Sélectionner le jeu de données de sortie]** s’affiche.
+
+Ensuite, parcourez les jeux de données existants ou utilisez le champ de recherche pour filtrer les options. Sélectionnez la ligne du jeu de données que vous souhaitez utiliser. Les détails du jeu de données s’affichent dans le panneau de droite. Sélectionner **[!UICONTROL Terminé]** pour confirmer votre choix.
+
+![La boîte de dialogue Sélectionner le jeu de données de sortie avec le champ de recherche, une ligne de jeu de données et Terminé est mise en surbrillance.](../images/ui/query-schedules/select-output-dataset-dialog.png)
+
+### Requêtes de mise en quarantaine en cas d’échec continu {#quarantine}
+
+Lors de la création d’un planning, vous pouvez inscrire votre requête dans la fonctionnalité de quarantaine afin de protéger les ressources système et d’éviter toute interruption potentielle. La fonction de quarantaine identifie et isole automatiquement les requêtes qui échouent à plusieurs reprises en les plaçant dans une [!UICONTROL Quarantiné] état. En mettant en quarantaine les requêtes après dix échecs consécutifs, vous pouvez intervenir, examiner et corriger les problèmes avant d’autoriser d’autres exécutions. Cela permet de préserver l’efficacité opérationnelle et l’intégrité des données.
+
+![Espace de travail des planifications de requêtes avec [!UICONTROL Quarantaine de requêtes] surligné et Oui sélectionné.](../images/ui/query-schedules/quarantine-enroll.png)
+
+Une fois qu’une requête est inscrite pour la fonction de quarantaine, vous pouvez vous abonner à des alertes pour ce changement de statut de la requête. Si une requête planifiée n’est pas inscrite en quarantaine, elle n’apparaît pas comme une option sur [Boîte de dialogue Alertes](./monitor-queries.md#alert-subscription).
+
+Vous pouvez également inscrire une requête planifiée dans la fonction de quarantaine à partir des actions intégrées de la fonction [!UICONTROL Requêtes planifiées] . Voir [documentation sur les requêtes de contrôle](./monitor-queries.md#alert-subscription) pour plus d’informations.
+
+### Définition d’alertes pour un état de requête planifié {#alerts-for-query-status}
+
+Vous pouvez également vous abonner aux alertes de requête dans le cadre des paramètres de requête planifiés. Cela signifie que vous recevez des notifications lors d’un changement d’état de votre requête. Les alertes peuvent être reçues sous la forme de notifications contextuelles ou d’emails. Les options d’alerte d’état de requête disponibles incluent le début, la réussite et l’échec. Cochez la case pour vous abonner à des alertes pour cet état de requête planifiée.
+
+![Panneau Détails du planning avec les options d’alerte mises en surbrillance.](../images/ui/query-editor/alerts.png)
+
+Pour une vue d’ensemble des alertes dans Adobe Experience Platform, y compris la structure de la définition des règles d’alerte, voir la section [aperçu des alertes](../../observability/alerts/overview.md). Pour plus d’informations sur la gestion des alertes et des règles d’alerte dans l’interface utilisateur de Adobe Experience Platform, voir [Guide de l’interface utilisateur des alertes](../../observability/alerts/ui.md).
 
 ### Définir les paramètres d’une requête planifiée planifiée {#set-parameters}
 
 >[!IMPORTANT]
 >
->La fonction d’IU de requête paramétrée est actuellement disponible dans une **version limitée uniquement** et n’est pas disponible pour tous les clients.
+>La fonction d’IU de requête paramétrée est actuellement disponible dans une **version limitée uniquement** et n’est pas disponible pour tous les clients. Si vous n’avez pas accès aux requêtes paramétrées, passez à la [suppression ou désactivation d’une planification](#delete-schedule) .
 
 Si vous créez une requête planifiée pour une requête paramétrée, vous devez maintenant définir les valeurs des paramètres pour ces exécutions de requête.
 
 ![La section Détails de la planification du workflow de création de la planification avec la section Paramètres de requête mise en surbrillance.](../images/ui/query-schedules/scheduled-query-parameter.png)
 
-Après avoir confirmé tous ces détails, sélectionnez **[!UICONTROL Enregistrer]** pour créer un planning. L’espace de travail des plannings affiche les détails du planning nouvellement créé, y compris l’ID du planning, le planning lui-même et le jeu de données de sortie du planning. Vous pouvez utiliser l’ID de planning pour rechercher plus d’informations sur les exécutions de la requête planifiée elle-même. Pour en savoir plus, veuillez lire le [guide des points d’entrée d’exécution de requête planifiée](../api/runs-scheduled-queries.md).
-
-![Espace de travail des plannings avec le nouveau planning mis en surbrillance.](../images/ui/query-schedules/schedules-workspace.png)
+Après avoir confirmé les détails de votre planning, sélectionnez **[!UICONTROL Enregistrer]** pour créer un planning. Vous revenez alors à l’onglet Planifications de votre modèle. Cet espace de travail affiche les détails du planning nouvellement créé, y compris l’identifiant du planning, le planning lui-même et le jeu de données de sortie du planning.
 
 ## Afficher les exécutions de requête planifiées {#scheduled-query-runs}
 
-Pour afficher la liste des exécutions planifiées d’un modèle de requête, accédez au [!UICONTROL Requêtes planifiées] et sélectionnez un nom de modèle dans la liste disponible.
+De votre modèle [!UICONTROL Planifications] sélectionnez l’ID de planning pour accéder à la liste des exécutions de requête pour votre requête nouvellement planifiée.
+
+![Espace de travail des plannings avec le nouveau planning mis en surbrillance.](../images/ui/query-schedules/schedules-workspace.png)
+
+Vous pouvez également accéder au **[!UICONTROL Requêtes planifiées]** et sélectionnez un nom de modèle dans la liste disponible.
 
 ![L&#39;onglet Requêtes planifiées avec un modèle nommé en surbrillance.](../images/ui/query-schedules/view-scheduled-runs.png)
 
@@ -91,20 +127,32 @@ La liste des exécutions de requête pour cette requête planifiée s’affiche.
 
 Voir [guide de suivi des requêtes planifiées](./monitor-queries.md#inline-actions) pour obtenir des informations complètes sur la manière de surveiller l’état de toutes les tâches de requête via l’interface utilisateur.
 
-## Supprimer ou désactiver un planning {#delete-schedule}
+Sélectionnez une **[!UICONTROL Identifiant d’exécution de requête]** de la liste pour accéder à la présentation de l’exécution de la requête. Pour une répartition complète des informations disponibles dans la variable [présentation de l’exécution de requête](./monitor-queries.md#query-run-overview), consultez la documentation de surveillance des requêtes planifiées .
 
-Vous pouvez supprimer ou désactiver un planning dans l’espace de travail des plannings d’une requête spécifique ou dans l’ [!UICONTROL Requêtes planifiées] Workspace qui répertorie toutes les requêtes planifiées.
+Pour surveiller les requêtes planifiées à l’aide de l’API Query Service, voir [guide des points de fin d’exécution de requête planifiée](../api/runs-scheduled-queries.md).
+
+## Activation, désactivation ou suppression d’une planification {#delete-schedule}
+
+Vous pouvez activer, désactiver ou supprimer une planification dans l’espace de travail des plannings d’une requête particulière ou dans la variable [!UICONTROL Requêtes planifiées] Workspace qui répertorie toutes les requêtes planifiées.
 
 Pour accéder au [!UICONTROL Planifications] de la requête choisie, vous devez sélectionner le nom d&#39;un modèle de requête parmi les [!UICONTROL Modèles] ou le [!UICONTROL Requêtes planifiées] . L’éditeur de requêtes de cette requête est alors accessible. Dans Query Editor, sélectionnez **[!UICONTROL Planifications]** pour accéder à l’espace de travail des plannings.
 
-Sélectionnez un planning dans les lignes des plannings disponibles. Vous pouvez activer ou désactiver la requête planifiée à l’aide du bouton d’activation.
+Sélectionnez une planification dans les lignes des plannings disponibles pour remplir le panneau Détails. Utilisez le bouton d’activation/désactivation pour désactiver (ou activer) la requête planifiée.
+
+### Suppression de requêtes désactivées
 
 >[!IMPORTANT]
 >
 >Vous devez désactiver le planning avant de pouvoir supprimer un planning pour une requête.
 
+![La liste des plannings d’un modèle avec le panneau Détails surligné.](../images/ui/query-schedules/schedule-details-panel.png)
+
+Une boîte de dialogue de confirmation s’affiche. Sélectionner **[!UICONTROL Désactiver]** pour confirmer l’action.
+
+![La boîte de dialogue de confirmation Désactiver le planning .](../images/ui/query-schedules/disable-schedule-confirmation-dialog.png)
+
 Sélectionnez **[!UICONTROL Supprimer un planning]** pour supprimer le planning désactivé.
 
-![L’espace de travail des plannings avec l’option Désactiver le planning et Supprimer le planning est en surbrillance.](../images/ui/query-schedules/delete-schedule.png)
+![L’espace de travail Planifications avec la planification Supprimer mise en surbrillance.](../images/ui/query-schedules/delete-schedule.png)
 
 Vous pouvez également utiliser la variable [!UICONTROL Requêtes planifiées] tab propose une collection d’actions intégrées pour chaque requête planifiée. Les actions intégrées disponibles sont les suivantes : [!UICONTROL Désactiver le planning] ou [!UICONTROL Activation du planning], [!UICONTROL Supprimer le planning], et [!UICONTROL Abonner] aux alertes pour la requête planifiée. Pour obtenir des instructions complètes sur la suppression ou la désactivation d’une requête planifiée via l’onglet Requêtes planifiées, voir la section [guide de suivi des requêtes planifiées](./monitor-queries.md#inline-actions).
