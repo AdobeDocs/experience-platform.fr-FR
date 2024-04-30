@@ -2,10 +2,10 @@
 description: Découvrez comment créer des champs d’entrée dans l’interface utilisateur d’Experience Platform qui permettent à vos utilisateurs de spécifier diverses informations relatives à la connexion et à l’exportation des données vers la destination.
 title: Champs de données client
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 6366686e3b3f656d200aa245fc148f00e623713c
 workflow-type: tm+mt
-source-wordcount: '1580'
-ht-degree: 90%
+source-wordcount: '1742'
+ht-degree: 80%
 
 ---
 
@@ -261,7 +261,7 @@ Les sélecteurs de liste déroulante dynamiques semblent identiques au [sélecte
 
 Pour créer un sélecteur de liste déroulante dynamique, vous devez configurer deux composants :
 
-**Étape 1.** [Création d’un serveur de destination](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) avec un `responseFields` modèle pour l’appel API dynamique, comme illustré ci-dessous.
+**Étape 1.** [Création d’un serveur de destination](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) avec un `responseFields` modèle pour l’appel API dynamique, comme illustré ci-dessous.
 
 ```json
 {
@@ -309,7 +309,7 @@ Pour créer un sélecteur de liste déroulante dynamique, vous devez configurer 
 }
 ```
 
-**Étape 2.** Utilisez la variable `dynamicEnum` comme illustré ci-dessous. Dans l’exemple ci-dessous, la variable `User` la liste déroulante est récupérée à l’aide du serveur dynamique.
+**Étape 2.** Utilisez la variable `dynamicEnum` comme illustré ci-dessous. Dans l’exemple ci-dessous, la variable `User` la liste déroulante est récupérée à l’aide du serveur dynamique.
 
 
 ```json {line-numbers="true" highlight="13-21"}
@@ -340,6 +340,56 @@ Pour créer un sélecteur de liste déroulante dynamique, vous devez configurer 
 
 Définissez la variable `destinationServerId` à l’identifiant du serveur de destination que vous avez créé à l’étape 1. Vous pouvez voir l’identifiant du serveur de destination dans la réponse de la [récupération d’une configuration de serveur de destination](../../authoring-api/destination-server/retrieve-destination-server.md) appel API.
 
+## Création de champs de données client imbriqués {#nested-fields}
+
+Vous pouvez créer des champs de données client imbriqués pour des modèles d’intégration complexes. Cela vous permet d’enchaîner une série de sélections pour le client.
+
+Par exemple, vous pouvez ajouter des champs de données client imbriqués pour exiger des clients qu’ils sélectionnent un type d’intégration avec votre destination, suivi immédiatement d’une autre sélection. La seconde sélection est un champ imbriqué dans le type d’intégration.
+
+Pour ajouter un champ imbriqué, utilisez la méthode `properties` comme illustré ci-dessous. Dans l’exemple de configuration ci-dessous, vous pouvez voir trois champs imbriqués distincts dans la variable **Votre destination : paramètres spécifiques à l’intégration** champ de données client.
+
+>[!TIP]
+>
+>À compter de la version d’avril 2024, vous pouvez définir une `isRequired` sur les champs imbriqués. Par exemple, dans le fragment de code de configuration ci-dessous, les deux premiers champs imbriqués sont marqués comme obligatoires (ligne xxx mise en surbrillance) et les clients ne peuvent pas procéder à moins de sélectionner une valeur pour le champ. En savoir plus sur les champs obligatoires dans la section [paramètres pris en charge](#supported-parameters) .
+
+```json {line-numbers="true" highlight="10,19"}
+    {
+      "name": "yourdestination",
+      "title": "Yourdestination - Integration Specific Settings",
+      "type": "object",
+      "properties": [
+        {
+          "name": "agreement",
+          "title": "Advertiser data destination terms agreement. Enter I AGREE.",
+          "type": "string",
+          "isRequired": true,
+          "pattern": "I AGREE",
+          "readOnly": false,
+          "hidden": false
+        },
+        {
+          "name": "account-name",
+          "title": "Account name",
+          "type": "string",
+          "isRequired": true,
+          "readOnly": false,
+          "hidden": false
+        },
+        {
+          "name": "email",
+          "title": "Email address",
+          "type": "string",
+          "isRequired": false,
+          "pattern": "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",
+          "readOnly": false,
+          "hidden": false
+        }
+      ],
+      "isRequired": false,
+      "readOnly": false,
+      "hidden": false,
+```
+
 ## Création de champs de données client conditionnels {#conditional-options}
 
 Vous pouvez créer des champs de données clients conditionnels, qui s’affichent dans le workflow d’activation uniquement quand les utilisateurs sélectionnent une certaine option.
@@ -358,7 +408,7 @@ Pour définir un champ comme conditionnel, utilisez le paramètre `conditional` 
 }
 ```
 
-Dans un contexte plus large, vous pouvez voir le champ `conditional` utilisé dans la configuration de destination ci-dessous, avec le champ `fileType` et l’objet `csvOptions` dans lequel il est défini.
+Dans un contexte plus large, vous pouvez voir la variable `conditional` champ utilisé dans la configuration de destination ci-dessous, avec le champ `fileType` et la chaîne `csvOptions` dans lequel elle est définie. Les champs conditionnels sont définis dans la variable `properties` .
 
 ```json {line-numbers="true" highlight="3-15, 21-25"}
 "customerDataFields":[
