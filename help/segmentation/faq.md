@@ -2,10 +2,10 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: f9235763746e12bd62f19094372dcff41cb41d65
+source-git-commit: 27571f3ed57399eb588865e1a52e7569957ffbff
 workflow-type: tm+mt
-source-wordcount: '3161'
-ht-degree: 29%
+source-wordcount: '3976'
+ht-degree: 23%
 
 ---
 
@@ -98,18 +98,6 @@ L’expiration actuelle des données pour les audiences générées en externe e
 
 Une fois la période d’expiration des données écoulée, le jeu de données associé sera toujours visible dans l’inventaire des jeux de données, mais vous pourrez **not** être en mesure d’activer l’audience et le nombre de profils s’affichera comme nul.
 
-### Que représentent les différents états du cycle de vie ?
-
-Le graphique suivant explique les différents états du cycle de vie, ce qu’ils représentent, où les audiences avec cet état peuvent être utilisées, ainsi que l’impact sur les barrières de sécurité de segmentation.
-
-| État | Définition | Visible dans Audience Portal ? | Visible dans les destinations ? | Affecte les limites de segmentation ? | Impact sur les audiences basées sur des fichiers | Impact sur l’évaluation des audiences | Utilisable dans d’autres audiences ? |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Brouillon | Une audience dans le **Version préliminaire** state est une audience qui est encore en cours de développement et qui n’est pas encore prête à être utilisée dans d’autres services. | Oui, mais peut être caché. | Non | Oui | Peuvent être importées ou mises à jour pendant le processus d’affinage. | Peuvent être évaluées afin d’obtenir des comptes de publication précis. | Oui, mais non recommandé. |
-| Publié | Une audience dans le **Publié** state est une audience prête à être utilisée sur tous les services en aval. | Oui | Oui | Oui | Peut être importé ou mis à jour. | Évalués à l’aide de la segmentation par lots, par flux ou par périphérie. | Oui |
-| Inactif | Une audience dans le **Inactif** state est une audience qui n’est actuellement pas utilisée. Il existe toujours dans Platform, mais il le sera **not** être utilisable jusqu’à ce qu’il soit marqué comme brouillon ou publié. | Non, mais peut être affiché. | Non | Non | N’est plus mis à jour. | N’est plus évalué ou mis à jour par Platform. | Oui |
-| Supprimé | Une audience dans le **Supprimé** state est une audience qui a été supprimée. L’exécution de la suppression des données peut prendre jusqu’à quelques minutes. | Non | Non | Non | Les données sous-jacentes sont supprimées. | Aucune évaluation ou exécution des données n’a lieu une fois la suppression terminée. | Non |
-| Actif | Cet état a été **obsolète** et est remplacé par le **Publié** statut. | S.O. | S.O. | S.O. | S.O. | S.O. | S.O. |
-
 ### Comment le portail d’audience et la composition d’audience interagiront-ils avec les données du partenaire Real-Time CDP ?
 
 Le portail d’audience et la composition d’audience interagissent avec les données du partenaire de deux manières :
@@ -130,9 +118,108 @@ Les attributs d’enrichissement sont des attributs qui proviennent d’un jeu d
 | Destinations Real-Time CDP | Les attributs de payload et les audiences peuvent être activés. | Seule l’audience peut être activée. Attributs d’enrichissement **cannot** être activée. |
 | Campagnes Adobe Journey Optimizer | Ni l’audience ni les attributs de payload ne peuvent être activés. | Les attributs audience et enrichissement peuvent être activés. |
 
+## États du cycle de vie {#lifecycle-states}
+
+La section suivante répertorie les questions relatives aux états du cycle de vie et à la gestion de l’état du cycle de vie dans Audience Portal.
+
+### Que représentent les différents états du cycle de vie ?
+
+Le graphique suivant explique les différents états du cycle de vie, ce qu’ils représentent, où les audiences avec cet état peuvent être utilisées, ainsi que l’impact sur les barrières de sécurité de segmentation.
+
+| État | Définition | Visible dans Audience Portal ? | Visible dans les destinations ? | Affecte les limites de segmentation ? | Impact sur les audiences basées sur des fichiers | Impact sur l’évaluation des audiences | Utilisable dans d’autres audiences ? | Modifiable |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Brouillon | Une audience dans le **Version préliminaire** state est une audience qui est encore en cours de développement et qui n’est pas encore prête à être utilisée dans d’autres services. | Oui, mais peut être caché. | Non | Oui | Peuvent être importées ou mises à jour pendant le processus d’affinage. | Peuvent être évaluées afin d’obtenir des comptes de publication précis. | Oui, mais non recommandé. | Oui |
+| Publié | Une audience dans le **Publié** state est une audience prête à être utilisée sur tous les services en aval. | Oui | Oui | Oui | Peut être importé ou mis à jour. | Évalués à l’aide de la segmentation par lots, par flux ou par périphérie. | Oui | Oui |
+| Inactif | Une audience dans le **Inactif** state est une audience qui n’est actuellement pas utilisée. Il existe toujours dans Platform, mais il le sera **not** être utilisable jusqu’à ce qu’il soit marqué comme brouillon ou publié. | Non, mais peut être affiché. | Non | Non | N’est plus mis à jour. | N’est plus évalué ou mis à jour par Platform. | Oui | Oui |
+| Supprimé | Une audience dans le **Supprimé** state est une audience qui a été supprimée. L’exécution de la suppression des données peut prendre jusqu’à quelques minutes. | Non | Non | Non | Les données sous-jacentes sont supprimées. | Aucune évaluation ou exécution des données n’a lieu une fois la suppression terminée. | Non | Non |
+
+### Dans quels états puis-je modifier mes audiences ?
+
+Les audiences peuvent être modifiées dans les états de cycle de vie suivants :
+
+- **Version préliminaire**: si une audience est modifiée à l’état de brouillon, elle reste à l’état de brouillon sauf si elle est publiée explicitement.
+- **Publié**: si une audience est modifiée à l’état publié, elle reste publiée et l’audience est automatiquement mise à jour.
+- **Inactif**: si une audience est modifiée à l’état inactif, elle reste inactive. Cela signifie qu’il ne sera pas évalué ni mis à jour. Si vous devez mettre à jour l’audience, vous devez la publier.
+
+Une fois qu’une audience est supprimée, elle **cannot** être édités.
+
+### À quels états de cycle de vie puis-je déplacer une audience ?
+
+Le cycle de vie possible indique qu’une audience peut être déplacée en fonction de l’état actuel de l’audience.
+
+![Diagramme décrivant les transitions possibles d’état de cycle de vie disponibles pour les audiences.](./images/faq/lifecycle-state-transition.png)
+
+Si votre audience est à l’état de brouillon, vous pouvez la publier ou la supprimer si elle n’a aucune dépendance.
+
+Si votre audience est à l’état publié, vous pouvez la désactiver ou la supprimer si elle n’a aucune dépendance.
+
+Si votre audience est à l’état inactif, vous pouvez la republier ou la supprimer si elle n’a aucune dépendance.
+
+### Existe-t-il des avertissements pour les audiences dans certains états de cycle de vie ?
+
+Les audiences dans l’état publié ne peuvent être déplacées dans un autre état que si l’audience le fait **not** avoir des dépendances. Cela signifie que si votre audience est utilisée dans un service en aval, elle ne peut pas être désactivée ni supprimée.
+
+Si une audience évaluée à l’aide de la segmentation par lots est republiée, c’est-à-dire lorsqu’une audience passe d’inactive à publiée, l’audience est actualisée. **after** la tâche par lots quotidienne. Lors de la première republication, les profils et les données seront **same** comme lorsque l’audience était inactive.
+
+### Comment placer une audience dans l’état de brouillon ?
+
+La méthode pour placer une audience dans l’état de brouillon dépend de l’origine de l’audience.
+
+Pour les audiences créées à l’aide du créateur de segments, vous pouvez définir l’audience sur l’état de brouillon en sélectionnant &quot;[!UICONTROL Enregistrer en tant que brouillon]&quot; dans le créateur de segments.
+
+Pour les audiences créées dans la composition de l’audience, les audiences sont automatiquement enregistrées en tant que brouillon jusqu’à publication.
+
+Pour les audiences créées en externe, les audiences sont automatiquement publiées.
+
+Une fois qu’une audience est à l’état publié, vous **cannot** redéfinissez l’audience d’origine sur l’état brouillon. Cependant, si vous copiez l’audience nouvellement copiée, elle se trouve à l’état de brouillon.
+
+### Comment placer une audience dans l’état publié ?
+
+Pour les audiences créées à l’aide du créateur de segments ou de la composition de l’audience, vous pouvez définir l’audience sur l’état publié en sélectionnant &quot;[!UICONTROL Publier]&quot; dans leurs interfaces utilisateur respectives.
+
+Les audiences créées en externe sont automatiquement définies sur la publication.
+
+### Comment placer une audience à l’état inactif ?
+
+Vous pouvez placer une audience publiée dans l’état inactif en ouvrant le menu des actions rapides dans Audience Portal et en sélectionnant &quot;[!UICONTROL Désactiver]&quot;.
+
+### Comment republier une audience ?
+
+>[!NOTE]
+>
+>L’état &quot;republié&quot; est identique à l’état publié pour le comportement de l’audience.
+
+Vous pouvez republier une audience en sélectionnant une audience inactive, en ouvrant le menu des actions rapides sur Audience Portal et en sélectionnant [!UICONTROL Publier].
+
+### Comment placer une audience dans l’état supprimé ?
+
+>[!IMPORTANT]
+>
+>Vous ne pouvez supprimer que les audiences qui sont **not** utilisée dans toute activation en aval. De plus, vous ne pouvez pas supprimer une audience référencée dans une autre audience. Si vous ne pouvez pas supprimer votre audience, veuillez vous assurer que vous êtes **not** l’utiliser dans n’importe quel service en aval ou en tant que composante essentielle d’une autre audience.
+
+Vous pouvez placer une audience dans l’état de suppression en ouvrant le menu des actions rapides dans Audience Portal et en sélectionnant [!UICONTROL Supprimer].
+
+### L’utilisation d’une audience en tant qu’audience enfant affecte-t-elle les transitions d’état de cycle de vie ?
+
+>[!NOTE]
+>
+>Une audience parente est une audience qui **uses** une autre audience comme dépendance de l’audience.
+>
+>Une audience enfant est une audience qui est **used as** une dépendance pour l’audience.
+
+Oui, l’utilisation d’une audience en tant qu’audience enfant affecte les états de cycle de vie des transitions que peuvent entreprendre l’audience enfant et parente.
+
+Pour qu’une audience enfant soit déplacée vers l’état publié, l’ensemble de l’audience parent **must** être dans l’état publié. Les audiences parents peuvent être publiées avant la publication de l’audience enfant ou, si l’utilisateur le confirme, peuvent être automatiquement publiées lorsque l’audience enfant est publiée.
+
+Pour que l’audience parent soit déplacée vers l’état inactif ou supprimé, toutes ses audiences enfants **must** être désactivés ou supprimés.
+
+### Puis-je faire référence à une audience dont l’état de cycle de vie est différent ?
+
+Oui! Si votre audience est actuellement à l’état de brouillon, vous pouvez vous référer aux audiences à l’état publié ou inactif. Cependant, pour publier cette audience, vous devez : **must** publiez les autres audiences parentes.
+
 ## Inventaire de l’audience
 
-Les sections suivantes répertorient les questions relatives à l’inventaire des audiences dans Audience Portal.
+La section suivante répertorie les questions relatives à l’inventaire des audiences dans Audience Portal.
 
 ### Ai-je besoin d’autorisations supplémentaires pour utiliser les fonctionnalités d’inventaire des audiences ?
 

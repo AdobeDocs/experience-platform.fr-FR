@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’IU de Segmentation Service
 description: Découvrez comment créer et gérer des audiences et des définitions de segment dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: dc899a4aa64b6e734322020e4c10aee687c6d8c5
+source-git-commit: c1a2d55cb99a1f66698289751a967f8c5f80a7bf
 workflow-type: tm+mt
-source-wordcount: '4014'
-ht-degree: 86%
+source-wordcount: '4105'
+ht-degree: 83%
 
 ---
 
@@ -80,7 +80,8 @@ Une icône de points de suspension se trouve à côté de chaque audience. Cette
 | [!UICONTROL Déplacer vers le dossier] | Composition d’audience, chargement personnalisé, Segmentation Service | Gère le dossier auquel l’audience appartient. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
 | [!UICONTROL Copier] | Segmentation Service | Duplique l’audience sélectionnée. |
 | [!UICONTROL Appliquer les libellés d’accès] | Composition d’audience, chargement personnalisé, Segmentation Service | Gère les étiquettes d’accès qui appartiennent à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL Archiver] | Chargement personnalisé | Archive l’audience sélectionnée. |
+| [!UICONTROL Publier] | Chargement personnalisé, service de segmentation | Publie l’audience sélectionnée. Pour plus d’informations sur la gestion de l’état du cycle de vie, consultez la section [section état du cycle de vie du FAQ sur la segmentation](../faq.md#lifecycle-states). |
+| [!UICONTROL Désactiver] | Chargement personnalisé, service de segmentation | Désactive l’audience sélectionnée. Pour plus d’informations sur la gestion de l’état du cycle de vie, consultez la section [section état du cycle de vie du FAQ sur la segmentation](../faq.md#lifecycle-states). |
 | [!UICONTROL Supprimer] | Composition d’audience, chargement personnalisé, Segmentation Service | Supprime l’audience sélectionnée. |
 | [!UICONTROL Ajouter au package] | Composition d’audience, chargement personnalisé, Segmentation Service | Déplace l’audience entre les environnements de test. Pour plus d’informations sur cette fonctionnalité, veuillez lire la section [guide d’outils sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
@@ -102,9 +103,9 @@ Vous pouvez sélectionner **[!UICONTROL Résumé de la fréquence de mise à jou
 
 ![Le bouton Récapitulatif de la mise à jour de la fréquence est mis en surbrillance.](../images/ui/overview/browse-audience-update-frequency-summary.png)
 
-Le graphique en secteurs apparaît, affichant une répartition des audiences par fréquence de mise à jour. Le graphique présente le nombre total d’audiences au milieu. Si vous passez le curseur de la souris sur les différentes parties de l’audience, le nombre d’audiences appartenant à chaque type de fréquence de mise à jour s’affiche.
+Le graphique en secteurs apparaît, affichant une répartition des audiences par fréquence de mise à jour. Le graphique affiche le nombre total d’audiences au milieu et le temps d’évaluation quotidien par lots en UTC en bas. Si vous passez le curseur de la souris sur les différentes parties de l’audience, le nombre d’audiences appartenant à chaque type de fréquence de mise à jour s’affiche.
 
-![Le graphique en secteurs des fréquences de mise à jour s’affiche.](../images/ui/overview/update-frequency-chart.png)
+![Le graphique circulaire de fréquence de mise à jour est mis en surbrillance, avec la durée d’évaluation de la segmentation par lots également affichée.](../images/ui/overview/update-frequency-chart.png)
 
 ### Personnaliser {#customize}
 
@@ -115,7 +116,7 @@ Vous pouvez ajouter des champs supplémentaires au [!UICONTROL Parcourir] en sé
 | [!UICONTROL Nom] | Nom de l’audience. |
 | [!UICONTROL Nombre de profils] | Nombre total de profils qui remplissent les critères de l’audience. |
 | [!UICONTROL Origine] | Origine de l’audience. Cette information indique d’où vient l’audience. Les valeurs possibles sont Segmentation Service, Chargement personnalisé, Composition de l’audience et Audience Manager. |
-| [!UICONTROL Statut du cycle de vie] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Published` et `Archived`. |
+| [!UICONTROL Statut du cycle de vie] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Inactive`, `Published`, et `Archived`. Pour plus d’informations sur les états du cycle de vie, y compris sur ce que signifient les différents états et sur la façon de déplacer les audiences vers différents états du cycle de vie, lisez la section [section d’état du cycle de vie du FAQ sur la segmentation](../faq.md#lifecycle-status). |
 | [!UICONTROL Fréquence de mise à jour] | Valeur qui indique la fréquence de mise à jour des données de l’audience. Les valeurs possibles pour ce champ incluent [!UICONTROL Lot], [!UICONTROL Diffusion en continu], [!UICONTROL Edge], et [!UICONTROL Non planifié]. |
 | [!UICONTROL Dernière mise à jour par] | Nom de la personne qui a mis à jour l’audience pour la dernière fois. |
 | [!UICONTROL Créé] | Date et heure de création de l’audience en UTC. |
@@ -205,7 +206,7 @@ La liste des filtres disponibles s’affiche.
 | ------ | ----------- |
 | [!UICONTROL Origine] | Permet de filtrer l’audience en fonction de son origine. Les options disponibles comprennent Segmentation Service, le chargement personnalisé, la composition d’audience et Audience Manager. |
 | [!UICONTROL A une balise] | Permet de filtrer par balise. Vous pouvez choisir entre **[!UICONTROL A une balise]** et **[!UICONTROL A toutes les balises]**. Lors de la sélection de **[!UICONTROL A une balise]**, les audiences filtrées incluent **toutes** les balises que vous avez ajoutées. Lors de la sélection de **[!UICONTROL A toutes les balises]**, les audiences filtrées doivent inclure **toutes** les balises que vous avez ajoutées. |
-| [!UICONTROL Statut du cycle de vie] | Permet de filtrer les données en fonction du statut de cycle de vie de l’audience. Les options disponibles sont les suivantes : [!UICONTROL Actif], [!UICONTROL Archivé], [!UICONTROL Supprimé], [!UICONTROL Brouillon], [!UICONTROL Inactif] et [!UICONTROL Publié]. |
+| [!UICONTROL Statut du cycle de vie] | Permet de filtrer les données en fonction du statut de cycle de vie de l’audience. Les options disponibles incluent : [!UICONTROL Supprimé], [!UICONTROL Version préliminaire], [!UICONTROL Inactif], et [!UICONTROL Publié]. |
 | [!UICONTROL Fréquence de mise à jour] | Permet de filtrer selon la fréquence de mise à jour de l’audience. Les options disponibles sont les suivantes : [!UICONTROL Planifié], [!UICONTROL Continu] et [!UICONTROL À la demande]. |
 | [!UICONTROL Créé par] | Permet de filtrer en fonction de la personne qui a créé l’audience. |
 | [!UICONTROL Date de création] | Permet de filtrer en fonction de la date de création de l’audience. Vous pouvez choisir une période pour filtrer la date de création de l’audience. |
@@ -408,7 +409,7 @@ Une fenêtre contextuelle s’affiche, répertoriant tous les champs pouvant êt
 | Champ | Description |
 | ----- | ----------- | 
 | [!UICONTROL Nom] | Nom de l’audience. |
-| [!UICONTROL Statut] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Published` et `Archived`. |
+| [!UICONTROL Statut] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Inactive`, `Published`, et `Archived`. |
 | [!UICONTROL Créé] | Heure et date de création de l’audience. |
 | [!UICONTROL Créé par] | Nom de la personne qui a créé l’audience. |
 | [!UICONTROL Mis à jour] | Heure et date de la dernière mise à jour de l’audience. |
