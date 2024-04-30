@@ -3,12 +3,12 @@ product: adobe experience platform
 solution: Real-Time Customer Data Platform
 audience: user
 user-guide-title: Guide de Real-Time Customer Data Platform
-user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs sources d’entreprise afin de créer des profils client, de créer des audiences à partir de ces profils et d’activer ces audiences vers des destinations tierces.
+user-guide-description: Regroupez les données connues et anonymes provenant de plusieurs entreprises sources afin de créer des profils clients, puis des audiences à partir de ces profils et enfin d’activer ces segments vers des destinations tierces.
 role: Admin
 source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
 workflow-type: tm+mt
 source-wordcount: '294'
-ht-degree: 59%
+ht-degree: 68%
 
 ---
 
@@ -85,5 +85,5 @@ ht-degree: 59%
    * Personnalisation, statistiques et engagement {#personalization-insights-engagement}
       * [Réengager intelligemment vos clients](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [Réengager intelligemment vos clients : exemples Luma](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
-* [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notes de mise à jour d’Experience Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
 * [Glossaire Experience Platform](https://docs.adobe.com/content/help/fr-FR/experience-platform/landing/glossary.html)
