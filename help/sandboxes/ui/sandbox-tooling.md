@@ -2,10 +2,10 @@
 title: Outils Sandbox
 description: Exportez et importez en toute transparence des configurations Sandbox entre des environnements de test.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 888608bdf3ccdfc56edd41c164640e258a4c5dd7
+source-git-commit: 1a474fa0947cb930bad95f94c1901fffb7e23e7b
 workflow-type: tm+mt
-source-wordcount: '1961'
-ht-degree: 10%
+source-wordcount: '2241'
+ht-degree: 9%
 
 ---
 
@@ -27,7 +27,7 @@ La fonctionnalité d’outil d’environnement de test vous permet d’exporter 
 
 Le tableau ci-dessous répertorie [!DNL Adobe Real-Time Customer Data Platform] objets actuellement pris en charge pour les outils Sandbox :
 
-| Plateforme | Objet | Détails |
+| Platform | Objet | Détails |
 | --- | --- | --- |
 | Plateforme de données clients | Sources | Les informations d’identification du compte source ne sont pas répliquées dans l’environnement de test cible pour des raisons de sécurité et devront être mises à jour manuellement. Par défaut, le flux de données source est copié dans un état de brouillon. |
 | Plateforme de données clients | Audiences | Seule la variable **[!UICONTROL Public du client]** type **[!UICONTROL Service de segmentation]** est prise en charge. Les étiquettes existantes pour le consentement et la gouvernance seront copiées dans la même tâche d’importation. Le système sélectionne automatiquement la stratégie de fusion par défaut dans l’environnement de test cible avec la même classe XDM lors de la vérification des dépendances de stratégie de fusion. |
@@ -49,7 +49,7 @@ Les objets suivants sont importés, mais leur état est brouillon ou désactivé
 
 Le tableau ci-dessous répertorie [!DNL Adobe Journey Optimizer] les objets actuellement pris en charge pour l’outil et les limitations des environnements de test :
 
-| Plateforme | Objet | Détails |
+| Platform | Objet | Détails |
 | --- | --- | --- |
 | [!DNL Adobe Journey Optimizer] | Audience | Une audience peut être copiée en tant qu’objet dépendant de l’objet parcours. Vous pouvez sélectionner Créer une audience ou réutiliser une audience existante dans l’environnement de test cible. |
 | [!DNL Adobe Journey Optimizer] | Schéma | Les schémas utilisés dans le parcours peuvent être copiés en tant qu’objets dépendants. Vous pouvez sélectionner Créer un nouveau schéma ou en réutiliser un existant dans l’environnement de test cible. |
@@ -165,6 +165,52 @@ Vous revenez alors à la variable [!UICONTROL Objet de package et dépendances] 
 
 ![La variable [!UICONTROL Objet de package et dépendances] affiche une liste des ressources incluses dans le module, en surbrillance. [!UICONTROL Terminer].](../images/ui/sandbox-tooling/finish-object-dependencies.png)
 
+## Exportation et importation d’un environnement de test complet
+
+>[!NOTE]
+>
+>Seuls les objets de plateforme de données client en temps réel sont pris en charge pour un export/import d’environnement de test complet. Les objets de parcours ne seront pas inclus.
+
+### Exportation d’un environnement de test entier {#export-entire-sandbox}
+
+Pour exporter un environnement de test complet, accédez à la [!UICONTROL Environnements de test] **[!UICONTROL Packages]** et sélectionnez **[!UICONTROL Créer un package]**.
+
+![La variable [!UICONTROL Environnements de test] **[!UICONTROL Packages]** mise en surbrillance des onglets [!UICONTROL Créer un package].](../images/ui/sandbox-tooling/create-sandbox-package.png)
+
+Sélectionner **[!UICONTROL Environnement de test complet]** pour le [!UICONTROL Type de package] dans le [!UICONTROL Créer un package] boîte de dialogue. Fournissez une [!UICONTROL Nom du module] pour votre nouveau module et sélectionnez l’option **[!UICONTROL Sandbox]** dans la liste déroulante. Enfin, sélectionnez **[!UICONTROL Créer]** pour confirmer vos entrées.
+
+![La variable [!UICONTROL Créer un package] Boîte de dialogue affichant les champs remplis et mise en surbrillance [!UICONTROL Créer].](../images/ui/sandbox-tooling/create-package-dialog.png)
+
+Le package a été créé avec succès, sélectionnez **[!UICONTROL Publier]** pour publier le module.
+
+![Liste des packages sandbox qui mettent en évidence le nouveau package publié.](../images/ui/sandbox-tooling/publish-entire-sandbox-packages.png)
+
+Vous revenez alors à la variable **[!UICONTROL Packages]** dans le [!UICONTROL Environnements de test] , où vous pouvez voir le nouveau module publié.
+
+### Importez l’intégralité du package sandbox. {#import-entire-sandbox-package}
+
+>[!NOTE]
+>
+>Tous les objets seront importés dans l’environnement de test cible en tant que nouveaux objets. Il est recommandé d’importer un package d’environnement de test complet dans un environnement de test vide.
+
+Pour importer le package dans un environnement de test cible, accédez au [!UICONTROL Environnements de test] **[!UICONTROL Parcourir]** et sélectionnez l’option plus (+) en regard du nom de l’environnement de test.
+
+![Environnements de test **[!UICONTROL Parcourir]** surligner la sélection du package d&#39;import.](../images/ui/sandbox-tooling/browse-entire-package-sandboxes.png)
+
+À l’aide du menu déroulant, sélectionnez l’environnement de test complet à l’aide du **[!UICONTROL Nom du module]** menu déroulant. Ajouter un **[!UICONTROL Job name]**, qui sera utilisé pour la surveillance future et une valeur facultative **[!UICONTROL Description de la tâche]**, puis sélectionnez **[!UICONTROL Suivant]**.
+
+![La page de détails de l’importation affiche la variable [!UICONTROL Nom du module] sélection de liste déroulante](../images/ui/sandbox-tooling/import-full-sandbox-package.png)
+
+>[!NOTE]
+>
+>Vous devez disposer d’autorisations complètes pour tous les objets inclus dans le package. Si vous ne disposez pas d’autorisations, l’opération d’importation échoue et des messages d’erreur s’affichent.
+
+Vous accédez au [!UICONTROL Objet de package et dépendances] où vous pouvez voir le nombre d’objets et de dépendances importés et exclus. À partir de là, sélectionnez **[!UICONTROL Importer]** pour terminer l’importation du package.
+
+![La variable [!UICONTROL Objet de package et dépendances] La page affiche le message intégré des types d’objets non pris en charge, en surbrillance. [!UICONTROL Importer].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
+
+Patientez un certain temps avant que l’importation ne soit terminée. La durée d’exécution peut varier en fonction du nombre d’objets dans le module. Vous pouvez contrôler la tâche d’importation à partir de la fonction [!UICONTROL Environnements de test] **[!UICONTROL Tâches]** .
+
 <!--
 ## Export and import an entire sandbox 
 
@@ -207,37 +253,37 @@ You are taken to the [!UICONTROL Package object and dependencies] page where you
  ![The [!UICONTROL Package object and dependencies] page shows the inline message of object types not supported, highlighting [!UICONTROL Import].](../images/ui/sandbox-tooling/finish-dependencies-entire-sandbox.png)
 -->
 
-## Surveillance des traitements d’importation et affichage des détails des objets d’importation
+## Surveiller les détails de l’importation {#view-import-details}
 
-Pour afficher les objets importés et les détails importés, accédez au [!UICONTROL Environnements de test] **[!UICONTROL Imports]** et sélectionnez le package dans la liste. Vous pouvez également utiliser la barre de recherche pour rechercher le module.
+Pour afficher les détails importés, accédez au [!UICONTROL Environnements de test] **[!UICONTROL Tâches]** et sélectionnez le package dans la liste. Vous pouvez également utiliser la barre de recherche pour rechercher le module.
 
-![Environnements de test [!UICONTROL Imports] met en surbrillance la sélection du package d’importation.](../images/ui/sandbox-tooling/imports-tab.png)
+![Environnements de test [!UICONTROL Tâches] met en surbrillance la sélection du package d’importation.](../images/ui/sandbox-tooling/imports-tab.png)
 
-### Affichage des objets importés {#view-imported-objects}
+<!--### View imported objects {#view-imported-objects}
 
-Sur le **[!UICONTROL Imports]** dans le [!UICONTROL Environnements de test] environnement, sélectionnez **[!UICONTROL Affichage des objets importés]** dans le volet de droite.
+On the **[!UICONTROL Jobs]** tab in the [!UICONTROL Sandboxes] environment, select **[!UICONTROL View imported objects]** from the right details pane.
 
-Sélectionner **[!UICONTROL Affichage des objets importés]** dans le volet de droite des détails de la **[!UICONTROL Imports]** dans le [!UICONTROL Environnements de test] environnement.
+Select **[!UICONTROL View imported objects]** from the right details pane on the **[!UICONTROL Jobs]** tab in the [!UICONTROL Sandboxes] environment.
 
-![Environnements de test [!UICONTROL Imports] surligne l’onglet [!UICONTROL Affichage des objets importés] dans le volet de droite.](../images/ui/sandbox-tooling/view-imported-objects.png)
+![The sandboxes [!UICONTROL Imports] tab highlights the [!UICONTROL View imported objects] selection in the right pane.](../images/ui/sandbox-tooling/view-imported-objects.png)
 
-Utilisez les flèches pour développer les objets afin d&#39;afficher la liste complète des champs importés dans le package.
+Use the arrows to expand objects to view the full list of fields that have been imported into the package.
 
-![Environnements de test [!UICONTROL Objets importés] affichant une liste d’objets importés dans le package.](../images/ui/sandbox-tooling/expand-imported-objects.png)
+![The sandboxes [!UICONTROL Imported objects] showing a list of objects imported into the package.](../images/ui/sandbox-tooling/expand-imported-objects.png)-->
 
-### Affichage des détails d’importation {#view-import-details}
-
-Sélectionner **[!UICONTROL Affichage des détails d’importation]** dans le volet de droite des détails de la **[!UICONTROL Imports]** dans l’environnement Sandbox.
+Sélectionner **[!UICONTROL Afficher le résumé de l’importation]** dans le volet de droite des détails de la **[!UICONTROL Tâches]** dans l’environnement Sandbox.
 
 ![Environnements de test [!UICONTROL Imports] surligne l’onglet [!UICONTROL Affichage des détails d’importation] dans le volet de droite.](../images/ui/sandbox-tooling/view-import-details.png)
 
-La variable **[!UICONTROL Détails de l’importation]** La boîte de dialogue affiche une ventilation détaillée des importations.
-
-![La variable [!UICONTROL Détails de l’importation] boîte de dialogue présentant une ventilation détaillée des imports.](../images/ui/sandbox-tooling/import-details.png)
+La variable **[!UICONTROL Résumé de l&#39;import]** La boîte de dialogue affiche une répartition des importations avec progression en pourcentage.
 
 >[!NOTE]
 >
->Une fois l’importation terminée, vous recevez des notifications dans l’interface utilisateur de Platform. Vous pouvez accéder à ces notifications à partir de l’icône d’alertes. Vous pouvez accéder au dépannage à partir de là si une tâche échoue.
+>Vous pouvez afficher une liste d’objets en accédant à des pages d’inventaire spécifiques.
+
+![La variable [!UICONTROL Détails de l’importation] boîte de dialogue présentant une ventilation détaillée des imports.](../images/ui/sandbox-tooling/import-details.png)
+
+Une fois l’importation terminée, une notification est reçue dans l’interface utilisateur de Platform. Vous pouvez accéder à ces notifications à partir de l’icône d’alertes. Vous pouvez accéder au dépannage à partir de là si une tâche échoue.
 
 ## Tutoriel vidéo
 
