@@ -3,10 +3,10 @@ title: Création d’une connexion source Azure Event Hubs à l’aide de l’AP
 description: Découvrez comment connecter Adobe Experience Platform à un compte Azure Event Hubs à l’aide de l’API Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: e4ea21af3f0d9e810959330488dc06bc559cf72c
 workflow-type: tm+mt
-source-wordcount: '1005'
-ht-degree: 49%
+source-wordcount: '1473'
+ht-degree: 33%
 
 ---
 
@@ -51,6 +51,29 @@ Pour [!DNL Flow Service] pour vous connecter à [!DNL Event Hubs] , vous devez f
 | `namespace` | L’espace de noms de la variable [!DNL Event Hubs] vous y accédez. Un [!DNL Event Hubs] L’espace de noms fournit un conteneur d’étendue unique, dans lequel vous pouvez créer un ou plusieurs [!DNL Event Hubs]. |
 | `eventHubName` | Le nom de votre [!DNL Event Hubs] source. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion [!DNL Event Hubs] est : `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+
+Pour plus d’informations sur l’authentification SAS (Shared Access Signatures) pour [!DNL Event Hubs], lisez le [[!DNL Azure] guide sur l&#39;utilisation de SAS](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+
+>[!TAB Event Hub Azure Active Directory Auth]
+
+| Informations d’identification | Description |
+| --- | --- |
+| `tenantId` | Identifiant du tenant auprès duquel vous souhaitez demander une autorisation. Votre ID de tenant peut être formaté sous la forme d’un GUID ou d’un nom convivial. **Remarque**: l’identifiant du client est appelé &quot;ID d’annuaire&quot; dans la variable [!DNL Microsoft Azure] . |
+| `clientId` | ID d’application affecté à votre application. Vous pouvez récupérer cet ID à partir de la variable [!DNL Microsoft Entra ID] le portail sur lequel vous avez enregistré votre [!DNL Azure Active Directory]. |
+| `clientSecretValue` | Le secret client utilisé avec l’ID client pour authentifier votre application. Vous pouvez récupérer votre secret client à partir de la fonction [!DNL Microsoft Entra ID] le portail sur lequel vous avez enregistré votre [!DNL Azure Active Directory]. |
+| `namespace` | L’espace de noms de la variable [!DNL Event Hubs] vous y accédez. Un [!DNL Event Hubs] L’espace de noms fournit un conteneur d’étendue unique, dans lequel vous pouvez créer un ou plusieurs [!DNL Event Hubs]. |
+
+Pour plus d’informations sur [!DNL Azure Active Directory], lisez le [Guide Azure sur l’utilisation de Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/healthcare-apis/register-application).
+
+>[!TAB Event Hub Portée par Azure Active Directory Auth]
+
+| Informations d’identification | Description |
+| --- | --- |
+| `tenantId` | Identifiant du tenant auprès duquel vous souhaitez demander une autorisation. Votre ID de tenant peut être formaté sous la forme d’un GUID ou d’un nom convivial. **Remarque**: l’identifiant du client est appelé &quot;ID d’annuaire&quot; dans la variable [!DNL Microsoft Azure] . |
+| `clientId` | ID d’application affecté à votre application. Vous pouvez récupérer cet ID à partir de la variable [!DNL Microsoft Entra ID] le portail sur lequel vous avez enregistré votre [!DNL Azure Active Directory]. |
+| `clientSecretValue` | Le secret client utilisé avec l’ID client pour authentifier votre application. Vous pouvez récupérer votre secret client à partir de la fonction [!DNL Microsoft Entra ID] le portail sur lequel vous avez enregistré votre [!DNL Azure Active Directory]. |
+| `namespace` | L’espace de noms de la variable [!DNL Event Hubs] vous y accédez. Un [!DNL Event Hubs] L’espace de noms fournit un conteneur d’étendue unique, dans lequel vous pouvez créer un ou plusieurs [!DNL Event Hubs]. |
+| `eventHubName` | Le nom de votre [!DNL Event Hubs] source. |
 
 >[!ENDTABS]
 
@@ -121,7 +144,7 @@ curl -X POST \
 
 +++Réponse
 
-Une réponse réussie renvoie les détails de la connexion de base que vous venez de créer, y compris son identifiant unique (`id`). Cet identifiant de connexion de est requis à l’étape suivante pour créer une connexion source.
+Une réponse réussie renvoie les détails de la connexion de base que vous venez de créer, y compris son identifiant unique (`id`). Cet identifiant de connexion est requis à l’étape suivante pour créer une connexion source.
 
 ```json
 {
@@ -177,7 +200,121 @@ curl -X POST \
 
 +++Réponse
 
-Une réponse réussie renvoie les détails de la connexion de base que vous venez de créer, y compris son identifiant unique (`id`). Cet identifiant de connexion de est requis à l’étape suivante pour créer une connexion source.
+Une réponse réussie renvoie les détails de la connexion de base que vous venez de créer, y compris son identifiant unique (`id`). Cet identifiant de connexion est requis à l’étape suivante pour créer une connexion source.
+
+```json
+{
+    "id": "4cdbb15c-fb1e-46ee-8049-0f55b53378fe",
+    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+}
+```
+
++++
+
+>[!TAB Event Hub Azure Active Directory Auth]
+
+Pour créer un compte à l’aide de l’authentification Azure Active Directory, envoyez une demande de POST à la fonction `/connections` point de terminaison tout en fournissant des valeurs pour votre `tenantId`, `clientId`,`clientSecretValue`, et `namespace`.
+
++++Requête
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Azure Event Hubs connection",
+      "description": "Connector for Azure Event Hubs",
+      "auth": {
+          "specName": "Event Hub Azure Active Directory Auth",
+          "params": {
+              "tenantId": "{TENANT_ID}",
+              "clientId": "{CLIENT_ID}",
+              "clientSecretValue": "{CLIENT_SECRET_VALUE}",
+              "namespace": "{NAMESPACE}" 
+          }
+      },
+      "connectionSpec": {
+          "id": "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Propriété | Description |
+| -------- | ----------- |
+| `auth.params.tenantId` | Identifiant du tenant de votre application. **Remarque**: l’identifiant du client est appelé &quot;ID d’annuaire&quot; dans la variable [!DNL Microsoft Azure] . |
+| `auth.params.clientId` | ID client de votre organisation. |
+| `auth.params.clientSecretValue` | La valeur du secret client de votre organisation. |
+| `auth.params.namespace` | L’espace de noms de la variable [!DNL Event Hubs] vous y accédez. |
+| `connectionSpec.id` | La variable [!DNL Event Hubs] l’identifiant de spécification de connexion est : `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+
++++
+
++++Réponse
+
+Une réponse réussie renvoie les détails de la connexion de base que vous venez de créer, y compris son identifiant unique (`id`). Cet identifiant de connexion est requis à l’étape suivante pour créer une connexion source.
+
+```json
+{
+    "id": "4cdbb15c-fb1e-46ee-8049-0f55b53378fe",
+    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+}
+```
+
++++
+
+>[!TAB Event Hub Portée par Azure Active Directory Auth]
+
+Pour créer un compte à l’aide de l’authentification Azure Active Directory, envoyez une demande de POST à la fonction `/connections` point de terminaison tout en fournissant des valeurs pour votre `tenantId`, `clientId`,`clientSecretValue`, `namespace`, et `eventHubName`.
+
++++Requête
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Azure Event Hubs connection",
+      "description": "Connector for Azure Event Hubs",
+      "auth": {
+          "specName": "Event Hub Scoped Azure Active Directory Auth",
+          "params": {
+              "tenantId": "{TENANT_ID}",
+              "clientId": "{CLIENT_ID}",
+              "clientSecretValue": "{CLIENT_SECRET_VALUE}",
+              "namespace": "{NAMESPACE}",
+              "eventHubName": "{EVENT_HUB_NAME}" 
+          }
+      },
+      "connectionSpec": {
+          "id": "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Propriété | Description |
+| -------- | ----------- |
+| `auth.params.tenantId` | Identifiant du tenant de votre application. **Remarque**: l’identifiant du client est appelé &quot;ID d’annuaire&quot; dans la variable [!DNL Microsoft Azure] . |
+| `auth.params.clientId` | ID client de votre organisation. |
+| `auth.params.clientSecretValue` | La valeur du secret client de votre organisation. |
+| `auth.params.namespace` | L’espace de noms de la variable [!DNL Event Hubs] vous y accédez. |
+| `auth.params.eventHubName` | Le nom de votre [!DNL Event Hubs] source. |
+| `connectionSpec.id` | La variable [!DNL Event Hubs] l’identifiant de spécification de connexion est : `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+
++++
+
++++Réponse
+
+Une réponse réussie renvoie les détails de la connexion de base que vous venez de créer, y compris son identifiant unique (`id`). Cet identifiant de connexion est requis à l’étape suivante pour créer une connexion source.
 
 ```json
 {
@@ -240,8 +377,8 @@ curl -X POST \
 | --- | --- |
 | `name` | Nom de votre connexion source. Assurez-vous que le nom de votre connexion source est descriptif, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion source. |
 | `description` | Valeur facultative que vous pouvez fournir pour inclure plus d’informations sur votre connexion source. |
-| `baseConnectionId` | Identifiant de connexion de de votre source [!DNL Event Hubs] générée à l’étape précédente. |
-| `connectionSpec.id` | Identifiant de spécification de connexion fixe pour [!DNL Event Hubs]. Cet ID est le suivant : `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`.. |
+| `baseConnectionId` | L’identifiant de connexion de votre [!DNL Event Hubs] source générée à l’étape précédente. |
+| `connectionSpec.id` | Identifiant de spécification de connexion fixe pour [!DNL Event Hubs]. Cet identifiant est `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 | `data.format` | Format des données [!DNL Event Hubs] que vous souhaitez ingérer. Actuellement, le format de données `json` est le seul à être pris en charge. |
 | `params.eventHubName` | Le nom de votre [!DNL Event Hubs] source. |
 | `params.dataType` | Ce paramètre définit le type des données ingérées. Les types de données pris en charge sont les suivants : `raw` et `xdm`. |
