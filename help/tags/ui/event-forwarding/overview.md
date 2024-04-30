@@ -3,10 +3,10 @@ title: Présentation du transfert dʼévénements
 description: Découvrez Adobe Experience Platform, qui vous permet dʼutiliser Platform Edge Network afin dʼexécuter des tâches sans modifier votre implémentation de balises.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
 workflow-type: tm+mt
-source-wordcount: '1064'
-ht-degree: 87%
+source-wordcount: '1160'
+ht-degree: 76%
 
 ---
 
@@ -24,7 +24,7 @@ Le transfert d’événement dans Adobe Experience Platform vous permet d’en
 
 Ce document présente une vue détaillée du transfert d’événement dans Platform.
 
-![Transfert d’événement dans l’écosystème de collecte de données](../../../collection/images/home/event-forwarding.png)
+![Transfert d’événement dans l’écosystème de collecte de données.](../../../collection/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
@@ -55,7 +55,11 @@ Tandis que les balises collectent les données d’événement directement sur v
 
 Le transfert d’événement conserve sa propre banque de propriétés séparées des balises, que vous pouvez afficher dans l’interface utilisateur de l’Experience Platform ou dans l’interface utilisateur de collecte de données en sélectionnant **[!UICONTROL Transfert d’événement]** dans le volet de navigation de gauche.
 
-![Propriétés de transfert d’événement dans l’interface utilisateur de la collecte de données](../../images/ui/event-forwarding/overview/properties.png)
+>[!TIP]
+>
+>Utilisez l’ aide du produit dans le panneau de droite pour en savoir plus sur le transfert d’événement et afficher d’autres ressources disponibles.
+
+![Propriétés de transfert d’événement dans l’interface utilisateur de la collecte de données.](../../images/ui/event-forwarding/overview/properties.png)
 
 Toutes les propriétés de transfert d’événement répertorient **[!UICONTROL Edge]** comme leur plateforme. Elles ne font pas la distinction entre web et mobile, car elles traitent uniquement les données reçues de Platform Edge Network, qui peut lui-même recevoir des données d’événement des plateformes web et mobiles.
 
@@ -63,7 +67,9 @@ Toutes les propriétés de transfert d’événement répertorient **[!UICONTROL
 
 Le transfert d’événement possède son propre catalogue d’extensions compatibles, telles que l’extension [Core](../../extensions/server/core/overview.md) et l’extension [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md). Vous pouvez afficher les extensions disponibles pour les propriétés de transfert d’événement dans l’interface utilisateur en sélectionnant **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Catalogue]**.
 
-![Extensions de transfert d’événement dans l’interface utilisateur de la collecte de données](../../images/ui/event-forwarding/overview/extensions.png)
+Pour afficher d’autres ressources disponibles pour en savoir plus sur cette fonctionnalité, sélectionnez ![about](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
+
+![Extensions de transfert d’événement dans l’interface utilisateur de la collecte de données.](../../images/ui/event-forwarding/overview/extensions.png)
 
 ### Éléments de données {#data-elements}
 
@@ -77,7 +83,9 @@ Pour référencer des données à partir de Platform Edge Network, vous devez 
 
 La valeur de **[!UICONTROL Chemin]** pour l’élément de données doit suivre le modèle `arc.event.{ELEMENT}` (par exemple : `arc.event.xdm.web.webPageDetails.URL`). Ce chemin d’accès doit être spécifié correctement pour que les données soient envoyées.
 
-![Exemple d’élément de données de type chemin pour le transfert d’événement](../../images/ui/event-forwarding/overview/data-reference.png)
+Pour afficher d’autres ressources disponibles pour en savoir plus sur cette fonctionnalité, sélectionnez ![about](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
+
+![Exemple d’élément de données de type chemin pour le transfert d’événement.](../../images/ui/event-forwarding/overview/data-reference.png)
 
 ### Règles {#rules}
 
@@ -85,13 +93,17 @@ La création de règles dans les propriétés de transfert d’événement fonct
 
 En outre, un délai d’attente de 30 secondes s’applique à un seul événement, car il est traité dans toutes les règles (et donc toutes les actions) au sein d’une propriété de transfert d’événement. Cela signifie que toutes les règles et toutes les actions pour un événement unique doivent être exécutées au cours de cette période.
 
-![Règles de transfert d’événement dans l’interface utilisateur de la collecte de données](../../images/ui/event-forwarding/overview/rules.png)
+Pour afficher d’autres ressources disponibles pour en savoir plus sur cette fonctionnalité, sélectionnez ![about](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
+
+![Règles de transfert d’événement dans l’interface utilisateur de la collecte de données.](../../images/ui/event-forwarding/overview/rules.png)
 
 #### Segmentation d’éléments de données en unités lexicales {#tokenization}
 
 Dans les règles de balises, les éléments de données sont segmentés en unités lexicales avec un `%` au début et à la fin du nom de l’élément de données (par exemple : `%viewportHeight%`). Dans les règles de transfert d’événement, les éléments de données sont plutôt segmentés en unités lexicales avec `{{` au début et `}}` à la fin du nom de l’élément de données (par exemple : `{{viewportHeight}}`).
 
-![Exemple d’élément de données de type chemin pour le transfert d’événement](../../images/ui/event-forwarding/overview/tokenization.png)
+Pour afficher d’autres ressources disponibles pour en savoir plus sur cette fonctionnalité, sélectionnez ![about](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
+
+![Exemple d’élément de données de type chemin pour le transfert d’événement.](../../images/ui/event-forwarding/overview/tokenization.png)
 
 #### Séquence des actions de règle {#action-sequencing}
 

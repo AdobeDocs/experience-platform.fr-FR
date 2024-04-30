@@ -2,10 +2,10 @@
 title: Extensions
 description: Découvrez le fonctionnement des extensions de balises dans Adobe Experience Platform.
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 100%
+source-wordcount: '523'
+ht-degree: 94%
 
 ---
 
@@ -43,13 +43,13 @@ La page Extensions propose trois options d’affichage :
 
 * Installed (Installées)
 
-   Affiche toutes les extensions installées.
+  Affiche toutes les extensions installées.
 
 * Catalog (Catalogue)
 * Affiche toutes les extensions disponibles.
 * Mises à jour
 
-   Affiche les mises à jour des extensions installées.
+  Affiche les mises à jour des extensions installées.
 
 Cliquez sur **[!UICONTROL Extensions]** pour afficher toutes les extensions installées. Vous pouvez également utiliser le catalogue pour afficher la liste de toutes les extensions disponibles et les extensions pour lesquelles des mises à jour sont disponibles.
 
@@ -59,10 +59,14 @@ Pour plus dʼinformations sur les extensions développées par Adobe, voir [Réf
 
 Nombre de fonctionnalités peuvent être ajoutées aux balises. Les extensions ajoutent des fonctionnalités essentielles aux balises. Les extensions sont souvent utilisées pour créer des intégrations avec d’autres applications.
 
+>[!TIP]
+>
+>Utilisez l’ aide du produit dans le panneau de droite pour en savoir plus sur les extensions et afficher d’autres ressources disponibles.
+
 1. Ouvrez l’onglet **[!UICONTROL Extensions]** à partir de la page d’aperçu de la propriété.
 1. Sélectionnez l’extension.
 
-   ![Extension Core](../../../images/extensions.png)
+   ![Onglet Catalogue présentant les extensions principales dans l’onglet Extensions.](../../../images/extensions.png)
 
    * Si l’extension existe, sélectionnez-la dans le catalogue des extensions.
    * Placez le pointeur de la souris sur une extension de votre liste pour la configurer ou la désactiver.

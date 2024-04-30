@@ -2,10 +2,10 @@
 title: Règles
 description: Découvrez le fonctionnement des extensions de balises dans Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 77190e4acf7aad448bbfdebd8ada4dbe9a55f8e0
 workflow-type: tm+mt
-source-wordcount: '1973'
-ht-degree: 100%
+source-wordcount: '2028'
+ht-degree: 93%
 
 ---
 
@@ -51,15 +51,19 @@ Les actions sont la partie *Then* d’une règle. Elles définissent ce que vous
 
 Créez une règle en indiquant les actions qui se produisent si une condition est remplie.
 
+>[!TIP]
+>
+>Pour afficher d’autres ressources disponibles pour en savoir plus sur cette fonctionnalité, sélectionnez ![about](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
+
 1. Ouvrez lʼonglet [!UICONTROL Règles], puis sélectionnez **[!UICONTROL Créer une règle]**.
 
-   ![](../../images/launch-rule-builder.jpg)
+   ![Onglet Règles , surlignant le champ du nom.](../../images/launch-rule-builder.png)
 
 1. Attribuez un nom à la règle.
 1. Cliquez sur lʼicône **[!UICONTROL Ajouter]** sous Événements.
 1. Sélectionnez votre extension et l’un des types d’événements disponibles pour cette extension, puis configurez les paramètres de l’événement.
 
-   ![](../../images/rule-event-config.png)
+   ![Page de configuration des événements de règles.](../../images/rule-event-config.png)
 
    Les types d’événement disponibles dépendent de l’extension sélectionnée. Les paramètres de l’événement diffèrent en fonction du type d’événement. Certains événements ne comportent aucun paramètre à configurer.
 
@@ -85,11 +89,11 @@ Créez une règle en indiquant les actions qui se produisent si une condition es
    * Les règles qui ont le même ordre s’exécutent sans ordre particulier.
    * Les règles sont déclenchées dans l’ordre, mais pas nécessairement dans le même ordre. Si Règle A et Règle B partagent un événement et que vous attribuez un ordre pour que cette Règle A vienne en premier lieu, alors si Règle A fait quelque chose de manière asynchrone, il n’est pas garanti que Règle A se termine avant que Règle B ne commence.
 
-      Si vous souhaitez qu’elle s’exécute plus tard, attribuez-lui un nombre supérieur à 50. Pour plus d’informations sur l’ordre, reportez-vous à [Ordre des règles](rules.md#rule-ordering).
+     Si vous souhaitez qu’elle s’exécute plus tard, attribuez-lui un nombre supérieur à 50. Pour plus d’informations sur l’ordre, reportez-vous à [Ordre des règles](rules.md#rule-ordering).
 
-1. Cliquez sur lʼicône **[!UICONTROL Ajouter]** sous Conditions, puis sélectionnez un type de logique, une extension, un type de condition et configurez les paramètres de votre condition. Sélectionnez ensuite **[!UICONTROL Conserver les modifications]**.
+1. Sélection des conditions **[!UICONTROL Ajouter]** puis sélectionnez un type de logique, une extension, un type de condition et configurez les paramètres de votre condition. Sélectionnez ensuite **[!UICONTROL Conserver les modifications]**.
 
-   ![](../../images/condition-settings.png)
+   ![Page de configuration des conditions des règles.](../../images/condition-settings.png)
 
    Les types de conditions disponibles dépendent de l’extension sélectionnée. Les paramètres de conditions diffèrent en fonction du type de condition.
 
@@ -102,9 +106,9 @@ Créez une règle en indiquant les actions qui se produisent si une condition es
 
    Vous pouvez ajouter autant de conditions que vous le souhaitez. Plusieurs conditions dans la même règle sont jointes avec AND.
 
-1. Cliquez sur lʼicône **[!UICONTROL Ajouter]** sous Actions, puis sélectionnez votre extension et lʼun des types dʼactions disponibles pour cette extension, configurez les paramètres de lʼaction, puis cliquez sur **[!UICONTROL Conserver les modifications]**.
+1. Sélection des actions **[!UICONTROL Ajouter]** puis sélectionnez votre extension et l’un des types d’actions disponibles pour cette extension, configurez les paramètres de l’action, puis sélectionnez **[!UICONTROL Conserver les modifications]**.
 
-   ![](../../images/action-settings.png)
+   ![Page de configuration des actions de règles.](../../images/action-settings.png)
 
    Les types d’action disponibles dépendent de l’extension que vous avez sélectionnée. Les paramètres d’action diffèrent selon le type d’action.
 
@@ -177,7 +181,7 @@ Si ce paramètre est activé lorsqu’un événement est déclenché au moment d
 
 Si une condition est évaluée comme false ou atteint son délai d’expiration défini, les conditions et actions suivantes de cette règle sont supprimées de la file d’attente.
 
-Si une action échoue ou atteint son délai d’expiration défini, les actions suivantes de cette règle sont supprimées de la file d’attente. 
+Si une action échoue ou atteint son délai d’expiration défini, les actions suivantes de cette règle sont supprimées de la file d’attente.
 
 ### Désactivé
 
