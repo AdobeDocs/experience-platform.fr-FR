@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2024
 description: Les notes de mise à jour de mars 2024 pour Adobe Experience Platform.
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
-source-git-commit: d698bf0b8b0dbdb85909008bb3b60efb0575accc
+source-git-commit: 708bb791ad85b6ee8f3671ffc574e4f27fdddd0a
 workflow-type: tm+mt
 source-wordcount: '1191'
 ht-degree: 36%
@@ -39,20 +39,6 @@ Le Catalog Service est le système d’enregistrement pour l’emplacement et la
 
 Pour plus d’informations sur Catalog Service, consultez la [vue d’ensemble de Catalog Service](../../catalog/home.md).
 
-## Collecte de données {#data-collection}
-
-Adobe Experience Platform fournit une suite de technologies qui vous permettent de collecter des données d’expérience client côté client. Vous pouvez ensuite les envoyer à Adobe Experience Platform Edge Network pour les enrichir, les transformer et les distribuer vers des destinations Adobe ou autres qu’Adobe.
-
-**Nouvelles fonctionnalités**
-
-| Type | Fonctionnalité | Description |
-| --- | --- | --- |
-| Extensions | [!DNL Merkury] Extension de balise | La variable [[!DNL Merkury] extension de balise](https://exchange.adobe.com/apps/ec/600027/merkury-tag) fournit des taux de correspondance de pointe pour les visiteurs anonymes de site web à une [!DNL Merkury] ID. Les marques peuvent tirer parti de la puissance de [!DNL Merkury] marquer et Adobe pour offrir des expériences de site web personnalisées en temps réel. En outre, la variable [!DNL Merkury] La balise permet la croissance de données numériques propriétaires avec des profils clients en ligne et hors ligne connectés. |
-
-{style="table-layout:auto"}
-
-Pour en savoir plus sur la collecte de données, consultez la [vue d’ensemble des collectes de données](../../tags/home.md).
-
 ## Préparation de données {#data-prep}
 
 La préparation des données permet aux personnes travaillant dans l’ingénierie de données de mapper, de transformer et de valider les données vers et à partir du modèle de données d’expérience (XDM).
@@ -66,6 +52,20 @@ La préparation des données permet aux personnes travaillant dans l’ingénier
 {style="table-layout:auto"}
 
 Pour plus d’informations sur la préparation des données, consultez la [présentation de la préparation des données](../../data-prep/home.md).
+
+## Collecte de données {#data-collection}
+
+Adobe Experience Platform fournit une suite de technologies qui vous permettent de collecter des données d’expérience client côté client. Vous pouvez ensuite les envoyer à Adobe Experience Platform Edge Network pour les enrichir, les transformer et les distribuer vers des destinations Adobe ou autres qu’Adobe.
+
+**Nouvelles fonctionnalités**
+
+| Type | Fonctionnalité | Description |
+| --- | --- | --- |
+| Extensions | [!DNL Merkury] Extension de balise | La variable [[!DNL Merkury] extension de balise](https://exchange.adobe.com/apps/ec/600027/merkury-tag) fournit des taux de correspondance de pointe pour les visiteurs anonymes de site web à une [!DNL Merkury] ID. Les marques peuvent tirer parti de la puissance de [!DNL Merkury] marquer et Adobe pour offrir des expériences de site web personnalisées en temps réel. En outre, la variable [!DNL Merkury] La balise permet la croissance de données numériques propriétaires avec des profils clients en ligne et hors ligne connectés. |
+
+{style="table-layout:auto"}
+
+Pour en savoir plus sur la collecte de données, consultez la [vue d’ensemble des collectes de données](../../tags/home.md).
 
 ## Destinations {#destinations}
 

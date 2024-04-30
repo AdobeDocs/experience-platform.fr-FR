@@ -2,16 +2,16 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour de mars 2024 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d698bf0b8b0dbdb85909008bb3b60efb0575accc
+source-git-commit: 6ad7d55ca0a544879db9738c0a4ab914fdc363bd
 workflow-type: tm+mt
-source-wordcount: '1189'
-ht-degree: 36%
+source-wordcount: '1726'
+ht-degree: 26%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de publication : mercredi 19 mars 2024**
+**Date de publication : mercredi 30 avril 2024**
 
 >[!TIP]
 >
@@ -19,117 +19,168 @@ ht-degree: 36%
 
 Mises à jour des fonctionnalités existantes dans Experience Platform :
 
-- [Catalog Service](#catalog-service)
+- [Tableaux de bord](#dashboards)
 - [Collecte de données](#data-collection)
-- [Préparation des données](#data-prep)
 - [Destinations](#destinations)
-- [Modèle de données d’expérience (XDM)](#xdm)
+- [Service d’identités](#identity-service)
+- [Surveillance](#monitoring)
+- [Query Service](#query-service)
+- [Sandbox](#sandboxes)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
-## Catalog Service {#catalog-service}
+## Tableaux de bord {#dashboards}
 
-Le Catalog Service est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous la forme de fichiers et de répertoires, le catalogue contient les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
-
-| Fonctionnalité | Description |
-| --- | --- |
-| Actions supplémentaires | Pour rendre les opérations plus flexibles et vous aider à gérer vos données, vous pouvez désormais utiliser la fonction &quot;Autres actions&quot; de la vue Détails pour effectuer des tâches supplémentaires sur un jeu de données. Vous pouvez supprimer le jeu de données ou l’activer pour l’utiliser avec Real-time Customer Profile à partir de la page de détails d’un jeu de données sélectionné.<br>**Remarque :** si vous activez un jeu de données pour l’ingestion de Profile, le schéma du jeu de données doit être compatible avec Real-time Customer Profile.<br>![L’espace de travail des jeux de données avec le [!UICONTROL .. Plus] menu déroulant en surbrillance.](../2024/assets/march/more-actions.png "Espace de travail des jeux de données avec le menu déroulant Plus en surbrillance."){width="100" zoomable="yes"}.<br>Lisez la section [guide d’utilisation des jeux de données](../../catalog/datasets/user-guide.md) documentation pour plus d’informations. |
-
-{style="table-layout:auto"}
-
-Pour plus d’informations sur Catalog Service, consultez la [vue d’ensemble de Catalog Service](../../catalog/home.md).
-
-## Préparation de données {#data-prep}
-
-La préparation des données permet aux personnes travaillant dans l’ingénierie de données de mapper, de transformer et de valider les données vers et à partir du modèle de données d’expérience (XDM).
+Adobe Experience Platform propose de nombreux tableaux de bord qui vous permettent dʼafficher des informations importantes concernant les données de votre entreprise. Celles-ci sont présentées telles quʼelles sont capturées lors dʼaperçus quotidiens.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Nouvelles fonctions de mappeur pour Adobe Analytics | Vous pouvez désormais utiliser les fonctions suivantes pour extraire des données d’événement d’Adobe Analytics : <ul><li>`aa_get_event_id`</li><li>`aa_get_event_value`</li><li>`aa_get_product_categories`</li><li>`aa_get_product_names`</li><li>`aa_get_product_quantities`</li><li>`aa_get_product_prices`</li><li>`aa_get_product_event_values`</li><li>`aa_get_product_evars`</li></ul> Pour plus d’informations sur ces fonctions, consultez la section [Guide des fonctions de préparation de données](../../data-prep/functions.md#analytics-functions) |
+| Real-time Customer Data Platform B2B insights | Explorez des informations sur les données B2B préconfigurées de Real-Time CDP sur les comptes et les opportunités afin de vous aider à comprendre vos données et à prendre des décisions professionnelles. Vous pouvez également créer vos propres insights à l’aide du modèle de données B2B de Real-Time CDP pour visualiser et explorer vos données et enregistrer vos visualisations personnalisées dans votre tableau de bord. |
 
-{style="table-layout:auto"}
+{style=“table-layout:auto”}
 
-Pour plus d’informations sur la préparation des données, consultez la [présentation de la préparation des données](../../data-prep/home.md).
+Pour plus dʼinformations sur les tableaux de bord, notamment sur la manière dʼoctroyer des autorisations dʼaccès et de créer des widgets personnalisés, commencez par lire la [Présentation des tableaux de bord](../../dashboards/home.md).
 
 ## Collecte de données {#data-collection}
 
-Adobe Experience Platform fournit une suite de technologies qui vous permettent de collecter des données d’expérience client côté client. Vous pouvez ensuite les envoyer à Adobe Experience Platform Edge Network pour les enrichir, les transformer et les distribuer vers des destinations Adobe ou autres qu’Adobe.
+Adobe Experience Platform fournit une suite de technologies qui vous permet de collecter des données d’expérience client côté client et de les envoyer à l’Edge Network Experience Platform où elles peuvent être enrichies, transformées et distribuées vers des destinations Adobe ou non Adobe.
 
-**Nouvelles fonctionnalités**
+**Fonctionnalités nouvelles ou mises à jour**
 
 | Type | Fonctionnalité | Description |
 | --- | --- | --- |
-| Extensions | [!DNL Merkury] Extension de balise | La variable [[!DNL Merkury] extension de balise](https://exchange.adobe.com/apps/ec/600027/merkury-tag) fournit des taux de correspondance de pointe pour les visiteurs anonymes de site web à une [!DNL Merkury] ID. Les marques peuvent tirer parti de la puissance de [!DNL Merkury] marquer et Adobe pour offrir des expériences de site web personnalisées en temps réel. En outre, la variable [!DNL Merkury] La balise permet la croissance de données numériques propriétaires avec des profils clients en ligne et hors ligne connectés. |
+| Insights | [!DNL Acxiom] Informations sur les visiteurs anonymes | Découvrez d’où viennent les visiteurs de votre site web [!DNL Acxiom's] Informations sur les visiteurs. En utilisant la technologie de recherche de géolocalisation des adresses IP, nous repérons l’emplacement des navigateurs anonymes. Une fois identifié, une recherche rapide dans notre base de données organisée génère des informations supplémentaires qui sont renvoyées au navigateur. Pour les créateurs de contenu, cela signifie une occasion en or d’adapter leur contenu à ces points de données afin d’offrir une expérience plus personnalisée et attrayante aux visiteurs, même s’ils ont commencé comme des inconnus. |
+| Trains de données | [Détection des robots Edge Network](../../datastreams/bot-detection.md) | Le trafic provenant d’entités non humaines, telles que les programmes automatisés, les web-scrapers, les araignées, les scanneurs à scripts, peut rendre plus difficile l’identification des événements provenant de visiteurs humains. Ce type de trafic peut avoir une incidence négative sur les mesures commerciales importantes, ce qui entraîne des rapports de trafic incorrects. <br>La détection des robots vous permet d’identifier les événements générés par la variable [SDK Web](../../web-sdk/home.md), [SDK Mobile](https://developer.adobe.com/client-sdks/home/) et [[!DNL Server API]](../../server-api/overview.md) comme étant généré par des araignées et des robots connus. En configurant la détection des robots pour vos flux de données, vous pouvez identifier des adresses IP, des plages d’adresses IP et des en-têtes de requête spécifiques que vous souhaitez classer comme événements de robots. <br> L’identification du trafic de robots peut vous fournir une mesure plus précise de l’activité des utilisateurs sur votre site ou application mobile. |
+| SDK Mobile | Version majeure | De nouvelles versions majeures du SDK Mobile ont été publiées pour les plateformes suivantes : iOS Mobile Core 5.x et les extensions iOS compatibles, Android Mobile Core 3.x et les extensions Android compatibles, React Native Core 6.x et les extensions React Native compatibles, FbattCore 4.x et les extensions FSaisir compatibles. Ces versions contiennent plusieurs nouvelles fonctionnalités et améliorations, notamment la prise en charge du SDK Android pour Jetpack Composer, la prise en charge d’expériences basées sur le code Adobe Journey Optimizer et la disponibilité générale de l’extension de messagerie Adobe Journey Optimizer pour FSaisir. Pour obtenir des notes de mise à jour plus détaillées, voir [Notes de mise à jour du SDK Mobile](https://developer.adobe.com/client-sdks/home/release-notes/). |
+| SDK Mobile | Confidentialité    | En raison de la mise à jour de la stratégie Apple, à compter du 1er mai 2024, les développeurs doivent mettre en oeuvre de nouvelles fonctionnalités de confidentialité pour se soumettre à App Store. Tous les clients Adobe qui utilisent le SDK Mobile devront effectuer une mise à niveau vers la version 5.x du SDK s’ils souhaitent recevoir l’approbation d’App Store après le 1er mai. |
+| SDK Roku | SDK Roku | La première version majeure du SDK Roku a été publiée avec la prise en charge des médias en flux continu pour l’Edge Network Platform. |
+| Balises et transfert d’événement | Conseils intégrés aux produits | Experience Platform [Balises](../../tags/home.md) et [Transfert d’événement](../../tags/ui/event-forwarding/overview.md) proposez une nouvelle gamme d’expériences qui peuvent vous aider à démarrer rapidement et à bénéficier rapidement d’un meilleur temps. Ces expériences incluent de nouveaux écrans d’intégration, des tutoriels intégrés au produit et des info-bulles. <br>![Transfert d’événement avec la recommandation intégrée au produit mise en évidence.](../2024/assets/april/event-forwarding.png "L’éditeur de schémas avec les champs de type de valeur Type et Mappage mis en surbrillance."){width="100" zoomable="yes"}<br> |
+| SDK Web | adoption simplifiée du SDK Web pour les clients Audience Manager | Plusieurs mises à jour du SDK Web simplifient désormais l’adoption du SDK Web sans utiliser le modèle de données d’expérience (XDM) pour les solutions Experience Cloud, telles que Audience Manager, Analytics et Target. Pour en savoir plus sur l’adoption du SDK Web d’Audience Manager, consultez les guides suivants : <ul><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/dil-extension-to-web-sdk">Mettez à jour votre bibliothèque de collecte de données pour l’Audience Manager de l’extension de balise d’Audience Manager vers l’extension de balise du SDK Web.</li><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/appmeasurement-to-web-sdk">Mettez à jour votre bibliothèque de collecte de données pour Audience Manager de la bibliothèque JavaScript AppMeasurement vers la bibliothèque JavaScript SDK Web.</li></ul> |
 
 {style="table-layout:auto"}
 
-Pour en savoir plus sur la collecte de données, consultez la [vue d’ensemble des collectes de données](../../tags/home.md).
+<!--| Web SDK | [Streaming Media Collection support in Web SDK](../../web-sdk/commands/configure/streamingmedia.md) | You can now use Experience Platform Web SDK to collect data related to media sessions on your website. The collected data can include information about media playbacks, pauses, completions, and other related events. Once collected, you can send this data to Adobe Experience Platform and/or Adobe Analytics, to generate reports. This feature provides a comprehensive solution for tracking and understanding media consumption behavior on your website. <br>See the [Web SDK](../../web-sdk/commands/configure/streamingmedia.md) documentation to learn how to configure the `streamingMedia` component. <br>See the guide on [migrating your Analytics for Streaming Media implementation from Media JS to Web SDK](https://experienceleague.adobe.com/en/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/edge-web-sdk) for more details.|-->
+
+Pour en savoir plus sur les collections de données, lisez le [présentation de la collecte de données](../../collection/home.md).
 
 ## Destinations {#destinations}
 
 Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
-**Destinations nouvelles et mises à jour** {#new-updated-destinations}
+**Fonctionnalités nouvelles ou mises à jour** {#destinations-new-updated-functionality}
 
-| Destination | Type | Description |
-| ----------- | --------- | ----------- |
-| [(Version bêta) Connexion d’amélioration des données Acrobat](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | Nouveau | Utilisez ce connecteur pour activer les profils propriétaires de Real-Time CDP vers Acxiom afin d’enrichir les données et de les utiliser sur les canaux marketing. Vous pouvez ensuite utiliser la source Acxiom pour importer les profils contenant des données améliorées et travailler avec eux dans Real-Time CDP. |
-| [(Version Bêta) Connexion de suppression de prospects Acxiom](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Nouveau | Exportez vos audiences propriétaires vers la destination Acxiom pour permettre à Acxiom de supprimer les clients connus ou convertis. Ensuite, utilisez le [Importation de données de prospection dans Acrobat](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) connecteur source pour ingérer et activer des listes de prospects à partir d’Acxiom, vos clients connus ou convertis étant supprimés. |
-| [Connexion Amazon Ads](../../destinations/catalog/advertising/amazon-ads.md) | Mise à jour  | Lors de l’exportation de données vers la destination Amazon Ads, vous pouvez désormais acheminer les données vers la DSP Amazon ou le Marketing Cloud Amazon (nouveau). |
-| [Connexion à l’intégration LiveRamp](../../destinations/catalog/advertising/liveramp-onboarding.md) | Mise à jour  | La destination d’intégration LiveRamp prend désormais en charge les diffusions vers l’Europe et l’Australie [!DNL LiveRamp] [!DNL SFTP] instances. La taille maximale du fichier exporté a également été augmentée à 10 millions de lignes (contre 5 millions auparavant). |
+| Fonction | Description |
+| ----------- | ----------- |
+| `isRequired` paramètre désormais disponible pour les champs de données client imbriqués dans Destination SDK | Lors de la configuration d’une destination dans Destination SDK, vous pouvez désormais [définir les champs de données client imbriqués selon les besoins ;](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields). Ainsi, les utilisateurs configurant votre destination ne peuvent pas poursuivre leur flux d’activation tant qu’ils n’ont pas sélectionné une valeur pour ce champ. |
 
 {style="table-layout:auto"}
 
-<!--
+Pour obtenir plus d’informations générales sur les destinations, consultez la [vue d’ensemble des destinations](../../destinations/home.md).
 
-**New or updated functionality** {#destinations-new-updated-functionality}
+<!--| [!BADGE Beta]{type=Informative} Remove multiple audiences and datasets from activation flows | You can now select and remove multiple audiences and datasets from destination activation flows. See the [destination details](../../destinations/ui/destination-details-page.md#bulk-remove) and [dataset export](../../destinations/ui/export-datasets.md) documentation for more details. |-->
 
--->
+## Service d’identités {#identity-service}
 
-Pour des informations plus générales sur les destinations, consultez la [présentation des destinations](../../destinations/home.md).
+Utilisez Adobe Experience Platform Identity Service pour créer une vue d’ensemble complète de vos clients et de leurs comportements en rapprochant des identités entre les appareils et les systèmes, ce qui vous permet de fournir des expériences numériques personnelles et percutantes en temps réel.
 
-## Modèle de données d’expérience (XDM) {#xdm}
-
-XDM est une spécification Open Source qui fournit des structures et des définitions communes (schémas) pour les données introduites dans Adobe Experience Platform. En adhérant aux normes XDM, toutes les données d’expérience client peuvent être intégrées dans une représentation commune afin de fournir des informations plus rapidement et de manière plus intégrée. Vous pouvez obtenir des informations précieuses à partir des actions des clients, définir des types de clients par le biais de segments et utiliser les attributs du client à des fins de personnalisation.
-
-**Nouvelles fonctionnalités**
+**Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Prise en charge du type de données de carte de l’interface utilisateur Experience Platform | Personnalisez davantage votre structure de données de modèle de données d’expérience (XDM) en définissant des champs de mappage dans l’interface utilisateur de Platform. Vous pouvez désormais créer des champs de mappage dans l’éditeur de schémas pour modéliser des structures de données flexibles ou stocker efficacement des paires clé-valeur. Sélectionnez &quot;Mapper&quot; dans la liste déroulante Type lors de la définition d’un nouveau champ pour configurer des sous-champs et les affecter à des groupes de champs. Les types de valeurs de mappage pris en charge sont string et integer.<br>![L’éditeur de schémas avec les champs de type de valeur Type et Mappage mis en surbrillance.](../2024/assets/march/maps.png "L’éditeur de schémas avec les champs de type de valeur Type et Mappage mis en surbrillance."){width="100" zoomable="yes"}<br> Pour apprendre à [Définition des champs de mappage dans l’interface utilisateur](../../xdm/ui/fields/map.md), voir le guide de l’interface utilisateur. |
+| Obsolescence des `/orgs/{ORG}/` Points de terminaison dans l’API | Les points de terminaison suivants dans la variable [[!DNL Identity Service] API](https://developer.adobe.com/experience-platform-apis/references/identity-service/) ont été abandonnés :<ul><li>`https://platform.adobe.io/data/core/idnamespace/orgs/{ORG}/identities`</li><li>`https://platform.adobe.io/data/core/idnamespace/orgs/{ORG}/identities/{ID}`</li></ul> Vous pouvez utiliser la variable `/idnamespace/identities` et la variable `/idnamespace/identities/{ID}` points de fin pour accomplir les mêmes tâches et récupérer tous les espaces de noms d’une organisation ou un espace de noms spécifique d’une organisation. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur XDM dans Platform, consultez la [vue d’ensemble du système XDM](../../xdm/home.md).
+Pour plus d’informations sur le service d’identités, consultez la [présentation du service d’identités](../../identity-service/home.md).
+
+## Surveillance {#monitoring}
+
+Utilisez le tableau de bord de surveillance dans l’interface utilisateur de l’Experience Platform pour surveiller le parcours de vos données à partir de sources, d’Identity Service, de Real-Time Customer Profile, d’audiences et de destinations.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Surveillance de l’extension du tableau de bord | Vous pouvez désormais utiliser le tableau de bord de surveillance pour différents types de données en fonction de votre cas d’utilisation professionnel. Utilisez le tableau de bord de surveillance pour surveiller les activités de type de données de personnes, de comptes et de prospects dans les sources, les audiences et les destinations. |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations, consultez le guide sur [utilisation du tableau de bord de surveillance](../../dataflows/ui/monitor.md).
+
+## Query Service {#query-service}
+
+Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou pour l’ingestion dans le profil client en temps réel.
+
+**Fonctionnalités mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Quarantaine de requêtes | isoler automatiquement les exécutions de requête ayant échoué afin d’éviter des perturbations et de maintenir des performances homogènes. |
+| Annuler la requête | Contrôlez l’exécution des requêtes et améliorez votre productivité en annulant les requêtes longues. |
+| Alertes de requête planifiées | Tenez compte des notifications proactives tout en planifiant les requêtes, ce qui vous permet de garantir une gestion efficace et opportune des tâches. Vous pouvez vous abonner aux alertes lors de la création d’une requête ou à l’aide des actions intégrées pour les requêtes planifiées existantes. |
+| Amélioration de la navigation des requêtes planifiées | Naviguez facilement entre les modèles de requête et les exécutions planifiées pour accroître la productivité. |
+| Sortie de requête étendue | Accédez à jusqu’à 500 lignes de résultats de requête dans la console pour une analyse plus approfondie de vos données. |
+| Jeu de soleil de l’ancien Query Editor | Depuis le 30 avril 2024, l’éditeur de requêtes amélioré est devenu l’éditeur par défaut pour tous les utilisateurs. L’ancien éditeur sera abandonné les 30 et 30 mai 2024 et ne sera plus disponible. |
+
+{style=“table-layout:auto”}
+
+Pour plus d’informations sur Query Service, consultez la [vue d’ensemble de Query Service](../../query-service/home.md).
+
+## Sandbox {#sandboxes}
+
+Adobe Experience Platform est conçu pour enrichir les applications d’expérience digitale à l’échelle mondiale. Les entreprises exécutent souvent plusieurs applications d’expérience digitale en parallèle et doivent prendre en charge le développement, les tests et le déploiement de ces applications tout en assurant la conformité opérationnelle. Pour répondre à ce besoin, Experience Platform fournit des sandbox qui divisent une instance de Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| [Outil Sandbox](../../sandboxes/ui/sandbox-tooling.md) | Utilisation des outils d’environnement de test pour [export](../../sandboxes/ui/sandbox-tooling.md#export-entire-sandbox) tous les types d’objets pris en charge dans un package sandbox complet, puis [import](../../sandboxes/ui/sandbox-tooling.md#import-entire-sandbox) le module dans différents environnements de test pour répliquer les configurations d’objet. |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations sur les environnements de test, lisez la section [Présentation des environnements de test](../../sandboxes/home.md).
 
 ## Segmentation Service {#segmentation}
 
 [!DNL Segmentation Service] permet de segmenter en audiences les données stockées dans [!DNL Experience Platform] qui se rapportent aux personnes (tels que les clientes et clients, les prospects, les utilisateurs et utilisatrices ou les organisations). Vous pouvez créer des audiences par le biais de définitions de segment ou d’autres sources à partir de vos données [!DNL Real-Time Customer Profile]. Ces audiences sont configurées et conservées de manière centralisée sur [!DNL Platform] et sont facilement accessibles à partir de n’importe quelle solution Adobe.
 
-**Nouvelle fonctionnalité**
+**Fonctionnalité mise à jour**
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Actions en bloc | L’inventaire des audiences prend désormais en charge les actions en bloc. Grâce aux actions en bloc, vous pouvez sélectionner rapidement plusieurs audiences pour les déplacer vers un dossier, appliquer des balises, appliquer des étiquettes d’accès ou supprimer. <br> ![Actions en bloc dans l’espace de travail de l’interface utilisateur Audiences.](../2024/assets/march/bulk-actions.png "Actions en bloc dans l’espace de travail de l’interface utilisateur Audiences."){width="100" zoomable="yes"} <br>Pour plus d’informations sur cette fonctionnalité, consultez la section [Guide de l’interface utilisateur de Segmentation Service](../../segmentation/ui/overview.md#bulk-actions). |
+| États du cycle de vie de l’audience | Les états du cycle de vie de l’audience ont été rationalisés afin de simplifier la gestion du cycle de vie. Pour en savoir plus sur ces états de cycle de vie, consultez la section [FAQ sur Segmentation Service](../../segmentation/faq.md#lifecycle-states). |
 
 {style="table-layout:auto"}
 
-Pour en savoir plus sur Segmentation Service, consultez la section [Présentation de Segmentation Service](../../segmentation/home.md).
+Pour plus d’informations sur [!DNL Segmentation Service], consultez la [présentation de la segmentation](../../segmentation/home.md).
 
 ## Sources {#sources}
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
-**Nouvelles sources et mises à jour**
+Utilisez les sources dans Experience Platform pour ingérer des données à partir d’une application Adobe ou d’une source de données tierce.
 
-| Fonctionnalité | Type | Description |
-| --- | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Acxiom Data Ingestion] | Nouveau | Utilisez la variable [[!DNL Acxiom Data Ingestion] source](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md) à ingérer [!DNL Acxiom] des données dans Real-time Customer Data Platform et enrichissez les profils propriétaires. Vous pouvez ensuite utiliser la variable [!DNL Acxiom]profils propriétaires enrichis pour améliorer les audiences et les activer sur les canaux marketing. <br> ![La source d’ingestion de données Acxiom.](../2024/assets/march/acxiom-data-ingestion.png "Nouvelle source d’ingestion de données Acxiom."){width="100" zoomable="yes"} <br> Lisez la section [[!DNL Acxiom Data Ingestion] aperçu](../../sources/connectors/data-partners/acxiom-data-ingestion.md) pour plus d’informations sur la prise en main. |
-| [!BADGE Beta]{type=Informative} [!DNL Stripe] | Nouveau | Utilisez la variable [[!DNL Stripe] source](../../sources/connectors/payments/stripe.md) pour ingérer dans Experience Platform les données capturées pendant le flux d’achat par vos clients. Une fois ingérées, vous pouvez utiliser ces données pour créer des offres personnalisées et déverrouiller des informations commerciales plus riches. <br> ![Source du Stripe.](../2024/assets/march/stripe.png "Nouvelle source du Stripe."){width="100" zoomable="yes"} <br> Lisez la section [[!DNL Stripe] aperçu](../../sources/connectors/payments/stripe.md) pour plus d’informations sur la prise en main. |
-| Prise en charge de l’interface utilisateur pour [!DNL Snowflake Streaming] | Nouveau | Vous pouvez désormais utiliser la variable [[!DNL Snowflake Streaming] source](../../sources/tutorials/ui/create/databases/snowflake-streaming.md) dans l’interface utilisateur de l’Experience Platform, pour diffuser des données depuis votre [!DNL Snowflake] base de données. <br> ![Source de diffusion en continu du Snowflake.](../2024/assets/march/snowflake-streaming.png "Nouvelle source de diffusion en continu des Snowflake."){width="100" zoomable="yes"} <br> Lisez la section [[!DNL Snowflake Streaming] aperçu](../../sources/connectors/databases/snowflake-streaming.md) pour plus d’informations sur la prise en main. |
+**Nouvelles sources**
+
+| Nouvelles sources | Description |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} [!DNL PathFactory] | Utilisez la variable [[!DNL PathFactory] source](../../sources/tutorials/ui/create/marketing-automation/pathfactory.md) pour intégrer les données sur les visiteurs, les sessions et les pages vues de [!DNL PathFactory] à Experience Platform. Lisez la section [[!DNL PathFactory] aperçu](../../sources/connectors/marketing-automation/pathfactory.md) pour plus d’informations sur la prise en main. |
+| [!DNL Teradata Vantage] | Utilisez la variable [[!DNL Teradata Vantage] source](../../sources/tutorials/ui/create/databases/teradata-vantage.md) pour ingérer des données à partir d’environnements multicloud hybrides vers Experience Platform. Lisez la section [[!DNL Teradata Vantage] aperçu](../../sources/connectors/databases/teradata-vantage.md) pour plus d’informations sur la prise en main. |
 
 {style="table-layout:auto"}
+
+**Nouvelles fonctionnalités et mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Mises à jour des adresses IP pour les listes autorisées dans VA7 | Les adresses IP suivantes ont été ajoutées à la liste des adresses IP à ajouter à votre liste autorisée pour VA7 (Amérique du Nord) : <ul><li>`20.98.198.224/29`</li><li>`20.119.28.57/32`</li><li>`20.232.89.104/29`</li><li>`20.98.195.172/32`</li><li>`172.210.218.144/28`</li></ul> Pour obtenir une liste complète des adresses IP à ajouter à votre liste autorisée, lisez le [LISTE AUTORISÉE d’adresses IP](../../sources/ip-address-allow-list.md). |
+| Prise en charge de nouveaux types d’authentification avec le [!DNL Azure Event Hubs] source | Vous pouvez désormais connecter votre [!DNL Event Hubs] source à Experience Platform à l’aide de [!DNL Azure Active Directory Authentication] ou [!DNL Scoped Azure Active Directory Authentication]. Lisez le guide sur [connexion [!DNL Event Hubs] à Experience Platform](../../sources/tutorials/ui/create/cloud-storage/eventhub.md) pour plus d’informations. |
+| Mises à jour de [!DNL Data Landing Zone] récupération d’informations d’identification | Vous pouvez désormais utiliser le rail droit dans l’espace de travail des sources pour récupérer votre [!DNL Data Landing Zone] informations d’identification. Vous pouvez également désormais utiliser le rail de droite pour actualiser vos informations d’identification. Lisez la section [[!DNL Data Landing Zone] Guide de l’interface utilisateur](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md) pour plus d’informations. |
+
+{style="table-layout:auto"}
+
+<!--| Enhanced filtering and navigation in the sources UI workspace | Use the enhanced filtering, search, and inline action tools in the sources UI workspace to streamline your workflow. <ul><li>Use filtering and search capabilities to navigate your way through sources accounts and dataflows in your organization.</li><li>Use inline actions to modify configuration settings applied to your dataflows and improve organizational workflows. You can use inline actions to apply tags, set up alerts, or create ingestion jobs on demand.</li></ul> For more information, read the guide on [filtering sources objects in the UI](../../sources/tutorials/ui/filter.md).|-->
 
 Pour plus d’informations sur les sources, consultez la [présentation des sources](../../sources/home.md).
