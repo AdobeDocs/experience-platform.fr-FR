@@ -1,9 +1,10 @@
 ---
 title: Informations sur les audiences
 description: Découvrez le code SQL qui alimente vos insights d’audience et utilisez ces requêtes pour générer des insights personnalisés afin d’explorer plus en détail les données d’audience de Adobe Experience Platform.
-source-git-commit: ee9ef2cf777c72fbd19cfccd80a37ea66591216d
+exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
+source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1124'
 ht-degree: 1%
 
 ---
@@ -14,8 +15,7 @@ Les informations dérivées de l’analyse de votre modèle de données rendent 
 
 Comprenez vos insights d’audience en accédant au code SQL qui les alimente, puis générez vos propres informations afin d’explorer plus en détail les identités et les profils qui constituent vos audiences. Transformez vos données brutes en nouvelles informations exploitables en utilisant le modèle de données Real-Time CDP SQL existant comme source d’inspiration pour créer des requêtes en fonction de vos besoins professionnels uniques.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+Voir [Afficher la documentation SQL](../view-sql.md) pour plus d’informations sur la manière d’adapter le langage SQL de vos insights directement via l’interface utilisateur de PLatform.
 
 Vous pouvez utiliser les informations suivantes dans le cadre de la [Tableau de bord Audiences](../guides/audiences.md) ou personnalisé [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md). Voir [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou [créer et modifier de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md#create-widget).
 
@@ -583,7 +583,6 @@ Voir [Documentation sur le widget des activations planifiées](../guides/audienc
 
 En lisant ce document, vous comprenez désormais le langage SQL qui génère des informations de tableau de bord et les questions courantes que cette analyse résout. Vous pouvez désormais modifier et itérer sur le SQL pour générer vos propres informations.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+Voir [Afficher la documentation SQL](../view-sql.md) pour plus d’informations sur la manière d’adapter le langage SQL de vos insights directement via l’interface utilisateur de PLatform.
 
-Vous pouvez également lire et comprendre le code SQL qui génère des insights pour la variable [Profils](./profiles.md) et [Destinations](./destinations.md) tableaux de bord.
+Vous pouvez également lire et comprendre le code SQL qui génère des insights pour la variable [Profils](./profiles.md), [Profils de compte](./account-profiles.md) et [Destinations](./destinations.md) tableaux de bord.

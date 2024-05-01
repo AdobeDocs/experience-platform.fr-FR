@@ -1,7 +1,8 @@
 ---
 title: Afficher Insight SQL
 description: Affichez le code SQL derrière votre profil, audience, destination et informations personnalisées et exécutez la requête à la demande via Query Editor.
-source-git-commit: be90cf38970a54431f48799bf506fb0a20ec0166
+exl-id: fd728926-c113-4593-92b1-916a02d09d41
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -58,4 +59,4 @@ L’éditeur de requêtes s’affiche. Vous pouvez désormais modifier l’instr
 
 ## Étapes suivantes
 
-Après avoir lu ce document, vous comprenez désormais comment accéder au SQL pour obtenir des informations dans les tableaux de bord standard ou dans un tableau de bord défini par l’utilisateur. Si vous ne l’avez pas déjà fait, il est recommandé de lire la [Document de modèle de données Real-time Customer Data Platform Insights](./cdp-insights-data-model.md). Ce document contient des informations sur la personnalisation des modèles SQL pour les rapports Real-Time CDP adaptés à vos besoins marketing et IPC.
+Après avoir lu ce document, vous comprenez désormais comment accéder au SQL pour obtenir des informations dans les tableaux de bord standard ou dans un tableau de bord défini par l’utilisateur. Si vous ne l’avez pas déjà fait, il est recommandé de lire la [Document de modèle de données Real-time Customer Data Platform Insights](./data-models/cdp-insights-data-model-b2c.md). Ce document contient des informations sur la personnalisation des modèles SQL pour les rapports Real-Time CDP adaptés à vos besoins marketing et IPC.

@@ -2,7 +2,7 @@
 title: Guide d’informations sur les rapports de magasin accélérés de requête
 description: Découvrez comment créer un modèle de données d’informations sur les rapports via Query Service afin de l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 82%
@@ -13,7 +13,7 @@ ht-degree: 82%
 
 Le magasin d’accélération des requêtes vous permet de réduire le temps et la puissance de traitement requis pour obtenir des informations critiques à partir de vos données. En règle générale, les données sont traitées à intervalles réguliers (par exemple, toutes les heures ou tous les jours), lorsque des vues agrégées sont créées et font l’objet de rapports. L’analyse de ces rapports générés à partir de données agrégées fournit des informations destinées à améliorer les performances commerciales. Le magasin d’accélération des requêtes offre un service de cache, une simultanéité, une expérience interactive et une API sans état. Toutefois, il suppose que les données sont prétraitées et optimisées pour les requêtes agrégées et non pour les requêtes de données brutes.
 
-Le magasin accéléré de requêtes vous permet de créer un modèle de données personnalisé et/ou d’étendre un modèle de données Adobe Real-time Customer Data Platform existant. Vous pouvez ensuite utiliser vos informations de rapports ou les incorporer dans un framework de création de rapports/visualisation de votre choix. Consultez la documentation du modèle de données Real-time Customer Data Platform Insights pour savoir comment [personnaliser vos modèles de requête SQL pour créer des rapports Real-Time CDP pour vos cas d’utilisation de marketing et d’indicateurs clés de performance (ICP)](../../../dashboards/cdp-insights-data-model.md).
+Le magasin accéléré de requêtes vous permet de créer un modèle de données personnalisé et/ou d’étendre un modèle de données Adobe Real-time Customer Data Platform existant. Vous pouvez ensuite utiliser vos informations de rapports ou les incorporer dans un framework de création de rapports/visualisation de votre choix. Consultez la documentation du modèle de données Real-time Customer Data Platform Insights pour savoir comment [personnaliser vos modèles de requête SQL pour créer des rapports Real-Time CDP pour vos cas d’utilisation de marketing et d’indicateurs clés de performance (ICP)](../../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
 Le modèle de données Real-Time CDP de Adobe Experience Platform fournit des informations sur les profils, les audiences et les destinations et active les tableaux de bord des informations Real-Time CDP. Ce document vous guide tout au long du processus de création de votre modèle de données des rapports d’informations et vous explique également comment étendre les modèles de données Real-time CDP selon les besoins.
 

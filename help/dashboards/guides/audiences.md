@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profil;audience;audiences;segmentation;interface utilisateur;interface utilisateur;personnalisation;tableau de bord de l’audience;tableau de bord
-title: Guide du tableau de bord Audiences
+title: Tableau de bord des audiences
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les audiences que votre entreprise a créées.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
+source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
 workflow-type: tm+mt
-source-wordcount: '3133'
+source-wordcount: '3132'
 ht-degree: 40%
 
 ---

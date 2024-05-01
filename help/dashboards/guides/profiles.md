@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;profil;profil client en temps réel;interface utilisateur;interface utilisateur;personnalisation;tableau de bord Profil;tableau de bord
-title: Guide du tableau de bord Profils
+title: Tableau de bord des profils
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les données Real-time Customer Profile de votre entreprise.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: 78cf435f506a21ddd2348642c07380ad810bc693
+source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
 workflow-type: tm+mt
-source-wordcount: '4996'
+source-wordcount: '4995'
 ht-degree: 49%
 
 ---
@@ -51,7 +51,7 @@ Sélectionnez **[!UICONTROL Ajouter un widget]** pour accéder à la bibliothèq
 
 Dans la bibliothèque de widgets, vous pouvez parcourir la sélection de widgets d’audience standard et personnalisés. Pour plus d’informations sur l’ajout de widgets, consultez la documentation de la bibliothèque de widgets sur la manière d’[ajouter un widget](../customize/widget-library.md#add-widgets).
 
-### Afficher SQL {#view-sql}
+### Afficher le SQL {#view-sql}
 
 Vous pouvez afficher le code SQL qui génère les insights visualisés sur votre tableau de bord avec une bascule sur le [!UICONTROL Présentation] workspace. Vous pouvez vous inspirer du SQL de vos insights existants pour créer de nouvelles requêtes qui obtiennent des insights uniques à partir des données Platform en fonction des besoins de votre entreprise. Pour en savoir plus sur cette fonctionnalité, voir [Afficher le guide de l’interface utilisateur SQL](../view-sql.md).
 

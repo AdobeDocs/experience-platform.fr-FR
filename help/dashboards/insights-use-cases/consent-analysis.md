@@ -2,7 +2,7 @@
 title: Analyse et suivi du consentement
 description: Découvrez comment créer un tableau de bord d’analyse du consentement pour suivre les tendances du consentement des utilisateurs au fil du temps.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
@@ -143,7 +143,7 @@ Une fois que le compositeur de widget est renseigné avec les données du tablea
 >Vous pouvez maintenant redimensionner ou déplacer le widget à la taille et à la position souhaitées avant d’enregistrer le tableau de bord.
 
 
-L’image ci-dessous montre l’affichage de votre widget terminé et d’autres informations personnalisées potentielles. Pour plus d’informations sur les types de widgets qui peuvent être créés, reportez-vous à la section [documentation du modèle de données](../cdp-insights-data-model.md).
+L’image ci-dessous montre l’affichage de votre widget terminé et d’autres informations personnalisées potentielles. Pour plus d’informations sur les types de widgets qui peuvent être créés, reportez-vous à la section [documentation du modèle de données](../data-models/cdp-insights-data-model-b2c.md).
 
 <!-- The diagram shows straight lines due to a lack of data, however in your environment the trends will reflect the actual changes over time. -->
 

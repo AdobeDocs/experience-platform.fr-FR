@@ -5,10 +5,10 @@ breadcrumb-title: Guide des tableaux de bord
 user-guide-description: Découvrez comment visualiser les données dans Experience Platform via des tableaux de bord personnalisables.
 feature: Dashboards
 role: Developer,User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8daa1c190f4c868fc12a46c66f6970704c8de8fa
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 87%
+source-wordcount: '106'
+ht-degree: 70%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 87%
    * [Profils](insights/profiles.md)
    * [Audiences](insights/audiences.md)
    * [Destinations](insights/destinations.md)
+   * [Profils de compte](insights/account-profiles.md)
 * Personnalisation des tableaux de bord {#customize}
    * [Présentation de la personnalisation](customize/overview.md)
    * [Modification des tableaux de bord](customize/modify.md)
@@ -39,9 +40,11 @@ ht-degree: 87%
    * [Modification du schéma](customize/edit-schema.md)
 * Cas d’utilisation d’insights {#insights-use-cases}
    * [Analyse du consentement](insights-use-cases/consent-analysis.md)
+* Modèles de données disponibles {#data-models}
+   * [Edition B2B du modèle de données Real-time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2b.md)
+   * [Edition B2C du modèle de données Real-time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2c.md)
 * Intégrations d’applications {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [Jeux de données de tableau de bord des requêtes](query.md)
-* [Modèle de données d’informations Real-Time Customer Data Platform](cdp-insights-data-model.md)
 * [Afficher les informations SQL](view-sql.md)
-* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

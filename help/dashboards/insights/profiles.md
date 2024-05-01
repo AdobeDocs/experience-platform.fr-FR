@@ -1,9 +1,10 @@
 ---
 title: Informations sur le profil
 description: Découvrez le langage SQL qui alimente vos insights de profil et utilisez ces requêtes pour générer des insights personnalisés qui explorent davantage vos clients et leurs expériences client.
-source-git-commit: ee9ef2cf777c72fbd19cfccd80a37ea66591216d
+exl-id: f3792076-3e01-4e26-8788-32927202a2e5
+source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1661'
 ht-degree: 1%
 
 ---
@@ -14,12 +15,9 @@ Les informations dérivées de l’analyse de votre modèle de données rendent 
 
 Comprenez vos informations sur les profils en accédant aux données SQL qui les alimentent, puis générez vos propres informations afin d’explorer davantage vos clients et leurs expériences client qui constituent vos profils. Transformez vos données brutes en nouvelles informations exploitables en utilisant le modèle de données Real-Time CDP SQL existant comme source d’inspiration pour créer des requêtes en fonction de vos besoins professionnels uniques.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI.  -->
+Voir [Afficher la documentation SQL](../view-sql.md) pour plus d’informations sur la manière d’adapter le code SQL de vos insights directement via l’interface utilisateur de Platform.
 
 Vous pouvez utiliser les informations suivantes dans le cadre de la [Tableau de bord des profils](../guides/profiles.md) ou personnalisé [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md). Voir [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou [créer et modifier de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md#create-widget).
-
-Vous pouvez utiliser les informations suivantes dans le cadre de la [Tableau de bord du profil](../guides/profiles.md) ou un tableau de bord personnalisé.
 
 ## Superposition des audiences par stratégie de fusion {#audience-overlap-by-merge-policy}
 
@@ -781,7 +779,6 @@ Voir [Documentation du widget des profils non segmentés](../guides/profiles.md#
 
 En lisant ce document, vous comprenez désormais le langage SQL qui génère des informations de tableau de bord et les questions courantes que cette analyse résout. Vous pouvez désormais modifier et itérer sur le SQL pour générer vos propres informations.
 
-<!-- This link will go in during the January release.
-See the [View SQL documentation]() for more information on how to adapt your insights' SQL directly through the PLatform UI. -->
+Voir [Afficher la documentation SQL](../view-sql.md) pour plus d’informations sur la manière d’adapter le langage SQL de vos insights directement via l’interface utilisateur de PLatform.
 
-Vous pouvez également lire et comprendre le code SQL qui génère des insights pour la variable [Audiences](./audiences.md) et [Destinations](./destinations.md) tableaux de bord.
+Vous pouvez également lire et comprendre le code SQL qui génère des insights pour la variable [Audiences](./audiences.md), [Profils de compte](./account-profiles.md), et [Destinations](./destinations.md) tableaux de bord.

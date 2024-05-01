@@ -4,9 +4,9 @@ title: Exploration, vérification et traitement des jeux de données de tableau 
 type: Documentation
 description: Découvrez comment utiliser Query Service pour explorer et traiter des jeux de données bruts alimentant les tableaux de bord de profil, d’audience et de destination dans Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: e808af41b0df7603ce6f44464d1e6e883d3f6208
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '944'
 ht-degree: 37%
 
 ---
@@ -86,7 +86,7 @@ Pour comprendre le schéma complet du jeu de données de destination DIM, vous p
 
 La fonction Modèles de données de statistiques CDP expose le code SQL qui alimente les informations pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQl afin de créer des rapports CDP pour vos cas d’utilisation de marketing et d’ICP.
 
-Les rapports CDP fournissent des informations sur vos données de profil et sur leurs relations avec les audiences et les destinations. Consultez la documentation du modèle de données de statistiques de la plateforme de données clients pour obtenir des informations détaillées sur la manière de procéder. [appliquer les modèles de données d’insights de la plateforme de données clients à vos cas d’utilisation d’IPC spécifiques ;](./cdp-insights-data-model.md).
+Les rapports CDP fournissent des informations sur vos données de profil et sur leurs relations avec les audiences et les destinations. Consultez la documentation du modèle de données de statistiques de la plateforme de données clients pour obtenir des informations détaillées sur la manière de procéder. [appliquer les modèles de données d’insights de la plateforme de données clients à vos cas d’utilisation d’IPC spécifiques ;](./data-models/cdp-insights-data-model-b2c.md).
 
 ## Exemples de requêtes
 

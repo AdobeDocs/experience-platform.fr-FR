@@ -2,7 +2,7 @@
 title: Suivi des signaux de données pour générer la valeur de durée de vie client
 description: Ce guide fournit une démonstration de bout en bout sur l’utilisation de Data Distiller et de tableaux de bord définis par l’utilisateur avec Real-time Customer Data Platform pour mesurer et visualiser la valeur de durée de vie des clients.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 7%
@@ -56,7 +56,7 @@ Ensuite, vous devez créer un modèle de données personnalisé ou étendre un m
 * Créez des tableaux de dimension pour étendre votre modèle d’informations sur les rapports.
 * Interroger votre modèle de données d’informations de rapports de magasin accéléré et étendu
 
-Consultez la documentation du modèle de données Real-time Customer Data Platform Insights pour savoir comment [personnaliser vos modèles de requête SQL pour créer des rapports Real-Time CDP pour vos cas d’utilisation de marketing et d’indicateurs clés de performance (ICP)](../../dashboards/cdp-insights-data-model.md).
+Consultez la documentation du modèle de données Real-time Customer Data Platform Insights pour savoir comment [personnaliser vos modèles de requête SQL pour créer des rapports Real-Time CDP pour vos cas d’utilisation de marketing et d’indicateurs clés de performance (ICP)](../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
 Veillez à définir un planning pour actualiser votre modèle de données personnalisé à un rythme normal. Cela permet de s’assurer que les données reviennent dans votre pipeline d’ingestion selon les besoins et renseigne vos tableaux de bord définis par l’utilisateur. Voir [guide de planification des requêtes](../ui/query-schedules.md#create-schedule) pour savoir comment configurer votre planning.
 
