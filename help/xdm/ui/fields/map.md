@@ -2,9 +2,9 @@
 title: Définition des champs de mappage dans l’interface utilisateur
 description: Découvrez comment définir un champ de mappage dans l’interface utilisateur de l’Experience Platform.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: 57a0381401c6084513ce7413b66dec56044b4492
+source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '452'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform vous permet de personnaliser entièrement la structure de vos classes XDM (Experience Data Model) personnalisées, de groupes de champs de schéma et de types de données.
 
-Vous pouvez également définir des champs de mappage dans l’éditeur de schémas pour modéliser des structures de données flexibles et dynamiques ou stocker une collection de paires clé-valeur. La structure de données de carte permet des recherches, des insertions et des suppressions efficaces et rapides lorsque des informations sont organisées et accessibles en fonction d’identifiants uniques.
+Vous pouvez également définir des champs de mappage dans l’éditeur de schémas pour modéliser des structures de données flexibles et dynamiques ou stocker une collection de paires clé-valeur.
 
 Lors de la définition d’un nouveau champ dans l’interface utilisateur de Platform, utilisez le **[!UICONTROL Type]** , puis sélectionnez &quot;**[!UICONTROL Carte]**&quot; de la liste.
 
@@ -34,6 +34,8 @@ XDM impose les restrictions suivantes à l’utilisation de ce type de données 
 * Les types de carte DOIVENT être de type `object`.
 * Les types de carte NE DOIVENT PAS avoir de propriétés définies (en d’autres termes, ils définissent des objets &quot;vides&quot;).
 * Les types de carte DOIVENT inclure un `additionalProperties.type` qui décrit les valeurs qui peuvent être placées dans le mappage, soit `string` ou `integer`.
+* La segmentation d’entités multiples ne peut être définie que sur la base des clés de mappage et non des valeurs.
+* Les cartes ne sont pas prises en charge pour les audiences de compte.
 
 Assurez-vous que vous utilisez uniquement des champs de type map lorsque cela est absolument nécessaire, car ils présentent les inconvénients suivants en termes de performances :
 
