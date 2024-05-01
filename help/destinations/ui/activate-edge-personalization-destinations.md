@@ -3,9 +3,9 @@ title: Activer les audiences vers des destinations de personnalisation Edge
 description: Découvrez comment activer les audiences de Adobe Experience Platform vers les destinations de personnalisation de périphérie pour les cas d’utilisation de la personnalisation de la même page et de la page suivante.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: c113d9615a276af67714f38b8325e69737b23964
 workflow-type: tm+mt
-source-wordcount: '1922'
+source-wordcount: '1957'
 ht-degree: 15%
 
 ---
@@ -47,7 +47,7 @@ Pour une brève présentation du partage d’audiences et d’attributs de profi
 
 ## Cas d’utilisation {#use-cases}
 
-Utilisez des solutions de personnalisation d’Adobe, telles qu’Adobe Target, ou vos propres plateformes de partenaire de personnalisation (par exemple, [!DNL Optimizely], [!DNL Pega]), ainsi que les systèmes propriétaires (par exemple, les systèmes de gestion de contenu intégrés) pour offrir une expérience de personnalisation plus approfondie aux clients via la fonction [Personnalisation personnalisée](../catalog/personalization/custom-personalization.md) destination. Tout cela tout en tirant parti des fonctionnalités Experience Platform de collecte et de segmentation des données du réseau Edge.
+Utilisez des solutions de personnalisation d’Adobe, telles qu’Adobe Target, ou vos propres plateformes de partenaire de personnalisation (par exemple, [!DNL Optimizely], [!DNL Pega]), ainsi que les systèmes propriétaires (par exemple, les systèmes de gestion de contenu intégrés) pour offrir une expérience de personnalisation plus approfondie aux clients via la fonction [Personnalisation personnalisée](../catalog/personalization/custom-personalization.md) destination. Tout cela tout en tirant parti des fonctionnalités Experience Platform de collecte et de segmentation des données Edge Network.
 
 Les cas d’utilisation décrits ci-dessous incluent à la fois la personnalisation du site et la publicité ciblée sur site.
 
@@ -78,6 +78,10 @@ Une société de location et de vente d’habitations souhaite personnaliser sa 
 La première étape de la configuration de votre destination de personnalisation consiste à configurer un flux de données pour le SDK web Experience Platform. Cette opération est effectuée dans l’interface utilisateur de la collecte de données.
 
 Lors de la configuration du flux de données, sous **[!UICONTROL Adobe Experience Platform]** assurez-vous que la **[!UICONTROL Segmentation Edge]** et les **[!UICONTROL Destinations de personnalisation]** sont bien sélectionnées.
+
+>[!TIP]
+>
+>À compter de la version d’avril 2024, vous n’aurez pas à cocher la case Segmentation Edge lorsque [configuration de la connexion à Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md). Dans ce cas, [personnalisation de session suivante](#next-session) est le seul cas d’utilisation de personnalisation disponible.
 
 ![Configuration des flux de données avec la segmentation Edge et les destinations de personnalisation surlignées !](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
@@ -146,7 +150,7 @@ Vous pouvez sélectionner plusieurs types d’audiences, selon leur origine :
 
 >[!IMPORTANT]
 >
->Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, la variable **[!UICONTROL Personnalisation personnalisée]** La destination requiert que vous utilisiez la variable [API du serveur réseau Edge](../../server-api/overview.md) lors de la configuration de la destination pour la personnalisation basée sur les attributs. Tous les appels de l’API du serveur doivent être effectués dans une [contexte authentifié](../../server-api/authentication.md).
+>Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, la variable **[!UICONTROL Personnalisation personnalisée]** La destination requiert que vous utilisiez la variable [API du serveur Edge Network](../../server-api/overview.md) lors de la configuration de la destination pour la personnalisation basée sur les attributs. Tous les appels de l’API du serveur doivent être effectués dans une [contexte authentifié](../../server-api/authentication.md).
 >
 ><br>Si vous utilisez déjà le SDK Web ou le SDK mobile pour votre intégration, vous pouvez récupérer les attributs via l’API serveur en ajoutant une intégration côté serveur.
 >
