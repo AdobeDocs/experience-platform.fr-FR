@@ -2,7 +2,7 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 27571f3ed57399eb588865e1a52e7569957ffbff
+source-git-commit: d4fc95532a82fe32b4172870a5521e41ce313bab
 workflow-type: tm+mt
 source-wordcount: '3976'
 ht-degree: 23%
@@ -127,7 +127,7 @@ La section suivante répertorie les questions relatives aux états du cycle de v
 Le graphique suivant explique les différents états du cycle de vie, ce qu’ils représentent, où les audiences avec cet état peuvent être utilisées, ainsi que l’impact sur les barrières de sécurité de segmentation.
 
 | État | Définition | Visible dans Audience Portal ? | Visible dans les destinations ? | Affecte les limites de segmentation ? | Impact sur les audiences basées sur des fichiers | Impact sur l’évaluation des audiences | Utilisable dans d’autres audiences ? | Modifiable |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- | --- | --- | -- |
 | Brouillon | Une audience dans le **Version préliminaire** state est une audience qui est encore en cours de développement et qui n’est pas encore prête à être utilisée dans d’autres services. | Oui, mais peut être caché. | Non | Oui | Peuvent être importées ou mises à jour pendant le processus d’affinage. | Peuvent être évaluées afin d’obtenir des comptes de publication précis. | Oui, mais non recommandé. | Oui |
 | Publié | Une audience dans le **Publié** state est une audience prête à être utilisée sur tous les services en aval. | Oui | Oui | Oui | Peut être importé ou mis à jour. | Évalués à l’aide de la segmentation par lots, par flux ou par périphérie. | Oui | Oui |
 | Inactif | Une audience dans le **Inactif** state est une audience qui n’est actuellement pas utilisée. Il existe toujours dans Platform, mais il le sera **not** être utilisable jusqu’à ce qu’il soit marqué comme brouillon ou publié. | Non, mais peut être affiché. | Non | Non | N’est plus mis à jour. | N’est plus évalué ou mis à jour par Platform. | Oui | Oui |
