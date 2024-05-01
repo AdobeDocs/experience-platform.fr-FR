@@ -1,10 +1,11 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2024
 description: Les notes de mise à jour d’avril 2024 pour Adobe Experience Platform.
-source-git-commit: 6ad7d55ca0a544879db9738c0a4ab914fdc363bd
+exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
+source-git-commit: 4ec4335d19695e8d6e26390358356dedd048594e
 workflow-type: tm+mt
-source-wordcount: '1728'
-ht-degree: 26%
+source-wordcount: '1851'
+ht-degree: 24%
 
 ---
 
@@ -73,12 +74,12 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Fonction | Description |
 | ----------- | ----------- |
 | `isRequired` paramètre désormais disponible pour les champs de données client imbriqués dans Destination SDK | Lors de la configuration d’une destination dans Destination SDK, vous pouvez désormais [définir les champs de données client imbriqués selon les besoins ;](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields). Ainsi, les utilisateurs configurant votre destination ne peuvent pas poursuivre leur flux d’activation tant qu’ils n’ont pas sélectionné une valeur pour ce champ. |
+| La segmentation Edge n’est plus obligatoire lors de la configuration d’une destination Adobe Target avec le SDK Web. | Auparavant, lors de la configuration d’une [Destination Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) avec le SDK Web, la gestion des données devait être activée pour la personnalisation et la segmentation Edge. L’exigence d’activation du flux de données pour la segmentation Edge [a été supprimé.](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Notez que ce modèle d’intégration vous permet uniquement de bénéficier d’un sous-ensemble de cas d’utilisation de la personnalisation lors de l’utilisation d’Adobe Target avec Real-Time CDP. En savoir plus sur les [cas d’utilisation activés par type d’intégration](/help/destinations/catalog/personalization/adobe-target-connection.md#parameters). |
+| [!BADGE Beta]{type=Informative} Supprimer plusieurs audiences et jeux de données des flux d’activation | Vous pouvez désormais sélectionner et supprimer plusieurs audiences et jeux de données des flux d’activation de destination. Voir [détails de la destination](../../destinations/ui/destination-details-page.md#bulk-remove) et [export du jeu de données](../../destinations/ui/export-datasets.md) pour plus d’informations. |
 
 {style="table-layout:auto"}
 
 Pour obtenir plus d’informations générales sur les destinations, consultez la [vue d’ensemble des destinations](../../destinations/home.md).
-
-<!--| [!BADGE Beta]{type=Informative} Remove multiple audiences and datasets from activation flows | You can now select and remove multiple audiences and datasets from destination activation flows. See the [destination details](../../destinations/ui/destination-details-page.md#bulk-remove) and [dataset export](../../destinations/ui/export-datasets.md) documentation for more details. |-->
 
 ## Service d’identités {#identity-service}
 

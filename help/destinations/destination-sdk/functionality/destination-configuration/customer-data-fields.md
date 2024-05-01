@@ -2,7 +2,7 @@
 description: Découvrez comment créer des champs d’entrée dans l’interface utilisateur d’Experience Platform qui permettent à vos utilisateurs de spécifier diverses informations relatives à la connexion et à l’exportation des données vers la destination.
 title: Champs de données client
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: 6366686e3b3f656d200aa245fc148f00e623713c
+source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
 workflow-type: tm+mt
 source-wordcount: '1742'
 ht-degree: 80%
@@ -352,7 +352,7 @@ Pour ajouter un champ imbriqué, utilisez la méthode `properties` comme illustr
 >
 >À compter de la version d’avril 2024, vous pouvez définir une `isRequired` sur les champs imbriqués. Par exemple, dans le fragment de code de configuration ci-dessous, les deux premiers champs imbriqués sont marqués comme obligatoires (ligne xxx mise en surbrillance) et les clients ne peuvent pas procéder à moins de sélectionner une valeur pour le champ. En savoir plus sur les champs obligatoires dans la section [paramètres pris en charge](#supported-parameters) .
 
-```json {line-numbers="true" highlight="10,19"}
+```json {line-numbers="true" highlight="11,20"}
     {
       "name": "yourdestination",
       "title": "Yourdestination - Integration Specific Settings",
