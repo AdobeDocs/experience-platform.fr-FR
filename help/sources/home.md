@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation des connecteurs source
 description: Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
 workflow-type: tm+mt
 source-wordcount: '1531'
-ht-degree: 75%
+ht-degree: 74%
 
 ---
 
@@ -63,7 +63,7 @@ Experience Platform prend en charge l’ingestion de données provenant d’un s
 
 ### Analytics {#analytics}
 
-Experience Platform prend en charge l’ingestion de données provenant d’un système Analytics tiers. Pour plus d’informations, consultez les documents connexes suivants :
+Experience Platform prend en charge l’ingestion de données provenant d’un système Analytics tiers. Pour plus d’informations, lisez les documents connexes suivants :
 
 - [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE Lot]{type=Informative}
 - [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE Diffusion en continu]{type=Positive}
