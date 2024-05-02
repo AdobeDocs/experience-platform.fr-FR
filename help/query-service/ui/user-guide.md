@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de Query Editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 02ecc6bd2ff85d2d837ffe25b090fd65043779a9
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '2794'
+source-wordcount: '2825'
 ht-degree: 42%
 
 ---
 
 # Guide de l’interface utilisateur de [!DNL Query Editor]
+
+>[!NOTE]
+>
+>À partir du 30 avril 2024, le [Éditeur de requêtes amélioré](#enhanced-editor-toggle) est devenu l’éditeur par défaut pour tous les utilisateurs. L’ancien éditeur sera abandonné les 30 et 30 mai 2024 et ne sera plus disponible.
 
 [!DNL Query Editor] est un outil interactif fourni par le [!DNL Query Service] d’Adobe Experience Platform. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’[!DNL Experience Platform]. [!DNL Query Editor] prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans [!DNL Experience Platform].
 
@@ -229,7 +233,7 @@ Lorsque vous enregistrez une requête dans l’éditeur de requêtes, un message
 
 Les requêtes qui ont été enregistrées en tant que modèle peuvent être planifiées à partir de l’éditeur de requêtes. La planification des requêtes vous permet d’automatiser les exécutions de requête sur une cadence personnalisée. Vous pouvez planifier des requêtes en fonction de la fréquence, de la date et de l’heure, et choisir également un jeu de données de sortie pour vos résultats, si nécessaire. Les plannings de requête peuvent également être désactivés ou supprimés via l’interface utilisateur.
 
-Les planifications sont définies dans l’éditeur de requêtes. Lorsque vous utilisez Query Editor, vous ne pouvez ajouter qu’un planning à une requête qui a déjà été créée, enregistrée et exécutée. La même limitation ne s’applique pas au [!DNL Query Service] API.
+Les planifications sont définies dans l’éditeur de requêtes. Lorsque vous utilisez l’éditeur de requêtes, vous ne pouvez ajouter qu’un planning à une requête qui a déjà été créée et enregistrée. La même limitation ne s’applique pas au [!DNL Query Service] API.
 
 >[!NOTE]
 >

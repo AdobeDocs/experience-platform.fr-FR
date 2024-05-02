@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2024
 description: Les notes de mise à jour d’avril 2024 pour Adobe Experience Platform.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: fea62a2aa3c7d175afbfa808f392c3a93a0d31a0
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '1843'
-ht-degree: 24%
+source-wordcount: '1897'
+ht-degree: 23%
 
 ---
 
@@ -31,15 +31,15 @@ Mises à jour des fonctionnalités existantes dans Experience Platform :
 
 ## Tableaux de bord {#dashboards}
 
-Adobe Experience Platform propose de nombreux tableaux de bord qui vous permettent dʼafficher des informations importantes concernant les données de votre entreprise. Celles-ci sont présentées telles quʼelles sont capturées lors dʼaperçus quotidiens.
+Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des informations importantes sur les données de votre organisation, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
 
 **Fonctionnalités nouvelles ou mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Real-time Customer Data Platform B2B insights | Explorez des informations sur les données B2B préconfigurées de Real-Time CDP sur les comptes et les opportunités afin de vous aider à comprendre vos données et à prendre des décisions professionnelles. Vous pouvez également créer vos propres insights à l’aide du modèle de données B2B de Real-Time CDP pour visualiser et explorer vos données et enregistrer vos visualisations personnalisées dans votre tableau de bord. |
+| Real-time Customer Data Platform B2B insights | Explorez les [Informations sur les données B2B de Real-Time CDP concernant les comptes et les opportunités](../../dashboards/insights/account-profiles.md) pour vous aider à comprendre vos données et à prendre des décisions professionnelles. Vous pouvez également [créer vos propres informations à l’aide du modèle de données Real-Time CDP B2B ;](../../dashboards/data-models/cdp-insights-data-model-b2c.md) pour visualiser et explorer vos données et enregistrer vos visualisations personnalisées dans votre tableau de bord. |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 Pour plus dʼinformations sur les tableaux de bord, notamment sur la manière dʼoctroyer des autorisations dʼaccès et de créer des widgets personnalisés, commencez par lire la [Présentation des tableaux de bord](../../dashboards/home.md).
 
@@ -117,14 +117,14 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Quarantaine de requêtes | isoler automatiquement les exécutions de requête ayant échoué afin d’éviter des perturbations et de maintenir des performances homogènes. |
-| Annuler la requête | Contrôlez l’exécution des requêtes et améliorez votre productivité en annulant les requêtes longues. |
-| Alertes de requête planifiées | Tenez compte des notifications proactives tout en planifiant les requêtes, ce qui vous permet de garantir une gestion efficace et opportune des tâches. Vous pouvez vous abonner aux alertes lors de la création d’une requête ou à l’aide des actions intégrées pour les requêtes planifiées existantes. |
-| Amélioration de la navigation des requêtes planifiées | Naviguez facilement entre les modèles de requête et les exécutions planifiées pour accroître la productivité. |
-| Sortie de requête étendue | Accédez à jusqu’à 500 lignes de résultats de requête dans la console pour une analyse plus approfondie de vos données. |
-| Jeu de soleil de l’ancien Query Editor | Depuis le 30 avril 2024, l’éditeur de requêtes amélioré est devenu l’éditeur par défaut pour tous les utilisateurs. L’ancien éditeur sera abandonné les 30 et 30 mai 2024 et ne sera plus disponible. |
+| Quarantaine de requêtes | isoler automatiquement les exécutions de requête ayant échoué afin d’éviter des perturbations et de maintenir des performances homogènes. Voir [mise en quarantaine des requêtes](../../query-service/ui/query-schedules.md#quarantine) pour plus d’informations. |
+| Annuler la requête | Contrôlez l&#39;exécution des requêtes et améliorez votre productivité en annulant les requêtes longues.Voir à ce propos la section [annuler la requête](../../query-service/ui/user-guide.md#cancel-query) pour plus d’informations. |
+| Alertes de requête planifiées | Tenez compte des notifications proactives tout en planifiant les requêtes, ce qui vous permet de garantir une gestion efficace et opportune des tâches. Vous pouvez [abonner aux alertes lors de la création d’une requête](../../query-service/ui/query-schedules.md#alerts-for-query-status) ou en utilisant les actions intégrées pour les requêtes planifiées existantes. Voir [abonner des alertes avec des actions intégrées](../../query-service/ui/monitor-queries.md#alert-subscription) pour plus d’informations. |
+| Amélioration de la navigation des requêtes planifiées | Naviguez facilement entre les modèles de requête et les exécutions planifiées pour accroître la productivité. Consultez la documentation relative à [affichage des exécutions de requête planifiées](../../query-service/ui/query-schedules.md#scheduled-query-runs) pour plus d’informations. |
+| Sortie de requête étendue | Accédez à jusqu’à 500 lignes de résultats de requête dans la console pour une analyse plus approfondie de vos données. Voir la section [comptage des résultats](../../query-service/ui/user-guide.md#result-count) pour plus d’informations. |
+| Jeu de soleil de l’ancien Query Editor | Depuis le 30 avril 2024, l’éditeur de requêtes amélioré est devenu l’éditeur par défaut pour tous les utilisateurs. L’ancien éditeur sera abandonné les 30 et 30 mai 2024 et ne sera plus disponible. Voir [Guide d’utilisation de Query Editor](../../query-service/ui/user-guide.md) pour plus d’informations. |
 
-{style=“table-layout:auto”}
+{style="table-layout:auto"}
 
 Pour plus d’informations sur Query Service, consultez la [vue d’ensemble de Query Service](../../query-service/home.md).
 

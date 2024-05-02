@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Questions fréquentes
 description: Ce document contient les questions les plus fréquentes et les réponses associées concernant Query Service. Les rubriques incluent l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 006b693c71cd45408bccb7c051f367f140260370
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '4450'
+source-wordcount: '4425'
 ht-degree: 96%
 
 ---
@@ -303,7 +303,7 @@ Commencez par consulter les journaux pour connaître les détails de l’erreur.
 
 Vous pouvez également consulter la documentation pour obtenir des conseils sur la manière d’effectuer des [requêtes planifiées dans l’interface utilisateur](./ui/user-guide.md#scheduled-queries) et par le biais de [l’API](./api/scheduled-queries.md).
 
-N’oubliez pas que lorsque vous utilisez [!DNL Query Editor], vous pouvez uniquement ajouter un planning à une requête qui a déjà été créée, enregistrée et exécutée. Ceci ne s’applique pas à l’API [!DNL Query Service].
+N’oubliez pas que lorsque vous utilisez la variable [!DNL Query Editor] vous pouvez uniquement ajouter un planning à une requête qui a déjà été créée et enregistrée. Ceci ne s’applique pas à l’API [!DNL Query Service].
 +++
 
 ### Que signifie l’erreur « Limite de session atteinte » ?

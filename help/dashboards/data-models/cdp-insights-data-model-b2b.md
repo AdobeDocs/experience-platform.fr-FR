@@ -3,9 +3,10 @@ title: Modèle de données Real-time Customer Data Platform Insights B2B
 description: Découvrez comment utiliser les requêtes SQL avec les modèles de données de statistiques Real-time Customer Data Platform (édition B2B) pour personnaliser vos propres rapports Real-Time CDP pour vos cas d’utilisation de marketing et d’indicateurs de performance clés.
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: 52f67037756af97bac97908d4736a3cbafce6844
+exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '475'
 ht-degree: 3%
 
 ---
@@ -49,15 +50,15 @@ Le diagramme ci-dessous affiche les champs de données pertinents de chaque jeu 
 
 ![Diagramme relationnel d’entité pour le modèle de profil de compte.](../images/data-models/account-profile-model.png)
 
-#### Cas pratique Comptes par secteur {#accounts-by-industry}
+#### Nouveaux comptes par cas d’utilisation industriel {#accounts-by-industry}
 
-La logique utilisée pour la variable [!UICONTROL Comptes par secteur industriel] insight renvoie les cinq premières industries en fonction de leur nombre de profils de compte et de leur taille relative les unes par rapport aux autres. Voir [[!UICONTROL Comptes par secteur industriel] documentation sur les widgets](../guides/account-profiles.md#accounts-by-industry) pour plus d’informations.
+La logique utilisée pour la variable [!UICONTROL Nouveaux comptes par secteur] insight renvoie les cinq premières industries en fonction de leur nombre de profils de compte et de leur taille relative les unes par rapport aux autres. Voir [[!UICONTROL Comptes par secteur industriel] documentation sur les widgets](../guides/account-profiles.md#accounts-by-industry) pour plus d’informations.
 
 >[!TIP]
 >
 >Vous pouvez personnaliser cette requête SQL pour renvoyer plus ou moins de données que les cinq premières industries.
 
-Le SQL qui génère la variable [!UICONTROL Comptes par secteur industriel] Un aperçu est présenté dans la section réductible ci-dessous.
+Le SQL qui génère la variable [!UICONTROL Nouveaux comptes par secteur] Un aperçu est présenté dans la section réductible ci-dessous.
 
 Requête +++SQL
 
@@ -94,11 +95,11 @@ LIMIT 5000;
 
 +++
 
-#### Cas d’utilisation Comptes par type {#accounts-by-type}
+#### Cas pratique des nouveaux comptes par type {#accounts-by-type}
 
-La logique utilisée pour la variable [!UICONTROL Comptes par type] insight renvoie la ventilation numérique des comptes selon leur type. Ces informations peuvent vous aider à orienter la stratégie commerciale et les opérations, y compris l’allocation des ressources ou les stratégies marketing. Voir [[!UICONTROL Comptes par type] documentation sur les widgets](../guides/account-profiles.md#accounts-by-type) pour plus d’informations.
+La logique utilisée pour la variable [!UICONTROL Nouveaux comptes par type] insight renvoie la ventilation numérique des comptes selon leur type. Ces informations peuvent vous aider à orienter la stratégie commerciale et les opérations, y compris l’allocation des ressources ou les stratégies marketing. Voir [[!UICONTROL Nouveaux comptes par type] documentation sur les widgets](../guides/account-profiles.md#accounts-by-type) pour plus d’informations.
 
-Le SQL qui génère la variable [!UICONTROL Comptes par type] Un aperçu est présenté dans la section réductible ci-dessous.
+Le SQL qui génère la variable [!UICONTROL Nouveaux comptes par type] Un aperçu est présenté dans la section réductible ci-dessous.
 
 Requête +++SQL
 

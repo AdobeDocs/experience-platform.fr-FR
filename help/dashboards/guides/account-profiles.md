@@ -2,9 +2,9 @@
 title: Tableau de bord des profils de compte
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les profils de compte B2B de votre entreprise.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: b7875128592b17044b068d8064de082bf00a8309
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1800'
 ht-degree: 3%
 
 ---
@@ -67,16 +67,20 @@ Les informations de profil du compte affichées sur la page [!UICONTROL Détails
 
 Adobe fournit des widgets standard que vous pouvez utiliser pour visualiser différentes mesures liées à vos profils de compte.
 
+>[!IMPORTANT]
+>
+>Si vous ne fournissez pas de filtre de date, le comportement par défaut des insights analyse les données ajoutées de l’année précédente à aujourd’hui.
+
 Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez le nom d’un widget dans la liste suivante :
 
 * [Profils de compte ajoutés](#account-profiles-added)
-* [Comptes par secteur](#accounts-by-industry)
-* [Comptes par type](#accounts-by-type)
+* [Nouveaux comptes par secteur](#accounts-by-industry)
+* [Nouveaux comptes par type](#accounts-by-type)
 * [Opportunités ajoutées](#opportunities-added)
-* [Opportunités par rôle individuel](#opportunities-by-person-role)
-* [Opportunités par chiffre d&#39;affaires](#opportunities-by-revenue)
-* [Opportunités par statut et étape](#opportunities-by-status-&-stage)
-* [Opportunités gagnées](#opportunities-won)
+* [Nouvelles opportunités par rôle individuel](#opportunities-by-person-role)
+* [Nouvelles opportunités par recettes](#opportunities-by-revenue)
+* [Nouvelles opportunités par statut et étape](#opportunities-by-status-&-stage)
+* [De nouvelles opportunités gagnées](#opportunities-won)
 * [Distribution de notation prédictive](#predictive-scoring-distribution)
 * [Facteurs d’influence de la notation prédictive](#predictive-scoring-top-influential-factors)
 * [Total des comptes par secteur](#total-accounts-by-industry)
@@ -87,17 +91,17 @@ La variable [!UICONTROL Profils de compte ajoutés] le widget utilise un graphiq
 
 ![Le widget Profils de compte ajouté.](../images/account-profiles/account-profiles-added.png)
 
-### Comptes par secteur {#accounts-by-industry}
+### Nouveaux comptes par secteur {#accounts-by-industry}
 
-La variable [!UICONTROL Comptes par secteur] widget affiche le nombre total de comptes dans une mesure unique au sein d’un graphique en anneau. Le graphique en anneau illustre la composition relative des différentes industries qui composent ce total. Une clé codée par couleur permet de ventiler toutes les industries incluses. Les décomptes individuels de chaque secteur sont affichés dans une boîte de dialogue lorsque le curseur survole la section correspondante du graphique en anneau.
+La variable [!UICONTROL Nouveaux comptes par secteur] widget affiche le nombre total de comptes dans une mesure unique au sein d’un graphique en anneau. Le graphique en anneau illustre la composition relative des différentes industries qui composent ce total. Une clé codée par couleur permet de ventiler toutes les industries incluses. Les décomptes individuels de chaque secteur sont affichés dans une boîte de dialogue lorsque le curseur survole la section correspondante du graphique en anneau.
 
-![Le widget Comptes par secteur.](../images/account-profiles/accounts-by-industry.png)
+![Le widget Nouveaux comptes par secteur.](../images/account-profiles/new-accounts-by-industry.png)
 
-### Comptes par type {#accounts-by-type}
+### Nouveaux comptes par type {#accounts-by-type}
 
-La variable [!UICONTROL Comptes par type] widget affiche le nombre total de comptes dans une mesure unique au sein d’un graphique en anneau. Le graphique en anneau illustre la composition relative des différents types de compte qui composent ce total. Une clé codée par couleur fournit une ventilation de tous les types de compte inclus. Les comptes individuels de chaque type de compte s’affichent dans une boîte de dialogue lorsque le curseur survole la section correspondante du graphique en anneau.
+La variable [!UICONTROL Nouveaux comptes par type] widget affiche le nombre total de comptes dans une mesure unique au sein d’un graphique en anneau. Le graphique en anneau illustre la composition relative des différents types de compte qui composent ce total. Une clé codée par couleur fournit une ventilation de tous les types de compte inclus. Les comptes individuels de chaque type de compte s’affichent dans une boîte de dialogue lorsque le curseur survole la section correspondante du graphique en anneau.
 
-![Le widget Comptes par type .](../images/account-profiles/accounts-by-type.png)
+![Le widget Nouveaux comptes par type .](../images/account-profiles/new-accounts-by-type.png)
 
 ### Opportunités ajoutées {#opportunities-added}
 
@@ -107,35 +111,35 @@ La variable [!UICONTROL Opportunités ajoutées] le widget utilise un graphique 
 
 ![Le widget Opportunités ajoutées .](../images/account-profiles/opportunities-added.png)
 
-### Opportunités par rôle individuel {#opportunities-by-person-role}
+### Nouvelles opportunités par rôle individuel {#opportunities-by-person-role}
 
-La variable [!UICONTROL Opportunités par rôle individuel] widget affiche le nombre total de vos opportunités dans une mesure unique au sein d’un graphique en anneau. Le graphique en anneau illustre la composition relative des rôles qui constituent ce nombre total d’opportunités. Une clé codée par couleur fournit une ventilation de tous les rôles inclus. Les décomptes individuels de chaque rôle s’affichent dans une boîte de dialogue lorsque le curseur survole la section correspondante du graphique en anneau.
+La variable [!UICONTROL Nouvelles opportunités par rôle individuel] widget affiche le nombre total de vos opportunités dans une mesure unique au sein d’un graphique en anneau. Le graphique en anneau illustre la composition relative des rôles qui constituent ce nombre total d’opportunités. Une clé codée par couleur fournit une ventilation de tous les rôles inclus. Les décomptes individuels de chaque rôle s’affichent dans une boîte de dialogue lorsque le curseur survole la section correspondante du graphique en anneau.
 
 >[!NOTE]
 >
 >La variable [!UICONTROL Aucune donnée trouvée] ou [!UICONTROL Impossible de charger] L’erreur est provoquée lorsque la table-pont &#39;Opportunity-Person&#39; n’est pas utilisée dans votre schéma. Si votre insight affiche l’une de ces erreurs, vérifiez votre schéma d’union et assurez-vous que le groupe de champs &#39;Opportunity-Person&#39; ingère des données.
 
-![Le widget de rôle Opportunités par personne .](../images/account-profiles/opportunities-by-person-role.png)
+![Le widget Nouvelles opportunités par rôle de personne .](../images/account-profiles/new-opportunities-by-person-role.png)
 
-### Opportunités par chiffre d&#39;affaires {#opportunities-by-revenue}
+### Nouvelles opportunités par recettes {#opportunities-by-revenue}
 
-La variable [!UICONTROL Opportunités par chiffre d&#39;affaires] widget utilise un graphique à barres pour illustrer le montant total estimé des recettes générées par vos opportunités. Le widget prend en charge jusqu’à six opportunités.
+La variable [!UICONTROL Nouvelles opportunités par recettes] widget utilise un graphique à barres pour illustrer le montant total estimé des recettes générées par vos opportunités. Le widget prend en charge jusqu’à six opportunités.
 
 Pour afficher une boîte de dialogue contenant le total des recettes spécifiques d’une opportunité, placez le curseur sur des barres individuelles.
 
-![Le widget Opportunités par chiffre d’affaires .](../images/account-profiles/opportunities-by-revenue.png)
+![Le widget Nouvelles opportunités par chiffre d’affaires .](../images/account-profiles/new-opportunities-by-revenue.png)
 
-### Opportunités par statut et étape {#opportunities-by-status-&-stage}
+### Nouvelles opportunités par statut et étape {#opportunities-by-status-&-stage}
 
 Ce widget utilise un graphique à barres pour illustrer le nombre d’opportunités ouvertes ou fermées à toutes les étapes de l’entonnoir marketing/vente. Le widget utilise des couleurs pour différencier l’étape des opportunités. Une clé codée par couleur indique les étapes disponibles pour les opportunités.
 
-![Le widget Opportunités par statut et étape .](../images/account-profiles/opportunities-by-status-&-stage.png)
+![Le widget Nouvelles opportunités par statut et étape .](../images/account-profiles/new-opportunities-by-status-&-stage.png)
 
-### Opportunités gagnées {#opportunities-won}
+### De nouvelles opportunités gagnées {#opportunities-won}
 
-La variable [!UICONTROL Opportunités gagnées] widget affiche le nombre total d’opportunités qui ont été finalisées avec succès dans une seule mesure dans un graphique en anneau. Le graphique en anneau illustre la composition relative des opportunités gagnées ou non. Une clé codée en couleur fait la distinction entre les opportunités gagnées et non gagnées. Les décomptes individuels de chaque rôle s’affichent dans une boîte de dialogue lorsque le curseur survole la section correspondante du graphique en anneau.
+La variable [!UICONTROL De nouvelles opportunités gagnées] widget affiche le nombre total d’opportunités qui ont été finalisées avec succès dans une seule mesure dans un graphique en anneau. Le graphique en anneau illustre la composition relative des opportunités gagnées ou non. Une clé codée en couleur fait la distinction entre les opportunités gagnées et non gagnées. Les décomptes individuels de chaque rôle s’affichent dans une boîte de dialogue lorsque le curseur survole la section correspondante du graphique en anneau.
 
-![Le widget Opportunités gagnées .](../images/account-profiles/opportunities-won.png)
+![Le widget Nouvelles opportunités a gagné.](../images/account-profiles/new-opportunities-won.png)
 
 ### Distribution de notation prédictive {#predictive-scoring-distribution}
 
@@ -170,6 +174,10 @@ Le menu déroulant du widget vous permet de sélectionner le modèle de notation
 ### Total des comptes par secteur {#total-accounts-by-industry}
 
 Ce widget affiche le nombre total de comptes dans une seule mesure et utilise un graphique en anneau pour illustrer les tailles proportionnelles des comptes pour les secteurs qui constituent le nombre global. La clé fournit des informations de codage des couleurs pour les différents secteurs qui composent le graphique en anneau.
+
+>[!NOTE]
+>
+>Les informations affichées par cet insight dépendent de la période que vous avez spécifiée. Si vous ne fournissez pas de filtre de date, le comportement par défaut de l’insight analyse les données ajoutées de l’année précédente jusqu’à aujourd’hui.
 
 Les décomptes individuels des différentes industries s’affichent dans une boîte de dialogue lorsque le curseur survole la section correspondante du graphique en anneau.
 

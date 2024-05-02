@@ -3,9 +3,10 @@ title: Informations sur le profil du compte
 description: Découvrez le code SQL qui alimente vos informations de profil de compte et utilisez ces requêtes pour générer des informations personnalisées qui explorent davantage vos clients et leurs expériences client.
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: b7875128592b17044b068d8064de082bf00a8309
+exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
+source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -46,7 +47,7 @@ ORDER BY date_key limit 5000;
 
 +++
 
-## Comptes par secteur {#accounts-by-industry}
+## Nouveaux comptes par secteur {#accounts-by-industry}
 
 Questions auxquelles répond cet aperçu :
 
@@ -82,7 +83,7 @@ ORDER BY total_accounts DESC limit 5000;
 
 +++
 
-## Comptes par type {#accounts-by-type}
+## Nouveaux comptes par type {#accounts-by-type}
 
 Questions auxquelles répond cet aperçu :
 
@@ -128,7 +129,7 @@ LIMIT  5000;
 
 +++
 
-## Opportunités par rôle individuel {#opportunities-by-person-role}
+## Nouvelles opportunités par rôle individuel {#opportunities-by-person-role}
 
 Questions auxquelles répond cet aperçu :
 
@@ -150,7 +151,7 @@ LIMIT  5000;
 
 +++
 
-## Opportunités par chiffre d&#39;affaires {#opportunities-by-revenue}
+## Nouvelles opportunités par recettes {#opportunities-by-revenue}
 
 Questions auxquelles répond cet aperçu :
 
@@ -190,7 +191,7 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 +++
 
-## Opportunités par statut et étape {#opportunities-by-status-and-stage}
+## Nouvelles opportunités par statut et étape {#opportunities-by-status-and-stage}
 
 Questions auxquelles répond cet aperçu :
 
@@ -223,7 +224,7 @@ FROM   opportunities_by_isclosed limit 5000;
 
 +++
 
-## Opportunités gagnées {#opportunities-won}
+## De nouvelles opportunités gagnées {#opportunities-won}
 
 Questions auxquelles répond cet aperçu :
 
