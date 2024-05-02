@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Audiences similaires
 description: Découvrez comment cibler de nouvelles audiences à forte valeur ajoutée dans Adobe Experience Platform à l’aide d’audiences look-alike.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: fe2bb709a7ee56323492fed381c447e6a79fd5f8
+source-git-commit: 36fffcddb09444dd6e010a4b5afeec6bf0b5c3bf
 workflow-type: tm+mt
-source-wordcount: '2212'
+source-wordcount: '2193'
 ht-degree: 10%
 
 ---
@@ -197,7 +197,7 @@ Les audiences semblables peuvent être configurées pour exclure les champs de d
 
 L’étiquette &quot;C9&quot; standard peut être utilisée pour étiqueter les données qui ne doivent pas être utilisées pour la science des données et qui peuvent être appliquées en activant la politique standard &quot;Limiter la science des données&quot;. Vous pouvez également créer des stratégies supplémentaires pour limiter les données aux autres étiquettes, y compris les étiquettes sensibles, à partir de l’utilisation de la science des données. Pour plus d’informations sur la gestion des stratégies d’utilisation des données, consultez la section [Guide d’utilisation des stratégies de données](../../data-governance/policies/user-guide.md). Pour plus d’informations sur la gestion des libellés d’utilisation des données, consultez la section [Guide d’utilisation des libellés d’utilisation des données](../../data-governance/labels/user-guide.md).
 
-Par défaut, le processus de modélisation pour les audiences look-alike exclut **any** champ, jeu de données ou audience en fonction de la politique de confidentialité activée pour votre entreprise. Si l’audience de base ne comporte pas de libellés de contrat, le processus de modélisation exclura **any** champ, jeu de données ou audience en fonction de la politique de confidentialité activée pour votre entreprise.
+Par défaut, si une audience de base ne comporte pas d’étiquettes de contrat, le processus de modélisation pour les audiences look-alike **any** champ, jeu de données ou audience en fonction de la politique de confidentialité activée pour votre entreprise.
 
 ## Étapes suivantes
 

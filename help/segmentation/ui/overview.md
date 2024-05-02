@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’IU de Segmentation Service
 description: Découvrez comment créer et gérer des audiences et des définitions de segment dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c1a2d55cb99a1f66698289751a967f8c5f80a7bf
+source-git-commit: 795b76465c59fc375542b92cdd3deefce8c000ca
 workflow-type: tm+mt
-source-wordcount: '4105'
-ht-degree: 83%
+source-wordcount: '4274'
+ht-degree: 80%
 
 ---
 
@@ -82,12 +82,8 @@ Une icône de points de suspension se trouve à côté de chaque audience. Cette
 | [!UICONTROL Appliquer les libellés d’accès] | Composition d’audience, chargement personnalisé, Segmentation Service | Gère les étiquettes d’accès qui appartiennent à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Publier] | Chargement personnalisé, service de segmentation | Publie l’audience sélectionnée. Pour plus d’informations sur la gestion de l’état du cycle de vie, consultez la section [section état du cycle de vie du FAQ sur la segmentation](../faq.md#lifecycle-states). |
 | [!UICONTROL Désactiver] | Chargement personnalisé, service de segmentation | Désactive l’audience sélectionnée. Pour plus d’informations sur la gestion de l’état du cycle de vie, consultez la section [section état du cycle de vie du FAQ sur la segmentation](../faq.md#lifecycle-states). |
-| [!UICONTROL Supprimer] | Composition d’audience, chargement personnalisé, Segmentation Service | Supprime l’audience sélectionnée. |
+| [!UICONTROL Supprimer] | Composition d’audience, chargement personnalisé, Segmentation Service | Supprime l’audience sélectionnée. Audiences utilisées dans des destinations en aval ou qui dépendent d’autres audiences **cannot** être supprimées. Pour plus d’informations sur la suppression d’une audience, veuillez lire le [FAQ sur la segmentation](../faq.md#lifecycle-states). |
 | [!UICONTROL Ajouter au package] | Composition d’audience, chargement personnalisé, Segmentation Service | Déplace l’audience entre les environnements de test. Pour plus d’informations sur cette fonctionnalité, veuillez lire la section [guide d’outils sandbox](../../sandboxes/ui/sandbox-tooling.md). |
-
->[!NOTE]
->
-> Vous **ne pourrez pas** supprimer une audience utilisée dans une activation de destination.
 
 Dans la partie supérieure de la page, vous trouverez des options permettant d’ajouter toutes les audiences à un planning, d’importer une audience, de créer une audience et d’afficher une ventilation de la fréquence de mise à jour.
 
@@ -356,6 +352,15 @@ Lors de l&#39;import de l&#39;audience générée en externe, vous devez sélect
 
 ![La page [!UICONTROL Détails de l’audience] s’affiche.](../images/ui/overview/import-audience-audience-details.png)
 
+Vous pouvez également éventuellement ajouter des détails supplémentaires à votre audience générée en externe, notamment lui donner un identifiant, définir sa stratégie de fusion ou modifier son type de données de colonne.
+
+>[!NOTE]
+>
+>Si vous utilisez un identifiant d’audience externe personnalisé, celui-ci doit respecter les instructions suivantes :
+>
+> - It **must** commencer par une lettre (a-z ou A-Z), un trait de soulignement (_) ou un symbole du dollar ($).
+> - Tous les caractères suivants peuvent être alphanumériques (a-z, A-Z, 0-9), des traits de soulignement (_) ou des signes dollar ($).
+
 Après avoir renseigné les détails de votre audience, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Le bouton [!UICONTROL Suivant] est mis en surbrillance sur la page [!UICONTROL Détails de l’audience].](../images/ui/overview/import-audience-filled-details.png)
@@ -397,6 +402,14 @@ Sélectionnez l’onglet **[!UICONTROL Compositions]** pour afficher la liste de
 ![Liste des audiences créées dans la Composition d’audience pour votre organisation.](../images/ui/overview/compositions.png)
 
 Par défaut, cette vue répertorie les informations sur les audiences, notamment les éléments suivants : Nom, Statut, Date de création, Créé par, Dernière date de mise à jour et Dernière mise à jour par.
+
+Une icône de points de suspension se trouve à côté de chaque audience. Cette option affiche la liste des actions rapides disponibles pour l’audience.
+
+| Action | Description |
+| ------ | ----------- |
+| Dupliquer | Copie l’audience sélectionnée. |
+| Gérer l’accès | Gère les étiquettes d’accès qui appartiennent à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
+| Supprimer | Supprime l’audience sélectionnée. Audiences utilisées dans des destinations en aval ou qui dépendent d’autres audiences **cannot** être supprimées. Pour plus d’informations sur la suppression d’une audience, veuillez lire le [FAQ sur la segmentation](../faq.md#lifecycle-states). |
 
 Vous pouvez sélectionner l’icône ![Personnaliser le tableau](../images/ui/overview/customize-table.png) pour modifier les champs affichés.
 
