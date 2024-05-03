@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: ea3df4f05850547c75358fb15bf7a1e6a1d19dbf
 workflow-type: tm+mt
-source-wordcount: '1983'
-ht-degree: 98%
+source-wordcount: '2024'
+ht-degree: 96%
 
 ---
 
@@ -13,6 +13,15 @@ ht-degree: 98%
 # Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir les [notes de mise à jour du SDK Web Platform](/help/web-sdk/release-notes.md).
+
+## Version 2.22.0 - samedi 3 mai 2024
+
+**Nouvelles fonctionnalités**
+
+* Étendre l’élément de données de variable pour prendre en charge les objets de données.
+* L’action de mise à jour de variable prend désormais en charge la modification des données Adobe Analytics, Adobe Audience Manager et Adobe Target transmises.
+
+Contient la version 2.19.2 du SDK Web d’Adobe Experience Platform.
 
 ## Version 2.21.4 - 10 janvier 2024
 
