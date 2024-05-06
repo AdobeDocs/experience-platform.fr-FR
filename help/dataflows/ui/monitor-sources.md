@@ -5,7 +5,7 @@ exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 51f8a8c77518a0b2e9e4b914c891f97433db1ef2
 workflow-type: tm+mt
 source-wordcount: '1256'
-ht-degree: 19%
+ht-degree: 20%
 
 ---
 
@@ -28,7 +28,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 * [Profil client en temps réel](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
 * [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-## Surveillez les données de vos sources à l’aide du tableau de bord de surveillance
+## Surveillez les données de vos sources à l’aide du tableau de bord de surveillance.
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
