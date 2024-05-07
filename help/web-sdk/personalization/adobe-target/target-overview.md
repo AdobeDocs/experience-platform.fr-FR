@@ -2,9 +2,9 @@
 title: Utilisation d’Adobe Target avec le SDK Web pour la personnalisation
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: a34204eb58ed935831d26caf062ebb486039669f
+source-git-commit: 69406293dce5fdfc832adff801f1991626dafae0
 workflow-type: tm+mt
-source-wordcount: '1354'
+source-wordcount: '1345'
 ht-degree: 4%
 
 ---
@@ -183,7 +183,7 @@ Pour mettre à jour une [!DNL Target] , assurez-vous que les données de profil 
 | `xdm` | Objet | Données formatées dans XDM qui se trouve dans le SDK Web en tant qu’événement d’expérience |
 | `data` | Objet | Paires clé/valeur arbitraires envoyées à [!DNL Target] solutions sous la classe cible. |
 
-Typique [!DNL Web SDK] Le code utilisant cette commande ressemble à ce qui suit :
+<!--Typical [!DNL Web SDK] code using this command looks like the following:-->
 
 **Retarder l’enregistrement des paramètres de profil ou d’entité jusqu’à ce que le contenu soit affiché pour l’utilisateur final.**
 
