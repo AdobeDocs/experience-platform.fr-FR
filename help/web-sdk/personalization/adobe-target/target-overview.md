@@ -2,10 +2,10 @@
 title: Utilisation d’Adobe Target avec le SDK Web pour la personnalisation
 description: Découvrez comment effectuer le rendu du contenu personnalisé avec le SDK Web Experience Platform à l’aide d’Adobe Target
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 0b662b4c1801a6d6f6fc2c6ade92d259b821ab23
+source-git-commit: a34204eb58ed935831d26caf062ebb486039669f
 workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 5%
+source-wordcount: '1354'
+ht-degree: 4%
 
 ---
 
@@ -184,6 +184,58 @@ Pour mettre à jour une [!DNL Target] , assurez-vous que les données de profil 
 | `data` | Objet | Paires clé/valeur arbitraires envoyées à [!DNL Target] solutions sous la classe cible. |
 
 Typique [!DNL Web SDK] Le code utilisant cette commande ressemble à ce qui suit :
+
+**Retarder l’enregistrement des paramètres de profil ou d’entité jusqu’à ce que le contenu soit affiché pour l’utilisateur final.**
+
+Pour retarder l’enregistrement des attributs dans le profil jusqu’à ce que le contenu soit affiché, définissez `data.adobe.target._save=false` dans votre requête.
+
+Par exemple, votre site web contient trois portées de décision correspondant à trois liens de catégorie sur le site web (Hommes, Femmes et Enfants) et vous souhaitez effectuer le suivi de la catégorie que l’utilisateur a finalement visitée. Envoyez ces requêtes avec la fonction `__save` indicateur défini sur `false` pour éviter de conserver la catégorie au moment de la demande de contenu. Une fois le contenu visualisé, envoyez la charge utile appropriée (y compris la variable `eventToken` et `stateToken`) pour les attributs correspondants à enregistrer.
+
+<!--Save profile or entity attributes by default with:
+
+```js
+alloy ( "sendEvent" , {
+  renderDecisions : true,
+  data : {
+    __adobe : {
+      target : {
+        "__save" : true // Optional. __save=true is the default 
+        "profile.gender" : "female",
+        "profile.age" : 30,
+        "entity.name" : "T-shirt",
+        "entity.id" : "1234",
+      }
+    }
+  }
+} ) ; 
+```
+-->
+
+L’exemple ci-dessous envoie un message de style trackEvent, exécute des scripts de profil, enregistre des attributs et enregistre immédiatement l’événement.
+
+```js
+alloy ( "sendEvent" , {
+  renderDecisions : true,
+  data : {
+    __adobe : {
+      target : {
+        "profile.gender" : "female",
+        "profile.age" : 30,
+        "entity.name" : "T-shirt" ,
+        "entity.id" : "1234" ,
+        "track": {
+          "scopes": [ "mbox1", "mbox2"],
+          "type": "display|click|..."
+        }
+      }
+    }
+  }
+} ) ;
+```
+
+>[!NOTE]
+>
+>Si la variable `__save` est omise, l’enregistrement des attributs de profil et d’entité se produit immédiatement, comme si la requête avait été exécutée, même si le reste de la requête est une prérécupération de la personnalisation. La variable `__save` n’est pertinente que pour les attributs de profil et d’entité. Si l’objet de suivi est présent, la variable `__save` est ignorée. Les données sont immédiatement enregistrées et la notification est enregistrée.
 
 **`sendEvent`avec données de profil**
 
