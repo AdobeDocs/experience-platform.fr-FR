@@ -1,17 +1,17 @@
 ---
 title: Configurer les remplacements de trains de données
-description: Découvrez comment configurer les remplacements de trains de données dans l’interface utilisateur des trains de données et à les activer via le SDK Web.
+description: Découvrez comment configurer les remplacements de flux de données dans l’interface utilisateur des flux de données et les activer via le SDK web ou le SDK mobile.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: b9b6320b15ee93807ebf8b48f31be7386a6f4a19
+source-git-commit: 17ed5f3c14d4787352f72d3d7721cbb6416d533e
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 68%
+source-wordcount: '1081'
+ht-degree: 57%
 
 ---
 
 # Configurer les remplacements de trains de données
 
-Les remplacements de trains de données vous permettent de définir des configurations supplémentaires pour vos trains de données, qui sont transmises au réseau Edge via le SDK Web.
+Les remplacements de flux de données vous permettent de définir des configurations supplémentaires pour vos flux de données, qui sont transmises à l’Edge Network par le biais du SDK Web ou du SDK mobile.
 
 Vous pouvez ainsi déclencher différents comportements de flux de données par rapport aux comportements par défaut, sans créer de flux de données ni modifier vos paramètres existants.
 
@@ -68,7 +68,7 @@ Une fois que vous avez créé le flux de données, modifiez la variable [Adobe T
 
 Une fois que vous avez ajouté les remplacements souhaités, enregistrez les paramètres du train de données.
 
-La configuration des remplacements de trains de données pour Adobe Target est terminée. Vous pouvez maintenant [envoyer les remplacements au réseau Edge via le SDK Web](#send-overrides).
+La configuration des remplacements de trains de données pour Adobe Target est terminée. Maintenant, vous pouvez [envoyer les remplacements à l’Edge Network via le SDK Web ou le SDK Mobile ;](#send-overrides).
 
 ### Remplacements de trains de données pour Adobe Analytics {#analytics-overrides}
 
@@ -82,7 +82,7 @@ Sélectionnez **[!UICONTROL Afficher le mode par lots]** pour activer la modific
 
 Une fois que vous avez ajouté les remplacements souhaités, enregistrez les paramètres du train de données.
 
-La configuration des remplacements de trains de données Adobe Analytics est terminée. Vous pouvez maintenant [envoyer les remplacements au réseau Edge via le SDK Web](#send-overrides).
+La configuration des remplacements de trains de données Adobe Analytics est terminée. Maintenant, vous pouvez [envoyer les remplacements à l’Edge Network via le SDK Web ou le SDK Mobile ;](#send-overrides).
 
 ### Remplacements de trains de données pour les jeux de données d’événements Experience Platform {#event-dataset-overrides}
 
@@ -94,7 +94,7 @@ Une fois que vous avez créé le flux de données, modifiez la variable [Adobe E
 
 Une fois que vous avez ajouté les remplacements souhaités, enregistrez les paramètres du train de données.
 
-Vous avez terminé la configuration des remplacements de trains de données Adobe Experience Platform. Vous pouvez maintenant [envoyer les remplacements au réseau Edge via le SDK Web](#send-overrides).
+Vous avez terminé la configuration des remplacements de trains de données Adobe Experience Platform. Maintenant, vous pouvez [envoyer les remplacements à l’Edge Network via le SDK Web ou le SDK Mobile ;](#send-overrides).
 
 ### Remplacements de trains de données pour les conteneurs de synchronisation d’identifiants tiers {#container-overrides}
 
@@ -112,9 +112,9 @@ Consultez ensuite la section **[!UICONTROL Remplacements d’ID de conteneur]** 
 
 Une fois que vous avez ajouté les remplacements souhaités, enregistrez les paramètres du train de données.
 
-Vous avez terminé la configuration des remplacements de conteneurs de synchronisation d’identifiants. Vous pouvez maintenant [envoyer les remplacements au réseau Edge via le SDK Web](#send-overrides).
+Vous avez terminé la configuration des remplacements de conteneurs de synchronisation d’identifiants. Maintenant, vous pouvez [envoyer les remplacements à l’Edge Network via le SDK Web ou le SDK Mobile ;](#send-overrides).
 
-## Envoyer les remplacements au réseau Edge via le SDK Web {#send-overrides}
+## Envoyer les remplacements à l’Edge Network {#send-overrides}
 
 Après avoir configuré les remplacements de flux de données dans l’interface utilisateur de collecte de données, vous pouvez envoyer les remplacements à l’Edge Network par le biais du SDK Web ou du SDK mobile.
 
