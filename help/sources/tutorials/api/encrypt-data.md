@@ -2,16 +2,16 @@
 title: Ingestion de données chiffrées
 description: Découvrez comment ingérer des fichiers chiffrés par le biais de sources de lots d’espaces de stockage à l’aide de l’API.
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: a92a3d4ce16e50d9eec97448e677ca603931fa44
+source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
 workflow-type: tm+mt
-source-wordcount: '1473'
-ht-degree: 89%
+source-wordcount: '1736'
+ht-degree: 76%
 
 ---
 
 # Ingestion de données chiffrées
 
-Adobe Experience Platform vous permet d’ingérer des fichiers chiffrés par le biais de sources de lot d’espace de stockage dans le cloud. Avec l’ingestion de données chiffrées, vous pouvez utiliser des mécanismes de chiffrement asymétrique pour transférer en toute sécurité des données par lots dans Experience Platform. Actuellement, les mécanismes de chiffrement asymétrique pris en charge sont PGP et GPG.
+Vous pouvez ingérer des fichiers de données chiffrés dans Adobe Experience Platform à l’aide de sources par lots de stockage dans le cloud. Avec l’ingestion de données chiffrées, vous pouvez utiliser des mécanismes de chiffrement asymétrique pour transférer en toute sécurité des données par lots dans Experience Platform. Actuellement, les mécanismes de chiffrement asymétrique pris en charge sont PGP et GPG.
 
 Le processus d’ingestion des données chiffrées est le suivant :
 
@@ -27,7 +27,7 @@ Le processus d’ingestion des données chiffrées est le suivant :
 
 Ce document décrit les étapes à suivre pour générer une paire de clés de chiffrement pour vos données et ingérer ces données chiffrées sur Experience Platform à l’aide de sources d’espace de stockage dans le cloud.
 
-## Prise en main
+## Commencer {#get-started}
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
@@ -39,9 +39,9 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide [Prise en main des API Platform](../../../landing/api-guide.md).
 
-### Extensions de fichiers prises en charge pour les fichiers chiffrés
+### Extensions de fichiers prises en charge pour les fichiers chiffrés {#supported-file-extensions-for-encrypted-files}
 
-La liste des extensions de fichier prises en charge pour les fichiers chiffrés est la suivante :
+La liste des extensions de fichier prises en charge pour les fichiers chiffrés est la suivante :
 
 * .csv
 * .tsv
@@ -74,6 +74,8 @@ POST /data/foundation/connectors/encryption/keys
 
 **Requête**
 
++++Affichage d’un exemple de requête
+
 La requête suivante génère une paire de clés de chiffrement à l’aide de l’algorithme de chiffrement PGP.
 
 ```shell
@@ -97,7 +99,11 @@ curl -X POST \
 | `encryptionAlgorithm` | Type d’algorithme de chiffrement que vous utilisez. Les types de chiffrement pris en charge sont `PGP` et `GPG`. |
 | `params.passPhrase` | La phrase secrète fournit un niveau supplémentaire de protection pour vos clés de chiffrement. Lors de sa création, Experience Platform stocke la phrase secrète dans un coffre sécurisé différent de celui de la clé publique. Vous devez fournir une chaîne non vide comme phrase secrète. |
 
++++
+
 **Réponse**
+
++++Affichage d’un exemple de réponse
 
 Une réponse réussie renvoie votre clé publique codée en Base64, votre identifiant de clé publique et la date d’expiration de vos clés. La date d’expiration est automatiquement définie sur 180 jours après la date de génération de la clé. La date d’expiration ne peut actuellement pas être configurée.
 
@@ -115,9 +121,93 @@ Une réponse réussie renvoie votre clé publique codée en Base64, votre identi
 | `publicKeyId` | L’identifiant de clé publique permet de créer un flux de données et d’ingérer les données chiffrées provenant de votre espace de stockage dans Experience Platform. |
 | `expiryTime` | Le délai d’expiration définit la date d’expiration de votre paire de clés de chiffrement. Cette date est automatiquement définie sur 180 jours après la date de génération de la clé et s’affiche au format de date et heure UNIX. |
 
-+++(Facultatif) Créer une paire de clés de vérification de signature pour les données signées
++++
 
-### Créer une paire de clés gérée par le client ou la cliente
+### Récupération des clés de chiffrement {#retrieve-encryption-keys}
+
+Pour récupérer toutes les clés de chiffrement de votre organisation, envoyez une requête GET à la fonction `/encryption/keys` endpoint=nt.
+
+**Format d’API**
+
+```http
+GET /data/foundation/connectors/encryption/keys
+```
+
+**Requête**
+
++++Affichage d’un exemple de requête
+
+La requête suivante récupère toutes les clés de chiffrement de votre organisation.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Réponse**
+
++++Affichage d’un exemple de réponse
+
+Une réponse réussie renvoie votre algorithme de chiffrement, votre clé publique, votre ID de clé publique et le délai d’expiration correspondant de vos clés.
+
+```json
+{
+    "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "publicKey": "{PUBLIC_KEY}",
+    "expiryTime": "{EXPIRY_TIME}"
+}
+```
+
++++
+
+### Récupération des clés de chiffrement par identifiant {#retrieve-encryption-keys-by-id}
+
+Pour récupérer un ensemble spécifique de clés de chiffrement, envoyez une demande de GET à la variable `/encryption/keys` et fournissez votre ID de clé publique comme paramètre d’en-tête.
+
+**Format d’API**
+
+```http
+GET /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
+```
+
+**Requête**
+
++++Affichage d’un exemple de requête
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Réponse**
+
++++Affichage d’un exemple de réponse
+
+Une réponse réussie renvoie votre algorithme de chiffrement, votre clé publique, votre ID de clé publique et le délai d’expiration correspondant de vos clés.
+
+```json
+{
+    "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "publicKey": "{PUBLIC_KEY}",
+    "expiryTime": "{EXPIRY_TIME}"
+}
+```
+
++++
+
+### Créer une paire de clés gérée par le client ou la cliente {#create-customer-managed-key-pair}
 
 Si vous le souhaitez, vous pouvez créer une paire de clés de vérification de signature pour signer et ingérer vos données chiffrées.
 
@@ -134,6 +224,8 @@ POST /data/foundation/connectors/encryption/customer-keys
 ```
 
 **Requête**
+
++++Affichage d’un exemple de requête
 
 ```shell
 curl -X POST \
@@ -154,7 +246,11 @@ curl -X POST \
 | `encryptionAlgorithm` | Type d’algorithme de chiffrement que vous utilisez. Les types de chiffrement pris en charge sont `PGP` et `GPG`. |
 | `publicKey` | La clé publique qui correspond aux clés gérées par le client ou la cliente utilisées pour signer vos données chiffrées. Cette clé doit être codée au format Base64. |
 
++++
+
 **Réponse**
+
++++Affichage d’un exemple de réponse
 
 ```json
 {    
@@ -206,11 +302,13 @@ Pour créer un flux de données, envoyez une requête POST au point d’entrée 
 POST /flows
 ```
 
-**Requête**
-
 >[!BEGINTABS]
 
 >[!TAB Créer un flux de données pour l’ingestion de données chiffrées]
+
+**Requête**
+
++++Affichage d’un exemple de requête
 
 La requête suivante crée un flux de données pour ingérer des données chiffrées pour une source d’espace de stockage dans le cloud.
 
@@ -268,8 +366,28 @@ curl -X POST \
 | `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. Les valeurs possibles sont les suivantes : `once`, `minute`, `hour`, `day` ou `week`. |
 | `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. L’intervalle n’est pas requis lorsque la fréquence est définie sur `once` et doit être supérieur ou égal à `15` pour d’autres valeurs de fréquence. |
 
++++
+
+**Réponse**
+
++++Affichage d’un exemple de réponse
+
+Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données créé pour vos données chiffrées.
+
+```json
+{
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
+}
+```
+
++++
 
 >[!TAB Créer un flux de données pour ingérer des données chiffrées et signées]
+
+**Requête**
+
++++Affichage d’un exemple de requête
 
 ```shell
 curl -X POST \
@@ -318,9 +436,11 @@ curl -X POST \
 | --- | --- |
 | `params.signVerificationKeyId` | L’identifiant de clé de vérification de signature est identique à l’identifiant de clé publique récupéré après le partage de votre clé publique encodée en Base64 avec Experience Platform. |
 
->[!ENDTABS]
++++
 
 **Réponse**
+
++++Affichage d’un exemple de réponse
 
 Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données créé pour vos données chiffrées.
 
@@ -331,10 +451,92 @@ Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données
 }
 ```
 
++++
 
->[!BEGINSHADEBOX]
+>[!ENDTABS]
 
-**Restrictions relatives à l’ingestion récurrente**
+### Suppression des clés de chiffrement {#delete-encryption-keys}
+
+Pour supprimer vos clés de chiffrement, envoyez une demande de DELETE au `/encryption/keys` et fournissez votre ID de clé publique comme paramètre d’en-tête.
+
+**Format d’API**
+
+```http
+DELETE /data/foundation/connectors/encryption/keys/{PUBLIC_KEY_ID}
+```
+
+**Requête**
+
++++Affichage d’un exemple de requête
+
+```shell
+curl -X DELETE \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Réponse**
+
+Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide.
+
+### Validation des clés de chiffrement {#validate-encryption-keys}
+
+Pour valider vos clés de chiffrement, envoyez une demande de GET à la fonction `/encryption/keys/validate/` et fournissez l’ID de clé publique que vous souhaitez valider en tant que paramètre d’en-tête.
+
+```http
+GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}
+```
+
+**Requête**
+
++++Affichage d’un exemple de requête
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/keys/validate/{publicKeyId}' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Réponse**
+
+Une réponse réussie renvoie une confirmation que vos identifiants sont valides ou non valides.
+
+>[!BEGINTABS]
+
+>[!TAB Valide]
+
+Un identifiant de clé publique valide renvoie un état de `Active` ainsi que votre ID de clé publique.
+
+```json
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Active"
+}
+```
+
+>[!TAB Non valide]
+
+Un identifiant de clé publique non valide renvoie un état de `Expired` ainsi que votre ID de clé publique.
+
+```json
+{
+    "publicKeyId": "{PUBLIC_KEY_ID}",
+    "status": "Expired"
+}
+```
+
+>[!ENDTABS]
+
+
+## Restrictions relatives à l’ingestion récurrente {#restrictions-on-recurring-ingestion}
 
 L’ingestion de données chiffrées ne prend pas en charge l’ingestion de dossiers récurrents ou à plusieurs niveaux dans des sources. Tous les fichiers cryptés doivent être contenus dans un seul dossier. Les caractères génériques avec plusieurs dossiers dans un seul chemin source ne sont pas non plus pris en charge.
 
@@ -363,7 +565,6 @@ Dans ce scénario, l’exécution du flux échoue et renvoie un message d’erre
 * ACME-loyalty
    * File6.csv.gpg
 
->[!ENDSHADEBOX]
 
 ## Étapes suivantes
 
