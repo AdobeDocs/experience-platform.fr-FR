@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation des services intelligents
 description: Intelligent Services permet aux analystes et spécialistes du marketing d’exploiter la puissance de l’intelligence artificielle et du machine learning dans les cas d’utilisation de l’expérience client. Les analystes marketing peuvent obtenir des prédictions spécifiques aux besoins d’une entreprise en utilisant des configurations au niveau de l’entreprise sans avoir besoin d’expertise en sciences des données. De plus, les spécialistes du marketing peuvent activer les prédictions dans Adobe Experience Cloud, Adobe Experience Platform et les applications tierces.
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
-source-git-commit: edc812c2725f92d71af30a3107de067f85ca1235
+source-git-commit: d6a4b149b911cd6e7dbbd6c1289fce64be76b506
 workflow-type: tm+mt
 source-wordcount: '505'
 ht-degree: 100%
@@ -14,7 +14,7 @@ ht-degree: 100%
 # Présentation des services intelligents {#intelligent-services-overview}
 
 >[!CONTEXTUALHELP]
->id="platform_intelligent-services_home"
+>id="platform_intelligentservices_home"
 >title="Présentation des services intelligents"
 >abstract=""
 
