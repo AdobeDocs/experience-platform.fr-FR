@@ -5,18 +5,23 @@ title: Publication d’un modèle en tant que service dans l’interface utilisa
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace vous permet de publier votre modèle formé et évalué en tant que service, ce qui permet aux utilisateurs de votre organisation de noter des données sans avoir à créer leurs propres modèles.
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 74dd4cb786cb96c04d15005fe869ff861093edc3
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 36%
+source-wordcount: '505'
+ht-degree: 33%
 
 ---
 
-# Publication d’un modèle en tant que service dans l’interface utilisateur de Data Science Workspace
+# Publication d’un modèle en tant que service dans l’interface utilisateur de Data Science Workspace {#publish-a-model-as-a-service}
+
+>[!CONTEXTUALHELP]
+>id="platform_intelligent-services_publishmodel"
+>title="Publication d’un modèle en tant que service"
+>abstract=""
 
 Adobe Experience Platform Data Science Workspace vous permet de publier votre modèle formé et évalué en tant que service, ce qui permet aux utilisateurs de votre organisation de noter des données sans avoir à créer leurs propres modèles.
 
-## Prise en main
+## Commencer
 
 Pour suivre ce tutoriel, vous devez avoir accès à [!DNL Experience Platform]. Si vous n’avez pas accès à une organisation dans [!DNL Experience Platform], contactez votre administrateur système avant de continuer.
 
@@ -64,7 +69,7 @@ Lorsqu’un service est créé, il hérite des configurations de notation par d�
 
 ![](../images/models-recipes/publish-model/scoring_configs.png)
 
-Sur la page **Présentation** du service, vous retrouvez les détails de la nouvelle tâche de notation et sa progression. Une fois la tâche terminée, la variable **[!UICONTROL Le plus récent]** dans l’en-tête **[!UICONTROL Notation]** Le conteneur est mis à jour.
+Sur la page **Présentation** du service, vous retrouvez les détails de la nouvelle tâche de notation et sa progression. Une fois la tâche terminée, la variable **[!UICONTROL Le plus récent]** dans l’en-tête **[!UICONTROL Notation]** est mis à jour.
 
 ![](../images/models-recipes/publish-model/pending_scoring.png)
 
