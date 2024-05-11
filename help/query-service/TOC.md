@@ -5,9 +5,9 @@ breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 61b20f2a618ed4305351b2fe6ff771a45d759de1
+source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '321'
 ht-degree: 82%
 
 ---
@@ -29,6 +29,7 @@ ht-degree: 82%
       - [Création de jeux de données dérivés basés sur des déciles](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - Informations personnalisables pour la création de rapports d’application étendue {#customizable-insights}
       - [Vue d’ensemble](data-distiller/customizable-insights/overview.md)
+      - [Mode Requête pro](data-distiller/customizable-insights/query-pro-mode.md)
       - [Envoi de requêtes accélérées](data-distiller/customizable-insights/send-accelerated-queries.md)
       - [Guide sur le modèle de données d’insights de rapports](data-distiller/customizable-insights/reporting-insights-data-model.md)
    - Pipelines de fonctionnalités AI/ML {#ml-feature-pipelines}
@@ -115,4 +116,4 @@ ht-degree: 82%
 - [Questions fréquentes](troubleshooting-guide.md)
 - [Liste autorisée d’adresses IP](ip-address-allowlist.md)
 - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

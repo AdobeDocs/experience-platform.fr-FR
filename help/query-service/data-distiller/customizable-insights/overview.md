@@ -1,9 +1,10 @@
 ---
 title: Informations personnalisables
 description: Découvrez les cas d’utilisation, les fonctionnalités essentielles et les étapes requises pour développer un tableau de bord d’informations personnalisables avec Data Distiller. Découvrez comment la fonctionnalité Informations personnalisables de Data Distiller peut améliorer la transparence et obtenir des informations opérationnelles sur différentes dimensions telles que les profils, les audiences, les campagnes, les parcours, les droits et le consentement.
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
+source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '941'
 ht-degree: 5%
 
 ---
@@ -12,13 +13,15 @@ ht-degree: 5%
 
 Créez des modèles de données de rapports personnalisés sur mesure pour extraire des informations plus approfondies, optimiser des stratégies et adapter les analyses pour répondre aux besoins spécifiques de l’entreprise grâce à la fonctionnalité Informations personnalisables de Data Distiller. Utilisez la fonctionnalité Informations personnalisables pour améliorer la transparence et obtenir des informations opérationnelles à partir de vos données Adobe Experience Platform dans des dimensions telles que les profils, les audiences, les campagnes, les parcours, les droits et le consentement. Cette fonctionnalité offre une solution adaptative polyvalente pour adapter les modèles de données de rapport de votre entreprise en fonction de vos besoins spécifiques.
 
+À [visualiser vos statistiques personnalisables](../../../dashboards/data-distiller/overview.md) vous pouvez utiliser [mode query pro](../../../dashboards/data-distiller/customizable-insights/query-pro-mode.md) pour effectuer des analyses complexes avec des requêtes SQL personnalisées et transformer vos données en graphiques facilement interprétables. Utilisez le mode professionnel des requêtes pour créer des insights et des visualisations personnalisés sur vos tableaux de bord et répondre aux audiences techniques et non techniques en téléchargeant vos informations au format CSV.
+
 Ce document couvre les cas d’utilisation, les fonctionnalités essentielles et les étapes requises pour développer un tableau de bord d’insights personnalisables avec Data Distiller.
 
 ## Conditions préalables
 
 Ce tutoriel utilise des tableaux de bord définis par l’utilisateur pour visualiser les données de votre modèle de données personnalisé dans l’interface utilisateur de Platform. Voir [documentation des tableaux de bord définis par l’utilisateur](../../../dashboards/user-defined-dashboards.md) pour en savoir plus sur cette fonctionnalité.
 
-## Prise en main
+## Commencer
 
 Le SKU Data Distiller est nécessaire pour créer un modèle de données personnalisé pour vos rapports d’informations et pour étendre les modèles de données Real-time CDP qui contiennent des données Platform enrichies. Voir [packaging](../../packaging.md), [barrières de sécurité](../../guardrails.md#query-accelerated-store), et  [licences](../../data-distiller/license-usage.md) documentation relative au SKU de Data Distiller. Si vous ne possédez pas le SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
 

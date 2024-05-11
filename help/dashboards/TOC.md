@@ -5,10 +5,10 @@ breadcrumb-title: Guide des tableaux de bord
 user-guide-description: Découvrez comment visualiser les données dans Experience Platform via des tableaux de bord personnalisables.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 8daa1c190f4c868fc12a46c66f6970704c8de8fa
+source-git-commit: 3ebd17eced73424135fc93a90f05d758912eb7d0
 workflow-type: tm+mt
-source-wordcount: '106'
-ht-degree: 70%
+source-wordcount: '132'
+ht-degree: 62%
 
 ---
 
@@ -18,8 +18,19 @@ ht-degree: 70%
 * [Présentation des tableaux de bord](home.md)
 * [Autorisations d’accès aux tableaux de bord](permissions.md)
 * [Inventaire des tableaux de bord](inventory.md)
-* [Tableaux de bord définis par l’utilisateur ou l’utilisatrice](user-defined-dashboards.md)
+* [Tableaux de bord](user-defined-dashboards.md)
 * [Téléchargement de tableaux de bord au format PDF](download.md)
+* Data Distiller {#data-distiller}
+   * [Aperçu](data-distiller/overview.md)
+   * Informations personnalisables pour la création de rapports d’application étendue {#customizable-insights}
+      * [Vue d’ensemble](data-distiller/customizable-insights/overview.md)
+      * [Mode Requête pro (création de graphiques SQL)](data-distiller/customizable-insights/query-pro-mode.md)
+      * Filtres {#filters}
+         * [Filtre de date](data-distiller/customizable-insights/filters/date-filter.md)
+         * [Filtre global](data-distiller/customizable-insights/filters/global-filter.md)
+      * [En savoir plus](data-distiller/customizable-insights/view-more.md)
+      * [Afficher le SQL](data-distiller/customizable-insights/view-sql.md)
+      * [Téléchargement au format CSV](data-distiller/customizable-insights/download-csv.md)
 * Tableaux de bord disponibles {#guides}
    * [Profils](guides/profiles.md)
    * [Profils de compte](guides/account-profiles.md)

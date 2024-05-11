@@ -1,17 +1,18 @@
 ---
-title: Tableaux de bord définis par l’utilisateur
+title: Tableaux de bord personnalisés
 description: Découvrez comment créer et gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser des mesures clés.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: b3bd7a5ba1847518beafd12240c0d3a433a891d0
+source-git-commit: 17ad52864bbca09844c0241b6451e6811bd8f413
 workflow-type: tm+mt
-source-wordcount: '1608'
-ht-degree: 4%
+source-wordcount: '1624'
+ht-degree: 3%
 
 ---
 
-# Tableaux de bord définis par l’utilisateur ou l’utilisatrice
+# Tableaux de bord personnalisés
 
-Les tableaux de bord Adobe Experience Platform vous permettent d’accélérer les insights et de personnaliser la visualisation par le biais de la fonctionnalité de tableaux de bord définis par l’utilisateur. Cette fonctionnalité vous permet de créer et de gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser les mesures clés pertinentes pour votre entreprise.
+Utilisez les tableaux de bord Adobe Experience Platform pour accélérer les insights et personnaliser la visualisation par le biais de la fonctionnalité Tableaux de bord . Utilisez cette fonction pour créer et gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés afin de visualiser les mesures clés pertinentes pour votre entreprise.
+
 
 <!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
@@ -25,15 +26,18 @@ Pour créer un tableau de bord personnalisé, accédez d’abord à l’inventai
 
 ![L’inventaire des tableaux de bord avec les tableaux de bord dans le volet de navigation de gauche et &quot;Créer un tableau de bord&quot; est mis en surbrillance.](./images/user-defined-dashboards/create-dashboard.png)
 
-Avant d’ajouter un tableau de bord personnalisé, l’inventaire des tableaux de bord est vide et affiche le message &quot;Aucun tableau de bord trouvé&quot;.  (Jeton récupéré) s’affiche.  Une fois créés, tous vos tableaux de bord définis par l’utilisateur sont répertoriés dans l’inventaire des tableaux de bord.
+Avant d’ajouter un tableau de bord personnalisé, l’inventaire des tableaux de bord est vide et affiche le message &quot;Aucun tableau de bord trouvé&quot;. message. Une fois créés, tous vos tableaux de bord sont répertoriés dans l’inventaire des tableaux de bord.
 
->[!NOTE]
+<!-- >[!NOTE]
 >
->Pour modifier un tableau de bord existant, sélectionnez le nom du tableau de bord dans la liste de stock, puis cliquez sur l’icône en forme de crayon (![Une icône en forme de crayon.](./images/user-defined-dashboards/edit-icon.png))
+>To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](./images/user-defined-dashboards/edit-icon.png))
+>![A custom inventory listed in the dashboard inventory.](./images/user-defined-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
 
 La variable [!UICONTROL Créer un tableau de bord] s’affiche. Saisissez un nom explicite et convivial pour la collection de widgets que vous souhaitez créer, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
 ![Boîte de dialogue Créer un tableau de bord .](./images/user-defined-dashboards/create-dashboard-dialog.png)
+
+Les utilisateurs qui ont acheté le SKU de Data Distiller ont la possibilité d’utiliser des requêtes SQL personnalisées pour créer leurs informations. Voir [Guide de création d’Insight personnalisable](./data-distiller/customizable-insights/overview.md) pour obtenir des instructions sur ce workflow.
 
 Le tableau de bord vierge nouvellement créé s’affiche avec le nom de votre choix dans le coin supérieur gauche de la vue.
 
@@ -42,13 +46,13 @@ Le tableau de bord vierge nouvellement créé s’affiche avec le nom de votre c
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_udd_maxwidgets"
 >title="Nombre maximal de widgets"
->abstract="Les tableaux de bord définis par l&#39;utilisateur prennent en charge jusqu&#39;à dix widgets. Une fois que vous avez ajouté dix widgets à votre tableau de bord, l&#39;option [!UICONTROL Ajouter un nouveau widget] est désactivée et apparaît en gris."
+>abstract="Le service de tableau de bord prend en charge jusqu’à dix widgets. Une fois que vous avez ajouté dix widgets à votre tableau de bord, l&#39;option [!UICONTROL Ajouter un nouveau widget] est désactivée et apparaît en gris."
 
 Dans la nouvelle vue de tableau de bord, sélectionnez **[!UICONTROL Ajouter un nouveau widget]** pour lancer le processus de création du widget.
 
 >[!IMPORTANT]
 >
->Les tableaux de bord définis par l&#39;utilisateur prennent en charge jusqu&#39;à dix widgets. Une fois que vous avez ajouté dix widgets à votre tableau de bord, l&#39;option [!UICONTROL Ajouter un nouveau widget] est désactivée et apparaît en gris.
+>Chaque tableau de bord prend en charge jusqu’à dix widgets. Une fois que vous avez ajouté dix widgets à votre tableau de bord, l&#39;option [!UICONTROL Ajouter un nouveau widget] est désactivée et apparaît en gris.
 
 ![Le nouveau tableau de bord vide avec l’option Ajouter un nouveau widget surlignée.](./images/user-defined-dashboards/add-new-widget.png)
 
@@ -150,21 +154,25 @@ Les widgets peuvent être réorganisés et redimensionnés dans cet espace de tr
 
 Pour s’assurer que chaque requête d’un tableau de bord des insights Adobe Real-time Customer Data Platform dispose de suffisamment de ressources pour s’exécuter efficacement, l’API effectue le suivi de l’utilisation des ressources en attribuant des emplacements simultanés à chaque requête. Le système peut traiter jusqu’à quatre requêtes simultanées. Par conséquent, quatre emplacements de requête simultanés sont disponibles à tout moment. Les requêtes sont placées dans une file d’attente en fonction des emplacements de simultanéité, puis patientez dans la file d’attente jusqu’à ce que suffisamment d’emplacements de simultanéité soient disponibles.
 
-### Duplication d’un widget
+### Modification, duplication ou suppression d’un widget {#duplicate}
 
-Une fois que vous avez créé un widget, vous pouvez dupliquer l’intégralité du widget et personnaliser ses attributs pour créer un widget unique sans avoir à partir de zéro. Pour dupliquer un widget, accédez d’abord à l’inventaire du tableau de bord. Sélectionnez ensuite le nom du tableau de bord dans la liste de stock. Votre tableau de bord personnalisé s’affiche.
+Une fois que vous avez créé un widget, vous pouvez modifier, dupliquer ou supprimer des widgets entiers de votre tableau de bord personnalisé.
 
-![L’interface utilisateur de Platform avec des tableaux de bord et un nom de tableau de bord personnalisé mis en surbrillance.](./images/user-defined-dashboards/dashbaord-inventory.png)
+>[!TIP]
+>
+>Pour basculer entre l’un de vos tableaux de bord personnalisés existants, sélectionnez Tableaux de bord dans la barre de navigation de gauche, puis sélectionnez le nom du tableau de bord dans la liste de stock.
 
 Sélectionnez l’icône de crayon (![Une icône en forme de crayon.](./images/user-defined-dashboards/edit-icon.png)) en haut à droite de votre tableau de bord personnalisé pour entrer en mode de modification.
 
 ![Un tableau de bord personnalisé avec l’icône en forme de crayon surlignée.](./images/user-defined-dashboards/edit-mode.png)
 
-Sélectionnez ensuite les ellipses situées en haut à droite du widget que vous souhaitez copier, puis choisissez **[!UICONTROL Dupliquer]** dans la liste des options disponibles.
+Sélectionnez ensuite les ellipses situées en haut à droite du widget que vous souhaitez modifier, copier ou supprimer. Sélectionnez l’action appropriée dans le menu déroulant.
 
-![Widget dans un tableau de bord défini par l’utilisateur, avec les points de suspension et le widget Dupliquer en surbrillance.](./images/user-defined-dashboards/duplicate.png)
+![Widget dans un tableau de bord personnalisé avec les points de suspension et le widget Dupliquer mis en surbrillance.](./images/user-defined-dashboards/duplicate.png)
 
-Un widget dupliqué apparaît dans le tableau de bord défini par l’utilisateur. Sélectionnez les ellipses de votre nouveau widget, suivies de **[!UICONTROL Modifier]**, pour personnaliser votre nouveau widget.
+>[!NOTE]
+>
+>La duplication vous permet de personnaliser les attributs d’un insight afin de créer un widget unique sans avoir à partir de zéro. Si vous dupliquez un widget, il apparaît dans votre tableau de bord personnalisé. Vous pouvez ensuite sélectionner les ellipses de votre nouveau widget, suivies de **[!UICONTROL Modifier]**, pour personnaliser vos informations.
 
 ## Étapes suivantes et ressources supplémentaires
 
@@ -172,6 +180,6 @@ En lisant ce document, vous comprenez mieux comment créer un tableau de bord pe
 
 Pour découvrir les mesures et visualisations préconfigurées disponibles pour la variable [profils](./guides/profiles.md#standard-widgets), [segments](./guides/audiences.md#standard-widgets), et [destinations](./guides/destinations.md#standard-widgets) pour les tableaux de bord, consultez la liste des widgets standard dans leur documentation respective.
 
-Pour mieux comprendre les tableaux de bord définis par l’utilisateur dans Experience Platform, regardez la vidéo suivante :
+Pour mieux comprendre les tableaux de bord en Experience Platform, regardez la vidéo suivante :
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)
