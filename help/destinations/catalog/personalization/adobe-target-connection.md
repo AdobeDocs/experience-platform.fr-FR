@@ -3,10 +3,10 @@ keywords: personnalisation cible;destination;destination cible Experience Platfo
 title: Connexion Adobe Target
 description: Adobe Target est une application qui permet la personnalisation et l’expérimentation en temps réel, grâce à l’IA, au niveau de toutes les interactions avec les clients entrants sur les sites web, les applications mobiles, etc.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: c113d9615a276af67714f38b8325e69737b23964
+source-git-commit: e9777960f347e32ff6288227ef95cec9cc4c55e7
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 41%
+source-wordcount: '1459'
+ht-degree: 37%
 
 ---
 
@@ -139,6 +139,16 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 >Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Lecture [Activation des audiences vers des destinations de personnalisation de périphérie](../../ui/activate-edge-personalization-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+
+## Suppression d’audiences d’une destination Target {#remove}
+
+Des étapes supplémentaires sont nécessaires pour supprimer une audience d’une connexion Adobe Target existante alors que cette audience est déjà utilisée dans une Adobe Target [activité](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). Toute tentative de suppression d’une audience d’une connexion Adobe Target entraîne une erreur si l’audience est utilisée par une activité Adobe Target.
+
+![Image de l’interface utilisateur de Platform montrant une erreur provoquée par la tentative de suppression d’une audience utilisée par une activité Target.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
+
+Pour supprimer une audience d’une destination cible lorsque l’audience est utilisée dans une activité, vous devez d’abord supprimer l’audience de l’activité Target qui l’utilise, ou supprimer complètement l’activité. Vous pouvez ensuite supprimer l’audience de votre connexion Target.
+
+Si l’audience n’est pas utilisée dans une activité, accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]** > **[!UICONTROL Sélectionner le flux de données de destination]** > **[!UICONTROL Données d’activation]**, sélectionnez les audiences à supprimer, puis sélectionnez **[!UICONTROL Suppression d’audiences]**.
 
 ## Données exportées {#exported-data}
 
