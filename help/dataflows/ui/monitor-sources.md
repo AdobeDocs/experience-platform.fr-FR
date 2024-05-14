@@ -38,7 +38,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_ingestion"
->title="Détails de l&#39;exécution du flux de données"
+>title="Détails de l’exécution du flux de données"
 >abstract="Le traitement des sources contient des informations sur l&#39;état de l&#39;activité des données et des mesures dans le service de lac de données, y compris les enregistrements ingérés et les enregistrements ayant échoué. Consultez le guide de définition des mesures pour en savoir plus sur les mesures et les graphiques."
 >text="Learn more in documentation"
 
@@ -105,7 +105,7 @@ Utilisez la page des détails d’exécution du flux de données pour afficher l
 
 ![La page de détails de l’exécution du flux de données.](../assets/ui/monitor-sources/dataflow-run-details.png)
 
-| Détails de l&#39;exécution du flux de données | Description |
+| Détails de l’exécution du flux de données | Description |
 | --- | --- |
 | Enregistrements ingérés | Le nombre total d’enregistrements ingérés à partir de l’exécution du flux de données. |
 | Échec des enregistrements | Nombre total d’enregistrements qui n’ont pas été ingérés en raison d’erreurs dans l’exécution du flux de données. |

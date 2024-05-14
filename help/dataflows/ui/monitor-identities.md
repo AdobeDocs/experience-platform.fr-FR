@@ -1,30 +1,30 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;contrôler les identités;contrôler les flux de données;flux de données;identités
-description: Adobe Experience Platform Identity Service vous offre la possibilité de mieux connaître vos clients et clientes ainsi que leur comportement en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel. Ce tutoriel explique comment surveiller les flux de données avec des identités à l’aide de l’interface utilisateur de l’Experience Platform.
+description: Adobe Experience Platform Identity Service vous offre une vue d’ensemble complète de vos clients et de leur comportement en rapprochant des identités entre appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel. Ce tutoriel explique comment surveiller les flux de données avec des identités à l’aide de l’interface utilisateur de l’Experience Platform.
 title: Surveillance des flux de données pour les identités dans l’interface utilisateur
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
-source-wordcount: '1149'
-ht-degree: 20%
+source-wordcount: '1151'
+ht-degree: 16%
 
 ---
 
 # Surveillance des flux de données pour les identités dans l’interface utilisateur
 
-Adobe Experience Platform Identity Service vous offre la possibilité de mieux connaître vos clients et clientes ainsi que leur comportement en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences numériques personnelles et percutantes en temps réel.
+Le service d’identités d’Adobe Experience Platform vous offre la possibilité de mieux connaître vos clients et leur comportement en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
 
 Le tableau de bord de surveillance vous fournit une représentation visuelle de l’activité des données dans les identités, y compris l’état des identités de vos données. Ce tutoriel explique comment utiliser le tableau de bord de surveillance pour surveiller les identités de vos données à l’aide de l’interface utilisateur de l’Experience Platform, ce qui vous permet de suivre l’état du traitement des identités.
 
-## Prise en main {#getting-started}
+## Commencer {#getting-started}
 
 - [Flux de données](../home.md) : les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Les flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers des jeux de données cibles, vers [!DNL Identity] et [!DNL Profile], et vers [!DNL Destinations].
    - [Exécutions de flux de données](../../sources/notifications.md): les exécutions de flux de données sont les tâches planifiées récurrentes en fonction de la configuration de fréquence des flux de données sélectionnés.
 - [Service d’identités](../../identity-service/home.md) : obtenez une meilleure compréhension des clients individuels et de leurs comportements en reliant les identités entre les appareils et les systèmes.
 - [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-## Tableau de bord des identités de surveillance {#identity-metrics}
+## Tableau de bord de surveillance des identités {#identity-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_identity_processing"
@@ -34,7 +34,7 @@ Le tableau de bord de surveillance vous fournit une représentation visuelle de 
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_identity"
->title="Détails de l&#39;exécution du flux de données"
+>title="Détails de l’exécution du flux de données"
 >abstract="La page Détails de l&#39;exécution du flux de données affiche plus d&#39;informations sur votre exécution du flux de données d&#39;identité, y compris son identifiant d&#39;organisation et son identifiant d&#39;exécution du flux de données."
 
 Pour accéder au **[!UICONTROL Identités]** tableau de bord, sélectionnez **[!UICONTROL Surveillance]** dans le volet de navigation de gauche. Une fois sur le **[!UICONTROL Surveillance]** , sélectionnez **[!UICONTROL Identités]** carte.
@@ -54,7 +54,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | Mesures d’identité | Description |
 | ---------------- | ----------- |
 | **[!UICONTROL Enregistrements reçus]** | Nombre d’enregistrements reçus du lac de données. |
-| **[!UICONTROL Échec des enregistrements]** | Nombre d’enregistrements qui n’ont pas été ingérés dans Platform en raison d’erreurs dans les données. |
+| **[!UICONTROL Enregistrements échoués]** | Nombre d’enregistrements qui n’ont pas été ingérés dans Platform en raison d’erreurs dans les données. |
 | **[!UICONTROL Enregistrements ignorés]** | Nombre d’enregistrements ingérés, mais pas dans [!DNL Identity Service] car il n’y avait qu’un seul identifiant dans la ligne d’enregistrement. |
 | **[!UICONTROL Enregistrements ingérés]** | Nombre d’enregistrements ingérés dans [!DNL Identity Service]. |
 | **[!UICONTROL Identités ajoutées]** | Nombre de nouveaux identifiants nets ajoutés à [!DNL Identity Service]. |
@@ -76,9 +76,9 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | -------| ----------- |
 | **[!UICONTROL Flux de données]** | Nom du flux de données. |
 | **[!UICONTROL Jeu de données]** | Nom du jeu de données auquel le flux de données est en cours d’insertion. |
-| **[!UICONTROL Nom de source]** | Nom de la source à laquelle le flux de données appartient. |
+| **[!UICONTROL Nom de la source]** | Nom de la source à laquelle le flux de données appartient. |
 | **[!UICONTROL Enregistrements reçus]** | Nombre d’enregistrements reçus du lac de données. |
-| **[!UICONTROL Échec des enregistrements]** | Nombre d’enregistrements qui n’ont pas été ingérés dans Platform en raison d’erreurs dans les données. |
+| **[!UICONTROL Enregistrements échoués]** | Nombre d’enregistrements qui n’ont pas été ingérés dans Platform en raison d’erreurs dans les données. |
 | **[!UICONTROL Enregistrements ignorés]** | Nombre d’enregistrements ingérés, mais pas dans [!DNL Identity Service] car il n’y avait qu’un seul identifiant dans la ligne d’enregistrement. |
 | **[!UICONTROL Enregistrements ingérés]** | Nombre d’enregistrements ingérés dans [!DNL Identity Service]. |
 | **[!UICONTROL Nombre total d’enregistrements]** | Comptage total de tous les enregistrements, y compris les enregistrements en échec, les enregistrements ignorés, les identités ajoutées et les enregistrements dupliqués. |
@@ -100,7 +100,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | Mesure | Description |
 | -------| ----------- |
 | **[!UICONTROL Enregistrements reçus]** | Nombre d’enregistrements reçus du lac de données. |
-| **[!UICONTROL Échec des enregistrements]** | Nombre d’enregistrements qui n’ont pas été ingérés dans Platform en raison d’erreurs dans les données. |
+| **[!UICONTROL Enregistrements échoués]** | Nombre d’enregistrements qui n’ont pas été ingérés dans Platform en raison d’erreurs dans les données. |
 | **[!UICONTROL Enregistrements ignorés]** | Nombre d’enregistrements ingérés, mais pas dans [!DNL Identity Service] car il n’y avait qu’un seul identifiant dans la ligne d’enregistrement. |
 | **[!UICONTROL Enregistrements ingérés]** | Nombre d’enregistrements ingérés dans [!DNL Identity Service]. |
 | **[!UICONTROL Identités ajoutées]** | Nombre de nouveaux identifiants nets ajoutés à [!DNL Identity Service]. |
