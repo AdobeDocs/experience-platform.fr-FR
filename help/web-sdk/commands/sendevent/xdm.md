@@ -1,9 +1,10 @@
 ---
 title: xdm
-description: Objet aligné sur le schéma envoyé à Adobe.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: Découvrez comment envoyer des données à Adobe par le biais de l’objet aligné sur le schéma XDM.
+exl-id: 1d8ef191-aed6-4c8b-a1fd-614bd8ed73da
+source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '248'
 ht-degree: 0%
 
 ---
@@ -14,13 +15,13 @@ La variable `xdm` contient la payload de données envoyée à Adobe. Les champs 
 
 Adobe Experience Platform utilise des schémas pour décrire la structure des données de manière cohérente et réutilisable. En définissant les données de manière cohérente sur l’ensemble des systèmes, il devient plus facile de conserver un sens et, par conséquent, d’en tirer profit.
 
-Ce champ est limité à 32 Ko au maximum.
+Cet objet est limité à 32 Ko au maximum.
 
 ## Configuration de l’objet XDM à l’aide de l’extension SDK Web
 
 Définissez la variable **[!UICONTROL XDM]** dans les actions d’une règle de balise. La variable [Objet XDM](/help/tags/extensions/client/web-sdk/data-element-types.md#xdm-object) fournit une interface intuitive pour mapper d’autres éléments de données à leurs champs XDM respectifs.
 
-1. Connexion à [experience.adobe.com](https://experience.adobe.com) à l’aide de vos informations d’identification Adobe ID.
+1. Connexion à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
 1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
 1. Accédez à **[!UICONTROL Règles]**, puis sélectionnez la règle de votre choix.
@@ -39,7 +40,7 @@ alloy("sendEvent", {
 });
 ```
 
-L’exemple suivant utilise la méthode [Groupe de champs de schéma Détails du commerce](/help/xdm/field-groups/event/commerce-details.md):
+L’exemple suivant utilise la méthode [Groupe de champs de schéma Détails du Commerce](/help/xdm/field-groups/event/commerce-details.md):
 
 ```javascript
 alloy("sendEvent",{

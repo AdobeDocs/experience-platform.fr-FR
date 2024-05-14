@@ -2,9 +2,9 @@
 title: Types d’éléments de données dans l’extension SDK Web Adobe Experience Platform
 description: Découvrez les différents types d’éléments de données fournis par l’extension de balise du SDK Web de Adobe Experience Platform.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 44fac57a30295b476910c0b37314eaebba175157
+source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '599'
 ht-degree: 6%
 
 ---
@@ -22,15 +22,15 @@ Dans le [!UICONTROL Mappage d’identité] Data, vous fournissez les information
 
 * **[!UICONTROL ID]**: valeur qui identifie le visiteur. Par exemple, si l’identifiant appartient à la variable _phone_ l’espace de noms, [!UICONTROL ID] may _555-555-5555_. Cette valeur est généralement dérivée d’une variable JavaScript ou d’un autre élément de données sur votre page. Il est donc préférable de créer un élément de données qui référence les données de la page, puis de référencer l’élément de données dans la variable [!UICONTROL ID] dans le champ [!UICONTROL Mappage d’identité] élément de données. Si, lors de l’exécution sur votre page, la valeur de l’identifiant est autre qu’une chaîne renseignée, l’identifiant est automatiquement supprimé de la carte d’identité.
 * **[!UICONTROL État authentifié]**: sélection indiquant si le visiteur est authentifié.
-* **[!UICONTROL Principal]**: sélection indiquant si l’identifiant doit être utilisé comme identifiant Principal de l’individu. Si aucun identifiant n’est marqué comme Principal, l’ECID est utilisé comme identifiant Principal.
+* **[!UICONTROL Principal]**: sélection indiquant si l’identifiant doit être utilisé comme identifiant principal de l’individu. Si aucun identifiant n’est marqué comme principal, l’ECID est utilisé comme identifiant principal.
 
 ![Image de l’interface utilisateur affichant l’écran Modifier l’élément de données .](assets/identity-map-data-element.png)
 
 >[!TIP]
 >
->Adobe recommande d’envoyer des identités représentant une personne, telles que `Luma CRM Id` comme la Principale identité.
+>Adobe recommande d’envoyer des identités représentant une personne, telles que `Luma CRM Id` comme identité principale.
 >
->Si la carte d’identité contient l’identifiant de personne (par exemple, `Luma CRM Id`), l’identifiant de personne deviendra l’identifiant Principal. Sinon, `ECID` devient la Principale identité.
+>Si la carte d’identité contient l’identifiant de personne (par exemple, `Luma CRM Id`), l’identifiant de personne deviendra l’identifiant principal. Sinon, `ECID` devient l’identité principale.
 
 Vous ne devez pas fournir un [!DNL ECID] lors de la création d’une carte d’identité. Lors de l’utilisation du SDK, une [!DNL ECID] est généré automatiquement sur le serveur et inclus dans la carte des identités.
 
@@ -52,11 +52,14 @@ Notez que lorsque vous ouvrez certains champs de votre schéma, tels que `web.we
 
 ## Variable {#variable}
 
-Une autre méthode de création d’objets XDM consiste à utiliser la propriété **[!UICONTROL Variable]** élément de données. Bien que l’élément de données de l’objet XDM soit créé lorsqu’il est référencé, par exemple dans une balise `sendEvent` , **[!UICONTROL Variable]** l’élément de données peut être mis à jour via [!UICONTROL Mettre à jour la variable] actions. Pour utiliser l’élément de données, sélectionnez l’environnement de test et le schéma Adobe Experience Platform appropriés.
+Vous pouvez créer des objets de payload à l’aide de la fonction **[!UICONTROL Variable]** élément de données. Les deux [!UICONTROL XDM] et [!UICONTROL Données] sont pris en charge.
 
-![Image de l’interface utilisateur affichant l’écran Créer un élément de données .](assets/variable-data-element.png)
+* Lorsque vous sélectionnez [!UICONTROL XDM], sélectionnez une [!UICONTROL Sandbox] et [!UICONTROL Schéma].
+* Lorsque vous sélectionnez [!UICONTROL Données], sélectionnez les solutions souhaitées. Les solutions disponibles incluent : [!UICONTROL Adobe Analytics] et [!UICONTROL Adobe Target].
 
-Une fois cet élément de données créé, vous pouvez utiliser [Mettre à jour la variable](./action-types.md#update-variable) actions permettant de modifier l’élément de données. Ensuite, dans les actions d’événement d’envoi, utilisez l’élément de données de variable pour l’option XDM.
+![Image de l’interface utilisateur des balises présentant les options des éléments de données.](assets/variable-data-element.png)
+
+Après avoir créé cet élément de données, vous pouvez utiliser la variable [Mettre à jour la variable](./action-types.md#update-variable) pour la modifier. Une fois prêt, vous pouvez inclure cet élément de données dans la variable [Envoyer un événement](./action-types.md#send-event) Action pour envoyer des données à un flux de données.
 
 ## Étapes suivantes {#next-steps}
 
