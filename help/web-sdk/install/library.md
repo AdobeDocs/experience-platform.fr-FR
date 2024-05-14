@@ -2,7 +2,7 @@
 title: Installation du SDK Web à l’aide de la bibliothèque JavaScript
 description: Référencez la bibliothèque SDK Web à l’aide d’un fichier CDN autonome.
 exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
-source-git-commit: 58cd6300307881c3de7c52e07c401bf2ed908517
+source-git-commit: 9876390f7ba34c312f2ce4c00fe39e3ea1ef1ace
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Ajoutez le bloc de code suivant aussi haut que possible dans la `<head>` de votr
 <script>
   !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
   []).push(o),n[o]=function(){var u=arguments;return new Promise(
-  function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
+  function(i,l){n.setTimeout(function(){n[o].q.push([i,l,u])})})},n[o].q=[])})}
   (window,["alloy"]);
 </script>
 <script src="https://cdn1.adoberesources.net/alloy/2.19.1/alloy.min.js" async></script>
