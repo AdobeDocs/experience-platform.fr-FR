@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide des informations d’identification de Query Service
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui permet d’écrire et d’exécuter des requêtes, d’afficher des requêtes précédemment exécutées et d’accéder aux requêtes enregistrées par les utilisateurs de votre entreprise.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 74e3dc2fa5fc84b5ce4b09e2adb0093ecb94bd82
+source-git-commit: ba4ff2715d4e3eb71377542ab2361b967cd3ac11
 workflow-type: tm+mt
-source-wordcount: '1504'
+source-wordcount: '1807'
 ht-degree: 3%
 
 ---
@@ -47,6 +47,28 @@ La variable **[!UICONTROL Expiration des informations d’identification]** four
 >![L’onglet Paramètres du Admin Console avec la confidentialité et la sécurité, les paramètres d’authentification et la durée de session maximale est mis en surbrillance.](../images/ui/credentials/max-session-life.png)
 >
 >Pour plus d’informations sur la rubrique [Paramètres avancés](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) proposé par Admin Console.
+
+### Connexion aux données du Customer Journey Analytics dans les sessions de requête {#connect-to-customer-journey-analytics}
+
+Utilisez l’extension Customer Journey Analytics BI avec Power BI ou Tableau pour accéder à votre Customer Journey Analytics. [vues de données](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) avec SQL. En intégrant Query Service à l’extension BI, vous pouvez accéder à vos vues de données directement dans les sessions Query Service. Cette intégration simplifie la fonctionnalité des outils de BI qui utilisent Query Service comme interface PostgreSQL. Cette fonctionnalité élimine la nécessité de dupliquer les vues de données dans les outils de BI, garantit la création de rapports cohérents entre les plateformes et simplifie l’intégration des données de Customer Journey Analytics avec d’autres sources dans les plateformes de BI.
+
+Consultez la documentation pour savoir comment [Connectez Query Service à plusieurs applications clientes de bureau](../clients/overview.md) par exemple [Power BI](../clients/power-bi.md) ou [Tableau](../clients/tableau.md)
+
+>[!IMPORTANT]
+>
+>Pour utiliser cette fonctionnalité, un projet d’espace de travail Customer Journey Analytics et une vue de données sont requis.
+
+Pour accéder à vos données de Customer Journey Analytics dans Power BI ou Tableau, sélectionnez la variable [!UICONTROL Base] menu déroulant, puis sélectionnez `prod:cja` dans les options disponibles. Ensuite, copiez votre [!DNL Postgres] paramètres d’identification (hôte, port, base de données, nom d’utilisateur, etc.) à utiliser dans votre configuration Power BI ou Tableau.
+
+![Onglet Informations d’identification de Query Service avec le menu déroulant de la base de données mis en surbrillance.](../images/ui/credentials/database-dropdown.png)
+
+>[!NOTE]
+>
+>Lorsque vous connectez Power BI ou Tableau à Customer Journey Analytics, le droit &quot;sessions simultanées&quot; de Query Service est consommé. Si d’autres sessions et requêtes sont requises, un module complémentaire du module des utilisateurs de requêtes ad hoc peut être acheté pour obtenir cinq sessions simultanées supplémentaires et une requête simultanée supplémentaire.
+
+Vous pouvez également accéder à vos données de Customer Journey Analytics directement à partir de l’interface de ligne de commande de Query Editor ou Postgres. Pour ce faire, reportez-vous à la section `cja` lors de l&#39;écriture de votre requête. Voir Query Editor [guide de création de requêtes](./user-guide.md#query-authoring) pour plus d’informations sur la manière d’écrire, d’exécuter et d’enregistrer des requêtes.
+
+Voir [Guide d’extension BI](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) pour obtenir des instructions complètes sur l’accès à vos vues de données Customer Journey Analytics avec SQL.
 
 ## Informations d’identification non arrivant à expiration {#non-expiring-credentials}
 

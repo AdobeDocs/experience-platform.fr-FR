@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Connecter Power BI à Query Service
 description: Ce document décrit les étapes à suivre pour connecter Power BI à Adobe Experience Platform Query Service.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
 workflow-type: tm+mt
-source-wordcount: '1067'
-ht-degree: 100%
+source-wordcount: '1073'
+ht-degree: 96%
 
 ---
 
@@ -42,6 +42,10 @@ Pour connecter [!DNL Power BI] à Query Service, ouvrez [!DNL Power BI] et séle
 La boîte de dialogue de base de données [!DNL PostgreSQL] s’affiche, vous demandant des valeurs pour votre serveur et votre base de données. Vous pouvez consulter des instructions supplémentaires sur la manière de [se connecter à la base de données PostgreSQL à partir de Power Query Desktop](https://learn.microsoft.com/fr-fr/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop) dans la documentation de [!DNL PowerBI].
 
 Ces valeurs requises proviennent de vos informations d’identification Adobe Experience Platform. Pour trouver vos informations d’identification, connectez-vous à l’interface utilisateur de Platform et sélectionnez **[!UICONTROL Requêtes]** à partir du volet de navigation de gauche, puis **[!UICONTROL Informations d’identification]**. Pour plus d’informations sur la manière dont trouver le nom, l’hôte et le port de votre base de données ainsi que vos informations d’identification de connexion, consultez le [guide des informations d’identification](../ui/credentials.md).
+
+>[!IMPORTANT]
+>
+>En tant qu’utilisateur Power BI ou Tableau, vous pouvez connecter Customer Journey Analytics à vos outils de BI à partir de l’onglet Informations d’identification de Query Service. Pour obtenir des instructions sur la manière de procéder, reportez-vous à la documentation sur les informations d’identification . [connecter vos outils de BI à Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
 
 ![L’espace de travail Requêtes Experience Platform avec l’onglet Informations d’identification et Informations d’identification arrivant à expiration en surbrillance.](../images/clients/power-bi/query-service-credentials-page.png)
 

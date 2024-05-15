@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Connexion des clients à Query Service
 description: Ce document explique comment se connecter à Query Service à partir de diverses applications clientes de bureau et comment vérifier ces connexions.
 exl-id: 2ba20179-5adb-4259-a120-231a40e78054
-source-git-commit: 778c65c6310ed4a627be0fd3ae076784cfc8495b
+source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
 workflow-type: tm+mt
-source-wordcount: '229'
+source-wordcount: '269'
 ht-degree: 3%
 
 ---
@@ -29,3 +29,7 @@ Les instructions concernent les clients suivants :
 - [[!DNL PSQL]](./psql.md)
 - [[!DNL RStudio]](./rstudio.md)
 - [[!DNL Tableau]](./tableau.md)
+
+>[!IMPORTANT]
+>
+>En tant qu’utilisateur Power BI et Tableau, vous pouvez connecter Customer Journey Analytics à vos outils de BI à partir de l’onglet Informations d’identification de Query Service. Pour obtenir des instructions sur la manière de procéder, reportez-vous à la documentation sur les informations d’identification . [connecter vos outils de BI à Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).

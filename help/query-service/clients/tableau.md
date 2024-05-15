@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;tableau;Tableau;service de requête;service de requête;se connecter au service de requête ;
 solution: Experience Platform
-title: Connexion de Tableau à Query Service
+title: Connexion de Tableau à Query Service
 description: Ce document décrit les étapes à suivre pour connecter Tableau à Adobe Experience Platform Query Service.
 exl-id: f380aacd-5091-41bc-97ca-593e0b1670fd
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 26f0725f0f239707bd719ed46929648f8d557155
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 12%
+source-wordcount: '476'
+ht-degree: 10%
 
 ---
 
@@ -31,6 +31,10 @@ Instructions sur la manière de procéder [Connexion à un serveur PostgreSQL av
 | **[!DNL Password]** | Cette chaîne alphanumérique est votre Experience Platform **[!UICONTROL Password]** informations d’identification Si vous souhaitez utiliser des informations d’identification qui ne expirent pas, cette valeur correspond aux arguments concaténés du `technicalAccountID` et la variable `credential` téléchargé dans le fichier de configuration JSON. La valeur du mot de passe se présente comme suit : {technicalAccountId}:{credential}. Le fichier de configuration JSON pour les informations d’identification non arrivant à expiration est un téléchargement unique lors de leur initialisation, dont Adobe ne conserve pas de copie. |
 
 Pour plus d’informations sur la recherche de votre nom d’utilisateur, de votre mot de passe et de vos informations de connexion, veuillez lire la section [guide des informations d’identification](../ui/credentials.md). Pour trouver vos informations d’identification, connectez-vous à [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, suivie de **[!UICONTROL Informations d’identification]**.
+
+>[!IMPORTANT]
+>
+>En tant qu’utilisateur Tableau ou Power BI, vous pouvez connecter Customer Journey Analytics à vos outils de BI à partir de l’onglet Informations d’identification de Query Service. Pour obtenir des instructions sur la manière de procéder, reportez-vous à la documentation sur les informations d’identification . [connecter vos outils de BI à Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
 
 Vérifiez que vous avez coché la variable **[!UICONTROL Require SSL]** avant de tenter de se connecter. Voir [Documentation sur les modes SSL](./ssl-modes.md) pour en savoir plus sur la prise en charge du protocole SSL pour les connexions tierces à Adobe Experience Platform Query Service.
 
