@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’IU de Segmentation Service
 description: Découvrez comment créer et gérer des audiences et des définitions de segment dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: bc501b96a9ec6b723f4598d048b399fef82d54b2
+source-git-commit: 5182ee22ae7952f74c29969c0d484397a2850a4c
 workflow-type: tm+mt
 source-wordcount: '4274'
-ht-degree: 79%
+ht-degree: 80%
 
 ---
 
@@ -112,7 +112,7 @@ Vous pouvez ajouter des champs supplémentaires au [!UICONTROL Parcourir] en sé
 | [!UICONTROL Nom] | Nom de l’audience. |
 | [!UICONTROL Nombre de profils] | Nombre total de profils qui remplissent les critères de l’audience. |
 | [!UICONTROL Origine] | Origine de l’audience. Cette information indique d’où vient l’audience. Les valeurs possibles sont Segmentation Service, Chargement personnalisé, Composition de l’audience et Audience Manager. |
-| [!UICONTROL Statut du cycle de vie] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Inactive`, `Published`, et `Archived`. Pour plus d’informations sur les états du cycle de vie, y compris sur ce que signifient les différents états et sur la façon de déplacer les audiences vers différents états du cycle de vie, lisez la section [section d’état du cycle de vie du FAQ sur la segmentation](../faq.md#lifecycle-status). |
+| [!UICONTROL Statut du cycle de vie] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Inactive`, et `Published`. Pour plus d’informations sur les états du cycle de vie, y compris sur ce que signifient les différents états et sur la façon de déplacer les audiences vers différents états du cycle de vie, lisez la section [section d’état du cycle de vie du FAQ sur la segmentation](../faq.md#lifecycle-status). |
 | [!UICONTROL Fréquence de mise à jour] | Valeur qui indique la fréquence de mise à jour des données de l’audience. Les valeurs possibles pour ce champ incluent [!UICONTROL Lot], [!UICONTROL Diffusion en continu], [!UICONTROL Edge], et [!UICONTROL Non planifié]. |
 | [!UICONTROL Dernière mise à jour par] | Nom de la personne qui a mis à jour l’audience pour la dernière fois. |
 | [!UICONTROL Créé] | Date et heure de création de l’audience en UTC. |
@@ -422,7 +422,7 @@ Une fenêtre contextuelle s’affiche, répertoriant tous les champs pouvant êt
 | Champ | Description |
 | ----- | ----------- | 
 | [!UICONTROL Nom] | Nom de l’audience. |
-| [!UICONTROL Statut] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Inactive`, `Published`, et `Archived`. |
+| [!UICONTROL Statut] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Inactive` et `Published`. |
 | [!UICONTROL Créé] | Heure et date de création de l’audience. |
 | [!UICONTROL Créé par] | Nom de la personne qui a créé l’audience. |
 | [!UICONTROL Mis à jour] | Heure et date de la dernière mise à jour de l’audience. |

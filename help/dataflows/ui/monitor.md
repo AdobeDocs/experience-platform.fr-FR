@@ -1,7 +1,8 @@
 ---
 title: Présentation du tableau de bord de supervision
 description: Découvrez comment utiliser le tableau de bord de surveillance dans l’interface utilisateur de Adobe Experience Platform
-source-git-commit: 21c69ff834dbd0e32831c5c9071e4255fd8258e1
+exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
+source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 4%
@@ -100,7 +101,7 @@ Sélectionner **[!UICONTROL Profils]** pour afficher le taux de succès du trait
 
 >[!TAB Audiences]
 
-Sélectionner **[!UICONTROL Audiences]** pour afficher les mesures sur vos audiences et tâches de segmentation. Lisez le guide sur [surveillance des données d’audience](monitor-segments.md) pour plus d’informations.
+Sélectionner **[!UICONTROL Audiences]** pour afficher les mesures sur vos audiences et tâches de segmentation. Lisez le guide sur [surveillance des données d’audience](monitor-audiences.md) pour plus d’informations.
 
 ![Le tableau de bord de surveillance dans l’interface utilisateur avec la carte d’audiences sélectionnée.](../assets/ui/monitor-overview/audiences.png)
 
@@ -135,5 +136,5 @@ En lisant ce document, vous pouvez désormais parcourir le tableau de bord de su
 * [Surveillance des données de sources](monitor-sources.md).
 * [Surveillance des données d’identité](monitor-identities.md).
 * [Surveillance des données de profil](monitor-profiles.md).
-* [Surveillance des données d’audience](monitor-segments.md).
+* [Surveillance des données d’audience](monitor-audiences.md).
 * [Surveiller les données des destinations](monitor-destinations.md).

@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2022
 description: Les notes de mise à jour d’avril 2022 pour Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: 4bdbb987905b6010f4b4f75bee060828d0e07368
+source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
 workflow-type: tm+mt
-source-wordcount: '2904'
+source-wordcount: '2670'
 ht-degree: 100%
 
 ---
@@ -63,13 +63,13 @@ Consultez la documentation pour plus d’informations sur les tableaux de bord [
 
 Dans Platform, les données sont ingérées à partir de nombreuses sources différentes, analysées dans le système et activées pour un large éventail de destinations. En offrant de la transparence au niveau des flux de données, Platform facilite le processus de suivi de ce flux de données potentiellement non linéaire.
 
-Les flux de données sont une représentation des tâches qui déplacent des données dans Platform. Ces flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers les jeux de données cibles, où elles sont ensuite utilisées par Identity Service et le profil client en temps réel avant d’être finalement activées vers les destinations.
+Les flux de données sont une représentation des tâches qui déplacent des données dans Platform. Ces flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers les jeux de données cibles, où elles sont ensuite utilisées par le service d’identités et le profil client en temps réel avant d’être finalement activées vers les destinations.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Tableau de bord des segments | Vous pouvez désormais utiliser le tableau de bord de surveillance pour surveiller les flux de données des segments. Pour en savoir plus, consultez le guide sur la [surveillance des segments dans lʼinterface utilisateur](../../dataflows/ui/monitor-segments.md). |
+| Tableau de bord des segments | Vous pouvez désormais utiliser le tableau de bord de surveillance pour surveiller les flux de données des segments. Pour en savoir plus, consultez le guide sur la [surveillance des segments dans lʼinterface utilisateur](../../dataflows/ui/monitor-audiences.md). |
 
 Pour des informations plus générales sur les flux de données, consultez la [présentation des flux de données](../../dataflows/home.md). Pour en savoir plus sur la segmentation, consultez la [présentation de la segmentation](../../segmentation/home.md).
 
