@@ -2,10 +2,10 @@
 title: Tester une mise en œuvre Adobe Target avec Adobe Experience Platform Debugger
 description: Découvrez comment utiliser Adobe Experience Platform Debugger pour tester et déboguer un site web activé avec Adobe Target.
 exl-id: f99548ff-c6f2-4e99-920b-eb981679de2d
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: bc6069f2cfa4459860fe98588b293ffeed7fb1f1
 workflow-type: tm+mt
-source-wordcount: '1209'
-ht-degree: 98%
+source-wordcount: '1035'
+ht-degree: 99%
 
 ---
 
@@ -69,7 +69,7 @@ Les valeurs suivantes sont capturées :
 | [!DNL clientCode] | Identifiant du compte de votre organisation, tel qu’il est reconnu par Target. |
 | [!DNL requestType] | API utilisée pour la requête. Si vous utilisez at.js 1.x, la valeur est `/json`. Si vous utilisez at.js 2.x, la valeur est `delivery`. |
 | [!DNL Audience Manager Blob] | Fournit des informations sur les métadonnées chiffrées d’Audience Manager appelées « blob ». |
-| [!DNL Audience Location Hint] | ID de la région de collecte de données. Il s’agit d’un identifiant numérique pour l’emplacement géographique d’un centre de données de service d’ID spécifique. Pour plus d’informations, voir la documentation sur Audience Manager dans [Identifiants de zone géographique, emplacements et noms d’hôte du serveur de collecte de données](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=fr) et le guide Experience Cloud Identity Service sur [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html#reference-a761030ff06c4439946bb56febf42d4c). |
+| [!DNL Audience Location Hint] | ID de la région de collecte de données. Il s’agit d’un identifiant numérique pour l’emplacement géographique d’un centre de données de service d’ID spécifique. Pour plus d’informations, voir la documentation sur Audience Manager dans [Identifiants de zone géographique, emplacements et noms d’hôte du serveur de collecte de données](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html?lang=fr) et le guide Service d’identités d’Experience Cloud sur [`getLocationHint`](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/getlocationhint.html#reference-a761030ff06c4439946bb56febf42d4c). |
 | [!DNL Browser Height] | Hauteur du navigateur en pixels. |
 | [!DNL Browser Time Offset] | Décalage horaire du navigateur associé à son fuseau horaire. |
 | [!DNL Browser Width] | Largeur du navigateur en pixels. |
@@ -109,7 +109,7 @@ Sélectionnez **[!DNL Configuration]** pour activer ou désactiver une sélectio
 | Outil de débogage | Description |
 | --- | --- |
 | [!DNL Target Console Logging] | Lorsque cette option est activée, elle vous permet d’accéder aux journaux at.js dans l’onglet de la console du navigateur. Cette fonction peut également être activée en ajoutant un paramètre de requête `mboxDebug` (avec n’importe quelle valeur) à l’URL du navigateur. |
-| [!DNL Target Diable] | Lorsque cette option est activée, toutes les fonctionnalités de Target sont désactivées sur la page. Vous pouvez l’utiliser pour déterminer si une offre spécifique à Target est à l’origine du problème sur la page. |
+| [!DNL Target Disable] | Lorsque cette option est activée, toutes les fonctionnalités de Target sont désactivées sur la page. Vous pouvez l’utiliser pour déterminer si une offre spécifique à Target est à l’origine du problème sur la page. |
 | [!DNL Target Trace] | **Remarque** : vous devez être connecté(e) pour activer cette fonctionnalité.<br><br>Une fois activés, les jetons de suivi sont envoyés avec chaque requête et un objet de suivi est renvoyé dans chaque réponse. `at.js` analyse la réponse `window.__targetTraces`. Chaque objet de suivi contient les mêmes informations que l’[onglet [!DNL Network Requests]], avec les ajouts suivants :<ul><li>Un instantané de profil, qui vous permet d’afficher les attributs avant et après les requêtes.</li><li>[Activités](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=fr) avec ou sans correspondance, indiquant pourquoi le profil actuel se qualifiait ou non pour des activités spécifiques.<ul><li>Cela peut aider à identifier les audiences pour lesquelles un profil se qualifie à un moment donné et pourquoi.</li><li>La documentation de Target contient plus d’informations sur les différents types d’activité.</li></ul></li></ul> |
 
 {style="table-layout:auto"}
