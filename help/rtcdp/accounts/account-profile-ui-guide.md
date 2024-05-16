@@ -5,10 +5,10 @@ description: Grâce aux profils de compte, l’édition B2B d’Adobe Real-time 
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: bbcc056e416e2c1a8b6fd1a411c0fba4c0ff8dbb
 workflow-type: tm+mt
-source-wordcount: '1636'
-ht-degree: 57%
+source-wordcount: '1664'
+ht-degree: 56%
 
 ---
 
@@ -28,7 +28,7 @@ Sélectionner **[!UICONTROL Profils]** under [!UICONTROL Comptes] dans le volet 
 
 ![Onglet Aperçu affichant des widgets](images/b2b-account-profile-overview.png)
 
-Consultez la documentation relative à la [[!UICONTROL Profils de compte]](../../dashboards/guides/account-profiles.md) tableau de bord pour en savoir plus.
+Consultez la documentation relative à la [[!UICONTROL Profils de compte]](../../dashboards/guides/account-profiles.md) tableau de bord pour en savoir plus. Consultez la documentation relative à [Modèle de données Real-time Customer Data Platform Insights B2B](../../dashboards/data-models/cdp-insights-data-model-b2b.md) pour plus d’informations sur l’utilisation des modèles de données d’insights pour créer des graphiques personnalisés pour vos tableaux de bord.
 
 ## Configurer la correspondance de pistes vers les comptes {#configure-lead-to-account-matching}
 
@@ -108,7 +108,7 @@ L’affichage des champs par défaut peut également être modifié au niveau de
 >
 >Des fonctionnalités similaires sont disponibles pour les profils clients. Un guide détaillé a également été créé et fournit des instructions sur l’ajout et la suppression d’attributs, le redimensionnement des panneaux, etc. Pour en savoir plus, consultez le [guide de personnalisation des détails du profil](../../profile/ui/profile-customization.md).
 
-![Affichage des détails du profil de compte](images/b2b-account-details.png)
+![Affichage des détails du profil du compte](images/b2b-account-details.png)
 
 Vous pouvez afficher des détails supplémentaires concernant le compte en sélectionnant l’un des autres onglets disponibles. Ces onglets comprennent les attributs, les personnes et l’onglet relatif aux opportunités, qui affiche les opportunités ouvertes et clôturées liées au compte sur l’ensemble de vos systèmes d’entreprise. Pour plus d’informations sur chaque onglet, consultez les sections suivantes.
 
