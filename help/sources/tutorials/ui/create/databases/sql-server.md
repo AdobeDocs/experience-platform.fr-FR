@@ -1,20 +1,17 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;Microsoft SQL Server;SQL Server;sql server
-solution: Experience Platform
 title: Création d’une connexion source Microsoft SQL Server dans l’interface utilisateur
-type: Tutorial
 description: Découvrez comment créer une connexion source Microsoft SQL Server à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: 1828dd76e9ff317f97e9651331df3e49e44efff5
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 55%
+source-wordcount: '465'
+ht-degree: 45%
 
 ---
 
 # Créer une connexion source [!DNL Microsoft SQL Server] dans l’interface utilisateur
 
-Les connecteurs source d’Adobe Experience Platform permettent d’ingérer des données externes selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Microsoft SQL Server] (ci-après dénommés &quot;[!DNL SQL Server]&quot;) connecteur source à l’aide de [!DNL Platform] de l’interface utilisateur.
+Lisez ce tutoriel pour apprendre à connecter votre [!DNL Microsoft SQL Server] à Adobe Experience Platform à l’aide de l’interface utilisateur.
 
 ## Prise en main
 
@@ -33,36 +30,44 @@ Pour vous connecter à [!DNL SQL Server] on [!DNL Platform], vous devez fournir 
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `connectionString` | La chaîne de connexion associée à votre [!DNL SQL Server] compte . Le [!DNL SQL Server] Le modèle de chaîne de connexion est le suivant : `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| Chaîne de connexion | La chaîne de connexion associée à votre [!DNL Microsoft SQL Server] compte . Le modèle de chaîne de connexion varie selon que vous utilisez le nom de serveur ou d’instance pour votre source de données :<ul><li>Chaîne de connexion utilisant le nom du serveur : `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>Chaîne de connexion utilisant le nom de l’instance :`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` | `Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword` |
 
-Pour plus d’informations sur la prise en main, reportez-vous à la section [this [!DNL SQL Server] document](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
+Pour plus d’informations sur la prise en main, voir [this [!DNL SQL Server] document](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
 
 ## Connecter votre compte [!DNL SQL Server]
 
-Une fois les informations d’identification requises collectées, vous pouvez suivre les étapes ci-dessous pour lier votre compte [!DNL SQL Server] à [!DNL Platform].
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au **[!UICONTROL Sources]** workspace. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Sous , *Bases de données* catégorie, sélectionnez **[!DNL Microsoft SQL Server]**, puis sélectionnez **[!UICONTROL Configuration]**.
 
-Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
+>[!TIP]
+>
+>Les sources dans le catalogue des sources affichent la variable **[!UICONTROL Configuration]** lorsqu’une source donnée ne dispose pas encore d’un compte authentifié. Une fois qu’un compte authentifié existe, cette option devient **[!UICONTROL Ajouter des données]**.
 
-Sous , **[!UICONTROL Bases de données]** catégorie, sélectionnez **[!UICONTROL Microsoft SQL Server]**. Si c’est la première fois que vous utilisez ce connecteur, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer [!DNL SQL Server] connecteur.
+![Catalogue des sources avec la source SQL Server Microsoft sélectionnée.](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
 
-![](../../../../images/tutorials/create/microsoft-sql-server/catalog.png)
+La variable **[!UICONTROL Connexion à Microsoft SQL Server]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
-Le **[!UICONTROL Connexion à Microsoft SQL Server]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+>[!BEGINTABS]
 
-### Nouveau compte
+>[!TAB Création d’un compte]
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et [!DNL SQL Server] informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion]** puis accorder un certain temps pour établir la nouvelle connexion.
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** et indiquez un nom, une description facultative et vos informations d’identification.
 
-![](../../../../images/tutorials/create/microsoft-sql-server/new.png)
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
-### Compte existant
+![La nouvelle interface du compte avec les détails de connexion source saisis et mis en surbrillance.](../../../../images/tutorials/create/microsoft-sql-server/new.png)
 
-Pour connecter un compte existant, sélectionnez le [!DNL SQL Server] compte auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+>[!TAB Utiliser un compte existant]
 
-![](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
+Pour utiliser un compte existant, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte à utiliser dans le catalogue de comptes existant.
+
+Cliquez sur **[!UICONTROL Suivant]** pour continuer.
+
+![Interface du compte existant qui affiche la liste des comptes existants.](../../../../images/tutorials/create/microsoft-sql-server/existing.png)
+
+>[!ENDTABS]
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL SQL Server]. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données dans [!DNL Platform]](../../dataflow/databases.md).
+En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL SQL Server]. Vous pouvez maintenant passer au tutoriel suivant et [configuration d’un flux de données pour importer des données [!DNL Platform]](../../dataflow/databases.md).

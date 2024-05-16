@@ -1,39 +1,37 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;Microsoft SQL;microsoft sql;serveur sql;serveur SQL
-solution: Experience Platform
-title: Création d’une connexion de base SQL Server à l’aide de l’API Flow Service
+title: Création d’une connexion de base Microsoft SQL Server à l’aide de l’API Flow Service
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Microsoft SQL Server à l’aide de l’API Flow Service.
 exl-id: 00455a61-c8c1-42f4-a962-fc16f7370cbd
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: 1828dd76e9ff317f97e9651331df3e49e44efff5
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 65%
+source-wordcount: '470'
+ht-degree: 61%
 
 ---
 
-# Créez un [!DNL Microsoft] Connexion de base de SQL Server à l’aide de [!DNL Flow Service] API
+# Créez un [!DNL Microsoft] Connexion de base SQL Server à l’aide de la fonction [!DNL Flow Service] API
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de base pour [!DNL Microsoft SQL Server] à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lisez ce tutoriel pour savoir comment créer une connexion de base pour [!DNL Microsoft SQL Server] en utilisant la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL Microsoft SQL Server] en utilisant la variable [!DNL Flow Service] API.
 
-### Collecter les informations d’identification requises
+### Collecter les informations d’identification requises {#gather-required-credentials}
 
 Pour vous connecter à [!DNL Microsoft SQL Server], vous devez fournir la propriété de connexion suivante :
 
-| Informations d’identification | Description |
-| ---------- | ----------- |
-| `connectionString` | La chaîne de connexion associée à votre [!DNL Microsoft SQL Server] compte . Le [!DNL Microsoft SQL Server] Le modèle de chaîne de connexion est le suivant : `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| Informations d’identification | Description | Exemple |
+| --- | --- | --- |
+| `connectionString` | La chaîne de connexion associée à votre [!DNL Microsoft SQL Server] compte . Le modèle de chaîne de connexion varie selon que vous utilisez le nom de serveur ou d’instance pour votre source de données :<ul><li>Chaîne de connexion utilisant le nom du serveur : `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>Chaîne de connexion utilisant le nom de l’instance :`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` | `Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword` |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Microsoft SQL Server] is `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 Pour plus d’informations sur l’obtention d’une chaîne de connexion, reportez-vous à cette section [[!DNL Microsoft SQL Server] document](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
@@ -60,30 +58,30 @@ La requête suivante permet de créer une connexion de base pour [!DNL Microsoft
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Base connection for sql-server",
-        "description": "Base connection for sql-server",
-        "auth": {
-            "specName": "Connection String Based Authentication",
-            "params": {
-                "connectionString": "Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};"
-            }
-        },
-        "connectionSpec": {
-            "id": "1f372ff9-38a4-4492-96f5-b9a4e4bd00ec",
-            "version": "1.0"
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Base connection for sql-server",
+      "description": "Base connection for sql-server",
+      "auth": {
+          "specName": "Connection String Based Authentication",
+          "params": {
+              "connectionString": "Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword"
+          }
+      },
+      "connectionSpec": {
+          "id": "1f372ff9-38a4-4492-96f5-b9a4e4bd00ec",
+          "version": "1.0"
+  }'
 ```
 
 | Propriété | Description |
-| --------- | ----------- |
-| `auth.params.connectionString` | La chaîne de connexion associée à votre [!DNL Microsoft SQL Server] compte . Le [!DNL Microsoft SQL Server] Le modèle de chaîne de connexion est le suivant : `Data Source={SERVER_NAME}\\<{INSTANCE_NAME} if using named instance>;Initial Catalog={DATABASE};Integrated Security=False;User ID={USERNAME};Password={PASSWORD};`. |
+| --- | --- |
+| `auth.params.connectionString` | La chaîne de connexion associée à votre [!DNL Microsoft SQL Server] compte . Lisez la section sur [collecte des informations requises](#gather-required-credentials) pour plus d’informations. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion [!DNL Microsoft SQL Server] est : `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 **Réponse**
