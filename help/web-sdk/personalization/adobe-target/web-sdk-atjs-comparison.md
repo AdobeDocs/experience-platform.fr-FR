@@ -3,9 +3,9 @@ title: Comparaison d’at.js au SDK Web Experience Platform
 description: Découvrez comment comparer les fonctionnalités d’at.js au SDK Web Experience Platform
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;champ de décision;fragment de code de masquage préalable;vec;compositeur d’expérience d’après les formulaires;xdm;audiences;décisions;portée;schéma;schéma;diagramme système;diagramme
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: ca1574f3f95840fce246fb4ed8845583fa0ff093
 workflow-type: tm+mt
-source-wordcount: '2136'
+source-wordcount: '2175'
 ht-degree: 6%
 
 ---
@@ -608,6 +608,27 @@ alloy("sendEvent", {
 
 [En savoir plus](../rendering-personalization-content.md#manually-rendering-content)
 
+**Exemple 3 : suivi d’un événement déclenché après l’exécution d’une action**
+
+Cet exemple effectue le suivi d’un événement déclenché après l’exécution d’une action spécifique, comme un clic sur un bouton.
+Vous pouvez ajouter d’autres paramètres personnalisés à l’aide de la variable `__adobe.target` objet de données.
+
+```js
+//replicates an at.js trackEvent call
+alloy("sendEvent", {
+    "type": "decisioning.propositionDisplay",
+    "xdm": {
+        "_experience": {
+            "decisioning": {
+                "propositions": [{
+                    "scope": "sumbitButtonClick" // Or any mbox/location name you want to use in Adobe Target
+                }]
+            }
+        }
+    }
+});
+```
+
 ## Comment déclencher un changement d’affichage dans une application d’une seule page
 
 ### Utilisation d’at.js
@@ -893,7 +914,7 @@ La journalisation côté serveur d’Analytics est activée lorsqu’Analytics e
 
 ![Interface utilisateur des flux de données présentant les paramètres Analytics.](assets/analytics-enabled-datastream-config.png)
 
-Lorsque la journalisation Analytics côté serveur est activée, la charge utile A4T qui doit être partagée avec Analytics afin que les rapports Analytics présentent les impressions et conversions correctes soient partagées au niveau du réseau Edge, de sorte que le client n’ait pas à effectuer de traitement supplémentaire.
+Lorsque la journalisation Analytics côté serveur est activée, la charge utile A4T qui doit être partagée avec Analytics afin que les rapports Analytics présentent les impressions et conversions correctes soient partagées au niveau de l’Edge Network, de sorte que le client n’ait pas à effectuer de traitement supplémentaire.
 
 Voici comment les données s’enchaînent dans nos systèmes lorsque la journalisation Analytics côté serveur est activée :
 
