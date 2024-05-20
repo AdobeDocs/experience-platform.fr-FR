@@ -5,10 +5,10 @@ title: Création d’une connexion à la source cloud du service Salesforce à l
 type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à Salesforce Service Cloud à l’aide de l’API Flow Service.
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
-source-git-commit: 5d28db34edd377269e8710b1741098a08616ae5f
+source-git-commit: 1f13b5fcad683b4c0ede96654e35d6f0c64d9eb7
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 69%
+source-wordcount: '498'
+ht-degree: 68%
 
 ---
 
@@ -32,12 +32,13 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 Pour connecter [!DNL Flow Service] à [!DNL Salesforce Service Cloud], vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
 | Informations d’identification | Description |
-| ---------- | ----------- |
+| --- | ---|
+| `environmentUrl` | L’URL de la variable [!DNL Salesforce] instance source. |
 | `username` | Le nom d’utilisateur de votre [!DNL Salesforce Service Cloud] compte utilisateur. |
 | `password` | Le mot de passe de votre [!DNL Salesforce Service Cloud] compte . |
 | `securityToken` | Jeton de sécurité pour votre [!DNL Salesforce Service Cloud] compte . |
 | `apiVersion` | (Facultatif) La version de l’API REST de la variable [!DNL Salesforce Service Cloud] que vous utilisez. Si ce champ n’est pas renseigné, Experience Platform utilisera automatiquement la dernière version disponible. |
-| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Salesforce Service Cloud] est `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
+| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Salesforce Service Cloud] est `cb66ab34-8619-49cb-96d1-39b37ede86ea`. |
 
 Pour plus d’informations sur la prise en main, voir [ce document Salesforce Service Cloud ;](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
 
@@ -75,24 +76,26 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "username": "{USERNAME}",
+              "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
+              "username": "acme-salesforce-service-cloud",
               "password": "{PASSWORD}",
               "securityToken": "{SECURITY_TOKEN}"
           }
       },
       "connectionSpec": {
-          "id": "b66ab34-8619-49cb-96d1-39b37ede86ea",
+          "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
           "version": "1.0"
       }
   }'
 ```
 
 | Paramètre | Description |
-| --------- | ----------- |
+| ---| --- |
+| `auth.params.environmentUrl` | L’URL de votre [!DNL Salesforce Service Cloud] instance. |
 | `auth.params.username` | Le nom d’utilisateur associé à votre [!DNL Salesforce Service Cloud] compte . |
 | `auth.params.password` | Le mot de passe associé à votre [!DNL Salesforce Service Cloud] compte . |
 | `auth.params.securityToken` | Le jeton de sécurité associé à votre [!DNL Salesforce Service Cloud] compte . |
-| `connectionSpec.id` | Identifiant de spécification de connexion [!DNL Salesforce Service Cloud] : `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
+| `connectionSpec.id` | Identifiant de spécification de connexion [!DNL Salesforce Service Cloud] : `cb66ab34-8619-49cb-96d1-39b37ede86ea`. |
 
 **Réponse**
 

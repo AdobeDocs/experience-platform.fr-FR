@@ -1,14 +1,11 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;Salesforce;Salesforce
-solution: Experience Platform
 title: Création d’une connexion de base Salesforce à l’aide de l’API Flow Service
-type: Tutorial
 description: Découvrez comment connecter Adobe Experience Platform à un compte Salesforce à l’aide de l’API Flow Service.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 27ad8812137502d0a636345852f0cae5d01c7b23
+source-git-commit: 8d62cf4ca0071e84baa9399e0a25f7ebfb096c1a
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 60%
+source-wordcount: '785'
+ht-degree: 40%
 
 ---
 
@@ -29,18 +26,40 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 ### Collecter les informations d’identification requises
 
-Pour que [!DNL Flow Service] puisse se connecter à [!DNL Salesforce], vous devez fournir des valeurs pour les propriétés de connexion suivantes :
+La variable [!DNL Salesforce] source prend en charge l’authentification de base et les informations d’identification du client OAuth2.
+
+>[!BEGINTABS]
+
+>[!TAB Authentification de base]
+
+Pour connecter votre [!DNL Salesforce] compte à [!DNL Flow Service] à l’aide de l’authentification de base, indiquez les valeurs des informations d’identification suivantes :
 
 | Informations d’identification | Description |
-| ---------- | ----------- |
+| --- | --- |
 | `environmentUrl` | L’URL de la variable [!DNL Salesforce] instance source. |
 | `username` | Nom d’utilisateur de la variable [!DNL Salesforce] compte utilisateur. |
 | `password` | Le mot de passe du [!DNL Salesforce] compte utilisateur. |
 | `securityToken` | Jeton de sécurité pour la variable [!DNL Salesforce] compte utilisateur. |
-| `apiVersion` | (Facultatif) La version de l’API REST de la variable [!DNL Salesforce] que vous utilisez. La valeur de la version d’API doit être formatée avec une valeur décimale. Par exemple, si vous utilisez la version d’API `52`, vous devez saisir la valeur sous la forme `52.0` Si ce champ n’est pas renseigné, Experience Platform utilisera automatiquement la dernière version disponible. |
+| `apiVersion` | (Facultatif) La version de l’API REST de la variable [!DNL Salesforce] que vous utilisez. La valeur de la version de l’API doit être formatée avec une valeur décimale. Par exemple, si vous utilisez la version d’API `52`, vous devez saisir la valeur sous la forme `52.0`. Si ce champ n’est pas renseigné, Experience Platform utilisera automatiquement la dernière version disponible. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Salesforce] est `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 Pour plus d’informations sur la prise en main, voir [ce document Salesforce ;](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
+
+>[!TAB Informations d’identification du client OAuth 2]
+
+Pour connecter votre [!DNL Salesforce] compte à [!DNL Flow Service] à l’aide des informations d’identification du client OAuth 2, indiquez les valeurs des informations d’identification suivantes :
+
+| Informations d’identification | Description |
+| --- | --- |
+| `environmentUrl` | L’URL de la variable [!DNL Salesforce] instance source. |
+| `clientId` | L’ID client est utilisé en tandem avec le secret client dans le cadre de l’authentification OAuth2. Ensemble, l’ID client et le secret client permettent à votre application d’opérer pour le compte de votre client en identifiant votre application à [!DNL Salesforce]. |
+| `clientSecret` | Le secret client est utilisé en tandem avec l’ID client dans le cadre de l’authentification OAuth2. Ensemble, l’ID client et le secret client permettent à votre application d’opérer pour le compte de votre client en identifiant votre application à [!DNL Salesforce]. |
+| `apiVersion` | La version de l’API REST de la variable [!DNL Salesforce] que vous utilisez. La valeur de la version de l’API doit être formatée avec une valeur décimale. Par exemple, si vous utilisez la version d’API `52`, vous devez saisir la valeur sous la forme `52.0`. Si ce champ n’est pas renseigné, Experience Platform utilisera automatiquement la dernière version disponible. Cette valeur est obligatoire pour l’authentification des informations d’identification du client OAuth2. |
+| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Salesforce] est `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+
+Pour plus d’informations sur l’utilisation d’OAuth pour [!DNL Salesforce], lisez le [[!DNL Salesforce] Guide sur les flux d’autorisation OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+
+>[!ENDTABS]
 
 ### Utiliser les API Platform
 
@@ -60,7 +79,11 @@ POST /connections
 
 **Requête**
 
-La requête suivante permet de créer une connexion de base pour [!DNL Salesforce] :
+>[!BEGINTABS]
+
+>[!TAB Authentification de base]
+
+La requête suivante crée une connexion de base pour [!DNL Salesforce] à l’aide de l’authentification de base :
 
 ```shell
 curl -X POST \
@@ -71,14 +94,15 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Salesforce Connection",
-      "description": "Connection for Salesforce account",
+      "name": "ACME Salesforce account",
+      "description": "Salesforce account using basic authentication",
       "auth": {
           "specName": "Basic Authentication",
-          "params": {****
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "securityToken": "{SECURITY_TOKEN}"
+          "params":
+              "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
+              "username": "acme-salesforce",
+              "password": "xxxx",
+              "securityToken": "xxxx"
           }
       },
       "connectionSpec": {
@@ -89,11 +113,53 @@ curl -X POST \
 ```
 
 | Propriété | Description |
-| -------- | ----------- |
+| --- | --- |
+| `auth.params.environmentUrl` | L’URL de votre [!DNL Salesforce] instance. |
 | `auth.params.username` | Le nom d’utilisateur associé à votre [!DNL Salesforce] compte . |
 | `auth.params.password` | Le mot de passe associé à votre [!DNL Salesforce] compte . |
 | `auth.params.securityToken` | Le jeton de sécurité associé à votre [!DNL Salesforce] compte . |
 | `connectionSpec.id` | La variable [!DNL Salesforce] identifiant de spécification de connexion : `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+
+>[!TAB Informations d’identification du client OAuth 2]
+
+La requête suivante crée une connexion de base pour [!DNL Salesforce] à l’aide des informations d’identification du client OAuth 2 :
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "ACME Salesforce account",
+      "description": "Salesforce account using OAuth 2",
+      "auth": {
+          "specName": "OAuth2 Client Credential",
+          "params":
+            "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
+            "clientId": "xxxx",
+            "clientSecret": "xxxx",
+            "apiVersion": "60.0"
+        }
+      },
+      "connectionSpec": {
+          "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Propriété | Description |
+| --- | --- |
+| `auth.params.environmentUrl` | L’URL de votre [!DNL Salesforce] instance. |
+| `auth.params.clientId` | L’ID client associé à votre [!DNL Salesforce] compte . |
+| `auth.params.clientSecret` | Le secret client associé à votre [!DNL Salesforce] compte . |
+| `auth.params.apiVersion` | La version de l’API REST de la variable [!DNL Salesforce] que vous utilisez. |
+| `connectionSpec.id` | La variable [!DNL Salesforce] identifiant de spécification de connexion : `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
+
+>[!ENDTABS]
 
 **Réponse**
 
