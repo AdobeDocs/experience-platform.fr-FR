@@ -2,10 +2,10 @@
 title: Connexion de votre compte Salesforce à l’aide de l’interface utilisateur Experience Platform
 description: Découvrez comment connecter votre compte Salesforce et importer vos données CRM dans Experience Platform à l’aide de l’interface utilisateur.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: a5ecd4ab1c543805870b846cfe0fccc5474333d4
+source-git-commit: c543590ef1806e5259da2ffb6833cd030d573ca7
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 23%
+source-wordcount: '737'
+ht-degree: 18%
 
 ---
 
@@ -26,17 +26,38 @@ Si vous disposez déjà d’une authentification [!DNL Salesforce] , vous pouvez
 
 ### Collecter les informations d’identification requises {#gather-required-credentials}
 
-Pour authentifier votre [!DNL Salesforce] par rapport à Experience Platform, vous devez fournir des valeurs qui correspondent aux [!DNL Salesforce] informations d’identification :
+La variable [!DNL Salesforce] source prend en charge l’authentification de base et les informations d’identification du client OAuth2.
+
+>[!BEGINTABS]
+
+>[!TAB Authentification de base]
+
+Vous devez fournir des valeurs pour les informations d’identification suivantes afin de connecter votre [!DNL Salesforce] à l’aide de l’authentification de base.
 
 | Informations d’identification | Description |
 | --- | --- |
-| `environmentUrl` | L’URL de la variable [!DNL Salesforce] instance source. |
-| `username` | Nom d’utilisateur de la variable [!DNL Salesforce] compte utilisateur. |
-| `password` | Le mot de passe du [!DNL Salesforce] compte utilisateur. |
-| `securityToken` | Jeton de sécurité pour la variable [!DNL Salesforce] compte utilisateur. |
-| `apiVersion` | (Facultatif) La version de l’API REST de la variable [!DNL Salesforce] que vous utilisez. La valeur de la version d’API doit être formatée avec une valeur décimale. Par exemple, si vous utilisez la version d’API `52`, vous devez saisir la valeur sous la forme `52.0` Si ce champ n’est pas renseigné, Experience Platform utilisera automatiquement la dernière version disponible. |
+| URL d’environnement | L’URL de la variable [!DNL Salesforce] instance source. |
+| Nom d’utilisateur | Nom d’utilisateur de la variable [!DNL Salesforce] compte utilisateur. |
+| Mot de passe | Le mot de passe du [!DNL Salesforce] compte utilisateur. |
+| Jeton de sécurité | Jeton de sécurité pour la variable [!DNL Salesforce] compte utilisateur. |
+| Version de l’API | (Facultatif) La version de l’API REST de la variable [!DNL Salesforce] que vous utilisez. La valeur de la version d’API doit être formatée avec une valeur décimale. Par exemple, si vous utilisez la version d’API `52`, vous devez saisir la valeur sous la forme `52.0` Si ce champ n’est pas renseigné, Experience Platform utilisera automatiquement la dernière version disponible. |
 
 Pour plus d’informations sur l’authentification, reportez-vous à la section [this [!DNL Salesforce] guide d&#39;authentification](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
+
+>[!TAB Informations d’identification du client OAuth2]
+
+Vous devez fournir des valeurs pour les informations d’identification suivantes afin de connecter votre [!DNL Salesforce] compte à l’aide des informations d’identification du client OAuth2.
+
+| Informations d’identification | Description |
+| --- | --- |
+| URL d’environnement | L’URL de la variable [!DNL Salesforce] instance source. |
+| Identifiant client | L’ID client est utilisé en tandem avec le secret client dans le cadre de l’authentification OAuth2. Ensemble, l’ID client et le secret client permettent à votre application d’opérer au nom de votre compte en identifiant votre application à [!DNL Salesforce]. |
+| Secret client | Le secret client est utilisé en tandem avec l’ID client dans le cadre de l’authentification OAuth2. Ensemble, l’ID client et le secret client permettent à votre application d’opérer au nom de votre compte en identifiant votre application à [!DNL Salesforce]. |
+| Version de l’API | (Facultatif) La version de l’API REST de la variable [!DNL Salesforce] que vous utilisez. La valeur de la version d’API doit être formatée avec une valeur décimale. Par exemple, si vous utilisez la version d’API `52`, vous devez saisir la valeur sous la forme `52.0` Si ce champ n’est pas renseigné, Experience Platform utilisera automatiquement la dernière version disponible. |
+
+Pour plus d’informations sur l’utilisation d’OAuth pour [!DNL Salesforce], lisez le [[!DNL Salesforce] Guide sur les flux d’autorisation OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+
+>[!ENDTABS]
 
 Une fois que vous avez rassemblé vos informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour connecter votre [!DNL Salesforce] compte à Experience Platform.
 
