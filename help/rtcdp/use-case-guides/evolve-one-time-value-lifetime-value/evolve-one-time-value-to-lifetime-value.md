@@ -3,7 +3,7 @@ title: Évoluer la valeur client unique à la valeur de durée de vie
 description: Découvrez comment créer des campagnes personnalisées pour offrir les meilleurs produits ou services complémentaires en fonction des attributs, du comportement et des achats antérieurs d’un client spécifique.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: 2f1008791a35f33a0379cba14b90334aebf83187
+source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
 workflow-type: tm+mt
 source-wordcount: '3179'
 ht-degree: 2%
@@ -27,7 +27,7 @@ Tenez compte de ces clients qui visitent vos propriétés et achètent sporadiqu
 * Créer des audiences
 * Créez des parcours pour cibler ces audiences dans Adobe Journey Optimizer et les activer dans Real-Time CDP.
 
-![Étape par étape Évoldez la valeur ponctuelle pour obtenir la valeur de durée de vie d’un aperçu visuel de haut niveau.](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){width="500" zoomable="yes"}
+![Étape par étape Évoldez la valeur ponctuelle pour obtenir la valeur de durée de vie d’un aperçu visuel de haut niveau.](../evolve-one-time-value-lifetime-value/images/diagram-business-use-case.png){zoomable="yes"}
 
 ## Prérequis et planification {#prerequisites-and-planning}
 
@@ -54,7 +54,7 @@ Pour ce faire, la technologie requise se compose des deux applications Experienc
 
 Vous trouverez ci-dessous une vue d’architecture de haut niveau des différents composants de Real-Time CDP et Journey Optimizer. Ce diagramme montre comment les données transitent par les deux applications Experience Platform, de la collecte de données jusqu’au point où elles sont activées par le biais de parcours ou de campagnes vers des destinations, afin d’atteindre le cas d’utilisation décrit sur cette page.
 
-![Présentation visuelle de haut niveau de l’architecture.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){width="600" zoomable="yes"}
+![Présentation visuelle de haut niveau de l’architecture.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){zoomable="yes"}
 
 ## Comment réaliser le cas d’utilisation : vue d’ensemble de haut niveau {#achieve-the-use-case-high-level}
 
@@ -70,7 +70,7 @@ Vous commencez par envoyer un message à votre audience de clients à forte et �
 
 >[!BEGINSHADEBOX]
 
-![Étape par étape Évoldez la valeur ponctuelle pour obtenir la valeur de durée de vie d’un aperçu visuel de haut niveau.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){width="600" zoomable="yes"}
+![Étape par étape Évoldez la valeur ponctuelle pour obtenir la valeur de durée de vie d’un aperçu visuel de haut niveau.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
 
 1. Vous créez des schémas et des jeux de données, puis les marquez pour [!UICONTROL Profil].
 2. Les données sont collectées et intégrées dans Experience Platform par le biais du SDK Web, du SDK Mobile Edge ou de l’API. Le connecteur de données Analytics peut également être utilisé, mais peut entraîner une latence de parcours.
@@ -304,7 +304,7 @@ Ce cas d’utilisation nécessite la création de deux audiences pour définir d
 
 Plus précisément, vous devez créer et utiliser deux audiences à différentes étapes du cas d’utilisation, comme illustré dans l’image ci-dessous.
 
-![Audiences surlignées.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){width="600" zoomable="yes"}
+![Audiences surlignées.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/audiences-highlighted-in-diagram.png){zoomable="yes"}
 
 >[!BEGINTABS]
 
@@ -351,7 +351,7 @@ Pour réaliser ce cas pratique, vous devez créer deux parcours distincts :
 * Parcours de durée de vie, qui inclut le message que vous envoyez à vos clients à forte valeur ajoutée et à faible fréquence
 * Le parcours de confirmation de commande pour les utilisateurs qui répondent à votre appel et qui achètent un abonnement.
 
-![Parcours surlignés.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){width="600" zoomable="yes"}
+![Parcours surlignés.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/journeys-highlighted-in-diagram.png){zoomable="yes"}
 
 Vous trouverez ci-dessous les données précises nécessaires à chaque branche de Parcours.
 
@@ -361,7 +361,7 @@ Vous trouverez ci-dessous les données précises nécessaires à chaque branche 
 
 Le parcours de durée de vie s’adresse à l’audience des clients à forte valeur et à faible fréquence qui n’ont pas été ciblés au cours des 30 derniers jours. Un message s’affiche à ces clients et, si au bout de 7 jours ils n’effectuent toujours pas d’achat, vous pouvez inclure les non-acheteurs dans une audience à laquelle vous pouvez afficher des publicités multimédia payantes. S&#39;ils effectuent un achat, vous pouvez définir les acheteurs sur un parcours de confirmation de commande, détaillé dans l&#39;onglet distinct.
 
-![Présentation visuelle de haut niveau du parcours de vie.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "Valeur unique à durée de vie parcours un aperçu visuel de haut niveau."){width="600" zoomable="yes"}
+![Présentation visuelle de haut niveau du parcours de vie.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/lifetime-journey.png "Valeur unique à durée de vie parcours un aperçu visuel de haut niveau."){zoomable="yes"}
 
 +++Logique de Parcours détaillée
 
@@ -383,7 +383,7 @@ Le parcours illustré ci-dessus suit la logique suivante.
 
 Le parcours de confirmation de commande se concentre sur la question de savoir si un achat a été effectué via le site web ou l’application mobile. Une fois qu’un client a acheté, par exemple, un abonnement auprès de votre société, vous pouvez le définir sur un parcours de confirmation de commande.
 
-![Présentation visuelle de haut niveau du parcours de confirmation de commande du client.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Présentation visuelle de haut niveau du parcours de confirmation de commande du client."){width="600" zoomable="yes"}
+![Présentation visuelle de haut niveau du parcours de confirmation de commande du client.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Présentation visuelle de haut niveau du parcours de confirmation de commande du client."){zoomable="yes"}
 
 Logique du Parcours +++
 

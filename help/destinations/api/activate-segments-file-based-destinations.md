@@ -4,7 +4,7 @@ title: Activation des audiences vers des destinations basées sur des fichiers �
 description: Découvrez comment utiliser l’API Flow Service pour exporter des fichiers avec des profils qualifiés vers des destinations de stockage dans le cloud.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: b94828381da56fa957b44b77aefa00a8ddd4bbd6
+source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
 workflow-type: tm+mt
 source-wordcount: '4404'
 ht-degree: 10%
@@ -43,7 +43,7 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 -->
 
-## Prise en main {#get-started}
+## Commencer {#get-started}
 
 ![Procédure d’activation des audiences mettant en surbrillance l’étape actuelle de l’utilisateur](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
@@ -745,7 +745,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-++[!DNL Amazon S3] - Requête de connexion de base avec authentification de rôle assumée
++++[!DNL Amazon S3] - Requête de connexion de base avec authentification de rôle assumée
 
 >[!TIP]
 >
