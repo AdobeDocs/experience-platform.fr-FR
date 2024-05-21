@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation du contrôle d’accès
 description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans l’Admin Console, liant les utilisateurs et utilisatrices à des autorisations et des sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: df24799e4644a98941b707bb216a4ad434f5ebf9
+source-git-commit: 16313e2109152329a427be9f13fcbd6382353797
 workflow-type: tm+mt
-source-wordcount: '1707'
+source-wordcount: '1718'
 ht-degree: 83%
 
 ---
@@ -100,6 +100,7 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL Profile Management] | [!UICONTROL Affichage des segments] | Accès en lecture seule aux segments disponibles. |
 | [!DNL Profile Management] | [!UICONTROL Gestion des politiques de fusion] | Accès à la lecture, la création, la modification et la suppression des politiques de fusion. |
 | [!DNL Profile Management] | [!UICONTROL Affichage des politiques de fusion] | Accès en lecture seule aux politiques de fusion disponibles. |
+| [!DNL Profile Management] | [!UICONTROL Importation d’audiences] | Accès à la lecture, la création, la modification et la suppression des audiences importées. |
 | [!DNL Profile Management] | [!UICONTROL Exportation de l’audience pour un segment] | Capacité à exporter un segment ciblé évalué vers un jeu de données. |
 | [!DNL Profile Management] | [!UICONTROL Évaluation dʼun segment sur une audience] | Possibilité de générer des profils pour une audience en évaluant une définition de segment. |
 | [!DNL Profile Management] | [!UICONTROL Affichage de l’IA B2B] | Accès en lecture seule aux paramètres et aux configurations pour tous les services B2B AI/ML. |
