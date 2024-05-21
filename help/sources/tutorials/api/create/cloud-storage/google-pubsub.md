@@ -3,10 +3,10 @@ title: Créer une connexion source Google PubSub à l’aide de l’API Flow Ser
 description: Découvrez comment connecter Adobe Experience Platform à un compte Google PubSub à l’aide de l’API Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: a826bda356a7205f3d4c0e0836881530dbaaf54e
+source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 59%
+source-wordcount: '1147'
+ht-degree: 54%
 
 ---
 
@@ -29,7 +29,7 @@ Les sections suivantes contiennent des informations supplémentaires que vous de
 
 ### Collecter les informations d’identification requises
 
-Pour que [!DNL Flow Service] puisse se connecter à [!DNL PubSub], vous devez fournir des valeurs pour les propriétés de connexion suivantes :
+Pour connecter votre [!DNL PubSub] compte à [!DNL Flow Service]. Pour plus d’informations sur l’authentification et la configuration des prérequis, consultez la section [[!DNL PubSub source] aperçu](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
 
 >[!BEGINTABS]
 
@@ -52,7 +52,7 @@ Pour que [!DNL Flow Service] puisse se connecter à [!DNL PubSub], vous devez fo
 
 >[!ENDTABS]
 
-Pour plus d’informations sur ces valeurs, voir le document d’[[!DNL PubSub] authentification](https://cloud.google.com/pubsub/docs/authentication). Pour utiliser l’authentification par compte de service, consultez le [[!DNL PubSub] Guide de création de comptes de service](https://cloud.google.com/docs/authentication/production#create_service_account) pour savoir comment générer vos informations d’identification.
+Pour plus d’informations sur ces valeurs, lisez cette section [[!DNL PubSub] authentication](https://cloud.google.com/pubsub/docs/authentication) document. Pour utiliser l’authentification par compte de service, lisez cette section [[!DNL PubSub] guide de création de comptes de service](https://cloud.google.com/docs/authentication/production#create_service_account) pour savoir comment générer vos informations d’identification.
 
 >[!TIP]
 >

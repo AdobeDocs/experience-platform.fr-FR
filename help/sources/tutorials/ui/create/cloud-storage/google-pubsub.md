@@ -1,12 +1,12 @@
 ---
-title: Créer une connexion de source Google PubSub dans l’interface utilisateur
+title: Création d’une connexion PubSub-Source Google dans l’interface utilisateur
 description: Découvrez comment créer un connecteur source Google PubSub à l’aide de l’interface utilisateur de Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: 563ad16304894cab1ee1ead06f63a5b3f65c4ec2
+source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
 workflow-type: tm+mt
-source-wordcount: '1099'
-ht-degree: 39%
+source-wordcount: '1098'
+ht-degree: 36%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 39%
 
 Ce tutoriel décrit les étapes à suivre pour créer une connexion de source [!DNL Google PubSub] (ci-après dénommée « [!DNL PubSub] ») à l’aide de l’interface utilisateur de Platform.
 
-## Prise en main
+## Commencer
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
@@ -29,7 +29,8 @@ Si vous disposez déjà d’une connexion [!DNL PubSub] valide, vous pouvez igno
 
 ### Collecter les informations d’identification requises
 
-Pour connecter [!DNL PubSub] à Platform, vous devez fournir une valeur valide pour les informations d’identification suivantes :
+Pour connecter votre [!DNL PubSub] compte à Experience Platform. Pour plus d’informations sur l’authentification et la configuration des prérequis, consultez la section [[!DNL PubSub source] aperçu](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
+
 
 >[!BEGINTABS]
 
@@ -37,7 +38,7 @@ Pour connecter [!DNL PubSub] à Platform, vous devez fournir une valeur valide p
 
 | Informations d’identification | Description |
 | --- | --- |
-| Identifiant du projet | Identifiant de projet requis pour authentifier [!DNL PubSub]. |
+| Identifiant de projet | Identifiant de projet requis pour authentifier [!DNL PubSub]. |
 | Informations d’identification | Informations d’identification requises pour l’authentification [!DNL PubSub]. Vous devez vous assurer de placer l’intégralité du fichier JSON après avoir supprimé les espaces blancs de vos informations d’identification. |
 
 >[!TAB Authentification par thème et par abonnement]
