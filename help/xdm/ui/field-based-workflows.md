@@ -1,21 +1,17 @@
 ---
-title: Workflows basés sur les champs dans l’éditeur de schémas (version bêta)
+title: Workflows basés sur les champs dans l’éditeur de schémas
 description: Découvrez comment ajouter individuellement des champs provenant de groupes de champs existants à vos schémas de modèle de données d’expérience (XDM).
 hide: true
 hidefromtoc: true
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 07faf4dd749219a955df720a8c740427113a5de2
+source-git-commit: b224783922c3b6c5e2045134be2512748ca2575b
 workflow-type: tm+mt
-source-wordcount: '1208'
+source-wordcount: '1167'
 ht-degree: 0%
 
 ---
 
-# Workflows basés sur les champs dans l’éditeur de schémas (version bêta)
-
->[!IMPORTANT]
->
->Les workflows décrits dans ce document bêta sont désormais disponibles en général dans Adobe Experience Platform. Pour obtenir des conseils à jour sur les workflows basés sur les champs dans l’éditeur de schémas, reportez-vous à la section [guide de l’interface utilisateur des schémas](./resources/schemas.md) au lieu de . Ce guide sera bientôt supprimé.
+# Workflows basés sur les champs dans l’éditeur de schémas
 
 Adobe Experience Platform fournit un ensemble robuste de [groupes de champs](../schema/composition.md#field-group) à utiliser dans les schémas de modèle de données d’expérience (XDM). La structure et la sémantique derrière ces groupes de champs sont soigneusement conçues pour répondre à un large éventail de cas d’utilisation de la segmentation et à d’autres applications en aval dans Platform. Vous pouvez également définir vos propres groupes de champs personnalisés pour répondre à des besoins professionnels uniques.
 
@@ -67,7 +63,7 @@ Sélectionnez l’icône d’aperçu (![Icône Aperçu](../images/ui/field-based
 
 ![Ajouter un champ standard](../images/ui/field-based-workflows/add-standard-field.png)
 
-Le canevas se met à jour pour afficher le champ standard ajouté au schéma, y compris tous les champs parents sous lesquels il est imbriqué dans la structure du groupe de champs. Le nom du groupe de champs est également répertorié sous **[!UICONTROL Groupes de champs]** dans le rail de gauche. Si vous souhaitez ajouter d’autres champs à partir du même groupe de champs, sélectionnez **[!UICONTROL Gestion des champs associés]** dans le rail de droite.
+Le canevas se met à jour pour afficher le champ standard ajouté au schéma, y compris tous les champs parents sous lesquels il est imbriqué dans la structure du groupe de champs. Le nom du groupe de champs figure également sous **[!UICONTROL Groupes de champs]** dans le rail de gauche. Si vous souhaitez ajouter d’autres champs à partir du même groupe de champs, sélectionnez **[!UICONTROL Gestion des champs associés]** dans le rail de droite.
 
 ![Champ standard ajouté](../images/ui/field-based-workflows/standard-field-added.png)
 

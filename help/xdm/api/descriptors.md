@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Point de terminaison de l’API Descripteurs
 description: Le point de terminaison /descriptors de l’API Schema Registry vous permet de gérer par programmation les descripteurs XDM dans votre application d’expérience.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 786801975dbde52b5d81a407618ef3b574a6afa3
+source-git-commit: 44355aa2ddf03b20aca64c6675414b73682bc2b5
 workflow-type: tm+mt
-source-wordcount: '1905'
+source-wordcount: '1919'
 ht-degree: 40%
 
 ---
@@ -21,7 +21,7 @@ Une ou plusieurs entités de descripteur de schéma peuvent être appliquées à
 
 La variable `/descriptors` du point de terminaison [!DNL Schema Registry] L’API vous permet de gérer par programmation les descripteurs dans votre application d’expérience.
 
-## Prise en main
+## Commencer
 
 Le point de terminaison utilisé dans ce guide fait partie du [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
@@ -288,6 +288,10 @@ Pour confirmer la suppression du descripteur, vous pouvez effectuer une [requêt
 La section suivante fournit des informations supplémentaires sur l’utilisation des descripteurs dans [!DNL Schema Registry] API.
 
 ### Définition de descripteurs {#defining-descriptors}
+
+>[!NOTE]
+>
+>Le nombre maximal de descripteurs pouvant être appliqués à un schéma est de 4 000.
 
 Les sections suivantes présentent les types de descripteurs disponibles, y compris les champs nécessaires pour définir un descripteur de chaque type.
 
