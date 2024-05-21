@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’IU de Segmentation Service
 description: Découvrez comment créer et gérer des audiences et des définitions de segment dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 5182ee22ae7952f74c29969c0d484397a2850a4c
+source-git-commit: 4c1f29e61ee716a9655bc389bbe08b386ddd643b
 workflow-type: tm+mt
-source-wordcount: '4274'
-ht-degree: 80%
+source-wordcount: '4334'
+ht-degree: 78%
 
 ---
 
@@ -85,7 +85,11 @@ Une icône de points de suspension se trouve à côté de chaque audience. Cette
 | [!UICONTROL Supprimer] | Composition d’audience, chargement personnalisé, Segmentation Service | Supprime l’audience sélectionnée. Audiences utilisées dans des destinations en aval ou qui dépendent d’autres audiences **cannot** être supprimées. Pour plus d’informations sur la suppression d’une audience, veuillez lire le [FAQ sur la segmentation](../faq.md#lifecycle-states). |
 | [!UICONTROL Ajouter au package] | Composition d’audience, chargement personnalisé, Segmentation Service | Déplace l’audience entre les environnements de test. Pour plus d’informations sur cette fonctionnalité, veuillez lire la section [guide d’outils sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
-Dans la partie supérieure de la page, vous trouverez des options permettant d’ajouter toutes les audiences à un planning, d’importer une audience, de créer une audience et d’afficher une ventilation de la fréquence de mise à jour.
+>[!IMPORTANT]
+>
+>Avant de supprimer votre audience, veillez à ce que l’audience soit **not** utilisé comme composant dans une audience basée sur un compte ou utilisé dans Adobe Journey Optimizer.
+
+En haut de la page se trouvent les options permettant d’ajouter toutes les audiences à un planning, d’importer une audience, de créer une audience et d’afficher un résumé de l’évaluation de l’audience.
 
 L’activation de l’option **[!UICONTROL Planifier toutes les audiences]** active la segmentation planifiée. Vous trouverez plus d’informations sur la segmentation planifiée dans la [section segmentation planifiée de ce guide d’utilisation](#scheduled-segmentation).
 
@@ -95,13 +99,13 @@ Sélectionner **[!UICONTROL Créer une audience]** vous permet de créer une aud
 
 ![La barre de navigation supérieure de la page de navigation des audiences est mise en surbrillance. Cette barre contient un bouton pour créer une audience et un bouton pour importer une audience.](../images/ui/overview/browse-audiences-top.png)
 
-Vous pouvez sélectionner **[!UICONTROL Résumé de la fréquence de mise à jour]** pour afficher un graphique circulaire indiquant la fréquence de mise à jour.
+Vous pouvez sélectionner **[!UICONTROL Résumé de l’évaluation]** pour afficher un graphique circulaire qui présente un résumé des évaluations de l’audience.
 
-![Le bouton Récapitulatif de la mise à jour de la fréquence est mis en surbrillance.](../images/ui/overview/browse-audience-update-frequency-summary.png)
+![Le bouton Synthèse des évaluations est mis en surbrillance.](../images/ui/overview/browse-audience-evaluation-summary.png)
 
-Le graphique en secteurs apparaît, affichant une répartition des audiences par fréquence de mise à jour. Le graphique affiche le nombre total d’audiences au milieu et le temps d’évaluation quotidien par lots en UTC en bas. Si vous passez le curseur de la souris sur les différentes parties de l’audience, le nombre d’audiences appartenant à chaque type de fréquence de mise à jour s’affiche.
+Le graphique circulaire s’affiche, affichant une ventilation des audiences par évaluation d’audience. Le graphique affiche le nombre total d’audiences au milieu et le temps d’évaluation quotidien par lots en UTC en bas. Si vous passez le curseur de la souris sur les différentes parties de l’audience, le nombre d’audiences appartenant à chaque type de fréquence de mise à jour s’affiche.
 
-![Le graphique circulaire de fréquence de mise à jour est mis en surbrillance, avec la durée d’évaluation de la segmentation par lots également affichée.](../images/ui/overview/update-frequency-chart.png)
+![Le graphique circulaire d’évaluation de l’audience est mis en surbrillance. Le temps d’évaluation de la segmentation par lots s’affiche également.](../images/ui/overview/evaluation-summary.png)
 
 ### Personnaliser {#customize}
 
@@ -203,7 +207,7 @@ La liste des filtres disponibles s’affiche.
 | [!UICONTROL Origine] | Permet de filtrer l’audience en fonction de son origine. Les options disponibles comprennent Segmentation Service, le chargement personnalisé, la composition d’audience et Audience Manager. |
 | [!UICONTROL A une balise] | Permet de filtrer par balise. Vous pouvez choisir entre **[!UICONTROL A une balise]** et **[!UICONTROL A toutes les balises]**. Lors de la sélection de **[!UICONTROL A une balise]**, les audiences filtrées incluent **toutes** les balises que vous avez ajoutées. Lors de la sélection de **[!UICONTROL A toutes les balises]**, les audiences filtrées doivent inclure **toutes** les balises que vous avez ajoutées. |
 | [!UICONTROL Statut du cycle de vie] | Permet de filtrer les données en fonction du statut de cycle de vie de l’audience. Les options disponibles incluent : [!UICONTROL Supprimé], [!UICONTROL Version préliminaire], [!UICONTROL Inactif], et [!UICONTROL Publié]. |
-| [!UICONTROL Fréquence de mise à jour] | Permet de filtrer selon la fréquence de mise à jour de l’audience. Les options disponibles sont les suivantes : [!UICONTROL Planifié], [!UICONTROL Continu] et [!UICONTROL À la demande]. |
+| [!UICONTROL Fréquence de mise à jour] | Permet de filtrer selon la fréquence de mise à jour de l’audience (méthode d’évaluation). Les options disponibles sont les suivantes : [!UICONTROL Planifié], [!UICONTROL Continu] et [!UICONTROL À la demande]. |
 | [!UICONTROL Créé par] | Permet de filtrer en fonction de la personne qui a créé l’audience. |
 | [!UICONTROL Date de création] | Permet de filtrer en fonction de la date de création de l’audience. Vous pouvez choisir une période pour filtrer la date de création de l’audience. |
 | [!UICONTROL Date de modification] | Permet de filtrer en fonction la date de dernière modification de l’audience. Vous pouvez choisir une période pour filtrer la date de la dernière modification de l’audience. |
@@ -329,6 +333,10 @@ Sélectionner **[!UICONTROL Créer une règle]** vous dirige vers le créateur d
 ![L‘espace de travail du créateur de segments s’affiche.](../images/ui/overview/segment-builder.png)
 
 ### Importer une audience {#import-audience}
+
+>[!IMPORTANT]
+>
+>Pour importer une audience générée de l’extérieur, vous **must** possèdent les autorisations suivantes : [!UICONTROL Affichage des segments], [!UICONTROL Gestion des segments], et [!UICONTROL Importer une audience]. Pour plus d’informations sur ces autorisations, consultez la [présentation du contrôle d’accès](../../access-control/home.md#permissions).
 
 Vous pouvez sélectionner **[!UICONTROL Importer une audience]** pour importer une audience générée en externe.
 

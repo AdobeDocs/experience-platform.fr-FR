@@ -2,10 +2,10 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: d4fc95532a82fe32b4172870a5521e41ce313bab
+source-git-commit: 6088dc06af6db2ce1a86a9638df23453184864b2
 workflow-type: tm+mt
-source-wordcount: '3976'
-ht-degree: 23%
+source-wordcount: '4056'
+ht-degree: 22%
 
 ---
 
@@ -29,7 +29,7 @@ Oui, les audiences préconfigurées générées en externe sont prises en charge
 
 ### Quelles autorisations dois-je posséder pour charger des audiences générées en externe ?
 
-Pour charger des audiences générées en externe, vous devez disposer des autorisations &quot;Afficher les audiences/segments&quot;, &quot;Gérer les audiences/segments&quot;, &quot;Afficher les jeux de données&quot;, &quot;Gérer les jeux de données&quot;, &quot;Afficher les sources&quot; et &quot;Gérer les sources&quot;. Aucun contrôle spécifique basé sur les rôles n’est nécessaire pour charger des audiences générées en externe.
+Pour charger des audiences générées en externe, vous devez disposer des autorisations &quot;Afficher les segments&quot;, &quot;Gérer les segments&quot; et &quot;Importer des audiences&quot;. Aucun contrôle spécifique basé sur les rôles n’est nécessaire pour charger des audiences générées en externe.
 
 ### Que se passe-t-il lorsque je charge une audience générée en externe ?
 
@@ -198,6 +198,14 @@ Vous pouvez republier une audience en sélectionnant une audience inactive, en o
 >Vous ne pouvez supprimer que les audiences qui sont **not** utilisée dans toute activation en aval. De plus, vous ne pouvez pas supprimer une audience référencée dans une autre audience. Si vous ne pouvez pas supprimer votre audience, veuillez vous assurer que vous êtes **not** l’utiliser dans n’importe quel service en aval ou en tant que composante essentielle d’une autre audience.
 
 Vous pouvez placer une audience dans l’état de suppression en ouvrant le menu des actions rapides dans Audience Portal et en sélectionnant [!UICONTROL Supprimer].
+
+### Existe-t-il des avertissements pour les transitions d’état de cycle de vie ?
+
+Oui, vous devez tenir compte de certains avertissements lorsque vous utilisez des audiences dans des services en aval tels que Adobe Journey Optimizer ou des audiences non basées sur les clients telles que les audiences basées sur un compte.
+
+À l’heure actuelle, vous **must** vérifier manuellement si l’audience est utilisée en aval dans Adobe Journey Optimizer, car ce statut n’est actuellement pas automatiquement vérifié.
+
+En outre, vous pouvez **must** vérifier manuellement si l’audience est utilisée comme composant d’une audience basée sur un compte, car ce statut n’est pas non plus actuellement vérifié automatiquement.
 
 ### L’utilisation d’une audience en tant qu’audience enfant affecte-t-elle les transitions d’état de cycle de vie ?
 
