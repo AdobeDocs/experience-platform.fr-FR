@@ -4,10 +4,10 @@ title: Connexion API HTTP
 description: Utilisez la destination API HTTP dans Adobe Experience Platform pour envoyer des données de profil vers un point d’entrée HTTP tiers afin d’exécuter vos propres analyses ou toute autre opération dont vous pourriez avoir besoin sur les données de profil exportées hors d’Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: e9ed96a15d6bba16165c67e53467b7f51a866014
 workflow-type: tm+mt
-source-wordcount: '2483'
-ht-degree: 78%
+source-wordcount: '2639'
+ht-degree: 71%
 
 ---
 
@@ -62,6 +62,20 @@ Pour utiliser la destination d’API HTTP pour exporter des données en dehors d
 >[!TIP]
 >
 > Vous pouvez également utiliser [Adobe Experience Platform Destination SDK](/help/destinations/destination-sdk/overview.md) pour configurer une intégration et envoyer des données de profil Experience Platform à un point d’entrée HTTP.
+
+## Prise en charge et certificat du protocole mTLS {#mtls-protocol-support}
+
+Vous pouvez utiliser [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) pour garantir une sécurité renforcée dans les connexions sortantes à vos connexions de destination d’API HTTP.
+
+[!DNL mTLS] est une méthode de sécurité de bout en bout pour l’authentification mutuelle qui garantit que les deux parties partageant des informations sont celles qu’elles prétendent être avant que les données ne soient partagées. [!DNL mTLS] inclut une étape supplémentaire par rapport à [!DNL TLS], dans laquelle le serveur demande également le certificat du client et le vérifie à son extrémité.
+
+Si vous souhaitez utiliser [!DNL mTLS] avec [!DNL HTTP API] destinations, l’adresse du serveur que vous avez indiquée dans la variable [détails de la destination](#destination-details) La page doit avoir [!DNL TLS] les protocoles sont désactivés et uniquement [!DNL mTLS] activée. Si la variable [!DNL TLS] Le protocole 1.2 est toujours activé sur le point de terminaison , aucun certificat n’est envoyé pour l’authentification du client. Cela signifie que pour utiliser [!DNL mTLS] avec votre [!DNL HTTP API] destination, votre point de terminaison de serveur de &quot;réception&quot; doit être un [!DNL mTLS]point d’entrée de connexion activé uniquement.
+
+### Télécharger le certificat {#certificate}
+
+Si vous souhaitez vérifier la variable [!DNL Common Name] (CN) et [!DNL Subject Alternative Names] (SAN) pour effectuer une validation tierce supplémentaire, vous pouvez télécharger le certificat ci-dessous :
+
+* [Certificat public mTLS de l’API HTTP](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
 
 ## Liste autorisée d’adresses IP {#ip-address-allowlist}
 
@@ -165,12 +179,12 @@ Si vous sélectionnez le type d’authentification **[!UICONTROL Informations d�
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
 >title="Inclure les noms de segment"
->abstract="Activez ce bouton si vous voulez que l’export de données inclue les noms des audiences que vous exportez. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée."
+>abstract="Basculez si vous souhaitez que l’exportation des données contienne les noms des audiences que vous exportez. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmenttimestamps"
 >title="Inclure la date et l’heure de segment"
->abstract="Activez ce bouton si vous souhaitez que l’export de données inclue la date et l’heure UNIX de la création et des mises à jour des audiences, ainsi que la date et l’heure UNIX du mappage des audiences à la destination pour l’activation. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée."
+>abstract="Basculez si vous souhaitez que l’exportation des données inclue l’horodatage UNIX lors de la création et de la mise à jour des audiences, ainsi que l’horodatage UNIX lorsque les audiences ont été mappées à la destination pour activation. Consultez la documentation pour un exemple d’exportation de données avec cette option sélectionnée."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_queryparameters"
