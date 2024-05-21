@@ -2,10 +2,10 @@
 title: Planifications de requête
 description: Découvrez comment automatiser les exécutions de requêtes planifiées, supprimer ou désactiver un planning de requêtes et utiliser les options de planification disponibles via l’interface utilisateur de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '1572'
-ht-degree: 18%
+source-wordcount: '1822'
+ht-degree: 15%
 
 ---
 
@@ -93,9 +93,23 @@ Vous pouvez également inscrire une requête planifiée dans la fonction de quar
 
 ### Définition d’alertes pour un état de requête planifié {#alerts-for-query-status}
 
-Vous pouvez également vous abonner aux alertes de requête dans le cadre des paramètres de requête planifiés. Cela signifie que vous recevez des notifications lors d’un changement d’état de votre requête. Les alertes peuvent être reçues sous la forme de notifications contextuelles ou d’emails. Les options d’alerte d’état de requête disponibles incluent le début, la réussite et l’échec. Cochez la case pour vous abonner à des alertes pour cet état de requête planifiée.
+Vous pouvez également vous abonner aux alertes de requête dans le cadre des paramètres de requête planifiés. Vous pouvez configurer vos paramètres pour recevoir des notifications dans diverses situations. Les alertes peuvent être définies pour un état en quarantaine, des retards dans le traitement des requêtes ou une modification de l’état de votre requête. Les options d’alerte d’état de requête disponibles incluent le début, la réussite et l’échec. Les alertes peuvent être reçues sous la forme de notifications contextuelles ou d’emails. Cochez la case pour vous abonner à des alertes pour cet état de requête planifiée.
 
 ![Panneau Détails du planning avec les options d’alerte mises en surbrillance.](../images/ui/query-editor/alerts.png)
+
+Le tableau ci-dessous décrit les types d’alerte de requête pris en charge :
+
+| Type d&#39;alerte | Description |
+|---|---|
+| `start` | Cette alerte vous avertit lorsqu’une exécution de requête planifiée est lancée ou commence à être traitée. |
+| `success` | Cette alerte vous informe lorsqu’une requête planifiée s’exécute correctement, ce qui indique que la requête s’est exécutée sans erreur. |
+| `failed` | Cette alerte se déclenche lorsqu’une exécution de requête planifiée rencontre une erreur ou échoue à s’exécuter correctement. Il vous aide à identifier et à résoudre rapidement les problèmes. |
+| `quarantine` | Cette alerte est activée lorsqu’une exécution de requête planifiée est mise en quarantaine. Une fois qu’une requête est [enrôlé dans la fonction de quarantaine](#quarantine), toute requête planifiée qui échoue dix exécutions consécutives est automatiquement placée dans une [!UICONTROL Quarantiné] état. Une requête mise en quarantaine requiert alors votre intervention avant que d’autres exécutions ne puissent avoir lieu. Remarque : les requêtes doivent être inscrites pour la fonction de quarantaine pour que vous puissiez vous abonner aux alertes de quarantaine. |
+| `delay` | Cette alerte vous indique si une [retard dans le résultat d’une exécution de requête planifiée](./monitor-queries.md#query-run-delay) au-delà d’un seuil spécifié. Vous pouvez définir une heure personnalisée qui déclenche l’alerte lorsque la requête s’exécute pendant cette durée sans avoir terminé ou échoué. Le comportement par défaut définit une alerte de 150 minutes après le début du traitement de la requête. |
+
+>[!NOTE]
+>
+>Si vous choisissez de définir une [!UICONTROL Délai d’exécution de la requête] , vous devez définir le délai souhaité en minutes dans l’interface utilisateur de Platform. Saisissez la durée en minutes. Le délai maximal est de 24 heures (1 440 minutes).
 
 Pour une vue d’ensemble des alertes dans Adobe Experience Platform, y compris la structure de la définition des règles d’alerte, voir la section [aperçu des alertes](../../observability/alerts/overview.md). Pour plus d’informations sur la gestion des alertes et des règles d’alerte dans l’interface utilisateur de Adobe Experience Platform, voir [Guide de l’interface utilisateur des alertes](../../observability/alerts/ui.md).
 

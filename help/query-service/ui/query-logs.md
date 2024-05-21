@@ -2,9 +2,9 @@
 title: Journaux de requête
 description: Les logs de requête sont générés automatiquement chaque fois qu’une requête est exécutée et sont disponibles via l’interface utilisateur pour faciliter la résolution des problèmes. Ce document explique comment utiliser et parcourir la section Journaux de Query Service de l’interface utilisateur.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 445738f78f44ab8eb1632dbda82c4dd69dbebefd
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '1012'
 ht-degree: 3%
 
 ---
@@ -19,9 +19,13 @@ Adobe Experience Platform conserve un journal de tous les événements de requê
 
 Les fichiers journaux sont générés automatiquement par tout événement de requête et contiennent des informations telles que le code SQL utilisé, l’état de la requête, la durée de la requête et l’heure de la dernière exécution. Vous pouvez utiliser les données du journal des requêtes comme un outil puissant pour résoudre les problèmes de requêtes inefficaces ou problématiques. Des informations plus complètes sur le journal sont conservées dans le cadre de la fonctionnalité de journal d’audit. Vous pouvez les trouver dans la section [documentation du journal d’audit](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## Vérifier les logs de requête
+## Vérifier les logs de requête {#check-query-logs}
 
 Pour vérifier les logs de requête, sélectionnez [!UICONTROL Requêtes] pour accéder à l’espace de travail Query Service et sélectionnez [!UICONTROL Journal] dans les options disponibles.
+
+>[!NOTE]
+>
+>Les requêtes système et les requêtes de tableau de bord sont exclues par défaut. Voir [filtres](#filter-logs) pour plus d’informations sur la manière d’affiner les journaux affichés en fonction de vos paramètres.
 
 ![L’interface utilisateur de Platform avec les requêtes et le journal mis en surbrillance.](../images/ui/query-log/logs.png)
 
@@ -77,11 +81,12 @@ La liste des filtres disponibles s’affiche.
 
 ![Espace de travail Journal des requêtes avec les options de filtre affichées et mises en surbrillance.](../images/ui/query-log/log-filter-settings.png)
 
-Le tableau suivant a prouvé la description de chaque filtre.
+Le tableau suivant fournit une description de chaque filtre.
 
 | Filtre | Description |
 | ------ | ----------- |
 | [!UICONTROL Exclure les requêtes de tableau de bord] | Cette case à cocher est activée par défaut et exclut les journaux générés par les requêtes utilisées pour générer les informations. Ces requêtes sont générées par le système et obscurcissent les enregistrements des journaux générés par l’utilisateur nécessaires à la surveillance, à l’administration et au dépannage. Pour afficher les journaux générés par le système, désélectionnez la case à cocher. |
+| [!UICONTROL Exclure les requêtes système] | Cette case à cocher est activée par défaut et exclut les journaux générés par le système. Les requêtes générées par le système incluent souvent des tâches en arrière-plan ou des opérations de maintenance qui peuvent ne pas être pertinentes à des fins de surveillance, d’administration ou de dépannage des utilisateurs. Si vous devez examiner les journaux générés par le système, désactivez cette case à cocher pour les inclure dans votre vue de journal. |
 | [!UICONTROL Date de début] | Pour filtrer les journaux des requêtes créées pendant une période spécifique, définissez la variable [!UICONTROL Début] et [!UICONTROL Fin] dates dans la variable [!UICONTROL Date de début] . |
 | [!UICONTROL Date d’achèvement] | Pour filtrer les journaux des requêtes terminées au cours d’une période spécifique, définissez la variable [!UICONTROL Début] et [!UICONTROL Fin] dates dans la variable [!UICONTROL Date d’achèvement] . |
 | [!UICONTROL Statut] | Pour filtrer les journaux en fonction de la variable [!UICONTROL État] de la requête, sélectionnez le bouton radio approprié. Les options disponibles incluent [!UICONTROL Envoyé], [!UICONTROL En cours], [!UICONTROL Succès], et [!UICONTROL En échec]. Vous ne pouvez filtrer les journaux que selon une condition d’état à la fois. |

@@ -2,10 +2,10 @@
 title: Surveillance des requêtes planifiées
 description: Découvrez comment surveiller les requêtes via l’interface utilisateur de Query Service.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: e63e3344dd530fc9111f29948f2dfbd4daedf28c
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '2030'
-ht-degree: 32%
+source-wordcount: '2454'
+ht-degree: 26%
 
 ---
 
@@ -25,7 +25,7 @@ Le tableau ci-dessous décrit chaque colonne disponible.
 
 >[!NOTE]
 >
->L’icône d’abonnement aux alertes apparaît dans chaque ligne dans une colonne sans titre. Consultez la section [Abonnements aux alertes](#alert-subscription) pour plus d’informations.
+>Icône d’abonnement aux alertes (![Icône d’abonnement d’une alerte.](../images/ui/monitor-queries/alert-subscription-icon.png)) est contenu dans chaque ligne d’une colonne sans titre. Consultez la section [Abonnements aux alertes](#alert-subscription) pour plus d’informations.
 
 | Colonne | Description |
 |---|---|
@@ -69,7 +69,7 @@ La variable [!UICONTROL Requêtes planifiées] view propose diverses actions int
 
 ### Désactivation ou activation d’une requête planifiée {#disable}
 
-Pour désactiver une requête planifiée, sélectionnez les points de suspension d’une requête planifiée que vous souhaitez gérer, puis sélectionnez **[!UICONTROL Désactiver le planning]** dans les options du menu contextuel. Une boîte de dialogue s’affiche pour confirmer votre action. Sélectionner **[!UICONTROL Désactiver]** pour confirmer votre paramètre.
+Pour désactiver une requête planifiée, sélectionnez les points de suspension de la requête planifiée que vous souhaitez gérer, puis sélectionnez **[!UICONTROL Désactiver le planning]** dans les options du menu contextuel. Une boîte de dialogue s’affiche pour confirmer votre action. Sélectionner **[!UICONTROL Désactiver]** pour confirmer votre paramètre.
 
 Une fois qu’une requête planifiée est désactivée, vous pouvez activer le planning par le biais du même processus. Sélectionnez les points de suspension, puis sélectionnez **[!UICONTROL Activation du planning]** dans les options disponibles.
 
@@ -79,21 +79,33 @@ Une fois qu’une requête planifiée est désactivée, vous pouvez activer le p
 
 ### Suppression d’une requête planifiée {#delete}
 
-Pour supprimer une requête planifiée, sélectionnez les points de suspension d’une requête planifiée que vous souhaitez gérer, puis sélectionnez **[!UICONTROL Supprimer le planning]** dans les options du menu contextuel. Une boîte de dialogue s’affiche pour confirmer votre action. Sélectionner **[!UICONTROL Supprimer]** pour confirmer votre paramètre.
+Pour supprimer une requête planifiée, sélectionnez les points de suspension de la requête planifiée que vous souhaitez gérer, puis sélectionnez **[!UICONTROL Supprimer le planning]** dans les options du menu contextuel. Une boîte de dialogue s’affiche pour confirmer votre action. Sélectionner **[!UICONTROL Supprimer]** pour confirmer votre paramètre.
 
-Une fois une requête planifiée supprimée, elle est **not** supprimé de la liste des requêtes planifiées. Les actions intégrées fournies par les ellipses sont supprimées et remplacées par l’icône d’alerte d’ajout grisé. Vous ne pouvez pas vous abonner à des alertes pour le planning supprimé. La ligne reste dans l’interface utilisateur pour fournir des informations sur les exécutions effectuées dans le cadre de la requête planifiée.
+Une fois une requête planifiée supprimée, elle est **not** supprimé de la liste des requêtes planifiées. Les actions intégrées fournies par les ellipses sont supprimées et remplacées par l’icône d’abonnement d’une alerte grisée. Vous ne pouvez pas vous abonner à des alertes pour le planning supprimé. La ligne reste dans l’interface utilisateur pour fournir des informations sur les exécutions effectuées dans le cadre de la requête planifiée.
 
-![L’onglet Requêtes planifiées avec une requête planifiée supprimée et l’icône d’alerte grisée mise en surbrillance.](../images/ui/monitor-queries/post-delete.png)
+![L’onglet Requêtes planifiées avec une requête planifiée supprimée et l’icône d’abonnement aux alertes grisées surlignée.](../images/ui/monitor-queries/post-delete.png)
 
 Si vous souhaitez planifier des exécutions pour ce modèle de requête, sélectionnez le nom du modèle dans la ligne appropriée pour accéder à l’éditeur de requêtes, puis suivez le [instructions pour ajouter un planning à une requête](./query-schedules.md#create-schedule) comme décrit dans la documentation.
 
 ### S’abonner aux alertes {#alert-subscription}
 
-Pour vous abonner aux alertes pour les exécutions de requête planifiées, sélectionnez les points de suspension d’une requête planifiée à gérer, puis sélectionnez **[!UICONTROL Abonner]** dans les options du menu contextuel.
+Pour vous abonner aux alertes pour les exécutions de requêtes planifiées, sélectionnez l’une des options suivantes : `...` (points de suspension) ou icône d’abonnement aux alertes (![Icône d’abonnement aux alertes.](../images/ui/monitor-queries/alert-subscription-icon.png)) pour la requête planifiée que vous souhaitez gérer. Le menu déroulant des actions intégrées s’affiche. Ensuite, sélectionnez **[!UICONTROL Abonner]** dans les options disponibles.
 
-La variable [!UICONTROL Alertes] s’ouvre. La variable [!UICONTROL Alertes] vous abonne aux notifications de l’interface utilisateur et aux alertes par courrier électronique. Les alertes reposent sur le statut de la requête. Trois options sont disponibles : `start`, `success` et `failure`. Cochez la ou les cases correspondantes et sélectionnez **[!UICONTROL Enregistrer]** pour vous abonner. Vous pouvez vous abonner à des alertes tant qu’elles n’ont pas de [!UICONTROL Horodatage de la dernière exécution] .
+![L’espace de travail des requêtes planifiées avec ses points de suspension, son icône d’abonnement aux alertes et le menu déroulant des actions intégrées sont mis en surbrillance.](../images/ui/monitor-queries/subscribe.png)
+
+La variable [!UICONTROL Alertes] s’ouvre. La variable [!UICONTROL Alertes] vous abonne aux notifications de l’interface utilisateur et aux alertes par courrier électronique. Plusieurs options d’abonnement aux alertes sont disponibles : `start`, `success`, `failure`, `quarantine`, et `delay`. Cochez la ou les cases correspondantes et sélectionnez **[!UICONTROL Enregistrer]** pour vous abonner.
 
 ![Boîte de dialogue d’abonnement aux alertes.](../images/ui/monitor-queries/alert-subscription-dialog.png)
+
+Le tableau ci-dessous décrit les types d’alerte de requête pris en charge :
+
+| Type d&#39;alerte | Description |
+|---|---|
+| `start` | Cette alerte vous avertit lorsqu’une exécution de requête planifiée est lancée ou commence à être traitée. |
+| `success` | Cette alerte vous informe lorsqu’une requête planifiée s’exécute correctement, ce qui indique que la requête s’est exécutée sans erreur. |
+| `failed` | Cette alerte se déclenche lorsqu’une exécution de requête planifiée rencontre une erreur ou échoue à s’exécuter correctement. Il vous aide à identifier et à résoudre rapidement les problèmes. |
+| `quarantine` | Cette alerte est activée lorsqu’une exécution de requête planifiée est mise en quarantaine. Lorsque des requêtes sont inscrites dans la variable [fonction de mise en quarantaine](#quarantined-queries), toute requête planifiée qui échoue dix exécutions consécutives est automatiquement placée dans une [!UICONTROL Quarantiné] état. Elles nécessitent alors votre intervention avant toute autre exécution. |
+| `delay` | Cette alerte vous indique si une [retard dans le résultat d&#39;une exécution de requête](#query-run-delay) au-delà d’un seuil spécifié. Vous pouvez définir une heure personnalisée qui déclenche l’alerte lorsque la requête s’exécute pendant cette durée sans avoir terminé ou échoué. |
 
 >[!NOTE]
 >
@@ -107,7 +119,11 @@ Sélectionnez l’icône d’information (![Icône d’informations.](../images/
 
 ![L’onglet Requêtes planifiées avec l’icône d’informations et le panneau Détails surligné.](../images/ui/monitor-queries/details-panel.png)
 
-### Requêtes en quarantaine {#quarantined-queries}
+## Requêtes en quarantaine {#quarantined-queries}
+
+>[!NOTE]
+>
+>L’alerte de quarantaine n’est pas disponible pour les requêtes ad hoc &quot;run-once&quot;. L’alerte de quarantaine ne s’applique qu’aux requêtes par lots planifiées (CTAS et ITAS).
 
 Lorsqu’elle est inscrite dans la fonction de quarantaine, toute requête planifiée qui échoue à dix exécutions consécutives est automatiquement placée dans une [!UICONTROL Quarantiné] statut. Une requête avec ce statut devient inactive et ne s’exécute pas à sa cadence planifiée. Il nécessite ensuite votre intervention avant toute autre exécution. Cela permet de protéger les ressources système, car vous devez examiner et corriger les problèmes liés à votre SQL avant d’autres exécutions.
 
@@ -116,6 +132,22 @@ Pour activer une requête planifiée pour la fonction de quarantaine, sélection
 ![L’onglet Requêtes planifiées avec les points de suspension et Activer la quarantaine mis en surbrillance dans le menu déroulant des actions en ligne .](../images/ui/monitor-queries/inline-enable.png)
 
 Les requêtes peuvent également être inscrites dans la fonction de quarantaine lors du processus de création du planning. Voir [documentation sur les plannings de requête](./query-schedules.md#quarantine) pour plus d’informations.
+
+## Délai d’exécution de la requête {#query-run-delay}
+
+Contrôlez les heures de votre ordinateur en définissant des alertes pour les délais des requêtes. Vous pouvez surveiller les performances des requêtes et recevoir des notifications si l’état d’une requête reste inchangé après une période spécifique. Utilisez le &quot;&quot;[!UICONTROL Délai d’exécution de la requête]&quot; pour être averti si le traitement d’une requête se poursuit après une période spécifique sans avoir abouti.
+
+Lorsque vous [abonner aux alertes](#alert-subscription) pour les exécutions de requête planifiées, l’une des alertes disponibles est la [!UICONTROL Délai d’exécution de la requête]. Cette alerte nécessite de définir un seuil pour la durée de l’exécution, à ce stade, vous serez informé du retard de traitement.
+
+Pour choisir une durée de seuil qui déclenche la notification, saisissez un nombre dans le champ de saisie de texte ou utilisez les flèches haut et bas pour augmenter d&#39;une minute. Puisque le seuil est défini en minutes, la durée maximale d’observation d’un délai d’exécution de requête est de 1 440 minutes (24 heures). La période par défaut d’un délai d’exécution est de 150 minutes.
+
+>[!NOTE]
+>
+>Une exécution de requête ne peut avoir qu’un seul délai d’exécution. Si vous modifiez le seuil de délai, il est modifié pour l’utilisateur abonné à l’alerte et pour l’ensemble de votre organisation.
+
+![La boîte de dialogue Alertes dans l’onglet Requêtes planifiées avec le champ de saisie du délai d’exécution de la requête en surbrillance.](../images/ui/monitor-queries/query-run-delay-input.png)
+
+Consultez la section Abonnement aux alertes pour savoir comment [abonner à [!UICONTROL Délai d’exécution de la requête] alertes](#alert-subscription).
 
 ## Filtrer des requêtes {#filter}
 
@@ -157,7 +189,7 @@ Sélectionnez un ID d’exécution de requête pour accéder à la page des dét
 
 ![Écran des détails du planning avec un ID d’exécution mis en surbrillance.](../images/ui/monitor-queries/navigate-to-run-details.png)
 
-## Présentation de l’exécution de requête {#query-run-overview}
+## Vue d’ensemble de l’exécution de la requête {#query-run-overview}
 
 La variable [!UICONTROL Présentation de l’exécution de requête] fournit des informations sur les exécutions individuelles pour cette requête planifiée et une ventilation plus détaillée de l’état d’exécution. Cette page contient également les informations sur le client et les détails des erreurs qui ont pu entraîner l’échec de la requête.
 

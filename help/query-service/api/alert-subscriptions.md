@@ -4,27 +4,39 @@ title: Point de terminaison des abonnements des alertes
 description: Ce guide fournit des exemples de requêtes et de réponses HTTP pour les différents appels API que vous pouvez effectuer au point d’entrée des abonnements aux alertes avec l’API Query Service.
 role: Developer
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
 workflow-type: tm+mt
-source-wordcount: '2666'
-ht-degree: 88%
+source-wordcount: '3204'
+ht-degree: 70%
 
 ---
 
 # Point d’entrée des abonnements des alertes
 
-Adobe Experience Platform Query Service vous permet de vous abonner à des alertes pour les requêtes ad hoc et planifiées. Les alertes peuvent être reçues par e-mail, dans l’interface utilisateur de Platform ou les deux. Le contenu de la notification est le même pour les alertes sur Platform et les alertes par e-mail. Actuellement, les alertes de requête ne peuvent être abonnées qu’à l’aide de la variable [API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/).
+Adobe Experience Platform Query Service vous permet de vous abonner à des alertes pour les requêtes ad hoc et planifiées. Les alertes peuvent être reçues par e-mail, dans l’interface utilisateur de Platform ou les deux. Le contenu de la notification est le même pour les alertes in-Platform et les alertes par email.
+
+## Commencer
+
+Les points de fin utilisés dans ce guide font partie de Adobe Experience Platform [API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/). Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
 
 >[!IMPORTANT]
 >
 >Pour recevoir des alertes par e-mail, vous devez d’abord activer ce paramètre dans l’interface utilisateur. Consultez la documentation pour des [instructions sur la façon d’activer les alertes par e-mail](../../observability/alerts/ui.md#enable-email-alerts).
 
-Le tableau ci-dessous décrit les types d’alerte pris en charge pour différents types de requêtes :
+## Types d’alerte {#alert-types}
 
-| Type de requête | Types d’alerte pris en charge |
+Le tableau ci-dessous décrit les types d’alerte de requête pris en charge :
+
+>[!IMPORTANT]
+>
+>La variable `delay` ou [!UICONTROL Délai d’exécution de la requête] Le type d’alerte n’est actuellement pas pris en charge par l’API Query Service. Cette alerte vous indique si le résultat d’une exécution de requête planifiée est retardé au-delà d’un seuil spécifié. Pour utiliser cette alerte, vous devez définir une heure personnalisée qui déclenche une alerte lorsque la requête s’exécute pendant cette durée sans avoir terminé ou échoué. Pour savoir comment définir cette alerte dans l’interface utilisateur, reportez-vous à la section [plannings de requête](../ui/query-schedules.md#alerts-for-query-status) la documentation ou la [guide des actions de requête intégrées](../ui/monitor-queries.md#query-run-delay).
+
+| Type d&#39;alerte | Description |
 |---|---|
-| Requêtes ad hoc | Exécutions `success` ou `failed`. |
-| Requêtes planifiées | Exécutions `start`, `success`ou `failed`. |
+| `start` | Cette alerte vous avertit lorsqu’une exécution de requête planifiée est lancée ou commence à être traitée. |
+| `success` | Cette alerte vous informe lorsqu’une requête planifiée s’exécute correctement, ce qui indique que la requête s’est exécutée sans erreur. |
+| `failed` | Cette alerte se déclenche lorsqu’une exécution de requête planifiée rencontre une erreur ou échoue à s’exécuter correctement. Il vous aide à identifier et à résoudre rapidement les problèmes. |
+| `quarantine` | Cette alerte est activée lorsqu’une exécution de requête planifiée est mise en quarantaine. Lorsque des requêtes sont inscrites dans la fonction de quarantaine, toute requête planifiée qui échoue à dix exécutions consécutives est automatiquement placée dans une [!UICONTROL Quarantiné] état. Elles nécessitent alors votre intervention avant toute autre exécution. |
 
 >[!NOTE]
 >
@@ -64,7 +76,7 @@ Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `orderby` | Champ qui spécifie l’ordre des résultats. Les champs `created` et `updated` sont pris en charge. Ajoutez le nom de la propriété en préfixe `+` pour les variables ascendantes et `-` pour l’ordre décroissant. La valeur par défaut est de `-created`. Notez que le signe plus (`+`) doit être échappé avec `%2B`. Par exemple `%2Bcreated` est la valeur d’un ordre créé croissant. |
+| `orderby` | Champ qui spécifie l’ordre des résultats. Les champs `created` et `updated` sont pris en charge. Ajoutez le nom de la propriété en préfixe `+` pour les variables ascendantes et `-` pour l’ordre décroissant. La valeur par défaut est `-created`. Notez que le signe plus (`+`) doit être échappé avec `%2B`. Par exemple `%2Bcreated` est la valeur d’un ordre créé croissant. |
 | `pagesize` | Utilisez ce paramètre pour contrôler le nombre d’enregistrements que vous souhaitez récupérer de l’appel API par page. La limite par défaut est définie sur le maximum de 50 enregistrements par page. |
 | `page` | Indiquez le numéro de page des résultats renvoyés pour lesquels vous souhaitez afficher les enregistrements. |
 | `property` | Filtrez les résultats selon les champs sélectionnés. Les filtres **doivent** être précédés d’une séquence d’échappement HTML. Des virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les propriétés suivantes permettent de filtrer : <ul><li>identifiant</li><li>assetId</li><li>statut</li><li>alertType</li></ul> Les opérateurs pris en charge sont : `==` (égal à). Par exemple : `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` renvoie l’alerte avec un ID correspondant. |
@@ -155,7 +167,7 @@ Une réponse réussie renvoie un état HTTP 200 et le tableau `alerts` avec les 
 | `alerts.assetId` | L’identifiant de la requête qui a associé l’alerte à une requête spécifique. |
 | `alerts.id` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier dans lequel l’alerte est stockée, le `alertType` et l’ID de flux. Vous trouverez des informations sur les alertes disponibles dans la section [Documentation du tableau de bord des alertes Platform](../../observability/alerts/ui.md). |
 | `alerts.status` | L’alerte a quatre valeurs de statut : `enabled`, `enabling`, `disabled` et `disabling`. Une alerte écoute activement les événements, est mise en pause pour une utilisation ultérieure tout en conservant tous les abonnés et paramètres pertinents, ou passe d’un état à l’autre. |
-| `alerts.alertType` | Le type d’alerte. Une alerte peut avoir trois valeurs : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
+| `alerts.alertType` | Le type d’alerte. Cinq états d’alerte sont disponibles pour les requêtes planifiées, bien que seuls quatre états d’alerte soient disponibles pour les requêtes ad hoc. La variable `quarantine` alerte n’est disponible que pour les requêtes planifiées. En outre, vous pouvez uniquement définir la variable `delay` à partir de l’interface utilisateur de Platform. Pour cette raison `delay` n’est pas décrite ici. Les alertes disponibles sont les suivantes : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li><li>`quarantine`: s’active lorsqu’une exécution de requête planifiée est mise en quarantaine.</li></ul> |
 | `alerts._links` | Fournit des informations sur les méthodes et points d’entrée disponibles qui peuvent être utilisés pour récupérer, mettre à jour, modifier ou supprimer des informations relatives à cet identifiant d’alerte. |
 | `_page` | L’objet contient des propriétés pour décrire l’ordre, la taille, le nombre total de pages et la page active. |
 | `_links` | L’objet contient des références URI qui peuvent être utilisées pour obtenir la page de ressources suivante ou précédente. |
@@ -370,7 +382,7 @@ Une réponse réussie renvoie un statut HTTP de 200 et toutes les alertes auxque
 | Propriété | Description |
 | -------- | ----------- |
 | `assetId` | L’identifiant de la requête qui a associé l’alerte à une requête spécifique. |
-| `alertType` | Le type d’alerte. Une alerte peut avoir trois valeurs : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
+| `alertType` | Le type d’alerte. Cinq états d’alerte sont disponibles pour les requêtes planifiées, bien que seuls quatre états d’alerte soient disponibles pour les requêtes ad hoc. La variable `quarantine` alerte n’est disponible que pour les requêtes planifiées. En outre, vous pouvez uniquement définir la variable `delay` à partir de l’interface utilisateur de Platform. Pour cette raison `delay` n’est pas décrite ici. Les alertes disponibles sont les suivantes : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li><li>`quarantine`: s’active lorsqu’une exécution de requête planifiée est mise en quarantaine.</li></ul> |
 | `subscriptions` | Objet utilisé pour transmettre les identifiants d’adresse électronique enregistrée par Adobe associés aux alertes, ainsi que les canaux via lesquels les utilisateurs et utilisatrices recevront les alertes. |
 | `subscriptions.inContextNotifications` | Tableau d’adresses électroniques enregistrées par Adobe pour les utilisateurs et utilisatrices qui sont abonnés aux notifications de l’interface utilisateur pour l’alerte. |
 | `subscriptions.emailNotifications` | Tableau d’adresses électroniques enregistrées par Adobe pour les utilisateurs et utilisatrices qui se sont abonnés pour recevoir des e-mails pour l’alerte. |
@@ -388,7 +400,7 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 | Paramètres | Description |
 | -------- | ----------- |
 | `{EMAIL_ID}` | Adresse électronique enregistrée dans un compte Adobe permettant d’identifier les utilisateurs et utilisatrices abonnés aux alertes. |
-| `orderby` | Champ qui spécifie l’ordre des résultats. Les champs `created` et `updated` sont pris en charge. Ajoutez le nom de la propriété en préfixe `+` pour les variables ascendantes et `-` pour l’ordre décroissant. La valeur par défaut est de `-created`. Notez que le signe plus (`+`) doit être échappé avec `%2B`. Par exemple `%2Bcreated` est la valeur d’un ordre créé croissant. |
+| `orderby` | Champ qui spécifie l’ordre des résultats. Les champs `created` et `updated` sont pris en charge. Ajoutez le nom de la propriété en préfixe `+` pour les variables ascendantes et `-` pour l’ordre décroissant. La valeur par défaut est `-created`. Notez que le signe plus (`+`) doit être échappé avec `%2B`. Par exemple `%2Bcreated` est la valeur d’un ordre créé croissant. |
 | `pagesize` | Utilisez ce paramètre pour contrôler le nombre d’enregistrements que vous souhaitez récupérer de l’appel API par page. La limite par défaut est définie sur le maximum de 50 enregistrements par page. |
 | `page` | Indiquez le numéro de page des résultats renvoyés pour lesquels vous souhaitez afficher les enregistrements. |
 | `property` | Filtrez les résultats selon les champs sélectionnés. Les filtres **doivent** être précédés d’une séquence d’échappement HTML. Des virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les propriétés suivantes permettent de filtrer : <ul><li>identifiant</li><li>assetId</li><li>statut</li><li>alertType</li></ul> Les opérateurs pris en charge sont : `==` (égal à). Par exemple : `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` renvoie l’alerte avec un ID correspondant. |
@@ -503,7 +515,7 @@ Une réponse réussie renvoie un statut HTTP 200 et le tableau `items` avec les 
 | `name` | Nom de l’alerte. Ce nom est généré par le service d’alertes et est utilisé sur le tableau de bord des alertes. Le nom de l’alerte comprend le dossier dans lequel l’alerte est stockée, le `alertType` et l’ID de flux. Vous trouverez des informations sur les alertes disponibles dans la section [Documentation du tableau de bord des alertes Platform](../../observability/alerts/ui.md). |
 | `assetId` | L’identifiant de la requête qui a associé l’alerte à une requête spécifique. |
 | `status` | L’alerte a quatre valeurs de statut : `enabled`, `enabling`, `disabled` et `disabling`. Une alerte écoute activement les événements, est mise en pause pour une utilisation ultérieure tout en conservant tous les abonnés et paramètres pertinents, ou passe d’un état à l’autre. |
-| `alertType` | Le type d’alerte. Une alerte peut avoir trois valeurs : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
+| `alertType` | Le type d’alerte. Cinq états d’alerte sont disponibles pour les requêtes planifiées, bien que seuls quatre états d’alerte soient disponibles pour les requêtes ad hoc. La variable `quarantine` alerte n’est disponible que pour les requêtes planifiées. En outre, vous pouvez uniquement définir la variable `delay` à partir de l’interface utilisateur de Platform. Pour cette raison `delay` n’est pas décrite ici. Les alertes disponibles sont les suivantes : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li><li>`quarantine`: s’active lorsqu’une exécution de requête planifiée est mise en quarantaine.</li></ul> |
 | `subscriptions` | Objet utilisé pour transmettre les identifiants d’adresse électronique enregistrée par Adobe associés aux alertes, ainsi que les canaux via lesquels les utilisateurs et utilisatrices recevront les alertes. |
 | `subscriptions.inContextNotifications` | Valeur booléenne déterminant la manière dont les utilisateurs et utilisatrices reçoivent les notifications d’alerte. Une valeur `true` confirme que les alertes doivent être fournies via l’interface utilisateur. Une valeur `false` garantit que les utilisateurs et utilisatrices ne sont pas avertis par ce canal. |
 | `subscriptions.emailNotifications` | Valeur booléenne déterminant la manière dont les utilisateurs et utilisatrices reçoivent les notifications d’alerte. Une valeur `true` confirme que les alertes doivent être fournies par e-mail. Une valeur `false` garantit que les utilisateurs et utilisatrices ne sont pas avertis par ce canal. |
@@ -548,7 +560,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | Propriété | Description |
 | -------- | ----------- |
 | `assetId` | L’alerte est associée à cet identifiant. L’ID peut être un ID de requête ou un ID de planning. |
-| `alertType` | Le type d’alerte. Une alerte peut avoir trois valeurs : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> |
+| `alertType` | Le type d’alerte. Cinq états d’alerte sont disponibles pour les requêtes planifiées, bien que seuls quatre états d’alerte soient disponibles pour les requêtes ad hoc. La variable `quarantine` alerte n’est disponible que pour les requêtes planifiées. En outre, vous pouvez uniquement définir la variable `delay` à partir de l’interface utilisateur de Platform. Pour cette raison `delay` n’est pas décrite ici. Les alertes disponibles sont les suivantes : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li><li>`quarantine`: s’active lorsqu’une exécution de requête planifiée est mise en quarantaine.</li></ul> |
 | `subscriptions` | Objet utilisé pour transmettre les identifiants d’adresse électronique enregistrée par Adobe associés aux alertes, ainsi que les canaux via lesquels les utilisateurs et utilisatrices recevront les alertes. |
 | `subscriptions.emailIds` | Un tableau d’adresses e-mail pour identifier les utilisateurs et utilisatrices qui doivent recevoir les alertes. Les adresses e-mail **doivent** être enregistrées sur un compte Adobe. |
 | `subscriptions.inContextNotifications` | Valeur booléenne déterminant la manière dont les utilisateurs et utilisatrices reçoivent les notifications d’alerte. Une valeur `true` confirme que les alertes doivent être fournies via l’interface utilisateur. Une valeur `false` garantit que les utilisateurs et utilisatrices ne sont pas avertis par ce canal. |
@@ -617,7 +629,7 @@ PATCH /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Paramètres | Description |
 | -------- | ----------- |
-| `ALERT_TYPE` | Le type d’alerte. Une alerte peut avoir trois valeurs : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul>Vous devez spécifier le type d’alerte actuel dans l’espace de noms du point d’entrée afin de le modifier. |
+| `ALERT_TYPE` | Le type d’alerte. Cinq états d’alerte sont disponibles pour les requêtes planifiées, bien que seuls quatre états d’alerte soient disponibles pour les requêtes ad hoc. La variable `quarantine` alerte n’est disponible que pour les requêtes planifiées. En outre, vous pouvez uniquement définir la variable `delay` à partir de l’interface utilisateur de Platform. Pour cette raison `delay` n’est pas décrite ici. Les alertes disponibles sont les suivantes : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li><li>`quarantine`: s’active lorsqu’une exécution de requête planifiée est mise en quarantaine.</li></ul>Vous devez spécifier le type d’alerte actuel dans l’espace de noms du point d’entrée afin de le modifier. |
 | `QUERY_ID` | Identifiant unique de la requête à mettre à jour. |
 | `SCHEDULE_ID` | Identifiant unique de la requête planifiée à mettre à jour. |
 
@@ -677,7 +689,7 @@ DELETE /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Paramètres | Description |
 | -------- | ----------- |
-| `ALERT_TYPE` | Le type d’alerte. Une alerte peut avoir trois valeurs : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li></ul> La requête DELETE s’applique uniquement au type d’alerte spécifique fourni. |
+| `ALERT_TYPE` | Le type d’alerte. Cinq états d’alerte sont disponibles pour les requêtes planifiées, bien que seuls quatre états d’alerte soient disponibles pour les requêtes ad hoc. La variable `quarantine` alerte n’est disponible que pour les requêtes planifiées. En outre, vous pouvez uniquement définir la variable `delay` à partir de l’interface utilisateur de Platform. Pour cette raison `delay` n’est pas décrite ici. Les alertes disponibles sont les suivantes : <ul><li>`start` : avertit un utilisateur ou une utilisatrice du démarrage de l’exécution de la requête.</li><li>`success` : avertit l’utilisateur ou l’utilisatrice une fois la requête terminée.</li><li>`failure` : avertit l’utilisateur ou l’utilisatrice en cas d’échec de la requête.</li><li>`quarantine`: s’active lorsqu’une exécution de requête planifiée est mise en quarantaine.</li></ul> La requête DELETE s’applique uniquement au type d’alerte spécifique fourni. |
 | `QUERY_ID` | Identifiant unique de la requête à mettre à jour. |
 | `SCHEDULE_ID` | Identifiant unique de la requête planifiée à mettre à jour. |
 
