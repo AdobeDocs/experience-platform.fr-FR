@@ -1,13 +1,13 @@
 ---
 title: Assistant IA pour Adobe Experience Platform
 description: Découvrez comment utiliser l’assistant d’IA pour parcourir et comprendre les concepts Experience Platform et Real-time Customer Data Platform, ainsi que les informations d’utilisation relatives à vos objets.
-badge: Version Beta
+badge: Version bêta
 hide: true
 hidefromtoc: true
 exl-id: 8be1c222-3ccd-4a41-978e-33ac9b730f8c
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: 6beaefb23f4deb382b7844fcf58efbd72b1da2ec
 workflow-type: tm+mt
-source-wordcount: '2730'
+source-wordcount: '3122'
 ht-degree: 1%
 
 ---
@@ -55,7 +55,7 @@ Il existe deux types de questions à prendre en compte avant d’interroger l’
 
 >[!ENDSHADEBOX]
 
-## Objectifs que vous pouvez atteindre avec l’assistant d’IA
+## Objectifs que vous pouvez atteindre avec l’assistant d’IA {#objectives}
 
 Vous pouvez utiliser l’assistant d’IA pour des objectifs tels que :
 
@@ -140,15 +140,15 @@ Pour afficher les citations et valider la réponse de l’assistant d’IA, sél
 
 +++
 
-### Utilisation et visualisation des données {#data-usage-and-visualization}
+### Données d’utilisation et visualisation {#usage-data-and-visualization}
 
-+++Sélectionner pour afficher un exemple de questions d’utilisation des données et de visualisation des données
++++Sélectionnez cette option pour afficher un exemple de questions et de visualisation de données d’utilisation
 
-Pour que l’assistant d’IA puisse répondre à une requête sur l’utilisation des données au sein de votre entreprise, vous devez être dans un environnement de test actif.
+Pour que l’assistant d’IA puisse répondre à une requête sur les données d’utilisation au sein de votre entreprise, vous devez être dans un environnement de test actif.
 
 Dans l’exemple ci-dessous, l’assistant d’IA est fourni avec la requête suivante : **&quot;Afficher des définitions de segment avec plus de 1 000 profils et inclure l’état d’activation.&quot;** L’assistant d’IA répond ensuite avec un graphique qui visualise les données de votre segment et de votre profil.
 
-![Suivez la question sur l’utilisation des données.](./images/ai-assistant/data-usage-question.png)
+![Suivez la question sur les données d’utilisation.](./images/ai-assistant/data-usage-question.png)
 
 Vous pouvez placer le pointeur de la souris sur une barre pour afficher des données spécifiques. Vous pouvez également cliquer sur l’icône Développer pour agrandir l’affichage du graphique.
 
@@ -158,7 +158,7 @@ Une vue développée de la visualisation s’affiche. Vous pouvez utiliser le mo
 
 ![Graphique développé.](./images/ai-assistant/chart-expanded.png)
 
-Lorsque vous y êtes invité avec une question sur l’utilisation des données, l’assistant d’IA vous explique comment il a calculé la réponse. Dans l’exemple ci-dessous, l’assistant d’IA décrit les étapes nécessaires pour afficher les définitions de segment avec plus de 1 000 profils et leurs états d’activation respectifs.
+Lorsque vous y êtes invité avec une question sur les données d’utilisation, l’assistant d’IA vous explique comment il a calculé la réponse. Dans l’exemple ci-dessous, l’assistant d’IA décrit les étapes nécessaires pour afficher les définitions de segment avec plus de 1 000 profils et leurs états d’activation respectifs.
 
 ![Suivez la question relative aux définitions de segment illustrant la manière dont l’assistant d’IA a calculé la réponse.](./images/ai-assistant/results-explained.png)
 
@@ -204,9 +204,9 @@ Actuellement, l’index de documentation couvre Adobe Experience Platform (Real-
 
 Le modèle de récupération de documentation est formé sur Experience Platform (Real-Time CDP et Audiences). Il n’est pas possible de répondre à des questions en dehors du cadre de Adobe Experience Platform, telles que des questions sur d’autres produits Adobe tels qu’Adobe Target et la suite de Creative Cloud.
 
-## Utilisation des données {#data-usage}
+## Données d’utilisation {#usage-date}
 
-Vous pouvez également poser des questions à l’assistant d’IA sur l’utilisation de vos données dans les domaines suivants :
+Vous pouvez également poser des questions à l’assistant d’IA au sujet de vos données d’utilisation dans les domaines suivants :
 
 * Attributs
 * Audiences
@@ -216,21 +216,50 @@ Vous pouvez également poser des questions à l’assistant d’IA sur l’utili
 * Schémas _(Pour l’instant, il n’est pas possible de répondre aux questions concernant les groupes de champs.)_
 * Sources _(Pour l’instant, il n’est pas possible de répondre aux questions concernant les comptes.)_
 
-Pour les requêtes de données d’utilisation, les réponses peuvent ne pas refléter l’état actuel de l’interface utilisateur. Les données sur lesquelles reposent ces questions sont mises à jour toutes les 24 heures. Par exemple, les modifications apportées par les utilisateurs dans Real-Time CDP pendant la journée sont synchronisées avec les entrepôts de données la nuit, puis elles deviennent disponibles pour les questions des utilisateurs le matin. Vous devrez peut-être formater vos questions comme suit : &quot;Quand l’audience a-t-elle eu le titre ? {TITLE} created ?&quot; au lieu de &quot;Quand était le {TITLE} audience créée ?&quot;
+Pour les requêtes de données d’utilisation, les réponses peuvent ne pas refléter l’état actuel de l’interface utilisateur. Les données sur lesquelles reposent ces questions sont mises à jour toutes les 24 heures. Par exemple, les modifications apportées par les utilisateurs dans Real-Time CDP pendant la journée sont synchronisées avec les entrepôts de données la nuit, puis elles deviennent disponibles pour les questions des utilisateurs le matin. De plus, vous devrez vous connecter à un environnement de test pour obtenir des informations sur des données spécifiques liées à des objets tels que des audiences, des schémas, des jeux de données, des attributs et des destinations.
 
-Vous devrez vous connecter à un environnement de test pour obtenir des informations sur des données spécifiques liées à des objets tels que des audiences, des schémas, des jeux de données, des attributs et des destinations.
+### Exemples de questions sur les données d’utilisation {#example-usage-data-questions}
 
-### Exemples de questions d’utilisation des données {#example-data-usage-questions}
++++Cliquez pour afficher la liste des exemples de questions de données d’utilisation
 
-+++Cliquez pour afficher la liste des exemples de questions d’utilisation des données.
+Consultez le tableau ci-dessous pour obtenir des exemples de questions sur les données d’utilisation et de leurs cas d’utilisation respectifs :
 
-| Type de question | Description | Exemples |
+| Type de question | Cas d’utilisation | Exemples |
 | --- | --- | --- | 
-| Parenté des données | Suivi de l’utilisation d’un ou de plusieurs objets sur d’autres objets Experience Platform | <ul><li>Quels jeux de données utilisent ? {SCHEMA_NAME} schéma ?</li><li>Combien de jeux de données ont été ingérés à l’aide du même schéma ?</li><li>Quels jeux de données ont été utilisés dans les audiences activées ?</li><li>Liste des schémas dont les attributs sont utilisés dans les audiences activées.</li><li>Me montrer les audiences qui sont activées pour {DESTINATION_ACCOUNT_NAME} et ont plus de 1000 profils.</li><li>Afficher les attributs utilisés dans les audiences activées qui ont été modifiées après janvier 2023.</li><li>Quels sont les jeux de données ingérés via ? {SOURCE_NAME}?</li><li>Les flux de données associés à {DATAFLOW_NAME}</li><li>Liste des schémas relatifs aux audiences activées et créés au cours de l’année écoulée.</li></ul> |
-| Distribution et agrégations | Questions récapitulatives sur l’utilisation des objets Experience Platform | <ul><li>Quel est le pourcentage des audiences activées ?</li><li>Combien de champs sont utilisés dans la segmentation ?</li><li>Quelles audiences sont activées pour le plus grand nombre de destinations ?</li><li>Répertorier les audiences en double</li><li>Afficher les audiences activées pour {DESTINATION_ACCOUNT_NAME} et les classer par taille de profil.</li><li>Quel est le pourcentage des audiences qui n’ont pas été activées mais comportent plus de 100 profils. Montrez-moi leurs noms.</li><li>Liste des 3 connecteurs source qui ingèrent des données dans mes jeux de données.</li><li>Listez-moi les 5 premiers attributs utilisés dans les audiences activées en fonction de leur occurrence.</li></ul> |
-| Recherche d’objet | Récupérez ou accédez à un objet Experience Platform ou à ses propriétés. | <ul><li>Les jeux de données auxquels aucun schéma n’est associé</li><li>Liste des attributs utilisés pour {AUDIENCE_NAME}?</li><li>Indiquez-moi la liste des schémas dont le profil est activé mais qui n’ont pas été modifiés depuis leur création.</li><li>Quelles audiences ont été modifiées la semaine dernière ?</li><li>Listez-moi les audiences qui ont les mêmes définitions de segment avec leur date de création.</li><li>Les jeux de données activés par le profil et incluant le nombre d’audiences créées à partir de chaque jeu de données.</li><li>Quels comptes sources sont associés au jeu de données XYZ ?</li><li>M’afficher la date de définition et de modification du segment de {AUDIENCE_NAME}.</li></ul> |
+| Parenté des données | Suivi de l’utilisation d’un ou de plusieurs objets sur d’autres objets Experience Platform | <ul><li>Quels jeux de données utilisent le schéma &quot;ACME&quot; ?</li><li>Combien de jeux de données ont été ingérés à l’aide du même schéma ?</li><li>Quels jeux de données ont été utilisés dans les audiences activées ?</li><li>Liste des schémas dont les attributs sont utilisés dans les audiences activées.</li><li>Montrez-moi les audiences qui sont activées sur les &quot;destinations ACME&quot; et qui ont plus de 1 000 profils.</li><li>Afficher les attributs utilisés dans les audiences activées qui ont été modifiées après janvier 2023.</li><li>Quels sont les jeux de données ingérés via la source &quot;ACME Amazon S3&quot; ?</li><li>Quels flux de données sont associés à &quot;Flux de données de fidélité ACME&quot; ?</li><li>Liste des schémas relatifs aux audiences activées et créés au cours de l’année écoulée.</li></ul> |
+| Distribution et agrégations | Questions récapitulatives sur l’utilisation des objets Experience Platform | <ul><li>Quel est le pourcentage des audiences activées ?</li><li>Combien de champs sont utilisés dans la segmentation ?</li><li>Quelles audiences sont activées pour le plus grand nombre de destinations ?</li><li>Répertorier les audiences en double</li><li>Montrez-moi les audiences activées sur les &quot;destinations ACME&quot; et classez-les par taille de profil.</li><li>Quel est le pourcentage des audiences qui n’ont pas été activées mais comportent plus de 100 profils. Montrez-moi leurs noms.</li><li>Liste des 3 connecteurs source qui ingèrent des données dans mes jeux de données.</li><li>Listez-moi les 5 premiers attributs utilisés dans les audiences activées en fonction de leur occurrence.</li></ul> |
+| Recherche d’objet | Récupérez ou accédez à un objet Experience Platform ou à ses propriétés. | <ul><li>Les jeux de données auxquels aucun schéma n’est associé</li><li>Répertorier les attributs utilisés pour &quot;Audience ACME&quot; ?</li><li>Indiquez-moi la liste des schémas dont le profil est activé mais qui n’ont pas été modifiés depuis leur création.</li><li>Quelles audiences ont été modifiées la semaine dernière ?</li><li>Listez-moi les audiences qui ont les mêmes définitions de segment avec leur date de création.</li><li>Les jeux de données activés par le profil et incluant le nombre d’audiences créées à partir de chaque jeu de données.</li><li>Quels comptes sources sont associés au jeu de données XYZ ?</li><li>Montrez-moi la définition de segment et la date de modification de &quot;l’audience ACME&quot;.</li></ul> |
+| Comparaison des objets | Identifiez les audiences en double. | <ul><li>En fonction de leur définition de segment, répertorie les audiences qui sont des doublons.</li><li>Les audiences en double qui sont activées vers les &quot;destinations ACME&quot;.</li></ul> |
 
 +++
+
+## Expression de vos questions {#phrasing-your-questions}
+
+Vous devez envoyer vos questions à l’assistant d’IA avec clarté et contexte afin d’obtenir une réponse aussi précise que possible. Reportez-vous à la liste suivante de conseils pour savoir comment poser une question claire avec contexte :
+
+* Exposez votre tâche et/ou votre question de manière concise.
+* Évitez d’utiliser un langage ambigu ou une syntaxe trop complexe pour faciliter la compréhension.
+* Fournissez un contexte pertinent concernant votre tâche et/ou votre question, car le contexte peut aider l’assistant d’IA à générer des réponses plus pertinentes.
+
+Lisez le tableau ci-dessous pour plus d’informations sur les bonnes pratiques à suivre lorsque vous posez des questions à l’assistant d’IA :
+
+| Do | Exemple |
+| --- | --- |
+| <ul><li>Soyez précis sur l’objet ou les informations que vous souhaitez récupérer ou analyser.</li><li>Essayez de placer les noms des objets de données entre guillemets. Si vous ne connaissez qu’une partie du nom de l’objet, vous pouvez également l’indiquer dans la question.</li><li>Utilisation [saisie automatique d’objet](./ui-guide.md#use-auto-complete) pour aider l’assistant d’IA à mieux comprendre le contexte de votre requête.</li></ul> | <ul><li>Quels jeux de données utilisent le schéma &quot;Luma - Loyalty&quot; ?</li><li>Montrez-moi les segments activés dont le nom contient &quot;Luma&quot;. Classement par nombre de profils.</li></ul> |
+| <ul><li>Éviter l’ambiguïté et utiliser un langage clair</li><li>Utilisez une terminologie précise pour une meilleure clarté dans votre requête.</li><li>Lorsque vous posez des questions concernant Adobe Experience Platform, essayez d’utiliser une terminologie spécifique à Experience Platform afin d’améliorer la pertinence des réponses.</li></ul> | <ul><li>Combien de profils ai-je dans &quot;Audience ACME&quot; ?</li><li>Montrez-moi les 5 premiers attributs XDM utilisés dans les audiences activées.</li></ul> |
+| <ul><li>Précisez un contexte ou spécifiez un critère pour filtrer vos résultats.</li><li>Utilisez un critère de filtrage dans les questions pour limiter le volume de données dans la réponse.</li></ul> | <ul><li>Montrez-moi les audiences qui n’ont pas été activées et qui ont été créées il y a plus de 6 mois et n’ont jamais été modifiées.</li><li>Affichez-moi les audiences activées vers &quot;destination ACME&quot; et qui ont plus de 10 000 profils.</li></ul> |
+
+{style="table-layout:auto"}
+
+| Ne le faites pas | Exemple |
+| --- | --- |
+| Utilisez un langage vague ou ambigu. | <ul><li>Donnez-moi des informations sur les jeux de données.</li><li>Combien d’utilisateurs ai-je dans &quot;Audience ACME&quot; ?</li><li>Afficher les segments.</li><li>Attributs de liste.</li></ul> |
+| Effectuez des requêtes incomplètes. | &quot;Luma - Jeu de données de fidélité&quot; |
+| Prenons le savoir sans contexte. | <ul><li>Audiences des 6 derniers mois.</li><li>Construisez une requête pour moi.</li></ul> |
+| Formuler des requêtes trop complexes. | Fournissez une analyse complète de la liaison des données entre tous les objets et leurs dépendances. |
+| Omission des critères ou des paramètres. | Montrez-moi des jeux de données. |
+
+{style="table-layout:auto"}
 
 ## Fournir des commentaires {#feedback}
 
