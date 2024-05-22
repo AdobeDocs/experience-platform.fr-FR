@@ -3,10 +3,10 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations basées sur un profil de lot.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 5e3c4f5c9a5540e0a796785c743a77c1e11821f8
+source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
 workflow-type: tm+mt
-source-wordcount: '3879'
-ht-degree: 58%
+source-wordcount: '3937'
+ht-degree: 51%
 
 ---
 
@@ -77,7 +77,7 @@ Vous pouvez sélectionner plusieurs types d’audiences, selon leur origine :
 >
 >Vous pouvez supprimer des audiences des flux d’activation existants du **[!UICONTROL Données d’activation]** page. Voir [documentation dédiée](../ui/destination-details-page.md#bulk-remove) pour plus d’informations.
 
-## Planifier l’export d’audience {#scheduling}
+## Planification de l’exportation des audiences {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule"
@@ -105,12 +105,12 @@ Experience Platform définit automatiquement un planning par défaut pour chaque
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_exportoptions"
 >title="Options d’exportation de fichiers"
->abstract="Sélectionnez **Exporter des fichiers complets** pour exporter une capture instantanée complète de tous les profils qui remplissent les critères pour l’audience. Sélectionnez **Exporter des fichiers incrémentiels** pour n’exporter que les profils qui remplissent les critères pour l’audience depuis le dernier export. <br> Le premier export de fichier incrémentiel comprend tous les profils qui remplissent les critères pour l’audience, agissant comme un renvoi. Les futurs fichiers incrémentiels incluent uniquement les profils qui remplissent les critères pour l’audience depuis le premier export de fichier incrémentiel."
+>abstract="Sélectionner **Exporter les fichiers complets** pour exporter un instantané complet de tous les profils éligibles à l’audience. Sélectionner **Exportation de fichiers incrémentiels** pour n&#39;exporter que les profils qualifiés pour l&#39;audience depuis le dernier export. <br> La première exportation de fichier incrémentielle comprend tous les profils qui remplissent les critères de l’audience, agissant comme un renvoi. Les prochains fichiers incrémentiels incluront uniquement les profils qualifiés pour l’audience depuis la première exportation incrémentielle de fichier."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=fr#export-incremental-files" text="Exporter des fichiers incrémentiels"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
->title="Activer après l’évaluation des audiences"
+>title="Activer après l’évaluation de l’audience"
 >abstract="L’activation s’exécute immédiatement une fois la tâche de segmentation quotidienne terminée. Ainsi, les profils les plus à jour sont exportés."
 
 >[!CONTEXTUALHELP]
@@ -256,7 +256,7 @@ Au cours de cette étape, vous devez sélectionner les attributs de profil à aj
 
    ![Fenêtre modale présentant les attributs de profil qui peuvent être exportés vers la destination.](../assets/ui/activate-batch-profile-destinations/select-target-field-updated.png)
 
-1. [!BADGE Version bêta]{type=Informative}
+1. (Facultatif) L’ordre des champs mappés dans l’interface utilisateur se reflète dans l’ordre des colonnes du fichier CSV exporté, de haut en bas, la rangée supérieure étant la colonne la plus à gauche du fichier CSV. Vous pouvez réorganiser les champs mappés comme vous le souhaitez, en faisant glisser les lignes de mappage, comme illustré ci-dessous.
 
    >[!NOTE]
    >
@@ -505,8 +505,8 @@ Les exportations de fichiers varient comme suit, selon que `segmentMembership.st
 [!CONTEXTUALHELP]
 id="platform_destinations_activate_exclude_enrichment_attributes"
 title="Exclure les attributs d’enrichissement"
-abstract="Activez cette option pour exporter les profils des audiences chargées personnalisées sélectionnées vers votre destination, tout en excluant leurs attributs."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=fr#select-enrichment-attributes" text="En savoir plus dans la documentation."
+abstract="Activez cette option pour exporter les profils des audiences chargées personnalisées sélectionnées vers votre destination, tout en excluant tous leurs attributs."
+additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-enrichment-attributes" text="En savoir plus dans la documentation."
 
 >[!IMPORTANT]
 >
@@ -543,10 +543,10 @@ Sur la page **[!UICONTROL Vérifier]**, vous pouvez voir un résumé de votre s�
 
 [!CONTEXTUALHELP]
 id="platform_governance_policies_viewApplicableConsentPolicies"
-title="Affichage des politiques de consentement applicables"
-abstract="Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. Ce contrôle est désactivé si votre entreprise n&#39;a pas accès aux SKU mentionnés ci-dessus."
+title="Afficher les politiques de consentement applicables"
+abstract="Si votre entreprise a acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**, sélectionnez **[!UICONTROL Affichage des stratégies de consentement applicables]** pour identifier les stratégies de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. Ce contrôle est désactivé si votre entreprise n’a pas accès aux SKU mentionnés ci-dessus."
 
-Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. En savoir plus [évaluation des stratégies de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) pour plus d’informations.
+Si votre entreprise a acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**, sélectionnez **[!UICONTROL Affichage des stratégies de consentement applicables]** pour identifier les stratégies de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. En savoir plus [évaluation des stratégies de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) pour plus d’informations.
 
 ### Vérifications des stratégies d’utilisation des données {#data-usage-policy-checks}
 

@@ -3,10 +3,10 @@ keywords: destinations;destination;page des détails des destinations;page des d
 title: Afficher les détails de la destination
 description: La page de détails d’une destination individuelle fournit un aperçu des détails de destination. Les détails de la destination incluent le nom de destination, l’identifiant, les audiences mappées à la destination et les contrôles permettant de modifier l’activation et d’activer et désactiver le flux de données.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 9d3b6409013edc38ef41dd2a184ccbdcf7ab9edd
+source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
 workflow-type: tm+mt
-source-wordcount: '1154'
-ht-degree: 9%
+source-wordcount: '1106'
+ht-degree: 10%
 
 ---
 
@@ -125,21 +125,13 @@ Pour supprimer plusieurs audiences des flux d’activation existants, sélection
 
 ![L’écran de données d’activation met en surbrillance l’option Supprimer les audiences .](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### [!BADGE Beta]{type=Informative} Exporter plusieurs fichiers à la demande vers des destinations par lot {#bulk-export}
-
->[!NOTE]
->
-Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe.
+### Exportation de plusieurs fichiers à la demande vers des destinations par lot {#bulk-export}
 
 Vous pouvez [exporter plusieurs fichiers à la demande](../ui/export-file-now.md) de la **[!UICONTROL Données d’activation]** page. Pour cela, sélectionnez les audiences pour lesquelles vous souhaitez exporter des fichiers à la demande et sélectionnez l&#39;option **[!UICONTROL Exporter le fichier maintenant]** pour déclencher une exportation unique qui diffusera un fichier pour chaque audience sélectionnée vers votre destination de lot.
 
 ![Image mettant en surbrillance le bouton Exporter le fichier maintenant .](../assets/ui/details-page/bulk-export-file-now.png)
 
-### [!BADGE Beta]{type=Informatif} Modifier les plannings d’activation de plusieurs audiences exportées vers des destinations par lots {#bulk-edit-schedule}
-
->[!NOTE]
->
-Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe.
+### Modification des plannings d’activation pour plusieurs audiences exportées vers des destinations par lots {#bulk-edit-schedule}
 
 Pour modifier le planning d’activation existant de plusieurs audiences en même temps, sélectionnez les audiences de votre choix, puis sélectionnez **[!UICONTROL Modifier le planning]**. Pour plus d’informations sur la définition ou la modification d’un planning d’exportation, consultez la section [planifier l’exportation d’audiences](../ui/activate-batch-profile-destinations.md#scheduling) .
 
