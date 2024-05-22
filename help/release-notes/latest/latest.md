@@ -1,9 +1,9 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Mai 2024
 description: Les notes de mise à jour de mai 2024 pour Adobe Experience Platform.
-source-git-commit: 85acffec03986cf56aeba6b8973ac1edf56a9cd6
+source-git-commit: 58de22b51bc721ec584b11e3f87c0ee210c0add5
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1596'
 ht-degree: 24%
 
 ---
@@ -71,9 +71,9 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonction | Description |
 | ----------- | ----------- |
-| Réorganiser les champs de mappage pour les destinations par lots | Vous pouvez désormais modifier l’ordre des colonnes dans vos exportations CSV en faisant glisser les champs de mappage dans la variable [étape de mappage](../../destinations/ui/activate-batch-profile-destinations.md#mapping). L’ordre des champs mappés dans l’interface utilisateur se reflète dans l’ordre des colonnes du fichier CSV exporté, de haut en bas, la rangée supérieure étant la colonne la plus à gauche du fichier CSV. |
+| Réorganiser les champs de mappage pour les destinations par lots | Vous pouvez désormais modifier l’ordre des colonnes dans vos exportations CSV en faisant glisser les champs de mappage dans la variable [étape de mappage](../../destinations/ui/activate-batch-profile-destinations.md#mapping). L’ordre des champs mappés dans l’interface utilisateur se reflète dans l’ordre des colonnes du fichier CSV exporté, de haut en bas, la rangée supérieure étant la colonne la plus à gauche du fichier CSV. <br> ![Vue de la façon dont les mappages peuvent être réorganisés.](../2024/assets/may/reorder-mappings.gif "Vue de la façon dont les mappages peuvent être réorganisés."){width="100" zoomable="yes"} |
 | Présélection des planifications d’exportation par défaut pour les destinations par lot | Experience Platform définit désormais automatiquement un planning par défaut pour chaque export de fichier. Consultez la documentation relative à [planification des exports d’audience](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) pour savoir comment modifier le planning par défaut. |
-| Modification des plannings d’activation de plusieurs audiences pour les destinations par lots | Vous pouvez désormais modifier le planning d’activation de plusieurs audiences à partir de la [page des détails de la destination](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). |
+| Modification des plannings d’activation de plusieurs audiences pour les destinations par lots | Vous pouvez désormais modifier le planning d’activation de plusieurs audiences exportées vers une destination par lot (basée sur un fichier) à partir du **[!UICONTROL Données d’activation]** de la [page des détails de la destination](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). <br> ![Vue de la sélection de plusieurs audiences et de la modification du planning d’exportation de fichiers.](../2024/assets/may/bulk-edit-schedule.gif "Vue de la sélection de plusieurs audiences et de la modification du planning d’exportation de fichiers."){width="100" zoomable="yes"} |
 | Exportation de plusieurs audiences à la demande vers des destinations par lots | Vous pouvez désormais sélectionner et exporter plusieurs audiences vers les destinations par lot, au moyen de l’option [exporter des fichiers à la demande](../../destinations/ui/export-file-now.md) . |
 
 {style="table-layout:auto"}
