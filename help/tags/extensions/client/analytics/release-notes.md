@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension Adobe Analytics
 description: Dernières notes de mise à jour pour lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: a49e0fe6c99f2874a9ca8403c4b69428826a6365
+source-git-commit: fbb8e2e7944fc6ef5be6fb0c6dc0ef256ca65b77
 workflow-type: tm+mt
-source-wordcount: '1416'
-ht-degree: 100%
+source-wordcount: '1438'
+ht-degree: 99%
 
 ---
 
@@ -16,6 +16,14 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 >[!NOTE]
 >
 >L’extension de balises Analytics est régulièrement mise à jour en réponse aux mises à jour apportées à la [Bibliothèque JavaScript AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=fr). Voir [Notes de mise à jour d’AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr) pour plus d’informations sur les versions spécifiques mentionnées ci-dessous.
+
+## 4 mars 2024
+
+**Extension Adobe Analytics 1.9.4**
+
+**Fonctionnalités** :
+
+* Mise à niveau vers [AppMeasurement à la version 2.26.0](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
 
 ## 15 septembre 2023
 
@@ -36,6 +44,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 * Ajout d’une configuration facultative (paramètres par défaut de `decodeLinkParameters` = `false`) qui décode les URL de lien contenant des caractères codés sur deux octets.
 
 **Correctifs de bugs** :
+
 * Ajout d’une fonctionnalité de gestion des erreurs supplémentaire pour les navigateurs ayant des API d’[indices clients d’agent utilisateur](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=fr) à entropie élevée défectueux.
 * Modification de l’en-tête Content-Type [POST](https://developer.mozilla.org/fr-FR/docs/Web/HTTP/Methods/POST) de sorte à utiliser `x-www-form-urlencoded` par défaut.
 
@@ -193,7 +202,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 
 * Mise à jour de l’extension Adobe Analytics pour la prise en charge de DIL 9.2 pour Audience Manager
 
-* Mise à jour de l’extension pour la prise en charge d’[AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr#Version 2.15.0)
+* Mise à jour de l’extension pour la prise en charge d’[AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0)
 * Suppression de la case à cocher suivante qui n’est plus prise en charge : « Ne pas joindre l’IFRAME de publication de destination au DOM ou aux destinations de déclenchement »
 
 ## 4 juin 2019
@@ -276,7 +285,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 * Séparation du champ « Serialize from value » (Sérialiser à partir de la valeur) en deux champs, « Event ID » (ID d’événement) et « Event Value » (Valeur d’événement). Cela corrige le problème qui affectait une valeur plutôt que de sérialiser un événement
    * Notez que si vous utilisez le champ actuel pour ajouter un ID à l’aide d’une chaîne (p. ex. Event7=3:abc123), vous devez mettre à jour votre entrée pour refléter l’ID dans le champ « Event ID » (ID d’événement).
 
-**Correctifs**:
+**Correctifs de bugs** :
 
 * Correction d’un bogue qui empêchait le remplissage correct du code de devise
 
