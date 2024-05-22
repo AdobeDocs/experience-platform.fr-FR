@@ -1,11 +1,10 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform - Avril 2024
+title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour d’avril 2024 pour Adobe Experience Platform.
-exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 2bddb4963ba0bd10485efe0351d854c01c9a5a3a
 workflow-type: tm+mt
-source-wordcount: '1897'
-ht-degree: 23%
+source-wordcount: '1895'
+ht-degree: 24%
 
 ---
 
@@ -117,7 +116,7 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Quarantaine de requêtes | isoler automatiquement les exécutions de requête ayant échoué afin d’éviter des perturbations et de maintenir des performances homogènes. Voir [mise en quarantaine des requêtes](../../query-service/ui/query-schedules.md#quarantine) pour plus d’informations. |
+| Quarantaine de requête | isoler automatiquement les exécutions de requête ayant échoué afin d’éviter des perturbations et de maintenir des performances homogènes. Voir [mise en quarantaine des requêtes](../../query-service/ui/query-schedules.md#quarantine) pour plus d’informations. |
 | Annuler la requête | Contrôlez l&#39;exécution des requêtes et améliorez votre productivité en annulant les requêtes longues.Voir à ce propos la section [annuler la requête](../../query-service/ui/user-guide.md#cancel-query) pour plus d’informations. |
 | Alertes de requête planifiées | Tenez compte des notifications proactives tout en planifiant les requêtes, ce qui vous permet de garantir une gestion efficace et opportune des tâches. Vous pouvez [abonner aux alertes lors de la création d’une requête](../../query-service/ui/query-schedules.md#alerts-for-query-status) ou en utilisant les actions intégrées pour les requêtes planifiées existantes. Voir [abonner des alertes avec des actions intégrées](../../query-service/ui/monitor-queries.md#alert-subscription) pour plus d’informations. |
 | Amélioration de la navigation des requêtes planifiées | Naviguez facilement entre les modèles de requête et les exécutions planifiées pour accroître la productivité. Consultez la documentation relative à [affichage des exécutions de requête planifiées](../../query-service/ui/query-schedules.md#scheduled-query-runs) pour plus d’informations. |
