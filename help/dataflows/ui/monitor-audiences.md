@@ -6,7 +6,7 @@ exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
 source-git-commit: 716c14f29be24d084111864053e3e4ae884003f0
 workflow-type: tm+mt
 source-wordcount: '1862'
-ht-degree: 6%
+ht-degree: 5%
 
 ---
 
@@ -83,8 +83,8 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | **[!UICONTROL Démarrage de tâche]** | Date et heure de début de la tâche de segmentation. |
 | **[!UICONTROL Type]** | Indique le type de la tâche de segmentation. Les deux types de tâche pris en charge sont les suivants : **activation** et **évaluation** tâches. |
 | **[!UICONTROL Fin de tâche]** | Date et heure auxquelles la tâche de segmentation s’est terminée. |
-| **[!UICONTROL Durée du traitement]** | Le temps nécessaire à la réalisation de la tâche de segmentation. |
-| **[!UICONTROL État des tâches]** | État de la tâche de segmentation. Les valeurs prises en charge incluent : **[!UICONTROL Succès]**, **[!UICONTROL En cours]**, et **[!UICONTROL En échec]**. |
+| **[!UICONTROL Temps de traitement]** | Le temps nécessaire à la réalisation de la tâche de segmentation. |
+| **[!UICONTROL État de la tâche]** | État de la tâche de segmentation. Les valeurs prises en charge incluent : **[!UICONTROL Succès]**, **[!UICONTROL En cours]**, et **[!UICONTROL En échec]**. |
 | **[!UICONTROL Nombre de profils]** | Nombre de profils que la tâche de segmentation évalue. Chaque utilisateur doit disposer d’un profil unique. |
 | **[!UICONTROL Identité activée]** | Nombre d’identités activées par la tâche de segmentation. Chaque profil peut avoir plusieurs identités. Par exemple, un profil peut avoir un email, un numéro de téléphone et un numéro de fidélité comme identités. |
 | **[!UICONTROL Nom de la destination]** | Nom de la destination vers laquelle la tâche de segmentation est activée. |
@@ -169,7 +169,7 @@ Pour le [!UICONTROL Audiences] , les mesures suivantes sont disponibles :
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_segment_jobs"
->title="Tâches de segmentation"
+>title="Traitements de segmentation"
 >abstract="La vue Tâches de segmentation contient des informations sur les tâches d’évaluation et d’exportation pour toutes vos audiences."
 
 Pour accéder au **[!UICONTROL Tâches de segmentation]** tableau de bord, sélectionnez **[!UICONTROL Tâches de segmentation]** dans le [!UICONTROL Audiences] tableau de bord. La variable [!UICONTROL Surveillance] Le tableau de bord contient des mesures et des informations sur les tâches d’évaluation et d’exportation.
