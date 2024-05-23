@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de l’API Batch Ingestion
 description: L’API Batch Ingestion de Adobe Experience Platform vous permet d’ingérer des données dans Platform sous forme de fichiers de lot. Les données en cours d’ingestion peuvent être les données de profil d’un fichier plat dans un système CRM (par exemple un fichier Parquet) ou les données conformes à un schéma connu dans le registre Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 9d3a8aac120119ce0361685f9cb8d3bfc28dc7fd
+source-git-commit: 6cd4bff07d042401d4ebc90d6fc2e70a1f8a7cb0
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 65%
@@ -21,7 +21,7 @@ Le diagramme suivant décrit le processus d’ingestion par lots :
 
 ![](../images/batch-ingestion/overview/batch_ingestion.png)
 
-## Prise en main
+## Commencer
 
 Les points de terminaison d’API utilisés dans ce guide font partie du [API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
@@ -56,7 +56,7 @@ Lors de l’ingestion de données, il est important de comprendre comment [!DNL 
 
 L’ingestion de données offre une certaine flexibilité : si un type ne correspond pas à ce qui se trouve dans le schéma cible, les données sont converties vers le type cible exprimé. Si cette conversion est impossible, le lot échouera avec `TypeCompatibilityException`.
 
-Par exemple, ni JSON ni CSV ne comportent de `date` ou `date-time` type. Par conséquent, ces valeurs sont exprimées à l’aide de [Chaînes formatées ISO 8061](https://www.iso.org/fr/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) ou heure Unix formatée en millisecondes (1531263959000) et convertie au moment de l’ingestion vers le type XDM cible.
+Par exemple, ni JSON ni CSV ne comportent de `date` ou `date-time` type. Par conséquent, ces valeurs sont exprimées à l’aide de [Chaînes formatées ISO 8601](https://www.iso.org/fr/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) ou heure Unix formatée en millisecondes (1531263959000) et convertie au moment de l’ingestion vers le type XDM cible.
 
 Le tableau ci-dessous illustre les conversions prises en charge lors de l’ingestion de données.
 
