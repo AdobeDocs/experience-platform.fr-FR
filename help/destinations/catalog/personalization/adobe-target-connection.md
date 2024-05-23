@@ -3,10 +3,10 @@ keywords: personnalisation cible;destination;destination cible Experience Platfo
 title: Connexion Adobe Target
 description: Adobe Target est une application qui permet la personnalisation et l’expérimentation en temps réel, grâce à l’IA, au niveau de toutes les interactions avec les clients entrants sur les sites web, les applications mobiles, etc.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: e9777960f347e32ff6288227ef95cec9cc4c55e7
+source-git-commit: ddc15a36e83ebe059f3b4f81f3feccb2d3a4a4f0
 workflow-type: tm+mt
-source-wordcount: '1459'
-ht-degree: 37%
+source-wordcount: '1531'
+ht-degree: 29%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 37%
 |---|---|---|
 | Avril 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | Lors de la connexion à la destination Target avec un identifiant de flux de données, vous devez maintenant *ne doivent pas* pour activer nécessairement le flux de données pour la segmentation edge. Cela signifie que la destination Target fonctionnera avec les audiences par lots et en flux continu, bien que les cas d’utilisation que vous pouvez accomplir diffèrent. Affichez le tableau de la section [paramètres de connexion](#parameters) pour plus d’informations. |
 | Janvier 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | Vous pouvez désormais partager des audiences et des attributs de profil avec la connexion Adobe Target pour l’environnement de test de production par défaut et d’autres environnements de test autres que ceux par défaut. |
-| Juin 2023 | Nouvelles fonctionnalités et mise à jour de la documentation | Depuis juin 2023, vous pouvez sélectionner l’espace de travail Adobe Target auquel vous souhaitez partager des audiences lors de la configuration d’une nouvelle connexion à la destination Adobe Target. Consultez la section [Paramètres de connexion](#parameters) pour plus d’informations. En outre, consultez le tutoriel sur la [configuration des espaces de travail](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=fr) dans Adobe Target pour plus d’informations sur les espaces de travail. |
+| Juin 2023 | Nouvelles fonctionnalités et mise à jour de la documentation | Depuis juin 2023, vous pouvez sélectionner l’espace de travail Adobe Target auquel vous souhaitez partager des audiences lors de la configuration d’une nouvelle connexion à la destination Adobe Target. Consultez la section [Paramètres de connexion](#parameters) pour plus d’informations. En outre, consultez le tutoriel sur la [configuration des espaces de travail](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) dans Adobe Target pour plus d’informations sur les espaces de travail. |
 | Mai 2023 | Nouvelles fonctionnalités et mise à jour de la documentation | En mai 2023, la **[!UICONTROL Adobe Target]** prise en charge de la connexion [personnalisation basée sur les attributs](../../ui/activate-edge-personalization-destinations.md#map-attributes) et est généralement disponible pour tous les clients. |
 
 {style="table-layout:auto"}
@@ -60,8 +60,15 @@ En savoir plus sur l’octroi d’autorisations pour [Target Premium](https://ex
 
 Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
 
+>[!IMPORTANT]
+>
+>Les audiences que vous activez sur cette destination doivent utiliser la variable [Stratégie de fusion active sur périphérie](../../../segmentation/ui/segment-builder.md#merge-policies). La variable [!DNL Active-On-Edge] la stratégie de fusion garantit que les audiences sont constamment évaluées. [sur le bord](../../../segmentation/ui/edge-segmentation.md) et sont disponibles pour les cas d’utilisation de la personnalisation en temps réel et de la page suivante.
+> Si vous mappez des audiences qui utilisent une autre stratégie de fusion avec des destinations de périphérie, ces audiences ne seront pas évaluées.
+> Suivez les instructions de la section [création d’une politique de fusion](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy) et assurez-vous d’activer le bouton **[!UICONTROL Politique de fusion Active-On-Edge]**.
+
+
 | Origine de l’audience | Pris en charge | Description |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
 | Chargements personnalisés | X | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
@@ -72,7 +79,7 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
----------|----------|---------|
+|---------|----------|---------|
 | Type d’exportation | **[!DNL Profile request]** | Vous demandez toutes les audiences qui sont mappées dans la destination Adobe Target pour un seul profil. |
 | Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
@@ -83,8 +90,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_datastream"
 >title="À propos des identifiants de flux de données"
->abstract="Cette option détermine dans quel train de données de collecte de données les audiences seront inclues. Le menu déroulant affiche uniquement les trains de données pour lesquels la configuration cible est activée. Pour utiliser la segmentation Edge, vous devez sélectionner un identifiant de train de données. Si vous sélectionnez Aucun, tous les cas d&#39;utilisation qui utilisent la segmentation Edge sont désactivés."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html?lang=fr#parameters" text="En savoir plus sur la sélection des trains de données"
+>abstract="Cette option détermine dans quel jeu de données de collecte de données les audiences seront incluses. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration Target est activée. Pour utiliser la segmentation Edge, vous devez sélectionner un identifiant de flux de données. Si vous sélectionnez Aucun, tous les cas d’utilisation qui utilisent la segmentation Edge sont désactivés."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html#parameters" text="En savoir plus sur la sélection des flux de données"
 
 >[!IMPORTANT]
 > 
@@ -98,9 +105,9 @@ Adobe Experience Platform se connecte automatiquement à l’instance Adobe Targ
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_workspace"
->title="À propos des espaces de travail Adobe Target"
->abstract="Sélectionnez l’espace de travail Adobe Target vers lequel les audiences seront partagées. Vous pouvez sélectionner un seul espace de travail pour chaque connexion Adobe Target. Lors de l’activation, les audiences sont acheminées vers l’espace de travail sélectionné tout en suivant les libellés d’utilisation des données Experience Platform applicables."
->additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=fr" text="En savoir plus sur les espaces de travail Adobe Target"
+>title="A propos des espaces de travail Adobe Target"
+>abstract="Sélectionnez l’espace de travail Adobe Target vers lequel les audiences seront partagées. Vous pouvez sélectionner un seul espace de travail pour chaque connexion Adobe Target. Lors de l’activation, les audiences sont acheminées vers l’espace de travail sélectionné tout en suivant les libellés d’utilisation des données Experience Platform applicables."
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html" text="En savoir plus sur les espaces de travail Adobe Target"
 
 Pendant la [configuration](../../ui/connect-destination.md) de cette destination, vous devez fournir les informations suivantes :
 
@@ -116,9 +123,9 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 
   | Implémentation d’Adobe Target *without* SDK Web | Implémentation d’Adobe Target *avec* SDK Web | Implémentation d’Adobe Target *avec* SDK Web *et* segmentation de périphérie désactivée |
   |---|---|---|
-  | <ul><li>Un flux de données n’est pas requis. Adobe Target peut être déployé via [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=fr), [côté serveur](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation), ou [hybride](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) méthodes d’implémentation.</li><li>[Segmentation Edge](../../../segmentation/ui/edge-segmentation.md) n’est pas prise en charge.</li><li>[Personnalisation de la même page et de la page suivante](../../ui/activate-edge-personalization-destinations.md) ne sont pas prises en charge.</li><li>Vous pouvez partager des audiences et des attributs de profil avec la connexion Adobe Target pour le *environnement de test de production par défaut* et les environnements de test autres que les environnements de test par défaut.</li><li>Pour configurer la personnalisation de la prochaine session sans utiliser d’identifiant de flux de données, utilisez [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>Un flux de données avec Adobe Target et Experience Platform configurés en tant que services est requis.</li><li>La segmentation Edge fonctionne comme prévu.</li><li>[Personnalisation de la même page et de la page suivante](../../ui/activate-edge-personalization-destinations.md#use-cases) sont prises en charge.</li><li>Le partage d’audiences et d’attributs de profil à partir d’autres environnements de test est pris en charge.</li></ul> | <ul><li>Un flux de données avec Adobe Target et Experience Platform configurés en tant que services est requis.</li><li>When [configuration du flux de données](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), ne sélectionnez pas l’événement **Segmentation Edge** .</li><li>[Personnalisation de la prochaine session](../../ui/activate-edge-personalization-destinations.md#next-session) est prise en charge.</li><li>Le partage d’audiences et d’attributs de profil à partir d’autres environnements de test est pris en charge.</li></ul> |
+  | <ul><li>Un flux de données n’est pas requis. Adobe Target peut être déployé via [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [côté serveur](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation), ou [hybride](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) méthodes d’implémentation.</li><li>[Segmentation Edge](../../../segmentation/ui/edge-segmentation.md) n’est pas prise en charge.</li><li>[Personnalisation de la même page et de la page suivante](../../ui/activate-edge-personalization-destinations.md) ne sont pas prises en charge.</li><li>Vous pouvez partager des audiences et des attributs de profil avec la connexion Adobe Target pour le *environnement de test de production par défaut* et les environnements de test autres que les environnements de test par défaut.</li><li>Pour configurer la personnalisation de la prochaine session sans utiliser d’identifiant de flux de données, utilisez [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>Un flux de données avec Adobe Target et Experience Platform configurés en tant que services est requis.</li><li>La segmentation Edge fonctionne comme prévu.</li><li>[Personnalisation de la même page et de la page suivante](../../ui/activate-edge-personalization-destinations.md#use-cases) sont prises en charge.</li><li>Le partage d’audiences et d’attributs de profil à partir d’autres environnements de test est pris en charge.</li></ul> | <ul><li>Un flux de données avec Adobe Target et Experience Platform configurés en tant que services est requis.</li><li>When [configuration du flux de données](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), ne sélectionnez pas l’événement **Segmentation Edge** .</li><li>[Personnalisation de la prochaine session](../../ui/activate-edge-personalization-destinations.md#next-session) est prise en charge.</li><li>Le partage d’audiences et d’attributs de profil à partir d’autres environnements de test est pris en charge.</li></ul> |
 
-* **Workspace**: sélectionnez Adobe Target. [workspace](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=fr) aux audiences qui seront partagées. Vous pouvez sélectionner un seul espace de travail pour chaque connexion Adobe Target. Lors de l’activation, les audiences sont acheminées vers l’espace de travail sélectionné tout en suivant le [Libellés d’utilisation des données Experience Platform](../../../data-governance/labels/overview.md).
+* **Workspace**: sélectionnez Adobe Target. [workspace](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) aux audiences qui seront partagées. Vous pouvez sélectionner un seul espace de travail pour chaque connexion Adobe Target. Lors de l’activation, les audiences sont acheminées vers l’espace de travail sélectionné tout en suivant le [Libellés d’utilisation des données Experience Platform](../../../data-governance/labels/overview.md).
 
 >[!NOTE]
 >
