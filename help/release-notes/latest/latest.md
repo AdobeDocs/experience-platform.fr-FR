@@ -47,7 +47,10 @@ Le Catalog Service est le système d’enregistrement pour l’emplacement et la
 Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des informations importantes sur les données de votre organisation, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
 
 **Fonctionnalités nouvelles ou mises à jour**
-| Fonctionnalité | Description | | — | — | | Informations personnalisables pour la création de rapports d’application étendue | En toute transparence [transition de la sortie de l’analyse SQL vers des formats visuels compréhensibles et conviviaux](../../dashboards/data-distiller/customizable-insights/overview.md). Utilisez des requêtes SQL personnalisées pour une manipulation de données précise et la création de graphiques dynamiques à partir de différents jeux de données structurés. Vous pouvez utiliser le mode query pro pour effectuer une analyse complexe avec SQL, puis partager cette analyse avec des utilisateurs non techniques par le biais de graphiques sur votre tableau de bord personnalisé ou les exporter dans des fichiers CSV. |
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Informations personnalisables pour la création de rapports d’application étendue | En toute transparence [transition de la sortie de l’analyse SQL vers des formats visuels compréhensibles et conviviaux](../../dashboards/data-distiller/customizable-insights/overview.md). Utilisez des requêtes SQL personnalisées pour une manipulation de données précise et la création de graphiques dynamiques à partir de différents jeux de données structurés. Vous pouvez utiliser le mode query pro pour effectuer une analyse complexe avec SQL, puis partager cette analyse avec des utilisateurs non techniques par le biais de graphiques sur votre tableau de bord personnalisé ou les exporter dans des fichiers CSV. |
 
 {style="table-layout:auto"}
 
