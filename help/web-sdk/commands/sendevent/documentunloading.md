@@ -1,10 +1,11 @@
 ---
 title: documentUnloading
 description: Utilisez l’API sendBeacon de JavaScript pour envoyer des données à Adobe.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 7683c0c4-ae2e-46ec-8471-628a10e17afc
+source-git-commit: f12d222e81a39a26bd71ab4bede05aa992889605
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 2%
+source-wordcount: '268'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +19,7 @@ Plusieurs navigateurs imposent une limite de 64 Ko à la quantité de données p
 
 Activez la variable **[!UICONTROL Le document sera déchargé.]** dans les actions d’une règle de balise.
 
-1. Connexion à [experience.adobe.com](https://experience.adobe.com) à l’aide de vos informations d’identification Adobe ID.
+1. Connexion à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
 1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
 1. Accédez à **[!UICONTROL Règles]**, puis sélectionnez la règle de votre choix.
@@ -30,6 +31,10 @@ Activez la variable **[!UICONTROL Le document sera déchargé.]** dans les actio
 ## Configuration du déchargement des documents à l’aide de la bibliothèque JavaScript du SDK Web
 
 Définissez la variable `documentUnloading` booléen lors de l’exécution de la variable `sendEvent` . Sa valeur par défaut est `false`. Définissez cette propriété sur `true` si vous souhaitez utiliser la variable `sendBeacon` pour envoyer des données à Adobe.
+
+>[!IMPORTANT]
+>
+>La variable `documentUnloading` est incompatible avec la propriété [`renderDecisions`](renderdecisions.md) . Ne définissez pas les deux propriétés sur `true` simultanément.
 
 ```js
 alloy("sendEvent", {

@@ -1,13 +1,13 @@
 ---
 title: sendEvent
-description: Envoyez des données au réseau Adobe Experience Platform Edge.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: Envoyez des données à l’Edge Network Adobe Experience Platform.
+exl-id: 83de368d-78d4-4e28-aadd-afaea1ca091d
+source-git-commit: 9ea7b678f5cfa19c7fd1e3ba6633cdeed4084b18
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
 
 ---
-
 
 # `sendEvent`
 
@@ -17,7 +17,7 @@ La variable `sendEvent` La commande est le principal moyen d’envoyer des donn�
 
 L’envoi de données d’événement est effectué sous la forme d’une action au sein d’une règle dans l’interface des balises de collecte de données Adobe Experience Platform.
 
-1. Connexion à [experience.adobe.com](https://experience.adobe.com) à l’aide de vos informations d’identification Adobe ID.
+1. Connexion à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
 1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
 1. Accédez à **[!UICONTROL Règles]**, puis sélectionnez la règle de votre choix.
@@ -32,7 +32,7 @@ Exécutez la variable `sendEvent` lors de l’appel de votre instance configuré
 ```js
 alloy("sendEvent", {
   "data": dataObject,
-  "documentUnloading": true,
+  "documentUnloading": false,
   "edgeConfigOverrides": { "datastreamId": "0dada9f4-fa94-4c9c-8aaf-fdbac6c56287" },
   "renderDecisions": true,
   "type": "commerce.purchases",
@@ -44,6 +44,6 @@ alloy("sendEvent", {
 
 Si vous décidez [gérer les réponses](../command-responses.md) avec cette commande, les propriétés suivantes sont disponibles dans l’objet de réponse :
 
-* **`propositions`**: un tableau de propositions renvoyé par le réseau Edge. Les propositions automatiquement générées incluent l’indicateur `renderAttempted` défini sur `true`.
+* **`propositions`**: un tableau de propositions renvoyé par l’Edge Network. Les propositions automatiquement générées incluent l’indicateur `renderAttempted` défini sur `true`.
 * **`inferences`**: un tableau d’objets d’inférence, qui contient des informations d’apprentissage automatique sur cet utilisateur.
-* **`destinations`**: un tableau d’objets de destination renvoyés par le réseau Edge.
+* **`destinations`**: un tableau d’objets de destination renvoyés par l’Edge Network.
