@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Source de la zone d’entrée de données
 description: Découvrez comment connecter la zone d’entrée des données à Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: c2cc734d4a5c86fecbd0dabdfe63c896f0fe0f54
+source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
 workflow-type: tm+mt
-source-wordcount: '869'
-ht-degree: 45%
+source-wordcount: '844'
+ht-degree: 35%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 45%
 >
 >Cette page est spécifique aux [!DNL Data Landing Zone] *source* connecteur dans Experience Platform. Pour plus d’informations sur la connexion à la variable [!DNL Data Landing Zone] *destination* connecteur, voir [[!DNL Data Landing Zone] page de documentation de destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
-[!DNL Data Landing Zone] est une interface de stockage [!DNL Azure Blob] fournie par Adobe Experience Platform et qui vous permet d’accéder à une fonctionnalité de stockage de fichiers sécurisée basée sur le cloud pour importer des fichiers dans Platform. Vous avez accès à un conteneur [!DNL Data Landing Zone] par sandbox et le volume total de données sur tous les conteneurs est limité au total des données fournies avec votre licence Produits et Services Platform. Tous les clients de Platform et ses services d’application tels que [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services] et [!DNL Adobe Real-Time Customer Data Platform] sont configurés avec un conteneur [!DNL Data Landing Zone] par sandbox. Vous pouvez lire et écrire des fichiers dans votre conteneur par le biais de [!DNL Azure Storage Explorer] ou votre interface de ligne de commande.
+[!DNL Data Landing Zone] est un [!DNL Azure Blob] Interface de stockage configurée par Adobe Experience Platform, qui vous permet d’accéder à une fonctionnalité de stockage de fichiers sécurisée basée sur le cloud pour importer des fichiers dans Platform. Vous avez accès à un conteneur [!DNL Data Landing Zone] par sandbox et le volume total de données sur tous les conteneurs est limité au total des données fournies avec votre licence Produits et Services Platform. Tous les clients de Platform et de ses applications, telles que [!DNL Customer Journey Analytics], [!DNL Journey Orchestration], [!DNL Intelligent Services], et [!DNL Adobe Real-Time Customer Data Platform] sont configurés avec un [!DNL Data Landing Zone] conteneur par environnement de test. Vous pouvez lire et écrire des fichiers dans votre conteneur par le biais de [!DNL Azure Storage Explorer] ou votre interface de ligne de commande.
 
-[!DNL Data Landing Zone] prend en charge l’authentification SAS et ses données sont protégées par des mécanismes de sécurité du stockage [!DNL Azure Blob] standard au repos et en transit. L’authentification SAS vous permet d’accéder en toute sécurité à votre conteneur [!DNL Data Landing Zone] via une connexion Internet publique. Aucune modification réseau n’est requise pour accéder à votre conteneur [!DNL Data Landing Zone], ce qui signifie que vous n’avez pas besoin de configurer de listes autorisées ou de configurations inter-régions pour votre réseau. Platform applique un délai d’expiration de sept jours strict pour tous les fichiers chargés dans un [!DNL Data Landing Zone] conteneur. Tous les fichiers sont supprimés au bout de sept jours.
+[!DNL Data Landing Zone] prend en charge l’authentification SAS et ses données sont protégées par des mécanismes de sécurité du stockage [!DNL Azure Blob] standard au repos et en transit. L’authentification SAS vous permet d’accéder en toute sécurité à votre conteneur [!DNL Data Landing Zone] via une connexion Internet publique. Aucune modification réseau n’est requise pour accéder à votre [!DNL Data Landing Zone] , ce qui signifie que vous n’avez pas besoin de configurer de listes autorisées ou de configurations inter-régions pour votre réseau. Platform applique un délai d’expiration de sept jours strict pour tous les fichiers chargés dans un [!DNL Data Landing Zone] conteneur. Tous les fichiers sont supprimés au bout de sept jours.
 
 ## Contraintes de dénomination pour fichiers et répertoires
 
@@ -50,7 +50,7 @@ Après avoir sélectionné votre méthode de connexion, vous devez ensuite fourn
 >
 >Vous pouvez récupérer votre [!DNL Data Landing Zone] informations d’identification provenant du catalogue des sources dans l’interface utilisateur de Platform.
 
-Fournissez votre URL SAS [!DNL Data Landing Zone], puis sélectionnez **Suivant**
+Fournissez les [!DNL Data Landing Zone] URL SAS , puis sélectionnez **Suivant**
 
 ![Saisie des informations de connexion](../../images/tutorials/create/dlz/enter-connection-info.png)
 
@@ -160,7 +160,7 @@ La documentation ci-dessous fournit des informations sur la manière d’importe
 
 ### Utiliser l’interface utilisateur
 
-- [Connecter  [!DNL Data Landing Zone]  à Platform à l’aide de l’interface utilisateur](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
+- [Connexion [!DNL Data Landing Zone] vers Platform à l’aide de l’interface utilisateur](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Créer un flux de données pour une connexion de stockage dans le cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
 
 >[!IMPORTANT]

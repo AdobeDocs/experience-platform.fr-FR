@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Présentation d’Adobe Experience Platform
 breadcrumb-title: Présentation d’Experience Platform
-user-guide-description: Découvrez comment Experience Platform permet de fournir des expériences personnalisées à vos clientes et clients en temps réel, grâce à des guides, de la documentation et des tutoriels.
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+user-guide-description: Découvrez comment Experience Platform permet de proposer en temps réel des expériences personnalisées à vos clients grâce à des guides, de la documentation et des tutoriels.
+source-git-commit: cb37eda87b8fcc0d0284db7a0bab8d48eab5aae6
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 86%
+source-wordcount: '281'
+ht-degree: 78%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 86%
    * [Guide de l’interface utilisateur des workflows](workflows.md)
    * [Prise en charge des navigateurs et des langues](browser-language-support.md)
    * [Enquête sur l’auto-identification](self-identification.md)
-   * [Assistant IA](ai-assistant.md)
+   * [Assistant AI](ai-assistant.md)
 * Les API d’Experience Platform {#platform-apis}
    * [Prise en main des API Platform](api-guide.md)
    * [Authentification et accès aux API Platform](api-authentication.md)
@@ -40,8 +40,8 @@ ht-degree: 86%
 * Documentation de Platform {#documentation}
    * [Présentation](documentation/overview.md)
    * [Prise en charge des langues](documentation/language-support.md)
-* Services applicatifs créés sur Platform {#ecosystem}
-   * [Présentation](application-services.md)
+* Applications créées sur Platform {#ecosystem}
+   * [Vue d’ensemble](application-services.md)
    * [Adobe Real-Time Customer Data Platform (toutes les éditions)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=fr)
    * [Application et services intelligents (vidéo)](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=fr)
@@ -62,7 +62,7 @@ ht-degree: 86%
    * Journaux d’audit {#audit-logs}
       * [Présentation](./governance-privacy-security/audit-logs/overview.md)
       * API Audit Query {#audit-api}
-         * [Aperçu](./governance-privacy-security/audit-logs/api/overview.md)
+         * [Vue d’ensemble](./governance-privacy-security/audit-logs/api/overview.md)
          * [Prise en main](./governance-privacy-security/audit-logs/api/getting-started.md)
          * [Événements](./governance-privacy-security/audit-logs/api/events.md)
          * [Exporter](./governance-privacy-security/audit-logs/api/export.md)
@@ -81,4 +81,4 @@ ht-degree: 86%
 * [Guide de dépannage](troubleshooting.md)
 * [Migration du lac de données Gen2](adls2-gen2-migration.md)
 * [Glossaire](glossary.md)
-* [Notes de mise à jour](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notes de mise à jour](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
