@@ -1,7 +1,8 @@
 ---
 title: applyResponse
-description: Utilisez une réponse du réseau Edge pour initialiser le SDK Web.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+description: Utilisez une réponse de l’Edge Network pour initialiser le SDK Web.
+exl-id: 0653b8f7-33f0-43a1-97f5-59a51270f660
+source-git-commit: 74725546163f0807d3188aff5b5ffda9b8d6350b
 workflow-type: tm+mt
 source-wordcount: '308'
 ht-degree: 0%
@@ -10,13 +11,13 @@ ht-degree: 0%
 
 # `applyResponse`
 
-La variable `applyResponse` vous permet d’effectuer diverses actions en fonction d’une réponse du réseau Edge. Il est généralement utilisé dans les déploiements hybrides où le serveur effectue un appel initial vers le réseau Edge. Cette commande récupère la réponse de cet appel et initialise le SDK Web dans le navigateur.
+La variable `applyResponse` vous permet d’effectuer diverses actions en fonction d’une réponse de l’Edge Network. Il est généralement utilisé dans les déploiements hybrides où le serveur effectue un appel initial vers l’Edge Network. Cette commande récupère la réponse de cet appel et initialise le SDK Web dans le navigateur.
 
 ## Application d’une réponse à l’aide de l’extension de balise SDK Web
 
 L’application des réponses est effectuée sous la forme d’une action au sein d’une règle dans l’interface des balises de collecte de données Adobe Experience Platform.
 
-1. Connexion à [experience.adobe.com](https://experience.adobe.com) à l’aide de vos informations d’identification Adobe ID.
+1. Connexion à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
 1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
 1. Accédez à **[!UICONTROL Règles]**, puis sélectionnez la règle de votre choix.
@@ -31,11 +32,11 @@ Exécutez la variable `applyResponse` lors de l’appel de votre instance config
 
 * **`renderDecisions`**: valeur booléenne qui force le SDK Web à effectuer le rendu de tout contenu personnalisé éligible au rendu automatique. Identique à [`renderDecisions`](sendevent/renderdecisions.md) dans le [`sendEvent`](sendevent/overview.md) .
 * **`responseHeaders`**: mappage des noms d’en-tête de chaîne aux valeurs d’en-tête de chaîne.
-* **`responseBody`** : obligatoire. Corps de réponse JSON de l’appel du serveur au réseau Edge.
+* **`responseBody`**: obligatoire. Corps de réponse JSON de l’appel du serveur à l’Edge Network.
 * **`personalization.sendDisplayEvent`**: une valeur booléenne qui fonctionne de la même manière que [`personalization.sendDisplayEvent`](sendevent/personalization.md) dans le `sendEvent` .
 
 ```js
-allow("applyResponse",{
+alloy("applyResponse",{
   "renderDecisions": true,
   "responseHeaders": {},
   "responseBody": {},
@@ -49,6 +50,6 @@ allow("applyResponse",{
 
 Si vous décidez [gérer les réponses](command-responses.md) avec cette commande, les propriétés suivantes sont disponibles dans l’objet de réponse :
 
-* **`propositions`**: un tableau de propositions renvoyé par le réseau Edge. Les propositions automatiquement générées incluent l’indicateur `renderAttempted` défini sur `true`.
+* **`propositions`**: un tableau de propositions renvoyé par l’Edge Network. Les propositions automatiquement générées incluent l’indicateur `renderAttempted` défini sur `true`.
 * **`inferences`**: un tableau d’objets d’inférence, qui contient des informations d’apprentissage automatique sur cet utilisateur.
-* **`destinations`**: un tableau d’objets de destination renvoyés par le réseau Edge.
+* **`destinations`**: un tableau d’objets de destination renvoyés par l’Edge Network.
