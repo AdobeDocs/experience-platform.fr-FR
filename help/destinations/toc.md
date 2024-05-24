@@ -5,10 +5,10 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+source-git-commit: e872d8f8a0c73fe3375e538260d23da1f145621c
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 89%
+source-wordcount: '1224'
+ht-degree: 88%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 89%
    * [Mettre à jour les flux de données de destination](./api/update-destination-dataflows.md)
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
    * [Supprimer les flux de données de destination](./api/delete-destination-dataflow.md)
-   * [Exportation de jeux de données](/help/destinations/api/export-datasets.md)
+   * [Exporter des jeux de données](/help/destinations/api/export-datasets.md)
    * [Tri et filtrage des réponses d’API pour les destinations](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guides d’interface utilisateur {#ui}
    * [Espace de travail des destinations](./ui/destinations-workspace.md)
@@ -48,7 +48,7 @@ ht-degree: 89%
       * [(Version bêta) Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform](./ui/export-file-now.md)
       * [Exportation de jeux de données à l’aide de l’interface utilisateur Experience Platform](./ui/export-datasets.md)
       * [(Version bêta) Utiliser l’attribut XDM de l’heure de la dernière qualification dans les nouvelles destinations de stockage dans le cloud en version bêta](./ui/activate-last-qualification-time.md)
-      * [(Version bêta) Utiliser des champs calculés pour exporter des tableaux dans des fichiers de schéma plats](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [(Version bêta) Utilisation de champs calculés pour exporter des tableaux dans des fichiers de schéma plats](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Afficher les détails de la destination](./ui/destination-details-page.md)
    * [Mettre à jour les comptes de destination](./ui/update-accounts.md)
    * [Supprimer les comptes de destination](./ui/delete-destination-account.md)
@@ -83,6 +83,7 @@ ht-degree: 89%
       * [Connexion Google Ad Manager](./catalog/advertising/google-ad-manager.md)
       * [(Version bêta) Connexion à Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Connexion à Google Customer Match](./catalog/advertising/google-customer-match.md)
+      * [(Version bêta) Google Customer Match + connexion DV360](./catalog/advertising/google-customer-match-dv360.md)
       * [Connexion Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
       * [Extension Google gtag](./catalog/advertising/gtag-advertising.md)
       * [Extension LinkedIn Insight Tag](./catalog/advertising/linkedin.md)
@@ -297,4 +298,4 @@ ht-degree: 89%
       * [Modèle de libre-service de documentation](./destination-sdk/docs-framework/self-service-template.md)
       * [Bonnes pratiques de création](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Questions fréquentes](./destinations-faq.md)
-* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
