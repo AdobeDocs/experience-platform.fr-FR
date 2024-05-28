@@ -2,9 +2,9 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 6088dc06af6db2ce1a86a9638df23453184864b2
+source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
 workflow-type: tm+mt
-source-wordcount: '4056'
+source-wordcount: '4064'
 ht-degree: 22%
 
 ---
@@ -333,7 +333,11 @@ Le fractionnement de l’audience vous permet de sous-définir davantage votre a
 
 En se divisant par attribut, il existe une exclusivité mutuelle entre les groupes. Cela signifie que si un enregistrement répond aux critères de plusieurs chemins de partage, le **premier** chemin à partir de la gauche lui sera attribué et **pas** l’un des autres chemins.
 
-Lors d’une division par pourcentage, les divisions sont **de manière aléatoire** terminé. Cela signifie que les profils seront affectés de manière aléatoire à chaque chemin d’accès. La division est **not** persistant, de sorte que le profil puisse se trouver dans une sous-audience différente sur chaque évaluation.
+Lors d’une division par pourcentage, les divisions sont **de manière aléatoire** terminé. Cela signifie que les profils seront affectés de manière aléatoire à chaque chemin d’accès. La division **is** persistant, ce qui signifie que le profil sera dans la même sous-audience pour chaque évaluation.
+
+>[!NOTE]
+>
+>Auparavant, les divisions dans la composition de l’audience étaient **not** persistant.
 
 Pour plus d’informations sur le bloc Partage, lisez le [Guide de l’interface utilisateur de composition d’audience](./ui/audience-composition.md#split).
 
