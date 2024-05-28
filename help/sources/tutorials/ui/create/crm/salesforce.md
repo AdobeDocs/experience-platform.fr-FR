@@ -2,7 +2,7 @@
 title: Connexion de votre compte Salesforce à l’aide de l’interface utilisateur Experience Platform
 description: Découvrez comment connecter votre compte Salesforce et importer vos données CRM dans Experience Platform à l’aide de l’interface utilisateur.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 8d62cf4ca0071e84baa9399e0a25f7ebfb096c1a
+source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
 workflow-type: tm+mt
 source-wordcount: '829'
 ht-degree: 21%
@@ -36,7 +36,7 @@ Vous devez fournir des valeurs pour les informations d’identification suivante
 
 | Informations d’identification | Description |
 | --- | --- |
-| URL d’environnement | L’URL de la variable [!DNL Salesforce] instance source. |
+| URL de l’environnement | L’URL de la variable [!DNL Salesforce] instance source. |
 | Nom d’utilisateur | Nom d’utilisateur de la variable [!DNL Salesforce] compte utilisateur. |
 | Mot de passe | Le mot de passe du [!DNL Salesforce] compte utilisateur. |
 | Jeton de sécurité | Jeton de sécurité pour la variable [!DNL Salesforce] compte utilisateur. |
@@ -50,7 +50,7 @@ Vous devez fournir des valeurs pour les informations d’identification suivante
 
 | Informations d’identification | Description |
 | --- | --- |
-| URL d’environnement | L’URL de la variable [!DNL Salesforce] instance source. |
+| URL de l’environnement | L’URL de la variable [!DNL Salesforce] instance source. |
 | Identifiant client | L’ID client est utilisé en tandem avec le secret client dans le cadre de l’authentification OAuth2. Ensemble, l’ID client et le secret client permettent à votre application d’opérer pour le compte de votre client en identifiant votre application à [!DNL Salesforce]. |
 | Secret client | Le secret client est utilisé en tandem avec l’ID client dans le cadre de l’authentification OAuth2. Ensemble, l’ID client et le secret client permettent à votre application d’opérer pour le compte de votre client en identifiant votre application à [!DNL Salesforce]. |
 | Version de l’API | La version de l’API REST de la variable [!DNL Salesforce] que vous utilisez. La valeur de la version de l’API doit être formatée avec une valeur décimale. Par exemple, si vous utilisez la version d’API `52`, vous devez saisir la valeur sous la forme `52.0`. Si ce champ n’est pas renseigné, Experience Platform utilisera automatiquement la dernière version disponible. |
@@ -65,7 +65,7 @@ Une fois que vous avez rassemblé vos informations d’identification requises, 
 
 Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous , *CRM* catégorie, sélectionnez **[!DNL Salesforce]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Sélectionner **[!DNL Salesforce]** sous le *[!UICONTROL CRM]* catégorie, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 >[!TIP]
 >
@@ -95,7 +95,7 @@ Sélectionnez ensuite le type d&#39;authentification que vous souhaitez utiliser
 
 Pour l’authentification de base, sélectionnez **[!UICONTROL Authentification de base]** puis saisissez des valeurs pour les informations d’identification suivantes :
 
-* URL d’environnement
+* URL de l’environnement
 * Nom d’utilisateur
 * Mot de passe
 * Version de l’API (facultatif)
@@ -108,7 +108,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion à la source]*
 
 Pour OAuth 2 Client Credential, sélectionnez **[!UICONTROL Informations d’identification du client OAuth2]** puis saisissez des valeurs pour les informations d’identification suivantes :
 
-* URL d’environnement
+* URL de l’environnement
 * Identifiant client
 * Secret client
 * Version de l’API
