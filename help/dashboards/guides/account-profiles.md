@@ -2,10 +2,10 @@
 title: Tableau de bord des profils de compte
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les profils de compte B2B de votre entreprise.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
 workflow-type: tm+mt
-source-wordcount: '1800'
-ht-degree: 3%
+source-wordcount: '1675'
+ht-degree: 4%
 
 ---
 
@@ -15,7 +15,7 @@ L’interface utilisateur de Adobe Experience Platform fournit un tableau de bor
 
 Ce document présente les fonctionnalités de la fonction [!UICONTROL Profils de compte] tableau de bord et détaille les informations standard disponibles. Voir [[!UICONTROL Profils de compte] Guide de l’interface utilisateur](../../rtcdp/accounts/account-profile-ui-guide.md) pour en savoir plus sur les fonctionnalités disponibles.
 
-## Prise en main
+## Commencer
 
 Vous devez avoir le droit de [Adobe Real-time Customer Data Platform version B2B](../../rtcdp/b2b-overview.md) pour accéder à B2B [!UICONTROL Profils de compte] tableau de bord.
 
@@ -76,14 +76,13 @@ Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez 
 * [Profils de compte ajoutés](#account-profiles-added)
 * [Nouveaux comptes par secteur](#accounts-by-industry)
 * [Nouveaux comptes par type](#accounts-by-type)
-* [Opportunités ajoutées](#opportunities-added)
 * [Nouvelles opportunités par rôle individuel](#opportunities-by-person-role)
 * [Nouvelles opportunités par recettes](#opportunities-by-revenue)
 * [Nouvelles opportunités par statut et étape](#opportunities-by-status-&-stage)
 * [De nouvelles opportunités gagnées](#opportunities-won)
-* [Distribution de notation prédictive](#predictive-scoring-distribution)
-* [Facteurs d’influence de la notation prédictive](#predictive-scoring-top-influential-factors)
-* [Total des comptes par secteur](#total-accounts-by-industry)
+* [Opportunités ajoutées](#opportunities-added)
+* [Répartition du score prédictif](#predictive-scoring-distribution)
+* [Facteurs les plus influents du score prédictif](#predictive-scoring-top-influential-factors)
 
 ### Profils de compte ajoutés {#account-profiles-added}
 
@@ -102,14 +101,6 @@ La variable [!UICONTROL Nouveaux comptes par secteur] widget affiche le nombre t
 La variable [!UICONTROL Nouveaux comptes par type] widget affiche le nombre total de comptes dans une mesure unique au sein d’un graphique en anneau. Le graphique en anneau illustre la composition relative des différents types de compte qui composent ce total. Une clé codée par couleur fournit une ventilation de tous les types de compte inclus. Les comptes individuels de chaque type de compte s’affichent dans une boîte de dialogue lorsque le curseur survole la section correspondante du graphique en anneau.
 
 ![Le widget Nouveaux comptes par type .](../images/account-profiles/new-accounts-by-type.png)
-
-### Opportunités ajoutées {#opportunities-added}
-
-La variable [!UICONTROL Opportunités ajoutées] le widget utilise un graphique linéaire pour afficher le nombre d’opportunités ajoutées chaque jour sur une période donnée. Utilisez le filtre de date globale situé en haut de votre tableau de bord pour déterminer la période d’analyse. Si aucun filtre de date n’est fourni, le comportement par défaut répertorie les opportunités ajoutées pour l’année précédente. Les résultats peuvent être utilisés pour déduire une tendance du nombre d’opportunités ajoutées.
-
-<!-- Link to date filter documentation from Annamalai -->
-
-![Le widget Opportunités ajoutées .](../images/account-profiles/opportunities-added.png)
 
 ### Nouvelles opportunités par rôle individuel {#opportunities-by-person-role}
 
@@ -141,7 +132,15 @@ La variable [!UICONTROL De nouvelles opportunités gagnées] widget affiche le n
 
 ![Le widget Nouvelles opportunités a gagné.](../images/account-profiles/new-opportunities-won.png)
 
-### Distribution de notation prédictive {#predictive-scoring-distribution}
+### Opportunités ajoutées {#opportunities-added}
+
+La variable [!UICONTROL Opportunités ajoutées] le widget utilise un graphique linéaire pour afficher le nombre d’opportunités ajoutées chaque jour sur une période donnée. Utilisez le filtre de date globale situé en haut de votre tableau de bord pour déterminer la période d’analyse. Si aucun filtre de date n’est fourni, le comportement par défaut répertorie les opportunités ajoutées pour l’année précédente. Les résultats peuvent être utilisés pour déduire une tendance du nombre d’opportunités ajoutées.
+
+<!-- Link to date filter documentation from Annamalai -->
+
+![Le widget Opportunités ajoutées .](../images/account-profiles/opportunities-added.png)
+
+### Répartition du score prédictif {#predictive-scoring-distribution}
 
 La variable [!UICONTROL Distribution de notation prédictive] widget affiche la distribution des scores de tous les profils de compte pour vous aider à comprendre en un coup d’oeil l’état de votre pipeline de ventes. Les données de notation sont véhiculées par le biais d’un graphique en anneau et d’un graphique en colonnes.
 
@@ -157,7 +156,7 @@ Le menu déroulant du widget vous permet de sélectionner le modèle de notation
 
 ![Le widget de distribution de notation prédictive.](../images/account-profiles/predictive-scoring-distribution.png)
 
-### Facteurs d’influence de la notation prédictive {#predictive-scoring-top-influential-factors}
+### Facteurs les plus influents du score prédictif {#predictive-scoring-top-influential-factors}
 
 La variable [!UICONTROL Facteurs d’influence de la notation prédictive] vous aide à comprendre les facteurs les plus significatifs qui génèrent les scores pour chaque compartiment de propension.
 
@@ -170,18 +169,6 @@ Le menu déroulant du widget vous permet de sélectionner le modèle de notation
 >Les filtres de période globaux ne s’appliquent pas aux insights de notation prédictive. Les widgets de notation prédictive analysent les données en fonction du modèle de notation de compte sélectionné dans la liste déroulante.
 
 ![Le widget Score prédictif des principaux facteurs d’influence .](../images/account-profiles/predictive-scoring-top-influential-factors.png)
-
-### Total des comptes par secteur {#total-accounts-by-industry}
-
-Ce widget affiche le nombre total de comptes dans une seule mesure et utilise un graphique en anneau pour illustrer les tailles proportionnelles des comptes pour les secteurs qui constituent le nombre global. La clé fournit des informations de codage des couleurs pour les différents secteurs qui composent le graphique en anneau.
-
->[!NOTE]
->
->Les informations affichées par cet insight dépendent de la période que vous avez spécifiée. Si vous ne fournissez pas de filtre de date, le comportement par défaut de l’insight analyse les données ajoutées de l’année précédente jusqu’à aujourd’hui.
-
-Les décomptes individuels des différentes industries s’affichent dans une boîte de dialogue lorsque le curseur survole la section correspondante du graphique en anneau.
-
-![Total des comptes par widget industriel.](../images/account-profiles/total-accounts-by-industry-widget.png)
 
 ## Étapes suivantes
 

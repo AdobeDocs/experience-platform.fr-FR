@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de Query Editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 5189e8bbe4cd93c4e1f355f09da9667f5eb5708d
+source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
 workflow-type: tm+mt
 source-wordcount: '2432'
 ht-degree: 31%
@@ -15,7 +15,7 @@ ht-degree: 31%
 
 >[!NOTE]
 >
->L’ancien éditeur a été abandonné le 30 mai 2024. Il n’est plus accessible à l’utilisation. Vous pouvez désormais utiliser la variable [Éditeur de requêtes amélioré](#enhanced-editor-toggle) pour écrire, valider et exécuter vos requêtes
+>L’ancien éditeur a été abandonné le 24 mai 2024. Il n’est plus accessible à l’utilisation. Vous pouvez désormais utiliser la variable [Éditeur de requêtes amélioré](#enhanced-editor-toggle) pour écrire, valider et exécuter vos requêtes
 
 Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service qui vous permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans les [!DNL Experience Platform] de l’interface utilisateur. Query Editor prend en charge le développement de requêtes à des fins d’analyse et d’exploration de données, et vous permet d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner des jeux de données dans [!DNL Experience Platform].
 
@@ -45,7 +45,7 @@ Les requêtes exécutées à partir de Query Editor s’exécutent de manière i
 
 >[!NOTE]
 >
->L’ancien éditeur a été abandonné le 30 mai 2024. Il n’est plus accessible à l’utilisation. Vous pouvez désormais utiliser l’éditeur de requêtes amélioré pour écrire, valider et exécuter vos requêtes.
+>L’ancien éditeur a été abandonné le 24 mai 2024. Il n’est plus accessible à l’utilisation. Vous pouvez désormais utiliser l’éditeur de requêtes amélioré pour écrire, valider et exécuter vos requêtes.
 
 Avec Query Editor, vous pouvez écrire, exécuter et enregistrer des requêtes de données d’expérience client. Toutes les requêtes exécutées ou enregistrées dans Query Editor sont disponibles pour tous les utilisateurs de votre entreprise ayant accès à Query Service.
 

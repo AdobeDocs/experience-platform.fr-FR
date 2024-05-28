@@ -1,7 +1,7 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour d’avril 2024 pour Adobe Experience Platform.
-source-git-commit: 2bddb4963ba0bd10485efe0351d854c01c9a5a3a
+source-git-commit: 45eab8f894819eea36465ea0b8f3f3dd8f91fbe0
 workflow-type: tm+mt
 source-wordcount: '1895'
 ht-degree: 24%
@@ -121,7 +121,7 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 | Alertes de requête planifiées | Tenez compte des notifications proactives tout en planifiant les requêtes, ce qui vous permet de garantir une gestion efficace et opportune des tâches. Vous pouvez [abonner aux alertes lors de la création d’une requête](../../query-service/ui/query-schedules.md#alerts-for-query-status) ou en utilisant les actions intégrées pour les requêtes planifiées existantes. Voir [abonner des alertes avec des actions intégrées](../../query-service/ui/monitor-queries.md#alert-subscription) pour plus d’informations. |
 | Amélioration de la navigation des requêtes planifiées | Naviguez facilement entre les modèles de requête et les exécutions planifiées pour accroître la productivité. Consultez la documentation relative à [affichage des exécutions de requête planifiées](../../query-service/ui/query-schedules.md#scheduled-query-runs) pour plus d’informations. |
 | Sortie de requête étendue | Accédez à jusqu’à 500 lignes de résultats de requête dans la console pour une analyse plus approfondie de vos données. Voir la section [comptage des résultats](../../query-service/ui/user-guide.md#result-count) pour plus d’informations. |
-| Jeu de soleil de l’ancien Query Editor | Depuis le 30 avril 2024, l’éditeur de requêtes amélioré est devenu l’éditeur par défaut pour tous les utilisateurs. L’ancien éditeur sera abandonné les 30 et 30 mai 2024 et ne sera plus disponible. Voir [Guide d’utilisation de Query Editor](../../query-service/ui/user-guide.md) pour plus d’informations. |
+| Jeu de soleil de l’ancien Query Editor | Depuis le 30 avril 2024, l’éditeur de requêtes amélioré est devenu l’éditeur par défaut pour tous les utilisateurs. L’ancien éditeur sera abandonné les 24 et 24 mai 2024 et ne sera plus disponible. Voir [Guide d’utilisation de Query Editor](../../query-service/ui/user-guide.md) pour plus d’informations. |
 
 {style="table-layout:auto"}
 
