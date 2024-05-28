@@ -5,7 +5,7 @@ role: Developer
 badgePrivateBeta: label="Beta privée" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: 8bd4bd293b68d01e072c1c0a776080379692c5ee
+source-git-commit: c527771e051d39032642afae33945a45e5183a5f
 workflow-type: tm+mt
 source-wordcount: '693'
 ht-degree: 6%
@@ -144,3 +144,10 @@ curl -X GET \
 
 La réponse est un fichier zip (*.zip). Les informations sont généralement renvoyées au format JSON, bien que cela ne puisse pas être garanti. Les données extraites peuvent être renvoyées dans n’importe quel format.
 
+<!-- ## Constraints {#constraints}
+
+During this private beta, the following constraints apply when using the `/content` endpoint:
+
+- The new `/content` download URL is only available in STAGE environments. It is not yet available in PROD environments
+- The `downloadUrl` should not be present in the JSON response unless the job has a `complete` status. Within the beta, the `downloadUrl` appears before a privacy job is complete.
+- The `downloadUrl` is also currently provided for `delete` jobs (which should never have a download URL). -->
