@@ -2,10 +2,10 @@
 title: Types d’éléments de données dans l’extension SDK Web Adobe Experience Platform
 description: Découvrez les différents types d’éléments de données fournis par l’extension de balise du SDK Web de Adobe Experience Platform.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
-source-git-commit: 8c652e96fa79b587c7387a4053719605df012908
+source-git-commit: fbca8a47c500e89d82cf636e8cb639f2bb59c2e6
 workflow-type: tm+mt
-source-wordcount: '599'
-ht-degree: 6%
+source-wordcount: '653'
+ht-degree: 5%
 
 ---
 
@@ -60,6 +60,12 @@ Vous pouvez créer des objets de payload à l’aide de la fonction **[!UICONTRO
 ![Image de l’interface utilisateur des balises présentant les options des éléments de données.](assets/variable-data-element.png)
 
 Après avoir créé cet élément de données, vous pouvez utiliser la variable [Mettre à jour la variable](./action-types.md#update-variable) pour la modifier. Une fois prêt, vous pouvez inclure cet élément de données dans la variable [Envoyer un événement](./action-types.md#send-event) Action pour envoyer des données à un flux de données.
+
+## Média : qualité de l’expérience {#quality-experience}
+
+A **[!UICONTROL Qualité d’expérience]** l’élément de données est utile lors de l’envoi d’événements de média en continu à Adobe Experience Platform. Vous pouvez ajouter cet élément lors de la création d’une session multimédia. Les événements multimédia suivants contiendront la mise à jour de la qualité des données d’expérience.
+
+![Image de l’interface utilisateur affichant l’écran Créer une qualité de l’élément de données d’expérience .](assets/qoe-data-element.png)
 
 ## Étapes suivantes {#next-steps}
 

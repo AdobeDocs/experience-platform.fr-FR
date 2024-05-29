@@ -2,16 +2,16 @@
 title: Configuration de l’extension de balise du SDK Web
 description: Découvrez comment configurer l’extension de balise SDK Web Experience Platform dans l’interface utilisateur des balises.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: 1d1bb754769defd122faaa2160e06671bf02c974
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1734'
 ht-degree: 6%
 
 ---
 
 # Configuration de l’extension de balise du SDK Web
 
-La variable [!DNL Web SDK] l’extension de balise envoie des données à Adobe Experience Cloud à partir de propriétés web par le biais du réseau Edge Experience Platform.
+La variable [!DNL Web SDK] l’extension de balise envoie des données à Adobe Experience Cloud à partir de propriétés web via l’Edge Network Experience Platform.
 
 L’extension vous permet de diffuser des données dans Platform, de synchroniser les identités, de traiter les signaux de consentement du client et de collecter automatiquement des données contextuelles.
 
@@ -47,7 +47,7 @@ Les options de configuration en haut de la page indiquent à Adobe Experience Pl
 
 Cette section vous permet de sélectionner les flux de données à utiliser pour chacun des trois environnements disponibles (production, évaluation et développement).
 
-Lorsqu’une demande est envoyée au réseau Edge, un identifiant de flux de données est utilisé pour référencer la configuration côté serveur. Vous pouvez mettre à jour la configuration sans avoir à apporter de modifications au code sur votre site web.
+Lorsqu’une demande est envoyée à l’Edge Network, un identifiant de flux de données est utilisé pour référencer la configuration côté serveur. Vous pouvez mettre à jour la configuration sans avoir à apporter de modifications au code sur votre site web.
 
 Consultez le guide sur la [datastreams](../../../../datastreams/overview.md) pour savoir comment configurer un flux de données.
 
@@ -113,9 +113,24 @@ Lors de l’utilisation du fragment de code de masquage préalable, Adobe recomm
 
 ![Image présentant les paramètres de collecte de données de l’extension de balise SDK Web dans l’interface utilisateur des balises](assets/web-sdk-ext-collection.png)
 
-* **[!UICONTROL Fonction de rappel]**: la fonction de rappel fournie dans l’extension est également appelée [`onBeforeEventSend` function](/help/web-sdk/commands/configure/onbeforeeventsend.md) dans la bibliothèque. Cette fonction vous permet de modifier les événements de manière globale avant qu’ils ne soient envoyés au réseau Edge.
+* **[!UICONTROL Fonction de rappel]**: la fonction de rappel fournie dans l’extension est également appelée [`onBeforeEventSend` function](/help/web-sdk/commands/configure/onbeforeeventsend.md) dans la bibliothèque. Cette fonction vous permet de modifier les événements de manière globale avant qu’ils ne soient envoyés à l’Edge Network.
 * **[!UICONTROL Activer la collecte de données de clic]**: le SDK Web peut automatiquement collecter des informations sur les clics sur les liens. Cette fonctionnalité est activée par défaut, mais elle peut être désactivée à l’aide de cette option. Les liens sont également étiquetés comme liens de téléchargement s’ils contiennent l’une des expressions de téléchargement répertoriées dans la variable [!UICONTROL Télécharger le qualificateur de lien] textbox. Adobe vous fournit quelques qualificateurs de lien de téléchargement par défaut. Vous pouvez les modifier en fonction de vos besoins.
 * **[!UICONTROL Données contextuelles collectées automatiquement]**: par défaut, le SDK Web collecte certaines données contextuelles concernant l’appareil, le web, l’environnement et le contexte de lieu. Si vous ne souhaitez pas que ces données soient collectées ou que certaines catégories de données soient uniquement collectées, sélectionnez **[!UICONTROL Informations contextuelles spécifiques]** et sélectionnez les données à collecter. Voir [`context`](/help/web-sdk/commands/configure/context.md) pour plus d’informations.
+
+## Configuration des paramètres de la collection multimédia {#media-collection}
+
+La fonctionnalité de collecte de médias vous aide à collecter des données liées aux sessions multimédia sur votre site web.
+
+Les données collectées peuvent inclure des informations sur les lectures multimédia, les pauses, les fins et d’autres événements connexes. Une fois ces données collectées, vous pouvez les envoyer à Adobe Experience Platform et/ou Adobe Analytics pour générer des rapports. Cette fonctionnalité offre une solution complète pour effectuer le suivi et comprendre le comportement de consommation des médias sur votre site web.
+
+![Image montrant les paramètres de collecte de médias de l’extension de balise SDK Web dans l’interface utilisateur des balises](assets/media-collection.png)
+
+
+* **[!UICONTROL Canal]**: nom du canal sur lequel se produit la collecte de médias. Exemple : `Video channel`.
+* **[!UICONTROL Nom du lecteur]**: nom du lecteur multimédia.
+* **[!UICONTROL Version de l’application]**: version de l’application du lecteur multimédia.
+* **[!UICONTROL Intervalle de ping principal]**: fréquence des pings pour le contenu principal, en secondes. La valeur par défaut est `10`. Les valeurs peuvent être comprises entre `10` to `50` secondes.  Si aucune valeur n’est spécifiée, la valeur par défaut est utilisée lors de l’utilisation de la variable [sessions suivies automatiquement](../../../../web-sdk/commands/createmediasession.md#automatic).
+* **[!UICONTROL Intervalle de ping publicitaire]**: fréquence des pings pour le contenu de la publicité, en secondes. La valeur par défaut est `10`. Les valeurs peuvent être comprises entre `1` to `10` secondes. Si aucune valeur n’est spécifiée, la valeur par défaut est utilisée lors de l’utilisation de la variable [sessions suivies automatiquement](../../../../web-sdk/commands/createmediasession.md#automatic)
 
 ## Configurer les remplacements de trains de données {#datastream-overrides}
 
@@ -126,7 +141,7 @@ Vous pouvez ainsi déclencher des comportements de trains de données différent
 Le remplacement de la configuration du train de données comporte deux étapes :
 
 1. Tout d’abord, vous devez définir vos remplacements de configuration de trains de données sur la page de [configuration des trains de données](/help/datastreams/configure.md).
-2. Ensuite, vous devez envoyer les remplacements au réseau Edge par le biais d’une commande de SDK Web ou à l’aide de l’extension de balise du SDK Web.
+2. Ensuite, vous devez envoyer les remplacements à l’Edge Network soit par le biais d’une commande SDK Web, soit à l’aide de l’extension de balise SDK Web.
 
 Voir la structure de données [la documentation de remplacement de configuration](/help/datastreams/overrides.md) pour obtenir des instructions détaillées sur la façon de remplacer les configurations datastream.
 
@@ -140,6 +155,6 @@ Les remplacements de flux de données doivent être configurés par environnemen
 
 ## Configuration des paramètres avancés
 
-Utilisez la variable **[!UICONTROL Chemin de base Edge]** si vous devez modifier le chemin de base utilisé pour interagir avec le réseau Edge. Cela ne doit pas nécessiter de mise à jour, mais dans le cas où vous participez à une version bêta ou alpha, l’Adobe peut vous demander de modifier ce champ.
+Utilisez la variable **[!UICONTROL Chemin de base Edge]** si vous devez modifier le chemin de base utilisé pour interagir avec l’Edge Network. Cela ne doit pas nécessiter de mise à jour, mais dans le cas où vous participez à une version bêta ou alpha, l’Adobe peut vous demander de modifier ce champ.
 
 ![Image présentant les paramètres avancés à l’aide de la page de l’extension de balise SDK Web.](assets/advanced-settings.png)

@@ -2,14 +2,14 @@
 solution: Data Collection
 audience: user
 user-guide-title: Aide du SDK web d’Adobe Experience Platform
-breadcrumb-title: Guide du SDK web
+breadcrumb-title: Guide du SDK Web
 user-guide-description: Interagissez avec les services Experience Cloud via le réseau Edge.
 feature: Web SDK
 role: Developer
-source-git-commit: 091aee1a5bb81d86925cbcde7c2ae3b354a3aebe
+source-git-commit: ec801c550740c4cba3481a961599f548518bb032
 workflow-type: tm+mt
-source-wordcount: '222'
-ht-degree: 53%
+source-wordcount: '226'
+ht-degree: 46%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 53%
       * [edgeConfigId](commands/configure/edgeconfigid.md)
       * [edgeDomain](commands/configure/edgedomain.md)
       * [idMigrationEnabled](commands/configure/idmigrationenabled.md)
+      * [streamingMedia](commands/configure/streamingmedia.md)
       * [onBeforeEventSend](commands/configure/onbeforeeventsend.md)
       * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
       * [orgId](commands/configure/orgid.md)
@@ -52,12 +53,15 @@ ht-degree: 53%
    * [appendIdentityToUrl](commands/appendidentitytourl.md)
    * [applyPropositions](commands/applypropositions.md)
    * [applyResponse](commands/applyresponse.md)
+   * [createMediaSession](commands/createmediasession.md)
    * [getIdentity](commands/getidentity.md)
    * [getLibraryInfo](commands/getlibraryinfo.md)
    * [setConsent](commands/setconsent.md)
    * [setDebug](commands/setdebug.md)
+   * [sendMediaEvent](commands/sendmediaevent.md)
    * [Configuration des remplacements de flux de données](commands/datastream-overrides.md)
    * [Réponses de commande](commands/command-responses.md)
+   * [getMediaAnalyticsTracker](commands/getmediaanalyticstracker.md)
 
 * Identité {#identity}
    * [Aperçu](identity/overview.md)

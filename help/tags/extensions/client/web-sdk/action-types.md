@@ -3,10 +3,10 @@ title: Types d’action dans l’extension SDK Web Adobe Experience Platform
 description: Découvrez les différents types d’actions fournis par l’extension de balise du SDK Web de Adobe Experience Platform.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 377be6d97e6da9b4aaacfa23a188131bd38e66f4
 workflow-type: tm+mt
-source-wordcount: '741'
-ht-degree: 2%
+source-wordcount: '1036'
+ht-degree: 1%
 
 ---
 
@@ -48,6 +48,33 @@ Le schéma XDM utilisé pour l’éditeur est le schéma sélectionné sur la pa
 ![](assets/update-variable-set-property.png)
 
 Il existe des différences entre l’éditeur dans l’action de mise à jour de variable et l’éditeur dans l’élément de données de l’objet XDM. Tout d’abord, l’action de mise à jour de variable comporte un élément de niveau racine intitulé &quot;xdm&quot;. Si vous cliquez sur cet élément, vous pouvez spécifier un élément de données à utiliser pour définir l’objet entier. Deuxièmement, l’action de mise à jour de variable comporte des cases à cocher pour effacer les données de l’objet xdm. Cliquez sur l’une des propriétés à gauche, puis cochez la case à droite pour effacer la valeur. Cela permet d’effacer la valeur actuelle avant de définir des valeurs sur la variable.
+
+## Envoyer un événement multimédia {#send-media-event}
+
+Envoie un événement multimédia à Adobe Experience Platform et/ou Adobe Analytics. Cette action est utile lorsque vous effectuez le suivi des événements multimédia sur votre site web. Sélectionnez une instance (si vous en avez plusieurs). L’action nécessite une `playerId` qui représente un identifiant unique pour une session multimédia suivie. Elle nécessite également une **[!UICONTROL Qualité d’expérience]** et un `playhead` élément de données lors du démarrage d’une session multimédia.
+
+![Image de l’interface utilisateur de Platform affichant l’écran d’événement de média envoyé.](assets/send-media-event.png)
+
+La variable **[!UICONTROL Envoyer un événement multimédia]** le type d’action prend en charge les propriétés suivantes :
+
+- **[!UICONTROL Instance]**: instance du SDK Web utilisée.
+- **[!UICONTROL Type d’événement multimédia]**: type d’événement multimédia suivi.
+- **[!UICONTROL ID du lecteur]**: identifiant unique de la session multimédia.
+- **[!UICONTROL Curseur de lecture]**: position actuelle de la lecture du média, en secondes.
+- **[!UICONTROL Détails de la session multimédia]**: lors de l’envoi d’un événement de démarrage du média, les détails de session multimédia requis doivent être spécifiés.
+- **[!UICONTROL Détails du chapitre]**: dans cette section, vous pouvez spécifier les détails du chapitre lors de l’envoi d’un événement multimédia de début de chapitre.
+- **[!UICONTROL Informations publicitaires]**: lors de l’envoi d’un événement `AdBreakStart` , vous devez spécifier les détails publicitaires requis.
+- **[!UICONTROL Détails de la capsule publicitaire]**: informations détaillées sur la capsule publicitaire lors de l’envoi d’une `AdStart` .
+- **[!UICONTROL Détails de l’erreur]**: informations détaillées sur l’erreur de lecture qui est suivie.
+- **[!UICONTROL Détails de la mise à jour de l’état]**: état du lecteur mis à jour.
+- **[!UICONTROL Métadonnées personnalisées]**: métadonnées personnalisées sur l’événement multimédia suivi.
+- **[!UICONTROL Qualité d’expérience]**: qualité du média des données d’expérience suivies.
+
+## Obtention du suivi de Media Analytics {#get-media-analytics-tracker}
+
+Cette action est utilisée pour obtenir l’API Media Analytics héritée. Lors de la configuration de l’action et qu’un nom d’objet est fourni, l’API Media Analytics héritée est exportée vers cet objet de fenêtre. Si aucun n’est fourni, il sera exporté vers `window.Media` comme le fait la bibliothèque Media JS actuelle.
+
+![Image de l’interface utilisateur de Platform montrant le type d’action Get Media Analytics Tracker .](assets/get-media-analytics-tracker.png)
 
 ## Étapes suivantes {#next-steps}
 
