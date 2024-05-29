@@ -3,7 +3,7 @@ title: Évoluer la valeur client unique à la valeur de durée de vie
 description: Découvrez comment créer des campagnes personnalisées pour offrir les meilleurs produits ou services complémentaires en fonction des attributs, du comportement et des achats antérieurs d’un client spécifique.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: 8cd0da12784d8fac3f0ce9afeb881d7a3916795f
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3179'
 ht-degree: 2%
@@ -21,7 +21,7 @@ Mettez en oeuvre le cas d’utilisation de la valeur client unique par rapport �
 
 Les personnes que vous ciblez sont les rares visiteurs de vos propriétés qui ont effectué des achats au cours des trois derniers mois.
 
-Tenez compte de ces clients qui visitent vos propriétés et achètent sporadiquement les produits ou services que vous proposez. Vous pouvez créer des campagnes personnalisées pour séduire ces clients afin que votre marque leur offre une valeur à plus long terme au lieu d’une valeur ponctuelle. Découvrez comment :
+Tenez compte de ces clients qui visitent vos propriétés et achètent sporadiquement les produits ou services que vous proposez. Vous pouvez créer des campagnes personnalisées pour séduire ces clients afin que votre marque leur offre une valeur à plus long terme au lieu d’une valeur ponctuelle. Découvrez comment :
 
 * Collecte et gestion des données
 * Créer des audiences

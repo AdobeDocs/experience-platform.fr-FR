@@ -2,7 +2,7 @@
 title: Profils Edge
 description: Découvrez les profils Edge, ainsi que la terminologie associée, les régions disponibles pour les profils Edge et les services disponibles pour les profils Edge.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
@@ -73,4 +73,4 @@ Pour les profils Edge, l’expiration des données détermine la durée pendant 
 
 ### Quelles données sont stockées sur le profil Edge ?
 
-Le profil Edge stocke les attributs de profil, les identifiants de profil, ainsi que les identifiants d’audience qualifiés. Par défaut, l’expiration des données dure 14 jours.
+Edge Profile stocke les attributs de profil, les identifiants de profil, ainsi que les identifiants d’audience qualifiés. Par défaut, l’expiration des données dure 14 jours.

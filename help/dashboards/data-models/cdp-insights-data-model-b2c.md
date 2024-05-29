@@ -4,10 +4,10 @@ description: Découvrez comment utiliser les requêtes SQL avec les modèles de 
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1155'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -98,7 +98,7 @@ L’image ci-dessous contient les champs de données appropriés dans chaque jeu
 
 #### Profils par cas d’utilisation d’identité {#profiles-by-identity}
 
-Le widget [!UICONTROL Profils par identité] affiche la répartition des identités pour tous les profils fusionnés de votre banque de profils. Voir [[!UICONTROL Profils par identité] documentation sur les widgets](../guides/profiles.md#profiles-by-identity) pour plus d’informations.
+La variable [!UICONTROL Profils par identité] widget affiche la ventilation des identités pour tous les profils fusionnés de votre banque de profils. Voir [[!UICONTROL Profils par identité] documentation sur les widgets](../guides/profiles.md#profiles-by-identity) pour plus d’informations.
 
 Le SQL qui génère la variable [!UICONTROL Profils par identité] Le widget est visible dans la section réductible ci-dessous.
 

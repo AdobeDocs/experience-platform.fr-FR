@@ -5,10 +5,10 @@ title: Traitement des demandes d’accès à des informations personnelles dans 
 type: Documentation
 description: Adobe Experience Platform Privacy Service traite les demandes des clients en matière dʼaccès, d’opt-out de vente ou de suppression de leurs données personnelles conformément aux nombreuses réglementations en matière de confidentialité. Ce document couvre les concepts essentiels liés au traitement des demandes d’accès à des informations personnelles pour Real-time Customer Profile.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1743'
-ht-degree: 24%
+ht-degree: 25%
 
 ---
 
@@ -28,7 +28,7 @@ Ce document couvre les concepts essentiels associés au traitement des demandes 
 >
 >La demande d’accès à des informations personnelles présentée dans ce guide **not** couvrir les entités non personnelles B2B ;
 
-## Prise en main
+## Commencer
 
 Ce guide nécessite une compréhension pratique des éléments suivants : [!DNL Platform] composants :
 
@@ -40,7 +40,7 @@ Ce guide nécessite une compréhension pratique des éléments suivants : [!DNL 
 
 Adobe Experience Platform [!DNL Identity Service] rapproche les données dʼidentité client entre les systèmes et les appareils. [!DNL Identity Service] utilise les **espaces de noms d’identité** pour fournir un contexte aux valeurs d’identité en les reliant à leur système d’origine. Un espace de noms peut représenter un concept générique tel qu’une adresse e-mail (« E-mail ») ou associer l’identité à une application spécifique telle qu’un identifiant Adobe Advertising Cloud ID (« AdCloud ») ou un identifiant Adobe Target (« TNTID »).
 
-Identity Service conserve un stock d’espaces de nom d’identité définis globalement (standard) et par l’utilisateur (personnalisés). Les espaces de noms standard sont disponibles pour toutes les organisations (par exemple, « E-mail » et « ECID »), tandis que votre organisation peut aussi créer des espaces de noms personnalisés adaptés à ses besoins spécifiques.
+Le service d’identités conserve un stock d’espaces de nom d’identité définis globalement (standard) et par l’utilisateur (personnalisés). Les espaces de noms standard sont disponibles pour toutes les organisations (par exemple, « E-mail » et « ECID »), tandis que votre organisation peut aussi créer des espaces de noms personnalisés adaptés à ses besoins spécifiques.
 
 Pour plus dʼinformations sur les espaces de noms dʼidentité dans [!DNL Experience Platform], consultez la [présentation de lʼespace de noms dʼidentité](../identity-service/features/namespaces.md).
 
@@ -178,7 +178,7 @@ Dans le [!DNL Profile] entrepôt de données, les données personnelles d’un c
 
 Prenons l’exemple d’une situation où vous stockez des données d’attributs du client dans trois jeux de données distincts, qui utilisent différents identifiants pour associer ces données à des clients individuels :
 
-| Nom du jeu de données | Champ d’identité du Principal | Attributs stockés |
+| Nom du jeu de données | Champ Identité principale | Attributs stockés |
 | --- | --- | --- |
 | Jeu de données 1 | `customer_id` | `address` |
 | Jeu de données 2 | `email_id` | `firstName`, `lastName` |

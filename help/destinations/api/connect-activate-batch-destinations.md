@@ -5,7 +5,7 @@ title: Se connecter aux destinations par lots et activer des données à l’aid
 description: Cette section contient des instructions détaillées sur l’utilisation de l’API Flow Service pour créer un espace de stockage par lots dans le cloud ou une destination de marketing par e-mail dans Experience Platform et activer les données.
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3411'
 ht-degree: 74%
@@ -173,9 +173,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Propriété | Description |
 | --------- | ----------- |
-| `name` | Attribuer un nom à la connexion de base à Experience Platform [!DNL Profile Store]. |
+| `name` | Attribuer un nom à la connexion de base à Experience Platform [!DNL Profile store]. |
 | `description` | Vous pouvez éventuellement fournir une description de la connexion de base. |
-| `connectionSpec.id` | Utilisez l’identifiant de spécification de connexion pour [Boutique de profils Experience Platform](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
+| `connectionSpec.id` | Utilisez l’identifiant de spécification de connexion pour la variable [Boutique de profils Experience Platform](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 
 {style="table-layout:auto"}
 
@@ -207,7 +207,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-            "name": "Connecting to Profile Store",
+            "name": "Connecting to Profile store",
             "description": "Optional",
             "connectionSpec": {
                 "id": "{CONNECTION_SPEC_ID}",
@@ -224,9 +224,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 | Propriété | Description |
 | --------- | ----------- |
-| `name` | Attribuer un nom à la connexion source à Experience Platform [!DNL Profile Store]. |
+| `name` | Attribuer un nom à la connexion source à Experience Platform [!DNL Profile store]. |
 | `description` | Vous pouvez éventuellement fournir une description de la connexion source. |
-| `connectionSpec.id` | Utilisez l’identifiant de spécification de connexion pour [Boutique de profils Experience Platform](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
+| `connectionSpec.id` | Utilisez l’identifiant de spécification de connexion pour la variable [Boutique de profils Experience Platform](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 | `baseConnectionId` | Utilisez l’identifiant de connexion de base que vous avez obtenu à l’étape précédente. |
 | `data.format` | `CSV` est actuellement le seul format d’exportation de fichier pris en charge. |
 
@@ -234,7 +234,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle connexion source à [!DNL Profile Store]. Cela confirme que vous avez réussi à vous connecter à vos données [!DNL Experience Platform]. Conservez cette valeur car elle sera nécessaire lors d’une prochaine étape.
+Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle connexion source à [!DNL Profile store]. Cela confirme que vous avez réussi à vous connecter à vos données [!DNL Experience Platform]. Conservez cette valeur car elle sera nécessaire lors d’une prochaine étape.
 
 ```json
 {

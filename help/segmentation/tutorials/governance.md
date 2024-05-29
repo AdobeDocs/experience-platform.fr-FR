@@ -4,10 +4,10 @@ title: Application de la conformité de l’utilisation des données à un segme
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour appliquer les définitions de segment de conformité à l’utilisation des données à l’aide des API.
 exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '1355'
-ht-degree: 44%
+source-wordcount: '1348'
+ht-degree: 42%
 
 ---
 
@@ -20,7 +20,7 @@ Ce tutoriel décrit les étapes à suivre pour appliquer la conformité de l’u
 Ce tutoriel nécessite une connaissance pratique des composants suivants de [!DNL Adobe Experience Platform] :
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): [!DNL Real-Time Customer Profile] est un magasin d’entités de recherche générique utilisé pour gérer les [!DNL Experience Data Model (XDM)] données dans [!DNL Platform]. Profile fusionne les données de divers actifs de données d’entreprise et permet d’accéder à ces données dans une présentation unifiée.
-   - [Politiques de fusion](../../profile/api/merge-policies.md)[!DNL Real-Time Customer Profile] : politiques utilisées par pour déterminer quelles données peuvent être fusionnées en une vue unifiée dans certains cas. Les politiques de fusion peuvent être configurées à des fins de gouvernance des données.
+   - [Stratégies de fusion](../../profile/api/merge-policies.md): règles utilisées par [!DNL Real-Time Customer Profile] pour déterminer quelles données peuvent être fusionnées dans une vue unifiée sous certaines conditions. Les politiques de fusion peuvent être configurées à des fins de gouvernance des données.
 - [[!DNL Segmentation]](../home.md): comment [!DNL Real-Time Customer Profile] divise un grand groupe d’individus contenus dans la banque de profils en groupes plus petits partageant des caractéristiques similaires et réagissant de la même manière aux stratégies marketing.
 - [Gouvernance des données](../../data-governance/home.md): la gouvernance des données fournit l’infrastructure pour l’étiquetage et l’application de l’utilisation des données, à l’aide des composants suivants :
    - [Libellés d’utilisation des données](../../data-governance/labels/user-guide.md) : libellés utilisés pour décrire les jeux de données et les champs en fonction du niveau de sensibilité avec lequel traiter leurs données respectives.

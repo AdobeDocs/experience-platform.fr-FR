@@ -5,7 +5,7 @@ type: Documentation
 description: Real-Time Customer Profile vous permet de créer une vue unique de clients individuels dans Adobe Experience Platform en rassemblant des données provenant de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données de profil peuvent ensuite être exportées vers un jeu de données en vue d’un traitement ultérieur.
 role: Developer
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fd5042bee9b09182ac643bcc69482a0a2b3f8faa
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 53%
@@ -24,7 +24,7 @@ Ce document fournit des instructions étape par étape pour la création et la g
 
 Outre la création d’une tâche d’exportation, vous pouvez également accéder à [!DNL Profile] à l’aide de la variable `/entities` endpoint, également appelé &quot;[!DNL Profile Access]&quot;. Voir [guide de point d’entrée des entités](./entities.md) pour plus d’informations. Pour connaître les étapes d’accès [!DNL Profile] données utilisant l’interface utilisateur, voir [guide de l’utilisateur](../ui/user-guide.md).
 
-## Prise en main
+## Commencer
 
 Les points de terminaison d’API utilisés dans ce guide font partie du [!DNL Real-Time Customer Profile] API. Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
@@ -53,8 +53,7 @@ POST /dataSets
 La requête suivante crée un jeu de données et fournit des paramètres de configuration dans le payload.
 
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/foundation/catalog/dataSets \
+curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -99,8 +98,7 @@ POST /export/jobs
 La requête suivante crée une tâche d’exportation et fournit des paramètres de configuration dans le payload.
 
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/export/jobs \
+curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
   -H 'Content-Type: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -119,7 +117,7 @@ curl -X POST \
           "fromIngestTimestamp": "2018-10-25T13:22:04-07:00"
         }
       }
-    }
+    },
     "destination": {
       "datasetId": "5b020a27e7040801dedba61b",
       "segmentPerBatch": false
@@ -200,8 +198,7 @@ GET /export/jobs?{QUERY_PARAMETERS}
 **Requête**
 
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/export/jobs/ \
+curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/ \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}'
@@ -342,8 +339,7 @@ GET /export/jobs/{EXPORT_JOB_ID}
 **Requête**
 
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/export/jobs/24115 \
+curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/24115 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -419,8 +415,7 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 **Requête**
 
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/export/jobs/726 \
+curl -X POST https://platform.adobe.io/data/core/ups/export/jobs/726 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \

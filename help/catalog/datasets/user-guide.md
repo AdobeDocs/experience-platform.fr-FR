@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des jeux de données
 description: Découvrez comment exécuter des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: ed0a259c72832e4fb219855e2a2fc49b3381b85d
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3080'
-ht-degree: 14%
+ht-degree: 13%
 
 ---
 
@@ -30,8 +30,8 @@ Ce guide d’utilisation nécessite une compréhension professionnelle des compo
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_negative_numbers"
->title="Nombres négatifs dans l&#39;activité du jeu de données"
->abstract="Les nombres négatifs dans les enregistrements ingérés signifient qu&#39;un utilisateur a supprimé certains lots au cours d&#39;une période sélectionnée."
+>title="Nombre négatif dans l’activité du jeu de données"
+>abstract="Les nombres négatifs dans les enregistrements ingérés signifie qu’un utilisateur a supprimé certains lots au cours d’une période sélectionnée."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -203,7 +203,7 @@ La liste des filtres appliqués s’affiche au-dessus des résultats filtrés.
 
 ![Onglet Parcourir de l’espace de travail des jeux de données avec la liste des filtres appliqués mise en surbrillance.](../images/datasets/user-guide/applied-filters.png)
 
-### Affichage des jeux de données système {#show-system-datasets}
+### Afficher les jeux de données système {#show-system-datasets}
 
 Par défaut, seuls les jeux de données dans lesquels vous avez ingéré des données s’affichent. Si vous souhaitez afficher les jeux de données générés par le système, sélectionnez la variable **[!UICONTROL Oui]** dans la [!UICONTROL Affichage des jeux de données système] . Les jeux de données générés par le système ne sont utilisés que pour traiter d’autres composants. Par exemple, le jeu de données d’exportation de profil généré par le système est utilisé pour traiter le tableau de bord du profil.
 
@@ -262,8 +262,8 @@ Pour créer un jeu de données, commencez par sélectionner **[!UICONTROL Créat
 
 Sur l’écran suivant, les deux options de création d’un nouveau jeu de données suivantes vous sont proposées :
 
-* [Création d’un jeu de données à partir d’un schéma](#schema)
-* [Création d’un jeu de données à partir d’un fichier CSV](#csv)
+* [Créer un jeu de données à partir d’un schéma](#schema)
+* [Créer un jeu de données à partir d’un fichier CSV](#csv)
 
 ### Création d’un jeu de données à partir d’un schéma existant {#schema}
 

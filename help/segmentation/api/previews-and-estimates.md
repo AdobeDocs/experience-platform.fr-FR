@@ -4,10 +4,10 @@ title: Points de terminaison de l’API d’aperçu et d’estimation
 description: Au fur et à mesure que la définition de segment est développée, vous pouvez utiliser les outils d’estimation et de prévisualisation dans Adobe Experience Platform pour afficher des informations de niveau résumé afin de vous assurer que vous isolez l’audience attendue.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '971'
-ht-degree: 21%
+ht-degree: 19%
 
 ---
 
@@ -23,7 +23,7 @@ Au fur et à mesure que vous développez une définition de segment, vous pouvez
 >
 >Pour accéder à des mesures similaires liées aux données de Real-Time Customer Profile, telles que le nombre total de fragments de profil et de profils fusionnés dans des espaces de noms spécifiques ou l’ensemble de l’entrepôt de données Profile, reportez-vous à la section [guide de point de terminaison de l’aperçu du profil (aperçu de l’état de l’exemple)](../../profile/api/preview-sample-status.md), fait partie du guide de développement de l’API Profile.
 
-## Prise en main
+## Commencer
 
 Les points de terminaison utilisés dans ce guide font partie de la variable [!DNL Adobe Experience Platform Segmentation Service] API. Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
 
@@ -34,7 +34,7 @@ Lorsque l’ingestion d’enregistrements dans la banque de profils augmente ou 
 * **Ingestion par lots :** Pour l’ingestion par lots, dans les 15 minutes suivant l’ingestion réussie d’un lot dans la banque de profils, si le seuil de 5 % d’augmentation ou de diminution est atteint, une tâche est exécutée pour mettre à jour le nombre.
 * **Ingestion par flux :** Pour les workflows de données en flux continu, une vérification est effectuée sur une base horaire afin de déterminer si le seuil de 5 % d’augmentation ou de diminution a été atteint. Si tel est le cas, une tâche est automatiquement déclenchée pour mettre à jour le décompte.
 
-La taille de l’échantillon dépend du nombre total d’entités dans votre banque de profils. Ces tailles d’échantillon sont représentées dans le tableau suivant :
+La taille de l’échantillon de l’analyse dépend du nombre total d’entités dans votre banque de profils. Ces tailles d’échantillon sont représentées dans le tableau suivant :
 
 | Entités dans la banque de profils | Taille de l’échantillon |
 | ------------------------- | ----------- |

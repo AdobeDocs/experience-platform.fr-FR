@@ -4,10 +4,10 @@ title: Service de segmentation de Real-Time Customer Data Platform
 description: Adobe Real-time Customer Data Platform repose sur Adobe Experience Platform et utilise de nombreux services et fonctionnalités Experience Platform. Grâce au service de segmentation, vous pouvez proposer un marketing sur mesure en divisant vos clients en groupes restreints aux caractéristiques similaires.
 feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '543'
-ht-degree: 83%
+ht-degree: 78%
 
 ---
 
@@ -19,7 +19,7 @@ Real-Time CDP repose sur Adobe Experience Platform et utilise de nombreux ser
 
 ## Segmentation
 
-La segmentation est le processus consistant à définir des attributs ou des comportements spécifiques partagés par un sous-ensemble de profils de votre magasin de profils afin d’identifier un groupe de clients potentiels dans votre base. Par exemple, dans une campagne par e-mail intitulée « Avez-vous oublié d’acheter vos baskets ? », vous souhaitez peut-être connaître l’audience de tous les utilisateurs ayant recherché des baskets au cours des 30 derniers jours sans effectuer d’achat. En utilisant différentes définitions de segment, vous pouvez vous concentrer sur vos différentes audiences, afin de fournir une expérience marketing plus personnalisée.
+La segmentation est le processus de définition d’attributs ou de comportements spécifiques partagés par un sous-ensemble de profils de votre banque de profils afin de distinguer un groupe de clients potentiels de votre base. Par exemple, dans une campagne par e-mail intitulée « Avez-vous oublié d’acheter vos baskets ? », vous souhaitez peut-être connaître l’audience de tous les utilisateurs ayant recherché des baskets au cours des 30 derniers jours sans effectuer d’achat. En utilisant différentes définitions de segment, vous pouvez vous concentrer sur vos différentes audiences, afin de fournir une expérience marketing plus personnalisée.
 
 ## [!DNL Segment Builder]
 

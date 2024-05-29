@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Présentation de Segmentation Service
 description: Découvrez Adobe Experience Platform Segmentation Service et le rôle qu’il occupe dans l’écosystème de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1627'
-ht-degree: 98%
+ht-degree: 95%
 
 ---
 
@@ -26,7 +26,7 @@ Vous devez comprendre les termes clés suivants utilisés dans ce document :
 
 ## Fonctionnement de la segmentation
 
-La segmentation est le processus consistant à définir des attributs ou des comportements spécifiques partagés par un sous-ensemble de profils de votre magasin de profils afin d’identifier un groupe de clients potentiels dans votre base. Par exemple, dans une campagne par e-mail intitulée « Avez-vous oublié d’acheter vos baskets ? », vous souhaitez peut-être connaître l’audience de tous les utilisateurs ayant recherché des baskets au cours des 30 derniers jours sans effectuer d’achat.
+La segmentation est le processus de définition d’attributs ou de comportements spécifiques partagés par un sous-ensemble de profils de votre banque de profils afin de distinguer un groupe de clients potentiels de votre base. Par exemple, dans une campagne par e-mail intitulée « Avez-vous oublié d’acheter vos baskets ? », vous souhaitez peut-être connaître l’audience de tous les utilisateurs ayant recherché des baskets au cours des 30 derniers jours sans effectuer d’achat.
 
 Une fois qu’une audience a été définie sur le plan conceptuel, elle est créée dans [!DNL Experience Platform]. En règle générale, les audiences sont créées par la personne spécialiste du marketing ou des audiences, bien que certaines organisations préfèrent qu’elles soient créées par leur propre service marketing, en collaboration avec leur propre personnel chargé de l’analyse des données. Lors de la révision des données envoyées à [!DNL Platform], la personne qui analyse les données peut créer l’audience de deux manières. Elle peut créer une définition de segment en sélectionnant les champs et les valeurs qui seront utilisés pour créer les règles ou les conditions de l’audience, ou composer une audience à l’aide de la composition de l’audience.
 
@@ -89,10 +89,10 @@ Les audiences par lots sont automatiquement évaluées toutes les 24 heures. Si
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Évaluation Edge"
->abstract="La segmentation Edge permet d’évaluer instantanément les segments dans Platform sur le réseau Edge, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante."
+>abstract="La segmentation Edge permet d’évaluer instantanément les segments dans Platform sur l’Edge Network, en activant les cas d’utilisation de la personnalisation de la même page et de la page suivante."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=fr" text="Guide de l’interface utilisateur de segmentation Edge"
 
-La segmentation Edge permet d’évaluer instantanément les segments dans Platform. [sur le réseau Edge](../web-sdk/home.md), activation des cas d’utilisation de la personnalisation de la même page et de la page suivante.
+La segmentation Edge permet d’évaluer instantanément les segments dans Platform. [sur l’Edge Network](../web-sdk/home.md), activation des cas d’utilisation de la personnalisation de la même page et de la page suivante.
 
 Pour en savoir plus sur la segmentation Edge, consultez la [documentation API](./api/edge-segmentation.md) ou la [documentation de l’interface utilisateur](./ui/edge-segmentation.md).
 

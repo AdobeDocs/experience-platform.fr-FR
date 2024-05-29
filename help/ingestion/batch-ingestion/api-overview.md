@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’API Batch Ingestion
 description: Ce document fournit un guide complet aux développeurs qui utilisent les API d’ingestion par lots pour Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '2411'
-ht-degree: 75%
+source-wordcount: '2383'
+ht-degree: 65%
 
 ---
 
@@ -19,15 +19,15 @@ L’annexe de ce document fournit des informations sur le [formatage des donnée
 
 ## Prise en main
 
-Les points de terminaison d’API utilisés dans ce guide font partie de la variable [API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). L’ingestion par lots est fournie par le biais d’une API RESTful qui vous permet d’effectuer des opérations CRUD de base sur les types d’objets pris en charge.
+Les points de terminaison d’API utilisés dans ce guide font partie du [API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). L’ingestion par lots est fournie par le biais d’une API RESTful qui vous permet d’effectuer des opérations CRUD de base sur les types d’objets pris en charge.
 
-Avant de poursuivre, veuillez consulter la section [Présentation de l’API d’ingestion par lots](overview.md) et le [guide de prise en main](getting-started.md).
+Avant de poursuivre, veuillez consulter la section [Présentation de l’API d’ingestion par lots](overview.md) et la variable [guide de prise en main](getting-started.md).
 
 ## Ingestion de fichiers JSON
 
 >[!NOTE]
 >
->Les étapes suivantes s’appliquent aux petits fichiers (256 Mo ou moins). Si vous atteignez un délai d’expiration de passerelle ou que vous obtenez des erreurs de requêtes de taille du corps, vous devez passer au chargement de fichiers volumineux.
+>Les étapes suivantes s’appliquent aux petits fichiers (256 Mo ou moins). Si vous atteignez un délai d’expiration de passerelle ou que vous obtenez des erreurs de requêtes de taille du corps, vous devez passer au chargement de fichiers volumineux.
 
 ### Création d’un lot
 
@@ -97,7 +97,7 @@ Maintenant que vous avez créé un lot, vous pouvez utiliser l’identifiant de 
 
 >[!NOTE]
 >
->Reportez-vous à l’annexe pour y trouver un [exemple de fichier de données JSON correctement formaté](#data-transformation-for-batch-ingestion).
+>Consultez la section de l’annexe pour obtenir un [Exemple de fichier de données JSON correctement formaté](#data-transformation-for-batch-ingestion).
 
 **Format d’API**
 
@@ -109,7 +109,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
+| `{FILE_NAME}` | Nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
 
 **Requête**
 
@@ -129,7 +129,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `acme/customers/campaigns/summer.json`. |
+| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous essayez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `acme/customers/campaigns/summer.json`. |
 
 **Réponse**
 
@@ -171,7 +171,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 >[!NOTE]
 >
->Les étapes suivantes s’appliquent aux petits fichiers (256 Mo ou moins). Si vous atteignez un délai d’expiration de passerelle ou que vous obtenez des erreurs de requêtes de taille du corps, vous devrez passer au chargement de fichiers volumineux.
+>Les étapes suivantes s’appliquent aux petits fichiers (256 Mo ou moins). Si vous atteignez un délai d’expiration de passerelle ou que vous obtenez des erreurs de requêtes de taille du corps, vous devrez passer au chargement de fichiers volumineux.
 
 ### Création d’un lot
 
@@ -244,7 +244,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
+| `{FILE_NAME}` | Nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
 
 **Requête**
 
@@ -264,7 +264,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `acme/customers/campaigns/summer.parquet`. |
+| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous essayez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `acme/customers/campaigns/summer.parquet`. |
 
 **Réponse**
 
@@ -306,7 +306,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 >[!NOTE]
 >
->Cette section explique comment charger des fichiers d’une taille supérieure à 256 Mo. Les fichiers volumineux sont chargés en blocs, puis assemblés au moyen d’un signal API.
+>Cette section explique comment télécharger des fichiers de plus de 256 Mo. Les fichiers volumineux sont chargés en blocs, puis assemblés au moyen d’un signal API.
 
 ### Création d’un lot
 
@@ -417,7 +417,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
+| `{FILE_NAME}` | Nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
 
 **Requête**
 
@@ -439,7 +439,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Paramètre | Description |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | En entiers, le début et la fin de la plage demandée. |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `acme/customers/campaigns/summer.json`. |
+| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous essayez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `acme/customers/campaigns/summer.json`. |
 
 
 **Réponse**
@@ -517,7 +517,7 @@ Pour ingérer des fichiers CSV, vous devrez créer une classe, un schéma et un 
 
 >[!NOTE]
 >
->Les étapes suivantes s’appliquent aux petits fichiers (256 Mo ou moins). Si vous atteignez un délai d’expiration de passerelle ou que vous obtenez des erreurs de requêtes de taille du corps, vous devrez passer au chargement de fichiers volumineux.
+>Les étapes suivantes s’appliquent aux petits fichiers (256 Mo ou moins). Si vous atteignez un délai d’expiration de passerelle ou que vous obtenez des erreurs de requêtes de taille du corps, vous devrez passer au chargement de fichiers volumineux.
 
 ### Création d’un jeu de données
 
@@ -621,7 +621,7 @@ Maintenant que vous avez créé un lot, vous pouvez utiliser le `batchId` préci
 
 >[!NOTE]
 >
->Reportez-vous à l’annexe pour y trouver un [exemple de fichier de données CSV correctement formaté](#data-transformation-for-batch-ingestion).
+>Consultez la section de l’annexe pour obtenir un [Exemple de fichier de données CSV correctement formaté](#data-transformation-for-batch-ingestion).
 
 **Format d’API**
 
@@ -633,7 +633,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
+| `{FILE_NAME}` | Nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
 
 **Requête**
 
@@ -653,7 +653,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `acme/customers/campaigns/summer.csv`. |
+| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous essayez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `acme/customers/campaigns/summer.csv`. |
 
 
 **Réponse**
@@ -720,7 +720,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Suppression d’un lot {#delete-a-batch}
 
-Vous pouvez supprimer un lot en exécutant la requête POST suivante avec le paramètre de requête `action=REVERT` vers l’identifiant du lot que vous souhaitez supprimer. Le lot est marqué comme « inactif », ce qui le rend éligible pour le nettoyage de la mémoire. Le lot sera collecté de manière asynchrone : il sera alors marqué comme « supprimé ».
+Vous pouvez supprimer un lot en exécutant la requête POST suivante avec le paramètre de requête `action=REVERT` vers l’identifiant du lot que vous souhaitez supprimer. Le lot est marqué comme « inactif », ce qui le rend éligible pour la récupération de l’espace mémoire. Le lot sera collecté de manière asynchrone : il sera alors marqué comme « supprimé ».
 
 **Format d’API**
 
@@ -748,9 +748,9 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 200 OK
 ```
 
-## Correction d’un lot
+## Corriger un lot
 
-Il peut parfois être nécessaire de mettre à jour les données du magasin de profils de votre organisation. Vous pouvez par exemple avoir besoin de corriger des enregistrements ou de modifier une valeur d’attribut. Adobe Experience Platform prend en charge la mise à jour ou le correctif des données de la banque de profils par le biais d’une action d’insertion ou de &quot;correction d’un lot&quot;.
+Il peut parfois être nécessaire de mettre à jour les données dans la banque de profils de votre entreprise. Vous pouvez par exemple avoir besoin de corriger des enregistrements ou de modifier une valeur d’attribut. Adobe Experience Platform prend en charge la mise à jour ou le correctif des données de banque de profils par le biais d’une action d’insertion ou de &quot;correction d’un lot&quot;.
 
 >[!NOTE]
 >
@@ -769,7 +769,7 @@ Si vous souhaitez remplacer un lot déjà ingéré, vous pouvez le faire grâce 
 
 ### Création d’un lot
 
-Vous devrez tout d’abord créer un lot au format JSON en tant que format d’entrée. Lors de la création du lot, vous devrez fournir un identifiant de jeu de données. Vous devrez également vous assurer que tous les fichiers chargés en tant que partie intégrante du lot sont conformes au schéma XDM lié au jeu de données fourni. Vous devrez également fournir le ou les anciens lots comme référence dans la section de relecture. Dans l’exemple ci-dessous, vous effectuez la relecture de lots aux identifiants `batchIdA` et `batchIdB`.
+Vous devrez tout d’abord créer un lot au format JSON en tant que format d’entrée. Lors de la création du lot, vous devrez fournir un identifiant de jeu de données. Vous devrez également vous assurer que tous les fichiers chargés en tant que partie intégrante du lot sont conformes au schéma XDM lié au jeu de données fourni. Vous devrez également fournir le ou les anciens lots comme référence dans la section de relecture. Dans l’exemple ci-dessous, vous relancez des lots avec des identifiants. `batchIdA` et `batchIdB`.
 
 **Format d’API**
 
@@ -855,7 +855,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | L’identifiant du lot dans lequel vous souhaitez effectuer le chargement. |
 | `{DATASET_ID}` | L’identifiant du jeu de données de référence du lot. |
-| `{FILE_NAME}` | Le nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
+| `{FILE_NAME}` | Nom du fichier que vous souhaitez charger. Veillez à utiliser un nom de fichier unique afin de ne pas créer de conflit avec un autre fichier pour le lot de fichiers en cours d’envoi. |
 
 **Requête**
 
@@ -875,7 +875,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | Le chemin d’accès et le nom complets du fichier que vous tentez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `acme/customers/campaigns/summer.json`. |
+| `{FILE_PATH_AND_NAME}` | Chemin d’accès complet et nom du fichier que vous essayez de charger. Ce chemin d’accès au fichier est le chemin d’accès au fichier local, tel que `acme/customers/campaigns/summer.json`. |
 
 **Réponse**
 

@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2022
 description: Les notes de mise à jour de mars 2022 pour Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: 3d0f2823dcf63f25c3136230af453118c83cdc7e
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
-source-wordcount: '1176'
-ht-degree: 100%
+source-wordcount: '1172'
+ht-degree: 98%
 
 ---
 
@@ -77,7 +77,7 @@ Adobe Experience Platform fournit de nombreux [!DNL dashboards] grâce auxquel
 
 ### Tableaux de bord des profils
 
-Le tableau de bord des profils affiche un instantané des données d’attribut (d’enregistrement) dont votre entreprise dispose dans la banque de profils d’Experience Platform.
+Le tableau de bord Profils affiche un instantané des données d’attribut (enregistrement) dont votre organisation dispose dans la banque de profils en Experience Platform.
 
 **Fonctionnalités mises à jour**
 

@@ -1,12 +1,12 @@
 ---
 title: Réengagement intelligent
-description: Proposez des expériences attrayantes et connectées au cours des moments de conversion clés pour réengager intelligemment la clientèle moins fréquente.
+description: Diffusez des expériences attrayantes et connectées au cours des moments de conversion clés pour réengager intelligemment les clients les plus rares.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: 6991bad03b298373a0d55258dacc60ea8d797fd8
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3894'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
@@ -178,9 +178,9 @@ La variable [Détails de l’identifiant utilisateur final](/help/xdm/field-grou
 
 +++
 
-+++Détails du commerce (groupe de champs)
++++Détails Commerce (groupe de champs)
 
-La variable [Détails du commerce](/help/xdm/field-groups/event/commerce-details.md) Le groupe de champs est utilisé pour décrire les données commerciales telles que les informations sur les produits (SKU, nom, quantité) et les opérations standard sur les paniers (commande, passage en caisse, abandon).
+La variable [Détails du Commerce](/help/xdm/field-groups/event/commerce-details.md) Le groupe de champs est utilisé pour décrire les données commerciales telles que les informations sur les produits (SKU, nom, quantité) et les opérations standard sur les paniers (commande, passage en caisse, abandon).
 
 | Champs | Description |
 | --- | --- |
@@ -221,9 +221,9 @@ La variable [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent
 
 +++
 
-+++Détails du commerce (groupe de champs)
++++Détails Commerce (groupe de champs)
 
-La variable [Détails du commerce](/help/xdm/field-groups/event/commerce-details.md) Le groupe de champs est utilisé pour décrire les données commerciales telles que les informations sur les produits (SKU, nom, quantité) et les opérations standard sur les paniers (commande, passage en caisse, abandon).
+La variable [Détails du Commerce](/help/xdm/field-groups/event/commerce-details.md) Le groupe de champs est utilisé pour décrire les données commerciales telles que les informations sur les produits (SKU, nom, quantité) et les opérations standard sur les paniers (commande, passage en caisse, abandon).
 
 | Champs | Description |
 | --- | --- |

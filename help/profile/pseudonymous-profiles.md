@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Expiration des données de profils pseudonymes
 description: Ce document fournit des conseils généraux sur la configuration de l’expiration des données de profils pseudonymes dans Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 63ea5f112a304259cbf2aee1cc8e4ae01f002a17
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1004'
-ht-degree: 90%
+ht-degree: 86%
 
 ---
 
 # Expiration des données de profils pseudonymes
 
-Dans Adobe Experience Platform, vous pouvez configurer les délais d’expiration des profils pseudonymes, ce qui vous permet de supprimer automatiquement des données du magasin de profils qui ne sont plus valides ou utiles pour vos cas d’utilisation.
+Dans Adobe Experience Platform, vous pouvez configurer des délais d’expiration pour les profils pseudonymes, ce qui vous permet de supprimer automatiquement de la banque de profils les données qui ne sont plus valides ou utiles pour vos cas d’utilisation.
 
 ## Profil pseudonyme {#pseudonymous-profile}
 
@@ -85,4 +85,4 @@ Dans un cas d’utilisation standard, définissez l’expiration de vos données
 ### Comment l’expiration des données de profils pseudonymes interagit-elle avec les barrières de sécurité pour les données Identity Service ?
 
 - Identity Service [système de suppression &quot;premier entré, premier sorti&quot;](../identity-service/guardrails.md) peut supprimer des ECID du graphique d’identités, qui sont stockés dans Identity Service.
-- Si ce comportement de suppression entraîne le stockage d’un profil ECID uniquement dans le profil client en temps réel (banque de profils), l’expiration des données de profil anonyme supprime ce profil de la banque de profils.
+- Si ce comportement de suppression entraîne le stockage d’un profil ECID uniquement dans le profil client en temps réel (banque de profils), l’expiration des données de profil pseudonyme supprime ce profil de la banque de profils.

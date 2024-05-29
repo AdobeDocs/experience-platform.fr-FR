@@ -4,7 +4,7 @@ title: Aperçu de l’exemple d’état (aperçu du profil), point de terminaiso
 description: L’aperçu de l’exemple de point de terminaison d’état de l’API Real-time Customer Profile vous permet de prévisualiser le dernier échantillon réussi de vos données de profil, de répertorier la distribution du profil par jeu de données et par identité, et de générer des rapports montrant le chevauchement des jeux de données, le chevauchement d’identités et les profils désassemblés.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 5%
@@ -100,7 +100,7 @@ La réponse inclut les détails du dernier exemple de tâche réussi qui a été
 | Propriété | Description |
 |---|---|
 | `numRowsToRead` | Le nombre total de profils fusionnés dans l’exemple. |
-| `sampleJobRunning` | Une valeur booléenne qui renvoie `true` lorsqu’un exemple de tâche est en cours. Fournit une transparence sur la latence qui survient lorsqu’un fichier de lot est chargé dans lorsqu’il est réellement ajouté à la banque de profils. |
+| `sampleJobRunning` | Une valeur booléenne qui renvoie `true` lorsqu’un exemple de tâche est en cours. Fournit une transparence quant à la latence qui survient lorsqu’un fichier de lot est chargé dans lorsqu’il est réellement ajouté à la banque de profils. |
 | `cosmosDocCount` | Nombre total de documents dans Cosmos. |
 | `totalFragmentCount` | Nombre total de fragments de profil dans la banque de profils. |
 | `lastSuccessfulBatchTimestamp` | Dernier horodatage d’ingestion par lots réussi. |
@@ -372,7 +372,7 @@ Ce rapport fournit les informations suivantes :
 
 ## Génération du rapport de chevauchement des espaces de noms d’identité {#identity-overlap-report}
 
-Le rapport sur le chevauchement des espaces de noms d’identité offre une visibilité sur la composition de la banque de profils de votre entreprise en exposant les espaces de noms d’identité qui contribuent le plus à votre audience adressable (profils fusionnés). Cela inclut les espaces de noms d’identité standard fournis par Adobe, ainsi que les espaces de noms d’identité personnalisés définis par votre organisation.
+Le rapport sur le chevauchement des espaces de noms d’identité offre une visibilité sur la composition de la banque de profils de votre organisation en exposant les espaces de noms d’identité qui contribuent le plus à votre audience adressable (profils fusionnés). Cela inclut les espaces de noms d’identité standard fournis par Adobe, ainsi que les espaces de noms d’identité personnalisés définis par votre organisation.
 
 Vous pouvez générer le rapport de chevauchement d’espaces de noms d’identité en adressant une requête de GET à la variable `/previewsamplestatus/report/namespace/overlap` point de terminaison .
 
@@ -468,7 +468,7 @@ Ce rapport fournit les informations suivantes :
 
 ## Générer le rapport des profils désassemblés
 
-Vous pouvez bénéficier d’une meilleure visibilité sur la composition de la banque de profils de votre entreprise via le rapport de profils désassemblés. Un profil &quot;désassemblé&quot; est un profil qui ne contient qu’un fragment de profil. Un profil &quot;inconnu&quot; est un profil associé à des espaces de noms d’identité pseudonymes tels que `ECID` et `AAID`. Les profils inconnus sont inactifs, ce qui signifie qu’ils n’ont pas ajouté de nouveaux événements pour la période spécifiée. Le rapport Profils désassemblés fournit une ventilation des profils pour une période de 7, 30, 60, 90 et 120 jours.
+Vous pouvez mieux comprendre la composition de la banque de profils de votre entreprise grâce au rapport Profils désassemblés. Un profil &quot;désassemblé&quot; est un profil qui ne contient qu’un fragment de profil. Un profil &quot;inconnu&quot; est un profil associé à des espaces de noms d’identité pseudonymes tels que `ECID` et `AAID`. Les profils inconnus sont inactifs, ce qui signifie qu’ils n’ont pas ajouté de nouveaux événements pour la période spécifiée. Le rapport Profils désassemblés fournit une ventilation des profils pour une période de 7, 30, 60, 90 et 120 jours.
 
 Vous pouvez générer le rapport des profils désassemblés en adressant une requête de GET au `/previewsamplestatus/report/unstitchedProfiles` point de terminaison .
 
@@ -549,8 +549,8 @@ Une requête réussie renvoie un état HTTP 200 (OK) et le rapport des profils d
 | Propriété | Description |
 |---|---|
 | `data` | La variable `data` contient les informations renvoyées pour le rapport des profils désassemblés. |
-| `totalNumberOfProfiles` | Nombre total de profils uniques dans la banque de profils. Cela équivaut au nombre d’audiences adressables. Il comprend les profils connus et désassemblés. |
-| `totalNumberOfEvents` | Nombre total d’ExperienceEvents dans le magasin de profils. |
+| `totalNumberOfProfiles` | Comptage total des profils uniques dans la banque de profils. Cela équivaut au nombre d’audiences adressables. Il comprend les profils connus et désassemblés. |
+| `totalNumberOfEvents` | Nombre total d’ExperienceEvents dans la banque de profils. |
 | `unstitchedProfiles` | Objet contenant une ventilation des profils désassemblés par période. Le rapport Profils désassemblés fournit une ventilation des profils pour des périodes de 7, 30, 60, 90 et 120 jours. |
 | `countOfProfiles` | Le nombre de profils désassemblés pour la période ou le nombre de profils désassemblés pour l’espace de noms. |
 | `eventsAssociated` | Nombre d’ExperienceEvents pour la période ou nombre d’événements pour l’espace de noms. |
@@ -559,7 +559,7 @@ Une requête réussie renvoie un état HTTP 200 (OK) et le rapport des profils d
 
 ### Interprétation du rapport des profils désassemblés
 
-Les résultats du rapport peuvent fournir des informations sur le nombre de profils désassemblés et inactifs de votre organisation dans son magasin de profils.
+Les résultats du rapport peuvent fournir des informations sur le nombre de profils désassemblés et inactifs de votre organisation dans sa banque de profils.
 
 Examinez l’extrait suivant de la `data` objet :
 
@@ -593,5 +593,5 @@ Ce rapport fournit les informations suivantes :
 
 ## Étapes suivantes
 
-Maintenant que vous savez comment prévisualiser des données d’exemple dans le magasin de profils et exécuter plusieurs rapports sur les données, vous pouvez également utiliser les points de terminaison d’estimation et de prévisualisation de l’API Segmentation Service pour afficher des informations sommaires sur vos définitions de segment. Ces informations vous permettent de vous assurer que vous isolez l’audience attendue. Pour en savoir plus sur l’utilisation des prévisualisations et des estimations à l’aide de l’API Segmentation, consultez le [guide de prévisualisation et d’estimation des points de fin](../../segmentation/api/previews-and-estimates.md).
+Maintenant que vous savez comment prévisualiser des données d’exemple dans la banque de profils et exécuter plusieurs rapports sur les données, vous pouvez également utiliser les points de terminaison d’estimation et de prévisualisation de l’API Segmentation Service pour afficher des informations sommaires sur vos définitions de segment. Ces informations vous permettent de vous assurer que vous isolez l’audience attendue. Pour en savoir plus sur l’utilisation des prévisualisations et des estimations à l’aide de l’API Segmentation, consultez le [guide de prévisualisation et d’estimation des points de fin](../../segmentation/api/previews-and-estimates.md).
 

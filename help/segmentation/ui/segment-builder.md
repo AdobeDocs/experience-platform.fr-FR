@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6a17febf845d2b9566e49423fc68491315b2d4d7
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '3633'
-ht-degree: 88%
+ht-degree: 85%
 
 ---
 
@@ -25,7 +25,7 @@ Le [!DNL Segment Builder] offre un vaste espace de travail qui vous permet d’i
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Champs"
->abstract="Une définition de segment est constituée des trois types de champ suivants : les attributs, les événements et les audiences. Les attributs vous permettent d’utiliser des attributs de profil appartenant à la classe XDM Individual Profile, les événements vous permettent de créer une audience basée sur des actions ou des événements qui ont lieu à l’aide des éléments de données XDM ExperienceEvent et les audiences vous permettent d’utiliser des audiences importées à partir de sources externes."
+>abstract="Les trois types de champ qui constituent une définition de segment sont les attributs, les événements et les audiences. Les attributs vous permettent d’utiliser des attributs de profil appartenant à la classe XDM Individual Profile, les événements vous permettent de créer une audience basée sur des actions ou des événements qui ont lieu à l’aide des éléments de données XDM ExperienceEvent et les audiences vous permettent d’utiliser des audiences importées à partir de sources externes."
 
 Les blocs de création de base des définitions de segment sont les attributs et les événements. En outre, les attributs et les événements contenus dans les audiences existantes peuvent être utilisés comme éléments de nouvelles définitions.
 
@@ -232,7 +232,7 @@ Après avoir selectionné **[!UICONTROL Déplier le conteneur]**, le conteneur e
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Politiques de fusion"
->abstract="Une politique de fusion permet de fusionner les différents jeux de données pour former votre profil. Platform a fourni une politique de fusion par défaut ; vous pouvez également créer une politique de fusion par défaut dans les profils. Choisissez une politique de fusion correspondant à votre objectif marketing pour cette audience."
+>abstract="Une stratégie de fusion permet la fusion de différents jeux de données pour former votre profil. Platform a fourni une stratégie de fusion par défaut ou vous pouvez créer une stratégie de fusion par défaut dans les profils. Choisissez une stratégie de fusion correspondant à votre objectif marketing pour cette audience."
 
 [!DNL Experience Platform] vous permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chaque client. Lors du regroupement de ces données, les politiques de fusion sont les règles utilisées par [!DNL Platform] pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer un profil.
 
@@ -247,13 +247,13 @@ Pour sélectionner une politique de fusion pour votre définition de segment, s�
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="Propriétés de définition de segment"
->abstract="La section des propriétés de définition de segment affiche une estimation de la taille de la définition de segment résultante, en affichant le nombre de profils qualifiés par rapport au nombre total de profils. Cela vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même."
+>abstract="La section Propriétés de la définition de segment affiche une estimation de la taille de la définition de segment résultante, indiquant le nombre de profils qualifiés par rapport au nombre total de profils. Cela vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Actualiser les estimations"
->abstract="Vous pouvez actualiser les estimations de votre définition de segment pour afficher immédiatement un aperçu du nombre de profils admissibles pour la définition de segment proposé. Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=fr#estimate-and-preview-an-audience" text="Estimation et prévisualisation d’une audience"
+>abstract="Vous pouvez actualiser les estimations de votre définition de segment pour afficher immédiatement un aperçu du nombre de profils qui remplissent les critères de la définition de segment proposée. Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="Estimation et prévisualisation d’une audience"
 
 Lors de la création d’une définition de segment, la variable **[!UICONTROL Propriétés d’audience]** sur le côté droit de l’espace de travail, la section affiche une estimation de la taille de la définition de segment résultante, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
 
@@ -273,7 +273,7 @@ Au fur et à mesure que vous continuez à créer votre définition de segment, v
 
 >[!NOTE]
 >
->Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour. S’il y a moins d’un million d’entités dans votre banque de profils, l’ensemble des données est utilisé ; entre 1 et 20 millions d’entités, 1 million d’entités sont utilisées ; et pour plus de 20 millions d’entités, 5 % du total des entités sont utilisés.
+>Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour. S’il y a moins d’un million d’entités dans votre banque de profils, l’ensemble des données est utilisé ; entre 1 et 20 millions d’entités, 1 million d’entités sont utilisées ; et pour plus de 20 millions d’entités, 5 % du total des entités est utilisé.
 >
 >En outre, cette estimation est basée sur la date de la dernière exécution de l’exemple de tâche de profil. Cela signifie que si vous utilisez une fonction de date relative telle que &quot;Aujourd’hui&quot; ou &quot;Cette semaine&quot;, l’estimation basera ses calculs sur le dernier exemple de temps d’exécution de tâche de profil. Par exemple, si nous sommes aujourd’hui le 24 janvier et que le dernier exemple de tâche de profil s’est exécuté le 22 janvier, la fonction de date relative &quot;Hier&quot; sera basée sur le 21 janvier et non le 23 janvier.
 >

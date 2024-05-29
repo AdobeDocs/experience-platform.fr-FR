@@ -1,12 +1,12 @@
 ---
 title: Interagir et acquérir de nouveaux clients sans dépendre de cookies tiers
-description: Découvrez comment interagir et acquérir de nouveaux clientes et clients grâce à des cas d’utilisation de prospection, sans recourir à des cookies tiers.
+description: Découvrez comment interagir et acquérir de nouveaux clients grâce à des cas d’utilisation de prospection, sans recourir à des cookies tiers.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2074'
-ht-degree: 86%
+ht-degree: 84%
 
 ---
 
@@ -110,7 +110,7 @@ La classe **[!UICONTROL XDM Individual Prospect Profile]** est préconfigurée a
 
 ![Champs préconfigurés pour la classe XDM Individual Prospect Profile.](/help/rtcdp/assets/partner-data/prospecting/preconfigured-fields-individual-prospect-class.png)
 
-Ensuite, vous devez sélectionner l’identité partnerID que vous avez créée précédemment comme identité principale du schéma. Les enregistrements de profil doivent comporter un identifiant principal. Cette étape vous permettra de vous assurer que les données de prospects peuvent être chargées dans le magasin de profils et mises à disposition pour la segmentation et l’activation.
+Ensuite, vous devez sélectionner l’identité partnerID que vous avez créée précédemment comme identité principale du schéma. Les enregistrements de profil doivent comporter un identifiant principal. Cette étape est nécessaire pour s’assurer que les données de prospect peuvent être chargées dans la banque de profils et mises à disposition pour la segmentation et l’activation.
 
 >[!AVAILABILITY]
 >

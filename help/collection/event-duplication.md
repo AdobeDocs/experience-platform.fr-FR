@@ -1,13 +1,13 @@
 ---
 title: Gestion de la duplication des événements dans Experience Platform
 description: Découvrez comment Adobe Experience Platform gère la duplication des événements
-source-git-commit: bc3ae849bd7fd8a9f50ba98528adc43d7282df90
+exl-id: ac8c3ee8-52cf-459c-b283-16ed32d2976d
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '442'
 ht-degree: 0%
 
 ---
-
 
 # Gestion de la duplication des événements dans Adobe Experience Platform
 
@@ -27,7 +27,7 @@ Pour mieux comprendre les bonnes pratiques de gestion des échecs transitoires, 
 
 La duplication d’événements peut se produire dans divers scénarios, tels que :
 
-* Problèmes liés au réseau entre les SDK côté client et [!DNL Edge Network]. Ces problèmes peuvent provenir de défaillances du fournisseur d’accès Internet, de pertes de signal mobile ou d’autres défaillances du réseau, puisque la connectivité entre le client et le réseau Edge est réalisée par le biais de l’Internet public.
+* Problèmes liés au réseau entre les SDK côté client et [!DNL Edge Network]. Ces problèmes peuvent provenir de défaillances du fournisseur d’accès Internet, de la perte de signal mobile ou d’autres défaillances du réseau, puisque la connectivité entre le client et l’Edge Network est réalisée par le biais de l’Internet public.
 * Événements de mise à l’échelle automatique de l’Experience Platform interne. Il arrive que les données soient rééquilibrées en raison de la volatilité de l’infrastructure cloud.
 
 La couche de collecte de données Adobe Experience Platform est conçue pour prendre en charge le traitement &quot;au moins une fois&quot;. Par conséquent, la duplication d’événements peut se produire dans de rares cas et dans de rares cas.
@@ -38,7 +38,7 @@ Pour en savoir plus sur le traitement &quot;au moins une fois&quot;, consultez c
 
 Pour les scénarios métier sensibles aux événements en double, Experience Platform utilise plusieurs méthodes de déduplication des événements dans ses systèmes de stockage en aval, comme ceux décrits ci-dessous.
 
-* La banque de profils Real-Time CDP supprime les événements si un événement avec le même `_id` existe déjà dans la variable [!DNL Profile Store]. Consultez la documentation relative à [Classe XDM ExperienceEvent](../xdm/classes/experienceevent.md) pour plus d’informations.
+* La banque de profils Real-Time CDP supprime les événements si un événement avec le même `_id` existe déjà dans la variable [!DNL Profile store]. Consultez la documentation relative à [Classe XDM ExperienceEvent](../xdm/classes/experienceevent.md) pour plus d’informations.
 * Customer Journey Analytics permet aux utilisateurs de configurer une mesure afin de ne comptabiliser les valeurs que de manière non répétitive. Pour découvrir la procédure à suivre, consultez la documentation sur [paramètres du composant de déduplication des mesures](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/component-settings/metric-deduplication.html?lang=fr).
 * Experience Platform Query Service prend en charge le dédoublonnage des données lorsqu’il est nécessaire de supprimer une ligne entière d’un calcul ou d’ignorer un ensemble spécifique de champs, car seule une partie des données de la ligne est des informations en double. Consultez la documentation relative à [déduplication des données dans Query Service](../query-service/key-concepts/deduplication.md) pour plus d’informations.
 

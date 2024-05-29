@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’IU de Segmentation Service
 description: Découvrez comment créer et gérer des audiences et des définitions de segment dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 4c1f29e61ee716a9655bc389bbe08b386ddd643b
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '4334'
-ht-degree: 78%
+ht-degree: 73%
 
 ---
 
@@ -50,17 +50,17 @@ Pour en savoir plus, consultez le [guide du tableau de bord Audiences](../../das
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_churncolumnname"
 >title="Attrition"
->abstract="L’attrition représente le pourcentage de profils qui changent dans une audience par rapport à la dernière exécution de la tâche de segmentation."
+>abstract="La perte de clientèle représente le pourcentage de profils qui changent au sein d’une audience par rapport à la dernière exécution de la tâche de segmentation."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_evaluationmethodcolumnname"
 >title="Méthode d’évaluation"
->abstract="Les méthodes d’évaluation des audiences incluent le traitement par lots, en flux continu et Edge."
+>abstract="Les méthodes d’évaluation pour les audiences comprennent le lot, la diffusion en continu et le serveur Edge."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_browse_addallsegmentstoschedule"
->title="Ajouter toutes les audiences à planifier"
->abstract="Activez cette option pour inclure toutes les audiences évaluées à l’aide de la segmentation par lots dans la mise à jour planifiée quotidienne. Désactivez cette option pour supprimer toutes les audiences de la mise à jour planifiée."
+>title="Ajouter toutes les audiences à la planification"
+>abstract="Activez cette option pour inclure toutes les audiences évaluées à l’aide de la segmentation par lots dans la mise à jour planifiée quotidienne. Désactivez la suppression de toutes les audiences de la mise à jour planifiée."
 
 Sélectionnez la variable **[!UICONTROL Parcourir]** pour afficher la liste de toutes les audiences de votre organisation. Cette vue répertorie des informations sur les audiences, notamment le nombre de profils, l’origine, la date de création, la date de dernière modification, les balises et la répartition.
 
@@ -278,7 +278,7 @@ Sélectionner **[!UICONTROL Modifier les propriétés]** vous permet de modifier
 
 La section **[!UICONTROL Audience totale]** indique le nombre de profils qui remplissent les critères de l’audience.
 
-Les estimations sont générées en utilisant une taille d’échantillon des données d’exemple du jour. S’il y a moins d’un million d’entités dans votre banque de profils, l’ensemble des données est utilisé. Entre 1 et 20 millions d’entités, 1 million d’entités sont utilisées. Et pour plus de 20 millions d’entités, 5 % du total des entités sont utilisés. Vous trouverez plus d’informations sur la génération d’estimations dans la [section sur la génération d’estimations](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) du tutoriel sur la création d’audiences.
+Les estimations sont générées en utilisant une taille d’échantillon des données d’exemple du jour. S’il y a moins d’un million d’entités dans votre banque de profils, l’ensemble des données est utilisé ; entre 1 et 20 millions d’entités, 1 million d’entités sont utilisées ; et pour plus de 20 millions d’entités, 5 % du total des entités est utilisé. Vous trouverez plus d’informations sur la génération d’estimations dans la [section sur la génération d’estimations](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) du tutoriel sur la création d’audiences.
 
 **Destinations activées** {#activated-destinations}
 
@@ -294,11 +294,11 @@ Ci-dessous se trouvent des exemples de profils qui remplissent les critères du 
 
 Le déclenchement de l’échantillonnage de données dépend de la méthode d’ingestion.
 
-Pour l’ingestion par lots, la banque de profils est automatiquement analysée toutes les quinze minutes afin de déterminer si un nouveau lot a bien été ingéré depuis la dernière tâche d’échantillonnage exécutée. Si tel est le cas, la banque de profils est ensuite analysée afin de déterminer si le nombre d’enregistrements a changé d’au moins 5 %. Si ces conditions sont remplies, une nouvelle tâche d’échantillonnage est déclenchée.
+Pour l’ingestion par lots, la banque de profils est automatiquement analysée toutes les quinze minutes afin de déterminer si un nouveau lot a bien été ingéré depuis la dernière tâche d’échantillonnage exécutée. Si tel est le cas, la banque de profils est ensuite analysée afin de déterminer si le nombre d’enregistrements a changé d’au moins 5 %. Si ces conditions sont remplies, une nouvelle tâche d’échantillonnage est déclenchée.
 
-Pour l’ingestion en flux continu, la banque de profils est automatiquement analysée toutes les heures afin de voir s’il y a eu au moins 5 % de changement dans le nombre d’enregistrements. Si cette condition est remplie, une nouvelle tâche d’échantillonnage est déclenchée.
+Pour l’ingestion par flux, la banque de profils est automatiquement analysée toutes les heures afin de vérifier si le nombre d’enregistrements a changé d’au moins 5 %. Si cette condition est remplie, une nouvelle tâche d’échantillonnage est déclenchée.
 
-La taille de l’échantillon dépend du nombre total d’entités dans votre banque de profils. Ces tailles d’échantillon sont représentées dans le tableau suivant :
+La taille de l’échantillon de l’analyse dépend du nombre total d’entités dans votre banque de profils. Ces tailles d’échantillon sont représentées dans le tableau suivant :
 
 | Entités dans la banque de profils | Taille de l’échantillon |
 | ------------------------- | ----------- |

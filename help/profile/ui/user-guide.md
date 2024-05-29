@@ -3,7 +3,7 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Guide de l’interface utilisateur de Real-Time Customer Profile
 description: Real-Time Customer Profile offre une vue d’ensemble de chaque client, en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec Real-time Customer Profile dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 804f87563abf36a1aa203cb675a687dd262231a7
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '2108'
 ht-degree: 7%
@@ -14,7 +14,7 @@ ht-degree: 7%
 
 [!DNL Real-Time Customer Profile] crée une vue d’ensemble de chacun de vos clients, en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec [!DNL Real-Time Customer Profile] données dans l’interface utilisateur de Adobe Experience Platform.
 
-## Prise en main
+## Commencer
 
 Ce guide de l’interface utilisateur nécessite une compréhension des différentes [!DNL Experience Platform] services impliqués dans la gestion [!DNL Real-Time Customer Profiles]. Avant de lire ce guide ou de travailler dans l’interface utilisateur, consultez la documentation relative aux services suivants :
 
@@ -90,7 +90,7 @@ Pour choisir une stratégie de fusion dans le **[!UICONTROL Sélectionner une st
 
 ![Une boîte de dialogue dans laquelle vous pouvez sélectionner la stratégie de fusion à filtrer s’affiche.](../images/user-guide/select-merge-policy.png)
 
-Les profils affichés représentent un échantillon de 20 profils au maximum de la banque de profils de votre entreprise, une fois la stratégie de fusion sélectionnée appliquée. Les exemples de profils pour la stratégie de fusion sélectionnée sont actualisés lorsque de nouvelles données sont ajoutées à la banque de profils de votre organisation.
+Les profils affichés représentent un échantillon de 20 profils au maximum de la banque de profils de votre entreprise, une fois la stratégie de fusion sélectionnée appliquée. Les exemples de profils pour la stratégie de fusion sélectionnée sont actualisés lorsque de nouvelles données sont ajoutées à la banque de profils de votre entreprise.
 
 Pour afficher les détails de l’un des profils d’exemple, sélectionnez l’option **[!UICONTROL Identifiant de profil]**. Pour plus d’informations, reportez-vous à la section suivante de ce guide sur [affichage des détails du profil](#profile-detail).
 

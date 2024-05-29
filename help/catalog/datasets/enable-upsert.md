@@ -4,10 +4,10 @@ title: Activer un jeu de données pour les mises à jour de profil à l’aide d
 type: Tutorial
 description: Ce tutoriel vous explique comment utiliser les API Adobe Experience Platform pour activer un jeu de données avec des fonctionnalités "d’insertion" afin d’effectuer des mises à jour des données Real-time Customer Profile.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1067'
-ht-degree: 92%
+ht-degree: 90%
 
 ---
 
@@ -183,7 +183,7 @@ Pour configurer un jeu de données activé pour le profil pour les mises à jour
 
 >[!WARNING]
 >
->Les données ingérées dans le jeu de données alors qu’il est désactivé ne seront pas ingérées dans la banque de profils. Vous devez éviter d’ingérer des données dans le jeu de données jusqu’à ce qu’il ait été réactivé pour Profil.
+>Les données ingérées dans le jeu de données alors qu’il est désactivé ne seront pas ingérées dans la banque de données Profile. Vous devez éviter d’ingérer des données dans le jeu de données jusqu’à ce qu’il ait été réactivé pour Profil.
 
 **Format d’API**
 

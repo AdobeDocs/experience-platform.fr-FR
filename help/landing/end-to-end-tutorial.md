@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques populaires;CJA;journey analytic
 title: Exemple de workflow de bout en bout Adobe Experience Platform
 description: Découvrez le workflow de base de bout en bout pour Adobe Experience Platform à un niveau élevé.
 exl-id: 0a4d3b68-05a5-43ef-bf0d-5738a148aa77
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
 source-wordcount: '1832'
 ht-degree: 10%
@@ -18,7 +18,7 @@ Basée sur les API RESTful, Platform expose toutes les fonctionnalités du syst�
 
 ![Processus de bout en bout Experience Platform](./images/end-to-end-tutorial/platform-end-2-end-workflow.png)
 
-## Prise en main
+## Commencer
 
 Ce workflow de bout en bout utilise plusieurs services Adobe Experience Platform. Voici une liste des services utilisés dans ce workflow avec des liens vers leurs vues d’ensemble :
 
