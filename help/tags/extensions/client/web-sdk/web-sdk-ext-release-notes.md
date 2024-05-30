@@ -5,7 +5,7 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: 2e1ea70496b8e379d5a9be0f2f321b21da86cf4d
 workflow-type: tm+mt
 source-wordcount: '2096'
-ht-degree: 93%
+ht-degree: 96%
 
 ---
 
@@ -29,14 +29,14 @@ Contient la version 2.20.0 du SDK Web de Adobe Experience Platform.
 * Correction d’une erreur qui se produisait lors de la recherche d’éléments de données dans la variable [Mettre à jour la variable](action-types.md#update-variable) action.
 * Supprimé [!UICONTROL Média] types d’événement parmi les types d’événement proposés à utiliser dans la variable `sendEvent` action.
 
-## Version 2.22.0 - samedi 3 mai 2024
+## Version 2.22.0 - 3 mai 2024
 
 **Nouvelles fonctionnalités**
 
-* Étendre l’élément de données de variable pour prendre en charge les objets de données.
-* L’action de mise à jour de variable prend désormais en charge la modification des données Adobe Analytics, Adobe Audience Manager et Adobe Target transmises.
+* Étendez des éléments de données de variables pour prendre en charge les objets de données.
+* L’action de mise à jour de variable prend désormais en charge la modification des données via Adobe Analytics, Adobe Audience Manager et Adobe Target.
 
-Contient la version 2.19.2 du SDK Web d’Adobe Experience Platform.
+Contient la version 2.19.2 du SDK web d’Adobe Experience Platform.
 
 ## Version 2.21.4 - 10 janvier 2024
 
@@ -45,7 +45,7 @@ Contient la version 2.19.2 du SDK Web d’Adobe Experience Platform.
 * Correction d’un problème en raison duquel l’enregistrement des remplacements de configuration sans les trois environnements définis bloquait l’interface utilisateur de l’extension.
 * Correction d’un problème en raison duquel la case à cocher Effacer la valeur existante de la racine n’était pas renseignée lors de la modification d’une action de mise à jour de variable.
 
-Contient la version 2.19.2 du SDK Web d’Adobe Experience Platform.
+Contient la version 2.19.2 du SDK web d’Adobe Experience Platform.
 
 ## Version 2.21.3 - 10 novembre 2023
 
@@ -247,10 +247,10 @@ Contient la version 2.5.0 de la bibliothèque SDK Web Adobe Experience Platfo
 
 Contient la version 2.4.0 de la bibliothèque SDK Web Adobe Experience Platform.
 
-* Ajout [&quot;Déchargement du document&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) pour envoyer l’interface utilisateur de l’action d’événement.
+* Ajout de la case à cocher [« Déchargement de document »](/help/web-sdk/commands/sendevent/documentunloading.md) à l’interface d’utilisation de l’action Envoyer l’événement.
 * Ajout de la prise en charge d’une option `out` lors de la [configuration du consentement par défaut](/help/web-sdk/commands/configure/defaultconsent.md) qui supprime tous les événements jusqu’à ce que le consentement soit reçu (l’option `pending` existante met les événements en file d’attente et les envoie une fois le consentement reçu).
 * Ajout d’une info-bulle au champ de consentement par défaut.
-* Ajout de la prise en charge de la norme Consentement 2.0 d’Adobe lors de l’utilisation de la variable [`setConsent`](/help/web-sdk/commands/setconsent.md) .
+* Ajout de la prise en charge de la norme de consentement 2.0 d’Adobe lors de l’utilisation de la commande [`setConsent`](/help/web-sdk/commands/setconsent.md).
 * Une erreur mieux formulée s’affiche désormais dans l’interface utilisateur de l’élément de données de l’objet XDM si le jeton d’accès de l’utilisateur n’est pas valide ou a été configuré de manière incorrecte.
 * Correction d’une erreur d’origine croisée (n’affectant pas le fonctionnement de l’extension) qui s’affichait sur la Developer Console du navigateur lors de l’affichage d’un élément de données de l’objet XDM.
 
