@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: e872d8f8a0c73fe3375e538260d23da1f145621c
+source-git-commit: a6bc9c5d2b4ec9032c70dcf625075e5d3e0442cc
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1223'
 ht-degree: 88%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 88%
    * [Activation des données vers des destinations basées sur des fichiers à l’aide de l’API Flow Service](/help/destinations/api/activate-segments-file-based-destinations.md)
    * [Se connecter aux destinations de diffusion en continu et activer les données à l’aide de l’API Flow Service](./api/streaming-destinations.md)
    * [Connectez-vous aux destinations de marketing par e-mail basées sur des fichiers et activez les données à l’aide de l’API Flow Service](./api/connect-activate-batch-destinations.md)
-   * [(Version Beta) Activer les audiences vers des destinations par lots via l’API d’activation ad hoc](./api/ad-hoc-activation-api.md)
+   * [Activation des audiences vers des destinations par lot via l’API d’activation ad hoc](./api/ad-hoc-activation-api.md)
    * [Modifier la destination](./api/edit-destination.md)
    * [Mettre à jour les flux de données de destination](./api/update-destination-dataflows.md)
    * [Supprimer les comptes de destination](./api/delete-destination-account.md)
