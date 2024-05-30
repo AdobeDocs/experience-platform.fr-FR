@@ -1,7 +1,7 @@
 ---
-title: mediaCollection
+title: streamingMedia
 description: Configurez le SDK Web pour collecter des données relatives à l’utilisation des médias sur vos propriétés web.
-source-git-commit: 1d1bb754769defd122faaa2160e06671bf02c974
+source-git-commit: c0cb244221215f78f9ef13d8a54a8799ab15df6c
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 6%
