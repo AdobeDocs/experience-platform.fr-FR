@@ -2,7 +2,7 @@
 description: Découvrez comment configurer les paramètres de métadonnées d’audience pour les destinations créées avec Destination SDK.
 title: Configuration des métadonnées d’audience
 exl-id: ae71df4f-b753-4084-835f-03559b4986cb
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 20cb2dbfbfc8e73c765073818c8e7e561d4e6629
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 90%
@@ -57,7 +57,7 @@ Pendant la création de la configuration des métadonnées d’audience, vous po
 | `mapExperiencePlatformSegmentName` | Booléen | Indique si la valeur de l’[[!UICONTROL identifiant de mappage]](../../../ui/activate-segment-streaming-destinations.md#scheduling) dans le workflow d’activation de destination doit correspondre au nom de l’audience Experience Platform. |
 | `mapExperiencePlatformSegmentId` | Booléen | Indique si la valeur de l’[[!UICONTROL identifiant de mappage]](../../../ui/activate-segment-streaming-destinations.md#scheduling) dans le workflow d’activation de destination doit correspondre à l’identifiant de l’audience Experience Platform. |
 | `mapUserInput` | Booléen | Active ou désactive l’entrée utilisateur pour la valeur de l’[[!UICONTROL identifiant de mappage]](../../../ui/activate-segment-streaming-destinations.md#scheduling) dans le workflow d’activation de destination. S’il est défini sur `true`, `audienceTemplateId` ne peut pas être présent. |
-| `audienceTemplateId` | Booléen | `instanceId` du [modèle de métadonnées d’audience](../../metadata-api/create-audience-template.md) utilisé pour votre destination. |
+| `audienceTemplateId` | Chaîne | `instanceId` du [modèle de métadonnées d’audience](../../metadata-api/create-audience-template.md) utilisé pour votre destination. |
 
 {style="table-layout:auto"}
 
