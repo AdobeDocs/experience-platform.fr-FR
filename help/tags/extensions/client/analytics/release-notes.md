@@ -3,9 +3,9 @@ title: Notes de mise à jour de l’extension Adobe Analytics
 description: Dernières notes de mise à jour pour lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 source-git-commit: fbb8e2e7944fc6ef5be6fb0c6dc0ef256ca65b77
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1438'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -17,13 +17,13 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 >
 >L’extension de balises Analytics est régulièrement mise à jour en réponse aux mises à jour apportées à la [Bibliothèque JavaScript AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=fr). Voir [Notes de mise à jour d’AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr) pour plus d’informations sur les versions spécifiques mentionnées ci-dessous.
 
-## 4 mars 2024
+## 4 mars 2024
 
 **Extension Adobe Analytics 1.9.4**
 
 **Fonctionnalités** :
 
-* Mise à niveau vers [AppMeasurement à la version 2.26.0](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
+* Mise à niveau vers [AppMeasurement v2.26.0](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
 
 ## 15 septembre 2023
 
@@ -202,7 +202,7 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 
 * Mise à jour de l’extension Adobe Analytics pour la prise en charge de DIL 9.2 pour Audience Manager
 
-* Mise à jour de l’extension pour la prise en charge d’[AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0)
+* Mise à jour de l’extension pour la prise en charge d’[AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr#version-2.15.0)
 * Suppression de la case à cocher suivante qui n’est plus prise en charge : « Ne pas joindre l’IFRAME de publication de destination au DOM ou aux destinations de déclenchement »
 
 ## 4 juin 2019
