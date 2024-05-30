@@ -2,10 +2,10 @@
 title: Gestion des autorisations pour la collecte de données dans Experience Platform
 description: Présentation générale de la gestion des autorisations et du contrôle de l’accès aux fonctionnalités de collecte de données dans Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 60590a77859320891717244eec58b556935354b5
 workflow-type: tm+mt
-source-wordcount: '1285'
-ht-degree: 29%
+source-wordcount: '1338'
+ht-degree: 28%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 29%
 
 Ce guide vous explique comment gérer les autorisations pour les fonctionnalités de collecte de données.
 
-## Prise en main
+## Commencer
 
 Pour configurer le contrôle d’accès pour la collecte de données, vous devez disposer de droits d’administrateur pour une organisation qui dispose d’une intégration de produit avec la collecte de données Adobe Experience Platform. Le rôle minimum qui permet d’accorder ou de retirer des autorisations est un **administrateur de profils de produit**. Les autres rôles d’administrateur qui peuvent gérer des autorisations sont les **administrateurs de produit** (qui peuvent gérer tous les profils au sein d’un produit) et les **administrateurs système** (aucune restriction). Consultez l’article sur les [rôles administratifs](https://helpx.adobe.com/fr/enterprise/using/admin-roles.html) dans le guide d’administration d’Adobe Enterprise pour plus d’informations.
 
@@ -34,8 +34,8 @@ Les autorisations sous Adobe Experience Platform incluent l’accès aux jeux de
 | Sandbox | (S/O) | Selon le [sandbox](../sandboxes/home.md) qui ont été créés sous votre organisation, vous pouvez contrôler l’accès à chacun d’eux par le biais de cette catégorie d’autorisations dans Admin Console. |
 | Modélisation des données | Gestion des schémas | Permet d’afficher, de créer et de modifier [Schémas XDM (Experience Data Model)](../xdm/home.md). |
 | Modélisation des données | Affichage des schémas | Accorde l’accès en lecture seule aux schémas. |
-| Identity Management | Gestion des espaces de noms d’identité | Permet d’afficher, de créer et de modifier [espaces de noms d’identité](../identity-service/features/namespaces.md). |
-| Identity Management | Affichages des espaces de noms d’identité | Accorde l’accès en lecture seule aux espaces de noms d’identité. |
+| Identity Management | Gestion des espaces de noms d’identité | Permet d’afficher, de créer et de modifier [espaces de noms d’identité](../identity-service/features/namespaces.md). |
+| Identity Management | Affichages des espaces de noms d’identité | Accorde l’accès en lecture seule aux espaces de noms d’identité. |
 | Collecte de données | Gestion des flux de données | Permet d’afficher, de créer et de modifier [datastreams](../datastreams/overview.md). |
 | Collecte de données | Affichage des flux de données | Accorde l’accès en lecture seule aux flux de données. |
 
@@ -78,7 +78,15 @@ Reportez-vous aux sous-sections ci-dessous pour savoir comment gérer les autori
 
 ### Gestion des autorisations sous Adobe Experience Platform {#manage-platform}
 
-Dans la **[!UICONTROL Autorisations]** dans Adobe Experience Platform, sélectionnez le rôle à modifier.
+>[!NOTE]
+>
+>Pour gérer les autorisations d’un rôle, vous aurez besoin des droits d’administrateur. Si vous ne disposez pas de droits d’administrateur, contactez votre administrateur système.
+
+Experience Cloud **[!UICONTROL Autorisations]** vous permet de définir des rôles utilisateur et des stratégies afin de gérer l’accès aux fonctions et aux objets au sein d’une application de produit.
+
+Via [!UICONTROL Autorisations], vous pouvez créer et gérer des rôles et attribuer les autorisations de ressources souhaitées pour ces rôles.
+
+![Adobe Experience Cloud mettant en surbrillance le produit Autorisations.](./images/permissions/permissions-product.png)
 
 Pour accéder aux fonctionnalités de collecte de données, vous devez activer toutes les autorisations de la variable **[!UICONTROL Environnements de test]**, **[!UICONTROL Modélisation des données]**, **[!UICONTROL Identity Management]**, et **[!UICONTROL Collecte de données]** catégories.
 
