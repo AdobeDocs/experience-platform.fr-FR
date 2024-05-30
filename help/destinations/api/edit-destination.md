@@ -4,10 +4,10 @@ title: Modification des connexions de destination à l’aide de l’API Flow Se
 type: Tutorial
 description: Découvrez comment modifier différents composants d’une connexion de destination à l’aide de l’API Flow Service.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 2a72f6886f7a100d0a1bf963eedaed8823a7b313
 workflow-type: tm+mt
-source-wordcount: '1580'
-ht-degree: 33%
+source-wordcount: '1605'
+ht-degree: 29%
 
 ---
 
@@ -19,7 +19,7 @@ Ce tutoriel décrit les étapes à suivre pour modifier différents composants d
 >
 > Les opérations de modification décrites dans ce tutoriel ne sont actuellement prises en charge que par le biais de l’API Flow Service.
 
-## Prise en main {#get-started}
+## Commencer {#get-started}
 
 Ce tutoriel nécessite que vous disposiez d’un identifiant de flux de données valide. Si vous ne disposez pas d’un identifiant de flux de données valide, sélectionnez votre destination de choix dans la [destinations](../catalog/overview.md) et suivez les étapes décrites à la section [se connecter à la destination](../ui/connect-destination.md) et [activer les données](../ui/activation-overview.md) avant de tester ce tutoriel.
 
@@ -29,7 +29,7 @@ Ce tutoriel nécessite que vous disposiez d’un identifiant de flux de données
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-* [Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. ](../home.md)[!DNL Destinations] Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+* [Destinations](../home.md): [!DNL Destinations] sont des intégrations prédéfinies avec des plateformes de destination qui permettent l’activation transparente des données de Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 * [Sandbox](../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour mettre à jour votre flux de données avec succès à l’aide de la variable [!DNL Flow Service] API.
@@ -54,7 +54,7 @@ Toutes les ressources de l’Experience Platform, y compris celles appartenant �
 >
 >Si la variable `x-sandbox-name` n’est pas spécifié, les requêtes sont résolues sous `prod` sandbox.
 
-Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
+Toutes les requêtes contenant un payload (`POST`, `PUT`, `PATCH`) nécessitent un en-tête de type de média supplémentaire :
 
 * `Content-Type: application/json`
 
@@ -177,17 +177,19 @@ Une réponse réussie renvoie les détails actuels de votre flux de données, y 
 
 Les composants d’une connexion cible diffèrent par destination. Par exemple, pour [!DNL Amazon S3] destinations, vous pouvez mettre à jour le compartiment et le chemin d’accès où les fichiers sont exportés. Pour [!DNL Pinterest] destinations, vous pouvez mettre à jour vos [!DNL Pinterest Advertiser ID] et pour [!DNL Google Customer Match] vous pouvez mettre à jour votre [!DNL Pinterest Account ID].
 
-Pour mettre à jour les composants d’une connexion cible, effectuez une requête de PATCH au `/targetConnections/{TARGET_CONNECTION_ID}` point de terminaison tout en fournissant votre identifiant de connexion cible, la version et les nouvelles valeurs que vous souhaitez utiliser. Souvenez-vous que vous avez obtenu votre identifiant de connexion cible à l’étape précédente, lorsque vous avez inspecté un flux de données existant vers la destination souhaitée.
+Pour mettre à jour les composants d’une connexion cible, effectuez une `PATCH` à la fonction `/targetConnections/{TARGET_CONNECTION_ID}` point de terminaison tout en fournissant votre identifiant de connexion cible, la version et les nouvelles valeurs que vous souhaitez utiliser. Souvenez-vous que vous avez obtenu votre identifiant de connexion cible à l’étape précédente, lorsque vous avez inspecté un flux de données existant vers la destination souhaitée.
 
 >[!IMPORTANT]
 >
->L’en-tête `If-Match` est requis lors de l’exécution d’une requête PATCH. La valeur de cet en-tête est la version unique de la connexion cible que vous souhaitez mettre à jour. La valeur etag est mise à jour à chaque mise à jour réussie d’une entité de flux, telle que le flux de données, la connexion cible, etc.
+>La variable `If-Match` Un en-tête est requis lors de la création d’une `PATCH` requête. La valeur de cet en-tête est la version unique de la connexion cible que vous souhaitez mettre à jour. La valeur etag est mise à jour à chaque mise à jour réussie d’une entité de flux, telle que le flux de données, la connexion cible, etc.
 >
 > Pour obtenir la dernière version de la valeur etag, effectuez une requête GET à la variable `/targetConnections/{TARGET_CONNECTION_ID}` point de terminaison , où `{TARGET_CONNECTION_ID}` est l’identifiant de connexion cible que vous souhaitez mettre à jour.
+>
+> Veillez à encapsuler la valeur de la variable `If-Match` en-tête entre guillemets doubles comme dans les exemples ci-dessous lors de l’exécution de `PATCH` requêtes.
 
 Vous trouverez ci-dessous quelques exemples de mise à jour des paramètres dans la spécification de connexion cible pour différents types de destinations. Mais la règle générale pour mettre à jour les paramètres pour n’importe quelle destination est la suivante :
 
-Obtenez l’identifiant du flux de données de la connexion > Obtenez l’identifiant de connexion cible > PATCH la connexion cible avec les valeurs mises à jour pour les paramètres souhaités.
+Obtenez l’identifiant du flux de données de la connexion > Obtenez l’identifiant de connexion cible > `PATCH` la connexion cible avec les valeurs mises à jour pour les paramètres souhaités.
 
 >[!BEGINSHADEBOX]
 
@@ -282,7 +284,7 @@ Une réponse réussie renvoie votre identifiant de connexion cible et une balise
 }
 ```
 
->[!TAB Pinterest.]
+>[!TAB Pinterest]
 
 **Requête**
 
@@ -332,19 +334,21 @@ Une réponse réussie renvoie votre identifiant de connexion cible et une balise
 
 Modifiez la connexion de base lorsque vous souhaitez mettre à jour les informations d’identification d’une destination. Les composants d’une connexion de base diffèrent par destination. Par exemple, pour [!DNL Amazon S3] destinations, vous pouvez mettre à jour la clé d’accès et la clé secrète vers vos [!DNL Amazon S3] emplacement.
 
-Pour mettre à jour les composants d’une connexion de base, effectuez une requête de PATCH au `/connections` point de terminaison tout en fournissant votre identifiant de connexion de base, votre version et les nouvelles valeurs que vous souhaitez utiliser.
+Pour mettre à jour les composants d’une connexion de base, effectuez une `PATCH` à la fonction `/connections` point de terminaison tout en fournissant votre identifiant de connexion de base, votre version et les nouvelles valeurs que vous souhaitez utiliser.
 
 Souvenez-vous que vous avez obtenu votre identifiant de connexion de base dans un [étape précédente](#look-up-dataflow-details), lorsque vous avez inspecté un flux de données existant vers la destination souhaitée pour le paramètre . `baseConnection`.
 
 >[!IMPORTANT]
 >
->L’en-tête `If-Match` est requis lors de l’exécution d’une requête PATCH. La valeur de cet en-tête est la version unique de la connexion de base que vous souhaitez mettre à jour. La valeur etag est mise à jour à chaque mise à jour réussie d’une entité de flux, telle que le flux de données, la connexion de base, etc.
+>La variable `If-Match` Un en-tête est requis lors de la création d’une `PATCH` requête. La valeur de cet en-tête est la version unique de la connexion de base que vous souhaitez mettre à jour. La valeur etag est mise à jour à chaque mise à jour réussie d’une entité de flux, telle que le flux de données, la connexion de base, etc.
 >
 > Pour obtenir la dernière version de la valeur Etag, effectuez une requête GET à la variable `/connections/{BASE_CONNECTION_ID}` point de terminaison , où `{BASE_CONNECTION_ID}` est l’identifiant de connexion de base que vous souhaitez mettre à jour.
+>
+> Veillez à encapsuler la valeur de la variable `If-Match` en-tête entre guillemets doubles comme dans les exemples ci-dessous lors de l’exécution de `PATCH` requêtes.
 
 Vous trouverez ci-dessous quelques exemples de mise à jour des paramètres dans la spécification de connexion de base pour différents types de destinations. Mais la règle générale pour mettre à jour les paramètres pour n’importe quelle destination est la suivante :
 
-Obtenez l’identifiant de flux de données de la connexion > obtenez l’identifiant de connexion de base > PATCH la connexion de base avec les valeurs mises à jour pour les paramètres souhaités.
+Obtenez l’identifiant de flux de données de la connexion > Obtenez l’identifiant de connexion de base > `PATCH` la connexion de base avec les valeurs mises à jour pour les paramètres souhaités.
 
 >[!BEGINSHADEBOX]
 

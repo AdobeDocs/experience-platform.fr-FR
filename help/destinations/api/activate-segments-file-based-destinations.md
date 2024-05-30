@@ -4,10 +4,10 @@ title: Activation des audiences vers des destinations basées sur des fichiers �
 description: Découvrez comment utiliser l’API Flow Service pour exporter des fichiers avec des profils qualifiés vers des destinations de stockage dans le cloud.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: df7b9bb0c5dc4348e8be7a0ea93296e24bc0fb1d
 workflow-type: tm+mt
-source-wordcount: '4404'
-ht-degree: 10%
+source-wordcount: '4760'
+ht-degree: 9%
 
 ---
 
@@ -81,7 +81,7 @@ Les ressources dans [!DNL Experience Platform] peuvent être isolées dans des s
 >
 >Pour plus d’informations sur les sandbox dans [!DNL Experience Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
 
-Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent un en-tête de type de média supplémentaire :
+Toutes les requêtes contenant un payload (`POST`, `PUT`, `PATCH`) nécessitent un en-tête de type de média supplémentaire :
 
 * Content-Type: `application/json`
 
@@ -4454,7 +4454,7 @@ Voir [récupération des détails d’un flux de données de destination](https:
 
 >[!ENDSHADEBOX]
 
-Enfin, vous devez PATCH le flux de données avec les informations du jeu de mappages que vous venez de créer.
+Enfin, vous devez `PATCH` le flux de données avec les informations du jeu de mappages que vous venez de créer.
 
 >[!BEGINSHADEBOX]
 
@@ -4504,11 +4504,88 @@ La réponse de l’API Flow Service renvoie l’identifiant du flux de données 
 
 ![Procédure d’activation des audiences mettant en surbrillance l’étape actuelle de l’utilisateur](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
-Pour mettre à jour votre flux de données, utilisez la variable `PATCH` operation.Vous pouvez par exemple mettre à jour vos flux de données afin de sélectionner des champs comme clés obligatoires ou clés de déduplication.
+Pour mettre à jour votre flux de données, utilisez la variable `PATCH` opération. Par exemple, vous pouvez ajouter une action marketing à vos flux de données. Vous pouvez également mettre à jour vos flux de données pour sélectionner des champs comme clés obligatoires ou clés de déduplication.
+
+### Ajout d’une action marketing {#add-marketing-action}
+
+Pour ajouter une [action marketing](/help/data-governance/api/marketing-actions.md), reportez-vous aux exemples de requête et de réponse ci-dessous.
+
+>[!IMPORTANT]
+>
+>La variable `If-Match` Un en-tête est requis lors de la création d’une `PATCH` requête. La valeur de cet en-tête est la version unique du flux de données que vous souhaitez mettre à jour. La valeur etag est mise à jour à chaque mise à jour réussie d’une entité de flux, telle que le flux de données, la connexion cible, etc.
+>
+> Pour obtenir la dernière version de la valeur etag, effectuez une requête GET à la variable `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` point de terminaison , où `{ID}` est l’identifiant de flux de données que vous souhaitez mettre à jour.
+>
+> Veillez à encapsuler la valeur de la variable `If-Match` en-tête entre guillemets doubles comme dans les exemples ci-dessous lors de l’exécution de `PATCH` requêtes.
+
+>[!BEGINSHADEBOX]
+
+**Requête**
+
+>[!TIP]
+>
+>Avant d’ajouter une action marketing à un flux de données, vous pouvez rechercher vos actions marketing principales et personnalisées existantes. Affichage [comment récupérer une liste d’actions marketing existantes](/help/data-governance/api/marketing-actions.md#list).
+
++++Ajout d’une action marketing à un flux de données de destination - Requête
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
+--data-raw '[
+   {
+      "op":"add",
+      "path":"/policy",
+      "value":{
+         "enforcementRefs":[
+            
+         ]
+      }
+   },
+   {
+      "op":"add",
+      "path":"/policy/enforcementRefs/-",
+      "value":"/dulepolicy/marketingActions/custom/6b935bc8-bb9e-451b-a327-0ffddfb91e66/constraints"
+   }
+]'
+```
+
++++
+
+
+**Réponse**
+
++++Ajout d’une action marketing - Réponse
+
+Une réponse réussie renvoie un code de réponse `200` ainsi que l’identifiant du flux de données mis à jour et l’eTag mise à jour.
+
+```json
+{
+    "id": "eb54b3b3-3949-4f12-89c8-64eafaba858f",
+    "etag": "\"0000d781-0000-0200-0000-63e29f420000\""
+}
+```
+
++++
+
+>[!ENDSHADEBOX]
 
 ### Ajouter une clé obligatoire {#add-mandatory-key}
 
-Pour ajouter une [clé obligatoire](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes), voir les exemples de requête et de réponse ci-dessous
+Pour ajouter une [clé obligatoire](/help/destinations/ui/activate-batch-profile-destinations.md#mandatory-attributes), reportez-vous aux exemples de requête et de réponse ci-dessous.
+
+>[!IMPORTANT]
+>
+>La variable `If-Match` Un en-tête est requis lors de la création d’une `PATCH` requête. La valeur de cet en-tête est la version unique du flux de données que vous souhaitez mettre à jour. La valeur etag est mise à jour à chaque mise à jour réussie d’une entité de flux, telle que le flux de données, la connexion cible, etc.
+>
+> Pour obtenir la dernière version de la valeur etag, effectuez une requête GET à la variable `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` point de terminaison , où `{ID}` est l’identifiant de flux de données que vous souhaitez mettre à jour.
+>
+> Veillez à encapsuler la valeur de la variable `If-Match` en-tête entre guillemets doubles comme dans les exemples ci-dessous lors de l’exécution de `PATCH` requêtes.
 
 >[!BEGINSHADEBOX]
 
@@ -4517,12 +4594,13 @@ Pour ajouter une [clé obligatoire](/help/destinations/ui/activate-batch-profile
 +++Ajouter une identité comme champ obligatoire - Requête
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4540,12 +4618,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 +++Ajouter un attribut XDM comme champ obligatoire - Requête
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4579,6 +4658,14 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 Pour ajouter une [clé de déduplication](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-keys), voir les exemples de requête et de réponse ci-dessous
 
+>[!IMPORTANT]
+>
+>La variable `If-Match` Un en-tête est requis lors de la création d’une `PATCH` requête. La valeur de cet en-tête est la version unique du flux de données que vous souhaitez mettre à jour. La valeur etag est mise à jour à chaque mise à jour réussie d’une entité de flux, telle que le flux de données, la connexion cible, etc.
+>
+> Pour obtenir la dernière version de la valeur etag, effectuez une requête GET à la variable `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` point de terminaison , où `{ID}` est l’identifiant de flux de données que vous souhaitez mettre à jour.
+>
+> Veillez à encapsuler la valeur de la variable `If-Match` en-tête entre guillemets doubles comme dans les exemples ci-dessous lors de l’exécution de `PATCH` requêtes.
+
 >[!BEGINSHADEBOX]
 
 **Requête**
@@ -4586,12 +4673,13 @@ Pour ajouter une [clé de déduplication](/help/destinations/ui/activate-batch-p
 +++Ajouter une identité comme clé de déduplication - Requête
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
@@ -4612,12 +4700,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 +++Ajouter un attribut XDM en tant que clé de déduplication - Requête
 
 ```shell
-curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
 --header 'accept: application/json' \
 --header 'x-api-key: {API_KEY}' \
 --header 'x-gw-ims-org-id: {ORG_ID}' \
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
 --data-raw '
 [
   {
