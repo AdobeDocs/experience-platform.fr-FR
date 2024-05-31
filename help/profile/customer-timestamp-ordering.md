@@ -4,7 +4,7 @@ description: Découvrez comment ajouter un ordre d’horodatage client à vos je
 badgePrivateBeta: label="Beta privée" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: f73b7ac38c681ec5161e2b5e7075f31946a6563e
+source-git-commit: dffbdafc3f063906c8c8fb648ace59b2f1aedab8
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Dans Adobe Experience Platform, l’ordre des données n’est pas garanti par défaut lors de l’ingestion de données par flux vers la banque de profils. Avec l’ordre des horodatages client, vous pouvez garantir que le dernier message, conformément à l’horodatage client fourni, sera conservé dans la banque de profils. Tous les messages obsolètes seront alors ignorés et seront **not** peut être utilisé dans les services en aval qui utilisent des données de profil telles que la segmentation et les destinations. Ainsi, vos données de profil seront cohérentes et vos données de profil resteront synchronisées avec vos systèmes sources.
 
-Pour activer l’ordre d’horodatage des clients, utilisez la variable `extSourceSystemAudit.lastUpdatedDate` dans le champ [Type de données Attributs d’audit du système de source externe](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/shared/external-source-system-audit-details.schema.md) et contactez votre gestionnaire de compte technique d’Adobe ou l’assistance clientèle d’Adobe avec vos informations de sandbox et de jeu de données.
+Pour activer l’ordre d’horodatage des clients, utilisez la variable `extSourceSystemAudit.lastUpdatedDate` dans le champ [Groupe de champs Attributs d’audit du système de source externe](https://github.com/adobe/xdm/blob/master/docs/reference/fieldgroups/shared/external-source-system-audit-details.schema.md) et contactez votre gestionnaire de compte technique d’Adobe ou l’assistance clientèle d’Adobe avec vos informations de sandbox et de jeu de données.
 
 ## Contraintes
 
