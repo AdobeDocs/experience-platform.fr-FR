@@ -4,9 +4,9 @@ description: Découvrez comment ajouter un ordre d’horodatage client à vos je
 badgePrivateBeta: label="Beta privée" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f73b7ac38c681ec5161e2b5e7075f31946a6563e
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Ordre des horodatages du client
 
-Dans Adobe Experience Platform, l’ordre des données n’est pas automatiquement garanti lors de l’ingestion de données par flux vers la banque de profils. Avec l’ordre des horodatages client, vous pouvez garantir que le dernier message, conformément à l’horodatage client fourni, sera conservé dans la banque de profils. Tous les messages obsolètes seront alors ignorés et seront **not** peut être utilisé dans les services en aval qui utilisent des données de profil telles que la segmentation et les destinations. Ainsi, vos données de profil seront cohérentes et vos données de profil resteront synchronisées avec vos systèmes sources.
+Dans Adobe Experience Platform, l’ordre des données n’est pas garanti par défaut lors de l’ingestion de données par flux vers la banque de profils. Avec l’ordre des horodatages client, vous pouvez garantir que le dernier message, conformément à l’horodatage client fourni, sera conservé dans la banque de profils. Tous les messages obsolètes seront alors ignorés et seront **not** peut être utilisé dans les services en aval qui utilisent des données de profil telles que la segmentation et les destinations. Ainsi, vos données de profil seront cohérentes et vos données de profil resteront synchronisées avec vos systèmes sources.
 
-Pour activer l’ordre d’horodatage des clients, utilisez la variable `extSourceSystemAudit.lastUpdatedDate` dans le champ [Type de données Attributs d’audit du système de source externe](../xdm/data-types/external-source-system-audit-attributes.md) et contactez votre gestionnaire de compte technique d’Adobe ou l’assistance clientèle d’Adobe avec vos informations de sandbox et de jeu de données.
+Pour activer l’ordre d’horodatage des clients, utilisez la variable `extSourceSystemAudit.lastUpdatedDate` dans le champ [Type de données Attributs d’audit du système de source externe](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/shared/external-source-system-audit-details.schema.md) et contactez votre gestionnaire de compte technique d’Adobe ou l’assistance clientèle d’Adobe avec vos informations de sandbox et de jeu de données.
 
 ## Contraintes
 
@@ -30,7 +30,7 @@ Lors de cette version bêta privée, les contraintes suivantes s’appliquent lo
 - La variable `extSourceSystemAudit.lastUpdatedDate` field **must** être dans la variable [ISO 8601](https://www.iso.org/fr/iso-8601-date-and-time-format.html) format. Lorsque vous utilisez le format ISO 8601, **must** être une date et une heure complètes au format `yyyy-MM-ddTHH:mm:ss.sssZ` (par exemple, `2028-11-13T15:06:49.001Z`).
 - Toutes les lignes de données ingérées **must** contain the `extSourceSystemAudit.lastUpdatedDate` comme groupe de champs de niveau supérieur. Cela signifie que ce champ **must** ne pas être imbriqué dans le schéma XDM. Si ce champ est manquant ou dans un format incorrect, l’enregistrement incorrect sera **not** sont ingérés et un message d’erreur correspondant est envoyé.
 - Tout jeu de données activé pour l’horodatage client **must** être un nouveau jeu de données sans aucune donnée précédemment ingérée.
-- Pour tout fragment de profil donné, seules les lignes contenant un fragment plus récent `extSourceSystemAudit.lastUpdatedDate` sera ingéré. Si la ligne ne contient pas d’élément plus récent `extSourceSystemAudit.lastUpdatedDate`, la ligne est ignorée.
+- Pour tout fragment de profil donné, seules les lignes contenant un fragment plus récent `extSourceSystemAudit.lastUpdatedDate` sera ingéré. Lignes contenant un `extSourceSystemAudit.lastUpdatedDate` qui est plus âgé ou dont le même âge sera ignoré.
 
 ## Recommandations
 
