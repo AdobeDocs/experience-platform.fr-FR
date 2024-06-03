@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 2e1ea70496b8e379d5a9be0f2f321b21da86cf4d
+source-git-commit: e96477882beceb6e370d53df3cc65e8dfb28745f
 workflow-type: tm+mt
-source-wordcount: '2096'
-ht-degree: 96%
+source-wordcount: '2158'
+ht-degree: 94%
 
 ---
 
@@ -13,6 +13,17 @@ ht-degree: 96%
 # Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir les [notes de mise à jour du SDK Web Platform](/help/web-sdk/release-notes.md).
+
+## Version 2.23.2 - mardi 3 juin 2024
+
+**Correctifs et améliorations**
+
+* Correction d’une erreur qui se produisait lors de la modification de la configuration de l’extension lorsque des remplacements de configuration étaient définis.
+* Autorisez la définition de valeurs vides pour les intervalles de ping de collecte de médias.
+* Correction d’une erreur qui se produisait lors de la modification d’une action de variable de mise à jour.
+* Autoriser la réinitialisation du conteneur de synchronisation des identifiants dans les remplacements de configuration.
+
+Contient la version 2.20.0 du SDK Web de Adobe Experience Platform.
 
 ## Version 2.23.1 - mercredi 28 mai 2024
 
