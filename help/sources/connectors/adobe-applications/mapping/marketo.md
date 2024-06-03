@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Mapper des champs pour la source Marketo Engage
 description: Les tableaux ci-dessous contiennent les mappages entre les champs des jeux de données Marketo et les champs XDM correspondants.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
+source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
 workflow-type: tm+mt
-source-wordcount: '889'
-ht-degree: 100%
+source-wordcount: '890'
+ht-degree: 94%
 
 ---
 
@@ -23,7 +23,11 @@ Les tableaux ci-dessous contiennent les mappages entre les champs des neuf jeux 
 
 La source [!DNL Marketo] prend désormais en charge les activités standards supplémentaires. Pour utiliser des activités standards, vous devez mettre à jour votre schéma à l’aide de l’[utilitaire de génération automatique de schéma](../marketo/marketo-namespaces.md), car si vous créez de nouveaux flux de données `activities` sans mettre à jour votre schéma, les modèles de mappage échouent, car les nouveaux champs cibles ne seront pas présents dans votre schéma. Si vous choisissez de ne pas mettre à jour votre schéma, vous pouvez toujours créer un nouveau flux de données et ignorer les erreurs. Toutefois, les champs nouveaux ou mis à jour ne seront pas ingérés dans Platform.
 
-Consultez la documentation relative à la [classe d’événement d’expérience XDM](../../../../xdm/classes/experienceevent.md) pour plus d’informations sur la classe XDM et le ou les groupes de champs XDM.
+Lisez la documentation sur [Classe XDM Experience Event](../../../../xdm/classes/experienceevent.md) pour plus d’informations sur la classe XDM et le ou les groupes de champs XDM.
+
+>[!NOTE]
+>
+>La variable `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` Le champ source est un champ calculé qui doit être ajouté à l’aide de la variable **[!UICONTROL Ajouter un champ calculé]** dans l’interface utilisateur de l’Experience Platform. Lisez le tutoriel sur [ajout de champs calculés](../../../../data-prep/ui/mapping.md#calculated-fields) pour plus d’informations.
 
 | Jeu de données source | Champ cible XDM | Notes |
 | -------------- | ---------------- | ----- |
@@ -127,6 +131,7 @@ Consultez la documentation relative à la [classe d’événement d’expérienc
 | `directMarketing.emailSent.testVariantID` | `directMarketing.emailSent.testVariantID` |
 | `directMarketing.emailSent.testVariantName` | `directMarketing.emailSent.testVariantName` |
 | `directMarketing.emailSent.automationRunID` | `directMarketing.emailSent.automationRunID` |
+| `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` | `identityMap` | Il s’agit d’un champ calculé. |
 
 {style="table-layout:auto"}
 
@@ -402,16 +407,11 @@ Lisez la [Présentation du Profil individuel XDM](../../../../xdm/classes/indivi
 | `iif(id != null && id != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", id, "sourceKey", concat(id,"@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourcePersonKey` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
-| `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | Il s’agit d’un champ calculé. |
 | `marketoIsDeleted` | `isDeleted` |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `b2b.convertedContactKey` | Il s’agit d’un champ calculé. |
 | `iif(mktoCdpCnvContactPersonId != null && mktoCdpCnvContactPersonId != \"\", to_object(\"sourceType\", \"Marketo\", \"sourceInstanceID\", \"${MUNCHKIN_ID}\", \"sourceID\", mktoCdpCnvContactPersonId, \"sourceKey\", concat(mktoCdpCnvContactPersonId,\"@${MUNCHKIN_ID}.Marketo\")), null)` | `personComponents.sourceConvertedContactKey` | Il s’agit d’un champ calculé. |
 
 {style="table-layout:auto"}
-
->[!NOTE]
->
->Le champ source `to_object('ECID',arrays_to_objects('id',explode(ecids)))` est un champ calculé qui doit être ajouté à l’aide de l’option [!UICONTROL Ajouter un champ calculé] dans l’interface utilisateur de Platform. Voir le tutoriel sur l’[ajout de champs calculés](../../../../data-prep/ui/mapping.md#calculated-fields) pour plus d’informations.
 
 ## Étapes suivantes
 

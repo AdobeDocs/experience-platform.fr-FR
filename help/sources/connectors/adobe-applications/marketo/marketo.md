@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Connecteur Marketo Engage
 description: Ce document présente le connecteur source du Marketo Engage, y compris des informations sur son authentification, son mappage et sa latence de données.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 50b97ebb8496636a0fccd64d57d7829b1342f87c
+source-git-commit: 0c695e11e7d7c14ef7e047cd007668e1099bf127
 workflow-type: tm+mt
-source-wordcount: '678'
-ht-degree: 15%
+source-wordcount: '683'
+ht-degree: 11%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 15%
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
-[[!DNL Marketo Engage]](https://www.marketo.com/software/) est une solution complète pour la gestion des pistes et les spécialistes du marketing B2B qui cherchent à transformer les expériences client en engageant à chaque étape de parcours d’achat complexes.
+[[!DNL Marketo Engage]](https://www.marketo.com/software/) est une solution complète pour la gestion des pistes et les spécialistes du marketing B2B qui cherchent à transformer les expériences client en s’engageant à chaque étape de parcours d’achat complexes.
 
 Avec la variable [!DNL Marketo Engage] connecteur source, vous pouvez importer des données B2B depuis [!DNL Marketo Engage] à Platform et tenir ces données à jour à l’aide d’applications connectées à Platform.
 
@@ -70,7 +70,7 @@ Le tableau suivant décrit la latence attendue pour l’introduction de [!DNL Ma
 
 | Destination | Latence attendue |
 | ----------- | ---------------- |
-| [!DNL Real-Time Customer Profile] | &lt; 10 minutes |
+| [!DNL Real-Time Customer Profile] | &lt; 10 minutes |
 | Lac de données | &lt; 60 minutes |
 
 >[!NOTE]
@@ -83,6 +83,7 @@ La documentation suivante fournit des informations supplémentaires sur la créa
 
 * Pour plus d’informations sur la connexion à votre [!DNL Marketo Engage] data to Platform, lisez le tutoriel sur [création d’un [!DNL Marketo Engage] connexion source dans l’interface utilisateur](../../../tutorials/ui/create/adobe-applications/marketo.md).
    * Pour plus d’informations sur la configuration de vos schémas et l’ingestion de données d’activité personnalisées, lisez le tutoriel sur [création d’une connexion source et d’un flux de données pour [!DNL Marketo Engage] données d’activité personnalisées](../../../tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
+   * Pour plus d’informations sur la migration de votre mappage ECID à partir de [!DNL Person] du jeu de données [!DNL Activity] jeu de données, lisez [Guide de migration de mappage ECID](./migration.md).
 * Pour plus d’informations sur la configuration sous-jacente des espaces de noms et des schémas B2B utilisés avec [!DNL Marketo Engage], lisez la documentation pour [Espaces de noms et schémas B2B](./marketo-namespaces.md).
 * Pour plus d’informations sur la recherche de [!DNL Marketo Engage] Identifiant munchkin et génération de vos informations d’identification, lisez la [[!DNL Marketo Engage] guide d&#39;authentification](./marketo-auth.md).
 * Pour plus d’informations sur les règles de mappage spécifiques qui s’appliquent à [!DNL Marketo Engage] jeux de données, lisez la documentation sur [[!DNL Marketo Engage] mappages de champs](../mapping/marketo.md).
