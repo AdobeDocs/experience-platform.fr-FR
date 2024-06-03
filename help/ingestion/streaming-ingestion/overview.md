@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;ingestion de données;données ingérées;diffusion en continu;présentation;ingestion par flux;latence;latence de diffusion en continu;latence ;
 solution: Experience Platform
-title: Présentation de l’ingestion par flux
+title: Vue d’ensemble de l’ingestion en flux continu
 description: L’ingestion par flux pour Adobe Experience Platform fournit aux utilisateurs une méthode pour envoyer en temps réel des données de périphériques côté client et côté serveur vers Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: c6cff4d30815d3f7bfb61d1672a5d0228a0da60d
+source-git-commit: d6424e2a9afc046f4bff329797954fd43939a819
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 16%
+source-wordcount: '424'
+ht-degree: 14%
 
 ---
 
@@ -35,7 +35,11 @@ Une fois que vous êtes certain que vos données sont propres, vous pouvez activ
 
 Pour plus d’informations sur l’activation d’un jeu de données pour [!DNL Profile] et [!DNL Identity Service], veuillez lire la [configuration d’un guide de jeu de données](../../profile/tutorials/dataset-configuration.md).
 
-## Quelle est la latence attendue sur l’ingestion par flux ? [!DNL Platform]?
+## Quelle est la latence attendue sur Experience Platform pour l’ingestion par flux ?
+
+>[!IMPORTANT]
+>
+>Les barrières de sécurité pour l’ingestion par flux sont calculées au niveau de l’organisation et non au niveau de l’environnement de test. Cela signifie que votre utilisation des données par environnement de test est liée au total des droits d’utilisation des licences qui correspondent à l’ensemble de votre organisation. En outre, l’utilisation des données dans les environnements de test de développement est limitée à 10 % de vos profils totaux. Pour plus d’informations sur les droits d’utilisation des licences, consultez la section [guide des bonnes pratiques relatives à la gestion des données](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 | Destination | Latence attendue |
 | --------- | ---------------- |

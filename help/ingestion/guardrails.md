@@ -3,14 +3,18 @@ keywords: Experience Platform;dépannage;mécanismes de sécurisation;conseils;
 title: Mécanismes de sécurisation pour l’ingestion des données
 description: Découvrez les barrières de sécurité pour l’ingestion de données dans Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 9d3a8aac120119ce0361685f9cb8d3bfc28dc7fd
+source-git-commit: cdc5bb01ef6de8134c6ad4ef6601a748571bf86f
 workflow-type: tm+mt
-source-wordcount: '579'
-ht-degree: 58%
+source-wordcount: '646'
+ht-degree: 52%
 
 ---
 
 # Mécanismes de sécurisation pour l’ingestion des données
+
+>[!IMPORTANT]
+>
+>Les barrières de sécurité pour l’ingestion par lots et par flux sont calculées au niveau de l’organisation et non au niveau de l’environnement de test. Cela signifie que votre utilisation des données par environnement de test est liée au total des droits d’utilisation des licences qui correspondent à l’ensemble de votre organisation. En outre, l’utilisation des données dans les environnements de test de développement est limitée à 10 % de vos profils totaux. Pour plus d’informations sur les droits d’utilisation des licences, consultez la section [guide des bonnes pratiques relatives à la gestion des données](../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
 Les mécanismes de sécurisation sont des seuils qui fournissent des conseils pour l’utilisation des données et du système, l’optimisation des performances et la prévention des erreurs ou des résultats inattendus dans Adobe Experience Platform. Les mécanismes de sécurisation peuvent faire référence à l’utilisation ou la consommation de données et de traitement par rapport à vos droits de licence.
 
