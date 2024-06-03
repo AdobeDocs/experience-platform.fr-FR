@@ -2,10 +2,10 @@
 title: Groupe de champs de schéma d’extension complète Adobe Analytics ExperienceEvent
 description: Découvrez le groupe de champs Extension complète du schéma d’Adobe Analytics ExperienceEvent.
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 5eb15a7dfff7e6d8ba815ae4f89142ba50166620
 workflow-type: tm+mt
 source-wordcount: '811'
-ht-degree: 95%
+ht-degree: 93%
 
 ---
 
@@ -101,6 +101,6 @@ Chaque objet pair utilise le type de données [[!UICONTROL Mesure]](../../data-t
 
 ## Étapes suivantes
 
-Ce document couvre la structure et le cas d’utilisation du groupe de champs de l’extension Analytics. Pour plus d’informations sur le groupe de champs lui-même, consultez le [référentiel XDM public](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
+Ce document couvrait la structure et le cas d’utilisation du groupe de champs de l’extension Analytics. Pour plus d’informations sur le groupe de champs lui-même, consultez le [référentiel XDM public](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
 
 Si vous utilisez ce groupe de champs pour collecter des données Analytics à l’aide du SDK web d’Adobe Experience Platform, consultez le guide sur la [configuration d’un flux de données](../../../datastreams/overview.md) pour savoir comment mapper des données à XDM côté serveur.

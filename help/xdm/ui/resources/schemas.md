@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les principes de base de la création et de l’édition de schémas dans l’interface utilisateur de l’Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
 workflow-type: tm+mt
 source-wordcount: '3732'
-ht-degree: 3%
+ht-degree: 1%
 
 ---
 
-# Créer et modifier les schémas dans l’interface utilisateur
+# Créer et modifier les schémas dans l’interface utilisateur {#create-edit-schemas-in-ui}
 
 Ce guide explique comment créer, modifier et gérer des schémas de modèle de données d’expérience (XDM) pour votre organisation dans l’interface utilisateur de Adobe Experience Platform.
 
@@ -197,7 +197,7 @@ Le canevas se met à jour pour afficher le champ standard ajouté au schéma, y 
 
 ![Champ standard ajouté](../../images/ui/resources/schemas/standard-field-added.png)
 
-### Ajouter des champ personnalisés       {#add-custom-fields}
+### Ajout de champs personnalisés {#add-custom-fields}
 
 Tout comme le workflow pour les champs standard, vous pouvez également ajouter vos propres champs personnalisés directement à un schéma.
 
@@ -281,12 +281,12 @@ Après avoir appliqué vos modifications, le nouveau champ s’affiche sous l’
 
 ![Champ ajouté à l’objet standard](../../images/ui/resources/schemas/added-to-standard-object.png)
 
-## Activer un schéma pour le profil client en temps réel {#profile}
+## Activation d’un schéma pour Real-time Customer Profile {#profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
->title="Activation d&#39;un schéma pour Profil"
->abstract="Lorsqu&#39;un schéma est activé pour Profil, tous les jeux de données créés à partir de ce schéma participent au profil client en temps réel, qui fusionne les données de différentes sources pour créer une vue complète de chaque client. Une fois qu&#39;un schéma est utilisé pour ingérer des données dans Profil, il ne peut pas être désactivé. Pour plus d&#39;informations, consultez la documentation."
+>title="Activation d’un schéma pour Profile"
+>abstract="Lorsqu’un schéma est activé pour Profile, tous les jeux de données créés à partir de ce schéma participent à Real-Time Customer Profile, qui fusionne les données de sources disparates pour créer une vue d’ensemble complète de chaque client. Une fois qu’un schéma est utilisé pour ingérer des données dans Profile, il ne peut pas être désactivé. Pour plus d’informations, consultez la documentation ."
 
 [Profil client en temps réel](../../../profile/home.md) fusionne les données provenant de sources disparates afin de créer une vue complète de chaque client. Si vous souhaitez que les données capturées par un schéma participent à ce processus, vous devez activer le schéma à utiliser dans [!DNL Profile].
 

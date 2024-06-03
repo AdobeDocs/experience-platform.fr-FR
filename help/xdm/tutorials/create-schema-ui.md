@@ -5,10 +5,10 @@ title: Créer un schéma à l’aide de l’éditeur de schémas
 type: Tutorial
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: c8c8e8b8571c215cb470dd5bdb9e9172d564f9d8
 workflow-type: tm+mt
-source-wordcount: '4695'
-ht-degree: 80%
+source-wordcount: '4813'
+ht-degree: 78%
 
 ---
 
@@ -353,11 +353,36 @@ Sélectionnez **[!UICONTROL Activer]** pour confirmer votre choix. Vous pouvez d
 
 ## Actions supplémentaires {#more}
 
-Dans l’éditeur de schémas, vous pouvez également exécuter des actions rapides pour copier la structure JSON du schéma ou supprimer le schéma s’il n’a pas été activé pour Real-time Customer Profile ou s’il comporte des jeux de données associés. Sélectionner [!UICONTROL Plus] dans la partie supérieure de la vue pour afficher une liste déroulante contenant des actions rapides.
-
-La fonctionnalité Copier la structure JSON vous permet de voir à quoi ressemblerait un exemple de payload pendant que vous créez encore le schéma et vos pipelines de données. Elle s’avère particulièrement utile dans les situations où il existe des structures de mappage d’objet complexes dans le schéma, telles qu’une carte d’identité.
+Dans l’éditeur de schémas, vous pouvez également exécuter des actions rapides pour copier la structure JSON du schéma ou supprimer le schéma. Sélectionner [!UICONTROL Plus] dans la partie supérieure de la vue pour afficher une liste déroulante contenant des actions rapides.
 
 ![L’éditeur de schémas avec le bouton Plus en surbrillance et les options de liste déroulante s’affichent.](../images/tutorials/create-schema/more-actions.png)
+
+### Suppression d’un schéma {#delete-a-schema}
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenabledwithdatasets"
+>title="Impossible de supprimer le schéma"
+>abstract="Le schéma ne peut pas être supprimé, car il a été activé pour Profile et a des jeux de données associés."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenablednodatasets"
+>title="Impossible de supprimer le schéma"
+>abstract="Le schéma ne peut pas être supprimé, car il a été activé pour Profile."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_withdatasetsnotprofileenabled"
+>title="Impossible de supprimer le schéma"
+>abstract="Le schéma ne peut pas être supprimé, car il comporte des jeux de données associés."
+
+Un schéma peut être supprimé dans l’interface utilisateur de l’éditeur de schémas à l’aide de [!UICONTROL Plus] et également à partir des détails du schéma dans la variable [!UICONTROL Parcourir] . Certaines conditions empêchent la suppression d’un schéma. Un schéma ne peut pas être supprimé si :
+
+* Le schéma est activé pour Profile.
+* Le schéma est activé pour Profile et comporte des jeux de données associés.
+* Le schéma comporte des jeux de données associés, mais n’est pas activé pour Profile.
+
+### Copier la structure JSON {#copy-json-structure}
+
+Sélectionner **[!UICONTROL Copie de la structure JSON]** pour générer un payload d’exportation pour n’importe quel schéma de la bibliothèque de schémas. Cette action copie la structure JSON dans le presse-papiers. Le fichier JSON exporté peut ensuite être utilisé pour importer le schéma et toutes les ressources associées dans un environnement de test ou une organisation différent. Cela rend le partage et la réutilisation des schémas entre différents environnements simples et efficaces.
 
 ## Étapes suivantes et ressources supplémentaires
 
