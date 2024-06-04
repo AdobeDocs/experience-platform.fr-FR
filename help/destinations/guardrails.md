@@ -6,14 +6,18 @@ product: experience platform
 type: Documentation
 description: En savoir plus sur l’utilisation par défaut de l’activation des données et les limites de débit.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: c425d1016bed80113b879a683114861d839b79eb
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1662'
-ht-degree: 52%
+source-wordcount: '1685'
+ht-degree: 51%
 
 ---
 
 # Barrières de sécurité pour l’activation des données
+
+>[!IMPORTANT]
+>
+>Vérifiez vos droits de licence dans votre commande commerciale et les [Description du produit](https://helpx.adobe.com/fr/legal/product-descriptions.html) sur les limites d’utilisation réelles en plus de cette page des barrières de sécurité.
 
 Cette page fournit les limites d’utilisation et de débit par défaut en ce qui concerne le comportement d’activation. Lors de la révision des mécanismes de sécurisation suivants, on suppose que vous avez correctement [connecté aux destinations](/help/destinations/ui/connect-destination.md).
 

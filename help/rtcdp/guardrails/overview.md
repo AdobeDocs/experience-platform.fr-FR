@@ -3,9 +3,9 @@ title: Barrières de sécurité Real-Time CDP
 description: Découvrez les barrières de sécurité des données dans les différents services et zones de Real-Time CDP.
 feature: Guardrails, Data Management, Data Ingestion, Data Export
 exl-id: 377499b4-5707-4d50-94e3-02f88ad5bf2c
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '392'
 ht-degree: 7%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 7%
 # Barrières de sécurité Real-Time CDP
 
 Les barrières de sécurité sont des seuils qui fournissent des conseils pour l’utilisation des données et du système, l’optimisation des performances et la prévention des erreurs ou des résultats inattendus dans Real-Time CDP. Les mécanismes de sécurisation peuvent faire référence à l’utilisation ou la consommation de données et de traitement par rapport à vos droits de licence.
+
+>[!IMPORTANT]
+>
+>Vérifiez vos droits de licence dans votre commande commerciale et les [Description du produit](https://helpx.adobe.com/fr/legal/product-descriptions.html) sur les limites d’utilisation réelles en plus de cette page des barrières de sécurité.
 
 Commencez ici et suivez les liens ci-dessous pour comprendre toutes les barrières de sécurité dans les différents services et zones de Real-Time CDP :
 

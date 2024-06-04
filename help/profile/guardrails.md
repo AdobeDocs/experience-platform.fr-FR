@@ -3,18 +3,22 @@ title: Barrières de sécurité par défaut pour la segmentation et les données
 solution: Experience Platform
 product: experience platform
 type: Documentation
-description: Découvrez les performances et les mécanismes de sécurisation appliqués par le système pour les données de profil et la segmentation, afin de garantir une utilisation optimale des fonctionnalités de Real-Time CDP.
+description: Découvrez les performances et les barrières de sécurité appliquées par le système pour les données de profil et la segmentation afin de garantir une utilisation optimale des fonctionnalités de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 0542e618dfb6e5571845387fed9eced4200179b6
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '2434'
-ht-degree: 60%
+source-wordcount: '2457'
+ht-degree: 59%
 
 ---
 
 # Barrières de sécurité par défaut pour [!DNL Real-Time Customer Profile] données et segmentation
 
 Adobe Experience Platform vous permet de proposer des expériences cross-canal personnalisées basées sur des informations comportementales et des attributs du client sous la forme de profils client en temps réel. Pour prendre en charge cette nouvelle approche des profils, Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel.
+
+>[!IMPORTANT]
+>
+>Vérifiez vos droits de licence dans votre commande commerciale et les [Description du produit](https://helpx.adobe.com/fr/legal/product-descriptions.html) sur les limites d’utilisation réelles en plus de cette page des barrières de sécurité.
 
 Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données de profil afin d’optimiser les performances du système. Lors de la révision des mécanismes de sécurisation suivants, on suppose que vous avez correctement modélisé les données. Si vous avez des questions sur la manière de modéliser vos données, contactez votre représentant du service client.
 
@@ -116,7 +120,7 @@ Les barrières de sécurité décrites dans cette section font référence au no
 | --------- | ----- | ---------- | ----------- |
 | Audiences par environnement de test | 4 000 | Protecteur des performances | Une organisation peut avoir plus de 4 000 audiences au total, à condition qu’il y ait moins de 4 000 audiences dans chaque environnement de test individuel. Cela inclut les audiences par lots, par flux et en périphérie. Toute tentative de création d’audiences supplémentaires peut affecter les performances du système. En savoir plus sur [création d&#39;audiences](/help/segmentation/ui/segment-builder.md) par le biais du créateur de segments. |
 | Audiences Edge par environnement de test | 150 | Protecteur des performances | Une organisation peut avoir plus de 150 audiences de périphérie au total, à condition qu’il y ait moins de 150 audiences de périphérie dans chaque environnement de test individuel. Toute tentative de création d’audiences Edge supplémentaires peut avoir une incidence sur les performances du système. En savoir plus sur [audiences de périphérie](/help/segmentation/ui/edge-segmentation.md). |
-| Débit Edge sur tous les environnements de test | 1 500 RPS | Protecteur des performances | La segmentation Edge prend en charge un pic de 1 500 événements entrants par seconde entrant dans le réseau Edge Adobe Experience Platform. La segmentation Edge peut prendre jusqu’à 350 millisecondes pour traiter un événement entrant après son entrée dans le réseau Edge Adobe Experience Platform. En savoir plus sur [audiences de périphérie](/help/segmentation/ui/edge-segmentation.md). |
+| Débit Edge sur tous les environnements de test | 1 500 RPS | Protecteur des performances | La segmentation Edge prend en charge un pic de 1 500 événements entrants par seconde entrant dans l’Edge Network Adobe Experience Platform. La segmentation Edge peut prendre jusqu’à 350 millisecondes pour traiter un événement entrant après son entrée dans l’Edge Network Adobe Experience Platform. En savoir plus sur [audiences de périphérie](/help/segmentation/ui/edge-segmentation.md). |
 | Audiences par environnement de test en flux continu | 500 | Protecteur des performances | Une organisation peut avoir plus de 500 audiences en continu au total, à condition qu’il y ait moins de 500 audiences en continu dans chaque environnement de test individuel. Cela inclut les audiences en continu et les audiences de périphérie. Toute tentative de création d’audiences en continu supplémentaires peut affecter les performances du système. En savoir plus sur [audiences en continu](/help/segmentation/ui/streaming-segmentation.md). |
 | Débit en flux continu sur tous les environnements de test | 1 500 RPS | Protecteur des performances | La segmentation par flux prend en charge un pic de 1 500 événements entrants par seconde. La segmentation par flux peut prendre jusqu’à 5 minutes pour qualifier un profil pour l’appartenance à un segment. En savoir plus sur [audiences en continu](/help/segmentation/ui/streaming-segmentation.md). |
 | Audiences par environnement de test par lot | 4 000 | Protecteur des performances | Une organisation peut avoir plus de 4 000 audiences par lots au total, à condition qu’il y ait moins de 4 000 audiences par lots dans chaque environnement de test individuel. Toute tentative de création d’audiences par lots supplémentaires peut affecter les performances du système. |

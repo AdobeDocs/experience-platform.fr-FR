@@ -6,10 +6,10 @@ description: Adobe Experience Platform utilise un modèle de données hybride 
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1794'
-ht-degree: 47%
+source-wordcount: '1817'
+ht-degree: 46%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 47%
 >Les limites décrites dans ce document représentent les modifications activées par Real-time Customer Data Platform B2B Edition. Pour obtenir une liste complète des limites par défaut de l’édition B2B de Real-Time CDP, combinez ces limites aux limites générales de Adobe Experience Platform décrites dans la section [Barrières de sécurité de la documentation sur les données Real-time Customer Profile](../profile/guardrails.md).
 
 L’édition B2B de Real-time Customer Data Platform vous permet de proposer des expériences cross-canal personnalisées basées sur des informations comportementales et des attributs du client sous la forme de profils client et de profils de compte en temps réel. Pour prendre en charge cette nouvelle approche des profils, Experience Platform utilise un modèle de données hybride fortement dénormalisé qui diffère du modèle de données relationnelles traditionnel.
+
+>[!IMPORTANT]
+>
+>Vérifiez vos droits de licence dans votre commande commerciale et les [Description du produit](https://helpx.adobe.com/fr/legal/product-descriptions.html) sur les limites d’utilisation réelles en plus de cette page des barrières de sécurité.
 
 Ce document fournit des limites d’utilisation et de débit par défaut pour vous aider à modéliser vos données pour optimiser les performances du système. Lors de la révision des mécanismes de sécurisation suivants, on suppose que vous avez correctement modélisé les données. Si vous avez des questions sur la manière de modéliser vos données, contactez votre représentant du service client.
 

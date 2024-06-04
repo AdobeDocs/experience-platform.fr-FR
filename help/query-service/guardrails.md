@@ -3,18 +3,21 @@ keywords: Experience Platform;requête;service de requête;dépannage;garde-fous
 title: Barrières de sécurité pour Query Service
 description: Ce document fournit des informations sur les limites d’utilisation des données de Query Service afin de vous aider à optimiser l’utilisation de vos requêtes.
 exl-id: 1ad5dcf4-d048-49ff-97e3-07040392b65b
-source-git-commit: ab2bb6f4cafe60aec7d8745cca9d2f7f0227a938
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '1177'
-ht-degree: 6%
+source-wordcount: '1181'
+ht-degree: 4%
 
 ---
 
 # Barrières de sécurité pour Query Service
 
 Les barrières de sécurité sont des seuils qui guident l’utilisation des données et du système, l’optimisation des performances et la prévention des erreurs ou des résultats inattendus dans Adobe Experience Platform.
-
 Ce document fournit des limites d’utilisation par défaut pour les données de Query Service afin de vous aider à optimiser les performances du système lors de l’interrogation de données par rapport à vos droits de licence.
+
+>[!IMPORTANT]
+>
+>Vérifiez vos droits de licence dans votre commande commerciale et les [Description du produit](https://helpx.adobe.com/fr/legal/product-descriptions.html) sur les limites d’utilisation réelles en plus de cette page des barrières de sécurité.
 
 ## Conditions préalables
 
@@ -60,14 +63,14 @@ Les tableaux ci-dessous contiennent les descriptions et limites recommandées po
 | Durée maximale d’exécution | 10 minutes | Barrière de sécurité mise en place par le système | Cela définit le temps de sortie maximal pour une requête SQL ad hoc. Le dépassement de la limite de temps pour renvoyer un résultat renvoie le code d’erreur 53400. |
 | Utilisateurs de Query Service simultanés | <ul><li>Comme spécifié dans la description du produit de l’application.</li><li>+5 (avec chaque module complémentaire d’utilisateurs de requêtes ad hoc supplémentaire acheté)</li></ul> | Barrière de sécurité mise en place par le système | Cela définit le nombre d’utilisateurs qui peuvent créer des sessions simultanément pour une organisation particulière. Si la limite de simultanéité est dépassée, l’utilisateur reçoit une `Session Limit Reached` erreur. |
 | Concurrence des requêtes | <ul><li>Comme spécifié dans la description du produit de l’application.</li><li>+1 (avec chaque module complémentaire SKU d’utilisateur de requête ad hoc supplémentaire acheté)</li></ul> | Barrière de sécurité mise en place par le système | Cela définit le nombre de requêtes pouvant être exécutées simultanément pour une organisation particulière. Si la limite de simultanéité est dépassée, les requêtes sont mises en file d&#39;attente. |
-| Connecteur client et limite de sortie de résultat | Connecteur client<ul><li>Interface utilisateur de requête (100 lignes)</li><li>Client tiers (50 000)</li><li>[!DNL PostgresSQL] client (50 000)</li></ul> | Barrière de sécurité mise en place par le système | Le résultat d&#39;une requête peut être reçu par les moyens suivants :<ul><li>UI Query Service</li><li>Client tiers</li><li>[!DNL PostgresSQL] client</li></ul>Remarque : L’ajout d’une limitation au nombre de sorties peut renvoyer des résultats plus rapidement. Par exemple, `LIMIT 5`, `LIMIT 10`, etc. |
+| Connecteur client et limite de sortie de résultat | Connecteur client<ul><li>Interface utilisateur de requête (100 lignes)</li><li>Client tiers (50 000)</li><li>[!DNL PostgresSQL] client (50 000)</li></ul> | Barrière de sécurité mise en place par le système | Le résultat d&#39;une requête peut être reçu par les moyens suivants :<ul><li>Interface utilisateur de Query Service</li><li>Client tiers</li><li>[!DNL PostgresSQL] client</li></ul>Remarque : L’ajout d’une limitation au nombre de sorties peut renvoyer des résultats plus rapidement. Par exemple, `LIMIT 5`, `LIMIT 10`, etc. |
 | Résultats renvoyés via | Interface utilisateur du client | S/O | Cela définit la manière dont les résultats sont mis à la disposition des utilisateurs. |
 
 {style="table-layout:auto"}
 
 **Requêtes par lots**
 
-| **Mécanisme de sécurisation** | **Limite** | **Type de limite** | **Description** |
+| **Guardrail** | **Limite** | **Type de limite** | **Description** |
 |---|---|---|---|
 | Durée maximale d’exécution | 24 heures | Barrière de sécurité mise en place par le système | Cette option définit le temps d’exécution maximal d’une requête SQL par lot.<br>Le temps de traitement d’une requête dépend du volume de données à traiter et de la complexité des requêtes. |
 | Utilisateurs simultanés de Query Service pour un lot non planifié | <ul><li>Comme spécifié dans la description du produit de l’application.</li><li>+5 (avec chaque module complémentaire d’utilisateurs de requêtes ad hoc supplémentaire acheté)</li></ul> | Barrière de sécurité mise en place par le système | Pour les requêtes par lots non planifiées (par exemple, les requêtes CTAS/ITAS en mode interactif), cela définit le nombre d’utilisateurs qui peuvent créer des sessions simultanément pour une organisation particulière. Si la limite de simultanéité est dépassée, l’utilisateur reçoit une `Session Limit Reached` erreur. |
@@ -79,7 +82,7 @@ Les tableaux ci-dessous contiennent les descriptions et limites recommandées po
 
 {style="table-layout:auto"}
 
-## Magasin de requêtes accélérées {#query-accelerated-store}
+## Magasin accéléré de requêtes {#query-accelerated-store}
 
 Le tableau ci-dessous fournit la description et les limites recommandées de la barrière de sécurité pour le magasin accéléré de requêtes.
 
@@ -95,8 +98,8 @@ Après avoir lu ce document, vous devez mieux comprendre les limites par défaut
 
 Pour plus d’informations sur Query Service, consultez la documentation suivante :
 
-* [API Query Service](./api/getting-started.md)
-* [UI Query Service](./ui/overview.md)
+* [API Query Service](./api/getting-started.md)
+* [Interface utilisateur de Query Service](./ui/overview.md)
 
 Pour plus d’informations sur les barrières de sécurité des autres services Experience Platform, sur les informations de latence de bout en bout et les informations de licence des documents Description du produit Real-Time CDP, consultez la documentation suivante :
 

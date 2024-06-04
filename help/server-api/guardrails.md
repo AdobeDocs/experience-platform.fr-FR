@@ -2,9 +2,9 @@
 title: Protections des performances pour l’API du serveur réseau Edge
 description: Découvrez comment utiliser l’API du serveur dans des barrières de sécurité de performances optimales.
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
+source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
 workflow-type: tm+mt
-source-wordcount: '508'
+source-wordcount: '531'
 ht-degree: 5%
 
 ---
@@ -18,14 +18,18 @@ Les barrières de performance définissent les limites d’utilisation liées à
 
 Adobe n’est pas responsable de la dégradation des performances provoquée par le dépassement des limites d’utilisation. Les clients qui dépassent systématiquement les barrières de performance peuvent demander une capacité de traitement supplémentaire afin d’éviter une dégradation des performances.
 
+>[!IMPORTANT]
+>
+>Vérifiez vos droits de licence dans votre commande commerciale et les [Description du produit](https://helpx.adobe.com/fr/legal/product-descriptions.html) sur les limites d’utilisation réelles en plus de cette page des barrières de sécurité.
+
 ## Définitions
 
-* **Disponibilité** est calculé pour chaque intervalle de cinq minutes en tant que pourcentage des requêtes traitées par le réseau Edge Experience Platform qui ne échouent pas en erreur et se rapportent uniquement aux API réseau Edge configurées. Si un client n’a effectué aucune requête au cours d’un intervalle de cinq minutes donné, cet intervalle est considéré comme 100 % disponible.
+* **Disponibilité** est calculé pour chaque intervalle de cinq minutes sous la forme du pourcentage de requêtes traitées par l’Edge Network Experience Platform qui n’échouent pas en erreur et se rapportent uniquement aux API Edge Network configurées. Si un client n’a effectué aucune requête au cours d’un intervalle de cinq minutes donné, cet intervalle est considéré comme 100 % disponible.
 * **Pourcentage de disponibilité mensuelle** pour une région donnée est calculée en moyenne de la disponibilité pour tous les intervalles de cinq minutes d’un mois.
-* Un **amont** est un service derrière le réseau Edge, activé pour un flux de données spécifique, tel que le transfert côté serveur Adobe, la segmentation Adobe Edge ou Adobe Target.
+* Un **amont** est un service derrière l’Edge Network, activé pour un flux de données spécifique, tel que le transfert côté serveur Adobe, la segmentation Adobe Edge ou Adobe Target.
 * A **unité de requête** correspond à un fragment de 8 Ko d’une requête et un en amont configuré pour un flux de données.
 * A **requête** est un message unique envoyé par une application détenue par le client à la variable [!DNL Server API]. Une requête peut contenir une ou plusieurs unités de requête.
-* Un **error** est une requête qui échoue en raison d’un réseau Edge [erreur de service interne](error-handling.md).
+* Un **error** est une requête qui échoue en raison d’un Edge Network [erreur de service interne](error-handling.md).
 
 ## Limites de service
 
@@ -51,14 +55,14 @@ Le tableau ci-dessous présente les valeurs limites par défaut. Si vous avez be
 | Point d’entrée | Demandes d’unités par seconde |
 | --- | --- |
 | `/v2/interact` | 4 000 |
-| `/v2/collect` | 6 000 |
+| `/v2/collect` | 6000 |
 
 
 ### Limite de taille de requête HTTP
 
 | Format de la payload | Taille maximale d’une requête | Fragments de requête max 8 Ko |
 | --- | --- | --- |
-| Texte brut JSON | 64 Ko | 8 |
+| Texte brut JSON | 64 Ko | 8 |
 
 
 >[!NOTE]
