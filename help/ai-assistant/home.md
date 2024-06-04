@@ -1,11 +1,9 @@
 ---
 title: Présentation de l’assistant AI dans Adobe Experience Platform
 description: Découvrez l’assistant d’IA, ses nuances et ses cas d’utilisation, et comment l’utiliser pour accélérer votre workflow avec Adobe Experience Platform et Real-time Customer Data Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: fe87a487079f5154f238b2d425cdd249a4724762
+source-git-commit: dd3a7d07c0c78d76c552affef892d5e5c0f0bfb5
 workflow-type: tm+mt
-source-wordcount: '2294'
+source-wordcount: '2371'
 ht-degree: 1%
 
 ---
@@ -72,6 +70,13 @@ Vous pouvez poser des questions à l’assistant d’IA sur vos informations op�
 * Sources _(Pour l’instant, il n’est pas possible de répondre aux questions concernant les comptes.)_
 
 Pour les questions d’informations opérationnelles, les réponses peuvent ne pas refléter l’état actuel de l’interface utilisateur. Les données qui appuient ces questions sont mises à jour toutes les 24 heures. Par exemple, les modifications apportées par les utilisateurs dans Real-Time CDP pendant la journée sont synchronisées avec les entrepôts de données la nuit, puis elles deviennent disponibles pour les questions des utilisateurs le matin. Vous devrez vous connecter à un environnement de test pour obtenir des informations sur des données spécifiques liées aux objets.
+
+### Portée de la fonctionnalité {#feature-scope}
+
+Actuellement, la portée de l’assistant d’IA est la suivante :
+
+* [Connaissances produit](./home.md#product-knowledge): l’assistant d’IA peut répondre aux questions sur les connaissances des produits pour Experience Platform, Real-time Customer Data Platform et Adobe Journey Optimizer. Vous pouvez également approfondir les connaissances sur les produits pour Customer Journey Analytics, mais uniquement via l’interface utilisateur de Customer Journey Analytics.
+* [Connaissances opérationnelles](./home.md#operational-insights): vous pouvez poser des questions à l’assistant d’IA sur les informations opérationnelles des objets de données suivants : attributs, audiences, flux de données, jeux de données, destinations, parcours, schémas et sources.
 
 ## Accès aux fonctionnalités {#feature-access}
 
