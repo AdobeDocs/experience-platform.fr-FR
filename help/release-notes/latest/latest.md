@@ -1,7 +1,8 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Mai 2024
 description: Notes de mise à jour de mai 2024 pour Adobe Experience Platform.
-source-git-commit: e02892a2cbf5f65a1b9a0eec49722896bd061084
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
 workflow-type: tm+mt
 source-wordcount: '1596'
 ht-degree: 96%
