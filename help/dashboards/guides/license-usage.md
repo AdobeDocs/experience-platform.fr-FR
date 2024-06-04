@@ -4,9 +4,9 @@ title: Tableau de bord d’utilisation de la licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b277de0bd7b65f8e3828c7ab0b4e00644eeddde5
+source-git-commit: 0613a0c713ea3559e03d2228e2b9e6be7232a1f0
 workflow-type: tm+mt
-source-wordcount: '2069'
+source-wordcount: '2101'
 ht-degree: 3%
 
 ---
@@ -24,6 +24,13 @@ ht-degree: 3%
 >abstract="Le tableau de bord de l’utilisation des licences donne des informations sur les produits Adobe Experience Platform que vous avez achetés. La présentation du tableau de bord affiche les mesures principales pour vos produits, y compris votre utilisation pour chacune des mesures principales et le montant de votre licence. L’espace de travail des détails affiche une ventilation de vos mesures pour chaque produit dans des environnements de test spécifiques."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Expirations de jeux de données"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Expiration des données des profils pseudonymes"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseUsage_reduction"
+>title="Comment réduire l’utilisation"
+>abstract="Pour réduire l’utilisation, vous pouvez configurer l’expiration des données de profil pseudonyme ou de jeu de données de jeu de données ou de jeu de données pour les environnements de test."
+>additional-url="https://experienceleague.adobe.com/fr/docs/platform-learn/tutorials/data-hygiene/pseudonymous-profile-and-event-expiration" text="Vidéo Expiration des données des profils pseudonymes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Documentation sur l&#39;expiration des données des profils anonymes"
 
 Vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise via Adobe Experience Platform [!UICONTROL Utilisation des licences] tableau de bord. Les informations affichées ici sont capturées pendant un instantané quotidien de votre instance Platform.
 
