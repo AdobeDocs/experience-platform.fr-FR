@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation du système XDM
 description: La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. Le modèle de données d’expérience (XDM), optimisé par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 8113b5298120f710f43c5a02504f19ca3af67c5a
+source-git-commit: 48caa318f0e951979db4fd2c94624a73311422d6
 workflow-type: tm+mt
-source-wordcount: '2117'
+source-wordcount: '2101'
 ht-degree: 74%
 
 ---
@@ -53,7 +53,7 @@ Pour plus d’informations sur la gestion et l’interaction avec les schémas d
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Comportements des données"
->abstract="Les données destinées à Experience Platform sont regroupées en trois types de comportements : enregistrement, série temporelle et ad hoc. Les schémas d’enregistrement fournissent des informations sur les attributs d’un objet, tandis que les schémas de série temporelle capturent un instantané du système au moment où une action a été effectuée. Les schémas ad hoc capturent les champs qui sont des espaces de noms, à des fins d&#39;utilisation par un jeu de données unique. Pour plus d’informations sur le comportement des données dans Platform, consultez la documentation."
+>abstract="Les données destinées à Experience Platform sont regroupées en trois types de comportements : enregistrement, série temporelle et ad hoc. Les schémas d’enregistrement fournissent des informations sur les attributs d’un objet, tandis que les schémas de série temporelle capturent un instantané du système au moment où une action a été effectuée. Les schémas ad hoc capturent les champs dont l’espace de noms peut être utilisé uniquement par un seul jeu de données. Pour plus d’informations sur le comportement des données dans Platform, consultez la documentation."
 
 Les données pouvant être utilisées dans Experience Platform sont regroupées selon trois types de comportements :
 
@@ -118,10 +118,6 @@ Pour plus d’informations sur le service, consultez la [présentation de Query 
 Le profil client en temps réel fournit un profil de consommateur centralisé pour une gestion d’expérience ciblée et personnalisée. Chaque profil contient des données agrégées sur tous les systèmes et inclut des comptes horodatés exploitables d’événements qui impliquent l’objet du profil. Ces événements peuvent avoir eu lieu dans n’importe quel système que vous utilisez avec Experience Platform.
 
 Real-Time Customer Profile utilise des données au format schéma basées sur la variable [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent] et répond aux requêtes en fonction de ces données.
-
->[!NOTE]
->
->Real-Time Customer Profile le fait **not** prendre en charge les schémas en fonction de classes autres que le [!UICONTROL XDM ExperienceEvent] classe .
 
 Le système conserve une instance de chaque profil client, fusionnant les données pour former une « source unique de vérité » pour l’individu. Ces données unifiées sont représentées par un « schéma d’union »; (parfois appelé « vue d’union »;). Un schéma d’union agrège les champs de tous les schémas qui mettent en oeuvre la même classe dans un seul schéma. Lors de la composition d’un schéma à l’aide de l’interface utilisateur ou d’une API, vous pouvez l’activer pour une utilisation avec le profil client en temps réel et l’étiqueter pour l’inclure à l’union. Le schéma balisé participe alors à la définition de schéma transmise à Profil.
 
