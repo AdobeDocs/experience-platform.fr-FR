@@ -4,9 +4,9 @@ description: Découvrez comment utiliser les requêtes SQL avec les modèles de 
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: e94343e61e98f69fa28ecd61aec9267460a7f616
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '476'
 ht-degree: 3%
 
 ---
@@ -52,7 +52,7 @@ Le diagramme ci-dessous affiche les champs de données pertinents de chaque jeu 
 
 #### Nouveaux comptes par cas d’utilisation industriel {#accounts-by-industry}
 
-La logique utilisée pour la variable [!UICONTROL Nouveaux comptes par secteur] insight renvoie les cinq premières industries en fonction de leur nombre de profils de compte et de leur taille relative les unes par rapport aux autres. Voir [[!UICONTROL Comptes par secteur industriel] documentation sur les widgets](../guides/account-profiles.md#accounts-by-industry) pour plus d’informations.
+La logique utilisée pour la variable [!UICONTROL Nouveaux comptes par secteur] insight renvoie les cinq premières industries en fonction de leur nombre de profils de compte et de leur taille relative les unes par rapport aux autres. Voir [[!UICONTROL Nouveaux comptes par secteur industriel] documentation sur les widgets](../guides/account-profiles.md#accounts-by-industry) pour plus d’informations.
 
 >[!TIP]
 >

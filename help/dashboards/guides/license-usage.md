@@ -4,9 +4,9 @@ title: Tableau de bord d’utilisation de la licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 0613a0c713ea3559e03d2228e2b9e6be7232a1f0
+source-git-commit: b1fac3d523ebdf765bec038cde6a667d9af71243
 workflow-type: tm+mt
-source-wordcount: '2101'
+source-wordcount: '2135'
 ht-degree: 3%
 
 ---
@@ -158,6 +158,10 @@ Le tableau de bord de l’utilisation des licences répertorie plusieurs mesures
 | [!UICONTROL Segmentation par flux : nombre de packs] | Les packs mettent à jour l’adhésion au segment pour un profil de personne lorsque de nouvelles données entrent dans le service de segmentation par le biais d’un flux continu. L’appartenance au segment est évaluée en fonction des attributs de profil de la personne actuelle et de la valeur de l’événement actuel, sans prendre en compte le comportement historique. La segmentation par flux est une fonctionnalité partagée. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
+
+>[!TIP]
+>
+>Vous pouvez vérifier vos droits de licence dans votre commande de ventes pour calculer des mesures telles que votre &quot;Autorisation de stockage&quot;.<br>Par exemple :<ul><li>Allocation de stockage = nombre de &quot;profils autorisés&quot; dans votre contrat X Richesse moyenne du profil</li></ul>
 
 La disponibilité de ces mesures et la définition spécifique de chacune d’elles varient en fonction des licences achetées par votre entreprise. Pour obtenir des définitions détaillées de chaque mesure, reportez-vous à la documentation Description du produit appropriée :
 
