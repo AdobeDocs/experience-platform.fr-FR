@@ -1,12 +1,12 @@
 ---
 audience: user
 user-guide-title: Assistant IA dans le guide Adobe Experience Platform
-user-guide-description: L’assistant d’IA dans Adobe Experience Platform est une expérience conversationnelle que vous pouvez utiliser pour accélérer vos workflows dans les applications Adobe. Vous pouvez utiliser l’assistant d’IA pour mieux comprendre les connaissances sur les produits, résoudre les problèmes ou rechercher des informations et trouver des informations opérationnelles.
+user-guide-description: Découvrez l’assistant d’IA, ses nuances et ses cas d’utilisation, et comment l’utiliser pour accélérer votre workflow avec Adobe Experience Platform et Real-time Customer Data Platform.
 description: Ce document répertorie la table des matières de l’assistant d’IA dans Adobe Experience Platform.
 role: Admin,User,Developer,Leader
-source-git-commit: a1092e21940c5e4ba9b598bc51ba1243b57a0051
+source-git-commit: 9b8d2422d3b5e13b980002a21f02dbbb6de8c6c6
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '74'
 ht-degree: 1%
 
 ---
