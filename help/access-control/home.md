@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation du contrôle d’accès
 description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans l’Admin Console, liant les utilisateurs et utilisatrices à des autorisations et des sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 16313e2109152329a427be9f13fcbd6382353797
+source-git-commit: 734a34e9acf80300c28ca14587198fb7eaf83c17
 workflow-type: tm+mt
-source-wordcount: '1718'
-ht-degree: 83%
+source-wordcount: '1731'
+ht-degree: 82%
 
 ---
 
@@ -79,12 +79,24 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 
 | Catégorie | Autorisation | Description |
 | --- | --- | --- |
+| [!DNL AI Assistant] | [!UICONTROL Activation de l’assistant AI] | Possibilité de demander au [Assistant d’IA](../ai-assistant/access.md) questions. |
+| [!DNL AI Assistant] | [!UICONTROL Affichage des informations opérationnelles] | Accès aux réponses aux [informations opérationnelles](../ai-assistant/home.md##operational-insights) requêtes. |
 | [!DNL Alerts] | [!UICONTROL Afficher l’historique des alertes] | Accès en lecture seule à l’historique des alertes. |
 | [!DNL Alerts] | [!UICONTROL Résoudre les alertes] | Accès à la lecture, la modification et la suppression des alertes. |
 | [!DNL Alerts] | [!UICONTROL Affichage des alertes] | Accès en lecture seule aux alertes. |
 | [!DNL Alerts] | [!UICONTROL Gérer les alertes] | Accès à la lecture, la création, la modification et la suppression de l’historique des alertes. |
 | [!DNL Computed Attributes] | [!UICONTROL Affichage des attributs calculés] | Accès en lecture seule à l’onglet Attributs calculés, à l’inventaire et aux détails. |
 | [!DNL Computed Attributes] | [!UICONTROL Gestion des attributs calculés] | Accès à la lecture, la création, la suppression de brouillons et la désactivation des attributs calculés. |
+| [!DNL Dashboards] | [!UICONTROL Afficher le tableau de bord d’utilisation des licences] | Accès en lecture seule pour afficher le tableau de bord de l’utilisation des licences. |
+| [!DNL Dashboards] | [!UICONTROL Gestion des tableaux de bord standard] | Ajoutez des attributs personnalisés qui ne se trouvent pas encore dans l’entrepôt de données. |
+| [!DNL Data Governance] | [!UICONTROL Gestion des étiquettes d’utilisation] | Accès à la lecture, la création et la suppression des étiquettes dʼutilisation des données. |
+| [!DNL Data Governance] | [!UICONTROL Gestion des politiques dʼutilisation des données] | Accès à la lecture, la création, la modification et la suppression des politiques dʼutilisation des données. |
+| [!DNL Data Governance] | [!UICONTROL Affichage des politiques dʼutilisation des données] | Accès en lecture seule pour les politiques dʼutilisation des données appartenant à votre organisation. |
+| [!DNL Data Governance] | [!UICONTROL Afficher le journal d’activité de l’utilisateur] | Accès en lecture seule pour afficher les [journaux d’audit](../landing/governance-privacy-security/audit-logs/overview.md) enregistrés des activités de Platform. |
+| [!DNL Data Ingestion] | [!UICONTROL Gestion des sources] | Accès à la lecture, la création, la modification et la désactivation des sources. |
+| [!DNL Data Ingestion] | [!UICONTROL Affichage des sources] | Accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux sources authentifiées dans l’onglet **[!UICONTROL Parcourir]**. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Accès à la création, lʼacceptation et le refus de négociations entre partenaires afin de connecter deux organisations et d’activer les flux [!DNL Segment Match]. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Accès à la lecture, la création, la modification et la publication de flux [!DNL Segment Match] avec des partenaires actifs. |
 | [!DNL Data Lifecycle] | [!UICONTROL Afficher le cycle de vie des données] | Accès en lecture seule au cycle de vie des données. |
 | [!DNL Data Lifecycle] | [!UICONTROL Gérer le cycle de vie des données] | Accès à la lecture, la création, la modification et la suppression du cycle de vie des données. |
 | [!DNL Data Modeling] | [!UICONTROL Gestion des schémas] | Accès pour lire, créer, modifier et supprimer des schémas et des ressources associées. |
@@ -94,6 +106,16 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL Data Management] | [!UICONTROL Gestion des jeux de données] | Accès à la lecture, la création, la modification et la suppression des jeux de données. Accès en lecture seule aux schémas. |
 | [!DNL Data Management] | [!UICONTROL Affichage des jeux de données] | Accès en lecture seule aux jeux de données et aux schémas. |
 | [!DNL Data Management] | [!UICONTROL Surveillance des données] | Accès en lecture seule à la surveillance des jeux de données et des flux. |
+| [!DNL Data Science Workspace] | [!UICONTROL Gestion de l’espace de travail de science des données] | Accès à la lecture, la création, la modification et la suppression dans [!DNL Data Science Workspace]. |
+| [!DNL Destinations] | [!UICONTROL Affichage des destinations] | Accès en lecture seule aux destinations disponibles dans le **[!UICONTROL Catalogue]** et les destinations authentifiées dans l’onglet **[!UICONTROL Parcourir]** . |
+| [!DNL Destinations] | [!UICONTROL Gérer les destinations] | Accès à la lecture, la création et la suppression des connexions de destination et des comptes de destination. |
+| [!DNL Destinations] | [!UICONTROL Activation des destinations] | Permet aux utilisateurs et utilisatrices d’activer des segments vers des destinations existantes. Active l’étape de mappage dans le workflow d’activation. Cette autorisation nécessite également la fonction [!UICONTROL Affichage des destinations] autorisation à être accordée à l’utilisateur qui activera les données vers les destinations. |
+| [!DNL Destinations] | [!UICONTROL Activer un segment sans mappage] | Permet aux utilisateurs et utilisatrices d’activer des segments vers des destinations existantes, sans afficher l’[étape de mappage](../destinations/ui/activate-batch-profile-destinations.md#mapping). Les utilisateurs et utilisatrices peuvent ajouter et supprimer des segments dans les workflows d’activation, mais ne peuvent pas ajouter ni supprimer des attributs ou des identités mappés. Cette autorisation nécessite également la fonction [!UICONTROL Affichage des destinations] autorisation à être accordée à l’utilisateur qui activera les données vers les destinations. |
+| [!DNL Destinations] | [!UICONTROL Gérer et activer des destinations de jeu de données] | Possibilité de lire, créer, modifier et désactiver les flux d’exportation des jeux de données. Possibilité d’activer des données vers des jeux de données actifs qui ont été créés. Cette autorisation nécessite également la fonction [!UICONTROL Affichage des destinations] autorisation à être accordée à l’utilisateur qui activera les données vers les destinations. |
+| [!DNL Destinations] | [!UICONTROL Création de destinations] | Possibilité de créer des destinations à lʼaide du [SDK Destination Adobe Experience Platform](../destinations/destination-sdk/overview.md). |
+| [!DNL Identity Management] | [!UICONTROL Gestion des espaces de noms d’identité] | Accès à la lecture, la création, la modification et la suppression des espaces de noms d’identité. |
+| [!DNL Identity Management] | [!UICONTROL Affichages des espaces de noms d’identité] | Accès en lecture seule aux espaces de noms d’identité. |
+| [!DNL Identity Management] | [!UICONTROL Afficher un graphique d’identité] | Accès en lecture seule aux graphiques d’identité. |
 | [!DNL Profile Management] | [!UICONTROL Gestion des profils] | Accès à la lecture, la création, la modification et la suppression des jeux de données utilisés pour les profils de clients. Accès en lecture seule aux profils disponibles. |
 | [!DNL Profile Management] | [!UICONTROL Affichage des profils] | Accès en lecture seule aux profils disponibles. |
 | [!DNL Profile Management] | [!UICONTROL Gestion des segments] | Accès à la lecture, la création, la modification et la suppression des segments. |
@@ -107,31 +129,11 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL Profile Management] | [!UICONTROL Gestion de l’IA B2B] | Accès à la lecture, la création, la modification et la suppression des paramètres et des configurations pour tous les services B2B AI/ML. |
 | [!DNL Profile Management] | [!UICONTROL Affichage du profil B2B] | Accès en lecture seule aux profils d’entité B2B (tels que Compte, Opportunité, etc.), aux paramètres et configurations pour tous les services B2B AI/ML et aux widgets de tableau de bord B2B. |
 | [!DNL Profile Management] | [!UICONTROL Gestion du profil B2B] | Accès à la lecture, la création, la modification et la suppression des profils d’entité B2B (tels que Compte, Opportunité, etc.). Accès en lecture seule aux paramètres et configurations pour tous les services B2B AI/ML et aux widgets de tableau de bord B2B. |
-| [!DNL Identity Management] | [!UICONTROL Gestion des espaces de noms d’identité] | Accès à la lecture, la création, la modification et la suppression des espaces de noms d’identité. |
-| [!DNL Identity Management] | [!UICONTROL Affichages des espaces de noms d’identité] | Accès en lecture seule aux espaces de noms d’identité. |
-| [!DNL Identity Management] | [!UICONTROL Afficher un graphique d’identité] | Accès en lecture seule aux graphiques d’identité. |
+| [!DNL Query Service] | [!UICONTROL Gestion des requêtes] | Accès à la lecture, la création, la modification et la suppression des requêtes SQL structurées pour les données Platform. |
+| [!DNL Query Service] | [!UICONTROL Gestion de lʼintégration de Query Service] | Accès à la création, la mise à jour et la suppression des informations dʼidentification sans date dʼexpiration pour lʼaccès à Query Service. |
 | [!DNL Sandbox Administration] | [!UICONTROL Gestion des sandbox] | Accès à la lecture, la création, la modification et la suppression des sandbox. |
 | [!DNL Sandbox Administration] | [!UICONTROL Affichage des sandbox] | Accès en lecture seule aux sandbox appartenant à votre organisation. |
 | [!DNL Sandbox Administration] | [!UICONTROL Réinitialisation d’un sandbox] | Capacité à réinitialiser un sandbox. |
-| [!DNL Destinations] | [!UICONTROL Affichage des destinations] | Accès en lecture seule aux destinations disponibles dans le **[!UICONTROL Catalogue]** et les destinations authentifiées dans l’onglet **[!UICONTROL Parcourir]** . |
-| [!DNL Destinations] | [!UICONTROL Gérer les destinations] | Accès à la lecture, la création et la suppression des connexions de destination et des comptes de destination. |
-| [!DNL Destinations] | [!UICONTROL Activation des destinations] | Permet aux utilisateurs et utilisatrices d’activer des segments vers des destinations existantes. Active l’étape de mappage dans le workflow d’activation. Cette autorisation nécessite également la fonction [!UICONTROL Affichage des destinations] autorisation à être accordée à l’utilisateur qui activera les données vers les destinations. |
-| [!DNL Destinations] | [!UICONTROL Activer un segment sans mappage] | Permet aux utilisateurs et utilisatrices d’activer des segments vers des destinations existantes, sans afficher l’[étape de mappage](../destinations/ui/activate-batch-profile-destinations.md#mapping). Les utilisateurs et utilisatrices peuvent ajouter et supprimer des segments dans les workflows d’activation, mais ne peuvent pas ajouter ni supprimer des attributs ou des identités mappés. Cette autorisation nécessite également la fonction [!UICONTROL Affichage des destinations] autorisation à être accordée à l’utilisateur qui activera les données vers les destinations. |
-| [!DNL Destinations] | [!UICONTROL Gérer et activer des destinations de jeu de données] | Possibilité de lire, créer, modifier et désactiver les flux d’exportation des jeux de données. Possibilité d’activer des données vers des jeux de données actifs qui ont été créés. Cette autorisation nécessite également la fonction [!UICONTROL Affichage des destinations] autorisation à être accordée à l’utilisateur qui activera les données vers les destinations. |
-| [!DNL Destinations] | [!UICONTROL Création de destinations] | Possibilité de créer des destinations à lʼaide du [SDK Destination Adobe Experience Platform](../destinations/destination-sdk/overview.md). |
-| [!DNL Data Ingestion] | [!UICONTROL Gestion des sources] | Accès à la lecture, la création, la modification et la désactivation des sources. |
-| [!DNL Data Ingestion] | [!UICONTROL Affichage des sources] | Accès en lecture seule aux sources disponibles dans l’onglet **[!UICONTROL Catalogue]** et aux sources authentifiées dans l’onglet **[!UICONTROL Parcourir]**. |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Accès à la création, lʼacceptation et le refus de négociations entre partenaires afin de connecter deux organisations et d’activer les flux [!DNL Segment Match]. |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Accès à la lecture, la création, la modification et la publication de flux [!DNL Segment Match] avec des partenaires actifs. |
-| [!DNL Data Science Workspace] | [!UICONTROL Gestion de l’espace de travail de science des données] | Accès à la lecture, la création, la modification et la suppression dans [!DNL Data Science Workspace]. |
-| Gouvernance des données | [!UICONTROL Gestion des étiquettes d’utilisation] | Accès à la lecture, la création et la suppression des étiquettes dʼutilisation des données. |
-| Gouvernance des données | [!UICONTROL Gestion des politiques dʼutilisation des données] | Accès à la lecture, la création, la modification et la suppression des politiques dʼutilisation des données. |
-| Gouvernance des données | [!UICONTROL Affichage des politiques dʼutilisation des données] | Accès en lecture seule pour les politiques dʼutilisation des données appartenant à votre organisation. |
-| Gouvernance des données | [!UICONTROL Afficher le journal d’activité de l’utilisateur] | Accès en lecture seule pour afficher les [journaux d’audit](../landing/governance-privacy-security/audit-logs/overview.md) enregistrés des activités de Platform. |
-| [!DNL Dashboards] | [!UICONTROL Afficher le tableau de bord d’utilisation des licences] | Accès en lecture seule pour afficher le tableau de bord de l’utilisation des licences. |
-| [!DNL Dashboards] | [!UICONTROL Gestion des tableaux de bord standard] | Ajoutez des attributs personnalisés qui ne se trouvent pas encore dans l’entrepôt de données. |
-| [!DNL Query Service] | [!UICONTROL Gestion des requêtes] | Accès à la lecture, la création, la modification et la suppression des requêtes SQL structurées pour les données Platform. |
-| [!DNL Query Service] | [!UICONTROL Gestion de lʼintégration de Query Service] | Accès à la création, la mise à jour et la suppression des informations dʼidentification sans date dʼexpiration pour lʼaccès à Query Service. |
 
 ## Étapes suivantes
 
