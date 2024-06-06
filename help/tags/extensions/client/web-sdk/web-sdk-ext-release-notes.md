@@ -5,7 +5,7 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 source-git-commit: 5086e6419c14356b47963b8445389a0048ad11d7
 workflow-type: tm+mt
 source-wordcount: '2158'
-ht-degree: 94%
+ht-degree: 97%
 
 ---
 
@@ -23,22 +23,22 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 * Correction d’une erreur qui se produisait lors de la modification d’une action de variable de mise à jour.
 * Autoriser la réinitialisation du conteneur de synchronisation des identifiants dans les remplacements de configuration.
 
-Contient la version 2.20.0 du SDK Web de Adobe Experience Platform.
+Contient la version 2.20.0 du SDK web d’Adobe Experience Platform.
 
-## Version 2.23.1 - mercredi 28 mai 2024
+## Version 2.23.1 - 28 mai 2024
 
 **Nouvelles fonctionnalités**
 
-* Ajout de la prise en charge de la fonction [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) dans la configuration de l’extension.
-* Ajout de la [`Send Media Event`](action-types.md#send-media-event) pour la variable [!DNL Streaming Media Collection] .
-* Ajout de la [`Media: Quality of Experience`](data-element-types.md#quality-experience) élément de données pour la variable [!DNL Streaming Media Collection] .
+* Ajout de la prise en charge du composant [`Streaming Media Collection`](web-sdk-extension-configuration.md#streaming-media) dans la configuration de l’extension.
+* Ajout de l’action [`Send Media Event`](action-types.md#send-media-event) pour la fonctionnalité [!DNL Streaming Media Collection].
+* Ajout de l’élément de données [`Media: Quality of Experience`](data-element-types.md#quality-experience) pour la fonctionnalité [!DNL Streaming Media Collection].
 
-Contient la version 2.20.0 du SDK Web de Adobe Experience Platform.
+Contient la version 2.20.0 du SDK web d’Adobe Experience Platform.
 
 **Correctifs et améliorations**
 
-* Correction d’une erreur qui se produisait lors de la recherche d’éléments de données dans la variable [Mettre à jour la variable](action-types.md#update-variable) action.
-* Supprimé [!UICONTROL Média] types d’événement parmi les types d’événement proposés à utiliser dans la variable `sendEvent` action.
+* Correction d’une erreur qui se produisait lors de la recherche d’éléments de données dans l’action [Mettre à jour la variable](action-types.md#update-variable).
+* Suppression des types d’événement [!UICONTROL Médias] parmi les types d’événement proposés à l’utilisation dans l’action `sendEvent`.
 
 ## Version 2.22.0 - 3 mai 2024
 
