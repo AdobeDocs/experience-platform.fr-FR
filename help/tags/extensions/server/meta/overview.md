@@ -2,10 +2,10 @@
 title: Présentation de l’extension de l’API Meta Conversions
 description: Découvrez l’extension de l’API Meta Conversions pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: f7fdfbf9afcecb255668d5d6393b87918114b067
+source-git-commit: 3cd937f49f27006e3cab60df1692d33138944ce2
 workflow-type: tm+mt
-source-wordcount: '2578'
-ht-degree: 1%
+source-wordcount: '2583'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 La variable [[!DNL Meta Conversions API]](https://developers.facebook.com/docs/marketing-api/conversions-api/) vous permet de connecter vos données marketing côté serveur à [!DNL Meta] des technologies permettant d’optimiser le ciblage de vos publicités, de réduire le coût par action et de mesurer les résultats. Les événements sont liés à un [[!DNL Meta Pixel]](https://developers.facebook.com/docs/meta-pixel/) Les identifiants et sont traités de la même manière que les événements côté client.
 
-En utilisant la variable [!DNL Meta Conversions API] , vous pouvez tirer parti des fonctionnalités de l’API dans votre [transfert d’événement](../../../ui/event-forwarding/overview.md) règles d’envoi de données à [!DNL Meta] à partir du réseau Adobe Experience Platform Edge. Ce document explique comment installer l’extension et utiliser ses fonctionnalités dans un transfert d’événement. [règle](../../../ui/managing-resources/rules.md).
+En utilisant la variable [!DNL Meta Conversions API] , vous pouvez tirer parti des fonctionnalités de l’API dans votre [transfert d’événement](../../../ui/event-forwarding/overview.md) règles d’envoi de données à [!DNL Meta] de l’Edge Network Adobe Experience Platform. Ce document explique comment installer l’extension et utiliser ses fonctionnalités dans un transfert d’événement. [règle](../../../ui/managing-resources/rules.md).
 
 ## Démonstration
 
@@ -53,15 +53,15 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**
 
 L’extension est installée et vous pouvez désormais utiliser ses fonctionnalités dans vos règles de transfert d’événement.
 
-## Intégration avec Meta Business Extension (MBE) {#mbe}
+## Intégration à l’extension Facebook et Instagram {#facebook}
 
-L’amélioration de l’intégration à Meta Business Extensions (MBE) vous permet de vous authentifier rapidement dans votre compte Meta Business. Cela renseigne ensuite automatiquement la variable [!UICONTROL ID de pixel] et l’API de métadonnées de conversion [!UICONTROL Jeton d’accès], ce qui facilite l’installation et la configuration de l’API de métadonnées de conversion.
+L’intégration à l’aide de l’extension Facebook et Instagram vous permet de vous authentifier rapidement dans votre compte Meta Business. Cela renseigne ensuite automatiquement la variable [!UICONTROL ID de pixel] et l’API de métadonnées de conversion [!UICONTROL Jeton d’accès], ce qui facilite l’installation et la configuration de l’API de métadonnées de conversion.
 
-Une invite de dialogue pour s’authentifier dans MBE s’affiche lors de l’installation de la variable [!UICONTROL API des conversions de métadonnées] extension .
+Une invite de dialogue permettant de s’authentifier dans Facebook et Instagram s’affiche lors de l’installation du [!UICONTROL API des conversions de métadonnées] extension .
 
 ![La variable [!UICONTROL Extension de l’API Meta Conversions] mise en surbrillance de la page d’installation [!UICONTROL Connexion aux métadonnées].](../../../images/extensions/server/meta/mbe-extension-install.png)
 
-Une invite de dialogue permettant de s’authentifier dans MBE s’affiche également dans l’interface utilisateur du processus de démarrage rapide dans le transfert d’événement.
+Une invite de dialogue permettant de s’authentifier dans Facebook et Instagram s’affiche également dans l’interface utilisateur du processus de démarrage rapide dans le transfert d’événement.
 
 ![Mise en surbrillance de l’interface utilisateur de processus de démarrage rapide [!UICONTROL Connexion aux métadonnées].](../../../images/extensions/server/meta/mbe-extension-quick-start.png)
 
@@ -129,7 +129,7 @@ Lors de l’envoi d’événements partagés, veillez à inclure un identifiant 
 
 La fonction de démarrage rapide vous permet de configurer facilement et efficacement l’API des conversions de métadonnées et les extensions de pixel de métadonnées. Cet outil automatise plusieurs étapes effectuées dans les balises Adobe et le transfert d’événement, réduisant considérablement le temps de configuration.
 
-Cette fonctionnalité installe et configure automatiquement l’API des conversions de métadonnées et les extensions de pixel de métadonnées sur une nouvelle propriété de transfert d’événement et de balises générées automatiquement avec les règles et les éléments de données nécessaires. De plus, il installe et configure automatiquement le SDK Web et la banque de données Experience Platform. Enfin, la fonction de démarrage rapide publie automatiquement la bibliothèque à l’URL désignée dans un environnement de développement, ce qui permet la collecte de données côté client et le transfert d’événements côté serveur en temps réel via Event Forwarding et Experience Platform Edge Network.
+Cette fonctionnalité installe et configure automatiquement l’API des conversions de métadonnées et les extensions de pixel de métadonnées sur une nouvelle propriété de transfert d’événement et de balises générées automatiquement avec les règles et les éléments de données nécessaires. De plus, il installe et configure automatiquement le SDK Web et la banque de données Experience Platform. Enfin, la fonction de démarrage rapide publie automatiquement la bibliothèque à l’URL désignée dans un environnement de développement, ce qui permet la collecte de données côté client et le transfert d’événements côté serveur en temps réel via le transfert d’événements et l’Edge Network Experience Platform.
 
 La vidéo suivante présente la fonction de démarrage rapide.
 
