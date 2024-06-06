@@ -1,9 +1,10 @@
 ---
 title: Assistant IA dans Adobe Experience Platform
 description: Découvrez comment utiliser l’assistant d’IA pour parcourir et comprendre les concepts Experience Platform et Real-time Customer Data Platform, ainsi que les informations d’utilisation relatives à vos objets.
-source-git-commit: 0820ba0f14e9eae5d89cd48490b1af5f9afcda70
+exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
+source-git-commit: 1c228eb95075d4302ab6d3544fff8766087411bf
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1379'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ Lisez ce guide pour découvrir comment utiliser l’assistant d’IA dans l’in
 
 Pour lancer l’assistant, sélectionnez la méthode **[!UICONTROL Icône Assistant IA]** dans l’en-tête supérieur de l’interface utilisateur de l’Experience Platform.
 
-![Page d’accueil de l’Experience Platform, avec l’icône Assistant d’IA sélectionnée et l’interface Assistant d’IA ouverte.](./images/ai-assistant.png)
+![Page d’accueil de l’Experience Platform, avec l’icône Assistant d’IA sélectionnée et l’interface Assistant d’IA ouverte.](./images/ai-assistant-full-icon.png)
 
 L’interface de l’assistant d’IA s’affiche, vous fournissant immédiatement des informations pour commencer. Vous pouvez utiliser les options fournies sous [!UICONTROL Idées de démarrage] pour répondre à des questions et à des commandes telles que :
 
@@ -86,9 +87,13 @@ Vous devez être dans un environnement de test actif pour que l’assistant d’
 
 +++Sélectionner pour afficher un exemple d’une question d’informations opérationnelles
 
-Dans l’exemple ci-dessous, la requête suivante est demandée à l’assistant d’IA : **&quot;Afficher les flux de données créés à l’aide de la source Amazon S3&quot;**, l’assistant d’IA répond ensuite avec un tableau répertoriant vos flux de données et leurs identifiants correspondants. Pour afficher l’ensemble du tableau de données, sélectionnez l’icône Développer en haut à droite.
+Dans l’exemple ci-dessous, la requête suivante est demandée à l’assistant d’IA : **&quot;Afficher les flux de données créés à l’aide de la source Amazon S3&quot;**.
 
-![Suivez la question sur les connaissances opérationnelles.](./images/usage-data-question.png)
+![Une question sur les connaissances opérationnelles.](./images/op-insights-question.png)
+
+L’assistant d’IA répond ensuite avec un tableau répertoriant vos flux de données et leurs identifiants correspondants. Pour afficher l’ensemble du tableau de données, sélectionnez l’icône Développer en haut à droite.
+
+![Une réponse sur les aspects opérationnels](./images/op-insights-answer.png)
 
 Une vue étendue du tableau s’affiche, vous fournissant une liste plus complète de flux de données en fonction des paramètres de votre requête.
 
@@ -96,9 +101,13 @@ Une vue étendue du tableau s’affiche, vous fournissant une liste plus complè
 
 Lorsque vous y êtes invité avec une question d’informations opérationnelles, l’assistant d’IA explique comment il a calculé la réponse. Dans l’exemple ci-dessous, l’assistant d’IA décrit les étapes nécessaires pour identifier les flux de données créés à l’aide de la variable [!DNL Amazon S3] source.
 
-![Suivez la question relative aux définitions de segment illustrant la manière dont l’assistant d’IA a calculé la réponse.](./images/answer-explained.png)
+![Assistant d’IA fournissant une explication sur la manière dont il a calculé sa réponse.](./images/answer-explained.png)
 
 Vous pouvez également fournir des filtres et des modifications à vos questions. Vous pouvez également demander à l’assistant d’IA de rendre ses résultats en fonction des filtres que vous incluez. Par exemple, vous pouvez demander à l’assistant d’IA de vous afficher une tendance du nombre de définitions de segment dans l’ordre de leur date de création, de supprimer les définitions de segment avec zéro total de profils et d’utiliser des noms de mois plutôt que des entiers lors de l’affichage des données.
+
+**Remarque :** Les réponses sur les informations opérationnelles sont actuellement en version bêta. Sélectionnez l’icône d’info-bulle dans l’interface utilisateur de l’assistant d’IA pour afficher l’avis bêta et pour obtenir un lien vers la documentation.
+
+![Icône d’info-bulle de l’assistant AI sélectionnée.](./images/op-insights-beta-note.png)
 
 +++
 
@@ -122,7 +131,27 @@ Vous pouvez utiliser les fonctionnalités à plusieurs volets de l’assistant d
 
 Dans l’exemple ci-dessous, l’assistant d’IA est d’abord invité à indiquer le nombre total de flux de données, puis à répertorier les 10 flux de données les plus récents.
 
-![Exemple de multi-tour](./images/multi-turn.png)
+![Exemple de multi-tour](./images/multiturn.png)
+
+Pour la réinitialiser, sélectionnez les ellipses (**`...`**) dans l’interface de l’assistant, puis sélectionnez **[!UICONTROL Commencer une nouvelle conversation]**. Cela indique à l’assistant d’IA que vous avez l’intention de modifier les rubriques et peut s’avérer particulièrement utile lors de la résolution des problèmes liés aux requêtes qui échouent ou qui référencent des informations incorrectes.
+
+![Les ellipses sélectionnées et l’option Démarrer une nouvelle conversation sélectionnée.](./images/reset.png)
+
++++
+
+### Utilisation de la recherche {#use-discoverability}
+
+Vous pouvez utiliser la fonction de découverte de l’assistant d’IA pour afficher la liste des sujets généraux, regroupés en entités, pris en charge par l’assistant d’IA.
+
++++Sélectionner pour afficher un exemple de capacité de découverte
+
+Pour afficher la visibilité, sélectionnez l’icône d’ampoule dans l’en-tête supérieur de l’interface de l’assistant d’IA.
+
+![Fonctionnalité de découverte de l’assistant d’IA.](./images/lightbulb.png)
+
+Sélectionnez ensuite une catégorie, puis une invite dans la liste fournie. Vous pouvez utiliser cette fonction pour mieux comprendre les types de questions auxquelles l’assistant d’IA peut répondre. Vous pouvez également mettre à jour les invites préexistantes avec des détails spécifiques relatifs à votre environnement de test à l’aide de texte libre ou [autocomplete](#use-auto-complete).
+
+![L’assistant d’IA vous invite à effectuer des recherches.](./images/prompt.png)
 
 +++
 
@@ -133,8 +162,6 @@ Vous pouvez fournir des commentaires sur votre expérience avec l’assistant d�
 Pour fournir des commentaires, sélectionnez un bouton de haut, un bouton de bas ou un indicateur après avoir reçu une réponse de l’assistant d’IA, puis saisissez vos commentaires dans la zone de texte fournie.
 
 ![Option de commentaire dans l’assistant d’IA.](./images/provide-feedback.png)
-
-Pour la réinitialiser, sélectionnez les ellipses (**`...`**) dans l’interface de l’assistant, puis sélectionnez **[!UICONTROL Commencer une nouvelle conversation]**. Cela indique à l’assistant d’IA que vous avez l’intention de modifier les rubriques et peut s’avérer particulièrement utile lors de la résolution des problèmes liés aux requêtes qui échouent ou qui référencent des informations incorrectes.
 
 +++Sélectionner pour afficher d’autres exemples
 
