@@ -5,9 +5,9 @@ breadcrumb-title: Guide des connecteurs source
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
+source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1046'
 ht-degree: 95%
 
 ---
@@ -350,6 +350,7 @@ ht-degree: 95%
       - [Flux de données de connexion au protocole](tutorials/ui/dataflow/protocols.md)
    - [Créer un flux de données de sources à l’aide de modèles dans l’interface utilisateur](tutorials/ui/templates.md)
    - [Filtrage des objets de sources](tutorials/ui/filter.md)
+   - [Ingérer des données chiffrées](tutorials/ui/encryped-ingestion.md)
    - [Ingestion à la demande](tutorials/ui/on-demand-ingestion.md)
    - [Surveiller les flux de données par lots](tutorials/ui/monitor.md)
    - [Surveiller les flux de données de diffusion en continu](tutorials/ui/monitor-streaming.md)
