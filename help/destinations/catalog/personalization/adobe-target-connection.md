@@ -3,9 +3,9 @@ keywords: personnalisation cible;destination;destination cible Experience Platfo
 title: Connexion Adobe Target
 description: Adobe Target est une application qui permet la personnalisation et l’expérimentation en temps réel, grâce à l’IA, au niveau de toutes les interactions avec les clients entrants sur les sites web, les applications mobiles, etc.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: ddc15a36e83ebe059f3b4f81f3feccb2d3a4a4f0
+source-git-commit: e5c34ffb9b27ddad0c6523a7279fdf712c84f3ff
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1555'
 ht-degree: 29%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 29%
 
 | Mois de publication | Type de mise à jour | Description |
 |---|---|---|
-| Avril 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | Lors de la connexion à la destination Target avec un identifiant de flux de données, vous devez maintenant *ne doivent pas* pour activer nécessairement le flux de données pour la segmentation edge. Cela signifie que la destination Target fonctionnera avec les audiences par lots et en flux continu, bien que les cas d’utilisation que vous pouvez accomplir diffèrent. Affichez le tableau de la section [paramètres de connexion](#parameters) pour plus d’informations. |
+| Avril 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | Lors de la connexion à la destination Target et de l’utilisation d’un identifiant de flux de données, vous *ne doivent pas* pour activer nécessairement le flux de données pour la segmentation edge. Cela signifie que la destination Target fonctionnera avec les audiences par lots et en flux continu, bien que les cas d’utilisation que vous pouvez accomplir diffèrent. Affichez le tableau de la section [paramètres de connexion](#parameters) pour plus d’informations. |
 | Janvier 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | Vous pouvez désormais partager des audiences et des attributs de profil avec la connexion Adobe Target pour l’environnement de test de production par défaut et d’autres environnements de test autres que ceux par défaut. |
 | Juin 2023 | Nouvelles fonctionnalités et mise à jour de la documentation | Depuis juin 2023, vous pouvez sélectionner l’espace de travail Adobe Target auquel vous souhaitez partager des audiences lors de la configuration d’une nouvelle connexion à la destination Adobe Target. Consultez la section [Paramètres de connexion](#parameters) pour plus d’informations. En outre, consultez le tutoriel sur la [configuration des espaces de travail](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) dans Adobe Target pour plus d’informations sur les espaces de travail. |
 | Mai 2023 | Nouvelles fonctionnalités et mise à jour de la documentation | En mai 2023, la **[!UICONTROL Adobe Target]** prise en charge de la connexion [personnalisation basée sur les attributs](../../ui/activate-edge-personalization-destinations.md#map-attributes) et est généralement disponible pour tous les clients. |
@@ -62,9 +62,9 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 
 >[!IMPORTANT]
 >
->Les audiences que vous activez sur cette destination doivent utiliser la variable [Stratégie de fusion active sur périphérie](../../../segmentation/ui/segment-builder.md#merge-policies). La variable [!DNL Active-On-Edge] la stratégie de fusion garantit que les audiences sont constamment évaluées. [sur le bord](../../../segmentation/ui/edge-segmentation.md) et sont disponibles pour les cas d’utilisation de la personnalisation en temps réel et de la page suivante.
-> Si vous mappez des audiences qui utilisent une autre stratégie de fusion avec des destinations de périphérie, ces audiences ne seront pas évaluées.
-> Suivez les instructions de la section [création d’une politique de fusion](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy) et assurez-vous d’activer le bouton **[!UICONTROL Politique de fusion Active-On-Edge]**.
+>Lors de l’activation *audiences Edge pour les cas d’utilisation de la personnalisation de la même page et de la page suivante*, les audiences *must* utiliser une [stratégie de fusion active-on-edge](../../../segmentation/ui/segment-builder.md#merge-policies). La variable [!DNL active-on-edge] la stratégie de fusion garantit que les audiences sont constamment évaluées. [sur le bord](../../../segmentation/ui/edge-segmentation.md) et sont disponibles pour les cas d’utilisation de la personnalisation en temps réel et de la page suivante.  En savoir plus [tous les cas d’utilisation disponibles](#parameter), en fonction du type d’implémentation.
+>Si vous mappez des audiences de périphérie qui utilisent une stratégie de fusion différente vers des destinations Adobe Target, ces audiences ne seront pas évaluées pour les cas d’utilisation en temps réel et de la page suivante.
+>Suivez les instructions de la section [création d’une politique de fusion](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy) et assurez-vous d’activer le bouton **[!UICONTROL Politique de fusion Active-On-Edge]**.
 
 
 | Origine de l’audience | Pris en charge | Description |
