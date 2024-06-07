@@ -3,10 +3,10 @@ title: Présentation du transfert dʼévénements
 description: Découvrez Adobe Experience Platform, qui vous permet dʼutiliser Platform Edge Network afin dʼexécuter des tâches sans modifier votre implémentation de balises.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
+source-git-commit: 16f9ee9d14326f857b444c2361b894aca06b04d6
 workflow-type: tm+mt
-source-wordcount: '1160'
-ht-degree: 76%
+source-wordcount: '1178'
+ht-degree: 75%
 
 ---
 
@@ -112,6 +112,12 @@ La section [!UICONTROL Actions] d’une règle de transfert d’événements est
 ## Secrets {#secrets}
 
 Le transfert d’événements vous permet de créer, gérer et stocker des secrets qui peuvent être utilisés pour vous authentifier sur les serveurs auxquels vous envoyez des données. Consultez le guide sur les [secrets](./secrets.md) pour connaître les différents types de secrets disponibles et la manière dont ils sont implémentés dans l’interface utilisateur.
+
+## Vue d’ensemble des vidéos {#video}
+
+La vidéo suivante est destinée à vous aider à mieux comprendre le transfert des événements et les connexions Real-Time CDP.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429308)
 
 ## Étapes suivantes
 
