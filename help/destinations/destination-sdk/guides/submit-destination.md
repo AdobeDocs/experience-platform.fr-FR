@@ -2,9 +2,9 @@
 description: Cette page fournit toutes les informations dont vous avez besoin pour soumettre une révision d’une destination productisée créée à l’aide de Destination SDK.
 title: Envoyer pour révision une destination productisée créée en Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 2c778f98815af87453e84f24ba8bf077774349a1
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1032'
 ht-degree: 36%
 
 ---
@@ -22,6 +22,8 @@ ht-degree: 36%
 >* Si l’équipe d’Adobe vous demande d’apporter des mises à jour à vos configurations après votre envoi initial, vous devez envoyer une autre demande de publication de destination après avoir effectué les mises à jour.
 >
 >* Même une fois votre destination publiée dans le catalogue des Experience Platform, si vous devez apporter des mises à jour à vos configurations, vous devez envoyer une nouvelle demande de publication de destination pour que les mises à jour soient répercutées dans les configurations.
+>
+>* La chronologie de révision et les artefacts requis sont les mêmes pour les nouvelles destinations et les destinations existantes que vous mettez à jour.
 
 Pour que votre destination puisse être publiée dans le [catalogue des destinations Experience Platform](/help/destinations/catalog/overview.md), vous devez fournir à Adobe certaines informations sur la destination et les tests effectués. Cela permet de sʼassurer que les utilisateurs bénéficient de la meilleure expérience possible lors de l’activation des données vers votre plateforme.
 
@@ -227,7 +229,7 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/a
 
 ## Autres exigences pour les destinations basées sur des fichiers {#additional-file-based-destination-requirements}
 
-Pour les destinations basées sur des fichiers, vous devez fournir un BAT supplémentaire que vous avez correctement configuré votre destination. Veillez à inclure les éléments ci-dessous :
+Pour les destinations basées sur des fichiers, vous devez fournir un preuve supplémentaire que vous avez correctement configuré votre destination. Veillez à inclure les éléments ci-dessous :
 
 ### Test de la réponse de l’API {#testing-api-response-file-based}
 
