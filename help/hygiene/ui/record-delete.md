@@ -1,12 +1,12 @@
 ---
 title: Suppression d’enregistrements
 description: Découvrez comment supprimer des enregistrements dans l’interface utilisateur de Adobe Experience Platform.
-badgeBeta: label="Version Beta" type="Informative"
+badgeBeta: label="Version bêta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: d9d2ab2da87adce45242cbb0c4132a4d17fcc4a6
+source-git-commit: 9981f35732b041a92c5a371e727a8facb6636cf5
 workflow-type: tm+mt
-source-wordcount: '1566'
-ht-degree: 34%
+source-wordcount: '1567'
+ht-degree: 20%
 
 ---
 
@@ -23,7 +23,7 @@ Utilisez la variable [[!UICONTROL Cycle de vie des données] workspace](./overvi
 
 ## Conditions préalables {#prerequisites}
 
-La suppression d’enregistrements nécessite une compréhension pratique du fonctionnement des champs d’identité dans Experience Platform. Plus précisément, vous devez connaître les valeurs d’identité principales des entités dont vous souhaitez supprimer les enregistrements, en fonction du jeu de données (ou des jeux de données) dans lequel vous les supprimez.
+La suppression d’enregistrements nécessite une compréhension pratique du fonctionnement des champs d’identité dans Experience Platform. Plus précisément, vous devez connaître les valeurs d’espace de noms d’identité des entités dont vous souhaitez supprimer les enregistrements, en fonction du jeu de données (ou des jeux de données) dont vous les supprimez.
 
 Pour plus d’informations sur les identités dans Platform, consultez la documentation suivante :
 
@@ -43,13 +43,13 @@ Le workflow de création de requête s’affiche. Par défaut, la variable **[!U
 
 >[!IMPORTANT]
 > 
->Dans le cadre des modifications en cours visant à améliorer l’efficacité et à rendre les opérations de jeux de données moins coûteuses, les organisations qui ont été déplacées au format Delta peuvent supprimer des données d’Identity Service, de Real-Time Customer Profile et du lac de données. Ce type d’utilisateur est appelé delta-migrated. Les utilisateurs des organisations qui ont fait l’objet d’une migration delta peuvent choisir de supprimer des enregistrements d’un seul jeu de données ou de tous les jeux de données. Les utilisateurs d’organisations qui n’ont pas fait l’objet d’une migration différentielle ne peuvent pas choisir de supprimer des enregistrements d’un seul jeu de données ou de tous les jeux de données comme illustré dans l’image ci-dessous. Dans ce cas, continuez à [fournir des identités](#provide-identities) du guide.
+>Pour améliorer l’efficacité et réduire le coût des opérations des jeux de données, les organisations qui ont été déplacées au format Delta peuvent supprimer des données d’Identity Service, de Real-Time Customer Profile et du lac de données. Ce type d’utilisateur est appelé delta-migrated. Les utilisateurs des organisations qui ont fait l’objet d’une migration delta peuvent choisir de supprimer des enregistrements d’un seul jeu de données ou de tous les jeux de données. Les utilisateurs d’organisations qui n’ont pas subi de migration delta ne peuvent pas supprimer de manière sélective des enregistrements d’un seul jeu de données ou de tous les jeux de données, comme illustré dans l’image ci-dessous. Dans ce cas, continuez à [Fournir des identités](#provide-identities) du guide.
 
 ![Le workflow de création de la requête avec la fonction [!UICONTROL Supprimer un enregistrement] sélectionnée et surlignée.](../images/ui/record-delete/delete-record.png)
 
 ## Sélectionner des jeux de données {#select-dataset}
 
-L’étape suivante consiste à déterminer si vous souhaitez supprimer des enregistrements d’un seul jeu de données ou de tous les jeux de données. Si cette option n’est pas disponible, passez à la [fournir des identités](#provide-identities) du guide.
+L’étape suivante consiste à déterminer si vous souhaitez supprimer des enregistrements d’un seul jeu de données ou de tous les jeux de données. Si cette option n’est pas disponible, passez à la [Fournir des identités](#provide-identities) du guide.
 
 Sous , **[!UICONTROL Détails de l’enregistrement]** utilisez le bouton radio pour effectuer une sélection entre un jeu de données spécifique et tous les jeux de données. Si vous choisissez **[!UICONTROL Sélectionner un jeu de données]**, procédez pour sélectionner l’icône de base de données (![Icône Base de données](../images/ui/record-delete/database-icon.png)) pour ouvrir une boîte de dialogue qui fournit une liste de jeux de données disponibles. Sélectionnez le jeu de données souhaité dans la liste, suivi de **[!UICONTROL Terminé]**.
 
@@ -67,30 +67,30 @@ Si vous souhaitez supprimer des enregistrements de tous les jeux de données, s�
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
->title="Identité principale"
->abstract="Une identité principale est un attribut qui lie un enregistrement au profil d’un client dans Experience Platform. Le champ d’identité principale d’un jeu de données est défini par le schéma sur lequel le jeu de données est basé. Dans cette colonne, vous devez indiquer le type (ou l&#39;espace de noms) de l&#39;identité principale de l&#39;enregistrement, par exemple `email` pour les adresses e-mail et `ecid` pour les identifiants Experience Cloud. Pour en savoir plus, consultez le guide de l’interface utilisateur sur le cycle de vie des données."
+>title="Espace de noms d’identité"
+>abstract="Un espace de noms d’identité est un attribut qui lie un enregistrement au profil d’un consommateur dans Experience Platform. Le champ d’espace de noms d’identité d’un jeu de données est défini par le schéma sur lequel le jeu de données est basé. Dans cette colonne, vous devez indiquer le type (ou l’espace de noms) de l’espace de noms d’identité de l’enregistrement, tel que `email` pour les adresses électroniques et `ecid` pour les identifiants Experience Cloud. Pour en savoir plus, consultez le guide de l’interface utilisateur du cycle de vie des données ."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
->title="Valeur de l’identité"
->abstract="Dans cette colonne, vous devez indiquer la valeur de l&#39;identité principale de l&#39;enregistrement, qui doit correspondre au type d&#39;identité fourni dans la colonne de gauche. Si le type d&#39;identité principale est `email`, la valeur doit correspondre à l&#39;adresse e-mail de l&#39;enregistrement. Pour en savoir plus, consultez le guide de l’interface utilisateur sur le cycle de vie des données."
+>title="Valeur d’identité du Principal"
+>abstract="Dans cette colonne, vous devez indiquer la valeur de l’espace de noms de l’identité de l’enregistrement, qui doit correspondre au type d’identité fourni dans la colonne de gauche. Si le type d’espace de noms d’identité est `email`, la valeur doit correspondre à l’adresse électronique de l’enregistrement. Pour en savoir plus, consultez le guide de l’interface utilisateur du cycle de vie des données."
 
-Lors de la suppression d’enregistrements, vous devez fournir des informations d’identité afin que le système puisse déterminer les enregistrements à supprimer. Pour les jeux de données de Platform, les enregistrements sont supprimés en fonction du champ **Identité principale** défini par le schéma du jeu de données.
+Lors de la suppression d’enregistrements, vous devez fournir des informations d’identité afin que le système puisse déterminer les enregistrements à supprimer. Pour tout jeu de données de Platform, les enregistrements sont supprimés en fonction de la variable **espace de noms d’identité** champ défini par le schéma du jeu de données.
 
-Comme tous les champs d’identité de Platform, une identité principale se compose de deux éléments : un **type** (parfois appelé espace de noms d’identité) et une **valeur**. Le type d’identité fournit un contexte sur la manière dont le champ identifie un enregistrement (une adresse électronique, par exemple) et la valeur représente l’identité spécifique d’un enregistrement pour ce type (par exemple, `jdoe@example.com` pour le `email` type d’identité). Les champs courants utilisés comme identités comprennent les informations de compte, les identifiants d’appareil et les identifiants de cookie.
+Comme tous les champs d’identité de Platform, un espace de noms d’identité est composé de deux éléments : un **type** (parfois appelé espace de noms d’identité) et un **value**. Le type d’identité fournit un contexte sur la manière dont le champ identifie un enregistrement (une adresse électronique, par exemple). La valeur représente l’identité spécifique d’un enregistrement pour ce type (par exemple, `jdoe@example.com` pour le `email` type d’identité). Les champs courants utilisés comme identités comprennent les informations de compte, les identifiants d’appareil et les identifiants de cookie.
 
 >[!TIP]
 >
->Si vous ne connaissez pas l’identité principale d’un jeu de données spécifique, vous pouvez la trouver dans l’interface utilisateur de Platform. Dans l’espace de travail **[!UICONTROL Jeux de données]**, sélectionnez le jeu de données en question dans la liste. Sur la page des détails du jeu de données, passez la souris sur le nom du schéma du jeu de données dans le rail de droite. L’identité principale s’affiche avec le nom et la description du schéma.
+>Si vous ne connaissez pas l’espace de noms d’identité d’un jeu de données spécifique, vous pouvez le trouver dans l’interface utilisateur de Platform. Dans l’espace de travail **[!UICONTROL Jeux de données]**, sélectionnez le jeu de données en question dans la liste. Sur la page des détails du jeu de données, passez la souris sur le nom du schéma du jeu de données dans le rail de droite. L’espace de noms de l’identité s’affiche avec le nom et la description du schéma.
 >
 >![Le tableau de bord des jeux de données avec un jeu de données sélectionné et une boîte de dialogue de schéma s’ouvre dans le panneau des détails du jeu de données. L’identifiant principal du jeu de données est mis en surbrillance.](../images/ui/record-delete/dataset-primary-identity.png)
 
-Si vous supprimez des enregistrements d’un seul jeu de données, toutes les identités que vous fournissez doivent avoir le même type, car un jeu de données ne peut avoir qu’une seule identité principale. Si vous effectuez une suppression dans tous les jeux de données, vous pouvez inclure plusieurs types d’identité, car différents jeux de données peuvent avoir différentes identités principales.
+Si vous supprimez des enregistrements d’un seul jeu de données, toutes les identités que vous fournissez doivent avoir le même type, car un jeu de données ne peut avoir qu’un seul espace de noms d’identité. Si vous effectuez une suppression dans tous les jeux de données, vous pouvez inclure plusieurs types d’identité, car différents jeux de données peuvent avoir différentes identités principales.
 
 Deux options permettent de fournir des identités lors de la suppression d’enregistrements :
 
 * [Charger un fichier JSON](#upload-json)
-* [Saisir des valeurs d’identité manuellement](#manual-identity)
+* [Saisie manuelle des valeurs d’identité principale](#manual-identity)
 
 ### Charger un fichier JSON {#upload-json}
 
@@ -116,7 +116,7 @@ Le fichier JSON doit être formaté sous la forme d’un tableau d’objets, cha
 | Propriété | Description |
 | --- | --- |
 | `namespaceCode` | Type d’identité. |
-| `value` | La valeur d’identité telle qu’elle est indiquée par le type. |
+| `value` | La valeur d’identité principale indiquée par le type. |
 
 Une fois le fichier chargé, vous pouvez continuer à [envoyer la requête](#submit).
 
@@ -126,7 +126,7 @@ Pour saisir les identités manuellement, sélectionnez **[!UICONTROL Ajouter une
 
 ![Le workflow de création de la requête avec la fonction [!UICONTROL Ajouter une identité] en surbrillance.](../images/ui/record-delete/add-identity.png)
 
-Les commandes qui s’affichent vous permettent de saisir des identités une par une. Sous **[!UICONTROL Identité principale]**, utilisez le menu déroulant pour sélectionner le type d’identité. Sous **[!UICONTROL Valeur d’identité]**, indiquez la valeur d’identité principale de l’enregistrement.
+Les commandes qui s’affichent vous permettent de saisir des identités une par une. Sous **[!UICONTROL espace de noms d’identité]**, utilisez le menu déroulant pour sélectionner le type d’identité. Sous **[!UICONTROL Valeur d’identité du Principal]**, indiquez la valeur de l’espace de noms d’identité pour l’enregistrement.
 
 ![Le workflow de création de requête avec un champ d’identité ajouté manuellement.](../images/ui/record-delete/identity-added.png)
 
