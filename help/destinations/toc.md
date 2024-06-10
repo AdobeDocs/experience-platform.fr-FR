@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: a6bc9c5d2b4ec9032c70dcf625075e5d3e0442cc
+source-git-commit: e0f4ee0ae0f14df43bfe36375d8fe8e9eac79369
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1224'
 ht-degree: 88%
 
 ---
@@ -216,6 +216,7 @@ ht-degree: 88%
    * [Vue d’ensemble](./destination-sdk/overview.md)
    * [Conditions préalables à l’intégration](./destination-sdk/integration-prerequisites.md)
    * [Prise en main de Destination SDK](./destination-sdk/getting-started.md)
+   * [Glossaire](/help/destinations/destination-sdk/glossary.md)
    * Fonction {#functionality}
       * [Options de configuration](./destination-sdk/functionality/configuration-options.md)
       * Composants du serveur de destination {#destination-server}

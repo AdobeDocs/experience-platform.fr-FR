@@ -2,9 +2,9 @@
 description: Utilisez les modèles de métadonnées d’audience pour créer, mettre à jour ou supprimer des audiences par programmation dans votre destination. Adobe fournit un modèle de métadonnées d’audience extensible que vous pouvez configurer en fonction des spécifications de votre API marketing. Une fois le modèle défini, testé et envoyé, il sera utilisé par Adobe pour structurer les appels API vers votre destination.
 title: Gérer les métadonnées d’audience
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 3660c3a342af07268d2ca2c907145df8237872a1
 workflow-type: tm+mt
-source-wordcount: '1037'
+source-wordcount: '1047'
 ht-degree: 100%
 
 ---
@@ -523,7 +523,7 @@ Notez que dans certains exemples les champs de macro tels que `{{authData.access
 
 Recherchez des descriptions de tous les paramètres du modèle dans la référence de l’API [Création d’un modèle d’audience](../metadata-api/create-audience-template.md).
 
-## Macros utilisées dans les modèles de métadonnées d’audience
+## Macros utilisées dans les modèles de métadonnées d’audience {#macros}
 
 Afin de transmettre des informations telles que des ID d’audience, des jetons d’accès, des messages d’erreur, etc. entre Experience Platform et votre API, les modèles d’audience incluent des macros que vous pouvez utiliser. Lisez ci-dessous une description des macros utilisées dans les trois exemples de configuration de cette page :
 
