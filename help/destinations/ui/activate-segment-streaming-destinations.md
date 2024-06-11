@@ -3,10 +3,10 @@ title: Activation des données d’audience vers des destinations de diffusion e
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les mappant aux destinations de diffusion en continu.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f741e62b3340b743e465edf3f7a007580b3f61be
 workflow-type: tm+mt
-source-wordcount: '1121'
-ht-degree: 20%
+source-wordcount: '1164'
+ht-degree: 16%
 
 ---
 
@@ -62,6 +62,10 @@ Vous pouvez sélectionner plusieurs types d’audiences, selon leur origine :
 >[!IMPORTANT]
 >
 >Cette étape s’applique uniquement à certaines destinations de diffusion en continu d’audience. Si votre destination n’a pas de **[!UICONTROL Mappage]** étape, passez à [planification des audiences](#scheduling).
+>
+>Lors de l’activation d’audiences vers des destinations de diffusion en continu, vous devez également mapper *au moins un espace de noms d’identité cible*, en plus des attributs de profil cibles. Sinon, les audiences ne seront pas activées sur la plateforme de destination.
+> ![Image de l’étape de mappage montrant un mappage d’espace de noms d’identité obligatoire.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+
 
 Certaines destinations de diffusion en continu d’audience nécessitent que vous sélectionniez des attributs source ou des espaces de noms d’identité à mapper en tant qu’identités cibles dans la destination.
 
@@ -98,12 +102,12 @@ Quand vous mappez des attributs source non hachés avec des attributs cibles qui
 
 ![Appliquez le contrôle de transformation mis en surbrillance à l’étape Mappage des identités .](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
-## Planifier l’export d’audience {#scheduling}
+## Planification de l’exportation des audiences {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="Date de fin"
->abstract="L’ajout d’une date de fin pour le planning des audiences n’est pas disponible."
+>abstract="L&#39;ajout d&#39;une date de fin pour le planning de l&#39;audience n&#39;est pas disponible."
 
 Par défaut, la variable **[!UICONTROL Planification de l’audience]** n’affiche que les audiences nouvellement sélectionnées dans le flux d’activation actuel.
 
@@ -137,7 +141,7 @@ Sur la page **[!UICONTROL Vérifier]**, vous pouvez voir un résumé de votre s�
 
 ### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
-Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. En savoir plus [évaluation des stratégies de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) pour plus d’informations.
+Si votre entreprise a acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**, sélectionnez **[!UICONTROL Affichage des stratégies de consentement applicables]** pour identifier les stratégies de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. En savoir plus [évaluation des stratégies de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) pour plus d’informations.
 
 ### Vérifications des stratégies d’utilisation des données {#data-usage-policy-checks}
 

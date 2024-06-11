@@ -2,10 +2,10 @@
 description: Découvrez comment configurer les identités cibles prises en charge pour les destinations créées avec Destination SDK.
 title: Configuration de l’espace de noms d’identité
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 20fb966c4cc8a2b09ea64da3e688688b34a0b5d1
+source-git-commit: 606685c1f0b607ca586e477cb9825ec551d537cc
 workflow-type: tm+mt
-source-wordcount: '892'
-ht-degree: 83%
+source-wordcount: '918'
+ht-degree: 81%
 
 ---
 
@@ -13,11 +13,15 @@ ht-degree: 83%
 
 Experience Platform utilise des espaces de noms d’identité pour décrire le type d’identités spécifiques. Par exemple, un espace de noms d’identité intitulé `Email` identifie une valeur telle que `name@email.com` en tant qu’adresse électronique.
 
-Lors de la création de destinations en temps réel (diffusion en continu) via Destination SDK, en plus des [configuration d&#39;un schéma de partenaire](schema-configuration.md) pour que les utilisateurs puissent mapper des attributs de profil et des identités à, vous devez également définir des espaces de noms d’identité pris en charge par votre plateforme de destination. Par exemple, si votre plateforme de destination accepte des courriers électroniques hachés et [!DNL IDFA], vous devez définir ces deux identités comme [décrit plus loin dans ce document](#supported-parameters).
+En fonction du type de destination que vous créez (en flux continu ou basé sur un fichier), gardez à l’esprit les exigences d’espace de noms d’identité suivantes :
 
-Lors de l’activation d’audiences vers des destinations de diffusion en continu, les utilisateurs doivent également mapper des identités cibles, en plus des attributs de profil cible. Sinon, les audiences ne seront pas activées sur la plateforme de destination.
+* Lors de la création de destinations en temps réel (diffusion en continu) via Destination SDK, en plus des [configuration d&#39;un schéma de partenaire](schema-configuration.md) auquel les utilisateurs peuvent mapper des attributs et des identités de profil, vous devez également définir *au moins un* espaces de noms d’identité pris en charge par votre plateforme de destination. Par exemple, si votre plateforme de destination accepte des courriers électroniques hachés et [!DNL IDFA], vous devez définir ces deux identités comme [décrit plus en détail dans ce document](#supported-parameters).
 
-Lors de la création d’une destination basée sur des fichiers via Destination SDK, la configuration des espaces de noms d’identité est facultative.
+  >[!IMPORTANT]
+  >
+  >Lors de l’activation d’audiences vers des destinations de diffusion en continu, les utilisateurs doivent également mapper _au moins une identité cible_, en plus des attributs de profil cibles. Sinon, les audiences ne seront pas activées sur la plateforme de destination.
+
+* Lors de la création de destinations basées sur des fichiers via Destination SDK, la configuration des espaces de noms d’identité est _facultatif_.
 
 Pour en savoir plus sur les espaces de noms d’identité dans Experience Platform, consultez la [documentation relative aux espaces de noms d’identité](../../../../identity-service/features/namespaces.md).
 
