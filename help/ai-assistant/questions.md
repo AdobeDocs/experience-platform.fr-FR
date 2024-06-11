@@ -1,9 +1,10 @@
 ---
 title: Guide de questions pour l’assistant d’IA
 description: Lisez ce document pour découvrir des exemples de questions que vous pouvez utiliser lors de l’interrogation de l’assistant d’IA.
-source-git-commit: a1092e21940c5e4ba9b598bc51ba1243b57a0051
+exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
+source-git-commit: 26e27e7a62731fe43ef203741121b22226078b28
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1206'
 ht-degree: 0%
 
 ---
@@ -33,20 +34,56 @@ Les exemples de questions suivants sont regroupées par objectifs que vous pouve
 
 Les questions suivantes sont regroupées par objet de données et classées comme [informations opérationnelles](./home.md#operational-insights) ou [connaissance du produit](./home.md#product-knowledge).
 
-| Objet | Description |
-| --- | --- |
-| Audiences - Aperçu opérationnel | <ul><li>Quelles audiences utilisent d’autres audiences ?</li><li>Quelle est la distribution du nombre de profils entre les audiences ?</li><li>Me montrer les audiences qui ont été modifiées pour la dernière fois avant {RELATIVE_DATE}.</li><li>Quelles audiences ont 0 profil ?</li><li>Is {USE_AUTOCOMPLETE_TO_FILL_AUDIENCE_NAME} utilisé dans d’autres audiences ?</li></ul> |
-| Attributs - insights opérationnels | <ul><li>Quelles audiences ont un attribut XDM ? {ATTRIBUTE_PATH} dans leur définition de segment ?</li><li>Combien d’attributs de schéma XDM ne sont pas utilisés dans les audiences ?</li><li>Quels schémas ont un attribut XDM ? {ATTRIBUTE_PATH} en eux ?</li><li>Quels attributs XDM sont activés ?</li><li>Les attributs XDM utilisés dans les audiences ayant plus de 10 profils</li></ul> |
-| Flux de données - Informations opérationnelles | <ul><li>Quels flux de données contribuent à {DATASET_NAME} jeu de données ?</li><li>Quels flux de données sources ne sont pas utilisés ou ne contiennent plus de données ?</li><li> |
-| Jeux de données - insights opérationnels | <ul><li>Combien de jeux de données ont été ingérés à l’aide du même schéma ?</li><li>Quel connecteur source est associé à {DATASET_NAME} dataset></li><li>Quels jeux de données sont utilisés dans chaque audience ?</li><li>Quels schémas ne sont utilisés dans aucun jeu de données ?</li><li>Combien de jeux de données ai-je ?</li></ul> |
-| Destinations - insights opérationnels | <ul><li>Quelles destinations sont à l’état actif ?</li><li>Quels comptes de destination ont 0 audience activée ?</li><li> |
-| Parcours - insights opérationnels | <ul><li>Combien de parcours ai-je ?</li><li>Les parcours créés dans {RELATIVE_DATE} (par exemple, la semaine dernière) ou {RELATIVE_DATE} (par exemple, avant/après/à une date spécifique) ?</li><li>Afficher la liste des parcours qui ont été modifiés dans {RELATIVE_DATE} (par exemple, la semaine dernière) ou {RELATIVE_DATE} (par exemple, avant/après/à une date spécifique) ?</li><li>Liste les parcours que j&#39;ai.</li><li>Répertorier les audiences utilisées dans les parcours en direct.</li></ul> |
-| Schémas - insights opérationnels | <ul><li>Quels champs du schéma ont contribué au plus grand nombre d’audiences ?</li><li>Combien de schémas le profil est-il activé ?</li><li>Liste de tous les schémas modifiés la semaine dernière.</li><li>Quels schémas ne sont utilisés dans aucun jeu de données ?</li><li>Liste de tous les schémas créés la semaine dernière.</li></ul> |
-| Sources - insights opérationnels | <ul><li>Quelles sont les sources actives ?</li><li>Quel connecteur source est associé à un jeu de données ? {DATASET_NAME}?</li><li>Quel est le connecteur source qui a le plus grand nombre de comptes associés ?</li><li>Montrez-moi les flux de données et leurs connecteurs source associés.</li></ul> |
-| Apprentissage en points - Connaissances produit (Real-Time CDP et Journey Optimizer) | <ul><li>Avec quoi l’assistant d’IA peut-il vous aider ?</li><li>Que sont les audiences semblables ?</li><li>Comment les groupes d’utilisateurs sont-ils liés aux rôles ?</li><li>Quand dois-je utiliser un type de données par rapport à un groupe de champs ?</li><li>Quelle est la différence entre une identité et une clé primaire ou étrangère ?</li><li>Comment est calculé la richesse des profils ?</li></ul> |
-| Dépannage - Connaissances produit (Real-Time CDP et Journey Optimizer) | <ul><li>Avec quoi l’assistant d’IA peut-il vous aider ?</li><li>Puis-je supprimer un schéma activé par le profil une fois les données ingérées ?</li><li>Pourquoi ne puis-je pas supprimer une audience ?</li><li>Combien de temps faut-il pour que les audiences soient évaluées et que les résultats soient disponibles pour le ciblage ?</li></ul> |
-
-{style="table-layout:auto"}
+* **Audiences - Aperçu opérationnel**
+   * Quelles audiences utilisent d’autres audiences ?
+   * Quelle est la distribution du nombre de profils entre les audiences ?
+   * Me montrer les audiences qui ont été modifiées pour la dernière fois avant {RELATIVE_DATE}.
+   * Quelles audiences ont 0 profil ?
+   * Is {USE_AUTO_COMPLETE_TO_FILL_AUDIENCE_NAME} utilisé dans d’autres audiences ?
+* **Attributs - insights opérationnels**
+   * Quelles audiences ont un attribut xdm ? {ATTRIBUTE_PATH} dans leur définition de segment ?
+   * Combien d’attributs de schéma XDM ne sont pas utilisés dans les audiences ?
+   * Quels schémas ont un attribut xdm ? {ATTRIBUTE_PATH} en eux ?
+   * Quels attributs XDM sont activés ?
+   * Quels attributs XDM sont utilisés dans les audiences avec plus de 10 profils ?
+* **Flux de données - Informations opérationnelles**
+   * Quels flux de données contribuent à {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME} jeu de données ?
+   * Quels flux de données sources ne sont pas utilisés ou ne contiennent plus de données ?
+   * Liste des flux de données source dont je dispose.
+   * Quels flux de données sont configurés pour chaque connecteur source ?
+* **Jeux de données - insights opérationnels**
+   * Combien de jeux de données ont été ingérés à l’aide du même schéma ?
+   * Quel connecteur source est associé à {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME} jeu de données ?
+   * Quels jeux de données sont utilisés dans chaque audience ?
+   * Quels schémas ne sont utilisés dans aucun jeu de données ?
+   * Combien de jeux de données ai-je ?
+* **Destinations - insights opérationnels**
+   * Quelles destinations sont à l’état actif ?
+   * Quels comptes de destination ont 0 audience activée ?
+   * Combien d’audiences sont activées pour chaque destination ?
+   * Quelles destinations ont le plus grand nombre d’audiences activées ?
+* **Parcours - insights opérationnels**
+   * Combien de parcours ai-je ?
+   * Les parcours créés dans {RELATIVE_DATE} (par exemple, la dernière semaine) ou {RELATIVE_DATE} (par exemple, avant/après/à une date spécifique) ?
+   * Afficher la liste des parcours qui ont été modifiés dans {RELATIVE_DATE} (par exemple, la dernière semaine) ou {RELATIVE_DATE} (par exemple, avant/après/à une date spécifique) ?
+   * Liste des parcours vivants que j&#39;ai.
+   * Répertorier les audiences utilisées dans les parcours en direct.
+* **Sources - insights opérationnels**
+   * Quelles sont les sources actives ?
+   * Quel connecteur source est associé à un jeu de données ? {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME}.
+   * Quel est le connecteur source qui a le plus grand nombre de comptes associés ?
+   * Montrez-moi les flux de données et leurs connecteurs source associés.
+* **Apprentissage en points - Connaissances produit (Real-Time CDP et Journey Optimizer)**
+   * Que sont les audiences semblables ?
+   * Comment les groupes d’utilisateurs sont-ils liés aux rôles ?
+   * Quand dois-je utiliser un type de données par rapport à un groupe de champs ?
+   * Quelle est la différence entre une identité et une clé primaire ou étrangère ?
+   * Comment est calculé la richesse de Profile ?
+* **Dépannage - Connaissances produit (Real-Time CDP et Journey Optimizer)**
+   * Avec quoi l’assistant d’IA peut-il vous aider ?
+   * Puis-je supprimer un schéma activé pour le profil une fois les données ingérées ?
+   * Pourquoi ne puis-je pas supprimer une audience ?
+   * Combien de temps faut-il pour que les audiences soient évaluées et que les résultats soient disponibles pour le ciblage ?
 
 ## Expression de vos questions {#phrasing-your-questions}
 
