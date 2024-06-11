@@ -2,13 +2,13 @@
 audience: user
 user-guide-title: Service d’identités d’Adobe Experience Platform
 breadcrumb-title: Guide de Platform Identity Service
-user-guide-description: Associez les identités des clients, quel que soit l’appareil ou le système utilisé, afin d’offrir des expériences digitales personnalisées.
+user-guide-description: Associez les identités des clients sur différents appareils et systèmes pour offrir des expériences numériques personnalisées.
 feature: Identities
 role: Admin,Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 2afdfd54b420bcf59423ea64048d928422ea61c9
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 79%
+source-wordcount: '126'
+ht-degree: 65%
 
 ---
 
@@ -40,7 +40,8 @@ ht-degree: 79%
 - [Règles de liaison de graphiques d’identités] {#identity-graph-linking-rules}
    - [Présentation des fonctionnalités](./identity-graph-linking-rules/overview.md)
    - [Algorithme d’optimisation des identités](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+   - [Priorité d’espace de noms](./identity-graph-linking-rules/namespace-priority.md)
    - [Exemples de scénarios](./identity-graph-linking-rules/example-scenarios.md)
 - [Traitement des demandes d’accès à des informations personnelles](privacy.md)
 - [Guide de dépannage](troubleshooting-guide.md)
-- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

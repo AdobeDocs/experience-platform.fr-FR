@@ -3,10 +3,10 @@ title: Connexion Oracle Eloqua (API)
 description: La destination Eloqua (API) d’Oracle vous permet d’exporter les données de votre compte et de les activer dans Oracle Eloqua pour vos besoins professionnels.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: cf7ad18fa3d8f074371a0f03e09e218d37be5e01
 workflow-type: tm+mt
-source-wordcount: '2042'
-ht-degree: 30%
+source-wordcount: '2033'
+ht-degree: 27%
 
 ---
 
@@ -27,7 +27,7 @@ Le service marketing d’une plateforme en ligne souhaite diffuser une campagne 
 
 ### Conditions préalables d’Experience Platform {#prerequisites-in-experience-platform}
 
-Avant d’activer des données dans la destination [!DNL Oracle Eloqua], vous devez avoir un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr), ainsi que des [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) créés dans [!DNL Experience Platform].
+Avant d’activer des données dans la destination [!DNL Oracle Eloqua], vous devez avoir un [schéma](/help/xdm/schema/composition.md), un [jeu de données](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), ainsi que des [segments](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) créés dans [!DNL Experience Platform].
 
 Reportez-vous à la documentation Experience Platform pour [Groupe de champs Détails de l’appartenance à une audience](/help/xdm/field-groups/profile/segmentation.md) si vous avez besoin de conseils sur les états d’audience.
 
@@ -97,7 +97,7 @@ Dans **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**, recherchez [!DN
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_companyname_username"
 >title="Nom de la société\Nom d’utilisateur"
->abstract="Inscrivez dans ce champ le nom de votre société et le nom d’utilisateur d’Oracle Eloqua (formulaire `{COMPANY_NAME}\{USERNAME}`)"
+>abstract="Renseignez ce champ avec le nom de votre société et le nom d’utilisateur de l’Oracle Eloqua dans le formulaire. `{COMPANY_NAME}\{USERNAME}`"
 
 Renseignez les champs obligatoires ci-dessous. Voir [Collecte [!DNL Oracle Eloqua] informations](#gather-credentials) pour obtenir des conseils.
 * **[!UICONTROL Password]**: le mot de passe de votre [!DNL Oracle Eloqua] compte .
@@ -112,9 +112,10 @@ Si les détails fournis sont valides, l’interface utilisateur affiche un statu
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_pod"
->title="Pod"
->abstract="Pour trouver votre numéro de pod, connectez-vous à Oracle Eloqua. Notez l’URL de votre navigateur dès la connexion effectuée. "
->additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Base de connaissances Oracle - Rechercher votre numéro de pod"
+>title="Capsule"
+>abstract="Pour trouver votre numéro de capsule, connectez-vous à Oracle Eloqua. Notez l’URL de votre navigateur une fois que vous êtes connecté. "
+
+<!-- >additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge base - find out your Pod number" -->
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 ![Capture d’écran de l’interface utilisateur de Platform montrant les détails de destination.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)

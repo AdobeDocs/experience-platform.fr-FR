@@ -1,22 +1,20 @@
 ---
 title: Présentation des règles de liaison de graphiques d’identités
 description: Découvrez les règles de liaison de graphique d’identités dans Identity Service.
-hide: true
-hidefromtoc: true
-badge: Alpha
+badge: Version bêta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: f21b5519440f7ffd272361954c9e32ccca2ec2bc
+source-git-commit: 67b08acaecb4adf4d30d6d4aa7b8c24b30dfac2e
 workflow-type: tm+mt
-source-wordcount: '1022'
+source-wordcount: '1114'
 ht-degree: 1%
 
 ---
 
 # Présentation des règles de liaison de graphiques d’identités
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en Alpha. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
+>Cette fonctionnalité n’est pas encore disponible ; le programme bêta pour les règles de liaison de graphiques d’identités devrait commencer en juillet sur les environnements de test de développement. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation.
 
 ## Table des matières 
 
@@ -24,9 +22,9 @@ ht-degree: 1%
 * [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
 * [Exemples de scénarios](./example-scenarios.md)
 
-Avec Adobe Experience Platform Identity Service et Real-time Customer Profile, il est facile de supposer que vos données sont parfaitement ingérées et que tous les profils fusionnés représentent une seule personne par le biais d’un identifiant de personne, tel qu’un identifiant CRM. Cependant, il existe des scénarios possibles où certaines données peuvent tenter de fusionner plusieurs profils disparates en un seul profil (&quot;effondrement de profil&quot;). Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par le biais des règles de liaison des graphiques d’identités et permettre une personnalisation précise pour vos utilisateurs.
+Avec Adobe Experience Platform Identity Service et Real-time Customer Profile, il est facile de supposer que vos données sont parfaitement ingérées et que tous les profils fusionnés représentent une seule personne par le biais d’un identifiant de personne, tel qu’un identifiant CRM. Cependant, il existe des scénarios possibles où certaines données peuvent tenter de fusionner plusieurs profils disparates en un seul profil (&quot;effondrement du graphique&quot;). Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par le biais des règles de liaison des graphiques d’identités et permettre une personnalisation précise pour vos utilisateurs.
 
-## Exemples de scénarios de réduction de profil
+## Exemples de scénarios de réduction de graphiques
 
 * **Appareil partagé**: un appareil partagé fait référence à des appareils utilisés par plusieurs individus. Les tablettes, les ordinateurs de bibliothèque et les kiosques sont des exemples d’appareils partagés.
 * **Emails et numéros de téléphone incorrects**: les numéros de téléphone et d’email incorrects se rapportent aux utilisateurs finaux qui enregistrent des coordonnées non valides, telles que &quot;test&quot;<span>@test.com&quot; pour les e-mails et &quot;+1-111-111-1111&quot; pour le numéro de téléphone.
@@ -34,81 +32,67 @@ Avec Adobe Experience Platform Identity Service et Real-time Customer Profile, i
 
 Pour plus d’informations sur les scénarios de cas d’utilisation des règles de liaison de graphiques d’identités, consultez le document sur [scénarios d’exemple](./example-scenarios.md).
 
-## Objectifs des règles de liaison de graphiques d’identités
+## Règles de liaison de graphiques d’identités {#identity-graph-linking-rules}
 
 Avec les règles de liaison de graphiques d’identités, vous pouvez :
 
-* Créez un graphique d’identités/profil fusionné unique pour chaque utilisateur en configurant des espaces de noms (limites) uniques, ce qui empêchera deux identifiants de personnes disparates de se fusionner en un seul graphique d’identités.
+* Créez un graphique d’identités/profil fusionné unique pour chaque utilisateur en configurant des espaces de noms uniques, ce qui empêchera deux identifiants de personnes disparates de se fusionner en un seul graphique d’identités.
 * Associer des événements authentifiés en ligne à la personne en configurant les priorités
 
-### Limites
+### Terminologie {#terminology}
 
-Un espace de noms unique est un identifiant qui représente un individu, tel que l’identifiant CRM, l’identifiant de connexion et le courrier électronique haché. Si un espace de noms est désigné comme unique, un graphique ne peut avoir qu’une seule identité avec cet espace de noms (`limit=1`). Cela empêchera la fusion de deux identifiants de personnes disparates dans le même graphique.
+| Terminologie | Description |
+| --- | --- |
+| Espace de noms unique | Un espace de noms unique est un espace de noms d’identité configuré pour être distinct dans le contexte d’un graphique d’identités. Vous pouvez configurer un espace de noms pour qu’il soit unique à l’aide de l’interface utilisateur. Une fois qu’un espace de noms est défini comme unique, un graphique ne peut avoir qu’une seule identité contenant cet espace de noms. |
+| Priorité d’espace de noms | La priorité d’espace de noms fait référence à l’importance relative des espaces de noms par rapport aux autres. La priorité des espaces de noms peut être configurée via l’interface utilisateur. Vous pouvez classer les espaces de noms dans un graphique d’identités donné. Une fois activée, la priorité des noms est utilisée dans divers scénarios, tels que l’entrée pour l’algorithme d’optimisation de l’identité et la détermination de l’identité principale pour les fragments d’événement d’expérience. |
+| Algorithme d’optimisation des identités | L’algorithme d’optimisation des identités garantit que les instructions créées en configurant un espace de noms et des priorités d’espace de noms uniques sont appliquées dans un graphique d’identités donné. |
 
-* Si aucune limite n’est configurée, il peut en résulter des fusions de graphiques indésirables, telles que deux identités avec un espace de noms d’identifiant CRM dans un graphique.
-* Si aucune limite n’est configurée, le graphique peut ajouter autant d’espaces de noms que nécessaire tant que le graphique se trouve dans les barrières de sécurité (50 identités/graphiques).
-* Si une limite est configurée, l’algorithme d’optimisation des identités s’assure que la limite est appliquée.
+### Espace de noms unique {#unique-namespace}
 
-### Algorithme d’optimisation des identités
+Vous pouvez configurer un espace de noms pour qu’il soit unique à l’aide de l’espace de travail de l’interface utilisateur des paramètres d’identité. Cela permet d’informer l’algorithme d’optimisation des identités qu’un graphique donné ne peut avoir qu’une seule identité contenant cet espace de noms unique. Cela empêche la fusion de deux identifiants de personnes disparates dans le même graphique.
 
-L’algorithme d’optimisation des identités est une règle qui garantit que les limites sont appliquées. L’algorithme honore les liens les plus récents et supprime les liens les plus anciens pour s’assurer qu’un graphique donné reste dans les limites que vous avez définies.
+Examinez le scénario suivant :
 
-Voici une liste des implications de l’algorithme sur l’association d’événements anonymes à des identifiants connus :
+* Scott utilise une tablette et ouvre son navigateur Chrome Google pour accéder à nike<span>.com, où il se connecte et recherche de nouvelles chaussures de basket.
+   * En arrière-plan, ce scénario consigne les identités suivantes :
+      * Espace de noms et valeur ECID représentant l’utilisation du navigateur
+      * Un espace de noms et une valeur de l’identifiant CRM pour représenter l’utilisateur authentifié (Scott s’est connecté avec son nom d’utilisateur et son mot de passe).
+* Son fils Peter utilise alors la même tablette et utilise également Google Chrome pour accéder à nike<span>.com, où il se connecte avec son propre compte pour rechercher du matériel de football.
+   * En arrière-plan, ce scénario consigne les identités suivantes :
+      * Espace de noms et valeur ECID identiques pour représenter le navigateur.
+      * Un nouvel espace de noms et une nouvelle valeur de l’identifiant CRM pour représenter l’utilisateur authentifié.
 
-* L’ECID sera associé au dernier utilisateur authentifié si les conditions suivantes sont remplies :
-   * Si les identifiants CRM sont fusionnés par ECID (appareil partagé).
-   * Si des limites sont configurées sur un seul identifiant CRM.
+Si l’identifiant CRM a été configuré en tant qu’espace de noms unique, l’algorithme d’optimisation des identités divise les identifiants CRM en deux graphiques d’identités distincts, au lieu de les fusionner.
 
-Pour plus d’informations, lisez le document sur [algorithme d’optimisation des identités](./identity-optimization-algorithm.md).
+Si vous ne configurez pas d’espace de noms unique, vous pouvez obtenir des fusions de graphiques indésirables, telles que deux identités avec le même espace de noms d’identifiant CRM, mais des valeurs d’identité différentes (des scénarios comme celui-ci représentent souvent deux entités de personne différentes dans le même graphique).
 
-### Priorité
+Vous devez configurer un espace de noms unique pour informer l’algorithme d’optimisation des identités afin d’appliquer des limites aux données d’identité ingérées dans un graphique d’identités donné.
 
->[!IMPORTANT]
->
->Les priorités des espaces de noms ne sont actuellement pas disponibles pour alpha.
+### Priorité d’espace de noms {#namespace-priority}
 
-Vous pouvez utiliser la priorité d’espace de noms pour définir les espaces de noms les plus importants que les autres. La priorité que vous définissez pour vos espaces de noms est ensuite utilisée pour définir les identités principales, qui est l’identité qui stocke les fragments de profil (données d’attribut et d’événement) dans Real-time Customer Profile. Si les paramètres de priorité sont configurés, le paramètre d’identité principal sur le SDK Web ne sera plus utilisé pour déterminer les fragments de profil stockés.
+La priorité d’espace de noms fait référence à l’importance relative des espaces de noms par rapport aux autres. La priorité des espaces de noms est configurable par le biais de l’interface utilisateur et vous pouvez classer les espaces de noms dans un graphique d’identités donné.
 
-* Les limites et la priorité sont des configurations indépendantes. **not** se répercutent :
-   * Limites est une configuration de graphique d’identités dans Identity Service.
-   * La priorité est une configuration de fragment de profil sur Real-time Customer Profile.
-   * La priorité est **not** affectent les barrières de sécurité du système de graphique d’identités.
+L’une des façons dont la priorité d’espace de noms est utilisée est de déterminer l’identité principale des fragments d’événement d’expérience (comportement de l’utilisateur) sur Real-time Customer Profile. Si les paramètres de priorité sont configurés, le paramètre d’identité principal sur le SDK Web ne sera plus utilisé pour déterminer les fragments de profil stockés.
+
+Les espaces de noms uniques et les priorités d’espace de noms peuvent être configurés dans l’espace de travail de l’interface utilisateur des paramètres d’identité. Toutefois, les effets de leurs configurations sont différents :
+
+| | Service d’identités | Profil client en temps réel |
+| --- | --- | --- |
+| Espace de noms unique | Dans Identity Service, l’algorithme d’optimisation des identités fait référence aux espaces de noms uniques afin de déterminer les données d’identité ingérées dans un graphique d’identités donné. | Les espaces de noms uniques n’affectent pas Real-Time Customer Profile. |
+| Priorité d’espace de noms | Dans Identity Service, pour les graphiques comportant plusieurs calques, la priorité de l’espace de noms détermine que les liens appropriés sont supprimés. | Lorsqu’un événement d’expérience est ingéré dans Profile, l’espace de noms ayant la priorité la plus élevée devient l’identité principale du fragment de profil. |
+
+* La priorité de l’espace de noms n’affecte pas le comportement du graphique lorsque la limite de 50 identités par graphique est atteinte.
 * **La priorité de l’espace de noms est une valeur numérique** affecté à un espace de noms indiquant son importance relative. Il s’agit d’une propriété d’un espace de noms.
 * **L’identité du Principal est l’identité par laquelle un fragment de profil est stocké.**. Un fragment de profil est un enregistrement de données qui stocke des informations sur un utilisateur spécifique : des attributs (généralement ingérés via des enregistrements CRM) ou des événements (généralement ingérés à partir d’événements d’expérience ou de données en ligne).
-* La priorité d’espace de noms détermine l’identité principale des événements d’expérience.
+* La priorité d’espace de noms détermine l’identité principale des fragments d’événement d’expérience.
    * Pour les enregistrements de profil, vous pouvez utiliser l’espace de travail des schémas de l’interface utilisateur de l’Experience Platform pour définir les champs d’identité, y compris l’identité principale. Lisez le guide sur [définition des champs d’identité dans l’interface utilisateur](../../xdm/ui/fields/identity.md) pour plus d’informations.
 
->[!BEGINSHADEBOX]
-
-**Exemple de priorité d’espace de noms**
-
-Supposons que vous ayez configuré la priorité suivante pour vos espaces de noms :
-
-1. Identifiant CRM : représente un utilisateur.
-2. IDFA : représente un périphérique matériel Apple, tel qu’iPhone et iPad.
-3. GAID : représente un périphérique matériel Google, tel que Google Pixel.
-4. ECID : représente un navigateur web, tel que Firefox, Safari et Chrome.
-5. AAID : représente un navigateur web.
-Si ECID et AAID sont envoyés simultanément, les deux identités représentent le même navigateur web (double).
-
-Si les événements d’expérience suivants sont ingérés dans Experience Platform, les fragments de profil sont ensuite stockés par rapport à l’espace de noms avec la priorité la plus élevée.
-
-**Événements authentifiés :**
-
-* Si la carte des identités contient un ECID, un GAID et un ID CRM, les informations d’événement sont stockées par rapport à l’ID CRM (identité principale).
-   * GAID représente un périphérique matériel Google (par exemple, Google Pixel), ECID représente un navigateur web (par exemple, Google Chrome) et l’ID de gestion de la relation client représente un utilisateur authentifié.
-   * Si la carte des identités contient un identifiant CRM, un ECID et un AAID, les informations d’événement sont stockées par rapport à l’identifiant CRM (identité principale).
-
-**Événements non authentifiés :**
-
-* Si la carte d’identité contient un ECID, un IDFA et un AAID, les informations d’événement sont stockées par rapport à l’IDFA (identité principale).
-   * IDFA représente un périphérique matériel Apple (par exemple iPhone), ECID et AAID représentent tous deux un navigateur web (Safari).
-
->[!ENDSHADEBOX]
+Pour plus d’informations, consultez le guide sur [priorité d’espace](./namespace-priority.md).
 
 ## Étapes suivantes
 
 Pour plus d’informations sur les règles de liaison des graphiques d’identités, consultez la documentation suivante :
 
-* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
-* [Exemples de scénarios de configuration des règles de liaison de graphiques d’identités](./example-scenarios.md)
+* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md).
+* [Priorité d’espace de noms](./namespace-priority.md).
+* [Exemples de scénarios de configuration des règles de liaison de graphiques d’identités](./example-scenarios.md).

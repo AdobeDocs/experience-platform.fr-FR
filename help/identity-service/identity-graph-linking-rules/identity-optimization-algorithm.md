@@ -3,24 +3,30 @@ title: Algorithme d’optimisation des identités
 description: Découvrez l’algorithme d’optimisation des identités dans Identity Service.
 hide: true
 hidefromtoc: true
-badge: Alpha
+badge: Version bêta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: 67b08acaecb4adf4d30d6d4aa7b8c24b30dfac2e
 workflow-type: tm+mt
-source-wordcount: '1319'
-ht-degree: 2%
+source-wordcount: '1570'
+ht-degree: 1%
 
 ---
 
 # Algorithme d’optimisation des identités
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->L’algorithme d’optimisation des identités est en Alpha. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
+>Cette fonctionnalité n’est pas encore disponible ; le programme bêta pour les règles de liaison de graphiques d’identités devrait commencer en juillet sur les environnements de test de développement. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation.
 
-L’algorithme d’optimisation des identités est une règle qui permet de s’assurer qu’un graphique d’identités est représentatif d’une seule personne et, par conséquent, empêche la fusion indésirable d’identités sur Real-time Customer Profile.
+L’algorithme d’optimisation des identités est un algorithme graphique d’Identity Service qui permet de s’assurer qu’un graphique d’identités est représentatif d’une seule personne et, par conséquent, empêche la fusion indésirable d’identités sur Real-time Customer Profile.
 
-## Paramètres d&#39;entrée
+## Paramètres d’entrée {#input-parameters}
+
+Lisez cette section pour plus d’informations sur les espaces de noms uniques et la priorité des espaces de noms. Ces deux concepts servent de paramètres d’entrée requis par l’algorithme d’optimisation des identités.
+
+### Espace de noms unique {#unique-namespace}
+
+Un espace de noms unique détermine les liens qui sont supprimés en cas d’effondrement du graphique.
 
 Un profil fusionné unique et son graphique d’identités correspondant doivent représenter une seule personne (entité de personne). Une seule personne est généralement représentée par des identifiants de gestion de la relation client et/ou des identifiants de connexion. On s’attend à ce qu’aucun deux individus (ID CRM) ne soient fusionnés dans un seul profil ou graphique.
 
@@ -29,17 +35,44 @@ Vous devez spécifier les espaces de noms qui représentent une entité de perso
 * Espace de noms de l’ID de gestion de la relation client = unique
 * Espace de noms de courriel = unique
 
-Un espace de noms que vous déclarez unique est automatiquement configuré pour avoir une limite maximale d’un dans un graphique d’identités donné. Par exemple, si vous déclarez un espace de noms d’identifiant CRM unique, un graphique d’identités ne peut avoir qu’une seule identité contenant un espace de noms d’identifiant CRM.
+Un espace de noms que vous déclarez unique est automatiquement configuré pour avoir une limite maximale d’un dans un graphique d’identités donné. Par exemple, si vous déclarez un espace de noms d’identifiant CRM unique, un graphique d’identités ne peut avoir qu’une seule identité contenant un espace de noms d’identifiant CRM. Si vous ne déclarez pas d’espace de noms unique, le graphique peut contenir plusieurs identités avec cet espace de noms.
 
 >[!NOTE]
 >
->* Actuellement, l’algorithme ne prend en charge que l’utilisation d’un seul identifiant de connexion (un espace de noms de connexion). Pour le moment, il n’est pas possible de prendre en charge plusieurs identifiants de connexion (plusieurs espaces de noms d’identité utilisés pour la connexion), des graphiques d’entités domestiques et des structures de graphiques hiérarchiques.
+>* Pour l’instant, la représentation des entités des ménages (&quot;graphiques des ménages&quot;) n’est pas prise en charge.
 >
 >* Tous les espaces de noms qui sont des identifiants de personne et utilisés dans l’environnement de test pour générer des graphiques d’identité doivent être marqués comme un espace de noms unique. Dans le cas contraire, il se peut que des résultats de liaison indésirables s’affichent.
 
-## Processus
+### Priorité d’espace de noms {#namespace-priority}
 
-Lors de l’ingestion de nouvelles identités, Identity Service vérifie si les nouvelles identités et leurs espaces de noms correspondants se traduiront par le dépassement des limites configurées. Si les limites ne sont pas dépassées, l’ingestion de nouvelles identités se poursuit et ces identités sont liées au graphique. Toutefois, si les limites sont dépassées, l’algorithme d’optimisation des identités met à jour le graphique de sorte que l’horodatage le plus récent soit respecté et que les liens les plus anciens avec les espaces de noms de priorité inférieure soient supprimés.
+La priorité de l’espace de noms détermine la manière dont l’algorithme d’optimisation des identités supprime les liens.
+
+Les espaces de noms dans Identity Service ont un ordre d’importance relatif implicite. Prenons un graphique structuré comme une pyramide. Il y a un noeud sur le calque supérieur, deux noeuds sur le calque central et quatre noeuds sur le calque inférieur. La priorité de l’espace de noms doit refléter cet ordre relatif pour s’assurer qu’une entité de personne est correctement représentée.
+
+Pour un examen détaillé de la priorité des espaces de noms et de leurs fonctionnalités et utilisations complètes, lisez la section [guide de priorité d’espace](./namespace-priority.md).
+
+![calques graphiques et priorité des espaces de noms](../images/namespace-priority/graph-layers.png)
+
+## Processus {#process}
+
+
+Lors de l’ingestion de nouvelles identités, Identity Service vérifie si les nouvelles identités et leurs espaces de noms correspondants respectent les configurations d’espace de noms uniques. Si les configurations sont suivies, l’ingestion se poursuit et les nouvelles identités sont liées au graphique. Toutefois, si les configurations ne sont pas suivies, l’algorithme d’optimisation des identités :
+
+
+* Ingérez l’événement le plus récent tout en tenant compte de la priorité de l’espace de noms.
+* Supprimez le lien qui fusionnerait deux entités de personne du calque graphique approprié.
+
+## Détails de l’algorithme d’optimisation des identités
+
+Lorsque la contrainte d’espace de noms unique est enfreinte, l’algorithme d’optimisation de l’identité &quot;relit&quot; les liens et recrée le graphique de zéro.
+
+* Les liens sont triés selon l’ordre suivant :
+   * Dernier événement.
+   * Horodatage par somme de la priorité de l’espace de noms (somme inférieure = ordre supérieur).
+* Le graphique est restauré en fonction de l’ordre ci-dessus. Si l’ajout du lien enfreint la contrainte limite (par exemple, le graphique contient plusieurs identités avec un espace de noms unique), les liens sont supprimés.
+* Le graphique qui en résulte sera alors conforme à la contrainte d’espace de noms unique que vous avez configurée.
+
+![Schéma qui visualise l’algorithme d’optimisation des identités.](../images/ido.png)
 
 ## Exemples de scénarios pour l’algorithme d’optimisation des identités
 
@@ -53,27 +86,27 @@ Un appareil partagé fait référence à un appareil utilisé par plusieurs indi
 
 >[!TAB Exemple 1]
 
-| Espace de noms | Limite |
+| Espace de noms | Espace de noms unique |
 | --- | --- |
-| Identifiant CRM | 1 |
-| E-mail | 1 |
-| ECID | S/O |
+| Identifiant CRM | Oui |
+| E-mail | Oui |
+| ECID | Non |
 
-Dans cet exemple, l’identifiant CRM et le courrier électronique sont désignés comme espaces de noms uniques. At `timestamp=0`, un jeu de données d’enregistrement CRM est ingéré et crée deux graphiques différents en raison de la configuration de limite. Chaque graphique contient un identifiant CRM et un espace de noms Email.
+Dans cet exemple, l’identifiant CRM et le courrier électronique sont désignés comme espaces de noms uniques. At `timestamp=0`, un jeu de données d’enregistrement CRM est ingéré et crée deux graphiques différents en raison de la configuration d’espace de noms unique. Chaque graphique contient un identifiant CRM et un espace de noms Email.
 
 * `timestamp=1`: Jane se connecte à votre site web de commerce électronique à l’aide d’un ordinateur portable. Jane est représentée par son identifiant CRM et son e-mail, tandis que le navigateur web sur son ordinateur portable qu’elle utilise est représenté par un ECID.
 * `timestamp=2`: John se connecte à votre site web de commerce électronique à l’aide du même ordinateur portable. John est représenté par son identifiant CRM et son e-mail, tandis que le navigateur web qu’il a utilisé est déjà représenté par un ECID. Comme le même ECID est lié à deux graphiques différents, Identity Service peut savoir que cet appareil (ordinateur portable) est un appareil partagé.
-* Cependant, en raison de la configuration de limite qui définit un maximum d’un espace de noms d’identifiant CRM et d’un espace de noms d’email par graphique, l’algorithme d’optimisation de l’identité divise le graphique en deux.
+* Cependant, en raison de la configuration d’espace de noms unique qui définit un maximum d’un espace de noms d’identifiant CRM et d’un espace de noms d’email par graphique, l’algorithme d’optimisation de l’identité divise ensuite le graphique en deux.
    * Enfin, puisque John est le dernier utilisateur authentifié, l’ECID qui représente l’ordinateur portable reste lié à son graphique au lieu de celui de Jane.
 
 ![cas d’appareil partagé 1](../images/identity-settings/shared-device-case-one.png)
 
 >[!TAB Exemple 2]
 
-| Espace de noms | Limite |
+| Espace de noms | Espace de noms unique |
 | --- | --- |
-| Identifiant CRM | 1 |
-| ECID | S/O |
+| Identifiant CRM | Oui |
+| ECID | Non |
 
 Dans cet exemple, l’espace de noms de l’identifiant CRM est désigné comme un espace de noms unique.
 
@@ -91,11 +124,11 @@ Dans cet exemple, l’espace de noms de l’identifiant CRM est désigné comme 
 
 Dans certains cas, un utilisateur peut saisir des valeurs erronées pour son adresse électronique et/ou ses numéros de téléphone.
 
-| Espace de noms | Limite |
+| Espace de noms | Espace de noms unique |
 | --- | --- |
-| Identifiant CRM | 1 |
-| E-mail | 1 |
-| ECID | S/O |
+| Identifiant CRM | Oui |
+| E-mail | Oui |
+| ECID | Non |
 
 Dans cet exemple, l’identifiant CRM et les espaces de noms de courrier électronique sont désignés comme uniques. Supposons que Jane et John se soient inscrits à votre site web d’e-commerce à l’aide d’une valeur d’e-mail incorrecte (test, par exemple).<span>@test.com).
 
@@ -103,7 +136,7 @@ Dans cet exemple, l’identifiant CRM et les espaces de noms de courrier électr
 * `timestamp=2`: John se connecte à votre site web de commerce électronique à l’aide de Google Chrome sur son iPhone, en établissant son identifiant CRM (informations de connexion) et son ECID (navigateur).
 * `timestamp=3`: votre ingénieur de données ingère l’enregistrement CRM de Jane, ce qui entraîne le lien entre son identifiant CRM et le mauvais courrier électronique.
 * `timestamp=4`: votre ingénieur de données ingère l’enregistrement CRM de John, ce qui entraîne l’association de son identifiant CRM au mauvais courrier électronique.
-   * Cela devient alors une violation des limites configurées, car il crée un graphique unique avec deux espaces de noms d’ID de gestion de la relation client.
+   * Cela devient alors une violation de la configuration d’espace de noms unique, car il crée un graphique unique avec deux espaces de noms d’ID CRM.
    * Par conséquent, l’algorithme d’optimisation des identités supprime l’ancien lien, qui dans ce cas est le lien entre l’identité de Jane avec l’espace de noms de l’ID de gestion de la relation client et l’identité avec le test.<span>@test.
 
 Avec l’algorithme d’optimisation des identités, les valeurs d’identité erronées telles que les faux emails ou les numéros de téléphone ne sont pas propagées sur plusieurs graphiques d’identités différents.
