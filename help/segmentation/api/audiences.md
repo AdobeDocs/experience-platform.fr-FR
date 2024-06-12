@@ -3,10 +3,10 @@ title: Point de terminaison de l’API Audiences
 description: Utilisez le point de terminaison audiences dans l’API Adobe Experience Platform Segmentation Service pour créer, gérer et mettre à jour par programmation les audiences de votre entreprise.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 87b491339469e69653cad79b657bd1edfbca1de9
 workflow-type: tm+mt
 source-wordcount: '1879'
-ht-degree: 7%
+ht-degree: 5%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 7%
 
 Une audience est un groupe de personnes qui partagent des comportements et/ou des caractéristiques similaires. Ces collections de personnes peuvent être générées à l’aide de Adobe Experience Platform ou à partir de sources externes. Vous pouvez utiliser la variable `/audiences` point de terminaison dans l’API Segmentation, qui vous permet de récupérer, créer, mettre à jour et supprimer des audiences par programmation.
 
-## Prise en main
+## Commencer
 
 Les points de terminaison utilisés dans ce guide font partie de la variable [!DNL Adobe Experience Platform Segmentation Service] API. Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
 
@@ -49,7 +49,7 @@ La requête suivante récupère les deux dernières audiences créées dans votr
 +++Exemple de requête pour récupérer une liste d’audiences.
 
 ```shell
-curl -X GET https: //platform.adobe.io/data/core/ups/audiences?limit=2 \
+curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -196,7 +196,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste des audiences cr�
 
 +++
 
-## Créer une nouvelle audience {#create}
+## Création d’une audience {#create}
 
 Vous pouvez créer une audience en adressant une requête de POST à la fonction `/audiences` point de terminaison .
 
