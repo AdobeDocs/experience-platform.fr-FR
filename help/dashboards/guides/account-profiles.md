@@ -2,9 +2,9 @@
 title: Tableau de bord des profils de compte
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les profils de compte B2B de votre entreprise.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
+source-git-commit: 8e05b0ae06250f8cd55b361a8176963e0dce8e92
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1763'
 ht-degree: 4%
 
 ---
@@ -169,6 +169,14 @@ Le menu déroulant du widget vous permet de sélectionner le modèle de notation
 >Les filtres de période globaux ne s’appliquent pas aux insights de notation prédictive. Les widgets de notation prédictive analysent les données en fonction du modèle de notation de compte sélectionné dans la liste déroulante.
 
 ![Le widget Score prédictif des principaux facteurs d’influence .](../images/account-profiles/predictive-scoring-top-influential-factors.png)
+
+### Erreur de chargement des données impossible {#errors}
+
+Si un widget s’affiche *[!UICONTROL Chargement impossible. Essaie à nouveau.]* car il n’existe aucune donnée disponible pour l’entité B2B. Par exemple, le widget affiché ci-dessous [!UICONTROL Nouvelles opportunités par rôle individuel], affiche le message &quot;[!UICONTROL Chargement impossible. Essaie à nouveau.]&quot;, car cet environnement de test ne dispose pas de données d’opportunité disponibles.
+
+![L’erreur Impossible de charger l’insight.](../images/account-profiles/unable-to-load.png)
+
+Pour résoudre ce problème, vous devez ingérer des données d’entité B2B, telles que *personne en opportunité* données, dans l’environnement de test. Au bout de 48 heures, les données sont répercutées dans les widgets.
 
 ## Étapes suivantes
 

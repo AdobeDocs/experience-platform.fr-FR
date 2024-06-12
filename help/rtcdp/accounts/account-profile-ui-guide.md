@@ -5,10 +5,10 @@ description: Grâce aux profils de compte, l’édition B2B d’Adobe Real-time 
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: bbcc056e416e2c1a8b6fd1a411c0fba4c0ff8dbb
+source-git-commit: 96f29d5c64bb29125d8a63dd3ddb3bdedb5ebd52
 workflow-type: tm+mt
-source-wordcount: '1664'
-ht-degree: 56%
+source-wordcount: '1680'
+ht-degree: 55%
 
 ---
 
@@ -26,7 +26,7 @@ Pour en savoir plus sur la manière dont les profils de compte sont créés dans
 
 Sélectionner **[!UICONTROL Profils]** under [!UICONTROL Comptes] dans le volet de navigation de gauche pour afficher la présentation des profils de compte. Sous , [!UICONTROL Présentation] , le tableau de bord affiche un graphique ou un graphique affichant des widgets dans un seul point d’entrée.
 
-![Onglet Aperçu affichant des widgets](images/b2b-account-profile-overview.png)
+![L’onglet Aperçu des profils de compte avec les profils dans le volet de navigation de gauche et Aperçu en surbrillance.](images/b2b-account-profile-overview.png)
 
 Consultez la documentation relative à la [[!UICONTROL Profils de compte]](../../dashboards/guides/account-profiles.md) tableau de bord pour en savoir plus. Consultez la documentation relative à [Modèle de données Real-time Customer Data Platform Insights B2B](../../dashboards/data-models/cdp-insights-data-model-b2b.md) pour plus d’informations sur l’utilisation des modèles de données d’insights pour créer des graphiques personnalisés pour vos tableaux de bord.
 
@@ -38,7 +38,7 @@ Consultez la documentation relative à la [[!UICONTROL Profils de compte]](../..
 
 Pour configurer la correspondance de pistes et de comptes, sélectionnez **[!UICONTROL Profils]** under [!UICONTROL Comptes] dans le volet de navigation de gauche. Sur le **[!UICONTROL Présentation]** onglet, sélectionnez **[!UICONTROL Paramètres]** en haut à droite.
 
-![Sélectionner les paramètres](images/b2b-configuring-accounts-profile.png)
+![Onglet Aperçu des profils de compte avec la mise en surbrillance des paramètres.](images/b2b-configuring-accounts-profile.png)
 
 La variable **[!UICONTROL Paramètres du compte]** s’ouvre. À partir de là, sélectionnez la variable **[!UICONTROL Activation de la mise en correspondance de pistes/comptes]** pour activer la fonction. Utilisez le menu déroulant pour sélectionner **[!UICONTROL Qualité]** pour le **[!UICONTROL Correspondance de cadence]** . Enfin, sélectionnez la **[!UICONTROL Critères de correspondance]** options suivies de **[!UICONTROL Enregistrer]** pour confirmer vos paramètres et revenir au **[!UICONTROL Profils de compte]** écran.
 

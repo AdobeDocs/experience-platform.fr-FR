@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Principes de base de la composition des schémas
 description: Découvrez les schémas de modèle de données d’expérience (XDM) et les blocs de création, les principes et les bonnes pratiques pour la composition de schémas dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 1b3d20610a48fc48c84dc4901d7b09db4bb8fa1f
+source-git-commit: 42038ecfeecc774b3a57e05d961bbd80f3178c21
 workflow-type: tm+mt
-source-wordcount: '4236'
-ht-degree: 25%
+source-wordcount: '4293'
+ht-degree: 21%
 
 ---
 
@@ -53,7 +53,7 @@ Les schémas d’enregistrement et de série temporelle contiennent tous deux un
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
 >title="Identités dans les schémas"
->abstract="Les identités sont des champs clés d&#39;un schéma pouvant être utilisés pour identifier un objet, comme une adresse e-mail ou un identifiant marketing. Ces champs sont utilisés pour créer le graphique d&#39;identité de chaque individu ainsi que les profils client. Pour plus d&#39;informations sur les identités dans les schémas, consultez la documentation."
+>abstract="Les identités sont des champs clés d’un schéma qui peuvent être utilisés pour identifier un objet, comme une adresse électronique ou un identifiant marketing. Ces champs sont utilisés pour créer le graphique d’identités pour chaque individu et créer des profils client. Pour plus d’informations sur les identités dans les schémas, consultez la documentation ."
 
 Les schémas sont utilisés pour ingérer des données dans Experience Platform. Ces données sont finalement utilisées par plusieurs services pour créer une vue unique et unifiée d’une entité individuelle. Il est donc important, lors de la conception de schémas pour les identités client, de prendre en compte les champs qui peuvent être utilisés pour identifier un sujet, quel que soit l’origine des données.
 
@@ -170,7 +170,12 @@ Les schémas sont composés à l’aide de la formule suivante :
 >[!CONTEXTUALHELP]
 >id="platform_schemas_class"
 >title="Classe"
->abstract="Chaque schéma est basé sur une seule classe. La classe définit le comportement du schéma et les propriétés communes que tous les schémas basés sur cette classe doivent avoir. Pour plus d&#39;informations sur l&#39;implication des classes dans la composition des schémas, consultez la documentation."
+>abstract="Chaque schéma est basé sur une seule classe. La classe définit le comportement du schéma et les propriétés communes que tous les schémas basés sur cette classe doivent contenir. Consultez la documentation pour en savoir plus sur l’implication des classes dans la composition des schémas."
+
+>[!CONTEXTUALHELP]
+>id="platform_schemas_class_industries"
+>title="Type de secteur"
+>abstract="Si vous sélectionnez un secteur industriel pertinent pour votre entreprise, le modèle d’apprentissage automatique peut fournir une meilleure organisation des données en mappant plus précisément les champs sources avec les groupes de champs standard conformes aux normes du secteur. Cela permet de s’assurer que l’intégration des données est adaptée aux besoins spécifiques de votre secteur d’activité et donne lieu à des informations plus précises et plus pertinentes."
 
 La composition d’un schéma commence par l’attribution d’une classe. Les classes définissent les aspects comportementaux des données que le schéma contiendra (enregistrement ou série temporelle). En outre, les classes décrivent le plus petit de nombres de propriétés communes que tous les schémas basés sur cette classe doivent inclure et fournir une manière de fusionner plusieurs jeux de données compatibles.
 
@@ -189,12 +194,12 @@ Pour obtenir la liste la plus récente des classes XDM standard disponibles, rep
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup"
 >title="Groupe de champs"
->abstract="Les groupes de champs sont des composants réutilisables qui vous permettent d&#39;étendre les schémas avec des attributs supplémentaires. La plupart des groupes de champs ne sont compatibles qu&#39;avec certaines classes. Vous pouvez utiliser des groupes de champs standard définis par Adobe ou définir manuellement vos propres groupes de champs personnalisés. Pour plus d&#39;informations sur l&#39;implication des groupes de champs dans la composition des schémas, consultez la documentation."
+>abstract="Les groupes de champs sont des composants réutilisables qui vous permettent d’étendre les schémas avec des attributs supplémentaires. La plupart des groupes de champs ne sont compatibles qu’avec certaines classes. Vous pouvez utiliser des groupes de champs standard définis par Adobe ou définir manuellement vos propres groupes de champs personnalisés. Consultez la documentation pour en savoir plus sur la manière dont les groupes de champs sont impliqués dans la composition des schémas."
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_requiredFieldgroup"
 >title="Groupe de champs requis"
->abstract="Ce groupe de champs est requis par la source que vous utilisez. Vous ne pouvez donc pas le supprimer de votre schéma."
+>abstract="Ce groupe de champs est requis par la source que vous utilisez. Pour cette raison, vous ne pouvez pas la supprimer de votre schéma."
 
 Un groupe de champs est un composant réutilisable qui définit un ou plusieurs champs qui implémentent certaines fonctions telles que les détails personnels, les préférences d’hôtel ou l’adresse. Les groupes de champs sont destinés à être inclus dans le cadre d’un schéma qui met en oeuvre une classe compatible.
 

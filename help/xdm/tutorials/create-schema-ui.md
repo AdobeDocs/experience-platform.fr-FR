@@ -5,7 +5,7 @@ title: Créer un schéma à l’aide de l’éditeur de schémas
 type: Tutorial
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: c8c8e8b8571c215cb470dd5bdb9e9172d564f9d8
+source-git-commit: df0912bcb7122152da127c4e6b625cff73f7fa72
 workflow-type: tm+mt
 source-wordcount: '4813'
 ht-degree: 78%
@@ -49,10 +49,6 @@ Pour commencer à composer un schéma, sélectionnez **[!UICONTROL Créer un sch
 La variable [!UICONTROL Créer un schéma] le workflow s’affiche. Choisissez ensuite une classe de base pour le schéma. Vous pouvez choisir parmi les classes principales de [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent], ou [!UICONTROL Autre] si ces classes ne répondent pas à vos besoins. La variable [!UICONTROL Autre] l’option classes vous permet d’effectuer l’une des opérations suivantes : [créer une classe](#create-new-class) ou effectuez une sélection dans d’autres classes préexistantes.
 
 Voir [Profil individuel XDM](../classes/individual-profile.md) et [XDM ExperienceEvent](../classes/experienceevent.md) documentation pour plus d’informations sur ces classes. Dans ce tutoriel, sélectionnez **[!UICONTROL XDM Individual Profile]** suivie de **[!UICONTROL Suivant]**.
-
-
-
-<!--  -->
 
 <!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
 
