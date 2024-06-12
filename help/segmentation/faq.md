@@ -2,9 +2,9 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
+source-git-commit: b41a60942460e22556714699975f9eb281d76335
 workflow-type: tm+mt
-source-wordcount: '4064'
+source-wordcount: '4060'
 ht-degree: 22%
 
 ---
@@ -128,9 +128,9 @@ Le graphique suivant explique les différents états du cycle de vie, ce qu’il
 
 | État | Définition | Visible dans Audience Portal ? | Visible dans les destinations ? | Affecte les limites de segmentation ? | Impact sur les audiences basées sur des fichiers | Impact sur l’évaluation des audiences | Utilisable dans d’autres audiences ? | Modifiable |
 | --- | --- | --- | --- | --- | --- | --- | --- | -- |
-| Brouillon | Une audience dans le **Version préliminaire** state est une audience qui est encore en cours de développement et qui n’est pas encore prête à être utilisée dans d’autres services. | Oui, mais peut être caché. | Non | Oui | Peuvent être importées ou mises à jour pendant le processus d’affinage. | Peuvent être évaluées afin d’obtenir des comptes de publication précis. | Oui, mais non recommandé. | Oui |
+| Brouillon | Une audience dans le **Version préliminaire** state est une audience qui est encore en cours de développement et qui n’est pas encore prête à être utilisée dans d’autres services. | Oui, mais peut être caché. | Non | Oui | Peuvent être importées ou mises à jour pendant le processus d’affinage. | Évalués pour obtenir des comptes de publication précis. | Oui, mais non recommandé. | Oui |
 | Publié | Une audience dans le **Publié** state est une audience prête à être utilisée sur tous les services en aval. | Oui | Oui | Oui | Peut être importé ou mis à jour. | Évalués à l’aide de la segmentation par lots, par flux ou par périphérie. | Oui | Oui |
-| Inactif | Une audience dans le **Inactif** state est une audience qui n’est actuellement pas utilisée. Il existe toujours dans Platform, mais il le sera **not** être utilisable jusqu’à ce qu’il soit marqué comme brouillon ou publié. | Non, mais peut être affiché. | Non | Non | N’est plus mis à jour. | N’est plus évalué ou mis à jour par Platform. | Oui | Oui |
+| Inactif | Une audience dans le **Inactif** state est une audience qui n’est actuellement pas utilisée. Il existe toujours dans Platform, mais il le sera **not** être utilisable jusqu’à ce qu’il soit marqué comme brouillon ou publié. | Non, mais peut être affiché. | Non | Non | N’est plus mis à jour. | N’est plus évalué ou mis à jour par Platform. | Non | Oui |
 | Supprimé | Une audience dans le **Supprimé** state est une audience qui a été supprimée. L’exécution de la suppression des données peut prendre jusqu’à quelques minutes. | Non | Non | Non | Les données sous-jacentes sont supprimées. | Aucune évaluation ou exécution des données n’a lieu une fois la suppression terminée. | Non | Non |
 
 ### Dans quels états puis-je modifier mes audiences ?
@@ -223,7 +223,7 @@ Pour que l’audience parent soit déplacée vers l’état inactif ou supprimé
 
 ### Puis-je faire référence à une audience dont l’état de cycle de vie est différent ?
 
-Oui! Si votre audience est actuellement à l’état de brouillon, vous pouvez vous référer aux audiences à l’état publié ou inactif. Cependant, pour publier cette audience, vous devez : **must** publiez les autres audiences parentes.
+Oui! Si votre audience se trouve actuellement à l’état de brouillon, vous pouvez vous référer aux audiences à l’état de brouillon ou de publication. Cependant, pour publier cette audience, vous devez : **must** publiez les autres audiences parentes.
 
 ## Inventaire de l’audience
 
