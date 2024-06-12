@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Dépannage des sources
 description: Ce document répond aux questions fréquentes sur les sources sur Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 583eb70235174825dd542b95463784638bdef235
 workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 100%
@@ -47,7 +47,7 @@ Vous trouverez ci-dessous une liste des contraintes dont vous devez tenir compte
 - Les noms de fichier suivants ne sont pas autorisés : LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, point (.) et deux points (..).
 - Le nombre maximal de fichiers par lot est de 1 500, avec une taille de lot maximale de 100 Go.
 - Le nombre maximal de propriétés ou de champs par ligne est de 10 000.
-- Le nombre maximal de lots pouvant être envoyés par utilisateur et par minute est de 138.
+- Le nombre maximal de lots pouvant être envoyés par utilisateur et par minute est de 2000.
 
 ### Quels types de données sont pris en charge ?
 

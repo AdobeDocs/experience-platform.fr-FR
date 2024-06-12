@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de l’API Batch Ingestion
 description: L’API Batch Ingestion de Adobe Experience Platform vous permet d’ingérer des données dans Platform sous forme de fichiers de lot. Les données en cours d’ingestion peuvent être les données de profil d’un fichier plat dans un système CRM (par exemple un fichier Parquet) ou les données conformes à un schéma connu dans le registre Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 583eb70235174825dd542b95463784638bdef235
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 65%
@@ -44,7 +44,7 @@ L’ingestion de données par lots présente certaines contraintes :
 - Nombre maximal de fichiers par lot : 1 500
 - Taille maximale du lot : 100 Go
 - Nombre maximal de propriétés ou de champs par ligne : 10 000
-- Nombre maximal de lots par minute sur le lac de données, par utilisateur : 138
+- Nombre maximal de lots par minute sur le lac de données, par utilisateur : 2 000
 
 >[!NOTE]
 >
