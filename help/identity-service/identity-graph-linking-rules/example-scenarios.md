@@ -1,22 +1,20 @@
 ---
 title: Exemples De Scénarios De Configuration Des Paramètres D’Identité
 description: Découvrez les exemples de scénarios de configuration des paramètres d’identité.
-hide: true
-hidefromtoc: true
-badge: Alpha
+badge: Version bêta
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: f1779ee75c877649a69f9fa99f3872aea861beca
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 3%
+source-wordcount: '455'
+ht-degree: 1%
 
 ---
 
 # Exemples de scénarios de configuration des règles de liaison de graphiques d’identités
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en Alpha. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
+>Cette fonctionnalité n’est pas encore disponible ; le programme bêta pour les règles de liaison de graphiques d’identités devrait commencer en juillet sur les environnements de test de développement. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation.
 
 Ce document présente des exemples de scénarios que vous pouvez prendre en compte lors de la configuration des règles de liaison de graphiques d’identités.
 
@@ -28,7 +26,7 @@ Il existe des cas où plusieurs connexions peuvent se produire sur un seul appar
 | --- | --- |
 | Ordinateurs de famille et tablettes | Le mari et la femme se connectent tous deux à leurs comptes bancaires respectifs. |
 | kiosque public | Les voyageurs qui se connectent à un aéroport se servant de leur carte de fidélité pour enregistrer leurs sacs et imprimer leurs cartes d&#39;embarquement. |
-| Centre d’appel | Le personnel du centre d’appels se connecte sur un seul appareil au nom des clients qui appellent le service clientèle pour résoudre les problèmes. |
+| Centre d’appels | Le personnel du centre d’appels se connecte sur un seul appareil au nom des clients qui appellent le service clientèle pour résoudre les problèmes. |
 
 ![shared-devices](../images/identity-settings/shared-devices.png)
 
