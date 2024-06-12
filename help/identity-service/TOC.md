@@ -5,7 +5,7 @@ breadcrumb-title: Guide de Platform Identity Service
 user-guide-description: Associez les identités des clients sur différents appareils et systèmes pour offrir des expériences numériques personnalisées.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 2afdfd54b420bcf59423ea64048d928422ea61c9
+source-git-commit: f04587fe325c1515545e4067845976aafc7d68ed
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 65%
@@ -22,6 +22,11 @@ ht-degree: 65%
    - [Logique de liaison d’identités](./features/identity-linking-logic.md)
    - [Visionneuse de graphique d’identités](./features/identity-graph-viewer.md)
    - [Suppressions dans le service d’identités](./features/deletion.md)
+   - Règles de liaison de graphiques d’identités {#identity-graph-linking-rules}
+      - [Présentation des fonctionnalités](./identity-graph-linking-rules/overview.md)
+      - [Algorithme d’optimisation des identités](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+      - [Priorité d’espace de noms](./identity-graph-linking-rules/namespace-priority.md)
+      - [Exemples de scénarios](./identity-graph-linking-rules/example-scenarios.md)
    - [Présentation d’ECID](./features/ecid.md)
 - [Guide de mise en oeuvre](implementation.md)
 - [Barrières de sécurité pour les données Identity ](guardrails.md)
@@ -37,11 +42,6 @@ ht-degree: 65%
    - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/identity-service)
 - [Détection des appareils partagés](shared-device-detection.md)
 - [Définir des champs d’identité dans l’interface utilisateur](label-identities.md)
-- [Règles de liaison de graphiques d’identités] {#identity-graph-linking-rules}
-   - [Présentation des fonctionnalités](./identity-graph-linking-rules/overview.md)
-   - [Algorithme d’optimisation des identités](./identity-graph-linking-rules/identity-optimization-algorithm.md)
-   - [Priorité d’espace de noms](./identity-graph-linking-rules/namespace-priority.md)
-   - [Exemples de scénarios](./identity-graph-linking-rules/example-scenarios.md)
 - [Traitement des demandes d’accès à des informations personnelles](privacy.md)
 - [Guide de dépannage](troubleshooting-guide.md)
 - [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
