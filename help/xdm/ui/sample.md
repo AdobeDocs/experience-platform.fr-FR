@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_downloadsamplefile"
->title="Télécharger l&#39;exemple de fichier"
+>title="Télécharger l’exemple de fichier"
 >abstract="Générez un exemple d’objet JSON conforme à la structure du schéma de votre choix. Cet objet peut servir de modèle pour vous assurer que vos données sont correctement formatées pour l’ingestion dans les jeux de données qui utilisent ce schéma. L’exemple de fichier JSON sera téléchargé par votre navigateur."
 
 Pour ingérer des données dans Adobe Experience Platform, le format et la structure des données doivent respecter un schéma de modèle de données d’expérience (XDM) existant. Selon la complexité du schéma pour un jeu de données spécifique, il peut être difficile de déterminer la forme exacte des données attendues par le jeu de données lors de l’ingestion.
