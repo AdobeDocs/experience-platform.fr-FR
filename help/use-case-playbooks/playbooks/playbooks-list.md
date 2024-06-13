@@ -3,19 +3,24 @@ solution: Experience Platform
 title: Cas d’utilisation disponibles des classeurs pour Real-time Customer Data Platform et Adobe Journey Optimizer.
 description: Liste de tous les playbooks dans Real-time Customer Data Platform et Adobe Journey Optimizer.
 role: User
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
+source-git-commit: 6573fdede3bd25bac556531e45f8abefc576f857
 workflow-type: tm+mt
-source-wordcount: '753'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
-
 
 # Manuels de cas d’utilisation disponibles
 
 Lisez cette page pour obtenir un aperçu de tous les playbooks disponibles que vous pouvez découvrir et utiliser dans Real-time Customer Data Platform et Adobe Journey Optimizer.
 
 ## Cas d’utilisation des classeurs de cas d’utilisation dans Journey Optimizer {#optimizer-playbooks}
+
+>[!CONTEXTUALHELP]
+>id="platform_playbooks_list"
+>title="Jeux disponibles"
+>abstract="Liste de tous les playbooks dans Real-time Customer Data Platform et Adobe Journey Optimizer."
 
 | Nom du manuel | Description |
 | ------------- |  ----------- |
