@@ -2,9 +2,10 @@
 title: Priorité d’espace de noms
 description: Découvrez la priorité des espaces de noms dans Identity Service.
 badge: Version bêta
-source-git-commit: 85da193f422a1708999fb59b7ea095f4447d6bdf
+exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
+source-git-commit: 5674309e4e8f17ad4c951ec4a5cb0cbc0a15ab03
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1519'
 ht-degree: 2%
 
 ---
@@ -50,9 +51,9 @@ Les espaces de noms de personne sont relativement immuables par rapport aux appa
 
 Une autre façon d&#39;aborder ce sujet est la cardinalité. Pour une entité de personne donnée, combien d’identités seront créées ? Dans la plupart des cas, une personne dispose d’un identifiant CRM, d’une poignée d’identifiants d’appareil matériel (les réinitialisations IDFA/GAID ne doivent pas se produire souvent) et d’encore plus de cookies (un individu peut facilement naviguer sur plusieurs appareils, utiliser le mode incognito ou réinitialiser les cookies à tout moment). En général, **une cardinalité inférieure indique un espace de noms avec une valeur supérieure.**.
 
-<!-- ## Step 2: Validate your namespace priority settings
+## Validation des paramètres de priorité de votre espace de noms
 
-Once you have an idea of how you will prioritize your namespaces, you can use the Graph Simulation tool to test out various graph collapse scenarios and ensure that your priority configurations are returning the expected graph results. For more information, read the guide on using the [Graph Simulation tool](./graph-simulation.md). -->
+Une fois que vous avez une idée de la manière dont vous hiérarchisez vos espaces de noms, vous pouvez utiliser l’outil Simulation de graphique pour tester différents scénarios de réduction des graphiques et vous assurer que vos configurations de priorité renvoient les résultats graphiques attendus. Pour plus d’informations, consultez le guide sur l’utilisation de la variable [Outil de simulation graphique](./graph-simulation.md).
 
 ## Configurer la priorité des espaces de noms
 
