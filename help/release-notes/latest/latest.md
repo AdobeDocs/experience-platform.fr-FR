@@ -1,155 +1,33 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform - Mai 2024
-description: Notes de mise à jour de mai 2024 pour Adobe Experience Platform.
-source-git-commit: e02892a2cbf5f65a1b9a0eec49722896bd061084
-workflow-type: ht
-source-wordcount: '1596'
-ht-degree: 100%
+title: Notes de mise à jour d’Adobe Experience Platform - Juin 2024
+description: Les notes de mise à jour de juin 2024 pour Adobe Experience Platform.
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: 0089ce105f59f68d8bf4208120526a7c1b25e32f
+workflow-type: tm+mt
+source-wordcount: '353'
+ht-degree: 9%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de mise à jour : 21 mai 2024**
+**Date de publication : juin 2024**
 
->[!TIP]
->
->La [Documentation de l’API Experience Platform](https://developer.adobe.com/experience-platform-apis/) est désormais interactive. Explorez les points d’entrée de l’API directement à partir des pages de la documentation pour obtenir des retours immédiats et accélérer votre implémentation technique. [En savoir plus](#interactive-api-documentation) à propos de la nouvelle fonctionnalité.
+Nouvelles fonctionnalités d’Adobe Experience Platform :
 
-Mises à jour des fonctionnalités existantes dans Experience Platform :
+- [Assistant IA](#ai-assistant)
 
-- [Service de catalogue](#catalog-service)
-- [Tableaux de bord](#dashboards)
-- [Gouvernance des données](#governance)
-- [Destinations](#destinations)
-- [Query Service](#query-service)
-- [Segmentation Service](#segmentation)
-- [Sources](#sources)
+## Assistant IA {#ai-assistant}
 
-Autres mises à jour dans Adobe Experience Platform :
+L’assistant d’IA dans Adobe Experience Platform est une expérience conversationnelle que vous pouvez utiliser pour accélérer vos workflows dans les applications Adobe. Vous pouvez utiliser l’assistant d’IA pour mieux comprendre les connaissances sur les produits, résoudre les problèmes ou rechercher des informations et trouver des informations opérationnelles. L’assistant d’IA prend en charge Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer et Customer Journey Analytics.
 
-- [Mises à jour de la documentation](#documentation-updates)
-
-## Catalog Service {#catalog-service}
-
-Catalog Service est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous forme de fichiers et de répertoires, Catalog conserve les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
-
-**Fonctionnalités nouvelles ou mises à jour**
+**Nouvelle fonctionnalité**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Actions en masse | L’inventaire des jeux de données prend désormais en charge les actions en masse. Rationalisez vos processus de gestion des données et garantissez une gestion efficace de vos jeux de données avec les actions en masse. Utilisez des actions en masse pour gagner du temps en exécutant plusieurs actions simultanément sur de multiples jeux de données.  Les actions en masse incluent : [Déplacer vers un dossier](../../catalog/datasets/user-guide.md#move-to-folders), [Modifier des balises](../../catalog/datasets/user-guide.md#manage-tags), et [Supprimer](../../catalog/datasets/user-guide.md#delete) des jeux de données. <br> ![Actions en masse dans l’espace de travail de l’interface d’utilisation des jeux de données.](../2024/assets/may/bulk-actions.png "Actions en masse dans l’espace de travail de l’interface d’utilisation des jeux de données."){width="100" zoomable="yes"} <br> Pour plus d’informations sur cette fonctionnalité, consultez le [Guide de l’interface d’utilisation des jeux de données](../../catalog/datasets/user-guide.md#bulk-actions). |
+| Assistant d’IA en Experience Platform | Vous pouvez désormais utiliser l’assistant d’IA en Experience Platform. L’assistant d’IA prend en charge Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer et Customer Journey Analytics. <br> ![Assistant IA dans Experience Platform.](../2024/assets/june/ai-assistant-full.png "Assistant IA dans Experience Platform."){width="100" zoomable="yes"} <br> Pour plus d’informations sur cette fonctionnalité, consultez la section [Guide de l’interface utilisateur de l’assistant IA](../../ai-assistant/ui-guide.md). |
+| Prise en charge des questions relatives aux connaissances sur les produits | [Connaissances produit](../../ai-assistant/home.md#product-knowledge) sont des concepts et des rubriques basés sur la documentation Experience League et peuvent être utilisés pour l’apprentissage pointé, la découverte ouverte et la résolution des problèmes. Vous pouvez poser des questions sur les connaissances des produits de l’assistant d’IA telles que : <ul><li>Que sont les audiences semblables ?</li><li>Comment est calculé la richesse de Profile ?</li><li> Puis-je supprimer un schéma activé pour le profil une fois les données ingérées ?</li></ul> |
+| [!BADGE Beta]{type=Informative} Prise en charge des questions d’informations opérationnelles | [Connaissances opérationnelles](../../ai-assistant/home.md#operational-insights) sont des réponses générées par l’assistant d’IA au sujet de vos objets de métadonnées, y compris les décomptes, les recherches et l’impact sur la traçabilité. Les insights opérationnels ne prennent en compte aucune donnée de votre environnement de test. Vous pouvez poser des questions sur les informations opérationnelles de l’assistant d’IA telles que : <ul><li>Quelles destinations sont à l’état actif ?</li><li>Combien de jeux de données ai-je ?</li><li>Répertorier les audiences utilisées dans les parcours en direct.</li></ul> Les informations opérationnelles sont prises en charge dans les domaines suivants : attributs, audiences, flux de données, jeux de données, destinations, parcours, schémas et sources. |
+| Accéder à l’assistant AI | Pour accéder à l’assistant d’IA pour Experience Platform, Real-Time CDP et Journey Optimizer, vous devez être ajouté à un rôle qui inclut la fonction **Activation de l’assistant AI** et **Affichage des informations opérationnelles** autorisations. Pour plus d’informations, consultez la section [guide d’accès aux fonctionnalités](../../ai-assistant/access.md). Vous devez utiliser le Admin Console pour [accès en Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant?lang=en#feature-access). |
 
-{style="table-layout:auto"}
-
-## Tableaux de bord {#dashboards}
-
-Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels vous pouvez afficher des informations importantes sur les données de votre organisation, telles quʼelles sont capturées lors dʼinstantanés quotidiens.
-
-**Fonctionnalités nouvelles ou mises à jour**
-
-| Fonctionnalité | Description |
-| --- | --- |
-| Informations personnalisables pour la création de rapports d’application étendue | Effectuez en toute transparence la [transition de la sortie de l’analyse SQL vers des formats visuels compréhensibles et conviviaux](../../dashboards/data-distiller/customizable-insights/overview.md). Utilisez des requêtes SQL personnalisées pour une manipulation de données précise et pour la création de graphiques dynamiques à partir de jeux de données aux structures diverses. Vous pouvez utiliser le mode de requête pro pour effectuer une analyse complexe avec SQL, puis partager cette analyse avec des utilisateurs et des utilisatrices non techniques par le biais de graphiques sur votre tableau de bord personnalisé, ou les exporter dans des fichiers CSV. |
-
-{style="table-layout:auto"}
-
-## Gouvernance des données {#governance}
-
-Dans Adobe Experience Platform, la gouvernance des données désigne un ensemble de politiques et de technologies permettant de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Elle joue un rôle clé dans [!DNL Experience Platform] à différents niveaux, notamment dans le catalogage, la traçabilité des données, l’étiquetage de l’utilisation des données, les politiques d’accès aux données et le contrôle d’accès aux données pour les actions marketing.
-
-**Nouvelles fonctionnalités**
-
-| Fonctionnalité | Description |
-| --- | --- |
-| Prise en charge de mTLS pour les destinations d’API HTTP et les actions personnalisées d’Adobe Journey Optimizer. | Gagnez la confiance des clientes et clients grâce aux mesures de sécurité renforcées du protocole mTLS (Mutual Transport Layer Security). La [destination de l’API HTTP Experience Platform](../../destinations/catalog/streaming/http-destination.md#mtls-protocol-support) et les [Actions personnalisées d’Adobe Journey Optimizer](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions) prennent désormais en charge le protocole mTLS lors de l’envoi de données vers des points d’entrée configurés. Aucune configuration supplémentaire n’est requise dans votre action personnalisée ou dans la destination de l’API HTTP pour activer mTLS. Ce processus se déclenche automatiquement lorsqu’un point d’entrée compatible mTLS est détecté. Vous pouvez [télécharger le certificat public d’Adobe Journey Optimizer ici](../../landing/governance-privacy-security/encryption.md#download-certificates) et le [certificat public du service de destinations ici](../../landing/governance-privacy-security/encryption.md#download-certificates).<br>Consultez la [documentation sur le chiffrement des données d’Experience Platform](../../landing/governance-privacy-security/encryption.md#mtls-protocol-support) pour plus d’informations sur les protocoles de connexion réseau lors de l’export de données vers des systèmes tiers. |
-
-{style="table-layout:auto"}
-
-## Destinations {#destinations}
-
-Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
-
-**Fonctionnalités nouvelles ou mises à jour** {#destinations-new-updated-functionality}
-
-| Fonction | Description |
-| ----------- | ----------- |
-| Réorganiser les champs de mappage pour les destinations par lots | Vous pouvez désormais modifier l’ordre des colonnes dans vos exports CSV en faisant glisser les champs de mappage dans l’[étape de mappage](../../destinations/ui/activate-batch-profile-destinations.md#mapping). L’ordre des champs mappés dans l’interface d’utilisation se reflète dans l’ordre des colonnes du fichier CSV exporté, de haut en bas, la ligne du haut étant la colonne la plus à gauche dans le fichier CSV. <br> ![Illustration de la façon dont les mappages peuvent être réorganisés.](../2024/assets/may/reorder-mappings.gif "Illustration de la façon dont les mappages peuvent être réorganisés."){width="100" zoomable="yes"} |
-| Plannings d’export par défaut présélectionnés pour les destinations par lots | Experience Platform définit désormais automatiquement un planning par défaut pour chaque export de fichier. Consultez la documentation relative à la [planification des exports d’audience](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) pour découvrir comment modifier le planning par défaut. |
-| Modifier les plannings d’activation de plusieurs audiences pour les destinations par lots | Vous pouvez désormais modifier le planning d’activation de plusieurs audiences exportées vers une destination par lots (basée sur des fichiers) à partir de l’onglet **[!UICONTROL Données d’activation]** de la [page des détails de la destination](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). <br> ![Illustration de la sélection de plusieurs audiences et de la modification du planning d’export des fichiers.](../2024/assets/may/bulk-edit-schedule.gif "Illustration de la sélection de plusieurs audiences et de la modification du planning d’export des fichiers."){width="100" zoomable="yes"} |
-| Exporter plusieurs audiences à la demande vers des destinations par lots | Vous pouvez désormais sélectionner et exporter plusieurs audiences vers des destinations par lots, au moyen de l’option [Exporter des fichiers à la demande](../../destinations/ui/export-file-now.md). |
-
-{style="table-layout:auto"}
-
-Pour des informations plus générales sur les destinations, reportez-vous à la [présentation des destinations](../../destinations/home.md).
-
-## Query Service {#query-service}
-
-Query Service vous permet d’utiliser le langage SQL standard pour interroger les données dans le [!DNL Data Lake] d’Adobe Experience Platform. Vous pouvez joindre n’importe quel jeu de données à partir du [!DNL Data Lake] et capturer les résultats de la requête sous la forme d’un nouveau jeu de données à utiliser dans les rapports, dans l’espace de travail de science des données ou pour l’ingestion dans le profil client en temps réel.
-
-**Fonctionnalités mises à jour**
-
-| Fonctionnalité | Description |
-| --- | --- |
-| Éditeur hérité obsolète | L’éditeur hérité est obsolète et n’est plus utilisable. À la place, vous pouvez utiliser les [fonctionnalités améliorées de l’éditeur de requête](../../query-service/ui/user-guide.md#query-authoring) pour écrire, valider et exécuter vos requêtes. |
-| Retard d’exécution de requête | Contrôlez les heures dédiées au calcul en définissant des alertes pour les retards d’exécution de vos requêtes. Vous pouvez choisir de recevoir des alertes si le statut d’une requête ne change pas après un délai spécifique. Il vous suffit de définir le délai souhaité dans l’interface d’utilisation de Platform pour obtenir des informations sur la progression de votre requête. Pour savoir comment définir cette alerte dans l’interface d’utilisation, consultez la [documentation sur les plannings de requêtes](../../query-service/ui/query-schedules.md#alerts-for-query-status) ou le [guide des actions de requêtes intégrées](../../query-service/ui/monitor-queries.md#query-run-delay). |
-| Inventaire des journaux de requêtes rationalisé | Vous pouvez désormais profiter d’une résolution des problèmes améliorée et d’une surveillance des tâches grâce à une [interface d’utilisation des journaux de requêtes rationalisée](../../query-service/ui/query-logs.md#filter-logs) : <ul><li> Par défaut, l’interface d’utilisation de Platform exclut toutes les « requêtes système » de l’onglet des journaux. </li><li> Affichez les requêtes système en décochant **Exclure les requêtes système**. </li></ul> <br> ![Onglet Journaux dans l’espace de travail de l’interface d’utilisation Requêtes.](../2024/assets/may/query-log.png "Onglet Journaux dans l’espace de travail de l’interface d’utilisation Requêtes."){width="100" zoomable="yes"} <br> Utilisez l’interface d’utilisation des journaux de requêtes rationalisée pour obtenir une vue plus précise vous permettant d’identifier et d’analyser rapidement les journaux pertinents. |
-| Sélecteur de base de données | Utilisez le menu déroulant du nouveau sélecteur de base de données pour [accéder facilement aux vues de données de Customer Journey Analytics à partir de Power BI ou Tableau](../../query-service/ui/credentials.md#connect-to-customer-journey-analytics). Vous pouvez désormais sélectionner la base de données de votre choix directement dans l’interface d’utilisation de Platform pour une intégration plus transparente de vos outils BI. <br> ![Onglet Informations d’identification dans l’espace de travail de l’interface d’utilisation Requêtes.](../2024/assets/may/database-selector.png "Onglet Informations d’identification dans l’espace de travail de l’interface d’utilisation Requêtes."){width="100" zoomable="yes"} <br> |
-
-{style="table-layout:auto"}
-
-## Segmentation Service {#segmentation}
-
-[!DNL Segmentation Service] permet de segmenter en audiences les données stockées dans [!DNL Experience Platform] qui se rapportent aux personnes (tels que les clientes et clients, les prospects, les utilisateurs et utilisatrices ou les organisations). Vous pouvez créer des audiences par le biais de définitions de segment ou d’autres sources à partir de vos données [!DNL Real-Time Customer Profile]. Ces audiences sont configurées et conservées de manière centralisée sur [!DNL Platform] et sont facilement accessibles à partir de n’importe quelle solution Adobe.
-
-**Fonctionnalité mise à jour**
-
-| Fonctionnalité | Description |
-| --- | --- |
-| Importer des audiences générées de manière externe | L’import d’audiences générées de manière externe nécessite désormais l’autorisation « Importer une audience ». Pour en savoir plus sur les autorisations, consultez le [guide de l’interface d’utilisation des autorisations](../../access-control/home.md#permissions). |
-
-{style="table-layout:auto"}
-
-## Sources {#sources}
-
-Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
-
-Utilisez les sources dans Experience Platform pour ingérer des données à partir d’une application Adobe ou d’une source de données tierce.
-
-**Fonctionnalités nouvelles ou mises à jour**
-
-| Fonctionnalité | Description |
-| --- | --- |
-| Authentification des informations d’identification client OAuth2 pour une source [!DNL Salesforce] | Vous pouvez désormais utiliser des informations d’identification client OAuth2 pour authentifier votre compte [!DNL Salesforce] sur Experience Platform. Lisez le [guide de l’API](../../sources/tutorials/api/create/crm/salesforce.md) et le [guide de l’interface d’utilisation](../../sources/tutorials/ui/create/crm/salesforce.md) de la source [!DNL Salesforce] pour plus d’informations. |
-| Prise en charge d’exemples de flux de données pour la source [!DNL Marketo Engage] | La source [!DNL Marketo Engage] prend désormais en charge les exemples de flux de données. Activez la configuration d’exemple de flux de données pour limiter votre débit d’ingestion, puis essayez des fonctionnalités Experience Platform sans avoir à ingérer de grandes quantités de données. Pour plus d’informations, consultez le guide sur la [création d’un flux de données pour  [!DNL Marketo Engage]  dans l’interface d’utilisation](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
-| Mises à jour de la liste autorisée d’adresses IP | Selon votre emplacement, vous devez ajouter un ensemble de nouvelles adresses IP à votre liste autorisée pour utiliser correctement des sources de streaming. Pour obtenir une liste complète des nouvelles adresses IP, lisez le [guide de la liste autorisée d’adresses IP](../../sources/ip-address-allow-list.md). |
-
-{style="table-layout:auto"}
-
-**Documentation nouvelle ou mise à jour**
-
-| Documentation mise à jour | Description |
-| --- | --- |
-| Mises à jour de la documentation pour [!DNL Google PubSub] | La documentation de la source [!DNL Google PubSub] a été mise à jour en incluant un guide de prérequis complet. Consultez la nouvelle section « prérequis » pour découvrir comment créer votre compte de service, accorder des autorisations au niveau d’une rubrique ou d’un abonnement, et définir des configurations afin d’optimiser l’utilisation de la source [!DNL Google PubSub]. Consultez la [[!DNL Google PubSub] vue d’ensemble](../../sources/connectors/cloud-storage/google-pubsub.md) pour plus d’informations. |
-
-{style="table-layout:auto"}
-
-Pour plus d’informations sur les sources, consultez la [vue d’ensemble des sources](../../sources/home.md).
-
-## Mises à jour de la documentation {#documentation-updates}
-
-### Documentation interactive de l’API Experience Platform {#interactive-api-documentation}
-
-La [Documentation de l’API Experience Platform](https://developer.adobe.com/experience-platform-apis/) est désormais interactive. Toutes les pages de référence de l’API possèdent désormais une fonctionnalité **Essayer**. Cette fonctionnalité vous permet de tester les appels API directement sur la page du site web de la documentation. [Obtenez les informations d’authentification requises](/help/landing/api-authentication.md) et commencez à utiliser la fonctionnalité pour explorer les points d’entrée de l’API.
-
-Utilisez cette nouvelle fonctionnalité pour explorer les requêtes envoyées et les réponses issues des points d’entrée de l’API, afin d’obtenir des retours immédiats et d’accélérer votre implémentation technique. Par exemple, consultez les points d’entrée de l’[API Services d’identités](https://developer.adobe.com/experience-platform-apis/references/identity-service/) ou de l’[API Schema Registry](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) pour découvrir la nouvelle fonctionnalité **Essayer** dans le rail de droite.
-
-![Enregistrement d’écran montrant un appel API effectué directement à partir du site web de la documentation.](../2024/assets/may/api-playground-demo.gif)
-
->[!CAUTION]
->
->Notez qu’en utilisant la fonctionnalité d’API interactive sur les pages de documentation, vous effectuez de vrais appels API vers les points d’entrée. Gardez cela à l’esprit lorsque vous effectuez des tests dans des sandbox de production.
-
-### Informations personnalisées et engagement {#personalized-insights-engagement}
-
-La nouvelle page de documentation de cas d’utilisation de bout en bout pour l’[évolution d’une valeur à moment unique vers une valeur de durée de vie](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md) est maintenant en ligne. Lisez cette documentation pour comprendre comment utiliser Real-Time CDP et Adobe Journey Optimizer pour convertir des visiteurs et visiteuses sporadiques de vos propriétés web en clientes et clients fidèles.
+Pour plus d’informations sur l’assistant d’IA, consultez la section [Présentation de l’assistant AI](../../ai-assistant/home.md).
