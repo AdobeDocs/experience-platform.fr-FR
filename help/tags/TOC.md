@@ -6,9 +6,9 @@ user-guide-description: Découvrez comment déployer et gérer des balises d’a
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
+source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '765'
 ht-degree: 98%
 
 ---
@@ -54,7 +54,7 @@ ht-degree: 98%
    * [Déploiement de balises JavaScript pour la gestion du consentement client](./ui/client-side/consent.md)
    * [Prise en charge de la politique de sécurité du contenu (CSP)](./ui/client-side/content-security-policy.md)
    * [Prise en charge de l’intégrité des sous-ressources (SRI)](./ui/client-side/sri.md)
-   * [Transport Layer Security (sécurité de la couche de transport)](./ui/client-side/transport-layer-security.md)
+   * [Sécurité du calque de transport](./ui/client-side/transport-layer-security.md)
 * Transfert d’événement {#event-forwarding}
    * [Aperçu](./ui/event-forwarding/overview.md)
    * [Prise en main](./ui/event-forwarding/getting-started.md)
@@ -251,6 +251,8 @@ ht-degree: 98%
          * [Aperçu](./extensions/server/twitter/overview.md)
       * [!DNL Tiktok] API des événements web {#tiktok}
          * [Aperçu](./extensions/server/tiktok/overview.md)
+      * [!DNL The Trade Desk] {#thetradedesk}
+         * [Aperçu](./extensions/server/tradedesk/overview.md)
       * API des événements [!DNL Zendesk] {#zendesk}
          * [Aperçu](./extensions/server/zendesk/overview.md)
 * Développement d’extension {#extension-dev}
@@ -322,5 +324,5 @@ ht-degree: 98%
 * [FAQ](./faq.md)
 * [Mises à jour de terminologie](./term-updates.md)
 * [Obsolescence de la prise en charge d’Internet Explorer 10 et 11](./ie-deprecation.md)
-* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
 
