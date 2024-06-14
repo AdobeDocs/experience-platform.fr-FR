@@ -2,9 +2,9 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: b41a60942460e22556714699975f9eb281d76335
+source-git-commit: 147dded9f5eb6c2e153a80fa80b18e9fe96a6faa
 workflow-type: tm+mt
-source-wordcount: '4060'
+source-wordcount: '4096'
 ht-degree: 22%
 
 ---
@@ -206,6 +206,10 @@ Oui, vous devez tenir compte de certains avertissements lorsque vous utilisez de
 À l’heure actuelle, vous **must** vérifier manuellement si l’audience est utilisée en aval dans Adobe Journey Optimizer, car ce statut n’est actuellement pas automatiquement vérifié.
 
 En outre, vous pouvez **must** vérifier manuellement si l’audience est utilisée comme composant d’une audience basée sur un compte, car ce statut n’est pas non plus actuellement vérifié automatiquement.
+
+### Que se passe-t-il lorsque je copie une audience ? {#copy}
+
+Lorsque vous copiez une audience, la nouvelle audience se trouve à l’état de brouillon et conserve les mêmes dossiers, balises et libellés qui ont été appliqués à l’audience d’origine.
 
 ### L’utilisation d’une audience en tant qu’audience enfant affecte-t-elle les transitions d’état de cycle de vie ?
 
