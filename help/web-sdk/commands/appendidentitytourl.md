@@ -1,10 +1,11 @@
 ---
 title: appendIdentityToUrl
 description: Proposer des expériences personnalisées plus précisément entre les applications, le web et les domaines.
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+exl-id: 09dd03bd-66d8-4d53-bda8-84fc4caadea6
+source-git-commit: 153c5bae42c027c25a38a8b63070249d1b1a8f01
 workflow-type: tm+mt
 source-wordcount: '412'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -18,11 +19,11 @@ La chaîne de requête générée et ajoutée à l’URL est `adobe_mc`. Si le S
 >
 >Si le consentement n’a pas été fourni, l’URL de cette méthode est renvoyée inchangée. Cette commande s’exécute immédiatement ; elle n’attend pas la mise à jour du consentement.
 
-## Ajout d’une identité à l’URL à l’aide de l’extension SDK Web
+## Ajout d’une identité à l’URL à l’aide de l’extension SDK Web {#extension}
 
 L’ajout d’une identité à une URL est effectué sous la forme d’une action au sein d’une règle dans l’interface des balises de collecte de données Adobe Experience Platform.
 
-1. Connexion à [experience.adobe.com](https://experience.adobe.com) à l’aide de vos informations d’identification Adobe ID.
+1. Connexion à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
 1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
 1. Accédez à **[!UICONTROL Règles]**, puis sélectionnez la règle de votre choix.
@@ -36,7 +37,7 @@ Cette commande est généralement utilisée avec une règle spécifique qui éco
 
 Déclenche lorsqu’une balise d’ancrage comporte une balise `href` Cliquez sur la propriété .
 
-* **[!UICONTROL Extension]**: Core
+* **[!UICONTROL Extension]** : Core
 * **[!UICONTROL Type d’événement]**: cliquez sur
 * **[!UICONTROL Lorsque l’utilisateur clique sur]**: éléments spécifiques
 * **[!UICONTROL Éléments correspondant au sélecteur CSS]**: `a[href]`
@@ -50,7 +51,7 @@ Condition de +++règle
 Déclenche uniquement sur les domaines de votre choix.
 
 * **[!UICONTROL Type de logique]**: régulier
-* **[!UICONTROL Extension]**: Core
+* **[!UICONTROL Extension]** : Core
 * **[!UICONTROL Type de condition]**: comparaison de valeurs
 * **[!UICONTROL Opérateur de gauche]**: `%this.hostname%`
 * **[!UICONTROL Opérateur]**: Matches Regex
@@ -64,7 +65,7 @@ Action +++Rule
 
 Ajoutez l’identité à l’URL.
 
-* **[!UICONTROL Extension]**: SDK Web Adobe Experience Platform
+* **[!UICONTROL Extension]** : SDK Web Adobe Experience Platform
 * **[!UICONTROL Type d’action]**: redirection avec identité
 
 ![Action de règle](../assets/id-sharing-action-configuration.png)
