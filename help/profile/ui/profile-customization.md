@@ -3,9 +3,9 @@ keywords: Experience Platform;profil;profil client en temps réel;interface util
 title: Personnalisation des détails du profil dans l’interface utilisateur
 description: Ce guide fournit des instructions détaillées pour personnaliser la manière dont les données de Real-Time Customer Profile s’affichent dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: 69ac6d3f98675df11183082ecbbb49d18ddb57af
 workflow-type: tm+mt
-source-wordcount: '1350'
+source-wordcount: '1394'
 ht-degree: 0%
 
 ---
@@ -18,11 +18,11 @@ Pour obtenir un guide complet sur l’interface utilisateur des profils, consult
 
 ## Réorganiser et redimensionner les cartes {#reorder-and-resize-cards}
 
-Dans la **[!UICONTROL Détail]** de l’onglet du profil client, vous pouvez sélectionner **[!UICONTROL Personnalisation des détails du profil]** pour redimensionner et réorganiser les cartes existantes.
+Dans la **[!UICONTROL Détail]** onglet du profil client, vous pouvez sélectionner **[!UICONTROL Personnalisation des détails du profil]** pour redimensionner et réorganiser les cartes existantes.
 
 ![Le bouton Personnaliser les détails du profil est mis en surbrillance dans le tableau de bord Profil .](../images/profile-customization/customize-profile-details.png)
 
-Après avoir choisi de modifier le tableau de bord, vous pouvez réorganiser les cartes en sélectionnant le titre de la carte, en les faisant glisser et en les déposant dans l’ordre souhaité. Vous pouvez également redimensionner une carte en sélectionnant le symbole de l’angle dans le coin inférieur droit de la carte (`⌟`) et faites glisser la carte à la taille souhaitée. Dans cet exemple, la variable **[!UICONTROL Attributs de base]** est redimensionnée.
+Après avoir choisi de modifier le tableau de bord, vous pouvez réorganiser les cartes en sélectionnant le titre de la carte, en les faisant glisser et en les déposant dans l’ordre souhaité. Vous pouvez également redimensionner une carte en sélectionnant le symbole de l’angle dans le coin inférieur droit de la carte (`⌟`) et faites glisser la carte à la taille souhaitée. Dans cet exemple, la variable **[!UICONTROL Attributs de base]** est en cours de redimensionnement.
 
 ![Le bouton de redimensionnement est mis en surbrillance dans la carte Attributs de base .](../images/profile-customization/resize.png)
 
@@ -40,23 +40,27 @@ Outre le redimensionnement et la réorganisation des cartes, vous pouvez modifie
 
 ![La liste déroulante de modification de carte est mise en surbrillance. Cela inclut des options de modification ou de suppression de la carte.](../images/profile-customization/edit-card.png)
 
-Sélectionner **[!UICONTROL Modifier]** dans la liste déroulante pour ouvrir le **[!UICONTROL Modifier le widget]** espace de travail dans lequel vous pouvez mettre à jour le titre de la carte, réorganiser ou supprimer les attributs visibles ou ajouter des attributs supplémentaires à l’aide de la fonction **[!UICONTROL Ajout d’attributs]** bouton .
+Sélectionner **[!UICONTROL Modifier]** dans la liste déroulante pour ouvrir la fonction **[!UICONTROL Modifier le widget]** espace de travail dans lequel vous pouvez mettre à jour le titre de la carte, réorganiser ou supprimer les attributs visibles ou ajouter des attributs supplémentaires à l’aide de la fonction **[!UICONTROL Ajout d’attributs]** bouton .
 
 ![La carte Attributs de base s’affiche.](../images/profile-customization/basic-attributes.png)
 
-## Ajout d’attributs {#add-attributes}
+## Ajouter des attributs {#add-attributes}
 
 Dans la **[!UICONTROL Modifier le widget]** écran, sélectionnez **[!UICONTROL Ajout d’attributs]** dans le coin supérieur droit de la carte pour commencer à ajouter des attributs à cette carte.
 
 ![Le bouton Ajouter des attributs dans la carte Attributs de base est mis en surbrillance.](../images/profile-customization/add-attributes.png)
 
-Lorsque la variable **[!UICONTROL Sélectionner le champ de schéma d’union]** La boîte de dialogue s’ouvre ; la partie gauche de la boîte de dialogue affiche l’intégralité [!UICONTROL XDM Individual Profile] schéma d’union, avec des champs imbriqués en dessous. Pour plus d’informations sur les schémas d’union, reportez-vous à la section [section schémas d’union de [!DNL Profile] guide de l’utilisateur](user-guide.md#union-schema).
+Lorsque la variable **[!UICONTROL Sélectionner le champ de schéma d’union]** La boîte de dialogue s’ouvre ; la partie gauche de la boîte de dialogue affiche l’intégralité [!UICONTROL XDM Individual Profile] schéma d’union, avec des champs imbriqués en dessous. Pour plus d’informations sur les schémas d’union, reportez-vous au [section schémas d’union de [!DNL Profile] guide de l’utilisateur](user-guide.md#union-schema).
 
-Le **[!UICONTROL Attributs sélectionnés]** sur le côté droit de la boîte de dialogue, la section affiche les attributs qui sont actuellement inclus dans la carte que vous modifiez. Vous pouvez également supprimer et réorganiser les attributs ici. Le nombre total d’attributs sélectionnés s’affiche, ainsi que le nombre maximal d’attributs (20) pouvant être ajoutés à une seule carte.
+La variable **[!UICONTROL Attributs sélectionnés]** sur le côté droit de la boîte de dialogue, la section affiche les attributs qui sont actuellement inclus dans la carte que vous modifiez. Vous pouvez également supprimer et réorganiser les attributs ici. Le nombre total d’attributs sélectionnés s’affiche, ainsi que le nombre maximal d’attributs (20) pouvant être ajoutés à une seule carte.
 
 ![Les attributs qui constituent actuellement les attributs sur la carte sont mis en surbrillance.](../images/profile-customization/select-before.png)
 
-Vous pouvez sélectionner l’un des champs de schéma d’union disponibles pour personnaliser les attributs de la carte que vous modifiez. Les champs sélectionnés sont accompagnés d’une coche et sont automatiquement ajoutés à la liste des attributs sélectionnés. Une fois que vous avez ajouté tous les attributs que vous souhaitez afficher sur la carte, choisissez **[!UICONTROL Sélectionner]** pour revenir au **[!UICONTROL Modifier le widget]** écran.
+Vous pouvez sélectionner l’un des champs de schéma d’union disponibles pour personnaliser les attributs de la carte que vous modifiez. Lors de la sélection des champs, vous pouvez choisir d’afficher le chemin du fichier ou le nom d’affichage. Pour basculer entre ces deux affichages, sélectionnez l’événement **[!UICONTROL Afficher les noms d’affichage]** bascule.
+
+![La variable [!UICONTROL Afficher les noms d’affichage] Le bouton bascule est mis en surbrillance dans la page Détails du profil .](../images/profile-customization/show-display-names.png)
+
+Les champs sélectionnés sont accompagnés d’une coche et sont automatiquement ajoutés à la liste des attributs sélectionnés. Une fois que vous avez ajouté tous les attributs que vous souhaitez afficher sur la carte, choisissez **[!UICONTROL Sélectionner]** pour revenir au **[!UICONTROL Modifier le widget]** écran.
 
 ![Les attributs nouvellement ajoutés sont mis en surbrillance.](../images/profile-customization/select-after.png)
 
@@ -64,7 +68,7 @@ Lorsque vous revenez à la variable **[!UICONTROL Modifier le widget]** , la lis
 
 ![Les attributs nouvellement ajoutés s’affichent sur la carte modifiée.](../images/profile-customization/new-attributes.png)
 
-Après l’enregistrement, vous revenez à la variable **[!UICONTROL Détail]** dans lequel la carte et les attributs mis à jour sont visibles.
+Après l’enregistrement, vous revenez au **[!UICONTROL Détail]** dans lequel la carte et les attributs mis à jour sont visibles.
 
 ![Les nouveaux attributs ajoutés sont affichés sur la carte dans le tableau de bord Profil .](../images/profile-customization/added-attributes.png)
 
@@ -94,13 +98,13 @@ Pour enregistrer votre nouvelle carte, vous devez d’abord fournir un **[!UICON
 
 ![Le nouveau widget est prévisualisé dans l’écran Modifier le widget .](../images/profile-customization/new-widget.png)
 
-Après l’enregistrement, vous revenez à la variable **[!UICONTROL Détail]** dans lequel vos nouvelles cartes et attributs sont visibles.
+Après l’enregistrement, vous revenez au **[!UICONTROL Détail]** dans lequel vos nouvelles cartes et attributs sont visibles.
 
 ![Le nouveau widget est ajouté au tableau de bord Profil .](../images/profile-customization/added-widget.png)
 
 ## Restaurer les cartes par défaut
 
-Si vous décidez à tout moment de restaurer les cartes par défaut qui ont été supprimées depuis, vous avez la possibilité de le faire rapidement et facilement. Tout d’abord, sélectionnez **[!UICONTROL Modifier le tableau de bord]**, puis sélectionnez **[!UICONTROL Restaurer les cartes par défaut]**. Une fois les cartes par défaut visibles, vous pouvez sélectionner **[!UICONTROL Enregistrer]** pour enregistrer vos modifications ou sélectionnez **[!UICONTROL Annuler]** si vous ne souhaitez pas restaurer les cartes par défaut.
+Si vous décidez à tout moment de restaurer les cartes par défaut qui ont été supprimées depuis, vous avez la possibilité de le faire rapidement et facilement. Sélectionnez d’abord **[!UICONTROL Modifier le tableau de bord]**, puis sélectionnez **[!UICONTROL Restaurer les cartes par défaut]**. Une fois les cartes par défaut visibles, vous pouvez sélectionner **[!UICONTROL Enregistrer]** pour enregistrer vos modifications ou sélectionnez **[!UICONTROL Annuler]** si vous ne souhaitez pas restaurer les cartes par défaut.
 
 ![Le bouton Restaurer les cartes par défaut est mis en surbrillance dans le tableau de bord Profil .](../images/profile-customization/restore-default.png)
 

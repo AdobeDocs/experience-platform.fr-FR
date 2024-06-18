@@ -3,9 +3,9 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Guide de l’interface utilisateur de Real-Time Customer Profile
 description: Real-Time Customer Profile offre une vue d’ensemble de chaque client, en combinant des données issues de plusieurs canaux, notamment des données en ligne, hors ligne, CRM et tierces. Ce document sert de guide pour interagir avec Real-time Customer Profile dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: e6c64ebbde0301c796a4d681d962f1edb3d79a12
 workflow-type: tm+mt
-source-wordcount: '2108'
+source-wordcount: '2155'
 ht-degree: 7%
 
 ---
@@ -132,9 +132,13 @@ Après avoir sélectionné une **[!UICONTROL Identifiant de profil]**, la variab
 
 Les champs par défaut affichés peuvent également être modifiés au niveau de l’organisation afin d’afficher les attributs de profil préférés. Pour en savoir plus sur la personnalisation de ces champs, notamment des instructions étape par étape sur l’ajout et la suppression d’attributs et le redimensionnement des panneaux du tableau de bord, consultez la section [guide de personnalisation des détails du profil](profile-customization.md).
 
-![L’onglet Détails est mis en surbrillance. Les détails du profil s’affichent.](../images/user-guide/profile-detail.png)
+![L’onglet Détails est mis en surbrillance. Les détails du profil s’affichent.](../images/user-guide/profile-detail-row-name.png)
 
-Vous pouvez afficher des informations supplémentaires relatives au profil client individuel en sélectionnant un autre des onglets disponibles. Ces onglets comprennent les attributs, les événements et l’onglet abonnement à l’audience qui affiche les audiences pour lesquelles le profil est actuellement qualifié.
+Vous pouvez également choisir de basculer entre l’affichage des noms d’attribut comme noms d’affichage et leur nom de chemin d’accès de champ. Pour basculer entre ces deux affichages, sélectionnez l’événement **[!UICONTROL Afficher les noms d’affichage]** bascule.
+
+![Le bouton d’activation/désactivation Afficher les noms d’affichage est mis en surbrillance et les noms d’affichage s’affichent sous les attributs .](../images/user-guide/profile-detail.png)
+
+Pour afficher des informations supplémentaires relatives au profil client individuel, sélectionnez l’un des autres onglets disponibles. Ces onglets comprennent les attributs, les événements et l’onglet abonnement à l’audience qui affiche les audiences pour lesquelles le profil est actuellement qualifié.
 
 ### Onglet Attributs
 
