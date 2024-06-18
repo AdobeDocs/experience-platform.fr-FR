@@ -4,17 +4,17 @@ title: Authentification et accès aux API Experience Platform
 type: Tutorial
 description: Ce document fournit un tutoriel détaillé pour accéder à un compte de développeur Adobe Experience Platform afin d’effectuer des appels API Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: f598c6dabe9296044055d8e961cf5177a655f5fa
+source-git-commit: 2fb0da385baeb96d5665ecc25bf353c7516ef9f7
 workflow-type: tm+mt
-source-wordcount: '2204'
-ht-degree: 13%
+source-wordcount: '2149'
+ht-degree: 7%
 
 ---
 
 
 # S’authentifier et accéder aux API Experience Platform
 
-Ce document fournit un tutoriel détaillé pour accéder à un compte de développeur Adobe Experience Platform afin d’effectuer des appels API Experience Platform. À la fin de ce tutoriel, vous aurez généré ou collecté les informations d’identification suivantes, requises en tant qu’en-têtes dans tous les appels d’API Platform :
+Ce document fournit un tutoriel détaillé permettant d’accéder à un compte de développeur Adobe Experience Platform afin d’effectuer des appels vers des API Experience Platform. À la fin de ce tutoriel, vous aurez généré ou collecté les informations d’identification suivantes, requises en tant qu’en-têtes dans tous les appels d’API Platform :
 
 * `{ACCESS_TOKEN}`
 * `{API_KEY}`
@@ -50,11 +50,11 @@ Avant de créer des intégrations sur Adobe Developer Console, votre compte doit
 
 ### Obtenir un accès en tant que développeur {#gain-developer-access}
 
-Contactez un [!DNL Admin Console] administrateur de votre entreprise pour vous ajouter en tant que développeur à un profil de produit Experience Platform à l’aide de la variable [[!DNL Admin Console]](https://adminconsole.adobe.com/). Voir [!DNL Admin Console] documentation pour obtenir des instructions spécifiques sur la manière de procéder [gérer l’accès des développeurs pour les profils de produit ;](https://helpx.adobe.com/fr/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
+Contactez un [!DNL Admin Console] administrateur de votre entreprise pour vous ajouter en tant que développeur à un profil de produit Experience Platform à l’aide de la variable [[!DNL Admin Console]](https://adminconsole.adobe.com/). Voir [!DNL Admin Console] documentation pour obtenir des instructions spécifiques sur la manière de procéder [gérer l’accès des développeurs pour les profils de produit ;](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
 Une fois que vous êtes désigné en tant que développeur, vous pouvez commencer à créer des intégrations dans [Console Adobe Developer](https://www.adobe.com/go/devs_console_ui). Ces intégrations constituent un pipeline allant des applications et services externes vers les API d’Adobe.
 
-### Obtenir un accès en tant qu’utilisateur {#gain-user-access}
+### Obtenir un accès utilisateur {#gain-user-access}
 
 Votre [!DNL Admin Console] L’administrateur doit également vous ajouter en tant qu’utilisateur au même profil de produit. Avec l’accès utilisateur, vous pouvez voir dans l’interface utilisateur le résultat des opérations de l’API que vous effectuez.
 
@@ -88,15 +88,15 @@ L’écran **[!UICONTROL Ajouter une API]** s’affiche. Sélectionnez l’icôn
 >
 >Sélectionnez la variable **[!UICONTROL Affichage des documents]** pour accéder à la [Documentation de référence de l’API Experience Platform](https://developer.adobe.com/experience-platform-apis/).
 
-### Sélectionnez le type d’authentification OAuth Server-to-Server {#select-oauth-server-to-server}
+### Sélectionnez la variable [!UICONTROL OAuth serveur à serveur] type d&#39;authentification {#select-oauth-server-to-server}
 
-Sélectionnez ensuite le type d&#39;authentification pour générer les jetons d&#39;accès et accéder à l&#39;API Experience Platform.
+Sélectionnez ensuite le [!UICONTROL OAuth serveur à serveur] type d’authentification pour générer des jetons d’accès et accéder à l’API Experience Platform.
 
 >[!IMPORTANT]
 >
->Sélectionnez la variable **[!UICONTROL OAuth serveur à serveur]** car il s’agira de la seule méthode prise en charge à l’avenir. La variable **[!UICONTROL Compte de service (JWT)]** est obsolète. Bien que les intégrations utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe recommande vivement de migrer les intégrations existantes vers la nouvelle méthode OAuth Server-to-Server avant cette date. Pour plus d’informations, consultez la section [!BADGE Obsolète]{type=negative}[Génération d’un jeton Web JSON (JWT)](#jwt).
+>La variable **[!UICONTROL OAuth serveur à serveur]** est la seule méthode de génération de jeton prise en charge à l’avenir. Anciennement pris en charge **[!UICONTROL Compte de service (JWT)]** est obsolète et ne peut pas être sélectionnée pour les nouvelles intégrations. Bien que les intégrations existantes utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe vous recommande vivement de migrer les intégrations existantes vers la nouvelle [!UICONTROL OAuth serveur à serveur] avant cette date. Pour plus d’informations, consultez la section [!BADGE Obsolète]{type=negative}[Génération d’un jeton Web JSON (JWT)](#jwt).
 
-![Sélectionnez API Experience Platform.](./images/api-authentication/oauth-authentication-method.png)
+![Sélectionnez la méthode d’authentification OAuth serveur à serveur pour l’API Experience Platform.](./images/api-authentication/oauth-authentication-method.png)
 
 ### Sélection des profils de produit pour votre intégration {#select-product-profiles}
 
@@ -119,13 +119,13 @@ Une présentation des étapes décrites ci-dessus pour configurer une intégrati
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on)
 
-### Collectez les informations d’identification de . {#gather-credentials}
+### Collecte des informations d’identification {#gather-credentials}
 
 Une fois l’API ajoutée au projet, la variable **[!UICONTROL API EXPERIENCE PLATFORM]** La page du projet affiche les informations d’identification suivantes, requises dans tous les appels aux API Experience Platform :
 
 ![Informations d’intégration après l’ajout d’une API dans Developer Console.](./images/api-authentication/api-integration-information.png)
 
-* `{API_KEY}` ([!UICONTROL Identifiant client])
+* `{API_KEY}` ([!UICONTROL ID client])
 * `{ORG_ID}` ([!UICONTROL ID d’organisation])
 
 <!--
@@ -154,11 +154,11 @@ Vous pouvez également utiliser un environnement et une collection Postman pour 
 
 >[!WARNING]
 >
-La méthode JWT de génération des jetons d’accès a été abandonnée. Toutes les nouvelles intégrations doivent être créées à l’aide de la [méthode d’authentification OAuth de serveur à serveur](#select-oauth-server-to-server). Adobe vous recommande également de migrer vos intégrations existantes vers la méthode OAuth. Lisez la documentation importante suivante :
+La méthode JWT de génération des jetons d’accès a été abandonnée. Toutes les nouvelles intégrations doivent être créées à l’aide de la [méthode d’authentification OAuth de serveur à serveur](#select-oauth-server-to-server). Adobe exige également que vous migriez vos intégrations existantes vers la méthode OAuth d’ici le 1er janvier 2025 pour que vos intégrations continuent à fonctionner. Lisez la documentation importante suivante :
 > 
 * [Guide de migration de vos applications de JWT vers OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
 * [Guide de mise en œuvre pour les nouvelles et les anciennes applications avec OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
-* [Avantages de l’utilisation de la méthode d’identification OAuth de serveur à serveur](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials).
+* [Avantages de l’utilisation de la méthode d’identification OAuth serveur à serveur](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
 +++ Affichage des informations obsolètes
 
