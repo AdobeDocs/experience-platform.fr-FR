@@ -1,11 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Juin 2024
 description: Les notes de mise à jour de juin 2024 pour Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 0089ce105f59f68d8bf4208120526a7c1b25e32f
+source-git-commit: 03a88554e8b7793d8e91bc867ce67a00f620b622
 workflow-type: tm+mt
-source-wordcount: '353'
-ht-degree: 9%
+source-wordcount: '1144'
+ht-degree: 23%
 
 ---
 
@@ -13,9 +12,19 @@ ht-degree: 9%
 
 **Date de publication : juin 2024**
 
+>[!TIP]
+>
+>[Assistant d’IA en Experience Platform](https://platform.adobe.com) est désormais disponible. Utilisez l’assistant d’IA pour accélérer vos workflows dans les applications Adobe. [En savoir plus](#ai-assistant) à propos de la nouvelle fonctionnalité.
+
 Nouvelles fonctionnalités d’Adobe Experience Platform :
 
 - [Assistant IA](#ai-assistant)
+- [Authentification sur les API Experience Platform](#authentication-platform-apis)
+- [Préparation des données](#data-prep)
+- [Destinations](#destinations)
+- [Privacy Service](#privacy)
+- [Segmentation Service](#segmentation)
+- [Playbooks de cas d’utilisation](#use-case-playbooks)
 
 ## Assistant IA {#ai-assistant}
 
@@ -31,3 +40,81 @@ L’assistant d’IA dans Adobe Experience Platform est une expérience conversa
 | Accéder à l’assistant AI | Pour accéder à l’assistant d’IA pour Experience Platform, Real-Time CDP et Journey Optimizer, vous devez être ajouté à un rôle qui inclut la fonction **Activation de l’assistant AI** et **Affichage des informations opérationnelles** autorisations. Pour plus d’informations, consultez la section [guide d’accès aux fonctionnalités](../../ai-assistant/access.md). Vous devez utiliser le Admin Console pour [accès en Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant?lang=en#feature-access). |
 
 Pour plus d’informations sur l’assistant d’IA, consultez la section [Présentation de l’assistant AI](../../ai-assistant/home.md).
+
+## Authentification sur les API Experience Platform {#authentication-platform-apis}
+
+La méthode JWT pour obtenir des jetons d’accès est désormais obsolète pour les nouvelles intégrations et remplacée par une méthode d’authentification OAuth serveur à serveur plus simple.<p>![Nouvelle méthode d’authentification OAuth pour mettre les jetons d’accès en surbrillance.](/help/landing/images/api-authentication/oauth-authentication-method.png "Nouvelle méthode d’authentification OAuth pour mettre les jetons d’accès en surbrillance."){width="100" zoomable="yes"}</p>
+
+Bien que les intégrations d’API existantes utilisant la méthode d’authentification JWT continueront à fonctionner jusqu’au 1er janvier 2025, Adobe recommande vivement de migrer les intégrations existantes vers la nouvelle méthode OAuth de serveur à serveur avant cette date. Lisez le guide sur la [migration des informations d’identification du compte de service (JWT) vers les informations d’identification OAuth de serveur à serveur](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
+
+## Préparation de données (#data-prep)
+
+Utilisez la préparation de données pour mapper, transformer et valider des données vers et à partir du modèle de données d’expérience (XDM).
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Ajouts à la liste des mots-clés réservés | Les mots suivants ont été ajoutés à la liste des mots-clés réservés de la préparation des données :<ul><li>`do`</li><li>`empty`</li><li>`function`</li><li>`size`</li></ul>. Pour plus d’informations, lisez le [guide des fonctions de préparation de données](../../data-prep/functions.md). |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations sur la préparation des données, consultez la [présentation de la préparation des données](../../data-prep/home.md).
+
+## Destinations {#destinations}
+
+Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+
+**Fonctionnalités nouvelles ou mises à jour** {#destinations-new-updated-functionality}
+
+| Fonction | Description |
+| ----------- | ----------- |
+| Amélioration de l’API d’exportation ad hoc pour exporter des audiences externes | Vous pouvez désormais utiliser l’API d’exportation ad hoc pour exporter des audiences externes (chargement personnalisé). [En savoir plus](/help/destinations/api/ad-hoc-activation-api.md) . |
+| (Version bêta) Fonctions supplémentaires prises en charge dans la phase bêta de la prise en charge des tableaux d’exportation | Auparavant, lors de l’activation d’audiences vers des destinations basées sur des fichiers et de la sélection de l’option Utiliser un champ calculé , vous étiez limité à l’utilisation d’un sous-ensemble des audiences disponibles par le biais de la préparation des données. Cette limitation a été levée et les clients ont accès à toutes les fonctions disponibles par le biais de la préparation des données lors de l’exportation d’audiences vers des destinations basées sur des fichiers. [En savoir plus](/help/destinations/ui/export-arrays-calculated-fields.md#supported-functions). |
+
+{style="table-layout:auto"}
+
+Pour obtenir plus d’informations générales sur les destinations, consultez la [vue d’ensemble des destinations](../../destinations/home.md).
+
+## [!DNL Privacy Service] {#privacy}
+
+Plusieurs réglementations juridiques et organisationnelles donnent aux utilisateurs le droit d’accéder à leurs données personnelles ou de les supprimer de vos entrepôts de données sur demande. Adobe Experience Platform [!DNL Privacy Service] fournit une API RESTful et une interface utilisateur pour vous aider à gérer ces requêtes de données de vos clients. Avec [!DNL Privacy Service], vous pouvez soumettre des demandes d’accès et de suppression de données clients privées ou personnelles des applications Adobe Experience Cloud, ce qui facilite la conformité automatisée aux réglementations de confidentialité légales et organisationnelles.
+
+**Nouvelles fonctionnalités**
+
+| Fonctionnalité | Description |
+|--- | ---|
+| Prise en charge des Privacy Service pour Adobe Journey Optimizer | Les fonctionnalités de Privacy Service sont désormais compatibles avec les protocoles Adobe Journey Optimizer pour le traitement des requêtes de suppression. Voir [Documentation sur les demandes de confidentialité Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/requests) pour plus d’informations ou pour obtenir la documentation Experience Platform d’une liste de [Applications Experience Cloud intégrées à Privacy Service](../../privacy-service/experience-cloud-apps.md). |
+
+Voir [Présentation du Privacy Service](../../privacy-service/home.md) pour plus d’informations sur le service.
+
+## Segmentation Service {#segmentation}
+
+[!DNL Segmentation Service] définit un sous-ensemble particulier de profils en décrivant les critères qui identifient un groupe de clients potentiels de votre base. Les segments peuvent être basés sur des données d’enregistrement (telles que des informations démographiques) ou des événements de séries temporelles représentant les interactions des clients avec votre marque.
+
+**Fonctionnalités nouvelles ou mises à jour**
+
+| Fonctionnalité | Description |
+| ------- | ----------- |
+| Mise à jour des contraintes temporelles | Le comportement de &quot;Ce mois-ci&quot; et &quot;Cette année&quot; a été mis à jour, et ils représentent désormais respectivement les &quot;mois à jour&quot; et &quot;année à jour&quot;. Pour plus d’informations sur cette modification, consultez la section [Guide du créateur de segments](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations sur [!DNL Segmentation Service], consultez la [présentation de la segmentation](../../segmentation/home.md).
+
+## Playbooks de cas d’utilisation {#use-case-playbooks}
+
+[!DNL Use Case Playbooks] sont disponibles sans frais supplémentaires pour tous les clients Adobe Experience Platform. Pour accéder à une riche galerie de classeurs de cas d’utilisation dans l’interface utilisateur d’Experience Platform, vous pouvez maintenant sélectionner **[!UICONTROL Livres]** dans le volet de navigation de gauche.
+
+[!DNL Use Case Playbooks] sont conçues pour vous aider à surmonter les défis lorsque vous commencez à utiliser Real-time Customer Data Platform ou Adobe Journey Optimizer. Ils fournissent des conseils et génèrent diverses ressources que vous pouvez tester et importer dans des environnements de production lorsque vous êtes prêt, même si vous ne savez pas où démarrer ni comment produire les ressources appropriées pour les cas d’utilisation prévus.
+
+Pour commencer, lisez le [Présentation des classeurs de cas d’utilisation](/help/use-case-playbooks/playbooks/overview.md), qui fournit un aperçu de la fonctionnalité des classeurs, de leur objectif et une démonstration de bout en bout, y compris la création d’instances et l’importation de ressources générées dans d’autres environnements de test.
+
+Pour découvrir comment accéder à un environnement de test inspirant et le configurer afin d’expérimenter et d’explorer plusieurs classeurs de cas d’utilisation, reportez-vous à la section [Découvrez le manuel de lecture approprié](/help/use-case-playbooks/playbooks/discover.md) document.
+
+Pour en savoir plus sur [!DNL Use Case Playbooks], lisez les pages de documentation suivantes :
+
+- Obtenir une liste de tous les [livres de lecture disponibles](/help/use-case-playbooks/playbooks/playbooks-list.md), regroupés par produit (Real-Time CDP ou Journey Optimizer).
+- En savoir plus sur les [permissions](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) sont nécessaires pour vous ou utilisez des playbooks et les ressources qu’ils créent.
+- Comprendre le [fonctionnalité de sensibilisation aux données](/help/use-case-playbooks/playbooks/data-awareness.md) qui vous permet de dupliquer des ressources générées vers d’autres environnements de test.
+
