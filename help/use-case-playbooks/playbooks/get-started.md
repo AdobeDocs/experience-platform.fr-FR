@@ -4,9 +4,9 @@ title: Prise en main des livres de cas d’utilisation
 description: Commencez à utiliser la fonctionnalité des Playbooks de cas d’utilisation.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: fe87b8cdeaca5e4e852a8819534f4a5c4023ca52
+source-git-commit: dfb4549a09628f2fed947ddf76167db28354eb92
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '953'
 ht-degree: 15%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 15%
 
 # Commencer
 
-Découvrez comment configurer votre compte pour les classeurs de cas d’utilisation, conçus pour Real-time Customer Data Platform et Adobe Journey Optimizer. Les trois principales étapes de configuration sont les suivantes :
+Découvrez comment configurer votre compte pour les classeurs de cas d’utilisation, conçus pour Real-time Customer Data Platform et Adobe Journey Optimizer s’il n’est pas configuré automatiquement. Les trois principales étapes de configuration sont les suivantes :
 
 * Créer un sandbox
 * Configurer les autorisations des utilisateurs et des utilisatrices

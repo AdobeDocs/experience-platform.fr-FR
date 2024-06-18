@@ -1,85 +1,74 @@
 ---
 solution: Experience Platform
-title: Trouver le bon playbook
-description: Découvrez le playbook approprié pour votre cas d’utilisation.
+title: Découvrir des livres de lecture
+description: Découvrez comment découvrir une galerie de playbooks et commencer avec un environnement de test inspirant.
 role: User
-exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
-workflow-type: ht
-source-wordcount: '752'
-ht-degree: 100%
+source-git-commit: ad3f746580f85e77cba390208d147b35b6854e10
+workflow-type: tm+mt
+source-wordcount: '711'
+ht-degree: 2%
 
 ---
 
-# Trouver le bon playbook
+# Découvrir des livres de lecture
 
-Pour utiliser un playbook, accédez à **[!UICONTROL Playbooks de cas d’utilisation] > [!UICONTROL Playbooks]**. Parcourez et utilisez les différentes options de recherche et de filtrage de la page pour sélectionner et commencer à utiliser un playbook spécifique.
+Les classeurs de cas d’utilisation sont disponibles sans frais supplémentaires pour tous les clients Adobe Experience Platform. Pour accéder à une riche galerie de classeurs de cas d’utilisation dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UICONTROL Livres]** dans le volet de navigation de gauche.
 
-## Rechercher et filtrer {#search-and-filter}
+![Cas d’utilisation de la galerie de livres de lecture.](/help/use-case-playbooks/assets/playbooks/discover/playbooks-gallery.png)
 
-Utilisez la fenêtre de recherche et les filtres disponibles sur la page pour trouver le playbook approprié à votre cas d’utilisation.
+![Accès direct aux classeurs de cas d’utilisation dans la barre de navigation de gauche.](/help/use-case-playbooks/assets/playbooks/discover/left-nav-playbooks.png)
 
-Vous pouvez, par exemple, filtrer les playbooks que vous utilisez en fonction de l’étape dans l’entonnoir marketing que vous souhaitez cibler : conversion, engagement ou fidélisation. Vous pouvez également filtrer les playbooks affichés selon le secteur dans lequel vous vous trouvez ou le droit au produit auquel vous avez accès : Adobe Journey Optimizer ou Real-Time CDP.
+Sélectionnez un playbook pour accéder à la page des détails, puis sélectionnez **[!UICONTROL Accédez à un environnement de test inspirant.]**. Un modal de confirmation s’affiche. Sélectionner **Confirmer** pour accéder à l’environnement de test inspirant où vous pouvez explorer et tester les différents cas d’utilisation.
 
-![Filtrer les playbooks par entonnoir marketing, secteur ou produit](/help/use-case-playbooks/assets/playbooks/ui-guide/filter-by-funnel-industry-product.gif)
+Si vous ne disposez pas des autorisations nécessaires pour créer des environnements de test, contactez votre administrateur pour obtenir de l’aide sur la création d’un environnement de test inspirant.
 
-Vous pouvez également utiliser la fonctionnalité de recherche pour trouver le playbook approprié. Vous trouverez ci-dessous un exemple de la manière de trouver un playbook qui vous aide à interagir avec les utilisateurs et utilisatrices qui ont peut-être abandonné leur panier.
+>[!TIP]
+>
+>Un environnement de test inspirant est un environnement de test de développement dans Adobe Experience Platform où vous pouvez créer, tester et expérimenter différents cas d’utilisation avant de les mettre en oeuvre dans un environnement de production actif.
 
-![Contactez les utilisateurs et utilisatrices qui ont peut-être abandonné leur panier.](/help/use-case-playbooks/assets/playbooks/ui-guide/engage-abandoned-cart.gif)
+![Accédez à un environnement de test inspirant.](/help/use-case-playbooks/assets/playbooks/discover/inspirational-sandbox.png)
 
-Vous pouvez également filtrer les playbooks disponibles selon les canaux que vous prévoyez d’utiliser pour contacter vos clientes et clients, comme vous pouvez le voir ci-dessous :
+Si vous n’avez déjà configuré aucun environnement de test inspirant, sélectionnez **[!UICONTROL Créer un environnement de test inspirant]**. Un modal s’affiche. Saisissez le **Nom** et **Titre** dans les zones de champ requises, puis sélectionnez **Créer**. Une fois que vous avez créé l’environnement de test d’inspiration, veillez à [définir des autorisations](/help/access-control/home.md) avant de revenir à la page détails du cas d’utilisation playbooks pour créer une instance.
 
-![Filtrer par canal](/help/use-case-playbooks/assets/playbooks/ui-guide/channel-select-filter.gif)
+![Créez un environnement de test inspirant.](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox.png)
 
-Testez les options de recherche et de filtres et trouvez le playbook approprié.
+![Saisissez le nom et le titre pour créer un environnement de test inspirant.](/help/use-case-playbooks/assets/playbooks/discover/create-inspirational-sandbox-modal.png)
 
-## Afficher le playbook et générer les ressources {#view-playbook-generate-assets}
+Si vous sélectionnez un scénario d’utilisation en dehors d’un environnement de test inspirant, vous ne pourrez pas créer d’instance. Sur la page Détails, sélectionnez **Accédez à un environnement de test inspirant.** pour accéder à un environnement de test d’inspiration existant, puis sélectionnez **[!UICONTROL Créer une instance]**.
 
-Avant d’opter pour un playbook et de créer des instances à partir de celui-ci, vous devez l’examiner pour vous assurer qu’il correspond à vos besoins. Pour vous aider à mieux comprendre les cas d’utilisation qu’ils couvrent, tous les playbooks contiennent les sections répertoriées ci-dessous. Lorsque vous voulez continuer et générer des ressources, sélectionnez **[!UICONTROL Créer une instance]**.
+Si vous ne disposez pas des autorisations nécessaires pour créer des environnements de test, contactez votre administrateur pour obtenir de l’aide sur la création d’un environnement de test inspirant.
 
-### Mind mapping {#mindmap}
+![Aucune autorisation pour créer un environnement de test.](/help/use-case-playbooks/assets/playbooks/discover/no-permissions-to-create-sandbox.png)
 
-Utilisez la section Mind mapping d’un playbook pour comprendre les étapes du workflow que le playbook peut vous aider à résoudre. Visualisez le flux de la manière dont tous les objets générés peuvent vous aider à réaliser le cas d’utilisation, selon le point de vue de la personne ciblée dans le cas d’utilisation.
+Si vous avez atteint la limite du nombre d’environnements de test qui vous ont été attribués, un message s’affiche vous demandant de contacter l’administrateur de votre organisation pour augmenter la limite, désactiver ou supprimer certains environnements de test actifs. Une fois votre limite d’environnements de test ajustée ou votre nombre d’environnements de test actifs réduit, vous pouvez créer l’environnement de test inspirant.
 
-Le mind mapping commence par une définition de la personne ciblée dans le parcours utilisateur et décrit à chaque étape si quelque chose est diffusé par Adobe, comme un nouveau message ou un rappel, ou s’il s’agit d’une chose que la personne ciblée a faite qui déclenche le message ou l’événement suivant.
+![Limite des environnements de test atteinte.](/help/use-case-playbooks/assets/playbooks/discover/sandbox-limit-reached.png)
 
-![Mind mapping du playbook mis en surbrillance.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
+Notez que lorsque vous créez un environnement de test d’inspiration, les surfaces des canaux pour les e-mails, les notifications push et SMS ne sont pas automatiquement configurées. Contactez votre administrateur informatique pour les configurer manuellement ou la création de l’instance peut échouer.
 
-### Résumé {#summary}
+![Configurez les paramètres prédéfinis de canal.](/help/use-case-playbooks/assets/playbooks/discover/configure-channel-presets.png)
 
->[!CONTEXTUALHELP]
->id="platform_playbooks_assets"
->title="Ressources"
->abstract="Voici les ressources générées par ce playbook. Après avoir créé une instance du playbook, vous pouvez afficher les ressources dans le sandbox d’inspiration et les convertir dans d’autres sandbox selon vos besoins."
+## Configuration des environnements de test et des surfaces de canal dans Journey Optimizer {#configure-channel-surfaces}
 
-Consultez la section de résumé pour identifier les ressources qui sont générées une fois que vous avez créé des instances à partir du playbook. Les ressources générées pour chaque playbook sont adaptées au cas d’utilisation activé par le playbook. Obtenez plus d’informations ci-dessous sur tous les éléments de la section de résumé.
+Si votre entreprise détient une licence pour [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=fr)et que vous souhaitez utiliser les playbooks conçus pour Journey Optimizer, vous devez configurer les paramètres prédéfinis de canal dans votre environnement de test, qui définissent les paramètres techniques requis pour vos messages. [Découvrez comment configurer les surfaces de canal dans Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/channel-surfaces.html?lang=fr).
 
-| Élément | Description |
----------|----------|
-| **[!UICONTROL Audience cible]** | Décrit les personnes que vous souhaitez cibler via ce playbook de cas d’utilisation. |
-| **[!UICONTROL Canaux marketing]** | Décrit les canaux utilisés pour atteindre les personnes ciblées dans le playbook. |
-| **[!UICONTROL Ressources techniques]** | Liste des ressources techniques générées après la création d’instances du playbook. Les ressources générées diffèrent en fonction du playbook, selon le cas d’utilisation. Certains playbooks peuvent générer des schémas, des segments et des parcours. D’autres peuvent générer des destinations. Pour plus d’informations sur l’utilisation et la réutilisation des ressources générées, consultez la section [Présentation des ressources générées](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets). |
+Pour créer des instances de playbooks dans Journey Optimizer, vous devez configurer les surfaces des canaux pour les notifications par e-mail, push et SMS.
 
-{style="table-layout:auto"}
+### Surface du canal email
 
-![Résumé du playbook mis en surbrillance](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-summary.png)
+Accédez à `Channels` dans l’interface de Journey Optimizer. Configurez des sous-domaines et des pools d’adresses IP distincts pour les emails marketing et les messages transactionnels, s’ils ne sont pas déjà configurés. Il s’agit des bonnes pratiques pour s’assurer que les messages transactionnels, tels que les courriers électroniques de confirmation de commande, parviennent à vos clients. Entrez les noms, les adresses électroniques et les paramètres supplémentaires. Sélectionner **Envoyer** dans le coin supérieur droit de la page pour créer la surface du canal marketing. Lisez la documentation sur [comment configurer les surfaces de canal de courrier électronique](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
 
-### Instances {#instances}
+### Surface du canal SMS
 
-Faites défiler jusqu’à la section Instances pour obtenir une vue d’ensemble des instances de ce playbook que vous ou les membres de votre équipe avez déjà créées. Vous pouvez utiliser différentes commandes pour trier et filtrer les instances affichées, par exemple pour ne voir que celles que vous avez créées. Vous pouvez également consulter différentes informations sur chaque instance, comme indiqué ci-dessous.
+Pour créer une surface de canal SMS, créez d’abord des informations d’identification d’API SMS, puis sélectionnez le fournisseur de votre choix (par exemple, Sinch). Nommez la surface du canal SMS (par exemple, SMS Marketing), sélectionnez la configuration et saisissez un numéro d&#39;expéditeur. Sélectionner **Envoyer** en haut à droite de la page pour enregistrer la surface du canal SMS. Lisez la documentation sur [comment configurer les surfaces de canal SMS](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=fr#message-preset-sms).
 
-| Élément | Description |
-|---------|----------|
-| **[!UICONTROL Nom]** | Nom de l’instance basé sur le playbook. Vous pouvez personnaliser le nom et la description d’une instance. Pour plus d’informations, consultez la section sur la [modification des métadonnées d’instance](/help/use-case-playbooks/playbooks/create-share-reuse.md#edit-instance-metadata). |
-| **[!UICONTROL Statut]** | Signale le statut de l’instance. Une instance **[!UICONTROL envoyée]** est prête à être utilisée. |
-| **[!UICONTROL Créé]** | Indique la date de création de l’instance. |
-| **[!UICONTROL Créée par]** | Indique la personne ayant créé l’instance. |
-| **[!UICONTROL Dernière modification]** | Indique la date de la dernière modification de l’instance. |
+Configurez également les canaux des livres de lecture qui contiennent des messages transactionnels, tels que les confirmations de commande.
 
-{style="table-layout:auto"}
+### Surface du canal push
 
-![L’instance du playbook est mise en surbrillance.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-instances.png)
+Vérifiez que les surfaces de l’application sont configurées à partir de l’Experience Platform ou de l’interface Collections de données. Voici à quoi ressemblent les surfaces d’application dans l’environnement Collections de données.
 
-## Étapes suivantes - Créer une instance de playbook {#next-steps-create-instance}
+## Étapes suivantes {#next-steps}
 
-Lorsque vous êtes prêt(e) à poursuivre un playbook et à créer une instance, sélectionnez **[!UICONTROL Créer une instance]** pour poursuivre le playbook et générer des ressources techniques. Pour plus d’informations, consultez le guide sur [la création, le partage et la réutilisation d’instances de playbook](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+Maintenant que vous avez lu ce document, vous devez savoir comment configurer un environnement de test inspirant et vous familiariser avec différentes façons d’accéder aux playbooks de cas d’utilisation dans Platform. À l’étape suivante, découvrez comment [find](/help/use-case-playbooks/playbooks/find.md) le bon playbook.
+
