@@ -2,12 +2,12 @@
 title: (Version bêta) Utiliser des champs calculés pour exporter des tableaux dans des fichiers de schéma plats
 type: Tutorial
 description: Découvrez comment utiliser des champs calculés pour exporter des tableaux dans des fichiers de schéma plats de Real-Time CDP vers des destinations de stockage dans le cloud.
-badge: Version Beta
+badge: Version bêta
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: b6bdfef8b9ac5ef03ea726d668477b8629b70b6c
+source-git-commit: 787aaef26fab5ca3acff8303f928efa299cafa93
 workflow-type: tm+mt
-source-wordcount: '1497'
-ht-degree: 7%
+source-wordcount: '1477'
+ht-degree: 5%
 
 ---
 
@@ -31,9 +31,13 @@ Obtenez des informations détaillées sur les champs calculés - ce qu’ils son
 * [Guide et présentation de l’interface utilisateur](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Fonctions de la préparation des données](/help/data-prep/functions.md)
 
+<!--
+
 >[!IMPORTANT]
 >
->Toutes les fonctions répertoriées ci-dessus ne sont pas prises en charge *lors de l’exportation de champs vers des destinations de stockage dans le cloud* en utilisant la fonctionnalité des champs calculés . Voir [section fonctions prises en charge](#supported-functions) pour plus d’informations, voir ci-dessous.
+>Not all functions listed above are supported *when exporting fields to cloud storage destinations* using the calculated fields functionality. See the [supported functions section](#supported-functions) further below for more information.
+
+-->
 
 ## Tableaux et autres types d’objets dans Platform {#arrays-strings-other-objects}
 
@@ -84,9 +88,11 @@ Une fois prêt, sélectionnez **[!UICONTROL Suivant]** pour passer à l’étape
 
 ![Etape de mappage avec le champ cible surligné et une valeur cible renseignée.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
-## Fonction  prise en charge {#supported-functions}
+## Fonctions prises en charge {#supported-functions}
 
-Notez que seules les fonctions suivantes sont prises en charge dans la version bêta des champs calculés et de la prise en charge des tableaux pour les destinations :
+Tous les documents [Fonctions de préparation des données](/help/data-prep/functions.md) sont pris en charge lors de l’activation de données vers des destinations basées sur des fichiers.
+
+Notez toutefois que des descriptions détaillées de cas d’utilisation et des exemples d’informations de sortie ne sont actuellement fournies pour les fonctions suivantes que dans la version bêta des champs calculés et de la prise en charge des tableaux pour les destinations :
 
 * `join`
 * `coalesce`
