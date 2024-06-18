@@ -5,10 +5,10 @@ title: Activation des audiences vers des destinations par lot via l’API d’ac
 description: Cet article illustre le processus de bout en bout d’activation des audiences via l’API d’activation ad hoc, y compris les tâches de segmentation qui ont lieu avant l’activation.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 6304dabb6125b7eddcac16bcbf8abcc36a4c9dc2
+source-git-commit: deecaf0af269b64af507126dba0523d2b16a5721
 workflow-type: tm+mt
-source-wordcount: '1550'
-ht-degree: 13%
+source-wordcount: '1612'
+ht-degree: 12%
 
 ---
 
@@ -167,15 +167,19 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 | Propriété | Description |
 | -------- | ----------- |
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Les identifiants des instances de destination vers lesquelles vous souhaitez activer les audiences. Vous pouvez obtenir ces ID à partir de l’interface utilisateur de Platform en accédant à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]** et cliquez sur la ligne de destination de votre choix pour afficher l’ID de destination dans le rail de droite. Pour plus d’informations, consultez la section [documentation de l’espace de travail des destinations](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Les identifiants des audiences que vous souhaitez activer vers la destination sélectionnée. |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Les identifiants des audiences que vous souhaitez activer vers la destination sélectionnée. Vous pouvez utiliser l’API ad hoc pour exporter des audiences générées par Platform ainsi que des audiences externes (téléchargement personnalisé). Lors de l’activation d’audiences externes, utilisez l’identifiant généré par le système au lieu de l’identifiant d’audience. L’identifiant généré par le système est accessible dans la vue de synthèse de l’audience de l’interface utilisateur d’audiences. <br> ![Vue de l’ID d’audience qui ne doit pas être sélectionné.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "Vue de l’ID d’audience qui ne doit pas être sélectionné."){width="100" zoomable="yes"} <br> ![Vue de l’ID d’audience généré par le système qui doit être utilisé.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "Vue de l’ID d’audience généré par le système qui doit être utilisé."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
-### Requête avec des identifiants d’exportation (à abandonner) {#request-deprecated}
+### Requête avec des ID d’exportation {#request-export-ids}
+
+<!--
 
 >[!IMPORTANT]
 >
->**Type de requête obsolète**. Cet exemple décrit le type de requête pour l’API version 1. Dans la version v2 de l’API d’activation ad hoc, vous n’avez pas besoin d’inclure le dernier ID de tâche d’exportation d’audience.
+>**Deprecated request type**. This example type describes the request type for the API version 1. In the v2 of the ad-hoc activation API, you do not need to include the latest audience export job ID.
+
+-->
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun \
