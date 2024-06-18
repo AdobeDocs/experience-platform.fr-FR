@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 305aa7f44cd64d9a0ae704fe9aa01d2d1c536ade
 workflow-type: tm+mt
-source-wordcount: '3633'
+source-wordcount: '3743'
 ht-degree: 85%
 
 ---
@@ -25,7 +25,7 @@ Le [!DNL Segment Builder] offre un vaste espace de travail qui vous permet d’i
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Champs"
->abstract="Les trois types de champ qui constituent une définition de segment sont les attributs, les événements et les audiences. Les attributs vous permettent d’utiliser des attributs de profil appartenant à la classe XDM Individual Profile, les événements vous permettent de créer une audience basée sur des actions ou des événements qui ont lieu à l’aide des éléments de données XDM ExperienceEvent et les audiences vous permettent d’utiliser des audiences importées à partir de sources externes."
+>abstract="Une définition de segment est constituée des trois types de champ suivants : les attributs, les événements et les audiences. Les attributs vous permettent d’utiliser des attributs de profil appartenant à la classe XDM Individual Profile, les événements vous permettent de créer une audience basée sur des actions ou des événements qui ont lieu à l’aide des éléments de données XDM ExperienceEvent et les audiences vous permettent d’utiliser des audiences importées à partir de sources externes."
 
 Les blocs de création de base des définitions de segment sont les attributs et les événements. En outre, les attributs et les événements contenus dans les audiences existantes peuvent être utilisés comme éléments de nouvelles définitions.
 
@@ -114,6 +114,14 @@ Vous pouvez passer la souris sur l’option ⓘ située à côté d’une audien
 Vous pouvez également rechercher des audiences à l’aide de la barre de recherche, laquelle utilise la [syntaxe de recherche Lucene](https://docs.microsoft.com/fr-fr/azure/search/query-lucene-syntax). Dans l’onglet **[!UICONTROL Audiences]**, si vous sélectionnez un dossier de niveau supérieur, la barre de recherche s’affiche et vous permet de faire une recherche dans ce dossier. Les résultats de la recherche ne commencent à s’afficher que lorsque des mots entiers sont saisis. Par exemple, pour trouver une audience nommée `Online Shoppers`, commencez à taper « Online » dans la barre de recherche. Une fois que le mot « Online » a été complètement saisi, les résultats de la recherche contenant ce mot apparaissent.
 
 ## Zone de travail du créateur de règles {#rule-builder-canvas}
+
+>[!IMPORTANT]
+>
+>Depuis la version de juin 2024, les contraintes de temps &quot;Ce mois-ci&quot; et &quot;Cette année&quot; représentent respectivement &quot;le mois à jour&quot; et &quot;l’année à jour&quot;. Par exemple, si vous avez créé une audience le 18 juillet à la recherche de &quot;tous les clients dont l’anniversaire a lieu ce mois-ci&quot;, l’audience obtiendra tous les clients dont l’anniversaire a eu lieu du 1er au 31 juillet. Le 1er août, ce public recevra tous les clients dont l&#39;anniversaire a lieu du 1er au 31 août.
+>
+>Auparavant, &quot;Ce mois-ci&quot; et &quot;cette année&quot; représentaient respectivement 30 et 365 jours, ce qui ne rendait pas compte des mois de 31 jours et des années bissextiles.
+>
+>Pour mettre à jour la logique de vos audiences, réenregistrez les audiences créées précédemment.
 
 Une définition de segment est un ensemble de règles utilisées pour décrire les caractéristiques ou les comportements clés d’une audience cible. Ces règles sont créées à l’aide de la zone de travail du créateur de règles, au centre du [!DNL Segment Builder].
 
@@ -232,7 +240,7 @@ Après avoir selectionné **[!UICONTROL Déplier le conteneur]**, le conteneur e
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Politiques de fusion"
->abstract="Une stratégie de fusion permet la fusion de différents jeux de données pour former votre profil. Platform a fourni une stratégie de fusion par défaut ou vous pouvez créer une stratégie de fusion par défaut dans les profils. Choisissez une stratégie de fusion correspondant à votre objectif marketing pour cette audience."
+>abstract="Une politique de fusion permet de fusionner les différents jeux de données pour former votre profil. Platform a fourni une politique de fusion par défaut ; vous pouvez également créer une politique de fusion par défaut dans les profils. Choisissez une politique de fusion correspondant à votre objectif marketing pour cette audience."
 
 [!DNL Experience Platform] vous permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chaque client. Lors du regroupement de ces données, les politiques de fusion sont les règles utilisées par [!DNL Platform] pour déterminer comment les données seront hiérarchisées et quelles données seront combinées pour créer un profil.
 
@@ -247,13 +255,13 @@ Pour sélectionner une politique de fusion pour votre définition de segment, s�
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
 >title="Propriétés de définition de segment"
->abstract="La section Propriétés de la définition de segment affiche une estimation de la taille de la définition de segment résultante, indiquant le nombre de profils qualifiés par rapport au nombre total de profils. Cela vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même."
+>abstract="La section des propriétés de définition de segment affiche une estimation de la taille de la définition de segment résultante, en affichant le nombre de profils qualifiés par rapport au nombre total de profils. Cela vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Actualiser les estimations"
->abstract="Vous pouvez actualiser les estimations de votre définition de segment pour afficher immédiatement un aperçu du nombre de profils qui remplissent les critères de la définition de segment proposée. Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="Estimation et prévisualisation d’une audience"
+>abstract="Vous pouvez actualiser les estimations de votre définition de segment pour afficher immédiatement un aperçu du nombre de profils admissibles pour la définition de segment proposé. Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=fr#estimate-and-preview-an-audience" text="Estimation et prévisualisation d’une audience"
 
 Lors de la création d’une définition de segment, la variable **[!UICONTROL Propriétés d’audience]** sur le côté droit de l’espace de travail, la section affiche une estimation de la taille de la définition de segment résultante, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
 
