@@ -6,7 +6,7 @@ exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 source-git-commit: 9981f35732b041a92c5a371e727a8facb6636cf5
 workflow-type: tm+mt
 source-wordcount: '1567'
-ht-degree: 20%
+ht-degree: 28%
 
 ---
 
@@ -68,12 +68,12 @@ Si vous souhaitez supprimer des enregistrements de tous les jeux de données, s�
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Espace de noms d’identité"
->abstract="Un espace de noms d’identité est un attribut qui lie un enregistrement au profil d’un consommateur dans Experience Platform. Le champ d’espace de noms d’identité d’un jeu de données est défini par le schéma sur lequel le jeu de données est basé. Dans cette colonne, vous devez indiquer le type (ou l’espace de noms) de l’espace de noms d’identité de l’enregistrement, tel que `email` pour les adresses électroniques et `ecid` pour les identifiants Experience Cloud. Pour en savoir plus, consultez le guide de l’interface utilisateur du cycle de vie des données ."
+>abstract="Un espace de noms d’identité est un attribut qui lie un enregistrement au profil d’un client ou d’une cliente dans Experience Platform. Le champ Espace de noms d’identité d’un jeu de données est défini par le schéma sur lequel le jeu de données est basé. Dans cette colonne, vous devez indiquer le type (ou l’espace de nommage) de l’espace de noms d’identité de l’enregistrement, par exemple `email` pour les adresses e-mail et `ecid` pour les identifiants Experience Cloud. Pour en savoir plus, consultez le guide de l’interface d’utilisation du cycle de vie des données."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"
->title="Valeur d’identité du Principal"
->abstract="Dans cette colonne, vous devez indiquer la valeur de l’espace de noms de l’identité de l’enregistrement, qui doit correspondre au type d’identité fourni dans la colonne de gauche. Si le type d’espace de noms d’identité est `email`, la valeur doit correspondre à l’adresse électronique de l’enregistrement. Pour en savoir plus, consultez le guide de l’interface utilisateur du cycle de vie des données."
+>title="Valeur d’identité principale"
+>abstract="Dans cette colonne, vous devez indiquer la valeur de l’espace de noms d’identité de l’enregistrement, qui doit correspondre au type d’identité fourni dans la colonne de gauche. Si l’espace de noms d’identité est `email`, la valeur doit correspondre à l’adresse e-mail de l’enregistrement. Pour en savoir plus, consultez le guide de l’interface d’utilisation du cycle de vie des données."
 
 Lors de la suppression d’enregistrements, vous devez fournir des informations d’identité afin que le système puisse déterminer les enregistrements à supprimer. Pour tout jeu de données de Platform, les enregistrements sont supprimés en fonction de la variable **espace de noms d’identité** champ défini par le schéma du jeu de données.
 

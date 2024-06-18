@@ -65,17 +65,17 @@ Les filtres suivants s’appliquent aux requêtes d’expiration de jeu de donn�
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
 >title="Statut par service"
->abstract="Les demandes liées au cycle de vie des données sont traitées indépendamment par plusieurs services d’Experience Platform. Cette section décrit le statut actuel du traitement de la requête pour chaque service respectif. Pour en savoir plus, consultez le guide de l’interface utilisateur sur le cycle de vie des données."
+>abstract="Les demandes liées au cycle de vie des données sont traitées indépendamment par plusieurs services d’Experience Platform. Cette section décrit le statut actuel du traitement de la requête pour chaque service respectif. Pour en savoir plus, consultez le guide de l’interface d’utilisation du cycle de vie des données."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"
 >title="Nombre d’identités"
->abstract="Le nombre d&#39;identités pour lesquelles une demande de mise à jour ou de suppression des enregistrements a été formulée dans le cadre de cet ordre de travail. Les identités incluses dans le nombre n’existent pas nécessairement dans les jeux de données affectés. Pour en savoir plus, consultez le guide de l’interface utilisateur sur le cycle de vie des données."
+>abstract="Le nombre d&#39;identités pour lesquelles une demande de mise à jour ou de suppression des enregistrements a été formulée dans le cadre de cet ordre de travail. Les identités incluses dans le nombre n’existent pas nécessairement dans les jeux de données affectés. Pour en savoir plus, consultez le guide de l’interface d’utilisation du cycle de vie des données."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Réponse de suppression d&#39;enregistrement"
->abstract="Lorsqu&#39;un processus de suppression d&#39;enregistrement reçoit une réponse du système, ces messages s&#39;affichent sous la section **[!UICONTROL Résultat]**. Si un problème se produit alors qu’un ordre de travail est en cours de traitement, tous les messages d’erreur pertinents s’affichent dans cette section pour vous aider à résoudre le problème. Pour en savoir plus, consultez le guide de l’interface utilisateur sur le cycle de vie des données."
+>abstract="Lorsqu&#39;un processus de suppression d&#39;enregistrement reçoit une réponse du système, ces messages s&#39;affichent sous la section **[!UICONTROL Résultat]**. Si un problème se produit alors qu’un ordre de travail est en cours de traitement, tous les messages d’erreur pertinents s’affichent dans cette section pour vous aider à résoudre le problème. Pour en savoir plus, consultez le guide de l’interface d’utilisation du cycle de vie des données."
 
 Sélectionnez l’identifiant d’un ordre de travail répertorié pour en afficher les détails.
 
