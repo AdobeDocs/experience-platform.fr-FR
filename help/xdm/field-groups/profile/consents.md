@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Groupe de champs de schéma de contenu et de préférences
 description: Découvrez le groupe de champs de schéma Contenus et Préférences .
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
 source-wordcount: '933'
 ht-degree: 0%
@@ -185,7 +185,7 @@ Voir le tutoriel sur [création d’un schéma dans l’interface utilisateur](h
 
 ## Gestion des modifications du consentement et des préférences
 
-Lorsqu’un client modifie ses consentements ou ses préférences sur votre site web, ces modifications doivent être collectées et appliquées immédiatement à l’aide de la variable [SDK Web Adobe Experience Platform](/help/web-sdk/consent/supporting-consent.md). Si un client choisit de ne pas participer à la collecte de données, toute collecte de données doit immédiatement cesser. Si un client s’exclut de la personnalisation, aucune personnalisation ne doit être présente sur la page suivante qu’il consulte.
+Lorsqu’un client modifie ses consentements ou ses préférences sur votre site web, ces modifications doivent être collectées et appliquées immédiatement à l’aide de la variable [SDK Web Adobe Experience Platform](../../../web-sdk/commands/setconsent.md). Si un client choisit de ne pas participer à la collecte de données, toute collecte de données doit immédiatement cesser. Si un client s’exclut de la personnalisation, aucune personnalisation ne doit être présente sur la page suivante qu’il consulte.
 
 ## Étapes suivantes
 

@@ -3,9 +3,9 @@ title: Intégration de la prise en charge du TCF 2.0 de l’IAB à l’aide du S
 description: Découvrez comment configurer la prise en charge du TCF 2.0 de l’IAB pour votre site web sans utiliser de balises.
 seo-description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Web SDK
 exl-id: 14f1802a-0f8d-487f-ae17-5daaaab05162
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Ce guide explique comment intégrer l’Interactive Advertising Bureau Transparency &amp; Consent Framework, version 2.0 (IAB TCF 2.0) au SDK Web de Adobe Experience Platform sans utiliser de balises. Pour un aperçu de l’intégration à IAB TCF 2.0, consultez la [aperçu](./overview.md). Pour obtenir un guide sur l’intégration aux balises, lisez le [Guide du TCF 2.0 de l’IAB pour les balises](./with-tags.md).
 
-## Prise en main
+## Commencer
 
 Ce guide utilise la méthode `__tcfapi` pour accéder aux informations de consentement. Il peut être plus facile d’intégrer directement votre fournisseur de gestion du cloud (CMP). Toutefois, les informations contenues dans ce guide peuvent être utiles, car les CMP offrent généralement des fonctionnalités similaires à l’API TCF.
 
@@ -77,7 +77,7 @@ window.__tcfapi('addEventListener', 2, function (tcData, success) {
 });
 ```
 
-Ce bloc de code écoute les `useractioncomplete` puis définit le consentement, en transmettant la chaîne de consentement et la variable `gdprApplies` Indicateur. Si vous disposez d’identités personnalisées pour vos clients, veillez à renseigner la variable `identityMap` Variable . Reportez-vous au guide sur [prise en charge du consentement](../../consent/supporting-consent.md) pour plus d’informations sur l’appel `setConsent`.
+Ce bloc de code écoute les `useractioncomplete` puis définit le consentement, en transmettant la chaîne de consentement et la variable `gdprApplies` Indicateur. Si vous disposez d’identités personnalisées pour vos clients, veillez à renseigner la variable `identityMap` Variable . Reportez-vous au guide sur [setConsent](../../../web-sdk/commands/setconsent.md) pour plus d’informations.
 
 ## Inclusion des informations de consentement dans sendEvent
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Prise en charge du TCF 2.0 de l’IAB en Experience Platform
 description: Découvrez comment configurer vos opérations de données et vos schémas pour transmettre les choix de consentement des clients lors de l’activation de segments vers des destinations dans Adobe Experience Platform.
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
 source-wordcount: '2492'
 ht-degree: 1%
@@ -41,7 +41,7 @@ Ce guide nécessite également une compréhension pratique des services Platform
 * [Service Adobe Experience Platform Identity](/help/identity-service/home.md): résout le problème fondamental posé par la fragmentation des données d’expérience client en rapprochant les identités entre les appareils et les systèmes.
 * [Profil client en temps réel](/help/profile/home.md): Utilisations [!DNL Identity Service] pour créer des profils client détaillés à partir de vos jeux de données en temps réel. [!DNL Real-Time Customer Profile] extrait les données du lac de données et conserve les profils client dans sa propre banque de données distincte.
 * [SDK Web Adobe Experience Platform](/help/web-sdk/home.md): une bibliothèque JavaScript côté client qui vous permet d’intégrer divers services Platform à votre site web destiné aux clients.
-   * [Commandes de consentement du SDK](/help/web-sdk/consent/supporting-consent.md): présentation du cas d’utilisation des commandes du SDK liées au consentement présentée dans ce guide.
+   * [Commandes de consentement du SDK](../../../../web-sdk/commands/setconsent.md): présentation du cas d’utilisation des commandes du SDK liées au consentement présentée dans ce guide.
 * [Adobe Experience Platform Segmentation Service](/help/segmentation/home.md): permet de diviser [!DNL Real-Time Customer Profile] données regroupées en groupes d’individus qui partagent des caractéristiques similaires et réagissent de la même manière aux stratégies marketing.
 
 Outre les services Platform répertoriés ci-dessus, vous devez également connaître les [destinations](/help/data-governance/home.md) et leur rôle dans l’écosystème de Platform.

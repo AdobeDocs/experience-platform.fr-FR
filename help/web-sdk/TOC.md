@@ -2,14 +2,14 @@
 solution: Data Collection
 audience: user
 user-guide-title: Aide du SDK web d’Adobe Experience Platform
-breadcrumb-title: Guide du SDK Web
+breadcrumb-title: Guide du SDK web
 user-guide-description: Interagissez avec les services Experience Cloud via le réseau Edge.
 feature: Web SDK
 role: Developer
-source-git-commit: ec801c550740c4cba3481a961599f548518bb032
+source-git-commit: b8c38108e7481a5c4e94e4122e0093fa6f00b96c
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 46%
+source-wordcount: '224'
+ht-degree: 52%
 
 ---
 
@@ -91,7 +91,6 @@ ht-degree: 46%
       * [Configuration de la prise en charge de la messagerie web in-app dans le SDK web](personalization/web-in-app-messaging.md)
 
 * Consentement {#consent}
-   * [Prise en charge du consentement](consent/supporting-consent.md)
    * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
       * [Aperçu](consent/iab-tcf/overview.md)
       * [Intégration avec des balises](consent/iab-tcf/with-tags.md)

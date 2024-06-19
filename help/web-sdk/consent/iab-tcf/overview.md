@@ -3,23 +3,23 @@ title: Prise en charge du TCF 2.0 de l’IAB dans le SDK Web de Adobe Experience
 description: Découvrez comment prendre en charge les préférences de consentement du TCF 2.0 de l’IAB à l’aide du SDK Web de Adobe Experience Platform
 keywords: consentement;setConsent;groupe Champ de confidentialité du profil;groupe Champ de confidentialité des événements d’expérience;groupe Champ de confidentialité;IAB TCF 2.0;Real-Time CDP;
 exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '862'
 ht-degree: 0%
 
 ---
 
 # Prise en charge du TCF 2.0 de l’IAB dans le SDK Web de Adobe Experience Platform
 
-Le SDK web Adobe Experience Platform prend en charge la version 2.0 de l’Interactive Advertising Bureau Transparency &amp; Consent Framework (IAB TCF 2.0). Ce guide présente les exigences relatives à la prise en charge du TCF 2.0 de l’IAB par le biais du SDK web Adobe Experience Platform grâce à l’intégration à Adobe Real-time Customer Data Platform, à l’Audience Manager, aux événements d’expérience, à Adobe Analytics et au réseau Edge.
+Le SDK web Adobe Experience Platform prend en charge la version 2.0 de l’Interactive Advertising Bureau Transparency &amp; Consent Framework (IAB TCF 2.0). Ce guide présente les exigences relatives à la prise en charge du TCF 2.0 de l’IAB par le biais du SDK Web Adobe Experience Platform grâce à l’intégration à Adobe Real-time Customer Data Platform, à l’Audience Manager, aux événements d’expérience, à Adobe Analytics et à l’Edge Network.
 
 En outre, les guides suivants sont disponibles pour vous aider à apprendre comment intégrer IAB TCF 2.0 avec et sans balises.
 
 - [Avec des balises](./with-tags.md)
 - [Sans balises](./without-tags.md)
 
-## Prise en main
+## Commencer
 
 Pour mettre en oeuvre le SDK Web avec IAB TCF 2.0, vous devez avoir une compréhension pratique du modèle de données d’expérience (XDM) et des événements d’expérience. Avant de commencer, consultez le document suivant :
 
@@ -69,16 +69,16 @@ Par exemple, si vous avez un client qui n’est pas sous la juridiction du Règl
 
 ### Définition du consentement lors de la modification
 
-Le SDK Web de Adobe Experience Platform comporte une `setConsent` qui communique les préférences de consentement de votre client à tous les services Adobe à l’aide du TCF 2.0 de l’IAB. Si vous effectuez une intégration avec Real-Time CDP, cela met à jour le profil de votre client. Si vous effectuez une intégration à Audience Manager, les informations de votre client sont mises à jour. L’appel de cette méthode définit également un cookie avec une préférence de consentement &quot;tout ou rien&quot; qui contrôle si les futurs événements d’expérience sont autorisés à être envoyés. Cette action est appelée chaque fois que le consentement est modifié. Lors des chargements ultérieurs de la page, le cookie de consentement du réseau Edge sera lu pour déterminer si des événements d’expérience peuvent être envoyés et si un cookie d’identité peut être défini.
+Le SDK Web de Adobe Experience Platform comporte une `setConsent` qui communique les préférences de consentement de votre client à tous les services Adobe à l’aide du TCF 2.0 de l’IAB. Si vous effectuez une intégration avec Real-Time CDP, cela met à jour le profil de votre client. Si vous effectuez une intégration à Audience Manager, les informations de votre client sont mises à jour. L’appel de cette méthode définit également un cookie avec une préférence de consentement &quot;tout ou rien&quot; qui contrôle si les futurs événements d’expérience sont autorisés à être envoyés. Cette action est appelée chaque fois que le consentement est modifié. Lors des chargements ultérieurs de la page, le cookie de consentement de l’Edge Network sera lu pour déterminer si des événements d’expérience peuvent être envoyés et si un cookie d’identité peut être défini.
 
-Tout comme l’intégration du TCF 2.0 de l’IAB à l’Audience Manager, le réseau Edge donne son consentement lorsqu’un client a fourni son consentement explicite aux fins suivantes :
+Tout comme l’intégration du TCF 2.0 de l’IAB à l’Audience Manager, l’Edge Network donne son consentement lorsqu’un client a fourni son consentement explicite aux fins suivantes :
 
 - **Objectif 1 :** Stocker et/ou accéder aux informations sur un appareil
 - **Objectif 10 :** Développement et amélioration des produits
 - **Objectif spécial 1 :** Assurez la sécurité, évitez les fraudes et déboguez. (Conformément aux réglementations du TCF de l’IAB, cela est toujours accepté)
 - **Autorisation du fournisseur d’Adobe :** Consentement pour l’Adobe (fournisseur 565)
 
-Pour plus d’informations sur la variable `setConsent` , lisez la documentation sur [Prise en charge du consentement](../../consent/supporting-consent.md).
+Pour plus d’informations sur la variable `setConsent` , lisez la documentation dédiée au SDK Web sur [setConsent](../../../web-sdk/commands/setconsent.md).
 
 ### Ajout de consentement aux événements d’expérience
 

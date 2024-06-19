@@ -3,7 +3,7 @@ keywords: Experience Platform;profil;profil client en temps réel;dépannage;API
 title: Type de données Consentements et Préférences
 description: Le type de données Consentement pour la confidentialité, la personnalisation et les préférences marketing est destiné à prendre en charge la collecte des autorisations et préférences client générées par les plateformes de gestion du consentement (CMP) et d’autres sources provenant de vos opérations de données.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
 workflow-type: tm+mt
 source-wordcount: '2278'
 ht-degree: 1%
@@ -267,7 +267,7 @@ Voir le tutoriel sur [création d’un schéma dans l’interface utilisateur](h
 
 ## Gestion des modifications du consentement et des préférences
 
-Lorsqu’un client modifie ses consentements ou ses préférences sur votre site web, ces modifications doivent être collectées et appliquées immédiatement à l’aide de la variable [SDK Web Adobe Experience Platform](/help/web-sdk/consent/supporting-consent.md). Si un client choisit de ne pas participer à la collecte de données, toute collecte de données doit immédiatement cesser. Si un client s’exclut de la personnalisation, aucune personnalisation ne doit être présente sur la page suivante qu’il consulte.
+Lorsqu’un client modifie ses consentements ou ses préférences sur votre site web, ces modifications doivent être collectées et appliquées immédiatement à l’aide de la variable [SDK Web Adobe Experience Platform](../../web-sdk/commands/setconsent.md). Si un client choisit de ne pas participer à la collecte de données, toute collecte de données doit immédiatement cesser. Si un client s’exclut de la personnalisation, aucune personnalisation ne doit être présente sur la page suivante qu’il consulte.
 
 ## Annexe {#appendix}
 
