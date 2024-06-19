@@ -1,10 +1,11 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Juin 2024
 description: Les notes de mise à jour de juin 2024 pour Adobe Experience Platform.
-source-git-commit: 03a88554e8b7793d8e91bc867ce67a00f620b622
+exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
+source-git-commit: e1b56c6150274748c35fedfc1e1b6bbbf66d1bfb
 workflow-type: tm+mt
-source-wordcount: '1144'
-ht-degree: 23%
+source-wordcount: '1195'
+ht-degree: 22%
 
 ---
 
@@ -71,6 +72,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | ----------- | ----------- |
 | Amélioration de l’API d’exportation ad hoc pour exporter des audiences externes | Vous pouvez désormais utiliser l’API d’exportation ad hoc pour exporter des audiences externes (chargement personnalisé). [En savoir plus](/help/destinations/api/ad-hoc-activation-api.md) . |
 | (Version bêta) Fonctions supplémentaires prises en charge dans la phase bêta de la prise en charge des tableaux d’exportation | Auparavant, lors de l’activation d’audiences vers des destinations basées sur des fichiers et de la sélection de l’option Utiliser un champ calculé , vous étiez limité à l’utilisation d’un sous-ensemble des audiences disponibles par le biais de la préparation des données. Cette limitation a été levée et les clients ont accès à toutes les fonctions disponibles par le biais de la préparation des données lors de l’exportation d’audiences vers des destinations basées sur des fichiers. [En savoir plus](/help/destinations/ui/export-arrays-calculated-fields.md#supported-functions). |
+| Afficher uniquement les champs avec des données dans l’étape de mappage | Lors du mappage des attributs de profil à vos destinations, vous pouvez désormais basculer entre tous les attributs de profil ou uniquement ceux qui contiennent des données. Par défaut, seuls les champs contenant des données sont affichés. Consultez les guides d’activation pour [batch](../../destinations/ui/activate-batch-profile-destinations.md#mapping) et [flux continu](../../destinations/ui/activate-segment-streaming-destinations.md#mapping) destinations pour plus d’informations. |
 
 {style="table-layout:auto"}
 
@@ -117,4 +119,3 @@ Pour en savoir plus sur [!DNL Use Case Playbooks], lisez les pages de documentat
 - Obtenir une liste de tous les [livres de lecture disponibles](/help/use-case-playbooks/playbooks/playbooks-list.md), regroupés par produit (Real-Time CDP ou Journey Optimizer).
 - En savoir plus sur les [permissions](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) sont nécessaires pour vous ou utilisez des playbooks et les ressources qu’ils créent.
 - Comprendre le [fonctionnalité de sensibilisation aux données](/help/use-case-playbooks/playbooks/data-awareness.md) qui vous permet de dupliquer des ressources générées vers d’autres environnements de test.
-
