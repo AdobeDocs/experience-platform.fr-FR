@@ -3,10 +3,10 @@ title: Activation des données d’audience vers des destinations de diffusion e
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les mappant aux destinations de diffusion en continu.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: f741e62b3340b743e465edf3f7a007580b3f61be
+source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
 workflow-type: tm+mt
-source-wordcount: '1164'
-ht-degree: 16%
+source-wordcount: '1188'
+ht-degree: 19%
 
 ---
 
@@ -79,7 +79,9 @@ Certaines destinations de diffusion en continu d’audience nécessitent que vou
 
 1. Dans le **[!UICONTROL Sélectionner le champ source]** , utilisez la méthode **[!UICONTROL Sélectionner des attributs]** ou le **[!UICONTROL Sélectionner un espace de noms d’identité]** pour basculer entre les deux catégories de champs sources disponibles. À partir de la [!DNL XDM] attributs de profil et espaces de noms d’identité, sélectionnez ceux que vous souhaitez mapper à la destination, puis choisissez **[!UICONTROL Sélectionner]**.
 
-   ![Sélectionnez la page du champ source qui affiche plusieurs champs source disponibles.](../assets/ui/activate-segment-streaming-destinations/source-field-page.png)
+   Utilisez la variable **[!UICONTROL Afficher uniquement les champs contenant des données]** pour afficher uniquement les champs de schéma renseignés avec des valeurs. Par défaut, seuls les champs de schéma renseignés sont affichés.
+
+   ![Sélectionnez la page du champ source qui affiche plusieurs champs source disponibles.](../assets/ui/activate-segment-streaming-destinations/select-source-field-modal.png)
 
 1. Sélectionnez le bouton situé à droite du **[!UICONTROL Champ cible]** entrée .
 
@@ -102,12 +104,12 @@ Quand vous mappez des attributs source non hachés avec des attributs cibles qui
 
 ![Appliquez le contrôle de transformation mis en surbrillance à l’étape Mappage des identités .](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
-## Planification de l’exportation des audiences {#scheduling}
+## Planifier l’export d’audience {#scheduling}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
 >title="Date de fin"
->abstract="L&#39;ajout d&#39;une date de fin pour le planning de l&#39;audience n&#39;est pas disponible."
+>abstract="L’ajout d’une date de fin pour le planning des audiences n’est pas disponible."
 
 Par défaut, la variable **[!UICONTROL Planification de l’audience]** n’affiche que les audiences nouvellement sélectionnées dans le flux d’activation actuel.
 
@@ -141,7 +143,7 @@ Sur la page **[!UICONTROL Vérifier]**, vous pouvez voir un résumé de votre s�
 
 ### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
-Si votre entreprise a acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**, sélectionnez **[!UICONTROL Affichage des stratégies de consentement applicables]** pour identifier les stratégies de consentement appliquées et le nombre de profils inclus dans l’activation qui en résulte. En savoir plus [évaluation des stratégies de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) pour plus d’informations.
+Si votre organisation a acheté **Adobe HealthCare Shield** ou **Adobe Privacy &amp; Security Shield**, sélectionnez **[!UICONTROL Afficher les politiques de consentement applicables]** pour identifier les politiques de consentement appliquées et le nombre de profils inclus dans l&#39;activation qui en résulte. En savoir plus [évaluation des stratégies de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) pour plus d’informations.
 
 ### Vérifications des stratégies d’utilisation des données {#data-usage-policy-checks}
 
