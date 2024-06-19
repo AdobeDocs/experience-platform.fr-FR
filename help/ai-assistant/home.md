@@ -1,11 +1,11 @@
 ---
 title: Présentation de l’assistant AI dans Adobe Experience Platform
-description: Découvrez l’assistant d’IA, ses nuances et ses cas d’utilisation, et comment l’utiliser pour accélérer votre workflow avec Adobe Experience Platform et Real-time Customer Data Platform.
+description: Découvrez l’assistant IA, ses nuances, ses cas d’utilisation et comment l’utiliser pour accélérer votre workflow avec Adobe Experience Platform et Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 9ee39ee1f877fa13acdca8a1d8549cf4692b39aa
+source-git-commit: e8939132c1508e1dfc4028e6c8ff23662d6c2b2b
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 2%
+source-wordcount: '820'
+ht-degree: 7%
 
 ---
 
@@ -55,7 +55,7 @@ Les connaissances sur les produits se rapportent aux concepts et aux sujets bas�
 
 {style="table-layout:auto"}
 
-### Connaissances opérationnelles {#operational-insights}
+### Informations opérationnelles {#operational-insights}
 
 >[!IMPORTANT]
 >
@@ -69,18 +69,22 @@ Les informations opérationnelles se rapportent aux réponses générées par l�
 
 Vous pouvez poser des questions à l’assistant d’IA sur vos informations opérationnelles dans les domaines suivants :
 
-* Attributs
-* Audiences
-* Flux de données
-* Jeux de données
-* Destinations _(Pour l’instant, il n’est pas possible de répondre aux questions concernant les comptes et à certaines questions concernant le flux de données.)_
-* Parcours
-* Schémas _(Pour l’instant, il n’est pas possible de répondre aux questions concernant les groupes de champs.)_
-* Sources _(Pour l’instant, il n’est pas possible de répondre aux questions concernant les comptes.)_
+| Domaine | Métadonnées prises en charge |
+| --- | --- |
+| Attributs | <ul><li>Recherches de nom d’attribut</li><li>Attribut - relation de schéma</li><li>Attribut - relation entre les jeux de données</li><li>Attribut - relation d’audience</li><li>Attribut - relation de destination</li><li>Attributs non utilisés</li></ul> |
+| Audiences | <ul><li>Taille de l’audience</li><li>Type d’audience (diffusion en continu ou par lot)</li><li>Dates de création/modification</li><li>État de l’activation</li><li>Nombre de profils</li><li>Duplication d&#39;audiences</li><li>Recherches de définitions d’audience</li><li>Audience - relation d’attribut</li><li>Audience - relation entre les jeux de données</li><li>Audience - relation de destination</li><li>Règles InSegment</li><li>Nommer les recherches</li><li>Recherches de nom et d’identifiant |
+| Flux de données | <ul><li>Nombre de flux de données</li><li>Statut du flux de données</li><li>Flux de données : relation entre les jeux de données</li><li>Flux de données - relation source</li></ul> |
+| Jeux de données | <ul><li>Nombre de jeux de données</li><li>État d’activation du profil</li><li>Date de création/modification</li><li>Jeu de données - relation de schéma</li><li>Jeu de données - relation avec l’audience</li><li>Jeu de données - relation d’attribut</li><li>Jeu de données - relation de flux de données</li><li>Nommer les recherches </li><li>Recherches de nom et d’identifiant</li></ul> |
+| Destinations | <ul><li>Nombre de destinations configurées</li><li>Destination - relation avec l’audience</li><li>Relation d’attribut de destination</li></ul> |
+| Parcours | <ul><li>Comptages</li><li>Nommer les recherches</li><li>Recherches de nom et d’identifiant</li><li>Statut du parcours</li><li>État déclenché (audience par rapport aux événements)</li><li>Dates de création/modification</li><li>Fréquence récurrente</li></ul> |
+| Schémas | <ul><li>Nombre de schémas</li><li>Date de création/modification</li><li>Type de classe de schéma</li><li>Schéma - relation d’attribut</li><li>Schéma - relation avec le jeu de données</li><li>Schéma - relation avec l’audience</li><li>État d’activation du profil</li><li>Nommer les recherches</li><li>Recherches de nom et d’identifiant</li></ul> |
+| Sources | <ul><li>Nombre de comptes</li><li>État du compte</li><li>Flux de données actifs/inactifs pour chaque compte</li><li>Connecteur source - relation de flux de données</li><li>Compte source - relation de flux de données</li></ul> |
+
+{style="table-layout:auto"}
 
 Pour les questions d’informations opérationnelles, les réponses peuvent ne pas refléter l’état actuel de l’interface utilisateur. Les données qui appuient ces questions sont mises à jour toutes les 24 heures. Par exemple, les modifications apportées par les utilisateurs dans Real-Time CDP pendant la journée sont synchronisées avec les entrepôts de données la nuit, puis elles deviennent disponibles pour les questions des utilisateurs le matin. Vous devrez vous connecter à un environnement de test pour obtenir des informations sur des données spécifiques liées aux objets.
 
-### Portée de la fonctionnalité {#feature-scope}
+### Périmètre de la fonctionnalité {#feature-scope}
 
 Actuellement, la portée de l’assistant d’IA est la suivante :
 

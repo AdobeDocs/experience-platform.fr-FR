@@ -2,9 +2,9 @@
 title: Assistant IA dans Adobe Experience Platform
 description: Découvrez comment utiliser l’assistant d’IA pour parcourir et comprendre les concepts Experience Platform et Real-time Customer Data Platform, ainsi que les informations d’utilisation relatives à vos objets.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 1c228eb95075d4302ab6d3544fff8766087411bf
+source-git-commit: 94245fe25828025b60ea57ddebede2b3ccf890eb
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1517'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # Guide de l’interface utilisateur de l’assistant IA
 
 Lisez ce guide pour découvrir comment utiliser l’assistant d’IA dans l’interface utilisateur de Adobe Experience Platform.
+
+La vidéo suivante est destinée à vous aider à comprendre l’assistant d’IA.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 ## Accès à l’assistant d’IA dans l’interface utilisateur d’Experience Platform
 
@@ -81,7 +85,7 @@ Vous pouvez également utiliser les suggestions fournies par l’assistant d’I
 
 +++
 
-### Connaissances opérationnelles {#operational-insights}
+### Informations opérationnelles {#operational-insights}
 
 Vous devez être dans un environnement de test actif pour que l’assistant d’IA puisse répondre suffisamment à une question sur vos informations opérationnelles.
 
@@ -111,6 +115,22 @@ Vous pouvez également fournir des filtres et des modifications à vos questions
 
 +++
 
+### Vérification des réponses d’informations opérationnelles {#verify-responses}
+
+Vous pouvez vérifier chaque réponse relative aux questions d’informations opérationnelles à l’aide d’une requête SQL fournie par l’assistant d’IA.
+
++++Sélectionner pour afficher un exemple de vérification des réponses d’informations opérationnelles
+
+Après avoir reçu une réponse à une question d’informations opérationnelles, sélectionnez **[!UICONTROL Afficher les sources]** puis sélectionnez **[!UICONTROL Afficher la requête source]**.
+
+![requête source d’affichage](./images/view-source-query.png)
+
+Lorsqu’elle est interrogée avec une question d’informations opérationnelles, l’assistant d’IA fournit une requête SQL que vous pouvez utiliser pour vérifier le processus nécessaire au calcul de sa réponse. Cette requête source est uniquement à des fins de vérification et n’est pas prise en charge sur Query Service.
+
+![exemple de requête source](./images/source-query.png)
+
++++
+
 ### Utilisation de la saisie automatique {#use-auto-complete}
 
 Vous pouvez utiliser la fonction de saisie semi-automatique pour recevoir la liste des objets de données qui existent dans votre environnement de test. Les recommandations de saisie semi-automatique sont disponibles pour les domaines suivants : audiences, schémas, jeux de données, sources et destinations.
@@ -132,6 +152,14 @@ Vous pouvez utiliser les fonctionnalités à plusieurs volets de l’assistant d
 Dans l’exemple ci-dessous, l’assistant d’IA est d’abord invité à indiquer le nombre total de flux de données, puis à répertorier les 10 flux de données les plus récents.
 
 ![Exemple de multi-tour](./images/multiturn.png)
+
++++
+
+### Commencer une nouvelle conversation
+
+Vous pouvez modifier des rubriques à l’aide de l’assistant d’IA en réinitialisant et en lançant une nouvelle conversation.
+
++++Cliquez pour afficher un exemple de réinitialisation de votre conversation.
 
 Pour la réinitialiser, sélectionnez les ellipses (**`...`**) dans l’interface de l’assistant, puis sélectionnez **[!UICONTROL Commencer une nouvelle conversation]**. Cela indique à l’assistant d’IA que vous avez l’intention de modifier les rubriques et peut s’avérer particulièrement utile lors de la résolution des problèmes liés aux requêtes qui échouent ou qui référencent des informations incorrectes.
 
