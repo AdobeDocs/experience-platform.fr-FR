@@ -4,14 +4,14 @@ title: Présentation de la prise en compte des données dans les classeurs de ca
 description: Découvrez comment accélérer le temps de valorisation en copiant les ressources générées dans l’environnement de test d’inspiration finale vers d’autres environnements de test.
 role: Developer
 exl-id: 537eff13-f5fe-4cc9-9769-ab47b3cecda7
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 0%
 
 ---
 
-# Publication de ressources générées par le livre de lecture sur d’autres environnements de test {#publish-to-other-sandboxes}
+# Ressources générées par le lecteur Publish dans d’autres environnements de test {#publish-to-other-sandboxes}
 
 Les scénarios d’utilisation sont des modèles marketing conçus pour générer des ressources telles que des audiences, des schémas ou des parcours pour des cas d’utilisation marketing courants. Vous pouvez tester les ressources créées par des livres de jeu dans l’environnement de test inspirant. Lorsque vous êtes prêt, vous pouvez importer les ressources dans d’autres environnements de test de développement pour effectuer d’autres tests avec les données disponibles dans ces environnements de test. Lorsque vous êtes satisfait des tests, vous pouvez ensuite déplacer les ressources des environnements de test de développement vers les environnements de test de production.
 
@@ -19,7 +19,7 @@ Cependant, dans certains cas, vous avez peut-être déjà configuré vos propres
 
 ## Conditions préalables {#prerequisites}
 
-Avant de lire ce tutoriel, parcourez les [modèles de manuel d’utilisation disponibles](/help/use-case-playbooks/playbooks/discover.md#search-and-filter) et [création d’une instance](/help/use-case-playbooks/playbooks/create-share-reuse.md) d’un playbook préféré.
+Avant de lire ce tutoriel, parcourez les [modèles de manuel d’utilisation disponibles](/help/use-case-playbooks/playbooks/choose.md#search-and-filter) et [création d’une instance](/help/use-case-playbooks/playbooks/create-share-reuse.md) d’un playbook préféré.
 
 La création d’une instance génère un ensemble de ressources telles que des parcours, des segments, des schémas et des messages dans l’environnement de test d’inspiration. Lisez la suite pour découvrir comment copier ces ressources dans d’autres environnements de test.
 
@@ -29,11 +29,11 @@ La création d’une instance génère un ensemble de ressources telles que des 
 >
 > Vous ne pouvez importer des packages que dans d’autres environnements de développement. Une fois que vous avez apporté toutes les modifications ou mises à jour nécessaires, vous pouvez importer en production les ressources ou les modules de ces environnements de test de développement. Vous ne pouvez pas importer directement depuis les environnements de test des cahiers de travail du cas d’utilisation en production.
 
-1. Pour importer des objets de l’environnement de test d’inspiration dans un autre environnement de test, accédez à l’instance souhaitée d’un manuel de cas d’utilisation, puis sélectionnez **[!UICONTROL Publication sur un autre environnement de test]** pour exporter les artefacts sous la forme d’un package.
+1. Pour importer des objets de l’environnement de test d’inspiration dans un autre environnement de test, accédez à l’instance souhaitée d’un manuel de cas d’utilisation, puis sélectionnez **[!UICONTROL Publish sur un autre environnement de test]** pour exporter les artefacts sous la forme d’un package.
 
    ![GIF montrant les différentes instances de cas d’utilisation](/help/use-case-playbooks/assets/playbooks/data-awareness/browse-to-existing-instances-of-playbook.gif)
 
-2. Une fois que vous avez sélectionné le **[!UICONTROL Publication sur un autre environnement de test]** , un modal s’affiche. Renseignez le nom et la description facultative, puis sélectionnez **[!UICONTROL Créer]**. Cette étape regroupe les ressources générées dans un package qui peut être importé dans un autre environnement de test.
+2. Une fois que vous avez sélectionné le **[!UICONTROL Publish sur un autre environnement de test]** , un modal s’affiche. Renseignez le nom et la description facultative, puis sélectionnez **[!UICONTROL Créer]**. Cette étape regroupe les ressources générées dans un package qui peut être importé dans un autre environnement de test.
 
    ![Un modal pour créer un package](/help/use-case-playbooks/assets/playbooks/data-awareness/create-package-modal.png)
 

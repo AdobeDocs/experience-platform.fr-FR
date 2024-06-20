@@ -4,9 +4,9 @@ title: Cas d’utilisation disponibles des classeurs pour Real-time Customer Dat
 description: Liste de tous les playbooks dans Real-time Customer Data Platform et Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
-source-git-commit: 6573fdede3bd25bac556531e45f8abefc576f857
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
@@ -77,4 +77,4 @@ Lisez cette page pour obtenir un aperçu de tous les playbooks disponibles que v
 
 ## Étapes suivantes
 
-Maintenant que vous connaissez les playbooks disponibles, lisez la [guide de découverte](/help/use-case-playbooks/playbooks/discover.md) pour comprendre comment commencer à utiliser les playbooks dans l’interface utilisateur.
+Maintenant que vous connaissez les playbooks disponibles, lisez ceci : [guide](/help/use-case-playbooks/playbooks/choose.md) pour comprendre comment commencer à utiliser les playbooks et choisir celui qui vous convient dans l’interface utilisateur.

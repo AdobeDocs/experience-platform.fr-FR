@@ -4,7 +4,7 @@ title: Prise en main des livres de cas d’utilisation
 description: Commencez à utiliser la fonctionnalité des Playbooks de cas d’utilisation.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: dfb4549a09628f2fed947ddf76167db28354eb92
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 15%
@@ -113,4 +113,4 @@ Lisez la documentation sur [comment configurer les surfaces de canal push](https
 
 ## Étapes suivantes {#next-steps}
 
-Maintenant que vous avez suivi toutes les étapes de ce document, vous devez avoir créé un environnement de test de développement avec des classeurs de cas d’utilisation disponibles dans le volet de navigation de gauche. Vous savez également comment octroyer aux membres de votre équipe les autorisations requises pour afficher et gérer des livres de jeu et générer des ressources. À l’étape suivante, lisez la section [découvrez le bon playbook](/help/use-case-playbooks/playbooks/discover.md) pour vous et puis [créer des instances à partir de celle-ci](/help/use-case-playbooks/playbooks/create-share-reuse.md).
+Maintenant que vous avez suivi toutes les étapes de ce document, vous devez avoir créé un environnement de test de développement avec des classeurs de cas d’utilisation disponibles dans le volet de navigation de gauche. Vous savez également comment octroyer aux membres de votre équipe les autorisations requises pour afficher et gérer des livres de jeu et générer des ressources. À l’étape suivante, lisez la section [choisissez le lecteur adapté](/help/use-case-playbooks/playbooks/choose.md) pour vous et puis [créer des instances à partir de celle-ci](/help/use-case-playbooks/playbooks/create-share-reuse.md).

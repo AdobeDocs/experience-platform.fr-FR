@@ -4,23 +4,19 @@ title: Limites connues et résolution des problèmes liés aux livres de lecture
 description: En savoir plus sur les problèmes connus et les problèmes courants liés aux playbooks et comment les résoudre
 role: User, Developer, Admin
 exl-id: 2604ce26-bcf9-46e1-bc10-30252a113159
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 0faf3187c0b32e0be70033e501939412ade37d7e
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 2%
+source-wordcount: '287'
+ht-degree: 0%
 
 ---
 
 
-# Dépannage et limites connues {#troubleshooting-known-limitations}
-
-Découvrez comment résoudre les erreurs lors de l’utilisation de classeurs de cas d’utilisation et comprendre les limites connues de la version de disponibilité générale.
-
-## Dépannage {#troubleshooting}
+# Dépannage {#troubleshooting}
 
 Affichage des suggestions de dépannage pour les erreurs courantes lors de l’utilisation de classeurs de cas d’utilisation
 
-### Surfaces Adobe Journey Optimizer non configurées
+## Surfaces Adobe Journey Optimizer non configurées {#surfaces-not-configured}
 
 Lors de la création d’une instance d’un playbook, le message ci-dessous peut s’afficher.
 
@@ -28,27 +24,10 @@ Lors de la création d’une instance d’un playbook, le message ci-dessous peu
 
 Cela est dû au fait que les playbooks Journey Optimizer créent des messages pour les canaux email, push et SMS. Lisez la section [prise en main](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) pour configurer les différentes surfaces.
 
-### État *failed* lors de la création d’une instance
+## État *failed* lors de la création d’une instance {#status-failed}
 
 Si un message d’échec s’affiche lorsque vous essayez de créer une instance, cela peut être dû au fait que votre administrateur ne vous a pas accordé les autorisations utilisateur requises. Un playbook contient de nombreuses ressources différentes et votre utilisateur a besoin d’autorisations pour créer ces ressources afin de pouvoir créer correctement l’instance du playbook. Voir [permissions](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) de ce guide sur la configuration des autorisations.
 
-## Limites connues
+## Échec de l’importation {#import-failure}
 
-Deux limites connues s’affichent lorsque vous créez une instance d’un playbook et que vous générez des ressources.
-
-* Pour les schémas générés, si un schéma est généré dans une instance d’un playbook et que vous le modifiez, alors un autre schéma *will not* est généré si vous activez une autre instance du playbook. Continuez également à utiliser le schéma que vous avez modifié dans l’instance.
-
-* Lors de l’utilisation de la variable [fonctionnalité de sensibilisation aux données](/help/use-case-playbooks/playbooks/data-awareness.md) pour promouvoir le schéma de l’environnement de test d’inspiration vers l’environnement de test de développement, vous pouvez voir des erreurs similaires à celles ci-dessous :
-
-![Erreurs affichées dans le workflow de mappage de schéma.](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
-
-En effet, certains des champs générés à partir de votre schéma ne sont pas présents dans le schéma de l’environnement de test de développement vers lequel vous effectuez la copie. Cherchez ces champs. Ensuite, revenez à l’environnement de test de développement dans lequel vous pouvez :
-
-* Créez un groupe de champs qui comprend ces champs ou
-* Incluez dans votre schéma un groupe de champs standard prédéfini qui inclut les champs manquants.
-
-Une fois que vous avez inclus ces champs dans le schéma dans l’environnement de test de développement, revenez au workflow pour copier les champs de schéma de l’environnement de test d’inspiration vers l’environnement de test de développement. Les erreurs ont maintenant disparu.
-
-Pour plus d’informations, regardez la vidéo ci-dessous pour créer des groupes de champs de schéma.
-
->[!VIDEO](https://video.tv.adobe.com/v/27013/?learn=on)
+Les clients opèrent dans différents environnements de test et, parfois, lors de l’importation d’une instance de leur environnement vers l’environnement de test d’Adobe, cela peut échouer. Pour afficher l’état de ces importations, sélectionnez Environnement de test dans le volet de navigation de gauche, puis Tâches. Vous pouvez y afficher tous les détails des fichiers importés. Sélectionnez un fichier dont l’état a échoué, puis cliquez sur Afficher les détails de la tâche. Un modal s’affiche. Sélectionnez Afficher le fichier JSON, faites défiler l’écran vers le bas et copiez le message d’erreur qui apparaît sous &quot;messages&quot;. Il est tout à fait possible que plusieurs messages d’erreur s’affichent. Vous devez donc tous les copier. Envoyez-les à votre équipe d’Adobe en essayant de consigner un ticket de bogue. Cela accélère le processus de résolution et donne à votre équipe plus de contexte sur ce qui se passe.

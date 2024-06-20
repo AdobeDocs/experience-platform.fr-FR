@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Juin 2024
 description: Les notes de mise à jour de juin 2024 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b9707c40beec3000456510a8a384a0af58d6d9fa
+source-git-commit: b2b38c1b540d074998e96712465ff52c68371004
 workflow-type: tm+mt
-source-wordcount: '1357'
+source-wordcount: '1358'
 ht-degree: 21%
 
 ---
@@ -127,7 +127,7 @@ Pour plus d’informations sur [!DNL Segmentation Service], consultez la [prése
 
 Pour commencer, lisez le [Présentation des classeurs de cas d’utilisation](/help/use-case-playbooks/playbooks/overview.md), qui fournit un aperçu de la fonctionnalité des classeurs, de leur objectif et une démonstration de bout en bout, y compris la création d’instances et l’importation de ressources générées dans d’autres environnements de test.
 
-Pour découvrir comment accéder à un environnement de test inspirant et le configurer afin d’expérimenter et d’explorer plusieurs classeurs de cas d’utilisation, reportez-vous à la section [Découvrez le manuel de lecture approprié](/help/use-case-playbooks/playbooks/discover.md) document.
+Pour découvrir comment accéder à un environnement de test inspirant et le configurer afin d’expérimenter et d’explorer plusieurs classeurs de cas d’utilisation, reportez-vous à la section [Accédez aux classeurs de cas d’utilisation](/help/use-case-playbooks/playbooks/navigate.md) document.
 
 Pour en savoir plus sur [!DNL Use Case Playbooks], lisez les pages de documentation suivantes :
 

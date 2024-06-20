@@ -4,10 +4,10 @@ title: Vue d’ensemble des playbooks de cas d’utilisation
 description: Découvrez comment utiliser la fonction des playbooks de cas d’utilisation dans Experience Platform pour commencer à utiliser divers cas d’utilisation marketing
 role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: ecce42e2c759bda31bc37d0aae1da2c7b3d141fc
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 31%
+source-wordcount: '533'
+ht-degree: 30%
 
 ---
 
@@ -20,7 +20,7 @@ Ce guide vous apportera la documentation suivante :
 * **[Vue d’ensemble des playbooks de cas d’utilisation](#overview)**
 * [Prise en main des configurations et autorisations requises](/help/use-case-playbooks/playbooks/get-started.md)
 * [Manuels de cas d’utilisation disponibles](/help/use-case-playbooks/playbooks/playbooks-list.md)
-* [Trouver le bon playbook](/help/use-case-playbooks/playbooks/discover.md)
+* [Choisissez parmi une sélection de livres de lecture](/help/use-case-playbooks/playbooks/choose.md)
 * [Créer, partager et réutiliser des instances de playbook](/help/use-case-playbooks/playbooks/create-share-reuse.md)
 * [Copiez des ressources générées par des livres de lecture dans d’autres environnements à l’aide de la fonctionnalité de sensibilisation aux données.](/help/use-case-playbooks/playbooks/data-awareness.md)
 * [Dépannage et limites connues](troubleshooting.md)
@@ -54,7 +54,7 @@ Certains [!UICONTROL Cas d’utilisation des classeurs] sont adaptés aux cas d�
 
 ## Guides d’interface utilisateur {#ui-guides}
 
-Une fois que vous avez choisi un playbook, sélectionnez-le dans l’interface utilisateur et commencez à l’utiliser. Lisez les guides de l’interface utilisateur sur [découvrez le bon playbook](/help/use-case-playbooks/playbooks/discover.md) pour vous et [comment créer, partager et réutiliser des instances playbook](/help/use-case-playbooks/playbooks/create-share-reuse.md) pour obtenir des informations complètes sur la création d’instances et sur l’utilisation optimale d’un playbook. Pour savoir comment promouvoir diverses ressources, de l’environnement de test d’inspiration à d’autres environnements de test de développement, puis à la production, consultez la documentation sur [sensibilisation aux données](/help/use-case-playbooks/playbooks/data-awareness.md).
+Une fois que vous avez choisi un playbook, sélectionnez-le dans l’interface utilisateur et commencez à l’utiliser. Lisez les guides de l’interface utilisateur sur [choix d’un playbook adapté à partir d’une sélection](/help/use-case-playbooks/playbooks/choose.md) pour vous et [comment créer, partager et réutiliser des instances playbook](/help/use-case-playbooks/playbooks/create-share-reuse.md) pour obtenir des informations complètes sur la création d’instances et sur l’utilisation optimale d’un playbook. Pour savoir comment promouvoir diverses ressources, de l’environnement de test d’inspiration à d’autres environnements de test de développement, puis à la production, consultez la documentation sur [sensibilisation aux données](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Dépannage et limites connues {#trouble-shooting-known-limitations}
 

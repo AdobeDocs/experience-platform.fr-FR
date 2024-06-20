@@ -4,10 +4,10 @@ title: Créer, partager et réutiliser des instances de playbook
 description: Découvrez comment créer, partager et réutiliser des instances de playbook pour réaliser votre cas d’utilisation marketing.
 role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
-source-git-commit: c4be3864c680a569166d53f18ec0ee28a52c9ea7
+source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '787'
-ht-degree: 83%
+source-wordcount: '785'
+ht-degree: 81%
 
 ---
 
@@ -22,7 +22,7 @@ Pour utiliser un playbook, accédez à **[!UICONTROL Playbooks de cas d’utilis
 >title="Créer une instance"
 >abstract="Générez une liste de ressources telles que des parcours, des audiences, des schémas ou des destinations à utiliser dans des scénarios de parcours ou d’activation."
 
-Avant de créer une instance de playbook, explorez les playbooks disponibles pour [découvrir le playbook qui vous convient le mieux](/help/use-case-playbooks/playbooks/discover.md). Lorsque vous êtes prêt(e) à poursuivre un playbook et à créer une instance, sélectionnez **[!UICONTROL Créer une instance]** pour poursuivre le playbook et générer des ressources techniques.
+Avant de créer une instance de playbook, explorez les classeurs disponibles à la rubrique [choisissez le lecteur adapté](/help/use-case-playbooks/playbooks/choose.md). Lorsque vous êtes prêt(e) à poursuivre un playbook et à créer une instance, sélectionnez **[!UICONTROL Créer une instance]** pour poursuivre le playbook et générer des ressources techniques.
 
 ![Créer une instance d’un playbook.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 
