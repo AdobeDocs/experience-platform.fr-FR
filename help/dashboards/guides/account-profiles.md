@@ -2,7 +2,7 @@
 title: Tableau de bord des profils de compte
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les profils de compte B2B de votre entreprise.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8e05b0ae06250f8cd55b361a8176963e0dce8e92
+source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
 workflow-type: tm+mt
 source-wordcount: '1763'
 ht-degree: 4%
@@ -170,7 +170,7 @@ Le menu déroulant du widget vous permet de sélectionner le modèle de notation
 
 ![Le widget Score prédictif des principaux facteurs d’influence .](../images/account-profiles/predictive-scoring-top-influential-factors.png)
 
-### Erreur de chargement des données impossible {#errors}
+## Erreur de chargement des données impossible {#errors}
 
 Si un widget s’affiche *[!UICONTROL Chargement impossible. Essaie à nouveau.]* car il n’existe aucune donnée disponible pour l’entité B2B. Par exemple, le widget affiché ci-dessous [!UICONTROL Nouvelles opportunités par rôle individuel], affiche le message &quot;[!UICONTROL Chargement impossible. Essaie à nouveau.]&quot;, car cet environnement de test ne dispose pas de données d’opportunité disponibles.
 

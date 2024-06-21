@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Syntaxe SQL dans Query Service
 description: Ce document décrit et explique la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 4b1d17afa3d9c7aac81ae869e2743a5def81cf83
+source-git-commit: d2cb7c3d1968a33300d480e63c4cb007df3cce7b
 workflow-type: tm+mt
-source-wordcount: '4256'
+source-wordcount: '4305'
 ht-degree: 5%
 
 ---
@@ -312,7 +312,9 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 | `RESTRICT` | La valeur par défaut du mode. Si spécifié, le schéma ne disparaît que s’il l’est. **not** contiennent tous les tableaux. |
 | `CASCADE` | Si spécifié, le schéma est déposé avec toutes les tables présentes dans le schéma. |
 
-## CREATE VIEW
+## CREATE VIEW {#create-view}
+
+Une vue SQL est une table virtuelle basée sur le jeu de résultats d’une instruction SQL. Créez une vue avec le `CREATE VIEW` et donnez-lui un nom. Vous pouvez ensuite utiliser ce nom pour revenir aux résultats de la requête. Cela facilite la réutilisation de requêtes complexes.
 
 La syntaxe suivante définit une `CREATE VIEW` requête pour un jeu de données. Ce jeu de données peut être un jeu de données ADLS ou de magasin accéléré.
 
