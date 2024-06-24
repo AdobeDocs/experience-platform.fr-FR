@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: e0f4ee0ae0f14df43bfe36375d8fe8e9eac79369
+source-git-commit: 791d854599cf1476f1ebb9584198433c91765efa
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1227'
 ht-degree: 88%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 88%
       * [(Version bêta) Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform](./ui/export-file-now.md)
       * [Exportation de jeux de données à l’aide de l’interface utilisateur Experience Platform](./ui/export-datasets.md)
       * [(Version bêta) Utiliser l’attribut XDM de l’heure de la dernière qualification dans les nouvelles destinations de stockage dans le cloud en version bêta](./ui/activate-last-qualification-time.md)
-      * [(Version bêta) Utilisation de champs calculés pour exporter des tableaux dans des fichiers de schéma plats](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [(Version bêta) Utiliser des champs calculés pour exporter des tableaux dans des fichiers de schéma plats](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Afficher les détails de la destination](./ui/destination-details-page.md)
    * [Mettre à jour les comptes de destination](./ui/update-accounts.md)
    * [Supprimer les comptes de destination](./ui/delete-destination-account.md)
@@ -141,6 +141,7 @@ ht-degree: 88%
    * Destinations Data Management Platform {#data-management}
       * [Destinations Data Management Platform (DMP)](./catalog/data-management/overview.md)
       * [Extension Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
+      * [Plateforme marketing Zeta](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
    * Data &amp; Identity Partner {#data-partner}
       * [Suppression des prospects Acxiom](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Amélioration des données d’Acrobat](./catalog/data-partner/acxiom-data-enhancement.md)
