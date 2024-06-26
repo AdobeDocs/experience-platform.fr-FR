@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 791d854599cf1476f1ebb9584198433c91765efa
+source-git-commit: 60bd377c87fe301985193c50cbfc4b44b734dd78
 workflow-type: tm+mt
-source-wordcount: '1227'
+source-wordcount: '1233'
 ht-degree: 88%
 
 ---
@@ -145,6 +145,8 @@ ht-degree: 88%
    * Data &amp; Identity Partner {#data-partner}
       * [Suppression des prospects Acxiom](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Amélioration des données d’Acrobat](./catalog/data-partner/acxiom-data-enhancement.md)
+      * [Connexions d’entreprise Merkury](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
+      * [Merkury Enterprise Identity](/help/destinations/catalog/data-partners/merkury-enterprise-identity.md)
    * Destinations de commerce électronique {#ecommerce}
       * [SAP Commerce](./catalog/ecommerce/sap-commerce.md)
    * Destinations dʼe-mail {#email}
