@@ -5,9 +5,9 @@ breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Découvrez une vue d’ensemble du système de modèle de données d’expérience (XDM) dans Experience Platform et apprenez à utiliser les classes et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
 role: Developer
-source-git-commit: fe239bee3c853d43c04200092f59537dfeb00c87
+source-git-commit: 948a86f78ca6a6305adaf3232ca98a5437d701a6
 workflow-type: tm+mt
-source-wordcount: '627'
+source-wordcount: '633'
 ht-degree: 81%
 
 ---
@@ -106,15 +106,17 @@ ht-degree: 81%
       * [Catégorie de produits](./field-groups/product/product-category.md)
    * Prestataire {#provider}
       * [Prestataire de soins de santé](./field-groups/provider/healthcare-provider.md)
+   * Partagé {#shared}
+      * [Détails d’audit du système source externe](./field-groups/shared/external-source-system-audit-details.md)
    * [Mises à jour des noms de groupes de champs](./field-groups/name-updates.md)
 * Types de données {#data-types}
    * [Détails du compte](./data-types/account-details.md)
    * [Coupure publicitaire](./data-types/ad-break.md)
    * [Adresse](./data-types/address.md)
-   * [Collection de détails publicitaires](./data-types/advertising-details-collection.md)
-   * [Rapports sur les détails des publicités](./data-types/advertising-details-reporting.md)
-   * [Collection de détails sur la capsule publicitaire](./data-types/advertising-pod-details-collection.md)
-   * [Rapports sur les détails de la capsule publicitaire](./data-types/advertising-pod-details-reporting.md)
+   * [Collection de détails Advertising](./data-types/advertising-details-collection.md)
+   * [Rapports sur les détails d’Advertising](./data-types/advertising-details-reporting.md)
+   * [Collection de détails sur la capsule Advertising](./data-types/advertising-pod-details-collection.md)
+   * [Rapports sur les détails de la capsule Advertising](./data-types/advertising-pod-details-reporting.md)
    * [Application](./data-types/application.md)
    * [Source B2B](./data-types/b2b-source.md)
    * [Repère](./data-types/beacon.md)
@@ -123,7 +125,7 @@ ht-degree: 81%
    * [Données de catégorie](./data-types/category-data.md)
    * [Collection de détails sur les chapitres](./data-types/chapter-details-collection.md)
    * [Rapports sur les détails du chapitre](./data-types/chapter-details-reporting.md)
-   * [Portée du commerce](./data-types/commerce-scope.md)
+   * [Portée du Commerce](./data-types/commerce-scope.md)
    * [Commerce](./data-types/commerce.md)
    * [Chaîne de consentement](./data-types/consent-string.md)
    * [Consentements et préférences](./data-types/consents.md)
@@ -149,7 +151,7 @@ ht-degree: 81%
    * [Identité](./data-types/identity.md)
    * [Détails de mise en œuvre](./data-types/implementation-details.md)
    * [Impressions](./data-types/impressions.md)
-   * [Recherche de site interne](./data-types/internal-site-search.md)
+   * [Recherche interne sur le site](./data-types/internal-site-search.md)
    * [Paire clé-valeur](./data-types/key-value-pair.md)
    * [Liste de la collection finale des états](./data-types/list-of-states-end-collection.md)
    * [Liste des états à partir de la collection](./data-types/list-of-states-start-collection.md)
@@ -174,7 +176,7 @@ ht-degree: 81%
    * [Article de remboursement](./data-types/refund-item.md)
    * [Liste des demandes](./data-types/requisition-list.md)
    * [Élément de retour](./data-types/return-item.md)
-   * [Retourner](./data-types/return.md)
+   * [Retour](./data-types/return.md)
    * [Recherche](./data-types/search.md)
    * [Collection Détails de la session](./data-types/session-details-collection.md)
    * [Rapport Détails de la session](./data-types/session-details-reporting.md)
@@ -238,4 +240,4 @@ ht-degree: 81%
    * [Créer un schéma ad hoc](tutorials/ad-hoc.md)
 * [Guide de dépannage](troubleshooting-guide.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
