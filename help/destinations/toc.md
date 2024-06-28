@@ -5,10 +5,10 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: c7eaea9c98dc51f75b5abafd8296eadb384d9ce2
+source-git-commit: 82e9263293462a223b635e828b95cb2b098886c7
 workflow-type: tm+mt
-source-wordcount: '1237'
-ht-degree: 88%
+source-wordcount: '1241'
+ht-degree: 87%
 
 ---
 
@@ -89,7 +89,8 @@ ht-degree: 88%
       * [Extension LinkedIn Insight Tag](./catalog/advertising/linkedin.md)
       * [LiveRamp - Connexion pour l’intégration](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp - Connexion de distribution](./catalog/advertising/liveramp-distribution.md)
-      * [Connexion en temps réel en flux continu Magnite](/help/destinations/catalog/advertising/magnite-streaming.md)
+      * [(Beta) Lot Magnite](/help/destinations/catalog/advertising/magnite-batch.md)
+      * [(Beta) Connexion en temps réel en flux continu Magnite](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Connexion Microsoft Bing](./catalog/advertising/bing.md)
       * [Extension Pinterest Conversion Tracking](./catalog/advertising/pinterest-extension.md)
       * [Connexion Liste des Clients Pinterest](./catalog/advertising/pinterest.md)
