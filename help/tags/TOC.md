@@ -6,10 +6,10 @@ user-guide-description: Découvrez comment déployer et gérer des balises d’a
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 8000bbf36e6763b8fca17c2ae0d5c2fe53bc6964
+source-git-commit: aca7597d524633e86d88cc3b40f292c8d1673839
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 98%
+source-wordcount: '769'
+ht-degree: 97%
 
 ---
 
@@ -299,6 +299,7 @@ ht-degree: 98%
       * [Règles](./api/endpoints/rules.md)
       * [Composants de règle](./api/endpoints/rule-components.md)
       * [Packages d’extension](./api/endpoints/extension-packages.md)
+      * [Autorisations d’utilisation des modules d’extension](./api/endpoints/extension-package-usage-authorizations.md)
       * [Extensions](./api/endpoints/extensions.md)
       * [Bibliothèques](./api/endpoints/libraries.md)
       * [Versions](./api/endpoints/builds.md)
