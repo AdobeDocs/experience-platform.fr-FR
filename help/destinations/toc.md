@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 60bd377c87fe301985193c50cbfc4b44b734dd78
+source-git-commit: c7eaea9c98dc51f75b5abafd8296eadb384d9ce2
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1237'
 ht-degree: 88%
 
 ---
@@ -83,16 +83,17 @@ ht-degree: 88%
       * [Connexion Google Ad Manager](./catalog/advertising/google-ad-manager.md)
       * [(Version bêta) Connexion à Google Ad Manager 360](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Connexion à Google Customer Match](./catalog/advertising/google-customer-match.md)
-      * [(Version bêta) Google Customer Match + connexion DV360](./catalog/advertising/google-customer-match-dv360.md)
+      * [(Beta) Correspondance client Google + connexion DV360](./catalog/advertising/google-customer-match-dv360.md)
       * [Connexion Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
       * [Extension Google gtag](./catalog/advertising/gtag-advertising.md)
       * [Extension LinkedIn Insight Tag](./catalog/advertising/linkedin.md)
       * [LiveRamp - Connexion pour l’intégration](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp - Connexion de distribution](./catalog/advertising/liveramp-distribution.md)
+      * [Connexion en temps réel en flux continu Magnite](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Connexion Microsoft Bing](./catalog/advertising/bing.md)
       * [Extension Pinterest Conversion Tracking](./catalog/advertising/pinterest-extension.md)
       * [Connexion Liste des Clients Pinterest](./catalog/advertising/pinterest.md)
-      * [Mise à niveau de la connexion pinterest](./catalog/advertising/pinterest-upgrade.md)
+      * [Mise à niveau de la connexion Pinterest](./catalog/advertising/pinterest-upgrade.md)
       * [Connexion à PubMatic](./catalog/advertising/pubmatic.md)
       * [Connexion Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [Connexion à The Trade Desk](./catalog/advertising/tradedesk.md)
