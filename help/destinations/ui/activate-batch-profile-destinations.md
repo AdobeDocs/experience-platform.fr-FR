@@ -3,9 +3,9 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations basées sur un profil de lot.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 30ad6c32d8ae8a2a68dfafd78f306209ce49b6d5
+source-git-commit: f0f66146bc65a9c5a1bcfee21aba44546cda6900
 workflow-type: tm+mt
-source-wordcount: '3961'
+source-wordcount: '3975'
 ht-degree: 57%
 
 ---
@@ -131,7 +131,7 @@ Sélectionner **[!UICONTROL Exporter les fichiers complets]** pour déclencher l
 
    >[!NOTE]
    >
-   >La variable **[!UICONTROL Après l’évaluation du segment]** L’option décrite ci-dessous n’est disponible que pour sélectionner les clients bêta.
+   >La variable **[!UICONTROL Après l’évaluation du segment]** L’option décrite ci-dessous n’est disponible que pour certains clients Beta.
 
    Utiliser l’option **[!UICONTROL Après l’évaluation du segment]** pour que le traitement d’activation s’exécute immédiatement après la fin du traitement quotidien de segmentation par lots de Platform. Cette option garantit que lorsque la tâche d’activation s’exécute, les profils les plus récents sont exportés vers votre destination.
 
@@ -442,13 +442,22 @@ La nouvelle page **[!UICONTROL Mappage]** présente les limitations connues suiv
 
 #### L’attribut d’appartenance à une audience ne peut pas être sélectionné via le workflow de mappage.
 
-En raison d’une limitation connue, vous ne pouvez actuellement pas utiliser la fenêtre **[!UICONTROL Sélectionner un champ]** pour ajouter `segmentMembership.status` à vos exportations de fichiers. Vous devez plutôt coller manuellement la valeur `xdm: segmentMembership.status` dans le champ de schéma, comme illustré ci-dessous.
+En raison d’une limitation connue, vous ne pouvez actuellement pas utiliser la fenêtre **[!UICONTROL Sélectionner un champ]** pour ajouter `segmentMembership.seg_namespace.seg_id.status` à vos exportations de fichiers. Vous devez plutôt coller manuellement la valeur `xdm: segmentMembership.seg_namespace.seg_id.status` dans le champ de schéma, comme illustré ci-dessous.
 
 ![Enregistrement de l’écran montrant la solution de contournement de l’appartenance à l’audience à l’étape de mappage du workflow d’activation.](../assets/ui/activate-batch-profile-destinations/segment-membership-mapping-step.gif)
 
-Les exportations de fichiers varient comme suit, selon que `segmentMembership.status` est sélectionné :
-* Si la variable `segmentMembership.status` champ sélectionné, les fichiers exportés incluent **[!UICONTROL Actif]** membres dans l’instantané complet initial et les nouveaux **[!UICONTROL Actif]** et **[!UICONTROL Expiré]** membres dans les exportations incrémentielles suivantes.
-* Si le champ `segmentMembership.status` n’est pas sélectionné, les fichiers exportés incluent uniquement les membres **[!UICONTROL actifs]** dans l’instantané complet initial et dans les exportations incrémentielles suivantes.
+
+>[!NOTE]
+>
+Pour les destinations de stockage dans le cloud, les attributs suivants sont ajoutés par défaut au mappage :
+>
+* `segmentMembership.seg_namespace.seg_id.status`
+* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
+
+Les exportations de fichiers varient comme suit, selon que `segmentMembership.seg_namespace.seg_id.status` est sélectionné :
+
+* Si la variable `segmentMembership.seg_namespace.seg_id.status` champ sélectionné, les fichiers exportés incluent **[!UICONTROL Actif]** membres dans l’instantané complet initial et les nouveaux **[!UICONTROL Actif]** et **[!UICONTROL Expiré]** membres dans les exportations incrémentielles suivantes.
+* Si le champ `segmentMembership.seg_namespace.seg_id.status` n’est pas sélectionné, les fichiers exportés incluent uniquement les membres **[!UICONTROL actifs]** dans l’instantané complet initial et dans les exportations incrémentielles suivantes.
 
 En savoir plus sur [comportement d’exportation de profils pour les destinations basées sur des fichiers](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
@@ -488,19 +497,19 @@ Pour les destinations basées sur un profil, vous devez sélectionner les attrib
 
 >[!NOTE]
 >
-Adobe Experience Platform préremplit votre sélection avec quatre attributs recommandés couramment utilisés de votre schéma : `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+Adobe Experience Platform préremplit votre sélection avec quatre attributs recommandés couramment utilisés de votre schéma : `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
 
 ![Image montrant les attributs recommandés préremplis dans l’étape de mappage du workflow d’activation de l’audience.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
-En raison d’une limitation connue, vous ne pouvez actuellement pas utiliser la fenêtre **[!UICONTROL Sélectionner un champ]** pour ajouter `segmentMembership.status` à vos exportations de fichiers. Vous devez plutôt coller manuellement la valeur. `xdm: segmentMembership.status` dans le champ de schéma, comme illustré ci-dessous.
+En raison d’une limitation connue, vous ne pouvez actuellement pas utiliser la fenêtre **[!UICONTROL Sélectionner un champ]** pour ajouter `segmentMembership.seg_namespace.seg_id.status` à vos exportations de fichiers. Vous devez plutôt coller manuellement la valeur. `xdm: segmentMembership.seg_namespace.seg_id.status` dans le champ de schéma, comme illustré ci-dessous.
 >
 ![Enregistrement de l’écran montrant la solution de contournement de l’appartenance à l’audience à l’étape de mappage du workflow d’activation.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
-Les exportations de fichiers varient comme suit, selon que `segmentMembership.status` est sélectionné :
-* Si le champ `segmentMembership.status` est sélectionné, les fichiers exportés incluent les membres **[!UICONTROL actifs]** dans l’instantané complet initial ainsi que les membres **[!UICONTROL actifs]** et **[!UICONTROL expirés]** dans les exportations incrémentielles suivantes.
-* Si le champ `segmentMembership.status` n’est pas sélectionné, les fichiers exportés incluent uniquement les membres **[!UICONTROL actifs]** dans l’instantané complet initial et dans les exportations incrémentielles suivantes.
+Les exportations de fichiers varient comme suit, selon que `segmentMembership.seg_namespace.seg_id.status` est sélectionné :
+* Si le champ `segmentMembership.seg_namespace.seg_id.status` est sélectionné, les fichiers exportés incluent les membres **[!UICONTROL actifs]** dans l’instantané complet initial ainsi que les membres **[!UICONTROL actifs]** et **[!UICONTROL expirés]** dans les exportations incrémentielles suivantes.
+* Si le champ `segmentMembership.seg_namespace.seg_id.status` n’est pas sélectionné, les fichiers exportés incluent uniquement les membres **[!UICONTROL actifs]** dans l’instantané complet initial et dans les exportations incrémentielles suivantes.
 
 ## Sélectionner les attributs d’enrichissement {#select-enrichment-attributes}
 
