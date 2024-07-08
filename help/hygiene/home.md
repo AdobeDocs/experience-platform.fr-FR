@@ -2,10 +2,10 @@
 title: Présentation de la gestion avancée du cycle de vie des données
 description: La gestion avancée du cycle de vie des données vous permet de gérer le cycle de vie de vos données en mettant à jour ou en purgeant des enregistrements obsolètes ou inexacts.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: 1f82403d4f8f5639f6a9181a7ea98bd27af54904
 workflow-type: tm+mt
-source-wordcount: '583'
-ht-degree: 58%
+source-wordcount: '636'
+ht-degree: 53%
 
 ---
 
@@ -23,6 +23,10 @@ Adobe Experience Platform offre un ensemble d’outils fiables pour gérer des o
 >Record deletes are meant to be used for data cleansing, removing anonymous data, or data minimization. They are **not** to be used for data subject rights requests (compliance) as pertaining to privacy regulations like the General Data Protection Regulation (GDPR). For all compliance use cases, use [Adobe Experience Platform Privacy Service](../privacy-service/home.md) instead. -->
 
 Ces activités peuvent être exécutées à l’aide du [[!UICONTROL Cycle de vie des données] Espace de travail de l’IU](#ui) ou le [API Data Hygiene](#api). Lorsqu’une tâche de cycle de vie des données s’exécute, le système fournit des mises à jour de transparence à chaque étape du processus. Pour plus d’informations sur la représentation de chaque type de traitement dans le système, consultez la section sur [la chronologie et la transparence](#timelines-and-transparency).
+
+>[!NOTE]
+>
+>La gestion avancée du cycle de vie des données prend en charge la suppression des jeux de données par le biais de la [point d’entrée d’expiration du jeu de données](./api/dataset-expiration.md) et les suppressions d’identifiants (données au niveau de la ligne) à l’aide d’identités principales via la variable [point d’entrée de l’ordre de travail](./api/workorder.md). Vous pouvez également gérer des [expiration des jeux de données](./ui/dataset-expiration.md) et [suppression d’enregistrements](./ui/record-delete.md) via l’interface utilisateur de Platform. Pour plus d’informations, consultez la documentation liée . Notez que le cycle de vie des données ne prend pas en charge la suppression par lots.
 
 ## [!UICONTROL Cycle de vie des données] Espace de travail de l’IU {#ui}
 

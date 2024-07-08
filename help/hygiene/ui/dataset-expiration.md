@@ -2,10 +2,10 @@
 title: Expiration automatisée de jeux de données
 description: Découvrez comment planifier l’expiration d’un jeu de données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 45dac5647e44ac35d9821d407eddeee72523faf9
+source-git-commit: 2aba88ac657e73a12be14d2c3a67dd5714513c97
 workflow-type: tm+mt
-source-wordcount: '820'
-ht-degree: 52%
+source-wordcount: '871'
+ht-degree: 49%
 
 ---
 
@@ -26,7 +26,13 @@ Ce document explique comment planifier et automatiser les expirations de jeux de
 
 >[!NOTE]
 >
->L’expiration du jeu de données ne supprime actuellement pas les données du réseau Adobe Experience Platform Edge. Cependant, il n’est pas possible que les données restent dans le réseau Edge une fois le jeu de données défini pour expirer. En effet, le contrat de licence de service de 15 jours pour l’expiration du jeu de données chevauche la période de 14 jours pendant laquelle les données existent dans le réseau Edge avant d’être ignorées.
+>L’expiration du jeu de données ne supprime actuellement pas les données de l’Edge Network Adobe Experience Platform. Cependant, il n’est pas possible que les données restent dans l’Edge Network après l’expiration du jeu de données. En effet, le contrat de licence de service de 15 jours pour l’expiration du jeu de données chevauche la période de 14 jours pendant laquelle les données existent dans l’Edge Network avant d’être ignorées.
+
+La gestion avancée du cycle de vie des données prend en charge la suppression des jeux de données par le biais de la [point d’entrée d’expiration du jeu de données](../api/dataset-expiration.md) et les suppressions d’identifiants (données au niveau de la ligne) à l’aide d’identités principales via la variable [point d’entrée de l’ordre de travail](../api/workorder.md). Vous pouvez également gérer les expirations de jeux de données et [suppression d’enregistrements](./record-delete.md) via l’interface utilisateur de Platform. Pour plus d’informations, consultez la documentation liée .
+
+>[!NOTE]
+>
+>Le cycle de vie des données ne prend pas en charge la suppression par lots.
 
 ## Planifier l’expiration d’un jeu de données {#schedule-dataset-expiration}
 

@@ -3,10 +3,10 @@ title: Point d’entrée de l’API d’expiration du jeu de données
 description: Le point d’entrée /ttl de l’API Data Hygiene vous permet de planifier par programmation l’expiration des jeux de données dans Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 20d616463469a4d78fe0e7b6be0ec76b293789d6
+source-git-commit: 4fb8313f8209b68acef1484fc873b9bd014492be
 workflow-type: tm+mt
-source-wordcount: '2166'
-ht-degree: 59%
+source-wordcount: '2217'
+ht-degree: 58%
 
 ---
 
@@ -27,6 +27,12 @@ Une fois que la suppression du jeu de données est lancée, sa tâche d’expira
 >[!WARNING]
 >
 >Si un jeu de données est défini pour expirer, vous devez modifier manuellement les flux de données susceptibles d’ingérer des données dans ce jeu, afin que vos workflows en aval ne soient pas affectés négativement.
+
+La gestion avancée du cycle de vie des données prend en charge les suppressions de jeux de données par le biais du point de terminaison d’expiration du jeu de données et des suppressions d’identifiants (données au niveau de la ligne) à l’aide d’identités primaires via le [point d’entrée de l’ordre de travail](./workorder.md). Vous pouvez également gérer des [expiration des jeux de données](../ui/dataset-expiration.md) et [suppression d’enregistrements](../ui/record-delete.md) via l’interface utilisateur de Platform. Pour plus d’informations, consultez la documentation liée .
+
+>[!NOTE]
+>
+>Le cycle de vie des données ne prend pas en charge la suppression par lots.
 
 ## Prise en main
 
@@ -493,7 +499,7 @@ Le tableau suivant décrit les paramètres de requête disponibles lorsque les [
 | `orgId` | Correspond aux expirations de jeux de données dont l’ID d’organisation correspond à celui du paramètre. Cette valeur par défaut est celle des en-têtes `x-gw-ims-org-id`, et est ignorée sauf si la requête fournit un jeton de service. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `page` | Nombre entier qui indique la page des expirations à renvoyer. | `page=3` |
 | `sandboxName` | Correspond aux expirations de jeux de données dont le sandbox correspond exactement à l’argument. La valeur par défaut est le nom du sandbox dans l’en-tête `x-sandbox-name` de la requête. Utilisez `sandboxName=*` pour inclure les expirations de jeux de données de tous les sandbox. | `sandboxName=dev1` |
-| `search` | Correspond aux expirations où la chaîne spécifiée correspond exactement à l’ID d’expiration ou est **contenu** dans l’un de ces champs :<br><ul><li>Création</li><li>nom d&#39;affichage</li><li>description</li><li>nom d&#39;affichage</li><li>nom du jeu de données</li></ul> | `search=TESTING` |
+| `search` | Correspond aux expirations où la chaîne spécifiée correspond exactement à l’ID d’expiration ou est **contenu** dans l’un de ces champs :<br><ul><li>Auteur</li><li>nom d&#39;affichage</li><li>description</li><li>nom d&#39;affichage</li><li>nom du jeu de données</li></ul> | `search=TESTING` |
 | `status` | Liste de statuts séparés par des virgules. Lorsqu’elle est incluse, la réponse correspond aux expirations de jeux de données dont le statut actuel fait partie de ceux répertoriés. | `status=pending,cancelled` |
 | `ttlId` | Correspond à la demande d’expiration avec l’ID donné. | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
 | `updatedDate` / `updatedToDate` / `updatedFromDate` | Comme `createdDate` / `createdFromDate` / `createdToDate`, mais correspond à l’heure de mise à jour de l’expiration d’un jeu de données plutôt qu’à l’heure de création.<br><br>Une expiration est considérée comme mise à jour à chaque modification, y compris lorsqu’elle est créée, annulée ou exécutée. | `updatedDate=2022-01-01` |
