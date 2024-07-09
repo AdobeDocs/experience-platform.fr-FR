@@ -4,10 +4,10 @@ title: Évaluation et accès aux résultats des segments
 type: Tutorial
 description: Suivez ce tutoriel pour savoir comment évaluer les définitions de segment et accéder aux résultats de segmentation à l’aide de l’API Adobe Experience Platform Segmentation Service.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1599'
-ht-degree: 51%
+source-wordcount: '1594'
+ht-degree: 47%
 
 ---
 
@@ -15,18 +15,18 @@ ht-degree: 51%
 
 Ce document fournit un tutoriel sur l’évaluation des définitions de segment et l’accès à ces résultats à l’aide du [[!DNL Segmentation API]](../api/getting-started.md).
 
-## Prise en main
+## Commencer
 
 Ce tutoriel nécessite une compréhension pratique des différentes [!DNL Adobe Experience Platform] services impliqués dans la création d’audiences. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): permet de créer des audiences à partir de [!DNL Real-Time Customer Profile] data.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : framework normalisé selon lequel Platform organise les données de l’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): cadre normalisé selon lequel Platform organise les données d’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
 - [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ### En-têtes requis
 
-Ce tutoriel exige aussi que vous ayez terminé le [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour passer des appels à des API [!DNL Platform] Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Ce tutoriel nécessite également que vous ayez terminé la [tutoriel sur l’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour passer des appels à [!DNL Platform] API. Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key : `{API_KEY}`
@@ -44,13 +44,13 @@ Toutes les requêtes POST, PUT et PATCH requièrent un en-tête supplémentaire�
 
 - Content-Type: application/json
 
-## Évaluation d’un segment définition {#evaluate-a-segment}
+## Évaluation d’une définition de segment {#evaluate-a-segment}
 
 Une fois que vous avez développé, testé et enregistré votre définition de segment, vous pouvez ensuite évaluer la définition de segment par le biais d’une évaluation planifiée ou d’une évaluation sur demande.
 
 [L’évaluation planifiée](#scheduled-evaluation) (également appelée « segmentation planifiée ») vous permet de créer un planning récurrent pour exécuter une tâche d’exportation à un moment précis, tandis que l’[évaluation sur demande](#on-demand-evaluation) implique la création d’une tâche de segmentation pour créer immédiatement l’audience. Les étapes à suivre pour chaque type d’évaluation sont décrites ci-dessous.
 
-Si vous n’avez pas encore terminé la variable [créer une définition de segment à l’aide de l’API Segmentation ;](./create-a-segment.md) tutoriel ou définition de segment créée à l’aide de [Créateur de segments](../ui/overview.md), faites-le avant de suivre ce tutoriel.
+Si vous n’avez pas encore terminé la variable [créer une définition de segment à l’aide de l’API Segmentation ;](./create-a-segment.md) tutoriel ou définition de segment créée à l’aide de [Créateur de segments](../ui/segment-builder.md), faites-le avant de suivre ce tutoriel.
 
 ## Évaluation planifiée {#scheduled-evaluation}
 
@@ -80,13 +80,13 @@ Vous trouverez des informations plus détaillées sur l’utilisation de ce poin
 
 ## Évaluation sur demande
 
-L’évaluation sur demande vous permet de créer une tâche de segmentation afin de générer un ciblé chaque fois que vous en avez besoin. Contrairement à l’évaluation planifiée, celle-ci n’a lieu que sur demande et n’est pas récurrente.
+L’évaluation à la demande vous permet de créer une tâche de segmentation afin de générer une audience lorsque vous le souhaitez. Contrairement à l’évaluation planifiée, celle-ci n’a lieu que sur demande et n’est pas récurrente.
 
 ### Création d’une tâche de segmentation
 
 Une tâche de segmentation est un processus asynchrone qui crée un segment d’audience à la demande. Il fait référence à une définition de segment, ainsi qu’à toute stratégie de fusion contrôlant la manière dont [!DNL Real-Time Customer Profile] fusionne des attributs qui se chevauchent dans vos fragments de profil. Une fois la tâche de segmentation terminée, vous pouvez collecter diverses informations sur la définition de segment, telles que les erreurs qui se sont produites au cours du traitement et la taille finale de votre audience. Une tâche de segmentation doit être exécutée chaque fois que vous souhaitez actualiser l’audience actuellement admissible par la définition de segment.
 
-Vous pouvez créer une tâche de segmentation en exécutant une requête POST sur le point de terminaison `/segment/jobs` dans l’API [!DNL Real-Time Customer Profile]
+Vous pouvez créer une tâche de segmentation en adressant une requête de POST à la fonction `/segment/jobs` du point de terminaison [!DNL Real-Time Customer Profile] API.
 
 Vous trouverez des informations plus détaillées sur l’utilisation de ce point de terminaison dans la section [guide de point de fin des tâches de segmentation](../api/segment-jobs.md#create)
 

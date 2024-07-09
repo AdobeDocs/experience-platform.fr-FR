@@ -4,7 +4,7 @@ title: Présentation de l’activation
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform vers différents types de destinations.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '361'
 ht-degree: 25%
@@ -52,7 +52,7 @@ Suivez les étapes ci-dessous pour activer les données vers vos destinations à
 
 ### Activation des audiences à partir de la page des détails de l’audience {#activate-audience-details}
 
-Vous pouvez activer les audiences vers les destinations à partir de la page des détails de l’audience. Voir [Détails de l’audience](../../segmentation/ui/overview.md#audience-details) pour plus d’informations.
+Vous pouvez activer les audiences vers les destinations à partir de la page des détails de l’audience. Voir [Détails de l’audience](../../segmentation/ui/audience-portal.md#audience-details) pour plus d’informations.
 
 Selon la destination sélectionnée, suivez les étapes décrites dans les articles ci-dessous pour terminer le workflow d’activation :
 

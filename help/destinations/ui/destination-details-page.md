@@ -3,7 +3,7 @@ keywords: destinations;destination;page des détails des destinations;page des d
 title: Afficher les détails de la destination
 description: La page de détails d’une destination individuelle fournit un aperçu des détails de destination. Les détails de la destination incluent le nom de destination, l’identifiant, les audiences mappées à la destination et les contrôles permettant de modifier l’activation et d’activer et désactiver le flux de données.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: f206ea853d44410c93463e1e515279b39afd1fd9
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1106'
 ht-degree: 10%
@@ -139,4 +139,4 @@ Pour modifier le planning d’activation existant de plusieurs audiences en mêm
 
 >[!NOTE]
 >
-Pour plus d’informations sur l’exploration de la page de détails d’une audience, reportez-vous à la section [Présentation de l’interface utilisateur de segmentation](../../segmentation/ui/overview.md#segment-details).
+Pour plus d’informations sur l’exploration de la page de détails d’une audience, reportez-vous à la section [Présentation d’Audience Portal](../../segmentation/ui/audience-portal.md#segment-details).

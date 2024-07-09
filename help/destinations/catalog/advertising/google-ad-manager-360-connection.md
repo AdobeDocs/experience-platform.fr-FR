@@ -2,10 +2,10 @@
 title: Connexion à  [!DNL Google Ad Manager 360]  (Version bêta)
 description: Google Ad Manager 360 est une plateforme de diffusion des publicités de Google qui donne aux éditeurs les moyens de gérer l’affichage des publicités sur leurs sites web, en vidéo et dans les applications mobiles.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 153b827d385b4a3f86a2432bf533ec543f12ea4e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1206'
-ht-degree: 59%
+ht-degree: 61%
 
 ---
 
@@ -52,9 +52,9 @@ Notez les détails suivants qui sont spécifiques aux destinations [!DNL Google 
 Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
 
 | Origine de l’audience | Pris en charge | Description |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -104,8 +104,8 @@ Pour plus d’informations sur ces valeurs, consultez le guide [Clés HMAC de Go
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam360_appendSegmentID"
->title="Ajout d’un ID d’audience au nom de l’audience"
->abstract="Sélectionnez cette option pour que le nom de l’audience dans cette destination inclut l’ID de l’audience de l’Experience Platform, comme ceci : `Audience Name (Audience ID)`"
+>title="Ajouter un identifiant d’audience au nom de l’audience"
+>abstract="Sélectionnez cette option pour que le nom de l’audience dans cette destination inclue l’identifiant de l’audience d’Experience Platform, comme suit : `Audience Name (Audience ID)`."
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 

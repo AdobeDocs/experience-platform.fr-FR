@@ -2,7 +2,7 @@
 description: Cette page répertorie et décrit les étapes de configuration d’une destination basée sur des fichiers à l’aide de Destination SDK.
 title: Utilisation de Destination SDK pour configurer une destination basée sur des fichiers
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 45ba0db386f065206f89ed30bfe7b0c1b44f6173
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 55%
@@ -420,7 +420,7 @@ Une fois votre destination configurée à l’aide des points d’entrée de con
 
 Dans le cadre du processus de test de votre destination, vous devez utiliser l’interface utilisateur de l’Experience Platform pour créer des audiences, que vous activerez vers votre destination. Reportez-vous aux deux ressources ci-dessous pour savoir comment créer des audiences dans Experience Platform :
 
-* [Créer une audience - page de documentation](/help/segmentation/ui/overview.md#create-segment)
+* [Créer une audience - page de documentation](/help/segmentation/ui/audience-portal.md#create-audience)
 * [Création d’une audience - présentation vidéo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Étape 6 : publier votre destination {#publish-destination}

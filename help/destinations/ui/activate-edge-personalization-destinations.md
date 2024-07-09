@@ -3,7 +3,7 @@ title: Activer les audiences vers des destinations de personnalisation Edge
 description: Découvrez comment activer les audiences de Adobe Experience Platform vers les destinations de personnalisation de périphérie pour les cas d’utilisation de la personnalisation de la même page et de la page suivante.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c113d9615a276af67714f38b8325e69737b23964
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 15%
@@ -47,11 +47,11 @@ Pour une brève présentation du partage d’audiences et d’attributs de profi
 
 ## Cas d’utilisation {#use-cases}
 
-Utilisez des solutions de personnalisation d’Adobe, telles qu’Adobe Target, ou vos propres plateformes de partenaire de personnalisation (par exemple, [!DNL Optimizely], [!DNL Pega]), ainsi que les systèmes propriétaires (par exemple, les systèmes de gestion de contenu intégrés) pour offrir une expérience de personnalisation plus approfondie aux clients via la fonction [Personnalisation personnalisée](../catalog/personalization/custom-personalization.md) destination. Tout cela tout en tirant parti des fonctionnalités Experience Platform de collecte et de segmentation des données Edge Network.
+Utilisez des solutions de personnalisation d’Adobe, telles qu’Adobe Target, ou vos propres plateformes de partenaire de personnalisation (par exemple, [!DNL Optimizely], [!DNL Pega]), ainsi que les systèmes propriétaires (par exemple, les systèmes de gestion de contenu intégrés) pour offrir une expérience de personnalisation plus approfondie aux clients via la fonction [Personalization personnalisée](../catalog/personalization/custom-personalization.md) destination. Tout cela tout en tirant parti des fonctionnalités Experience Platform de collecte et de segmentation des données Edge Network.
 
 Les cas d’utilisation décrits ci-dessous incluent à la fois la personnalisation du site et la publicité ciblée sur site.
 
-Pour activer ces cas d’utilisation, les clients ont besoin d’une méthode rapide et simplifiée pour récupérer à la fois les audiences et les informations d’attribut de profil de l’Experience Platform, puis envoyer ces informations à l’une des méthodes suivantes : [Adobe Target](../catalog/personalization/adobe-target-connection.md) ou le [Personnalisation personnalisée](../catalog/personalization/custom-personalization.md) connexions dans l’interface utilisateur de l’Experience Platform.
+Pour activer ces cas d’utilisation, les clients ont besoin d’une méthode rapide et simplifiée pour récupérer à la fois les audiences et les informations d’attribut de profil de l’Experience Platform, puis envoyer ces informations à l’une des méthodes suivantes : [Adobe Target](../catalog/personalization/adobe-target-connection.md) ou le [Personalization personnalisée](../catalog/personalization/custom-personalization.md) connexions dans l’interface utilisateur de l’Experience Platform.
 
 ### Personnalisation de la même page {#same-page}
 
@@ -81,9 +81,9 @@ Lors de la configuration du flux de données, sous **[!UICONTROL Adobe Experien
 
 >[!TIP]
 >
->À compter de la version d’avril 2024, vous n’aurez pas à cocher la case Segmentation Edge lorsque [configuration de la connexion à Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md). Dans ce cas, [personnalisation de session suivante](#next-session) est le seul cas d’utilisation de personnalisation disponible.
+>À compter de la version d’avril 2024, il n’est plus nécessaire de cocher la case Segmentation d’Edge lorsque [configuration de la connexion à Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md). Dans ce cas, [personnalisation de session suivante](#next-session) est le seul cas d’utilisation de personnalisation disponible.
 
-![Configuration des flux de données avec la segmentation Edge et les destinations de personnalisation surlignées !](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
+![Configuration des flux de données avec la segmentation Edge et les destinations Personalization surlignées !](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
 Pour plus d’informations sur la configuration d’un flux de données, suivez les instructions décrites dans la section [Documentation du SDK web Platform](../../datastreams/configure.md#aep).
 
@@ -93,7 +93,7 @@ Après avoir créé votre connexion de destination, vous devez créer une [!DNL 
 
 >[!IMPORTANT]
 >
->Actuellement, les destinations Edge ne prennent en charge que l’activation des audiences qui utilisent la variable [Stratégie de fusion active sur périphérie](../../segmentation/ui/segment-builder.md#merge-policies) définie par défaut. Si vous mappez des audiences qui utilisent une autre stratégie de fusion avec des destinations de périphérie, ces audiences ne seront pas évaluées.
+>Actuellement, les destinations Edge ne prennent en charge que l’activation des audiences qui utilisent la variable [Stratégie de fusion active sur Edge](../../segmentation/ui/segment-builder.md#merge-policies) définie par défaut. Si vous mappez des audiences qui utilisent une autre stratégie de fusion avec des destinations de périphérie, ces audiences ne seront pas évaluées.
 
 Suivez les instructions de la section [création d’une politique de fusion](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) et assurez-vous d’activer le bouton **[!UICONTROL Politique de fusion Active-On-Edge]**.
 
@@ -141,7 +141,7 @@ Pour sélectionner les audiences que vous souhaitez activer vers la destination,
 Vous pouvez sélectionner plusieurs types d’audiences, selon leur origine :
 
 * **[!UICONTROL Segmentation Service]**: audiences générées dans Experience Platform par le service de segmentation. Voir [documentation sur la segmentation](../../segmentation/ui/overview.md) pour plus d’informations.
-* **[!UICONTROL Chargement personnalisé]**: audiences générées en dehors de l’Experience Platform et chargées dans Platform sous la forme de fichiers CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [import d&#39;une audience](../../segmentation/ui/overview.md#import-audience).
+* **[!UICONTROL Chargement personnalisé]**: audiences générées en dehors de l’Experience Platform et chargées dans Platform sous la forme de fichiers CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [import d&#39;une audience](../../segmentation/ui/audience-portal.md#import-audience).
 * Autres types d’audiences, provenant d’autres solutions Adobe, telles que [!DNL Audience Manager].
 
 ![Sélectionnez l’étape Audiences du workflow d’activation avec plusieurs audiences en surbrillance.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
@@ -150,7 +150,7 @@ Vous pouvez sélectionner plusieurs types d’audiences, selon leur origine :
 
 >[!IMPORTANT]
 >
->Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, la variable **[!UICONTROL Personnalisation personnalisée]** La destination requiert que vous utilisiez la variable [API du serveur Edge Network](../../server-api/overview.md) lors de la configuration de la destination pour la personnalisation basée sur les attributs. Tous les appels de l’API du serveur doivent être effectués dans une [contexte authentifié](../../server-api/authentication.md).
+>Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, la variable **[!UICONTROL Personalization personnalisée]** La destination requiert que vous utilisiez la variable [API du serveur Edge Network](../../server-api/overview.md) lors de la configuration de la destination pour la personnalisation basée sur les attributs. Tous les appels de l’API du serveur doivent être effectués dans une [contexte authentifié](../../server-api/authentication.md).
 >
 ><br>Si vous utilisez déjà le SDK Web ou le SDK mobile pour votre intégration, vous pouvez récupérer les attributs via l’API serveur en ajoutant une intégration côté serveur.
 >
@@ -164,7 +164,7 @@ L’ajout d’attributs est facultatif. Vous pouvez toujours passer à l’étap
 
 ### Sélectionner les attributs source {#select-source-attributes}
 
-Pour ajouter des attributs source, sélectionnez l’option **[!UICONTROL Ajouter un nouveau champ]** du contrôle **[!UICONTROL Champ source]** et recherchez ou accédez au champ d’attribut XDM de votre choix, comme illustré ci-dessous.
+Pour ajouter des attributs source, sélectionnez l’option **[!UICONTROL Ajouter un nouveau champ]** du contrôle **[!UICONTROL Champ Source]** et recherchez ou accédez au champ d’attribut XDM de votre choix, comme illustré ci-dessous.
 
 ![Enregistrement de l’écran montrant comment sélectionner un attribut cible dans l’étape de mappage.](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-attribute.gif)
 
@@ -174,7 +174,7 @@ Pour ajouter des attributs de cible, sélectionnez la variable **[!UICONTROL Ajo
 
 >[!NOTE]
 >
->La sélection des attributs de la cible s’applique uniquement au [Personnalisation personnalisée](../catalog/personalization/custom-personalization.md) workflow d’activation, afin de prendre en charge le mappage de champs de nom convivial dans la plateforme de destination.
+>La sélection des attributs de la cible s’applique uniquement au [Personalization personnalisée](../catalog/personalization/custom-personalization.md) workflow d’activation, afin de prendre en charge le mappage de champs de nom convivial dans la plateforme de destination.
 
 ![Enregistrement d’écran montrant comment sélectionner un attribut XDM à l’étape de mappage](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 

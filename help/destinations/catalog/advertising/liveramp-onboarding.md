@@ -3,7 +3,7 @@ title: LiveRamp - Connexion pour l’intégration
 description: Découvrez comment utiliser le connecteur LiveRamp pour intégrer des audiences d’Adobe Real-time Customer Data Platform vers LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: a235f9a66ea15fc5e72dd6ed03e4a6a384fd30a4
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1941'
 ht-degree: 89%
@@ -37,9 +37,9 @@ Avant d’envoyer des données d’Experience Platform vers [!DNL LiveRamp - On
 Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
 
 | Origine de l’audience | Pris en charge | Description |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -211,7 +211,7 @@ Les profils inclus dans les fichiers exportés peuvent correspondre à l’un de
 * `Expired` : le profil n’est plus qualifié pour l’audience, mais il l’a déjà été.
 * `""` (chaîne vide) : le profil n’a jamais été qualifié pour l’audience.
 
-Par exemple, un fichier CSV exporté avec un attribut `email`, deux audiences provenant du [Segmentation Service](../../../segmentation/home.md) d’Experience Platform et une audience externe [importée](../../../segmentation/ui/overview.md#importing-an-audience) ressemble à ceci :
+Par exemple, un fichier CSV exporté avec un attribut `email`, deux audiences provenant du [Segmentation Service](../../../segmentation/home.md) d’Experience Platform et une audience externe [importée](../../../segmentation/ui/audience-portal.md#import-audience) ressemble à ceci :
 
 ```csv
 email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -223,7 +223,7 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-Dans l’exemple ci-dessus, les sections `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` et `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` décrivent les audiences provenant de Segmentation Service, tandis que `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` décrit une audience importée dans Platform sous la forme d’un [chargement personnalisé](../../../segmentation/ui/overview.md#importing-an-audience).
+Dans l’exemple ci-dessus, les sections `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` et `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` décrivent les audiences provenant de Segmentation Service, tandis que `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` décrit une audience importée dans Platform sous la forme d’un [chargement personnalisé](../../../segmentation/ui/audience-portal.md#import-audience).
 
 Comme Platform génère un fichier CSV pour chaque [ID de stratégie de fusion](../../../profile/merge-policies/overview.md), il génère également une exécution de flux de données distincte pour chaque ID de stratégie de fusion.
 

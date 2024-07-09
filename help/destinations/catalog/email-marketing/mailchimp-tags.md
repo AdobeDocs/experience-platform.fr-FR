@@ -2,7 +2,8 @@
 title: Balises Mailchimp
 description: La destination Balises Mailchimp vous permet d’exporter les données de votre compte et de les activer dans Mailchimp pour interagir avec des contacts.
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: dff460f0b0d365d3d643744544642d9f9488e18a
+exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1646'
 ht-degree: 27%
@@ -86,9 +87,9 @@ Voir [!DNL Mailchimp] [limites de taux](https://mailchimp.com/developer/marketin
 Cette section décrit le type d’audiences que vous pouvez exporter vers cette destination.
 
 | Origine de l’audience | Pris en charge | Description |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -173,7 +174,7 @@ Pour mapper correctement vos champs XDM à [!DNL Mailchimp Tags] pour les champs
 
    ![Copie d’écran de l’interface utilisateur de Platform avec le champ Target comme courrier électronique à partir de l’espace de noms d’identité.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
-   Mappages entre votre schéma de profil XDM et [!DNL Mailchimp Tags] sera comme ci-dessous : | Champ source | Champ cible | Obligatoire | | — | — | — | |`IdentityMap: Email`|`Identity: Email`| Oui |
+   Mappages entre votre schéma de profil XDM et [!DNL Mailchimp Tags] sera comme ci-dessous : | Champ Source | Champ cible | Obligatoire | | — | — | — | |`IdentityMap: Email`|`Identity: Email`| Oui |
 
    Un exemple avec les mappages terminés est illustré ci-dessous :
    ![Exemple de capture d’écran de l’interface utilisateur de Platform montrant les mappages de champs.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
@@ -200,6 +201,6 @@ Voir [[!DNL Mailchimp] page erreurs](https://mailchimp.com/developer/marketing/d
 Informations utiles supplémentaires de la section [!DNL Mailchimp] la documentation est la suivante :
 * [Prise en main d’ [!DNL Mailchimp]](https://mailchimp.com/help/getting-started-with-mailchimp/)
 * [Prise en main des audiences](https://mailchimp.com/help/getting-started-audience/)
-* [Création d’un public](https://mailchimp.com/help/create-audience/)
+* [Création d’une audience](https://mailchimp.com/help/create-audience/)
 * [Prise en main des balises](https://mailchimp.com/help/getting-started-tags/)
 * [API marketing](https://mailchimp.com/developer/marketing/api/)

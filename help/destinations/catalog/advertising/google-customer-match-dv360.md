@@ -2,13 +2,13 @@
 title: Correspondance client Google + connexion Display & Video 360
 description: Avec le connecteur de destination Correspondance client Google + Display & Video 360 , vous pouvez utiliser vos données en ligne et hors ligne d’Experience Platform pour atteindre et réengager vos clients dans les propriétés Google détenues et exploitées, telles que la recherche, le shopping, Gmail et YouTube.
 badgeBeta: label="Version bêta" type="Informative"
-source-git-commit: 7a9312a3722e205de3d11e17f6f079709b20237c
+exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1935'
 ht-degree: 18%
 
 ---
-
 
 # Connexion [!DNL Google Customer Match + Display & Video 360]
 
@@ -82,9 +82,9 @@ Pour promouvoir cette version, ils téléchargent les adresses électroniques de
 Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
 
 | Origine de l’audience | Pris en charge | Description |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 

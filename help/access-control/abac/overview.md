@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès;
 title: Présentation du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform.
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 900e0dc323e9055a92313788a4a191c615d0b8cd
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1866'
-ht-degree: 84%
+source-wordcount: '1864'
+ht-degree: 82%
 
 ---
 
@@ -98,7 +98,7 @@ En tant qu’administrateur, vous pouvez utiliser des fonctionnalités de contr�
 >
 >En résumé, souvenez-vous des implications suivantes quand vous utilisez des destinations et un contrôle d’accès basé sur les attributs :
 >
->* Vous pouvez activer uniquement les segments pour lesquels vous avez l’autorisation d’accès et de vue dans l’[affichage Parcourir les segments](/help/segmentation/ui/overview.md#browse) et dans l’[étape Sélectionner un segment](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) du workflow d’activation.
+>* Vous pouvez uniquement activer les audiences auxquelles vous êtes autorisé à accéder et à afficher dans [Audience Portal](/help/segmentation/ui/audience-portal.md#browse) et [étape sélection d’un segment](/help/destinations/ui/activate-batch-profile-destinations.md#select-segments) du workflow d’activation.
 >* Dans l’[étape de mappage du processus d’activation](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), vous pouvez uniquement afficher et sélectionner pour activation les champs auxquels vous avez accès.
 >* Si vous souhaitez activer des segments supplémentaires vers une destination existante et que vous n’avez pas accès à tous les champs mappés à l’exportation, le workflow d’activation est bloqué pour vous.
 

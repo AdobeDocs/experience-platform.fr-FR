@@ -5,10 +5,10 @@ breadcrumb-title: Guide de Segmentation Service
 user-guide-description: Créez des audiences à partir de vos données de profil client en temps réel à l’aide des définitions de segment générées par Adobe Experience Platform ou de sources externes.
 feature: Segments
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 62a174e6f3b1bd1b0bc518ff7e5f236893e9e5d3
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 91%
+source-wordcount: '185'
+ht-degree: 93%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 91%
 - [Types de données de segmentation](data-types.md)
 - [Protections de la segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - API Segmentation {#api}
-   - [Aperçu](api/overview.md)
+   - [Vue d’ensemble](api/overview.md)
    - [Prise en main](api/getting-started.md)
    - [Audiences](api/audiences.md)
    - [Segmentation Edge](api/edge-segmentation.md)
@@ -33,9 +33,10 @@ ht-degree: 91%
 - Interface utilisateur de segmentation {#ui}
    - [Présentation](ui/overview.md)
    - [Tableau de bord Audience](ui/audience-dashboard.md)
+   - [Audience Portal](ui/audience-portal.md)
    - [Composition de l’audience](ui/audience-composition.md)
    - [Créateur de segments](ui/segment-builder.md)
-   - [Audiences du compte](ui/account-audiences.md)
+   - [Audiences de compte](ui/account-audiences.md)
    - [Audiences semblables](ui/lookalike-audiences.md)
    - [Audiences de prospects](ui/prospect-audience.md)
    - [Segmentation Edge](ui/edge-segmentation.md)
@@ -73,4 +74,4 @@ ht-degree: 91%
    - [Application de la conformité à l’utilisation des données pour les segments](tutorials/governance.md)
 - [Questions fréquentes](./faq.md)
 - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

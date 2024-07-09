@@ -3,7 +3,7 @@ keywords: mobile, braser, messagerie;
 title: Connexion Braze
 description: Braze est une plateforme d’engagement client complète qui optimise les expériences pertinentes et mémorables entre les clients et les marques qu’ils aiment.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 31%
@@ -49,9 +49,9 @@ En tant que marketeur, je souhaite cibler les utilisateurs dans une destination 
 Cette section décrit les types d’audiences que vous pouvez exporter vers cette destination.
 
 | Origine de l’audience | Pris en charge | Description |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -115,18 +115,18 @@ Dans le [!UICONTROL Mappage] étape, cliquez sur **[!UICONTROL Ajouter un nouvea
 
 ![Mappage de l’ajout de la destination de braquage](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
-Dans le [!UICONTROL Champ source] , cliquez sur la flèche située en regard du champ vide.
+Dans le [!UICONTROL Champ Source] , cliquez sur la flèche située en regard du champ vide.
 
-![Mappage de la source de destination du braquage](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
+![Mappage du code Source de destination du bloc](../../assets/catalog/mobile-engagement/braze/mapping-source.png)
 
 Dans le [!UICONTROL Sélectionner le champ source] vous pouvez choisir entre deux catégories de champs XDM :
 * [!UICONTROL Sélectionner des attributs]: utilisez cette option pour mapper un champ spécifique de votre schéma XDM à un [!DNL Braze] attribut.
 
-![Attribut source de mappage de destination de braquage](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
+![Attribut Source de mappage de destination de braquage](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
 * [!UICONTROL Sélectionner un espace de noms d’identité]: utilisez cette option pour mapper une [!DNL Platform] espace de noms d’identité en un [!DNL Braze] espace de noms.
 
-![Espace de noms source du mapping de destination de la suppression](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
+![Espace de noms Source du mappage de destinations de braquage](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
 Sélectionnez votre champ source, puis cliquez sur **[!UICONTROL Sélectionner]**.
 

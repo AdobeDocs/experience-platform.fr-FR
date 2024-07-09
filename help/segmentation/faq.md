@@ -2,7 +2,7 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 147dded9f5eb6c2e153a80fa80b18e9fe96a6faa
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '4096'
 ht-degree: 22%
@@ -175,7 +175,7 @@ Une fois qu’une audience est à l’état publié, vous **cannot** redéfiniss
 
 ### Comment placer une audience dans l’état publié ?
 
-Pour les audiences créées à l’aide du créateur de segments ou de la composition de l’audience, vous pouvez définir l’audience sur l’état publié en sélectionnant &quot;[!UICONTROL Publier]&quot; dans leurs interfaces utilisateur respectives.
+Pour les audiences créées à l’aide du créateur de segments ou de la composition de l’audience, vous pouvez définir l’audience sur l’état publié en sélectionnant &quot;[!UICONTROL Publish]&quot; dans leurs interfaces utilisateur respectives.
 
 Les audiences créées en externe sont automatiquement définies sur la publication.
 
@@ -189,7 +189,7 @@ Vous pouvez placer une audience publiée dans l’état inactif en ouvrant le me
 >
 >L’état &quot;republié&quot; est identique à l’état publié pour le comportement de l’audience.
 
-Vous pouvez republier une audience en sélectionnant une audience inactive, en ouvrant le menu des actions rapides sur Audience Portal et en sélectionnant [!UICONTROL Publier].
+Vous pouvez republier une audience en sélectionnant une audience inactive, en ouvrant le menu des actions rapides sur Audience Portal et en sélectionnant [!UICONTROL Publish].
 
 ### Comment placer une audience dans l’état supprimé ?
 
@@ -239,11 +239,11 @@ Non, ce n&#39;est pas le cas. Tant que vous disposez des autorisations de modifi
 
 ### Le nombre de dossiers que je peux créer est-il limité ?
 
-Non, le nombre de dossiers que vous pouvez créer n’est pas limité. Pour plus d’informations sur les dossiers, veuillez lire le [section d’inventaire des audiences](./ui/overview.md#folders) de la présentation de l’interface utilisateur de Segmentation Service.
+Non, le nombre de dossiers que vous pouvez créer n’est pas limité. Pour plus d’informations sur les dossiers, veuillez lire le [section d’inventaire des audiences](./ui/audience-portal.md#folders) de la présentation de l’interface utilisateur de Segmentation Service.
 
 ### Le nombre de balises pouvant être ajoutées à une audience est-il limité ?
 
-Non, il n’existe pas de limite au nombre de balises pouvant être ajoutées à une audience. Pour plus d’informations sur les balises, veuillez lire le [section d’inventaire des audiences](./ui/overview.md#tags) de la présentation de l’interface utilisateur de Segmentation Service.
+Non, il n’existe pas de limite au nombre de balises pouvant être ajoutées à une audience. Pour plus d’informations sur les balises, veuillez lire le [section d’inventaire des audiences](./ui/audience-portal.md#tags) de la présentation de l’interface utilisateur de Segmentation Service.
 
 ### Le nombre de balises que je peux créer est-il limité ?
 
@@ -251,7 +251,7 @@ Non, il n’y a pas de limite au nombre de balises que vous pouvez créer. Cepen
 
 ### Lorsque je recherche une audience par nom ou balise dans un dossier parent, puis-je également effectuer une recherche dans les dossiers enfants associés ?
 
-Non, ce comportement n’est pas pris en charge. Cependant, vous pouvez modifier la vue de l’inventaire de l’audience pour examiner **Toutes les audiences**, puis effectuez une recherche dans tous les dossiers. Pour plus d’informations sur l’utilisation de la recherche dans l’inventaire des audiences, veuillez lire la section [section de recherche](./ui/overview.md#search) de la présentation de l’interface utilisateur de Segmentation Service.
+Non, ce comportement n’est pas pris en charge. Cependant, vous pouvez modifier la vue de l’inventaire de l’audience pour examiner **Toutes les audiences**, puis effectuez une recherche dans tous les dossiers. Pour plus d’informations sur l’utilisation de la recherche dans l’inventaire des audiences, veuillez lire la section [section de recherche](./ui/audience-portal.md#search) de la présentation de l’interface utilisateur de Segmentation Service.
 
 ### Puis-je affecter automatiquement une audience à un dossier au moment de sa création ?
 

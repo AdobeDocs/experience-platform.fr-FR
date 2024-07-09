@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de l’interface utilisateur de l’Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 3%
@@ -129,7 +129,7 @@ La variable **[!UICONTROL Destinations]** vous permet de créer, de mettre à jo
 
 La variable **[!UICONTROL Profils]** vous permet de parcourir les profils client, d’afficher les mesures de profil, de créer et de gérer des stratégies de fusion et d’afficher les schémas d’union. Pour en savoir plus sur l’utilisation de la variable [!UICONTROL Profils] , veuillez lire [[!DNL Profile] guide de l’utilisateur](../profile/ui/user-guide.md). Vous trouverez plus d’informations sur Real-time Customer Profile dans la section [Présentation de Real-Time Customer Profile](../profile/home.md).
 
-La variable **[!UICONTROL Segments]** vous permet de créer et de gérer des définitions de segment. Pour en savoir plus sur l’utilisation de la variable [!UICONTROL Segments] , veuillez lire [guide d’utilisation de la segmentation](../segmentation/ui/overview.md). Vous trouverez plus d’informations sur Segmentation Service dans la section [Présentation de Segmentation Service](../segmentation/home.md).
+La variable **[!UICONTROL Audiences]** vous permet de créer et de gérer des définitions de segment. Pour en savoir plus sur l’utilisation de la variable [!UICONTROL Audiences] , veuillez lire [guide d’utilisation de la segmentation](../segmentation/ui/overview.md). Vous trouverez plus d’informations sur Segmentation Service dans la section [Présentation de Segmentation Service](../segmentation/home.md).
 
 La variable **[!UICONTROL Identités]** vous permet de créer et de gérer des espaces de noms d’identité. Pour plus d’informations sur la variable [!UICONTROL Identités] , y compris des informations sur les espaces de noms d’identité et sur l’utilisation des identités dans l’interface utilisateur de Platform, reportez-vous à la section [présentation de l’espace de noms d’identité](../identity-service/features/namespaces.md).
 

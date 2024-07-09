@@ -2,13 +2,13 @@
 title: PubMatic Connect
 description: PubMatic optimise la valeur client en fournissant la chaîne d’approvisionnement de marketing numérique programmatique du futur. PubMatic Connect associe la technologie de plateforme et un service dédié pour améliorer la manière dont l’inventaire et les données sont empaquetés et transactionnels.
 last-substantial-update: 2023-12-14T00:00:00Z
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '923'
-ht-degree: 43%
+ht-degree: 44%
 
 ---
-
 
 # Destination PubMatic Connect {#pubmatic-connect}
 
@@ -16,7 +16,7 @@ ht-degree: 43%
 
 Utilisation [!DNL PubMatic Connect] pour optimiser la valeur client en fournissant la chaîne d’approvisionnement de marketing numérique programmatique de l’avenir. [!DNL PubMatic Connect] combine la technologie de plateforme et un service dédié pour améliorer la manière dont l’inventaire et les données sont empaquetés et transactionnels.
 
-Utilisez cette destination pour envoyer des données d’audience à la variable [!DNL PubMatic Connect] plateforme.
+Utilisez cette destination pour envoyer des données d’audience à la plateforme [!DNL PubMatic Connect].
 
 >[!IMPORTANT]
 >
@@ -40,7 +40,7 @@ Parlez à votre [!DNL PubMatic] Gestionnaire de compte pour vous assurer que vot
 
 | Identité cible | Description | Considérations |
 | --------------- | ------ | --- |
-| GAID | Google Advertising ID | Sélectionnez l’identité cible GAID lorsque votre identité source est un espace de noms GAID. |
+| GAID | GOOGLE ADVERTISING ID | Sélectionnez l’identité cible GAID lorsque votre identité source est un espace de noms GAID. |
 | IDFA | Identifiant Apple pour les annonceurs | Sélectionnez l’identité cible IDFA lorsque votre identité source est un espace de noms IDFA. |
 | extern_id | ID utilisateur personnalisés | Sélectionnez cette identité cible lorsque votre identité source est un espace de noms personnalisé. |
 
@@ -53,7 +53,7 @@ Cette section décrit le type d’audiences que vous pouvez exporter vers cette 
 | Origine de l’audience | Pris en charge | Description |
 | --- | --------- | ------ |
 | [!DNL Segmentation Service] | ✓ | Audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 

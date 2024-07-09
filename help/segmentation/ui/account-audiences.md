@@ -4,18 +4,18 @@ description: Découvrez comment créer et utiliser des audiences de compte pour 
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 7d630c3673304060ad26375955602440a495f354
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
 source-wordcount: '1130'
-ht-degree: 29%
+ht-degree: 30%
 
 ---
 
-# Audiences du compte
+# Audiences de compte
 
 >[!AVAILABILITY]
 >
->Les audiences de compte ne sont disponibles que dans la variable [Édition B2B de Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) et la variable [Édition B2P de Real-time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
+>Les audiences de compte ne sont disponibles que dans la variable [Édition B2B de Real-Time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) et la variable [Édition B2P de Real-Time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
 
 Grâce à la segmentation des comptes, Adobe Experience Platform vous permet d’offrir une expérience de segmentation marketing simplifiée et conviviale, allant des audiences basées sur les personnes aux audiences basées sur les comptes.
 
@@ -29,7 +29,7 @@ Avant de commencer à utiliser les audiences de compte, veuillez examiner les di
 - **Audiences de personnes**: une audience de type personne est une audience créée à l’aide de **client** données de profil. Les données de profil client peuvent être utilisées pour créer des audiences qui ciblent la clientèle de votre entreprise. Pour plus d’informations sur les profils client, veuillez lire la section [Présentation de Real-Time Customer Profile](../../profile/home.md).
 - **Public potentiel**: une audience de prospect est une audience créée à l’aide de **prospect** données de profil. Les données de profil de prospects peuvent être utilisées pour créer des audiences à partir d’utilisateurs non authentifiés. Pour plus d’informations sur les profils de prospect, veuillez lire la section [présentation du profil de prospect](../../profile/ui/prospect-profile.md).
 
-## Accéder à {#access}
+## Accès {#access}
 
 Pour accéder aux audiences du compte, sélectionnez **[!UICONTROL Audiences]** dans le **[!UICONTROL Comptes]** .
 
@@ -41,7 +41,7 @@ La variable [!UICONTROL Parcourir] s’affiche, avec la liste de toutes les audi
 
 Cette vue répertorie des informations sur l’audience, notamment le nom, le nombre de profils, l’origine, l’état du cycle de vie, la date de création et la date de dernière mise à jour.
 
-Vous pouvez également utiliser la fonctionnalité de recherche et de filtrage pour rechercher et trier rapidement des audiences de compte spécifiques. Pour plus d’informations sur cette fonctionnalité, voir [guide de l’interface utilisateur de segmentation](./overview.md#manage-audiences).
+Vous pouvez également utiliser la fonctionnalité de recherche et de filtrage pour rechercher et trier rapidement des audiences de compte spécifiques. Pour plus d’informations sur cette fonctionnalité, voir [Présentation d’Audience Portal](./audience-portal.md#manage-audiences).
 
 ## Créer une audience {#create}
 
@@ -67,7 +67,7 @@ Sous , [!UICONTROL Audiences] vous pouvez ajouter des audiences basées sur des 
 
 Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [Guide de l’interface utilisateur du créateur de segments](./segment-builder.md).
 
-## Activer l’audience {#activate}
+## Activer l&#39;audience {#activate}
 
 >[!NOTE]
 >

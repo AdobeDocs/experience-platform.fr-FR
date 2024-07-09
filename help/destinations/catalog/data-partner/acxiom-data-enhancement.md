@@ -2,8 +2,9 @@
 title: Amélioration des données d’Acrobat
 description: Utilisez ce connecteur pour activer les profils d’Adobe propriétaires dans Real-Time CDP vers Acrobat afin d’enrichir les données et de les utiliser sur les canaux marketing. Vous pouvez ensuite utiliser la source Acxiom pour importer les profils contenant des données améliorées et travailler avec eux dans Real-Time CDP.
 last-substantial-update: 2024-03-14T00:00:00Z
-badge: Version Beta
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+badge: Version bêta
+exl-id: 59edc43d-ae8e-4c3d-820c-b5be1c4483f9
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1346'
 ht-degree: 28%
@@ -56,7 +57,7 @@ Cette section décrit le type d’audiences que vous pouvez exporter vers cette 
 | Origine de l’audience | Pris en charge | Description |
 |-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
 | [!DNL Segmentation Service] | ✓ | Audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Chargements personnalisés | x | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | x | Audiences [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -143,7 +144,7 @@ Le traitement correct des fichiers du côté Acxiom nécessite des éléments de
 
 Les suggestions de mappage sont fournies dans le tableau ci-dessous, qui répertorie les attributs du côté destination utilisés par le traitement Acxiom vers lesquels les clients peuvent mapper des attributs de profil. Traitez ces éléments comme des suggestions, car tous les éléments ne sont pas requis et les valeurs source dépendront des besoins du compte.
 
-| Champ cible | Description source |
+| Champ cible | Description Source |
 |--------------|-------------------------------------------------------------|
 | nom | La variable `person.name.fullName` dans Experience Platform. |
 | Prénom | La variable `person.name.firstName` dans Experience Platform. |

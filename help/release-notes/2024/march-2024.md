@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Mars 2024
 description: Les notes de mise à jour de mars 2024 pour Adobe Experience Platform.
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
-source-git-commit: 708bb791ad85b6ee8f3671ffc574e4f27fdddd0a
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1191'
-ht-degree: 36%
+source-wordcount: '1190'
+ht-degree: 40%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 36%
 
 >[!TIP]
 >
->Utilisez la variable [Glossaire Adobe Experience Platform](/help/landing/glossary.md) pour vous familiariser avec la terminologie utilisée dans Real-time Customer Data Platform et Adobe Experience Platform. Si vous ne trouvez pas de terme spécifique que vous recherchez, utilisez les options de commentaire de la page pour demander l’ajout de nouveaux termes au glossaire.
+>Utilisez la variable [Glossaire Adobe Experience Platform](/help/landing/glossary.md) pour vous familiariser avec la terminologie utilisée dans Real-Time Customer Data Platform et Adobe Experience Platform. Si vous ne trouvez pas de terme spécifique que vous recherchez, utilisez les options de commentaire de la page pour demander l’ajout de nouveaux termes au glossaire.
 
 Mises à jour des fonctionnalités existantes dans Experience Platform :
 
@@ -29,7 +29,7 @@ Mises à jour des fonctionnalités existantes dans Experience Platform :
 
 ## Catalog Service {#catalog-service}
 
-Le Catalog Service est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous la forme de fichiers et de répertoires, le catalogue contient les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
+Catalog Service est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. Bien que toutes les données ingérées dans Experience Platform soient stockées dans le lac de données sous forme de fichiers et de répertoires, Catalog conserve les métadonnées et la description de ces fichiers et répertoires à des fins de recherche et de surveillance.
 
 | Fonctionnalité | Description |
 | --- | --- |
@@ -75,8 +75,8 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Type | Description |
 | ----------- | --------- | ----------- |
-| [(Version bêta) Connexion d’amélioration des données Acrobat](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | Nouveau | Utilisez ce connecteur pour activer les profils propriétaires de Real-Time CDP vers Acxiom afin d’enrichir les données et de les utiliser sur les canaux marketing. Vous pouvez ensuite utiliser la source Acxiom pour importer les profils contenant des données améliorées et travailler avec eux dans Real-Time CDP. |
-| [(Version Bêta) Connexion de suppression de prospects Acxiom](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Nouveau | Exportez vos audiences propriétaires vers la destination Acxiom pour permettre à Acxiom de supprimer les clients connus ou convertis. Ensuite, utilisez le [Importation de données de prospection dans Acrobat](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) connecteur source pour ingérer et activer des listes de prospects à partir d’Acxiom, vos clients connus ou convertis étant supprimés. |
+| [(Beta) Connexion d’amélioration des données d’Acrobat](../../destinations/catalog/data-partner/acxiom-data-enhancement.md) | Nouveau | Utilisez ce connecteur pour activer les profils propriétaires de Real-Time CDP vers Acxiom afin d’enrichir les données et de les utiliser sur les canaux marketing. Vous pouvez ensuite utiliser la source Acxiom pour importer les profils contenant des données améliorées et travailler avec eux dans Real-Time CDP. |
+| [(Beta) Connexion de suppression des prospects Acxiom](../../destinations/catalog/data-partner/acxiom-prospect-suppression.md) | Nouveau | Exportez vos audiences propriétaires vers la destination Acxiom pour permettre à Acxiom de supprimer les clients connus ou convertis. Ensuite, utilisez le [Importation de données de prospection dans Acrobat](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md) connecteur source pour ingérer et activer des listes de prospects à partir d’Acxiom, vos clients connus ou convertis étant supprimés. |
 | [Connexion Amazon Ads](../../destinations/catalog/advertising/amazon-ads.md) | Mise à jour  | Lors de l’exportation de données vers la destination Amazon Ads, vous pouvez désormais acheminer les données vers la DSP Amazon ou le Marketing Cloud Amazon (nouveau). |
 | [Connexion à l’intégration LiveRamp](../../destinations/catalog/advertising/liveramp-onboarding.md) | Mise à jour  | La destination d’intégration LiveRamp prend désormais en charge les diffusions vers l’Europe et l’Australie [!DNL LiveRamp] [!DNL SFTP] instances. La taille maximale du fichier exporté a également été augmentée à 10 millions de lignes (contre 5 millions auparavant). |
 
@@ -112,7 +112,7 @@ Pour plus d’informations sur XDM dans Platform, consultez la [vue d’ensemble
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Actions en bloc | L’inventaire des audiences prend désormais en charge les actions en bloc. Grâce aux actions en bloc, vous pouvez sélectionner rapidement plusieurs audiences pour les déplacer vers un dossier, appliquer des balises, appliquer des étiquettes d’accès ou supprimer. <br> ![Actions en bloc dans l’espace de travail de l’interface utilisateur Audiences.](../2024/assets/march/bulk-actions.png "Actions en bloc dans l’espace de travail de l’interface utilisateur Audiences."){width="100" zoomable="yes"} <br>Pour plus d’informations sur cette fonctionnalité, consultez la section [Guide de l’interface utilisateur de Segmentation Service](../../segmentation/ui/overview.md#bulk-actions). |
+| Actions en masse | L’inventaire des audiences prend désormais en charge les actions en bloc. Grâce aux actions en bloc, vous pouvez sélectionner rapidement plusieurs audiences pour les déplacer vers un dossier, appliquer des balises, appliquer des étiquettes d’accès ou supprimer. <br> ![Actions en bloc dans l’espace de travail de l’interface utilisateur Audiences.](../2024/assets/march/bulk-actions.png "Actions en bloc dans l’espace de travail de l’interface utilisateur Audiences."){width="100" zoomable="yes"} <br>Pour plus d’informations sur cette fonctionnalité, consultez la section [Présentation d’Audience Portal](../../segmentation/ui/audience-portal.md#bulk-actions). |
 
 {style="table-layout:auto"}
 
@@ -126,10 +126,10 @@ Experience Platform fournit une API RESTful et une interface utilisateur inter
 
 | Fonctionnalité | Type | Description |
 | --- | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Acxiom Data Ingestion] | Nouveau | Utilisez la variable [[!DNL Acxiom Data Ingestion] source](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md) à ingérer [!DNL Acxiom] des données dans Real-time Customer Data Platform et enrichissez les profils propriétaires. Vous pouvez ensuite utiliser la variable [!DNL Acxiom]profils propriétaires enrichis pour améliorer les audiences et les activer sur les canaux marketing. <br> ![La source d’ingestion de données Acxiom.](../2024/assets/march/acxiom-data-ingestion.png "Nouvelle source d’ingestion de données Acxiom."){width="100" zoomable="yes"} <br> Lisez la section [[!DNL Acxiom Data Ingestion] aperçu](../../sources/connectors/data-partners/acxiom-data-ingestion.md) pour plus d’informations sur la prise en main. |
+| [!BADGE Beta]{type=Informative} [!DNL Acxiom Data Ingestion] | Nouveau | Utilisez la variable [[!DNL Acxiom Data Ingestion] source](../../sources/tutorials/ui/create/data-partners/acxiom-data-ingestion.md) à ingérer [!DNL Acxiom] des données dans Real-Time Customer Data Platform et enrichissez les profils propriétaires. Vous pouvez ensuite utiliser la variable [!DNL Acxiom]profils propriétaires enrichis pour améliorer les audiences et les activer sur les canaux marketing. <br> ![La source d’ingestion de données Acxiom.](../2024/assets/march/acxiom-data-ingestion.png "Nouvelle source d’ingestion de données Acxiom."){width="100" zoomable="yes"} <br> Lisez la section [[!DNL Acxiom Data Ingestion] aperçu](../../sources/connectors/data-partners/acxiom-data-ingestion.md) pour plus d’informations sur la prise en main. |
 | [!BADGE Beta]{type=Informative} [!DNL Stripe] | Nouveau | Utilisez la variable [[!DNL Stripe] source](../../sources/connectors/payments/stripe.md) pour ingérer dans Experience Platform les données capturées pendant le flux d’achat par vos clients. Une fois ingérées, vous pouvez utiliser ces données pour créer des offres personnalisées et déverrouiller des informations commerciales plus riches. <br> ![Source du Stripe.](../2024/assets/march/stripe.png "Nouvelle source du Stripe."){width="100" zoomable="yes"} <br> Lisez la section [[!DNL Stripe] aperçu](../../sources/connectors/payments/stripe.md) pour plus d’informations sur la prise en main. |
 | Prise en charge de l’interface utilisateur pour [!DNL Snowflake Streaming] | Nouveau | Vous pouvez désormais utiliser la variable [[!DNL Snowflake Streaming] source](../../sources/tutorials/ui/create/databases/snowflake-streaming.md) dans l’interface utilisateur de l’Experience Platform, pour diffuser des données depuis votre [!DNL Snowflake] base de données. <br> ![Source de diffusion en continu du Snowflake.](../2024/assets/march/snowflake-streaming.png "Nouvelle source de diffusion en continu des Snowflake."){width="100" zoomable="yes"} <br> Lisez la section [[!DNL Snowflake Streaming] aperçu](../../sources/connectors/databases/snowflake-streaming.md) pour plus d’informations sur la prise en main. |
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur les sources, consultez la [présentation des sources](../../sources/home.md).
+Pour plus d’informations sur les sources, consultez la [vue d’ensemble des sources](../../sources/home.md).

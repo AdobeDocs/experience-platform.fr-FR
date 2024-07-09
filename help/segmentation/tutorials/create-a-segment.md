@@ -4,7 +4,7 @@ title: Création d’une définition de segment à l’aide de l’API Segmentat
 type: Tutorial
 description: Suivez ce tutoriel pour découvrir comment développer, tester, prévisualiser et enregistrer une définition de segment à l’aide de l’API Adobe Experience Platform Segmentation Service.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: 9966385968540701f66acbb70c0810906650b7e1
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1066'
 ht-degree: 44%
@@ -15,9 +15,9 @@ ht-degree: 44%
 
 Ce document fournit un tutoriel pour le développement, le test, la prévisualisation et l’enregistrement d’une définition de segment à l’aide du [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
-Pour plus d’informations sur la création de définitions de segment à l’aide de l’interface utilisateur, voir [Guide du créateur de segments](../ui/overview.md).
+Pour plus d’informations sur la création de définitions de segment à l’aide de l’interface utilisateur, voir [Guide du créateur de segments](../ui/segment-builder.md).
 
-## Prise en main
+## Commencer
 
 Ce tutoriel nécessite une compréhension pratique des différentes [!DNL Adobe Experience Platform] services impliqués dans la création de définitions de segment. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
@@ -53,7 +53,7 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ## Développement d’une définition de segment
 
-La première étape de la segmentation consiste à définir une définition de segment. Une définition de segment est un objet qui contient une requête écrite dans [!DNL Profile Query Language] (PQL). Cet objet est également appelé prédicat PQL. Les prédicats PQL définissent les règles de la définition de segment en fonction des conditions liées à tout enregistrement ou série temporelle que vous fournissez. [!DNL Real-Time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
+La première étape de la segmentation consiste à définir une définition de segment. Une définition de segment est un objet qui contient une requête écrite dans [!DNL Profile Query Language] (PQL). Cet objet est également appelé prédicat PQL. Les prédicats PQL définissent les règles de la définition de segment en fonction des conditions liées aux données d’enregistrement ou de série temporelle que vous fournissez. [!DNL Real-Time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
 
 Vous pouvez créer une définition de segment en adressant une requête de POST à la fonction `/segment/definitions` du point de terminaison [!DNL Segmentation] API. L’exemple suivant décrit comment formater une requête de définition, y compris les informations requises pour qu’une définition de segment soit définie avec succès.
 

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Présentation de Segmentation Service
 description: Découvrez Adobe Experience Platform Segmentation Service et le rôle qu’il occupe dans l’écosystème de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '1627'
-ht-degree: 95%
+source-wordcount: '1607'
+ht-degree: 96%
 
 ---
 
@@ -20,9 +20,9 @@ Ce document offre une présentation de [!DNL Segmentation Service] et de son rô
 
 Vous devez comprendre les termes clés suivants utilisés dans ce document :
 
-- **Segmentation** : division d’un grand groupe de personnes (tels que des clientes et des clients, des prospects, des utilisateurs et des utilisatrices ou des organisations) en groupes plus petits partageant des caractéristiques similaires et réagissant de la même manière aux stratégies marketing.
 - **Audience** : un groupe de personnes qui partagent des comportements et/ou des caractéristiques similaires. Ce groupe de personnes peut être généré par Adobe Experience Platform à l’aide de définitions de segment (audience générée par Platform) ou à partir de sources externes (audience générée en externe).
 - **Définition de segment** : l’ensemble des règles utilisées par Adobe Experience Platform pour décrire les caractéristiques ou le comportement clés d’une audience cible.
+- **Segmenter** : acte de séparation des profils en audiences.
 
 ## Fonctionnement de la segmentation
 
@@ -42,7 +42,7 @@ Lorsque vous composez directement une audience sur Platform, utilisez la composi
 
 Qu’elles soient créées grâce à une API ou au [!DNL Segment Builder], les définitions de segments sont finalement définies à l’aide du [!DNL Profile Query Language] (PQL). C’est là que la définition conceptuelle du segment est décrite dans le langage conçu pour récupérer les profils répondant aux critères. Pour plus d’informations, voir la [présentation de PQL](./pql/overview.md).
 
-Pour savoir comment créer et utiliser des segments dans le [!DNL Segment Builder] (l’implémentation de l’interface utilisateur de [!DNL Segmentation Service]), consultez le [guide du créateur de segments](./ui/overview.md).
+Pour savoir comment créer et utiliser des segments dans le [!DNL Segment Builder] (l’implémentation de l’interface utilisateur de [!DNL Segmentation Service]), consultez le [guide du créateur de segments](./ui/segment-builder.md).
 
 Pour plus d’informations sur la création de définitions de segments à l’aide de l’API, suivez le tutoriel sur la [création de définitions de segments à l’aide de l’API](./tutorials/create-a-segment.md).
 
@@ -89,7 +89,7 @@ Les audiences par lots sont automatiquement évaluées toutes les 24 heures. Si
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Évaluation Edge"
->abstract="La segmentation Edge permet d’évaluer instantanément les segments dans Platform sur l’Edge Network, en activant les cas d’utilisation de la personnalisation de la même page et de la page suivante."
+>abstract="La segmentation Edge permet d’évaluer instantanément les segments dans Platform sur le réseau Edge, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html?lang=fr" text="Guide de l’interface utilisateur de segmentation Edge"
 
 La segmentation Edge permet d’évaluer instantanément les segments dans Platform. [sur l’Edge Network](../web-sdk/home.md), activation des cas d’utilisation de la personnalisation de la même page et de la page suivante.

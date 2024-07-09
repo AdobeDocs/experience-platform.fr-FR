@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour de septembre 2023 pour Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: fc55e9a0849767d43c7f2a3bc3c540e776c8a072
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '2263'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
@@ -220,7 +220,7 @@ Pour plus d’informations sur Query Service, consultez la [vue d’ensemble de
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Colonnes personnalisables | Vous pouvez désormais personnaliser la disposition du portail Audience avec des colonnes redimensionnables. Pour plus d’informations sur cette fonctionnalité, consultez le [guide de l’interface utilisateur de segmentation](../../segmentation/ui/overview.md#customize). |
+| Colonnes personnalisables | Vous pouvez désormais personnaliser la disposition du portail Audience avec des colonnes redimensionnables. Pour plus d’informations sur cette fonctionnalité, veuillez lire la section [Présentation d’Audience Portal](../../segmentation/ui/audience-portal.md#customize). |
 | Ventilation des fréquences de mise à jour | Vous pouvez désormais afficher la ventilation des fréquences de mise à jour des audiences de votre organisation. Pour plus d’informations sur cette fonctionnalité, consultez le [guide de l’interface utilisateur de segmentation](../../segmentation/ui/overview.md#browse). |
 
 Pour en savoir plus sur Segmentation Service, consultez la [vue d’ensemble de Segmentation Service](../../segmentation/home.md).

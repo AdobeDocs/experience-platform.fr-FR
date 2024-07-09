@@ -1,12 +1,13 @@
 ---
-title: Acxiom Prospect Suppression
+title: Suppression des prospects Acxiom
 description: Exportez vos audiences propriétaires vers la destination Acxiom pour permettre à Acxiom de supprimer les clients connus ou convertis. Utilisez ensuite le connecteur source Acxiom pour ingérer et activer les listes de prospects à partir d’Acxiom, sans que vos clients connus ou convertis soient supprimés.
 last-substantial-update: 2024-03-14T00:00:00Z
-badge: Version Beta
-source-git-commit: c35eec2b83f92a7fb165bad13213ec50a6c9863e
+badge: Version bêta
+exl-id: d82e8cd3-970c-44af-99b0-ea154eb3655e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1466'
-ht-degree: 26%
+ht-degree: 27%
 
 ---
 
@@ -18,7 +19,7 @@ ht-degree: 26%
 
 ## Vue d’ensemble {#overview}
 
-Utilisation [!DNL Acxiom Prospect-Suppression] pour fournir les audiences de prospects les plus productives possible. Ce connecteur exporte en toute sécurité des données propriétaires à partir de Real-time Customer Data Platform et les exécute via une résolution d’identité et d’hygiène primée qui produit un fichier de données à utiliser comme liste de suppression. Cela sera comparé au [!DNL Acxiom Global] qui permet de personnaliser les listes de prospects pour les importer. Ensuite, utilisez le [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) le connecteur source vers les listes de prospects d’Acxiom vers Real-Time CDP, avec vos clients connus ou convertis supprimés.
+Utilisation [!DNL Acxiom Prospect-Suppression] pour fournir les audiences de prospects les plus productives possible. Ce connecteur exporte en toute sécurité des données propriétaires à partir de Real-Time Customer Data Platform et les exécute via une résolution d’identité et d’hygiène primée qui produit un fichier de données à utiliser comme liste de suppression. Cela sera comparé au [!DNL Acxiom Global] qui permet de personnaliser les listes de prospects pour les importer. Ensuite, utilisez le [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) le connecteur source vers les listes de prospects d’Acxiom vers Real-Time CDP, avec vos clients connus ou convertis supprimés.
 
 ![Diagramme marketing permettant d’exporter des données propriétaires vers Acxiom, puis de réimporter des données de prospects dans Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow.png)
 
@@ -58,7 +59,7 @@ Cette section décrit le type d’audiences que vous pouvez exporter vers cette 
 | Origine de l’audience | Pris en charge | Description |
 |-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
 | [!DNL Segmentation Service] | ✓ | Audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Chargements personnalisés | x | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | x | Audiences [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -143,7 +144,7 @@ Consultez la section [Activer des données d’audience vers des destinations d�
 
 Le traitement nécessite des éléments de nom et d’adresse, tandis que tous les éléments ne sont pas nécessaires si vous fournissez autant que possible pour faciliter la correspondance.  Les suggestions de mappage sont fournies dans le tableau ci-dessous, qui répertorie les attributs du côté destination utilisés par le traitement Acxiom vers lesquels les clients peuvent mapper des attributs de profil.  Cela doit être traité comme des suggestions, car tous les éléments ne sont pas requis et les valeurs source dépendront des besoins du compte.
 
-| Champ cible | Description source |
+| Champ cible | Description Source |
 |--------------|-------------------------------------------------------------|
 | nom | La variable `person.name.fullName` dans Experience Platform. |
 | Prénom | La variable `person.name.firstName` dans Experience Platform. |

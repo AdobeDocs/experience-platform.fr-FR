@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Audiences similaires
 description: Découvrez comment cibler de nouvelles audiences à forte valeur ajoutée dans Adobe Experience Platform à l’aide d’audiences look-alike.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: 36fffcddb09444dd6e010a4b5afeec6bf0b5c3bf
+source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '2192'
 ht-degree: 10%
 
 ---
@@ -179,7 +179,7 @@ Pour afficher les détails d’une audience analogue, sélectionnez l’audience
 
 ![La section Audiences look-alike est mise en surbrillance.](../images/ui/lookalike-audiences/select-laa.png)
 
-La page Détails de l’audience s’affiche. Pour plus d’informations sur cette page, veuillez lire le [section des détails de l’audience du guide de l’interface utilisateur de Segmentation Service](./overview.md#audience-details).
+La page Détails de l’audience s’affiche. Pour plus d’informations sur cette page, veuillez lire le [section détails de l’audience de la présentation d’Audience Portal](./audience-portal.md#audience-details).
 
 ![Les détails de l’audience analogue s’affichent.](../images/ui/lookalike-audiences/laa-details.png)
 

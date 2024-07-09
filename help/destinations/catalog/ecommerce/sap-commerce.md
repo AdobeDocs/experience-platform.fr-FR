@@ -2,10 +2,11 @@
 title: Connexion SAP Commerce
 description: Utilisez le connecteur de destination SAP Commerce pour mettre à jour les enregistrements de client dans votre compte SAP.
 last-substantial-update: 2024-02-20T00:00:00Z
-source-git-commit: 9bb2cf5adcd48f9d111ba04b8c93129367dd12f8
+exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
+source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
-source-wordcount: '2245'
-ht-degree: 25%
+source-wordcount: '2246'
+ht-degree: 26%
 
 ---
 
@@ -29,7 +30,7 @@ Reportez-vous aux sections ci-dessous pour connaître les conditions préalables
 
 ### Conditions préalables d’Experience Platform {#prerequisites-in-experience-platform}
 
-Avant d’activer des données dans [!DNL SAP Commerce] destination, vous devez avoir une [schema](/help/xdm/schema/composition.md), un [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=fr), et [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) créé dans [!DNL Experience Platform].
+Avant d’activer des données dans [!DNL SAP Commerce] destination, vous devez avoir une [schema](/help/xdm/schema/composition.md), un [dataset](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), et [audiences](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) créé dans [!DNL Experience Platform].
 
 Reportez-vous à la documentation Experience Platform pour [Groupe de champs Détails de l’appartenance à une audience](/help/xdm/field-groups/profile/segmentation.md) si vous avez besoin de conseils sur les états d’audience.
 
@@ -118,10 +119,10 @@ Cette destination prend en charge l’activation de toutes les audiences génér
 
 Cette destination prend également en charge l’activation des audiences décrites dans le tableau ci-dessous.
 
-| Type d’audience | Description |
----------|----------|
+| Type d’audience | Pris en charge | Description |
+| ------------- | --------- | ----------- |
 | [!DNL Segmentation Service] | ✓ | Audiences générées par l’Experience Platform [Segmentation Service](../../../segmentation/home.md). |
-| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/overview.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
+| Chargements personnalisés | ✓ | Audiences [importées](../../../segmentation/ui/audience-portal.md#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
 
@@ -153,9 +154,9 @@ Renseignez les champs obligatoires ci-dessous. Voir [Générer une clé de servi
 | Champ | Description |
 | --- | --- |
 | **[!UICONTROL Identifiant du client]** | La valeur de `clientId` à partir de la clé de service. |
-| **[!UICONTROL Client secret]** | La valeur de `clientSecret` à partir de la clé de service. |
+| **[!UICONTROL Secret client]** | La valeur de `clientSecret` à partir de la clé de service. |
 | **[!UICONTROL Point d’entrée]** | La valeur de `url` à partir de la clé de service, la variable `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
-| **[!UICONTROL Zone géographique]** | Emplacement de votre centre de données. La région est présente dans la variable `url` et a une valeur similaire à `eu10` ou `us10`. Par exemple, si la variable `url` is `https://eu10.revenue.cloud.sap/api` besoin `eu10`. |
+| **[!UICONTROL Région]** | Emplacement de votre centre de données. La région est présente dans la variable `url` et a une valeur similaire à `eu10` ou `us10`. Par exemple, si la variable `url` is `https://eu10.revenue.cloud.sap/api` besoin `eu10`. |
 
 Pour vous authentifier auprès de la destination, sélectionnez **[!UICONTROL Se connecter à la destination]**.
 ![Image de l’interface utilisateur de Platform montrant comment s’authentifier sur la destination.](../../assets/catalog/ecommerce/sap-commerce/authenticate-destination.png)
