@@ -1,12 +1,10 @@
 ---
 title: Destination Merkury Enterprise Identity
 description: Découvrez comment créer une connexion de destination d’identité d’entreprise Merkury à l’aide de l’interface utilisateur de Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: 66a0a085e696dbe13d0368da395f655c7ca01a97
+source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
 workflow-type: tm+mt
-source-wordcount: '1502'
-ht-degree: 16%
+source-wordcount: '1469'
+ht-degree: 17%
 
 ---
 
@@ -15,33 +13,33 @@ ht-degree: 16%
 
 >[!NOTE]
 >
->Le connecteur de destination et la page de documentation sont créés et conservés par l’équipe Merkury. Pour toute demande d&#39;information ou de mise à jour, veuillez contacter votre représentant du compte Merkury.
+>La page de documentation et le connecteur de destination sont créés et conservés par la fonction [!DNL Merkury] l&#39;équipe. Pour toute question ou demande de mise à jour, veuillez contacter votre [!DNL Merkury] représentant du compte.
 
 ## Vue d’ensemble
 
-Utilisez la destination Merkury Enterprise Identity pour créer des profils clients plus précis, complets et pertinents. Grâce à l’amélioration des données de profil, les marketeurs peuvent optimiser les informations, les segments et les modèles, ce qui se traduit par un ciblage et une modélisation prédictive plus précis.
+Utilisez la variable [!DNL Merkury Enterprise Identity] destination pour créer des profils clients plus précis, complets et pertinents. Grâce à l’amélioration des données de profil, les marketeurs peuvent optimiser les informations, les segments et les modèles, ce qui se traduit par un ciblage et une modélisation prédictive plus précis.
 
 ![Un diagramme montrant l&#39;interconnexion entre Merkury et Experience Platform, y compris l&#39;ingestion et l&#39;activation](../../assets/catalog/data-partners/merkury-identity/media/image1.png)
 
-Suivez les étapes de cette page de documentation pour créer une connexion de destination d’identité Merkury et activer les audiences pour identification et enrichissement à l’aide de l’interface utilisateur de Adobe Experience Platform.
+Suivez les étapes de cette page de documentation pour créer une [!DNL Merkury Identity] connexion de destination et activation des audiences pour identification et enrichissement à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
 >[!NOTE]
 >
->Si vous souhaitez activer des audiences vers des destinations multimédia avec votre compte Merkury Connect, utilisez plutôt notre destination Connexions Merkury .
+>Si vous souhaitez activer des audiences vers des destinations de média avec votre [!DNL Merkury Connect] , utilisez la variable [!DNL Merkury Connections] destination .
 
 ![La carte de destination Identité d’entreprise Merkury mise en surbrillance dans le catalogue des destinations Experience Platform.](../../assets/catalog/data-partners/merkury-identity/media/image2.png)
 
 ## Cas d’utilisation
 
-Merkury Enterprise Identity Destination permet de transférer en toute sécurité les informations d’identification personnelles des clients pour les fonctionnalités Merkury suivantes :
+La variable [!DNL Merkury Enterprise Identity] La destination permet de transférer en toute sécurité les informations d’identification personnelles des consommateurs pour les éléments suivants : [!DNL Merkury] fonctionnalités :
 
-* **Qualité des données**: améliorez la qualité des données du profil du client grâce à l’hygiène et à la normalisation des données. Merkury s&#39;occupe notamment de l&#39;hygiène postale aux États-Unis et de l&#39;identification des déménageurs afin de répondre aux cas les plus avancés de marketing par courrier.
-* **Résolution des identités**: créez une vue unique précise et complète du client, informée par Merkury Individual ID et Household ID. Les Merkury ID offrent un niveau profond de liaison de profils, alimenté par le graphique complet d&#39;identités des consommateurs américains adultes de Merkury, qui compte plus de 268 millions de personnes.
-* **Enrichissement**: optimisez les informations et la personnalisation grâce aux données Merkury. Les données Merkury comprennent plus de 10 000 attributs de données disponibles, allant de la démographie, du style de vie, des événements financiers, de la vie et des données d’achat auprès de la suite de données Merkury.
+* **Qualité des données**: améliorez la qualité des données du profil du client grâce à l’hygiène et à la normalisation des données. [!DNL Merkury] inclut l’hygiène postale aux États-Unis et l’identification des déménagements afin de prendre en charge les cas d’utilisation les plus avancés du marketing par courrier.
+* **Résolution des identités**: créer une vue unique précise et complète du client, informée par [!DNL Merkury] ID individuels et ID de foyer. Les identifiants Merkury offrent un niveau profond de liaison de profils optimisés par [!DNL Merkury]Le graphique complet de l&#39;identité des consommateurs américains adultes de plus de 268 millions de personnes.
+* **Enrichissement**: proposez de meilleures informations et personnalisation avec [!DNL Merkury Data]. [!DNL Merkury Data] comprend plus de 10 000 attributs de données disponibles, allant de données démographiques, de style de vie, financières, d’événements de la vie et des données d’achat auprès de la variable [!DNL Merkury Data Suite].
 
 >[!NOTE]
 >
->Ces cas d’utilisation sont exécutés par le biais d’une combinaison de connecteurs source et de destination. Le client commencerait par exporter ses dossiers client existants pour enrichissement à l’aide de ce connecteur de destination. Le service de Merkury recherche le fichier, le récupère, l&#39;enrichit avec les données de Merkury et génère un fichier. Le client utilisera alors la carte source du connecteur Merkury correspondante pour ingérer à nouveau les profils client hydratés dans Adobe Real-Time CDP.
+>Ces cas d’utilisation sont exécutés par le biais d’une combinaison de connecteurs source et de destination. Le client commencerait par exporter ses dossiers client existants pour enrichissement à l’aide de ce connecteur de destination. [!DNL Merkury]Le service de recherche de rechercherait le fichier, le récupérerait, l’enrichirait de [!DNL Merkury]des données et générez un fichier. Le client utilisera alors la variable [!DNL Merkury] Carte source du connecteur Source pour ingérer à nouveau les profils client hydratés dans Adobe Real-Time CDP.
 
 ## Conditions préalables
 
@@ -54,7 +52,7 @@ Merkury Enterprise Identity Destination permet de transférer en toute sécurit�
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| GAID | Google Advertising ID | Sélectionnez l’identité cible GAID lorsque votre identité source est un espace de noms GAID. |
+| GAID | GOOGLE ADVERTISING ID | Sélectionnez l’identité cible GAID lorsque votre identité source est un espace de noms GAID. |
 | IDFA | Identifiant Apple pour les annonceurs | Sélectionnez l’identité cible IDFA lorsque votre identité source est un espace de noms IDFA. |
 | ECID | Experience Cloud ID | Espace de noms qui représente l’ECID. Cet espace de noms peut également être référencé par les alias suivants : « ID Adobe Marketing Cloud », « ID Adobe Experience Cloud », « ID Adobe Experience Platform ». Consultez le document suivant sur [ECID](/help/identity-service/features/ecid.md) pour plus d’informations. |
 | phone_sha256 | Numéros de téléphone hachés avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les numéros de téléphone hachés avec SHA256. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l’activation. |
@@ -77,11 +75,9 @@ Cette section décrit le type d’audiences que vous pouvez exporter vers cette 
 ## Type et fréquence d’exportation
 
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
-
-|**Audience**|**Pris en charge**|**Description de l’origine**|
-|---|---|---|
-|Segmentation Service|✓|Audiences générées par l’Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).|
-|Téléchargements personnalisés|X|Audiences [[importé]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) dans Experience Platform à partir de fichiers CSV.|
+|**Audience**|**Pris en charge**|**Description de l’origine**|\
+|—|—|—|\
+|Segmentation Service|✓|Audiences générées par l’Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home).| Téléchargements personnalisés|X|Audiences [[importé]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) dans Experience Platform à partir de fichiers CSV.
 
 {style="table-layout:auto"}
 
@@ -124,7 +120,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 >[!NOTE]
 >
->Lors de la sélection de l’option CSV, les options Délimiteur, Caractère de citation, Caractère d’échappement, Valeur vide, Valeur nulle, Format de compression et Inclure le fichier manifeste sont présentées. Contactez votre équipe Merkury pour connaître les paramètres appropriés à votre compte.
+>Lorsque vous sélectionnez l’option CSV, les options Délimiteur, Caractère de citation, Caractère d’échappement, Valeur vide, Valeur nulle, Format de compression et Inclure le fichier manifeste s’affichent, consultez votre équipe Merkury pour connaître les paramètres appropriés à votre compte.
 
 ![image de l’option csv](../../assets/catalog/data-partners/merkury-identity/media/image8.png)
 
@@ -145,20 +141,20 @@ Lorsque vous avez terminé de fournir des détails sur votre connexion de destin
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin des autorisations de contrôle d’accès Afficher les destinations, Activer les destinations, Afficher les profils et Afficher les segments. Lisez la présentation du contrôle d’accès ou contactez votre administrateur de produit pour obtenir les autorisations requises.
->* Pour exporter des identités, vous avez besoin de l’autorisation de contrôle d’accès Afficher le graphique d’identités .
+>* Pour activer les données, vous avez besoin de l’événement **Affichage des destinations**, **Activation des destinations**, **Afficher les profils**, et **Affichage de segments** autorisations de contrôle d’accès. Lisez la présentation du contrôle d’accès ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>* Pour exporter des identités, vous avez besoin de l’événement **Affichage du graphique des identités** autorisation de contrôle d’accès.
 
 Lecture [Activation des données d’audience vers des destinations d’exportation de profils par lots](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ## Suggestions de mappage
 
-Le traitement correct des fichiers du côté Merkury nécessite des éléments de nom et d’adresse. Bien que tous les éléments ne soient pas nécessaires, fournir autant que possible contribue à une correspondance réussie.
+Le traitement correct des fichiers sur l’événement [!DNL Merkury] Le côté nécessite des éléments de nom et d’adresse. Bien que tous les éléments ne soient pas nécessaires, fournir autant que possible contribue à une correspondance réussie.
 
-Les suggestions de mappage sont fournies dans le tableau ci-dessous, qui répertorie les attributs de votre côté destination utilisés par le traitement Merkury vers lesquels les clients peuvent mapper des attributs de profil. Traitez ces éléments comme des suggestions, car tous les éléments ne sont pas requis et les valeurs source dépendront des besoins du compte.
+Les suggestions de mappage sont fournies dans le tableau ci-dessous, qui répertorie les attributs du côté destination utilisés par [!DNL Merkury] traitement auquel les clients peuvent mapper des attributs de profil. Traitez ces éléments comme des suggestions, car tous les éléments ne sont pas requis et les valeurs source dépendront des besoins du compte.
 
-| Champ cible | Description source |
+| Champ cible | Description Source |
 |---|---|
-| identifiant | Champ d’identité à utiliser pour mapper les données de marchandisage à Experience Platform par le biais du connecteur source de résolution d’identité de l’entreprise Merkury |
+| identifiant | Champ d’identité à utiliser pour le mappage [!DNL Merkury] données à l’Experience Platform via la variable [!DNL Merkury Enterprise Identity] Connecteur Source |
 | Input_First_Name | La variable `person.name.firstName` dans Experience Platform. |
 | Input_Last_Name | La variable `person.name.lastName` dans Experience Platform. |
 | Input_Address_Line_1 | La variable `mailingAddress.street` dans Experience Platform. |
@@ -181,4 +177,4 @@ Toutes les destinations Adobe Experience Platform sont conformes aux politiques 
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé un flux de données pour exporter des données de profil d’Experience Platform vers votre emplacement S3 géré par Merkury. Ensuite, vous devez contacter votre représentant Merkury avec le nom du compte, les noms de fichier et le chemin du compartiment afin que le traitement puisse être configuré.
+En suivant ce tutoriel, vous avez créé un flux de données pour exporter les données de profil de l’Experience Platform vers votre [!DNL Merkury] emplacement S3 géré. Ensuite, vous devez contacter votre [!DNL Merkury] représentant avec le nom du compte, les noms de fichier et le chemin du compartiment afin que le traitement puisse être configuré.
