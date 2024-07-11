@@ -2,10 +2,10 @@
 title: Configuration de l’extension de balise du SDK Web
 description: Découvrez comment configurer l’extension de balise SDK Web Experience Platform dans l’interface utilisateur des balises.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 1d1bb754769defd122faaa2160e06671bf02c974
+source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
 workflow-type: tm+mt
-source-wordcount: '1734'
-ht-degree: 6%
+source-wordcount: '2012'
+ht-degree: 5%
 
 ---
 
@@ -111,11 +111,29 @@ Lors de l’utilisation du fragment de code de masquage préalable, Adobe recomm
 
 ## Configuration des paramètres de collecte de données {#data-collection}
 
-![Image présentant les paramètres de collecte de données de l’extension de balise SDK Web dans l’interface utilisateur des balises](assets/web-sdk-ext-collection.png)
+Gérer les paramètres de configuration de la collecte de données. Des paramètres similaires de la bibliothèque JavaScript sont disponibles à l’aide de la variable [`configure`](/help/web-sdk/commands/configure/overview.md) .
 
-* **[!UICONTROL Fonction de rappel]**: la fonction de rappel fournie dans l’extension est également appelée [`onBeforeEventSend` function](/help/web-sdk/commands/configure/onbeforeeventsend.md) dans la bibliothèque. Cette fonction vous permet de modifier les événements de manière globale avant qu’ils ne soient envoyés à l’Edge Network.
-* **[!UICONTROL Activer la collecte de données de clic]**: le SDK Web peut automatiquement collecter des informations sur les clics sur les liens. Cette fonctionnalité est activée par défaut, mais elle peut être désactivée à l’aide de cette option. Les liens sont également étiquetés comme liens de téléchargement s’ils contiennent l’une des expressions de téléchargement répertoriées dans la variable [!UICONTROL Télécharger le qualificateur de lien] textbox. Adobe vous fournit quelques qualificateurs de lien de téléchargement par défaut. Vous pouvez les modifier en fonction de vos besoins.
-* **[!UICONTROL Données contextuelles collectées automatiquement]**: par défaut, le SDK Web collecte certaines données contextuelles concernant l’appareil, le web, l’environnement et le contexte de lieu. Si vous ne souhaitez pas que ces données soient collectées ou que certaines catégories de données soient uniquement collectées, sélectionnez **[!UICONTROL Informations contextuelles spécifiques]** et sélectionnez les données à collecter. Voir [`context`](/help/web-sdk/commands/configure/context.md) pour plus d’informations.
+![Image présentant les paramètres de collecte de données de l’extension de balise SDK Web dans l’interface utilisateur des balises.](assets/web-sdk-ext-collection.png)
+
+* **[!UICONTROL Activé avant le rappel d’envoi d’événement]**: fonction de rappel permettant d’évaluer et de modifier la charge utile envoyée à Adobe. Utilisez la variable `content` dans la fonction de rappel pour modifier la charge utile. Ce rappel équivaut à la balise [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) dans la bibliothèque JavaScript.
+* **[!UICONTROL Collecter les clics sur les liens internes]**: une case à cocher qui permet la collecte des données de suivi des liens internes à votre site ou propriété. Lorsque vous activez cette case à cocher, les options de regroupement d’événements s’affichent :
+   * **[!UICONTROL Aucun regroupement d’événements]**: les données de suivi des liens sont envoyées à l’Adobe dans des événements distincts. Les clics sur les liens envoyés dans des événements distincts peuvent augmenter l’utilisation contractuelle des données envoyées à Adobe Experience Platform.
+   * **[!UICONTROL Regroupement d’événements à l’aide du stockage de session]**: stockez les données de suivi des liens dans l’enregistrement de session jusqu’à l’événement de page suivant. Sur la page suivante, les données de suivi des liens stockées et les données de pages vues sont envoyées à Adobe en même temps. Adobe recommande d’activer ce paramètre lors du suivi des liens internes.
+   * **[!UICONTROL Regroupement d’événements à l’aide d’un objet local]**: stocke les données de suivi des liens dans un objet local jusqu’à l’événement de page suivant. Si un visiteur accède à une nouvelle page, les données de suivi des liens sont perdues. Ce paramètre est plus bénéfique dans le contexte des applications d’une seule page.
+* **[!UICONTROL Collecter les clics sur les liens externes]**: une case à cocher qui active la collecte de liens externes.
+* **[!UICONTROL Collecter les clics sur les liens de téléchargement]**: une case à cocher qui active la collecte des liens de téléchargement.
+* **[!UICONTROL Qualificateur de lien de téléchargement]**: expression régulière qualifiant une URL de lien en tant que lien de téléchargement.
+* **[!UICONTROL Filtrer les propriétés de clic]**: fonction de rappel permettant d’évaluer et de modifier les propriétés liées aux clics avant la collecte. Cette fonction s’exécute avant la fonction [!UICONTROL Activé avant le rappel d’envoi d’événement].
+* **Paramètres contextuels**: collecte automatiquement les informations sur les visiteurs, ce qui renseigne des champs XDM spécifiques pour vous. Vous pouvez choisir **[!UICONTROL Toutes les informations contextuelles par défaut]** ou **[!UICONTROL Informations contextuelles spécifiques]**. Il s’agit de la balise équivalente à [`context`](/help/web-sdk/commands/configure/context.md) dans la bibliothèque JavaScript.
+   * **[!UICONTROL Web]**: collecte des informations sur la page active.
+   * **[!UICONTROL Appareil]**: collecte des informations sur l’appareil de l’utilisateur.
+   * **[!UICONTROL Environnement]**: collecte des informations sur le navigateur de l’utilisateur.
+   * **[!UICONTROL Contexte de l’emplacement]**: collecte des informations sur l’emplacement de l’utilisateur.
+   * **[!UICONTROL Conseils d’agent-utilisateur à forte entropie]**: collecte des informations plus détaillées sur l’appareil de l’utilisateur.
+
+>[!TIP]
+>
+La variable **[!UICONTROL Avant l’envoi du lien, cliquez sur]** est un rappel obsolète qui n’est visible que pour les propriétés qui l’ont déjà configuré. Il s’agit de la balise équivalente à [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) dans la bibliothèque JavaScript. Utilisez la variable **[!UICONTROL Filtrer les propriétés de clic]** rappel pour filtrer ou ajuster les données de clics ou utiliser la fonction **[!UICONTROL Activé avant le rappel d’envoi d’événement]** pour filtrer ou ajuster la payload globale envoyée à Adobe. Si la variable **[!UICONTROL Filtrer les propriétés de clic]** rappel et **[!UICONTROL Avant l’envoi du lien, cliquez sur]** sont définies, seule la fonction **[!UICONTROL Filtrer les propriétés de clic]** s’exécute.
 
 ## Configuration des paramètres de la collection multimédia {#media-collection}
 
@@ -155,6 +173,6 @@ Les remplacements de flux de données doivent être configurés par environnemen
 
 ## Configuration des paramètres avancés
 
-Utilisez la variable **[!UICONTROL Chemin de base Edge]** si vous devez modifier le chemin de base utilisé pour interagir avec l’Edge Network. Cela ne doit pas nécessiter de mise à jour, mais dans le cas où vous participez à une version bêta ou alpha, l’Adobe peut vous demander de modifier ce champ.
+Utilisez la variable **[!UICONTROL Chemin d’accès de base Edge]** si vous devez modifier le chemin de base utilisé pour interagir avec l’Edge Network. Cela ne doit pas nécessiter de mise à jour, mais dans le cas où vous participez à une version bêta ou alpha, l’Adobe peut vous demander de modifier ce champ.
 
 ![Image présentant les paramètres avancés à l’aide de la page de l’extension de balise SDK Web.](assets/advanced-settings.png)

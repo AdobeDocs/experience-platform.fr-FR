@@ -1,28 +1,34 @@
 ---
 title: onBeforeLinkClickSend
 description: Rappel qui s’exécute juste avant l’envoi des données de suivi des liens.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+exl-id: 8c73cb25-2648-4cf7-b160-3d06aecde9b4
+source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '463'
 ht-degree: 0%
 
 ---
 
+
 # `onBeforeLinkClickSend`
 
-La variable `onBeforeLinkClickSend` callback vous permet d’enregistrer une fonction JavaScript qui peut modifier les données de suivi des liens que vous envoyez juste avant l’envoi de ces données à Adobe. Ce rappel vous permet de manipuler la variable `xdm` ou `data` , y compris la possibilité d’ajouter, de modifier ou de supprimer des éléments. Vous pouvez également annuler de manière conditionnelle l’envoi de données, par exemple avec le trafic de robots côté client détecté. Elle est prise en charge sur le SDK Web 2.15.0 ou version ultérieure.
+>[!IMPORTANT]
+>
+>Ce rappel est obsolète. Utilisation [`filterClickDetails`](clickcollection.md) au lieu de .
 
-Ce rappel ne s’exécute que lorsque [`clickCollectionEnabled`](clickcollectionenabled.md) est activée. If `clickCollectionEnabled` est désactivé, ce rappel ne s’exécute pas. Si les deux `onBeforeEventSend` et `onBeforeLinkClickSend` contiennent des fonctions enregistrées, l’objet `onBeforeLinkClickSend` s’exécute en premier. Une fois que la variable `onBeforeLinkClickSend` se termine, la fonction `onBeforeEventSend` puis s’exécute.
+La variable `onBeforeLinkClickSend` callback vous permet d’enregistrer une fonction JavaScript qui peut modifier les données de suivi des liens que vous envoyez juste avant que ces données ne soient envoyées à Adobe. Ce rappel vous permet de manipuler la variable `xdm` ou `data` , y compris la possibilité d’ajouter, de modifier ou de supprimer des éléments. Vous pouvez également annuler de manière conditionnelle l’envoi de données, par exemple avec le trafic de robots côté client détecté. Elle est prise en charge sur le SDK Web 2.15.0 ou version ultérieure.
+
+Ce rappel ne s’exécute que lorsque [`clickCollectionEnabled`](clickcollectionenabled.md) est activé et [`filterClickDetails`](clickcollection.md) ne contient pas de fonction enregistrée. If `clickCollectionEnabled` est désactivé, ou si `filterClickDetails` contient une fonction enregistrée, puis ce rappel ne s’exécute pas. If `onBeforeEventSend` et `onBeforeLinkClickSend` contiennent tous deux des fonctions enregistrées, `onBeforeLinkClickSend` est exécuté en premier.
 
 >[!WARNING]
 >
 >Ce rappel permet l’utilisation de code personnalisé. Si un code que vous incluez dans le rappel renvoie une exception non interceptée, le traitement de l’événement est interrompu. Les données ne sont pas envoyées à Adobe.
 
-## Avant le lien, cliquez sur Send callback à l’aide de l’extension de balise SDK Web.
+## Configurez avant le rappel de rappel de clic sur les liens à l’aide de l’extension de balise SDK Web. {#tag-extension}
 
 Sélectionnez la variable **[!UICONTROL Fournir avant le code de rappel d’événement de clic sur les liens]** lorsque [configuration de l’extension de balise](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Ce bouton ouvre une fenêtre modale dans laquelle vous pouvez insérer le code de votre choix.
 
-1. Connexion à [experience.adobe.com](https://experience.adobe.com) à l’aide de vos informations d’identification Adobe ID.
+1. Connexion à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
 1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
 1. Accédez à **[!UICONTROL Extensions]**, puis cliquez sur **[!UICONTROL Configurer]** sur le [!UICONTROL SDK Web Adobe Experience Platform] carte.
@@ -31,19 +37,15 @@ Sélectionnez la variable **[!UICONTROL Fournir avant le code de rappel d’év�
 1. Ce bouton ouvre une fenêtre modale avec un éditeur de code. Insérez le code souhaité, puis cliquez sur **[!UICONTROL Enregistrer]** pour fermer la fenêtre modale.
 1. Cliquez sur **[!UICONTROL Enregistrer]** sous paramètres d’extension, puis publiez vos modifications.
 
-Dans l’éditeur de code, vous pouvez ajouter, modifier ou supprimer des éléments dans le `content` . Cet objet contient la payload envoyée à Adobe. Vous n’avez pas besoin de définir la variable `content` ou placer tout code dans une fonction. Toute variable définie en dehors de `content` peuvent être utilisées, mais ne sont pas incluses dans la payload envoyée à Adobe.
+Dans l’éditeur de code, vous avez accès aux variables suivantes :
 
->[!TIP]
->
->Les objets `content.xdm`, `content.data`, et `content.clickedElement` sont toujours définis dans ce contexte. Il n’est donc pas nécessaire de vérifier s’ils existent. Certaines variables de ces objets dépendent de votre mise en oeuvre et de votre couche de données. Adobe recommande de rechercher les valeurs non définies dans ces objets afin d’éviter les erreurs JavaScript.
+* **`content.clickedElement`**: élément DOM sur lequel l’utilisateur a cliqué.
+* **`content.xdm`**: charge utile XDM de l’événement.
+* **`content.data`**: charge utile de l’objet de données pour l’événement.
+* **`return true`**: quittez immédiatement le rappel avec les valeurs de variable actuelles. La variable `onBeforeEventSend` callback s’exécute s’il contient une fonction enregistrée.
+* **`return false`**: quittez immédiatement le rappel et abandonnez l’envoi de données à Adobe. La variable `onBeforeEventSend` callback n’est pas exécuté.
 
-Par exemple, supposons que vous souhaitiez effectuer les actions suivantes :
-
-* Modifier l’URL de la page active
-* Capture de l’élément sur lequel l’utilisateur a cliqué dans un eVar Adobe Analytics
-* Remplacez le type de lien &quot;other&quot; par &quot;download&quot;.
-
-Le code équivalent dans la fenêtre modale serait le suivant :
+Toute variable définie en dehors de `content` peuvent être utilisées, mais ne sont pas incluses dans la payload envoyée à Adobe.
 
 ```js
 // Set an already existing value to something else
@@ -63,26 +65,26 @@ content.xdm._experience.analytics.customDimensions.eVars.eVar1 = content.clicked
 if(content.xdm.web?.webInteraction?.type === "other") content.xdm.web.webInteraction.type = "download";
 ```
 
-De la même manière que [`onBeforeEventSend`](onbeforeeventsend.md), vous pouvez `return true` pour terminer immédiatement la fonction ; ou `return false` pour annuler immédiatement l’envoi de données. Si vous annulez l’envoi de données dans `onBeforeLinkClickSend` lorsque les deux `onBeforeEventSend` et `onBeforeLinkClickSend` contiennent des fonctions enregistrées, l’objet `onBeforeEventSend` ne s’exécute pas.
+De la même manière que [`onBeforeEventSend`](onbeforeeventsend.md), vous pouvez `return true` pour exécuter immédiatement la fonction ; ou `return false` pour abandonner l’envoi de données à Adobe. Si vous abandonnez l’envoi de données dans `onBeforeLinkClickSend` lorsque les deux `onBeforeEventSend` et `onBeforeLinkClickSend` contiennent des fonctions enregistrées, l’objet `onBeforeEventSend` ne s’exécute pas.
 
-## Avant le lien, cliquez sur Envoyer le rappel à l’aide de la bibliothèque JavaScript SDK Web
+## Configurez avant le rappel de rappel de clic sur les liens à l’aide de la bibliothèque JavaScript SDK Web {#library}
 
 Enregistrez le `onBeforeLinkClickSend` rappel lors de l’exécution de la fonction `configure` . Vous pouvez modifier la variable `content` nom de la variable à n’importe quelle valeur en modifiant la variable de paramètre dans la fonction intégrée.
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeLinkClickSend": function(content) {
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeLinkClickSend: function(content) {
     // Add, modify, or delete values
     content.xdm.web.webPageDetails.URL = "https://example.com/current.html";
     
-    // Return true to immediately complete the function
+    // Return true to complete the function immediately
     if (sendImmediate == true) {
       return true;
     }
     
-    // Return false to immediately cancel sending data
+    // Return false to cancel sending data immediately
     if(myBotDetector.isABot()){
       return false;
     }
@@ -99,8 +101,8 @@ function lastChanceLinkLogic(content) {
 }
 
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeLinkClickSend": lastChanceLinkLogic
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeLinkClickSend: lastChanceLinkLogic
 });    
 ```

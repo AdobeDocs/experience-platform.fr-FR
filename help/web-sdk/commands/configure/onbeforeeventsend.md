@@ -1,12 +1,13 @@
 ---
 title: onBeforeEventSend
-description: Rappel qui s’exécute juste avant l’envoi des données.
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+description: Découvrez comment configurer le SDK Web pour enregistrer une fonction JavaScript qui peut modifier les données que vous envoyez juste avant l’envoi de ces données à Adobe.
+source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
+
 
 # `onBeforeEventSend`
 
@@ -16,11 +17,11 @@ La variable `onBeforeEventSend` callback vous permet d’enregistrer une fonctio
 >
 >Ce rappel permet l’utilisation de code personnalisé. Si un code que vous incluez dans le rappel renvoie une exception non interceptée, le traitement de l’événement est interrompu. Les données ne sont pas envoyées à Adobe.
 
-## Activé avant le rappel de l’envoi d’événement à l’aide de l’extension de balise SDK Web
+## Configurez avant le rappel de l’envoi des événements à l’aide de l’extension de balise SDK Web. {#tag-extension}
 
 Sélectionnez la variable **[!UICONTROL Fournir avant le code de rappel d’envoi d’événement]** lorsque [configuration de l’extension de balise](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Ce bouton ouvre une fenêtre modale dans laquelle vous pouvez insérer le code de votre choix.
 
-1. Connexion à [experience.adobe.com](https://experience.adobe.com) à l’aide de vos informations d’identification Adobe ID.
+1. Connexion à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
 1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
 1. Accédez à **[!UICONTROL Extensions]**, puis cliquez sur **[!UICONTROL Configurer]** sur le [!UICONTROL SDK Web Adobe Experience Platform] carte.
@@ -28,21 +29,14 @@ Sélectionnez la variable **[!UICONTROL Fournir avant le code de rappel d’envo
 1. Ce bouton ouvre une fenêtre modale avec un éditeur de code. Insérez le code souhaité, puis cliquez sur **[!UICONTROL Enregistrer]** pour fermer la fenêtre modale.
 1. Cliquez sur **[!UICONTROL Enregistrer]** sous paramètres d’extension, puis publiez vos modifications.
 
-Dans l’éditeur de code, vous pouvez ajouter, modifier ou supprimer des éléments dans le `content` . Cet objet contient la payload envoyée à Adobe. Vous n’avez pas besoin de définir la variable `content` ou placer tout code dans une fonction. Toute variable définie en dehors de `content` peuvent être utilisées, mais ne sont pas incluses dans la payload envoyée à Adobe.
+Dans l’éditeur de code, vous avez accès aux variables suivantes :
 
->[!TIP]
->
->Les objets `content.xdm` et `content.data` sont toujours définis dans ce contexte. Il n’est donc pas nécessaire de vérifier s’ils existent. Certaines variables de ces objets dépendent de votre mise en oeuvre et de votre couche de données. Adobe recommande de rechercher les valeurs non définies dans ces objets afin d’éviter les erreurs JavaScript.
+* **`content.xdm`**: la variable [XDM](../sendevent/xdm.md) charge utile pour l’événement.
+* **`content.data`**: la variable [data](../sendevent/data.md) charge utile d’objet pour l’événement.
+* **`return true`**: quittez immédiatement le rappel et envoyez les données à l’Adobe avec les valeurs actuelles dans la variable `content` .
+* **`return false`**: quittez immédiatement le rappel et abandonnez l’envoi de données à Adobe.
 
-Par exemple, si vous souhaitez :
-
-* Ajout de l’élément XDM `xdm.commerce.order.purchaseID`
-* Forcer tous les caractères dans `xdm.marketing.trackingCode` en minuscules
-* Supprimez `xdm.environment.operatingSystemVersion`.
-* Si un type d’événement est un clic sur les liens, envoyez immédiatement des données, quel que soit le code sous-jacent.
-* Annuler l’envoi des données à Adobe si un robot est détecté
-
-Le code équivalent dans la fenêtre modale serait le suivant :
+Toute variable définie en dehors de `content` peuvent être utilisées, mais ne sont pas incluses dans la payload envoyée à Adobe.
 
 ```js
 // Use nullish coalescing assignments to add objects if they don't yet exist
@@ -69,19 +63,18 @@ if (myBotDetector.isABot()) {
 }
 ```
 
->[!NOTE]
->
+>[!TIP]
 >Éviter le renvoi `false` lors du premier événement d’une page. Renvoi `false` le premier événement peut avoir un impact négatif sur la personnalisation.
 
-## Activé avant le rappel de l’envoi d’événement à l’aide de la bibliothèque JavaScript du SDK Web
+## Configurez avant le rappel de l’envoi d’événement à l’aide de la bibliothèque JavaScript du SDK Web {#library}
 
 Enregistrez le `onBeforeEventSend` rappel lors de l’exécution de la fonction `configure` . Vous pouvez modifier la variable `content` nom de la variable à n’importe quelle valeur en modifiant la variable de paramètre dans la fonction intégrée.
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": function(content) {
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeEventSend: function(content) {
     // Use nullish coalescing assignments to add a new value
     content.xdm._experience ??= {};
     content.xdm._experience.analytics ??= {};
@@ -121,8 +114,8 @@ function lastChanceLogic(content) {
 }
 
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": lastChanceLogic
+  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  onBeforeEventSend: lastChanceLogic
 });    
 ```
