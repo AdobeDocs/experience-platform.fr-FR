@@ -1,9 +1,9 @@
 ---
 title: Présentation d’Audience Portal
 description: Découvrez comment utiliser Audience Portal pour afficher, gérer et créer des audiences dans Adobe Experience Platform.
-source-git-commit: 531bee643c14ad407a1207cca9093e210e5227a5
+source-git-commit: c724baba6972e1a033c18b63ab824149567d20fb
 workflow-type: tm+mt
-source-wordcount: '3674'
+source-wordcount: '3673'
 ht-degree: 66%
 
 ---
@@ -27,7 +27,7 @@ Dans Audience Portal, vous pouvez accomplir les tâches suivantes :
    - [Utilisation de la composition de l’audience pour créer une audience](#audience-composition)
 - [Importer des audiences générées de manière externe](#import-audience)
 
-Pour ouvrir Audience Portal, sélectionnez la variable **[!UICONTROL Parcourir]** dans la section Segmentation .
+Pour ouvrir Audience Portal, sélectionnez l’onglet **[!UICONTROL Parcourir]** dans la section Segmentation .
 
 ## Liste d’audiences {#list}
 
@@ -53,40 +53,40 @@ Une icône de points de suspension se trouve à côté de chaque audience. Cette
 
 | Action | Origines | Description |
 | ------ | ------- | ----------- |
-| [!UICONTROL Modifier] | Segmentation Service | Ouvre le créateur de segments pour modifier votre audience. Notez que si votre audience a été créée par le biais de l’API, vous allez **not** Vous pouvez le modifier à l’aide du créateur de segments. Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [Guide de l’interface utilisateur du créateur de segments](./segment-builder.md). |
+| [!UICONTROL Modifier] | Segmentation Service | Ouvre le créateur de segments pour modifier votre audience. Notez que si votre audience a été créée par le biais de l’API, vous ne pourrez **pas** la modifier à l’aide du créateur de segments. Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [Guide de l’interface utilisateur du créateur de segments](./segment-builder.md). |
 | [!UICONTROL Composition ouverte] | Composition de l’audience | Ouvre la composition d’audience pour afficher votre audience. Pour plus d’informations sur la composition d’audience, consultez le [Guide de l’interface utilisateur de la composition d’audience](./audience-composition.md). |
 | [!UICONTROL Activer la destination] | Segmentation Service | Active l’audience vers une destination. Pour plus d’informations sur l’activation d’une audience vers une destination, consultez la [vue d’ensemble de l’activation](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Partager avec les partenaires] | Composition d’audience, chargement personnalisé, Segmentation Service | Partage votre audience avec d’autres utilisateurs de Platform. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble de la correspondance de segments](./segment-match/overview.md). |
-| [!UICONTROL Gestion des balises] | Composition d’audience, chargement personnalisé, Segmentation Service | Gère les balises définies par l’utilisateur qui appartiennent à l’audience. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
+| [!UICONTROL Partager avec des partenaires] | Composition d’audience, chargement personnalisé, Segmentation Service | Partage votre audience avec d’autres utilisateurs de Platform. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble de la correspondance de segments](./segment-match/overview.md). |
+| [!UICONTROL Gérer les balises] | Composition d’audience, chargement personnalisé, Segmentation Service | Gère les balises définies par l’utilisateur qui appartiennent à l’audience. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
 | [!UICONTROL Déplacer vers le dossier] | Composition d’audience, chargement personnalisé, Segmentation Service | Gère le dossier auquel l’audience appartient. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
-| [!UICONTROL Copier] | Segmentation Service | Duplique l’audience sélectionnée. Vous trouverez plus d’informations sur cette fonction dans la section [FAQ sur la segmentation](../faq.md#copy). |
-| [!UICONTROL Appliquer les libellés d’accès] | Composition d’audience, chargement personnalisé, Segmentation Service | Gère les étiquettes d’accès qui appartiennent à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL Publier] | Chargement personnalisé, service de segmentation | Publie l’audience sélectionnée. Pour plus d’informations sur la gestion de l’état du cycle de vie, consultez la section [section état du cycle de vie du FAQ sur la segmentation](../faq.md#lifecycle-states). |
-| [!UICONTROL Désactiver] | Chargement personnalisé, service de segmentation | Désactive l’audience sélectionnée. Pour plus d’informations sur la gestion de l’état du cycle de vie, consultez la section [section état du cycle de vie du FAQ sur la segmentation](../faq.md#lifecycle-states). |
-| [!UICONTROL Supprimer] | Composition d’audience, chargement personnalisé, Segmentation Service | Supprime l’audience sélectionnée. Audiences utilisées dans des destinations en aval ou qui dépendent d’autres audiences **cannot** être supprimées. Pour plus d’informations sur la suppression d’une audience, veuillez lire le [FAQ sur la segmentation](../faq.md#lifecycle-states). |
-| [!UICONTROL Ajouter au package] | Composition d’audience, chargement personnalisé, Segmentation Service | Déplace l’audience entre les environnements de test. Pour plus d’informations sur cette fonctionnalité, veuillez lire la section [guide d’outils sandbox](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Copier] | Segmentation Service | Duplique l’audience sélectionnée. Vous trouverez plus d’informations sur cette fonction dans la [FAQ sur la segmentation](../faq.md#copy). |
+| [!UICONTROL Appliquer les étiquettes d’accès] | Composition d’audience, chargement personnalisé, Segmentation Service | Gère les étiquettes d’accès qui appartiennent à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Publier] | Chargement personnalisé, service de segmentation | Publie l’audience sélectionnée. Pour plus d’informations sur la gestion de l’état du cycle de vie, consultez la section [état du cycle de vie dans le FAQ sur la segmentation](../faq.md#lifecycle-states). |
+| [!UICONTROL Désactiver] | Chargement personnalisé, service de segmentation | Désactive l’audience sélectionnée. Pour plus d’informations sur la gestion de l’état du cycle de vie, consultez la section [état du cycle de vie dans le FAQ sur la segmentation](../faq.md#lifecycle-states). |
+| [!UICONTROL Supprimer] | Composition d’audience, chargement personnalisé, Segmentation Service | Supprime l’audience sélectionnée. Les audiences qui sont utilisées dans des destinations en aval ou qui sont dépendantes d’autres audiences **ne peuvent pas** être supprimées. Pour plus d’informations sur la suppression d’audience, consultez la [FAQ sur la segmentation](../faq.md#lifecycle-states). |
+| [!UICONTROL Ajouter au package] | Composition d’audience, chargement personnalisé, Segmentation Service | Déplace l’audience entre les environnements de test. Pour plus d’informations sur cette fonctionnalité, consultez le [guide d’outils sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!IMPORTANT]
 >
->Avant de supprimer votre audience, veillez à ce que l’audience soit **not** utilisé comme composant dans une audience basée sur un compte ou utilisé dans Adobe Journey Optimizer.
+>Avant de supprimer votre audience, veillez à ce que l’audience ne soit **pas** utilisée comme composant dans une audience basée sur un compte ou utilisée dans Adobe Journey Optimizer.
 
 En haut de la page se trouvent les options permettant d’ajouter toutes les audiences à un planning, d’importer une audience, de créer une audience et d’afficher un résumé de l’évaluation de l’audience.
 
 L’activation de l’option **[!UICONTROL Planifier toutes les audiences]** active la segmentation planifiée. Vous trouverez plus d’informations sur la segmentation planifiée dans la [section segmentation planifiée de ce guide d’utilisation](#scheduled-segmentation).
 
-Sélection **[!UICONTROL Importer une audience]** vous permet d’importer une audience générée en externe. Pour en savoir plus sur l&#39;import d&#39;audiences, consultez la section sur [import d’une audience dans le guide d’utilisation](#import-audience).
+En sélectionnant **[!UICONTROL Importer une audience]**, vous pouvez importer une audience générée en externe. Pour en savoir plus sur l&#39;import d&#39;audiences, consultez la section sur l&#39; [import d&#39;une audience dans le guide de l&#39;utilisateur](#import-audience).
 
 Sélectionner **[!UICONTROL Créer une audience]** vous permet de créer une audience. Pour en savoir plus sur la création d’audiences, consultez la section sur la [création d’une audience dans le guide d’utilisation](#create-audience).
 
 ![La barre de navigation supérieure de la page de navigation des audiences est mise en surbrillance. Cette barre contient un bouton pour créer une audience et un bouton pour importer une audience.](../images/ui/audience-portal/browse-audiences-top.png)
 
-Vous pouvez sélectionner **[!UICONTROL Résumé de l’évaluation]** pour afficher un graphique circulaire qui présente un résumé des évaluations de l’audience.
+Vous pouvez sélectionner **[!UICONTROL Synthèse de l&#39;évaluation]** pour afficher un graphique circulaire présentant un résumé des évaluations de l&#39;audience.
 
-![Le bouton Synthèse des évaluations est mis en surbrillance.](../images/ui/audience-portal/browse-audience-evaluation-summary.png)
+![Le bouton Synthèse de l’évaluation est mis en surbrillance.](../images/ui/audience-portal/browse-audience-evaluation-summary.png)
 
 Le graphique circulaire s’affiche, affichant une ventilation des audiences par évaluation d’audience. Le graphique affiche le nombre total d’audiences au milieu et le temps d’évaluation quotidien par lots en UTC en bas. Si vous passez le curseur de la souris sur les différentes parties de l’audience, le nombre d’audiences appartenant à chaque type de fréquence de mise à jour s’affiche.
 
-![Le graphique circulaire d’évaluation de l’audience est mis en surbrillance. Le temps d’évaluation de la segmentation par lots s’affiche également.](../images/ui/audience-portal/evaluation-summary.png)
+![Le graphique circulaire d’évaluation de l’audience est mis en surbrillance, avec le temps d’évaluation de la segmentation par lots également affiché.](../images/ui/audience-portal/evaluation-summary.png)
 
 ### Personnaliser {#customize}
 
@@ -97,8 +97,8 @@ Vous pouvez ajouter des champs supplémentaires à Audience Portal en sélection
 | [!UICONTROL Nom] | Nom de l’audience. |
 | [!UICONTROL Nombre de profils] | Nombre total de profils qui remplissent les critères de l’audience. |
 | [!UICONTROL Origine] | Origine de l’audience. Cette information indique d’où vient l’audience. Les valeurs possibles sont Segmentation Service, Chargement personnalisé, Composition de l’audience et Audience Manager. |
-| [!UICONTROL Statut du cycle de vie] | Statut de l’audience. Les valeurs possibles pour ce champ incluent `Draft`, `Inactive`, et `Published`. Pour plus d’informations sur les états du cycle de vie, y compris sur ce que signifient les différents états et sur la façon de déplacer les audiences vers différents états du cycle de vie, lisez la section [section d’état du cycle de vie du FAQ sur la segmentation](../faq.md#lifecycle-status). |
-| [!UICONTROL Fréquence de mise à jour] | Valeur qui indique la fréquence de mise à jour des données de l’audience. Les valeurs possibles pour ce champ incluent [!UICONTROL Lot], [!UICONTROL Diffusion en continu], [!UICONTROL Edge], et [!UICONTROL Non planifié]. |
+| [!UICONTROL Statut du cycle de vie] | Statut de l’audience. Les valeurs possibles pour ce champ sont `Draft`, `Inactive` et `Published`. Pour plus d’informations sur les états du cycle de vie, y compris sur ce que signifient les différents états et sur la façon de déplacer les audiences vers différents états du cycle de vie, consultez la section [état du cycle de vie du FAQ sur la segmentation](../faq.md#lifecycle-status). |
+| [!UICONTROL Fréquence de mise à jour] | Valeur qui indique la fréquence de mise à jour des données de l’audience. Les valeurs possibles pour ce champ sont [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge] et [!UICONTROL Not Scheduled]. |
 | [!UICONTROL Dernière mise à jour par] | Nom de la personne qui a mis à jour l’audience pour la dernière fois. |
 | [!UICONTROL Créé] | Date et heure de création de l’audience en UTC. |
 | [!UICONTROL Dernière mise à jour] | Date et heure de la dernière mise à jour de l’audience en UTC. |
@@ -116,9 +116,9 @@ Si la répartition est sélectionnée, l’affichage présente un graphique à b
 | [!UICONTROL Existant] | Nombre de profils qui **sont restés** dans le segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
 | [!UICONTROL Sortant] | Nombre de profils qui **sont sortis** du segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
 
-Après avoir sélectionné les champs à afficher, vous pouvez redimensionner la largeur des colonnes affichées. Pour ce faire, faites glisser la zone entre les colonnes ou sélectionnez l’option ![icône de flèche](../images/ui/audience-portal/arrow-icon.png) de la colonne à redimensionner, suivie de **[!UICONTROL Redimensionner la colonne]**.
+Après avoir sélectionné les champs à afficher, vous pouvez redimensionner la largeur des colonnes affichées. Pour ce faire, faites glisser la zone entre les colonnes ou sélectionnez l’![icône de flèche](../images/ui/audience-portal/arrow-icon.png) de la colonne à redimensionner, suivie de l’option **[!UICONTROL Redimensionner la colonne]**.
 
-![Le bouton de colonne Redimensionner est mis en surbrillance.](../images/ui/audience-portal/browse-audience-resize-column.png)
+![Le bouton Redimensionner la colonne est surligné.](../images/ui/audience-portal/browse-audience-resize-column.png)
 
 ### Filtrage, dossiers et balisage {#manage-audiences}
 
@@ -187,8 +187,8 @@ La liste des filtres disponibles s’affiche.
 | ------ | ----------- |
 | [!UICONTROL Origine] | Permet de filtrer l’audience en fonction de son origine. Les options disponibles comprennent Segmentation Service, le chargement personnalisé, la composition d’audience et Audience Manager. |
 | [!UICONTROL A une balise] | Permet de filtrer par balise. Vous pouvez choisir entre **[!UICONTROL A une balise]** et **[!UICONTROL A toutes les balises]**. Lors de la sélection de **[!UICONTROL A une balise]**, les audiences filtrées incluent **toutes** les balises que vous avez ajoutées. Lors de la sélection de **[!UICONTROL A toutes les balises]**, les audiences filtrées doivent inclure **toutes** les balises que vous avez ajoutées. |
-| [!UICONTROL Statut du cycle de vie] | Permet de filtrer les données en fonction du statut de cycle de vie de l’audience. Les options disponibles incluent : [!UICONTROL Supprimé], [!UICONTROL Version préliminaire], [!UICONTROL Inactif], et [!UICONTROL Publié]. |
-| [!UICONTROL Fréquence de mise à jour] | Permet de filtrer selon la fréquence de mise à jour de l’audience (méthode d’évaluation). Les options disponibles sont les suivantes : [!UICONTROL Planifié], [!UICONTROL Continu] et [!UICONTROL À la demande]. |
+| [!UICONTROL Statut du cycle de vie] | Permet de filtrer les données en fonction du statut de cycle de vie de l’audience. Les options disponibles sont les suivantes : [!UICONTROL Supprimé], [!UICONTROL Brouillon], [!UICONTROL Inactif] et [!UICONTROL Publié]. |
+| [!UICONTROL Fréquence de mise à jour] | Permet de filtrer selon la fréquence de mise à jour de l’audience (méthode d’évaluation). Les options disponibles sont [!UICONTROL Batch], [!UICONTROL Streaming] et [!UICONTROL Edge] |
 | [!UICONTROL Créé par] | Permet de filtrer en fonction de la personne qui a créé l’audience. |
 | [!UICONTROL Date de création] | Permet de filtrer en fonction de la date de création de l’audience. Vous pouvez choisir une période pour filtrer la date de création de l’audience. |
 | [!UICONTROL Date de modification] | Permet de filtrer en fonction la date de dernière modification de l’audience. Vous pouvez choisir une période pour filtrer la date de la dernière modification de l’audience. |
@@ -197,15 +197,15 @@ La liste des filtres disponibles s’affiche.
 
 #### Actions en masse {#bulk-actions}
 
-En outre, vous pouvez sélectionner jusqu’à 25 audiences différentes et effectuer diverses actions sur ces audiences. Ces actions incluent : [déplacement vers un dossier](#folders), [modification ou application d’une balise](#tags), [application des libellés d’accès](../../access-control/abac/ui/labels.md), et [suppression](#browse).
+En outre, vous pouvez sélectionner jusqu’à 25 audiences différentes et effectuer diverses actions sur ces audiences. Ces actions incluent [le déplacement vers un dossier](#folders), [la modification ou l’application d’une balise](#tags), [l’application d’étiquettes d’accès](../../access-control/abac/ui/labels.md) et [la suppression](#browse).
 
-![Les options disponibles pour les actions en bloc sont mises en surbrillance.](../images/ui/audience-portal/bulk-actions.png)
+![ Les options disponibles pour les actions en masse sont mises en surbrillance.](../images/ui/audience-portal/bulk-actions.png)
 
 Lorsque vous appliquez des actions en bloc à ces audiences, les conditions suivantes s’appliquent :
 
-- You **can** sélectionner des audiences à partir de différentes pages ;
-- You **cannot** supprimer une audience utilisée dans une activation de destination.
-- Si vous sélectionnez un filtre, les audiences sélectionnées **will** réinitialiser.
+- Vous **pouvez** sélectionner des audiences à partir de différentes pages.
+- Vous **ne pouvez pas** supprimer une audience utilisée dans une activation de destination.
+- Si vous sélectionnez un filtre, les audiences sélectionnées **seront réinitialisées.**
 
 ## Détails de l’audience {#audience-details}
 
@@ -312,7 +312,7 @@ Vous pouvez activer les audiences pour une évaluation planifiée à l’aide de
 
 Actuellement, les plannings ne peuvent être créés qu’à l’aide de l’API. Pour obtenir des instructions détaillées sur la création, la modification et l’utilisation des plannings à l’aide de l’API, suivez le tutoriel relatif à l’évaluation des résultats de segmentation et à leur accès, en particulier la section sur [l’évaluation planifiée à l’aide de l’API](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
-![La bascule Planification de toutes les audiences est mise en surbrillance sur Audience Portal.](../images/ui/audience-portal/browse-audiences-scheduled.png)
+![Le bouton bascule de Planification de toutes les audiences est mis en surbrillance sur Audience Portal.](../images/ui/audience-portal/browse-audiences-scheduled.png)
 
 ## Créer une audience {#create-audience}
 
@@ -340,7 +340,7 @@ Sélectionner **[!UICONTROL Créer une règle]** vous dirige vers le créateur d
 
 >[!IMPORTANT]
 >
->Pour importer une audience générée de l’extérieur, vous **must** possèdent les autorisations suivantes : [!UICONTROL Affichage des segments], [!UICONTROL Gestion des segments], et [!UICONTROL Importer une audience]. Pour plus d’informations sur ces autorisations, consultez la [présentation du contrôle d’accès](../../access-control/home.md#permissions).
+>Pour importer une audience générée en externe, vous **devez** disposer des autorisations suivantes : [!UICONTROL Afficher les segments], [!UICONTROL Gérer les segments] et [!UICONTROL Importer une audience]. Pour plus d’informations sur ces autorisations, consultez la [présentation du contrôle d’accès](../../access-control/home.md#permissions).
 
 Vous pouvez sélectionner **[!UICONTROL Importer une audience]** pour importer une audience générée en externe.
 
@@ -360,7 +360,7 @@ Après avoir sélectionné le fichier CSV à importer, une liste de données d�
 
 La page **[!UICONTROL Détails de l’audience]** s’affiche. Vous pouvez ajouter des informations sur votre audience, notamment son nom, sa description, son identité principale et sa valeur d’espace de noms d’identité.
 
-Lors de l&#39;import de l&#39;audience générée en externe, vous devez sélectionner l&#39;une des colonnes pour le champ d&#39;identité principal et spécifier la valeur de l&#39;espace de noms. Veuillez noter que tous les champs restants seront pris en compte. **attributs payload**. Ces attributs sont considérés comme **non durable**, car ils ne sont associés à cette audience qu’à des fins de personnalisation, et sont **not** connecté au profil.
+Lors de l&#39;import de l&#39;audience générée en externe, vous devez sélectionner l&#39;une des colonnes pour le champ d&#39;identité principal et spécifier la valeur de l&#39;espace de noms. Notez que tous les champs restants seront considérés comme des **attributs de payload**. Ces attributs sont considérés comme **non durables**, car ils ne seront associés à cette audience qu’à des fins de personnalisation et ne sont **pas** connectés au profil.
 
 ![La page [!UICONTROL Détails de l’audience] s’affiche.](../images/ui/audience-portal/import-audience-audience-details.png)
 
@@ -370,7 +370,7 @@ Vous pouvez également éventuellement ajouter des détails supplémentaires à 
 >
 >Si vous utilisez un identifiant d’audience externe personnalisé, celui-ci doit respecter les instructions suivantes :
 >
-> - It **must** commencer par une lettre (a-z ou A-Z), un trait de soulignement (_) ou un symbole du dollar ($).
+> - Il **must** commence par une lettre (a-z ou A-Z), un trait de soulignement (_) ou un signe dollar ($).
 > - Tous les caractères suivants peuvent être alphanumériques (a-z, A-Z, 0-9), des traits de soulignement (_) ou des signes dollar ($).
 
 Après avoir renseigné les détails de votre audience, sélectionnez **[!UICONTROL Suivant]**.
@@ -387,7 +387,7 @@ Une fois que les détails sont corrects, sélectionnez **[!UICONTROL Terminer]**
 >
 >Par défaut, les audiences générées en externe ont une expiration de données de 30 jours. L’expiration des données est réinitialisée si l’audience est mise à jour ou modifiée de quelque manière que ce soit.
 >
->De plus, si votre audience générée en externe contient des informations sensibles et/ou liées à la santé, vous **must** appliquez les libellés d’utilisation des données nécessaires avant de l’activer vers n’importe quelle destination. Puisque les variables des audiences générées de l’extérieur sont stockées dans le lac de données plutôt que dans Real-time Customer Profile, vous devez **not** inclure des données de consentement dans votre fichier CSV ; Pour plus d’informations sur l’application des libellés d’utilisation des données, consultez la documentation sur [gestion des libellés](../../access-control/abac/ui/labels.md).
+>De plus, si votre audience générée en externe contient des informations sensibles et/ou liées à la santé, vous **devez** appliquer les libellés d’utilisation des données nécessaires avant de l’activer vers n’importe quelle destination. Puisque les variables provenant d’audiences générées de l’extérieur sont stockées dans le lac de données plutôt que dans Real-time Customer Profile, vous devez **ne pas** inclure des données de consentement dans votre fichier CSV. Pour plus d’informations sur l’application des libellés d’utilisation des données, consultez la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md).
 
 ## Étapes suivantes
 
@@ -395,4 +395,4 @@ Après avoir lu cet aperçu, vous devriez pouvoir utiliser Audience Portal pour 
 
 Pour plus d’informations sur l’utilisation de l’IU de Segmentation Service, consultez la [Vue d’ensemble de l’IU de Segmentation Service](./overview.md).
 
-Pour connaître les questions les plus fréquemment posées sur Audience Portal, veuillez lire le [questions fréquentes](../faq.md).
+Pour obtenir les questions les plus fréquemment posées sur Audience Portal, veuillez lire les [ questions fréquentes](../faq.md).
