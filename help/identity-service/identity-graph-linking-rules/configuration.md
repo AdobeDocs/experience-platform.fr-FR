@@ -2,10 +2,10 @@
 title: Guide de configuration des règles de liaison de graphique d’identités
 description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec des configurations de règles de liaison de graphiques d’identités.
 badge: Version bêta
-source-git-commit: d8a36650b2cd3ec9683763f536ea5c2c2e27455c
+source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
 workflow-type: tm+mt
-source-wordcount: '696'
-ht-degree: 5%
+source-wordcount: '807'
+ht-degree: 4%
 
 ---
 
@@ -26,29 +26,28 @@ Composition détaillé :
 
 Avant de commencer, vous devez vous assurer que les événements authentifiés de votre système contiennent toujours un identifiant de personne.
 
-<!-- ## Set permissions {#set-permissions}
+## Définition des autorisations {#set-permissions}
 
-The first step in the implementation process for Identity Service is to ensure that your Experience Platform account is added to a role that is provisioned with the necessary permissions. Your administrator can configure permissions for your account by navigating to the Permissions UI in Adobe Experience Cloud. From there, your account must be added to a role with the following permissions:
+La première étape du processus de mise en oeuvre d’Identity Service consiste à s’assurer que votre compte Experience Platform est ajouté à un rôle doté des autorisations nécessaires. Votre administrateur peut configurer les autorisations de votre compte en accédant à l’interface utilisateur Autorisations de Adobe Experience Cloud. À partir de là, votre compte doit être ajouté à un rôle avec les autorisations suivantes :
 
-* manage-identity-settings
-* view-identity-dashboard
-* view-identity-simulation
+* [!UICONTROL Afficher les paramètres d’identité] : appliquez cette autorisation pour pouvoir afficher les espaces de noms uniques et la priorité d’espace de noms dans la page de navigation de l’espace de noms d’identité.
+* [!UICONTROL Modifier les paramètres d’identité] : appliquez cette autorisation pour pouvoir modifier et enregistrer vos paramètres d’identité.
 
-For more information on permissions, read the [permissions guide](../../access-control/abac/ui/permissions.md). -->
+Pour plus d’informations sur les autorisations, consultez le [guide des autorisations](../../access-control/abac/ui/permissions.md).
 
 ## Création des espaces de noms d’identité {#namespace}
 
-Si vos données en ont besoin, vous devez d’abord créer les espaces de noms appropriés pour votre organisation. Pour savoir comment créer un espace de noms personnalisé, consultez le guide sur [création d’un espace de noms personnalisé dans l’interface utilisateur](../features/namespaces.md#create-custom-namespaces).
+Si vos données en ont besoin, vous devez d’abord créer les espaces de noms appropriés pour votre organisation. Pour savoir comment créer un espace de noms personnalisé, consultez le guide sur la [création d’un espace de noms personnalisé dans l’interface utilisateur](../features/namespaces.md#create-custom-namespaces).
 
 ## Utiliser l&#39;outil de simulation graphique {#graph-simulation}
 
-Ensuite, accédez au [outil de simulation graphique](./graph-simulation.md) dans l’espace de travail de l’interface utilisateur d’Identity Service. Vous pouvez utiliser l’outil de simulation graphique pour simuler des graphiques d’identités, créés avec différentes configurations de priorité d’espace de noms et d’espace de noms uniques.
+Ensuite, accédez à l’[outil de simulation graphique](./graph-simulation.md) dans l’espace de travail de l’interface utilisateur d’Identity Service. Vous pouvez utiliser l’outil de simulation graphique pour simuler des graphiques d’identités, créés avec différentes configurations de priorité d’espace de noms et d’espace de noms uniques.
 
 En créant différentes configurations, vous pouvez utiliser l’outil de simulation graphique pour découvrir et mieux comprendre comment l’algorithme d’optimisation des identités et certaines configurations peuvent affecter le comportement de votre graphique.
 
 ## Configuration des paramètres d’identité {#identity-settings}
 
-Une fois que vous avez une meilleure idée du comportement de votre graphique, accédez au [outil des paramètres d’identité](./identity-settings-ui.md) dans l’espace de travail de l’interface utilisateur d’Identity Service.
+Une fois que vous avez une meilleure idée du comportement de votre graphique, accédez à l’ [outil de paramètres d’identité](./identity-settings-ui.md) dans l’espace de travail de l’interface utilisateur d’Identity Service.
 
 Utilisez l’outil de paramètres d’identité pour désigner vos espaces de noms uniques et configurer vos espaces de noms par ordre de priorité. Une fois que vous avez terminé d’appliquer vos paramètres, vous devez attendre au moins six heures avant de pouvoir procéder à l’ingestion des données, car au moins six heures sont nécessaires pour que les nouveaux paramètres soient reflétés dans Identity Service.
 
@@ -58,13 +57,13 @@ Une fois vos espaces de noms uniques et vos priorités d’espace de noms établ
 
 Pour ingérer des données dans Real-time Customer Profile, vous devez vous assurer que votre schéma contient au moins un champ qui a été désigné comme identité principale. En définissant une identité principale, vous pouvez activer un schéma donné pour l’ingestion de profils.
 
-Pour plus d’informations sur la création d’un schéma, consultez le guide sur [création d’un schéma XDM dans l’interface utilisateur](../../xdm/tutorials/create-schema-ui.md).
+Pour plus d’informations sur la création d’un schéma, consultez le guide sur la [création d’un schéma XDM dans l’interface utilisateur](../../xdm/tutorials/create-schema-ui.md).
 
 ## Créer un jeu de données {#dataset}
 
 Créez ensuite un jeu de données afin de fournir une structure pour les données que vous allez ingérer. Un jeu de données est une structure de stockage et de gestion pour une collection de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les jeux de données fonctionnent en tandem avec les schémas. Pour ingérer des données dans Real-time Customer Profile, votre jeu de données doit être activé pour l’ingestion de Profile. Pour que votre jeu de données soit activé pour Profile, il doit référencer un schéma activé pour l’ingestion de Profile.
 
-Pour plus d’informations sur la création d’un jeu de données, consultez la section [guide de l’interface utilisateur des jeux de données](../../catalog/datasets/user-guide.md).
+Pour plus d’informations sur la création d’un jeu de données, consultez le [guide de l’interface utilisateur du jeu de données](../../catalog/datasets/user-guide.md).
 
 ## Ingestion de données {#ingest}
 
@@ -86,4 +85,4 @@ Une fois que tous les éléments sont répertoriés ci-dessus, vous pouvez comme
 >
 >Une fois vos données ingérées, la charge utile des données brutes XDM ne change pas. Il se peut que vos configurations d’identité principale s’affichent toujours dans l’interface utilisateur. Toutefois, ces configurations seront remplacées par les paramètres d’identité.
 
-Pour tout commentaire, utilisez la variable **[!UICONTROL Commentaires Beta]** dans l’espace de travail de l’interface utilisateur d’Identity Service.
+Pour tout commentaire, utilisez l’option **[!UICONTROL Commentaires Beta]** dans l’espace de travail de l’interface utilisateur d’Identity Service.

@@ -3,9 +3,9 @@ title: Priorité d’espace de noms
 description: Découvrez la priorité des espaces de noms dans Identity Service.
 badge: Version bêta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 5674309e4e8f17ad4c951ec4a5cb0cbc0a15ab03
+source-git-commit: 5d19a22dc8d1b7f0151008d14b2f5bf89c85c638
 workflow-type: tm+mt
-source-wordcount: '1519'
+source-wordcount: '1574'
 ht-degree: 2%
 
 ---
@@ -37,7 +37,7 @@ Si la structure graphique de votre organisation est superposée, la priorité de
 >
 >* Un graphique à couches fait référence à des graphiques d’identités qui comportent plusieurs niveaux de liens. Affichez l’image ci-dessous pour obtenir un exemple de graphique avec trois calques.
 
-![Diagramme de calques graphiques](../images/namespace-priority/graph-layers.png)
+![ Diagramme des calques graphiques ](../images/namespace-priority/graph-layers.png)
 
 ### Signification sémantique de l’espace de noms
 
@@ -49,15 +49,15 @@ Une identité représente un objet réel. Trois objets sont représentés dans l
 
 Les espaces de noms de personne sont relativement immuables par rapport aux appareils matériels (comme IDFA, GAID), qui sont relativement immuables par rapport aux navigateurs web. En gros, vous (personne) serez toujours une seule entité, qui peut avoir plusieurs appareils (téléphone, ordinateur portable, tablette, etc.) et utiliser plusieurs navigateurs (Google Chrome, Safari, FireFox, etc.)
 
-Une autre façon d&#39;aborder ce sujet est la cardinalité. Pour une entité de personne donnée, combien d’identités seront créées ? Dans la plupart des cas, une personne dispose d’un identifiant CRM, d’une poignée d’identifiants d’appareil matériel (les réinitialisations IDFA/GAID ne doivent pas se produire souvent) et d’encore plus de cookies (un individu peut facilement naviguer sur plusieurs appareils, utiliser le mode incognito ou réinitialiser les cookies à tout moment). En général, **une cardinalité inférieure indique un espace de noms avec une valeur supérieure.**.
+Une autre façon d&#39;aborder ce sujet est la cardinalité. Pour une entité de personne donnée, combien d’identités seront créées ? Dans la plupart des cas, une personne dispose d’un identifiant CRM, d’une poignée d’identifiants d’appareil matériel (les réinitialisations IDFA/GAID ne doivent pas se produire souvent) et d’encore plus de cookies (un individu peut facilement naviguer sur plusieurs appareils, utiliser le mode incognito ou réinitialiser les cookies à tout moment). En règle générale, **la cardinalité inférieure indique un espace de noms avec une valeur supérieure**.
 
 ## Validation des paramètres de priorité de votre espace de noms
 
-Une fois que vous avez une idée de la manière dont vous hiérarchisez vos espaces de noms, vous pouvez utiliser l’outil Simulation de graphique pour tester différents scénarios de réduction des graphiques et vous assurer que vos configurations de priorité renvoient les résultats graphiques attendus. Pour plus d’informations, consultez le guide sur l’utilisation de la variable [Outil de simulation graphique](./graph-simulation.md).
+Une fois que vous avez une idée de la manière dont vous hiérarchisez vos espaces de noms, vous pouvez utiliser l’outil Simulation de graphique pour tester différents scénarios de réduction des graphiques et vous assurer que vos configurations de priorité renvoient les résultats graphiques attendus. Pour plus d’informations, lisez le guide sur l’utilisation de l’ [outil de simulation graphique](./graph-simulation.md).
 
 ## Configurer la priorité des espaces de noms
 
-La priorité des espaces de noms peut être configurée à l’aide de [!UICONTROL Paramètres d’identité]. Dans le [!UICONTROL Paramètres d’identité] , vous pouvez faire glisser et déposer un espace de noms pour déterminer son importance relative.
+La priorité des espaces de noms peut être configurée à l’aide de [!UICONTROL Paramètres d’identité]. Dans l’interface [!UICONTROL Paramètres d’identité], vous pouvez faire glisser et déposer un espace de noms pour déterminer son importance relative.
 
 >[!IMPORTANT]
 >
@@ -65,28 +65,28 @@ La priorité des espaces de noms peut être configurée à l’aide de [!UICONTR
 
 ## Utilisation des priorités des espaces de noms
 
-Actuellement, la priorité d’espace de noms influence le comportement du système de Real-Time Customer Profile. Le diagramme ci-dessous illustre ce concept. Pour plus d’informations, consultez le guide sur [Diagrammes d’architecture de Adobe Experience Platform et d’applications](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Actuellement, la priorité d’espace de noms influence le comportement du système de Real-Time Customer Profile. Le diagramme ci-dessous illustre ce concept. Pour plus d’informations, consultez le guide sur les [diagrammes d’architecture Adobe Experience Platform et d’applications](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
-![Diagramme de la portée de l’application de priorité des espaces de noms](../images/namespace-priority/application-scope.png)
+![ Diagramme de la portée de l’application de la priorité d’espace de noms ](../images/namespace-priority/application-scope.png)
 
 ### Identity Service : algorithme d’optimisation des identités
 
-Pour les structures graphiques relativement complexes, la priorité des espaces de noms joue un rôle important pour s’assurer que les liens corrects sont supprimés lorsque des scénarios de réduction des graphiques se produisent. Pour plus d’informations, lisez la section [[!DNL Identity Optimization Algorithm] aperçu](../identity-graph-linking-rules/identity-optimization-algorithm.md).
+Pour les structures graphiques relativement complexes, la priorité des espaces de noms joue un rôle important pour s’assurer que les liens corrects sont supprimés lorsque des scénarios de réduction des graphiques se produisent. Pour plus d’informations, consultez la [présentation de l’algorithme d’optimisation des identités](../identity-graph-linking-rules/identity-optimization-algorithm.md).
 
 ### Real-Time Customer Profile : détermination de l’identité principale pour les événements d’expérience
 
 * Pour les événements d’expérience, une fois que vous avez configuré les paramètres d’identité pour un environnement de test donné, l’identité principale sera déterminée par la priorité d’espace de noms la plus élevée.
    * En effet, les événements d’expérience sont dynamiques par nature. Un mappage d’identité peut contenir trois identités ou plus et la priorité de l’espace de noms garantit que l’espace de noms le plus important est associé à l’événement d’expérience.
-* Par conséquent, les configurations suivantes **ne sera plus utilisé par Real-time Customer Profile.**:
+* Par conséquent, les configurations **suivantes ne seront plus utilisées par Real-Time Customer Profile** :
    * Case à cocher &quot;Principal&quot; sur le type d’élément de données dans WebSDK.
    * Tous les champs marqués comme identité principale sur un schéma de classe d’événement d’expérience XDM.
    * Paramètres d’identité principale par défaut dans le connecteur source Adobe Analytics (ECID ou AAID).
-* D&#39;un autre côté, **la priorité d’espace de noms ne détermine pas l’identité principale des enregistrements de profil**.
-   * Pour les enregistrements de profil, vous pouvez utiliser l’espace de travail des schémas de l’interface utilisateur de l’Experience Platform pour définir vos champs d’identité, y compris l’identité principale. Lisez le guide sur [définition des champs d’identité dans l’interface utilisateur](../../xdm/ui/fields/identity.md) pour plus d’informations.
+* D’un autre côté, la priorité **espace de noms ne détermine pas l’identité principale des enregistrements de profil**.
+   * Pour les enregistrements de profil, vous pouvez utiliser l’espace de travail des schémas de l’interface utilisateur de l’Experience Platform pour définir vos champs d’identité, y compris l’identité principale. Pour plus d’informations, consultez le guide sur la [définition des champs d’identité dans l’interface utilisateur](../../xdm/ui/fields/identity.md) .
 
 >[!NOTE]
 >
->* La priorité Espace de noms est **une propriété d’un espace de noms ;**. Il s’agit d’une valeur numérique attribuée à un espace de noms pour indiquer son importance relative.
+>* La priorité de l’espace de noms est **une propriété d’un espace de noms**. Il s’agit d’une valeur numérique attribuée à un espace de noms pour indiquer son importance relative.
 >
 >* L’identité de Principal est l’identité par laquelle un fragment de profil est stocké. Un fragment de profil est un enregistrement de données qui stocke des informations sur un utilisateur spécifique : des attributs (généralement ingérés via des enregistrements CRM) ou des événements (généralement ingérés à partir d’événements d’expérience ou de données en ligne).
 
@@ -120,7 +120,7 @@ Compte tenu des configurations décrites ci-dessus, les actions de l’utilisate
 
 ### Segmentation Service : stockage des métadonnées d’adhésion à un segment
 
-![Un diagramme du stockage de l’adhésion aux segments](../images/namespace-priority/segment-membership-storage.png)
+![ Diagramme de stockage de l’adhésion au segment ](../images/namespace-priority/segment-membership-storage.png)
 
 Pour un profil fusionné donné, les appartenances au segment sont stockées par rapport à l’identité avec l’espace de noms de priorité la plus élevée.
 
@@ -144,19 +144,25 @@ Les demandes de suppression d’enregistrements d’hygiène des données foncti
 * Profil client en temps réel : supprime tout fragment de profil avec une identité spécifiée comme identité principale. **L’identité principale sur Profile sera désormais déterminée en fonction de la priorité de l’espace de noms.**
 * Lac de données : supprime tout enregistrement avec l’identité spécifiée comme identité principale.
 
-Pour plus d’informations, consultez la section [présentation avancée de la gestion du cycle de vie](../../hygiene/home.md).
+Pour plus d’informations, consultez la [présentation de la gestion avancée du cycle de vie](../../hygiene/home.md).
+
+### Attributs calculés
+
+Les attributs calculés n’utilisent pas la priorité d’espace de noms pour calculer les valeurs. Si vous utilisez des attributs calculés, vous devez vous assurer que l’identifiant CRM est désigné comme votre identité principale pour WebSDK. Cette limitation devrait être résolue en août 2024.
+
+Pour plus d’informations, consultez le [guide de l’interface utilisateur des attributs calculés](../../profile/computed-attributes/ui.md).
 
 ### Lac de données
 
-L’ingestion de données vers le lac de données continuera à respecter les paramètres d’identité principaux configurés sur [SDK Web](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) et schémas.
+L’ingestion de données vers le lac de données continuera à respecter les paramètres d’identité principaux configurés sur le [SDK Web](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) et les schémas.
 
 Le lac de données ne détermine pas l’identité principale en fonction de la priorité de l’espace de noms. Par exemple, Adobe Customer Journey Analytics continuera à utiliser les valeurs dans la carte d’identité même après l’activation de la priorité d’espace de noms (par exemple, l’ajout d’un jeu de données à une nouvelle connexion), car Customer Journey Analytics utilise leurs données du lac de données.
 
 ### Schémas de modèle de données d’expérience (XDM)
 
-Tout schéma qui n’est pas un événement d’expérience XDM, tel que les profils individuels XDM, continuera à honorer tout [champs que vous marquez comme identité](../../xdm/ui/fields/identity.md).
+Tout schéma qui n’est pas un événement d’expérience XDM, tel que les profils individuels XDM, continuera à honorer tous les champs [que vous marquez comme identité](../../xdm/ui/fields/identity.md).
 
-Pour plus d’informations sur les schémas XDM, consultez la section [présentation des schémas](../../xdm/home.md).
+Pour plus d’informations sur les schémas XDM, consultez la [présentation des schémas](../../xdm/home.md).
 
 ### Services intelligents
 
@@ -171,9 +177,9 @@ Pour plus d’informations sur, lisez les documents sur [Attribution AI](../../i
 
 ### Privacy Service
 
-[Demandes de suppression Privacy Service](../privacy.md) fonctionne de la manière suivante, pour une identité donnée :
+La fonction [Demandes de suppression de Privacy Service](../privacy.md) fonctionne de la manière suivante pour une identité donnée :
 
 * Profil client en temps réel : supprime tout fragment de profil avec une valeur d’identité spécifiée comme identité principale. **L’identité principale sur Profile sera désormais déterminée en fonction de la priorité de l’espace de noms.**
 * Lac de données : supprime tout enregistrement avec l’identité spécifiée comme identité principale ou secondaire.
 
-Pour plus d’informations, consultez la section [Présentation de Privacy Service](../../privacy-service/home.md).
+Pour plus d’informations, consultez la [présentation de Privacy Service](../../privacy-service/home.md).

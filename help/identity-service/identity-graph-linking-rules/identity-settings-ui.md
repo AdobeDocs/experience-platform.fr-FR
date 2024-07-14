@@ -1,12 +1,10 @@
 ---
 title: Interface utilisateur des paramètres d’identité
 description: Découvrez comment utiliser l’interface utilisateur des paramètres d’identité.
-hide: true
-hidefromtoc: true
 badge: Version bêta
-source-git-commit: 605aa5ed2db2bfd7f787f2dff9fa00cee2afbce6
+source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
@@ -19,12 +17,13 @@ ht-degree: 0%
 
 Les paramètres d’identité sont une fonctionnalité de l’interface utilisateur du service Adobe Experience Platform Identity que vous pouvez utiliser pour désigner des espaces de noms uniques et configurer la priorité des espaces de noms.
 
-Lisez ce guide pour savoir comment utiliser l’outil de paramètres d’identité.
+Lisez ce guide pour savoir comment configurer vos paramètres d’identité dans l’interface utilisateur.
 
-## Prérequis
+## Conditions préalables
 
 Lisez les documents suivants avant de commencer à utiliser les paramètres d’identité :
 
+* [Guide de configuration des règles de liaison de graphique d’identités](./configuration.md)
 * [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
 * [Priorité d’espace de noms](./namespace-priority.md)
 * [Simulation graphique](./graph-simulation.md)
@@ -33,30 +32,32 @@ Lisez les documents suivants avant de commencer à utiliser les paramètres d’
 
 Pour accéder aux paramètres d’identité, accédez à l’espace de travail Identity Service dans l’interface utilisateur de Adobe Experience Platform, puis sélectionnez **[!UICONTROL Paramètres]**.
 
-![Bouton des paramètres d’identité sélectionné.](../images/rules/identity-ui.png)
-
-La page des paramètres d’identité s’affiche et vous recevez un message de confirmation vous rappelant de tester et de valider vos paramètres d’identité dans un environnement de test de développement avant d’avoir terminé les configurations dans un environnement de test de production.
-
-![La page des paramètres d’identité.](../images/rules/identity-settings.png)
+![Bouton des paramètres d&#39;identité sélectionné.](../images/rules/identities-ui.png)
 
 La page des paramètres d’identité est divisée en deux sections : [!UICONTROL Espaces de noms de personne] et [!UICONTROL Espaces de noms d’appareil ou de cookie]. Les espaces de noms de personne sont des identifiants pour des individus uniques. Il peut s’agir d’identifiants multi-appareils, d’adresses électroniques et de numéros de téléphone. Les espaces de noms d’appareil ou de cookie sont des identifiants pour les appareils et les navigateurs web et ne peuvent pas avoir une priorité plus élevée que les espaces de noms de personne. Vous ne pouvez pas non plus désigner un espace de noms d’appareil ou de cookie comme espace de noms unique.
-
-### Désigner votre espace de noms unique
-
-Pour désigner un espace de noms unique, sélectionnez la variable [!UICONTROL Unique par graphique] correspondant à cet espace de noms. Vous pouvez sélectionner plusieurs espaces de noms uniques pour la configuration des paramètres d’identité.
-
-![Deux espaces de noms uniques sélectionnés.](../images/rules/unique-namespaces.png)
-
-Une fois vos espaces de noms uniques définis, les graphiques ne pourront plus avoir plusieurs identités contenant un espace de noms unique. Par exemple, si vous avez désigné Analytics Custom ID comme espace de noms unique, un graphique ne peut avoir qu’une seule identité avec l’espace de noms Analytics Custom ID. Pour plus d’informations, consultez la section [algorithme d’optimisation des identités - Aperçu](./identity-optimization-algorithm.md#unique-namespace).
 
 ### Configurer la priorité des espaces de noms
 
 Pour configurer la priorité des espaces de noms, sélectionnez un espace de noms dans le menu des paramètres d’identité, puis faites glisser-le et déposez-le dans l’ordre de votre choix. Placez un espace de noms plus haut sur la liste pour lui donner une priorité plus élevée, et inversement, placez un espace de noms plus bas sur la liste pour lui donner une priorité plus faible. L’espace de noms ayant la priorité la plus élevée doit également être désigné comme un espace de noms unique.
 
-Lorsque vous avez terminé vos configurations, sélectionnez **[!UICONTROL Suivant]**. Un message de confirmation s’affiche. Utilisez cette opportunité pour vérifier que vos configurations sont correctes, puis sélectionnez **[!UICONTROL Terminer]**.
+![Espace de travail des paramètres d’identité avec un espace de noms de personne en surbrillance.](../images/rules/namespace-priority.png)
 
-![Page de validation.](../images/rules/validate.png)
+### Désigner votre espace de noms unique
 
-Un avertissement s’affiche indiquant que vos nouveaux paramètres n’auront aucune incidence sur les liens existants dans un graphique d’identités et les fragments de profil d’événement d’expérience qui ont déjà été ingérés. Pour confirmer, saisissez le nom de votre environnement de test, puis sélectionnez **[!UICONTROL Confirmer]**.
+Pour désigner un espace de noms unique, cochez la case [!UICONTROL Unique per graph] correspondant à cet espace de noms. Vous pouvez sélectionner plusieurs espaces de noms uniques pour la configuration des paramètres d’identité.
 
-![La fenêtre de confirmation.](../images/rules/confirm.png)
+![Deux espaces de noms sélectionnés et définis comme uniques.](../images/rules/unique-namespace.png)
+
+Une fois vos espaces de noms uniques définis, les graphiques ne pourront plus avoir plusieurs identités contenant un espace de noms unique. Par exemple, si vous avez désigné l’identifiant CRM comme un espace de noms unique, un graphique ne peut avoir qu’une seule identité avec l’espace de noms de l’identifiant CRM. Pour plus d’informations, consultez la [présentation de l’algorithme d’optimisation des identités](./identity-optimization-algorithm.md#unique-namespace).
+
+Lorsque vos configurations sont terminées, sélectionnez **[!UICONTROL Suivant]**. Un message de confirmation s’affiche. Utilisez cette opportunité pour vérifier que vos configurations sont correctes, puis sélectionnez **[!UICONTROL Terminer]**.
+
+![ La page de validation avec l’option Terminer mise en surbrillance.](../images/rules/finish.png)
+
+Un avertissement s’affiche indiquant que vos nouveaux paramètres n’auront aucune incidence sur les liens existants dans un graphique d’identités et les fragments de profil d’événement d’expérience qui ont déjà été ingérés. En outre, vous êtes averti que la prise en compte de vos nouveaux paramètres dans le système prendra jusqu’à six heures. Pour confirmer, saisissez le nom de votre environnement de test, puis sélectionnez **[!UICONTROL Confirmer]**.
+
+![Fenêtre de confirmation qui affiche un avertissement de retard de six heures avant le traitement des configurations.](../images/rules/confirm-settings.png)
+
+## Étapes suivantes
+
+Vous avez maintenant configuré les priorités de vos espaces de noms et désigné vos espaces de noms uniques à l’aide de la page d’interface utilisateur des paramètres d’identité. Pour plus d’informations, consultez la [présentation des règles de liaison de graphiques d’identités](./overview.md).
