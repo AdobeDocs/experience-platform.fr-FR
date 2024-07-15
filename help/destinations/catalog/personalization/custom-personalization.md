@@ -3,10 +3,10 @@ keywords: personnalisation personnalisée;destination;destination personnalisée
 title: Connexion de personnalisation personnalisée
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer les informations d’audience de Adobe Experience Platform. Cette destination fournit une personnalisation en temps réel basée sur l’appartenance à l’audience du profil utilisateur.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 182176aa2e588aa356d5fea23b49f17bc8a50314
 workflow-type: tm+mt
-source-wordcount: '906'
-ht-degree: 58%
+source-wordcount: '912'
+ht-degree: 57%
 
 ---
 
@@ -17,15 +17,15 @@ ht-degree: 58%
 
 | Mois de publication | Type de mise à jour | Description |
 |---|---|---|
-| Mai 2023 | Nouvelles fonctionnalités et mise à jour de la documentation | En mai 2023, la **[!UICONTROL Personnalisation personnalisée]** prise en charge de la connexion [personnalisation basée sur les attributs](../../ui/activate-edge-personalization-destinations.md#map-attributes) et est généralement disponible pour tous les clients. |
+| Mai 2023 | Nouvelles fonctionnalités et mise à jour de la documentation | Depuis mai 2023, la connexion **[!UICONTROL Personnalisation personnalisée]** prend en charge la [ personnalisation basée sur les attributs](../../ui/activate-edge-personalization-destinations.md#map-attributes) et est généralement disponible pour tous les clients. |
 
 {style="table-layout:auto"}
 
 >[!IMPORTANT]
 >
->Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, vous devez utiliser la variable [API du serveur Edge Network](/help/server-api/overview.md) lors de la configuration de la variable **[!UICONTROL Personalization personnalisée]** destination pour la personnalisation basée sur les attributs. Tous les appels de l’API du serveur doivent être effectués dans une [contexte authentifié](../../../server-api/authentication.md).
+>Les attributs de profil peuvent contenir des données sensibles. Pour protéger ces données, vous devez utiliser l’[ API serveur Edge Network](/help/server-api/overview.md) lors de la configuration de la destination **[!UICONTROL Personalization personnalisé]** pour la personnalisation basée sur les attributs. Tous les appels de l’API du serveur doivent être effectués dans un [contexte authentifié](../../../server-api/authentication.md).
 >
-><br>Si vous utilisez déjà le SDK Web ou le SDK mobile pour votre intégration, vous pouvez récupérer les attributs via l’API serveur en ajoutant une intégration côté serveur.
+><br>Vous pouvez récupérer les attributs de profil via l’ [API serveur Edge Network](/help/server-api/overview.md) en ajoutant une intégration côté serveur qui utilise le même flux de données que celui que vous utilisez déjà pour votre mise en oeuvre de SDK Web ou mobile.
 >
 ><br>Si vous ne respectez pas les exigences ci-dessus, la personnalisation sera basée uniquement sur l’appartenance à l’audience.
 
@@ -39,7 +39,7 @@ Cette intégration est optimisée par le [SDK web Adobe Experience Platform](/he
 
 >[!IMPORTANT]
 >
->Avant de créer une connexion de personnalisation personnalisée, lisez le guide sur la façon de [activation des données d’audience vers les destinations de personnalisation de périphérie](../../ui/activate-edge-personalization-destinations.md). Ce guide vous fait parcourir toutes les étapes de configuration requises pour les cas d’utilisation de la personnalisation de la même page et de la page suivante, sur plusieurs composants Experience Platform.
+>Avant de créer une connexion de personnalisation personnalisée, lisez le guide sur la [activation des données d’audience vers les destinations de personnalisation de périphérie](../../ui/activate-edge-personalization-destinations.md). Ce guide vous fait parcourir toutes les étapes de configuration requises pour les cas d’utilisation de la personnalisation de la même page et de la page suivante, sur plusieurs composants Experience Platform.
 
 ## Audiences prises en charge {#supported-audiences}
 
@@ -69,7 +69,7 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **** et des **** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
@@ -80,7 +80,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 * **[!UICONTROL Nom]** : renseignez le nom de votre choix pour cette destination.
 * **[!UICONTROL Description]** : saisissez une description pour votre destination. Vous pouvez, par exemple, mentionner la campagne pour laquelle vous utilisez cette destination. Ce champ est facultatif.
 * **[!UICONTROL Alias d’intégration]** : cette valeur est envoyée au SDK web Experience Platform sous forme de nom d’objet JSON.
-* **[!UICONTROL Identifiant du flux de données]**: détermine dans quel jeu de données de collecte de données les audiences seront incluses dans la réponse à la page. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration de destination est activée. Voir [Configurer un flux de données](../../../datastreams/overview.md) pour plus d’informations.
+* **[!UICONTROL Identifiant du flux de données]** : détermine dans quel flux de données de collecte de données les audiences seront incluses dans la réponse à la page. Le menu déroulant affiche uniquement les flux de données pour lesquels la configuration de destination est activée. Voir [Configurer un flux de données](../../../datastreams/overview.md) pour plus d’informations.
 
 ### Activer les alertes {#enable-alerts}
 
@@ -92,9 +92,9 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **** et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Lecture [Activation des destinations de personnalisation de périphérie des profils et des audiences](../../ui/activate-edge-personalization-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Lisez la section [Activation des profils et des audiences vers des destinations de personnalisation de périphérie](../../ui/activate-edge-personalization-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ## Données exportées {#exported-data}
 
@@ -156,11 +156,11 @@ alloy("sendEvent", {
   });
 ```
 
-### Exemple de réponse pour [!UICONTROL Personalization Personnalisé Avec Attributs]
+### Exemple de réponse pour [!UICONTROL Personalization personnalisé avec attributs]
 
-Lorsque vous utilisez **[!UICONTROL Personalization Personnalisé Avec Attributs]**, la réponse de l’API ressemblera à l’exemple ci-dessous.
+Lors de l’utilisation de **[!UICONTROL Personalization personnalisé avec des attributs]**, la réponse de l’API ressemblera à l’exemple ci-dessous.
 
-La différence entre **[!UICONTROL Personalization Personnalisé Avec Attributs]** et **[!UICONTROL Personalization personnalisée]** est l’inclusion de la variable `attributes` dans la réponse de l’API.
+La différence entre **[!UICONTROL Personalization personnalisée avec attributs]** et **[!UICONTROL Personalization personnalisé]** réside dans l’inclusion de la section `attributes` dans la réponse de l’API.
 
 ```json
 [
