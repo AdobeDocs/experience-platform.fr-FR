@@ -2,9 +2,9 @@
 title: Présentation de l’assistant AI dans Adobe Experience Platform
 description: Découvrez l’assistant IA, ses nuances, ses cas d’utilisation et comment l’utiliser pour accélérer votre workflow avec Adobe Experience Platform et Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 2bafd80771dc76384d380100f10216853278da2e
+source-git-commit: d950e7ef524dfb487176e51ef25e98c0b5fe8b6c
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '925'
 ht-degree: 9%
 
 ---
@@ -77,7 +77,7 @@ Vous pouvez poser des questions à l’assistant d’IA sur vos informations op�
 | Jeux de données | <ul><li>Nombre de jeux de données</li><li>État d’activation du profil</li><li>Date de création/modification</li><li>Jeu de données - relation de schéma</li><li>Jeu de données - relation avec l’audience</li><li>Jeu de données - relation d’attribut</li><li>Jeu de données - relation de flux de données</li><li>Nommer les recherches </li><li>Recherches de nom et d’identifiant</li></ul> | <ul><li>Journal</li><li>Créé par</li><li>Jeu de données - relation avec le lot</li><li>Création/modification de jeux de données</li><li>Taille du jeu de données</li><li>Nombre de profils</li><li>Nombre de lignes</li><li>Recherches de valeur</li></ul> |
 | Destinations | <ul><li>Nombre de destinations configurées</li><li>Destination - relation avec l’audience</li><li>Relation d’attribut de destination</li></ul> | <ul><li>Configuration du compte</li><li>Informations d’identification du compte</li><li>Profils uniques activés</li></ul> |
 | Parcours | <ul><li>Comptages</li><li>Nommer les recherches</li><li>Recherches de nom et d’identifiant</li><li>Statut du parcours</li><li>État déclenché (audience par rapport aux événements)</li><li>Dates de création/modification</li><li>Fréquence récurrente</li></ul> | <ul><li>Attributs - Relations de parcours</li><li>Journal</li><li>Création/modification</li><li>Créé par</li><li>Événements</li><li>Parcours - jeu de données</li><li>Parcours - schéma</li><li>Offres</li><li>Tendances de qualification des profils</li><li>Événements d’étape</li></ul> |
-| Schémas | <ul><li>Nombre de schémas</li><li>Date de création/modification</li><li>Type de classe de schéma</li><li>Schéma - relation d’attribut</li><li>Schéma - relation avec le jeu de données</li><li>Schéma - relation avec l’audience</li><li>État d’activation du profil</li><li>Nommer les recherches</li><li>Recherches de nom et d’identifiant</li></ul> | <ul><li>Journal</li><li>Création/modification</li><li>Créé par</li><li>Groupes de champs</li><li>Identités</li><li>Espaces de noms d’identité</li><li>Libellés</li><li>Nombre de profils</li></ul> |
+| Schémas | <ul><li>Nombre de schémas</li><li>Date de création/modification</li><li>Schéma - relation d’attribut</li><li>Schéma - relation avec le jeu de données</li><li>Schéma - relation avec l’audience</li><li>État d’activation du profil</li><li>Nommer les recherches</li><li>Recherches de nom et d’identifiant</li></ul> | <ul><li>Journal</li><li>Création/modification</li><li>Créé par</li><li>Groupes de champs</li><li>Identités</li><li>Espaces de noms d’identité</li><li>Libellés</li><li>Nombre de profils</li></ul> |
 | Sources | <ul><li>Nombre de comptes</li><li>État du compte</li><li>Flux de données actifs/inactifs pour chaque compte</li><li>Connecteur Source - relation de flux de données</li><li>Compte Source - relation de flux de données</li></ul> | <ul><li>Informations d’identification du compte</li><li>Configuration du compte</li><li>Mesures d’ingestion de données</li><li>Nombre de profils</li><li>Source - relations par lots</li></ul> |
 
 {style="table-layout:auto"}

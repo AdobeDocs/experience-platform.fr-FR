@@ -2,9 +2,9 @@
 title: Guide de questions pour l’assistant d’IA
 description: Lisez ce document pour découvrir des exemples de questions que vous pouvez utiliser lors de l’interrogation de l’assistant d’IA.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 6860e1dc03920feaf0dfa83d09c4fca8f85a2ac2
+source-git-commit: 196a39edd493dcc8296f4b6d2904393dd6f6cdd4
 workflow-type: tm+mt
-source-wordcount: '1694'
+source-wordcount: '1524'
 ht-degree: 1%
 
 ---
@@ -85,30 +85,6 @@ Les questions suivantes sont regroupées par objet de données et classées comm
    * Pourquoi ne puis-je pas supprimer une audience ?
    * Combien de temps faut-il pour que les audiences soient évaluées et que les résultats soient disponibles pour le ciblage ?
 
-+++Sélectionner pour afficher une liste supplémentaire des invites
-
-* Puis-je supprimer un schéma activé pour le profil une fois les données ingérées ?
-* Comment les groupes d’utilisateurs sont-ils liés aux rôles ?
-* Quand dois-je utiliser un type de données par rapport à un groupe de champs ?&quot;
-* Quelle est la différence entre une identité et une clé primaire ou étrangère ?&quot;
-* Combien de temps faut-il pour que les segments soient évalués et que les résultats soient disponibles pour le ciblage ?
-* Comment est calculé la richesse du profil ?&quot;
-* Indiquez-moi quelques cas d’utilisation courants pour Real-Time CDP.
-* Pourquoi ne puis-je pas supprimer un segment ?
-* Quel type de modifications puis-je effectuer une fois qu’un schéma a été activé pour le profil ?
-* Pourquoi ne puis-je pas accéder aux tableaux de bord dans AEP ?
-* Combien de segments utilisent l’attribut xdm {FIELD_PATH}
-* Ai-je des segments qui sont utilisés dans d’autres segments ?
-* Quels champs du schéma {SCHEMA_NAME} contiennent {STRING} ?
-* Quelles audiences ont l’attribut xdm {FULL_ATTRIBUTE_PATH} dans leur définition de segment ?
-* Quels schémas comportent l’attribut xdm {FULL_ATTRIBUTE_PATH} ?
-* Quels flux de données sources ne sont pas utilisés ou ne contiennent plus de données ?
-* Liste des parcours vivants que j&#39;ai.
-* Répertorier les audiences utilisées dans les parcours en direct.
-* Quelles sont les sources actives ?
-
-+++
-
 ## Expression de vos questions {#phrasing-your-questions}
 
 Vous devez envoyer vos questions à l’assistant d’IA avec clarté et contexte afin d’obtenir une réponse aussi précise que possible. Reportez-vous à la liste suivante de conseils pour savoir comment poser une question claire avec contexte :
@@ -147,7 +123,7 @@ Vous trouverez ci-dessous une liste d’exemples de questions qui ne sont actuel
 
 ### Informations opérationnelles
 
-* Combien de profils dans cet environnement de test [répondent à un critère spécifique, par exemple &quot;vivent en Californie&quot;] ?
+* Combien de profils de cet environnement de test vivent en Californie ? (**Remarque** : pour des questions similaires, vous devez fournir un critère spécifique afin de donner suffisamment de contexte à votre requête. Dans ce cas, le critère spécifique est &quot;En situation de vie en Californie&quot;).
 * Dans quels segments se trouve ce profil {PROFILE_INFO/ATTRIBUTE_VALUE} ?
 * Combien de profils du jeu de données comportent un email ?
 * Quel jeu de données représente le nombre maximal de profils dans cet environnement de test ?
