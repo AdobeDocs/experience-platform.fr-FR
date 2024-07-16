@@ -3,7 +3,8 @@ solution: Experience Platform
 title: Prise en main de l’API des balises unifiées
 description: La documentation suivante fournit des informations supplémentaires dont vous avez besoin pour travailler avec l’API des balises unifiées.
 role: Developer
-source-git-commit: 8280281fa8b676b13c0601e2c9a50515ce8979c3
+exl-id: 8f33707f-b46d-4054-802c-9e42ecabd9ba
+source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 44%
@@ -18,7 +19,7 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 ## Lecture d’exemples d’appels API
 
-La documentation de l’API des balises unifiées fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur [lecture d’exemples d’appels API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage de l’Experience Platform.
+La documentation de l’API des balises unifiées fournit des exemples d’appels API pour démontrer comment formater vos requêtes. Il s’agit notamment de chemins d’accès, d’en-têtes requis et de payloads de requêtes correctement formatés. L’exemple JSON renvoyé dans les réponses de l’API est également fourni. Pour plus d’informations sur les conventions utilisées dans la documentation pour les exemples d’appels API, consultez la section sur la [lecture d’exemples d’appels API](../../landing/troubleshooting.md#how-do-i-format-an-api-request) dans le guide de dépannage de l’Experience Platform.
 
 ## En-têtes requis
 
@@ -38,4 +39,4 @@ Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sa
 
 ## Étapes suivantes
 
-Pour lancer des appels à l’aide de l’API des balises unifiées, sélectionnez l’un des guides de point de terminaison disponibles à l’aide du volet de navigation de gauche ou dans la balise [présentation du guide de développement](./overview.md)
+Pour lancer des appels à l’aide de l’API des balises unifiées, sélectionnez l’un des guides de point de terminaison disponibles à l’aide du volet de navigation de gauche ou dans la [présentation du guide de développement](./overview.md)

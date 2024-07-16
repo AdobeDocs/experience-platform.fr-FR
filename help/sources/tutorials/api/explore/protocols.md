@@ -6,16 +6,16 @@ description: Ce tutoriel utilise l’API Flow Service pour explorer les applicat
 exl-id: e4b24312-543e-4014-aa53-e8ca9c620950
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 41%
+source-wordcount: '585'
+ht-degree: 39%
 
 ---
 
-# Explorez un système de protocole à l’aide de la méthode [!DNL Flow Service] API
+# Explorez un système de protocole à l’aide de l’API [!DNL Flow Service]
 
-[!DNL Flow Service] sert à collecter et à centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisé pour collecter et centraliser des données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
 
-Ce tutoriel utilise la méthode [!DNL Flow Service] API pour explorer les applications de protocoles.
+Ce tutoriel utilise l’API [!DNL Flow Service] pour explorer les applications de protocoles.
 
 ## Prise en main
 
@@ -24,11 +24,11 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Sources](../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 * [Sandbox](../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à une application de protocoles à l’aide de la méthode [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à une application de protocoles à l’aide de l’API [!DNL Flow Service].
 
-### Obtention d’une connexion de base
+### Obtenir une connexion de base
 
-Pour explorer votre système de protocole à l’aide de [!DNL Platform] API, vous devez posséder un identifiant de connexion de base valide. Si vous ne disposez pas déjà d’une connexion de base pour le système de protocole que vous souhaitez utiliser, vous pouvez en créer une via le tutoriel suivant :
+Pour explorer votre système de protocole à l’aide des API [!DNL Platform], vous devez posséder un identifiant de connexion de base valide. Si vous ne disposez pas déjà d’une connexion de base pour le système de protocole que vous souhaitez utiliser, vous pouvez en créer une via le tutoriel suivant :
 
 * [OData générique](../create/protocols/odata.md)
 
@@ -54,7 +54,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ## Exploration des tableaux de données
 
-À l’aide de l’identifiant de connexion de votre application de protocoles, vous pouvez explorer vos tableaux de données en exécutant des requêtes GET. Utilisez l’appel suivant pour trouver le chemin du tableau que vous souhaitez inspecter ou ingérer. [!DNL Platform].
+À l’aide de l’identifiant de connexion de votre application de protocoles, vous pouvez explorer vos tableaux de données en exécutant des requêtes GET. Utilisez l’appel suivant pour trouver le chemin de la table que vous souhaitez inspecter ou ingérer dans [!DNL Platform].
 
 **Format d’API**
 
@@ -79,7 +79,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau de tableaux de votre application de protocoles. Trouvez la table que vous souhaitez importer [!DNL Platform] et notez ses `path` , car vous devez le fournir à l’étape suivante pour inspecter sa structure.
+Une réponse réussie renvoie un tableau de tableaux de votre application de protocoles. Recherchez la table que vous souhaitez importer dans [!DNL Platform] et notez sa propriété `path`, car vous devez la fournir à l&#39;étape suivante pour inspecter sa structure.
 
 ```json
 [
@@ -126,7 +126,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{BASE_CONNECTION_ID}` | Identifiant de connexion de votre application de protocoles.. |
+| `{BASE_CONNECTION_ID}` | L’identifiant de connexion de votre application de protocoles. |
 | `{TABLE_PATH}` | Chemin d’accès d’un tableau dans votre application de protocoles. |
 
 ```shell
@@ -140,7 +140,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie la structure de la table spécifiée. Les détails relatifs à chaque colonne du tableau se trouvent dans les éléments du `columns` tableau.
+Une réponse réussie renvoie la structure de la table spécifiée. Les détails concernant chacune des colonnes de la table se trouvent dans les éléments du tableau `columns`.
 
 ```json
 {
@@ -188,4 +188,4 @@ Une réponse réussie renvoie la structure de la table spécifiée. Les détails
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez exploré votre application de protocoles, trouvé le chemin du tableau dans lequel vous souhaitez ingérer. [!DNL Platform]et obtenir des informations sur sa structure. Vous pouvez utiliser ces informations dans le tutoriel suivant pour [collecter des données à partir de votre application de protocoles et les importer dans Platform ;](../collect/protocols.md).
+En suivant ce tutoriel, vous avez exploré l’application de vos protocoles, trouvé le chemin de la table que vous souhaitez ingérer dans [!DNL Platform] et obtenu des informations concernant sa structure. Vous pouvez utiliser ces informations dans le tutoriel suivant pour [collecter des données de votre application de protocoles et les importer dans Platform](../collect/protocols.md).

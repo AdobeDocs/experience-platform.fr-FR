@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;ServiceNow;servicenow
 solution: Experience Platform
-title: Création d’une connexion source ServiceNow dans l’interface utilisateur
+title: Création d’une connexion Source ServiceNow dans l’interface utilisateur
 type: Tutorial
 description: Découvrez comment créer une connexion source ServiceNow à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 66c12f4d-8b0c-4bb2-910d-9e09fa364c94
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '457'
-ht-degree: 69%
+source-wordcount: '449'
+ht-degree: 52%
 
 ---
 
 # Créer une connexion source [!DNL ServiceNow] dans l’interface utilisateur
 
-Les connecteurs source d’Adobe Experience Platform permettent d’ingérer des données externes selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour créer un connecteur source [!DNL ServiceNow] à l’aide de l’interface utilisateur de [!DNL Platform].
+Les connecteurs Source dans Adobe Experience Platform permettent d’ingérer des données provenant de l’extérieur de manière planifiée. Ce tutoriel décrit les étapes à suivre pour créer un connecteur source [!DNL ServiceNow] à l’aide de l’interface utilisateur de [!DNL Platform].
 
 ## Prise en main
 
@@ -29,7 +29,7 @@ Si vous disposez déjà d’une connexion [!DNL ServiceNow] valide, vous pouvez 
 
 ### Collecter les informations d’identification requises
 
-Pour accéder au compte [!DNL ServiceNow] sur , vous devez fournir les valeurs suivantes :[!DNL Platform]
+Pour accéder à votre compte [!DNL ServiceNow] sur [!DNL Platform], vous devez fournir les valeurs suivantes :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
@@ -37,31 +37,31 @@ Pour accéder au compte [!DNL ServiceNow] sur , vous devez fournir les valeurs s
 | `username` | Nom d’utilisateur utilisé pour la connexion au serveur [!DNL ServiceNow] pour l’authentification. |
 | `password` | Mot de passe pour la connexion au serveur [!DNL ServiceNow] pour l’authentification. |
 
-Pour plus d’informations sur la prise en main, reportez-vous à la section [this [!DNL ServiceNow] document](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET).
+Pour plus d&#39;informations sur la prise en main, consultez [ce [!DNL ServiceNow] document](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&amp;id=r_TableAPI-GET).
 
 ## Connecter votre compte [!DNL ServiceNow]
 
 Une fois les informations d’identification requises collectées, vous pouvez suivre les étapes ci-dessous pour lier votre compte [!DNL ServiceNow] à [!DNL Platform].
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au **[!UICONTROL Sources]** workspace. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com), puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]**. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous , **[!UICONTROL Succès des clients]** catégorie, sélectionnez **[!UICONTROL ServiceNow]**. Si c’est la première fois que vous utilisez ce connecteur, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Connexion à la source]** pour créer [!DNL ServiceNow] connecteur.
+Sous la catégorie **[!UICONTROL Succès client]**, sélectionnez **[!UICONTROL ServiceNow]**. Si c&#39;est la première fois que vous utilisez ce connecteur, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Connecter la source]** pour créer un nouveau connecteur [!DNL ServiceNow].
 
 ![](../../../../images/tutorials/create/servicenow/catalog.png)
 
-Le **[!UICONTROL Connexion à ServiceNow]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Se connecter à ServiceNow]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et [!DNL ServiceNow] informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion]** puis accorder un certain temps pour établir la nouvelle connexion.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification [!DNL ServiceNow]. Une fois que vous avez terminé, sélectionnez **[!UICONTROL Se connecter]** et laissez un certain temps à la nouvelle connexion pour établir.
 
 ![](../../../../images/tutorials/create/servicenow/new.png)
 
 ### Compte existant
 
-Pour connecter un compte existant, sélectionnez le [!DNL ServiceNow] compte auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Pour connecter un compte existant, sélectionnez le compte [!DNL ServiceNow] auquel vous souhaitez vous connecter, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
 ![](../../../../images/tutorials/create/servicenow/existing.png)
 

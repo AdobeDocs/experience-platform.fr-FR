@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `onBeforeEventSend`
 
-La variable `onBeforeEventSend` callback vous permet d’enregistrer une fonction JavaScript qui peut modifier les données que vous envoyez juste avant que les données ne soient envoyées à Adobe. Ce rappel vous permet de manipuler la variable `xdm` ou `data` , y compris la possibilité d’ajouter, de modifier ou de supprimer des éléments. Vous pouvez également annuler de manière conditionnelle l’envoi de données, par exemple avec le trafic de robots côté client détecté.
+Le rappel `onBeforeEventSend` vous permet d’enregistrer une fonction JavaScript qui peut modifier les données que vous envoyez juste avant l’envoi de ces données à Adobe. Ce rappel vous permet de manipuler l’objet `xdm` ou `data`, y compris la possibilité d’ajouter, de modifier ou de supprimer des éléments. Vous pouvez également annuler de manière conditionnelle l’envoi de données, par exemple avec le trafic de robots côté client détecté.
 
 >[!WARNING]
 >
@@ -19,24 +19,24 @@ La variable `onBeforeEventSend` callback vous permet d’enregistrer une fonctio
 
 ## Configurez avant le rappel de l’envoi des événements à l’aide de l’extension de balise SDK Web. {#tag-extension}
 
-Sélectionnez la variable **[!UICONTROL Fournir avant le code de rappel d’envoi d’événement]** lorsque [configuration de l’extension de balise](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Ce bouton ouvre une fenêtre modale dans laquelle vous pouvez insérer le code de votre choix.
+Sélectionnez le bouton **[!UICONTROL Fournir avant l’envoi de l’événement le code de rappel]** lors de la [configuration de l’extension de balise](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Ce bouton ouvre une fenêtre modale dans laquelle vous pouvez insérer le code de votre choix.
 
-1. Connexion à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
 1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
-1. Accédez à **[!UICONTROL Extensions]**, puis cliquez sur **[!UICONTROL Configurer]** sur le [!UICONTROL SDK Web Adobe Experience Platform] carte.
-1. Faites défiler l’écran vers le bas jusqu’à [!UICONTROL Collecte de données] , puis cliquez sur le bouton **[!UICONTROL Fournir avant le code de rappel d’envoi d’événement]**.
-1. Ce bouton ouvre une fenêtre modale avec un éditeur de code. Insérez le code souhaité, puis cliquez sur **[!UICONTROL Enregistrer]** pour fermer la fenêtre modale.
-1. Cliquez sur **[!UICONTROL Enregistrer]** sous paramètres d’extension, puis publiez vos modifications.
+1. Accédez à **[!UICONTROL Extensions]**, puis cliquez sur **[!UICONTROL Configurer]** sur la carte [!UICONTROL SDK Web Adobe Experience Platform].
+1. Faites défiler l’écran jusqu’à la section [!UICONTROL Collecte de données], puis sélectionnez le bouton **[!UICONTROL Fournir avant le code de rappel d’envoi d’événement]**.
+1. Ce bouton ouvre une fenêtre modale avec un éditeur de code. Insérez le code de votre choix, puis cliquez sur **[!UICONTROL Enregistrer]** pour fermer la fenêtre modale.
+1. Cliquez sur **[!UICONTROL Enregistrer]** sous les paramètres d’extension, puis publiez vos modifications.
 
 Dans l’éditeur de code, vous avez accès aux variables suivantes :
 
-* **`content.xdm`**: la variable [XDM](../sendevent/xdm.md) charge utile pour l’événement.
-* **`content.data`**: la variable [data](../sendevent/data.md) charge utile d’objet pour l’événement.
-* **`return true`**: quittez immédiatement le rappel et envoyez les données à l’Adobe avec les valeurs actuelles dans la variable `content` .
-* **`return false`**: quittez immédiatement le rappel et abandonnez l’envoi de données à Adobe.
+* **`content.xdm`** : charge utile [XDM](../sendevent/xdm.md) pour l’événement.
+* **`content.data`** : charge utile de l’objet [data](../sendevent/data.md) pour l’événement.
+* **`return true`** : Quittez immédiatement le rappel et envoyez les données à l’Adobe avec les valeurs actuelles dans l’objet `content`.
+* **`return false`** : Quittez immédiatement le rappel et abandonnez l’envoi de données à Adobe.
 
-Toute variable définie en dehors de `content` peuvent être utilisées, mais ne sont pas incluses dans la payload envoyée à Adobe.
+Toutes les variables définies en dehors de `content` peuvent être utilisées, mais ne sont pas incluses dans la payload envoyée à Adobe.
 
 ```js
 // Use nullish coalescing assignments to add objects if they don't yet exist
@@ -64,11 +64,11 @@ if (myBotDetector.isABot()) {
 ```
 
 >[!TIP]
->Éviter le renvoi `false` lors du premier événement d’une page. Renvoi `false` le premier événement peut avoir un impact négatif sur la personnalisation.
+>Évitez de renvoyer `false` lors du premier événement sur une page. Le renvoi de `false` au premier événement peut avoir une incidence négative sur la personnalisation.
 
 ## Configurez avant le rappel de l’envoi d’événement à l’aide de la bibliothèque JavaScript du SDK Web {#library}
 
-Enregistrez le `onBeforeEventSend` rappel lors de l’exécution de la fonction `configure` . Vous pouvez modifier la variable `content` nom de la variable à n’importe quelle valeur en modifiant la variable de paramètre dans la fonction intégrée.
+Enregistrez le rappel `onBeforeEventSend` lors de l’exécution de la commande `configure`. Vous pouvez remplacer le nom de la variable `content` par toute valeur souhaitée en modifiant la variable de paramètre dans la fonction intégrée.
 
 ```js
 alloy("configure", {

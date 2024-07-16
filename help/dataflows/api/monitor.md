@@ -7,30 +7,30 @@ description: Ce tutoriel décrit les étapes de surveillance de l’exhaustivit�
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
-source-wordcount: '718'
-ht-degree: 60%
+source-wordcount: '711'
+ht-degree: 57%
 
 ---
 
 # Surveiller les flux de données à l’aide de l’API Flow Service
 
-Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc. En outre, Experience Platform permet l’activation des données auprès de partenaires externes.
+Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données à partir de diverses sources telles que des applications d’Adobe, du stockage dans le cloud, des bases de données, etc. En outre, Experience Platform permet l’activation des données auprès de partenaires externes.
 
-[!DNL Flow Service] sert à collecter et à centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources et destinations prises en charge sont connectables.
+[!DNL Flow Service] est utilisé pour collecter et centraliser des données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources et destinations prises en charge sont connectables.
 
-Ce tutoriel décrit les étapes de surveillance de l’exécution des flux pour vérifier l’exhaustivité, les erreurs et les mesures à l’aide de la variable [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes de surveillance des données d’exécution de flux pour l’exhaustivité, les erreurs et les mesures à l’aide de [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Prise en main
+## Commencer
 
-Ce tutoriel nécessite que vous disposiez de la valeur d’identifiant d’un flux de données valide. Si vous ne disposez pas d’un identifiant de flux de données valide, sélectionnez votre connecteur de votre choix dans la [présentation des sources](../../sources/home.md) ou [présentation des destinations](../../destinations/catalog/overview.md) et suivez les étapes décrites avant de lancer ce tutoriel.
+Ce tutoriel nécessite que vous disposiez de la valeur d’identifiant d’un flux de données valide. Si vous ne disposez pas d’un identifiant de flux de données valide, sélectionnez votre connecteur de votre choix dans la [présentation des sources](../../sources/home.md) ou la [présentation des destinations](../../destinations/catalog/overview.md) et suivez les étapes décrites avant de lancer ce tutoriel.
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
-- [Destinations](../../destinations/home.md): Les destinations sont des intégrations préconfigurées aux applications courantes qui permettent l’activation transparente des données de Platform pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
+- [Destinations](../../destinations/home.md) : les destinations sont des intégrations préconfigurées des applications courantes qui permettent l’activation transparente des données de Platform pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 - [Sources ](../../sources/home.md): [!DNL Experience Platform]permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 - [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour surveiller les exécutions de flux à l’aide de la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour surveiller les exécutions de flux à l’aide de l’API [!DNL Flow Service].
 
 ### Lecture d’exemples d’appels API
 
@@ -54,7 +54,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ## Surveiller les exécutions de flux
 
-Une fois que vous avez créé un flux de données, effectuez une requête de GET à la fonction [!DNL Flow Service] API.
+Une fois que vous avez créé un flux de données, effectuez une demande de GET à l’API [!DNL Flow Service].
 
 **Format d’API**
 
@@ -195,9 +195,9 @@ Une réponse réussie renvoie des informations concernant votre exécution de fl
 | `sizeSummary` | Volume des données en octets. |
 | `recordSummary` | Nombre d’enregistrements des données. |
 | `fileSummary` | Le fichier compte les données. |
-| `fileSummary.extensions` | Contient des informations spécifiques à l’activité. Par exemple : `manifest` ne fait partie que de l’&quot;activité de promotion&quot; et est donc incluse dans la variable `extensions` . |
+| `fileSummary.extensions` | Contient des informations spécifiques à l’activité. Par exemple, `manifest` ne fait partie que de l’&quot;activité de promotion&quot; et est donc inclus dans l’objet `extensions` . |
 | `statusSummary` | Indique si l’exécution du flux est une réussite ou un échec. |
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez récupéré des mesures et des informations relatives aux erreurs sur votre flux de données à l’aide de l’API [!DNL Flow Service]. Vous pouvez maintenant continuer à surveiller votre flux de données, en fonction de votre planning d’ingestion, pour suivre son statut et ses taux d’ingestion. Pour plus d’informations sur la façon de surveiller les flux de données pour les sources, veuillez lire le [surveillance des flux de données pour les sources à l’aide de l’interface utilisateur](../ui/monitor-sources.md) tutoriel . Pour plus d’informations sur la manière de surveiller les flux de données pour les destinations, veuillez lire le [surveillance des flux de données pour les destinations à l’aide de l’interface utilisateur](../ui/monitor-destinations.md) tutoriel .
+En suivant ce tutoriel, vous avez récupéré des mesures et des informations relatives aux erreurs sur votre flux de données à l’aide de l’API [!DNL Flow Service]. Vous pouvez maintenant continuer à surveiller votre flux de données, en fonction de votre planning d’ingestion, pour suivre son statut et ses taux d’ingestion. Pour plus d’informations sur la façon de surveiller les flux de données pour les sources, consultez le tutoriel [surveillance des flux de données pour les sources à l’aide de l’interface utilisateur](../ui/monitor-sources.md) . Pour plus d’informations sur la manière de surveiller les flux de données pour les destinations, consultez le tutoriel [surveillance des flux de données pour les destinations à l’aide de l’interface utilisateur](../ui/monitor-destinations.md) .

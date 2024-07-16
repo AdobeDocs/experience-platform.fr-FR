@@ -29,17 +29,17 @@ En utilisant Campaign, vous pouvez :
 
 Gardez à l’esprit les barrières de sécurité suivantes lors de l’utilisation de la connexion Adobe Campaign Managed Cloud Services :
 
-* Vous pouvez [activate](#activate) 25 audiences au maximum vers cette destination.
+* Vous pouvez [activer](#activate) un maximum de 25 audiences vers cette destination.
 
-  Vous pouvez modifier cette limite en mettant à jour la valeur de la variable **NmsCdp_Aep_Audience_List_Limit** dans le **[!UICONTROL Administration]** > **[!UICONTROL Plateforme]** > **[!UICONTROL Options]** dossier de l&#39;explorateur Campaign.
+  Vous pouvez modifier cette limite en mettant à jour la valeur de l’option **NmsCdp_Aep_Audience_List_Limit** dans le dossier **[!UICONTROL Administration]** > **[!UICONTROL Plateforme]** > **[!UICONTROL Options]** de l’explorateur Campaign.
 
-* Pour chaque audience, vous pouvez ajouter jusqu’à 20 champs à la variable [map](#map) vers Adobe Campaign.
+* Pour chaque audience, vous pouvez ajouter jusqu’à 20 champs à [map](#map) vers Adobe Campaign.
 
-  Vous pouvez modifier cette limite en mettant à jour la valeur de la variable **NmsCdp_Aep_Destinations_Max_Columns** dans le **[!UICONTROL Administration]** > **[!UICONTROL Plateforme]** > **[!UICONTROL Options]** dossier de l&#39;explorateur Campaign.
+  Vous pouvez modifier cette limite en mettant à jour la valeur de l’option **NmsCdp_Aep_Destinations_Max_Columns** dans le dossier **[!UICONTROL Administration]** > **[!UICONTROL Plateforme]** > **[!UICONTROL Options]** de l’explorateur Campaign.
 
 * Conservation des données sur la zone d’entrée des données de stockage Blob Azure (DLZ) : 7 jours.
 * La fréquence d&#39;activation est d&#39;au moins 3 heures.
-* La longueur maximale de nom de fichier prise en charge par cette connexion est de 255 caractères. Lorsque vous [configuration du nom du fichier exporté](../../ui/activate-batch-profile-destinations.md#configure-file-names), veillez à ce que le nom de fichier ne dépasse pas 255 caractères. Le dépassement de la longueur maximale du nom de fichier entraîne des erreurs d’activation.
+* La longueur maximale de nom de fichier prise en charge par cette connexion est de 255 caractères. Lorsque vous [configurez le nom de fichier exporté](../../ui/activate-batch-profile-destinations.md#configure-file-names), assurez-vous que le nom de fichier ne dépasse pas 255 caractères. Le dépassement de la longueur maximale du nom de fichier entraîne des erreurs d’activation.
 
 ## Cas d’utilisation {#use-cases}
 
@@ -60,7 +60,7 @@ Pour vous aider à mieux comprendre comment et à quel moment utiliser la destin
   >
   >La synchronisation des attributs de profil est disponible pour les profils déjà présents dans la base de données Adobe Campaign.
 
-[En savoir plus sur l’intégration d’Adobe Campaign à Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=fr)
+[En savoir plus sur l’intégration d’Adobe Campaign avec Adobe Experience Platform](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=fr)
 
 ## Identités prises en charge {#supported-identities}
 
@@ -83,7 +83,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’une audience, ainsi que les champs de schéma souhaités (par exemple : adresse email, numéro de téléphone, nom), tels qu’ils sont sélectionnés dans l’écran de sélection des attributs de profil de la fonction [workflow d’activation de destination](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres d’une audience, ainsi que les champs de schéma souhaités (par exemple : adresse email, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil du [workflow d’activation de destination](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Fréquence des exportations | **[!UICONTROL Lot]** | Les destinations par lots exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur les [destinations basées sur des fichiers par lots](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
@@ -92,7 +92,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **** et des **** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -104,22 +104,22 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Sélectionner une instance]**: votre **[!DNL Campaign]** instance marketing.
-* **[!UICONTROL Mapping de ciblage]**: sélectionnez le mapping de ciblage utilisé dans **[!DNL Adobe Campaign]** pour envoyer des diffusions. [En savoir plus](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
-* **[!UICONTROL Sélectionner le type de synchronisation]**:
+* **[!UICONTROL Sélectionner une instance]** : votre instance marketing **[!DNL Campaign]**.
+* **[!UICONTROL Mapping de ciblage]** : sélectionnez le mapping de ciblage que vous utilisez dans **[!DNL Adobe Campaign]** pour envoyer des diffusions. [En savoir plus](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
+* **[!UICONTROL Sélectionner le type de synchronisation]** :
 
-   * **[!UICONTROL Synchronisation de l’audience]**: utilisez cette option pour envoyer des audiences Adobe Experience Platform vers Adobe Campaign.
-   * **[!UICONTROL Synchronisation des profils (mise à jour uniquement)]**: utilisez cette option pour importer les attributs de profil Adobe Experience Platform dans Adobe Campaign et mettre en place un processus de synchronisation afin qu’ils puissent être mis à jour régulièrement.
+   * **[!UICONTROL Synchronisation des audiences]** : utilisez cette option pour envoyer des audiences Adobe Experience Platform vers Adobe Campaign.
+   * **[!UICONTROL Synchronisation des profils (mise à jour uniquement)]** : utilisez cette option pour importer les attributs de profil Adobe Experience Platform dans Adobe Campaign et avoir un processus de synchronisation en place afin qu’ils puissent être mis à jour régulièrement.
 
 ### Activer les alertes {#enable-alerts}
 
-Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d&#39;informations sur les alertes, consultez le guide sur les [abonnement aux alertes de destinations à l’aide de l’interface utilisateur](../../ui/alerts.md).
+Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, reportez-vous au guide sur l’ [ abonnement aux alertes de destinations à l’aide de l’interface utilisateur ](../../ui/alerts.md).
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
 ### Politiques de gouvernance et actions d’application {#governance}
 
-Sélectionnez les actions marketing applicables aux données que vous souhaitez exporter vers la destination. Pour Adobe Campaign, il est recommandé de sélectionner la variable **[!UICONTROL Ciblage des emails]** action marketing.
+Sélectionnez les actions marketing applicables aux données que vous souhaitez exporter vers la destination. Pour Adobe Campaign, nous vous recommandons de sélectionner l’action marketing **[!UICONTROL Ciblage d’email]**.
 
 Pour plus d’informations sur les actions marketing, consultez la page [présentation des politiques d’utilisation des données](/help/data-governance/policies/overview.md).
 
@@ -127,10 +127,10 @@ Pour plus d’informations sur les actions marketing, consultez la page [présen
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter *identités*, vous avez besoin de la fonction **[!UICONTROL Affichage du graphique des identités]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **** et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous avez besoin de l&#39;autorisation **[!UICONTROL Afficher le graphique d&#39;identités]** [ ](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
-Lecture [Activation des données d’audience vers des destinations d’exportation de profils par lots](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) pour obtenir des instructions sur l’activation des données d’audience vers cette destination.
+Lisez [Activer les données d’audience vers les destinations d’exportation de profil de lot](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) pour obtenir des instructions sur l’activation des données d’audience vers cette destination.
 
 ### Mapper les attributs et les identités {#map}
 
@@ -138,9 +138,9 @@ Sélectionnez les champs XDM à exporter avec les profils et les mappez aux cham
 
 1. Sélectionner les champs source :
 
-   * Sélectionnez une **identifier** (Par exemple : le champ email) comme identité source qui identifie de manière unique un profil dans Adobe Experience Platform et Adobe Campaign.
+   * Sélectionnez un **identifiant** (par exemple : le champ de courrier électronique) comme identité source qui identifie de manière unique un profil dans Adobe Experience Platform et Adobe Campaign.
 
-   * Tout autre **Attributs de profil source XDM** qui doivent être exportés vers Adobe Campaign.
+   * Sélectionnez tous les autres **attributs de profil source XDM** qui doivent être exportés vers Adobe Campaign.
 
    >[!NOTE]
    >
@@ -151,7 +151,7 @@ Sélectionnez les champs XDM à exporter avec les profils et les mappez aux cham
 1. Identifiez les attributs obligatoires et les clés de déduplication. Notez que les valeurs des attributs marqués comme &quot;Obligatoire&quot; ou &quot;Clé de déduplication&quot; ne peuvent pas être nulles.
 
    * [Attributs obligatoires](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) assurez-vous que tous les enregistrements de profil contiennent le ou les attributs sélectionnés. Par exemple : tous les profils exportés contiennent une adresse email. Il est recommandé de définir sur obligatoire le champ d’identité et le champ utilisés comme clé de déduplication.
-   * [Clé de déduplication](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) est une clé primaire qui détermine l’identité par laquelle les utilisateurs souhaitent dédupliquer leurs profils.
+   * [Une clé de déduplication](../../ui/activate-batch-profile-destinations.md#mandatory-attributes) est une clé primaire qui détermine l’identité par laquelle les utilisateurs veulent que leurs profils soient dédupliqués.
 
      >[!IMPORTANT]
      >
@@ -159,7 +159,7 @@ Sélectionnez les champs XDM à exporter avec les profils et les mappez aux cham
 
    ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/mapping.png)
 
-1. Une fois le mappage effectué, vous pouvez vérifier et terminer la configuration de destination pour commencer à envoyer des données à **[!DNL Campaign]**.
+1. Une fois le mappage effectué, vous pouvez passer en revue et terminer la configuration de destination pour commencer à envoyer des données à **[!DNL Campaign]**.
    [Découvrez comment passer en revue et terminer la configuration de destination](/help/destinations/destination-types.md#review).
 
 ## Données exportées / Valider l’exportation des données {#exported-data}
@@ -168,17 +168,17 @@ Une fois une destination activée, vous pouvez accéder au traitement correspond
 
 ### Surveillance des traitements d’exportation de données {#jobs}
 
-Accédez au **[!UICONTROL Administration]** > **[!UICONTROL Audit]** > **[!UICONTROL Tâches de chargement d’audience]** pour surveiller toutes les tâches d’exportation activées à partir de Adobe Experience Platform.
+Accédez au menu **[!UICONTROL Administration]** > **[!UICONTROL Audit]** > **[!UICONTROL Tâches de chargement d’audience]** pour surveiller toutes les tâches d’exportation activées à partir de Adobe Experience Platform.
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-jobs.png)
 
 ### Accès aux données exportées {#data}
 
-Pour **[!UICONTROL Synchronisation de l’audience]**, vous pouvez vérifier l’audience exportée en accédant à la variable **[!UICONTROL Profil et cible]** > **[!UICONTROL Liste]** > **[!UICONTROL Audiences AEP]** .
+Pour la **[!UICONTROL synchronisation d’audience]**, vous pouvez vérifier l’audience exportée en accédant au menu **[!UICONTROL Profil et cible]** > **[!UICONTROL Liste]** > **[!UICONTROL Audiences AEP]**.
 
 ![](../../assets/catalog/email-marketing/adobe-campaign-managed-services/campaign-audiences.png)
 
-Pour **[!UICONTROL Synchronisation des profils (mise à jour uniquement)]**, les données sont automatiquement mises à jour dans la base de données Campaign pour chaque profil ciblé par l’audience activée dans la destination.
+Pour la **[!UICONTROL synchronisation des profils (mise à jour uniquement)]**, les données sont automatiquement mises à jour dans la base de données Campaign pour chaque profil ciblé par l’audience activée dans la destination.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

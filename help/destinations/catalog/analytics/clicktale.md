@@ -1,22 +1,22 @@
 ---
 keywords: clicktale;extension clicktale;destination du clicktale
 title: Extension Clicktale
-description: L’extension Clicktale est une destination d’analyse de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Clicktale est une destination d’analyse de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: fb721f0a-6026-4d7b-ba42-2e540e9c5426
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 90%
+source-wordcount: '438'
+ht-degree: 92%
 
 ---
 
 # Extension [!DNL Clicktale] {#clicktale-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Le [!DNL Clicktale] l’extension de balise vous permet de déployer du code et de mapper des éléments de données à l’aide de [!DNL Clicktale's] Éditeur visuel.
+L’extension de balise [!DNL Clicktale] vous permet de déployer du code et de mapper des éléments de données à l’aide de [!DNL Clicktale's] Visual Editor.
 
-[!DNL Clicktale] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100082.html).
+[!DNL Clicktale] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100082.html).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Clicktale] extension :
+Pour installer l’extension [!DNL Clicktale], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

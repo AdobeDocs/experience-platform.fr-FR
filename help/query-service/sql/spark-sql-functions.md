@@ -15,7 +15,7 @@ ht-degree: 93%
 
 Vous pouvez utiliser plusieurs fonctions Spark SQL intégrées pour étendre les fonctionnalités SQL avec Adobe Experience Platform Query Service. Ce document répertorie les fonctions Spark SQL prises en charge par Query Service.
 
-Pour plus d’informations sur les fonctions, notamment leur syntaxe, leur utilisation et des exemples, consultez la section [Documentation sur les fonctions Spark SQL](https://spark.apache.org/docs/latest/api/sql/index.html).
+Pour plus d’informations sur les fonctions, y compris leur syntaxe, leur utilisation et des exemples, consultez la [documentation sur les fonctions Spark SQL](https://spark.apache.org/docs/latest/api/sql/index.html).
 
 >[!NOTE]
 >

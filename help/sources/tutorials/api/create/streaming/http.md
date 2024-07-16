@@ -11,20 +11,20 @@ ht-degree: 34%
 ---
 
 
-# Créez une connexion en continu à l’API HTTP à l’aide de la fonction [!DNL Flow Service] API
+# Créez une connexion en continu d’API HTTP à l’aide de l’API [!DNL Flow Service]
 
 Le service de flux permet de collecter et de centraliser les données client à partir de différentes sources dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
 
-Ce tutoriel utilise la méthode [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) pour vous guider dans les étapes de création d’une connexion en continu à l’aide de la fonction [!DNL Flow Service] API.
+Ce tutoriel utilise l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) pour vous guider tout au long des étapes de création d’une connexion en continu à l’aide de l’API [!DNL Flow Service].
 
 ## Prise en main
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): cadre normalisé selon lequel [!DNL Platform] organise les données d’expérience.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données d’expérience.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
 
-En outre, la création d’une connexion en continu nécessite que vous disposiez d’un schéma XDM cible et d’un jeu de données. Pour savoir comment les créer, consultez le tutoriel sur [données d’enregistrement en continu](../../../../../ingestion/tutorials/streaming-record-data.md) ou du tutoriel sur [diffusion en continu de données de série temporelle](../../../../../ingestion/tutorials/streaming-time-series-data.md).
+En outre, la création d’une connexion en continu nécessite que vous disposiez d’un schéma XDM cible et d’un jeu de données. Pour savoir comment les créer, consultez le tutoriel sur [la diffusion en continu de données d’enregistrement](../../../../../ingestion/tutorials/streaming-record-data.md) ou le tutoriel sur la [ diffusion en continu de données de série temporelle](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
 ### Utiliser les API Platform
 
@@ -38,7 +38,7 @@ Une connexion de base spécifie la source et contient les informations requises 
 
 Les connexions non authentifiées sont la connexion en continu standard que vous pouvez créer lorsque vous souhaitez diffuser des données dans Platform.
 
-Pour créer une connexion de base non authentifiée, envoyez une requête de POST au `/connections` point de terminaison tout en fournissant un nom pour votre connexion, le type de données et l’identifiant de spécification de connexion de l’API HTTP. Cet identifiant est `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Pour créer une connexion de base non authentifiée, envoyez une requête de POST au point de terminaison `/connections` tout en fournissant un nom pour votre connexion, le type de données et l’identifiant de spécification de connexion de l’API HTTP. Cet identifiant est `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 **Format d’API**
 
@@ -125,14 +125,14 @@ Une réponse réussie renvoie un état HTTP 201 avec les détails de la nouvelle
 
 | Propriété | Description |
 | -------- | ----------- |
-| `id` | La variable `id` de votre nouvelle connexion de base. |
+| `id` | `id` de la connexion de base que vous venez de créer. |
 | `etag` | Identifiant attribué à la connexion, spécifiant la version de la connexion de base. |
 
 ### Connexion authentifiée
 
 Les connexions authentifiées doivent être utilisées lorsque vous devez différencier les enregistrements provenant de sources approuvées et non approuvées. Les utilisateurs qui souhaitent envoyer des informations avec des informations d’identification personnelle (PII) doivent créer une connexion authentifiée lors de la diffusion d’informations vers Platform.
 
-Pour créer une connexion de base authentifiée, vous devez inclure la variable `authenticationRequired` dans votre requête et indiquez sa valeur en tant que `true`. Au cours de cette étape, vous pouvez également fournir un ID source pour votre connexion de base authentifiée. Ce paramètre est facultatif et utilisera la même valeur que la variable `name` , s’il n’est pas fourni.
+Pour créer une connexion de base authentifiée, vous devez inclure le paramètre `authenticationRequired` dans votre requête et spécifier sa valeur `true`. Au cours de cette étape, vous pouvez également fournir un ID source pour votre connexion de base authentifiée. Ce paramètre est facultatif et utilisera la même valeur que l’attribut `name` s’il n’est pas fourni.
 
 
 **Format d’API**
@@ -207,8 +207,8 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `auth.params.sourceId` | Identifiant supplémentaire pouvant être utilisé lors de la création d’une connexion de base authentifiée. Ce paramètre est facultatif et utilisera la même valeur que la variable `name` , s’il n’est pas fourni. |
-| `auth.params.authenticationRequired` | Ce paramètre indique si la connexion en continu nécessite une authentification ou non. If `authenticationRequired` est défini sur `true` l’authentification doit ensuite être fournie pour la connexion en continu. If `authenticationRequired` est défini sur `false` l’authentification n’est alors pas requise. |
+| `auth.params.sourceId` | Identifiant supplémentaire pouvant être utilisé lors de la création d’une connexion de base authentifiée. Ce paramètre est facultatif et utilisera la même valeur que l’attribut `name` s’il n’est pas fourni. |
+| `auth.params.authenticationRequired` | Ce paramètre indique si la connexion en continu nécessite une authentification ou non. Si `authenticationRequired` est défini sur `true`, l’authentification doit être fournie pour la connexion en continu. Si `authenticationRequired` est défini sur `false`, l’authentification n’est pas requise. |
 
 **Réponse**
 
@@ -247,7 +247,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{B
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la connexion demandée. L’URL du point de terminaison de diffusion en continu est automatiquement créée avec la connexion et peut être récupérée à l’aide de la fonction `inletUrl` .
+Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la connexion demandée. L’URL du point d’entrée de diffusion en continu est automatiquement créée avec la connexion et peut être récupérée à l’aide de la valeur `inletUrl`.
 
 ```json
 {
@@ -290,7 +290,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 ## Créer une connexion source {#source}
 
-Pour créer une connexion source, envoyez une requête de POST au `/sourceConnections` point de terminaison tout en fournissant votre identifiant de connexion de base.
+Pour créer une connexion source, envoyez une requête de POST au point de terminaison `/sourceConnections` tout en fournissant votre identifiant de connexion de base.
 
 **Format d’API**
 
@@ -458,7 +458,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ## Créer un flux de données
 
-Une fois vos connexions source et cible créées, vous pouvez désormais créer un flux de données. Le flux de données est chargé de planifier et de collecter les données d’une source. Vous pouvez créer un flux de données en adressant une requête de POST au `/flows` point de terminaison .
+Une fois vos connexions source et cible créées, vous pouvez désormais créer un flux de données. Le flux de données est chargé de planifier et de collecter les données d’une source. Vous pouvez créer un flux de données en effectuant une requête de POST sur le point de terminaison `/flows`.
 
 **Format d’API**
 
@@ -502,7 +502,7 @@ curl -X POST \
 
 Les requêtes suivantes créent un flux de données en continu pour l’API HTTP avec des transformations de mappage appliquées à vos données.
 
-Lors de la création d’un flux de données avec des transformations, la variable `name` ne peut pas être modifié. Cette valeur doit toujours être définie sur `Mapping`.
+Lors de la création d’un flux de données avec des transformations, le paramètre `name` ne peut pas être modifié. Cette valeur doit toujours être définie sur `Mapping`.
 
 ```shell
 curl -X POST \
@@ -543,7 +543,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Nom du flux de données. Assurez-vous que le nom de votre flux de données est explicite, car vous pouvez l’utiliser pour rechercher des informations sur votre flux de données. |
 | `description` | (Facultatif) Propriété que vous pouvez inclure pour fournir plus d’informations sur votre flux de données. |
-| `flowSpec.id` | L’identifiant de spécification de flux pour [!DNL HTTP API]. Pour créer un flux de données avec des transformations, vous devez utiliser  `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. Pour créer un flux de données sans conversion, utilisez `d8a6f005-7eaf-4153-983e-e8574508b877`. |
+| `flowSpec.id` | ID de spécification de flux pour [!DNL HTTP API]. Pour créer un flux de données avec des transformations, vous devez utiliser `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. Pour créer un flux de données sans transformations, utilisez `d8a6f005-7eaf-4153-983e-e8574508b877`. |
 | `sourceConnectionIds` | [Identifiant de connexion source](#source) récupéré lors d’une étape précédente. |
 | `targetConnectionIds` | [Identifiant de connexion cible](#target) récupéré lors d’une étape précédente. |
 | `transformations.params.mappingId` | [Identifiant de mappage](#mapping) récupéré lors d’une étape précédente. |
@@ -559,7 +559,7 @@ Une réponse réussie renvoie un état HTTP 201 avec les détails du nouveau flu
 }
 ```
 
-## Données de publication à ingérer dans Platform {#ingest-data}
+## Données Post à ingérer dans Platform {#ingest-data}
 
 >[!NOTE]
 >
@@ -575,7 +575,7 @@ POST /collection/{INLET_URL}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{INLET_URL}` | Votre URL de point de terminaison de diffusion en continu. Vous pouvez récupérer cette URL en effectuant une requête de GET à la variable `/connections` point de terminaison tout en fournissant votre identifiant de connexion de base. |
+| `{INLET_URL}` | Votre URL de point de terminaison de diffusion en continu. Vous pouvez récupérer cette URL en effectuant une requête de GET sur le point de terminaison `/connections` tout en fournissant votre identifiant de connexion de base. |
 | `{FLOW_ID}` | Identifiant du flux de données de diffusion en continu de votre API HTTP. Cet identifiant est requis pour les données XDM et RAW. |
 
 **Requête**
@@ -622,7 +622,7 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
       }'
 ```
 
->[!TAB Envoi de données brutes avec un ID de flux en tant qu’en-tête HTTP]
+>[!TAB Envoyer des données brutes avec l’ID de flux en tant qu’en-tête HTTP]
 
 Lors de l’envoi de données brutes, vous pouvez spécifier votre identifiant de flux comme paramètre de requête ou dans le cadre de votre en-tête HTTP. L’exemple suivant spécifie l’ID de flux comme en-tête HTTP.
 
@@ -646,7 +646,7 @@ curl -X POST https://dcs.adobedc.net/collection/667b41cf2dbf3509927da1ebf7e93c20
   }'
 ```
 
->[!TAB Envoi de données brutes avec l’ID de flux comme paramètre de requête]
+>[!TAB Envoyer des données brutes avec l’ID de flux comme paramètre de requête]
 
 Lors de l’envoi de données brutes, vous pouvez spécifier votre identifiant de flux comme paramètre de requête ou en tant qu’en-tête HTTP. L’exemple suivant spécifie l’ID de flux comme paramètre de requête.
 
@@ -692,9 +692,9 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails des informatio
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une connexion HTTP en continu, ce qui vous permet d’utiliser le point de terminaison de diffusion pour ingérer des données dans Platform. Pour obtenir des instructions sur la création d’une connexion en continu dans l’interface utilisateur, veuillez lire le [tutoriel sur la création d’une connexion en continu](../../../ui/create/streaming/http.md).
+En suivant ce tutoriel, vous avez créé une connexion HTTP en continu, ce qui vous permet d’utiliser le point de terminaison de diffusion pour ingérer des données dans Platform. Pour obtenir des instructions sur la création d’une connexion en continu dans l’interface utilisateur, consultez le [tutoriel sur la création d’une connexion en continu](../../../ui/create/streaming/http.md).
 
-Pour savoir comment diffuser des données vers Platform, veuillez lire le tutoriel sur [diffusion en continu de données de série temporelle](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou du tutoriel sur [données d’enregistrement en continu](../../../../../ingestion/tutorials/streaming-record-data.md).
+Pour savoir comment diffuser des données vers Platform, lisez le tutoriel sur la [diffusion en continu de données de série temporelle](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou le tutoriel sur la [diffusion en continu de données d’enregistrement](../../../../../ingestion/tutorials/streaming-record-data.md).
 
 ## Annexe
 

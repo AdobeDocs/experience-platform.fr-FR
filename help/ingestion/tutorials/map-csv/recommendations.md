@@ -4,8 +4,8 @@ description: Ce tutoriel explique comment mapper un fichier CSV à un schéma XD
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
 source-git-commit: 6632086641004c2b788a28cbc47ac6d8bd4eace3
 workflow-type: tm+mt
-source-wordcount: '1102'
-ht-degree: 90%
+source-wordcount: '1100'
+ht-degree: 82%
 
 ---
 
@@ -30,7 +30,7 @@ Ce tutoriel nécessite une connaissance pratique des composants suivants de [!DN
 
 Dans l’interface utilisateur d’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche. Sur la vue **[!UICONTROL Catalogue]**, accédez à la catégorie **[!UICONTROL Système local]**. Sous **[!UICONTROL Chargement de fichier local]**, sélectionnez **[!UICONTROL Ajouter des données]**.
 
-![Le catalogue [!UICONTROL Sources] dans l’interface utilisateur de Platform, avec [!UICONTROL Ajouter des données] sous [!UICONTROL Chargement de fichier local] en train d’être sélectionné.](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
+![Catalogue [!UICONTROL Sources] dans l’interface utilisateur de Platform, avec [!UICONTROL Ajouter des données] sous [!UICONTROL Chargement de fichier local] sélectionné.](../../images/tutorials/map-csv-recommendations/local-file-upload.png)
 
 Le workflow **[!UICONTROL Mapper CSV à un schéma XDM]** apparaît, en commençant par l’étape **[!UICONTROL Détails du flux de données]**.
 
@@ -60,7 +60,7 @@ Lorsque vous avez terminé de configurer le flux de données, sélectionnez **[!
 
 Lors de l’étape **[!UICONTROL Sélectionner des données]**, utilisez la colonne de gauche pour charger votre fichier CSV. Vous pouvez sélectionner **[!UICONTROL Choisir les fichiers]** pour ouvrir une boîte de dialogue de l’explorateur de fichiers à partir de laquelle sélectionner le fichier, ou vous pouvez également faire glisser le fichier directement dans la colonne.
 
-![Le bouton [!UICONTROL Choisir les fichiers] et la zone de glisser-déposer sont mis en surbrillance lors de l’étape [!UICONTROL Sélectionner des données.]](../../images/tutorials/map-csv-recommendations/upload-files.png)
+![Bouton [!UICONTROL Choisir les fichiers] et zone de glisser-déposer surlignée à l’étape [!UICONTROL Sélectionner les données].](../../images/tutorials/map-csv-recommendations/upload-files.png)
 
 Une fois le fichier chargé, une section de données d’exemple s’affiche. Elle présente les dix premières lignes des données reçues afin que vous puissiez vérifier qu’elles ont bien été chargées. Sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
@@ -70,15 +70,15 @@ Une fois le fichier chargé, une section de données d’exemple s’affiche. El
 
 Les modèles ML sont exécutés pour générer un nouveau schéma basé sur votre configuration de flux de données et votre fichier CSV chargé. Une fois le processus terminé, l’étape [!UICONTROL Mappage] est renseignée pour afficher les mappages de chaque champ individuel avec une vue entièrement navigable de la structure de schéma générée.
 
-![L’étape [!UICONTROL Mappage] dans l’interface utilisateur, affichant tous les champs CSV mappés et la structure de schéma résultante.](../../images/tutorials/map-csv-recommendations/schema-generated.png)
+![L’étape [!UICONTROL Mapping] de l’interface utilisateur, qui affiche tous les champs CSV mappés et la structure de schéma résultante.](../../images/tutorials/map-csv-recommendations/schema-generated.png)
 
 >[!NOTE]
 >
->Vous pouvez filtrer tous les champs de votre schéma en fonction de divers critères lors du workflow de mappage des champs source vers cible. Le comportement par défaut est d’afficher tous les champs mappés. Pour modifier les champs affichés, sélectionnez l’icône de filtrage en regard du champ de saisie de la recherche et choisissez dans la liste déroulante des options.<br> ![L’étape de mappage du workflow de création de schéma CSV vers XDM avec l’icône de filtre et le menu déroulant mis en surbrillance.](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "L’étape de mappage du workflow de création de schéma CSV vers XDM avec l’icône de filtre et le menu déroulant mis en surbrillance."){width="100" zoomable="yes"}
+>Vous pouvez filtrer tous les champs de votre schéma en fonction de divers critères lors du workflow de mappage des champs source vers cible. Le comportement par défaut est d’afficher tous les champs mappés. Pour modifier les champs affichés, sélectionnez l’icône de filtre en regard du champ de saisie de la recherche et choisissez dans la liste déroulante.<br> ![L’étape de mappage du workflow de création de schéma CSV vers XDM avec l’icône de filtre et le menu déroulant mis en surbrillance.](../../images/tutorials/map-csv-recommendations/source-field-to-target-mapping-filter.png "L’étape de mappage du workflow de création de schéma CSV vers XDM avec l’icône de filtre et le menu déroulant mis en surbrillance."){width="100" zoomable="yes"}
 
 À partir de là, vous pouvez éventuellement [modifier les mappages des champs](#edit-mappings) ou [modifier les groupes de champs auxquels ils sont associés](#edit-schema) selon vos besoins. Lorsque vous êtes satisfait(e), sélectionnez **[!UICONTROL Terminer]** pour terminer le mappage et lancer le flux de données que vous avez configuré précédemment. Les données CSV sont ingérées dans le système et renseignent un jeu de données en se basant sur la structure de schéma générée, qui sera prêt à être utilisé par les services Platform en aval.
 
-![Le bouton [!UICONTROL Terminer] sélectionné, finalisant le processus de mappage CSV.](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
+![Bouton [!UICONTROL Terminer] sélectionné, achèvement du processus de mappage CSV.](../../images/tutorials/map-csv-recommendations/finish-mapping.png)
 
 ### Modifier les mappages de champs {#edit-mappings}
 
@@ -88,7 +88,7 @@ Utilisez l’aperçu du mappage des champs pour modifier les mappages existants 
 
 Les champs CSV sont automatiquement mappés à des groupes de champs existants à l’aide de modèles ML. Si vous souhaitez modifier le groupe de champs d’un champ CSV particulier, sélectionnez **[!UICONTROL Modifier]** à côté de l’arborescence du schéma.
 
-![Le bouton [!UICONTROL Modifier] sélectionné à côté de l’arborescence du schéma.](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
+![Bouton [!UICONTROL Modifier] sélectionné en regard de l’arborescence des schémas.](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
 Une boîte de dialogue s’affiche, vous permettant de modifier le nom d’affichage, le type de données et le groupe de champs de n’importe quel champ du mappage. Sélectionnez l’icône Modifier (![icône Modifier](../../images/tutorials/map-csv-recommendations/edit-icon.png)) à côté d’un champ source pour modifier ses détails dans la colonne de droite avant de sélectionner **[!UICONTROL Appliquer]**.
 

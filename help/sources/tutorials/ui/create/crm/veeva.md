@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;Veeva CRM;veeva
 solution: Experience Platform
-title: Création d’une connexion source CRM Veeva dans l’interface utilisateur
+title: Création d’une connexion Source CRM Veeva dans l’interface utilisateur
 type: Tutorial
 description: Découvrez comment créer une connexion source CRM Veeva à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 4ef76c28-9bd2-4e54-a3d6-dceb89162337
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 78%
+source-wordcount: '425'
+ht-degree: 79%
 
 ---
 
@@ -31,12 +31,12 @@ Si vous disposez déjà d’un compte [!DNL Veeva CRM], vous pouvez ignorer le r
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `environmentUrl` | L’URL de la variable [!DNL Veeva CRM] instance source. |
-| `username` | Nom d’utilisateur de la variable [!DNL Veeva CRM] compte utilisateur. |
-| `password` | Le mot de passe du [!DNL Veeva CRM] compte utilisateur. |
-| `securityToken` | Jeton de sécurité pour la variable [!DNL Veeva CRM] compte utilisateur. |
+| `environmentUrl` | URL de l’instance source [!DNL Veeva CRM]. |
+| `username` | Nom d’utilisateur du compte utilisateur [!DNL Veeva CRM]. |
+| `password` | Mot de passe du compte utilisateur [!DNL Veeva CRM]. |
+| `securityToken` | Jeton de sécurité pour le compte utilisateur [!DNL Veeva CRM]. |
 
-Pour plus d&#39;informations sur la prise en main, reportez-vous à cette section [[!DNL Veeva CRM] document](https://developer.veevacrm.com/doc/Content/rest-api.htm).
+Pour plus d&#39;informations sur la prise en main, consultez ce [[!DNL Veeva CRM] document](https://developer.veevacrm.com/doc/Content/rest-api.htm).
 
 ## Connecter votre compte [!DNL Veeva CRM]
 
@@ -46,11 +46,11 @@ Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous , [!UICONTROL CRM] catégorie, sélectionnez **[!UICONTROL GRC de Veeva]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Sous la catégorie [!UICONTROL CRM], sélectionnez **[!UICONTROL Veeva CRM]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 ![catalogue](../../../../images/tutorials/create/veeva/catalog.png)
 
-Le **[!UICONTROL Connexion au compte CRM Veeva]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connecter le compte CRM Veeva]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 

@@ -15,4 +15,4 @@ ht-degree: 8%
 
 Le tutoriel d’activation d’un jeu de données à utiliser dans Real-Time Customer Profile et Adobe Experience Platform Identity Service comprend les étapes de création d’un nouveau jeu de données et de configuration d’un jeu de données existant. Le tutoriel couvre également les étapes d’ingestion de données dans le jeu de données et de confirmation de l’ingestion réussie de données dans Profile et Identity Service.
 
-Pour accéder à ce tutoriel, consultez la [Tutoriel sur l’activation d’un jeu de données pour Profile et Identity Service à l’aide des API](../../catalog/datasets/enable-for-profile.md), fait partie de la documentation sur les jeux de données.
+Pour accéder à ce tutoriel, consultez le tutoriel [Activation d’un jeu de données pour Profile et Identity Service à l’aide d’API](../../catalog/datasets/enable-for-profile.md), partie de la documentation sur les jeux de données.

@@ -6,7 +6,7 @@ description: Ce document reprend toutes les étapes nécessaires à la création
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '313'
 ht-degree: 100%
 
 ---

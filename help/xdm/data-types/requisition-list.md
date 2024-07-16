@@ -1,28 +1,29 @@
 ---
 title: Type de données de liste de demandes
 description: Découvrez le type de données XDM (modèle de données d’expérience de liste de demandes).
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+exl-id: cbea6b08-9d4d-4cbe-b0c5-506bccc6df67
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '125'
 ht-degree: 7%
 
 ---
 
-# [!UICONTROL Liste des demandes] type de données
+# Type de données [!UICONTROL Liste des demandes]
 
-[!UICONTROL Liste des demandes] est un type de données XDM (Experience Data Model) standard qui décrit une collection organisée d’articles à des fins d’achat ou d’achat. Utilisez la variable [!UICONTROL Liste des demandes] type de données pour identifier et décrire les listes de demandes d’acquisition.
+[!UICONTROL Liste des demandes] est un type de données XDM (Experience Data Model) standard qui décrit une collection organisée d’articles à acheter ou à acheter. Utilisez le type de données [!UICONTROL Liste des demandes] pour identifier et décrire les listes de demandes.
 
-![Un diagramme de [!UICONTROL Liste des demandes] type de données.](../images/data-types/requisition-list.png)
+![Schéma du type de données [!UICONTROL Liste de demandes].](../images/data-types/requisition-list.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |---------------------------|-------------------|-----------|--------------------------------------------------|
-| [!UICONTROL Identifiant de liste de demandes] | `ID` | chaîne | Identifiant unique de la liste des demandes. |
-| [!UICONTROL Nom de la liste de demandes] | `name` | chaîne | Nom de la liste des demandes spécifiée par le client. |
-| [!UICONTROL Description de la liste de demandes] | `description` | chaîne | Description de la liste des demandes spécifiée par le client. |
+| [!UICONTROL ID de liste de demandes] | `ID` | Chaîne | Identifiant unique de la liste des demandes. |
+| [!UICONTROL Nom de liste de demandes] | `name` | Chaîne | Nom de la liste des demandes spécifiée par le client. |
+| [!UICONTROL Description de la liste de demandes] | `description` | Chaîne | Description de la liste des demandes spécifiée par le client. |
 
 {style="table-layout:auto"}
 
 Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/requisitionlist.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/requisitionlist.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/requisitionlist.schema.json)

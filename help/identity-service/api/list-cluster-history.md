@@ -14,7 +14,7 @@ ht-degree: 78%
 
 # Obtention de l’historique des clusters d’une identité
 
-Les identités peuvent déplacer des clusters au cours de différentes opérations de graphiques d’appareil. [!DNL Identity Service] offre une visibilité sur les associations de clusters d’une identité donnée au fil du temps.
+Les identités peuvent déplacer des clusters au cours de différentes opérations de graphiques d’appareil. [!DNL Identity Service] offre une visibilité sur les associations de cluster d’une identité donnée au fil du temps.
 
 Utilisez le paramètre `graph-type` facultatif pour indiquer le type de sortie à partir duquel obtenir le cluster. Les options sont les suivantes :
 

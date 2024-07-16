@@ -5,13 +5,13 @@ exl-id: a40d17b3-cb76-4b63-9328-735fc7c55672
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '94'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
 # [!UICONTROL Détails du dépôt] groupe de champs de schéma
 
-[!UICONTROL Détails du dépôt] est un groupe de champs de schéma standard pour la variable [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Le groupe de champs fournit une `personalFinances.deposits` à un schéma, qui capture les détails d’un dépôt financier.
+[!UICONTROL Deposit Details] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Le groupe de champs fournit un champ `personalFinances.deposits` unique à un schéma, qui capture les détails sur un dépôt financier.
 
 ![](../../images/field-groups/deposit-details.png)
 

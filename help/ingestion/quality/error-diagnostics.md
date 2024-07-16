@@ -6,14 +6,14 @@ description: Ce document fournit des informations sur la surveillance de l’ing
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
 source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 40%
+source-wordcount: '976'
+ht-degree: 36%
 
 ---
 
 # Récupération des diagnostics d’erreur d’ingestion de données
 
-Adobe Experience Platform propose deux méthodes de chargement et d’ingestion de données. Vous pouvez utiliser soit l’ingestion par lots, qui vous permet d’insérer des données à l’aide de différents types de fichiers (tels que des fichiers CSV), soit l’ingestion par flux, qui vous permet d’insérer leurs données dans [!DNL Platform] utilisation de points de terminaison de diffusion en continu en temps réel.
+Adobe Experience Platform propose deux méthodes de chargement et d’ingestion de données. Vous pouvez utiliser soit l’ingestion par lots, qui vous permet d’insérer des données à l’aide de différents types de fichiers (tels que des fichiers CSV), soit l’ingestion par flux, qui vous permet d’insérer leurs données vers [!DNL Platform] à l’aide de points de terminaison en continu en temps réel.
 
 Ce document fournit des informations sur la surveillance de l’ingestion par lots, la gestion des erreurs d’ingestion par lots partielle, ainsi qu’une référence pour les types d’ingestion par lots partielle.
 
@@ -36,7 +36,7 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Toutes les ressources dans [!DNL Experience Platform], y compris ceux appartenant à la variable [!DNL Schema Registry], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
+Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Schema Registry], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -46,7 +46,7 @@ Toutes les ressources dans [!DNL Experience Platform], y compris ceux appartenan
 
 ## Téléchargement des diagnostics d’erreur {#download-diagnostics}
 
-Adobe Experience Platform permet aux utilisateurs de télécharger les diagnostics d’erreur des fichiers d’entrée. Les diagnostics sont conservés dans la variable [!DNL Platform] pendant 30 jours au maximum.
+Adobe Experience Platform permet aux utilisateurs de télécharger les diagnostics d’erreur des fichiers d’entrée. Les diagnostics seront conservés dans un délai de [!DNL Platform] jusqu’à 30 jours.
 
 ### Liste des fichiers d’entrée {#list-files}
 
@@ -132,7 +132,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/batches/af838510-22
 
 **Réponse**
 
-Une réponse réussie renvoie des objets JSON contenant `path` des objets détaillant l’emplacement d’enregistrement des diagnostics. La réponse renvoie la variable `path` objets dans [Lignes JSON](https://jsonlines.readthedocs.io/en/latest/) format.
+Une réponse réussie renvoie des objets JSON contenant des objets `path` détaillant l’emplacement d’enregistrement des diagnostics. La réponse renvoie les objets `path` au format [JSON Lines](https://jsonlines.readthedocs.io/en/latest/).
 
 ```json
 {"path": "F1.json"}
@@ -145,7 +145,7 @@ Si les lots contiennent des échecs, vous devez récupérer les informations d�
 
 ### Vérification de l’état {#check-status}
 
-Pour vérifier l’état du lot ingéré, vous devez indiquer l’identifiant du lot dans le chemin d’une requête GET. Pour en savoir plus sur l’utilisation de cet appel API, veuillez lire la [guide de point de fin de catalogue](../../catalog/api/list-objects.md).
+Pour vérifier l’état du lot ingéré, vous devez indiquer l’identifiant du lot dans le chemin d’accès d’une demande de GET. Pour en savoir plus sur l’utilisation de cet appel API, consultez le [guide de point de terminaison de catalogue](../../catalog/api/list-objects.md).
 
 **Format d’API**
 
@@ -157,7 +157,7 @@ GET /catalog/batches/{BATCH_ID}?{FILTER}
 | Paramètre | Description |
 | --------- | ----------- |
 | `{BATCH_ID}` | Valeur `id` du lot dont vous voulez vérifier l’état. |
-| `{FILTER}` | Un paramètre de requête utilisé pour filtrer les résultats renvoyés dans la réponse. Plusieurs paramètres sont séparés par des esperluettes (`&`). Pour plus d’informations, veuillez lire le guide sur [filtrage des données du catalogue](../../catalog/api/filter-data.md). |
+| `{FILTER}` | Un paramètre de requête utilisé pour filtrer les résultats renvoyés dans la réponse. Plusieurs paramètres sont séparés par des esperluettes (`&`). Pour plus d’informations, consultez le guide sur le [filtrage des données du catalogue](../../catalog/api/filter-data.md). |
 
 **Requête**
 
@@ -214,9 +214,9 @@ Une réponse réussie renvoie des informations détaillées sur l’état du lot
 
 | Propriété | Description |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Nombre de lignes qui n’ont pas pu être traitées en raison de l’analyse, de la conversion ou de la validation. Cette valeur peut être déduite en soustrayant la variable `inputRecordCount` de la `outputRecordCount`. Cette valeur est générée sur tous les lots, que ce soit `errorDiagnostics` est activée. |
+| `metrics.failedRecordCount` | Nombre de lignes qui n’ont pas pu être traitées en raison de l’analyse, de la conversion ou de la validation. Cette valeur peut être dérivée en soustrayant le `inputRecordCount` de `outputRecordCount`. Cette valeur est générée sur tous les lots, que `errorDiagnostics` soit activé. |
 
-**Réponse en erreur**
+**Réponse avec erreurs**
 
 Si le lot comporte une ou plusieurs erreurs et que les diagnostics d’erreur sont activés, la réponse renvoie plus d’informations sur les erreurs, à la fois dans la payload elle-même et dans un fichier d’erreur téléchargeable. Notez que l’état d’un lot contenant des erreurs peut toujours présenter un état de réussite.
 
@@ -277,8 +277,8 @@ Si le lot comporte une ou plusieurs erreurs et que les diagnostics d’erreur so
 
 | Propriété | Description |
 | -------- | ----------- |
-| `metrics.failedRecordCount` | Nombre de lignes qui n’ont pas pu être traitées en raison de l’analyse, de la conversion ou de la validation. Cette valeur peut être déduite en soustrayant la variable `inputRecordCount` de la `outputRecordCount`. Cette valeur est générée sur tous les lots, que ce soit `errorDiagnostics` est activée. |
-| `errors.recordCount` | Nombre de lignes qui ont échoué pour le code d’erreur spécifié. Cette valeur est **only** généré si `errorDiagnostics` est activée. |
+| `metrics.failedRecordCount` | Nombre de lignes qui n’ont pas pu être traitées en raison de l’analyse, de la conversion ou de la validation. Cette valeur peut être dérivée en soustrayant le `inputRecordCount` de `outputRecordCount`. Cette valeur est générée sur tous les lots, que `errorDiagnostics` soit activé. |
+| `errors.recordCount` | Nombre de lignes qui ont échoué pour le code d’erreur spécifié. Cette valeur est **uniquement** générée si `errorDiagnostics` est activé. |
 
 >[!NOTE]
 >
@@ -374,7 +374,7 @@ Une réponse réussie renvoie une liste des fichiers en erreur.
 }
 ```
 
-Vous pouvez ensuite récupérer des informations détaillées sur les erreurs à l’aide de la variable [point d’entrée de récupération des diagnostics](#retrieve-diagnostics).
+Vous pouvez ensuite récupérer des informations détaillées sur les erreurs à l’aide du [point d’entrée de récupération des diagnostics](#retrieve-diagnostics).
 
 Vous trouverez ci-dessous un exemple de réponse de récupération du fichier d’erreur :
 

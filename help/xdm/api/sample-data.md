@@ -6,8 +6,8 @@ description: Le point d’entrée /sampledata dans l’API Schema Registry vous 
 exl-id: 424d33ca-0624-4891-bf83-044ac2861579
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 23%
+source-wordcount: '311'
+ht-degree: 18%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 23%
 
 Pour ingérer des données dans Adobe Experience Platform, le format et la structure des données doivent respecter un schéma de modèle de données d’expérience (XDM) existant. Selon la complexité du schéma pour un jeu de données spécifique, il peut être difficile de déterminer la forme exacte des données attendues par le jeu de données lors de l’ingestion.
 
-En utilisant la variable `/sampledata` du point de terminaison [!DNL Schema Registry] API, vous pouvez générer un exemple d’objet d’ingestion pour tout schéma créé précédemment.
+À l’aide du point d’entrée `/sampledata` de l’API [!DNL Schema Registry], vous pouvez générer un exemple d’objet d’ingestion pour tout schéma créé précédemment.
 
-## Prise en main
+## Commencer
 
-Le point d’entrée utilisé dans ce guide fait partie de lʼ[[!DNL Schema Registry] API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Le point de terminaison utilisé dans ce guide fait partie de l’ [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
-L’exemple de point de terminaison de données fait partie des appels de procédure distants (RPC) pris en charge par la fonction [!DNL Schema Registry]. Contrairement aux autres points de terminaison dans la variable [!DNL Schema Registry] API, les points de terminaison RPC ne nécessitent pas d’en-têtes supplémentaires comme `Accept` ou `Content-Type`, et n’utilisez pas d’événement `CONTAINER_ID`. Ils doivent plutôt utiliser la variable `/rpc` , comme illustré dans l’appel API ci-dessous.
+L’exemple de point d’entrée de données fait partie des appels de procédure distante (RPC) pris en charge par [!DNL Schema Registry]. Contrairement à d’autres points de terminaison dans l’API [!DNL Schema Registry], les points de terminaison RPC ne nécessitent pas d’en-têtes supplémentaires tels que `Accept` ou `Content-Type` et n’utilisent pas un `CONTAINER_ID`. Au lieu de cela, ils doivent utiliser l’espace de noms `/rpc`, comme illustré dans l’appel API ci-dessous.
 
 ## Récupération des exemples de données pour un schéma
 
@@ -35,7 +35,7 @@ GET /rpc/sampledata/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | Le `meta:altId` ou encodé URL `$id` du schéma pour lequel vous souhaitez générer des données d’exemple. |
+| `{SCHEMA_ID}` | `meta:altId` ou encodé URL `$id` du schéma pour lequel vous souhaitez générer des exemples de données. |
 
 {style="table-layout:auto"}
 

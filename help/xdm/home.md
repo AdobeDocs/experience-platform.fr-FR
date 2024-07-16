@@ -27,7 +27,7 @@ Experience Platform utilise des schémas pour décrire la structure des donnée
 
 Avant que les données puissent être ingérées dans Platform, il est nécessaire de composer un schéma pour décrire la structure des données et fournir des contraintes au type de données pouvant être contenues dans chaque champ. Les schémas se composent d’une classe de base et de zéro ou plusieurs groupes de champs.
 
-Pour plus d’informations sur le modèle de composition de schémas, y compris les principes de conception et les bonnes pratiques, voir la section [principes de base de la composition des schémas](schema/composition.md).
+Pour plus d’informations sur le modèle de composition de schémas, y compris les principes de conception et les bonnes pratiques, consultez les [ principes de base de la composition de schémas](schema/composition.md).
 
 ### Composants XDM standard {#Standard-xdm-components}
 
@@ -35,13 +35,13 @@ XDM fournit une solide collection de groupes de champs et de types de données s
 
 Lors de la création de schémas dans l’interface utilisateur d’Experience Platform, les groupes de champs répertoriés s’affichent avec une mesure de popularité. Cette mesure est déterminée par la fréquence à laquelle les autres utilisateurs de Platform utilisent le groupe de champs dans leurs schémas. Plus le nombre est élevé, plus le groupe de champs est populaire. Par défaut, les résultats s’affichent du plus populaire au moins populaire, vous renseignant sur les tendances de modélisation des données dans votre secteur d’activité.
 
-![La colonne de popularité de la variable [!UICONTROL Ajouter un groupe de champs] boîte de dialogue.](./images/overview/popularity.png)
+![Colonne de popularité de la boîte de dialogue [!UICONTROL Ajouter un groupe de champs].](./images/overview/popularity.png)
 
 ### [!DNL Schema Library] {#schema-library}
 
 Experience Platform fournit une interface utilisateur et une API RESTful à partir desquelles vous pouvez afficher et gérer toutes les ressources liées aux schémas de **[!DNL Schema Library]** d’Experience Platform. La [!DNL Schema Library] possède des composants XDM standard mis à votre disposition par Adobe, ainsi que des ressources de partenaires Experience Platform et de fournisseurs dont vous utilisez les applications.
 
-Vous pouvez également créer et gérer de nouveaux schémas et ressources propres à votre organisation à l’aide de la variable [!DNL Schema Registry API], ou la variable [!UICONTROL Schémas] dans l’interface utilisateur de Platform.
+Vous pouvez également créer et gérer de nouveaux schémas et ressources propres à votre organisation à l’aide de [!DNL Schema Registry API] ou de l’espace de travail [!UICONTROL Schémas] dans l’interface utilisateur de Platform.
 
 Pour plus d’informations sur la gestion et l’interaction avec les schémas dans Platform, consultez la documentation suivante :
 
@@ -53,25 +53,25 @@ Pour plus d’informations sur la gestion et l’interaction avec les schémas d
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Comportements des données"
->abstract="Les données destinées à Experience Platform sont regroupées en trois types de comportements : enregistrement, série temporelle et ad hoc. Les schémas d’enregistrement fournissent des informations sur les attributs d’un objet, tandis que les schémas de série temporelle capturent un instantané du système au moment où une action a été effectuée. Les schémas ad hoc capturent les champs dont l’espace de noms peut être utilisé uniquement par un seul jeu de données. Pour plus d’informations sur le comportement des données dans Platform, consultez la documentation."
+>abstract="Les données destinées à Experience Platform sont regroupées en trois types de comportements : enregistrement, série temporelle et ad hoc. Les schémas d’enregistrement fournissent des informations sur les attributs d’un objet, tandis que les schémas de série temporelle capturent un instantané du système au moment où une action a été effectuée. Les schémas ad hoc capturent les champs qui sont des espaces de noms, à des fins d&#39;utilisation par un jeu de données unique. Pour plus d’informations sur le comportement des données dans Platform, consultez la documentation."
 
 Les données pouvant être utilisées dans Experience Platform sont regroupées selon trois types de comportements :
 
 * **Enregistrement** : fournit des informations sur les attributs d’un sujet. Un sujet peut être une organisation ou un individu.
-* **Série temporelle**: fournit un instantané du système au moment où une action a été entreprise directement ou indirectement par un sujet enregistré.
+* **Série temporelle** : fournit un instantané du système au moment où une action a été entreprise directement ou indirectement par un sujet enregistré.
 * **Ad hoc** : capture les champs dont l’espace de noms n’est utilisable que par un seul jeu de données. Les schémas ad hoc sont utilisés dans plusieurs workflows d’ingestion de données pour Experience Platform, notamment dans l’ingestion de fichiers CSV et dans la création de certains types de connexions sources.
 
 Tous les schémas XDM décrivent des données pouvant être catégorisées en tant qu’enregistrement ou série temporelle. Le comportement des données d’un schéma est défini par la classe du schéma attribuée à celui-ci lorsqu’il est créé pour la première fois. Les classes XDM décrivent le plus petit nombre de propriétés qu’un schéma doit contenir pour représenter un comportement de données spécifique.
 
-Bien que vous puissiez définir vos propres classes dans la variable [!DNL Schema Registry], il est recommandé d’utiliser les classes standard **[!UICONTROL XDM Individual Profile]** et **[!UICONTROL XDM ExperienceEvent]** pour les données d’enregistrement et de série temporelle, respectivement. Ces classes sont décrites plus en détail ci-dessous.
+Bien que vous puissiez définir vos propres classes dans [!DNL Schema Registry], il est recommandé d’utiliser les classes standard **[!UICONTROL XDM Individual Profile]** et **[!UICONTROL XDM ExperienceEvent]** pour les données d’enregistrement et de série temporelle, respectivement. Ces classes sont décrites plus en détail ci-dessous.
 
 >[!NOTE]
 >
->Il n’existe aucune classe standard basée sur le comportement ad hoc. Les schémas ad hoc sont générés automatiquement par les processus Platform qui les utilisent, mais ils peuvent également être [créé manuellement à l’aide de l’API Schema Registry](./tutorials/ad-hoc.md).
+>Il n’existe aucune classe standard basée sur le comportement ad hoc. Les schémas ad hoc sont générés automatiquement par les processus Platform qui les utilisent, mais ils peuvent également être [créés manuellement à l’aide de l’API Schema Registry](./tutorials/ad-hoc.md).
 
 ### [!UICONTROL XDM Individual Profile] {#xdm-individual-profile}
 
-[!UICONTROL XDM Individual Profile] est une classe basée sur des enregistrements qui forme une représentation singulière des attributs des sujets identifiés et partiellement identifiés. Les profils hautement identifiés peuvent être utilisés pour des communications personnelles ou des engagements ciblés. Les profils hautement identifiés peuvent contenir des informations personnelles détaillées telles que le nom, le sexe, la date de naissance, l’emplacement et les coordonnées, y compris les numéros de téléphone et les adresses électroniques.
+[!UICONTROL XDM Individual Profile] est une classe basée sur les enregistrements qui forme une représentation singulière des attributs des sujets identifiés et partiellement identifiés. Les profils hautement identifiés peuvent être utilisés pour des communications personnelles ou des engagements ciblés. Les profils hautement identifiés peuvent contenir des informations personnelles détaillées telles que le nom, le sexe, la date de naissance, l’emplacement et les coordonnées, y compris les numéros de téléphone et les adresses électroniques.
 
 Les profils moins identifiés peuvent n’être constitués que de signaux comportementaux anonymes tels que les cookies de navigateur. Dans ce cas, les données de profil éparses sont utilisées pour constituer une base d’informations dans laquelle les intérêts et les préférences du profil anonyme sont rassemblés et stockés. Ces identifiants peuvent devenir plus détaillés avec le temps si l’objet s’inscrit pour recevoir des notifications, souscrit à des abonnements, effectue des achats, etc. Ce développement des attributs de profil peut permettre d’obtenir un objet identifié et un degré plus élevé d’engagement ciblé.
 
@@ -103,7 +103,7 @@ Les données du catalogue sont stockées dans le lac de données, un entrepôt d
 
 Pour commencer l’ingestion de données dans Experience Platform, vous pouvez utiliser le service de catalogue pour créer un jeu de données. Le jeu de données fait référence à un schéma XDM qui décrit la structure des données à ingérer. Si un jeu de données est créé sans schéma, Experience Platform crée alors un « schéma observé » en examinant le type et le contenu des champs de données ingérés. Les jeux de données sont ensuite suivis dans le service de catalogue et stockés dans le lac de données aux côtés des schémas et des schémas observés sur lesquels ils sont basés.
 
-Voir [Présentation du service de catalogue](../catalog/home.md) pour plus d’informations. Voir [Présentation de Data Ingestion](../ingestion/home.md) pour plus d’informations sur Adobe Experience Platform Data Ingestion.
+Pour plus d’informations, consultez la [présentation du service de catalogue](../catalog/home.md) . Pour plus d’informations sur Adobe Experience Platform Data Ingestion, consultez la [présentation de Data Ingestion](../ingestion/home.md) .
 
 ### Query Service {#query-service}
 
@@ -117,11 +117,11 @@ Pour plus d’informations sur le service, consultez la [présentation de Query 
 
 Le profil client en temps réel fournit un profil de consommateur centralisé pour une gestion d’expérience ciblée et personnalisée. Chaque profil contient des données agrégées sur tous les systèmes et inclut des comptes horodatés exploitables d’événements qui impliquent l’objet du profil. Ces événements peuvent avoir eu lieu dans n’importe quel système que vous utilisez avec Experience Platform.
 
-Real-Time Customer Profile utilise des données au format schéma basées sur la variable [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent] et répond aux requêtes en fonction de ces données.
+Real-Time Customer Profile utilise des données au format schéma basées sur les classes [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent] et répond aux requêtes basées sur ces données.
 
 Le système conserve une instance de chaque profil client, fusionnant les données pour former une « source unique de vérité » pour l’individu. Ces données unifiées sont représentées par un « schéma d’union »; (parfois appelé « vue d’union »;). Un schéma d’union agrège les champs de tous les schémas qui mettent en oeuvre la même classe dans un seul schéma. Lors de la composition d’un schéma à l’aide de l’interface utilisateur ou d’une API, vous pouvez l’activer pour une utilisation avec le profil client en temps réel et l’étiqueter pour l’inclure à l’union. Le schéma balisé participe alors à la définition de schéma transmise à Profil.
 
-As [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent] Les données sont ingérées dans le lac de données. Real-time Customer Profile ingère toutes les données qui ont été activées pour son utilisation. Plus la quantité d’interactions et de détails ingérés est élevée, plus les profils deviennent robustes.
+Comme les données [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent] sont ingérées dans le lac de données, Real-Time Customer Profile ingère toutes les données qui ont été activées pour son utilisation. Plus la quantité d’interactions et de détails ingérés est élevée, plus les profils deviennent robustes.
 
 Les données [!UICONTROL XDM Individual Profile] permettent de guider et d’exécuter les actions sur n’importe quel canal ou intégration de produit Adobe. Associées à un riche historique de données sur les comportements et les interactions, ces données peuvent être utilisées pour alimenter le machine learning. L’API Real-Time Customer Profile peut aussi être utilisée pour enrichir les fonctionnalités des solutions tierces, des solutions CRM et des solutions propriétaires.
 
@@ -129,7 +129,7 @@ Pour plus d’informations, consultez la [vue d’ensemble du profil client en t
 
 ### Espace de travail de science des données {#data-science-workspace}
 
-L’espace de travail de science des données d’Adobe Experience Platform utilise le machine learning et l’intelligence artificielle pour obtenir des informations à partir des données stockées dans Experience Platform. Data Science Workspace permet aux spécialistes des données de créer des recettes basées sur [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent] des données sur les clients et leurs activités. Ces recettes facilitent les prédictions telles que la propension à acheter et les offres recommandées que l’individu est susceptible d’apprécier et d’utiliser.
+L’espace de travail de science des données d’Adobe Experience Platform utilise le machine learning et l’intelligence artificielle pour obtenir des informations à partir des données stockées dans Experience Platform. Data Science Workspace permet aux spécialistes des données de créer des recettes basées sur les données [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent] relatives aux clients et à leurs activités. Ces recettes facilitent les prédictions telles que la propension à acheter et les offres recommandées que l’individu est susceptible d’apprécier et d’utiliser.
 
 Avec l’espace de travail de science des données, les spécialistes des données peuvent facilement créer des API de service intelligents optimisés par le machine learning. Ces services fonctionnent avec d’autres solutions Adobe, y compris Adobe Target et Adobe Analytics Cloud, pour vous aider à automatiser les expériences digitales ciblées et personnalisées.
 

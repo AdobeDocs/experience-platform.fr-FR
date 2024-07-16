@@ -24,7 +24,7 @@ GET /{OBJECT_TYPE}?{FILTER}={VALUE}&{FILTER_2}={VALUE}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Le type de [!DNL Catalog] à répertorier. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Le type d’objet [!DNL Catalog] à répertorier. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{FILTER}` | Un paramètre de requête utilisé pour filtrer les résultats renvoyés dans la réponse. Plusieurs paramètres sont séparés par des esperluettes (`&`). Pour plus d’informations, consultez le guide sur le [filtrage des données de Catalog](filter-data.md). |
 
 **Requête**
@@ -42,11 +42,11 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste de [!DNL Catalog] sous la forme de paires clé-valeur, filtrées par les paramètres de requête fournis dans la requête. Pour chaque paire clé-valeur, la clé représente un identifiant unique pour la variable [!DNL Catalog] objet en question, qui peut ensuite être utilisé dans un autre appel à [afficher cet objet spécifique ;](look-up-object.md) pour plus d’informations.
+Une réponse réussie renvoie une liste d’objets [!DNL Catalog] sous la forme de paires clé-valeur, filtrées par les paramètres de requête fournis dans la requête. Pour chaque paire clé-valeur, la clé représente un identifiant unique pour l’objet [!DNL Catalog] en question, qui peut ensuite être utilisé dans un autre appel à [afficher cet objet spécifique](look-up-object.md) pour plus de détails.
 
 >[!NOTE]
 >
->Si un objet renvoyé ne contient pas une ou plusieurs des propriétés demandées indiquées par la variable `properties` , la réponse renvoie uniquement les propriétés demandées qu’elle inclut, comme indiqué dans la section ***`Sample Dataset 3`*** et ***`Sample Dataset 4`*** ci-dessous
+>Si un objet renvoyé ne contient pas une ou plusieurs des propriétés demandées indiquées par la requête `properties`, la réponse renvoie uniquement les propriétés demandées incluses, comme illustré dans les sections ***`Sample Dataset 3`*** et ***`Sample Dataset 4`*** ci-dessous.
 
 ```json
 {

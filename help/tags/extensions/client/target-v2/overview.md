@@ -4,7 +4,7 @@ description: Découvrez l’extension de balise Adobe Target v2 dans Adobe Ex
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1318'
 ht-degree: 93%
 
 ---
@@ -134,7 +134,7 @@ Voici quelques éléments à garder à l’esprit lors de l’utilisation du fra
    * Lorsque la requête de chargement de page arrive à expiration
    * Lorsque le fragment lui-même arrive à expiration.
 * L’action &quot;Fire Page Load Request&quot; (Déclencher la requête de chargement de page) doit être utilisée sur toutes les pages à l’aide du fragment de code de masquage préalable afin de minimiser la durée du masquage.
-* Le masquage du corps doit également être activé dans l’action de requête de chargement de page de la règle de chargement de page que vous utilisez pour Target ; dans le cas contraire, tous les chargements de page restent masqués pendant le délai d’expiration.
+* Le masquage du corps doit également être activé dans l’action de requête de chargement de page de la règle de chargement de page que vous utilisez pour Target. Dans le cas contraire, tous les chargements de page restent masqués pendant le délai d’expiration.
 
 Le fragment de code de masquage préalable se présente comme suit et peut être réduit. Les options configurables se trouvent à la fin :
 

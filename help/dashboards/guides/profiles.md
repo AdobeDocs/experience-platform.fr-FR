@@ -15,7 +15,7 @@ ht-degree: 45%
 
 L’interface utilisateur d’Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos données [!DNL Real-Time Customer Profile], présentées ainsi lors d’un instantané quotidien. Ce guide explique comment accéder au tableau de bord Profils et l’utiliser dans l’interface utilisateur. Il fournit également des informations sur les mesures affichées dans le tableau de bord.
 
-Voir [Guide de l’interface utilisateur de Real-Time Customer Profile](../../profile/ui/user-guide.md) pour une présentation des fonctionnalités de profil dans l’interface utilisateur de l’Experience Platform.
+Reportez-vous au [guide de l’interface utilisateur de profil client en temps réel](../../profile/ui/user-guide.md) pour un aperçu des fonctionnalités de profil dans l’interface utilisateur de l’Experience Platform.
 
 ## Données du tableau de bord Profils
 
@@ -33,15 +33,15 @@ Pour accéder au tableau de bord Profils dans l’interface utilisateur de Platf
 
 >[!NOTE]
 >
->Si votre organisation débute avec Platform et ne dispose pas encore de jeux de données ou de politiques de fusion de profil actifs, le tableau de bord Profils n’est pas visible. Au lieu de cela, la variable [!UICONTROL Présentation] Cet onglet affiche des liens et de la documentation pour vous aider à prendre en main Real-time Customer Profile.
+>Si votre organisation débute avec Platform et ne dispose pas encore de jeux de données ou de politiques de fusion de profil actifs, le tableau de bord Profils n’est pas visible. À la place, l’onglet [!UICONTROL Aperçu] affiche des liens et de la documentation pour vous aider à prendre en main Real-time Customer Profile.
 
-![Le tableau de bord Profils Experience Platform avec les options Profils et Aperçu en surbrillance.](../images/profiles/dashboard-overview.png)
+![ Tableau de bord Profils Experience Platform avec profils et présentation en surbrillance.](../images/profiles/dashboard-overview.png)
 
 ### Modification du tableau de bord Profils {#modify-dashboard}
 
-Vous pouvez modifier l’aspect du tableau de bord Profils en sélectionnant **[!UICONTROL Modifier le tableau de bord]**. Vous pouvez déplacer, ajouter, redimensionner et supprimer des widgets du tableau de bord, ainsi que d’accéder au **[!UICONTROL Bibliothèque de widgets]** pour explorer les widgets disponibles et créer des widgets personnalisés pour votre organisation.
+Vous pouvez modifier l’aspect du tableau de bord Profils en sélectionnant **[!UICONTROL Modifier le tableau de bord]**. Vous pouvez déplacer, ajouter, redimensionner et supprimer des widgets du tableau de bord, ainsi qu’accéder à la **[!UICONTROL bibliothèque de widgets]** pour explorer les widgets disponibles et créer des widgets personnalisés pour votre organisation.
 
-Pour en savoir plus, voir la section [modification des tableaux de bord](../customize/modify.md) et [Présentation de la bibliothèque de widgets](../customize/widget-library.md) la documentation.
+Pour en savoir plus, consultez la documentation [Modification des tableaux de bord](../customize/modify.md) et [Présentation de la bibliothèque de widgets](../customize/widget-library.md) .
 
 ### Ajouter des widgets {#add-widget}
 
@@ -53,7 +53,7 @@ Dans la bibliothèque de widgets, vous pouvez parcourir la sélection de widgets
 
 ### Afficher le SQL {#view-sql}
 
-Vous pouvez afficher le code SQL qui génère les insights visualisés sur votre tableau de bord avec une bascule sur le [!UICONTROL Présentation] workspace. Vous pouvez vous inspirer du SQL de vos insights existants pour créer de nouvelles requêtes qui obtiennent des insights uniques à partir des données Platform en fonction des besoins de votre entreprise. Pour en savoir plus sur cette fonctionnalité, voir [Afficher le guide de l’interface utilisateur SQL](../view-sql.md).
+Vous pouvez afficher le code SQL qui génère les insights visualisés sur votre tableau de bord avec une bascule sur l’espace de travail [!UICONTROL Overview]. Vous pouvez vous inspirer du SQL de vos insights existants pour créer de nouvelles requêtes qui obtiennent des insights uniques à partir des données Platform en fonction des besoins de votre entreprise. Pour en savoir plus sur cette fonctionnalité, consultez le [guide de l’interface utilisateur SQL d’affichage](../view-sql.md).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -75,13 +75,13 @@ L’onglet [!UICONTROL Parcourir] vous permet de rechercher et d’afficher les 
 
 ## Détails du profil {#profile-details}
 
-Pour ouvrir la [!UICONTROL Profils] [!UICONTROL Détail] espace de travail, sélectionnez une [!UICONTROL Identifiant de profil] dans la liste.
+Pour ouvrir l&#39;espace de travail [!UICONTROL Profils] [!UICONTROL Détail], sélectionnez un [!UICONTROL ID de profil] dans la liste.
 
 ![L’onglet Parcourir des profils avec un identifiant de profil en surbrillance.](../images/profiles/profile-id.png)
 
-La variable [!UICONTROL Profils] [!UICONTROL Détail] workspace affiche plusieurs widgets préconfigurés qui véhiculent des informations spécifiques à ce profil. Ces informations vous permettent de comprendre en un coup d’oeil les attributs clés du profil. Vous pouvez également personnaliser vos [!UICONTROL Profils] [!UICONTROL Détail] espace de travail en créant vos propres widgets. Voir la section sur [comment ajouter des widgets](#add-widgets) pour plus d’informations.
+L&#39;espace de travail [!UICONTROL Profils] [!UICONTROL Détail] affiche plusieurs widgets préconfigurés qui véhiculent des informations spécifiques à ce profil. Ces informations vous permettent de comprendre en un coup d’oeil les attributs clés du profil. Vous pouvez également personnaliser votre espace de travail [!UICONTROL Profils] [!UICONTROL Détail] en créant vos propres widgets. Pour plus d’informations, reportez-vous à la section sur [l’ajout de widgets](#add-widgets) .
 
-![La variable [!UICONTROL Profils] [!UICONTROL Détail] de l’espace de travail [!UICONTROL Détail] en surbrillance.](../images/profiles/profile-details-workspace.png)
+![ Espace de travail [!UICONTROL Profils] [!UICONTROL Détail] avec l’onglet [!UICONTROL Détail] surligné.](../images/profiles/profile-details-workspace.png)
 
 ### Widgets de détails des profils {#widgets}
 
@@ -89,65 +89,65 @@ Les widgets de détails de profil préconfigurés sont les suivants :
 
 #### Profil client {#customer-profile}
 
-La variable [!UICONTROL Profil client] widget affiche le prénom et le nom de l’utilisateur associé au profil, ainsi que son [!UICONTROL Identifiant de profil]. Un identifiant de profil est un identifiant généré automatiquement, associé à un type d’identité et qui représente un profil. Pour en savoir plus sur les identités et les espaces de noms d’identité, consultez [Présentation des identités](../../rtcdp/profile/identities-overview.md).
+Le widget [!UICONTROL Profil client] affiche le prénom et le nom de l’utilisateur associé au profil, ainsi que son [!UICONTROL identifiant de profil]. Un identifiant de profil est un identifiant généré automatiquement, associé à un type d’identité et qui représente un profil. Pour en savoir plus sur les identités et les espaces de noms d’identité, consultez [Présentation des identités](../../rtcdp/profile/identities-overview.md).
 
-![Le widget Profil client .](../images/profiles/customer-profile.png)
+![Le widget Profil client.](../images/profiles/customer-profile.png)
 
 #### Attributs de base {#basic-attributes}
 
-La variable [!UICONTROL Attributs de base] widget affiche les attributs les plus couramment utilisés pour définir un profil individuel.
+Le widget [!UICONTROL Attributs de base] affiche les attributs les plus couramment utilisés pour définir un profil individuel.
 
-![Le widget Attributs de base .](../images/profiles/basic-attributes.png)
+![Widget Attributs de base.](../images/profiles/basic-attributes.png)
 
 #### Identités liées {#linked-identities}
 
-La variable [!UICONTROL Identités liées] widget affiche toutes les autres identités associées au profil.
+Le widget [!UICONTROL Identités liées] affiche toute autre identité associée au profil.
 
-Pour afficher plus en détail les détails de l’identité du profil, accédez à la [!UICONTROL Identités] espace de travail, sélectionnez **[!UICONTROL Affichage du graphique d’identités]**.
+Pour afficher plus en détail les détails de l’identité du profil et accéder à l’espace de travail [!UICONTROL Identités], sélectionnez **[!UICONTROL Afficher le graphique d’identités]**.
 
-![Le widget Identités liées .](../images/profiles/linked-identities.png)
+![Le widget Identités liées.](../images/profiles/linked-identities.png)
 
 #### Préférences de canaux {#channel-preferences}
 
-La variable [!UICONTROL Préférences de canal] widget affiche les canaux de communication dont l’utilisateur a consenti à recevoir la communication. Une coche indique chaque canal dont l’utilisateur a consenti à recevoir la communication.
+Le widget [!UICONTROL Préférences de canal] affiche les canaux de communication desquels l’utilisateur a consenti à recevoir la communication. Une coche indique chaque canal dont l’utilisateur a consenti à recevoir la communication.
 
 <!-- image needs a blue tick added below -->
 
-![Le widget Préférences de canal .](../images/profiles/channel-preferences.png)
+![Widget Préférences de canal.](../images/profiles/channel-preferences.png)
 
 Le consentement du client et les préférences de contact sont des sujets complexes. Pour savoir comment collecter, traiter et filtrer les préférences de consentement et de contexte dans Experience Platform, il est recommandé de lire les documents suivants :
 
-* Pour en savoir plus sur les groupes de champs de schéma requis pour [collecter des données de consentement conformément à la norme Adobe ;](../../landing/governance-privacy-security/consent/adobe/overview.md), consultez la documentation sur ces groupes de champs de schéma activés pour Profile.
-   * [[!UICONTROL Détails du consentement et des préférences]](../../xdm/field-groups/profile/consents.md)
-   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (obligatoire si vous utilisez le SDK Web ou Mobile Platform pour envoyer des signaux de consentement)
-* Pour savoir comment traiter les données de consentement et de préférence des clients à l’aide de la norme Adobe, consultez la présentation sur [traitement du consentement dans Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
-* Une stratégie de gouvernance des données et de consentement combinée peut être utilisée pour filtrer les profils en vue de la segmentation en fonction de leurs préférences de consentement et de vos règles d’organisation établies. Pour savoir comment créer et utiliser ces stratégies combinées, consultez le guide de l’utilisateur sur [gestion des stratégies d’utilisation des données](../../data-governance/policies/user-guide.md#combine-policies).
+* Pour en savoir plus sur les groupes de champs de schéma requis pour [ collecter les données de consentement conformément à la norme d’Adobe ](../../landing/governance-privacy-security/consent/adobe/overview.md), consultez la documentation sur ces groupes de champs de schéma activés pour Profile.
+   * [[!UICONTROL  Détails du consentement et des préférences]](../../xdm/field-groups/profile/consents.md)
+   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (requis si vous utilisez le SDK Web ou mobile de Platform pour envoyer des signaux de consentement)
+* Pour savoir comment traiter les données de consentement et de préférence client à l’aide de la norme Adobe, consultez la présentation sur le [traitement du consentement dans Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
+* Une stratégie de gouvernance des données et de consentement combinée peut être utilisée pour filtrer les profils en vue de la segmentation en fonction de leurs préférences de consentement et de vos règles d’organisation établies. Pour savoir comment créer et utiliser ces stratégies combinées, consultez le guide de l’utilisateur sur la [gestion des stratégies d’utilisation des données](../../data-governance/policies/user-guide.md#combine-policies).
 
 ### Ajouter des widgets {#add-widgets}
 
-Pour ajouter des widgets personnalisés à votre [!UICONTROL Profils] [!UICONTROL Détail] espace de travail, sélectionnez **[!UICONTROL Personnalisation des détails du profil]**.
+Pour ajouter des widgets personnalisés à votre espace de travail [!UICONTROL Profils] [!UICONTROL Détail], sélectionnez **[!UICONTROL Personnaliser les détails du profil]**.
 
-![L’espace de travail Détails des profils avec [!UICONTROL Personnalisation des détails du profil] surlignée.](../images/profiles/customize-profile-details.png)
+![Espace de travail Détails du profil avec [!UICONTROL Personnaliser les détails du profil] surligné.](../images/profiles/customize-profile-details.png)
 
-Vous pouvez désormais modifier l’espace de travail en redimensionnant ou en délocalisant les widgets. Sélectionner **[!UICONTROL Ajouter un widget]** pour créer un widget avec des attributs personnalisés.
+Vous pouvez désormais modifier l’espace de travail en redimensionnant ou en délocalisant les widgets. Sélectionnez **[!UICONTROL Ajouter un widget]** pour créer un widget avec des attributs personnalisés.
 
-![Profils [!UICONTROL Détail] Workspace avec [!UICONTROL Ajouter un widget] surlignée.](../images/profiles/add-widget.png)
+![ L&#39;espace de travail [!UICONTROL Détail] des profils avec [!UICONTROL Ajouter un widget] surligné.](../images/profiles/add-widget.png)
 
-Le créateur du widget s’affiche. Saisissez un nom explicite pour votre widget dans le champ [!UICONTROL Titre de carte] Champ de texte et sélectionnez **[!UICONTROL Ajout d’attributs]**.
+Le créateur du widget s’affiche. Saisissez un nom explicite pour votre widget dans le champ de texte [!UICONTROL Titre de carte] et sélectionnez **[!UICONTROL Ajouter des attributs]**.
 
-![Le canevas du créateur de widgets avec la propriété [!UICONTROL Titre de carte] champ et [!UICONTROL Ajout d’attributs] surlignée.](../images/profiles/widget-creator.png)
+![Le canevas du créateur de widgets avec le champ [!UICONTROL Titre de carte] et [!UICONTROL Ajouter des attributs] mis en surbrillance.](../images/profiles/widget-creator.png)
 
-Une boîte de dialogue s’affiche et contient une visualisation du schéma d’union du profil. Utilisez le champ de recherche ou faites défiler l’écran pour trouver les attributs sur lesquels vous souhaitez créer des rapports avec votre widget. Cochez la case correspondant aux attributs que vous souhaitez inclure. Sélectionner **[!UICONTROL Sélectionner]** pour continuer le workflow de création.
+Une boîte de dialogue s’affiche et contient une visualisation du schéma d’union du profil. Utilisez le champ de recherche ou faites défiler l’écran pour trouver les attributs sur lesquels vous souhaitez créer des rapports avec votre widget. Cochez la case correspondant aux attributs que vous souhaitez inclure. Sélectionnez **[!UICONTROL Sélectionner]** pour continuer le processus de création.
 
 >[!TIP]
 >
 >Une sélection de la case à cocher de niveau supérieur inclut tous les éléments enfants.
 
-![le diagramme de schéma d’union avec la case à cocher Attribut de fidélité et [!UICONTROL Sélectionner] surlignée.](../images/profiles/union-schema-attributes.png)
+![Le diagramme de schéma d&#39;union avec la case à cocher de l&#39;attribut loyalty et [!UICONTROL Select] surligné.](../images/profiles/union-schema-attributes.png)
 
-Un aperçu du widget terminé s’affiche sur la zone de travail. Une fois que vous êtes satisfait des attributs que vous avez choisis, sélectionnez **[!UICONTROL Enregistrer]** pour confirmer vos choix et revenir au [!UICONTROL Profils] [!UICONTROL Détail] workspace. Le widget nouvellement créé est désormais visible dans l’espace de travail.
+Un aperçu du widget terminé s’affiche sur la zone de travail. Une fois que vous êtes satisfait des attributs de votre choix, sélectionnez **[!UICONTROL Enregistrer]** pour confirmer vos choix et revenir à l’espace de travail [!UICONTROL Profils] [!UICONTROL Détail] . Le widget nouvellement créé est désormais visible dans l’espace de travail.
 
-![Zone de travail du créateur de widgets avec l’option Enregistrer mise en surbrillance et affichage de l’aperçu du widget.](../images/profiles/widget-preview.png)
+![Le canevas du créateur de widgets avec l’option Enregistrer mise en surbrillance et affiche l’aperçu du widget.](../images/profiles/widget-preview.png)
 
 ## Politiques de fusion {#merge-policies}
 
@@ -169,7 +169,7 @@ Le tableau de bord [!UICONTROL Schéma d’union] affiche le schéma d’union p
 
 Les schémas d’union sont composés de plusieurs schémas qui partagent la même classe et qui ont été activés pour Profile. Ils vous permettent de voir en une seule vue, une fusion de chaque champ contenu dans chaque schéma qui partage la même classe.
 
-Pour en savoir plus sur [affichage des schémas d’union dans l’interface utilisateur de Platform](../../profile/ui/union-schema.md#view-union-schemas), reportez-vous au guide de l’interface utilisateur du schéma d’union.
+Pour en savoir plus sur l’ [affichage des schémas d’union dans l’interface utilisateur de Platform](../../profile/ui/union-schema.md#view-union-schemas), consultez le guide de l’interface utilisateur des schémas d’union.
 
 ## Widgets et mesures
 
@@ -191,11 +191,11 @@ Un chargement de widget par défaut est fourni pour toutes les nouvelles instanc
 
 >[!NOTE]
 >
->Depuis le 26 juillet 2023, la variable [!UICONTROL Profils], [!UICONTROL Audiences], et [!UICONTROL Destinations] Les tableaux de bord Aperçu ont été réinitialisés à un nouveau chargement de widget par défaut pour tous les utilisateurs qui n’ont pas modifié leurs vues au cours des six derniers mois. Reportez-vous à la documentation du [Destinations](./destinations.md#default-widgets) et [Audiences](./audiences.md#default-widgets) sections de widget par défaut pour plus d’informations sur les widgets qui sont inclus dans les chargements de widgets par défaut. Vous pouvez continuer à personnaliser vos widgets de tableau de bord comme auparavant.
+>Depuis le 26 juillet 2023, les tableaux de bord [!UICONTROL Profils], [!UICONTROL Audiences] et [!UICONTROL Destinations] Aperçu ont été réinitialisés à un nouveau chargement de widget par défaut pour tous les utilisateurs qui n’ont pas modifié leurs vues au cours des six derniers mois. Reportez-vous à la documentation des sections de widget par défaut [Destinations](./destinations.md#default-widgets) et [Audiences](./audiences.md#default-widgets) pour plus d’informations sur les widgets inclus dans les chargements de widget par défaut. Vous pouvez continuer à personnaliser vos widgets de tableau de bord comme auparavant.
 
 ## Widgets Customer AI {#customer-ai-profiles-widgets}
 
-Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Pour ce faire, Customer AI analyse les données d’événement d’expérience client existantes afin de prédire **scores de propension à l’attrition ou à la conversion**. Ces modèles de propension des clients à haute précision permettent une segmentation et un ciblage plus précis. La variable [distribution des scores](#customer-ai-distribution-of-scores) et [résumé de notation](#customer-ai-scoring-summary) les insights montrent la division de votre audience. Ils mettent en évidence les profils qui correspondent à une propension élevée/faible/moyenne et la manière dont ils sont répartis dans les nombres de profils.
+Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Pour ce faire, Customer AI analyse les données d’événement d’expérience client existantes afin de prédire les **scores de propension à l’attrition ou à la conversion**. Ces modèles de propension des clients à haute précision permettent une segmentation et un ciblage plus précis. La [distribution des scores](#customer-ai-distribution-of-scores) et les [résumé de notation](#customer-ai-scoring-summary) affichent la division dans votre audience. Ils mettent en évidence les profils qui correspondent à une propension élevée/faible/moyenne et la manière dont ils sont répartis dans les nombres de profils.
 
 * [[!UICONTROL Résumé des scores de l’IA dédiée aux clientes et aux clients]](#customer-ai-scoring-summary)
 * [[!UICONTROL Distribution des scores par l’IA dédiée aux clientes et aux clients]](#customer-ai-distribution-of-scores)
@@ -207,27 +207,27 @@ Customer AI est utilisé pour générer des scores de propension personnalisés 
 >title="Distribution des scores"
 >abstract="Ce widget visualise la distribution du nombre total de profils en fonction de leurs scores de propension, par incréments de cinq pour cent. La distribution du nombre de profils est déterminée par le modèle d’IA et la politique de fusion sélectionnée. Vous pouvez modifier le modèle d’IA dans le menu déroulant sous le titre du widget."
 
-La variable [!UICONTROL Distribution des scores par Customer AI] widget classe le nombre total de profils en fonction de leurs scores de propension. La distribution du nombre de profils est déterminée par le modèle AI et la stratégie de fusion sélectionnée, puis visualisée par incréments de 5 % qui indiquent leur propension. Le nombre de profils est fourni le long de l’axe Y et les scores de propension sont fournis le long de l’axe X.
+Le widget [!UICONTROL distribution Customer AI des scores] classe le nombre total de profils en fonction de leurs scores de propension. La distribution du nombre de profils est déterminée par le modèle AI et la stratégie de fusion sélectionnée, puis visualisée par incréments de 5 % qui indiquent leur propension. Le nombre de profils est fourni le long de l’axe Y et les scores de propension sont fournis le long de l’axe X.
 
 >[!NOTE]
 >
 >Si la visualisation est un score de propension à la conversion, les scores élevés sont en vert et les scores faibles en rouge. Si vous prédisez la propension à l’attrition, les scores élevés sont en rouge et les scores faibles en vert. Le compartiment moyen reste jaune quel que soit le type de propension sélectionné.
 
-Le modèle AI qui détermine les scores de propension est sélectionné dans le sélecteur de liste déroulante sous le titre du widget. La liste déroulante contient une liste de tous les modèles Customer AI configurés. Sélectionnez le modèle d’IA approprié à votre analyse dans la liste des modèles disponibles. Si aucun modèle Customer AI n’est disponible, un message du widget vous invite à configurer au moins un modèle Customer AI et fournit un lien hypertexte vers la page de configuration du modèle Customer AI. Consultez la documentation pour obtenir des instructions sur [Configuration d’une instance Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md).
+Le modèle AI qui détermine les scores de propension est sélectionné dans le sélecteur de liste déroulante sous le titre du widget. La liste déroulante contient une liste de tous les modèles Customer AI configurés. Sélectionnez le modèle d’IA approprié à votre analyse dans la liste des modèles disponibles. Si aucun modèle Customer AI n’est disponible, un message du widget vous invite à configurer au moins un modèle Customer AI et fournit un lien hypertexte vers la page de configuration du modèle Customer AI. Consultez la documentation pour obtenir des instructions sur la configuration d’une instance Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md).[
 
 >[!NOTE]
 >
->Sélectionnez la liste déroulante juste en dessous de l’onglet d’aperçu pour modifier la stratégie de fusion qui détermine les profils inclus dans l’analyse. Voir la section sur [stratégies de fusion](#merge-policies) pour une brève description, ou la variable [présentation des stratégies de fusion](../../profile/merge-policies/overview.md) pour plus d’informations.
+>Sélectionnez la liste déroulante juste en dessous de l’onglet d’aperçu pour modifier la stratégie de fusion qui détermine les profils inclus dans l’analyse. Pour obtenir une brève description, reportez-vous à la section sur les [stratégies de fusion](#merge-policies) ou à la [présentation des stratégies de fusion](../../profile/merge-policies/overview.md) pour plus d’informations.
 
-Pour accéder à la page d’informations détaillées du modèle Customer AI sélectionné, sélectionnez **[!UICONTROL Affichage des détails du modèle]**.
+Pour accéder à la page d’informations détaillées du modèle Customer AI sélectionné, sélectionnez **[!UICONTROL Afficher les détails du modèle]**.
 
-![Le tableau de bord Audiences Experience Platform avec la variable [!UICONTROL Distribution des scores par Customer AI] widget [!UICONTROL Affichage des détails du modèle] surlignée.](../images/segments/customer-ai-distribution-of-scores.png)
+![Le tableau de bord Audiences Experience Platform avec le widget [!UICONTROL  Distribution Customer AI des scores] et [!UICONTROL Afficher les détails du modèle] mis en surbrillance.](../images/segments/customer-ai-distribution-of-scores.png)
 
 La page d’informations détaillées sur les modèles s’affiche.
 
-![Page d’informations de Customer AI.](../images/profiles/customer-ai-insights-page.png)
+![Page d’insights pour Customer AI.](../images/profiles/customer-ai-insights-page.png)
 
-Pour plus d’informations sur Customer AI, voir [guide de l’interface utilisateur de discover insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+Vous trouverez plus d’informations sur Customer AI dans le [guide de découverte de l’interface utilisateur d’insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
 ### [!UICONTROL Résumé des scores de l’IA dédiée aux clientes et aux clients] {#customer-ai-scoring-summary}
 
@@ -242,19 +242,19 @@ Ce widget affiche le nombre total de profils notés et les classe en compartimen
 >
 >Si la visualisation est un score de propension à la conversion, les scores élevés sont en vert et les scores faibles en rouge. Si vous prédisez la propension à l’attrition, les scores élevés sont en rouge et les scores faibles en vert. Le compartiment moyen reste jaune quel que soit le type de propension sélectionné.
 
-Le menu déroulant sous le titre du widget fournit une liste de tous les modèles Customer AI configurés. Sélectionnez le modèle d’IA approprié à votre analyse dans la liste des modèles disponibles. Si aucun modèle Customer AI n’est disponible, un message du widget vous invite à configurer au moins un modèle Customer AI et fournit un lien hypertexte vers la page de configuration du modèle Customer AI. Consultez la documentation relative à [Configuration d’une instance Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md) pour obtenir des instructions détaillées.
+Le menu déroulant sous le titre du widget fournit une liste de tous les modèles Customer AI configurés. Sélectionnez le modèle d’IA approprié à votre analyse dans la liste des modèles disponibles. Si aucun modèle Customer AI n’est disponible, un message du widget vous invite à configurer au moins un modèle Customer AI et fournit un lien hypertexte vers la page de configuration du modèle Customer AI. Pour obtenir des instructions détaillées, consultez la documentation sur [la configuration d’une instance Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md) .
 
 >[!NOTE]
 >
->Le nombre total de profils calculés dépend de la stratégie de fusion choisie. Pour modifier la stratégie de fusion utilisée, sélectionnez la liste déroulante juste en dessous de l’onglet d’aperçu. Voir la section sur [stratégies de fusion](#merge-policies) pour une brève description, ou la variable [présentation des stratégies de fusion](../../profile/merge-policies/overview.md) pour plus d’informations.
+>Le nombre total de profils calculés dépend de la stratégie de fusion choisie. Pour modifier la stratégie de fusion utilisée, sélectionnez la liste déroulante juste en dessous de l’onglet d’aperçu. Pour obtenir une brève description, reportez-vous à la section sur les [stratégies de fusion](#merge-policies) ou à la [présentation des stratégies de fusion](../../profile/merge-policies/overview.md) pour plus d’informations.
 
 ![Le tableau de bord Audiences Experience Platform avec le widget de résumé de notation de Customer AI mis en surbrillance.](../images/segments/customer-ai-scoring-summary.png)
 
-Pour accéder à la page d’informations détaillées du modèle Customer AI sélectionné, sélectionnez **[!UICONTROL Affichage des détails du modèle]**. Pour plus d’informations sur Customer AI, voir [guide de l’interface utilisateur de discover insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+Pour accéder à la page d’informations détaillées du modèle Customer AI sélectionné, sélectionnez **[!UICONTROL Afficher les détails du modèle]**. Vous trouverez plus d’informations sur Customer AI dans le [guide de découverte de l’interface utilisateur d’insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
 ## Widgets standard {#standard-widgets}
 
-Adobe fournit plusieurs widgets standards que vous pouvez utiliser pour visualiser différentes mesures liées à vos données de profil. Vous pouvez également créer des widgets personnalisés à partager avec votre organisation à l’aide de la [!UICONTROL Bibliothèque de widgets]. Pour en savoir plus sur la création de widgets personnalisés, commencez par lire le [Présentation de la bibliothèque de widgets](../customize/widget-library.md).
+Adobe fournit plusieurs widgets standards que vous pouvez utiliser pour visualiser différentes mesures liées à vos données de profil. Vous pouvez également créer des widgets personnalisés à partager avec votre organisation à l’aide de la [!UICONTROL Bibliothèque de widgets]. Pour en savoir plus sur la création de widgets personnalisés, commencez par lire la [présentation de la bibliothèque de widgets](../customize/widget-library.md).
 
 Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez le nom d’un widget dans la liste suivante :
 
@@ -283,15 +283,15 @@ Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez 
 >title="Nombre de profils"
 >abstract="Ce widget affiche le nombre total de profils fusionnés dans la banque de profils au moment où l’instantané a été pris. Le nombre dépend de la politique de fusion sélectionnée appliquée à vos données de profil."
 
-La variable **[!UICONTROL Nombre de profils]** widget affiche le nombre total de profils fusionnés dans la banque de profils au moment où l’instantané a été pris. Ce nombre est le résultat de l’application de la politique de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
+Le widget **[!UICONTROL Nombre de profils]** affiche le nombre total de profils fusionnés dans la banque de profils au moment où l’instantané a été pris. Ce nombre est le résultat de l’application de la politique de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
 
 Pour en savoir plus, consultez la [section sur les politiques de fusion plus haut dans ce document](#merge-policies).
 
 >[!NOTE]
 >
->Le widget [!UICONTROL Nombre de profils] peut afficher un nombre différent du nombre de profils affiché dans l’onglet [!UICONTROL Parcourir] dans la section [!UICONTROL Profils] de l’interface utilisateur pour plusieurs raisons. La raison la plus courante de cette différence est que la variable [!UICONTROL Parcourir] L’onglet référence le nombre total de profils fusionnés en fonction de la stratégie de fusion par défaut de votre organisation, tandis que la variable [!UICONTROL Nombre de profils] Le widget référence le nombre total de profils fusionnés en fonction de la stratégie de fusion que vous avez sélectionnée pour afficher dans le tableau de bord.
+>Le widget [!UICONTROL Nombre de profils] peut afficher un nombre différent du nombre de profils affiché dans l’onglet [!UICONTROL Parcourir] dans la section [!UICONTROL Profils] de l’interface utilisateur pour plusieurs raisons. La raison la plus courante de cette différence est que l’onglet [!UICONTROL Parcourir] référence le nombre total de profils fusionnés en fonction de la stratégie de fusion par défaut de votre organisation, tandis que le widget [!UICONTROL Nombre de profils] référence le nombre total de profils fusionnés en fonction de la stratégie de fusion que vous avez sélectionnée pour afficher dans le tableau de bord.
 >
->Une autre raison courante est due aux différences entre le moment où l’instantané du tableau de bord est pris et le moment où l’exemple de tâche est exécuté pour l’onglet [!UICONTROL Parcourir]. Vous pouvez voir quand le widget [!UICONTROL Nombre de profils] a été mis à jour pour la dernière fois en regardant la date et l’heure sur le widget. Pour en savoir plus sur la manière dont l’exemple de tâche est déclenché sur la page [!UICONTROL Parcourir] , voir [section sur le nombre de profils dans le guide de l’interface utilisateur de Real-time Customer Profile](../../profile/ui/user-guide.md#profile-count).
+>Une autre raison courante est due aux différences entre le moment où l’instantané du tableau de bord est pris et le moment où l’exemple de tâche est exécuté pour l’onglet [!UICONTROL Parcourir]. Vous pouvez voir quand le widget [!UICONTROL Nombre de profils] a été mis à jour pour la dernière fois en regardant la date et l’heure sur le widget. Pour en savoir plus sur la façon dont l’exemple de tâche est déclenché sur l’onglet [!UICONTROL Parcourir], consultez la section [nombre de profils dans le guide d’interface utilisateur de Real-Time Customer Profile](../../profile/ui/user-guide.md#profile-count).
 
 ![Le tableau de bord Profils Experience Platform avec le widget Nombre de profils mis en surbrillance.](../images/profiles/profile-count.png)
 
@@ -308,11 +308,11 @@ Le widget [!UICONTROL Tendance du nombre de profils] utilise un graphique linéa
 >title="Modification du nombre de profils"
 >abstract="Ce widget affiche le nombre total de profils fusionnés **ajoutés** à la banque de profils au moment du dernier instantané. Le nombre dépend de la politique de fusion sélectionnée appliquée à vos données de profil."
 
-La variable **[!UICONTROL Modification du nombre de profils]** widget affiche le nombre de profils fusionnés ajoutés à la banque de profils depuis l’instantané précédent. Ce nombre est le résultat de l’application de la politique de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu. Vous pouvez utiliser le sélecteur de liste déroulante pour afficher le nombre de profils ajoutés au cours des 30 derniers jours, des 90 derniers jours, ou des 12 derniers mois.
+Le widget **[!UICONTROL Changement du nombre de profils]** affiche le nombre de profils fusionnés ajoutés à la banque de profils depuis l’instantané précédent. Ce nombre est le résultat de l’application de la politique de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu. Vous pouvez utiliser le sélecteur de liste déroulante pour afficher le nombre de profils ajoutés au cours des 30 derniers jours, des 90 derniers jours, ou des 12 derniers mois.
 
 >[!NOTE]
 >
->La variable [!UICONTROL Modification du nombre de profils] widget reflète le nombre de profils ajoutés **after** la configuration initiale de l’ingestion des profils et de la banque de profils. En d’autres termes, si votre entreprise a configuré la banque de profils et ingéré 4 000 000 le jour 1, le tableau de bord sera disponible dans les 24 heures, mais la variable [!UICONTROL Modification du nombre de profils] est défini sur 0. Cette méthode de comptage est effectuée pour éviter un pic associé à l’ingestion initiale des profils dans le système. Au cours des 30 prochains jours, votre organisation assimilera 1 000 000 profils supplémentaires dans la banque de profils. Une fois l’instantané suivant pris, le widget [!UICONTROL Modification du nombre de profils] affiche un total de 1 000 000 profils ajoutés, tandis que le widget [!UICONTROL Nombre de profils] affiche un total de 5 000 000 profils.
+>Le widget [!UICONTROL changement de nombre de profils] reflète le nombre de profils ajoutés **après** l’ingestion initiale du profil et la configuration de la banque de profils. En d’autres termes, si votre organisation a configuré la banque de profils et ingéré 4 000 000 le jour 1, dans les 24 heures, le tableau de bord sera disponible, mais le widget [!UICONTROL Changement de nombre de profils] sera défini sur 0. Cette méthode de comptage est effectuée pour éviter un pic associé à l’ingestion initiale des profils dans le système. Au cours des 30 prochains jours, votre organisation assimilera 1 000 000 profils supplémentaires dans la banque de profils. Une fois l’instantané suivant pris, le widget [!UICONTROL Modification du nombre de profils] affiche un total de 1 000 000 profils ajoutés, tandis que le widget [!UICONTROL Nombre de profils] affiche un total de 5 000 000 profils.
 
 ![Le tableau de bord Profils de l’interface utilisateur de Platform avec le widget Modification du nombre de profils mis en surbrillance.](../images/profiles/profile-count-change.png)
 
@@ -323,9 +323,9 @@ La variable **[!UICONTROL Modification du nombre de profils]** widget affiche le
 >title="Tendance de modification du nombre de profils"
 >abstract="Ce widget affiche le nombre de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30 derniers jours, des 90 derniers jours, ou des 12 derniers mois. Le nombre dépend également de la politique de fusion sélectionnée appliquée à vos données de profil."
 
-La variable **[!UICONTROL Tendance du nombre de changements de profils]** widget affiche le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30 derniers jours, 90 ou 12 derniers mois. Ce nombre est mis à jour chaque jour lorsque l’instantané est pris. Par conséquent, si vous deviez ingérer des profils dans Platform, le nombre de profils ne serait pas reflété tant que l’instantané suivant n’aurait pas été pris. Le nombre de profils ajoutés est le résultat de l’application de la politique de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
+Le widget **[!UICONTROL Tendance à changement du nombre de profils]** affiche le nombre total de profils fusionnés qui ont été ajoutés quotidiennement à la banque de profils au cours des 30 derniers jours, 90 ou 12 derniers mois. Ce nombre est mis à jour chaque jour lorsque l’instantané est pris. Par conséquent, si vous deviez ingérer des profils dans Platform, le nombre de profils ne serait pas reflété tant que l’instantané suivant n’aurait pas été pris. Le nombre de profils ajoutés est le résultat de l’application de la politique de fusion sélectionnée à vos données de profil afin de fusionner les fragments de profil pour former un seul profil pour chaque individu.
 
-Pour en savoir plus, voir la section [section sur les stratégies de fusion plus tôt dans ce document](#merge-policies).
+Pour en savoir plus, reportez-vous à la section [sur les stratégies de fusion plus tôt dans ce document](#merge-policies).
 
 Le widget **[!UICONTROL Tendance de modification du nombre de profils]** affiche un bouton « légendes » en haut à droite du widget. Pour ouvrir la boîte de dialogue de sous-titres automatiques, sélectionnez **[!UICONTROL Sous-titres]**.
 
@@ -352,9 +352,9 @@ Ce widget vous permet de gérer vos besoins d’activation de destination en pr�
 >title="Profils par identité"
 >abstract="Ce widget affiche la répartition de tous les profils fusionnés dans votre banque de profils par identités."
 
-La variable **[!UICONTROL Profils par identité]** widget affiche la ventilation des identités pour tous les profils fusionnés de votre banque de profils. Le nombre total de profils par identité (c’est-à-dire en additionnant les valeurs affichées pour chaque espace de noms) peut être supérieur au nombre total de profils fusionnés, car plusieurs espaces de noms peuvent être associés à un profil. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms sont associés à ce client individuel.
+Le widget **[!UICONTROL Profils par identité]** affiche la ventilation des identités sur tous les profils fusionnés de votre banque de profils. Le nombre total de profils par identité (c’est-à-dire en additionnant les valeurs affichées pour chaque espace de noms) peut être supérieur au nombre total de profils fusionnés, car plusieurs espaces de noms peuvent être associés à un profil. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms sont associés à ce client individuel.
 
-Pour en savoir plus, voir la section [section sur les stratégies de fusion plus tôt dans ce document](#merge-policies).
+Pour en savoir plus, reportez-vous à la section [sur les stratégies de fusion plus tôt dans ce document](#merge-policies).
 
 ![Le tableau de bord d’aperçu des profils avec le widget Profils par identité mis en surbrillance.](../images/profiles/profiles-by-identity.png)
 
@@ -364,7 +364,7 @@ Pour ouvrir la boîte de dialogue de sous-titres automatiques, sélectionnez **[
 
 Un modèle de machine learning génère automatiquement des informations sur les données en analysant la distribution globale et les dimensions clés des données.
 
-Pour en savoir plus sur les identités, reportez-vous au [Documentation du service Adobe Experience Platform Identity](../../identity-service/home.md).
+Pour en savoir plus sur les identités, consultez la [documentation du service Adobe Experience Platform Identity](../../identity-service/home.md).
 
 ### [!UICONTROL Chevauchement des identités] {#identity-overlap}
 
@@ -373,15 +373,15 @@ Pour en savoir plus sur les identités, reportez-vous au [Documentation du servi
 >title="Chevauchement des identités"
 >abstract="Ce widget utilise un diagramme de Venn pour afficher le chevauchement des profils de votre banque de profils qui contiennent les deux identités sélectionnées."
 
-La variable **[!UICONTROL Superposition des identités]** Le widget utilise un diagramme de Venn, ou un diagramme de définition, pour afficher le chevauchement des profils de votre banque de profils qui contiennent les deux identités sélectionnées.
+Le widget **[!UICONTROL chevauchement d’identités]** utilise un diagramme de Venn, ou un diagramme défini, pour afficher le chevauchement des profils de votre banque de profils qui contiennent les deux identités sélectionnées.
 
 Utilisez les menus déroulants du widget pour sélectionner les identités à comparer. Les cercles affichent le nombre total relatif de profils qui contiennent chaque identité. Le nombre de profils contenant les deux identités est représenté par la taille du chevauchement entre les cercles. Si un client interagit avec votre marque sur plusieurs canaux, plusieurs identités sont associées à ce client individuel. Dans ce cas, il est probable que votre organisation dispose de plusieurs profils contenant des fragments provenant de plusieurs identités.
 
-Pour plus d&#39;informations sur les fragments de profil, consultez la section sur [fragments de profil par rapport aux profils fusionnés](../../profile/home.md#profile-fragments-vs-merged-profiles) dans la présentation de Real-time Customer Profile.
+Pour plus d’informations sur les fragments de profil, reportez-vous à la section sur les [fragments de profil par rapport aux profils fusionnés](../../profile/home.md#profile-fragments-vs-merged-profiles) dans la présentation de Real-time Customer Profile.
 
-Pour en savoir plus sur les identités, reportez-vous au [Documentation du service Adobe Experience Platform Identity](../../identity-service/home.md).
+Pour en savoir plus sur les identités, consultez la [documentation du service Adobe Experience Platform Identity](../../identity-service/home.md).
 
-![Le tableau de bord Profils présente un aperçu du widget de chevauchement des identités mis en surbrillance.](../images/profiles/identity-overlap.png)
+![Présentation du tableau de bord Profils avec le widget de chevauchement des identités surligné.](../images/profiles/identity-overlap.png)
 
 ### [!UICONTROL Profils à identité unique] {#single-identity-profiles}
 
@@ -409,7 +409,7 @@ Pour afficher une boîte de dialogue détaillant le nombre total de profils pour
 >title="Profils non segmentés"
 >abstract="Ce widget fournit le nombre total de profils qui ne sont associés à aucune audience et représente l’opportunité d’activation des profils à l’échelle de votre organisation."
 
-La variable [!UICONTROL Profils non segmentés] fournit le nombre total de tous les profils qui ne sont associés à aucune audience. Le nombre, généré à partir du dernier instantané, est précis et souligne l’opportunité d’activation de profils dans votre entreprise. Il indique également la possibilité d’effacer les profils qui ne fournissent pas un retour sur investissement adéquat.
+Le widget [!UICONTROL Profils non segmentés] fournit le nombre total de tous les profils qui ne sont associés à aucune audience. Le nombre, généré à partir du dernier instantané, est précis et souligne l’opportunité d’activation de profils dans votre entreprise. Il indique également la possibilité d’effacer les profils qui ne fournissent pas un retour sur investissement adéquat.
 
 ![Widget Profils non segmentés.](../images/profiles/unsegmented-profiles.png)
 
@@ -420,7 +420,7 @@ La variable [!UICONTROL Profils non segmentés] fournit le nombre total de tous 
 >title="Tendance des profils non segmentés"
 >abstract="Ce widget fournit une illustration graphique linéaire du nombre de profils qui ne sont associés à aucune audience sur une période donnée. La tendance des profils non associés à une audience peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois."
 
-La variable [!UICONTROL Les profils non segmentés changent de tendance] widget utilise un graphique linéaire pour illustrer le nombre de profils ajoutés depuis le dernier instantané quotidien qui ne sont associés à aucune audience. La tendance de changement des profils qui ne sont associés à aucune audience peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. Le nombre de profils est reflété sur l’axe des ordonnées et la période sur l’axe des abscisses.
+Le widget [!UICONTROL Flux de changement de profil non segmenté] utilise un graphique linéaire pour illustrer le nombre de profils ajoutés depuis le dernier instantané quotidien qui ne sont associés à aucune audience. La tendance de changement des profils qui ne sont associés à aucune audience peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. Le nombre de profils est reflété sur l’axe des ordonnées et la période sur l’axe des abscisses.
 
 ![Les profils non segmentés changent de widget de tendance.](../images/profiles/unsegmented-profiles-change-trend.png)
 
@@ -445,7 +445,7 @@ The [!UICONTROL Unsegmented Profiles by Identity] widget categorizes the total n
 
 Ce widget fournit le nombre total d’audiences prêtes à être activées, en fonction de la stratégie de fusion choisie appliquée aux données de votre profil.
 
-Sélectionner **[!UICONTROL Audiences]** pour accéder au [!UICONTROL Audiences] tableau de bord [!UICONTROL Parcourir] . À partir de là, vous pouvez voir une liste de toutes les définitions de segment pour votre organisation.
+Sélectionnez **[!UICONTROL Audiences]** pour accéder au tableau de bord [!UICONTROL Audiences] [!UICONTROL Parcourir] . À partir de là, vous pouvez voir une liste de toutes les définitions de segment pour votre organisation.
 
 ![Widget Audiences.](../images/profiles/audiences.png)
 
@@ -462,7 +462,7 @@ The visualization allows you to monitor the overall health of audiences within A
 
 ### [!UICONTROL Rapport de chevauchement des audiences] {#audience-overlap-report}
 
-Ce widget tableau les données de chevauchement de toutes les audiences disponibles filtrées par stratégie de fusion. Une liste de cinq audiences classées du pourcentage de chevauchement le plus élevé au plus faible est fournie pour la politique de fusion choisie dans le menu déroulant en haut de l’écran. Les deux audiences analysées sont répertoriées dans la variable [!UICONTROL AUDIENCE A NAME] et [!UICONTROL NOM DE L’AUDIENCE B] colonnes. Le chevauchement en pourcentage est fourni dans la troisième colonne avec une précision de douze décimales.
+Ce widget tableau les données de chevauchement de toutes les audiences disponibles filtrées par stratégie de fusion. Une liste de cinq audiences classées du pourcentage de chevauchement le plus élevé au plus faible est fournie pour la politique de fusion choisie dans le menu déroulant en haut de l’écran. Les deux audiences analysées sont répertoriées dans les colonnes [!UICONTROL AUDIENCE A NAME] et [!UICONTROL AUDIENCE B NAME] . Le chevauchement en pourcentage est fourni dans la troisième colonne avec une précision de douze décimales.
 
 Le rapport sur les chevauchements d’audiences vous aide à créer de nouvelles audiences hautement performantes. L’observation des chevauchements au pourcentage élevé vous permet de supprimer des audiences et d’empêcher l’envoi d’une même audience vers différentes destinations. Elle vous aide également à identifier les informations cachées qui peuvent contribuer à une meilleure segmentation. Un chevauchement au pourcentage faible permet de localiser les profils uniques à rechercher.
 
@@ -470,13 +470,13 @@ Sélectionnez **[!UICONTROL Afficher plus]** pour ouvrir une boîte de dialogue 
 
 ![Le widget Rapport de chevauchement des audiences avec l’option Afficher plus en surbrillance.](../images/profiles/profiles-audience-overlap-report.png)
 
-La boîte de dialogue [!UICONTROL Rapport de chevauchement des audiences] s’affiche. Cette boîte de dialogue peut contenir jusqu’à 50 lignes d’analyses de chevauchement des audiences, divisées en six colonnes. Pour supprimer ou ajouter des colonnes du tableau, sélectionnez l’icône de paramètres (![Icône Paramètres .](../images/profiles/settings-icon.png)).
+La boîte de dialogue [!UICONTROL Rapport de chevauchement des audiences] s’affiche. Cette boîte de dialogue peut contenir jusqu’à 50 lignes d’analyses de chevauchement des audiences, divisées en six colonnes. Pour supprimer ou ajouter des colonnes de la table, sélectionnez l’icône de paramètres (![Icône Paramètres.](../images/profiles/settings-icon.png)).
 
 ![Boîte de dialogue Rapport de chevauchement des audiences.](../images/profiles/profiles-audience-overlap-report-dialog.png)
 
 >[!NOTE]
 >
->Pour modifier le classement des résultats entre le plus haut au plus bas ou le plus bas au plus haut, sélectionnez la variable **[!UICONTROL Chevauchement]** en-tête de colonne.
+>Pour modifier le classement des résultats entre le plus haut au plus bas ou le plus bas au plus haut, sélectionnez l’en-tête de colonne **[!UICONTROL Overlapping]** .
 
 Pour télécharger l’intégralité du rapport au format PDF, sélectionnez le menu d’options (**`...`**), puis **[!UICONTROL Télécharger]**.
 
@@ -490,7 +490,7 @@ Sélectionnez **[!UICONTROL Fermer]** pour revenir au tableau de bord des [!UICO
 
 ### [!UICONTROL Audiences mappées au statut de destination] {#audiences-mapped-to-destination-status}
 
-La variable [!UICONTROL Audiences mappées à l’état de destination] widget affiche le nombre total d’audiences mappées et non mappées dans une seule mesure et utilise un graphique en anneau pour illustrer la différence proportionnelle entre leurs totaux. Les nombres calculés dépendent de la politique de fusion choisie.
+Le widget [!UICONTROL Audiences mappées sur l’état de destination] affiche le nombre total d’audiences mappées et non mappées dans une mesure unique et utilise un graphique en anneau pour illustrer la différence proportionnelle entre leurs totaux. Les nombres calculés dépendent de la politique de fusion choisie.
 
 Les nombres individuels des audiences mappées ou non mappées s’affichent dans une boîte de dialogue lorsque le curseur survole la section correspondante du graphique en anneau.
 
@@ -498,15 +498,15 @@ Les nombres individuels des audiences mappées ou non mappées s’affichent dan
 
 ### [!UICONTROL Taille des audiences] {#audiences-size}
 
-La variable [!UICONTROL Taille des audiences] widget fournit un tableau à deux colonnes qui répertorie les noms de 20 audiences au maximum et le nombre total de profils contenus dans chaque audience. La liste est classée de haut en bas en fonction du nombre total de profils contenus dans l&#39;audience. Le nombre total de tailles d’audience dépend de la stratégie de fusion appliquée.
+Le widget [!UICONTROL Taille des audiences] fournit un tableau à deux colonnes qui répertorie les noms de 20 audiences au maximum et le nombre total de profils contenus dans chaque audience. La liste est classée de haut en bas en fonction du nombre total de profils contenus dans l&#39;audience. Le nombre total de tailles d’audience dépend de la stratégie de fusion appliquée.
 
 ![Le widget Taille des audiences.](../images/profiles/audiences-size.png)
 
-Pour afficher des informations complètes sur une audience, sélectionnez un nom d’audience dans la liste fournie pour accéder à la fonction [!UICONTROL Audiences] [!UICONTROL Détail] page. En sélectionnant **[!UICONTROL Afficher toutes les audiences]** à partir de la fin du widget, vous pouvez accéder au [!UICONTROL Audiences] [!UICONTROL Parcourir] pour rechercher une audience existante.
+Pour afficher des informations complètes sur une audience, sélectionnez un nom d’audience dans la liste fournie pour accéder à la page [!UICONTROL Audiences] [!UICONTROL Détail] . En outre, en sélectionnant **[!UICONTROL Afficher toutes les audiences]** à partir de la fin du widget, vous pouvez accéder à l’onglet [!UICONTROL Audiences] [!UICONTROL Parcourir] pour trouver une audience existante.
 
-![Le widget Taille des audiences avec un nom d’audience et le texte Afficher toutes les audiences mis en surbrillance.](../images/profiles/audiences-size-view-all-audiences.png)
+![Le widget Taille de l’audience avec un nom d’audience et le texte Afficher toutes les audiences mis en surbrillance.](../images/profiles/audiences-size-view-all-audiences.png)
 
-Vous trouverez plus d’informations sur les détails de l’audience dans la section [Documentation d’Audience Portal](../../segmentation/ui/audience-portal.md).
+Vous trouverez plus d’informations sur les détails de l’audience dans la [documentation d’Audience Portal](../../segmentation/ui/audience-portal.md).
 
 ### [!UICONTROL Chevauchements d’audience par politique de fusion] {#audience-overlap-by-merge-policy}
 
@@ -514,7 +514,7 @@ Ce widget utilise un diagramme de Venn pour afficher le chevauchement de deux au
 
 Ce widget affiche le croisement visuel des définitions de segment et vous permet d’optimiser la politique de segmentation en étudiant les similitudes entre les définitions de segment.
 
-![Le tableau de bord Profils de l’interface utilisateur de Platform avec le menu déroulant de stratégie de fusion et les listes déroulantes d’audience de widget sont mises en surbrillance.](../images/profiles/audience-overlap-by-merge-policy.png)
+![Le tableau de bord Profils de l’interface utilisateur de Platform avec la liste déroulante de stratégie de fusion et les listes déroulantes d’audience de widgets en surbrillance.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
@@ -587,4 +587,4 @@ The three levels of completeness are:
 
 ## Étapes suivantes
 
-En suivant ce document, vous devriez maintenant pouvoir localiser le tableau de bord des profils et comprendre les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation de [!DNL Profile] données de l’interface utilisateur Experience Platform, voir [Guide de l’interface utilisateur de Real-Time Customer Profile](../../profile/ui/user-guide.md).
+En suivant ce document, vous devriez maintenant pouvoir localiser le tableau de bord des profils et comprendre les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des données [!DNL Profile] dans l’interface utilisateur de l’Experience Platform, consultez le [guide de l’interface utilisateur de profil client en temps réel](../../profile/ui/user-guide.md).

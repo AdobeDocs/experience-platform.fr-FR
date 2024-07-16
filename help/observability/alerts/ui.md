@@ -21,13 +21,13 @@ Lʼinterface utilisateur dʼAdobe Experience Platform vous permet de consulter
 
 Commencez par sélectionner **[!UICONTROL Alertes]** dans le volet de navigation de gauche.
 
-![Mise en surbrillance de la page Alertes [!UICONTROL Alertes] dans le volet de navigation de gauche.](../images/alerts/ui/workspace.png)
+![ La page Alertes surlignant les [!UICONTROL alertes] dans le volet de navigation de gauche.](../images/alerts/ui/workspace.png)
 
 ## Gestion des règles dʼalerte
 
 Lʼonglet **[!UICONTROL Parcourir]** répertorie les règles disponibles susceptibles de déclencher une alerte.
 
-![Une liste des alertes disponibles s’affiche dans la variable [!UICONTROL Parcourir] .](../images/alerts/ui/rules.png)
+![ Une liste des alertes disponibles s&#39;affiche dans l&#39;onglet [!UICONTROL Parcourir].](../images/alerts/ui/rules.png)
 
 Sélectionnez une règle dans la liste pour afficher sa description et ses paramètres de configuration dans le rail de droite, y compris le seuil et la gravité.
 
@@ -37,7 +37,7 @@ Sélectionnez les points de suspension (**...**) en regard du nom dʼune règle 
 
 ![Les ellipses sélectionnées affichent le menu déroulant.](../images/alerts/ui/disable-subscribe.png)
 
-## Gestion des abonnés aux alertes
+## Gérer les abonnés aux alertes
 
 >[!NOTE]
 >
@@ -45,23 +45,23 @@ Sélectionnez les points de suspension (**...**) en regard du nom dʼune règle 
 
 Lʼonglet **[!UICONTROL Parcourir]** répertorie les règles disponibles susceptibles de déclencher une alerte.
 
-![Liste des règles d’alerte disponibles affichées dans la variable [!UICONTROL Parcourir] .](../images/alerts/ui/rules.png)
+![ Liste des règles d&#39;alerte disponibles affichées dans l&#39;onglet [!UICONTROL Parcourir].](../images/alerts/ui/rules.png)
 
-Sélectionnez les points de suspension (**..**) en regard du nom d’une règle, une liste déroulante affiche les contrôles. Sélectionner **[!UICONTROL Gestion des abonnés aux alertes]**.
+Sélectionnez les points de suspension (**...**) en regard du nom d’une règle. Une liste déroulante affiche les commandes. Sélectionnez **[!UICONTROL Gérer les abonnés aux alertes]**.
 
-![Sélectionnez les ellipses pour afficher le menu déroulant. La variable [!UICONTROL Gestion des abonnés aux alertes] est mise en surbrillance.](../images/alerts/ui/manage-alert-subscribers.png)
+![Sélectionnez les ellipses pour afficher le menu déroulant. L&#39;option [!UICONTROL Gérer les abonnés aux alertes] est mise en surbrillance.](../images/alerts/ui/manage-alert-subscribers.png)
 
-La variable [!UICONTROL Gestion des abonnés aux alertes] s’affiche. Pour attribuer des notifications à des utilisateurs spécifiques, saisissez leur identifiant utilisateur Adobe, leur adresse électronique externe ou une liste de groupes de messagerie, puis appuyez sur Entrée.
+La page [!UICONTROL Gérer les abonnés aux alertes] s&#39;affiche. Pour attribuer des notifications à des utilisateurs spécifiques, saisissez leur identifiant utilisateur Adobe, leur adresse électronique externe ou une liste de groupes de messagerie, puis appuyez sur Entrée.
 
 >[!NOTE]
 >
 >Pour envoyer cette notification à plusieurs utilisateurs à la fois, fournissez une liste d’ID utilisateur ou d’adresses électroniques séparés par des virgules.
 
-![La page gérer les abonnés aux alertes affiche les adresses électroniques saisies.](../images/alerts/ui/manage-alert-add-email.png)
+![ La page gérer les abonnés aux alertes qui affiche les adresses électroniques saisies.](../images/alerts/ui/manage-alert-add-email.png)
 
-Les adresses électroniques apparaissent dans la liste des abonnés actuels. Sélectionner **[!UICONTROL Mettre à jour]**.
+Les adresses électroniques apparaissent dans la liste des abonnés actuels. Sélectionnez **[!UICONTROL Mettre à jour]**.
 
-![La page gérer les abonnés aux alertes met en surbrillance les abonnés et [!UICONTROL Mettre à jour].](../images/alerts/ui/manage-alert-subscribers-added-email.png)
+![ La page de gestion des abonnés aux alertes met en surbrillance les abonnés et [!UICONTROL Mettre à jour].](../images/alerts/ui/manage-alert-subscribers-added-email.png)
 
 Vous avez correctement ajouté des utilisateurs à votre liste de notifications d’alertes. Les utilisateurs envoyés recevront désormais des notifications par courrier électronique pour cette alerte, comme illustré dans l’image ci-dessous.
 
@@ -71,17 +71,17 @@ Vous avez correctement ajouté des utilisateurs à votre liste de notifications 
 
 Les notifications d&#39;alerte peuvent être diffusées directement à votre email.
 
-Sélectionnez l’icône représentant une cloche (![icône représentant une cloche](../images/alerts/ui/bell-icon.png)) situé dans le ruban supérieur à droite pour afficher les notifications et les annonces. Dans la liste déroulante qui s’affiche, sélectionnez l’icône représentant un engrenage (![icône de code](../images/alerts/ui/cog-icon.png)) pour accéder à la page des préférences de l’Experience Cloud.
+Sélectionnez l’icône représentant une cloche (![icône représentant une cloche](../images/alerts/ui/bell-icon.png)) située dans le ruban supérieur à droite pour afficher les notifications et les annonces. Dans la liste déroulante qui s’affiche, sélectionnez l’icône représentant un engrenage (![icône représentant un engrenage](../images/alerts/ui/cog-icon.png)) pour accéder à la page des préférences de l’Experience Cloud.
 
-![Une liste d’alertes s’affiche, mettant en surbrillance l’icône représentant une cloche et l’icône représentant un engrenage.](../images/alerts/ui/edit-preferences.png)
+![ Une liste d’alertes affichée qui met en surbrillance l’icône représentant une cloche et l’icône représentant un engrenage.](../images/alerts/ui/edit-preferences.png)
 
-La variable **Profil** s’affiche. Sélectionnez la variable **[!UICONTROL Notifications]** dans le volet de navigation de gauche pour accéder aux préférences d’alerte par email.
+La page **Profil** s’affiche. Sélectionnez les **[!UICONTROL notifications]** dans le volet de navigation de gauche pour accéder aux préférences d’alertes par e-mail.
 
-![Mise en surbrillance de la page Profil [!UICONTROL Notifications] dans le volet de navigation de gauche.](../images/alerts/ui/profile.png)
+![ La page Profil qui surligne les [!UICONTROL notifications] dans le volet de navigation de gauche.](../images/alerts/ui/profile.png)
 
-Faites défiler l’écran jusqu’à **Emails** au bas de la page, puis sélectionnez **[!UICONTROL Notifications instantanées]**
+Accédez à la section **Emails** au bas de la page et sélectionnez **[!UICONTROL Notifications instantanées]**
 
-![La section Emails est mise en surbrillance dans la page Profil .](../images/alerts/ui/notifications.png)
+![La section Emails mise en surbrillance dans la page Profil.](../images/alerts/ui/notifications.png)
 
 Toutes les alertes auxquelles vous êtes abonné seront désormais envoyées à l’adresse électronique connectée à votre compte Adobe ID.
 
@@ -89,11 +89,11 @@ Toutes les alertes auxquelles vous êtes abonné seront désormais envoyées à 
 
 Lʼonglet **[!UICONTROL Historique]** affiche lʼhistorique des alertes reçues pour votre organisation, y compris la règle qui a déclenché lʼalerte, la date de déclenchement et la date de résolution (le cas échéant).
 
-![Une liste des alertes reçues s’affiche dans la [!UICONTROL Histoire] .](../images/alerts/ui/history.png)
+![Une liste des alertes reçues s&#39;affiche dans l&#39;onglet [!UICONTROL Historique].](../images/alerts/ui/history.png)
 
 Sélectionnez une alerte répertoriée pour afficher des détails supplémentaires dans le rail de droite, y compris un bref résumé de lʼévénement qui a déclenché lʼalerte.
 
-![Une alerte est mise en surbrillance pour afficher les détails dans le rail de droite.](../images/alerts/ui/history-details.png)
+![Une alerte mise en surbrillance pour afficher les détails dans le rail de droite.](../images/alerts/ui/history-details.png)
 
 ## Étapes suivantes
 

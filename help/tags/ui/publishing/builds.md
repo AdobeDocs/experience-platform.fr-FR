@@ -4,7 +4,7 @@ description: Découvrez le concept des builds et leur fonctionnement dans Adobe�
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '784'
 ht-degree: 100%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 100%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Une version est l’ensemble de fichiers contenant tout le code qui s’exécute sur le périphérique du client.
+Une version est l’ensemble de fichiers contenant tout le code qui s’exécute sur l’appareil du client.
 
 Il s’agit d’un ensemble des modifications que vous avez spécifiées dans votre bibliothèque, ainsi que de tout ce qui a été soumis, approuvé ou publié auparavant.
 

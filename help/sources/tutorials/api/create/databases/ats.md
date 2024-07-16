@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées[!DNL Azure Table Storage];[!DNL Azure Table Storage];Stockage de table Azure
+keywords: Experience Platform;accueil;rubriques populaires;[!DNL Azure Table Storage];[!DNL Azure Table Storage];stockage de table Azure
 solution: Experience Platform
 title: Création d’une connexion de base de stockage Azure Table à l’aide de l’API Flow Service
 type: Tutorial
@@ -7,16 +7,16 @@ description: Découvrez comment connecter Azure Table Storage à Adobe Experienc
 exl-id: 8ebd5d77-ed1f-47e1-8212-efb6c5e84ec1
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 65%
+source-wordcount: '465'
+ht-degree: 66%
 
 ---
 
-# Créez un [!DNL Azure Table Storage] connexion de base à l’aide de [!DNL Flow Service] API
+# Créez une connexion de base [!DNL Azure Table Storage] à l’aide de l’API [!DNL Flow Service]
 
 >[!NOTE]
 >
->La variable [!DNL Azure Table Storage] Le connecteur est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
+>Le connecteur [!DNL Azure Table Storage] est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez la [Présentation des sources](../../../../home.md#terms-and-conditions) .
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -29,7 +29,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 * [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL Azure Table Storage] en utilisant la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL Azure Table Storage] à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
@@ -37,10 +37,10 @@ Pour connecter [!DNL Flow Service] à [!DNL Azure Table Storage], vous devez fou
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `connectionString` | Chaîne de connexion utilisée pour se connecter à un [!DNL Azure Table Storage] instance. Le modèle de chaîne de connexion pour [!DNL Azure Table Storage] est : `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Azure Table Storage] is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `connectionString` | Chaîne de connexion utilisée pour se connecter à une instance [!DNL Azure Table Storage]. Le modèle de chaîne de connexion pour [!DNL Azure Table Storage] est : `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’ID de spécification de connexion pour [!DNL Azure Table Storage] est `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
-Pour plus d’informations sur l’obtention d’une chaîne de connexion, voir [this [!DNL Azure Table Storage] document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
+Pour plus d&#39;informations sur l&#39;obtention d&#39;une chaîne de connexion, reportez-vous à [this [!DNL Azure Table Storage] document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
 
 ### Utiliser les API Platform
 
@@ -88,8 +88,8 @@ curl -X POST \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `auth.params.connectionString` | Chaîne de connexion utilisée pour se connecter à un [!DNL Azure Table Storage] instance. Le modèle de chaîne de connexion pour [!DNL Azure Table Storage] est : `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| `connectionSpec.id` | La variable [!DNL Azure Table Storage] identifiant de spécification de connexion : `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `auth.params.connectionString` | Chaîne de connexion utilisée pour se connecter à une instance [!DNL Azure Table Storage]. Le modèle de chaîne de connexion pour [!DNL Azure Table Storage] est : `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionSpec.id` | ID de spécification de connexion [!DNL Azure Table Storage] : `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 **Réponse**
 
@@ -107,4 +107,4 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 Ce tutoriel vous a permis de créer une connexion de base [!DNL Azure Table Storage] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de la fonction [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/database-nosql.md)

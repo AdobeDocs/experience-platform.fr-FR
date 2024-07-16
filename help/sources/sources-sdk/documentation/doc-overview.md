@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;sources;connecteurs;connecteurs source;sdk sources;sdk;SDK
 solution: Experience Platform
-title: Document source
+title: Document de votre Source
 description: La dernière étape avant que votre nouvelle source puisse être mise en ligne dans Adobe Experience Platform consiste à documenter votre nouvelle source.
 exl-id: 80daadb1-127f-4f42-8bc9-fb89a7898462
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '392'
 ht-degree: 4%
 
 ---
@@ -26,8 +26,8 @@ Ce guide de documentation comprend :
 
 Les éléments suivants sont requis pour pouvoir commencer à documenter votre nouvelle source :
 
-* **Un compte utilisateur GitHub valide**: si vous ne disposez pas d’un compte GitHub existant, vous devez en créer un via la variable [Page d’inscription GitHub](https://github.com/);
-* **Accès à GitHub Desktop**: vous devez utiliser la variable [Application de bureau GitHub](https://desktop.github.com/) afin de créer votre documentation source dans votre environnement local ;
+* **Compte utilisateur GitHub valide** : si vous n’avez pas de compte GitHub existant, vous devez en créer un par le biais de la [page d’inscription GitHub](https://github.com/) ;
+* **Accès à l’appli de bureau GitHub** : vous devez utiliser l’[application de bureau GitHub](https://desktop.github.com/) pour créer la documentation source dans votre environnement local ;
 * Votre intégration à Adobe doit être dans une phase de test avec votre source déployée dans un environnement d’évaluation de Platform.
 
 ## Instructions générales pour créer la documentation de votre source dans Platform
@@ -36,7 +36,7 @@ Les éléments suivants sont requis pour pouvoir commencer à documenter votre n
 
 ## Modèle de documentation
 
-Vous pouvez utiliser un champ prérempli [modèle de documentation](./template.md) pour faciliter la création de la documentation pour votre source. Vous trouverez ci-dessous des instructions sur la manière de modifier le modèle et d’ouvrir une requête d’extraction. La documentation envoyée pour votre nouvelle source sera révisée et publiée par l’équipe de documentation d’Adobe.
+Vous pouvez utiliser un [modèle de documentation](./template.md) prérempli pour faciliter la création de documentation pour votre source. Vous trouverez ci-dessous des instructions sur la manière de modifier le modèle et d’ouvrir une requête d’extraction. La documentation envoyée pour votre nouvelle source sera révisée et publiée par l’équipe de documentation d’Adobe.
 
 Vous pouvez également télécharger les modèles de documentation ci-dessous :
 

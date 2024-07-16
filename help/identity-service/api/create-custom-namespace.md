@@ -14,7 +14,7 @@ ht-degree: 52%
 
 # Création d’un espace de noms personnalisé dans l’API Identity Service
 
-En utilisant la variable [!DNL Identity Namespace] API, vous pouvez créer un espace de noms d’identité personnalisé qui sera disponible uniquement pour votre organisation.
+À l’aide de l’API [!DNL Identity Namespace], vous pouvez créer un espace de noms d’identité personnalisé qui sera disponible uniquement pour votre organisation.
 
 Pour obtenir des recommandations sur la création d’espaces de noms personnalisés, reportez-vous aux [questions fréquentes sur le service dʼidentités](../troubleshooting-guide.md).
 

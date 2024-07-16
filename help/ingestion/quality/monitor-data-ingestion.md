@@ -13,7 +13,7 @@ ht-degree: 37%
 
 # Surveillance de l’ingestion des données
 
-L’ingestion des données vous permet d’ingérer vos données dans Adobe Experience Platform. Vous pouvez utiliser soit l’ingestion par lots, qui vous permet d’insérer vos données à l’aide de différents types de fichiers (tels que des fichiers CSV), soit l’ingestion par flux, qui vous permet d’ingérer vos données vers [!DNL Platform] utilisation de points de terminaison de diffusion en continu en temps réel.
+L’ingestion des données vous permet d’ingérer vos données dans Adobe Experience Platform. Vous pouvez utiliser soit l’ingestion par lots, qui vous permet d’insérer vos données à l’aide de différents types de fichiers (tels que les fichiers CSV), soit l’ingestion par flux, qui vous permet d’ingérer vos données vers [!DNL Platform] à l’aide de points de terminaison en continu en temps réel.
 
 Ce guide d’utilisation décrit les étapes à suivre pour surveiller vos données dans l’interface utilisateur de Adobe Experience Platform. Ce guide nécessite que vous possédiez déjà un Adobe ID et un accès à Adobe Experience Platform.
 
@@ -30,9 +30,9 @@ Ce guide d’utilisation décrit les étapes à suivre pour surveiller vos donn�
 >
 >Pour calculer le total des événements à une date spécifique, utilisez l’expression de : `total events / day = ingestion rate * 60 * 60 * 24`.
 
-Dans le [Interface utilisateur Experience Platform](https://platform.adobe.com), sélectionnez **[!UICONTROL Surveillance]** dans le menu de navigation de gauche, suivi de **[!UICONTROL Diffusion en continu de bout en bout]**.
+Dans l’ [ interface utilisateur Experience Platform](https://platform.adobe.com), sélectionnez **[!UICONTROL Surveillance]** dans le menu de navigation de gauche, suivi de **[!UICONTROL Diffusion en continu de bout en bout]**.
 
-La page de surveillance **[!UICONTROL Diffusion en continu de bout en bout]** apparaît. Cet espace de travail fournit un graphique qui affiche le taux d’événements en flux continu reçus par [!DNL Platform], un graphique qui affiche le taux d’événements en flux continu qui ont été traités avec succès par [[!DNL Real-Time Customer Profile]](../../profile/home.md), ainsi qu’une liste détaillée des données entrantes.
+La page de surveillance **[!UICONTROL Diffusion en continu de bout en bout]** apparaît. Cet espace de travail fournit un graphique qui affiche le taux des événements en flux continu reçus par [!DNL Platform], un graphique qui affiche le taux des événements en flux continu qui ont été traités avec succès par [[!DNL Real-Time Customer Profile]](../../profile/home.md), ainsi qu’une liste détaillée des données entrantes.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -40,11 +40,11 @@ Par défaut, le graphique supérieur affiche le taux d’ingestion des sept dern
 
 ![](../images/quality/monitor-data-flows/events-received.png)
 
-Le graphique inférieur affiche le taux d’événements en flux continu traités avec succès par [!DNL Profile] au cours des sept derniers jours. Cette période peut être ajustée pour afficher différentes périodes en sélectionnant le bouton en surbrillance.
+Le graphique du bas montre le taux d’événements diffusés en continu traités avec succès par [!DNL Profile] au cours des sept derniers jours. Cette période peut être ajustée pour afficher différentes périodes en sélectionnant le bouton en surbrillance.
 
 >[!NOTE]
 >
->Pour que les données s’affichent sur ce graphique, les données doivent être **explicitement** activé pour [!DNL Profile]. Pour savoir comment activer les données en continu pour [!DNL Profile], lisez le [guide d’utilisation des jeux de données](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+>Pour que les données s’affichent sur ce graphique, les données doivent être **explicitement** activées pour [!DNL Profile]. Pour savoir comment activer les données en continu pour [!DNL Profile], consultez le [guide d’utilisation des jeux de données](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/ingested-by-profile.png)
 
@@ -66,7 +66,7 @@ En outre, les enregistrements en échec fournissent des détails sur les erreurs
 
 >[!NOTE]
 >
->En cas d’erreur dans les lignes ingérées, ces lignes seront **not** être déposé, sauf si le message résultant génère un XDM non valide.
+>En cas d’erreur dans les lignes ingérées, ces lignes seront **et non** ignorées, sauf si le message résultant génère un XDM non valide.
 
 ![](../images/quality/monitor-data-flows/failed-batch-error.png)
 
@@ -92,6 +92,6 @@ En outre, les lots en échec fournissent des détails sur les erreurs qui se son
 
 >[!NOTE]
 >
->En cas d’erreur dans les lignes ingérées, ces lignes seront **not** être déposé, sauf si le message résultant génère un XDM non valide.
+>En cas d’erreur dans les lignes ingérées, ces lignes seront **et non** ignorées, sauf si le message résultant génère un XDM non valide.
 
 ![](../images/quality/monitor-data-flows/failed-streaming-error.png)

@@ -7,31 +7,31 @@ description: Ce tutoriel vous aidera à commencer à utiliser les API d’ingest
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 68%
+source-wordcount: '1032'
+ht-degree: 62%
 
 ---
 
 
 # Diffusion en continu de données d’enregistrement à l’aide des API d’ingestion en flux continu
 
-Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie de Adobe Experience Platform. [!DNL Data Ingestion Service] API.
+Ce tutoriel vous aidera à commencer à utiliser les API d’ingestion par flux, qui font partie des API Adobe Experience Platform [!DNL Data Ingestion Service].
 
 ## Prise en main
 
 Ce tutoriel nécessite une connaissance pratique de différents services d’Adobe Experience Platform. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Le cadre normalisé selon lequel [!DNL Platform] organise les données d’expérience.
-   - [Guide de développement du registre des schémas](../../xdm/api/getting-started.md)[!DNL Schema Registry] : guide complet abordant chacun des points d’entrée disponibles de l’API et la manière d’effectuer des appels vers ceux-ci. Cela implique de connaître votre `{TENANT_ID}`, qui apparaît dans les appels de ce tutoriel, et de savoir comment créer des schémas utilisés pour la création d’un jeu de données destiné à être ingéré.
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fournit un profil client unifié en temps réel basé sur des données agrégées provenant de plusieurs sources.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données d’expérience.
+   - [Guide de développement du registre des schémas](../../xdm/api/getting-started.md) : guide complet qui couvre chacun des points de terminaison disponibles de l’API [!DNL Schema Registry] et comment leur adresser des appels. Cela implique de connaître votre `{TENANT_ID}`, qui apparaît dans les appels de ce tutoriel, et de savoir comment créer des schémas utilisés pour la création d’un jeu de données destiné à être ingéré.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
 
 ### Utiliser les API Platform
 
 Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide [Prise en main des API Platform](../../landing/api-guide.md).
 
-## Composition d’un schéma basé sur l’objet [!DNL XDM Individual Profile] class
+## Composition d’un schéma basé sur la classe [!DNL XDM Individual Profile]
 
-Pour créer un jeu de données, vous devez d’abord créer un nouveau schéma qui implémente le [!DNL XDM Individual Profile] classe . Pour plus d’informations sur la façon de créer des schémas, consultez le [guide de développement de l’API Schema Registry](../../xdm/api/getting-started.md).
+Pour créer un jeu de données, vous devez d’abord créer un nouveau schéma qui implémente la classe [!DNL XDM Individual Profile]. Pour plus d’informations sur la façon de créer des schémas, consultez le [guide de développement de l’API Schema Registry](../../xdm/api/getting-started.md).
 
 **Format d’API**
 
@@ -73,7 +73,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | Le nom que vous souhaitez utiliser pour votre schéma. Ce nom doit être unique. |
 | `description` | Description significative du schéma que vous êtes en train de créer. |
-| `meta:immutableTags` | Dans cet exemple, la variable `union` est utilisée pour conserver vos données dans [[!DNL Real-Time Customer Profile]](../../profile/home.md). |
+| `meta:immutableTags` | Dans cet exemple, la balise `union` est utilisée pour conserver vos données dans [[!DNL Real-Time Customer Profile]](../../profile/home.md). |
 
 **Réponse**
 
@@ -138,7 +138,7 @@ Ajoutez ensuite un [descripteur d’identité](../../xdm/api/descriptors.md) au 
 
 1. L’adresse e-mail de travail deviendra un champ obligatoire. Cela signifie que les messages envoyés sans ce champ ne seront ni validés ni ingérés.
 
-2. [!DNL Real-Time Customer Profile] utilisera l’adresse électronique professionnelle comme identifiant pour rassembler plus d’informations sur cette personne.
+2. [!DNL Real-Time Customer Profile] utilisera l’adresse électronique professionnelle comme identifiant pour rassembler plus d’informations sur cet individu.
 
 ### Requête
 
@@ -166,9 +166,9 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 
 >[!NOTE]
 >
->&#x200B; &#x200B;**Codes d’espaces de noms d’identité**
+>&#x200B; &#x200B;**Codes d’espace de noms d’identité**
 >
-> Assurez-vous que les codes sont valides. L’exemple ci-dessus utilise « email », qui est un espace de noms d’identité standard. Vous trouverez d’autres espaces de noms d’identité standard couramment utilisés dans la [FAQ d’Identity Service](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
+> Assurez-vous que les codes sont valides. L’exemple ci-dessus utilise « email », qui est un espace de noms d’identité standard. Vous trouverez d’autres espaces de noms d’identité standard couramment utilisés dans la [FAQ du service d’identités](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
 >
 > Si vous souhaitez créer un espace de noms personnalisé, suivez les étapes décrites dans la [présentation de l’espace de noms d’identité](../../identity-service/home.md).
 
@@ -258,7 +258,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 | Paramètre | Description |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | La valeur `inletId` de la connexion en continu que vous avez créée précédemment. |
-| `syncValidation` | Un paramètre de requête facultatif destiné au développement. S’il est défini sur `true`, il peut être utilisé pour obtenir des commentaires immédiats afin de déterminer si la requête a bien été envoyée. Par défaut, cette valeur est définie sur `false`. Notez que si vous définissez ce paramètre de requête sur `true` que la demande sera limitée à 60 fois par minute `CONNECTION_ID`. |
+| `syncValidation` | Un paramètre de requête facultatif destiné au développement. S’il est défini sur `true`, il peut être utilisé pour obtenir des commentaires immédiats afin de déterminer si la requête a bien été envoyée. Par défaut, cette valeur est définie sur `false`. Notez que si vous définissez ce paramètre de requête sur `true`, le taux de la requête sera limité à 60 fois par minute par `CONNECTION_ID`. |
 
 **Requête**
 
@@ -330,7 +330,7 @@ Si vous souhaitez inclure un nom source, l’exemple suivant montre comment l’
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails du nouveau flux en continu. [!DNL Profile].
+Une réponse réussie renvoie un état HTTP 200 avec les détails du [!DNL Profile] nouvellement diffusé en continu.
 
 ```json
 {
@@ -352,11 +352,11 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails du nouveau flu
 
 ## Récupération des données d’enregistrement nouvellement ingérées
 
-Pour valider les enregistrements précédemment ingérés, vous pouvez utiliser la variable [[!DNL Profile Access API]](../../profile/api/entities.md) pour récupérer les données d’enregistrement.
+Pour valider les enregistrements précédemment ingérés, vous pouvez utiliser le [[!DNL Profile Access API]](../../profile/api/entities.md) pour récupérer les données d’enregistrement.
 
 >[!NOTE]
 >
->Si l’ID de stratégie de fusion n’est pas défini et que la variable `schema.name` ou `relatedSchema.name` is `_xdm.context.profile`, [!DNL Profile Access] va fetch **all** identités associées.
+>Si l’ID de stratégie de fusion n’est pas défini et que `schema.name` ou `relatedSchema.name` est `_xdm.context.profile`, [!DNL Profile Access] va récupérer **toutes** identités associées.
 
 **Format d’API**
 
@@ -435,6 +435,6 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails des entités 
 
 ## Étapes suivantes
 
-En lisant ce document, vous comprenez désormais comment ingérer des données d’enregistrement dans [!DNL Platform] à l’aide de connexions en continu. Vous pouvez essayer d’effectuer plus d’appels avec des valeurs différentes et de récupérer les valeurs mises à jour. De plus, vous pouvez commencer à surveiller vos données ingérées par le biais de [!DNL Platform] Interface utilisateur. Pour plus d’informations, consultez le guide de [surveillance de l’ingestion des données](../quality/monitor-data-ingestion.md).
+En lisant ce document, vous comprenez maintenant comment ingérer des données d’enregistrement dans [!DNL Platform] à l’aide de connexions en continu. Vous pouvez essayer d’effectuer plus d’appels avec des valeurs différentes et de récupérer les valeurs mises à jour. De plus, vous pouvez commencer à surveiller vos données ingérées via l’interface utilisateur [!DNL Platform]. Pour plus d’informations, consultez le guide de [surveillance de l’ingestion des données](../quality/monitor-data-ingestion.md).
 
 Pour plus d’informations sur l’ingestion par flux en général, consultez la [présentation de l’ingestion par flux](../streaming-ingestion/overview.md).

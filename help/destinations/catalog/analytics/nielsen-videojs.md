@@ -1,26 +1,26 @@
 ---
-keywords: Gestionnaire de lecteur vidéo Nielsen;lecteur vidéo js nielsen;lecteur vidéo nielsen;lecteur vidéo nielsen;Nielsen;nielsen;lecteur vidéo Nielsen;SDK Nielsen;sdk numérique nielsen
+keywords: Nielsen VideoJS Player Handler;lecteur vidéo nielsen;lecteur vidéo js nielsen;lecteur vidéo nielsen;Nielsen;nielsen;nielsen;lecteur vidéo Nielsen;SDK Nielsen Digital;sdk numérique nielsen
 title: Extension Nielsen VideoJS Player Handler
-description: L’extension Nielsen VideoJS Player Handler est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Nielsen VideoJS Player Handler est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: d640bf40-c6af-4aff-8303-933fe71f4a7e
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 89%
+source-wordcount: '540'
+ht-degree: 91%
 
 ---
 
 # Extension [!DNL Nielsen VideoJS Player Handler] {#nielsen-vjs-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-[!DNL Nielsen Digital SDK] l’extension de balise permet de mesurer l’audience à l’aide des produits de mesure numérique suivants :
+L’extension de balise [!DNL Nielsen Digital SDK] offre la mesure de l’audience via les produits de mesure numérique suivants :
 
 DCR : une solution de mesure qui permet de mesurer quotidiennement le contenu numérique non linéaire, y compris le contenu comportant des publicités, et d’obtenir une vue exhaustive de la consommation du contenu numérique par l’audience sur les ordinateurs de bureau, les téléphones portables, les tablettes et les appareils connectés.
 
 DTVR : cette solution tient compte du visionnage linéaire de la télévision sur les ordinateurs de bureau et les appareils mobiles pour les sources de programmation participantes. Il s’agit de la première solution ayant obtenu une accréditation du MRC pour sa contribution à la mesure de l’audience télévisuelle pour les programmes visionnés sur des ordinateurs et des appareils mobiles.
 
-[!DNL Nielsen VideoJS Player Handler] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html).
+[!DNL Nielsen VideoJS Player Handler] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -34,7 +34,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Nielsen VideoJS Player Handler] extension :
+Pour installer l’extension [!DNL Nielsen VideoJS Player Handler], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

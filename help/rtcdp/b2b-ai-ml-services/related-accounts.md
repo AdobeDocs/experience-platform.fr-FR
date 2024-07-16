@@ -18,7 +18,7 @@ ht-degree: 14%
 
 Les entreprises B2B ont souvent leurs informations client stockées dans plusieurs systèmes, chacun ne contenant que des données partielles, voire conflictuelles, pour la même entité commerciale physique. Cela crée un énorme défi : parvenir à une vue exacte de ses clients, réduisant ainsi l’efficacité et l’efficience de leurs efforts marketing et de vente B2B.
 
-| Identifiant | Nom | Site web | Secteur industriel | État | Téléphone | A une opportunité ouverte avec quantité > `$1 million` |
+| Identifiant | Nom | Site web | Secteur industriel | État | Téléphone | A une opportunité ouverte avec une quantité > `$1 million` |
 |---|---|---|---|---|---|---|
 | 1 | Acme | acme.com | Logiciels | CA | (408)536-6000 |   |
 | 2 | Acme | acm.com | Logiciels | CA | 4085366000 | x |
@@ -28,9 +28,9 @@ Les entreprises B2B ont souvent leurs informations client stockées dans plusie
 
 {style="table-layout:auto"}
 
-Avec les comptes associés, [!DNL Real-Time CDP B2B] affiche désormais la liste des comptes similaires au compte que vous parcourez.
+Avec les comptes connexes, [!DNL Real-Time CDP B2B] affiche désormais une liste des comptes similaires au compte que vous parcourez.
 
-![Écran affichant les comptes associés dans l’interface utilisateur de l’Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
+![ Écran affichant les comptes associés dans l’interface utilisateur de l’Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
 Utilisez cette fonction pour afficher les profils de compte associés à un profil de compte dans l’interface utilisateur de l’Experience Platform, puis inclure les comptes associés dans vos définitions de segment afin d’élargir votre portée ou d’appliquer des critères plus larges à vos audiences.
 
@@ -38,11 +38,11 @@ Utilisez cette fonction pour afficher les profils de compte associés à un prof
 
 Pour activer le service, sélectionnez **[!UICONTROL Profils]** dans la barre latérale suivie de **[!UICONTROL Paramètres]**.
 
-![Interface utilisateur de l’Experience Platform qui surligne les profils et les paramètres.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+![ L’interface utilisateur Experience Platform met en surbrillance les profils et les paramètres.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
 
-Sélectionner le bouton bascule en regard de [!UICONTROL Activation des comptes associés] pour activer le service, puis sélectionnez **[!UICONTROL Enregistrer]**.
+Sélectionnez la bascule en regard de [!UICONTROL Activer les comptes associés] pour activer le service, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
-![L’écran Paramètres du compte met en surbrillance le bouton bascule et l’enregistrement.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
+![ L’écran des paramètres du compte met en surbrillance le bouton bascule et l’enregistrement.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
 ## Fonctionnement {#how-it-works}
 
@@ -52,18 +52,18 @@ Les tâches d’apprentissage automatique exécutées quotidiennement utilisent 
 * Domaine web
 * Nom du compte
 
-Après une tâche de traitement réussie, chaque membre du groupe de profils de compte est balisé avec la liste Comptes associés . Vous pouvez afficher la liste dans le **Comptes associés** de la page Profil de compte , et utilisez les comptes associés dans les définitions de segment.
+Après une tâche de traitement réussie, chaque membre du groupe de profils de compte est balisé avec la liste Comptes associés . Vous pouvez afficher la liste dans l’onglet **Comptes associés** de la page Profil de compte et utiliser les comptes associés dans les définitions de segment.
 
-Pour plus d’informations sur la variable [traitements de comptes liés à l’enrichissement de profil](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Consultez la documentation pour plus d’informations sur les [tâches de comptes liés à l’enrichissement de profil](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
 
 ## Affichage des comptes associés {#how-to-view}
 
 Vous pouvez afficher les comptes associés d’un compte que vous parcourez dans l’interface utilisateur de l’Experience Platform.
 
-Pour plus d’informations sur la variable [comment trouver des comptes associés dans l’interface utilisateur](/help/rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab).
+Consultez la documentation pour plus d’informations sur la [recherche de comptes associés dans l’interface utilisateur](/help/rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab).
 
 ## Utilisation de comptes liés {#how-to-use}
 
 Vous pouvez utiliser des comptes et des comptes associés dans la segmentation. La décision d’utiliser des comptes associés dans vos définitions de segment dépend de votre cas d’utilisation marketing. Par exemple, vous pouvez utiliser des comptes associés pour les campagnes de marketing par e-mail ou de publicité, dans lesquels vous pouvez accepter une précision moindre dans exchange pour une portée plus large.
 
-Voir [exemple de segmentation](/help/rtcdp/segmentation/b2b.md#related-accounts) qui utilise des comptes associés.
+Voir un [exemple de segmentation](/help/rtcdp/segmentation/b2b.md#related-accounts) qui utilise des comptes associés.

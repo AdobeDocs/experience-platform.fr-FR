@@ -20,11 +20,11 @@ Dans Adobe Experience Platform, nous faisons la distinction entre différents ty
 
 Enfin, les connexions peuvent également être distinguées entre les destinations publiques disponibles dans toutes les organisations du catalogue des destinations et les destinations privées que les clients Real-Time CDP Ultimate peuvent créer pour répondre à leurs cas d’utilisation spécifiques à l’exportation.
 
-![Schéma des types de destinations.](./assets/destination-types/types-of-destinations-no-highlight.png)
+![Diagramme des types de destinations.](./assets/destination-types/types-of-destinations-no-highlight.png)
 
 ## Connexions {#connections}
 
-**[!UICONTROL Exportation de profils]**, **[!UICONTROL Exportation d’audiences en flux continu]**, et **[!DNL Edge Personalization]** les destinations dans Adobe Experience Platform capturent les données d’événement, les combinent à d’autres sources de données pour former la variable [Profil client en temps réel](../profile/home.md), appliquez une segmentation et exportez des audiences et des profils qualifiés vers les destinations.
+Les destinations **[!UICONTROL Export de profil]**, **[!UICONTROL Export d’audience en flux continu]** et **[!DNL Edge Personalization]** dans Adobe Experience Platform capturent les données d’événement, les combinent à d’autres sources de données pour former le [profil client en temps réel](../profile/home.md), appliquent la segmentation et exportent les audiences et les profils qualifiés vers les destinations.
 
 ## Destinations d’exportation de profils {#profile-export}
 
@@ -74,14 +74,14 @@ La vidéo ci-dessous vous montre les particularités des deux types de destinati
 Vous pouvez exporter trois types d’audiences d’Experience Platform vers différentes destinations :
 
 * Audiences de personnes
-* Audiences du compte
+* Audiences de compte
 * Audiences de prospects
 
-En savoir plus sur les [différents types d’audience ;](/help/segmentation/ui/account-audiences.md#terminology).
+En savoir plus sur les [différents types d’audience](/help/segmentation/ui/account-audiences.md#terminology).
 
 Un symbole sur la carte de destination indique les types d’audiences que vous pouvez exporter vers chaque destination.
 
-![Exemple de carte de destination avec des symboles indiquant quels types d’audience peuvent être exportés.](/help/destinations/assets/destination-types/types-of-audiences.png)
+![ Exemple de carte de destination avec des symboles indiquant quels types d’audience peuvent être exportés.](/help/destinations/assets/destination-types/types-of-audiences.png)
 
 
 ## Destinations d’exportation de jeux de données {#dataset-export-destinations}

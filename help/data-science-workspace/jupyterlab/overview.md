@@ -6,8 +6,8 @@ description: JupyterLab est une interface utilisateur web pour Project Jupyter e
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '1821'
-ht-degree: 100%
+source-wordcount: '1812'
+ht-degree: 99%
 
 ---
 
@@ -25,7 +25,7 @@ La liste suivante présente quelques-unes des fonctionnalités propres à Jupyte
 
 | Fonctionnalité | Description |
 | --- | --- |
-| **Noyaux** | Les noyaux permettent aux notebooks et aux autres interfaces [!DNL JupyterLab] d’exécuter et d’inspecter le code dans différents langages de programmation. [!DNL Experience Platform] fournit des noyaux supplémentaires pour prendre en charge le développement en [!DNL Python], R, PySpark et [!DNL Spark]. Pour plus d’informations, consultez la section sur les [noyaux](#kernels). |
+| **Noyaux** | Les noyaux permettent aux notebooks et aux autres front-ends [!DNL JupyterLab] d’exécuter et d’inspecter le code dans différents langages de programmation. [!DNL Experience Platform] fournit des noyaux supplémentaires pour prendre en charge le développement en [!DNL Python], R, PySpark et [!DNL Spark]. Pour plus d’informations, consultez la section sur les [noyaux](#kernels). |
 | **Accès aux données** | Accédez aux jeux de données existants directement depuis [!DNL JupyterLab] avec la prise en charge intégrale des fonctionnalités de lecture et d’écriture. |
 | Intégration du service **[!DNL Platform]** | Les intégrations vous permettent d’utiliser d’autres services [!DNL Platform] directement depuis [!DNL JupyterLab]. Une liste complète des intégrations prises en charge est fournie dans la section sur l’[intégration avec d’autres services Platform](#service-integration). |
 | **Authentification** | Outre <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">le modèle de sécurité intégré de JupyterLab</a>, chaque interaction entre votre application et Experience Platform, y compris la communication service à service de Platform, est chiffrée et authentifiée à l’aide d’<a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |

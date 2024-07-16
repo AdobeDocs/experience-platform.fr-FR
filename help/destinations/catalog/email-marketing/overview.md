@@ -74,7 +74,7 @@ Certaines destinations de marketing par e-mail dans le catalogue exportent les p
 
 D’autres destinations exportent les fichiers vers un emplacement de stockage dans le cloud. Une fois l’exportation terminée, vous devez importer les données de l’emplacement de stockage dans le cloud dans votre destination de marketing par e-mail.
 
-Suivez les liens de la section [destinations de marketing par e-mail prises en charge](#supported-destinations) pour savoir comment activer des audiences vers chaque destination de marketing par e-mail.
+Suivez les liens de la section [Destinations de marketing par e-mail prises en charge](#supported-destinations) pour savoir comment activer les audiences vers chaque destination de marketing par e-mail.
 
 ## Ressources supplémentaires {#additional-resources}
 

@@ -13,4 +13,4 @@ ht-degree: 0%
 
 # Libellés d’utilisation des données dans l’API du service de jeux de données
 
-Séparez de l’API Catalog Service à l’API [!DNL Dataset Service] L’API fournit des points de terminaison pour gérer les libellés d’utilisation des données pour les jeux de données. Pour savoir comment effectuer des appels vers ces points de terminaison, reportez-vous au guide sur [gestion des libellés d’utilisation des données à l’aide de l’API](../../data-governance/labels/dataset-api.md) dans la documentation sur la gouvernance des données de Adobe Experience Platform.
+Séparée de l’API Catalog Service, l’API [!DNL Dataset Service] fournit des points de terminaison pour gérer les libellés d’utilisation des données pour les jeux de données. Pour savoir comment effectuer des appels vers ces points de terminaison, reportez-vous au guide sur la [gestion des libellés d’utilisation des données à l’aide de l’API](../../data-governance/labels/dataset-api.md) dans la documentation sur la gouvernance des données de Adobe Experience Platform.

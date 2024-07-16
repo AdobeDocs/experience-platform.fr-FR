@@ -1,20 +1,20 @@
 ---
 keywords: kickfire;Kickfire;extension;Kickfire
 title: Extension KickFire
-description: L’extension KickFire est une destination de personnalisation dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension KickFire est une destination de personnalisation dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: c2313474-05d5-4c06-8aa5-ed10e9e9226e
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '444'
-ht-degree: 85%
+source-wordcount: '437'
+ht-degree: 86%
 
 ---
 
 # Extension [!DNL KickFire] {#kickfire-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-[!DNL KickFire's] Les données démographiques B2B et d’intelligence des adresses IP vous permettent de traduire des adresses IP en entreprises, d’identifier des visiteurs web anonymes et d’intégrer des données de compte dans votre pile technologique, le tout en fonction de l’adresse IP d’une entreprise.
+[!DNL KickFire's] Les données démographiques et d’intelligence des adresses IP et B2B vous permettent de traduire des adresses IP en entreprises, d’identifier des visiteurs web anonymes et d’intégrer des données de compte dans votre pile technologique, le tout en fonction de l’adresse IP d’une entreprise.
 
 [!DNL KickFire] est une extension de personnalisation dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez le [site web de KickFire](https://www.kickfire.com/).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL KickFire] extension :
+Pour installer l’extension [!DNL KickFire], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

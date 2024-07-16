@@ -19,9 +19,9 @@ ht-degree: 26%
 
 La version de janvier 2024 de Adobe Experience Platform a introduit des modifications dans le service de segmentation de Adobe Experience Platform qui ajoutent de nouvelles restrictions aux endroits où des contraintes de temps peuvent être définies. Ces modifications affectent les segments nouvellement créés ou modifiés effectués à l’aide de l’interface utilisateur du créateur de segments. Ce guide explique comment atténuer ces modifications.
 
-Avant la version de janvier 2024, toutes les contraintes temporelles de niveau règle, de niveau groupe et de niveau canevas faisaient référence de manière redondante au même horodatage. Afin de clarifier l’utilisation des contraintes de temps, les contraintes de temps au niveau des règles et des groupes ont été supprimées. Pour tenir compte de cette modification, toutes les contraintes de temps **must** être réécrit en tant que **niveau de la zone de travail** ou **niveau carte** contraintes de temps.
+Avant la version de janvier 2024, toutes les contraintes temporelles de niveau règle, de niveau groupe et de niveau canevas faisaient référence de manière redondante au même horodatage. Afin de clarifier l’utilisation des contraintes de temps, les contraintes de temps au niveau des règles et des groupes ont été supprimées. Pour tenir compte de cette modification, toutes les contraintes de temps **doivent** être réécrites en tant que contraintes de temps **canvas-level** ou **card-level**.
 
-Auparavant, plusieurs règles de contrainte temporelle pouvaient être associées à un événement individuel. Avec cette mise à jour récente, la tentative d’ajout d’une contrainte temporelle à une règle entraîne désormais une **error**.
+Auparavant, plusieurs règles de contrainte temporelle pouvaient être associées à un événement individuel. Avec cette mise à jour récente, la tentative d’ajout d’une contrainte temporelle à une règle entraînera désormais une **erreur**.
 
 ![La contrainte temporelle au niveau de la règle est mise en surbrillance. L’erreur qui se produit par la suite est également mise en surbrillance. ](../images/ui/segment-refactoring/rule-time-constraint.png)
 
@@ -31,12 +31,12 @@ Lors de l’application d’une contrainte temporelle au niveau de la zone de tr
 
 >[!NOTE]
 >
->Si la variable **one** sur la zone de travail, l’application de la contrainte temporelle à la carte est **équivalent** pour appliquer la contrainte temporelle au niveau de la zone de travail.
+>S’il n’y a que **une** carte sur la zone de travail, appliquer la contrainte de temps à la carte est **équivalent** pour appliquer la contrainte de temps au niveau de la zone de travail.
 >
->S’il existe des **multiple** sur les cartes de la zone de travail, l’application de la contrainte temporelle au niveau de la zone de travail applique cette contrainte temporelle à **all** cartes sur la zone de travail.
+>S’il existe **cartes** sur la zone de travail, l’application de la contrainte temporelle au niveau de la zone de travail applique cette contrainte temporelle à toutes les **cartes sur la zone de travail.**
 
 ![La contrainte temporelle au niveau de la zone de travail est mise en surbrillance.](../images/ui/segment-refactoring/canvas-time-constraint.png)
 
-Pour appliquer une contrainte temporelle au niveau de la carte, sélectionnez la carte spécifique à laquelle vous souhaitez appliquer la contrainte temporelle. La variable **[!UICONTROL Règles d’événement]** s’affiche. Vous pouvez maintenant sélectionner la contrainte temporelle à appliquer à la carte.
+Pour appliquer une contrainte temporelle au niveau de la carte, sélectionnez la carte spécifique à laquelle vous souhaitez appliquer la contrainte temporelle. Le conteneur **[!UICONTROL Règles d’événement]** s’affiche. Vous pouvez maintenant sélectionner la contrainte temporelle à appliquer à la carte.
 
 ![La contrainte temporelle au niveau de la carte est mise en surbrillance.](../images/ui/segment-refactoring/card-time-constraint.png)

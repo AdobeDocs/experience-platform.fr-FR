@@ -12,17 +12,17 @@ ht-degree: 6%
 
 # Créer un rapport de tendance d’événements
 
-Ce document fournit un exemple de code SQL requis pour créer un rapport de tendances d’événements par jour sur une période spécifique. Avec Adobe Experience Platform Query Service, vous pouvez écrire des requêtes qui utilisent [!DNL Experience Events] pour capturer divers cas d’utilisation. Les événements d’expérience sont représentés par la classe ExperienceEvent du modèle de données d’expérience (XDM), qui capture un instantané non agrégé et immuable du système lorsqu’un utilisateur interagit avec un site web ou un service. Les événements d’expérience peuvent même être utilisés pour l’analyse du domaine temporel. Voir [section étapes suivantes](#next-steps) pour d’autres cas d’utilisation impliquant [!DNL Experience Events] pour générer des rapports sur les visiteurs.
+Ce document fournit un exemple de code SQL requis pour créer un rapport de tendances d’événements par jour sur une période spécifique. Avec Adobe Experience Platform Query Service, vous pouvez écrire des requêtes qui utilisent [!DNL Experience Events] pour capturer divers cas d’utilisation. Les événements d’expérience sont représentés par la classe ExperienceEvent du modèle de données d’expérience (XDM), qui capture un instantané non agrégé et immuable du système lorsqu’un utilisateur interagit avec un site web ou un service. Les événements d’expérience peuvent même être utilisés pour l’analyse du domaine temporel. Pour plus d’informations sur les cas d’utilisation qui impliquent [!DNL Experience Events] pour générer des rapports sur les visiteurs, reportez-vous à la section [étapes suivantes](#next-steps) .
 
 Les rapports vous donnent accès aux données de Platform pour bénéficier des informations stratégiques de votre entreprise. Grâce à ces rapports, vous pouvez examiner vos données Platform de différentes manières, afficher les mesures clés dans des formats faciles à comprendre et partager les informations résultantes.
 
-Informations supplémentaires sur XDM et [!DNL Experience Events] se trouve dans la variable [[!DNL XDM System] aperçu](../../xdm/home.md). En combinant Query Service à [!DNL Experience Events], vous pouvez effectuer un suivi efficace des tendances comportementales parmi vos utilisateurs. Le document suivant fournit des exemples de requêtes impliquant des [!DNL Experience Events].
+Vous trouverez plus d’informations sur XDM et [!DNL Experience Events] dans la [[!DNL XDM System] présentation](../../xdm/home.md). En combinant Query Service à [!DNL Experience Events], vous pouvez effectuer un suivi efficace des tendances comportementales parmi vos utilisateurs. Le document suivant fournit des exemples de requêtes impliquant [!DNL Experience Events].
 
 ## Objectifs
 
-L’exemple suivant crée un rapport de tendance d’événements sur une période donnée avec un regroupement par date. Plus précisément, cet exemple SQL additionne diverses valeurs d’analyse sous la forme `A`, `B`, et `C`, puis additionne le nombre de fois où des parkas ont été vues sur une période d’un mois.
+L’exemple suivant crée un rapport de tendance d’événements sur une période donnée avec un regroupement par date. Plus précisément, cet exemple SQL additionne diverses valeurs d’analyse sous la forme `A`, `B` et `C`, puis additionne le nombre de fois où les parkas ont été vues sur une période d’un mois.
 
-La colonne d’horodatage se trouve dans [!DNL Experience Event] les jeux de données sont au format UTC. L’exemple utilise la méthode `from_utc_timestamp()` pour transformer l’horodatage UTC en EDT, puis utilise la variable `date_format()` pour isoler la date du reste de l’horodatage.
+La colonne d’horodatage trouvée dans les jeux de données [!DNL Experience Event] est au format UTC. L’exemple utilise la fonction `from_utc_timestamp()` pour transformer l’horodatage UTC en EDT, puis utilise la fonction `date_format()` pour isoler la date du reste de l’horodatage.
 
 ```sql
 SELECT 
@@ -86,8 +86,8 @@ Les résultats de cette requête sont présentés ci-dessous.
 
 En lisant ce document, vous comprenez mieux comment utiliser Query Service avec [!DNL Experience Events] pour effectuer un suivi efficace des tendances comportementales parmi vos utilisateurs.
 
-Pour en savoir plus sur d’autres cas d’utilisation basés sur les visiteurs qui utilisent [!DNL Experience Events], lisez les documents suivants :
+Pour en savoir plus sur d&#39;autres cas d&#39;utilisation basés sur les visiteurs qui utilisent [!DNL Experience Events], consultez les documents suivants :
 
-- [Récupère une liste de visiteurs organisée par nombre de pages vues.](./visitors-by-number-of-page-views.md)
-- [Répertorier les sessions précédentes d’un visiteur.](./list-visitor-sessions.md)
+- [Récupérez une liste de visiteurs organisée par nombre de pages vues.](./visitors-by-number-of-page-views.md)
+- [Liste des sessions précédentes d’un visiteur.](./list-visitor-sessions.md)
 - [Affiche un rapport de cumul d’un visiteur.](./roll-up-report-of-a-visitor.md)

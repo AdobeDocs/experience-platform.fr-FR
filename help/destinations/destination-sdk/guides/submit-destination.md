@@ -33,11 +33,11 @@ Cette page répertorie toutes les informations dont vous avez besoin pour envoye
 * Description de la raison de l’envoi vers la destination. Cela n’est nécessaire que si vous mettez à jour une configuration de destination existante.
 * Des résultats de test après avoir utilisé le point dʼentrée de l’API de destination de test pour effectuer un appel HTTP vers votre destination. Partagez avec l’Adobe un appel API effectué à votre point de terminaison de destination et la réponse de l’API reçue de votre point de terminaison de destination.
 * Autres exigences pour les destinations basées sur des fichiers :
-   * Partagez une requête et un exemple de réponse après avoir utilisé l’API de test sur [tester votre destination basée sur des fichiers avec des exemples de profils ;](../testing-api/batch-destinations/file-based-destination-testing-api.md).
+   * Partagez une requête et un exemple de réponse après avoir utilisé l’API de test sur [tester votre destination basée sur des fichiers avec des exemples de profils](../testing-api/batch-destinations/file-based-destination-testing-api.md).
    * Joignez un fichier d’exemple généré par votre destination et exporté vers votre emplacement de stockage.
    * Envoyez une forme de BAT indiquant que vous avez correctement ingéré le fichier exporté à partir de l’emplacement de stockage dans votre système.
 * La preuve que vous avez envoyé une demande de publication de destination pour votre destination à l’aide de l’[API de publication de destination](../publishing-api/create-publishing-request.md).
-* Une documentation PR (requête de tirage), suivant les instructions décrites dans la section [processus de documentation en libre-service](../docs-framework/documentation-instructions.md).
+* Une documentation PR (requête de tirage), suivant les instructions décrites dans le [processus de documentation en libre-service](../docs-framework/documentation-instructions.md).
 * Un fichier image qui s’affichera sous forme de logo sur votre carte de destination dans le catalogue des destinations dʼExperience Platform.
 
 Vous trouverez des informations détaillées sur chaque élément dans les sections ci-dessous :
@@ -46,8 +46,8 @@ Vous trouverez des informations détaillées sur chaque élément dans les secti
 
 Fournissez une description des cas d’utilisation que votre destination résout pour les clients Experience Platform. Vos descriptions peuvent être similaires aux cas d’utilisation des partenaires existants :
 
-* [Pinterest](/help/destinations/catalog/advertising/pinterest.md): créez des audiences à partir des listes de clients, des personnes qui ont visité votre site ou des personnes qui ont déjà interagi avec votre contenu sur Pinterest.
-* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): les API DataX sont disponibles pour les annonceurs qui souhaitent cibler un groupe d’audience spécifique en dehors des adresses électroniques dans Verizon Media (VMG) peuvent rapidement créer une nouvelle audience et pousser le groupe d’audience souhaité à l’aide de l’API en temps quasi réel de VMG.
+* [Pinterest](/help/destinations/catalog/advertising/pinterest.md) : créez des audiences à partir de vos listes de clients, des personnes qui ont visité votre site ou des personnes qui ont déjà interagi avec votre contenu sur Pinterest.
+* [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases) : les API DataX sont disponibles pour les annonceurs qui souhaitent cibler un groupe d’audiences spécifique provenant d’adresses électroniques dans Verizon Media (VMG) peuvent rapidement créer une nouvelle audience et pousser le groupe d’audiences souhaité à l’aide de l’API en temps quasi réel de VMG.
 
 ## Raison de la mise à jour {#reason-for-update}
 
@@ -233,11 +233,11 @@ Pour les destinations basées sur des fichiers, vous devez fournir un preuve sup
 
 ### Test de la réponse de l’API {#testing-api-response-file-based}
 
-Inclure une requête et un exemple de réponse après avoir utilisé l’API de test pour [tester votre destination basée sur des fichiers avec des exemples de profils ;](../testing-api/batch-destinations/file-based-destination-testing-api.md).
+Insérez une requête et un exemple de réponse après avoir utilisé l’API de test pour [tester votre destination basée sur des fichiers avec des exemples de profils](../testing-api/batch-destinations/file-based-destination-testing-api.md).
 
 ### Joindre le fichier exporté {#attach-exported-file}
 
-Dans votre [courrier électronique d’envoi](#download-sample-email), joignez un fichier CSV qui a été exporté dans votre emplacement de stockage par la destination que vous avez configurée.
+Dans votre [courrier électronique d’envoi](#download-sample-email), joignez un fichier CSV qui a été exporté vers votre emplacement de stockage par la destination que vous avez configurée.
 
 ### Preuve d’ingestion réussie {#proof-of-successful-ingestion}
 
@@ -251,11 +251,11 @@ Enfin, vous devez fournir une forme de preuve que les données ont bien été in
 
 Une fois votre destination testée, vous devez utiliser l’[API de publication de destination](../publishing-api/create-publishing-request.md) pour envoyer la destination à Adobe pour examen et publication.
 
-Indiquez l’identifiant de la demande de publication pour votre destination. Pour plus d’informations sur la manière de récupérer l’ID de requête de publication, lisez comment [récupération des requêtes de publication de destination](../publishing-api/retrieve-publishing-request.md).
+Indiquez l’identifiant de la demande de publication pour votre destination. Pour plus d’informations sur la manière de récupérer l’ID de requête de publication, lisez la section [Récupérer les requêtes de publication de destination](../publishing-api/retrieve-publishing-request.md).
 
 ## Documentation de destination PR (demande de tirage) pour les intégrations personnalisées {#documentation-pr}
 
-Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI), créez une [intégration productive](../overview.md#productized-custom-integrations), vous devez utiliser la variable [processus de documentation en libre-service](../docs-framework/documentation-instructions.md) pour créer une page de documentation du produit pour votre destination. Dans le cadre du processus d’envoi, indiquez la demande de tirage (PR) pour votre documentation de destination.
+Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) créant une [intégration productisée](../overview.md#productized-custom-integrations), vous devez utiliser le [processus de documentation en libre-service](../docs-framework/documentation-instructions.md) pour créer une page de documentation de produit pour votre destination. Dans le cadre du processus d’envoi, indiquez la demande de tirage (PR) pour votre documentation de destination.
 
 ## Logo de votre destination {#logo}
 

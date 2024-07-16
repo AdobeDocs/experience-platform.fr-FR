@@ -7,25 +7,25 @@ description: Ce document fournit un tutoriel sur l’envoi de plusieurs messages
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
 source-git-commit: 3ad5c06db07b360df255d3afb1c177cc5de613bb
 workflow-type: tm+mt
-source-wordcount: '1490'
-ht-degree: 75%
+source-wordcount: '1487'
+ht-degree: 61%
 
 ---
 
 # Envoi de plusieurs messages dans une seule requête HTTP
 
-Lorsque vous diffusez des données en continu vers Adobe Experience Platform, effectuer de nombreux appels HTTP peut vous coûter cher. Par exemple, au lieu de créer 200 requêtes HTTP contenant des payloads de 1 Ko chacun, il est plus efficace de créer une requête HTTP contenant 200 messages de 1 Ko chacun avec un payload unique de 200 Ko. Lorsque cette fonctionnalité est utilisée correctement, regrouper plusieurs messages au sein d’une requête unique est une excellente manière d’optimiser les données envoyées vers [!DNL Experience Platform].
+Lorsque vous diffusez des données en continu vers Adobe Experience Platform, effectuer de nombreux appels HTTP peut vous coûter cher. Par exemple, au lieu de créer 200 requêtes HTTP contenant des payloads de 1 Ko chacun, il est plus efficace de créer une requête HTTP contenant 200 messages de 1 Ko chacun avec un payload unique de 200 Ko. Lorsqu’il est utilisé correctement, regrouper plusieurs messages dans une seule requête est un excellent moyen d’optimiser les données envoyées à [!DNL Experience Platform].
 
-Ce document fournit un tutoriel sur l’envoi de plusieurs messages à [!DNL Experience Platform] dans une requête HTTP unique à l’aide de l’ingestion par flux.
+Ce document fournit un tutoriel sur l’envoi de plusieurs messages à [!DNL Experience Platform] dans une seule requête HTTP à l’aide de l’ingestion par flux.
 
-## Prise en main
+## Commencer
 
-Ce tutoriel nécessite une compréhension professionnelle d’Adobe Experience Platform [!DNL Data Ingestion]. Avant de commencer ce tutoriel, consultez la documentation suivante :
+Ce tutoriel nécessite une compréhension pratique de Adobe Experience Platform [!DNL Data Ingestion]. Avant de commencer ce tutoriel, consultez la documentation suivante :
 
-- [Présentation de Data Ingestion](../home.md): Couvre les concepts de base de [!DNL Experience Platform Data Ingestion], y compris les méthodes d’ingestion et les connecteurs de données.
-- [Présentation de l’ingestion par flux](../streaming-ingestion/overview.md): le workflow et les blocs de création de l’ingestion par flux, tels que les connexions en continu, les jeux de données, [!DNL XDM Individual Profile], et [!DNL XDM ExperienceEvent].
+- [Présentation de Data Ingestion](../home.md) : couvre les concepts de base de [!DNL Experience Platform Data Ingestion], y compris les méthodes d’ingestion et les connecteurs de données.
+- [Présentation de l’ingestion par flux](../streaming-ingestion/overview.md) : processus et blocs de création de l’ingestion par flux, tels que les connexions en continu, les jeux de données, [!DNL XDM Individual Profile] et [!DNL XDM ExperienceEvent].
 
-Pour passer à ce tutoriel, vous devez également avoir terminé le tutoriel [Authentification à Adobe Experience ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) afin de passer avec succès des appels aux API Platform. [!DNL Platform] Terminer le tutoriel d’authentification fournit la valeur de l’en-tête d’autorisation requise par tous les appels API de ce tutoriel. L’en-tête est affiché dans les appels d’échantillon de la manière suivante :
+Pour suivre ce tutoriel, vous devez également avoir terminé le tutoriel [Authentification à Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) afin d’effectuer avec succès des appels vers les API [!DNL Platform]. Terminer le tutoriel d’authentification fournit la valeur de l’en-tête d’autorisation requise par tous les appels API de ce tutoriel. L’en-tête est affiché dans les appels d’échantillon de la manière suivante :
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 
@@ -35,7 +35,7 @@ Toutes les requêtes POST nécessitent un en-tête supplémentaire :
 
 ## Création d’une connexion en continu
 
-Vous devez d’abord créer une connexion en continu avant de pouvoir commencer à diffuser des données vers [!DNL Experience Platform]. Lisez le guide [Création d’une connexion en continu](./create-streaming-connection.md) pour savoir comment créer une connexion en continu.
+Vous devez d’abord créer une connexion en continu avant de pouvoir commencer la diffusion des données en continu vers [!DNL Experience Platform]. Lisez le guide [Création d’une connexion en continu](./create-streaming-connection.md) pour savoir comment créer une connexion en continu.
 
 Après avoir enregistré une connexion en continu, vous obtiendrez, en tant que producteur des données, une URL unique que vous pourrez utiliser pour diffuser en continu des données vers Platform.
 
@@ -43,7 +43,7 @@ Après avoir enregistré une connexion en continu, vous obtiendrez, en tant que 
 
 L’exemple suivant vous montre comment envoyer plusieurs messages vers un jeu de données spécifique au sein d’une requête HTTP unique. Insérez l’identifiant du jeu de données dans l’en-tête du message pour que ce message soit directement ingéré.
 
-Vous pouvez obtenir l’identifiant d’un jeu de données existant à l’aide de la variable [!DNL Platform] ou en utilisant une opération de liste dans l’API. L’identifiant du jeu de données se trouve sur [Experience Platform](https://platform.adobe.com) en accédant à la fonction **[!UICONTROL Jeux de données]** , en cliquant sur le jeu de données dont vous souhaitez récupérer l’identifiant, puis en copiant la chaîne à partir du champ identifiant du jeu de données sur le **[!UICONTROL Infos]** . Consultez la [présentation du service de catalogue](../../catalog/home.md) pour obtenir des informations sur la manière dont vous pouvez récupérer les jeux de données à l’aide de l’API.
+Vous pouvez obtenir l’identifiant d’un jeu de données existant à l’aide de l’interface utilisateur [!DNL Platform] ou en utilisant une opération de liste dans l’API. L’identifiant du jeu de données se trouve sur [Experience Platform](https://platform.adobe.com) en accédant à l’onglet **[!UICONTROL Jeux de données]**, en cliquant sur le jeu de données dont vous souhaitez récupérer l’identifiant et en copiant la chaîne à partir du champ ID du jeu de données sur l’onglet **[!UICONTROL Informations]**. Consultez la [présentation du service de catalogue](../../catalog/home.md) pour obtenir des informations sur la manière dont vous pouvez récupérer les jeux de données à l’aide de l’API.
 
 Au lieu d’utiliser un jeu de données existant, vous pouvez créer un nouveau jeu de données. Pour plus d’informations sur la création d’un jeu de données à l’aide d’API, lisez le tutoriel [Création d’un jeu de données à l’aide d’API](../../catalog/api/create-dataset.md).
 
@@ -219,9 +219,9 @@ Avant de poursuivre ce tutoriel, nous vous recommandons de consulter dans un pre
 L’exemple suivant montre ce qui se produit lorsque le lot contient des messages valides et invalides.
 
 Le payload de la requête est un tableau d’objets JSON représentant l’événement dans le schéma XDM. Notez que vous devez remplir les conditions suivantes pour valider le message avec succès :
-- Le champ `imsOrgId` de l’en-tête du message doit correspondre à la définition de l’inlet. Si le payload de la requête n’inclut pas un `imsOrgId` , le champ [!DNL Data Collection Core Service] (DCCS) l’ajoutera automatiquement.
-- L’en-tête du message doit faire référence à un schéma XDM existant créé dans le [!DNL Platform] Interface utilisateur.
-- Le `datasetId` doit référencer un jeu de données existant dans [!DNL Platform], et son schéma doit correspondre au schéma fourni dans la variable `header` au sein de chaque message inclus dans le corps de la requête.
+- Le champ `imsOrgId` de l’en-tête du message doit correspondre à la définition de l’inlet. Si le payload de la requête n&#39;inclut pas de champ `imsOrgId`, le [!DNL Data Collection Core Service] (DCCS) l&#39;ajoutera automatiquement.
+- L’en-tête du message doit faire référence à un schéma XDM existant créé dans l’interface utilisateur [!DNL Platform].
+- Le champ `datasetId` doit référencer un jeu de données existant dans [!DNL Platform] et son schéma doit correspondre au schéma fourni dans l’objet `header` de chaque message inclus dans le corps de la requête.
 
 **Format d’API**
 
@@ -508,11 +508,11 @@ Le deuxième message a échoué parce qu’il manquait un corps de message. Pour
     },
 ```
 
-Le troisième message a échoué en raison de l’utilisation d’un identifiant d’organisation invalide dans l’en-tête. L’organisation doit correspondre au {CONNECTION_ID} sur lequel vous essayez de publier. Pour déterminer quel ID d’organisation correspond à la connexion en continu que vous utilisez, vous pouvez effectuer une `GET inlet` à l’aide de la méthode [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/). Consultez la section [Récupération d’une connexion en continu](./create-streaming-connection.md#get-data-collection-url) pour obtenir un exemple de la manière dont vous pouvez récupérer les connexions en continu créées précédemment.
+Le troisième message a échoué en raison de l’utilisation d’un ID d’organisation non valide dans l’en-tête . L’organisation doit correspondre au {CONNECTION_ID} sur lequel vous essayez de publier. Pour déterminer l’ID d’organisation correspondant à la connexion en continu que vous utilisez, vous pouvez effectuer une requête `GET inlet` à l’aide de [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/). Consultez la section [Récupération d’une connexion en continu](./create-streaming-connection.md#get-data-collection-url) pour obtenir un exemple de la manière dont vous pouvez récupérer les connexions en continu créées précédemment.
 
-Le quatrième message a échoué, car il ne suivait pas le schéma XDM attendu. Les éléments `xdmSchema` inclus dans l’en-tête et dans le corps de la requête ne correspondent pas au schéma XDM de `{DATASET_ID}`. Corriger le schéma dans l’en-tête et le corps du message lui permettra de passer la validation DCCS et d’être envoyé avec succès vers [!DNL Platform]. Vous devez également mettre à jour le corps du message de manière à ce qu’il corresponde au schéma XDM de `{DATASET_ID}` pour passer la validation en continu sur [!DNL Platform]. Pour plus d’informations sur ce qui arrive aux messages diffusés en continu vers Platform, consultez la section [Confirmation des messages ingérés](#confirm-messages-ingested) de ce tutoriel.
+Le quatrième message a échoué, car il ne suivait pas le schéma XDM attendu. Les éléments `xdmSchema` inclus dans l’en-tête et dans le corps de la requête ne correspondent pas au schéma XDM de `{DATASET_ID}`. La correction du schéma dans l&#39;en-tête et le corps du message lui permet de passer la validation DCCS et d&#39;être envoyé avec succès à [!DNL Platform]. Le corps du message doit également être mis à jour pour correspondre au schéma XDM de `{DATASET_ID}` pour qu’il puisse passer la validation en continu sur [!DNL Platform]. Pour plus d’informations sur ce qui arrive aux messages diffusés en continu vers Platform, consultez la section [Confirmation des messages ingérés](#confirm-messages-ingested) de ce tutoriel.
 
-### Récupération des messages en échec depuis [!DNL Platform]
+### Récupération des messages en échec de [!DNL Platform]
 
 Les messages en échec sont identifiés par un code d’état d’erreur dans le tableau de réponse.
 Les messages invalides sont collectés et stockés dans un lot « erreur » au sein du jeu de données spécifié par `{DATASET_ID}`.
@@ -521,15 +521,15 @@ Pour plus d’informations sur la récupération des messages par lots en échec
 
 ## Confirmation des messages ingérés
 
-Les messages ayant passé la validation DCCS sont diffusés en continu vers [!DNL Platform]. Activé [!DNL Platform], les messages par lots sont testés par la validation par flux avant d’être ingérés dans la variable [!DNL Data Lake]. L’état des lots, qu’ils soient réussis ou non apparaissent au sein du jeu de données spécifié par `{DATASET_ID}`.
+Les messages qui réussissent la validation DCCS sont diffusés en continu vers [!DNL Platform]. Sur [!DNL Platform], les messages par lots sont testés par validation par flux avant d’être ingérés dans le [!DNL Data Lake]. L’état des lots, qu’ils soient réussis ou non apparaissent au sein du jeu de données spécifié par `{DATASET_ID}`.
 
-Vous pouvez afficher l’état des messages par lots qui diffusent avec succès vers [!DNL Platform] en utilisant la variable [Interface utilisateur Experience Platform](https://platform.adobe.com) en accédant à la fonction **[!UICONTROL Jeux de données]** , en cliquant sur le jeu de données vers lequel vous diffusez, puis en vérifiant la variable **[!UICONTROL Activité du jeu de données]** .
+Vous pouvez afficher l’état des messages par lots qui diffusent avec succès vers [!DNL Platform] à l’aide de l’ [interface utilisateur Experience Platform](https://platform.adobe.com) en accédant à l’onglet **[!UICONTROL Jeux de données]**, en cliquant sur le jeu de données vers lequel vous diffusez, puis en vérifiant l’onglet **[!UICONTROL Activité du jeu de données]**.
 
-Messages par lots qui transmettent la validation en continu sur [!DNL Platform] sont ingérés dans la variable [!DNL Data Lake]. Les messages sont ensuite disponibles à des fins d’analyse ou d’exportation.
+Les messages par lots qui passent la validation en continu sur [!DNL Platform] sont ingérés dans [!DNL Data Lake]. Les messages sont ensuite disponibles à des fins d’analyse ou d’exportation.
 
 ## Étapes suivantes
 
-Maintenant que vous savez comment envoyer plusieurs messages en une seule requête et vérifier quand les messages ont été ingérés avec succès dans le jeu de données cibles, vous pouvez commencer à diffuser vos propres données vers [!DNL Platform]. Pour obtenir un aperçu de la manière dont interroger et récupérer les données ingérées de [!DNL Platform], reportez-vous à la section [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) guide.
+Maintenant que vous savez comment envoyer plusieurs messages dans une seule requête et vérifier quand les messages sont correctement ingérés dans le jeu de données cible, vous pouvez commencer à diffuser vos propres données vers [!DNL Platform]. Pour obtenir un aperçu de la manière dont interroger et récupérer les données ingérées de [!DNL Platform], consultez le guide [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md).
 
 ## Annexe
 
@@ -547,5 +547,5 @@ Le tableau suivant affiche les codes d’état renvoyés par les messages de ré
 | 403 | Non autorisé : le jeton d’autorisation fourni est non valide ou a expiré. Ce message n’est renvoyé que pour les inlets dont l’authentification est activée. |
 | 413 | Payload trop grand : apparaît lorsque la requête de payload totale est supérieure à 1 Mo. |
 | 429 | Trop de requêtes au cours d’une période précise. |
-| 500 | Erreur lors du traitement du payload. Consultez le corps de réponse pour un message d’erreur plus spécifique (par exemple, le schéma de payload du message n’était pas indiqué ou ne correspondait pas à la définition XDM dans [!DNL Platform]). |
+| 500 | Erreur lors du traitement du payload. Consultez le corps de la réponse pour obtenir un message d’erreur plus spécifique (par exemple, le schéma de payload du message n’est pas spécifié ou ne correspond pas à la définition XDM dans [!DNL Platform]). |
 | 503 | Le service n’est pas disponible pour le moment. Nous conseillons aux clients de réessayer au moins 3 fois en utilisant une stratégie de backoff exponentiel. |

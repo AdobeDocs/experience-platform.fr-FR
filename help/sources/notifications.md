@@ -6,8 +6,8 @@ title: Notifications d’exécution de flux
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '786'
-ht-degree: 17%
+source-wordcount: '770'
+ht-degree: 16%
 
 ---
 
@@ -21,39 +21,38 @@ Avec les événements d’Adobe I/O, vous pouvez vous abonner aux événements e
 
 Ce document décrit les étapes à suivre pour s’abonner à des événements, enregistrer des webhooks et recevoir des notifications contenant des informations sur l’état de vos exécutions de flux.
 
-## Prise en main
+## Commencer
 
-Ce tutoriel suppose que vous avez déjà créé au moins une connexion source dont vous souhaitez surveiller le flux. Si vous n’avez pas encore configuré de connexion source, commencez par consulter le [présentation des sources](./home.md) pour configurer la source de votre choix avant de revenir à ce guide.
+Ce tutoriel suppose que vous avez déjà créé au moins une connexion source dont vous souhaitez surveiller le flux. Si vous n’avez pas encore configuré de connexion source, commencez par consulter la [présentation des sources](./home.md) pour configurer la source de votre choix avant de revenir à ce guide.
 
 Ce document nécessite également une compréhension pratique des webhooks et de la manière dont connecter un webhook d’une application à une autre. Pour en savoir plus sur les Webhooks, consultez la [[!DNL I/O Events] documentation](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md).
 
 ## Enregistrement d’un webhook pour les notifications d’exécution de flux
 
-Pour recevoir des notifications d’exécution de flux, vous devez utiliser la console Adobe Developer pour enregistrer un webhook dans votre [!DNL Experience Platform] intégration.
+Pour recevoir des notifications d’exécution de flux, vous devez utiliser Adobe Developer Console pour enregistrer un webhook dans votre intégration [!DNL Experience Platform].
 
-Suivez le tutoriel sur [abonnement aux notifications [!DNL I/O Event]](../observability/alerts/subscribe.md) pour obtenir des instructions détaillées sur la manière d’y parvenir.
+Suivez le tutoriel [abonnement aux notifications [!DNL I/O Event]](../observability/alerts/subscribe.md) pour obtenir des instructions détaillées sur la manière d’y parvenir.
 
 >[!IMPORTANT]
 >
->Pendant le processus d’abonnement, veillez à sélectionner **[!UICONTROL Notifications Platform]** en tant que fournisseur d’événements, et sélectionnez les abonnements aux événements suivants :
+>Pendant le processus d’abonnement, veillez à sélectionner **[!UICONTROL Notifications Platform]** en tant que fournisseur d’événement, puis sélectionnez les abonnements d’événement suivants :
 >
->* **[!UICONTROL Succès de l’exécution du flux de la source Experience Platform]**
->* **[!UICONTROL Échec de l’exécution du flux de la source Experience Platform]**
-
+>* **[!UICONTROL Succès de l’exécution du flux Source Experience Platform]**
+>* **[!UICONTROL Échec de l’exécution du flux Source Experience Platform]**
 
 ## Réception de notifications d’exécution de flux
 
 Une fois votre webhook connecté et votre abonnement à l’événement terminé, vous pouvez commencer à recevoir des notifications d’exécution de flux via le tableau de bord webhook.
 
-Une notification renvoie des informations telles que le nombre de tâches d’ingestion exécutées, la taille du fichier et les erreurs. Une notification renvoie également un payload associé à votre exécution de flux au format JSON. La payload de réponse peut être classée comme `sources_flow_run_success` ou `sources_flow_run_failure`.
+Une notification renvoie des informations telles que le nombre de tâches d’ingestion exécutées, la taille du fichier et les erreurs. Une notification renvoie également un payload associé à votre exécution de flux au format JSON. La charge utile de réponse peut être classée comme `sources_flow_run_success` ou `sources_flow_run_failure`.
 
 >[!IMPORTANT]
 >
->Si l’ingestion partielle est activée pendant le processus de création de flux, un flux qui contient à la fois des ingérations réussies et en échec est marqué comme `sources_flow_run_success` uniquement si le nombre d’erreurs est inférieur au pourcentage du seuil d’erreur défini lors du processus de création de flux. Si une exécution de flux réussie contient des erreurs, ces erreurs seront toujours incluses dans la payload de retour.
+>Si l’ingestion partielle est activée pendant le processus de création de flux, un flux qui contient à la fois des ingestion réussies et en échec ne sera marqué comme `sources_flow_run_success` que si le nombre d’erreurs est inférieur au pourcentage de seuil d’erreur défini pendant le processus de création de flux. Si une exécution de flux réussie contient des erreurs, ces erreurs seront toujours incluses dans la payload de retour.
 
 ### Réussite
 
-Une réponse réussie renvoie un ensemble de `metrics` qui définissent les caractéristiques d’une exécution de flux spécifique et `activities` qui indiquent comment les données sont transformées.
+Une réponse réussie renvoie un ensemble de `metrics` qui définissent les caractéristiques d’une exécution de flux spécifique et `activities` qui décrivent la manière dont les données sont transformées.
 
 ```json
 {
@@ -312,11 +311,11 @@ La réponse suivante est un exemple d’exécution d’un flux ayant échoué, a
 
 >[!NOTE]
 >
->Voir [annexe](#errors) pour plus d’informations sur les messages d’erreur.
+>Pour plus d’informations sur les messages d’erreur, consultez l’ [annexe](#errors) .
 
 ## Étapes suivantes
 
-Vous pouvez désormais vous abonner à des événements qui vous permettent de recevoir des notifications en temps réel sur vos états d’exécution de flux. Pour plus d’informations sur les exécutions de flux et les sources, voir [présentation des sources](./home.md).
+Vous pouvez désormais vous abonner à des événements qui vous permettent de recevoir des notifications en temps réel sur vos états d’exécution de flux. Pour plus d’informations sur les exécutions de flux et les sources, consultez la [présentation des sources](./home.md).
 
 ## Annexe
 

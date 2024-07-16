@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Configuration d’une CSP
 
-A [Stratégie de sécurité du contenu](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) est utilisé pour restreindre les ressources qu’un navigateur est autorisé à utiliser. La CSP peut également limiter les fonctionnalités des ressources de script et de style. Le SDK Web de Adobe Experience Platform ne nécessite pas de stratégie de sécurité du contenu, mais l’ajout d’une solution peut réduire la surface d’attaque afin de prévenir les attaques malveillantes.
+Une [stratégie de sécurité du contenu](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) est utilisée pour restreindre les ressources qu’un navigateur est autorisé à utiliser. La CSP peut également limiter les fonctionnalités des ressources de script et de style. Le SDK Web de Adobe Experience Platform ne nécessite pas de stratégie de sécurité du contenu, mais l’ajout d’une solution peut réduire la surface d’attaque afin de prévenir les attaques malveillantes.
 
-La stratégie de sécurité du contenu doit refléter comment [!DNL Platform Web SDK] est déployé et configuré. La CSP suivante indique les modifications qui peuvent être nécessaires au bon fonctionnement du SDK. D’autres paramètres CSP seront probablement requis, selon votre environnement spécifique.
+La CSP doit refléter la manière dont [!DNL Platform Web SDK] est déployé et configuré. La CSP suivante indique les modifications qui peuvent être nécessaires au bon fonctionnement du SDK. D’autres paramètres CSP seront probablement requis, selon votre environnement spécifique.
 
 ## Exemple de stratégie de sécurité du contenu
 
@@ -29,17 +29,17 @@ default-src 'self';
 connect-src 'self' EDGE-DOMAIN
 ```
 
-Dans l’exemple ci-dessus, `EDGE-DOMAIN` doit être remplacé par le domaine propriétaire. Le domaine propriétaire est configuré pour la variable [edgeDomain](../commands/configure/edgedomain.md) . Si aucun domaine propriétaire n’a été configuré, `EDGE-DOMAIN` doit être remplacé par `*.adobedc.net`. Si la migration des visiteurs est activée à l’aide de [idMigrationEnabled](../commands/configure/idmigrationenabled.md), la variable `connect-src` La directive doit également inclure `*.demdex.net`.
+Dans l’exemple ci-dessus, `EDGE-DOMAIN` doit être remplacé par le domaine propriétaire. Le domaine propriétaire est configuré pour le paramètre [edgeDomain](../commands/configure/edgedomain.md) . Si aucun domaine propriétaire n’a été configuré, `EDGE-DOMAIN` doit être remplacé par `*.adobedc.net`. Si la migration des visiteurs est activée à l’aide de [idMigrationEnabled](../commands/configure/idmigrationenabled.md), la directive `connect-src` doit également inclure `*.demdex.net`.
 
 ### Utilisez NONCE pour autoriser les éléments de script et de style intégrés.
 
-[!DNL Platform Web SDK] peut modifier le contenu de la page et doit être approuvé pour créer un script intégré et des balises de style. Pour ce faire, Adobe recommande d’utiliser une valeur à usage unique pour la variable [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) directive CSP. Une valeur à usage unique est un jeton aléatoire généré par le serveur, de manière cryptographique, et généré une fois par chaque page vue unique.
+[!DNL Platform Web SDK] peut modifier le contenu de la page et doit être approuvé pour créer le script intégré et les balises de style. Pour ce faire, Adobe recommande d’utiliser une valeur à usage unique pour la directive CSP [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src). Une valeur à usage unique est un jeton aléatoire généré par le serveur, de manière cryptographique, et généré une fois par chaque page vue unique.
 
 ```
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-En outre, la valeur à usage unique CSP doit être ajoutée en tant qu’attribut à la variable [!DNL Platform Web SDK] [code de base](../install/library.md) balise de script. [!DNL Platform Web SDK] utilisera alors cette valeur à usage unique lors de l’ajout de balises de style ou de script intégrées à la page :
+En outre, la valeur à usage unique CSP doit être ajoutée en tant qu’attribut à la balise de script [!DNL Platform Web SDK] [code de base](../install/library.md). [!DNL Platform Web SDK] utilisera alors cette valeur à usage unique lors de l’ajout de balises de style ou de script intégrées à la page :
 
 ```
 <script nonce="SERVER-GENERATED-NONCE">
@@ -50,7 +50,7 @@ En outre, la valeur à usage unique CSP doit être ajoutée en tant qu’attribu
 </script>
 ```
 
-Si une valeur à usage unique n’est pas utilisée, l’autre option consiste à ajouter `unsafe-inline` à la fonction `script-src` et `style-src` Directives CSP :
+Si aucune valeur à usage unique n’est utilisée, l’autre option consiste à ajouter `unsafe-inline` aux directives CSP `script-src` et `style-src` :
 
 ```
 script-src 'unsafe-inline'
@@ -59,11 +59,11 @@ style-src 'unsafe-inline'
 
 >[!NOTE]
 >
->L’Adobe fait **not** recommandation, spécification `unsafe-inline` car il permet à n’importe quel script de s’exécuter sur la page, ce qui limite les avantages de la CSP.
+>Adobe ne recommande **pas** de spécifier `unsafe-inline`, car il permet à n’importe quel script de s’exécuter sur la page, ce qui limite les avantages de la CSP.
 
 ## Configuration d’une CSP pour la messagerie in-app {#in-app-messaging}
 
-Lorsque vous configurez [Messagerie in-app web](../personalization/web-in-app-messaging.md), vous devez inclure la directive suivante dans votre CSP :
+Lorsque vous configurez la [messagerie in-app web](../personalization/web-in-app-messaging.md), vous devez inclure la directive suivante dans votre CSP :
 
 ```
 default-src  blob:;

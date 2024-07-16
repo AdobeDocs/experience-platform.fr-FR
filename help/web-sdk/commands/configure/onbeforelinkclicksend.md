@@ -14,11 +14,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Ce rappel est obsolète. Utilisation [`filterClickDetails`](clickcollection.md) au lieu de .
+>Ce rappel est obsolète. Utilisez [`filterClickDetails`](clickcollection.md) à la place.
 
-La variable `onBeforeLinkClickSend` callback vous permet d’enregistrer une fonction JavaScript qui peut modifier les données de suivi des liens que vous envoyez juste avant que ces données ne soient envoyées à Adobe. Ce rappel vous permet de manipuler la variable `xdm` ou `data` , y compris la possibilité d’ajouter, de modifier ou de supprimer des éléments. Vous pouvez également annuler de manière conditionnelle l’envoi de données, par exemple avec le trafic de robots côté client détecté. Elle est prise en charge sur le SDK Web 2.15.0 ou version ultérieure.
+Le rappel `onBeforeLinkClickSend` vous permet d’enregistrer une fonction JavaScript qui peut modifier les données de suivi des liens que vous envoyez juste avant l’envoi de ces données à Adobe. Ce rappel vous permet de manipuler l’objet `xdm` ou `data`, y compris la possibilité d’ajouter, de modifier ou de supprimer des éléments. Vous pouvez également annuler de manière conditionnelle l’envoi de données, par exemple avec le trafic de robots côté client détecté. Elle est prise en charge sur le SDK Web 2.15.0 ou version ultérieure.
 
-Ce rappel ne s’exécute que lorsque [`clickCollectionEnabled`](clickcollectionenabled.md) est activé et [`filterClickDetails`](clickcollection.md) ne contient pas de fonction enregistrée. If `clickCollectionEnabled` est désactivé, ou si `filterClickDetails` contient une fonction enregistrée, puis ce rappel ne s’exécute pas. If `onBeforeEventSend` et `onBeforeLinkClickSend` contiennent tous deux des fonctions enregistrées, `onBeforeLinkClickSend` est exécuté en premier.
+Ce rappel ne s’exécute que lorsque [`clickCollectionEnabled`](clickcollectionenabled.md) est activé et [`filterClickDetails`](clickcollection.md) ne contient pas de fonction enregistrée. Si `clickCollectionEnabled` est désactivé ou si `filterClickDetails` contient une fonction enregistrée, ce rappel ne s’exécute pas. Si `onBeforeEventSend` et `onBeforeLinkClickSend` contiennent tous deux des fonctions enregistrées, `onBeforeLinkClickSend` est exécuté en premier.
 
 >[!WARNING]
 >
@@ -26,26 +26,26 @@ Ce rappel ne s’exécute que lorsque [`clickCollectionEnabled`](clickcollection
 
 ## Configurez avant le rappel de rappel de clic sur les liens à l’aide de l’extension de balise SDK Web. {#tag-extension}
 
-Sélectionnez la variable **[!UICONTROL Fournir avant le code de rappel d’événement de clic sur les liens]** lorsque [configuration de l’extension de balise](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Ce bouton ouvre une fenêtre modale dans laquelle vous pouvez insérer le code de votre choix.
+Sélectionnez le bouton **[!UICONTROL Fournir avant le clic sur les événements de lien envoyer le code de rappel]** lors de la [configuration de l’extension de balise](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Ce bouton ouvre une fenêtre modale dans laquelle vous pouvez insérer le code de votre choix.
 
-1. Connexion à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
 1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
-1. Accédez à **[!UICONTROL Extensions]**, puis cliquez sur **[!UICONTROL Configurer]** sur le [!UICONTROL SDK Web Adobe Experience Platform] carte.
-1. Faites défiler l’écran vers le bas jusqu’à [!UICONTROL Collecte de données] , puis cochez la case **[!UICONTROL Activer la collecte de données de clic]**.
-1. Sélectionnez le bouton intitulé **[!UICONTROL Fournir avant le code de rappel d’événement de clic sur les liens]**.
-1. Ce bouton ouvre une fenêtre modale avec un éditeur de code. Insérez le code souhaité, puis cliquez sur **[!UICONTROL Enregistrer]** pour fermer la fenêtre modale.
-1. Cliquez sur **[!UICONTROL Enregistrer]** sous paramètres d’extension, puis publiez vos modifications.
+1. Accédez à **[!UICONTROL Extensions]**, puis cliquez sur **[!UICONTROL Configurer]** sur la carte [!UICONTROL SDK Web Adobe Experience Platform].
+1. Faites défiler l’écran jusqu’à la section [!UICONTROL Collecte de données], puis cochez la case **[!UICONTROL Activer la collecte de données de clic]**.
+1. Sélectionnez le bouton intitulé **[!UICONTROL Fournir avant l’événement de clic de lien envoyer le code de rappel]**.
+1. Ce bouton ouvre une fenêtre modale avec un éditeur de code. Insérez le code de votre choix, puis cliquez sur **[!UICONTROL Enregistrer]** pour fermer la fenêtre modale.
+1. Cliquez sur **[!UICONTROL Enregistrer]** sous les paramètres d’extension, puis publiez vos modifications.
 
 Dans l’éditeur de code, vous avez accès aux variables suivantes :
 
-* **`content.clickedElement`**: élément DOM sur lequel l’utilisateur a cliqué.
-* **`content.xdm`**: charge utile XDM de l’événement.
-* **`content.data`**: charge utile de l’objet de données pour l’événement.
-* **`return true`**: quittez immédiatement le rappel avec les valeurs de variable actuelles. La variable `onBeforeEventSend` callback s’exécute s’il contient une fonction enregistrée.
-* **`return false`**: quittez immédiatement le rappel et abandonnez l’envoi de données à Adobe. La variable `onBeforeEventSend` callback n’est pas exécuté.
+* **`content.clickedElement`** : élément DOM sur lequel l’utilisateur a cliqué.
+* **`content.xdm`** : charge utile XDM pour l’événement.
+* **`content.data`** : charge utile de l’objet de données pour l’événement.
+* **`return true`** : Quittez immédiatement le rappel avec les valeurs de variable actuelles. Le rappel `onBeforeEventSend` s’exécute s’il contient une fonction enregistrée.
+* **`return false`** : Quittez immédiatement le rappel et abandonnez l’envoi de données à Adobe. Le rappel `onBeforeEventSend` n’est pas exécuté.
 
-Toute variable définie en dehors de `content` peuvent être utilisées, mais ne sont pas incluses dans la payload envoyée à Adobe.
+Toutes les variables définies en dehors de `content` peuvent être utilisées, mais ne sont pas incluses dans la payload envoyée à Adobe.
 
 ```js
 // Set an already existing value to something else
@@ -65,11 +65,11 @@ content.xdm._experience.analytics.customDimensions.eVars.eVar1 = content.clicked
 if(content.xdm.web?.webInteraction?.type === "other") content.xdm.web.webInteraction.type = "download";
 ```
 
-De la même manière que [`onBeforeEventSend`](onbeforeeventsend.md), vous pouvez `return true` pour exécuter immédiatement la fonction ; ou `return false` pour abandonner l’envoi de données à Adobe. Si vous abandonnez l’envoi de données dans `onBeforeLinkClickSend` lorsque les deux `onBeforeEventSend` et `onBeforeLinkClickSend` contiennent des fonctions enregistrées, l’objet `onBeforeEventSend` ne s’exécute pas.
+De la même manière que [`onBeforeEventSend`](onbeforeeventsend.md), vous pouvez `return true` terminer la fonction immédiatement ou `return false` abandonner l&#39;envoi de données à Adobe. Si vous interrompez l&#39;envoi de données dans `onBeforeLinkClickSend` lorsque `onBeforeEventSend` et `onBeforeLinkClickSend` contiennent tous deux des fonctions enregistrées, la fonction `onBeforeEventSend` ne s&#39;exécute pas.
 
 ## Configurez avant le rappel de rappel de clic sur les liens à l’aide de la bibliothèque JavaScript SDK Web {#library}
 
-Enregistrez le `onBeforeLinkClickSend` rappel lors de l’exécution de la fonction `configure` . Vous pouvez modifier la variable `content` nom de la variable à n’importe quelle valeur en modifiant la variable de paramètre dans la fonction intégrée.
+Enregistrez le rappel `onBeforeLinkClickSend` lors de l’exécution de la commande `configure`. Vous pouvez remplacer le nom de la variable `content` par toute valeur souhaitée en modifiant la variable de paramètre dans la fonction intégrée.
 
 ```js
 alloy("configure", {

@@ -6,7 +6,7 @@ description: Dans l’API Content Tagging, le service Text Presence/Optical Char
 exl-id: 85b976a7-0229-43e9-b166-cdbd213b867f
 source-git-commit: 82722ddf7ff543361177b555fffea730a7879886
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '693'
 ht-degree: 4%
 
 ---
@@ -74,12 +74,12 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 **Réponse**
 
-Une réponse réussie renvoie le texte qui a été détecté dans la variable `tags` liste pour chaque image transmise dans la requête. Si aucune image ne contient de texte, `is_text_present` est 0 et `tags` est une liste vide.
+Une réponse réussie renvoie le texte qui a été détecté dans la liste `tags` pour chaque image qui a été transmise dans la requête. S’il n’y a pas de texte dans une certaine image, `is_text_present` a 0 et `tags` est une liste vide.
 
-[result0, result1, ...]: liste des réponses pour chaque document d’entrée. Chaque résultat est un dict avec des clés :
+[result0, result1, ...] : liste des réponses pour chaque document d’entrée. Chaque résultat est un dict avec des clés :
 
-1. request_element_id: index correspondant au fichier d’entrée pour cette réponse, 0 pour la première image de la liste de documents de la requête, 1 pour la suivante, etc.
-2. balises : liste des dictionnaires, chaque dictionnaire comporte deux clés : texte, qui est un mot reconnu de l’image, et sa pertinence, qui est calculé comme la fraction de la zone du cadre de sélection du texte extrait par rapport à l’image complète. 0,01 correspond à un texte occupant au moins 1 % de l’image.
+1. request_element_id : index correspondant au fichier d’entrée pour cette réponse, 0 pour la première image de la liste de documents de la requête, 1 pour la suivante, etc.
+2. balises : liste des dictionnaires, chaque dictionnaire comporte deux clés : le texte, qui est un mot reconnu de l’image, et la pertinence, qui est calculé comme la fraction de la zone du cadre de sélection du texte extrait par rapport à l’image complète. 0,01 correspond à un texte occupant au moins 1 % de l’image.
 3. is_text_present : 0 ou 1 selon si du texte est présent dans l’image. Si la valeur des balises est 0, la liste est vide.
 
 ```json
@@ -202,14 +202,14 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 | `repo:path` | URL présignée à la ressource image. | Oui |
 | `sensei:repoType` | &quot;HTTP&quot; (pour presigned-url). | Non |
 | `dc:format` | Format codé de l’image d’entrée. Seuls les formats d’image tels que jpeg, jpg, png et tiff sont autorisés pour le codage d’image. Le format dc:format est comparé aux formats autorisés. | Non |
-| `correct_with_dictionary` | Est-il possible de corriger les mots avec un dictionnaire anglais ? Si cette option n’est pas activée, il est possible que des mots non anglais soient reconnus. La valeur par défaut est True : activée.) Notez que lorsque le dictionnaire est activé, il n’est pas nécessaire d’obtenir toujours un mot anglais. Nous essayons de le corriger, mais si ce n&#39;est pas possible dans un certain délai d&#39;édition, nous retournons le mot d&#39;origine. | Non |
+| `correct_with_dictionary` | Est-il possible de corriger les mots avec un dictionnaire d&#39;anglais ? Si cette option n’est pas activée, il est possible que des mots non anglais soient reconnus. La valeur par défaut est True : activée.) Notez que lorsque le dictionnaire est activé, il n’est pas nécessaire d’obtenir toujours un mot anglais. Nous essayons de le corriger, mais si ce n&#39;est pas possible dans un certain délai d&#39;édition, nous retournons le mot d&#39;origine. | Non |
 | `filter_with_dictionary` | Est-il possible de filtrer les mots pour ne contenir que les mots du dictionnaire anglais ? Si cette option est activée, les mots renvoyés appartiennent toujours au grand anglais , qui comprend 470 000 mots. | Non |
 | `min_probability` | Quelle est la probabilité minimale pour les mots reconnus ? Seuls les mots extraits de l’image et ayant une probabilité supérieure à min_probabilité sont renvoyés par le service. La valeur par défaut est 0,2. | Non |
-| `min_relevance` | Quelle est la pertinence minimale pour les mots reconnus ? Seuls les mots extraits de l’image et ayant une plus grande pertinence que min_relevant sont renvoyés par le service. La valeur par défaut est de 0,01. La pertinence est calculée comme la fraction de la zone du cadre de sélection du texte extrait par rapport à l’image complète. 0,01 correspond à un texte occupant au moins 1 % de l’image. | Non |
+| `min_relevance` | Quelle est la pertinence minimale pour les mots reconnus ? Seuls les mots extraits de l’image et ayant une plus grande pertinence que min_relevant sont renvoyés par le service. La valeur par défaut est 0,01. La pertinence correspond à la fraction de la zone du cadre de sélection du texte extrait par rapport à l’image complète. 0,01 correspond à un texte occupant au moins 1 % de l’image. | Non |
 
 | Nom | Type de données | Obligatoire | Par défaut | Valeurs | Description |
 | -----| --------- | -------- | ------- | ------ | ----------- |
 | `repo:path` | chaîne | - | - | - | URL présignée de l’image à partir de laquelle le texte doit être extrait. |
-| `sensei:repoType` | chaîne | - | - | HTTPS | Type de référentiel dans lequel l’image est stockée. |
-| `sensei:multipart_field_name` | chaîne | - | - | - | Utilisez-le lorsque vous transmettez l’image en tant qu’argument en plusieurs parties au lieu d’utiliser des URL présignées. |
-| `dc:format` | chaîne | Oui | - | &quot;image/jpg&quot;, <br>&quot;image/jpeg&quot;, <br>&quot;image/png&quot;, <br>&quot;image/tiff&quot; | Le codage des images est comparé aux types de codage d’entrée autorisés avant d’être traité. |
+| `sensei:repoType` | Chaîne | - | - | HTTPS | Type de référentiel dans lequel l’image est stockée. |
+| `sensei:multipart_field_name` | Chaîne | - | - | - | Utilisez-le lorsque vous transmettez l’image en tant qu’argument en plusieurs parties au lieu d’utiliser des URL présignées. |
+| `dc:format` | Chaîne | Oui | - | &quot;image/jpg&quot;, <br>&quot;image/jpeg&quot;, <br>&quot;image/png&quot;, <br>&quot;image/tiff&quot; | Le codage des images est comparé aux types de codage d’entrée autorisés avant d’être traité. |

@@ -5,7 +5,7 @@ exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
 source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
 workflow-type: tm+mt
 source-wordcount: '797'
-ht-degree: 43%
+ht-degree: 44%
 
 ---
 
@@ -13,21 +13,21 @@ ht-degree: 43%
 
 ## Présentation {#overview}
 
-[!DNL DataX] est un agrégat [!DNL Verizon Media/Yahoo] infrastructure qui héberge divers composants permettant d’activer [!DNL Verizon Media/Yahoo] d’échanger des données avec ses partenaires externes de manière sécurisée, automatisée et évolutive.
+[!DNL DataX] est une infrastructure [!DNL Verizon Media/Yahoo] agrégée qui héberge divers composants qui permettent à [!DNL Verizon Media/Yahoo] d&#39;exchange des données avec ses partenaires externes de manière sécurisée, automatisée et évolutive.
 
 >[!IMPORTANT]
 >
->Cette page de documentation et de connecteur de destination est créée et gérée par [!DNL Verizon Media/Yahoo]&#39;s [!DNL DataX] l&#39;équipe. Pour toute demande d’information ou de mise à jour, contactez-les directement à l’adresse [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
+>Ce connecteur de destination et cette page de documentation sont créés et gérés par l’équipe [!DNL DataX] de [!DNL Verizon Media/Yahoo]. Pour toute question ou demande de mise à jour, contactez-les directement à l’adresse [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
 
 ## Conditions préalables {#prerequisites}
 
 **ID MDM**
 
-Il s’agit d’un identifiant unique dans [!DNL Yahoo DataX] et il s’agit d’un champ obligatoire pour configurer les exportations de données vers cette destination. Si vous ne connaissez pas cet identifiant, contactez votre [!DNL Yahoo DataX] gestionnaire de compte.
+Il s’agit d’un identifiant unique dans [!DNL Yahoo DataX] et il s’agit d’un champ obligatoire pour configurer les exportations de données vers cette destination. Si vous ne connaissez pas cet identifiant, contactez votre gestionnaire de compte [!DNL Yahoo DataX].
 
 **Métadonnées de taxonomie**
 
-La ressource Taxonomie définit une extension sur la base [!DNL DataX] Structure des métadonnées
+La ressource Taxonomie définit une extension sur la structure de métadonnées de base [!DNL DataX]
 
 ```
 {
@@ -48,20 +48,20 @@ La ressource Taxonomie définit une extension sur la base [!DNL DataX] Structure
 }
 ```
 
-En savoir plus sur [Métadonnées de taxonomie](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) dans le [!DNL DataX] documentation destinée aux développeurs.
+Pour en savoir plus sur les [métadonnées de taxonomie](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/), consultez la documentation destinée aux développeurs [!DNL DataX].
 
 ## Limites de taux et barrières de sécurité {#rate-limits-guardrails}
 
 >[!IMPORTANT]
 >
->Lors de l’activation de plus de 100 audiences vers [!DNL Verizon Media/Yahoo DataX], vous pouvez recevoir des erreurs de limitation de débit de la destination. Lors de l’activation d’audiences vers cette destination, essayez d’activer moins de 100 audiences dans un seul flux de données d’activation. Si vous devez activer davantage de segments, créez une destination sur le même compte.
+>Lors de l’activation de plus de 100 audiences vers [!DNL Verizon Media/Yahoo DataX], vous pourriez recevoir des erreurs de limitation de débit de la destination. Lors de l’activation d’audiences vers cette destination, essayez d’activer moins de 100 audiences dans un seul flux de données d’activation. Si vous devez activer davantage de segments, créez une destination sur le même compte.
 
-[!DNL DataX] est limitée au taux selon les limites de quota pour la taxonomie et les publications d’audience décrites dans la section [Documentation de DataX](https://developer.verizonmedia.com/datax/guide/rate-limits/).
+[!DNL DataX] est limité par le taux selon les limites de quota pour la taxonomie et les publications d’audience décrites dans la [documentation de DataX](https://developer.verizonmedia.com/datax/guide/rate-limits/).
 
 
 | Code d’erreur | Message d’erreur | Description |
 |---------|----------|---------|
-| 429 Too many requests | Limite de taux dépassée par heure **(Limite : 100)** | Nombre de demandes autorisées par heure par fournisseur. |
+| 429 Too many requests | Limite de débit dépassée par heure **(Limite : 100)** | Nombre de demandes autorisées par heure par fournisseur. |
 
 {style="table-layout:auto"}
 
@@ -72,7 +72,7 @@ En savoir plus sur [Métadonnées de taxonomie](https://developer.verizonmedia.c
 | Identité cible | Description | Considérations |
 |---|---|---|
 | email_lc_sha256 | Adresses e-mail hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l’activation. |
-| GAID | Google Advertising ID | Sélectionnez l’identité cible GAID lorsque votre identité source est un espace de noms GAID. |
+| GAID | GOOGLE ADVERTISING ID | Sélectionnez l’identité cible GAID lorsque votre identité source est un espace de noms GAID. |
 | IDFA | Identifiant Apple pour les annonceurs | Sélectionnez l’identité cible IDFA lorsque votre identité source est un espace de noms IDFA. |
 
 {style="table-layout:auto"}
@@ -90,13 +90,13 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 ## Cas d’utilisation {#use-cases}
 
-[!DNL DataX] Les API sont disponibles pour les annonceurs qui souhaitent cibler un groupe d’audience spécifique en dehors des adresses électroniques dans [!DNL Verizon Media] (VMG) peut rapidement créer une nouvelle audience et pousser le groupe d’audiences souhaité à l’aide de l’API en temps quasi réel de VMG.
+[!DNL DataX] Les API sont disponibles pour les annonceurs qui souhaitent cibler un groupe d’audiences spécifique en dehors des adresses électroniques dans [!DNL Verizon Media] (VMG) peuvent rapidement créer une nouvelle audience et pousser le groupe d’audiences souhaité à l’aide de l’API en temps quasi réel de VMG.
 
 ## Se connecter à la destination {#connect}
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **** et des **** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 ![Carte de destination Yahoo DataX dans l’interface utilisateur de Platform](/help/destinations/assets/catalog/advertising/yahoo-datax/catalog.png)
 
@@ -108,7 +108,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL ID MDM]**: il s’agit d’un identifiant unique dans [!DNL Yahoo DataX] et il s’agit d’un champ obligatoire pour configurer les exportations de données vers cette destination. Si vous ne connaissez pas cet identifiant, contactez votre [!DNL Yahoo DataX] gestionnaire de compte.  Avec les identifiants MDM, les données ne peuvent être limitées pour une utilisation qu’avec un certain ensemble d’utilisateurs exclusifs (tels que les données propriétaires pour les annonceurs).
+* **[!UICONTROL ID MDM]** : il s’agit d’un identifiant unique dans [!DNL Yahoo DataX] et il s’agit d’un champ obligatoire pour configurer les exportations de données vers cette destination. Si vous ne connaissez pas cet identifiant, contactez votre gestionnaire de compte [!DNL Yahoo DataX].  Avec les identifiants MDM, les données ne peuvent être limitées pour une utilisation qu’avec un certain ensemble d’utilisateurs exclusifs (tels que les données propriétaires pour les annonceurs).
 
 ### Activer les alertes {#enable-alerts}
 
@@ -120,10 +120,10 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter *identités*, vous avez besoin de la fonction **[!UICONTROL Affichage du graphique des identités]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **** et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous avez besoin de l&#39;autorisation **[!UICONTROL Afficher le graphique d&#39;identités]** [ ](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
-Lecture [Activation de profils et d’audiences vers une destination](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers les destinations.
+Lisez [Activer les profils et les audiences vers une destination](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers les destinations.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
@@ -131,4 +131,4 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-Pour plus d’informations, consultez la section [!DNL Yahoo/Verizon Media] [documentation sur [!DNL DataX]](https://developer.verizonmedia.com/datax/guide/).
+Pour plus d&#39;informations, consultez la [!DNL Yahoo/Verizon Media] [documentation sur [!DNL DataX]](https://developer.verizonmedia.com/datax/guide/).

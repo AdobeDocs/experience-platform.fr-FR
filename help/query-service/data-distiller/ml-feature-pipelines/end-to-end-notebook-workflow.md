@@ -24,9 +24,9 @@ Utilisez Data Distiller pour enrichir vos pipelines d’apprentissage automatiqu
 
 Ce document fournit une série de notebooks d’environnement d’apprentissage automatique basés sur le cloud qui montrent un processus de bout en bout. Le workflow utilise vos outils d’apprentissage automatique préférés pour créer des modèles de données personnalisés qui prennent en charge vos cas d’utilisation marketing avec des données Experience Platform.
 
-Ce workflow nécessite l’utilisation de la fonction [!DNL Python] notebooks dans vos environnements d’apprentissage automatique. Instructions pour commencer à utiliser les [!DNL Python] les notebooks sont inclus dans leurs fichiers Lisez-moi respectifs.
+Ce workflow nécessite l’utilisation de [!DNL Python] notebooks dans vos environnements d’apprentissage automatique. Les instructions de prise en main de ces [!DNL Python] notebooks sont incluses dans leurs fichiers Lisez-moi respectifs.
 
-Avant de poursuivre avec ce guide, suivez les étapes décrites dans la section [Présentation des pipelines de fonctionnalités AI/ML](./overview.md) pour activer l’utilisation des exemples de notebooks Python utilisés dans ce cas d’utilisation de pipeline de fonctionnalités AI/ML.
+Avant de poursuivre avec ce guide, suivez les étapes décrites dans la [présentation des pipelines de fonctionnalités AI/ML](./overview.md) pour activer l’utilisation des notebooks Python d’exemple utilisés dans ce cas d’utilisation de ce pipeline de fonctionnalités AI/ML.
 
 ## notebooks d’environnement d’apprentissage automatique cloud {#cmle-notebooks}
 

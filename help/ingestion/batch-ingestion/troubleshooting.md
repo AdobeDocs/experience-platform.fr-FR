@@ -6,7 +6,7 @@ description: Cette documentation vous aidera à répondre aux questions fréquen
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1418'
 ht-degree: 100%
 
 ---
@@ -181,18 +181,18 @@ Au cours de son cycle de vie, un lot peut passer par les états suivants :
 
 | État | Données écrites au format maître | Description |
 | ------ | ---------------------- | ----------- |
-| Abandonné |  | Le client n’a pas terminé le lot dans le délai prévu. |
-| Interrompu |  | Le client a explicitement demandé, via les API [!DNL Batch Data Ingestion], une opération d’abandon pour le lot spécifié. Une fois que le lot a atteint l’état Chargé, il ne peut plus être abandonné. |
+| Abandonné | | Le client n’a pas terminé le lot dans le délai prévu. |
+| Interrompu | | Le client a explicitement demandé, via les API [!DNL Batch Data Ingestion], une opération d’abandon pour le lot spécifié. Une fois que le lot a atteint l’état Chargé, il ne peut plus être abandonné. |
 | Actif/Réussite | x | Le lot a été promu de l’évaluation au format maître. Il est désormais disponible pour la consommation en aval. **Remarque :** Actif et Réussite sont interchangeables. |
-| Archivé |  | Le lot a été archivé dans un stockage hors ligne. |
-| Échoué/Échec |  | État final résultant d’une configuration incorrecte et/ou de mauvaises données. Une erreur exploitable est enregistrée, ainsi que le lot, pour permettre aux clients de corriger et de renvoyer les données. **Remarque :** Échoué et Échec sont interchangeables. |
+| Archivé | | Le lot a été archivé dans un stockage hors ligne. |
+| Échoué/Échec | | État final résultant d’une configuration incorrecte et/ou de mauvaises données. Une erreur exploitable est enregistrée, ainsi que le lot, pour permettre aux clients de corriger et de renvoyer les données. **Remarque :** Échoué et Échec sont interchangeables. |
 | Inactif | x | Le lot a été promu, mais la promotion a été annulée ou a expiré. Le lot ne sera plus disponible pour la consommation en aval, mais les données sous-jacentes resteront au format maître jusqu’à ce qu’elles aient été conservées, archivées ou supprimées d’une autre manière. |
-| Chargement |  | Le client écrit actuellement des données pour le lot. À ce stade, le lot n’est **pas** prêt pour la promotion. |
-| Chargé |  | Le client a terminé l’écriture des données pour le lot. Le lot est prêt pour la promotion. |
-| Conservé |  | Les données ont été extraites du format maître et placées dans une archive désignée d’Adobe Data Lake. |
-| Évaluation |  | Le client a réussi à signaler le lot à promouvoir et les données sont en cours d’évaluation en vue de leur consommation en aval. |
-| Nouvelle tentative |  | Le client a signalé le lot à promouvoir, mais en raison d’une erreur, un service de surveillance des lots effectue une nouvelle tentative sur le lot. Cet état peut être utilisé pour indiquer aux clients un éventuel retard dans l’ingestion des données. |
-| Bloqué |  | Le client a signalé le lot à promouvoir, mais après `n` nouvelles tentatives par un service de surveillance des lots, la promotion du lot a été bloquée. |
+| Chargement | | Le client écrit actuellement des données pour le lot. À ce stade, le lot n’est **pas** prêt pour la promotion. |
+| Chargé | | Le client a terminé l’écriture des données pour le lot. Le lot est prêt pour la promotion. |
+| Conservé | | Les données ont été extraites du format maître et placées dans une archive désignée d’Adobe Data Lake. |
+| Évaluation | | Le client a réussi à signaler le lot à promouvoir et les données sont en cours d’évaluation en vue de leur consommation en aval. |
+| Nouvelle tentative | | Le client a signalé le lot à promouvoir, mais en raison d’une erreur, un service de surveillance des lots effectue une nouvelle tentative sur le lot. Cet état peut être utilisé pour indiquer aux clients un éventuel retard dans l’ingestion des données. |
+| Bloqué | | Le client a signalé le lot à promouvoir, mais après `n` nouvelles tentatives par un service de surveillance des lots, la promotion du lot a été bloquée. |
 
 ### En quoi consiste l’état « Évaluation » des lots ?
 

@@ -1,20 +1,20 @@
 ---
 keywords: annonces Google;publicités Google;extension Google ads;extension Google Ads
 title: Extension Google Ads
-description: L’extension Google Ads est une destination publicitaire de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Google Ads est une destination publicitaire de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: b563ce68-7b04-4cfb-b0c3-151f34ec7c1a
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 85%
+source-wordcount: '464'
+ht-degree: 84%
 
 ---
 
 # Extension [!DNL Google Ads]
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Cette extension effectue le suivi des conversions des utilisateurs qui cliquent sur vos publicités [!DNL Google Ads]. Vous devez également installer l’extension gtag.js et l’ajouter à votre bibliothèque, comme [!DNL Google Ads] en dépend.
+Cette extension effectue le suivi des conversions des utilisateurs qui cliquent sur votre [!DNL Google Ads]. Vous devrez également installer l’extension gtag.js et l’ajouter à votre bibliothèque, car [!DNL Google Ads] en dépend.
 
 [!DNL Google Ads] est une extension publicitaire dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Google Ads] extension :
+Pour installer l’extension [!DNL Google Ads], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

@@ -4,7 +4,7 @@ description: Commencez à développer vos propres extensions de balises dans Ado
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
 source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '448'
 ht-degree: 95%
 
 ---
@@ -60,7 +60,6 @@ L’outil de génération de modèles automatique fournit ensuite des options po
 >* Plusieurs événements, conditions, actions peuvent être ajoutés.
 >* Une seule vue de configuration peut exister.
 
-
 ## Étapes suivantes
 
-* Suivez la [Présentation du processus d’envoi](./submit/overview.md) et préparer [valider](./submit/upload-and-test.md#validate) et [charger](./submit/upload-and-test.md#integration) votre extension pour les tests dans l’écosystème de balises.
+* Suivez la [présentation du processus d’envoi](./submit/overview.md) et préparez-vous à [valider](./submit/upload-and-test.md#validate) et [charger](./submit/upload-and-test.md#integration) votre extension pour les tests dans l’écosystème de balises.

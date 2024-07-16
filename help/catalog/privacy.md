@@ -19,7 +19,7 @@ Ce document couvre les concepts essentiels liés au traitement des demandes d’
 
 >[!NOTE]
 >
->Ce guide porte uniquement sur la manière d’effectuer des demandes d’accès à des informations personnelles pour le lac de données en Experience Platform. Si vous prévoyez également d’effectuer des demandes d’accès à des informations personnelles pour la banque de données de Real-time Customer Profile, reportez-vous au guide sur la [traitement des demandes d’accès à des informations personnelles pour Profile](../profile/privacy.md) en plus de ce tutoriel.
+>Ce guide porte uniquement sur la manière d’effectuer des demandes d’accès à des informations personnelles pour le lac de données en Experience Platform. Si vous prévoyez également d’effectuer des demandes d’accès à des informations personnelles pour la banque de données de Real-time Customer Profile, reportez-vous au guide sur le [traitement des demandes d’accès à des informations personnelles pour Profile](../profile/privacy.md) en plus de ce tutoriel.
 >
 >Pour savoir comment effectuer des demandes d’accès à des informations personnelles pour d’autres applications Adobe Experience Cloud, reportez-vous à la [documentation du Privacy Service](../privacy-service/experience-cloud-apps.md).
 
@@ -139,7 +139,7 @@ Une réponse réussie renvoie un état HTTP 201 (Created) et les détails du no
 >
 >Cette section explique comment formater les demandes d’accès à des informations personnelles pour le lac de données. Il est vivement recommandé de consulter la documentation de lʼ[[!DNL Privacy Service] interface utilisateur](../privacy-service/ui/overview.md) ou de lʼ[[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) pour obtenir des instructions complètes sur la manière dʼenvoyer une tâche concernant la confidentialité, y compris sur la manière de formater correctement les données dʼidentité utilisateur envoyées dans les payloads de requête.
 
-La section suivante explique comment effectuer des demandes d’accès à des informations personnelles pour le lac de données à l’aide de la variable [!DNL Privacy Service] Interface utilisateur ou API.
+La section suivante explique comment effectuer des demandes d’accès à des informations personnelles pour le lac de données à l’aide de l’interface utilisateur ou de l’API [!DNL Privacy Service].
 
 >[!IMPORTANT]
 >
@@ -147,17 +147,17 @@ La section suivante explique comment effectuer des demandes d’accès à des in
 
 ### Utilisation de l’interface utilisateur
 
-Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL Lac de données AEP]** under **[!UICONTROL Produits]** afin de traiter les tâches pour les données stockées dans le lac de données.
+Lors de la création de requêtes de tâche dans l’interface utilisateur, veillez à sélectionner **[!UICONTROL AEP Data Lake]** sous **[!UICONTROL Products]** afin de traiter les tâches pour les données stockées dans le lac de données.
 
 ![Image montrant le produit de lac de données sélectionné dans la boîte de dialogue de création de demande d’accès à des informations personnelles](./images/privacy/product-value.png)
 
 ### Utilisation de l’API
 
-Lors de la création de requêtes de tâche dans l’API, tout `userIDs` fourni doit utiliser un `namespace` et un `type` spécifiques en fonction de la banque de données concernée. Les identifiants du lac de données doivent utiliser `unregistered` pour leur `type` et une valeur `namespace` qui correspond à l’une des valeurs [étiquettes de confidentialité](#privacy-labels) qui ont été ajoutés aux jeux de données applicables.
+Lors de la création de requêtes de tâche dans l’API, tout `userIDs` fourni doit utiliser un `namespace` et un `type` spécifiques en fonction de la banque de données concernée. Les identifiants du lac de données doivent utiliser `unregistered` pour leur valeur `type` et une valeur `namespace` correspondant à l’une des [étiquettes de confidentialité](#privacy-labels) qui ont été ajoutées aux jeux de données applicables.
 
 En outre, le tableau `include` de la payload de requête doit inclure les valeurs de produit pour les différentes banques de données vers lesquelles la requête est effectuée. Lors de l’envoi de requêtes au lac de données, le tableau doit inclure la valeur `aepDataLake`.
 
-La requête suivante crée une nouvelle tâche de confidentialité pour le lac de données, en utilisant le paramètre non enregistré `email_label` espace de noms. Elle inclut également la valeur du produit pour le lac de données dans la variable `include` tableau :
+La requête suivante crée une tâche de confidentialité pour le lac de données, à l’aide de l’espace de noms `email_label` non enregistré. Elle inclut également la valeur du produit pour le lac de données dans le tableau `include` :
 
 ```shell
 curl -X POST \
@@ -206,13 +206,13 @@ curl -X POST \
 
 Lorsquʼ[!DNL Experience Platform] reçoit une requête DELETE de la part de [!DNL Privacy Service], [!DNL Platform] envoie une confirmation à [!DNL Privacy Service] pour confirmer que la requête a été reçue et que les données concernées ont été marquées pour suppression. Les enregistrements sont ensuite retirés du lac de données dans les sept jours. Pendant cette période de sept jours, les données subissent une suppression réversible, elles ne sont donc accessibles par aucun service [!DNL Platform].
 
-Si vous avez également inclus `ProfileService` ou `identity` dans la demande d’accès à des informations personnelles, les données qui lui sont associées sont traitées séparément. Voir la section sur [traitement des requêtes de suppression pour Profile](../profile/privacy.md#delete) pour plus d’informations.
+Si vous avez également inclus `ProfileService` ou `identity` dans la demande d’accès à des informations personnelles, les données qui leur sont associées sont traitées séparément. Pour plus d’informations, consultez la section sur le [traitement des requêtes de suppression pour Profile](../profile/privacy.md#delete) .
 
 ## Étapes suivantes
 
 En lisant ce document, vous avez découvert les concepts importants liés au traitement des demandes d’accès à des informations personnelles pour le lac de données. Il est recommandé de continuer la lecture de la documentation fournie dans ce guide afin de mieux comprendre comment gérer les données d’identité et créer des tâches concernant la confidentialité.
 
-Consultez le document sur [traitement des demandes d’accès à des informations personnelles pour Real-time Customer Profile](../profile/privacy.md) pour les étapes de traitement des demandes d’accès à des informations personnelles pour [!DNL Profile] magasin.
+Consultez le document sur le [traitement des demandes d’accès à des informations personnelles pour Real-time Customer Profile](../profile/privacy.md) pour connaître les étapes du traitement des demandes d’accès à des informations personnelles pour la boutique [!DNL Profile].
 
 ## Annexe
 

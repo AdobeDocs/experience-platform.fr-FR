@@ -9,15 +9,15 @@ ht-degree: 9%
 
 ---
 
-# [!UICONTROL Détails du plan de santé] groupe de champs de schéma
+# Groupe de champs [!UICONTROL Détails du plan de soins de santé]
 
-[!UICONTROL Détails du plan de santé] est un groupe de champs de schéma standard pour la variable [[!UICONTROL Planifier] class](../../classes/plan.md). Il fournit un champ de type objet unique. `healthcarePlanDetails` qui capture les propriétés liées à un plan médical.
+[!UICONTROL Health Care Plan Details] est un groupe de champs de schéma standard pour la classe [[!UICONTROL Plan]](../../classes/plan.md). Il fournit un champ de type objet unique `healthcarePlanDetails` qui capture les propriétés liées à un plan médical.
 
 ![](../../images/field-groups/plan/healthcare-plan-details.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `networkDetails` | Tableau d’objets | Répertorie les détails du ou des réseaux définis par l&#39;assureur des fournisseurs auxquels le bénéficiaire peut demander un traitement et qui seront couverts au taux &quot;en réseau&quot;. Chaque objet comprend les propriétés suivantes : <ul><li>`networkID`: (chaîne). Identifiant spécifique à l’assureur pour le réseau.</li><li>`networkName`: (chaîne). Nom spécifique à l’assureur pour le réseau.</li></ul> |
+| `networkDetails` | Tableau d’objets | Répertorie les détails du ou des réseaux définis par l&#39;assureur des fournisseurs auxquels le bénéficiaire peut demander un traitement et qui seront couverts au taux &quot;en réseau&quot;. Chaque objet comprend les propriétés suivantes : <ul><li>`networkID` : (chaîne). Identifiant spécifique à l’assureur pour le réseau.</li><li>`networkName` : (chaîne). Nom spécifique à l’assureur pour le réseau.</li></ul> |
 | `affiliations` | Tableau de chaînes | Liste des entités commerciales affiliées au plan. |
 | `coverageType` | Chaîne | Type de couverture du plan. Les valeurs acceptées sont les suivantes :<ul><li>`medical`</li><li>`dental`</li><li>`vision`</li><li>`accident`</li></ul> |
 | `isActive` | Booléen | Indique si le plan est actif. |

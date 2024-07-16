@@ -3,8 +3,8 @@ title: Mappages des champs de données météo
 description: Page de référence des champs de données météorologiques disponibles dans le cadre de l’intégration à The Weather Channel.
 exl-id: bc0f158b-f9d0-424a-aa21-953e8380473f
 source-git-commit: e2122008fcae1016db03d6b5f56e4fa25520f9d0
-workflow-type: ht
-source-wordcount: '12238'
+workflow-type: tm+mt
+source-wordcount: '12787'
 ht-degree: 100%
 
 ---
@@ -18,11 +18,11 @@ Cette page répertorie tous les champs disponibles que vous pouvez utiliser pour
 Les champs sont répartis en trois groupes différents qui s’alignent sur les groupes de champs.
 
 * [**[!UICONTROL Météo actuelle]**](#current-weather) : conditions météorologiques actuelles de l’utilisateur ou de l’utilisatrice, en fonction de son emplacement. Ces données affichent la température actuelle, les précipitations, la couverture nuageuse, etc.
-* [**[!UICONTROL Prévisions météo]**](#forecast) : prévisions à 1, 2, 3, 5, 7 et 10 jours, en fonction de l’emplacement de l’utilisateur ou de l’utilisatrice.
-* [**[!UICONTROL Déclencheurs]**](#triggers) : combinaisons spécifiques qui correspondent à différentes définitions de conditions météorologiques. Il existe trois types de déclencheurs météorologiques :
+* [**[!UICONTROL Météo prévue]**](#forecast) : prévisions à 1, 2, 3, 5, 7 et 10 jours de la position de l’utilisateur ou de l’utilisatrice.
+* [**[!UICONTROL Déclencheurs]**](#triggers) : combinaisons spécifiques qui correspondent à différentes conditions météorologiques sémantiques. Il existe trois types de déclencheurs météorologiques :
 
    * **[!UICONTROL Déclencheurs relatifs]** : conditions sémantiquement significatives, telles que temps froid ou pluvieux. Leurs définitions peuvent varier selon les climats.
-   * **[!UICONTROL Déclencheurs de produits]** : conditions qui peuvent conduire à l’achat de différents types de produits. Par exemple, les prévisions de périodes de froid augmentent la probabilité d’achat de manteaux.
+   * **[!UICONTROL Déclencheurs de produits]** : conditions qui conduiraient à l’achat de différents types de produits. Par exemple, les prévisions de périodes de froid augmentent la probabilité d’achat de manteaux.
    * **[!UICONTROL Déclencheurs météorologiques graves]** : avertissements météorologiques graves, comme les tempêtes hivernales et les ouragans.
 
 ## Météo actuelle {#current-weather}

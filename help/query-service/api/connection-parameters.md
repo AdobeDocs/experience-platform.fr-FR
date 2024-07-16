@@ -16,11 +16,11 @@ ht-degree: 29%
 
 ## Exemple d’appel API
 
-La section suivante vous guide tout au long de l’appel API que vous pouvez effectuer à l’aide de la variable [!DNL Query Service] API. L’appel inclut le format général de l’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+La section suivante vous guide tout au long de l’appel API que vous pouvez effectuer à l’aide de l’API [!DNL Query Service]. L’appel inclut le format général de l’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
 ### Demande de paramètres de connexion
 
-Vous pouvez récupérer vos paramètres de connexion en envoyant une requête de GET à la variable `/connection_parameters` point de terminaison . Pour plus d’informations sur les clients utilisant des paramètres de connexion pour se connecter via le service interactif, consultez la documentation sur les [clients de Query Service](../clients/overview.md).
+Vous pouvez récupérer vos paramètres de connexion en effectuant une requête de GET sur le point de terminaison `/connection_parameters`. Pour plus d’informations sur les clients utilisant des paramètres de connexion pour se connecter via le service interactif, consultez la documentation sur les [clients de Query Service](../clients/overview.md).
 
 **Format d’API**
 

@@ -11,13 +11,13 @@ ht-degree: 12%
 
 # Extension de la couche de données Google
 
-L’extension de couche de données Google vous permet d’utiliser une couche de données Google dans votre implémentation des balises. L’extension peut être utilisée indépendamment ou simultanément avec les solutions Google et avec Google open source [Bibliothèque d’assistance de couche de données](https://github.com/google/data-layer-helper).
+L’extension de couche de données Google vous permet d’utiliser une couche de données Google dans votre implémentation des balises. L’extension peut être utilisée indépendamment ou simultanément avec les solutions Google et avec Google qui  une [bibliothèque d’assistance de couche de données](https://github.com/google/data-layer-helper).
 
-La bibliothèque d’assistance fournit des fonctionnalités similaires, pilotées par des événements, à la couche de données client Adobe (ACDL). Les éléments de données, les règles et les actions de l’extension de la couche de données de Google fournissent des fonctionnalités similaires à celles de la variable [Extension ACDL](../client-data-layer/overview.md).
+La bibliothèque d’assistance fournit des fonctionnalités similaires, pilotées par des événements, à la couche de données client Adobe (ACDL). Les éléments de données, les règles et les actions de l’extension de la couche de données Google fournissent des fonctionnalités similaires à celles de l’ [extension ACDL](../client-data-layer/overview.md).
 
 ## Installation
 
-Pour installer l’extension, accédez au catalogue d’extensions dans l’interface utilisateur de la collecte de données et sélectionnez **[!UICONTROL Couche de données Google]**.
+Pour installer l’extension, accédez au catalogue d’extensions dans l’interface utilisateur de la collecte de données et sélectionnez **[!UICONTROL Google Data Layer]**.
 
 Une fois installée, l’extension crée ou accède à une couche de données à chaque chargement de la bibliothèque de balises Adobe Experience Platform.
 
@@ -25,7 +25,7 @@ Une fois installée, l’extension crée ou accède à une couche de données à
 
 La configuration de l’extension peut être utilisée pour définir le nom de la couche de données utilisée par l’extension. Si aucune couche de données avec le nom configuré n’est présente lors du chargement des balises Adobe Experience Platform, l’extension en crée une.
 
-Le nom de couche de données par défaut est le nom par défaut de Google. `dataLayer`.
+La valeur par défaut du nom de la couche de données est le nom par défaut de Google `dataLayer`.
 
 >[!NOTE]
 >
@@ -35,27 +35,27 @@ Le nom de couche de données par défaut est le nom par défaut de Google. `data
 
 >[!NOTE]
 >
->Le mot _event_ est surchargé lorsqu’une couche de données pilotée par un événement est utilisée dans les balises Adobe Experience Platform. _Événements_ peut être :
+>Le mot _event_ est surchargé lorsqu’une couche de données pilotée par un événement est utilisée dans les balises Adobe Experience Platform. _Events_ peut être :
 > - Événements Balises Adobe Experience Platform (bibliothèque chargée, etc.).
 > - Événements JavaScript.
-> - Données transmises à la couche de données avec la variable _event_ mot-clé.
+> - Données transmises à la couche de données avec le mot-clé _event_.
 
 L’extension vous permet d’écouter les modifications apportées à la couche de données.
 
 >[!NOTE]
 >
->Il est important de comprendre l’utilisation de la variable _event_ mot-clé lorsque des données sont transmises à une couche de données Google, comme la couche de données client Adobe. La variable _event_ change le comportement de la couche de données Google et donc de cette extension.\
+>Il est important de comprendre l’utilisation du mot-clé _event_ lorsque des données sont transmises à une couche de données Google, tout comme la couche de données client Adobe. Le mot-clé _event_ modifie le comportement de la couche de données Google et donc cette extension.\
 > Veuillez lire la documentation de Google ou effectuer des recherches si vous n’êtes pas sûr de ce point.
 
 ### Types d’événement Google
 
-Google prend en charge deux moyens de pousser les événements : Google Tag Manager, à l’aide de la méthode `push()` et les Google Analytics 4, à l’aide de la méthode `gtag()` .
+Google prend en charge deux méthodes de publication d’événements : Google Tag Manager, à l’aide de la méthode `push()` et Google Analytics 4, à l’aide de la méthode `gtag()`.
 
 Les versions de l’extension de la couche de données Google antérieures à la version 1.2.1 ne prenaient en charge que les événements créés par `push()`, comme illustré dans les exemples de code de cette page.
 
-Événements de prise en charge 1.2.1 et versions ultérieures créés à l’aide de `gtag()`.  Cette option est facultative et peut être activée dans la boîte de dialogue Configuration de l’extension .
+Les versions 1.2.1 et ultérieures prennent en charge les événements créés à l’aide de `gtag()`.  Cette option est facultative et peut être activée dans la boîte de dialogue Configuration de l’extension .
 
-Pour plus d’informations sur `push()` et `gtag()` , voir [Documentation Google](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  Des informations sont également fournies dans les boîtes de dialogue de configuration et de règle de l’extension.
+Pour plus d’informations sur les événements `push()` et `gtag()`, consultez la [documentation Google](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtag).  Des informations sont également fournies dans les boîtes de dialogue de configuration et de règle de l’extension.
 
 ### Écoute de toutes les transmissions vers la couche de données
 
@@ -107,7 +107,7 @@ dataLayer.push({"event":"myEvent"})
 
 Une expression régulière (ECMAScript/JavaScript) peut être utilisée pour faire correspondre les noms d’événement.
 
-Par exemple, la définition de &quot;myEvent\d&quot; effectue le suivi `myEvent` avec un chiffre (\d) :
+Par exemple, la définition de &quot;myEvent\d&quot; effectue le suivi de `myEvent` avec un chiffre (\d) :
 
 ```js
 dataLayer.push({"event":"myEvent1"})
@@ -157,4 +157,4 @@ L’élément de données peut donc renvoyer :
 
 Les boîtes de dialogue d’élément de données et d’événement de l’extension contiennent des informations d’utilisation détaillées et des exemples.
 
-Vous trouverez des informations générales supplémentaires dans la section [project README](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)
+Des informations générales supplémentaires sont disponibles dans le [projet README](https://github.com/adobe/reactor-extension-googledatalayer/blob/main/README.md)

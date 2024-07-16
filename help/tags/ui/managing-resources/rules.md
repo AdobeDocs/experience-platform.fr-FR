@@ -53,11 +53,11 @@ Créez une règle en indiquant les actions qui se produisent si une condition es
 
 >[!TIP]
 >
->Pour afficher d’autres ressources disponibles pour en savoir plus sur cette fonctionnalité, sélectionnez ![about](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
+>Vous pouvez afficher d’autres ressources disponibles pour en savoir plus sur cette fonctionnalité en sélectionnant ![about](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
 
 1. Ouvrez lʼonglet [!UICONTROL Règles], puis sélectionnez **[!UICONTROL Créer une règle]**.
 
-   ![Onglet Règles , surlignant le champ du nom.](../../images/launch-rule-builder.png)
+   ![Onglet Règles surlignant le champ de nom.](../../images/launch-rule-builder.png)
 
 1. Attribuez un nom à la règle.
 1. Cliquez sur lʼicône **[!UICONTROL Ajouter]** sous Événements.
@@ -91,9 +91,9 @@ Créez une règle en indiquant les actions qui se produisent si une condition es
 
      Si vous souhaitez qu’elle s’exécute plus tard, attribuez-lui un nombre supérieur à 50. Pour plus d’informations sur l’ordre, reportez-vous à [Ordre des règles](rules.md#rule-ordering).
 
-1. Sélection des conditions **[!UICONTROL Ajouter]** puis sélectionnez un type de logique, une extension, un type de condition et configurez les paramètres de votre condition. Sélectionnez ensuite **[!UICONTROL Conserver les modifications]**.
+1. Sélectionnez l’icône **[!UICONTROL Ajouter]** de Conditions, puis sélectionnez un type de logique, une extension, un type de condition et configurez les paramètres de votre condition. Sélectionnez ensuite **[!UICONTROL Conserver les modifications]**.
 
-   ![Page de configuration des conditions des règles.](../../images/condition-settings.png)
+   ![ Page de configuration des conditions des règles.](../../images/condition-settings.png)
 
    Les types de conditions disponibles dépendent de l’extension sélectionnée. Les paramètres de conditions diffèrent en fonction du type de condition.
 
@@ -106,9 +106,9 @@ Créez une règle en indiquant les actions qui se produisent si une condition es
 
    Vous pouvez ajouter autant de conditions que vous le souhaitez. Plusieurs conditions dans la même règle sont jointes avec AND.
 
-1. Sélection des actions **[!UICONTROL Ajouter]** puis sélectionnez votre extension et l’un des types d’actions disponibles pour cette extension, configurez les paramètres de l’action, puis sélectionnez **[!UICONTROL Conserver les modifications]**.
+1. Sélectionnez l’icône Actions **[!UICONTROL Ajouter]** , puis sélectionnez votre extension et l’un des types d’actions disponibles pour cette extension, configurez les paramètres de l’action, puis sélectionnez **[!UICONTROL Conserver les modifications]**.
 
-   ![Page de configuration des actions de règles.](../../images/action-settings.png)
+   ![Page de configuration de l’action Règles.](../../images/action-settings.png)
 
    Les types d’action disponibles dépendent de l’extension que vous avez sélectionnée. Les paramètres d’action diffèrent selon le type d’action.
 

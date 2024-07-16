@@ -9,7 +9,7 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL Recherche de site interne] type de données
+# Type de données [!UICONTROL Recherche de site interne]
 
 [!UICONTROL Recherche de site interne] est un type de données XDM standard qui décrit une recherche de site interne, y compris tous les comportements et détails de recherche associés.
 
@@ -26,15 +26,15 @@ ht-degree: 3%
 | `numberOfResults` | [!UICONTROL Entier] | Nombre total de résultats de recherche renvoyés. |
 | `postalCode` | [!UICONTROL Chaîne] | Le code postal utilisé pour la recherche, le cas échéant. |
 | `productFindingMethods` | [!UICONTROL Chaîne] | Valeur du terme de recherche interne sur le site avec liaison de marchandisage. Cette valeur indique le terme recherché immédiatement avant l’affichage d’un produit. |
-| `radiusDistance` | [!UICONTROL Entier] | Combiné avec `radiusType`, indique la distance sélectionnée du rayon de recherche. |
-| `radiusType` | [!UICONTROL Entier] | Le type de distance sélectionné de `radiusDistance`, soit des kilomètres. |
+| `radiusDistance` | [!UICONTROL Entier] | Associé à `radiusType`, indique la distance sélectionnée du rayon de recherche. |
+| `radiusType` | [!UICONTROL Entier] | Type de distance sélectionné `radiusDistance`, soit des kilomètres, soit des kilomètres. |
 | `refinementInstances` | [!UICONTROL Entier] | Nombre de fois où la recherche interne sur le site a été affinée. |
 | `refinementType` | Tableau de chaînes | Répertorie les types d’amélioration appliqués aux résultats de la recherche. Par exemple, département, marque, prix, en magasin, évaluation des révisions, couleur, matériau, etc. |
 | `refinementValue` | [!UICONTROL Chaîne] | Valeur à laquelle la recherche a été affinée. |
 | `resultsPageNumber` | [!UICONTROL Entier] | Pour les résultats de recherche paginés, cette valeur effectue le suivi de la page des résultats que le visiteur consulte. |
 | `resultsPerPage` | [!UICONTROL Entier] | Pour les résultats de recherche paginés, cette valeur effectue le suivi du nombre de résultats de recherche affichés par page. |
 | `searchType` | [!UICONTROL Chaîne] | Capture la méthode de recherche en cours d’exécution, le cas échéant. Par exemple, une recherche par type anticipé, une recherche saisie directement ou tout autre type de fonctionnalité de recherche personnalisée d’un site. |
-| `sortOrder` | [!UICONTROL Chaîne] | Combiné avec `sortType`, indique l’ordre de tri des résultats de la recherche, croissant ou décroissant. |
+| `sortOrder` | [!UICONTROL Chaîne] | Combiné avec `sortType`, indique l’ordre de tri des résultats de recherche, ascendant ou descendant. |
 | `term` | [!UICONTROL Chaîne] | Terme de recherche interne du site saisi par le visiteur. |
 
 {style="table-layout:auto"}

@@ -5,7 +5,7 @@ exl-id: 2c2b9b31-0618-4b93-97ec-0798fc06aac0
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
 source-wordcount: '501'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -25,7 +25,7 @@ Par exemple, si un package d’extension nommé `example-package`comporte une ac
 
 La compréhension du fonctionnement des ID de descripteur de délégué est importante pour la définition des composants de règle (événements, conditions et actions) et des éléments de données dans l’API. Les sections ci-dessous décrivent le fonctionnement de ces ID pour chaque ressource.
 
-### Composants de   règle
+### Composants de règle
 
 Un [composant de règle](../endpoints/rule-components.md) doit être associé à un événement, une condition ou une action appartenant à un package d’extension. Cela représente le « type » du composant de règle, car il se rapporte à la logique de la règle globale (un événement, une condition ou une action). Par conséquent, lors de la création d’un composant de règle, un ID de descripteur de délégué doit être fourni afin d’indiquer à quel événement, à quelle condition ou à quelle action le composant de règle doit être associé.
 

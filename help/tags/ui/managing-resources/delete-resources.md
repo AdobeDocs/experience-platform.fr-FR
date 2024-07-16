@@ -15,7 +15,7 @@ ht-degree: 93%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-La suppression d’une ressource entraîne la suppression définitive de cette ressource dans Adobe Experience Platform. Si vous souhaitez supprimer une ressource d’une bibliothèque de balises spécifique tout en souhaitant que cette ressource soit disponible dans d’autres bibliothèques, consultez le guide sur [suppression de ressources d’une bibliothèque](remove-resources-from-library.md).
+La suppression d’une ressource entraîne la suppression définitive de cette ressource dans Adobe Experience Platform. Si vous souhaitez supprimer une ressource d’une bibliothèque de balises spécifique tout en souhaitant que cette ressource soit disponible dans d’autres bibliothèques, consultez le guide sur la [suppression de ressources d’une bibliothèque](remove-resources-from-library.md).
 
 Vous pouvez supprimer des éléments de données, des règles, des extensions, des hôtes, des environnements et des propriétés. Une fois supprimées, il n’est pas possible de récupérer ces ressources.
 
@@ -50,7 +50,7 @@ Vous pouvez résoudre ces dépendances avant ou après la suppression de l’él
 
 Toutes les autres ressources (règles, composants de règles et éléments de données) sont fournies par des extensions.
 
-Le comportement des composants de règles et des éléments de données dépend d’extensions, et c’est également le cas pour leur affichage dans l’interface utilisateur de collecte de données. Si vous supprimez l’extension avant de résoudre les dépendances, vous ne pourrez plus afficher ces ressources orphelines. Ces ressources orphelines apparaissent dans les vues de liste, mais vous recevrez une erreur si vous essayez d’ouvrir la vue des détails.
+Le comportement des composants de règles et des éléments de données dépend d’extensions, et c’est également le cas pour leur affichage dans l’interface utilisateur de collecte de données. Si vous supprimez l’extension avant de résoudre les dépendances, vous ne pourrez plus afficher ces ressources orphelines. Ces ressources orphelines apparaissent dans les vues Liste, mais vous recevrez une erreur si vous essayez d’ouvrir la vue détaillée.
 
 C’est pourquoi vous devez faire particulièrement attention lorsque vous supprimez des extensions et résoudre les dépendances avant de les supprimer.
 
@@ -78,4 +78,4 @@ Avant de pouvoir supprimer une ressource, vous devez la supprimer des bibliothè
 
 ## Supprimer une ressource
 
-Dans la vue de liste appropriée, sélectionnez la ressource à supprimer, puis cliquez sur **[!UICONTROL Supprimer]**.
+Dans la vue Liste appropriée, sélectionnez la ressource à supprimer, puis cliquez sur **[!UICONTROL Supprimer]**.

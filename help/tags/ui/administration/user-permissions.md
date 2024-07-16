@@ -4,7 +4,7 @@ description: Découvrez les différents types d’autorisations relatives aux ba
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
 source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
 workflow-type: tm+mt
-source-wordcount: '1299'
+source-wordcount: '1305'
 ht-degree: 91%
 
 ---
@@ -21,7 +21,7 @@ Ce guide présente un aperçu des différents types d’autorisations relatives 
 
 >[!NOTE]
 >
->Pour savoir comment configurer des autorisations pour les utilisateurs utilisant Admin Console, reportez-vous au tutoriel sur [gestion des autorisations pour la collecte de données](../../../collection/permissions.md).
+>Pour savoir comment configurer les autorisations pour les utilisateurs qui utilisent Admin Console, reportez-vous au tutoriel sur la [gestion des autorisations pour la collecte de données](../../../collection/permissions.md).
 
 ## Types d’autorisations
 
@@ -68,7 +68,7 @@ Les droits d’entreprise s’appliquent aux autorisations qui s’appliquent à
 | --- | --- |
 | **Gérer les propriétés** | Ce droit autorise les actions suivantes :<ul><li>Création de propriétés</li><li>Modification des métadonnées et des paramètres au niveau de la propriété</li><li>Suppression des propriétés</li></ul>Les administrateurs assument généralement ce rôle. Pour plus dʼinformations, voir la [documentation sur les propriétés](companies-and-properties.md). |
 | **Développer des extensions** | Permet de créer et de modifier des packages dʼextensions dont lʼentreprise dispose, y compris les versions privées et les demandes de version publique. |
-| **Gérer les configurations d&#39;application** | Cette option n’est disponible que si vous disposez d’une licence pour Adobe Journey Optimizer ou d’une autre solution qui accorde l’accès aux messages in-app et push mobiles.  Cela permet de gérer les applications dont Experience Cloud a connaissance, ainsi que les informations d’identification push nécessaires pour communiquer avec le service Firebase Cloud Messaging et le service de notification push Apple. |
+| **Gérer les configurations d&#39;application** | Cette option n’est disponible que si vous disposez d’une licence pour Adobe Journey Optimizer ou d’une autre solution qui accorde l’accès à la messagerie intégrée (in-app) mobile et push.  Cela permet de gérer les applications dont Experience Cloud a connaissance, ainsi que les informations d’identification push nécessaires pour communiquer avec le service Firebase Cloud Messaging et le service de notification push Apple. |
 
 {style="table-layout:auto"}
 
@@ -121,4 +121,4 @@ Le tableau suivant fournit quelques exemples des types de rôles que vous pouvez
 
 ## Étapes suivantes
 
-Ce document fournit un aperçu des autorisations disponibles pour les balises dans Experience Platform. Pour obtenir des instructions sur la configuration des profils de produit pour les balises dans Adobe Admin Console, consultez le guide sur [gestion des autorisations utilisateur pour la collecte de données](../../../collection/permissions.md).
+Ce document fournit un aperçu des autorisations disponibles pour les balises dans Experience Platform. Pour obtenir des instructions sur la configuration des profils de produit pour les balises dans Adobe Admin Console, consultez le guide sur la [gestion des autorisations d’utilisateur pour la collecte de données](../../../collection/permissions.md).

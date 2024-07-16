@@ -4,18 +4,18 @@ description: Découvrez comment l’Auditor teste la cohérence des balises dans
 exl-id: 642b0c49-a7c7-4142-8189-67f00ed50015
 source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 43%
+source-wordcount: '118'
+ht-degree: 40%
 
 ---
 
 # Référence du test de cohérence des balises
 
-Cette référence fournit des informations supplémentaires sur la manière dont la fonction d’audit dans Adobe Experience Platform Debugger teste la cohérence des balises.
+Cette référence fournit des informations supplémentaires sur la manière dont la fonction d’audit dans les tests d’Adobe Experience Platform Debugger pour assurer la cohérence des balises.
 
 >[!NOTE]
 >
->Pour plus d’informations sur les tests d’Auditor dans Platform Debugger, voir la section [présentation de la fonctionnalité auditor](./overview.md).
+>Pour plus d’informations sur les tests d’Auditor dans Platform Debugger, consultez la [présentation des fonctionnalités d’Auditor](./overview.md).
 
 Les tests de cohérence des balises recherchent les incohérences entre toutes les pages numérisées. Il s’agit de valeurs ou de configurations qui doivent être identiques sur toutes les pages du site pour garantir une collecte de données précise.
 

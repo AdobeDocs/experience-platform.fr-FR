@@ -15,7 +15,7 @@ ht-degree: 82%
 
 Pour attribuer ou supprimer des utilisateurs d’un profil de produits, ouvrez la page des détails du profil et accédez à l’onglet **[!UICONTROL Utilisateurs]**. Sélectionnez ensuite **[!UICONTROL Ajouter utilisateur]**.
 
-![La page des détails du profil de produit qui affiche les utilisateurs répertoriés dans la [!UICONTROL Utilisateurs] .](../images/add-user.png)
+![La page des détails du profil de produit qui montre les utilisateurs répertoriés dans l’onglet [!UICONTROL Utilisateurs].](../images/add-user.png)
 
 La boîte de dialogue **[!UICONTROL Ajouter un utilisateur]** s’affiche. Le champ de recherche vous permet de rechercher des utilisateurs à ajouter par nom ou par adresse e-mail. Lorsque vous tapez, les utilisateurs correspondants s’affichent dans une fenêtre de saisie semi-automatique sous la zone de texte.
 
@@ -25,7 +25,7 @@ La boîte de dialogue **[!UICONTROL Ajouter un utilisateur]** s’affiche. Le ch
 
 Une fois que vous avez sélectionné un utilisateur, cliquez sur **[!UICONTROL Enregistrer]** pour l’ajouter au profil du produit.
 
-![Ajoutez des utilisateurs à la page du profil de produit pour mettre en évidence les détails de l’utilisateur.](../images/save-user.png)
+![Ajoutez des utilisateurs à la page de profil de produit pour mettre en évidence les détails de l’utilisateur.](../images/save-user.png)
 
 La vidéo suivante est destinée à vous aider à comprendre comment gérer les administrateurs d’un profil de produit.
 

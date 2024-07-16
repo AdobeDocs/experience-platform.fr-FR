@@ -6,14 +6,14 @@ description: Ce tutoriel utilise l’API Flow Service pour explorer le contenu e
 exl-id: 94935492-a7be-48dc-8089-18476590bf98
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '560'
 ht-degree: 38%
 
 ---
 
-# Explorez une base de données à l’aide du [!DNL Flow Service] API
+# Exploration d’une base de données à l’aide de l’API [!DNL Flow Service]
 
-Ce tutoriel utilise la méthode [!DNL Flow Service] API permettant d’explorer le contenu et la structure de fichiers d’une base de données tierce.
+Ce tutoriel utilise l’API [!DNL Flow Service] pour explorer le contenu et la structure de fichiers d’une base de données tierce.
 
 ## Prise en main
 
@@ -22,11 +22,11 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Sources](../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 * [Sandbox](../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à une base de données tierce à l’aide de la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à une base de données tierce à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
-Ce tutoriel nécessite que vous disposiez d’une connexion valide à la base de données tierce à partir de laquelle vous souhaitez ingérer des données. Une connexion valide implique l’identifiant de spécification de connexion et l’identifiant de connexion de votre base de données. Vous trouverez plus d’informations sur la création d’une connexion à la base de données et la récupération de ces valeurs dans la section [Présentation des connecteurs source](./../../../home.md#database).
+Ce tutoriel nécessite que vous disposiez d’une connexion valide à la base de données tierce à partir de laquelle vous souhaitez ingérer des données. Une connexion valide implique l’identifiant de spécification de connexion et l’identifiant de connexion de votre base de données. Vous trouverez plus d’informations sur la création d’une connexion à la base de données et la récupération de ces valeurs dans la [présentation des connecteurs source](./../../../home.md#database).
 
 ### Lecture d’exemples d’appels API
 
@@ -34,7 +34,7 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecte des valeurs des en-têtes requis
 
-Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel sur l’authentification indique les valeurs de chacun des en-têtes requis dans toutes les E[!DNL xperience Platform] Appels API, comme illustré ci-dessous :
+Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [tutoriel d’authentification](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel sur l’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API E[!DNL xperience Platform], comme illustré ci-dessous :
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -50,7 +50,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ## Exploration des tableaux de données
 
-À l’aide de l’identifiant de connexion à votre base de données, vous pouvez explorer vos tableaux de données en effectuant des requêtes de GET. Utilisez l’appel suivant pour trouver le chemin du tableau que vous souhaitez inspecter ou ingérer. [!DNL Platform].
+À l’aide de l’identifiant de connexion à votre base de données, vous pouvez explorer vos tableaux de données en effectuant des requêtes de GET. Utilisez l’appel suivant pour trouver le chemin de la table que vous souhaitez inspecter ou ingérer dans [!DNL Platform].
 
 **Format d’API**
 
@@ -75,7 +75,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau de tableaux de votre base de données. Trouvez la table que vous souhaitez importer [!DNL Platform] et notez ses `path` , car vous devez le fournir à l’étape suivante pour inspecter sa structure.
+Une réponse réussie renvoie un tableau de tableaux de votre base de données. Recherchez la table que vous souhaitez importer dans [!DNL Platform] et notez sa propriété `path`, car vous devez la fournir à l&#39;étape suivante pour inspecter sa structure.
 
 ```json
 [
@@ -124,7 +124,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie la structure de la table spécifiée. Les détails relatifs à chaque colonne du tableau se trouvent dans les éléments du `columns` tableau.
+Une réponse réussie renvoie la structure de la table spécifiée. Les détails concernant chacune des colonnes de la table se trouvent dans les éléments du tableau `columns`.
 
 ```json
 {
@@ -152,4 +152,4 @@ Une réponse réussie renvoie la structure de la table spécifiée. Les détails
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez exploré votre base de données et trouvé le chemin du tableau que vous souhaitez ingérer. [!DNL Platform]et obtenir des informations sur sa structure. Vous pouvez utiliser ces informations dans le tutoriel suivant pour [collecter des données de votre base de données et les importer dans Platform ;](../collect/database-nosql.md).
+En suivant ce tutoriel, vous avez exploré votre base de données, trouvé le chemin de la table que vous souhaitez ingérer dans [!DNL Platform] et obtenu des informations sur sa structure. Vous pouvez utiliser ces informations dans le tutoriel suivant pour [collecter des données de votre base de données et les importer dans Platform](../collect/database-nosql.md).

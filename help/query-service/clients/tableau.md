@@ -13,30 +13,30 @@ ht-degree: 10%
 
 # Connecter [!DNL Tableau] à Query Service
 
-Ce document fournit des informations sur la connexion. [!DNL Tableau] avec Adobe Experience Platform [!DNL Query Service].
+Ce document fournit des informations pour la connexion de [!DNL Tableau] à Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> Ce guide suppose que vous avez déjà accès à [!DNL Tableau] et connaissent comment naviguer dans son interface. Plus d’informations sur [!DNL Tableau] se trouve dans la variable [officiel [!DNL Tableau] documentation](https://help.tableau.com/current/pro/desktop/en-us/default.htm).
+> Ce guide suppose que vous avez déjà accès à [!DNL Tableau] et que vous savez naviguer dans son interface. Vous trouverez plus d&#39;informations sur [!DNL Tableau] dans la [documentation officielle [!DNL Tableau] 3}.](https://help.tableau.com/current/pro/desktop/en-us/default.htm)
 
-Instructions sur la manière de procéder [Connexion à un serveur PostgreSQL avec Tableau](https://help.tableau.com/current/pro/desktop/en-us/examples_postgresql.htm) sont disponibles sur le site web officiel de Tableau. Une fois que la boîte de dialogue des paramètres de connexion s’affiche, saisissez vos informations d’identification Platform dans les champs de paramètre pour vous connecter à Adobe Experience Platform. Vous trouverez ci-dessous une liste des paramètres de connexion requis.
+Les instructions sur la [connexion à un serveur PostgreSQL avec Tableau](https://help.tableau.com/current/pro/desktop/en-us/examples_postgresql.htm) sont disponibles sur le site web officiel de Tableau. Une fois que la boîte de dialogue des paramètres de connexion s’affiche, saisissez vos informations d’identification Platform dans les champs de paramètre pour vous connecter à Adobe Experience Platform. Vous trouverez ci-dessous une liste des paramètres de connexion requis.
 
 | Paramètre de connexion | Description |
 |---|---|
-| **[!DNL Server]** | Adresse de votre emplacement de stockage SFTP. Utiliser la valeur de votre Experience Platform **[!UICONTROL Hôte]** informations d’identification |
-| **[!DNL Port]:** | Le port pour [!DNL Query Service]. Vous devez utiliser le port **80** ou **5432** pour vous connecter à [!DNL Query Service]. |
-| **[!DNL Database]** | Les bases de données auxquelles vous souhaitez accéder. Utiliser la valeur de votre Experience Platform **[!UICONTROL Base]** credential : `prod:all`. |
-| **[!DNL Authentication]:** | Méthode choisie pour prouver l’identité de l’utilisateur. Il est recommandé de sélectionner [!DNL Username and Password] dans les options disponibles du menu déroulant. |
-| **[!DNL Username]** | Il s’agit de votre ID d’organisation Platform. Utiliser la valeur de votre Experience Platform **[!UICONTROL Nom d’utilisateur]** informations d’identification L’identifiant sera au format de `ORG_ID@AdobeOrg`. |
-| **[!DNL Password]** | Cette chaîne alphanumérique est votre Experience Platform **[!UICONTROL Password]** informations d’identification Si vous souhaitez utiliser des informations d’identification qui ne expirent pas, cette valeur correspond aux arguments concaténés du `technicalAccountID` et la variable `credential` téléchargé dans le fichier de configuration JSON. La valeur du mot de passe se présente comme suit : {technicalAccountId}:{credential}. Le fichier de configuration JSON pour les informations d’identification non arrivant à expiration est un téléchargement unique lors de leur initialisation, dont Adobe ne conserve pas de copie. |
+| **[!DNL Server]** | Adresse de votre emplacement de stockage SFTP. Utilisez la valeur de vos informations d’identification **[!UICONTROL Host]** d’Experience Platform. |
+| **[!DNL Port]:** | Port de [!DNL Query Service]. Vous devez utiliser le port **80** ou **5432** pour vous connecter à [!DNL Query Service]. |
+| **[!DNL Database]** | Les bases de données auxquelles vous souhaitez accéder. Utilisez la valeur de vos informations d’identification **[!UICONTROL Base de données]** Experience Platform : `prod:all`. |
+| **[!DNL Authentication]:** | Méthode choisie pour prouver l’identité de l’utilisateur. Il est recommandé de sélectionner [!DNL Username and Password] parmi les options disponibles du menu déroulant. |
+| **[!DNL Username]** | Il s’agit de votre ID d’organisation Platform. Utilisez la valeur de vos informations d’identification d’Experience Platform **[!UICONTROL Username]**. L’ID sera au format `ORG_ID@AdobeOrg`. |
+| **[!DNL Password]** | Cette chaîne alphanumérique est votre identifiant Experience Platform **[!UICONTROL Password]**. Si vous souhaitez utiliser des informations d’identification qui n’expirent pas, cette valeur correspond aux arguments concaténés de `technicalAccountID` et de `credential` téléchargés dans le fichier JSON de configuration. La valeur du mot de passe se présente comme suit : {technicalAccountId}:{credential}. Le fichier de configuration JSON pour les informations d’identification non arrivant à expiration est un téléchargement unique lors de leur initialisation, dont Adobe ne conserve pas de copie. |
 
-Pour plus d’informations sur la recherche de votre nom d’utilisateur, de votre mot de passe et de vos informations de connexion, veuillez lire la section [guide des informations d’identification](../ui/credentials.md). Pour trouver vos informations d’identification, connectez-vous à [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, suivie de **[!UICONTROL Informations d’identification]**.
+Pour plus d’informations sur la recherche de votre nom d’utilisateur, de votre mot de passe et de vos informations de connexion, consultez le [guide d’identification](../ui/credentials.md). Pour trouver vos informations d’identification, connectez-vous à [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, suivi de **[!UICONTROL Informations d’identification]**.
 
 >[!IMPORTANT]
 >
->En tant qu’utilisateur Tableau ou Power BI, vous pouvez connecter Customer Journey Analytics à vos outils de BI à partir de l’onglet Informations d’identification de Query Service. Pour obtenir des instructions sur la manière de procéder, reportez-vous à la documentation sur les informations d’identification . [connecter vos outils de BI à Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
+>En tant qu’utilisateur Tableau ou Power BI, vous pouvez connecter Customer Journey Analytics à vos outils de BI à partir de l’onglet Informations d’identification de Query Service. Consultez la documentation des informations d’identification pour obtenir des instructions sur la [connexion de vos outils de BI à Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
 
-Vérifiez que vous avez coché la variable **[!UICONTROL Require SSL]** avant de tenter de se connecter. Voir [Documentation sur les modes SSL](./ssl-modes.md) pour en savoir plus sur la prise en charge du protocole SSL pour les connexions tierces à Adobe Experience Platform Query Service.
+Vérifiez que vous avez coché la case **[!UICONTROL Require SSL]** avant de tenter de vous connecter. Pour en savoir plus sur la prise en charge du protocole SSL pour les connexions tierces à Adobe Experience Platform Query Service, consultez la [documentation sur les modes SSL](./ssl-modes.md).
 
 >[!IMPORTANT]
 >
@@ -46,4 +46,4 @@ Après avoir renseigné toutes vos informations d’identification, vérifiez vo
 
 ## Étapes suivantes
 
-Maintenant que vous êtes connecté à [!DNL Query Service], vous pouvez utiliser [!DNL Tableau] pour écrire des requêtes. Pour plus d’informations sur l’écriture et l’exécution de requêtes, veuillez lire le guide sur [exécution de requêtes](../best-practices/writing-queries.md).
+Maintenant que vous êtes connecté à [!DNL Query Service], vous pouvez utiliser [!DNL Tableau] pour écrire des requêtes. Pour plus d’informations sur la façon d’écrire et d’exécuter des requêtes, consultez le guide sur l’ [exécution de requêtes](../best-practices/writing-queries.md).

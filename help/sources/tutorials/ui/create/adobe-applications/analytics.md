@@ -53,13 +53,13 @@ Dans la catégorie des **[!UICONTROL applications Adobe]**, sélectionnez **[!UI
 >
 >Les suites de rapports répertoriées à l’écran peuvent provenir de différentes régions. Il vous incombe de comprendre les limites et les obligations de vos données, ainsi que la manière dont vous utilisez ces données dans Adobe Experience Platform entre les régions. Assurez-vous que votre entreprise l’autorise.
 
-La variable **[!UICONTROL Ajout de données à la source Analytics]** vous fournit une liste de [!DNL Analytics] données de la suite de rapports avec laquelle créer une connexion source.
+L’étape **[!UICONTROL Ajout de données source Analytics]** vous fournit une liste de [!DNL Analytics] données de suite de rapports avec lesquelles créer une connexion source.
 
-Une suite de rapports est un conteneur de données qui constitue la base de [!DNL Analytics] création de rapports. Une organisation peut comporter de nombreuses suites de rapports, chacune contenant différents jeux de données.
+Une suite de rapports est un conteneur de données qui constitue la base de la création de rapports [!DNL Analytics]. Une organisation peut comporter de nombreuses suites de rapports, chacune contenant différents jeux de données.
 
 Vous pouvez ingérer des suites de rapports provenant de n’importe quelle région (États-Unis, Royaume-Uni ou Singapour) tant qu’elles sont mappées à la même organisation que l’instance de sandbox Experience Platform dans laquelle la connexion source est créée. Une suite de rapports peut être ingérée à l’aide d’un seul flux de données actif. Une suite de rapports qui n’est pas sélectionnable a déjà été ingérée, que ce soit dans l’environnement de test que vous utilisez ou dans un autre environnement de test.
 
-Plusieurs connexions entrantes peuvent être établies pour importer plusieurs suites de rapports dans le même environnement de test. Si les suites de rapports comportent des schémas différents pour les variables (comme les eVars ou les événements), elles doivent être mappées à des champs spécifiques dans les groupes de champs personnalisés et éviter les conflits de données en utilisant [Préparation de données](../../../../../data-prep/ui/mapping.md). Les suites de rapports ne peuvent être ajoutées qu’à un seul environnement de test.
+Plusieurs connexions entrantes peuvent être établies pour importer plusieurs suites de rapports dans le même environnement de test. Si les suites de rapports comportent des schémas différents pour les variables (comme les eVars ou les événements), elles doivent être mappées à des champs spécifiques dans les groupes de champs personnalisés et éviter les conflits de données à l’aide de [Data Prep](../../../../../data-prep/ui/mapping.md). Les suites de rapports ne peuvent être ajoutées qu’à un seul environnement de test.
 
 ![](../../../../images/tutorials/create/analytics/report-suite.png)
 
@@ -67,7 +67,7 @@ Plusieurs connexions entrantes peuvent être établies pour importer plusieurs s
 >
 >Les données de plusieurs suites de rapports ne peuvent être activées pour Real-Time Customer Profile que s’il n’existe aucun conflit de données, comme deux propriétés personnalisées (eVars, listes et props) ayant une signification différente.
 
-Pour créer une [!DNL Analytics] connexion source, sélectionnez une suite de rapports, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Pour créer une connexion source [!DNL Analytics], sélectionnez une suite de rapports, puis **[!UICONTROL Suivant]** pour continuer.
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
@@ -129,7 +129,7 @@ Vous pouvez utiliser les fonctions de préparation de données pour ajouter un n
 
 ![custom](../../../../images/tutorials/create/analytics/custom.png)
 
-Selon vos besoins, vous pouvez sélectionner l’une des options suivantes : **[!UICONTROL Ajouter un nouveau mappage]** ou **[!UICONTROL Ajouter un champ calculé]** et créez des mappages personnalisés pour vos attributs personnalisés. Pour obtenir des instructions complètes sur l’utilisation des fonctions de préparation de données, veuillez lire la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
+Selon vos besoins, vous pouvez sélectionner **[!UICONTROL Ajouter un nouveau mappage]** ou **[!UICONTROL Ajouter un champ calculé]** et continuer à créer des mappages personnalisés pour vos attributs personnalisés. Pour obtenir des instructions complètes sur l’utilisation des fonctions de préparation de données, consultez le [guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
 
 La documentation suivante fournit d’autres ressources sur la compréhension de la préparation des données, des champs calculés et des fonctions de mappage :
 
@@ -175,7 +175,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 >title="Créer des règles de filtrage"
 >abstract="Définissez des règles de filtrage au niveau des lignes et des colonnes lors de l&#39;envoi de données au profil client en temps réel. Utilisez le filtrage au niveau des lignes pour appliquer des conditions et dicter les données à **inclure lors de l&#39;ingestion de profils**. Utilisez le filtrage au niveau des colonnes pour sélectionner les colonnes de données à **exclure lors de l&#39;ingestion de profils**. Les règles de filtrage ne s&#39;appliquent pas aux données envoyées au lac de données."
 
-Une fois que vous avez terminé les mappages pour vos [!DNL Analytics] données de suite de rapports, vous pouvez appliquer des règles et des conditions de filtrage pour inclure ou exclure de manière sélective des données de l’ingestion dans Real-time Customer Profile. La prise en charge du filtrage est uniquement disponible pour [!DNL Analytics] Les données et les données ne sont filtrées que lors de la saisie de [!DNL Profile.] Toutes les données sont ingérées dans le lac de données.
+Une fois que vous avez terminé les mappages pour les données de vos suites de rapports [!DNL Analytics], vous pouvez appliquer des règles et conditions de filtrage pour inclure ou exclure de manière sélective les données de l’ingestion vers Real-time Customer Profile. La prise en charge du filtrage n’est disponible que pour les données [!DNL Analytics] et les données ne sont filtrées qu’avant d’entrer dans [!DNL Profile.] Toutes les données sont ingérées dans le lac de données.
 
 >[!BEGINSHADEBOX]
 
@@ -183,8 +183,8 @@ Une fois que vous avez terminé les mappages pour vos [!DNL Analytics] données 
 
 * Vous pouvez utiliser la fonctionnalité de filtrage pour les données qui vont dans Profile, mais pas pour les données qui vont dans le lac de données.
 * Vous pouvez utiliser le filtrage des données actives, mais vous ne pouvez pas filtrer les données de renvoi.
-   * La variable [!DNL Analytics] La source ne renverse pas les données dans Profile.
-* Si vous utilisez des configurations de préparation de données lors de la configuration initiale d’une [!DNL Analytics] , ces modifications sont également appliquées au renvoi automatique de 13 mois.
+   * La source [!DNL Analytics] ne renverse pas les données dans Profile.
+* Si vous utilisez des configurations de prépréparation de données lors de la configuration initiale d’un flux [!DNL Analytics], ces modifications sont également appliquées au renvoi automatique de 13 mois.
    * Cependant, ce n’est pas le cas pour le filtrage, car celui-ci est réservé uniquement aux données actives.
 * La préparation de données est appliquée aux chemins d’ingestion par lots et en flux continu. Si vous modifiez une configuration de prépréparation de données existante, ces modifications sont ensuite appliquées aux nouvelles données entrantes sur les chemins de diffusion en continu et d’ingestion par lots.
    * Toutefois, les configurations de prép de données ne s’appliquent pas aux données qui ont déjà été ingérées dans Experience Platform, qu’il s’agisse de données en flux continu ou de données par lots.
@@ -200,27 +200,27 @@ Une fois que vous avez terminé les mappages pour vos [!DNL Analytics] données 
 
 >[!IMPORTANT]
 >
->Utilisez le filtrage au niveau des lignes pour appliquer des conditions et dicter les données à **inclure lors de l&#39;ingestion de profils**. Utilisez le filtrage au niveau des colonnes pour sélectionner les colonnes de données à sélectionner. **exclusion de l’ingestion de profils**.
+>Utilisez le filtrage au niveau des lignes pour appliquer des conditions et dicter les données à **inclure lors de l&#39;ingestion de profils**. Utilisez le filtrage au niveau des colonnes pour sélectionner les colonnes de données que vous souhaitez **exclure pour l’ingestion de profils**.
 
-Vous pouvez filtrer les données pour [!DNL Profile] ingestion au niveau des lignes et des colonnes. Le filtrage au niveau des lignes vous permet de définir des critères tels que chaîne contenant, égal à, commence ou se termine par. Vous pouvez également utiliser le filtrage au niveau des lignes pour joindre des conditions à l’aide de `AND` ainsi que `OR`et annuler les conditions à l’aide de `NOT`.
+Vous pouvez filtrer les données pour l’ingestion [!DNL Profile] au niveau des lignes et des colonnes. Le filtrage au niveau des lignes vous permet de définir des critères tels que chaîne contenant, égal à, commence ou se termine par. Vous pouvez également utiliser le filtrage au niveau des lignes pour joindre des conditions en utilisant `AND` ainsi que `OR` et annuler des conditions en utilisant `NOT`.
 
-Pour filtrer votre [!DNL Analytics] données au niveau de la ligne, sélectionnez **[!UICONTROL Filtre de lignes]**.
+Pour filtrer vos données [!DNL Analytics] au niveau de la ligne, sélectionnez **[!UICONTROL Filtre de ligne]**.
 
 ![row-filter](../../../../images/tutorials/create/analytics/row-filter.png)
 
 Utilisez le rail de gauche pour parcourir la hiérarchie de schémas et sélectionnez l’attribut de schéma de votre choix pour approfondir l’analyse d’un schéma particulier.
 
-![rail gauche](../../../../images/tutorials/create/analytics/left-rail.png)
+![rail-gauche](../../../../images/tutorials/create/analytics/left-rail.png)
 
 Une fois que vous avez identifié l’attribut que vous souhaitez configurer, sélectionnez-le et faites glisser l’attribut du rail de gauche vers le panneau de filtrage.
 
 ![filter-panel](../../../../images/tutorials/create/analytics/filtering-panel.png)
 
-Pour configurer différentes conditions, sélectionnez **[!UICONTROL est égal à]** puis sélectionnez une condition dans la fenêtre déroulante qui s’affiche.
+Pour configurer différentes conditions, sélectionnez **[!UICONTROL equals]** , puis sélectionnez une condition dans la fenêtre déroulante qui s’affiche.
 
 La liste des conditions configurables inclut :
 
-* [!UICONTROL est égal à]
+* [!UICONTROL equals]
 * [!UICONTROL n’est pas égal à]
 * [!UICONTROL commence par]
 * [!UICONTROL se termine par]
@@ -232,11 +232,11 @@ La liste des conditions configurables inclut :
 
 ![conditions](../../../../images/tutorials/create/analytics/conditions.png)
 
-Saisissez ensuite les valeurs à inclure en fonction de l’attribut que vous avez sélectionné. Dans l’exemple ci-dessous, [!DNL Apple] et [!DNL Google] sont sélectionnés pour l’ingestion dans le cadre de la fonction **[!UICONTROL Fabricant]** attribut.
+Saisissez ensuite les valeurs à inclure en fonction de l’attribut que vous avez sélectionné. Dans l’exemple ci-dessous, [!DNL Apple] et [!DNL Google] sont sélectionnés pour ingestion dans le cadre de l’attribut **[!UICONTROL Fabricant]** .
 
 ![include-manufacturer](../../../../images/tutorials/create/analytics/include-manufacturer.png)
 
-Pour préciser davantage vos conditions de filtrage, ajoutez un autre attribut du schéma, puis ajoutez des valeurs basées sur cet attribut. Dans l’exemple ci-dessous, la variable **[!UICONTROL Modèle]** est ajouté et des modèles tels que [!DNL iPhone 13] et [!DNL Google Pixel 6] sont filtrées pour l’ingestion.
+Pour préciser davantage vos conditions de filtrage, ajoutez un autre attribut du schéma, puis ajoutez des valeurs basées sur cet attribut. Dans l’exemple ci-dessous, l’attribut **[!UICONTROL Model]** est ajouté et les modèles tels que [!DNL iPhone 13] et [!DNL Google Pixel 6] sont filtrés pour ingestion.
 
 ![include-model](../../../../images/tutorials/create/analytics/include-model.png)
 
@@ -244,11 +244,11 @@ Pour ajouter un nouveau conteneur, sélectionnez les ellipses (`...`) en haut à
 
 ![add-container](../../../../images/tutorials/create/analytics/add-container.png)
 
-Une fois un nouveau conteneur ajouté, sélectionnez **[!UICONTROL Inclure]** puis sélectionnez **[!UICONTROL Exclure]** dans la fenêtre déroulante qui s’affiche.
+Une fois qu’un nouveau conteneur est ajouté, sélectionnez **[!UICONTROL Inclure]**, puis **[!UICONTROL Exclure]** dans la fenêtre déroulante qui s’affiche.
 
 ![exclude](../../../../images/tutorials/create/analytics/exclude.png)
 
-Suivez la même procédure en faisant glisser les attributs de schéma et en ajoutant les valeurs correspondantes que vous souhaitez exclure du filtrage. Dans l’exemple ci-dessous, la variable [!DNL iPhone 12], [!DNL iPhone 12 mini], et [!DNL Google Pixel 5] sont tous filtrés à partir de l’exclusion de la variable **[!UICONTROL Modèle]** , paysage est exclu de la variable **[!UICONTROL Orientation de l’écran]**, et numéro de modèle [!DNL A1633] est exclu de **[!UICONTROL Numéro de modèle]**.
+Suivez la même procédure en faisant glisser les attributs de schéma et en ajoutant les valeurs correspondantes que vous souhaitez exclure du filtrage. Dans l’exemple ci-dessous, les [!DNL iPhone 12], [!DNL iPhone 12 mini] et [!DNL Google Pixel 5] sont tous filtrés de l’exclusion de l’attribut **[!UICONTROL Model]**, le paysage est exclu de l’**[!UICONTROL orientation d’écran]** et le numéro de modèle [!DNL A1633] est exclu de l’attribut **[!UICONTROL Model number]**.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -256,25 +256,25 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ### Filtrage au niveau des colonnes
 
-Sélectionner **[!UICONTROL Filtre Colonnes]** à partir de l’en-tête pour appliquer un filtrage au niveau des colonnes.
+Sélectionnez **[!UICONTROL Filtre de colonnes]** dans l’en-tête pour appliquer un filtrage au niveau de la colonne.
 
 ![column-filter](../../../../images/tutorials/create/analytics/column-filter.png)
 
-La page se met à jour dans une arborescence de schéma interactive, affichant vos attributs de schéma au niveau de la colonne. À partir de là, vous pouvez sélectionner les colonnes de données que vous souhaitez exclure de [!DNL Profile] ingestion. Vous pouvez également développer une colonne et sélectionner des attributs spécifiques à exclure.
+La page se met à jour dans une arborescence de schéma interactive, affichant vos attributs de schéma au niveau de la colonne. À partir de là, vous pouvez sélectionner les colonnes de données que vous souhaitez exclure de l’ingestion [!DNL Profile]. Vous pouvez également développer une colonne et sélectionner des attributs spécifiques à exclure.
 
-Par défaut, tous les [!DNL Analytics] accéder à [!DNL Profile] et ce processus permet d’exclure des branches de données XDM [!DNL Profile] ingestion.
+Par défaut, tous les [!DNL Analytics] accèdent à [!DNL Profile] et ce processus permet d’exclure des branches de données XDM de l’ingestion [!DNL Profile].
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
-![colonnes sélectionnées](../../../../images/tutorials/create/analytics/columns-selected.png)
+![columns-selected](../../../../images/tutorials/create/analytics/columns-selected.png)
 
 ### Filtrage des identités secondaires
 
-Utilisez un filtre de colonne pour exclure les identités secondaires de l’ingestion des profils. Pour filtrer les identités secondaires, sélectionnez **[!UICONTROL Filtre Colonnes]** puis sélectionnez **[!UICONTROL _identities]**.
+Utilisez un filtre de colonne pour exclure les identités secondaires de l’ingestion des profils. Pour filtrer les identités secondaires, sélectionnez **[!UICONTROL Filtre de colonnes]**, puis **[!UICONTROL _identities]**.
 
 Le filtre s’applique uniquement lorsqu’une identité est marquée comme secondaire. Si des identités sont sélectionnées, mais qu’un événement arrive avec l’une des identités marquées comme primaires, elles ne sont pas filtrées.
 
-![identités secondaires](../../../../images/tutorials/create/analytics/secondary-identities.png)
+![secondary-identities](../../../../images/tutorials/create/analytics/secondary-identities.png)
 
 ### Fournir des détails sur le flux de données
 
@@ -293,7 +293,7 @@ L’écran de [!UICONTROL Révision] s’affiche, vous permettant dʼexaminer vo
 
 ## Surveiller votre flux de données {#monitor-your-dataflow}
 
-Une fois le flux de données terminé, sélectionnez **[!UICONTROL Flux de données]** dans le catalogue des sources pour surveiller l’activité et l’état de vos données.
+Une fois votre flux de données terminé, sélectionnez **[!UICONTROL Flux de données]** dans le catalogue de sources pour surveiller l’activité et l’état de vos données.
 
 ![Catalogue des sources avec l’onglet des flux de données sélectionné.](../../../../images/tutorials/create/analytics/select-dataflows.png)
 
@@ -301,38 +301,38 @@ Une liste des flux de données Analytics existants dans votre organisation s’a
 
 ![Liste des flux de données Adobe Analytics existants dans votre organisation.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-La variable [!UICONTROL Activité du jeu de données] fournit des informations sur la progression des données envoyées d’Analytics à Experience Platform. L’interface affiche des mesures telles que le nombre d’enregistrements ingérés, le nombre de lots ingérés et le nombre de lots en échec.
+La page [!UICONTROL Activité du jeu de données] fournit des informations sur la progression des données envoyées d’Analytics à l’Experience Platform. L’interface affiche des mesures telles que le nombre d’enregistrements ingérés, le nombre de lots ingérés et le nombre de lots en échec.
 
 La source instancie deux flux de jeux de données. L’un représente les données de renvoi, l’autre les données actives. Les données de renvoi ne sont pas configurées pour être ingérées dans Real-Time Customer Profile, mais sont envoyées au lac de données à des fins d’analyse et de cas d’utilisation en science des données.
 
-Pour plus d’informations sur le renvoi, les données actives et leurs latences respectives, consultez la section [Présentation de la source Analytics](../../../../connectors/adobe-applications/analytics.md).
+Pour plus d’informations sur le renvoi, les données en direct et leurs latences respectives, consultez la [présentation des sources Analytics](../../../../connectors/adobe-applications/analytics.md).
 
-![Page d’activité du jeu de données pour un jeu de données cible donné pour les données Adobe Analytics.](../../../../images/tutorials/create/analytics/dataset-activity.png)
+![ Page d’activité du jeu de données pour un jeu de données cible donné pour les données Adobe Analytics.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
 +++Affichage de lots individuels à l’aide de l’interface de surveillance héritée
 
 La page d’activité du jeu de données n’affiche pas de liste de lots individuels. Pour afficher une liste de lots individuels, sélectionnez un graphique dans l’interface de l’activité du jeu de données.
 
-![Page de l’activité du jeu de données avec un graphique sélectionné.](../../../../images/tutorials/create/analytics/select-chart.png)
+![ Page de l’activité du jeu de données avec un graphique sélectionné.](../../../../images/tutorials/create/analytics/select-chart.png)
 
-Vous accédez au tableau de bord Surveillance . Ensuite, sélectionnez **[!UICONTROL SEULS LES ÉCHECS D’INGÉRATION : OUI]** pour effacer le filtre et afficher une liste de lots individuels.
+Vous accédez au tableau de bord Surveillance . Sélectionnez ensuite **[!UICONTROL UNIQUEMENT INGEST FAILURES: YES]** pour effacer le filtre et afficher une liste de lots individuels.
 
 ![Le tableau de bord de surveillance avec le filtre d’échec sélectionné.](../../../../images/tutorials/create/analytics/clear-filter.png)
 
 L’interface se met à jour vers une liste de lots individuels, y compris des informations sur leurs mesures respectives.
 
-![Page de surveillance héritée pour les données par lots.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
+![Page de surveillance héritée pour les données de lot.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
 
 | Mesures | Description |
 | --- | --- |
-| Identifiant de lot | L’identifiant d’un lot donné. Cette valeur est générée en interne. |
+| ID de lot | L’identifiant d’un lot donné. Cette valeur est générée en interne. |
 | Nom du jeu de données | Nom d’un jeu de données donné utilisé pour les données Analytics. |
 | Source | Source des données ingérées. |
 | Mis à jour | Date de l’itération d’exécution de flux la plus récente. |
-| Enregistrements dans un jeu de données | Nombre total d’enregistrements dans le jeu de données. **Remarque**: ce paramètre affiche parfois l’état de `in-progress`. Ce statut indique que le processus d’ingestion des enregistrements n’est pas encore terminé. |
+| Enregistrements dans le jeu de données | Nombre total d’enregistrements dans le jeu de données. **Remarque** : ce paramètre affiche parfois l’état de `in-progress`. Ce statut indique que le processus d’ingestion des enregistrements n’est pas encore terminé. |
 | Nouveaux fragments de profil | Nombre total de nouveaux fragments de profil qui ont été ingérés. |
 | Fragments de profil existants | Comptage total des fragments de profil existants. |
-| Enregistrements d’identité assemblés | Comptage total des enregistrements d’identité assemblés après ingestion. |
+| Enregistrements d’identités assemblés | Comptage total des enregistrements d’identité assemblés après ingestion. |
 | Enregistrements dans le profil | Nombre total d’enregistrements ingérés dans Real-Time Customer Profile. |
 
 {style="table-layout:auto"}

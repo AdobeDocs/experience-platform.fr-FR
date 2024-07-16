@@ -30,7 +30,7 @@ Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également utiliser la barre de recherche pour réduire les sources affichées.
 
-Sous , **[!UICONTROL Adobe des applications]** catégorie, sélectionnez **[!UICONTROL Adobe Campaign Managed Cloud Services]** puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Sous la catégorie **[!UICONTROL Adobe applications]**, sélectionnez **[!UICONTROL Adobe Campaign Managed Cloud Services]**, puis **[!UICONTROL Ajouter des données]**.
 
 ![Catalogue des sources affichant la carte Adobe Campaign Managed Cloud Services.](../../../../images/tutorials/create/campaign/catalog.png)
 
@@ -54,7 +54,7 @@ Sous , **[!UICONTROL Adobe des applications]** catégorie, sélectionnez **[!UIC
 >abstract="Nom de l’entité définie dans la base de données Adobe Campaign."
 >text="Learn more in documentation"
 
-La variable [!UICONTROL Sélectionner des données] s’affiche, vous fournissant une interface pour configurer votre [!UICONTROL Instance Adobe Campaign], [!UICONTROL Mapping de ciblage], et [!UICONTROL Nom du schéma].
+L’étape [!UICONTROL Sélectionner les données] s’affiche et vous fournit une interface pour configurer votre [!UICONTROL instance Adobe Campaign], le [!UICONTROL mapping de ciblage] et le [!UICONTROL nom du schéma].
 
 | Propriété | Description |
 | --- | --- |
@@ -62,15 +62,15 @@ La variable [!UICONTROL Sélectionner des données] s’affiche, vous fournissan
 | Mapping de ciblage | Les objets techniques utilisés par Campaign pour diffuser des messages et contiennent tous les paramètres techniques requis pour envoyer des diffusions. |
 | Nom du schéma | Nom de l’entité de schéma que vous apportez à Platform. Les options incluent Journal de diffusion et Journal de suivi. |
 
-![Une interface dans laquelle vous pouvez configurer votre instance Adobe Campaign, le mapping de ciblage et le nom du schéma.](../../../../images/tutorials/create/campaign/select-data.png)
+![Interface dans laquelle vous pouvez configurer votre instance Adobe Campaign, le mapping de ciblage et le nom du schéma.](../../../../images/tutorials/create/campaign/select-data.png)
 
 Une fois que vous avez renseigné les valeurs de votre instance Campaign, du mapping de ciblage et du nom du schéma, l’écran se met à jour pour afficher un aperçu de votre schéma ainsi qu’un exemple de jeu de données. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
-![Un aperçu de la hiérarchie de votre schéma ainsi qu’un exemple de votre jeu de données](../../../../images/tutorials/create/campaign/preview.png)
+![ Aperçu de la hiérarchie de votre schéma ainsi qu’un exemple de votre jeu de données ](../../../../images/tutorials/create/campaign/preview.png)
 
 ### Utiliser un jeu de données existant
 
-La variable [!UICONTROL Détails du flux de données] vous permet de choisir si vous souhaitez utiliser un jeu de données existant ou configurer un nouveau jeu de données pour votre flux de données.
+La page [!UICONTROL Détails du flux de données] vous permet de choisir si vous souhaitez utiliser un jeu de données existant ou configurer un nouveau jeu de données pour votre flux de données.
 
 Pour utiliser un jeu de données existant, sélectionnez **[!UICONTROL Jeu de données existant]**. Vous pouvez soit récupérer un jeu de données existant à l’aide de l’option de [!UICONTROL Recherche avancée], soit en faisant défiler la liste des jeux de données existants dans le menu déroulant.
 
@@ -80,7 +80,7 @@ Une fois un jeu de données sélectionné, donnez un nom à votre flux de donné
 
 ### Utiliser un nouveau jeu de données
 
-Pour utiliser un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]** puis fournissez un nom de jeu de données de sortie et une description facultative. Sélectionnez ensuite un schéma à mapper à l’aide de l’option [!UICONTROL Recherche avancée] ou en faisant défiler la liste des schémas existants dans le menu déroulant. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
+Pour utiliser un nouveau jeu de données, sélectionnez **[!UICONTROL Nouveau jeu de données]**, puis fournissez un nom de jeu de données de sortie et une description facultative. Sélectionnez ensuite un schéma à mapper à l’aide de l’option [!UICONTROL Recherche avancée] ou en faisant défiler la liste des schémas existants dans le menu déroulant. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ![Interface affichant la nouvelle option de jeu de données.](../../../../images/tutorials/create/campaign/new-dataset.png)
 
@@ -96,7 +96,7 @@ Lorsque vous avez terminé de renseigner votre flux de données, sélectionnez *
 
 L’interface de [!UICONTROL mappage] fournit un outil complet pour mapper les champs sources de votre schéma source aux champs XDM cibles correspondants dans le schéma cible.
 
-Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, voir la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
+Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [guide de l’interface utilisateur de la préparation des données](../../../../../data-prep/ui/mapping.md).
 
 >[!IMPORTANT]
 >
@@ -115,15 +115,15 @@ L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexamine
 
 Une fois que vous avez vérifié votre flux de données, sélectionnez **[!UICONTROL Terminer]** et patientez quelques instants le temps que le flux de données soit créé.
 
-![Une page de révision présentant les informations de connexion et de jeu de données.](../../../../images/tutorials/create/campaign/review.png)
+![Une page de révision présentant des informations sur la connexion et le jeu de données.](../../../../images/tutorials/create/campaign/review.png)
 
 ### Surveillance de l’activité du jeu de données
 
 Une fois votre flux de données créé, vous pouvez surveiller les données qui sont ingérées par celui-ci pour afficher des informations sur les taux ingérés et les lots réussis et en échec.
 
-Pour commencer à afficher votre activité de jeu de données, sélectionnez **[!UICONTROL Flux de données]** dans le catalogue des sources.
+Pour commencer à afficher votre activité de jeu de données, sélectionnez **[!UICONTROL Flux de données]** dans le catalogue de sources.
 
-![Page du catalogue des sources avec l’onglet d’en-tête des flux de données sélectionné.](../../../../images/tutorials/create/campaign/dataflows.png)
+![Page du catalogue des sources avec l’onglet de l’en-tête du flux de données sélectionné.](../../../../images/tutorials/create/campaign/dataflows.png)
 
 Sélectionnez ensuite le jeu de données cible dans la liste des flux de données qui s’affichent.
 

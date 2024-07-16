@@ -1,20 +1,20 @@
 ---
 keywords: Talk URL Inbox;boîte de réception Talk url;boîte de réception Talk URL;boîte de réception Talk URL;URL talk;URL Talk;URL Talk
 title: Extension Talk URL Inbox
-description: L’extension Talk URL Inbox est une destination de voix du client dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Talk URL Inbox est une destination de voix du client dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: f3e962c6-82c0-4d2f-9a78-275f261f058d
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 89%
+source-wordcount: '475'
+ht-degree: 90%
 
 ---
 
 # Extension [!DNL Talk URL Inbox] {#talk-url-extension}
 
-Recevez des messages vocaux de la part des visiteurs de votre page web. Inclut l’interface utilisateur hébergée et le machine learning dans le cloud pour transcrire instantanément vos messages vocaux en insights textuels.
+Recevez des messages vocaux de la part des visiteurs de votre page web. Inclut l’interface utilisateur hébergée et l’apprentissage automatique dans le cloud pour transcrire instantanément vos messages vocaux en informations textuelles.
 
-[!DNL Talk URL Inbox] est une voix de l’extension client dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
+[!DNL Talk URL Inbox] est une extension de voix du client dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100583.html).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -28,7 +28,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Talk URL Inbox] extension :
+Pour installer l’extension [!DNL Talk URL Inbox], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

@@ -4,12 +4,12 @@ description: Découvrez comment connecter Adobe Experience Platform à Oracle El
 exl-id: 866e408f-6e0b-4e81-9ad8-9d74c485c89a
 source-git-commit: e8f54f06ad3431227e140219a9960e8e04f83ccc
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '546'
 ht-degree: 81%
 
 ---
 
-# Créez un [!DNL Oracle Eloqua] connexion de base à l’aide de [!DNL Flow Service] API
+# Créez une connexion de base [!DNL Oracle Eloqua] à l’aide de l’API [!DNL Flow Service]
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -20,7 +20,7 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 Ce guide nécessite une connaissance pratique des composants suivants de Platform :
 
 * [Sources](../../../../home.md) : Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de [!DNL Platform].
-* [Sandbox](../../../../../sandboxes/home.md) : Platform fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Platform fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour une connexion réussie à [!DNL Oracle Eloqua] à l’aide de l’API [!DNL Flow Service].
 
@@ -30,9 +30,9 @@ Pour connecter [!DNL Flow Service] à [!DNL Oracle Eloqua], vous devez fournir d
 
 | Informations d’identification | Description |
 | --- | --- |
-| `endpoint` | Le point de terminaison de votre [!DNL Oracle Eloqua]. |
-| `username` | Le nom d’utilisateur de votre [!DNL Oracle Eloqua] compte . Le nom d’utilisateur doit être formaté en tant que `siteName + \\ + username`où `siteName` est le nom de l’entreprise à laquelle vous vous êtes connecté. [!DNL Oracle Eloqua] et `username` est votre nom d’utilisateur. Par exemple, votre nom d’utilisateur de connexion peut être : `adobe\\emily`. |
-| `password` | Le mot de passe correspondant à votre [!DNL Oracle Eloqua] nom d’utilisateur. |
+| `endpoint` | Point de terminaison de votre [!DNL Oracle Eloqua]. |
+| `username` | Nom d’utilisateur de votre compte [!DNL Oracle Eloqua]. Le nom d’utilisateur doit être formaté sous la forme `siteName + \\ + username`, où `siteName` est le nom de société que vous avez utilisé pour vous connecter à [!DNL Oracle Eloqua] et `username` est votre nom d’utilisateur. Par exemple, votre nom d’utilisateur de connexion peut être : `adobe\\emily`. |
+| `password` | Mot de passe correspondant à votre nom d’utilisateur [!DNL Oracle Eloqua]. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. La valeur de l’identifiant de spécification de connexion de la source [!DNL Oracle Eloqua] est fixe comme suit : `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
 
 Pour plus d’informations sur les informations d’authentification pour [!DNL Oracle Eloqua], reportez-vous au guide [[!DNL Oracle Eloqua] sur l’authentification](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
@@ -89,8 +89,8 @@ curl -X POST \
 | `description` | (Facultatif) Propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion de base. |
 | `auth.specName` | Type d’authentification utilisé pour la connexion. |
 | `auth.params.endpoint` | Point d’entrée de votre serveur [!DNL Oracle Eloqua]. |
-| `auth.params.username` | Les informations d’identification concaténées qui incluent le nom du site et le nom d’utilisateur correspondant à votre [!DNL Oracle Eloqua] compte . |
-| `auth.params.password` | Mot de passe correspondant à votre compte [!DNL Oracle Eloqua].  |
+| `auth.params.username` | Les informations d’identification concaténées qui incluent le nom du site et le nom d’utilisateur correspondant à votre compte [!DNL Oracle Eloqua]. |
+| `auth.params.password` | Mot de passe correspondant à votre compte [!DNL Oracle Eloqua]. |
 | `connectionSpec.id` | La valeur de l’identifiant de spécification de connexion de la source [!DNL Oracle Eloqua] est fixe comme suit : `35d6c4d8-c9a9-11eb-b8bc-0242ac130003`. |
 
 **Réponse**

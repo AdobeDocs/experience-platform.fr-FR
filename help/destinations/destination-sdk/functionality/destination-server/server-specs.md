@@ -4,7 +4,7 @@ title: Spécifications de serveur pour les destinations créées avec Destinatio
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '2750'
+source-wordcount: '2739'
 ht-degree: 100%
 
 ---

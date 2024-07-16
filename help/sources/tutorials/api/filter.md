@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;service de flux;API de service de flux;sources;sources
-title: Filtrage Des Données Au Niveau De La Ligne D’Une Source À L’Aide De L’API Flow Service
+title: Filtrage Des Données Au Niveau De La Ligne Pour Un Source À L’Aide De L’API Flow Service
 description: Ce tutoriel décrit les étapes de filtrage des données au niveau de la source à l’aide de l’API Flow Service
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
 source-git-commit: b0e2fc4767fb6fbc90bcdd3350b3add965988f8f
 workflow-type: tm+mt
-source-wordcount: '782'
-ht-degree: 17%
+source-wordcount: '778'
+ht-degree: 14%
 
 ---
 
-# Filtrez les données au niveau de la ligne d’une source à l’aide de la méthode [!DNL Flow Service] API
+# Filtrage des données au niveau des lignes pour une source à l’aide de l’API [!DNL Flow Service]
 
 >[!IMPORTANT]
 >
@@ -21,7 +21,7 @@ ht-degree: 17%
 >* [Salesforce](../../connectors/crm/salesforce.md)
 >* [Snowflake](../../connectors/databases/snowflake.md)
 
-Ce tutoriel décrit les étapes à suivre pour filtrer les données au niveau de la ligne pour une source à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel décrit les étapes à suivre pour filtrer les données au niveau des lignes pour une source à l’aide de l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
@@ -42,7 +42,7 @@ Les étapes suivantes décrivent les étapes à suivre pour filtrer les données
 
 Avant de pouvoir utiliser l’API pour filtrer les données au niveau des lignes d’une source, vous devez d’abord récupérer les détails de spécification de connexion de votre source afin de déterminer les opérateurs et la langue pris en charge par une source spécifique.
 
-Pour récupérer la spécification de connexion d’une source donnée, envoyez une requête GET à la fonction `/connectionSpecs` point d’entrée du [!DNL Flow Service] API tout en fournissant le nom de propriété de votre source dans le cadre de vos paramètres de requête.
+Pour récupérer la spécification de connexion d’une source donnée, envoyez une requête GET au point de terminaison `/connectionSpecs` de l’API [!DNL Flow Service] tout en fournissant le nom de propriété de votre source dans le cadre de vos paramètres de requête.
 
 **Format d’API**
 
@@ -52,7 +52,7 @@ GET /connectionSpecs/{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --- | --- |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs selon lesquels filtrer les résultats. Vous pouvez récupérer la variable [!DNL Google BigQuery] spécification de connexion en appliquant la `name` propriété et spécification `"google-big-query"` dans votre recherche. |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs selon lesquels filtrer les résultats. Vous pouvez récupérer la spécification de connexion [!DNL Google BigQuery] en appliquant la propriété `name` et en spécifiant `"google-big-query"` dans votre recherche. |
 
 **Requête**
 
@@ -121,14 +121,14 @@ Une réponse réussie renvoie les spécifications de connexion pour [!DNL Google
 | `>` | Filtre selon si la propriété est supérieure ou non à la valeur fournie. |
 | `<=` | Filtre selon si la propriété est inférieure ou égale à la valeur fournie. |
 | `>=` | Filtre selon si la propriété est supérieure ou égale à la valeur fournie. |
-| `like` | Filtre en utilisant dans une `WHERE` pour rechercher un modèle spécifié. |
+| `like` | Filtre en utilisant une clause `WHERE` pour rechercher un modèle spécifié. |
 | `in` | Filtre selon si la propriété se trouve dans une plage spécifiée. |
 
 {style="table-layout:auto"}
 
 ### Définition des conditions de filtrage pour l’ingestion
 
-Une fois que vous avez identifié les opérateurs logiques et le langage de requête pris en charge par votre source, vous pouvez utiliser le langage de requête de profil (PQL) pour spécifier les conditions de filtrage à appliquer à vos données source.
+Une fois que vous avez identifié les opérateurs logiques et le langage de requête pris en charge par votre source, vous pouvez utiliser Profile Query Language (PQL) pour spécifier les conditions de filtrage à appliquer à vos données source.
 
 Dans l’exemple ci-dessous, les conditions sont appliquées uniquement à la sélection des données qui correspondent aux valeurs fournies pour les types de noeuds répertoriés en tant que paramètres.
 
@@ -155,7 +155,7 @@ Dans l’exemple ci-dessous, les conditions sont appliquées uniquement à la s�
 
 ### Prévisualiser vos données
 
-Vous pouvez prévisualiser vos données en adressant une requête de GET au `/explore` point d’entrée du [!DNL Flow Service] API lors de la fourniture `filters` dans les paramètres de requête et en spécifiant vos conditions d’entrée PQL dans [!DNL Base64].
+Vous pouvez prévisualiser vos données en envoyant une requête de GET au point de terminaison `/explore` de l’API [!DNL Flow Service] tout en fournissant `filters` dans le cadre de vos paramètres de requête et en spécifiant vos conditions d’entrée PQL dans [!DNL Base64].
 
 **Format d’API**
 
@@ -330,7 +330,7 @@ Une requête réussie renvoie la réponse suivante.
 
 ### Créer une connexion source pour les données filtrées
 
-Pour créer une connexion source et ingérer des données filtrées, envoyez une requête de POST à la variable `/sourceConnections` point de terminaison tout en fournissant vos conditions de filtrage dans le cadre de vos paramètres de corps.
+Pour créer une connexion source et ingérer des données filtrées, envoyez une requête de POST au point de terminaison `/sourceConnections` tout en fournissant vos conditions de filtrage dans le cadre de vos paramètres de corps.
 
 **Format d’API**
 
@@ -340,7 +340,7 @@ POST /sourceConnections
 
 **Requête**
 
-La requête suivante crée une connexion source pour ingérer des données à partir de `test1.fasTestTable` where `city` = `DDN`.
+La requête suivante crée une connexion source pour ingérer des données à partir de `test1.fasTestTable` où `city` = `DDN`.
 
 ```shell
 curl -X POST \
@@ -387,7 +387,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle connexion source.
+Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion source nouvellement créée.
 
 ```json
 {
@@ -402,7 +402,7 @@ Cette section fournit d’autres exemples de payloads différents pour le filtra
 
 ### Conditions uniques
 
-Vous pouvez omettre la `fnApply` pour les scénarios qui ne nécessitent qu’une seule condition.
+Vous pouvez omettre le `fnApply` initial pour les scénarios qui ne nécessitent qu’une seule condition.
 
 ```json
 {
@@ -425,7 +425,7 @@ Vous pouvez omettre la `fnApply` pour les scénarios qui ne nécessitent qu’un
 }
 ```
 
-### En utilisant la variable `in` operator
+### Utilisation de l’opérateur `in`
 
 Consultez l’exemple de payload ci-dessous pour obtenir un exemple de l’opérateur `in`.
 
@@ -459,7 +459,7 @@ Consultez l’exemple de payload ci-dessous pour obtenir un exemple de l’opér
 }
 ```
 
-### En utilisant la variable `isNull` operator
+### Utilisation de l’opérateur `isNull`
 
 Consultez l’exemple de payload ci-dessous pour obtenir un exemple de l’opérateur `isNull`.
 
@@ -480,7 +480,7 @@ Consultez l’exemple de payload ci-dessous pour obtenir un exemple de l’opér
 }
 ```
 
-### En utilisant la variable `NOT` operator
+### Utilisation de l’opérateur `NOT`
 
 Consultez l’exemple de payload ci-dessous pour obtenir un exemple de l’opérateur `NOT`.
 

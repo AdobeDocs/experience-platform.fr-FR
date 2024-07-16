@@ -4,8 +4,8 @@ description: Découvrez comment configurer un fichier de manifeste JSON informan
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '2645'
-ht-degree: 100%
+source-wordcount: '2591'
+ht-degree: 99%
 
 ---
 
@@ -120,7 +120,7 @@ Une définition de type est un objet utilisé pour décrire un type d’événem
     </tr>
     <tr>
       <td><code>categoryName</code> <em>(Facultatif)</em></td>
-      <td>Lorsqu’il est fourni, le <code>displayName</code> est répertorié sous le <code>categoryName</code> dans l’interface utilisateur de Tous les types ayant le même <code>categoryName</code> sont répertoriés dans la même catégorie. Par exemple, si votre extension a fourni un type d’événement <code>keyUp</code> et un type d’événement <code>keyDown</code> et qu’ils ont tous deux un <code>categoryName</code> de <code>Keyboard</code>, les deux types d’événement sont répertoriés dans la catégorie Clavier tandis que l’utilisateur effectue une sélection dans la liste des types d’événement disponibles lors de la création d’une règle. La valeur de <code>categoryName</code> doit être lisible à l’œil.</td>
+      <td>Lorsqu’il est fourni, le <code>displayName</code> est répertorié sous le <code>categoryName</code> dans l’interface utilisateur. Tous les types ayant le même <code>categoryName</code> sont répertoriés dans la même catégorie. Par exemple, si votre extension a fourni un type d’événement <code>keyUp</code> et un type d’événement <code>keyDown</code> et qu’ils ont tous deux un <code>categoryName</code> de <code>Keyboard</code>, les deux types d’événement sont répertoriés dans la catégorie Clavier tandis que l’utilisateur effectue une sélection dans la liste des types d’événement disponibles lors de la création d’une règle. La valeur de <code>categoryName</code> doit être lisible à l’œil.</td>
     </tr>
     <tr>
       <td><code>libPath</code></td>

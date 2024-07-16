@@ -4,7 +4,7 @@ description: Découvrez comment définir des vues pour les modules de bibliothè
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
 source-git-commit: 41efcb14df44524b58be2293d2b943bd890c1621
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '2061'
 ht-degree: 100%
 
 ---

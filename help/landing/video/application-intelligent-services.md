@@ -1,6 +1,6 @@
 ---
 title: Application et services intelligents reposant sur l’Experience Platform
-description: Cette vidéo donne un aperçu des applications et des services intelligents reposant sur Adobe Experience Platform, qui complètent les applications et les mdash Experience Cloud ; Real-time Customer Data Platform, Journey Orchestration, Customer Journey Analytics, Attribution AI et Customer AI.
+description: Cette vidéo donne un aperçu des applications et des services intelligents reposant sur Adobe Experience Platform, qui complètent les applications et les horodatages Experience Cloud ; mdash ; Real-Time Customer Data Platform ; Journey Orchestration ; Customer Journey Analytics ; Attribution AI ; Customer AI.
 kt: 4333
 audience: all
 doc-type: video

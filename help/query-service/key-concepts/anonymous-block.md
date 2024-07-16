@@ -60,7 +60,7 @@ $$;
 
 Certains clients tiers peuvent avoir besoin d’un identifiant distinct avant et après un bloc SQL pour indiquer qu’une partie du script doit être traitée comme une seule instruction. Si vous recevez un message d’erreur lors de l’utilisation de Query Service avec un client tiers, vous devez vous référer à la documentation du client tiers concernant l’utilisation d’un bloc SQL.
 
-Par exemple : **DbVisualizer** nécessite que le délimiteur soit le seul texte sur la ligne. Dans DbVisualizer, la valeur par défaut de l’identifiant de début est `--/` et pour l’identifiant de fin, il est `/`. Vous trouverez ci-dessous un exemple de bloc anonyme dans DbVisualizer :
+Par exemple, **DbVisualizer** nécessite que le délimiteur soit le seul texte sur la ligne. Dans DbVisualizer, la valeur par défaut de l’identifiant de début est `--/` et, pour l’identifiant de fin, elle est `/`. Vous trouverez ci-dessous un exemple de bloc anonyme dans DbVisualizer :
 
 ```SQL
 --/
@@ -74,10 +74,10 @@ $$;
 /
 ```
 
-Pour DbVisualizer en particulier, il existe également une option dans l’interface utilisateur de &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Voir [Documentation de DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) pour plus d’informations.
+Pour DbVisualizer en particulier, il existe également une option dans l’interface utilisateur de &quot;[!DNL Execute the complete buffer as one SQL statement]&quot;. Pour plus d’informations, consultez la [documentation de DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsingExecuteBuffer) .
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez aquis une compréhension claire des blocs anonymes et de leur structure. Veuillez lire la [guide d&#39;exécution de requête](../best-practices/writing-queries.md) pour plus d’informations sur l’écriture de requêtes.
+En lisant ce document, vous avez aquis une compréhension claire des blocs anonymes et de leur structure. Pour plus d’informations sur l’écriture de requêtes, consultez le [guide d’exécution de requête](../best-practices/writing-queries.md) .
 
-Vous devez également consulter les [utilisation des blocs anonymes avec le modèle de conception de charge incrémentielle](./incremental-load.md) pour augmenter l’efficacité des requêtes.
+Vous devez également consulter la section [ sur l’utilisation des blocs anonymes avec le modèle de conception de charge incrémentielle ](./incremental-load.md) pour augmenter l’efficacité des requêtes.

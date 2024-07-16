@@ -21,11 +21,11 @@ Ce guide explique comment installer et configurer l’extension Adobe Privacy da
 
 >[!NOTE]
 >
->Si vous préférez installer ces fonctionnalités sans utiliser de balises, reportez-vous à la section [Présentation de la bibliothèque JavaScript de confidentialité](../../../../privacy-service/js-library.md) pour savoir comment mettre en oeuvre l’utilisation du code brut.
+>Si vous préférez installer ces fonctionnalités sans utiliser de balises, reportez-vous à la [présentation de la bibliothèque Privacy JavaScript](../../../../privacy-service/js-library.md) pour obtenir des instructions sur la mise en oeuvre de l’utilisation du code brut.
 
 ## Installation et configuration de l’extension 
 
-Sélectionner **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de la fonction **[!UICONTROL Catalogue]** . Utilisez la barre de recherche pour réduire la liste des extensions disponibles jusqu’à ce que vous trouviez Adobe Privacy. Sélectionnez **[!UICONTROL Installer]** pour continuer.
+Sélectionnez **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de l’onglet **[!UICONTROL Catalogue]** . Utilisez la barre de recherche pour réduire la liste des extensions disponibles jusqu’à ce que vous trouviez Adobe Privacy. Sélectionnez **[!UICONTROL Installer]** pour continuer.
 
 ![Installer l’extension](../../../images/extensions/client/privacy/install.png)
 
@@ -34,7 +34,7 @@ L’écran suivant vous permet de configurer les sources et solutions à partir 
 * Adobe Analytics (AA)
 * Adobe Audience Manager (AAM)
 * Adobe Target
-* Adobe Experience Cloud Identity Service (Visiteur ou ECID)
+* Service d’identités d’Adobe Experience Cloud (Visiteur ou ECID)
 * Adobe Advertising Cloud (AdCloud)
 
 Sélectionnez une ou plusieurs solutions, puis cliquez sur **[!UICONTROL Mettre à jour]**.
@@ -71,7 +71,7 @@ Lors de l’utilisation de l’extension de balise d’Adobe Privacy, vous deve
 
 ### Définition d’un élément de données pour gérer les identités
 
-Lancez le processus de création d’un élément de données en sélectionnant **[!UICONTROL Éléments de données]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Ajouter un élément de données]**. Une fois que vous êtes sur l’écran de configuration, sélectionnez **[!UICONTROL Core]** pour l’extension et **[!UICONTROL Code personnalisé]** pour le type d’élément de données. À partir de là, sélectionnez **[!UICONTROL Ouvrir l’éditeur]** dans le panneau de droite.
+Démarrez le processus de création d’un élément de données en sélectionnant **[!UICONTROL Data Elements]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Add Data Element]**. Une fois que vous êtes sur l’écran de configuration, sélectionnez **[!UICONTROL Core]** pour l’extension et **[!UICONTROL Code personnalisé]** pour le type d’élément de données. À partir de là, sélectionnez **[!UICONTROL Ouvrir l’éditeur]** dans le panneau de droite.
 
 ![Sélectionner le type d’élément de données](../../../images/extensions/client/privacy/data-element-type.png)
 

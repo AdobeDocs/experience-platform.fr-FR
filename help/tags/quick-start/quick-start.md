@@ -4,8 +4,8 @@ description: Découvrez comment vous familiariser rapidement avec les balises da
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
 source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '1525'
-ht-degree: 92%
+source-wordcount: '1521'
+ht-degree: 90%
 
 ---
 
@@ -33,11 +33,11 @@ Les balises sont totalement intégrées à votre Adobe ID. Les autorisations ut
 
 Les balises disposent dʼun système de gestion des utilisateurs basé sur les droits. Cela signifie que les droits individuels doivent être accordés explicitement. Ces droits sont octroyés aux groupes, puis les utilisateurs sont ajoutés aux groupes appropriés afin d’y avoir accès. Même si votre entreprise a accès à la collecte de données, les utilisateurs individuels ne peuvent rien faire tant qu’un administrateur ne leur a pas explicitement accordé certains droits.
 
-Pour obtenir des instructions détaillées sur la création de groupes et l’ajout d’utilisateurs pour les balises, voir [guide des autorisations de collecte de données](../../collection/permissions.md).
+Pour obtenir des instructions détaillées sur la création de groupes et l’ajout d’utilisateurs pour les balises, reportez-vous au [guide des autorisations de collecte de données](../../collection/permissions.md).
 
 ## 2. Connexion
 
-Une fois les droits de balise ajoutés à votre Adobe ID, vous devez vous connecter à l’interface utilisateur de l’Experience Platform ou à l’interface utilisateur de collecte de données. Pour ce faire, accédez directement au [Écran de connexion Experience Cloud](https://experience.adobe.com/)et en sélectionnant **[!UICONTROL Collecte de données]** ou **[!UICONTROL Experience Platform]**.
+Une fois les droits de balise ajoutés à votre Adobe ID, vous devez vous connecter à l’interface utilisateur de l’Experience Platform ou à l’interface utilisateur de collecte de données. Pour ce faire, accédez directement à l’[ écran de connexion de l’Experience Cloud](https://experience.adobe.com/) et sélectionnez **[!UICONTROL Collecte de données]** ou **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >
@@ -135,5 +135,5 @@ Pour plus d’informations sur les différents états et options disponibles pen
 Pour en savoir plus sur les balises, consultez les ressources suivantes :
 
 * **[Communauté de la collecte de données](https://forums.adobe.com/community/experience-cloud/platform/launch)** : posez vos questions et répondez à celles des autres, proposez des idées, prononcez-vous sur les idées des autres. Connectez-vous avec votre Adobe ID.
-* **[Developer Docs](../api/overview.md)** : rejoignez la communauté des développeurs de balises pour créer des extensions ou utiliser les API de balises.
+* **[Developer Docs](../api/overview.md)** : participez à la communauté des développeurs de balises pour créer des extensions ou utiliser les API de balises.
 * **[Présentation des tutoriels](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html?lang=fr)** : ces documents vous présentent les concepts de balises, y compris le transfert d’événement et le SDK mobile dans les applications Android.

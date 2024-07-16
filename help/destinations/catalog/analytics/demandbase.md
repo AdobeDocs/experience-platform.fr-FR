@@ -1,22 +1,22 @@
 ---
 keywords: extension demandbase;demandbase;destination demandbase
 title: Extension Demandbase
-description: L’extension Demandbase est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Demandbase est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 112a9575-4527-4a32-9610-a9d18ffd84f1
 source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
 workflow-type: tm+mt
-source-wordcount: '476'
-ht-degree: 86%
+source-wordcount: '464'
+ht-degree: 88%
 
 ---
 
 # Extension [!DNL Demandbase] {#demandbase-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Get [!DNL Demandbase] Informations sur les comptes B2B directement dans Adobe Analytics, dans lesquelles vous pouvez segmenter le trafic et le comportement par secteur industriel, par chiffre d’affaires et par vos comptes cibles. Cette présentation à partir du compte fournit des informations uniques sur l’engagement, la conversion et la provenance des visiteurs qui vous rapportent le plus.
+Obtenez des [!DNL Demandbase] informations sur les comptes B2B directement dans Adobe Analytics, où vous pouvez segmenter le trafic et le comportement par secteur industriel, par chiffre d’affaires et par vos comptes cibles. Cette présentation à partir du compte fournit des informations uniques sur l’engagement, la conversion et la provenance des visiteurs qui vous rapportent le plus.
 
-[!DNL Demandbase] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101605.html).
+[!DNL Demandbase] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101605.html).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Demandbase] extension :
+Pour installer l’extension [!DNL Demandbase], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

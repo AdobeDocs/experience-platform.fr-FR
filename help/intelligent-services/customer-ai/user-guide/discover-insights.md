@@ -7,8 +7,8 @@ description: Ce document sert de guide pour interagir avec les informations d’
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
-source-wordcount: '2079'
-ht-degree: 31%
+source-wordcount: '2098'
+ht-degree: 27%
 
 ---
 
@@ -20,11 +20,11 @@ Ce document sert de guide pour interagir avec les informations d’instance de s
 
 ## Prise en main
 
-Pour utiliser les informations relatives à Customer AI, vous devez avoir à disposition une instance de service dont l’état d’exécution est réussi. Pour créer une nouvelle instance de service, rendez-vous sur [Configuration d’une instance Customer AI](./configure.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
+Pour utiliser les informations relatives à Customer AI, vous devez avoir à disposition une instance de service dont l’état d’exécution est réussi. Pour créer une instance de service, rendez-vous sur [Configuration d’une instance Customer AI](./configure.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
 
 ## Présentation de l’instance de service
 
-Dans le [!DNL Adobe Experience Platform] Interface utilisateur, sélectionnez **[!UICONTROL Services]** dans le volet de navigation de gauche. Le navigateur *Services* apparaît et affiche les services intelligents disponibles. Dans le conteneur de Customer AI, sélectionnez **[!UICONTROL Ouvrir]**.
+Dans l’interface utilisateur de [!DNL Adobe Experience Platform], sélectionnez **[!UICONTROL Services]** dans le volet de navigation de gauche. Le navigateur *Services* apparaît et affiche les services intelligents disponibles. Dans le conteneur de Customer AI, sélectionnez **[!UICONTROL Ouvrir]**.
 
 ![Accès à votre instance](../images/insights/navigate-to-service.png)
 
@@ -32,7 +32,7 @@ La page de service de Customer AI s’affiche. Cette page répertorie les instan
 
 >[!NOTE]
 >
->Seules les instances de service ayant réussi des exécutions de notation ont des informations.
+>Seules les instances de service ayant réussi des exécutions de notation ont des insights.
 
 ![Création d’une instance](../images/insights/dashboard.png)
 
@@ -40,9 +40,9 @@ Sélectionnez un nom d’instance de service à commencer.
 
 ![Création d’une instance](../images/insights/click-the-name.png)
 
-Ensuite, la page d’insights de cette instance de service s’affiche avec l’option de sélection **[!UICONTROL Derniers scores]** ou **[!UICONTROL Synthèse des performances]**. Onglet par défaut **[!UICONTROL Derniers scores]** fournit des visualisations de vos données. Les visualisations et ce que vous pouvez faire avec ces données sont expliqués plus en détail dans ce guide.
+Ensuite, la page des insights de cette instance de service s’affiche avec l’option de sélectionner **[!UICONTROL Latest scores]** ou **[!UICONTROL Performance summary]**. L’onglet par défaut **[!UICONTROL Derniers scores]** fournit des visualisations de vos données. Les visualisations et ce que vous pouvez faire avec ces données sont expliqués plus en détail dans ce guide.
 
-La variable **[!UICONTROL Synthèse des performances]** affiche les taux de perte ou de conversion réels pour chaque compartiment de propension. Pour en savoir plus, consultez la section sur [mesures de synthèse des performances](#performance-metrics).
+L’onglet **[!UICONTROL Synthèse des performances]** affiche les taux d’attrition ou de conversion réels pour chaque compartiment de propension. Pour en savoir plus, consultez la section sur les [mesures de résumé des performances](#performance-metrics).
 
 ![page de configuration](../images/insights/landing_page_insights.png)
 
@@ -54,40 +54,40 @@ Il existe deux manières d’afficher les détails de l’instance de service : 
 
 Pour afficher un aperçu des détails de l’instance de service dans le tableau de bord, sélectionnez un conteneur d’instance de service, en évitant le lien hypertexte associé au nom. Cela ouvre un rail droit qui fournit des détails supplémentaires. Les contrôles contiennent les éléments suivants :
 
-- **[!UICONTROL Modifier]**: sélection **[!UICONTROL Modifier]** permet de modifier une instance de service existante. Vous pouvez modifier le nom, la description et la fréquence de notation de l’instance.
-- **[!UICONTROL Cloner]**: sélection **[!UICONTROL Cloner]** copie la configuration de l’instance de service actuellement sélectionnée. Vous pouvez ensuite modifier le workflow pour effectuer des ajustements mineurs et le renommer en nouvelle instance.
-- **[!UICONTROL Supprimer]**: vous pouvez supprimer une instance de service, y compris les exécutions historiques.
-- **[!UICONTROL Source de données]**: lien vers le jeu de données utilisé par cette instance.
-- **[!UICONTROL Fréquence d’exécution]**: fréquence d’exécution d’une notation et moment auquel.
-- **[!UICONTROL Définition de score]**: aperçu rapide de l’objectif que vous avez configuré pour cette instance.
+- **[!UICONTROL Modifier]** : la sélection de **[!UICONTROL Modifier]** vous permet de modifier une instance de service existante. Vous pouvez modifier le nom, la description et la fréquence de notation de l’instance.
+- **[!UICONTROL Clone]** : la sélection de **[!UICONTROL Clone]** copie la configuration de l’instance de service actuellement sélectionnée. Vous pouvez ensuite modifier le workflow pour effectuer des ajustements mineurs et le renommer en nouvelle instance.
+- **[!UICONTROL Supprimer]** : vous pouvez supprimer une instance de service, y compris toutes les exécutions historiques.
+- **[!UICONTROL Source de données]** : lien vers le jeu de données utilisé par cette instance.
+- **[!UICONTROL Fréquence d’exécution]** : fréquence à laquelle une opération de notation a lieu et quand.
+- **[!UICONTROL Définition de score]** : aperçu rapide de l’objectif que vous avez configuré pour cette instance.
 
 ![](../images/user-guide/service-instance-panel.png)
 
 >[!NOTE]
 >
->En cas d’échec d’une exécution de notation, vous recevez un message d’erreur. Le message d’erreur est répertorié sous les **détails de la dernière exécution** dans le rail droit, qui est visible uniquement en cas d’exécutions ayant échoué.
+>En cas d’échec d’une opération de notation, un message d’erreur est fourni. Le message d’erreur est répertorié sous les **détails de la dernière exécution** dans le rail droit, qui est visible uniquement en cas d’exécutions ayant échoué.
 
 ![message d’échec d’exécution](../images/insights/failed-run.png)
 
 ### Afficher la liste déroulante d’informations supplémentaires
 
-La deuxième façon d’afficher des détails supplémentaires sur une instance de service se trouve sur la page des informations. Sélectionner **[!UICONTROL Afficher plus]** dans le coin supérieur droit pour remplir une liste déroulante. Les détails sont répertoriés, tels que la définition du score, la date de création, le type de propension et les jeux de données utilisés. Pour plus d’informations sur l’une des propriétés répertoriées, consultez la page [Configuration d’une instance Customer AI](./configure.md).
+La deuxième façon d’afficher des détails supplémentaires sur une instance de service se trouve sur la page des informations. Sélectionnez **[!UICONTROL Afficher plus]** en haut à droite pour remplir une liste déroulante. Les détails sont répertoriés, tels que la définition du score, la date de création, le type de propension et les jeux de données utilisés. Pour plus d’informations sur l’une des propriétés répertoriées, consultez la page [Configuration d’une instance Customer AI](./configure.md).
 
 ![afficher plus](../images/insights/landing-show-more.png)
 
 ### Fenêtre contextuelle d’aperçu du jeu de données Customer AI
 
-Si plusieurs jeux de données sont utilisés par Customer AI, un lien hypertexte intitulé **[!UICONTROL Multiple]** suivi du nombre de jeux de données entre crochets `()` est fournie.
+Si plusieurs jeux de données sont utilisés par Customer AI, un lien hypertexte intitulé **[!UICONTROL Multiple]** suivi du nombre de jeux de données entre crochets `()` est fourni.
 
 ![plusieurs jeux de données](../images/insights/insights-multi-datasets.png)
 
-La sélection du lien de plusieurs jeux de données ouvre la fenêtre contextuelle d’aperçu des jeux de données Customer AI. Chaque couleur de l’aperçu représente un jeu de données tel qu’affiché par la clé de couleur située à gauche des colonnes du jeu de données. Dans cet exemple, vous pouvez voir que **Jeu de données 1** contient la variable `PROP1` colonne .
+La sélection du lien de plusieurs jeux de données ouvre la fenêtre contextuelle d’aperçu des jeux de données Customer AI. Chaque couleur de l’aperçu représente un jeu de données tel qu’affiché par la clé de couleur située à gauche des colonnes du jeu de données. Dans cet exemple, vous pouvez constater que seul le **jeu de données 1** contient la colonne `PROP1`.
 
 ![afficher plus](../images/insights/dataset-preview.png)
 
 ### Modification d’une instance
 
-Pour modifier une instance, sélectionnez **[!UICONTROL Modifier]** dans le volet de navigation supérieur droit.
+Pour modifier une instance, sélectionnez **[!UICONTROL Edit]** dans le volet de navigation supérieur droit.
 
 ![cliquez sur le bouton Modifier](../images/insights/edit-button.png)
 
@@ -97,11 +97,11 @@ La boîte de dialogue de modification s’affiche, vous permettant de modifier l
 
 ### Actions supplémentaires
 
-Le bouton **[!UICONTROL Actions supplémentaires]** se trouve dans la navigation en haut à droite en regard de **[!UICONTROL Modifier]**. Sélection **[!UICONTROL Autres actions]** ouvre une liste déroulante qui vous permet de sélectionner l’une des opérations suivantes :
+Le bouton **[!UICONTROL Actions supplémentaires]** se trouve dans la navigation en haut à droite en regard de **[!UICONTROL Modifier]**. Sélectionner **[!UICONTROL Autres actions]** ouvre une liste déroulante qui vous permet de sélectionner l’une des opérations suivantes :
 
-- **[!UICONTROL Cloner]**: sélection **[!UICONTROL Cloner]** copie la configuration de l’instance de service. Vous pouvez ensuite modifier le workflow pour effectuer des ajustements mineurs et le renommer en nouvelle instance.
+- **[!UICONTROL Clone]** : si vous sélectionnez **[!UICONTROL Clone]**, l’instance de service configurée est copiée. Vous pouvez ensuite modifier le workflow pour effectuer des ajustements mineurs et le renommer en nouvelle instance.
 - **[!UICONTROL Supprimer]** : supprime l’instance.
-- **[!UICONTROL Accéder aux scores]**: sélection **[!UICONTROL Accéder aux scores]** ouvre une boîte de dialogue fournissant un lien vers la fonction [téléchargement de scores pour Customer AI](./download-scores.md) tutoriel, la boîte de dialogue fournit également l’identifiant de jeu de données requis pour effectuer des appels API.
+- **[!UICONTROL Accéder aux scores]** : si vous sélectionnez **[!UICONTROL Accéder aux scores]**, une boîte de dialogue s’ouvre. Elle contient un lien vers le tutoriel [ sur le téléchargement des scores pour Customer AI](./download-scores.md). La boîte de dialogue fournit également l’identifiant du jeu de données requis pour effectuer des appels API.
 - **[!UICONTROL Afficher l’historique d’exécution]** : fait apparaître une boîte de dialogue contenant une liste des exécutions de notation associées à l’instance de service.
 
 ![actions supplémentaires](../images/insights/more-actions.png)
@@ -122,7 +122,7 @@ Vous pouvez survoler n’importe quelle couleur de l’anneau pour afficher des 
 
 ## Distribution des scores
 
-La carte **[!UICONTROL Distribution des scores]** vous donne un résumé visuel de la population en fonction du score. Les couleurs présentes sur la carte [!UICONTROL Distribution des scores] représentent le type de score de propension généré. Passez la souris sur l’une des distributions de notation pour obtenir le nombre exact appartenant à cette distribution.
+La carte **[!UICONTROL Distribution des scores]** vous donne un résumé visuel de la population en fonction du score. Les couleurs que vous voyez dans la carte [!UICONTROL Distribution des scores] représentent le type de score de propension généré. Passez la souris sur l’une des distributions de notation pour obtenir le nombre exact appartenant à cette distribution.
 
 ![distribution des scores](../images/insights/distribution-of-scores.png)
 
@@ -146,21 +146,21 @@ Vous pouvez constater que les profils présentant une faible propension à la co
 
 ### Création d’un segment
 
-En sélectionnant le **[!UICONTROL Créer un segment]** dans l’un des compartiments de propension faible, moyenne et élevée, vous redirige vers le créateur de segments.
+Si vous sélectionnez le bouton **[!UICONTROL Créer un segment]** dans l’un des compartiments de propension faible, moyenne et élevée, vous redirigez vers le créateur de segments.
 
 >[!NOTE]
 >
->La variable **[!UICONTROL Créer un segment]** n’est disponible que si Real-time Customer Profile est activé pour le jeu de données. Pour plus d’informations sur l’activation de Real-time Customer Profile, consultez la page [Présentation de Real-Time Customer Profile](../../../rtcdp/overview.md).
+>Le bouton **[!UICONTROL Créer un segment]** n’est disponible que si Real-Time Customer Profile est activé pour le jeu de données. Pour plus d’informations sur l’activation de Real-Time Customer Profile, consultez la [présentation de Real-Time Customer Profile](../../../rtcdp/overview.md).
 
 ![Cliquez sur Créer un segment](../images/insights/influential-factors-create-segment.png)
 
 ![Création d’un segment](../images/insights/create-segment.png)
 
-Le créateur de segments permet de définir un segment. Lorsque vous sélectionnez **[!UICONTROL Créer un segment]** sur la page Statistiques , Customer AI ajoute automatiquement les informations des compartiments sélectionnés au segment. Pour terminer la création de votre segment, il vous suffit de renseigner les conteneurs **Nom** et **Description** situés dans le rail droit de l’interface utilisateur du créateur de segments. Après avoir donné un nom et une description au segment, sélectionnez **[!UICONTROL Enregistrer]** en haut à droite.
+Le créateur de segments permet de définir un segment. Lorsque vous sélectionnez **[!UICONTROL Créer un segment]** sur la page Statistiques, Customer AI ajoute automatiquement les informations des compartiments sélectionnés au segment. Pour terminer la création de votre segment, il vous suffit de renseigner les conteneurs **Nom** et **Description** situés dans le rail droit de l’interface utilisateur du créateur de segments. Après avoir donné un nom et une description au segment, sélectionnez **[!UICONTROL Enregistrer]** en haut à droite.
 
 >[!NOTE]
 >
->Puisque les scores de propension sont écrits dans chaque profil individuel, ils sont disponibles dans le créateur de segments comme tout autre attribut de profil. Lorsque vous accédez au créateur de segments pour créer des segments, vous pouvez voir tous les scores de propension sous le Customer AI de votre espace de noms.
+>Puisque les scores de propension sont écrits dans le profil individuel, ils sont disponibles dans le créateur de segments comme tout autre attribut de profil. Lorsque vous accédez au créateur de segments pour créer des segments, vous pouvez voir tous les scores de propension sous le Customer AI de votre espace de noms.
 
 ![Remplissage de segment](../images/insights/segment-saving.png)
 
@@ -170,7 +170,7 @@ Pour afficher votre nouveau segment dans l’interface utilisateur de Platform, 
 
 ## Performance historique {#historical-performance}
 
-La variable **[!UICONTROL Synthèse des performances]** affiche les taux d’attrition ou de conversion réels, séparés dans chacun des compartiments de propension notés par Customer AI.
+L’onglet **[!UICONTROL Synthèse des performances]** affiche les taux d’attrition ou de conversion réels, séparés dans chacun des compartiments de propension notés par Customer AI.
 
 ![Onglet Synthèse des performances](../images/insights/summary_tab.png)
 
@@ -180,15 +180,15 @@ Le survol des lignes avec le curseur affiche la date et le taux réel/attendu po
 
 ![Exemple de compartiment](../images/insights/churn_tab.png)
 
-Vous pouvez filtrer la période pour les taux prévus et réels affichés. Sélectionnez la variable **icône de calendrier** ![icon](../images/insights/calendar_icon.png)sélectionnez ensuite une nouvelle période. Les résultats de chacun des compartiments sont mis à jour pour s’afficher dans la nouvelle période.
+Vous pouvez filtrer la période pour les taux prévus et réels affichés. Sélectionnez l&#39;**icône de calendrier** ![icône](../images/insights/calendar_icon.png) , puis sélectionnez une nouvelle plage de dates. Les résultats de chacun des compartiments sont mis à jour pour s’afficher dans la nouvelle période.
 
 ![Sélecteur de date](../images/insights/date_selector.png)
 
 ### Taux d’exécution de notation individuels
 
-La moitié inférieure de la **[!UICONTROL Synthèse des performances]** affiche les résultats de chaque opération de notation. Sélectionnez la date de liste déroulante en haut à droite pour afficher les résultats d’une autre opération de notation.
+La moitié inférieure de l’onglet **[!UICONTROL Résumé des performances]** affiche les résultats de chaque opération de notation individuelle. Sélectionnez la date de liste déroulante en haut à droite pour afficher les résultats d’une autre opération de notation.
 
-Selon que vous prédites une perte de clientèle ou une conversion, la variable [!UICONTROL Distribution des scores] Le graphique affiche la distribution des profils générés/convertis et non pas générés/non convertis à chaque incrément.
+Selon que vous prédites une perte ou une conversion, le graphique [!UICONTROL Distribution des scores] affiche la distribution des profils générés/convertis et non pas générés/non convertis dans chaque incrément.
 
 ![notation individuelle](../images/insights/scoring_tab.png)
 
@@ -198,7 +198,7 @@ Outre le suivi des résultats prévus et réels au fil du temps sur l’onglet P
 
 ### Graphique de l’effet élévateur
 
-![graphique d’effet](../images/user-guide/lift-chart.png)
+![graphique d’effet élévateur](../images/user-guide/lift-chart.png)
 
 Le graphique de l’effet élévateur mesure l’amélioration de l’utilisation d’un modèle prédictif au lieu du ciblage aléatoire.
 
@@ -221,7 +221,7 @@ Les indicateurs de modèle de haute qualité incluent :
 
 ### AUC (surface sous la courbe)
 
-L’AUC reflète la force de la relation entre le classement par score et l’occurrence de l’objectif prévu. Un **AUC** de 0,5 signifie que le modèle n’est pas meilleur qu’une estimation aléatoire. Un **AUC** de 1 signifie que le modèle peut parfaitement prédire qui prendra l’action appropriée.
+L’AUC reflète la force de la relation entre le classement par score et l’occurrence de l’objectif prévu. Un **AUC** de 0.5 signifie que le modèle n’est pas meilleur qu’une estimation aléatoire. Un **AUC** de 1 signifie que le modèle peut parfaitement prédire qui prendra l’action appropriée.
 
 ## Étapes suivantes
 

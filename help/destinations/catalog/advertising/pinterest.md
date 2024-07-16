@@ -5,7 +5,7 @@ exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
 source-git-commit: 8a48ce4185f8044b8563d0435dcec17030b90830
 workflow-type: tm+mt
 source-wordcount: '722'
-ht-degree: 43%
+ht-degree: 44%
 
 ---
 
@@ -21,20 +21,20 @@ Créez des audiences à partir des listes de clients, des personnes qui ont visi
 
 ## Conditions préalables {#prerequisites}
 
-* L’utilisateur doit s’authentifier auprès d’un compte Pinterest ayant accès au compte publicitaire auquel il souhaite ajouter une audience. Vous trouverez des informations détaillées sur le partage de comptes publicitaires [here](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). Plus précisément, l’utilisateur a besoin des niveaux d’accès &quot;audience&quot;.
-* Vous trouverez des détails sur les formats d’identité de la liste de clients [here](https://help.pinterest.com/en/business/article/audience-targeting).
+* L’utilisateur doit s’authentifier auprès d’un compte Pinterest ayant accès au compte publicitaire auquel il souhaite ajouter une audience. Vous trouverez des détails sur le partage de comptes publicitaires [ici](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). Plus précisément, l’utilisateur a besoin des niveaux d’accès &quot;audience&quot;.
+* Vous trouverez des détails sur les formats d&#39;identité de la liste de clients [ici](https://help.pinterest.com/en/business/article/audience-targeting).
 
 ## Identités prises en charge {#supported-identities}
 
-La variable [!DNL Pinterest Customer List] destination prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
+La destination [!DNL Pinterest Customer List] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
-Dans le [étape de mappage](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) du workflow d’activation de destination, faites correspondre les identités de votre choix au champ cible. *pinterest_audience*. Les identités sont distinguées et résolues lors de l’ingestion de données dans Pinterest.
+Dans l’ [étape de mappage](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) du processus d’activation de destination, mappez les identités de votre choix au champ cible *pinterest_audience*. Les identités sont distinguées et résolues lors de l’ingestion de données dans Pinterest.
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | Faites correspondre la variable *GAID* espace de noms d’identité source vers le champ d’identité cible *pinterest_audience*. Les identités sont distinguées et résolues lors de l’ingestion de données dans Pinterest. |
-| IDFA | [!DNL Apple ID for Advertisers] | Faites correspondre la variable *IDFA* espace de noms d’identité source vers le champ d’identité cible *pinterest_audience*. Les identités sont distinguées et résolues lors de l’ingestion de données dans Pinterest. |
-| EMAIL | Adresses électroniques (texte en clair ou haché avec l’algorithme SHA256) | Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. <br> Faites correspondre la variable *Email* ou *Email_LC_SHA256* espace de noms d’identité source vers le champ d’identité cible *pinterest_audience*. |
+| GAID | [!DNL Google Advertising ID] | Mappez l’espace de noms de l’identité source *GAID* au champ d’identité cible *pinterest_audience*. Les identités sont distinguées et résolues lors de l’ingestion de données dans Pinterest. |
+| IDFA | [!DNL Apple ID for Advertisers] | Mappez l’espace de noms de l’identité source *IDFA* au champ d’identité cible *pinterest_audience*. Les identités sont distinguées et résolues lors de l’ingestion de données dans Pinterest. |
+| EMAIL | Adresses électroniques (texte en clair ou haché avec l’algorithme SHA256) | Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. <br> Mappez l&#39;espace de noms d&#39;identité source *Email* ou *Email_LC_SHA256* avec le champ d&#39;identité cible *pinterest_audience*. |
 
 {style="table-layout:auto"}
 
@@ -51,7 +51,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 ## Cas d’utilisation {#use-cases}
 
-Pour mieux comprendre comment et à quel moment utiliser la variable [!DNL Pinterest Customer List] destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
+Pour vous aider à mieux comprendre comment et à quel moment utiliser la destination [!DNL Pinterest Customer List], voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 
 ### Cas d’utilisation 1
 
@@ -61,7 +61,7 @@ Créez des audiences à partir des listes de clients, des personnes qui ont visi
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **** et des **** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
@@ -71,7 +71,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Identifiant de compte publicitaire]**: votre identifiant publicitaire Pinterest.
+* **[!UICONTROL Identifiant du compte publicitaire]** : votre identifiant publicitaire Pinterest.
 
 ### Activer les alertes {#enable-alerts}
 
@@ -83,8 +83,8 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter *identités*, vous avez besoin de la fonction **[!UICONTROL Affichage du graphique des identités]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **** et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous avez besoin de l&#39;autorisation **[!UICONTROL Afficher le graphique d&#39;identités]** [ ](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -94,7 +94,7 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-Reportez-vous à [Page Centre d’aide pinterest](https://help.pinterest.com/en/business/article/audience-targeting) pour plus d’informations.
+Pour plus d’informations, reportez-vous à la [page du Centre d’aide de Pinterest](https://help.pinterest.com/en/business/article/audience-targeting) .
 
 +++ Afficher le journal des modifications
 

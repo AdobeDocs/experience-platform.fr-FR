@@ -18,7 +18,7 @@ Ce tutoriel décrit les étapes à suivre pour récupérer les données d’une 
 
 >[!NOTE]
 >
->* Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source CRM. Si vous ne disposez pas de cet identifiant, reportez-vous au [présentation des sources](../../../home.md#customer-relationship-management) pour une liste de sources CRM avec lesquelles vous pouvez créer une connexion de base.
+>* Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source CRM. Si vous ne disposez pas de cet identifiant, consultez la [présentation des sources](../../../home.md#customer-relationship-management) pour obtenir la liste des sources CRM avec lesquelles vous pouvez créer une connexion de base.
 >* Pour que l’Experience Platform puisse ingérer des données, les fuseaux horaires de toutes les sources par lots basées sur un tableau doivent être configurés en UTC.
 
 ## Prise en main
@@ -184,7 +184,7 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | `$id` du schéma XDM cible. |
 | `data.schema.version` | La version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full+json;version=1`, qui renvoie la dernière version mineure du schéma. |
-| `params.dataSetId` | Identifiant du jeu de données cible généré à l’étape précédente. **Remarque**: vous devez fournir un identifiant de jeu de données valide lors de la création d’une connexion cible. Un identifiant de jeu de données non valide entraînera une erreur. |
+| `params.dataSetId` | Identifiant du jeu de données cible généré à l’étape précédente. **Remarque** : vous devez fournir un identifiant de jeu de données valide lors de la création d’une connexion cible. Un identifiant de jeu de données non valide entraînera une erreur. |
 | `connectionSpec.id` | Identifiant de spécification de connexion utilisé pour se connecter au lac de données. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 ```json

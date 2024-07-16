@@ -23,7 +23,7 @@ Chaque propriété de balise dans Adobe Experience Platform requiert que les e
 *  du service d’identification des visiteurs Experience Cloud
 * Extension Core
 
-Utilisez la variable [&quot;Incorporer un lecteur à l’aide d’un \&lt;iframe> tag&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) extrait de code provenant de la documentation destinée aux développeurs Google située dans le HTML de chaque page web sur laquelle un lecteur vidéo doit être rendu.
+Utilisez le fragment de code [&quot;Incorporer un lecteur à l’aide d’une balise \&lt;iframe\>&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) de la documentation du développeur Google à l’HTML de chaque page web sur laquelle un lecteur vidéo doit être rendu.
 
 Cette extension, la version 2.0.1, prend en charge l’incorporation d’une ou de plusieurs vidéos YouTube sur une seule page web via l’insertion d’un attribut `id` avec une valeur unique dans la balise de script iframe, et l’ajout de `enablejsapi=1` et `rel=0` à la fin de la valeur de l’attribut `src`, si le code ne s’y trouve pas déjà. Par exemple :
 
@@ -75,18 +75,18 @@ Une règle de balise peut être définie pour chaque événement vidéo (les sep
 Les règles comportent trois actions :
 
 * **Définir des variables :** définissez les variables Adobe Analytics (les faire correspondre à tous les éléments de données inclus ou à certains d’entre eux).
-* **Envoyer la balise :** Envoyez la balise Adobe Analytics en tant qu’appel de suivi de lien personnalisé et indiquez une valeur &quot;Nom du lien&quot;.
+* **Envoyer la balise :** Envoyez la balise Adobe Analytics en tant qu’appel de suivi des liens personnalisé et indiquez une valeur &quot;Nom du lien&quot;.
 * **Effacer les variables :** effacez les variables Adobe Analytics.
 
 ## Exemple de règle de balise pour « Vidéo lancée »
 
 Les objets dʼextension vidéo suivants doivent être inclus.
 
-* **Événements**: &quot;Vidéo lancée&quot; (cet événement déclenche la règle lorsque le visiteur lance une vidéo YouTube.)
+* **Événements** : &quot;Vidéo lancée&quot; (cet événement déclenche la règle lorsque le visiteur lance une vidéo YouTube.)
 
 * **Condition :** aucune
 
-* **Actions**: utilisez la variable **Extension Analytics** à l’action &quot;Définir des variables&quot;, pour mapper :
+* **Actions** : utilisez l’ **extension Analytics** pour définir l’action &quot;Définir des variables&quot;, pour mapper :
 
    * L’événement pour Début vidéo,
    * Une valeur prop/eVar pour l’élément de données Durée de la vidéo
@@ -94,7 +94,7 @@ Les objets dʼextension vidéo suivants doivent être inclus.
    * Une valeur prop/eVar pour l’élément de données Nom de la vidéo
    * Une valeur prop/eVar pour l’élément de données URL de la vidéo
 
-  Insérez ensuite l’action &quot;Envoyer la balise&quot; (`s.tl`) avec le nom du lien &quot;video start&quot;, suivi d’une action &quot;Clear Variables&quot; (Effacer les variables).
+  Insérez ensuite l’action &quot;Envoyer la balise&quot; (`s.tl`) avec le nom de lien &quot;Début vidéo&quot;, suivi d’une action &quot;Effacer les variables&quot;.
 
 >[!TIP]
 > 
@@ -114,4 +114,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-Pour plus d’informations sur la manière de créer et d’exploiter efficacement les éléments de données dans Platform, lisez le [éléments de données](../../../ui/managing-resources/data-elements.md) la documentation.
+Pour plus d’informations sur la manière de créer et d’exploiter efficacement des éléments de données dans Platform, consultez la documentation [ sur les éléments de données](../../../ui/managing-resources/data-elements.md).

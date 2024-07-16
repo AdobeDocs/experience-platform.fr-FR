@@ -6,18 +6,18 @@ description: Ce document contient des informations supplémentaires pour vous ai
 exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
 source-git-commit: 24db94b959d1bad925af1e8e9cbd49f20d9a46dc
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 77%
+source-wordcount: '459'
+ht-degree: 76%
 
 ---
 
-# [!DNL Catalog Service] Annexe du guide d’API
+# [!DNL Catalog Service] annexe du guide de l’API
 
-Ce document contient des informations supplémentaires pour vous aider à utiliser les [!DNL Catalog] API.
+Ce document contient des informations supplémentaires pour vous aider à travailler avec l’API [!DNL Catalog].
 
 ## Affichage d’objets interconnectés {#view-interrelated-objects}
 
-Certains [!DNL Catalog] les objets peuvent être interconnectés avec d’autres [!DNL Catalog] objets. Tout champ précédé du préfixe `@` dans les payloads de réponse indique les objets associés. Les valeurs de ces champs prennent la forme d’un URI qui peut être utilisé dans une requête GET distincte pour récupérer les objets associés qu’ils représentent.
+Certains objets [!DNL Catalog] peuvent être interconnectés avec d’autres objets [!DNL Catalog]. Tout champ précédé du préfixe `@` dans les payloads de réponse indique les objets associés. Les valeurs de ces champs prennent la forme d’un URI qui peut être utilisé dans une requête GET distincte pour récupérer les objets associés qu’ils représentent.
 
 L’exemple de jeu de données renvoyé dans le document sur la [recherche d’un jeu de données spécifique](look-up-object.md) contient un champ `files` avec la valeur URI suivante : `"@/datasetFiles?datasetId={DATASET_ID}"`. Le contenu du champ `files` peut être visualisé en utilisant cet URI comme chemin d’accès à une nouvelle requête GET.
 
@@ -107,6 +107,6 @@ Il peut arriver que vous souhaitiez valider un objet sans enregistrer les inform
 
 ## Compactage des données
 
-La compression est une [!DNL Experience Platform] qui fusionne les données de petits fichiers en fichiers plus volumineux sans modifier les données. Pour des raisons de performances, il est parfois bénéfique de combiner un ensemble de petits fichiers en fichiers plus volumineux afin de fournir un accès plus rapide aux données lors de l’interrogation.
+Compaction est un service [!DNL Experience Platform] qui fusionne les données de petits fichiers en fichiers plus volumineux sans modifier les données. Pour des raisons de performances, il est parfois bénéfique de combiner un ensemble de petits fichiers en fichiers plus volumineux afin de fournir un accès plus rapide aux données lors de l’interrogation.
 
-Lorsque les fichiers d’un lot ingéré ont été compactés, leur [!DNL Catalog] est mis à jour à des fins de surveillance.
+Lorsque les fichiers d’un lot ingéré ont été compactés, son objet [!DNL Catalog] associé est mis à jour à des fins de surveillance.

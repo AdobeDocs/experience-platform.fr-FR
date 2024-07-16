@@ -4,8 +4,8 @@ title: Spécifications de modèle pour les destinations créées avec Destinatio
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 93%
+source-wordcount: '511'
+ht-degree: 92%
 
 ---
 
@@ -17,7 +17,7 @@ Dans une spécification de modèle, vous pouvez définir comment transformer les
 
 Les spécifications de modèle font partie de la configuration du serveur de destination pour les destinations en temps réel (streaming).
 
-Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la section [options de configuration](../configuration-options.md) ou consulter le guide sur la manière d’effectuer [utiliser la Destination SDK pour configurer une destination de diffusion en continu ;](../../guides/configure-destination-instructions.md#create-server-template-configuration).
+Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la documentation [options de configuration](../configuration-options.md) ou consultez le guide sur la [ utilisation de la Destination SDK pour configurer une destination de diffusion en continu](../../guides/configure-destination-instructions.md#create-server-template-configuration).
 
 Vous pouvez configurer les spécifications du modèle pour la destination via le point d’entrée `/authoring/destination-servers`. Pour obtenir des exemples d’appels API détaillés dans lesquels vous pouvez configurer les composants affichés sur cette page, consultez les pages de référence de l’API suivantes.
 

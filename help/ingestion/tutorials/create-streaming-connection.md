@@ -18,4 +18,4 @@ L’enregistrement d’une connexion en continu est requis pour commencer la dif
 
 Après avoir enregistré une connexion en continu, vous obtiendrez, en tant que producteur des données, une URL unique que vous pourrez utiliser pour diffuser en continu des données vers Platform.
 
-Pour savoir comment créer une connexion en continu authentifiée, veuillez lire le [Guide de l’API source HTTP](../../sources/tutorials/api/create/streaming/http.md).
+Pour savoir comment créer une connexion en continu authentifiée, consultez le [guide de l’API source HTTP ](../../sources/tutorials/api/create/streaming/http.md).

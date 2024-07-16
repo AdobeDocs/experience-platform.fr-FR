@@ -6,7 +6,7 @@ description: Ce document reprend les étapes nécessaires à la gestion des dét
 exl-id: ac9c2213-f2fb-44be-9334-87fada8a4717
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '293'
 ht-degree: 98%
 
 ---
@@ -27,7 +27,7 @@ Le menu **[!UICONTROL Activer les services]** vous permet de modifier l’accès
 
 - [!DNL Data Science Workspace]
 - [!DNL Query Service]
-- [!DNL Adobe Real-Time Customer Data Platform] Interface utilisateur (pour Real-Time CDP uniquement)
+- Interface utilisateur de [!DNL Adobe Real-Time Customer Data Platform] (pour Real-Time CDP uniquement)
 - Interface utilisateur B2B
 
 Cliquez sur le bouton à droite d’un service particulier pour l’activer ou le désactiver. Vous pouvez également cocher la case **[!UICONTROL Tout activer]** pour activer ou désactiver tous les services répertoriés.

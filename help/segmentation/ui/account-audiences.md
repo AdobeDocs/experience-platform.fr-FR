@@ -15,53 +15,53 @@ ht-degree: 30%
 
 >[!AVAILABILITY]
 >
->Les audiences de compte ne sont disponibles que dans la variable [Édition B2B de Real-Time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) et la variable [Édition B2P de Real-Time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
+>Les audiences de compte ne sont disponibles que dans l’[édition B2B de Real-Time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) et l’[ édition B2P de Real-Time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
 
 Grâce à la segmentation des comptes, Adobe Experience Platform vous permet d’offrir une expérience de segmentation marketing simplifiée et conviviale, allant des audiences basées sur les personnes aux audiences basées sur les comptes.
 
-Les audiences de compte peuvent être utilisées comme entrée pour les destinations basées sur un compte, ce qui vous permet de cibler les personnes contenues dans ces comptes dans les services en aval. Par exemple, vous pouvez utiliser des audiences basées sur un compte pour récupérer les enregistrements de tous les comptes qui le font. **not** avoir des coordonnées avec le titre de chef des opérations ou de directeur du marketing.
+Les audiences de compte peuvent être utilisées comme entrée pour les destinations basées sur un compte, ce qui vous permet de cibler les personnes contenues dans ces comptes dans les services en aval. Par exemple, vous pouvez utiliser des audiences basées sur un compte pour récupérer les enregistrements de tous les comptes qui n’ont **pas** ayant des informations de contact pour toute personne ayant le titre de chef des opérations (COO) ou chef du marketing (CMO).
 
 ## Terminologie {#terminology}
 
 Avant de commencer à utiliser les audiences de compte, veuillez examiner les différences entre les différents types d’audience :
 
-- **Audiences du compte**: une audience de compte est une audience créée à l’aide de **account** données de profil. Les données de profil de compte peuvent être utilisées pour créer des audiences qui ciblent les personnes dans les comptes en aval. Pour plus d’informations sur les profils de compte, veuillez lire la section [présentation du profil de compte](../../rtcdp/accounts/account-profile-overview.md).
-- **Audiences de personnes**: une audience de type personne est une audience créée à l’aide de **client** données de profil. Les données de profil client peuvent être utilisées pour créer des audiences qui ciblent la clientèle de votre entreprise. Pour plus d’informations sur les profils client, veuillez lire la section [Présentation de Real-Time Customer Profile](../../profile/home.md).
-- **Public potentiel**: une audience de prospect est une audience créée à l’aide de **prospect** données de profil. Les données de profil de prospects peuvent être utilisées pour créer des audiences à partir d’utilisateurs non authentifiés. Pour plus d’informations sur les profils de prospect, veuillez lire la section [présentation du profil de prospect](../../profile/ui/prospect-profile.md).
+- **Audiences du compte** : une audience de compte est une audience créée à l’aide des données de profil **account**. Les données de profil de compte peuvent être utilisées pour créer des audiences qui ciblent les personnes dans les comptes en aval. Pour plus d’informations sur les profils de compte, consultez la [présentation des profils de compte](../../rtcdp/accounts/account-profile-overview.md).
+- **Audiences de personnes** : une audience de personnes est une audience créée à l’aide des données de profil **customer**. Les données de profil client peuvent être utilisées pour créer des audiences qui ciblent la clientèle de votre entreprise. Pour plus d’informations sur les profils client, consultez la [présentation de Real-Time Customer Profile](../../profile/home.md).
+- **Audiences de prospects** : une audience de prospects est une audience qui est créée à l’aide des données de profil **prospect**. Les données de profil de prospects peuvent être utilisées pour créer des audiences à partir d’utilisateurs non authentifiés. Pour plus d’informations sur les profils de prospects, consultez la [présentation des profils de prospects](../../profile/ui/prospect-profile.md).
 
 ## Accès {#access}
 
-Pour accéder aux audiences du compte, sélectionnez **[!UICONTROL Audiences]** dans le **[!UICONTROL Comptes]** .
+Pour accéder aux audiences du compte, sélectionnez **[!UICONTROL Audiences]** dans la section **[!UICONTROL Comptes]** .
 
-![Le bouton Audiences est mis en surbrillance dans la section Comptes .](../images/ui/account-audiences/select.png)
+![Le bouton Audiences est mis en surbrillance dans la section Comptes.](../images/ui/account-audiences/select.png)
 
-La variable [!UICONTROL Parcourir] s’affiche, avec la liste de toutes les audiences de compte pour l’organisation.
+La page [!UICONTROL Parcourir] s’affiche, affichant la liste de toutes les audiences de compte pour l’organisation.
 
-![Les audiences du compte appartenant à l’organisation s’affichent.](../images/ui/account-audiences/browse.png)
+![Les audiences du compte appartenant à l&#39;organisation sont affichées.](../images/ui/account-audiences/browse.png)
 
 Cette vue répertorie des informations sur l’audience, notamment le nom, le nombre de profils, l’origine, l’état du cycle de vie, la date de création et la date de dernière mise à jour.
 
-Vous pouvez également utiliser la fonctionnalité de recherche et de filtrage pour rechercher et trier rapidement des audiences de compte spécifiques. Pour plus d’informations sur cette fonctionnalité, voir [Présentation d’Audience Portal](./audience-portal.md#manage-audiences).
+Vous pouvez également utiliser la fonctionnalité de recherche et de filtrage pour rechercher et trier rapidement des audiences de compte spécifiques. Vous trouverez plus d’informations sur cette fonctionnalité dans la [présentation d’Audience Portal](./audience-portal.md#manage-audiences).
 
 ## Créer une audience {#create}
 
 >[!NOTE]
 >
->Les audiences de compte sont évaluées à l’aide de **batch** et sera évaluée toutes les 24 heures.
+>Les audiences de compte sont évaluées à l’aide de la segmentation **batch** et seront évaluées toutes les 24 heures.
 
-Pour créer une audience de compte, sélectionnez **[!UICONTROL Créer une audience]** sur le [!UICONTROL Parcourir] page.
+Pour créer une audience de compte, sélectionnez **[!UICONTROL Créer une audience]** sur la page [!UICONTROL Parcourir].
 
-![La variable [!UICONTROL Créer une audience] est mis en surbrillance sur la page de navigation de l’audience du compte.](../images/ui/account-audiences/select-create-audience.png)
+![Le bouton [!UICONTROL Créer une audience] est mis en surbrillance sur la page de navigation de l&#39;audience du compte.](../images/ui/account-audiences/select-create-audience.png)
 
-Le créateur de segments s’affiche. Les attributs de compte et les audiences s’affichent dans la barre de navigation de gauche. Sous , [!UICONTROL Attributs] , vous pouvez ajouter des attributs personnalisés et créés par Platform.
+Le créateur de segments s’affiche. Les attributs de compte et les audiences s’affichent dans la barre de navigation de gauche. Sous l’onglet [!UICONTROL Attributs], vous pouvez ajouter des attributs personnalisés et créés par Platform.
 
 ![Le créateur de segments s’affiche. Notez que seuls les attributs et les audiences sont affichés.](../images/ui/account-audiences/segment-builder.png)
 
 Lors de la création d’audiences de compte, notez que les événements sont répertoriés sous **[!UICONTROL Personnes]**, plutôt que d’être leur propre onglet, car ces attributs sont associés à des personnes.
 
-![L’emplacement où trouver les événements, qui se trouve dans la variable [!UICONTROL Personnes] , est mis en surbrillance.](../images/ui/account-audiences/attributes.png)
+![L&#39;emplacement de recherche d&#39;événements, qui se trouve dans le dossier [!UICONTROL People], est mis en surbrillance.](../images/ui/account-audiences/attributes.png)
 
-Sous , [!UICONTROL Audiences] vous pouvez ajouter des audiences basées sur des personnes créées précédemment à partir desquelles créer votre propre audience de compte.
+Sous l’onglet [!UICONTROL Audiences] , vous pouvez ajouter des audiences basées sur des personnes créées précédemment à partir desquelles créer une audience de compte lors de la création de votre propre audience.
 
 ![L’onglet Audiences du créateur de segments est mis en surbrillance.](../images/ui/account-audiences/audiences.png)
 
@@ -75,15 +75,15 @@ Pour plus d’informations sur l’utilisation du créateur de segments, consult
 
 Après avoir créé l’audience de votre compte, vous pouvez activer l’audience vers d’autres services en aval.
 
-Sélectionnez l’audience que vous souhaitez activer, suivie de **[!UICONTROL Activer la destination]**.
+Sélectionnez l’audience que vous souhaitez activer, suivie de **[!UICONTROL Activer à la destination]**.
 
-![La variable [!UICONTROL Activer la destination] est mis en surbrillance dans le menu actions rapides de l’audience sélectionnée.](../images/ui/account-audiences/activate.png)
+![Le bouton [!UICONTROL Activer la destination] est mis en surbrillance dans le menu des actions rapides pour l’audience sélectionnée.](../images/ui/account-audiences/activate.png)
 
-La variable [!UICONTROL Activer la destination] s’affiche. Pour plus d’informations sur le processus d’activation, y compris les destinations prises en charge et les détails sur les mappages de champs, veuillez lire le [activation des audiences de compte](/help/destinations/ui/activate-account-audiences.md) tutoriel .
+La page [!UICONTROL Activer la destination] s’affiche. Pour plus d’informations sur le processus d’activation, y compris les destinations prises en charge et les détails sur les mappages de champs, consultez le tutoriel [Activer les audiences de compte](/help/destinations/ui/activate-account-audiences.md) .
 
 ## Étapes suivantes {#next-steps}
 
-Après avoir lu ce guide, vous comprenez mieux comment créer et utiliser les audiences de votre compte dans Adobe Experience Platform. Pour savoir comment utiliser d’autres types d’audiences dans Platform, veuillez lire le [Guide de l’interface utilisateur de Segmentation Service](./overview.md).
+Après avoir lu ce guide, vous comprenez mieux comment créer et utiliser les audiences de votre compte dans Adobe Experience Platform. Pour savoir comment utiliser d’autres types d’audiences dans Platform, consultez le [guide de l’interface utilisateur de Segmentation Service](./overview.md).
 
 ## Annexe {#appendix}
 
@@ -161,24 +161,24 @@ La section suivante fournit des informations supplémentaires sur les audiences 
 >title="Violation de contrainte"
 >abstract="L’audience enfreint une contrainte. Lisez le document lié pour plus de détails."
 
-Lors de l’utilisation des audiences du compte, l’audience **must** respecter les contraintes suivantes :
+Lors de l’utilisation d’audiences de compte, l’audience **doit** respecter les contraintes suivantes :
 
 >[!NOTE]
 >
->La liste suivante répertorie les **default** contraintes pour les audiences de compte. Ces valeurs **may** change, selon les paramètres implémentés par l’administrateur de votre entreprise.
+>La liste suivante présente les contraintes **default** pour les audiences de compte. Ces valeurs **peuvent** changer, selon les paramètres implémentés par l’administrateur de votre entreprise.
 
-- La période de recherche arrière maximale pour les événements d’expérience est : **30 jours**.
+- La période de recherche arrière maximale pour les événements d’expérience est de **30 jours**.
 - La profondeur maximale des conteneurs imbriqués est **5**.
    - Cela signifie qu’il est **impossible** d’avoir plus de cinq conteneurs imbriqués lors de la création de votre audience.
 - Le nombre maximal de règles dans un seul conteneur est **5**.
-   - Cela signifie que votre audience **cannot** comportent plus de cinq règles qui composent votre audience.
+   - Cela signifie que votre audience **ne peut pas** comporter plus de cinq règles qui composent votre audience.
 - Le nombre maximal d’entités croisées pouvant être utilisées est **5**.
    - « Entité croisée » désigne le fait de changer d’entités au sein de votre audience. Vous pouvez notamment passer d’un compte à une personne et d’une personne à une liste marketing.
-- Entités personnalisées **cannot** à utiliser.
+- Les entités personnalisées **ne peuvent pas** être utilisées.
 - Le nombre maximal de valeurs pouvant être cochées pour un champ est de **50**.
    - Par exemple, si vous avez un champ &quot;Nom de ville&quot;, vous pouvez comparer cette valeur à 50 noms de ville.
-- Audiences du compte **cannot** use `inSegment` événements .
-- Audiences du compte **cannot** utilisez des événements séquentiels.
-- Audiences du compte **cannot** utiliser des cartes.
+- Les audiences de compte **ne peuvent pas** utiliser les événements `inSegment`.
+- Les audiences de compte **ne peuvent pas** utiliser des événements séquentiels.
+- Les audiences de compte **ne peuvent pas** utiliser de mappages.
 - La profondeur maximale des tableaux imbriqués est de **5**.
 - Le nombre maximal d’objets imbriqués est **10**.

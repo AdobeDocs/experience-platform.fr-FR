@@ -46,7 +46,7 @@ La suppression de ressources d’une bibliothèque de production est le cas le p
 Vous devez plutôt désactiver la ressource. Cette désactivation est une modification que vous ajoutez ensuite à une bibliothèque de développement comme n’importe quelle autre modification. Une fois cette modification mise en production, la ressource est déplacée depuis votre bibliothèque de production.
 
 1. Désactivez la ressource.
-   1. Sélectionnez la ressource dans la vue de la liste.
+   1. Sélectionnez la ressource dans la vue Liste.
    1. Sélectionnez **[!UICONTROL Désactiver]**.
 1. Créez une bibliothèque de développement.
 1. Ajoutez la `latest` version de la ressource désactivée.

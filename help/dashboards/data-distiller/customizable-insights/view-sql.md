@@ -1,7 +1,8 @@
 ---
 title: Afficher le SQL
 description: Découvrez comment afficher le code SQL derrière vos insights personnalisés.
-source-git-commit: 37633c901e9c5130e8f65d936c5130e8f9350798
+exl-id: 663f64aa-34a9-4b3a-bd00-7ad6e4f3b64a
+source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 2%
@@ -10,22 +11,22 @@ ht-degree: 2%
 
 # Afficher le SQL {#view-sql}
 
-Une fois que vous avez créé une [informations personnalisées](./overview.md) avec [mode query pro](./query-pro-mode.md), vous pouvez afficher le code SQL qui remplit vos graphiques avec la fonctionnalité Afficher le code SQL .
+Une fois que vous avez créé un [insight personnalisée](./overview.md) avec le [mode de requête pro](./query-pro-mode.md), vous pouvez afficher le code SQL qui renseigne vos graphiques avec la fonctionnalité View SQL.
 
-Dans votre tableau de bord personnalisé, sélectionnez les ellipses (`...`) sur n’importe quel widget pour accéder au [!UICONTROL En savoir plus] et [!UICONTROL Afficher SQL] options.
+Dans votre tableau de bord personnalisé, sélectionnez les ellipses (`...`) de n’importe quel widget pour accéder aux options [!UICONTROL Afficher plus] et [!UICONTROL Afficher SQL] .
 
-![Un tableau de bord personnalisé avec le menu déroulant des ellipses d’un aperçu et les options Afficher plus et Afficher SQL mises en surbrillance.](../../images/customizable-insights/ellipses-dropdown.png)
+![Un tableau de bord personnalisé avec un menu déroulant des ellipses d’informations et les options Afficher plus et Afficher SQL mises en surbrillance.](../../images/customizable-insights/ellipses-dropdown.png)
 
-Pour afficher le code SQL derrière vos insights personnalisés, sélectionnez le **[!UICONTROL Afficher SQL]** . La boîte de dialogue est intitulée avec le nom de l’insight. Dans cette vue, vous pouvez copier le code SQL dans le presse-papiers afin de l’utiliser comme base pour la création future de graphiques en mode query pro, ou ouvrir le code SQL directement dans l’éditeur de requêtes. Sélectionner **[!UICONTROL Exécuter SQL]** pour ouvrir la requête dans Query Editor.
+Pour afficher le code SQL derrière vos insights personnalisés, sélectionnez l’option **[!UICONTROL Afficher SQL]** . La boîte de dialogue est intitulée avec le nom de l’insight. Dans cette vue, vous pouvez copier le code SQL dans le presse-papiers afin de l’utiliser comme base pour la création future de graphiques en mode query pro, ou ouvrir le code SQL directement dans l’éditeur de requêtes. Sélectionnez **[!UICONTROL Exécuter SQL]** pour ouvrir la requête dans Query Editor.
 
-![Une boîte de dialogue affichant le code SQL d’un insight avec les options SQL et Run SQL mises en surbrillance.](../../images/customizable-insights/view-sql.png)
+![Boîte de dialogue affichant le SQL d’un insight avec l’option SQL et exécuter SQL mise en surbrillance.](../../images/customizable-insights/view-sql.png)
 
-Sélectionner **[!UICONTROL Fermer]** pour fermer la boîte de dialogue.
+Sélectionnez **[!UICONTROL Fermer]** pour fermer la boîte de dialogue.
 
-![Boîte de dialogue affichant le SQL d’une information avec l’option Fermer mise en surbrillance.](../../images/customizable-insights/close-sql-dialog.png)
+![Boîte de dialogue affichant le SQL d’un insight avec l’option Close mise en surbrillance.](../../images/customizable-insights/close-sql-dialog.png)
 
 ## Étapes suivantes
 
-Après avoir lu ce document, vous savez maintenant comment afficher le code SQL derrière vos insights personnalisés. Consultez le document d’affichage supplémentaire pour savoir comment [comparer votre graphique personnalisé avec les résultats tabulés de votre analyse SQL ;](./view-more.md).
+Après avoir lu ce document, vous savez maintenant comment afficher le code SQL derrière vos insights personnalisés. Consultez le document Afficher plus pour savoir comment [comparer votre graphique personnalisé avec les résultats tabulés de votre analyse SQL](./view-more.md).
 
-Vous pouvez également apprendre à générer des graphiques à partir de modèles de données existants dans l’interface utilisateur de Adobe Experience Platform à l’aide de la méthode [guide du mode de conception guidée](../../user-defined-dashboards.md).
+Vous pouvez également apprendre à générer des graphiques à partir de modèles de données existants dans l’interface utilisateur de Adobe Experience Platform avec le [guide de mode de conception guidé](../../user-defined-dashboards.md).

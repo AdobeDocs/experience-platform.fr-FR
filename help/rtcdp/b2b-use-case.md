@@ -1,6 +1,6 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform;plateforme de données client en temps réel;cdp en temps réel;cdp;rtcdp
-title: Exemple de cas d’utilisation pour Real-time Customer Data Platform Édition B2B
+keywords: RTCDP;CDP;Real-Time Customer Data Platform;plateforme de données client en temps réel;cdp en temps réel;cdp;rtcdp
+title: Exemple de cas d’utilisation pour Real-Time Customer Data Platform Édition B2B
 description: Cet exemple de scénario fournit un exemple de configuration de votre implémentation de l’édition B2B de Adobe Real-Time Customer Data Platform.
 feature: Get Started, Use Cases, B2B
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
@@ -12,9 +12,9 @@ ht-degree: 76%
 
 ---
 
-# Exemple de cas d’utilisation pour Real-time Customer Data Platform Édition B2B
+# Exemple de cas d’utilisation pour Real-Time Customer Data Platform Édition B2B
 
-L’édition B2B de Real-time Customer Data Platform développe les offres Real-Time CDP et Adobe Experience Platform existantes pour prendre en charge les données et les workflows B2B. Ce document fournit un exemple de cas d’utilisation qui illustre les avantages supplémentaires fournis par l’édition B2B. Ce sont :
+L’édition B2B de Real-Time Customer Data Platform développe les offres Real-Time CDP et Adobe Experience Platform existantes pour prendre en charge les données et les workflows B2B. Ce document fournit un exemple de cas d’utilisation qui illustre les avantages supplémentaires fournis par l’édition B2B. Ce sont :
 
 - Associez les données de comptes et d’utilisateurs provenant de différentes sources de données compartimentées afin de produire une vue d’ensemble offrant une meilleure compréhension des clients et permettant une segmentation plus précise. Pour plus d’informations, consultez la documentation sur la [création de relations de schémas XDM](./schemas/b2b.md) à utiliser avec des sources B2B variées.
 - Segmentez une audience sur la base d’attributs d’entités liées. Cela comprend les comptes, les opportunités, les campagnes et les listes marketing. Les audiences ne se limitent plus aux attributs de personne et aux événements d’expérience. Consultez la [documentation sur la segmentation B2B](./segmentation/b2b.md) pour obtenir plus d’exemples de création d’audiences spécifiques au B2B.
@@ -93,10 +93,10 @@ En lisant ce document, vous avez maintenant découvert les types d’objectifs e
 
 La documentation suivante est recommandée pour améliorer votre compréhension des fonctionnalités spécifiques au B2B :
 
-- [Tutoriel de bout en bout sur l’édition B2B de Real-time Customer Data Platform](./b2b-tutorial.md)
-- [Sources dans Real-time Customer Data Platform version B2B](./sources/b2b.md)
+- [Tutoriel de bout en bout sur l’édition B2B de Real-Time Customer Data Platform](./b2b-tutorial.md)
+- [Sources dans Real-Time Customer Data Platform version B2B](./sources/b2b.md)
 - [Schémas dans l’édition B2B de Real-time Customer Data Platform](./schemas/b2b.md)
 - [Exemples de segmentation B2B](./segmentation/b2b.md)
 - [Présentation des profils de compte](./accounts/account-profile-overview.md)
-- [Destinations dans Real-time Customer Data Platform version B2B](./destinations/b2b.md)
+- [Destinations dans Real-Time Customer Data Platform version B2B](./destinations/b2b.md)
 - [Configuration d’une destination LinkedIn Matched Audiences](../destinations/catalog/social/linkedin.md)

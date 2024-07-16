@@ -1,17 +1,17 @@
 ---
 title: Extension Pinterest Conversion Tracking
-description: L’extension Pinterest Conversion Tracking est une destination publicitaire de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Pinterest Conversion Tracking est une destination publicitaire de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: c2a78f79-99c8-4aca-892e-fb40f9281f2d
 source-git-commit: 0d0f1afcc1cc259d3f3feae2584329ef030f1902
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 94%
+source-wordcount: '453'
+ht-degree: 95%
 
 ---
 
 # Extension [!DNL Pinterest Conversion Tracking] {#pinterest-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Effectuez le suivi des actions des visiteurs sur votre site web après la consultation de votre Pin promu. Mesurez le retour sur dépenses publicitaires et créez des audiences ciblées. En savoir plus [ici](https://ads.pinterest.com/).
 
@@ -29,7 +29,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Pinterest Conversion Tracking] extension :
+Pour installer l’extension [!DNL Pinterest Conversion Tracking], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

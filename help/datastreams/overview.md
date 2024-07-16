@@ -11,7 +11,7 @@ ht-degree: 77%
 
 # Présentation des flux de données
 
-Un flux de données représente la configuration côté serveur lors de la mise en œuvre des SDK web et mobile d’Adobe Experience Platform. Lorsque la variable [`configure`](/help/web-sdk/commands/configure/overview.md) dans le SDK contrôle les éléments qui doivent être gérés sur le client (comme la fonction `edgeDomain`), les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une requête est envoyée à Adobe Experience Platform Edge Network, `edgeConfigId` est utilisé pour référencer le flux de données. Cela vous permet de mettre à jour la configuration côté serveur sans devoir modifier le code du site web.
+Un flux de données représente la configuration côté serveur lors de la mise en œuvre des SDK web et mobile d’Adobe Experience Platform. Bien que la commande [`configure`](/help/web-sdk/commands/configure/overview.md) du SDK contrôle les éléments qui doivent être gérés sur le client (comme `edgeDomain`), les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une requête est envoyée à Adobe Experience Platform Edge Network, `edgeConfigId` est utilisé pour référencer le flux de données. Cela vous permet de mettre à jour la configuration côté serveur sans devoir modifier le code du site web.
 
 Vous pouvez créer et gérer des trains de données en sélectionnant **[!UICONTROL Trains de données]** dans le volet de navigation de gauche de l’interface utilisateur d’Adobe Experience Platform ou de l’interface utilisateur de collecte des données.
 
@@ -57,7 +57,7 @@ Si un schéma est utilisé dans un train de données existant avec des services 
 
 ### Journaux d’audit
 
-Dans Experience Platform, les activités du train de données peuvent être surveillées sous la forme de journaux d’audit. Les journaux d’audit indiquent **who** performance **what** et **when**, ainsi que d’autres données contextuelles qui peuvent vous aider à résoudre les problèmes liés aux flux de données pour aider votre entreprise à se conformer aux politiques de gestion des données d’entreprise et aux exigences réglementaires.
+Dans Experience Platform, les activités du train de données peuvent être surveillées sous la forme de journaux d’audit. Les journaux d’audit indiquent **qui** a effectué l’action **What** et **quand**, ainsi que d’autres données contextuelles qui peuvent vous aider à résoudre les problèmes liés aux jeux de données pour aider votre entreprise à se conformer aux politiques de gestion des données d’entreprise et aux exigences réglementaires.
 
 Chaque fois qu’un utilisateur ou une utilisatrice crée, met à jour ou supprime un train de données, un journal d’audit est créé pour enregistrer l’action. Il en va de même lorsqu’un utilisateur ou une utilisatrice crée, met à jour ou supprime un mappage par le biais de la [Préparation de données pour la collecte de données](./data-prep.md). Qu’il s’agisse d’un train de données ou d’un mappage mis à jour, le journal d’audit résultant est classé sous le type de ressource [!UICONTROL Trains de données].
 

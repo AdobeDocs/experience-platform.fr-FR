@@ -5,11 +5,11 @@ exl-id: dbdd1c88-5c54-46be-9824-2f15cce3d160
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
 source-wordcount: '1052'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
-# Types d’événements  pour les extensions web
+# Types d’événement pour les extensions web
 
 >[!NOTE]
 >
@@ -27,7 +27,7 @@ Ce document explique comment définir des types d’événements pour une extens
 
 Les types d’événements sont définis par des extensions et se composent généralement des éléments suivants :
 
-1. A [view](./views.md) affichées dans l’interface utilisateur de l’Experience Platform et l’interface utilisateur de collecte de données qui permettent aux utilisateurs de modifier les paramètres de l’événement.
+1. [view](./views.md) affiché dans l’interface utilisateur de l’Experience Platform et dans l’interface utilisateur de collecte de données qui permet aux utilisateurs de modifier les paramètres de l’événement.
 2. Un module de bibliothèque émis dans la bibliothèque d’exécution de balise pour interpréter les paramètres et surveiller l’apparition d’une certaine activité.
 
 `module.exports` acceptez les paramètres `settings` et `trigger`. Cela permet de personnaliser le type d’événement.
@@ -71,7 +71,7 @@ module.exports = function(settings, trigger) {
 
 ## Transmission de données d’événement contextuelles
 
-Lorsqu’une règle est déclenchée, il est souvent utile de fournir des détails supplémentaires sur l’événement qui s’est produit. Les utilisateurs qui créent des règles peuvent trouver ces informations utiles pour obtenir un certain comportement. Supposons, par exemple, qu’un spécialiste marketing souhaite créer une règle dans laquelle une balise d’analyse est envoyée chaque fois que l’utilisateur balaie l’écran. L’extension doit fournir un type d’événement `swipe` afin que le professionnel du marketing puisse utiliser ce type d’événement pour déclencher la règle appropriée. En supposant que le spécialiste du marketing souhaite inclure l’angle auquel le glissement s’est produit sur la balise, cela serait difficile à faire sans fournir d’informations supplémentaires. Pour fournir des informations supplémentaires sur l’événement qui s’est produit, transmettez un objet lors de l’appel de la fonction `trigger`. Par exemple :
+Lorsqu’une règle est déclenchée, il est souvent utile de fournir des détails supplémentaires sur l’événement qui s’est produit. Les utilisateurs qui créent des règles peuvent trouver ces informations utiles pour obtenir un certain comportement. Supposons, par exemple, qu’un spécialiste marketing souhaite créer une règle dans laquelle une balise d’analyse est envoyée chaque fois que l’utilisateur balaie l’écran. L’extension doit fournir un type d’événement `swipe` afin que le spécialiste marketing puisse utiliser ce type d’événement pour déclencher la règle appropriée. En supposant que le spécialiste du marketing souhaite inclure l’angle auquel le glissement s’est produit sur la balise, cela serait difficile à faire sans fournir d’informations supplémentaires. Pour fournir des informations supplémentaires sur l’événement qui s’est produit, transmettez un objet lors de l’appel de la fonction `trigger`. Par exemple :
 
 ```js
 trigger({
@@ -105,7 +105,7 @@ trigger({
 
 ## Respect de l’ordre des règles
 
-Les balises permettent aux utilisateurs de trier les règles. Par exemple, un utilisateur peut créer deux règles qui utilisent toutes les deux le type d’événement de changement d’orientation et personnaliser l’ordre dans lequel les règles se déclenchent. Supposons que l’utilisateur d’Adobe Experience Platform spécifie une valeur d’ordre de `2` pour l’événement de modification d’orientation dans la règle A et une valeur d’ordre de `1` pour l’événement de modification d’orientation dans la règle B. Ces valeurs indiquent que lorsque l’orientation change sur un équipement mobile, la règle B doit se déclencher avant la règle A (les règles avec les plus petites valeurs d’ordre se déclenchent en premier).
+Les balises permettent aux utilisateurs de trier les règles. Par exemple, un utilisateur peut créer deux règles qui utilisent toutes les deux le type d’événement de changement d’orientation et personnaliser l’ordre dans lequel les règles se déclenchent. Supposons que l’utilisateur d’Adobe Experience Platform spécifie une valeur d’ordre de `2` pour l’événement de modification d’orientation dans la règle A et une valeur d’ordre de `1` pour l’événement de modification d’orientation dans la règle B. Ces valeurs indiquent que lorsque l’orientation change sur un appareil mobile, la règle B doit se déclencher avant la règle A (les règles avec les plus petites valeurs d’ordre se déclenchent en premier).
 
 Comme mentionné précédemment, la fonction exportée dans notre module d’événement sera appelée une fois pour chaque règle configurée pour utiliser notre type d’événement. Chaque fois que la fonction exportée est appelée, elle transmet une fonction `trigger` unique liée à une règle spécifique. Dans le scénario qui vient d’être décrit, notre fonction exportée sera appelée une fois avec une fonction `trigger` liée à la règle B, puis une autre fois avec une fonction `trigger` liée à la règle A. La règle B est appelée en premier parce que l’utilisateur lui a donné une valeur d’ordre inférieure à la règle A. Lorsque notre module de bibliothèque détecte une modification d’orientation, il est important d’appeler les fonctions `trigger` dans l’ordre dans lequel elles ont été fournies au module de bibliothèque.
 

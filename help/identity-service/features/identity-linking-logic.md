@@ -15,8 +15,8 @@ Un lien entre deux identités est établi lorsque l’espace de noms de l’iden
 
 Deux types d’identités sont liés :
 
-* **Enregistrements de profil**: ces identités proviennent généralement de systèmes CRM.
-* **Événements d’expérience**: ces identités proviennent généralement de la mise en oeuvre de WebSDK ou de la source Adobe Analytics.
+* **Enregistrements de profil** : Ces identités proviennent généralement de systèmes CRM.
+* **Événements d’expérience** : ces identités proviennent généralement de l’implémentation de WebSDK ou de la source Adobe Analytics.
 
 ## Signification sémantique de l’établissement de liens
 
@@ -26,7 +26,7 @@ Une identité représente une entité réelle. S’il existe un lien établi ent
 | --- | --- | --- |
 | Un utilisateur final se connecte à l’aide d’un ordinateur. | L’identifiant CRM et l’ECID sont liés. | Une personne (identifiant CRM) possède un appareil avec un navigateur (ECID). |
 | Un utilisateur final navigue anonymement à l’aide d’iPhone . | IDFA est lié à ECID. | L’appareil matériel Apple (IDFA), tel qu’iPhone, est associé au navigateur (ECID). |
-| Un utilisateur final se connecte à l’aide de Google Chrome, puis de Firefox. | L’identifiant CRM est lié à deux ECID différents. | Une personne (identifiant CRM) est associée à 2 navigateurs web (**Remarque**: chaque navigateur aura son propre ECID). |
+| Un utilisateur final se connecte à l’aide de Google Chrome, puis de Firefox. | L’identifiant CRM est lié à deux ECID différents. | Une personne (ID CRM) est associée à 2 navigateurs web (**Remarque** : chaque navigateur aura son propre ECID). |
 | Un ingénieur de données ingère un enregistrement CRM qui comprend deux champs marqués comme identité : Identifiant CRM et Courrier électronique. | L&#39;identifiant CRM et l&#39;email sont liés. | Une personne (identifiant CRM) est associée à l’adresse email. |
 
 ## Présentation de la logique de liaison d’Identity Service
@@ -34,7 +34,7 @@ Une identité représente une entité réelle. S’il existe un lien établi ent
 Une identité se compose d’un espace de noms d’identité et d’une valeur d’identité.
 
 * Un espace de noms d’identité est le contexte d’une valeur d’identité donnée à . Les exemples d’espaces de noms d’identité courants incluent l’ID CRM, le courrier électronique et le téléphone.
-* Une valeur d’identité est la chaîne qui représente une entité du monde réel. Par exemple : &quot;julien&quot;<span>@acme.com&quot; peut être une valeur d’identité pour un espace de noms Email et 555-555-1234 peut être une valeur d’identité correspondante pour un espace de noms Phone.
+* Une valeur d’identité est la chaîne qui représente une entité du monde réel. Par exemple : &quot;julien<span>@acme.com&quot; peut être une valeur d’identité pour un espace de noms Email et 555-555-1234 peut être une valeur d’identité correspondante pour un espace de noms Phone.
 
 >[!TIP]
 >
@@ -96,7 +96,7 @@ Vous avez également implémenté WebSDK et ingéré un jeu de données WebSDK (
 | `t=3` | ECID:44675 | Afficher la page d’accueil |
 | `t=4` | ECID : 44675, ID CRM : 31260XYZ | Afficher l’historique des achats |
 
-L’identité principale de chaque événement est déterminée en fonction de [configuration des types d’éléments de données](../../tags/extensions/client/web-sdk/data-element-types.md).
+L’identité principale de chaque événement sera déterminée en fonction de la façon dont vous configurez les types d’éléments de données ](../../tags/extensions/client/web-sdk/data-element-types.md).[
 
 >[!NOTE]
 >
@@ -106,18 +106,18 @@ L’identité principale de chaque événement est déterminée en fonction de [
 
 Dans cet exemple :
 
-* `t=1`, utilisait un ordinateur de bureau (ECID:38652) et pour afficher le navigateur de la page d’accueil de manière anonyme.
-* `t=2`, utilisait le même ordinateur de bureau, se connectait (ID CRM : 31260XYZ), puis recherchait des chaussures.
+* `t=1`, a utilisé un ordinateur de bureau (ECID:38652) et pour afficher le navigateur de la page d’accueil de manière anonyme.
+* `t=2`, a utilisé le même ordinateur de bureau, s’est connecté (ID CRM : 31260XYZ), puis a recherché des chaussures.
    * Une fois qu’un utilisateur est connecté, l’événement envoie à la fois l’identifiant ECID et l’identifiant CRM à Identity Service.
 * `t=3`, utilisait un ordinateur portable (ECID:44675) et naviguait de manière anonyme.
-* `t=4`, a utilisé le même ordinateur portable, s’est connecté (ID CRM : 31260XYZ), puis a consulté l’historique des achats.
+* `t=4`, a utilisé le même ordinateur portable, s&#39;est connecté (ID CRM : 31260XYZ), puis a consulté l&#39;historique des achats.
 
 
 >[!BEGINTABS]
 
 >[!TAB timestamp=0]
 
-At `timestamp=0`, vous disposez de deux graphiques d’identités pour deux clients différents. Tous deux sont représentés par trois identités liées.
+À `timestamp=0`, vous avez deux graphiques d’identités pour deux clients différents. Tous deux sont représentés par trois identités liées.
 
 | | Identifiant CRM | E-mail | Téléphone |
 | --- | --- | --- | --- |
@@ -128,26 +128,26 @@ At `timestamp=0`, vous disposez de deux graphiques d’identités pour deux clie
 
 >[!TAB timestamp=1]
 
-At `timestamp=1`, un client utilise un ordinateur portable pour visiter votre site web de commerce électronique, afficher votre page d’accueil et naviguer de manière anonyme. Cet événement de navigation anonyme est identifié comme ECID:38652. Comme Identity Service ne stocke que les événements avec au moins deux identités, ces informations ne sont pas stockées.
+Sur `timestamp=1`, un client utilise un ordinateur portable pour visiter votre site web d’e-commerce, afficher votre page d’accueil et naviguer de manière anonyme. Cet événement de navigation anonyme est identifié comme ECID:38652. Comme Identity Service ne stocke que les événements avec au moins deux identités, ces informations ne sont pas stockées.
 
 ![timestamp-one](../images/identity-settings/timestamp-one.png)
 
 >[!TAB timestamp=2]
 
-At `timestamp=2`, un client utilise le même ordinateur portable pour visiter votre site web d’e-commerce. Ils se connectent avec leur nom d’utilisateur et leur mot de passe, et ils recherchent des chaussures. Identity Service identifie le compte du client lorsqu’il se connecte, car il correspond à son identifiant CRM : 31260XYZ. En outre, Identity Service associe ECID:38562 à l’ID CRM:31260XYZ, car ils utilisent tous deux le même navigateur sur le même appareil.
+À `timestamp=2`, un client utilise le même ordinateur portable pour visiter votre site web de commerce électronique. Ils se connectent avec leur nom d’utilisateur et leur mot de passe, et ils recherchent des chaussures. Identity Service identifie le compte du client lorsqu’il se connecte, car il correspond à son identifiant CRM : 31260XYZ. En outre, Identity Service associe ECID:38562 à l’ID CRM:31260XYZ, car ils utilisent tous deux le même navigateur sur le même appareil.
 
 ![timestamp-two](../images/identity-settings/timestamp-two.png)
 
 >[!TAB timestamp=3]
 
-At `timestamp=3` un client utilise une tablette pour visiter votre site web d’e-commerce et naviguer de manière anonyme. Cet événement de navigation anonyme est identifié comme ECID:44675. Comme Identity Service ne stocke que les événements avec au moins deux identités, ces informations ne sont pas stockées.
+Sur `timestamp=3`, un client utilise une tablette pour visiter votre site web d’e-commerce et naviguer de manière anonyme. Cet événement de navigation anonyme est identifié comme ECID:44675. Comme Identity Service ne stocke que les événements avec au moins deux identités, ces informations ne sont pas stockées.
 
 ![timestamp-trois](../images/identity-settings/timestamp-three.png)
 
 >[!TAB timestamp=4]
 
-At `timestamp=4`, un client utilise la même tablette, se connecte à son compte (ID CRM : 31260XYZ) et affiche son historique des achats. Cet événement lie leur ID CRM : 31260XYZ à l’identifiant de cookie affecté à l’activité de navigation anonyme, ECID : 44675, et relie ECID : 44675 au graphique d’identités de customer two.
+Sur `timestamp=4`, un client utilise la même tablette, se connecte à son compte (ID CRM : 31260XYZ) et affiche son historique des achats. Cet événement lie leur ID CRM : 31260XYZ à l’identifiant de cookie affecté à l’activité de navigation anonyme, ECID : 44675, et relie ECID : 44675 au graphique d’identités de customer two.
 
-![timestamp-quatre](../images/identity-settings/timestamp-four.png)
+![timestamp-four](../images/identity-settings/timestamp-four.png)
 
 >[!ENDTABS]

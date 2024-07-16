@@ -16,7 +16,7 @@ ht-degree: 9%
 >[!IMPORTANT]
 >
 > * Adobe vous recommande de mettre cette page en signet et de la revoir tous les trois mois pour rechercher les dernières adresses IP. Adobe ne fournit pas de notification pour les nouvelles plages d’adresses IP.
-> * La liste des adresses IP documentée ici *ne fait pas* s’appliquent à toutes les destinations que vous créez à l’aide de [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).
+> * La liste des adresses IP documentées ici *ne s’applique pas à toutes les destinations que vous créez à l’aide de [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md).*
 
 ## Vue d’ensemble {#overview}
 
@@ -28,7 +28,7 @@ Les plages d’adresses IP documentées ici s’appliquent aux destinations suiv
 
 Le trafic sortant de l’Experience Platform vers ces destinations passe toujours par les adresses IP répertoriées sur cette page.
 
-Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée pour exporter en toute sécurité des données d’Experience Platform vers votre point d’entrée HTTP, [!DNL Amazon Kinesis], ou [!DNL Azure Event Hubs] instance. Cette fonctionnalité est particulièrement utile si votre point de terminaison HTTP se trouve derrière un pare-feu d’entreprise ou si les normes de sécurité et de conformité de votre entreprise nécessitent qu’une liste de plages d’adresses IP soit placée sur la liste autorisée.
+Cette page fournit des plages d’adresses IP que vous pouvez ajouter à votre liste autorisée afin d’exporter en toute sécurité des données de l’Experience Platform vers votre point d’entrée HTTP, [!DNL Amazon Kinesis] ou [!DNL Azure Event Hubs]. Cette fonctionnalité est particulièrement utile si votre point de terminaison HTTP se trouve derrière un pare-feu d’entreprise ou si les normes de sécurité et de conformité de votre entreprise nécessitent qu’une liste de plages d’adresses IP soit placée sur la liste autorisée.
 
 Vous pouvez définir des contrôles d’accès réseau via votre pare-feu réseau. En spécifiant la plage d’adresses IP appropriée, vous pouvez autoriser le trafic pour le service de transfert de données.
 

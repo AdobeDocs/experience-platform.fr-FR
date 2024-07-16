@@ -1,12 +1,12 @@
 ---
 title: Créer une connexion source SAP Commerce dans l’interface utilisateur
 description: Découvrez comment créer une connexion source SAP Commerce à l’aide de l’interface utilisateur de Adobe Experience Platform.
-badge: Version Beta
+badge: Version bêta
 exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '1010'
-ht-degree: 34%
+source-wordcount: '965'
+ht-degree: 32%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 34%
 
 >[!NOTE]
 >
->La source [!DNL SAP Commerce] est en version Beta. Voir [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La source [!DNL SAP Commerce] est en version Beta. Pour plus d’informations sur l’utilisation de sources étiquetées bêta, consultez la [présentation des sources](../../../../home.md#terms-and-conditions) .
 
-Le tutoriel suivant décrit les étapes à suivre pour créer un [!DNL SAP Commerce] connexion source à apporter [[!DNL SAP] Facturation d’abonnement](https://www.sap.com/products/financial-management/subscription-billing.html) contacts et données client à l’aide de l’interface utilisateur de Adobe Experience Platform.
+Le tutoriel suivant vous guide tout au long des étapes à suivre pour créer une connexion source [!DNL SAP Commerce] afin d’importer des contacts [[!DNL SAP] Subscription Billing](https://www.sap.com/products/financial-management/subscription-billing.html) et des données client à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
 ## Prise en main {#getting-started}
 
@@ -31,20 +31,20 @@ Si vous disposez déjà d’un compte [!DNL SAP Commerce], vous pouvez ignorer l
 
 ### Collecter les informations d’identification requises {#gather-credentials}
 
-Pour vous connecter [!DNL SAP Commerce] pour Experience Platform, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
+Pour connecter [!DNL SAP Commerce] à Experience Platform, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
 | Informations d’identification | Description |
 | --- | --- |
-| Identifiant client | La valeur de `clientId` à partir de la clé de service. |
-| Secret client | La valeur de `clientSecret` à partir de la clé de service. |
-| Point de terminaison du jeton | La valeur de `url` à partir de la clé de service, la variable `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
-| Région | Emplacement de votre centre de données. La région est présente dans la variable `url` et a une valeur similaire à `eu10` ou `us10`. Par exemple, si la variable `url` is `https://eu10.revenue.cloud.sap/api` vous aurez besoin de `eu10`. |
+| Identifiant client | La valeur de `clientId` de la clé de service. |
+| Secret client | La valeur de `clientSecret` de la clé de service. |
+| Point de terminaison du jeton | La valeur de `url` de la clé de service sera similaire à `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. |
+| Région | Emplacement de votre centre de données. La région est présente dans le `url` et a une valeur similaire à `eu10` ou `us10`. Par exemple, si `url` est `https://eu10.revenue.cloud.sap/api`, vous aurez besoin de `eu10`. |
 
-Pour plus d’informations, reportez-vous au [[!DNL SAP Commerce] documentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
+Pour plus d&#39;informations, consultez la [[!DNL SAP Commerce] documentation](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
 ### Création d’un schéma Platform {#create-platform-schema}
 
-Avant de créer un [!DNL SAP Commerce] connexion source, vous devez également vous assurer de créer au préalable un schéma Experience Platform à utiliser pour votre source. Voir le tutoriel sur [création d’un schéma Platform](../../../../../xdm/schema/composition.md) pour obtenir des instructions complètes sur la création d’un schéma.
+Avant de créer une connexion source [!DNL SAP Commerce], vous devez également vous assurer de créer un schéma Experience Platform à utiliser pour votre source. Consultez le tutoriel sur la [création d’un schéma de plateforme](../../../../../xdm/schema/composition.md) pour obtenir des instructions complètes sur la création d’un schéma.
 
 Développez la section suivante pour afficher un exemple de schéma.
 
@@ -147,29 +147,29 @@ Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous , *eCommerce* catégorie, sélectionnez **[!UICONTROL SAP Commerce]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Sous la catégorie *eCommerce*, sélectionnez **[!UICONTROL SAP Commerce]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
-![Capture d’écran de l’interface utilisateur de Platform pour le catalogue avec carte SAP Commerce](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
+![Copie d’écran de l’interface utilisateur de Platform pour le catalogue avec carte SAP Commerce](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
 
-La variable **[!UICONTROL Connexion au compte SAP Commerce]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connecter le compte SAP Commerce]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant {#existing-account}
 
 Pour utiliser un compte existant, sélectionnez le compte [!DNL SAP Commerce] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
-![Copie d’écran de l’interface utilisateur de Platform pour connecter un compte SAP Commerce à un compte existant](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
+![ Copie d’écran de l’interface utilisateur de Platform pour connecter un compte SAP Commerce à un compte existant ](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
 
 ### Nouveau compte {#new-account}
 
-Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom, une description facultative et vos informations d’identification . Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
+Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom, une description facultative et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
-![Capture d’écran de l’interface utilisateur de Platform pour connecter un compte SAP Commerce à un nouveau compte](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
+![ Copie d’écran de l’interface utilisateur de Platform pour connecter un compte SAP Commerce à un nouveau compte ](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
 
 ### Sélectionner les données {#select-data}
 
 Enfin, vous devez sélectionner le type d’objet à ingérer dans Platform.
 
-| Type d’objet | Description |
+| Type d’objet  | Description |
 | --- | --- |
 | `Customers` | Les entités qui ont des abonnements. |
 | `Contacts` | Les coordonnées des clients. |
@@ -178,15 +178,15 @@ Enfin, vous devez sélectionner le type d’objet à ingérer dans Platform.
 
 >[!TAB Clients]
 
-Pour ingérer des données client, sélectionnez **[!UICONTROL Clients]** comme type d’objet, puis sélectionnez **[!UICONTROL Suivant]**.
+Pour ingérer des données client, sélectionnez **[!UICONTROL Customers]** comme type d’objet, puis **[!UICONTROL Suivant]**.
 
-![Capture d’écran de l’interface utilisateur de Platform pour SAP Commerce montrant la configuration avec l’option Clients sélectionnée](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
+![ Copie d’écran de l’interface utilisateur de Platform pour SAP Commerce montrant la configuration avec l’option Clients sélectionnée](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
 
 >[!TAB Contacts]
 
-Pour ingérer les données de contact, sélectionnez **[!UICONTROL Contacts]** comme type d’objet, puis sélectionnez **[!UICONTROL Suivant]**.
+Pour ingérer des données de contact, sélectionnez **[!UICONTROL Contacts]** comme type d&#39;objet, puis sélectionnez **[!UICONTROL Suivant]**.
 
-![Copie d’écran de l’interface utilisateur de Platform pour SAP Commerce montrant la configuration avec l’option Contacts sélectionnée](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
+![ Copie d’écran de l’interface utilisateur de Platform pour SAP Commerce montrant la configuration avec l’option Contacts sélectionnée](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
 
 >[!ENDTABS]
 
@@ -196,11 +196,11 @@ En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL SA
 
 ## Ressources supplémentaires {#additional-resources}
 
-Les sections ci-dessous contiennent des ressources supplémentaires auxquelles vous pouvez vous référer lors de l’utilisation de la variable [!DNL SAP Commerce] source.
+Les sections ci-dessous fournissent des ressources supplémentaires auxquelles vous pouvez vous référer lors de l’utilisation de la source [!DNL SAP Commerce].
 
 ### Mappage {#mapping}
 
-Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, voir la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
+Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [guide de l’interface utilisateur de la préparation des données](../../../../../data-prep/ui/mapping.md).
 
 Les configurations de mappage de votre flux de données diffèrent selon votre schéma et le type d’objet que vous choisissez d’ingérer.
 
@@ -208,9 +208,9 @@ Les configurations de mappage de votre flux de données diffèrent selon votre s
 
 >[!TAB Clients]
 
-Pour les données client, [!DNL SAP Commerce] utilise la variable [clients](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers) et la variable [relations client-contact](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) points de fin de la variable [!DNL SAP Business Partners] API pour récupérer les données
+Pour les données client, [!DNL SAP Commerce] utilise les points d’entrée [clients](https://api.sap.com/api/BusinessPartner_APIs/path/GET_customers) et [ customer-contacts](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) de l’API [!DNL SAP Business Partners] pour récupérer les données.
 
-Voici un exemple de configurations de mappage pour [!DNL SAP Commerce] flux de données pour les données client :
+Voici un exemple de configurations de mappage pour le flux de données [!DNL SAP Commerce] pour les données client :
 
 | Champ cible | Description |
 | --- | --- |
@@ -232,9 +232,9 @@ Voici un exemple de configurations de mappage pour [!DNL SAP Commerce] flux de d
 
 >[!TAB Contacts]
 
-Pour les données de contact, [!DNL SAP Commerce] utilise la variable [contacts](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts) point d’entrée du [!DNL SAP Business Partners] API pour récupérer les données.
+Pour les données de contact, [!DNL SAP Commerce] utilise le point d’entrée [contacts](https://api.sap.com/api/BusinessPartner_APIs/path/GET_contacts) de l’API [!DNL SAP Business Partners] pour récupérer les données.
 
-Voici un exemple de configurations de mappage pour [!DNL SAP Commerce] flux de données pour les données de contact :
+Voici un exemple de configurations de mappage pour le flux de données [!DNL SAP Commerce] pour les données de contact :
 
 | Champ cible | Description |
 | --- | --- |

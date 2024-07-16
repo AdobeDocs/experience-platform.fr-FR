@@ -7,7 +7,7 @@ hidefromtoc: true
 exl-id: 9ec5e1c2-3d9e-4729-be81-89a85d5ea782
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '476'
 ht-degree: 97%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->La source [!DNL Oracle Responsys] est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
+>La source [!DNL Oracle Responsys] est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez la [Présentation des sources](../../../../home.md#terms-and-conditions) .
 
 Ce tutoriel vous fournit les étapes à suivre pour créer une connexion source [[!DNL Oracle Responsys]](../../../../connectors/marketing-automation/oracle-responsys.md) à l’aide de l’interface utilisateur d’Adobe Experience Platform.
 

@@ -1,5 +1,5 @@
 ---
-title: Suppressions dans Identity Service
+title: Suppressions dans le service d’identités
 description: Ce document présente les différents mécanismes que vous pouvez utiliser pour supprimer vos données d’identité dans Experience Platform et explique clairement comment les graphiques d’identités peuvent être affectés.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
 source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
@@ -9,7 +9,7 @@ ht-degree: 97%
 
 ---
 
-# Suppressions dans Identity Service
+# Suppressions dans le service d’identités
 
 Adobe Experience Platform Identity Service génère des graphiques d’identités en liant de manière déterministe les identités entre les appareils et les systèmes pour une personne individuelle. Les liens des graphiques d’identités sont établis lorsque plusieurs identités marquées sont reçues au sein de la même ligne de données.
 
@@ -31,13 +31,13 @@ Le document ci-dessous fait référence aux fonctions suivantes d’Experience P
 
 ## Suppressions d’identité unique
 
-Les demandes de suppression d’identité unique vous permettent de supprimer une identité dans un graphique, ce qui entraîne la suppression des liens liés à une seule identité utilisateur associée à un espace de noms d’identité. Vous pouvez utiliser les mécanismes fournis par [Privacy Service](../../privacy-service/home.md) pour des cas d’utilisation tels que les demandes de suppression de données de la part des clients et la conformité aux réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD).
+Les demandes de suppression d’identité unique vous permettent de supprimer une identité dans un graphique, ce qui entraîne la suppression des liens liés à une seule identité utilisateur associée à un espace de noms d’identité. Vous pouvez utiliser les mécanismes fournis par [Privacy Service](../../privacy-service/home.md) pour les cas d’utilisation tels que les demandes de suppression de données des clients et la conformité aux réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD).
 
 Les sections ci-dessous décrivent les mécanismes que vous pouvez utiliser pour les demandes de suppression d’identité uniques dans Experience Platform.
 
 ### Suppression d’une identité unique dans Privacy Service
 
-Privacy Service traite les demandes des clients en matière dʼaccès, d’opt-out de vente ou de suppression de leurs données personnelles conformément aux réglementations de confidentialité telles que le Règlement général sur la protection des données (RGPD) et le California Consumer Privacy Act (CCPA). Avec Privacy Service, vous pouvez envoyer des requêtes de traitement à l’aide de l’API ou de l’interface utilisateur. Lorsqu’Experience Platform reçoit une demande de suppression de la part de Privacy Service, Platform envoie une confirmation à Privacy Service pour confirmer que la demande a été reçue et que les données concernées ont été marquées pour suppression. La suppression de l’identité individuelle est basée sur l’espace de noms et/ou la valeur d’identifiant fournis. En outre, la suppression a lieu pour tous les sandbox associés à une organisation donnée. Pour plus d’informations, consultez le guide sur le [traitement des demandes d’accès à des informations personnelles dans Identiy Service](../privacy.md).
+Privacy Service traite les demandes des clients en matière dʼaccès, d’opt-out de vente ou de suppression de leurs données personnelles conformément aux réglementations de confidentialité telles que le Règlement général sur la protection des données (RGPD) et le California Consumer Privacy Act (CCPA). Avec Privacy Service, vous pouvez envoyer des requêtes de traitement à l’aide de l’API ou de l’interface utilisateur. Lorsqu’Experience Platform reçoit une demande de suppression de la part de Privacy Service, Platform envoie une confirmation à Privacy Service pour confirmer que la demande a été reçue et que les données concernées ont été marquées pour suppression. La suppression de l’identité individuelle est basée sur l’espace de noms et/ou la valeur d’identifiant fournis. En outre, la suppression a lieu pour tous les sandbox associés à une organisation donnée. Pour plus d’informations, consultez le guide sur le [traitement des demandes d’accès à des informations personnelles dans le service d’identités](../privacy.md).
 
 Le tableau ci-dessous fournit une répartition de la suppression d’identité unique dans Privacy Service :
 
@@ -46,7 +46,7 @@ Le tableau ci-dessous fournit une répartition de la suppression d’identité u
 | Cas d’utilisation acceptés | Demandes d’accès à des informations personnelles (RGPD, CCPA) uniquement. |
 | Latence estimée | Plusieurs jours à plusieurs semaines |
 | Services concernés | La suppression d’identité unique dans Privacy Service vous permet de choisir si les données seront supprimées du service d’identités, du profil client en temps réel ou du lac de données. |
-| Modèles de suppression | Supprimer une identité d’Identity Service. |
+| Modèles de suppression | Supprimer une identité du service d’identités. |
 
 {style="table-layout:auto"}
 
@@ -69,13 +69,13 @@ Le tableau ci-dessous présente les différences entre la suppression de jeux de
 | Cas d’utilisation acceptés | Supprimer les jeux de données complets et les informations d’identité associées dans Platform. | Gestion des données stockées dans Experience Platform. |
 | Latence estimée | Jours | Jours |
 | Services concernés | La suppression de jeux de données par le biais de Catalog Service supprime les données du service d’identités, du profil client en temps réel et du lac de données. | La suppression de jeux de données avec l’hygiène des données supprime les données du service d’identités, du profil client en temps réel et du lac de données. |
-| Modèle de suppression | Supprimer les identités liées d’Identity Service établies par un jeu de données spécifique. | Supprimer les identités liées d’Identity Service établies par un jeu de données spécifique, selon le calendrier d’expiration. |
+| Modèle de suppression | Supprimer les identités liées du service d’identités établies par un jeu de données spécifique. | Supprimer les identités liées du service d’identités établies par un jeu de données spécifique, selon le calendrier d’expiration. |
 
 {style="table-layout:auto"}
 
 ## Différents états des graphiques d’identités après suppression
 
-Toutes les suppressions de graphiques d’identités entraînent la suppression des liens entre plusieurs identités, comme spécifié par la demande de suppression. Pour les demandes de suppression de jeux de données, tous les liens d’identité établis par le jeu de données spécifié sont supprimés et peuvent ou non supprimer les identités des graphiques. Pour les demandes de suppression d’identité uniques, les liens d’identité sont supprimés pour l’identité spécifiée. Par conséquent, la valeur d’identité elle-même est supprimée de tous les graphiques d’identités. Les identités sans liaison unique à une autre identité ne sont pas stockées dans Identity Service.
+Toutes les suppressions de graphiques d’identités entraînent la suppression des liens entre plusieurs identités, comme spécifié par la demande de suppression. Pour les demandes de suppression de jeux de données, tous les liens d’identité établis par le jeu de données spécifié sont supprimés et peuvent ou non supprimer les identités des graphiques. Pour les demandes de suppression d’identité uniques, les liens d’identité sont supprimés pour l’identité spécifiée. Par conséquent, la valeur d’identité elle-même est supprimée de tous les graphiques d’identités. Les identités sans liaison unique à une autre identité ne sont pas stockées dans le service d’identités.
 
 Vous trouverez ci-dessous un aperçu des impacts potentiels des suppressions sur l’état des graphiques d’identités.
 
@@ -89,7 +89,7 @@ Vous trouverez ci-dessous un aperçu des impacts potentiels des suppressions sur
 
 ## Étapes suivantes
 
-Ce document a couvert les différents mécanismes que vous pouvez utiliser pour supprimer des identités et des jeux de données sur Experience Platform. Ce document a également décrit comment les suppressions d’identité et de jeux de données peuvent avoir un impact sur les graphiques d’identités. Pour plus d’informations sur Identity Service, consultez la [présentation d’Identity Service](../home.md).
+Ce document a couvert les différents mécanismes que vous pouvez utiliser pour supprimer des identités et des jeux de données sur Experience Platform. Ce document a également décrit comment les suppressions d’identité et de jeux de données peuvent avoir un impact sur les graphiques d’identités. Pour plus d’informations sur le service d’identités, consultez la [présentation du service d’identités](../home.md).
 
 <!--
 

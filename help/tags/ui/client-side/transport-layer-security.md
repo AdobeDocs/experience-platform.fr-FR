@@ -1,7 +1,8 @@
 ---
 title: Informations TLS (Transport Layer Security)
 description: Informations sur les versions et les chiffrements TLS utilisés
-source-git-commit: 35ee2aca2b92cb8abe1fc69ad6cbc66b0e241e89
+exl-id: 04948cd8-6cf0-4159-a9d3-3130b97af106
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 24%
@@ -12,11 +13,11 @@ ht-degree: 24%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Pour une référence consolidée des modifications terminologiques, reportez-vous à la section [mises à jour des termes](../../term-updates.md) document.
+>Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Pour consulter une référence consolidée des modifications terminologiques, reportez-vous au document [mises à jour de termes](../../term-updates.md) .
 
-Transport Layer Security (TLS) est un protocole cryptographique qui fournit une sécurité de bout en bout pour les données envoyées entre les applications sur Internet. Pour plus d’informations sur TLS, consultez la [Notions de base de TLS](https://www.internetsociety.org/deploy360/tls/basics/) la documentation.
+Transport Layer Security (TLS) est un protocole cryptographique qui fournit une sécurité de bout en bout pour les données envoyées entre les applications sur Internet. Pour plus d’informations sur TLS, consultez la documentation [Notions de base sur TLS](https://www.internetsociety.org/deploy360/tls/basics/) .
 
-Dans Adobe Experience Platform, les balises représentent un système de gestion des balises conçu pour charger dynamiquement des scripts sur votre site web. TLS sécurise la communication entre l’hôte de l’Adobe `assets.adobedtm.com` et votre site web lorsque ces scripts sont chargés.
+Dans Adobe Experience Platform, les balises représentent un système de gestion des balises conçu pour charger dynamiquement des scripts sur votre site web. TLS sécurise la communication entre l’hôte d’Adobe `assets.adobedtm.com` et votre site web lorsque ces scripts sont chargés.
 
 Plusieurs versions de TLS sont disponibles et prennent en charge plusieurs chiffrements différents. Toutes les versions et les chiffrements ne sont pas identiques, car certains sont considérés comme moins ou plus sécurisés que d’autres.
 
@@ -50,7 +51,7 @@ PORT    STATE SERVICE
 
 ### Auto-hébergement
 
-Si vous [auto-hébergement](../publishing/hosts/self-hosting-libraries.md) Dans votre bibliothèque , les versions TLS prises en charge seront déterminées par votre propre service d’hébergement.
+Si vous [ auto-hébergement](../publishing/hosts/self-hosting-libraries.md) de votre bibliothèque, les versions TLS prises en charge seront déterminées par votre propre service d’hébergement.
 
 ## TLS Ciphers à supprimer le 1er mai 2024
 

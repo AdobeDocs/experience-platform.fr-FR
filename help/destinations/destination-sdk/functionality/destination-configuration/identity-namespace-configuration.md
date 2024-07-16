@@ -15,11 +15,11 @@ Experience Platform utilise des espaces de noms d’identité pour décrire le t
 
 En fonction du type de destination que vous créez (en flux continu ou basé sur un fichier), gardez à l’esprit les exigences d’espace de noms d’identité suivantes :
 
-* Lors de la création de destinations en temps réel (diffusion en continu) via Destination SDK, en plus des [configuration d&#39;un schéma de partenaire](schema-configuration.md) auquel les utilisateurs peuvent mapper des attributs et des identités de profil, vous devez également définir *au moins un* espaces de noms d’identité pris en charge par votre plateforme de destination. Par exemple, si votre plateforme de destination accepte des courriers électroniques hachés et [!DNL IDFA], vous devez définir ces deux identités comme [décrit plus en détail dans ce document](#supported-parameters).
+* Lors de la création de destinations en temps réel (diffusion en continu) via Destination SDK, en plus de [la configuration d’un schéma de partenaire](schema-configuration.md) vers lequel les utilisateurs peuvent mapper des attributs de profil et des identités, vous devez également définir *au moins un* espaces de noms d’identité pris en charge par votre plateforme de destination. Par exemple, si votre plateforme de destination accepte des emails hachés et [!DNL IDFA], vous devez définir ces deux identités comme [ décrit plus bas dans ce document](#supported-parameters).
 
   >[!IMPORTANT]
   >
-  >Lors de l’activation d’audiences vers des destinations de diffusion en continu, les utilisateurs doivent également mapper _au moins une identité cible_, en plus des attributs de profil cibles. Sinon, les audiences ne seront pas activées sur la plateforme de destination.
+  >Lors de l’activation d’audiences vers des destinations de diffusion en continu, les utilisateurs doivent également mapper _au moins une identité cible_, en plus des attributs de profil cible. Sinon, les audiences ne seront pas activées sur la plateforme de destination.
 
 * Lors de la création de destinations basées sur des fichiers via Destination SDK, la configuration des espaces de noms d’identité est _facultatif_.
 
@@ -31,7 +31,7 @@ Pendant la configuration des espaces de noms d’identité pour la destination, 
 * Autoriser les utilisateurs à mapper les [espaces de noms d’identité standard](../../../../identity-service/features/namespaces.md#standard) à vos propres espaces de noms d’identité.
 * Autoriser les utilisateurs à mapper les [espaces de noms d’identité personnalisés](../../../../identity-service/features/namespaces.md#manage-namespaces) à vos propres espaces de noms d’identité.
 
-Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la section [options de configuration](../configuration-options.md) ou consulter le guide sur la manière d’effectuer [utiliser la Destination SDK pour configurer une destination basée sur des fichiers ;](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la documentation [options de configuration](../configuration-options.md) ou consultez le guide sur la [manière d’utiliser la Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Vous pouvez configurer vos espaces de noms d’identité pris en charge via le point d’entrée `/authoring/destinations`. Pour obtenir des exemples d’appels API détaillés dans lesquels vous pouvez configurer les composants affichés sur cette page, consultez les pages de référence de l’API suivantes.
 

@@ -16,23 +16,23 @@ ht-degree: 74%
 
 >[!IMPORTANT]
 > 
->* Pour vous connecter à une destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
+>* Pour vous connecter à une destination, vous avez besoin des **** et des **** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès.
 >
->* Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
+>* Pour activer les données, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **** et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
 >
->* Pour exporter *identités*, vous avez besoin de la fonction **[!UICONTROL Affichage du graphique des identités]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour exporter des *identités*, vous avez besoin de l&#39;autorisation **[!UICONTROL Afficher le graphique d&#39;identités]** [ ](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 >
 >Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Ce tutoriel explique comment utiliser l’API Flow Service pour créer un fichier basé sur un fichier [destination de marketing par e-mail](../catalog/email-marketing/overview.md), créez un flux de données vers la destination que vous venez de créer et exportez les données vers cette dernière au moyen de fichiers CSV.
+Ce tutoriel explique comment utiliser l’API Flow Service pour créer une [destination de marketing par e-mail](../catalog/email-marketing/overview.md) basée sur un fichier, créer un flux de données vers votre destination nouvellement créée et exporter des données vers votre destination nouvellement créée au moyen de fichiers CSV.
 
 >[!TIP]
 > 
->Pour savoir comment activer des données vers des destinations de stockage dans le cloud à l’aide de l’API Flow Service, lisez la section [tutoriel sur les API dédiées](/help/destinations/api/activate-segments-file-based-destinations.md).
+>Pour savoir comment activer des données vers des destinations de stockage dans le cloud à l’aide de l’API Flow Service, lisez le [tutoriel sur les API dédiées](/help/destinations/api/activate-segments-file-based-destinations.md).
 
-Ce tutoriel utilise la méthode [!DNL Adobe Campaign] destination dans tous les exemples, mais les étapes sont identiques pour les destinations de marketing par e-mail basées sur des fichiers.
+Ce tutoriel utilise la destination [!DNL Adobe Campaign] dans tous les exemples, mais les étapes sont identiques pour les destinations de marketing par e-mail basées sur des fichiers.
 
-![Présentation : étapes pour créer une destination et activer des audiences](../assets/api/email-marketing/overview.png)
+![Présentation : étapes de création d’une destination et d’activation d’audiences](../assets/api/email-marketing/overview.png)
 
 Si vous préférez utiliser l’interface utilisateur Platform pour vous connecter à une destination et activer des données, reportez-vous aux tutoriels [Se connecter à une destination](../ui/connect-destination.md) et [Activer des données d’audience vers des destinations d’exportation de profils par lots](../ui/activate-batch-profile-destinations.md).
 
@@ -41,7 +41,7 @@ Si vous préférez utiliser l’interface utilisateur Platform pour vous connect
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] vous permet de créer des audiences dans [!DNL Adobe Experience Platform] de votre [!DNL Real-Time Customer Profile] data.
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md) : [!DNL Adobe Experience Platform Segmentation Service] vous permet de créer des audiences dans [!DNL Adobe Experience Platform] à partir de vos données [!DNL Real-Time Customer Profile].
 * [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour activer des données vers les destinations par lots sur Platform.
@@ -175,7 +175,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | --------- | ----------- |
 | `name` | Attribuer un nom à la connexion de base à Experience Platform [!DNL Profile store]. |
 | `description` | Vous pouvez éventuellement fournir une description de la connexion de base. |
-| `connectionSpec.id` | Utilisez l’identifiant de spécification de connexion pour la variable [Boutique de profils Experience Platform](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
+| `connectionSpec.id` | Utilisez l’identifiant de spécification de connexion pour la [banque de profils Experience Platform](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 
 {style="table-layout:auto"}
 
@@ -226,7 +226,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | --------- | ----------- |
 | `name` | Attribuer un nom à la connexion source à Experience Platform [!DNL Profile store]. |
 | `description` | Vous pouvez éventuellement fournir une description de la connexion source. |
-| `connectionSpec.id` | Utilisez l’identifiant de spécification de connexion pour la variable [Boutique de profils Experience Platform](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
+| `connectionSpec.id` | Utilisez l’identifiant de spécification de connexion pour la [banque de profils Experience Platform](/help/profile/home.md#profile-data-store) - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`. |
 | `baseConnectionId` | Utilisez l’identifiant de connexion de base que vous avez obtenu à l’étape précédente. |
 | `data.format` | `CSV` est actuellement le seul format d’exportation de fichier pris en charge. |
 
@@ -1028,10 +1028,10 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | Propriété | Description |
 | --------- | ----------- |
 | `{DATAFLOW_ID}` | Dans l’URL, utilisez l’identifiant du flux de données que vous avez créé à l’étape précédente. |
-| `{ETAG}` | Obtenez la variable `{ETAG}` de la réponse de l’étape précédente, [Création d’un flux de données](#create-dataflow). Le format de réponse de l’étape précédente comporte des guillemets d’échappement. Vous devez utiliser les valeurs sans séquence d’échappement dans l’en-tête de la requête. Voir l’exemple ci-dessous : <br> <ul><li>Exemple de réponse : `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Valeur à utiliser dans votre requête : `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> La valeur etag est mise à jour à chaque mise à jour réussie d’un flux de données. |
-| `{SEGMENT_ID}` | Indiquez l’ID d’audience que vous souhaitez exporter vers cette destination. Pour récupérer les ID d’audience pour les audiences que vous souhaitez activer, voir [récupération d’une définition d’audience](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) dans la référence de l’API Experience Platform. |
+| `{ETAG}` | Récupérez le `{ETAG}` de la réponse de l’étape précédente, [Créez un flux de données](#create-dataflow). Le format de réponse de l’étape précédente comporte des guillemets d’échappement. Vous devez utiliser les valeurs sans séquence d’échappement dans l’en-tête de la requête. Voir l’exemple ci-dessous : <br> <ul><li>Exemple de réponse : `"etag":""7400453a-0000-1a00-0000-62b1c7a90000""`</li><li>Valeur à utiliser dans votre requête : `"etag": "7400453a-0000-1a00-0000-62b1c7a90000"`</li></ul> <br> La valeur etag est mise à jour à chaque mise à jour réussie d’un flux de données. |
+| `{SEGMENT_ID}` | Indiquez l’ID d’audience que vous souhaitez exporter vers cette destination. Pour récupérer les ID d’audience pour les audiences que vous souhaitez activer, voir [récupération d’une définition d’audience](https://www.adobe.io/experience-platform-apis/references/segmentation/#operation/retrieveSegmentDefinitionById) dans la référence d’API Experience Platform. |
 | `{PROFILE_ATTRIBUTE}` | Par exemple : `"person.lastName"` |
-| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour ajouter une audience à un flux de données, utilisez la méthode `add` opération. |
+| `op` | Appel d’opération utilisé pour définir l’action nécessaire pour mettre à jour la connexion. Les opérations comprennent : `add`, `replace` et `remove`. Pour ajouter une audience à un flux de données, utilisez l’opération `add`. |
 | `path` | Définit la partie du flux à mettre à jour. Lors de l’ajout d’une audience à un flux de données, utilisez le chemin spécifié dans l’exemple. |
 | `value` | Nouvelle valeur avec laquelle vous souhaitez mettre à jour votre paramètre. |
 | `id` | Indiquez l’identifiant de l’audience que vous ajoutez au flux de données de destination. |
@@ -1040,9 +1040,9 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `exportMode` | Obligatoire. Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. |
 | `startDate` | Sélectionnez la date à laquelle l’audience doit commencer à exporter les profils vers votre destination. |
 | `frequency` | Obligatoire. <br> <ul><li>Pour le mode d’exportation `"DAILY_FULL_EXPORT"`, vous pouvez sélectionner `ONCE` ou `DAILY`.</li><li>Pour le mode d’exportation `"FIRST_FULL_THEN_INCREMENTAL"`, vous pouvez sélectionner `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"` ou `"EVERY_12_HOURS"`.</li></ul> |
-| `triggerType` | Pour *destinations par lot* uniquement. Ce champ est obligatoire uniquement lors de la sélection de la variable `"DAILY_FULL_EXPORT"` dans le `frequency` sélecteur. <br> Obligatoire. <br> <ul><li>Sélectionner `"AFTER_SEGMENT_EVAL"` pour que la tâche d’activation s’exécute immédiatement une fois la tâche de segmentation par lots quotidienne de Platform terminée. Ainsi, lorsque la tâche d’activation s’exécute, les profils les plus récents sont exportés vers votre destination.</li><li>Sélectionner `"SCHEDULED"` pour que la tâche d’activation s’exécute à un moment donné. Cela permet de garantir que les données de profil Experience Platform sont exportées simultanément chaque jour, mais les profils que vous exportez peuvent ne pas être les plus à jour, selon que la tâche de segmentation par lots est terminée ou non avant le début de la tâche d’activation. Lorsque vous sélectionnez cette option, vous devez également ajouter une `startTime` pour indiquer à quel moment en UTC les exportations quotidiennes doivent avoir lieu.</li></ul> |
-| `endDate` | Pour *destinations par lot* uniquement. Ce champ n’est requis que lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots comme Amazon S3, SFTP ou Azure Blob. <br> Non applicable lors de la sélection `"exportMode":"DAILY_FULL_EXPORT"` et `"frequency":"ONCE"`. <br> Définit la date à laquelle les membres de l’audience cessent d’être exportés vers la destination. |
-| `startTime` | Pour *destinations par lot* uniquement. Ce champ n’est requis que lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots comme Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. Sélectionnez l’heure à laquelle les fichiers contenant des membres de l’audience doivent être générés et exportés vers votre destination. |
+| `triggerType` | Pour les *destinations par lot* uniquement. Ce champ est obligatoire uniquement lors de la sélection du mode `"DAILY_FULL_EXPORT"` dans le sélecteur `frequency`. <br> Obligatoire. <br> <ul><li>Sélectionnez `"AFTER_SEGMENT_EVAL"` pour que la tâche d’activation s’exécute immédiatement une fois la tâche de segmentation par lots de Platform terminée. Ainsi, lorsque la tâche d’activation s’exécute, les profils les plus récents sont exportés vers votre destination.</li><li>Sélectionnez `"SCHEDULED"` pour que la tâche d’activation s’exécute à un moment donné. Cela permet de garantir que les données de profil Experience Platform sont exportées simultanément chaque jour, mais les profils que vous exportez peuvent ne pas être les plus à jour, selon que la tâche de segmentation par lots est terminée ou non avant le début de la tâche d’activation. Lorsque vous sélectionnez cette option, vous devez également ajouter un `startTime` pour indiquer à quel moment en UTC les exportations quotidiennes doivent avoir lieu.</li></ul> |
+| `endDate` | Pour les *destinations par lot* uniquement. Ce champ n’est requis que lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots comme Amazon S3, SFTP ou Azure Blob. <br> Non applicable lors de la sélection de `"exportMode":"DAILY_FULL_EXPORT"` et `"frequency":"ONCE"`. <br> Définit la date à laquelle les membres de l’audience cessent d’être exportés vers la destination. |
+| `startTime` | Pour les *destinations par lot* uniquement. Ce champ n’est requis que lors de l’ajout d’une audience à un flux de données dans des destinations d’exportation de fichiers par lots comme Amazon S3, SFTP ou Azure Blob. <br> Obligatoire. Sélectionnez l’heure à laquelle les fichiers contenant des membres de l’audience doivent être générés et exportés vers votre destination. |
 
 {style="table-layout:auto"}
 
@@ -1085,7 +1085,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Réponse**
 
-La réponse renvoyée doit inclure dans la variable `transformations` paramètre les audiences et les attributs de profil que vous avez envoyés à l’étape précédente. Voici un exemple de paramètre `transformations` dans la réponse :
+La réponse renvoyée doit inclure dans le paramètre `transformations` les audiences et les attributs de profil que vous avez envoyés à l’étape précédente. Voici un exemple de paramètre `transformations` dans la réponse :
 
 ```json
 "transformations":[
@@ -1240,7 +1240,7 @@ La réponse renvoyée doit inclure dans la variable `transformations` paramètre
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points de terminaison d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API d’Experience Platform. Voir [Codes d’état d’API](/help/landing/troubleshooting.md#api-status-codes) et [erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform pour plus d’informations sur l’interprétation des réponses d’erreur.
+Les points de terminaison d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API d’Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur, reportez-vous aux [codes d’état d’API](/help/landing/troubleshooting.md#api-status-codes) et [ erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
 
 ## Étapes suivantes {#next-steps}
 

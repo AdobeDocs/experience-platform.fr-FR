@@ -1,15 +1,15 @@
 ---
-title: Présentation de lʼextension du service Experience Cloud Identity dʼAdobe
-description: Découvrez lʼextension de balises du service Adobe Experience Cloud Identity dans Adobe Experience Platform.
+title: Présentation de lʼextension Service d’identités d’Adobe Experience Cloud
+description: Découvrez lʼextension de balises du service d’identités d’Adobe Experience Cloud dans Adobe Experience Platform.
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '792'
 ht-degree: 100%
 
 ---
 
-# Présentation de lʼextension du service Experience Cloud Identity dʼAdobe
+# Présentation de lʼextension Service d’identités d’Adobe Experience Cloud
 
 >[!NOTE]
 >
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 Cette référence vous permet dʼobtenir plus dʼinformations sur la configuration de lʼextension du service Experience Cloud ID dʼAdobe et sur les options disponibles lors de lʼutilisation de cette extension afin de créer une règle.
 
-Utilisez cette extension pour intégrer le service Experience Cloud Identity à votre propriété. Grâce au service Experience Cloud Identity, vous pouvez créer et stocker des identifiants uniques et persistants pour les visiteurs de votre site.
+Utilisez cette extension pour intégrer le service d’identités d’Experience Cloud à votre propriété. Grâce au service d’identités d’Experience Cloud, vous pouvez créer et stocker des identifiants uniques et persistants pour les personnes qui visitent votre site.
 
 ## Configuration de l’extension Experience Cloud ID
 
@@ -49,7 +49,7 @@ Cliquez sur **[!UICONTROL Ajouter]** pour exclure un autre chemin.
 
 Utilisez les options Opt-in (Accord préalable) pour déterminer si les visiteurs doivent accepter les services Adobe sur votre site, ainsi que pour savoir si des cookies peuvent être créés pour suivre l’activité des visiteurs.
 
-L’option Opt-in (Accord préalable) est le point de référence centralisé pour toutes les bibliothèques côté client de la solution Platform afin de déterminer si des cookies peuvent être créés sur l’appareil ou le navigateur d’un utilisateur lors de sa visite sur votre site. La fonctionnalité d’accord préalable ne prend pas en charge la collecte ou le stockage des préférences d’autorisation des utilisateurs.
+L’option Opt-in (Accord préalable) est le point de référence centralisé pour toutes les bibliothèques côté client de la solution Platform afin de déterminer si des cookies peuvent être créés sur l’appareil ou le navigateur d’un utilisateur lors de sa visite sur votre site. L’opt-in ne prend pas en charge la collecte ou le stockage des préférences d’autorisation des utilisateurs.
 
 **Activer Opt-in (Accord préalable) ?**
 
@@ -89,7 +89,7 @@ Définissez les catégories qui sont approuvées ou refusées lorsqu’aucune pr
 
 ### Variables
 
-Définissez les paires nom-valeur comme propriétés d’instance Experience Cloud ID. Utilisez la liste déroulante pour sélectionner une variable, puis saisissez ou sélectionnez une valeur. Pour plus dʼinformations sur chaque variable, reportez-vous à la [documentation sur le service Experience Cloud Identity](https://experiencecloud.adobe.com/resources/help/fr_FR/mcvid/mcvid-overview.html).
+Définissez les paires nom-valeur comme propriétés d’instance Experience Cloud ID. Utilisez la liste déroulante pour sélectionner une variable, puis saisissez ou sélectionnez une valeur. Pour plus dʼinformations sur chaque variable, reportez-vous à la [documentation sur le service d’identités d’Experience Cloud](https://experiencecloud.adobe.com/resources/help/fr_FR/mcvid/mcvid-overview.html).
 
 ## Types d’actions de l’extension Experience Cloud ID
 

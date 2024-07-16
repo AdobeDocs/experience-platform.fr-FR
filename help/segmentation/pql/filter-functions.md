@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: Fonctions de filtre PQL
-description: Les fonctions de filtre sont utilisées pour filtrer les données à l’intérieur des tableaux dans le langage de requête de profil (PQL).
+description: Les fonctions de filtre sont utilisées pour filtrer les données dans des tableaux dans Profile Query Language (PQL).
 exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '203'
-ht-degree: 87%
+ht-degree: 80%
 
 ---
 
 # Fonctions de filtre
 
-Les fonctions de filtre sont utilisées pour filtrer les données dans les tableaux de [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
+Les fonctions de filtre sont utilisées pour filtrer les données dans des tableaux dans [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
 
 ## Filtrer
 

@@ -15,7 +15,7 @@ ht-degree: 6%
 >[!IMPORTANT]
 >
 > * Adobe vous recommande de mettre cette page en signet et de la revoir tous les trois mois pour rechercher les dernières adresses IP. Adobe ne fournit pas de notification pour les nouvelles plages d’adresses IP.
-> * Bien qu’Adobe prenne en charge les exportations de données vers les serveurs SFTP, les emplacements de stockage dans le cloud recommandés pour exporter des données sont les suivants : [!DNL Amazon S3] et [!DNL Azure Blob].
+> * Bien qu’Adobe prenne en charge les exportations de données vers les serveurs SFTP, les emplacements de stockage dans le cloud recommandés pour exporter des données sont [!DNL Amazon S3] et [!DNL Azure Blob].
 
 ## Applicabilité {#applicability}
 
@@ -27,7 +27,7 @@ Les informations de plage d’adresses IP de cette page s’appliquent aux conne
 
 >[!IMPORTANT]
 >
->Les plages d’adresses IP documentées sur cette page sont *not* pris en charge pour les destinations de stockage dans le cloud basées sur les fichiers suivantes : [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2] et [!UICONTROL Zone d’entrée des données].
+>Les plages d’adresses IP documentées sur cette page ne sont *pas* prises en charge pour les destinations de stockage dans le cloud basées sur les fichiers suivantes : [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2] et [!UICONTROL Data Landing Zone].
 
 ## Vue d’ensemble {#overview}
 

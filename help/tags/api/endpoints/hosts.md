@@ -4,7 +4,7 @@ description: Découvrez comment effectuer des appels au point d’entrée /hôte
 exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '793'
 ht-degree: 91%
 
 ---

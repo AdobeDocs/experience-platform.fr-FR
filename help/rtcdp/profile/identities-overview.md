@@ -1,7 +1,7 @@
 ---
 keywords: identités rtcdp;identités rtcdp;identités real-time cdp
 title: Identités dans Real-time Customer Data Platform
-description: Identity Service d’Adobe Experience Platform vous permet de mieux connaître vos clients et leurs comportements en rapprochant des identités entre appareils et systèmes.
+description: Le service d’identités d’Adobe Experience Platform vous permet de mieux connaître vos clients et leurs comportements en rapprochant des identités entre appareils et systèmes.
 feature: Get Started, Identities
 exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
 source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
@@ -25,8 +25,8 @@ Les espaces de noms d’identité sont des composants d’[!DNL Identity Service
 
 Un graphique d’identités est une carte des relations entre différentes identités, qui vous fournit une représentation visuelle de la manière dont votre client interagit avec votre marque sur différents canaux. Tous les graphiques d’identités client sont gérés et mis à jour collectivement par Identity Service, en réponse à l’activité des clients.
 
-[!DNL Identity Service] gère un graphique d’identités visible uniquement par votre entreprise et basé sur vos données. [!DNL Identity Service] augmente le graphique lorsqu’un enregistrement de données ingéré contient plusieurs identités, ajoutant ainsi une relation entre les identités trouvées.
+[!DNL Identity Service] gère un graphique d’identités visible uniquement par votre entreprise et basé sur vos données. [!DNL Identity Service] augmente le graphique lorsqu’un enregistrement de données ingérées contient plusieurs identités, ajoutant ainsi une relation entre les identités trouvées.
 
 ## Étapes suivantes
 
-Les identités et les relations qui les constituent sont définies et conservées par [!DNL Identity Service] et utilisées par [!DNL Real-Time Customer Profile] pour créer une vue d’ensemble de chaque client/cliente et de ses interactions. Pour en savoir plus, consultez la [documentation sur Identity Service](../../identity-service/home.md).
+Les identités et les relations qui les constituent sont définies et conservées par [!DNL Identity Service] et utilisées par [!DNL Real-Time Customer Profile] pour créer une vue d’ensemble de chaque client/cliente et de ses interactions. Pour en savoir plus, consultez la [documentation sur le service d’identités](../../identity-service/home.md).

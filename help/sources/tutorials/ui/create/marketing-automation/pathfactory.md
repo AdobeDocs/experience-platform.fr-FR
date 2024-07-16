@@ -1,7 +1,7 @@
 ---
 title: Connexion de votre compte PathFactory à un Experience Platform via l’interface utilisateur
 description: Découvrez comment connecter votre compte PathFactory à Experience Platform via l’interface utilisateur.
-badge: Version Beta
+badge: Version bêta
 exl-id: 859dd0c1-8c4b-43e3-a87b-84c879460bc0
 source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
 workflow-type: tm+mt
@@ -10,9 +10,9 @@ ht-degree: 21%
 
 ---
 
-# Connectez-vous à [!DNL PathFactory] compte à Experience Platform via l’interface utilisateur
+# Connectez votre compte [!DNL PathFactory] à un Experience Platform via l’interface utilisateur
 
-Ce tutoriel décrit les étapes à suivre pour connecter votre [!DNL PathFactory] Données Visiteurs, sessions et Pages vues vers Adobe Experience Platform via l’interface utilisateur.
+Ce tutoriel décrit les étapes à suivre pour connecter vos données de visiteurs, sessions et pages vues [!DNL PathFactory] à Adobe Experience Platform via l’interface utilisateur.
 
 ## Prise en main
 
@@ -23,7 +23,7 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    * [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
-Si vous disposez déjà d’une [!DNL PathFactory] , vous pouvez ignorer le reste de ce document et passer au tutoriel sur [apport de données d’automatisation du marketing à Experience Platform à l’aide de l’interface utilisateur](../../dataflow/marketing-automation.md).
+Si vous disposez déjà d’un compte [!DNL PathFactory], vous pouvez ignorer le reste de ce document et passer au tutoriel sur l’ [ introduction des données d’automatisation du marketing à l’Experience Platform à l’aide de l’interface utilisateur](../../dataflow/marketing-automation.md).
 
 ### Collecte des informations d’identification requises {#gather-credentials}
 
@@ -35,26 +35,26 @@ Pour accéder à votre compte PathFactory sur Platform, vous devez fournir les v
 | Mot de passe | Mot de passe associé à votre compte PathFactory. Veillez à ce que cette protection soit sécurisée pour empêcher tout accès non autorisé. |
 | Domaine | Domaine associé à votre compte PathFactory. Cela fait généralement référence à l’identifiant unique dans votre URL PathFactory. |
 | Jeton d’accès | Jeton unique utilisé pour l’authentification API afin d’assurer une communication sécurisée entre vos systèmes et PathFactory. |
-| Points de terminaison API | Points de terminaison d’API spécifiques pour l’accès aux données : visiteurs, sessions et pages vues. Chaque point de terminaison correspond à différents jeux de données que vous pouvez récupérer. **Remarque :** Ils sont prédéfinis par [!DNL PathFactory] et sont spécifiques aux données auxquelles vous avez l’intention d’accéder : <ul><li>**Point de terminaison Visiteurs**: `/api/public/v3/data_lake_apis/visitors.json`</li><li>**Point de terminaison des sessions**: `/api/public/v3/data_lake_apis/sessions.json`</li><li>**Point de terminaison des pages vues**: `/api/public/v3/data_lake_apis/page_views.json`</li></ul> |
+| Points de terminaison API | Points de terminaison d’API spécifiques pour l’accès aux données : visiteurs, sessions et pages vues. Chaque point de terminaison correspond à différents jeux de données que vous pouvez récupérer. **Remarque :** Ces données sont prédéfinies par [!DNL PathFactory] et sont spécifiques aux données auxquelles vous avez l’intention d’accéder : <ul><li>**Point d’entrée des visiteurs** : `/api/public/v3/data_lake_apis/visitors.json`</li><li>**Point d’entrée des sessions** : `/api/public/v3/data_lake_apis/sessions.json`</li><li>**Point d’entrée des pages vues** : `/api/public/v3/data_lake_apis/page_views.json`</li></ul> |
 
-Pour obtenir des instructions détaillées sur la manière de sécuriser et d’utiliser vos informations d’identification, ainsi que pour obtenir et actualiser votre jeton d’accès, consultez la page [Centre de support PathFactory](https://support.pathfactory.com/categories/adobe/). Cette ressource propose des guides complets sur la gestion de vos informations d’identification et sur l’intégration efficace et sécurisée de l’API.
+Pour obtenir des instructions détaillées sur la manière de sécuriser et d’utiliser vos informations d’identification, ainsi que pour obtenir et actualiser votre jeton d’accès, consultez le [Centre de support PathFactory](https://support.pathfactory.com/categories/adobe/). Cette ressource propose des guides complets sur la gestion de vos informations d’identification et sur l’intégration efficace et sécurisée de l’API.
 
 
 ## Connecter votre compte [!DNL PathFactory]
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. La variable [!UICONTROL Catalogue] affiche diverses sources prises en charge par Experience Platform.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Le [!UICONTROL catalogue] affiche diverses sources prises en charge par Experience Platform.
 
 Vous pouvez sélectionner la catégorie appropriée dans la liste des catégories. Vous pouvez également utiliser la barre de recherche pour filtrer une source spécifique.
 
-Sous , [!UICONTROL Automatisation du marketing] catégorie, sélectionnez **[!UICONTROL PathFactory]** puis sélectionnez **[!UICONTROL Configuration]**.
+Sous la catégorie [!UICONTROL Automatisation marketing], sélectionnez **[!UICONTROL PathFactory]**, puis sélectionnez **[!UICONTROL Configurer]**.
 
 ![Catalogue des sources avec la source PathFactory sélectionnée.](../../../../images/tutorials/create/pathfactory/catalog.png)
 
-La variable **[!UICONTROL Connexion à PathFactory]** s’affiche. Sur cette page, vous pouvez créer un compte ou utiliser un compte existant.
+La page **[!UICONTROL Se connecter à PathFactory]** s’affiche. Sur cette page, vous pouvez créer un compte ou utiliser un compte existant.
 
 ### Nouveau compte
 
-Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]** et indiquez un nom pour votre compte, une description facultative et les informations d’authentification qui correspondent à votre [!DNL PathFactory] compte .
+Pour créer un nouveau compte, sélectionnez **[!UICONTROL Nouveau compte]** et indiquez un nom pour votre compte, une description facultative et les informations d’authentification qui correspondent à votre compte [!DNL PathFactory].
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
@@ -62,10 +62,10 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la sourc
 
 ### Compte existant
 
-Si vous disposez déjà d’un compte, sélectionnez **[!UICONTROL Compte existant]** puis sélectionnez le compte à utiliser dans la liste qui s’affiche.
+Si vous disposez déjà d’un compte, sélectionnez **[!UICONTROL Compte existant]** , puis sélectionnez le compte que vous souhaitez utiliser dans la liste qui s’affiche.
 
 ![Interface du compte existant dans laquelle vous pouvez effectuer une sélection dans une liste de comptes PathFactory existants.](../../../../images/tutorials/create/pathfactory/existing.png)
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez établi une connexion entre votre [!DNL PathFactory] et Experience Platform. Vous pouvez maintenant passer au tutoriel suivant et [créer un flux de données pour importer vos données d’automatisation marketing dans Experience Platform ;](../../dataflow/marketing-automation.md).
+En suivant ce tutoriel, vous avez établi une connexion entre votre compte [!DNL PathFactory] et votre Experience Platform. Vous pouvez maintenant passer au tutoriel suivant et [créer un flux de données pour importer vos données d’automatisation du marketing dans Experience Platform](../../dataflow/marketing-automation.md).

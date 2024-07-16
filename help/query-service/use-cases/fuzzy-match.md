@@ -5,7 +5,7 @@ exl-id: ec1e2dda-9b80-44a4-9fd5-863c45bc74a7
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '813'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -17,42 +17,42 @@ Au lieu d’essayer de reformater les chaînes de recherche afin de les faire co
 
 L’exemple fourni dans ce cas d’utilisation se concentre sur la mise en correspondance d’attributs similaires à partir d’une recherche de chambre d’hôtel dans deux jeux de données d’agence de voyages différents. Le document indique comment faire correspondre des chaînes en fonction de leur degré de similarité à partir de sources de données distinctes volumineuses. Dans cet exemple, une correspondance approximative compare les résultats de recherche des fonctionnalités d’une pièce des agences de voyage Luma et Acme.
 
-## Prise en main {#getting-started}
+## Commencer {#getting-started}
 
 Dans le cadre de ce processus, vous devez entraîner un modèle d’apprentissage automatique. Ce document suppose une connaissance pratique d’un ou de plusieurs environnements d’apprentissage automatique.
 
-Cet exemple utilise [!DNL Python] et le [!DNL Jupyter Notebook] environnement de développement. Bien qu’il existe de nombreuses options disponibles, [!DNL Jupyter Notebook] est recommandé, car il s’agit d’une application web open source qui a de faibles exigences de calcul. Il peut être téléchargé à partir de [le site officiel de Jupyter](https://jupyter.org/).
+Cet exemple utilise [!DNL Python] et l’environnement de développement [!DNL Jupyter Notebook]. Bien qu’il existe de nombreuses options disponibles, [!DNL Jupyter Notebook] est recommandé car il s’agit d’une application web open source qui a de faibles exigences en matière de calcul. Il peut être téléchargé à partir du [site officiel de Jupyter](https://jupyter.org/).
 
-Avant de commencer, vous devez importer les bibliothèques nécessaires. [!DNL FuzzyWuzzy] est un site open-source [!DNL Python] bibliothèque créée au-dessus de [!DNL difflib] et utilisée pour faire correspondre des chaînes. Elle utilise [!DNL Levenshtein Distance] pour calculer les différences entre les séquences et les motifs. [!DNL FuzzyWuzzy] présente les exigences suivantes :
+Avant de commencer, vous devez importer les bibliothèques nécessaires. [!DNL FuzzyWuzzy] est une bibliothèque [!DNL Python] Open Source construite sur la bibliothèque [!DNL difflib] et utilisée pour faire correspondre des chaînes. Il utilise [!DNL Levenshtein Distance] pour calculer les différences entre les séquences et les motifs. [!DNL FuzzyWuzzy] a les exigences suivantes :
 
 - [!DNL Python] 2.4 (ou version ultérieure)
 - [!DNL Python-Levenshtein]
 
-A partir de la ligne de commande, utilisez la commande suivante pour installer : [!DNL FuzzyWuzzy]:
+Sur la ligne de commande, utilisez la commande suivante pour installer [!DNL FuzzyWuzzy] :
 
 ```console
 pip install fuzzywuzzy
 ```
 
-Ou utilisez la commande suivante pour installer [!DNL Python-Levenshtein] ainsi que :
+Ou utilisez la commande suivante pour installer [!DNL Python-Levenshtein] également :
 
 ```console
 pip install fuzzywuzzy[speedup]
 ```
 
-Informations techniques supplémentaires sur [!DNL Fuzzywuzzy] se trouvent dans leur [documentation officielle](https://pypi.org/project/fuzzywuzzy/).
+Vous trouverez plus d&#39;informations techniques sur [!DNL Fuzzywuzzy] dans leur [documentation officielle](https://pypi.org/project/fuzzywuzzy/).
 
-### Connecter  à Query Service
+### Connexion à Query Service
 
-Vous devez connecter votre modèle d’apprentissage automatique à Query Service en fournissant vos informations d’identification de connexion. Les informations d’identification arrivant à expiration et non arrivant à expiration peuvent être fournies. Veuillez consulter la [guide des informations d’identification](../ui/credentials.md) pour plus d’informations sur la manière d’acquérir les informations d’identification nécessaires. Si vous utilisez [!DNL Jupyter Notebook], veuillez lire le guide complet sur [Comment se connecter à Query Service](../clients/jupyter-notebook.md).
+Vous devez connecter votre modèle d’apprentissage automatique à Query Service en fournissant vos informations de connexion. Les informations d’identification arrivant à expiration et non arrivant à expiration peuvent être fournies. Pour plus d’informations sur la manière d’acquérir les informations d’identification nécessaires, consultez le [guide d’identification](../ui/credentials.md) . Si vous utilisez [!DNL Jupyter Notebook], veuillez lire le guide complet sur [la connexion à Query Service](../clients/jupyter-notebook.md).
 
-Veillez également à importer la variable [!DNL numpy] dans votre [!DNL Python] pour activer l’algèbre linéaire.
+Veillez également à importer le package [!DNL numpy] dans votre environnement [!DNL Python] pour activer l’algèbre linéaire.
 
 ```python
 import numpy as np
 ```
 
-Les commandes ci-dessous sont nécessaires pour se connecter à Query Service à partir de [!DNL Jupyter Notebook]:
+Les commandes ci-dessous sont nécessaires pour se connecter à Query Service à partir de [!DNL Jupyter Notebook] :
 
 ```python
 import psycopg2
@@ -67,9 +67,9 @@ password=<YOUR_QUERY_SERVICE_PASSWORD>
 cur = conn.cursor()
 ```
 
-Votre [!DNL Jupyter Notebook] est désormais connectée à Query Service. Si la connexion est établie, aucun message ne s’affiche. Si la connexion a échoué, une erreur s’affiche.
+Votre instance [!DNL Jupyter Notebook] est maintenant connectée à Query Service. Si la connexion est établie, aucun message ne s’affiche. Si la connexion a échoué, une erreur s’affiche.
 
-### Dessin de données à partir du jeu de données Luma {#luma-dataset}
+### Données Draw du jeu de données Luma {#luma-dataset}
 
 Les données à analyser sont extraites du premier jeu de données avec les commandes suivantes. Pour plus de concision, les exemples se sont limités aux 10 premiers résultats de la colonne.
 
@@ -81,9 +81,9 @@ luma = np.array([r[0] for r in cur])
 luma[:10]
 ```
 
-Sélectionner **Sortie** pour afficher le tableau renvoyé.
+Sélectionnez **Output** pour afficher le tableau renvoyé.
 
-+++Sortie
++++Output
 
 ```console
 array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
@@ -96,7 +96,7 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### Dessin de données à partir du jeu de données Acme {#acme-dataset}
+### Données Draw du jeu de données Acme {#acme-dataset}
 
 Les données à analyser sont désormais extraites du deuxième jeu de données avec les commandes suivantes. Pour être plus concis, les exemples se sont limités aux 10 premiers résultats de la colonne.
 
@@ -108,9 +108,9 @@ acme = np.array([r[0] for r in cur])
 acme[:10]
 ```
 
-Sélectionner **Sortie** pour afficher le tableau renvoyé.
+Sélectionnez **Output** pour afficher le tableau renvoyé.
 
-+++Sortie
++++Output
 
 ```console
 array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
@@ -123,9 +123,9 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### Création d’une fonction de notation floue {#fuzzy-scoring}
+### Créer une fonction de notation floue {#fuzzy-scoring}
 
-Ensuite, vous devez importer `fuzz` à partir de la bibliothèque FuzzyWuzzy et effectuez une comparaison des proportions partielle des chaînes. La fonction de rapport partiel vous permet d’effectuer une correspondance sous-chaîne. Cette chaîne prend la chaîne la plus courte et correspond à toutes les sous-chaînes de même longueur. La fonction renvoie un pourcentage de similarité allant jusqu’à 100 %. Par exemple, la fonction de rapport partiel compare les chaînes suivantes &quot;chambre de luxe&quot;, &quot;lit de roi&quot; et &quot;chambre de roi de luxe&quot; et renvoie un score de similarité de 69 %.
+Ensuite, vous devez importer `fuzz` à partir de la bibliothèque FuzzyWuzzy et exécuter une comparaison des proportions partielles des chaînes. La fonction de rapport partiel vous permet d’effectuer une correspondance sous-chaîne. Cette chaîne prend la chaîne la plus courte et correspond à toutes les sous-chaînes de même longueur. La fonction renvoie un pourcentage de similarité allant jusqu’à 100 %. Par exemple, la fonction de rapport partiel compare les chaînes suivantes &quot;chambre de luxe&quot;, &quot;lit de roi&quot; et &quot;chambre de roi de luxe&quot; et renvoie un score de similarité de 69 %.
 
 Dans le cas d’utilisation de la correspondance de chambre d’hôtel, cela se fait à l’aide des commandes suivantes :
 
@@ -135,7 +135,7 @@ def compute_match_score(x,y):
     return fuzz.partial_ratio(x,y)
 ```
 
-Importer ensuite `cdist` de la [!DNL SciPy] pour calculer la distance entre chaque paire dans les deux collections d’entrées. Cela calcule les scores parmi toutes les paires de chambres d’hôtel fournies par chacune des agences de voyage.
+Importez ensuite `cdist` depuis la bibliothèque [!DNL SciPy] pour calculer la distance entre chaque paire dans les deux collections d’entrées. Cela calcule les scores parmi toutes les paires de chambres d’hôtel fournies par chacune des agences de voyage.
 
 ```python
 from scipy.spatial.distance import cdist
@@ -160,9 +160,9 @@ Les résultats peuvent être affichés avec la commande suivante. Pour plus de c
 matched_pairs[:10]
 ```
 
-Sélectionner **Sortie** pour voir les résultats.
+Sélectionnez **Output** pour afficher les résultats.
 
-+++Sortie
++++Output
 
 ```console
 [('Deluxe Room, 1 King Bed', 'Deluxe Room - One King Bed'),
@@ -179,7 +179,7 @@ Sélectionner **Sortie** pour voir les résultats.
 
 +++
 
-Les résultats sont ensuite mis en correspondance à l’aide de SQL avec la commande suivante :
+Les résultats sont ensuite associés à l’aide de SQL avec la commande suivante :
 
 <!-- Q) Why and is this accurate? -->
 
@@ -187,7 +187,7 @@ Les résultats sont ensuite mis en correspondance à l’aide de SQL avec la com
 matching_sql = ' OR '.join(["(e.luma = '{}' AND b.acme = '{}')".format(c1,c2) for c1,c2 in matched_pairs])
 ```
 
-## Appliquez les mappages pour effectuer une jointure floue dans Query Service. {#mappings-for-query-service}
+## Application des mappages pour effectuer une jointure floue dans Query Service {#mappings-for-query-service}
 
 Ensuite, les paires de correspondance à score élevé sont unies à l’aide de SQL pour créer un nouveau jeu de données.
 
@@ -202,9 +202,9 @@ WHERE
 [r for r in cur]
 ```
 
-Sélectionner **Sortie** pour voir les résultats de cette jointure.
+Sélectionnez **Output** pour afficher les résultats de cette jointure.
 
-+++Sortie
++++Output
 
 ```console
 [('Deluxe Room, 1 King Bed', 'Deluxe Room - One King Bed'),

@@ -2,11 +2,11 @@
 keywords: Experience Platform;guide de développement;Espace de travail de science des données;rubriques les plus consultées;machine learning en temps réel;
 solution: Experience Platform
 title: Vue d’ensemble du machine learning en temps réel
-description: Le machine learning en temps réel peut considérablement améliorer la pertinence de votre contenu d’expérience digitale pour vos utilisateurs finaux. Cela est rendu possible grâce à l’utilisation de l’inférencement en temps réel et à l’apprentissage continu sur le réseau Edge Experience Platform.
+description: Le machine learning en temps réel peut considérablement améliorer la pertinence de votre contenu d’expérience digitale pour vos utilisateurs finaux. Pour ce faire, vous pouvez tirer parti des référencements en temps réel et de l’apprentissage continu sur l’Edge Network Experience Platform.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '553'
 ht-degree: 93%
 
 ---
@@ -43,7 +43,7 @@ Créez entièrement un modèle de machine learning en temps réel ou incorporez-
 
 ### Déploiement
 
-Déployez votre modèle sur le [!DNL Edge Network] Création d’un service d’apprentissage automatique en temps réel dans le [!UICONTROL Galerie de services] à l’aide du point de terminaison de l’API de prédiction.
+Déployez votre modèle sur le [!DNL Edge Network] pour créer un service d’apprentissage automatique en temps réel dans la [!UICONTROL Galerie de services] à l’aide du point de terminaison de l’API de prédiction.
 
 ### Inférence   
 

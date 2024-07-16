@@ -17,9 +17,9 @@ Les points de terminaison de collecte de données interactives reçoivent un seu
 
 >[!IMPORTANT]
 >
->La variable `/interact` endpoint est conçu principalement pour être utilisé par les SDK Experience Platform. Ce point de terminaison est sujet à des modifications additive et son comportement peut évoluer sans préavis. Par exemple, de nouveaux éléments pourront être ajoutés ultérieurement à la charge utile de la réponse.
+>Le point d’entrée `/interact` est principalement conçu pour être utilisé par les SDK Experience Platform. Ce point de terminaison est sujet à des modifications additive et son comportement peut évoluer sans préavis. Par exemple, de nouveaux éléments pourront être ajoutés ultérieurement à la charge utile de la réponse.
 
-La réponse du serveur comprend une ou plusieurs `Handle` , comme illustré ci-dessous.
+La réponse du serveur comprend un ou plusieurs objets `Handle`, comme illustré ci-dessous.
 
 ## Exemple d’appel API
 
@@ -71,7 +71,7 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 
 ### Réponse {#response}
 
-Une réponse réussie renvoie un état HTTP `200 OK`, avec un ou plusieurs `Handle` selon les services edge en temps réel activés dans la configuration de la chaîne de données.
+Une réponse réussie renvoie un état HTTP `200 OK`, avec un ou plusieurs objets `Handle`, selon les services Edge en temps réel activés dans la configuration de la chaîne de données.
 
 ```json
 {

@@ -28,7 +28,7 @@ GET /{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour filtrer les résultats. Voir [document de l’annexe](./appendix.md#query) pour une liste de paramètres disponibles. |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour filtrer les résultats. Consultez le [document de l’annexe](./appendix.md#query) pour obtenir la liste des paramètres disponibles. |
 
 **Requête**
 
@@ -42,7 +42,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une liste d’environnements de test disponibles pour l’utilisateur actuel, y compris des détails tels que `name`, `title`, `state`, et `type`.
+Une réponse réussie renvoie une liste d’environnements de test disponibles pour l’utilisateur actuel, y compris des détails tels que `name`, `title`, `state` et `type`.
 
 ```json
 {
@@ -104,7 +104,7 @@ Une réponse réussie renvoie une liste d’environnements de test disponibles p
 | --- | --- |
 | `name` | Le nom du sandbox. Utilisé à des fins de recherche dans les appels API. |
 | `title` | Le nom d’affichage du sandbox. |
-| `state` | L’état de traitement actuel du sandbox. Un sandbox peut avoir l’un des états suivants : <ul><li>`creating`: l’environnement de test a été créé, mais le système continue de le configurer.</li><li>`active`: l’environnement de test est créé et actif.</li><li>`failed`: en raison d’une erreur, le système n’a pas pu configurer l’environnement de test et est désactivé.</li><li>`deleted`: l’environnement de test a été désactivé manuellement.</li></ul> |
+| `state` | L’état de traitement actuel du sandbox. Un sandbox peut avoir l’un des états suivants : <ul><li>`creating` : l’environnement de test a été créé, mais le système continue de le configurer.</li><li>`active` : l’environnement de test est créé et actif.</li><li>`failed` : en raison d’une erreur, le système n’a pas pu configurer l’environnement de test et est désactivé.</li><li>`deleted` : l’environnement de test a été désactivé manuellement.</li></ul> |
 | `type` | Le type de sandbox : « développement » ou « production ». |
 | `isDefault` | Une propriété booléenne indiquant si cet environnement de test est l’environnement de test de production par défaut pour l’organisation. |
 | `eTag` | L’identifiant d’une version spécifique du sandbox. Utilisée pour le contrôle des versions et une mise en cache efficace, cette valeur est mise à jour chaque fois que le sandbox est modifié. |

@@ -1,5 +1,5 @@
 ---
-title: 'Derrière les scènes : Expérience client optimisée par Adobe Experience Platform'
+title: Dans les coulisses de Scenes&#58 ; une expérience client optimisée par Adobe Experience Platform
 description: Dans la vidéo précédente, nous avons vu comment un exemple de marque, Luma, a pu créer une expérience client riche, gratifiante et pertinente. Cette vidéo montre comment Adobe Experience Platform est utilisé pour accomplir ce parcours.
 kt: 4340
 audience: all
@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Scènes en arrière-plan d’une expérience client optimisée par un Experience Platform
 
-Après avoir regardé la vidéo qui s’affiche [une expérience client optimisée par Platform ;](customer-experience.md), passez en arrière-plan pour voir comment Adobe Experience Platform a été utilisé pour alimenter cette expérience.
+Après avoir regardé la vidéo montrant [une expérience client optimisée par Platform](customer-experience.md), allez en arrière-plan voir comment Adobe Experience Platform a été utilisé pour alimenter cette expérience.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)

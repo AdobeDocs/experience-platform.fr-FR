@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour de l’extension Service d’identités d’Adobe Experience Cloud
-description: Dernières notes de mise à jour pour lʼextension de balise Service dʼidentités dʼAdobe Experience Cloud dans Adobe Experience Platform.
+description: Dernières notes de mise à jour pour l’extension Service d’identités d’Adobe Experience Cloud dans Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '688'
 ht-degree: 78%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 78%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-Ce document couvre les notes de mise à jour de l’extension de balise Adobe Experience Cloud Identity Service. Pour les notes de mise à jour sur le service Identity Experience Cloud lui-même, reportez-vous à la section [Documentation d’Identity Service](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=fr).
+Ce document couvre les notes de mise à jour de l’extension de balise Adobe Experience Cloud Identity Service. Pour les notes de mise à jour sur le service Identity Experience Cloud lui-même, reportez-vous à la [documentation du service Identity](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=fr).
 
 ## 17 octobre 2022
 
 ### Extension 5.5.0 d’Experience Cloud ID
 
-* L’extension prend désormais en charge la version 5.5.0 de la fonction [Client JS du visiteur](https://github.com/Adobe-Marketing-Cloud/id-service). Reportez-vous à la section [Notes de mise à jour du visiteur](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) pour des mises à jour spécifiques.
+* L’extension prend désormais en charge la version 5.5.0 du [client JavaScript du visiteur](https://github.com/Adobe-Marketing-Cloud/id-service). Pour des mises à jour spécifiques, reportez-vous aux [notes de mise à jour du visiteur](https://github.com/Adobe-Marketing-Cloud/id-service/releases/tag/5.5.0) .
 
 ## 9 mars 2022
 
@@ -29,17 +29,17 @@ Ce document couvre les notes de mise à jour de l’extension de balise Adobe Ex
 
 * Cette version contient la dernière version 5.4.0 du visiteur, qui comprend les mises à jour suivantes :
 
-   * Possibilité de configurer la durée de vie de la variable `s_ecid` cookie utilisant la configuration cookieLifetime
+   * Possibilité de configurer la durée de vie du cookie `s_ecid` à l’aide de la configuration cookieLifetime
    * Mise à jour d’un problème de navigateur Firefox qui se produit lorsqu’une page est chargée dans un iFrame enfant
 
-## 10 octobre 2021
+## 10 octobre 2021
 
 ### Extension 5.3.1 d’Experience Cloud ID
 
 * Cette version contient la dernière version 5.3.0 du visiteur, qui comporte les nouvelles mises à jour suivantes :
 
    * Mise à jour de l’algorithme pour générer l’ECID local
-   * Dernier accord préalable avec `Secure` et `SameSite` indicateurs du cookie de confidentialité
+   * Dernière Opt-in avec les indicateurs `Secure` et `SameSite` pour le cookie de confidentialité
    * Correction d’un problème de navigateur Firefox lorsqu’une page est chargée dans un iFrame enfant.
 
 ## 12 janvier 2021
@@ -83,7 +83,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 
 ### Extension 4.6.0 d’Experience Cloud ID
 
-* L’indicateur `loadSSL` est activé par défaut. Tous les appels à Identity Service seront par défaut en `https`. Les clients peuvent définir ce paramètre sur false s’ils souhaitent appeler Identity Service en HTTP à partir de leurs pages non-SSL.
+* L’indicateur `loadSSL` est activé par défaut. Tous les appels au service d’identités seront par défaut en `https`. Les clients peuvent définir ce paramètre sur false s’ils souhaitent appeler le service d’identités en HTTP à partir de leurs pages non SSL.
 * Mise à jour de la fonction utilisée pour détecter la version d’Internet-Explorer (IE), afin de corriger un problème signalé par ESLint.
 * Correction d’un bogue pour un problème de performances sur Internet-Explorer (IE) 11 lorsque l’inclusion pre-approval est accordée à ECID et que ce dernier est mis à jour ultérieurement.
 
@@ -111,7 +111,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 * Correction d’un bogue concernant l’obtention de l’entrée de preApprovals en opt-in
 * VIDEO_ANALYTICS renommé MEDIA_ANALYTICS dans preOptInApprovals
 
-   ![](../../../images/ecid-media-analytics.png)
+  ![](../../../images/ecid-media-analytics.png)
 
 ## 17 juillet 2019
 
@@ -120,7 +120,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 * Mise à jour du fichier visitor.js vers la version 4.4.0
 * Ajout de la prise en charge du hachage SHA-256 pour setCustomerIDs
 
-   ![](../../../images/ecid-setCustomerIDs-hash.png)
+  ![](../../../images/ecid-setCustomerIDs-hash.png)
 
 ## 13 mai 2019
 
@@ -129,7 +129,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 * Mise à jour du fichier visitor.js vers la version 4.3
 * Type d’élément de données ajouté pour ECID dans le cadre de l’extension de balise
 
-   ![](../../../images/ecid-data-element.png)
+  ![](../../../images/ecid-data-element.png)
 
 ## 9 avril 2019
 
@@ -150,7 +150,7 @@ Les détails de ces valeurs d’attribut sont sur [web.dev](https://web.dev/same
 * Mise à jour du fichier visitor.js vers la version 4.0
 * Ajout d’options de configuration pour le nouvel objet intégré d’accord préalable. Les paramètres d’accord préalable peuvent être utilisés pour supprimer les cookies et les appels de balises des solutions Adobe pour mieux prendre en charge les réglementations comme le RGPD
 
-   ![](../../../images/ext-mcid-opt-in.png)
+  ![](../../../images/ext-mcid-opt-in.png)
 
 ## 20 mars 2018
 

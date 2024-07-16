@@ -23,7 +23,7 @@ En outre, pensez aux sources de données que vous utilisez actuellement dans Aud
 
 Adobe vous recommande de classer vos segments comme suit :
 
-* Segments qui peuvent être envoyés à l’Experience Platform via le [[!UICONTROL Connecteur source d’Audience Manager]](/help/sources/connectors/adobe-applications/audience-manager.md), car ils n’ont aucune dépendance de données, aucun problème de destination ou d’activation, et leurs règles de segmentation peuvent être créées via Real-Time CDP. [créateur de segments](/help/segmentation/ui/segment-builder.md) plus tard.
+* Les segments qui peuvent être envoyés à l’Experience Platform par l’intermédiaire du [[!UICONTROL Connecteur Source d’Audience Manager]](/help/sources/connectors/adobe-applications/audience-manager.md), car ils ne comportent aucune dépendance de données, aucun problème de destination ou d’activation, et leurs règles de segmentation peuvent être créées par l’intermédiaire du [créateur de segments](/help/segmentation/ui/segment-builder.md) de Real-Time CDP.
 * Segments qui comportent des règles qui peuvent être prises en charge, mais qui peuvent contenir des données qui ne seront pas disponibles dans Real-Time CDP.
 * Segments qui ne peuvent pas être créés dans Real-Time CDP et qui ne disposent d’aucune fonctionnalité.
 

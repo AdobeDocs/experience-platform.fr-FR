@@ -4,8 +4,8 @@ description: Découvrez comment effectuer des appels vers le point d’entrée /
 exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1103'
-ht-degree: 99%
+source-wordcount: '1100'
+ht-degree: 98%
 
 ---
 
@@ -22,7 +22,7 @@ Dans la hiérarchie Ressource, une propriété est considérée propriétaire de
 * [Extensions](./extensions.md)
 * [Hôtes](./properties.md)
 * [Bibliothèques](./libraries.md)
-* [Composants de   règle](./rule-components.md)
+* [Composants de règle](./rule-components.md)
 * [Règles](./rules.md)
 
 Une propriété appartient à une seule [société](./companies.md). Une société peut contenir plusieurs propriétés.

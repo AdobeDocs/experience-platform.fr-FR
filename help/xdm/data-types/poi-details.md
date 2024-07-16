@@ -11,16 +11,16 @@ ht-degree: 16%
 
 ---
 
-# [!UICONTROL Détails des points ciblés] type de données
+# [!UICONTROL Détails du point ciblé] type de données
 
-[!UICONTROL Détails des points ciblés] est un type de données XDM standard qui décrit les données géographiques où un événement a été observé.
+[!UICONTROL Détails du point ciblé] est un type de données XDM standard qui décrit les données géographiques où un événement a été observé.
 
 <img src="../images/data-types/poi-details.png" width="550" /><br />
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `beaconInteractionDetails` | [[!UICONTROL Balise]](./beacon.md) | Décrit les détails de la balise active pour l’interaction du point ciblé. |
-| `geoInteractionDetails` | [[!UICONTROL Détails des interactions géographiques]](./geo-interaction-details.md) | Décrit les détails géographiques actifs pour l’interaction du point ciblé. |
+| `geoInteractionDetails` | [[!UICONTROL Détails de l’interaction géographique]](./geo-interaction-details.md) | Décrit les détails géographiques actifs pour l’interaction du point ciblé. |
 | `category` | Chaîne | Catégorie générale affectée à l’organisation des points ciblés par l’administrateur des définitions des points ciblés. |
 | `distanceToPOICenter` | Double | Distance estimée depuis le centre du point ciblé en mètres. |
 | `locatingType` | Chaîne | Mécanisme utilisé pour déterminer la position. Les valeurs acceptées sont les suivantes : <ul><li>`beacon`</li><li>`gps`</li><li>`ip`</li><li>`ip+wifi`</li><li>`wifi-triangulation`</li></ul> |
@@ -32,5 +32,5 @@ ht-degree: 16%
 
 Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json)

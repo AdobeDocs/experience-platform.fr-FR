@@ -26,7 +26,7 @@ Il existe des cas où plusieurs connexions peuvent se produire sur un seul appar
 | --- | --- |
 | Ordinateurs de famille et tablettes | Le mari et la femme se connectent tous deux à leurs comptes bancaires respectifs. |
 | kiosque public | Les voyageurs qui se connectent à un aéroport se servant de leur carte de fidélité pour enregistrer leurs sacs et imprimer leurs cartes d&#39;embarquement. |
-| Centre d’appels | Le personnel du centre d’appels se connecte sur un seul appareil au nom des clients qui appellent le service clientèle pour résoudre les problèmes. |
+| Centre d’appel | Le personnel du centre d’appels se connecte sur un seul appareil au nom des clients qui appellent le service clientèle pour résoudre les problèmes. |
 
 ![shared-devices](../images/identity-settings/shared-devices.png)
 

@@ -17,12 +17,12 @@ L’envoi d’événements d’affichage améliore la précision des mesures de 
 
 Le SDK Web vous permet d’envoyer des événements d’affichage de deux manières :
 
-* [Automatiquement](#send-automatically), immédiatement après le rendu du contenu personnalisé sur la page. Consultez la documentation sur la manière de [rendu du contenu personnalisé](rendering-personalization-content.md) pour plus d’informations.
-* [Manuellement](#send-sendEvent-calls), par `sendEvent` appels .
+* [Automatically](#send-automatically), immédiatement après le rendu du contenu personnalisé sur la page. Pour plus d’informations, consultez la documentation sur la [personnalisation du rendu du contenu](rendering-personalization-content.md) .
+* [Manuellement](#send-sendEvent-calls), par le biais des appels `sendEvent` suivants.
 
 >[!NOTE]
 >
->Les événements d’affichage ne sont pas envoyés automatiquement lors de l’appel de la fonction `applyPropositions` de la fonction
+>Les événements d’affichage ne sont pas envoyés automatiquement lors de l’appel de la fonction `applyPropositions`.
 
 ## Envoi automatique des événements d’affichage {#send-automatically}
 
@@ -33,21 +33,21 @@ Pour envoyer automatiquement des événements d&#39;affichage après le rendu du
 * `renderDecisions: true`
 * `personalization.sendDisplayNotifications: true` ou non spécifié
 
-Le SDK Web envoie les événements d’affichage immédiatement après le rendu d’une personnalisation suite à un événement `sendEvent` appelez .
+Le SDK Web envoie les événements d’affichage immédiatement après le rendu d’une personnalisation suite à un appel `sendEvent`.
 
 ## Envoi d’événements d’affichage dans les appels sendEvent suivants {#send-sendEvent-calls}
 
-Comparé à [automatiquement](#send-automatically) envoi d’événements d’affichage, lorsque vous les incluez dans les événements suivants ; `sendEvent` vous donne également la possibilité d’inclure plus d’informations sur le chargement de la page dans l’appel . Il peut s’agir d’informations supplémentaires, qui n’étaient pas disponibles lors de la demande du contenu personnalisé.
+Par rapport à l’envoi d’événements d’affichage [automatique](#send-automatically), lorsque vous les incluez dans les appels `sendEvent` suivants, vous avez également la possibilité d’inclure plus d’informations sur le chargement de la page dans l’appel . Il peut s’agir d’informations supplémentaires, qui n’étaient pas disponibles lors de la demande du contenu personnalisé.
 
-En outre, l’envoi d’événements d’affichage dans `sendEvent` Les appels minimisent les erreurs de taux de rebond lors de l’utilisation d’Adobe Analytics.
+De plus, l’envoi d’événements d’affichage dans les appels `sendEvent` minimise les erreurs de taux de rebond lors de l’utilisation d’Adobe Analytics.
 
 >[!IMPORTANT]
 >
->Lors de l’utilisation de propositions générées manuellement, les événements d’affichage ne sont pris en charge que via `sendEvent` appels . Dans ce cas, vous ne pouvez pas envoyer automatiquement des événements d’affichage.
+>Lors de l’utilisation de propositions générées manuellement, les événements d’affichage ne sont pris en charge que par des appels `sendEvent`. Dans ce cas, vous ne pouvez pas envoyer automatiquement des événements d’affichage.
 
 ### Envoi d’événements d’affichage pour les propositions générées automatiquement {#auto-rendered-propositions}
 
-Pour envoyer des événements d’affichage pour les propositions générées automatiquement, vous devez configurer les paramètres suivants dans la variable `sendEvent` call:
+Pour envoyer des événements d’affichage pour les propositions générées automatiquement, vous devez configurer les paramètres suivants dans l’appel `sendEvent` :
 
 * `renderDecisions: true`
 * `personalization.sendDisplayNotifications: false` pour l’accès en haut de la page
@@ -56,6 +56,6 @@ Pour envoyer les événements d’affichage, appelez `sendEvent` avec `personali
 
 ### Envoyer des événements d’affichage pour les propositions générées manuellement {#manually-rendered-propositions}
 
-Pour envoyer des événements d’affichage pour les propositions générées manuellement, vous devez les inclure dans la variable `_experience.decisioning.propositions` Champ XDM, y compris le champ `id`, `scope`, et `scopeDetails` des propositions.
+Pour envoyer des événements d’affichage pour les propositions générées manuellement, vous devez les inclure dans le champ XDM `_experience.decisioning.propositions`, y compris les champs `id`, `scope` et `scopeDetails` des propositions.
 
-En outre, définissez la variable `include _experience.decisioning.propositionEventType.display` champ à `1`.
+De plus, définissez le champ `include _experience.decisioning.propositionEventType.display` sur `1`.

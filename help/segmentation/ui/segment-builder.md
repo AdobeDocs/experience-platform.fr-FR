@@ -101,9 +101,9 @@ Une fois les suites de rapports mappées, vous pouvez utiliser ces nouveaux cham
 
 >[!NOTE]
 >
->Pour les audiences créées dans Platform, seules les audiences qui ont la variable **same** la stratégie de fusion s’affiche.
+>Pour les audiences créées dans Platform, seules les audiences ayant la stratégie de fusion **same** s’affichent.
 
-La variable **[!UICONTROL Audiences]** répertorie toutes les audiences importées à partir de sources externes, telles que Adobe Audience Manager ou Customer Journey Analytics, ainsi que les audiences créées dans [!DNL Experience Platform].
+L’onglet **[!UICONTROL Audiences]** répertorie toutes les audiences importées de sources externes, telles que Adobe Audience Manager ou Customer Journey Analytics, ainsi que les audiences créées dans [!DNL Experience Platform].
 
 Dans l’onglet **[!UICONTROL Audiences]**, vous pouvez voir toutes les sources disponibles sous la forme d’un groupe de dossiers. En sélectionnant ces dossiers, vous pouvez voir les sous-dossiers et les audiences disponibles. De plus, vous pouvez sélectionner l’icône du dossier (comme indiqué dans l’image située à l’extrême droite) afin de visualiser la structure des dossiers (une coche indique le dossier dans lequel vous vous trouvez actuellement) et de parcourir facilement les dossiers en sélectionnant le nom d’un dossier dans l’arborescence.
 
@@ -263,17 +263,17 @@ Pour sélectionner une politique de fusion pour votre définition de segment, s�
 >abstract="Vous pouvez actualiser les estimations de votre définition de segment pour afficher immédiatement un aperçu du nombre de profils admissibles pour la définition de segment proposé. Les estimations d’audience sont générées en utilisant une taille d’échantillon des données d’exemple du jour."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=fr#estimate-and-preview-an-audience" text="Estimation et prévisualisation d’une audience"
 
-Lors de la création d’une définition de segment, la variable **[!UICONTROL Propriétés d’audience]** sur le côté droit de l’espace de travail, la section affiche une estimation de la taille de la définition de segment résultante, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
+Lors de la création d’une définition de segment, la section **[!UICONTROL Propriétés de l’audience]** sur le côté droit de l’espace de travail affiche une estimation de la taille de la définition de segment résultante, ce qui vous permet d’ajuster votre définition de segment selon vos besoins avant de créer l’audience elle-même.
 
-**[!UICONTROL Profils qualifiés]** indique que la variable **réel** nombre de profils qui correspondent aux règles de la définition de segment. Ce nombre est mis à jour toutes les 24 heures, après l’exécution de la tâche d’évaluation de segment.
+**[!UICONTROL Profils qualifiés]** indique le nombre **actuel** de profils qui correspondent aux règles de la définition de segment. Ce nombre est mis à jour toutes les 24 heures, après l’exécution de la tâche d’évaluation de segment.
 
-L’horodatage des profils qualifiés indique la plus récente **batch** tâche d’évaluation de segment et est **not** affiché pour les définitions de segment évaluées à l’aide de la segmentation par flux ou de périphérie. Si vous modifiez la définition de segment, le nombre de profils qualifiés reste le même jusqu’à l’exécution de la tâche d’évaluation de segment suivante.
+L’horodatage des profils qualifiés indique la tâche d’évaluation de segment **batch** la plus récente et est **not** affiché pour les définitions de segment évaluées à l’aide de la segmentation par flux ou en périphérie. Si vous modifiez la définition de segment, le nombre de profils qualifiés reste le même jusqu’à l’exécution de la tâche d’évaluation de segment suivante.
 
-**[!UICONTROL Profils estimés]** indique qu’une **approximatif** nombre de profils en fonction de la variable **exemple de tâche**. Vous pouvez voir une version mise à jour de cette valeur après avoir ajouté de nouvelles règles ou conditions et sélectionné **[!UICONTROL Actualiser l’estimation]**. La sélection de la bulle d’informations donne le seuil d’erreur et l’exemple de temps de tâche le plus récent.
+**[!UICONTROL Profils estimés]** indique un nombre **approximatif** de profils en fonction de l’ **exemple de tâche**. Vous pouvez voir une version mise à jour de cette valeur après avoir ajouté de nouvelles règles ou conditions et sélectionné **[!UICONTROL Actualiser l’estimation]**. La sélection de la bulle d’informations donne le seuil d’erreur et l’exemple de temps de tâche le plus récent.
 
-![Les profils qualifiés et les profils estimés sont mis en surbrillance dans la section Propriétés de l’audience .](../images/ui/segment-builder/audience-estimates.png)
+![ Les profils qualifiés et les profils estimés sont mis en surbrillance dans la section Propriétés de l’audience.](../images/ui/segment-builder/audience-estimates.png)
 
-La variable **[!UICONTROL Propriétés d’audience]** vous permet également de spécifier des informations importantes sur votre définition de segment, notamment son nom, sa description et son type d’évaluation. Les noms des définitions de segment sont utilisés pour identifier votre définition de segment parmi celles définies par votre organisation et doivent donc être descriptifs, concis et uniques.
+La section **[!UICONTROL Propriétés d’audience]** vous permet également de spécifier des informations importantes sur votre définition de segment, y compris son nom, sa description et son type d’évaluation. Les noms des définitions de segment sont utilisés pour identifier votre définition de segment parmi celles définies par votre organisation et doivent donc être descriptifs, concis et uniques.
 
 Au fur et à mesure que vous continuez à créer votre définition de segment, vous pouvez visualiser un aperçu paginé de l’audience en sélectionnant **[!UICONTROL Afficher les profils]**.
 
@@ -291,7 +291,7 @@ Vous pouvez également sélectionner votre méthode d’évaluation. Si vous sav
 
 L’[!UICONTROL Éligibilité de la méthode d’évaluation] s’affiche. Cette fenêtre contextuelle affiche les méthodes d’évaluation disponibles, à savoir par lots, en flux continu et Edge. La fenêtre contextuelle affiche les méthodes d’évaluation éligibles et non éligibles. Selon les paramètres que vous avez utilisés dans votre définition de segment, il se peut qu’elle ne soit pas admissible pour certaines méthodes d’évaluation. Pour plus d’informations sur les exigences de chaque méthode d’évaluation, veuillez lire les présentations sur la [segmentation en flux continu](./streaming-segmentation.md#query-types) ou la [segmentation Edge](./edge-segmentation.md#query-types).
 
-Vous pouvez également modifier la méthode d’évaluation de la définition de segment une fois que vous avez fini de la créer. Si vous changez la méthode d’évaluation d’Edge ou de Streaming en Batch, vous obtiendrez **not** peuvent le redéfinir sur Edge ou Streaming. Le changement apporté à la méthode d’évaluation sera **only** prend effet une fois que vous avez sélectionné **[!UICONTROL Enregistrer]** dans la fenêtre contextuelle. Annuler la boîte de dialogue **keep** la méthode d’évaluation d’origine.
+Vous pouvez également modifier la méthode d’évaluation de la définition de segment une fois que vous avez fini de la créer. Si vous changez la méthode d’évaluation d’Edge ou de Streaming en Batch, vous ne pourrez **pas** la redéfinir sur Edge ou Streaming. La modification de la méthode d’évaluation prend effet **uniquement** une fois que vous avez sélectionné **[!UICONTROL Enregistrer]** dans la fenêtre contextuelle. L’annulation de la boîte de dialogue **conserve** la méthode d’évaluation d’origine.
 
 ![La fenêtre contextuelle d’éligibilité de la méthode d’évaluation s’affiche. Elle affiche les méthodes d’évaluation éligibles et non éligibles pour la définition de segment.](../images/ui/segment-builder/select-evaluation-method.png)
 

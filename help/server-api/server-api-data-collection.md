@@ -4,21 +4,21 @@ description: Découvrez comment l’API Adobe Experience Platform Edge Network S
 source-git-commit: f52603f7e65ac553e00a2b632857561cd07ae441
 workflow-type: tm+mt
 source-wordcount: '131'
-ht-degree: 9%
+ht-degree: 8%
 
 ---
 
 
 # Collecte de données
 
-Le [!DNL Server API] propose deux types de points de terminaison de collecte de données :
+[!DNL Server API] offre deux types de points de terminaison de collecte de données :
 
-* [Points d’entrée de la collecte de données interactive](interactive-data-collection.md), utilisé lorsque le client attend qu’une réponse soit renvoyée par le serveur. Ces points de terminaison peuvent également renvoyer du contenu d’autres services Edge Network, lors de la collecte de données.
-* [Collecte de données d’événement non interactif](non-interactive-data-collection.md), utilisé lorsqu’aucune réponse n’est attendue du serveur. Ces points de terminaison sont utilisés uniquement pour la collecte de données.
+* [Points de terminaison de collecte de données interactives](interactive-data-collection.md), utilisés lorsque le client s’attend à ce qu’une réponse soit renvoyée par le serveur. Ces points de terminaison peuvent également renvoyer du contenu d’autres services Edge Network lors de la collecte de données.
+* [Collecte de données d’événement non interactif](non-interactive-data-collection.md), utilisée lorsqu’aucune réponse n’est attendue du serveur. Ces points de terminaison sont utilisés uniquement pour la collecte de données.
 
-## `Event` objet {#event-object}
+## Objet `Event` {#event-object}
 
-Données collectées par la variable [!DNL Server API] est structuré dans la variable `Event` . La structure de cet objet est décrite ci-dessous.
+Les données collectées par [!DNL Server API] sont structurées dans l’objet `Event`. La structure de cet objet est décrite ci-dessous.
 
 ```json
 {
@@ -57,5 +57,5 @@ Données collectées par la variable [!DNL Server API] est structuré dans la va
 | Attribut | Type | Description |
 | --- | --- | --- |
 | `xdm` | Objet | *Obligatoire*. Objet JSON contenant des données au format XDM, correspondant au schéma du jeu de données. |
-| `data` | Objet | *Facultatif*. Objet JSON contenant des données de forme libre, qui peuvent être mappées à XDM par le réseau Edge. |
+| `data` | Objet | *Facultatif*. Objet JSON contenant des données de formulaire libre, qui peuvent être mappées à XDM par l’Edge Network. |
 

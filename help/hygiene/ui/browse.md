@@ -23,11 +23,11 @@ Ce guide explique comment afficher et gérer les ordres de travail existants dan
 
 ## Répertorier et filtrer les ordres de travail existants
 
-Lorsque vous accédez pour la première fois à **[!UICONTROL Cycle de vie des données]** dans l’interface utilisateur de , une liste des ordres de travail existants s’affiche avec leurs détails de base.
+Lorsque vous accédez pour la première fois à l’espace de travail **[!UICONTROL Cycle de vie des données]** dans l’interface utilisateur, une liste des ordres de travail existants s’affiche avec leurs détails de base.
 
-![Image montrant le [!UICONTROL Cycle de vie des données] Workspace dans l’interface utilisateur de Platform](../images/ui/browse/work-order-list.png)
+![ Image montrant l’espace de travail [!UICONTROL Data Lifecycle] dans l’interface utilisateur de Platform](../images/ui/browse/work-order-list.png)
 
-La liste affiche uniquement les ordres de travail d’une catégorie à la fois. Sélectionner **[!UICONTROL Consommation]** pour afficher la liste des tâches de suppression d’enregistrement, et **[!UICONTROL Jeu de données]** pour afficher une liste des expirations de jeux de données planifiées.
+La liste affiche uniquement les ordres de travail d’une catégorie à la fois. Sélectionnez **[!UICONTROL Consumer]** pour afficher une liste de tâches de suppression d’enregistrement et **[!UICONTROL Jeu de données]** pour afficher une liste d’expirations de jeux de données planifiées.
 
 ![Image illustrant l’onglet [!UICONTROL Jeu de données]](../images/ui/browse/dataset-tab.png).
 

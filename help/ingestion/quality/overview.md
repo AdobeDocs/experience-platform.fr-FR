@@ -6,14 +6,14 @@ description: Le document suivant résume les comportements de vérification et d
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '423'
-ht-degree: 54%
+source-wordcount: '427'
+ht-degree: 73%
 
 ---
 
 # Qualité des données dans Adobe Experience Platform
 
-Adobe Experience Platform fournit des garanties bien définies d’exhaustivité, d’exactitude et de cohérence pour toute donnée transférée par ingestion par lots ou par flux. Le document suivant présente un résumé des contrôles et des comportements de validation pris en charge pour l’ingestion par lots et par flux dans [!DNL Experience Platform].
+Adobe Experience Platform fournit des garanties bien définies d’exhaustivité, d’exactitude et de cohérence pour toute donnée chargée par ingestion par lots ou par flux. Le document suivant fournit un résumé des contrôles et des comportements de validation pris en charge pour l’ingestion par lots et par flux dans [!DNL Experience Platform].
 
 ## Vérifications prises en charge
 
@@ -28,7 +28,7 @@ Adobe Experience Platform fournit des garanties bien définies d’exhaustivit
 
 ## Comportements de validation pris en charge
 
-L’ingestion par lots et par flux empêche les données en échec de se rendre en aval en déplaçant les données incorrectes pour récupération et analyse dans [!DNL Data Lake]. L’ingestion de données fournit les validations suivantes pour l’ingestion par lots et par flux.
+L’ingestion par lots et par flux empêche les données en échec de se rendre en aval en déplaçant les données incorrectes pour la récupération et l’analyse dans [!DNL Data Lake]. L’ingestion de données fournit les validations suivantes pour l’ingestion par lots et par flux.
 
 ### Ingestion par lots
 
@@ -54,15 +54,15 @@ Les validations suivantes sont effectuées pour l’ingestion par flux :
 | Jeu de données | Vérifie que le jeu de données est spécifié, activé et n’a pas été supprimé. |
 | En-tête | Vérifie que l’en-tête est spécifié et valide. |
 
-Informations supplémentaires sur la manière dont [!DNL Platform] Les analyses et les validations des données sont disponibles dans la variable [documentation sur la surveillance des flux de données](./monitor-data-ingestion.md).
+Vous trouverez plus d’informations sur la façon dont [!DNL Platform] surveille et valide les données dans la [documentation sur le suivi des flux de données](./monitor-data-ingestion.md).
 
 ## Validation de la valeur d’identité
 
-Le tableau suivant décrit les règles existantes que vous devez suivre pour garantir une validation réussie de votre valeur d’identité.
+Le tableau suivant décrit les règles à suivre pour garantir la validation de votre valeur d’identité.
 
-| Espace de noms | Règle de validation | Comportement du système en cas de violation de la règle |
+| Espace de noms | Règle de validation | Comportement du système en cas de violation de règle |
 | --- | --- | --- |
-| ECID | <ul><li>La valeur d’identité d’un ECID doit comporter exactement 38 caractères.</li><li>La valeur d’identité d’un ECID ne doit être composée que de nombres.</li></ul> | <ul><li>Si la valeur d’identité d’ECID ne comporte pas exactement 38 caractères, l’enregistrement est ignoré.</li><li>Si la valeur d’identité d’ECID contient des caractères non numériques, l’enregistrement est ignoré.</li></ul> |
-| Non ECID | La valeur d’identité ne peut pas dépasser 1 024 caractères. | Si la valeur d’identité dépasse 1 024 caractères, l’enregistrement est ignoré. |
+| ECID | <ul><li>La valeur d’identité d’un ECID doit comporter exactement 38 caractères.</li><li>La valeur d’identité d’un ECID ne doit être composée que de chiffres.</li></ul> | <ul><li>Si la valeur d’identité d’un ECID ne comporte pas exactement 38 caractères, l’enregistrement est ignoré.</li><li>Si la valeur d’identité d’un ECID contient des caractères non numériques, l’enregistrement est ignoré.</li></ul> |
+| Non-ECID | La valeur d’identité ne peut pas dépasser 1 024 caractères. | Le cas échéant, l’enregistrement est ignoré. |
 
-Pour plus d’informations sur [!DNL Identity Service] barrières de sécurité, voir [[!DNL Identity Service] Présentation des barrières de sécurité](../../identity-service/guardrails.md).
+Pour plus d’informations sur les garde-fous [!DNL Identity Service], consultez la [[!DNL Identity Service] présentation des garde-fous](../../identity-service/guardrails.md).

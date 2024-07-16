@@ -14,11 +14,11 @@ ht-degree: 56%
 
 # Point d’entrée de l’ordre de travail {#work-order-endpoint}
 
-La variable `/workorder` Le point de terminaison de l’API Data Hygiene vous permet de gérer par programmation les demandes de suppression d’enregistrements dans Adobe Experience Platform.
+Le point d’entrée `/workorder` de l’API Data Hygiene vous permet de gérer par programmation les demandes de suppression d’enregistrements dans Adobe Experience Platform.
 
 >[!IMPORTANT]
 > 
->La fonction de suppression d’enregistrement est actuellement en version bêta et disponible uniquement dans un **version limitée**. Il n’est pas disponible pour tous les clients. Les demandes de suppression d’enregistrements ne sont disponibles que pour les organisations de la version limitée.
+>La fonctionnalité de suppression d’enregistrement est actuellement disponible dans Beta et n’est disponible que dans une **version limitée**. Il n’est pas disponible pour tous les clients. Les demandes de suppression d’enregistrements ne sont disponibles que pour les organisations de la version limitée.
 >
 >Les suppressions d’enregistrements sont destinées au nettoyage des données, à la suppression des données anonymes ou à la minimisation des données. Elles ne sont **pas** destinées aux demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez plutôt [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
 
@@ -28,11 +28,11 @@ Le point d’entrée utilisé dans ce guide fait partie de lʼAPI Data Hygiene. 
 
 ## Création d’une requête de suppression d’enregistrement {#create}
 
-Vous pouvez supprimer une ou plusieurs identités d’un seul jeu de données ou de tous les jeux de données en adressant une requête POST à la variable `/workorder` point de terminaison .
+Vous pouvez supprimer une ou plusieurs identités d’un seul jeu de données ou de tous les jeux de données en envoyant une requête de POST au point de terminaison `/workorder`.
 
 >[!IMPORTANT]
 > 
->Il existe différentes limites pour le nombre total de suppressions d’enregistrement d’identité unique qui peuvent être envoyées chaque mois. Ces limites sont basées sur votre contrat de licence. Les organisations qui ont acheté toutes les éditions d’Adobe Real-time Customer Data Platform et de Adobe Journey Optimizer peuvent envoyer jusqu’à 100 000 enregistrements d’identité supprimés chaque mois. Organisations ayant effectué des achats **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité** peut envoyer jusqu’à 600 000 enregistrements d’identité supprimés chaque mois.<br>Une seule [demande de suppression d’enregistrement via l’interface utilisateur](../ui/record-delete.md) vous permet d’envoyer 10 000 identifiants à la fois. La méthode d’API pour supprimer des enregistrements permet l’envoi simultané de 100 000 identifiants.<br>Il est recommandé d’envoyer autant d’ID par demande que possible, jusqu’à votre limite d’ID. Lorsque vous envisagez de supprimer un volume élevé d’identifiants, il est préférable d’éviter d’envoyer un volume faible ou une seule demande de suppression d’identifiant par enregistrement.
+>Il existe différentes limites pour le nombre total de suppressions d’enregistrement d’identité unique qui peuvent être envoyées chaque mois. Ces limites sont basées sur votre contrat de licence. Les organisations qui ont acheté toutes les éditions d’Adobe Real-Time Customer Data Platform et de Adobe Journey Optimizer peuvent envoyer jusqu’à 100 000 enregistrements d’identité supprimés chaque mois. Les organisations qui ont acheté le **Bouclier de santé des Adobes** ou le **Bouclier de sécurité et de confidentialité des Adobes** peuvent envoyer jusqu’à 600 000 enregistrements d’identité supprimés chaque mois.<br>Une seule [requête de suppression d’enregistrement via l’interface utilisateur](../ui/record-delete.md) vous permet d’envoyer 10 000 identifiants à la fois. La méthode d’API pour supprimer des enregistrements permet l’envoi simultané de 100 000 identifiants.<br>Il est recommandé d’envoyer autant d’ID par demande que possible, jusqu’à votre limite d’ID. Lorsque vous envisagez de supprimer un volume élevé d’identifiants, il est préférable d’éviter d’envoyer un volume faible ou une seule demande de suppression d’identifiant par enregistrement.
 
 **Format d’API**
 
@@ -46,7 +46,7 @@ POST /workorder
 
 **Requête**
 
-Selon la valeur de la variable `datasetId` fourni dans le payload de requête, l’appel API supprime les identités de tous les jeux de données ou d’un seul jeu de données que vous spécifiez. La requête suivante supprime trois identités d’un jeu de données spécifique.
+Selon la valeur de `datasetId` fournie dans le payload de la requête, l’appel API supprime les identités de tous les jeux de données ou d’un seul jeu de données que vous spécifiez. La requête suivante supprime trois identités d’un jeu de données spécifique.
 
 ```shell
 curl -X POST \
@@ -87,7 +87,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `action` | L’action à effectuer. La valeur doit être définie sur `delete_identity` pour les suppressions d’enregistrement. |
-| `datasetId` | Si vous effectuez une suppression dans un seul jeu de données, cette valeur doit correspondre à l’identifiant du jeu de données en question. Si vous effectuez une suppression dans tous les jeux de données, définissez la valeur sur `ALL`.<br><br>Si vous spécifiez un seul jeu de données, une identité principale doit être définie pour le schéma XDM (Experience Data Model) associé au jeu de données. Si le jeu de données ne possède pas d’identité principale, il doit alors disposer d’une carte d’identité pour pouvoir être modifié par une requête Data Lifecycle.<br>Si une carte d’identité existe, elle est présente sous la forme d’un champ de niveau supérieur nommé `identityMap`.<br>Notez qu’une ligne de jeu de données peut avoir de nombreuses identités dans sa carte d’identité, mais qu’une seule peut être marquée comme principale. `"primary": true` doit être inclus pour forcer la variable `id` pour correspondre à une identité principale. |
+| `datasetId` | Si vous effectuez une suppression dans un seul jeu de données, cette valeur doit correspondre à l’identifiant du jeu de données en question. Si vous effectuez une suppression dans tous les jeux de données, définissez la valeur sur `ALL`.<br><br>Si vous spécifiez un seul jeu de données, une identité principale doit être définie pour le schéma de modèle de données d’expérience (XDM) associé au jeu de données. Si le jeu de données ne possède pas d’identité principale, il doit alors disposer d’une carte d’identité pour pouvoir être modifié par une requête Data Lifecycle.<br>S’il existe une carte d’identité, elle sera présente sous la forme d’un champ de niveau supérieur nommé `identityMap`.<br>Notez qu’une ligne de jeu de données peut avoir de nombreuses identités dans sa carte d’identité, mais qu’une seule peut être marquée comme principale. `"primary": true` doit être inclus pour forcer `id` à correspondre à une identité principale. |
 | `displayName` | Nom d’affichage de la requête de suppression d’enregistrement. |
 | `description` | Description de la requête de suppression d’enregistrement. |
 | `identities` | Un tableau contenant les identités d’au moins un utilisateur dont vous souhaitez supprimer les informations. Chaque identité se compose d’un [espace de noms d’identité](../../identity-service/features/namespaces.md) et d’une valeur :<ul><li>`namespace` : contient une seule propriété de chaîne, `code`, qui représente l’espace de noms d’identité. </li><li>`id` : la valeur de l’identité.</ul>Si `datasetId` spécifie un seul jeu de données, chaque entité sous `identities` doit utiliser le même espace de noms d’identité que l’identité principale du schéma.<br><br>Si `datasetId` est défini sur `ALL`, le tableau `identities` n’est limité à aucun espace de noms unique, car chaque jeu de données peut être différent. Toutefois, les requêtes sont toujours limitées aux espaces de noms disponibles pour l’organisation, comme indiqué par le [service d’identités](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
@@ -130,7 +130,7 @@ Une réponse réussie renvoie les détails de la suppression de l’enregistreme
 
 ## Récupération de l’état d’une suppression d’enregistrement {#lookup}
 
-Après vous [créer une requête de suppression d’enregistrement](#create), vous pouvez vérifier son état à l’aide d’une requête de GET.
+Après avoir [créé une requête de suppression d’enregistrement](#create), vous pouvez vérifier son état à l’aide d’une requête de GET.
 
 **Format d’API**
 
@@ -140,7 +140,7 @@ GET /workorder/{WORK_ORDER_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{WORK_ORDER_ID}` | La variable `workorderId` de l’enregistrement que vous recherchez. |
+| `{WORK_ORDER_ID}` | `workorderId` de l’enregistrement supprimé que vous recherchez. |
 
 {style="table-layout:auto"}
 
@@ -207,7 +207,7 @@ Une réponse réussie renvoie les détails de l’opération de suppression, y c
 
 ## Mise à jour d’une requête de suppression d’enregistrement
 
-Vous pouvez mettre à jour la variable `displayName` et `description` pour une suppression d’enregistrement en effectuant une requête de PUT.
+Vous pouvez mettre à jour `displayName` et `description` pour une suppression d’enregistrement en effectuant une requête de PUT.
 
 **Format d’API**
 
@@ -217,7 +217,7 @@ PUT /workorder{WORK_ORDER_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{WORK_ORDER_ID}` | La variable `workorderId` de l’enregistrement que vous recherchez. |
+| `{WORK_ORDER_ID}` | `workorderId` de l’enregistrement supprimé que vous recherchez. |
 
 {style="table-layout:auto"}
 

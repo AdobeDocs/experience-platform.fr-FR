@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;Oracle DB;oracle db
 solution: Experience Platform
-title: Création d’une connexion à la source Oracle DB dans l’interface utilisateur
+title: Création d’une connexion Source Oracle dans l’interface utilisateur
 type: Tutorial
 description: Découvrez comment créer une connexion source Oracle DB à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 52%
+source-wordcount: '459'
+ht-degree: 42%
 
 ---
 
-# Créez un [!DNL Oracle DB] connexion source dans l’interface utilisateur
+# Créer une connexion source [!DNL Oracle DB] dans l’interface utilisateur
 
-Les connecteurs source d’Adobe Experience Platform permettent d’ingérer des données externes selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Oracle DB] connecteur source à l’aide de [!DNL Platform] de l’interface utilisateur.
+Les connecteurs Source dans Adobe Experience Platform permettent d’ingérer des données provenant de l’extérieur de manière planifiée. Ce tutoriel décrit les étapes de création d’un connecteur source [!DNL Oracle DB] à l’aide de l’interface utilisateur [!DNL Platform].
 
 ## Prise en main
 
@@ -29,38 +29,38 @@ Si vous disposez déjà d’une connexion [!DNL Oracle DB] valide, vous pouvez i
 
 ### Collecter les informations d’identification requises
 
-Pour accéder au compte [!DNL Oracle DB] sur , vous devez fournir les valeurs suivantes :[!DNL Platform]
+Pour accéder à votre compte [!DNL Oracle DB] sur [!DNL Platform], vous devez fournir les valeurs suivantes :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `connectionString` | Chaîne de connexion utilisée pour la connexion à [!DNL Oracle DB]. Le [!DNL Oracle DB] Le modèle de chaîne de connexion est le suivant : `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | Identifiant unique nécessaire pour créer une connexion. L’identifiant de spécification de connexion pour [!DNL Oracle DB] is `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
+| `connectionString` | Chaîne de connexion utilisée pour se connecter à [!DNL Oracle DB]. Le modèle de chaîne de connexion [!DNL Oracle DB] est : `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
+| `connectionSpec.id` | Identifiant unique nécessaire pour créer une connexion. L’ID de spécification de connexion pour [!DNL Oracle DB] est `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
 
-Pour plus d’informations sur la prise en main, reportez-vous à la section [ce document Oracle](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
+Pour plus d&#39;informations sur la prise en main, reportez-vous à [ce document d&#39;Oracle](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
 
 ## Connecter votre compte [!DNL Oracle DB]
 
-Une fois que vous avez rassemblé vos informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre [!DNL Oracle DB] compte auquel se connecter [!DNL Platform].
+Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre compte [!DNL Oracle DB] afin de vous connecter à [!DNL Platform].
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au **[!UICONTROL Sources]** workspace. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com), puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]**. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous , **[!UICONTROL Bases de données]** catégorie, sélectionnez **[!UICONTROL Oracle DB]**. Si c’est la première fois que vous utilisez ce connecteur, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer [!DNL Oracle DB] connecteur.
+Sous la catégorie **[!UICONTROL Bases de données]**, sélectionnez **[!UICONTROL Oracle DB]**. Si c&#39;est la première fois que vous utilisez ce connecteur, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer un nouveau connecteur [!DNL Oracle DB].
 
 ![catalogue](../../../../images/tutorials/create/oracle/catalog.png)
 
-Le **[!UICONTROL Connexion à Oracle DB]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Se connecter à Oracle DB]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et [!DNL Oracle DB] informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion]** puis accorder un certain temps pour établir la nouvelle connexion.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification [!DNL Oracle DB]. Une fois que vous avez terminé, sélectionnez **[!UICONTROL Se connecter]** et laissez un certain temps à la nouvelle connexion pour établir.
 
 ![connect](../../../../images/tutorials/create/oracle/new.png)
 
 ### Compte existant
 
-Pour connecter un compte existant, sélectionnez le [!DNL Oracle DB] compte auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Pour connecter un compte existant, sélectionnez le compte [!DNL Oracle DB] auquel vous souhaitez vous connecter, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
 ![existant](../../../../images/tutorials/create/oracle/existing.png)
 

@@ -6,7 +6,7 @@ exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 source-git-commit: d8f72bb5ae56daf5a41c763f821ca6306514bc48
 workflow-type: tm+mt
 source-wordcount: '531'
-ht-degree: 16%
+ht-degree: 15%
 
 ---
 
@@ -16,11 +16,11 @@ Les rôles définissent l’accès dont dispose un administrateur, un spécialis
 
 ## Créer un rôle
 
-Pour créer un nouveau rôle, sélectionnez le **[!UICONTROL Rôles]** dans la barre latérale et sélectionnez **[!UICONTROL Créer un rôle]**.
+Pour créer un nouveau rôle, sélectionnez l’onglet **[!UICONTROL Rôles]** dans la barre latérale et sélectionnez **[!UICONTROL Créer un rôle]**.
 
 ![flac-new-role](../../images/flac-ui/flac-new-role.png)
 
-La variable **[!UICONTROL Création d’un nouveau rôle]** s’affiche, vous invitant à saisir un nom et une description facultative.
+La boîte de dialogue **[!UICONTROL Créer un nouveau rôle]** s’affiche, vous invitant à saisir un nom et une description facultative.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Confirmer]**.
 
@@ -42,11 +42,11 @@ Sélectionnez les autorisations de ressources que vous souhaitez inclure dans le
 
 ![flac-save-resources](../../images/flac-ui/flac-save-resources.png)
 
-Le nouveau rôle a été créé avec succès et vous êtes redirigé vers la fonction **[!UICONTROL Rôles]** , où le nouveau rôle apparaît dans la liste.
+Le nouveau rôle a été créé avec succès et vous êtes redirigé vers la page **[!UICONTROL Rôles]** où le nouveau rôle apparaîtra dans la liste.
 
 ![flac-role-saved](../../images/flac-ui/flac-role-saved.png)
 
-Consultez les sections sur [gestion des autorisations pour un rôle](#manage-permissions-for-a-role) pour plus d’informations sur la gestion des autorisations de rôle une fois qu’elles ont été créées.
+Consultez les sections sur la [gestion des autorisations pour un rôle](#manage-permissions-for-a-role) pour plus d’informations sur la gestion des autorisations de rôle une fois qu’elles ont été créées.
 
 La vidéo suivante est destinée à vous aider à comprendre comment créer un nouveau rôle et gérer les utilisateurs pour ce rôle.
 
@@ -54,7 +54,7 @@ La vidéo suivante est destinée à vous aider à comprendre comment créer un n
 
 ## Dupliquer un rôle
 
-Pour dupliquer un rôle existant, sélectionnez le rôle dans la **[!UICONTROL Rôles]** . Vous pouvez également utiliser l’option de filtrage pour filtrer les résultats afin de trouver le rôle que vous souhaitez dupliquer.
+Pour dupliquer un rôle existant, sélectionnez le rôle dans l’onglet **[!UICONTROL Rôles]** . Vous pouvez également utiliser l’option de filtrage pour filtrer les résultats afin de trouver le rôle que vous souhaitez dupliquer.
 
 ![flac-duplicate-role](../../images/flac-ui/flac-duplicate-role.png)
 
@@ -62,32 +62,32 @@ Ensuite, sélectionnez **[!UICONTROL Dupliquer]** en haut à droite de l’écra
 
 ![flac-duplicate](../../images/flac-ui/flac-duplicate.png)
 
-La variable **[!UICONTROL Duplication du rôle]** s’affiche, vous invitant à confirmer la duplication.
+La boîte de dialogue **[!UICONTROL Dupliquer le rôle]** s’affiche, vous invitant à confirmer la duplication.
 
 ![flac-duplicate-confirm](../../images/flac-ui/flac-duplicate-confirm.png)
 
-Ensuite, vous accédez à la page des détails du rôle dans laquelle vous pouvez modifier le nom et les autorisations du rôle. Les environnements Détails, Étiquettes et Sandbox sont dupliqués à partir du rôle précédent. Les utilisateurs doivent être ajoutés depuis l&#39;onglet Utilisateurs . Vous pouvez afficher la [gestion des autorisations pour un rôle](permissions.md) document pour en savoir plus sur l’ajout de détails, de libellés, d’environnements de test et d’utilisateurs à un rôle.
+Ensuite, vous accédez à la page des détails du rôle dans laquelle vous pouvez modifier le nom et les autorisations du rôle. Les environnements Détails, Étiquettes et Sandbox sont dupliqués à partir du rôle précédent. Les utilisateurs doivent être ajoutés depuis l&#39;onglet Utilisateurs . Vous pouvez afficher le document [gérer les autorisations pour un rôle](permissions.md) pour en savoir plus sur l’ajout de détails, d’étiquettes, de sandbox et d’utilisateurs à un rôle.
 
-Cliquez sur la flèche gauche pour revenir au **[!UICONTROL Rôles]** .
+Cliquez sur la flèche gauche pour revenir à l’onglet **[!UICONTROL Rôles]** .
 
 ![flac-return-to-role](../../images/flac-ui/flac-return-to-roles.png)
 
-Le nouveau rôle apparaîtra dans la liste de la fonction **[!UICONTROL Rôles]** page.
+Le nouveau rôle apparaîtra dans la liste de la page **[!UICONTROL Rôles]** .
 
 ![flac-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
 
-## Supprimer un rôle
+## Suppression d’un rôle
 
-Sélectionnez les points de suspension (`…`) en regard du nom d’un rôle, et une liste déroulante affiche les commandes permettant de modifier, supprimer ou dupliquer le rôle. Sélectionnez Supprimer dans la liste déroulante.
+Sélectionnez les points de suspension (`…`) en regard du nom d’un rôle et une liste déroulante affiche les commandes permettant de modifier, supprimer ou dupliquer le rôle. Sélectionnez Supprimer dans la liste déroulante.
 
 ![flac-role-delete](../../images/flac-ui/flac-role-delete.png)
 
-La variable **[!UICONTROL Suppression d’un rôle utilisateur]** s’affiche, vous invitant à confirmer la suppression.
+La boîte de dialogue **[!UICONTROL Supprimer le rôle utilisateur]** s’affiche et vous invite à confirmer la suppression.
 
 ![flac-confirm-role-delete](../../images/flac-ui/flac-confirm-role-delete.png)
 
-Vous revenez alors à la variable **[!UICONTROL Rôles]** .
+Vous serez alors renvoyé à l&#39;onglet **[!UICONTROL Rôles]** .
 
 ## Étapes suivantes
 
-Une fois un nouveau rôle créé, vous pouvez passer à l’étape suivante [gestion des autorisations pour un rôle](permissions.md).
+Une fois un nouveau rôle créé, vous pouvez passer à l’étape suivante : [gérer les autorisations pour un rôle](permissions.md).

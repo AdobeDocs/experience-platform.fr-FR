@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;Blob;blob;Azure Blob;blob azure
+keywords: Experience Platform;accueil;rubriques populaires;Blob;blob;Azure Blob;blob azure
 solution: Experience Platform
-title: Présentation du connecteur source Azure Blob
+title: Présentation du connecteur Azure Blob Source
 description: Découvrez comment connecter Azure Blob à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '466'
 ht-degree: 64%
 
 ---
 
 # Connecteur Azure Blob
 
-Adobe Experience Platform fournit une connectivité native pour les fournisseurs cloud tels qu’AWS, [!DNL Google Cloud Platform], et [!DNL Azure]. Vous pouvez importer vos données de ces systèmes dans [!DNL Platform].
+Adobe Experience Platform fournit une connectivité native pour les fournisseurs cloud tels qu’AWS, [!DNL Google Cloud Platform] et [!DNL Azure]. Vous pouvez importer vos données de ces systèmes dans [!DNL Platform].
 
-Les sources de stockage dans le cloud peuvent introduire vos propres données dans [!DNL Platform] sans avoir à les télécharger, les formater ou les transférer. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. [!DNL Platform] vous permet d’importer des données depuis [!DNL Azure Blob] par lots.
+Les sources de stockage dans le cloud peuvent introduire vos propres données dans [!DNL Platform] sans avoir à les télécharger, les formater ou les transférer. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. [!DNL Platform] vous permet d’importer des données de [!DNL Azure Blob] par lots.
 
 ## Liste autorisée d’adresses IP
 
@@ -23,7 +23,7 @@ Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’
 
 >[!IMPORTANT]
 >
->Le [!DNL Azure Blob] source ne prend pas en charge la connectivité de la même région à Experience Platform. Si votre instance Azure utilise la même région de réseau qu’Experience Platform, une connexion aux sources Experience Platform ne peut pas être établie. N’utilisez pas les régions Azure East US 2, Azure West Europe et Azure Australia East lors de la configuration de votre [!DNL Azure Blob] source. Actuellement, seule la connectivité inter-régions est prise en charge.
+>La source [!DNL Azure Blob] ne prend pas en charge la connectivité de la même région à l’Experience Platform. Si votre instance Azure utilise la même région de réseau qu’Experience Platform, une connexion aux sources Experience Platform ne peut pas être établie. N’utilisez pas les régions Azure East US 2, Azure West Europe et Azure Australia East lors de la configuration de votre source [!DNL Azure Blob]. Actuellement, seule la connectivité inter-régions est prise en charge.
 
 ## Contraintes de dénomination pour fichiers et répertoires
 
@@ -36,7 +36,7 @@ La liste suivante inclut les contraintes dont vous devez tenir compte lorsque vo
 - Caractères de chemin d’URL illégaux interdits. Les points de code tels que `\uE000`, bien que valides dans les noms de fichier NTFS, ne sont pas des caractères Unicode valides. En outre, certains caractères ASCII ou Unicode, tels que les caractères de contrôle (0x00 à 0x1F, \u0081, etc.), ne sont pas non plus autorisés. Pour les règles régissant les chaînes Unicode en HTTP/1.1, voir [RFC 2616, section 2.2 : règles de base](https://www.ietf.org/rfc/rfc2616.txt) et [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - Les noms de fichier suivants ne sont pas autorisés : LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, point (.) et deux points (..).
 
-## Connexion [!DNL Azure Blob] to [!DNL Platform]
+## Connectez [!DNL Azure Blob] à [!DNL Platform]
 
 La documentation ci-dessous fournit des informations sur la connexion d’Azure Blob à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur :
 
@@ -48,5 +48,5 @@ La documentation ci-dessous fournit des informations sur la connexion d’Azure 
 
 ### Utiliser l’interface utilisateur
 
-- [Création d’une connexion source Azure Blob dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/blob.md)
+- [Créer une connexion source Azure Blob dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/blob.md)
 - [Créer un flux de données pour une connexion de stockage dans le cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)

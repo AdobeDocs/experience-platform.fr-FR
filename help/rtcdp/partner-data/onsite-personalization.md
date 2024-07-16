@@ -209,7 +209,7 @@ Nommez l’élément de données `partnerData`, laissez la valeur d’[!UICONTRO
 
 Pour configurer le deuxième élément de données, nommez la nouvelle variable `pageVisit`, définissez l’**[!UICONTROL extension]** sur **[!UICONTROL Adobe Experience Platform]** et choisissez **[!UICONTROL Objet XDM]** comme type de données.
 
-![Sélections mises en surbrillance pour configurer correctement l’élément de données pageVisit .](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
+![Sélections mises en surbrillance pour configurer correctement l’élément de données pageVisit.](/help/rtcdp/assets/partner-data/onsite-personalization/page-visit-data-element.png)
 
 Dans le schéma, sélectionnez les attributs tiers qui correspondent aux valeurs attendues du partenaire de données. Sélectionnez ensuite le bouton radio intitulé **[!UICONTROL Fournir un objet entier]**. Sélectionnez l’icône qui ressemble à une base de données et choisissez l’élément de données `partnerData` que vous avez créé précédemment.
 
@@ -259,11 +259,11 @@ Vous pouvez à présent créer et activer des audiences pour la personnalisation
 
 #### Création d’une audience et configuration de la segmentation Edge
 
-Dans l’interface utilisateur de Platform, accédez à **[!UICONTROL Client]** > **[!UICONTROL Audiences]** et créer une audience pour capturer les visiteurs de votre site web.
+Dans l’interface utilisateur de Platform, accédez à **[!UICONTROL Client]** > **[!UICONTROL Audiences]** et créez une audience pour capturer les visiteurs de votre site web.
 
 ![Vue de la navigation vers les audiences.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-Vous devez configurer votre audience avec [segmentation de périphérie](/help/segmentation/ui/edge-segmentation.md) ainsi, l’appartenance de l’audience de vos visiteurs est évaluée en temps réel, lorsqu’ils visitent votre propriété web.
+Vous devez configurer votre audience avec la [segmentation Edge](/help/segmentation/ui/edge-segmentation.md) afin que l’appartenance à l’audience de vos visiteurs soit évaluée en temps réel lorsqu’ils visitent votre propriété web.
 
 Veillez également à configurer une [politique de fusion Active-On-Edge](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) pour les audiences Edge.
 

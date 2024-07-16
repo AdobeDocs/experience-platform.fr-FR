@@ -1,5 +1,5 @@
 ---
-title: Migration de la destination pinterest vers une nouvelle API. Action du client requise.
+title: Migration de la destination Pinterest vers une nouvelle API. Action du client requise.
 description: Pinterest rend obsolète l’API de l’annonceur v4 actuellement utilisée par la destination Pinterest dans Real-Time CDP. Comprenez vos éléments d’action afin de passer facilement à la nouvelle API sans perturber vos campagnes Pinterest.
 hide: true
 hidefromtoc: true
@@ -11,15 +11,15 @@ ht-degree: 0%
 
 ---
 
-# Mise à niveau de la destination pinterest vers la nouvelle API. Action client requise d’ici le 18 janvier 2024.
+# Mise à niveau de la destination Pinterest vers la nouvelle API. Action client requise d’ici le 18 janvier 2024.
 
 >[!IMPORTANT]
 >
->Les éléments d’action du client de cette page s’appliquent à vous si votre entreprise a configuré des flux de données pour exporter des données vers Pinterest avant le 16 novembre 2023, date à laquelle la nouvelle **[!UICONTROL Pinterest]** destination, à l’aide de la dernière API Pinterest, a été ajoutée au catalogue des destinations.
+>Les éléments d’action du client sur cette page s’appliquent à vous si votre entreprise a configuré des flux de données pour exporter des données vers Pinterest avant le 16 novembre 2023, date à laquelle la nouvelle destination **[!UICONTROL Pinterest]**, à l’aide de la dernière API Pinterest, a été ajoutée au catalogue des destinations.
 
 ## Que se passe-t-il ?
 
-Pinterest a abandonné l’API de l’annonceur v4 utilisée par la variable [Destination pinterest](/help/destinations/catalog/advertising/pinterest.md) dans Real-Time CDP. Adobe de la mise à jour de la destination pour utiliser la variable [API de l’annonceur v5](https://developers.pinterest.com/docs/getting-started/migration/). Lisez cette page pour comprendre vos éléments d’action afin de passer facilement à la nouvelle API sans perturber vos campagnes Pinterest.
+Pinterest a abandonné l’API de l’annonceur v4 utilisée par la [destination Pinterest](/help/destinations/catalog/advertising/pinterest.md) dans Real-Time CDP. Adobe mise à jour de la destination afin d’utiliser l’ [API de l’annonceur v5](https://developers.pinterest.com/docs/getting-started/migration/). Lisez cette page pour comprendre vos éléments d’action afin de passer facilement à la nouvelle API sans perturber vos campagnes Pinterest.
 
 ## Pourquoi suis-je informé ?
 
@@ -36,21 +36,21 @@ Oui, avant le 18 janvier 2024, vous devez vous authentifier à la nouvelle desti
 ### Réauthentification à Pinterest {#reauthenticate}
 
 1. Accédez à **[!UICONTROL Destinations > Comptes]** et utilisez le filtre à l’écran pour filtrer uniquement la destination Pinterest.
-   ![Filtrage des comptes Pinterest uniquement](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
-2. Sur le **Pinterest** destination, sélectionnez le symbole des trois points, puis sélectionnez **[!UICONTROL Modifier les détails]**.
+   ![Filtrer les comptes Pinterest uniquement](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-acconts-only.png)
+2. Sur la destination **Pinterest**, sélectionnez le symbole des trois points... et sélectionnez **[!UICONTROL Modifier les détails]**.
    ![Sélectionner Modifier les détails](/help/destinations/assets/catalog/advertising/pinterest-migration/edit-details-pinterest.png)
-3. Sélectionner **[!UICONTROL Reconnecter OAuth]** et connectez-vous à votre compte Pinterest.
-   ![Sélectionnez Reconnecter OAuth](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
+3. Sélectionnez **[!UICONTROL Reconnecter OAuth]** et connectez-vous à votre compte Pinterest.
+   ![Sélectionner Reconnecter OAuth](/help/destinations/assets/catalog/advertising/pinterest-migration/reconnect-oauth-pinterest.png)
 4. Passez à l’élément d’action dans la section ci-dessous.
 
 ### Activation des flux vers une nouvelle destination {#disable-old-enable-new-flows}
 
-Ensuite, vous devez activer les flux de données vers la nouvelle  **[!UICONTROL Pinterest]** carte.
+Ensuite, vous devez activer les flux de données vers la nouvelle carte **[!UICONTROL Pinterest]**.
 
-1. Accédez à **[!UICONTROL Destinations > Parcourir]** et utilisez le filtre à l’écran pour filtrer la variable **[!UICONTROL Pinterest]** destination uniquement.
-   ![Filtrage des flux de données Pinterest uniquement dans l’onglet Parcourir](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
-2. Sélectionnez le nom de la connexion avec lien hypertexte (Loyalty campaign dans l’exemple de capture d’écran ci-dessus) au **[!UICONTROL Pinterest]** destination et basculez la variable **[!UICONTROL Activer]** bascule vers **on**.
-   ![Activation pour les nouvelles connexions et désactivation pour les anciennes connexions](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
+1. Accédez à **[!UICONTROL Destinations > Parcourir]** et utilisez le filtre à l’écran pour filtrer uniquement la destination **[!UICONTROL Pinterest]**.
+   ![Filtrer les flux de données Pinterest uniquement dans l’onglet Parcourir](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
+2. Sélectionnez le nom de la connexion avec lien hypertexte (Loyalty campaign dans l’exemple de capture d’écran ci-dessus) à la destination **[!UICONTROL Pinterest]** et basculez la bascule **[!UICONTROL Activer]** sur **on**.
+   ![ Activez les nouvelles connexions et désactivez-les pour les anciennes connexions ](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
 
 <!--
 
@@ -62,7 +62,7 @@ While no disruption to your campaigns is expected, remember to check in the Pint
 
 Oui, voir ci-dessous :
 
-**D’ici le 16 novembre 2023**: la nouvelle destination est prête et vous devriez voir deux cartes Pinterest côte à côte dans le catalogue jusqu’à ce que Pinterest cesse de prendre en charge l’ancienne API v4. Tous vos flux de données existants vers la carte Pinterest actuelle sont copiés vers la nouvelle destination.
+**D’ici le 16 novembre 2023** : la nouvelle destination est prête et vous devriez voir deux cartes Pinterest côte à côte dans le catalogue jusqu’à ce que Pinterest cesse de prendre en charge l’ancienne API v4. Tous vos flux de données existants vers la carte Pinterest actuelle sont copiés vers la nouvelle destination.
 
 ![Ancienne et nouvelle destination Pinterest côte à côte](/help/destinations/assets/catalog/advertising/pinterest-migration/pinterest-two-cards-side-by-side.png)
 
@@ -75,9 +75,9 @@ Oui, voir ci-dessous :
 
 -->
 
-**D’ici le 15 décembre 2023**: <span class="preview">Action client 1</span>. Vous devez vous reconnecter à Pinterest afin que la nouvelle carte soit connectée à Pinterest. Afficher les instructions complètes dans [cette section](#reauthenticate).
+**D&#39;ici le 15 décembre 2023** : <span class="preview">Action client 1</span>. Vous devez vous reconnecter à Pinterest afin que la nouvelle carte soit connectée à Pinterest. Affichez les instructions complètes dans [cette section](#reauthenticate).
 
-<span class="preview">Action client 2</span>.Ensuite, vous devez activer les flux de données dans la nouvelle carte. Afficher les instructions complètes dans [cette section](#disable-old-enable-new-flows).
+<span class="preview">Action client 2</span>. Vous devez ensuite activer les flux de données dans la nouvelle carte. Affichez les instructions complètes dans [cette section](#disable-old-enable-new-flows).
 
 <!--
 
@@ -87,7 +87,7 @@ Oui, voir ci-dessous :
 
 -->
 
-**Après le 18 janvier 2024**: <span class="preview">Pinterest a désactivé l’accès à l’API de l’annonceur V4. Tous les clients Real-Time CDP qui n’ont pas effectué la mise à niveau vers la nouvelle destination constateront désormais que leurs flux de données vers la destination Pinterest échouent. [Réauthentification à Pinterest](#reauthenticate) et [activation des flux de données](#disable-old-enable-new-flows) à la destination mise à niveau pour reprendre vos campagnes vers Pinterest.</span>
+**Après le 18 janvier 2024** : <span class="preview">Pinterest a désactivé l’accès à l’API de l’annonceur V4. Tous les clients Real-Time CDP qui n’ont pas effectué la mise à niveau vers la nouvelle destination constateront désormais que leurs flux de données vers la destination Pinterest échouent. [Réauthentifiez-vous à Pinterest](#reauthenticate) et [ activez les flux de données](#disable-old-enable-new-flows) vers la destination mise à niveau pour reprendre vos campagnes vers Pinterest.</span>
 
 <!--
 

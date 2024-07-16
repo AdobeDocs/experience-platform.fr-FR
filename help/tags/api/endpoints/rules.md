@@ -4,7 +4,7 @@ description: Découvrez comment effectuer des appels au point d’entrée /règl
 exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '893'
 ht-degree: 95%
 
 ---
@@ -15,7 +15,7 @@ Dans le contexte des balises de collecte de données, les règles contrôlent le
 
 >[!NOTE]
 >
->Ce document explique comment gérer les règles dans l’API Reactor. Pour plus d’informations sur l’interaction avec les règles dans l’interface utilisateur, reportez-vous à la section [Guide de l’interface utilisateur](../../ui/managing-resources/rules.md).
+>Ce document explique comment gérer les règles dans l’API Reactor. Pour plus d’informations sur l’interaction avec les règles dans l’interface utilisateur, consultez le [guide de l’interface utilisateur](../../ui/managing-resources/rules.md).
 
 Une règle appartient à une seule [propriété](./properties.md). Une propriété peut comporter de nombreuses règles.
 

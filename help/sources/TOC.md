@@ -1,14 +1,14 @@
 ---
 audience: user
 user-guide-title: Aide sur les connecteurs source d’Adobe Experience Platform
-breadcrumb-title: Guide des connecteurs source
+breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
 source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
 workflow-type: tm+mt
 source-wordcount: '1046'
-ht-degree: 95%
+ht-degree: 97%
 
 ---
 

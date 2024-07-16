@@ -4,14 +4,14 @@ description: Adobe Experience Platform ne prend plus en charge la mise à jour
 exl-id: 35491c80-2a8a-4e07-baa7-a5db373b6852
 source-git-commit: 44e056407f5089c927752f00cc6bf173d7640b83
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '352'
 ht-degree: 100%
 
 ---
 
 # Fin de la prise en charge des balises dans Internet Explorer 10 et 11
 
-Alors que le paysage de l’expérience numérique en ligne continue d’évoluer, Adobe n’investit plus de ressources pour prendre en charge Internet Explorer 10 (IE10) et Internet Explorer 11 (IE11) pour les balises dans Adobe Experience Platform. Bien qu’Adobe ne supprime pas activement la prise en charge d’IE10 et d’IE11, l’impact de ces navigateurs sur les nouvelles fonctionnalités ne sera plus pris en compte lors des futures mises à jour.
+Alors que le paysage de l’expérience digitale en ligne continue d’évoluer, Adobe n’investit plus de ressources pour prendre en charge Internet Explorer 10 (IE10) et Internet Explorer 11 (IE11) pour les balises dans Adobe Experience Platform. Bien qu’Adobe ne supprime pas activement la prise en charge d’IE10 et d’IE11, l’impact de ces navigateurs sur les nouvelles fonctionnalités ne sera plus pris en compte lors des futures mises à jour.
 
 ## Pourquoi IE10 et IE11 ne sont-ils plus pris en charge ?
 

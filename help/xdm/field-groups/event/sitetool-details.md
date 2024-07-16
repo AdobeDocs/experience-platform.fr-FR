@@ -11,13 +11,13 @@ ht-degree: 6%
 
 # [!UICONTROL Détails du site] groupe de champs de schéma
 
-[!UICONTROL Détails du site] est un groupe de champs de schéma standard pour la variable [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Le groupe de champs fournit une `sitetool` vers un schéma, qui capture les informations collectées par un outil de site.
+[!UICONTROL Sitetool Details] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Le groupe de champs fournit un seul objet `sitetool` à un schéma, qui capture les informations collectées par un outil de site.
 
-![Structure du groupe de champs](../../images/field-groups/sitetool-details.png)
+![Structure de groupe de champs](../../images/field-groups/sitetool-details.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `dataGatheringEvent` | Objet | Indique si cet événement est un événement de collecte de données, ainsi que d’autres détails connexes. Contient les propriétés suivantes :<ul><li>`data`: (carte) contient les données JSON qui sont collectées et envoyées dans le cadre d’un événement d’envoi de questionnaire, d’enquête ou de sondage.</li><li>`isTrue`: (booléen). Indique s’il s’agit d’un événement de collecte de données comme un questionnaire, une enquête ou un sondage.</li><li>`score`: (entier). Score obtenu par l’acteur en fonction des réponses de l’événement.</li></ul> |
+| `dataGatheringEvent` | Objet | Indique si cet événement est un événement de collecte de données, ainsi que d’autres détails connexes. Contient les propriétés suivantes :<ul><li>`data` : (carte) contient les données JSON collectées et envoyées dans le cadre d’un événement d’envoi de questionnaire, d’enquête ou de sondage.</li><li>`isTrue` : (booléen). Indique s’il s’agit d’un événement de collecte de données comme un questionnaire, une enquête ou un sondage.</li><li>`score` : (entier) score obtenu par l’acteur en fonction des réponses de l’événement.</li></ul> |
 | `actor` | Chaîne | Personne/membre ayant effectué l’action. |
 | `actorID` | Chaîne | Identifiant unique de la personne/du membre qui a effectué l’action. |
 | `isKeyEvent` | Booléen | Indique si cet événement est un événement clé. |

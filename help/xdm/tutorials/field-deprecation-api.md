@@ -4,7 +4,7 @@ description: Découvrez comment rendre obsolètes les champs de modèle de donn�
 exl-id: e49517c4-608d-4e05-8466-75724ca984a8
 source-git-commit: f9f783b75bff66d1bf3e9c6d1ed1c543bd248302
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '584'
 ht-degree: 100%
 
 ---
@@ -30,7 +30,6 @@ Pour rendre obsolète un champ dans une classe, un groupe de champs ou un type d
 >* [Mettre à jour une classe](../api/classes.md#patch)
 >* [Mettre à jour un groupe de champs](../api/field-groups.md#patch)
 >* [Mettre à jour un type de données](../api/data-types.md#patch)
-
 
 L’exemple d’appel API ci-dessous rend obsolète un champ dans un type de données personnalisées.
 

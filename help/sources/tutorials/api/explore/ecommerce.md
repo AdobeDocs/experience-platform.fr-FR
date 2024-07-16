@@ -6,29 +6,29 @@ description: Ce tutoriel utilise l’API Flow Service pour explorer les connexio
 exl-id: 832ce399-6c9f-40da-8e7c-5434503c16b6
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '570'
 ht-degree: 35%
 
 ---
 
-# Explorez une connexion eCommerce à l’aide du [!DNL Flow Service] API
+# Exploration d’une connexion eCommerce à l’aide de l’API [!DNL Flow Service]
 
-[!DNL Flow Service] sert à collecter et à centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisé pour collecter et centraliser des données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
 
-Ce tutoriel utilise la méthode [!DNL Flow Service] API pour explorer un tiers **[!UICONTROL eCommerce]** connexion.
+Ce tutoriel utilise l’API [!DNL Flow Service] pour explorer une connexion **[!UICONTROL eCommerce]** tierce.
 
 ## Prise en main
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Sources]](../../../home.md): [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
-* [[!DNL Sandboxes]](../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [[!DNL Sources]](../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
+* [[!DNL Sandboxes]](../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à un **[!UICONTROL eCommerce]** connexion à l’aide de la fonction [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à une connexion **[!UICONTROL eCommerce]** à l’aide de l’API [!DNL Flow Service].
 
 ### Obtention d’un identifiant de connexion
 
-Pour explorer votre **[!UICONTROL eCommerce]** connexion [!DNL Platform] API, vous devez posséder un identifiant de connexion valide. Si vous ne disposez pas déjà d’une connexion pour la variable **[!UICONTROL eCommerce]** Pour vous connecter avec , vous pouvez en créer un par le biais du tutoriel suivant :
+Pour explorer votre connexion **[!UICONTROL eCommerce]** à l’aide des API [!DNL Platform], vous devez posséder un identifiant de connexion valide. Si vous n’avez pas encore de connexion pour la connexion **[!UICONTROL eCommerce]** que vous souhaitez utiliser, vous pouvez en créer une via le tutoriel suivant :
 
 * [Shopify](../create/ecommerce/shopify.md)
 
@@ -54,7 +54,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ## Exploration des tableaux de données
 
-En utilisant **[!UICONTROL eCommerce]** identifiant de connexion, vous pouvez explorer vos tableaux de données en exécutant des requêtes GET. Utilisez l’appel suivant pour trouver le chemin du tableau que vous souhaitez inspecter ou ingérer. [!DNL Platform].
+À l’aide de votre ID de connexion **[!UICONTROL eCommerce]**, vous pouvez explorer vos tableaux de données en exécutant des requêtes de GET. Utilisez l’appel suivant pour trouver le chemin de la table que vous souhaitez inspecter ou ingérer dans [!DNL Platform].
 
 **Format d’API**
 
@@ -64,7 +64,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=root
 
 | Paramètre | Description |
 | --- | --- |
-| `{CONNECTION_ID}` | Votre **[!UICONTROL eCommerce]** identifiant de connexion. |
+| `{CONNECTION_ID}` | Votre ID de connexion **[!UICONTROL eCommerce]**. |
 
 **Requête**
 
@@ -79,7 +79,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau de tableaux de votre **[!UICONTROL eCommerce]** connexion. Trouvez la table que vous souhaitez importer [!DNL Platform] et notez ses `path` , car vous devez le fournir à l’étape suivante pour inspecter sa structure.
+Une réponse réussie renvoie un tableau de tables de votre connexion **[!UICONTROL eCommerce]**. Recherchez la table que vous souhaitez importer dans [!DNL Platform] et notez sa propriété `path`, car vous devez la fournir à l&#39;étape suivante pour inspecter sa structure.
 
 ```json
 [
@@ -116,7 +116,7 @@ Une réponse réussie renvoie un tableau de tableaux de votre **[!UICONTROL eCom
 
 ## Inspect de la structure d’un tableau
 
-Pour inspecter la structure d’un tableau à partir de votre **[!UICONTROL eCommerce]** connexion, effectuer une requête de GET lors de la spécification du chemin d’un tableau dans un `object` paramètre de requête.
+Pour inspecter la structure d’une table à partir de votre connexion **[!UICONTROL eCommerce]**, effectuez une requête de GET tout en spécifiant le chemin d’accès d’une table dans un paramètre de requête `object`.
 
 **Format d’API**
 
@@ -126,8 +126,8 @@ GET /connections/{CONNECTION_ID}/explore?objectType=table&object={TABLE_PATH}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | L’identifiant de connexion de votre **[!UICONTROL eCommerce]** connexion. |
-| `{TABLE_PATH}` | Le chemin d’accès d’un tableau dans votre **[!UICONTROL eCommerce]** connexion. |
+| `{CONNECTION_ID}` | L’identifiant de connexion de votre connexion **[!UICONTROL eCommerce]**. |
+| `{TABLE_PATH}` | Chemin d’accès d’une table dans votre connexion **[!UICONTROL eCommerce]**. |
 
 **Requête**
 
@@ -142,7 +142,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie la structure de la table spécifiée. Les détails relatifs à chaque colonne du tableau se trouvent dans les éléments du `columns` tableau.
+Une réponse réussie renvoie la structure de la table spécifiée. Les détails concernant chacune des colonnes de la table se trouvent dans les éléments du tableau `columns`.
 
 ```json
 {
@@ -196,4 +196,4 @@ Une réponse réussie renvoie la structure de la table spécifiée. Les détails
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez exploré votre **[!UICONTROL eCommerce]** connexion, a trouvé le chemin de la table dans laquelle vous souhaitez ingérer [!DNL Platform]et obtenir des informations sur sa structure. Vous pouvez utiliser ces informations dans le tutoriel suivant pour [collecter des données eCommerce et les importer dans Platform ;](../collect/ecommerce.md).
+En suivant ce tutoriel, vous avez exploré votre connexion **[!UICONTROL eCommerce]**, trouvé le chemin de la table que vous souhaitez ingérer dans [!DNL Platform] et obtenu des informations sur sa structure. Vous pouvez utiliser ces informations dans le tutoriel suivant pour [collecter des données eCommerce et les importer dans Platform](../collect/ecommerce.md).

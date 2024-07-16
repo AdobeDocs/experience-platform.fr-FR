@@ -1,24 +1,24 @@
 ---
 title: sendMediaEvent
 description: Découvrez comment utiliser la commande sendMediaEvent pour effectuer le suivi des sessions multimédia dans le SDK Web.
-source-git-commit: 83d3de67e7680369dc890f58b16d9668058e221c
+exl-id: a38626fd-4810-40a0-8893-e98136634fac
+source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
 workflow-type: tm+mt
 source-wordcount: '763'
 ht-degree: 0%
 
 ---
 
-
 # `sendMediaEvent`
 
-La variable `sendMediaEvent` fait partie du SDK Web `streamingMedia` composant. Vous pouvez utiliser ce composant pour collecter des données relatives aux sessions multimédia sur votre site web. Voir `streamingMedia` [documentation](configure/streamingmedia.md) pour savoir comment configurer ce composant.
+La commande `sendMediaEvent` fait partie du composant SDK Web `streamingMedia`. Vous pouvez utiliser ce composant pour collecter des données relatives aux sessions multimédia sur votre site web. Consultez la `streamingMedia` [documentation](configure/streamingmedia.md) pour savoir comment configurer ce composant.
 
-Utilisez la variable `sendMediaEvent` pour effectuer le suivi des lectures multimédia, des pauses, des compléments, des mises à jour de l’état du lecteur et d’autres événements connexes.
+Utilisez la commande `sendMediaEvent` pour effectuer le suivi des lectures multimédia, des pauses, des compléments, des mises à jour de l’état du lecteur et d’autres événements connexes.
 
 Le SDK Web peut gérer les événements multimédia en fonction du type de suivi de session multimédia :
 
-* **Gestion des événements pour les sessions suivies automatiquement**. Dans ce mode, vous n’avez pas besoin de transmettre la variable `sessionID` à l’événement média ou à la valeur du curseur de lecture. Le SDK Web gère ce problème pour vous, en fonction de l’identifiant du lecteur fourni et de la variable `getPlayerDetails` fonction de rappel fournie lors du démarrage de la session multimédia.
-* **Gestion des événements pour les sessions suivies manuellement**. Dans ce mode, vous devez transmettre la variable `sessionID` à l’événement media , ainsi que la valeur du curseur de lecture (valeur entière). Vous pouvez également transmettre les détails de la qualité des données d’expérience, si nécessaire.
+* **Gestion des événements pour les sessions suivies automatiquement**. Dans ce mode, vous n’avez pas besoin de transmettre `sessionID` à l’événement multimédia ou la valeur du curseur de lecture. Le SDK Web gère cette opération pour vous, en fonction de l’identifiant du lecteur fourni et de la fonction de rappel `getPlayerDetails` fournie lors du démarrage de la session multimédia.
+* **Gestion des événements pour les sessions suivies manuellement**. Dans ce mode, vous devez transmettre `sessionID` à l’événement multimédia, ainsi que la valeur du curseur de lecture (valeur entière). Vous pouvez également transmettre les détails de la qualité des données d’expérience, si nécessaire.
 
 ## Gestion des événements de média par type {#handle-by-type}
 
@@ -27,11 +27,11 @@ Sélectionnez les onglets ci-dessous pour afficher des exemples de gestion des t
 
 ### Play {#play}
 
-La variable `media.play` Le type d’événement est utilisé pour effectuer le suivi au démarrage de la lecture multimédia. Cet événement doit être envoyé lorsque le lecteur passe de l’état &quot;lecture&quot; à un autre état. Parmi les autres états à partir desquels le lecteur passe à &quot;lecture&quot;, citons &quot;mise en mémoire tampon&quot;, la reprise de l’utilisateur après &quot;mise en pause&quot;, la reprise du lecteur suite à une erreur ou la lecture automatique.
+Le type d’événement `media.play` est utilisé pour effectuer le suivi au démarrage de la lecture multimédia. Cet événement doit être envoyé lorsque le lecteur passe de l’état &quot;lecture&quot; à un autre état. Parmi les autres états à partir desquels le lecteur passe à &quot;lecture&quot;, citons &quot;mise en mémoire tampon&quot;, la reprise de l’utilisateur après &quot;mise en pause&quot;, la reprise du lecteur suite à une erreur ou la lecture automatique.
 
 >[!BEGINTABS]
 
->[!TAB Suivi automatique des sessions]
+>[!TAB Suivi automatique de session]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -42,7 +42,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Suivi manuel des sessions]
+>[!TAB Suivi manuel de session]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -63,11 +63,11 @@ sessionPromise.then(sessionID => {
 
 ### Pause {#pause}
 
-La variable `media.pauseStart` Le type d’événement est utilisé pour effectuer le suivi de la mise en pause d’une lecture multimédia. Cet événement doit être envoyé lorsque l’utilisateur appuie sur **[!UICONTROL Pause]**. Il n’existe aucun type d’événement resume . Une reprise est déduite lorsque vous envoyez une `media.play` après un événement `media.pauseStart`.
+Le type d’événement `media.pauseStart` est utilisé pour effectuer le suivi de la mise en pause de la lecture multimédia. Cet événement doit être envoyé lorsque l’utilisateur appuie sur **[!UICONTROL Pause]**. Il n’existe aucun type d’événement resume . Une reprise est déduite lorsque vous envoyez un événement `media.play` après un `media.pauseStart`.
 
 >[!BEGINTABS]
 
->[!TAB Suivi automatique des sessions]
+>[!TAB Suivi automatique de session]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -78,7 +78,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Suivi manuel des sessions]
+>[!TAB Suivi manuel de session]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -99,11 +99,11 @@ sessionPromise.then(sessionID => {
 
 ### Erreur {#error}
 
-La variable `media.error` Le type d’événement est utilisé pour effectuer le suivi lorsqu’une erreur se produit au cours de la lecture multimédia. Cet événement doit être envoyé lorsqu’une erreur se produit.
+Le type d’événement `media.error` est utilisé pour effectuer le suivi d’une erreur survenant pendant la lecture du média. Cet événement doit être envoyé lorsqu’une erreur se produit.
 
 >[!BEGINTABS]
 
->[!TAB Suivi automatique des sessions]
+>[!TAB Suivi automatique de session]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -120,7 +120,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Suivi manuel des sessions]
+>[!TAB Suivi manuel de session]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -145,11 +145,11 @@ sessionPromise.then(sessionID => {
 
 ### Début de la coupure publicitaire {#ad-break-start}
 
-La variable `media.adBreakStart` Le type d’événement est utilisé pour effectuer le suivi au début d’une coupure publicitaire. Cet événement doit être envoyé au démarrage d’une coupure publicitaire.
+Le type d’événement `media.adBreakStart` est utilisé pour effectuer le suivi du début d’une coupure publicitaire. Cet événement doit être envoyé au démarrage d’une coupure publicitaire.
 
 >[!BEGINTABS]
 
->[!TAB Suivi automatique des sessions]
+>[!TAB Suivi automatique de session]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -167,7 +167,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Suivi manuel des sessions]
+>[!TAB Suivi manuel de session]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -193,11 +193,11 @@ sessionPromise.then(sessionID => {
 
 ### Fin de la coupure publicitaire {#ad-break-complete}
 
-La variable `media.adBreakComplete` type d’événement est utilisé pour effectuer le suivi à la fin d’une coupure publicitaire. Cet événement doit être envoyé à la fin d’une coupure publicitaire.
+Le type d’événement `media.adBreakComplete` est utilisé pour effectuer le suivi de la fin d’une coupure publicitaire. Cet événement doit être envoyé à la fin d’une coupure publicitaire.
 
 >[!BEGINTABS]
 
->[!TAB Suivi automatique des sessions]
+>[!TAB Suivi automatique de session]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -208,7 +208,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Suivi manuel des sessions]
+>[!TAB Suivi manuel de session]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -229,11 +229,11 @@ sessionPromise.then(sessionID => {
 
 ### Démarrage de publicité {#ad-start}
 
-La variable `media.adStart` type d’événement est utilisé pour effectuer le suivi au démarrage d’une publicité. Cet événement doit être envoyé au démarrage d’une publicité.
+Le type d’événement `media.adStart` est utilisé pour effectuer le suivi du démarrage d’une publicité. Cet événement doit être envoyé au démarrage d’une publicité.
 
 >[!BEGINTABS]
 
->[!TAB Suivi automatique des sessions]
+>[!TAB Suivi automatique de session]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -272,7 +272,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Suivi manuel des sessions]
+>[!TAB Suivi manuel de session]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -319,11 +319,11 @@ sessionPromise.then(sessionID => {
 
 ### Fin de publicité {#ad-complete}
 
-La variable `media.adComplete` type d’événement est utilisé pour effectuer le suivi à la fin d’une publicité. Cet événement doit être envoyé lorsqu’une publicité se termine.
+Le type d’événement `media.adComplete` est utilisé pour effectuer le suivi à la fin d’une publicité. Cet événement doit être envoyé lorsqu’une publicité se termine.
 
 >[!BEGINTABS]
 
->[!TAB Suivi automatique des sessions]
+>[!TAB Suivi automatique de session]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -334,7 +334,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Suivi manuel des sessions]
+>[!TAB Suivi manuel de session]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -355,11 +355,11 @@ sessionPromise.then(sessionID => {
 
 ### Ignorer la publicité {#ad-skip}
 
-La variable `media.adSkip` Le type d’événement est utilisé pour effectuer le suivi lorsqu’une publicité est ignorée. Cet événement doit être envoyé lorsqu’une publicité est ignorée.
+Le type d’événement `media.adSkip` est utilisé pour effectuer le suivi lorsqu’une publicité est ignorée. Cet événement doit être envoyé lorsqu’une publicité est ignorée.
 
 >[!BEGINTABS]
 
->[!TAB Suivi automatique des sessions]
+>[!TAB Suivi automatique de session]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -370,7 +370,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Suivi manuel des sessions]
+>[!TAB Suivi manuel de session]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -391,11 +391,11 @@ sessionPromise.then(sessionID => {
 
 ### Début du chapitre {#chapter-start}
 
-La variable `media.chapterStart` Le type d’événement est utilisé pour effectuer le suivi au début d’un chapitre. Cet événement doit être envoyé au début d’un chapitre.
+Le type d’événement `media.chapterStart` est utilisé pour effectuer le suivi du début d’un chapitre. Cet événement doit être envoyé au début d’un chapitre.
 
 >[!BEGINTABS]
 
->[!TAB Suivi automatique des sessions]
+>[!TAB Suivi automatique de session]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -428,7 +428,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Suivi manuel des sessions]
+>[!TAB Suivi manuel de session]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -469,11 +469,11 @@ sessionPromise.then(sessionID => {
 
 ### Fin du chapitre {#chapter-complete}
 
-La variable `media.chapterComplete` Le type d’événement est utilisé pour effectuer le suivi à la fin d’un chapitre. Cet événement doit être envoyé lorsqu’un chapitre se termine.
+Le type d’événement `media.chapterComplete` est utilisé pour effectuer le suivi de la fin d’un chapitre. Cet événement doit être envoyé lorsqu’un chapitre se termine.
 
 >[!BEGINTABS]
 
->[!TAB Suivi automatique des sessions]
+>[!TAB Suivi automatique de session]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -484,7 +484,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Suivi manuel des sessions]
+>[!TAB Suivi manuel de session]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -505,11 +505,11 @@ sessionPromise.then(sessionID => {
 
 ### Saut de chapitre {#chapter-skip}
 
-La variable `media.chapterSkip` Le type d’événement est utilisé pour effectuer le suivi lorsqu’un chapitre est ignoré. Cet événement doit être envoyé lorsqu’un chapitre est ignoré.
+Le type d’événement `media.chapterSkip` est utilisé pour effectuer le suivi lorsqu’un chapitre est ignoré. Cet événement doit être envoyé lorsqu’un chapitre est ignoré.
 
 >[!BEGINTABS]
 
->[!TAB Suivi automatique des sessions]
+>[!TAB Suivi automatique de session]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -520,7 +520,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Suivi manuel des sessions]
+>[!TAB Suivi manuel de session]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -541,11 +541,11 @@ sessionPromise.then(sessionID => {
 
 ### Début de la mémoire tampon {#buffer-start}
 
-La variable `media.bufferStart` le type d’événement est utilisé pour effectuer le suivi au démarrage de la mise en mémoire tampon. Cet événement doit être envoyé au démarrage de la mise en mémoire tampon. Il n’y a pas de `bufferResume` type d’événement. A `bufferResume` est déduit lorsque vous envoyez un événement de lecture après `bufferStart`.
+Le type d’événement `media.bufferStart` est utilisé pour effectuer le suivi au démarrage de la mise en mémoire tampon. Cet événement doit être envoyé au démarrage de la mise en mémoire tampon. Il n’existe pas de type d’événement `bufferResume`. Un `bufferResume` est déduit lorsque vous envoyez un événement de lecture après `bufferStart`.
 
 >[!BEGINTABS]
 
->[!TAB Suivi automatique des sessions]
+>[!TAB Suivi automatique de session]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -556,7 +556,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Suivi manuel des sessions]
+>[!TAB Suivi manuel de session]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -577,11 +577,11 @@ sessionPromise.then(sessionID => {
 
 ### Changement de débit binaire {#bitrate-change}
 
-La variable `media.bitrateChange` Le type d’événement est utilisé pour effectuer le suivi des changements de débit binaire. Cet événement doit être envoyé lorsque le débit binaire change.
+Le type d’événement `media.bitrateChange` est utilisé pour effectuer le suivi des changements de débit binaire. Cet événement doit être envoyé lorsque le débit binaire change.
 
 >[!BEGINTABS]
 
->[!TAB Suivi automatique des sessions]
+>[!TAB Suivi automatique de session]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -600,7 +600,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Suivi manuel des sessions]
+>[!TAB Suivi manuel de session]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -626,11 +626,11 @@ sessionPromise.then(sessionID => {
 
 ### Mises à jour d’état {#state-updates}
 
-La variable `media.stateUpdate` Le type d’événement est utilisé pour effectuer le suivi des modifications de l’état du lecteur. Cet événement doit être envoyé lorsque l’état du lecteur change.
+Le type d’événement `media.stateUpdate` est utilisé pour effectuer le suivi des modifications de l’état du lecteur. Cet événement doit être envoyé lorsque l’état du lecteur change.
 
 >[!BEGINTABS]
 
->[!TAB Suivi automatique des sessions]
+>[!TAB Suivi automatique de session]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -653,7 +653,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Suivi manuel des sessions]
+>[!TAB Suivi manuel de session]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -684,13 +684,13 @@ sessionPromise.then(sessionID => {
 
 ### Fin de session {#session-end}
 
-La variable `media.sessionEnd` Le type d’événement est utilisé pour informer le serveur principal Media Analytics de fermer immédiatement la session lorsque l’utilisateur a abandonné l’affichage du contenu et qu’il est peu probable qu’il y rende.
+Le type d’événement `media.sessionEnd` est utilisé pour informer le serveur principal Media Analytics de fermer immédiatement la session lorsque l’utilisateur a abandonné l’affichage du contenu et qu’il est peu probable qu’il y rende.
 
-Si vous n’envoyez pas d’événement `sessionEnd` , une session abandonnée expire après qu’aucun événement n’a été reçu pendant 10 minutes ou lorsqu’aucun mouvement du curseur de lecture ne se produit pendant 30 minutes. La session est automatiquement supprimée.
+Si vous n’envoyez pas d’événement `sessionEnd`, une session abandonnée expirera après qu’aucun événement n’a été reçu pendant 10 minutes, ou lorsqu’aucun mouvement du curseur de lecture ne se produit pendant 30 minutes. La session est automatiquement supprimée.
 
 >[!BEGINTABS]
 
->[!TAB Suivi automatique des sessions]
+>[!TAB Suivi automatique de session]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -701,7 +701,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Suivi manuel des sessions]
+>[!TAB Suivi manuel de session]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -722,11 +722,11 @@ sessionPromise.then(sessionID => {
 
 ### Fin de la session {#session-complete}
 
-La variable `media.sessionComplete` Le type d’événement est utilisé pour effectuer le suivi à la fin d’une session multimédia. Cet événement doit être envoyé lorsque la fin du contenu principal est atteinte.
+Le type d’événement `media.sessionComplete` est utilisé pour effectuer le suivi à la fin d’une session multimédia. Cet événement doit être envoyé lorsque la fin du contenu principal est atteinte.
 
 >[!BEGINTABS]
 
->[!TAB Suivi automatique des sessions]
+>[!TAB Suivi automatique de session]
 
 ```javascript
 alloy("sendMediaEvent", {
@@ -737,7 +737,7 @@ alloy("sendMediaEvent", {
 });
 ```
 
->[!TAB Suivi manuel des sessions]
+>[!TAB Suivi manuel de session]
 
 ```javascript
 sessionPromise.then(sessionID => {
@@ -754,6 +754,3 @@ sessionPromise.then(sessionID => {
 ```
 
 >[!ENDTABS]
-
-
-

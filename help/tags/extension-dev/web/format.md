@@ -4,7 +4,7 @@ description: Découvrez comment formater des modules de bibliothèque pour les e
 exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
 source-git-commit: b3754c94843f32ba58aa1e020dface1179372de3
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '372'
 ht-degree: 100%
 
 ---

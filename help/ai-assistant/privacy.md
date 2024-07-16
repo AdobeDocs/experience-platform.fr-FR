@@ -17,10 +17,10 @@ Lisez ce document pour en savoir plus sur les fonctionnalités axées sur la con
 
 * Aucune donnée personnelle n’est utilisée aujourd’hui par l’assistant d’IA, même à des fins de formation.
 * L’assistant d’IA ne connaît pas les données des consommateurs.
-* Toutes les [contrôle d&#39;accès](../access-control/home.md) Les politiques seront honorées par l’assistant d’IA.
+* Toutes les stratégies de [contrôle d’accès](../access-control/home.md) existantes seront honorées par l’assistant d’IA.
    * Toutes les nouvelles stratégies de contrôle d’accès basées sur des attributs sont répercutées dans l’assistant d’IA après un maximum de 24 heures*
 * Vous devez disposer d’une autorisation explicite pour interagir avec l’assistant d’IA.
-   * Vous pouvez définir des autorisations différentes pour Experience Platform et Journey Optimizer à l’aide de la variable [Interface utilisateur des autorisations](../access-control/abac/ui/permissions.md) et vous pouvez utiliser la variable [Admin Console](../access-control/ui/browse.md) pour attribuer des autorisations au Customer Journey Analytics.
+   * Vous pouvez définir des autorisations différentes pour Experience Platform et Journey Optimizer à l’aide de l’ [interface utilisateur d’autorisations](../access-control/abac/ui/permissions.md) et vous pouvez utiliser l’ [Admin Console](../access-control/ui/browse.md) pour attribuer des autorisations pour Customer Journey Analytics.
    * Les autorisations sont granulaires et votre administrateur d’environnement de test peut configurer lequel de vos utilisateurs peut poser différentes catégories de questions (questions basées sur les connaissances du produit avec l’assistant d’IA ou questions relatives aux informations opérationnelles).
 * L’assistant d’IA est une fonctionnalité prête pour les HIPAA lorsqu’il est utilisé conjointement avec Adobe Experience Platform Healthcare Shield.
 * Vous pouvez afficher un journal de vos interactions précédentes avec l’assistant d’IA avec une politique de conservation des données de 30 jours.

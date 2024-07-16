@@ -18,7 +18,7 @@ Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une 
 
 >[!NOTE]
 >
->* Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de protocoles. Si vous ne disposez pas de cet identifiant, reportez-vous au [présentation des sources](../../../home.md#protocols) pour obtenir une liste des sources de protocoles avec lesquelles vous pouvez créer une connexion de base.
+>* Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de protocoles. Si vous ne disposez pas de cet ID, consultez la [présentation des sources](../../../home.md#protocols) pour obtenir la liste des protocoles avec lesquels vous pouvez créer une connexion de base.
 
 ## Prise en main
 
@@ -196,7 +196,7 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `data.schema.id` | Lʼ`$id` du schéma XDM cible. |
-| `params.dataSetId` | Identifiant du jeu de données cible généré à l’étape précédente. **Remarque**: vous devez fournir un identifiant de jeu de données valide lors de la création d’une connexion cible. Un identifiant de jeu de données non valide entraînera une erreur. |
+| `params.dataSetId` | Identifiant du jeu de données cible généré à l’étape précédente. **Remarque** : vous devez fournir un identifiant de jeu de données valide lors de la création d’une connexion cible. Un identifiant de jeu de données non valide entraînera une erreur. |
 | `connectionSpec.id` | Identifiant de spécification de connexion utilisé pour se connecter au lac de données. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Réponse**

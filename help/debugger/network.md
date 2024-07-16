@@ -15,7 +15,7 @@ ht-degree: 59%
 
 # Onglet Réseau
 
-Le **Réseau** agrège tous les appels de solution Adobe Experience Cloud effectués sur la page et les affiche dans l’ordre de gauche à droite. Les paramètres standard sont automatiquement étiquetés avec des noms conviviaux et organisés pour regrouper des paramètres communs sur le même rôle.
+L’onglet **Réseau** regroupe tous les appels de solution Adobe Experience Cloud effectués sur la page et les affiche dans l’ordre de gauche à droite. Les paramètres standard sont automatiquement étiquetés avec des noms conviviaux et organisés pour regrouper des paramètres communs sur le même rôle.
 
 ![](images/network.jpg)
 
@@ -29,7 +29,7 @@ Pour modifier les informations par solution, sélectionnez la solution que vous 
 
 ![](images/network-analytics.jpg)
 
-Pour revenir à l’affichage de toutes les solutions, sélectionnez **[!UICONTROL Réseau]**
+Pour revenir à l’affichage de toutes les solutions, sélectionnez **[!UICONTROL Network]**
 
 Sélectionnez sur un élément de la vue Réseau pour afficher une vue étendue. Vous pouvez copier les informations affichées dans le Presse-papiers à partir de la fenêtre d’affichage agrandie.
 
@@ -39,6 +39,6 @@ Sélectionnez sur un élément de la vue Réseau pour afficher une vue étendue.
 
 ![](images/copy.jpg)-->
 
-Pour effacer la liste, sélectionnez **[!UICONTROL Suppression d’événements]**.
+Pour effacer la liste, sélectionnez **[!UICONTROL Supprimer les événements]**.
 
 Pour télécharger un fichier Excel contenant les informations de cet écran, sélectionnez **[!UICONTROL Télécharger]**.

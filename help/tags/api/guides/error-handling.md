@@ -4,7 +4,7 @@ description: Découvrez la manière dont les erreurs sont traitées dans lʼAPI 
 exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
 source-git-commit: f3c23665229a83d6c63c7d6026ebf463069d8ad9
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1057'
 ht-degree: 100%
 
 ---
@@ -88,8 +88,8 @@ Le tableau suivant répertorie les différentes erreurs que l’API peut renvoye
 | `library-file-not-found` | Un fichier requis défini en extension.json est introuvable dans le package zip. |
 | `minification-error` | Échec de la compilation du code en raison dʼun code non valide. |
 | `multiple-revisions` | Une seule révision de chaque ressource peut être incluse dans une bibliothèque. |
-| `no-available-orgs` | Ce compte utilisateur nʼappartient pas à un profil de produit ayant accès aux balises. Utilisez Admin Console pour ajouter cet utilisateur à un profil de produit disposant de droits de balises. |
-| `not-authorized` | Ce compte utilisateur ne dispose pas des autorisations nécessaires pour effectuer cette action. |
+| `no-available-orgs` | Ce compte d’utilisateur nʼappartient pas à un profil de produit ayant accès aux balises. Utilisez Admin Console pour ajouter cet utilisateur à un profil de produit disposant de droits de balises. |
+| `not-authorized` | Ce compte d’utilisateur ne dispose pas des autorisations nécessaires pour effectuer cette action. |
 | `not-found` | Lʼenregistrement est introuvable. Vérifiez lʼidentifiant de lʼobjet que vous essayez de récupérer. |
 | `not-unique` | Le nom que vous souhaitez utiliser est déjà attribué. Pour cette ressource, la propriété « name » doit être unique. |
 | `public-release-not-authorized` | La publication publique des extensions est coordonnée par `launch-ext-dev@adobe.com`. Pour plus dʼinformations, consultez le document [Publication des extensions](../../extension-dev/submit/release.md). |

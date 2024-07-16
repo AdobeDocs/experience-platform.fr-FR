@@ -29,7 +29,7 @@ Ce document explique comment définir des types d’éléments de données pour 
 
 Les types d’éléments de données sont généralement les suivants :
 
-1. A [view](./views.md) affichées dans l’interface utilisateur de l’Experience Platform et l’interface utilisateur de collecte de données qui permettent aux utilisateurs de modifier les paramètres de l’élément de données.
+1. Une [vue](./views.md) affichée dans l’interface utilisateur Experience Platform et l’interface utilisateur de collecte de données qui permet aux utilisateurs de modifier les paramètres de l’élément de données.
 2. Un module de bibliothèque émis dans la bibliothèque d’exécution de balise pour interpréter les paramètres et récupérer des éléments de données.
 
 Supposons que vous souhaitiez autoriser les utilisateurs à récupérer cette donnée dans un élément d’enregistrement local nommé `productName`. Votre module peut se présenter comme suit :

@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;IBM [!DNL IBM DB2];IBM;ibm [!DNL IBM DB2];[!DNL IBM DB2];[!DNL IBM DB2]
+keywords: Experience Platform;accueil;rubriques populaires;IBM [!DNL IBM DB2];IBM;ibm [!DNL IBM DB2];[!DNL IBM DB2];[!DNL IBM DB2]
 solution: Experience Platform
-title: Création d’une IBM [!DNL IBM DB2] Connexion de base à l’aide de l’API Flow Service
+title: Création d’une connexion IBM [!DNL IBM DB2] de base à l’aide de l’API Flow Service
 type: Tutorial
-description: Découvrez comment connecter IBM [!DNL IBM DB2] vers Adobe Experience Platform à l’aide de l’API Flow Service.
+description: Découvrez comment connecter IBM [!DNL IBM DB2]  à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 48%
+source-wordcount: '458'
+ht-degree: 49%
 
 ---
 
-# Création d’une IBM [!DNL IBM DB2] connexion de base à l’aide de [!DNL Flow Service] API
+# Créez une connexion de base IBM [!DNL IBM DB2] à l’aide de l’API [!DNL Flow Service]
 
 >[!NOTE]
 >
->IBM [!DNL IBM DB2] Le connecteur est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
+>Le connecteur IBM [!DNL IBM DB2] est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez la [Présentation des sources](../../../../home.md#terms-and-conditions) .
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -26,20 +26,20 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] permet aux données d’être ingérées à partir de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services Platform.
-* [Environnements de test](../../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance de Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
+* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL IBM DB2] en utilisant la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL IBM DB2] à l’aide de l’API [!DNL Flow Service].
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `server` | Nom de la variable [!DNL IBM DB2] serveur. Vous pouvez spécifier le numéro de port suivant le nom du serveur délimité par deux points. Par exemple : server:port. |
-| `database` | Nom de la variable [!DNL IBM DB2] base de données. |
-| `username` | Nom d’utilisateur utilisé pour se connecter à la variable [!DNL IBM DB2] base de données. |
+| `server` | Nom du serveur [!DNL IBM DB2]. Vous pouvez spécifier le numéro de port suivant le nom du serveur délimité par deux points. Par exemple : server:port. |
+| `database` | Nom de la base de données [!DNL IBM DB2]. |
+| `username` | Nom d’utilisateur utilisé pour se connecter à la base de données [!DNL IBM DB2]. |
 | `password` | mot de passe du compte utilisateur que vous avez spécifié pour le nom d’utilisateur. |
-| `connectionSpec.id` | Identifiant unique nécessaire pour créer une connexion. L’identifiant de spécification de connexion pour [!DNL IBM DB2] is `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
+| `connectionSpec.id` | Identifiant unique nécessaire pour créer une connexion. L’ID de spécification de connexion pour [!DNL IBM DB2] est `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
 
-Pour plus d’informations sur la prise en main, voir [this [!DNL IBM DB2] document](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html).
+Pour plus d&#39;informations sur la prise en main, reportez-vous à [ce [!DNL IBM DB2] document](https://www.ibm.com/support/knowledgecenter/SSFMBX/com.ibm.swg.im.dashdb.doc/connecting/connect_credentials.html).
 
 ### Utiliser les API Platform
 
@@ -91,8 +91,8 @@ curl -X POST \
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `auth.params.connectionString` | La chaîne de connexion associée à votre [!DNL IBM DB2] compte . |
-| `connectionSpec.id` | La variable [!DNL IBM DB2] identifiant de spécification de connexion : `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
+| `auth.params.connectionString` | Chaîne de connexion associée à votre compte [!DNL IBM DB2]. |
+| `connectionSpec.id` | ID de spécification de connexion [!DNL IBM DB2] : `09182899-b429-40c9-a15a-bf3ddbc8ced7`. |
 
 **Réponse**
 
@@ -110,5 +110,5 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 Ce tutoriel vous a permis de créer une connexion de base [!DNL IBM DB2] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de la fonction [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/database-nosql.md)
 

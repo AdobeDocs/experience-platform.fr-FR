@@ -1,20 +1,20 @@
 ---
 keywords: Confirmit Digital Feedback;confirmit extension;confirmer
 title: Extension Confirmit Digital Feedback
-description: L’extension Confirmit Digital Feedback est une destination de voix du client dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Confirmit Digital Feedback est une destination de voix du client dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: b45efd1f-318c-42c4-8a88-02f25fc31319
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '500'
-ht-degree: 86%
+source-wordcount: '489'
+ht-degree: 85%
 
 ---
 
 # Extension [!DNL Confirmit Digital Feedback]
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-[!DNL Confirmit Digital Feedback] vous aide à transformer le trafic de votre site web en informations en temps réel. Avec [!DNL Confirmit], des enquêtes non intrusives et très ciblées peuvent être affichées en fonction de vos besoins, ce qui encourage les visiteurs à faire part de leurs commentaires, par exemple :
+La solution [!DNL Confirmit Digital Feedback] vous aide à transformer le trafic de votre site web en informations en temps réel. Avec [!DNL Confirmit], des enquêtes non intrusives et très ciblées peuvent être affichées en fonction de vos besoins, ce qui encourage les visiteurs à faire part de leurs commentaires, par exemple :
 
 * Commentaires sur le site web
 * Satisfaction des transactions
@@ -23,7 +23,7 @@ ht-degree: 86%
 * Satisfaction globale de la clientèle
 * Et bien plus encore
 
-[!DNL Confirmit] Digital Feedback est une extension de voix du client de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html).
+[!DNL Confirmit] Digital Feedback est une extension de voix du client dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103247.confirmit-digital-feedback-for-adobe-launch.html).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -37,7 +37,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Confirmit] Extension Digital Feedback :
+Pour installer l’extension [!DNL Confirmit] Digital Feedback :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

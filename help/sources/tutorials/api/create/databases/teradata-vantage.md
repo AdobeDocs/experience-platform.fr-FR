@@ -27,24 +27,24 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide [Prise en main des API Platform](../../../../../landing/api-guide.md).
 
-La section suivante fournit des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL Teradata Vantage] en utilisant la variable [!DNL Flow Service] API.
+La section suivante fournit des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL Teradata Vantage] à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
-Pour [!DNL Flow Service] pour vous connecter à [!DNL Teradata Vantage], vous devez fournir les propriétés de connexion suivantes :
+Pour que [!DNL Flow Service] se connecte à [!DNL Teradata Vantage], vous devez fournir les propriétés de connexion suivantes :
 
 | Informations d’identification | Description |
 | --- | --- |
-| `connectionString` | Une chaîne de connexion est une chaîne qui fournit des informations sur une source de données et sur la manière dont vous pouvez vous y connecter. Le modèle de chaîne de connexion pour [!DNL Teradata Vantage] is `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
+| `connectionString` | Une chaîne de connexion est une chaîne qui fournit des informations sur une source de données et sur la manière dont vous pouvez vous y connecter. Le modèle de chaîne de connexion pour [!DNL Teradata Vantage] est `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Teradata Vantage] est : `2fa8af9c-2d1a-43ea-a253-f00a00c74412` |
 
-Pour plus d’informations sur la prise en main, reportez-vous à cette section [[!DNL Teradata Vantage] document](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options).
+Pour plus d&#39;informations sur la prise en main, consultez ce [[!DNL Teradata Vantage] document](https://docs.teradata.com/r/Teradata-VantageTM-Advanced-SQL-Engine-Security-Administration/July-2021/Setting-Up-the-Administrative-Infrastructure/Controlling-Access-to-the-Operating-System/Working-with-OS-Level-Security-Options).
 
 ## Créer une connexion de base
 
 Une connexion de base conserve les informations échangées entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 
-Pour créer un identifiant de connexion de base, envoyez une requête de POST au `/connections` point de terminaison lors de la fourniture de [!DNL Teradata Vantage] informations d’identification d’authentification dans le corps de la requête.
+Pour créer un identifiant de connexion de base, envoyez une requête de POST au point de terminaison `/connections` tout en fournissant vos informations d’authentification [!DNL Teradata Vantage] dans le cadre du corps de la requête.
 
 **Format d’API**
 
@@ -82,12 +82,12 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `auth.params.connectionString` | Chaîne de connexion utilisée pour se connecter à votre [!DNL Teradata Vantage] instance. Le modèle de chaîne de connexion pour [!DNL Teradata Vantage] is `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
-| `connectionSpec.id` | La variable [!DNL Teradata Vantage] identifiant de spécification de connexion : `2fa8af9c-2d1a-43ea-a253-f00a00c74412`. |
+| `auth.params.connectionString` | Chaîne de connexion utilisée pour se connecter à votre instance [!DNL Teradata Vantage]. Le modèle de chaîne de connexion pour [!DNL Teradata Vantage] est `DBCName={SERVER};Uid={USERNAME};Pwd={PASSWORD}`. |
+| `connectionSpec.id` | ID de spécification de connexion [!DNL Teradata Vantage] : `2fa8af9c-2d1a-43ea-a253-f00a00c74412`. |
 
 **Réponse**
 
-Une réponse réussie renvoie la connexion nouvellement créée, y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
+Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
 
 ```json
 {
@@ -99,4 +99,4 @@ Une réponse réussie renvoie la connexion nouvellement créée, y compris son i
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL Teradata Vantage] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de la fonction [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/database-nosql.md)

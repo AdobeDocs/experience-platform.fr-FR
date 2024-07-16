@@ -6,8 +6,8 @@ description: Découvrez comment connecter Adobe Experience Platform à une cam
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '1942'
-ht-degree: 85%
+source-wordcount: '1925'
+ht-degree: 84%
 
 ---
 
@@ -29,7 +29,7 @@ Une connexion de base conserve les informations échangées entre votre source e
 
 ### Créer une connexion de base [!DNL Mailchimp] à l’aide de l’authentification de base
 
-Pour créer une [!DNL Mailchimp] connexion de base à l’aide de l’authentification de base, effectuez une requête de POST à l’adresse `/connections` point d’entrée [!DNL Flow Service] API tout en fournissant des informations d’identification pour votre `authorizationTestUrl`, `username`, et `password`.
+Pour créer une connexion de base [!DNL Mailchimp] à l’aide de l’authentification de base, envoyez une requête de POST au point de terminaison `/connections` de l’API [!DNL Flow Service] tout en fournissant des informations d’identification pour vos `authorizationTestUrl`, `username` et `password`.
 
 **Format d’API**
 
@@ -90,7 +90,7 @@ Une réponse réussie renvoie la nouvelle connexion de base, y compris son ident
 
 ### Créer une connexion de base [!DNL Mailchimp] à l’aide du code d’actualisation OAuth 2
 
-Pour créer une [!DNL Mailchimp] connexion de base à l’aide du code d’actualisation OAuth 2, envoyez une requête de POST au `/connections` point de terminaison tout en fournissant des informations d’identification pour votre `authorizationTestUrl`, et `accessToken`.
+Pour créer une connexion de base [!DNL Mailchimp] à l’aide du code d’actualisation OAuth 2, envoyez une requête de POST au point de terminaison `/connections` tout en fournissant des informations d’identification pour vos `authorizationTestUrl` et `accessToken`.
 
 **Format d’API**
 
@@ -547,20 +547,20 @@ La section suivante fournit des informations sur les étapes de surveillance, de
 
 ### Surveiller votre flux de données
 
-Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs. Pour consulter des exemples complets d’API, reportez-vous au guide sur [surveillance de vos flux de données sources à l’aide de l’API](../../monitor.md).
+Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs. Pour obtenir des exemples complets d’API, consultez le guide sur la [surveillance des flux de données de sources à l’aide de l’API](../../monitor.md).
 
 ### Mettre à jour votre flux de données
 
-Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés, en envoyant une requête PATCH à la variable `/flows` point d’entrée [!DNL Flow Service] API, tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre flux de données `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour des flux de données sources à l’aide de l’API](../../update-dataflows.md).
+Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les ensembles de mappages associés, en envoyant une requête de PATCH au point de terminaison `/flows` de l’API [!DNL Flow Service], tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique `etag` de votre flux de données dans l’en-tête `If-Match`. Pour obtenir des exemples complets d’API, lisez le guide sur la [mise à jour des flux de données de sources à l’aide de l’API](../../update-dataflows.md).
 
 ### Mettre à jour votre compte
 
-Mettez à jour le nom, la description et les informations d’identification de votre compte source en adressant une requête de PATCH au [!DNL Flow Service] API tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre compte source `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour de votre compte source à l’aide de l’API](../../update.md).
+Mettez à jour le nom, la description et les informations d’identification de votre compte source en adressant une requête de PATCH à l’API [!DNL Flow Service] tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique `etag` de votre compte source dans l’en-tête `If-Match`. Pour obtenir des exemples complets d’API, lisez le guide sur la [mise à jour de votre compte source à l’aide de l’API](../../update.md).
 
 ### Supprimer le flux de données
 
-Supprimez votre flux de données en adressant une requête de DELETE à la fonction [!DNL Flow Service] API tout en fournissant l’identifiant du flux de données que vous souhaitez supprimer dans le cadre du paramètre de requête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [suppression de vos flux de données à l’aide de l’API](../../delete-dataflows.md).
+Supprimez votre flux de données en adressant une requête de DELETE à l’API [!DNL Flow Service] tout en fournissant l’identifiant du flux de données que vous souhaitez supprimer dans le cadre du paramètre de requête . Pour obtenir des exemples complets d’API, lisez le guide sur la [suppression de vos flux de données à l’aide de l’API](../../delete-dataflows.md).
 
 ### Suppression de votre compte
 
-Supprimez votre compte en adressant une requête de DELETE à la fonction [!DNL Flow Service] API tout en fournissant l’identifiant de connexion de base du compte que vous souhaitez supprimer. Pour consulter des exemples complets d’API, reportez-vous au guide sur [suppression de votre compte source à l’aide de l’API](../../delete.md).
+Supprimez votre compte en adressant une requête de DELETE à l’API [!DNL Flow Service] tout en fournissant l’identifiant de connexion de base du compte que vous souhaitez supprimer. Pour obtenir des exemples complets d’API, lisez le guide sur la [suppression de votre compte source à l’aide de l’API](../../delete.md).

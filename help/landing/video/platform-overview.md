@@ -18,6 +18,6 @@ ht-degree: 7%
 
 Cette vidéo présente rapidement l’Experience Platform et présente quelques-uns des défis commerciaux qu’il résout.
 
-Pour en savoir plus, commencez par lire le [Présentation de Experience Platform](../home.md).
+Pour en savoir plus, commencez par lire la [présentation de l’Experience Platform](../home.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)

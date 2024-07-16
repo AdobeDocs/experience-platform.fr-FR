@@ -1,20 +1,20 @@
 ---
-keywords: Marketo;marketo;extension Marketo;extension marketo
+keywords: Marketo;marketo;extension Marketo;extension marketing
 title: Extension Marketo
-description: L’extension Marketo est une destination d’e-mail dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Marketo est une destination d’e-mail dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 3841eb19-a17e-4c28-a101-7332d178af34
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 87%
+source-wordcount: '445'
+ht-degree: 89%
 
 ---
 
 # Extension [!DNL Marketo] {#marketo-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-[!DNL Marketo]Grâce à son puissant logiciel d’automatisation du marketing, les marketeurs peuvent maîtriser l’art et la science du marketing numérique pour attirer les clients et les prospects.
+Le puissant logiciel d’automatisation du marketing de [!DNL Marketo] permet aux marketeurs de maîtriser l’art et la science du marketing numérique pour impliquer les clients et les prospects.
 
 [!DNL Marketo] est une extension de messagerie dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la [page de l’extension dans Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Marketo] extension :
+Pour installer l’extension [!DNL Marketo], procédez comme suit :
 
 1. Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 2. Sélectionnez l’extension dans le catalogue ou utilisez la barre de recherche.

@@ -7,8 +7,8 @@ description: Customer AI vous permet de télécharger des scores au format de fi
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
-source-wordcount: '961'
-ht-degree: 82%
+source-wordcount: '962'
+ht-degree: 72%
 
 ---
 
@@ -20,14 +20,14 @@ Ce document sert de guide pour télécharger des scores dans Customer AI.
 
 Customer AI vous permet de télécharger des scores au format de fichier Parquet. Pour suivre ce tutoriel, vous devez avoir terminé de lire la section consacrée au téléchargement de scores Customer AI dans le [guide de prise en main](../getting-started.md).
 
-De plus, pour accéder aux scores dans Customer AI, vous devez disposer d’une instance de service avec un état d’exécution réussi disponible. Pour créer une instance de service, rendez-vous sur la page [Configuration d’une instance Customer AI](./configure.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
+De plus, pour accéder aux scores dans Customer AI, vous devez disposer d’une instance de service avec un état d’exécution réussi disponible. Pour créer une instance de service, consultez la page [Configuration d’une instance Customer AI](./configure.md). Si vous avez récemment créé une instance de service et qu’elle est toujours en cours de formation et de notation, comptez 24 heures pour qu’elle se termine.
 
 Actuellement, il existe deux manières de télécharger les scores Customer AI :
 
-1. Si vous souhaitez télécharger les scores au niveau individuel et/ou si Real-Time Customer Profile n’est pas activé, commencez par accéder à [recherche de votre identifiant de jeu de données](#dataset-id).
+1. Si vous souhaitez télécharger les scores au niveau individuel et/ou si Real-Time Customer Profile n’est pas activé, commencez par accéder à [la recherche de l’identifiant de votre jeu de données](#dataset-id).
 2. Si Profile est activé et que vous souhaitez télécharger les segments que vous avez configurés à l’aide de Customer AI, [téléchargez un segment configuré avec Customer AI](#segment).
 
-## Chercher l’identifiant de votre jeu de données {#dataset-id}
+## Recherche de votre identifiant de jeu de données {#dataset-id}
 
 Dans votre instance de service d’informations Customer AI, cliquez sur la liste déroulante *Actions supplémentaires* dans le volet de navigation en haut à droite, puis sélectionnez **[!UICONTROL Accéder aux scores]**.
 
@@ -39,7 +39,7 @@ Une boîte de dialogue s’affiche. Elle contient un lien vers la documentation 
 
 ## Récupération de votre identifiant de lot {#retrieve-your-batch-id}
 
-En utilisant l’identifiant du jeu de données de l’étape précédente, vous devez appeler l’API Catalog pour récupérer un identifiant de lot. Des paramètres de requête supplémentaires sont utilisés pour cet appel API afin de renvoyer le dernier lot réussi au lieu d’une liste de lots appartenant à votre organisation. Pour renvoyer des lots supplémentaires, augmentez le nombre du paramètre de requête limite à la valeur souhaitée que vous souhaitez voir renvoyer. Pour plus d’informations sur les types de paramètres de requête disponibles, consultez le guide sur le [filtrage des données Catalogue à l’aide des paramètres de requête](../../../catalog/api/filter-data.md).
+À l’aide de l’identifiant de jeu de données de l’étape précédente, vous devez effectuer un appel à l’API Catalog afin de récupérer un identifiant de lot. Des paramètres de requête supplémentaires sont utilisés pour cet appel API afin de renvoyer le dernier lot réussi au lieu d’une liste de lots appartenant à votre organisation. Pour renvoyer des lots supplémentaires, augmentez le nombre du paramètre de requête limite à la valeur souhaitée que vous souhaitez voir renvoyer. Pour plus d’informations sur les types de paramètres de requête disponibles, consultez le guide sur le [filtrage des données Catalogue à l’aide des paramètres de requête](../../../catalog/api/filter-data.md).
 
 **Format d’API**
 
@@ -63,7 +63,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?dataSet=5
 
 **Réponse**
 
-Une réponse réussie renvoie un payload contenant un objet d’identifiant de lot de Dans cet exemple, la valeur clé de l’objet renvoyé est l’identifiant de lot. `01E5QSWCAASFQ054FNBKYV6TIQ`. Copiez l’identifiant de lot à utiliser dans l’appel API suivant.
+Une réponse réussie renvoie un payload contenant un objet d’identifiant de lot. Dans cet exemple, la valeur clé de l’objet renvoyé est l’identifiant de lot `01E5QSWCAASFQ054FNBKYV6TIQ`. Copiez l’identifiant de lot à utiliser dans l’appel API suivant.
 
 ```json
 {
@@ -245,7 +245,7 @@ Pour télécharger vos données de fichier, envoyez une requête GET vers la val
 
 >[!NOTE]
 >
->Si vous entrez cette requête directement dans la ligne de commande, vous serez peut-être invité à ajouter une sortie après les en-têtes de la requête. L’exemple de requête suivant utilise `--output {FILENAME.FILETYPE}`.
+>Si vous effectuez cette requête directement dans la ligne de commande, vous serez peut-être invité à ajouter une sortie après les en-têtes de la requête. L’exemple de requête suivant utilise `--output {FILENAME.FILETYPE}`.
 
 **Format d’API**
 
@@ -271,7 +271,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 >[!TIP]
 >
->Assurez-vous de vous trouver dans le répertoire ou le dossier dans lequel vous souhaitez enregistrer votre fichier avant d’effectuer la requête GET.
+>Assurez-vous que vous vous trouvez dans le répertoire ou le dossier dans lequel vous souhaitez enregistrer votre fichier avant d’effectuer la demande de GET.
 
 **Réponse**
 

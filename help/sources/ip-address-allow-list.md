@@ -69,7 +69,7 @@ Vous pouvez définir des contrôles d’accès réseau via votre pare-feu résea
 
 ## LISTE AUTORISÉE d’adresses IP pour les sources en continu {#streaming}
 
-Vous devez ajouter les adresses IP suivantes à votre liste autorisée afin d’autoriser le trafic pour le service de transfert de données pour les sources en continu, telles que [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md), et [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
+Vous devez ajouter les adresses IP suivantes à votre liste autorisée afin d’autoriser le trafic pour le service de transfert de données pour les sources de diffusion en continu telles que [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) et [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
 
 >[!BEGINTABS]
 

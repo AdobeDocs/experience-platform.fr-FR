@@ -6,8 +6,8 @@ description: Le balisage de contenu est un ensemble de services d’IA qui vous 
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
 source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
 workflow-type: tm+mt
-source-wordcount: '319'
-ht-degree: 2%
+source-wordcount: '322'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +23,7 @@ Le contenu est un composant essentiel de ces expériences. Pour mieux répondre 
 
 | Type de contenu | Fonctionnalités | Présentation des fonctionnalités |
 | --- | --- | --- |
-| Texte | - Balisage des mots-clés <br> | - Extrayez automatiquement les mots-clés et les balises des documents d’entreprise et des pages web à l’aide d’un service d’IA prêt à l’emploi. <br> |
+| Texte | - Balisage de mots-clés <br> | - Extrayez automatiquement les mots-clés et les balises des documents d’entreprise et des pages web à l’aide d’un service d’IA prêt à l’emploi. <br> |
 | Images | - Balisage des couleurs <br> - Reconnaissance optique des caractères (OCR) | : extrait précisément les couleurs dominantes (libellés et valeurs hexadécimales) et leur pondération à partir d’une image de produit. <br> : extrait précisément tout texte présent à partir d’une image de produit. |
 
 ## Compréhension du balisage du contenu
@@ -40,7 +40,7 @@ La vision globale du balisage de contenu est divisée en trois étapes afin de r
 - Obtenez les préférences et les affinités du client à partir du contenu et des actions.
 - Ajoutez des préférences au profil du client.
 
-**Étape 3 : Activation de l’optimisation de l’expérience**
+**Étape 3 : activation de l’optimisation de l’expérience**
 - Utilisez le profil du client pour offrir des expériences personnalisées et améliorées, dans une session et pour les expériences suivantes.
 - Utilisez les fonctionnalités de contenu pour obtenir des informations sur les comportements des clients qui pilotent les IPC.
 - Utilisez les informations sur le contenu pour améliorer la création, la création et la sélection de contenu.

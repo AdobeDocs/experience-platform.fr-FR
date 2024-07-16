@@ -2,7 +2,8 @@
 title: Exemples de cas d’utilisation dans Real-Time CDP
 description: Consultez des exemples de cas d’utilisation inter-services pour tirer le meilleur parti de votre mise en oeuvre Real-Time CDP.
 feature: Use Cases
-source-git-commit: a58476e0a52cce763a114b2b4f4314fdb2e3f4c9
+exl-id: 2d92a9d3-7648-4241-904e-48f5b2e16023
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 6%
@@ -35,7 +36,7 @@ Les exemples de cas d’utilisation peuvent être regroupés en cas d’acquisit
     </a>
     <div>
       <a href="../partner-data/prospecting.md">
-    <strong>Nouvelle acquisition client</strong>
+    <strong> Nouvelle acquisition de clients</strong>
     </a>
     </div>
     <p>
@@ -71,7 +72,7 @@ Les exemples de cas d’utilisation peuvent être regroupés en cas d’acquisit
   </tr>
   </table>
 
-### Enrichissement de profil {#profile-enrichment}
+### Enrichissement du profil {#profile-enrichment}
 
 <table style="margin-top: 0 !important">
 <tr>
@@ -81,17 +82,17 @@ Les exemples de cas d’utilisation peuvent être regroupés en cas d’acquisit
     </a>
     <div>
       <a href="../partner-data/supplement-first-party-profiles.md">
-    <strong>Compléter les profils propriétaires avec les attributs fournis par les partenaires</strong>
+    <strong>Compléter les profils propriétaires avec les attributs fournis par le partenaire</strong>
     </a>
     </div>
     <p>
-    <em>Complétez les profils propriétaires avec les attributs des partenaires de données de confiance afin d’améliorer vos bases de données, d’obtenir de nouvelles informations sur votre base de clients et d’optimiser l’audience.</em>
+    <em>Complétez les profils propriétaires avec les attributs des partenaires de données de confiance pour améliorer votre base de données, obtenir de nouvelles informations sur votre base de clients et optimiser l’audience.</em>
     <p>
   </td>
   </tr>
   </table>
 
-## Personnalisation, informations, engagement {#personalization-insights-engagement}
+## Personalization, insights, engagement {#personalization-insights-engagement}
 
 <table style="margin-top: 0 !important">
 <tr>
@@ -105,7 +106,7 @@ Les exemples de cas d’utilisation peuvent être regroupés en cas d’acquisit
     </a>
     </div>
     <p>
-    <em>Réengager les clients qui ont abandonné une conversion de manière intelligente et responsable. Contactez les clients obsolètes avec des expériences afin d’augmenter la conversion et d’augmenter la valeur de durée de vie du client.</em>
+    <em>Réengager les clients qui ont abandonné une conversion de manière intelligente et responsable. Interagir avec les clients obsolètes avec des expériences pour augmenter la conversion et augmenter la valeur de durée de vie du client.</em>
     <p>
   </td>
   </tr>

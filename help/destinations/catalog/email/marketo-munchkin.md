@@ -1,24 +1,24 @@
 ---
 keywords: Marketo Munchkin;marketo munchkin;extension Marketo Munchkin;extension marketo munchkin;marketo;Marketo
 title: Extension Marketo Munchkin
-description: L’extension Marketo Munchkin est une destination de personnalisation de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Marketo Munchkin est une destination de personnalisation de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 0639ff74-5450-456e-b030-8118814ed705
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 84%
+source-wordcount: '458'
+ht-degree: 80%
 
 ---
 
 # Extension [!DNL Marketo Munchkin] {#marketo-munchkin-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-De la gestion des prospects au marketing basé sur les comptes, [!DNL Marketo Engagement Platform] simplifie la planification, l’orchestration et la mesure de l’engagement avec les clients et les prospects à chaque étape de leur expérience.
+De la gestion des prospects au marketing basé sur les comptes, [!DNL Marketo Engagement Platform] simplifie la planification, l&#39;orchestration et la mesure de l&#39;engagement avec les clients et les prospects à chaque étape de leur expérience.
 
-[!DNL Marketo’s Munchkin][!DNL Marketo] JavaScript permet le suivi des visites et des clics des pages des utilisateurs finaux vers vos pages Web externes et vos pages de renvoi 
+[!DNL Marketo’s Munchkin] JavaScript permet le suivi des visites et des clics des pages des utilisateurs finaux vers vos [!DNL Marketo] landing pages et pages web externes.
 
-[!DNL Marketo Munchkin] est une extension de messagerie dans Adobe Experience Platform. Pour plus d’informations sur Marketo Munchkin, reportez-vous à la section [Suivi des pistes](https://developers.marketo.com/javascript-api/lead-tracking/) dans la documentation de Marketo.
+[!DNL Marketo Munchkin] est une extension de messagerie dans Adobe Experience Platform. Pour plus d’informations sur Marketo Munchkin, consultez la section [Suivi des pistes](https://developers.marketo.com/javascript-api/lead-tracking/) de la documentation Marketo.
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -32,7 +32,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Marketo Munchkin] extension :
+Pour installer l’extension [!DNL Marketo Munchkin], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

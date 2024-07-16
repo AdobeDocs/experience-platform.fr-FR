@@ -11,7 +11,7 @@ ht-degree: 28%
 
 # Gestion des autorisations pour la collecte de données dans Experience Platform
 
-[Collecte de données dans Adobe Experience Platform](./home.md) est constitué de plusieurs technologies différentes qui travaillent ensemble pour collecter et transférer vos données. L’accès à ces technologies est contrôlé par le biais d’autorisations granulaires basées sur les rôles dans Adobe Admin Console.
+La [collecte de données dans Adobe Experience Platform](./home.md) est composée de plusieurs technologies différentes qui fonctionnent ensemble pour collecter et transférer vos données. L’accès à ces technologies est contrôlé par le biais d’autorisations granulaires basées sur les rôles dans Adobe Admin Console.
 
 Ce guide vous explique comment gérer les autorisations pour les fonctionnalités de collecte de données.
 
@@ -27,35 +27,35 @@ Les autorisations appropriées pour la collecte de données sont fournies par le
 
 ### Autorisations Adobe Experience Platform
 
-Les autorisations sous Adobe Experience Platform incluent l’accès aux jeux de données, aux identités, aux schémas et aux environnements de test. Pour obtenir des instructions sur la configuration des autorisations Adobe Experience Platform, voir [guide d’utilisation du contrôle d’accès](../access-control/ui/overview.md).
+Les autorisations sous Adobe Experience Platform incluent l’accès aux jeux de données, aux identités, aux schémas et aux environnements de test. Pour obtenir des instructions sur la configuration des autorisations Adobe Experience Platform, consultez le [guide d’utilisation du contrôle d’accès](../access-control/ui/overview.md).
 
 | Catégorie | Autorisation | Description |
 | --- | --- | --- |
-| Sandbox | (S/O) | Selon le [sandbox](../sandboxes/home.md) qui ont été créés sous votre organisation, vous pouvez contrôler l’accès à chacun d’eux par le biais de cette catégorie d’autorisations dans Admin Console. |
-| Modélisation des données | Gestion des schémas | Permet d’afficher, de créer et de modifier [Schémas XDM (Experience Data Model)](../xdm/home.md). |
+| Sandbox | (S/O) | Selon les [environnements de test](../sandboxes/home.md) créés sous votre organisation, vous pouvez contrôler l’accès à chacun d’eux par le biais de cette catégorie d’autorisations dans Admin Console. |
+| Modélisation des données | Gestion des schémas | Permet d’afficher, de créer et de modifier des schémas [Modèle de données d’expérience (XDM)](../xdm/home.md). |
 | Modélisation des données | Affichage des schémas | Accorde l’accès en lecture seule aux schémas. |
-| Identity Management | Gestion des espaces de noms d’identité | Permet d’afficher, de créer et de modifier [espaces de noms d’identité](../identity-service/features/namespaces.md). |
+| Identity Management | Gestion des espaces de noms d’identité | Permet d’afficher, de créer et de modifier les [espaces de noms d’identité](../identity-service/features/namespaces.md). |
 | Identity Management | Affichages des espaces de noms d’identité | Accorde l’accès en lecture seule aux espaces de noms d’identité. |
-| Collecte de données | Gestion des flux de données | Permet d’afficher, de créer et de modifier [datastreams](../datastreams/overview.md). |
+| Collecte de données | Gestion des flux de données | Permet d’afficher, de créer et de modifier des [jeux de données](../datastreams/overview.md). |
 | Collecte de données | Affichage des flux de données | Accorde l’accès en lecture seule aux flux de données. |
 
 {style="table-layout:auto"}
 
 ### Autorisations de collecte de données Adobe Experience Platform
 
-Les autorisations de la collecte de données Adobe Experience Platform contrôlent l’accès aux balises et aux fonctionnalités de transfert d’événement, y compris les propriétés, les extensions et les environnements. Pour obtenir des instructions sur la configuration des autorisations de la collecte de données Adobe Experience Platform, voir [section](#manage).
+Les autorisations de la collecte de données Adobe Experience Platform contrôlent l’accès aux balises et aux fonctionnalités de transfert d’événement, y compris les propriétés, les extensions et les environnements. Pour obtenir des instructions sur la configuration des autorisations de collecte de données Adobe Experience Platform, reportez-vous à la [section ci-dessous](#manage).
 
 | Catégorie | Autorisation | Description |
 | --- | --- | --- |
-| Plateformes | Web | Accorde l’accès à [propriétés web](../tags/ui/administration/companies-and-properties.md) lorsqu’elles sont combinées avec d’autres droits de propriété. |
+| Plateformes | Web | Accorde l’accès aux [propriétés web](../tags/ui/administration/companies-and-properties.md) lorsqu’elles sont combinées avec d’autres droits de propriété. |
 | Plateformes | Mobile | Accorde l’accès à [propriétés mobiles](../tags/ui/administration/companies-and-properties.md) lorsqu’elles sont combinées avec d’autres droits de propriété. |
-| Plateformes | Edge | Accorde l’accès à [Propriétés Edge de transfert d’événement](../tags/ui/event-forwarding/getting-started.md) lorsqu’elles sont combinées avec d’autres droits de propriété. |
-| Propriétés | (S/O) | Selon les propriétés qui ont été créées sous votre organisation, vous pouvez contrôler l’accès à chacune d’elles par le biais de cette catégorie d’autorisations dans Admin Console.<br><br>Les droits de propriété attribués à un utilisateur s’appliquent uniquement aux propriétés auxquelles il a eu accès par le biais de cette catégorie d’autorisations. |
+| Plateformes | Edge | Accorde l’accès aux [propriétés Edge de transfert d’événement](../tags/ui/event-forwarding/getting-started.md) lorsqu’elles sont combinées avec d’autres droits de propriété. |
+| Propriétés | (S/O) | Selon les propriétés qui ont été créées sous votre organisation, vous pouvez contrôler l’accès à chacune d’elles par le biais de cette catégorie d’autorisations dans Admin Console.<br><br>Les droits de propriété attribués à un utilisateur s’appliquent uniquement aux propriétés auxquelles il a été autorisé à accéder par le biais de cette catégorie d’autorisations. |
 | Droits de propriété | Approuver | Permet d’approuver une version de bibliothèque dans le cadre du [flux de publication](../tags/ui/publishing/publishing-flow.md). |
 | Droits de propriété | Développer | Permet de développer une version de bibliothèque dans le cadre du [flux de publication](../tags/ui/publishing/publishing-flow.md). |
 | Droits de propriété | Modifier la propriété | Permet de modifier la configuration de base des propriétés auxquelles un utilisateur a accès. |
-| Droits de propriété | Gérer les environnements | Permet de gérer le [environnements](../tags/ui/publishing/environments.md) pour les propriétés auxquelles un utilisateur a accès. |
-| Droits de propriété | Gérer les extensions | Permet de gérer le [extensions](../tags/ui/managing-resources/extensions/overview.md) pour les propriétés auxquelles un utilisateur a accès. |
+| Droits de propriété | Gérer les environnements | Permet de gérer les [environnements](../tags/ui/publishing/environments.md) pour les propriétés auxquelles un utilisateur a accès. |
+| Droits de propriété | Gérer les extensions | Permet de gérer les [extensions](../tags/ui/managing-resources/extensions/overview.md) pour les propriétés auxquelles un utilisateur a accès. |
 | Droits de propriété | Publier | Permet de publier une version de bibliothèque dans le cadre du [flux de publication](../tags/ui/publishing/publishing-flow.md). |
 | Droits d’entreprise | Développement dʼextensions | Permet de créer et de modifier des modules d’extension dont votre organisation est propriétaire, y compris les versions privées et les demandes de publication publique. |
 | Droits d’entreprise | Gérer les configurations d’application | Cette autorisation n’est applicable que si vous disposez d’une licence pour Adobe Journey Optimizer ou une autre solution qui accorde l’accès aux messages in-app et push mobiles. Cela vous permet de gérer les applications dont Adobe Experience Cloud a connaissance, ainsi que les informations d’identification push nécessaires pour communiquer avec le service Firebase Cloud Messaging et le service Apple Push Notification. |
@@ -65,11 +65,11 @@ Les autorisations de la collecte de données Adobe Experience Platform contrôle
 
 >[!NOTE]
 >
->Pour plus d’informations sur la façon dont ces autorisations affectent les fonctionnalités des balises, y compris les stratégies d’administration pour les scénarios courants, consultez la documentation sur les balises sur [permissions utilisateur](../tags/ui/administration/user-permissions.md).
+>Pour plus d’informations sur la façon dont ces autorisations affectent les fonctionnalités des balises, y compris les stratégies d’administration pour les scénarios courants, consultez la documentation sur les balises sur les [autorisations utilisateur](../tags/ui/administration/user-permissions.md).
 
 ## Gérer les autorisations {#manage}
 
-Les autorisations pour la collecte de données sont gérées par le biais de deux désignations de produit : **Adobe Experience Platform** et **Collecte de données Adobe Experience Platform**.
+Les autorisations pour la collecte de données sont gérées par deux désignations de produit : **Adobe Experience Platform** et **Collecte de données Adobe Experience Platform**.
 
 Reportez-vous aux sous-sections ci-dessous pour savoir comment gérer les autorisations pertinentes sous chaque produit en Admin Console :
 
@@ -82,17 +82,17 @@ Reportez-vous aux sous-sections ci-dessous pour savoir comment gérer les autori
 >
 >Pour gérer les autorisations d’un rôle, vous aurez besoin des droits d’administrateur. Si vous ne disposez pas de droits d’administrateur, contactez votre administrateur système.
 
-Experience Cloud **[!UICONTROL Autorisations]** vous permet de définir des rôles utilisateur et des stratégies afin de gérer l’accès aux fonctions et aux objets au sein d’une application de produit.
+La section **[!UICONTROL Autorisations]** de l’Experience Cloud vous permet de définir des rôles utilisateur et des stratégies pour gérer l’accès aux fonctionnalités et aux objets dans une application de produit.
 
-Via [!UICONTROL Autorisations], vous pouvez créer et gérer des rôles et attribuer les autorisations de ressources souhaitées pour ces rôles.
+Grâce aux [!UICONTROL autorisations], vous pouvez créer et gérer des rôles et attribuer les autorisations de ressources souhaitées pour ces rôles.
 
 ![Adobe Experience Cloud mettant en surbrillance le produit Autorisations.](./images/permissions/permissions-product.png)
 
-Pour accéder aux fonctionnalités de collecte de données, vous devez activer toutes les autorisations de la variable **[!UICONTROL Environnements de test]**, **[!UICONTROL Modélisation des données]**, **[!UICONTROL Identity Management]**, et **[!UICONTROL Collecte de données]** catégories.
+Pour accéder aux fonctionnalités de collecte de données, vous devez activer toutes les autorisations dans les catégories **[!UICONTROL Sandbox]**, **[!UICONTROL Data Modeling]**, **[!UICONTROL Identity Management]** et **[!UICONTROL Data Collection]**.
 
 ![Image montrant la carte de produit de la collecte de données en Admin Console](./images/permissions/platform-permission-card.png)
 
-Voir [guide de l’interface utilisateur du contrôle d’accès](../access-control/ui/overview.md) pour obtenir des instructions détaillées sur la gestion des autorisations de Platform.
+Pour obtenir des instructions détaillées sur la gestion des autorisations de Platform, consultez le [guide d’interface utilisateur du contrôle d’accès](../access-control/ui/overview.md) .
 
 >[!NOTE]
 >
@@ -110,7 +110,7 @@ L’écran suivant affiche une liste des profils de produit disponibles pour la 
 
 ![Image montrant les profils de produit pour la collecte de données dans Admin Console](./images/permissions/new-profile.png)
 
-Après avoir sélectionné ou créé un profil de produit, vous pouvez utiliser la variable **[!UICONTROL Modifier]** icônes de démarrage [modification des autorisations](#edit-permissions) pour le profil, ou sélectionnez l’événement **[!UICONTROL Utilisateurs]** pour démarrer [attribution d’utilisateurs](#assign-users) au profil.
+Après avoir sélectionné ou créé un profil de produit, vous pouvez utiliser les icônes **[!UICONTROL Modifier]** pour commencer à [modifier les autorisations](#edit-permissions) pour le profil, ou sélectionner l’onglet **[!UICONTROL Utilisateurs]** pour commencer à [affecter des utilisateurs](#assign-users) au profil.
 
 ![Image montrant l’onglet Autorisations d’un profil de produit dans Admin Console.](./images/permissions/edit-permission-categories.png)
 
@@ -122,7 +122,7 @@ Lors de l’édition des autorisations d’un profil, les autorisations disponib
 
 Les autorisations sont organisées en catégories. Pour passer d’une catégorie à l’autre, sélectionnez la catégorie souhaitée dans le volet de navigation de gauche.
 
-![Image présentant la section des droits de l’entreprise sous autorisations](./images/permissions/switch-category.png)
+![Image montrant la section des droits de l’entreprise sous autorisations](./images/permissions/switch-category.png)
 
 Sélectionnez **[!UICONTROL Enregistrer]** une fois que vous avez terminé de configurer les autorisations.
 

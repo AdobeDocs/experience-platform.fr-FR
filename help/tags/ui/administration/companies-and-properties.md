@@ -125,9 +125,9 @@ Suivez les instructions pour créer une propriété mobile.
    * **Name :** le nom de la propriété.
    * **Privacy :** par défaut, le paramètre de confidentialité est défini sur Opted In (Activé), ce qui signifie que vous souhaitez que le SDK collecte et envoie des données aux solutions. Si vous sélectionnez Opt Out (Désactivé), le SDK ne transmettra PAS les données aux solutions par défaut. Si vous sélectionnez Unknown (Aucun), le SDK doit préalablement demander à lʼutilisateur lʼautorisation de collecter et de partager les données.
 
-      >[!NOTE]
-      >
-      >Il est possible de contrôler ces paramètres par API dans l’application mobile.
+     >[!NOTE]
+     >
+     >Il est possible de contrôler ces paramètres par API dans l’application mobile.
 
    * **Use HTTPS :** sélectionnez ce paramètre selon que toutes les communications de données doivent être envoyées via HTTP ou via HTTPS.
 

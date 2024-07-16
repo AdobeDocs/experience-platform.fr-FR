@@ -1,8 +1,8 @@
 ---
-title: Document Your Source (SDK de diffusion)
+title: Document Your Source (SDK de diffusion en continu)
 description: La dernière étape avant que votre nouvelle source puisse être mise en ligne dans Adobe Experience Platform consiste à documenter votre nouvelle source.
 exl-id: 65ca7a4d-3e02-4f54-bf07-ea2c92b8dbf1
-badge: Version Beta
+badge: Version bêta
 source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
 source-wordcount: '409'
@@ -29,8 +29,8 @@ Ce guide de documentation comprend :
 
 Les éléments suivants sont requis pour pouvoir commencer à documenter votre nouvelle source :
 
-* **Un compte utilisateur GitHub valide**: si vous ne disposez pas d’un compte GitHub existant, vous devez en créer un via la variable [Page d’inscription GitHub](https://github.com/);
-* **Accès à GitHub Desktop**: vous devez utiliser la variable [Application de bureau GitHub](https://desktop.github.com/) afin de créer votre documentation source dans votre environnement local ;
+* **Compte utilisateur GitHub valide** : si vous n’avez pas de compte GitHub existant, vous devez en créer un par le biais de la [page d’inscription GitHub](https://github.com/) ;
+* **Accès à l’appli de bureau GitHub** : vous devez utiliser l’[application de bureau GitHub](https://desktop.github.com/) pour créer la documentation source dans votre environnement local ;
 * Votre intégration à Adobe doit être dans une phase de test avec votre source déployée dans un environnement d’évaluation de Platform.
 
 ## Instructions générales pour créer la documentation de votre source dans Platform
@@ -39,7 +39,7 @@ Les éléments suivants sont requis pour pouvoir commencer à documenter votre n
 
 ## Modèle de documentation
 
-Vous pouvez utiliser un champ prérempli [Modèle de documentation d’API](streaming-template-api.md) ou le [Modèle de documentation de l’interface utilisateur](streaming-template-ui.md) pour faciliter la création de la documentation pour votre source. Vous trouverez ci-dessous des instructions sur la manière de modifier le modèle et d’ouvrir une requête d’extraction. La documentation envoyée pour votre nouvelle source sera révisée et publiée par l’équipe de documentation d’Adobe.
+Vous pouvez utiliser un [modèle de documentation d’API](streaming-template-api.md) prérempli ou le [ modèle de documentation d’interface utilisateur](streaming-template-ui.md) pour faciliter la création de la documentation pour votre source. Vous trouverez ci-dessous des instructions sur la manière de modifier le modèle et d’ouvrir une requête d’extraction. La documentation envoyée pour votre nouvelle source sera révisée et publiée par l’équipe de documentation d’Adobe.
 
 Vous pouvez également télécharger les modèles de documentation ci-dessous :
 

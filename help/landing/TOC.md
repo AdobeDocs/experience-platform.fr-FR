@@ -2,11 +2,11 @@
 audience: user
 user-guide-title: Présentation d’Adobe Experience Platform
 breadcrumb-title: Présentation d’Experience Platform
-user-guide-description: Découvrez comment Experience Platform permet de proposer en temps réel des expériences personnalisées à vos clients grâce à des guides, de la documentation et des tutoriels.
+user-guide-description: Découvrez comment Experience Platform permet de fournir des expériences personnalisées à vos clientes et clients en temps réel, grâce à des guides, de la documentation et des tutoriels.
 source-git-commit: a926560f3c5f765090046313ec7a7431b5ce69c6
 workflow-type: tm+mt
 source-wordcount: '279'
-ht-degree: 78%
+ht-degree: 86%
 
 ---
 
@@ -75,7 +75,7 @@ ht-degree: 78%
    * [Bonnes pratiques relatives aux droits de licence de gestion des données](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Tableau de bord d’utilisation des licences](./license-usage-and-guardrails/license-usage-dashboard.md)
    * [Barrières de sécurité Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
-   * [Protections des Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+   * [Barrières de sécurité du Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
    * [Barrières de sécurité Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [Guide de dépannage](troubleshooting.md)
 * [Migration du lac de données Gen2](adls2-gen2-migration.md)

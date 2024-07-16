@@ -6,7 +6,7 @@ description: Découvrez comment connecter Adobe Experience Platform à des campa
 exl-id: e8e1ed32-4277-44c9-aafc-6bb9e0a1fe0d
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '682'
+source-wordcount: '684'
 ht-degree: 93%
 
 ---
@@ -20,7 +20,7 @@ Ce tutoriel décrit les étapes à suivre pour créer un connecteur source [!DNL
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de [!DNL Platform].
-* [Sandbox](../../../../../sandboxes/home.md) : Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ## Collecter les informations d’identification requises
 
@@ -72,13 +72,13 @@ Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fo
 
 #### S’authentifier à l’aide d’OAuth 2
 
-Pour utiliser OAuth 2, sélectionnez [!UICONTROL Actualisation du code OAuth 2], indiquez les valeurs de votre domaine, de l’URL de test d’autorisation et du jeton d’accès, puis sélectionnez **[!UICONTROL Connexion à la source]**. Patientez quelques instants le temps que vos informations d’identification soient validées, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
+Pour utiliser OAuth 2, sélectionnez [!UICONTROL OAuth 2 Refresh Code], fournissez des valeurs pour votre domaine, l’URL de test d’autorisation et le jeton d’accès, puis sélectionnez **[!UICONTROL Se connecter à la source]**. Patientez quelques instants le temps que vos informations d’identification soient validées, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
 ![oauth](../../../../images/tutorials/create/mailchimp-campaigns/oauth.png)
 
 #### S’authentifier à l’aide de l’authentification de base
 
-Pour utiliser l’authentification de base, sélectionnez [!UICONTROL Authentification de base], indiquez les valeurs de votre domaine, de votre nom d’utilisateur et de votre mot de passe, puis sélectionnez **[!UICONTROL Connexion à la source]**. Patientez quelques instants le temps que vos informations d’identification soient validées, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
+Pour utiliser une authentification de base, sélectionnez [!UICONTROL Authentification de base], fournissez des valeurs pour votre domaine, votre nom d’utilisateur et votre mot de passe, puis sélectionnez **[!UICONTROL Se connecter à la source]**. Patientez quelques instants le temps que vos informations d’identification soient validées, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
 ![De base](../../../../images/tutorials/create/mailchimp-campaigns/basic.png)
 

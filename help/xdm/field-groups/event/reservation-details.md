@@ -12,11 +12,11 @@ ht-degree: 8%
 
 # [!UICONTROL Détails de la réservation] groupe de champs de schéma
 
-[!UICONTROL Détails de la réservation] est un groupe de champs de schéma standard pour la variable [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) utilisé pour capturer des informations concernant une réservation, notamment la longueur, la modification, le statut remboursable et le nombre de pièces.
+[!UICONTROL Détails de la réservation] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) utilisée pour capturer des informations concernant une réservation, notamment la longueur, la modification, le statut remboursable et le nombre de chambres.
 
-Le groupe de champs fournit un champ de type objet unique, `reservations`. Les propriétés contenues dans cet objet sont expliquées ci-dessous.
+Le groupe de champs fournit un seul champ de type objet, `reservations`. Les propriétés contenues dans cet objet sont expliquées ci-dessous.
 
-![Structure des détails de la réservation](../../images/field-groups/reservation-details.png)
+![Structure des détails de réservation](../../images/field-groups/reservation-details.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
@@ -41,12 +41,12 @@ Le groupe de champs fournit un champ de type objet unique, `reservations`. Les p
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-reservation-details.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-reservation-details.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-reservation-details.schema.json)
 
 ## Groupes de champs de réservation spécifiques au secteur
 
-Il existe plusieurs autres groupes de champs standard qui étendent le [!UICONTROL Détails de la réservation] schéma pour les cas d’utilisation spécifiques au secteur. Pour plus d’informations, consultez la documentation suivante :
+Il existe plusieurs autres groupes de champs standard qui étendent le schéma [!UICONTROL Détails de la réservation] pour des cas d’utilisation spécifiques au secteur. Pour plus d’informations, consultez la documentation suivante :
 
 * [[!UICONTROL Réservation de restaurant]](./dining-reservation.md)
 * [[!UICONTROL Réservation de vol]](./flight-reservation.md)

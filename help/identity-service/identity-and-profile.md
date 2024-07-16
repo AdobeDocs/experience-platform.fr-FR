@@ -13,7 +13,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Cette page suppose que la stratégie de fusion utilise le graphique d’identités. Pour plus d’informations sur les stratégies de fusion dans Real-Time Customer Profile, consultez la documentation sur [stratégies de fusion et combinaison d’identités](../profile/merge-policies/overview.md#identity-stitching).
+>Cette page suppose que la stratégie de fusion utilise le graphique d’identités. Pour plus d’informations sur les stratégies de fusion dans Real-Time Customer Profile, consultez la documentation sur les [stratégies de fusion et combinaison d’identités](../profile/merge-policies/overview.md#identity-stitching).
 
 Bien que vous puissiez utiliser Identity Service et Real-time Customer Profile en tandem, les deux fonctionnalités de Adobe Experience Platform ne sont pas intrinsèquement les mêmes.
 
@@ -26,12 +26,12 @@ Ce document décrit les similitudes, les différences et les relations entre Ide
 
 Les principales différences entre Identity Service et Real-Time Customer Profile sont les suivantes :
 
-| | Identity Service | Profil client en temps réel |
+| | Service d’identités | Profil client en temps réel |
 | --- | --- |--- |
 | **Rôle** | <ul><li>Vous pouvez utiliser Identity Service pour créer et gérer des graphiques d’identités.</li></ul> | Vous pouvez utiliser Real-time Customer Profile pour : <ul><li>Créez une vue à 360 degrés d’un profil client.</li><li>Affichage et gestion des profils</li></ul> |
 | **Entrée** | <ul><li>Pour utiliser Identity Service, vous devez ingérer des données d’enregistrement ou des événements de série temporelle comportant au moins deux champs marqués comme identité. Les champs que vous marquez comme identité sont ensuite ingérés dans Identity Service.</li></ul> | <ul><li>Fragments de profil : représentent une identité principale unique et les données d’enregistrement ou d’événement correspondantes pour cet identifiant dans un jeu de données donné.</li><li>Graphiques d’identités : le profil référence le graphique d’identités d’un profil client donné afin d’identifier tous les fragments de profil avec les mêmes identités principales.</li></ul> |
 | **Processus** | <ul><li>Une fois que vous avez ingéré au moins deux identités, Identity Service relie ensuite ces identités.</li></ul> | <ul><li>Real-Time Customer Profile fusionne des fragments de profil lors du référencement de leurs graphiques d’identités correspondants.</li></ul> |
-| **Sortie** | <ul><li>Le résultat est un graphique d’identités, qui est un ensemble d’identités liées à un individu.</li></ul> | <ul><li>Le résultat est un profil fusionné, qui est une vue unique et complète d’un client donné. Ce profil peut ensuite être admissible pour un segment.</li></ul> |
+| **Output** | <ul><li>Le résultat est un graphique d’identités, qui est un ensemble d’identités liées à un individu.</li></ul> | <ul><li>Le résultat est un profil fusionné, qui est une vue unique et complète d’un client donné. Ce profil peut ensuite être admissible pour un segment.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -42,7 +42,7 @@ Lisez les étapes ci-dessous pour mieux comprendre le processus de création d�
 * Tout d’abord, Real-Time Customer Profile référence un graphique d’identités et récupère toutes les identités.
 * Ensuite, Profile récupère les fragments de profil avec les identités principales dans le graphique d’identités.
 * Une fois l’opération terminée, Profile fusionne tous les événements et attributs existants.
-   * En cas de conflit d’informations d’attribut, les attributs sont choisis en fonction de la méthode de fusion. Pour plus d’informations, consultez la section [présentation des stratégies de fusion](../profile/merge-policies/overview.md).
+   * En cas de conflit d’informations d’attribut, les attributs sont choisis en fonction de la méthode de fusion. Pour plus d’informations, consultez la [présentation des stratégies de fusion](../profile/merge-policies/overview.md).
 
 ![Graphique de flux détaillant le fonctionnement d’Identity Service et de la fusion de profils.](./images/merge-profile-process.png)
 

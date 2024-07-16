@@ -42,7 +42,7 @@ Enfin, la sandbox de production par défaut est la première sandbox de producti
 Pour résumer, les sandbox offrent les avantages suivants :
 
 * **Gestion du cycle de vie des applications** : créez des environnements virtuels distincts pour développer et faire évoluer des applications d’expérience digitale.
-* **Gestion de projet et de marque**: permet à plusieurs projets de s’exécuter en parallèle au sein de la même organisation, tout en fournissant un isolement et un contrôle d’accès.
+* **Gestion de projet et de marque** : permet à plusieurs projets de s’exécuter en parallèle au sein d’une même organisation, tout en offrant un isolement et un contrôle d’accès.
 * **Écosystème de développement flexible** : proposez des sandbox de manière transparente, évolutive et économique pour l’exploration, l’activation et la démonstration.
 
 ## Contrôle d’accès pour les sandbox

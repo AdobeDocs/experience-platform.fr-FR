@@ -18,7 +18,7 @@ ht-degree: 76%
 
 [!UICONTROL IdentityMap] est un groupe de champs de schéma standard pour la classe [[!DNL XDM Individual Profile] ](../../classes/individual-profile.md). Le groupe de champs fournit un champ de mappage unique, qui contient un ensemble d’identités utilisateur saisies par espace de noms.
 
-![Un diagramme de [!UICONTROL IdentityMap] groupe de champs de schéma](../../images/field-groups/identitymap.png)
+![ Diagramme du groupe de champs de schéma [!UICONTROL IdentityMap]](../../images/field-groups/identitymap.png)
 
 Pour plus d’informations sur les cas d’utilisation des mappages dʼidentités et leurs avantages et inconvénients, consultez la section correspondante sur la page consacrée aux [principes de base de la composition des schémas](../../schema/composition.md#identityMap).
 

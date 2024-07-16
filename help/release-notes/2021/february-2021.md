@@ -116,7 +116,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 | ------- | ----------- |
 | Attributs calculés (Alpha) | ***Remarque : cette fonctionnalité est actuellement en version Alpha et n’est pas disponible pour tous les utilisateurs. La documentation et les fonctionnalités peuvent changer.*** <br/><br/>Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Vous pouvez ensuite utiliser les agrégats dans la segmentation, l’activation et la personnalisation. Ces fonctions incluent notamment le nombre, la somme, la moyenne, les valeurs min. et max. ou encore la valeur vrai/faux. Les attributs calculés sont actuellement disponibles via l’API uniquement. |
 
-Pour plus d’informations sur Real-time Customer Profile, notamment des tutoriels et des bonnes pratiques pour travailler avec [!DNL Profile] data, veuillez commencer par lire la [Présentation de Real-Time Customer Profile](../../profile/home.md).
+Pour plus d’informations sur Real-time Customer Profile, y compris des tutoriels et des bonnes pratiques pour l’utilisation des données [!DNL Profile], commencez par lire la [présentation de Real-Time Customer Profile](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 

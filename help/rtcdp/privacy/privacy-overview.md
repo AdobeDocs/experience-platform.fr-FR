@@ -27,7 +27,7 @@ Les réglementations légales relatives à la confidentialité, telles que le [!
 
 ## Fonctionnalités de désinscription
 
-[!DNL Real-Time CDP] permet aux clients de refuser (opt-out) que leurs données personnelles soient incluses dans les cas d’utilisation de segmentation. Les préférences de désinscription des clients sont capturées et stockées par [!DNL Real-Time Customer Profile], et peuvent être appliqués en excluant les utilisateurs qui se sont désinscrits d’une audience à l’aide d’une logique booléenne (&quot;AND NOT&quot;) dans le prédicat de segment.
+[!DNL Real-Time CDP] permet aux clients de refuser (opt-out) que leurs données personnelles soient incluses dans les cas d’utilisation de segmentation. Les préférences d’exclusion des clients sont capturées et stockées par [!DNL Real-Time Customer Profile] et peuvent être appliquées en excluant les utilisateurs qui se sont désinscrits d’une audience à l’aide d’une logique booléenne (&quot;AND NOT&quot;) dans le prédicat de segment.
 
 Consultez le document sur le [respect des demandes de désinscription](../../segmentation/consents.md) dans la documentation du service de segmentation d’Adobe Experience Platform pour plus d’informations.
 

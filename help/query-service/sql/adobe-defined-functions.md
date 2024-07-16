@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;accueil;rubriques populaires;service de requête;Query Service;fonctions définies par adobe;sql;
+keywords: Experience Platform;accueil;rubriques les plus consultées;service de requête;Query service;fonctions définies par adobe;sql;
 solution: Experience Platform
 title: Fonctions SQL définies par Adobe dans Query Service
 description: Ce document fournit des informations sur les fonctions définies par Adobe disponibles dans Adobe Experience Platform Query Service.
 exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
-source-wordcount: '1486'
-ht-degree: 21%
+source-wordcount: '1468'
+ht-degree: 13%
 
 ---
 
-# Fonctions SQL définies par l’Adobe dans Query Service
+# Fonctions SQL définies par Adobe dans Query Service
 
-Les fonctions définies par l’Adobe, ici appelées ADF, sont des fonctions prédéfinies de Adobe Experience Platform Query Service qui permettent d’effectuer des tâches commerciales courantes sur [!DNL Experience Event] data. Ces fonctions incluent des fonctions pour [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) et [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=fr) comme dans Adobe Analytics.
+Les fonctions définies par l’Adobe, ici appelées ADF, sont des fonctions prédéfinies de Adobe Experience Platform Query Service qui permettent d’effectuer des tâches commerciales courantes sur les données [!DNL Experience Event]. Il s’agit notamment de fonctions pour [Session](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) et [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) comme celles trouvées dans Adobe Analytics.
 
-Ce document fournit des informations sur les fonctions définies par Adobe disponibles dans [!DNL Query Service].
+Ce document fournit des informations sur les fonctions définies par l’Adobe disponibles dans [!DNL Query Service].
 
 >[!NOTE]
 >
@@ -23,11 +23,11 @@ Ce document fournit des informations sur les fonctions définies par Adobe dispo
 
 ## Fonctions de fenêtre {#window-functions}
 
-La majeure partie de la logique commerciale exige de rassembler les points de contact d’un client et de les classer par heure. Cette prise en charge est assurée par [!DNL Spark] SQL sous la forme de fonctions de fenêtre. Les fonctions de fenêtre font partie du langage SQL standard et sont prises en charge par de nombreux autres moteurs SQL.
+La majeure partie de la logique commerciale exige de rassembler les points de contact d’un client et de les classer par heure. Cette prise en charge est fournie par [!DNL Spark] SQL sous la forme de fonctions de fenêtre. Les fonctions de fenêtre font partie du langage SQL standard et sont prises en charge par de nombreux autres moteurs SQL.
 
 Une fonction de fenêtre met à jour une agrégation et renvoie un élément unique pour chaque ligne de votre sous-ensemble classé. `SUM()` est la fonction d’agrégation la plus élémentaire. `SUM()` additionne vos lignes et fournit un total. Si vous appliquez plutôt `SUM()` à une fenêtre, la transformant ainsi en fonction de fenêtre, vous recevez une somme cumulée pour chaque ligne.
 
-La majorité des [!DNL Spark] Les assistants SQL sont des fonctions de fenêtre qui mettent à jour chaque ligne de la fenêtre, l’état de cette ligne étant ajouté.
+La plupart des assistants SQL [!DNL Spark] sont des fonctions de fenêtre qui mettent à jour chaque ligne de la fenêtre, avec l’état de cette ligne ajouté.
 
 **Syntaxe de la requête**
 
@@ -38,16 +38,16 @@ OVER ({PARTITION} {ORDER} {FRAME})
 | Paramètre | Description | Exemple |
 | --------- | ----------- | ------- |
 | `{PARTITION}` | Sous-groupe de lignes basé sur une colonne ou un champ disponible. | `PARTITION BY endUserIds._experience.mcid.id` |
-| `{ORDER}` | Une colonne ou un champ disponible utilisé pour classer le sous-ensemble ou les lignes. | `ORDER BY timestamp` |
+| `{ORDER}` | Colonne ou champ disponible utilisé pour classer le sous-ensemble ou les lignes. | `ORDER BY timestamp` |
 | `{FRAME}` | Un sous-groupe des lignes d’une partition. | `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
 
 ## Sessionisation
 
-Lorsque vous utilisez [!DNL Experience Event] données provenant d’un site web, d’une application mobile, d’un système interactif de réponse vocale ou de tout autre canal d’interaction client, il est utile de regrouper les événements autour d’une période d’activité connexe. Généralement, une intention spécifique oriente votre activité, comme la recherche d’un produit, le paiement d’une facture, la vérification du solde d’un compte, le remplissage d’une demande, etc.
+Lorsque vous utilisez des données [!DNL Experience Event] provenant d’un site web, d’une application mobile, d’un système interactif de réponse vocale ou de tout autre canal d’interaction client, il est utile de regrouper les événements autour d’une période d’activité connexe. En règle générale, une intention spécifique oriente votre activité, comme la recherche d’un produit, le paiement d’une facture, la vérification du solde du compte, le remplissage d’une demande, etc.
 
 Ce regroupement, ou sessionisation des données, permet d’associer les événements pour découvrir plus de contexte sur l’expérience client.
 
-Pour plus d’informations sur la mise en session dans Adobe Analytics, consultez la documentation sur [sessions contextuelles](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
+Pour plus d’informations sur la session dans Adobe Analytics, consultez la documentation sur les [sessions contextuelles](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
 
 **Syntaxe de la requête**
 
@@ -60,7 +60,7 @@ SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FR
 | `{TIMESTAMP}` | Champ d’horodatage trouvé dans le jeu de données. |
 | `{EXPIRATION_IN_SECONDS}` | Nombre de secondes nécessaires entre les événements pour qualifier la fin de la session en cours et le début d’une nouvelle session. |
 
-Une explication des paramètres de la variable `OVER()` se trouve dans la fonction [section fonctions de fenêtre](#window-functions).
+Vous trouverez une explication des paramètres de la fonction `OVER()` dans la [section des fonctions de fenêtre](#window-functions).
 
 **Exemple de requête**
 
@@ -96,7 +96,7 @@ LIMIT 10
 (10 rows)
 ```
 
-Pour l’exemple de requête donné, les résultats sont donnés dans la variable `session` colonne . Le `session` est composée des composants suivants :
+Pour l’exemple de requête donné, les résultats sont donnés dans la colonne `session`. La colonne `session` est composée des composants suivants :
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -105,8 +105,8 @@ Pour l’exemple de requête donné, les résultats sont donnés dans la variabl
 | Paramètres | Description |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | La différence de temps, en secondes, entre l’enregistrement actif et l’enregistrement précédent. |
-| `{NUM}` | Un numéro de session unique, commençant à 1, pour la clé définie dans la variable `PARTITION BY` de la fonction window. |
-| `{IS_NEW}` | Une valeur booléenne utilisée pour déterminer si un enregistrement est le premier d’une session. |
+| `{NUM}` | Un numéro de session unique, commençant à 1, pour la clé définie dans le `PARTITION BY` de la fonction de fenêtre. |
+| `{IS_NEW}` | Valeur booléenne utilisée pour déterminer si un enregistrement est le premier d’une session. |
 | `{DEPTH}` | Profondeur de l’enregistrement actif dans la session. |
 
 ### SESS_START_IF
@@ -124,7 +124,7 @@ SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{TIMESTAMP}` | Champ d’horodatage trouvé dans le jeu de données. |
 | `{TEST_EXPRESSION}` | Une expression par rapport à laquelle vous souhaitez vérifier les champs des données. Par exemple : `application.launches > 0`. |
 
-Une explication des paramètres de la variable `OVER()` se trouve dans la fonction [section fonctions de fenêtre](#window-functions).
+Vous trouverez une explication des paramètres de la fonction `OVER()` dans la [section des fonctions de fenêtre](#window-functions).
 
 **Exemple de requête**
 
@@ -161,7 +161,7 @@ SELECT
 (10 rows)
 ```
 
-Pour l’exemple de requête donné, les résultats sont donnés dans la variable `session` colonne . Le `session` est composée des composants suivants :
+Pour l’exemple de requête donné, les résultats sont donnés dans la colonne `session`. La colonne `session` est composée des composants suivants :
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -170,8 +170,8 @@ Pour l’exemple de requête donné, les résultats sont donnés dans la variabl
 | Paramètres | Description |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | La différence de temps, en secondes, entre l’enregistrement actif et l’enregistrement précédent. |
-| `{NUM}` | Un numéro de session unique, commençant à 1, pour la clé définie dans la variable `PARTITION BY` de la fonction window. |
-| `{IS_NEW}` | Une valeur booléenne utilisée pour déterminer si un enregistrement est le premier d’une session. |
+| `{NUM}` | Un numéro de session unique, commençant à 1, pour la clé définie dans le `PARTITION BY` de la fonction de fenêtre. |
+| `{IS_NEW}` | Valeur booléenne utilisée pour déterminer si un enregistrement est le premier d’une session. |
 | `{DEPTH}` | Profondeur de l’enregistrement actif dans la session. |
 
 ### SESS_END_IF
@@ -189,7 +189,7 @@ SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 | `{TIMESTAMP}` | Champ d’horodatage trouvé dans le jeu de données. |
 | `{TEST_EXPRESSION}` | Une expression par rapport à laquelle vous souhaitez vérifier les champs des données. Par exemple : `application.launches > 0`. |
 
-Une explication des paramètres de la variable `OVER()` se trouve dans la fonction [section fonctions de fenêtre](#window-functions).
+Vous trouverez une explication des paramètres de la fonction `OVER()` dans la [section des fonctions de fenêtre](#window-functions).
 
 **Exemple de requête**
 
@@ -226,7 +226,7 @@ SELECT
 (10 rows)
 ```
 
-Pour l’exemple de requête donné, les résultats sont donnés dans la variable `session` colonne . Le `session` est composée des composants suivants :
+Pour l’exemple de requête donné, les résultats sont donnés dans la colonne `session`. La colonne `session` est composée des composants suivants :
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -235,8 +235,8 @@ Pour l’exemple de requête donné, les résultats sont donnés dans la variabl
 | Paramètres | Description |
 | ---------- | ------------- |
 | `{TIMESTAMP_DIFF}` | La différence de temps, en secondes, entre l’enregistrement actif et l’enregistrement précédent. |
-| `{NUM}` | Un numéro de session unique, commençant à 1, pour la clé définie dans la variable `PARTITION BY` de la fonction window. |
-| `{IS_NEW}` | Une valeur booléenne utilisée pour déterminer si un enregistrement est le premier d’une session. |
+| `{NUM}` | Un numéro de session unique, commençant à 1, pour la clé définie dans le `PARTITION BY` de la fonction de fenêtre. |
+| `{IS_NEW}` | Valeur booléenne utilisée pour déterminer si un enregistrement est le premier d’une session. |
 | `{DEPTH}` | Profondeur de l’enregistrement actif dans la session. |
 
 
@@ -248,7 +248,7 @@ Les fonctions définies par Adobe suivantes prennent en charge l’établissemen
 
 ### Page précédente
 
-Détermine la valeur précédente d’un champ donné avec un nombre défini d’étapes restantes dans la fenêtre. Dans l’exemple, notez que la variable `WINDOW` est configurée avec un cadre de `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` paramétrer la fonction définie par Adobe pour qu’elle examine la ligne actuelle et toutes les lignes suivantes.
+Détermine la valeur précédente d’un champ donné avec un nombre défini d’étapes restantes dans la fenêtre. Dans l’exemple, remarquez que la fonction `WINDOW` est configurée avec une image `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` définissant la fonction définie par Adobe pour qu’elle examine la ligne actuelle et toutes les lignes suivantes.
 
 **Syntaxe de la requête**
 
@@ -260,9 +260,9 @@ PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | --------- | ----------- |
 | `{KEY}` | La colonne ou le champ de l’événement. |
 | `{SHIFT}` | (Facultatif) Le nombre d’événements en dehors de l’événement en cours. Par défaut, la valeur est 1. |
-| `{IGNORE_NULLS}` | (Facultatif) Une valeur booléenne qui indique si la valeur est nulle `{KEY}` doivent être ignorées. Par défaut, la valeur est `false`. |
+| `{IGNORE_NULLS}` | (Facultatif) Une valeur booléenne qui indique si les valeurs `{KEY}` nulles doivent être ignorées. Par défaut, la valeur est `false`. |
 
-Une explication des paramètres de la variable `OVER()` se trouve dans la fonction [section fonctions de fenêtre](#window-functions).
+Vous trouverez une explication des paramètres de la fonction `OVER()` dans la [section des fonctions de fenêtre](#window-functions).
 
 **Exemple de requête**
 
@@ -295,11 +295,11 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Pour l’exemple de requête donné, les résultats sont donnés dans la variable `previous_page` colonne . La valeur de la variable `previous_page` repose sur la variable `{KEY}` utilisé dans la fonction définie par Adobe.
+Pour l’exemple de requête donné, les résultats sont donnés dans la colonne `previous_page`. La valeur de la colonne `previous_page` est basée sur le `{KEY}` utilisé dans la fonction définie par Adobe.
 
 ### Page suivante
 
-Détermine la valeur suivante d’un champ donné avec un nombre défini d’étapes restantes dans la fenêtre. Dans l’exemple, notez que la variable `WINDOW` est configurée avec un cadre de `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` paramétrer la fonction définie par Adobe pour qu’elle examine la ligne actuelle et toutes les lignes suivantes.
+Détermine la valeur suivante d’un champ donné avec un nombre défini d’étapes restantes dans la fenêtre. Dans l’exemple, remarquez que la fonction `WINDOW` est configurée avec une image `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` définissant la fonction définie par Adobe pour qu’elle examine la ligne actuelle et toutes les lignes suivantes.
 
 **Syntaxe de la requête**
 
@@ -311,9 +311,9 @@ NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 | --------- | ----------- |
 | `{KEY}` | La colonne ou le champ de l’événement. |
 | `{SHIFT}` | (Facultatif) Le nombre d’événements en dehors de l’événement en cours. Par défaut, la valeur est 1. |
-| `{IGNORE_NULLS}` | (Facultatif) Une valeur booléenne qui indique si la valeur est nulle `{KEY}` doivent être ignorées. Par défaut, la valeur est `false`. |
+| `{IGNORE_NULLS}` | (Facultatif) Une valeur booléenne qui indique si les valeurs `{KEY}` nulles doivent être ignorées. Par défaut, la valeur est `false`. |
 
-Une explication des paramètres de la variable `OVER()` se trouve dans la fonction [section fonctions de fenêtre](#window-functions).
+Vous trouverez une explication des paramètres de la fonction `OVER()` dans la [section des fonctions de fenêtre](#window-functions).
 
 **Exemple de requête**
 
@@ -347,7 +347,7 @@ LIMIT 10
 (10 rows)
 ```
 
-Pour l’exemple de requête donné, les résultats sont donnés dans la variable `previous_page` colonne . La valeur de la variable `previous_page` repose sur la variable `{KEY}` utilisé dans la fonction définie par Adobe.
+Pour l’exemple de requête donné, les résultats sont donnés dans la colonne `previous_page`. La valeur de la colonne `previous_page` est basée sur le `{KEY}` utilisé dans la fonction définie par Adobe.
 
 ## Intervalle
 
@@ -371,7 +371,7 @@ TIME_BETWEEN_PREVIOUS_MATCH(
 | `{EVENT_DEFINITION}` | L’expression permettant de qualifier l’événement précédent. |
 | `{TIME_UNIT}` | Unité de sortie. La valeur possible inclut les jours, heures, minutes et secondes. Par défaut, la valeur est en secondes. |
 
-Une explication des paramètres de la variable `OVER()` se trouve dans la fonction [section fonctions de fenêtre](#window-functions).
+Vous trouverez une explication des paramètres de la fonction `OVER()` dans la [section des fonctions de fenêtre](#window-functions).
 
 **Exemple de requête**
 
@@ -415,7 +415,7 @@ LIMIT 10
 (10 rows)
 ```
 
-Pour l’exemple de requête donné, les résultats sont donnés dans la variable `average_minutes_since_registration` colonne . La valeur de la variable `average_minutes_since_registration` correspond à la différence de temps entre les événements actuels et précédents. L’unité de temps a été définie précédemment dans la variable `{TIME_UNIT}`.
+Pour l’exemple de requête donné, les résultats sont donnés dans la colonne `average_minutes_since_registration`. La valeur de la colonne `average_minutes_since_registration` correspond à la différence de temps entre les événements actuels et précédents. L’unité de temps a été définie précédemment dans le `{TIME_UNIT}`.
 
 ### Intervalle jusqu’à la correspondance suivante
 
@@ -433,7 +433,7 @@ TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PAR
 | `{EVENT_DEFINITION}` | L’expression permettant de qualifier l’événement suivant. |
 | `{TIME_UNIT}` | (Facultatif) Unité de sortie. La valeur possible inclut les jours, heures, minutes et secondes. Par défaut, la valeur est en secondes. |
 
-Une explication des paramètres de la variable `OVER()` se trouve dans la fonction [section fonctions de fenêtre](#window-functions).
+Vous trouverez une explication des paramètres de la fonction `OVER()` dans la [section des fonctions de fenêtre](#window-functions).
 
 **Exemple de requête**
 
@@ -477,11 +477,11 @@ LIMIT 10
 (10 rows)
 ```
 
-Pour l’exemple de requête donné, les résultats sont donnés dans la variable `average_minutes_until_order_confirmation` colonne . La valeur de la variable `average_minutes_until_order_confirmation` est la différence de temps entre les événements en cours et les événements suivants. L’unité de temps a été définie précédemment dans la variable `{TIME_UNIT}`.
+Pour l’exemple de requête donné, les résultats sont donnés dans la colonne `average_minutes_until_order_confirmation`. La valeur de la colonne `average_minutes_until_order_confirmation` correspond à la différence de temps entre les événements actuels et suivants. L’unité de temps a été définie précédemment dans le `{TIME_UNIT}`.
 
 ## Étapes suivantes
 
-À l’aide des fonctions décrites ici, vous pouvez écrire des requêtes pour accéder aux vôtres. [!DNL Experience Event] jeux de données à l’aide de [!DNL Query Service]. Pour plus d’informations sur la création de requêtes dans [!DNL Query Service], reportez-vous à la documentation relative à [création de requêtes](../best-practices/writing-queries.md).
+En utilisant les fonctions décrites ici, vous pouvez écrire des requêtes pour accéder à vos propres jeux de données [!DNL Experience Event] à l’aide de [!DNL Query Service]. Pour plus d’informations sur la création de requêtes dans [!DNL Query Service], consultez la documentation sur la [création de requêtes](../best-practices/writing-queries.md).
 
 ## Ressources supplémentaires
 

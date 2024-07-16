@@ -34,7 +34,7 @@ Les sections suivantes décrivent comment installer et configurer [!DNL Segment 
 
 La première étape pour prendre en main [!DNL Segment Match] est de vous assurer que vous ingérez des données par rapport aux espaces de noms d’identité pris en charge.
 
-Les espaces de noms d’identité sont un composant [d’Adobe Experience Platform Identity Service](../../../identity-service/home.md). Chaque identité client contient un espace de noms associé qui indique le contexte de l’identité. Par exemple, un espace de noms peut faire la différence entre une valeur « name<span>@email.com » en tant qu’adresse e-mail ou « 443522 » en tant qu’ID CRM numérique.
+Les espaces de noms d’identité sont un composant du [service d’identités d’Adobe Experience Platform](../../../identity-service/home.md). Chaque identité client contient un espace de noms associé qui indique le contexte de l’identité. Par exemple, un espace de noms peut faire la différence entre une valeur « name<span>@email.com » en tant qu’adresse e-mail ou « 443522 » en tant qu’ID CRM numérique.
 
 Une identité complète est composée d’une valeur d’identifiant et d’un espace de noms. Lors de la mise en correspondance des données d’enregistrement sur des fragments de profil (comme lorsque [!DNL Real-Time Customer Profile] fusionne les données Profile), la valeur d’identité et l’espace de noms doivent tous deux correspondre.
 
@@ -58,7 +58,7 @@ La vérification de consentement pour l’accord préalable et le droit d’oppo
 
 La configuration de consentement par défaut pour [!DNL Segment Match] est définie sur `opt-out`. Pour appliquer un modèle d’accord préalable à vos données, envoyez une demande par e-mail à votre équipe Adobe en charge des comptes.
 
-Pour plus d’informations sur la variable `share` utilisé pour définir la valeur de consentement du partage des données, consultez la documentation suivante sur [groupe de champs confidentialité et consentement](../../../xdm/field-groups/profile/consents.md). Pour plus d’informations sur le groupe de champs spécifique utilisé pour capturer le consentement des consommateurs pour la collecte et l’utilisation de données liées à la confidentialité, à la personnalisation et aux préférences marketing, consultez [les exemples GitHub de consentement pour la confidentialité, la personnalisation et les préférences marketing](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
+Pour plus d’informations sur l’attribut `share` utilisé pour définir la valeur de consentement du partage de données, consultez la documentation suivante sur le [groupe de champs de confidentialité et consentement](../../../xdm/field-groups/profile/consents.md). Pour plus d’informations sur le groupe de champs spécifique utilisé pour capturer le consentement des consommateurs pour la collecte et l’utilisation de données liées à la confidentialité, à la personnalisation et aux préférences marketing, consultez [les exemples GitHub de consentement pour la confidentialité, la personnalisation et les préférences marketing](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 
 ### Configurer les libellés d’utilisation des données
 

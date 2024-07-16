@@ -1,17 +1,17 @@
 ---
-title: Création d’une connexion à la source dans l’interface utilisateur
+title: Création d’une connexion Source à panneau mixte dans l’interface utilisateur
 description: Découvrez comment créer une connexion source à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
 source-wordcount: '797'
-ht-degree: 41%
+ht-degree: 40%
 
 ---
 
 # Créer une connexion source [!DNL Mixpanel] dans l’interface utilisateur
 
-Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Mixpanel] connexion source à l’aide de l’interface utilisateur de Adobe Experience Platform Platform.
+Ce tutoriel décrit les étapes à suivre pour créer une connexion source [!DNL Mixpanel] à l’aide de l’interface utilisateur de la plateforme Adobe Experience Platform.
 
 ## Prise en main
 
@@ -28,12 +28,12 @@ Pour connecter [!DNL Mixpanel] à Platform, vous devez fournir des valeurs pour 
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
-| Nom d’utilisateur | Le nom d’utilisateur du compte de service qui correspond à votre [!DNL Mixpanel] compte . Voir [[!DNL Mixpanel] documentation sur les comptes de service](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) pour plus d’informations. | `Test8.6d4ee7.mp-service-account` |
-| Mot de passe | mot de passe du compte de service qui correspond à votre [!DNL Mixpanel] compte . | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
-| Identifiant de projet | Votre [!DNL Mixpanel] ID de projet. Cet identifiant est nécessaire pour créer une connexion source. Voir [[!DNL Mixpanel] documentation sur les paramètres du projet](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) et la variable [[!DNL Mixpanel] guide de création et de gestion des projets](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects) pour plus d’informations. | `2384945` |
-| Fuseau horaire | Le fuseau horaire correspondant à votre [!DNL Mixpanel] projet. Le fuseau horaire est requis pour créer une connexion source. Voir [Documentation sur les paramètres du projet Mixpanel](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) pour plus d’informations. | `Pacific Standard Time` |
+| Nom d’utilisateur | Nom d’utilisateur du compte de service qui correspond à votre compte [!DNL Mixpanel]. Pour plus d’informations, consultez la [[!DNL Mixpanel] documentation sur les comptes de service](https://developer.mixpanel.com/reference/service-accounts#authenticating-with-a-service-account) . | `Test8.6d4ee7.mp-service-account` |
+| Mot de passe | Mot de passe du compte de service qui correspond à votre compte [!DNL Mixpanel]. | `dLlidiKHpCZtJhQDyN2RECKudMeTItX1` |
+| Identifiant de projet | Votre ID de projet [!DNL Mixpanel]. Cet identifiant est nécessaire pour créer une connexion source. Pour plus d’informations, consultez la [[!DNL Mixpanel] documentation sur les paramètres de projet](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) et le [[!DNL Mixpanel]  guide de création et de gestion de projets](https://help.mixpanel.com/hc/en-us/articles/115004505106-Create-and-Manage-Projects). | `2384945` |
+| Fuseau horaire | Le fuseau horaire correspondant à votre projet [!DNL Mixpanel]. Le fuseau horaire est requis pour créer une connexion source. Pour plus d’informations, consultez la [documentation sur les paramètres du projet Mixpanel](https://help.mixpanel.com/hc/en-us/articles/115004490503-Project-Settings) . | `Pacific Standard Time` |
 
-Pour plus d’informations sur l’authentification [!DNL Mixpanel] source, voir [[!DNL Mixpanel] présentation de la source](../../../../connectors/analytics/mixpanel.md).
+Pour plus d’informations sur l’authentification de votre source [!DNL Mixpanel], consultez la [[!DNL Mixpanel] présentation de la source](../../../../connectors/analytics/mixpanel.md).
 
 ## Connecter votre compte [!DNL Mixpanel]
 
@@ -41,11 +41,11 @@ Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous , *Analytics* catégorie, sélectionnez [!DNL Mixpanel], puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Sous la catégorie *Analytics*, sélectionnez [!DNL Mixpanel], puis **[!UICONTROL Ajouter des données]**.
 
 ![catalogue](../../../../images/tutorials/create/mixpanel-export-events/catalog.png)
 
-La variable **[!UICONTROL Connexion au compte Mixpanel]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Se connecter au compte Mixpanel]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
@@ -67,27 +67,27 @@ Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fo
 >abstract="Le fuseau horaire doit être identique à celui du profil Mixpanel, car Platform utilise le fuseau horaire du projet désigné pour ingérer les données pertinentes à partir de Mixpanel. Mixpanel adaptera son fuseau horaire afin de le coordonner à celui de votre projet avant d&#39;enregistrer l&#39;événement dans un entrepôt de données Mixpanel."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=fr#project-id-and-timezone" text="En savoir plus dans la documentation."
 
-Une fois la source authentifiée, indiquez l’ID de projet et le fuseau horaire, puis sélectionnez **[!UICONTROL Sélectionner]**.
+Une fois votre source authentifiée, indiquez l’ID de projet et le fuseau horaire, puis sélectionnez **[!UICONTROL Sélectionner]**.
 
-Le fuseau horaire que vous avez désigné avant d’ingérer votre [!DNL Mixpanel] Les données de Platform doivent être identiques à votre [!DNL Mixpanel] paramètre de fuseau horaire du profil. Toute modification du fuseau horaire de vos données ne sera appliquée qu’aux nouveaux événements et aux anciens événements resteront dans le fuseau horaire que vous avez précédemment désigné. [!DNL Mixpanel] prend en charge l’heure d’été et adapte l’horodatage d’ingestion de manière appropriée. Pour plus d’informations sur l’impact des fuseaux horaires sur vos données, voir [!DNL Mixpanel] guide on [gestion des fuseaux horaires pour les projets](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel).
+Le fuseau horaire que vous désignez avant d’ingérer vos données [!DNL Mixpanel] vers Platform doit être identique à celui de votre profil [!DNL Mixpanel]. Toute modification du fuseau horaire de vos données ne sera appliquée qu’aux nouveaux événements et aux anciens événements resteront dans le fuseau horaire que vous avez précédemment désigné. [!DNL Mixpanel] prend en charge l’heure d’été et ajustera l’horodatage de votre ingestion de manière appropriée. Pour plus d’informations sur la façon dont les fuseaux horaires affectent vos données, consultez le guide [!DNL Mixpanel] sur la [gestion des fuseaux horaires pour les projets](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel).
 
 Au bout de quelques instants, l’interface appropriée se met à jour vers un panneau d’aperçu, ce qui vous permet d’examiner votre schéma avant de créer un flux de données. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
-![Configuration.](../../../../images/tutorials/create/mixpanel-export-events/authentication-configuration.png)
+![configuration](../../../../images/tutorials/create/mixpanel-export-events/authentication-configuration.png)
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL Mixpanel]. Vous pouvez maintenant passer au tutoriel suivant et [configuration d’un flux de données pour importer des données d’analyse dans Platform](../../dataflow/analytics.md).
+En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL Mixpanel]. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données d’analyse dans Platform](../../dataflow/analytics.md).
 
 ## Ressources supplémentaires {#additional-resources}
 
-Les sections ci-dessous contiennent des ressources supplémentaires auxquelles vous pouvez vous référer lors de l’utilisation de la variable [!DNL Mixpanel] source.
+Les sections ci-dessous fournissent des ressources supplémentaires auxquelles vous pouvez vous référer lors de l’utilisation de la source [!DNL Mixpanel].
 
 ### Validation {#validation}
 
-La section suivante décrit les étapes que vous pouvez suivre pour vérifier que vous avez bien connecté votre [!DNL Mixpanel] source et cela [!DNL Mixpanel] sont ingérés dans Platform.
+Les étapes suivantes décrivent les étapes que vous pouvez suivre pour vérifier que vous avez correctement connecté votre source [!DNL Mixpanel] et que les événements [!DNL Mixpanel] sont ingérés dans Platform.
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Jeux de données]** à partir de la barre de navigation de gauche pour accéder au [!UICONTROL Jeux de données] workspace. La variable [!UICONTROL Activité du jeu de données] affiche les détails des exécutions.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Jeux de données]** dans la barre de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Jeux de données]. L’écran [!UICONTROL Activité du jeu de données] affiche les détails des exécutions.
 
 ![dataset-activity](../../../../images/tutorials/create/mixpanel-export-events/dataset-activity.png)
 
@@ -95,11 +95,11 @@ Sélectionnez ensuite l’identifiant d’exécution du flux de données que vou
 
 ![dataflow-monitoring](../../../../images/tutorials/create/mixpanel-export-events/dataflow-monitoring.png)
 
-Enfin, sélectionnez **[!UICONTROL Prévisualisation d’un jeu de données]** pour afficher les données qui ont été ingérées.
+Enfin, sélectionnez **[!UICONTROL Prévisualiser le jeu de données]** pour afficher les données ingérées.
 
 ![preview-dataset](../../../../images/tutorials/create/mixpanel-export-events/preview-dataset.png)
 
-Vous pouvez comparer ces données aux données de la variable [!DNL Mixpanel] > [!DNL Events] page. Voir [[!DNL Mixpanel] document sur les événements](https://help.mixpanel.com/hc/en-us/articles/4402837164948-Events-formerly-Live-View-) pour plus d’informations.
+Vous pouvez comparer ces données aux données de la page [!DNL Mixpanel] > [!DNL Events]. Pour plus d’informations, consultez le [[!DNL Mixpanel] document sur les événements](https://help.mixpanel.com/hc/en-us/articles/4402837164948-Events-formerly-Live-View-) .
 
 ![mixpanel-events](../../../../images/tutorials/create/mixpanel-export-events/mixpanel-events.png)
 
@@ -109,7 +109,7 @@ Le tableau ci-dessous répertorie les mappages pris en charge qui doivent être 
 
 >[!TIP]
 >
->Voir [API d’exportation d’événements > Télécharger](https://developer.mixpanel.com/reference/raw-event-export) pour plus d’informations sur l’API.
+>Voir [API d’exportation d’événements > Téléchargement](https://developer.mixpanel.com/reference/raw-event-export) pour plus d’informations sur l’API.
 
 
 | Source | Type |
@@ -123,9 +123,9 @@ Le tableau ci-dessous répertorie les mappages pris en charge qui doivent être 
 | `item_price` | chaîne |
 | `mp_api_endpoint` | chaîne |
 | `mp_api_timestamp_ms` | nombre entier |
-| `mp_processing_time_ms` | nombre entier |
-| `time` | nombre entier |
+| `mp_processing_time_ms` | Entier |
+| `time` | Entier |
 
 ### Limites {#limits}
 
-* Vous avez un maximum de 100 requêtes simultanées et 60 requêtes par heure, comme indiqué sur [Limites du taux de l’API d’exportation](https://help.mixpanel.com/hc/en-us/articles/115004602563-Rate-Limits-for-API-Endpoints).
+* Vous avez un maximum de 100 requêtes simultanées et 60 requêtes par heure, comme indiqué sur la page [Limites de débit de l’API d’exportation](https://help.mixpanel.com/hc/en-us/articles/115004602563-Rate-Limits-for-API-Endpoints).

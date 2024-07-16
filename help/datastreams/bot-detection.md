@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Le trafic provenant d’entités non humaines, telles que les programmes automatisés, les web-scrapers, les araignées, les scanneurs à scripts, peut rendre plus difficile l’identification des événements provenant de visiteurs humains. Ce type de trafic peut avoir une incidence négative sur les mesures commerciales importantes, ce qui entraîne des rapports de trafic incorrects.
 
-La détection des robots vous permet d’identifier les événements générés par la variable [SDK Web](../web-sdk/home.md), [SDK Mobile](https://developer.adobe.com/client-sdks/home/) et [[!DNL Server API]](../server-api/overview.md) comme étant généré par des araignées et des robots connus.
+La détection des robots permet d’identifier les événements générés par le [SDK Web](../web-sdk/home.md), le [SDK mobile](https://developer.adobe.com/client-sdks/home/) et [[!DNL Server API]](../server-api/overview.md) comme étant générés par des araignées et des robots connus.
 
 En configurant la détection des robots pour vos flux de données, vous pouvez identifier des adresses IP, des plages d’adresses IP et des en-têtes de requête spécifiques que vous souhaitez classer comme événements de robots.
 
@@ -33,54 +33,54 @@ Ce score de robot permet aux solutions qui reçoivent la demande d’identifier 
 
 >[!IMPORTANT]
 >
->La détection des robots ne supprime aucune requête de robot. Il met uniquement à jour le schéma XDM avec la notation de robot et transfère l’événement vers la variable [service datastream](configure.md) que vous avez configuré.
+>La détection des robots ne supprime aucune requête de robot. Il ne met à jour que le schéma XDM avec la notation des robots et transfère l’événement au [service datastream](configure.md) que vous avez configuré.
 >
->Les solutions Adobe peuvent gérer la notation des robots de différentes manières. Par exemple, Adobe Analytics utilise son propre [service de filtrage de robots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) et n’utilise pas le score défini par l’Edge Network. Les deux services utilisent le même [Liste de robots IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), le score du robot est donc identique.
+>Les solutions Adobe peuvent gérer la notation des robots de différentes manières. Par exemple, Adobe Analytics utilise son propre [service de filtrage de robots](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) et n’utilise pas le score défini par l’Edge Network. Les deux services utilisent la même [liste de robots IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), de sorte que la notation des robots est identique.
 
 Les règles de détection de robots peuvent prendre jusqu’à 15 minutes pour se propager dans l’Edge Network après sa création.
 
 ## Conditions préalables {#prerequisites}
 
-Pour que la détection des robots fonctionne sur votre flux de données, vous devez ajouter la variable **[!UICONTROL Informations sur la détection des robots]** groupe de champs à votre schéma. Voir [Schéma XDM](../xdm/ui/resources/schemas.md#add-field-groups) documentation pour savoir comment ajouter des groupes de champs à un schéma.
+Pour que la détection des robots fonctionne sur votre flux de données, vous devez ajouter le groupe de champs **[!UICONTROL Informations sur la détection des robots]** à votre schéma. Consultez la documentation [Schéma XDM](../xdm/ui/resources/schemas.md#add-field-groups) pour savoir comment ajouter des groupes de champs à un schéma.
 
 ## Configuration de la détection des robots pour les flux de données {#configure}
 
-Vous pouvez configurer la détection des robots après avoir créé une configuration de flux de données. Consultez la documentation sur la manière de [créer et configurer un flux de données](configure.md), puis suivez les instructions ci-dessous pour ajouter des fonctionnalités de détection de robots à votre flux de données.
+Vous pouvez configurer la détection des robots après avoir créé une configuration de flux de données. Consultez la documentation sur la façon de [créer et configurer un flux de données](configure.md), puis suivez les instructions ci-dessous pour ajouter des fonctionnalités de détection de robots à votre flux de données.
 
 Accédez à la liste des flux de données et sélectionnez le flux de données auquel vous souhaitez ajouter la détection des robots.
 
 ![Interface utilisateur des flux de données présentant la liste des flux de données.](assets/bot-detection/datastream-list.png)
 
-Dans la page des détails de la chaîne de données, sélectionnez la variable **[!UICONTROL Détection de robots]** sur le rail de droite.
+Dans la page des détails de la banque de données, sélectionnez l’option **[!UICONTROL Détection de robots]** sur le rail de droite.
 
 ![Option de détection des robots mise en surbrillance dans l’interface utilisateur des flux de données.](assets/bot-detection/bot-detection.png)
 
-La variable **[!UICONTROL Règles de détection des robots]** s’affiche.
+La page **[!UICONTROL Règles de détection des robots]** s’affiche.
 
 ![Paramètres de détection des robots dans la page des paramètres de la banque de données.](assets/bot-detection/bot-detection-page.png)
 
 Sur la page Règles de détection des robots , vous pouvez configurer la détection des robots à l’aide des fonctionnalités suivantes :
 
-* En utilisant la variable [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
+* Utilisation de [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
 * Création de vos propres règles de détection de robots.
 
 ### Utilisation de la liste internationale des robots (Robots) fournie par l’IAB/ABC {#iab-list}
 
-La variable [Liste internationale des robots et araignées IAB/ABC](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) est une liste tierce et standard d’araignées et de robots Internet, qui vous permet d’identifier le trafic automatisé, tel que les moteurs de recherche, les outils de surveillance et d’autres flux non humains, que vous ne souhaitez peut-être pas afficher dans vos comptes analytics.
+La [ liste internationale des robots et araignées IAB/ABC ](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) est une liste tierce, standard du secteur, d’araignées et de robots Internet, qui vous permet d’identifier le trafic automatisé, tel que les robots de moteur de recherche, les outils de surveillance et d’autres trafics non humains, que vous ne souhaitez peut-être pas afficher dans vos comptes d’analyses.
 
-Pour configurer votre flux de données afin d’utiliser la variable [!DNL IAB/ABC International Spiders and Bots List], faites basculer le **[!UICONTROL Utilisez la liste internationale des robots d’indexation et robots IAB/ABC pour la détection des robots dans ce flux de données.]** sélectionnez ensuite Enregistrer pour appliquer les paramètres de détection des robots à votre flux de données.
+Pour configurer votre flux de données de manière à utiliser le [!DNL IAB/ABC International Spiders and Bots List], activez l’option **[!UICONTROL Utiliser la liste internationale des robots et araignées IAB/ABC pour la détection des robots dans cette banque de données]**, puis sélectionnez Enregistrer pour appliquer les paramètres de détection des robots à votre flux de données.
 
 ![Les araignées IAB et la liste de robots sont activées.](assets/bot-detection/bot-detection-list.png)
 
 ### Création de règles de détection de robots {#rules}
 
-En plus d’utiliser la variable [Liste internationale des robots et araignées IAB/ABC](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), vous pouvez définir vos propres règles de détection des robots pour chaque flux de données.
+Outre l’utilisation de la [liste internationale des robots et araignées IAB/ABC ](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), vous pouvez définir vos propres règles de détection des robots pour chaque flux de données.
 
-Vous pouvez créer des règles de détection de robots basées sur **Adresses IP** et **Plages d’adresses IP**.
+Vous pouvez créer des règles de détection de robots basées sur les **adresses IP** et les **plages d’adresses IP**.
 
 Si vous avez besoin de règles de détection de robots plus granulaires, vous pouvez combiner les conditions d’IP avec des conditions d’en-tête de requête. Les règles de détection de robots peuvent utiliser les en-têtes suivants :
 
-| En-tête HTTP | Description |
+| En-tête HTTP | Description |
 | --- | --- |
 | `user-agent` | En-tête qui permet aux serveurs et aux pairs réseau d’identifier l’application, le système d’exploitation, le fournisseur et/ou la version de l’agent utilisateur requérant. |
 | `content-type` | Indique le type de support d’origine de la ressource (avant tout codage de contenu appliqué à l’envoi). |
@@ -96,35 +96,35 @@ Si vous avez besoin de règles de détection de robots plus granulaires, vous po
 
 Pour créer une règle de détection de robots, procédez comme suit :
 
-1. Sélectionner **[!UICONTROL Ajouter une nouvelle règle]**.
+1. Sélectionnez **[!UICONTROL Ajouter une nouvelle règle]**.
 
-   ![L’écran des paramètres de détection des robots avec le bouton Ajouter une nouvelle règle en surbrillance.](assets/bot-detection/bot-detection-new-rule.png)
+   ![Écran des paramètres de détection des robots avec le bouton Ajouter une nouvelle règle surligné.](assets/bot-detection/bot-detection-new-rule.png)
 
-2. Saisissez le nom de la règle dans la variable **[!UICONTROL Nom de la règle]** champ .
+2. Saisissez un nom pour la règle dans le champ **[!UICONTROL Nom de la règle]**.
 
-   ![Écran des règles de détection des robots avec le nom de la règle en surbrillance.](assets/bot-detection/rule-name.png)
+   ![Écran de règle de détection des robots avec le nom de règle en surbrillance.](assets/bot-detection/rule-name.png)
 
-3. Sélectionner **[!UICONTROL Ajouter une nouvelle condition IP]** pour ajouter une nouvelle règle basée sur l’adresse IP. Vous pouvez définir la règle par adresse IP ou plage d’adresses IP.
+3. Sélectionnez **[!UICONTROL Ajouter une nouvelle condition IP]** pour ajouter une nouvelle règle basée sur IP. Vous pouvez définir la règle par adresse IP ou plage d’adresses IP.
 
-   ![Écran des règles de détection des robots avec le champ Adresse IP en surbrillance.](assets/bot-detection/ip-address-rule.png)
+   ![Écran de règle de détection des robots avec le champ d’adresse IP en surbrillance.](assets/bot-detection/ip-address-rule.png)
 
-   ![Écran des règles de détection des robots avec le champ de plage d’adresses IP en surbrillance.](assets/bot-detection/ip-range-rule.png)
+   ![Écran de règle de détection de robots avec le champ de plage d’adresses IP surligné.](assets/bot-detection/ip-range-rule.png)
 
    >[!TIP]
    >
-   >Les conditions d’IP sont basées sur une `OR` opération. Une demande est marquée comme provenant d’un robot si correspond à l’une des conditions IP que vous avez définies.
+   >Les conditions IP sont basées sur une opération `OR` logique. Une demande est marquée comme provenant d’un robot si correspond à l’une des conditions IP que vous avez définies.
 
 4. Si vous souhaitez ajouter des conditions d’en-tête à votre règle, sélectionnez **[!UICONTROL Ajouter un groupe de conditions d’en-tête]**, puis sélectionnez les en-têtes que la règle doit utiliser.
 
-   ![Écran des règles de détection des robots avec les conditions d’en-tête surlignées.](assets/bot-detection/header-conditions.png)
+   ![Écran des règles de détection de robots avec les conditions d’en-tête surlignées.](assets/bot-detection/header-conditions.png)
 
    Ajoutez ensuite les conditions à utiliser pour l’en-tête sélectionné.
 
-   ![Écran des règles de détection des robots avec les conditions d’en-tête surlignées.](assets/bot-detection/header-condition-rule.png)
+   ![Écran des règles de détection de robots avec les conditions d’en-tête surlignées.](assets/bot-detection/header-condition-rule.png)
 
-5. Après avoir configuré les règles de détection des robots souhaitées, sélectionnez **[!UICONTROL Enregistrer]** pour que les règles soient appliquées à votre flux de données.
+5. Après avoir configuré les règles de détection de robots souhaitées, sélectionnez **[!UICONTROL Enregistrer]** pour que les règles soient appliquées à votre flux de données.
 
-   ![Écran des règles de détection des robots avec les conditions d’en-tête surlignées.](assets/bot-detection/bot-detection-save.png)
+   ![Écran des règles de détection de robots avec les conditions d’en-tête surlignées.](assets/bot-detection/bot-detection-save.png)
 
 
 ## Exemples de règles de détection de robots {#examples}
@@ -147,25 +147,25 @@ Pour marquer comme trafic de robots toutes les requêtes provenant de l’une de
 
 Pour marquer comme trafic de robots toutes les requêtes provenant d’une adresse IP sur une plage spécifique, créez une nouvelle règle de détection de robots qui évalue une plage d’adresses IP entière, comme illustré dans l’image ci-dessous.
 
-![Règle de détection de robots basée sur la plage d’adresses IP.](assets/bot-detection/bot-detection-range.png)
+![Règle de détection de robots basée sur une plage IP.](assets/bot-detection/bot-detection-range.png)
 
 ### Détection des robots à partir d’une adresse IP et d’un en-tête de requête {#ip-header}
 
 Pour marquer toutes les requêtes provenant d’une adresse IP spécifique et contenant un en-tête de requête spécifique comme trafic de robots, créez une règle de détection de robots comme illustré dans l’image ci-dessous.
 
-Cette règle vérifie si la demande provient d’une adresse IP spécifique et si la variable `referer` l’en-tête de la requête commence par `www.adobe.com`.
+Cette règle vérifie si la requête provient d’une adresse IP spécifique et si l’en-tête de la requête `referer` commence par `www.adobe.com`.
 
-![Règle de détection des robots basée sur l’adresse IP et l’en-tête de requête.](assets/bot-detection/bot-detection-header-ip.png)
+![Règle de détection de robots basée sur l’adresse IP et l’en-tête de requête.](assets/bot-detection/bot-detection-header-ip.png)
 
 ### Détection de robots selon plusieurs conditions {#multiple-conditions}
 
 Vous pouvez créer des règles de détection de robots basées sur les éléments suivants :
 
-* **Plusieurs conditions différentes**: les différentes conditions sont évaluées en tant que `AND` , ce qui signifie que les conditions doivent être remplies simultanément pour que la demande soit identifiée comme provenant d’un robot.
-* **Plusieurs conditions du même type**: les conditions du même type sont évaluées en tant que `OR` , ce qui signifie que si l’une des conditions est remplie, la demande est identifiée comme provenant d’un robot.
+* **Plusieurs conditions différentes** : différentes conditions sont évaluées en tant qu’opération `AND` logique, ce qui signifie que les conditions doivent être remplies simultanément pour que la demande soit identifiée comme provenant d’un robot.
+* **Plusieurs conditions du même type** : les conditions du même type sont évaluées en tant qu’opération `OR` logique, ce qui signifie que si l’une des conditions est remplie, la demande est identifiée comme provenant d’un robot.
 
 La règle affichée dans l’image ci-dessous identifie une demande d’origine de robots si les conditions suivantes sont remplies :
 
-La demande provient de l’une des deux adresses IP, la variable `referer` L’en-tête commence par `www.adobe.com`, et la variable `sec-ch-ua-mobile` identifie la requête comme provenant d’un navigateur de bureau.
+La requête provient de l’une des deux adresses IP, l’en-tête `referer` commence par `www.adobe.com` et l’en-tête `sec-ch-ua-mobile` identifie la requête comme provenant d’un navigateur de bureau.
 
 ![Règle de détection des robots basée sur plusieurs conditions.](assets/bot-detection/bot-detection-multiple.png)

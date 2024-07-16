@@ -4,8 +4,8 @@ description: Notes de mise à jour les plus récentes pour l’extension Core da
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
 workflow-type: tm+mt
-source-wordcount: '1644'
-ht-degree: 90%
+source-wordcount: '1632'
+ht-degree: 100%
 
 ---
 
@@ -19,21 +19,21 @@ ht-degree: 90%
 
 v3.4.1
 
-* Ajoute de nouveaux événements de délégation natifs web :
+* Ajoute de nouveaux événements délégués natifs web :
    * Keydown
    * KeyUp
-* Ajoute la possibilité de tester par rapport à de nombreuses valeurs (options &quot;Ajouter une autre&quot;) par rapport aux délégués suivants :
+* Ajoute la possibilité de tester par rapport à de nombreuses valeurs (options « Ajouter une autre ») par rapport aux délégués suivants :
    * Événements
-      * de changement
+      * Changement
    * Conditions
       * Cookie
       * Page de destination
-      * Query String Parameter
-      * Traffic Source
+      * Paramètre de chaîne de requête
+      * Source de trafic
       * Variable
-* Modifie le délégué events/EntersViewport pour utiliser la variable [API Intersection Observer](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) au lieu de la détection manuelle des éléments qui entrent dans la fenêtre d’affichage.
+* Modifie le délégué events/EntersViewport pour utiliser l’[API Intersection Observer](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) au lieu de la détection manuelle des éléments qui entrent dans la fenêtre d’affichage.
 * Supprime le code qui migrait les cookies DTM vers LocalStorage.
-* Consigne un avertissement dans la console lorsque les API LocalStorage et SessionStorage ne sont pas disponibles.
+* Inscrit un avertissement dans la console lorsque les API LocalStorage et SessionStorage ne sont pas disponibles.
 
 ## 4 janvier 2022
 
@@ -117,13 +117,13 @@ v2.0.4
 
 * Ajout de la prise en charge des éléments de données dans plusieurs champs - La prise en charge des éléments de données a été ajoutée aux événements suivants : « Temps sur la page », « Entrée dans la fenêtre dʼaffichage », « Survol » et « Temps de lecture du média ». En plus des conditions suivantes : « Temps passé sur le site » et « Comparaison de valeur »
 * Ajout de la prise en charge du comportement par défaut pour Ctrl/Cmd + Clic et pour le clic central de la souris lors de lʼutilisation du délai de lien
-* **Le délai du lien marqué sur l’événement click comme &quot;n’est plus pris en charge&quot;.** - Vous trouverez plus d’informations sur le [blog de collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) pour Adobe Experience Platform.
+* **Le délai sur les liens pour lʼévénement Clic a été indiqué comme « nʼest plus pris en charge ».** - Vous trouverez plus d’informations sur le [blog de collecte de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) pour Adobe Experience Platform.
 
 ## 6 janvier 2021
 
 v1.9.0
 
-* **Nouvelle action &quot;Trigger Direct Call&quot;** - L’extension Core inclut désormais un nouveau type d’action appelé `Trigger Direct Call`.  Vous pouvez l’utiliser lorsque vous voulez déclencher une règle d’appel direct par le biais d’une action tirée d’une autre règle. Il correspond directement à la méthode `_satellite.track()`. Un grand merci à Jan Exner pour cette contribution.
+* **Nouvelle action « Déclencher un appel direct »** : l’extension Core inclut désormais un nouveau type d’action appelé `Trigger Direct Call`.  Vous pouvez l’utiliser lorsque vous voulez déclencher une règle d’appel direct par le biais d’une action tirée d’une autre règle. Il correspond directement à la méthode `_satellite.track()`. Un grand merci à Jan Exner pour cette contribution.
 
 ## 8 décembre 2020
 
@@ -181,7 +181,7 @@ v1.6.2
 
 v1.6.1
 
-* **Prise en charge de la valeur à usage unique de la CSP** : l’extension Core comporte désormais un paramètre de configuration facultatif. Vous pouvez ajouter un élément de données qui fait référence à une valeur à usage unique. S’il est configuré, tous les scripts intégrés qu’une balise ajoute à la page utilisent la valeur à usage unique que vous avez configurée. Cette modification prend en charge lʼutilisation dʼune politique de sécurité du contenu (CSP) avec une valeur à usage unique afin que les scripts de balises puissent toujours se charger dans un environnement CSP. Pour en savoir plus sur lʼutilisation des balises avec une stratégie de sécurité du contenu, [cliquez ici](../../../ui/client-side/content-security-policy.md).
+* **Prise en charge de la valeur à usage unique de la CSP** : l’extension Core comporte désormais un paramètre de configuration facultatif. Vous pouvez ajouter un élément de données qui fait référence à une valeur à usage unique. Si celle-ci est configurée, tous les scripts intégrés qu’une balise ajoute à la page utilisent la valeur à usage unique que vous avez configurée. Cette modification prend en charge lʼutilisation dʼune politique de sécurité du contenu (CSP) avec une valeur à usage unique afin que les scripts de balises puissent toujours se charger dans un environnement CSP. Pour en savoir plus sur lʼutilisation des balises avec une stratégie de sécurité du contenu, [cliquez ici](../../../ui/client-side/content-security-policy.md).
 
 ## 18 juin 2019
 
@@ -209,8 +209,8 @@ v1.4.2
 ## 8 novembre 2018
 
 * **Option Persist Cohort** : l’option de conservation d’une cohorte a été ajoutée à la condition de l’échantillonnage. Cela a pour effet de conserver un utilisateur dans ou hors de la cohorte de l’échantillon d’une session à l’autre. Par exemple, si la case « Conserver la cohorte » est cochée et que la condition renvoie « true » lors de sa première exécution pour une personne donnée, elle renvoie « true » sur toutes les exécutions suivantes de la condition pour la même personne. De même, si la case « Conserver la cohorte » est cochée et que la condition renvoie « false » lors de sa première exécution pour une personne donnée, elle renvoie « false » sur toutes les exécutions suivantes de la condition pour la même personne.
-* **Correctif** : correction d’un bug par lequel une règle utilisant un événement Page Bottom et une action Custom Code (Code personnalisé) sur une page où les balises étaient chargées de manière synchrone, mais installées de manière incorrecte (aucun appel à `_satellite.pageBottom()`) effaçait le contenu du site Web.
-* **Bug Fix** - Correction d’un problème en raison duquel la fenêtre d’affichage Enters ne fonctionnait pas si la bibliothèque de balises était chargée de manière asynchrone et que le chargement se terminait après le déclenchement de l’événement DOMContentLoaded du navigateur.
+* **Correctif** : correction d’un bug par lequel une règle utilisant un événement Bas de page et une action de code personnalisé sur une page où les balises étaient chargées de manière synchrone, mais installées de manière incorrecte (aucun appel à `_satellite.pageBottom()`), effaçait le contenu du site web.
+* **Correction de bug** : correction dʼun problème qui empêchait l’événement Enters Viewport de fonctionner si la bibliothèque de balises était chargée de manière asynchrone et que le chargement était terminé après le déclenchement de lʼévénement DOMContentLoaded du navigateur.
 
 ## 24 mai 2018
 

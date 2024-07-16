@@ -220,7 +220,7 @@ Pour plus d’informations sur Query Service, consultez la [vue d’ensemble de
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Colonnes personnalisables | Vous pouvez désormais personnaliser la disposition du portail Audience avec des colonnes redimensionnables. Pour plus d’informations sur cette fonctionnalité, veuillez lire la section [Présentation d’Audience Portal](../../segmentation/ui/audience-portal.md#customize). |
+| Colonnes personnalisables | Vous pouvez désormais personnaliser la disposition du portail Audience avec des colonnes redimensionnables. Pour plus d’informations sur cette fonctionnalité, consultez la [présentation d’Audience Portal](../../segmentation/ui/audience-portal.md#customize). |
 | Ventilation des fréquences de mise à jour | Vous pouvez désormais afficher la ventilation des fréquences de mise à jour des audiences de votre organisation. Pour plus d’informations sur cette fonctionnalité, consultez le [guide de l’interface utilisateur de segmentation](../../segmentation/ui/overview.md#browse). |
 
 Pour en savoir plus sur Segmentation Service, consultez la [vue d’ensemble de Segmentation Service](../../segmentation/home.md).

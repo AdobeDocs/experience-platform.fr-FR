@@ -14,7 +14,7 @@ ht-degree: 82%
 
 Adobe Experience Platform vous permet d’afficher les données de votre organisation et d’interagir avec elles à l’aide de plusieurs tableaux de bord. Vous pouvez également mettre à jour certains tableaux de bord en ajoutant de nouveaux widgets à l’affichage de votre tableau de bord. Adobe propose une sélection de widgets standard que vous pouvez ajouter à vos tableaux de bord.
 
-La variable [[!UICONTROL Profils]](../guides/profiles.md#default-widgets), [[!UICONTROL Audiences]](../guides/audiences.md#default-widgets), et [[!UICONTROL Destinations]](../guides/destinations.md#default-widgets) Les tableaux de bord comportent chacun un chargement de widget par défaut lors de la création d’une instance Platform. Ce guide fournit des instructions détaillées sur l’ajout de widgets standard pour personnaliser la variable [!UICONTROL Profils], [!UICONTROL Audiences], et [!UICONTROL Destinations] Tableaux de bord dans l’interface utilisateur de Platform.
+Les tableaux de bord [[!UICONTROL Profils]](../guides/profiles.md#default-widgets), [[!UICONTROL Audiences]](../guides/audiences.md#default-widgets) et [[!UICONTROL Destinations]](../guides/destinations.md#default-widgets) ont chacun un chargement de widget par défaut lors de la création d’une instance Platform. Ce guide fournit des instructions détaillées sur l’ajout de widgets standard pour personnaliser les tableaux de bord [!UICONTROL Profils], [!UICONTROL Audiences] et [!UICONTROL Destinations] dans l’interface utilisateur de Platform.
 
 >[!NOTE]
 >
@@ -38,7 +38,7 @@ Les widgets standard de la catégorie sélectionnée s’affichent. Chaque widge
 >
 >Les widgets ne peuvent être ajoutés qu’au tableau de bord correspondant à la catégorie sélectionnée. Par exemple, seuls les widgets de la catégorie [!UICONTROL Profils] peuvent être ajoutés au tableau de bord [!UICONTROL Profils].
 
-![Espace de travail de la bibliothèque de widgets avec l’onglet Standard et les catégories disponibles mises en surbrillance.](../images/customization/standard-widgets.png)
+![Espace de travail de la bibliothèque de widgets avec l’onglet Standard et les catégories disponibles surlignées.](../images/customization/standard-widgets.png)
 
 ## Ajout d’un widget standard au tableau de bord
 
@@ -50,7 +50,7 @@ Pour choisir un widget standard à ajouter à votre tableau de bord, mettez le w
 
 Sélectionnez **[!UICONTROL Ajouter un widget]** pour ajouter les widgets sélectionnés à votre tableau de bord.
 
-![Espace de travail de la bibliothèque de widgets avec un widget sélectionné, puis l’option Ajouter un widget et Annuler mise en surbrillance.](../images/customization/add-widget.png)
+![Espace de travail de la bibliothèque de widgets avec un widget sélectionné et Ajouter un widget et Annuler mis en surbrillance.](../images/customization/add-widget.png)
 
 ## Étapes suivantes
 

@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: Fonctions booléennes PQL
-description: Les fonctions booléennes sont utilisées pour exécuter une logique booléenne sur différents éléments dans le langage de requête de profil (PQL).
+description: Les fonctions booléennes sont utilisées pour exécuter une logique booléenne sur différents éléments dans Profile Query Language (PQL).
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 88%
+source-wordcount: '239'
+ht-degree: 81%
 
 ---
 
 # Fonctions booléennes
 
-Les fonctions booléennes sont utilisées pour exécuter une logique booléenne sur différents éléments dans [!DNL Profile Query Language] (PQL).  Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
+Les fonctions booléennes sont utilisées pour exécuter une logique booléenne sur différents éléments dans [!DNL Profile Query Language] (PQL).  Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
 
 ## And
 

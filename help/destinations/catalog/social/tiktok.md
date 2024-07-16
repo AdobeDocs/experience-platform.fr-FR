@@ -14,11 +14,11 @@ ht-degree: 39%
 
 ## Vue d’ensemble {#overview}
 
-Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. Il peut s’agir de personnes qui ont visité votre site web ou interagi avec votre contenu. Poussez rapidement et en toute sécurité l’audience souhaitée de Adobe Experience Platform vers TikTok à l’aide de l’intégration en temps réel d’Adobe à TikTok Ads Manager. Visite [Centre d’aide aux entreprises TikTok](https://ads.tiktok.com/help/article/audiences) pour plus d’informations.
+Créez des audiences personnalisées sur TikTok avec vos données pour le ciblage de vos campagnes publicitaires. Il peut s’agir de personnes qui ont visité votre site web ou interagi avec votre contenu. Poussez rapidement et en toute sécurité l’audience souhaitée de Adobe Experience Platform vers TikTok à l’aide de l’intégration en temps réel d’Adobe à TikTok Ads Manager. Pour plus d’informations, consultez le [centre d’aide aux entreprises TikTok](https://ads.tiktok.com/help/article/audiences) .
 
 >[!IMPORTANT]
 >
->Ce connecteur de destination et cette page de documentation sont créés et gérés par l’équipe TikTok. Pour toute demande d’information ou de mise à jour, contactez-les directement à l’adresse [https://ads.tiktok.com/help/](https://ads.tiktok.com/help/).
+>Ce connecteur de destination et cette page de documentation sont créés et gérés par l’équipe TikTok. Pour toute question ou demande de mise à jour, contactez-les directement à l&#39;adresse [https://ads.tiktok.com/help/](https://ads.tiktok.com/help/).
 
 ## Cas d’utilisation {#use-cases}
 
@@ -30,9 +30,9 @@ Une marque de vêtements d’athlétisme veut atteindre ses clients existants pa
 
 ## Conditions préalables {#prerequisites}
 
-Vous devez avoir [!DNL Admin] ou [!DNL Operator] accéder au compte TikTok Ads Manager auquel vous souhaitez envoyer des audiences. Vous trouverez plus d’instructions sur la page [Centre d’aide TikTok](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
+Vous devez avoir [!DNL Admin] ou [!DNL Operator] accès au compte TikTok Ads Manager auquel vous souhaitez envoyer des audiences. Vous trouverez plus d’instructions sur le [centre d’aide de TikTok](https://ads.tiktok.com/help/article/add-users-tiktok-business-center).
 
-Avant d’envoyer des données à votre compte TikTok Ads Manager, vous devez autoriser Adobe Experience Platform à accéder à votre compte publicitaire pour la variable `Audience Management`. Cette autorisation peut être fournie par [saisie de votre identifiant Ads Manager](#authenticate) dans l’interface utilisateur de l’Experience Platform et en accordant l’autorisation après avoir été redirigé vers votre compte TikTok Ads Manager.
+Avant d’envoyer des données à votre compte TikTok Ads Manager, vous devez autoriser Adobe Experience Platform à accéder à votre compte publicitaire pour `Audience Management`. Cette autorisation peut être fournie en [saisissant votre ID de gestionnaire de publicités](#authenticate) dans l’interface utilisateur de l’Experience Platform et en accordant l’autorisation après avoir été redirigé vers votre compte de gestionnaire de publicités TikTok.
 
 ## Identités prises en charge {#supported-identities}
 
@@ -40,7 +40,7 @@ TikTok prend en charge l’activation des identités décrites dans le tableau c
 
 | Identité cible | Description | Considérations |
 |---|---|---|
-| GAID | Google Advertising ID | Sélectionnez l’identité cible GAID lorsque votre identité source est un espace de noms GAID. |
+| GAID | GOOGLE ADVERTISING ID | Sélectionnez l’identité cible GAID lorsque votre identité source est un espace de noms GAID. |
 | IDFA | Identifiant Apple pour les annonceurs | Sélectionnez l’identité cible IDFA lorsque votre identité source est un espace de noms IDFA. |
 | Numéro de téléphone | Numéros de téléphone hachés avec l’algorithme SHA256 | Les numéros de téléphone hachés SHA-256 et en texte brut sont pris en charge par Adobe Experience Platform et doivent être au format E.164. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l’activation. |
 | E-mail | Adresses e-mail hachées avec l’algorithme SHA256 | Adobe Experience Platform prend en charge le texte brut et les adresses e-mail hachées avec SHA256. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l’activation. |
@@ -62,27 +62,27 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **** et des **** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-Pour vous authentifier à la destination, vous serez redirigé vers votre [!DNL TikTok Ads Manager] et autorisez Adobe à gérer les audiences en votre nom.
+Pour vous authentifier à la destination, vous serez redirigé afin de vous connecter à votre compte [!DNL TikTok Ads Manager] et d’autoriser l’Adobe à gérer les audiences en votre nom.
 
-![Sélection des autorisations TikTok](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png "Image de l’interface utilisateur de TikTok pour la sélection des autorisations")
+![Sélection d’autorisations TikTok](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png "Image de l’interface utilisateur de TikTok pour la sélection des autorisations")
 
 ### Renseigner les détails de la destination {#destination-details}
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-![Détails de la connexion de destination](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png "Image de l’interface utilisateur de Platform, indiquant les détails de connexion de destination à renseigner")
+![Détails de la connexion de destination](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png "Image de l’interface utilisateur de Platform, indiquant les détails de la connexion de destination à remplir dans")
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Identifiant TikTok Ads Manager]**: votre [!DNL TikTok Ads Manager ID]. Vous pouvez le trouver dans votre [!DNL TikTok Ads manager] compte .
+* **[!UICONTROL TikTok Ads Manager ID]** : votre [!DNL TikTok Ads Manager ID]. Vous pouvez le trouver dans votre compte [!DNL TikTok Ads manager].
 
-![Identifiant TikTok Ads Manager](/help/destinations/assets/catalog/social/tiktok/tiktok-ads-manager-ID.png "Image de l’interface utilisateur de TikTok Ads Manager, montrant comment obtenir l’identifiant de TikTok Ads Manager")
+![Identifiant TikTok Ads Manager](/help/destinations/assets/catalog/social/tiktok/tiktok-ads-manager-ID.png "Image de l’interface utilisateur de TikTok Ads Manager, indiquant comment obtenir l’identifiant TikTok Ads Manager")
 
 ### Activer les alertes {#enable-alerts}
 
@@ -94,8 +94,8 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter *identités*, vous avez besoin de la fonction **[!UICONTROL Affichage du graphique des identités]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **** et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous avez besoin de l&#39;autorisation **[!UICONTROL Afficher le graphique d&#39;identités]** [ ](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
@@ -115,7 +115,7 @@ Sélection des champs cibles :
 
 ## Données exportées {#exported-data}
 
-Vérifiez vos [!DNL TikTok Ads Manager] compte (sous **Ressources > Audiences**) pour vérifier si l’exportation de votre audience Experience Platform a réussi. L’audience est renseignée sous la forme d’une audience : `Partner Audience`.
+Vérifiez votre compte [!DNL TikTok Ads Manager] (sous **Assets > Audiences**) pour vérifier si l’exportation de votre audience Experience Platform a réussi. L’audience sera renseignée sous la forme d’un type d’audience : `Partner Audience`.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
@@ -123,4 +123,4 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-Reportez-vous à [Page Centre d’aide TikTok](https://ads.tiktok.com/help/article/audiences) pour plus d’informations.
+Pour plus d’informations, reportez-vous à la [page du Centre d’aide de TikTok](https://ads.tiktok.com/help/article/audiences) .

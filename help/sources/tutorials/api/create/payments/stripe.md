@@ -1,21 +1,22 @@
 ---
-title: Ingestion des données de paiement à partir de vos [!DNL Stripe] compte à Experience Platform à l’aide des API
+title: Ingérer des données de paiement de votre compte  [!DNL Stripe]  vers l’Experience Platform à l’aide d’API
 description: Découvrez comment ingérer des données de paiement de votre compte de Stripe vers Experience Platform à l’aide de l’API Flow Service
-badge: Version Beta
-source-git-commit: f8df3ddb96ad0810a7a46b0a55125336c427aebd
+badge: Version bêta
+exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
+source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
 workflow-type: tm+mt
 source-wordcount: '1998'
 ht-degree: 45%
 
 ---
 
-# Ingestion des données de paiement à partir de vos [!DNL Stripe] compte à Experience Platform à l’aide des API
+# Ingérez des données de paiement de votre compte [!DNL Stripe] vers l’Experience Platform à l’aide d’API.
 
 >[!NOTE]
 >
->La source [!DNL Stripe] est en version Beta. Lisez la section [conditions générales](../../../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La source [!DNL Stripe] est en version Beta. Lisez les [termes et conditions](../../../../home.md#terms-and-conditions) dans la présentation des sources pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Lisez le tutoriel suivant pour savoir comment ingérer vos données de paiement à partir de [!DNL Stripe] vers Adobe Experience Platform à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lisez le tutoriel suivant pour savoir comment ingérer vos données de paiements de [!DNL Stripe] vers Adobe Experience Platform à l’aide de l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Commencer
 
@@ -26,21 +27,21 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 ### Authentification
 
-Lisez la section [[!DNL Stripe] aperçu](../../../../connectors/payments/stripe.md) pour plus d’informations sur la manière de récupérer vos informations d’authentification.
+Lisez la [[!DNL Stripe] présentation](../../../../connectors/payments/stripe.md) pour plus d’informations sur la manière de récupérer vos informations d’authentification.
 
 ### Utiliser les API Platform
 
 Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide [Prise en main des API Platform](../../../../../landing/api-guide.md).
 
-## Connexion [!DNL Stripe] à Experience Platform
+## Connecter [!DNL Stripe] à l’Experience Platform
 
-Suivez le guide ci-dessous pour savoir comment authentifier votre [!DNL Stripe] source, créez une connexion source et créez un flux de données pour importer vos données de paiements dans Experience Platform.
+Suivez le guide ci-dessous pour savoir comment authentifier votre source [!DNL Stripe], créer une connexion source et créer un flux de données pour importer vos données de paiement dans Experience Platform.
 
 ### Créer une connexion de base {#base-connection}
 
 Une connexion de base conserve les informations entre votre source et votre Experience Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. Vous pouvez explorer et parcourir les fichiers de votre source à l’aide de l’identifiant de connexion de base. En outre, vous pouvez identifier les éléments spécifiques que vous souhaitez ingérer, y compris des détails sur les types et les formats de données de ces éléments.
 
-Pour créer un identifiant de connexion de base, envoyez une requête de POST au `/connections` point de terminaison lors de la fourniture de [!DNL Stripe] informations d’identification d’authentification dans le corps de la requête.
+Pour créer un identifiant de connexion de base, envoyez une requête de POST au point de terminaison `/connections` tout en fournissant vos informations d’authentification [!DNL Stripe] dans le cadre du corps de la requête.
 
 **Format d’API**
 
@@ -80,9 +81,9 @@ curl -X POST \
 | --- | --- |
 | `name` | Nom de la connexion de base. Assurez-vous que le nom de votre connexion de base est explicite, car vous pouvez lʼutiliser pour rechercher des informations sur votre connexion de base. |
 | `description` | Une valeur facultative que vous pouvez inclure pour fournir plus d’informations sur votre connexion de base. |
-| `connectionSpec.id` | Identifiant de spécification de connexion de la source. Identifiant de spécification de connexion pour [!DNL Stripe] is `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3`et cet identifiant est corrigé. |
+| `connectionSpec.id` | Identifiant de spécification de connexion de la source. L’identifiant de spécification de connexion pour [!DNL Stripe] est `cc2c31d6-7b8c-4581-b49f-5c8698aa3ab3` et cet identifiant est corrigé. |
 | `auth.specName` | Type d’authentification que vous utilisez pour authentifier votre source auprès de l’Experience Platform. |
-| `auth.params.accessToken` | Jeton d’accès de votre [!DNL Stripe] compte . Lisez la section [[!DNL Stripe] guide d&#39;authentification](../../../../connectors/payments/stripe.md#prerequisites) pour savoir comment récupérer votre jeton d’accès. |
+| `auth.params.accessToken` | Jeton d’accès de votre compte [!DNL Stripe]. Lisez le [[!DNL Stripe] guide d’authentification](../../../../connectors/payments/stripe.md#prerequisites) pour connaître les étapes de récupération de votre jeton d’accès. |
 
 **Réponse**
 
@@ -97,7 +98,7 @@ Une réponse réussie renvoie la nouvelle connexion de base, y compris son ident
 
 ### Explorer votre source {#explore}
 
-Une fois que vous disposez de votre identifiant de connexion de base, vous pouvez désormais explorer le contenu et la structure de vos données source en adressant une requête de GET à la variable `/connections` point de terminaison tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête.
+Une fois que vous disposez de votre identifiant de connexion de base, vous pouvez explorer le contenu et la structure de vos données source en exécutant une requête de GET sur le point de terminaison `/connections` tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête.
 
 **Format d’API**
 
@@ -116,7 +117,7 @@ Lors de l’exécution de requêtes GET pour explorer la structure et le contenu
 | `{OBJECT}` | Ce paramètre est requis uniquement lors de l’affichage d’un répertoire spécifique. Sa valeur représente le chemin du répertoire que vous souhaitez explorer. Pour cette source, la valeur serait `json`. |
 | `fileType=json` | Type de fichier du fichier que vous souhaitez importer dans Platform. Actuellement, `json` est le seul type de fichier pris en charge. |
 | `{PREVIEW}` | Valeur booléenne qui définit si le contenu de la connexion prend en charge la prévisualisation. |
-| `{SOURCE_PARAMS}` | A [!DNL Base64-]chaîne codée qui pointe vers le chemin d’accès à la ressource que vous souhaitez explorer. Le chemin de la ressource doit être codé dans [!DNL Base64] afin d’obtenir le format approuvé pour `{SOURCE_PARAMS}`. Par exemple : `{"resourcePath":"charges"}` est codé en tant que `eyJyZXNvdXJjZVBhdGgiOiJjaGFyZ2VzIn0%3D`. La liste des chemins de ressources disponibles inclut : <ul><li>`charges`</li><li>`subscriptions`</li><li>`refunds`</li><li>`balance_transactions`</li><li>`customers`</li><li>`prices`</li></ul> |
+| `{SOURCE_PARAMS}` | Chaîne codée [!DNL Base64-] qui pointe vers le chemin de ressource que vous souhaitez explorer. Votre chemin d&#39;accès à la ressource doit être codé dans [!DNL Base64] pour obtenir le format approuvé pour `{SOURCE_PARAMS}`. Par exemple, `{"resourcePath":"charges"}` est codé en tant que `eyJyZXNvdXJjZVBhdGgiOiJjaGFyZ2VzIn0%3D`. La liste des chemins de ressources disponibles inclut : <ul><li>`charges`</li><li>`subscriptions`</li><li>`refunds`</li><li>`balance_transactions`</li><li>`customers`</li><li>`prices`</li></ul> |
 
 ```shell
 curl -X GET \
@@ -406,7 +407,7 @@ Une réponse réussie renvoie une structure JSON comme suit :
 
 ### Créer une connexion source {#source-connection}
 
-Vous pouvez créer une connexion source en envoyant une requête de POST au `/sourceConnections` point d’entrée du [!DNL Flow Service] API. Une connexion source se compose d’un identifiant de connexion, d’un chemin d’accès au fichier de données source et d’un identifiant de spécification de connexion.
+Vous pouvez créer une connexion source en envoyant une requête de POST au point de terminaison `/sourceConnections` de l’API [!DNL Flow Service]. Une connexion source se compose d’un identifiant de connexion, d’un chemin d’accès au fichier de données source et d’un identifiant de spécification de connexion.
 
 **Format d’API**
 
@@ -524,7 +525,7 @@ curl -X POST \
 | `description` | Valeur facultative que vous pouvez inclure pour fournir plus d’informations sur votre connexion cible. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion qui correspond au lac de données. Cet ID fixe est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 | `data.format` | Format des données [!DNL Stripe] à ingérer. |
-| `params.dataSetId` | L’identifiant de votre jeu de données cible. Cet identifiant est généré par [création d’un jeu de données cible](#target-dataset). |
+| `params.dataSetId` | L’identifiant de votre jeu de données cible. Cet identifiant est généré par [la création d’un jeu de données cible](#target-dataset). |
 
 **Réponse**
 
@@ -788,7 +789,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `xdmSchema` | L’identifiant de votre schéma XDM cible. Cet identifiant est généré en créant une [schéma XDM cible](#target-schema). |
+| `xdmSchema` | L’identifiant de votre schéma XDM cible. Cet identifiant est généré en créant un [schéma XDM cible](#target-schema). |
 | `destinationXdmPath` | Champ XDM auquel l’attribut source est mappé. |
 | `sourceAttribute` | Champ de données source en cours de mappage. |
 | `identity` | Une valeur boolean qui définit si le champ sera conservé dans [Identity Service](../../../../../identity-service/home.md). |
@@ -813,7 +814,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ### Créer un flux {#flow}
 
-La dernière étape pour obtenir des données de [!DNL Stripe] vers Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
+La dernière étape pour apporter des données de [!DNL Stripe] à Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
 
 * [ID de connexion source](#source-connection)
 * [ID de connexion cible](#target-connection)
@@ -879,7 +880,7 @@ curl -X POST \
 | `transformations.params.mappingId` | [Identifiant de mappage](#mapping) généré lors d’une étape précédente. |
 | `transformations.params.mappingVersion` | Version correspondante de l’identifiant de mappage. Ce paramètre est défini par défaut sur `0`. |
 | `scheduleParams.startTime` | Heure à laquelle votre flux de données commencera. Vous devez fournir la valeur de l’heure de début au format d’un horodatage Unix. |
-| `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. Vous pouvez configurer la fréquence d’ingestion pour :  <ul><li>**Une fois**: définissez votre fréquence sur `once` pour créer une ingestion unique. Les configurations de l’intervalle et du renvoi ne sont pas disponibles lors de la création d’un flux de données d’ingestion unique. Par défaut, la fréquence de planification est définie sur une seule fois.</li><li>**Minute**: définissez votre fréquence sur `minute` pour planifier votre flux de données afin qu’il ingère des données par minute.</li><li>**Heure**: définissez votre fréquence sur `hour` pour planifier votre flux de données afin d’ingérer des données par heure.</li><li>**Jour**: définissez votre fréquence sur `day` pour planifier votre flux de données afin d’ingérer des données quotidiennement.</li><li>**Semaine**: définissez votre fréquence sur `week` pour planifier votre flux de données afin qu’il ingère des données sur une base hebdomadaire.</li></ul> |
+| `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. Vous pouvez configurer la fréquence d’ingestion pour :  <ul><li>**Une fois** : définissez votre fréquence sur `once` pour créer une ingestion unique. Les configurations de l’intervalle et du renvoi ne sont pas disponibles lors de la création d’un flux de données d’ingestion unique. Par défaut, la fréquence de planification est définie sur une seule fois.</li><li>**Minute** : définissez votre fréquence sur `minute` pour planifier votre flux de données de sorte qu’il ingère des données par minute.</li><li>**Heure** : définissez votre fréquence sur `hour` pour planifier votre flux de données pour ingérer des données par heure.</li><li>**Jour** : définissez votre fréquence sur `day` pour planifier votre flux de données de sorte qu’il ingère des données quotidiennement.</li><li>**Semaine** : définissez votre fréquence sur `week` pour planifier votre flux de données de sorte qu’il ingère des données sur une base hebdomadaire.</li></ul> |
 | `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. Par exemple, si vous définissez votre fréquence sur &quot;jour&quot; et configurez l’intervalle sur 15, votre flux de données s’exécute tous les 15 jours. La valeur de l’intervalle doit être un entier non nul. |
 
 **Réponse**
@@ -899,21 +900,20 @@ La section suivante fournit des informations sur les étapes à suivre pour surv
 
 ### Surveiller votre flux de données
 
-Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs. Pour consulter des exemples complets d’API, reportez-vous au guide sur [surveillance de vos flux de données sources à l’aide de l’API](../../monitor.md).
+Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs. Pour obtenir des exemples complets d’API, consultez le guide sur la [surveillance des flux de données de sources à l’aide de l’API](../../monitor.md).
 
 ### Mettre à jour votre flux de données
 
-Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les ensembles de mappages associés, en envoyant une requête PATCH au point de terminaison /flows de la variable [!DNL Flow Service] API lors de la fourniture de l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre flux de données `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour des flux de données de sources à l’aide de l’API](../../update-dataflows.md).
+Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les ensembles de mappages associés, en envoyant une requête de PATCH au point de terminaison /flows de l’API [!DNL Flow Service] tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique `etag` de votre flux de données dans l’en-tête `If-Match`. Pour obtenir des exemples complets d’API, lisez le guide sur la [mise à jour des flux de données de sources à l’aide de l’API](../../update-dataflows.md).
 
 ### Mettre à jour votre compte
 
-Mettez à jour le nom, la description et les informations d’identification de votre compte source en adressant une requête de PATCH au [!DNL Flow Service] API tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre compte source `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour de votre compte source à l’aide de l’API](../../update.md).
+Mettez à jour le nom, la description et les informations d’identification de votre compte source en adressant une requête de PATCH à l’API [!DNL Flow Service] tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique `etag` de votre compte source dans l’en-tête `If-Match`. Pour obtenir des exemples complets d’API, lisez le guide sur la [mise à jour de votre compte source à l’aide de l’API](../../update.md).
 
 ### Supprimer le flux de données
 
-Supprimez votre flux de données en adressant une requête de DELETE à la fonction [!DNL Flow Service] API tout en fournissant l’identifiant du flux de données que vous souhaitez supprimer dans le cadre du paramètre de requête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [suppression de vos flux de données à l’aide de l’API](../../delete-dataflows.md).
+Supprimez votre flux de données en adressant une requête de DELETE à l’API [!DNL Flow Service] tout en fournissant l’identifiant du flux de données que vous souhaitez supprimer dans le cadre du paramètre de requête . Pour obtenir des exemples complets d’API, lisez le guide sur la [suppression de vos flux de données à l’aide de l’API](../../delete-dataflows.md).
 
 ### Suppression de votre compte
 
-Supprimez votre compte en adressant une requête de DELETE à la fonction [!DNL Flow Service] API tout en fournissant l’identifiant de connexion de base du compte que vous souhaitez supprimer. Pour consulter des exemples complets d’API, reportez-vous au guide sur [suppression de votre compte source à l’aide de l’API](../../delete.md).
-
+Supprimez votre compte en adressant une requête de DELETE à l’API [!DNL Flow Service] tout en fournissant l’identifiant de connexion de base du compte que vous souhaitez supprimer. Pour obtenir des exemples complets d’API, lisez le guide sur la [suppression de votre compte source à l’aide de l’API](../../delete.md).

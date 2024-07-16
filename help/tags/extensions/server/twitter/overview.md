@@ -13,31 +13,31 @@ ht-degree: 7%
 
 # Extension de transfert d’événement [!DNL Twitter]
 
-[[!DNL Twitter]](https://twitter.com/i/flow/login) est un service en ligne de médias sociaux et de réseaux sociaux, sur lequel les utilisateurs publient et interagissent avec des messages de 280 caractères, appelés tweets. Les utilisateurs peuvent interagir avec Twitter à l’aide d’un navigateur, d’un logiciel frontal mobile ou par programmation via son [API](https://developer.twitter.com/en/docs/twitter-api)
+[[!DNL Twitter]](https://twitter.com/i/flow/login) est un service de réseaux sociaux en ligne, sur lequel les utilisateurs publient et interagissent avec des messages de 280 caractères, appelés tweets. Les utilisateurs peuvent interagir avec Twitter à l’aide d’un navigateur, d’un logiciel frontal mobile ou par programmation via ses [API](https://developer.twitter.com/en/docs/twitter-api)
 
-La variable [!DNL Twitter] API de conversion web [transfert d’événement](../../../ui/event-forwarding/overview.md) l’extension vous permet d’exploiter les données capturées dans Adobe Experience Platform Edge Network et de les envoyer à [!DNL Twitter]. Ce document couvre les cas d’utilisation de l’extension, comment l’installer et comment intégrer ses fonctionnalités à votre transfert d’événement. [rules](../../../ui/managing-resources/rules.md).
+L’extension [!DNL Twitter] Web Conversions API [ de transfert d’événement](../../../ui/event-forwarding/overview.md) vous permet d’exploiter les données capturées dans l’Edge Network Adobe Experience Platform et de les envoyer à [!DNL Twitter]. Ce document couvre les cas d’utilisation de l’extension, comment l’installer et comment intégrer ses fonctionnalités dans le transfert d’événement [rules](../../../ui/managing-resources/rules.md).
 
-[!DNL Twitter] require [OAuth 1.0](https://developer.twitter.com/en/docs/authentication/oauth-1-0a) pour l’authentification avec le [!DNL Twitter] [!DNL Web Conversions] API.
+[!DNL Twitter] nécessite [ OAuth 1.0](https://developer.twitter.com/en/docs/authentication/oauth-1-0a) pour l&#39;authentification avec l&#39;API [!DNL Twitter] [!DNL Web Conversions].
 
 ## Cas d’utilisation
 
-Cette extension doit être utilisée si vous souhaitez utiliser les données du réseau Edge dans [!DNL Twitter] pour tirer parti de ses capacités de ciblage et d’analyse client.
+Cette extension doit être utilisée si vous souhaitez utiliser les données de l’Edge Network dans [!DNL Twitter] pour tirer parti de ses fonctionnalités d’analyse et de ciblage des clients.
 
-Prenons l’exemple d’une équipe marketing au sein d’une organisation. L’équipe capture les données d’événement d’interaction utilisateur de son site web en tant que données d’événement de son site web et les charge dans [!DNL Twitter] en utilisant cette extension de transfert d’événement.
+Prenons l’exemple d’une équipe marketing au sein d’une organisation. L’équipe capture les données d’événement d’interaction de l’utilisateur de son site web en tant que données d’événement de son site web et les charge dans [!DNL Twitter] à l’aide de cette extension de transfert d’événement.
 
-Les équipes marketing et d’analyse peuvent alors tirer parti des [!DNL Twitter's] fonctionnalités permettant d’effectuer une analyse supplémentaire et de cibler ces utilisateurs pour des campagnes publicitaires ciblées.
+Les équipes de marketing et d’analyse peuvent ensuite exploiter les fonctionnalités [!DNL Twitter's] pour effectuer une analyse supplémentaire et cibler ces utilisateurs pour les campagnes de publicité ciblées.
 
-Pour plus d’informations sur les cas d’utilisation spécifiques à [!DNL Twitter], reportez-vous au [[!DNL Twitter] cas d’utilisation](https://developer.twitter.com/en/use-cases/build-for-businesses) la documentation.
+Pour plus d&#39;informations sur les cas d&#39;utilisation spécifiques à [!DNL Twitter], consultez la documentation [[!DNL Twitter] Cas d&#39;utilisation](https://developer.twitter.com/en/use-cases/build-for-businesses) .
 
 ## [!DNL Twitter] conditions préalables et barrières de sécurité {#prerequisites}
 
-Vous devez disposer d’un [!DNL Twitter] afin d’utiliser cette extension. Accédez au [[!DNL Twitter] page d’enregistrement](https://help.twitter.com/en/using-twitter/create-twitter-account) pour enregistrer et créer un compte si vous n’en avez pas déjà un.
+Pour utiliser cette extension, vous devez disposer d’un compte [!DNL Twitter] valide. Accédez à la [[!DNL Twitter] page d&#39;inscription](https://help.twitter.com/en/using-twitter/create-twitter-account) pour vous enregistrer et créer un compte si vous n&#39;en avez pas déjà un.
 
-Vous devez configurer votre compte en tant que [!DNL Twitter] compte développeur. Pour savoir comment vous inscrire en tant que développeur, reportez-vous à la section [[!DNL Twitter] compte développeur](https://developer.twitter.com/en/support/twitter-api/developer-account1).
+Vous devez configurer votre compte en tant que compte de développeur [!DNL Twitter]. Pour savoir comment vous inscrire en tant que développeur, reportez-vous au [[!DNL Twitter] compte développeur](https://developer.twitter.com/en/support/twitter-api/developer-account1).
 
 ### Protections des API {#guardrails}
 
-La variable [!DNL Twitter] L’API de conversion web est limitée à 60 000 requêtes par intervalle de 15 minutes, où chaque requête autorise 500 événements.
+L’API de conversion web [!DNL Twitter] a une limite de taux de 60 000 demandes par intervalle de 15 minutes, où chaque demande autorise 500 événements.
 
 ### Collecte des détails de configuration requis {#configuration-details}
 
@@ -45,51 +45,51 @@ Pour connecter l’Experience Platform à [!DNL Twitter], les entrées suivantes
 
 | Type de clé | Description |
 | --- | --- |
-| Clé client | &#x200B; Clé API de l’application permettant d’accéder au [!DNL Twitter] API. Voir [!DNL Twitter] documentation sur [clés et secrets d’api](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) pour obtenir des conseils. | |
-| Secret du client | Le secret d’API permet à votre application d’accéder à [!DNL Twitter] API. Voir [!DNL Twitter] documentation sur [clés et secrets d’api](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) pour obtenir des conseils. |
-| Secret du jeton | Le secret du jeton non expirant de votre application, qui est utilisé pour l’authentification au [!DNL Twitter] API via OAuth. Voir [!DNL Twitter] documentation sur [obtention des jetons d’accès d’utilisation](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) pour obtenir des conseils. |
-| Jeton d’accès | Jeton d’accès non expirant de votre application, utilisé pour l’authentification au [!DNL Twitter] API via OAuth. Voir [!DNL Twitter] documentation sur [obtention des jetons d’accès d’utilisation](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) pour obtenir des conseils. |
-| Pixel Id | La variable [!DNL Twitter] Pixel est une balise de site web qui est implémentée sur votre site web pour effectuer le suivi des actions ou des conversions du site. Voir [!DNL Twitter] documentation sur [suivi des conversions pour les sites web](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) pour obtenir des conseils. |
+| Clé client | &#x200B; Clé API de l’application pour accéder à l’API [!DNL Twitter]. Pour plus d&#39;informations, reportez-vous à la documentation [!DNL Twitter] sur les [clés et secrets d&#39;api](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) . | |
+| Secret du client | Le secret API permet à votre application d’accéder à l’API [!DNL Twitter]. Pour plus d&#39;informations, reportez-vous à la documentation [!DNL Twitter] sur les [clés et secrets d&#39;api](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) . |
+| Secret du jeton | Secret de jeton non expirant de votre application, utilisé pour l’authentification à l’API [!DNL Twitter] via OAuth. Pour plus d&#39;informations, reportez-vous à la documentation [!DNL Twitter] sur l&#39; [obtention des jetons d&#39;accès à l&#39;utilisation](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) . |
+| Jeton d’accès | Jeton d’accès non expirant de votre application, utilisé pour l’authentification à l’API [!DNL Twitter] via OAuth. Pour plus d&#39;informations, reportez-vous à la documentation [!DNL Twitter] sur l&#39; [obtention des jetons d&#39;accès à l&#39;utilisation](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) . |
+| Pixel Id | Le pixel [!DNL Twitter] est une balise de site web qui est implémentée sur votre site web pour suivre les actions ou les conversions du site. Pour plus d&#39;informations, reportez-vous à la documentation [!DNL Twitter] sur le [suivi de conversion pour les sites web](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) . |
 
-## Installez et configurez le [!DNL Twitter] extension {#install}
+## Installation et configuration de l’extension [!DNL Twitter] {#install}
 
-Pour installer l’extension, [création d’une propriété de transfert d’événement](../../../ui/event-forwarding/overview.md#properties) ou choisissez une propriété existante à modifier.
+Pour installer l’extension, [créez une propriété de transfert d’événement](../../../ui/event-forwarding/overview.md#properties) ou choisissez une propriété existante à modifier à la place.
 
-Sélectionner **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Dans le **[!UICONTROL Catalogue]** onglet, sélectionnez **[!UICONTROL Installer]** sur la carte de la variable [!DNL Twitter] extension .
+Sélectionner **[!UICONTROL Extensions]** dans le volet de navigation de gauche. Dans l’onglet **[!UICONTROL Catalogue]** , sélectionnez **[!UICONTROL Installer]** sur la carte de l’extension [!DNL Twitter].
 
-![Catalogue affichant le [!DNL Twitter] installation de mise en surbrillance de l’extension.](../../../images/extensions/server/twitter/install.png)
+![Catalogue présentant l’installation de mise en surbrillance de l’extension [!DNL Twitter].](../../../images/extensions/server/twitter/install.png)
 
 >[!IMPORTANT]
 >
 >En fonction des besoins de mise en oeuvre, vous devrez peut-être créer un schéma, des éléments de données et un jeu de données avant de configurer l’extension. Avant de commencer, consultez toutes les étapes de configuration afin de déterminer les entités à configurer pour votre cas d’utilisation.
 
-Dans l’écran suivant, saisissez ce qui suit : [valeurs de configuration](#configuration-details) que vous avez précédemment rassemblé à partir de [!DNL Twitter]:
+Sur l’écran suivant, saisissez les [valeurs de configuration](#configuration-details) suivantes que vous avez précédemment collectées à partir de [!DNL Twitter] :
 
-* **[!UICONTROL Pixel Id]**
+* **[!UICONTROL Id Pixel]**
 * **[!UICONTROL Clé client]**
 * **[!UICONTROL Secret du client]**
 * **[!UICONTROL Jeton]**
-* **[!UICONTROL Secret du jeton]**
+* **[!UICONTROL Jeton Secret]**
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]**.
 
-![[!DNL Twitter] écran de configuration pour la [!DNL Twitter] extension .](../../../images/extensions/server/twitter/configure.png)
+Écran de configuration ![[!DNL Twitter] pour l’extension [!DNL Twitter].](../../../images/extensions/server/twitter/configure.png)
 
 ## Configurer une règle de transfert d’événement {#config-rule}
 
 Une fois tous vos éléments de données configurés, vous pouvez commencer à créer des règles de transfert d’événement qui déterminent quand et comment vos événements seront envoyés à [!DNL Twitter].
 
-Créer [règle](../../../ui/managing-resources/rules.md) dans la propriété de transfert d’événement. Sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL Twitter]**. Pour envoyer des événements Edge Network à [!DNL Twitter], définissez la variable **[!UICONTROL Type d’action]** to **[!UICONTROL Envoyer la conversion web].**
+Créez une [règle](../../../ui/managing-resources/rules.md) dans votre propriété de transfert d’événement. Sous **[!UICONTROL Actions]**, ajoutez une nouvelle action et définissez l’extension sur **[!UICONTROL Twitter]**. Pour envoyer des événements Edge Network à [!DNL Twitter], définissez le **[!UICONTROL Type d’action]** sur **[!UICONTROL Envoyer la conversion web].**
 
-Une fois la sélection effectuée, d’autres commandes s’affichent pour configurer davantage l’événement. Vous devez mapper la variable [!DNL Twitter] propriétés d’événement aux éléments de données que vous avez précédemment créés. Pour plus d’informations, voir la section [[!DNL Twitter] API de conversion web](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions).
+Une fois la sélection effectuée, d’autres commandes s’affichent pour configurer davantage l’événement. Vous devez mapper les propriétés d’événement [!DNL Twitter] aux éléments de données que vous avez précédemment créés. Pour plus d’informations, reportez-vous à l’ [[!DNL Twitter]  API de conversion web](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions).
 
-![La variable [!DNL Twitter] création d’une règle d’événement de conversion.](../../../images/extensions/server/twitter/action-configuration.png)
+![ [!DNL Twitter] créant une règle d’événement de conversion.](../../../images/extensions/server/twitter/action-configuration.png)
 
 **[!UICONTROL Identification de l’utilisateur]**
 
 | Nom du champ | Description | Exemple | Obligatoire |
 | --- | --- | --- | --- |
-| [!UICONTROL [!DNL Twitter] ID de clic] | [!DNL Twitter] Cliquez sur ID tel qu’analysé dans l’URL du clic publicitaire. | 26l6412g5p4iyj65a2oic2ayg2 | Obligatoire si aucun autre identifiant n’est ajouté. |
+| [!UICONTROL [!DNL Twitter] ID de clic] | [!DNL Twitter] ID de clic tel qu’analysé à partir de l’URL de clic publicitaire. | 26l6412g5p4iyj65a2oic2ayg2 | Obligatoire si aucun autre identifiant n’est ajouté. |
 | [!UICONTROL E-mail.] | Adresse électronique hachée avec SHA256. Le texte doit être en minuscules et les espaces à la fin ou au début doivent être supprimés avant le hachage. | eventforwarding@example.com | Obligatoire si aucun autre identifiant n’est ajouté. |
 | [!UICONTROL Phone] | Phone sert d’identifiant pour correspondre à l’événement de conversion. Le numéro de téléphone doit être au format E164 [+][code pays][code zone][local phone number] avant le hachage. | +911234567875 | Obligatoire si aucun autre identifiant n’est ajouté. |
 
@@ -97,8 +97,8 @@ Une fois la sélection effectuée, d’autres commandes s’affichent pour confi
 
 | Nom du champ | Description | Exemple | Obligatoire |
 | --- | --- | --- | --- |
-| [!UICONTROL Temps de conversion] | Date-time sous forme de chaîne dans ISO 8601 ou dans `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. | 2022-02-18T01:14:00.603Z | Oui |
-| [!UICONTROL Identifiant d’événement] | ID de base 36 d’un événement spécifique. Cet identifiant doit correspondre à un événement préconfiguré contenu dans votre [!DNL Twitter] compte publicitaire. Il s’agit de l’identifiant de l’événement correspondant dans le Gestionnaire d’événements. | o87ne ou tw-o8z6j-o87ne (tw-pixel_id-event-id) | Oui |
+| [!UICONTROL Temps de conversion] | Date-time sous la forme d’une chaîne au format ISO 8601 ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. | 2022-02-18T01:14:00.603Z | Oui |
+| [!UICONTROL  {Event Id] | ID de base 36 d’un événement spécifique. Cet identifiant doit correspondre à un événement préconfiguré contenu dans votre compte publicitaire [!DNL Twitter]. Il s’agit de l’identifiant de l’événement correspondant dans le Gestionnaire d’événements. | o87ne ou tw-o8z6j-o87ne (tw-pixel_id-event-id) | Oui |
 | [!UICONTROL Nombre d’éléments] | Nombre d’éléments achetés dans l’événement. Il doit s’agir d’un nombre positif supérieur à 0. | 4 | Non |
 | [!UICONTROL Devise] | Devise des éléments achetés dans l’événement. Elle est exprimée dans la norme ISO-4217 et, si elle n’est pas fournie, la valeur par défaut est USD. | USD | Non |
 | [!UICONTROL Valeur] | Valeur du prix des articles achetés dans l’événement. | 100,00 | Non |
@@ -107,17 +107,17 @@ Une fois la sélection effectuée, d’autres commandes s’affichent pour confi
 
 ## Validation des données dans [!DNL Twitter]
 
-Une fois la règle de transfert d’événement créée et exécutée, vérifiez si l’événement envoyé à la variable [!DNL Twitter] L’API s’affiche comme prévu dans [!DNL Twitter] Interface utilisateur.
+Une fois la règle de transfert d’événement créée et exécutée, vérifiez si l’événement envoyé à l’API [!DNL Twitter] s’affiche comme prévu dans l’interface utilisateur de [!DNL Twitter].
 
-Si la collecte d’événements et [!DNL Experience Platform] l’intégration a réussi, vous verrez des événements dans la variable [!DNL Twitter] [!UICONTROL Gestionnaire d’événements].
+Si la collecte d’événements et l’intégration de [!DNL Experience Platform] ont réussi, vous verrez des événements dans le [!DNL Twitter] [!UICONTROL gestionnaire d’événements].
 
-![La variable [!DNL Twitter] gestionnaire d&#39;événements](../../../images/extensions/server/twitter/event-manager.png)
+![Le [!DNL Twitter] gestionnaire d’événements](../../../images/extensions/server/twitter/event-manager.png)
 
 ## Étapes suivantes
 
-Ce guide explique comment envoyer des événements de conversion à [!DNL Twitter] à l’aide du transfert d’événement. Pour plus d&#39;informations sur ces technologies sous-jacentes, consultez la documentation officielle :
+Ce guide explique comment envoyer des événements de conversion vers [!DNL Twitter] à l’aide du transfert d’événement. Pour plus d&#39;informations sur ces technologies sous-jacentes, consultez la documentation officielle :
 
 * [[!DNL Twitter] API](https://developer.twitter.com/en/docs/twitter-api)
-* [[!DNL Twitter] API de conversion Web](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions)
+* [[!DNL Twitter] API de conversion web](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions)
 * [[!DNL Twitter] Jeton d’accès utilisateur](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens)
-* [Pixel ID et suivi de conversion](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html)
+* [ID de pixel et suivi de conversion](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html)

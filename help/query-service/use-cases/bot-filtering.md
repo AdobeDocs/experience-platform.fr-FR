@@ -4,14 +4,14 @@ description: Ce document fournit une vue d’ensemble de l’utilisation de Quer
 exl-id: fc9dbc5c-874a-41a9-9b60-c926f3fd6e76
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 6%
+source-wordcount: '909'
+ht-degree: 5%
 
 ---
 
-# Filtrage des robots [!DNL Query Service] avec machine learning
+# Filtrage des robots dans [!DNL Query Service] avec apprentissage automatique
 
-L’activité des robots peut avoir un impact sur les mesures d’analyse et endommager l’intégrité des données. Adobe Experience Platform [!DNL Query Service] peut être utilisé pour maintenir la qualité des données par le biais du processus de filtrage des robots.
+L’activité des robots peut avoir un impact sur les mesures d’analyse et endommager l’intégrité des données. Adobe Experience Platform [!DNL Query Service] peut être utilisé pour maintenir la qualité de vos données par le biais du processus de filtrage des robots.
 
 Le filtrage des robots permet de maintenir la qualité des données en supprimant largement la contamination des données résultant d’interactions non humaines avec votre site web. Ce processus est réalisé grâce à la combinaison de requêtes SQL et d’apprentissage automatique.
 
@@ -19,18 +19,18 @@ L’activité des robots peut être identifiée de différentes manières. L’a
 
 Ce document fournit un aperçu et des exemples détaillés des requêtes de filtrage de robots SQL et des modèles d’apprentissage automatique nécessaires pour configurer le processus dans votre environnement.
 
-## Prise en main
+## Commencer
 
 Dans le cadre de ce processus, vous devez entraîner un modèle d’apprentissage automatique. Ce document suppose une connaissance pratique d’un ou de plusieurs environnements d’apprentissage automatique.
 
-Cet exemple utilise [!DNL Jupyter Notebook] comme environnement de développement. Bien qu’il existe de nombreuses options disponibles, [!DNL Jupyter Notebook] est recommandé, car il s’agit d’une application web open source qui a de faibles exigences de calcul. Cela peut être [téléchargé sur le site officiel](https://jupyter.org/).
+Cet exemple utilise [!DNL Jupyter Notebook] comme environnement de développement. Bien qu’il existe de nombreuses options disponibles, [!DNL Jupyter Notebook] est recommandé car il s’agit d’une application web open source qui a de faibles exigences en matière de calcul. Il peut être [téléchargé à partir du site officiel](https://jupyter.org/).
 
-## Utilisation [!DNL Query Service] pour définir un seuil pour une activité de robot
+## Utiliser [!DNL Query Service] pour définir un seuil pour l’activité de robot
 
 Les deux attributs utilisés pour extraire les données pour la détection des robots sont les suivants :
 
-* Identifiant visiteur Experience Cloud (ECID, également appelé MCID) : Il fournit un identifiant universel et permanent qui identifie vos visiteurs dans toutes les solutions d’Adobe.
-* Horodatage : Vous obtenez ainsi l’heure et la date au format UTC auxquelles une activité s’est produite sur le site web.
+* Identifiant visiteur Experience Cloud (ECID) : il fournit un identifiant universel et permanent qui identifie vos visiteurs dans toutes les solutions d’Adobe.
+* Horodatage : indique l’heure et la date au format UTC où une activité s’est produite sur le site web.
 
 >[!NOTE]
 >
@@ -49,7 +49,7 @@ WHERE  enduserids._experience.mcid NOT IN (SELECT enduserids._experi
                                            HAVING Count(*) > 50);  
 ```
 
-L’expression filtre les ECID (`mcid`) de tous les visiteurs qui atteignent le seuil, mais qui ne résolvent pas les pics de trafic à partir d’autres intervalles.
+L’expression filtre les ECID (`mcid`) de tous les visiteurs qui atteignent le seuil, mais ne résout pas les pics de trafic d’autres intervalles.
 
 ## Amélioration de la détection des robots grâce à l’apprentissage automatique
 
@@ -116,9 +116,9 @@ Le résultat de cette expression peut ressembler au tableau ci-dessous.
 
 ## Identifier les nouveaux seuils de pic à l’aide de l’apprentissage automatique
 
-Ensuite, exportez le jeu de données de requête obtenu au format CSV, puis importez-le dans [!DNL Jupyter Notebook]. Dans cet environnement, vous pouvez entraîner un modèle d’apprentissage automatique à l’aide des bibliothèques d’apprentissage automatique actuelles. Consultez le guide de dépannage pour plus d’informations sur [Comment exporter des données depuis [!DNL Query Service] au format CSV](../troubleshooting-guide.md#export-csv)
+Ensuite, exportez le jeu de données de requête obtenu au format CSV, puis importez-le dans [!DNL Jupyter Notebook]. Dans cet environnement, vous pouvez entraîner un modèle d’apprentissage automatique à l’aide des bibliothèques d’apprentissage automatique actuelles. Consultez le guide de dépannage pour plus d’informations sur [la manière d’exporter des données de  [!DNL Query Service] au format CSV](../troubleshooting-guide.md#export-csv)
 
-Les seuils de pic ad hoc initialement établis ne sont pas axés sur les données et manquent donc d’exactitude. Les modèles d’apprentissage automatique peuvent être utilisés pour former des paramètres en tant que seuils. Par conséquent, vous pouvez augmenter l’efficacité des requêtes en réduisant le nombre de `GROUP BY` mots-clés en supprimant les fonctionnalités inutiles.
+Les seuils de pic ad hoc initialement établis ne sont pas axés sur les données et manquent donc d’exactitude. Les modèles d’apprentissage automatique peuvent être utilisés pour former des paramètres en tant que seuils. Par conséquent, vous pouvez augmenter l’efficacité des requêtes en réduisant le nombre de `GROUP BY` mots-clés en supprimant les fonctionnalités superflues.
 
 Cet exemple utilise la bibliothèque d’apprentissage automatique Scikit-Learn installée par défaut avec [!DNL Jupyter Notebook]. La bibliothèque python &quot;pandas&quot; est également importée pour être utilisée ici. Les commandes suivantes sont entrées dans [!DNL Jupyter Notebook].
 
@@ -153,17 +153,17 @@ tree.plot_tree(clf,feature_names=X.columns)
 plt.show()
 ```
 
-Les valeurs renvoyées par [!DNL Jupyter Notebook] pour cet exemple, voici ce qui suit.
+Les valeurs renvoyées par [!DNL Jupyter Notebook] pour cet exemple sont les suivantes.
 
 ```text
 Model Accuracy: 0.99935
 ```
 
-![Produit statistique de [!DNL Jupyter Notebook] modèle d’apprentissage automatique.](../images/use-cases/jupiter-notebook-output.png)
+![Sortie statistique de [!DNL Jupyter Notebook] modèle d’apprentissage automatique.](../images/use-cases/jupiter-notebook-output.png)
 
 Les résultats du modèle illustré dans l’exemple ci-dessus sont plus de 99 % précis.
 
-Dans la mesure où la classification de l’arborescence de décision peut être formée à l’aide de données issues de [!DNL Query Service] sur une cadence régulière à l’aide de requêtes planifiées, vous pouvez garantir l’intégrité des données en filtrant l’activité des robots avec un haut degré de précision. En utilisant les paramètres dérivés du modèle d’apprentissage automatique, les requêtes d’origine peuvent être mises à jour avec les paramètres très précis créés par le modèle.
+Comme la classificateur de l’arbre de décision peut être formée à l’aide de données provenant de [!DNL Query Service] sur une cadence régulière à l’aide de requêtes planifiées, vous pouvez garantir l’intégrité des données en filtrant l’activité des robots avec un haut degré de précision. En utilisant les paramètres dérivés du modèle d’apprentissage automatique, les requêtes d’origine peuvent être mises à jour avec les paramètres très précis créés par le modèle.
 
 L’exemple de modèle a déterminé avec une grande précision que tous les visiteurs ayant plus de 130 interactions en cinq minutes sont des robots. Ces informations peuvent maintenant être utilisées pour affiner vos requêtes SQL de filtrage de robots.
 
@@ -171,4 +171,4 @@ L’exemple de modèle a déterminé avec une grande précision que tous les vis
 
 En lisant ce document, vous comprenez mieux comment utiliser [!DNL Query Service] et l’apprentissage automatique pour déterminer et filtrer l’activité des robots.
 
-Autres documents présentant les avantages de [!DNL Query Service] Pour consulter les informations stratégiques de votre entreprise, reportez-vous à la section [cas d’utilisation du navigateur abandonné](./abandoned-browse.md) par exemple.
+D’autres documents qui montrent les avantages de [!DNL Query Service] pour les informations stratégiques sur les entreprises de votre entreprise sont l’exemple [de cas d’utilisation de navigation abandonnée](./abandoned-browse.md).

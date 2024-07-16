@@ -4,14 +4,14 @@ description: Découvrez comment créer une connexion source d’événements Sug
 exl-id: db346ec0-2c57-4b82-8a39-f15d4cd377d4
 source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 46%
+source-wordcount: '648'
+ht-degree: 43%
 
 ---
 
 # Créer une connexion source [!DNL SugarCRM Events] dans l’interface utilisateur
 
-Ce tutoriel décrit les étapes à suivre pour créer une [!DNL SugarCRM Events] connexion source à l’aide de l’interface utilisateur de Adobe Experience Platform.
+Ce tutoriel décrit les étapes à suivre pour créer une connexion source [!DNL SugarCRM Events] à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
 ## Prise en main
 
@@ -34,15 +34,15 @@ Pour connecter [!DNL SugarCRM Events] à Platform, vous devez fournir des valeur
 | `Username` | Nom d’utilisateur de votre compte de développeur SugarCRM. | `abc.def@example.com@sugarmarketdemo000.com` |
 | `Password` | Votre mot de passe du compte de développeur SugarCRM. | `123456789` |
 
-### Création d’un schéma Platform pour [!DNL SugarCRM]
+### Création d’un schéma de plateforme pour [!DNL SugarCRM]
 
-Avant de créer un [!DNL SugarCRM] connexion source, vous devez également vous assurer de créer au préalable un schéma Platform à utiliser pour votre source. Voir le tutoriel sur [création d’un schéma Platform](../../../../../xdm/schema/composition.md) pour obtenir des instructions complètes sur la création d’un schéma.
+Avant de créer une connexion source [!DNL SugarCRM], vous devez également vous assurer de créer au préalable un schéma de plateforme à utiliser pour votre source. Consultez le tutoriel sur la [création d’un schéma de plateforme](../../../../../xdm/schema/composition.md) pour obtenir des instructions complètes sur la création d’un schéma.
 
-![Copie d’écran de l’interface utilisateur de Platform présentant un exemple de schéma pour les événements SugarCRM](../../../../images/tutorials/create/sugarcrm-events/sugarcrm-schema-events.png)
+![ Copie d’écran de l’interface utilisateur de Platform présentant un exemple de schéma pour les événements SugarCRM](../../../../images/tutorials/create/sugarcrm-events/sugarcrm-schema-events.png)
 
 >[!WARNING]
 >
->Lors du mappage du schéma, veillez également à mapper le `event_id` et `timestamp` champs requis par Platform.
+>Lors du mappage du schéma, veillez également à mapper les champs `event_id` et `timestamp` obligatoires requis par Platform.
 
 ## Connecter votre compte [!DNL SugarCRM Events]
 
@@ -50,23 +50,23 @@ Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous , *CRM* catégorie, sélectionnez **[!UICONTROL Événements SugarCRM]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Sous la catégorie *CRM*, sélectionnez **[!UICONTROL SugarCRM Events]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 ![Copie d’écran de l’interface utilisateur de Platform pour le catalogue avec carte Événements SugarCRM](../../../../images/tutorials/create/sugarcrm-events/catalog-sugarcrm-events.png)
 
-La variable **[!UICONTROL Connexion au compte Événements SugarCRM]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Se connecter au compte d’événements SugarCRM]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
 Pour utiliser un compte existant, sélectionnez le compte [!DNL SugarCRM Events] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
-![Copie d’écran de l’interface utilisateur de Platform pour le compte Connect SugarCRM Events avec un compte existant](../../../../images/tutorials/create/sugarcrm-events/existing.png)
+![ Copie d’écran de l’interface utilisateur de Platform pour le compte Connect SugarCRM Events avec un compte existant ](../../../../images/tutorials/create/sugarcrm-events/existing.png)
 
 ### Nouveau compte
 
-Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom, une description facultative et vos informations d’identification . Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
+Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom, une description facultative et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
-![Copie d’écran de l’interface utilisateur de Platform pour le compte Connect SugarCRM Events avec un nouveau compte](../../../../images/tutorials/create/sugarcrm-events/new.png)
+![ Copie d’écran de l’interface utilisateur de Platform pour le compte Connect SugarCRM Events avec un nouveau compte ](../../../../images/tutorials/create/sugarcrm-events/new.png)
 
 ## Étapes suivantes
 
@@ -74,22 +74,22 @@ En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL Su
 
 ## Ressources supplémentaires
 
-Les sections ci-dessous contiennent des ressources supplémentaires auxquelles vous pouvez vous référer lors de l’utilisation de la variable [!DNL SugarCRM] source.
+Les sections ci-dessous fournissent des ressources supplémentaires auxquelles vous pouvez vous référer lors de l’utilisation de la source [!DNL SugarCRM].
 
 ### Mécanismes de sécurisation {#guardrails}
 
-La variable [!DNL SugarCRM] Les taux de ralentissement de l’API sont de 90 appels par minute ou de 2 000 appels par jour, selon ce qui se produit en premier. Toutefois, cette restriction a été contournée en ajoutant un paramètre dans la spécification de connexion qui retardera le temps de demande afin que la limite de taux ne soit jamais atteinte.
+Les taux de ralentissement de l’API [!DNL SugarCRM] sont de 90 appels par minute ou de 2 000 appels par jour, selon ce qui se produit en premier. Toutefois, cette restriction a été contournée en ajoutant un paramètre dans la spécification de connexion qui retardera le temps de demande afin que la limite de taux ne soit jamais atteinte.
 
 ### Validation {#validation}
 
-Pour vérifier que vous avez correctement configuré la source et [!DNL SugarCRM Events] en cours d’ingestion des données, procédez comme suit :
+Pour vérifier que vous avez correctement configuré la source et que les données [!DNL SugarCRM Events] sont en cours d’ingestion, procédez comme suit :
 
-* Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Afficher les flux de données]** en regard de la variable [!DNL SugarCRM Events] menu de carte dans le catalogue des sources. Ensuite, sélectionnez **[!UICONTROL Prévisualisation d’un jeu de données]** pour vérifier les données ingérées.
+* Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Afficher les flux de données]** en regard du menu de carte [!DNL SugarCRM Events] du catalogue des sources. Sélectionnez ensuite **[!UICONTROL Prévisualiser le jeu de données]** pour vérifier les données ingérées.
 
-* En fonction du type d’objet que vous utilisez, vous pouvez vérifier les données agrégées par rapport aux nombres visibles sur la variable [!DNL SugarMarket] Page Événements ci-dessous :
+* Selon le type d’objet que vous utilisez, vous pouvez vérifier les données agrégées par rapport aux nombres visibles sur la page [!DNL SugarMarket] Events ci-dessous :
 
 ![Capture d&#39;écran de la page Comptes SugarMarket affichant la liste des comptes](../../../../images/tutorials/create/sugarcrm-events/sugarmarket-events.png)
 
 >[!NOTE]
 >
->La variable [!DNL SugarMarket] Les pages n’incluent pas le nombre d’objets supprimés. Toutefois, les données récupérées via cette source incluent également le nombre supprimé, qui sera marqué d’un indicateur supprimé.
+>Les pages [!DNL SugarMarket] n’incluent pas le nombre d’objets supprimés. Toutefois, les données récupérées via cette source incluent également le nombre supprimé, qui sera marqué d’un indicateur supprimé.

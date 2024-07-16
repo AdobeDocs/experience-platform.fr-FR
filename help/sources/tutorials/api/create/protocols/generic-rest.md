@@ -7,16 +7,16 @@ description: Découvrez comment connecter l’API REST générique à Adobe Expe
 exl-id: 6b414868-503e-49d5-8f4a-5b2fc003dab0
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '945'
-ht-degree: 60%
+source-wordcount: '947'
+ht-degree: 58%
 
 ---
 
-# Créez une connexion de base d’API REST générique à l’aide du [!DNL Flow Service] API
+# Créez une connexion de base d’API REST générique à l’aide de l’API [!DNL Flow Service]
 
 >[!NOTE]
 >
->La source [!DNL Generic REST API] est en version Beta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
+>La source [!DNL Generic REST API] est en version Beta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez la [Présentation des sources](../../../../home.md#terms-and-conditions) .
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -33,7 +33,7 @@ Pour plus d’informations sur la manière d’effectuer des appels vers les API
 
 ### Collecter les informations d’identification requises
 
-Pour [!DNL Flow Service] pour vous connecter à [!DNL Generic REST API], vous devez fournir des identifiants valides pour le type d’authentification de votre choix. [!DNL Generic REST API] prend en charge le code d’actualisation OAuth 2 et l’authentification de base. Consultez les tableaux suivants pour plus d’informations sur les informations d’identification des deux types d’authentification pris en charge.
+Pour que [!DNL Flow Service] se connecte à [!DNL Generic REST API], vous devez fournir des informations d’identification valides pour le type d’authentification de votre choix. [!DNL Generic REST API] prend en charge le code d’actualisation OAuth 2 et l’authentification de base. Consultez les tableaux suivants pour plus d’informations sur les informations d’identification des deux types d’authentification pris en charge.
 
 #### Code d’actualisation OAuth 2
 
@@ -67,7 +67,7 @@ Une connexion de base conserve les informations échangées entre votre source e
 
 ### Créer une connexion de base [!DNL Generic REST API] à l’aide du code d’actualisation OAuth 2
 
-Pour créer un identifiant de connexion de base à l’aide du code d’actualisation OAuth 2, envoyez une requête de POST au `/connections` point de terminaison tout en fournissant vos informations d’identification OAuth 2.
+Pour créer un identifiant de connexion de base à l’aide du code d’actualisation OAuth 2, envoyez une requête de POST au point de terminaison `/connections` tout en fournissant vos informations d’identification OAuth 2.
 
 **Format d’API**
 
@@ -110,12 +110,12 @@ curl -X POST \
 | `description` | (Facultatif) Propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion de base. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion associé à [!DNL Generic REST API]. Cet ID fixe est `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
 | `auth.specName` | Type d’authentification que vous utilisez pour authentifier votre source sur Platform. |
-| `auth.params.host` | L’URL racine utilisée pour se connecter à votre [!DNL Generic REST API] source. |
+| `auth.params.host` | URL racine utilisée pour se connecter à la source [!DNL Generic REST API]. |
 | `auth.params.accessToken` | Jeton d’accès correspondant utilisé pour authentifier la source. Ceci est requis pour l’authentification basée sur OAuth. |
 
 **Réponse**
 
-Une réponse réussie renvoie la nouvelle connexion de , y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
+Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
 
 ```json
 {
@@ -126,7 +126,7 @@ Une réponse réussie renvoie la nouvelle connexion de , y compris son identifia
 
 ### Créer une connexion de base [!DNL Generic REST API] à l’aide de l’authentification de base
 
-Pour créer une [!DNL Generic REST API] connexion de base à l’aide de l’authentification de base, effectuez une requête de POST à l’adresse `/connections` point d’entrée de [!DNL Flow Service] API lors de la fourniture de vos informations d’authentification de base.
+Pour créer une connexion de base [!DNL Generic REST API] à l’aide de l’authentification de base, envoyez une requête de POST au point de terminaison `/connections` de l’API [!DNL Flow Service] tout en fournissant vos informations d’authentification de base.
 
 **Format d’API**
 
@@ -170,9 +170,9 @@ curl -X POST \
 | `description` | (Facultatif) Propriété que vous pouvez inclure pour fournir plus d’informations sur votre connexion de base. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion associé à [!DNL Generic REST API]. Cet ID fixe est `4e98f16f-87d6-4ef0-bdc6-7a2b0fe76e62`. |
 | `auth.specName` | Type d’authentification que vous utilisez pour connecter votre source à Platform. |
-| `auth.params.host` | L’URL racine utilisée pour se connecter à votre [!DNL Generic REST API] source. |
-| `auth.params.username` | Le nom d’utilisateur correspondant à votre [!DNL Generic REST API] source. Ceci est requis pour l’authentification de base. |
-| `auth.params.password` | Le mot de passe qui correspond à votre [!DNL Generic REST API] source. Ceci est requis pour l’authentification de base. |
+| `auth.params.host` | URL racine utilisée pour se connecter à la source [!DNL Generic REST API]. |
+| `auth.params.username` | Nom d’utilisateur correspondant à votre source [!DNL Generic REST API]. Ceci est requis pour l’authentification de base. |
+| `auth.params.password` | Mot de passe correspondant à votre source [!DNL Generic REST API]. Ceci est requis pour l’authentification de base. |
 
 **Réponse**
 
@@ -190,4 +190,4 @@ Une réponse réussie renvoie la nouvelle connexion de base, y compris son ident
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL Generic REST API] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer les données de protocoles à Platform à l’aide de la variable [!DNL Flow Service] API](../../collect/protocols.md)
+* [Créez un flux de données pour importer les données de protocoles à Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/protocols.md)

@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: Fonctions de mappage PQL
-description: Le langage de requête de profil (PQL) offre des fonctions pour faciliter l’interaction avec des cartes.
+description: Profile Query Language (PQL) offre des fonctions pour faciliter l’interaction avec les cartes.
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '156'
-ht-degree: 90%
+ht-degree: 76%
 
 ---
 
 # Fonctions de mappage
 
-[!DNL Profile Query Language] (PQL) offre des fonctions permettant de faciliter l&#39;interaction avec les cartes. Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
+[!DNL Profile Query Language] (PQL) offre des fonctions pour faciliter l’interaction avec les cartes. Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
 
 ## Obtenir
 

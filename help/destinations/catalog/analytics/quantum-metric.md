@@ -1,22 +1,22 @@
 ---
 keywords: Extension Quantum Metric;mesure quantique;mesure quantique;mesure quantique
 title: Extension Quantum Metric
-description: L’extension Quantum Metric est une destination d’analyse de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Quantum Metric est une destination d’analyse de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: b88df05f-0559-4568-9251-2d00f9223edb
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '471'
-ht-degree: 87%
+source-wordcount: '460'
+ht-degree: 89%
 
 ---
 
 # Extension [!DNL Quantum Metric] {#quantum-metric-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Le [!DNL Quantum Metric] l’extension de balise facilite le déploiement sans code de [!DNL Quantum Metric's] fonctionnalités de collecte de données. En outre, cette extension offre la possibilité de capturer des éléments de données contenant des informations utiles à partir de la variable [!DNL Quantum Metric] API.
+L’extension de balise [!DNL Quantum Metric] facilite le déploiement sans code des fonctionnalités de collecte de données [!DNL Quantum Metric's]. En outre, cette extension offre la possibilité de capturer des éléments de données contenant des informations utiles de l’API [!DNL Quantum Metric].
 
-[!DNL Quantum Metric] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101535.quantum-metric-extension-for-adobe-launch.html).
+[!DNL Quantum Metric] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101535.quantum-metric-extension-for-adobe-launch.html).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Quantum Metric] extension :
+Pour installer l’extension [!DNL Quantum Metric], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

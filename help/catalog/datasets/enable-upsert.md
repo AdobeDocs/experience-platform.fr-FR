@@ -17,7 +17,7 @@ Ce tutoriel décrit le processus d’activation d’un jeu de données avec des 
 
 >[!NOTE]
 >
->Le workflow décrit dans ce tutoriel ne fonctionne que pour l’ingestion par lots. Pour les upserts d’ingestion par flux, consultez le guide sur [Envoi de mises à jour de lignes partielles à Real-time Customer Profile à l’aide de la préparation de données](../../data-prep/upserts.md).
+>Le workflow décrit dans ce tutoriel ne fonctionne que pour l’ingestion par lots. Pour les upserts d’ingestion par flux, reportez-vous au guide sur l’ [envoi de mises à jour de lignes partielles à Real-time Customer Profile à l’aide de Data Prep](../../data-prep/upserts.md).
 
 ## Prise en main
 

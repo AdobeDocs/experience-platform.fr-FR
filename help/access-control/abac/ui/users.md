@@ -12,19 +12,19 @@ ht-degree: 5%
 
 # Gérer les utilisateurs
 
-Si vous souhaitez afficher les détails et les rôles des utilisateurs auxquels ils sont affectés, sélectionnez la variable **[!UICONTROL Utilisateurs]** .
+Si vous souhaitez afficher les détails et les rôles des utilisateurs auxquels ils sont affectés, sélectionnez l’onglet **[!UICONTROL Utilisateurs]** .
 
-![La page Utilisateurs s’affiche avec la fonction [!UICONTROL Utilisateurs] de l’onglet.](../../images/flac-ui/flac-users-tab.png)
+![Page Utilisateurs affichée avec l&#39;onglet [!UICONTROL Utilisateurs] mis en surbrillance.](../../images/flac-ui/flac-users-tab.png)
 
 Une liste d’utilisateurs s’affiche. Sélectionnez l’utilisateur que vous souhaitez afficher dans la liste. Vous pouvez également utiliser la barre de recherche pour rechercher l’utilisateur en saisissant son nom ou son adresse électronique.
 
 L’onglet Détails présente un aperçu de l’utilisateur. La présentation affiche le nom des utilisateurs, le type de compte, l’adresse électronique, l’ID d’authentification, les coordonnées et les détails de l’emplacement.
 
-![Page de détails de l’utilisateur avec [!UICONTROL Détails] et le profil utilisateur mis en surbrillance.](../../images/flac-ui/flac-users-details.png)
+![Page de détails de l&#39;utilisateur avec l&#39;onglet [!UICONTROL Détails] et le profil utilisateur mis en surbrillance.](../../images/flac-ui/flac-users-details.png)
 
-Sélectionnez la variable **[!UICONTROL Rôles]** pour afficher les rôles auxquels l’utilisateur est affecté.
+Sélectionnez l’onglet **[!UICONTROL Rôles]** pour afficher les rôles attribués à l’utilisateur.
 
-![La page Rôles affichée avec la fonction [!UICONTROL Rôles] onglet et rôle mis en surbrillance.](../../images/flac-ui/flac-users-roles.png)
+![Page Rôles affichée avec l&#39;onglet [!UICONTROL Rôles] et rôle en surbrillance.](../../images/flac-ui/flac-users-roles.png)
 
 ## Contrôle d’accès des développeurs et des API avec autorisations des Experience Platform
 
@@ -32,7 +32,7 @@ Sélectionnez la variable **[!UICONTROL Rôles]** pour afficher les rôles auxqu
 >
 >Seuls les administrateurs système peuvent afficher et gérer les informations d’identification de l’API dans les autorisations.
 
-La transition vers les autorisations Adobe Experience Platform comprend d’autres étapes à suivre pour le workflow de l’API développeur qui dépendait auparavant des rôles. Consultez le guide sur la [Authentification API](../../../landing/api-authentication.md) pour plus d’informations.
+La transition vers les autorisations Adobe Experience Platform comprend d’autres étapes à suivre pour le workflow de l’API développeur qui dépendait auparavant des rôles. Pour plus d’informations, consultez le guide sur l’ [authentification API](../../../landing/api-authentication.md) .
 
 La vidéo suivante est destinée à vous aider à comprendre les informations d’identification des développeurs et des API.
 
@@ -40,4 +40,4 @@ La vidéo suivante est destinée à vous aider à comprendre les informations d�
 
 ## Étapes suivantes
 
-Vous avez maintenant appris à afficher les détails des utilisateurs et les rôles auxquels ils sont actuellement ajoutés. Pour en savoir plus sur le contrôle d’accès basé sur les attributs, voir [contrôle d’accès basé sur les attributs - Aperçu](../overview.md).
+Vous avez maintenant appris à afficher les détails des utilisateurs et les rôles auxquels ils sont actuellement ajoutés. Pour en savoir plus sur le contrôle d’accès basé sur les attributs, consultez la [présentation du contrôle d’accès basé sur les attributs](../overview.md).

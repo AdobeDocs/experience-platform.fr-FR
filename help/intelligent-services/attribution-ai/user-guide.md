@@ -17,35 +17,35 @@ Dans le cadre d’Intelligent Services, Attribution AI est un service d’attrib
 
 Ce document sert de guide pour interagir avec Attribution AI dans l’interface utilisateur d’Intelligent Services.
 
-## Création d’un modèle
+## Créer modèle
 
-Dans le [!DNL Adobe Experience Platform] Interface utilisateur, sélectionnez **[!UICONTROL Services]** dans le volet de navigation de gauche. Le navigateur **[!UICONTROL Services]** apparaît et affiche les services intelligents Adobe disponibles. Dans le conteneur pour Attribution AI, sélectionnez **[!UICONTROL Ouvrir]**.
+Dans l’interface utilisateur de [!DNL Adobe Experience Platform], sélectionnez **[!UICONTROL Services]** dans le volet de navigation de gauche. Le navigateur **[!UICONTROL Services]** apparaît et affiche les services intelligents Adobe disponibles. Dans le conteneur pour Attribution AI, sélectionnez **[!UICONTROL Ouvrir]**.
 
 ![Accès à votre modèle](./images/user-guide/open_Attribution_ai.png)
 
 La page de service d’Attribution AI s’affiche. Cette page répertorie les modèles de service d’Attribution AI et affiche des informations les concernant, notamment le nom du modèle, les événements de conversion, la fréquence d’exécution du modèle et l’état de la dernière mise à jour.
 
-Vous pouvez trouver la variable **[!UICONTROL Total des événements de conversion notés]** mesure située dans le coin inférieur droit de la **[!UICONTROL Créer un modèle]** conteneur. Cette mesure effectue le suivi du nombre total d’événements de conversion marqués par Attribution AI pour l’année civile en cours, y compris tous les environnements de test et les modèles de service supprimés.
+Vous trouverez la mesure **[!UICONTROL Nombre total d’événements de conversion notés]** située dans le coin inférieur droit du conteneur **[!UICONTROL Créer un modèle]** . Cette mesure effectue le suivi du nombre total d’événements de conversion marqués par Attribution AI pour l’année civile en cours, y compris tous les environnements de test et les modèles de service supprimés.
 
 ![total des conversions](./images/user-guide/total_conversions.png)
 
-Les modèles de service peuvent être modifiés, clonés et supprimés à l’aide des commandes situées dans la partie droite de l’interface utilisateur. Pour afficher ces commandes, sélectionnez un modèle parmi les **[!UICONTROL Modèles de service]**. Les contrôles contiennent les informations suivantes :
+Les modèles de service peuvent être modifiés, clonés et supprimés à l’aide des commandes situées dans la partie droite de l’interface utilisateur. Pour afficher ces commandes, sélectionnez un modèle parmi vos **[!UICONTROL modèles de service]** existants. Les contrôles contiennent les informations suivantes :
 
-- **[!UICONTROL Modifier]**: sélection **[!UICONTROL Modifier]** vous permet de modifier un modèle de service existant. Vous pouvez modifier le nom, la description, l’état, la fréquence de notation du modèle et d’autres colonnes de jeux de données de score.
-- **[!UICONTROL Cloner]**: sélection **[!UICONTROL Cloner]** copie le modèle de service sélectionné. Vous pouvez ensuite modifier le workflow pour effectuer des ajustements mineurs et le renommer en nouveau modèle.
-- **[!UICONTROL Supprimer]**: vous pouvez supprimer un modèle de service, y compris les exécutions historiques. Le jeu de données de sortie correspondant sera supprimé de Platform. Toutefois, les scores synchronisés dans Real-time Customer Profile ne sont pas supprimés.
-- **[!UICONTROL Source de données]**: lien vers le jeu de données utilisé. Si plusieurs jeux de données sont utilisés par Attribution AI, &quot;Multiple&quot; suivi du nombre de jeux de données s’affiche. Lorsque vous sélectionnez l’hyperlien, la fenêtre contextuelle d’aperçu des jeux de données s’affiche.
-- **[!UICONTROL Détails de la dernière exécution]**: s’affiche uniquement lorsqu’une exécution échoue. Vous trouverez ici des informations sur les raisons pour lesquelles l’exécution a échoué, telles que les codes d’erreur.
+- **[!UICONTROL Modifier]** : la sélection de **[!UICONTROL Modifier]** vous permet de modifier un modèle de service existant. Vous pouvez modifier le nom, la description, l’état, la fréquence de notation du modèle et d’autres colonnes de jeux de données de score.
+- **[!UICONTROL Clone]** : la sélection de **[!UICONTROL Clone]** copie le modèle de service sélectionné. Vous pouvez ensuite modifier le workflow pour effectuer des ajustements mineurs et le renommer en nouveau modèle.
+- **[!UICONTROL Supprimer]** : vous pouvez supprimer un modèle de service, y compris les exécutions historiques. Le jeu de données de sortie correspondant sera supprimé de Platform. Toutefois, les scores synchronisés dans Real-time Customer Profile ne sont pas supprimés.
+- **[!UICONTROL Source de données]** : lien vers le jeu de données utilisé. Si plusieurs jeux de données sont utilisés par Attribution AI, &quot;Multiple&quot; suivi du nombre de jeux de données s’affiche. Lorsque vous sélectionnez l’hyperlien, la fenêtre contextuelle d’aperçu des jeux de données s’affiche.
+- **[!UICONTROL Détails de la dernière exécution]** : s’affiche uniquement en cas d’échec d’une exécution. Vous trouverez ici des informations sur les raisons pour lesquelles l’exécution a échoué, telles que les codes d’erreur.
 
 ![Volet latéral](./images/user-guide/multiple-datasets-pane.png)
 
-- **[!UICONTROL Événements de conversion]**: aperçu rapide des événements de conversion configurés pour ce modèle.
-- **[!UICONTROL Intervalle de recherche en amont]**: la période que vous avez définie indiquant le nombre de jours avant l’inclusion des points de contact d’événement de conversion.
-- **[!UICONTROL Points de contact]**: liste de tous les points de contact que vous avez définis lors de la création de ce modèle.
+- **[!UICONTROL Événements de conversion]** : aperçu rapide des événements de conversion configurés pour ce modèle.
+- **[!UICONTROL Intervalle de recherche en amont]** : période que vous avez définie indiquant le nombre de jours avant l’inclusion des points de contact de l’événement de conversion.
+- **[!UICONTROL Points de contact]** : liste de tous les points de contact que vous avez définis lors de la création de ce modèle.
 
 ![](./images/user-guide/side_panel_2.png)
 
-Sélectionner **[!UICONTROL Créer un modèle]** pour commencer.
+Sélectionnez **[!UICONTROL Créer un modèle]** pour commencer.
 
 ![Créer un modèle](./images/user-guide/landing_page.png)
 
@@ -57,21 +57,21 @@ Ensuite, la page de configuration d’Attribution AI s’affiche, où vous pouve
 
 <!-- https://www.adobe.com/go/aai-select-data -->
 
-Par conception, Attribution AI peut utiliser les données Adobe Analytics, Evénement d’expérience et Événement d’expérience client pour calculer les scores d’attribution. Lors de la sélection d’un jeu de données, seuls les jeux compatibles avec Attribution AI sont répertoriés. Pour sélectionner un jeu de données, sélectionnez (**+**) en regard du nom du jeu de données ou cochez la case pour ajouter plusieurs jeux de données à la fois. Vous pouvez également utiliser l’option de recherche pour trouver rapidement les jeux de données qui vous intéressent.
+Par conception, Attribution AI peut utiliser les données Adobe Analytics, Evénement d’expérience et Événement d’expérience client pour calculer les scores d’attribution. Lors de la sélection d’un jeu de données, seuls les jeux compatibles avec Attribution AI sont répertoriés. Pour sélectionner un jeu de données, sélectionnez le symbole (**+**) en regard de son nom ou cochez la case pour ajouter plusieurs jeux de données à la fois. Vous pouvez également utiliser l’option de recherche pour trouver rapidement les jeux de données qui vous intéressent.
 
-Après avoir sélectionné les jeux de données que vous souhaitez utiliser, sélectionnez la variable **[!UICONTROL Ajouter]** pour ajouter les jeux de données au volet d’aperçu du jeu de données.
+Après avoir sélectionné les jeux de données que vous souhaitez utiliser, cliquez sur le bouton **[!UICONTROL Ajouter]** pour ajouter les jeux de données au volet d’aperçu du jeu de données.
 
-![Sélection de jeux de données](./images/user-guide/select-datasets.png)
+![Sélectionner des jeux de données](./images/user-guide/select-datasets.png)
 
-Icône Sélectionner l’information ![icône info](./images/user-guide/info-icon.png) en regard d’un jeu de données, la fenêtre contextuelle d’aperçu du jeu de données s’ouvre.
+La sélection de l’icône d’information ![icône d’information](./images/user-guide/info-icon.png) en regard d’un jeu de données ouvre la fenêtre contextuelle d’aperçu du jeu de données.
 
 ![Sélectionner et rechercher un jeu de données](./images/user-guide/dataset-preview.png)
 
 L’aperçu du jeu de données contient des données telles que l’heure de la dernière mise à jour, le schéma source et un aperçu des dix premières colonnes.
 
-Sélectionner **[!UICONTROL Enregistrer]** pour enregistrer vos brouillons au fur et à mesure que vous vous déplacez dans le workflow. Vous pouvez également enregistrer les configurations de modèle de brouillon et passer à l’étape suivante du workflow. Utilisation **[!UICONTROL Enregistrer et continuer]** pour créer et enregistrer des brouillons lors des configurations de modèle. Cette fonctionnalité vous permet de créer et d’enregistrer des brouillons de la configuration du modèle. Elle est particulièrement utile lorsque vous devez définir de nombreux champs dans le workflow de configuration.
+Sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer vos brouillons au fur et à mesure que vous vous déplacez dans le workflow. Vous pouvez également enregistrer les configurations de modèle de brouillon et passer à l’étape suivante du workflow. Utilisez **[!UICONTROL Enregistrer et continuer]** pour créer et enregistrer des brouillons lors des configurations de modèle. Cette fonctionnalité vous permet de créer et d’enregistrer des brouillons de la configuration du modèle. Elle est particulièrement utile lorsque vous devez définir de nombreux champs dans le workflow de configuration.
 
-![Le workflow Créer de l’onglet Attribution AI Data Science Services avec Enregistrer et enregistrer et continuer est mis en surbrillance.](./images/user-guide/aai-save-save-&-exit.png)
+![Le workflow Créer de l’onglet Attribution AI Data Science Services avec Enregistrer et enregistrer et continuer en surbrillance.](./images/user-guide/aai-save-save-&-exit.png)
 
 ### Complétude du jeu de données {#dataset-completeness}
 
@@ -83,7 +83,7 @@ Dans l’aperçu du jeu de données, il y a une valeur en pourcentage d’exhaus
 >
 >L’exhaustivité des jeux de données est calculée à l’aide de la période de formation maximale pour Attribution AI (un an). Cela signifie que les données de plus d’un an ne sont pas prises en compte lors de l’affichage de la valeur d’exhaustivité de votre jeu de données.
 
-![Complétude du jeu de données](./images/user-guide/dataset-completeness.png)
+![Complexité du jeu de données](./images/user-guide/dataset-completeness.png)
 
 ### Sélection d’une identité {#identity}
 
@@ -97,19 +97,19 @@ Pour sélectionner une identité, sélectionnez la valeur soulignée située dan
 
 ![sélectionner le même espace de noms](./images/user-guide/aai-identity-map-save-and-exit.png)
 
-Dans le cas où plusieurs identités sont disponibles dans un espace de noms, veillez à sélectionner le champ d’identité approprié à votre cas d’utilisation. Par exemple, deux identités de courrier électronique sont disponibles dans l’espace de noms de courrier électronique, un courrier électronique professionnel et un courrier électronique personnel. Selon le cas d’utilisation, un email personnel est plus susceptible d’être renseigné et plus utile dans les prédictions individuelles. Cela signifie que vous pouvez sélectionner `EMAIL (personalEmail.address)` comme votre identité.
+Dans le cas où plusieurs identités sont disponibles dans un espace de noms, veillez à sélectionner le champ d’identité approprié à votre cas d’utilisation. Par exemple, deux identités de courrier électronique sont disponibles dans l’espace de noms de courrier électronique, un courrier électronique professionnel et un courrier électronique personnel. Selon le cas d’utilisation, un email personnel est plus susceptible d’être renseigné et plus utile dans les prédictions individuelles. Cela signifie que vous devez sélectionner `EMAIL (personalEmail.address)` comme identité.
 
 ![Clé de jeu de données non sélectionnée](./images/user-guide/aai-identity-namespace.png)
 
 >[!NOTE]
 >
-> S’il n’existe aucun type d’identité (espace de noms) valide pour un jeu de données, vous devez définir une identité principale et l’affecter à un espace de noms d’identité à l’aide de la variable [éditeur de schéma](../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la page [Espaces de noms Identity Service](../../identity-service/features/namespaces.md) la documentation.
+> S’il n’existe aucun type d’identité valide (espace de noms) pour un jeu de données, vous devez définir une identité principale et l’affecter à un espace de noms d’identité à l’aide de l’ [éditeur de schéma](../../xdm/schema/composition.md#identity). Pour en savoir plus sur les espaces de noms et les identités, consultez la documentation [Espaces de noms Identity Service](../../identity-service/features/namespaces.md) .
 
 ## Mappage du canal média et des champs de campagne {#aai-mapping}
 
 <!-- https://www.adobe.com/go/aai-mapping -->
 
-Une fois que vous avez fini de sélectionner et d’ajouter des jeux de données, la variable **Carte** l’étape de configuration s’affiche. Attribution AI exige que vous mappez le champ Canal multimédia pour chaque jeu de données sélectionné à l’étape précédente. En effet, sans le mappage du canal Media entre les jeux de données, les informations dérivées d’Attribution AI peuvent ne pas s’afficher correctement, ce qui rend la page d’informations difficile à interpréter. Bien que seul le canal Média soit requis, il est vivement recommandé de mapper certains des champs facultatifs tels que l’action Média, le nom de la campagne, le groupe Campagne et la balise Campagne. Cela permet à Attribution AI de fournir des informations plus claires et des résultats optimaux.
+Une fois que vous avez terminé de sélectionner et d’ajouter des jeux de données, l’étape de configuration **Map** s’affiche. Attribution AI exige que vous mappez le champ Canal multimédia pour chaque jeu de données sélectionné à l’étape précédente. En effet, sans le mappage du canal Media entre les jeux de données, les informations dérivées d’Attribution AI peuvent ne pas s’afficher correctement, ce qui rend la page d’informations difficile à interpréter. Bien que seul le canal Média soit requis, il est vivement recommandé de mapper certains des champs facultatifs tels que l’action Média, le nom de la campagne, le groupe Campagne et la balise Campagne. Cela permet à Attribution AI de fournir des informations plus claires et des résultats optimaux.
 
 ![mappage](./images/user-guide/mapping-save-&-exit.png)
 
@@ -125,7 +125,7 @@ Il existe trois types différents de données d’entrée utilisées pour défin
 
 ### Définition des événements de conversion {#define-conversion-events}
 
-Pour définir un événement de conversion, vous devez donner un nom à l’événement et sélectionner le type d’événement en sélectionnant le jeu de données et le champ dans la variable **Sélection d’un jeu de données et d’un champ** menu déroulant.
+Pour définir un événement de conversion, vous devez donner un nom à l’événement et sélectionner le type d’événement en sélectionnant le jeu de données et le champ dans le menu déroulant **Sélectionner un jeu de données et un champ** .
 
 ![menu déroulant oui](./images/user-guide/define-conversion-events.png)
 
@@ -133,21 +133,21 @@ Une fois qu’un événement est sélectionné, un nouveau menu déroulant s’a
 
 >[!NOTE]
 >
->Une chaîne sous votre *nom de la conversion* est mis à jour au fur et à mesure que vous définissez votre événement.
+>Une chaîne sous votre *nom de conversion* est mise à jour lorsque vous définissez votre événement.
 
 ![aucun menu déroulant](./images/user-guide/conversion_event_1.png)
 
-Vous pouvez ensuite sélectionner un jeu de données combiné généré en combinant tous les jeux de données d’entrée à l’étape précédente. Vous pouvez également sélectionner une colonne en fonction de jeux de données individuels dans la variable **Sélection d’un jeu de données et d’un champ** menu déroulant.
+Vous pouvez ensuite sélectionner un jeu de données combiné généré en combinant tous les jeux de données d’entrée à l’étape précédente. Vous pouvez également sélectionner une colonne en fonction de jeux de données individuels dans le menu déroulant **Sélectionner un jeu de données et un champ** .
 
 Les boutons **[!UICONTROL Ajouter un événement]** et **[!UICONTROL Ajouter un groupe]** permettent de définir plus précisément votre conversion. En fonction de la conversion que vous définissez, vous devrez peut-être utiliser les boutons **[!UICONTROL Ajouter un événement]** et **[!UICONTROL Ajouter un groupe]** pour fournir davantage de contexte.
 
 ![ajouter un événement](./images/user-guide/add_event.png)
 
-Sélection **[!UICONTROL Ajouter un événement]** crée des champs supplémentaires qui peuvent être remplis en utilisant la même méthode que celle décrite ci-dessus. Cela permet d’ajouter une instruction ET à la définition de chaîne sous le nom de conversion. Sélectionnez la variable **x** pour supprimer un événement qui a été ajouté.
+Sélectionner **[!UICONTROL Ajouter un événement]** crée des champs supplémentaires qui peuvent être remplis en utilisant la même méthode que celle décrite ci-dessus. Cela permet d’ajouter une instruction ET à la définition de chaîne sous le nom de conversion. Sélectionnez le **x** pour supprimer un événement qui a été ajouté.
 
 ![menu ajouter un événement](./images/user-guide/add_event_result.png)
 
-Sélection **[!UICONTROL Ajouter un groupe]** permet de créer des champs supplémentaires distincts de l’original. Avec l’ajout de groupes, un bouton bleu *Et* apparaît. Sélection **Et** permet de modifier le paramètre pour qu’il contienne &quot;Ou&quot;. « Ou » est utilisé pour définir plusieurs chemins de conversion performants. « Et » prolonge le chemin de conversion pour inclure des conditions supplémentaires.
+Sélectionner **[!UICONTROL Ajouter un groupe]** donne la possibilité de créer des champs supplémentaires distincts de l’original. Avec l’ajout de groupes, un bouton bleu *Et* apparaît. Sélectionner **And** permet de modifier le paramètre pour qu’il contienne &quot;Or&quot;. « Ou » est utilisé pour définir plusieurs chemins de conversion performants. « Et » prolonge le chemin de conversion pour inclure des conditions supplémentaires.
 
 ![utilisation de et/ou](./images/user-guide/and_or.png)
 
@@ -171,7 +171,7 @@ Pour ce point de contact, sélectionnez **equals**.
 
 ![étape 1](./images/user-guide/touchpoint_step1.png)
 
-Une fois qu’un opérateur pour un point de contact est sélectionné, *Saisir la valeur du champ* est mis à disposition. Les valeurs du menu déroulant pour *Saisir la valeur du champ* reposent sur l’opérateur et la valeur du point de contact que vous avez sélectionnés précédemment. Si une valeur n’apparaît pas dans le menu déroulant, vous pouvez la saisir manuellement. Sélectionnez la liste déroulante, puis sélectionnez **CLICK**.
+Une fois qu’un opérateur pour un point de contact est sélectionné, *Saisir la valeur du champ* est mis à disposition. Les valeurs du menu déroulant pour *Saisir la valeur du champ* reposent sur l’opérateur et la valeur du point de contact que vous avez sélectionnés précédemment. Si une valeur n’apparaît pas dans le menu déroulant, vous pouvez la saisir manuellement. Sélectionnez la liste déroulante et sélectionnez **CLICK**.
 
 >[!NOTE]
 >
@@ -181,21 +181,21 @@ Une fois qu’un opérateur pour un point de contact est sélectionné, *Saisir 
 
 Les boutons **Ajouter un événement** et **Ajouter un groupe** permettent de définir plus précisément votre point de contact. En raison de la nature complexe des points de contact, il n’est pas rare d’avoir plusieurs événements et groupes pour un seul point de contact.
 
-Lorsque cette option est sélectionnée, **Ajouter un événement** permet d’ajouter des champs supplémentaires. sélectionnez l’option **x** pour supprimer un événement qui a été ajouté.
+Lorsque cette option est sélectionnée, **Ajouter un événement** permet d’ajouter des champs supplémentaires. sélectionnez le **x** pour supprimer un événement qui a été ajouté.
 
 ![ajouter un événement](./images/user-guide/touchpoint_add_event.png)
 
-Sélection **Ajouter un groupe** vous donne la possibilité de créer des champs supplémentaires distincts de l’original. Avec l’ajout de groupes, un bouton bleu *Et* apparaît. Sélectionner **Et** pour modifier le paramètre, le nouveau paramètre &quot;Ou&quot; est utilisé pour définir plusieurs chemins performants. Ce point de contact particulier n’a qu’un seul chemin performant. Par conséquent, « Ou » n’est pas nécessaire.
+En sélectionnant **Ajouter un groupe**, vous avez la possibilité de créer des champs supplémentaires distincts de l’original. Avec l’ajout de groupes, un bouton bleu *Et* apparaît. Sélectionnez **And** pour modifier le paramètre. Le nouveau paramètre &quot;Or&quot; est utilisé pour définir plusieurs chemins performants. Ce point de contact particulier n’a qu’un seul chemin performant. Par conséquent, « Ou » n’est pas nécessaire.
 
 ![présentation du point de contact](./images/user-guide/add_group_touchpoint.png)
 
 >[!NOTE]
 >
->Utilisez la chaîne sous *Nom du point de contact* pour un aperçu rapide de votre point de contact. Notez que la chaîne correspond au nom du point de contact.
+>Utilisez la chaîne sous *Touchpoint name* pour un aperçu rapide de votre point de contact. Notez que la chaîne correspond au nom du point de contact.
 
 ![](./images/user-guide/touchpoint_string.png)
 
-Vous pouvez ajouter d’autres points de contact en sélectionnant **Ajouter un point de contact** et répétant le processus ci-dessus.
+Vous pouvez ajouter d’autres points de contact en sélectionnant **Ajouter un point de contact** et en répétant le processus ci-dessus.
 
 ![ajouter un point de contact](./images/user-guide/add_touchpoint.png)
 
@@ -229,7 +229,7 @@ Pour modifier l’heure de la journée où vous souhaitez que la notation soit e
 
 Par défaut, un jeu de données de score est créé pour chaque modèle de service dans un schéma standard. Vous pouvez choisir d’ajouter des colonnes supplémentaires en fonction de vos configurations Événement de conversion et Point de contact à la sortie du jeu de données de notation. Commencez par sélectionner des colonnes dans votre jeu de données d’entrée, puis faites-les glisser et déposez-les pour modifier l’ordre en maintenant le bouton gauche de la souris enfoncé sur l’icône de hamburger.
 
-![ajout de colonne de jeu de données de score](./images/user-guide/Add-score-dataset.png)
+![Ajout de colonne de jeu de données de score](./images/user-guide/Add-score-dataset.png)
 
 ### Modélisation basée sur la région (facultative) {#region-based-modeling-optional}
 
@@ -261,13 +261,13 @@ Pour vous assurer d’obtenir le modèle le plus précis possible, il est import
 
 ![période de formation](./images/user-guide/training_window.png)
 
-Une fois la fenêtre de formation sélectionnée, sélectionnez **[!UICONTROL Terminer]** dans le coin supérieur droit. Prévoyez un certain temps pour le traitement des données. Une fois cette opération terminée, une boîte de dialogue s’affiche, confirmant que la configuration de l’instance est terminée. Sélectionner **[!UICONTROL Ok]** pour être redirigé vers le **[!UICONTROL Instances de service]** où vous pouvez voir votre instance de service.
+Une fois que vous avez sélectionné votre fenêtre de formation, sélectionnez **[!UICONTROL Terminer]** dans le coin supérieur droit. Prévoyez un certain temps pour le traitement des données. Une fois cette opération terminée, une boîte de dialogue s’affiche, confirmant que la configuration de l’instance est terminée. Sélectionnez **[!UICONTROL Ok]** pour être redirigé vers la page **[!UICONTROL Instances de service]** où vous pouvez voir votre instance de service.
 
 ![configuration terminée](./images/user-guide/instance_setup_complete.png)
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez réussi à créer une instance de service dans Attribution AI. Une fois que la notation de l’instance est terminée (compter jusqu’à 24 heures), vous êtes prêt à [découvrir les insights d’Attribution AI](./discover-insights.md). De plus, si vous souhaitez télécharger les résultats de la notation, visitez le [téléchargement de scores](./download-scores.md) la documentation.
+En suivant ce tutoriel, vous avez réussi à créer une instance de service dans Attribution AI. Une fois que la notation de l’instance est terminée (compter jusqu’à 24 heures), vous êtes prêt à [découvrir les insights Attribution AI](./discover-insights.md). De plus, si vous souhaitez télécharger les résultats de la notation, consultez la documentation [ sur le téléchargement des scores](./download-scores.md) .
 
 ## Ressources supplémentaires
 

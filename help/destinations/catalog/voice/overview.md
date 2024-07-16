@@ -12,7 +12,7 @@ ht-degree: 83%
 
 # Présentation des destinations de voix du client {#voice-of-customer-destinations}
 
-## Présentation
+## Vue d’ensemble
 
 Les plateformes vocales collectent et regroupent des données issues de diverses sources, y compris des messages vocaux, des données d’appel et des conversations en ligne. Les informations regroupées peuvent être filtrées et analysées pour permettre aux entreprises d’optimiser leur site web en fonction de leurs besoins.
 

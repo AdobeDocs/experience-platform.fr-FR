@@ -28,7 +28,7 @@ Une fois que la suppression du jeu de données est lancée, sa tâche d’expira
 >
 >Si un jeu de données est défini pour expirer, vous devez modifier manuellement les flux de données susceptibles d’ingérer des données dans ce jeu, afin que vos workflows en aval ne soient pas affectés négativement.
 
-La gestion avancée du cycle de vie des données prend en charge les suppressions de jeux de données par le biais du point de terminaison d’expiration du jeu de données et des suppressions d’identifiants (données au niveau de la ligne) à l’aide d’identités primaires via le [point d’entrée de l’ordre de travail](./workorder.md). Vous pouvez également gérer des [expiration des jeux de données](../ui/dataset-expiration.md) et [suppression d’enregistrements](../ui/record-delete.md) via l’interface utilisateur de Platform. Pour plus d’informations, consultez la documentation liée .
+La gestion avancée du cycle de vie des données prend en charge les suppressions de jeux de données par le biais du point de terminaison d’expiration du jeu de données et des suppressions d’identifiants (données au niveau de la ligne) à l’aide des identités primaires via le [point de terminaison de l’ordre de travail](./workorder.md). Vous pouvez également gérer les [expirations de jeux de données](../ui/dataset-expiration.md) et les [ suppressions d’enregistrements](../ui/record-delete.md) via l’interface utilisateur de Platform. Pour plus d’informations, consultez la documentation liée .
 
 >[!NOTE]
 >
@@ -36,11 +36,11 @@ La gestion avancée du cycle de vie des données prend en charge les suppression
 
 ## Prise en main
 
-Le point d’entrée utilisé dans ce guide fait partie de lʼAPI Data Hygiene. Avant de poursuivre, veuillez consulter la section [Guide de l’API](./overview.md) pour plus d’informations sur les en-têtes requis pour les opérations CRUD, les messages d’erreur, les collections Postman et la lecture d’exemples d’appels API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼAPI Data Hygiene. Avant de poursuivre, consultez le [guide d’API](./overview.md) pour plus d’informations sur les en-têtes requis pour les opérations CRUD, les messages d’erreur, les collections Postman et sur la lecture d’exemples d’appels API.
 
 >[!IMPORTANT]
 >
->Lorsque vous effectuez des appels vers l’API d’hygiène des données, vous devez utiliser le paramètre -H `x-sandbox-name: {SANDBOX_NAME}` en-tête .
+>Lors d’appels à l’API d’hygiène des données, vous devez utiliser l’en-tête -H `x-sandbox-name: {SANDBOX_NAME}` .
 
 ## Répertorier les expirations des jeux de données {#list}
 
@@ -75,7 +75,7 @@ Une réponse réussie répertorie les expirations de jeux de données obtenues. 
 
 >[!IMPORTANT]
 >
->La variable `ttlId` dans la réponse est également appelée `{DATASET_EXPIRATION_ID}`. Tous deux font référence à l’identifiant unique pour l’expiration du jeu de données.
+>`ttlId` dans la réponse est également appelé `{DATASET_EXPIRATION_ID}`. Tous deux font référence à l’identifiant unique pour l’expiration du jeu de données.
 
 ```json
 {
@@ -107,11 +107,11 @@ Une réponse réussie répertorie les expirations de jeux de données obtenues. 
 
 ## Rechercher l’expiration d’un jeu de données {#lookup}
 
-Pour rechercher une expiration de jeu de données, effectuez une requête GET avec l’une des options suivantes : `{DATASET_ID}` ou le `{DATASET_EXPIRATION_ID}`.
+Pour rechercher une expiration de jeu de données, effectuez une requête de GET avec le `{DATASET_ID}` ou le `{DATASET_EXPIRATION_ID}`.
 
 >[!IMPORTANT]
 >
->La variable `{DATASET_EXPIRATION_ID}` est appelé `ttlId` dans la réponse. Tous deux font référence à l’identifiant unique pour l’expiration du jeu de données.
+>`{DATASET_EXPIRATION_ID}` est appelé `ttlId` dans la réponse. Tous deux font référence à l’identifiant unique pour l’expiration du jeu de données.
 
 **Format d’API**
 
@@ -233,8 +233,8 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `datasetId` | **Obligatoire** L’identifiant du jeu de données cible pour lequel vous souhaitez planifier une expiration. |
-| `expiry` | **Obligatoire** Date et heure au format ISO 8601. Si la chaîne n’a pas de décalage de fuseau horaire explicite, le fuseau horaire est supposé être UTC. La durée de vie des données du système est définie en fonction de la valeur d’expiration fournie.<br>Remarque :<ul><li>La requête échoue si une expiration de jeu de données existe déjà pour le jeu de données.</li><li>Cette date et cette heure doivent au moins être **24 heures dans le futur**.</li></ul> |
+| `datasetId` | **Obligatoire** Identifiant du jeu de données cible pour lequel vous souhaitez planifier une expiration. |
+| `expiry` | **Obligatoire** Date et heure au format ISO 8601. Si la chaîne n’a pas de décalage de fuseau horaire explicite, le fuseau horaire est supposé être UTC. La durée de vie des données du système est définie en fonction de la valeur d’expiration fournie.<br>Remarque :<ul><li>La requête échoue si une expiration de jeu de données existe déjà pour le jeu de données.</li><li>Cette date et cette heure doivent être au moins **24 heures dans le futur**.</li></ul> |
 | `displayName` | Nom d’affichage facultatif pour la demande d’expiration de jeu de données. |
 | `description` | Une description facultative de la requête d’expiration. |
 
@@ -276,7 +276,7 @@ Un état HTTP 400 (Bad Request) se produit si une expiration de jeu de données 
 
 ## Mettre à jour l’expiration d’un jeu de données {#update}
 
-Pour mettre à jour la date d’expiration d’un jeu de données, utilisez une requête de PUT et le `ttlId`. Vous pouvez mettre à jour la variable `displayName`, `description`, et/ou `expiry` informations.
+Pour mettre à jour une date d’expiration pour un jeu de données, utilisez une requête de PUT et le `ttlId`. Vous pouvez mettre à jour les informations `displayName`, `description` et/ou `expiry`.
 
 >[!NOTE]
 >
@@ -290,11 +290,11 @@ PUT /ttl/{DATASET_EXPIRATION_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{DATASET_EXPIRATION_ID}` | L’identifiant de l’expiration du jeu de données que vous souhaitez modifier. Remarque : On parle alors de `ttlId` dans la réponse. |
+| `{DATASET_EXPIRATION_ID}` | L’identifiant de l’expiration du jeu de données que vous souhaitez modifier. Remarque : On parle ici de `ttlId` dans la réponse. |
 
 **Requête**
 
-La requête suivante replanifie une expiration de jeu de données. `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` à fin 2024 (heure de Greenwich). Si l’expiration du jeu de données existant est trouvée, cette expiration est mise à jour avec le nouveau `expiry` .
+La requête suivante replanifie l’expiration d’un jeu de données `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` à la fin de l’année 2024 (Heure moyenne de Greenwich). Si l’expiration du jeu de données existant est trouvée, cette expiration est mise à jour avec la nouvelle valeur `expiry`.
 
 ```shell
 curl -X PUT \
@@ -313,7 +313,7 @@ curl -X PUT \
 
 | Propriété | Description |
 | --- | --- |
-| `expiry` | **Obligatoire** Date et heure au format ISO 8601. Si la chaîne n’a pas de décalage de fuseau horaire explicite, le fuseau horaire est supposé être UTC. La durée de vie des données du système est définie en fonction de la valeur d’expiration fournie. Tout horodatage d’expiration précédent pour le même jeu de données doit être remplacé par la nouvelle valeur d’expiration que vous avez fournie. Cette date et cette heure doivent au moins être **24 heures dans le futur**. |
+| `expiry` | **Obligatoire** Date et heure au format ISO 8601. Si la chaîne n’a pas de décalage de fuseau horaire explicite, le fuseau horaire est supposé être UTC. La durée de vie des données du système est définie en fonction de la valeur d’expiration fournie. Tout horodatage d’expiration précédent pour le même jeu de données doit être remplacé par la nouvelle valeur d’expiration que vous avez fournie. Cette date et cette heure doivent être au moins **24 heures dans le futur**. |
 | `displayName` | Un nom d’affichage de la requête d’expiration. |
 | `description` | Une description facultative de la requête d’expiration. |
 
@@ -390,7 +390,7 @@ Une réponse réussie renvoie un statut HTTP 204 (No Content), et l’attribut
 
 ## Récupérer l’historique du statut d’expiration d’un jeu de données {#retrieve-expiration-history}
 
-Pour rechercher l’historique de l’état d’expiration d’un jeu de données spécifique, utilisez la variable `{DATASET_ID}` et `include=history` paramètre de requête dans une requête de recherche. Le résultat comprend des informations sur la création de l’expiration du jeu de données, les mises à jour qui ont été appliquées et son annulation ou son exécution (le cas échéant). Vous pouvez également utiliser la variable `{DATASET_EXPIRATION_ID}` pour récupérer l’historique des états d’expiration du jeu de données.
+Pour rechercher l’historique de l’état d’expiration d’un jeu de données spécifique, utilisez le paramètre de requête `{DATASET_ID}` et `include=history` dans une requête de recherche. Le résultat comprend des informations sur la création de l’expiration du jeu de données, les mises à jour qui ont été appliquées et son annulation ou son exécution (le cas échéant). Vous pouvez également utiliser le `{DATASET_EXPIRATION_ID}` pour récupérer l’historique de l’état d’expiration du jeu de données.
 
 **Format d’API**
 
@@ -402,7 +402,7 @@ GET /ttl/{DATASET_EXPIRATION_ID}?include=history
 | Paramètre | Description |
 | --- | --- |
 | `{DATASET_ID}` | L’identifiant du jeu de données dont vous souhaitez consulter l’historique des expirations. |
-| `{DATASET_EXPIRATION_ID}` | L’identifiant de l’expiration du jeu de données. Remarque : On parle alors de `ttlId` dans la réponse. |
+| `{DATASET_EXPIRATION_ID}` | L’identifiant de l’expiration du jeu de données. Remarque : On parle ici de `ttlId` dans la réponse. |
 
 {style="table-layout:auto"}
 
@@ -478,7 +478,7 @@ Le tableau suivant décrit les paramètres de requête disponibles lorsque les [
 
 >[!NOTE]
 >
->La variable `description`, `displayName`, et `datasetName` Les paramètres contiennent tous la possibilité d’effectuer des recherches à l’aide de valeurs LIKE. Cela signifie que vous pouvez trouver des expirations de jeux de données planifiées nommées : &quot;Name123&quot;, &quot;Name183&quot;, &quot;DisplayName1234&quot; en recherchant la chaîne &quot;Name1&quot;.
+>Les paramètres `description`, `displayName` et `datasetName` contiennent tous la possibilité de rechercher par des valeurs LIKE. Cela signifie que vous pouvez trouver des expirations de jeux de données planifiées nommées : &quot;Name123&quot;, &quot;Name183&quot;, &quot;DisplayName1234&quot; en recherchant la chaîne &quot;Name1&quot;.
 
 | Paramètre | Description | Exemple |
 | --- | --- | --- |
@@ -495,11 +495,11 @@ Le tableau suivant décrit les paramètres de requête disponibles lorsque les [
 | `executedDate` / `executedFromDate` / `executedToDate` | Filtre les résultats selon une date d’exécution exacte, une date de fin d’exécution ou une date de début d’exécution. Ils sont utilisés pour récupérer des données ou des enregistrements associés à l’exécution d’une opération à une date spécifique, avant une date particulière ou après une date particulière. | `executedDate=2023-02-05T19:34:40.383615Z` |
 | `expiryDate` / `expiryToDate` / `expiryFromDate` | Correspond aux expirations qui doivent être exécutées ou qui ont déjà été exécutées au cours de l’intervalle spécifié. | `expiryFromDate=2099-01-01&expiryToDate=2100-01-01` |
 | `limit` | Nombre entier compris entre 1 et 100 qui indique le nombre maximal d’expirations à renvoyer. La valeur par défaut est 25. | `limit=50` |
-| `orderBy` | La variable `orderBy` Le paramètre de requête spécifie l’ordre de tri des résultats renvoyés par l’API. Utilisez-le pour classer les données en fonction d’un ou de plusieurs champs, soit par ordre croissant (ASC), soit par ordre décroissant (DESC). Utilisez le préfixe + ou - pour désigner respectivement ASC et DESC. Les valeurs suivantes sont acceptées : `displayName`, `description`, `datasetName`, `id`, `updatedBy`, `updatedAt`, `expiry`, `status`. | `-datasetName` |
+| `orderBy` | Le paramètre de requête `orderBy` spécifie l’ordre de tri des résultats renvoyés par l’API. Utilisez-le pour classer les données en fonction d’un ou de plusieurs champs, soit par ordre croissant (ASC), soit par ordre décroissant (DESC). Utilisez le préfixe + ou - pour désigner respectivement ASC et DESC. Les valeurs suivantes sont acceptées : `displayName`, `description`, `datasetName`, `id`, `updatedBy`, `updatedAt`, `expiry`, `status`. | `-datasetName` |
 | `orgId` | Correspond aux expirations de jeux de données dont l’ID d’organisation correspond à celui du paramètre. Cette valeur par défaut est celle des en-têtes `x-gw-ims-org-id`, et est ignorée sauf si la requête fournit un jeton de service. | `orgId=885737B25DC460C50A49411B@AdobeOrg` |
 | `page` | Nombre entier qui indique la page des expirations à renvoyer. | `page=3` |
 | `sandboxName` | Correspond aux expirations de jeux de données dont le sandbox correspond exactement à l’argument. La valeur par défaut est le nom du sandbox dans l’en-tête `x-sandbox-name` de la requête. Utilisez `sandboxName=*` pour inclure les expirations de jeux de données de tous les sandbox. | `sandboxName=dev1` |
-| `search` | Correspond aux expirations où la chaîne spécifiée correspond exactement à l’ID d’expiration ou est **contenu** dans l’un de ces champs :<br><ul><li>Auteur</li><li>nom d&#39;affichage</li><li>description</li><li>nom d&#39;affichage</li><li>nom du jeu de données</li></ul> | `search=TESTING` |
+| `search` | Correspond aux expirations où la chaîne spécifiée correspond exactement à l’ID d’expiration ou est **contenu** dans l’un de ces champs :<br><ul><li>Auteur</li><li>nom d&#39;affichage</li><li>description</li><li>nom d&#39;affichage</li><li>nom du jeu de données</li></ul> | `search=TESTING` |
 | `status` | Liste de statuts séparés par des virgules. Lorsqu’elle est incluse, la réponse correspond aux expirations de jeux de données dont le statut actuel fait partie de ceux répertoriés. | `status=pending,cancelled` |
 | `ttlId` | Correspond à la demande d’expiration avec l’ID donné. | `ttlID=SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` |
 | `updatedDate` / `updatedToDate` / `updatedFromDate` | Comme `createdDate` / `createdFromDate` / `createdToDate`, mais correspond à l’heure de mise à jour de l’expiration d’un jeu de données plutôt qu’à l’heure de création.<br><br>Une expiration est considérée comme mise à jour à chaque modification, y compris lorsqu’elle est créée, annulée ou exécutée. | `updatedDate=2022-01-01` |

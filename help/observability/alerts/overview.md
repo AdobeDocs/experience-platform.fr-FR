@@ -6,7 +6,7 @@ feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 source-git-commit: cb889a169aa42b761b0eeff5aa7fb771ad6ed4be
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '797'
 ht-degree: 89%
 
 ---
@@ -83,7 +83,7 @@ Pour utiliser des alertes dans l’interface utilisateur de Platform, vous devez
 >
 >Pour plus d’informations sur la gestion des autorisations dans Platform, consultez la [documentation sur le contrôle d’accès](../../access-control/ui/overview.md).
 
-Avec l’autorisation Afficher les alertes , vous pouvez afficher les alertes reçues en sélectionnant l’icône représentant une cloche (![Icône Bell](../images/alerts/overview/icon.png)) dans le coin supérieur droit.
+Avec l’autorisation Afficher les alertes, vous pouvez afficher les alertes reçues en sélectionnant l’icône représentant une cloche (![Icône de cloche](../images/alerts/overview/icon.png)) dans le coin supérieur droit.
 
 ![](../images/alerts/overview/ui.png)
 

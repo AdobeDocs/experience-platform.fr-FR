@@ -7,8 +7,8 @@ description: Découvrez comment connecter PayPal à Adobe Experience Platform à
 exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 64%
+source-wordcount: '455'
+ht-degree: 61%
 
 ---
 
@@ -23,9 +23,9 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-* [Environnements de test](../../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance de Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL PayPal] en utilisant la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL PayPal] à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
@@ -33,12 +33,12 @@ Pour connecter [!DNL Flow Service] à [!DNL PayPal], vous devez fournir des vale
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `host` | L’URL de la variable [!DNL PayPal] instance. (par défaut : api.sandbox.paypal.com). |
-| `clientId` | L’ID client associé à votre [!DNL PayPal] application. |
-| `clientSecret` | Le secret client associé à votre [!DNL PayPal] application. |
+| `host` | URL de l’instance [!DNL PayPal]. (valeur par défaut : api.sandbox.paypal.com). |
+| `clientId` | L’ID client associé à votre application [!DNL PayPal]. |
+| `clientSecret` | Le secret client associé à votre application [!DNL PayPal]. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL PayPal] est : `221c7626-58f6-4eec-8ee2-042b0226f03b` |
 
-Pour plus d’informations sur la prise en main, reportez-vous à la section [ce document PayPal](https://developer.paypal.com/docs/api/overview/#get-credentials).
+Pour plus d’informations sur la prise en main, reportez-vous à [ce document PayPal](https://developer.paypal.com/docs/api/overview/#get-credentials).
 
 ### Utiliser les API Platform
 
@@ -88,14 +88,14 @@ curl -X POST \
 
 | Propriété | Description |
 | --------- | ----------- |
-| `auth.params.host` | L’URL de la variable [!DNL PayPal] instance. |
-| `auth.params.clientId` | L’ID client associé à votre [!DNL PayPal] instance. |
-| `auth.params.clientSecret` | Le secret client associé à votre [!DNL PayPal] instance. |
-| `connectionSpec.id` | Le [!DNL PayPal] identifiant de spécification de connexion : `221c7626-58f6-4eec-8ee2-042b0226f03b`. |
+| `auth.params.host` | URL de l’instance [!DNL PayPal]. |
+| `auth.params.clientId` | L’ID client associé à votre instance [!DNL PayPal]. |
+| `auth.params.clientSecret` | Le secret client associé à votre instance [!DNL PayPal]. |
+| `connectionSpec.id` | ID de spécification de connexion [!DNL PayPal] : `221c7626-58f6-4eec-8ee2-042b0226f03b`. |
 
 **Réponse**
 
-Une réponse réussie renvoie la nouvelle connexion de , y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
+Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
 
 ```json
 {
@@ -109,4 +109,4 @@ Une réponse réussie renvoie la nouvelle connexion de , y compris son identifia
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL PayPal] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer des données de paiement à Platform à l’aide de la variable [!DNL Flow Service] API](../../collect/payments.md)
+* [Créez un flux de données pour importer les données de paiement dans Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/payments.md)

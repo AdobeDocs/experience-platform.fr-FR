@@ -11,16 +11,16 @@ ht-degree: 11%
 
 ---
 
-# [!UICONTROL Identité] type de données
+# Type de données [!UICONTROL Identity]
 
-[!UICONTROL Identité] est un type de données XDM standard utilisé pour distinguer clairement les personnes qui interagissent avec des expériences numériques. L’identité est établie par un fournisseur d’identité, qui est lui-même référencé dans une variable `namespace` attribut. Dans chaque `namespace`, l’identité est unique.
+[!UICONTROL Identity] est un type de données XDM standard utilisé pour distinguer clairement les personnes qui interagissent avec des expériences numériques. L’identité est établie par un fournisseur d’identité, qui est lui-même référencé dans un attribut `namespace`. Dans chaque `namespace`, l’identité est unique.
 
 <img src="../images/data-types/identity.png" width="550" /><br />
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `namespace` | Objet | Objet contenant un seul champ de chaîne (`code`), qui indique l’espace de noms associé au fourni `id` attribut. |
-| `authenticatedState` | Chaîne | État authentifié de cette identité au moment de l’événement d’expérience observé. Voir [annexe](#authenticatedState) pour les valeurs et définitions acceptées. |
+| `namespace` | Objet | Objet contenant un seul champ de chaîne (`code`), qui indique l’espace de noms associé à l’attribut `id` fourni. |
+| `authenticatedState` | Chaîne | État authentifié de cette identité au moment de l’événement d’expérience observé. Consultez l’ [annexe](#authenticatedState) pour connaître les valeurs et les définitions acceptées. |
 | `id` | Chaîne | Identité du consommateur dans l’espace de noms associé. |
 | `primary` | Booléen | Indique s’il s’agit de l’identité principale de l’individu. Chaque individu ne peut avoir qu&#39;une seule identité principale. |
 | `xid` | Chaîne | Lorsqu’elle est présente, cette valeur représente un identifiant d’espace de noms croisé unique pour tous les identifiants d’espace de noms inclus dans tous les espaces de noms. |
@@ -29,12 +29,12 @@ ht-degree: 11%
 
 Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.schema.json)
 
 ## Annexe
 
-La section suivante contient des informations supplémentaires sur la variable [!UICONTROL Identité] type de données.
+La section suivante contient des informations supplémentaires sur le type de données [!UICONTROL Identity].
 
 ## Valeurs acceptées pour authenticatedState {#authenticatedState}
 

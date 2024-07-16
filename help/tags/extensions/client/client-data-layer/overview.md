@@ -91,7 +91,7 @@ Les sections suivantes décrivent les actions prises en charge par l’extension
 
 ### Réinitialisation de la couche de données
 
-L’extension vous permet de réinitialiser la longueur de couche de données, ce qui peut vous aider à maintenir une taille limitée pour une application d’une seule page (SPA).
+L’extension vous permet de réinitialiser la longueur de couche de données, ce qui peut vous aider à maintenir une taille limitée pour une application monopage.
 
 Cependant, il n’est actuellement pas possible de supprimer complètement les informations définies précédemment pendant les méthodes push.
 

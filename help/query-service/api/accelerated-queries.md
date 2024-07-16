@@ -18,7 +18,7 @@ Avant de poursuivre avec ce guide, assurez-vous d’avoir lu et compris le [guid
 
 ## Prise en main
 
-Le SKU Data Distiller est requis pour utiliser la boutique de requêtes accélérées. Veuillez consulter la [packaging](../packaging.md) et [barrières de sécurité](../guardrails.md#query-accelerated-store), et [licences](../data-distiller/license-usage.md) documentation relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
+Le SKU Data Distiller est requis pour utiliser la boutique de requêtes accélérées. Veuillez consulter la documentation [packaging](../packaging.md) et [guardrails](../guardrails.md#query-accelerated-store), ainsi que la documentation [licensing](../data-distiller/license-usage.md) relative au SKU de Data Distiller. Si vous ne disposez pas du SKU de Data Distiller, contactez votre représentant du service client Adobe pour plus d’informations.
 
 Les sections suivantes détaillent les appels d’API nécessaires pour accéder sans état à la boutique de requêtes accélérées via l’API Query Service. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 

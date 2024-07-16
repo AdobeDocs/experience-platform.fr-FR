@@ -4,7 +4,7 @@ description: Découvrez comment gérer les signaux d’opt-in et d’opt-out des
 exl-id: 7762c42f-71c8-4f29-a96b-c6c04b838a91
 source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '609'
 ht-degree: 96%
 
 ---

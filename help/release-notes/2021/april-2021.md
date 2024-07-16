@@ -1,5 +1,5 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform Avril 2021
+title: Notes de mise à jour d’Adobe Experience Platform - Avril 2021
 description: Les notes de mise à jour d’avril 2021 pour Adobe Experience Platform.
 doc-type: release notes
 last-update: April 21, 2021
@@ -7,7 +7,7 @@ author: ens72741
 exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '886'
 ht-degree: 97%
 
 ---
@@ -51,7 +51,7 @@ Intelligent Services permet aux analystes et spécialistes du marketing d’exp
 
 ### Customer AI
 
-Customer AI disponible dans Real-time Customer Data Platform est utilisé pour générer des scores de propension personnalisés tels que l’attrition et la conversion pour des profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème de machine learning ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
+Customer AI disponible dans Real-Time Customer Data Platform est utilisé pour générer des scores de propension personnalisés tels que l’attrition et la conversion pour des profils individuels à grande échelle. Cette opération s’effectue sans qu’il soit nécessaire de transformer les besoins professionnels en un problème de machine learning ou d’avoir recours à un algorithme, à une formation ou à un déploiement.
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
@@ -89,7 +89,7 @@ Pour plus d’informations sur [!DNL Segmentation Service], consultez la [prése
 
 Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
-Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 | Fonctionnalité | Description |
 | ------- | ----------- |

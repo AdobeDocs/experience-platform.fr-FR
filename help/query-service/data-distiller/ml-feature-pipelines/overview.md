@@ -15,7 +15,7 @@ ht-degree: 5%
 
 This document provides an overview of the AI/ML feature pipelines use case and details the steps required to get started with the cloud machine learning environment (CMLE) notebooks. -->
 
-Data Distiller permet aux spécialistes des données et aux ingénieurs d’enrichir leurs pipelines d’apprentissage automatique avec des données d’expérience client à forte valeur ajoutée qui ont été collectées et traitées dans Adobe Experience Platform. Depuis un [!DNL Python] dans n’importe quel environnement, vous pouvez explorer de manière interactive les données client dans l’Experience Platform, définir et calculer les fonctionnalités à partir des données et lire les fonctionnalités calculées dans votre environnement d’apprentissage automatique pour la modélisation.
+Data Distiller permet aux spécialistes des données et aux ingénieurs d’enrichir leurs pipelines d’apprentissage automatique avec des données d’expérience client à forte valeur ajoutée qui ont été collectées et traitées dans Adobe Experience Platform. À partir d’un notebook [!DNL Python] dans n’importe quel environnement, vous pouvez explorer de manière interactive les données client dans l’Experience Platform, définir et calculer les fonctionnalités à partir des données, et lire les fonctionnalités calculées dans votre environnement d’apprentissage automatique pour la modélisation.
 
 >[!IMPORTANT]
 >
@@ -25,15 +25,15 @@ Data Distiller permet aux spécialistes des données et aux ingénieurs d’enri
 
 - Data Distiller de puissantes fonctionnalités de requête, vous pouvez extraire des fonctionnalités significatives des riches données comportementales disponibles dans l’Experience Platform. Vous pouvez ensuite importer les données de fonction distillée dans votre environnement d’apprentissage automatique sans avoir à copier un grand volume de données d’événement en dehors de l’Experience Platform.
 - Lisez le jeu de données de fonctionnalités préparé dans vos outils d’apprentissage automatique préférés et combinez-le à d’autres fonctionnalités dérivées des données d’entreprise pour former, tester, ajuster et déployer des modèles personnalisés adaptés à votre entreprise.
-- Générez des scores, des prédictions ou des recommandations à partir de vos modèles et renvoyez la sortie à l’Experience Platform afin d’optimiser les expériences client via Real-time Customer Data Platform et Adobe Journey Optimizer.
+- Générez des scores, des prédictions ou des recommandations à partir de vos modèles et renvoyez la sortie à l’Experience Platform afin d’optimiser les expériences client via Real-Time Customer Data Platform et Adobe Journey Optimizer.
 
 ## Conditions préalables {#prerequisites}
 
 Ce processus nécessite une compréhension pratique des différents aspects de Adobe Experience Platform. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux concepts suivants :
 
-- Comment [authentification et accès aux API Experience Platform](../../../landing/api-authentication.md).
-- Sandbox : [Autorisations de contrôle d’accès en fonction des attributs](../../../access-control/abac/overview.md) et comment créer et gérer des rôles, ainsi qu’affecter les autorisations de ressources souhaitées pour ces rôles.
-- Gouvernance des données : comment [appliquez des libellés d’utilisation des données aux jeux de données et aux champs, en classant chaque](../../../data-governance/labels/overview.md) conformément aux politiques de gouvernance des données et aux politiques de contrôle d’accès associées.
+- Comment [authentifier et accéder aux API Experience Platform](../../../landing/api-authentication.md).
+- Environnements de test : [Autorisations de contrôle d’accès basées sur les attributs](../../../access-control/abac/overview.md) et comment créer et gérer des rôles, ainsi qu’affecter les autorisations de ressources souhaitées pour ces rôles.
+- Gouvernance des données : comment [ appliquer des libellés d’utilisation des données aux jeux de données et aux champs, en les classant chaque](../../../data-governance/labels/overview.md) en fonction des stratégies de gouvernance des données et des stratégies de contrôle d’accès associées.
 
 ## Étapes suivantes
 
@@ -41,17 +41,17 @@ En lisant ce document, vous avez découvert les concepts importants qui sous-ten
 
 Les documents inclus dans cette série de guides décrivent les étapes de base de la création de pipelines de fonctionnalités à partir d’Experience Platform pour alimenter des modèles personnalisés dans votre environnement d’apprentissage automatique. Vous êtes maintenant prêt à établir une connexion entre Data Distiller et votre [!DNL Jupyter Notebook].
 
-- **Configuration**: [Connexion à Data Distiller à partir d’un [!DNL Python] notebook](./establish-connection.md)
+- **Configurer** : [Se connecter à Data Distiller à partir d’un  [!DNL Python] notebook](./establish-connection.md)
 
 La documentation liée ci-dessous correspond aux étapes indiquées dans l&#39;infographie ci-dessus.
 
-- **Étape 1**: [Exploration et analyse des jeux de données](./exploratory-analysis.md)
-- **Étape 2**: [Fonctionnalités d’ingénierie pour l’apprentissage automatique](./feature-engineering.md)
-- **Étape 3**: [Exportation des jeux de données de fonctionnalités](./export-data.md)
+- **Étape 1** : [Explorer et analyser des jeux de données](./exploratory-analysis.md)
+- **Étape 2** : [Fonctionnalités de l’ingénieur pour l’apprentissage automatique](./feature-engineering.md)
+- **Étape 3** : [Exporter des jeux de données de fonctionnalités](./export-data.md)
 
 ## Ressources supplémentaires
 
-- [aepp](https://github.com/adobe/aepp): un open source géré par Adobe [!DNL Python] Bibliothèque pour envoyer des requêtes à Data Distiller et à d’autres services Experience Platform depuis [!DNL Python] code.
+- [aepp](https://github.com/adobe/aepp) : une bibliothèque [!DNL Python] Open Source gérée par l’Adobe pour effectuer des requêtes vers Data Distiller et d’autres services Experience Platform à partir du code [!DNL Python].
 
 <!-- Old content below -->
 

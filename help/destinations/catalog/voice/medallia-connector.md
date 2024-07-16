@@ -36,7 +36,7 @@ Un détaillant cherche à mieux comprendre les préférences du client en matiè
 Les informations suivantes sont nécessaires pour établir la connexion à Medallia :
 * **URL du point d’entrée du jeton OAuth**
 * **Identifiant du client**
-* **Secret client**
+* **Secret du client**
 * **URL de passerelle API**
 * **Nom de l’API d’importation**
 
@@ -59,7 +59,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres nouvellement qualifiés d’un segment, ainsi que les champs de schéma souhaités (par exemple : adresse email, numéro de téléphone, nom), tels qu’ils sont sélectionnés dans l’écran de sélection des attributs de profil de la variable [workflow d’activation de destination](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Type d’exportation | **[!UICONTROL Basé sur les profils]** | Vous exportez tous les membres nouvellement qualifiés d’un segment, ainsi que les champs de schéma souhaités (par exemple : adresse email, numéro de téléphone, nom), tel que sélectionné dans l’écran de sélection des attributs de profil du [workflow d’activation de destination](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
 | Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -68,7 +68,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **** et des **** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -76,11 +76,11 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
-* **[!UICONTROL URL du point d’entrée du jeton OAuth]**: prend généralement la forme https://instance.medallia.tld/oauth/tenant/token.
-* **[!UICONTROL ID client]**: procurez-vous des informations auprès de votre équipe de diffusion Medallia.
-* **[!UICONTROL Secret du client]**: procurez-vous des informations auprès de votre équipe de diffusion Medallia.
+* **[!UICONTROL URL du point d’entrée du jeton OAuth]** : prend généralement la forme https://instance.medallia.tld/oauth/tenant/token.
+* **[!UICONTROL ID client]** : procurez-vous l’identifiant auprès de votre équipe de diffusion Medallia.
+* **[!UICONTROL Client Secret]** : procurez-vous auprès de votre équipe de diffusion Medallia.
 
-![Image montrant l’écran d’authentification pour cette destination.](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
+![Image montrant l&#39;écran d&#39;authentification pour cette destination.](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -88,10 +88,10 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL URL de passerelle API]**: procurez-vous des informations auprès de votre équipe de diffusion Medallia. Se présente généralement sous la forme https://instance-tenant.apis.medallia.com.
-* **[!UICONTROL Nom de l’API d’importation]**: procurez-vous des informations auprès de votre équipe de diffusion Medallia. Nom de l’API d’importation Medallia (également appelée flux web) à utiliser dans cette connexion. Vous pouvez activer différentes audiences sur différentes API d&#39;import afin de déclencher différents programmes d&#39;enquête.
+* **[!UICONTROL URL de passerelle API]** : procurez-vous auprès de votre équipe de diffusion Medallia. Se présente généralement sous la forme https://instance-tenant.apis.medallia.com.
+* **[!UICONTROL Importer le nom de l’API]** : procurez-vous auprès de votre équipe de diffusion Medallia. Nom de l’API d’importation Medallia (également appelée flux web) à utiliser dans cette connexion. Vous pouvez activer différentes audiences sur différentes API d&#39;import afin de déclencher différents programmes d&#39;enquête.
 
-![Image montrant l’écran des détails de la destination pour cette destination.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
+![Image montrant l&#39;écran des détails de la destination pour cette destination.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
 
 ### Activer les alertes {#enable-alerts}
 
@@ -103,35 +103,35 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter *identités*, vous avez besoin de la fonction **[!UICONTROL Affichage du graphique des identités]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **** et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous avez besoin de l&#39;autorisation **[!UICONTROL Afficher le graphique d&#39;identités]** [ ](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ### Mapper les attributs et les identités {#map}
 
 Les espaces de noms d’identité cible suivants doivent être mappés en fonction du cas d’utilisation :
-* Pour les enquêtes par e-mail, **email** doit être mappé en tant que champ cible à l’aide de **Champ cible** > **Sélectionner un espace de noms d’identité** > **email**
-* Pour les enquêtes par SMS, **phone** doit être mappé en tant que champ cible à l’aide de **Champ cible** > **Sélectionner un espace de noms d’identité** > **phone**. Les numéros de téléphone doivent être au format E.164, qui comprend un signe plus (+), un code d’appel international pour les pays, un code local et un numéro de téléphone.
+* Pour les enquêtes par e-mail, **email** doit être mappé en tant que champ cible à l’aide de **Champ cible** > **Sélectionner l’espace de noms d’identité** > **email**
+* Pour les enquêtes basées sur des SMS, **phone** doit être mappé en tant que champ cible à l’aide de **Champ cible** > **Sélectionner l’espace de noms d’identité** > **phone**. Les numéros de téléphone doivent être au format E.164, qui comprend un signe plus (+), un code d’appel international pour les pays, un code local et un numéro de téléphone.
 
 Il est vivement recommandé de mapper des attributs personnalisés de ciblage supplémentaires pour créer des enquêtes personnalisées et d’ajouter des informations supplémentaires sur le client à l’enregistrement de l’enquête :
 
 * Les enquêtes personnalisées portent généralement le nom du client
-   * Faire correspondre le prénom du client à **Champ cible** > **Sélectionner des attributs personnalisés** > **Nom de l’attribut** > **firstname**
-   * Faire correspondre le nom du client à **Champ cible** > **Sélectionner des attributs personnalisés** > **Nom de l’attribut** > **lastname**
+   * Faites correspondre le prénom du client à **Champ cible** > **Sélectionner des attributs personnalisés** > **Nom d’attribut** > **prénom**
+   * Faites correspondre le nom de famille du client à **Champ cible** > **Sélectionner des attributs personnalisés** > **Nom d’attribut** > **nom de hôte**
 * Ajoutez des mappages pour tout autre attribut personnalisé cible selon vos besoins.
 
 ![Image présentant un exemple de mappage pour les identités et les attributs.](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)
 
 >[!IMPORTANT]
 > 
-> Partagez avec votre équipe de diffusion Medallia les informations exactes **Noms d’attributs** pour chaque attribut personnalisé cible que vous mappez à l’aide de **Champ cible** > **Sélectionner des attributs personnalisés** > **Nom de l’attribut**. Vous pouvez réaliser une capture d’écran de la page de mappage à partager directement.
+> Partagez avec votre équipe de diffusion Medallia les **noms d’attributs** exacts pour chaque attribut personnalisé cible que vous mappez à l’aide de **Champ cible** > **Sélectionner des attributs personnalisés** > **Nom d’attribut**. Vous pouvez réaliser une capture d’écran de la page de mappage à partager directement.
 
 ## Données exportées {#exported-data}
 
 Une fois que vous avez activé vos segments vers la destination, informez votre équipe de diffusion Medallia, qui pourra valider les données exportées de Adobe Experience Platform vers Medallia. Notez que les enquêtes ne peuvent être activées dans Medallia qu’après une vérification des données réussie. Avant cela, les données seront exportées vers Medallia, mais ne déclencheront pas d’enquêtes auprès des clients.
 
-Vous trouverez ci-dessous un exemple JSON des données exportées, qui utilise l’exemple de mappage de la capture d’écran ci-dessus dans la variable **Mise en correspondance des attributs et des identités** section :
+Vous trouverez ci-dessous un exemple JSON des données exportées, qui utilise l’exemple de mappage de la capture d’écran ci-dessus dans la section **Mapper les attributs et les identités** :
 
 ```json
 [

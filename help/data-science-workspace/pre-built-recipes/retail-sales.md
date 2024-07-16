@@ -6,7 +6,7 @@ description: La recette Ventes au détail vous fournit des prévisions de ventes
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '580'
 ht-degree: 92%
 
 ---

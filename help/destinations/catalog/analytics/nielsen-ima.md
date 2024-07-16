@@ -1,18 +1,18 @@
 ---
 keywords: Nielsen IMA Handler;nielsen ima Handler;nielsen ima;Nielsen ima;Nielsen Ima;Nielsen IMA
 title: Extension Nielsen IMA Handler
-description: L’extension Nielsen IMA Handler est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Nielsen IMA Handler est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: a6f8260b-063d-4784-9f26-8b3dacd4ba58
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '410'
-ht-degree: 90%
+source-wordcount: '405'
+ht-degree: 91%
 
 ---
 
 # Extension [!DNL Nielsen IMA Handler] {#nielsen-ima-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 [!DNL Nielsen IMA Handler] est une extension d’analyse dans Adobe Experience Platform.
 
@@ -28,7 +28,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Nielsen IMA Handler] extension :
+Pour installer l’extension [!DNL Nielsen IMA Handler], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

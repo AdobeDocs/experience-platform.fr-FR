@@ -14,7 +14,7 @@ ht-degree: 51%
 
 # Point d’entrée de gestion des environnements de test
 
-Les environnements de test de Adobe Experience Platform fournissent des environnements de développement isolés qui vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter votre environnement de production. La variable `/sandboxes` du point de terminaison [!DNL Sandbox] L’API vous permet de gérer par programmation les environnements de test dans Platform.
+Les environnements de test de Adobe Experience Platform fournissent des environnements de développement isolés qui vous permettent de tester des fonctionnalités, d’exécuter des expériences et de créer des configurations personnalisées sans affecter votre environnement de production. Le point d’entrée `/sandboxes` de l’API [!DNL Sandbox] vous permet de gérer par programmation les environnements de test dans Platform.
 
 ## Prise en main
 
@@ -22,7 +22,7 @@ Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL San
 
 ## Récupération d’une liste d’environnements de test {#list}
 
-Vous pouvez répertorier tous les environnements de test appartenant à votre organisation (actifs ou non) en adressant une requête GET à la variable `/sandboxes` point de terminaison .
+Vous pouvez répertorier tous les environnements de test appartenant à votre organisation (actifs ou non) en effectuant une requête GET sur le point de terminaison `/sandboxes`.
 
 **Format d’API**
 
@@ -32,7 +32,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour filtrer les résultats. Voir la section sur [paramètres de requête](./appendix.md#query) pour plus d’informations. |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour filtrer les résultats. Pour plus d’informations, consultez la section sur les [paramètres de requête](./appendix.md#query) . |
 
 **Requête**
 
@@ -130,8 +130,8 @@ Une réponse réussie renvoie une liste de sandbox appartenant à votre organisa
 | --- | --- |
 | `name` | Le nom du sandbox. Cette propriété est utilisée à des fins de recherche dans les appels API. |
 | `title` | Le nom d’affichage du sandbox. |
-| `state` | L’état de traitement actuel du sandbox. Un sandbox peut avoir l’un des états suivants : <br/><ul><li>`creating`: l’environnement de test a été créé, mais le système continue de le configurer.</li><li>`active`: l’environnement de test est créé et actif.</li><li>`failed`: en raison d’une erreur, le système n’a pas pu configurer l’environnement de test et est désactivé.</li><li>`deleted`: l’environnement de test a été désactivé manuellement.</li></ul> |
-| `type` | Type d’environnement de test. Les types d’environnements de test actuellement pris en charge sont les suivants : `development` et `production`. |
+| `state` | L’état de traitement actuel du sandbox. Un sandbox peut avoir l’un des états suivants : <br/><ul><li>`creating` : l’environnement de test a été créé, mais le système continue de le configurer.</li><li>`active` : l’environnement de test est créé et actif.</li><li>`failed` : en raison d’une erreur, le système n’a pas pu configurer l’environnement de test et est désactivé.</li><li>`deleted` : l’environnement de test a été désactivé manuellement.</li></ul> |
+| `type` | Type d’environnement de test. Les types d’environnements de test actuellement pris en charge sont `development` et `production`. |
 | `isDefault` | Une propriété booléenne indiquant si cet environnement de test est l’environnement de test de production par défaut pour l’organisation. |
 | `eTag` | L’identifiant d’une version spécifique du sandbox. Utilisée pour le contrôle des versions et une mise en cache efficace, cette valeur est mise à jour chaque fois que le sandbox est modifié. |
 
@@ -196,11 +196,11 @@ Une réponse réussie renvoie les détails du sandbox, y compris son `name`, `ti
 >
 >Lorsqu’un nouveau sandbox est créé, vous devez d’abord l’ajouter à votre profil de produit dans [Adobe Admin Console](https://adminconsole.adobe.com/) avant de commencer à utiliser le nouveau sandbox. Consultez la documentation relative à la [gestion des autorisations pour un profil de produit](../../access-control/ui/permissions.md) pour plus d’informations sur la configuration d’un sandbox en fonction d’un profil de produit.
 
-Vous pouvez créer un environnement de test de développement ou de production en adressant une requête de POST à la variable `/sandboxes` point de terminaison .
+Vous pouvez créer un environnement de test de développement ou de production en envoyant une requête de POST au point de terminaison `/sandboxes`.
 
 ### Créer une sandbox de développement
 
-Pour créer un environnement de test de développement, vous devez fournir un `type` avec la valeur de `development` dans le payload de la requête.
+Pour créer un environnement de test de développement, vous devez fournir un attribut `type` avec une valeur `development` dans le payload de la requête.
 
 **Format d’API**
 
@@ -248,11 +248,11 @@ Une réponse réussie renvoie les détails du nouveau sandbox, indiquant que son
 
 >[!NOTE]
 >
->Les environnements de test prennent environ 30 secondes pour être configurés par le système, après quoi leurs `state` deviendra &quot;actif&quot; ou &quot;échec&quot;.
+>Les environnements de test prennent environ 30 secondes pour être configurés par le système, après quoi leur `state` deviendra &quot;actif&quot; ou &quot;en échec&quot;.
 
 ### Création d’un environnement de test de production
 
-Pour créer un environnement de test de production, vous devez fournir un `type` avec la valeur de `production` dans le payload de la requête.
+Pour créer un environnement de test de production, vous devez fournir un attribut `type` avec une valeur `production` dans le payload de la requête.
 
 **Format d’API**
 
@@ -301,7 +301,7 @@ Une réponse réussie renvoie les détails du nouveau sandbox, indiquant que son
 
 >[!NOTE]
 >
->Les environnements de test prennent environ 30 secondes pour être configurés par le système, après quoi leurs `state` deviendra &quot;actif&quot; ou &quot;échec&quot;.
+>Les environnements de test prennent environ 30 secondes pour être configurés par le système, après quoi leur `state` deviendra &quot;actif&quot; ou &quot;en échec&quot;.
 
 ## Mise à jour d’un sandbox {#put}
 
@@ -309,7 +309,7 @@ Vous pouvez mettre à jour un ou plusieurs champs d’un sandbox en effectuant u
 
 >[!NOTE]
 >
->Actuellement, seul un environnement de test `title` peut être mise à jour.
+>Actuellement, seule la propriété `title` d’un environnement de test peut être mise à jour.
 
 **Format d’API**
 
@@ -323,7 +323,7 @@ PATCH /sandboxes/{SANDBOX_NAME}
 
 **Requête**
 
-La requête suivante met à jour la variable `title` de l’environnement de test nommé &quot;acme&quot;.
+La requête suivante met à jour la propriété `title` de l’environnement de test nommé &quot;acme&quot;.
 
 ```shell
 curl -X PATCH \
@@ -364,7 +364,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 | Paramètre | Description |
 | --- | --- |
 | `{SANDBOX_NAME}` | La propriété `name` du sandbox que vous souhaitez réinitialiser. |
-| `validationOnly` | Paramètre facultatif qui vous permet d’effectuer une vérification avant vol sur l’opération de réinitialisation de l’environnement de test sans effectuer la requête réelle. Définissez ce paramètre sur `validationOnly=true` pour vérifier si l’environnement de test que vous êtes sur le point de réinitialiser contient des données Adobe Analytics, Adobe Audience Manager ou de partage de segments. |
+| `validationOnly` | Paramètre facultatif qui vous permet d’effectuer une vérification avant vol sur l’opération de réinitialisation de l’environnement de test sans effectuer la requête réelle. Définissez ce paramètre sur `validationOnly=true` pour vérifier si l’environnement de test que vous êtes sur le point de réinitialiser contient des données Adobe Analytics, Adobe Audience Manager ou de partage de segment. |
 
 **Requête**
 
@@ -405,7 +405,7 @@ Une réponse réussie renvoie les détails du sandbox mis à jour, indiquant que
 }
 ```
 
-L’environnement de test de production par défaut et les environnements de test de production créés par l’utilisateur ne peuvent pas être réinitialisés si le graphique d’identités hébergé à l’intérieur est également utilisé par Adobe Analytics pour la variable [Analyses entre appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=fr) ou si le graphique d’identités hébergé dans est également utilisé par Adobe Audience Manager pour la variable [Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=fr) fonction .
+L’environnement de test de production par défaut et les environnements de test de production créés par l’utilisateur ne peuvent pas être réinitialisés si le graphique d’identités hébergé à l’intérieur de celui-ci est également utilisé par Adobe Analytics pour la fonction [Analyse entre appareils (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html?lang=fr) ou si le graphique d’identités hébergé à l’intérieur de celui-ci est également utilisé par Adobe Audience Manager pour la fonction [ Destinations basées sur les personnes (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=fr).
 
 Voici une liste d’exceptions possibles qui peuvent empêcher la réinitialisation d’un environnement de test :
 
@@ -432,7 +432,7 @@ Voici une liste d’exceptions possibles qui peuvent empêcher la réinitialisat
 }
 ```
 
-Vous pouvez procéder à la réinitialisation d’un environnement de test de production utilisé pour le partage bidirectionnel de segments avec [!DNL Audience Manager] ou [!DNL Audience Core Service] en ajoutant la variable `ignoreWarnings` à votre requête.
+Vous pouvez procéder à la réinitialisation d’un environnement de test de production utilisé pour le partage bidirectionnel de segments avec [!DNL Audience Manager] ou [!DNL Audience Core Service] en ajoutant le paramètre `ignoreWarnings` à votre requête.
 
 **Format d’API**
 
@@ -480,13 +480,13 @@ Une réponse réussie renvoie les détails du sandbox mis à jour, indiquant que
 
 >[!IMPORTANT]
 >
->L’environnement de test de production par défaut ne peut pas être supprimé.
+>Impossible de supprimer le sandbox de production par défaut.
 
 Vous pouvez supprimer un sandbox en effectuant une requête DELETE qui inclut le `name` du sandbox dans le chemin de la requête.
 
 >[!NOTE]
 >
->L’appel de cette API met à jour l’environnement de test `status` à &quot;supprimé&quot; et la désactive. Les requêtes GET peuvent toujours récupérer les détails du sandbox après sa suppression.
+>L’appel de cette API met à jour la propriété `status` de l’environnement de test sur &quot;supprimé&quot; et la désactive. Les requêtes GET peuvent toujours récupérer les détails du sandbox après sa suppression.
 
 **Format d’API**
 
@@ -497,8 +497,8 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | Paramètre | Description |
 | --- | --- |
 | `{SANDBOX_NAME}` | `name` du sandbox que vous souhaitez supprimer. |
-| `validationOnly` | Paramètre facultatif qui vous permet de vérifier en amont l’opération de suppression de l’environnement de test sans effectuer la requête réelle. Définissez ce paramètre sur `validationOnly=true` pour vérifier si l’environnement de test que vous êtes sur le point de réinitialiser contient des données Adobe Analytics, Adobe Audience Manager ou de partage de segments. |
-| `ignoreWarnings` | Paramètre facultatif qui vous permet d’ignorer la vérification de validation et de forcer la suppression d’un environnement de test de production créé par l’utilisateur qui est utilisé pour le partage de segment bidirectionnel avec [!DNL Audience Manager] ou [!DNL Audience Core Service]. Ce paramètre ne peut pas être appliqué à un environnement de test de production par défaut. |
+| `validationOnly` | Paramètre facultatif qui vous permet de vérifier en amont l’opération de suppression de l’environnement de test sans effectuer la requête réelle. Définissez ce paramètre sur `validationOnly=true` pour vérifier si l’environnement de test que vous êtes sur le point de réinitialiser contient des données Adobe Analytics, Adobe Audience Manager ou de partage de segment. |
+| `ignoreWarnings` | Paramètre facultatif qui vous permet d’ignorer la vérification de validation et de forcer la suppression d’un environnement de test de production créé par l’utilisateur qui est utilisé pour le partage bidirectionnel de segments avec [!DNL Audience Manager] ou [!DNL Audience Core Service]. Ce paramètre ne peut pas être appliqué à un environnement de test de production par défaut. |
 
 **Requête**
 

@@ -1,22 +1,22 @@
 ---
 keywords: Intercept Surveys de QuestionPro;Questionnaire d’ordonnancement;QuestionPro;quertionpro
 title: Extension Intercept Surveys de QuestionPro
-description: L’extension Intercept Surveys de QuestionPro est une destination de sondage dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Intercept Surveys de QuestionPro est une destination de sondage dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: a0d6d46b-caac-48ae-94bc-4ebf24f9c94a
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '458'
 ht-degree: 88%
 
 ---
 
 # Extension [!DNL QuestionPro Intercept Surveys] {#questionpro-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 [!DNL QuestionPro Intercept Surveys] est une plateforme permettant de déployer des enquêtes et de collecter des données comportementales au point de transaction ou lorsque les utilisateurs accèdent à votre site web ou le quittent.
 
-[!DNL QuestionPro Intercept Surveys] est une extension d&#39;enquête dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html).
+[!DNL QuestionPro Intercept Surveys] est une extension de sondage dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL QuestionPro Intercept Surveys] extension :
+Pour installer l’extension [!DNL QuestionPro Intercept Surveys], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

@@ -16,13 +16,13 @@ ht-degree: 44%
 
 ## Exemples d’appels API
 
-Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer à l’aide du [!DNL Query Service] API. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+Les sections suivantes décrivent les différents appels d’API que vous pouvez effectuer à l’aide de l’API [!DNL Query Service]. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
-Voir [Documentation sur les modèles de requête d’interface utilisateur](../ui/query-templates.md) pour plus d’informations sur la création de modèles via l’interface utilisateur de l’Experience Platform.
+Pour plus d’informations sur la création de modèles par le biais de l’interface utilisateur Experience Platform, consultez la [documentation sur les modèles de requête d’interface utilisateur](../ui/query-templates.md) .
 
 ### Récupération d’une liste de modèles de requête
 
-Vous pouvez récupérer une liste de tous les modèles de requête pour votre organisation en adressant une requête de GET à la fonction `/query-templates` point de terminaison .
+Vous pouvez récupérer une liste de tous les modèles de requête pour votre organisation en envoyant une requête de GET au point de terminaison `/query-templates`.
 
 **Format d’API**
 
@@ -43,7 +43,7 @@ Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour
 | --------- | ----------- |
 | `orderby` | Spécifie le champ de référence pour le tri des résultats. Les champs `created` et `updated` sont pris en charge. Par exemple, `orderby=created` triera les résultats par ordre croissant de création. L’ajout d’un `-` devant created (`orderby=-created`) triera les éléments par ordre décroissant de création. |
 | `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. (*Valeur par défaut : 20*) |
-| `start` | Spécifiez un horodatage au format ISO pour classer les résultats. Si aucune date de début n’est spécifiée, l’appel API renvoie d’abord les modèles créés les plus anciens, puis continue à répertorier les résultats plus récents.<br> Les horodatages ISO permettent différents niveaux de granularité dans la date et l’heure. Les horodatages ISO de base prennent le format suivant : `2020-09-07` le 7 septembre 2020. Un exemple plus complexe serait écrit comme suit : `2022-11-05T08:15:30-05:00` et correspond au 5 novembre 2022, 8:15:30 h, heure normale de l&#39;Est des États-Unis. Un fuseau horaire peut être fourni avec un décalage UTC et est signalé par le suffixe &quot;Z&quot; (`2020-01-01T01:01:01Z`). Si aucun fuseau horaire n’est fourni, la valeur par défaut est zéro. |
+| `start` | Spécifiez un horodatage au format ISO pour classer les résultats. Si aucune date de début n’est spécifiée, l’appel API renvoie d’abord les modèles créés les plus anciens, puis continue à répertorier les résultats plus récents.<br> Les horodatages ISO permettent différents niveaux de granularité dans la date et l’heure. Les horodatages ISO de base prennent le format : `2020-09-07` pour exprimer la date du 7 septembre 2020. Un exemple plus complexe serait écrit sous la forme `2022-11-05T08:15:30-05:00` et correspond au 5 novembre 2022, 8:15:30 am, heure normale de l’Est des États-Unis. Un fuseau horaire peut être fourni avec un décalage UTC et est signalé par le suffixe &quot;Z&quot; (`2020-01-01T01:01:01Z`). Si aucun fuseau horaire n’est fourni, la valeur par défaut est zéro. |
 | `property` | Filtrez les résultats en fonction des champs. Les filtres **doivent** être précédés d’une séquence d’échappement HTML. Des virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les champs `name` et `userId` sont pris en charge. Le seul opérateur pris en charge est `==` (égal à). Par exemple, `name==my_template` renvoie tous les modèles de requête portant le nom `my_template`. |
 
 **Requête**
@@ -109,7 +109,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de modèles de re
 
 >[!NOTE]
 >
->Vous pouvez utiliser la valeur `_links.delete` to [supprimer votre modèle de requête](#delete-a-specified-query-template).
+>Vous pouvez utiliser la valeur `_links.delete` pour [supprimer votre modèle de requête](#delete-a-specified-query-template).
 
 ### Création d’un modèle de requête
 
@@ -140,9 +140,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 | Propriété | Description |
 | -------- | ----------- |
-| `sql` | La requête SQL que vous souhaitez créer. Vous pouvez utiliser SQL standard ou un remplacement de paramètre. Pour utiliser un remplacement de paramètre dans le SQL, vous devez ajouter en préfixe la clé de paramètre avec une `$`. Par exemple : `$key`et indiquez les paramètres utilisés dans le SQL en tant que paires clé-valeur JSON dans la variable `queryParameters` champ . Les valeurs transmises ici seront les paramètres par défaut utilisés dans le modèle. Si vous souhaitez remplacer ces paramètres, vous devez les remplacer dans la requête du POST. |
+| `sql` | La requête SQL que vous souhaitez créer. Vous pouvez utiliser SQL standard ou un remplacement de paramètre. Pour utiliser un remplacement de paramètre dans le SQL, vous devez ajouter la clé de paramètre en préfixe `$`. Par exemple, `$key` et fournissez les paramètres utilisés dans le SQL en tant que paires clé-valeur JSON dans le champ `queryParameters`. Les valeurs transmises ici seront les paramètres par défaut utilisés dans le modèle. Si vous souhaitez remplacer ces paramètres, vous devez les remplacer dans la requête du POST. |
 | `name` | Le nom du modèle de requête. |
-| `queryParameters` | Une valeur key appariant pour remplacer toute valeur paramétrée dans l’instruction SQL. Elle n’est requise que **if** vous utilisez des remplacements de paramètres dans le SQL que vous fournissez. Aucune vérification du type de valeur ne sera effectuée sur ces paires clé-valeur. |
+| `queryParameters` | Une valeur key appariant pour remplacer toute valeur paramétrée dans l’instruction SQL. Il n’est requis que **si** vous utilisez des remplacements de paramètres dans le SQL que vous fournissez. Aucune vérification du type de valeur ne sera effectuée sur ces paires clé-valeur. |
 
 **Réponse**
 
@@ -176,7 +176,7 @@ Une réponse réussie renvoie un état HTTP 202 (Accepted) avec les détails du
 
 >[!NOTE]
 >
->Vous pouvez utiliser la valeur `_links.delete` to [supprimer votre modèle de requête](#delete-a-specified-query-template).
+>Vous pouvez utiliser la valeur `_links.delete` pour [supprimer votre modèle de requête](#delete-a-specified-query-template).
 
 ### Récupération d’un modèle de requête spécifié
 
@@ -234,7 +234,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de votre mod�
 
 >[!NOTE]
 >
->Vous pouvez utiliser la valeur `_links.delete` to [supprimer votre modèle de requête](#delete-a-specified-query-template).
+>Vous pouvez utiliser la valeur `_links.delete` pour [supprimer votre modèle de requête](#delete-a-specified-query-template).
 
 ### Mise à jour d’un modèle de requête spécifié
 
@@ -254,7 +254,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 >[!NOTE]
 >
->La requête du PUT nécessite que le champ sql et le champ de nom soient renseignés. **overwrite** le contenu actuel de ce modèle de requête.
+>La requête du PUT nécessite que les champs sql et name soient renseignés, et **remplace** le contenu actuel de ce modèle de requête.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -273,9 +273,9 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | Propriété | Description |
 | -------- | ----------- |
-| `sql` | La requête SQL que vous souhaitez créer. Vous pouvez utiliser SQL standard ou un remplacement de paramètre. Pour utiliser un remplacement de paramètre dans le SQL, vous devez ajouter en préfixe la clé de paramètre avec une `$`. Par exemple : `$key`et indiquez les paramètres utilisés dans le SQL en tant que paires clé-valeur JSON dans la variable `queryParameters` champ . Les valeurs transmises ici seront les paramètres par défaut utilisés dans le modèle. Si vous souhaitez remplacer ces paramètres, vous devez les remplacer dans la requête du POST. |
+| `sql` | La requête SQL que vous souhaitez créer. Vous pouvez utiliser SQL standard ou un remplacement de paramètre. Pour utiliser un remplacement de paramètre dans le SQL, vous devez ajouter la clé de paramètre en préfixe `$`. Par exemple, `$key` et fournissez les paramètres utilisés dans le SQL en tant que paires clé-valeur JSON dans le champ `queryParameters`. Les valeurs transmises ici seront les paramètres par défaut utilisés dans le modèle. Si vous souhaitez remplacer ces paramètres, vous devez les remplacer dans la requête du POST. |
 | `name` | Le nom du modèle de requête. |
-| `queryParameters` | Une valeur key appariant pour remplacer toute valeur paramétrée dans l’instruction SQL. Elle n’est requise que **if** vous utilisez des remplacements de paramètres dans le SQL que vous fournissez. Aucune vérification du type de valeur ne sera effectuée sur ces paires clé-valeur. |
+| `queryParameters` | Une valeur key appariant pour remplacer toute valeur paramétrée dans l’instruction SQL. Il n’est requis que **si** vous utilisez des remplacements de paramètres dans le SQL que vous fournissez. Aucune vérification du type de valeur ne sera effectuée sur ces paires clé-valeur. |
 
 **Réponse**
 
@@ -310,7 +310,7 @@ Une réponse réussie renvoie un état HTTP 202 (Accepted) avec les information
 
 >[!NOTE]
 >
->Vous pouvez utiliser la valeur `_links.delete` to [supprimer votre modèle de requête](#delete-a-specified-query-template).
+>Vous pouvez utiliser la valeur `_links.delete` pour [supprimer votre modèle de requête](#delete-a-specified-query-template).
 
 ### Suppression d’un modèle de requête spécifié
 

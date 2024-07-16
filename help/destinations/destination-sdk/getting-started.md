@@ -4,8 +4,8 @@ title: Prise en main de Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
 source-git-commit: 7c1d956e3b6a1314baa13fef823d73d42404516a
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 89%
+source-wordcount: '583'
+ht-degree: 86%
 
 ---
 
@@ -23,7 +23,7 @@ Ce guide utilise des concepts spécifiques à Platform, tels que l’organisatio
 
 Destination SDK utilise la passerelle [Adobe I/O](https://www.adobe.io/) pour l’authentification. Pour effectuer des appels API vers des points d’entrée de Destination SDK, vous devez fournir certains en-têtes dans vos appels API. Demandez à l’équipe dʼAdobe Exchange de configurer votre authentification dans [Adobe Developer Console](https://developer.adobe.com/console).
 
-Pour réaliser des appels aux points d’entrée de l’API Destination SDK, suivez le [tutoriel sur l’authentification Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Démarrez le tutoriel à partir du[Génération d’une clé API, d’un ID d’organisation et d’un secret client](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#api-ims-secret)&quot;. L’équipe dʼAdobe Exchange effectuera les étapes précédentes à votre place. Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans les appels à l’API Destination SDK, tel qu’indiqué ci-dessous :
+Pour réaliser des appels aux points d’entrée de l’API Destination SDK, suivez le [tutoriel sur l’authentification Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Démarrez le tutoriel à partir de l’étape &quot;[Générer une clé d’API, un ID d’organisation et un secret client](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr#api-ims-secret)&quot;. L’équipe dʼAdobe Exchange effectuera les étapes précédentes à votre place. Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans les appels à l’API Destination SDK, tel qu’indiqué ci-dessous :
 
 * `x-api-key: {API_KEY}`, également appelé identifiant client.
 * `x-gw-ims-org-id: {ORG_ID}`, également appelé identifiant d’organisation.
@@ -68,7 +68,7 @@ Pour plus d’informations, consultez les documents suivants sur le contrôle d�
 
 ## Remarques complémentaires {#additional-considerations}
 
-* Pour les destinations productisées/publiques, toute modification que vous apportez aux configurations de destination, que vous créiez ou modifiez une configuration de destination, doit être révisée et approuvée par Adobe. Vos modifications ne sont appliquées dans vos destinations qu’une fois la révision terminée. Cela ne s’applique pas aux destinations privées qui ne sont disponibles que pour vous.
+* Pour les destinations productisées/publiques, toute modification que vous apportez aux configurations de destination, que vous créiez ou modifiez une configuration de destination, doit être révisée et approuvée par Adobe. Vos modifications ne sont répercutées dans vos destinations qu’une fois la révision terminée. Cela ne s’applique pas aux destinations privées qui ne sont disponibles que pour vous.
 * Seuls les utilisateurs appartenant à la même organisation et ayant accès au sandbox peuvent modifier la configuration de destination.
 
 ## Étapes suivantes {#next-steps}

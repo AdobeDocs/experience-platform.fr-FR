@@ -9,9 +9,9 @@ ht-degree: 9%
 
 ---
 
-# [!UICONTROL Catégorie de produits] groupe de champs de schéma
+# Groupe de champs de schéma [!UICONTROL Catégorie de produits]
 
-[!UICONTROL Catégorie de produits] est un groupe de champs de schéma standard pour la variable [[!UICONTROL Produit] class](../../classes/product.md) qui capture les propriétés liées à la catégorie d’un produit.
+[!UICONTROL Catégorie de produits] est un groupe de champs de schéma standard pour la [[!UICONTROL classe Product]](../../classes/product.md) qui capture les propriétés liées à la catégorie d’un produit.
 
 ![](../../images/field-groups/product/product-category.png)
 

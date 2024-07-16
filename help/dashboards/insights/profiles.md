@@ -5,7 +5,7 @@ exl-id: f3792076-3e01-4e26-8788-32927202a2e5
 source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
 source-wordcount: '1661'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -15,11 +15,11 @@ Les informations dérivées de l’analyse de votre modèle de données rendent 
 
 Comprenez vos informations sur les profils en accédant aux données SQL qui les alimentent, puis générez vos propres informations afin d’explorer davantage vos clients et leurs expériences client qui constituent vos profils. Transformez vos données brutes en nouvelles informations exploitables en utilisant le modèle de données Real-Time CDP SQL existant comme source d’inspiration pour créer des requêtes en fonction de vos besoins professionnels uniques.
 
-Voir [Afficher la documentation SQL](../view-sql.md) pour plus d’informations sur la manière d’adapter le code SQL de vos insights directement via l’interface utilisateur de Platform.
+Pour plus d’informations sur la manière d’adapter le langage SQL de vos insights directement via l’interface utilisateur de Platform, consultez la [documentation sur l’affichage SQL](../view-sql.md).
 
-Vous pouvez utiliser les informations suivantes dans le cadre de la [Tableau de bord des profils](../guides/profiles.md) ou personnalisé [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md). Voir [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou [créer et modifier de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md#create-widget).
+Les informations suivantes sont toutes disponibles pour que vous puissiez les utiliser dans le [tableau de bord des profils](../guides/profiles.md) ou dans un [ tableau de bord personnalisé ](../user-defined-dashboards.md) défini par l’utilisateur. Consultez la [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou la [création et modification de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md#create-widget).
 
-## Superposition des audiences par stratégie de fusion {#audience-overlap-by-merge-policy}
+## Chevauchement des audiences par politique de fusion {#audience-overlap-by-merge-policy}
 
 Questions auxquelles répond cet aperçu :
 
@@ -64,9 +64,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Voir [Superposition des audiences par documentation du widget de stratégie de fusion](../guides/profiles.md#audience-overlap-by-merge-policy) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation sur le chevauchement des audiences par widget de stratégie de fusion](../guides/profiles.md#audience-overlap-by-merge-policy) .
 
-## Rapport de chevauchement d’audiences {#audience-overlap-report}
+## Rapport de chevauchement des audiences {#audience-overlap-report}
 
 Questions auxquelles répond cet aperçu :
 
@@ -131,7 +131,7 @@ SELECT source_segment_name,
 
 +++
 
-Voir [Documentation du widget de rapport sur le chevauchement des audiences](../guides/profiles.md#audience-overlap-report) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget de rapport sur le chevauchement des audiences](../guides/profiles.md#audience-overlap-report) .
 
 ## Audiences (nombre) {#audiences}
 
@@ -159,9 +159,9 @@ SELECT count(DISTINCT a.segment_id) count_of_segments
 
 +++
 
-Voir [Documentation du widget Audiences](../guides/profiles.md#audiences) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget Audiences](../guides/profiles.md#audiences) .
 
-## Audiences mappées à l’état de destination {#audiences-mapped-to-destination-status}
+## Audiences mappées au statut de destination {#audiences-mapped-to-destination-status}
 
 Questions auxquelles répond cet aperçu :
 
@@ -191,7 +191,7 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-Voir [Audiences mappées à la documentation du widget d’état de destination](../guides/profiles.md#audiences-mapped-to-destination-status) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation sur les audiences mappées sur le widget d’état de destination](../guides/profiles.md#audiences-mapped-to-destination-status) .
 
 ## Taille des audiences {#audiences-size}
 
@@ -224,9 +224,9 @@ SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
 
 +++
 
-Voir [Documentation du widget Taille des audiences](../guides/profiles.md#audiences-size) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget Taille des audiences](../guides/profiles.md#audiences-size) .
 
-## Distribution des scores par Customer AI {#customer-ai-distribution-of-scores}
+## Répartition des scores (IA dédiée aux clients) {#customer-ai-distribution-of-scores}
 
 Questions auxquelles répond cet aperçu :
 
@@ -361,9 +361,9 @@ SELECT b.model_name,
 
 +++
 
-Voir [Documentation du widget de scores sur Customer AI](../guides/profiles.md#customer-ai-distribution-of-scores) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, consultez la [documentation sur la distribution du widget de scores dans Customer AI](../guides/profiles.md#customer-ai-distribution-of-scores) .
 
-## Résumé de notation de Customer AI {#customer-ai-scoring-summary}
+## Résumé du score de l’IA dédiée aux clients {#customer-ai-scoring-summary}
 
 Questions auxquelles répond cet aperçu :
 
@@ -402,13 +402,13 @@ SELECT model_name,
 
 +++
 
-Voir [Documentation du widget de résumé de notation de Customer AI](../guides/profiles.md#customer-ai-scoring-summary) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget de résumé de notation de Customer AI](../guides/profiles.md#customer-ai-scoring-summary) .
 
 ## Chevauchement des identités {#identity-overlap}
 
 Questions auxquelles répond cet aperçu :
 
-- Quelle est l’intersection commune entre [!UICONTROL Type d’identité A] et [!UICONTROL Type d’identité B]?
+- Quelle est l’intersection commune entre [!UICONTROL Type d’identité A] et [!UICONTROL Type d’identité B] ?
 - Comment puis-je affiner les audiences de clients en fonction du chevauchement de types d’identité spécifiques afin d’améliorer les stratégies de marketing ciblées ?
 - Quelles sont les informations à tirer de l’évaluation des performances d’une campagne dans les zones intersectées ?
 - À l’aide de ces informations sur les performances des campagnes, comment optimiser les futurs efforts marketing ?
@@ -459,13 +459,13 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Voir [Documentation du widget de chevauchement d’identités](../guides/profiles.md#identity-overlap) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation sur le widget de chevauchement des identités](../guides/profiles.md#identity-overlap) .
 
 ## Nombre de profils {#profile-count}
 
 Questions auxquelles répond cet aperçu :
 
-- Quel est le nombre total de profils dans Adobe Real-time Customer Data Platform ?
+- Quel est le nombre total de profils dans Adobe Real-Time Customer Data Platform ?
 - Comment les profils sont-ils distribués en fonction de stratégies de fusion ?
 - Quelle stratégie de fusion possède le nombre de profils le plus élevé ?
 
@@ -481,9 +481,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-Vous trouverez des informations complètes sur l’apparence et les fonctionnalités de cet aperçu dans la section [Guide du widget de comptage de profils](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
+Vous trouverez des informations complètes sur l’apparence et les fonctionnalités de cet aperçu dans le [guide du widget de nombre de profils](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
 
-Voir [Documentation du widget de compte de profil](../guides/profiles.md#profile-count) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget Nombre de profils](../guides/profiles.md#profile-count) .
 
 ## Modification du nombre de profils {#profile-count-change}
 
@@ -528,7 +528,7 @@ SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
 
 +++
 
-Voir [Documentation du widget de modification du nombre de profils](../guides/profiles.md#profile-count-change) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget de modification du nombre de profils](../guides/profiles.md#profile-count-change) .
 
 ## Tendance à la modification du nombre de profils {#profile-count-change-trend}
 
@@ -562,7 +562,7 @@ SELECT date_key,
 
 +++
 
-Voir [Documentation du widget de tendance de changement de numéro de profil](../guides/profiles.md#profile-count-change-trend) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget de tendance de changement de nombre de profils](../guides/profiles.md#profile-count-change-trend) .
 
 ## Tendance du nombre de profils {#profile-count-trend}
 
@@ -593,7 +593,7 @@ SELECT date_key,
 
 +++
 
-Voir [Documentation du widget de tendance du nombre de profils](../guides/profiles.md#profile-count-trend) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget de tendance du nombre de profils](../guides/profiles.md#profile-count-trend) .
 
 ## Profils par identité {#profiles-by-identity}
 
@@ -622,7 +622,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Voir [Documentation des profils par widget d’identité](../guides/profiles.md#profiles-by-identity) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, consultez la [documentation sur les profils par widget d’identité](../guides/profiles.md#profiles-by-identity) .
 
 ## Tendance de modification du nombre de profils {#profiles-count-change-trend}
 
@@ -656,9 +656,9 @@ SELECT date_key,
 
 +++
 
-Voir [Documentation du widget de tendance de changement de compte de profils](../guides/profiles.md#profiles-count-change-trend) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget de tendance de changement de nombre de profils](../guides/profiles.md#profiles-count-change-trend) .
 
-## Les profils comptabilisent les tendances de changement par identité {#profiles-count-change-trend-by-identity}
+## Évolution du nombre de profils en fonction des identités {#profiles-count-change-trend-by-identity}
 
 Questions auxquelles répond cet aperçu :
 
@@ -697,7 +697,7 @@ SELECT date_key,
 
 +++
 
-Voir [Les profils comptabilisent les tendances de changement par la documentation du widget d’identité](../guides/profiles.md#profiles-count-change-trend-by-identity) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget d’identité sur le nombre de profils](../guides/profiles.md#profiles-count-change-trend-by-identity) .
 
 ## Profils à identité unique {#single-identity-profiles}
 
@@ -722,9 +722,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Voir [Documentation du widget des profils d’identité uniques](../guides/profiles.md#single-identity-profiles) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget de profils d’identité unique](../guides/profiles.md#single-identity-profiles) .
 
-## Profils d’identité uniques par identité {#single-identity-profiles-by-identity}
+## Profils à une seule identité par identité {#single-identity-profiles-by-identity}
 
 Questions auxquelles répond cet aperçu :
 
@@ -749,7 +749,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Voir [Profils d’identité uniques par documentation du widget d’identité](../guides/profiles.md#single-identity-profiles-by-identity) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation sur les profils d’identité uniques par widget d’identité](../guides/profiles.md#single-identity-profiles-by-identity) .
 
 ## Profils non segmentés {#unsegmented-profiles}
 
@@ -773,12 +773,12 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Voir [Documentation du widget des profils non segmentés](../guides/profiles.md#unsegmented-profiles) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget de profils non segmentés](../guides/profiles.md#unsegmented-profiles) .
 
 ## Étapes suivantes
 
 En lisant ce document, vous comprenez désormais le langage SQL qui génère des informations de tableau de bord et les questions courantes que cette analyse résout. Vous pouvez désormais modifier et itérer sur le SQL pour générer vos propres informations.
 
-Voir [Afficher la documentation SQL](../view-sql.md) pour plus d’informations sur la manière d’adapter le langage SQL de vos insights directement via l’interface utilisateur de PLatform.
+Pour plus d’informations sur la manière d’adapter le langage SQL de vos insights directement via l’interface utilisateur de PLatform, consultez la [documentation sur l’affichage de SQL](../view-sql.md) .
 
-Vous pouvez également lire et comprendre le code SQL qui génère des insights pour la variable [Audiences](./audiences.md), [Profils de compte](./account-profiles.md), et [Destinations](./destinations.md) tableaux de bord.
+Vous pouvez également lire et comprendre le code SQL qui génère des insights pour les tableaux de bord [Audiences](./audiences.md), [Profils de compte](./account-profiles.md) et [Destinations](./destinations.md).

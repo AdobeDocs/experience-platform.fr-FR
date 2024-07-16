@@ -4,8 +4,8 @@ description: Les tableaux ci-dessous contiennent les mappages entre les champs s
 exl-id: 32f51761-5de3-4192-8f23-c1412ca12c08
 source-git-commit: ec42cf27c082611acb1a08500b7bbd23fc34d730
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 38%
+source-wordcount: '499'
+ht-degree: 40%
 
 ---
 
@@ -171,8 +171,8 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 | `iif(record1id != null && record1id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record1id, "sourceKey", concat(record1id,"@${CRM_ORG_ID}.Dynamics")), null)` | `opportunityKey` |
 | `iif(record2id != null && record2id != "", to_object("sourceType", "Dynamics", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", record2id, "sourceKey", concat(record2id,"@${CRM_ORG_ID}.Dynamics")), null)` | `personKey` |
 | `connectionrole1.name` | `personRole` |
-| `record1objecttypecode` | *Un groupe de champs personnalisé doit être défini comme schéma cible.* Voir la section de l’annexe pour connaître les étapes de [comment mapper un champ source de type liste de sélection à un schéma XDM cible](#picklist-type-fields) pour plus d’informations. | Pour obtenir la liste des valeurs possibles et , ainsi que les libellés du `record1objecttypecode` champ source, voir [[!DNL Microsoft Dynamics] document de référence d’entité de connexion](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
-| `record2objecttypecode` | *Un groupe de champs personnalisé doit être défini comme schéma cible.* Voir la section de l’annexe pour connaître les étapes de [comment mapper un champ source de type liste de sélection à un schéma XDM cible](#picklist-type-fields) pour plus d’informations. | Pour obtenir la liste des valeurs possibles et , ainsi que les libellés du `record2objecttypecode` champ source, voir [[!DNL Microsoft Dynamics] document de référence d’entité de connexion](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
+| `record1objecttypecode` | *Un groupe de champs personnalisé doit être défini comme schéma cible.* Pour plus d’informations, reportez-vous à la section de l’annexe pour savoir comment mapper un champ source de type liste de sélection à un schéma XDM cible ](#picklist-type-fields).[ | Pour obtenir la liste des valeurs et des libellés possibles pour le champ source `record1objecttypecode`, consultez ce [[!DNL Microsoft Dynamics] document de référence d’entité de connexion](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record1objecttypecode-options). |
+| `record2objecttypecode` | *Un groupe de champs personnalisé doit être défini comme schéma cible.* Pour plus d’informations, reportez-vous à la section de l’annexe pour savoir comment mapper un champ source de type liste de sélection à un schéma XDM cible ](#picklist-type-fields).[ | Pour obtenir la liste des valeurs et des libellés possibles pour le champ source `record2objecttypecode`, consultez ce [[!DNL Microsoft Dynamics] document de référence d’entité de connexion](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/connection?view=op-9-1#record2objecttypecode-options). |
 
 {style="table-layout:auto"}
 
@@ -216,7 +216,7 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 
 {style="table-layout:auto"}
 
-## Membres de la liste marketing {#marketing-list-members}
+## Personnes membres de la liste marketing {#marketing-list-members}
 
 | Champ source | Champ XDM cible | Notes |
 | --- | --- | --- |
@@ -232,20 +232,20 @@ Les tableaux ci-dessous contiennent les mappages entre les champs source [!DNL M
 
 ## Annexe
 
-Les sections ci-dessous fournissent des informations supplémentaires que vous pouvez utiliser lors de la configuration de mappages B2B pour vos [!DNL Microsoft] Source Dynamics.
+Les sections ci-dessous fournissent des informations supplémentaires que vous pouvez utiliser lors de la configuration des mappages B2B pour votre source Dynamics [!DNL Microsoft].
 
 ### Champs de type Liste de sélection {#picklist-type-fields}
 
-Vous pouvez utiliser [champs calculés](../../../../data-prep/ui/mapping.md#calculated-fields) pour mapper un champ source de type liste de sélections à partir de [!DNL Microsoft Dynamics] à un champ XDM cible.
+Vous pouvez utiliser [ champs calculés](../../../../data-prep/ui/mapping.md#calculated-fields) pour mapper un champ source de type liste de sélection de [!DNL Microsoft Dynamics] à un champ XDM cible.
 
-Par exemple, la variable `genderCode` comprend deux options :
+Par exemple, le champ `genderCode` comprend deux options :
 
 | Valeur | Libellé |
 | --- | --- |
 | 1 | `male` |
 | 2 | `female` |
 
-Vous pouvez utiliser les options suivantes pour mapper la variable `genderCode` champ source vers `person.gender` champ cible :
+Vous pouvez utiliser les options suivantes pour mapper le champ source `genderCode` au champ cible `person.gender` :
 
 #### Utilisation d’un opérateur logique
 
@@ -253,7 +253,7 @@ Vous pouvez utiliser les options suivantes pour mapper la variable `genderCode` 
 | --- | --- |
 | `decode(genderCode, "1", "male", "2", "female", "default")` | `person.gender` |
 
-Dans ce scénario, la valeur correspond à la clé, si elle figure dans les options, ou `default`, si `default` est présent et la clé est introuvable. La valeur correspond à `null` si options est `null` ou il n’y a pas `default` et la clé est introuvable.
+Dans ce scénario, la valeur correspond à la clé, si la clé est trouvée dans les options, ou `default`, si `default` est présent et que la clé est introuvable. La valeur correspond à `null` si les options sont `null` ou s’il n’y a pas `default` et que la clé est introuvable.
 
 #### Utiliser un champ calculé
 
@@ -265,4 +265,4 @@ Dans ce scénario, la valeur correspond à la clé, si elle figure dans les opti
 >
 >Une itération imbriquée de l’opération ci-dessus serait similaire à : `iif(condition, iif(cond1, tv1, fv1), iif(cond2, tv2, fv2))`.
 
-Pour plus d’informations, voir [document sur les opérateurs logiques dans [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators)
+Pour plus d’informations, consultez le [ document sur les opérateurs logiques dans  [!DNL Data Prep]](../../../../data-prep/functions.md##logical-operators).

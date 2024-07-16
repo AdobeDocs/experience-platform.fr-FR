@@ -4,8 +4,8 @@ description: Le point de terminaison /tools de l’API Sandbox Tooling vous perm
 exl-id: 529cb7d6-6b3f-459c-be03-35fc28b891cf
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 20%
+source-wordcount: '150'
+ht-degree: 22%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 20%
 
 L’outil Sandbox vous permet de sélectionner différents artefacts et de les exporter dans un package. Un package peut se composer d’un ou de plusieurs objets. Tous les objets inclus dans un package doivent provenir du même sandbox.
 
-La variable `/tools` Le point de terminaison dans l’API des outils de test vous permet de répertorier et de récupérer les données JSON de la tâche.
+Le point d’entrée `/tools` de l’API d’outils de test vous permet de répertorier et de récupérer les données JSON de la tâche.
 
-## Détails de la tâche {#details}
+## Détails du traitement {#details}
 
-Pour récupérer indépendamment les données JSON de la tâche, envoyez une demande de GET à la fonction `/tools` et indiquez l’identifiant de la tâche.
+Pour récupérer indépendamment les données JSON de la tâche, effectuez une requête de GET au point de terminaison `/tools` et fournissez l’identifiant de la tâche.
 
 **Format d’API**
 
@@ -43,7 +43,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails de l’ID de tâche interrogé, fournissant des mises à jour d’état en temps réel sous la forme `completedTasks` et `failedTasks` sont mises à jour au fur et à mesure que la tâche avance.
+Une réponse réussie renvoie les détails de l’ID de tâche interrogé, fournissant des mises à jour d’état en temps réel lorsque `completedTasks` et `failedTasks` sont mis à jour au fur et à mesure que la tâche progresse.
 
 ```json
 {

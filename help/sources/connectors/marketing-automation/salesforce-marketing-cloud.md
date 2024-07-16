@@ -1,13 +1,13 @@
 ---
 solution: Experience Platform
-title: Présentation de la source de Marketing Cloud Salesforce
+title: Présentation de Salesforce Marketing Cloud Source
 description: Découvrez comment connecter le Marketing Cloud Salesforce à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2023-05-25T00:00:00Z
 source-git-commit: bc37d41d0f7b0ff0cf4d52242f41467f2891d613
 workflow-type: tm+mt
-source-wordcount: '334'
-ht-degree: 42%
+source-wordcount: '322'
+ht-degree: 44%
 
 ---
 
@@ -15,22 +15,22 @@ ht-degree: 42%
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
-Experience Platform prend en charge l’ingestion de données provenant de systèmes tiers d’automatisation du marketing. La prise en charge des fournisseurs d’automatisation marketing inclut [!DNL Salesforce Marketing Cloud].
+Experience Platform prend en charge l’ingestion de données provenant de systèmes tiers d’automatisation du marketing. [!DNL Salesforce Marketing Cloud] est compatible avec les fournisseurs d’automatisation marketing.
 
 ## Conditions préalables
 
-Avant de pouvoir connecter votre [!DNL Salesforce Marketing Cloud] source vers Platform, vous devez vous assurer que : **portées d’autorisation** sont configurés pour [!DNL Salesforce Marketing Cloud] combinaison client ID et client secret :
+Avant de pouvoir connecter votre source [!DNL Salesforce Marketing Cloud] à Platform, vous devez vous assurer que les **portées d’autorisation** suivantes sont configurées sur votre combinaison [!DNL Salesforce Marketing Cloud] d’ID client et de secret client :
 
 * `campaign_read`
 * `list_and_subscribers_read`
 
-Vous pouvez demander des portées en effectuant un appel à la fonction `v2/userinfo` de la ressource [!DNL Salesforce Marketing Cloud] API. Voir [[!DNL Salesforce Marketing Cloud] Document Portées d’autorisation d’intégration d’API](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) pour savoir comment demander et comparer des portées.
+Vous pouvez demander des portées en effectuant un appel vers la ressource `v2/userinfo` de l’API [!DNL Salesforce Marketing Cloud]. Consultez le [[!DNL Salesforce Marketing Cloud] document Portées d’autorisation d’intégration d’API](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/data-access-permissions.html>) pour obtenir des instructions sur la demande et la comparaison des portées.
 
-Pour plus d’informations sur les portées, y compris une liste de leurs autorisations et comportements associés, voir ceci [[!DNL Salesforce Marketing Cloud] Document de l’API REST](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>).
+Pour plus d’informations sur les portées, y compris une liste de leurs autorisations et comportements associés, consultez ce [[!DNL Salesforce Marketing Cloud] document de l’API REST](<https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/rest-permissions-and-scopes.html>).
 
 >[!IMPORTANT]
 >
->L’ingestion d’objets personnalisés n’est actuellement pas prise en charge par la fonction [!DNL Salesforce Marketing Cloud] intégration de la source.
+>L’ingestion d’objets personnalisés n’est actuellement pas prise en charge par l’intégration de la source [!DNL Salesforce Marketing Cloud].
 
 ## Liste autorisée d’adresses IP
 
@@ -38,7 +38,7 @@ Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’
 
 ## Connecter [!DNL Salesforce Marketing Cloud] à Platform à l’aide d’API
 
-La documentation ci-dessous fournit des informations sur la connexion. [!DNL Salesforce Marketing Cloud] vers Platform à l’aide d’API :
+La documentation ci-dessous fournit des informations sur la connexion de [!DNL Salesforce Marketing Cloud] à Platform à l’aide d’API :
 
 * [Création d’une connexion de base de Marketing Cloud Salesforce à l’aide de l’API Flow Service](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Explorer des tableaux de données à l’aide de l’API Flow Service](../../tutorials/api/explore/tabular.md)
@@ -46,7 +46,7 @@ La documentation ci-dessous fournit des informations sur la connexion. [!DNL Sal
 
 ## Connecter [!DNL Salesforce Marketing Cloud] à Platform à l’aide de l’interface utilisateur
 
-La documentation ci-dessous fournit des informations sur la connexion. [!DNL Salesforce Marketing Cloud] vers Platform à l’aide de l’interface utilisateur :
+La documentation ci-dessous fournit des informations sur la connexion de [!DNL Salesforce Marketing Cloud] à Platform à l’aide de l’interface utilisateur :
 
 * [Création d’une connexion source de Marketing Cloud Salesforce dans l’interface utilisateur](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Créer un flux de données pour une connexion à une source d’automatisation du marketing dans l’interface utilisateur](../../tutorials/ui/dataflow/marketing-automation.md)

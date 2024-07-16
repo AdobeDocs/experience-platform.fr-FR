@@ -6,7 +6,7 @@ exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
 source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
 workflow-type: tm+mt
 source-wordcount: '1673'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
@@ -14,19 +14,20 @@ ht-degree: 4%
 
 ## Vue d’ensemble {#overview}
 
-Ce document répond aux questions les plus fréquemment posées sur les destinations Adobe Experience Platform. Pour les questions et le dépannage liés à d’autres [!DNL Platform] services, y compris ceux rencontrés dans toutes les [!DNL Platform] API, reportez-vous au [Guide de dépannage des Experience Platform](../landing/troubleshooting.md).
+Ce document répond aux questions les plus fréquemment posées sur les destinations Adobe Experience Platform. Pour toute question ou dépannage concernant d’autres services [!DNL Platform], y compris ceux rencontrés sur toutes les API [!DNL Platform], reportez-vous au [guide de dépannage Experience Platform](../landing/troubleshooting.md).
 
 ## Questions générales sur les destinations {#general}
 
 ### Pourquoi vois-je différents nombres de profils dans l’interface utilisateur de l’Experience Platform et dans les fichiers CSV exportés ?
 
-+++Réponse Il s’agit d’un comportement normal en raison de la manière dont Experience Platform effectue la segmentation.
++++Réponse
+Il s’agit d’un comportement normal en raison de la manière dont Experience Platform effectue la segmentation.
 
 La segmentation par flux met à jour le nombre de profils pour les audiences en continu toute la journée, tandis que la segmentation par lots met à jour le nombre de profils pour les audiences par lots une fois toutes les 24 heures.
 
-Lorsque le planning d’exportation de l’audience diffère du planning de segmentation, le profil est comptabilisé entre l’interface utilisateur et l’exportation [!DNL CSV] sera différent, en particulier en ce qui concerne les audiences en continu.
+Lorsque le planning d’exportation de l’audience diffère du planning de segmentation, le nombre de profils entre l’interface utilisateur et le fichier [!DNL CSV] exporté sera différent, en particulier en ce qui concerne les audiences en continu.
 
-Voir [Documentation de Segmentation Service](../segmentation/home.md) pour plus d’informations.
+Pour plus d’informations, consultez la [documentation de Segmentation Service](../segmentation/home.md) .
 +++
 
 ### Pourquoi vois-je des taux de correspondance faibles lors de la désactivation et de la réactivation d’une audience mise à jour vers la même destination ?
@@ -86,12 +87,13 @@ See the table below for a feature comparison between the Experience Cloud Audien
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
-### Que dois-je faire avant d’activer les audiences dans [!DNL Facebook Custom Audiences]?
+### Que dois-je faire avant de pouvoir activer les audiences dans [!DNL Facebook Custom Audiences] ?
 
-+++Réponse Avant de pouvoir envoyer vos audiences à [!DNL Facebook], assurez-vous de respecter les conditions suivantes :
++++Réponse
+Avant d’envoyer vos audiences à [!DNL Facebook], assurez-vous de respecter les conditions suivantes :
 
-* Votre [!DNL Facebook] Le compte utilisateur doit avoir la variable **[!DNL Manage campaigns]** autorisation activée pour le compte publicitaire que vous prévoyez d’utiliser.
-* La variable **Adobe Experience Cloud** votre compte professionnel doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Voir [Ajout de partenaires à votre compte Business Manager](https://www.facebook.com/business/help/1717412048538897) pour plus d’informations, voir la documentation de Facebook .
+* L’autorisation **[!DNL Manage campaigns]** doit être activée pour votre compte utilisateur [!DNL Facebook] pour le compte publicitaire que vous prévoyez d’utiliser.
+* Le compte commercial **Adobe Experience Cloud** doit être ajouté en tant que partenaire publicitaire dans votre [!DNL Facebook Ad Account]. Utilisez `business ID=206617933627973`. Pour plus d’informations, voir [Ajout de partenaires à votre compte Business Manager](https://www.facebook.com/business/help/1717412048538897) dans la documentation Facebook.
 
   >[!IMPORTANT]
   >
@@ -99,7 +101,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 * Lisez et signez les Conditions d’utilisation [!DNL Facebook Custom Audiences]. Pour ce faire, accédez à `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, où `accountID` est votre [!DNL Facebook Ad Account ID].
 +++
 
-### Dois-je ajouter des applications ou des pixels à mon [!DNL Facebook] compte publicitaire ?
+### Dois-je ajouter des applications ou des pixels à mon compte publicitaire [!DNL Facebook] ?
 
 +++Réponse
 Non. Puisqu’il ne s’agit pas d’une intégration basée sur les pixels, il n’est pas nécessaire d’ajouter des pixels à votre compte publicitaire.
@@ -107,102 +109,111 @@ Non. Puisqu’il ne s’agit pas d’une intégration basée sur les pixels, il 
 
 ### Combien de temps prend Facebook pour traiter les informations de Adobe Experience Platform ?
 
-+++Réponse à partir de mars 2021, [!DNL Facebook Custom Audiences] nécessite jusqu’à une heure pour traiter les informations reçues d’ [!DNL Platform].
++++Réponse
+Depuis mars 2021, [!DNL Facebook Custom Audiences] a besoin d&#39;une heure maximum pour traiter les informations reçues de [!DNL Platform].
 +++
 
-### Puis-je utiliser [!DNL Facebook Custom Audiences] pour le ciblage d’audience dans d’autres [!DNL Facebook] applications, comme [!DNL Instagram]?
-
-+++Réponse Vous pouvez utiliser la variable [!DNL Facebook Custom Audiences] destination pour le ciblage des audiences dans la famille d’applications Facebook prises en charge par [!DNL Facebook Custom Audiences], y compris [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], et [!DNL Messenger]. La sélection de l’application sur laquelle les annonceurs souhaitent exécuter des campagnes est indiquée au niveau de l’emplacement dans [!DNL Facebook Ads Manager].
-+++
-
-### Quelle est la différence entre [!DNL Facebook Custom Audiences] connexion et [!DNL Facebook Pixel] extension ?
-
-+++Répondez Au [!DNL Facebook Custom Audiences] utilisation des connexions [!DNL Platform] identités lors de l’envoi d’audiences à [!DNL Facebook], tandis que la fonction [[!DNL Facebook Pixel] connection](../destinations/catalog/advertising/facebook-pixel.md) utilise la variable [!DNL Facebook] pixel intégré dans un site web.
-
-Ces deux intégrations sont complémentaires ; vous pouvez utiliser les deux pour assurer une meilleure couverture d’audience. Par exemple, vous pouvez utiliser la variable [!DNL Facebook Pixel] extension pour la prospection des visiteurs de sites web qui n’ont pas créé de compte, alors que [!DNL Facebook Custom Audiences] peut vous aider à cibler les clients existants, en fonction des [!DNL Platform] identités.
-+++
-
-### L’intégration de Adobe Experience Platform à [!DNL Facebook Custom Audiences] prise en charge de l’exclusion des utilisateurs d’une audience lorsqu’ils ne remplissent plus les critères pour cette exclusion?**
-
-+++Réponse Oui, l’intégration prend en charge la suppression des utilisateurs de [!DNL Facebook Custom Audiences] lorsqu’ils ne remplissent plus les critères.
-+++
-
-### Comment dois-je hacher les données d’audience avant de les envoyer à [!DNL Facebook]?
+### Puis-je utiliser [!DNL Facebook Custom Audiences] pour le ciblage d’audience dans d’autres applications [!DNL Facebook], telles que [!DNL Instagram] ?
 
 +++Réponse
-[!DNL Facebook] exige qu’aucune information d’identification personnelle (PII) ne soit envoyée clairement. Par conséquent, les audiences sont activées vers [!DNL Facebook] peut être désactivé *haché* les identifiants, tels que les adresses électroniques ou les numéros de téléphone.
+Vous pouvez utiliser la destination [!DNL Facebook Custom Audiences] pour le ciblage des audiences dans la famille d’applications Facebook prises en charge par [!DNL Facebook Custom Audiences], y compris [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] et [!DNL Messenger]. La sélection de l’application sur laquelle les annonceurs souhaitent exécuter des campagnes est indiquée au niveau de l’emplacement dans [!DNL Facebook Ads Manager].
++++
+
+### Quelle est la différence entre la connexion [!DNL Facebook Custom Audiences] et l’extension [!DNL Facebook Pixel] ?
+
++++Réponse
+La connexion [!DNL Facebook Custom Audiences] utilise des identités [!DNL Platform] lors de l’envoi d’audiences à [!DNL Facebook], tandis que la [[!DNL Facebook Pixel] connexion](../destinations/catalog/advertising/facebook-pixel.md) utilise le pixel [!DNL Facebook] intégré à un site web.
+
+Ces deux intégrations sont complémentaires ; vous pouvez utiliser les deux pour garantir une meilleure couverture de l’audience. Par exemple, vous pouvez utiliser l’extension [!DNL Facebook Pixel] pour la prospection des visiteurs de site web qui n’ont pas créé de compte, tandis que [!DNL Facebook Custom Audiences] peut vous aider à cibler les clients existants, en fonction des identités [!DNL Platform].
++++
+
+### L&#39;intégration de Adobe Experience Platform avec [!DNL Facebook Custom Audiences] prend-elle en charge l&#39;exclusion des utilisateurs d&#39;une audience lorsqu&#39;ils ne remplissent plus les critères pour cette intégration?**
+
++++Réponse
+Oui, l’intégration prend en charge la suppression des utilisateurs de [!DNL Facebook Custom Audiences] lorsqu’ils ne remplissent plus les critères.
++++
+
+### Comment dois-je hacher les données d&#39;audience avant de les envoyer à [!DNL Facebook] ?
+
++++Réponse
+[!DNL Facebook] nécessite qu’aucune information d’identification personnelle (PII) ne soit envoyée en clair. Par conséquent, les audiences activées vers [!DNL Facebook] peuvent être masquées à partir des identifiants *hashed* (hachés), tels que les adresses électroniques ou les numéros de téléphone.
 
 Pour obtenir des explications détaillées sur les exigences de correspondance des identifiants, voir [Exigences de correspondance des identifiants](catalog/social/facebook.md#id-matching-requirements).
 +++
 
-### Quel type d’identités puis-je activer dans [!DNL Facebook Custom Audiences]?
+### Quel type d’identités puis-je activer dans [!DNL Facebook Custom Audiences] ?
 
 +++Réponse
-[!DNL Facebook Custom Audiences] prend en charge l’activation des identités suivantes : courriers électroniques hachés, numéros de téléphone hachés, [!DNL GAID], [!DNL IDFA]et les identifiants externes personnalisés.
+[!DNL Facebook Custom Audiences] prend en charge l’activation des identités suivantes : courriers électroniques hachés, numéros de téléphone hachés, [!DNL GAID], [!DNL IDFA] et identifiants externes personnalisés.
 +++
 
 ### Puis-je créer plusieurs destinations Facebook dans l’interface utilisateur de Platform pour des comptes Facebook distincts ?
 
 +++Réponse
-Oui. Dans Experience Platform, une destination Facebook correspond à 1:1 pour un compte publicitaire dans Facebook. Vous pouvez créer une destination Facebook distincte pour chaque compte publicitaire Facebook de votre société. Suivez la [tutoriel sur la connexion à destination](/help/destinations/ui/connect-destination.md) et connectez-vous à un compte Facebook distinct pour chaque nouvelle destination Facebook dans l’interface utilisateur de Platform. Le nombre de comptes publicitaires Facebook auxquels vous pouvez vous connecter est illimité.
+Oui. Dans Experience Platform, une destination Facebook correspond à 1:1 pour un compte publicitaire dans Facebook. Vous pouvez créer une destination Facebook distincte pour chaque compte publicitaire Facebook de votre société. Suivez le [tutoriel sur la connexion de destination](/help/destinations/ui/connect-destination.md) et connectez-vous à un compte Facebook distinct pour chaque nouvelle destination Facebook dans l’interface utilisateur de Platform. Le nombre de comptes publicitaires Facebook auxquels vous pouvez vous connecter est illimité.
 +++
 
-## Correspondance client Google {#google-customer-match}
+## Ciblage par liste de clients Google {#google-customer-match}
 
 ### Lors de l’exportation d’audiences vers la correspondance client Google, pourquoi vois-je des nombres supplémentaires annexés à la fin des noms d’audience dans l’interface de Google ?
 
-+++La réponse Google nécessite que les noms d’audience soient uniques. Les chiffres que vous voyez sont [Horodatages UNIX](https://www.unixtimestamp.com/) et ils sont ajoutés afin de conserver les noms d’audience uniques, si vous avez mappé la même audience à plusieurs destinations Google.
++++Réponse
+Google exige que les noms d’audience soient uniques. Les nombres que vous voyez sont [horodatages UNIX](https://www.unixtimestamp.com/) et ils sont ajoutés afin de conserver les noms d’audience uniques, si vous avez mappé la même audience sur plusieurs destinations Google.
 +++
 
 ## Audiences mappées linkedIn {#linkedin}
 
-### Dois-je ajouter des applications ou des pixels à mon [!DNL LinkedIn] compte publicitaire ?
+### Dois-je ajouter des applications ou des pixels à mon compte publicitaire [!DNL LinkedIn] ?
 
 +++Réponse
 Non. Puisqu’il ne s’agit pas d’une intégration basée sur les pixels, il n’est pas nécessaire d’ajouter des pixels à votre compte publicitaire.
 +++
 
-### Que dois-je faire avant d’activer les audiences dans [!DNL LinkedIn Matched Audiences]?
-
-+++Réponse Avant de pouvoir utiliser la variable [!UICONTROL Audience mise en correspondance linkedIn] destination, assurez-vous que [!DNL LinkedIn Campaign Manager] Le compte a la propriété [!DNL Creative Manager] niveau d’autorisation ou supérieur.
-
-Pour savoir comment modifier votre [!DNL LinkedIn Campaign Manager] autorisations utilisateur, voir [Ajout, modification et suppression des autorisations d’utilisateur sur les comptes Advertising](https://www.linkedin.com/help/lms/answer/5753) dans la documentation de LinkedIn.
-+++
-
-### Comment dois-je hacher les données d’audience avant de les envoyer à [!DNL LinkedIn]?
+### Que dois-je faire avant de pouvoir activer les audiences dans [!DNL LinkedIn Matched Audiences] ?
 
 +++Réponse
-[!DNL LinkedIn] exige qu’aucune information d’identification personnelle (PII) ne soit envoyée clairement. Par conséquent, les audiences sont activées vers [!DNL LinkedIn] peut être désactivé *haché* les identifiants, tels que les adresses électroniques ou les numéros de téléphone.
+Avant de pouvoir utiliser la destination [!UICONTROL Audience mappée LinkedIn], assurez-vous que votre compte [!DNL LinkedIn Campaign Manager] possède le niveau d’autorisation [!DNL Creative Manager] ou supérieur.
+
+Pour savoir comment modifier vos autorisations d’utilisateur [!DNL LinkedIn Campaign Manager], voir [Ajout, modification et suppression d’autorisations d’utilisateur sur des comptes Advertising](https://www.linkedin.com/help/lms/answer/5753) dans la documentation LinkedIn.
++++
+
+### Comment dois-je hacher les données d&#39;audience avant de les envoyer à [!DNL LinkedIn] ?
+
++++Réponse
+[!DNL LinkedIn] nécessite qu’aucune information d’identification personnelle (PII) ne soit envoyée en clair. Par conséquent, les audiences activées vers [!DNL LinkedIn] peuvent être masquées à partir des identifiants *hashed* (hachés), tels que les adresses électroniques ou les numéros de téléphone.
 
 Pour obtenir des explications détaillées sur les exigences de correspondance des identifiants, voir [Exigences de correspondance des identifiants](catalog/social/linkedin.md#id-matching-requirements).
 +++
 
-### Quel type d’identités puis-je activer dans [!DNL LinkedIn]?
+### Quel type d’identités puis-je activer dans [!DNL LinkedIn] ?
 
 +++Réponse
-[!DNL LinkedIn Matched Audiences] prend en charge l’activation des identités suivantes : emails hachés, [!DNL GAID], et [!DNL IDFA].
+[!DNL LinkedIn Matched Audiences] prend en charge l’activation des identités suivantes : courriers électroniques hachés, [!DNL GAID] et [!DNL IDFA].
 
 +++
 
-## Personnalisation de la même page et de la page suivante via les destinations Adobe Target et Personnalisation personnalisée {#same-next-page-personalization}
+## Personnalisation de la même page et de la page suivante via les destinations Adobe Target et Personalization personnalisées {#same-next-page-personalization}
 
 ### Dois-je utiliser le SDK Web Experience Platform pour envoyer des audiences et des attributs à Adobe Target ?
 
-+++Réponse Non, [SDK Web](../web-sdk/home.md) n’est pas nécessaire pour activer les audiences vers [Adobe Target](catalog/personalization/adobe-target-connection.md).
++++Réponse
+Non, [SDK Web](../web-sdk/home.md) n’est pas nécessaire pour activer les audiences vers [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-Cependant, si [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=fr) est utilisée à la place du SDK Web, seule la personnalisation de session suivante est prise en charge.
+Cependant, si [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) est utilisé à la place du SDK Web, seule la personnalisation de session suivante est prise en charge.
 
-Pour [personnalisation de la même page et de la page suivante](ui/activate-edge-personalization-destinations.md) , vous devez utiliser l’une des méthodes suivantes : [SDK Web](../web-sdk/home.md) ou le [API du serveur réseau Edge](../server-api/overview.md). Consultez la documentation relative à [activation des audiences vers les destinations de périphérie](ui/activate-edge-personalization-destinations.md) pour plus d’informations sur l’implémentation.
+Pour les cas d’utilisation de la [personnalisation de la même page et de la page suivante](ui/activate-edge-personalization-destinations.md), vous devez utiliser le [SDK Web](../web-sdk/home.md) ou l’ [API de serveur Edge Network](../server-api/overview.md). Pour plus d’informations sur l’implémentation, consultez la documentation sur l’ [activation d’audiences vers des destinations de périphérie](ui/activate-edge-personalization-destinations.md) .
 +++
 
-### Le nombre d’attributs que je peux envoyer de Real-time Customer Data Platform vers Adobe Target ou vers une destination de personnalisation personnalisée est-il limité ?
+### Le nombre d’attributs que je peux envoyer de Real-time Customer Data Platform vers Adobe Target ou vers une destination Personalization personnalisée est-il limité ?
 
-+++Réponse Oui, les cas d’utilisation de la personnalisation de la même page et de la page suivante prennent en charge un maximum de 30 attributs par environnement de test lors de l’activation d’audiences vers des destinations Adobe Target ou de personnalisation personnalisée. Pour plus d’informations sur les barrières de sécurité d’activation, voir [documentation sur les barrières de sécurité](guardrails.md#edge-destinations-activation).
++++Réponse
+Oui, les cas d’utilisation de la personnalisation de la même page et de la page suivante prennent en charge un maximum de 30 attributs par environnement de test lors de l’activation d’audiences vers des destinations Adobe Target ou Personalization personnalisées. Pour plus d’informations sur les barrières de sécurité d’activation, consultez la [documentation sur les barrières de sécurité](guardrails.md#edge-destinations-activation).
 +++
 
 ### Quels types d’attributs sont pris en charge pour l’activation (par exemple, tableaux, cartes, etc.) ?
 
-+++Réponse Actuellement, seuls les attributs statiques à une seule valeur sont pris en charge, tels que `person.name.firstName`. Les attributs de tableau ne sont actuellement pas pris en charge.
++++Réponse
+Actuellement, seuls les attributs statiques à une seule valeur sont pris en charge, tels que `person.name.firstName`. Les attributs de tableau ne sont actuellement pas pris en charge.
 +++
 
 <!-- **Is there a limit on the number of audiences that can be activated to Adobe Target and Custom Personalization destinations?**
@@ -211,51 +222,56 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 
 ### Après avoir créé une audience dans Experience Platform, combien de temps faudra-t-il pour qu’elle soit disponible pour les cas d’utilisation de la segmentation Edge ?
 
-+++Réponse Les définitions d’audience sont propagées à la variable [Edge Network](../web-sdk/home.md) jusqu&#39;à une heure. Cependant, si une audience est activée au cours de cette première heure, certains visiteurs qui auraient pu être qualifiés pour l’audience pourraient être manqués.
++++Réponse
+Les définitions d’audience sont propagées à l’Edge Network [ en une heure au maximum. ](../web-sdk/home.md) Cependant, si une audience est activée au cours de cette première heure, certains visiteurs qui auraient pu être qualifiés pour l’audience pourraient être manqués.
 +++
 
 ### Où puis-je voir les attributs activés dans Adobe Target ?
 
-+++Les attributs de réponse peuvent être utilisés dans Target dans [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) et [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?=lang=fr) offres.
++++Réponse
+Les attributs peuvent être utilisés dans Target dans les offres [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) et [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html).
 +++
 
 ### Puis-je créer une destination sans flux de données, puis ajouter un flux de données à la même destination ultérieurement ?
 
-+++Réponse Ceci n’est actuellement pas pris en charge via l’interface utilisateur Destinations . Si vous avez besoin d’aide dans ce cas, contactez votre représentant Adobe.
++++Réponse
+Cette fonctionnalité n’est actuellement pas prise en charge via l’interface utilisateur Destinations . Si vous avez besoin d’aide dans ce cas, contactez votre représentant Adobe.
 +++
 
 ### Que se passe-t-il si je supprime une destination Adobe Target ?
 
-+++Réponse Lorsque vous supprimez une destination, toutes les audiences et tous les attributs mappés sous la destination sont supprimés d’Adobe Target et ils sont également supprimés du réseau Edge.
++++Réponse
+Lorsque vous supprimez une destination, toutes les audiences et tous les attributs mappés sous la destination sont supprimés d’Adobe Target et ils sont également supprimés de l’Edge Network.
 +++
 
-### L’intégration fonctionne-t-elle à l’aide de l’API Edge Network Server ?
+### L’intégration fonctionne-t-elle à l’aide de l’API de serveur Edge Network ?
 
-+++Répondez Oui, l’API Edge Network Server fonctionne avec la destination de personnalisation personnalisée. Comme les attributs de profil peuvent contenir des données sensibles, pour protéger ces données, la destination de personnalisation personnalisée exige que vous utilisiez l’API Edge Network Server pour la collecte des données. En outre, tous les appels API doivent être effectués dans un [contexte authentifié](../server-api/authentication.md).
++++Réponse
+Oui, l’API du serveur Edge Network fonctionne avec la destination Personalization personnalisée. Les attributs de profil pouvant contenir des données sensibles, pour protéger ces données, la destination Personalization personnalisée requiert que vous utilisiez l’API serveur Edge Network pour la collecte de données. De plus, tous les appels API doivent être effectués dans un [contexte authentifié](../server-api/authentication.md).
 +++
 
 ### Je ne peux avoir qu’une seule stratégie de fusion active en périphérie. Puis-je créer des audiences qui utilisent une autre stratégie de fusion et les envoyer tout de même à Adobe Target en tant qu’audiences en continu ?
 
 +++Réponse
-Non. Toutes les audiences que vous souhaitez activer dans Adobe Target doivent utiliser un [stratégie de fusion](../profile/merge-policies/ui-guide.md).
+Non. Toutes les audiences que vous souhaitez activer dans Adobe Target doivent utiliser une [stratégie de fusion](../profile/merge-policies/ui-guide.md) active sur le serveur.
 +++
 
 ### Les stratégies Data Usage Labeling and Enforcement (DULE) et Consent sont-elles appliquées ?
 
 +++Réponse
-Oui. La variable [Stratégies de gouvernance et de consentement des données](../data-governance/home.md) l’activation des attributs sélectionnés sera régie par les actions marketing créées et associées aux actions marketing sélectionnées.
+Oui. Les [ stratégies de gouvernance et de consentement des données ](../data-governance/home.md) créées et associées aux actions marketing sélectionnées régissent l’activation des attributs sélectionnés.
 +++
 
-### Sont les [!DNL Adobe Target] et [!DNL Custom Personalization] destinations [!DNL HIPAA]-compatible ?
+### Les destinations [!DNL Adobe Target] et [!DNL Custom Personalization] sont-elles conformes à [!DNL HIPAA] ?
 
 +++Réponse
-[!DNL Adobe Target] n’est pas [!DNL HIPPA]-compatible avec [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). Les clients doivent consulter leurs propres équipes juridiques au sujet de [!DNL HIPPA]-préparation aux canaux d’optimisation personnalisés avant d’utiliser la personnalisation de périphérie via [!DNL Adobe Target] ou le [!DNL Custom Personalization] destinations.
+[!DNL Adobe Target] n&#39;est pas [!DNL HIPPA] compatible avec [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). Les clients doivent vérifier auprès de leurs propres équipes juridiques si les canaux d’optimisation personnalisés sont prêts pour [!DNL HIPPA] avant d’utiliser la personnalisation de périphérie via [!DNL Adobe Target] ou les destinations [!DNL Custom Personalization].
 
-Pour les cas d’utilisation où la gestion de la stratégie de consentement doit être appliquée à grande échelle, les clients doivent acheter [!DNL Adobe Privacy & Security Shield]. [!DNL Adobe Privacy & Security Shield] Les fonctionnalités sont vendues comme une suite avancée de fonctionnalités et ne peuvent pas être achetées séparément.
+Pour les cas d’utilisation où la gestion des stratégies de consentement doit être appliquée à grande échelle, les clients doivent acheter [!DNL Adobe Privacy & Security Shield]. Les fonctionnalités [!DNL Adobe Privacy & Security Shield] sont vendues comme une suite avancée de fonctionnalités et ne peuvent pas être achetées séparément.
 
 Ce service comprend des clés gérées par le client et des seuils élevés pour gérer le cycle de vie des données client.
 
-La variable [!DNL Adobe Target] et [!DNL Custom Personalization] les destinations sont intégrées à la fonction [Étiquettes d’utilisation des données Experience Platform](../data-governance/labels/overview.md) et la variable [Service d’application de la stratégie de consentement](../data-governance/enforcement/overview.md). Ces fonctionnalités sont disponibles pour tous les clients.
+Les destinations [!DNL Adobe Target] et [!DNL Custom Personalization] sont intégrées aux [ libellés d’utilisation des données Experience Platform ](../data-governance/labels/overview.md) et au [ service d’application de la stratégie de consentement](../data-governance/enforcement/overview.md). Ces fonctionnalités sont disponibles pour tous les clients.
 
 
 

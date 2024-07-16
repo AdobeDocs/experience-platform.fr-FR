@@ -4,8 +4,8 @@ description: Découvrez comment enregistrer une organisation Adobe Experience 
 exl-id: ee36319d-5de8-462e-879b-311445cf334c
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 95%
+source-wordcount: '573'
+ht-degree: 90%
 
 ---
 
@@ -41,9 +41,9 @@ Ce programme est destiné aux sociétés de conseil qui aident les clients Adobe
 >
 >Actuellement, votre adresse email professionnelle ne peut être utilisée que dans un seul programme de partenariat à la fois. Vous devez donc utiliser une autre adresse email professionnelle comme contact enregistré pour chacun des programmes.
 
-Une fois que votre société a rejoint le programme Partenaires Exchange, vous pouvez demander l’accès aux solutions Adobe en vous connectant au [site Partenaires Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud) et en suivant les étapes ci-dessous.
+Une fois que votre société a rejoint le programme Partenaires en Exchange, vous pouvez demander l’accès aux solutions Adobe en vous connectant au [site Partenaires en Exchange](https://partners.adobe.com/exchangeprogram/experiencecloud) et en suivant les étapes ci-dessous.
 
-Si un compte Experience Cloud doit avoir accès à l’interface utilisateur de collecte de données et à l’interface utilisateur Experience Platform, reportez-vous à la section [guide des autorisations de collecte de données](../../../collection/permissions.md).
+Si vous disposez d’un compte Experience Cloud qui nécessite l’accès à l’interface utilisateur de collecte de données et à l’interface utilisateur Experience Platform, consultez le [ guide des autorisations de collecte de données](../../../collection/permissions.md).
 
 ## Pour les développeurs indépendants
 

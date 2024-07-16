@@ -10,13 +10,13 @@ ht-degree: 40%
 
 ---
 
-# Barrières de sécurité pour [!DNL Identity Service] data
+# Barrières de sécurité pour les données [!DNL Identity Service]
 
 Ce document traite de l’utilisation et des limites de débit des données [!DNL Identity Service] afin de vous aider à optimiser l’utilisation du graphique d’identité. Lors de la révision des mécanismes de sécurisation suivants, on suppose que vous avez correctement modélisé les données. Si vous avez des questions sur la manière de modéliser vos données, contactez votre représentant du service client.
 
 >[!IMPORTANT]
 >
->Vérifiez vos droits de licence dans votre commande commerciale et les [Description du produit](https://helpx.adobe.com/fr/legal/product-descriptions.html) sur les limites d’utilisation réelles en plus de cette page des barrières de sécurité.
+>Vérifiez vos droits de licence dans votre commande de ventes et la [description du produit](https://helpx.adobe.com/fr/legal/product-descriptions.html) correspondante sur les limites d’utilisation réelles en plus de cette page de garde-fous.
 
 ## Commencer
 
@@ -35,7 +35,7 @@ Le tableau suivant décrit les limites statiques appliquées aux données d’id
 
 | Mécanisme de sécurisation | Limite | Notes |
 | --- | --- | --- |
-| Nombre d’identités dans un graphique | 50 | Lorsqu’un graphique comportant 50 identités liées est mis à jour, Identity Service applique un mécanisme &quot;premier entré, premier sorti&quot; et supprime l’identité la plus ancienne afin de libérer de l’espace pour la nouvelle identité de ce graphique (**Remarque**: Real-Time Customer Profile n’est pas affecté). La suppression est basée sur le type d’identité et sur la date et l’heure. La limite est appliquée au niveau de la sandbox. Pour plus d’informations, consultez la section sur [compréhension de la logique de suppression](#deletion-logic). |
+| Nombre d’identités dans un graphique | 50 | Lorsqu’un graphique comportant 50 identités liées est mis à jour, Identity Service applique un mécanisme &quot;premier entré, premier sorti&quot; et supprime l’identité la plus ancienne afin de libérer de l’espace pour la nouvelle identité pour ce graphique (**Remarque** : le profil client en temps réel n’est pas affecté). La suppression est basée sur le type d’identité et sur la date et l’heure. La limite est appliquée au niveau de la sandbox. Pour plus d’informations, consultez la section sur [la compréhension de la logique de suppression](#deletion-logic). |
 | Nombre de liens vers une identité pour une ingestion par lots unique | 50 | Un seul lot peut contenir des identités anormales qui entraînent des fusions de graphiques indésirables. Pour éviter cela, Identity Service n’ingère pas d’identités déjà liées à 50 identités ou plus. |
 | Nombre d’identités dans un enregistrement XDM | 20 | Le nombre minimum d’enregistrements XDM requis est de deux. |
 | Nombre d’espaces de noms personnalisés | Aucun | Vous pouvez créer autant d’espaces de noms personnalisés que vous le souhaitez. |
@@ -98,27 +98,27 @@ Une fois cette fonction disponible, les graphiques qui dépassent la limite de 5
 La suppression se produit uniquement pour les données d’Identity Service et non pour Real-Time Customer Profile.
 
 * Ce comportement peut donc créer plus de profils avec un seul ECID, car celui-ci ne fait plus partie du graphique d’identités.
-* Pour rester dans vos numéros de droits d’audience adressables, il est recommandé d’activer [expiration pseudonyme des données de profil](../profile/pseudonymous-profiles.md) pour supprimer vos anciens profils.
+* Pour que vous puissiez rester dans vos numéros de droits d’audience adressables, il est recommandé d’activer l’[expiration de données de profil pseudonyme](../profile/pseudonymous-profiles.md) pour supprimer vos anciens profils.
 
 #### Real-Time Customer Profile et WebSDK : suppression d’identité par Principal
 
 Si vous souhaitez conserver vos événements authentifiés par rapport à l’identifiant CRM, il est recommandé de modifier vos identifiants principaux ECID en identifiant CRM. Lisez les documents suivants pour connaître les étapes de mise en oeuvre de cette modification :
 
-* [Configuration de la carte d’identité pour les balises Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
+* [Configurez le mappage d’identité pour les balises Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Données d’identité dans le SDK Web Experience Platform](../web-sdk/identity/overview.md#using-identitymap)
 
 ### Exemples de scénarios
 
 #### Exemple 1 : graphique grand type
 
-*Diagram note :*
+*Remarques sur le diagramme :*
 
 * `t` = horodatage.
-* La valeur d’un horodatage correspond à la récence d’une identité donnée. Par exemple : `t1` représente la première identité liée (la plus ancienne) et `t51` représente l’identité liée la plus récente.
+* La valeur d’un horodatage correspond à la récence d’une identité donnée. Par exemple, `t1` représente la première identité liée (la plus ancienne) et `t51` représente la plus récente identité liée.
 
 Dans cet exemple, avant que le graphique de gauche ne puisse être mis à jour avec une nouvelle identité, Identity Service supprime d’abord l’identité existante avec l’horodatage le plus ancien. Cependant, comme l’identité la plus ancienne est un ID d’appareil, le service d’identités ignore cette identité et cherche à supprimer un espace de noms avec un type plus élevé dans la liste de priorité de suppression, en l’occurrence `ecid-3`. Une fois la suppression de l’identité la plus ancienne avec un type de priorité de suppression plus élevé effectuée, le graphique est mis à jour avec un nouveau lien, `ecid-51`.
 
-* Dans le rare cas où il existe deux identités avec le même horodatage et le même type d’identité, Identity Service triera les identifiants en fonction des [XID](./api/list-native-id.md) et effectuer la suppression.
+* Dans le rare cas où il existe deux identités avec le même horodatage et le même type d’identité, Identity Service triera les identifiants en fonction de [XID](./api/list-native-id.md) et effectuera la suppression.
 
 ![Exemple de suppression de l’identité la plus ancienne afin d’incorporer l’identité la plus récente](./images/graph-limits-v3.png)
 
@@ -128,12 +128,12 @@ Dans cet exemple, avant que le graphique de gauche ne puisse être mis à jour a
 
 >[!TAB Événement entrant]
 
-*Diagram note :*
+*Remarques sur le diagramme :*
 
-* Le diagramme suivant suppose que à `timestamp=50`, il existe 50 identités dans le graphique d’identités.
-* `(...)` désigne les autres identités déjà liées dans le graphique.
+* Le diagramme suivant suppose qu’au niveau de `timestamp=50`, 50 identités existent dans le graphique d’identités.
+* `(...)` correspond aux autres identités déjà liées dans le graphique.
 
-Dans cet exemple, ECID:32110 est ingéré et lié à un graphique volumineux à l’adresse `timestamp=51`, dépassant ainsi la limite de 50 identités.
+Dans cet exemple, ECID:32110 est ingéré et lié à un graphique volumineux à `timestamp=51`, dépassant ainsi la limite de 50 identités.
 
 ![](./images/guardrails/before-split.png)
 
@@ -157,14 +157,14 @@ Suite à la suppression de ECID:35577, les périphéries qui liaient l’ID CRM:
 
 >[!TAB Événement entrant]
 
-*Diagram note :*
+*Remarques sur le diagramme :*
 
-* Le diagramme suivant suppose que à `timestamp=50`, il existe 50 identités dans le graphique d’identités.
-* `(...)` désigne les autres identités déjà liées dans le graphique.
+* Le diagramme suivant suppose qu’au niveau de `timestamp=50`, 50 identités existent dans le graphique d’identités.
+* `(...)` correspond aux autres identités déjà liées dans le graphique.
 
 En vertu de la logique de suppression, certaines identités &quot;hub&quot; peuvent également être supprimées. Ces identités de hub font référence à des noeuds liés à plusieurs identités individuelles qui seraient sinon dissociées.
 
-Dans l’exemple ci-dessous, ECID:21011 est ingéré et lié au graphique à l’adresse `timestamp=51`, dépassant ainsi la limite de 50 identités.
+Dans l’exemple ci-dessous, ECID:21011 est ingéré et lié au graphique à l’emplacement `timestamp=51`, dépassant ainsi la limite de 50 identités.
 
 ![](./images/guardrails/hub-and-spoke-start.png)
 
@@ -196,6 +196,6 @@ Pour plus d’informations sur les barrières de sécurité des autres services 
 
 * [Barrières de sécurité Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
-* [Real-time Customer Data Platform (Édition B2C - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (Édition B2C - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

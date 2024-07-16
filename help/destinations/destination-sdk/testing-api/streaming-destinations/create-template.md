@@ -3,8 +3,8 @@ description: Découvrez comment utiliser l’API de test de destination pour tes
 title: Création et test d’un modèle de transformation de message
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: ht
-source-wordcount: '950'
+workflow-type: tm+mt
+source-wordcount: '948'
 ht-degree: 100%
 
 ---

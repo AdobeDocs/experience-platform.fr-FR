@@ -2,19 +2,19 @@
 title: Point de terminaison des dossiers
 description: Découvrez comment créer, mettre à jour, gérer et supprimer des dossiers à l’aide des API Adobe Experience Platform.
 role: Developer
-source-git-commit: 8f9a2b5a2063b76518302eb9de38b628c87416e1
+exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
+source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 5%
 
 ---
 
-
 # Point de terminaison de dossiers
 
 >[!IMPORTANT]
 >
->L’URL de point de terminaison de cet ensemble de points de terminaison est : `https://experience.adobe.io`.
+>L’URL de point d’entrée de cet ensemble de points d’entrée est `https://experience.adobe.io`.
 
 Les dossiers sont une fonctionnalité qui vous permet de mieux organiser vos objets d’entreprise afin de faciliter la navigation et la catégorisation.
 
@@ -22,11 +22,11 @@ Ce guide fournit des informations pour vous aider à mieux comprendre les dossie
 
 ## Commencer
 
-Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
+Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, y compris les en-têtes requis et comment lire des exemples d’appels API.
 
 ## Récupération d’une liste de dossiers {#list}
 
-Vous pouvez récupérer une liste de dossiers appartenant à votre organisation en adressant une requête GET à la variable `/folder` point de fin et spécification du type de dossier et de l’identifiant du dossier parent.
+Vous pouvez récupérer une liste des dossiers appartenant à votre organisation en envoyant une requête de GET au point de terminaison `/folder` et en spécifiant le type de dossier et l’ID du dossier parent.
 
 **Format d’API**
 
@@ -36,8 +36,8 @@ GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Type des objets contenus dans le dossier. Les valeurs prises en charge sont les suivantes : `segment` et `dataset`. |
-| `{PARENT_FOLDER_ID}` | L’identifiant du dossier parent à partir duquel vous récupérez la liste de dossiers. Pour afficher la liste de tous les dossiers parents, utilisez l’identifiant de dossier. `root`. |
+| `{FOLDER_TYPE}` | Type des objets contenus dans le dossier. Les valeurs prises en charge sont `segment` et `dataset`. |
+| `{PARENT_FOLDER_ID}` | L’identifiant du dossier parent à partir duquel vous récupérez la liste de dossiers. Pour afficher la liste de tous les dossiers parents, utilisez l’ID de dossier `root`. |
 
 **Requête**
 
@@ -113,7 +113,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de tous les dossi
 
 ## Création d’un dossier {#create}
 
-Vous pouvez créer un dossier en adressant une requête de POST à la fonction `/folder` point de fin et spécification du type de dossier.
+Vous pouvez créer un dossier en envoyant une requête de POST au point de terminaison `/folder` et en spécifiant le type de dossier.
 
 **Format d’API**
 
@@ -123,7 +123,7 @@ POST /folder/{FOLDER_TYPE}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Type des objets contenus dans le dossier. Les valeurs prises en charge sont les suivantes : `segment` et `dataset`. |
+| `{FOLDER_TYPE}` | Type des objets contenus dans le dossier. Les valeurs prises en charge sont `segment` et `dataset`. |
 
 **Requête**
 
@@ -185,7 +185,7 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails du dossier que
 
 ## Récupération d’un dossier spécifique {#get}
 
-Vous pouvez récupérer un dossier spécifique qui appartient à votre organisation en envoyant une requête de GET à la variable `/folder` point de fin et spécification du type de dossier et de l’identifiant du dossier.
+Vous pouvez récupérer un dossier spécifique qui appartient à votre organisation en envoyant une requête de GET au point de terminaison `/folder` et en spécifiant le type de dossier et l’identifiant du dossier.
 
 **Format d’API**
 
@@ -195,7 +195,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Type des objets contenus dans le dossier. Les valeurs prises en charge sont les suivantes : `segment` et `dataset`. |
+| `{FOLDER_TYPE}` | Type des objets contenus dans le dossier. Les valeurs prises en charge sont `segment` et `dataset`. |
 | `{FOLDER_ID}` | L’identifiant du dossier que vous récupérez. |
 
 **Requête**
@@ -250,13 +250,13 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails du dossier dem
 | `createdAt` | Horodatage de la création du dossier. |
 | `modifiedBy` | ID de l’utilisateur qui a mis à jour le dossier pour la dernière fois. |
 | `modifiedAt` | Horodatage de la dernière mise à jour du dossier. |
-| `status` | État du dossier demandé. Les valeurs prises en charge incluent : `IN_USE` et `ARCHIVED`. |
+| `status` | État du dossier demandé. Les valeurs prises en charge sont `IN_USE` et `ARCHIVED`. |
 
 +++
 
 ## Validation d’un dossier spécifique {#validate}
 
-Vous pouvez vérifier si un dossier peut contenir des objets en adressant une requête GET à la fonction `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` et indiquez le type et l’identifiant du dossier.
+Vous pouvez vérifier si un dossier peut contenir des objets en envoyant une requête de GET au point de terminaison `/folder/{FOLDER_TYPE}/{FOLDER_ID}/validate` et en fournissant le type et l’identifiant de dossier.
 
 **Format d’API**
 
@@ -266,7 +266,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Type des objets contenus dans le dossier. Les valeurs prises en charge sont les suivantes : `segment` et `dataset`. |
+| `{FOLDER_TYPE}` | Type des objets contenus dans le dossier. Les valeurs prises en charge sont `segment` et `dataset`. |
 | `{FOLDER_ID}` | L’identifiant du dossier que vous validez. |
 
 **Requête**
@@ -316,7 +316,7 @@ Un état réussi renvoie un état HTTP 200 avec les détails du dossier que vous
 
 ## Mise à jour d’un dossier spécifique {#update}
 
-Vous pouvez mettre à jour les détails d’un dossier spécifique qui appartient à votre organisation en adressant une requête de PATCH à la variable `/folder` point de fin et spécification du type de dossier et de l’identifiant du dossier.
+Vous pouvez mettre à jour les détails d’un dossier spécifique qui appartient à votre organisation en envoyant une requête de PATCH au point de terminaison `/folder` et en spécifiant le type de dossier et l’identifiant du dossier.
 
 **Format d’API**
 
@@ -326,7 +326,7 @@ PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Type des objets contenus dans le dossier. Les valeurs prises en charge sont les suivantes : `segment` et `dataset`. |
+| `{FOLDER_TYPE}` | Type des objets contenus dans le dossier. Les valeurs prises en charge sont `segment` et `dataset`. |
 | `{FOLDER_ID}` | L’identifiant du dossier que vous mettez à jour. |
 
 **Requête**
@@ -378,7 +378,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur votre 
 
 ## Supprimer un dossier spécifique {#delete}
 
-Vous pouvez supprimer un dossier spécifique qui appartient à votre organisation en adressant une requête de DELETE au `/folder` et en spécifiant le type de dossier et l’identifiant du dossier.
+Vous pouvez supprimer un dossier spécifique qui appartient à votre organisation en adressant une requête de DELETE à l’élément `/folder` et en spécifiant le type de dossier et l’identifiant du dossier.
 
 ***Format d’API**
 
@@ -388,7 +388,7 @@ DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{FOLDER_TYPE}` | Type des objets contenus dans le dossier. Les valeurs prises en charge sont les suivantes : `segment` et `dataset`. |
+| `{FOLDER_TYPE}` | Type des objets contenus dans le dossier. Les valeurs prises en charge sont `segment` et `dataset`. |
 | `{FOLDER_ID}` | L’identifiant du dossier que vous supprimez. |
 
 **Requête**

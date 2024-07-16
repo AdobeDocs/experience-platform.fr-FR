@@ -1,7 +1,8 @@
 ---
 title: Gestion des types de données de tableau et de mappage avec des fonctions d’ordre supérieur
 description: Découvrez comment gérer les types de données de tableau et de mappage avec des fonctions d’ordre supérieur dans Query Service. Des exemples pratiques sont fournis avec des cas d’utilisation courants.
-source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
+exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '1471'
 ht-degree: 1%
@@ -18,7 +19,7 @@ La liste suivante de cas d’utilisation contient des exemples de fonctions de m
 
 `transform(array<T>, function<T, U>): array<U>`
 
-Le fragment de code ci-dessus applique une fonction à chaque élément du tableau et renvoie un nouveau tableau d’éléments transformés. Plus précisément, la variable `transform` prend un tableau de type T et convertit chaque élément de type T en type U. Elle renvoie ensuite un tableau de type U. Les types T et U réels dépendent de l’utilisation spécifique de la fonction de transformation.
+Le fragment de code ci-dessus applique une fonction à chaque élément du tableau et renvoie un nouveau tableau d’éléments transformés. Plus précisément, la fonction `transform` utilise un tableau de type T et convertit chaque élément de type T en type U. Elle renvoie ensuite un tableau de type U. Les types T et U réels dépendent de l’utilisation spécifique de la fonction de transformation.
 
 `transform(array<T>, function<T, Int, U>): array<U>`
 
@@ -26,7 +27,7 @@ Cette fonction de transformation de tableau est similaire à l’exemple précé
 
 **Exemple**
 
-L’exemple SQL ci-dessous illustre ce cas pratique. La requête récupère un ensemble limité de lignes à partir du tableau spécifié, transformant ainsi le `productListItems` en multipliant la variable `priceTotal` par 73. Le résultat comprend la variable `_id`, `productListItems`et la transformation `price_in_inr` colonnes. La sélection est basée sur une plage d’horodatage spécifique.
+L’exemple SQL ci-dessous illustre ce cas pratique. La requête récupère un ensemble limité de lignes à partir du tableau spécifié, transformant le tableau `productListItems` en multipliant l’attribut `priceTotal` de chaque élément par 73. Le résultat inclut les colonnes `_id`, `productListItems` et `price_in_inr` transformées. La sélection est basée sur une plage d’horodatage spécifique.
 
 ```sql
 SELECT _id,
@@ -59,11 +60,11 @@ Les résultats pour ce SQL apparaissent comme ceux présentés ci-dessous.
 
 `exists(array<T>, function<T, boolean>): boolean`
 
-Dans le fragment de code ci-dessus, la variable `exists` est appliquée à chaque élément du tableau et renvoie une valeur booléenne. La valeur booléenne indique s’il existe un ou plusieurs éléments dans le tableau qui répondent à une condition spécifiée. Dans ce cas, il confirme l’existence d’un produit avec un SKU spécifique.
+Dans le fragment de code ci-dessus, la fonction `exists` est appliquée à chaque élément du tableau et renvoie une valeur booléenne. La valeur booléenne indique s’il existe un ou plusieurs éléments dans le tableau qui répondent à une condition spécifiée. Dans ce cas, il confirme l’existence d’un produit avec un SKU spécifique.
 
 **Exemple**
 
-Dans l’exemple SQL ci-dessous, la requête récupère `productListItems` de la `geometrixxx_999_xdm_pqs_1batch_10k_rows` et évalue si un élément avec un SKU est égal à `123679` dans le `productListItems` existe. Il filtre ensuite les résultats en fonction d’une plage spécifique d’horodatages et limite les résultats finaux à dix lignes.
+Dans l’exemple SQL ci-dessous, la requête récupère `productListItems` de la table `geometrixxx_999_xdm_pqs_1batch_10k_rows` et évalue si un élément avec un SKU égal à `123679` dans le tableau `productListItems` existe. Il filtre ensuite les résultats en fonction d’une plage spécifique d’horodatages et limite les résultats finaux à dix lignes.
 
 ```sql
 SELECT productListItems
@@ -102,7 +103,7 @@ Cette fonction filtre un tableau d’éléments en fonction d’une condition do
 
 **Exemple**
 
-La requête ci-dessous sélectionne la variable `productListItems` applique un filtre afin de n’inclure que les éléments dont le SKU est supérieur à 100000 et limite l’ensemble de résultats aux lignes d’une plage d’horodatage spécifique. Le tableau filtré est alors alias `_filter` dans la sortie.
+La requête ci-dessous sélectionne la colonne `productListItems`, applique un filtre afin d’inclure uniquement les éléments dont le SKU est supérieur à 100000, et limite l’ensemble de résultats aux lignes d’une plage d’horodatage spécifique. Le tableau filtré est ensuite alias `_filter` dans la sortie.
 
 ```sql
 SELECT productListItems,
@@ -136,7 +137,7 @@ Cette opération d’agrégat applique un opérateur binaire à un état initial
 
 **Exemple**
 
-Cet exemple de requête calcule la valeur maximale de SKU à partir de la variable `productListItems` dans la plage d’horodatage donnée et double le résultat. La sortie comprend l’original `productListItems` tableau et le calcul `max_value`.
+Cet exemple de requête calcule la valeur maximale de SKU du tableau `productListItems` au cours de la période d’horodatage donnée et double le résultat. La sortie inclut le tableau `productListItems` d’origine et le `max_value` calculé.
 
 ```sql
 SELECT productListItems,
@@ -175,7 +176,7 @@ Ce fragment de code combine les éléments de deux tableaux en un seul nouveau t
 
 **Exemple**
 
-La requête suivante utilise la variable `zip_with` pour créer des paires de valeurs à partir de deux tableaux. Pour ce faire, il ajoute les valeurs de SKU de la variable `productListItems` tableau à une séquence entière, générée à l’aide de la fonction `Sequence` de la fonction Le résultat est sélectionné avec l’original `productListItems` et est limitée en fonction d’une période.
+La requête suivante utilise la fonction `zip_with` pour créer des paires de valeurs à partir de deux tableaux. Pour ce faire, il ajoute les valeurs SKU du tableau `productListItems` à une séquence entière, générée à l’aide de la fonction `Sequence`. Le résultat est sélectionné avec la colonne `productListItems` d’origine et est limité en fonction d’une plage d’horodatage.
 
 ```sql
 SELECT productListItems,
@@ -250,7 +251,7 @@ productListItems     | map_from_entries
 
 `map_form_arrays(array<K>, array<V>): map<K, V>`
 
-La variable `map_form_arrays` crée une map à l’aide de valeurs couplées issues de deux tableaux.
+La fonction `map_form_arrays` crée une map à l’aide de valeurs couplées issues de deux tableaux.
 
 >[!IMPORTANT]
 >
@@ -258,7 +259,7 @@ La variable `map_form_arrays` crée une map à l’aide de valeurs couplées iss
 
 **Exemple**
 
-Le code SQL ci-dessous crée une carte où les clés sont séquencées par des nombres générés à l’aide de la variable `Sequence` et les valeurs sont des éléments de la fonction `productListItems` tableau. La requête sélectionne la variable `productListItems` et utilise la variable `Map_from_arrays` pour créer la carte en fonction de la séquence générée de nombres et des éléments du tableau. Le résultat est limité à dix lignes et filtré selon une plage d’horodatage.
+Le code SQL ci-dessous crée une carte où les clés sont des nombres séquencés générés à l’aide de la fonction `Sequence`, et les valeurs sont des éléments du tableau `productListItems`. La requête sélectionne la colonne `productListItems` et utilise la fonction `Map_from_arrays` pour créer la carte en fonction de la séquence générée de nombres et des éléments du tableau. Le résultat est limité à dix lignes et filtré selon une plage d’horodatage.
 
 ```sql
 SELECT productListItems,
@@ -296,11 +297,11 @@ productListItems     | map_from_entries
 
 `map_concat(map<K, V>, ...): map<K, V>`
 
-La variable `map_concat` dans le fragment de code ci-dessus prend plusieurs mappages comme arguments et renvoie une nouvelle map qui combine toutes les paires clé-valeur des mappages d’entrée. La fonction concatène plusieurs mappages en une seule carte, et la carte résultante inclut toutes les paires clé-valeur des mappages d’entrée.
+La fonction `map_concat` du fragment de code ci-dessus prend plusieurs mappages comme arguments et renvoie une nouvelle map qui combine toutes les paires clé-valeur des mappages d’entrée. La fonction concatène plusieurs mappages en une seule carte, et la carte résultante inclut toutes les paires clé-valeur des mappages d’entrée.
 
 **Exemple**
 
-Le code SQL ci-dessous crée une carte où chaque élément dans `productListItems` est associé à un numéro de séquence, qui est ensuite concaténé avec une autre carte où les clés sont générées dans une plage de séquences spécifique.
+Le code SQL ci-dessous crée une carte où chaque élément de `productListItems` est associé à un numéro de séquence, qui est ensuite concaténé avec une autre carte où les clés sont générées dans une plage de séquences spécifique.
 
 ```sql
 SELECT productListItems,
@@ -345,7 +346,7 @@ Pour les mappages, elle renvoie une valeur pour la clé donnée ou null si la cl
 
 **Exemple**
 
-La requête sélectionne la variable `identitymap` colonne du tableau `geometrixxx_999_xdm_pqs_1batch_10k_rows` et extrait la valeur associée à la clé `AAID` pour chaque ligne. Les résultats sont limités aux lignes comprises dans la plage d’horodatage spécifiée, et la requête limite la sortie à dix lignes.
+La requête sélectionne la colonne `identitymap` de la table `geometrixxx_999_xdm_pqs_1batch_10k_rows` et extrait la valeur associée à la clé `AAID` pour chaque ligne. Les résultats sont limités aux lignes comprises dans la plage d’horodatage spécifiée, et la requête limite la sortie à dix lignes.
 
 ```sql
 SELECT identitymap,
@@ -383,7 +384,7 @@ Ce fragment de code renvoie la taille d’un tableau ou d’un mappage donné et
 
 **Exemple**
 
-La requête ci-dessous récupère le `identitymap` et la variable `Cardinality` calcule le nombre d’éléments dans chaque carte au sein de la fonction `identitymap`. Les résultats sont limités à dix lignes et sont filtrés selon une plage d’horodatage spécifiée.
+La requête ci-dessous récupère la colonne `identitymap` et la fonction `Cardinality` calcule le nombre d’éléments dans chaque carte dans `identitymap`. Les résultats sont limités à dix lignes et sont filtrés selon une plage d’horodatage spécifiée.
 
 ```sql
 SELECT identitymap,
@@ -421,7 +422,7 @@ Le fragment de code ci-dessus supprime les valeurs en double du tableau donné.
 
 **Exemple**
 
-La requête ci-dessous sélectionne la variable `productListItems` , supprime les éléments en double des tableaux et limite la sortie à dix lignes en fonction d’une plage d’horodatage spécifiée.
+La requête ci-dessous sélectionne la colonne `productListItems`, supprime les éléments en double des tableaux et limite la sortie à dix lignes en fonction d’une plage d’horodatage spécifiée.
 
 ```sql
 SELECT productListItems,
@@ -457,8 +458,8 @@ productListItems     | array_distinct(productListItems)
 
 Les exemples suivants de fonctions d’ordre supérieur sont expliqués dans le cadre de la récupération de cas d’utilisation d’enregistrements similaires. Vous trouverez un exemple et une explication de l’utilisation de chaque fonction dans la section correspondante de ce document.
 
-La variable [`transform` exemple de fonction](../use-cases/retrieve-similar-records.md#length-adjustment) couvre la segmentation en unités lexicales d’une liste de produits.
+L’exemple de fonction [`transform`](../use-cases/retrieve-similar-records.md#length-adjustment) couvre la segmentation en unités lexicales d’une liste de produits.
 
-La variable [`filter` exemple de fonction](../use-cases/retrieve-similar-records.md#filter-results) démontre une extraction plus précise et plus affinée des informations pertinentes à partir des données textuelles.
+L’exemple de fonction [`filter` ](../use-cases/retrieve-similar-records.md#filter-results) illustre une extraction plus précise et plus affinée d’informations pertinentes à partir de données de texte.
 
-La variable [`reduce` function](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) permet d&#39;obtenir des valeurs cumulatives ou des agrégats, qui peuvent être essentiels dans divers processus d&#39;analyse et de planification.
+La fonction [`reduce` ](../use-cases/retrieve-similar-records.md#higher-order-function-solutions) permet d’obtenir des valeurs cumulatives ou des agrégats, qui peuvent être essentiels dans divers processus d’analyse et de planification.

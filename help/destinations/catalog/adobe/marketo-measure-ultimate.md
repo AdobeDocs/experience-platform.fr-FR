@@ -40,8 +40,8 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Exportation des jeux de données]** | Vous exportez des jeux de données bruts qui ne sont pas groupés ou structurés selon les intérêts ou les qualifications de l’audience. En savoir plus sur [exportations de jeux de données](/help/destinations/destination-types.md#dataset-export-destinations). |
-| Fréquence des exportations | **[!UICONTROL Lot]** | Cette destination de lot exporte les fichiers vers la plateforme Marketo Measure toutes les deux heures. En savoir plus sur [planification des exportations de jeux de données](/help/destinations/ui/export-datasets.md#scheduling). |
+| Type d’exportation | **[!UICONTROL Exportation de jeux de données]** | Vous exportez des jeux de données bruts qui ne sont pas groupés ou structurés selon les intérêts ou les qualifications de l’audience. En savoir plus sur les [exportations de jeux de données](/help/destinations/destination-types.md#dataset-export-destinations). |
+| Fréquence des exportations | **[!UICONTROL Lot]** | Cette destination de lot exporte les fichiers vers la plateforme Marketo Measure toutes les deux heures. En savoir plus sur la [planification des exportations de jeux de données](/help/destinations/ui/export-datasets.md#scheduling). |
 
 {style="table-layout:auto"}
 
@@ -49,7 +49,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion et activation des destinations de jeu de données]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **** et **[!UICONTROL Gérer et activer les destinations de jeu de données]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration de la destination, renseignez les champs répertoriés dans la section ci-dessous.
 
@@ -60,7 +60,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
 
-![Le workflow Se connecter à la destination pour la destination Marketo Measure.](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
+![Workflow de connexion à la destination pour la destination Marketo Measure.](/help/destinations/assets/catalog/adobe/marketo-measure-ultimate/marketo-measure-connect-to-destination.png)
 
 ### Activer les alertes {#enable-alerts}
 
@@ -72,13 +72,13 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion et activation des destinations de jeu de données]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des **** et **[!UICONTROL Gérer et activer les destinations de jeu de données]** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Lisez la section [Exportation de jeux de données](/help/destinations/ui/export-datasets.md) tutoriel pour obtenir des instructions détaillées sur l’exportation de jeux de données vers cette destination.
+Lisez le tutoriel [Exporter des jeux de données](/help/destinations/ui/export-datasets.md) pour obtenir des instructions détaillées sur l’exportation de jeux de données vers cette destination.
 
 ## Valider l’exportation des données {#exported-data}
 
-Pour valider une exportation réussie de jeux de données, vous pouvez vérifier que votre jeu de données a bien été transmis à votre [entrepôt de données Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
+Pour valider une exportation réussie d’un jeu de données, vous pouvez vérifier que votre jeu de données a réussi à passer à l’ [ entrepôt de données de Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

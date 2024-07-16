@@ -303,7 +303,7 @@ Commencez par consulter les journaux pour connaître les détails de l’erreur.
 
 Vous pouvez également consulter la documentation pour obtenir des conseils sur la manière d’effectuer des [requêtes planifiées dans l’interface utilisateur](./ui/user-guide.md#scheduled-queries) et par le biais de [l’API](./api/scheduled-queries.md).
 
-N’oubliez pas que lorsque vous utilisez la variable [!DNL Query Editor] vous pouvez uniquement ajouter un planning à une requête qui a déjà été créée et enregistrée. Ceci ne s’applique pas à l’API [!DNL Query Service].
+N’oubliez pas que lorsque vous utilisez le [!DNL Query Editor], vous ne pouvez ajouter qu’un planning à une requête qui a déjà été créée et enregistrée. Ceci ne s’applique pas à l’API [!DNL Query Service].
 +++
 
 ### Que signifie l’erreur « Limite de session atteinte » ?
@@ -587,18 +587,20 @@ Non, Query Service ne prend pas en charge la commande « INSERT OVERWRITE INTO
 
 ### À quelle fréquence les données d’utilisation du tableau de bord d’utilisation des licences sont-elles mises à jour pour les heures de calcul de Data Distiller ?
 
-+++Réponse Le tableau de bord d’utilisation des licences pour les heures d’ordinateur de Data Distiller est mis à jour quatre fois par jour, toutes les six heures.
++++Réponse
+Le tableau de bord d’utilisation des licences pour les heures d’ordinateur de Data Distiller est mis à jour quatre fois par jour, toutes les six heures.
 +++
 
 ### Puis-je utiliser la commande CREATE VIEW sans accès à Data Distiller ?
 
-+++Répondre Oui, vous pouvez utiliser `CREATE VIEW` sans accès à Data Distiller. Cette commande offre une vue logique des données, mais ne les réécrit pas dans le lac de données.
++++Réponse
+Oui, vous pouvez utiliser la commande `CREATE VIEW` sans accès à Data Distiller. Cette commande offre une vue logique des données, mais ne les réécrit pas dans le lac de données.
 +++
 
 ### Puis-je utiliser des blocs anonymes dans DbVisualizer ?
 
 +++Réponse
-Oui. Bien que certains clients tiers, tels que DbVisualizer, puissent avoir besoin d’un identifiant distinct avant et après un bloc SQL pour indiquer qu’une partie d’un script doit être traitée comme une seule instruction. Vous trouverez plus de détails dans la section [documentation bloquée anonyme](./key-concepts/anonymous-block.md) ou [la documentation officielle de DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
+Oui. Bien que certains clients tiers, tels que DbVisualizer, puissent avoir besoin d’un identifiant distinct avant et après un bloc SQL pour indiquer qu’une partie d’un script doit être traitée comme une seule instruction. Vous trouverez plus de détails dans la [documentation du bloc anonyme](./key-concepts/anonymous-block.md) ou dans la [documentation officielle de DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
 ## Exportation des données {#exporting-data}

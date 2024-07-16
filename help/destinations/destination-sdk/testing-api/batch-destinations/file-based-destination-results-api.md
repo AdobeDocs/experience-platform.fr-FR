@@ -3,7 +3,7 @@ description: Cette page explique comment utiliser le point d’entrée /testing/
 title: Consulter les résultats détaillés de l’activation
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
 source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 100%
 

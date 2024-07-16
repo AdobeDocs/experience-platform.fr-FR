@@ -4,7 +4,7 @@ description: Découvrez les principaux composants des différents types d’exte
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '935'
 ht-degree: 95%
 
 ---
@@ -37,7 +37,7 @@ Vous pouvez placer les fichiers de module de bibliothèque n’importe où dans 
 
 ### Vues
 
-Une vue est un fichier de HTML pouvant être chargé dans une [`iframe` element](https://developer.mozilla.org/fr-FR/docs/Web/HTML/Element/iframe) dans l’application des balises, notamment via l’interface utilisateur de Platform et l’interface utilisateur de collecte de données. La vue doit inclure un script fourni par l’extension et se conformer à une petite API pour communiquer avec l’application.
+Une vue est un fichier d’HTML pouvant être chargé dans un élément [`iframe` ](https://developer.mozilla.org/fr-FR/docs/Web/HTML/Element/iframe) dans l’application de balises, en particulier via l’interface utilisateur de Platform et l’interface utilisateur de collecte de données. La vue doit inclure un script fourni par l’extension et se conformer à une petite API pour communiquer avec l’application.
 
 Le plus important fichier de vue de toute extension est sa configuration. Pour plus d’informations, consultez la section consacrée aux [configurations d’extension](#configuration).
 

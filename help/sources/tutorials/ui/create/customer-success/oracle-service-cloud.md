@@ -5,7 +5,7 @@ description: Découvrez comment créer une connexion source Oracle Service Cloud
 exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
 source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '468'
 ht-degree: 100%
 
 ---
@@ -32,7 +32,7 @@ Pour accéder au compte Oracle Service Cloud sur [!DNL Platform], vous devez fou
 | Informations d’identification | Description |
 | ---------- | ----------- |
 | Hôte | URL d’hôte de votre instance Oracle Service Cloud.  |
-| Nom d’utilisateur | Nom d’utilisateur de votre compte utilisateur Oracle Service Cloud.  |
+| Nom d’utilisateur | Nom d’utilisateur de votre compte d’utilisateur Oracle Service Cloud.  |
 | Mot de passe | Mot de passe de votre compte Oracle Service Cloud.  |
 
 Pour plus d’informations sur l’authentification de votre compte Oracle Service Cloud, reportez-vous au guide [[!DNL Oracle]  sur l’authentification](https://docs.oracle.com/en/cloud/saas/b2c-service/20c/cxska/OKCS_Authenticate_and_Authorize.html ).

@@ -4,16 +4,16 @@ description: Découvrez comment partager un jeu de données de formation prépar
 exl-id: 75022acf-fafd-41d6-8dfa-ff3fd4c4fa7e
 source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
 workflow-type: tm+mt
-source-wordcount: '537'
-ht-degree: 5%
+source-wordcount: '457'
+ht-degree: 6%
 
 ---
 
 # Exportation de données dans des environnements ML externes
 
-Ce document explique comment partager un jeu de données de formation préparé créé avec Data Distiller vers un emplacement de stockage dans le cloud que votre environnement ML peut lire pour la formation et la notation de votre modèle. L’exemple ici exporte le jeu de données d’entraînement vers le [Zone d’entrée des données (DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). Vous pouvez modifier la destination de stockage selon les besoins pour travailler avec votre environnement d’apprentissage automatique.
+Ce document explique comment partager un jeu de données de formation préparé créé avec Data Distiller vers un emplacement de stockage dans le cloud que votre environnement ML peut lire pour la formation et la notation de votre modèle. L’exemple ici exporte le jeu de données d’apprentissage vers la [zone d’entrée de données (DLZ)](../../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md). Vous pouvez modifier la destination de stockage selon les besoins pour travailler avec votre environnement d’apprentissage automatique.
 
-La variable [Service de flux pour les destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/) est utilisé pour terminer le pipeline de fonctionnalités en déposant un jeu de données de fonctionnalités calculées dans un emplacement de stockage dans le cloud approprié.
+Le [service de flux pour les destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/) est utilisé pour terminer le pipeline de fonctionnalités en déposant un jeu de données de fonctionnalités calculées dans un emplacement de stockage dans le cloud approprié.
 
 ## Création de la connexion source {#create-source-connection}
 
@@ -39,10 +39,10 @@ La connexion cible est responsable de la connexion au système de fichiers de de
 
 Les destinations de stockage dans le cloud disponibles sont chacune identifiées par un identifiant de spécification de connexion :
 
-| Type de stockage dans le cloud | Identifiant de spécification de connexion |
+| Type de stockage dans le cloud | Identifiant spécifique de la connexion |
 |-----------------------|--------------------------------------|
 | Amazon S3 | 4fce964d-3f37-408f-9778-e597338a21ee |
-| Stockage Azure Blob | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
+| Stockage Azure Blob | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
 | Azure Data Lake | be2c3209-53bc-47e7-ab25-145db8b873e1 |
 | Zone d’atterrissage des données | 10440537-2a7b-4583-ac39-ed38d4b848e8 |
 | Google Cloud Storage | c5d93acb-ea8b-4b14-8f53-02138444ae99 |
@@ -88,7 +88,7 @@ Chaque type de stockage dans le cloud disponible est identifié par un identifia
 | Type de stockage dans le cloud | Identifiant de spécification de flux |
 |-----------------------|--------------------------------------|
 | Amazon S3 | 269ba276-16fc-47db-92b0-c1049a3c131f |
-| Stockage Azure Blob | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
+| Stockage Azure Blob | 95bd8965-fc8a-4119-b9c3-944c2c2df6d2 |
 | Azure Data Lake | 17be2013-2549-41ce-96e7-a70363bec293 |
 | Zone d’atterrissage des données | cd2fc47e-e838-4f38-a581-8fff2f99b63a |
 | Google Cloud Storage | 585c15c4-6cbf-4126-8f87-e26bff78b657 |
@@ -170,7 +170,7 @@ activation_res
 
 ## Partage rationalisé vers la zone d’entrée des données
 
-Pour partager plus facilement un jeu de données dans la zone d’entrée des données, la variable `aepp` fournit une bibliothèque `exportDatasetToDataLandingZone` qui exécute les étapes ci-dessus dans un seul appel de fonction :
+Pour partager plus facilement un jeu de données dans la zone d’entrée des données, la bibliothèque `aepp` fournit une fonction `exportDatasetToDataLandingZone` qui exécute les étapes ci-dessus dans un seul appel de fonction :
 
 ```python
 from aepp import exportDatasetToDataLandingZone

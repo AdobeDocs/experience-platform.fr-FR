@@ -6,7 +6,7 @@ description: Un nœud est l’unité fondamentale à partir de laquelle des grap
 exl-id: 67fe26b5-ce03-4a9a-ad45-783b2acf8d92
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '652'
 ht-degree: 100%
 
 ---

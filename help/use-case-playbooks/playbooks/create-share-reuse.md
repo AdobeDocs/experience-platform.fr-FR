@@ -22,7 +22,7 @@ Pour utiliser un playbook, accédez à **[!UICONTROL Playbooks de cas d’utilis
 >title="Créer une instance"
 >abstract="Générez une liste de ressources telles que des parcours, des audiences, des schémas ou des destinations à utiliser dans des scénarios de parcours ou d’activation."
 
-Avant de créer une instance de playbook, explorez les classeurs disponibles à la rubrique [choisissez le lecteur adapté](/help/use-case-playbooks/playbooks/choose.md). Lorsque vous êtes prêt(e) à poursuivre un playbook et à créer une instance, sélectionnez **[!UICONTROL Créer une instance]** pour poursuivre le playbook et générer des ressources techniques.
+Avant de créer une instance de playbook, explorez les playbooks disponibles pour [choisir le playbook approprié](/help/use-case-playbooks/playbooks/choose.md). Lorsque vous êtes prêt(e) à poursuivre un playbook et à créer une instance, sélectionnez **[!UICONTROL Créer une instance]** pour poursuivre le playbook et générer des ressources techniques.
 
 ![Créer une instance d’un playbook.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 
@@ -63,7 +63,7 @@ Le comportement décrit ci-dessus est valable pour toutes les ressources qui son
 >
 >Effectuez des tests dans le sandbox de développement et passez en production lorsque vous êtes prêt(e).
 >
->Une fois les objets générés, vous pouvez continuer à les tester dans les sandbox de développement en y rajoutant des données. Vous pouvez tester les ressources tant que vous le souhaitez dans l’environnement de test de développement et vous pouvez répliquer la logique des ressources (définitions d’audience, parcours, schémas, etc.) dans l’environnement de test de production lorsque vous êtes prêt. Vous pouvez passer à l’environnement de test de développement, puis à l’environnement de test de production à l’aide de la variable [fonctionnalité de sensibilisation aux données](/help/use-case-playbooks/playbooks/data-awareness.md).
+>Une fois les objets générés, vous pouvez continuer à les tester dans les sandbox de développement en y rajoutant des données. Vous pouvez tester les ressources tant que vous le souhaitez dans l’environnement de test de développement et vous pouvez répliquer la logique des ressources (définitions d’audience, parcours, schémas, etc.) dans l’environnement de test de production lorsque vous êtes prêt. Vous pouvez passer à l’environnement de test de développement, puis à l’environnement de test de production à l’aide de la [fonctionnalité de sensibilisation aux données](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Réutiliser des playbooks {#reuse-playbooks}
 

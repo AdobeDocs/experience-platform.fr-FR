@@ -7,8 +7,8 @@ description: Ce document fournit des informations sur le contrôle d’accès ba
 exl-id: 3ed672bf-1fa6-4893-99e0-afc2b2179543
 source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 99%
+source-wordcount: '492'
+ht-degree: 98%
 
 ---
 

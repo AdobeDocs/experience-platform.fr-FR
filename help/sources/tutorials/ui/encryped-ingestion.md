@@ -1,5 +1,5 @@
 ---
-title: Ingestion de données chiffrées dans l’espace de travail de l’interface utilisateur Sources
+title: Ingestion de données chiffrées dans l’interface utilisateur de sources Workspace
 description: Découvrez comment ingérer des données chiffrées dans l’espace de travail de l’interface utilisateur des sources.
 hide: true
 hidefromtoc: true

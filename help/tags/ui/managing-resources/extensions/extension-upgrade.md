@@ -47,7 +47,7 @@ L’installation d’une mise à niveau est presque identique à l’installatio
 
 La mise à niveau ne s’effectue réellement que lorsque vous appuyez sur **[!UICONTROL Enregistrer]**. Avant cela, vous pouvez cliquer à tout moment sur [!UICONTROL Annuler] et conserver la version installée. Un clic sur **[!UICONTROL Enregistrer]** représente un point de non-retour.
 
-Les mises à niveau d’extension ne sont pas autorisées si vous disposez d’une bibliothèque à l’état `Approved` ou `Submitted`. Cela s’explique par le fait que le build suivant doit contenir la nouvelle version de l’extension. Dans le cas d’une bibliothèque `Approved` ou `Submitted`, le prochain build est le build d’exploitation. Ce build échouerait, car il ne contiendrait pas la dernière version. Le flux de travaux consiste donc à publier ou à rejeter les bibliothèques à l’état `Approved` ou `Submitted` _avant_ la mise à niveau de l’extension.
+Les mises à niveau d’extension ne sont pas autorisées si vous disposez d’une bibliothèque à l’état `Approved` ou `Submitted`. Cela s’explique par le fait que le build suivant doit contenir la nouvelle version de l’extension. Dans le cas d’une bibliothèque `Approved` ou `Submitted`, le prochain build est le build d’exploitation. Ce build échouerait, car il ne contiendrait pas la dernière version. Le workflow consiste donc à publier ou à rejeter les bibliothèques à l’état `Approved` ou `Submitted`_avant_ la mise à niveau de l’extension.
 
 ## Publication d’une mise à niveau
 

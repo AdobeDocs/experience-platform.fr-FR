@@ -18,15 +18,15 @@ ht-degree: 25%
 >
 >Si un jeton utilisateur est transmis, l’utilisateur du jeton doit disposer d’un rôle &quot;d’administrateur org&quot; pour l’organisation demandée.
 
-La variable `/products` Le point de terminaison de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les produits, ainsi que les catégories d’autorisations et les jeux d’autorisations associés aux produits de votre entreprise.
+Le point d’entrée `/products` de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les produits, ainsi que les catégories d’autorisations et les jeux d’autorisations associés aux produits de votre entreprise.
 
-## Prise en main
+## Commencer
 
 Le point de terminaison API utilisé dans ce guide fait partie de l’API de contrôle d’accès basé sur les attributs. Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 ## Récupération d’une liste de produits autorisés {#list}
 
-Vous pouvez récupérer une liste des produits autorisés en adressant une demande de GET à la variable `/products` point de terminaison .
+Vous pouvez récupérer une liste des produits autorisés en effectuant une requête de GET sur le point de terminaison `/products`.
 
 **Format d’API**
 
@@ -70,7 +70,7 @@ Une réponse réussie renvoie une liste des produits autorisés appartenant à v
 
 ## Rechercher des catégories d’autorisations par ID de produit
 
-Vous pouvez rechercher des catégories d’autorisations pour un produit donné en adressant une requête de GET au `/products/{PRODUCT_ID}/categories` point de terminaison lors de la spécification de votre ID de produit.
+Vous pouvez rechercher des catégories d’autorisations pour un produit donné en effectuant une requête de GET sur le point de terminaison `/products/{PRODUCT_ID}/categories` lors de la spécification de votre ID de produit.
 
 **Format d’API**
 
@@ -145,7 +145,7 @@ Une réponse réussie renvoie les catégories d’autorisations associées à l�
 
 ## Recherche de jeux d’autorisations par ID de produit
 
-Vous pouvez rechercher des jeux d’autorisations pour un produit donné en adressant une demande de GET à la fonction `/products/{PRODUCT_ID}/permission-sets` point de terminaison lors de la spécification de votre ID de produit.
+Vous pouvez rechercher des jeux d’autorisations pour un produit donné en effectuant une requête de GET sur le point de terminaison `/products/{PRODUCT_ID}/permission-sets` lors de la spécification de votre ID de produit.
 
 **Format d’API**
 
@@ -242,4 +242,4 @@ Une réponse réussie renvoie les jeux d’autorisations associés à l’ID de 
 | `category` | La catégorie d’autorisation disponible. |
 | `permissions` | Les autorisations incluent la possibilité d’afficher ou d’utiliser les fonctionnalités Platform, telles que la création de sandbox, la définition de schémas et la gestion des jeux de données. |
 | `permissions.resource` | Ressource ou objet auquel un sujet peut ou ne peut pas accéder. Les ressources peuvent être des fichiers, des applications, des serveurs ou même des API. |
-| `permissions.actions` | Action autorisée d’un sujet par rapport à une ressource interrogée. Les valeurs possibles sont les suivantes : `view`, `read`, `create`, `edit`, et `delete` |
+| `permissions.actions` | Action autorisée d’un sujet par rapport à une ressource interrogée. Les valeurs possibles sont : `view`, `read`, `create`, `edit` et `delete` |

@@ -53,7 +53,7 @@ Dans la bibliothèque de widgets, vous pouvez parcourir la sélection de widgets
 
 ### Afficher le SQL {#view-sql}
 
-Vous pouvez afficher le code SQL qui génère les insights visualisés sur votre tableau de bord avec une bascule sur le [!UICONTROL Présentation] workspace. Vous pouvez vous inspirer du SQL de vos insights existants pour créer de nouvelles requêtes qui obtiennent des insights uniques à partir des données Platform en fonction des besoins de votre entreprise. Pour en savoir plus sur cette fonctionnalité, voir [Afficher le guide de l’interface utilisateur SQL](../view-sql.md).
+Vous pouvez afficher le code SQL qui génère les insights visualisés sur votre tableau de bord avec une bascule sur l’espace de travail [!UICONTROL Overview]. Vous pouvez vous inspirer du SQL de vos insights existants pour créer de nouvelles requêtes qui obtiennent des insights uniques à partir des données Platform en fonction des besoins de votre entreprise. Pour en savoir plus sur cette fonctionnalité, consultez le [guide de l’interface utilisateur SQL d’affichage](../view-sql.md).
 
 ## Widgets par défaut {#default-widgets}
 
@@ -65,8 +65,8 @@ Un chargement de widget par défaut est fourni pour toutes les nouvelles instanc
 
 >[!NOTE]
 >
->Depuis le 26 juillet 2023, [!UICONTROL Profils], [!UICONTROL Audiences], et [!UICONTROL Destinations] Les tableaux de bord Aperçu ont été réinitialisés à un nouveau chargement de widget par défaut pour tous les utilisateurs qui n’ont pas modifié leurs vues au cours des six derniers mois.
->Reportez-vous à la documentation du [Profils](./profiles.md#default-widgets) et [Audiences](./audiences.md#default-widgets) sections de widget par défaut pour plus d’informations sur les widgets qui sont inclus dans les chargements de widgets par défaut. Vous pouvez continuer à personnaliser vos widgets de tableau de bord comme auparavant.
+>Depuis le 26 juillet 2023, les tableaux de bord [!UICONTROL Profils], [!UICONTROL Audiences] et [!UICONTROL Destinations] de présentation ont été réinitialisés à un nouveau chargement de widget par défaut pour tous les utilisateurs qui n’ont pas modifié leurs vues au cours des six derniers mois.
+>Reportez-vous à la documentation des sections de widget par défaut [Profils](./profiles.md#default-widgets) et [Audiences](./audiences.md#default-widgets) pour plus d’informations sur les widgets inclus dans les chargements de widget par défaut. Vous pouvez continuer à personnaliser vos widgets de tableau de bord comme auparavant.
 
 ## Widgets standard {#standard-widgets}
 
@@ -76,11 +76,11 @@ Adobe fournit plusieurs widgets standard que vous pouvez utiliser pour visualise
 
 Avant de poursuivre avec les descriptions des widgets standard, assurez-vous de bien connaître les définitions des termes clés suivants utilisés dans toute la documentation :
 
-* **Définition de segment :** Une définition de segment est une **ensemble de règles** utilisé pour décrire les caractéristiques ou le comportement clés d’une audience cible. Ces règles incluent des données d’attribut et d’événement qui qualifient les profils comme faisant partie d’une audience.
+* **Définition de segment :** Une définition de segment est un **ensemble de règles** utilisé pour décrire les caractéristiques ou le comportement clés d’une audience cible. Ces règles incluent des données d’attribut et d’événement qui qualifient les profils comme faisant partie d’une audience.
 * **Audience** : ensemble de personnes, de comptes, de foyers ou d’autres entités qui partagent des caractéristiques et des comportements communs.
-* **Mappé/Mappage**: le mappage des données est le processus de mappage des champs de données sources aux champs cibles associés dans une destination.
-* **Identité**: une identité est un identifiant qui représente de manière unique un client individuel, tel qu’un identifiant de cookie, un identifiant d’appareil ou un identifiant de courrier électronique.
-* **Activer**: Activer est l’action entreprise par un utilisateur pour mapper une audience ou des profils à une destination telle qu’Oracle Eloqua, Google ou Marketing Cloud Salesforce.
+* **Mappé/Mapping** : le mappage de données est le processus de mappage des champs de données source aux champs cibles associés dans une destination.
+* **Identité** : une identité est un identifiant qui représente de manière unique un client individuel, comme un identifiant de cookie, un identifiant d’appareil ou un identifiant de courrier électronique.
+* **Activer** : l’activation est l’action entreprise par un utilisateur pour mapper une audience ou des profils à une destination telle que l’Oracle Eloqua, Google ou le Marketing Cloud Salesforce.
 
 Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez le nom d’un widget dans la liste suivante :
 
@@ -107,11 +107,11 @@ Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez 
 >title="Destinations les plus utilisées"
 >abstract="Ce widget affiche les destinations les plus actives de votre organisation en fonction du nombre d’audiences mappées. Ces chiffres sont précis au moment du dernier instantané. Ce classement fournit des informations sur les destinations les plus utilisées actuellement tout en mettant en évidence celles qui peuvent être sous-utilisées."
 
-La variable **[!UICONTROL Destinations les plus utilisées]** le widget affiche les principales destinations de votre entreprise en fonction du nombre d’audiences mappées, à partir du dernier instantané. Ce classement permet de savoir quelles destinations sont utilisées, tout en présentant éventuellement celles qui peuvent être sous-utilisées.
+Le widget **[!UICONTROL Destinations les plus utilisées]** affiche les principales destinations de votre entreprise en fonction du nombre d’audiences mappées, à partir du dernier instantané. Ce classement permet de savoir quelles destinations sont utilisées, tout en présentant éventuellement celles qui peuvent être sous-utilisées.
 
 Par exemple, si vous avez configuré une destination hier mais que vous ne lui avez mappé aucune audience, vous pouvez constater que la destination est actuellement sous-utilisée.
 
-Le nombre d’audiences mappées affiché dans la variable [!UICONTROL Nombre d’audiences] est exacte à partir du dernier instantané quotidien. Le mappage d’une nouvelle audience à la destination ne met pas à jour le décompte tant que l’instantané suivant n’a pas été pris.
+Le nombre d’audiences mappées affiché dans la colonne [!UICONTROL Audience count] est précis à partir du dernier instantané quotidien. Le mappage d’une nouvelle audience à la destination ne met pas à jour le décompte tant que l’instantané suivant n’a pas été pris.
 
 Sélectionnez le nom d’une destination dans la liste affichée sur le widget pour accéder aux détails de destination de cette destination spécifique. Vous pouvez également sélectionner **[!UICONTROL Afficher tout]** pour accéder à l’onglet **[!UICONTROL Parcourir]** et sélectionner le nom d’une destination pour en afficher les détails.
 
@@ -141,15 +141,15 @@ Pour en savoir plus sur la configuration de types de destinations spécifiques, 
 >title="Audiences récemment activées"
 >abstract="Ce widget fournit une liste des audiences qui ont été les plus récemment mappées à une destination. Cette liste fournit une capture instantanée des audiences et des destinations utilisées activement dans le système et peut aider à corriger les mappages erronés."
 
-La variable **[!UICONTROL Audiences récemment activées]** fournit une liste des audiences mappées le plus récemment à une destination. Cette liste fournit une capture instantanée des audiences et des destinations utilisées activement dans le système et peut aider à corriger les mappages erronés.
+Le widget **[!UICONTROL Audiences récemment activées]** fournit une liste des audiences les plus récemment mappées à une destination. Cette liste fournit une capture instantanée des audiences et des destinations utilisées activement dans le système et peut aider à corriger les mappages erronés.
 
-La variable [!UICONTROL Mis à jour] La date affichée affiche la dernière fois que l’audience a été activée vers la destination et est exacte par rapport au dernier instantané quotidien. En d’autres termes, si vous activez une audience vers la destination, la date mise à jour ne changera pas tant que l’instantané suivant n’aura pas été pris.
+La date [!UICONTROL Mise à jour] affichée affiche la dernière fois que l’audience a été activée vers la destination et est exacte par rapport au dernier instantané quotidien. En d’autres termes, si vous activez une audience vers la destination, la date mise à jour ne changera pas tant que l’instantané suivant n’aura pas été pris.
 
-La sélection du nom d’une audience dans la liste affichée sur le widget vous permet d’accéder aux détails de l’audience. Vous pouvez également sélectionner **[!UICONTROL Afficher tout]** pour accéder au [!UICONTROL Audiences] [!UICONTROL Parcourir] puis sélectionnez le nom d’une audience pour en afficher les détails.
+La sélection du nom d’une audience dans la liste affichée sur le widget vous permet d’accéder aux détails de l’audience. Vous pouvez également sélectionner **[!UICONTROL Afficher tout]** pour accéder à l’onglet [!UICONTROL Audiences] [!UICONTROL Parcourir] et sélectionner ensuite le nom d’une audience pour afficher ses détails.
 
-Pour plus d’informations sur l’utilisation des audiences dans Experience Platform, reportez-vous au [Présentation de Segmentation Service](../../segmentation/home.md).
+Pour plus d’informations sur l’utilisation des audiences dans Experience Platform, reportez-vous à la [présentation de Segmentation Service](../../segmentation/home.md).
 
-![L’onglet Aperçu du tableau de bord Destinations avec le widget Audiences récemment activées en surbrillance.](../images/destinations/recently-activated-audiences.png)
+![Onglet Aperçu du tableau de bord Destinations avec le widget Audiences récemment activées en surbrillance.](../images/destinations/recently-activated-audiences.png)
 
 ### [!UICONTROL Audiences récemment activées par destination] {#recently-activated-audiences-by-destination}
 
@@ -158,15 +158,15 @@ Pour plus d’informations sur l’utilisation des audiences dans Experience Pla
 >title="Audiences récemment activées par destination"
 >abstract="Ce widget affiche les cinq audiences les plus récemment activées par ordre décroissant en fonction de la destination choisie dans le menu déroulant de la vue d’ensemble."
 
-La variable **[!UICONTROL Audiences récemment activées par destination]** widget affiche les cinq dernières audiences activées dans l’ordre décroissant en fonction de la destination choisie dans la liste déroulante d’aperçu. Elle est similaire à la variable [!UICONTROL Audiences récemment activées] , mais les données affichées **only** s’applique à la destination sélectionnée.
+Le widget **[!UICONTROL Audiences récemment activées par destination]** affiche les cinq audiences les plus récemment activées dans l’ordre décroissant en fonction de la destination choisie dans la liste déroulante de présentation. Elle est similaire au widget [!UICONTROL Audiences récemment activées], mais les données affichées **uniquement** s’appliquent à la destination sélectionnée.
 
 Ce widget contient deux mesures : le nom des audiences et la date de la dernière activation des audiences vers la destination. Les données affichées sont correctes selon le dernier instantané quotidien.
 
 Vous pouvez afficher les détails d’une audience en sélectionnant son nom dans la liste affichée.
 
-![Le widget Audiences récemment activées par destination .](../images/destinations/recently-activated-audiences-by-destination.png)
+![Les audiences récemment activées par widget de destination.](../images/destinations/recently-activated-audiences-by-destination.png)
 
-Consultez la section Conditions préalables pour [définitions des termes utilisés](#prerequisites) dans cette description.
+Consultez la section Conditions préalables pour connaître les [définitions des termes utilisés](#prerequisites) dans cette description.
 
 ### [!UICONTROL Tendance de la taille de l’audience] {#audience-size-trend}
 
@@ -175,7 +175,7 @@ Consultez la section Conditions préalables pour [définitions des termes utilis
 >title="Tendance de la taille de l’audience"
 >abstract="Ce widget indique le nombre de profils contenus dans l’audience qui est envoyée quotidiennement au compte de destination. Le premier menu déroulant adapte la période à la tendance de l’audience. Le deuxième menu déroulant du widget sélectionne l’audience à analyser. La destination est choisie dans la liste déroulante de l’aperçu."
 
-La variable **[!UICONTROL Tendance de la taille de l’audience]** Le widget illustre la relation entre le nombre de profils sur une période donnée pour une audience qui a été mappée à ce compte de destination. Le widget utilise un graphique linéaire pour illustrer le nombre de profils contenus dans l’audience, qui sont envoyés quotidiennement au compte de destination.
+Le widget **[!UICONTROL Tendance de la taille de l’audience]** illustre la relation entre le nombre de profils sur une période donnée pour une audience qui a été mappée à ce compte de destination. Le widget utilise un graphique linéaire pour illustrer le nombre de profils contenus dans l’audience, qui sont envoyés quotidiennement au compte de destination.
 
 A l’aide du premier menu déroulant, une période peut être ajustée pour la tendance de l’audience des 30 derniers jours, 90 jours ou 12 mois.
 
@@ -194,15 +194,15 @@ Le widget **[!UICONTROL Tendance de la taille d’audience]** contient un bouton
 >title="Audiences non mappées par identité"
 >abstract="Ce widget répertorie les cinq premières audiences **non mappées** classées par nombre d’identités décroissant pour une destination et une identité données. Les identifiants de filtre répertoriés dans la liste déroulante du widget changent en fonction du compte de destination sélectionné en haut de la page d’aperçu."
 
-La variable **[!UICONTROL Audiences non mappées par identité]** Le widget répertorie les cinq premiers **non mappé** les audiences classées par nombre d’identités décroissant pour une destination et une identité données. Il met en évidence les audiences qui sont les plus avantageuses à mapper au compte de destination choisi en fonction de l’identifiant choisi.
+Le widget **[!UICONTROL Audiences non mappées par identité]** répertorie les cinq premières audiences **non mappées** classées par nombre d’identités décroissant pour une destination et une identité données. Il met en évidence les audiences qui sont les plus avantageuses à mapper au compte de destination choisi en fonction de l’identifiant choisi.
 
 La liste déroulante Identifiant de destination filtre vos audiences disponibles. Les identifiants de filtre répertoriés dans la liste déroulante changent en fonction du compte de destination sélectionné en haut de la page d’aperçu.
 
 La colonne Identités comptabilise le nombre d’identifiants source dans l’audience qui peuvent correspondre à l’identifiant choisi dans la liste déroulante Identifiant du widget.
 
-![Le widget Audiences non mappées par identité .](../images/destinations/unmapped-audiences-by-identity.png)
+![Les audiences non mappées par widget d’identité.](../images/destinations/unmapped-audiences-by-identity.png)
 
-Consultez la section Conditions préalables pour [définitions des termes utilisés](#prerequisites) dans cette description.
+Consultez la section Conditions préalables pour connaître les [définitions des termes utilisés](#prerequisites) dans cette description.
 
 ### [!UICONTROL Audiences mappées par identité] {#mapped-audiences-by-identity}
 
@@ -213,9 +213,9 @@ Consultez la section Conditions préalables pour [définitions des termes utilis
 
 Ce widget fournit une liste des cinq premières audiences **mappées**. La liste est classée de haut en bas en fonction du nombre d’identifiants sources contenus dans les audiences. L’identifiant de destination à comptabiliser est sélectionné dans le menu déroulant sous le titre du widget. Les identifiants de destination disponibles dans la liste déroulante du widget changent en fonction du filtre du compte de destination sélectionné en haut du tableau de bord de la présentation.
 
-![Le widget Audiences mappées par identité .](../images/destinations/mapped-audiences-by-identity.png)
+![ Le widget Audiences mappées par identité.](../images/destinations/mapped-audiences-by-identity.png)
 
-La variable **[!UICONTROL Audiences mappées par identité]** met en évidence, d’un seul coup d’oeil, la probabilité de cibler correctement les opportunités de profil pour une campagne au sein de la destination choisie. Une campagne ciblée efficace ne dépend pas du nombre de profils envoyés à la destination, mais plutôt du nombre d’identifiants sources qui sont susceptibles d’être associés aux identifiants de destination pour fournir des données utiles et activables.
+Le widget **[!UICONTROL Audiences mappées par identité]** met en évidence en un coup d’oeil la probabilité de réussir le ciblage des opportunités de profil pour une campagne dans la destination choisie. Une campagne ciblée efficace ne dépend pas du nombre de profils envoyés à la destination, mais plutôt du nombre d’identifiants sources qui sont susceptibles d’être associés aux identifiants de destination pour fournir des données utiles et activables.
 
 ### Audiences courantes {#common-audiences}
 
@@ -224,9 +224,9 @@ La variable **[!UICONTROL Audiences mappées par identité]** met en évidence, 
 >title="Audiences courantes"
 >abstract="Ce widget fournit une liste des cinq premières audiences activées sur le compte de destination choisi en haut de la page, ainsi que la destination sélectionnée dans la liste déroulante du widget. La liste d’audiences est classée en fonction de leur date d’activation récente. L’audience la plus récemment activée s’affiche en haut."
 
-La variable **[!UICONTROL Audiences courantes]** fournit une liste des cinq premières audiences activées sur le compte de destination choisi en haut de la page, ainsi que la destination sélectionnée dans la liste déroulante du widget. La liste d’audiences est classée en fonction de leur date d’activation récente. L’audience la plus récemment activée s’affiche en haut.
+Le widget **[!UICONTROL Audiences courantes]** fournit une liste des cinq premières audiences activées sur le compte de destination choisi en haut de la page, ainsi que la destination sélectionnée dans la liste déroulante du widget. La liste d’audiences est classée en fonction de leur date d’activation récente. L’audience la plus récemment activée s’affiche en haut.
 
-La variable [!UICONTROL TAILLE DE L’AUDIENCE] indique le nombre total de profils de chaque audience répertoriée.
+La colonne [!UICONTROL TAILLE DE L’AUDIENCE] indique le nombre total de profils de chaque audience répertoriée.
 
 ![Le widget Audiences courantes.](../images/destinations/common-audiences.png)
 
@@ -234,7 +234,7 @@ La variable [!UICONTROL TAILLE DE L’AUDIENCE] indique le nombre total de profi
 
 Le widget [!UICONTROL Audiences mappées] affiche le nombre total d’audiences mappées qui peuvent être activées vers la destination sélectionnée en haut de la page.
 
-Sélectionner **[!UICONTROL Audiences]** pour accéder au tableau de bord Audiences [!UICONTROL Parcourir] . Cet espace de travail affiche une liste de toutes les définitions de segment pour votre organisation.
+Sélectionnez **[!UICONTROL Audiences]** pour accéder au tableau de bord Audiences [!UICONTROL Parcourir] . Cet espace de travail affiche une liste de toutes les définitions de segment pour votre organisation.
 
 ![Le widget Audiences mappées.](../images/destinations/mapped-audiences.png)
 
@@ -253,7 +253,7 @@ Toutes les tailles d’audience du système sont triées de la gande taille à l
 
 Si le nombre de profils d’audience mappés ne correspond pas à l’écart-type par rapport à la taille de profil mappée moyenne au cours des 30 derniers jours, cela indique une anomalie du système et doit être étudié.
 
-Si une audience dans la variable [!UICONTROL Santé de l’audience mappée] vous devez vous reporter au graphique de tendance de la taille de l’audience et localiser l’audience anormale. La tendance peut fournir des informations supplémentaires sur l’état de santé de votre audience.
+Si une audience dans le widget [!UICONTROL Intégrité de l’audience mappée] s’écarte largement, vous devez vous référer au graphique de tendance de la taille de l’audience et localiser l’audience anormale. La tendance peut fournir des informations supplémentaires sur l’état de santé de votre audience.
 
 >[!NOTE]
 >
@@ -294,9 +294,9 @@ Le widget [!UICONTROL Audiences activées sur toutes les destinations] fournit l
 
 ![Le widget Audiences activées dans toutes les destinations.](../images/destinations/activated-audiences-across-all-destinations.png)
 
-Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet [!UICONTROL Parcourir] des destinations. Cette page fournit une liste de toutes les destinations activées, ainsi que diverses mesures pertinentes. Pour plus d’informations sur la variable [[!UICONTROL Parcourir] tab](../../destinations/ui/destinations-workspace.md#browse).
+Sélectionnez **[!UICONTROL Audiences]** pour accéder à l’onglet [!UICONTROL Parcourir] des destinations. Cette page fournit une liste de toutes les destinations activées, ainsi que diverses mesures pertinentes. Consultez la documentation pour plus d’informations sur l’onglet [[!UICONTROL Parcourir]](../../destinations/ui/destinations-workspace.md#browse).
 
-Consultez la section Conditions préalables pour [définitions des termes utilisés](#prerequisites) dans cette description.
+Consultez la section Conditions préalables pour connaître les [définitions des termes utilisés](#prerequisites) dans cette description.
 
 ### [!UICONTROL Audiences activées] {#activated-audiences}
 
@@ -304,13 +304,13 @@ Ce widget fournit une mesure unique pour le nombre total d’audiences activées
 
 ![Le widget Audiences activées.](../images/destinations/activated-audiences.png)
 
-Sélectionnez **[!UICONTROL Audiences]** pour accéder à la page de détails du tableau de bord des destinations. La variable [!UICONTROL Données d’activation] affiche une liste des audiences qui ont été mappées à la destination, y compris leur date de début et de fin (le cas échéant), ainsi que d’autres informations pertinentes pour l’exportation des données, telles que le type d’exportation, la planification et la fréquence. Pour afficher les détails d’une audience spécifique, sélectionnez son nom dans la [!UICONTROL Nom de l’audience] colonne .
+Sélectionnez **[!UICONTROL Audiences]** pour accéder à la page de détails du tableau de bord des destinations. L’onglet [!UICONTROL Données d’activation] affiche une liste des audiences qui ont été mappées à la destination, y compris leur date de début et de fin (le cas échéant), ainsi que d’autres informations pertinentes pour l’exportation des données, telles que le type d’exportation, la planification et la fréquence. Pour afficher les détails sur une audience particulière, sélectionnez son nom dans la colonne [!UICONTROL Nom de l’audience].
 
 ![La page de détails du tableau de bord des destinations avec l’onglet Données d’activation en surbrillance.](../images/destinations/activation-data-tab.png)
 
 Ce widget vous aide à comprendre en un coup d’œil la valeur de vos destinations en fonction du nombre d’audiences activées. Il permet également d’accéder facilement à des informations plus détaillées pour une analyse plus approfondie.
 
-Consultez la section Conditions préalables pour [définitions des termes utilisés](#prerequisites) dans cette description.
+Consultez la section Conditions préalables pour connaître les [définitions des termes utilisés](#prerequisites) dans cette description.
 
 ## Étapes suivantes
 

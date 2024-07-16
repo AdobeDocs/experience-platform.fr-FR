@@ -6,8 +6,8 @@ description: Ce document décrit les étapes générales pour créer un jeu de d
 exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
 source-git-commit: e2f16f532b98e6948ffd7f331e630137b3972f0f
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 81%
+source-wordcount: '1302'
+ht-degree: 80%
 
 ---
 
@@ -19,11 +19,11 @@ Ce document décrit les étapes générales pour créer un jeu de données à l�
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Ingestion par lots](../../ingestion/batch-ingestion/overview.md): [!DNL Experience Platform] vous permet d’ingérer des données sous forme de fichiers de lot.
+* [Ingestion par lots](../../ingestion/batch-ingestion/overview.md) : [!DNL Experience Platform] vous permet d’ingérer des données sous forme de fichiers de lots.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
 * [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à la fonction [!DNL Platform] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels aux API [!DNL Platform].
 
 ### Lecture d’exemples d’appels API
 
@@ -45,7 +45,7 @@ Dans [!DNL Experience Platform], toutes les ressources sont isolées dans des sa
 >
 >Pour plus d’informations sur les sandbox dans [!DNL Platform], consultez la [documentation de présentation des sandbox](../../sandboxes/home.md).
 
-Toutes les requêtes contenant une payload (POST, PUT, PATCH) nécessitent un en-tête `Content-Type: application/json` supplémentaire : Pour les requêtes JSON+PATCH, la variable `Content-Type` should `application/json-patch+json`.
+Toutes les requêtes contenant une payload (POST, PUT, PATCH) nécessitent un en-tête `Content-Type: application/json` supplémentaire : Pour les demandes JSON+PATCH, `Content-Type` doit être `application/json-patch+json`.
 
 ## Tutoriel
 
@@ -57,9 +57,9 @@ Ces définitions standard permettent d’interpréter les données de manière c
 
 Ce tutoriel commence là où le [tutoriel de l’API Schema Registry](../../xdm/tutorials/create-schema-api.md) se termine, en utilisant le schéma des membres du programme de fidélité créé pendant ce tutoriel.
 
-Si vous n’avez pas terminé la [!DNL Schema Registry] pour suivre ce tutoriel, commencez ici et continuez avec ce tutoriel sur les jeux de données uniquement une fois que vous avez composé le schéma nécessaire.
+Si vous n’avez pas terminé le tutoriel [!DNL Schema Registry], commencez là et continuez avec ce tutoriel sur les jeux de données uniquement une fois que vous avez composé le schéma nécessaire.
 
-L’appel suivant peut être utilisé pour afficher le schéma Loyalty Members que vous avez créé lors de la [!DNL Schema Registry] Tutoriel sur l’API :
+L’appel suivant peut être utilisé pour afficher le schéma Loyalty Members que vous avez créé pendant le tutoriel de l’API [!DNL Schema Registry] :
 
 **Format d’API**
 
@@ -211,7 +211,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Ce tutoriel utilise la méthode [Apache Parquet](https://parquet.apache.org/docs/) format de fichier pour tous ses exemples. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md)
+>Ce tutoriel utilise le format de fichier [Apache Parquet](https://parquet.apache.org/docs/) pour tous ses exemples. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md)
 
 **Réponse**
 
@@ -252,7 +252,7 @@ curl -X POST 'https://platform.adobe.io/data/foundation/import/batches' \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 201 (Created) et un objet de réponse. L’objet de réponse est un tableau contenant l’identifiant du lot nouvellement créé au format . `"@/batches/{BATCH_ID}"`. L’identifiant de lot est une chaîne en lecture seule générée par le système et utilisée pour référencer le lot dans les appels API.
+Une réponse réussie renvoie un état HTTP 201 (Created) et un objet de réponse. L’objet de réponse est un tableau contenant l’identifiant du lot nouvellement créé au format `"@/batches/{BATCH_ID}"`. L’identifiant de lot est une chaîne en lecture seule générée par le système et utilisée pour référencer le lot dans les appels API.
 
 ```JSON
 {
@@ -295,7 +295,7 @@ Une fois le nouveau lot créé pour le chargement, vous pouvez désormais charge
 
 >[!NOTE]
 >
->Le fichier de transfert de données le plus volumineux pris en charge est de 512 Mo. Si votre fichier de données est plus volumineux, il doit être divisé en blocs de 512 Mo maximum afin de les charger un par un. En répétant cette étape, vous pouvez charger chaque fichier dans le même lot, à l’aide du même identifiant de lot. Le nombre de fichiers que vous pouvez charger dans le cadre d’un lot n’est pas limité.
+>Le fichier de chargement de données le plus volumineux pris en charge est de 512 Mo. Si votre fichier de données est plus volumineux, il doit être divisé en blocs de 512 Mo maximum afin de les charger un par un. En répétant cette étape, vous pouvez charger chaque fichier dans le même lot, à l’aide du même identifiant de lot. Le nombre de fichiers que vous pouvez charger dans le cadre d’un lot n’est pas limité.
 
 **Format d’API**
 
@@ -326,7 +326,7 @@ Un fichier chargé renvoie un corps de réponse vide et un état HTTP 200 (OK).
 
 ## Signalement de la fin du lot
 
-Après avoir chargé tous les fichiers de données dans le lot, vous pouvez signaler que le lot est terminé. Le signalement de la fin entraîne la création du service. [!DNL Catalog] `DataSetFile` entrées pour les fichiers chargés et les associer au lot généré précédemment. La variable [!DNL Catalog] Le lot est marqué comme réussi, ce qui déclenche tous les flux en aval qui peuvent ensuite fonctionner sur les données désormais disponibles.
+Après avoir chargé tous les fichiers de données dans le lot, vous pouvez signaler que le lot est terminé. Le signalement de la fin entraîne la création d’entrées [!DNL Catalog] `DataSetFile` pour les fichiers chargés et leur association au lot généré précédemment. Le lot [!DNL Catalog] est marqué comme réussi, ce qui déclenche tous les flux en aval qui peuvent ensuite travailler sur les données désormais disponibles.
 
 **Format d’API**
 
@@ -353,7 +353,7 @@ Un lot terminé renvoie un corps de réponse vide et un état HTTP 200 (OK).
 
 ## Surveillance de l’ingestion
 
-La durée d’ingestion des lots varie en fonction de la taille des données. Vous pouvez surveiller l’état d’un lot en ajoutant son identifiant à une `GET /batches` requête.
+La durée d’ingestion des lots varie en fonction de la taille des données. Vous pouvez surveiller l’état d’un lot en ajoutant l’identifiant d’un lot à une requête `GET /batches`.
 
 **Format d’API**
 

@@ -25,9 +25,9 @@ Avant dʼeffectuer les étapes illustrées ci-dessous, consultez la page [Prise 
 
 ## Étape 1 : créer une configuration de serveur et de fichier {#create-server-file-configuration}
 
-Commencer par [création d’une configuration de serveur et de fichier](../authoring-api/destination-server/create-destination-server.md) en utilisant la variable `/destinations-server` point de terminaison .
+Commencez par [créer une configuration de serveur et de fichier](../authoring-api/destination-server/create-destination-server.md) à l’aide du point d’entrée `/destinations-server`.
 
-Vous trouverez ci-dessous un exemple de configuration pour une destination [!DNL Amazon S3]. Pour plus d’informations sur les champs utilisés dans la configuration et pour configurer d’autres types de destinations basées sur des fichiers, voir leur [configurations de serveur](../functionality/destination-server/server-specs.md).
+Vous trouverez ci-dessous un exemple de configuration pour une destination [!DNL Amazon S3]. Pour plus d’informations sur les champs utilisés dans la configuration et pour configurer d’autres types de destinations basées sur des fichiers, voir leurs [configurations de serveur](../functionality/destination-server/server-specs.md) correspondantes.
 
 **Format d’API**
 
@@ -114,9 +114,9 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 ## Étape 2 : créer une configuration de destination {#create-destination-configuration}
 
-Vous trouverez ci-dessous un exemple de configuration de destination, créée à l’aide de la fonction `/destinations` Point d’entrée de l’API.
+Vous trouverez ci-dessous un exemple de configuration de destination, créée à l’aide du point d’entrée de l’API `/destinations`.
 
-Pour connecter la configuration du serveur et des fichiers de l’étape 1 à cette configuration de destination, ajoutez le `instance ID` de la configuration du serveur et du fichier en tant que `destinationServerId` ici.
+Pour connecter la configuration du serveur et des fichiers de l’étape 1 à cette configuration de destination, ajoutez ici `instance ID` de la configuration du serveur et des fichiers comme `destinationServerId`.
 
 **Format d’API**
 
@@ -400,7 +400,7 @@ Selon que vous spécifiez `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `
 
 >[!NOTE]
 >
->`CUSTOMER_AUTHENTICATION` est la plus courante des deux règles d’authentification. Elle est à utiliser si vous demandez aux utilisateurs de fournir une forme d’authentification à votre destination avant de pouvoir configurer une connexion et exporter des données.
+>`CUSTOMER_AUTHENTICATION` est le plus courant des deux règles d’authentification. Il est à utiliser si vous demandez aux utilisateurs de fournir une sorte d’authentification à votre destination avant de pouvoir configurer une connexion et exporter des données.
 
 * Si vous avez sélectionné `"authenticationRule": "CUSTOMER_AUTHENTICATION"` dans la configuration des destinations, reportez-vous aux sections suivantes pour connaître les types d’authentification pris en charge par Destination SDK pour les destinations basées sur des fichiers :
 
@@ -411,7 +411,7 @@ Selon que vous spécifiez `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `
    * [Authentification SFTP avec clé SSH](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [Authentification SFTP avec mot de passe](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
-* Si vous avez sélectionné `"authenticationRule": "PLATFORM_AUTHENTICATION"`, reportez-vous au [documentation de l’API de configuration des informations d’identification](../credentials-api/create-credential-configuration.md#when-to-use).
+* Si vous avez sélectionné `"authenticationRule": "PLATFORM_AUTHENTICATION"`, reportez-vous à la [ documentation de l&#39;API de configuration des informations d&#39;identification](../credentials-api/create-credential-configuration.md#when-to-use).
 
 
 ## Étape 5 : tester votre destination {#test-destination}
@@ -421,7 +421,7 @@ Une fois votre destination configurée à l’aide des points d’entrée de con
 Dans le cadre du processus de test de votre destination, vous devez utiliser l’interface utilisateur de l’Experience Platform pour créer des audiences, que vous activerez vers votre destination. Reportez-vous aux deux ressources ci-dessous pour savoir comment créer des audiences dans Experience Platform :
 
 * [Créer une audience - page de documentation](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Création d’une audience - présentation vidéo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [Créer une audience - présentation vidéo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Étape 6 : publier votre destination {#publish-destination}
 
@@ -445,4 +445,4 @@ Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur 
 >
 >Cette étape n’est pas requise si vous créez une destination privée à des fins personnelles et que vous ne souhaitez pas la publier dans le catalogue de destinations pour que d’autres clients puissent l’utiliser.
 
-Enfin, avant que la destination puisse être publiée dans le catalogue des Experience Platform et visible par tous les clients Experience Platform, vous devez envoyer officiellement la destination pour la révision de l’Adobe. Obtention d’informations complètes sur la procédure à suivre [envoyer pour révision une destination productisée créée en Destination SDK](../guides/submit-destination.md).
+Enfin, avant que la destination puisse être publiée dans le catalogue des Experience Platform et visible par tous les clients Experience Platform, vous devez envoyer officiellement la destination pour la révision de l’Adobe. Trouvez des informations complètes sur la manière de [soumettre pour révision une destination productisée créée dans Destination SDK](../guides/submit-destination.md).

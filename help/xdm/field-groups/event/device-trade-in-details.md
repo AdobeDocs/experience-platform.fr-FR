@@ -11,15 +11,15 @@ ht-degree: 18%
 
 ---
 
-# [!UICONTROL Détails sur l’entrée des appareils] groupe de champs de schéma
+# [!UICONTROL  Groupe de champs de schéma Détails sur le commerce d’appareil ]
 
 >[!NOTE]
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL Détails sur l’entrée des appareils] est un groupe de champs de schéma standard pour la variable [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Il fournit un champ unique (`deviceTradeInDetails`) qui décrit une transaction d’échange d’appareils, y compris la valeur d’échange, l’identifiant d’appareil d’origine et le nouvel identifiant d’appareil.
+[!UICONTROL Device Trade-In Details] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Il fournit un champ unique (`deviceTradeInDetails`) qui décrit une transaction d’échange d’appareils, y compris la valeur d’échange, l’identifiant d’appareil d’origine et le nouvel identifiant d’appareil.
 
-![Structure Détails de l’entrée de l’appareil](../../images/field-groups/device-trade-in-details.png)
+![ Structure Détails de l’entrée de l’appareil ](../../images/field-groups/device-trade-in-details.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
@@ -31,5 +31,5 @@ ht-degree: 18%
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-device-trade-in-details.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-device-trade-in-details.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-device-trade-in-details.schema.json)

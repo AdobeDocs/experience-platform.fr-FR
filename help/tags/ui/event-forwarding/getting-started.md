@@ -5,7 +5,7 @@ feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
 source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '864'
 ht-degree: 84%
 
 ---
@@ -31,7 +31,7 @@ Après avoir envoyé les données au réseau Edge, vous pouvez basculer sur des 
 
 * Connexions Adobe Real-Time CDP, Prime ou Ultimate (contactez l’équipe de votre compte Adobe pour connaître les tarifs)
 * Transfert d’événement dans Adobe Experience Platform
-* SDK web Adobe Experience Platform, SDK mobile ou API Edge Network Server configurés pour envoyer des données à Edge Network
+* SDK Web Adobe Experience Platform, SDK Mobile ou API de serveur Edge Network configurés pour envoyer des données à l’Edge Network
 * Mettez en correspondance les données avec le modèle de données dʼexpérience (XDM) (cette mise en correspondance peut être effectuée à lʼaide de balises).
 
 ## Créer un schéma XDM
@@ -54,7 +54,7 @@ Pour plus d’informations sur les schémas, voir [Aide du système XDM (Modèle
 
 ## Création dʼune propriété de transfert dʼévénements
 
-Dans le **[!UICONTROL Balises]** espace de travail, créer une propriété de type **[!UICONTROL Edge]**.
+Dans l’espace de travail **[!UICONTROL Tags]**, créez une propriété de type **[!UICONTROL Edge]**.
 
 1. Sélectionnez **[!UICONTROL Nouvelle propriété]**.
 
@@ -71,7 +71,7 @@ notez les identifiants de lʼenvironnement. Si lʼorganisation Adobe utilisée d
 
 Pour créer votre flux de données dans Adobe Experience Platform, utilisez l’identifiant d’environnement généré lors de la création de la propriété de transfert d’événement.
 
-1. Sélectionner **[!UICONTROL Datastreams]** dans le volet de navigation de gauche.
+1. Sélectionnez **[!UICONTROL Datastreams]** dans le volet de navigation de gauche.
 
 1. Nommez la configuration et donnez une description facultative.
 La description permet d’identifier les configurations dans une liste de plusieurs configurations.
@@ -82,7 +82,7 @@ La description permet d’identifier les configurations dans une liste de plusie
 
 Ensuite, configurez Edge Network pour envoyer des données au transfert dʼévénements et à dʼautres produits Adobe.
 
-1. Dans le **[!UICONTROL Datastreams]** workspace, sélectionnez la propriété que vous avez créée.
+1. Dans l’espace de travail **[!UICONTROL Datastreams]**, sélectionnez la propriété que vous avez créée.
 
 1. Sélectionnez l’environnement de développement, de production ou d’évaluation.
 
@@ -98,9 +98,9 @@ Après la configuration, prenez note des identifiants d’environnement pour la 
 
 ## Configurez l’extension SDK web de Platform pour envoyer des données au flux de données créé précédemment.
 
-Créez votre propriété dans le **[!UICONTROL Balises]** workspace, puis accédez à **[!UICONTROL Extensions]** et sélectionnez l’extension SDK Web Experience Platform dans le catalogue pour la configurer et l’installer.
+Créez votre propriété dans l’espace de travail **[!UICONTROL Balises]**, puis accédez à **[!UICONTROL Extensions]** et sélectionnez l’extension SDK Web Experience Platform dans le catalogue pour la configurer et l’installer.
 
-Voir [Documentation de l’extension SDK Web](../../extensions/client/web-sdk/overview.md) pour plus d’informations sur les options de configuration.
+Pour plus d’informations sur les options de configuration, voir la [documentation de l’extension SDK Web](../../extensions/client/web-sdk/overview.md) .
 
 ## Création dʼune règle de balise pour envoyer des données au SDK Web Platform
 

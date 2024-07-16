@@ -13,9 +13,9 @@ ht-degree: 65%
 
 # Présentation de l’API d’ingestion par lots
 
-L’API Batch Ingestion de Adobe Experience Platform vous permet d’ingérer des données dans Platform sous forme de fichiers de lot. Les données en cours d’ingestion peuvent être des données de profil provenant d’un fichier plat (un fichier Parquet, par exemple) ou des données conformes à un schéma connu dans la variable [!DNL Experience Data Model] Registre (XDM).
+L’API Batch Ingestion de Adobe Experience Platform vous permet d’ingérer des données dans Platform sous forme de fichiers de lot. Les données en cours d’ingestion peuvent être des données de profil d’un fichier plat (par exemple un fichier Parquet) ou des données conformes à un schéma connu dans le registre [!DNL Experience Data Model] (XDM).
 
-La variable [Référence de l’API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) fournit des informations supplémentaires sur ces appels API.
+La [référence de l’API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) fournit des informations supplémentaires sur ces appels d’API.
 
 Le diagramme suivant décrit le processus d’ingestion par lots :
 
@@ -23,12 +23,12 @@ Le diagramme suivant décrit le processus d’ingestion par lots :
 
 ## Commencer
 
-Les points de terminaison d’API utilisés dans ce guide font partie du [API Batch Ingestion](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Les points de terminaison d’API utilisés dans ce guide font partie de l’ [API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 ### Conditions préalables de [!DNL Data Ingestion]
 
 - Les données à charger doivent être au format Parquet ou JSON.
-- Un jeu de données créé dans la variable [[!DNL Catalog services]](../../catalog/home.md).
+- Jeu de données créé dans le [[!DNL Catalog services]](../../catalog/home.md).
 - Le contenu du fichier Parquet doit correspondre à un sous-ensemble du schéma du jeu de données dans lequel il est chargé.
 - Obtenez votre jeton d’accès unique après l’authentification.
 
@@ -48,15 +48,15 @@ L’ingestion de données par lots présente certaines contraintes :
 
 >[!NOTE]
 >
->Pour charger un fichier de plus de 512 Mo, vous devez le diviser en petits blocs. Les instructions de chargement d’un fichier volumineux sont présentées dans la section [section de chargement de fichiers volumineux de ce document](#large-file-upload---create-file).
+>Pour charger un fichier de plus de 512 Mo, vous devez le diviser en petits blocs. Vous trouverez des instructions pour télécharger un fichier volumineux dans la section [gros fichier upload de ce document](#large-file-upload---create-file).
 
 ### Types
 
-Lors de l’ingestion de données, il est important de comprendre comment [!DNL Experience Data Model] Les schémas (XDM) fonctionnent. Pour plus d’informations sur la façon dont les types de champs XDM sont associés à différents formats, reportez-vous au [guide de développement du registre des schémas](../../xdm/api/getting-started.md).
+Lors de l’ingestion de données, il est important de comprendre le fonctionnement des schémas [!DNL Experience Data Model] (XDM). Pour plus d’informations sur la façon dont les types de champs XDM sont associés à différents formats, reportez-vous au [guide de développement du registre des schémas](../../xdm/api/getting-started.md).
 
 L’ingestion de données offre une certaine flexibilité : si un type ne correspond pas à ce qui se trouve dans le schéma cible, les données sont converties vers le type cible exprimé. Si cette conversion est impossible, le lot échouera avec `TypeCompatibilityException`.
 
-Par exemple, ni JSON ni CSV ne comportent de `date` ou `date-time` type. Par conséquent, ces valeurs sont exprimées à l’aide de [Chaînes formatées ISO 8601](https://www.iso.org/fr/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) ou heure Unix formatée en millisecondes (1531263959000) et convertie au moment de l’ingestion vers le type XDM cible.
+Par exemple, ni JSON ni CSV ne possèdent de type `date` ou `date-time`. Par conséquent, ces valeurs sont exprimées à l’aide de [chaînes formatées ISO 8601](https://www.iso.org/fr/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) ou de l’heure Unix formatée en millisecondes (1531263959000) et sont converties au moment de l’ingestion vers le type XDM cible.
 
 Le tableau ci-dessous illustre les conversions prises en charge lors de l’ingestion de données.
 
@@ -79,7 +79,7 @@ Le tableau ci-dessous illustre les conversions prises en charge lors de l’inge
 
 ## Utilisation de l’API
 
-La variable [!DNL Data Ingestion] L’API vous permet d’ingérer des données sous forme de lots (une unité de données composée d’un ou de plusieurs fichiers à ingérer en une seule unité) dans [!DNL Experience Platform] en trois étapes de base :
+L’API [!DNL Data Ingestion] vous permet d’ingérer des données sous forme de lots (une unité de données composée d’un ou de plusieurs fichiers à ingérer en une seule unité) dans [!DNL Experience Platform] en trois étapes de base :
 
 1. Création d’un nouveau filtre.
 2. Chargez des fichiers vers un jeu de données spécifique qui correspond au schéma XDM des données.
@@ -146,11 +146,11 @@ Vous pouvez charger des fichiers à l’aide de l’API Small File Upload. Cepen
 
 >[!NOTE]
 >
->L’ingestion par lots peut être utilisée pour mettre à jour progressivement les données dans la banque de profils. Pour plus d’informations, voir la section sur [mise à jour d’un lot](#patch-a-batch) dans le [guide de développement de l’ingestion par lots](api-overview.md).
+>L’ingestion par lots peut être utilisée pour mettre à jour progressivement les données dans la banque de profils. Pour plus d’informations, reportez-vous à la section sur la [mise à jour d’un lot](#patch-a-batch) dans le [guide de développement de l’ingestion par lots](api-overview.md).
 
 >[!INFO]
 >
->Les exemples ci-dessous utilisent la méthode [Apache Parquet](https://parquet.apache.org/docs/) format de fichier. Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](api-overview.md).
+>Les exemples ci-dessous utilisent le format de fichier [Apache Parquet](https://parquet.apache.org/docs/). Vous trouverez un exemple d’utilisation du format de fichier JSON dans le [guide de développement de l’ingestion par lots](api-overview.md).
 
 ### Chargement de petits fichiers
 
@@ -257,7 +257,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Signalement de la fin du lot
 
-Une fois que tous les fichiers ont été chargés dans le lot, il peut être marqué comme étant terminé. En procédant comme suit, la variable [!DNL Catalog] Les entrées DataSetFile sont créées pour les fichiers terminés et associées au lot généré ci-dessus. Le lot de [!DNL Catalog] est marqué comme réussi, ce qui déclenche les flux en aval afin d’ingérer les données disponibles.
+Une fois que tous les fichiers ont été chargés dans le lot, il peut être marqué comme étant terminé. Ce faisant, les entrées [!DNL Catalog] DataSetFile sont créées pour les fichiers terminés et associées au lot généré ci-dessus. Le lot de [!DNL Catalog] est marqué comme réussi, ce qui déclenche les flux en aval afin d’ingérer les données disponibles.
 
 **Requête**
 

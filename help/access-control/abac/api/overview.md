@@ -20,22 +20,22 @@ L’API de contrôle d’accès basé sur les attributs est utilisée pour accé
 
 >[!IMPORTANT]
 >
->Le contrôle d’accès basé sur les attributs ne doit pas être confondu avec les fonctionnalités de gouvernance des données des Experience Platform, qui vous permettent d’utiliser des libellés et des stratégies pour contrôler la manière dont les données sont utilisées dans Platform plutôt que les utilisateurs de votre organisation qui y ont accès. Voir [Guide de l’API Policy Service](../../../data-governance/api/overview.md) pour savoir comment utiliser ces fonctionnalités par programmation.
+>Le contrôle d’accès basé sur les attributs ne doit pas être confondu avec les fonctionnalités de gouvernance des données des Experience Platform, qui vous permettent d’utiliser des libellés et des stratégies pour contrôler la manière dont les données sont utilisées dans Platform plutôt que les utilisateurs de votre organisation qui y ont accès. Consultez le [guide de l’API Policy Service](../../../data-governance/api/overview.md) pour savoir comment utiliser ces fonctionnalités par programmation.
 
 Ces points d’entrée sont décrits ci-dessous. Consultez le guide de chaque point d’entrée pour plus de détails et reportez-vous au [guide de prise en main](./getting-started.md) pour obtenir des informations importantes sur les en-têtes nécessaires, la lecture des exemples d’appels d’API, etc.
 
 ## Rôles
 
-Les rôles définissent l’accès dont dispose un administrateur, un spécialiste ou un utilisateur final aux ressources de votre entreprise. Dans un environnement de contrôle d’accès basé sur les rôles, la configuration de l’accès des utilisateurs est regroupée suivant les responsabilités et les besoins communs. Un rôle possède un ensemble donné d’autorisations et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin. Voir [guide d’endpoint des rôles](./roles.md) pour plus d’informations sur l’utilisation des rôles dans l’API.
+Les rôles définissent l’accès dont dispose un administrateur, un spécialiste ou un utilisateur final aux ressources de votre entreprise. Dans un environnement de contrôle d’accès basé sur les rôles, la configuration de l’accès des utilisateurs est regroupée suivant les responsabilités et les besoins communs. Un rôle possède un ensemble donné d’autorisations et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès en lecture ou en écriture dont ils ont besoin. Pour plus d’informations sur l’utilisation des rôles dans l’API, consultez le [guide de point de terminaison des rôles](./roles.md) .
 
 ## Politiques
 
-Les politiques sont des déclarations qui réunissent des attributs pour établir des actions autorisées et non autorisées. Les stratégies peuvent être locales ou globales et peuvent remplacer d’autres stratégies. La variable `/policies` endpoint vous permet de gérer par programmation les stratégies de votre entreprise. Voir [guide de point de fin des stratégies](./policies.md) pour plus d’informations sur l’utilisation des stratégies dans l’API.
+Les politiques sont des déclarations qui réunissent des attributs pour établir des actions autorisées et non autorisées. Les stratégies peuvent être locales ou globales et peuvent remplacer d’autres stratégies. Le point de terminaison `/policies` vous permet de gérer par programmation les stratégies de votre entreprise. Pour plus d’informations sur l’utilisation des stratégies dans l’API, consultez le [guide de point de terminaison des stratégies](./policies.md) .
 
 ## Produits
 
-La variable `/products` Le point de terminaison de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les produits, ainsi que les catégories d’autorisations et les jeux d’autorisations associés aux produits de votre entreprise. Voir [guide de point de fin de produits](./products.md) pour plus d’informations sur l’utilisation des produits, de leurs catégories d’autorisations et de leurs jeux d’autorisations correspondants dans l’API.
+Le point d’entrée `/products` de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les produits, ainsi que les catégories d’autorisations et les jeux d’autorisations associés aux produits de votre entreprise. Pour plus d’informations sur l’utilisation des produits, leurs catégories d’autorisations correspondantes et les jeux d’autorisations correspondants dans l’API, consultez le [guide de point de terminaison de produits](./products.md) .
 
 ## Étapes suivantes
 
-Pour commencer à lancer des appels à l’aide de l’API de contrôle d’accès basé sur les attributs, lisez la [guide de prise en main](./getting-started.md) sélectionnez ensuite l’un des guides de point de fin pour savoir comment utiliser des points de fin spécifiques.
+Pour commencer à lancer des appels à l’aide de l’API de contrôle d’accès basé sur les attributs, lisez le [guide de prise en main](./getting-started.md) , puis sélectionnez l’un des guides de point de terminaison pour savoir comment utiliser des points de terminaison spécifiques.

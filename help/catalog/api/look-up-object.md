@@ -13,11 +13,11 @@ ht-degree: 44%
 
 # Recherche d’un objet Catalogue
 
-Si vous connaissez l’identifiant unique d’une [!DNL Catalog] , vous pouvez exécuter une requête de GET pour afficher les détails de cet objet.
+Si vous connaissez l’identifiant unique d’un objet [!DNL Catalog] spécifique, vous pouvez exécuter une requête de GET pour afficher les détails de cet objet.
 
 >[!NOTE]
 >
->Lors de l’affichage d’objets spécifiques, il est toujours recommandé de [filtre par propriétés](filter-data.md) et ne renvoient que les propriétés qui vous intéressent.
+>Lors de l’affichage d’objets spécifiques, il est toujours recommandé de [filtrer par propriétés](filter-data.md) et de renvoyer uniquement les propriétés qui vous intéressent.
 
 **Format d’API**
 
@@ -28,12 +28,12 @@ GET /{OBJECT_TYPE}/{OBJECT_ID}?properties={PROPERTY_1},{PROPERTY_2},{PROPERTY_3}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Le type de [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Type d’objet [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | L’identifiant de l’objet spécifique que vous souhaitez récupérer. |
 
 **Requête**
 
-La requête suivante récupère un jeu de données à l’aide de son identifiant, renvoyant son `name`, `description`, `tags`, et `files` propriétés.
+La requête suivante récupère un jeu de données à l’aide de son identifiant, renvoyant ses propriétés `name`, `description`, `tags` et `files`.
 
 ```shell
 curl -X GET \
@@ -65,4 +65,4 @@ Une réponse réussie renvoie le jeu de données spécifié contenant uniquement
 
 >[!NOTE]
 >
->Propriétés dont les valeurs comportent le préfixe `@` représentent des objets interconnectés. Consultez la section de l’annexe sur [l’affichage des objets interconnectés](appendix.md#view-interrelated-objects) pour savoir comment afficher les détails de ces objets.
+>Les propriétés dont les valeurs comportent le préfixe `@` représentent des objets interconnectés. Consultez la section de l’annexe sur [l’affichage des objets interconnectés](appendix.md#view-interrelated-objects) pour savoir comment afficher les détails de ces objets.

@@ -4,8 +4,8 @@ description: Découvrez comment effectuer une publication publique ou privée d�
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
 source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 98%
+source-wordcount: '303'
+ht-degree: 99%
 
 ---
 

@@ -4,8 +4,8 @@ description: Découvrez lʼextension de balise Core dans Adobe Experience Plat
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '5482'
-ht-degree: 96%
+source-wordcount: '5445'
+ht-degree: 95%
 
 ---
 
@@ -460,7 +460,7 @@ Indiquez un ou plusieurs modèles de hachage qui doivent exister dans l’URL.
 1. (Facultatif) Activez les Regex s’il s’agit d’une expression régulière.
 1. Ajoutez d’autres modèles de hachage.
 
-#### Path And Query String
+#### Chemin Et Chaîne De Requête
 
 Indiquez un ou plusieurs chemins d’accès qui doivent exister dans l’URL.  Cela inclut le chemin et la chaîne de requête.
 
@@ -472,7 +472,7 @@ Indiquez un ou plusieurs chemins d’accès qui doivent exister dans l’URL.  C
 1. (Facultatif) Activez les Regex s’il s’agit d’une expression régulière.
 1. Ajoutez d’autres chemins d’accès.
 
-#### Path Without Query String
+#### Chemin sans chaîne de requête
 
 Indiquez un ou plusieurs chemins d’accès qui doivent exister dans l’URL.  Cela inclut le chemin d’accès, mais n’inclut pas la chaîne de requête.
 
@@ -646,7 +646,7 @@ Les sections suivantes décrivent les types d’éléments de données disponibl
 
 ### Cookie
 
-N’importe quel cookie de domaine disponible peut être référencé dans le champ de nom du cookie.
+Tout cookie de domaine disponible peut être référencé dans le champ du nom du cookie.
 
 #### Exemple :
 
@@ -721,7 +721,7 @@ Dans l’exemple ci-dessous, l’annotation contient une variable JavaScript nom
 
 Lorsque vous créez l’élément de données, fournissez simplement le chemin d’accès à cette variable.
 
-Si vous utilisez un objet collecteur de données dans votre couche de données, utilisez la notation point dans le chemin pour référencer l’objet et la propriété que vous souhaitez capturer dans l’élément de données, par exemple `_myData.pageName`, ou `digitalData.pageName`, etc.
+Si vous utilisez un objet collecteur de données dans votre couche de données, utilisez la notation point dans le chemin pour référencer l’objet et la propriété que vous souhaitez capturer dans l’élément de données, par exemple `_myData.pageName`, `digitalData.pageName`, etc.
 
 #### Exemple :
 
@@ -798,7 +798,7 @@ Vous pouvez sélectionner l’un des attributs de page suivants à utiliser dans
 
 * URL
 * Hostname
-* Pathname
+* Nom du chemin
 * Protocol
 * Référent
 * Title

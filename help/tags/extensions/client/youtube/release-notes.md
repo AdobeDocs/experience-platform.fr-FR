@@ -4,7 +4,7 @@ description: Notes de mise à jour les plus récentes pour lʼextension de balis
 exl-id: 5c680b1d-3970-42ed-9956-e78ead7b3662
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '138'
 ht-degree: 100%
 
 ---

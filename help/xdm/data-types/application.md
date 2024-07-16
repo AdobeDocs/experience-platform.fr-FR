@@ -11,7 +11,7 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL Application] type de données
+# Type de données [!UICONTROL Application]
 
 [!UICONTROL Application] est un type de données XDM (Experience Data Model) standard qui décrit les détails liés aux interactions générées par une application. Une application fait référence à une expérience logicielle, telle qu’une application mobile ou de bureau, qui peut être installée, exécutée, fermée ou désinstallée par un utilisateur final. Les propriétés de ce type de données ne sont pas destinées à décrire des agents tels que des chatbots, des modules externes basés sur un navigateur ou d’autres expériences qui ne s’appliquent pas aux applications.
 
@@ -28,12 +28,12 @@ ht-degree: 3%
 | `upgrades` | [[!UICONTROL Mesure]](./measure.md) | Contient des données sur la mise à niveau d’une application qui a été installée précédemment. Elle est déclenchée au premier lancement après une mise à niveau. |
 | `id` | Chaîne | Identifiant unique de l’application. |
 | `name` | Chaîne | Nom de l’application. |
-| `userPerspective` | Chaîne | La perspective ou la relation physique entre l’utilisateur et l’application ou la marque au moment où un événement s’est produit. La compréhension de la perspective de l’utilisateur par rapport à l’application permet de générer des sessions avec précision, car la plupart du temps vous ne souhaitez pas inclure `background` et `detached` dans le cadre d’une session &quot;active&quot;. La valeur de cette propriété doit être égale à l’une des valeurs d’énumération répertoriées ci-dessous. <li> `foreground`: l’utilisateur et l’application interagissent directement entre eux. </li> <li> `background`: l’application et l’utilisateur interagissent indirectement. Par exemple, l’application peut mesurer une valeur et l’actualiser lorsque l’écran est verrouillé ou qu’une autre application est utilisée en premier plan.  </li> <li> `detached`: détaché signifie que l’événement était lié à l’application, mais ne provenait pas directement de l’application, comme l’envoi d’un email ou d’une notification push depuis un système externe. |
+| `userPerspective` | Chaîne | La perspective ou la relation physique entre l’utilisateur et l’application ou la marque au moment où un événement s’est produit. La compréhension de la perspective de l’utilisateur par rapport à l’application permet de générer des sessions avec précision, car la plupart du temps, vous ne souhaitez pas inclure les événements `background` et `detached` dans le cadre d’une session &quot;active&quot;. La valeur de cette propriété doit être égale à l’une des valeurs d’énumération répertoriées ci-dessous. <li> `foreground` : l’utilisateur et l’application interagissent directement entre eux. </li> <li> `background` : l’application et l’utilisateur interagissent indirectement entre eux. Par exemple, l’application peut mesurer une valeur et l’actualiser lorsque l’écran est verrouillé ou qu’une autre application est utilisée en premier plan.  </li> <li> `detached` : désolidarisé signifie que l’événement était lié à l’application, mais ne provenait pas directement de l’application, comme l’envoi d’un email ou d’une notification push depuis un système externe. |
 | `version` | Chaîne | Version de l’application. |
 
 {style="table-layout:auto"}
 
 Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/application.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/application.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/application.schema.json)

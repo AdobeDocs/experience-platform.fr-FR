@@ -1,7 +1,7 @@
 ---
 title: Utiliser l’enquête d’auto-identification pour créer votre profil personnel Experience Platform
 description: Découvrez comment utiliser l’interface utilisateur de l’enquête d’auto-identification pour recevoir du contenu pertinent en fonction de vos fonctions de travail et des objectifs associés.
-badge: Version Beta
+badge: Version bêta
 exl-id: 80b3f55f-1eab-4a99-be75-49bd091f9739
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt

@@ -53,11 +53,11 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 >abstract="Sélectionnez le type d’entreprise approprié à votre cas d’utilisation. Votre accès peut varier en fonction de votre compte d’abonnement Real-time Customer Data Platform."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=fr" text="Présentation de Real-Time CDP"
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à la fonction [!UICONTROL Sources] workspace et afficher un catalogue de sources disponibles dans Experience Platform.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources] et afficher un catalogue de sources disponibles dans Experience Platform.
 
-Utilisez la variable *[!UICONTROL Catégories]* pour filtrer les sources par catégorie. Vous pouvez également saisir un nom de source dans la barre de recherche pour trouver une source spécifique dans le catalogue.
+Utilisez le menu *[!UICONTROL Catégories]* pour filtrer les sources par catégorie. Vous pouvez également saisir un nom de source dans la barre de recherche pour trouver une source spécifique dans le catalogue.
 
-Accédez au [!UICONTROL Adobe des applications] pour afficher la catégorie [!DNL Marketo Engage] carte source, puis sélectionnez [!UICONTROL Ajouter des données] pour commencer.
+Accédez à la catégorie [!UICONTROL Adobe applications] pour afficher la carte source [!DNL Marketo Engage], puis sélectionnez [!UICONTROL Ajouter des données] pour commencer.
 
 ![Un catalogue de l’espace de travail des sources avec la source de Marketo Engage mise en surbrillance.](../../images/tutorials/templates/catalog.png)
 
@@ -82,7 +82,7 @@ Pour utiliser un compte existant, sélectionnez [!UICONTROL Compte existant] pui
 
 ![La page de sélection d’un compte existant avec la liste des comptes existants auxquels vous pouvez accéder.](../../images/tutorials/templates/existing-account.png)
 
->[!TAB Création d’un compte]
+>[!TAB Créer un compte]
 
 Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez les informations de connexion source et les informations d’authentification du compte. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion à la source]**, puis patientez quelques instants le temps que la nouvelle connexion sʼétablisse.
 
@@ -94,9 +94,10 @@ Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fourn
 
 Une fois votre compte authentifié, vous pouvez désormais sélectionner le modèle à utiliser pour votre flux de données.
 
-+++[!DNL Marketo Engage] modèles Le tableau suivant décrit les modèles disponibles pour les [!DNL Marketo Engage] source.
++++[!DNL Marketo Engage] modèles
+Le tableau suivant décrit les modèles disponibles pour la source [!DNL Marketo Engage].
 
-| [!DNL Marketo Engage] templates | Description |
+| [!DNL Marketo Engage] modèles | Description |
 | --- | --- |
 | Activités | Le modèle Activités capture des instantanés d’activités basés sur un événement, tels que des interactions par e-mail, des interactions sur le site web et des appels de vente. |
 | Sociétés | Le modèle Sociétés capture les détails du compte commercial, tels que les informations démographiques, le lieu et les informations de facturation de l’entreprise. |
@@ -113,13 +114,14 @@ Une fois votre compte authentifié, vous pouvez désormais sélectionner le mod�
 
 +++
 
-+++[!DNL Salesforce] Modèles B2B Le tableau suivant décrit les modèles B2B disponibles pour les [!DNL Salesforce] source.
++++[!DNL Salesforce] modèles B2B
+Le tableau suivant décrit les modèles B2B disponibles pour la source [!DNL Salesforce].
 
-| [!DNL Salesforce] Modèles B2B | Description |
+| [!DNL Salesforce] modèles B2B | Description |
 | --- | --- |
 | Contact de compte | Le modèle Relation contact compte capture la relation entre un contact et un ou plusieurs comptes. |
 | Comptes | Le modèle Compte capture les détails du compte commercial, tels que les informations démographiques, le lieu et les informations de facturation de l’entreprise. |
-| Membres de la campagne | Le modèle Membres de la campagne capture la relation entre un prospect ou un contact individuel et un [!DNL Salesforce] campaign. |
+| Membres de la campagne | Le modèle Membres de la campagne capture la relation entre un prospect ou un contact individuel et une campagne [!DNL Salesforce] spécifique. |
 | Campagnes | Le modèle Campagnes capture les détails du compte d’entreprise, tels que les informations démographiques, le lieu et les informations de facturation de l’entreprise. |
 | Contacts | Le modèle Contact capture les attributs des contacts, tels que les détails démographiques, les coordonnées et les entités commerciales associées. |
 | Prospects | Le modèle Pistes capture les attributs des pistes, tels que les détails démographiques, les coordonnées et les entités commerciales associées. |
@@ -130,20 +132,22 @@ Une fois votre compte authentifié, vous pouvez désormais sélectionner le mod�
 
 +++
 
-+++[!DNL Salesforce] Modèles B2C Le tableau suivant décrit les modèles B2C disponibles pour les [!DNL Salesforce] source.
++++[!DNL Salesforce] modèles B2C
+Le tableau suivant décrit les modèles B2C disponibles pour la source [!DNL Salesforce].
 
-| [!DNL Salesforce] Modèles B2C | Description |
+| [!DNL Salesforce] modèles B2C | Description |
 | --- | --- |
 | Contact | Le modèle Contact capture les attributs des contacts, tels que les détails démographiques, les coordonnées et les entités commerciales associées. |
-| Prospect | Le modèle de piste capture les attributs des pistes, tels que les détails démographiques, les coordonnées et les entités commerciales associées. |
+| Lead | Le modèle de piste capture les attributs des pistes, tels que les détails démographiques, les coordonnées et les entités commerciales associées. |
 
 {style="table-layout:auto"}
 
 +++
 
-+++[!DNL Microsoft Dynamics] Modèles B2B Le tableau suivant décrit les modèles B2B disponibles pour les [!DNL Microsoft Dynamics] source.
++++[!DNL Microsoft Dynamics] modèles B2B
+Le tableau suivant décrit les modèles B2B disponibles pour la source [!DNL Microsoft Dynamics].
 
-| [!DNL Microsoft Dynamics] Modèles B2B | Description |
+| [!DNL Microsoft Dynamics] modèles B2B | Description |
 | --- | --- |
 | Comptes | Le modèle Compte capture les détails du compte commercial, tels que les informations démographiques, le lieu et les informations de facturation de l’entreprise. |
 | Campagnes | Le modèle Campagnes capture les détails du compte d’entreprise, tels que les informations démographiques, le lieu et les informations de facturation de l’entreprise. |
@@ -158,18 +162,19 @@ Une fois votre compte authentifié, vous pouvez désormais sélectionner le mod�
 
 +++
 
-+++[!DNL Microsoft Dynamics] Modèles B2C Le tableau suivant décrit les modèles B2C disponibles pour les [!DNL Microsoft Dynamics] source.
++++[!DNL Microsoft Dynamics] modèles B2C
+Le tableau suivant décrit les modèles B2C disponibles pour la source [!DNL Microsoft Dynamics].
 
-| [!DNL Microsoft Dynamics] Modèles B2C | Description |
+| [!DNL Microsoft Dynamics] modèles B2C | Description |
 | --- | --- |
 | Contact | Le modèle Contact capture les attributs des contacts, tels que les détails démographiques, les coordonnées et les entités commerciales associées. |
-| Prospect | Le modèle de piste capture les attributs des pistes, tels que les détails démographiques, les coordonnées et les entités commerciales associées. |
+| Lead | Le modèle de piste capture les attributs des pistes, tels que les détails démographiques, les coordonnées et les entités commerciales associées. |
 
 {style="table-layout:auto"}
 
 +++
 
-Selon le type d’entreprise sélectionné, une liste de modèles s’affiche. Sélectionner l’icône d’aperçu ![icône d’aperçu](../../images/tutorials/templates/preview-icon.png) en regard d’un nom de modèle pour prévisualiser les exemples de données du modèle.
+Selon le type d’entreprise sélectionné, une liste de modèles s’affiche. Sélectionnez l’icône d’aperçu ![icône d’aperçu](../../images/tutorials/templates/preview-icon.png) en regard d’un nom de modèle pour prévisualiser des données d’exemple du modèle.
 
 ![Une liste de modèles avec l’icône d’aperçu mise en surbrillance.](../../images/tutorials/templates/templates.png)
 
@@ -187,21 +192,21 @@ Si vous sélectionnez un ou des éléments partiels dans la liste des modèles d
 
 ![La liste des modèles avec le modèle Rôle de contact d’opportunité sélectionné.](../../images/tutorials/templates/select-template.png)
 
-### Définition d’un planning
+### Définir un planning
 
-La variable [!DNL Microsoft Dynamics] et la variable [!DNL Salesforce] les sources prennent toutes deux en charge la planification des flux de données.
+Les sources [!DNL Microsoft Dynamics] et [!DNL Salesforce] prennent toutes deux en charge les flux de données de planification.
 
-Utilisez l’interface de planification pour configurer un planning d’ingestion pour vos flux de données. Définissez la fréquence d’ingestion sur **Une fois** pour créer une ingestion unique.
+Utilisez l’interface de planification pour configurer un planning d’ingestion pour vos flux de données. Définissez la fréquence d’ingestion sur **Once** pour créer une ingestion unique.
 
-![Interface de planification pour les modèles Dynamics et Salesforce.](../../images/tutorials/templates/schedule.png)
+![ Interface de planification pour les modèles Dynamics et Salesforce.](../../images/tutorials/templates/schedule.png)
 
-Vous pouvez également définir la fréquence d’ingestion sur **Minute**, **Heure**, **Jour**, ou **Semaine**. Si vous planifiez votre flux de données pour plusieurs assimilations, vous devez définir un intervalle pour établir une période entre chaque ingestion. Par exemple, une fréquence d’ingestion définie sur **Heure** et un intervalle défini sur **15** signifie que votre flux de données est planifié pour ingérer des données chaque **15 heures**.
+Vous pouvez également définir la fréquence d&#39;ingestion sur **Minute**, **Heure**, **Jour** ou **Semaine**. Si vous planifiez votre flux de données pour plusieurs assimilations, vous devez définir un intervalle pour établir une période entre chaque ingestion. Par exemple, une fréquence d’ingestion définie sur **Heure** et un intervalle défini sur **15** signifie que votre flux de données est planifié pour ingérer des données toutes les **15 heures**.
 
-Au cours de cette étape, vous pouvez également activer **renvoyer** et définissez une colonne pour l’ingestion incrémentielle des données. Le renvoi est utilisé pour ingérer des données historiques, tandis que la colonne que vous définissez pour l’ingestion incrémentielle permet de différencier les nouvelles données des données existantes.
+Au cours de cette étape, vous pouvez également activer le **renvoi** et définir une colonne pour l’ingestion incrémentielle de données. Le renvoi est utilisé pour ingérer des données historiques, tandis que la colonne que vous définissez pour l’ingestion incrémentielle permet de différencier les nouvelles données des données existantes.
 
-Une fois que vous avez terminé la configuration de votre planning d’ingestion, sélectionnez **[!UICONTROL Terminer]**.
+Une fois que vous avez terminé la configuration de votre planning d&#39;ingestion, sélectionnez **[!UICONTROL Terminer]**.
 
-![Interface de planification pour les modèles Dynamics et Salesforce avec renvoi activé.](../../images/tutorials/templates/backfill.png)
+![ L’interface de planification pour les modèles Dynamics et Salesforce avec le renvoi activé.](../../images/tutorials/templates/backfill.png)
 
 ### Vérifier les ressources {#review-assets}
 
@@ -228,15 +233,15 @@ Vous pouvez utiliser la vue de l’éditeur de schémas pour mettre à jour votr
 
 >[!TIP]
 >
->Vous pouvez accéder à votre flux de données de brouillon via la [!UICONTROL Flux de données] page catalogue dans l’espace de travail sources. Sélectionner **[!UICONTROL Flux de données]** dans l’en-tête supérieur, puis sélectionnez le flux de données à mettre à jour dans la liste.
+>Vous pouvez accéder à votre flux de données de brouillon via la page de catalogue [!UICONTROL Flux de données] de l’espace de travail des sources. Sélectionnez **[!UICONTROL Flux de données]** dans l’en-tête supérieur, puis sélectionnez le flux de données à mettre à jour dans la liste.
 >
 >![Liste des flux de données existants dans le catalogue des flux de données de l’espace de travail des sources.](../../images/tutorials/templates/dataflows.png)
 
-### Publication de votre flux de données
+### Publish de votre flux de données
 
-Commencez le processus de publication en parcourant le workflow des sources. Après avoir sélectionné [!UICONTROL Mise à jour du flux de données], vous êtes dirigé vers la variable *[!UICONTROL Ajouter des données]* de l’étape du workflow. Cliquez sur **[!UICONTROL Suivant]** pour continuer.
+Commencez le processus de publication en parcourant le workflow des sources. Après avoir sélectionné [!UICONTROL Mettre à jour le flux de données], vous êtes dirigé vers l’étape *[!UICONTROL Ajouter des données]* du workflow. Cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
-![Étape d’ajout de données pour un flux de données de brouillon](../../images/tutorials/templates/continue-draft.png)
+![L’étape d’ajout de données pour un flux de données de brouillon](../../images/tutorials/templates/continue-draft.png)
 
 Ensuite, confirmez les détails de votre flux de données et configurez les paramètres pour les diagnostics d’erreur, l’ingestion partielle et les notifications d’alerte. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -244,15 +249,15 @@ Ensuite, confirmez les détails de votre flux de données et configurez les para
 
 >[!NOTE]
 >
->Vous pouvez sélectionner **[!UICONTROL Enregistrer en tant que brouillon]** à tout moment pour arrêter et enregistrer les modifications apportées à votre flux de données.
+>Vous pouvez à tout moment sélectionner **[!UICONTROL Enregistrer en tant que brouillon]** pour arrêter et enregistrer les modifications que vous avez apportées à votre flux de données.
 
-L’étape de mappage s’affiche. Pendant cette étape, vous pouvez reconfigurer les configurations de mappage de votre flux de données. Pour obtenir un guide complet sur les fonctions de préparation de données utilisées pour le mappage, consultez la page [guide de l’interface utilisateur de la préparation de données](../../../data-prep/ui/mapping.md).
+L’étape de mappage s’affiche. Pendant cette étape, vous pouvez reconfigurer les configurations de mappage de votre flux de données. Pour obtenir un guide complet sur les fonctions de prép de données utilisées pour le mappage, consultez le [guide de l’interface utilisateur de prép de données](../../../data-prep/ui/mapping.md).
 
-![L’étape de mappage d’un flux de données de brouillon.](../../images/tutorials/templates/mapping.png)
+![Étape de mappage d’un flux de données de brouillon.](../../images/tutorials/templates/mapping.png)
 
-Enfin, passez en revue les détails de votre flux de données, puis sélectionnez **[!UICONTROL Enregistrement et ingestion]** pour publier votre brouillon.
+Enfin, passez en revue les détails de votre flux de données, puis sélectionnez **[!UICONTROL Enregistrer et ingérer]** pour publier votre brouillon.
 
-![L’étape de révision d’un flux de données de brouillon.](../../images/tutorials/templates/review.png)
+![Étape de révision d’un flux de données de brouillon.](../../images/tutorials/templates/review.png)
 
 ## Étapes suivantes
 
@@ -266,4 +271,4 @@ Sélectionnez l’icône de notification dans l’en-tête supérieur de l’int
 
 ![Le panneau des notifications de l’interface utilisateur de Platform avec une notification signalant l’échec d’un flux de données mise en surbrillance.](../../images/tutorials/templates/notifications.png)
 
-Vous pouvez mettre à jour les paramètres d’alerte de vos modèles afin de recevoir des notifications par courrier électronique et dans Platform sur l’état de vos flux de données. Pour plus d’informations sur la configuration des alertes, consultez le guide sur [comment vous abonner aux alertes pour les flux de données de sources](../ui/alerts.md).
+Vous pouvez mettre à jour les paramètres d’alerte de vos modèles afin de recevoir des notifications par courrier électronique et dans Platform sur l’état de vos flux de données. Pour plus d’informations sur la configuration des alertes, consultez le guide sur [l’abonnement aux alertes pour les flux de données de sources](../ui/alerts.md).

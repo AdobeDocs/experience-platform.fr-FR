@@ -5,8 +5,8 @@ title: Exemple de point d’entrée de l’API Data
 description: Vous pouvez utiliser le point d’entrée `/samples` dans l’API Adobe Experience Platform pour récupérer, créer, mettre à jour et valider par programmation les donnée d’exemple de mappage.
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 90%
+source-wordcount: '405'
+ht-degree: 91%
 
 ---
 
@@ -17,7 +17,7 @@ Des exemples de données peuvent être utilisés lors de la création d’un sch
 
 ## Liste des données d’exemple
 
-Vous pouvez récupérer une liste de toutes les données d’exemple de mappage pour votre organisation en envoyant une demande de GET à la variable `/samples` point de terminaison .
+Vous pouvez récupérer une liste de toutes les données d’exemple de mappage pour votre organisation en envoyant une requête de GET au point de terminaison `/samples`.
 
 **Format d’API**
 
@@ -81,8 +81,8 @@ Une réponse réussie renvoie un statut HTTP 200 avec des informations sur les 
 
 | Propriété | Description |
 | -------- | ----------- |
-| `sampleData` |  |
-| `sampleType` |  |
+| `sampleData` | |
+| `sampleType` | |
 
 ## Création de données d’exemples
 

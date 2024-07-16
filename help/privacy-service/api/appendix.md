@@ -18,9 +18,9 @@ Les sections suivantes contiennent des informations supplémentaires sur l’uti
 
 ## Espaces de noms d’identité standard {#standard-namespaces}
 
-Toutes les identités envoyées à [!DNL Privacy Service] doit être fourni sous un espace de noms d’identité spécifique. Les espaces de noms d’identité sont des composants du [service d’identités d’Adobe Experience Platform](../../identity-service/home.md) qui servent d’indicateurs du contexte auquel une identité se rapporte.
+Toutes les identités envoyées à [!DNL Privacy Service] doivent être fournies sous un espace de noms d’identité spécifique. Les espaces de noms d’identité sont des composants du [service d’identités d’Adobe Experience Platform](../../identity-service/home.md) qui servent d’indicateurs du contexte auquel une identité se rapporte.
 
-Le tableau suivant présente plusieurs types d’identité prédéfinis couramment utilisés, mis à disposition par [!DNL Experience Platform], ainsi que les `namespace` values :
+Le tableau suivant décrit plusieurs types d’identité prédéfinis couramment utilisés, mis à disposition par [!DNL Experience Platform], ainsi que les valeurs `namespace` qui leur sont associées :
 
 | Type d’identité | `namespace` | `namespaceId` |
 | --- | --- | --- |
@@ -31,25 +31,25 @@ Le tableau suivant présente plusieurs types d’identité prédéfinis couramme
 | Adobe Experience Cloud ID | `ECID` | `4` |
 | Identifiant Adobe Target | `TNTID` | `9` |
 | [!DNL Apple] ID pour les annonceurs | `IDFA` | `20915` |
-| [!DNL Google] Identifiant de publicité | `GAID` | `20914` |
+| [!DNL Google] ID de publicité | `GAID` | `20914` |
 | [!DNL Windows] AID | `WAID` | `8` |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->Chaque type d’identité possède également une `namespaceId` valeur entière, qui peut être utilisée à la place de la propriété `namespace` chaîne lors de la définition de l’identité `type` à &quot;namespaceId&quot;. Pour plus d’informations, consultez la section sur les [qualificateurs d’espace de noms](#namespace-qualifiers).
+>Chaque type d’identité possède également une valeur `namespaceId` entière, qui peut être utilisée à la place de la chaîne `namespace` lors de la définition de la propriété `type` de l’identité sur &quot;namespaceId&quot;. Pour plus d’informations, consultez la section sur les [qualificateurs d’espace de noms](#namespace-qualifiers).
 
-Vous pouvez récupérer une liste des espaces de noms d’identité utilisés par votre organisation en adressant une requête GET à la variable `idnamespace/identities` du point de terminaison [!DNL Identity Service] API. Pour plus d’informations, consultez le [guide de développement du service d’identités](../../identity-service/api/getting-started.md).
+Vous pouvez récupérer une liste des espaces de noms d’identité utilisés par votre organisation en envoyant une requête GET au point de terminaison `idnamespace/identities` dans l’API [!DNL Identity Service]. Pour plus d’informations, consultez le [guide de développement du service d’identités](../../identity-service/api/getting-started.md).
 
 ## Qualificateurs d’espace de noms
 
-Lorsque vous spécifiez une `namespace` dans la variable [!DNL Privacy Service] API, une **qualificateur d’espace de noms** doit être inclus dans une `type` . Le tableau suivant présente les différents qualificateurs d’espace de noms acceptés.
+Lors de la spécification d’une valeur `namespace` dans l’API [!DNL Privacy Service], un **qualificateur d’espace de noms** doit être inclus dans un paramètre `type` correspondant. Le tableau suivant présente les différents qualificateurs d’espace de noms acceptés.
 
 | Qualificateur | Définition |
 | --------- | ---------- |
 | `standard` | Un des espaces de noms standard définis globalement, non lié à un jeu de données d’une organisation individuelle (par exemple, e-mail, numéro de téléphone, etc.). L’identifiant d’espace de noms est fourni. |
-| `custom` | Espace de noms unique créé dans le contexte d’une organisation et non partagé dans l’ensemble de la variable [!DNL Experience Cloud]. La valeur représente le nom convivial (champ « nom ») à rechercher. L’identifiant d’espace de noms est fourni. |
+| `custom` | Espace de noms unique créé dans le contexte d’une organisation, non partagé dans l’ensemble de [!DNL Experience Cloud]. La valeur représente le nom convivial (champ « nom ») à rechercher. L’identifiant d’espace de noms est fourni. |
 | `integrationCode` | Code d’intégration, similaire à « custom », mais spécifiquement défini comme le code d’intégration d’une source de données à rechercher. L’identifiant d’espace de noms est fourni. |
 | `namespaceId` | Indique que la valeur correspond à l’identifiant réel de l’espace de noms créé ou mappé via le service d’espace de noms. |
 | `unregistered` | Chaîne de forme libre non définie dans le service d’espace de noms et prise « en l’état ». Toute application qui gère ces types d’espaces de noms les compare et les traite en fonction du contexte de l’entreprise et du jeu de données. Aucun identifiant d’espace de noms n’est fourni. |

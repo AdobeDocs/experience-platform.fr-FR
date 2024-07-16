@@ -17,7 +17,7 @@ Ce document décrit la structure et le cas d’utilisation du groupe de champs d
 
 >[!NOTE]
 >
->En raison de la taille et du nombre d’éléments répétés dans ce groupe de champs, de nombreux champs présentés dans ce guide ont été réduits pour gagner de l’espace. Pour explorer la structure complète de ce groupe de champs, vous pouvez : [Recherche dans l’interface utilisateur de Platform](../../ui/explore.md) ou consulter le schéma complet dans la [référentiel XDM public](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
+>En raison de la taille et du nombre d’éléments répétés dans ce groupe de champs, de nombreux champs présentés dans ce guide ont été réduits pour gagner de l’espace. Pour explorer la structure complète de ce groupe de champs, vous pouvez [le rechercher dans l’interface utilisateur de Platform](../../ui/explore.md) ou afficher le schéma complet dans le [référentiel XDM public](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
 
 ## Structure du groupe de champs
 

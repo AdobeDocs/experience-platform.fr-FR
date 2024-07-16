@@ -1,8 +1,8 @@
 ---
-keywords: RTCDP;CDP;Édition B2B;Real-time Customer Data Platform;plateforme de données client en temps réel;cdp en temps réel;b2b;cdp
+keywords: RTCDP;CDP;Édition B2B;Real-Time Customer Data Platform;plateforme de données client en temps réel;cdp en temps réel;b2b;cdp
 solution: Experience Platform
-title: Prise en main de Real-time Customer Data Platform B2B Edition
-description: Utilisez cet exemple de scénario comme exemple lors de la configuration de votre mise en oeuvre d’Adobe Real-time Customer Data Platform B2B Edition.
+title: Prise en main de Real-Time Customer Data Platform B2B Edition
+description: Utilisez cet exemple de scénario comme exemple lors de la configuration de votre mise en oeuvre d’Adobe Real-Time Customer Data Platform B2B Edition.
 feature: Get Started, B2B
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
@@ -13,9 +13,9 @@ ht-degree: 67%
 
 ---
 
-# Prise en main de Real-time Customer Data Platform B2B Edition
+# Prise en main de Real-Time Customer Data Platform B2B Edition
 
-Ce document fournit un processus de haut niveau de bout en bout pour la prise en main de l’édition B2B de Real-time Customer Data Platform (CDP), à l’aide d’un exemple de cas d’utilisation pour illustrer des concepts clés.
+Ce document fournit un processus de haut niveau de bout en bout pour la prise en main de l’édition B2B de Real-Time Customer Data Platform (CDP), à l’aide d’un exemple de cas d’utilisation pour illustrer des concepts clés.
 
 La société de technologie Bodea souhaite combiner des données relatives aux personnes et aux comptes provenant de différentes sources de données cloisonnées afin de cibler efficacement les clients avec un e-mail et une campagne publicitaire LinkedIn pour son nouveau produit. Bodea utilise Marketo Engage comme plateforme d’automatisation marketing et doit segmenter une audience spécifique à B2B à partir de plusieurs CRM contenant des données client. 
 
@@ -86,21 +86,21 @@ Dans cet exemple, l’audience trouve toutes les personnes qui travaillent dans 
 
 >[!NOTE]
 > 
->Pour obtenir des instructions sur la création d’audiences pour évaluer vos données, voir [Guide de l’interface utilisateur du créateur de segments](../segmentation/ui/segment-builder.md). Pour des cas d’utilisation de la segmentation B2B plus spécifiques, reportez-vous à la section [présentation de la segmentation pour Real-Time CDP B2B Edition](./segmentation/b2b.md).
+>Pour plus d’informations sur la création d’audiences pour évaluer vos données, consultez le [guide de l’interface utilisateur du créateur de segments](../segmentation/ui/segment-builder.md). Pour des cas d’utilisation de la segmentation B2B plus spécifiques, reportez-vous à la [présentation de la segmentation pour Real-Time CDP B2B Edition](./segmentation/b2b.md).
 
 Le créateur de segments vous permet de créer une audience vendable à partir des données de Real-Time Customer Profile et d’afficher les estimations de votre audience potentielle en fonction de la combinaison des attributs, événements et audiences existantes que vous avez définies.
 
 ## Activation de vos données évaluées vers une destination
 
-Une fois l’audience créée, un résumé est fourni dans la variable [!UICONTROL Détails] de l’espace de travail. Comme aucune destination n’est actuellement activée pour la définition de segment, le spécialiste du marketing de la boîte doit exporter l’audience vers un jeu de données où elle peut être accessible et sur lequel elle peut agir.
+Une fois l’audience créée, un résumé est fourni dans la section [!UICONTROL Détails] de l’espace de travail. Comme aucune destination n’est actuellement activée pour la définition de segment, le spécialiste du marketing de la boîte doit exporter l’audience vers un jeu de données où elle peut être accessible et sur lequel elle peut agir.
 
 Dans l’espace de travail [!UICONTROL Segments] de l’interface utilisateur de Platform, le spécialiste marketing Bodea sélectionne **[!UICONTROL Activer vers la destination]**.
 
-![Activation de l’audience vers une destination](./assets/b2b-tutorial/activate-to-destination.png)
+![Activer l’audience vers une destination](./assets/b2b-tutorial/activate-to-destination.png)
 
 >[!NOTE]
 > 
->Voir le tutoriel sur [activation d’une audience vers une destination](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=fr) pour obtenir des instructions complètes sur la manière d’y parvenir.
+>Consultez le tutoriel sur l’ [activation d’une audience vers une destination](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=fr) pour obtenir des instructions complètes sur la manière d’y parvenir.
 
 Le spécialiste du marketing de boîte active l’audience vers la destination Marketo, ce qui lui permet de transférer les données d’audience de Platform vers Marketo Engage sous la forme d’une liste statique. Consultez le guide sur la [Destination Marketo](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html?lang=fr) pour plus d’informations.
 

@@ -35,7 +35,7 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 
 ## Mécanismes de sécurisation
 
-Voir [Barrières de sécurité de Query Service](../guardrails.md) document concernant les limites d’utilisation par défaut des données de Query Service par rapport à vos droits de licence.
+Consultez le document [Barrières de sécurité de Query Service](../guardrails.md) concernant les limites d’utilisation par défaut des données de Query Service par rapport à vos droits de licence.
 
 <!-- Update these descriptions post 23.3 release
 ## Static limits

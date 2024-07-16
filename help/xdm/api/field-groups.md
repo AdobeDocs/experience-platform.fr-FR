@@ -6,26 +6,26 @@ description: Le point d’entrée /fieldgroups de l’API Schema Registry vous p
 exl-id: d26257e4-c7d5-4bff-b555-7a2997c88c74
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '1195'
-ht-degree: 14%
+source-wordcount: '1197'
+ht-degree: 12%
 
 ---
 
 # Point de terminaison des groupes de champs de schéma
 
-Les groupes de champs de schéma sont des composants réutilisables qui définissent un ou plusieurs champs qui représentent un concept particulier, tel qu’une personne individuelle, une adresse postale ou un environnement de navigateur web. Les groupes de champs sont destinés à être inclus dans un schéma qui met en oeuvre une classe compatible, en fonction du comportement des données qu’ils représentent (enregistrement ou série temporelle). Le `/fieldgroups` du point de terminaison [!DNL Schema Registry] L’API vous permet de gérer par programmation les groupes de champs dans votre application d’expérience.
+Les groupes de champs de schéma sont des composants réutilisables qui définissent un ou plusieurs champs qui représentent un concept particulier, tel qu’une personne individuelle, une adresse postale ou un environnement de navigateur web. Les groupes de champs sont destinés à être inclus dans un schéma qui met en oeuvre une classe compatible, en fonction du comportement des données qu’ils représentent (enregistrement ou série temporelle). Le point d’entrée `/fieldgroups` de l’API [!DNL Schema Registry] vous permet de gérer par programmation les groupes de champs dans votre application d’expérience.
 
-## Prise en main
+## Commencer
 
-Le point d’entrée utilisé dans ce guide fait partie de lʼ[[!DNL Schema Registry] API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Le point de terminaison utilisé dans ce guide fait partie de l’ [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 ## Récupération d’une liste de groupes de champs {#list}
 
-Vous pouvez répertorier tous les groupes de champs sous le `global` ou `tenant` conteneur en effectuant une requête de GET vers `/global/fieldgroups` ou `/tenant/fieldgroups`, respectivement.
+Vous pouvez répertorier tous les groupes de champs sous le conteneur `global` ou `tenant` en envoyant une requête de GET à `/global/fieldgroups` ou `/tenant/fieldgroups`, respectivement.
 
 >[!NOTE]
 >
->Lors de l’énumération des ressources, le registre des schémas limite les résultats à 300 éléments. Pour renvoyer des ressources au-delà de cette limite, vous devez utiliser des paramètres de pagination. Il est également recommandé d’utiliser des paramètres de requête supplémentaires pour filtrer les résultats et réduire le nombre de ressources renvoyées. Voir la section sur [paramètres de requête](./appendix.md#query) pour plus d’informations.
+>Lors de l’énumération des ressources, le registre des schémas limite les résultats à 300 éléments. Pour renvoyer des ressources au-delà de cette limite, vous devez utiliser des paramètres de pagination. Il est également recommandé d’utiliser des paramètres de requête supplémentaires pour filtrer les résultats et réduire le nombre de ressources renvoyées. Pour plus d’informations, consultez la section sur les [paramètres de requête](./appendix.md#query) dans le document de l’annexe.
 
 **Format d’API**
 
@@ -35,14 +35,14 @@ GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --- | --- |
-| `{CONTAINER_ID}` | Conteneur à partir duquel vous souhaitez récupérer des groupes de champs : `global` pour les groupes de champs créés par Adobe ou `tenant` pour les groupes de champs appartenant à votre organisation. |
-| `{QUERY_PARAMS}` | Paramètres de requête facultatifs en fonction desquels filtrer les résultats. Voir [document de l’annexe](./appendix.md#query) pour une liste de paramètres disponibles. |
+| `{CONTAINER_ID}` | Conteneur à partir duquel vous souhaitez récupérer des groupes de champs : `global` pour les groupes de champs créés par l’Adobe ou `tenant` pour les groupes de champs appartenant à votre organisation. |
+| `{QUERY_PARAMS}` | Paramètres de requête facultatifs pour filtrer les résultats. Consultez le [document de l’annexe](./appendix.md#query) pour obtenir la liste des paramètres disponibles. |
 
 {style="table-layout:auto"}
 
 **Requête**
 
-La requête suivante récupère une liste de groupes de champs à partir du `tenant` conteneur, à l’aide d’un `orderby` paramètre de requête pour trier les groupes de champs en fonction de leur `title` attribut.
+La requête suivante récupère une liste de groupes de champs du conteneur `tenant`, à l’aide d’un paramètre de requête `orderby` pour trier les groupes de champs selon leur attribut `title`.
 
 ```shell
 curl -X GET \
@@ -54,18 +54,18 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Le format de réponse dépend de la variable `Accept` en-tête envoyé dans la requête. Les éléments suivants `Accept` Les en-têtes sont disponibles pour répertorier les groupes de champs :
+Le format de la réponse dépend de l’en-tête `Accept` envoyé dans la requête. Les en-têtes `Accept` suivants sont disponibles pour répertorier les groupes de champs :
 
 | En-tête `Accept` | Description |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Renvoie un court résumé de chaque ressource. Il s’agit de l’en-tête recommandé pour répertorier les ressources. (Limite : 300) |
-| `application/vnd.adobe.xed+json` | Renvoie le groupe de champs JSON complet pour chaque ressource, avec l’original `$ref` et `allOf` inclus. (Limite : 300) |
+| `application/vnd.adobe.xed+json` | Renvoie le groupe de champs JSON complet pour chaque ressource, avec les `$ref` et `allOf` d&#39;origine inclus. (Limite : 300) |
 
 {style="table-layout:auto"}
 
 **Réponse**
 
-La requête ci-dessus utilisait la variable `application/vnd.adobe.xed-id+json` `Accept` en-tête , par conséquent, la réponse inclut uniquement la variable `title`, `$id`, `meta:altId`, et `version` attributs pour chaque groupe de champs. Utiliser l&#39;autre `Accept` header (`application/vnd.adobe.xed+json`) renvoie tous les attributs de chaque groupe de champs. Sélectionnez les `Accept` en-tête selon les informations dont vous avez besoin dans votre réponse.
+La requête ci-dessus utilisait l’en-tête `application/vnd.adobe.xed-id+json` `Accept`. Par conséquent, la réponse inclut uniquement les attributs `title`, `$id`, `meta:altId` et `version` pour chaque groupe de champs. L’utilisation de l’autre en-tête `Accept` (`application/vnd.adobe.xed+json`) renvoie tous les attributs de chaque groupe de champs. Sélectionnez l’en-tête `Accept` approprié en fonction des informations dont vous avez besoin dans votre réponse.
 
 ```json
 {
@@ -122,13 +122,13 @@ GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
 | Paramètre | Description |
 | --- | --- |
 | `{CONTAINER_ID}` | Conteneur qui héberge le groupe de champs que vous souhaitez récupérer : `global` pour un groupe de champs créé par l’Adobe ou `tenant` pour un groupe de champs appartenant à votre organisation. |
-| `{FIELD_GROUP_ID}` | Le `meta:altId` ou encodé URL `$id` du groupe de champs que vous souhaitez rechercher. |
+| `{FIELD_GROUP_ID}` | `meta:altId` ou encodé URL `$id` du groupe de champs que vous souhaitez rechercher. |
 
 {style="table-layout:auto"}
 
 **Requête**
 
-La requête suivante récupère un groupe de champs selon ses `meta:altId` valeur fournie dans le chemin.
+La requête suivante récupère un groupe de champs en fonction de sa valeur `meta:altId` fournie dans le chemin d’accès.
 
 ```shell
 curl -X GET \
@@ -140,7 +140,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-Le format de réponse dépend de la variable `Accept` en-tête envoyé dans la requête. Toutes les requêtes de recherche nécessitent une `version` être inclus dans la variable `Accept` en-tête . Les éléments suivants `Accept` Les en-têtes sont disponibles :
+Le format de la réponse dépend de l’en-tête `Accept` envoyé dans la requête. Toutes les requêtes de recherche nécessitent qu’un `version` soit inclus dans l’en-tête `Accept`. Les en-têtes `Accept` suivants sont disponibles :
 
 | En-tête `Accept` | Description |
 | ------- | ------------ |
@@ -154,7 +154,7 @@ Le format de réponse dépend de la variable `Accept` en-tête envoyé dans la r
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du groupe de champs. Les champs renvoyés dépendent de la variable `Accept` en-tête envoyé dans la requête. Expérience avec différentes `Accept` pour comparer les réponses et déterminer l’en-tête qui convient le mieux à votre cas d’utilisation.
+Une réponse réussie renvoie les détails du groupe de champs. Les champs renvoyés dépendent de l’en-tête `Accept` envoyé dans la requête. Testez différents en-têtes `Accept` pour comparer les réponses et déterminer l’en-tête qui convient le mieux à votre cas d’utilisation.
 
 ```json
 {
@@ -215,9 +215,9 @@ Une réponse réussie renvoie les détails du groupe de champs. Les champs renvo
 }
 ```
 
-## Créer un groupe de champs {#create}
+## Création d’un groupe de champs {#create}
 
-Vous pouvez définir un groupe de champs personnalisé sous le `tenant` en effectuant une requête de POST.
+Vous pouvez définir un groupe de champs personnalisé sous le conteneur `tenant` en effectuant une requête de POST.
 
 **Format d’API**
 
@@ -227,11 +227,11 @@ POST /tenant/fieldgroups
 
 **Requête**
 
-Lors de la définition d’un nouveau groupe de champs, il doit inclure un `meta:intendedToExtend` , répertoriant la variable `$id` des classes avec lesquelles le groupe de champs est compatible. Dans cet exemple, le groupe de champs est compatible avec un `Property` qui a été définie précédemment. Les champs personnalisés doivent être imbriqués sous `_{TENANT_ID}` (comme illustré dans l’exemple) pour éviter toute collision avec des champs similaires fournis par des classes et d’autres groupes de champs.
+Lors de la définition d’un nouveau groupe de champs, il doit inclure un attribut `meta:intendedToExtend` répertoriant le `$id` des classes avec lesquelles le groupe de champs est compatible. Dans cet exemple, le groupe de champs est compatible avec une classe `Property` définie précédemment. Les champs personnalisés doivent être imbriqués sous `_{TENANT_ID}` (comme illustré dans l’exemple) pour éviter toute collision avec des champs similaires fournis par des classes et d’autres groupes de champs.
 
 >[!NOTE]
 >
->Pour plus d’informations sur la définition de différents types de champ à inclure dans votre groupe de champs, consultez le guide sur [définition de champs personnalisés dans l’API](../tutorials/custom-fields-api.md#define-fields).
+>Pour plus d’informations sur la définition de différents types de champs à inclure dans votre groupe de champs, consultez le guide sur la [définition de champs personnalisés dans l’API](../tutorials/custom-fields-api.md#define-fields).
 
 ```SHELL
 curl -X POST \
@@ -300,7 +300,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 201 (Created) et un payload contenant les détails du nouveau groupe de champs, y compris le `$id`, `meta:altId`, et `version`. Ces valeurs sont en lecture seule et sont affectées par la variable [!DNL Schema Registry].
+Une réponse réussie renvoie un état HTTP 201 (Created) et un payload contenant les détails du nouveau groupe de champs, y compris les `$id`, `meta:altId` et `version`. Ces valeurs sont en lecture seule et sont attribuées par le [!DNL Schema Registry].
 
 ```JSON
 {
@@ -384,7 +384,7 @@ Une réponse réussie renvoie un état HTTP 201 (Created) et un payload contenan
 }
 ```
 
-Exécution d’une demande de GET pour [répertorier tous les groupes de champs ;](#list) dans le conteneur client , le groupe de champs Détails de la propriété est désormais inclus. Vous pouvez également [effectuer une requête de recherche (GET) ;](#lookup) à l’aide du codage URL `$id` URI pour afficher directement le nouveau groupe de champs.
+L’exécution d’une requête de GET pour [répertorier tous les groupes de champs](#list) dans le conteneur client inclurait désormais le groupe de champs Détails de la propriété , ou vous pouvez [ effectuer une requête de recherche (GET)](#lookup) à l’aide de l’URI `$id` encodé URL pour afficher directement le nouveau groupe de champs.
 
 ## Mettre à jour un groupe de champs {#put}
 
@@ -392,7 +392,7 @@ Vous pouvez remplacer un groupe de champs entier par le biais d’une opération
 
 >[!NOTE]
 >
->Si vous souhaitez uniquement mettre à jour une partie d’un groupe de champs au lieu de la remplacer entièrement, reportez-vous à la section sur [mise à jour d’une partie d’un groupe de champs](#patch).
+>Si vous souhaitez uniquement mettre à jour une partie d’un groupe de champs au lieu de la remplacer entièrement, reportez-vous à la section sur la [mise à jour d’une partie d’un groupe de champs](#patch).
 
 **Format d’API**
 
@@ -402,13 +402,13 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | Le `meta:altId` ou encodé URL `$id` du groupe de champs que vous souhaitez réécrire. |
+| `{FIELD_GROUP_ID}` | `meta:altId` ou encodé URL `$id` du groupe de champs que vous souhaitez réécrire. |
 
 {style="table-layout:auto"}
 
 **Requête**
 
-La requête suivante réécrit un groupe de champs existant en ajoutant un nouveau `propertyCountry` champ .
+La requête suivante réécrit un groupe de champs existant, en ajoutant un nouveau champ `propertyCountry`.
 
 ```SHELL
 curl -X PUT \
@@ -573,11 +573,11 @@ Une réponse réussie renvoie les détails du groupe de champs mis à jour.
 
 ## Mettre à jour une partie d’un groupe de champs {#patch}
 
-Vous pouvez mettre à jour une partie d’un groupe de champs à l’aide d’une requête de PATCH. Le [!DNL Schema Registry] prend en charge toutes les opérations JSON Patch standard, y compris `add`, `remove`, et `replace`. Pour plus d’informations sur le correctif JSON, voir [Guide de base des API](../../landing/api-fundamentals.md#json-patch).
+Vous pouvez mettre à jour une partie d’un groupe de champs à l’aide d’une requête de PATCH. [!DNL Schema Registry] prend en charge toutes les opérations JSON Patch standard, y compris `add`, `remove` et `replace`. Pour plus d’informations sur le correctif JSON, voir [Guide de base des API](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Si vous souhaitez remplacer une ressource entière par de nouvelles valeurs au lieu de mettre à jour des champs individuels, reportez-vous à la section sur [remplacement d’un groupe de champs à l’aide d’une opération de PUT](#put).
+>Si vous souhaitez remplacer une ressource entière par de nouvelles valeurs au lieu de mettre à jour des champs individuels, reportez-vous à la section [Remplacement d’un groupe de champs à l’aide d’une opération de PUT](#put).
 
 **Format d’API**
 
@@ -587,15 +587,15 @@ PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | Codé URL `$id` URI ou `meta:altId` du groupe de champs que vous souhaitez mettre à jour. |
+| `{FIELD_GROUP_ID}` | URI `$id` encodé URL ou `meta:altId` du groupe de champs que vous souhaitez mettre à jour. |
 
 {style="table-layout:auto"}
 
 **Requête**
 
-L’exemple de requête ci-dessous met à jour la variable `description` d’un groupe de champs existant et ajoute un nouveau `propertyCity` champ .
+L’exemple de requête ci-dessous met à jour le `description` d’un groupe de champs existant et ajoute un nouveau champ `propertyCity`.
 
-Le corps de la requête se présente sous la forme d’un tableau, chaque objet répertorié représentant une modification spécifique à un champ individuel. Chaque objet inclut l’opération à effectuer (`op`), le champ sur lequel l’opération doit être effectuée (`path`), et quelles informations doivent être incluses dans cette opération (`value`).
+Le corps de la requête se présente sous la forme d’un tableau, chaque objet répertorié représentant une modification spécifique à un champ individuel. Chaque objet inclut l’opération à effectuer (`op`), le champ sur lequel l’opération doit être effectuée (`path`) et les informations qui doivent être incluses dans cette opération (`value`).
 
 ```SHELL
 curl -X PATCH \
@@ -625,7 +625,7 @@ curl -X PATCH \
 
 **Réponse**
 
-La réponse montre que les deux opérations ont été réalisées avec succès. Le `description` a été mis à jour et `propertyCountry` a été ajouté sous `definitions`.
+La réponse montre que les deux opérations ont été réalisées avec succès. `description` a été mis à jour et `propertyCountry` a été ajouté sous `definitions`.
 
 ```JSON
 {
@@ -726,7 +726,7 @@ DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | Codé URL `$id` URI ou `meta:altId` du groupe de champs que vous souhaitez supprimer. |
+| `{FIELD_GROUP_ID}` | URI `$id` encodé URL ou `meta:altId` du groupe de champs que vous souhaitez supprimer. |
 
 {style="table-layout:auto"}
 
@@ -745,4 +745,4 @@ curl -X DELETE \
 
 Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vide.
 
-Vous pouvez confirmer la suppression en tentant d’effectuer une [requête de recherche (GET)](#lookup) au groupe de champs. Vous devez inclure une `Accept` dans la requête, mais doit recevoir le statut HTTP 404 (Introuvable) car le groupe de champs a été supprimé du registre des schémas.
+Vous pouvez confirmer la suppression en tentant d’adresser une [requête de recherche (GET)](#lookup) au groupe de champs. Vous devez inclure un en-tête `Accept` dans la requête, mais vous devriez recevoir le statut HTTP 404 (Introuvable) car le groupe de champs a été supprimé du registre des schémas.

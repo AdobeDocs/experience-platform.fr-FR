@@ -9,11 +9,11 @@ ht-degree: 7%
 
 ---
 
-# [!UICONTROL Détails de mise en oeuvre] type de données
+# Type de données [!UICONTROL Détails de mise en oeuvre]
 
 [!UICONTROL Détails de mise en oeuvre] est un type de données XDM (Experience Data Model) standard qui décrit une mise en oeuvre technologique, telle qu’une API ou un SDK.
 
-![Structure du type de données](../images/data-types/implementation-details.png)
+![Structure de type de données](../images/data-types/implementation-details.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
@@ -25,5 +25,5 @@ ht-degree: 7%
 
 Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/implementationdetails.schema.json)

@@ -7,7 +7,7 @@ author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '718'
 ht-degree: 93%
 
 ---
@@ -64,7 +64,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 | Suppression d’un jeu de données du magasin de profils | Lorsque vous supprimez un jeu de données du lac de données d’Experience Platform, ce jeu est automatiquement supprimé du magasin de profils. Vous n’avez plus besoin d’utiliser le point d’entrée de l’API des tâches du système de profils pour effectuer une demande de suppression permettant de supprimer explicitement le jeu de données du magasin de profils. Pour plus d’informations, consultez le [guide relatif au point d’entrée de l’API du système de profils](../../profile/api/profile-system-jobs.md). |
 | Estimation du nombre d’espaces de noms d’ID pour un segment donné | Pour l’estimation du nombre de profils, l’API de prévisualisation indique désormais :<ul><li>Le nombre total de profils estimés dans un segment pour un espace de noms donné.</li><li>Le nombre total de profils estimés dans le schéma d’union des profils pour un espace de noms donné.</li></ul>Pour en savoir plus, consultez le [guide relatif au point d’entrée de l’API de prévisualisation du profil](../../profile/api/preview-sample-status.md). |
 
-Pour plus d’informations sur Real-time Customer Profile, notamment des tutoriels et des bonnes pratiques pour travailler avec [!DNL Profile] data, veuillez commencer par lire la [Présentation de Real-Time Customer Profile](../../profile/home.md).
+Pour plus d’informations sur Real-time Customer Profile, y compris des tutoriels et des bonnes pratiques pour l’utilisation des données [!DNL Profile], commencez par lire la [présentation de Real-Time Customer Profile](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -80,6 +80,6 @@ Experience Platform fournit une API RESTful et une interface utilisateur intera
 | Améliorations du connecteur source [!DNL Google BigQuery] | Vous pouvez désormais ingérer des fichiers de plus de 10 Go lors d’une seule exécution de flux à l’aide du connecteur source [!DNL BigQuery]. Pour plus d’informations, consultez la présentation du connecteur source [[!DNL BigQuery] ](../../sources/connectors/databases/bigquery.md). |
 | Prise en charge de types de données complexes pour le stockage sur le cloud | Vous pouvez désormais ingérer des types de données complexes, tels que des tableaux dans des fichiers JSON, lors de l’utilisation d’un connecteur source d’espace de stockage. Pour plus d’informations, consultez les tutoriels sur la création d’un flux de données d’espace de stockage [dans l’interface utilisateur](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) ou [à l’aide de  [!DNL Flow Service] l’API ](../../sources/tutorials/api/collect/cloud-storage.md). |
 | Prise en charge de l’authentification basée sur la clé de service principale pour la source [!DNL Microsoft Dynamics] | Vous pouvez désormais vous authentifier auprès de votre compte [!DNL Dynamics] à l’aide d’une clé de service principale. Cela représente une alternative à l’authentification par mot de passe. Pour plus d’informations, consultez la présentation du connecteur source [[!DNL Dynamics] ](../../sources/connectors/crm/ms-dynamics.md). |
-| Prise en charge de l’interface utilisateur pour les séparateurs personnalisés dans les sources d’espace de stockage | Vous pouvez désormais définir un délimiteur de colonne personnalisé, tel qu’une virgule (`,`), onglet (`\t`) ou une barre verticale (`|`), pour collecter des fichiers délimités dans l’interface utilisateur. Pour plus d’informations, consultez le tutoriel sur la [création d’un flux de données avec un connecteur source d’espace de stockage](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
+| Prise en charge de l’interface utilisateur pour les séparateurs personnalisés dans les sources d’espace de stockage | Vous pouvez désormais définir un délimiteur de colonne personnalisé, tel qu’une virgule (`,`), une tabulation (`\t`) ou une barre verticale (`|`), pour collecter les fichiers délimités dans l’interface utilisateur. Pour plus d’informations, consultez le tutoriel sur la [création d’un flux de données avec un connecteur source d’espace de stockage](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
 
 Pour en savoir plus sur les sources, consultez la [présentation des sources](../../sources/home.md).

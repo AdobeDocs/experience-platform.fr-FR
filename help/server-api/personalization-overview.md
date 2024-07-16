@@ -11,24 +11,24 @@ ht-degree: 10%
 
 # Vue d’ensemble de la personnalisation
 
-Avec la variable [!DNL Server API], vous pouvez récupérer du contenu personnalisé à partir des solutions de personnalisation d’Adobe, y compris [Adobe Target](https://business.adobe.com/fr/products/target/adobe-target.html), [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home), et [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=fr).
+Avec [!DNL Server API], vous pouvez récupérer du contenu personnalisé à partir des solutions de personnalisation d’Adobe, y compris [Adobe Target](https://business.adobe.com/fr/products/target/adobe-target.html), [Adobe Journey Optimizer](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/ajo-home) et [Offer decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=fr).
 
-En outre, la variable [!DNL Server API] optimise les fonctionnalités de personnalisation de la même page et de la page suivante grâce aux destinations de personnalisation Adobe Experience Platform, telles que [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) et la variable [connexion à la personnalisation personnalisée](../destinations/catalog/personalization/custom-personalization.md). Pour savoir comment configurer Experience Platform pour la personnalisation de la même page et de la page suivante, reportez-vous à la section [guide dédié](../destinations/ui/activate-edge-personalization-destinations.md).
+En outre, le [!DNL Server API] optimise les fonctionnalités de personnalisation de la même page et de la page suivante par le biais de destinations de personnalisation Adobe Experience Platform, telles que [Adobe Target](../destinations/catalog/personalization/adobe-target-connection.md) et la [connexion de personnalisation personnalisée](../destinations/catalog/personalization/custom-personalization.md). Pour savoir comment configurer Experience Platform pour la personnalisation de la même page et de la page suivante, consultez le [guide dédié](../destinations/ui/activate-edge-personalization-destinations.md).
 
-Lors de l’utilisation de l’API serveur, vous devez intégrer la réponse fournie par le moteur de personnalisation à la logique utilisée pour effectuer le rendu du contenu sur votre site. Contrairement à la variable [SDK Web](../web-sdk/home.md), la variable [!DNL Server API] ne dispose pas d’un mécanisme pour appliquer automatiquement le contenu renvoyé par les solutions de personnalisation Adobe.
+Lors de l’utilisation de l’API serveur, vous devez intégrer la réponse fournie par le moteur de personnalisation à la logique utilisée pour effectuer le rendu du contenu sur votre site. Contrairement au [SDK Web](../web-sdk/home.md), [!DNL Server API] ne dispose pas d’un mécanisme pour appliquer automatiquement le contenu renvoyé par les solutions de personnalisation d’Adobe.
 
 ## Terminologie {#terminology}
 
 Avant d’utiliser des solutions de personnalisation d’Adobe, veillez à comprendre les concepts suivants :
 
 * **Offre** : une offre est un message marketing auquel des règles peuvent être associées et qui spécifie qui est éligible pour voir l&#39;offre.
-* **Décision**: une décision (précédemment appelée activité d’offre) informe la sélection d’une offre.
-* **Schéma**: le schéma d’une décision indique le type d’offre renvoyé.
-* **Portée**: la portée de la décision.
-   * Dans Adobe Target, il s’agit de la variable [!DNL mbox]. La variable [!DNL global mbox] est la valeur `__view__` scope
-   * Pour [!DNL Offer Decisioning], il s’agit des chaînes codées Base64 de JSON contenant les identifiants d’activité et d’emplacement que vous souhaitez que le service offer decisioning utilise pour proposer des offres.
+* **Décision** : une décision (précédemment appelée activité d’offre) informe la sélection d’une offre.
+* **Schéma** : le schéma d’une décision informe le type d’offre renvoyé.
+* **Portée** : la portée de la décision.
+   * Dans Adobe Target, il s’agit du [!DNL mbox]. [!DNL global mbox] est la portée `__view__`
+   * Pour [!DNL Offer Decisioning], il s’agit des chaînes encodées Base64 de JSON contenant les identifiants d’activité et d’emplacement que le service d’offer decisioning doit utiliser pour proposer des offres.
 
-## La variable `query` objet {#query-object}
+## Objet `query` {#query-object}
 
 La récupération de contenu personnalisé nécessite un objet de requête de requête explicite pour un exemple de requête. Le format de l’objet de requête est le suivant :
 
@@ -66,7 +66,7 @@ La récupération de contenu personnalisé nécessite un objet de requête de re
 
 ## Objet handle {#handle}
 
-Le contenu personnalisé récupéré des solutions de personnalisation est présenté dans une `personalization:decisions` handle, qui présente le format suivant pour sa charge utile :
+Le contenu personnalisé récupéré à partir des solutions de personnalisation est présenté dans un pseudo `personalization:decisions`, qui a le format suivant pour sa payload :
 
 ```json
 {
@@ -121,7 +121,7 @@ Le contenu personnalisé récupéré des solutions de personnalisation est prés
 | --- | --- | --- |
 | `payload.id` | Chaîne | ID de décision. |
 | `payload.scope` | Chaîne | Portée de décision qui a abouti aux offres proposées. |
-| `payload.scopeDetails.decisionProvider` | Chaîne | Définissez sur . `TGT` lorsque vous utilisez Adobe Target. |
+| `payload.scopeDetails.decisionProvider` | Chaîne | Définissez cette variable sur `TGT` lors de l’utilisation d’Adobe Target. |
 | `payload.scopeDetails.activity.id` | Chaîne | Identifiant unique de l’activité d’offre. |
 | `payload.scopeDetails.experience.id` | Chaîne | Identifiant unique de l’emplacement de l’offre. |
 | `items[].id` | Chaîne | Identifiant unique de l’emplacement de l’offre. |
@@ -130,8 +130,8 @@ Le contenu personnalisé récupéré des solutions de personnalisation est prés
 | `items[].data.format` | Chaîne | Format du contenu associé à l’offre proposée. |
 | `items[].data.language` | Chaîne | Tableau de langues associées au contenu de l’offre proposée. |
 | `items[].data.content` | Chaîne | Contenu associé à l’offre proposée au format d’une chaîne. |
-| `items[].data.selector` | Chaîne | Sélecteur de HTML utilisé pour identifier l’élément DOM cible pour une offre d’action DOM. |
-| `items[].data.prehidingSelector` | Chaîne | Sélecteur de HTML utilisé pour identifier l’élément DOM à masquer lors de la gestion d’une offre d’action DOM. |
+| `items[].data.selector` | Chaîne | Sélecteur d’HTML utilisé pour identifier l’élément DOM cible pour une offre d’action DOM. |
+| `items[].data.prehidingSelector` | Chaîne | Sélecteur d’HTML utilisé pour identifier l’élément DOM à masquer lors de la gestion d’une offre d’action DOM. |
 | `items[].data.deliveryUrl` | Chaîne | Contenu de l&#39;image associé à l&#39;offre proposée au format d&#39;une URL. |
 | `items[].data.characteristics` | Chaîne | Caractéristiques associées à l’offre proposée au format d’un objet JSON. |
 
@@ -192,11 +192,11 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | Paramètre | Type | Obligatoire | Description |
 | --- | --- | --- | --- |
 | `configId` | Chaîne | Oui | Identifiant de la banque de données. |
-| `requestId` | Chaîne | Non | Fournissez un identifiant de suivi de requête externe. Si aucun n’est fourni, le réseau Edge en génère un pour vous et le renvoie dans le corps/les en-têtes de réponse. |
+| `requestId` | Chaîne | Non | Fournissez un identifiant de suivi de requête externe. Si aucun n’est fourni, l’Edge Network en génère un pour vous et le renvoie dans le corps/les en-têtes de réponse. |
 
 ### Réponse {#response}
 
-Renvoie un `200 OK` et un ou plusieurs `Handle` , selon les services Edge activés dans la configuration de flux de données.
+Renvoie un état `200 OK` et un ou plusieurs objets `Handle`, en fonction des services Edge activés dans la configuration du flux de données.
 
 ```json
 {
@@ -254,9 +254,9 @@ Renvoie un `200 OK` et un ou plusieurs `Handle` , selon les services Edge activ�
 
 ## Notifications {#notifications}
 
-Les notifications doivent être déclenchées lorsqu’un contenu ou une vue prérécupéré a été visité ou rendu à l’utilisateur final. Pour que les notifications soient déclenchées pour la portée appropriée, veillez à suivre les `id` pour chaque portée.
+Les notifications doivent être déclenchées lorsqu’un contenu ou une vue prérécupéré a été visité ou rendu à l’utilisateur final. Pour que les notifications soient déclenchées pour la portée appropriée, veillez à suivre le `id` correspondant pour chaque portée.
 
-Notifications avec la valeur appropriée `id` pour que les portées correspondantes soient déclenchées afin que la création de rapports soit correctement reflétée.
+Les notifications avec le `id` approprié pour les portées correspondantes doivent être déclenchées pour que les rapports soient correctement reflétés.
 
 **Format d’API**
 
@@ -316,15 +316,15 @@ curl -X POST "https://server.adobedc.net/ee/v2/collect?dataStreamId={DATASTREAM_
 | Paramètre | Type | Obligatoire | Description |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Oui | L’identifiant du flux de données utilisé par le point de terminaison de la collecte de données. |
-| `requestId` | `String` | Non | ID de suivi de requête externe externe. Si aucun n’est fourni, le réseau Edge en génère un pour vous et le renvoie dans le corps/les en-têtes de réponse. |
-| `silent` | `Boolean` | Non | Paramètre booléen facultatif indiquant si le réseau Edge doit renvoyer une valeur `204 No Content` réponse avec un payload vide. Les erreurs critiques sont signalées à l’aide du code d’état HTTP et de la charge utile correspondants. |
+| `requestId` | `String` | Non | ID de suivi de requête externe externe. Si aucun n’est fourni, l’Edge Network en génère un pour vous et le renvoie dans le corps/les en-têtes de réponse. |
+| `silent` | `Boolean` | Non | Paramètre booléen facultatif indiquant si l’Edge Network doit renvoyer une réponse `204 No Content` avec une charge utile vide. Les erreurs critiques sont signalées à l’aide du code d’état HTTP et de la charge utile correspondants. |
 
 ### Réponse {#notifications-response}
 
-Une réponse réussie renvoie l’un des états suivants, ainsi qu’un `requestID` si aucun n’a été fourni dans la requête.
+Une réponse réussie renvoie l’un des états suivants, et `requestID` si aucun état n’a été fourni dans la requête.
 
-* `202 Accepted` une fois la requête traitée ;
-* `204 No Content` lorsque la requête a été traitée avec succès et que la variable `silent` a été défini sur `true`;
+* `202 Accepted` lorsque la requête a été traitée avec succès ;
+* `204 No Content` lorsque la requête a été traitée avec succès et que le paramètre `silent` a été défini sur `true` ;
 * `400 Bad Request` lorsque la requête n’a pas été correctement formée (par exemple, l’identité principale obligatoire est introuvable).
 
 ```json

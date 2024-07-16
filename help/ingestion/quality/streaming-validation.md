@@ -7,8 +7,8 @@ description: 'L’ingestion par flux vous permet de charger vos données vers Ad
 exl-id: 6e9ac943-6d73-44de-a13b-bef6041d3834
 source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
 workflow-type: tm+mt
-source-wordcount: '917'
-ht-degree: 83%
+source-wordcount: '906'
+ht-degree: 82%
 
 ---
 
@@ -21,7 +21,7 @@ L’ingestion par flux vous permet de charger vos données vers Adobe Experience
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
-- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md): L’une des méthodes par lesquelles les données peuvent être envoyées à [!DNL Experience Platform].
+- [[!DNL Streaming Ingestion]](../streaming-ingestion/overview.md) : l’une des méthodes par lesquelles les données peuvent être envoyées à [!DNL Experience Platform].
 
 ### Lecture d’exemples d’appels API
 
@@ -35,7 +35,7 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 - x-api-key : `{API_KEY}`
 - x-gw-ims-org-id : `{ORG_ID}`
 
-Toutes les ressources dans [!DNL Experience Platform], y compris ceux appartenant à la variable [!DNL Schema Registry], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
+Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Schema Registry], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 - x-sandbox-name : `{SANDBOX_NAME}`
 
@@ -65,7 +65,7 @@ La validation synchrone n’est pas activée par défaut. Pour l’activer, vous
 
 >[!NOTE]
 >
->Le `syncValidation` Le paramètre de requête n’est disponible que pour le point de fin de message unique et ne peut pas être utilisé pour le point de fin de lot.
+>Le paramètre de requête `syncValidation` n’est disponible que pour le point de terminaison unique du message et ne peut pas être utilisé pour le point de terminaison du lot.
 
 Si un message échoue au cours de la validation synchrone, le message ne sera pas écrit vers la file d’attente de sortie, qui fournit des commentaires immédiats pour les utilisateurs.
 
@@ -148,7 +148,7 @@ La réponse ci-dessus répertorie le nombre de violations de schéma et en quoi 
 
 ## Validation asynchrone
 
-La validation asynchrone est une méthode de validation qui ne fournit aucun commentaire immédiat. Au lieu de cela, les données sont envoyées à un lot en échec dans [!DNL Data Lake] pour éviter toute perte de données. Ces données en échec peuvent être récupérées par la suite pour une analyse et une relecture plus approfondies. Cette méthode est celle qui doit être utilisée en production. Sauf requête contraire, l’ingestion par flux fonctionne avec le mode de validation asynchrone.
+La validation asynchrone est une méthode de validation qui ne fournit aucun commentaire immédiat. Au lieu de cela, les données sont envoyées à un lot en échec dans [!DNL Data Lake] pour empêcher la perte de données. Ces données en échec peuvent être récupérées par la suite pour une analyse et une relecture plus approfondies. Cette méthode est celle qui doit être utilisée en production. Sauf requête contraire, l’ingestion par flux fonctionne avec le mode de validation asynchrone.
 
 **Format d’API**
 

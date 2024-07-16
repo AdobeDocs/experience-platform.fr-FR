@@ -4,27 +4,27 @@ description: Découvrez comment transformer des données dans Adobe Experience P
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 14%
+source-wordcount: '1140'
+ht-degree: 13%
 
 ---
 
 # Fonctionnalités d’ingénierie pour l’apprentissage automatique
 
-Ce document explique comment transformer des données en **features** ou des variables qui peuvent être utilisées par un modèle d’apprentissage automatique. Ce processus est appelé **ingénierie des fonctionnalités**. Utilisez Data Distiller pour calculer des fonctionnalités ML à grande échelle et partager ces fonctionnalités dans votre environnement d’apprentissage automatique. Cela implique les éléments suivants :
+Ce document explique comment transformer des données dans Adobe Experience Platform en **fonctions**, ou variables, qui peuvent être utilisées par un modèle d’apprentissage automatique. Ce processus est appelé **ingénierie de fonctionnalités**. Utilisez Data Distiller pour calculer des fonctionnalités ML à grande échelle et partager ces fonctionnalités dans votre environnement d’apprentissage automatique. Cela implique les éléments suivants :
 
 1. Créez un modèle de requête pour définir les libellés et fonctionnalités cibles que vous souhaitez calculer pour votre modèle.
 2. Exécution de la requête et stockage des résultats dans un jeu de données de formation
 
 ## Définition des données de formation {#define-training-data}
 
-L’exemple suivant illustre une requête permettant d’extraire des données de formation d’un jeu de données d’événements d’expérience pour un modèle afin de prédire la propension d’un utilisateur à s’abonner à une newsletter. Les événements d’abonnement sont représentés par le type d’événement . `web.formFilledOut`, ainsi que d’autres événements comportementaux du jeu de données, sont utilisés pour dériver des fonctionnalités au niveau du profil afin de prédire les abonnements.
+L’exemple suivant illustre une requête permettant d’extraire des données de formation d’un jeu de données d’événements d’expérience pour un modèle afin de prédire la propension d’un utilisateur à s’abonner à une newsletter. Les événements d’abonnement sont représentés par le type d’événement `web.formFilledOut` et d’autres événements comportementaux du jeu de données sont utilisés pour dériver des fonctionnalités au niveau du profil pour prédire les abonnements.
 
 ### Requête sur les libellés positifs et négatifs {#query-positive-and-negative-labels}
 
 Un jeu de données complet pour la formation d’un modèle d’apprentissage automatique (supervisé) comprend une variable ou une étiquette cible qui représente le résultat à prévoir, ainsi qu’un ensemble de caractéristiques ou de variables explicatives utilisées pour décrire les exemples de profils utilisés pour entraîner le modèle.
 
-Dans ce cas, le libellé est une variable appelée `subscriptionOccurred` qui est égal à 1 si le profil utilisateur comporte un événement de type `web.formFilledOut` , et 0 dans le cas contraire. La requête suivante renvoie un ensemble de 50 000 utilisateurs du jeu de données d’événements, y compris tous les utilisateurs qui disposent d’étiquettes positives (`subscriptionOccurred = 1`) plus un ensemble sélectionné de manière aléatoire avec des libellés négatifs pour remplir la taille d’échantillon de 50 000 utilisateurs. Cela permet de s’assurer que les données d’apprentissage incluent des exemples positifs et négatifs à partir desquels le modèle peut apprendre.
+Dans ce cas, le libellé est une variable appelée `subscriptionOccurred` qui est égale à 1 si le profil utilisateur a un événement de type `web.formFilledOut` et 0 dans le cas contraire. La requête suivante renvoie un ensemble de 50 000 utilisateurs du jeu de données d’événements, y compris tous les utilisateurs avec des libellés positifs (`subscriptionOccurred = 1`) plus un utilisateur sélectionné de manière aléatoire avec des libellés négatifs pour remplir la taille d’échantillon de 50 000 utilisateurs. Cela permet de s’assurer que les données d’apprentissage incluent des exemples positifs et négatifs à partir desquels le modèle peut apprendre.
 
 ```python
 from aepp import queryservice
@@ -52,7 +52,7 @@ print(f"Number of classes: {len(df_labels)}")
 df_labels.head()
 ```
 
-**Exemple de résultat**
+**Exemple de sortie**
 
 Nombre de classes : 5000
 
@@ -70,12 +70,12 @@ Nombre de classes : 5000
 
 Avec une requête appropriée, vous pouvez rassembler les événements du jeu de données en fonctionnalités numériques significatives qui peuvent être utilisées pour former un modèle de propension. Vous trouverez ci-dessous des exemples d’événements :
 
-- **Nombre d&#39;emails** qui ont été envoyés à des fins marketing et reçus par l’utilisateur.
-- Partie de ces emails qui étaient **ouvert**.
-- Partie de ces emails où l’utilisateur **selected** le lien.
-- **Nombre de produits** qui ont été vues.
-- Nombre de **propositions ayant été interactives**.
-- Nombre de **propositions refusées**.
+- **Nombre d’emails** envoyés à des fins marketing et reçus par l’utilisateur.
+- Partie de ces courriers électroniques **ouverts**.
+- Partie de ces emails dans laquelle l’utilisateur **a sélectionné** le lien.
+- **Nombre de produits** qui ont été consultés.
+- Nombre de **propositions ayant été interactives avec**.
+- Nombre de **propositions rejetées**.
 - Nombre de **liens sélectionnés**.
 - Nombre de minutes entre deux courriers électroniques consécutifs reçus.
 - Nombre de minutes entre deux emails consécutifs ouverts.
@@ -144,15 +144,15 @@ df_features.head()
 
 +++
 
-**Exemple de résultat**
+**Exemple de sortie**
 
 |   | userId | emailsReceived | emailsOpening | emailsClicked | productsViewed | propositionInteracts | propositionDismiss | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpening | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick |
 | --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- | 
-| 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | Aucun | NaN |
-| 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | Aucun | NaN |
-| 2 | 01102546977582484968046916668339306826 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | Aucun | NaN |
-| 3 | 01102546977582484968046916668339306826 | 3 | 1 | 0 | 0 | 0 | 0 | 0 | 540.0 | 0.0 | NaN | NaN | NaN | Aucun | NaN |
-| 4 | 01102546977582484968046916668339306826 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 588.0 | 0.0 | NaN | NaN | NaN | Aucun | NaN |
+| 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Aucun | NaN |
+| 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Aucun | NaN |
+| 2 | 01102546977582484968046916668339306826 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Aucun | NaN |
+| 3 | 01102546977582484968046916668339306826 | 3 | 1 | 0 | 0 | 0 | 0 | 0 | 540,0 | 0,0 | NaN | NaN | NaN | Aucun | NaN |
+| 4 | 01102546977582484968046916668339306826 | 3 | 2 | 0 | 0 | 0 | 0 | 0 | 588,0 | 0,0 | NaN | NaN | NaN | Aucun | NaN |
 
 {style="table-layout:auto"}
 
@@ -227,15 +227,15 @@ df_training_set.head()
 
 +++
 
-**Exemple de résultat**
+**Exemple de sortie**
 
 |  | userId | eventType | date et heure | subscriptionOcferred | emailsReceived | emailsOpening | emailsClicked | productsViewed | propositionInteracts | propositionDismiss | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpening | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick | random_row_number_for_user |
 | ---  |  --- |   ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---  |  ---   | ---  |  ---  |  ---  |  --- |    
-| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | Aucun | NaN | 1 |
-| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921.0 | 0.0 | NaN | 1703.0 | NaN | Aucun | NaN | 1 |
-| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365.0 | 26.0 | 1.0 | NaN | NaN | Aucun | NaN | 7 |
-| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | Aucun | NaN | 1 |
-| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 2023-06-21 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0.0 | NaN | NaN | NaN | NaN | Aucun | NaN | 1 |
+| 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Aucun | NaN | 1 |
+| 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | Aucun | NaN | 1 |
+| 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1.0 | NaN | NaN | Aucun | NaN | 7 |
+| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Aucun | NaN | 1 |
+| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 2023-06-21 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | Aucun | NaN | 1 |
 
 {style="table-layout:auto"}
 
@@ -246,9 +246,9 @@ Il est généralement conseillé de former régulièrement un modèle à l’aid
 Pour ce faire, quelques modifications doivent être apportées à la requête du jeu de formation :
 
 - Ajoutez une logique pour créer un nouveau jeu de données d’apprentissage s’il n’existe pas, puis insérez les nouveaux libellés et fonctionnalités dans le jeu de données d’apprentissage existant dans le cas contraire. Cela nécessite une série de deux versions de la requête du jeu de formation :
-   - Tout d’abord, utilisez la méthode `CREATE TABLE IF NOT EXISTS {table_name} AS` statement
-   - Ensuite, à l’aide de la méthode `INSERT INTO {table_name}` instruction du cas où le jeu de données d’apprentissage existe déjà
-- Ajouter un `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` pour limiter la requête aux données d’événement ajoutées dans un intervalle spécifié. La variable `$` le préfixe sur les ID d’instantané indique qu’il s’agit de variables qui seront transmises lors de l’exécution du modèle de requête.
+   - Tout d’abord, en utilisant l’instruction `CREATE TABLE IF NOT EXISTS {table_name} AS`
+   - Ensuite, en utilisant l’instruction `INSERT INTO {table_name}` pour le cas où le jeu de données d’apprentissage existe déjà
+- Ajoutez une instruction `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` pour limiter la requête aux données d’événement ajoutées dans un intervalle spécifié. Le préfixe `$` sur les ID d’instantané indique qu’il s’agit de variables qui seront transmises lors de l’exécution du modèle de requête.
 
 L’application de ces modifications entraîne la requête suivante :
 
@@ -403,7 +403,7 @@ template_id = template_res["id"]
 print(f"Template for propensity training data created as ID {template_id}")
 ```
 
-**Exemple de résultat**
+**Exemple de sortie**
 
 `Template for propensity training data created as ID f3d1ec6b-40c2-4d13-93b6-734c1b3c7235`
 
@@ -441,7 +441,7 @@ query_final_id = query_final_res["id"]
 print(f"Query started successfully and got assigned ID {query_final_id} - it will take some time to execute")
 ```
 
-**Exemple de résultat**
+**Exemple de sortie**
 
 `Query started successfully and got assigned ID c6ea5009-1315-4839-b072-089ae01e74fd - it will take some time to execute`
 
@@ -468,7 +468,7 @@ def wait_for_query_completion(query_id):
 wait_for_query_completion(query_final_id)
 ```
 
-**Exemple de résultat**
+**Exemple de sortie**
 
 ```console
 Query is still in progress, sleeping…
@@ -482,6 +482,6 @@ Query is still in progress, sleeping…
 Query completed successfully in 473.8 seconds
 ```
 
-## Étapes suivantes:
+## Étapes suivantes :
 
-En lisant ce document, vous avez appris à transformer des données dans Adobe Experience Platform en fonctionnalités, ou variables, qui peuvent être utilisées par un modèle d’apprentissage automatique. L’étape suivante de la création de pipelines de fonctionnalités à partir d’Experience Platform pour alimenter des modèles personnalisés dans votre environnement d’apprentissage automatique consiste à [exportation des jeux de données de fonctionnalités](./export-data.md).
+En lisant ce document, vous avez appris à transformer des données dans Adobe Experience Platform en fonctionnalités, ou variables, qui peuvent être utilisées par un modèle d’apprentissage automatique. L’étape suivante de la création de pipelines de fonctionnalités à partir d’Experience Platform pour alimenter des modèles personnalisés dans votre environnement d’apprentissage automatique est d’ [exporter des jeux de données de fonctionnalités](./export-data.md).

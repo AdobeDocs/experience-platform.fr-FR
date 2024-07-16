@@ -19,7 +19,7 @@ Cette fonctionnalité vous permet de classer les champs de schéma, les segments
 
 >[!NOTE]
 >
->Ce document se concentre sur le cas d’utilisation des stratégies de contrôle d’accès. Si vous tentez de configurer des stratégies pour régir la variable **use** de données plutôt que de connaître les utilisateurs de Platform ayant accès à ces données, consultez le guide de bout en bout sur [gouvernance des données](../../data-governance/e2e.md) au lieu de .
+>Ce document se concentre sur le cas d’utilisation des stratégies de contrôle d’accès. Si vous essayez de configurer des stratégies pour régir l’ **utilisation** des données plutôt que de déterminer les utilisateurs de Platform qui y ont accès, reportez-vous au guide de bout en bout sur la [gouvernance des données](../../data-governance/e2e.md) à la place.
 
 ## Prise en main
 
@@ -36,31 +36,31 @@ Vous accédez à un exemple de workflow de contrôle d’accès basé sur les at
 
 Vous êtes un prestataire de santé et souhaitez configurer l’accès aux ressources de votre entreprise.
 
-* Votre équipe marketing interne doit pouvoir accéder à **[!UICONTROL PHI/Données d’intégrité réglementées]** data.
-* Votre agence externe ne doit pas pouvoir accéder à **[!UICONTROL PHI/Données d’intégrité réglementées]** data.
+* Votre équipe marketing interne doit pouvoir accéder aux données **[!UICONTROL PHI/ données d’intégrité réglementées]**.
+* Votre agence externe ne doit pas pouvoir accéder aux données **[!UICONTROL PHI/ données d’intégrité réglementées]**.
 
 Pour ce faire, vous devez configurer les rôles, les ressources et les stratégies.
 
 Vous allez :
 
-* [Étiqueter les rôles de vos utilisateurs](#label-roles): utilisez l’exemple d’un prestataire de santé (ACME Business Group) dont le groupe marketing travaille avec des agences externes.
-* [Étiqueter vos ressources (champs de schéma et segments)](#label-resources): attribuez la variable **[!UICONTROL PHI/Données d’intégrité réglementées]** libellé aux ressources de schéma et aux segments.
+* [Étiqueter les rôles de vos utilisateurs](#label-roles) : utilisez l’exemple d’un prestataire de services de santé (ACME Business Group) dont le groupe marketing travaille avec des agences externes.
+* [Étiqueter vos ressources (champs de schéma et segments)](#label-resources) : Attribuez l’étiquette **[!UICONTROL PHI/données d’intégrité réglementées]** aux ressources de schéma et aux segments.
 * 
-   * [Activez la stratégie qui les reliera :](#policy): activez la stratégie par défaut pour empêcher l’accès aux champs de schéma et aux segments en connectant les libellés de vos ressources aux libellés de votre rôle. Les utilisateurs disposant de libellés correspondants auront alors accès au champ de schéma et au segment dans tous les environnements de test.
+   * [Activez la stratégie qui les reliera :](#policy) : activez la stratégie par défaut pour empêcher l’accès aux champs de schéma et aux segments en connectant les libellés de vos ressources aux libellés de votre rôle. Les utilisateurs disposant de libellés correspondants auront alors accès au champ de schéma et au segment dans tous les environnements de test.
 
 ## Autorisations
 
-[!UICONTROL Autorisations] est la zone de l’Experience Cloud dans laquelle les administrateurs peuvent définir des rôles utilisateur et des stratégies afin de gérer les autorisations pour les fonctionnalités et les objets au sein d’une application de produit.
+[!UICONTROL Autorisations] est la zone de l’Experience Cloud dans laquelle les administrateurs peuvent définir des rôles utilisateur et des stratégies afin de gérer les autorisations pour les fonctionnalités et les objets dans une application de produit.
 
-Via [!UICONTROL Autorisations], vous pouvez créer et gérer des rôles et attribuer les autorisations de ressources souhaitées pour ces rôles. [!UICONTROL Autorisations] vous permet également de gérer les libellés, les environnements de test et les utilisateurs associés à un rôle spécifique.
+Grâce aux [!UICONTROL autorisations], vous pouvez créer et gérer des rôles et attribuer les autorisations de ressources souhaitées pour ces rôles. [!UICONTROL Autorisations] vous permet également de gérer les étiquettes, les environnements de test et les utilisateurs associés à un rôle spécifique.
 
 Contactez votre administrateur système pour obtenir un accès si vous ne disposez pas de droits d’administrateur.
 
-Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Experience Cloud](https://experience.adobe.com/) et connectez-vous à l’aide de vos informations d’identification d’Adobe. Une fois connecté, le **[!UICONTROL Présentation]** s’affiche pour votre organisation pour laquelle vous disposez des droits d’administrateur. Cette page présente les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’organisation. Sélectionner **[!UICONTROL Autorisations]** pour ouvrir l’espace de travail de votre intégration Platform.
+Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Experience Cloud](https://experience.adobe.com/) et connectez-vous à l’aide de vos informations d’identification d’Adobe. Une fois connecté, la page **[!UICONTROL Overview]** s’affiche pour votre organisation pour laquelle vous disposez des droits d’administrateur. Cette page présente les produits auxquels votre organisation est abonnée, ainsi que d’autres contrôles permettant d’ajouter des utilisateurs et des administrateurs à l’organisation. Sélectionnez **[!UICONTROL Autorisations]** pour ouvrir l’espace de travail de votre intégration Platform.
 
 ![Image montrant le produit Autorisations sélectionné dans Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
-L’espace de travail Autorisations de l’interface utilisateur de Platform s’affiche, s’ouvrant sur la fenêtre **[!UICONTROL Rôles]** page.
+L’espace de travail Autorisations de l’interface utilisateur de Platform s’affiche, s’ouvrant sur la page **[!UICONTROL Rôles]** .
 
 ## Appliquer des libellés à un rôle {#label-roles}
 
@@ -95,17 +95,17 @@ L’espace de travail Autorisations de l’interface utilisateur de Platform s�
 
 Les rôles sont des moyens de catégoriser les types d’utilisateurs qui interagissent avec votre instance Platform et sont des blocs élémentaires des stratégies de contrôle d’accès. Un rôle possède un ensemble donné d’autorisations et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès dont ils ont besoin.
 
-Pour commencer, sélectionnez **[!UICONTROL ACME Business Group]** de la **[!UICONTROL Rôles]** page.
+Pour commencer, sélectionnez **[!UICONTROL ACME Business Group]** sur la page **[!UICONTROL Rôles]** .
 
-![Image montrant le rôle métier ACME sélectionné dans les rôles](../images/abac-end-to-end-user-guide/abac-select-role.png)
+![Image montrant le rôle commercial ACME sélectionné dans les rôles](../images/abac-end-to-end-user-guide/abac-select-role.png)
 
-Ensuite, sélectionnez **[!UICONTROL Étiquettes]** puis sélectionnez **[!UICONTROL Ajouter des étiquettes]**.
+Ensuite, sélectionnez **[!UICONTROL Étiquettes]**, puis **[!UICONTROL Ajouter des étiquettes]**.
 
-![Image affichant l’option Ajouter des libellés sélectionnée dans l’onglet Étiquettes](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
+![Image montrant l’ajout de libellés sélectionnés dans l’onglet Étiquettes](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
-Une liste de tous les libellés de votre organisation s’affiche. Sélectionner **[!UICONTROL RHD]** pour ajouter le libellé de **[!UICONTROL PHI/Données d’intégrité réglementées]**. Autoriser l’affichage d’une coche bleue en regard du libellé pendant quelques instants, puis sélectionnez **[!UICONTROL Enregistrer]**.
+Une liste de tous les libellés de votre organisation s’affiche. Sélectionnez **[!UICONTROL RHD]** pour ajouter le libellé de **[!UICONTROL PHI/Definated Health Data]**. Laissez passer quelques instants pour qu’une coche bleue apparaisse en regard du libellé, puis sélectionnez **[!UICONTROL Enregistrer]**.
 
-![Image montrant le libellé du disque dur (RHD) sélectionné et enregistré](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
+![Image montrant l&#39;étiquette RHD en cours de sélection et d&#39;enregistrement](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
 >[!NOTE]
 >
@@ -113,19 +113,19 @@ Une liste de tous les libellés de votre organisation s’affiche. Sélectionner
 
 ## Application de libellés aux champs de schéma {#label-resources}
 
-Maintenant que vous avez configuré un rôle d’utilisateur avec la fonction [!UICONTROL RHD] , l’étape suivante consiste à ajouter le même libellé aux ressources que vous souhaitez contrôler pour ce rôle.
+Maintenant que vous avez configuré un rôle utilisateur avec l’étiquette [!UICONTROL RHD], l’étape suivante consiste à ajouter le même libellé aux ressources que vous souhaitez contrôler pour ce rôle.
 
-Sélectionner **[!UICONTROL Schémas]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL ACME Healthcare]** dans la liste des schémas qui s’affichent.
+Sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche, puis **[!UICONTROL ACME Healthcare]** dans la liste des schémas qui s’affichent.
 
 ![Image montrant le schéma ACME Health care sélectionné dans l’onglet Schémas](../images/abac-end-to-end-user-guide/abac-select-schema.png)
 
-Ensuite, sélectionnez **[!UICONTROL Étiquettes]** pour afficher une liste qui affiche les champs associés à votre schéma. À partir de là, vous pouvez attribuer des étiquettes à un ou plusieurs champs à la fois. Sélectionnez la variable **[!UICONTROL BloodGluglucose]** et **[!UICONTROL InsulinLevel]** puis sélectionnez **[!UICONTROL Appliquer les étiquettes d’accès et de gouvernance des données]**.
+Sélectionnez ensuite **[!UICONTROL Étiquettes]** pour afficher une liste qui affiche les champs associés à votre schéma. À partir de là, vous pouvez attribuer des étiquettes à un ou plusieurs champs à la fois. Sélectionnez les champs **[!UICONTROL BloodGluglucose]** et **[!UICONTROL InsulinLevel]**, puis sélectionnez **[!UICONTROL Appliquer les étiquettes d’accès et de gouvernance des données]**.
 
-![Image montrant la sélection des étiquettes BloodGluglucose et InsulinLevel et l’application des étiquettes d’accès et de gouvernance des données](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
+![Image montrant le BloodGluglucose et l&#39;insulineLevel sélectionnés et l&#39;application des étiquettes d&#39;accès et de gouvernance des données sélectionnées](../images/abac-end-to-end-user-guide/abac-select-schema-labels-tab.png)
 
-La variable **[!UICONTROL Modifier les libellés]** s’affiche, vous permettant de choisir les libellés à appliquer aux champs du schéma. Pour ce cas pratique, sélectionnez la variable **[!UICONTROL PHI/Données d’intégrité réglementées]** libellé, puis sélectionnez **[!UICONTROL Enregistrer]**.
+La boîte de dialogue **[!UICONTROL Modifier les libellés]** s’affiche, vous permettant de choisir les libellés que vous souhaitez appliquer aux champs du schéma. Pour ce cas d’utilisation, sélectionnez l’étiquette **[!UICONTROL PHI/Definated Health Data]** , puis sélectionnez **[!UICONTROL Save]**.
 
-![Image montrant le libellé du disque dur (RHD) sélectionné et enregistré](../images/abac-end-to-end-user-guide/abac-select-schema-labels.png)
+![Image montrant l&#39;étiquette RHD en cours de sélection et d&#39;enregistrement](../images/abac-end-to-end-user-guide/abac-select-schema-labels.png)
 
 >[!NOTE]
 >
@@ -139,22 +139,22 @@ La variable **[!UICONTROL Modifier les libellés]** s’affiche, vous permettant
 
 Une fois les champs de schéma libellés, vous pouvez commencer à les libeller.
 
-Sélectionner **[!UICONTROL Segments]** dans le volet de navigation de gauche. Une liste des segments disponibles dans votre organisation s’affiche. Dans cet exemple, les deux segments suivants doivent être étiquetés, car ils contiennent des données d’intégrité sensibles :
+Sélectionnez **[!UICONTROL Segments]** dans le volet de navigation de gauche. Une liste des segments disponibles dans votre organisation s’affiche. Dans cet exemple, les deux segments suivants doivent être étiquetés, car ils contiennent des données d’intégrité sensibles :
 
 * Glucide sanguin > 100
 * Insuline &lt;50
 
-Sélectionner **[!UICONTROL Glucide sanguin > 100]** pour commencer à libeller le segment.
+Sélectionnez **[!UICONTROL Glucide sanguin >100]** pour commencer à étiqueter le segment.
 
 ![Image montrant le glucose dans le sang >100 sélectionné depuis l’onglet Segments](../images/abac-end-to-end-user-guide/abac-select-segment.png)
 
-Le segment **[!UICONTROL Détails]** s’affiche. Sélectionner **[!UICONTROL Gérer l’accès]**.
+L’écran **[!UICONTROL Détails]** du segment s’affiche. Sélectionnez **[!UICONTROL Gérer l’accès]**.
 
 ![Image montrant la sélection de l’accès Manages](../images/abac-end-to-end-user-guide/abac-segment-fields-manage-access.png)
 
-La variable **[!UICONTROL Modifier les libellés]** s’affiche, vous permettant de choisir les libellés à appliquer au segment. Pour ce cas pratique, sélectionnez la variable **[!UICONTROL PHI/Données d’intégrité réglementées]** libellé, puis sélectionnez **[!UICONTROL Enregistrer]**.
+La boîte de dialogue **[!UICONTROL Modifier les étiquettes]** s’affiche, vous permettant de choisir les étiquettes à appliquer au segment. Pour ce cas d’utilisation, sélectionnez l’étiquette **[!UICONTROL PHI/Definated Health Data]** , puis sélectionnez **[!UICONTROL Save]**.
 
-![Image montrant la sélection du libellé RHD et de l&#39;enregistrement sélectionné](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
+![Image montrant la sélection de l&#39;étiquette RHD et de l&#39;enregistrement sélectionné](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
 
 Répétez les étapes ci-dessus avec **[!UICONTROL Insuline &lt;50]**.
 
@@ -166,15 +166,15 @@ Pour activer la stratégie de contrôle d’accès, sélectionnez [!UICONTROL Au
 
 ![Liste des stratégies affichées](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-Sélectionnez ensuite les points de suspension (`...`) en regard du nom des stratégies et une liste déroulante affiche les commandes permettant de modifier, d’activer, de supprimer ou de dupliquer le rôle. Sélectionner **[!UICONTROL Activer]** dans la liste déroulante.
+Sélectionnez ensuite les points de suspension (`...`) en regard du nom des stratégies et une liste déroulante affiche les commandes permettant de modifier, activer, supprimer ou dupliquer le rôle. Sélectionnez **[!UICONTROL Activer]** dans la liste déroulante.
 
 ![Liste déroulante pour activer la stratégie](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-La boîte de dialogue Activer la stratégie s’affiche et vous invite à confirmer l’activation. Sélectionner **[!UICONTROL Confirmer]**.
+La boîte de dialogue Activer la stratégie s’affiche et vous invite à confirmer l’activation. Sélectionnez **[!UICONTROL Confirmer]**.
 
 ![Boîte de dialogue Activer la stratégie](../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
-La confirmation de l’activation de la stratégie est reçue et vous revenez à la variable [!UICONTROL Stratégies] page.
+La confirmation de l’activation de la stratégie est reçue et vous êtes renvoyé à la page [!UICONTROL Stratégies] .
 
 ![Activer la confirmation de stratégie](../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 

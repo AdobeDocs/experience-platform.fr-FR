@@ -4,8 +4,8 @@ description: Découvrez comment effectuer des appels vers le point d’entrée /
 exl-id: d0434098-f49a-45f3-9772-488bd3c134aa
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '169'
-ht-degree: 78%
+source-wordcount: '161'
+ht-degree: 77%
 
 ---
 

@@ -4,7 +4,7 @@ title: Configuration par lots
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
 source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1052'
 ht-degree: 96%
 
 ---
@@ -22,7 +22,7 @@ Quand vous créez des destinations basées sur des fichiers avec Destination SDK
 
 Les paramètres de configuration par lots font partie de la configuration de destination pour les destinations basées sur des fichiers.
 
-Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la section [options de configuration](../configuration-options.md) ou consulter le guide sur la manière d’effectuer [utiliser la Destination SDK pour configurer une destination basée sur des fichiers ;](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la documentation [options de configuration](../configuration-options.md) ou consultez le guide sur la [manière d’utiliser la Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Vous pouvez configurer les noms de fichiers et les paramètres du planning d’exportation via le point d’entrée `/authoring/destinations`. Pour obtenir des exemples d’appels API détaillés dans lesquels vous pouvez configurer les composants affichés sur cette page, consultez les pages de référence de l’API suivantes.
 

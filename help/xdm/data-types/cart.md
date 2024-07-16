@@ -1,27 +1,28 @@
 ---
 title: Type de données du panier
 description: Découvrez le type de données Modèle de données d’expérience du panier (XDM).
-source-git-commit: c3590dc2cfe47eb634136eeb88578f965598760d
+exl-id: 24ae3882-60f3-4962-b0b5-7dba48170da8
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '118'
-ht-degree: 7%
+ht-degree: 15%
 
 ---
 
-# [!UICONTROL Panier] type de données
+# Type de données [!UICONTROL Panier]
 
 [!UICONTROL Panier] est un type de données XDM (Experience Data Model) standard qui fournit des propriétés liées à un panier. Utilisez ce type de données pour capturer l’identifiant unique attribué par le vendeur (`Cart ID`) et la source (`Cart Source`) où un ou plusieurs produits ont été ajoutés au panier.
 
-![Un diagramme de [!UICONTROL Panier] type de données.](../images/data-types/cart.png)
+![Schéma du type de données [!UICONTROL Cart].](../images/data-types/cart.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |----------------|-------------------|-----------|------------------------------------------------------------|
-| [!UICONTROL Identifiant du panier] | `cartID` | chaîne | Identifiant unique attribué par le vendeur au panier. |
-| [!UICONTROL Source du panier] | `cartSource` | chaîne | À partir duquel un ou plusieurs produits ont été ajoutés au panier. |
+| [!UICONTROL ID de panier] | `cartID` | Chaîne | Identifiant unique attribué au panier par le vendeur. |
+| [!UICONTROL Source de panier] | `cartSource` | Chaîne | À partir duquel un ou plusieurs produits ont été ajoutés au panier. |
 
 {style="table-layout:auto"}
 
 Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.schema.json)

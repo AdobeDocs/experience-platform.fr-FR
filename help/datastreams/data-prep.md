@@ -17,7 +17,7 @@ Toutes les données envoyées à partir d’une page web doivent atterrir en Exp
 
 1. Reformétez la couche de données dans XDM sur la page web elle-même.
 2. Utilisez la fonctionnalité Balises - Éléments de données natifs pour reformater le format de couche de données existant d’une page web en XDM.
-3. Reformater le format de couche de données d’une page web dans XDM via le réseau Edge, à l’aide de la préparation de données pour la collecte de données.
+3. Reformater le format de couche de données d’une page web dans XDM via l’Edge Network, à l’aide de la préparation de données pour la collecte de données.
 
 Ce guide se concentre sur la 3e option.
 
@@ -25,14 +25,14 @@ Ce guide se concentre sur la 3e option.
 
 Dans deux cas d’utilisation, la préparation des données pour la collecte de données est utile :
 
-1. Le site web dispose d’une couche de données bien formée, bien gérée et bien gérée. Il est préférable de l’envoyer directement au réseau Edge plutôt que d’utiliser une manipulation JavaScript pour le convertir au format XDM sur la page (soit par le biais d’éléments de données de balises, soit par une manipulation JavaScript manuelle).
+1. Le site web dispose d’une couche de données bien formée, bien gérée et bien gérée. Il est préférable de l’envoyer directement à l’Edge Network plutôt que d’utiliser la manipulation JavaScript pour le convertir au format XDM sur la page (soit par le biais d’éléments de données de balises, soit par le biais d’une manipulation manuelle de JavaScript).
 2. Un système de balisage autre que Balises est déployé sur le site.
 
-## Envoi d’une couche de données existante vers le réseau Edge via WebSDK {#send-datalayer-via-websdk}
+## Envoyer une couche de données existante à l’Edge Network via WebSDK {#send-datalayer-via-websdk}
 
-La couche de données existante doit être envoyée à l’aide de la variable [`data`](/help/web-sdk/commands/sendevent/data.md) dans l’objet `sendEvent` .
+La couche de données existante doit être envoyée à l’aide de l’objet [`data`](/help/web-sdk/commands/sendevent/data.md) dans la commande `sendEvent`.
 
-Si vous utilisez des balises, vous devez utiliser la variable **[!UICONTROL Données]** du champ **[!UICONTROL Envoyer un événement]** type d’action, comme décrit dans la section [Documentation sur l’extension de balise SDK Web](/help/tags/extensions/client/web-sdk/action-types.md).
+Si vous utilisez des balises, vous devez utiliser le champ **[!UICONTROL Data]** du type d’action **[!UICONTROL Send Event]**, comme décrit dans la [documentation de l’extension de balise Web SDK](/help/tags/extensions/client/web-sdk/action-types.md).
 
 Le reste de ce guide se concentrera sur la manière de mapper la couche de données aux normes XDM une fois qu’elle a été envoyée par le SDK WebSDK.
 
@@ -54,7 +54,7 @@ Pour une démonstration rapide du processus de préparation des données pour la
 
 Une fois la configuration de base d’un flux de données terminée, sélectionnez **[!UICONTROL Enregistrer et Ajouter un mappage]** pour passer à l’étape **[!UICONTROL Sélectionner les données]**. Ensuite, vous devez fournir un exemple d’objet JSON qui représente la structure des données que vous prévoyez d’envoyer à Platform.
 
-Pour capturer les propriétés directement à partir de la couche de données, l’objet JSON doit comporter une seule propriété racine `data`. Les sous-propriétés de la propriété `data` doit ensuite être construit de manière à correspondre aux propriétés de couche de données que vous souhaitez capturer. Sélectionnez la section ci-dessous pour afficher un exemple d’objet JSON correctement formaté avec une racine `data`.
+Pour capturer les propriétés directement à partir de la couche de données, l’objet JSON doit comporter une seule propriété racine `data`. Les sous-propriétés de l’objet `data` doivent ensuite être construites de manière à correspondre aux propriétés de couche de données que vous souhaitez capturer. Sélectionnez la section ci-dessous pour afficher un exemple d’objet JSON correctement formaté avec une racine `data`.
 
 +++Fichier JSON Sample avec une racine `data`
 
@@ -164,26 +164,26 @@ Vous pouvez sélectionner l’option pour charger l’objet sous forme de fichie
 
 L’étape **[!UICONTROL Mappage]** s’affiche et vous permet de mapper les champs de vos données source à ceux du schéma d’événement cible dans Platform. Ensuite, vous pouvez configurer le mappage de deux manières :
 
-* [Création de règles de mappage](#create-mapping) pour ce flux de données via un processus manuel.
+* [Créez des règles de mappage](#create-mapping) pour ce flux de données par le biais d’un processus manuel.
 * [Importer des règles de mappage](#import-mapping) d’un flux de données existant.
 
 ### Création de règles de mappage {#create-mapping}
 
 Pour créer une règle de mappage, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**.
 
-![Ajout d’un nouveau mappage.](assets/data-prep/add-new-mapping.png)
+![Ajout d&#39;un nouveau mapping.](assets/data-prep/add-new-mapping.png)
 
 Sélectionnez l’icône de source (![icône de source](assets/data-prep/source-icon.png)) et, dans la boîte de dialogue qui s’affiche, sélectionnez le champ source que vous souhaitez mapper dans la zone de travail fournie. Une fois que vous avez choisi un champ, utilisez le bouton **[!UICONTROL Sélectionner]** pour continuer.
 
-![Sélection du champ à mapper dans le schéma source.](assets/data-prep/source-mapping.png)
+![Sélectionner le champ à mapper dans le schéma source.](assets/data-prep/source-mapping.png)
 
 Ensuite, sélectionnez l’icône de schéma (![icône de schéma](assets/data-prep/schema-icon.png)) pour ouvrir une boîte de dialogue similaire pour le schéma d’événement cible. Sélectionnez le champ vers lequel vous souhaitez mapper les données avant de confirmer à l’aide du bouton **[!UICONTROL Sélectionner]**.
 
-![Sélection du champ à mapper dans le schéma cible.](assets/data-prep/target-mapping.png)
+![Sélectionner le champ à mapper dans le schéma cible.](assets/data-prep/target-mapping.png)
 
 La page de mappage réapparaît et affiche le mappage des champs terminé. La section **[!UICONTROL Progression du mappage]** est mise à jour pour refléter le nombre total de champs qui ont été mappés.
 
-![Champ mappé avec succès et progression reflétée.](assets/data-prep/field-mapped.png)
+![Champ mappé avec la progression reflétée.](assets/data-prep/field-mapped.png)
 
 >[!TIP]
 >
@@ -201,7 +201,7 @@ Si vous avez déjà créé un flux de données, vous pouvez réutiliser ses règ
 
 Pour commencer, sélectionnez **[!UICONTROL Importer le mappage]**.
 
-![Bouton Mappage d’importation en cours de sélection.](assets/data-prep/import-mapping-button.png)
+![Bouton de mappage d’importation en cours de sélection.](assets/data-prep/import-mapping-button.png)
 
 Dans la boîte de dialogue qui s’affiche, sélectionnez le flux de données dont vous souhaitez importer les règles de mappage. Une fois le flux de données choisi, sélectionnez **[!UICONTROL Aperçu]**.
 
@@ -213,7 +213,7 @@ Dans la boîte de dialogue qui s’affiche, sélectionnez le flux de données do
 
 L’écran suivant affiche un aperçu des règles de mappage enregistrées pour le flux de données sélectionné. Assurez-vous que les mappages affichés vous conviennent, puis sélectionnez **[!UICONTROL Importer]** pour confirmer et ajouter les mappages au nouveau flux de données.
 
-![Règles de mappage à importer.](assets/data-prep/import-mapping-rules.png)
+![ Règles de mappage à importer.](assets/data-prep/import-mapping-rules.png)
 
 >[!NOTE]
 >

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;guide de développement;Espace de travail de sciences de données;rubriques les plus consultées;machine learning en temps réel;référence de nœud;
+keywords: Experience Platform;guide de développement;Espace de travail de sciences des données;rubriques les plus consultées;machine learning en temps réel;référence de nœud;
 solution: Experience Platform
 title: Gérer les notebooks de machine learning en temps réel
 description: Le guide suivant décrit les étapes nécessaires à la création d’une application de machine learning en temps réel dans Adobe Experience Platform JupyterLab.
 exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1663'
 ht-degree: 100%
 
 ---

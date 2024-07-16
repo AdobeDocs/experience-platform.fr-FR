@@ -34,7 +34,7 @@ Sous la colonne de droite *Propriétés du segment*, indiquez un nom pour le seg
 
 ![](../images/user-guide/properties_new.png)
 
-Au-dessus de la gauche *Champs* , cliquez sur le bouton **engrenage** et sélectionnez une *Stratégie de fusion* dans la liste déroulante. Cliquez sur **[!UICONTROL Enregistrer]** pour créer le segment.
+Au-dessus de la colonne de gauche *Champs*, cliquez sur l’icône **engrenage** et sélectionnez une *stratégie de fusion* dans la liste déroulante. Cliquez sur **[!UICONTROL Enregistrer]** pour créer le segment.
 
 ![](../images/user-guide/merge_policy_new.png)
 

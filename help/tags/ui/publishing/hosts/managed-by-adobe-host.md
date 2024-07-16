@@ -4,8 +4,8 @@ description: Découvrez l’option d’hébergement par défaut pour le déploie
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
 source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
 workflow-type: tm+mt
-source-wordcount: '1173'
-ht-degree: 90%
+source-wordcount: '1177'
+ht-degree: 89%
 
 ---
 
@@ -76,7 +76,7 @@ Ces invalidations échelonnées du cache donnent aux groupes de serveurs d’ori
 
 Les versions de bibliothèque sont également mises en cache sur le navigateur à l’aide de l’en-tête HTTP `cache-control`. Lors de l’utilisation d’hôtes gérés par Adobe, vous n’avez aucun contrôle sur les en-têtes renvoyés dans les réponses de l’API. Par conséquent, le paramètre Adobe par défaut pour le caching est utilisé. En d’autres termes, vous ne pouvez pas utiliser d’en-têtes personnalisés pour les hôtes gérés par Adobe. Si vous avez besoin d’un en-tête `cache-control` personnalisé, vous pouvez envisager l’[auto-hébergement](self-hosting-libraries.md) à la place.
 
-Délai d’expiration de la version de votre bibliothèque mise en cache par le navigateur (déterminé par la variable `cache-control` ) varie en fonction de l’environnement de balise utilisé :
+Le délai d’expiration de la version de votre bibliothèque mise en cache par le navigateur (déterminé par l’en-tête `cache-control`) varie en fonction de l’environnement de balise que vous utilisez :
 
 | Environnement | Valeur `cache-control` |
 | --- | --- |
@@ -88,7 +88,7 @@ Comme l’indique le tableau ci-dessus, le caching du navigateur n’est pas pri
 
 Les en-têtes de contrôle du cache ne sont appliqués que pour la version de la bibliothèque principale. Toutes les sous-ressources situées sous la bibliothèque principale sont toujours considérées comme des sous-ressources nouvelles et il n’est donc pas nécessaire de les mettre en cache dans le navigateur.
 
-## Utilisation de l’hébergement géré par Adobe dans l’interface utilisateur de 
+## Utilisation de l’hébergement géré par les Adobes dans l’interface utilisateur
 
 Lorsque vous créez une propriété pour la première fois dans l’interface utilisateur de Platform ou dans l’interface utilisateur de collecte de données, un hôte géré par Adobe est automatiquement créé. Tous les environnements disponibles possédant des propriétés immédiatement utilisables sont également affectés par défaut à l’hôte géré par Adobe.
 
@@ -98,7 +98,6 @@ Lorsque vous créez une propriété pour la première fois dans l’interface ut
 >
 >1. Sélectionnez l’onglet **[!UICONTROL Hôtes]** sur votre propriété, puis cliquez sur **[!UICONTROL Ajouter l’hôte]**.
 >1. Attribuez un nom à l’hôte, sélectionnez **[!UICONTROL Géré par Adobe]** comme type d’hôte, puis cliquez sur **[!UICONTROL Enregistrer]**.
-
 >
 >Vous pouvez ensuite réaffecter vos environnements à l’hôte géré par Adobe selon vos besoins.
 

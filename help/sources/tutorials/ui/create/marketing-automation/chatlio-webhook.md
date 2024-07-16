@@ -1,12 +1,12 @@
 ---
-title: Création d’une connexion à la source de Chrome dans l’interface utilisateur
+title: Création d’une connexion Source Chatlio dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Chatlio à l’aide de l’interface utilisateur de Adobe Experience Platform.
-badge: Version Beta
+badge: Version bêta
 exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
 source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
 workflow-type: tm+mt
-source-wordcount: '1167'
-ht-degree: 22%
+source-wordcount: '1156'
+ht-degree: 21%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 22%
 >
 >La source [!DNL Chatlio] est en version Beta. Veuillez lire la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Chatlio] connexion source à l’aide de l’interface utilisateur de Adobe Experience Platform.
+Ce tutoriel décrit les étapes à suivre pour créer une connexion source [!DNL Chatlio] à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
 ## Prise en main {#getting-started}
 
@@ -29,11 +29,11 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 ## Conditions préalables {#prerequisites}
 
-La section suivante fournit des informations sur les conditions préalables à la création d’un [!DNL Chatlio] connexion source.
+La section suivante fournit des informations sur les conditions préalables à remplir avant de pouvoir créer une connexion source [!DNL Chatlio].
 
-### Exemple de fichier JSON pour définir le schéma source pour [!DNL Chatlio] {#prerequisites-json-schema}
+### Exemple JSON pour définir le schéma source pour [!DNL Chatlio] {#prerequisites-json-schema}
 
-Avant de créer un [!DNL Chatlio] connexion source, un schéma source doit être fourni. Vous pouvez utiliser le fichier JSON ci-dessous.
+Avant de créer une connexion source [!DNL Chatlio], vous devez fournir un schéma source. Vous pouvez utiliser le fichier JSON ci-dessous.
 
 ```
 {
@@ -48,34 +48,34 @@ Avant de créer un [!DNL Chatlio] connexion source, un schéma source doit être
 }
 ```
 
-### Création d’un schéma Platform pour [!DNL Chatlio] {#create-platform-schema}
+### Création d’un schéma de plateforme pour [!DNL Chatlio] {#create-platform-schema}
 
-Vous devez également vous assurer de créer un schéma Platform à utiliser pour votre source. Lisez le tutoriel sur [création d’un schéma Platform](../../../../../xdm/schema/composition.md) pour obtenir des instructions complètes sur la création d’un schéma.
+Vous devez également vous assurer de créer un schéma Platform à utiliser pour votre source. Lisez le tutoriel sur la [création d’un schéma de plateforme](../../../../../xdm/schema/composition.md) pour obtenir des instructions complètes sur la création d’un schéma.
 
-![L’interface utilisateur de Platform affiche un exemple de schéma pour Chatlio](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/schema.png)
+![L’interface utilisateur de Platform présentant un exemple de schéma pour Chatlio](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/schema.png)
 
 ## Connecter votre compte [!DNL Chatlio] {#connect-account}
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à la fonction [!UICONTROL Sources] workspace et afficher un catalogue de sources disponibles dans Experience Platform.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources] et afficher un catalogue de sources disponibles dans Experience Platform.
 
-Utilisez la variable *[!UICONTROL Catégories]* pour filtrer les sources par catégorie. Vous pouvez également saisir un nom de source dans la barre de recherche pour trouver une source spécifique dans le catalogue.
+Utilisez le menu *[!UICONTROL Catégories]* pour filtrer les sources par catégorie. Vous pouvez également saisir un nom de source dans la barre de recherche pour trouver une source spécifique dans le catalogue.
 
-Accédez au [!UICONTROL Automatisation du marketing] pour afficher la catégorie [!DNL Chatlio] carte source. Pour commencer, sélectionnez **[!UICONTROL Ajouter des données]**.
+Accédez à la catégorie [!UICONTROL Automatisation marketing] pour afficher la carte source [!DNL Chatlio]. Pour commencer, sélectionnez **[!UICONTROL Ajouter des données]**.
 
 ![Catalogue de l’interface utilisateur de Platform avec carte Chatlio](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/catalog.png)
 
 ## Sélectionner les données {#select-data}
 
-La variable **[!UICONTROL Sélectionner des données]** s’affiche, fournissant une interface vous permettant de sélectionner les données à importer dans Platform.
+L’étape **[!UICONTROL Sélectionner les données]** s’affiche, vous permettant ainsi de sélectionner les données à importer dans Platform.
 
 * La partie gauche de l’interface est un navigateur qui vous permet d’afficher les flux de données disponibles dans votre compte ;
 * La partie droite de l’interface vous permet de prévisualiser jusqu’à 100 lignes de données à partir d’un fichier JSON.
 
-Sélectionner **[!UICONTROL Chargement de fichiers]** pour charger un fichier JSON à partir de votre système local. Vous pouvez également faire glisser et déposer le fichier JSON que vous souhaitez charger dans le [!UICONTROL Glisser-déposer des fichiers] du panneau.
+Sélectionnez **[!UICONTROL Télécharger des fichiers]** pour charger un fichier JSON à partir de votre système local. Vous pouvez également faire glisser et déposer le fichier JSON que vous souhaitez charger dans le panneau [!UICONTROL Glisser-déposer des fichiers].
 
 ![L’étape d’ajout de données du workflow des sources.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/add-data.png)
 
-Une fois le fichier chargé, l’interface de prévisualisation se met à jour pour afficher un aperçu du schéma que vous avez chargé. L’interface d’aperçu vous permet d’examiner le contenu et la structure d’un fichier. Vous pouvez également utiliser la variable [!UICONTROL Champ de recherche] pour accéder à des éléments spécifiques de votre schéma.
+Une fois le fichier chargé, l’interface de prévisualisation se met à jour pour afficher un aperçu du schéma que vous avez chargé. L’interface d’aperçu vous permet d’examiner le contenu et la structure d’un fichier. Vous pouvez également utiliser l’utilitaire [!UICONTROL Search field] pour accéder à des éléments spécifiques à partir de votre schéma.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -83,23 +83,23 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
 ## Détails du flux de données {#dataflow-detail}
 
-La variable **Détails du flux de données** s’affiche, vous fournissant des options permettant d’utiliser un jeu de données existant ou d’établir un nouveau jeu de données pour votre flux de données, ainsi qu’une opportunité de fournir un nom et une description pour votre flux de données. Au cours de cette étape, vous pouvez également configurer des paramètres pour l’ingestion de profils, les diagnostics d’erreur, l’ingestion partielle et les alertes.
+L’étape **Détails du flux de données** s’affiche, vous fournissant des options permettant d’utiliser un jeu de données existant ou d’établir un nouveau jeu de données pour votre flux de données, ainsi qu’une opportunité de fournir un nom et une description pour votre flux de données. Au cours de cette étape, vous pouvez également configurer des paramètres pour l’ingestion de profils, les diagnostics d’erreur, l’ingestion partielle et les alertes.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 
-![L’étape de détail du flux de données du processus des sources.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/dataflow-detail.png)
+![L’étape de détail du flux de données du flux de sources.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/dataflow-detail.png)
 
 ## Mappage {#mapping}
 
 L’interface de [!UICONTROL mappage] fournit un outil complet pour mapper les champs sources de votre schéma source aux champs XDM cibles correspondants dans le schéma cible.
 
-Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, voir la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
+Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [guide de l’interface utilisateur de la préparation des données](../../../../../data-prep/ui/mapping.md).
 
-Les mappages répertoriés ci-dessous sont obligatoires et doivent être configurés avant de passer à la [!UICONTROL Réviser] scène.
+Les mappages répertoriés ci-dessous sont obligatoires et doivent être configurés avant de passer à l’étape [!UICONTROL Révision].
 
 | Champ cible | Description |
 | --- | --- |
-| `UUID` | La variable [!DNL Chatlio] identifiant de l’événement. |
+| `UUID` | L’identifiant [!DNL Chatlio] de l’événement. |
 
 Une fois le mappage de vos données source réussi, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -114,59 +114,59 @@ L’écran de **[!UICONTROL Révision]** s’affiche, vous permettant dʼexamine
 
 Une fois que vous avez vérifié votre flux de données, sélectionnez **[!UICONTROL Terminer]** et patientez quelques instants le temps que le flux de données soit créé.
 
-![L’étape de révision du processus des sources.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/review.png)
+![L’étape de révision du workflow des sources.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/review.png)
 
 ## Obtention de l’URL de votre point de terminaison de diffusion {#get-streaming-endpoint-url}
 
 Une fois votre flux de données de diffusion en continu créé, vous pouvez désormais récupérer l’URL de votre point de terminaison de diffusion en continu. Ce point de terminaison sera utilisé pour s’abonner à votre webhook, ce qui permet à votre source de diffusion en continu de communiquer avec l’Experience Platform.
 
-Pour construire l’URL utilisée pour configurer le webhook sur [!DNL Chatlio] vous devez récupérer les éléments suivants :
+Pour construire l’URL utilisée pour configurer le webhook sur [!DNL Chatlio], vous devez récupérer les éléments suivants :
 
 * **[!UICONTROL Identifiant de flux de données]**
-* **[!UICONTROL Point de terminaison de diffusion]**
+* **[!UICONTROL Point d’entrée de diffusion en continu]**
 
-Pour récupérer votre **[!UICONTROL Identifiant de flux de données]** et **[!UICONTROL Point de terminaison de diffusion]**, accédez au [!UICONTROL Activité Flux de données] de la page du flux de données que vous venez de créer et de copier les détails depuis le bas de la page [!UICONTROL Propriétés] du panneau.
+Pour récupérer votre **[!UICONTROL identifiant de flux de données]** et votre **[!UICONTROL point d’entrée de flux]**, accédez à la page [!UICONTROL activité de flux de données] du flux de données que vous venez de créer et copiez les détails depuis le bas du panneau [!UICONTROL Propriétés].
 
-![Point de terminaison de diffusion en continu dans l’activité de flux de données.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/endpoint-test.png)
+![Le point d’entrée de diffusion en continu dans l’activité de flux de données.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/endpoint-test.png)
 
 Une fois que vous avez récupéré votre point de terminaison de diffusion en continu et votre identifiant de flux de données, créez une URL basée sur le modèle suivant : ```{STREAMING_ENDPOINT}?x-adobe-flow-id={DATAFLOW_ID}```. Par exemple, une URL webhook construite peut se présenter comme suit : ``https://dcs.adobedc.net/collection/d56b47ee3985104beaf724efcd78a3e1a863d720471a482bebac0acc1ab95983``
 
 ## Configuration du webhook dans [!DNL Chatlio] {#set-up-webhook}
 
-Une fois votre URL webhook créée, vous pouvez désormais configurer votre webhook à l’aide de la variable [!DNL Chatlio] de l’interface utilisateur.
+Une fois votre URL webhook créée, vous pouvez configurer votre webhook à l’aide de l’interface utilisateur [!DNL Chatlio].
 
-Connectez-vous à [[!DNL Chatlio]](https://chatlio.com/) compte et suivre [le guide de configuration et d’installation ;](https://chatlio.com/docs/setup/) pour créer un widget.
+Connectez-vous à votre compte [[!DNL Chatlio]](https://chatlio.com/) et suivez [le guide de configuration et d&#39;installation](https://chatlio.com/docs/setup/) pour créer un widget.
 
 Une fois qu’un widget est créé, accédez à la page des paramètres du widget pour ajouter l’URL du webhook à ce widget.
 
-![Page des paramètres du webhook sur Chatlio.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/widget-settings.png)
+![Page des paramètres webhook sur Chatlio.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/widget-settings.png)
 
-Sélectionnez ensuite le **[!DNL Behavior]** et ajoutez votre URL webhook à la variable *[!DNL Webhook when a new conversation starts]* et tout autre champ d’événements webhook auquel vous souhaitez vous abonner.
+Ensuite, sélectionnez l’onglet **[!DNL Behavior]** et ajoutez votre URL webhook au champ *[!DNL Webhook when a new conversation starts]* et aux autres champs d’événements webhook auxquels vous souhaitez vous abonner.
 
 ![L’interface utilisateur de Chatlio affichant le champ de point de terminaison webhook.](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/webhook.png)
 
 >[!TIP]
 >
->Vous pouvez vous abonner à divers événements pour votre [!DNL Chatlio] webhook. Pour plus d’informations sur les différents événements, reportez-vous au [[!DNL Chatlio] documentation sur les événements](https://chatlio.com/docs/webhooks/).
+>Vous pouvez vous abonner à divers événements pour votre webhook [!DNL Chatlio]. Pour plus d&#39;informations sur les différents événements, consultez la [[!DNL Chatlio] documentation sur les événements](https://chatlio.com/docs/webhooks/).
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez correctement configuré un flux de données en continu pour importer votre [!DNL Chatlio] données à Experience Platform. Pour surveiller les données en cours d’ingestion, reportez-vous au guide sur [surveillance des flux de données en continu à l’aide de l’interface utilisateur de Platform](../../monitor-streaming.md).
+En suivant ce tutoriel, vous avez correctement configuré un flux de données en continu pour importer vos données [!DNL Chatlio] dans Experience Platform. Pour surveiller les données ingérées, reportez-vous au guide sur la [surveillance des flux de données en continu à l’aide de l’interface utilisateur de Platform](../../monitor-streaming.md).
 
 ## Ressources supplémentaires {#additional-resources}
 
-Les sections ci-dessous contiennent des ressources supplémentaires auxquelles vous pouvez vous référer lors de l’utilisation de la variable [!DNL Chatlio] source.
+Les sections ci-dessous fournissent des ressources supplémentaires auxquelles vous pouvez vous référer lors de l’utilisation de la source [!DNL Chatlio].
 
 ### Validation {#validation}
 
-Pour vérifier que vous avez correctement configuré la source et [!DNL Chatlio] les messages sont en cours d’ingestion. Procédez comme suit :
+Pour vérifier que vous avez correctement configuré la source et que les messages [!DNL Chatlio] sont ingérés, procédez comme suit :
 
-* Vous pouvez vérifier les [!DNL Chatlio] **[!UICONTROL Rapports]** > **[!UICONTROL Historique des conversations]** pour identifier les événements capturés par [!DNL Chatlio].
+* Vous pouvez consulter la page [!DNL Chatlio] **[!UICONTROL Rapports]** > **[!UICONTROL Historique de conversation]** pour identifier les événements capturés par [!DNL Chatlio].
 
-![Capture d&#39;écran de l&#39;interface utilisateur de Chatlio montrant l&#39;historique des conversations](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/chatlio-chat-history.png)
+![Copie d’écran de l’interface utilisateur de Chatlio montrant l’historique de la conversation](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/chatlio-chat-history.png)
 
-* Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Afficher les flux de données]** en regard de la variable [!DNL Chatlio] menu de carte dans le catalogue des sources. Ensuite, sélectionnez **[!UICONTROL Prévisualisation d’un jeu de données]** pour vérifier les données ingérées pour les webhooks dans lesquels vous avez configuré [!DNL Chatlio].
+* Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Afficher les flux de données]** en regard du menu de carte [!DNL Chatlio] du catalogue des sources. Ensuite, sélectionnez **[!UICONTROL Prévisualiser le jeu de données]** pour vérifier les données ingérées pour les webhooks que vous avez configurés dans [!DNL Chatlio].
 
 ![Copie d’écran de l’interface utilisateur de Platform montrant les événements ingérés](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png)
 
-Pour plus d’informations sur [!DNL Chatlio], consultez la [[!DNL Chatlio] documentation](https://chatlio.com/docs/) et [FAQ](https://chatlio.com/pricing/#FAQ).
+Pour plus d&#39;informations sur [!DNL Chatlio], consultez la [[!DNL Chatlio] documentation](https://chatlio.com/docs/) et la [FAQ](https://chatlio.com/pricing/#FAQ).

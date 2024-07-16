@@ -16,20 +16,20 @@ ht-degree: 25%
 
 >[!IMPORTANT]
 >
->Cette page de documentation et de connecteur de destination est créée et conservée par Criteo. Il s’agit actuellement d’un produit en version Beta qui peut faire l’objet de modifications. Pour toute demande de mise à jour ou de mise à jour, contactez directement Criteo. [here](mailto:criteoTechnicalPartnerships@criteo.com).
+>Cette page de documentation et de connecteur de destination est créée et conservée par Criteo. Il s’agit actuellement d’un produit en version Beta qui peut faire l’objet de modifications. Pour toute demande de mise à jour ou de demande de mise à jour, contactez directement le critère [ici](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo optimise la publicité de confiance et d’impact afin d’offrir à chaque consommateur des expériences plus riches sur l’Internet libre. Grâce au jeu de données commercial le plus important du monde et à l’IA la plus performante du monde, Criteo s’assure que chaque point de contact du parcours d’achat est personnalisé pour atteindre les clients avec la bonne publicité, au bon moment.
 
 ## Conditions préalables {#prerequisites}
 
-* Vous devez disposer d’un compte utilisateur administrateur sur [Centre de gestion des critères](https://marketing.criteo.com).
+* Vous devez disposer d’un compte utilisateur administrateur sur le [Centre de gestion des critères](https://marketing.criteo.com).
 * Vous aurez besoin de votre identifiant publicitaire Criteo (demandez à votre contact Criteo si vous ne possédez pas cet identifiant).
-* Vous devrez fournir [!DNL GUM caller ID], au cas où vous souhaitez utiliser [!DNL GUM ID] comme identifiant.
+* Vous devrez fournir [!DNL GUM caller ID] si vous souhaitez utiliser [!DNL GUM ID] comme identifiant.
 
 ## Limites {#limitations}
 
-* Acceptation des critères uniquement [!DNL SHA-256]Emails en texte brut et hachés (à transformer en [!DNL SHA-256] avant envoi). Veuillez ne pas envoyer d&#39;informations d&#39;identification personnelles, telles que le nom ou les numéros de téléphone d&#39;un individu.
-* Le critère nécessite qu’au moins un identifiant soit fourni par le client. Elle établit des priorités. [!DNL GUM ID] comme identifiant sur un email haché, car il contribue à un meilleur taux de correspondance.
+* Criteo accepte uniquement les emails [!DNL SHA-256] hachés et en texte brut (à transformer en [!DNL SHA-256] avant l’envoi). Veuillez ne pas envoyer d&#39;informations d&#39;identification personnelles, telles que le nom ou les numéros de téléphone d&#39;un individu.
+* Le critère nécessite qu’au moins un identifiant soit fourni par le client. Il donne la priorité à [!DNL GUM ID] comme identifiant par rapport à un email haché, car il contribue à un meilleur taux de correspondance.
 
 ![Conditions préalables](../../assets/catalog/advertising/criteo/prerequisites.png)
 
@@ -39,8 +39,8 @@ Criteo prend en charge l’activation des identités décrites dans le tableau c
 
 | Identité cible | Description | Considérations |
 | --- | --- | --- |
-| `email_sha256` | Adresses électroniques hachées avec l’algorithme SHA-256 | Adobe Experience Platform prend en charge le texte brut et les adresses électroniques hachées SHA-256. Lorsque votre champ source contient des attributs non hachés, vérifiez la variable [!UICONTROL Appliquer la transformation] pour que Platform hache automatiquement les données lors de l’activation. |
-| `gum_id` | Criteo [!DNL GUM] identifiant de cookie | [!DNL GUM IDs] permettre aux clients de gérer une correspondance entre leur système d’identification utilisateur et l’identification utilisateur de Criteo ([!DNL UID]). Si le type d’identifiant est `gum_id`, un paramètre supplémentaire, la variable [!DNL GUM Caller ID], doit également être inclus. Contactez votre équipe de compte Criteo pour connaître les [!DNL GUM Caller ID] ou pour obtenir plus d’informations à ce sujet [!DNL GUM ID] synchronisation, si nécessaire. |
+| `email_sha256` | Adresses électroniques hachées avec l’algorithme SHA-256 | Adobe Experience Platform prend en charge le texte brut et les adresses électroniques hachées SHA-256. Lorsque votre champ source contient des attributs non hachés, cochez l’option [!UICONTROL Appliquer la transformation] pour que Platform hache automatiquement les données lors de l’activation. |
+| `gum_id` | Identifiant du cookie Criteo [!DNL GUM] | [!DNL GUM IDs] permet aux clients de gérer une correspondance entre leur système d’identification d’utilisateur et l’identification de l’utilisateur de Criteo ([!DNL UID]). Si le type d&#39;identifiant est `gum_id`, un paramètre supplémentaire, [!DNL GUM Caller ID], doit également être inclus. Contactez votre équipe de compte Criteo pour obtenir le [!DNL GUM Caller ID] approprié ou pour obtenir plus d’informations sur cette synchronisation [!DNL GUM ID], si nécessaire. |
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 
@@ -53,7 +53,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 ## Cas d’utilisation {#use-cases}
 
-Pour mieux comprendre comment utiliser la variable [!DNL Criteo] destination, voici quelques objectifs que les clients Adobe Experience Platform peuvent atteindre. [!DNL Criteo]:
+Pour vous aider à mieux comprendre comment utiliser la destination [!DNL Criteo], voici quelques objectifs que les clients Adobe Experience Platform peuvent atteindre avec [!DNL Criteo] :
 
 ### Cas d’utilisation 1 : Obtention du trafic
 
@@ -67,7 +67,7 @@ Lorsque les visiteurs quittent votre site web, rappelez-leur ce qui leur manque 
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **** et des **** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
@@ -81,11 +81,11 @@ Les étapes de connexion sont les suivantes :
 
 1. Vous serez redirigé vers Criteo pour autoriser la connexion. Vous devrez peut-être d’abord vous connecter à l’aide de vos informations d’identification Criteo :
 
-   ![Connexion aux critères](../../assets/catalog/advertising/criteo/log-in-1.png)
+   ![ ](../../assets/catalog/advertising/criteo/log-in-1.png)
 
-   ![Connexion aux critères](../../assets/catalog/advertising/criteo/log-in-2.png)
+   ![ ](../../assets/catalog/advertising/criteo/log-in-2.png)
 
-   ![Connexion aux critères](../../assets/catalog/advertising/criteo/log-in-3.png)
+   ![ ](../../assets/catalog/advertising/criteo/log-in-3.png)
 
 
 ### Paramètres de connexion {#connection-parameters}
@@ -96,10 +96,10 @@ Après vous être authentifié à la destination, veuillez renseigner les param�
 
 | Champ | Description | Obligatoire |
 | --- | --- | --- |
-| Nom | Un nom qui vous aidera à reconnaître cette destination à l’avenir. Le nom que vous choisissez ici sera : [!DNL Audience] dans le Centre de gestion des critères et ne peut pas être modifié ultérieurement. | Oui |
+| Nom | Un nom qui vous aidera à reconnaître cette destination à l’avenir. Le nom que vous choisissez ici sera le nom [!DNL Audience] dans le Centre de gestion des critères et ne pourra pas être modifié ultérieurement. | Oui |
 | Description | Description qui vous aidera à identifier cette destination ultérieurement. | Non |
 | Identifiant annonceur | Identifiant de publicitaire de critère de votre organisation. Contactez votre gestionnaire de compte Criteo pour obtenir ces informations. | Oui |
-| Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] de votre organisation. Contactez votre équipe de compte Criteo pour connaître les [!DNL GUM Caller ID] ou pour obtenir plus d’informations à ce sujet [!DNL GUM] synchronisation, si nécessaire. | Oui, chaque fois que [!DNL GUM ID] est fourni comme identifiant |
+| Criteo [!DNL GUM caller ID] | [!DNL GUM Caller ID] de votre organisation. Contactez votre équipe de compte Criteo pour obtenir le [!DNL GUM Caller ID] approprié ou pour obtenir plus d’informations sur cette synchronisation [!DNL GUM], si nécessaire. | Oui, chaque fois que [!DNL GUM ID] est fourni comme identifiant |
 
 ### Activer les alertes {#enable-alerts}
 
@@ -111,16 +111,16 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter *identités*, vous avez besoin de la fonction **[!UICONTROL Affichage du graphique des identités]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **** et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous avez besoin de l&#39;autorisation **[!UICONTROL Afficher le graphique d&#39;identités]** [ ](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer les profils et les audiences vers les destinations d’exportation d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ## Données exportées {#exported-data}
 
-Vous pouvez afficher les audiences exportées dans la variable [Centre de gestion des critères](https://marketing.criteo.com/audience-manager/dashboard).
+Vous pouvez afficher les audiences exportées dans le [centre de gestion des critères](https://marketing.criteo.com/audience-manager/dashboard).
 
-Le corps de la requête d’ajout d’un profil utilisateur reçu par le [!DNL Criteo] La connexion ressemble à ceci :
+Le corps de requête d’ajout d’un profil utilisateur reçu par la connexion [!DNL Criteo] ressemble à ceci :
 
 ```json
 {
@@ -148,7 +148,7 @@ Le corps de la requête d’ajout d’un profil utilisateur reçu par le [!DNL C
 }
 ```
 
-Le corps de requête de suppression du profil utilisateur reçu par le [!DNL Criteo] La connexion ressemble à ceci :
+Le corps de requête de suppression du profil utilisateur reçu par la connexion [!DNL Criteo] ressemble à ceci :
 
 ```json
 {
@@ -178,9 +178,9 @@ Le corps de requête de suppression du profil utilisateur reçu par le [!DNL Cri
 
 ## Utilisation et gouvernance des données {#data-usage}
 
-Toutes les destinations Adobe Experience Platform sont conformes aux politiques d’utilisation des données lors de la gestion de vos données. Pour plus d’informations sur la manière dont Adobe Experience Platform applique la gouvernance des données, consultez la section [Présentation de la gouvernance des données](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=fr).
+Toutes les destinations Adobe Experience Platform sont conformes aux politiques d’utilisation des données lors de la gestion de vos données. Pour plus d’informations sur la manière dont Adobe Experience Platform applique la gouvernance des données, consultez la [présentation de la gouvernance des données](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=fr).
 
 ## Ressources supplémentaires
 
 * [Centre d’aide de Criteo](https://help.criteo.com/kb/en)
-* [Portail de développement de critères](https://developers.criteo.com)
+* [Portail du développeur de critères](https://developers.criteo.com)

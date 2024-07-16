@@ -7,17 +7,17 @@ exl-id: be08b38b-68a0-4a74-9b8f-0344a0637395
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 20%
+ht-degree: 19%
 
 ---
 
-# [!UICONTROL Détails du marketing de campagne] groupe de champs de schéma
+# [!UICONTROL Groupe de champs Détails du marketing de campagne]
 
 >[!NOTE]
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL Détails du marketing de campagne] est un groupe de champs de schéma standard pour la variable [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), utilisé pour décrire des informations sur les campagnes marketing telles que le groupe, le nom et le code de suivi de la campagne.
+[!UICONTROL Détails marketing de campagne] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), utilisé pour décrire des informations de campagne marketing telles que le groupe de campagne, le nom et le code de suivi.
 
 ![](../../images/field-groups/campaign-marketing-details.png)
 
@@ -29,5 +29,5 @@ ht-degree: 20%
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-marketing.schema.json)

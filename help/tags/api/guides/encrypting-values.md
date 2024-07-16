@@ -4,14 +4,14 @@ description: Découvrez comment chiffrer des valeurs sensibles lors de l’utili
 exl-id: d89e7f43-3bdb-40a5-a302-bad6fd1f4596
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '366'
 ht-degree: 100%
 
 ---
 
 # Chiffrement des valeurs
 
-Lorsque vous utilisez des balises dans Adobe Experience Platform, certains flux de travaux nécessitent de fournir des valeurs sensibles (par exemple, en fournissant une clé privée lors de la diffusion de bibliothèques vers des environnements via des hôtes). La nature sensible de ces informations d’identification nécessite
+Lorsque vous utilisez des balises dans Adobe Experience Platform, certains workflows nécessitent de fournir des valeurs sensibles (par exemple, en fournissant une clé privée lors de la diffusion de bibliothèques vers des environnements via des hôtes). La nature sensible de ces informations d’identification nécessite
 un transfert et un stockage sécurisés.
 
 Ce document décrit comment chiffrer des valeurs sensibles à l’aide du [chiffrement GnuPG](https://www.gnupg.org/gph/en/manual/x110.html) (également appelé GPG) afin que seul le système de balises puisse les lire.

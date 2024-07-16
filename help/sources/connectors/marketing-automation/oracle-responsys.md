@@ -16,7 +16,7 @@ ht-degree: 95%
 
 >[!NOTE]
 >
->La source [!DNL Oracle Responsys] est en version bêta. Voir [Présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La source [!DNL Oracle Responsys] est en version bêta. Pour plus d’informations sur l’utilisation de sources bêta étiquetées, consultez la [Présentation des sources](../../home.md#terms-and-conditions) .
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 

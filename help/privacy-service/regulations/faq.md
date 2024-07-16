@@ -6,8 +6,8 @@ description: Ce document répond aux questions les plus fréquemment posées sur
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1618'
-ht-degree: 33%
+source-wordcount: '1631'
+ht-degree: 32%
 
 ---
 
@@ -17,7 +17,7 @@ Ce document répond aux questions les plus fréquemment posées sur les régleme
 
 >[!NOTE]
 >
->Les définitions des différents termes utilisés dans ce document se trouvent dans la section [terminologie de la réglementation sur la confidentialité](terminology.md) guide.
+>Les définitions des différents termes utilisés dans ce document se trouvent dans le guide [terminologie de la réglementation de la confidentialité](terminology.md).
 
 ## Questions générales
 
@@ -25,7 +25,7 @@ Les questions suivantes concernent toutes les réglementations de confidentialit
 
 ### Quelles sont les répercussions des réglementations de confidentialité prises en charge ?
 
-La variable [réglementations de confidentialité prises en charge par l’Experience Cloud](./overview.md) s’appliquent à toutes les organisations qui stockent et traitent les données personnelles des citoyens dans les juridictions respectives des règlements, quel que soit l’emplacement géographique de l’organisation.
+Les [réglementations de confidentialité prises en charge par Experience Cloud](./overview.md) s’appliquent à toutes les organisations qui stockent et traitent les données personnelles des citoyens dans les juridictions respectives des réglementations, quel que soit l’emplacement géographique de l’organisation.
 
 ### Que signifie la notion de données personnelles ?
 
@@ -53,13 +53,13 @@ Même si les réglementations de confidentialité couvrent un large éventail d&
 
 Le **contrôleur des données** est l’entité qui détermine les finalités, conditions et moyens du traitement des données personnelles, tandis que l’**entité de traitement des données** est une entité qui traite les données personnelles pour le compte du contrôleur des données.
 
-A **contrôleur de données** est la personne ou l’organisation qui a le pouvoir et la responsabilité de prendre des décisions concernant la collecte, l’utilisation ou la divulgation de données personnelles. A **responsable du traitement des données** est la personne ou l’organisation qui opère en relation avec la collecte, l’utilisation ou la divulgation des données personnelles et la direction du contrôleur des données.
+Un **contrôleur des données** est la personne ou l’organisation qui a le pouvoir et la responsabilité de prendre des décisions concernant la collecte, l’utilisation ou la divulgation de données personnelles. Un **responsable du traitement des données** est la personne ou l’organisation qui fonctionne en relation avec la collecte, l’utilisation ou la divulgation des données personnelles et la direction du contrôleur des données.
 
 ### Quelle est la différence entre le consentement explicite et le consentement univoque du titulaire de données ?
 
 **Consentement explicite** fait référence à une norme de consentement qui implique une indication spécifique, éclairée et sans ambiguïté des souhaits du sujet de données sous forme orale ou écrite. En d’autres termes, le sujet des données doit littéralement et explicitement dire &quot;J’accepte&quot; ou &quot;Je suis d’accord&quot; pour que le consentement soit considéré comme explicite. En outre, il doit être aussi facile de retirer le consentement que de le donner.
 
-**Consentement non ambigu (implicite)** fait référence au consentement qui n’a pas été donné explicitement par le sujet des données, mais qui n’en est pas moins sans ambiguïté dans sa nature. Par exemple, lors du processus d’inscription à un site web d’entreprise, un avis est donné qu’en fournissant une adresse électronique, le sujet des données accepte de recevoir des emails sur des offres spéciales. Si le sujet des données lit l&#39;avis, la discrimination positive consistant à entrer dans son email est suffisante pour être considérée comme un consentement univoque.
+**Consentement non ambigu (implicite)** fait référence au consentement qui n’a pas été explicitement donné par le sujet des données, mais qui n’en est pas moins de nature non ambiguë. Par exemple, lors du processus d’inscription à un site web d’entreprise, un avis est donné qu’en fournissant une adresse électronique, le sujet des données accepte de recevoir des emails sur des offres spéciales. Si le sujet des données lit l&#39;avis, la discrimination positive consistant à entrer dans son email est suffisante pour être considérée comme un consentement univoque.
 
 Pour de nombreuses réglementations comme le RGPD, un consentement explicite est requis pour le traitement de données personnelles sensibles, où rien d’autre que &quot;opt-in&quot; ne suffira. Toutefois, pour les données non sensibles, le consentement univoque (implicite) est acceptable.
 
@@ -67,7 +67,7 @@ Pour de nombreuses réglementations comme le RGPD, un consentement explicite est
 
 De nombreuses réglementations de confidentialité stipulent que si un sujet des données est âgé de moins d’un certain âge, il ne peut légalement fournir de consentement pour la collecte de ses données personnelles. Dans ces cas-ci, certaines réglementations autorisent le consentement du détenteur de la responsabilité parentale pour ce sujet de données, mais pas tous. Le tableau suivant répertorie l’âge minimum pour que les sujets des données puissent fournir leur propre consentement pour chaque réglementation, avec des notes pour plus d’informations :
 
-| Régulation | Age du consentement | Notes |
+| Réglementation | Age du consentement | Notes |
 | --- | --- | --- |
 | CCPA (Californie) | 16 | <ul><li>Le consentement parental ne peut être fourni que pour les sujets de données de 13 ans ou plus.</li><li>La collecte de données à caractère personnel auprès de personnes de moins de 13 ans est strictement interdite.</li></ul> |
 | RGPD (Union européenne) | 16 | <ul><li>Certains États membres de l&#39;UE peuvent fournir une loi à un âge inférieur à cette fin, mais pas moins de 13 ans.</li><li>Le consentement parental doit être fourni pour tous les sujets des données dont l’âge est inférieur à la limite d’âge.</li></ul> |
@@ -84,7 +84,7 @@ En supposant que l’entreprise ait collecté des informations personnelles et q
 >
 >Le délai de réponse en &quot;jours&quot; est le reflet des délais prescrits par chaque loi pour répondre à une demande des consommateurs.
 
-| Régulation | Période de réponse | Notes |
+| Réglementation | Période de réponse | Notes |
 | --- | --- | --- |
 | CCPA (Californie) | 45 jours | |
 | RGPD (Union européenne) | 30 jours | Si la demande est complexe ou si de nombreuses demandes ont été effectuées par le même sujet de données, la demande peut être étendue à 60 jours. |
@@ -107,11 +107,11 @@ Si les opérations de données de votre entreprise relèvent des juridictions l�
 
 ### Comment puis-je prendre en charge les demandes d’accès à des informations personnelles des clients si je conserve des données couvertes par les réglementations de confidentialité ?
 
-Une fois que vous avez pris les mesures nécessaires pour authentifier les clients qui appartiennent aux juridictions appropriées, Adobe Experience Platform Privacy Service vous permet de soumettre des demandes d’accès à des informations personnelles des clients à des applications Experience Cloud compatibles. Pour plus d’informations, consultez la [[!DNL Privacy Service] présentation](../home.md). Pour plus d’informations sur la manière dont vos applications Experience Cloud spécifiques peuvent répondre aux demandes de confidentialité, reportez-vous au guide sur les [applications Privacy Service et Experience Cloud](../experience-cloud-apps.md).
+Une fois que vous avez pris les mesures nécessaires pour authentifier les clients qui appartiennent aux juridictions appropriées, Adobe Experience Platform Privacy Service vous permet de soumettre des demandes d’accès à des informations personnelles des clients à des applications Experience Cloud compatibles. Pour plus d’informations, consultez la [[!DNL Privacy Service] présentation](../home.md) . Pour plus d’informations sur la manière dont vos applications Experience Cloud spécifiques peuvent répondre aux demandes de confidentialité, reportez-vous au guide sur les [applications Privacy Service et Experience Cloud](../experience-cloud-apps.md).
 
 >[!NOTE]
 >
->L’autorité de régulation californienne donnera prochainement des indications supplémentaires sur les types de données concernés par les demandes de protection de la vie privée des clients.
+>L’autorité de régulation californienne donnera prochainement des indications supplémentaires sur les types de données qui peuvent faire l’objet de demandes d’accès à des informations personnelles.
 
 ## Questions relatives au CCPA
 

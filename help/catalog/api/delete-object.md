@@ -13,11 +13,11 @@ ht-degree: 48%
 
 # Suppression d’un objet dans l’API
 
-Vous pouvez supprimer une [!DNL Catalog] en indiquant son identifiant dans le chemin d’accès d’une requête de DELETE.
+Vous pouvez supprimer un objet [!DNL Catalog] en fournissant son identifiant dans le chemin d’accès d’une requête de DELETE.
 
 >[!WARNING]
 >
->Soyez très prudent lors de la suppression d’objets, car cette opération ne peut pas être annulée et peut produire des modifications avec rupture ailleurs dans . [!DNL Experience Platform].
+>Soyez très prudent lors de la suppression d’objets, car cette opération ne peut pas être annulée et peut produire des modifications avec rupture ailleurs dans [!DNL Experience Platform].
 
 **Format d’API**
 
@@ -27,11 +27,11 @@ DELETE /{OBJECT_TYPE}/{OBJECT_ID}
 
 >[!IMPORTANT]
 >
->La variable `DELETE /batches/{ID}` Le point de terminaison a été abandonné. Pour supprimer un lot, vous devez utiliser la variable [API Batch Ingestion](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
+>Le point d’entrée `DELETE /batches/{ID}` est obsolète. Pour supprimer un lot, vous devez utiliser l’ [API d’ingestion par lots](../../ingestion/batch-ingestion/api-overview.md#delete-a-batch).
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Le type de [!DNL Catalog] à supprimer. Les objets valides sont : <ul><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Le type d’objet [!DNL Catalog] à supprimer. Les objets valides sont : <ul><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Identifiant de l’objet spécifique que vous souhaitez mettre à jour. |
 
 **Requête**
@@ -59,4 +59,4 @@ Une réponse réussie renvoie un état HTTP 200 (OK) et un tableau contenant l�
 
 >[!NOTE]
 >
->Si non [!DNL Catalog] correspondent à l’identifiant fourni dans votre requête. Vous pouvez toujours recevoir un code d’état HTTP 200, mais le tableau de réponse sera vide.
+>Si aucun objet [!DNL Catalog] ne correspond à l’identifiant fourni dans votre requête, vous pouvez toujours recevoir un code d’état HTTP 200, mais le tableau de réponse sera vide.

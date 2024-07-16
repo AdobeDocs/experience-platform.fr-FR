@@ -1,22 +1,22 @@
 ---
 keywords: DoubleClick Floodlight;extension doueclick de la lumière d’inondation;doubleclick;inondation
 title: Extension DoubleClick Floodlight (Version Beta)
-description: L’extension DoubleClick Floodlight (bêta) est une destination publicitaire dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension DoubleClick Floodlight (Beta) est une destination publicitaire de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 64e1f964-a58e-43d2-8b1a-3baa6104ab3a
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '444'
 ht-degree: 85%
 
 ---
 
-# [!DNL DoubleClick Floodlight] Extension (bêta)
+# Extension [!DNL DoubleClick Floodlight] (Beta)
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Cette extension permet un déploiement rapide et facile de [!DNL DoubleClick Floodlight] les balises utilisant le format standard de projecteur (pas Global Site Tag). Remarque : cette extension est actuellement en version bêta.
+Cette extension permet un déploiement rapide et facile des balises [!DNL DoubleClick Floodlight] à l’aide du format de lumière d’inondation traditionnel (et non de la balise de site globale). Remarque : cette extension est actuellement en version bêta.
 
-[!DNL DoubleClick Floodlight] (Version bêta) est une extension publicitaire dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, voir [!DNL Google] documentation d’assistance pour [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=fr).
+[!DNL DoubleClick Floodlight] (Beta) est une extension publicitaire dans Adobe Experience Platform. Pour plus d’informations sur la fonctionnalité de l’extension, consultez la documentation de prise en charge de [!DNL Google] pour [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=fr).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 

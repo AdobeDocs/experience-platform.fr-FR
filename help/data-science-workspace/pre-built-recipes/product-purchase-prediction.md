@@ -6,7 +6,7 @@ description: La recette de prédiction d’achat de produit vous permet de prév
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '392'
 ht-degree: 94%
 
 ---

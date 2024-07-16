@@ -7,16 +7,16 @@ description: Ce tutoriel décrit les étapes à suivre pour récupérer des info
 exl-id: 5fb9f28d-091e-4124-8d8e-b8a675938d3a
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '645'
-ht-degree: 80%
+source-wordcount: '643'
+ht-degree: 79%
 
 ---
 
 # Récupération des lots en échec à l’aide de l’API Data Access
 
-Adobe Experience Platform propose deux méthodes de chargement et d’ingestion de données. Vous pouvez utiliser soit l’ingestion par lots, qui vous permet d’insérer leurs données à l’aide de différents types de fichiers (tels que des fichiers CSV), soit l’ingestion par flux, qui vous permet d’insérer leurs données dans [!DNL Platform] utilisation de points de terminaison de diffusion en continu en temps réel.
+Adobe Experience Platform propose deux méthodes de chargement et d’ingestion de données. Vous pouvez utiliser soit l’ingestion par lots, qui vous permet d’insérer leurs données à l’aide de différents types de fichiers (tels que les fichiers CSV), soit l’ingestion par flux, qui vous permet d’insérer leurs données vers [!DNL Platform] à l’aide de points de terminaison en continu en temps réel.
 
-Ce tutoriel décrit les étapes à suivre pour récupérer des informations sur un lot en échec à l’aide de [!DNL Data Ingestion] API.
+Ce tutoriel décrit les étapes à suivre pour récupérer des informations sur un lot en échec à l’aide des API [!DNL Data Ingestion].
 
 ## Prise en main
 
@@ -37,7 +37,7 @@ Pour lancer des appels aux API [!DNL Platform], vous devez d’abord suivre le [
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Toutes les ressources dans [!DNL Experience Platform], y compris ceux appartenant à la variable [!DNL Schema Registry], sont isolés dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
+Toutes les ressources de [!DNL Experience Platform], y compris celles appartenant à [!DNL Schema Registry], sont isolées dans des environnements de test virtuels spécifiques. Toutes les requêtes envoyées aux API [!DNL Platform] nécessitent un en-tête spécifiant le nom du sandbox dans lequel l’opération sera effectuée :
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 

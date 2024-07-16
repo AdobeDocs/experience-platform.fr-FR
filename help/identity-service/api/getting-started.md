@@ -14,17 +14,17 @@ ht-degree: 61%
 
 # Guide de l’API [!DNL Identity Service]
 
-Adobe Experience Platform [!DNL Identity Service] gère l’identification de vos clients sur plusieurs appareils, sur plusieurs canaux et quasiment en temps réel dans ce qu’on appelle un graphique d’identités dans Adobe Experience Platform.
+Adobe Experience Platform [!DNL Identity Service] gère l’identification inter-appareils, cross-canal et en temps quasi réel de vos clients dans ce qu’on appelle un graphique d’identités dans Adobe Experience Platform.
 
 ## Prise en main
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-- [[!DNL Identity Service]](../home.md): résout le problème fondamental posé par la fragmentation des données de profil client. Pour ce faire, il associe les identités entre les appareils et les systèmes sur lesquels les clients interagissent avec votre marque.
-- [[!DNL Real-Time Customer Profile]](../../profile/home.md): fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
+- [[!DNL Identity Service]](../home.md) : résout le problème fondamental posé par la fragmentation des données de profil client. Pour ce faire, il associe les identités entre les appareils et les systèmes sur lesquels les clients interagissent avec votre marque.
+- [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées provenant de plusieurs sources.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 
-Les sections suivantes contiennent des informations supplémentaires que vous devrez connaître ou dont vous devrez disposer pour passer avec succès des appels à la fonction [!DNL Identity Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin ou dont vous devrez disposer pour passer avec succès des appels à l’API [!DNL Identity Service].
 
 ### Lecture d’exemples d’appels API
 
@@ -52,9 +52,9 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ### Acheminement basé sur la région
 
-La variable [!DNL Identity Service] L’API utilise des points de terminaison spécifiques à une région qui nécessitent l’inclusion d’un `{REGION}` dans le chemin d’accès de la requête. Pendant la mise en service de votre organisation, une région est déterminée et stockée dans votre profil d’organisation. L’utilisation de la région appropriée avec chaque point de terminaison garantit que toutes les requêtes effectuées à l’aide de la variable [!DNL Identity Service] Les API sont acheminées vers la région appropriée.
+L’API [!DNL Identity Service] utilise des points de terminaison spécifiques à une région qui nécessitent l’inclusion d’un `{REGION}` dans le chemin de requête. Pendant la mise en service de votre organisation, une région est déterminée et stockée dans votre profil d’organisation. L’utilisation de la région appropriée avec chaque point de terminaison garantit que toutes les requêtes effectuées à l’aide de l’API [!DNL Identity Service] sont acheminées vers la région appropriée.
 
-Deux régions sont actuellement prises en charge par [!DNL Identity Service] API : VA7 et NLD2.
+Il existe actuellement deux régions prises en charge par les API [!DNL Identity Service] : VA7 et NLD2.
 
 Le tableau ci-dessous présente des exemples de chemins qui utilisent les régions :
 
@@ -69,17 +69,17 @@ Le tableau ci-dessous présente des exemples de chemins qui utilisent les régio
 
 Si vous ne parvenez pas à localiser la région dans votre profil d’entreprise, contactez votre administrateur système pour obtenir de l’aide.
 
-## En utilisant la variable [!DNL Identity Service] API
+## Utilisation de l’API [!DNL Identity Service]
 
 Les paramètres d’identité utilisés dans ces services peuvent être exprimés de l’une des deux manières suivantes : composite ou XID.
 
 Les identités composites sont des éléments incluant à la fois la valeur d’identifiant et l’espace de noms. Lors de l’utilisation d’identités composites, l’espace de noms peut être fourni soit par nom (`namespace.code`), soit par identifiant (`namespace.id`).
 
-Lorsqu’une identité est conservée, [!DNL Identity Service] génère et affecte un identifiant à cette identité, appelé identifiant natif, ou XID. Toutes les variations des API de cluster et de mappage prennent en charge les identités composites et les XID dans leurs requêtes et leurs réponses. L’un des paramètres est requis pour utiliser ces API : `xid` ou une combinaison de [`ns` ou `nsid`] et `id`.
+Lorsqu’une identité est persistante, [!DNL Identity Service] génère et affecte un identifiant à cette identité, appelé identifiant natif, ou XID. Toutes les variations des API de cluster et de mappage prennent en charge les identités composites et les XID dans leurs requêtes et leurs réponses. L’un des paramètres est requis pour utiliser ces API : `xid` ou une combinaison de [`ns` ou `nsid`] et `id`.
 
 Pour limiter le payload dans les réponses, les API adaptent leurs réponses au type de construction d’identité utilisée. En d’autres termes, si vous transmettez un XID, vos réponses auront des XID, si vous transmettez des identités composites, la réponse suivra la structure utilisée dans la requête.
 
-Les exemples de ce document ne couvrent pas toutes les fonctionnalités de la fonction [!DNL Identity Service] API. Pour l’API complète, voir le [guide de référence de l’API Swagger](https://www.adobe.io/experience-platform-apis/references/identity-service).
+Les exemples de ce document ne couvrent pas la fonctionnalité complète de l’API [!DNL Identity Service]. Pour l’API complète, voir le [guide de référence de l’API Swagger](https://www.adobe.io/experience-platform-apis/references/identity-service).
 
 >[!NOTE]
 >

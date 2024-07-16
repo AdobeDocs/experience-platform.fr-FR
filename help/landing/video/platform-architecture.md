@@ -1,6 +1,6 @@
 ---
 title: Présentation de l’architecture des Experience Platform
-description: Cette vidéo présente un diagramme de présentation et explique les Principaux composants de Adobe Experience Platform.
+description: Cette vidéo présente un diagramme d’aperçu et explique les principaux composants de Adobe Experience Platform.
 kt: 4336
 audience: all
 doc-type: video
@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Architecture Experience Platform - Aperçu
 
-Cette vidéo présente un diagramme d’architecture de haut niveau qui explique les Principaux composants d’Experience Platform.
+Cette vidéo présente un diagramme d’architecture de haut niveau qui explique les principaux composants d’Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)

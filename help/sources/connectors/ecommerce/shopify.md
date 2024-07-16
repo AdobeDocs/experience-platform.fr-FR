@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;shopify;Shopify;
 solution: Experience Platform
-title: Présentation du connecteur source Shopify
+title: Présentation du connecteur Source Shopify
 description: Découvrez comment connecter Shopify à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 636b31a7-e5f9-434a-acd1-226096522495
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
 source-wordcount: '160'
-ht-degree: 49%
+ht-degree: 39%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 49%
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
-[!DNL Experience Platform] prend en charge l’ingestion de données à partir d’une source de commerce électronique. La prise en charge des fournisseurs de commerce électronique inclut [!DNL Shopify].
+[!DNL Experience Platform] prend en charge l’ingestion de données à partir d’une source E-Commerce. [!DNL Shopify] est compatible avec les fournisseurs E-Commerce.
 
-La documentation ci-dessous fournit des informations sur la connexion d’[!DNL Shopify] à à l’aide d’API ou de l’interface utilisateur :[!DNL Platform]
+La documentation ci-dessous fournit des informations sur la connexion de [!DNL Shopify] à [!DNL Platform] à l’aide des API ou de l’interface utilisateur :
 
 ## Connecter [!DNL Shopify] à [!DNL Platform] à lʼaide dʼAPI
 
@@ -27,5 +27,5 @@ La documentation ci-dessous fournit des informations sur la connexion d’[!DNL 
 
 ## Connecter [!DNL Shopify] à [!DNL Platform] à lʼaide de l’interface utilisateur
 
-- [Création d’une connexion source Shopify dans l’interface utilisateur](../../tutorials/ui/create/ecommerce/shopify.md)
+- [Créer une connexion source Shopify dans l’interface utilisateur](../../tutorials/ui/create/ecommerce/shopify.md)
 - [Création d’un flux de données pour une connexion source eCommerce dans l’interface utilisateur](../../tutorials/ui/dataflow/ecommerce.md)

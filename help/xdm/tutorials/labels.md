@@ -13,9 +13,9 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->L’étiquetage basé sur les schémas fait partie de [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md), actuellement disponible dans une version limitée pour les clients de santé basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Adobe Real-time Customer Data Platform une fois qu’elle sera entièrement publiée.
+>L’étiquetage basé sur les schémas fait partie du [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md), qui est actuellement disponible dans une version limitée pour les clients de santé basés aux États-Unis. Cette fonctionnalité sera disponible pour tous les clients Adobe Real-Time Customer Data Platform une fois qu’elle sera entièrement publiée.
 
-Toutes les données introduites dans Adobe Experience Platform sont contraintes par les schémas du modèle de données d’expérience (XDM). Ces données peuvent être soumises à des restrictions d’utilisation définies par votre organisation ou par des réglementations juridiques. Pour en tenir compte, la plateforme vous permet de restreindre l’utilisation de certains jeux de données et champs par l’utilisation de [libellés d’utilisation des données](../../data-governance/labels/overview.md).
+Toutes les données introduites dans Adobe Experience Platform sont contraintes par les schémas du modèle de données d’expérience (XDM). Ces données peuvent être soumises à des restrictions d’utilisation définies par votre organisation ou par des réglementations juridiques. Pour ce faire, Platform vous permet de restreindre l’utilisation de certains jeux de données et champs à l’aide de [libellés d’utilisation des données](../../data-governance/labels/overview.md).
 
 Un libellé appliqué à un champ de schéma indique les stratégies d’utilisation qui s’appliquent aux données contenues dans ce champ spécifique.
 
@@ -30,8 +30,8 @@ Ce tutoriel décrit les étapes à suivre pour ajouter des libellés à un sché
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
-   * [Éditeur de schéma](../ui/overview.md): découvrez comment créer et gérer des schémas et d’autres ressources dans l’interface utilisateur de Platform.
-* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): fournit l’infrastructure permettant d’appliquer des restrictions d’utilisation des données aux opérations de Platform à l’aide de stratégies qui définissent les actions marketing pouvant (ou non) être effectuées sur des données étiquetées.
+   * [Éditeur de schémas](../ui/overview.md) : découvrez comment créer et gérer des schémas et d’autres ressources dans l’interface utilisateur de Platform.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md) : fournit l’infrastructure permettant d’appliquer des restrictions d’utilisation des données aux opérations de Platform, à l’aide de stratégies qui définissent les actions marketing pouvant (ou non) être effectuées sur des données étiquetées.
 
 ## Sélectionner un schéma ou un champ auquel ajouter des libellés {#select-schema-field}
 
@@ -40,9 +40,9 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 >title="Modifier les libellés de gouvernance"
 >abstract="Appliquez un libellé à un champ de schéma pour indiquer les stratégies d&#39;utilisation qui s&#39;appliquent aux données contenues dans ce champ."
 
-Pour commencer à ajouter des libellés, vous devez d’abord [sélectionner un schéma existant à modifier ;](../ui/resources/schemas.md#edit) ou [créer un nouveau schéma ;](../ui/resources/schemas.md#create) pour afficher sa structure dans l’éditeur de schémas.
+Pour commencer à ajouter des libellés, vous devez d’abord [sélectionner un schéma existant à modifier](../ui/resources/schemas.md#edit) ou [créer un nouveau schéma](../ui/resources/schemas.md#create) pour afficher sa structure dans l’éditeur de schémas.
 
-Pour modifier les libellés d’un champ, vous pouvez sélectionner le champ dans la zone de travail, puis sélectionner **[!UICONTROL Gérer l’accès]** dans le rail de droite.
+Pour modifier les libellés d’un champ individuel, vous pouvez sélectionner le champ dans la zone de travail, puis sélectionner **[!UICONTROL Gérer l’accès]** dans le rail de droite.
 
 >[!IMPORTANT]
 >
@@ -50,17 +50,17 @@ Pour modifier les libellés d’un champ, vous pouvez sélectionner le champ dan
 
 ![Sélectionnez un champ dans le canevas de l’éditeur de schémas](../images/tutorials/labels/manage-access.png)
 
-Vous pouvez également sélectionner la variable **[!UICONTROL Étiquettes]** , sélectionnez le champ de votre choix dans la liste, puis sélectionnez **[!UICONTROL Appliquer les étiquettes d’accès et de gouvernance des données]** dans le rail de droite.
+Vous pouvez également sélectionner l’onglet **[!UICONTROL Étiquettes]**, choisir le champ de votre choix dans la liste et sélectionner **[!UICONTROL Appliquer les étiquettes d’accès et de gouvernance des données]** dans le rail de droite.
 
-![Sélectionnez un champ dans le [!UICONTROL Étiquettes] tab](../images/tutorials/labels/select-field-on-labels-tab.png)
+![Sélectionnez un champ dans l’onglet [!UICONTROL Étiquettes]](../images/tutorials/labels/select-field-on-labels-tab.png)
 
-Pour modifier les libellés de l’ensemble du schéma, dans le **[!UICONTROL Étiquettes]** , cochez la case située sous l’icône de filtre. Cela sélectionne tous les champs disponibles dans le schéma. Ensuite, sélectionnez **[!UICONTROL Appliquer les étiquettes d’accès et de gouvernance des données]** dans le rail de droite.
+Pour modifier les libellés de l’ensemble du schéma, dans l’onglet **[!UICONTROL Étiquettes]**, cochez la case située sous l’icône de filtre. Cela sélectionne tous les champs disponibles dans le schéma. Ensuite, sélectionnez **[!UICONTROL Appliquer les étiquettes d’accès et de gouvernance des données]** dans le rail de droite.
 
-![Sélectionnez le nom du schéma dans la [!UICONTROL Étiquettes] tab](../images/tutorials/labels/select-schema-on-labels-tab.png)
+![Sélectionnez le nom du schéma dans l’onglet [!UICONTROL Étiquettes]](../images/tutorials/labels/select-schema-on-labels-tab.png)
 
 >[!NOTE]
 >
->Un message d’avertissement s’affiche lorsque vous tentez pour la première fois de modifier les libellés d’un schéma ou d’un champ, expliquant comment l’utilisation des libellés affecte les opérations en aval en fonction des stratégies de votre entreprise. Sélectionner **[!UICONTROL Continuer]** pour continuer la modification.
+>Un message d’avertissement s’affiche lorsque vous tentez pour la première fois de modifier les libellés d’un schéma ou d’un champ, expliquant comment l’utilisation des libellés affecte les opérations en aval en fonction des stratégies de votre entreprise. Sélectionnez **[!UICONTROL Continuer]** pour continuer la modification.
 >
 >![Avertissement sur l’utilisation des libellés](../images/tutorials/labels/disclaimer.png)
 
@@ -74,22 +74,22 @@ Une boîte de dialogue s’affiche, vous permettant de modifier les libellés du
 >
 >Si vous modifiez des champs pour l’ensemble du schéma, le rail de droite ne répertorie pas les champs applicables et affiche le nom du schéma à la place.
 
-Utilisez la liste affichée pour sélectionner les libellés à ajouter au schéma ou au champ. À mesure que les libellés sont sélectionnés, la variable **[!UICONTROL Libellés appliqués]** mises à jour de section pour afficher les libellés qui ont été sélectionnés jusqu’à présent.
+Utilisez la liste affichée pour sélectionner les libellés à ajouter au schéma ou au champ. Au fur et à mesure que les libellés sont sélectionnés, la section **[!UICONTROL Libellés appliqués]** se met à jour pour afficher les libellés sélectionnés jusqu’à présent.
 
 ![La boîte de dialogue Appliquer les étiquettes d’accès et de gouvernance des données avec les étiquettes appliquées surlignées.](../images/tutorials/labels/applied-labels.png)
 
 Pour filtrer les libellés affichés par type, sélectionnez la catégorie de votre choix dans le rail de gauche. Pour créer une étiquette personnalisée, sélectionnez **[!UICONTROL Créer une étiquette]**.
 
-![La boîte de dialogue Appliquer les étiquettes d’accès et de gouvernance des données avec un filtre de type de libellé appliqué et Créer le libellé mis en surbrillance.](../images/tutorials/labels/filter-and-create-custom.png)
+![La boîte de dialogue Appliquer les étiquettes d’accès et de gouvernance des données avec un filtre de type d’étiquette appliqué et Créer une étiquette mise en surbrillance.](../images/tutorials/labels/filter-and-create-custom.png)
 
-Une fois que vous êtes satisfait des libellés que vous choisissez, sélectionnez **[!UICONTROL Enregistrer]** pour les appliquer au champ ou au schéma.
+Une fois que vous êtes satisfait des libellés de votre choix, sélectionnez **[!UICONTROL Enregistrer]** pour les appliquer au champ ou au schéma.
 
 ![La boîte de dialogue Appliquer les étiquettes d’accès et de gouvernance des données avec l’option Enregistrer mise en surbrillance.](../images/tutorials/labels/save-labels.png)
 
-La variable **[!UICONTROL Étiquettes]** réapparaît, affichant les libellés appliqués pour le schéma.
+L’onglet **[!UICONTROL Libellés]** réapparaît, affichant les libellés appliqués pour le schéma.
 
-![Onglet Libellés de l’espace de travail des schémas avec les libellés de champ appliqués mis en surbrillance.](../images/tutorials/labels/field-labels-added.png)
+![Onglet Libellés de l’espace de travail des schémas avec les libellés de champ appliqués en surbrillance.](../images/tutorials/labels/field-labels-added.png)
 
 ## Étapes suivantes
 
-Ce guide explique comment gérer les libellés d’utilisation des données pour les schémas et les champs. Pour plus d’informations sur la gestion des libellés d’utilisation des données, y compris sur la manière de les ajouter à des jeux de données spécifiques plutôt qu’au niveau du schéma, voir la section [Guide d’utilisation des libellés d’utilisation des données](../../data-governance/labels/user-guide.md).
+Ce guide explique comment gérer les libellés d’utilisation des données pour les schémas et les champs. Pour plus d’informations sur la gestion des libellés d’utilisation des données, notamment sur la manière de les ajouter à des jeux de données spécifiques plutôt qu’au niveau du schéma, consultez le [guide d’utilisation des libellés d’utilisation des données](../../data-governance/labels/user-guide.md).

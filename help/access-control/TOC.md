@@ -8,7 +8,7 @@ role: Admin
 source-git-commit: e27695a96d7b61e2552387611c4eb63ebc6daf47
 workflow-type: tm+mt
 source-wordcount: '127'
-ht-degree: 85%
+ht-degree: 86%
 
 ---
 
@@ -27,9 +27,9 @@ ht-degree: 85%
       * [Politiques](abac/ui/policies.md)
       * [Rôles](abac/ui/roles.md)
       * [Sandbox](abac/ui/sandboxes.md)
-      * [Utilisateurs et utilisatrices](abac/ui/users.md)
+      * [Utilisateurs](abac/ui/users.md)
    * API de contrôle d’accès basé sur les attributs {#abac-api}
-      * [Aperçu](abac/api/overview.md)
+      * [Vue d’ensemble](abac/api/overview.md)
       * [Prise en main](abac/api/getting-started.md)
       * [Rôles](abac/api/roles.md)
       * [Politiques](abac/api/policies.md)
@@ -47,4 +47,4 @@ ht-degree: 85%
    * [Affichage des politiques efficaces](api/effective-policies.md)
 * [Guide de dépannage](troubleshooting-guide.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

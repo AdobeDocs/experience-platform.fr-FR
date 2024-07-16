@@ -5,7 +5,7 @@ exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
 source-git-commit: d4baf6cfaa772e5d46cef470fb35818c7af868b1
 workflow-type: tm+mt
 source-wordcount: '1139'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -15,9 +15,9 @@ Les informations dérivées de l’analyse de votre modèle de données rendent 
 
 Comprenez vos informations de destination en accédant au code SQL qui les alimente, puis générez vos propres informations afin d’explorer plus en détail l’activation des données de Adobe Experience Platform vers vos plateformes de destination. Transformez vos données brutes en nouvelles informations exploitables en utilisant le modèle de données Real-Time CDP SQL existant comme source d’inspiration pour créer des requêtes en fonction de vos besoins professionnels uniques.
 
-Voir [Afficher la documentation SQL](../view-sql.md) pour plus d’informations sur la manière d’adapter le langage SQL de vos insights directement via l’interface utilisateur de PLatform.
+Pour plus d’informations sur la manière d’adapter le langage SQL de vos insights directement via l’interface utilisateur de PLatform, consultez la [documentation sur l’affichage de SQL](../view-sql.md) .
 
-Vous pouvez utiliser les informations suivantes dans le cadre de la [Tableau de bord des destinations](../guides/destinations.md) ou personnalisé [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md). Voir [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou [créer et modifier de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md#create-widget).
+Les informations suivantes sont toutes disponibles pour que vous puissiez les utiliser dans le [tableau de bord des destinations](../guides/destinations.md) ou dans un [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md) personnalisé. Consultez la [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou la [création et modification de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md#create-widget).
 
 ## Audiences activées {#activated-audiences}
 
@@ -48,9 +48,9 @@ WHERE
 
 +++
 
-Voir [Documentation du widget Audiences activées](../guides/destinations.md#activated-audiences) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget Audiences activées](../guides/destinations.md#activated-audiences) .
 
-## Audiences activées sur toutes les destinations {#activated-audiences-across-all-destinations}
+## Audiences activées dans toutes les destinations {#activated-audiences-across-all-destinations}
 
 Questions auxquelles répond cet aperçu :
 
@@ -71,7 +71,7 @@ WHERE
 
 +++
 
-Voir [Documentation du widget des audiences activées pour toutes les destinations](../guides/destinations.md#activated-audiences-across-all-destinations) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation sur les audiences activées dans toutes les destinations](../guides/destinations.md#activated-audiences-across-all-destinations) .
 
 ## Destinations actives par plateforme de destination {#active-destinations-by-destination-platform}
 
@@ -96,7 +96,7 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 +++
 
-Voir [Documentation du widget des destinations actives par plateforme de destination](../guides/destinations.md#active-destinations-by-destination-platform) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation sur les destinations actives par widget de plateforme de destination](../guides/destinations.md#active-destinations-by-destination-platform) .
 
 ## Tendance de la taille de l’audience {#audience-size-trend}
 
@@ -142,7 +142,7 @@ SELECT d.destination_name,
 
 +++
 
-Voir [Documentation du widget de tendance de taille d’audience](../guides/destinations.md#audience-size-trend) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation sur le widget de tendance de la taille de l’audience](../guides/destinations.md#audience-size-trend) .
 
 ## Audiences courantes {#common-audiences}
 
@@ -214,9 +214,9 @@ SELECT k.destination_name1,
 
 +++
 
-Voir [Documentation du widget Audiences courantes](../guides/destinations.md#common-audiences) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget Audiences courantes](../guides/destinations.md#common-audiences) .
 
-## État de la destination {#destination-status}
+## Statut de destination {#destination-status}
 
 Questions auxquelles répond cet aperçu :
 
@@ -238,7 +238,7 @@ FROM qsaccel.profile_agg.adwh_dim_destination;
 
 +++
 
-Voir [Documentation du widget d’état de destination](../guides/destinations.md#destination-status) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget État de destination](../guides/destinations.md#destination-status) .
 
 ## Nombre de destinations {#destinations-count}
 
@@ -256,7 +256,7 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 +++
 
-Voir [Documentation du widget du nombre de destinations](../guides/destinations.md#destinations-count) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget Nombre de destinations](../guides/destinations.md#destinations-count) .
 
 ## Intégrité de l’audience mappée {#mapped-audience-health}
 
@@ -325,7 +325,7 @@ SELECT destination_name,
 
 +++
 
-Voir [Documentation du widget d’intégrité de l’audience mappé](../guides/destinations.md#mapped-audience-health) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget d’intégrité de l’audience mappée](../guides/destinations.md#mapped-audience-health) .
 
 ## Audiences mappées {#mapped-audiences}
 
@@ -345,7 +345,7 @@ WHERE destination_id = 1458738325;
 
 +++
 
-Voir [Documentation du widget Audiences mappées](../guides/destinations.md#mapped-audiences) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget Audiences mappées](../guides/destinations.md#mapped-audiences) .
 
 <!-- Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
@@ -393,7 +393,7 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 +++
 
-Voir [Documentation du widget des destinations les plus utilisées](../guides/destinations.md#most-used-destinations) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget de destinations les plus utilisées](../guides/destinations.md#most-used-destinations) .
 
 ## Audiences récemment activées {#recently-activated-audiences}
 
@@ -424,7 +424,7 @@ LIMIT
 
 +++
 
-Voir [Documentation du widget d’audiences récemment activé](../guides/destinations.md#recently-activated-audiences) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget Audiences récemment activées](../guides/destinations.md#recently-activated-audiences) .
 
 ## Audiences récemment activées par destination {#recently-activated-audiences-by-destination}
 
@@ -455,7 +455,7 @@ SELECT c.destination_name,
 
 +++
 
-Voir [Audiences récemment activées par la documentation du widget de destination](../guides/destinations.md#recently-activated-audiences-by-destination) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation des audiences récemment activées par widget de destination](../guides/destinations.md#recently-activated-audiences-by-destination) .
 
 ## Destinations récemment créées {#recently-created-destinations}
 
@@ -484,7 +484,7 @@ LIMIT
 
 +++
 
-Voir [Documentation du widget des destinations récemment créé](../guides/destinations.md#recently-created-destinations) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation sur les destinations récemment créées](../guides/destinations.md#recently-created-destinations) .
 
 <!-- Commented out until the Jan release as SQL MISSING FROM WIKI:
 
@@ -511,6 +511,6 @@ See the [Unmapped audiences by identity widget documentation](../guides/destinat
 
 En lisant ce document, vous comprenez désormais le langage SQL qui génère des informations de tableau de bord et les questions courantes que cette analyse résout. Vous pouvez maintenant modifier et itérer ces requêtes SQL pour générer vos propres informations.
 
-Voir [Afficher la documentation SQL](../view-sql.md) pour plus d’informations sur la manière d’adapter le langage SQL de vos insights directement via l’interface utilisateur de PLatform.
+Pour plus d’informations sur la manière d’adapter le langage SQL de vos insights directement via l’interface utilisateur de PLatform, consultez la [documentation sur l’affichage de SQL](../view-sql.md) .
 
-Vous pouvez également lire et comprendre le code SQL qui génère des insights pour la variable [Profils](./profiles.md), [Profils de compte](./account-profiles.md) et [Audiences](./audiences.md) tableaux de bord.
+Vous pouvez également lire et comprendre le code SQL qui génère des insights pour les tableaux de bord [Profils](./profiles.md), [Profils de compte](./account-profiles.md) et [Audiences](./audiences.md).

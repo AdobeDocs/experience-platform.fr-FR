@@ -4,7 +4,7 @@ description: Notes de mise à jour les plus récentes pour l’extension de bali
 exl-id: 8fa3a210-6c85-4162-84cf-15c6e3cfcb9e
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '178'
 ht-degree: 100%
 
 ---

@@ -14,13 +14,13 @@ ht-degree: 4%
 
 # Point de terminaison du consentement
 
-Certaines réglementations exigent un consentement explicite de la part du client avant que leurs données personnelles puissent être collectées. La variable `/consent` du point de terminaison [!DNL Privacy Service] L’API vous permet de traiter les demandes de consentement des clients et de les intégrer à votre workflow de confidentialité.
+Certaines réglementations exigent un consentement explicite de la part du client avant que leurs données personnelles puissent être collectées. Le point d’entrée `/consent` de l’API [!DNL Privacy Service] vous permet de traiter les demandes de consentement des clients et de les intégrer à votre workflow de confidentialité.
 
-Avant d’utiliser ce guide, reportez-vous au [prise en main](./getting-started.md) guide pour plus d’informations sur les en-têtes d’authentification requis présentés dans l’exemple d’appel API ci-dessous.
+Avant d’utiliser ce guide, reportez-vous au guide de [prise en main](./getting-started.md) pour plus d’informations sur les en-têtes d’authentification requis présentés dans l’exemple d’appel API ci-dessous.
 
 ## Traitement d’une demande de consentement du client
 
-Les demandes de consentement sont traitées en adressant une requête de POST à la fonction `/consent` point de terminaison .
+Les demandes de consentement sont traitées en envoyant une requête de POST au point de terminaison `/consent`.
 
 **Format d’API**
 
@@ -30,7 +30,7 @@ POST /consent
 
 **Requête**
 
-La requête suivante crée une tâche de consentement pour les ID utilisateur fournis dans la variable `entities` tableau.
+La requête suivante crée une tâche de consentement pour les ID utilisateur fournis dans le tableau `entities`.
 
 ```shell
 curl -X POST \
@@ -61,17 +61,17 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `optOutOfSale` | Lorsqu’elle est définie sur true, indique que les utilisateurs ont fourni `entities` vous souhaitez vous exclure de la vente ou du partage de leurs données personnelles. |
-| `entities` | Tableau d’objets indiquant les utilisateurs auxquels s’applique la demande de consentement. Chaque objet contient une `namespace` et un tableau de `values` pour associer des utilisateurs individuels à cet espace de noms. |
-| `nameSpace` | Chaque objet de la variable `entities` Le tableau doit contenir l’un des éléments suivants : [espaces de noms d’identité standard](./appendix.md#standard-namespaces) reconnu par l’API du Privacy Service. |
-| `values` | Tableau de valeurs pour chaque utilisateur, correspondant au `nameSpace`. |
+| `optOutOfSale` | Lorsqu’elle est définie sur true, indique que les utilisateurs fournis sous `entities` souhaitent se désinscrire de la vente ou du partage de leurs données personnelles. |
+| `entities` | Tableau d’objets indiquant les utilisateurs auxquels s’applique la demande de consentement. Chaque objet contient un `namespace` et un tableau de `values` pour faire correspondre des utilisateurs individuels à cet espace de noms. |
+| `nameSpace` | Chaque objet du tableau `entities` doit contenir l’un des [ espaces de noms d’identité standard](./appendix.md#standard-namespaces) reconnus par l’API du Privacy Service. |
+| `values` | Un tableau de valeurs pour chaque utilisateur, correspondant au `nameSpace` fourni. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->Pour plus d’informations sur la manière de déterminer les valeurs d’identité du client à envoyer à [!DNL Privacy Service], reportez-vous au guide sur [fournir des données d’identité](../identity-data.md).
+>Pour plus d&#39;informations sur la manière de déterminer les valeurs d&#39;identité du client à envoyer à [!DNL Privacy Service], consultez le guide sur la [fourniture de données d&#39;identité](../identity-data.md).
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 202 (Accepted) sans payload, indiquant que la requête a été acceptée par [!DNL Privacy Service] et est en cours de traitement.
+Une réponse réussie renvoie un état HTTP 202 (Accepted) sans payload, indiquant que la requête a été acceptée par [!DNL Privacy Service] et qu’elle est en cours de traitement.

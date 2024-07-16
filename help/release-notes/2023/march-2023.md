@@ -4,8 +4,8 @@ description: Les notes de mise à jour de mars 2023 pour Adobe Experience Pla
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
 source-git-commit: e300e57df998836a8c388511b446e90499185705
 workflow-type: tm+mt
-source-wordcount: '2204'
-ht-degree: 85%
+source-wordcount: '2079'
+ht-degree: 83%
 
 ---
 
@@ -50,7 +50,7 @@ Adobe Experience Platform fournit une suite de technologies qui vous permetten
 | Nouveau workflow de démarrage rapide pour l’API Meta Conversions (Beta) | Accédez aux nouveaux workflows de démarrage rapide sous « Prise en main » à partir de l’écran d’accueil Collecte de données. Le [workflow de démarrage rapide pour l’API Meta Conversions](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=fr#quick-start) permet aux clientes et clients de collecter et de transférer rapidement des données d’événement côté serveur vers les métadonnées pour les conversions publicitaires en quelques étapes simples. |
 | Nouveau workflow de démarrage rapide pour le SDK mobile (Beta) | Accédez aux nouveaux workflows de démarrage rapide sous « Prise en main » à partir de l’écran d’accueil Collecte de données. Le [workflow de démarrage rapide pour le SDK mobile](https://developer.adobe.com/client-sdks/documentation/) vous permet d’implémenter rapidement le SDK mobile et de valider les événements mobiles de base en quelques étapes simples. |
 | Extension de transfert d’événement [!DNL Braze] | L’extension de transfert d’événement [[!DNL Braze Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=fr) vous permet de tirer parti des données capturées dans le réseau Edge d’Adobe Experience Platform et de les envoyer à [!DNL Braze] sous la forme d’événements côté serveur à l’aide des API de suivi des utilisateurs et utilisatrices [!DNL Braze]. |
-| Extension de transfert d’événement [!DNL Epsilon] | La variable [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html?lang=fr) l’extension vous permet d’exploiter le transfert d’événement pour capturer des informations d’événement dans Adobe Experience Platform Edge Network et les envoyer à [!DNL Epsilon] en utilisant la variable [!DNL Epsilon] API d’événement. |
+| Extension de transfert d’événement [!DNL Epsilon] | L’extension [[!DNL Epsilon Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) vous permet d’exploiter le transfert d’événement pour capturer des informations d’événement dans l’Edge Network Adobe Experience Platform et les envoyer à [!DNL Epsilon] à l’aide de l’API d’événement [!DNL Epsilon]. |
 | Extension de transfert d’événement [!DNL Mixpanel] | L’extension [[!DNL Mixpanel Track Events API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html?lang=fr) permet aux clientes et clients d’exploiter le transfert d’événement pour capturer des informations d’événement dans le réseau Edge d’Adobe Experience Platform et les envoyer à Mixpanel à l’aide de l’API de suivi des événements. |
 
 {style="table-layout:auto"}
@@ -119,7 +119,7 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Classe | [[!UICONTROL Article de l’offre]](https://github.com/adobe/xdm/pull/1678/files) | Classe qui représente une offre. |
+| Classe | [[!UICONTROL Article d’offre]](https://github.com/adobe/xdm/pull/1678/files) | Classe qui représente une offre. |
 | Classe | [[!UICONTROL Élément de décision]](https://github.com/adobe/xdm/pull/1678/files) | Un élément qui peut être soumis à la prise de décision. Le résultat d’un processus de prise de décision est un ou plusieurs éléments de décision. |
 | Classe | [[!UICONTROL Délai d’expiration du serveur de session multimédia]](https://github.com/adobe/xdm/pull/1676/files) | Cela indique le temps, en secondes, qui s’est écoulé entre la dernière interaction connue de l’utilisateur et le moment où la session a été fermée. |
 | Groupe de champs | [[!UICONTROL Attributs calculés du profil XDM]](https://github.com/adobe/xdm/pull/1686/files) | Cela permet d’ajouter des attributs calculés à partir des services Adobe internes aux données client entrantes. Les clients ne doivent pas l’utiliser pour ingérer des données. |
@@ -133,17 +133,17 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Type de composant | Nom | Description |
 | --- | --- | --- |
-| Groupe de champs | [[!UICONTROL Détails du composant de contenu]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` a été supprimé de [!UICONTROL Détails du composant de contenu] |
-| Groupe de champs | [[!UICONTROL Balises d’entité AJO]](https://github.com/adobe/xdm/pull/1672/files) | Ajout de balises d’entité AJO à [!UICONTROL Champs d’entité AJO], qui correspondent à un Parcours ou à une campagne |
-| Groupe de champs | (Multiple) | Ajout de plusieurs champs pour [[!UICONTROL Champs communs des événements d’étape du Journey Orchestration]](https://github.com/adobe/xdm/pull/1671/files) |
-| Groupe de champs | (Multiple) | [Ajout de plusieurs types d’événement XDM pour [!UICONTROL Rapports multimédia]](https://github.com/adobe/xdm/pull/1670/files). |
-| Groupe de champs | [!UICONTROL Événement de changement de Workfront] | La variable `Full Record` et `Accessor Employee Ids` des groupes de champs ont été ajoutés. |
-| Type de données | [[!UICONTROL Élément de liste de produits]](https://github.com/adobe/xdm/pull/1685/files) | La variable [!UICONTROL Montant remboursé] a été ajouté pour indiquer le montant remboursé pour l’article, le cas échéant. |
+| Groupe de champs | [[!UICONTROL Détails du composant de contenu]](https://github.com/adobe/xdm/pull/1674/files) | `uri-reference` a été supprimé de [!UICONTROL Content Component Details] |
+| Groupe de champs | [[!UICONTROL Balises d’entité AJO]](https://github.com/adobe/xdm/pull/1672/files) | Ajout de balises d’entité AJO à [!UICONTROL AJO Entity Fields], qui correspondent à un Parcours ou à une campagne |
+| Groupe de champs | (Multiple) | Ajout de plusieurs champs pour [[!UICONTROL Champs communs des événements d’étape de Journey Orchestration]](https://github.com/adobe/xdm/pull/1671/files) |
+| Groupe de champs | (Multiple) | [Ajout de plusieurs types d’événements XDM pour la [!UICONTROL création de rapports multimédia]](https://github.com/adobe/xdm/pull/1670/files). |
+| Groupe de champs | [!UICONTROL Événement de changement Workfront] | Les groupes de champs `Full Record` et `Accessor Employee Ids` ont été ajoutés. |
+| Type de données | [[!UICONTROL Élément de liste de produits]](https://github.com/adobe/xdm/pull/1685/files) | Le [!UICONTROL montant du remboursement] a été ajouté pour indiquer le montant remboursé pour l’article, le cas échéant. |
 | Type de données | [[!UICONTROL Commande ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Liste des remboursements] a été ajouté à la liste des remboursements pour cette commande. |
-| Type de données | [[!UICONTROL Élément de liste de produits ]](https://github.com/adobe/xdm/pull/1677/files) | Des catégories de produits ont été ajoutées à la liste des données de catégorie de ce produit. |
-| Type de données | [!UICONTROL Informations détaillées sur la session] | Ajout de la `pev3` champ de chaîne qui [indique le type de flux média utilisé pour la création de rapports.](https://github.com/adobe/xdm/pull/1676/files). Ajout également de la fonction `pccr` indique si une redirection a eu lieu. |
-| Type de données | [!UICONTROL Liste des demandes] | Fournit le [propriétés de la liste de demandes](https://github.com/adobe/xdm/pull/1675/files). Il s’agit du nom, de l’identifiant et de la description. |
-| Type de données | [!UICONTROL Commerce] | La variable [Mise à jour du type de données Commerce](https://github.com/adobe/xdm/pull/1675/files) à inclure `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals`, et `requisitionList`. |
+| Type de données | [[!UICONTROL Elément Liste de produits ]](https://github.com/adobe/xdm/pull/1677/files) | Des catégories de produits ont été ajoutées à la liste des données de catégorie de ce produit. |
+| Type de données | [!UICONTROL Informations sur les détails de la session] | Ajout du champ de chaîne `pev3` qui [ indique le type de flux média utilisé pour la création de rapports ](https://github.com/adobe/xdm/pull/1676/files). La propriété `pccr` a également été ajoutée pour indiquer si une redirection a eu lieu. |
+| Type de données | [!UICONTROL Liste des demandes] | Fournit les [propriétés de liste de demandes](https://github.com/adobe/xdm/pull/1675/files). Il s’agit du nom, de l’identifiant et de la description. |
+| Type de données | [!UICONTROL Commerce] | Le [ type de données Commerce a été mis à jour ](https://github.com/adobe/xdm/pull/1675/files) pour inclure `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals` et `requisitionList`. |
 
 {style="table-layout:auto"}
 

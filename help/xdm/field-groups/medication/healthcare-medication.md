@@ -9,15 +9,15 @@ ht-degree: 7%
 
 ---
 
-# [!UICONTROL Médicaments de santé] groupe de champs de schéma
+# Groupe de champs [!UICONTROL Médicaments de santé] du schéma
 
-[!UICONTROL Médicaments de santé] est un groupe de champs de schéma standard pour la variable [[!UICONTROL Médicaments] class](../../classes/medication.md). Il fournit un champ de type objet unique. `medication` qui capture des détails tels que le nom de la marque, le numéro de lot et la quantité.
+[!UICONTROL Healthcare médication] est un groupe de champs de schéma standard pour la [[!UICONTROL classe Medication]](../../classes/medication.md). Il fournit un champ de type objet unique `medication` qui capture des détails tels que le nom de la marque, le numéro de lot et la quantité.
 
 ![](../../images/field-groups/healthcare-medication.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `ingredients` | Tableau d’objets | Répertorie les ingrédients présents dans le médicament. Chaque objet comprend les propriétés suivantes : <ul><li>`isActive`: (booléen). Indique si cet ingrédient est toujours activement utilisé dans ce médicament.</li><li>`name`: (chaîne). Nom de l’ingrédient.</li><li>`quantity`: (chaîne). La quantité de l’ingrédient présent dans le médicament.</li></ul> |
+| `ingredients` | Tableau d’objets | Répertorie les ingrédients présents dans le médicament. Chaque objet comprend les propriétés suivantes : <ul><li>`isActive` : (booléen). Indique si cet ingrédient est toujours activement utilisé dans ce médicament.</li><li>`name` : (chaîne). Nom de l’ingrédient.</li><li>`quantity` : (chaîne). La quantité de l’ingrédient présent dans le médicament.</li></ul> |
 | `brandName` | Chaîne | Nom de la marque du médicament. |
 | `codes` | Tableau de chaînes | Une liste de codes qui identifient ce médicament. |
 | `dosageUnitNumber` | Double | Numéro de l’unité de dosage du médicament. |

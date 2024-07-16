@@ -67,7 +67,7 @@ Toutes les propriétés de transfert d’événement répertorient **[!UICONTROL
 
 Le transfert d’événement possède son propre catalogue d’extensions compatibles, telles que l’extension [Core](../../extensions/server/core/overview.md) et l’extension [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md). Vous pouvez afficher les extensions disponibles pour les propriétés de transfert d’événement dans l’interface utilisateur en sélectionnant **[!UICONTROL Extensions]** dans le volet de navigation de gauche, suivi de **[!UICONTROL Catalogue]**.
 
-Pour afficher d’autres ressources disponibles pour en savoir plus sur cette fonctionnalité, sélectionnez ![about](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
+Vous pouvez afficher d’autres ressources disponibles pour en savoir plus sur cette fonctionnalité en sélectionnant ![about](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
 
 ![Extensions de transfert d’événement dans l’interface utilisateur de la collecte de données.](../../images/ui/event-forwarding/overview/extensions.png)
 
@@ -83,9 +83,9 @@ Pour référencer des données à partir de Platform Edge Network, vous devez 
 
 La valeur de **[!UICONTROL Chemin]** pour l’élément de données doit suivre le modèle `arc.event.{ELEMENT}` (par exemple : `arc.event.xdm.web.webPageDetails.URL`). Ce chemin d’accès doit être spécifié correctement pour que les données soient envoyées.
 
-Pour afficher d’autres ressources disponibles pour en savoir plus sur cette fonctionnalité, sélectionnez ![about](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
+Vous pouvez afficher d’autres ressources disponibles pour en savoir plus sur cette fonctionnalité en sélectionnant ![about](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
 
-![Exemple d’élément de données de type chemin pour le transfert d’événement.](../../images/ui/event-forwarding/overview/data-reference.png)
+![Exemple d&#39;élément de données de type chemin pour le transfert d&#39;événement.](../../images/ui/event-forwarding/overview/data-reference.png)
 
 ### Règles {#rules}
 
@@ -93,7 +93,7 @@ La création de règles dans les propriétés de transfert d’événement fonct
 
 En outre, un délai d’attente de 30 secondes s’applique à un seul événement, car il est traité dans toutes les règles (et donc toutes les actions) au sein d’une propriété de transfert d’événement. Cela signifie que toutes les règles et toutes les actions pour un événement unique doivent être exécutées au cours de cette période.
 
-Pour afficher d’autres ressources disponibles pour en savoir plus sur cette fonctionnalité, sélectionnez ![about](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
+Vous pouvez afficher d’autres ressources disponibles pour en savoir plus sur cette fonctionnalité en sélectionnant ![about](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
 
 ![Règles de transfert d’événement dans l’interface utilisateur de la collecte de données.](../../images/ui/event-forwarding/overview/rules.png)
 
@@ -101,9 +101,9 @@ Pour afficher d’autres ressources disponibles pour en savoir plus sur cette fo
 
 Dans les règles de balises, les éléments de données sont segmentés en unités lexicales avec un `%` au début et à la fin du nom de l’élément de données (par exemple : `%viewportHeight%`). Dans les règles de transfert d’événement, les éléments de données sont plutôt segmentés en unités lexicales avec `{{` au début et `}}` à la fin du nom de l’élément de données (par exemple : `{{viewportHeight}}`).
 
-Pour afficher d’autres ressources disponibles pour en savoir plus sur cette fonctionnalité, sélectionnez ![about](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
+Vous pouvez afficher d’autres ressources disponibles pour en savoir plus sur cette fonctionnalité en sélectionnant ![about](../../images/ui/event-forwarding/overview/about.png) dans le panneau de droite.
 
-![Exemple d’élément de données de type chemin pour le transfert d’événement.](../../images/ui/event-forwarding/overview/tokenization.png)
+![Exemple d&#39;élément de données de type chemin pour le transfert d&#39;événement.](../../images/ui/event-forwarding/overview/tokenization.png)
 
 #### Séquence des actions de règle {#action-sequencing}
 

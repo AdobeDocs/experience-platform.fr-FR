@@ -15,7 +15,7 @@ ht-degree: 90%
 
 [!DNL Observability Insights] vous permet de vous abonner à des notifications dʼévénement Adobe I/O concernant les activités dʼAdobe Experience Platform. Ces événements sont envoyés à un Webhook configuré afin de faciliter lʼautomatisation efficace de la surveillance des activités.
 
-Ce document décrit les étapes à suivre pour vous abonner aux notifications d’événement d’Adobe I/O pour les services Adobe Experience Platform. Des informations de référence sur les types d’événement disponibles sont également fournies, ainsi que des liens vers d’autres documents sur la manière dont vous pouvez interpréter les données d’événement renvoyées pour chaque type applicable. [!DNL Platform] service.
+Ce document décrit les étapes à suivre pour vous abonner aux notifications d’événement d’Adobe I/O pour les services Adobe Experience Platform. Des informations de référence sur les types d’événements disponibles sont également fournies, ainsi que des liens vers d’autres documents sur la manière dont vous pouvez interpréter les données d’événement renvoyées pour chaque service [!DNL Platform] applicable.
 
 ## Prise en main
 
@@ -41,7 +41,7 @@ Accédez à [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) 
 
 >[!NOTE]
 >
->L’événement de notification d’ingestion de données a été abandonné dans Adobe I/O. Vous devez plutôt utiliser la variable **Informations sur l’exécution du flux de sources** Événement I/O.
+>L’événement de notification d’ingestion de données a été abandonné dans Adobe I/O. À la place, vous devez utiliser l’événement d’E/S **Sources Flow Run Info**.
 
 Une fois que vous avez créé un projet, accédez à lʼécran dʼaperçu de ce projet. Sélectionnez ensuite **[!UICONTROL Ajouter un événement]**.
 

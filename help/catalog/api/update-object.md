@@ -13,7 +13,7 @@ ht-degree: 74%
 
 # Mise à jour d’un objet Catalogue
 
-Vous pouvez mettre à jour une partie d’une [!DNL Catalog] en incluant son identifiant dans le chemin d’accès d’une requête de PATCH. Ce document couvre les deux méthodes d’exécution des opérations PATCH sur les objets Catalogue :
+Vous pouvez mettre à jour une partie d’un objet [!DNL Catalog] en incluant son identifiant dans le chemin d’accès d’une requête de PATCH. Ce document couvre les deux méthodes d’exécution des opérations PATCH sur les objets Catalogue :
 
 * Utilisation des champs
 * Utilisation de la notation par patch JSON
@@ -34,7 +34,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Le type de [!DNL Catalog] à mettre à jour. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Le type d’objet [!DNL Catalog] à mettre à jour. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Identifiant de l’objet spécifique que vous souhaitez mettre à jour. |
 
 **Requête**
@@ -69,7 +69,7 @@ Une réponse réussie renvoie un tableau contenant l’identifiant du jeu de don
 
 L’exemple d’appel suivant montre comment mettre à jour un objet à l’aide d’un patch JSON, comme indiqué dans [RFC-6902](https://tools.ietf.org/html/rfc6902).
 
-Pour plus d’informations sur la syntaxe du correctif JSON, voir [Guide de base des API](../../landing/api-fundamentals.md#json-patch).
+Pour plus d’informations sur la syntaxe du correctif JSON, consultez le [guide de base de l’API](../../landing/api-fundamentals.md#json-patch).
 
 **Format d’API**
 
@@ -79,7 +79,7 @@ PATCH /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Le type de [!DNL Catalog] à mettre à jour. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Le type d’objet [!DNL Catalog] à mettre à jour. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Identifiant de l’objet spécifique que vous souhaitez mettre à jour. |
 
 **Requête**

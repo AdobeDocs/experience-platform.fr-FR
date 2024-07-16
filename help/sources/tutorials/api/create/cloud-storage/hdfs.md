@@ -7,20 +7,20 @@ description: Découvrez comment connecter un Apache Hadoop Distributed File Syst
 exl-id: 04fa65db-073c-48e1-b981-425185ae08aa
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 58%
+source-wordcount: '453'
+ht-degree: 54%
 
 ---
 
-# Créez un [!DNL Apache] Connexion de base HDFS à l’aide de [!DNL Flow Service] API
+# Créez une connexion de base [!DNL Apache] HDFS à l’aide de l’API [!DNL Flow Service]
 
 >[!NOTE]
 >
->Le connecteur Apache HDFS est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
+>Le connecteur Apache HDFS est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez la [Présentation des sources](../../../../home.md#terms-and-conditions) .
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Apache Hadoop Distributed File System] (ci-après dénommés &quot;[!DNL HDFS]&quot;) en utilisant la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Apache Hadoop Distributed File System] (ci-après appelée &quot;[!DNL HDFS]&quot;) à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
@@ -29,13 +29,13 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 * [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL HDFS] en utilisant la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL HDFS] à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `url` | L’URL définit les paramètres d’authentification requis pour la connexion à [!DNL HDFS] anonymement. Pour plus d&#39;informations sur l&#39;obtention de cette valeur, reportez-vous à la section [this [!DNL HDFS] document](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
+| `url` | L’URL définit les paramètres d’authentification requis pour la connexion anonyme à [!DNL HDFS]. Pour plus d&#39;informations sur la manière d&#39;obtenir cette valeur, consultez [ce [!DNL HDFS] document](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL AdWords] est `54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
 ### Utiliser les API Platform
@@ -84,8 +84,8 @@ curl -X POST \
 
 | Propriété | Description |
 | --------- | ----------- |
-| `auth.params.url` | L’URL qui définit les paramètres d’authentification requis pour la connexion à [!DNL HDFS] anonymement |
-| `connectionSpec.id` | La variable [!DNL HDFS] identifiant de spécification de connexion : `54e221aa-d342-4707-bcff-7a4bceef0001`. |
+| `auth.params.url` | L’URL qui définit les paramètres d’authentification requis pour la connexion anonyme à [!DNL HDFS] |
+| `connectionSpec.id` | ID de spécification de connexion [!DNL HDFS] : `54e221aa-d342-4707-bcff-7a4bceef0001`. |
 
 **Réponse**
 
@@ -100,4 +100,4 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 
 ## Étapes suivantes
 
-Vous êtes arrivé au bout de ce tutoriel, félicitations ! Grâce à celui-ci, vous avez créé une connexion de à [!DNL HDFS] à l’aide de l’API [!DNL Flow Service] et avez obtenu la valeur d’identifiant unique de la connexion. Vous pouvez utiliser cet identifiant dans le tutoriel suivant lorsque vous apprendrez à [explorer un espace de stockage dans le cloud tiers à l’aide de l’API Flow Service](../../explore/cloud-storage.md).
+En suivant ce tutoriel, vous avez créé une connexion [!DNL HDFS] à l’aide de l’API [!DNL Flow Service] et obtenu la valeur d’identifiant unique de la connexion. Vous pouvez utiliser cet identifiant dans le tutoriel suivant lorsque vous apprendrez à [explorer un espace de stockage dans le cloud tiers à l’aide de l’API Flow Service](../../explore/cloud-storage.md).

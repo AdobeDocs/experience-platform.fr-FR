@@ -7,8 +7,8 @@ description: Découvrez comment connecter Adobe Experience Platform à PostgreSQ
 exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '509'
-ht-degree: 56%
+source-wordcount: '502'
+ht-degree: 54%
 
 ---
 
@@ -26,29 +26,29 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 * [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL PostgreSQL] en utilisant la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL PostgreSQL] à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
-Pour [!DNL Flow Service] pour vous connecter à [!DNL PostgreSQL], vous devez fournir la propriété de connexion suivante :
+Pour que [!DNL Flow Service] se connecte à [!DNL PostgreSQL], vous devez fournir la propriété de connexion suivante :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `connectionString` | La chaîne de connexion associée à votre [!DNL PostgreSQL] compte . Le [!DNL PostgreSQL] Le modèle de chaîne de connexion est le suivant : `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL PostgreSQL] is `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
+| `connectionString` | Chaîne de connexion associée à votre compte [!DNL PostgreSQL]. Le modèle de chaîne de connexion [!DNL PostgreSQL] est : `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
+| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’ID de spécification de connexion pour [!DNL PostgreSQL] est `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
-Pour plus d’informations sur l’obtention d’une chaîne de connexion, reportez-vous à cette section [[!DNL PostgreSQL] document](https://www.postgresql.org/docs/9.2/app-psql.html).
+Pour plus d&#39;informations sur l&#39;obtention d&#39;une chaîne de connexion, consultez ce [[!DNL PostgreSQL] document](https://www.postgresql.org/docs/9.2/app-psql.html).
 
 #### Activer le chiffrement SSL pour votre chaîne de connexion
 
-Vous pouvez activer le chiffrement SSL pour votre [!DNL PostgreSQL] Chaîne de connexion en ajoutant votre chaîne de connexion avec les propriétés suivantes :
+Vous pouvez activer le cryptage SSL pour votre chaîne de connexion [!DNL PostgreSQL] en ajoutant votre chaîne de connexion avec les propriétés suivantes :
 
 | Propriété | Description | Exemple |
 | --- | --- | --- |
-| `EncryptionMethod` | Permet d’activer le chiffrement SSL sur votre [!DNL PostgreSQL] data. | <uL><li>`EncryptionMethod=0`(Désactivé)</li><li>`EncryptionMethod=1`(Activé)</li><li>`EncryptionMethod=6`(RequestSSL)</li></ul> |
-| `ValidateServerCertificate` | Valide le certificat envoyé par votre [!DNL PostgreSQL] de base de données lorsque `EncryptionMethod` est appliquée. | <uL><li>`ValidationServerCertificate=0`(Désactivé)</li><li>`ValidationServerCertificate=1`(Activé)</li></ul> |
+| `EncryptionMethod` | Permet d&#39;activer le cryptage SSL sur vos données [!DNL PostgreSQL]. | <uL><li>`EncryptionMethod=0`(Désactivé)</li><li>`EncryptionMethod=1`(Activé)</li><li>`EncryptionMethod=6`(RequestSSL)</li></ul> |
+| `ValidateServerCertificate` | Valide le certificat envoyé par votre base de données [!DNL PostgreSQL] lorsque `EncryptionMethod` est appliqué. | <uL><li>`ValidationServerCertificate=0`(Désactivé)</li><li>`ValidationServerCertificate=1`(Activé)</li></ul> |
 
-Voici un exemple d’une [!DNL PostgreSQL] Chaîne de connexion ajoutée avec chiffrement SSL : `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD};EncryptionMethod=1;ValidateServerCertificate=1`.
+Voici un exemple de chaîne de connexion [!DNL PostgreSQL] ajoutée avec le chiffrement SSL : `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD};EncryptionMethod=1;ValidateServerCertificate=1`.
 
 ### Utiliser les API Platform
 
@@ -96,12 +96,12 @@ curl -X POST \
 
 | Propriété | Description |
 | ------------- | --------------- |
-| `auth.params.connectionString` | La chaîne de connexion associée à votre [!DNL PostgreSQL] compte . Le [!DNL PostgreSQL] Le modèle de chaîne de connexion est le suivant : `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | Le [!DNL PostgreSQL] identifiants de spécification de connexion : `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
+| `auth.params.connectionString` | Chaîne de connexion associée à votre compte [!DNL PostgreSQL]. Le modèle de chaîne de connexion [!DNL PostgreSQL] est : `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}`. |
+| `connectionSpec.id` | Les [!DNL PostgreSQL] identifiants de spécification de connexion : `74a1c565-4e59-48d7-9d67-7c03b8a13137`. |
 
 **Réponse**
 
-Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion de base que vous venez de créer. Cet identifiant est nécessaire pour explorer votre [!DNL PostgreSQL] base de données dans le tutoriel suivant.
+Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion de base nouvellement créée. Cet identifiant est nécessaire pour explorer votre base de données [!DNL PostgreSQL] dans le tutoriel suivant.
 
 ```json
 {
@@ -112,7 +112,7 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion de b
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une [!DNL PostgreSQL] connexion de base à l’aide de [!DNL Flow Service] API. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
+En suivant ce tutoriel, vous avez créé une connexion de base de connexion [!DNL PostgreSQL] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de la fonction [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/database-nosql.md)

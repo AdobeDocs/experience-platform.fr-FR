@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;Apache Hive;Azure HDInsights;azure hdinsights
 solution: Experience Platform
-title: Création d’une Apache Hive sur la connexion source Azure HDInsights dans l’interface utilisateur
+title: Création d’une Apache Hive sur la connexion Source Azure HDInsights dans l’interface utilisateur
 type: Tutorial
 description: Découvrez comment créer une connexion source Apache Hive sur Azure HDInsights à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 3eb3cb02-9867-451a-b847-ab895310eedf
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 54%
+source-wordcount: '479'
+ht-degree: 39%
 
 ---
 
-# Créez un [!DNL Apache Hive] on [!DNL Azure HDInsights] connexion source dans l’interface utilisateur
+# Création d’une connexion source [!DNL Apache Hive] sur [!DNL Azure HDInsights] dans l’interface utilisateur
 
 >[!NOTE]
 >
-> La variable [!DNL Apache Hive] on [!DNL Azure HDInsights] Le connecteur est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
+> Le connecteur [!DNL Apache Hive] sur [!DNL Azure HDInsights] est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez la [Présentation des sources](../../../../home.md#terms-and-conditions) .
 
-Les connecteurs source d’Adobe Experience Platform permettent d’ingérer des données externes selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Apache Hive] on [!DNL Azure HDInsights] connecteur source à l’aide de [!DNL Platform] de l’interface utilisateur.
+Les connecteurs Source dans Adobe Experience Platform permettent d’ingérer des données provenant de l’extérieur de manière planifiée. Ce tutoriel décrit les étapes de création d’un connecteur source [!DNL Apache Hive] sur [!DNL Azure HDInsights] à l’aide de l’interface utilisateur [!DNL Platform].
 
 ## Prise en main
 
@@ -33,39 +33,39 @@ Si vous disposez déjà d’une connexion [!DNL Hive] valide, vous pouvez ignore
 
 ### Collecter les informations d’identification requises
 
-Pour accéder au compte [!DNL Hive] sur , vous devez fournir les valeurs suivantes :[!DNL Platform]
+Pour accéder à votre compte [!DNL Hive] sur [!DNL Platform], vous devez fournir les valeurs suivantes :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `host` | L’adresse IP ou le nom d’hôte de la variable [!DNL Hive] serveur. |
-| `username` | Le nom d’utilisateur que vous utilisez pour accéder à la variable [!DNL Hive] serveur. |
+| `host` | Adresse IP ou nom d’hôte du serveur [!DNL Hive]. |
+| `username` | Nom d’utilisateur que vous utilisez pour accéder au serveur [!DNL Hive]. |
 | `password` | Mot de passe qui correspond à l’utilisateur. |
 
-Pour plus d’informations sur la prise en main, voir [this [!DNL Hive] document](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
+Pour plus d&#39;informations sur la prise en main, consultez [ce [!DNL Hive] document](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
 
 ## Connecter votre compte [!DNL Hive]
 
 Une fois les informations d’identification requises collectées, vous pouvez suivre les étapes ci-dessous pour lier votre compte [!DNL Hive] à [!DNL Platform].
 
-Connexion à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au **[!UICONTROL Sources]** workspace. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com), puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]**. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous , **[!UICONTROL Bases de données]** catégorie, sélectionnez **[!UICONTROL Hive]**. Si c’est la première fois que vous utilisez ce connecteur, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer [!DNL Hive] connecteur.
+Sous la catégorie **[!UICONTROL Bases de données]**, sélectionnez **[!UICONTROL Hive]**. Si c&#39;est la première fois que vous utilisez ce connecteur, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer un nouveau connecteur [!DNL Hive].
 
 ![catalogue](../../../../images/tutorials/create/hive/catalog.png)
 
-La variable **[!UICONTROL Connexion à Hive]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Se connecter à Hive]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et votre [!DNL Hive] informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion]** puis accorder un certain temps pour établir la nouvelle connexion.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification [!DNL Hive]. Une fois que vous avez terminé, sélectionnez **[!UICONTROL Se connecter]** et laissez un certain temps à la nouvelle connexion pour établir.
 
 ![connect](../../../../images/tutorials/create/hive/new.png)
 
 ### Compte existant
 
-Pour connecter un compte existant, sélectionnez le [!DNL Hive] compte auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Pour connecter un compte existant, sélectionnez le compte [!DNL Hive] auquel vous souhaitez vous connecter, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
 ![existant](../../../../images/tutorials/create/hive/existing.png)
 

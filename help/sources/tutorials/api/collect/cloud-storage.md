@@ -7,8 +7,8 @@ description: Ce tutoriel décrit la procédure à suivre pour récupérer des do
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 source-git-commit: 92f39f970402ab907f711d23a8f5f599668f0fe0
 workflow-type: tm+mt
-source-wordcount: '1765'
-ht-degree: 72%
+source-wordcount: '1741'
+ht-degree: 71%
 
 ---
 
@@ -18,7 +18,7 @@ Ce tutoriel décrit la procédure à suivre pour récupérer des données à par
 
 >[!NOTE]
 >
->Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de stockage dans le cloud. Si vous ne disposez pas de cet identifiant, reportez-vous au [présentation des sources](../../../home.md#cloud-storage) pour obtenir la liste des sources de stockage dans le cloud avec lesquelles vous pouvez créer une connexion de base.
+>Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de stockage dans le cloud. Si vous ne disposez pas de cet ID, consultez la [présentation des sources](../../../home.md#cloud-storage) pour obtenir la liste des sources de stockage dans le cloud avec lesquelles vous pouvez créer une connexion de base.
 
 ## Prise en main
 
@@ -37,7 +37,7 @@ Pour plus d’informations sur la manière d’effectuer correctement des appels
 
 ## Créer une connexion source {#source}
 
-Vous pouvez créer une connexion source en envoyant une requête de POST au `sourceConnections` point d’entrée de [!DNL Flow Service] l’API lors de la fourniture de votre identifiant de connexion de base, le chemin d’accès au fichier source que vous souhaitez ingérer et l’identifiant de spécification de connexion correspondant à votre source.
+Vous pouvez créer une connexion source en envoyant une requête de POST au point de terminaison `sourceConnections` de l’API [!DNL Flow Service] tout en fournissant votre identifiant de connexion de base, le chemin d’accès au fichier source à ingérer et l’identifiant de spécification de connexion correspondant de votre source.
 
 Lors de la création d&#39;une connexion source, vous devez également définir une valeur d&#39;énumération pour l&#39;attribut data format.
 
@@ -93,13 +93,13 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `baseConnectionId` | Identifiant de connexion de base de votre source de stockage dans le cloud. |
-| `data.format` | Le format des données que vous souhaitez importer dans Platform. Les valeurs prises en charge sont les suivantes : `delimited`, `JSON`, et `parquet`. |
+| `data.format` | Le format des données que vous souhaitez importer dans Platform. Les valeurs prises en charge sont : `delimited`, `JSON` et `parquet`. |
 | `data.properties` | (Facultatif) Ensemble de propriétés que vous pouvez appliquer à vos données lors de la création d’une connexion source. |
-| `data.properties.columnDelimiter` | (Facultatif) Un délimiteur de colonne à un seul caractère que vous pouvez spécifier lors de la collecte de fichiers plats. Toute valeur de caractère unique est un délimiteur de colonne autorisé. Si elle n’est pas fournie, une virgule (`,`) est utilisée comme valeur par défaut. **Remarque**: la variable `columnDelimiter` ne peut être utilisée que lors de l’ingestion de fichiers délimités. |
-| `data.properties.encoding` | (Facultatif) Une propriété qui définit le type de codage à utiliser lors de l’ingestion de vos données vers Platform. Les types de codage pris en charge sont les suivants : `UTF-8` et `ISO-8859-1`. **Remarque**: la variable `encoding` n’est disponible que lors de l’ingestion de fichiers CSV délimités. Les autres types de fichiers seront ingérés avec le codage par défaut, `UTF-8`. |
-| `data.properties.compressionType` | (Facultatif) Une propriété qui définit le type de fichier compressé pour l’ingestion. Les types de fichiers compressés pris en charge sont les suivants : `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, et `tar`. **Remarque**: la variable `compressionType` ne peut être utilisée que lors de l’ingestion de fichiers JSON ou délimités. |
-| `params.path` | Chemin d’accès au fichier source auquel vous accédez. Ce paramètre pointe vers un fichier individuel ou un dossier entier.  **Remarque**: vous pouvez utiliser un astérisque à la place du nom de fichier pour spécifier l’ingestion d’un dossier entier. Par exemple : `/acme/summerCampaign/*.csv` ingère l’intégralité de `/acme/summerCampaign/` dossier. |
-| `params.type` | Type de fichier du fichier de données source que vous ingérez. Type d’utilisation `file` pour ingérer un fichier individuel et utiliser le type `folder` pour ingérer un dossier entier. |
+| `data.properties.columnDelimiter` | (Facultatif) Un délimiteur de colonne à un seul caractère que vous pouvez spécifier lors de la collecte de fichiers plats. Toute valeur de caractère unique est un délimiteur de colonne autorisé. Si elle n’est pas fournie, une virgule (`,`) est utilisée comme valeur par défaut. **Remarque** : La propriété `columnDelimiter` ne peut être utilisée que lors de l’ingestion de fichiers délimités. |
+| `data.properties.encoding` | (Facultatif) Une propriété qui définit le type de codage à utiliser lors de l’ingestion de vos données vers Platform. Les types de codage pris en charge sont : `UTF-8` et `ISO-8859-1`. **Remarque** : Le paramètre `encoding` n’est disponible que lors de l’ingestion de fichiers CSV délimités. D’autres types de fichiers seront ingérés avec l’encodage par défaut, `UTF-8`. |
+| `data.properties.compressionType` | (Facultatif) Une propriété qui définit le type de fichier compressé pour l’ingestion. Les types de fichiers compressés pris en charge sont les suivants : `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` et `tar`. **Remarque** : La propriété `compressionType` ne peut être utilisée que lors de l’ingestion de fichiers délimités ou JSON. |
+| `params.path` | Le chemin d’accès au fichier source auquel vous accédez. Ce paramètre pointe vers un fichier individuel ou un dossier entier.  **Remarque** : Vous pouvez utiliser un astérisque à la place du nom de fichier pour spécifier l’ingestion d’un dossier entier. Par exemple : `/acme/summerCampaign/*.csv` ingère l’intégralité du dossier `/acme/summerCampaign/`. |
+| `params.type` | Type de fichier du fichier de données source que vous ingérez. Utilisez le type `file` pour ingérer un fichier individuel et le type `folder` pour ingérer un dossier entier. |
 | `connectionSpec.id` | Identifiant de spécification de connexion associé à votre source de stockage dans le cloud spécifique. Consultez lʼ[annexe](#appendix) pour obtenir la liste des identifiants de spécification de connexion. |
 
 **Réponse**
@@ -125,7 +125,7 @@ POST /sourceConnections
 
 **Requête**
 
-Dans l’exemple ci-dessous, l’expression régulière est utilisée dans le chemin d’accès au fichier pour spécifier l’ingestion de tous les fichiers CSV comportant `premium` en leur nom.
+Dans l’exemple ci-dessous, l’expression régulière est utilisée dans le chemin d’accès au fichier pour spécifier l’ingestion de tous les fichiers CSV dont le nom contient `premium`.
 
 ```shell
 curl -X POST \
@@ -155,7 +155,7 @@ curl -X POST \
 
 ### Configurer une connexion source pour ingérer les données de manière récursive
 
-Lors de la création d’une connexion source, vous pouvez utiliser la variable `recursive` pour ingérer des données à partir de dossiers profondément imbriqués.
+Lors de la création d’une connexion source, vous pouvez utiliser le paramètre `recursive` pour ingérer des données à partir de dossiers profondément imbriqués.
 
 **Format d’API**
 
@@ -165,7 +165,7 @@ POST /sourceConnections
 
 **Requête**
 
-Dans l’exemple ci-dessous, la variable `recursive: true` informations sur les paramètres [!DNL Flow Service] pour lire tous les sous-dossiers de manière récursive pendant le processus d’ingestion.
+Dans l’exemple ci-dessous, le paramètre `recursive: true` informe [!DNL Flow Service] de lire tous les sous-dossiers de manière récursive pendant le processus d’ingestion.
 
 ```shell
 curl -X POST \
@@ -253,7 +253,7 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | `$id` du schéma XDM cible. |
 | `data.schema.version` | La version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full+json;version=1`, qui renvoie la dernière version mineure du schéma. |
-| `params.dataSetId` | Identifiant du jeu de données cible généré à l’étape précédente. **Remarque**: vous devez fournir un identifiant de jeu de données valide lors de la création d’une connexion cible. Un identifiant de jeu de données non valide entraînera une erreur. |
+| `params.dataSetId` | Identifiant du jeu de données cible généré à l’étape précédente. **Remarque** : vous devez fournir un identifiant de jeu de données valide lors de la création d’une connexion cible. Un identifiant de jeu de données non valide entraînera une erreur. |
 | `connectionSpec.id` | Identifiant de spécification de connexion utilisé pour se connecter au lac de données. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Réponse**

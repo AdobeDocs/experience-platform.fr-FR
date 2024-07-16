@@ -4,7 +4,7 @@ description: Obtenez des réponses aux questions les plus fréquentes à propos 
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
 source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
 workflow-type: tm+mt
-source-wordcount: '1044'
+source-wordcount: '1032'
 ht-degree: 89%
 
 ---
@@ -45,7 +45,7 @@ La fonctionnalité Balises a ouvert son portail en libre-service, que les dével
 
 Nous avons de nombreux clients qui choisissent également de développer leurs propres extensions privées pour les utiliser uniquement dans leurs propres entreprises en utilisant les mêmes méthodes de développement d’extension.
 
-Pour développer une extension, consultez la [Présentation du développement d’extensions](./extension-dev/overview.md) page.
+Pour développer une extension, consultez la page [Présentation du développement d’extension](./extension-dev/overview.md).
 
 ## Les balises sont-elles conformes aux normes de sécurité de ma société ?
 
@@ -73,7 +73,7 @@ Les balises sont conçues pour fournir et exécuter des technologies publicitair
 
 ## Quels navigateurs les balises prennent-elles en charge ?
 
-Voir les navigateurs pris en charge [here](./extension-dev/browsers.md).
+Consultez les navigateurs [ici](./extension-dev/browsers.md) pris en charge.
 
 La plupart des clients exploitent désormais des fonctionnalités de plateforme web plus modernes dans les navigateurs actuels et génèrent de meilleures expériences utilisateur, y compris des applications d’une seule page et des sites web et pages interactifs à utilisation lourde Ajax. Comme la plupart des clients optent pour des approches plus modernes de leurs sites, ils ont besoin d’une solution comme Balises permettant ces approches.
 
@@ -83,7 +83,7 @@ Oui! Balises prend désormais en charge les propriétés et la configuration des
 
 ## Pourquoi l’interface utilisateur indique-t-elle qu’une erreur s’est produite lors du chargement de mon compte ?
 
-Si vous recevez un message indiquant qu’une erreur s’est produite lors du chargement de votre compte, cela signifie que votre compte n’appartient à aucun profil de produit pour les balises. Consultez le guide sur la [gestion des autorisations](../collection/permissions.md) pour savoir comment configurer un profil de produit dans Adobe Admin Console afin d’accorder l’accès aux fonctionnalités de collecte de données dans l’interface utilisateur.
+Si vous recevez un message indiquant qu’une erreur s’est produite lors du chargement de votre compte, cela signifie que votre compte n’appartient à aucun profil de produit pour les balises. Consultez le guide sur la [gestion des autorisations](../collection/permissions.md) pour savoir comment configurer un profil de produit dans Adobe Admin Console pour accorder l’accès aux fonctionnalités de collecte de données dans l’interface utilisateur.
 
 ## Pourquoi m’est-il impossible d’ajouter des propriétés dans l’interface utilisateur ?
 
@@ -93,4 +93,4 @@ Consultez le guide sur la [gestion des autorisations](../collection/permissions.
 
 ## Et si j’ai d’autres questions ?
 
-Si vous avez d’autres questions, vous pouvez poser la question suivante sur le [Page de la communauté Collecte de données Adobe Experience Platform](https://adobe.com/go/launchme) sur l’Experience League ou rejoignez le [espace de travail du Slack de communauté](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) pour les développeurs et les rubriques de mise en oeuvre technique.
+Si vous avez d’autres questions, vous pouvez poser la question sur la [page de la communauté de collecte de données Adobe Experience Platform](https://adobe.com/go/launchme) sur Experience League ou rejoindre l’ [ espace de travail du Slack de communauté](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) pour les développeurs et les rubriques de mise en oeuvre technique.

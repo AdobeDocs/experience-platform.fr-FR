@@ -4,26 +4,26 @@ description: Adobe Experience Platform permet de contrôler, de tester, de sim
 exl-id: e887f5f6-3db0-4521-be2d-20ef3d08e7d0
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '824'
-ht-degree: 6%
+source-wordcount: '808'
+ht-degree: 5%
 
 ---
 
 # Assurance d’Adobe Experience Platform Assurance
 
-Adobe Experience Platform Assurance est un produit de [Adobe Experience Cloud](https://www.adobe.com/fr/experience-cloud.html) pour vous aider à inspecter, tester, simuler et valider la manière dont vous collectez des données ou diffusez des expériences dans votre application mobile.
+Adobe Experience Platform Assurance est un produit de [Adobe Experience Cloud](https://www.adobe.com/experience-cloud.html) qui vous aide à inspecter, à tester, à simuler et à valider la manière dont vous collectez des données ou diffusez des expériences dans votre application mobile.
 
 >[!IMPORTANT]
 >
-> Le Griffon du projet est désormais connu sous le nom de **Assurance**!
+> Le projet Griffon est désormais appelé **Assurance** !
 >
-> Le Griffon du projet est désormais disponible pour les **all** Clients Adobe Experience Cloud en tant qu’assurance. Pour en savoir plus sur cette transition, veuillez lire le [guide d’accès des utilisateurs](./user-access.md).
+> Le Griffon du projet est désormais disponible en tant qu&#39;assurance pour tous les clients **Adobe Experience Cloud**. Pour en savoir plus sur cette transition, consultez le [guide d&#39;accès utilisateur](./user-access.md).
 
 >[!INFO]
 >
 >Les API d’assurance publique sont disponibles !
 >
->[API d’assurance](https://developer.adobe.com/adobe-assurance-public-apis/) sont un ensemble d’API qui permet aux utilisateurs de tester et de déboguer leurs applications web et mobiles, lorsqu’ils sont équipés du SDK Mobile Assurance Adobe.
+>[Les API d’assurance](https://developer.adobe.com/adobe-assurance-public-apis/) sont un ensemble d’API qui permettent aux utilisateurs de tester et de déboguer leurs applications web et mobiles, lorsqu’ils sont équipés du SDK Mobile Adobe Assurance.
 
 ## Disponibilité générale
 
@@ -31,9 +31,9 @@ Adobe Experience Platform Assurance est un produit de [Adobe Experience Cloud](h
 
 ### Qu&#39;est-ce qui change ?
 
-Le 15 octobre, l’accès à Assurance sera géré via Admin Console. Veuillez lire la [guide d’accès des utilisateurs](./user-access.md) pour vous assurer que vous disposez toujours d’un accès ininterrompu.
+Le 15 octobre, l’accès à Assurance sera géré par Admin Console. Veuillez lire le [guide d’accès utilisateur](./user-access.md) pour vous assurer que vous disposez toujours d’un accès ininterrompu.
 
-Aucune autre modification ou perturbation n’est attendue des intégrations, sessions et événements Assurance existants. Il est possible de continuer à y accéder par l&#39;intermédiaire de la garantie [https://griffon.adobe.com](https://griffon.adobe.com) **ou** vous pouvez utiliser (et le signet). [https://experience.adobe.com/assurance](https://experience.adobe.com/assurance).
+Aucune autre modification ou perturbation n’est attendue des intégrations, sessions et événements Assurance existants. Vous pouvez continuer à y accéder via [https://griffon.adobe.com](https://griffon.adobe.com) **ou** que vous pouvez utiliser (et mettre en signet) [https://experience.adobe.com/assurance](https://experience.adobe.com/assurance).
 
 ## Que peut faire Assurance pour vous ?
 
@@ -43,7 +43,7 @@ Commencez rapidement avec peu de lignes de code. Pour les applications mobiles, 
 
 ### Connexion sans tracas
 
-Avec Assurance, la connexion de votre application à Platform est simple et fiable. Vous n’avez pas besoin d’utiliser des proxies réseau, [MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)), et d’autres gymnastiques réseau : la connexion de votre application à Assurance est aussi facile que la numérisation d’un code QR ou l’activation d’un bouton.
+Grâce à Assurance, la connexion de votre application à Platform est simple et fiable. Vous n’avez pas besoin d’utiliser des proxies réseau, [MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)) et d’autres gymnastiques réseau. La connexion de votre application à Assurance est aussi facile que la numérisation d’un code QR ou l’activation d’un bouton.
 
 ![](./images/index/no-hassle-connection.png)
 
@@ -67,7 +67,7 @@ Assurance vous aide à inspecter les événements SDK bruts générés par le SD
 
 ### Adobe Analytics
 
-La vue Adobe Analytics > Événements Analytics est une vue sélectionnée qui affiche les événements liés à votre mise en oeuvre mobile Adobe Analytics. Le mode Liste affiche le cycle de vie ou les événements action/état, &quot;status&quot; post-traité, ainsi que les détails d’événement requis dans une vue spécialement formatée. L’état Post-traitement indique comment l’événement a été traité par Adobe Analytics après l’application des règles de traitement sur l’événement.
+La vue Adobe Analytics > Événements Analytics est une vue sélectionnée qui affiche les événements liés à votre mise en oeuvre mobile Adobe Analytics. Le mode Liste affiche le cycle de vie ou les événements action/état, &quot;status&quot; traité par Post, ainsi que les détails d’événement requis dans une vue spécialement formatée. L’état Post-Processed vous indique comment l’événement a été traité par Adobe Analytics après l’application des règles de traitement sur l’événement.
 
 ### Adobe Analytics for Streaming Media
 
@@ -85,11 +85,11 @@ Les mesures de sécurité mises en place par Assurance sont les suivantes :
 * Seules les connexions entre Assurance et l’interface utilisateur web d’assurance appartenant au même ID d’organisation Adobe Experience Cloud sont prises en charge.
 * Les événements des SDK mobiles Adobe Experience Platform sont transportés via HTTPS.
 * Les SDK Assurance et Adobe Experience Platform Mobile utilisent TLS 1.2
-* Les sessions d’assurance sont supprimées au bout de 30 jours.
+* Les sessions d’assurance sont supprimées après 30 jours.
 * Les données de session d’assurance sont chiffrées au repos, conformément aux bonnes pratiques de stockage.
 
-## Prise en main
+## Commencer
 
-Pour configurer Assurance, vous devez d’abord installer l’extension Assurance dans votre application. Pour savoir comment procéder, consultez le tutoriel sur [mise en oeuvre de l’extension Assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
+Pour configurer Assurance, vous devez d’abord installer l’extension Assurance dans votre application. Pour savoir comment procéder, consultez le tutoriel sur la [mise en oeuvre de l’extension Assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
 
-Après avoir ajouté l’assurance à votre application, vous pouvez créer une session d’assurance qui peut être connectée à votre appareil. Pour savoir comment utiliser Assurance, veuillez lire le [guide sur l’utilisation d’Assurance](./tutorials/using-assurance.md).
+Après avoir ajouté l’assurance à votre application, vous pouvez créer une session d’assurance qui peut être connectée à votre appareil. Pour savoir comment utiliser Assurance, consultez le [guide sur l’utilisation de Assurance](./tutorials/using-assurance.md).

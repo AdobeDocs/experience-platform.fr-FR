@@ -1,22 +1,22 @@
 ---
 keywords: analytics universel Google;Google Universal Analytics;analytics universel Google
 title: Extension Google Universal Analytics
-description: L’extension Google Universal Analytics est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Google Universal Analytics est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 72576a0f-f2da-46d6-a722-33a0cf17f2c4
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '465'
-ht-degree: 92%
+source-wordcount: '454'
+ht-degree: 90%
 
 ---
 
 # Extension [!DNL Google Universal Analytics] {#google-universal-analytics-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-[!DNL Google Universal Analytics] vous permet de mesurer votre retour sur investissement publicitaire, ainsi que de suivre vos sites et applications Flash, vidéo et de réseaux sociaux.
+[!DNL Google Universal Analytics] vous permet de mesurer votre retour sur investissement publicitaire, ainsi que de suivre vos sites et applications de Flash, de vidéo et de réseau social.
 
-[!DNL Google Universal Analytics] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html).
+[!DNL Google Universal Analytics] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Google Universal Analytics] extension :
+Pour installer l’extension [!DNL Google Universal Analytics], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

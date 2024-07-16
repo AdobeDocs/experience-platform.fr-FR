@@ -9,9 +9,9 @@ ht-degree: 11%
 
 ---
 
-# [!UICONTROL Informations détaillées sur les personnes commerciales XDM] groupe de champs de schéma
+# [!UICONTROL  {XDM Business Person Details] groupe de champs de schéma
 
-[!UICONTROL Informations détaillées sur les personnes commerciales XDM] est un groupe de champs de schéma standard pour la variable [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) qui capture les informations sur une personne dans le contexte d’une entreprise B2B (business-to-business).
+[!UICONTROL XDM Business Person Details] est un groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) qui capture des informations sur une personne dans le contexte d’une entreprise B2B.
 
 ![](../../images/field-groups/business-person-details.png)
 
@@ -34,9 +34,9 @@ ht-degree: 11%
 | `b2b.personSource` | Chaîne | Source de laquelle les informations de la personne ont été reçues. |
 | `b2b.personStatus` | Chaîne | État actuel du marketing ou des ventes de la personne. |
 | `b2b.personType` | Chaîne | Type de personne B2B. |
-| `extSourceSystemAudit` | [Attributs d’audit du système de source externe](../../data-types/external-source-system-audit-attributes.md) | Si la relation homme-entreprise provient d’un système source externe, cet objet capture les attributs de contrôle de ce système. |
+| `extSourceSystemAudit` | [ Attributs d’audit système Source externes](../../data-types/external-source-system-audit-attributes.md) | Si la relation homme-entreprise provient d’un système source externe, cet objet capture les attributs de contrôle de ce système. |
 | `extendedWorkDetails` | Objet | Capture d’autres informations relatives au travail de la personne. |
-| `extendedWorkDetails.assistantDetails` | Objet | Capture les attributs suivants liés à l’assistant de la personne : <ul><li>`name`: ([Nom de la personne](../../data-types/person-name.md)) Nom complet de l’assistant.</li><li>`phone`: ([Numéro de téléphone](../../data-types/phone-number.md)) Numéro de téléphone de l’assistant.</li></ul> |
+| `extendedWorkDetails.assistantDetails` | Objet | Capture les attributs suivants liés à l’assistant de la personne : <ul><li>`name` : ([Nom de la personne](../../data-types/person-name.md)) Nom complet de l’assistant.</li><li>`phone` : ([Numéro de téléphone](../../data-types/phone-number.md)) numéro de téléphone de l’assistant.</li></ul> |
 | `extendedWorkDetails.departments` | Tableau de chaînes | Liste des noms des départements où la personne travaille. |
 | `extendedWorkDetails.jobTitle` | Chaîne | Fonction de la personne. |
 | `extendedWorkDetails.photoUrl` | Chaîne | URL d’une photo de la personne. |
@@ -52,13 +52,13 @@ ht-degree: 11%
 | `workAddress` | [Adresse postale](../../data-types/postal-address.md) | Adresse professionnelle de la personne. |
 | `workEmail` | [Adresse électronique](../../data-types/email-address.md) | Adresse électronique professionnelle de la personne. |
 | `workPhone` | [Numéro de téléphone](../../data-types/phone-number.md) | Numéro de téléphone professionnel de la personne. |
-| `identityMap` | Carte | Champ de mappage contenant un ensemble d’identités d’espace de noms pour la personne. Ce champ est automatiquement mis à jour par le système lors de l’ingestion des données d’identité. Pour utiliser correctement ce champ pour [Profil client en temps réel](../../../profile/home.md), ne tentez pas de mettre à jour manuellement le contenu du champ dans vos opérations de données.<br /><br />Pour plus d’informations sur les cas d’utilisation des mappages dʼidentités, consultez la section correspondante sur la page consacrée aux [principes de base de la composition des schémas](../../schema/composition.md#identityMap). |
-| `isDeleted` | Booléen | Indique si cette personne a été supprimée dans Marketo Engage.<br><br>Lors de l’utilisation de la variable [Connecteur source Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tous les enregistrements supprimés dans Marketo sont automatiquement répercutés dans Real-time Customer Profile. Cependant, les enregistrements relatifs à ces profils peuvent toujours persister dans le lac de données. En définissant `isDeleted` to `true`, vous pouvez utiliser ce champ pour filtrer les enregistrements qui ont été supprimés de vos sources lors de l’interrogation du lac de données. |
+| `identityMap` | Carte | Champ de mappage contenant un ensemble d’identités d’espace de noms pour la personne. Ce champ est automatiquement mis à jour par le système lors de l’ingestion des données d’identité. Pour utiliser correctement ce champ pour [Real-time Customer Profile](../../../profile/home.md), ne tentez pas de mettre à jour manuellement le contenu du champ dans vos opérations de données.<br /><br />Pour plus d’informations sur les cas d’utilisation des mappages dʼidentités, consultez la section correspondante sur la page consacrée aux [principes de base de la composition des schémas](../../schema/composition.md#identityMap). |
+| `isDeleted` | Booléen | Indique si cette personne a été supprimée dans Marketo Engage.<br><br>Lors de l’utilisation du [connecteur source Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tous les enregistrements supprimés dans Marketo sont automatiquement répercutés dans Real-time Customer Profile. Cependant, les enregistrements relatifs à ces profils peuvent toujours persister dans le lac de données. En définissant `isDeleted` sur `true`, vous pouvez utiliser le champ pour filtrer les enregistrements qui ont été supprimés de vos sources lors de l’interrogation du lac de données. |
 | `organizations` | Tableau de chaînes | Liste des noms de l’organisation dans laquelle la personne travaille. |
 
 {style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-details.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-details.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/b2b-person-details.schema.json)

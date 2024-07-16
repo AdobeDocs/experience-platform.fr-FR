@@ -5,7 +5,7 @@ exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
 source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
 workflow-type: tm+mt
 source-wordcount: '712'
-ht-degree: 0%
+ht-degree: 8%
 
 ---
 
@@ -15,28 +15,28 @@ Adobe Experience Platform est un système puissant et extensible qui centralise 
 
 Le diagramme de flux de processus suivant illustre la manière dont Experience Platform ingère, chiffre et conserve les données :
 
-![Diagramme qui illustre la manière dont les données sont ingérées, chiffrées et conservées par l’Experience Platform.](../images/governance-privacy-security/encryption/flow.png)
+![Diagramme illustrant la manière dont les données sont ingérées, chiffrées et conservées par l’Experience Platform.](../images/governance-privacy-security/encryption/flow.png)
 
 ## Données en transit {#in-transit}
 
-Toutes les données en transit entre Platform et tout composant externe sont effectuées sur des connexions sécurisées et cryptées à l’aide de HTTPS [TLS v1.2](https://datatracker.ietf.org/doc/html/rfc5246).
+Toutes les données en transit entre Platform et tout composant externe sont effectuées sur des connexions sécurisées et chiffrées à l’aide du protocole HTTPS [TLS v1.2](https://datatracker.ietf.org/doc/html/rfc5246).
 
 En règle générale, les données sont introduites dans Platform de trois façons :
 
-- [Collecte de données](../../collection/home.md) Les fonctionnalités permettent aux sites web et aux applications mobiles d’envoyer des données à l’Edge Network Platform pour l’évaluation et la préparation à l’ingestion.
-- [Connecteurs source](../../sources/home.md) diffuser des données directement vers Platform à partir d’applications Adobe Experience Cloud et d’autres sources de données d’entreprise ;
-- Les outils ETL (extraction, transformation, chargement) non Adobes envoient des données à la variable [API d’ingestion par lots](../../ingestion/batch-ingestion/overview.md) pour la consommation.
+- Les fonctionnalités de [collecte de données](../../collection/home.md) permettent aux sites web et aux applications mobiles d’envoyer des données à l’Edge Network Platform pour l’évaluation et la préparation à l’ingestion.
+- [Les connecteurs Source](../../sources/home.md) diffusent directement des données vers Platform à partir d’applications Adobe Experience Cloud et d’autres sources de données d’entreprise.
+- Les outils ETL (extraction, transformation, chargement) non Adobes envoient des données à l’ [ API d’ingestion par lots](../../ingestion/batch-ingestion/overview.md) pour être utilisés.
 
-Une fois les données introduites dans le système et [encrypted au repos](#at-rest), les services Platform enrichissent et exportent les données de la manière suivante :
+Une fois les données introduites dans le système et [cryptées au repos](#at-rest), les services Platform enrichissent et exportent les données de la manière suivante :
 
-- [Destinations](../../destinations/home.md) vous permettent d’activer les données pour Adobe des applications et des applications partenaires.
-- Applications de plateforme natives telles que [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=fr) et [Adobe Journey Optimizer](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/ajo-home) peut également utiliser les données.
+- Les [destinations](../../destinations/home.md) vous permettent d’activer des données pour Adobe des applications et des applications partenaires.
+- Les applications Platform natives telles que [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=fr) et [Adobe Journey Optimizer](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/ajo-home) peuvent également utiliser les données.
 
 ### Prise en charge du protocole mTLS {#mtls-protocol-support}
 
-Vous pouvez désormais utiliser le protocole mTLS (Mutual Transport Layer Security) pour garantir une sécurité renforcée dans les connexions sortantes à la variable [Destination de l’API HTTP](../../destinations/catalog/streaming/http-destination.md) et Adobe Journey Optimizer [actions personnalisées](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions). mTLS est une méthode de sécurité de bout en bout pour l’authentification mutuelle qui garantit que les deux parties qui partagent des informations sont celles qu’elles prétendent être avant que les données ne soient partagées. mTLS inclut une étape supplémentaire par rapport à TLS, dans laquelle le serveur demande également le certificat du client et le vérifie à son bout.
+Vous pouvez désormais utiliser Mutual Transport Layer Security (mTLS) pour garantir une sécurité renforcée dans les connexions sortantes à la [ destination d’API HTTP](../../destinations/catalog/streaming/http-destination.md) et aux [ actions personnalisées ](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions) de Adobe Journey Optimizer. Le protocole mTLS est une méthode de sécurité de bout en bout pour une authentification mutuelle qui garantit que les deux parties qui partagent des informations sont celles qu’elles prétendent être avant que les données ne soient partagées. Le protocole mTLS inclut une étape supplémentaire par rapport à TLS, dans laquelle le serveur demande également le certificat du client et le vérifie de son côté.
 
-Si vous voulez [utilisation de mTLS avec des actions personnalisées Adobe Journey Optimizer](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) et les workflows de destination d’API HTTP Experience Platform, l’adresse de serveur que vous placez dans l’interface utilisateur d’action du client Adobe Journey Optimizer ou l’interface utilisateur Destinations doit avoir les protocoles TLS désactivés et uniquement mTLS activé. Si le protocole TLS 1.2 est toujours activé sur ce point de terminaison, aucun certificat n’est envoyé pour l’authentification du client. Cela signifie que pour utiliser mTLS avec ces workflows, votre point d’entrée de serveur &quot;récepteur&quot; doit être un mTLS. **only** point d’entrée de connexion activé.
+Si vous souhaitez [ utiliser mTLS avec des actions personnalisées Adobe Journey Optimizer ](https://experienceleague.adobe.com/fr/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) et des workflows de destination d’API HTTP Experience Platform, l’adresse du serveur que vous avez placée dans l’interface utilisateur d’action du client Adobe Journey Optimizer ou l’interface utilisateur des destinations doit avoir les protocoles TLS désactivés et uniquement mTLS activé. Si le protocole TLS 1.2 est toujours activé sur ce point de terminaison, aucun certificat n’est envoyé pour l’authentification du client. Cela signifie que pour utiliser mTLS avec ces workflows, votre point d’entrée de serveur &quot;réception&quot; doit être un point d’entrée de connexion activé mTLS **uniquement**.
 
 >[!IMPORTANT]
 >
@@ -57,10 +57,10 @@ Si vous souhaitez vérifier le CN ou le SAN pour effectuer une validation tierce
 
 ## Données au repos {#at-rest}
 
-Les données ingérées et utilisées par Platform sont stockées dans le lac de données, un entrepôt de données hautement granulaire contenant toutes les données gérées par le système, indépendamment de l’origine ou du format de fichier. Toutes les données conservées dans le lac de données sont chiffrées, stockées et gérées dans un environnement isolé. [[!DNL Microsoft Azure Data Lake] Stockage](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) qui est propre à votre organisation.
+Les données ingérées et utilisées par Platform sont stockées dans le lac de données, un entrepôt de données hautement granulaire contenant toutes les données gérées par le système, indépendamment de l’origine ou du format de fichier. Toutes les données conservées dans le lac de données sont chiffrées, stockées et gérées dans une instance [[!DNL Microsoft Azure Data Lake] Storage](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) isolée, propre à votre organisation.
 
-Pour plus d’informations sur la façon dont les données au repos sont chiffrées dans Azure Data Lake Storage, reportez-vous à la section [documentation Azure officielle](https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption).
+Pour plus d’informations sur la façon dont les données au repos sont chiffrées dans Azure Data Lake Storage, consultez la [documentation Azure officielle](https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption).
 
 ## Étapes suivantes
 
-Ce document fournit un aperçu général de la manière dont les données sont chiffrées dans Platform. Pour plus d’informations sur les procédures de sécurité dans Platform, consultez la présentation de [gouvernance, confidentialité et sécurité](./overview.md) sur l’Experience League ou consultez le [Livre blanc sur la sécurité de Platform](https://www.adobe.com/content/dam/cc/en/security/pdfs/AEP_SecurityOverview.pdf).
+Ce document fournit un aperçu général de la manière dont les données sont chiffrées dans Platform. Pour plus d’informations sur les procédures de sécurité dans Platform, consultez la présentation de [gouvernance, confidentialité et sécurité](./overview.md) sur Experience League ou consultez le [livre blanc de sécurité de Platform](https://www.adobe.com/content/dam/cc/en/security/pdfs/AEP_SecurityOverview.pdf).

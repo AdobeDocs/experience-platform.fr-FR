@@ -4,8 +4,8 @@ description: Dernières notes de mise à jour pour lʼextension de balise Adobe�
 exl-id: ba29f614-c3cd-4e0b-b043-2b1c17567def
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '520'
-ht-degree: 98%
+source-wordcount: '578'
+ht-degree: 97%
 
 ---
 
@@ -17,10 +17,10 @@ ht-degree: 98%
 
 ## 16 septembre 2021
 
-### Extension Adobe Target 0.11.4
+### Extension Adobe Target 0.11.4
 
 * Mise à jour vers at.js v1.8.3
-* Ajout `SameSite=None` et `Secure` attributs lors de la définition des cookies
+* Ajout des attributs `SameSite=None` et `Secure` lors de la définition des cookies
 
 ## 24 juillet 2020
 

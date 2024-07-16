@@ -16,8 +16,8 @@ ht-degree: 23%
 
 >[!IMPORTANT]
 > 
-> * Pour activer les données et activer la variable [étape de mappage](#mapping) du workflow, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
-> * Pour activer les données sans passer par la fonction [étape de mappage](#mapping) du workflow, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation du segment sans mappage]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
+> * Pour activer les données et activer l’[ étape de mappage](#mapping) du workflow, vous avez besoin des **** **[!UICONTROL Visualiser les destinations]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès.
+> * Pour activer les données sans passer par l’[ étape de mappage](#mapping) du workflow, vous avez besoin des autorisations **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Activer le segment sans mappage]**, **[!UICONTROL Afficher les profils]** et **[!UICONTROL Afficher les segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions).
 > 
 > Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
@@ -39,37 +39,37 @@ Pour activer des données vers des destinations, vous devez avoir réussi à vou
 
 1. Accédez à **[!UICONTROL Connexions et destinations]**, puis sélectionnez l’onglet **[!UICONTROL Catalogue]**.
 
-   ![Image affichant l’onglet Catalogue de destinations.](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
+   ![Image montrant l&#39;onglet Catalogue de destinations.](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
-1. Sélectionner **[!UICONTROL Activation des audiences]** sur la carte correspondant à la destination à laquelle vous souhaitez activer vos audiences, comme illustré dans l’image ci-dessous.
+1. Sélectionnez **[!UICONTROL Activer les audiences]** sur la carte correspondant à la destination vers laquelle vous souhaitez activer vos audiences, comme illustré dans l’image ci-dessous.
 
-   ![Image mettant en surbrillance le contrôle d’activation des audiences dans l’onglet Catalogue de destinations .](../assets/ui/activate-streaming-profile-destinations/activate-audiences-button.png)
+   ![Image mettant en surbrillance le contrôle Activer les audiences dans l’onglet Catalogue de destinations.](../assets/ui/activate-streaming-profile-destinations/activate-audiences-button.png)
 
-1. Sélectionnez la connexion de destination à utiliser pour activer vos audiences, puis sélectionnez **[!UICONTROL Suivant]**.
+1. Sélectionnez la connexion de destination que vous souhaitez utiliser pour activer vos audiences, puis sélectionnez **[!UICONTROL Suivant]**.
 
    ![Image montrant une sélection de deux destinations auxquelles vous pouvez vous connecter.](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
-1. Accédez à la section suivante pour [sélectionner vos audiences](#select-audiences).
+1. Passez à la section suivante pour [sélectionner vos audiences](#select-audiences).
 
 ## Sélectionner vos audiences {#select-audiences}
 
-Pour sélectionner les audiences que vous souhaitez activer vers la destination, utilisez les cases à cocher situées à gauche des noms d’audience, puis sélectionnez **[!UICONTROL Suivant]**.
+Pour sélectionner les audiences que vous souhaitez activer vers la destination, utilisez les cases à cocher à gauche des noms d’audience, puis sélectionnez **[!UICONTROL Suivant]**.
 
 Vous pouvez sélectionner plusieurs types d’audiences, selon leur origine :
 
-* **[!UICONTROL Segmentation Service]**: audiences générées dans Experience Platform par le service de segmentation. Voir [Documentation d’Audience Portal](../../segmentation/ui/audience-portal.md) pour plus d’informations.
-* **[!UICONTROL Chargement personnalisé]**: audiences générées en dehors de l’Experience Platform et chargées dans Platform sous la forme de fichiers CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur [import d&#39;une audience](../../segmentation/ui/audience-portal.md#import-audience).
-* Autres types d’audiences, provenant d’autres solutions Adobe, telles que [!DNL Audience Manager].
+* **[!UICONTROL Service de segmentation]** : audiences générées dans Experience Platform par le service de segmentation. Pour plus d’informations, consultez la [documentation d’Audience Portal](../../segmentation/ui/audience-portal.md) .
+* **[!UICONTROL Téléchargement personnalisé]** : audiences générées en dehors de l’Experience Platform et téléchargées dans Platform sous la forme de fichiers CSV. Pour en savoir plus sur les audiences externes, consultez la documentation sur l&#39; [import d&#39;une audience](../../segmentation/ui/audience-portal.md#import-audience).
+* Autres types d’audiences, provenant d’autres solutions d’Adobe, telles que [!DNL Audience Manager].
 
 ![Image mettant en surbrillance la sélection des cases à cocher à l’étape Sélectionner les audiences du workflow d’activation.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
 
 ## Sélectionner des attributs de profil {#select-attributes}
 
-Dans le **[!UICONTROL Mappage]** sélectionnez les attributs de profil à envoyer à la destination cible.
+À l’étape **[!UICONTROL Mapping]**, sélectionnez les attributs de profil à envoyer à la destination cible.
 
 1. Sur la page **[!UICONTROL Sélectionner des attributs]**, sélectionnez **[!UICONTROL Ajouter un nouveau champ]**.
 
-   ![Image mettant en surbrillance le contrôle Ajouter un nouveau champ dans l’étape de mappage.](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
+   ![Image mettant en surbrillance le bouton Ajouter un nouveau contrôle de champ dans l’étape de mappage.](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
 
 1. Sélectionnez la flèche située à droite de l’entrée **[!UICONTROL Champ de schéma]**.
 
@@ -89,9 +89,9 @@ Sur la page **[!UICONTROL Vérifier]**, vous pouvez voir un résumé de votre s�
 
 ### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
-[Évaluation des stratégies de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) n’est actuellement pas pris en charge dans les exportations vers les trois destinations d’entreprise : Amazon Kinesis, Azure Event Hubs et API HTTP.
+[L’évaluation de la stratégie de consentement](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) n’est actuellement pas prise en charge dans les exportations vers les trois destinations d’entreprise : Amazon Kinesis, Azure Event Hubs et API HTTP.
 
-Cela signifie que les profils qui n&#39;ont pas consenti à être ciblés *sont inclus* dans les exportations vers ces trois destinations.
+Cela signifie que les profils qui n’ont pas consenti à être ciblés *sont inclus* dans les exportations vers ces trois destinations.
 
 <!--
 
@@ -101,7 +101,7 @@ If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & 
 
 ### Vérifications des stratégies d’utilisation des données {#data-usage-policy-checks}
 
-Dans le **[!UICONTROL Réviser]** , Experience Platform recherche également les violations de stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la politique. Vous ne pouvez pas terminer le workflow d’activation de l’audience tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la résolution des violations de stratégie, reportez-vous à la section [violations de la stratégie d’utilisation des données](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) dans la section de documentation sur la gouvernance des données .
+À l’étape **[!UICONTROL Réviser]**, Experience Platform recherche également toutes les violations de stratégie d’utilisation des données. Vous trouverez ci-dessous un exemple de violation de la politique. Vous ne pouvez pas terminer le workflow d’activation de l’audience tant que vous n’avez pas résolu la violation. Pour plus d’informations sur la façon de résoudre les violations de stratégie, reportez-vous à la section [Violations de stratégie d’utilisation des données](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) de la documentation sur la gouvernance des données.
 
 ![violation de la politique de données](../assets/common/data-policy-violation.png)
 
@@ -111,11 +111,11 @@ En outre, au cours de cette étape, vous pouvez utiliser les filtres disponibles
 
 ![Enregistrement de l’écran montrant les filtres d’audience disponibles dans l’étape de révision.](../assets/ui/activate-streaming-profile-destinations/filter-audiences-review-step.gif)
 
-Si vous êtes satisfait de votre sélection et qu’aucune violation de stratégie n’a été détectée, sélectionnez **[!UICONTROL Terminer]** pour confirmer votre sélection et commencer à envoyer des données à la destination.
+Si votre sélection vous satisfait et qu’aucune violation de stratégie n’a été détectée, sélectionnez **[!UICONTROL Terminer]** pour confirmer votre sélection et commencer à envoyer les données à la destination.
 
 ## Vérification de l’activation de l’audience {#verify}
 
-Votre exportation [!DNL Experience Platform] Les données arrivent dans votre destination cible au format JSON. Par exemple, l’événement ci-dessous contient l’attribut d’adresse email d’un profil qui s’est qualifié pour une certaine audience et qui a quitté une autre audience. Les identités de ce prospect sont les suivantes : `ECID` et `email_lc_sha256`.
+Vos données [!DNL Experience Platform] exportées arrivent dans votre destination cible au format JSON. Par exemple, l’événement ci-dessous contient l’attribut d’adresse email d’un profil qui s’est qualifié pour une certaine audience et qui a quitté une autre audience. Les identités de ce prospect sont `ECID` et `email_lc_sha256`.
 
 ```json
 {

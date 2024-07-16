@@ -14,7 +14,7 @@ ht-degree: 45%
 
 # Configuration de Platform Debugger
 
-Vous pouvez configurer certains aspects de l’apparence et du fonctionnement de Adobe Experience Platform Debugger.
+Vous pouvez configurer certains aspects de l’apparence et du fonctionnement de l’Adobe Experience Platform Debugger.
 
 ![](images/settings.jpg)
 
@@ -24,7 +24,7 @@ Une fois Platform Debugger ouvert, vous pouvez sélectionner l’apparence souha
 
 ## Réinitialiser
 
-Sélectionner **[!UICONTROL Réinitialisation de l’ensemble des données et paramètres]** pour revenir à l’effacement de toutes les données et aux paramètres par défaut.
+Sélectionnez **[!UICONTROL Réinitialiser toutes les données et tous les paramètres]** pour revenir à l’effacement de toutes les données et revenir aux paramètres par défaut.
 
 ## Verrouiller Experience Platform Debugger sur une page
 

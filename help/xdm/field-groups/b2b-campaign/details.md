@@ -9,11 +9,11 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL Détails des campagnes commerciales XDM] groupe de champs de schéma
+# [!UICONTROL  {XDM Business Campaign Details] groupe de champs de schéma
 
-[!UICONTROL Détails des campagnes commerciales XDM] est un groupe de champs de schéma standard pour la variable [[!UICONTROL Campagne commerciale XDM] class](../../classes/b2b/business-campaign.md), qui capture des informations détaillées sur une campagne d’entreprise.
+[!UICONTROL XDM Business Campaign Details] est un groupe de champs de schéma standard pour la [[!UICONTROL classe XDM Business Campaign]](../../classes/b2b/business-campaign.md), qui capture des informations détaillées sur une campagne commerciale.
 
-![Structure du groupe de champs Détails de la campagne XDM tel qu’il apparaît dans l’interface utilisateur](../../images/field-groups/b2b/business-campaign-details.png)
+![Structure du groupe de champs Détails de campagne XDM Business telle qu’elle apparaît dans l’interface utilisateur](../../images/field-groups/b2b/business-campaign-details.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
@@ -29,7 +29,7 @@ ht-degree: 5%
 | `expectedResponse` | [!UICONTROL Chaîne] | Réponse attendue pour la campagne. |
 | `integrationPartnerName` | [!UICONTROL Chaîne] | Nom du partenaire qui a intégré cette campagne. |
 | `isActive` | [!UICONTROL Booléen] | Indique si cette campagne est active. |
-| `isDeleted` | [!UICONTROL Booléen] | Indique si cette campagne a été supprimée dans Marketo Engage.<br><br>Lors de l’utilisation de la variable [Connecteur source Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tous les enregistrements supprimés dans Marketo sont automatiquement répercutés dans Real-time Customer Profile. Cependant, les enregistrements relatifs à ces profils peuvent toujours persister dans le lac de données. En définissant `isDeleted` to `true`, vous pouvez utiliser ce champ pour filtrer les enregistrements qui ont été supprimés de vos sources lors de l’interrogation du lac de données. |
+| `isDeleted` | [!UICONTROL Booléen] | Indique si cette campagne a été supprimée dans Marketo Engage.<br><br>Lors de l’utilisation du [connecteur source Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tous les enregistrements supprimés dans Marketo sont automatiquement répercutés dans Real-time Customer Profile. Cependant, les enregistrements relatifs à ces profils peuvent toujours persister dans le lac de données. En définissant `isDeleted` sur `true`, vous pouvez utiliser le champ pour filtrer les enregistrements qui ont été supprimés de vos sources lors de l’interrogation du lac de données. |
 | `lastActivityDate` | [!UICONTROL DateTime] | Horodatage ISO 8601 de la dernière activité associée à la campagne. |
 | `timeZone` | [!UICONTROL Chaîne] | Fuseau horaire dans lequel la campagne fonctionne. |
 | `timeZoneDelivery` | [!UICONTROL Chaîne] | Fuseau horaire de la diffusion dans laquelle la campagne opère. |

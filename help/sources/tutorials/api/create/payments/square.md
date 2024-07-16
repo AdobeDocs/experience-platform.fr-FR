@@ -5,8 +5,8 @@ description: Découvrez comment connecter Square à Adobe Experience Platform à
 exl-id: 82c1d513-3b06-4ce9-b637-2c5a268da506
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '542'
-ht-degree: 48%
+source-wordcount: '536'
+ht-degree: 45%
 
 ---
 
@@ -21,9 +21,9 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
-* [Environnements de test](../../../../../sandboxes/home.md): [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance de Platform unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL Square] en utilisant la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL Square] à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
@@ -31,14 +31,14 @@ Pour connecter [!DNL Flow Service] à [!DNL Square], vous devez fournir des vale
 
 | Informations d’identification | Description |
 | --- | --- |
-| `host` | L’URL de la variable [!DNL Square] instance. |
-| `clientId` | L’ID client associé à votre [!DNL Square] compte . |
-| `clientSecret` | Le secret client associé à votre [!DNL Square] compte . |
-| `accessToken` | Le jeton d’accès est utilisé pour authentifier votre [!DNL Square] compte avec authentification OAuth 2.0. Le jeton d’accès peut être obtenu à partir de [!DNL Square]. |
+| `host` | URL de l’instance [!DNL Square]. |
+| `clientId` | L’ID client associé à votre compte [!DNL Square]. |
+| `clientSecret` | Le secret client associé à votre compte [!DNL Square]. |
+| `accessToken` | Le jeton d’accès est utilisé pour authentifier votre compte [!DNL Square] avec l’authentification OAuth 2.0. Le jeton d’accès peut être obtenu à partir de [!DNL Square]. |
 | `refreshToken` | Le jeton d’actualisation est utilisé pour générer de nouveaux jetons d’accès une fois que votre jeton d’accès actuel expire. Le jeton d’actualisation peut être obtenu à partir de [!DNL Square]. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Square] est : `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5` |
 
-Pour plus d’informations sur ces informations d’identification et sur la manière de les obtenir, reportez-vous à la section [[!DNL Square] documentation sur OAuth](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens).
+Pour plus d’informations sur ces informations d’identification et sur la manière de les obtenir, consultez la [[!DNL Square] documentation sur OAuth](https://developer.squareup.com/docs/oauth-api/receive-and-manage-tokens).
 
 ### Utiliser les API Platform
 
@@ -90,16 +90,16 @@ curl -X POST \
 
 | Propriété | Description |
 | --------- | ----------- |
-| `auth.params.host` | L’URL de la variable [!DNL Square] instance. |
-| `auth.params.clientId` | L’ID client associé à votre [!DNL Square] compte . |
-| `auth.params.clientSecret` | Le secret client associé à votre [!DNL Square] compte . |
-| `auth.params.accessToken` | Le jeton d’accès est utilisé pour authentifier votre [!DNL Square] compte avec authentification OAuth 2.0. Le jeton d’accès peut être obtenu à partir de [!DNL Square]. |
+| `auth.params.host` | URL de l’instance [!DNL Square]. |
+| `auth.params.clientId` | L’ID client associé à votre compte [!DNL Square]. |
+| `auth.params.clientSecret` | Le secret client associé à votre compte [!DNL Square]. |
+| `auth.params.accessToken` | Le jeton d’accès est utilisé pour authentifier votre compte [!DNL Square] avec l’authentification OAuth 2.0. Le jeton d’accès peut être obtenu à partir de [!DNL Square]. |
 | `auth.params.refreshToken` | Le jeton d’actualisation est utilisé pour générer de nouveaux jetons d’accès une fois que votre jeton d’accès actuel expire. Le jeton d’actualisation peut être obtenu à partir de [!DNL Square]. |
-| `connectionSpec.id` | Le [!DNL Square] identifiant de spécification de connexion : `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5`. |
+| `connectionSpec.id` | ID de spécification de connexion [!DNL Square] : `2acf109f-9b66-4d5e-bc18-ebb2adcff8d5`. |
 
 **Réponse**
 
-Une réponse réussie renvoie la nouvelle connexion de , y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
+Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
 
 ```json
 {
@@ -110,4 +110,4 @@ Une réponse réussie renvoie la nouvelle connexion de , y compris son identifia
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une [!DNL Square] connexion à l’aide de la fonction [!DNL Flow Service] et ont obtenu la valeur d’identifiant unique de la connexion. Vous pouvez utiliser cet identifiant dans le tutoriel suivant lorsque vous apprendrez à [explorer l’application de paiements à l’aide de l’API Flow Service](../../explore/payments.md).
+En suivant ce tutoriel, vous avez créé une connexion [!DNL Square] à l’aide de l’API [!DNL Flow Service] et obtenu la valeur d’identifiant unique de la connexion. Vous pouvez utiliser cet identifiant dans le tutoriel suivant lorsque vous apprendrez à [explorer l&#39;application de paiements à l&#39;aide de l&#39;API Flow Service](../../explore/payments.md).

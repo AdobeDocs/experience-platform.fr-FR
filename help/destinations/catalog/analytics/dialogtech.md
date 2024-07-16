@@ -1,20 +1,20 @@
 ---
 keywords: extension dialogtech;dialogtech;destination dialogTech;DialogTech;DialogTech SourceTrak
 title: Extension DialogTech
-description: L’extension DialogTech est une destination d’analyse de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension DialogTech est une destination d’analyse de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 9cab2f99-bab5-48b2-b893-f974a1886407
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '414'
-ht-degree: 88%
+source-wordcount: '408'
+ht-degree: 91%
 
 ---
 
 # Extension [!DNL DialogTech] {#dialogtech-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-[!DNL DialogTech] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez le [site web de Dialogtech](https://www.dialogtech.com/).
+[!DNL DialogTech] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez le [site web de Dialogtech](https://www.dialogtech.com/).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -28,7 +28,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL DialogTech] extension :
+Pour installer l’extension [!DNL DialogTech], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

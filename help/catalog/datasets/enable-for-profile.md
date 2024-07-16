@@ -19,8 +19,8 @@ Ce tutoriel décrit le processus d’activation d’un jeu de données en vue de
    - [Créer un nouveau jeu de données](#create-a-dataset-enabled-for-profile-and-identity)
    - [Configurer un jeu de données existant](#configure-an-existing-dataset)
 1. [Ingestion de données dans le jeu de données](#ingest-data-into-the-dataset)
-1. [Confirmation de l’ingestion des données par Real-time Customer Profile](#confirm-data-ingest-by-real-time-customer-profile)
-1. [Confirmation de l’ingestion des données par Identity Service](#confirm-data-ingest-by-identity-service)
+1. [ Confirmation de l’ingestion des données par Real-Time Customer Profile ](#confirm-data-ingest-by-real-time-customer-profile)
+1. [Confirmation de l’ingestion des données par le service d’identités](#confirm-data-ingest-by-identity-service)
 
 ## Prise en main
 
@@ -204,7 +204,7 @@ Le corps de la requête comprend un `path` à deux types de balises, `unifiedPro
 
 **Réponse**
 
-Une requête PATCH réussie renvoie un statut HTTP 200 (OK) et un tableau contenant l’identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la requête PATCH. Les balises `unifiedProfile` et `unifiedIdentity` ont maintenant été ajoutées, et le jeu de données est activé pour une utilisation dans Profile et Identity Service.
+Une requête PATCH réussie renvoie un statut HTTP 200 (OK) et un tableau contenant l’identifiant du jeu de données mis à jour. Cet identifiant doit correspondre à celui envoyé dans la requête PATCH. Les balises `unifiedProfile` et `unifiedIdentity` ont maintenant été ajoutées, et le jeu de données est activé pour une utilisation dans le profil et le service dʼidentités.
 
 ```json
 [
@@ -225,4 +225,4 @@ Lors du premier chargement de données vers un nouveau jeu de données ou dans l
 
 ## Confirmer l’ingestion des données par le Service d’identités {#confirm-data-ingest-by-identity-service}
 
-Chaque fragment de données ingéré contenant plusieurs identités crée un lien dans votre graphique d’identités privé. Pour plus d’informations sur les graphiques d’identités et sur l’accès aux données d’identité, veuillez commencer par lire la [présentation d’Identity Service](../../identity-service/home.md).
+Chaque fragment de données ingéré contenant plusieurs identités crée un lien dans votre graphique d’identités privé. Pour plus d’informations sur les graphiques d’identités et sur l’accès aux données d’identité, veuillez commencer par lire la [présentation du service d’identités](../../identity-service/home.md).

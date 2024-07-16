@@ -12,7 +12,7 @@ ht-degree: 78%
 
 # Autorisation OAuth 2
 
-Destination SDK prend en charge plusieurs méthodes d’autorisation pour votre destination. Parmi celles-ci, vous pouvez vous authentifier à votre destination en utilisant la variable [Structure d’autorisation OAuth 2](https://tools.ietf.org/html/rfc6749).
+Destination SDK prend en charge plusieurs méthodes d’autorisation pour votre destination. Parmi celles-ci, vous pouvez vous authentifier à votre destination à l’aide de la [structure d’autorisation OAuth 2](https://tools.ietf.org/html/rfc6749).
 
 Cette page décrit les différents flux d’autorisation OAuth 2 pris en charge par Destination SDK et fournit des instructions pour configurer l’autorisation OAuth 2 pour votre destination.
 
@@ -55,7 +55,7 @@ Dans le cadre de cette configuration, vous avez besoin des adresses URL de redir
 
 ### À faire dans Destination SDK {#to-do-in-destination-sdk}
 
-Pour configurer l’autorisation OAuth 2 pour votre destination dans Experience Platform, vous devez ajouter les détails OAuth 2 à la variable [configuration de destination](../../authoring-api/destination-configuration/create-destination-configuration.md), sous `customerAuthenticationConfigurations` . Pour obtenir des exemples détaillés, consultez l’[authentification du client](../../functionality/destination-configuration/customer-authentication.md). Vous trouverez ci-dessous des instructions spécifiques sur les champs à ajouter à votre modèle de configuration, en fonction de votre type d’octroi d’autorisation OAuth 2.
+Pour configurer l’autorisation OAuth 2 pour votre destination en Experience Platform, vous devez ajouter les détails OAuth 2 à la [configuration de destination](../../authoring-api/destination-configuration/create-destination-configuration.md), sous le paramètre `customerAuthenticationConfigurations` . Pour obtenir des exemples détaillés, consultez l’[authentification du client](../../functionality/destination-configuration/customer-authentication.md). Vous trouverez ci-dessous des instructions spécifiques sur les champs à ajouter à votre modèle de configuration, en fonction de votre type d’octroi d’autorisation OAuth 2.
 
 ## Types d’octroi OAuth 2 pris en charge {#oauth2-grant-types}
 
@@ -93,7 +93,7 @@ Si la destination prend en charge un flux de code d’autorisation OAuth 2.0 st
 
 {style="table-layout:auto"}
 
-Pour configurer cette méthode d’autorisation pour votre destination, ajoutez les lignes suivantes à votre configuration, lorsque vous [créer une configuration de destination ;](../../authoring-api/destination-configuration/create-destination-configuration.md):
+Pour configurer cette méthode d’autorisation pour votre destination, ajoutez les lignes suivantes à votre configuration, lorsque vous [créez une configuration de destination](../../authoring-api/destination-configuration/create-destination-configuration.md) :
 
 ```json
 {
@@ -129,7 +129,7 @@ Pour configurer cette méthode d’autorisation pour votre destination, ajoutez 
 
 ## OAuth 2 avec octroi de mot de passe
 
-Pour octroyer le mot de passe OAuth 2 (lisez la section [Spécifications des normes RFC](https://tools.ietf.org/html/rfc6749#section-4.3)), Experience Platform demande le nom d’utilisateur et le mot de passe de l’utilisateur. Dans le flux d’autorisation, l’Experience Platform échange ces informations d’identification pour un jeton d’accès et, éventuellement, un jeton d’actualisation.
+Pour octroyer le mot de passe OAuth 2 (lisez la section [Spécifications des normes RFC](https://tools.ietf.org/html/rfc6749#section-4.3)), Experience Platform demande le nom d’utilisateur et le mot de passe de l’utilisateur. Dans le flux d’autorisation, Experience Platform exchange ces informations d’identification pour un jeton d’accès et éventuellement un jeton d’actualisation.
 Adobe utilise les entrées standard ci-dessous pour simplifier la configuration de destination, avec la possibilité de remplacer des valeurs :
 
 | Octroi OAuth 2 | Entrées | Sorties |
@@ -142,7 +142,7 @@ Adobe utilise les entrées standard ci-dessous pour simplifier la configuration 
 >
 > Vous n’avez pas besoin d’ajouter de paramètres pour `username` et `password` dans la configuration ci-dessous. Quand vous ajoutez `"grant": "OAUTH2_PASSWORD"` dans la configuration de destination, le système demande à l’utilisateur de fournir un nom d’utilisateur et un mot de passe dans l’interface utilisateur d’Experience Platform, quand il s’authentifie à la destination.
 
-Pour configurer cette méthode d’autorisation pour votre destination, ajoutez les lignes suivantes à votre configuration, lorsque vous [créer une configuration de destination ;](../../authoring-api/destination-configuration/create-destination-configuration.md):
+Pour configurer cette méthode d’autorisation pour votre destination, ajoutez les lignes suivantes à votre configuration, lorsque vous [créez une configuration de destination](../../authoring-api/destination-configuration/create-destination-configuration.md) :
 
 ```json
 {
@@ -180,7 +180,7 @@ Vous pouvez configurer des informations d’identification du client OAuth 2 (c
 
 {style="table-layout:auto"}
 
-Pour configurer cette méthode d’autorisation pour votre destination, ajoutez les lignes suivantes à votre configuration, lorsque vous [créer une configuration de destination ;](../../authoring-api/destination-configuration/create-destination-configuration.md):
+Pour configurer cette méthode d’autorisation pour votre destination, ajoutez les lignes suivantes à votre configuration, lorsque vous [créez une configuration de destination](../../authoring-api/destination-configuration/create-destination-configuration.md) :
 
 ```json
 {
@@ -216,7 +216,7 @@ Pour configurer cette méthode d’autorisation pour votre destination, ajoutez 
 
 Les configurations décrites dans les sections ci-dessus décrivent les octrois OAuth 2 standard. Cependant, le système conçu par Adobe offre une certaine flexibilité afin de vous permettre d’utiliser des paramètres personnalisés pour n’importe quelle variante de l’octroi OAuth 2. Pour personnaliser les paramètres OAuth 2 standard, utilisez les paramètres `authenticationDataFields`, comme illustrés dans les exemples ci-dessous.
 
-### Exemple 1 : utilisation `authenticationDataFields` pour capturer les informations provenant de la réponse d’autorisation {#example-1}
+### Exemple 1 : utilisation de `authenticationDataFields` pour capturer des informations provenant de la réponse d’autorisation {#example-1}
 
 Dans cet exemple, une plateforme de destination dispose de jetons d’actualisation qui expirent après un certain temps. Dans ce cas, le partenaire configure le champ personnalisé `refreshTokenExpiration` pour obtenir l’expiration du jeton d’actualisation à partir du champ `refresh_token_expires_in` dans la réponse de l’API.
 

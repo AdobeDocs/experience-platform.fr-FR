@@ -15,11 +15,11 @@ ht-degree: 7%
 >[!IMPORTANT]
 >
 > * Adobe vous recommande de mettre cette page en signet et de la revoir tous les trois mois pour rechercher les dernières adresses IP. Adobe ne fournit pas de notification pour les nouvelles plages d’adresses IP.
-> * Bien qu’Adobe prenne en charge les exportations de données vers les serveurs SFTP, les emplacements de stockage dans le cloud recommandés pour exporter des données sont les suivants : [!DNL Amazon S3] et [!DNL Azure Blob].
+> * Bien qu’Adobe prenne en charge les exportations de données vers les serveurs SFTP, les emplacements de stockage dans le cloud recommandés pour exporter des données sont [!DNL Amazon S3] et [!DNL Azure Blob].
 
 ## Vue d’ensemble {#overview}
 
-Cette page fournit des adresses IP que vous pouvez ajouter à votre liste autorisée afin d’exporter en toute sécurité des données de l’Experience Platform vers votre [Serveur SFTP](../destinations/catalog/cloud-storage/sftp.md).
+Cette page fournit des adresses IP que vous pouvez ajouter à votre liste autorisée pour exporter en toute sécurité des données de l’Experience Platform vers votre [serveur SFTP](../destinations/catalog/cloud-storage/sftp.md).
 
 Vous pouvez définir des contrôles d’accès réseau via votre pare-feu réseau. En spécifiant la plage d’adresses IP appropriée, vous pouvez autoriser le trafic pour le service de transfert de données.
 

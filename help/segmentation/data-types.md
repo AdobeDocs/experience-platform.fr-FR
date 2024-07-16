@@ -5,8 +5,8 @@ description: Tous les types de données de modèle de données d’expérience (
 exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '490'
-ht-degree: 57%
+source-wordcount: '478'
+ht-degree: 52%
 
 ---
 
@@ -16,7 +16,7 @@ Tous les types de données de modèle de données d’expérience (XDM) sont pri
 
 ## Données de chaîne
 
-Les définitions de utilisent des données de chaîne pour définir des contraintes non numériques pour les audiences de segment, telles que « nom du pays » ou « niveau du programme de fidélité ».
+Les définitions de segment utilisent des données de chaîne pour définir des contraintes non numériques pour les audiences, telles que &quot;nom du pays&quot; ou &quot;niveau du programme de fidélité&quot;.
 
 Les données de chaîne sont incluses dans les définitions de segment à l’aide d’instructions logiques, inclusives/exclusives et comparatives. Une fois qu’un attribut de chaîne est ajouté à votre définition de segment, vous pouvez utiliser des instructions appropriées à la chaîne pour l’évaluer par rapport à d’autres champs de chaîne.
 
@@ -37,7 +37,7 @@ Les données de date vous permettent d’attribuer un contexte temporel à vos d
 
 ## Événements Experience
 
-En tant que schéma Adobe Experience Platform, [!DNL XDM ExperienceEvents] enregistrer les interactions client explicites et implicites avec ; [!DNL Platform]les applications intégrées, y compris un instantané du système au moment de l’interaction. [!DNL ExperienceEvents] sont des enregistrements factuels. Ainsi, il s’agit d’une source de données disponible lors de la définition de segment.
+En tant que schéma Adobe Experience Platform, [!DNL XDM ExperienceEvents] enregistre les interactions client explicites et implicites avec les applications intégrées à [!DNL Platform], y compris un instantané du système au moment de l’interaction. [!DNL ExperienceEvents] sont des enregistrements de faits. Ainsi, il s’agit d’une source de données disponible lors de la définition de segment.
 
 Comme le montre le tableau ci-dessous, les données d’événement sont générées à l’aide de mots-clés qui aident à affiner le comportement des événements et à spécifier des attributs d’événement.
 
@@ -52,11 +52,11 @@ Comme le montre le tableau ci-dessous, les données d’événement sont génér
 
 Les audiences externes peuvent également être utilisées comme composants d’une nouvelle définition de segment, en ajoutant leurs règles d’attributs aux nouvelles définitions de segment.
 
-Actuellement, seule Adobe Audience Manager est prise en charge en tant qu’audience externe, avec des sources supplémentaires activées à l’avenir. Vous trouverez plus d’informations sur l’utilisation des audiences Adobe Audience Manager avec Platform dans la section [guide de partage d’audience dans la documentation de Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr).
+Actuellement, seule Adobe Audience Manager est prise en charge en tant qu’audience externe, avec des sources supplémentaires activées à l’avenir. Vous trouverez plus d’informations sur l’utilisation des audiences Adobe Audience Manager avec Platform dans le [guide de partage d’audience dans la documentation Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr).
 
 ### Partage des définitions de segment
 
-Les définitions de segment créées dans Platform peuvent être utilisées dans d’autres [Services principaux Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=fr). Pour activer cette fonctionnalité, vous devez contacter votre architecte de solution ou votre consultant.
+Les définitions de segment créées dans Platform peuvent être utilisées dans d’autres [services principaux Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=fr). Pour activer cette fonctionnalité, vous devez contacter votre architecte de solution ou votre consultant.
 
 ## Autres types de données
 

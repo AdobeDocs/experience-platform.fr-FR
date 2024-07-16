@@ -6,7 +6,7 @@ exl-id: 0358a73b-9f4a-4362-a7ed-e49ece6e5f02
 source-git-commit: 57d3e136902201f9ba9bd2f427ebe0f876900671
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 34%
+ht-degree: 29%
 
 ---
 
@@ -29,4 +29,4 @@ Actuellement, Platform prend en charge les destinations d’enquête répertori�
 * [Extension Foresee](./foresee.md)
 * [Extension InMoment](./inmoment.md)
 * [Extension Website Feedback de Qualtrics](./qualtrics.md)
-* [Extension Web Intercept Surveys - QuestionPro](./web-intercept-surveys.md)
+* [Web Intercept Surveys - extension QuestionPro](./web-intercept-surveys.md)

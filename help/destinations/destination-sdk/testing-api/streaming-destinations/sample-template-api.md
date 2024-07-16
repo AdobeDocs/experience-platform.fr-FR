@@ -3,8 +3,8 @@ description: Découvrez comment utiliser l’API de test de destination pour gé
 title: Génération d’un modèle type de transformation des messages
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: ht
-source-wordcount: '375'
+workflow-type: tm+mt
+source-wordcount: '376'
 ht-degree: 100%
 
 ---

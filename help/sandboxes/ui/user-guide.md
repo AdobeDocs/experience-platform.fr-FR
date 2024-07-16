@@ -49,7 +49,7 @@ Une fois qu’un sandbox est sélectionné, l’écran actualise le sandbox que 
 
 >[!NOTE]
 >
->La création d’un nouvel environnement de test nécessite que vous l’ajoutiez à un rôle dans [[!UICONTROL Autorisations]](../../access-control/abac/ui/permissions.md) avant de pouvoir commencer à l’utiliser. Pour savoir comment configurer un environnement de test pour un rôle, reportez-vous à la section [gestion des environnements de test pour un rôle](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) la documentation.
+>La création d’un nouvel environnement de test nécessite que vous l’ajoutiez à un rôle dans [[!UICONTROL Permissions]](../../access-control/abac/ui/permissions.md) avant de pouvoir commencer à l’utiliser. Pour savoir comment configurer un environnement de test pour un rôle, reportez-vous à la documentation [gestion des environnements de test pour un rôle](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role) .
 
 La vidéo suivante présente un aperçu rapide de l’utilisation des sandbox dans Experience Platform.
 
@@ -88,15 +88,15 @@ Lorsque vous avez terminé de créer le sandbox, actualisez la page pour que le 
 
 La composition de l’audience n’est actuellement pas intégrée à la fonctionnalité de réinitialisation des environnements de test. Par conséquent, les audiences doivent être supprimées manuellement avant d’effectuer la réinitialisation des environnements de test.
 
-Sélectionner **[!UICONTROL Audiences]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Compositions]**.
+Sélectionnez **[!UICONTROL Audiences]** dans le volet de navigation de gauche, puis **[!UICONTROL Compositions]**.
 
-![La variable [!UICONTROL Compositions] dans le [!UICONTROL Audiences] workspace.](../images/ui/audiences.png)
+![Onglet [!UICONTROL Compositions] dans l’espace de travail [!UICONTROL Audiences].](../images/ui/audiences.png)
 
 Sélectionnez ensuite les points de suspension (`...`) en regard de la première audience, puis sélectionnez **[!UICONTROL Supprimer]**.
 
-![Le menu Audience met en surbrillance la variable [!UICONTROL Supprimer] .](../images/ui/delete-composition.png)
+![Le menu de l&#39;audience met en surbrillance l&#39;option [!UICONTROL Supprimer].](../images/ui/delete-composition.png)
 
-Une confirmation de suppression réussie s’affiche et vous revenez au **[!UICONTROL Compositions]** .
+Une confirmation de suppression réussie s’affiche et vous êtes renvoyé à l’onglet **[!UICONTROL Compositions]** .
 
 Répétez les étapes ci-dessus avec toutes vos compositions. Toutes les audiences seront alors supprimées de l’inventaire des audiences. Une fois toutes les audiences supprimées, vous pouvez continuer à réinitialiser l’environnement de test.
 

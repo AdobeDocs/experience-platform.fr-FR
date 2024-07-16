@@ -28,7 +28,7 @@ La fenêtre contextuelle **[!UICONTROL Propriétés de la composition]** s’aff
 
 >[!NOTE]
 >
->Si vous **not** Si vous donnez un titre à votre composition, celle-ci aura le titre &quot;Composition&quot; suivi de la date et de l’heure de création par défaut. De plus, chaque composition **must** ont son propre nom unique.
+>Si vous n’attribuez pas **non** à votre composition un titre, celui-ci sera &quot;Composition&quot; suivi par la date et l’heure de création par défaut. De plus, chaque composition **must** possède son propre nom unique.
 
 Après avoir mis à jour les détails de votre composition, sélectionnez **[!UICONTROL Enregistrer]** pour confirmer ces mises à jour. La zone de travail de composition de l’audience réapparaît.
 
@@ -54,9 +54,9 @@ Pour ajouter des audiences au bloc Audience : Sélectionnez **[!UICONTROL Ajout
 
 >[!IMPORTANT]
 >
->Veuillez noter que **only** les audiences définies à l’aide de la stratégie de fusion par défaut s’affichent.
+>Notez que les audiences **uniquement** définies à l’aide de la stratégie de fusion par défaut s’affichent.
 >
->En outre, uniquement **publié** les audiences créées à l’aide du créateur de segments peuvent être utilisées. Les audiences créées à l’aide de la composition de l’audience et les audiences générées en externe sont **not** disponible.
+>En outre, seules les audiences **publiées** créées à l’aide du créateur de segments peuvent être utilisées. Les audiences créées à l’aide de la composition d’audience et des audiences générées en externe sont **non** disponibles.
 
 Une liste d’audiences s’affiche. Sélectionnez les audiences que vous souhaitez inclure, puis **[!UICONTROL Ajouter]** pour les ajouter à votre bloc d’audience.
 
@@ -106,7 +106,7 @@ Si vous excluez par audience, vous pouvez sélectionner les audiences à exclure
 
 >[!IMPORTANT]
 >
->Uniquement **publié** les audiences créées à l’aide du créateur de segments peuvent être utilisées. Les audiences créées à l’aide de la composition de l’audience et les audiences générées en externe sont **not** disponible.
+>Seules les audiences **publiées** créées à l’aide du créateur de segments peuvent être utilisées. Les audiences créées à l’aide de la composition d’audience et des audiences générées en externe sont **non** disponibles.
 
 Une liste d’audiences s’affiche. Sélectionnez **[!UICONTROL Ajouter]** pour ajouter les audiences que vous souhaitez exclure à votre bloc d’exclusion.
 
@@ -124,7 +124,7 @@ Une liste d’attributs de profil s’affiche. Sélectionnez le type d’attribu
 
 >[!IMPORTANT]
 >
->Lorsque vous excluez par attribut, vous pouvez uniquement spécifier **one** à exclure. L’utilisation de n’importe quel séparateur, tel qu’une virgule ou un point-virgule, n’entraîne que l’exclusion de cette valeur exacte. Par exemple, la définition de la valeur sur `red, blue` se traduira par l’exclusion du terme `red, blue` à partir de l’attribut , mais **not** en excluant soit le terme `red` ou `blue`.
+>Lors de l’exclusion par attribut, vous ne pouvez spécifier que la valeur **one** à exclure. L’utilisation de n’importe quel séparateur, tel qu’une virgule ou un point-virgule, n’entraîne que l’exclusion de cette valeur exacte. Par exemple, si vous définissez la valeur sur `red, blue`, le terme `red, blue` sera exclu de l’attribut, mais **not** entraînera l’exclusion du terme `red` ou `blue`.
 
 ## [!UICONTROL Enrichir] {#enrich-block}
 
@@ -226,13 +226,13 @@ Une liste d’attributs de profil s’affiche. Dans cette fenêtre contextuelle,
 
 Après avoir sélectionné l’attribut, vous pouvez sélectionner l’ordre de classement. Il s’agit d’un ordre croissant (du plus bas au plus élevé) ou décroissant (du plus élevé au plus bas).
 
-En outre, vous pouvez limiter le nombre de profils renvoyés en activant la variable **[!UICONTROL Ajout d’une limite de profil]** bascule. Lorsque ce bouton est activé, vous pouvez définir le nombre maximal de profils renvoyés dans la variable **[!UICONTROL Profils inclus]** champ .
+De plus, vous pouvez limiter le nombre de profils renvoyés en activant le bouton d’activation/désactivation **[!UICONTROL Ajouter la limite de profil]** . Lorsque ce bouton est activé, vous pouvez définir le nombre maximal de profils renvoyés dans le champ **[!UICONTROL Profils inclus]**.
 
-![Le bouton d&#39;activation/désactivation Ajouter une limite de profil est mis en surbrillance, ce qui permet de limiter le nombre de profils renvoyés.](../images/ui/audience-composition/add-profile-limit.png)
+![Le bouton bascule Ajouter la limite du profil est mis en surbrillance, ce qui vous permet de limiter le nombre de profils renvoyés.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Fractionner] {#split-block}
 
-Le type de bloc **[!UICONTROL Fractionner]** vous permet de fractionner votre nouvelle audience en différentes sous-audiences. Vous pouvez fractionner cette audience en fonction d’un pourcentage ou d’un attribut. Lors de la division de votre audience en sous-audiences, cette division est **persistant**. Cela signifie que le profil sera dans la même sous-audience pour chaque évaluation.
+Le type de bloc **[!UICONTROL Fractionner]** vous permet de fractionner votre nouvelle audience en différentes sous-audiences. Vous pouvez fractionner cette audience en fonction d’un pourcentage ou d’un attribut. Lors de la division de votre audience en sous-audiences, cette division est **persistante**. Cela signifie que le profil sera dans la même sous-audience pour chaque évaluation.
 
 Pour ajouter un bloc **[!UICONTROL Fractionner]**, sélectionnez l’icône **+**, puis **[!UICONTROL Fractionner]**.
 

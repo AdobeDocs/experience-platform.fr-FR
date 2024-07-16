@@ -6,7 +6,7 @@ description: Le service de balisage des couleurs, lorsqu’une image est donnée
 exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
 source-git-commit: fd8891bdc7d528e327d2a72c2427f7bbc6dc8a03
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '662'
 ht-degree: 6%
 
 ---
@@ -17,13 +17,13 @@ Le service de balisage des couleurs, lorsqu’une image est donnée, peut calcul
 
 **Balisage des couleurs (image complète)**
 
-Cette méthode extrait un histogramme des couleurs sur l’ensemble de l’image.
+Cette méthode extrait un histogramme des couleurs sur toute l’image.
 
 **Balisage des couleurs (avec masque)**
 
 Cette méthode utilise un extracteur de premier plan basé sur l’apprentissage profond pour identifier les objets au premier plan. Une fois les objets de premier plan extraits, un histogramme est calculé sur les couleurs dominantes pour les zones de premier plan et d’arrière-plan, ainsi que pour l’image entière.
 
-**Extraction des tons**
+**Extraction de tonalité**
 
 Outre les variantes mentionnées ci-dessus, vous pouvez configurer le service pour récupérer un histogramme des tons pour :
 
@@ -32,7 +32,7 @@ Outre les variantes mentionnées ci-dessus, vous pouvez configurer le service po
 
 L’image suivante a été utilisée dans l’exemple illustré dans ce document :
 
-![image de test](../images/QQAsset1.jpg)
+![image test](../images/QQAsset1.jpg)
 
 **Format d’API**
 
@@ -81,15 +81,15 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 -F 'infile_1=@1431RDMJANELLERAWJACKE_2.jpg'
 ```
 
-**Réponse : variante de l’image complète**
+**Réponse - variante d’image complète**
 
-Une réponse réussie renvoie les détails des couleurs extraites. Chaque couleur est représentée par une `feature_value` qui contient les informations suivantes :
+Une réponse réussie renvoie les détails des couleurs extraites. Chaque couleur est représentée par une clé `feature_value` qui contient les informations suivantes :
 
 - Nom de la couleur
-- Pourcentage d’affichage de cette couleur par rapport à l’image
-- Valeur RGB de la couleur
+- Pourcentage de cette couleur par rapport à l’image
+- La valeur RGB de la couleur
 
-`"White":{"coverage":0.5834,"rgb":{"red":254,"green":254,"blue":243}}`signifie que la couleur trouvée est blanche, que l’on trouve dans 58,34 % de l’image et qu’elle a une valeur de RGB moyenne de 254, 254, 243.
+`"White":{"coverage":0.5834,"rgb":{"red":254,"green":254,"blue":243}}`signifie que la couleur trouvée est blanche, que l’on trouve dans 58,34 % de l’image et qu’elle a une valeur de RGB moyenne de 254 254 243.
 
 ```json
 {
@@ -159,9 +159,9 @@ Une réponse réussie renvoie les détails des couleurs extraites. Chaque couleu
 
 Notez que la couleur du résultat ici est extraite de la région &quot;globale&quot; de l’image.
 
-**Demande - Variante d’image masquée**
+**Demande - variante d’image masquée**
 
-L’exemple de requête suivant utilise la méthode de masquage pour le balisage colorimétrique. Cette option est activée en définissant la variable `enable_mask` du paramètre `true` dans la requête.
+L’exemple de requête suivant utilise la méthode de masquage pour le balisage colorimétrique. Cela est activé en définissant le paramètre `enable_mask` sur `true` dans la requête.
 
 ```SHELL
 curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
@@ -204,9 +204,9 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 >[!NOTE]
 >
->En outre, la variable `retrieve_tone` est également défini sur `true` dans la requête ci-dessus. Cela nous permet de récupérer un histogramme de distribution des tons sur des tons chauds, neutres et froids dans l’ensemble, le premier plan et l’arrière-plan de l’image.
+>De plus, le paramètre `retrieve_tone` est également défini sur `true` dans la requête ci-dessus. Cela nous permet de récupérer un histogramme de distribution des tons sur des tons chauds, neutres et froids dans l’ensemble, le premier plan et l’arrière-plan de l’image.
 
-**Réponse : variante d’image masquée**
+**Réponse - variante d’image masquée**
 
 ```json
 {
@@ -356,14 +356,14 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v2/predict \
 
 Outre les couleurs de l’image globale, vous pouvez désormais afficher les couleurs des régions de premier plan et d’arrière-plan. Comme la récupération des tons est activée pour chacune des régions ci-dessus, vous pouvez également récupérer l’histogramme d’une tonalité.
 
-**Paramètres d&#39;entrée**
+**Paramètres d’entrée**
 
 | Nom | Type de données | Obligatoire | Par défaut | Valeurs | Description |
 | --- | --- | --- | --- | --- | --- |
-| `documents` | array (Document-Object) | Oui | - | Reportez-vous à l’exemple ci-dessous : | Liste des éléments JSON dont chaque élément de la liste représente un document. |
+| `documents` | array (Document-Object) | Oui | - | Voir ci-dessous | Liste des éléments JSON dont chaque élément de la liste représente un document. |
 | `top_n` | nombre | Non | 0 | Entier non négatif | Nombre de résultats à renvoyer. 0, pour renvoyer tous les résultats. En cas d’utilisation conjointe avec le seuil, le nombre de résultats renvoyé sera inférieur à l’une ou l’autre des limites. |
-| `min_coverage` | nombre | Non | 0.05 | Nombre réel | Seuil de couverture au-dessus duquel les résultats doivent être renvoyés. Paramètre Exclure pour renvoyer tous les résultats. |
-| `resize_image` | nombre | Non | True | True/False | Si vous souhaitez redimensionner l’image d’entrée ou non. Par défaut, les images sont redimensionnées à 320 x 320 pixels avant l’extraction des couleurs. À des fins de débogage, nous pouvons également permettre au code de s’exécuter sur l’image complète, en définissant sur `False`. |
+| `min_coverage` | nombre | Non | 0,05 | Nombre réel | Seuil de couverture au-dessus duquel les résultats doivent être renvoyés. Paramètre Exclure pour renvoyer tous les résultats. |
+| `resize_image` | nombre | Non | True | True/False | Si vous souhaitez redimensionner l’image d’entrée ou non. Par défaut, les images sont redimensionnées à 320 x 320 pixels avant l’extraction des couleurs. À des fins de débogage, nous pouvons également permettre au code de s’exécuter sur l’image complète, en définissant ce paramètre sur `False`. |
 | `enable_mask` | nombre | Non | False | True/False | Active/désactive l’extraction de couleurs |
 | `retrieve_tone` | nombre | Non | False | True/False | Active/désactive l’extraction des tons |
 
@@ -372,6 +372,6 @@ Outre les couleurs de l’image globale, vous pouvez désormais afficher les cou
 | Nom | Type de données | Obligatoire | Par défaut | Valeurs | Description |
 | -----| --------- | -------- | ------- | ------ | ----------- |
 | `repo:path` | chaîne | - | - | - | URL présignée du document. |
-| `sensei:repoType` | chaîne | - | - | HTTPS | Type de référentiel dans lequel l’image est stockée. |
-| `sensei:multipart_field_name` | chaîne | - | - | - | Utilisez-le lorsque vous transmettez le fichier image en tant qu’argument en plusieurs parties au lieu d’utiliser des URL présignées. |
-| `dc:format` | chaîne | Oui | - | &quot;image/jpg&quot;,<br>&quot;image/jpeg&quot;,<br>&quot;image/png&quot;,<br>&quot;image/tiff&quot; | Le codage des images est comparé aux types de codage d’entrée autorisés avant d’être traité. |
+| `sensei:repoType` | Chaîne | - | - | HTTPS | Type de référentiel dans lequel l’image est stockée. |
+| `sensei:multipart_field_name` | Chaîne | - | - | - | Utilisez-le lorsque vous transmettez le fichier image en tant qu’argument en plusieurs parties au lieu d’utiliser des URL présignées. |
+| `dc:format` | Chaîne | Oui | - | &quot;image/jpg&quot;,<br>&quot;image/jpeg&quot;,<br>&quot;image/png&quot;,<br>&quot;image/tiff&quot; | Le codage des images est comparé aux types de codage d’entrée autorisés avant d’être traité. |

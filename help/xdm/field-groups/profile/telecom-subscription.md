@@ -7,37 +7,37 @@ exl-id: 00c20081-09d0-425c-9894-0f957558bd43
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '692'
-ht-degree: 9%
+ht-degree: 8%
 
 ---
 
-# [!UICONTROL Abonnement aux télécommunications] groupe de champs de schéma
+# Groupe de champs de schéma [!UICONTROL Inscription aux télécommunications]
 
 >[!NOTE]
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL Abonnement aux télécommunications] est un groupe de champs de schéma standard pour la variable [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) qui décrit le plan d’abonnement d’un client aux télécommunications, notamment les tarifs, les packages et les abonnements à des produits individuels.
+[!UICONTROL Inscription aux télécommunications] est un groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) qui décrit le plan d’abonnement d’un client à des services de télécommunication, y compris les tarifs, les packages et les abonnements à des produits individuels.
 
 Le groupe de champs fournit un champ de type objet unique, `telecomSubscription`, dont les propriétés sont décrites ci-dessous.
 
-![Structure de l&#39;abonnement aux télécommunications](../../images/field-groups/telecom-subscription/structure.png)
+![Structure d&#39;abonnement aux télécoms](../../images/field-groups/telecom-subscription/structure.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `internetSubscription` | Tableau d’objets | Décrit les détails du plan d’abonnement Internet, tels que la limite de données, le type de connexion et les détails de vitesse. Voir [section](#internetSubscription) pour plus d’informations. |
-| `landlineSubscription` | Tableau d’objets | Décrit les détails du plan d’abonnement fixe, y compris les fonctionnalités, les minutes et les plans de numérotation sélectionnés. Voir [section](#landlineSubscription) pour plus d’informations. |
-| `mediaSubscription` | Tableau d’objets | Décrit les détails du plan d’abonnement au média, y compris le nombre de canaux et les services de diffusion en continu inclus. Voir [section](#mediaSubscription) pour plus d’informations. |
-| `mobileSubscription` | Tableau d’objets | Décrit les détails du plan d’abonnement mobile, notamment le nombre de lignes, les taux de données, le coût, etc. Voir [section](#mobileSubscription) pour plus d’informations. |
+| `internetSubscription` | Tableau d’objets | Décrit les détails du plan d’abonnement Internet, tels que la limite de données, le type de connexion et les détails de vitesse. Pour plus d’informations, consultez la [section ci-dessous](#internetSubscription) . |
+| `landlineSubscription` | Tableau d’objets | Décrit les détails du plan d’abonnement fixe, y compris les fonctionnalités, les minutes et les plans de numérotation sélectionnés. Pour plus d’informations, consultez la [section ci-dessous](#landlineSubscription) . |
+| `mediaSubscription` | Tableau d’objets | Décrit les détails du plan d’abonnement au média, y compris le nombre de canaux et les services de diffusion en continu inclus. Pour plus d’informations, consultez la [section ci-dessous](#mediaSubscription) . |
+| `mobileSubscription` | Tableau d’objets | Décrit les détails du plan d’abonnement mobile, notamment le nombre de lignes, les taux de données, le coût, etc. Pour plus d’informations, consultez la [section ci-dessous](#mobileSubscription) . |
 | `primarySubscriber` | [[!UICONTROL Personne]](../../data-types/person.md) | Décrit le propriétaire de l’abonnement. |
-| `bundleName` | Chaîne | Capture le nom de tout type de regroupement d’abonnement auquel le client est inscrit, tel que `Internet + Media`. |
+| `bundleName` | Chaîne | Capture le nom de tout type de bundle d’abonnement dans lequel le client est inscrit, par exemple `Internet + Media`. |
 | `primaryPartyID` | Chaîne | Identifiant de la personne principale responsable de l’abonnement, qui peut généralement être son numéro de téléphone d’appareil. |
 
 {style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)
 
 ## `internetSubscription` {#internetSubscription}
@@ -88,7 +88,7 @@ Pour plus d’informations sur le groupe de champs, reportez-vous au référenti
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `streamingServices` | Tableau d’objets | Liste de tous les services de diffusion en continu inclus dans l’abonnement. Chaque élément de tableau comprend les propriétés suivantes : <ul><li>`promotionLength`: durée de la promotion, en mois, si le service de diffusion en continu a été ajouté dans le cadre d’une promotion.</li><li>`promotionalAddition`: indique si le service de diffusion en continu a été ajouté dans le cadre d’une promotion.</li><li>`serviceName`: nom du service de diffusion en continu.</li></ul> |
+| `streamingServices` | Tableau d’objets | Liste de tous les services de diffusion en continu inclus dans l’abonnement. Chaque élément de tableau comprend les propriétés suivantes : <ul><li>`promotionLength` : durée de la promotion, en mois, si le service de diffusion en continu a été ajouté dans le cadre d’une promotion.</li><li>`promotionalAddition` : indique si le service de diffusion en continu a été ajouté dans le cadre d’une promotion.</li><li>`serviceName` : nom du service de diffusion en continu.</li></ul> |
 | `subscriptionDetails` | [[!UICONTROL Abonnement aux télécommunications]](../../data-types/telecom-subscription.md) | Décrit les détails généraux de l’abonnement, notamment la durée de l’abonnement, les frais, l’état, etc. |
 | `channels` | Nombre entier | Nombre de canaux inclus dans l’abonnement au média. |
 

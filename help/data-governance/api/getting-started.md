@@ -18,7 +18,7 @@ L’API [!DNL Policy Service] vous permet de créer et de gérer diverses ressou
 
 ## Conditions préalables
 
-L’utilisation du guide de développement nécessite une compréhension pratique des différentes [!DNL Experience Platform] Services impliqués dans l’utilisation des fonctionnalités de gouvernance des données. Avant de commencer à travailler avec les [!DNL Policy Service API], consultez la documentation relative aux services suivants :
+L’utilisation du guide de développement nécessite une compréhension pratique des différents services [!DNL Experience Platform] impliqués dans l’utilisation des fonctionnalités de gouvernance des données. Avant de commencer à travailler avec les [!DNL Policy Service API], consultez la documentation relative aux services suivants :
 
 * [Gouvernance des données](../home.md) : cadre selon lequel [!DNL Experience Platform] applique la conformité d’utilisation des données.
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : Cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.

@@ -4,8 +4,8 @@ description: Ce guide explique comment conserver l’accès des utilisateurs et 
 exl-id: b26ff857-5486-4391-b5a0-1e5cb05a1f11
 source-git-commit: 95e5dad03741d06ee33a10c48b481b792140f7f1
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 100%
+source-wordcount: '199'
+ht-degree: 91%
 
 ---
 
@@ -21,7 +21,7 @@ Pour recevoir ou maintenir un accès ininterrompu à Assurance, vérifiez que le
 
 ## Ajout d’utilisateurs à Experience Platform via un profil de produit
 
-Pour ajouter un utilisateur à un profil de produit, connectez-vous a Admin Console et sélectionnez **Ajouter des utilisateurs**..
+Pour ajouter un utilisateur à un profil de produit, connectez-vous à l’Admin Console et sélectionnez **Ajouter des utilisateurs**.
 
 ![Le bouton Ajouter des utilisateurs est mis en surbrillance.](./images/get-access/product-profile-add-users.png)
 

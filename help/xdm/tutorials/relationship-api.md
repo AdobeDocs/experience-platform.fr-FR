@@ -1,50 +1,50 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;api;API;XDM;système XDM;modèle de données d’expérience;modèle de données d’expérience;modèle de données d’expérience;modèle de données;modèle de données;registre des schémas;schéma;schémas;schémas;schémas;schémas;relation;relation;descripteur de relation;descripteur de relation;identité de référence;identité de référence;
 title: Définition d’une relation entre deux schémas à l’aide de l’API Schema Registry
-description: Ce document fournit un tutoriel indiquant comment définir une relation un-à-un entre deux schémas définis par votre organisation à l’aide de l’API Schema Registry.
+description: Ce document fournit un tutoriel pour la définition d’une relation un-à-un entre deux schémas définis par votre organisation à l’aide de l’API Schema Registry.
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
 workflow-type: tm+mt
-source-wordcount: '1383'
-ht-degree: 33%
+source-wordcount: '1379'
+ht-degree: 27%
 
 ---
 
-# Définissez une relation entre deux schémas à l’aide de la propriété [!DNL Schema Registry] API
+# Définition d’une relation entre deux schémas à l’aide de l’API [!DNL Schema Registry]
 
-Comprendre les relations entre vos clients et leurs interactions avec votre marque sur divers canaux est un aspect important d’Adobe Experience Platform. Définir ces relations au sein de la structure de votre [!DNL Experience Data Model] Les schémas (XDM) vous permettent d’obtenir des informations complexes sur les données de vos clients.
+Comprendre les relations entre vos clients et leurs interactions avec votre marque sur divers canaux est un aspect important d’Adobe Experience Platform. La définition de ces relations au sein de la structure de vos schémas [!DNL Experience Data Model] (XDM) vous permet d’obtenir des informations complexes sur vos données client.
 
-Bien que les relations de schéma puissent être déduites par l’utilisation du schéma d’union et [!DNL Real-Time Customer Profile], cela s’applique uniquement aux schémas partageant la même classe. Pour établir une relation entre deux schémas appartenant à des classes différentes, un champ de relation dédié doit être ajouté à un **schéma source**, qui indique l’identité d’un **schéma de référence**.
+Bien que les relations de schéma puissent être déduites par l’utilisation du schéma d’union et [!DNL Real-Time Customer Profile], cela s’applique uniquement aux schémas partageant la même classe. Pour établir une relation entre deux schémas appartenant à des classes différentes, un champ de relation dédié doit être ajouté à un **schéma source**, qui indique l’identité d’un **schéma de référence** distinct.
 
 >[!NOTE]
 >
->L’API Schema Registry fait référence aux schémas de référence en tant que &quot;schémas de destination&quot;. Ils ne doivent pas être confondus avec les schémas de destination dans [Jeux de mappage de la préparation de données](../../data-prep/mapping-set.md) ou schémas pour [connexions aux destinations](../../destinations/home.md).
+>L’API Schema Registry fait référence aux schémas de référence en tant que &quot;schémas de destination&quot;. Ils ne doivent pas être confondus avec les schémas de destination dans les [ensembles de mappages de préparation de données](../../data-prep/mapping-set.md) ou les schémas pour les [connexions de destination](../../destinations/home.md).
 
-Ce document fournit un tutoriel pour définir une relation un-à-un entre deux schémas définis par votre organisation à l’aide de la variable [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Ce document fournit un tutoriel pour la définition d’une relation un-à-un entre deux schémas définis par votre organisation à l’aide de [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
-## Prise en main
+## Commencer
 
 Ce tutoriel nécessite une compréhension pratique de [!DNL Experience Data Model] (XDM) et [!DNL XDM System]. Avant de commencer ce tutoriel, consultez la documentation suivante :
 
-* [Système XDM en Experience Platform](../home.md): Présentation de XDM et de son implémentation dans [!DNL Experience Platform].
+* [Système XDM en Experience Platform](../home.md) : présentation de XDM et de sa mise en oeuvre dans [!DNL Experience Platform].
    * [Principes de base de composition des schémas](../schema/composition.md) : une présentation des blocs de création de schémas XDM.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Avant de commencer ce tutoriel, veuillez consulter le [guide de développement](../api/getting-started.md) pour trouver les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API [!DNL Schema Registry] Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête [!DNL Accept] et à ses valeurs possibles).
+Avant de commencer ce tutoriel, consultez le [guide de développement](../api/getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API [!DNL Schema Registry]. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête [!DNL Accept] et à ses valeurs possibles).
 
 ## Définition d’un schéma source et de référence {#define-schemas}
 
-Vous devez avoir déjà créé les deux schémas qui seront définis dans la relation. Ce tutoriel crée une relation entre les membres du programme de fidélité actuel d’une organisation (défini dans un &quot;[!DNL Loyalty Members]&quot;) et leurs hôtels préférés (définis dans un &quot;[!DNL Hotels]&quot;).
+Vous devez avoir déjà créé les deux schémas qui seront définis dans la relation. Ce tutoriel crée une relation entre les membres du programme de fidélité actuel d’une organisation (définis dans un schéma &quot;[!DNL Loyalty Members]&quot;) et leurs hôtels préférés (définis dans un schéma &quot;[!DNL Hotels]&quot;).
 
-Les relations de schéma sont représentées par une **schéma source** avoir un champ qui fait référence à un autre champ dans un **schéma de référence**. Dans les étapes suivantes, &quot;[!DNL Loyalty Members]&quot; sera le schéma source, tandis que &quot;[!DNL Hotels]&quot; agira comme schéma de référence.
+Les relations de schéma sont représentées par un **schéma source** ayant un champ qui fait référence à un autre champ dans un **schéma de référence**. Dans les étapes qui suivent, &quot;[!DNL Loyalty Members]&quot; sera le schéma source, tandis que &quot;[!DNL Hotels]&quot; servira de schéma de référence.
 
 >[!IMPORTANT]
 >
->Pour établir une relation, les deux schémas doivent avoir défini des identités Principales et être activés pour [!DNL Real-Time Customer Profile]. Voir la section sur [activation d’un schéma à utiliser dans Profile](./create-schema-api.md#profile) dans le tutoriel sur la création de schémas si vous avez besoin de conseils sur la configuration de vos schémas en conséquence.
+>Pour établir une relation, les deux schémas doivent avoir défini des identités primaires et être activés pour [!DNL Real-Time Customer Profile]. Consultez la section [Activation d’un schéma à utiliser dans Profile](./create-schema-api.md#profile) dans le tutoriel de création de schéma si vous avez besoin de conseils sur la configuration de vos schémas en conséquence.
 
-Pour définir une relation entre deux schémas, vous devez d’abord acquérir les valeurs `$id` des deux schémas. Si vous connaissez les noms d’affichage (`title`) des schémas, vous pouvez trouver leurs valeurs `$id` en envoyant une requête GET au point d’entrée `/tenant/schemas` dans l’API [!DNL Schema Registry]
+Pour définir une relation entre deux schémas, vous devez d’abord acquérir les valeurs `$id` des deux schémas. Si vous connaissez les noms d’affichage (`title`) des schémas, vous pouvez trouver leurs valeurs `$id` en envoyant une requête GET au point de terminaison `/tenant/schemas` dans l’API [!DNL Schema Registry].
 
 **Format d’API**
 
@@ -66,7 +66,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->Le [!DNL Accept] header `application/vnd.adobe.xed-id+json` renvoie uniquement les titres, les identifiants et les versions des schémas obtenus.
+>L&#39;en-tête [!DNL Accept] `application/vnd.adobe.xed-id+json` renvoie uniquement les titres, les identifiants et les versions des schémas obtenus.
 
 **Réponse**
 
@@ -112,21 +112,21 @@ Enregistrez les valeurs `$id` des deux schémas entre lesquels que vous souhaite
 
 ## Définition d’un champ de référence pour le schéma source
 
-Dans le [!DNL Schema Registry], les descripteurs de relation fonctionnent de la même manière que les clés étrangères dans les tables de base de données relationnelle : un champ du schéma source fait office de référence au champ d’identité Principal d’un schéma de référence. Si votre schéma source n’a pas de champ prévu à cet effet, vous devrez peut-être créer un groupe de champs de schéma avec le nouveau champ et l’ajouter au schéma. Ce nouveau champ doit comporter un `type` valeur de `string`.
+Dans [!DNL Schema Registry], les descripteurs de relation fonctionnent de la même manière que les clés étrangères dans les tables de base de données relationnelle : un champ du schéma source agit comme une référence au champ d’identité principal d’un schéma de référence. Si votre schéma source n’a pas de champ prévu à cet effet, vous devrez peut-être créer un groupe de champs de schéma avec le nouveau champ et l’ajouter au schéma. Ce nouveau champ doit avoir une valeur `type` de `string`.
 
 >[!IMPORTANT]
 >
->Le schéma source ne peut pas utiliser son identité Principale comme champ de référence.
+>Le schéma source ne peut pas utiliser son identité principale comme champ de référence.
 
-Dans ce tutoriel, le schéma de référence &quot;[!DNL Hotels]&quot; contient une `hotelId` qui sert d’identité Principale au schéma. Cependant, le schéma source &quot;[!DNL Loyalty Members]&quot; ne dispose pas d’un champ dédié à utiliser comme référence à `hotelId`, et par conséquent, un groupe de champs personnalisé doit être créé pour ajouter un nouveau champ au schéma : `favoriteHotel`.
+Dans ce tutoriel, le schéma de référence &quot;[!DNL Hotels]&quot; contient un champ `hotelId` qui sert d’identité principale du schéma. Cependant, le schéma source &quot;[!DNL Loyalty Members]&quot; ne possède pas de champ dédié à utiliser comme référence à `hotelId`. Par conséquent, un groupe de champs personnalisé doit être créé pour ajouter un nouveau champ au schéma : `favoriteHotel`.
 
 >[!NOTE]
 >
->Si votre schéma source comporte déjà un champ dédié que vous prévoyez d’utiliser comme champ de référence, vous pouvez passer à l’étape suivante [création d’un descripteur de référence](#reference-identity).
+>Si votre schéma source comporte déjà un champ dédié que vous prévoyez d’utiliser comme champ de référence, vous pouvez passer à l’étape [création d’un descripteur de référence](#reference-identity).
 
 ### Créer un groupe de champs
 
-Pour ajouter un nouveau champ à un schéma, il doit d&#39;abord être défini dans un groupe de champs. Vous pouvez créer un groupe de champs en adressant une requête de POST à la fonction `/tenant/fieldgroups` point de terminaison .
+Pour ajouter un nouveau champ à un schéma, il doit d&#39;abord être défini dans un groupe de champs. Vous pouvez créer un groupe de champs en envoyant une requête de POST au point de terminaison `/tenant/fieldgroups`.
 
 **Format d’API**
 
@@ -136,7 +136,7 @@ POST /tenant/fieldgroups
 
 **Requête**
 
-La requête suivante crée un groupe de champs qui ajoute un `favoriteHotel` sous le champ `_{TENANT_ID}` l’espace de noms de tout schéma auquel il est ajouté.
+La requête suivante crée un groupe de champs qui ajoute un champ `favoriteHotel` sous l’espace de noms `_{TENANT_ID}` de tout schéma auquel il est ajouté.
 
 ```shell
 curl -X POST\
@@ -234,11 +234,11 @@ Une réponse réussie renvoie les détails du nouveau groupe de champs créé.
 
 {style="table-layout:auto"}
 
-Enregistrez la variable `$id` URI du groupe de champs à utiliser à l’étape suivante de l’ajout du groupe de champs au schéma source.
+Enregistrez l’URI `$id` du groupe de champs à utiliser à l’étape suivante de l’ajout du groupe de champs au schéma source.
 
 ### Ajouter le groupe de champs au schéma source
 
-Une fois que vous avez créé un groupe de champs, vous pouvez l’ajouter au schéma source en envoyant une requête de PATCH au `/tenant/schemas/{SCHEMA_ID}` point de terminaison .
+Une fois que vous avez créé un groupe de champs, vous pouvez l’ajouter au schéma source en envoyant une requête de PATCH au point de terminaison `/tenant/schemas/{SCHEMA_ID}`.
 
 **Format d’API**
 
@@ -254,7 +254,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **Requête**
 
-La requête suivante ajoute le caractère &quot;[!DNL Favorite Hotel]&quot; au groupe de champs &quot;[!DNL Loyalty Members]&quot;.
+La requête suivante ajoute le groupe de champs &quot;[!DNL Favorite Hotel]&quot; au schéma &quot;[!DNL Loyalty Members]&quot;.
 
 ```shell
 curl -X PATCH \
@@ -279,13 +279,13 @@ curl -X PATCH \
 | --- | --- |
 | `op` | Opération PATCH à effectuer. Cette requête utilise l’opération `add`. |
 | `path` | Le chemin d’accès au champ de schéma où la nouvelle ressource sera ajoutée. Lors de l’ajout de groupes de champs aux schémas, la valeur doit être &quot;/allOf/-&quot;. |
-| `value.$ref` | Le `$id` du groupe de champs à ajouter. |
+| `value.$ref` | `$id` du groupe de champs à ajouter. |
 
 {style="table-layout:auto"}
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du schéma mis à jour, qui inclut désormais la variable `$ref` valeur du groupe de champs ajouté sous sa `allOf` tableau.
+Une réponse réussie renvoie les détails du schéma mis à jour, qui inclut désormais la valeur `$ref` du groupe de champs ajouté sous son tableau `allOf`.
 
 ```json
 {
@@ -346,9 +346,9 @@ Une réponse réussie renvoie les détails du schéma mis à jour, qui inclut d�
 
 ## Création d’un descripteur d’identité de référence {#reference-identity}
 
-Un descripteur d’identité de référence doit être appliqué aux champs de schéma s’ils sont utilisés comme référence à un autre schéma dans une relation. Depuis la variable `favoriteHotel` champ dans &quot;[!DNL Loyalty Members]&quot; fait référence à la variable `hotelId` champ dans &quot;[!DNL Hotels]&quot;, `favoriteHotel` doit se voir attribuer un descripteur d’identité de référence.
+Un descripteur d’identité de référence doit être appliqué aux champs de schéma s’ils sont utilisés comme référence à un autre schéma dans une relation. Puisque le champ `favoriteHotel` dans &quot;[!DNL Loyalty Members]&quot; fait référence au champ `hotelId` dans &quot;[!DNL Hotels]&quot;, `favoriteHotel` doit recevoir un descripteur d’identité de référence.
 
-Créez un descripteur de référence pour le schéma source en adressant une requête de POST à la fonction `/tenant/descriptors` point de terminaison .
+Créez un descripteur de référence pour le schéma source en envoyant une requête de POST au point de terminaison `/tenant/descriptors`.
 
 **Format d’API**
 
@@ -358,7 +358,7 @@ POST /tenant/descriptors
 
 **Requête**
 
-La requête suivante crée un descripteur de référence pour la variable `favoriteHotel` champ du schéma source &quot;[!DNL Loyalty Members]&quot;.
+La requête suivante crée un descripteur de référence pour le champ `favoriteHotel` dans le schéma source &quot;[!DNL Loyalty Members]&quot;.
 
 ```shell
 curl -X POST \
@@ -382,8 +382,8 @@ curl -X POST \
 | `@type` | Le type de descripteur en cours de définition. Pour les descripteurs de référence, la valeur doit être `xdm:descriptorReferenceIdentity`. |
 | `xdm:sourceSchema` | L’URL `$id` du schéma source. |
 | `xdm:sourceVersion` | Le numéro de version du schéma source. |
-| `sourceProperty` | Le chemin d’accès au champ dans le schéma source qui sera utilisé pour faire référence à l’identité Principale du schéma de référence. |
-| `xdm:identityNamespace` | L’espace de noms d’identité du champ de référence. Il doit s’agir du même espace de noms que l’identité Principale du schéma de référence. Pour plus d’informations, voir [Présentation des espaces de noms d’identité](../../identity-service/home.md). |
+| `sourceProperty` | Le chemin d’accès au champ dans le schéma source qui sera utilisé pour faire référence à l’identité principale du schéma de référence. |
+| `xdm:identityNamespace` | L’espace de noms d’identité du champ de référence. Il doit s’agir du même espace de noms que l’identité principale du schéma de référence. Pour plus d’informations, voir [Présentation des espaces de noms d’identité](../../identity-service/home.md). |
 
 {style="table-layout:auto"}
 
@@ -405,7 +405,7 @@ Une réponse réussie renvoie les détails du nouveau descripteur de référence
 
 ## Création d’un descripteur de relation {#create-descriptor}
 
-Les descripteurs de relation établissent une relation un-à-un entre un schéma source et un schéma de référence. Une fois que vous avez défini un descripteur d’identité de référence pour le champ approprié dans le schéma source, vous pouvez créer un descripteur de relation en adressant une requête de POST au `/tenant/descriptors` point de terminaison .
+Les descripteurs de relation établissent une relation un-à-un entre un schéma source et un schéma de référence. Une fois que vous avez défini un descripteur d’identité de référence pour le champ approprié dans le schéma source, vous pouvez créer un descripteur de relation en envoyant une requête de POST au point de terminaison `/tenant/descriptors`.
 
 **Format d’API**
 
@@ -442,9 +442,9 @@ curl -X POST \
 | `xdm:sourceSchema` | L’URL `$id` du schéma source. |
 | `xdm:sourceVersion` | Le numéro de version du schéma source. |
 | `xdm:sourceProperty` | Le chemin d’accès au champ de référence dans le schéma source. |
-| `xdm:destinationSchema` | Le `$id` URL du schéma de référence. |
+| `xdm:destinationSchema` | URL `$id` du schéma de référence. |
 | `xdm:destinationVersion` | Numéro de version du schéma de référence. |
-| `xdm:destinationProperty` | Le chemin d’accès au champ d’identité Principal dans le schéma de référence. |
+| `xdm:destinationProperty` | Le chemin d’accès au champ d’identité principal dans le schéma de référence. |
 
 {style="table-layout:auto"}
 
@@ -468,4 +468,4 @@ Une réponse réussie renvoie les détails du descripteur de relation que vous v
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez réussi à créer une relation un-à-un entre deux schémas. Pour plus d’informations sur l’utilisation des descripteurs à l’aide de la variable [!DNL Schema Registry] API, voir [Guide de développement du registre des schémas](../api/descriptors.md). Pour savoir comment définir des relations de schémas dans l’interface utilisateur, consultez le tutoriel sur la [définition de relations de schémas à l’aide de l’éditeur de schémas](relationship-ui.md).
+En suivant ce tutoriel, vous avez réussi à créer une relation un-à-un entre deux schémas. Pour plus d’informations sur l’utilisation des descripteurs à l’aide de l’API [!DNL Schema Registry], consultez le [guide de développement du registre des schémas](../api/descriptors.md). Pour savoir comment définir des relations de schémas dans l’interface utilisateur, consultez le tutoriel sur la [définition de relations de schémas à l’aide de l’éditeur de schémas](relationship-ui.md).

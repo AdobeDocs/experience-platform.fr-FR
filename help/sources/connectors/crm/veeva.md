@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;Veeva CRM;veeva crm;veeva;crm
 solution: Experience Platform
-title: Présentation du connecteur source CRM Veeva
+title: Présentation du connecteur Source de Veeva CRM
 description: Découvrez comment connecter Veeva CRM à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: fcd7af48-e66a-4313-bbfe-73301d335c67
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
@@ -11,7 +11,7 @@ ht-degree: 76%
 
 ---
 
-# [!DNL Veeva CRM] source
+# Source [!DNL Veeva CRM]
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous permettant de structurer, de libeller et d’améliorer les données entrantes à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
@@ -31,5 +31,5 @@ La documentation ci-dessous fournit des informations sur la connexion d’[!DNL 
 
 ## Connecter [!DNL Veeva CRM] à [!DNL Platform] à lʼaide de l’interface utilisateur
 
-- [Création d’une connexion source CRM Veeva dans l’interface utilisateur](../../tutorials/ui/create/crm/veeva.md)
+- [Créer une connexion source CRM Veeva dans l’interface utilisateur](../../tutorials/ui/create/crm/veeva.md)
 - [Créer un flux de données pour une connexion source CRM dans l’interface utilisateur](../../tutorials/ui/dataflow/crm.md)

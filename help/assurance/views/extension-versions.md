@@ -15,7 +15,7 @@ La vue Version des extensions vous permet de classer et d’afficher rapidement 
 
 ## Prise en main des vues Versions d’extension
 
-Après [configuration de Assurance](../tutorials/implement-assurance.md), dans la variable **Accueil** vue, sélectionnez **[!UICONTROL Versions d’extension]**
+Après avoir [ configuré Assurance](../tutorials/implement-assurance.md), dans la vue **Home**, sélectionnez **[!UICONTROL Extension Versions]**
 
 ![Versions d’extension](./images/versions/versions-extension.png)
 
@@ -27,6 +27,6 @@ Dans cette vue, un tableau affiche la dernière version de chaque SDK Mobile, ai
 
 ## Exporter les versions
 
-En haut à droite de la vue, vous pouvez sélectionner **[!UICONTROL Exportation de versions]** qui fournit une charge utile JSON avec toutes les informations d’extension, ainsi que la plateforme utilisée par le client. Vous pouvez choisir d’exporter ces données vers un fichier JSON ou de les copier dans le presse-papiers.
+En haut à droite de la vue, vous pouvez sélectionner **[!UICONTROL Exporter les versions]** qui vous donne une charge utile JSON avec toutes les informations d’extension, ainsi que la plateforme utilisée par le client. Vous pouvez choisir d’exporter ces données vers un fichier JSON ou de les copier dans le presse-papiers.
 
-![Exportation des versions d’extension](./images/versions/versions-extension-export.png)
+![Exportation de versions d’extension](./images/versions/versions-extension-export.png)

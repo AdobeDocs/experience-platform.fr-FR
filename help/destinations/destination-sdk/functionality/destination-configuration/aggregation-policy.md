@@ -4,7 +4,7 @@ title: Politique d’agrégation
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
 source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '1006'
 ht-degree: 96%
 
 ---
@@ -17,7 +17,7 @@ Utilisez l’agrégation configurable pour vous plonger dans les paramètres de 
 
 Pendant la création d’une destination en temps réel (streaming) avec Destination SDK, vous pouvez configurer la manière dont les profils exportés doivent être combinés dans les exportations résultantes. Ce comportement est déterminé par les paramètres de la politique d’agrégation.
 
-Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la section [options de configuration](../configuration-options.md) ou consulter le guide sur la manière d’effectuer [utiliser la Destination SDK pour configurer une destination de diffusion en continu ;](../../guides/configure-destination-instructions.md#create-destination-configuration).
+Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la documentation [options de configuration](../configuration-options.md) ou consultez le guide sur la [ utilisation de la Destination SDK pour configurer une destination de diffusion en continu](../../guides/configure-destination-instructions.md#create-destination-configuration).
 
 Vous pouvez configurer les paramètres de la politique d’agrégation via le point d’entrée `/authoring/destinations`. Pour obtenir des exemples d’appels API détaillés dans lesquels vous pouvez configurer les composants affichés sur cette page, consultez les pages de référence de l’API suivantes.
 

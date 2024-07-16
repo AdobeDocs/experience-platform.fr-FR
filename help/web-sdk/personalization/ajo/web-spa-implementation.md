@@ -17,7 +17,7 @@ Les sites web traditionnels fonctionnaient sur des modèles de navigation « pa
 
 Les applications web modernes, comme les applications monopages, adoptent plutôt un modèle qui projette rapidement le rendu de l’interface utilisateur du navigateur, ce qui est souvent indépendant des rechargements de page. Ces expériences peuvent être déclenchées par des interactions client, comme faire défiler, cliquer et faire bouger le curseur. À mesure de l’évolution des paradigmes du Web moderne, la pertinence des événements génériques traditionnels, comme le chargement des pages, pour déployer la personnalisation et les expériences ne fonctionnent plus.
 
-![Diagramme de cycle de vie des pages.](assets/web-spa-vs-traditional-lifecycle.png)
+![ Diagramme de cycle de vie de page.](assets/web-spa-vs-traditional-lifecycle.png)
 
 ## Avantages du SDK Web pour SPA {#web-spa-benefits}
 
@@ -29,7 +29,7 @@ Voici quelques avantages de l’utilisation du SDK Web pour vos applications d�
 
 ## Vues XDM et applications monopages {#web-spa-xdm}
 
-L’éditeur web de Journey Optimizer utilise un concept appelé _views_.
+L’éditeur web de Journey Optimizer tire parti d’un concept appelé _views_.
 
 Les vues sont un groupe logique d’éléments visuels qui, ensemble, constituent une expérience SPA. Une application monopage peut donc être considérée comme une transition entre les vues (et pas entre les URL) basée sur les interactions des utilisateurs et utilisatrices. Une vue peut généralement représenter un site entier, une seule page ou des éléments visuels regroupés dans une page.
 
@@ -37,21 +37,21 @@ Pour montrer plus de détails sur les vues, l’exemple suivant utilise un hypot
 
 * Après avoir accédé au site d’accueil, une image principale fait la promotion de collections saisonnières ainsi que des différents catalogues de produits disponibles sur le site. Dans ce cas, une vue peut être définie pour la totalité de l’écran d’accueil. Cette vue pourrait simplement être nommée « accueil ».
 
-  ![Exemple d’image de site web montrant une page d’accueil.](assets/web-spa-home.png)
+  ![Exemple d&#39;image de site web montrant une page d&#39;accueil.](assets/web-spa-home.png)
 
 * À mesure que le client ou la cliente s’intéresse de plus en plus aux produits de l’entreprise, il ou elle décide de cliquer sur le lien **Hommes**. Comme pour la page d’accueil, l’intégralité de la page **Hommes** peut être définie comme une vue. Cette vue pourrait être nommée « hommes ».
 
-  ![Exemple d’image de site web présentant une vue spécifique.](assets/web-spa-men.png)
+  ![Exemple d&#39;image de site web montrant une vue spécifique.](assets/web-spa-men.png)
 
 * Étant donné qu’une vue peut être définie comme un site entier ou un groupe d’éléments visuels sur un site, les quatre produits affichés sur le site de produits peuvent être regroupés et considérés comme une vue. Cette vue pourrait être nommée « produits ».
 
-  ![Exemple d’image de site web présentant une vue spécifique.](assets/web-spa-men-products.png)
+  ![Exemple d&#39;image de site web montrant une vue spécifique.](assets/web-spa-men-products.png)
 
 * Lorsque le client ou la cliente décide de cliquer sur le bouton **TOUS LES PRODUITS POUR HOMMES** pour voir d’autres produits sur le site, l’URL du site web ne change pas dans ce cas, mais une vue peut être créée ici pour représenter uniquement la deuxième ligne des produits affichés. Le nom de la vue pourrait être « page-produits-2 ».
 
 * Le client ou la cliente décide d’acheter quelques produits sur le site et passe à l’écran de passage en caisse. L’écran du panier lui-même peut être associé à une vue nommée « panier ». Vous pouvez également disposer d’une vue différente dans l’écran de passage en caisse pour afficher les produits recommandés en dessous.
 
-  ![Exemple d’image de site web présentant une vue spécifique.](assets/web-spa-cart.png)
+  ![Exemple d&#39;image de site web montrant une vue spécifique.](assets/web-spa-cart.png)
 
 Le concept de vues peut être étendu bien plus loin. Ce ne sont que quelques exemples de vues qui peuvent être définies sur un site.
 
@@ -61,7 +61,7 @@ Les vues XDM peuvent être exploitées dans Adobe Journey Optimizer pour permett
 
 Pour effectuer une configuration de développeur ou développeuse unique, procédez comme suit :
 
-1. Installer [SDK Web Adobe Experience Platform](/help/web-sdk/install/overview.md) et vérifiez la variable [conditions préalables pour le canal web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html) page.
+1. Installez [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md) et vérifiez la page [conditions préalables requises pour le canal web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html).
 
 2. Déterminez toutes les vues XDM de votre application monopage que vous souhaitez personnaliser.
 
@@ -137,7 +137,7 @@ history.listen(onViewChange);
 
 L’équipe marketing souhaite personnaliser la deuxième ligne de produits en définissant la couleur du libellé du prix en rouge après qu’un utilisateur ou une utilisatrice a cliqué pour afficher tous les produits Hommes.
 
-![Page d’exemple d’application d’une seule page avec des produits personnalisés.](assets/web-spa-men-products.png)
+![Exemple de page d’application d’une seule page avec des produits personnalisés.](assets/web-spa-men-products.png)
 
 ```js
 function onViewChange(viewName) {

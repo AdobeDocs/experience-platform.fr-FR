@@ -14,13 +14,13 @@ ht-degree: 44%
 
 ## Vue d’ensemble {#overview}
 
-Utilisation [!DNL PubMatic Connect] pour optimiser la valeur client en fournissant la chaîne d’approvisionnement de marketing numérique programmatique de l’avenir. [!DNL PubMatic Connect] combine la technologie de plateforme et un service dédié pour améliorer la manière dont l’inventaire et les données sont empaquetés et transactionnels.
+Utilisez [!DNL PubMatic Connect] pour maximiser la valeur client en fournissant la chaîne d’approvisionnement de marketing numérique programmatique du futur. [!DNL PubMatic Connect] combine la technologie de la plateforme et un service dédié pour améliorer la manière dont l’inventaire et les données sont empaquetés et transités.
 
 Utilisez cette destination pour envoyer des données d’audience à la plateforme [!DNL PubMatic Connect].
 
 >[!IMPORTANT]
 >
->La page de documentation et le connecteur de destination sont créés et conservés par la fonction [!DNL PubMatic] l&#39;équipe. Pour toute demande de renseignements ou de mise à jour, contactez-les directement à l’adresse `support@pubmatic.com`.
+>Le connecteur de destination et la page de documentation sont créés et gérés par l’équipe [!DNL PubMatic]. Pour toute question ou demande de mise à jour, contactez-les directement à l’adresse `support@pubmatic.com`.
 
 ## Cas d’utilisation {#use-cases}
 
@@ -28,11 +28,11 @@ Pour mieux comprendre quand et comment utiliser la destination [!DNL PubMatic Co
 
 ### Ciblage des utilisateurs sur des plateformes mobiles, web et CTV {#targeting}
 
-Les éditeurs ou les fournisseurs de données souhaitent envoyer des audiences de Adobe Experience Platform vers [!DNL PubMatic Connect] pour cibler les utilisateurs sur des plateformes mobiles, web et CTV, à l’aide d’un large éventail d’identifiants.
+Les éditeurs ou les fournisseurs de données souhaitent envoyer des audiences de Adobe Experience Platform vers [!DNL PubMatic Connect] pour cibler les utilisateurs sur les plateformes mobiles, web et CTV, à l’aide d’une large gamme d’identifiants.
 
 ## Conditions préalables {#prerequisites}
 
-Parlez à votre [!DNL PubMatic] Gestionnaire de compte pour vous assurer que votre compte est correctement configuré et prend en charge l’intégration des segments d’audience. Ils s’assureront également que vous disposez de tous les détails pertinents pour utiliser cette destination et pour vous fournir une assistance lors de la configuration.
+Contactez votre gestionnaire de compte [!DNL PubMatic] pour vous assurer que votre compte est correctement configuré et prend en charge l’intégration des segments d’audience. Ils s’assureront également que vous disposez de tous les détails pertinents pour utiliser cette destination et pour vous fournir une assistance lors de la configuration.
 
 ## Identités prises en charge {#supported-identities}
 
@@ -92,13 +92,13 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 - **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 - **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-- **[!UICONTROL Identifiant du partenaire de données]**: identifiant de partenaire de données configuré dans votre [!DNL PubMatic] pour cette intégration.
-- **[!UICONTROL Code pays par défaut]**: code de pays par défaut qui doit être appliqué à toutes les identités si aucun n’est fourni dans le profil.
-- **[!UICONTROL Identifiant de compte]**: votre [!DNL PubMatic Connect] ID de compte.
-- **[!UICONTROL Type de compte]**: le type de compte de votre [!DNL PubMatic] compte Platform. Parlez à votre [!DNL PubMatic] gestionnaire de compte si vous avez des questions à choisir. Les options disponibles sont les suivantes :
+- **[!UICONTROL ID de partenaire de données]** : identifiant de partenaire de données configuré dans votre compte [!DNL PubMatic] pour cette intégration.
+- **[!UICONTROL Code pays par défaut]** : code pays par défaut qui doit être appliqué à toutes les identités si aucune n’est fournie dans le profil.
+- **[!UICONTROL ID de compte]** : votre ID de compte [!DNL PubMatic Connect].
+- **[!UICONTROL Type de compte]** : type de compte de votre compte de plateforme [!DNL PubMatic]. Contactez votre gestionnaire de compte [!DNL PubMatic] si vous avez des questions à choisir. Les options disponibles sont les suivantes :
    - [!UICONTROL ÉDITEUR]
    - [!UICONTROL DEMAND_PARTNER]
-   - [!UICONTROL ACHETEUR]
+   - [!UICONTROL BUYER]
 
 ### Activer les alertes {#enable-alerts}
 
@@ -110,9 +110,9 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 >
-> - Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+> - Pour activer les données, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **** et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 >
-> - Pour exporter _identités_, vous avez besoin de la fonction **[!UICONTROL Affichage du graphique des identités]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](../../assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+> - Pour exporter des _identités_, vous avez besoin de l&#39;autorisation **[!UICONTROL Afficher le graphique d&#39;identités]** [ ](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](../../assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez [Activer les profils et les segments vers les destinations d’exportation de segments de diffusion en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
@@ -124,14 +124,14 @@ Sélection des champs sources :
 
 Sélection des champs cibles :
 
-- Parlez à votre [!DNL PubMatic] Gestionnaire de compte pour obtenir les informations sur le type d’UID correct au cours de cette étape.
-- Sélectionnez la variable [!DNL PubMatic UID] type number correspondant à l’identifiant que vous avez sélectionné à la première étape.
+- Contactez votre gestionnaire de compte [!DNL PubMatic] pour obtenir les informations sur le type d’UID correct au cours de cette étape.
+- Sélectionnez le numéro de type [!DNL PubMatic UID] correspondant à l&#39;identifiant que vous avez sélectionné à la première étape.
 
-![Mise en correspondance des attributs et des identités](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
+![ Attributs et identités de mappage ](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
 
 ## Données exportées / Valider l’exportation des données {#exported-data}
 
-La variable [!DNL PubMatic] L’interface utilisateur vous permet de vérifier si les données ont été correctement transmises et si les segments sont disponibles. Cela peut prendre jusqu’à 24 heures après que les données ont été poussées pour la variable [!DNL PubMatic] Interface utilisateur à mettre à jour.
+L’interface utilisateur de [!DNL PubMatic] vous permet de vérifier si les données ont été correctement transmises et si les segments sont disponibles. Cela peut prendre jusqu’à 24 heures après que les données ont été poussées pour que l’interface utilisateur de [!DNL PubMatic] soit mise à jour.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

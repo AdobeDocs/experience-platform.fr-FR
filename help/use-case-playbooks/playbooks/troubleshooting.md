@@ -22,11 +22,11 @@ Lors de la création d’une instance d’un playbook, le message ci-dessous peu
 
 ![Dépannage](/help/use-case-playbooks/assets/playbooks/troubleshooting/troubleshooting-ajo.png)
 
-Cela est dû au fait que les playbooks Journey Optimizer créent des messages pour les canaux email, push et SMS. Lisez la section [prise en main](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) pour configurer les différentes surfaces.
+Cela est dû au fait que les playbooks Journey Optimizer créent des messages pour les canaux email, push et SMS. Lisez le guide de [prise en main](/help/use-case-playbooks/playbooks/get-started.md#configure-sandbox-and-channel-surfaces-in-journey-optimizer) pour configurer les différentes surfaces.
 
 ## État *failed* lors de la création d’une instance {#status-failed}
 
-Si un message d’échec s’affiche lorsque vous essayez de créer une instance, cela peut être dû au fait que votre administrateur ne vous a pas accordé les autorisations utilisateur requises. Un playbook contient de nombreuses ressources différentes et votre utilisateur a besoin d’autorisations pour créer ces ressources afin de pouvoir créer correctement l’instance du playbook. Voir [permissions](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) de ce guide sur la configuration des autorisations.
+Si un message d’échec s’affiche lorsque vous essayez de créer une instance, cela peut être dû au fait que votre administrateur ne vous a pas accordé les autorisations utilisateur requises. Un playbook contient de nombreuses ressources différentes et votre utilisateur a besoin d’autorisations pour créer ces ressources afin de pouvoir créer correctement l’instance du playbook. Consultez la section [autorisations](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) de ce guide sur la configuration des autorisations.
 
 ## Échec de l’importation {#import-failure}
 

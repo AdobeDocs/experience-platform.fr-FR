@@ -16,11 +16,11 @@ ht-degree: 48%
 
 ## Exemples d’appels API
 
-Les sections suivantes passent en revue les appels que vous pouvez effectuer à l’aide de la variable `/queries` du point de terminaison [!DNL Query Service] API. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
+Les sections suivantes passent en revue les appels que vous pouvez effectuer à l’aide du point de terminaison `/queries` de l’API [!DNL Query Service]. Chaque appel inclut le format général d’API, un exemple de requête présentant les en-têtes requis et un exemple de réponse.
 
 ### Récupération d’une liste de requêtes
 
-Vous pouvez récupérer une liste de toutes les requêtes de votre organisation en adressant une requête GET à la fonction `/queries` point de terminaison .
+Vous pouvez récupérer une liste de toutes les requêtes de votre organisation en envoyant une requête de GET au point de terminaison `/queries`.
 
 **Format d’API**
 
@@ -39,11 +39,11 @@ Vous trouverez ci-dessous une liste des paramètres de requête disponibles pour
 | --------- | ----------- |
 | `orderby` | Spécifie le champ de référence pour le tri des résultats. Les champs `created` et `updated` sont pris en charge. Par exemple, `orderby=created` triera les résultats par ordre croissant de création. L’ajout d’un `-` devant created (`orderby=-created`) triera les éléments par ordre décroissant de création. |
 | `limit` | Indique la limite de taille de page pour contrôler le nombre de résultats inclus dans une page. (*Valeur par défaut : 20*) |
-| `start` | Spécifiez un horodatage au format ISO pour classer les résultats. Si aucune date de début n’est spécifiée, l’appel API renvoie d’abord la requête créée la plus ancienne, puis continue à répertorier les résultats plus récents.<br> Les horodatages ISO permettent différents niveaux de granularité dans la date et l’heure. Les horodatages ISO de base prennent le format suivant : `2020-09-07` le 7 septembre 2020. Un exemple plus complexe serait écrit comme suit : `2022-11-05T08:15:30-05:00` et correspond au 5 novembre 2022, 8:15:30 h, heure normale de l&#39;Est des États-Unis. Un fuseau horaire peut être fourni avec un décalage UTC et est signalé par le suffixe &quot;Z&quot; (`2020-01-01T01:01:01Z`). Si aucun fuseau horaire n’est fourni, la valeur par défaut est zéro. |
+| `start` | Spécifiez un horodatage au format ISO pour classer les résultats. Si aucune date de début n’est spécifiée, l’appel API renvoie d’abord la requête créée la plus ancienne, puis continue à répertorier les résultats plus récents.<br> Les horodatages ISO permettent différents niveaux de granularité dans la date et l’heure. Les horodatages ISO de base prennent le format : `2020-09-07` pour exprimer la date du 7 septembre 2020. Un exemple plus complexe serait écrit sous la forme `2022-11-05T08:15:30-05:00` et correspond au 5 novembre 2022, 8:15:30 am, heure normale de l’Est des États-Unis. Un fuseau horaire peut être fourni avec un décalage UTC et est signalé par le suffixe &quot;Z&quot; (`2020-01-01T01:01:01Z`). Si aucun fuseau horaire n’est fourni, la valeur par défaut est zéro. |
 | `property` | Filtrez les résultats en fonction des champs. Les filtres **doivent** être précédés d’une séquence d’échappement HTML. Des virgules sont utilisées pour combiner plusieurs ensembles de filtres. Les champs `created`, `updated`, `state` et `id` sont pris en charge. Les opérateurs `>` (supérieur à), `<` (inférieur à), `>=` (supérieur ou égal à), `<=` (inférieur ou égal à), `==` (égal à), `!=` (différent de) et `~` (contient). Par exemple, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` renvoie toutes les requêtes avec l’identifiant spécifié. |
 | `excludeSoftDeleted` | Indique s’il faut inclure une requête ayant été supprimée de manière réversible. Par exemple, `excludeSoftDeleted=false` inclut **des** requêtes supprimées de manière réversible. (*booléenne, valeur par défaut : true*) |
 | `excludeHidden` | Indique si les requêtes formulées par l’utilisateur doivent être affichées. Si cette valeur est définie sur false, cela **inclut** les requêtes qui ne sont pas formulées par l’utilisateur telles que les définitions CURSOR, FETCH ou les requêtes de métadonnées. (*booléenne, valeur par défaut : true*) |
-| `isPrevLink` | La variable `isPrevLink` Le paramètre de requête est utilisé pour la pagination. Les résultats de l’appel API sont triés à l’aide de leur `created` l’horodatage et la variable `orderby` . Lors de la navigation dans les pages de résultats, `isPrevLink` est défini sur true lorsque vous effectuez une pagination à l’envers. L’ordre de la requête est alors inversé. Voir les liens &quot;suivant&quot; et &quot;prev&quot; comme exemples. |
+| `isPrevLink` | Le paramètre de requête `isPrevLink` est utilisé pour la pagination. Les résultats de l’appel API sont triés à l’aide de leur horodatage `created` et de la propriété `orderby`. Lors de la navigation dans les pages de résultats, `isPrevLink` est défini sur true lors de la pagination vers l’arrière. L’ordre de la requête est alors inversé. Voir les liens &quot;suivant&quot; et &quot;prev&quot; comme exemples. |
 
 **Requête**
 
@@ -173,7 +173,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
 | `sql` | La requête SQL que vous souhaitez créer. |
 | `name` | Nom de la requête SQL. |
 | `description` | Description de la requête SQL. |
-| `queryParameters` | Une valeur key appariant pour remplacer toute valeur paramétrée dans l’instruction SQL. Elle n’est requise que **if** vous utilisez des remplacements de paramètres dans le SQL que vous fournissez. Aucune vérification du type de valeur ne sera effectuée sur ces paires clé-valeur. |
+| `queryParameters` | Une valeur key appariant pour remplacer toute valeur paramétrée dans l’instruction SQL. Il n’est requis que **si** vous utilisez des remplacements de paramètres dans le SQL que vous fournissez. Aucune vérification du type de valeur ne sera effectuée sur ces paires clé-valeur. |
 | `templateId` | Identifiant unique d’une requête préexistante. Vous pouvez fournir ceci au lieu d’une instruction SQL. |
 | `insertIntoParameters` | (Facultatif) Si cette propriété est définie, cette requête sera convertie en requête INSERT INTO . |
 | `ctasParameters` | (Facultatif) Si cette propriété est définie, cette requête sera convertie en requête CTAS. |
@@ -223,7 +223,7 @@ Une réponse réussie renvoie un état HTTP 202 (Accepted) avec les détails de
 
 >[!NOTE]
 >
->Vous pouvez utiliser la valeur `_links.cancel` to [annuler la requête créée ;](#cancel-a-query).
+>Vous pouvez utiliser la valeur `_links.cancel` pour [annuler la requête créée](#cancel-a-query).
 
 ### Récupération d’une requête par identifiant
 
@@ -294,11 +294,11 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 
 >[!NOTE]
 >
->Vous pouvez utiliser la valeur `_links.cancel` to [annuler la requête créée ;](#cancel-a-query).
+>Vous pouvez utiliser la valeur `_links.cancel` pour [annuler la requête créée](#cancel-a-query).
 
 ### Annulation ou suppression différée d’une requête
 
-Vous pouvez demander l’annulation ou la suppression différée d’une requête spécifiée en adressant une requête de PATCH à la fonction `/queries` point de terminaison et spécification de la requête `id` dans le chemin d’accès de la requête.
+Vous pouvez demander l’annulation ou la suppression progressive d’une requête spécifiée en effectuant une requête de PATCH vers le point de terminaison `/queries` et en fournissant la valeur `id` de la requête dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -308,7 +308,7 @@ PATCH /queries/{QUERY_ID}
 
 | Paramètre | Description |
 | -------- | ----------- |
-| `{QUERY_ID}` | La variable `id` de la requête sur laquelle vous souhaitez effectuer l’opération. |
+| `{QUERY_ID}` | La valeur `id` de la requête sur laquelle vous souhaitez effectuer l’opération. |
 
 
 **Requête**

@@ -2,7 +2,7 @@
 title: Modèle de documentation en libre-service pour l’API du SDK de diffusion en continu
 description: Découvrez comment importer des données en continu d’une source vers Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
-badge: Version Beta
+badge: Version bêta
 source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
 source-wordcount: '1638'
@@ -10,7 +10,7 @@ ht-degree: 43%
 
 ---
 
-# Création d’une connexion source et d’un flux de données pour la diffusion *YOURSOURCE* à l’aide de la variable [!DNL Flow Service] API
+# Créez une connexion source et un flux de données pour diffuser des données *YOURSOURCE* à l’aide de l’API [!DNL Flow Service].
 
 *Lorsque vous parcourez ce modèle, remplacez ou supprimez tous les paragraphes en italique (en commençant par celui-ci).*
 
@@ -18,44 +18,44 @@ ht-degree: 43%
 
 ## Vue d’ensemble
 
-*Fournissez un bref aperçu de votre entreprise, y compris la valeur qu’elle fournit aux clients. Insérez un lien vers la page d’accueil de la documentation du produit pour en savoir plus.*
+*Fournissez un bref aperçu de votre entreprise, y compris la valeur qu’elle fournit aux clients. Insérez un lien vers la page d’accueil de la documentation du produit pour une lecture plus approfondie.*
 
 >[!IMPORTANT]
 >
->Cette page de documentation et de connecteur source est créée et conservée par *YOURSOURCE* l&#39;équipe. Pour toute demande d’information ou de mise à jour, contactez-les directement à l’adresse *Ajouter un lien ou une adresse électronique permettant d’accéder aux mises à jour*.
+>Ce connecteur source et cette page de documentation sont créés et conservés par l’équipe *YOURSOURCE*. Pour toute demande de mise à jour ou de demande de mise à jour, contactez-les directement à l&#39;adresse *Ajouter un lien ou une adresse email où vous pouvez accéder pour les mises à jour*.
 
 ## Conditions préalables
 
-*Ajoutez dans cette section des informations sur tout ce dont les clients doivent tenir compte avant de commencer à configurer la source dans l’interface utilisateur de Adobe Experience Platform. Il peut s’agir :*
+*Ajoutez dans cette section des informations sur tout ce dont les clients doivent tenir compte avant de commencer à configurer la source dans l’interface utilisateur de Adobe Experience Platform. Il peut s’agir de :*
 
 * *à ajouter à une liste autorisée*
-* *conditions requises pour le hachage des emails*
-* *toute spécification de compte de votre côté ;*
+* *Conditions requises pour le hachage des emails*
+* *toutes les caractéristiques de compte de votre côté*
 * *Comment obtenir une clé API pour se connecter à votre plateforme*
 
 ### Collecter les informations d’identification requises
 
-Pour vous connecter *YOURSOURCE* pour Experience Platform, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
+Pour connecter *YOURSOURCE* à Experience Platform, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
-| *identifiant un* | *Ajoutez ici une brève description des informations d’identification d’authentification de votre source.* | *Ajoutez ici un exemple d’informations d’identification d’authentification de votre source.* |
-| *credential two* | *Ajoutez ici une brève description des informations d’identification d’authentification de votre source.* | *Ajoutez ici un exemple d’informations d’identification d’authentification de votre source.* |
-| *identification d’identification trois* | *Ajoutez ici une brève description des informations d’identification d’authentification de votre source.* | *Ajoutez ici un exemple d’informations d’identification d’authentification de votre source.* |
+| *identifiant one* | *Ajoutez une brève description aux informations d’identification d’authentification de votre source ici* | *Ajoutez ici un exemple d&#39;informations d&#39;identification d&#39;authentification de votre source* |
+| *credential two* | *Ajoutez une brève description aux informations d’identification d’authentification de votre source ici* | *Ajoutez ici un exemple d&#39;informations d&#39;identification d&#39;authentification de votre source* |
+| *credential trois* | *Ajoutez une brève description aux informations d’identification d’authentification de votre source ici* | *Ajoutez ici un exemple d&#39;informations d&#39;identification d&#39;authentification de votre source* |
 
-Pour plus d’informations sur ces informations d’identification, voir *YOURSOURCE* documentation d’authentification. *Veuillez ajouter un lien vers la documentation d’authentification de votre plateforme ici*.
+Pour plus d’informations sur ces informations d’identification, consultez la documentation d’authentification *YOURSOURCE*. *Ajoutez un lien vers la documentation d’authentification de votre plateforme ici*.
 
-### Intégrer *YOURSOURCE* avec votre webhook
+### Intégrer *YOURSOURCE* à votre webhook
 
-*Le SDK de diffusion en continu nécessite que votre source puisse prendre en charge les webhooks pour communiquer avec l’Experience Platform. Dans cette section, vous devez indiquer les étapes que vos utilisateurs devront suivre pour intégrer VOTRE SOURCE à un webhook.*
+*Le SDK de diffusion en continu nécessite que votre source puisse prendre en charge les webhooks pour communiquer avec un Experience Platform. Dans cette section, vous devez indiquer les étapes que vos utilisateurs devront suivre pour intégrer VOTRE SOURCE à un webhook.*
 
-## Connexion *YOURSOURCE* vers Platform à l’aide de la méthode [!DNL Flow Service] API
+## Connectez *YOURSOURCE* à Platform à l’aide de l’API [!DNL Flow Service]
 
-Le tutoriel suivant décrit les étapes à suivre pour créer un *YOURSOURCE* connexion source et créer un flux de données à importer *YOURSOURCE* données vers Platform à l’aide de la fonction [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Le tutoriel suivant vous guide tout au long des étapes pour créer une connexion source *YOURSOURCE* et créer un flux de données pour importer des données *YOURSOURCE* vers Platform à l’aide de l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Créer une connexion source {#source-connection}
 
-Créez une connexion source en adressant une requête de POST à la fonction [!DNL Flow Service] API, tout en fournissant l’identifiant de spécification de connexion de votre source, des détails tels que le nom et la description, ainsi que le format de vos données.
+Créez une connexion source en adressant une requête de POST à l’API [!DNL Flow Service], tout en fournissant l’identifiant de spécification de connexion de votre source, des détails tels que le nom et la description, et le format de vos données.
 
 **Format d’API**
 
@@ -65,7 +65,7 @@ POST /sourceConnections
 
 **Requête**
 
-La requête suivante crée une connexion source pour *YOURSOURCE*:
+La requête suivante crée une connexion source pour *YOURSOURCE* :
 
 ```shell
 curl -X POST \
@@ -94,7 +94,7 @@ curl -X POST \
 | `name` | Nom de votre connexion source. Assurez-vous que le nom de votre connexion source est descriptif, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion source. |
 | `description` | Valeur facultative que vous pouvez inclure pour fournir plus d’informations sur votre connexion source. |
 | `connectionSpec.id` | Identifiant de spécification de connexion correspondant à votre source. |
-| `data.format` | Le format de la variable *YOURSOURCE* données que vous souhaitez ingérer. Actuellement, le format de données `json` est le seul à être pris en charge. |
+| `data.format` | Format des données *YOURSOURCE* que vous souhaitez ingérer. Actuellement, le format de données `json` est le seul à être pris en charge. |
 
 **Réponse**
 
@@ -135,7 +135,7 @@ POST /targetConnections
 
 **Requête**
 
-La requête suivante crée une connexion cible pour *YOURSOURCE*:
+La requête suivante crée une connexion cible pour *YOURSOURCE* :
 
 
 ```shell
@@ -172,7 +172,7 @@ curl -X POST \
 | `name` | Nom de la connexion cible. Assurez-vous que le nom de votre connexion cible est explicite, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion cible. |
 | `description` | Valeur facultative que vous pouvez inclure pour fournir plus d’informations sur votre connexion cible. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion qui correspond au lac de données. Cet ID fixe est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | Le format de la variable *YOURSOURCE* données que vous souhaitez apporter à Platform. |
+| `data.format` | Format des données *YOURSOURCE* que vous souhaitez importer dans Platform. |
 | `params.dataSetId` | Identifiant du jeu de données cible récupéré lors d’une étape précédente. |
 
 
@@ -189,7 +189,7 @@ Une réponse réussie renvoie l’identifiant unique de la nouvelle connexion ci
 
 ### Créer un mappage {#mapping}
 
-Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache. Pour ce faire, il vous suffit d’adresser une requête de POST à [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) avec des mappages de données définis dans le payload de la requête.
+Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache. Pour ce faire, effectuez une requête de POST vers [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) avec des mappages de données définis dans le payload de la requête.
 
 **Format d’API**
 
@@ -252,7 +252,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ### Créer un flux {#flow}
 
-La dernière étape pour obtenir des données de *YOURSOURCE* vers Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
+La dernière étape pour apporter des données de *YOURSOURCE* à Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
 
 * [ID de connexion source](#source-connection)
 * [ID de connexion cible](#target-connection)
@@ -328,7 +328,7 @@ Une réponse réussie renvoie l’identifiant (`id`) du flux de données nouvell
 
 Une fois votre flux de données créé, vous pouvez désormais récupérer l’URL de votre point de terminaison de diffusion en continu. Vous utiliserez cette URL de point de terminaison pour abonner votre source à un webhook, ce qui vous permettra de communiquer avec votre Experience Platform.
 
-Pour récupérer l’URL de votre point de terminaison de diffusion en continu, envoyez une demande de GET à la fonction `/flows` et fournissez l’identifiant de votre flux de données.
+Pour récupérer l’URL de votre point de terminaison de diffusion en continu, envoyez une requête GET au point de terminaison `/flows` et fournissez l’identifiant de votre flux de données.
 
 **Format d’API**
 
@@ -349,7 +349,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie des informations sur votre flux de données, y compris l’URL de votre point de terminaison, marquée comme `inletUrl`.
+Une réponse réussie renvoie des informations sur votre flux de données, y compris votre URL de point d’entrée, marquée comme `inletUrl`.
 
 ```json
 {
@@ -434,20 +434,20 @@ La section suivante fournit des informations sur les étapes de surveillance, de
 
 ### Surveiller votre flux de données
 
-Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs. Pour consulter des exemples complets d’API, reportez-vous au guide sur [surveillance de vos flux de données sources à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
+Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs. Pour obtenir des exemples complets d’API, consultez le guide sur la [surveillance des flux de données de sources à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
 
 ### Mettre à jour votre flux de données
 
-Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés, en envoyant une requête PATCH à la variable `/flows` point d’entrée de [!DNL Flow Service] API, tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre flux de données `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour des flux de données de sources à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les ensembles de mappages associés, en envoyant une requête de PATCH au point de terminaison `/flows` de l’API [!DNL Flow Service], tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique `etag` de votre flux de données dans l’en-tête `If-Match`. Pour consulter des exemples complets d’API, consultez le guide sur la [mise à jour des flux de données de sources à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
 ### Mettre à jour votre compte
 
-Mettez à jour le nom, la description et les informations d’identification de votre compte source en adressant une requête de PATCH au [!DNL Flow Service] API tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre compte source `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour de votre compte source à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Mettez à jour le nom, la description et les informations d’identification de votre compte source en adressant une requête de PATCH à l’API [!DNL Flow Service] tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique `etag` de votre compte source dans l’en-tête `If-Match`. Pour obtenir des exemples complets d’API, lisez le guide sur la [mise à jour de votre compte source à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### Supprimer le flux de données
 
-Supprimez votre flux de données en adressant une requête de DELETE à la fonction [!DNL Flow Service] API tout en fournissant l’identifiant du flux de données que vous souhaitez supprimer dans le cadre du paramètre de requête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [suppression de vos flux de données à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
+Supprimez votre flux de données en adressant une requête de DELETE à l’API [!DNL Flow Service] tout en fournissant l’identifiant du flux de données que vous souhaitez supprimer dans le cadre du paramètre de requête . Pour obtenir des exemples complets d’API, lisez le guide sur la [suppression de vos flux de données à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
 
 ### Suppression de votre compte
 
-Supprimez votre compte en adressant une requête de DELETE à la fonction [!DNL Flow Service] API tout en fournissant l’identifiant de connexion de base du compte que vous souhaitez supprimer. Pour consulter des exemples complets d’API, reportez-vous au guide sur [suppression de votre compte source à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
+Supprimez votre compte en adressant une requête de DELETE à l’API [!DNL Flow Service] tout en fournissant l’identifiant de connexion de base du compte que vous souhaitez supprimer. Pour obtenir des exemples complets d’API, lisez le guide sur la [suppression de votre compte source à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).

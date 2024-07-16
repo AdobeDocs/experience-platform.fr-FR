@@ -9,9 +9,9 @@ ht-degree: 54%
 
 ---
 
-# Créer une connexion source et un flux de données pour [!DNL SugarCRM Accounts & Contacts] utilisation de l’API Flow Service
+# Créez une connexion source et un flux de données pour [!DNL SugarCRM Accounts & Contacts] à l’aide de l’API Flow Service
 
-Le tutoriel suivant décrit les étapes à suivre pour créer un [!DNL SugarCRM Accounts & Contacts] connexion source et créer un flux de données à importer [[!DNL SugarCRM]](https://www.sugarcrm.com/) les données de comptes et de contacts vers Adobe Experience Platform à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Le tutoriel suivant vous guide tout au long des étapes pour créer une connexion source [!DNL SugarCRM Accounts & Contacts] et créer un flux de données afin d’importer des données de contacts et de comptes [[!DNL SugarCRM] vers Adobe Experience Platform à l’aide de l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).](https://www.sugarcrm.com/)
 
 ## Prise en main
 
@@ -20,7 +20,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
 * [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL SugarCRM] en utilisant la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL SugarCRM] à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
@@ -32,15 +32,15 @@ Pour connecter [!DNL SugarCRM Accounts & Contacts] à Platform, vous devez fourn
 | `username` | Nom d’utilisateur de votre compte de développeur SugarCRM. | `abc.def@example.com@sugarmarketdemo000.com` |
 | `password` | Votre mot de passe du compte de développeur SugarCRM. | `123456789` |
 
-## Connexion [!DNL SugarCRM Accounts & Contacts] vers Platform à l’aide de la méthode [!DNL Flow Service] API
+## Connectez [!DNL SugarCRM Accounts & Contacts] à Platform à l’aide de l’API [!DNL Flow Service]
 
-Les étapes suivantes décrivent les étapes à suivre pour authentifier votre [!DNL SugarCRM] source, créer une connexion source et créer un flux de données pour importer vos comptes et vos données de contacts dans Experience Platform.
+Les étapes suivantes décrivent les étapes à suivre pour authentifier votre source [!DNL SugarCRM], créer une connexion source et créer un flux de données afin d’importer vos données de comptes et de contacts dans Experience Platform.
 
 ### Créer une connexion de base {#base-connection}
 
 Une connexion de base conserve les informations échangées entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 
-Pour créer un identifiant de connexion de base, envoyez une requête de POST au `/connections` point de terminaison lors de la fourniture de [!DNL SugarCRM Accounts & Contacts] informations d’identification d’authentification dans le corps de la requête.
+Pour créer un identifiant de connexion de base, envoyez une requête de POST au point de terminaison `/connections` tout en fournissant vos informations d’authentification [!DNL SugarCRM Accounts & Contacts] dans le cadre du corps de la requête.
 
 **Format d’API**
 
@@ -120,9 +120,9 @@ Lors de l’exécution de requêtes GET pour explorer la structure et le contenu
 | `{OBJECT}` | Ce paramètre est requis uniquement lors de l’affichage d’un répertoire spécifique. Sa valeur représente le chemin du répertoire que vous souhaitez explorer. Pour cette source, la valeur serait `json`. |
 | `fileType=json` | Type de fichier du fichier que vous souhaitez importer dans Platform. Actuellement, `json` est le seul type de fichier pris en charge. |
 | `{PREVIEW}` | Valeur booléenne qui définit si le contenu de la connexion prend en charge la prévisualisation. |
-| `{SOURCE_PARAMS}` | Définit les paramètres du fichier source que vous souhaitez importer dans Platform. Pour récupérer le type de format accepté pour `{SOURCE_PARAMS}`, vous devez coder la chaîne entière en base64. <br> [!DNL SugarCRM Accounts & Contacts] prend en charge plusieurs API. Selon le type d’objet que vous utilisez, transmettez l’un des types suivants : <ul><li>`accounts` : entreprises avec lesquelles votre organisation entretient une relation.</li><li>`contacts` : personnes avec lesquelles votre organisation entretient une relation établie.</li></ul> |
+| `{SOURCE_PARAMS}` | Définit les paramètres du fichier source que vous souhaitez importer dans Platform. Pour récupérer le type de format accepté pour `{SOURCE_PARAMS}`, vous devez coder la chaîne entière en base64. <br> [!DNL SugarCRM Accounts & Contacts] prend en charge plusieurs API. Selon le type d’objet que vous utilisez, transmettez l’un des types suivants : <ul><li>`accounts` : entreprises avec lesquelles votre organisation entretient une relation.</li><li>`contacts` : personnes avec lesquelles votre organisation a une relation établie.</li></ul> |
 
-La variable [!DNL SugarCRM Accounts & Contacts] prend en charge plusieurs API. Selon le type d’objet utilisé pour l’envoi de la requête, procédez comme suit :
+[!DNL SugarCRM Accounts & Contacts] prend en charge plusieurs API. Selon le type d’objet utilisé pour l’envoi de la requête, procédez comme suit :
 
 **Requête**
 
@@ -130,7 +130,7 @@ La variable [!DNL SugarCRM Accounts & Contacts] prend en charge plusieurs API. S
 
 >[!TAB Comptes]
 
-Pour [!DNL SugarCRM] API de comptes , valeur de `{SOURCE_PARAMS}` est transmis comme `{"object_type":"accounts"}`. Lorsqu’il est codé en base64, il équivaut à `eyJvYmplY3RfdHlwZSI6ImFjY291bnRzIn0=` comme illustré ci-dessous.
+Pour l’API de comptes [!DNL SugarCRM], la valeur de `{SOURCE_PARAMS}` est transmise comme `{"object_type":"accounts"}`. Lorsqu’il est codé en base64, il correspond à `eyJvYmplY3RfdHlwZSI6ImFjY291bnRzIn0=` comme illustré ci-dessous.
 
 ```shell
 curl -X GET \
@@ -143,7 +143,7 @@ curl -X GET \
 
 >[!TAB Contacts]
 
-Pour [!DNL SugarCRM] L’API Contacts présente la valeur de `{SOURCE_PARAMS}` est transmis comme `{"object_type":"contacts"}`. Lorsqu’il est codé en base64, il équivaut à `eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=` comme illustré ci-dessous.
+Pour l&#39;API [!DNL SugarCRM] Contacts, la valeur de `{SOURCE_PARAMS}` est transmise comme `{"object_type":"contacts"}`. Lorsqu’il est codé en base64, il correspond à `eyJvYmplY3RfdHlwZSI6ImNvbnRhY3RzIn0=` comme illustré ci-dessous.
 
 ```shell
 curl -X GET \
@@ -586,7 +586,7 @@ Selon le type d’objet que vous utilisez, sélectionnez dans les onglets ci-des
 
 >[!TAB Comptes]
 
-Pour [!DNL SugarCRM] L’API de compte `object_type` La valeur de propriété doit être `accounts`.
+Pour l’API de comptes [!DNL SugarCRM], la valeur de la propriété `object_type` doit être `accounts`.
 
 ```shell
 curl -X POST \
@@ -616,7 +616,7 @@ curl -X POST \
 
 >[!TAB Contacts]
 
-Pour [!DNL SugarCRM] L’API de contacts `object_type` La valeur de propriété doit être `contacts`.
+Pour l&#39;API [!DNL SugarCRM] Contacts, la valeur de la propriété `object_type` doit être `contacts`.
 
 ```shell
 curl -X POST \
@@ -653,8 +653,8 @@ curl -X POST \
 | `baseConnectionId` | Identifiant de connexion de base de [!DNL SugarCRM Accounts & Contacts]. Cet identifiant a été généré lors d’une étape précédente. |
 | `connectionSpec.id` | Identifiant de spécification de connexion correspondant à votre source. |
 | `data.format` | Format des données [!DNL SugarCRM Accounts & Contacts] que vous souhaitez ingérer. Actuellement, le format de données `json` est le seul à être pris en charge. |
-| `object_type` | [!DNL SugarCRM Accounts & Contacts] prend en charge plusieurs API. Selon le type d’objet que vous utilisez, transmettez l’un des types suivants : <ul><li>`accounts` : entreprises avec lesquelles votre organisation entretient une relation.</li><li>`contacts` : personnes avec lesquelles votre organisation entretient une relation établie.</li></ul> |
-| `path` | Cette valeur sera la même que celle que vous sélectionnez pour *`object_type`*. |
+| `object_type` | [!DNL SugarCRM Accounts & Contacts] prend en charge plusieurs API. Selon le type d’objet que vous utilisez, transmettez l’un des types suivants : <ul><li>`accounts` : entreprises avec lesquelles votre organisation entretient une relation.</li><li>`contacts` : personnes avec lesquelles votre organisation a une relation établie.</li></ul> |
+| `path` | Celui-ci aura la même valeur que celle sélectionnée pour *`object_type`*. |
 
 **Réponse**
 
@@ -746,7 +746,7 @@ Une réponse réussie renvoie l’identifiant unique de la nouvelle connexion ci
 
 ### Créer un mappage {#mapping}
 
-Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache. Pour ce faire, il vous suffit d’adresser une requête de POST à [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) avec des mappages de données définis dans le payload de la requête.
+Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache. Pour ce faire, effectuez une requête de POST vers [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) avec des mappages de données définis dans le payload de la requête.
 
 **Format d’API**
 
@@ -885,7 +885,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ### Créer un flux {#flow}
 
-La dernière étape pour obtenir des données de [!DNL SugarCRM Accounts & Contacts] vers Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
+La dernière étape pour apporter des données de [!DNL SugarCRM Accounts & Contacts] à Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
 
 * [ID de connexion source](#source-connection)
 * [ID de connexion cible](#target-connection)
@@ -893,7 +893,7 @@ La dernière étape pour obtenir des données de [!DNL SugarCRM Accounts & Conta
 
 Un flux de données est chargé de planifier et de collecter les données provenant d’une source. Vous pouvez créer un flux de données en exécutant une requête POST et en fournissant les valeurs mentionnées précédemment dans la payload.
 
-Pour planifier une ingestion, vous devez d’abord définir la valeur de l’heure de début en temps Unix en secondes. Vous devez ensuite définir la valeur de fréquence sur l’une des valeurs suivantes : `hour` ou `day`. La valeur interval désigne la période entre deux ingestion consécutives. La valeur d’intervalle doit être définie comme `1` ou `24` selon `scheduleParams.frequency` sélection de l’une ou l’autre `hour` ou `day`.
+Pour planifier une ingestion, vous devez d’abord définir la valeur de l’heure de début en temps Unix en secondes. Ensuite, vous devez définir la valeur de fréquence sur `hour` ou `day`. La valeur interval désigne la période entre deux ingestion consécutives. La valeur d&#39;intervalle doit être définie sur `1` ou `24` en fonction de la sélection de `scheduleParams.frequency` `hour` ou `day`.
 
 **Format d’API**
 
@@ -954,7 +954,7 @@ curl -X POST \
 | `transformations.params.mappingVersion` | Version correspondante de l’identifiant de mappage. Ce paramètre est défini par défaut sur `0`. |
 | `scheduleParams.startTime` | Cette propriété contient des informations sur la planification de l’ingestion du flux de données. |
 | `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. Les valeurs possibles sont les suivantes : `hour` ou `day`. |
-| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. La valeur d’intervalle doit être définie comme `1` ou `24` selon `scheduleParams.frequency` sélection de l’une ou l’autre `hour` ou `day`. |
+| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. La valeur d&#39;intervalle doit être définie sur `1` ou `24` en fonction de la sélection de `scheduleParams.frequency` `hour` ou `day`. |
 
 **Réponse**
 
@@ -973,20 +973,20 @@ La section suivante fournit des informations sur les étapes de surveillance, de
 
 ### Surveiller votre flux de données
 
-Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs. Pour consulter des exemples complets d’API, reportez-vous au guide sur [surveillance de vos flux de données sources à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
+Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs. Pour obtenir des exemples complets d’API, consultez le guide sur la [surveillance des flux de données de sources à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
 
 ### Mettre à jour votre flux de données
 
-Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés, en envoyant une requête PATCH à la variable `/flows` point d’entrée de [!DNL Flow Service] API, tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre flux de données `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour des flux de données de sources à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les ensembles de mappages associés, en envoyant une requête de PATCH au point de terminaison `/flows` de l’API [!DNL Flow Service], tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique `etag` de votre flux de données dans l’en-tête `If-Match`. Pour consulter des exemples complets d’API, consultez le guide sur la [mise à jour des flux de données de sources à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
 ### Mettre à jour votre compte
 
-Mettez à jour le nom, la description et les informations d’identification de votre compte source en adressant une requête de PATCH au [!DNL Flow Service] API tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre compte source `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour de votre compte source à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Mettez à jour le nom, la description et les informations d’identification de votre compte source en adressant une requête de PATCH à l’API [!DNL Flow Service] tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique `etag` de votre compte source dans l’en-tête `If-Match`. Pour obtenir des exemples complets d’API, lisez le guide sur la [mise à jour de votre compte source à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### Supprimer le flux de données
 
-Supprimez votre flux de données en adressant une requête de DELETE à la fonction [!DNL Flow Service] API tout en fournissant l’identifiant du flux de données que vous souhaitez supprimer dans le cadre du paramètre de requête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [suppression de vos flux de données à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
+Supprimez votre flux de données en adressant une requête de DELETE à l’API [!DNL Flow Service] tout en fournissant l’identifiant du flux de données que vous souhaitez supprimer dans le cadre du paramètre de requête . Pour obtenir des exemples complets d’API, lisez le guide sur la [suppression de vos flux de données à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
 
 ### Suppression de votre compte
 
-Supprimez votre compte en adressant une requête de DELETE à la fonction [!DNL Flow Service] API tout en fournissant l’identifiant de connexion de base du compte que vous souhaitez supprimer. Pour consulter des exemples complets d’API, reportez-vous au guide sur [suppression de votre compte source à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
+Supprimez votre compte en adressant une requête de DELETE à l’API [!DNL Flow Service] tout en fournissant l’identifiant de connexion de base du compte que vous souhaitez supprimer. Pour obtenir des exemples complets d’API, lisez le guide sur la [suppression de votre compte source à l’aide de l’API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).

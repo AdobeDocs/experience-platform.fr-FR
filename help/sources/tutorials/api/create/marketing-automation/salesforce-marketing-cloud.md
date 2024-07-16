@@ -13,7 +13,7 @@ ht-degree: 58%
 
 >[!IMPORTANT]
 >
->L’ingestion d’objets personnalisés n’est actuellement pas prise en charge par la fonction [!DNL Salesforce Marketing Cloud] intégration de la source.
+>L’ingestion d’objets personnalisés n’est actuellement pas prise en charge par l’intégration de la source [!DNL Salesforce Marketing Cloud].
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -30,26 +30,26 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 
 Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide [Prise en main des API Platform](../../../../../landing/api-guide.md).
 
-La section suivante fournit des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL Salesforce Marketing Cloud] en utilisant la variable [!DNL Flow Service] API.
+La section suivante fournit des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL Salesforce Marketing Cloud] à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
-Pour [!DNL Flow Service] pour vous connecter à [!DNL Salesforce Marketing Cloud], vous devez fournir les propriétés de connexion suivantes :
+Pour que [!DNL Flow Service] se connecte à [!DNL Salesforce Marketing Cloud], vous devez fournir les propriétés de connexion suivantes :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `host` | Serveur hôte de votre application. Il s’agit souvent de votre sous-domaine. **Remarque :** Lorsque vous saisissez votre `host` , vous devez spécifier la variable `{subdomain}.rest.marketingcloudapis.com`. Par exemple, si l’URL d’hôte est `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, vous devez alors saisir `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` comme valeur d’hôte. |
-| `clientId` | L’ID client associé à votre [!DNL Salesforce Marketing Cloud] application. |
-| `clientSecret` | Le secret client associé à votre [!DNL Salesforce Marketing Cloud] application. |
+| `host` | Serveur hôte de votre application. Il s’agit souvent de votre sous-domaine. **Remarque :** Lorsque vous entrez votre valeur `host`, vous devez spécifier la valeur `{subdomain}.rest.marketingcloudapis.com`. Par exemple, si l’URL de l’hôte est `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, vous devez saisir `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` comme valeur de l’hôte. |
+| `clientId` | L’ID client associé à votre application [!DNL Salesforce Marketing Cloud]. |
+| `clientSecret` | Le secret client associé à votre application [!DNL Salesforce Marketing Cloud]. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Salesforce Marketing Cloud] est `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
-Pour plus d’informations sur la prise en main, reportez-vous à cette section [[!DNL Salesforce Marketing Cloud] document](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
+Pour plus d&#39;informations sur la prise en main, consultez ce [[!DNL Salesforce Marketing Cloud] document](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
 
 ## Créer une connexion de base
 
 Une connexion de base conserve les informations échangées entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 
-Pour créer un identifiant de connexion de base, envoyez une requête de POST au `/connections` point de terminaison lors de la fourniture de [!DNL Salesforce Marketing Cloud] informations d’identification d’authentification dans le corps de la requête.
+Pour créer un identifiant de connexion de base, envoyez une requête de POST au point de terminaison `/connections` tout en fournissant vos informations d’authentification [!DNL Salesforce Marketing Cloud] dans le cadre du corps de la requête.
 
 **Format d’API**
 
@@ -89,13 +89,13 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `auth.params.clientId` | L’ID client associé à votre [!DNL Salesforce Marketing Cloud] application. |
-| `auth.params.clientSecret` | Le secret client associé à votre [!DNL Salesforce Marketing Cloud] application. |
-| `connectionSpec.id` | La variable [!DNL Salesforce Marketing Cloud] identifiant de spécification de connexion : `ea1c2a08-b722-11eb-8529-0242ac130003`. |
+| `auth.params.clientId` | L’ID client associé à votre application [!DNL Salesforce Marketing Cloud]. |
+| `auth.params.clientSecret` | Le secret client associé à votre application [!DNL Salesforce Marketing Cloud]. |
+| `connectionSpec.id` | ID de spécification de connexion [!DNL Salesforce Marketing Cloud] : `ea1c2a08-b722-11eb-8529-0242ac130003`. |
 
 **Réponse**
 
-Une réponse réussie renvoie la connexion nouvellement créée, y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
+Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
 
 ```json
 {

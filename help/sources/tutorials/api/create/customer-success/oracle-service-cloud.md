@@ -5,12 +5,12 @@ description: Découvrez comment connecter Adobe Experience Platform à Oracle Se
 exl-id: 00c0bc9c-a740-4bab-a882-2cfed8abe758
 source-git-commit: 1695b7d638feb648d5cd7af07879f3ed13f938eb
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '511'
 ht-degree: 98%
 
 ---
 
-# Créez une connexion source Oracle Service Cloud à l’aide du [!DNL Flow Service] API
+# Créez une connexion source Oracle Service Cloud à l’aide de l’API [!DNL Flow Service]
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -21,7 +21,7 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour réussir à vous connecter à Oracle Service Cloud à l’aide de l’API [!DNL Flow Service]. 
 
@@ -32,7 +32,7 @@ Pour connecter [!DNL Flow Service] à Oracle Service Cloud, vous devez fournir d
 | Informations d’identification | Description |
 | ---------- | ----------- |
 | `host` | URL d’hôte de votre instance Oracle Service Cloud.  |
-| `username` | Nom d’utilisateur de votre compte utilisateur Oracle Service Cloud.  |
+| `username` | Nom d’utilisateur de votre compte d’utilisateur Oracle Service Cloud. |
 | `password` | Mot de passe de votre compte Oracle Service Cloud.  |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source.  L’identifiant de spécification de connexion pour Oracle Service Cloud est : `ba5126ec-c9ac-11eb-b8bc-0242ac130003`.  |
 

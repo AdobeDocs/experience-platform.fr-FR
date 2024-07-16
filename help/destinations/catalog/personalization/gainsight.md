@@ -1,20 +1,20 @@
 ---
 keywords: prévoir;prévoir l’extension;prévoir la destination
 title: Extension Gainsight
-description: L’extension Gainsight est une destination de personnalisation dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Gainsight est une destination de personnalisation dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: f73042e0-e540-4373-86c2-60be3749c049
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 93%
+source-wordcount: '443'
+ht-degree: 90%
 
 ---
 
 # Extension [!DNL Gainsight] {#gainsight-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-[!DNL Gainsight] fournit aux propriétaires de produits les outils nécessaires pour mieux comprendre le comportement des utilisateurs, favoriser l’adoption des produits et recueillir les retours des utilisateurs.
+[!DNL Gainsight] dote les propriétaires de produits des outils nécessaires pour mieux comprendre le comportement des utilisateurs, stimuler l’adoption des produits et collecter les commentaires des utilisateurs.
 
 [!DNL Gainsight] est une extension de personnalisation dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.103343.html).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Gainsight] extension :
+Pour installer l’extension [!DNL Gainsight], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

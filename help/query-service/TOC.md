@@ -8,7 +8,7 @@ role: User,Developer
 source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
 workflow-type: tm+mt
 source-wordcount: '321'
-ht-degree: 82%
+ht-degree: 83%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 82%
       - [Création de jeux de données dérivés basés sur des déciles](data-distiller/derived-datasets/decile-based-derived-attributes.md)
    - Informations personnalisables pour la création de rapports d’application étendue {#customizable-insights}
       - [Vue d’ensemble](data-distiller/customizable-insights/overview.md)
-      - [Mode Requête pro](data-distiller/customizable-insights/query-pro-mode.md)
+      - [Mode de requête pro](data-distiller/customizable-insights/query-pro-mode.md)
       - [Envoi de requêtes accélérées](data-distiller/customizable-insights/send-accelerated-queries.md)
       - [Guide sur le modèle de données d’insights de rapports](data-distiller/customizable-insights/reporting-insights-data-model.md)
    - Pipelines de fonctionnalités AI/ML {#ml-feature-pipelines}

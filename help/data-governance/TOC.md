@@ -8,7 +8,7 @@ role: User,Developer,Admin
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '90'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -38,4 +38,4 @@ ht-degree: 98%
    * [Actions marketing](api/marketing-actions.md)
    * [Évaluation](api/evaluation.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/policy-service/)
-* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

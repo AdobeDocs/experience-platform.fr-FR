@@ -1,28 +1,28 @@
 ---
 keywords: Experience Platform;publier un modèle;Data Science Workspace;rubriques les plus consultées;API d’apprentissage automatique sensei
 solution: Experience Platform
-title: Publication d’un modèle en tant que service à l’aide de l’API d’apprentissage automatique de Sensei
+title: Publish d’un modèle en tant que service à l’aide de l’API Sensei Machine Learning
 type: Tutorial
 description: Ce tutoriel décrit le processus de publication d’un modèle en tant que service à l’aide de l’API Sensei Machine Learning.
 exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '1516'
-ht-degree: 47%
+source-wordcount: '1518'
+ht-degree: 45%
 
 ---
 
-# Publier un modèle en tant que service à l’aide de la méthode [!DNL Sensei Machine Learning API]
+# Publish d’un modèle en tant que service à l’aide de [!DNL Sensei Machine Learning API]
 
-Ce tutoriel décrit le processus de publication d’un modèle en tant que service à l’aide de la fonction [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
+Ce tutoriel décrit le processus de publication d’un modèle en tant que service à l’aide de [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
 
-## Prise en main
+## Commencer
 
-Ce tutoriel nécessite une compréhension pratique de Adobe Experience Platform Data Science Workspace. Avant de commencer ce tutoriel, veuillez consulter la section [Présentation de Data Science Workspace](../home.md) pour une présentation de haut niveau du service.
+Ce tutoriel nécessite une compréhension pratique de Adobe Experience Platform Data Science Workspace. Avant de commencer ce tutoriel, consultez la [présentation de Data Science Workspace](../home.md) pour une présentation générale du service.
 
-Pour suivre ce tutoriel, vous devez disposer d’un moteur ML, d’une instance ML et d’une expérience. Pour savoir comment créer ces éléments dans l’API, consultez le tutoriel sur [importation d’une recette empaquetée](./import-packaged-recipe-api.md).
+Pour suivre ce tutoriel, vous devez disposer d’un moteur ML, d’une instance ML et d’une expérience. Pour obtenir des instructions sur la création de ces recettes dans l’API, consultez le tutoriel sur l’ [importation d’une recette empaquetée](./import-packaged-recipe-api.md).
 
-Enfin, avant de commencer ce tutoriel, consultez la section [prise en main](../api/getting-started.md) de la section du guide de développement pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à la fonction [!DNL Sensei Machine Learning] API, y compris les en-têtes requis utilisés tout au long de ce tutoriel :
+Enfin, avant de commencer ce tutoriel, consultez la section [prise en main](../api/getting-started.md) du guide de développement pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API [!DNL Sensei Machine Learning], y compris les en-têtes requis utilisés tout au long de ce tutoriel :
 
 - `{ACCESS_TOKEN}`
 - `{ORG_ID}`
@@ -38,7 +38,7 @@ Le tableau suivant présente la terminologie courante utilisée dans ce tutoriel
 
 | Terme | Définition |
 | --- | --- |
-| **Instance de machine learning (instance ML)** | Une instance d’une [!DNL Sensei] Moteur pour un client spécifique, contenant des données, des paramètres et des [!DNL Sensei] code. |
+| **Instance de machine learning (instance ML)** | Une instance d’un moteur [!DNL Sensei] pour un client spécifique, contenant des données, des paramètres et du code [!DNL Sensei] spécifiques. |
 | **Expérience** | Entité parapluie permettant d’organiser des exécutions d’expériences de formation ou de notation ou les deux. |
 | **Expérience planifiée** | Terme décrivant l’automatisation des exécutions d’expériences de formation ou de notation, régies par un calendrier défini par l’utilisateur. |
 | **Exécution de l’expérience** | Une instance particulière d’expériences de formation ou de notation. Les exécutions d’expériences multiples provenant d’une expérience particulière peuvent différer des valeurs de jeu de données utilisées pour la formation ou la notation. |
@@ -48,7 +48,7 @@ Le tableau suivant présente la terminologie courante utilisée dans ce tutoriel
 
 ## Création d’un service ML avec une exécution d’expérience de formation existante et une notation planifiée
 
-Lorsque vous publiez une exécution d’expérience de formation en tant que service ML, vous pouvez planifier la notation en fournissant des détails sur l’exécution de l’expérience de notation dans le payload d’une requête de POST. Cela entraîne la création d’une entité Expérience planifiée pour la notation.
+Lorsque vous publiez une exécution d’expérience de formation en tant que service ML, vous pouvez planifier la notation en fournissant des détails sur l’exécution de l’expérience de notation dans le payload d’une requête de POST. Cela entraîne la création d’une entité d’expérience planifiée pour la notation.
 
 **Format d’API**
 
@@ -94,7 +94,7 @@ curl -X POST
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du nouveau service ML, y compris son unique `id` et le `scoringExperimentId` pour son expérience de notation correspondante.
+Une réponse réussie renvoie les détails du nouveau service ML, y compris son `id` unique et le `scoringExperimentId` pour son expérience de notation correspondante.
 
 
 ```JSON
@@ -176,7 +176,7 @@ curl -X POST
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du service ML nouvellement créé. Cela inclut l’unique `id`, ainsi que la variable `trainingExperimentId` et `scoringExperimentId` pour ses expériences de formation et de notation correspondantes, respectivement.
+Une réponse réussie renvoie les détails du service ML nouvellement créé. Cela inclut le `id` unique du service, ainsi que les `trainingExperimentId` et `scoringExperimentId` pour ses expériences de formation et de notation correspondantes, respectivement.
 
 ```JSON
 {
@@ -254,7 +254,7 @@ curl -X POST 'https://platform.adobe.io/data/sensei/mlServices'
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du service ML nouvellement créé. Cela inclut l’unique `id`, ainsi que la variable `trainingExperimentId` et `scoringExperimentId` de ses expériences de formation et de notation correspondantes, respectivement. Dans l’exemple de réponse ci-dessous, la présence de `trainingSchedule` et `scoringSchedule` suggère que les entités d’expérience pour la formation et la notation sont des expériences planifiées.
+Une réponse réussie renvoie les détails du service ML nouvellement créé. Cela inclut le `id` unique du service, ainsi que les `trainingExperimentId` et `scoringExperimentId` de ses expériences de formation et de notation correspondantes, respectivement. Dans l’exemple de réponse ci-dessous, la présence de `trainingSchedule` et `scoringSchedule` suggère que les entités d’expérience pour la formation et la notation sont des expériences planifiées.
 
 ```JSON
 {
@@ -285,7 +285,7 @@ Une réponse réussie renvoie les détails du service ML nouvellement créé. Ce
 
 ## Recherche d’un service ML {#retrieving-ml-services}
 
-Vous pouvez rechercher un service ML existant en effectuant une `GET` de `/mlServices` et en fournissant les `id` du service ML dans le chemin.
+Vous pouvez rechercher un service ML existant en effectuant une requête `GET` vers `/mlServices` et en fournissant l’unique `id` du service ML dans le chemin.
 
 **Format d’API**
 
@@ -295,7 +295,7 @@ GET /mlServices/{SERVICE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SERVICE_ID}` | L’unique `id` du service ML que vous recherchez. |
+| `{SERVICE_ID}` | Le `id` unique du service ML que vous recherchez. |
 
 **Requête**
 
@@ -345,7 +345,7 @@ Une réponse réussie renvoie les détails du service ML.
 
 ## Planification de la formation ou de la notation
 
-Si vous souhaitez planifier la notation et la formation sur un service ML déjà publié, vous pouvez le faire en mettant à jour le service ML existant avec une `PUT` requête sur `/mlServices`.
+Si vous souhaitez planifier la notation et la formation sur un service ML qui a déjà été publié, vous pouvez le faire en mettant à jour le service ML existant avec une requête `PUT` sur `/mlServices`.
 
 **Format d’API**
 
@@ -355,11 +355,11 @@ PUT /mlServices/{SERVICE_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SERVICE_ID}` | L’unique `id` du service ML que vous mettez à jour. |
+| `{SERVICE_ID}` | Le `id` unique du service ML que vous mettez à jour. |
 
 **Requête**
 
-La requête suivante planifie la formation et la notation pour un service ML existant en ajoutant la variable `trainingSchedule` et `scoringSchedule` clés avec leurs `startTime`, `endTime`, et `cron` clés.
+La requête suivante planifie la formation et la notation pour un service ML existant en ajoutant les clés `trainingSchedule` et `scoringSchedule` avec leurs clés `startTime`, `endTime` et `cron` respectives.
 
 ```SHELL
 curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}' 
@@ -392,7 +392,7 @@ curl -X PUT 'https://platform.adobe.io/data/sensei/mlServices/{SERVICE_ID}'
 
 >[!WARNING]
 >
->Ne tentez pas de modifier la variable `startTime` sur les tâches de formation et de notation planifiées existantes. Si le modèle `startTime` doit être modifié, pensez à publier le même modèle et à reprogrammer les tâches de formation et de notation.
+>Ne tentez pas de modifier le `startTime` sur les tâches de formation et de notation planifiées existantes. Si le modèle `startTime` doit être modifié, pensez à publier le même modèle et à reprogrammer les tâches de formation et de notation.
 
 **Réponse**
 

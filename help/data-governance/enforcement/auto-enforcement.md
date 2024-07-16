@@ -19,7 +19,7 @@ Pour vous aider à protéger votre organisation contre les risques et passifs po
 
 >[!IMPORTANT]
 >
->Les stratégies de consentement et l’application automatique des stratégies de consentement ne sont disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield** ou **Adobe de la confidentialité et de la sécurité**.
+>Les politiques de consentement et l’application automatique des politiques de consentement ne sont disponibles que pour les organisations qui ont acheté **Adobe Healthcare Shield** ou **Adobe Privacy &amp; Security Shield**.
 
 Ce document se concentre sur l’application des politiques de gouvernance des données et de consentement. Pour plus d’informations sur les politiques de contrôle d’accès, consultez la documentation sur le [contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md).
 
@@ -94,35 +94,35 @@ Si une violation de politique se produit lors de la tentative d’activation d�
 
 Sélectionnez un nom de stratégie pour afficher les détails de cette violation.
 
-![Une boîte de dialogue indiquant qu’une violation de stratégie s’est produite avec le nom de la stratégie mis en surbrillance.](../images/enforcement/violation-policy-select.png)
+![Boîte de dialogue indiquant qu’une violation de stratégie s’est produite avec le nom de la stratégie mis en surbrillance.](../images/enforcement/violation-policy-select.png)
 
 Le message relatif à la violation présente un résumé de la politique enfreinte, y compris les conditions configurées pour être vérifiées par la politique, l’action spécifique qui a déclenché la violation ainsi qu’une liste de résolutions possibles pour le problème.
 
-![Une boîte de dialogue de violation de politique avec le résumé de la violation mis en surbrillance.](../images/enforcement/violation-summary.png)
+![Une boîte de dialogue de violation de stratégie avec le résumé de violation mis en surbrillance.](../images/enforcement/violation-summary.png)
 
 Un graphique relatif à la parenté des données s’affiche sous le résumé de la violation. Cela vous permet de visualiser les jeux de données, les politiques de fusion, les audiences et les destinations impliqués dans la violation de la politique. L’entité que vous modifiez actuellement est mise en surbrillance dans le graphique, ce qui indique le point du flux à l’origine de la violation. Vous pouvez sélectionner un nom d’entité dans le graphique pour ouvrir la page de détails de l’entité en question.
 
-![Une boîte de dialogue de violation de stratégie avec le graphique de lignage des données mis en surbrillance.](../images/enforcement/data-lineage.png)
+![Boîte de dialogue de violation de politique avec le graphique de lignage de données surligné.](../images/enforcement/data-lineage.png)
 
-Vous pouvez également utiliser la variable **[!UICONTROL Filtrer]** icône (![Icône de filtre.](../images/enforcement/filter.png)) pour filtrer les entités affichées par catégorie. Au moins deux catégories doivent être sélectionnées pour que les données s’affichent.
+Vous pouvez également utiliser l’icône **[!UICONTROL Filtre]** (![Icône de filtre).](../images/enforcement/filter.png)) pour filtrer les entités affichées par catégorie. Au moins deux catégories doivent être sélectionnées pour que les données s’affichent.
 
-![Une boîte de dialogue de violation de stratégie avec le filtre de traçabilité des données et le menu déroulant mis en surbrillance.](../images/enforcement/lineage-filter.png)
+![Une boîte de dialogue de violation de politique avec le filtre de traçabilité des données et le menu déroulant mis en surbrillance.](../images/enforcement/lineage-filter.png)
 
 Sélectionnez **[!UICONTROL Vue Liste]** pour afficher la parenté des données sous forme de liste. Pour revenir au graphique visuel, sélectionnez **[!UICONTROL Chemin parcouru]**.
 
-![Une boîte de dialogue de violation de stratégie avec la vue de chemin de lignage des données mise en surbrillance.](../images/enforcement/list-view.png)
+![Une boîte de dialogue de violation de stratégie avec la vue de chemin de lignage de données mise en surbrillance.](../images/enforcement/list-view.png)
 
-#### Étiquettes correctement appliquées {#labels-successfully-applied}
+#### Libellés appliqués avec succès {#labels-successfully-applied}
 
-Si vous créez des stratégies d’utilisation des données avant de libeller vos champs de schéma, vous risquez de rencontrer une boîte de dialogue de violation de stratégie de gouvernance dès que vous appliquez des libellés à votre schéma. Dans ce cas, vous pouvez étiqueter une partie de votre schéma. La variable [!UICONTROL Étiquettes correctement appliquées] tab indique les libellés qui ont été appliqués avec succès, car il n’existe aucune restriction de stratégie pour ce champ.
+Si vous créez des stratégies d’utilisation des données avant de libeller vos champs de schéma, vous risquez de rencontrer une boîte de dialogue de violation de stratégie de gouvernance dès que vous appliquez des libellés à votre schéma. Dans ce cas, vous pouvez étiqueter une partie de votre schéma. L’onglet [!UICONTROL Étiquettes appliquées avec succès] indique quelles étiquettes ont été appliquées avec succès, car il n’existe aucune restriction de stratégie pour ce champ.
 
 Utilisez le diagramme de lignage de données pour comprendre les autres modifications de configuration à effectuer avant de pouvoir ajouter le libellé à votre champ de schéma.
 
-![Boîte de dialogue de violation de stratégie avec [!UICONTROL Étiquettes correctement appliquées] en surbrillance.](../images/enforcement/labels-successfully-applied.png)
+![Une boîte de dialogue de violation de stratégie avec l’onglet [!UICONTROL Étiquettes correctement appliquées] mis en surbrillance.](../images/enforcement/labels-successfully-applied.png)
 
 ### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
-Lorsque vous activez une audience vers une destination, vous pouvez voir comment votre [stratégies de consentement](../policies/user-guide.md#consent-policy) affectent différents pourcentages de profils inclus dans l’activation.
+Lors de l’activation d’une audience vers une destination, vous pouvez voir comment vos [stratégies de consentement](../policies/user-guide.md#consent-policy) affectent différents pourcentages de profils inclus dans l’activation.
 
 >[!NOTE]
 >

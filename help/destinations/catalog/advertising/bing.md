@@ -14,15 +14,15 @@ ht-degree: 52%
 
 ## Présentation {#overview}
 
-Utilisez la variable [!DNL Microsoft Bing] destination pour envoyer les données de profil à l’ensemble de [!DNL Microsoft Advertising Network], y compris [!DNL Display Advertising], [!DNL Search], et [!DNL Native].
+Utilisez la destination [!DNL Microsoft Bing] pour envoyer des données de profil à l’ensemble de [!DNL Microsoft Advertising Network], y compris [!DNL Display Advertising], [!DNL Search] et [!DNL Native].
 
-La variable [!DNL Microsoft Bing] création de destination *[!DNL Custom Audiences]* dans Microsoft. Elles sont disponibles dans les deux [!DNL Microsoft Search Network] et [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]) comme indiqué dans la variable [Documentation Microsoft Advertising](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
+La destination [!DNL Microsoft Bing] crée *[!DNL Custom Audiences]* dans Microsoft. Celles-ci sont disponibles dans les [!DNL Microsoft Search Network] et [!DNL Audience Network] ([!DNL Native] /[!DNL Display] /[!DNL Programmatic]) comme indiqué dans la [documentation Microsoft Advertising](https://help.ads.microsoft.com/#apex/ads/en/56892/1-500).
 
 Pour envoyer des données de profil à [!DNL Microsoft Bing], vous devez d’abord vous connecter à la destination.
 
 ## Cas d’utilisation {#use-cases}
 
-En tant que marketeur, je souhaite pouvoir utiliser des audiences composées de [!DNL Microsoft Advertising IDs] pour cibler les utilisateurs par le biais de publicités display ou de recherche sur plusieurs [!DNL Microsoft Advertising] canaux.
+En tant que marketeur, je souhaite pouvoir utiliser des audiences [!DNL Microsoft Advertising IDs] pour cibler les utilisateurs par le biais de publicités display ou de recherches sur des canaux [!DNL Microsoft Advertising].
 
 ## Identités prises en charge {#supported-identities}
 
@@ -47,13 +47,13 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 
 ## Type et fréquence d’exportation {#export-type-frequency}
 
-**[!DNL Audience Export]** : vous exportez tous les membres d’une audience vers le [!DNL Microsoft Bing] destination.
+**[!DNL Audience Export]** : vous exportez tous les membres d’une audience vers la destination [!DNL Microsoft Bing].
 
 Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la fréquence d’exportation des destinations.
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Export d’audience]** | Vous exportez tous les membres d’une audience vers le [!DNL Microsoft Bing] destination. |
+| Type d’exportation | **[!UICONTROL Export d’audience]** | Vous exportez tous les membres d’une audience vers la destination [!DNL Microsoft Bing]. |
 | Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des audiences, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -62,17 +62,17 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Si vous souhaitez créer votre première destination avec [!DNL Microsoft Bing] et n’ont pas activé la variable [fonctionnalité de synchronisation des identifiants](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=fr) dans le service d’ID Experience Cloud (avec Adobe Audience Manager ou d’autres applications), contactez Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants. Si vous avez configuré précédemment des intégrations [!DNL Microsoft Bing] dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers Platform.
+>Si vous souhaitez créer votre première destination avec [!DNL Microsoft Bing] et que vous n’avez pas activé par le passé la [fonctionnalité de synchronisation des identifiants](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=fr) dans le service d’ID Experience Cloud (avec Adobe Audience Manager ou d’autres applications), contactez Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants. Si vous avez configuré précédemment des intégrations [!DNL Microsoft Bing] dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers Platform.
 
 Lors de la configuration de la destination, vous devez fournir les informations suivantes :
 
-* [!UICONTROL Identifiant de compte]: ceci est votre [!DNL Bing Ads CID], au format entier.
+* [!UICONTROL ID de compte] : il s’agit de votre [!DNL Bing Ads CID], au format entier.
 
 ## Se connecter à la destination {#connect}
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **** et des **** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
 
@@ -82,7 +82,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Identifiant de compte]**: votre [!DNL Bing Ads Customer ID] (CID). Votre ID de client est un entier, qui se trouve dans l’URL lorsque vous vous connectez. [!DNL Microsoft Advertising].
+* **[!UICONTROL ID de compte]** : votre [!DNL Bing Ads Customer ID] (CID). Votre ID de client est un entier, qui se trouve dans l’URL lorsque vous vous connectez à [!DNL Microsoft Advertising].
 
 ### Activer les alertes {#enable-alerts}
 
@@ -99,13 +99,13 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **** et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Voir [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](../../ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
-Dans le [Planification de l’audience](../../ui/activate-segment-streaming-destinations.md#scheduling) vous devez mapper manuellement le nom de l’audience dans la variable [!UICONTROL ID de mappage] champ . Ainsi, les métadonnées d’audience sont correctement transmises à [!DNL Bing].
+À l’étape [Planification de l’audience](../../ui/activate-segment-streaming-destinations.md#scheduling), vous devez mapper manuellement le nom de l’audience dans le champ [!UICONTROL  ID de mappage] . Cela permet de s’assurer que les métadonnées d’audience sont correctement transmises à [!DNL Bing].
 
-![Image de l’interface utilisateur montrant l’écran de planification de l’audience avec un exemple de mappage du nom de l’audience à l’identifiant de mappage Bing.](../../assets/catalog/advertising/bing/mapping-id.png)
+![Image de l&#39;interface utilisateur montrant l&#39;écran de planification de l&#39;audience avec un exemple de mappage du nom de l&#39;audience à l&#39;identifiant de mappage Bing.](../../assets/catalog/advertising/bing/mapping-id.png)
 
 ## Données exportées {#exported-data}
 

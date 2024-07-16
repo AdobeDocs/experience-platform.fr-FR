@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: Fonctions de tableau, de liste et de définition de PQL
-description: Le langage de requête de profil (PQL) offre des fonctions pour faciliter l’interaction avec des tableaux, des listes et des chaînes.
+description: Profile Query Language (PQL) offre des fonctions pour faciliter l’interaction avec des tableaux, des listes et des chaînes.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '750'
-ht-degree: 97%
+source-wordcount: '753'
+ht-degree: 94%
 
 ---
 
 # Fonctions de tableau, de liste et d’ensemble
 
-[!DNL Profile Query Language] (PQL) offre des fonctions pour faciliter l’interaction avec des tableaux, des listes et des chaînes. Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
+[!DNL Profile Query Language] (PQL) offre des fonctions pour faciliter l’interaction avec des tableaux, des listes et des chaînes. Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
 
 ## Dans
 

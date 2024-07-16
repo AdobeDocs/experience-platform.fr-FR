@@ -6,8 +6,8 @@ description: Ce document donne un aperçu de la manière dont différents types 
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
 source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 98%
+source-wordcount: '602'
+ht-degree: 99%
 
 ---
 
@@ -108,4 +108,4 @@ Le tableau suivant indique les lettres de modèle définies pour les chaînes de
 
 ## Mappages {#maps}
 
-Les mappages ne sont actuellement pas pris en charge dans [!DNL Data Prep].
+Les cartes ne sont actuellement pas prises en charge dans [!DNL Data Prep].

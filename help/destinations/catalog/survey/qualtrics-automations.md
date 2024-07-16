@@ -25,19 +25,19 @@ Utilisez l’agrégation de plusieurs sources de données opérationnelles dans 
 
 ## Cas d’utilisation {#use-cases}
 
-Pour mieux comprendre comment et à quel moment utiliser la variable *Automatisations Qualtrics* destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
+Pour vous aider à mieux comprendre comment et à quel moment utiliser la destination *Automations Qualtrics*, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 
 ### Cas d’utilisation #1 {#use-case-1}
 
-**Scénario**: une entreprise souhaite mesurer la satisfaction de ses clients sur divers points de contact numériques, tels que son site web et son application mobile. Ils utilisent Adobe Experience Platform pour déclencher des enquêtes Qualtrics en fonction des interactions des utilisateurs, comme l’exécution d’un achat ou la visite d’une page web spécifique.
+**Scénario** : une entreprise souhaite mesurer la satisfaction de ses clients sur divers points de contact numériques, tels que son site web et son application mobile. Ils utilisent Adobe Experience Platform pour déclencher des enquêtes Qualtrics en fonction des interactions des utilisateurs, comme l’exécution d’un achat ou la visite d’une page web spécifique.
 
-**Résultat**: en collectant des commentaires en temps réel, l’entreprise peut améliorer l’expérience client grâce aux données, ce qui lui permet d’accroître la satisfaction et la fidélité.
+**Résultat** : en collectant des commentaires en temps réel, l’entreprise peut améliorer l’expérience client grâce aux données, ce qui lui permet d’accroître la satisfaction et la fidélité.
 
 ### Cas d’utilisation #2 {#use-case-2}
 
-**Scénario**: une organisation vise à améliorer son processus d’intégration des employés. Ils utilisent Adobe Experience Platform pour recueillir les commentaires des nouveaux employés par le biais des enquêtes Qualtrics. Les enquêtes sont automatiquement déclenchées après une période d&#39;intégration prédéfinie.
+**Scénario** : une entreprise vise à améliorer son processus d’intégration des employés. Ils utilisent Adobe Experience Platform pour recueillir les commentaires des nouveaux employés par le biais des enquêtes Qualtrics. Les enquêtes sont automatiquement déclenchées après une période d&#39;intégration prédéfinie.
 
-**Résultat**: les commentaires continus permettent à l’entreprise d’adapter et d’améliorer le processus d’intégration, ce qui se traduit par un meilleur engagement et une meilleure productivité parmi les nouveaux employés.
+**Résultat** : les commentaires continus permettent à l’entreprise d’adapter et d’améliorer le processus d’intégration, ce qui se traduit par un meilleur engagement et une meilleure productivité parmi les nouveaux employés.
 
 ## Conditions préalables
 
@@ -52,12 +52,12 @@ Vous trouverez ci-dessous les étapes nécessaires pour obtenir un jeton API à 
 
 1. Connectez-vous à votre compte Qualtrics.
 2. Accédez à **Paramètres du compte**.
-3. Sélectionner **ID Qualtrics**.
-4. Sur cette page, recherchez le **API** contient une **Jeton** champ . Il s’agit du jeton API, qui sera requis lors de la configuration de la destination.
+3. Sélectionnez **ID Qualtrics**.
+4. Sur cette page, recherchez la section **API** qui contient un champ **Token**. Il s’agit du jeton API, qui sera requis lors de la configuration de la destination.
 
 ## Identités prises en charge {#supported-identities}
 
-*Automatisations Qualtrics* prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
+*Automations Qualtrics* prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
 
 | Identité cible | Description | Considérations |
 |---|---|---|
@@ -72,7 +72,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | Élément | Type | Notes |
 ---------|----------|---------|
-| Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la variable *Automatisations Qualtrics* destination. |
+| Type d’exportation | **[!UICONTROL Exportation des segments]** | Vous exportez tous les membres d’un segment (audience) avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la destination *des automatisations Qualtrics*. |
 | Fréquence des exportations | **[!UICONTROL Diffusion en continu]** | Les destinations de diffusion en continu sont des connexions basées sur l’API « toujours actives ». Dès qu’un profil est mis à jour dans Experience Platform en fonction de l’évaluation des segments, le connecteur envoie la mise à jour en aval vers la plateforme de destination. En savoir plus sur les [destinations de diffusion en continu](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -81,13 +81,13 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **** et des **** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-Dans le cadre de l’authentification, vous devrez fournir un **Nom d’utilisateur** et **Password**. Le nom d’utilisateur est votre nom d’utilisateur Qualtrics et le mot de passe est le jeton API de votre compte Qualtrics. Pour récupérer le jeton API, suivez les instructions de la section **Conditions préalables** ci-dessus.
+Dans le cadre de l&#39;authentification, vous devrez fournir un **nom d&#39;utilisateur** et un **mot de passe**. Le nom d’utilisateur est votre nom d’utilisateur Qualtrics et le mot de passe est le jeton API de votre compte Qualtrics. Pour récupérer le jeton API, suivez les instructions de la section **Conditions préalables** ci-dessus.
 
 ![Authentification](/help/destinations/assets/catalog/survey/qualtrics/authentication.png)
 
@@ -97,7 +97,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL URL]**: URL trouvée dans la variable [Événement JSON](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About) qui déclenche votre [workflow dans Qualtrics](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About). Voir la capture d’écran ci-dessous pour obtenir un exemple.
+* **[!UICONTROL URL]** : URL trouvée dans l’ [événement JSON](https://www.qualtrics.com/support/survey-platform/actions-module/json-events/#About) qui déclenche votre [workflow dans Qualtrics](https://www.qualtrics.com/support/survey-platform/actions-module/setting-up-actions/#About). Voir la capture d’écran ci-dessous pour obtenir un exemple.
 
 ![URL](/help/destinations/assets/catalog/survey/qualtrics/json-event-url.png)
 
@@ -111,7 +111,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **** et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Consultez [Activer les profils et les segments vers les destinations d’exportation de segments de diffusion en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
@@ -121,7 +121,7 @@ Cette destination comporte un schéma ouvert afin que vous puissiez envoyer tout
 
 #### Attributs de mappage
 
-Pour ajouter un attribut à votre mappage, sélectionnez simplement **attributs personnalisés** lors de l’ajout d’un nouveau mappage. Vous pouvez saisir n’importe quel nom pour votre attribut. Qualtrics encourage la *CamelCase* convention de dénomination pour les noms d’attribut (voir la capture d’écran ci-dessous pour un exemple).
+Pour ajouter un attribut à votre mappage, sélectionnez simplement **attributs personnalisés** lors de l’ajout d’un nouveau mappage. Vous pouvez saisir n’importe quel nom pour votre attribut. Qualtrics encourage la convention de nommage *camelCase* pour les noms d’attribut (voir la capture d’écran ci-dessous pour un exemple).
 
 ![Attribut personnalisé](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
 
@@ -178,9 +178,9 @@ Comme mentionné précédemment, cette destination utilise un schéma ouvert. To
 }
 ```
 
-Pour vérifier que les données ont été ingérées dans Qualtrics, passez en revue le workflow contenant vos **Événement JSON**, de là, accédez à **Exécuter l’historique** où vous devriez voir les exécutions de votre workflow. Chaque workflow a un état : **Succès** ou **En échec**. La sélection d’une exécution spécifique permet d’en savoir plus, ce qui vous permet de résoudre les problèmes éventuels.
+Pour vérifier que les données ont été ingérées dans Qualtrics, passez en revue le workflow contenant votre **événement JSON**, puis accédez à l’historique d’exécution **où vous devriez voir les exécutions de votre workflow.** Chaque workflow a un état **Succès** ou **Échec**. La sélection d’une exécution spécifique permet d’en savoir plus, ce qui vous permet de résoudre les problèmes éventuels.
 
-Si aucune exécution n’est visible dans **Exécuter l’historique**, cela signifie que le workflow n’a pas encore été déclenché, ce qui indique qu’il peut y avoir un problème. Assurez-vous que le workflow est activé et que la variable **URL** dans la destination de Adobe Experience Platform est correcte. Les exécutions de workflows ne sont pas instantanées. Il se peut donc que vous deviez attendre longtemps avant de les terminer.
+Si aucune exécution n’est visible dans **Run history**, cela signifie que le workflow n’a pas encore été déclenché, ce qui indique qu’il peut y avoir un problème. Assurez-vous que le workflow est activé et que l’ **URL** de la destination dans Adobe Experience Platform est correct. Les exécutions de workflows ne sont pas instantanées. Il se peut donc que vous deviez attendre longtemps avant de les terminer.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 

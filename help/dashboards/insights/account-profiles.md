@@ -7,19 +7,19 @@ exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
 source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
 workflow-type: tm+mt
 source-wordcount: '549'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # Informations sur le profil du compte
 
-[Profils de compte](../../rtcdp/accounts/account-profile-overview.md) sont utilisées pour consolider les informations de compte provenant de diverses sources, y compris de plusieurs canaux marketing et systèmes organisationnels. Cette vue unifiée permet une compréhension complète des comptes clients, améliorant ainsi les campagnes marketing B2B. Les insights dérivés de l’analyse de votre modèle de données rendent vos données Adobe Real-time Customer Data Platform B2B plus accessibles, plus compréhensibles et plus efficaces pour la prise de décision.
+Les [profils de compte](../../rtcdp/accounts/account-profile-overview.md) sont utilisés pour consolider les informations de compte provenant de diverses sources, y compris de plusieurs canaux marketing et systèmes organisationnels. Cette vue unifiée permet une compréhension complète des comptes clients, améliorant ainsi les campagnes marketing B2B. Les insights dérivés de l’analyse de votre modèle de données rendent vos données Adobe Real-time Customer Data Platform B2B plus accessibles, plus compréhensibles et plus efficaces pour la prise de décision.
 
 Grâce à l’accès au code SQL qui alimente vos informations, vous pouvez mieux comprendre vos données B2B et générer vos propres informations réutilisables hautement personnalisées pour explorer plus en détail les informations de votre compte client. Transformez vos données brutes en nouvelles informations exploitables en utilisant le modèle de données Real-Time CDP SQL existant comme source d’inspiration pour créer des requêtes en fonction de vos besoins professionnels uniques.
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-Vous pouvez utiliser les informations suivantes dans le cadre de la [Tableau de bord Profils de compte](../guides/account-profiles.md) ou [tableau de bord personnalisé](../user-defined-dashboards.md). Voir [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou [créer et modifier de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md#create-widget).
+Les informations suivantes sont toutes disponibles pour que vous puissiez les utiliser dans le [tableau de bord Profils de compte](../guides/account-profiles.md) ou dans un [tableau de bord personnalisé](../user-defined-dashboards.md). Consultez la [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou la [création et modification de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md#create-widget).
 
 ## Profils de compte ajoutés {#account-profiles-added}
 
@@ -287,4 +287,4 @@ En lisant ce document, vous comprenez désormais le code SQL qui génère les in
 
 <!-- Add link above Learn how to [generate insights with SQL](). after April release -->
 
-Vous pouvez également lire et comprendre le code SQL qui génère des insights pour la variable [Profils](./profiles.md), [Audiences](./audiences.md), et [Destinations](./destinations.md) tableaux de bord.
+Vous pouvez également lire et comprendre le code SQL qui génère des insights pour les tableaux de bord [Profils](./profiles.md), [Audiences](./audiences.md) et [Destinations](./destinations.md).

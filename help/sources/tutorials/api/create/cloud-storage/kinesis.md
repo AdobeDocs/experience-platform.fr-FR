@@ -1,20 +1,20 @@
 ---
-title: Création d’une connexion source Kinesis Amazon à l’aide de l’API Flow Service
+title: Création d’une connexion Amazon Kinesis Source à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à une source Kinesis Amazon à l’aide de l’API Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 66%
+source-wordcount: '726'
+ht-degree: 59%
 
 ---
 
-# Créez un [!DNL Amazon Kinesis] Connexion source à l’aide de l’API Flow Service
+# Créer une connexion source [!DNL Amazon Kinesis] à l’aide de l’API Flow Service
 
 >[!IMPORTANT]
 >
->La variable [!DNL Amazon Kinesis] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+>La source [!DNL Amazon Kinesis] est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-Time Customer Data Platform Ultimate.
 
 Ce tutoriel vous guide tout au long des étapes de connexion de [!DNL Amazon Kinesis] (ci-après dénommé « [!DNL Kinesis] ») à Experience Platform à l’aide de l’API [[!DNL Flow Service] ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -22,23 +22,23 @@ Ce tutoriel vous guide tout au long des étapes de connexion de [!DNL Amazon Kin
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [Sources](../../../../home.md)[!DNL Platform] : Experience  permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, de libeller et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md)[!DNL Platform] : Experience  fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+* [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
 Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour réussir à connecter [!DNL Kinesis] à Platform à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
-Pour [!DNL Flow Service] pour vous connecter à [!DNL Amazon Kinesis] , vous devez fournir des valeurs pour les propriétés de connexion suivantes :
+Pour que [!DNL Flow Service] se connecte à votre compte [!DNL Amazon Kinesis], vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `accessKeyId` | L’identifiant de clé d’accès est la moitié de la paire de clés d’accès utilisée pour authentifier votre [!DNL Kinesis] compte à Platform. |
-| `secretKey` | La clé d’accès secrète est l’autre moitié de la paire de clés d’accès utilisée pour authentifier votre [!DNL Kinesis] compte à Platform. |
-| `region` | La région de votre [!DNL Kinesis] compte . Consultez le guide sur la [Ajout d’adresses IP à votre liste autorisée](../../../../ip-address-allow-list.md) pour plus d’informations sur les régions. |
+| `accessKeyId` | L’ID de clé d’accès est la moitié de la paire de clés d’accès utilisée pour authentifier votre compte [!DNL Kinesis] sur Platform. |
+| `secretKey` | La clé d’accès secrète est l’autre moitié de la paire de clés d’accès utilisée pour authentifier votre compte [!DNL Kinesis] sur Platform. |
+| `region` | La région de votre compte [!DNL Kinesis]. Pour plus d’informations sur les régions, consultez le guide sur l’ [ajout d’adresses IP à votre liste autorisée](../../../../ip-address-allow-list.md) . |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion [!DNL Kinesis] est : `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
-Pour plus d’informations sur [!DNL Kinesis] les clés d&#39;accès et leur génération, voir à ce sujet [[!DNL AWS] Guide de gestion des clés d’accès pour les utilisateurs IAM](https://docs.aws.amazon.com/fr_fr/IAM/latest/UserGuide/id_credentials_access-keys.html).
+Pour plus d&#39;informations sur les clés d&#39;accès [!DNL Kinesis] et la manière de les générer, consultez ce [[!DNL AWS] guide sur la gestion des clés d&#39;accès pour les utilisateurs IAM](https://docs.aws.amazon.com/fr_fr/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 ### Utiliser les API Platform
 
@@ -87,9 +87,9 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `auth.params.accessKeyId` | L’identifiant de la clé d’accès pour votre [!DNL Kinesis] compte . |
-| `auth.params.secretKey` | La clé d’accès secrète de votre [!DNL Kinesis] compte . |
-| `auth.params.region` | La région de votre [!DNL Kinesis] compte . |
+| `auth.params.accessKeyId` | ID de clé d’accès pour votre compte [!DNL Kinesis]. |
+| `auth.params.secretKey` | Clé d’accès secrète pour votre compte [!DNL Kinesis]. |
+| `auth.params.region` | La région de votre compte [!DNL Kinesis]. |
 | `connectionSpec.id` | Identifiant de spécification de connexion [!DNL Kinesis] : `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
 **Réponse**
@@ -153,7 +153,7 @@ curl -X POST \
 | `data.format` | Format des données [!DNL Kinesis] que vous souhaitez ingérer. Actuellement, le format de données `json` est le seul à être pris en charge. |
 | `params.stream` | Nom du flux de données duquel extraire les enregistrements. |
 | `params.dataType` | Ce paramètre définit le type des données ingérées. Les types de données pris en charge sont les suivants : `raw` et `xdm`. |
-| `params.reset` | Ce paramètre définit la manière dont les données seront lues. Utilisation `latest` pour commencer la lecture à partir des données les plus récentes et utiliser `earliest` pour commencer la lecture à partir des premières données disponibles dans le flux. |
+| `params.reset` | Ce paramètre définit la manière dont les données seront lues. Utilisez `latest` pour commencer la lecture à partir des données les plus récentes et `earliest` pour commencer la lecture à partir des premières données disponibles dans le flux. |
 
 **Réponse**
 

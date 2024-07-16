@@ -66,7 +66,7 @@ Nombre de fonctionnalités peuvent être ajoutées aux balises. Les extensions a
 1. Ouvrez l’onglet **[!UICONTROL Extensions]** à partir de la page d’aperçu de la propriété.
 1. Sélectionnez l’extension.
 
-   ![Onglet Catalogue présentant les extensions principales dans l’onglet Extensions.](../../../images/extensions.png)
+   ![Onglet Catalogue présentant les extensions principales dans l’onglet des extensions.](../../../images/extensions.png)
 
    * Si l’extension existe, sélectionnez-la dans le catalogue des extensions.
    * Placez le pointeur de la souris sur une extension de votre liste pour la configurer ou la désactiver.

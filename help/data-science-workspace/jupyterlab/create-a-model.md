@@ -7,8 +7,8 @@ description: Ce tutoriel vous guide tout au long des étapes requises pour crée
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '2119'
-ht-degree: 34%
+source-wordcount: '2083'
+ht-degree: 29%
 
 ---
 
@@ -18,38 +18,38 @@ Ce tutoriel vous guide tout au long des étapes requises pour créer un modèle 
 
 ## Concepts présentés :
 
-- **Recettes :** Une recette est le terme utilisé par l’Adobe pour désigner une spécification de modèle. Il s’agit d’un conteneur de niveau supérieur qui représente un apprentissage automatique spécifique, un algorithme d’intelligence artificielle ou un ensemble d’algorithmes, une logique de traitement et la configuration nécessaires pour créer et exécuter un modèle formé.
+- **Recettes :** Une recette est le terme d’Adobe d’une spécification de modèle et est un conteneur de niveau supérieur qui représente un apprentissage automatique spécifique, un algorithme d’IA ou un ensemble d’algorithmes, une logique de traitement et la configuration nécessaires pour créer et exécuter un modèle formé.
 - **Modèle** : un modèle est une instance d’une recette de machine learning entraînée à l’aide de données historiques et de configurations dans le but de résoudre un cas d’usage commercial.
-- **Formation :** la formation est le processus de formation de modèles et de connaissances à partir de données étiquetées.
+- **Formation :** la formation est le processus de formation de modèles et d’informations à partir de données étiquetées.
 - **Notation :** la notation est le processus de génération d’informations à partir de données en utilisant un modèle formé.
 
 ## Téléchargement des ressources requises {#assets}
 
-Avant de poursuivre ce tutoriel, vous devez créer les schémas et les jeux de données requis. Consultez le tutoriel pour [création de schémas et de jeux de données de modèle de propension Luma](../models-recipes/create-luma-data.md) pour télécharger les ressources requises et configurer les conditions préalables requises.
+Avant de poursuivre ce tutoriel, vous devez créer les schémas et les jeux de données requis. Consultez le tutoriel de [création des schémas de modèle de propension Luma et des jeux de données](../models-recipes/create-luma-data.md) pour télécharger les ressources requises et configurer les conditions préalables.
 
-## Prise en main de la fonction [!DNL JupyterLab] environnement de notebook
+## Prise en main de l’environnement de notebook [!DNL JupyterLab]
 
-La création d’une recette à partir de zéro peut être effectuée dans [!DNL Data Science Workspace]. Pour commencer, accédez à [Adobe Experience Platform](https://platform.adobe.com) et sélectionnez la variable **[!UICONTROL Notebooks]** de gauche. Pour créer un nouveau notebook, sélectionnez le modèle Recipe Builder dans le [!DNL JupyterLab Launcher].
+La création d’une recette à partir de zéro peut être effectuée dans [!DNL Data Science Workspace]. Pour commencer, accédez à [Adobe Experience Platform](https://platform.adobe.com) et sélectionnez l’onglet **[!UICONTROL Notebooks]** sur la gauche. Pour créer un nouveau notebook, sélectionnez le modèle Recipe Builder dans le [!DNL JupyterLab Launcher].
 
-Le [!UICONTROL Créateur de recettes] notebook vous permet d’exécuter des opérations de formation et de notation dans le notebook. Vous avez ainsi la possibilité d’apporter des modifications à leurs méthodes de `train()` et de `score()` entre deux expériences en cours d’exécution sur les données de formation et de notation. Une fois que vous êtes satisfait des résultats de la formation et de la notation, vous pouvez créer une recette et la publier en outre en tant que modèle à l’aide de la fonctionnalité de modèle de la recette.
+Le notebook [!UICONTROL Recipe Builder] vous permet d’exécuter des exécutions de formation et de notation dans le notebook. Vous avez ainsi la possibilité d’apporter des modifications à leurs méthodes de `train()` et de `score()` entre deux expériences en cours d’exécution sur les données de formation et de notation. Une fois que vous êtes satisfait des résultats de la formation et de la notation, vous pouvez créer une recette et la publier en outre en tant que modèle à l’aide de la fonctionnalité de modèle de la recette.
 
 >[!NOTE]
 >
->Le [!UICONTROL Créateur de recettes] Le notebook prend en charge l’utilisation de tous les formats de fichier, mais la fonctionnalité de création de recette ne prend actuellement en charge que l’utilisation de [!DNL Python].
+>Le notebook [!UICONTROL  Recipe Builder] prend en charge l’utilisation de tous les formats de fichier, mais la fonctionnalité de création de recette ne prend actuellement en charge que [!DNL Python].
 
 ![](../images/jupyterlab/create-recipe/recipe_builder-new.png)
 
-Lorsque vous sélectionnez la variable [!UICONTROL Créateur de recettes] depuis le lanceur, le notebook est ouvert dans un nouvel onglet.
+Lorsque vous sélectionnez le notebook [!UICONTROL Recipe Builder] dans le lanceur, le notebook est ouvert dans un nouvel onglet.
 
-Dans le nouvel onglet du notebook situé en haut, une barre d’outils se charge et contient trois actions supplémentaires : **[!UICONTROL Train]**, **[!UICONTROL Score]**, et **[!UICONTROL Créer une recette]**. Ces icônes s’affichent uniquement dans la [!UICONTROL Créateur de recettes] notebook. Des informations supplémentaires sur ces actions sont fournies [dans la section formation et notation](#training-and-scoring) après avoir créé votre recette dans le notebook.
+Dans le nouvel onglet du notebook situé en haut, une barre d’outils se charge et contient trois actions supplémentaires : **[!UICONTROL Former]**, **[!UICONTROL Score]** et **[!UICONTROL Créer une recette]**. Ces icônes s’affichent uniquement dans le notebook [!UICONTROL Recipe Builder]. Vous trouverez plus d’informations sur ces actions [ dans la section Formation et notation ](#training-and-scoring) après avoir créé votre recette dans le notebook.
 
 ![](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
-## Prise en main de la fonction [!UICONTROL Créateur de recettes] notebook
+## Prise en main du notebook [!UICONTROL Recipe Builder]
 
-Dans le dossier des ressources fournies, il existe un modèle de propension Luma. `propensity_model.ipynb`. À l’aide de l’option de chargement de notebook dans JupyterLab, chargez le modèle fourni et ouvrez le notebook.
+Dans le dossier de ressources fourni se trouve un modèle de propension Luma `propensity_model.ipynb`. À l’aide de l’option de chargement de notebook dans JupyterLab, chargez le modèle fourni et ouvrez le notebook.
 
-![charger un notebook](../images/jupyterlab/create-recipe/upload_notebook.png)
+![télécharger un notebook](../images/jupyterlab/create-recipe/upload_notebook.png)
 
 Le reste de ce tutoriel couvre les fichiers suivants prédéfinis dans le notebook du modèle de propension :
 
@@ -67,7 +67,7 @@ Le tutoriel vidéo suivant explique le notebook du modèle de propension Luma :
 
 ### Fichier des exigences {#requirements-file}
 
-Le fichier des exigences est utilisé pour déclarer les bibliothèques supplémentaires que vous souhaitez utiliser dans le modèle. En cas de dépendance, vous pouvez spécifier le numéro de version. Pour rechercher d’autres bibliothèques, rendez-vous sur la page [anaconda.org](https://anaconda.org). Pour savoir comment formater le fichier des exigences, consultez la page [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually). Voici une liste non exhaustive des principales bibliothèques déjà utilisées :
+Le fichier des exigences est utilisé pour déclarer les bibliothèques supplémentaires que vous souhaitez utiliser dans le modèle. En cas de dépendance, vous pouvez spécifier le numéro de version. Pour rechercher d’autres bibliothèques, consultez le site [anaconda.org](https://anaconda.org). Pour savoir comment formater le fichier des exigences, consultez la page [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually). Voici une liste non exhaustive des principales bibliothèques déjà utilisées :
 
 ```JSON
 python=3.6.7
@@ -79,7 +79,7 @@ data_access_sdk_python
 
 >[!NOTE]
 >
->Les bibliothèques ou versions spécifiques que vous ajoutez peuvent être incompatibles avec les bibliothèques mentionnées ci-dessus. En outre, si vous choisissez de créer manuellement un fichier d’environnement, la variable `name` n’est pas autorisé à être remplacé.
+>Les bibliothèques ou versions spécifiques que vous ajoutez peuvent être incompatibles avec les bibliothèques ci-dessus. De plus, si vous choisissez de créer manuellement un fichier d’environnement, le champ `name` n’est pas autorisé à être remplacé.
 
 Pour le notebook de modèle de propension Luma, les exigences n’ont pas besoin d’être mises à jour.
 
@@ -87,9 +87,9 @@ Pour le notebook de modèle de propension Luma, les exigences n’ont pas besoin
 
 Les fichiers de configuration, `training.conf` et `scoring.conf`, servent à spécifier les jeux de données que vous souhaitez utiliser pour la formation et la notation, et à ajouter des hyperparamètres. Les configurations pour la formation et la notation sont distinctes.
 
-Pour qu’un modèle puisse exécuter une formation, vous devez fournir la variable `trainingDataSetId`, `ACP_DSW_TRAINING_XDM_SCHEMA`, et `tenantId`. En outre, pour la notation, vous devez fournir la variable `scoringDataSetId`, `tenantId`, et `scoringResultsDataSetId `.
+Pour qu’un modèle puisse exécuter la formation, vous devez fournir les `trainingDataSetId`, `ACP_DSW_TRAINING_XDM_SCHEMA` et `tenantId`. En outre, pour la notation, vous devez fournir les `scoringDataSetId`, `tenantId` et `scoringResultsDataSetId `.
 
-Pour trouver le jeu de données et les identifiants de schéma, accédez à l’onglet données . ![Onglet Données](../images/jupyterlab/create-recipe/dataset-tab.png) dans les notebooks sur la barre de navigation de gauche (sous l’icône de dossier). Trois identifiants de jeu de données différents doivent être fournis. Le `scoringResultsDataSetId` est utilisé pour stocker les résultats de notation du modèle et doit être un jeu de données vide. Ces jeux de données ont été créés précédemment dans la variable [Ressources requises](#assets) étape .
+Pour rechercher les identifiants du jeu de données et du schéma, accédez à l’onglet de données ![Onglet Données](../images/jupyterlab/create-recipe/dataset-tab.png) dans les notebooks dans la barre de navigation de gauche (sous l’icône de dossier). Trois identifiants de jeu de données différents doivent être fournis. `scoringResultsDataSetId` est utilisé pour stocker les résultats de notation du modèle et doit être un jeu de données vide. Ces jeux de données ont été précédemment créés à l’étape [Ressources requises](#assets) .
 
 ![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
@@ -117,14 +117,14 @@ Les deux prochaines sections traiteront du chargement et de la préparation des 
 
 ### Chargement des données {#loading-data}
 
-Cette étape utilise le [cadre de données pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Les données peuvent être chargées à partir de fichiers dans [!DNL Adobe Experience Platform] à l’aide de la fonction [!DNL Platform] SDK (`platform_sdk`), ou provenant de sources externes utilisant pandas&#39; `read_csv()` ou `read_json()` fonctions.
+Cette étape utilise le [cadre de données pandas](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Les données peuvent être chargées à partir de fichiers dans [!DNL Adobe Experience Platform] à l’aide du SDK [!DNL Platform] (`platform_sdk`) ou à partir de sources externes à l’aide des fonctions `read_csv()` ou `read_json()` de pandas.
 
 - [[!DNL Platform SDK]](#platform-sdk)
 - [Sources externes](#external-sources)
 
 >[!NOTE]
 >
-> Dans le notebook Recipe Builder, les données sont chargées via le chargeur de données `platform_sdk`.
+>Dans le notebook Recipe Builder, les données sont chargées via le chargeur de données `platform_sdk`.
 
 ### SDK [!DNL Platform] {#platform-sdk}
 
@@ -156,7 +156,7 @@ Dans cet exemple, les données sont chargées à l’aide du SDK Platform. La bi
 
 `from platform_sdk.dataset_reader import DatasetReader`
 
-Vous pouvez ensuite utiliser la variable `load()` pour récupérer le jeu de données d’apprentissage à partir de la méthode `trainingDataSetId` comme défini dans la configuration (`recipe.conf`).
+Vous pouvez ensuite utiliser la méthode `load()` pour récupérer le jeu de données d’apprentissage à partir de `trainingDataSetId` tel que défini dans le fichier de configuration (`recipe.conf`).
 
 ```PYTHON
 def load(config_properties):
@@ -171,24 +171,23 @@ def load(config_properties):
 
 >[!NOTE]
 >
->Comme indiqué dans la section [Section Fichier de configuration](#configuration-files), les paramètres de configuration suivants sont définis pour vous lorsque vous accédez aux données d’Experience Platform à l’aide de `client_context = get_client_context(config_properties)`:
+>Comme mentionné dans la [section Fichier de configuration](#configuration-files), les paramètres de configuration suivants sont définis pour vous lorsque vous accédez aux données d’Experience Platform à l’aide de `client_context = get_client_context(config_properties)` :
 > - `ML_FRAMEWORK_IMS_USER_CLIENT_ID`
 > - `ML_FRAMEWORK_IMS_TOKEN`
 > - `ML_FRAMEWORK_IMS_ML_TOKEN`
 > - `ML_FRAMEWORK_IMS_TENANT_ID`
 
-
 Maintenant que vous disposez de vos données, vous pouvez commencer leur préparation ainsi que la conception des fonctionnalités.
 
 ### Préparation des données et ingénierie des fonctionnalités {#data-preparation-and-feature-engineering}
 
-Une fois les données chargées, elles doivent être nettoyées et préparées. Dans cet exemple, l’objectif du modèle est de prédire si un client va commander un produit ou non. Étant donné que le modèle ne tient pas compte de produits spécifiques, vous n’avez pas besoin de `productListItems` et, par conséquent, la colonne est supprimée. Ensuite, des colonnes supplémentaires sont ignorées, qui ne contiennent qu’une ou deux valeurs dans une seule colonne. Lors de la formation d’un modèle, il est important de ne conserver que des données utiles qui aideront à prédire votre objectif.
+Une fois les données chargées, elles doivent être nettoyées et préparées. Dans cet exemple, l’objectif du modèle est de prédire si un client va commander un produit ou non. Comme le modèle ne tient pas compte de produits spécifiques, vous n’avez pas besoin de `productListItems` et la colonne est donc supprimée. Ensuite, des colonnes supplémentaires sont ignorées, qui ne contiennent qu’une ou deux valeurs dans une seule colonne. Lors de la formation d’un modèle, il est important de ne conserver que des données utiles qui aideront à prédire votre objectif.
 
-![exemple de préparation de données](../images/jupyterlab/create-recipe/data_prep.png)
+![exemple de prép de données](../images/jupyterlab/create-recipe/data_prep.png)
 
 Une fois que vous avez supprimé les données inutiles, vous pouvez commencer la conception des fonctionnalités. Les données de démonstration utilisées pour cet exemple ne contiennent aucune information de session. Normalement, vous souhaitez obtenir des données sur les sessions en cours et passées pour un client particulier. En raison de l’absence d’informations sur les sessions, cet exemple reproduit les sessions en cours et passées par le biais de la démarcation des parcours.
 
-![démarcation des parcours](../images/jupyterlab/create-recipe/journey_demarcation.png)
+![ {démarcation de Parcours](../images/jupyterlab/create-recipe/journey_demarcation.png)
 
 Une fois la démarcation terminée, les données sont étiquetées et un parcours est créé.
 
@@ -196,29 +195,29 @@ Une fois la démarcation terminée, les données sont étiquetées et un parcour
 
 Ensuite, les fonctionnalités sont créées et divisées entre le passé et le présent. Ensuite, toutes les colonnes inutiles sont ignorées, ce qui vous laisse avec les parcours passés et actuels pour les clients Luma. Ces parcours contiennent des informations, telles que si un client a acheté un article et le parcours qu’il a pris avant l’achat.
 
-![formation actuelle finale](../images/jupyterlab/create-recipe/final_journey.png)
+![formation finale actuelle](../images/jupyterlab/create-recipe/final_journey.png)
 
 ## Chargeur de données de notation {#scoring-data-loader}
 
-La procédure de chargement des données pour la notation est similaire au chargement des données de formation. En regardant attentivement le code, vous pouvez voir que tout est identique, à l’exception de la fonction `scoringDataSetId` dans le `dataset_reader`. En effet, la même source de données Luma est utilisée pour la formation et la notation.
+La procédure de chargement des données pour la notation est similaire au chargement des données de formation. En examinant de près le code, vous pouvez voir que tout est identique, à l’exception de `scoringDataSetId` dans le `dataset_reader`. En effet, la même source de données Luma est utilisée pour la formation et la notation.
 
 Si vous souhaitez utiliser différents fichiers de données pour la formation et la notation, le chargeur de données de formation et de notation est distinct. Cela vous permet d’effectuer un pré-traitement supplémentaire, par exemple de mapper vos données de formation à vos données de notation si nécessaire.
 
 ## Fichier Pipeline {#pipeline-file}
 
-Le fichier `pipeline.py` inclut la logique de formation et de notation.
+Le fichier `pipeline.py` comprend la logique de formation et de notation.
 
-L’objectif de la formation est de créer un modèle à l’aide des fonctionnalités et des étiquettes présentes dans votre jeu de données d’apprentissage. Après avoir choisi votre modèle de formation, vous devez adapter votre jeu de données de formation x et y au modèle, et la fonction renvoie le modèle formé.
+L’objectif de la formation est de créer un modèle à l’aide de fonctionnalités et d’étiquettes dans votre jeu de données d’apprentissage. Après avoir choisi votre modèle de formation, vous devez adapter votre jeu de données de formation x et y au modèle, et la fonction renvoie le modèle formé.
 
 >[!NOTE]
 > 
->Les Fonctionnalités font référence à la variable d’entrée utilisée par le modèle d’apprentissage automatique pour prédire les étiquettes.
+>Les fonctionnalités se rapportent à la variable d’entrée utilisée par le modèle d’apprentissage automatique pour prédire les étiquettes.
 
-![train def](../images/jupyterlab/create-recipe/def_train.png)
+![def train](../images/jupyterlab/create-recipe/def_train.png)
 
 La fonction `score()` doit contenir l’algorithme de notation et renvoyer une mesure pour indiquer le degré de réussite du modèle. La fonction `score()` utilise les étiquettes des jeux de données de notation et le modèle formé pour générer un ensemble de fonctionnalités prédites. Ces valeurs prédites sont ensuite comparées aux fonctionnalités réelles du jeu de données de notation. Dans cet exemple, la fonction `score()` utilise le modèle formé pour prédire les fonctionnalités à l’aide des étiquettes du jeu de données de notation. Les fonctionnalités prédites sont renvoyées.
 
-![score def](../images/jupyterlab/create-recipe/def_score.png)
+![score de def](../images/jupyterlab/create-recipe/def_score.png)
 
 ## Fichier Evaluator {#evaluator-file}
 
@@ -226,49 +225,49 @@ Le fichier `evaluator.py` contient la logique de la manière dont vous souhaitez
 
 ### Fractionnement du jeu de données {#split-the-dataset}
 
-La phase de préparation des données pour la formation nécessite de fractionner le jeu de données à utiliser pour la formation et les tests. Ceci `val` Les données sont utilisées implicitement pour évaluer le modèle après sa formation. Il s’agit d’un processus distinct de celui de notation.
+La phase de préparation des données pour la formation nécessite de fractionner le jeu de données à utiliser pour la formation et les tests. Ces données `val` sont utilisées implicitement pour évaluer le modèle après sa formation. Il s’agit d’un processus distinct de celui de notation.
 
-Cette section présente les `split()` qui charge des données dans le notebook, puis nettoie les données en supprimant les colonnes non liées dans le jeu de données. De là, vous pouvez concevoir des fonctionnalités, ce qui est le processus de création de fonctionnalités pertinentes supplémentaires à partir des fonctionnalités brutes existantes dans les données.
+Cette section présente la fonction `split()` qui charge les données dans le notebook, puis nettoie les données en supprimant les colonnes non liées dans le jeu de données. De là, vous pouvez concevoir des fonctionnalités, ce qui est le processus de création de fonctionnalités pertinentes supplémentaires à partir des fonctionnalités brutes existantes dans les données.
 
 ![Fonction de division](../images/jupyterlab/create-recipe/split.png)
 
 ### Évaluation du modèle formé {#evaluate-the-trained-model}
 
-Le `evaluate()` est exécutée après la formation du modèle et renvoie une mesure pour indiquer le degré de réussite du modèle. Le `evaluate()` utilise les étiquettes des jeux de données de test et le modèle formé pour prédire un ensemble de fonctionnalités. Ces valeurs prédites sont ensuite comparées aux fonctionnalités réelles du jeu de données de test. Dans cet exemple, les mesures utilisées sont les suivantes : `precision`, `recall`, `f1`, et `accuracy`. Vous remarquerez que la fonction renvoie un objet `metric` contenant un tableau de mesures d’évaluation. Ces mesures sont utilisées pour évaluer les performances du modèle formé.
+La fonction `evaluate()` est exécutée après la formation du modèle et renvoie une mesure pour indiquer le degré de réussite du modèle. La fonction `evaluate()` utilise les étiquettes des jeux de données de test et le modèle formé pour prédire un ensemble de fonctionnalités. Ces valeurs prédites sont ensuite comparées aux fonctionnalités réelles du jeu de données de test. Dans cet exemple, les mesures utilisées sont `precision`, `recall`, `f1` et `accuracy`. Vous remarquerez que la fonction renvoie un objet `metric` contenant un tableau de mesures d’évaluation. Ces mesures sont utilisées pour évaluer les performances du modèle formé.
 
 ![evaluate](../images/jupyterlab/create-recipe/evaluate.png)
 
-Ajouter `print(metric)` vous permet d’afficher les résultats de la mesure.
+L&#39;ajout de `print(metric)` vous permet d&#39;afficher les résultats de la mesure.
 
-![résultats des mesures](../images/jupyterlab/create-recipe/evaluate_metric.png)
+![résultats de la mesure](../images/jupyterlab/create-recipe/evaluate_metric.png)
 
 ## Fichier Data Saver {#data-saver-file}
 
-Le `datasaver.py` contient le fichier `save()` et est utilisée pour enregistrer votre prédiction lors du test de notation. Le `save()` utilise votre prédiction et [!DNL Experience Platform Catalog] Les API écrivent les données dans la variable `scoringResultsDataSetId` que vous avez spécifié dans votre `scoring.conf` fichier . Vous pouvez
+Le fichier `datasaver.py` contient la fonction `save()` et est utilisé pour enregistrer votre prédiction lors du test de notation. La fonction `save()` utilise votre prédiction et utilise des API [!DNL Experience Platform Catalog], écrit les données dans le `scoringResultsDataSetId` que vous avez spécifié dans votre fichier `scoring.conf`. Vous pouvez
 
-![Enregistreur de données](../images/jupyterlab/create-recipe/data_saver.png)
+![Éditeur de données](../images/jupyterlab/create-recipe/data_saver.png)
 
 ## Formation et notation {#training-and-scoring}
 
-Lorsque vous avez terminé d’apporter des modifications à votre notebook et que vous souhaitez entraîner votre recette, vous pouvez sélectionner les boutons associés en haut de la barre pour créer une session d’entraînement dans la cellule. Lorsque vous cliquez sur le bouton, un journal des commandes et des sorties issues du script de formation s’affiche dans le notebook (sous `evaluator.py` ). Conda installe d’abord toutes les dépendances, puis la formation commence.
+Lorsque vous avez terminé d’apporter des modifications à votre notebook et que vous souhaitez entraîner votre recette, vous pouvez sélectionner les boutons associés en haut de la barre pour créer une session d’entraînement dans la cellule. Lorsque vous sélectionnez le bouton, un journal des commandes et des sorties issues du script de formation s’affiche dans le notebook (sous la cellule `evaluator.py`). Conda installe d’abord toutes les dépendances, puis la formation commence.
 
-Remarque : vous devez exécuter la formation au moins une fois avant de pouvoir exécuter la notation. En sélectionnant le **[!UICONTROL Exécuter la notation]** noter le modèle formé généré pendant la formation. Le script de notation apparaît sous `datasaver.py`.
+Remarque : vous devez exécuter la formation au moins une fois avant de pouvoir exécuter la notation. Si vous sélectionnez le bouton **[!UICONTROL Exécuter la notation]** , la notation sera affectée au modèle formé généré pendant la formation. Le script de notation apparaît sous `datasaver.py`.
 
 À des fins de débogage, si vous souhaitez afficher la sortie masquée, ajoutez `debug` à la fin de la cellule de sortie et exécutez-la de nouveau.
 
-![formation et score](../images/jupyterlab/create-recipe/toolbar_actions.png)
+![train et score](../images/jupyterlab/create-recipe/toolbar_actions.png)
 
-## Création d’une recette {#create-recipe}
+## Créer une recette {#create-recipe}
 
-Lorsque vous avez terminé de modifier la recette et que vous êtes satisfait du résultat de formation/notation, vous pouvez créer une recette à partir du notebook en sélectionnant **[!UICONTROL Créer une recette]** en haut à droite.
+Lorsque vous avez terminé de modifier la recette et que vous êtes satisfait de la sortie de formation/notation, vous pouvez créer une recette à partir du notebook en sélectionnant **[!UICONTROL Créer une recette]** dans le coin supérieur droit.
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-Après avoir sélectionné **[!UICONTROL Créer une recette]**, vous êtes invité à saisir un nom de recette. Ce nom représente la recette réelle créée sur [!DNL Platform].
+Après avoir sélectionné **[!UICONTROL Créer une recette]**, vous êtes invité à saisir un nom de recette. Ce nom représente la recette créée sur [!DNL Platform].
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
-Une fois que vous avez sélectionné **[!UICONTROL Ok]**, le processus de création de la recette commence. Cela peut prendre du temps et une barre de progression s’affiche à la place du bouton Créer une recette . Une fois l’opération terminée, vous pouvez sélectionner la variable **[!UICONTROL Afficher les recettes]** pour accéder au **[!UICONTROL Recettes]** sous **[!UICONTROL Modèles ML]**
+Une fois que vous avez sélectionné **[!UICONTROL Ok]**, le processus de création de la recette commence. Cela peut prendre du temps et une barre de progression s’affiche à la place du bouton Créer une recette . Une fois l’opération terminée, vous pouvez sélectionner le bouton **[!UICONTROL Afficher les recettes]** pour accéder à l’onglet **[!UICONTROL Recettes]** sous **[!UICONTROL Modèles ML]**.
 
 ![](../images/jupyterlab/create-recipe/recipe_creation_started.png)
 
@@ -278,9 +277,8 @@ Une fois que vous avez sélectionné **[!UICONTROL Ok]**, le processus de créat
 > - Ne pas modifier la ligne `%%writefile` en haut des cellules de fichier
 > - Ne pas créer plusieurs recettes dans différents cahiers simultanément
 
-
 ## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez appris à créer un modèle d’apprentissage automatique dans le [!UICONTROL Créateur de recettes] notebook. Vous avez également appris à utiliser le notebook pour le workflow de recette.
+En suivant ce tutoriel, vous avez appris à créer un modèle d’apprentissage automatique dans le notebook [!UICONTROL Recipe Builder]. Vous avez également appris à utiliser le notebook pour le workflow de recette.
 
-Pour continuer à apprendre à utiliser les ressources dans [!DNL Data Science Workspace], rendez-vous sur la page [!DNL Data Science Workspace] menu déroulant recettes et modèles.
+Pour continuer à apprendre à utiliser les ressources dans [!DNL Data Science Workspace], consultez la liste déroulante [!DNL Data Science Workspace] de recettes et de modèles .

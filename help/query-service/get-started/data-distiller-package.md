@@ -10,7 +10,7 @@ ht-degree: 0%
 
 # Package Distiller de données
 
-Data Distiller est une offre de package qui comprend un sous-ensemble des fonctionnalités de Adobe Experience Platform. Ce module est destiné à la préparation des données post-ingestion pour les cas d’utilisation de profils clients en temps réel ou de données analytiques par des requêtes par lots exécutées dans Query Service. Voir [Présentation de Data Distiller](../data-distiller/overview.md) pour plus d’informations sur le package Data Distiller.
+Data Distiller est une offre de package qui comprend un sous-ensemble des fonctionnalités de Adobe Experience Platform. Ce module est destiné à la préparation des données post-ingestion pour les cas d’utilisation de profils clients en temps réel ou de données analytiques par des requêtes par lots exécutées dans Query Service. Pour plus d’informations sur le package Data Distiller, reportez-vous à la [présentation de Data Distiller](../data-distiller/overview.md) .
 
 <!-- Document is hidden temporarily
 See the [Data Distiller overview](../data-distiller/overview.md) for more details on the Data Distiller package, or the [Data Distiller license usage document](../data-distiller/license-usage.md) for information about your organization's Query Service license usage.

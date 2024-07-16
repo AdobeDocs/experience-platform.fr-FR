@@ -1,22 +1,22 @@
 ---
 keywords: Medallia;medallia
 title: Extension Medallia
-description: L’extension Medallia est une destination de voix du client dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Medallia est une destination de voix du client dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: c28cf31a-890c-4dcd-b936-5a030dc6e83e
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '469'
 ht-degree: 85%
 
 ---
 
 # Extension [!DNL Medallia] {#medallia-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Déployer [!DNL Medallia] rapidement et facilement sur vos propriétés web. L’extension vous permet également de détecter des événements d’enquête, de capturer les commentaires des clients en temps réel au moyen d’éléments de données, de les utiliser dans des règles pour personnaliser l’expérience de votre client et de partager des données avec Adobe Analytics.
+Déployez [!DNL Medallia] rapidement et facilement sur vos propriétés web. L’extension vous permet également de détecter des événements d’enquête, de capturer les commentaires des clients en temps réel au moyen d’éléments de données, de les utiliser dans des règles pour personnaliser l’expérience de votre client et de partager des données avec Adobe Analytics.
 
-[!DNL Medallia] est une voix de l’extension client dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
+[!DNL Medallia] est une extension de voix du client dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Medallia] extension :
+Pour installer l’extension [!DNL Medallia], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

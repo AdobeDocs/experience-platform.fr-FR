@@ -1,22 +1,22 @@
 ---
-title: Création d’une connexion source de redirection Amazon dans l’interface utilisateur
+title: Création d’une connexion Amazon Redshift à Source dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Amazon Redshift à l’aide de l’interface utilisateur de Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
 source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '486'
 ht-degree: 41%
 
 ---
 
-# Connectez-vous à [!DNL Amazon Redshift] compte utilisant l’espace de travail sources
+# Connectez votre compte [!DNL Amazon Redshift] à l’aide de l’espace de travail des sources
 
 >[!IMPORTANT]
 >
->La variable [!DNL Amazon Redshift] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+>La source [!DNL Amazon Redshift] est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-Time Customer Data Platform Ultimate.
 
-Ce tutoriel décrit les étapes à suivre pour connecter votre [!DNL Amazon Redshift] (ci-après dénommés &quot;[!DNL Redshift]&quot;) à Adobe Experience Platform à l’aide de l’interface utilisateur.
+Ce tutoriel décrit les étapes à suivre pour connecter votre compte [!DNL Amazon Redshift] (ci-après appelé &quot;[!DNL Redshift]&quot;) à Adobe Experience Platform à l’aide de l’interface utilisateur.
 
 ## Prise en main
 
@@ -31,19 +31,19 @@ Si vous disposez déjà d’une connexion [!DNL Redshift] valide, vous pouvez ig
 
 ### Collecter les informations d’identification requises
 
-Pour accéder à [!DNL Redshift] sur Experience Platform, vous devez fournir les valeurs suivantes :
+Pour accéder à votre compte [!DNL Redshift] sur Experience Platform, vous devez fournir les valeurs suivantes :
 
-| **Informations d’identification** | **Description** |
+| **Credential** | **Description** |
 | -------------- | --------------- |
-| Serveur | Le serveur associé à votre [!DNL Redshift] compte . |
-| Port | Le port TCP qu’un [!DNL Redshift] Le serveur utilise pour écouter les connexions client. |
-| Nom d’utilisateur | Le nom d’utilisateur associé à votre [!DNL Redshift] compte . |
-| Mot de passe | Le mot de passe associé à votre [!DNL Redshift] compte . |
-| Base de données | La variable [!DNL Redshift] la base de données à laquelle vous accédez. |
+| Serveur | Serveur associé à votre compte [!DNL Redshift]. |
+| Port | Port TCP utilisé par un serveur [!DNL Redshift] pour écouter les connexions client. |
+| Nom d’utilisateur | Nom d’utilisateur associé à votre compte [!DNL Redshift]. |
+| Mot de passe | Mot de passe associé à votre compte [!DNL Redshift]. |
+| Base de données | La base de données [!DNL Redshift] à laquelle vous accédez. |
 
-Pour plus d’informations sur la prise en main, voir [this [!DNL Redshift] document](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).
+Pour plus d&#39;informations sur la prise en main, consultez [ce [!DNL Redshift] document](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).
 
-Une fois que vous avez rassemblé vos informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre [!DNL Redshift] compte à Experience Platform.
+Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre compte [!DNL Redshift] à l’Experience Platform.
 
 ## Connecter votre compte [!DNL Redshift]
 
@@ -51,25 +51,25 @@ Une fois que vous avez rassemblé vos informations d’identification requises, 
 >
 >La norme de codage par défaut pour [!DNL Redshift] est Unicode. Cela ne peut pas être modifié.
 
-Connexion à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au **[!UICONTROL Sources]** workspace. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com), puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]**. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous , **[!UICONTROL Bases de données]** catégorie, sélectionnez **[!UICONTROL Amazon Redshift]**. Si c’est la première fois que vous utilisez ce connecteur, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer [!DNL Redshift] connecteur.
+Sous la catégorie **[!UICONTROL Bases de données]**, sélectionnez **[!UICONTROL Amazon Redshift]**. Si c&#39;est la première fois que vous utilisez ce connecteur, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer un nouveau connecteur [!DNL Redshift].
 
 ![](../../../../images/tutorials/create/redshift/catalog.png)
 
-La variable **[!UICONTROL Connexion à Amazon Redshift]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Se connecter à Amazon Redshift]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et votre [!DNL Redshift] informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion]** puis accorder un certain temps pour établir la nouvelle connexion.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification [!DNL Redshift]. Une fois que vous avez terminé, sélectionnez **[!UICONTROL Se connecter]** et laissez un certain temps à la nouvelle connexion pour établir.
 
 ![](../../../../images/tutorials/create/redshift/new.png)
 
 ### Compte existant
 
-Pour connecter un compte existant, sélectionnez le [!DNL Redshift] compte auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Pour connecter un compte existant, sélectionnez le compte [!DNL Redshift] auquel vous souhaitez vous connecter, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
 ![](../../../../images/tutorials/create/redshift/existing.png)
 

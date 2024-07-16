@@ -4,8 +4,8 @@ description: Découvrez l’extension de balises Common Analytics dans Adobe Ex
 exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 90%
+source-wordcount: '399'
+ht-degree: 86%
 
 ---
 
@@ -50,7 +50,7 @@ L’extension de modules externes courants Analytics propose les actions suivant
 >
 >Bien que l’implémentation de cette action soit plus facile, Adobe Consulting ne vous recommande pas d’utiliser cette action, car celle-ci augmente le poids du module externe.
 
-Avec cette action, vous pouvez sélectionner chaque module externe que vous souhaitez inclure dans votre implémentation et enregistrer les modifications. Sélectionnez tout ou partie des modules externes que vous prévoyez d’utiliser au cours de cette implémentation.
+Avec cette action, vous pouvez sélectionner chaque module externe que vous souhaitez inclure dans votre implémentation et enregistrer les modifications. Sélectionnez le nombre ou le nombre maximal de que vous prévoyez d’utiliser pendant l’implémentation.
 
 ### Initialiser le module externe
 
@@ -71,4 +71,4 @@ Les éléments de données suivants sont disponibles dans l’extension de modul
 
 >[!NOTE]
 >
->Pour plus d’informations sur les modules externes ci-dessus, consultez la section [Documentation Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=fr).
+>Pour plus d’informations sur les modules externes ci-dessus, consultez la [documentation Analytics](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=fr).

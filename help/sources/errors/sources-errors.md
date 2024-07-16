@@ -4,7 +4,7 @@ description: Prenez connaissance des messages d’erreur que vous pouvez rencont
 exl-id: cfba9780-4ab9-447b-8c60-c9f813107d11
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '3192'
+source-wordcount: '3188'
 ht-degree: 100%
 
 ---
@@ -25,7 +25,7 @@ Ce document fournit une liste des messages d’erreur liés aux sources, avec le
 | `1005-500` | Erreur interne | Une erreur interne sʼest produite. Réessayez. Si le problème persiste, contactez l’assistance clientèle. |
 | `1006-408` | Délai d’expiration de la requête | Une erreur s’est produite lors du traitement de la requête. La requête a expiré. Réessayez. Si le problème persiste, contactez l’assistance clientèle. |
 | `1007-400` | Paramètre d’en-tête non valide | Un paramètre d’en-tête non valide : {headerName} a été reçu. Vérifiez les paramètres d’en-tête et réessayez. |
-| `1008-401` |  | Jeton d’autorisation non valide | Le jeton d’autorisation n’a pas accès à cette organisation ou l’organisation n’existe pas. Assurez-vous que l’organisation existe ou contactez votre administration pour y accéder. |
+| `1008-401` | | Jeton d’autorisation non valide | Le jeton d’autorisation n’a pas accès à cette organisation ou l’organisation n’existe pas. Assurez-vous que l’organisation existe ou contactez votre administration pour y accéder. |
 | `1009-403` | ID d’organisation IMS manquant ou vide | L’en-tête de la requête d’ID d’organisation est manquant ou vide. Mettez à jour la valeur de l’en-tête et réessayez. |
 | `1010-500` | Message détaillé non valide | Le paramètre du message détaillé n’a pas été correctement fourni. Vérifiez le paramètre dans le message détaillé et réessayez. |
 | `1011-503` | Service indisponible | Le service est temporairement indisponible. Réessayez. Si le problème persiste, contactez l’assistance clientèle. |

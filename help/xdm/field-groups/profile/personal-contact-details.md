@@ -7,7 +7,7 @@ exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '143'
-ht-degree: 18%
+ht-degree: 16%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 18%
 >
 >Les noms de plusieurs groupes de champs de schéma ont changé. Pour plus d’informations, consultez le document sur les [mises à jour des noms de groupes de champs](../name-updates.md).
 
-[!UICONTROL Détails du contact personnel] est un groupe de champs de schéma standard pour la variable [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) qui décrit les coordonnées d’une personne.
+[!UICONTROL Personal Contact Details] est un groupe de champs de schéma standard pour la [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) qui décrit les informations de contact pour une personne individuelle.
 
 ![](../../images/field-groups/personal-contact-details.png)
 
@@ -34,5 +34,5 @@ ht-degree: 18%
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-personal-details.schema.json)

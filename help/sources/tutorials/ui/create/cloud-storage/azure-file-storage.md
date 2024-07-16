@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;Stockage de fichier Azure;Connecteur de stockage de fichiers Azure
 solution: Experience Platform
-title: Création d’une connexion à la source de stockage de fichiers Azure dans l’interface utilisateur
+title: Création d’une connexion Source de stockage de fichiers Azure dans l’interface utilisateur
 type: Tutorial
 description: Découvrez comment créer une connexion source de stockage de fichiers Azure à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 25d483b6-3975-4e80-9dbe-28b7b91cb063
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 49%
+source-wordcount: '463'
+ht-degree: 46%
 
 ---
 
-# Créez un [!DNL Azure File Storage] connexion source dans l’interface utilisateur
+# Créer une connexion source [!DNL Azure File Storage] dans l’interface utilisateur
 
-Les connecteurs source d’Adobe Experience Platform permettent d’ingérer des données externes selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour authentifier une [!DNL Azure File Storage] connecteur source à l’aide de [!DNL Platform] de l’interface utilisateur.
+Les connecteurs Source dans Adobe Experience Platform permettent d’ingérer des données provenant de l’extérieur de manière planifiée. Ce tutoriel décrit les étapes d’authentification d’un connecteur source [!DNL Azure File Storage] à l’aide de l’interface utilisateur [!DNL Platform].
 
 ## Prise en main
 
@@ -29,39 +29,39 @@ Si vous disposez déjà d’une connexion [!DNL Azure File Storage] valide, vous
 
 ### Collecter les informations d’identification requises
 
-Pour authentifier votre [!DNL Azure File Storage] connecteur source, vous devez fournir des valeurs pour les propriétés de connexion suivantes :
+Pour authentifier votre connecteur source [!DNL Azure File Storage], vous devez fournir des valeurs pour les propriétés de connexion suivantes :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `host` | Le point de terminaison de [!DNL Azure File Storage] instance à laquelle vous accédez. |
-| `userId` | L’utilisateur disposant d’un accès suffisant à la variable [!DNL Azure File Storage] point de terminaison . |
-| `password` | Le [!DNL Azure File Storage] clé d’accès. |
+| `host` | Le point de terminaison de l’instance [!DNL Azure File Storage] à laquelle vous accédez. |
+| `userId` | L’utilisateur disposant d’un accès suffisant au point d’entrée [!DNL Azure File Storage]. |
+| `password` | La clé d&#39;accès [!DNL Azure File Storage]. |
 
-Pour plus d’informations sur la prise en main, reportez-vous à la section [this [!DNL Azure File Storage] document](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
+Pour plus d&#39;informations sur la prise en main, reportez-vous à [ce [!DNL Azure File Storage] document](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
 
 ## Connecter votre compte [!DNL Azure File Storage]
 
 Une fois les informations d’identification requises collectées, vous pouvez suivre les étapes ci-dessous pour lier votre compte [!DNL Azure File Storage] à [!DNL Platform].
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au **[!UICONTROL Sources]** workspace. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com), puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]**. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous , **[!UICONTROL Bases de données]** catégorie, sélectionnez **[!UICONTROL Stockage de fichiers Azure]**. Si c’est la première fois que vous utilisez ce connecteur, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer [!DNL Azure File Storage] connecteur.
+Sous la catégorie **[!UICONTROL Bases de données]**, sélectionnez **[!UICONTROL Stockage de fichier Azure]**. Si c&#39;est la première fois que vous utilisez ce connecteur, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer un nouveau connecteur [!DNL Azure File Storage].
 
 ![catalogue](../../../../images/tutorials/create/azure-file-storage/catalog.png)
 
-Le **[!UICONTROL Connexion à Azure File Storage]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Se connecter au stockage de fichiers Azure]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 
-Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et [!DNL Azure File Storage] informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion]** puis accorder un certain temps pour établir la nouvelle connexion.
+Si vous utilisez de nouvelles informations d’identification, sélectionnez **[!UICONTROL Nouveau compte]**.  Dans le formulaire de saisie qui s’affiche, indiquez un nom, une description facultative et vos informations d’identification [!DNL Azure File Storage]. Une fois que vous avez terminé, sélectionnez **[!UICONTROL Se connecter]** et laissez un certain temps à la nouvelle connexion pour établir.
 
 ![connect](../../../../images/tutorials/create/azure-file-storage/new.png)
 
 ### Compte existant
 
-Pour connecter un compte existant, sélectionnez le [!DNL Azure File Storage] compte auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Pour connecter un compte existant, sélectionnez le compte [!DNL Azure File Storage] auquel vous souhaitez vous connecter, puis cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
 ![existant](../../../../images/tutorials/create/azure-file-storage/existing.png)
 

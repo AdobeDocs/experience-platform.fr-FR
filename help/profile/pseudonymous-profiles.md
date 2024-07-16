@@ -80,9 +80,9 @@ Dans un cas d’utilisation standard, définissez l’expiration de vos données
 - Il ne s’agit **pas** d’une tâche de suppression ponctuelle. L’expiration des données de profil anonymes s’exécute une fois par jour et supprime les profils qui correspondent à l’entrée du client.
 - **Tous** les profils définis comme des profils pseudonymes sont sujets à l’expiration des données de profils pseudonymes. **Peu importe** si le profil est uniquement un événement d’expérience ou ne contient que des attributs de profil.
 - La suppression se produit **uniquement** au niveau du profil. Il se peut que le service d’identités continue à afficher les identités supprimées dans le graphique si le profil possède plusieurs identités pseudonymes associées (telles que `AAID` et `ECID`). Nous apporterons une solution à cette incohérence dans une prochaine mise à jour.
-- L’expiration des données de profil pseudonyme fait l’objet d’un **not** s’exécuter immédiatement et le traitement peut prendre jusqu’à trois jours.
+- L’expiration des données de profil pseudonyme ne s’exécute **pas** immédiatement et peut prendre jusqu’à trois jours pour être traitée.
 
 ### Comment l’expiration des données de profils pseudonymes interagit-elle avec les barrières de sécurité pour les données Identity Service ?
 
-- Identity Service [système de suppression &quot;premier entré, premier sorti&quot;](../identity-service/guardrails.md) peut supprimer des ECID du graphique d’identités, qui sont stockés dans Identity Service.
+- Le système de suppression &quot;premier entré, premier sorti&quot; du service Identity ](../identity-service/guardrails.md) peut supprimer les ECID du graphique d’identités, qui sont stockés dans Identity Service.[
 - Si ce comportement de suppression entraîne le stockage d’un profil ECID uniquement dans le profil client en temps réel (banque de profils), l’expiration des données de profil pseudonyme supprime ce profil de la banque de profils.

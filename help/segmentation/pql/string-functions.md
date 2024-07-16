@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: Fonctions de chaîne PQL
-description: Le langage de requête de profil (PQL) offre des fonctions pour faciliter l’interaction avec les chaînes.
+description: Profile Query Language (PQL) offre des fonctions pour faciliter l’interaction avec les chaînes.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 90%
+source-wordcount: '815'
+ht-degree: 88%
 
 ---
 
 # Fonctions de chaîne
 
-[!DNL Profile Query Language] (PQL) offre des fonctions pour faciliter l’interaction avec des chaînes. Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
+[!DNL Profile Query Language] (PQL) offre des fonctions pour faciliter l’interaction avec les chaînes. Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
 
 ## Comme
 
@@ -247,7 +247,7 @@ person.name.matches("(?i)^John")
 
 >[!NOTE]
 >
->Si vous utilisez des fonctions d’expression régulière telles que `\w`, vous **must** permet d’échapper la barre oblique inverse. Donc, au lieu d&#39;écrire simplement `\w`, vous devez inclure une barre oblique inverse supplémentaire et écrire. `\\w`.
+>Si vous utilisez des fonctions d’expression régulière telles que `\w`, vous **devez** pour échapper la barre oblique inverse. Ainsi, au lieu d&#39;écrire uniquement `\w`, vous devez inclure une barre oblique inverse supplémentaire et écrire `\\w`.
 
 ## Groupe d’expressions régulières
 
@@ -269,7 +269,7 @@ emailAddress.regexGroup("@(\\w+)", 1)
 
 >[!NOTE]
 >
->Si vous utilisez des fonctions d’expression régulière telles que `\w`, vous **must** permet d’échapper la barre oblique inverse. Donc, au lieu d&#39;écrire simplement `\w`, vous devez inclure une barre oblique inverse supplémentaire et écrire. `\\w`.
+>Si vous utilisez des fonctions d’expression régulière telles que `\w`, vous **devez** pour échapper la barre oblique inverse. Ainsi, au lieu d&#39;écrire uniquement `\w`, vous devez inclure une barre oblique inverse supplémentaire et écrire `\\w`.
 
 ## Étapes suivantes
 

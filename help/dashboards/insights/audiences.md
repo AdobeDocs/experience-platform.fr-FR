@@ -5,7 +5,7 @@ exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
 source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
 workflow-type: tm+mt
 source-wordcount: '1124'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -15,13 +15,13 @@ Les informations dérivées de l’analyse de votre modèle de données rendent 
 
 Comprenez vos insights d’audience en accédant au code SQL qui les alimente, puis générez vos propres informations afin d’explorer plus en détail les identités et les profils qui constituent vos audiences. Transformez vos données brutes en nouvelles informations exploitables en utilisant le modèle de données Real-Time CDP SQL existant comme source d’inspiration pour créer des requêtes en fonction de vos besoins professionnels uniques.
 
-Voir [Afficher la documentation SQL](../view-sql.md) pour plus d’informations sur la manière d’adapter le langage SQL de vos insights directement via l’interface utilisateur de PLatform.
+Pour plus d’informations sur la manière d’adapter le langage SQL de vos insights directement via l’interface utilisateur de PLatform, consultez la [documentation sur l’affichage de SQL](../view-sql.md) .
 
-Vous pouvez utiliser les informations suivantes dans le cadre de la [Tableau de bord Audiences](../guides/audiences.md) ou personnalisé [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md). Voir [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou [créer et modifier de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md#create-widget).
+Les informations suivantes sont toutes disponibles pour que vous puissiez les utiliser dans le [tableau de bord Audiences](../guides/audiences.md) ou dans un [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md) personnalisé. Consultez la [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou la [création et modification de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md#create-widget).
 
-Vous pouvez utiliser les informations suivantes dans le cadre de la [Tableau de bord Audiences](../guides/audiences.md) ou un tableau de bord personnalisé.
+Les informations suivantes sont toutes disponibles pour que vous puissiez les utiliser dans le [tableau de bord Audiences](../guides/audiences.md) ou dans un tableau de bord personnalisé.
 
-## Rapport de chevauchement d’audiences {#audience-overlap-report}
+## Rapport de chevauchement des audiences {#audience-overlap-report}
 
 Questions auxquelles répond cet aperçu :
 
@@ -86,9 +86,9 @@ SELECT source_segment_name,
 
 +++
 
-Voir [Documentation du widget de rapport sur le chevauchement des audiences](../guides/audiences.md#audience-overlap-report) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget de rapport sur le chevauchement des audiences](../guides/audiences.md#audience-overlap-report) .
 
-## Supervision de l’audience {#audience-overlap}
+## Chevauchement des audiences {#audience-overlap}
 
 Questions auxquelles répond cet aperçu :
 
@@ -133,9 +133,9 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Voir [Documentation du widget de chevauchement d’audiences](../guides/audiences.md#audience-overlap) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation sur le widget de chevauchement d’audiences](../guides/audiences.md#audience-overlap) .
 
-## Tendance de changement de la taille de l’audience {#audience-size-change-trend}
+## Tendance modif. taille audience {#audience-size-change-trend}
 
 Questions auxquelles répond cet aperçu :
 
@@ -174,9 +174,9 @@ SELECT date_key,
 
 +++
 
-Voir [Documentation du widget de tendance de changement de taille d’audience](../guides/audiences.md#audience-size-change-trend) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, consultez la [documentation du widget de tendance de changement de taille d’audience](../guides/audiences.md#audience-size-change-trend) .
 
-## Tendance de la taille de l’audience par identité {#audience-size-trend-by-identity}
+## Tendance de la taille des audiences par identité {#audience-size-trend-by-identity}
 
 Questions auxquelles répond cet aperçu :
 
@@ -207,7 +207,7 @@ SELECT sum(count_of_profiles) AS identities,
 
 +++
 
-Voir [Tendance de la taille d’audience par documentation du widget d’identité](../guides/audiences.md#audience-size-trend-by-identity) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation sur la taille de l’audience par widget d’identité](../guides/audiences.md#audience-size-trend-by-identity) .
 
 ## Tendance de la taille de l’audience {#audience-size-trend}
 
@@ -238,7 +238,7 @@ SELECT date_key,
 
 +++
 
-Voir [Documentation du widget de tendance de taille d’audience](../guides/audiences.md#audience-size-trend) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation sur le widget de tendance de la taille de l’audience](../guides/audiences.md#audience-size-trend) .
 
 ## Taille de l’audience {#audience-size}
 
@@ -266,9 +266,9 @@ WHERE
 
 +++
 
-Voir [Documentation du widget Taille de l’audience](../guides/audiences.md#audience-size) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget Taille de l’audience](../guides/audiences.md#audience-size) .
 
-## Distribution des scores par Customer AI {#customer-ai-distribution-of-scores}
+## Répartition des scores (IA dédiée aux clients) {#customer-ai-distribution-of-scores}
 
 Questions auxquelles répond cet aperçu :
 
@@ -409,9 +409,9 @@ SELECT b.model_name,
 
 +++
 
-Voir [Documentation du widget de scores sur Customer AI](../guides/audiences.md#customer-ai-distribution-of-scores) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, consultez la [documentation sur la distribution du widget de scores dans Customer AI](../guides/audiences.md#customer-ai-distribution-of-scores) .
 
-## Résumé de notation de Customer AI {#customer-ai-scoring-summary}
+## Résumé du score de l’IA dédiée aux clients {#customer-ai-scoring-summary}
 
 Questions auxquelles répond cet aperçu :
 
@@ -454,13 +454,13 @@ SELECT model_name,
 
 +++
 
-Voir [Documentation du widget de résumé de notation de Customer AI](../guides/audiences.md#customer-ai-scoring-summary) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget de résumé de notation de Customer AI](../guides/audiences.md#customer-ai-scoring-summary) .
 
 ## Chevauchement des identités {#identity-overlap}
 
 Questions auxquelles répond cet aperçu :
 
-- Quelle est l’intersection commune entre [!UICONTROL Type d’identité A] et [!UICONTROL Type d’identité B] pour une audience filtrée ?
+- Quelle est l’intersection courante entre [!UICONTROL Type d’identité A] et [!UICONTROL Type d’identité B] pour une audience filtrée ?
 - Comment affiner les audiences de clients en fonction du chevauchement de types d’identité spécifiques afin d’améliorer les stratégies marketing ciblées ?
 - Quelles sont les informations à tirer de l’évaluation des performances d’une campagne dans les zones intersectées ?
 - Sur la base de ces informations, comment optimiser les efforts marketing futurs ?
@@ -514,7 +514,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Voir [Documentation du widget de chevauchement d’identités](../guides/audiences.md#identity-overlap) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation sur le widget de chevauchement des identités](../guides/audiences.md#identity-overlap) .
 
 ## Profils par identité {#profiles-by-identity}
 
@@ -542,7 +542,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Voir [Documentation des profils par widget d’identité](../guides/audiences.md#profiles-by-identity) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, consultez la [documentation sur les profils par widget d’identité](../guides/audiences.md#profiles-by-identity) .
 
 ## Activations planifiées {#scheduled-activations}
 
@@ -577,12 +577,12 @@ SELECT p.destination_platform ,
 
 +++
 
-Voir [Documentation sur le widget des activations planifiées](../guides/audiences.md#scheduled-activations) pour plus d’informations sur l’aspect et les fonctionnalités de cet aperçu.
+Pour plus d’informations sur l’apparence et les fonctionnalités de cet aperçu, voir la [documentation du widget Activations planifiées](../guides/audiences.md#scheduled-activations) .
 
 ## Étapes suivantes
 
 En lisant ce document, vous comprenez désormais le langage SQL qui génère des informations de tableau de bord et les questions courantes que cette analyse résout. Vous pouvez désormais modifier et itérer sur le SQL pour générer vos propres informations.
 
-Voir [Afficher la documentation SQL](../view-sql.md) pour plus d’informations sur la manière d’adapter le langage SQL de vos insights directement via l’interface utilisateur de PLatform.
+Pour plus d’informations sur la manière d’adapter le langage SQL de vos insights directement via l’interface utilisateur de PLatform, consultez la [documentation sur l’affichage de SQL](../view-sql.md) .
 
-Vous pouvez également lire et comprendre le code SQL qui génère des insights pour la variable [Profils](./profiles.md), [Profils de compte](./account-profiles.md) et [Destinations](./destinations.md) tableaux de bord.
+Vous pouvez également lire et comprendre le code SQL qui génère des insights pour les tableaux de bord [Profils](./profiles.md), [Profils de compte](./account-profiles.md) et [Destinations](./destinations.md).

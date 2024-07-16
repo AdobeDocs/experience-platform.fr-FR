@@ -35,7 +35,7 @@ Query Service vous permet d’effectuer toutes les actions répertoriées ci-des
 >
 >La requête SQL fournie ci-dessous suppose l’utilisation d’un espace de noms préexistant.
 
-Utilisez une requête Create Table as Select (CTAS) pour créer un jeu de données, attribuer des types de données, définir une identité principale, créer un schéma et le marquer comme profil activé. L’exemple d’instruction SQL ci-dessous crée un jeu de données et le rend disponible pour Real-time Customer Data Platform (Real-Time CDP). Votre requête SQL suit le format indiqué dans l’exemple ci-dessous :
+Utilisez une requête Create Table as Select (CTAS) pour créer un jeu de données, attribuer des types de données, définir une identité principale, créer un schéma et le marquer comme profil activé. L’exemple d’instruction SQL ci-dessous crée un jeu de données et le rend disponible pour Real-Time Customer Data Platform (Real-Time CDP). Votre requête SQL suit le format indiqué dans l’exemple ci-dessous :
 
 ```sql
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
@@ -51,9 +51,9 @@ MAP <data_type, data_type>
 ARRAY <data_type>
 ```
 
-Vous pouvez également activer les jeux de données pour le profil via l’interface utilisateur de Platform. Pour plus d’informations sur le marquage d’un jeu de données comme activé pour un profil, voir la section [Activation d’un jeu de données pour la documentation de Real-time Customer Profile](../../../catalog/datasets/user-guide.md#enable-profile).
+Vous pouvez également activer les jeux de données pour le profil via l’interface utilisateur de Platform. Pour plus d’informations sur le marquage d’un jeu de données comme activé pour le profil, voir la [documentation d’activation d’un jeu de données pour Real-time Customer Profile](../../../catalog/datasets/user-guide.md#enable-profile).
 
-Dans l’exemple de requête ci-dessous, la variable `decile_table` le jeu de données est créé avec `id` comme colonne d’identité principale et possède l’espace de noms `IDFA`. Il comporte également un champ nommé `decile1Month` du type de données map . La table créée (`decile_table`) est activé pour profile.
+Dans l’exemple de requête ci-dessous, le jeu de données `decile_table` est créé avec `id` comme colonne d’identité principale et a l’espace de noms `IDFA`. Il comporte également un champ nommé `decile1Month` du type de données de carte. La table créée (`decile_table`) est activée pour le profil.
 
 ```sql
 CREATE TABLE decile_table (id text PRIMARY KEY NAMESPACE 'IDFA', 
@@ -69,13 +69,13 @@ Created Table DataSet Id
 (1 row)
 ```
 
-Utilisation `label='PROFILE'` sur un `CREATE TABLE` pour créer un jeu de données activé par le profil. La variable `upsert` est activée par défaut. La variable `upsert` peut être remplacé à l’aide de la fonction `ALTER` comme le montre l&#39;exemple ci-dessous.
+Utilisez `label='PROFILE'` sur une commande `CREATE TABLE` pour créer un jeu de données activé par le profil. La fonctionnalité `upsert` est activée par défaut. La fonctionnalité `upsert` peut être écrasée à l’aide de la commande `ALTER`, comme illustré dans l’exemple ci-dessous.
 
 ```sql
 ALTER TABLE <your_table_name> DROP label upsert;
 ```
 
-Pour plus d’informations sur l’utilisation de la fonction [ALTER TABLE](../../sql/syntax.md#alter-table) et [libellé dans le cadre d’une requête CTAS](../../sql/syntax.md#create-table-as-select).
+Pour plus d’informations sur l’utilisation de la commande [ALTER TABLE](../../sql/syntax.md#alter-table) et [label dans le cadre d’une requête CTAS](../../sql/syntax.md#create-table-as-select), consultez la documentation sur la syntaxe SQl.
 
 ## Constructions destinées à aider à la gestion de jeux de données dérivés via SQL
 
@@ -91,7 +91,7 @@ ALTER TABLE your_decile_table ADD label 'PROFILE';
 
 >[!NOTE]
 >
->Une fois l’exécution de la variable `ALTER TABLE` , la console renvoie `ALTER SUCCESS`.
+>Une fois la commande `ALTER TABLE` exécutée avec succès, la console renvoie `ALTER SUCCESS`.
 
 ### Ajout d’une identité principale à un jeu de données existant {#add-primary-identity}
 
@@ -107,11 +107,11 @@ Par exemple :
 ALTER TABLE test1_dataset ADD CONSTRAINT PRIMARY KEY(id2) NAMESPACE 'IDFA';
 ```
 
-Dans l&#39;exemple fourni, `id2` est une colonne existante dans `test1_dataset`.
+Dans l’exemple fourni, `id2` est une colonne existante dans `test1_dataset`.
 
 ### Désactivation d’un jeu de données pour un profil {#disable-dataset-for-profile}
 
-Si vous souhaitez désactiver votre table pour les utilisateurs de profils, vous devez utiliser la commande DROP . Exemple d’instruction SQL qui UTILISE `DROP` est illustré ci-dessous.
+Si vous souhaitez désactiver votre table pour les utilisateurs de profils, vous devez utiliser la commande DROP . Vous trouverez ci-dessous un exemple d’instruction SQL USES `DROP`.
 
 ```sql
 ALTER TABLE table_name DROP LABEL 'PROFILE';
@@ -123,7 +123,7 @@ Par exemple :
 ALTER TABLE decile_table DROP label 'PROFILE';
 ```
 
-Cette instruction SQL fournit une méthode alternative efficace à l’utilisation d’un appel API. Pour plus d’informations, consultez la documentation sur la manière de [désactiver un jeu de données à utiliser avec Real-Time CDP à l’aide de l’API des jeux de données](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile).
+Cette instruction SQL fournit une méthode alternative efficace à l’utilisation d’un appel API. Pour plus d’informations, consultez la documentation sur la [désactivation d’un jeu de données à utiliser avec Real-Time CDP à l’aide de l’API des jeux de données](../../../catalog/datasets/enable-upsert.md#disable-the-dataset-for-profile).
 
 ### Autoriser la mise à jour et l’insertion de fonctionnalités pour votre jeu de données {#enable-upsert-functionality-for-dataset}
 
@@ -141,7 +141,7 @@ Par exemple :
 ALTER TABLE table_with_a_decile ADD label 'UPSERT';
 ```
 
-Cette instruction SQL fournit une méthode alternative efficace à l’utilisation d’un appel API. Pour plus d’informations, consultez la documentation sur la manière de [activer un jeu de données à utiliser avec Real-Time CDP et UPSERT à l’aide de l’API des jeux de données ;](../../../catalog/datasets/enable-upsert.md#enable-the-dataset).
+Cette instruction SQL fournit une méthode alternative efficace à l’utilisation d’un appel API. Pour plus d’informations, consultez la documentation sur l’ [activation d’un jeu de données à utiliser avec Real-Time CDP et UPSERT à l’aide de l’API des jeux de données](../../../catalog/datasets/enable-upsert.md#enable-the-dataset).
 
 ### Désactivation de la mise à jour et de l’insertion de fonctionnalités pour votre jeu de données {#disable-upsert-functionality-for-dataset}
 
@@ -161,7 +161,7 @@ ALTER TABLE table_with_a_decile DROP label 'UPSERT';
 
 ### Afficher les informations supplémentaires du tableau associées à chaque tableau {#show-labels-for-tables}
 
-Des métadonnées supplémentaires sont conservées pour les jeux de données activés pour les profils. Utilisez la variable `SHOW TABLES` pour afficher un `labels` qui fournit des informations sur les libellés associés aux tableaux.
+Des métadonnées supplémentaires sont conservées pour les jeux de données activés pour les profils. Utilisez la commande `SHOW TABLES` pour afficher une colonne `labels` supplémentaire qui fournit des informations sur les libellés associés aux tableaux.
 
 Vous trouverez ci-dessous un exemple de sortie de cette commande :
 
@@ -174,7 +174,7 @@ Vous trouverez ci-dessous un exemple de sortie de cette commande :
 (3 rows)
 ```
 
-Vous pouvez voir dans l’exemple que `table_with_a_decile` a été activé pour le profil et appliqué avec des étiquettes telles que [&#39;UPSERT&#39;](#enable-upsert-functionality-for-dataset), [&#39;PROFIL&#39;](#enable-existing-dataset-for-profile) comme décrit précédemment.
+Vous pouvez voir dans l’exemple que `table_with_a_decile` a été activé pour le profil et appliqué avec des étiquettes telles que [&#39;UPSERT&#39;](#enable-upsert-functionality-for-dataset), [&#39;PROFILE&#39;](#enable-existing-dataset-for-profile) comme décrit précédemment.
 
 ### Création d’un groupe de champs avec SQL
 
@@ -188,8 +188,8 @@ CREATE FIELDGROUP <field_group_name> [IF NOT EXISTS]  (field_name <data_type> pr
 
 >[!IMPORTANT]
 >
->La création du groupe de champs via SQL échoue si la variable `label` L’indicateur n’est pas fourni dans l’instruction ou si le groupe de champs existe déjà.
->Assurez-vous que la requête comprend une `IF NOT EXISTS` pour éviter l’échec de la requête, car le groupe de champs existe déjà.
+>La création d’un groupe de champs via SQL échoue si l’indicateur `label` n’est pas fourni dans l’instruction ou si le groupe de champs existe déjà.
+>Assurez-vous que la requête inclut une clause `IF NOT EXISTS` pour éviter que la requête ne échoue, car le groupe de champs existe déjà.
 
 Un exemple concret peut ressembler à celui illustré ci-dessous.
 
@@ -199,11 +199,11 @@ CREATE FIELDGROUP field_group_for_test123 (decile1Month map<text, integer>, deci
 
 L’exécution réussie de cette instruction renvoie l’identifiant de groupe de champs créé. Par exemple `c731a1eafdfdecae1683c6dca197c66ed2c2b49ecd3a9525`.
 
-Consultez la documentation sur la manière de [créer un groupe de champs dans l’éditeur de schémas ;](../../../xdm/ui/resources/field-groups.md#create) ou en utilisant la variable [API Schema Registry](../../../xdm/api/field-groups.md#create) pour plus d’informations sur les méthodes alternatives.
+Pour plus d’informations sur les autres méthodes, consultez la documentation sur la [création d’un groupe de champs dans l’éditeur de schémas](../../../xdm/ui/resources/field-groups.md#create) ou sur l’utilisation de l’ [ API Schema Registry](../../../xdm/api/field-groups.md#create) .
 
 ### Déposer un groupe de champs
 
-Il peut parfois être nécessaire de supprimer un groupe de champs du registre des schémas. Pour ce faire, exécutez le `DROP FIELDGROUP` avec l’identifiant du groupe de champs.
+Il peut parfois être nécessaire de supprimer un groupe de champs du registre des schémas. Pour ce faire, exécutez la commande `DROP FIELDGROUP` avec l’identifiant du groupe de champs.
 
 ```sql
 DROP FIELDGROUP [IF EXISTS] <your_field_group_id>;
@@ -217,11 +217,11 @@ DROP FIELDGROUP field_group_for_test123;
 
 >[!IMPORTANT]
 >
->La suppression d’un groupe de champs via SQL échoue si le groupe de champs n’existe pas. Assurez-vous que l’instruction comprend une `IF EXISTS` pour éviter l’échec de la requête.
+>La suppression d’un groupe de champs via SQL échoue si le groupe de champs n’existe pas. Assurez-vous que l’instruction comprend une clause `IF EXISTS` pour éviter l’échec de la requête.
 
 ### Afficher tous les noms et identifiants des groupes de champs pour vos tableaux
 
-La variable `SHOW FIELDGROUPS` La commande renvoie une table contenant le nom, fieldgroupId et le propriétaire des tables.
+La commande `SHOW FIELDGROUPS` renvoie une table contenant le nom, fieldgroupId et le propriétaire des tables.
 
 Vous trouverez ci-dessous un exemple de sortie de cette commande :
 

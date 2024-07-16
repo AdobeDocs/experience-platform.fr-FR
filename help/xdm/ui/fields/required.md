@@ -16,19 +16,19 @@ Dans le modèle de données d’expérience (XDM), un champ obligatoire indique 
 
 >[!IMPORTANT]
 >
->Qu’un champ de schéma soit obligatoire ou non, Platform n’accepte pas `null` ou des valeurs vides pour tout champ ingéré. S’il n’existe aucune valeur pour un champ particulier dans un enregistrement ou un événement, la clé de ce champ doit être exclue de la charge utile d’ingestion.
+>Qu’un champ de schéma soit obligatoire ou non, Platform n’accepte pas `null` ou les valeurs vides pour un champ ingéré. S’il n’existe aucune valeur pour un champ particulier dans un enregistrement ou un événement, la clé de ce champ doit être exclue de la charge utile d’ingestion.
 
-When [définition d’un nouveau champ](./overview.md#define) dans l’interface utilisateur de Adobe Experience Platform, vous pouvez définir ce champ comme champ obligatoire en sélectionnant le **[!UICONTROL Obligatoire]** dans le rail de droite. Sélectionner **[!UICONTROL Appliquer]** pour appliquer la modification au schéma.
+Lorsque [vous définissez un nouveau champ](./overview.md#define) dans l’interface utilisateur de Adobe Experience Platform, vous pouvez le définir comme champ obligatoire en cochant la case **[!UICONTROL Obligatoire]** dans le rail de droite. Sélectionnez **[!UICONTROL Appliquer]** pour appliquer la modification au schéma.
 
-![Case à cocher obligatoire](../../images/ui/fields/required/root.png)
+![Case à cocher requise](../../images/ui/fields/required/root.png)
 
 Si le champ est un attribut de niveau racine sous l’objet ID du client, son chemin d’accès apparaît immédiatement sous **[!UICONTROL Champs obligatoires]** dans le rail de gauche.
 
-![Champ obligatoire au niveau racine](../../images/ui/fields/required/applied.png)
+![Champ racine requis](../../images/ui/fields/required/applied.png)
 
 Toutefois, si un champ obligatoire est imbriqué dans un objet qui n’est pas marqué comme obligatoire, le champ imbriqué n’apparaît pas sous **[!UICONTROL Champs obligatoires]** dans le rail de gauche.
 
-Dans l’exemple ci-dessous, la variable `internalSKU` est défini selon les besoins, mais son objet parent `SKUs` ne l’est pas. Dans ce cas, aucune erreur de validation ne se produirait si `SKUs` est exclu lors de l’ingestion de données, même si le champ enfant `internalSKU` est marqué comme requis. En d’autres termes, `SKUs` est facultatif ; il doit contenir un `internalSKU` dans l’événement qu’il est inclus.
+Dans l’exemple ci-dessous, le champ `internalSKU` est défini comme requis, mais pas son objet parent `SKUs`. Dans ce cas, aucune erreur de validation ne se produirait si `SKUs` est exclu lors de l’ingestion de données, même si le champ enfant `internalSKU` est marqué comme obligatoire. En d’autres termes, même si `SKUs` est facultatif, il doit contenir un champ `internalSKU` dans l’événement qu’il est inclus.
 
 ![Champ obligatoire imbriqué](../../images/ui/fields/required/nested.png)
 
@@ -38,4 +38,4 @@ Si vous souhaitez qu’un champ imbriqué soit toujours requis dans un schéma, 
 
 ## Étapes suivantes
 
-Ce guide explique comment définir un champ obligatoire dans l’interface utilisateur. Consultez la présentation sur [définition des champs dans l’interface utilisateur](./overview.md#special) pour savoir comment définir d’autres types de champ XDM dans [!DNL Schema Editor].
+Ce guide explique comment définir un champ obligatoire dans l’interface utilisateur. Consultez la présentation de la [définition des champs dans l’interface utilisateur](./overview.md#special) pour savoir comment définir d’autres types de champs XDM dans [!DNL Schema Editor].

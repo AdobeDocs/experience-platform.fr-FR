@@ -4,7 +4,7 @@ description: Découvrez comment valider, télécharger et tester votre extension
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
 source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
 workflow-type: tm+mt
-source-wordcount: '2382'
+source-wordcount: '2362'
 ht-degree: 92%
 
 ---
@@ -39,7 +39,7 @@ Le fichier de logo en est un exemple précis : ajoutez une ligne `"iconPath": "
 
 Pour utiliser l’API ou les outils de ligne de commande, vous avez besoin d’un compte technique avec Adobe I/O. Vous devez créer ce compte technique dans la console I/O, puis utiliser l’outil de téléchargement pour télécharger le package d’extension.
 
-Pour plus d’informations sur la création d’un compte technique à utiliser avec des balises dans Adobe Experience Platform, reportez-vous à la section [Prise en main de l’API Reactor](../../api/getting-started.md) guide.
+Pour plus d’informations sur la création d’un compte technique à utiliser avec des balises dans Adobe Experience Platform, reportez-vous au guide de [prise en main de l’API Reactor](../../api/getting-started.md).
 
 >[!IMPORTANT]
 >
@@ -74,7 +74,7 @@ Votre package d’extension sera ensuite téléchargé et le téléchargeur vous
 
 >[!NOTE]
 >
->Pendant le téléchargement ou l’application de correctifs, les packages d’extension sont placés en attente tandis que le système extrait le module et le déploie de manière asynchrone. Pendant ce processus, vous pouvez interroger la variable `extension_package` ID pour son état à l’aide de l’API et dans l’interface utilisateur. Une carte d’extension apparaît dans le catalogue portant la mention En attente.
+>Pendant le téléchargement ou l’application de correctifs, les packages d’extension sont placés en attente tandis que le système extrait le module et le déploie de manière asynchrone. Pendant ce processus, vous pouvez interroger l’ID `extension_package` pour connaître son état à l’aide de l’API et dans l’interface utilisateur. Une carte d’extension apparaît dans le catalogue portant la mention En attente.
 
 >[!NOTE]
 >
@@ -82,7 +82,7 @@ Votre package d’extension sera ensuite téléchargé et le téléchargeur vous
 
 ## Créer une propriété de développement {#property}
 
-Après vous être connecté à l’interface utilisateur, sélectionnez **[!UICONTROL Balises]** dans le volet de navigation de gauche, la variable [!UICONTROL Propriétés] s’affiche. Une propriété est un conteneur pour les balises que vous souhaitez déployer et elle peut être utilisée sur un ou plusieurs sites.
+Après vous être connecté à l’interface utilisateur et avoir sélectionné **[!UICONTROL Balises]** dans le volet de navigation de gauche, l’écran [!UICONTROL Propriétés] s’affiche. Une propriété est un conteneur pour les balises que vous souhaitez déployer et elle peut être utilisée sur un ou plusieurs sites.
 
 ![](../images/getting-started/properties-screen.png)
 
@@ -217,7 +217,7 @@ L’objectif de ce test est de vérifier la fonctionnalité de la bibliothèque 
 
 Lorsque vous découvrez des modifications à apporter à votre package d’extension, le processus d’itération est similaire au processus de développement.
 
-1. Apporter des modifications au code de votre projet..
+1. Apportez des modifications au code de votre projet.
 1. Validez les modifications à l’aide de l’outil Sandbox.
 1. Utilisez l’outil Packager pour créer un package .zip.
 1. Utilisez l’outil de téléchargement pour télécharger votre nouveau package .zip. Ce processus suit les mêmes instructions qu’auparavant concernant le téléchargement initial. Cependant, vous remarquerez que, puisqu’il existe déjà un package d’extension de ce nom en mode de développement, ce nouveau package remplace l’ancienne version au lieu d’en créer une autre.

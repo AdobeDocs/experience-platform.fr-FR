@@ -58,7 +58,7 @@ Le cadre de gouvernance des données simplifie et rationalise le processus de ca
 Le cadre de gouvernance des données comporte trois éléments clés : les libellés, les politiques et l’application. 
 
 1. **Libellés :** classent les données en fonction des considérations liées à la confidentialité et aux conditions contractuelles afin qu’elles soient conformes aux réglementations et aux politiques de l’organisation.
-1. **Stratégies :** Décrivez les types d’actions marketing que vous pouvez ou non entreprendre sur des données spécifiques.
+1. **Stratégies :** Décrivez les types d’actions marketing qui peuvent ou non être effectuées sur des données spécifiques.
 1. **Application :** utilise le cadre de la politique pour conseiller et appliquer les stratégies sur différents modèles d’accès aux données.
 
 ## Libellés d’utilisation des données {#data-usage-labels}
@@ -67,7 +67,7 @@ La gouvernance des données permet aux gestionnaires de données d’appliquer d
 
 Le cadre de gouvernance des données inclut des libellés d’utilisation des données prédéfinis pouvant être utilisés pour catégoriser les données de trois manières différentes :
 
-![Les trois catégories de libellés d’utilisation des données.](./images/overview/label-categories.png)
+![Les trois catégories d’étiquettes d’utilisation des données.](./images/overview/label-categories.png)
 
 * **Étiquettes de données Contrat « C » :** étiquetez et catégorisez les données soumises à des obligations contractuelles ou associées à des politiques de gouvernance des données clients.
 * **Étiquettes de données Identité « I » :** étiquetez et catégorisez des données pouvant identifier ou contacter une personne en particulier.
@@ -75,11 +75,11 @@ Le cadre de gouvernance des données inclut des libellés d’utilisation des do
 
 >[!NOTE]
 >
->Consultez le guide sur la [libellés d’utilisation des données pris en charge](labels/reference.md) pour obtenir une liste complète des libellés disponibles, ainsi que des définitions pour chaque type de libellé.
+>Consultez le guide sur les [libellés d’utilisation des données pris en charge](labels/reference.md) pour obtenir la liste complète des libellés disponibles et des définitions pour chaque type d’étiquette.
 
 Vous pouvez appliquer les libellés à tout moment, ce qui vous offre une certaine flexibilité quant à la manière dont vous choisissez de gérer les données. La bonne pratique encourage à étiqueter les données lorsqu’elles sont ingérées dans Experience Platform ou dès que les données sont disponibles dans [!DNL Platform].
 
-Consultez la présentation sur [libellés d’utilisation des données](./labels/overview.md) pour plus d’informations sur la manière dont les libellés d’utilisation des données sont utilisés pour renforcer la conformité à la gouvernance des données.
+Pour plus d’informations sur l’utilisation des libellés d’utilisation des données pour renforcer la conformité de la gouvernance des données, consultez la présentation sur les [libellés d’utilisation des données](./labels/overview.md) .
 
 ## Politiques d’utilisation des données {#data-usage-policies}
 
@@ -91,7 +91,7 @@ Un exemple d’action marketing peut être le souhait d’exporter un jeu de don
 Deux types de politiques sont disponibles :
 
 * **[!UICONTROL Politique de gouvernance des données]** : permet de restreindre l’activation des données en fonction de l’action marketing en cours et des étiquettes d’utilisation des données associées aux données en question.
-* **[!UICONTROL Stratégie de consentement]**: filtrer les profils pouvant être activés sur [destinations](../destinations/home.md) selon le consentement ou les préférences de vos clients.
+* **[!UICONTROL Stratégie de consentement]** : filtrez les profils qui peuvent être activés vers [destinations](../destinations/home.md) en fonction du consentement ou des préférences de vos clients.
 
 Une fois les libellés d’utilisation des données appliqués, les gestionnaires de données peuvent créer des stratégies à l’aide de l’API Policy Service ou de l’interface utilisateur de l’Experience Platform. Pour plus d’informations sur les politiques d’utilisation des données et les actions marketing, consultez la [présentation des politiques](./policies/overview.md).
 
@@ -122,7 +122,7 @@ Le tableau suivant présente les termes clés liés à la gouvernance des donné
 | **Libellés de champ** | Les libellés du champ sont des libellés de gouvernance des données qui sont hérités d’un schéma ou appliqués directement à un champ. Les libellés de gouvernance des données appliqués à un champ ne sont pas hérités jusqu’au niveau du schéma. |
 | **Géobarrière** | Une géobarrière est une limite géographique virtuelle, définie par les technologies GPS ou RFID qui permet à un logiciel de déclencher une réponse lorsqu’un appareil mobile entre ou quitte une zone particulière. |
 | **Étiquettes Identité** | Les étiquettes Identité « I » sont utilisées pour catégoriser des données pouvant identifier ou contacter une personne en particulier. |
-| **Ciblage en fonction des intérêts** | Le ciblage en fonction des intérêts, également appelé personnalisation, se produit si les trois conditions suivantes sont remplies :<br>Les données collectées sur site sont :<br><ul><li>Utilisé pour établir des inférences sur l’intérêt d’un utilisateur,</li><li>Utilisé dans un autre contexte, tel que sur un autre site ou une autre application (hors site)</li><li>Utilisé pour sélectionner le contenu ou les publicités diffusés en fonction de ces inférences.</li></ul> |
+| **Ciblage en fonction des intérêts** | Le ciblage en fonction des intérêts, également appelé personnalisation, se produit si les trois conditions suivantes sont remplies :<br>Les données collectées sur site sont,<br><ul><li>Utilisé pour établir des inférences sur l’intérêt d’un utilisateur,</li><li>Utilisé dans un autre contexte, tel que sur un autre site ou une autre application (hors site)</li><li>Utilisé pour sélectionner le contenu ou les publicités diffusés en fonction de ces inférences.</li></ul> |
 | **Action marketing** | Dans le cadre de la gouvernance des données, une action marketing est une action entreprise par un utilisateur de données Experience Platform pour laquelle il est nécessaire de vérifier les violations des politiques d’utilisation des données |
 | **Politique** | Dans le cadre de la gouvernance des données, une stratégie est une règle qui décrit les types d’actions marketing que vous pouvez ou non entreprendre sur des données spécifiques. |
 | **Libellés de schéma** | Gérez les libellés liés à la gouvernance des données, au consentement et au contrôle d’accès au niveau du schéma. Cela propage les libellés à chaque jeu de données qui utilise ce schéma. |

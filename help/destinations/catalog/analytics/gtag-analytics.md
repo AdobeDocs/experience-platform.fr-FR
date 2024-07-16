@@ -1,22 +1,22 @@
 ---
 keywords: Google Global Site Tag;gtag;google gtag;extension google;extension google gtag;GTAG
 title: Extension Google Global Site Tag
-description: L’extension Google Global Site Tag est une destination d’analyse de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Google Global Site Tag est une destination d’analyse de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 9643adc5-997d-45b3-a2b6-e365164022b8
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 89%
+source-wordcount: '453'
+ht-degree: 92%
 
 ---
 
 # Extension [!DNL Google Global Site Tag] {#gtag-analytics-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Envoi de données à [!DNL Google Analytics], [!DNL Google Ads], et la variable [!DNL Google Marketing Platform] via [!DNL Google's Global Site Tag]ou gtag.js. Il est possible de configurer plusieurs comptes par produit.
+Envoyez des données à [!DNL Google Analytics], [!DNL Google Ads] et [!DNL Google Marketing Platform] via [!DNL Google's Global Site Tag] ou gtag.js. Il est possible de configurer plusieurs comptes par produit.
 
-[!DNL Google Global Site Tag] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101437.google-global-site-tag-gtag.html).
+[!DNL Google Global Site Tag] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101437.google-global-site-tag-gtag.html).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Google Global Site Tag] extension :
+Pour installer l’extension [!DNL Google Global Site Tag], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

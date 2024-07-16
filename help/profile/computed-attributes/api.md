@@ -4,8 +4,8 @@ description: Découvrez comment créer, afficher, mettre à jour et supprimer de
 exl-id: f217891c-574d-4a64-9d04-afc436cf16a9
 source-git-commit: 94c94b8a3757aca1a04ff4ffc3c62e84602805cc
 workflow-type: tm+mt
-source-wordcount: '1654'
-ht-degree: 12%
+source-wordcount: '1664'
+ht-degree: 10%
 
 ---
 
@@ -15,24 +15,24 @@ ht-degree: 12%
 >
 >L’accès à l’API est restreint. Pour savoir comment accéder à l’API des attributs calculés, contactez l’assistance Adobe.
 
-Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation. Ce guide comprend des exemples d’appels API pour effectuer des opérations CRUD de base à l’aide de `/attributes` point de terminaison .
+Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées au niveau de la segmentation, de l’activation et de la personnalisation. Ce guide comprend des exemples d’appels API pour effectuer des opérations CRUD de base à l’aide du point d’entrée `/attributes`.
 
-Pour en savoir plus sur les attributs calculés, commencez par lire le [présentation des attributs calculés](overview.md).
+Pour en savoir plus sur les attributs calculés, commencez par lire la [présentation des attributs calculés](overview.md).
 
-## Prise en main
+## Commencer
 
-Le point de terminaison API utilisé dans ce guide fait partie de la variable [API Real-Time Customer Profile](https://www.adobe.com/go/profile-apis-en).
+Le point de terminaison d’API utilisé dans ce guide fait partie de l’ [ API Real-Time Customer Profile](https://www.adobe.com/go/profile-apis-en).
 
-Avant de poursuivre, veuillez consulter la section [Guide de prise en main de l’API Profile](../api/getting-started.md) pour obtenir des liens vers la documentation recommandée, un guide de lecture des exemples d’appels API qui apparaissent dans ce document, ainsi que des informations importantes concernant les en-têtes requis pour réussir les appels à une API Experience Platform.
+Avant de poursuivre, consultez le [guide de prise en main de l’API Profile](../api/getting-started.md) pour obtenir des liens vers la documentation recommandée, un guide de lecture des exemples d’appels API qui apparaissent dans ce document et des informations importantes sur les en-têtes requis pour réussir les appels à une API Experience Platform.
 
 En outre, veuillez consulter la documentation du service suivant :
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
-   - [Guide de prise en main du registre des schémas](../../xdm/api/getting-started.md#know-your-tenant_id): informations sur votre `{TENANT_ID}`, qui apparaît dans les réponses de ce guide, est fourni.
+   - [Guide de prise en main du registre des schémas](../../xdm/api/getting-started.md#know-your-tenant_id) : des informations sur votre `{TENANT_ID}`, qui apparaissent dans les réponses de ce guide, sont fournies.
 
 ## Récupération d’une liste d’attributs calculés {#list}
 
-Vous pouvez récupérer une liste de tous les attributs calculés pour votre organisation en envoyant une requête GET à la variable `/attributes` point de terminaison .
+Vous pouvez récupérer une liste de tous les attributs calculés pour votre organisation en envoyant une requête de GET au point de terminaison `/attributes`.
 
 **Format d’API**
 
@@ -49,8 +49,8 @@ Les paramètres de requête suivants peuvent être utilisés lors de la récupé
 | --------------- | ----------- | ------- |
 | `limit` | Un paramètre qui spécifie le nombre maximal d’éléments renvoyés dans le cadre de la réponse. La valeur minimale de ce paramètre est 1 et la valeur maximale est 40. Si ce paramètre n’est pas inclus, 20 éléments sont renvoyés par défaut. | `limit=20` |
 | `offset` | Un paramètre qui spécifie le nombre d’éléments à ignorer avant de renvoyer les éléments. | `offset=5` |
-| `sortBy` | Un paramètre qui spécifie l’ordre dans lequel les éléments renvoyés sont triés. Les options disponibles incluent : `name`, `status`, `updateEpoch`, et `createEpoch`. Vous pouvez également choisir de trier dans l’ordre croissant ou décroissant en n’incluant pas ou en incluant un `-` devant l’option de tri. Par défaut, les éléments sont triés par `updateEpoch` dans l’ordre décroissant. | `sortBy=name` |
-| `property` | Paramètre permettant de filtrer les données selon différents champs d’attribut calculés. Les propriétés prises en charge incluent : `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch`, et `status`. Les opérations prises en charge dépendent de la propriété répertoriée. <ul><li>`name`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`updateEpoch`: `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status`: `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
+| `sortBy` | Un paramètre qui spécifie l’ordre dans lequel les éléments renvoyés sont triés. Les options disponibles sont `name`, `status`, `updateEpoch` et `createEpoch`. Vous pouvez également choisir de trier dans l’ordre croissant ou décroissant en n’incluant pas ou en incluant une `-` devant l’option de tri. Par défaut, les éléments seront triés par `updateEpoch` dans l’ordre décroissant. | `sortBy=name` |
+| `property` | Paramètre permettant de filtrer les données selon différents champs d’attribut calculés. Les propriétés prises en charge sont `name`, `createEpoch`, `mergeFunction.value`, `updateEpoch` et `status`. Les opérations prises en charge dépendent de la propriété répertoriée. <ul><li>`name` : `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`createEpoch` : `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=) </li><li>`mergeFunction.value` : `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li><li>`updateEpoch` : `GREATER_THAN_OR_EQUALS` (&lt;=), `LESS_THAN_OR_EQUALS` (>=)</li><li>`status` : `EQUAL` (=), `NOT_EQUAL` (!=), `CONTAINS` (=contains()), `NOT_CONTAINS` (=!contains())</li></ul> | `property=updateEpoch>=1683669114845`<br/>`property=name!=testingrelease`<br/>`property=status=contains(new,processing,disabled)` |
 
 **Requête**
 
@@ -211,14 +211,14 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste des 3 derniers at
 | Propriété | Description |
 | -------- | ----------- |
 | `_links` | Objet contenant les informations de pagination nécessaires pour accéder à la dernière page de résultats, à la page de résultats suivante, à la page de résultats précédente ou à la page de résultats active. |
-| `computedAttributes` | Tableau contenant les attributs calculés en fonction de vos paramètres de requête. Vous trouverez plus d’informations sur le tableau des attributs calculés dans la section [récupération d’une section d’attribut calculé spécifique](#get). |
+| `computedAttributes` | Tableau contenant les attributs calculés en fonction de vos paramètres de requête. Vous trouverez plus d’informations sur le tableau d’attributs calculés dans la section [ de récupération d’un attribut calculé spécifique ](#get). |
 | `_page` | Objet contenant des métadonnées sur les résultats renvoyés. Cela inclut des informations sur le décalage actuel, le nombre d’attributs calculés renvoyés, le nombre total d’attributs calculés, ainsi que la limite des attributs calculés renvoyés. |
 
 +++
 
 ## Création d’un attribut calculé {#create}
 
-Pour créer un attribut calculé, commencez par envoyer une requête de POST à la variable `/attributes` point de terminaison avec un corps de requête contenant les détails de l’attribut calculé que vous souhaitez créer.
+Pour créer un attribut calculé, commencez par effectuer une requête de POST sur le point de terminaison `/attributes` avec un corps de requête contenant les détails de l’attribut calculé que vous souhaitez créer.
 
 **Format d’API**
 
@@ -257,7 +257,7 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `name` | Le nom du champ attribut calculé, sous forme de chaîne. Le nom de l’attribut calculé ne peut être composé que de caractères alphanumériques sans espaces ni traits de soulignement. Cette valeur **must** être unique parmi tous les attributs calculés. En règle générale, ce nom doit être une version CamelCase de la variable `displayName`. |
+| `name` | Nom du champ attribut calculé, sous forme de chaîne. Le nom de l’attribut calculé ne peut être composé que de caractères alphanumériques sans espaces ni traits de soulignement. Cette valeur **must** doit être unique parmi tous les attributs calculés. En règle générale, ce nom doit être une version CamelCase de `displayName`. |
 | `description` | Une description de l’attribut calculé. Cela s’avère particulièrement utile une fois que plusieurs attributs calculés ont été définis, car cela aidera d’autres membres de votre organisation à déterminer l’attribut calculé correct à utiliser. |
 | `displayName` | Nom d’affichage de l’attribut calculé. Il s’agit du nom qui s’affichera lors de la liste de vos attributs calculés dans l’interface utilisateur de Adobe Experience Platform. |
 | `expression` | Un objet qui représente l’expression de requête de l’attribut calculé que vous essayez de créer. |
@@ -266,9 +266,9 @@ curl -X POST https://platform.adobe.io/data/core/ca/attributes \
 | `expression.value` | La valeur de l’expression. |
 | `keepCurrent` | Valeur booléenne qui détermine si la valeur de l’attribut calculé est actualisée ou non à l’aide d’une actualisation rapide. Actuellement, cette valeur doit être définie sur `false`. |
 | `duration` | Objet qui représente la période de recherche arrière de l’attribut calculé. La période de recherche en amont représente le délai dans lequel il est possible de revenir en arrière pour calculer l’attribut calculé. |
-| `duration.count` | Un nombre qui représente la durée de la période de recherche en amont. Les valeurs possibles dépendent de la valeur de la variable `duration.unit` champ . <ul><li>`HOURS`: 1-24</li><li>`DAYS`: 1-7</li><li>`WEEKS`: 1-4</li><li>`MONTHS`: 1-6</li></ul> |
-| `duration.unit` | Chaîne représentant l’unité de temps qui sera utilisée pour la période de recherche arrière. Les valeurs possibles sont les suivantes : `HOURS`, `DAYS`, `WEEKS`, et `MONTHS`. |
-| `status` | État de l’attribut calculé. Les valeurs possibles incluent : `DRAFT` et `NEW`. |
+| `duration.count` | Un nombre qui représente la durée de la période de recherche en amont. Les valeurs possibles dépendent de la valeur du champ `duration.unit`. <ul><li>`HOURS` : 1-24</li><li>`DAYS` : 1-7</li><li>`WEEKS` : 1-4</li><li>`MONTHS` : 1-6</li></ul> |
+| `duration.unit` | Chaîne représentant l’unité de temps qui sera utilisée pour la période de recherche arrière. Les valeurs possibles sont les suivantes : `HOURS`, `DAYS`, `WEEKS` et `MONTHS`. |
+| `status` | État de l’attribut calculé. Les valeurs possibles sont `DRAFT` et `NEW`. |
 
 +++
 
@@ -316,7 +316,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur votre 
 | Propriété | Description |
 | -------- | ----------- |
 | `id` | L’identifiant généré par le système de votre attribut calculé nouvellement créé. |
-| `status` | État de l’attribut calculé. Cela peut être : `DRAFT` ou `NEW`. |
+| `status` | État de l’attribut calculé. Il peut s’agir de `DRAFT` ou de `NEW`. |
 | `createEpoch` | Heure à laquelle l’attribut calculé a été créé, en secondes. |
 | `updateEpoch` | Heure à laquelle l’attribut calculé a été mis à jour pour la dernière fois, en secondes. |
 | `createdBy` | L’identifiant de l’utilisateur qui a créé l’attribut calculé. |
@@ -325,7 +325,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur votre 
 
 ## Récupération d’un attribut calculé spécifique {#get}
 
-Vous pouvez récupérer des informations détaillées sur un attribut calculé spécifique en envoyant une requête GET à la variable `/attributes` point de terminaison et en fournissant l’identifiant de l’attribut calculé que vous souhaitez récupérer dans le chemin d’accès de la requête.
+Vous pouvez récupérer des informations détaillées sur un attribut calculé spécifique en effectuant une requête de GET sur le point de terminaison `/attributes` et en fournissant l’identifiant de l’attribut calculé que vous souhaitez récupérer dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -397,11 +397,11 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaillé
 | `description` | Une description de l’attribut calculé. Cela s’avère particulièrement utile une fois que plusieurs attributs calculés ont été définis, car cela aidera d’autres membres de votre organisation à déterminer l’attribut calculé correct à utiliser. |
 | `imsOrgId` | L’identifiant de l’organisation à laquelle appartient l’attribut calculé. |
 | `sandbox` | L’objet Sandbox contient des détails sur le sandbox sur lequel l’attribut calculé a été configuré. Ces informations sont tirées de l’en-tête du sandbox envoyé dans la requête. Pour plus d’informations, consultez la [présentation des sandbox](../../sandboxes/home.md). |
-| `path` | La variable `path` à l’attribut calculé. |
+| `path` | `path` à l’attribut calculé. |
 | `keepCurrent` | Valeur booléenne qui détermine si la valeur de l’attribut calculé est actualisée ou non à l’aide d’une actualisation rapide. |
 | `expression` | Objet contenant l’expression de l’attribut calculé. |
-| `mergeFunction` | Objet contenant la fonction de fusion pour l’attribut calculé. Cette valeur est basée sur le paramètre d’agrégation correspondant dans l’expression de l’attribut calculé. Les valeurs possibles incluent : `SUM`, `MIN`, `MAX`, et `MOST_RECENT`. |
-| `status` | État de l’attribut calculé. Il peut s’agir de l’une des valeurs suivantes : `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED`, ou `DISABLED`. |
+| `mergeFunction` | Objet contenant la fonction de fusion pour l’attribut calculé. Cette valeur est basée sur le paramètre d’agrégation correspondant dans l’expression de l’attribut calculé. Les valeurs possibles sont `SUM`, `MIN`, `MAX` et `MOST_RECENT`. |
+| `status` | État de l’attribut calculé. Il peut s’agir de l’une des valeurs suivantes : `DRAFT`, `NEW`, `INITIALIZING`, `PROCESSING`, `PROCESSED`, `FAILED` ou `DISABLED`. |
 | `schema` | Objet contenant des informations sur le schéma dans lequel l’expression est évaluée. Actuellement, seul `_xdm.context.profile` est pris en charge. |
 | `lastEvaluationTs` | Horodatage qui représente le moment où l’attribut calculé a été évalué pour la dernière fois. |
 | `createEpoch` | Heure à laquelle l’attribut calculé a été créé, en secondes. |
@@ -412,11 +412,11 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaillé
 
 ## Suppression d’un attribut calculé spécifique {#delete}
 
-Vous pouvez supprimer un attribut calculé spécifique en envoyant une requête de DELETE au `/attributes` point de terminaison et en fournissant l’identifiant de l’attribut calculé que vous souhaitez supprimer dans le chemin d’accès de la requête.
+Vous pouvez supprimer un attribut calculé spécifique en effectuant une requête de DELETE sur le point de terminaison `/attributes` et en fournissant l’identifiant de l’attribut calculé que vous souhaitez supprimer dans le chemin d’accès de la requête.
 
 >[!IMPORTANT]
 >
->La requête de suppression ne peut être utilisée que pour supprimer les attributs calculés dont l’état est **draft** (`DRAFT`). Ce point de terminaison **cannot** peut être utilisé pour supprimer des attributs calculés dans un autre état.
+>La requête de suppression ne peut être utilisée que pour supprimer les attributs calculés ayant un état **draft** (`DRAFT`). Ce point d’entrée **ne peut pas** être utilisé pour supprimer des attributs calculés dans un autre état.
 
 **Format d’API**
 
@@ -426,7 +426,7 @@ DELETE /attributes/{ATTRIBUTE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{ATTRIBUTE_ID}` | La variable `id` de l’attribut calculé que vous souhaitez supprimer. |
+| `{ATTRIBUTE_ID}` | La valeur `id` de l’attribut calculé que vous souhaitez supprimer. |
 
 **Requête**
 
@@ -487,14 +487,14 @@ Une réponse réussie renvoie un état HTTP 202 avec les détails de l’attribu
 
 ## Mise à jour d’un attribut calculé spécifique
 
-Vous pouvez mettre à jour un attribut calculé spécifique en envoyant une requête de PATCH au `/attributes` point de terminaison et en fournissant l’identifiant de l’attribut calculé que vous souhaitez mettre à jour dans le chemin d’accès de la requête.
+Vous pouvez mettre à jour un attribut calculé spécifique en effectuant une requête de PATCH sur le point de terminaison `/attributes` et en fournissant l’identifiant de l’attribut calculé que vous souhaitez mettre à jour dans le chemin d’accès de la requête.
 
 >[!IMPORTANT]
 >
 >Lors de la mise à jour d’un attribut calculé, seuls les champs suivants peuvent être mis à jour :
 >
 >- Si l’état actuel est `NEW`, l’état peut uniquement être modifié en `DISABLED`.
->- Si l’état actuel est `DRAFT`, vous pouvez modifier les valeurs des champs suivants : `name`, `description`, `keepCurrent`, `expression`, et `duration`. Vous pouvez également modifier l’état à partir de `DRAFT` to `NEW`. Toute modification apportée aux champs générés par le système, tels que `mergeFunction` ou `path` renvoie une erreur.
+>- Si l’état actuel est `DRAFT`, vous pouvez modifier les valeurs des champs suivants : `name`, `description`, `keepCurrent`, `expression` et `duration`. Vous pouvez également modifier l’état de `DRAFT` à `NEW`. Toutes les modifications apportées aux champs générés par le système, tels que `mergeFunction` ou `path`, renverront une erreur.
 >- Si l’état actuel est `PROCESSING` ou `PROCESSED`, l’état peut uniquement être modifié en `DISABLED`.
 
 **Format d’API**
@@ -505,11 +505,11 @@ PATCH /attributes/{ATTRIBUTE_ID}
 
 | Paramètre | Description |
 | --------- | ----------- |
-| `{ATTRIBUTE_ID}` | La variable `id` valeur de l’attribut calculé que vous souhaitez mettre à jour. |
+| `{ATTRIBUTE_ID}` | La valeur `id` de l’attribut calculé que vous souhaitez mettre à jour. |
 
 **Requête**
 
-La requête suivante met à jour l’état de l’attribut calculé à partir de `DRAFT` to `NEW`.
+La requête suivante mettra à jour l’état de l’attribut calculé de `DRAFT` à `NEW`.
 
 +++ Exemple de requête pour mettre à jour un attribut calculé.
 
@@ -579,4 +579,4 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur votre 
 
 ## Étapes suivantes
 
-Maintenant que vous avez appris les bases des attributs calculés, vous êtes prêt à commencer à les définir pour votre organisation. Pour savoir comment utiliser les attributs calculés dans l’interface utilisateur de l’Experience Platform, veuillez lire la section [guide de l’interface utilisateur des attributs calculés](./ui.md).
+Maintenant que vous avez appris les bases des attributs calculés, vous êtes prêt à commencer à les définir pour votre organisation. Pour savoir comment utiliser les attributs calculés dans l’interface utilisateur de l’Experience Platform, consultez le [guide de l’interface utilisateur des attributs calculés](./ui.md).

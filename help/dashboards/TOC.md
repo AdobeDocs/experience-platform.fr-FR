@@ -8,7 +8,7 @@ role: Developer,User
 source-git-commit: 3ebd17eced73424135fc93a90f05d758912eb7d0
 workflow-type: tm+mt
 source-wordcount: '132'
-ht-degree: 62%
+ht-degree: 63%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 62%
       * Filtres {#filters}
          * [Filtre de date](data-distiller/customizable-insights/filters/date-filter.md)
          * [Filtre global](data-distiller/customizable-insights/filters/global-filter.md)
-      * [En savoir plus](data-distiller/customizable-insights/view-more.md)
+      * [Afficher plus](data-distiller/customizable-insights/view-more.md)
       * [Afficher le SQL](data-distiller/customizable-insights/view-sql.md)
       * [Téléchargement au format CSV](data-distiller/customizable-insights/download-csv.md)
 * Tableaux de bord disponibles {#guides}
@@ -37,7 +37,7 @@ ht-degree: 62%
    * [Audiences](guides/audiences.md)
    * [Destinations](guides/destinations.md)
    * [Utilisation des licences](guides/license-usage.md)
-* Informations disponibles {#insights}
+* Statistiques disponibles {#insights}
    * [Profils](insights/profiles.md)
    * [Audiences](insights/audiences.md)
    * [Destinations](insights/destinations.md)
@@ -49,11 +49,11 @@ ht-degree: 62%
    * [Widgets standard](customize/standard-widgets.md)
    * [Widgets personnalisés](customize/custom-widgets.md)
    * [Modification du schéma](customize/edit-schema.md)
-* Cas d’utilisation d’insights {#insights-use-cases}
+* Cas d’utilisation des statistiques {#insights-use-cases}
    * [Analyse du consentement](insights-use-cases/consent-analysis.md)
 * Modèles de données disponibles {#data-models}
-   * [Edition B2B du modèle de données Real-time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2b.md)
-   * [Edition B2C du modèle de données Real-time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2c.md)
+   * [Edition B2B du modèle de données Real-Time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2b.md)
+   * [Edition B2C du modèle de données Real-Time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2c.md)
 * Intégrations d’applications {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [Jeux de données de tableau de bord des requêtes](query.md)

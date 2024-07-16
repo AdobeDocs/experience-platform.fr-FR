@@ -2,7 +2,7 @@
 title: Mise à jour d’une spécification de connexion pour le SDK de diffusion en continu à l’aide de l’API Flow Service
 description: Le document suivant décrit les étapes à suivre pour établir une spécification de connexion à l’aide de l’API Flow Service pour les sources en libre-service (SDK de diffusion en continu).
 exl-id: 89f96ae1-81d0-47a3-9e21-7dae810ee823
-badge: Version Beta
+badge: Version bêta
 source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
 source-wordcount: '163'
@@ -196,4 +196,4 @@ Un appel réussi renvoie les détails de la spécification de connexion mis à j
 
 ## Étapes suivantes
 
-Une fois les mises à jour apportées à votre spécification de connexion, vous pouvez maintenant passer à [test et envoi de votre source pour l’intégration](./submit.md).
+Une fois que vous avez terminé vos mises à jour de votre spécification de connexion, vous pouvez passer à [test et envoyer votre source pour l’intégration](./submit.md).

@@ -19,9 +19,9 @@ ht-degree: 13%
 
 # Segmentation par flux dans l’interface utilisateur Experience Platform
 
-La vidéo suivante est destinée à vous aider à comprendre la segmentation par flux. Il présente un exemple d’expérience client suivie d’une rapide visite des fonctionnalités clés de la [!DNL Platform] . Pour en savoir plus sur la segmentation par flux et sur la manière d’effectuer une segmentation par flux dans l’interface utilisateur, consultez le [guide de l’interface utilisateur de segmentation par flux](../ui/streaming-segmentation.md).
+La vidéo suivante est destinée à vous aider à comprendre la segmentation par flux. Il présente un exemple d’expérience client suivi d’une visite rapide des fonctionnalités clés de l’interface [!DNL Platform]. Pour en savoir plus sur la segmentation par flux et sur la manière d’effectuer une segmentation par flux dans l’interface utilisateur, consultez le [guide de l’interface utilisateur de la segmentation par flux](../ui/streaming-segmentation.md).
 
-Si vous souhaitez une segmentation par flux à l’aide de l’API Segmentation, reportez-vous à la section [guide de l’API de segmentation par flux](../api/streaming-segmentation.md).
+Si vous souhaitez une segmentation par flux à l’aide de l’API Segmentation, consultez le [guide de l’API de segmentation par flux](../api/streaming-segmentation.md).
 
 >[!NOTE]
 >

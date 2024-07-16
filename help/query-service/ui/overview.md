@@ -6,14 +6,14 @@ description: Adobe Experience Platform Query Service fournit une interface utili
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1133'
-ht-degree: 72%
+source-wordcount: '1132'
+ht-degree: 71%
 
 ---
 
 # Guide de l’interface utilisateur de [!DNL Query Service]
 
-Adobe Experience Platform [!DNL Query Service] fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder aux requêtes enregistrées par les utilisateurs de votre entreprise. Pour accéder à l’interface utilisateur d’[Adobe Experience Platform](https://platform.adobe.com), sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche.
+Adobe Experience Platform [!DNL Query Service] fournit une interface utilisateur qui peut être utilisée pour écrire et exécuter des requêtes, afficher des requêtes précédemment exécutées et accéder aux requêtes enregistrées par les utilisateurs de votre organisation. Pour accéder à l’interface utilisateur d’[Adobe Experience Platform](https://platform.adobe.com), sélectionnez **[!UICONTROL Requêtes]** dans le volet de navigation de gauche.
 
 ## [!DNL Query Editor]
 
@@ -29,11 +29,11 @@ Le [!DNL Query Editor] vous permet d’écrire et d’exécuter des requêtes sa
 
 Les requêtes qui ont déjà été enregistrées en tant que modèle peuvent être planifiées pour une exécution régulière. Lors de la planification d’une requête, vous pouvez choisir la fréquence des exécutions, la date de début et de fin, le jour de la semaine où la requête planifiée s’exécute, ainsi que le jeu de données vers lequel exporter la requête. Les plannings de requête sont définis à l’aide de Query Editor.
 
-Pour savoir comment planifier une requête via l’interface utilisateur, reportez-vous à la section [guide des requêtes planifiées](./user-guide.md#scheduled-queries). Pour savoir comment ajouter des plannings à l’aide de l’API, veuillez lire le [guide de point d’entrée des requêtes planifiées](../api/scheduled-queries.md).
+Pour savoir comment planifier une requête via l’interface utilisateur, consultez le [guide des requêtes planifiées](./user-guide.md#scheduled-queries). Pour savoir comment ajouter des plannings à l’aide de l’API, veuillez lire le [guide de point d’entrée des requêtes planifiées](../api/scheduled-queries.md).
 
-Une fois qu’une requête a été planifiée, elle apparaît dans la liste des requêtes planifiées de la variable [!UICONTROL Requêtes planifiées] . Vous trouverez des détails complets sur la requête, les exécutions, le créateur et les minutages en sélectionnant une requête planifiée dans la liste.
+Une fois qu’une requête a été planifiée, elle apparaît dans la liste des requêtes planifiées de l’onglet [!UICONTROL Requêtes planifiées] . Vous trouverez des détails complets sur la requête, les exécutions, le créateur et les minutages en sélectionnant une requête planifiée dans la liste.
 
-![L’espace de travail Requêtes avec l’onglet Requêtes planifiées mis en surbrillance et qui affiche des lignes de plannings de requête.](../images/ui/overview/scheduled-queries.png)
+![ L’espace de travail Requêtes avec l’onglet Requêtes planifiées mis en surbrillance et affichant des lignes de plannings de requête.](../images/ui/overview/scheduled-queries.png)
 
 | Colonne | Description |
 | --- | --- |
@@ -43,10 +43,10 @@ Une fois qu’une requête a été planifiée, elle apparaît dans la liste des 
 | **[!UICONTROL Fréquence d’exécution]** | Il s’agit de la cadence d’exécution de votre requête. Les valeurs disponibles sont `Run once` et `Scheduled`. Les requêtes peuvent être filtrées en fonction de leur fréquence d’exécution. |
 | **[!UICONTROL Créé par]** | Nom de la personne qui a créé la requête. |
 | **[!UICONTROL Créé]** | La date et l’heure de création de la requête, au format UTC. |
-| **[!UICONTROL La date et l’heure de la dernière exécution]** | La date et l’heure les plus récentes auxquelles la requête a été exécutée. Cette colonne met en évidence si une requête a été exécutée conformément à son planning actuel. |
-| **[!UICONTROL Statut de la dernière exécution]** | Statut de la dernière exécution de la requête. Les trois valeurs de statut sont les suivantes : `successful` `failed` ou `in progress`. |
+| **[!UICONTROL Horodatage de la dernière exécution]** | La date et l’heure les plus récentes auxquelles la requête a été exécutée. Cette colonne met en évidence si une requête a été exécutée conformément à son planning actuel. |
+| **[!UICONTROL État de la dernière exécution]** | Statut de la dernière exécution de la requête. Les trois valeurs de statut sont les suivantes : `successful` `failed` ou `in progress`. |
 
-Consultez la documentation pour plus d’informations sur la manière de [Surveillance des requêtes via l’interface utilisateur de Query Service](./monitor-queries.md).
+Consultez la documentation pour plus d’informations sur la façon de [surveiller les requêtes via l’interface utilisateur de Query Service](./monitor-queries.md).
 
 ## Modèles {#browse}
 
@@ -61,7 +61,7 @@ L’onglet **[!UICONTROL Modèles]** affiche les requêtes enregistrées par les
 | **[!UICONTROL Modifié par]** | Dernier utilisateur à avoir modifié la requête. Tout utilisateur de votre organisation ayant accès à [!DNL Query Service] peut modifier les requêtes. |
 | **[!UICONTROL Dernière modification]** | Date et heure de la dernière modification apportée à la requête, dans le fuseau horaire du navigateur. |
 
-Voir [modèles de requête](./query-templates.md) documentation pour plus d’informations sur les modèles dans l’interface utilisateur de Platform.
+Pour plus d’informations sur les modèles dans l’interface utilisateur de Platform, consultez la documentation [Modèles de requête](./query-templates.md) .
 
 ## Journal {#log}
 
@@ -71,7 +71,7 @@ L’onglet **[!UICONTROL Journal]** fournit une liste de requêtes qui ont été
 
 | Colonne | Description |
 | --- | --- |
-| **[!UICONTROL Nom]** | Nom de la requête, composé des premiers caractères de la requête SQL. Sélectionnez le nom du modèle à ouvrir. [!UICONTROL Détails du journal de requête] pour cette exécution. Vous pouvez utiliser la barre de recherche pour effectuer une recherche sur le nom d’une requête. Les recherches sont sensibles à la casse. |
+| **[!UICONTROL Nom]** | Nom de la requête, composé des premiers caractères de la requête SQL. Sélectionnez le nom du modèle pour ouvrir la vue [!UICONTROL Détails du journal de requête] pour cette exécution. Vous pouvez utiliser la barre de recherche pour effectuer une recherche sur le nom d’une requête. Les recherches sont sensibles à la casse. |
 | **[!UICONTROL Heure de début]** | Heure à laquelle la requête a été exécutée. |
 | **[!UICONTROL Durée complète]** | Heure à laquelle la requête s’est exécutée. |
 | **[!UICONTROL Statut]** | Statut actuel de la requête. |
@@ -79,10 +79,11 @@ L’onglet **[!UICONTROL Journal]** fournit une liste de requêtes qui ont été
 | **[!UICONTROL Client]** | Client utilisé pour la requête. |
 | **[!UICONTROL Créé par]** | Nom de la personne qui a créé la requête. |
 
->!![Note]
-Sélectionnez l’icône de crayon (![Une icône en forme de crayon.](../images/ui/overview/edit-icon.png)) de n’importe quelle ligne du journal de requête pour accéder à la variable [!DNL Query Editor]. La requête est prérenseignée pour faciliter la modification.
+>
+>
+>Sélectionnez l’icône en forme de crayon (![Une icône en forme de crayon.](../images/ui/overview/edit-icon.png)) de n’importe quelle ligne du journal de requête pour accéder à [!DNL Query Editor]. La requête est prérenseignée pour faciliter la modification.
 
-Voir [documentation sur les journaux de requête](./query-logs.md) pour plus d’informations sur les fichiers journaux générés automatiquement par un événement de requête.
+Pour plus d’informations sur les fichiers journaux générés automatiquement par un événement de requête, reportez-vous à la [documentation sur les journaux de requête](./query-logs.md) .
 
 ## Informations d’identification
 

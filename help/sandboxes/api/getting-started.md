@@ -20,7 +20,7 @@ Ce guide de développement décrit les étapes à suivre pour utiliser l’API S
 
 ## Conditions préalables
 
-Pour gérer les environnements de test pour votre organisation, vous devez disposer des autorisations Sandbox Administration. Les utilisateurs ne disposant pas d’autorisations d’accès peuvent uniquement utiliser la variable [point d’entrée sandbox disponible](./available.md) pour répertorier les environnements de test actifs de l’utilisateur actuel. Pour plus d’informations sur l’attribution des autorisations Sandbox pour Experience Platform, reportez-vous à la [présentation du contrôle d’accès](../../access-control/home.md).
+Pour gérer les environnements de test pour votre organisation, vous devez disposer des autorisations Sandbox Administration. Les utilisateurs ne disposant pas d’autorisations d’accès peuvent uniquement utiliser le [point d’entrée des environnements de test disponibles](./available.md) pour répertorier les environnements de test actifs de l’utilisateur actuel. Pour plus d’informations sur l’attribution des autorisations Sandbox pour Experience Platform, reportez-vous à la [présentation du contrôle d’accès](../../access-control/home.md).
 
 ### Lecture d’exemples d’appels API
 

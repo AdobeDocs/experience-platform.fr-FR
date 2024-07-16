@@ -42,7 +42,7 @@ En ce qui concerne le flux de publication, une bibliothèque peut se trouver dan
 * [[!UICONTROL Approuvé]](#approved)
 * [[!UICONTROL Publié]](#published)
 
-Ces quatre états sont représentés sous forme de colonnes dans la variable **[!UICONTROL Flux de publication]** .
+Ces quatre états sont représentés sous forme de colonnes dans l’onglet **[!UICONTROL Flux de publication]**.
 
 ![](./images/approval-workflow/flow-ui.png)
 
@@ -112,7 +112,7 @@ Ce qui est inclus en amont dépend de l’étape actuelle de la bibliothèque. P
 
 ![](./images/approval-workflow/upstream.png)
 
-Lors de la modification d’une bibliothèque dans l’interface utilisateur, toutes les ressources héritées du amont sont représentées dans la variable **[!UICONTROL Ressources en amont]** . Pour afficher ces ressources, sélectionnez l’onglet Développer situé sous l’en-tête de la section.
+Lors de la modification d’une bibliothèque dans l’interface utilisateur, toutes les ressources héritées du amont sont représentées dans la section **[!UICONTROL Resources Upstream]**. Pour afficher ces ressources, sélectionnez l’onglet Développer situé sous l’en-tête de la section.
 
 ![](./images/approval-workflow/upstream-collapse.png)
 

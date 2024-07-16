@@ -4,8 +4,8 @@ description: Ce document explique comment utiliser Query Service pour créer une
 exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
 source-git-commit: e33d59c4ac28f55ba6ae2fc073d02f8738159263
 workflow-type: tm+mt
-source-wordcount: '1419'
-ht-degree: 13%
+source-wordcount: '1418'
+ht-degree: 10%
 
 ---
 
@@ -13,18 +13,18 @@ ht-degree: 13%
 
 Attribution est un concept analytique qui permet de déterminer les tactiques marketing telles que les canaux, les offres et les messages, qui contribuent aux ventes commerciales ou aux conversions. Ce concept évalue le parcours client (le processus par lequel un client interagit avec une entreprise pour atteindre un objectif) qui entraîne un achat ou une acquisition en fonction des points de contact du client (chaque fois qu’un client interagit avec votre marque). Grâce à l’analyse d’attribution, les marketeurs peuvent évaluer le retour sur investissement des canaux qui les connectent à un client potentiel.
 
-## Prise en main
+## Commencer
 
-Les exemples SQL de ce document sont des requêtes couramment utilisées avec les données Adobe Analytics. Ce tutoriel nécessite une connaissance pratique des composants suivants :
+Les exemples SQL de ce document sont des requêtes couramment utilisées avec les données Adobe Analytics. Ce tutoriel nécessite une compréhension pratique des composants suivants :
 
-* [Présentation du connecteur source Adobe Analytics pour les données des suites de rapports](../../sources/connectors/adobe-applications/mapping/analytics.md).
-* [Documentation sur les mappages de champs Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) fournit des informations supplémentaires sur l’ingestion et le mappage de données d’analyse pour une utilisation avec Query Service.
-* [Présentation d’Attribution IQ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=fr)
-* [Guide du panneau Attribution Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=fr).
+* [Connecteur source Adobe Analytics pour la présentation des données de suite de rapports](../../sources/connectors/adobe-applications/mapping/analytics.md).
+* [La documentation sur les mappages de champs Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) fournit des informations supplémentaires sur l’ingestion et le mappage de données d’analyse à utiliser avec Query Service.
+* [Présentation Attribution IQ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
+* [Guide du panneau Attribution Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html).
 
-Une explication des paramètres de la variable `OVER()` se trouve dans la fonction [section fonctions de fenêtre](../sql/adobe-defined-functions.md#window-functions). Le [Glossaire des termes Adobe Marketing et Commerce](https://business.adobe.com/glossary/index.html) peut également être utile.
+Vous trouverez une explication des paramètres de la fonction `OVER()` dans la [section des fonctions de fenêtre](../sql/adobe-defined-functions.md#window-functions). Le [glossaire des termes Adobe Marketing et Commerce](https://business.adobe.com/glossary/index.html) peut également être utile.
 
-Pour chacun des cas d’utilisation suivants, un exemple de requête SQL paramétré est fourni comme modèle que vous pouvez personnaliser. Fournir des paramètres partout où vous voyez `{ }` dans les exemples SQL que vous souhaitez évaluer.
+Pour chacun des cas d’utilisation suivants, un exemple de requête SQL paramétré est fourni comme modèle que vous pouvez personnaliser. Spécifiez des paramètres partout où `{ }` apparaît dans les exemples SQL que vous souhaitez évaluer.
 
 ## Objectifs
 
@@ -44,14 +44,14 @@ Le tableau ci-dessous fournit une ventilation des paramètres et de leurs descri
 |---|---|
 | `{TIMESTAMP}` | Champ d’horodatage trouvé dans le jeu de données. |
 | `{CHANNEL_NAME}` | Libellé de l’objet renvoyé. |
-| `{CHANNEL_VALUE}` | La colonne ou le champ correspondant au canal cible pour la requête. |
+| `{CHANNEL_VALUE}` | La colonne ou le champ correspondant au canal cible de la requête. |
 | `{EXP_TIMEOUT}` | La fenêtre de temps avant l’événement de canal, en secondes, pendant laquelle la requête recherche un événement Première touche. |
 | `{EXP_CONDITION}` | La condition qui détermine le point d’expiration du canal. |
 | `{EXP_BEFORE}` | Valeur booléenne qui indique si le canal expire avant ou après la condition spécifiée, `{EXP_CONDITION}`, est satisfait. Cette option est principalement activée pour les conditions d’expiration d’une session, afin de garantir que la Première touche n’est pas sélectionnée à partir d’une session précédente. Par défaut, cette valeur est définie sur `false`. |
 
 ## Composants de colonne de résultats de requête {#query-result-column-components}
 
-Les résultats des requêtes d’attribution sont fournis dans l’une ou l’autre des `first_touch` ou le `last_touch` colonne . Ces colonnes sont constituées des composants suivants :
+Les résultats des requêtes d’attribution sont donnés dans la colonne `first_touch` ou `last_touch`. Ces colonnes sont constituées des composants suivants :
 
 ```console
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
@@ -59,16 +59,16 @@ Les résultats des requêtes d’attribution sont fournis dans l’une ou l’au
 
 | Paramètres | Description |
 | ---------- | ----------- |
-| `{NAME}` | Le `{CHANNEL_NAME}`, saisi en tant que libellé dans la fabrique de données Azure (ADF). |
+| `{NAME}` | `{CHANNEL_NAME}`, saisi en tant que libellé dans la fabrique de données Azure (ADF). |
 | `{VALUE}` | La valeur de `{CHANNEL_VALUE}` qui correspond à la Dernière touche dans l’intervalle `{EXP_TIMEOUT}` spécifié |
-| `{TIMESTAMP}` | L’horodatage de la variable [!DNL Experience Event] où la dernière touche s’est produite |
+| `{TIMESTAMP}` | Horodatage de l’ [!DNL Experience Event] où la dernière touche s’est produite |
 | `{FRACTION}` | L’attribution de la Dernière touche, exprimée en fraction décimale. |
 
 ### Attribution Première touche {#first-touch}
 
 L’attribution Première touche attribue 100 % de la responsabilité d’un résultat réussi au canal initial rencontré par le client. Cet exemple SQL permet de mettre en évidence l’interaction qui a conduit à une série d’actions client ultérieure.
 
-La requête ci-dessous renvoie la valeur d’attribution Première touche et les détails du canal dans la cible. [!DNL Experience Event] jeu de données. Elle renvoie également une `struct` pour le canal sélectionné avec la valeur Première touche, l’horodatage et l’attribution pour chaque ligne.
+La requête ci-dessous renvoie la valeur d’attribution Première touche et les détails du canal dans le jeu de données [!DNL Experience Event] cible. Elle renvoie également un objet `struct` pour le canal sélectionné avec la valeur Première touche, l’horodatage et l’attribution pour chaque ligne.
 
 >[!NOTE]
 >
@@ -80,7 +80,7 @@ La requête ci-dessous renvoie la valeur d’attribution Première touche et les
 ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Pour obtenir une liste complète des paramètres potentiellement requis et leur description, voir [section paramètres de requête d’attribution](#attribution-query-parameters).
+Pour obtenir une liste complète des paramètres potentiellement requis et leurs descriptions, consultez la [section Paramètres de requête d’attribution](#attribution-query-parameters).
 
 **Exemple de requête**
 
@@ -98,7 +98,7 @@ LIMIT 10
 
 **Résultats**
 
-Dans les résultats ci-dessous, le code de suivi initial `em:946426` est extrait de la fonction [!DNL Experience Event] jeu de données. Ce code de suivi est attribué avec 100 % (`1.0`) de la responsabilité des actions du client, car il s’agissait de la première interaction.
+Dans les résultats ci-dessous, le code de suivi initial `em:946426` est extrait du jeu de données [!DNL Experience Event]. Ce code de suivi est attribué avec 100 % (`1.0`) de la responsabilité des actions du client, car il s’agissait de la première interaction.
 
 ```console
                  id                 |       timestamp       | trackingCode |                   first_touch                   
@@ -116,13 +116,13 @@ Dans les résultats ci-dessous, le code de suivi initial `em:946426` est extrait
 (10 rows)
 ```
 
-Pour une répartition des résultats affichés dans le `first_touch` , voir [section des composants de colonne](#query-result-column-components).
+Pour une ventilation des résultats affichés dans la colonne `first_touch`, consultez la [section des composants de colonne](#query-result-column-components).
 
 ### Attribution Dernière touche {#second-touch}
 
 L’attribution Dernière touche accorde 100 % de la responsabilité d’un résultat réussi au dernier canal rencontré par le client. Cet exemple SQL permet de mettre en évidence l’interaction finale dans une série d’actions du client.
 
-La requête renvoie la valeur d’attribution Dernière touche et les détails du canal dans la cible. [!DNL Experience Event] jeu de données. Elle renvoie également une `struct` pour le canal sélectionné avec la valeur Dernière touche, l’horodatage et l’attribution pour chaque ligne.
+La requête renvoie la valeur d’attribution Dernière touche et les détails du canal dans le jeu de données [!DNL Experience Event] cible. Elle renvoie également un objet `struct` pour le canal sélectionné avec la valeur Dernière touche, l’horodatage et l’attribution pour chaque ligne.
 
 **Syntaxe de la requête**
 
@@ -145,7 +145,7 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 
 **Résultats**
 
-Dans les résultats affichés ci-dessous, le code de suivi dans l’objet renvoyé est la dernière interaction dans chaque [!DNL Experience Event] enregistrement. Chaque code se voit attribuer 100 % (`1.0`) de la responsabilité des actions du client, car il s’agissait de la dernière interaction.
+Dans les résultats affichés ci-dessous, le code de suivi dans l’objet renvoyé est la dernière interaction dans chaque enregistrement [!DNL Experience Event]. Chaque code se voit attribuer 100 % (`1.0`) de la responsabilité des actions du client, car il s’agissait de la dernière interaction.
 
 ```console
                  id                |       timestamp       | trackingCode |                   last_touch                   
@@ -163,13 +163,13 @@ Dans les résultats affichés ci-dessous, le code de suivi dans l’objet renvoy
 (10 rows)
 ```
 
-Pour une répartition des résultats affichés dans le `last_touch` , voir [section des composants de colonne](#query-result-column-components).
+Pour une ventilation des résultats affichés dans la colonne `last_touch`, consultez la [section des composants de colonne](#query-result-column-components).
 
 ### Attribution Première touche avec condition d’expiration {#first-touch-attribution-with-expiration-condition}
 
-Cette requête est utilisée pour déterminer quelle interaction a entraîné une série d’actions du client dans une partie de la variable [!DNL Experience Event] jeu de données déterminé par une condition de votre choix.
+Cette requête est utilisée pour déterminer quelle interaction a entraîné une série d’actions du client dans une partie du jeu de données [!DNL Experience Event] déterminée par une condition de votre choix.
 
-La requête renvoie la valeur d’attribution Première touche et les détails d’un seul canal dans la cible. [!DNL Experience Event] jeu de données, expirant après ou avant une condition. Elle renvoie également une `struct` avec la valeur Première touche, l’horodatage et l’attribution pour chaque ligne renvoyée pour le canal sélectionné.
+La requête renvoie la valeur d’attribution Première touche et les détails d’un seul canal dans le jeu de données [!DNL Experience Event] cible, expirant après ou avant une condition. Elle renvoie également un objet `struct` avec la valeur Première touche, l’horodatage et l’attribution pour chaque ligne renvoyée pour le canal sélectionné.
 
 **Syntaxe de la requête**
 
@@ -179,11 +179,11 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Pour obtenir une liste complète des paramètres potentiellement requis et leur description, voir [section paramètres de requête d’attribution](#attribution-query-parameters).
+Pour obtenir une liste complète des paramètres potentiellement requis et leurs descriptions, consultez la [section Paramètres de requête d’attribution](#attribution-query-parameters).
 
 **Exemple de requête**
 
-Dans l’exemple ci-dessous, un achat est enregistré (`commerce.purchases.value IS NOT NULL`) sur chacun des quatre jours affichés dans les résultats (15, 21, 23 et 29 juillet), et le code de suivi initial de chaque jour se voit attribuer 100 % (`1.0`) la responsabilité des actions du client.
+Dans l’exemple ci-dessous, un achat est enregistré (`commerce.purchases.value IS NOT NULL`) sur chacun des quatre jours affichés dans les résultats (15, 21, 23 et 29 juillet), et le code de suivi initial de chaque jour se voit attribuer 100 % (`1.0`) de la responsabilité des actions du client.
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -214,13 +214,13 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Pour une répartition des résultats affichés dans le `first_touch` , voir [section des composants de colonne](#query-result-column-components).
+Pour une ventilation des résultats affichés dans la colonne `first_touch`, consultez la [section des composants de colonne](#query-result-column-components).
 
 ### Attribution Première touche avec délai d’expiration {#first-touch-attribution-with-expiration-timeout}
 
 Cette requête est utilisée pour trouver l’interaction, au cours d’une période sélectionnée, qui a conduit à l’action client réussie.
 
-La requête ci-dessous renvoie la valeur d’attribution Première touche et les détails d’un seul canal dans la cible. [!DNL Experience Event] jeu de données pour une période spécifiée. La requête renvoie un objet `struct` avec la valeur Première touche, la date et heure et l’attribution pour chaque ligne renvoyée pour le canal sélectionné.
+La requête ci-dessous renvoie la valeur d’attribution Première touche et les détails d’un seul canal dans le jeu de données [!DNL Experience Event] cible pendant une période donnée. La requête renvoie un objet `struct` avec la valeur Première touche, la date et heure et l’attribution pour chaque ligne renvoyée pour le canal sélectionné.
 
 **Syntaxe de la requête**
 
@@ -230,7 +230,7 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Pour obtenir une liste complète des paramètres potentiellement requis et leur description, voir [section paramètres de requête d’attribution](#attribution-query-parameters).
+Pour obtenir une liste complète des paramètres potentiellement requis et leurs descriptions, consultez la [section Paramètres de requête d’attribution](#attribution-query-parameters).
 
 **Exemple de requête**
 
@@ -265,13 +265,13 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Pour une répartition des résultats affichés dans le `first_touch` , voir [section des composants de colonne](#query-result-column-components).
+Pour une ventilation des résultats affichés dans la colonne `first_touch`, consultez la [section des composants de colonne](#query-result-column-components).
 
 ### Attribution Dernière touche avec condition d’expiration {#last-touch-attribution-with-expiration-condition}
 
-Cette requête permet de trouver la dernière interaction dans une série d’actions du client dans une partie de la variable [!DNL Experience Event] jeu de données déterminé par une condition de votre choix.
+Cette requête est utilisée pour trouver la dernière interaction dans une série d’actions du client dans une partie du jeu de données [!DNL Experience Event] déterminée par une condition de votre choix.
 
-La requête ci-dessous renvoie la valeur d’attribution Dernière touche et les détails d’un seul canal dans la cible. [!DNL Experience Event] jeu de données, expirant après ou avant une condition. La requête renvoie un objet `struct` avec la valeur Dernière touche, la date et heure et l’attribution pour chaque ligne renvoyée pour le canal sélectionné.
+La requête ci-dessous renvoie la valeur d’attribution Dernière touche et les détails d’un seul canal dans le jeu de données [!DNL Experience Event] cible, expirant après ou avant une condition. La requête renvoie un objet `struct` avec la valeur Dernière touche, la date et heure et l’attribution pour chaque ligne renvoyée pour le canal sélectionné.
 
 **Syntaxe de la requête**
 
@@ -281,11 +281,11 @@ ATTRIBUTION_LAST_TOUCH_EXP_IF(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Pour obtenir une liste complète des paramètres potentiellement requis et leur description, voir [section paramètres de requête d’attribution](#attribution-query-parameters).
+Pour obtenir une liste complète des paramètres potentiellement requis et leurs descriptions, consultez la [section Paramètres de requête d’attribution](#attribution-query-parameters).
 
 **Exemple de requête**
 
-Dans l’exemple ci-dessous, un achat est enregistré (`commerce.purchases.value IS NOT NULL`) sur chacun des quatre jours affichés dans les résultats (15, 21, 23 et 29 juillet), et le dernier code de suivi de chaque jour se voit attribuer 100 % (`1.0`) la responsabilité des actions du client.
+Dans l’exemple ci-dessous, un achat est enregistré (`commerce.purchases.value IS NOT NULL`) sur chacun des quatre jours affichés dans les résultats (15, 21, 23 et 29 juillet), et le dernier code de suivi de chaque jour se voit attribuer 100 % (`1.0`) de la responsabilité des actions du client.
 
 ```sql
 SELECT endUserIds._experience.mcid.id, timestamp, marketing.trackingCode,
@@ -298,7 +298,7 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-**Exemples de résultats**
+**Exemple de résultats**
 
 ```console
                 id                 |       timestamp       | trackingCode |                   last_touch                   
@@ -316,11 +316,11 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Pour une répartition des résultats affichés dans le `last_touch` , voir [section des composants de colonne](#query-result-column-components).
+Pour une ventilation des résultats affichés dans la colonne `last_touch`, consultez la [section des composants de colonne](#query-result-column-components).
 
 ### Attribution Dernière touche avec délai d’expiration {#last-touch-attribution-with-expiration-timeout}
 
-Cette requête est utilisée pour trouver la dernière interaction dans un intervalle de temps sélectionné. La requête renvoie la valeur d’attribution Dernière touche et les détails d’un seul canal dans la cible. [!DNL Experience Event] jeu de données pour une période spécifiée. La requête renvoie un objet `struct` avec la valeur Dernière touche, la date et heure et l’attribution pour chaque ligne renvoyée pour le canal sélectionné.
+Cette requête est utilisée pour trouver la dernière interaction dans un intervalle de temps sélectionné. La requête renvoie la valeur d’attribution Dernière touche et les détails d’un seul canal dans le jeu de données [!DNL Experience Event] cible pendant une période donnée. La requête renvoie un objet `struct` avec la valeur Dernière touche, la date et heure et l’attribution pour chaque ligne renvoyée pour le canal sélectionné.
 
 **Syntaxe de la requête**
 
@@ -330,7 +330,7 @@ ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
     OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
-Pour obtenir une liste complète des paramètres potentiellement requis et leur description, voir [section paramètres de requête d’attribution](#attribution-query-parameters).
+Pour obtenir une liste complète des paramètres potentiellement requis et leurs descriptions, consultez la [section Paramètres de requête d’attribution](#attribution-query-parameters).
 
 **Exemple de requête**
 
@@ -365,4 +365,4 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-Pour une répartition des résultats affichés dans le `last_touch` , voir [section des composants de colonne](#query-result-column-components).
+Pour une ventilation des résultats affichés dans la colonne `last_touch`, consultez la [section des composants de colonne](#query-result-column-components).

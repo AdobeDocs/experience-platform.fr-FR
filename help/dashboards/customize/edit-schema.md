@@ -5,7 +5,7 @@ description: Ce guide fournit des instructions détaillées relatives à la sél
 exl-id: a744eb24-5ba7-4971-9183-3f891e807863
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '499'
 ht-degree: 74%
 
 ---
@@ -38,7 +38,7 @@ Avant de pouvoir créer des widgets personnalisés, les attributs Real-Time Cust
 
 Si votre entreprise n’a sélectionné aucun attribut de profil, commencez par sélectionner **[!UICONTROL Configurer]** au centre de l’écran.
 
-![Onglet Personnalisé de l’espace de travail de la bibliothèque de widgets avec l’option Configurer mise en surbrillance.](../images/customization/configure-schema.png)
+![Onglet Personnalisé de l’espace de travail de la bibliothèque de widgets avec l’option Configurer en surbrillance.](../images/customization/configure-schema.png)
 
 Après la création d’au moins un attribut personnalisé, sélectionnez **[!UICONTROL Modifier le schéma]** pour afficher les attributs sélectionnés et en ajouter d’autres.
 
@@ -57,7 +57,7 @@ Après avoir choisi les attributs que vous souhaitez ajouter, sélectionnez **[!
 >[!WARNING]
 >Les attributs nouvellement sélectionnés sont disponibles après l’instantané quotidien suivant, lorsque l’actualisation des données est effectuée.
 
-![La boîte de dialogue permettant de sélectionner les attributs de schéma avec les attributs et de cliquer sur Enregistrer en surbrillance.](../images/customization/select-attribute.png)
+![Boîte de dialogue de sélection des attributs de schéma avec attributs et d’enregistrement en surbrillance.](../images/customization/select-attribute.png)
 
 ## Étapes suivantes
 

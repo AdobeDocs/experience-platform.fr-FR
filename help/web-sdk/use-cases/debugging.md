@@ -16,9 +16,9 @@ Lorsque le débogage est activé, le SDK Web envoie des messages à la console d
 
 Le débogage est désactivé par défaut, mais peut être activé de quatre manières différentes. Vous pouvez utiliser n’importe quelle combinaison de ces méthodes pour activer ou désactiver le débogage qui convient le mieux à votre workflow de développement.
 
-## Utilisation `debugEnabled` dans le `configure` command
+## Utilisez `debugEnabled` dans la commande `configure`
 
-Définissez la variable `debugEnabled` booléen sur true lors de la configuration de l’extension. Cette option est généralement utilisée pour les environnements de développement, car elle active le débogage pour tous les visiteurs d’une page de votre site :
+Définissez la valeur booléenne `debugEnabled` sur true lors de la configuration de l’extension. Cette option est généralement utilisée pour les environnements de développement, car elle active le débogage pour tous les visiteurs d’une page de votre site :
 
 ```js
 alloy("configure", {
@@ -30,7 +30,7 @@ alloy("configure", {
 
 Voir [`debugEnabled`](../commands/configure/debugenabled.md) pour plus d’informations.
 
-## Utilisez la variable `setDebug` command
+## Utilisation de la commande `setDebug`
 
 À l’instar de la valeur booléenne ci-dessus, cette commande active le débogage pour tous les visiteurs de la page.
 
@@ -38,11 +38,11 @@ Voir [`debugEnabled`](../commands/configure/debugenabled.md) pour plus d’infor
 alloy("setDebug", {"enabled": true});
 ```
 
-Voir [`setDebug`](../commands/setdebug.md) pour plus d’informations.
+Pour plus d’informations, voir la commande [`setDebug`](../commands/setdebug.md) .
 
 ## Définition d’un paramètre de chaîne de requête
 
-Vous pouvez activer le débogage en ajoutant la chaîne de requête. `?alloy_debug=true` à la fin d’une URL. Par exemple :
+Vous pouvez activer le débogage en ajoutant la chaîne de requête `?alloy_debug=true` à la fin de n’importe quelle URL. Par exemple :
 
 `http://example.com/?alloy_debug=true`
 
@@ -52,6 +52,6 @@ Cette méthode s’applique uniquement à votre ordinateur local, ce qui vous pe
 
 L’Adobe Experience Platform Debugger est un outil puissant qui examine vos pages web et vous aide à déboguer votre implémentation des produits Experience Cloud. Vous pouvez activer le débogage à partir de l’onglet de configuration de la section SDK Web AEP.
 
-![Activation du débogueur](../assets/enable-debugging.png)
+![Activer le débogueur](../assets/enable-debugging.png)
 
-Voir [Adobe Experience Platform Debugger - Aperçu](/help/debugger/home.md) pour plus d’informations.
+Pour plus d’informations, voir [Aperçu de l’Adobe Experience Platform Debugger](/help/debugger/home.md) .

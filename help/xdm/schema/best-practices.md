@@ -17,11 +17,11 @@ ht-degree: 68%
 
 Étant donné que XDM est extrêmement polyvalent et personnalisable par sa conception, il est important de suivre les bonnes pratiques de modélisation des données lors de la conception de vos schémas. Ce document couvre les principales décisions et considérations à prendre lors du mappage des données d’expérience client à XDM.
 
-## Prise en main
+## Commencer
 
-Avant de lire ce guide, consultez la section [Présentation du système XDM](../home.md) pour une présentation de haut niveau de XDM et de son rôle dans Experience Platform.
+Avant de lire ce guide, consultez la [présentation du système XDM](../home.md) pour une présentation de haut niveau de XDM et de son rôle dans Experience Platform.
 
-Comme ce guide se concentre exclusivement sur les points clés de la conception de schéma, il est vivement recommandé de lire la section [principes de base de la composition des schémas](./composition.md) pour des explications détaillées des éléments de schéma individuels mentionnés tout au long de ce guide.
+Comme ce guide se concentre exclusivement sur les considérations clés concernant la conception de schéma, il est vivement recommandé de lire les [ principes de base de la composition de schémas](./composition.md) pour obtenir des explications détaillées sur les éléments de schéma individuels mentionnés tout au long de ce guide.
 
 ## Résumé des bonnes pratiques {#summary}
 
@@ -37,11 +37,11 @@ Les étapes relatives à l’identification des sources de données applicables 
 
 ## Créer un ERD détaillé {#create-an-erd}
 
-Une fois que vous avez déterminé les sources de données à importer [!DNL Platform], créez un ERD de haut niveau pour vous aider à orienter le processus de mappage de vos données aux schémas XDM.
+Une fois que vous avez déterminé les sources de données que vous souhaitez importer dans [!DNL Platform], créez un ERD de haut niveau pour vous aider à guider le processus de mappage de vos données aux schémas XDM.
 
 L’exemple ci-dessous représente un ERD simplifié pour une entreprise qui souhaite importer des données dans [!DNL Platform]. Le diagramme présente les entités essentielles qui doivent être triées en classes XDM, notamment les comptes clients, les hôtels, les adresses et plusieurs événements e-commerce courants.
 
-![Diagramme relationnel d’entité qui met en évidence les entités essentielles qui doivent être triées en classes XDM pour l’ingestion de données.](../images/best-practices/erd.png)
+![ Diagramme relationnel d’entité qui met en évidence les entités essentielles qui doivent être triées dans des classes XDM pour l’ingestion de données.](../images/best-practices/erd.png)
 
 ## Trier les entités en catégories de profil, de recherche et d’événement {#sort-entities}
 
@@ -109,7 +109,7 @@ Par exemple, une entreprise a créé une audience basée sur la règle stipulant
 
 En fonction du cas d’utilisation et de la granularité de vos données, vous devez décider si certaines valeurs doivent être pré-agrégées avant d’être incluses dans un profil ou une entité d’événement.
 
-Par exemple, une entreprise souhaite créer une audience en fonction du nombre d’achats. Vous pouvez choisir d’incorporer ces données avec la granularité la plus faible en incluant chaque événement d’achat horodaté comme une entité à part entière. Cependant, cela peut parfois augmenter de façon exponentielle le nombre d’événements enregistrés. Pour réduire le nombre d’événements ingérés, vous pouvez choisir de créer une valeur agrégée. `numberOfPurchases` sur une période d’une semaine ou d’un mois. D’autres fonctions d’agrégation telles que MIN et MAX peuvent également s’appliquer à ces situations.
+Par exemple, une entreprise souhaite créer une audience en fonction du nombre d’achats. Vous pouvez choisir d’incorporer ces données avec la granularité la plus faible en incluant chaque événement d’achat horodaté comme une entité à part entière. Cependant, cela peut parfois augmenter de façon exponentielle le nombre d’événements enregistrés. Pour réduire le nombre d’événements ingérés, vous pouvez choisir de créer une valeur agrégée `numberOfPurchases` sur une période d’une semaine ou d’un mois. D’autres fonctions d’agrégation telles que MIN et MAX peuvent également s’appliquer à ces situations.
 
 >[!CAUTION]
 >
@@ -148,7 +148,7 @@ Dans ce scénario, l’entreprise dispose de deux options potentielles pour repr
 
 La première approche consiste à inclure un tableau des abonnements en tant qu’attributs au sein de l’entité de profil pour les clients. Les objets de ce tableau contiendront des champs pour `category`, `status`, `planName`, `startDate` et `endDate`.
 
-![Schéma des clients dans l’éditeur de schémas avec la classe et la structure en surbrillance](../images/best-practices/profile-schema.png)
+![Schéma des clients dans l’éditeur de schémas avec la classe et la structure mises en surbrillance](../images/best-practices/profile-schema.png)
 
 **Avantages**
 
@@ -164,7 +164,7 @@ La première approche consiste à inclure un tableau des abonnements en tant qu�
 
 La seconde approche consiste à utiliser des schémas d’événement pour représenter les abonnements. Cela implique l’ingestion des mêmes champs d’abonnement que pour la première approche, avec l’ajout d’un ID d’abonnement, d’un ID de client et de la date et de l’heure auxquelles l’événement d’abonnement s’est produit.
 
-![Schéma du schéma Événements d’abonnement avec la classe XDM Experience Event et la structure des abonnements mise en surbrillance.](../images/best-practices/event-schema.png)
+![Schéma du schéma des événements d’abonnement avec la classe XDM Experience Event et la structure des abonnements mise en surbrillance.](../images/best-practices/event-schema.png)
 
 **Avantages**
 
@@ -217,9 +217,9 @@ Experience Platform fournit plusieurs groupes de champs de schéma XDM prêts à
 * Adobe Campaign
 * Adobe Target
 
-Par exemple, vous pouvez utiliser la variable [[!UICONTROL Modèle ExperienceEvent Adobe Analytics] groupe de champs](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) to map [!DNL Analytics]Champs spécifiques à vos schémas XDM. Selon les applications d’Adobe que vous utilisez, vous devez utiliser ces groupes de champs fournis par Adobe dans vos schémas.
+Par exemple, vous pouvez utiliser le [[!UICONTROL groupe de champs Adobe Analytics ExperienceEvent Template]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) pour mapper des champs [!DNL Analytics] spécifiques à vos schémas XDM. Selon les applications d’Adobe que vous utilisez, vous devez utiliser ces groupes de champs fournis par Adobe dans vos schémas.
 
-![Schéma du [!UICONTROL Modèle ExperienceEvent Adobe Analytics].](../images/best-practices/analytics-field-group.png)
+![Schéma du [!UICONTROL Modèle Adobe Analytics ExperienceEvent].](../images/best-practices/analytics-field-group.png)
 
 Les groupes de champs d’application Adobe attribuent automatiquement une identité principale par défaut grâce à l’utilisation du champ `identityMap`, qui est un objet généré par le système et en lecture seule qui mappe les valeurs d’identité standard pour un client individuel.
 
@@ -237,21 +237,21 @@ Lorsque vous ingérez des données dans le lac de données, la validation des do
 >
 >La validation ne s’applique pas aux colonnes imbriquées. Si le format du champ se trouve dans une colonne de tableau, les données ne seront pas validées.
 
-Pour définir des contraintes sur un champ spécifique, sélectionnez le champ dans l’éditeur de schémas pour ouvrir la **[!UICONTROL Propriétés du champ]** barre latérale. Consultez la documentation relative à [propriétés de champ spécifiques à un type](../ui/fields/overview.md#type-specific-properties) pour obtenir une description exacte des champs disponibles.
+Pour définir des contraintes sur un champ particulier, sélectionnez le champ dans l’éditeur de schémas pour ouvrir la barre latérale **[!UICONTROL Propriétés du champ]**. Consultez la documentation sur les [propriétés de champ spécifiques au type](../ui/fields/overview.md#type-specific-properties) pour obtenir des descriptions exactes des champs disponibles.
 
-![L’éditeur de schémas avec les champs de contrainte mis en évidence dans la variable [!UICONTROL Propriétés du champ] barre latérale.](../images/best-practices/data-validation-fields.png)
+![Éditeur de schéma avec les champs de contrainte surlignés dans la barre latérale [!UICONTROL Propriétés du champ].](../images/best-practices/data-validation-fields.png)
 
 ### Conseils pour préserver l’intégrité des données {#data-integrity-tips}
 
 Vous trouverez ci-dessous un ensemble de suggestions pour préserver l’intégrité des données lors de la création d’un schéma.
 
-* **Considérer les identités principales**: pour les produits Adobe tels que le SDK web, le SDK mobile, Adobe Analytics et Adobe Journey Optimizer, la variable `identityMap` sert souvent d’identité principale. Évitez de désigner des champs supplémentaires comme identités principales pour ce schéma.
-* **Éviter d’utiliser `_id` comme identité**: évitez d’utiliser la variable `_id` dans les schémas d’événement d’expérience en tant qu’identité. Il est destiné à une unicité record, et non à une utilisation en tant qu&#39;identité.
-* **Définir des contraintes de longueur**: il est recommandé de définir des longueurs minimales et maximales sur les champs marqués comme identités. Un avertissement se déclenche si vous essayez d’attribuer un espace de noms personnalisé à un champ d’identité sans respecter les contraintes de longueur minimale et maximale. Ces limites permettent de maintenir la cohérence et la qualité des données.
-* **Application de modèles pour des valeurs homogènes**: si vos valeurs d’identité suivent un modèle spécifique, utilisez la variable **[!UICONTROL Modèle]** pour appliquer cette contrainte. Ce paramètre peut inclure des règles telles que des chiffres uniquement, des majuscules, des minuscules ou des combinaisons de caractères spécifiques. Utilisez des expressions régulières pour faire correspondre des modèles dans vos chaînes.
-* **Limitation des eVars dans les schémas Analytics**: en règle générale, un schéma Analytics ne doit comporter qu’un seul eVar désigné comme identité. Si vous envisagez d’utiliser plusieurs eVars comme identité, vous devez vérifier deux fois si la structure de données peut être optimisée.
-* **Garantir l’unicité d’un champ sélectionné**: le champ de votre choix doit être unique par rapport à l’identité principale du schéma. Dans le cas contraire, ne le marquez pas comme une identité. Par exemple, si plusieurs clients peuvent fournir la même adresse électronique, cet espace de noms n’est pas une identité appropriée. Ce principe s’applique également à d’autres espaces de noms d’identité tels que les numéros de téléphone.
-* **Avertissements de déclenchement de contraintes pour les champs d’espace de noms personnalisés**: définissez des contraintes pour déclencher un avertissement lorsqu’un champ de schéma est marqué avec un espace de noms personnalisé sans spécifier de longueur minimale et maximale. Cet avertissement constitue un avertissement important pour le maintien de l’intégrité des données. Voir [propriétés de champ spécifiques à un type](../ui/fields/overview.md#type-specific-properties) documentation pour plus d’informations sur la manière de définir des contraintes sur un champ particulier.
+* **Tenir compte des identités principales** : pour les produits d’Adobe tels que le SDK web, le SDK mobile, Adobe Analytics et Adobe Journey Optimizer, le champ `identityMap` sert souvent d’identité principale. Évitez de désigner des champs supplémentaires comme identités principales pour ce schéma.
+* **Évitez d’utiliser `_id` comme identité** : évitez d’utiliser le champ `_id` dans les schémas d’événement d’expérience comme identité. Il est destiné à une unicité record, et non à une utilisation en tant qu&#39;identité.
+* **Définir des contraintes de longueur** : il est recommandé de définir des longueurs minimales et maximales sur les champs marqués comme identités. Un avertissement se déclenche si vous essayez d’attribuer un espace de noms personnalisé à un champ d’identité sans respecter les contraintes de longueur minimale et maximale. Ces limites permettent de maintenir la cohérence et la qualité des données.
+* **Appliquez des modèles pour des valeurs cohérentes** : si vos valeurs d’identité suivent un modèle spécifique, vous devez utiliser le paramètre **[!UICONTROL Modèle]** pour appliquer cette contrainte. Ce paramètre peut inclure des règles telles que des chiffres uniquement, des majuscules, des minuscules ou des combinaisons de caractères spécifiques. Utilisez des expressions régulières pour faire correspondre des modèles dans vos chaînes.
+* **Limiter les eVars dans les schémas Analytics** : en règle générale, un schéma Analytics ne doit avoir qu’un seul eVar désigné comme identité. Si vous envisagez d’utiliser plusieurs eVars comme identité, vous devez vérifier deux fois si la structure de données peut être optimisée.
+* **Assurer l’unicité d’un champ sélectionné** : le champ choisi doit être unique par rapport à l’identité principale du schéma. Dans le cas contraire, ne le marquez pas comme une identité. Par exemple, si plusieurs clients peuvent fournir la même adresse électronique, cet espace de noms n’est pas une identité appropriée. Ce principe s’applique également à d’autres espaces de noms d’identité tels que les numéros de téléphone.
+* **Les contraintes déclenchent des avertissements pour les champs d’espace de noms personnalisés** : définissez des contraintes pour déclencher un avertissement lorsqu’un champ de schéma est marqué avec un espace de noms personnalisé sans spécifier les longueurs minimale et maximale. Cet avertissement constitue un avertissement important pour le maintien de l’intégrité des données. Pour plus d’informations sur la manière de définir des contraintes sur un champ particulier, consultez la documentation [propriétés de champ spécifiques au type](../ui/fields/overview.md#type-specific-properties) .
 
 ## Étapes suivantes
 

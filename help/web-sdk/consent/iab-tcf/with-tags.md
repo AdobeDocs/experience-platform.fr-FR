@@ -11,23 +11,23 @@ ht-degree: 0%
 
 # Intégrer la prise en charge du TCF 2.0 de l’IAB à l’aide de balises et de l’extension du SDK Web Platform
 
-Le SDK Web de Adobe Experience Platform prend en charge le Transparency &amp; Consent Framework de l’Interactive Advertising Bureau, version 2.0 (IAB TCF 2.0). Ce guide vous explique comment configurer une propriété de balise pour envoyer des informations de consentement IAB TCF 2.0 à Adobe à l’aide de l’extension de balise du SDK Web Adobe Experience Platform.
+Le SDK Web de Adobe Experience Platform prend en charge la version 2.0 de Interactive Advertising Bureau Transparency &amp; Consent Framework (IAB TCF 2.0). Ce guide vous explique comment configurer une propriété de balise pour envoyer des informations de consentement IAB TCF 2.0 à Adobe à l’aide de l’extension de balise du SDK Web Adobe Experience Platform.
 
-Si vous ne souhaitez pas utiliser de balises, reportez-vous au guide sur la [utilisation d’IAB TCF 2.0 sans balises](./without-tags.md).
+Si vous ne souhaitez pas utiliser de balises, reportez-vous au guide sur l’ [utilisation de IAB TCF 2.0 sans balises](./without-tags.md).
 
-## Prise en main
+## Commencer
 
 Pour utiliser IAB TCF 2.0 avec des balises et l’extension SDK Web Platform, vous devez disposer d’un schéma XDM et d’un jeu de données disponibles.
 
-En outre, ce guide nécessite une compréhension pratique du SDK Web de Adobe Experience Platform. Pour une actualisation rapide, veuillez lire le [Présentation du SDK Web Adobe Experience Platform](../../home.md) et la variable [Questions fréquentes](../../faq.md) la documentation.
+En outre, ce guide nécessite une compréhension pratique du SDK Web de Adobe Experience Platform. Pour une actualisation rapide, consultez la [présentation du SDK Web de Adobe Experience Platform](../../home.md) et la documentation [Forum aux questions](../../faq.md) .
 
 ## Définition du consentement par défaut
 
-Dans la configuration de l’extension, il existe un paramètre pour le consentement par défaut. Cela contrôle le comportement des clients qui n’ont pas de cookie de consentement. Si vous souhaitez mettre en file d’attente les événements d’expérience pour les clients qui n’ont pas de cookie de consentement, définissez cette variable sur `pending`. Si vous souhaitez ignorer les événements d’expérience pour les clients qui n’ont pas de cookie de consentement, définissez cette variable sur `out`. Vous pouvez également utiliser un élément de données pour définir dynamiquement la valeur de consentement par défaut. Voir [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) pour plus d’informations.
+Dans la configuration de l’extension, il existe un paramètre pour le consentement par défaut. Cela contrôle le comportement des clients qui n’ont pas de cookie de consentement. Si vous souhaitez mettre en file d’attente les événements d’expérience pour les clients qui n’ont pas de cookie de consentement, définissez-le sur `pending`. Si vous souhaitez ignorer les événements d’expérience pour les clients qui n’ont pas de cookie de consentement, définissez-le sur `out`. Vous pouvez également utiliser un élément de données pour définir dynamiquement la valeur de consentement par défaut. Voir [`defaultConsent`](/help/web-sdk/commands/configure/defaultconsent.md) pour plus d’informations.
 
 ## Mise à jour du profil avec les informations de consentement {#consent-code-1}
 
-Pour appeler la fonction [`setConsent`](/help/web-sdk/commands/setconsent.md) lorsque les préférences de consentement de vos clients ont changé, créez une règle de balise. Commencez par ajouter un nouvel événement et sélectionnez le type d’événement &quot;Code personnalisé&quot; de l’extension Core.
+Pour appeler l’action [`setConsent`](/help/web-sdk/commands/setconsent.md) lorsque les préférences de consentement de vos clients ont changé, créez une règle de balise. Commencez par ajouter un nouvel événement et sélectionnez le type d’événement &quot;Code personnalisé&quot; de l’extension Core.
 
 Utilisez l’exemple de code suivant pour votre nouvel événement :
 
@@ -53,7 +53,7 @@ addEventListener();
 
 Ce code personnalisé effectue deux opérations :
 
-* Définit deux éléments de données, l’un avec la chaîne de consentement et l’autre avec le paramètre `gdprApplies` Indicateur. Cela s’avérera utile ultérieurement lors du remplissage de l’action &quot;Définir le consentement&quot;.
+* Définit deux éléments de données, l’un avec la chaîne de consentement et l’autre avec l’indicateur `gdprApplies`. Cela s’avérera utile ultérieurement lors du remplissage de l’action &quot;Définir le consentement&quot;.
 
 * Déclenche la règle lorsque les préférences de consentement ont changé. L’action &quot;Définir le consentement&quot; doit être utilisée chaque fois que les préférences de consentement ont changé. Ajoutez une action &quot;Définir le consentement&quot; dans l’extension et remplissez le formulaire comme suit :
 
@@ -70,18 +70,18 @@ Ce code personnalisé effectue deux opérations :
 
 ## Création d’un élément de données XDM pour les événements d’expérience
 
-La chaîne de consentement doit être incluse dans l’événement d’expérience XDM. Pour ce faire, utilisez l’élément de données Objet XDM . Commencez par créer un élément de données d’objet XDM ou utilisez-en un que vous avez déjà créé pour envoyer des événements. Si vous avez ajouté le groupe de champs de schéma Confidentialité des événements d’expérience à votre schéma, vous devez disposer d’un `consentStrings` clé dans l’objet XDM.
+La chaîne de consentement doit être incluse dans l’événement d’expérience XDM. Pour ce faire, utilisez l’élément de données Objet XDM . Commencez par créer un élément de données d’objet XDM ou utilisez-en un que vous avez déjà créé pour envoyer des événements. Si vous avez ajouté le groupe de champs Confidentialité des événements d’expérience à votre schéma, vous devez disposer d’une clé `consentStrings` dans l’objet XDM.
 
-1. Sélectionner **[!UICONTROL consentStrings]**.
+1. Sélectionnez **[!UICONTROL consentStrings]**.
 
-1. Choisir **[!UICONTROL Fournir des éléments individuels]** et sélectionnez **[!UICONTROL Ajouter un élément]**.
+1. Sélectionnez **[!UICONTROL Fournir des éléments individuels]** et sélectionnez **[!UICONTROL Ajouter un élément]**.
 
-1. Développez l’objet **[!UICONTROL consentString]** et développez le premier élément, puis renseignez les valeurs suivantes :
+1. Développez l’en-tête **[!UICONTROL consentString]**, développez le premier élément, puis renseignez les valeurs suivantes :
 
-* `consentStandard`: IAB TCF
-* `consentStandardVersion`: 2.0
-* `consentStringValue`: %IAB TCF Consent String%
-* `gdprApplies`: %Consentement du TCF de l’IAB RGPD%
+* `consentStandard` : IAB TCF
+* `consentStandardVersion` : 2.0
+* `consentStringValue` : %IAB TCF Consent String%
+* `gdprApplies` : %consentement du TCF de l’IAB RGPD%
 
 >[!IMPORTANT]
 >
@@ -111,7 +111,7 @@ function addEventListener() {
 addEventListener();
 ```
 
-Ce code est identique au code personnalisé précédent, à la différence que `useractioncomplete` et `tcloaded` les événements sont gérés. La variable [code personnalisé précédent](#consent-code-1) ne se déclenche que lorsque le client choisit ses préférences pour la première fois. Ce code se déclenche également lorsque le client a déjà choisi ses préférences. Par exemple, au second chargement de la page.
+Ce code est identique au code personnalisé précédent, sauf que les événements `useractioncomplete` et `tcloaded` sont gérés. Le [code personnalisé précédent](#consent-code-1) ne se déclenche que lorsque le client choisit ses préférences pour la première fois. Ce code se déclenche également lorsque le client a déjà choisi ses préférences. Par exemple, au second chargement de la page.
 
 Ajoutez une action &quot;Envoyer l’événement&quot; à partir de l’extension SDK Web Platform. Dans le champ XDM, sélectionnez l’élément de données XDM que vous avez créé dans la section précédente.
 
@@ -121,4 +121,4 @@ Lorsque des événements sont déclenchés après l’événement d’expérienc
 
 ## Étapes suivantes
 
-Maintenant que vous avez appris à utiliser IAB TCF 2.0 avec l’extension SDK Web Platform, vous pouvez également choisir d’intégrer avec d’autres solutions Adobe telles qu’Adobe Analytics ou Adobe Real-time Customer Data Platform. Voir [Présentation du Transparency and Consent Framework 2.0 de l’IAB](./overview.md) pour plus d’informations.
+Maintenant que vous avez appris à utiliser IAB TCF 2.0 avec l’extension SDK Web Platform, vous pouvez également choisir d’intégrer avec d’autres solutions Adobe telles qu’Adobe Analytics ou Adobe Real-Time Customer Data Platform. Pour plus d’informations, consultez la [présentation de Transparency &amp; Consent Framework 2.0 de l’IAB](./overview.md) .

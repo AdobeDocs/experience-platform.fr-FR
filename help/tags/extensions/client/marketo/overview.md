@@ -1,11 +1,11 @@
 ---
-title: Extension Marketo Munchkin  Présentation
+title: Présentation de l’extension Marketo Munchkin
 description: Découvrez l’extension de balises Marketo Munchkin dans Adobe Experience Platform.
 exl-id: 8efc5203-91fc-4e89-be8f-74bf1aeeee5f
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 100%
+source-wordcount: '210'
+ht-degree: 98%
 
 ---
 

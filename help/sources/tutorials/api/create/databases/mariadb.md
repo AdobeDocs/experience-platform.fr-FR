@@ -7,7 +7,7 @@ description: Découvrez comment connecter Adobe Experience Platform à MariaDB �
 exl-id: 9b7ff394-ca55-4ab4-99ef-85c80b04a6df
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '438'
 ht-degree: 69%
 
 ---
@@ -25,18 +25,18 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 * [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL MariaDB] en utilisant la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL MariaDB] à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
-Pour [!DNL Flow Service] pour vous connecter à [!DNL MariaDB], vous devez fournir la propriété de connexion suivante :
+Pour que [!DNL Flow Service] se connecte à [!DNL MariaDB], vous devez fournir la propriété de connexion suivante :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `connectionString` | La chaîne de connexion associée à votre [!DNL MariaDB] authentification. Le [!DNL MariaDB] Le modèle de chaîne de connexion est le suivant : `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL MariaDB] is `3000eb99-cd47-43f3-827c-43caf170f015`. |
+| `connectionString` | Chaîne de connexion associée à votre authentification [!DNL MariaDB]. Le modèle de chaîne de connexion [!DNL MariaDB] est : `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’ID de spécification de connexion pour [!DNL MariaDB] est `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
-Pour plus d’informations sur l’obtention d’une chaîne de connexion, reportez-vous à cette section [[!DNL MariaDB] document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
+Pour plus d&#39;informations sur l&#39;obtention d&#39;une chaîne de connexion, consultez ce [[!DNL MariaDB] document](https://mariadb.com/kb/en/about-mariadb-connector-odbc/).
 
 ### Utiliser les API Platform
 
@@ -84,7 +84,7 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `auth.params.connectionString` | La chaîne de connexion associée à votre [!DNL MariaDB] authentification. Le [!DNL MariaDB] Le modèle de chaîne de connexion est le suivant : `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
+| `auth.params.connectionString` | Chaîne de connexion associée à votre authentification [!DNL MariaDB]. Le modèle de chaîne de connexion [!DNL MariaDB] est : `Server={HOST};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion [!DNL MariaDB] est : `3000eb99-cd47-43f3-827c-43caf170f015`. |
 
 **Réponse**
@@ -103,4 +103,4 @@ Une réponse réussie renvoie les détails de la connexion de base que vous vene
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL MariaDB] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de la fonction [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/database-nosql.md)

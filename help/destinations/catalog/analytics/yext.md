@@ -1,22 +1,22 @@
 ---
 keywords: Suivi des conversions Yext;Yext;yext;suivi des conversions Yext
 title: Extension Yext Conversion Tracking
-description: L’extension Yext Conversion Tracking est une destination d’analyse de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Yext Conversion Tracking est une destination d’analyse de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 786ea14c-25a3-40ac-906d-6a8f7de04f41
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '464'
-ht-degree: 89%
+source-wordcount: '453'
+ht-degree: 91%
 
 ---
 
 # Extension [!DNL Yext Conversion Tracking] {#yext-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Le [!DNL Yext Conversion Tracking] L’extension vous permet de mesurer les conversions qui peuvent être attribuées à votre utilisation des produits Yext.
+L’extension [!DNL Yext Conversion Tracking] vous permet de mesurer les conversions qui peuvent être attribuées à votre utilisation des produits Yext.
 
-[!DNL Yext Conversion Tracking] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html).
+[!DNL Yext Conversion Tracking] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Yext Conversion Tracking] extension :
+Pour installer l’extension [!DNL Yext Conversion Tracking], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

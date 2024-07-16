@@ -14,15 +14,15 @@ ht-degree: 5%
 
 # Point de terminaison des comptes
 
-Dans Adobe Experience Platform Query Service, les comptes sont utilisés pour créer des informations d’identification non expirantes que vous pouvez utiliser avec des clients SQL externes. Vous pouvez utiliser la variable `/accounts` point de terminaison dans l’API Query Service, qui vous permet de créer, récupérer, modifier et supprimer par programmation vos comptes d’intégration Query Service (également appelés compte technique).
+Dans Adobe Experience Platform Query Service, les comptes sont utilisés pour créer des informations d’identification non expirantes que vous pouvez utiliser avec des clients SQL externes. Vous pouvez utiliser le point d’entrée `/accounts` dans l’API Query Service, ce qui vous permet de créer, récupérer, modifier et supprimer par programmation vos comptes d’intégration Query Service (également appelés compte technique).
 
-## Prise en main
+## Commencer
 
-Les points de terminaison utilisés dans ce guide font partie de l’API Query Service. Avant de poursuivre, veuillez consulter la section [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels à l’API, notamment les en-têtes requis et la lecture d’exemples d’appels API.
+Les points de terminaison utilisés dans ce guide font partie de l’API Query Service. Avant de poursuivre, consultez le [guide de prise en main](./getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API, y compris les en-têtes requis et comment lire des exemples d’appels API.
 
 ## Créer un compte
 
-Vous pouvez créer un compte d’intégration de Query Service en adressant une requête de POST à la fonction `/accounts` point de terminaison .
+Vous pouvez créer un compte d’intégration de Query Service en envoyant une requête de POST au point de terminaison `/accounts`.
 
 **Format d’API**
 
@@ -72,12 +72,12 @@ Une réponse réussie renvoie un état HTTP 200, avec les détails du compte d�
 | Propriété | Description |
 | -------- | ----------- |
 | `technicalAccountName` | Nom du compte d’intégration de Query Service. |
-| `technicalAccountId` | L’identifiant de votre compte d’intégration Query Service. Cette variable, ainsi que la variable `credential`, compose votre mot de passe pour votre compte. |
-| `credential` | Informations d’identification de votre compte d’intégration Query Service. Cette variable, ainsi que la variable `technicalAccountId`, compose votre mot de passe pour votre compte. |
+| `technicalAccountId` | L’identifiant de votre compte d’intégration Query Service. Avec `credential`, ce composant compose votre mot de passe pour votre compte. |
+| `credential` | Informations d’identification de votre compte d’intégration Query Service. Avec `technicalAccountId`, ce composant compose votre mot de passe pour votre compte. |
 
 ## Mettre à jour un compte
 
-Vous pouvez mettre à jour votre compte d’intégration de Query Service en adressant une requête de PUT au `/accounts` point de terminaison .
+Vous pouvez mettre à jour votre compte d’intégration Query Service en effectuant une requête de PUT sur le point de terminaison `/accounts`.
 
 **Format d’API**
 
@@ -135,7 +135,7 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur votre 
 
 ## Liste de tous les comptes
 
-Vous pouvez récupérer une liste de tous les comptes d’intégration de Query Service en adressant une requête GET à la variable `/accounts` point de terminaison .
+Vous pouvez récupérer une liste de tous les comptes d’intégration de Query Service en envoyant une requête de GET au point de terminaison `/accounts`.
 
 **Format d’API**
 
@@ -206,7 +206,7 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de tous les compt
 
 ## Suppression d’un compte
 
-Vous pouvez supprimer votre compte d’intégration de Query Service en adressant une requête de DELETE à la fonction `/accounts` point de terminaison .
+Vous pouvez supprimer votre compte d’intégration Query Service en effectuant une requête de DELETE sur le point de terminaison `/accounts`.
 
 **Format d’API**
 

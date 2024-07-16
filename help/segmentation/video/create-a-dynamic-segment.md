@@ -19,12 +19,12 @@ ht-degree: 13%
 
 # Création d’un segment dynamique dans l’interface utilisateur de l’Experience Platform
 
-La vidéo suivante est destinée à vous aider à comprendre la création de segments dynamiques. Il présente un exemple d’expérience client suivie d’une rapide visite des fonctionnalités clés de la [!DNL Platform] . Pour en savoir plus sur la segmentation et sur la création de segments dans l’interface utilisateur, consultez la section [Guide du créateur de segments](../ui/segment-builder.md).
+La vidéo suivante est destinée à vous aider à comprendre la création de segments dynamiques. Il présente un exemple d’expérience client suivi d’une visite rapide des fonctionnalités clés de l’interface [!DNL Platform]. Pour en savoir plus sur la segmentation et sur la création de segments dans l’interface utilisateur, consultez le [guide du créateur de segments](../ui/segment-builder.md).
 
-Si vous souhaitez créer un segment à l’aide de l’API Segmentation, reportez-vous à la section [guide de création d’une API de segment](../tutorials/create-a-segment.md).
+Si vous souhaitez créer un segment à l’aide de l’API Segmentation, consultez le [guide de création d’une API de segment](../tutorials/create-a-segment.md).
 
 >[!NOTE]
 >
->L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous au [Guide du créateur de segments](../ui/segment-builder.md).
+>L’interface utilisateur d’Experience Platform est fréquemment mise à jour et peut avoir changé depuis l’enregistrement de cette vidéo. Pour obtenir les informations les plus récentes, reportez-vous au [guide du créateur de segments](../ui/segment-builder.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/27428?quality=12&learn=on)

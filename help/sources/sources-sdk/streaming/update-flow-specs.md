@@ -2,7 +2,7 @@
 title: Mise à jour des spécifications de flux pour le SDK de diffusion en continu à l’aide de l’API Flow Service
 description: Le document suivant décrit les étapes à suivre pour récupérer et mettre à jour les spécifications de flux à l’aide de l’API Flow Service pour les sources en libre-service (SDK de diffusion en continu).
 exl-id: cc9dab7a-08fa-4c6c-bbac-cb658a6376fb
-badge: Version Beta
+badge: Version bêta
 source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
 source-wordcount: '423'
@@ -10,7 +10,7 @@ ht-degree: 13%
 
 ---
 
-# Mise à jour des spécifications de flux à l’aide de [!DNL Flow Service] API
+# Mise à jour des spécifications de flux à l’aide de l’API [!DNL Flow Service]
 
 >[!NOTE]
 >
@@ -18,9 +18,9 @@ ht-degree: 13%
 
 Une fois que vous avez généré un nouvel identifiant de spécification de connexion, vous devez ajouter cet identifiant à une spécification de flux afin de créer un flux de données.
 
-Les spécifications de flux contiennent des informations qui définissent un flux, notamment les identifiants de connexion source et cible pris en charge, les spécifications de transformation nécessaires à l’application aux données et les paramètres de planification requis pour générer un flux. Vous pouvez modifier les spécifications de flux en utilisant la méthode `/flowSpecs` point de terminaison .
+Les spécifications de flux contiennent des informations qui définissent un flux, notamment les identifiants de connexion source et cible pris en charge, les spécifications de transformation nécessaires à l’application aux données et les paramètres de planification requis pour générer un flux. Vous pouvez modifier les spécifications de flux à l’aide du point d’entrée `/flowSpecs`.
 
-Le document suivant décrit les étapes à suivre pour récupérer et mettre à jour les spécifications de flux à l’aide du [!DNL Flow Service] API pour les sources en libre-service (SDK de diffusion).
+Le document suivant décrit les étapes à suivre pour récupérer et mettre à jour les spécifications de flux à l’aide de l’API [!DNL Flow Service] pour les sources en libre-service (SDK de diffusion en continu).
 
 ## Prise en main
 
@@ -28,7 +28,7 @@ Avant de continuer, consultez le [guide de prise en main](./getting-started.md) 
 
 ## Recherche d’une spécification de flux {#lookup}
 
-Les sources créées avec la variable `generic-streaming` tous les modèles utilisent la variable `GenericStreamingAEP` spécification de flux. Cette spécification de flux peut être récupérée en adressant une requête GET à la fonction `/flowSpecs/` et en fournissant la variable `flowSpec.id` de `e77fde5a-22a8-11ed-861d-0242ac120002`.
+Les sources créées avec le modèle `generic-streaming` utilisent toutes la spécification de flux `GenericStreamingAEP`. Cette spécification de flux peut être récupérée en envoyant une requête GET au point de terminaison `/flowSpecs/` et en fournissant la `flowSpec.id` de `e77fde5a-22a8-11ed-861d-0242ac120002`.
 
 **Format d’API**
 
@@ -38,7 +38,7 @@ GET /flowSpecs/e77fde5a-22a8-11ed-861d-0242ac120002
 
 **Requête**
 
-La requête suivante récupère le `e77fde5a-22a8-11ed-861d-0242ac120002` spécification de flux.
+La requête suivante récupère la spécification de flux `e77fde5a-22a8-11ed-861d-0242ac120002`.
 
 ```shell
 curl -X GET \
@@ -154,7 +154,7 @@ Vous pouvez mettre à jour les champs d’une spécification de flux via une op�
 
 >[!IMPORTANT]
 >
->Lorsque vous créez une spécification de connexion pour une nouvelle source, vous devez ajouter son identifiant de spécification à la variable `sourceConnectionSpecIds` tableau des spécifications de flux qui correspondent à votre source. Cela garantit que votre nouvelle source est prise en charge par une spécification de flux existante, ce qui vous permet d’effectuer le processus de création de flux de données avec votre nouvelle source.
+>Lorsque vous créez une spécification de connexion pour une nouvelle source, vous devez ajouter son identifiant de spécification au tableau `sourceConnectionSpecIds` des spécifications de flux qui correspondent à votre source. Cela garantit que votre nouvelle source est prise en charge par une spécification de flux existante, ce qui vous permet d’effectuer le processus de création de flux de données avec votre nouvelle source.
 
 **Format d’API**
 
@@ -164,7 +164,7 @@ PUT /flowSpecs/e77fde5a-22a8-11ed-861d-0242ac120002
 
 **Requête**
 
-La requête suivante met à jour la spécification de flux de `e77fde5a-22a8-11ed-861d-0242ac120002` pour inclure l’identifiant de spécification de connexion `bdb5b792-451b-42de-acf8-15f3195821de`.
+La requête suivante met à jour la spécification de flux de `e77fde5a-22a8-11ed-861d-0242ac120002` pour inclure l’ID de spécification de connexion `bdb5b792-451b-42de-acf8-15f3195821de`.
 
 ```shell
 PUT -X GET \
@@ -368,4 +368,4 @@ Une réponse réussie renvoie les détails de la spécification de flux interrog
 
 ## Étapes suivantes
 
-Une fois la nouvelle spécification de connexion ajoutée à la spécification de flux appropriée, vous pouvez passer au test et envoyer votre nouvelle source. Consultez le guide sur la [tester et envoyer une nouvelle source](./submit.md) pour plus d’informations.
+Une fois la nouvelle spécification de connexion ajoutée à la spécification de flux appropriée, vous pouvez passer au test et envoyer votre nouvelle source. Pour plus d’informations, consultez le guide sur le [test et l’envoi d’une nouvelle source](./submit.md) .

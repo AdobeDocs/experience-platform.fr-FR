@@ -10,11 +10,11 @@ ht-degree: 61%
 
 ---
 
-# Créez un [!DNL Microsoft] Connexion de base SQL Server à l’aide de la fonction [!DNL Flow Service] API
+# Créez une connexion de base SQL Server [!DNL Microsoft] à l’aide de l’API [!DNL Flow Service]
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Lisez ce tutoriel pour savoir comment créer une connexion de base pour [!DNL Microsoft SQL Server] en utilisant la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lisez ce tutoriel pour découvrir comment créer une connexion de base pour [!DNL Microsoft SQL Server] à l’aide de l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
@@ -23,7 +23,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
 * [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL Microsoft SQL Server] en utilisant la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL Microsoft SQL Server] à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises {#gather-required-credentials}
 
@@ -31,10 +31,10 @@ Pour vous connecter à [!DNL Microsoft SQL Server], vous devez fournir la propri
 
 | Informations d’identification | Description | Exemple |
 | --- | --- | --- |
-| `connectionString` | La chaîne de connexion associée à votre [!DNL Microsoft SQL Server] compte . Le modèle de chaîne de connexion varie selon que vous utilisez le nom de serveur ou d’instance pour votre source de données :<ul><li>Chaîne de connexion utilisant le nom du serveur : `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>Chaîne de connexion utilisant le nom de l’instance :`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` | `Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword` |
-| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Microsoft SQL Server] is `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
+| `connectionString` | Chaîne de connexion associée à votre compte [!DNL Microsoft SQL Server]. Le modèle de chaîne de connexion varie selon que vous utilisez le nom de serveur ou d’instance pour votre source de données :<ul><li>Chaîne de connexion utilisant le nom du serveur : `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>Chaîne de connexion utilisant le nom de l’instance :`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` | `Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword` |
+| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’ID de spécification de connexion pour [!DNL Microsoft SQL Server] est `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
-Pour plus d’informations sur l’obtention d’une chaîne de connexion, reportez-vous à cette section [[!DNL Microsoft SQL Server] document](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
+Pour plus d&#39;informations sur l&#39;obtention d&#39;une chaîne de connexion, consultez ce [[!DNL Microsoft SQL Server] document](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
 
 ### Utiliser les API Platform
 
@@ -81,7 +81,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `auth.params.connectionString` | La chaîne de connexion associée à votre [!DNL Microsoft SQL Server] compte . Lisez la section sur [collecte des informations requises](#gather-required-credentials) pour plus d’informations. |
+| `auth.params.connectionString` | Chaîne de connexion associée à votre compte [!DNL Microsoft SQL Server]. Lisez la section sur la [collecte des informations d’identification requises](#gather-required-credentials) pour plus d’informations. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion [!DNL Microsoft SQL Server] est : `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
 
 **Réponse**
@@ -100,4 +100,4 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 Ce tutoriel vous a permis de créer une connexion de base [!DNL Microsoft SQL Server] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de la fonction [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/database-nosql.md)

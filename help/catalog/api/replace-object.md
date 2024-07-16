@@ -13,11 +13,11 @@ ht-degree: 60%
 
 # Remplacement d’un objet Catalogue
 
-Vous pouvez remplacer le contenu d’une [!DNL Catalog] à l’aide d’une requête de PUT, dans laquelle la ressource entière est remplacée par le payload de la requête.
+Vous pouvez remplacer le contenu d’un objet [!DNL Catalog] à l’aide d’une requête de PUT, dans laquelle la ressource entière est remplacée par le payload de la requête.
 
 >[!NOTE]
 >
->Si vous n’avez besoin de mettre à jour que quelques champs spécifiques dans une [!DNL Catalog] , l’utilisation d’une requête de PATCH peut être plus efficace.
+>Si vous n’avez besoin de mettre à jour que quelques champs spécifiques dans un objet [!DNL Catalog], l’utilisation d’une requête de PATCH peut être plus efficace.
 
 **Format d’API**
 
@@ -27,7 +27,7 @@ PUT /{OBJECT_TYPE}/{OBJECT_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{OBJECT_TYPE}` | Le type de [!DNL Catalog] à remplacer. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Le type d’objet [!DNL Catalog] à remplacer. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{OBJECT_ID}` | Identifiant de l’objet spécifique que vous souhaitez mettre à jour. |
 
 **Requête**

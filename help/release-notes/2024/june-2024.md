@@ -15,7 +15,7 @@ ht-degree: 21%
 
 >[!TIP]
 >
->[Assistant d’IA en Experience Platform](https://platform.adobe.com) est désormais disponible. Utilisez l’assistant d’IA pour accélérer vos workflows dans les applications Adobe. [En savoir plus](#ai-assistant) à propos de la nouvelle fonctionnalité.
+>[L’assistant d’IA en Experience Platform](https://platform.adobe.com) est désormais disponible. Utilisez l’assistant d’IA pour accélérer vos workflows dans les applications Adobe. [En savoir plus](#ai-assistant) à propos de la nouvelle fonctionnalité.
 
 Nouvelles fonctionnalités d’Adobe Experience Platform :
 
@@ -36,12 +36,12 @@ L’assistant d’IA dans Adobe Experience Platform est une expérience conversa
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Assistant d’IA en Experience Platform | Vous pouvez désormais utiliser l’assistant d’IA en Experience Platform. L’assistant d’IA prend en charge Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer et Customer Journey Analytics. <br> ![Assistant IA dans Experience Platform.](../2024/assets/june/ai-assistant-full.png "Assistant IA dans Experience Platform."){width="100" zoomable="yes"} <br> Pour plus d’informations sur cette fonctionnalité, consultez la section [Guide de l’interface utilisateur de l’assistant IA](../../ai-assistant/ui-guide.md). |
-| Prise en charge des questions relatives aux connaissances sur les produits | [Connaissances produit](../../ai-assistant/home.md#product-knowledge) sont des concepts et des rubriques basés sur la documentation Experience League et peuvent être utilisés pour l’apprentissage pointé, la découverte ouverte et la résolution des problèmes. Vous pouvez poser des questions sur les connaissances des produits de l’assistant d’IA telles que : <ul><li>Que sont les audiences semblables ?</li><li>Comment est calculé la richesse de Profile ?</li><li> Puis-je supprimer un schéma activé pour le profil une fois les données ingérées ?</li></ul> |
-| [!BADGE Beta]{type=Informative} Prise en charge des questions d’informations opérationnelles | [Connaissances opérationnelles](../../ai-assistant/home.md#operational-insights) sont des réponses générées par l’assistant d’IA au sujet de vos objets de métadonnées, y compris les décomptes, les recherches et l’impact sur la traçabilité. Les insights opérationnels ne prennent en compte aucune donnée de votre environnement de test. Vous pouvez poser des questions sur les informations opérationnelles de l’assistant d’IA telles que : <ul><li>Quelles destinations sont à l’état actif ?</li><li>Combien de jeux de données ai-je ?</li><li>Répertorier les audiences utilisées dans les parcours en direct.</li></ul> Les informations opérationnelles sont prises en charge dans les domaines suivants : attributs, audiences, flux de données, jeux de données, destinations, parcours, schémas et sources. |
-| Accéder à l’assistant AI | Pour accéder à l’assistant d’IA pour Experience Platform, Real-Time CDP et Journey Optimizer, vous devez être ajouté à un rôle qui inclut la fonction **Activation de l’assistant AI** et **Affichage des informations opérationnelles** autorisations. Pour plus d’informations, consultez la section [guide d’accès aux fonctionnalités](../../ai-assistant/access.md). Vous devez utiliser l’Admin Console pour [accès en Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant?lang=en#feature-access). |
+| Assistant d’IA en Experience Platform | Vous pouvez désormais utiliser l’assistant d’IA en Experience Platform. L’assistant d’IA prend en charge Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer et Customer Journey Analytics. <br> ![Assistant d’IA dans Experience Platform.](../2024/assets/june/ai-assistant-full.png "Assistant d’IA dans Experience Platform."){width="100" zoomable="yes"} <br> Pour plus d’informations sur cette fonctionnalité, consultez le [guide de l’interface utilisateur de l’assistant d’IA](../../ai-assistant/ui-guide.md). |
+| Prise en charge des questions relatives aux connaissances sur les produits | [Les connaissances sur les produits](../../ai-assistant/home.md#product-knowledge) sont des concepts et des rubriques basés sur la documentation Experience League et peuvent être utilisés pour l’apprentissage avec précision, la découverte ouverte et la résolution des problèmes. Vous pouvez poser des questions sur les connaissances des produits de l’assistant d’IA telles que : <ul><li>Que sont les audiences semblables ?</li><li>Comment est calculé la richesse de Profile ?</li><li> Puis-je supprimer un schéma activé pour le profil une fois les données ingérées ?</li></ul> |
+| [!BADGE Beta]{type=Informative} Prise en charge des questions d’informations opérationnelles | [Les insights opérationnels](../../ai-assistant/home.md#operational-insights) sont des réponses que l’assistant d’IA génère à propos de vos objets de métadonnées, y compris le nombre, les recherches et l’impact sur la traçabilité. Les insights opérationnels ne prennent en compte aucune donnée de votre environnement de test. Vous pouvez poser des questions sur les informations opérationnelles de l’assistant d’IA telles que : <ul><li>Quelles destinations sont à l’état actif ?</li><li>Combien de jeux de données ai-je ?</li><li>Répertorier les audiences utilisées dans les parcours en direct.</li></ul> Les informations opérationnelles sont prises en charge dans les domaines suivants : attributs, audiences, flux de données, jeux de données, destinations, parcours, schémas et sources. |
+| Accéder à l’assistant AI | Pour accéder à l’assistant d’IA pour Experience Platform, Real-Time CDP et Journey Optimizer, vous devez être ajouté à un rôle qui inclut les autorisations **Activer l’assistant d’IA** et **Afficher les statistiques opérationnelles**. Pour plus d’informations, consultez le [guide d’accès aux fonctionnalités](../../ai-assistant/access.md). Vous devez utiliser l’Admin Console pour l’accès [dans Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant?lang=en#feature-access). |
 
-Pour plus d’informations sur l’assistant d’IA, consultez la section [Présentation de l’assistant AI](../../ai-assistant/home.md).
+Pour plus d’informations sur l’assistant d’IA, consultez la [présentation de l’assistant d’IA](../../ai-assistant/home.md).
 
 ## Authentification sur les API Experience Platform {#authentication-platform-apis}
 
@@ -57,7 +57,7 @@ Utilisez la préparation de données pour mapper, transformer et valider des don
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Ajouts à la liste des mots-clés réservés | Les mots suivants ont été ajoutés à la liste des mots-clés réservés de la préparation des données :<ul><li>`do`</li><li>`empty`</li><li>`function`</li><li>`size`</li></ul> Pour plus d’informations, lisez le [guide des fonctions de préparation de données](../../data-prep/functions.md). |
+| Ajouts à la liste des mots-clés réservés | Les mots suivants ont été ajoutés à la liste des mots-clés réservés de la préparation des données :<ul><li>`do`</li><li>`empty`</li><li>`function`</li><li>`size`</li></ul> Pour plus d’informations, consultez le [guide des fonctions de prép de données](../../data-prep/functions.md). |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | ----------- | ----------- |
 | Amélioration de l’API d’exportation ad hoc pour exporter des audiences externes | Vous pouvez désormais utiliser l’API d’exportation ad hoc pour exporter des audiences externes (chargement personnalisé). [En savoir plus](/help/destinations/api/ad-hoc-activation-api.md) . |
 | (Beta) Fonctions supplémentaires prises en charge dans la phase bêta de la prise en charge des tableaux d’exportation | Auparavant, lors de l’activation d’audiences vers des destinations basées sur des fichiers et de la sélection de l’option Utiliser un champ calculé , vous étiez limité à l’utilisation d’un sous-ensemble des audiences disponibles par le biais de la préparation des données. Cette limitation a été levée et les clients ont accès à toutes les fonctions disponibles par le biais de la préparation des données lors de l’exportation d’audiences vers des destinations basées sur des fichiers. [En savoir plus](/help/destinations/ui/export-arrays-calculated-fields.md#supported-functions). |
-| Afficher uniquement les champs avec des données dans l’étape de mappage | Lors du mappage des attributs de profil à vos destinations, vous pouvez désormais basculer entre tous les attributs de profil ou uniquement ceux qui contiennent des données. Par défaut, seuls les champs contenant des données sont affichés. Consultez les guides d’activation pour [batch](../../destinations/ui/activate-batch-profile-destinations.md#mapping) et [flux continu](../../destinations/ui/activate-segment-streaming-destinations.md#mapping) destinations pour plus d’informations. |
+| Afficher uniquement les champs avec des données dans l’étape de mappage | Lors du mappage des attributs de profil à vos destinations, vous pouvez désormais basculer entre tous les attributs de profil ou uniquement ceux qui contiennent des données. Par défaut, seuls les champs contenant des données sont affichés. Pour plus d’informations, consultez les guides d’activation des destinations [batch](../../destinations/ui/activate-batch-profile-destinations.md#mapping) et [streaming](../../destinations/ui/activate-segment-streaming-destinations.md#mapping) . |
 
 {style="table-layout:auto"}
 
@@ -87,7 +87,7 @@ Utilisez Adobe Experience Platform Identity Service pour créer une vue d’ense
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} Règles de liaison de graphiques d’identités | Les participants au programme bêta peuvent utiliser des règles de liaison de graphiques d’identités pour garantir la représentation des entités personnelles dans le système en empêchant le &quot;périphérique partagé&quot; et d’autres scénarios de réduction des graphiques. Pour atteindre cet objectif, les participants du programme bêta auront accès à trois fonctionnalités dans un environnement de test de développement : <ul><li>Outil de simulation graphique permettant de comprendre le fonctionnement de l’algorithme graphique.</li><li>L’écran des paramètres d’identité pour configurer les espaces de noms uniques et les priorités d’espace de noms.</li><li>Un tableau de bord d’identité pour obtenir des informations sur les graphiques ingérés.</li></ul> En outre, le programme bêta comprendra des améliorations de la stabilité du comportement des profils. Pour plus d’informations, consultez la section [règles de liaison de graphiques d’identités](../../identity-service/identity-graph-linking-rules/overview.md) la documentation. |
+| [!BADGE Beta]{type=Informative} Règles de liaison de graphiques d’identités | Les participants au programme bêta peuvent utiliser des règles de liaison de graphiques d’identités pour garantir la représentation des entités personnelles dans le système en empêchant le &quot;périphérique partagé&quot; et d’autres scénarios de réduction des graphiques. Pour atteindre cet objectif, les participants du programme bêta auront accès à trois fonctionnalités dans un environnement de test de développement : <ul><li>Outil de simulation graphique permettant de comprendre le fonctionnement de l’algorithme graphique.</li><li>L’écran des paramètres d’identité pour configurer les espaces de noms uniques et les priorités d’espace de noms.</li><li>Un tableau de bord d’identité pour obtenir des informations sur les graphiques ingérés.</li></ul> En outre, le programme bêta comprendra des améliorations de la stabilité du comportement des profils. Pour plus d’informations, consultez la documentation [ sur la liaison de règles de graphique d’identités](../../identity-service/identity-graph-linking-rules/overview.md) . |
 
 {style="table-layout:auto"}
 
@@ -95,15 +95,15 @@ Pour plus d’informations sur le service d’identités, consultez la [présent
 
 ## [!DNL Privacy Service] {#privacy}
 
-Plusieurs réglementations juridiques et organisationnelles donnent aux utilisateurs le droit d’accéder à leurs données personnelles ou de les supprimer de vos entrepôts de données sur demande. Adobe Experience Platform [!DNL Privacy Service] fournit une API RESTful et une interface utilisateur pour vous aider à gérer ces requêtes de données de vos clients. Avec [!DNL Privacy Service], vous pouvez soumettre des demandes d’accès et de suppression de données clients privées ou personnelles des applications Adobe Experience Cloud, ce qui facilite la conformité automatisée aux réglementations de confidentialité légales et organisationnelles.
+Plusieurs réglementations juridiques et organisationnelles donnent aux utilisateurs le droit d’accéder à leurs données personnelles ou de les supprimer de vos entrepôts de données sur demande. Adobe Experience Platform [!DNL Privacy Service] fournit une API RESTful et une interface utilisateur pour vous aider à gérer ces requêtes de données de vos clients. [!DNL Privacy Service] vous permet d’envoyer des demandes d’accès et de suppression de données clients privées ou personnelles des applications Adobe Experience Cloud, ce qui facilite la conformité automatisée aux réglementations de confidentialité légales et organisationnelles.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 |--- | ---|
-| Prise en charge des Privacy Service pour Adobe Journey Optimizer | Les fonctionnalités de Privacy Service sont désormais compatibles avec les protocoles Adobe Journey Optimizer pour le traitement des requêtes de suppression. Voir [Documentation sur les demandes de confidentialité Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/requests) pour plus d’informations ou pour obtenir la documentation Experience Platform d’une liste de [Applications Experience Cloud intégrées à Privacy Service](../../privacy-service/experience-cloud-apps.md). |
+| Prise en charge des Privacy Service pour Adobe Journey Optimizer | Les fonctionnalités de Privacy Service sont désormais compatibles avec les protocoles Adobe Journey Optimizer pour le traitement des requêtes de suppression. Pour plus d’informations, consultez la [documentation sur les demandes d’accès à des informations personnelles de Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/requests) ou la documentation Experience Platform pour obtenir la liste des [applications Experience Cloud intégrées à Privacy Service](../../privacy-service/experience-cloud-apps.md). |
 
-Voir [Présentation du Privacy Service](../../privacy-service/home.md) pour plus d’informations sur le service.
+Pour plus d’informations sur le service, consultez la [présentation du Privacy Service](../../privacy-service/home.md) .
 
 ## Segmentation Service {#segmentation}
 
@@ -113,7 +113,7 @@ Voir [Présentation du Privacy Service](../../privacy-service/home.md) pour plus
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Mise à jour des contraintes temporelles | Le comportement de &quot;Ce mois-ci&quot; et &quot;Cette année&quot; a été mis à jour, et ils représentent désormais respectivement les &quot;mois à jour&quot; et &quot;année à jour&quot;. Pour plus d’informations sur cette modification, consultez la section [Guide du créateur de segments](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
+| Mise à jour des contraintes temporelles | Le comportement de &quot;Ce mois-ci&quot; et &quot;Cette année&quot; a été mis à jour, et ils représentent désormais respectivement les &quot;mois à jour&quot; et &quot;année à jour&quot;. Pour plus d’informations sur cette modification, consultez le [guide du créateur de segments](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 
 {style="table-layout:auto"}
 
@@ -121,16 +121,16 @@ Pour plus d’informations sur [!DNL Segmentation Service], consultez la [prése
 
 ## Playbooks de cas d’utilisation {#use-case-playbooks}
 
-[!DNL Use Case Playbooks] sont disponibles sans frais supplémentaires pour tous les clients Adobe Experience Platform. Pour accéder à une riche galerie de classeurs de cas d’utilisation dans l’interface utilisateur d’Experience Platform, vous pouvez maintenant sélectionner **[!UICONTROL Livres]** dans le volet de navigation de gauche.
+[!DNL Use Case Playbooks] est disponible sans frais supplémentaires pour tous les clients Adobe Experience Platform. Pour accéder à une riche galerie de playbooks de cas d’utilisation dans l’interface utilisateur de l’Experience Platform, vous pouvez désormais sélectionner **[!UICONTROL Playbooks]** dans le volet de navigation de gauche.
 
-[!DNL Use Case Playbooks] sont conçues pour vous aider à surmonter les défis lorsque vous commencez à utiliser Real-Time Customer Data Platform ou Adobe Journey Optimizer. Ils fournissent des conseils et génèrent diverses ressources que vous pouvez tester et importer dans des environnements de production lorsque vous êtes prêt, même si vous ne savez pas où démarrer ni comment produire les ressources appropriées pour les cas d’utilisation prévus.
+[!DNL Use Case Playbooks] sont conçus pour aider à surmonter les défis en commençant par Real-Time Customer Data Platform ou Adobe Journey Optimizer. Ils fournissent des conseils et génèrent diverses ressources que vous pouvez tester et importer dans des environnements de production lorsque vous êtes prêt, même si vous ne savez pas où démarrer ni comment produire les ressources appropriées pour les cas d’utilisation prévus.
 
-Pour commencer, lisez le [Présentation des classeurs de cas d’utilisation](/help/use-case-playbooks/playbooks/overview.md), qui fournit un aperçu de la fonctionnalité des classeurs, de leur objectif et une démonstration de bout en bout, y compris la création d’instances et l’importation de ressources générées dans d’autres environnements de test.
+Pour commencer, consultez la [présentation des classeurs de cas d’utilisation](/help/use-case-playbooks/playbooks/overview.md), qui offre un aperçu de la fonctionnalité des classeurs, de leur objectif et une démonstration de bout en bout, y compris la création d’instances et l’importation de ressources générées dans d’autres environnements de test.
 
-Pour découvrir comment accéder à un environnement de test inspirant et le configurer afin d’expérimenter et d’explorer plusieurs classeurs de cas d’utilisation, reportez-vous à la section [Accédez aux classeurs de cas d’utilisation](/help/use-case-playbooks/playbooks/navigate.md) document.
+Pour découvrir comment accéder à un environnement de test inspirant et le configurer afin d’expérimenter et d’explorer plusieurs classeurs de cas d’utilisation, consultez le document [Accéder aux classeurs de cas d’utilisation](/help/use-case-playbooks/playbooks/navigate.md).
 
-Pour en savoir plus sur [!DNL Use Case Playbooks], lisez les pages de documentation suivantes :
+Pour en savoir plus sur [!DNL Use Case Playbooks], consultez les pages de documentation suivantes :
 
-- Obtenir une liste de tous les [livres de lecture disponibles](/help/use-case-playbooks/playbooks/playbooks-list.md), regroupés par produit (Real-Time CDP ou Journey Optimizer).
-- En savoir plus sur les [permissions](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) sont nécessaires pour vous ou utilisez des playbooks et les ressources qu’ils créent.
-- Comprendre le [fonctionnalité de sensibilisation aux données](/help/use-case-playbooks/playbooks/data-awareness.md) qui vous permet de dupliquer des ressources générées vers d’autres environnements de test.
+- Obtenez une liste de tous les [playbooks disponibles](/help/use-case-playbooks/playbooks/playbooks-list.md), regroupés par produit (Real-Time CDP ou Journey Optimizer).
+- Découvrez les [autorisations](/help/use-case-playbooks/playbooks/get-started.md#grant-your-team-the-required-access-permissions) nécessaires à votre utilisation ou les playbooks et les ressources qu’ils créent.
+- Comprenez la [fonctionnalité de sensibilisation aux données](/help/use-case-playbooks/playbooks/data-awareness.md) qui vous permet de dupliquer des ressources générées vers d’autres environnements de test.

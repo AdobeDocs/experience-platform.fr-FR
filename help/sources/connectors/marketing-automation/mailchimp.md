@@ -26,9 +26,9 @@ La documentation ci-dessous fournit des informations sur comment connecter [!DNL
 ## Connecter [!DNL Mailchimp Campaigns] à Platform
 
 * [Créez une connexion source pour importer [!DNL Mailchimp Campaigns] les données dans Platform à l’aide d’API](../../tutorials/api/create/marketing-automation/mailchimp-campaign.md).
-* [Créer une connexion source à importer [!DNL Mailchimp Campaigns] données vers Platform à l’aide de l’interface utilisateur](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
+* [Créez une connexion source pour importer [!DNL Mailchimp Campaigns] des données vers Platform à l’aide de l’interface utilisateur](../../tutorials/ui/create/marketing-automation/mailchimp-campaigns.md).
 
 ## Connecter [!DNL Mailchimp Members] à Platform
 
 * [Créez une connexion source pour importer [!DNL Mailchimp Members] les données dans Platform à l’aide d’API](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
-* [Créer une connexion source à importer [!DNL Mailchimp Members] données vers Platform à l’aide de l’interface utilisateur](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).
+* [Créez une connexion source pour importer [!DNL Mailchimp Members] des données vers Platform à l’aide de l’interface utilisateur](../../tutorials/ui/create/marketing-automation/mailchimp-members.md).

@@ -7,8 +7,8 @@ description: Découvrez comment connecter Generic OData à Adobe Experience Plat
 exl-id: 45b302cb-1a43-4fab-a8a2-cb4e1ee129f9
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '433'
-ht-degree: 74%
+source-wordcount: '426'
+ht-degree: 72%
 
 ---
 
@@ -25,7 +25,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 * [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL Generic OData] en utilisant la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL Generic OData] à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
@@ -33,10 +33,10 @@ Pour connecter [!DNL Flow Service] à [!DNL Generic OData], vous devez fournir d
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `url` | L’URL racine de la variable [!DNL Generic OData] service. |
+| `url` | URL racine du service [!DNL Generic OData]. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Generic Generic OData] est `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
 
-Pour plus d’informations sur la prise en main, reportez-vous à la section [this [!DNL Generic OData] document](https://www.odata.org/getting-started/basic-tutorial/).
+Pour plus d&#39;informations sur la prise en main, reportez-vous à [ce [!DNL Generic OData] document](https://www.odata.org/getting-started/basic-tutorial/).
 
 ### Utiliser les API Platform
 
@@ -84,12 +84,12 @@ curl -X POST \
 
 | Propriété | Description |
 | --------- | ----------- |
-| `auth.params.url` | L’hôte de la variable [!DNL Generic OData] serveur. |
-| `connectionSpec.id` | Le [!DNL Generic OData] identifiant de spécification de connexion : `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
+| `auth.params.url` | L’hôte du serveur [!DNL Generic OData]. |
+| `connectionSpec.id` | ID de spécification de connexion [!DNL Generic OData] : `8e6b41a8-d998-4545-ad7d-c6a9fff406c3`. |
 
 **Réponse**
 
-Une réponse réussie renvoie la nouvelle connexion de , y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
+Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
 
 ```json
 {
@@ -103,4 +103,4 @@ Une réponse réussie renvoie la nouvelle connexion de , y compris son identifia
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL Generic REST OData] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer les données de protocoles à Platform à l’aide de la variable [!DNL Flow Service] API](../../collect/protocols.md)
+* [Créez un flux de données pour importer les données de protocoles à Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/protocols.md)

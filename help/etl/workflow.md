@@ -6,8 +6,8 @@ description: Différents outils d’extraction, de transformation et de chargeme
 exl-id: 09de6c50-ad04-4d7c-99e6-33784fb0dd58
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 84%
+source-wordcount: '225'
+ht-degree: 83%
 
 ---
 
@@ -25,7 +25,7 @@ Les actions illustrées ci-dessous sont détaillées dans les étapes décrites 
 
 ![](images/image2.png)
 
-### Tableau 2 - [!DNL Experience Platform] Connecteur activé :
+### Figure 2 - Connecteur [!DNL Experience Platform] activé :
 
 ![](images/image3.png)
 
@@ -33,11 +33,11 @@ Les actions illustrées ci-dessous sont détaillées dans les étapes décrites 
 
 ![](images/image4.png)
 
-### Figure 4 - Nouvelle interface utilisateur de transformation, sélection de [!DNL Experience Platform] Connexion :
+### Figure 4 - Nouvelle interface utilisateur de transformation, sélection de la connexion [!DNL Experience Platform] :
 
 ![](images/image5.png)
 
-### Figure 5 - Recherche de la source [!DNL Experience Platform] Jeux de données :
+### Figure 5 - Recherche de jeux de données source [!DNL Experience Platform] :
 
 ![](images/image6.png)
 
@@ -57,7 +57,7 @@ Les actions illustrées ci-dessous sont détaillées dans les étapes décrites 
 
 ![](images/image10.png)
 
-### Figure 10 - Définition de la variable [!DNL Experience Data Model] Jeu de données cible (XDM) :
+### Figure 10 - Définition du jeu de données cible [!DNL Experience Data Model] (XDM) :
 
 ![](images/image11.png)
 

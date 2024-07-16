@@ -28,7 +28,7 @@ Basée sur les API RESTful, [!DNL Experience Platform] propose lʼensemble des f
 
 ## [!DNL Experience Platform] documentation
 
-[!DNL Experience Platform] La documentation est fournie dans plusieurs formats pour diverses fonctionnalités et applications. Pour en savoir plus sur les types de documentation disponibles, consultez la [présentation de la documentation pour Platform](documentation/overview.md).
+La documentation [!DNL Experience Platform] est fournie dans plusieurs formats pour diverses fonctionnalités et applications. Pour en savoir plus sur les types de documentation disponibles, consultez la [présentation de la documentation pour Platform](documentation/overview.md).
 
 Pour commencer à en savoir plus sur un service [!DNL Platform] spécifique, revenez à la [page de destination de la documentation](https://experienceleague.adobe.com/docs/experience-platform.html?lang=fr) et sélectionnez le guide approprié.
 

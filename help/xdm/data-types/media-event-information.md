@@ -9,15 +9,15 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL Informations sur l’événement multimédia] type de données
+# Type de données [!UICONTROL Media Event Information]
 
-[!UICONTROL Informations sur l’événement multimédia] est un type de données XDM (Experience Data Model) standard qui décrit les informations de détails du média relatives à l’événement d’expérience.
+[!UICONTROL Informations sur l’événement multimédia] est un type de données standard du modèle de données d’expérience (XDM) qui décrit les informations détaillées sur le média relatives à l’événement d’expérience.
 
 ![Schéma du type de données Informations sur l’événement multimédia.](../images/data-types/media-event-information.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `mediaCollection` | [!UICONTROL mediaDetails] | Informations détaillées sur le média relatives à l’événement d’expérience. Ce type de données est utilisé pour les deux types [collecte de données multimédia](./media-collection-details.md) et [création de rapports de données multimédia](./media-reporting-details.md). |
+| `mediaCollection` | [!UICONTROL mediaDetails] | Informations détaillées sur le média relatives à l’événement d’expérience. Ce type de données est utilisé pour la [collecte de données multimédia](./media-collection-details.md) et la [ création de rapports de données multimédia](./media-reporting-details.md). |
 | `mediaEventTimestamp` | [!UICONTROL Chaîne] | Heure à laquelle un événement multimédia s’est produit. |
 | `mediaEventType` | [!UICONTROL Chaîne] | Type d’événement multimédia. |
 

@@ -1,22 +1,22 @@
 ---
 keywords: SessionCam;session cam;sessioncam
 title: Extension SessionCam
-description: L’extension SessionCam est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension SessionCam est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 67d7b206-d6ed-47f5-9c04-67562ccd1644
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '454'
-ht-degree: 94%
+source-wordcount: '443'
+ht-degree: 92%
 
 ---
 
 # Extension [!DNL SessionCam] {#sessioncam-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-[!DNL SessionCam] fournit une suite essentielle d’outils qui révèlent le comportement des utilisateurs et vous montrent les principaux problèmes à résoudre.
+[!DNL SessionCam] fournit une suite essentielle d’outils qui révèlent le comportement des utilisateurs et vous montrent les problèmes les plus importants à résoudre.
 
-[!DNL SessionCam] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100517.html).
+[!DNL SessionCam] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100517.html).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL SessionCam] extension :
+Pour installer l’extension [!DNL SessionCam], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

@@ -6,34 +6,34 @@ exl-id: f0eafc83-21f1-483d-9397-1133e3777699
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '655'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
-# [!UICONTROL Réservation logement] groupe de champs de schéma
+# Groupe de champs de schéma [!UICONTROL Réserve de logement]
 
-[!UICONTROL Réservation logement] est un groupe de champs de schéma standard pour la variable [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) utilisé pour capturer des informations sur une réservation de logement.
+[!UICONTROL Réservation hébergement] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) utilisée pour capturer des informations concernant une réservation de logement.
 
-Le groupe de champs est une extension de la variable [!UICONTROL Détails de la réservation] groupe de champs et contient tous les mêmes champs sous un seul champ de type objet, `reservations`. En plus de ces champs génériques, [!UICONTROL Réservation logement] inclut également `lodgingReservations` tableau. Ce tableau d’objets est utilisé pour décrire une ou plusieurs réservations avec des propriétés propres au logement.
+Le groupe de champs est une extension du groupe de champs [!UICONTROL Détails de la réservation] et contient tous les mêmes champs sous un seul champ de type objet, `reservations`. Outre ces champs génériques, la [!UICONTROL réservation de logement] comprend également un tableau `lodgingReservations`. Ce tableau d’objets est utilisé pour décrire une ou plusieurs réservations avec des propriétés propres au logement.
 
 >[!NOTE]
 >
->Ce document couvre les détails du `lodgingReservations` tableau. Pour plus d’informations sur les autres champs fournis sous le `reservations` , reportez-vous à la section [[!UICONTROL Détails de la réservation] référence de groupe de champs](./reservation-details.md).
+>Ce document couvre les détails du tableau `lodgingReservations`. Pour plus d’informations sur les autres champs fournis sous l’objet `reservations`, reportez-vous à la [[!UICONTROL référence du groupe de champs  Détails de la réservation]](./reservation-details.md).
 
-![Logement Structure de la réservation](../../images/field-groups/lodging-reservation/structure.png)
+![Structure de réservation de logement](../../images/field-groups/lodging-reservation/structure.png)
 
 ## `lodgingReservations`
 
-`lodgingReservations` est un tableau d’objets qui représente une liste de réservations. Si un événement de réservation implique des réservations dans plusieurs hôtels différents le long du parcours d’un voyage, par exemple, ces réservations peuvent être répertoriées comme des objets individuels sous `lodgingReservations` pour un seul événement.
+`lodgingReservations` est un tableau d’objets qui représente une liste de réservations de logement. Si un événement de réservation implique des réservations dans plusieurs hôtels différents le long de l’itinéraire d’un voyage, par exemple, ces réservations peuvent être répertoriées comme des objets individuels sous `lodgingReservations` pour un seul événement.
 
-La structure de chaque objet fournie sous `lodgingReservations` est fourni ci-dessous.
+La structure de chaque objet fourni sous `lodgingReservations` est fournie ci-dessous.
 
-![structure lodgingReserve](../../images/field-groups/lodging-reservation/lodgingReservations.png)
+![lodgingReserve structure](../../images/field-groups/lodging-reservation/lodgingReservations.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
 | `averageDailyPrice` | [[!UICONTROL Devise]](../../data-types/currency.md) | Le prix moyen journalier de la chambre d&#39;hôtel. |
-| `lodgingCheckIn` | Objet | Objet décrivant les détails de l’archivage. Inclut les valeurs suivantes :<ul><li>`digitalKey`: (nombre entier) indique lorsqu’un invité sélectionne l’utilisation d’une clé numérique lors de son archivage.</li><li>`earlyCheckInRequested`: (nombre entier) indique lorsqu’un invité demande à s’archiver avant les heures d’archivage normales.</li><li>`lateCheckInRequested`: (nombre entier) indique lorsqu’un invité demande à s’archiver plus tard que les heures d’enregistrement normales.</li><li>`noRoomCheckIn`: (entier). Cette valeur est capturée lorsqu’un invité termine son archivage lorsqu’aucune pièce n’est disponible à ce moment-là.</li><li>`oneRoomCheckIn`: (entier). Cette valeur est capturée lorsqu’un invité termine son enregistrement lorsqu’une seule pièce est disponible à ce moment-là.</li><li>`roomKeys`: (nombre entier) nombre de clés de chambre standard fournies lors de l’archivage.</li><li>`userSelectedRoom`: (booléen). Indique si l’invité a sélectionné sa chambre à l’enregistrement.</li></ul> |
+| `lodgingCheckIn` | Objet | Objet décrivant les détails de l’archivage. Inclut les valeurs suivantes :<ul><li>`digitalKey` : (nombre entier) indique lorsqu’un invité sélectionne l’utilisation d’une clé numérique lors de son archivage.</li><li>`earlyCheckInRequested` : (nombre entier) indique lorsqu’un invité demande à s’enregistrer avant les heures d’enregistrement normales.</li><li>`lateCheckInRequested` : (nombre entier) indique lorsqu’un invité demande à s’archiver plus tard que les heures d’enregistrement normales.</li><li>`noRoomCheckIn` : (entier) cette valeur est capturée lorsqu’un invité termine son archivage lorsqu’il n’y a aucune pièce disponible à ce moment.</li><li>`oneRoomCheckIn` : (entier) cette valeur est capturée lorsqu’un invité termine son enregistrement lorsqu’une seule pièce est disponible à ce moment.</li><li>`roomKeys` : (nombre entier) nombre de clés de chambre standard fournies lors de l’archivage.</li><li>`userSelectedRoom` : (booléen). Indique si l’invité a sélectionné sa chambre à l’enregistrement.</li></ul> |
 | `rackrate` | [[!UICONTROL Devise]](../../data-types/currency.md) | Le coût d’une réservation le même jour sans réservation préalable. |
 | `ID` | Chaîne | Numéro ou identifiant de la réservation. |
 | `agentID` | Chaîne | ID d’agent associé à la réservation de l’hôtel. |
@@ -59,7 +59,7 @@ La structure de chaque objet fournie sous `lodgingReservations` est fourni ci-de
 | `propertyID` | Chaîne | Identifiant de l’hôtel ou du complexe pour la réservation. |
 | `propertyName` | Chaîne | Nom de l’hôtel ou du complexe pour la réservation. |
 | `purpose` | Chaîne | L’objet de la réservation, généralement professionnel ou personnel. |
-| `ratePlan` | Chaîne | La transaction de taux sur laquelle la pièce a été vendue. |
+| `ratePlan` | Chaîne | Taux négocié auquel la chambre a été vendue. |
 | `refundable` | Booléen | Indique si la chambre est remboursable. |
 | `reservationStatus` | Chaîne | Le statut de la réservation. |
 | `roomAccessibilityType` | Chaîne | Type d’accessibilité de la pièce, tel que la mobilité, l’audition ou autre. |
@@ -72,5 +72,5 @@ La structure de chaque objet fournie sous `lodgingReservations` est fourni ci-de
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-lodging-reservation.schema.json)

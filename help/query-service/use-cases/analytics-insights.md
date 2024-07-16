@@ -4,22 +4,22 @@ description: Ce document explique comment utiliser Query Service pour créer des
 exl-id: f64e61ef-0157-4f0a-88f8-bbe4f9aa83f0
 source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '237'
 ht-degree: 1%
 
 ---
 
 # Analytics - Aperçu des interactions web et mobiles
 
-Adobe Experience Platform vous permet d’ingérer des données à partir de suites de rapports Adobe Analytics à l’aide de champs de modèle de données d’expérience (XDM) pour renseigner les jeux de données. Ces données d’analyse sont modifiées pour se conformer à la variable [!DNL XDM ExperienceEvent] classe . Query Service peut ensuite utiliser ces données en exécutant des requêtes SQL pour générer des informations précieuses à partir du comportement d’un utilisateur sur les plateformes numériques.
+Adobe Experience Platform vous permet d’ingérer des données à partir de suites de rapports Adobe Analytics à l’aide de champs de modèle de données d’expérience (XDM) pour renseigner les jeux de données. Ces données d’analyse sont modifiées pour être conformes à la classe [!DNL XDM ExperienceEvent]. Query Service peut ensuite utiliser ces données en exécutant des requêtes SQL pour générer des informations précieuses à partir du comportement d’un utilisateur sur les plateformes numériques.
 
 Ce document fournit divers exemples de requêtes SQL qui montrent des cas d’utilisation courants lors de la création d’informations à partir de données Analytics web et mobiles.
 
-Voir [Documentation sur les mappages de champs Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) pour plus d’informations sur l’ingestion et le mappage de données analytics.
+Pour plus d’informations sur l’ingestion et le mappage des données d’analyse, consultez la [documentation sur les mappages de champs Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) .
 
-## Prise en main
+## Commencer
 
-Pour chacun des cas d’utilisation suivants, un exemple de requête SQL paramétré est fourni comme modèle que vous pouvez personnaliser. Fournir des paramètres partout où vous voyez `{ }` dans les exemples SQL du jeu de données, de l’eVar, de l’événement ou de la période que vous souhaitez évaluer.
+Pour chacun des cas d’utilisation suivants, un exemple de requête SQL paramétré est fourni comme modèle que vous pouvez personnaliser. Spécifiez des paramètres partout où `{ }` apparaît dans les exemples SQL pour le jeu de données, l’eVar, l’événement ou la période que vous souhaitez évaluer.
 
 ## Objectifs
 
@@ -49,7 +49,7 @@ ORDER BY page_views DESC
 LIMIT  10;
 ```
 
-### Identifier les 10 utilisateurs les plus principaux
+### Identifier les 10 utilisateurs les plus actifs
 
 ```sql
 SELECT enduserids._experience.aaid.id AS aaid,

@@ -1,22 +1,22 @@
 ---
 keywords: TMMData;données tmm;tmdata;données TMM
 title: Extension TMMData
-description: L’extension TMMData est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension TMMData est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 9f4ad50e-d964-41b0-b58e-71611bff3ead
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '485'
-ht-degree: 84%
+source-wordcount: '474'
+ht-degree: 86%
 
 ---
 
 # Extension [!DNL TMMData] {#tmmdata-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-[!DNL TMMData's] La plateforme Foundation pour Adobe Marketing Cloud fournit aux équipes marketing les outils nécessaires pour accéder à toutes leurs sources de données essentielles, y compris les données internes/externes et en ligne/hors ligne, et les fusionner, afin d’offrir aux équipes marketing une analyse cross-canal fiable et complète, avec une configuration de campagne automatisée et des importations directes vers Adobe et d’autres outils d’analyse et de BI.
+[!DNL TMMData's] La plateforme de base pour Adobe Marketing Cloud fournit aux équipes marketing les outils nécessaires pour accéder à toutes leurs sources de données essentielles, y compris les données internes/externes et en ligne/hors ligne, et les mélanger pour une analyse cross-canal fiable et complète, avec une configuration de campagne automatisée et des importations directes vers Adobe et d’autres outils d’analyse et de BI.
 
-[!DNL TMMData] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
+[!DNL TMMData] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL TMMData] extension :
+Pour installer l’extension [!DNL TMMData], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

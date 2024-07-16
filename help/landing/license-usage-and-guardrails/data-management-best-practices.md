@@ -27,7 +27,7 @@ Le **[!DNL data lake]** remplit principalement les fonctions suivantes :
 * Il sert de stockage de données à long terme pour toutes les données Experience Platform.
 * Il permet des cas d’utilisation tels que l’analyse des données et la science des données.
 
-La variable **Boutique de profils** est l’endroit où les profils client sont créés et qui remplit principalement les fonctions suivantes :
+La **banque de profils** est l’endroit où les profils client sont créés et sert principalement les objectifs suivants :
 
 * Il sert de stockage de données pour les profils utilisés afin de prendre en charge les expériences en temps réel.
 * Il permet des cas d’utilisation tels que la segmentation, l’activation et la personnalisation.
@@ -46,8 +46,8 @@ Lorsque vous acquérez une licence pour Experience Platform, vous recevez des d
 
 La mesure de [!DNL Profile Richness] varie en fonction de la licence que vous avez achetée. Deux calculs de [!DNL Profile Richness] sont disponibles :
 
-* Somme de toutes les données de production stockées dans Adobe Real-time Customer Data Platform (c’est-à-dire Real-Time Customer Profile et Identity Service) à tout moment, divisée par le [!DNL Addressable Audience];
-* La somme de toutes les données stockées dans Platform (y compris, mais sans s’y limiter, à la variable [!DNL data lake], Real-Time Customer Profile et Identity Service) à tout moment et à toutes les données que vous diffusez via (au lieu de les stocker dans) Platform au cours des 12 derniers mois, divisé par la variable [!DNL Addressable Audience].
+* La somme de toutes les données de production stockées dans Adobe Real-Time Customer Data Platform (c’est-à-dire Real-Time Customer Profile et Identity Service) à tout moment, divisée par le [!DNL Addressable Audience] ;
+* Somme de toutes les données stockées dans Platform (y compris, mais sans s’y limiter, [!DNL data lake], Real-Time Customer Profile et Identity Service) à tout moment et toutes les données que vous diffusez (au lieu de les stocker) dans Platform au cours des 12 derniers mois, divisée par [!DNL Addressable Audience].
 
 La disponibilité de ces mesures et la définition spécifique de chacune d’elles varient en fonction des licences achetées par l’entreprise.
 
@@ -79,7 +79,7 @@ Vous devez prendre en compte deux scénarios principaux pour vous assurer que l�
 
 ### Quelles données importer dans Platform ?
 
-Les données peuvent être ingérées dans un ou plusieurs systèmes dans Platform, à savoir : [!DNL data lake] et/ou la banque de profils. Cela signifie que des données différentes peuvent exister dans les deux systèmes pour différents cas d’utilisation. Par exemple, vous pouvez conserver des données historiques dans la variable [!DNL data lake], mais pas dans la banque de profils. Vous pouvez sélectionner les données à envoyer à la banque de profils en activant un jeu de données pour l’ingestion de profils.
+Les données peuvent être ingérées dans un ou plusieurs systèmes de Platform, à savoir [!DNL data lake] et/ou la banque de profils. Cela signifie que des données différentes peuvent exister dans les deux systèmes pour différents cas d’utilisation. Par exemple, vous souhaitez peut-être conserver des données historiques dans le [!DNL data lake], mais pas dans la banque de profils. Vous pouvez sélectionner les données à envoyer à la banque de profils en activant un jeu de données pour l’ingestion de profils.
 
 >[!NOTE]
 >
@@ -98,7 +98,7 @@ Vous pouvez utiliser un certain nombre d’outils pour respecter vos droits d’
 
 Les graphiques d’identités ne sont pas pris en compte dans vos droits totaux à l’audience adressable, car l’audience adressable fait référence à votre nombre total de profils client.
 
-Toutefois, les limites des graphiques d’identités peuvent affecter votre audience adressable en raison du fractionnement des identités. Par exemple, si l’ECID le plus ancien est supprimé du graphique, il continuera à exister dans Real-Time Customer Profile sous la forme d’un profil pseudonyme. Vous pouvez définir [Expiration des données de profil pseudonyme](../../profile/pseudonymous-profiles.md) pour contourner ce comportement. Pour plus d’informations, consultez les [mécanismes de sécurité pour les données du Service d’identités](../../identity-service/guardrails.md).
+Toutefois, les limites des graphiques d’identités peuvent affecter votre audience adressable en raison du fractionnement des identités. Par exemple, si l’ECID le plus ancien est supprimé du graphique, il continuera à exister dans Real-Time Customer Profile sous la forme d’un profil pseudonyme. Vous pouvez définir [expirations de données de profil pseudonyme](../../profile/pseudonymous-profiles.md) pour contourner ce comportement. Pour plus d’informations, consultez les [mécanismes de sécurité pour les données du Service d’identités](../../identity-service/guardrails.md).
 
 ### Filtres d’ingestion {#ingestion-filters}
 
@@ -106,12 +106,12 @@ Les filtres d’ingestion vous permettent d’importer uniquement les données n
 
 | Filtre d’ingestion | Description |
 | --- | --- |
-| Filtrage de la source Adobe Audience Manager | Lorsque vous créez une connexion source Adobe Audience Manager, vous pouvez sélectionner les segments et les caractéristiques à importer dans la [!DNL data lake] et Real-time Customer Profile, plutôt que d’ingérer les données d’Audience Manager dans leur intégralité. Pour plus d’informations, consultez le guide sur la [création d’une connexion source Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). |
+| Filtrage de la source Adobe Audience Manager | Lorsque vous créez une connexion source Adobe Audience Manager, vous pouvez choisir les segments et les caractéristiques à importer dans [!DNL data lake] et Real-Time Customer Profile, plutôt que d’ingérer les données d’Audience Manager dans leur intégralité. Pour plus d’informations, consultez le guide sur la [création d’une connexion source Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). |
 | Préparation de données Adobe Analytics | Vous pouvez utiliser les fonctionnalités de [!DNL Data Prep] lors de la création d’une connexion source Analytics pour filtrer les données qui ne sont pas requises pour vos cas d’utilisation. [!DNL Data Prep] vous permet de définir les attributs/colonnes à publier dans le profil. Vous pouvez également fournir des instructions conditionnelles pour indiquer à Platform si les données doivent être publiées dans le profil ou uniquement dans le [!DNL data lake]. Pour plus d’informations, consultez le guide sur la [création d’une connexion source Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
 | Prise en charge de l’activation et de la désactivation des jeux de données pour le profil | Pour ingérer des données dans Real-time Customer Profile, vous devez activer un jeu de données à utiliser dans la banque de profils. Ce faisant, vous élargissez l’[!DNL Addressable Audience] et les droits de [!DNL Profile Richness]. Une fois qu’un jeu de données n’est plus nécessaire pour les cas d’utilisation de profil client, vous pouvez désactiver l’intégration de ce jeu de données au profil afin de vous assurer que vos données restent conformes à la licence. Pour plus d’informations, consultez le guide sur l’[activation et la désactivation des jeux de données pour le profil](../../catalog/datasets/enable-for-profile.md). |
 | Exclusion des données du SDK Web et du SDK mobile | Il existe deux types de collecte de données par le SDK Web et Mobile : les données collectées automatiquement et les données collectées explicitement par le développeur. Pour mieux gérer la conformité de licence, vous pouvez désactiver la collecte de données automatique dans la configuration du SDK via le paramètre contextuel. Les données personnalisées peuvent également être supprimées ou non définies par votre développeur. |
 | Exclusion des données du transfert côté serveur | Si vous envoyez des données à Platform à l’aide du transfert côté serveur, vous pouvez exclure les données envoyées en supprimant le mappage dans une action de règle pour l’exclure de tous les événements ou en ajoutant des conditions à la règle afin que les données ne se déclenchent que pour certains événements. Pour plus d’informations, consultez la documentation sur les [événements et conditions](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if). |
-| Filtrer des données au niveau de la source | Vous pouvez utiliser des opérateurs logiques et de comparaison pour filtrer les données au niveau des lignes de vos sources avant de créer une connexion et d’ingérer des données vers Experience Platform. Pour plus d’informations, consultez le guide sur [filtrage des données au niveau de la ligne pour une source à l’aide de la variable [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
+| Filtrer des données au niveau de la source | Vous pouvez utiliser des opérateurs logiques et de comparaison pour filtrer les données au niveau des lignes de vos sources avant de créer une connexion et d’ingérer des données vers Experience Platform. Pour plus d’informations, consultez le guide sur le [filtrage des données au niveau des lignes pour une source à l’aide de l’ [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |
 
 {style="table-layout:auto"}
 
@@ -132,18 +132,18 @@ La banque de profils est composée des composants suivants :
 
 Plusieurs rapports sont disponibles pour vous aider à comprendre la composition de la banque de profils. Ces rapports vous aident à prendre des décisions éclairées sur la manière et l’emplacement de définir vos expirations d’événements d’expérience afin de mieux optimiser votre utilisation de licence :
 
-* **API Dataset Overlap Report** : indique les jeux de données qui contribuent le plus à l’audience adressable. Vous pouvez utiliser ce rapport pour identifier lequel [!DNL ExperienceEvent] jeux de données pour lesquels définir une expiration. Pour plus d’informations, consultez le tutoriel sur la [génération du rapport de chevauchement de jeux de données](../../profile/tutorials/dataset-overlap-report.md).
+* **API Dataset Overlap Report** : indique les jeux de données qui contribuent le plus à l’audience adressable. Vous pouvez utiliser ce rapport pour identifier les jeux de données [!DNL ExperienceEvent] pour lesquels définir une expiration. Pour plus d’informations, consultez le tutoriel sur la [génération du rapport de chevauchement de jeux de données](../../profile/tutorials/dataset-overlap-report.md).
 * **API Identity Overlap Report** : indique les espaces de noms d’identité qui contribuent le plus à l’audience adressable. Pour plus d’informations, consultez le tutoriel sur la [génération du rapport de chevauchement d’identités](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report).
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
 #### Expiration des données de profil pseudonyme {#pseudonymous-profile-expirations}
 
-Cette fonctionnalité vous permet de supprimer automatiquement les profils pseudonymes obsolètes de la banque de profils. Pour plus d’informations sur cette fonctionnalité, veuillez lire la section [Expiration des données de profil pseudonyme - Aperçu](../../profile/pseudonymous-profiles.md).
+Cette fonctionnalité vous permet de supprimer automatiquement les profils pseudonymes obsolètes de la banque de profils. Pour plus d’informations sur cette fonctionnalité, consultez la [présentation de l’expiration des données de profil pseudonyme](../../profile/pseudonymous-profiles.md).
 
 #### Expirations des événements d’expérience {#event-expirations}
 
-Cette fonctionnalité vous permet de supprimer automatiquement les données comportementales d’un jeu de données activé par Profile qui n’est plus utile pour vos cas d’utilisation. Consultez la présentation sur [Expiration des événements d’expérience](../../profile/event-expirations.md) pour plus d’informations sur le fonctionnement de ce processus une fois activé pour un jeu de données.
+Cette fonctionnalité vous permet de supprimer automatiquement les données comportementales d’un jeu de données activé par Profile qui n’est plus utile pour vos cas d’utilisation. Pour plus d’informations sur le fonctionnement de ce processus une fois activé pour un jeu de données, consultez la présentation sur les [expirations d’un événement d’expérience](../../profile/event-expirations.md) .
 
 ## Résumé des bonnes pratiques pour la conformité de l’utilisation des licences {#best-practices}
 
@@ -152,8 +152,8 @@ Vous trouverez ci-dessous une liste des bonnes pratiques recommandées pour gara
 * Utilisez le [tableau de bord d’utilisation de la licence](../../dashboards/guides/license-usage.md) pour suivre et surveiller les tendances d’utilisation des clients. Vous pouvez ainsi anticiper les potentiels dépassements qui peuvent survenir.
 * Configurez les [filtres d’ingestion](#ingestion-filters) en identifiant les événements requis pour les cas d’utilisation de segmentation et de personnalisation. Cela vous permet d’envoyer uniquement les événements importants nécessaires aux cas d’utilisation.
 * Assurez-vous que vous n’avez [activé que les jeux de données pour le profil](#ingestion-filters) qui sont nécessaires aux d’utilisation de segmentation et de personnalisation.
-* Configurer [Expiration des événements d’expérience](#event-expirations) et [Expiration des données de profil pseudonyme](#pseudonymous-profile-expirations) pour les données à haute fréquence, telles que les données web.
-* Vérifiez régulièrement le [Rapports de composition de profils](#profile-store-composition-reports) pour comprendre la composition de votre banque de profils. Cela vous permet de comprendre les sources de données qui contribuent le plus à la consommation de l’utilisation des licences.
+* Configurez les [ expirations d’événements d’expérience ](#event-expirations) et les [ expirations de données de profil pseudonyme](#pseudonymous-profile-expirations) pour les données haute fréquence telles que les données web.
+* Vérifiez régulièrement les [ rapports de composition de profil](#profile-store-composition-reports) pour comprendre la composition de votre magasin de profils. Cela vous permet de comprendre les sources de données qui contribuent le plus à la consommation de l’utilisation des licences.
 
 ## Résumé et disponibilité des fonctionnalités {#feature-summary}
 
@@ -164,7 +164,7 @@ Le tableau suivant présente la liste des fonctionnalités actuellement disponib
 | Fonctionnalité | Description |
 | --- | --- |
 | [Activation/désactivation de jeux de données pour le profil](../../catalog/datasets/user-guide.md) | Activez ou désactivez l’ingestion de jeux de données dans Real-time Customer Profile. |
-| [Expiration des événements d’expérience](../../profile/event-expirations.md) | Appliquez un délai d’expiration pour tous les événements ingérés dans un jeu de données activé par Profile. Contactez votre équipe de compte d’Adobe ou l’assistance clientèle pour activer cette fonctionnalité. |
+| [Expirations des événements d’expérience](../../profile/event-expirations.md) | Appliquez un délai d’expiration pour tous les événements ingérés dans un jeu de données activé par Profile. Contactez votre équipe de compte d’Adobe ou l’assistance clientèle pour activer cette fonctionnalité. |
 | [Filtres de préparation de données Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Appliquez des filtres [!DNL Kafka] pour exclure les données inutiles de l’ingestion |
 | [Filtres de connecteur source Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Appliquez des filtres de connexion source Audience Manager pour exclure les données inutiles de l’ingestion. |
 | [Filtres de données de transfert d’événement](../../tags/ui/event-forwarding/overview.md) | Appliquez des filtres [!DNL Kafka] côté serveur pour exclure les données inutiles de l’ingestion.  Pour plus d’informations, consultez la documentation sur les [règles de balise](../../tags/ui/managing-resources/rules.md). |

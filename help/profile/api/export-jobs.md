@@ -14,31 +14,31 @@ ht-degree: 53%
 
 # Point de terminaison des tâches d’exportation de profils
 
-[!DNL Real-Time Customer Profile] vous permet de créer une vue unique de clients individuels en rassemblant des données provenant de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données de profil peuvent ensuite être exportées vers un jeu de données en vue d’un traitement ultérieur. Par exemple : [!DNL Profile] les données peuvent être exportées pour activation en créant des audiences et les attributs de profil peuvent être exportés pour création de rapports.
+[!DNL Real-Time Customer Profile] vous permet de créer une vue unique de clients individuels en rassemblant des données provenant de plusieurs sources, y compris des données d’attributs et des données comportementales. Les données de profil peuvent ensuite être exportées vers un jeu de données en vue d’un traitement ultérieur. Par exemple, les données [!DNL Profile] peuvent être exportées pour activation en créant des audiences et les attributs de profil peuvent être exportés pour création de rapports.
 
-Ce document fournit des instructions étape par étape pour la création et la gestion de tâches d’exportation à l’aide du [API de profil](https://www.adobe.com/go/profile-apis-en).
+Ce document fournit des instructions étape par étape pour la création et la gestion de tâches d’exportation à l’aide de l’ [API Profile](https://www.adobe.com/go/profile-apis-en).
 
 >[!NOTE]
 >
->Ce guide couvre l’utilisation des traitements d’exportation dans la variable [!DNL Profile API]. Pour plus d’informations sur la gestion des tâches d’exportation pour Adobe Experience Platform Segmentation Service, consultez le guide sur [tâches d’exportation dans l’API Segmentation](../../profile/api/export-jobs.md).
+>Ce guide couvre l’utilisation des tâches d’exportation dans [!DNL Profile API]. Pour plus d’informations sur la gestion des tâches d’exportation pour Adobe Experience Platform Segmentation Service, consultez le guide sur les [tâches d’exportation dans l’API Segmentation](../../profile/api/export-jobs.md).
 
-Outre la création d’une tâche d’exportation, vous pouvez également accéder à [!DNL Profile] à l’aide de la variable `/entities` endpoint, également appelé &quot;[!DNL Profile Access]&quot;. Voir [guide de point d’entrée des entités](./entities.md) pour plus d’informations. Pour connaître les étapes d’accès [!DNL Profile] données utilisant l’interface utilisateur, voir [guide de l’utilisateur](../ui/user-guide.md).
+Outre la création d’une tâche d’exportation, vous pouvez également accéder aux données [!DNL Profile] à l’aide du point d’entrée `/entities`, également appelé &quot;[!DNL Profile Access]&quot;. Pour plus d’informations, consultez le [guide des points de terminaison d’entités](./entities.md) . Pour savoir comment accéder aux données [!DNL Profile] à l’aide de l’interface utilisateur, reportez-vous au [guide de l’utilisateur](../ui/user-guide.md).
 
 ## Commencer
 
-Les points de terminaison d’API utilisés dans ce guide font partie du [!DNL Real-Time Customer Profile] API. Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
+Les points de terminaison d’API utilisés dans ce guide font partie de l’API [!DNL Real-Time Customer Profile]. Avant de continuer, consultez le [guide de prise en main](getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples dʼappels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels à nʼimporte quel API dʼ[!DNL Experience Platform].
 
 ## Création d’une tâche d’exportation
 
-Export [!DNL Profile] Les données nécessitent d’abord la création d’un jeu de données dans lequel les données seront exportées, puis le lancement d’une nouvelle tâche d’exportation. Ces deux étapes peuvent être réalisées à l’aide des API Experience Platform, la première utilisant l’API Catalog Service, la seconde utilisant l’API Real-time Customer Profile. Les sections suivantes contiennent des instructions détaillées sur l’exécution de chaque étape.
+L’exportation de données [!DNL Profile] nécessite d’abord la création d’un jeu de données dans lequel les données seront exportées, puis le lancement d’une nouvelle tâche d’exportation. Ces deux étapes peuvent être réalisées à l’aide des API Experience Platform, la première utilisant l’API Catalog Service, la seconde utilisant l’API Real-time Customer Profile. Les sections suivantes contiennent des instructions détaillées sur l’exécution de chaque étape.
 
 ### Créer un jeu de données cible
 
-Lors de l’exportation [!DNL Profile] données, un jeu de données cible doit d’abord être créé. Il est important que le jeu de données soit correctement configuré pour garantir la réussite de l’exportation.
+Lors de l’export de données [!DNL Profile], un jeu de données cible doit d’abord être créé. Il est important que le jeu de données soit correctement configuré pour garantir la réussite de l’exportation.
 
-Le schéma sur lequel repose le jeu de données est l’une des principales considérations (`schemaRef.id` dans l’exemple de requête API ci-dessous). Pour exporter des données de profil, le jeu de données doit être basé sur la variable [!DNL XDM Individual Profile] Schéma d’union (`https://ns.adobe.com/xdm/context/profile__union`). Un schéma d’union est un schéma en lecture seule généré par le système qui agrège les champs des schémas qui partagent la même classe. Dans ce cas, il s’agit de la variable [!DNL XDM Individual Profile] classe . Pour plus d’informations sur les schémas d’affichage d’union, reportez-vous à la section [section sur l’union dans le guide de base de la composition des schémas](../../xdm/schema/composition.md#union).
+Le schéma sur lequel repose le jeu de données est l’une des principales considérations (`schemaRef.id` dans l’exemple de requête API ci-dessous). Pour exporter les données de profil, le jeu de données doit être basé sur le schéma d’union [!DNL XDM Individual Profile] (`https://ns.adobe.com/xdm/context/profile__union`). Un schéma d’union est un schéma en lecture seule généré par le système qui agrège les champs des schémas qui partagent la même classe. Dans ce cas, il s’agit de la classe [!DNL XDM Individual Profile]. Pour plus d’informations sur les schémas de vue d’union, consultez la section [union dans le guide de base de la composition de schémas](../../xdm/schema/composition.md#union).
 
-Les étapes suivantes de ce tutoriel indiquent comment créer un jeu de données qui référence le [!DNL XDM Individual Profile] Schéma d’union utilisant la variable [!DNL Catalog] API. Vous pouvez également utiliser la variable [!DNL Platform] interface utilisateur pour créer un jeu de données qui référence le schéma d’union. Les étapes d’utilisation de l’interface utilisateur sont décrites dans la section [ce tutoriel sur l’interface utilisateur pour l’exportation d’audiences](../../segmentation/tutorials/create-dataset-export-segment.md) mais sont également applicables ici. Une fois que vous avez terminé, vous pouvez revenir à ce tutoriel pour suivre les étapes de [lancement d’une nouvelle tâche d’exportation](#initiate).
+Les étapes suivantes de ce tutoriel expliquent comment créer un jeu de données qui référence le schéma d’union [!DNL XDM Individual Profile] à l’aide de l’API [!DNL Catalog]. Vous pouvez également utiliser l’interface utilisateur [!DNL Platform] pour créer un jeu de données qui référence le schéma d’union. Les étapes d’utilisation de l’interface utilisateur sont décrites dans [ce tutoriel sur l’interface utilisateur pour l’exportation d’audiences](../../segmentation/tutorials/create-dataset-export-segment.md), mais elles s’appliquent également ici. Une fois que vous avez terminé, vous pouvez revenir à ce tutoriel pour suivre les étapes de [lancement d’une nouvelle tâche d’exportation](#initiate).
 
 Si vous disposez déjà d’un jeu de données compatible et connaissez son identifiant, vous pouvez passer directement à l’étape de [lancement d’une nouvelle tâche d’exportation](#initiate).
 
@@ -85,7 +85,7 @@ Une réponse réussie renvoie un tableau contenant l’ID unique, en lecture seu
 
 ### Lancement d’une tâche d’exportation {#initiate}
 
-Une fois que vous disposez d’un jeu de données d’union persistant, vous pouvez créer une tâche d’exportation afin de conserver les données de profil dans le jeu de données en envoyant une requête de POST au `/export/jobs` point de terminaison dans l’API Real-time Customer Profile et fournissant les détails des données que vous souhaitez exporter dans le corps de la requête.
+Une fois que vous disposez d’un jeu de données d’union persistant, vous pouvez créer une tâche d’exportation afin de conserver les données Profile dans le jeu de données en envoyant une requête de POST au point de terminaison `/export/jobs` de l’API Real-Time Customer Profile et en fournissant les détails des données que vous souhaitez exporter dans le corps de la requête.
 
 **Format d’API**
 
@@ -134,8 +134,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `mergePolicy` | *(Facultatif)* Spécifie la politique de fusion pour régir les données exportées. Insérez ce paramètre lorsque plusieurs audiences sont exportées. |
 | `mergePolicy.id` | Identifiant de la politique de fusion. |
 | `mergePolicy.version` | La version spécifique de la politique de fusion à utiliser. Si vous omettez cette valeur, la version la plus récente sera utilisée par défaut. |
-| `additionalFields.eventList` | *(Facultatif)* Contrôle les champs d’événement de série temporelle exportés pour des objets enfants ou associés en fournissant un ou plusieurs des paramètres suivants :<ul><li>`eventList.fields` : contrôlent les champs à exporter.</li><li>`eventList.filter` : indique les critères qui limitent les résultats inclus dans les objets associés. Attend une valeur minimale requise pour l’exportation, généralement une date.</li><li>`eventList.filter.fromIngestTimestamp`: filtre les événements de série temporelle par rapport à ceux qui ont été ingérés après l’horodatage fourni. Il ne s’agit pas de l’heure de l’événement, mais de l’heure de l’ingestion des événements.</li></ul> |
-| `destination` | **(Obligatoire)** Informations de destination pour les données exportées :<ul><li>`destination.datasetId` : **(obligatoire)** identifiant du jeu de données vers lequel les données doivent être exportées.</li><li>`destination.segmentPerBatch` : *(facultatif)* valeur booléenne qui, si elle n’est pas fournie, est définie par défaut sur `false`. Une valeur de `false` exporte tous les identifiants de définition de segment dans un seul identifiant de lot. Une valeur de `true` exporte un identifiant de définition de segment dans un identifiant de lot. Notez que la définition de la valeur sur `true` peut affecter les performances d’exportation par lots.</li></ul> |
+| `additionalFields.eventList` | *(Facultatif)* Contrôle les champs d’événement de série temporelle exportés pour des objets enfants ou associés en fournissant un ou plusieurs des paramètres suivants :<ul><li>`eventList.fields` : contrôlent les champs à exporter.</li><li>`eventList.filter` : indique les critères qui limitent les résultats inclus dans les objets associés. Attend une valeur minimale requise pour l’exportation, généralement une date.</li><li>`eventList.filter.fromIngestTimestamp` : filtre les événements de série temporelle par rapport à ceux qui ont été ingérés après l’horodatage fourni. Il ne s’agit pas de l’heure de l’événement, mais de l’heure de l’ingestion des événements.</li></ul> |
+| `destination` | **(Obligatoire)** Informations de destination pour les données exportées :<ul><li>`destination.datasetId` : **(obligatoire)** identifiant du jeu de données vers lequel les données doivent être exportées.</li><li>`destination.segmentPerBatch` : *(facultatif)* valeur booléenne qui, si elle n’est pas fournie, est définie par défaut sur `false`. La valeur `false` exporte tous les identifiants de définition de segment vers un seul identifiant de lot. La valeur `true` exporte un identifiant de définition de segment dans un identifiant de lot. Notez que la définition de la valeur sur `true` peut affecter les performances d’exportation par lots.</li></ul> |
 | `schema.name` | **(Obligatoire)** Le nom du schéma associé au jeu de données vers lequel les données doivent être exportées. |
 
 >[!NOTE]
@@ -179,7 +179,7 @@ Une réponse réussie renvoie un jeu de données contenant les données Profile,
 
 ## Liste de toutes les tâches d’exportation
 
-Vous pouvez renvoyer une liste de toutes les tâches d’exportation pour une organisation spécifique en adressant une requête de GET à la fonction `export/jobs` point de terminaison . La requête prend également en charge les paramètres de requête `limit` et `offset`, comme illustré ci-dessous.
+Vous pouvez renvoyer une liste de toutes les tâches d’exportation pour une organisation spécifique en exécutant une requête de GET sur le point de terminaison `export/jobs`. La requête prend également en charge les paramètres de requête `limit` et `offset`, comme illustré ci-dessous.
 
 **Format d’API**
 
@@ -193,7 +193,7 @@ GET /export/jobs?{QUERY_PARAMETERS}
 | `start` | Décalez la page des résultats renvoyée, selon l’heure de création de la requête. Exemple : `start=4` |
 | `limit` | Limitez le nombre de résultats renvoyés. Exemple : `limit=10` |
 | `page` | Renvoyez une page de résultats spécifique, selon l’heure de création de la requête. Exemple : `page=2` |
-| `sort` | Tri des résultats selon un champ spécifique dans une valeur ascendante ( **`asc`** ) ou descendant ( **`desc`** ). Le paramètre de tri ne fonctionne pas lors du renvoi de plusieurs pages de résultats. Exemple : `sort=updateTime:asc` |
+| `sort` | Triez les résultats selon un champ spécifique dans l’ordre croissant ( **`asc`** ) ou décroissant ( **`desc`** ). Le paramètre de tri ne fonctionne pas lors du renvoi de plusieurs pages de résultats. Exemple : `sort=updateTime:asc` |
 
 **Requête**
 
@@ -207,7 +207,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/ \
 
 **Réponse**
 
-La réponse comprend une `records` contenant les tâches d’exportation créées par votre organisation.
+La réponse comprend un objet `records` contenant les tâches d’exportation créées par votre organisation.
 
 ```json
 {
@@ -442,7 +442,7 @@ La section suivante contient des informations supplémentaires sur les tâches d
 
 ### Exemples supplémentaires de payload d’exportation
 
-L’exemple d’appel API présenté dans la section sur [lancer une tâche d’exportation](#initiate) crée une tâche qui contient à la fois des données de profil (enregistrement) et d’événement (série temporelle). Cette section fournit des exemples de payload de requête supplémentaires pour limiter votre exportation à contenir un type de données ou un autre.
+L’exemple d’appel API présenté dans la section [initialisation d’une tâche d’exportation](#initiate) crée une tâche contenant à la fois des données de profil (enregistrement) et d’événement (série temporelle). Cette section fournit des exemples de payload de requête supplémentaires pour limiter votre exportation à contenir un type de données ou un autre.
 
 La charge utile suivante crée une tâche d’exportation contenant uniquement des données de profil (aucun événement) :
 
@@ -492,4 +492,4 @@ Pour créer une tâche d’exportation contenant uniquement des données d’év
 
 ### Export d&#39;audiences
 
-Vous pouvez également utiliser le point de terminaison des tâches d’exportation pour exporter des audiences au lieu de [!DNL Profile] data. Consultez le guide sur la [tâches d’exportation dans l’API Segmentation](../../segmentation/api/export-jobs.md) pour plus d’informations.
+Vous pouvez également utiliser le point de terminaison des tâches d’exportation pour exporter des audiences au lieu des données [!DNL Profile]. Pour plus d’informations, consultez le guide sur les [tâches d’exportation dans l’API Segmentation](../../segmentation/api/export-jobs.md) .

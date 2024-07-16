@@ -4,7 +4,7 @@ title: Conditions préalables à l’intégration
 exl-id: 031af9f1-ce18-4056-bd53-199ce8b56be5
 source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '199'
 ht-degree: 2%
 
 ---
@@ -24,10 +24,10 @@ Pour utiliser Destination SDK, veillez à respecter les conditions préalables t
 
 ## Conditions préalables techniques pour les destinations par lots {#batch-prerequisites}
 
-1. Votre emplacement de destination est hébergé sur [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage], [!DNL SFTP], [!DNL Google Cloud], ou une propriété privée [!DNL Data Landing Zone], où vous pouvez recevoir les fichiers exportés hors d’Experience Platform.
-2. Votre plateforme de destination peut ingérer des fichiers au format configuré via le [options de formatage de fichier](functionality/destination-server/file-formatting.md) en Destination SDK pour les destinations par lots.
-3. (Facultatif) Vous avez une audience à créer/récupérer/mettre à jour/supprimer ([!DNL CRUD]) API ou point d’entrée API pour la gestion programmatique des métadonnées.
+1. Vous disposez d’un emplacement de destination hébergé sur [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage], [!DNL SFTP], [!DNL Google Cloud] ou un [!DNL Data Landing Zone] privé, où vous pouvez recevoir des fichiers exportés en dehors de l’Experience Platform.
+2. Votre plateforme de destination peut ingérer des fichiers au format configuré par le biais des [ options de formatage de fichier](functionality/destination-server/file-formatting.md) en Destination SDK pour les destinations par lot.
+3. (Facultatif) Vous disposez d’une API ou d’un point de terminaison API de création/récupération/mise à jour/suppression d’audience ([!DNL CRUD]) pour la gestion des métadonnées programmatiques.
 
 ## Conditions préalables du partenariat {#partnership-prerequisites}
 
-Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) qui souhaite utiliser Destination SDK, lisez les exigences de partenariat pour les ISV et les SI dans la [section accès](overview.md#get-access).
+Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur de système (SI) qui cherche à utiliser Destination SDK, lisez les exigences de partenariat pour les ISV et SI dans la [section d&#39;accès](overview.md#get-access).

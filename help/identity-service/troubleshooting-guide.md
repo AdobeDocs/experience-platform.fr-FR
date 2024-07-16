@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;espace de noms d’identité;Espace de noms d’identité
 solution: Experience Platform
-title: Guide de dépannage d’Identity Service
-description: Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform Identity Service, ainsi qu’un guide de dépannage pour les erreurs courantes.
+title: Guide de dépannage du service d’identités
+description: Ce document fournit des réponses aux questions fréquentes sur le service d’identités d’Adobe Experience Platform, ainsi qu’un guide de dépannage pour les erreurs courantes.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
 source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
 workflow-type: tm+mt
@@ -11,11 +11,11 @@ ht-degree: 100%
 
 ---
 
-# Guide de dépannage d’Identity Service
+# Guide de dépannage du service d’identités
 
 Ce document fournit des réponses aux questions fréquentes sur Adobe Experience Platform [!DNL Identity Service] ainsi qu’un guide de dépannage pour les erreurs courantes. Pour toute question ou tout dépannage concernant les API de [!DNL Platform] en général, reportez-vous au [guide de dépannage des API d’Adobe Experience Platform](../landing/troubleshooting.md).
 
-Les données qui identifient un client unique sont souvent fragmentées sur les différents appareils et systèmes qu’il utilise pour interagir avec votre marque. [!DNL Identity Service] rassemble ces identités fragmentées, ce qui permet une compréhension complète du comportement des clients afin que vous puissiez offrir des expériences digitales percutantes en temps réel. Pour plus d’informations, voir la [Présentation d’Identity Service](./home.md).
+Les données qui identifient un client unique sont souvent fragmentées sur les différents appareils et systèmes qu’il utilise pour interagir avec votre marque. [!DNL Identity Service] rassemble ces identités fragmentées, ce qui permet une compréhension complète du comportement des clients afin que vous puissiez offrir des expériences digitales percutantes en temps réel. Pour plus d’informations, voir la [Présentation du service d’identités](./home.md).
 
 ## FAQ
 
@@ -27,7 +27,7 @@ Les données d’identité sont les données pouvant être utilisées pour ident
 
 ## Quel est l’avantage de l’étiquetage des champs de données comme identités ?
 
-L’étiquetage de certains champs de données comme identités dans vos données d’enregistrement et de série temporelle vous permet de mettre en correspondance les relations d’identité dans la structure naturelle de vos données et de réconcilier les duplicatas de données entre les canaux. Pour plus d’informations, voir la [Présentation d’Identity Service](./home.md).
+L’étiquetage de certains champs de données comme identités dans vos données d’enregistrement et de série temporelle vous permet de mettre en correspondance les relations d’identité dans la structure naturelle de vos données et de réconcilier les duplicatas de données entre les canaux. Pour plus d’informations, voir la [Présentation du service d’identités](./home.md).
 
 ## Que sont les identités connues et anonymes ?
 
@@ -55,7 +55,7 @@ Les champs tels que les codes postaux et les adresses IP ne doivent pas être é
 
 ## Pourquoi mes champs d’identité ne sont-ils pas liés comme je m’y attendais ?
 
-À l’aide du [`/cluster/members`point d’entrée](./api/list-cluster-identites.md) de l’API Identity Service, vous pouvez afficher les identités associées pour un ou plusieurs champs d’identité. Si la réponse ne renvoie pas les identités liées attendues, veillez à fournir les informations d’identité appropriées dans vos données XDM. Pour plus d’informations, voir la section relative à la [provision de données XDM à Identity Service](./home.md) dans la présentation d’Identity Service.
+À l’aide du [`/cluster/members`point d’entrée](./api/list-cluster-identites.md) de l’API Service d’identités, vous pouvez afficher les identités associées pour un ou plusieurs champs d’identité. Si la réponse ne renvoie pas les identités liées attendues, veillez à fournir les informations d’identité appropriées dans vos données XDM. Pour plus d’informations, voir la section relative à la [provision de données XDM au service d’identités](./home.md) dans la présentation du service d’identités.
 
 ## Qu’est-ce qu’un espace de noms d’identité ?
 
@@ -77,23 +77,23 @@ Les espaces de noms d’identité standard sont des espaces de noms disponibles 
 
 ## Où trouver la liste des espaces de noms d’identité disponibles pour mon organisation ?
 
-À l’aide de l’[API Identity Service](https://www.adobe.io/experience-platform-apis/references/identity-service), vous pouvez répertorier tous les espaces de noms d’identité disponibles pour votre organisation en envoyant une requête GET au point d’entrée `/idnamespace/identities`. Pour plus d’informations, reportez-vous à la section relative à la [liste des espaces de noms disponibles](./api/list-namespaces.md) dans la présentation de l’API Identity Service.
+À l’aide de l’[API Service d’identités](https://www.adobe.io/experience-platform-apis/references/identity-service), vous pouvez répertorier tous les espaces de noms d’identité disponibles pour votre organisation en envoyant une requête GET au point d’entrée `/idnamespace/identities`. Pour plus d’informations, reportez-vous à la section relative à la [liste des espaces de noms disponibles](./api/list-namespaces.md) dans la présentation de l’API Service d’identités.
 
 ## Comment créer un espace de noms personnalisé pour mon organisation ?
 
-À l’aide de l’[API Identity Service](https://www.adobe.io/experience-platform-apis/references/identity-service), vous pouvez créer un espace de noms d’identité personnalisé pour votre organisation en envoyant une requête POST au point d’entrée `/idnamespace/identities`. Pour plus d’informations, reportez-vous à la section relative à la [création d’un espace de noms personnalisé](./api/create-custom-namespace.md) dans la présentation de l’API Identity Service.
+À l’aide de l’[API Service d’identités](https://www.adobe.io/experience-platform-apis/references/identity-service), vous pouvez créer un espace de noms d’identité personnalisé pour votre organisation en envoyant une requête POST au point d’entrée `/idnamespace/identities`. Pour plus d’informations, reportez-vous à la section relative à la [création d’un espace de noms personnalisé](./api/create-custom-namespace.md) dans la présentation de l’API Service d’identités.
 
 ## Que sont les identités composites et les XID ?
 
-Les identités sont référencées dans les appels API par leur identité composite ou XID. Une identité composite est une représentation d’une identité qui contient une valeur d’identifiant et un espace de noms. Un XID est un identifiant à une seule valeur qui représente le même concept qu’une identité composite (un identifiant et un espace de noms) et qui est automatiquement affecté à de nouvelles identités lorsqu’il est conservé par Identity Service. Pour plus d’informations, voir la [présentation de l’API Identity Service](./home.md).
+Les identités sont référencées dans les appels API par leur identité composite ou XID. Une identité composite est une représentation d’une identité qui contient une valeur d’identifiant et un espace de noms. Un XID est un identifiant à une seule valeur qui représente le même concept qu’une identité composite (un identifiant et un espace de noms) et qui est automatiquement affecté à de nouvelles identités lorsqu’il est conservé par le service d’identités. Pour plus d’informations, voir la [présentation de l’API Service d’identités](./home.md).
 
-## Comment Identity Service gère-t-il les données personnelles identifiables (PII) ?
+## Comment le service d’identités gère-t-il les données personnelles identifiables (PII) ?
 
-Identity Service dispose d’espaces de noms standard pour prendre en charge l’ingestion de valeurs d’identité hachées pour les numéros de téléphone et les e-mails. Cependant, vous êtes vous-même responsable du hachage des valeurs. Pour en savoir plus sur le hachage de données ingérées dans Platform, consultez le [[!DNL Data Prep] guide des fonctions de mappage](../data-prep/functions.md#hashing).
+Le service d’identités dispose d’espaces de noms standard pour prendre en charge l’ingestion de valeurs d’identité hachées pour les numéros de téléphone et les e-mails. Cependant, vous êtes vous-même responsable du hachage des valeurs. Pour en savoir plus sur le hachage de données ingérées dans Platform, consultez le [[!DNL Data Prep] guide des fonctions de mappage](../data-prep/functions.md#hashing).
 
 ## Y a-t-il des considérations à prendre en compte lors du hachage des identités basées sur les données personnelles identifiables ?
 
-Lorsque vous envoyez des données personnelles identifiables hachées à Identity Service, vous devez utiliser la même méthode de chiffrement pour vos jeux de données. Cela permet de s’assurer qu’une valeur d’identité commune à plusieurs jeux de données génère les mêmes valeurs hachées, et que ces valeurs sont en mesure d’être correctement mises en correspondance et liées dans le graphique d’identités.
+Lorsque vous envoyez des données personnelles identifiables hachées au service d’identités, vous devez utiliser la même méthode de chiffrement pour vos jeux de données. Cela permet de s’assurer qu’une valeur d’identité commune à plusieurs jeux de données génère les mêmes valeurs hachées, et que ces valeurs sont en mesure d’être correctement mises en correspondance et liées dans le graphique d’identités.
 
 <!-- Documentation does not show any methods of editing the identityMap directly, and this table never overtly recommends using identityMap anyway. This should probably be removed unless PM thinks otherwise. -->
 <!-- ## When should I use the Identity map rather than labeling individual XDM schema fields?

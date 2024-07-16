@@ -4,14 +4,14 @@ description: Découvrez l’extension Splunk pour le transfert d’événement d
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
 source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
 workflow-type: tm+mt
-source-wordcount: '1051'
-ht-degree: 100%
+source-wordcount: '976'
+ht-degree: 98%
 
 ---
 
 # Présentation de l’extension Splunk
 
-[Splunk](https://www.splunk.com/fr_fr) est une plateforme de contrôle qui fournit des fonctions de recherche, d’analyse et de visualisation pour obtenir des insights sur vos données. Le [transfert d’événement](../../../ui/event-forwarding/overview.md) Splunk tire parti de l’[API REST du collecteur d’événements HTTP Splunk](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/HECRESTendpoints) pour envoyer des événements d’Adobe Experience Platform Edge Network vers le [collecteur d’événements HTTP Splunk](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector).
+[Splunk](https://www.splunk.com/fr_fr) est une plateforme de contrôle qui fournit des fonctions de recherche, d’analyse et de visualisation pour obtenir des informations sur vos données. Le [transfert d’événement](../../../ui/event-forwarding/overview.md) Splunk tire parti de l’[API REST du collecteur d’événements HTTP Splunk](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/HECRESTendpoints) pour envoyer des événements d’Adobe Experience Platform Edge Network vers le [collecteur d’événements HTTP Splunk](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector).
 
 Splunk utilise des jetons porteur comme mécanisme d’authentification pour communiquer avec l’API collecteur d’événements Splunk.
 
@@ -22,7 +22,7 @@ Les équipes marketing peuvent utiliser l’extension pour les cas d’utilisati
 | Cas d’utilisation | Description |
 | --- | --- |
 | Analyse du comportement des clients | Les organiations peuvent capturer les données d’événement d’interaction client de leur site web et transférer les événements pertinents vers Splunk. Les équipes de marketing et d’analyse peuvent alors effectuer des analyses ultérieures sur la plateforme Splunk afin de comprendre les interactions et les comportements clés des utilisateurs. La plateforme Splunk peut être utilisée pour générer des graphiques, des tableaux de bord ou d’autres visualisations afin d’informer les parties prenantes de l’entreprise. |
-| Recherche évolutive sur des jeux de données volumineux | Les entreprises peuvent capturer des entrées transactionnelles ou conversationnelles comme données d’événement du site web et transférer des événements vers Splunk. Les équipes d’Analytics peuvent ensuite tirer parti des fonctionnalités d’indexation évolutive de Splunk pour filtrer et traiter les jeux de données volumineux afin d’obtenir des insights sur l’entreprise et prendre des décisions éclairées. |
+| Recherche évolutive sur des jeux de données volumineux | Les entreprises peuvent capturer des entrées transactionnelles ou conversationnelles comme données d’événement du site web et transférer des événements vers Splunk. Les équipes d’Analytics peuvent ensuite tirer parti des fonctionnalités d’indexation évolutive de Splunk pour filtrer et traiter les jeux de données volumineux afin d’obtenir des informations sur l’entreprise et prendre des décisions éclairées. |
 
 {style="table-layout:auto"}
 
@@ -38,9 +38,9 @@ Pour configurer l’extension, vous devez également disposer des valeurs techni
 
 * Un [jeton de collecteur d’événements](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector#Create_an_Event_Collector_token_on_Splunk_Cloud_Platform). Les jetons sont généralement au format UUIDv4, comme celui-ci : `12345678-1234-1234-1234-1234567890AB`.
 * L’adresse et port de l’instance de plateforme Splunk pour votre organisation. L’adresse et le port d’une instance de plateforme adoptent généralement le format suivant : `mysplunkserver.example.com:443`.
-   >[!IMPORTANT]
-   >
-   > Les points d’entrée Splunk référencés dans le transfert d’événement ne doivent utiliser que le port `443`. Les ports non standard ne sont actuellement pas pris en charge dans les implémentations de transfert d’événement.
+  >[!IMPORTANT]
+  >
+  > Les points d’entrée Splunk référencés dans le transfert d’événement ne doivent utiliser que le port `443`. Les ports non standard ne sont actuellement pas pris en charge dans les implémentations de transfert d’événement.
 
 ## Installer l’extension Splunk {#install}
 
@@ -92,6 +92,6 @@ Après avoir créé et exécuté la règle de transfert d’événement, vérifi
 
 Ce document explique comment installer et configurer l’extension de transfert d’événement Splunk dans l’interface utilisateur. Pour plus d’informations sur la collecte de données d’événement dans Splunk, consultez la documentation officielle :
 
-* [Configurer et utiliser le collecteur d’événements HTTP dans Splunk Web](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector)
+* [Configuration et utilisation du collecteur d’événements HTTP dans Splunk Web](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector)
 * [Configurer l’authentification avec des jetons](https://docs.splunk.com/Documentation/Splunk/8.2.5/Security/Setupauthenticationwithtokens#Prerequisites_for_activating_tokens)
 * [Dépannage du collecteur d’événements HTTP](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector) (répertorie également un compendium de [codes d’erreur possibles](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/TroubleshootHTTPEventCollector#Possible_error_codes))

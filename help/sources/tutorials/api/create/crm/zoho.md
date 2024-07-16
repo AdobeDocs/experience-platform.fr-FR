@@ -7,7 +7,7 @@ description: Découvrez comment connecter Adobe Experience Platform à Zoho CRM 
 exl-id: 33995927-8f5e-44c5-b809-4db8706bbd34
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '638'
 ht-degree: 98%
 
 ---
@@ -35,8 +35,8 @@ Pour connecter [!DNL Flow Service] à [!DNL Zoho CRM], vous devez fournir des va
 | --- | --- |
 | `endpoint` | Point d’entrée du serveur [!DNL Zoho CRM] vers lequel vous effectuez votre demande. |
 | `accountsUrl` | L’URL des comptes est utilisée pour générer vos jetons d’accès et d’actualisation. L’URL doit être spécifique au domaine. |
-| `clientId` | Identifiant client qui correspond à votre compte utilisateur [!DNL Zoho CRM]. |
-| `clientSecret` | Secret client qui correspond à votre compte utilisateur [!DNL Zoho CRM]. |
+| `clientId` | Identifiant client correspondant à votre compte d’utilisateur [!DNL Zoho CRM]. |
+| `clientSecret` | Secret client correspondant à votre compte d’utilisateur [!DNL Zoho CRM]. |
 | `accessToken` | Le jeton d’accès autorise votre accès sécurisé et temporaire à votre compte [!DNL Zoho CRM]. |
 | `refreshToken` | Un jeton d’actualisation est un jeton utilisé pour générer un nouveau jeton d’accès, une fois que votre jeton d’accès a expiré. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Zoho CRM] est `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
@@ -103,8 +103,8 @@ curl -X POST \
 | `auth.specName` | Type d’authentification utilisé pour la connexion. |
 | `auth.params.endpoint` | Point d’entrée du serveur [!DNL Zoho CRM] vers lequel vous effectuez une demande. |
 | `auth.params.accountsUrl` | L’URL de comptes est utilisée pour générer vos jetons d’accès et d’actualisation. L’URL doit être spécifique au domaine. |
-| `auth.params.clientId` | Identifiant client qui correspond à votre compte utilisateur [!DNL Zoho CRM]. |
-| `auth.params.clientSecret` | Secret client qui correspond à votre compte utilisateur [!DNL Zoho CRM]. |
+| `auth.params.clientId` | Identifiant client correspondant à votre compte d’utilisateur [!DNL Zoho CRM]. |
+| `auth.params.clientSecret` | Secret client correspondant à votre compte d’utilisateur [!DNL Zoho CRM]. |
 | `auth.params.accessToken` | Le jeton d’accès autorise votre accès sécurisé et temporaire à votre compte [!DNL Zoho CRM]. |
 | `auth.params.refreshToken` | Un jeton d’actualisation est un jeton utilisé pour générer un nouveau jeton d’accès, une fois que votre jeton d’accès a expiré. |
 | `connectionSpec.id` | Identifiant de spécification de connexion pour [!DNL Zoho CRM] : `929e4450-0237-4ed2-9404-b7e1e0a00309`. |
@@ -125,4 +125,4 @@ Une réponse réussie renvoie les détails de la connexion de base que vous vene
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL Zoho] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer des données de gestion de la relation client dans Platform à l’aide du [!DNL Flow Service] API](../../collect/crm.md)
+* [Créez un flux de données pour importer des données de gestion de la relation client dans Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/crm.md)

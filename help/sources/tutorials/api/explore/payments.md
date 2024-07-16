@@ -6,16 +6,16 @@ description: Ce tutoriel utilise l’API Flow Service pour explorer les demandes
 exl-id: 7d0231de-46c0-49df-8a10-aeb42a2c8822
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '594'
 ht-degree: 39%
 
 ---
 
-# Explorez un système de paiement à l’aide de la méthode [!DNL Flow Service] API
+# Explorez un système de paiement à l’aide de l’API [!DNL Flow Service]
 
-[!DNL Flow Service] sert à collecter et à centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisé pour collecter et centraliser des données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
 
-Ce tutoriel utilise la méthode [!DNL Flow Service] API pour explorer les demandes de paiement.
+Ce tutoriel utilise l’API [!DNL Flow Service] pour explorer les demandes de paiement.
 
 ## Prise en main
 
@@ -24,11 +24,11 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Sources](../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 * [Sandbox](../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à une demande de paiement à l’aide de la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à une application de paiements à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
-Ce tutoriel nécessite que vous disposiez d’une connexion valide avec l’application de paiements tierce à partir de laquelle vous souhaitez ingérer des données. Une connexion valide implique l’identifiant de spécification de connexion et l’identifiant de connexion de votre application. Vous trouverez plus d’informations sur la création d’une connexion aux paiements et la récupération de ces valeurs dans la section [connexion d’une source de paiements à Platform](../../api/create/payments/paypal.md) tutoriel .
+Ce tutoriel nécessite que vous disposiez d’une connexion valide avec l’application de paiements tierce à partir de laquelle vous souhaitez ingérer des données. Une connexion valide implique l’identifiant de spécification de connexion et l’identifiant de connexion de votre application. Vous trouverez plus d’informations sur la création d’une connexion aux paiements et la récupération de ces valeurs dans le tutoriel [Connexion d’une source de paiements à Platform](../../api/create/payments/paypal.md) .
 
 ### Lecture d’exemples d’appels API
 
@@ -52,7 +52,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ## Exploration des tableaux de données
 
-À l’aide de l’identifiant de connexion de votre système de paiements, vous pouvez explorer vos tableaux de données en exécutant des requêtes GET. Utilisez l’appel suivant pour trouver le chemin du tableau que vous souhaitez inspecter ou ingérer. [!DNL Platform].
+À l’aide de l’identifiant de connexion de votre système de paiements, vous pouvez explorer vos tableaux de données en exécutant des requêtes GET. Utilisez l’appel suivant pour trouver le chemin de la table que vous souhaitez inspecter ou ingérer dans [!DNL Platform].
 
 **Format d’API**
 
@@ -77,7 +77,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau de tables de votre système de paiements. Trouvez la table que vous souhaitez importer [!DNL Platform] et notez ses `path` , car vous devez le fournir à l’étape suivante pour inspecter sa structure.
+Une réponse réussie renvoie un tableau de tables de votre système de paiements. Recherchez la table que vous souhaitez importer dans [!DNL Platform] et notez sa propriété `path`, car vous devez la fournir à l&#39;étape suivante pour inspecter sa structure.
 
 ```json
 [
@@ -138,7 +138,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie la structure de la table spécifiée. Les détails relatifs à chaque colonne du tableau se trouvent dans les éléments du `columns` tableau.
+Une réponse réussie renvoie la structure de la table spécifiée. Les détails concernant chacune des colonnes de la table se trouvent dans les éléments du tableau `columns`.
 
 ```json
 {
@@ -180,4 +180,4 @@ Une réponse réussie renvoie la structure de la table spécifiée. Les détails
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez exploré votre système de paiements et trouvé le chemin du tableau que vous souhaitez ingérer. [!DNL Platform]et obtenir des informations sur sa structure. Vous pouvez utiliser ces informations dans le tutoriel suivant pour [collecter des données à partir de votre système de paiements et les importer dans Platform ;](../collect/payments.md).
+En suivant ce tutoriel, vous avez exploré votre système de paiements, trouvé le chemin de la table que vous souhaitez ingérer dans [!DNL Platform] et obtenu des informations sur sa structure. Vous pouvez utiliser ces informations dans le tutoriel suivant pour [collecter des données de votre système de paiement et les importer dans Platform](../collect/payments.md).

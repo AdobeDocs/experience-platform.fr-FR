@@ -7,12 +7,12 @@ description: Adobe Experience Platform fournit plusieurs services et outils qu
 exl-id: 70b04061-0cb0-4b3e-9dfa-d49cc0ef1be0
 source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '224'
-ht-degree: 98%
+source-wordcount: '206'
+ht-degree: 96%
 
 ---
 
-# Attribution AI et gouvernance des données dans Attribution AI
+# Attribution AI et gouvernance des données dans Attribution AI
 
 Tous les paramètres liés à la gouvernance des données dans Attribution AI sont hérités d’Adobe Experience Platform.
 

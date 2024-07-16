@@ -18,7 +18,7 @@ ht-degree: 59%
 >
 >Si un jeton utilisateur est transmis, l’utilisateur du jeton doit disposer d’un rôle &quot;d’administrateur org&quot; pour l’organisation demandée.
 
-Vous pouvez répertorier les noms de tous les types d’autorisations et de ressources en envoyant une requête GET au point d’entrée `/acl/reference`. Ces noms peuvent ensuite être utilisés dans les appels API à [Affichage des stratégies de contrôle d’accès efficaces](./effective-policies.md) pour l’utilisateur actuel.
+Vous pouvez répertorier les noms de tous les types d’autorisations et de ressources en envoyant une requête GET au point d’entrée `/acl/reference`. Ces noms peuvent ensuite être utilisés dans les appels API pour [ afficher les stratégies de contrôle d’accès efficaces](./effective-policies.md) pour l’utilisateur actuel.
 
 Une autorisation est une politique gérée à l’aide d’Adobe Admin Console et mettant en correspondance zéro, une ou plusieurs politiques de type ressource. Un type de ressource est une politique activant des fonctionnalités de lecture, d’écriture et/ou de suppression pour un type spécifique de ressources de [!DNL Platform] (comme des jeux de données ou des schémas).
 

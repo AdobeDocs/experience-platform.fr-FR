@@ -5,8 +5,8 @@ description: Adobe Experience Platform est l’un des meilleurs systèmes ouve
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
 source-git-commit: 9c46f2eeb563009da52acb629796ee9992136343
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 35%
+source-wordcount: '251'
+ht-degree: 33%
 
 ---
 
@@ -16,7 +16,7 @@ L’interface utilisateur de Adobe Experience Platform est conçue pour prendre 
 
 ## Prise en charge des navigateurs
 
-L’interface utilisateur de Platform est conçue pour fonctionner de manière optimale dans le **versions les plus récentes** de Google Chrome, Safari, Firefox et Microsoft Edge. Vous pouvez rencontrer des problèmes lors de l’utilisation de certaines fonctionnalités sur des versions plus anciennes de navigateurs.
+L’interface utilisateur de Platform est conçue pour fonctionner de manière optimale dans les **dernières versions** de Google Chrome, Safari, Firefox et Microsoft Edge. Vous pouvez rencontrer des problèmes lors de l’utilisation de certaines fonctionnalités sur des versions plus anciennes de navigateurs.
 
 | Operating system (Système d’exploitation) | Navigateurs pris en charge |
 |---|---|
@@ -52,10 +52,10 @@ Votre langue d’interface utilisateur par défaut est déterminée par la régi
 Pour modifier la langue :
 
 1. Connectez-vous à votre compte Experience Platform.
-1. Presse `Ctrl + i` pour afficher le menu informations sur le compte .
+1. Appuyez sur `Ctrl + i` pour afficher le menu Informations sur le compte.
 1. Accédez à **[!UICONTROL Langues préférées]**.
 1. Sélectionnez vos préférences de langue première et seconde.
-1. Sélectionner **[!UICONTROL Enregistrer]** et fermez la fenêtre.
+1. Sélectionnez **[!UICONTROL Enregistrer]** et fermez la fenêtre.
 
 >[!NOTE]
 >

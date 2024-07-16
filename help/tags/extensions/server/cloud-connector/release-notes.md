@@ -5,7 +5,7 @@ exl-id: 5ee85d9f-71f4-46ee-9064-4ceee1cf90e7
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
 source-wordcount: '128'
-ht-degree: 36%
+ht-degree: 35%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 36%
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
 
-## 17 janvier 2023
+## 17 janvier 2023
 
 v1.0.1
 

@@ -46,8 +46,8 @@ ht-degree: 67%
    * [Destinations dans l’édition B2B de Real-Time CDP](destinations/b2b.md)
 * Barrières de sécurité {#guardrails}
    * [Présentation des barrières de sécurité Real-Time CDP](guardrails/overview.md)
-   * [Barrières de sécurité pour l’ingestion des données](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
-   * [Barrières de sécurité pour les [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
+   * [Barrières de sécurité pour l’ingestion de données](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [Barrières de sécurité pour  [!DNL Edge Network Server API]](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
    * [Barrières de sécurité pour [!DNL Real-Time Customer Profile] données et segmentation](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=fr){target="_blank"}
    * [Barrières de sécurité pour [!DNL Identity Service] data](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
    * [Barrières de sécurité pour [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
@@ -82,7 +82,7 @@ ht-degree: 67%
       * [Reciblage hors site des utilisateurs non authentifiés](./partner-data/offsite-retargeting.md)
    * Enrichissement de profil {#profile-enrichment}
       * [Complémenter les profils propriétaires avec des attributs fournis par le partenaire](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-   * Informations et engagement personnalisés {#personalization-insights-engagement}
+   * Informations personnalisées et engagement {#personalization-insights-engagement}
       * [Évoluer la valeur client unique à la valeur de durée de vie](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
       * [Réengager intelligemment vos clients](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [Réengager intelligemment vos clients : exemples Luma](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)

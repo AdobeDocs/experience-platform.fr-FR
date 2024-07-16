@@ -1,22 +1,22 @@
 ---
 keywords: prévoir;prévoir l’extension;prévoir la destination
 title: Destination de l’extension Foresee
-description: L’extension Foresee est une destination de sondage dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Foresee est une destination de sondage dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 3eca9e2e-fd41-4dca-a38f-8e281c45a01b
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 92%
+source-wordcount: '429'
+ht-degree: 93%
 
 ---
 
 # Extension [!DNL Foresee] {#foresee-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Configurer [!DNL ForeSee] déploiements de produits à l’aide de balises .
+Configurez les déploiements de produits [!DNL ForeSee] à l’aide de balises.
 
-[!DNL Foresee] est une extension d&#39;enquête dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100164.html).
+[!DNL Foresee] est une extension de sondage dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100164.html).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Foresee] extension :
+Pour installer l’extension [!DNL Foresee], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

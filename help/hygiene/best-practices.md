@@ -15,11 +15,11 @@ Utilisez l’interface utilisateur Advanced Data Lifecycle Management et l’API
 
 ## Conditions préalables {#prerequisites}
 
-Ce guide nécessite une compréhension pratique de l’espace de travail du cycle de vie des données et de la variable [API Data Hygiene](./api/overview.md). Avant de poursuivre ce document, familiarisez-vous avec les guides proposés sur [Gestion avancée du cycle de vie des données](./home.md) et [création de requêtes de suppression d’enregistrement](./ui/record-delete.md) ou [expiration des jeux de données dans l’interface utilisateur](./ui/dataset-expiration.md)ou via l’API.
+Ce guide nécessite une compréhension pratique de l’espace de travail du cycle de vie des données et de l’ [ API d’hygiène des données](./api/overview.md). Avant de poursuivre ce document, familiarisez-vous avec les guides sur la [gestion avancée du cycle de vie des données](./home.md) et la [création de requêtes de suppression d’enregistrement](./ui/record-delete.md) ou les [expirations de jeux de données dans l’interface utilisateur](./ui/dataset-expiration.md) ou via l’API.
 
 ## Instructions de création d’un ordre de travail {#work-order-creation-guidelines}
 
-Vous pouvez utiliser la variable `/workorder` point de terminaison dans l’API Data Hygiene pour gérer par programmation les demandes de suppression d’enregistrements dans Experience Platform. Avec ce point de terminaison, vous pouvez créer une requête de suppression, vérifier son état ou mettre à jour une requête existante. Voir [Document de point de terminaison de l’ordre de travail](./api/workorder.md) pour savoir comment effectuer ces actions à l’aide de l’API.
+Vous pouvez utiliser le point d’entrée `/workorder` dans l’API Data Hygiene pour gérer par programmation les demandes de suppression d’enregistrements dans Experience Platform. Avec ce point de terminaison, vous pouvez créer une requête de suppression, vérifier son état ou mettre à jour une requête existante. Consultez le [ document Point d’entrée de l’ordre de travail](./api/workorder.md) pour savoir comment effectuer ces actions à l’aide de l’API.
 
 >[!TIP]
 >
@@ -27,27 +27,27 @@ Vous pouvez utiliser la variable `/workorder` point de terminaison dans l’API 
 
 Suivez ces instructions pour optimiser les envois de requêtes de nettoyage :
 
-1. **Maximiser les identités par requête :** Incluez jusqu’à 100 000 identités par demande de nettoyage afin d’améliorer l’efficacité. Le regroupement de plusieurs identités en une seule requête permet de réduire la fréquence des appels d’API et de minimiser le risque de problèmes de performances en raison d’un nombre excessif de demandes d’identité unique. Envoyez des demandes avec un nombre maximal d’identités pour accélérer le traitement, car les ordres de travail sont traités par lots pour plus d’efficacité.
+1. **Maximiser les identités par requête :** Incluez jusqu’à 100 000 identités par requête de nettoyage pour améliorer l’efficacité. Le regroupement de plusieurs identités en une seule requête permet de réduire la fréquence des appels d’API et de minimiser le risque de problèmes de performances en raison d’un nombre excessif de demandes d’identité unique. Envoyez des demandes avec un nombre maximal d’identités pour accélérer le traitement, car les ordres de travail sont traités par lots pour plus d’efficacité.
 2. **Spécifiez des jeux de données individuels :** Pour une efficacité maximale, spécifiez le jeu de données individuel à traiter.
-3. **Considérations relatives au ralentissement des API :** Gardez à l’esprit le ralentissement de l’API pour éviter les ralentissements. Des demandes plus petites (&lt; 100 ID) à des fréquences plus élevées peuvent donner lieu à 429 réponses et nécessiter un renvoi à des taux acceptables.
+3. **Considérations relatives au ralentissement de l’API :** Tenez compte du ralentissement de l’API pour éviter les ralentissements. Des demandes plus petites (&lt; 100 ID) à des fréquences plus élevées peuvent donner lieu à 429 réponses et nécessiter un renvoi à des taux acceptables.
 
 ### Gestion des erreurs 429 {#manage-429-errors}
 
 Si vous recevez une erreur 429, elle indique que vous avez dépassé le nombre autorisé de requêtes au cours d’une période donnée. Suivez ces bonnes pratiques pour gérer efficacement les erreurs 429 :
 
-- **Lisez l’en-tête &quot;Retry-After&quot;**: lorsqu’une erreur 429 est renvoyée, vérifiez l’en-tête de réponse &quot;Retry-After&quot;. Cet en-tête indique le temps d’attente avant de retenter la requête.
-- **Implémentation de la logique de reprise**: utilisez la valeur &quot;Retry-After&quot; pour implémenter la logique de nouvelle tentative dans votre application, en veillant à ce que les nouvelles tentatives soient effectuées après l’heure spécifiée afin d’éviter les erreurs 429 suivantes.
-- **Lot de vos requêtes**: évitez d’envoyer rapidement de nombreuses petites requêtes. Vous pouvez plutôt regrouper plusieurs identités dans une seule requête afin de réduire la fréquence des appels et de minimiser le risque d’atteindre les limites de taux.
+- **Lisez l’en-tête &#39;Retry-After&#39;** : lorsqu’une erreur 429 est renvoyée, vérifiez l’en-tête de réponse &#39;Retry-After&#39;. Cet en-tête indique le temps d’attente avant de retenter la requête.
+- **Implémentation de la logique de nouvelle tentative** : utilisez la valeur &quot;Retry-After&quot; pour implémenter la logique de nouvelle tentative dans votre application, en veillant à ce que les tentatives soient effectuées après le délai spécifié afin d’éviter les erreurs 429 suivantes.
+- **Lancer vos requêtes** : évitez d’envoyer de nombreuses petites requêtes l’une après l’autre. Vous pouvez plutôt regrouper plusieurs identités dans une seule requête afin de réduire la fréquence des appels et de minimiser le risque d’atteindre les limites de taux.
 
 ## Expiration du jeu de données {#dataset-expiration}
 
-Configurez le nettoyage automatique des jeux de données pour les données de courte durée. Utilisez la variable `/ttl` point de terminaison sur l’API Data Hygiene pour planifier des dates d’expiration pour les jeux de données à nettoyer en fonction d’une heure ou d’une date spécifiées. Consultez le guide du point de terminaison d’expiration du jeu de données pour savoir comment [création d’une expiration de jeu de données](./api/dataset-expiration.md) et la variable [paramètres de requête acceptés](./api/dataset-expiration.md#query-params).
+Configurez le nettoyage automatique des jeux de données pour les données de courte durée. Utilisez le point de terminaison `/ttl` de l’API Data Hygiene pour planifier des dates d’expiration pour les jeux de données à nettoyer en fonction d’une heure ou d’une date spécifiées. Consultez le guide du point de terminaison d’expiration du jeu de données pour savoir comment [créer une expiration de jeu de données](./api/dataset-expiration.md) et les [paramètres de requête acceptés](./api/dataset-expiration.md#query-params).
 
 ## Surveillance de l’ordre de travail et de l’état d’expiration du jeu de données {#monitor}
 
-Vous pouvez contrôler efficacement la progression de la gestion de votre cycle de vie des données à l’aide de l’utilisation de la fonction **Événements I/O**. Un événement d’E/S est un mécanisme permettant de recevoir des notifications en temps réel sur les modifications ou mises à jour de divers services de Platform.
+Vous pouvez surveiller efficacement la progression de la gestion de votre cycle de vie des données à l’aide des **événements I/O**. Un événement d’E/S est un mécanisme permettant de recevoir des notifications en temps réel sur les modifications ou mises à jour de divers services de Platform.
 
-Les alertes d’événement d’E/S peuvent être envoyées à un webhook configuré pour permettre l’automatisation de la surveillance des activités. Pour recevoir des alertes via webhook, vous devez enregistrer votre webhook pour les alertes Platform dans Adobe Developer Console. Consultez le guide sur la [abonnement aux notifications d’événement d’Adobe I/O](../observability/alerts/subscribe.md) pour obtenir des instructions détaillées.
+Les alertes d’événement d’E/S peuvent être envoyées à un webhook configuré pour permettre l’automatisation de la surveillance des activités. Pour recevoir des alertes via webhook, vous devez enregistrer votre webhook pour les alertes Platform dans Adobe Developer Console. Pour obtenir des instructions détaillées, reportez-vous au guide sur l’ [abonnement aux notifications d’événement d’Adobe I/O](../observability/alerts/subscribe.md) .
 
 Utilisez les méthodes et directives de cycle de vie des données suivantes pour récupérer et surveiller efficacement les états des tâches :
 
@@ -63,7 +63,7 @@ Pour surveiller efficacement la progression de vos tâches de cycle de vie des d
 
 Pour obtenir des informations détaillées sur les différents ordres de travail, utilisez l’approche suivante :
 
-- Envoyez une requête de GET à la fonction `/workorder/{work_order_id}` point de terminaison pour les données de réponse détaillées.
+- Effectuez une requête de GET au point de terminaison `/workorder/{work_order_id}` pour obtenir des données de réponse détaillées.
 - Récupérez des réponses et des messages de succès spécifiques à un produit.
 - Évitez d’utiliser cette méthode pour des activités d’interrogation régulières.
 

@@ -12,7 +12,7 @@ ht-degree: 38%
 
 # Destination Audience Analysis
 
-La variable [!UICONTROL Analyse de l’audience] destination vous permet d’enrichir les données d’audience Adobe Experience Platform dans [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=fr). Vous pouvez sélectionner les audiences à inclure dans les données enrichies obtenues. Les qualifications d’audience sont ensuite disponibles en tant que dimensions dans [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html) création de rapports.
+La destination [!UICONTROL Audience Analysis] vous permet d’enrichir les données d’audience Adobe Experience Platform en [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=fr). Vous pouvez sélectionner les audiences à inclure dans les données enrichies obtenues. Les qualifications d’audience sont ensuite disponibles en tant que dimensions dans les rapports [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html).
 
 >[!AVAILABILITY]
 >
@@ -67,24 +67,24 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 > 
->Pour créer une destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion des destinations]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour créer une destination, vous avez besoin de l’autorisation de **[!UICONTROL Affichage des destinations]** et de **[!UICONTROL Gestion des destinations]** [ ](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
-Pour créer cette destination, suivez les étapes décrites dans la section [tutoriel sur la configuration des destinations](../../ui/connect-destination.md).
+Pour créer cette destination, suivez les étapes décrites dans le [tutoriel de configuration de destination](../../ui/connect-destination.md).
 
 ### Détails de la destination
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-* **[!UICONTROL Nom]**: nom de la destination.
-* **[!UICONTROL Description]**: description de la destination.
-* **[!UICONTROL Identifiant du flux de données]**: identifiant de la banque de données que vous souhaitez enrichir avec les audiences admissibles. Vous pouvez obtenir cet identifiant dans la variable [Gestionnaire des flux de données](/help/datastreams/overview.md).
-* **[!UICONTROL Alias d’intégration]**: alias de l’intégration.
+* **[!UICONTROL Name]** : nom de destination.
+* **[!UICONTROL Description]** : description de la destination.
+* **[!UICONTROL Identifiant du flux de données]** : l’identifiant du flux de données que vous souhaitez enrichir avec les audiences admissibles. Vous pouvez obtenir cet identifiant dans le [gestionnaire de jeux de données](/help/datastreams/overview.md).
+* **[!UICONTROL Alias d’intégration]** : alias d’intégration.
 
 ### Alertes
 
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
-* **[!UICONTROL Taux d’activation ignoré dépassé]**: Soyez averti lorsque le taux d’activation ignoré dépasse un seuil.
+* **[!UICONTROL Taux d’activation ignoré dépassé]** : soyez averti lorsque le taux d’activation ignoré dépasse un seuil.
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
 
@@ -98,13 +98,13 @@ Lorsque vous avez terminé de sélectionner les actions marketing souhaitées po
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **** et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Une fois la destination créée, vous pouvez activer les audiences de votre choix pour la destination.
 
-1. Si vous ne vous trouvez pas déjà dans la destination créée, vous pouvez la retrouver en accédant à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]**.
-1. Sélectionner **[!UICONTROL Activation des audiences]**.
+1. Si vous n’êtes pas déjà dans la destination créée, vous pouvez la retrouver en accédant à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]**.
+1. Sélectionnez **[!UICONTROL Activer les audiences]**.
 1. Sélectionnez les audiences pour lesquelles vous souhaitez analyser les qualifications. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
 1. Vérifiez la configuration de destination et les paramètres de l’audience, puis sélectionnez **[!UICONTROL Terminer]**.
 
-Vous pouvez ajouter d’autres audiences à analyser ultérieurement en revenant au **[!UICONTROL Activation des audiences]** page. Une fois activées, les audiences ne peuvent pas être supprimées.
+Vous pouvez ajouter d’autres audiences à analyser ultérieurement en revenant à la page **[!UICONTROL Activer les audiences]** . Une fois activées, les audiences ne peuvent pas être supprimées.

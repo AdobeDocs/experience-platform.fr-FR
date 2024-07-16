@@ -28,13 +28,13 @@ Pour récapituler : si vous ne souhaitez diffuser des audiences Adobe Real-Time 
 
 
 Pour plus d’informations sur Magnite : destination du lot de diffusion en continu, comment s’y connecter et comment activer les audiences Adobe Real-Time CDP vers celui-ci, continuez la lecture ci-dessous.
-Pour plus d’informations sur la destination en temps réel, voir [ce document](magnite-streaming.md) au lieu de .
+Pour plus d’informations sur la destination en temps réel, reportez-vous à [ce document](magnite-streaming.md) à la place.
 
 >[!IMPORTANT]
 >
 >Ce connecteur de destination est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès, contactez votre représentant Adobe.
 >
->La page de documentation et le connecteur de destination sont créés et conservés par la fonction [!DNL Magnite] l&#39;équipe. Pour toute demande d’information ou de mise à jour, contactez-les directement à l’adresse `adobe-tech@magnite.com`.
+>Le connecteur de destination et la page de documentation sont créés et gérés par l’équipe [!DNL Magnite]. Pour toute question ou demande de mise à jour, contactez-les directement à l’adresse `adobe-tech@magnite.com`.
 
 ## Cas d’utilisation {#use-cases}
 
@@ -54,15 +54,15 @@ Toute audience activée via la diffusion en continu Magnite : la destination du 
 
 ## Conditions préalables {#prerequisites}
 
-Pour utiliser les destinations Magnite dans Adobe Experience Platform, vous devez d’abord disposer d’un compte de diffusion en continu Magnite. Si vous avez une [!DNL Magnite Streaming] compte, contactez votre [!DNL Magnite] gestionnaire de compte à fournir pour l’accès [!DNL Magnite's] destinations. Si vous n’avez pas de [!DNL Magnite Streaming] compte, contactez adobe-tech@magnite.com
+Pour utiliser les destinations Magnite dans Adobe Experience Platform, vous devez d’abord disposer d’un compte de diffusion en continu Magnite. Si vous disposez d’un compte [!DNL Magnite Streaming], contactez votre gestionnaire de compte [!DNL Magnite] pour qu’il vous fournisse les informations d’identification lui permettant d’accéder aux destinations [!DNL Magnite's]. Si vous ne disposez pas d’un compte [!DNL Magnite Streaming], contactez adobe-tech@magnite.com
 
 ## Identités prises en charge {#supported-identities}
 
-Diffusion en continu Magnite : la destination de lot peut recevoir *any* sources d’identité à partir de la plateforme de données clients de l’Adobe. Actuellement, cette destination comporte trois champs d’identité cible auxquels vous pouvez mapper.
+La diffusion en continu Magnite : la destination par lot peut recevoir *n’importe quelle* source d’identité de la plateforme de données clients de l’Adobe. Actuellement, cette destination comporte trois champs d’identité cible auxquels vous pouvez mapper.
 
 >[!NOTE]
 >
->*Quelconque* les sources d’identité peuvent correspondre à n’importe quelle identité cible magnite_deviceId.
+>*Toutes les sources d’identité* peuvent mapper sur n’importe quelle identité cible magnite_deviceId.
 
 | Identité cible | Description | Considérations |
 |:--------------------------- |:------------------------------------------------------------------------------------------------ |:------------------------------------------------------------------------------------- |
@@ -86,7 +86,7 @@ Diffusion en continu Magnite : la destination de lot peut recevoir *any* sources
 | Élément | Type | Notes |
 |-----------------------------|----------|----------|
 | Type d’exportation | Exportation de l’audience | Vous exportez tous les membres d’une audience avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la diffusion en continu Magnite : destination du lot. |
-| Fréquence des exportations | Lot | Les destinations par lots exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur le lot [destinations basées sur des fichiers](/help/destinations/destination-types.md). |
+| Fréquence des exportations | Lot | Les destinations par lots exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur les [destinations basées sur des fichiers](/help/destinations/destination-types.md). |
 
 {style="table-layout:auto"}
 
@@ -100,9 +100,9 @@ Recherchez la destination de diffusion en continu Magnite : lot dans le catalogu
 
 Si vous disposez déjà d’un compte, vous pouvez le localiser en définissant l’option Type de compte sur &quot;Compte existant&quot;. Sinon, vous allez créer un compte ci-dessous :
 
-Pour créer un nouveau compte et l’authentifier pour la première fois sur la destination, renseignez les champs &quot;Clé d’accès S3&quot; et &quot;Clé secrète S3&quot; requis (fournis à votre gestionnaire de compte), puis sélectionnez **[!UICONTROL Se connecter à la destination]**
+Pour créer un compte et l’authentifier à la destination pour la première fois, renseignez les champs &quot;Clé d’accès S3&quot; et &quot;Clé secrète S3&quot; requis (fournis à vous par l’intermédiaire de votre gestionnaire de compte), puis sélectionnez **[!UICONTROL Se connecter à la destination]**
 
-![Champs d’authentification de la configuration de destination vides](../../assets/catalog/advertising/magnite/destination-batch-config-auth-unfilled.png)
+![Champs d’authentification de configuration de destination vides](../../assets/catalog/advertising/magnite/destination-batch-config-auth-unfilled.png)
 
 >[!NOTE]
 >
@@ -112,11 +112,13 @@ Pour créer un nouveau compte et l’authentifier pour la première fois sur la 
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-* **[!UICONTROL Nom]**: nom par lequel vous reconnaîtrez cette connexion/instance de destination à l’avenir.
-* **[!UICONTROL Description]**: description qui vous aidera à identifier cette connexion/instance de destination à l’avenir.
-* **[!UICONTROL Nom de votre partenaire source]**: nom que vous souhaitez utiliser comme source dans la plateforme de diffusion en continu Magnite.
+* **[!UICONTROL Nom]** : nom par lequel vous reconnaîtrez cette connexion/instance de destination dans la variable
+future.
+* **[!UICONTROL Description]** : description qui vous aidera à identifier ceci
+connexion/instance de destination à l’avenir.
+* **[!UICONTROL Nom de votre partenaire source]** : nom que vous souhaitez utiliser comme source dans la plateforme de diffusion en continu Magnite.
 
-![Champs d’authentification de la configuration de destination renseignés](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
+![Champs d’authentification de configuration de destination renseignés](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
 
 >[!NOTE]
 >
@@ -126,7 +128,7 @@ Vous pouvez ensuite procéder en sélectionnant **[!UICONTROL Suivant]**
 
 Dans l’écran suivant, intitulé &quot;Stratégie de gouvernance et actions d’application (facultatif)&quot;, vous pouvez éventuellement sélectionner toute stratégie de gouvernance des données appropriée. L’option &quot;Exportation de données&quot; est généralement sélectionnée pour la destination de lot de diffusion en continu Magnite.
 
-![Stratégies de gouvernance facultatives et actions d’application](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
+![Stratégie de gouvernance et actions d’application facultatives](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
 
 Une fois sélectionné, ou si vous souhaitez ignorer cet écran facultatif, sélectionnez **[!UICONTROL Créer]**
 
@@ -140,19 +142,19 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter *identités*, vous avez besoin de la fonction **[!UICONTROL Affichage du graphique des identités]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **** et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous avez besoin de l&#39;autorisation **[!UICONTROL Afficher le graphique d&#39;identités]** [ ](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
 ### Mapper les attributs et les identités {#map}
 
-Dans le **[!UICONTROL Champ Source]**, vous pouvez sélectionner n’importe quel attribut ou identité pour vos appareils. Dans cet exemple, nous avons sélectionné une carte d’identité personnalisée appelée &quot;DeviceId&quot;.
-![faire correspondre les champs de données souhaités au champ device_id ;](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
+Dans le **[!UICONTROL champ Source]**, vous pouvez sélectionner n’importe quel attribut ou identité pour vos appareils. Dans cet exemple, nous avons sélectionné une carte d’identité personnalisée appelée &quot;DeviceId&quot;.
+![ mappez les champs de données souhaités avec le champ device_id](../../assets/catalog/advertising/magnite/destination-batch-active-audience-field-mapping.png)
 
-Dans le **[!UICONTROL Champ cible]**:
-![sélectionner l’identité cible de type d’appareil appropriée](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) Voir [Identités prises en charge](#supported-identities) pour plus d’informations.
-Dans cet exemple, nous avons sélectionné la variable **[!UICONTROL Champ cible]**: magnite_deviceId_CUSTOM, car notre **[!UICONTROL Champ Source]** a été défini comme une carte d’identité personnalisée : DeviceID.
+Dans le **[!UICONTROL champ cible]** :
+![sélectionnez l’identité cible de type d’appareil appropriée](../../assets/catalog/advertising/magnite/destination-batch-active-audience-select-device-type.png) Voir [Identités prises en charge](#supported-identities) pour plus d’informations.
+Dans cet exemple, nous avons sélectionné le **[!UICONTROL champ cible]** : magnite_deviceId_CUSTOM, car notre **[!UICONTROL champ Source]** a été défini comme une carte d’identité personnalisée : DeviceID.
 
 >[!NOTE]
 >
@@ -167,7 +169,7 @@ Dans l&#39;écran &quot;Configurer un nom de fichier et un planning d&#39;export
 >
 > Un identifiant de mappage doit être fourni lorsqu’une audience possède un identifiant de segment préexistant précédemment connu pour la diffusion en continu Magnite. Dans le cas contraire, &quot;NONE&quot; doit être utilisé comme ID de mappage.
 >
-> Lors de la configuration du nom de fichier pour chaque audience, vous devez inclure l&#39;identifiant du mapping via le champ &quot;Texte personnalisé&quot; à ajouter. L’ID de mappage est ajouté comme suit : `{previous_filename}\_\[MAPPING_ID\].` Si cette audience est une nouvelle audience de la diffusion en continu Magnite et que vous ne fournissez pas d’ID de mappage, &quot;AUCUN&quot; doit être entré dans le champ &quot;Texte personnalisé&quot;. Dans ce cas, le nouveau nom de fichier doit être : `{previous_filename}\_\[NONE\]`.
+> Lors de la configuration du nom de fichier pour chaque audience, vous devez inclure l&#39;identifiant du mapping via le champ &quot;Texte personnalisé&quot; à ajouter. L’ID de mappage sera ajouté comme suit : `{previous_filename}\_\[MAPPING_ID\].` Si cette audience est une nouvelle audience de la diffusion en continu Magnite et que vous ne fournissez pas d’ID de mappage, &quot;AUCUN&quot; doit être entré dans le champ &quot;Texte personnalisé&quot;. Dans ce cas, le nouveau nom de fichier doit être : `{previous_filename}\_\[NONE\]`.
 
 ## Données exportées / Valider l’exportation des données {#exported-data}
 
@@ -177,7 +179,7 @@ Une fois vos audiences chargées, vous pouvez vérifier qu’elles ont été cr�
 
 >[!NOTE]
 >
->Les audiences activées/diffusées vers la destination de lot de diffusion en continu Magnite seront *replace* les mêmes audiences qui ont été activées/diffusées via la destination en temps réel de la diffusion en continu Magnite. Si vous recherchez un segment à l’aide du nom du segment, il se peut que vous ne trouviez pas le segment en temps réel tant que le lot n’a pas été ingéré et traité par la plateforme de diffusion en continu Magnite.
+>Les audiences activées/diffusées vers la destination par lots de diffusion en continu Magnite *remplaceront* les mêmes audiences qui ont été activées/diffusées via la destination en temps réel de diffusion en continu Magnite. Si vous recherchez un segment à l’aide du nom du segment, il se peut que vous ne trouviez pas le segment en temps réel tant que le lot n’a pas été ingéré et traité par la plateforme de diffusion en continu Magnite.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
@@ -185,4 +187,4 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-Pour accéder à une documentation d’aide supplémentaire, consultez la page [Centre d’aide Magnite](https://help.magnite.com/help).
+Pour obtenir une aide supplémentaire, consultez le [Centre d’aide Magnite](https://help.magnite.com/help).

@@ -6,8 +6,8 @@ description: Le document suivant décrit les étapes requises pour créer un mod
 exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
 source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 100%
+source-wordcount: '438'
+ht-degree: 94%
 
 ---
 
@@ -25,7 +25,7 @@ Les guides sur le machine learning en temps réel nécessitent une compréhensio
 
 - **DSL :** langue spécifique au domaine.
 - **Edge :** le service de notation du machine learning en temps réel peut être exécuté sur des grappes Edge plus proches de vos activations et applications.
-- **Hub :** la version alpha actuelle exécute le service de notation du machine learning en temps réel sur le Hub d’Adobe Platform pendant que le réseau Experience Edge est en cours de développement.
+- **Hub :** L’alpha actuel exécute le service de notation de l’apprentissage automatique en temps réel sur Adobe Experience Platform Hub pendant que l’Edge Network est en cours de développement.
 - **Nœud :** un nœud est l’unité fondamentale à partir de laquelle des graphiques sont formés. Chaque nœud effectue une tâche spécifique et ces nœuds peuvent être liés ensemble à l’aide de liens afin de former un graphique représentant un pipeline ML. La tâche effectuée par un nœud représente une opération sur les données d’entrée, telle qu’une transformation des données ou un schéma, ou une inférence de machine learning. Le nœud sort la valeur transformée ou déduite pour le ou les nœuds suivants.
 
 ## Jeux de données dans Adobe Experience Platform

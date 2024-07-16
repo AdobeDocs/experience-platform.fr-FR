@@ -11,32 +11,32 @@ ht-degree: 49%
 
 # Configuration et configuration des clés gérées par le client à l’aide de l’API
 
-Ce document couvre le processus d’activation de la fonction de clés gérées par le client (CMK) dans Adobe Experience Platform à l’aide de l’API. Pour obtenir des instructions sur la façon d’effectuer ce processus à l’aide de l’interface utilisateur, reportez-vous à la section [Document de configuration de l’IU CMK](./ui-set-up.md).
+Ce document couvre le processus d’activation de la fonction de clés gérées par le client (CMK) dans Adobe Experience Platform à l’aide de l’API. Pour plus d’informations sur la façon d’effectuer ce processus à l’aide de l’interface utilisateur, reportez-vous au [document de configuration du CMK de l’interface utilisateur](./ui-set-up.md).
 
 ## Conditions préalables
 
-Pour afficher et consulter la variable [!UICONTROL Chiffrement] dans Adobe Experience Platform, vous devez avoir créé un rôle et affecté la fonction [!UICONTROL Gestion de la clé gérée par le client] autorisation de ce rôle. Tout utilisateur qui possède la variable [!UICONTROL Gestion de la clé gérée par le client] La permission peut activer le CMK pour leur organisation.
+Pour afficher et consulter la section [!UICONTROL Chiffrement] dans Adobe Experience Platform, vous devez avoir créé un rôle et lui avoir attribué l’autorisation [!UICONTROL Gérer la clé gérée par le client]. Tout utilisateur disposant de l’autorisation [!UICONTROL Gérer la clé gérée par le client] peut activer le CMK pour son organisation.
 
-Pour plus d’informations sur l’affectation de rôles et d’autorisations dans Experience Platform, reportez-vous à la section [configuration de la documentation sur les autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
+Pour plus d&#39;informations sur l&#39;attribution des rôles et des autorisations en Experience Platform, consultez la [documentation sur la configuration des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
 Pour activer le CMK, votre [[!DNL Azure] Key Vault doit être configuré](./azure-key-vault-config.md) avec les paramètres suivants :
 
 * [Activer la protection contre le vidage](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
-* [Activation de la suppression progressive](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
-* [Configurer l’accès à l’aide de [!DNL Azure] contrôle d’accès en fonction du rôle](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
-* [Configurez une [!DNL Azure] Key Vault](./azure-key-vault-config.md)
+* [Activer soft-delete](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
+* [Configurer l’accès à l’aide du  [!DNL Azure] contrôle d’accès basé sur les rôles](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
+* [Configuration d’un Key Vault  [!DNL Azure] ](./azure-key-vault-config.md)
 
 ## Configurer l’application CMK {#register-app}
 
-Une fois que votre coffre-fort de clé est configuré, l’étape suivante consiste à s’enregistrer pour l’application CMK qui se connectera à votre [!DNL Azure] client.
+Une fois que votre coffre-fort de clé est configuré, l’étape suivante consiste à s’enregistrer pour l’application CMK qui se connectera à votre client [!DNL Azure].
 
-### Prise en main
+### Commencer
 
 L’enregistrement de l’application CMK nécessite que vous exécutiez des appels vers les API Platform. Pour plus d’informations sur la collecte des en-têtes d’authentification requis pour effectuer ces appels, consultez le [guide d’authentification des API Platform](../../api-authentication.md).
 
 Le guide d’authentification fournit des instructions sur la génération de votre propre valeur unique pour l’en-tête de requête `x-api-key`, toutes les opérations API de ce guide utilisent plutôt la valeur statique `acp_provisioning`. Cependant, vous devez toujours fournir vos propres valeurs pour `{ACCESS_TOKEN}` et `{ORG_ID}`.
 
-Dans tous les appels API présentés dans ce guide, `platform.adobe.io` est utilisé comme chemin racine, qui correspond par défaut à la région VA7. Si votre entreprise utilise une autre région, `platform` doit être suivie d’un tiret et du code de région affecté à votre organisation : `nld2` pour NLD2 ou `aus5` pour AUS5 (par exemple : `platform-aus5.adobe.io`). Si vous ne connaissez pas la région de votre entreprise, contactez votre administrateur système.
+Dans tous les appels API présentés dans ce guide, `platform.adobe.io` est utilisé comme chemin racine, qui correspond par défaut à la région VA7. Si votre organisation utilise une autre région, `platform` doit être suivi d’un tiret et du code de région affecté à votre organisation : `nld2` pour NLD2 ou `aus5` pour AUS5 (par exemple : `platform-aus5.adobe.io`). Si vous ne connaissez pas la région de votre entreprise, contactez votre administrateur système.
 
 ### Récupérer une URL d’authentification {#fetch-authentication-url}
 
@@ -68,43 +68,43 @@ Une réponse réussie renvoie une propriété `applicationRedirectUrl` contenant
 
 Copiez et collez l’adresse `applicationRedirectUrl` dans un navigateur pour ouvrir une boîte de dialogue d’authentification. Sélectionnez **[!DNL Accept]** pour ajouter le principal de service de l’application CMK à votre client [!DNL Azure].
 
-![Boîte de dialogue de demande d’autorisation Microsoft avec [!UICONTROL Accepter] surlignée.](../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
+![Boîte de dialogue de demande d’autorisation Microsoft avec [!UICONTROL Accept] surlignée.](../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
 ### Attribuer l’application CMK à un rôle {#assign-to-role}
 
 Une fois le processus d’authentification terminé, revenez au coffre de clés [!DNL Azure] et sélectionnez **[!DNL Access control]** dans le volet de navigation de gauche. À partir de là, sélectionnez **[!DNL Add]**, puis **[!DNL Add role assignment]**.
 
-![Le tableau de bord Azure Microsoft avec [!DNL Add] et [!DNL Add role assignment] surlignée.](../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
+![ Le tableau de bord Azure Microsoft avec [!DNL Add] et [!DNL Add role assignment] surlignés.](../../images/governance-privacy-security/customer-managed-keys/add-role-assignment.png)
 
 L’écran suivant vous invite à choisir un rôle pour cette affectation. Sélectionnez **[!DNL Key Vault Crypto Service Encryption User]** avant de sélectionner **[!DNL Next]** pour continuer.
 
 >[!NOTE]
 >
->Si vous avez le [!DNL Managed-HSM Key Vault] , vous devez sélectionner la variable **[!DNL Managed HSM Crypto Service Encryption User]** rôle de l’utilisateur.
+>Si vous disposez du niveau [!DNL Managed-HSM Key Vault], vous devez sélectionner le rôle d’utilisateur **[!DNL Managed HSM Crypto Service Encryption User]**.
 
-![Le tableau de bord Azure de Microsoft avec la variable [!DNL Key Vault Crypto Service Encryption User] surlignée.](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
+![Le tableau de bord Azure Microsoft avec [!DNL Key Vault Crypto Service Encryption User] en surbrillance.](../../images/governance-privacy-security/customer-managed-keys/select-role.png)
 
 Dans l’écran suivant, choisissez **[!DNL Select members]** pour ouvrir une boîte de dialogue dans le rail de droite. Utilisez la barre de recherche pour localiser le principal de service de l’application CMK et sélectionnez-le dans la liste. Lorsque vous avez terminé, sélectionnez **[!DNL Save]**.
 
 >[!NOTE]
 >
->Si vous ne trouvez pas votre application dans la liste, votre principal de service n’a pas été accepté dans votre client. Pour vous assurer que vous disposez des privilèges appropriés, utilisez votre [!DNL Azure] administrateur ou représentant.
+>Si vous ne trouvez pas votre application dans la liste, votre principal de service n’a pas été accepté dans votre client. Pour vous assurer que vous disposez des privilèges appropriés, contactez votre administrateur ou représentant [!DNL Azure].
 
 ## Activer la configuration de la clé de chiffrement sur Experience Platform {#send-to-adobe}
 
 Après l’installation de l’application CMK sur [!DNL Azure], vous pouvez envoyer votre identifiant de la clé de chiffrement à Adobe. Sélectionnez **[!DNL Keys]** dans le volet de navigation de gauche, suivi du nom de la clé à envoyer.
 
-![Le tableau de bord Azure de Microsoft avec la variable [!DNL Keys] et le nom de la clé mis en surbrillance.](../../images/governance-privacy-security/customer-managed-keys/select-key.png)
+![Le tableau de bord Azure Microsoft avec l’objet [!DNL Keys] et le nom de clé mis en surbrillance.](../../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
 Sélectionnez la dernière version de la clé et sa page de détails s’affiche. À partir de là, vous pouvez éventuellement configurer les opérations autorisées pour la clé.
 
 >[!IMPORTANT]
 >
->Les opérations minimales requises autorisées pour la clé sont les suivantes : **[!DNL Wrap Key]** et **[!DNL Unwrap Key]** autorisations. Vous pouvez inclure [!DNL Encrypt], [!DNL Decrypt], [!DNL Sign], et [!DNL Verify] devrais-tu vouloir.
+>Les opérations minimales requises autorisées pour la clé sont les autorisations **[!DNL Wrap Key]** et **[!DNL Unwrap Key]**. Vous pouvez inclure [!DNL Encrypt], [!DNL Decrypt], [!DNL Sign] et [!DNL Verify] si vous le souhaitez.
 
 Le champ **[!UICONTROL Identifiant de clé]** affiche l’identifiant d’URI de la clé. Copiez cette valeur d’URI à utiliser à l’étape suivante.
 
-![La clé du tableau de bord Azure de Microsoft contient les informations suivantes : [!DNL Permitted operations] et les sections Copier la clé URL sont mises en surbrillance.](../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
+![Détails de la clé de tableau de bord Azure Microsoft avec [!DNL Permitted operations] et les sections Copier la clé URL mises en surbrillance.](../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
 
 Une fois que vous avez obtenu l’URI du coffre de clés, vous pouvez l’envoyer à l’aide d’une requête POST au point d’entrée de configuration du CMK.
 
@@ -135,9 +135,9 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `name` | Un nom pour la configuration. Veillez à mémoriser cette valeur, car il est nécessaire de vérifier l’état de la configuration à l’adresse [étape ultérieure](#check-status). La valeur respecte la casse. |
+| `name` | Un nom pour la configuration. Veillez à mémoriser cette valeur, car il est nécessaire de vérifier l’état de la configuration à une [étape ultérieure](#check-status). La valeur respecte la casse. |
 | `type` | Le type de configuration. Cette propriété doit être définie sur `BYOK_CONFIG`. |
-| `imsOrgId` | ID d’organisation. Cet identifiant doit être la même valeur que celle fournie sous la variable `x-gw-ims-org-id` en-tête . |
+| `imsOrgId` | ID d’organisation. Cet identifiant doit être la même valeur que celle fournie sous l’en-tête `x-gw-ims-org-id`. |
 | `configData` | Cette propriété contient les détails suivants sur la configuration :<ul><li>`providerType` : Cette propriété doit être définie sur `AZURE_KEYVAULT`.</li><li>`keyVaultKeyIdentifier` : URI de coffre de clés que vous avez copié [précédemment](#send-to-adobe).</li></ul> |
 
 +++
@@ -217,11 +217,11 @@ curl -X GET \
 
 L’attribut `status` peut avoir l’une des quatre valeurs ayant la signification suivante :
 
-1. `RUNNING`: vérifie que Platform peut accéder au coffre-fort de clé et de clé.
+1. `RUNNING` : vérifie que Platform peut accéder à la clé et à la clé Vault.
 1. `UPDATE_EXISTING_RESOURCES` : le système ajoute le coffre de clés et le nom des clés aux magasins de données de tous les sandbox de votre entreprise.
-1. `COMPLETED`: le coffre-fort de la clé et le nom de la clé ont été ajoutés aux banques de données avec succès.
+1. `COMPLETED` : le coffre-fort de la clé et le nom de la clé ont été ajoutés avec succès aux banques de données.
 1. `FAILED` : un problème s’est produit, principalement lié à la configuration de la clé, du coffre de clés ou de l’application multi-utilisateur.
 
 ## Étapes suivantes
 
-En suivant les étapes ci-dessus, vous avez activé le CMK pour votre entreprise. Les données ingérées dans les entrepôts de données principaux seront désormais chiffrées et déchiffrées à l’aide des clés de votre [!DNL Azure] Key Vault. Pour en savoir plus sur le cryptage des données dans Adobe Experience Platform, voir [documentation sur le chiffrement](../encryption.md).
+En suivant les étapes ci-dessus, vous avez activé le CMK pour votre entreprise. Les données ingérées dans les entrepôts de données principaux seront désormais chiffrées et déchiffrées à l’aide des clés de votre Key Vault [!DNL Azure]. Pour en savoir plus sur le cryptage des données dans Adobe Experience Platform, consultez la [documentation sur le cryptage](../encryption.md).

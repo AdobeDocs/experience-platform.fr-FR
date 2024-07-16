@@ -7,14 +7,14 @@ author: ens71067
 exl-id: 98d50b90-38ed-4cc2-ad48-78b712b453f7
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '661'
-ht-degree: 72%
+source-wordcount: '663'
+ht-degree: 68%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform
 
-**Date de lancement : 11 décembre 2019**
+**Date de mise à jour : jeudi 11 décembre 2019**
 
 Mises à jour des fonctionnalités existantes dans Adobe Experience Platform :
 
@@ -33,8 +33,8 @@ Adobe Experience Platform Segmentation Service propose une interface utilisa
 
 | Fonctionnalité | Description |
 |--- | ---|
-| Onglet Audiences fusionnées dans [!DNL Segment Builder] | Le [!UICONTROL Segments] et [!UICONTROL Audiences] dans les onglets [!DNL Segment Builder] ont été combinés en une seule [!UICONTROL Audiences] . Cet onglet vous permet de parcourir et de rechercher les audiences existantes, que vous pouvez ensuite faire glisser dans le canevas du créateur de règles pour créer une nouvelle définition de segment. En référençant une audience, il est possible d’ajouter l’un des jeux de logiques de règles suivants à la nouvelle définition de segment : l’appartenance à l’audience en tant que règle, le jeu complet de la logique de règle qui a défini l’audience référencée. |
-| Nouvel emplacement du sélecteur de politique de fusion | L’emplacement du sélecteur de stratégie de fusion dans la variable [!DNL Segment Builder] a été modifié. Pour sélectionner une stratégie de fusion pour une définition de segment, cliquez sur l’icône d’engrenage sur la page **[!UICONTROL Champs]** , puis utilisez la fonction **[!UICONTROL Stratégie de fusion]** menu déroulant pour sélectionner la stratégie de fusion à utiliser. |
+| Onglet Audiences fusionnées dans [!DNL Segment Builder] | Les onglets [!UICONTROL Segments] et [!UICONTROL Audiences] dans [!DNL Segment Builder] ont été combinés en un seul onglet [!UICONTROL Audiences]. Cet onglet vous permet de parcourir et de rechercher les audiences existantes, que vous pouvez ensuite faire glisser dans la zone de travail du créateur de règles pour créer une nouvelle définition de segment. En référençant une audience, il est possible d’ajouter l’un des jeux de logiques de règles suivants à la nouvelle définition de segment : l’appartenance à l’audience en tant que règle, le jeu complet de la logique de règle qui a défini l’audience référencée. |
+| Nouvel emplacement du sélecteur de politique de fusion | L’emplacement du sélecteur de stratégie de fusion dans [!DNL Segment Builder] a été modifié. Pour sélectionner une stratégie de fusion pour une définition de segment, sélectionnez l’icône en forme d’engrenage dans l’onglet **[!UICONTROL Champs]**, puis utilisez le menu déroulant **[!UICONTROL Stratégie de fusion]** pour sélectionner la stratégie de fusion que vous souhaitez utiliser. |
 
 **Problèmes connus**
 
@@ -58,16 +58,16 @@ Adobe Experience Platform [!DNL Decisioning Service] permet de sélectionner int
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide de [!DNL Platform] services. Vous pouvez ingérer des données provenant de diverses sources telles que les solutions Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
+Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services [!DNL Platform]. Vous pouvez ingérer des données provenant de diverses sources telles que les solutions Adobe, le stockage dans le cloud, les logiciels tiers et le système de gestion de la relation client.
 
-[!DNL Experience Platform] fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier auprès de vos services de gestion de la relation client et de vos systèmes de stockage, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+[!DNL Experience Platform] fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source pour différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier auprès de vos services de gestion de la relation client et de vos systèmes de stockage, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | ---------- | ------------ |
-| Connexion en continu | L’ingestion par flux vous permet d’envoyer des données depuis des périphériques côté client et côté serveur vers [!DNL Experience Platform] en temps réel. La version comprend une nouvelle interface utilisateur pour la connexion en continu. |
-| Prise en charge des connecteurs pour [!DNL Google Cloud Store] | Prise en charge de la collecte de données à partir de [!DNL Google Cloud Store]. |
+| Connexion en continu | L’ingestion par flux vous permet d’envoyer en temps réel des données de périphériques côté client et côté serveur vers [!DNL Experience Platform]. La version comprend une nouvelle interface utilisateur pour la connexion en continu. |
+| Prise en charge des connecteurs pour [!DNL Google Cloud Store] | Prise en charge de la collecte de données de [!DNL Google Cloud Store]. |
 
 **Problèmes connus**
 
@@ -90,10 +90,10 @@ XDM est une spécification documentée publiquement conçue pour améliorer la p
 **Correctifs de bugs**
 
 * Maintenance et améliorations relatives au contrôle d’accès et aux sandbox.
-* Prise en charge de l’`eTag` pour le point d’entrée `/descriptors` dans l’API [!DNL Schema Registry]
+* Prise en charge de `eTag` pour le point de terminaison `/descriptors` dans l’API [!DNL Schema Registry].
 
 **Problèmes connus**
 
 * Aucun
 
-Pour en savoir plus sur l’utilisation de XDM à l’aide de la variable [!DNL Schema Registry] API et [!DNL Schema Editor] dans l’interface utilisateur, veuillez lire [Documentation du système XDM](../../xdm/home.md).
+Pour en savoir plus sur l’utilisation de XDM à l’aide de l’API [!DNL Schema Registry] et de l’interface utilisateur [!DNL Schema Editor], consultez la [documentation du système XDM](../../xdm/home.md).

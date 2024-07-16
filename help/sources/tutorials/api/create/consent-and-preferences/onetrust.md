@@ -1,47 +1,47 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;OneTrust
 solution: Experience Platform
-title: Création d’un flux de données pour une source d’intégration OneTrust à l’aide de l’API Flow Service
+title: Créez un flux de données pour une source d’intégration OneTrust à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform à l’intégration OneTrust à l’aide de l’API Flow Service.
 exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
 source-git-commit: 9846dc24321d7b32a110cfda9df3511b1e3a82ed
 workflow-type: tm+mt
-source-wordcount: '1961'
-ht-degree: 62%
+source-wordcount: '1913'
+ht-degree: 61%
 
 ---
 
-# Création d’un flux de données pour un [!DNL OneTrust Integration] source à l’aide de la fonction [!DNL Flow Service] API
+# Créez un flux de données pour une source [!DNL OneTrust Integration] à l’aide de l’API [!DNL Flow Service]
 
 >[!NOTE]
 >
->Le [!DNL OneTrust Integration] source ne prend en charge que l’ingestion des données de consentement et de préférences, et non les cookies.
+>La source [!DNL OneTrust Integration] ne prend en charge que l’ingestion des données de consentement et de préférences et non des cookies.
 
-Le tutoriel suivant décrit les étapes à suivre pour créer une connexion source et un flux de données afin d’importer des données de consentement historiques et planifiées de [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) vers Adobe Experience Platform à l’aide de la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Le tutoriel suivant vous guide tout au long des étapes nécessaires à la création d’une connexion source et d’un flux de données pour importer les données de consentement historiques et planifiées de [[!DNL OneTrust Integration]](https://my.onetrust.com/s/contactsupport?language=en_US) vers Adobe Experience Platform à l’aide de l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Conditions préalables
 
 >[!IMPORTANT]
 >
->Le [!DNL OneTrust Integration] le connecteur source et la documentation ont été créés par [!DNL OneTrust Integration] l&#39;équipe. Pour toute question ou demande de mise à jour, veuillez contacter la [[!DNL OneTrust] équipe](https://my.onetrust.com/s/contactsupport?language=en_US) directement.
+>Le connecteur source [!DNL OneTrust Integration] et la documentation ont été créés par l’équipe [!DNL OneTrust Integration]. Pour toute demande de mise à jour ou de demande de mise à jour, contactez directement l&#39;[[!DNL OneTrust] équipe](https://my.onetrust.com/s/contactsupport?language=en_US).
 
-Avant de vous connecter [!DNL OneTrust Integration] sur Platform, vous devez d’abord récupérer votre jeton d’accès. Pour obtenir des instructions détaillées sur la recherche de votre jeton d’accès, reportez-vous à la section [[!DNL OneTrust Integration] Guide OAuth 2](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
+Avant de pouvoir vous connecter [!DNL OneTrust Integration] à Platform, vous devez d’abord récupérer votre jeton d’accès. Pour obtenir des instructions détaillées sur la recherche de votre jeton d’accès, consultez le [[!DNL OneTrust Integration] guide OAuth 2](https://developer.onetrust.com/docs/api-docs-v3/b3A6MjI4OTUyOTc-generate-access-token).
 
-Le jeton d’accès n’est pas actualisé automatiquement après son expiration, car les jetons d’actualisation système à système ne sont pas pris en charge par [!DNL OneTrust]. Par conséquent, il est nécessaire de s’assurer que votre jeton d’accès est mis à jour dans la connexion avant son expiration. La durée de vie maximale configurable d’un jeton d’accès est d’un an. Pour en savoir plus sur la mise à jour de votre jeton d’accès, reportez-vous à la section [[!DNL OneTrust] document sur la gestion de vos informations d’identification client OAuth 2.0](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials).
+Le jeton d’accès n’est pas actualisé automatiquement après son expiration, car les jetons d’actualisation système à système ne sont pas pris en charge par [!DNL OneTrust]. Par conséquent, il est nécessaire de s’assurer que votre jeton d’accès est mis à jour dans la connexion avant son expiration. La durée de vie maximale configurable d’un jeton d’accès est d’un an. Pour en savoir plus sur la mise à jour de votre jeton d’accès, consultez le [[!DNL OneTrust] document sur la gestion de vos informations d’identification client OAuth 2.0](https://developer.onetrust.com/docs/documentation/ZG9jOjIyODk1MTUw-managing-o-auth-2-0-client-credentials).
 
-## Connexion [!DNL OneTrust Integration] vers Platform à l’aide de [!DNL Flow Service] API
+## Connectez [!DNL OneTrust Integration] à Platform à l’aide de l’API [!DNL Flow Service]
 
 >[!NOTE]
 >
->Le [!DNL OneTrust Integration] Les spécifications d’API sont partagées avec Adobe pour l’ingestion de données.
+>Les spécifications d’API [!DNL OneTrust Integration] sont partagées avec Adobe pour l’ingestion de données.
 
-Le tutoriel suivant vous guide tout au long des étapes de création d’un [!DNL OneTrust Integration] connexion source et créer un flux de données à importer [!DNL OneTrust Integration] données vers Platform à l’aide de la fonction [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Le tutoriel suivant vous guide tout au long des étapes nécessaires à la création d’une connexion source [!DNL OneTrust Integration] et à la création d’un flux de données pour importer des données [!DNL OneTrust Integration] vers Platform à l’aide de l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Créer une connexion de base {#base-connection}
 
 Une connexion de base conserve les informations échangées entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 
-Pour créer un identifiant de connexion de base, envoyez une requête de POST au `/connections` point de terminaison lors de la fourniture de [!DNL OneTrust Integration] informations d’identification d’authentification dans le corps de la requête.
+Pour créer un identifiant de connexion de base, envoyez une requête de POST au point de terminaison `/connections` tout en fournissant vos informations d’authentification [!DNL OneTrust Integration] dans le cadre du corps de la requête.
 
 **Format d’API**
 
@@ -51,7 +51,7 @@ POST /connections
 
 **Requête**
 
-La requête suivante permet de créer une connexion de base pour [!DNL OneTrust Integration] :
+La requête suivante crée une connexion de base pour [!DNL OneTrust Integration] :
 
 ```shell
 curl -X POST \
@@ -84,7 +84,7 @@ curl -X POST \
 | `connectionSpec.id` | Identifiant de spécification de connexion de votre source. Cet identifiant peut être récupéré une fois que votre source est enregistrée et approuvée par le biais de l’API [!DNL Flow Service]. |
 | `auth.specName` | Type d’authentification que vous utilisez pour authentifier votre source sur Platform. |
 | `auth.params.` | Contient les informations d’identification requises pour authentifier votre source, notamment le jeton d’accès permettant de se connecter à l’API. |
-| `auth.params.accessToken` | Le jeton d’accès qui correspond à votre [!DNL OneTrust Integration] compte . |
+| `auth.params.accessToken` | Jeton d’accès correspondant à votre compte [!DNL OneTrust Integration]. |
 
 **Réponse**
 
@@ -101,7 +101,7 @@ Une réponse réussie renvoie la nouvelle connexion de base, y compris son ident
 
 À l’aide de l’identifiant de connexion de base généré à l’étape précédente, vous pouvez explorer les fichiers et répertoires en exécutant des requêtes GET.
 
-Utilisez les appels suivants pour trouver le chemin d’accès au fichier que vous souhaitez importer. [!DNL Platform]:
+Utilisez les appels suivants pour trouver le chemin du fichier que vous souhaitez importer dans [!DNL Platform] :
 
 **Format d’API**
 
@@ -575,7 +575,7 @@ POST /sourceConnections
 
 **Requête**
 
-La requête suivante crée une connexion source pour [!DNL OneTrust Integration] :
+La requête suivante crée une connexion source pour [!DNL OneTrust Integration] :
 
 ```shell
 curl -X POST \
@@ -647,7 +647,7 @@ POST /targetConnections
 
 **Requête**
 
-La requête suivante crée une connexion cible pour [!DNL OneTrust Integration] :
+La requête suivante crée une connexion cible pour [!DNL OneTrust Integration] :
 
 ```shell
 curl -X POST \
@@ -695,7 +695,7 @@ Une réponse réussie renvoie l’identifiant unique de la nouvelle connexion ci
 
 ### Créer un mappage {#mapping}
 
-Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache. Pour ce faire, il vous suffit d’adresser une requête de POST à [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) avec des mappages de données définis dans le payload de la requête.
+Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache. Pour ce faire, effectuez une requête de POST vers [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) avec des mappages de données définis dans le payload de la requête.
 
 **Format d’API**
 
@@ -786,7 +786,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ### Créer un flux {#flow}
 
-La dernière étape pour obtenir des données de [!DNL OneTrust Integration] à Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
+La dernière étape pour apporter des données de [!DNL OneTrust Integration] à Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
 
 * [ID de connexion source](#source-connection)
 * [ID de connexion cible](#target-connection)
@@ -874,20 +874,20 @@ La section suivante fournit des informations sur les étapes de surveillance, de
 
 ### Surveiller votre flux de données
 
-Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs. Pour consulter des exemples complets d’API, reportez-vous au guide sur [surveillance de vos flux de données sources à l’aide de l’API](../../monitor.md).
+Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs. Pour obtenir des exemples complets d’API, consultez le guide sur la [surveillance des flux de données de sources à l’aide de l’API](../../monitor.md).
 
 ### Mettre à jour votre flux de données
 
-Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés, en envoyant une requête PATCH à la variable `/flows` point d’entrée [!DNL Flow Service] API, tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre flux de données `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour des flux de données sources à l’aide de l’API](../../update-dataflows.md).
+Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les ensembles de mappages associés, en envoyant une requête de PATCH au point de terminaison `/flows` de l’API [!DNL Flow Service], tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique `etag` de votre flux de données dans l’en-tête `If-Match`. Pour obtenir des exemples complets d’API, lisez le guide sur la [mise à jour des flux de données de sources à l’aide de l’API](../../update-dataflows.md).
 
 ### Mettre à jour votre compte
 
-Mettez à jour le nom, la description et les informations d’identification de votre compte source en adressant une requête de PATCH au [!DNL Flow Service] API tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique de votre compte source `etag` dans le `If-Match` en-tête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [mise à jour de votre compte source à l’aide de l’API](../../update.md).
+Mettez à jour le nom, la description et les informations d’identification de votre compte source en adressant une requête de PATCH à l’API [!DNL Flow Service] tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique `etag` de votre compte source dans l’en-tête `If-Match`. Pour obtenir des exemples complets d’API, lisez le guide sur la [mise à jour de votre compte source à l’aide de l’API](../../update.md).
 
 ### Supprimer le flux de données
 
-Supprimez votre flux de données en adressant une requête de DELETE à la fonction [!DNL Flow Service] API tout en fournissant l’identifiant du flux de données que vous souhaitez supprimer dans le cadre du paramètre de requête . Pour consulter des exemples complets d’API, reportez-vous au guide sur [suppression de vos flux de données à l’aide de l’API](../../delete-dataflows.md).
+Supprimez votre flux de données en adressant une requête de DELETE à l’API [!DNL Flow Service] tout en fournissant l’identifiant du flux de données que vous souhaitez supprimer dans le cadre du paramètre de requête . Pour obtenir des exemples complets d’API, lisez le guide sur la [suppression de vos flux de données à l’aide de l’API](../../delete-dataflows.md).
 
 ### Suppression de votre compte
 
-Supprimez votre compte en adressant une requête de DELETE à la fonction [!DNL Flow Service] API tout en fournissant l’identifiant de connexion de base du compte que vous souhaitez supprimer. Pour consulter des exemples complets d’API, reportez-vous au guide sur [suppression de votre compte source à l’aide de l’API](../../delete.md).
+Supprimez votre compte en adressant une requête de DELETE à l’API [!DNL Flow Service] tout en fournissant l’identifiant de connexion de base du compte que vous souhaitez supprimer. Pour obtenir des exemples complets d’API, lisez le guide sur la [suppression de votre compte source à l’aide de l’API](../../delete.md).

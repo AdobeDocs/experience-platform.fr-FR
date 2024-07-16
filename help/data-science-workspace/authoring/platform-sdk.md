@@ -6,12 +6,12 @@ description: Ce tutoriel vous fournit des informations sur la conversion de data
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 69%
+source-wordcount: '486'
+ht-degree: 60%
 
 ---
 
-# Création de modèles à l’aide de Adobe Experience Platform [!DNL Platform] SDK
+# Création de modèles à l’aide du SDK Adobe Experience Platform [!DNL Platform]
 
 Ce tutoriel vous fournit des informations sur la conversion de `data_access_sdk_python` en nouveau `platform_sdk` Python en Python et en R. Ce tutoriel fournit des informations sur les opérations suivantes :
 
@@ -21,7 +21,7 @@ Ce tutoriel vous fournit des informations sur la conversion de `data_access_sdk_
 
 ## Authentification de création {#build-authentication}
 
-L’authentification est requise pour effectuer des appels vers [!DNL Adobe Experience Platform], et comprend une clé API, un ID d’organisation, un jeton utilisateur et un jeton de service.
+L’authentification est requise pour effectuer des appels vers [!DNL Adobe Experience Platform]. Elle comprend la clé API, l’ID d’organisation, un jeton utilisateur et un jeton de service.
 
 ### Python
 
@@ -68,18 +68,18 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Lecture basique des données {#basic-reading-of-data}
 
-Avec la nouvelle [!DNL Platform] SDK, la taille de lecture maximale est de 32 Go, avec un temps de lecture maximal de 10 minutes.
+Avec le nouveau SDK [!DNL Platform], la taille de lecture maximale est de 32 Go, avec un temps de lecture maximal de 10 minutes.
 
 Si votre temps de lecture est trop long, vous pouvez essayer d’utiliser l’une des options de filtrage suivantes :
 
 - [Filtrage des données par décalage et limite](#filter-by-offset-and-limit)
-- [Filtrage des données par date](#filter-by-date)
+- [Filtrer les données par date](#filter-by-date)
 - [Filtrage des données par colonne](#filter-by-selected-columns)
 - [Obtention de résultats triés](#get-sorted-results)
 
 >[!NOTE]
 >
->L’organisation est définie dans la variable `client_context`.
+>L’organisation est définie dans le `client_context`.
 
 ### Python
 
@@ -145,7 +145,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-La nouvelle [!DNL Platform] Le SDK prend en charge les opérations suivantes :
+Le nouveau SDK [!DNL Platform] prend en charge les opérations suivantes :
 
 | Opération | Fonction |
 | --------- | -------- |
@@ -195,7 +195,7 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 >[!NOTE]
 >
->L’organisation est définie dans la variable `client_context`.
+>L’organisation est définie dans le `client_context`.
 
 Pour écrire des données en Python et en R, utilisez l’un des exemples suivants :
 
@@ -220,4 +220,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Étapes suivantes
 
-Une fois que vous avez configuré l’outil de chargement de données `platform_sdk`, les données sont préparées puis réparties dans les jeux de données `train` et `val`. Pour en savoir plus sur la préparation des données et la conception des fonctionnalités, consultez la section sur [la préparation des données et la conception des fonctionnalités](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) du tutoriel sur la création d’une recette à l’aide des notebooks [!DNL JupyterLab]
+Une fois que vous avez configuré l’outil de chargement de données `platform_sdk`, les données sont préparées puis réparties dans les jeux de données `train` et `val`. Pour en savoir plus sur la préparation des données et la conception des fonctionnalités, consultez la section sur la [préparation des données et la conception des fonctionnalités](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) du tutoriel sur la création d’une recette à l’aide de [!DNL JupyterLab] notebooks.

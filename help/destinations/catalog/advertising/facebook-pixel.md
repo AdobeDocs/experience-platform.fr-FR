@@ -1,20 +1,20 @@
 ---
 keywords: Extensions de pixel facebook;extension de pixel facebook;destinations de pixel facebook;pixel facebook
 title: Extension Pixel Facebook
-description: L’extension Facebook Pixel est une destination publicitaire de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Facebook Pixel est une destination publicitaire de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 6a2c661f-1ad0-4d96-b1bb-bf8c158c8521
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '446'
-ht-degree: 86%
+source-wordcount: '438'
+ht-degree: 87%
 
 ---
 
 # Extension [!DNL Facebook Pixel] {#facebook-pixel-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Le [!DNL Facebook Pixel] est un outil d’analyse qui vous permet de mesurer l’efficacité de vos publicités en comprenant les actions des visiteurs sur votre site web.
+[!DNL Facebook Pixel] est un outil d’analyse qui vous permet de mesurer l’efficacité de vos publicités en comprenant les actions que les visiteurs effectuent sur votre site web.
 
 [!DNL Facebook Pixel] est une extension publicitaire dans Adobe Experience Platform. Pour plus d’informations sur la fonctionnalité de l’extension, voir le [site web Pixel Facebook](https://developers.facebook.com/docs/facebook-pixel/).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Facebook Pixel] extension :
+Pour installer l’extension [!DNL Facebook Pixel], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

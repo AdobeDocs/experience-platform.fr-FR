@@ -1,18 +1,19 @@
 ---
 title: Type de données de rapport Détails de la capsule Advertising
-description: Découvrez le type de données XDM (Advertising Pod Details Reporting Experience Data Model).
-source-git-commit: b6b916c76d1b2babb673d419ab69ae414dd42f20
+description: Découvrez le type de données XDM (Modèle de données d’expérience de création de rapports sur les détails de la capsule Advertising).
+exl-id: 5164520f-8c48-4eb0-a0b0-66dc10b68356
+source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
 workflow-type: tm+mt
 source-wordcount: '180'
 ht-degree: 6%
 
 ---
 
-# [!UICONTROL Rapports sur les détails de la capsule publicitaire] type de données
+# [!UICONTROL Rapport sur les détails de la capsule Advertising] type de données
 
-[!UICONTROL Rapports sur les détails de la capsule publicitaire] est un type de données XDM (Experience Data Model) standard. Il définit une séquence ou un groupe de publicités généralement lues l’une après l’autre lors des pauses de contenu. Utilisez la variable [!UICONTROL Rapports sur les détails de la capsule publicitaire] type de données pour capturer des détails tels que l’identifiant de coupure publicitaire, un nom convivial pour la coupure publicitaire, l’index des publicités pendant la coupure et le décalage de la coupure publicitaire dans la chronologie du contenu en secondes.
+[!UICONTROL  La création de rapports sur les détails de la capsule Advertising ] est un type de données XDM (Experience Data Model) standard. Il définit une séquence ou un groupe de publicités généralement lues l’une après l’autre lors des pauses de contenu. Utilisez le type de données [!UICONTROL Rapport sur les détails de la capsule Advertising] pour capturer des détails tels que l’ID de coupure publicitaire, un nom convivial pour la coupure publicitaire, l’index des publicités pendant la coupure et le décalage de la coupure publicitaire dans la chronologie du contenu en secondes.
 
-![Diagramme du type de données Rapports sur les détails de la capsule publicitaire.](../images/data-types/advertising-pod-details-information.png)
+![ Diagramme du type de données de rapport Détails de la capsule Advertising.](../images/data-types/advertising-pod-details-information.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |----------------------------|------------------------|-----------|-------------------------------------------------------|

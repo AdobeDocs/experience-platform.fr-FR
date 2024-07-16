@@ -4,7 +4,7 @@ description: Découvrez comment effectuer des appels au point d’entrée /envir
 exl-id: 4c22f799-8338-4cf0-980a-3900d725ab5d
 source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '999'
 ht-degree: 100%
 
 ---
@@ -28,7 +28,7 @@ Les environnements sont organisés en trois types (ou étapes), chaque type ayan
 
 {style="table-layout:auto"}
 
-Ces types d’environnements ont un comportement similaire, mais sont utilisés à différentes étapes du [flux de travaux de publication de balises](../../ui/publishing/publishing-flow.md).
+Ces types d’environnements ont un comportement similaire, mais sont utilisés à différentes étapes du [workflow de publication de balises](../../ui/publishing/publishing-flow.md).
 
 Un environnement appartient exactement à une [propriété](./properties.md).
 

@@ -13,19 +13,19 @@ ht-degree: 44%
 
 # Création d’une définition de segment à l’aide de l’API Segmentation Service
 
-Ce document fournit un tutoriel pour le développement, le test, la prévisualisation et l’enregistrement d’une définition de segment à l’aide du [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
+Ce document fournit un tutoriel pour le développement, le test, la prévisualisation et l’enregistrement d’une définition de segment à l’aide de [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md).
 
-Pour plus d’informations sur la création de définitions de segment à l’aide de l’interface utilisateur, voir [Guide du créateur de segments](../ui/segment-builder.md).
+Pour plus d’informations sur la création de définitions de segment à l’aide de l’interface utilisateur, consultez le [guide du créateur de segments](../ui/segment-builder.md).
 
 ## Commencer
 
-Ce tutoriel nécessite une compréhension pratique des différentes [!DNL Adobe Experience Platform] services impliqués dans la création de définitions de segment. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
+Ce tutoriel nécessite une compréhension pratique des différents services [!DNL Adobe Experience Platform] impliqués dans la création de définitions de segment. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): vous permet de créer des audiences à l’aide de définitions de segment ou d’autres sources externes à partir de données Real-time Customer Profile.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md) : permet de créer des audiences à l’aide de définitions de segment ou d’autres sources externes à partir de données Real-time Customer Profile.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client. Pour utiliser au mieux la segmentation, veillez à ce que vos données soient ingérées en tant que profils et événements en fonction des [bonnes pratiques pour la modélisation des données](../../xdm/schema/best-practices.md).
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels à la fonction [!DNL Platform] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour passer avec succès des appels aux API [!DNL Platform].
 
 ### Lecture d’exemples d’appels API
 
@@ -53,15 +53,15 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 ## Développement d’une définition de segment
 
-La première étape de la segmentation consiste à définir une définition de segment. Une définition de segment est un objet qui contient une requête écrite dans [!DNL Profile Query Language] (PQL). Cet objet est également appelé prédicat PQL. Les prédicats PQL définissent les règles de la définition de segment en fonction des conditions liées aux données d’enregistrement ou de série temporelle que vous fournissez. [!DNL Real-Time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
+La première étape de la segmentation consiste à définir une définition de segment. Une définition de segment est un objet qui encapsule une requête écrite dans [!DNL Profile Query Language] (PQL). Cet objet est également appelé prédicat PQL. Les prédicats PQL définissent les règles de la définition de segment en fonction des conditions liées aux données d’enregistrement ou de série temporelle que vous fournissez à [!DNL Real-Time Customer Profile]. Pour plus d’informations sur l’écriture de requêtes PQL, reportez-vous au [guide de PQL](../pql/overview.md).
 
-Vous pouvez créer une définition de segment en adressant une requête de POST à la fonction `/segment/definitions` du point de terminaison [!DNL Segmentation] API. L’exemple suivant décrit comment formater une requête de définition, y compris les informations requises pour qu’une définition de segment soit définie avec succès.
+Vous pouvez créer une définition de segment en envoyant une requête de POST au point de terminaison `/segment/definitions` dans l’API [!DNL Segmentation]. L’exemple suivant décrit comment formater une requête de définition, y compris les informations requises pour qu’une définition de segment soit définie avec succès.
 
-Pour obtenir une explication détaillée sur la définition d’une définition de segment, veuillez lire le [guide de développement de la définition de segment](../api/segment-definitions.md#create).
+Pour obtenir une explication détaillée sur la définition d’une définition de segment, consultez le [guide de développement de la définition de segment](../api/segment-definitions.md#create).
 
 ## Estimation et prévisualisation d’une audience {#estimate-and-preview-an-audience}
 
-Lorsque vous développez votre définition de segment, vous pouvez utiliser les outils d’estimation et de prévisualisation dans la [!DNL Real-Time Customer Profile] pour afficher des informations sommaires afin de vous assurer que vous isolez l’audience attendue. Les estimations fournissent des informations statistiques sur une définition de segment telles que la taille prévue de l’audience et l’intervalle de confiance. Les prévisualisations fournissent des listes paginées des profils admissibles pour une définition de segment, ce qui vous permet de comparer les résultats avec vos attentes.
+Au fur et à mesure que vous développez votre définition de segment, vous pouvez utiliser les outils d’estimation et de prévisualisation dans [!DNL Real-Time Customer Profile] pour afficher des informations de niveau résumé afin de vous assurer que vous isolez l’audience attendue. Les estimations fournissent des informations statistiques sur une définition de segment telles que la taille prévue de l’audience et l’intervalle de confiance. Les prévisualisations fournissent des listes paginées des profils admissibles pour une définition de segment, ce qui vous permet de comparer les résultats avec vos attentes.
 
 En estimant et en prévisualisant votre audience, vous pouvez tester et optimiser vos prédicats PQL jusqu’à ce qu’ils produisent un résultat souhaitable. Ils peuvent alors être utilisés dans une définition de segment mise à jour.
 
@@ -93,15 +93,15 @@ Les estimations durent généralement entre 10 et 15 secondes. L’estimation e
 
 Vous pouvez créer une nouvelle tâche de prévisualisation en exécutant une requête POST sur le point d’entrée `/preview`.
 
-Vous trouverez des instructions détaillées sur la création d’une tâche de prévisualisation dans la section [guide des prévisualisations et des points de fin d’estimation](../api/previews-and-estimates.md#create-preview).
+Vous trouverez des instructions détaillées sur la création d’une tâche de prévisualisation dans le [guide de points de fin d’aperçus et d’estimations](../api/previews-and-estimates.md#create-preview).
 
 ### Affichage d’une estimation ou d’une prévisualisation
 
 Les processus d’estimation et de prévisualisation sont exécutés de manière asynchrone, car le temps de traitement peut différer d’une requête à une autre. Une fois qu’une requête a été lancée, vous pouvez utiliser des appels API pour récupérer (GET) l’état actuel de l’estimation ou de la prévisualisation au fur et à mesure de sa progression.
 
-En utilisant la variable [!DNL Segmentation Service] API, vous pouvez rechercher l’état actuel d’une tâche de prévisualisation par son identifiant. Si l’état affiche « RESULT_READY », vous pouvez consulter les résultats. Pour rechercher l’état actuel d’une tâche de prévisualisation, veuillez lire la section sur [récupération d’une section de tâche de prévisualisation](../api/previews-and-estimates.md#get-preview) dans le guide de points de fin previews and estimated . Pour rechercher l’état actuel d’une tâche d’estimation, veuillez lire la section sur [récupération d’une tâche d’estimation](../api/previews-and-estimates.md#get-estimate) dans le guide de points de fin previews and estimated .
+À l’aide de l’API [!DNL Segmentation Service], vous pouvez rechercher l’état actuel d’une tâche de prévisualisation par son identifiant. Si l’état affiche « RESULT_READY », vous pouvez consulter les résultats. Pour rechercher l’état actuel d’une tâche de prévisualisation, veuillez lire la section sur la [récupération d’une section de tâche de prévisualisation](../api/previews-and-estimates.md#get-preview) dans le guide de points de fin de prévisualisation et d’estimation. Pour rechercher l’état actuel d’une tâche d’estimation, veuillez lire la section sur la [récupération d’une tâche d’estimation](../api/previews-and-estimates.md#get-estimate) dans le guide de points de fin d’aperçu et d’estimation.
 
 
 ## Étapes suivantes
 
-Une fois que vous avez développé, testé et enregistré votre définition de segment, vous pouvez créer une tâche de segmentation pour créer une audience à l’aide de la fonction [!DNL Segmentation Service] API. Consultez le tutoriel portant sur l’[évaluation et l’accès aux résultats des segments](./evaluate-a-segment.md) pour obtenir des instructions détaillées sur la manière d’y parvenir.
+Une fois que vous avez développé, testé et enregistré votre définition de segment, vous pouvez créer une tâche de segmentation pour créer une audience à l’aide de l’API [!DNL Segmentation Service]. Consultez le tutoriel portant sur l’[évaluation et l’accès aux résultats des segments](./evaluate-a-segment.md) pour obtenir des instructions détaillées sur la manière d’y parvenir.

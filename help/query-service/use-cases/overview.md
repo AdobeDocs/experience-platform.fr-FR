@@ -2,7 +2,8 @@
 title: Cas d’utilisation pris en charge avec Adobe Experience Platform Query Service
 description: Découvrez les cas d’utilisation pris en charge par Adobe Experience Platform Query Service.
 keywords: Query Service, cas d’utilisation
-source-git-commit: 454f485a327233ca1a5b37ea58f16b7b53255ba6
+exl-id: eba8050d-be3a-41b6-8175-4f6b2b2ef7b0
+source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 7%
@@ -20,4 +21,3 @@ Chaque document de cette section contient des informations sur la mise en oeuvre
 - [Valeur durée de vie client](./customer-lifetime-value.md)
 - [Déterminer un score de propension](./propensity-score.md)
 - [Correspondance floue](./fuzzy-match.md)
-

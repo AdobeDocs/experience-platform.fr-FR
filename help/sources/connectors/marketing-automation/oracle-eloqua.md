@@ -29,5 +29,5 @@ La documentation ci-dessous fournit des informations sur la connexion d’[!DNL 
 
 ## Connecter [!DNL Oracle Eloqua] à Platform à l’aide de l’interface utilisateur
 
-* [Création d’une connexion source Eloqua d’Oracle dans l’interface utilisateur](../../tutorials/ui/create/marketing-automation/oracle-eloqua.md)
+* [Création d’une connexion source Eloqua Oracle dans l’interface utilisateur](../../tutorials/ui/create/marketing-automation/oracle-eloqua.md)
 * [Créer un flux de données pour une connexion à une source d’automatisation du marketing dans l’interface utilisateur](../../tutorials/ui/dataflow/marketing-automation.md)

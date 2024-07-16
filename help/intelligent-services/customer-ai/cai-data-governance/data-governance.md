@@ -7,8 +7,8 @@ description: Adobe Experience Platform fournit plusieurs services et outils qu
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
 source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
-source-wordcount: '303'
-ht-degree: 99%
+source-wordcount: '278'
+ht-degree: 97%
 
 ---
 

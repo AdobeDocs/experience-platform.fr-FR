@@ -5,7 +5,7 @@ description: Ce document fournit des instructions sur la manière d’utiliser l
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '1845'
+source-wordcount: '1847'
 ht-degree: 90%
 
 ---
@@ -169,23 +169,23 @@ Vous pouvez ajouter manuellement des champs, des fonctions et des opérateurs à
 
 ![create-calculated-field](../images/ui/mapping/create-calculated-field.png)
 
-### Mappage d’importation {#import}
+### Importer le mapping {#import}
 
-Vous pouvez réutiliser le mappage d’un flux de données existant afin de réduire la durée de configuration manuelle de votre ingestion de données et de limiter les erreurs. Sélectionner **[!UICONTROL Mappage d’importation]** pour réutiliser un mappage existant.
+Vous pouvez réutiliser le mappage d’un flux de données existant afin de réduire la durée de configuration manuelle de votre ingestion de données et de limiter les erreurs. Sélectionnez **[!UICONTROL Import mapping]** pour réutiliser un mapping existant.
 
 ![import-mapping](../images/ui/mapping/import-mapping.png)
 
-Le [!UICONTROL Mappage d’importation] s’affiche, vous indiquant la liste des flux de données à choisir.
+La fenêtre [!UICONTROL Mappage d’importation] s’affiche, vous fournissant une liste de flux de données parmi lesquels choisir.
 
 Sélectionnez l’icône d’aperçu pour prévisualiser le mappage du flux de données que vous avez sélectionné.
 
 ![list-mapping](../images/ui/mapping/list-mapping.png)
 
-La fenêtre d’aperçu vous permet d’examiner le mappage existant avant de l’importer dans votre flux de données. Une fois que vous avez vérifié le mappage, vous pouvez sélectionner **[!UICONTROL Précédent]** pour revenir à la liste des flux de données et inspecter un autre ensemble de mappages, vous pouvez également sélectionner **[!UICONTROL Sélectionner]** pour continuer.
+La fenêtre d’aperçu vous permet d’examiner le mappage existant avant de l’importer dans votre flux de données. Une fois que vous avez vérifié le mappage, vous pouvez sélectionner **[!UICONTROL Précédent]** pour revenir à la liste des flux de données et inspecter un autre ensemble de mappages, ou vous pouvez sélectionner **[!UICONTROL Sélectionner]** pour continuer.
 
-![prévisualisation-mapping](../images/ui/mapping/preview-mapping.png)
+![preview-mapping](../images/ui/mapping/preview-mapping.png)
 
-Vous pouvez également sélectionner le mappage à importer dans la fenêtre de liste des flux de données. Sélectionnez le flux de données contenant le mappage à importer, puis sélectionnez **[!UICONTROL Sélectionner]** pour continuer.
+Vous pouvez également sélectionner le mappage à importer dans la fenêtre de liste des flux de données. Sélectionnez le flux de données qui contient le mappage à importer, puis sélectionnez **[!UICONTROL Sélectionner]** pour continuer.
 
 ![select-mapping](../images/ui/mapping/select-mapping.png)
 

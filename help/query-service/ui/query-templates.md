@@ -29,7 +29,7 @@ Consultez la documentation pour obtenir des instructions sur l’utilisation de 
 
 >[!TIP]
 >
->Lorsque vous enregistrez une requête dans l’éditeur de requêtes, un message de confirmation s’affiche pour vous informer de la réussite de l’action. Ce message contextuel contient un lien qui permet d’accéder facilement à l’espace de travail de planification des requêtes. Voir [documentation sur les requêtes de planification](./query-schedules.md) pour savoir comment exécuter des requêtes sur une cadence personnalisée.
+>Lorsque vous enregistrez une requête dans l’éditeur de requêtes, un message de confirmation s’affiche pour vous informer de la réussite de l’action. Ce message contextuel contient un lien qui permet d’accéder facilement à l’espace de travail de planification des requêtes. Consultez la [documentation sur les requêtes de planification](./query-schedules.md) pour savoir comment exécuter des requêtes sur une cadence personnalisée.
 
 ## Parcourir les modèles de requête {#browse}
 
@@ -43,10 +43,10 @@ Pour trouver les informations de modèle pertinentes, sélectionnez un modèle d
 
 Dans le panneau Détails, vous pouvez exécuter les actions suivantes :
 
-* Sélectionner **[!UICONTROL Exécuter comme CTAS]** pour créer un tableau en sélectionnant les données d’une ou de plusieurs tables existantes. Cette option n’est disponible que si vous avez une requête SELECT.
-* Sélectionner **[!UICONTROL Ajouter un planning]** pour commencer à modifier votre planning pour votre modèle de requête.
-* Sélectionner **[!UICONTROL Afficher le planning]** pour accéder au [!UICONTROL Planifications] de l’éditeur de requêtes. Cette vue contient toutes les informations de planification associées à la requête.
-* Sélectionner **[!UICONTROL Supprimer la requête]** pour supprimer le modèle.
+* Sélectionnez **[!UICONTROL Exécuter en tant que CTAS]** pour créer une table en sélectionnant les données d’une ou de plusieurs tables existantes. Cette option n’est disponible que si vous avez une requête SELECT.
+* Sélectionnez **[!UICONTROL Ajouter un planning]** pour commencer à modifier votre planning pour votre modèle de requête.
+* Sélectionnez **[!UICONTROL Afficher la planification]** pour accéder à l’onglet [!UICONTROL Planifications] de l’éditeur de requêtes. Cette vue contient toutes les informations de planification associées à la requête.
+* Sélectionnez **[!UICONTROL Supprimer la requête]** pour supprimer le modèle.
 * Sélectionnez le nom du modèle pour accéder à l’éditeur de requêtes dans lequel le code SQL est prérenseigné pour modification.
 
 ### Utiliser l’API Query Service pour créer un modèle

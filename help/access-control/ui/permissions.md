@@ -7,7 +7,7 @@ exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
 source-git-commit: 1812af74e82f3071963177356b3cd4b23ea567f5
 workflow-type: tm+mt
 source-wordcount: '356'
-ht-degree: 92%
+ht-degree: 86%
 
 ---
 
@@ -17,7 +17,7 @@ Immédiatement après la [création d’un nouveau profil de produit](#create-a-
 
 ![autorisations](../images/permissions.png)
 
-Les autorisations sont divisées en catégories et répertoriées sur cette page. La liste affiche le nom de la catégorie, le nombre d’autorisations qu’elle contient (et le nombre d’autorisations actives) ainsi que sa description. Consultez le tableau de la section [Autorisations des ressources](/help/access-control/home.md#permissions) pour obtenir une ventilation des autorisations disponibles pour chaque rôle.
+Les autorisations sont divisées en catégories et répertoriées sur cette page. La liste affiche le nom de la catégorie, le nombre d’autorisations qu’elle contient (et le nombre d’autorisations actives) et sa description. Reportez-vous au tableau de la section [Autorisations des ressources](/help/access-control/home.md#permissions) pour une ventilation des autorisations disponibles pour chaque rôle.
 
 Sélectionnez nʼimporte quelle catégorie de la liste pour ouvrir la page **[!UICONTROL Modifier les autorisations]**.
 

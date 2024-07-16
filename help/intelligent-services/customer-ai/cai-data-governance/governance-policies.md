@@ -7,11 +7,11 @@ exl-id: be3eca3a-0ea1-4b84-9454-675a4f9ac71e
 source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
 source-wordcount: '189'
-ht-degree: 98%
+ht-degree: 97%
 
 ---
 
-# Politiques de gouvernance dans Customer AI
+# Stratégies de gouvernance dans Customer AI
 
 Une fois que vous avez terminé le workflow pour créer un modèle et envoyer la configuration du modèle, l’[application des politiques](/help/data-governance/enforcement/auto-enforcement.md) vérifie s’il existe des violations. Si une violation de politique se produit, une fenêtre contextuelle s’affiche indiquant qu’une ou plusieurs politiques ont été violées. Cela permet de vous assurer que vos opérations de données et vos actions marketing dans Platform sont conformes aux politiques d’utilisation des données.
 

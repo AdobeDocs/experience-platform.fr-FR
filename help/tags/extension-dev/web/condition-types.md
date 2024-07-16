@@ -29,7 +29,7 @@ Ce document explique comment définir des types de conditions pour une extension
 
 Les types de conditions se composent généralement des éléments suivants :
 
-1. A [view](./views.md) affichées dans l’interface utilisateur de l’Experience Platform et l’interface utilisateur de collecte de données qui permettent aux utilisateurs de modifier les paramètres de la condition.
+1. Une [vue](./views.md) affichée dans l’interface utilisateur de l’Experience Platform et l’interface utilisateur de collecte de données qui permet aux utilisateurs de modifier les paramètres de la condition.
 2. Un module de bibliothèque émis dans la bibliothèque d’exécution de balise pour interpréter les paramètres et évaluer une condition.
 
 Un module de bibliothèque de type de condition a un seul objectif : évaluer si quelque chose est vrai ou faux. Ce qu’il évalue ne dépend que de vous.

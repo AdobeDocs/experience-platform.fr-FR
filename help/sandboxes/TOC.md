@@ -7,7 +7,7 @@ feature: Sandboxes
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '70'
-ht-degree: 85%
+ht-degree: 87%
 
 ---
 
@@ -20,18 +20,18 @@ ht-degree: 85%
    * [Guide d’utilisation des sandbox](ui/user-guide.md)
    * [Outil Sandbox](ui/sandbox-tooling.md)
 * API Sandbox {#api}
-   * [Aperçu](api/overview.md)
+   * [Vue d’ensemble](api/overview.md)
    * [Prise en main](api/getting-started.md)
    * [Environnements de test disponibles](api/available.md)
    * [Gestion des environnements de test](api/sandboxes.md)
    * [Types de sandbox](api/types.md)
    * [Annexe](api/appendix.md)
 * API des outils Sandbox {#sandbox-tooling-api}
-   * [Aperçu](sandbox-tooling-api/overview.md)
+   * [Vue d’ensemble](sandbox-tooling-api/overview.md)
    * [Prise en main](sandbox-tooling-api/getting-started.md)
-   * [Packages](sandbox-tooling-api/packages.md)
+   * [Packages  ](sandbox-tooling-api/packages.md)
    * [Outils](sandbox-tooling-api/tools.md)
    * [Annexe](sandbox-tooling-api/appendix.md)
 * [Guide de dépannage](troubleshooting-guide.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/sandbox)
-* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

@@ -7,7 +7,7 @@ author: ens28527
 exl-id: 0513b9dc-b16c-43b3-8e17-4be4499308d4
 source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '715'
 ht-degree: 98%
 
 ---
@@ -65,7 +65,7 @@ Adobe Experience Platform vous permet d’offrir aux clients des expériences 
 
 | Fonctionnalité | Description |
 | ------- | ----------- |
-| Parcourir les profils par politique de fusion ou identité | Lors de lʼexploration des profils dans Experience Platform, vous pouvez désormais naviguer par politique de fusion pour prévisualiser 20 profils dʼexemple en fonction de la politique de fusion sélectionnée. Vous pouvez également naviguer par identité afin de rechercher un profil spécifique à lʼaide dʼun espace de noms dʼidentité et dʼune valeur dʼidentité associée. Pour plus d’informations, voir [Guide de l’interface utilisateur de Real-Time Customer Profile](../../profile/ui/user-guide.md). |
+| Parcourir les profils par politique de fusion ou identité | Lors de lʼexploration des profils dans Experience Platform, vous pouvez désormais naviguer par politique de fusion pour prévisualiser 20 profils dʼexemple en fonction de la politique de fusion sélectionnée. Vous pouvez également naviguer par identité afin de rechercher un profil spécifique à lʼaide dʼun espace de noms dʼidentité et dʼune valeur dʼidentité associée. Pour plus d’informations, consultez le [guide de l’interface utilisateur de profil client en temps réel](../../profile/ui/user-guide.md). |
 
 Pour en savoir plus sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à lʼutilisation des données de profil, consultez la [vue d’ensemble de Real-Time Customer Profile](../../profile/home.md).
 
@@ -73,7 +73,7 @@ Pour en savoir plus sur le profil client en temps réel, notamment les bonnes pr
 
 Adobe Experience Platform peut ingérer des données à partir de sources externes tout en vous permettant de structurer, d’étiqueter et d’améliorer ces données à l’aide des services de Platform. Vous pouvez ingérer des données à partir de diverses sources telles que les applications Adobe, le stockage dans le cloud, des logiciels tiers et votre système de gestion de la relation client.
 
-Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
+Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 | Fonctionnalité | Description |
 | ------- | ----------- |

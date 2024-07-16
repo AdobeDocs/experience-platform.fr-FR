@@ -5,8 +5,8 @@ description: Gérez l’expérience de vos clients en connectant vos données da
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
 source-git-commit: 461545b7d06a4c54fb4037cf1eb2ba44dd6ee7b9
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 33%
+source-wordcount: '224'
+ht-degree: 29%
 
 ---
 
@@ -20,7 +20,7 @@ Gérez l’expérience de vos clients en connectant vos données dans Adobe Expe
 
 Actuellement, Platform prend en charge les destinations d’Adobe répertoriées ci-dessous.
 
-Pour comprendre la différence entre les connexions et les extensions, voir [Connexions](../../destination-types.md#connections) sur la page Types et catégories de destination .
+Pour comprendre la différence entre les connexions et les extensions, voir [Connexions](../../destination-types.md#connections) dans la page Types et catégories de destination.
 
 ### Connexions
 
@@ -44,8 +44,8 @@ Pour comprendre la différence entre les connexions et les extensions, voir [Con
 * [Extension Marketo Munchkin](../email/marketo-munchkin.md)
 * [Extension Marketo Web Personalization](../personalization/marketo-web-personalization.md)
 
-## Partage d’audiences Experience Platform
+## Partage d’audiences Experience Platform
 
 Utilisez la fonctionnalité de partage d’audience Experience Platform pour partager vos audiences Experience Platform avec d’autres destinations d’Adobe. Pour plus d’informations, consultez la page ci-dessous (s’ouvre dans le portail de documentation d’Audience Manager) :
 
-* [Partage d’audiences Experience Platform avec Adobe Audience Manager, Adobe Advertising Cloud et Adobe Target par le biais de l’intégration des services principaux](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr)
+* [Partage d&#39;audiences Experience Platform avec Adobe Audience Manager, Adobe Advertising Cloud et Adobe Target via l&#39;intégration des services principaux](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr)

@@ -1,18 +1,18 @@
 ---
 keywords: branche;extension de branche;destination de branche
 title: Extension Branch
-description: L’extension Branch est une destination publicitaire dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Branch est une destination publicitaire dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 19cbd410-e1c9-4510-8b04-b4c0bf7ff6a7
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 93%
+source-wordcount: '428'
+ht-degree: 94%
 
 ---
 
 # Extension [!DNL Branch] {#branch-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Branch fournit des liens et des solutions puissants qui vous aident à acquérir, à engager et à mesurer sur tous les appareils, canaux et plateformes.
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Branch] extension :
+Pour installer l’extension [!DNL Branch], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

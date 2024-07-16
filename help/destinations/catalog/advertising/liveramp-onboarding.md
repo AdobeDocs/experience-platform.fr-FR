@@ -58,7 +58,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **** et des **** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -70,9 +70,9 @@ Pour vous authentifier à la destination, renseignez les champs requis et sélec
 
 ![Exemple de capture d’écran montrant comment s’authentifier à la destination à l’aide du SFTP avec un mot de passe](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-password.png)
 
-* **[!UICONTROL Port]**: port utilisé pour votre [!DNL LiveRamp - Onboarding] emplacement de stockage.  Utilisez le port correspondant à votre emplacement géographique, comme décrit ci-dessous :
-   * **[!UICONTROL NA]**: utiliser le port `22`
-   * **[!UICONTROL AU]**: utiliser le port `2222`
+* **[!UICONTROL Port]** : port utilisé pour votre emplacement de stockage [!DNL LiveRamp - Onboarding].  Utilisez le port correspondant à votre emplacement géographique, comme décrit ci-dessous :
+   * **[!UICONTROL NA]** : utiliser le port `22`
+   * **[!UICONTROL AU]** : utiliser le port `2222`
 * **[!UICONTROL Nom d’utilisateur]** : nom d’utilisateur de votre emplacement de stockage [!DNL LiveRamp - Onboarding].
 * **[!UICONTROL Mot de passe]** : mot de passe de votre emplacement de stockage [!DNL LiveRamp - Onboarding].
 * **[!UICONTROL Clé de chiffrement PGP/GPG]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
@@ -83,8 +83,8 @@ Pour vous authentifier à la destination, renseignez les champs requis et sélec
 
 ![Exemple de capture d’écran montrant comment s’authentifier à la destination à l’aide de la clé SSH](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-ssh.png)
 
-* **[!UICONTROL Port]**: port utilisé pour votre [!DNL LiveRamp - Onboarding] emplacement de stockage.  Utilisez le port correspondant à votre emplacement géographique, comme décrit ci-dessous :
-   * **[!UICONTROL UE]**: utiliser le port `4222`
+* **[!UICONTROL Port]** : port utilisé pour votre emplacement de stockage [!DNL LiveRamp - Onboarding].  Utilisez le port correspondant à votre emplacement géographique, comme décrit ci-dessous :
+   * **[!UICONTROL EU]** : utiliser le port `4222`
 * **[!UICONTROL Nom d’utilisateur]** : nom d’utilisateur de votre emplacement de stockage [!DNL LiveRamp - Onboarding].
 * **[!UICONTROL Clé SSH]** : la clé privée [!DNL SSH] utilisée pour se connecter à votre emplacement de stockage [!DNL LiveRamp - Onboarding]. La clé privée doit être formatée sous la forme d’une chaîne codée en [!DNL Base64] et ne doit pas être protégée par un mot de passe.
 
@@ -108,7 +108,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Région]**: région géographique de votre instance du stockage SFTP LiveRamp.
+* **[!UICONTROL Région]** : région géographique de votre instance de l’espace de stockage SFTP LiveRamp.
 * **[!UICONTROL Chemin du dossier]** : saisissez le sous-dossier `uploads` de [!DNL LiveRamp] qui hébergera les fichiers exportés. Le préfixe `uploads` est automatiquement ajouté au chemin du dossier. [!DNL LiveRamp] recommande de créer un sous-dossier dédié pour les diffusions d’Adobe Real-Time CDP afin de séparer les fichiers des autres flux existants et de garantir le bon fonctionnement de l’automatisation.
    * Par exemple, si vous souhaitez exporter vos fichiers vers `uploads/my_export_folder`, saisissez `my_export_folder` dans le champ **[!UICONTROL Chemin du dossier]**.
 * **[!UICONTROL Format de compression]** : sélectionnez le type de compression qu’Experience Platform doit utiliser pour les fichiers exportés. Les options disponibles sont **[!UICONTROL GZIP]** ou **[!UICONTROL Aucun]**.
@@ -123,7 +123,7 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 > 
->Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>Pour activer les données, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **** et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
 
 Consultez la section [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -185,7 +185,7 @@ Une fois que vous avez ajouté tous les mappages souhaités, sélectionnez **[!U
 
 Vos données sont exportées vers l’emplacement de stockage [!DNL LiveRamp - Onboarding] que vous avez configuré, sous forme de fichiers CSV.
 
-La taille maximale des fichiers exportés est de 10 millions de lignes. Experience Platform génère plusieurs fichiers par diffusion si les audiences sélectionnées dépassent 10 millions de lignes. Si vous prévoyez de dépasser la limite du fichier unique, contactez votre [!DNL LiveRamp] représentez-vous et demandez-leur de configurer l’ingestion par lots pour vous.
+La taille maximale des fichiers exportés est de 10 millions de lignes. Experience Platform génère plusieurs fichiers par diffusion si les audiences sélectionnées dépassent 10 millions de lignes. Si vous prévoyez de dépasser la limite du fichier unique, contactez votre représentant [!DNL LiveRamp] et demandez-lui de configurer l’ingestion par lots pour vous.
 
 Lors de l’exportation de fichiers vers la destination [!DNL LiveRamp - Onboarding], Platform génère un fichier CSV pour chaque [ID de stratégie de fusion](../../../profile/merge-policies/overview.md).
 
@@ -255,7 +255,7 @@ Cette section répertorie les nouvelles fonctionnalités et les mises à jour im
 
 | Mois de publication | Type de mise à jour | Description |
 |---|---|---|
-| Mars 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | <ul><li>Ajout de la prise en charge des diffusions en Europe et en Australie [!DNL LiveRamp] [!DNL SFTP] instances.</li><li>Mise à jour de la documentation afin de décrire les configurations spécifiques pour les régions nouvellement prises en charge.</li><li>Augmentation de la taille de fichier maximale à 10 millions de lignes (contre 5 millions auparavant).</li><li>Mise à jour de la documentation pour prendre en compte l’augmentation de la taille des fichiers.</li></ul> |
+| Mars 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | <ul><li>Ajout de la prise en charge des diffusions vers les instances [!DNL LiveRamp] [!DNL SFTP] d’Europe et d’Australie.</li><li>Mise à jour de la documentation afin de décrire les configurations spécifiques pour les régions nouvellement prises en charge.</li><li>Augmentation de la taille de fichier maximale à 10 millions de lignes (contre 5 millions auparavant).</li><li>Mise à jour de la documentation pour prendre en compte l’augmentation de la taille des fichiers.</li></ul> |
 | Juillet 2023 | Version initiale | Publication de la destination initiale et de la documentation. |
 
 {style="table-layout:auto"}

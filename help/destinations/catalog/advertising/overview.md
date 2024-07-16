@@ -22,7 +22,7 @@ Lors de la connexion à une destination publicitaire, vos audiences sont envoyé
 
 Actuellement, Experience Platform prend en charge les destinations publicitaires répertoriées ci-dessous.
 
-Pour comprendre la différence entre les connexions et les extensions, voir [Connexions](../../destination-types.md#connections) sur la page Types et catégories de destination .
+Pour comprendre la différence entre les connexions et les extensions, voir [Connexions](../../destination-types.md#connections) dans la page Types et catégories de destination.
 
 ### Connexions
 

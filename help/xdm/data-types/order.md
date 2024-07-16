@@ -11,20 +11,20 @@ ht-degree: 13%
 
 ---
 
-# [!UICONTROL Commande] type de données
+# Type de données [!UICONTROL Order]
 
-[!UICONTROL Commande] est un type de données XDM (Experience Data Model) standard qui décrit la commande placée pour une liste de produits.
+[!UICONTROL Order] est un type de données XDM (Experience Data Model) standard qui décrit la commande placée pour une liste de produits.
 
-![Un diagramme de [!UICONTROL Commande] type de données.](../images/data-types/order.png)
+![Schéma du type de données [!UICONTROL Order].](../images/data-types/order.png)
 
 | Nom d’affichage | Propriété | Type de données | Description |
 |-------------------------|-------------------------|-----------|------------------------------------------------------------------------------------------------------------------|
 | Identifiant d’achat | `purchaseID` | Chaîne | Identifiant unique attribué par le vendeur pour cet achat ou ce contrat. Il n’existe aucune garantie que l’identifiant est unique, car il est défini par le vendeur. |
 | Numéro de commande | `purchaseOrderNumber` | Chaîne | Identifiant unique attribué par l’acheteur pour cet achat ou ce contrat. |
-| Liste de paiements | `payments` | Tableau de [[!UICONTROL Éléments de paiement]](./payment-item.md) | Liste des paiements pour cette commande. Les paiements sont présentés dans la section [!UICONTROL Éléments de paiement] spécification. |
-| Liste des remboursements | `refunds` | Tableau de [[!UICONTROL Éléments remboursés]](./refund-item.md) | La liste des remboursements pour cette commande. Les remboursements sont présentés dans la section [!UICONTROL Éléments remboursés] spécification. |
-| Infos sur le retour | `returns` | [[!UICONTROL Infos sur le retour]](./return.md) | La RMA (Return Merchandise Authorization) a été émise. Les retours sont détaillés dans la section [!UICONTROL Infos sur le retour] spécification. |
-| Devise | `currencyCode` | Chaîne | Code de devise ISO 4217 utilisé pour les totaux de commande. Exemples : `USD` et `EUR`. Toutes les instances doivent correspondre au modèle `^[A-Z]{3}$`. |
+| Liste de paiements | `payments` | Tableau de [[!UICONTROL  éléments de paiement ]](./payment-item.md) | Liste des paiements pour cette commande. Les paiements sont détaillés dans la spécification [!UICONTROL  Éléments de paiement ]. |
+| Liste des remboursements | `refunds` | Tableau de [[!UICONTROL Éléments de remboursement]](./refund-item.md) | La liste des remboursements pour cette commande. Les remboursements sont détaillés dans la spécification [!UICONTROL Refund Items]. |
+| Infos sur le retour | `returns` | [[!UICONTROL Informations sur le retour]](./return.md) | La RMA (Return Merchandise Authorization) a été émise. Les retours sont détaillés dans la spécification [!UICONTROL Return Info]. |
+| Devise | `currencyCode` | Chaîne | Code de devise ISO 4217 utilisé pour les totaux de commande. Par exemple, `USD` et `EUR`. Toutes les instances doivent correspondre au modèle `^[A-Z]{3}$`. |
 | Montant de la taxe | `taxAmount` | Nombre | Montant de l&#39;impôt payé par l&#39;acheteur dans le cadre du paiement final. |
 | Montant de remise | `discountAmount` | Nombre | La différence entre le prix normal et le prix spécial appliqué à l&#39;ensemble de la commande, plutôt qu&#39;à des produits individuels. |
 | Prix total | `priceTotal` | Nombre | Prix total de cette commande une fois toutes les remises et taxes appliquées. |
@@ -38,5 +38,5 @@ ht-degree: 13%
 
 Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/data/order.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/data/order.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/data/order.schema.json)

@@ -14,7 +14,7 @@ ht-degree: 43%
 
 # Onglet Événements
 
-Le **Événements** fournit une vue graphique des événements qui se produisent, affichés sur une chronologie.
+L’onglet **Événements** fournit une vue graphique des événements qui se produisent, affichés sur une chronologie.
 
 ![](images/events.jpg)
 
@@ -37,8 +37,8 @@ Pour activer le suivi des modifications apportées à la couche de données dans
 
 1. Sélectionnez **[!UICONTROL Enregistrer]**.
 
-Les détails des modifications apportées à la couche de données indiquent tout élément qui a été supprimé ou ajouté. Vous pouvez sélectionner **{}** pour approfondir l’analyse de la couche de données.
+Les détails des modifications apportées à la couche de données indiquent tout élément qui a été supprimé ou ajouté. Vous pouvez sélectionner **{}** pour approfondir la couche de données.
 
 ## Téléchargement des informations sur l’événement
 
-Sélectionner **[!UICONTROL Télécharger]** pour télécharger un fichier Excel contenant des informations sur les appels de page.
+Sélectionnez **[!UICONTROL Télécharger]** pour télécharger un fichier Excel contenant des informations sur les appels de page.

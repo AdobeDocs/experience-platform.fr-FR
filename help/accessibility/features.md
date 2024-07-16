@@ -6,14 +6,14 @@ description: En savoir plus sur les fonctionnalités d’accessibilité généra
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '484'
+source-wordcount: '481'
 ht-degree: 100%
 
 ---
 
 # Fonctionnalités d’accessibilité dans Experience Platform
 
-Adobe Experience Platform s’engage à fournir des fonctionnalités accessibles et inclusives à tous les individus, y compris les utilisateurs ayant recours à des dispositifs d’assistance tels que des logiciels de reconnaissance vocale et des lecteurs d’écran. Ce document décrit les fonctionnalités d’accessibilité générales prises en charge par Platform, notamment la navigation au clavier, la structure sémantique, un contraste suffisant entre les éléments de premier plan et les éléments d’arrière-plan, ainsi que la prise en charge des technologies d’assistance.
+Adobe Experience Platform s’engage à fournir des fonctionnalités accessibles et inclusives à tous les individus, y compris les utilisateurs ayant recours à des appareils d’assistance tels que des logiciels de reconnaissance vocale et des lecteurs d’écran. Ce document décrit les fonctionnalités d’accessibilité générales prises en charge par Platform, notamment la navigation au clavier, la structure sémantique, un contraste suffisant entre les éléments de premier plan et les éléments d’arrière-plan, ainsi que la prise en charge des technologies d’assistance.
 
 ## Technologies d’assistance
 

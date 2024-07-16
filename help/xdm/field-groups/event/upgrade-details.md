@@ -9,11 +9,11 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL Détails de la mise à niveau] groupe de champs de schéma
+# Groupe de champs de schéma [!UICONTROL Détails de la mise à niveau]
 
-[!UICONTROL Détails de la mise à niveau] est un groupe de champs de schéma standard pour la variable [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) utilisé pour capturer des informations concernant un événement marketing de mise à niveau, notamment des détails sur la transaction et les différentes manières dont l’offre s’affichait pour un client.
+[!UICONTROL Détails de la mise à niveau] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md) utilisée pour capturer des informations concernant un événement marketing de mise à niveau, y compris des détails sur la transaction et les différentes manières dont l’offre s’affichait pour un client.
 
-Le groupe de champs fournit un champ de type objet unique, `upgrades`. Les propriétés contenues dans cet objet sont expliquées ci-dessous.
+Le groupe de champs fournit un seul champ de type objet, `upgrades`. Les propriétés contenues dans cet objet sont expliquées ci-dessous.
 
 ![Structure des détails de la mise à niveau](../../images/field-groups/upgrade-details.png)
 
@@ -26,5 +26,5 @@ Le groupe de champs fournit un champ de type objet unique, `upgrades`. Les propr
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-upgrade-details.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-upgrade-details.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-upgrade-details.schema.json)

@@ -11,7 +11,7 @@ ht-degree: 6%
 
 # [!UICONTROL Détails de la demande de devis] groupe de champs de schéma
 
-[!UICONTROL Détails de la demande de devis] est un groupe de champs de schéma standard pour la variable [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Le groupe de champs fournit une `quotes` vers un schéma, qui capture les détails du processus de demande pour différents types de devis, y compris les polices d’assurance, les soins de santé, les commandes de fabrication et les commandes high-tech.
+[!UICONTROL Détails de la requête entre guillemets] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Le groupe de champs fournit un seul objet `quotes` à un schéma, qui capture les détails du processus de demande pour différents types de devis, y compris les polices d’assurance, les soins de santé, les commandes de fabrication et les commandes high-tech.
 
 ![](../../images/field-groups/quote-request-details.png)
 

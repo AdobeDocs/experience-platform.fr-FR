@@ -3,12 +3,12 @@ keywords: Experience Platform;optimisation;modèle;Data Science Workspace;rubriq
 solution: Experience Platform
 title: Optimisation d’un modèle à l’aide de Model Insights Framework
 type: Tutorial
-description: Model Insights Framework fournit aux analystes de données des outils dans l’espace de travail de science des données pour prendre des décisions rapides et éclairées afin d’optimiser les modèles de machine learning basés sur des expériences.
+description: Model Insights Framework fournit aux analystes de données des outils dans Data Science Workspace pour faire des choix rapides et éclairés pour des modèles d’apprentissage automatique optimaux basés sur des expériences.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '1265'
-ht-degree: 88%
+source-wordcount: '1187'
+ht-degree: 81%
 
 ---
 
@@ -64,7 +64,7 @@ evaluation.metrics.com=com.adobe.platform.ml.impl.Constants.DEFAULT
 
 >[!NOTE]
 >
->Si la mesure n’est pas définie, les mesures par défaut seront actives.
+>Si la mesure n’est pas définie, les mesures par défaut sont actives.
 
 Une mesure spécifique peut être activée en modifiant la valeur de `evaluation.metrics.com`. Dans l’exemple suivant, la mesure F-Score est activée.
 
@@ -87,7 +87,7 @@ L’évaluateur personnalisé peut être fourni en étendant l’interface de `M
 
 >[!IMPORTANT]
 >
->Pour la classe `MLMetric`, n’utilisez pas `"measures"` pour `valueType` lors de la création d’un nouveau `MLMetric`, sinon la mesure ne sera pas renseignée dans le tableau des mesures d’évaluation personnalisées.
+>Pour la classe `MLMetric`, n’utilisez pas `"measures"` pour `valueType` lors de la création d’un `MLMetric`. Sinon, la mesure ne sera pas renseignée dans le tableau des mesures d’évaluation personnalisées.
 >  
 > À faire : `metrics.add(new MLMetric("MAPE", mape, "double"))`\
 > À ne pas faire : `metrics.add(new MLMetric("MAPE", mape, "measures"))`
@@ -99,7 +99,7 @@ Une fois définie dans la recette, l’étape suivante consiste à l’activer d
 evaluation.class=com.adobe.platform.ml.Evaluator
 ```
 
-Dans le [!DNL Data Science Workspace], l’utilisateur peut consulter les insights dans l’onglet &quot;Mesures d’évaluation&quot; de la page de l’expérience.
+Dans l’élément [!DNL Data Science Workspace], l’utilisateur peut voir les insights dans l’onglet &quot;Mesures d’évaluation&quot; de la page de l’expérience.
 
 ### [!DNL Python/Tensorflow] {#pythontensorflow}
 
@@ -109,9 +109,9 @@ Pour l’instant, il n’existe aucune mesure d’évaluation par défaut pour [
 
 Pour les mesures d’évaluation personnalisées, deux méthodes principales doivent être mises en œuvre pour l’évaluateur : `split()` et `evaluate()`.
 
-Pour [!DNL Python], ces méthodes seraient définies dans [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour le `Evaluator` classe . Suivez le lien [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour obtenir un exemple de l’`Evaluator`.
+Pour [!DNL Python], ces méthodes sont définies dans [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour la classe `Evaluator`. Suivez le lien [evaluator.py](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) pour obtenir un exemple de l’`Evaluator`.
 
-Création de mesures d’évaluation dans [!DNL Python] nécessite que l’utilisateur mette en oeuvre la variable `evaluate()` et `split()` méthodes.
+La création de mesures d’évaluation dans [!DNL Python] nécessite que l’utilisateur implémente les méthodes `evaluate()` et `split()`.
 
 La méthode `evaluate()` renvoie l’objet de mesure qui contient un tableau d’objets de mesure avec les propriétés `name`, `value` et `valueType`.
 
@@ -121,7 +121,7 @@ La méthode `split()` doit renvoyer un cadre de données de formation et de test
 
 #### Mesures d’évaluation personnalisées pour Tensorflow
 
-Pour [!DNL Tensorflow], similaire à [!DNL Python], les méthodes `evaluate()` et `split()` dans le `Evaluator` doit être mise en oeuvre. Les mesures doivent être renvoyées pour `evaluate()`, tandis que `split()` renvoie les jeux de données de formation et de test.
+Pour [!DNL Tensorflow], comme [!DNL Python], les méthodes `evaluate()` et `split()` de la classe `Evaluator` devront être implémentées. Les mesures doivent être renvoyées pour `evaluate()`, tandis que `split()` renvoie les jeux de données de formation et de test.
 
 ```PYTHON
 from ml.runtime.python.Interfaces.AbstractEvaluator import AbstractEvaluator
@@ -156,7 +156,7 @@ Les données sont d’abord chargées dans un jeu de données à partir d’une 
 
 ## Utilisation de mesures préconfigurées et de graphiques de visualisation
 
-Le [!DNL Sensei Model Insights Framework] prend en charge un modèle par défaut pour chaque type d’algorithme d’apprentissage automatique. Le tableau ci-dessous présente les classes d’algorithme de machine learning de haut niveau courantes et les mesures d’évaluation et visualisations correspondantes.
+[!DNL Sensei Model Insights Framework] prend en charge un modèle par défaut pour chaque type d’algorithme d’apprentissage automatique. Le tableau ci-dessous présente les classes d’algorithme de machine learning de haut niveau courantes et les mesures d’évaluation et visualisations correspondantes.
 
 | Type d’algorithme de ML | Mesures d’évaluation | Visualisations |
 | --- | --- | --- |

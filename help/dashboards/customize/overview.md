@@ -26,11 +26,11 @@ Sélectionnez **[!UICONTROL Modifier le tableau de bord]** dans les tableaux de 
 
 Dans la bibliothèque de widgets dʼExperience Platform, vous pouvez afficher tous les widgets [standard](#standard-widgets) et [personnalisés](#custom-widgets) disponibles pour votre organisation. Dans vos tableaux de bord (par exemple, le tableau de bord des profils), vous pouvez sélectionner **[!UICONTROL Modifier le tableau de bord]** afin dʼafficher le bouton **[!UICONTROL Bibliothèque de widgets]**.
 
-![Le tableau de bord Profils avec modification du tableau de bord est mis en surbrillance.](../images/customization/modify-dashboard.png)
+![ Le tableau de bord Profils avec l’option Modifier le tableau de bord en surbrillance.](../images/customization/modify-dashboard.png)
 
 Sélectionnez **[!UICONTROL Bibliothèque de widgets]** pour ouvrir la bibliothèque de widgets et afficher toutes les mesures standard disponibles ou commencer à créer des widgets personnalisés.
 
-![Le tableau de bord Profils avec la bibliothèque de widgets est mis en surbrillance.](../images/customization/widget-library-button.png)
+![ Le tableau de bord Profils avec la bibliothèque de widgets mise en surbrillance.](../images/customization/widget-library-button.png)
 
 ### Widgets standard {#standard-widgets}
 
@@ -44,11 +44,11 @@ Les widgets personnalisés sont les widgets créés et partagés par les membres
 
 Pour connaître la procédure complète afin de créer vos propres widgets, reportez-vous au [guide des widgets personnalisés pour les tableaux de bord](custom-widgets.md).
 
-![Espace de travail de la bibliothèque de widgets en surbrillance Standard et Personnalisé.](../images/customization/widget-library.png)
+![Espace de travail de la bibliothèque de widgets avec l’option Standard et Personnalisé mise en surbrillance.](../images/customization/widget-library.png)
 
 #### Modification du schéma {#edit-schema}
 
-Pour créer une [widget personnalisé](#custom-widgets) pour vos tableaux de bord, vous devez d’abord identifier l’attribut Real-time Customer Profile sur lequel le widget sera basé.
+Pour créer un [widget personnalisé](#custom-widgets) pour vos tableaux de bord, vous devez d’abord identifier l’attribut Real-Time Customer Profile sur lequel le widget sera basé.
 
 Pour obtenir des instructions détaillées sur la modification du schéma de votre organisation afin de créer des widgets personnalisés pour les tableaux de bord, consultez le guide de [modification du schéma de votre tableau de bord](edit-schema.md).
 

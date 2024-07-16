@@ -1,20 +1,20 @@
 ---
 keywords: Extensions Flashtalking OneTag;extension Flashtalking OneTag;destinations Flashtalking OneTag;Flashtalking OneTag;flashtalking onetag
 title: Extension Flashtalking OneTag
-description: L’extension Flashtalking OneTag est une destination publicitaire de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Flashtalking OneTag est une destination publicitaire de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: e0dcbe9d-6fed-4b86-839e-661b7df8580e
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 86%
+source-wordcount: '461'
+ht-degree: 87%
 
 ---
 
 # Extension [!DNL Flashtalking OneTag] {#flashtalking-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Le [!DNL Flashtalking OneTag] l’extension de balise permet d’attribuer facilement des actions de site à l’affichage, la vidéo et l’activité publicitaire mobile. Déployez la variable [!DNL Flashtalking OneTag] à vos propriétés web à l’aide de balises.
+L’extension de balise [!DNL Flashtalking OneTag] permet d’attribuer facilement des actions de site à l’affichage, la vidéo et l’activité publicitaire mobile. Déployez [!DNL Flashtalking OneTag] sur vos propriétés web à l’aide de balises.
 
 [!DNL Flashtalking OneTag] est une extension publicitaire dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101392.flashtalking-onetag.html).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Flashtalking OneTag] extension :
+Pour installer l’extension [!DNL Flashtalking OneTag], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

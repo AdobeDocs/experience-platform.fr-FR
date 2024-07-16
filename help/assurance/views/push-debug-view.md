@@ -4,8 +4,8 @@ description: Ce guide contient des informations détaillées sur la vue Débogag
 exl-id: a9558ee2-2e80-4b0d-ab45-2020be85e634
 source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 1%
+source-wordcount: '940'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ La vue de débogage Push dans Adobe Experience Platform Assurance permet de vali
 
 ## Clients
 
-![Clients push](./images/push-debug-view/clients.png)
+![Clients Push](./images/push-debug-view/clients.png)
 
 La liste déroulante client comporte une liste de chaque client unique connecté à cette session d’assurance. Un client est un appareil unique ou une installation d’application unique pour un appareil. Par exemple, si un appareil Android et un appareil iOS ont été connectés à la session, ces clients apparaissent dans la liste déroulante Clients .
 
@@ -25,7 +25,7 @@ Cette vue n’est activée que pour un seul client. La sélection d’un autre c
 
 ## Validation de la configuration
 
-Le **[!UICONTROL Validation de la configuration]** tab valide et fournit des détails supplémentaires sur la configuration push de l’application. Trois panneaux effectuent des validations. Une coche verte s’affiche si les validations réussissent toutes. S’il existe trois coches vertes, l’application a été correctement configurée pour la messagerie push, écrit des jetons push sur le profil utilisateur et a une surface d’application associée configurée.
+L’onglet **[!UICONTROL Valider la configuration]** valide et fournit des détails supplémentaires sur la configuration push de l’application. Trois panneaux effectuent des validations. Une coche verte s’affiche si les validations réussissent toutes. S’il existe trois coches vertes, l’application a été correctement configurée pour la messagerie push, écrit des jetons push sur le profil utilisateur et a une surface d’application associée configurée.
 
 Si quelque chose ne fonctionne pas comme prévu, une alerte vous indique comment résoudre ce problème :
 
@@ -43,7 +43,7 @@ Une fois votre client configuré correctement, ce panneau vérifie si l’appare
 
 S’il est valide, le panneau affiche l’ECID de l’appareil, le jeton push, l’ID de l’application de votre application, la plateforme de messagerie et si le jeton push a été placé sur liste refusée. Le jeton peut être placé sur liste refusée pour diverses raisons, par exemple pour la désinstallation de l’application ou pour la désactivation de la messagerie push par l’utilisateur.
 
-![Bloquée](./images/push-debug-view/deny-list-blocked.png)
+![Blocked](./images/push-debug-view/deny-list-blocked.png)
 
 Enfin, au bas du panneau se trouve un lien qui ouvre ce profil spécifique dans un nouvel onglet.
 
@@ -57,43 +57,43 @@ Enfin, au bas du panneau se trouve un lien qui ouvre cette surface d’applicati
 
 ## Envoyer un test push
 
-Le **[!UICONTROL Envoyer le test push]** peut être utilisé pour envoyer un message de test à votre appareil.
+L’onglet **[!UICONTROL Envoyer le test push]** peut être utilisé pour envoyer un message de test à votre appareil.
 
-Plusieurs volets peuvent être configurés pour tester différentes fonctionnalités iOS et Android push. Une fois la configuration effectuée, sélectionnez **[!UICONTROL Envoi de la notification push de test]** pour envoyer votre message.
+Plusieurs volets peuvent être configurés pour tester différentes fonctionnalités iOS et Android push. Une fois la configuration effectuée, sélectionnez **[!UICONTROL Envoyer la notification push de test]** pour envoyer votre message.
 
 ![Envoyer push](./images/push-debug-view/send.png)
 
 ### Message
 
-Dans le **[!UICONTROL Message]** vous pouvez fournir un titre et un corps pour le message. La fonctionnalité de notification silencieuse peut également être activée ici.
+Dans le volet **[!UICONTROL Message]**, vous pouvez fournir un titre et un corps pour le message. La fonctionnalité de notification silencieuse peut également être activée ici.
 
 ![Volet Message](./images/push-debug-view/message-pane.png)
 
 ### Cible push
 
-Le **[!UICONTROL Cible push]** vous permet de personnaliser le jeton push et la surface de l’application à utiliser lors de l’envoi du message push.
+Le volet **[!UICONTROL Cible push]** vous permet de personnaliser le jeton push et la surface de l’application à utiliser lors de l’envoi du message push.
 
-Ces informations sont fournies par défaut si la variable **[!UICONTROL Validation de la configuration]** affiche trois coches vertes. Cependant, vous pouvez fournir votre propre jeton push et votre propre surface d’application, même si votre application n’est pas entièrement configurée.
+Ces informations sont fournies par défaut si l’onglet **[!UICONTROL Valider la configuration]** affiche trois coches vertes. Cependant, vous pouvez fournir votre propre jeton push et votre propre surface d’application, même si votre application n’est pas entièrement configurée.
 
-![Volet Cible](./images/push-debug-view/target-pane.png)
+![Volet cible](./images/push-debug-view/target-pane.png)
 
-### Comportement des clics
+### Comportement en cas de clic
 
-Dans la **[!UICONTROL Comportement des clics]** , vous pouvez choisir le comportement à adopter lorsque vous cliquez sur la notification push sur l’appareil. Par défaut, l’application s’ouvre, mais elle peut ouvrir un lien profond ou une page web.
+Dans le volet **[!UICONTROL Comportement des clics]**, vous pouvez choisir le comportement à adopter lorsque l’utilisateur clique sur la notification push sur l’appareil. Par défaut, l’application s’ouvre, mais elle peut ouvrir un lien profond ou une page web.
 
 Si vous choisissez d’utiliser un lien profond, le développeur de l’application doit en créer un pour vous.
 
 ![Volet Comportement](./images/push-debug-view/click-behavior.png)
 
-### Média enrichi
+### Média riche
 
-Le **[!UICONTROL Média enrichi]** vous permet d’ajouter des médias supplémentaires à votre message, tels qu’une image, une vidéo ou un GIF. Le développeur de l’application doit ajouter du code à l’application pour activer cette fonctionnalité.
+Le volet **[!UICONTROL Média enrichi]** vous permet d’ajouter des médias supplémentaires à votre message, tels qu’une image, une vidéo ou un GIF. Le développeur de l’application doit ajouter du code à l’application pour activer cette fonctionnalité.
 
 ![Volet enrichi](./images/push-debug-view/rich-pane.png)
 
 ### Boutons
 
-Le **[!UICONTROL Boutons]** vous permet d’ajouter des boutons supplémentaires à la notification push. Chaque bouton peut ouvrir l’application, ouvrir un lien profond dans l’application ou ouvrir une page web.
+Le volet **[!UICONTROL Boutons]** vous permet d’ajouter des boutons supplémentaires à la notification push. Chaque bouton peut ouvrir l’application, ouvrir un lien profond dans l’application ou ouvrir une page web.
 
 Le développeur de l’application doit ajouter du code à l’application pour activer cette fonctionnalité.
 
@@ -101,13 +101,13 @@ Le développeur de l’application doit ajouter du code à l’application pour 
 
 ### Données personnalisées
 
-Le **[!UICONTROL Données personnalisées]** vous permet d’ajouter des données personnalisées à la notification push. Chaque paire clé/valeur est envoyée sous forme de métadonnées avec le message et peut être utilisée par les développeurs pour créer des expériences puissantes et ajouter un suivi supplémentaire.
+Le volet **[!UICONTROL Données personnalisées]** vous permet d’ajouter des données personnalisées à la notification push. Chaque paire clé/valeur est envoyée sous forme de métadonnées avec le message et peut être utilisée par les développeurs pour créer des expériences puissantes et ajouter un suivi supplémentaire.
 
 ![Volet personnalisé](./images/push-debug-view/custom-pane.png)
 
 ## Résultats du test
 
-Une fois que vous avez envoyé un message, la variable **[!UICONTROL Résultats du test]** reçoit les données des services push du message. Vous pouvez voir ici si le message a été envoyé aux services de messagerie Google/iOS :
+Une fois que vous avez envoyé un message, la section **[!UICONTROL Résultats du test]** reçoit les données des services push du message. Vous pouvez voir ici si le message a été envoyé aux services de messagerie Google/iOS :
 
 ![Résultats du test](./images/push-debug-view/test-results.png)
 
@@ -119,6 +119,6 @@ Si des problèmes se sont produits, ils s’affichent ici :
 
 ### Affichage de la payload du message
 
-En regard de **[!UICONTROL Envoi de la notification push de test]** est un ensemble de points de suspension avec un menu contextuel. À partir de là, vous pouvez afficher la payload du message. Vous pouvez ainsi voir le message exact qui sera envoyé au service de messagerie distant. Vous pouvez consulter cette payload ou la copier et la coller dans un outil de test push de bureau.
+À côté du bouton **[!UICONTROL Envoyer la notification push de test]** se trouve un ensemble de points de suspension avec un menu contextuel. À partir de là, vous pouvez afficher la payload du message. Vous pouvez ainsi voir le message exact qui sera envoyé au service de messagerie distant. Vous pouvez consulter cette payload ou la copier et la coller dans un outil de test push de bureau.
 
 ![Volet personnalisé](./images/push-debug-view/message-payload.png)

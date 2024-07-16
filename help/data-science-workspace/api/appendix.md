@@ -12,13 +12,13 @@ ht-degree: 66%
 
 ---
 
-# [!DNL Sensei Machine Learning] Annexe du guide d’API
+# [!DNL Sensei Machine Learning] annexe du guide de l’API
 
-Les sections suivantes contiennent des informations de référence sur les différentes fonctionnalités de [!DNL Sensei Machine Learning] API.
+Les sections suivantes fournissent des informations de référence pour différentes fonctionnalités de l’API [!DNL Sensei Machine Learning].
 
 ## Paramètres de requête pour la récupération de ressources {#query}
 
-La variable [!DNL Sensei Machine Learning] L’API prend en charge les paramètres de requête pour la récupération des ressources. Les paramètres de requête disponibles et leurs utilisations sont décrits dans le tableau suivant :
+L’API [!DNL Sensei Machine Learning] prend en charge les paramètres de requête pour la récupération des ressources. Les paramètres de requête disponibles et leurs utilisations sont décrits dans le tableau suivant :
 
 | Paramètre de requête | Description | Valeur par défaut |
 | --------------- | ----------- | ------- |
@@ -29,7 +29,7 @@ La variable [!DNL Sensei Machine Learning] L’API prend en charge les paramètr
 
 >[!NOTE]
 >
->Lorsque vous combinez plusieurs paramètres de requête, ceux-ci doivent être séparés par des esperluettes (**&amp;**).
+>Lorsque vous combinez plusieurs paramètres de requête, ils doivent être séparés par des esperluettes (**&amp;**).
 
 ## Configurations du processeur et du processeur graphique Python {#cpu-gpu-config}
 
@@ -70,7 +70,7 @@ L’exemple suivant présente une configuration qui précise l’utilisation d�
 
 >[!NOTE]
 >
->Les valeurs de `cpus` et `gpus` ne représente pas le nombre de processeurs ou de processeurs graphiques, mais plutôt le nombre de machines physiques. Ces valeurs sont acceptablement `"1"` et renverront une exception dans le cas contraire.
+>Les valeurs `cpus` et `gpus` ne signifient pas le nombre de processeurs ou de processeurs graphiques, mais plutôt le nombre de machines physiques. Ces valeurs sont acceptablement `"1"` et renverront une exception dans le cas contraire.
 
 ## Configurations des ressources PySpark et Spark {#resource-config}
 

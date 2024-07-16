@@ -2,12 +2,12 @@
 keywords: Experience Platform;accueil;rubriques populaires;service de requête;Query Service;instructions préparées;préparées;sql;
 solution: Experience Platform
 title: Instructions préparées dans Query Service
-description: Dans SQL, les instructions préparées sont utilisées pour modéliser des requêtes ou des mises à jour similaires. Adobe Experience Platform Query Service prend en charge les instructions préparées à l’aide d’une requête paramétrée.
+description: Dans SQL, les instructions préparées sont utilisées pour modéliser des requêtes ou des mises à jour similaires. Adobe Experience Platform Query Service prend en charge les instructions préparées à l’aide d’une requête paramétrée.
 exl-id: 7ee4a10e-2bfe-487f-a8c5-f03b5b1d77e3
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 85%
+source-wordcount: '364'
+ht-degree: 78%
 
 ---
 

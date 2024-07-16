@@ -9,7 +9,7 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL Impressions] type de données
+# Type de données [!UICONTROL Impressions]
 
 [!UICONTROL Impressions] est un type de données XDM standard qui décrit une impression marketing, qui est une mesure utilisée pour quantifier le nombre d’affichages ou d’engagements numériques pour un élément de contenu tel qu’une publicité, une publication numérique ou une page web.
 
@@ -26,5 +26,5 @@ ht-degree: 6%
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/impressions.schema.json)

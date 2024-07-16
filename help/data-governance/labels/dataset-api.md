@@ -6,7 +6,7 @@ description: LʼAPI Dataset Service vous permet dʼappliquer et de modifier des 
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
 source-git-commit: 8db484e4a65516058d701ca972fcbcb6b73abb31
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1314'
 ht-degree: 93%
 
 ---
@@ -103,7 +103,7 @@ Lors dʼappels API mettant à jour les libellés existants dʼun jeu de données
 
 >[!NOTE]
 >
->Si des libellés existent actuellement pour le jeu de données en question, de nouveaux libellés ne peuvent être ajoutés que par le biais dʼune requête PUT, qui ne nécessite pas d’en-tête `If-Match`. Une fois que des libellés ont été ajoutés à un jeu de données, le plus récent `etag` est requise pour mettre à jour ou supprimer les étiquettes ultérieurement.<br>Avant d’exécuter la méthode du PUT, vous devez effectuer une requête de GET sur les libellés du jeu de données. Veillez à ne mettre à jour que les champs spécifiques destinés à être modifiés dans la requête, en laissant le reste inchangé. De plus, assurez-vous que l’appel de PUT conserve les mêmes entités parentes que l’appel de GET. Toute incohérence provoquerait une erreur pour le client.
+>Si des libellés existent actuellement pour le jeu de données en question, de nouveaux libellés ne peuvent être ajoutés que par le biais dʼune requête PUT, qui ne nécessite pas d’en-tête `If-Match`. Une fois que des libellés ont été ajoutés à un jeu de données, la valeur `etag` la plus récente est requise pour mettre à jour ou supprimer les libellés ultérieurement<br>Avant d’exécuter la méthode du PUT, vous devez effectuer une requête de GET sur les libellés du jeu de données. Veillez à ne mettre à jour que les champs spécifiques destinés à être modifiés dans la requête, en laissant le reste inchangé. De plus, assurez-vous que l’appel de PUT conserve les mêmes entités parentes que l’appel de GET. Toute incohérence provoquerait une erreur pour le client.
 
 Pour récupérer la version la plus récente de lʼentité étiquette-jeu de données, envoyez une [requête GET](#look-up) au point d’entrée `/datasets/{DATASET_ID}/labels`. La valeur actuelle est renvoyée dans la réponse sous un en-tête `etag`. Lors de la mise à jour de libellés de jeux de données existants, il est recommandé dʼeffectuer dʼabord une requête de recherche pour le jeu de données afin de récupérer sa valeur `etag` la plus récente avant dʼutiliser cette valeur dans lʼen-tête `If-Match` de votre requête PUT ultérieure. 
 

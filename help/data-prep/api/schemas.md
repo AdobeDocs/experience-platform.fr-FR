@@ -5,7 +5,7 @@ title: Point d’entrée de l’API Schemas
 description: Vous pouvez utiliser le point d’entrée `/schemas` dans l’API Adobe Experience Platform pour récupérer, créer et mettre à jour par programmation les schémas à utiliser avec le mappeur dans Platform.
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '616'
 ht-degree: 94%
 
 ---
@@ -22,7 +22,7 @@ Les schémas peuvent être utilisés avec le mappeur pour vous assurer que les d
 
 ## Obtention de tous les schémas
 
-Vous pouvez récupérer une liste de tous les schémas de mappeur disponibles pour votre organisation en envoyant une requête de GET à la fonction `/schemas` point de terminaison .
+Vous pouvez récupérer une liste de tous les schémas de mappeur disponibles pour votre organisation en envoyant une requête de GET au point de terminaison `/schemas`.
 
 **Format d’API**
 

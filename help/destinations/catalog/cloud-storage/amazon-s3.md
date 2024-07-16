@@ -18,17 +18,17 @@ ht-degree: 51%
 
 | Mois de publication | Type de mise à jour | Description |
 |---|---|---|
-| Janvier 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | Le connecteur de destination Amazon S3 prend désormais en charge un nouveau type d’authentification de rôle supposé. Pour en savoir plus, voir la section [section d&#39;authentification](#assumed-role-authentication). |
-| Juillet 2023 | Nouvelles fonctionnalités et mise à jour de la documentation | Avec la version Experience Platform de juillet 2023, la variable [!DNL Amazon S3] destination offre de nouvelles fonctionnalités, comme indiqué ci-dessous : <br><ul><li>[Prise en charge de l’exportation des jeux de données](/help/destinations/ui/export-datasets.md)</li><li>[Options de dénomination de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) supplémentaires.</li><li>Possibilité de définir des en-têtes de fichier personnalisés dans vos fichiers exportés via l’[étape de mappage améliorée](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Possibilité de personnaliser le formatage des fichiers de données CSV exportés](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> |
+| Janvier 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | Le connecteur de destination Amazon S3 prend désormais en charge un nouveau type d’authentification de rôle supposé. Pour en savoir plus, consultez la [section d&#39;authentification](#assumed-role-authentication). |
+| Juillet 2023 | Nouvelles fonctionnalités et mise à jour de la documentation | Avec la version Experience Platform de juillet 2023, la destination [!DNL Amazon S3] offre de nouvelles fonctionnalités, comme indiqué ci-dessous : <br><ul><li>[ Prise en charge de l’exportation des jeux de données](/help/destinations/ui/export-datasets.md)</li><li>[Options de dénomination de fichier](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) supplémentaires.</li><li>Possibilité de définir des en-têtes de fichier personnalisés dans vos fichiers exportés via l’[étape de mappage améliorée](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).</li><li>[Possibilité de personnaliser le formatage des fichiers de données CSV exportés](/help/destinations/ui/batch-destinations-file-formatting-options.md).</li></ul> |
 
 {style="table-layout:auto"}
 
 +++
 
-## Se connecter à [!DNL Amazon S3] stockage via l’API ou l’interface utilisateur {#connect-api-or-ui}
+## Connexion à votre stockage [!DNL Amazon S3] via l’API ou l’interface utilisateur {#connect-api-or-ui}
 
-* Pour vous connecter à [!DNL Amazon S3] Emplacement de stockage à l’aide de l’interface utilisateur de Platform, lisez les sections [Connexion à la destination](#connect) et [Activer les audiences vers cette destination](#activate) ci-dessous
-* Pour vous connecter à [!DNL Amazon S3] emplacement de stockage par programmation, lisez le guide sur la façon de [activation d’audiences vers des destinations basées sur des fichiers à l’aide du tutoriel sur l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
+* Pour vous connecter à votre emplacement de stockage [!DNL Amazon S3] à l’aide de l’interface utilisateur de Platform, lisez les sections [Se connecter à la destination](#connect) et [Activer les audiences vers cette destination](#activate) ci-dessous.
+* Pour vous connecter à votre emplacement de stockage [!DNL Amazon S3] par programmation, lisez le guide sur l’ [activation d’audiences vers des destinations basées sur des fichiers à l’aide du tutoriel de l’API Flow Service](../../api/activate-segments-file-based-destinations.md).
 
 ## Audiences prises en charge {#supported-audiences}
 
@@ -52,26 +52,26 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 {style="table-layout:auto"}
 
-![Type d’exportation basé sur un profil Amazon S3 mis en surbrillance dans l’interface utilisateur.](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
+![Type d’exportation Amazon S3 basé sur un profil mis en surbrillance dans l’UU.](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
 ## Exporter des jeux de données {#export-datasets}
 
 Cette destination prend en charge les exportations de jeux de données. Pour obtenir des informations complètes sur la configuration des exportations de jeux de données, consultez les tutoriels :
 
-* Comment [exportation de jeux de données à l’aide de l’interface utilisateur de Platform](/help/destinations/ui/export-datasets.md).
+* Comment [exporter des jeux de données à l’aide de l’interface utilisateur de Platform](/help/destinations/ui/export-datasets.md).
 * Comment [exporter des jeux de données par programmation à l’aide de l’API Flow Service](/help/destinations/api/export-datasets.md).
 
 ## Format de fichier des données exportées {#file-format}
 
-Lors de l’exportation *données d&#39;audience*, Platform crée une `.csv`, `parquet`, ou `.json` dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [Formats de fichiers pris en charge pour l’exportation](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) dans le tutoriel sur l’activation de l’audience.
+Lors de l’exportation de *données d’audience*, Platform crée un fichier `.csv`, `parquet` ou `.json` dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, consultez la section [Formats de fichiers pris en charge pour l’exportation](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) du tutoriel sur l’activation de l’audience.
 
-Lors de l’exportation *jeux de données*, Platform crée une `.parquet` ou `.json` dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, voir [vérification de l’exportation réussie du jeu de données](../../ui/export-datasets.md#verify) dans le tutoriel sur l’exportation des jeux de données .
+Lors de l’exportation de *jeux de données*, Platform crée un fichier `.parquet` ou `.json` dans l’emplacement de stockage que vous avez fourni. Pour plus d’informations sur les fichiers, consultez la section [Vérification de l’exportation des jeux de données réussie](../../ui/export-datasets.md#verify) du tutoriel sur l’exportation des jeux de données.
 
 ## Se connecter à la destination {#connect}
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **** et des **** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -82,7 +82,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 >title="Clé publique RSA"
 >abstract="Vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Affichez un exemple de clé correctement formatée dans le lien de documentation ci-dessous."
 
-Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**. La destination Amazon S3 prend en charge deux méthodes d’authentification :
+Pour vous authentifier à la destination, remplissez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**. La destination Amazon S3 prend en charge deux méthodes d’authentification :
 
 * Authentification par clé d’accès et clé secrète
 * Authentification du rôle assumé
@@ -96,7 +96,7 @@ Utilisez cette méthode d’authentification lorsque vous souhaitez saisir votre
 * **[!DNL Amazon S3]Clé d’accès** et **[!DNL Amazon S3]clé secrète** : dans [!DNL Amazon S3], générez une paire `access key - secret access key` pour accorder à Platform l’accès à votre compte [!DNL Amazon S3]. En savoir plus dans la [Documentation Amazon Web Services](https://docs.aws.amazon.com/fr_fr/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Clé de chiffrement]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
 
-  ![Image illustrant un exemple de clé PGP correctement formatée dans l’interface utilisateur.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
+  ![ Image montrant un exemple de clé PGP correctement formatée dans l&#39;interface utilisateur.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
 #### Rôle assumé {#assumed-role-authentication}
 
@@ -105,13 +105,13 @@ Utilisez cette méthode d’authentification lorsque vous souhaitez saisir votre
 >title="Authentification du rôle assumé"
 >abstract="Utilisez ce type d’authentification si vous préférez ne pas partager les clés de compte et les clés secrètes avec Adobe. Au lieu de cela, Experience Platform se connecte à votre emplacement Amazon S3 en utilisant un accès basé sur les rôles. Collez l’ARN (nom de ressource Amazon) du rôle que vous avez créé dans AWS pour l’utilisateur ou l’utilisatrice Adobe. Le modèle est similaire à `arn:aws:iam::800873819705:role/destinations-role-customer`. "
 
-![Image des champs requis lors de la sélection de l’authentification de rôle assumé.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
+![Image des champs requis lors de la sélection de l’authentification du rôle assumé.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
 Utilisez ce type d’authentification si vous préférez ne pas partager les clés de compte et les clés secrètes avec Adobe. Experience Platform se connecte plutôt à votre emplacement Amazon S3 à l’aide d’un accès basé sur les rôles.
 
-Pour ce faire, vous devez créer dans la console AWS un utilisateur désigné pour l’Adobe avec le [autorisations requises](#required-s3-permission) pour écrire dans vos compartiments Amazon S3. Créez un **[!UICONTROL Entité approuvée]** dans AWS avec le compte Adobe **[!UICONTROL 670664943635]**. Pour plus d’informations, voir la section [Documentation AWS sur la création de rôles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+Pour ce faire, vous devez créer dans la console AWS un utilisateur présumé pour l’Adobe avec les [autorisations requises appropriées](#required-s3-permission) pour écrire dans vos compartiments Amazon S3. Créez une **[!UICONTROL entité approuvée]** dans AWS avec le compte Adobe **[!UICONTROL 670664943635]**. Pour plus d&#39;informations, consultez la [documentation AWS sur la création de rôles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 
-* **[!DNL Role]**: collez l’ARN du rôle que vous avez créé dans AWS pour l’utilisateur Adobe. Le modèle est similaire à `arn:aws:iam::800873819705:role/destinations-role-customer`.
+* **[!DNL Role]** : collez l’ARN du rôle que vous avez créé dans AWS pour l’utilisateur Adobe. Le modèle est similaire à `arn:aws:iam::800873819705:role/destinations-role-customer`.
 * **[!UICONTROL Clé de chiffrement]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
 
 ### Renseigner les détails de la destination {#destination-details}
@@ -129,18 +129,18 @@ Pour ce faire, vous devez créer dans la console AWS un utilisateur désigné po
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-* **[!UICONTROL Nom]**: saisissez un nom qui vous aidera à identifier cette destination.
-* **[!UICONTROL Description]**: saisissez une description de cette destination.
+* **[!UICONTROL Nom]** : saisissez un nom qui vous aidera à identifier cette destination.
+* **[!UICONTROL Description]** : entrez une description de cette destination.
 * **[!UICONTROL Nom du compartiment]** : saisissez le nom du compartiment [!DNL Amazon S3] que cette destination doit utiliser.
 * **[!UICONTROL Chemin d’accès au dossier]** : saisissez le chemin d’accès au dossier de destination qui hébergera les fichiers exportés.
-* **[!UICONTROL Type de fichier]**: sélectionnez le format que l’Experience Platform doit utiliser pour les fichiers exportés. Lorsque vous sélectionnez la variable [!UICONTROL CSV] , vous pouvez également [configuration des options de formatage de fichier](../../ui/batch-destinations-file-formatting-options.md).
-* **[!UICONTROL Format de compression]**: sélectionnez le type de compression que l’Experience Platform doit utiliser pour les fichiers exportés.
-* **[!UICONTROL Inclure le fichier manifeste]**: activez cette option si vous souhaitez que les exportations incluent un fichier JSON manifeste contenant des informations sur l’emplacement de l’exportation, la taille de l’exportation, etc. Le manifeste est nommé au format `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Afficher un [exemple de fichier manifeste](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Le fichier de manifeste comprend les champs suivants :
-   * `flowRunId`: la variable [exécution du flux de données](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) qui a généré le fichier exporté.
-   * `scheduledTime`: heure en UTC à laquelle le fichier a été exporté.
-   * `exportResults.sinkPath`: chemin d’accès dans l’emplacement de stockage où le fichier exporté est déposé.
-   * `exportResults.name`: nom du fichier exporté.
-   * `size`: taille du fichier exporté, en octets.
+* **[!UICONTROL Type de fichier]** : sélectionnez le format que l’Experience Platform doit utiliser pour les fichiers exportés. Lorsque vous sélectionnez l’option [!UICONTROL CSV] , vous pouvez également [ configurer les options de formatage de fichier ](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Format de compression]** : sélectionnez le type de compression que l’Experience Platform doit utiliser pour les fichiers exportés.
+* **[!UICONTROL Inclure le fichier manifeste]** : activez cette option si vous souhaitez que les exportations incluent un fichier JSON manifeste contenant des informations sur l’emplacement d’exportation, la taille de l’exportation, etc. Le manifeste est nommé au format `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Affichez un [exemple de fichier manifeste](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Le fichier de manifeste comprend les champs suivants :
+   * `flowRunId` : [exécution de flux de données](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) qui a généré le fichier exporté.
+   * `scheduledTime` : heure en UTC à laquelle le fichier a été exporté.
+   * `exportResults.sinkPath` : chemin d’accès dans l’emplacement de stockage où le fichier exporté est déposé.
+   * `exportResults.name` : nom du fichier exporté.
+   * `size` : taille du fichier exporté, en octets.
 
 >[!TIP]
 >
@@ -177,10 +177,10 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 >[!IMPORTANT]
 > 
->* Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter *identités*, vous avez besoin de la fonction **[!UICONTROL Affichage du graphique des identités]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **** et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous avez besoin de l&#39;autorisation **[!UICONTROL Afficher le graphique d&#39;identités]** [ ](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
-Voir [Activation des données d’audience vers des destinations d’exportation de profils par lots](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
+Voir [Activation des données d’audience vers des destinations d’exportation de profil de lot](../../ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audiences vers cette destination.
 
 ## Valider l’exportation des données avec succès {#exported-data}
 
@@ -188,4 +188,4 @@ Pour vérifier si l’exportation des données a réussi, vérifiez le stockage 
 
 ## Liste autorisée d’adresses IP {#ip-address-allow-list}
 
-Voir [LISTE AUTORISÉE d’adresses IP](ip-address-allow-list.md) article si vous devez ajouter des adresses IP d’Adobe à une liste autorisée.
+Reportez-vous à l’article [liste autorisée d’adresses IP](ip-address-allow-list.md) si vous devez ajouter des adresses IP d’Adobe à une liste autorisée.

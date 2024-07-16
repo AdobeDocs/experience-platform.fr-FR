@@ -16,13 +16,13 @@ Ce document présente les configurations que vous devez préparer pour utiliser 
 
 ## Spécification de connexion
 
-Les spécifications de connexion renvoient les propriétés du connecteur d’une source. Elles incluent des spécifications d’authentification liées à la création des connexions de base et source, ainsi qu’un identifiant de spécification de connexion fixe affecté à une source particulière. Les spécifications de connexion sont indépendantes du client et de l’organisation. Une spécification de connexion type contient des informations de base sur une source donnée, ainsi que trois sections distinctes : `authSpec`, `sourceSpec`, et `exploreSpec`.
+Les spécifications de connexion renvoient les propriétés du connecteur d’une source. Elles incluent des spécifications d’authentification liées à la création des connexions de base et source, ainsi qu’un identifiant de spécification de connexion fixe affecté à une source particulière. Les spécifications de connexion sont indépendantes du client et de l’organisation. Une spécification de connexion type contient des informations de base sur une source donnée, ainsi que trois sections distinctes : `authSpec`, `sourceSpec` et `exploreSpec`.
 
 | Spécification | Description |
 | --- | --- |
-| `authSpec` | Le `authSpec` contient des informations sur les paramètres d’authentification requis pour connecter une source à Platform. N’importe quelle source donnée peut prendre en charge plusieurs types d’authentification différents. |
-| `sourceSpec` | Le `sourceSpec` contient des informations générales relatives à une source, notamment des informations sur les attributs requis pour présenter la source dans l’interface utilisateur, un lien vers la documentation et des paramètres concernant la pagination, l’en-tête, le corps et la planification. En outre, `sourceSpec` décrit le schéma des paramètres requis pour créer une connexion source à partir d’une connexion de base. Il est nécessaire pour créer une connexion source. |
-| `exploreSpec` | Le `exploreSpec` définit les paramètres requis pour explorer et inspecter les objets contenus dans votre source. Le `exploreSpec` définit également le format de réponse renvoyé lorsque des objets sont explorés et inspectés. |
+| `authSpec` | Le tableau `authSpec` contient des informations sur les paramètres d’authentification requis pour connecter une source à Platform. Toute source donnée peut prendre en charge plusieurs types d’authentification différents. |
+| `sourceSpec` | Le tableau `sourceSpec` contient des informations générales relatives à une source, notamment des informations sur les attributs requis pour présenter la source dans l’interface utilisateur, le lien vers la documentation et les paramètres concernant la pagination, l’en-tête, le corps et la planification. De plus, `sourceSpec` décrit le schéma des paramètres requis pour créer une connexion source à partir d’une connexion de base. Il est nécessaire pour créer une connexion source. |
+| `exploreSpec` | Le tableau `exploreSpec` définit les paramètres requis pour explorer et inspecter les objets contenus dans votre source. `exploreSpec` définit également le format de réponse renvoyé lorsque des objets sont explorés et inspectés. |
 
 {style="table-layout:auto"}
 

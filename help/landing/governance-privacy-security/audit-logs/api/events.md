@@ -11,7 +11,7 @@ ht-degree: 20%
 
 # Point d’entrée des événements d’audit
 
-Les journaux d’audit permettent de fournir des détails sur l’activité des utilisateurs pour divers services et fonctionnalités. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’ID d’e-mail de l’utilisateur ou de l’utilisatrice qui a exécuté l’action et des attributs supplémentaires liés au type d’action. Le `/audit/events` du point de terminaison [!DNL Audit Query] L’API vous permet de récupérer par programmation les données d’événement pour l’activité de votre entreprise dans [!DNL Platform].
+Les journaux d’audit permettent de fournir des détails sur l’activité des utilisateurs pour divers services et fonctionnalités. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’ID d’e-mail de l’utilisateur ou de l’utilisatrice qui a exécuté l’action et des attributs supplémentaires liés au type d’action. Le point d’entrée `/audit/events` de l’API [!DNL Audit Query] vous permet de récupérer par programmation les données d’événement pour l’activité de votre organisation dans [!DNL Platform].
 
 ## Prise en main
 
@@ -19,7 +19,7 @@ Le point d’entrée dʼAPI utilisé dans ce guide fait partie de lʼ [[!DNL Aud
 
 ## Liste des événements de contrôle
 
-Vous pouvez récupérer des données d’événements en envoyant une requête de GET à la variable `/audit/events` point de terminaison , en spécifiant les événements que vous souhaitez récupérer dans la payload.
+Vous pouvez récupérer les données d’événements en envoyant une requête de GET au point de terminaison `/audit/events`, en spécifiant les événements que vous souhaitez récupérer dans la payload.
 
 **Format d’API**
 
@@ -27,12 +27,12 @@ Vous pouvez récupérer des données d’événements en envoyant une requête d
 GET /audit/events
 ```
 
-Le [!DNL Audit Query] L’API prend en charge l’utilisation de paramètres de requête pour la page et le filtrage des résultats lors de la liste d’événements.
+L’API [!DNL Audit Query] prend en charge l’utilisation de paramètres de requête pour la page et le filtrage des résultats lors de la liste d’événements.
 
 | Paramètre | Description |
 | --- | --- |
-| `limit` | Nombre maximal d’enregistrements à renvoyer dans la réponse. La valeur par défaut `limit` est de 50. |
-| `start` | Pointeur vers le premier élément pour les résultats de recherche renvoyés. Pour accéder à la page de résultats suivante, ce paramètre doit être incrémenté de la même quantité que celle indiquée par la limite. Exemple : Pour accéder à la page de résultats suivante pour une requête avec limit=50, utilisez le paramètre start=50, puis start=100 pour la page suivante, et ainsi de suite. |
+| `limit` | Nombre maximal d’enregistrements à renvoyer dans la réponse. La valeur par défaut `limit` est 50. |
+| `start` | Pointeur vers le premier élément pour les résultats de recherche renvoyés. Pour accéder à la page de résultats suivante, ce paramètre doit être incrémenté de la même quantité que celle indiquée par la limite. Exemple : pour accéder à la page de résultats suivante pour une requête avec limit=50, utilisez le paramètre start=50, puis start=100 pour la page après cela, etc. |
 | `queryId` | Lors de l’exécution d’une requête sur le point de terminaison /audit/events, la réponse inclut une propriété de chaîne queryId. Pour effectuer la même requête dans un appel distinct, vous pouvez inclure la valeur Id comme paramètre de requête unique au lieu de reconfigurer manuellement les paramètres de recherche. |
 
 **Requête**
@@ -146,9 +146,9 @@ Une réponse réussie renvoie les points de données résultants pour les mesure
 | --- | --- |
 | `customerAuditLogList` | Tableau dont les objets représentent chacun des événements spécifiés dans la requête. Chaque objet contient des informations sur la configuration du filtre et les données d’événement renvoyées. |
 | `userEmail` | Adresse électronique de l’utilisateur qui a exécuté l’événement. |
-| `eventType` | Type d’événement. Les types d’événements incluent : `Core` et `Enhanced`. |
+| `eventType` | Type d’événement. Les types d’événements incluent `Core` et `Enhanced`. |
 | `imsOrgId` | ID de l’organisation sous laquelle l’événement a eu lieu. |
-| `permissionResource` | Le produit ou la fonctionnalité qui a fourni l’autorisation effectue l’action. Une ressource peut être l’une des ressources suivantes : <ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
+| `permissionResource` | Le produit ou la fonctionnalité qui a fourni l’autorisation effectue l’action. Une ressource peut être l’une des suivantes : <ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
 | `permissionType` | Type d’autorisation associé à l’action. |
 | `assetType` | Type de ressource Platform sur laquelle l’action a été effectuée. |
 | `assetId` | Identifiant unique de la ressource Platform sur laquelle l’action a été effectuée. |

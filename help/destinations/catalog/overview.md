@@ -6,7 +6,7 @@ exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
 workflow-type: tm+mt
 source-wordcount: '171'
-ht-degree: 39%
+ht-degree: 29%
 
 ---
 
@@ -27,15 +27,15 @@ Parcourez le catalogue pour déterminer les plateformes de destination qui convi
 
 Vous pouvez activer vos données dans différentes catégories de destination dans Adobe Experience Platform. Les liens ci-dessous fournissent des informations supplémentaires sur chaque catégorie de destination :
 
-- [Adobe [!UICONTROL destinations] aperçu](adobe/overview.md)
-- [[!UICONTROL Publicité] [!UICONTROL destinations] aperçu](advertising/overview.md)
-- [[!UICONTROL Analytics] [!UICONTROL destinations] aperçu](analytics/overview.md)
-- [[!UICONTROL Présentation des destinations de stockage dans le cloud]](cloud-storage/overview.md)
-- [[!UICONTROL Plateforme de Data Management] (DMP) [!UICONTROL destinations] aperçu](data-management/overview.md)
-- [[!UICONTROL Présentation des destinations du marketing par e-mail]](email-marketing/overview.md)
-- [[!UICONTROL Présentation des destinations d’engagement mobile]](mobile-engagement/overview.md)
-- [[!UICONTROL Personnalisation] [!UICONTROL destinations] aperçu](personalization/overview.md)
-- [[!UICONTROL Social] [!UICONTROL destinations] aperçu](social/overview.md)
-- [[!UICONTROL Diffusion en continu] [!UICONTROL destinations] (liens vers la destination HTTP)](streaming/http-destination.md)
-- [[!UICONTROL Enquête] [!UICONTROL destinations] aperçu](survey/overview.md)
-- [[!UICONTROL Présentation des destinations de voix du client]](voice/overview.md)
+- [Adobe [!UICONTROL destinations] - Aperçu](adobe/overview.md)
+- [[!UICONTROL Advertising] [!UICONTROL destinations] - Aperçu](advertising/overview.md)
+- [[!UICONTROL Présentation d’Analytics] [!UICONTROL destinations]](analytics/overview.md)
+- [ [!UICONTROL Présentation des destinations] de stockage dans le cloud](cloud-storage/overview.md)
+- [[!UICONTROL Présentation de la plateforme de gestion des données] (DMP) [!UICONTROL destinations]](data-management/overview.md)
+- [[!UICONTROL Présentation du marketing par e-mail] [!UICONTROL destinations]](email-marketing/overview.md)
+- [[!UICONTROL Engagement mobile] [!UICONTROL Présentation des destinations]](mobile-engagement/overview.md)
+- [[!UICONTROL Personalization] [!UICONTROL destinations] - Aperçu](personalization/overview.md)
+- [[!UICONTROL Présentation de Social] [!UICONTROL destinations]](social/overview.md)
+- [[!UICONTROL Diffusion en continu] [!UICONTROL destinations] (liens vers une destination HTTP)](streaming/http-destination.md)
+- [[!UICONTROL Présentation du module Survey] [!UICONTROL destinations]](survey/overview.md)
+- [[!UICONTROL Présentation de la voix du client] [!UICONTROL destinations]](voice/overview.md)

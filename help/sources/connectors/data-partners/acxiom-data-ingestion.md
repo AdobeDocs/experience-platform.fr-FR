@@ -1,11 +1,12 @@
 ---
-title: Ingestion des données par l’intermédiaire d’Acxiom
-description: Découvrez comment ingérer [!DNL Acxiom] données à Real-time Customer Data Platform, enrichissez les profils propriétaires, améliorez les audiences et activez-les sur l’ensemble des canaux marketing.
-badge: Version Beta
-source-git-commit: d841975249262fa5908a408e4c27c5f76b92d96e
+title: Ingestion de données Acxiom
+description: Découvrez comment ingérer des données  [!DNL Acxiom] dans Real-Time Customer Data Platform, enrichir les profils propriétaires, améliorer les audiences et activer sur l’ensemble des canaux marketing.
+badge: Version bêta
+exl-id: 3bbbe4e1-5e34-4104-bf39-2c452865b807
+source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
 workflow-type: tm+mt
 source-wordcount: '473'
-ht-degree: 42%
+ht-degree: 43%
 
 ---
 
@@ -15,22 +16,22 @@ ht-degree: 42%
 >
 >La source [!DNL Acxiom Prospecting Data Import] est en version Beta. Veuillez lire la [présentation des sources](../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Utilisez la variable [!DNL Acxiom Data Ingestion] source à ingérer [!DNL Acxiom] des données dans Real-time Customer Data Platform et enrichissez les profils propriétaires. Vous pouvez ensuite utiliser la variable [!DNL Acxiom]profils propriétaires enrichis pour améliorer les audiences et les activer sur les canaux marketing.
+Utilisez la source [!DNL Acxiom Data Ingestion] pour ingérer des données [!DNL Acxiom] dans Real-Time Customer Data Platform et enrichir les profils propriétaires. Vous pouvez ensuite utiliser vos profils propriétaires enrichis de [!DNL Acxiom] pour améliorer les audiences et les activer sur l’ensemble des canaux marketing.
 
 ![acxiom-data-ingestion-workflow](../../images/tutorials/create/acxiom-data-enhancement-import/acxiom-data-ingestion.png)
 
-Pour plus d’informations sur la configuration de votre [!DNL Acxiom Data Ingestion] compte source.
+Lisez le document ci-dessous pour plus d’informations sur la configuration de votre compte source [!DNL Acxiom Data Ingestion].
 
 ## Conditions préalables {#prerequisites}
 
-Pour connecter votre [!DNL Acxiom Data Ingestion] pour Experience Platform, vous devez fournir des valeurs pour les informations d’authentification suivantes :
+Pour connecter votre compte [!DNL Acxiom Data Ingestion] à un Experience Platform, vous devez fournir des valeurs pour les informations d’authentification suivantes :
 
 | Informations d’identification | Description |
 | --- | --- |
-| [!DNL Acxiom] clé d&#39;authentification | Clé d’authentification. Vous pouvez récupérer cette valeur à partir de la variable [!DNL Acxiom] l&#39;équipe. |
-| [!DNL Amazon S3] clé d&#39;accès | Identifiant de la clé d’accès pour votre compartiment. Vous pouvez récupérer cette valeur à partir de la variable [!DNL Acxiom] l&#39;équipe. |
-| Clé secrète [!DNL Amazon S3] | Identifiant de clé secrète pour votre compartiment. Vous pouvez récupérer cette valeur à partir de la variable [!DNL Acxiom] l&#39;équipe. |
-| Nom du compartiment | Il s’agit de votre compartiment où les fichiers seront partagés. Vous pouvez récupérer cette valeur à partir de la variable [!DNL Acxiom] l&#39;équipe. |
+| [!DNL Acxiom] clé d’authentification | Clé d’authentification. Vous pouvez récupérer cette valeur de l’équipe [!DNL Acxiom]. |
+| [!DNL Amazon S3] clé d’accès | Identifiant de la clé d’accès pour votre compartiment. Vous pouvez récupérer cette valeur de l’équipe [!DNL Acxiom]. |
+| Clé secrète [!DNL Amazon S3] | Identifiant de clé secrète pour votre compartiment. Vous pouvez récupérer cette valeur de l’équipe [!DNL Acxiom]. |
+| Nom du compartiment | Il s’agit de votre compartiment où les fichiers seront partagés. Vous pouvez récupérer cette valeur de l’équipe [!DNL Acxiom]. |
 
 ## Liste autorisée d’adresses IP
 
@@ -38,7 +39,7 @@ Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’
 
 ### Configuration des autorisations sur Experience Platform
 
-Vous devez disposer des deux **[!UICONTROL Afficher les sources]** et **[!UICONTROL Gérer les sources]** autorisations activées pour votre compte afin de connecter [!DNL Acxiom Data Ingestion] compte à Experience Platform. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez la section [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
+Les autorisations **[!UICONTROL Afficher les sources]** et **[!UICONTROL Gérer les sources]** doivent être activées pour votre compte pour connecter votre compte [!DNL Acxiom Data Ingestion] à un Experience Platform. Contactez votre administrateur de produit pour obtenir les autorisations nécessaires. Pour plus d’informations, consultez le [guide de l’interface utilisateur du contrôle d’accès](../../../access-control/ui/overview.md).
 
 ### Contraintes de dénomination pour fichiers et répertoires
 
@@ -53,5 +54,4 @@ Les restrictions répertoriées ci-dessous doivent être prises en compte lors d
 
 ## Étapes suivantes
 
-En lisant ce document, vous avez terminé la configuration préalable nécessaire pour importer les données de votre [!DNL Acxiom] compte à Experience Platform. Vous pouvez maintenant passer au guide sur la [connexion [!DNL Acxiom Data Ingestion] Experience Platform à l’aide de l’interface utilisateur](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).
-
+En lisant ce document, vous avez terminé la configuration préalable nécessaire pour importer les données de votre compte [!DNL Acxiom] vers Experience Platform. Vous pouvez maintenant passer au guide sur la [connexion [!DNL Acxiom Data Ingestion] à l’Experience Platform à l’aide de l’interface utilisateur](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).

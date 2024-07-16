@@ -164,7 +164,7 @@ Une réponse réussie renvoie un payload contenant les détails de votre modèle
 
 ## Enregistrement d’un modèle prégénéré {#register-a-model}
 
-Vous pouvez enregistrer un modèle prégénéré en adressant une requête de POST à la fonction `/models` point de terminaison . Pour enregistrer votre modèle, la variable `modelArtifact` et `model` Les valeurs de propriété doivent être incluses dans le corps de la requête.
+Vous pouvez enregistrer un modèle prégénéré en envoyant une requête de POST au point de terminaison `/models`. Pour enregistrer votre modèle, les valeurs de fichier `modelArtifact` et de propriété `model` doivent être incluses dans le corps de la requête.
 
 **Format d’API**
 
@@ -174,7 +174,7 @@ POST /models
 
 **Requête**
 
-Le POST suivant contient la variable `modelArtifact` et `model` valeurs de propriété nécessaires. Consultez le tableau ci-dessous pour plus d’informations sur ces valeurs.
+Le POST suivant contient les valeurs de fichier `modelArtifact` et de propriété `model` nécessaires. Consultez le tableau ci-dessous pour plus d’informations sur ces valeurs.
 
 ```shell
 curl -X POST \
@@ -214,7 +214,7 @@ Une réponse réussie renvoie un payload contenant les détails de votre modèle
 | Propriété | Description |
 | --- | --- |
 | `id` | L’identifiant correspondant au modèle. |
-| `modelArtifactUri` | Un URI indiquant l’emplacement de stockage du modèle. L’URI se termine par la propriété `id` pour votre modèle. |
+| `modelArtifactUri` | Un URI indiquant l’emplacement de stockage du modèle. L’URI se termine par la valeur `id` de votre modèle. |
 
 ## Mise à jour d’un modèle par son identifiant
 
@@ -318,7 +318,7 @@ Une réponse réussie renvoie un payload contenant un état 200 qui confirme la
 
 ## Création d’un transcodage pour un modèle {#create-transcoded-model}
 
-Le transcodage est la conversion numérique-numérique directe d’un encodage vers un autre. Vous créez un transcodage pour un modèle en fournissant la variable `{MODEL_ID}` et un `targetFormat` vous souhaitez que la nouvelle sortie soit dans .
+Le transcodage est la conversion numérique-numérique directe d’un encodage vers un autre. Vous créez un nouveau transcodage pour un modèle en fournissant le `{MODEL_ID}` et un `targetFormat` dans lequel vous souhaitez que la nouvelle sortie se trouve.
 
 **Format d’API**
 
@@ -355,7 +355,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie un payload contenant un objet JSON contenant les informations de votre transcodage. Cela inclut l’identifiant unique de transcodage (`id`) utilisé dans [récupération d’un modèle transcodé spécifique](#retrieve-transcoded-model).
+Une réponse réussie renvoie un payload contenant un objet JSON contenant les informations de votre transcodage. Cela inclut l’identifiant unique de transcodage (`id`) utilisé dans la [récupération d’un modèle transcodé spécifique](#retrieve-transcoded-model).
 
 ```json
 {

@@ -6,26 +6,26 @@ description: L’API Catalog Service permet aux développeurs de gérer les mét
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
 source-git-commit: 07451b8ab4bcb7ca43ad0c8a821478b2c9682894
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 61%
+source-wordcount: '588'
+ht-degree: 58%
 
 ---
 
 # Guide de l’API [!DNL Catalog Service]
 
-Le [!DNL Catalog Service] est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. [!DNL Catalog] agit comme un magasin de métadonnées ou un &quot;catalogue&quot; dans lequel vous pouvez trouver des informations sur vos données dans [!DNL Experience Platform], sans avoir à accéder aux données elles-mêmes. Pour plus d’informations, consultez la [[!DNL Catalog] présentation](../home.md). 
+Le [!DNL Catalog Service] est le système d’enregistrement pour l’emplacement et la parenté des données au sein d’Adobe Experience Platform. [!DNL Catalog] agit comme un magasin de métadonnées ou un &quot;catalogue&quot; où vous pouvez trouver des informations sur vos données dans [!DNL Experience Platform], sans avoir à accéder aux données elles-mêmes. Pour plus d’informations, consultez la [[!DNL Catalog] présentation](../home.md). 
 
 Ce guide de développement décrit les étapes à suivre pour commencer à utiliser l’API [!DNL Catalog]. Le guide fournit ensuite des exemples d’appels API pour effectuer des opérations clés à l’aide de [!DNL Catalog].
 
 ## Conditions préalables
 
-[!DNL Catalog] effectue le suivi des métadonnées pour plusieurs types de ressources et d’opérations dans [!DNL Experience Platform]. Ce guide de développement nécessite une compréhension pratique des différentes [!DNL Experience Platform] services impliqués dans la création et la gestion de ces ressources :
+[!DNL Catalog] effectue le suivi des métadonnées pour plusieurs types de ressources et d’opérations dans [!DNL Experience Platform]. Ce guide de développement nécessite une compréhension pratique des différents services [!DNL Experience Platform] impliqués dans la création et la gestion de ces ressources :
 
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
-* [Ingestion par lots](../../ingestion/batch-ingestion/overview.md)[!DNL Experience Platform] : méthode d’ingestion et de stockage de données de fichiers, par exemple de type CSV et Parquet, dans 
-* [Ingestion par flux](../../ingestion/streaming-ingestion/overview.md): comment [!DNL Experience Platform] ingère et stocke des données à partir de périphériques côté client et côté serveur en temps réel.
+* [Ingestion par lots](../../ingestion/batch-ingestion/overview.md) : méthode d’ingestion et de stockage de données de fichiers, tels que CSV et Parquet, par [!DNL Experience Platform].
+* [Ingestion par flux](../../ingestion/streaming-ingestion/overview.md) : méthode d’ingestion et de stockage de données en temps réel à partir de périphériques côté client et côté serveur. [!DNL Experience Platform]
 
-Les sections suivantes contiennent des informations supplémentaires que vous devrez connaître ou dont vous devrez disposer pour passer avec succès des appels à la fonction [!DNL Catalog Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin ou dont vous devrez disposer pour passer avec succès des appels à l’API [!DNL Catalog Service].
 
 ## Lecture d’exemples d’appels API
 
@@ -51,18 +51,18 @@ Toutes les requêtes contenant un payload (POST, PUT, PATCH) requièrent un en-t
 
 * Content-Type: application/json
 
-## Bonnes pratiques relatives aux [!DNL Catalog] Appels API
+## Bonnes pratiques relatives aux appels d’API [!DNL Catalog]
 
-Lors de l’exécution de requêtes de GET à la variable [!DNL Catalog] API, la bonne pratique consiste à inclure des paramètres de requête dans vos requêtes afin de renvoyer uniquement les objets et les propriétés dont vous avez besoin. Les requêtes non filtrées peuvent entraîner des payloads de réponse supérieurs à 3 Go, ce qui peut ralentir les performances globales.
+Lors de l’exécution de requêtes de GET à l’API [!DNL Catalog], la bonne pratique consiste à inclure des paramètres de requête dans vos requêtes afin de renvoyer uniquement les objets et les propriétés dont vous avez besoin. Les requêtes non filtrées peuvent entraîner des payloads de réponse supérieurs à 3 Go, ce qui peut ralentir les performances globales.
 
 Vous pouvez afficher des objets spécifiques en incluant leurs identifiants dans le chemin d’accès à la requête ou utiliser des paramètres de requête tels que `properties` et `limit` pour filtrer les réponses. Les filtres peuvent être transmis sous forme d’en-têtes et de paramètres de requête, les filtres transmis sous forme de paramètres de requête prévalant sur les autres. Pour plus d’informations, consultez le document sur le [filtrage des données du catalogue](filter-data.md).
 
-Comme certaines requêtes peuvent imposer une charge importante à l’API, des limites globales ont été mises en oeuvre sur [!DNL Catalog] requêtes afin de prendre davantage en charge les bonnes pratiques.
+Comme certaines requêtes peuvent imposer une charge importante à l’API, des limites globales ont été mises en oeuvre sur les requêtes [!DNL Catalog] afin de prendre davantage en charge les bonnes pratiques.
 
 ## Étapes suivantes
 
 Dans ce document, vous avez découvert les connaissances préalables requises pour effectuer des appels vers l’API [!DNL Catalog]. Vous pouvez désormais procéder aux exemples d&#39;appel fournis dans ce guide de développement et suivre leurs instructions.
 
-La plupart des exemples de ce guide utilisent la méthode `/dataSets` mais les principes peuvent s’appliquer à d’autres points de terminaison dans [!DNL Catalog] (par exemple `/batches`). Consultez la [référence de l’API Catalog Service](https://www.adobe.io/experience-platform-apis/references/catalog/) pour obtenir une liste complète de tous les appels et opérations disponibles pour chaque point d’entrée.
+La plupart des exemples de ce guide utilisent le point de terminaison `/dataSets`, mais les principes peuvent être appliqués à d’autres points de terminaison dans [!DNL Catalog] (comme `/batches`). Consultez la [référence de l’API Catalog Service](https://www.adobe.io/experience-platform-apis/references/catalog/) pour obtenir une liste complète de tous les appels et opérations disponibles pour chaque point d’entrée.
 
-Pour un workflow détaillé qui montre comment la variable [!DNL Catalog] L’API est impliquée dans l’ingestion de données. Pour plus d’informations, consultez le tutoriel sur [création d’un jeu de données](../datasets/create.md).
+Pour un workflow détaillé qui montre comment l’API [!DNL Catalog] est impliquée dans l’ingestion de données, consultez le tutoriel sur la [création d’un jeu de données](../datasets/create.md).

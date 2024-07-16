@@ -1,24 +1,24 @@
 ---
 keywords: Experience Platform;accueil;rubriques populaires;Apache HDFS;HDFS;hdfs
 solution: Experience Platform
-title: Création d’une connexion source Apache HDFS dans l’interface utilisateur
+title: Création d’une connexion Source Apache HDFS dans l’interface utilisateur
 type: Tutorial
 description: Découvrez comment créer une connexion source Apache Hadoop Distributed File System à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 3b8bf210-13b6-44e6-9090-152998f67452
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '487'
 ht-degree: 35%
 
 ---
 
-# Créez un [!DNL Apache] Connexion source HDFS dans l’interface utilisateur
+# Créer une connexion source HDFS [!DNL Apache] dans l’interface utilisateur
 
 >[!NOTE]
 >
->La variable [!DNL Apache] Le connecteur HDFS est en version bêta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
+>Le connecteur HDFS [!DNL Apache] est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez la [Présentation des sources](../../../../home.md#terms-and-conditions) .
 
-Connecteurs source dans [!DNL Adobe Experience Platform] offrir la possibilité d’ingérer des données provenant de l’extérieur sur une base planifiée ; Ce tutoriel décrit les étapes à suivre pour authentifier une [!DNL Apache Hadoop Distributed File System] (ci-après appelé &quot;HDFS&quot;) Connecteur source à l’aide de [!DNL Platform] de l’interface utilisateur.
+Les connecteurs Source de [!DNL Adobe Experience Platform] permettent d’ingérer des données provenant de l’extérieur selon un calendrier précis. Ce tutoriel décrit les étapes d’authentification d’un connecteur source [!DNL Apache Hadoop Distributed File System] (ci-après appelé &quot;HDFS&quot;) à l’aide de l’interface utilisateur [!DNL Platform].
 
 ## Prise en main
 
@@ -29,7 +29,7 @@ Ce tutoriel nécessite une connaissance pratique des composants suivants de [!DN
    - [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 - [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
-Si vous disposez déjà d’une connexion HDFS valide, vous pouvez ignorer le reste de ce document et passer au tutoriel sur [configuration d’un flux de données](../../dataflow/batch/cloud-storage.md).
+Si vous disposez déjà d’une connexion HDFS valide, vous pouvez ignorer le reste de ce document et passer au tutoriel sur la [configuration d’un flux de données](../../dataflow/batch/cloud-storage.md).
 
 ### Collecter les informations d’identification requises
 
@@ -37,21 +37,21 @@ Pour authentifier votre connecteur source HDFS, vous devez fournir des valeurs p
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `url` | L’URL définit les paramètres d’authentification requis pour la connexion anonyme à HDFS. Pour plus d&#39;informations sur l&#39;obtention de cette valeur, consultez le document suivant sur [Authentification HTTPS pour HDFS](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
+| `url` | L’URL définit les paramètres d’authentification requis pour la connexion anonyme à HDFS. Pour plus d’informations sur la manière d’obtenir cette valeur, reportez-vous au document suivant sur l’ [authentification HTTPS pour HDFS](https://hadoop.apache.org/docs/r1.2.1/HttpAuthentication.html). |
 
 ## Connexion à votre compte HDFS
 
-Une fois que vous avez rassemblé les informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre compte HDFS à [!DNL Platform].
+Une fois que vous avez rassemblé vos informations d’identification requises, vous pouvez suivre les étapes ci-dessous pour lier votre compte HDFS à [!DNL Platform].
 
-Connexion à [Adobe Experience Platform](https://platform.adobe.com) puis sélectionnez **[!UICONTROL Sources]** à partir de la barre de navigation de gauche pour accéder au **[!UICONTROL Sources]** workspace. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
+Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com), puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail **[!UICONTROL Sources]**. L’écran **[!UICONTROL Catalogue]** affiche diverses sources pour lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous , **[!UICONTROL Stockage dans le cloud]** catégorie, sélectionnez **[!UICONTROL Apache HDFS]**. Si c’est la première fois que vous utilisez ce connecteur, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer un connecteur HDFS.
+Sous la catégorie **[!UICONTROL Stockage dans le cloud]**, sélectionnez **[!UICONTROL Apache HDFS]**. Si c&#39;est la première fois que vous utilisez ce connecteur, sélectionnez **[!UICONTROL Configurer]**. Sinon, sélectionnez **[!UICONTROL Ajouter des données]** pour créer un connecteur HDFS.
 
 ![catalogue](../../../../images/tutorials/create/hdfs/catalog.png)
 
-La variable **[!UICONTROL Connexion à HDFS]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Se connecter à HDFS]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Nouveau compte
 
@@ -61,7 +61,7 @@ Si vous utilisez de nouvelles informations d’identification, sélectionnez **[
 
 ### Compte existant
 
-Pour connecter un compte existant, sélectionnez le compte HDFS auquel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
+Pour connecter un compte existant, sélectionnez le compte HDFS avec lequel vous souhaitez vous connecter, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
 ![existant](../../../../images/tutorials/create/hdfs/existing.png)
 

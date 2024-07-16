@@ -1,6 +1,6 @@
 ---
-title: Modèle de données Real-time Customer Data Platform Insights B2B
-description: Découvrez comment utiliser les requêtes SQL avec les modèles de données de statistiques Real-time Customer Data Platform (édition B2B) pour personnaliser vos propres rapports Real-Time CDP pour vos cas d’utilisation de marketing et d’indicateurs de performance clés.
+title: Modèle de données Real-Time Customer Data Platform Insights B2B
+description: Découvrez comment utiliser les requêtes SQL avec les modèles de données de statistiques Real-Time Customer Data Platform (édition B2B) pour personnaliser vos propres rapports Real-Time CDP pour vos cas d’utilisation de marketing et d’indicateurs de performance clés.
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
@@ -13,11 +13,11 @@ ht-degree: 3%
 
 # Modèle de données Real-time Customer Data Platform Insights B2B
 
-Le modèle de données Real-time Customer Data Platform Insights pour l’édition B2B expose les modèles de données et SQL qui alimentent les insights pour [profils de compte](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). Vous pouvez personnaliser ces modèles de requête SQL afin de créer des rapports Real-Time CDP pour vos cas d’utilisation d’indicateurs de performance clés et de marketing B2B. Ces informations peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord.
+Le modèle de données Real-Time Customer Data Platform Insights pour l’édition B2B expose les modèles de données et SQL qui alimentent les insights pour les [profils de compte](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). Vous pouvez personnaliser ces modèles de requête SQL afin de créer des rapports Real-Time CDP pour vos cas d’utilisation d’indicateurs de performance clés et de marketing B2B. Ces informations peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord.
 
 >[!AVAILABILITY]
 >
->Cette fonctionnalité est disponible pour les clients qui ont acheté les packages Real-Time CDP Prime et Ultimate. Consultez la documentation sur la version disponible [éditions Real-Time CDP](../../rtcdp/overview.md#rtcdp-editions) pour plus d’informations, ou contactez votre représentant Adobe.
+>Cette fonctionnalité est disponible pour les clients qui ont acheté les packages Real-Time CDP Prime et Ultimate. Pour plus d’informations, consultez la documentation sur les [éditions Real-Time CDP](../../rtcdp/overview.md#rtcdp-editions) disponibles ou contactez votre représentant Adobe.
 
 <!-- 
 See the query accelerated store reporting insights documentation to learn [how to build a reporting insights data model through Query Service for use with accelerated store data and user-defined dashboards](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
@@ -25,7 +25,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 ## Conditions préalables
 
-Ce guide nécessite une compréhension pratique des tableaux de bord personnalisés. Lisez la documentation sur [création d’un tableau de bord personnalisé](../user-defined-dashboards.md) avant de poursuivre avec ce guide.
+Ce guide nécessite une compréhension pratique des tableaux de bord personnalisés. Lisez la documentation sur [la création d’un tableau de bord personnalisé](../user-defined-dashboards.md) avant de poursuivre avec ce guide.
 
 ## Rapports d’informations sur Real-Time CDP B2B et cas d’utilisation {#B2B-insight-reports-and-use-cases}
 
@@ -48,17 +48,17 @@ Le modèle de profil de compte comprend huit jeux de données :
 
 Le diagramme ci-dessous affiche les champs de données pertinents de chaque jeu de données, leur type de données et les clés étrangères qui lient les jeux de données ensemble.
 
-![Diagramme relationnel d’entité pour le modèle de profil de compte.](../images/data-models/account-profile-model.png)
+![ Diagramme relationnel de l’entité pour le modèle de profil de compte.](../images/data-models/account-profile-model.png)
 
 #### Nouveaux comptes par cas d’utilisation industriel {#accounts-by-industry}
 
-La logique utilisée pour la variable [!UICONTROL Nouveaux comptes par secteur] insight renvoie les cinq premières industries en fonction de leur nombre de profils de compte et de leur taille relative les unes par rapport aux autres. Voir [[!UICONTROL Nouveaux comptes par secteur industriel] documentation sur les widgets](../guides/account-profiles.md#accounts-by-industry) pour plus d’informations.
+La logique utilisée pour l’insight [!UICONTROL Nouveaux comptes par industrie] renvoie les cinq premières industries en fonction de leur nombre de profils de compte et de leur taille relative l’une par rapport à l’autre. Pour plus d’informations, consultez la [[!UICONTROL documentation du widget New accounts By Industry] .](../guides/account-profiles.md#accounts-by-industry)
 
 >[!TIP]
 >
 >Vous pouvez personnaliser cette requête SQL pour renvoyer plus ou moins de données que les cinq premières industries.
 
-Le SQL qui génère la variable [!UICONTROL Nouveaux comptes par secteur] Un aperçu est présenté dans la section réductible ci-dessous.
+L’aperçu SQL qui génère l’[!UICONTROL information sur les nouveaux comptes par industrie] est visible dans la section réductible ci-dessous.
 
 Requête +++SQL
 
@@ -97,9 +97,9 @@ LIMIT 5000;
 
 #### Cas pratique des nouveaux comptes par type {#accounts-by-type}
 
-La logique utilisée pour la variable [!UICONTROL Nouveaux comptes par type] insight renvoie la ventilation numérique des comptes selon leur type. Ces informations peuvent vous aider à orienter la stratégie commerciale et les opérations, y compris l’allocation des ressources ou les stratégies marketing. Voir [[!UICONTROL Nouveaux comptes par type] documentation sur les widgets](../guides/account-profiles.md#accounts-by-type) pour plus d’informations.
+La logique utilisée pour l’insight [!UICONTROL New accounts by type] renvoie la ventilation numérique des comptes par leur type. Ces informations peuvent vous aider à orienter la stratégie commerciale et les opérations, y compris l’allocation des ressources ou les stratégies marketing. Pour plus d’informations, consultez la [[!UICONTROL documentation du widget New accounts by type] .](../guides/account-profiles.md#accounts-by-type)
 
-Le SQL qui génère la variable [!UICONTROL Nouveaux comptes par type] Un aperçu est présenté dans la section réductible ci-dessous.
+L’aperçu SQL qui génère l’[!UICONTROL information sur les nouveaux comptes par type] est visible dans la section réductible ci-dessous.
 
 Requête +++SQL
 
@@ -132,4 +132,4 @@ Le modèle d’opportunité comprend sept jeux de données :
 
 Le diagramme ci-dessous affiche les champs de données pertinents dans chaque jeu de données.
 
-![Diagramme relationnel de l’entité pour le modèle d’opportunité.](../images/data-models/opportunity-model.png)
+![Diagramme relationnel de l’entité pour le modèle Opportunity.](../images/data-models/opportunity-model.png)

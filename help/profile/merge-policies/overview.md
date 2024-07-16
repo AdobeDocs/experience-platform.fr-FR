@@ -7,7 +7,7 @@ exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
 source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
 source-wordcount: '1265'
-ht-degree: 81%
+ht-degree: 80%
 
 ---
 
@@ -22,7 +22,7 @@ Adobe Experience Platform permet de rassembler des données issues de plusieur
 Ce guide nécessite une compréhension pratique de plusieurs fonctions [!DNL Experience Platform] importantes. Avant de suivre ce guide et d’utiliser des politiques de fusion, consultez la documentation des services suivants :
 
 * [Profil client en temps réel](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [Service Adobe Experience Platform Identity](../../identity-service/home.md): active Real-time Customer Profile en rapprochant des identités de sources de données disparates ingérées dans [!DNL Platform].
+* [Service Adobe Experience Platform Identity](../../identity-service/home.md) : active Real-time Customer Profile en rapprochant des identités de sources de données disparates ingérées dans [!DNL Platform].
 * [Modèle de données d’expérience (XDM)](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données d’expérience client.
 
 ## Comprendre les politiques de fusion
@@ -33,7 +33,7 @@ Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votr
 
 Lorsque les données provenant de plusieurs sources entrent en conflit (par exemple, si un fragment classe le client comme étant « célibataire » tandis qu’un autre le classe comme étant « marié »), la politique de fusion détermine les informations qui doivent passer en priorité et être incluses dans le profil de l’individu.
 
-Les stratégies de fusion sont réservées à votre organisation, ce qui vous permet de créer différentes stratégies pour fusionner les schémas de la manière spécifique dont vous avez besoin. Vous pouvez également spécifier une politique de fusion par défaut qui sera utilisée si elle n’est pas explicitement fournie. Pour en savoir plus, consultez la section [Politiques de fusion par défaut](#default-merge-policy) plus loin dans ce document. Notez qu’un maximum de cinq stratégies de fusion est autorisé par organisation.
+Les stratégies de fusion sont réservées à votre organisation, ce qui vous permet de créer différentes stratégies pour fusionner les schémas de la manière spécifique dont vous avez besoin. Vous pouvez également spécifier une politique de fusion par défaut qui sera utilisée si elle n’est pas explicitement fournie. Pour en savoir plus, consultez la section sur les [stratégies de fusion par défaut](#default-merge-policy) plus loin dans ce document. Notez qu’un maximum de cinq stratégies de fusion est autorisé par organisation.
 
 ## Méthodes de fusion {#merge-methods}
 
@@ -63,7 +63,7 @@ La combinaison d’identités ([!UICONTROL combinaison d’identités]) est le p
 * **[!UICONTROL Aucun] :** lorsque cette option est sélectionnée, les identifiants ne sont pas regroupés. Lorsque la segmentation se produit, les identités qui peuvent appartenir à la même personne ne sont pas regroupées et la segmentation ne prend en compte que les attributs associés à chaque ID individuel lorsque vous déterminez si un client est admissible pour l’appartenance à l’audience. Cela peut se traduire par l’existence de plusieurs profils pour un seul client et par la qualification de chaque profil pour différentes audiences, ce qui entraîne l’envoi de plusieurs messages marketing à un même client.
 * **[!UICONTROL Graphique privé] :** lorsque le graphique privé est sélectionné, les différentes identités liées à la même personne sont regroupées. Le client dispose ainsi d’un profil unique, ce qui permet à la segmentation de prendre en compte plusieurs attributs provenant de plusieurs identités associées lors de la détermination de la qualification du segment. Dans ce scénario, le client est susceptible d’avoir un seul profil, de se qualifier pour une audience en fonction de la combinaison d’attributs entre les identités et de ne recevoir qu’un seul message marketing.
 
-Pour en savoir plus sur les identités et leur rôle dans la génération de profils et d’audiences, veuillez commencer par lire la [Présentation d’Identity Service](../../identity-service/home.md).
+Pour en savoir plus sur les identités et leur rôle dans la génération de profils et d’audiences, commencez par lire la [présentation d’Identity Service](../../identity-service/home.md).
 
 ## Politique de fusion par défaut {#default-merge-policy}
 

@@ -47,11 +47,11 @@ Pour en savoir plus, consultez le [guide du tableau de bord Audiences](../../das
 
 ## Parcourir {#browse}
 
-Sélectionnez la variable **[!UICONTROL Parcourir]** pour afficher le portail Audience. Audience Portal fournit une liste de toutes les audiences qui appartiennent à votre organisation et à votre environnement de test et inclut des détails tels que le nombre de profils, l’origine, la date de création, la date de dernière modification, les balises et la ventilation.
+Sélectionnez l’onglet **[!UICONTROL Parcourir]** pour afficher le portail Audience. Audience Portal fournit une liste de toutes les audiences qui appartiennent à votre organisation et à votre environnement de test et inclut des détails tels que le nombre de profils, l’origine, la date de création, la date de dernière modification, les balises et la ventilation.
 
 En outre, Audience Portal vous permet de créer de nouvelles audiences à l’aide du créateur de segments ou de la composition de l’audience, ainsi que d’importer des audiences générées en externe dans Platform.
 
-Pour plus d’informations sur Audience Portal, veuillez lire le [Présentation d’Audience Portal](./audience-portal.md).
+Pour plus d’informations sur Audience Portal, consultez la [présentation d’Audience Portal](./audience-portal.md).
 
 ## Compositions {#compositions}
 
@@ -67,7 +67,7 @@ Une icône de points de suspension se trouve à côté de chaque audience. Cette
 | ------ | ----------- |
 | Dupliquer | Copie l’audience sélectionnée. |
 | Gérer l’accès | Gère les étiquettes d’accès qui appartiennent à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
-| Supprimer | Supprime l’audience sélectionnée. Audiences utilisées dans des destinations en aval ou qui dépendent d’autres audiences **cannot** être supprimées. Pour plus d’informations sur la suppression d’une audience, veuillez lire le [FAQ sur la segmentation](../faq.md#lifecycle-states). |
+| Supprimer | Supprime l’audience sélectionnée. Les audiences qui sont utilisées dans des destinations en aval ou qui sont dépendantes d’autres audiences **ne peuvent pas** être supprimées. Pour plus d’informations sur la suppression d’audience, consultez la [FAQ sur la segmentation](../faq.md#lifecycle-states). |
 
 Vous pouvez sélectionner l’icône ![Personnaliser le tableau](../images/ui/overview/customize-table.png) pour modifier les champs affichés.
 

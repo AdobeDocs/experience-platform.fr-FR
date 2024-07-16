@@ -7,12 +7,12 @@ description: Découvrez comment connecter Adobe Experience Platform à Oracle Ob
 exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '543'
 ht-degree: 50%
 
 ---
 
-# Créez un [!DNL Oracle Object Storage] connexion de base à l’aide de [!DNL Flow Service] API
+# Créez une connexion de base [!DNL Oracle Object Storage] à l’aide de l’API [!DNL Flow Service]
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -23,9 +23,9 @@ Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
-* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL Oracle Object Storage] en utilisant la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL Oracle Object Storage] à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
@@ -33,14 +33,14 @@ Pour que [!DNL Flow Service] puisse se connecter à [!DNL Oracle Object Storage]
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `serviceUrl` | Le [!DNL Oracle Object Storage] point d’entrée requis pour l’authentification. Le format du point de terminaison est le suivant : `https://{OBJECT_STORAGE_NAMESPACE}.compat.objectstorage.eu-frankfurt-1.oraclecloud.com` |
-| `accessKey` | Le [!DNL Oracle Object Storage] ID de clé d’accès requis pour l’authentification. |
-| `secretKey` | Le [!DNL Oracle Object Storage] mot de passe requis pour l’authentification. |
-| `bucketName` | Nom du compartiment autorisé requis si l’utilisateur dispose d’un accès restreint. Le nom du compartiment doit comporter entre trois et 63 caractères, il doit commencer et se terminer par une lettre ou un nombre et ne peut contenir que des minuscules lettres, des chiffres ou des tirets (`-`). Le nom du compartiment ne peut pas être formaté comme une adresse IP. |
+| `serviceUrl` | Point d’entrée [!DNL Oracle Object Storage] requis pour l’authentification. Le format du point de terminaison est : `https://{OBJECT_STORAGE_NAMESPACE}.compat.objectstorage.eu-frankfurt-1.oraclecloud.com` |
+| `accessKey` | ID de clé d’accès [!DNL Oracle Object Storage] requis pour l’authentification. |
+| `secretKey` | Mot de passe [!DNL Oracle Object Storage] requis pour l’authentification. |
+| `bucketName` | Nom du compartiment autorisé requis si l’utilisateur dispose d’un accès restreint. Le nom du compartiment doit comporter entre trois et 63 caractères, il doit commencer et se terminer par une lettre ou un nombre et ne peut contenir que des lettres minuscules, des chiffres ou des tirets (`-`). Le nom du compartiment ne peut pas être formaté comme une adresse IP. |
 | `folderPath` | Chemin d’accès au dossier autorisé requis si l’utilisateur dispose d’un accès restreint. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Oracle Object Storage] est `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
 
-Pour plus d’informations sur l’obtention de ces valeurs, reportez-vous à la section [Guide d’authentification du stockage d’objets Oracle](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
+Pour plus d’informations sur la manière d’obtenir ces valeurs, consultez le [guide d’authentification du stockage d’objet Oracle](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
 ### Utiliser les API Platform
 
@@ -92,9 +92,9 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `auth.params.serviceUrl` | Le [!DNL Oracle Object Storage] point d’entrée requis pour l’authentification. |
-| `auth.params.accessKey` | Le [!DNL Oracle Object Storage] ID de clé d’accès requis pour l’authentification. |
-| `auth.params.secretKey` | Le [!DNL Oracle Object Storage] mot de passe requis pour l’authentification. |
+| `auth.params.serviceUrl` | Point d’entrée [!DNL Oracle Object Storage] requis pour l’authentification. |
+| `auth.params.accessKey` | ID de clé d’accès [!DNL Oracle Object Storage] requis pour l’authentification. |
+| `auth.params.secretKey` | Mot de passe [!DNL Oracle Object Storage] requis pour l’authentification. |
 | `auth.params.bucketName` | Nom du compartiment autorisé requis si l’utilisateur dispose d’un accès restreint. |
 | `auth.params.folderPath` | Chemin d’accès au dossier autorisé requis si l’utilisateur dispose d’un accès restreint. |
 | `connectionSpec.id` | L’identifiant de spécification de connexion [!DNL Oracle Object Storage] : `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
@@ -112,4 +112,4 @@ Une réponse réussie renvoie l’identifiant de connexion de la nouvelle connex
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une [!DNL Oracle Object Storage] connexion à l’aide de la fonction [!DNL Flow Service] et ont obtenu son identifiant de connexion unique. Vous pouvez utiliser cet identifiant de connexion pour [explorer le stockage dans le cloud à l’aide de l’API Flow Service](../../explore/cloud-storage.md).
+En suivant ce tutoriel, vous avez créé une connexion [!DNL Oracle Object Storage] à l’aide de l’API [!DNL Flow Service] et obtenu son identifiant de connexion unique. Vous pouvez utiliser cet identifiant de connexion pour [ explorer le stockage dans le cloud à l’aide de l’API Flow Service ](../../explore/cloud-storage.md).

@@ -19,7 +19,7 @@ ht-degree: 89%
 >
 >La segmentation Edge est désormais généralement disponible pour tous les utilisateurs et utilisatrices de Platform. Si vous avez créé des définitions de segments Edge au cours de la version Beta, ces définitions de segments continueront à fonctionner.
 
-La segmentation Edge permet d’évaluer instantanément les définitions de segment dans Adobe Experience Platform, en activant les cas d’utilisation de la personnalisation de la même page et de la page suivante.
+La segmentation Edge permet d’évaluer instantanément les définitions de segment dans Adobe Experience Platform, ce qui permet d’activer les cas d’utilisation de la personnalisation de la même page et de la page suivante.
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ La segmentation Edge permet d’évaluer instantanément les définitions de seg
 Ce guide de développement nécessite une connaissance pratique des divers services [!DNL Adobe Experience Platform] impliqués dans la segmentation Edge. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur en temps réel unifié sur base des données agrégées provenant de plusieurs sources.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): permet de créer des audiences à partir de [!DNL Real-Time Customer Profile] data.
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md) : vous permet de créer des audiences à partir de données [!DNL Real-Time Customer Profile].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 
 Pour passer avec succès des appels à des points d’entrée d’API Experience Platform, consultez le guide sur la [prise en main des API Platform](../../landing/api-guide.md) pour en savoir plus sur les en-têtes requis et sur la lecture d’exemples d’appels d’API.
@@ -68,7 +68,7 @@ Une définition de segment ne sera **pas** activée pour la segmentation Edge da
 
 ## Récupérer tous les segments activés pour la segmentation Edge
 
-Vous pouvez récupérer une liste de tous les segments activés pour la segmentation Edge au sein de votre organisation en envoyant une demande de GET à la fonction `/segment/definitions` point de terminaison .
+Vous pouvez récupérer une liste de tous les segments activés pour la segmentation Edge au sein de votre organisation en envoyant une requête de GET au point de terminaison `/segment/definitions`.
 
 **Format d’API**
 

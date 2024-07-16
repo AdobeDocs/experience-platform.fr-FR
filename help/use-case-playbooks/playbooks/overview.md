@@ -29,7 +29,7 @@ Ce guide vous apportera la documentation suivante :
 
 ## Vue d’ensemble {#overview}
 
-[!UICONTROL Cas d’utilisation des classeurs] peut vous aider à résoudre le problème lors de la prise en main de Real-Time CDP ou de Adobe Journey Optimizer, lorsque vous ne savez pas exactement par quoi commencer ou comment créer les ressources appropriées pour réaliser les cas d’utilisation souhaités. Les cahiers de lecture de cas d’utilisation peuvent vous aider en procédant comme suit :
+[!UICONTROL Les classeurs de cas d’utilisation] peuvent vous aider à résoudre le problème lorsque vous commencez à utiliser Real-Time CDP ou Adobe Journey Optimizer alors que vous ne savez peut-être pas exactement par quoi commencer ou comment créer les ressources appropriées afin d’atteindre les cas d’utilisation souhaités. Les cahiers de lecture de cas d’utilisation peuvent vous aider en procédant comme suit :
 
 * Affichage des cas d’utilisation pour l’inspiration
 * Création de différentes ressources pour que vous puissiez utiliser, tester et promouvoir en production lorsque vous êtes prêt.
@@ -50,11 +50,11 @@ Regardez cette vidéo pour découvrir, créer, publier et dépanner des instance
 
 ## Disponibilité {#availability}
 
-Certains [!UICONTROL Cas d’utilisation des classeurs] sont adaptés aux cas d’utilisation de Real-Time CDP, tandis que d’autres sont mieux adaptés aux clients utilisant Journey Optimizer. Parcourez le catalogue pour trouver les playbooks les mieux adaptés à votre produit et à votre cas d’utilisation. En savoir plus sur Real-Time CDP et Journey Optimizer dans la section [Adobe des descriptions de produit](https://helpx.adobe.com/fr/legal/product-descriptions.html).
+Certains [!UICONTROL  livres de cas d’utilisation] sont adaptés aux cas d’utilisation de Real-Time CDP, tandis que d’autres sont mieux adaptés aux clients utilisant Journey Optimizer. Parcourez le catalogue pour trouver les playbooks les mieux adaptés à votre produit et à votre cas d’utilisation. Découvrez-en plus sur Real-Time CDP et Journey Optimizer dans la [description des produits Adobe](https://helpx.adobe.com/fr/legal/product-descriptions.html).
 
 ## Guides d’interface utilisateur {#ui-guides}
 
-Une fois que vous avez choisi un playbook, sélectionnez-le dans l’interface utilisateur et commencez à l’utiliser. Lisez les guides de l’interface utilisateur sur [choix d’un playbook adapté à partir d’une sélection](/help/use-case-playbooks/playbooks/choose.md) pour vous et [comment créer, partager et réutiliser des instances playbook](/help/use-case-playbooks/playbooks/create-share-reuse.md) pour obtenir des informations complètes sur la création d’instances et sur l’utilisation optimale d’un playbook. Pour savoir comment promouvoir diverses ressources, de l’environnement de test d’inspiration à d’autres environnements de test de développement, puis à la production, consultez la documentation sur [sensibilisation aux données](/help/use-case-playbooks/playbooks/data-awareness.md).
+Une fois que vous avez choisi un playbook, sélectionnez-le dans l’interface utilisateur et commencez à l’utiliser. Lisez les guides de l’interface utilisateur sur [comment choisir le playbook approprié à partir d’une sélection](/help/use-case-playbooks/playbooks/choose.md) pour vous et [comment créer, partager et réutiliser des instances de playbook](/help/use-case-playbooks/playbooks/create-share-reuse.md) pour obtenir des informations complètes sur la création d’instances et l’utilisation optimale d’un playbook. Pour savoir comment promouvoir diverses ressources, de l’environnement de test d’inspiration à d’autres environnements de test de développement, puis à la production, consultez la documentation sur la [sensibilisation aux données](/help/use-case-playbooks/playbooks/data-awareness.md).
 
 ## Dépannage et limites connues {#trouble-shooting-known-limitations}
 

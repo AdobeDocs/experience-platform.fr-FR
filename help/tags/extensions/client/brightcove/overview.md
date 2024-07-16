@@ -4,7 +4,7 @@ description: Découvrez lʼextension de balise de suivi vidéo BrightCove dans A
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '898'
 ht-degree: 97%
 
 ---
@@ -94,9 +94,9 @@ Les objets d’extension vidéo suivants doivent être inclus :
       * Une valeur prop/eVar pour l’élément de données **Nom de la vidéo** (exemple : eVar10)
       * Une valeur prop/eVar pour l&#39;élément de données **Durée de la vidéo** (exemple : eVar11)
       * Une valeur prop/eVar pour l’élément de données **Emplacement actuel de la vidéo** (exemple : eVar12)
+
    1. L’action Analytics « Envoyer la balise » (`s.tl`)
    1. L’action Analytics « Effacer les variables »
-
 
 >[!TIP]
 >

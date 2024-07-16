@@ -7,8 +7,8 @@ description: Découvrez comment connecter Shopify à Adobe Experience Platform �
 exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 64%
+source-wordcount: '442'
+ht-degree: 61%
 
 ---
 
@@ -16,16 +16,16 @@ ht-degree: 64%
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Shopify] (ci-après dénommés &quot;[!DNL Shopify]&quot;) en utilisant la variable [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Ce tutoriel vous guide tout au long des étapes pour créer une connexion de base pour [!DNL Shopify] (ci-après appelée &quot;[!DNL Shopify]&quot;) à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Sources]](../../../../home.md): [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide de [!DNL Platform] services.
-* [[!DNL Sandboxes]](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [[!DNL Sources]](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous permettant de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
+* [[!DNL Sandboxes]](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL Shopify] en utilisant la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL Shopify] à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
@@ -33,11 +33,11 @@ Pour connecter [!DNL Flow Service] à [!DNL Shopify], vous devez fournir des val
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `host` | Le point de terminaison de votre [!DNL Shopify] serveur. |
-| `accessToken` | Jeton d’accès pour votre [!DNL Shopify] compte utilisateur. |
+| `host` | Point de terminaison de votre serveur [!DNL Shopify]. |
+| `accessToken` | Jeton d’accès pour votre compte utilisateur [!DNL Shopify]. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Shopify] est `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. |
 
-Pour plus d’informations sur la prise en main, reportez-vous à cette section [Shopifier le document d’authentification](https://shopify.dev/concepts/about-apis/authentication).
+Pour plus d&#39;informations sur la prise en main, consultez ce [document d&#39;authentification Shopify](https://shopify.dev/concepts/about-apis/authentication).
 
 ### Utiliser les API Platform
 
@@ -87,12 +87,12 @@ curl -X POST \
 | Propriété | Description |
 | --------- | ----------- |
 | `auth.params.host` | Point d’entrée du serveur [!DNL Shopify]. |
-| `auth.params.accessToken` | Jeton d’accès pour votre [!DNL Shopify] compte utilisateur. |
-| `connectionSpec.id` | Le [!DNL Shopify] identifiant de spécification de connexion : `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. |
+| `auth.params.accessToken` | Jeton d’accès pour votre compte utilisateur [!DNL Shopify]. |
+| `connectionSpec.id` | ID de spécification de connexion [!DNL Shopify] : `4f63aa36-bd48-4e33-bb83-49fbcd11c708`. |
 
 **Réponse**
 
-Une réponse réussie renvoie la nouvelle connexion de , y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
+Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
 
 ```json
 {
@@ -106,4 +106,4 @@ Une réponse réussie renvoie la nouvelle connexion de , y compris son identifia
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL Shopify] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer des données de commerce électronique dans Platform à l’aide du [!DNL Flow Service] API](../../collect/ecommerce.md)
+* [Créez un flux de données pour importer des données E-Commerce dans Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/ecommerce.md)

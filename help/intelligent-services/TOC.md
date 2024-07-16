@@ -8,7 +8,7 @@ role: User
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '136'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 99%
    - [Analyser des scores à lʼaide de Query Service](attribution-ai/aai-query-service.md)
    - [Résolution des problèmes](attribution-ai/troubleshooting.md)
 - Balisage de contenu {#content-commerce-ai}
-   - [Aperçu](content-commerce-ai/overview.md)
+   - [Vue d’ensemble](content-commerce-ai/overview.md)
    - [Prise en main](content-commerce-ai/getting-started.md)
    - API de balisage de contenu {#api}
       - [Balisage des couleurs](content-commerce-ai/api/color-tagging.md)
@@ -55,4 +55,4 @@ ht-degree: 99%
       - [Clés gérées par le client](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [Gouvernance des données](customer-ai/cai-data-governance/data-governance.md)
       - [Politiques de gouvernance](customer-ai/cai-data-governance/governance-policies.md)
-- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

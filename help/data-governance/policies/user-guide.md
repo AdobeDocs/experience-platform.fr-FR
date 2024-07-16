@@ -151,7 +151,7 @@ Lors de la sélection de l’attribut de consentement, sélectionnez les valeurs
 
 ![](../images/policies/select-schema-field.png)
 
-Après avoir sélectionné au moins un attribut de consentement, la variable **[!UICONTROL Propriétés de la stratégie]** mises à jour du panneau pour afficher le nombre estimé de profils qui seraient autorisés en vertu de cette stratégie, y compris le pourcentage de la banque de profils totale. Cette estimation est automatiquement mise à jour lorsque vous ajustez la configuration de la politique.
+Une fois que vous avez sélectionné au moins un attribut de consentement, le panneau **[!UICONTROL Propriétés de la stratégie]** se met à jour afin d’afficher le nombre estimé de profils autorisés dans cette stratégie, y compris le pourcentage de la banque de profils totale. Cette estimation est automatiquement mise à jour lorsque vous ajustez la configuration de la politique.
 
 ![](../images/policies/audience-preview.png)
 

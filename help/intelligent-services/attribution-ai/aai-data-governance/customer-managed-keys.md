@@ -18,6 +18,6 @@ Vous pouvez lire la documentation relative aux [Clés gérées par le client dan
 
 >[!NOTE]
 >
->[!DNL Customer Managed Keys] sont actuellement disponibles uniquement pour les organisations qui ont acheté la variable [!DNL Healthcare Shield or Privacy & Security Shield] offre complémentaire.
+>[!DNL Customer Managed Keys] sont actuellement disponibles uniquement pour les organisations qui ont acheté l’offre de module complémentaire [!DNL Healthcare Shield or Privacy & Security Shield].
 
 Toutes les données utilisées par Platform sont chiffrées en transit et au repos pour garantir leur sécurité, avec ou sans CMK. Pour plus d’informations sur le chiffrement d’Adobe Experience Platform, consultez la documentation sur le [chiffrement des données](../../../landing/governance-privacy-security/encryption.md).

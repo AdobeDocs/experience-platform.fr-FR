@@ -18,7 +18,7 @@ ht-degree: 74%
 >
 >Si un jeton utilisateur est transmis, l’utilisateur du jeton doit disposer d’un rôle &quot;d’administrateur org&quot; pour l’organisation demandée.
 
-Pour afficher les stratégies de contrôle d’accès efficaces pour l’utilisateur actuel, envoyez une requête de POST à la variable `/acl/effective-policies` du point de terminaison [!DNL Access Control] API. Les autorisations et les types de ressources que vous souhaitez récupérer doivent être fournis dans le payload de la requête sous la forme de tableau. Ceci est illustré dans l’exemple d’appel API ci-dessous.
+Pour afficher des stratégies de contrôle d’accès efficaces pour l’utilisateur actuel, envoyez une requête de POST au point de terminaison `/acl/effective-policies` dans l’API [!DNL Access Control]. Les autorisations et les types de ressources que vous souhaitez récupérer doivent être fournis dans le payload de la requête sous la forme de tableau. Ceci est illustré dans l’exemple d’appel API ci-dessous.
 
 **Format d’API**
 
@@ -69,7 +69,7 @@ Une réponse réussie renvoie des informations sur les autorisations et les type
 
 ## Étapes suivantes
 
-Ce document décrit comment effectuer des appels à la fonction [!DNL Access Control] API pour renvoyer des informations sur les autorisations actives et les stratégies d’accès associées pour les types de ressources. Pour plus dʼinformations sur le contrôle dʼaccès dʼ[!DNL Experience Platform], consultez la [présentation du contrôle dʼaccès](../home.md).
+Ce document explique comment effectuer des appels à l’API [!DNL Access Control] pour renvoyer des informations sur les autorisations actives et les stratégies d’accès associées pour les types de ressources. Pour plus dʼinformations sur le contrôle dʼaccès dʼ[!DNL Experience Platform], consultez la [présentation du contrôle dʼaccès](../home.md).
 
 ## Annexe
 

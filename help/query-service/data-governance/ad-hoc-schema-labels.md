@@ -26,15 +26,15 @@ Ce document fournit un tutoriel pour gérer l’accès aux données sensibles en
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [Système de modèle de données d’expérience (XDM)](../../xdm/home.md) : cadre normalisé selon lequel Experience Platform organise les données d’expérience client.
-   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): découvrez comment créer et gérer des schémas et d’autres ressources dans l’interface utilisateur de Platform.
-* [[!DNL Data Governance]](../../data-governance/home.md): découvrez comment [!DNL Data Governance] vous permet de gérer les données client et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données.
-* [Contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md): le contrôle d’accès basé sur les attributs est une fonctionnalité de Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs. Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ de schéma ad hoc ou ordinaire. Un administrateur définit des politiques d’accès qui comprennent des attributs afin de gérer les autorisations d’accès des utilisateurs.
+   * [[!DNL Schema Editor]](../../xdm/ui/overview.md) : découvrez comment créer et gérer des schémas et d’autres ressources dans l’interface utilisateur de Platform.
+* [[!DNL Data Governance]](../../data-governance/home.md) : découvrez comment [!DNL Data Governance] vous permet de gérer les données client et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données.
+* [Contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md) : le contrôle d’accès basé sur les attributs est une fonctionnalité de Adobe Experience Platform qui permet aux administrateurs de contrôler l’accès à des objets et/ou fonctionnalités spécifiques en fonction d’attributs. Les attributs peuvent être des métadonnées ajoutées à un objet, comme un libellé ajouté à un champ de schéma ad hoc ou ordinaire. Un administrateur définit des politiques d’accès qui comprennent des attributs afin de gérer les autorisations d’accès des utilisateurs.
 
 ## Créer un schéma ad hoc
 
 Une fois votre requête exécutée et les résultats générés, un schéma ad hoc est automatiquement généré et ajouté à l’inventaire des schémas.
 
-Pour ajouter une étiquette de données, accédez à [!UICONTROL Schémas] onglet de navigation du tableau de bord en sélectionnant [!UICONTROL Schémas] dans le rail gauche de l’interface utilisateur de Platform. L’inventaire des schémas s’affiche.
+Pour ajouter une étiquette de données, accédez à l’onglet de navigation du tableau de bord [!UICONTROL Schémas] en sélectionnant [!UICONTROL Schémas] dans le rail gauche de l’interface utilisateur de Platform. L’inventaire des schémas s’affiche.
 
 >[!NOTE]
 >
@@ -42,41 +42,41 @@ Pour ajouter une étiquette de données, accédez à [!UICONTROL Schémas] ongle
 
 ## Découvrez les schémas ad hoc dans l’inventaire des schémas de l’interface utilisateur de Platform {#discover-ad-hoc-schemas}
 
-Pour activer l’affichage des schémas ad hoc dans l’interface utilisateur de Platform, sélectionnez l’icône de filtre (![Icône de filtre.](../images/data-governance/filter.png)) à gauche du champ de recherche, puis sélectionnez **[!UICONTROL Affichage des schémas ad hoc] dans le rail de gauche qui s’affiche.
+Pour activer l’affichage des schémas ad hoc dans l’interface utilisateur de Platform, sélectionnez l’icône de filtre (![Icône de filtre).](../images/data-governance/filter.png)) à gauche du champ de recherche, puis sélectionnez **[!UICONTROL Afficher les schémas ad hoc] dans le rail de gauche qui s’affiche.
 
-![Le tableau de bord du schéma filtre les options du rail de gauche avec la bascule &quot;Afficher le schéma ad hoc&quot; activée.](../images/data-governance/adhoc-schema-toggle.png)
+![Les options de filtre du tableau de bord de schéma ont été activées dans le rail de gauche avec la bascule &quot;Afficher le schéma ad hoc&quot; activée.](../images/data-governance/adhoc-schema-toggle.png)
 
 Sélectionnez le nom du schéma ad hoc récemment créé dans la liste disponible. Une visualisation de la structure de schéma ad hoc s’affiche.
 
-![L’exemple de diagramme de structure de schéma ad hoc.](../images/data-governance/adhoc-schema-structure-diagram.png)
+![ Exemple de diagramme de structure de schéma ad hoc.](../images/data-governance/adhoc-schema-structure-diagram.png)
 
 ## Modifier les libellés de gouvernance
 
-Pour modifier les libellés de données de votre schéma ad hoc, sélectionnez la variable [!UICONTROL Étiquettes] . L’espace de travail des libellés vous permet d’appliquer, de créer et de modifier des libellés à vos champs de schéma ad hoc et de contrôler les autorisations d’accès via l’interface utilisateur. Tous les champs du schéma ad hoc sont représentés ici.
+Pour modifier les libellés de données de votre schéma ad hoc, sélectionnez l’onglet [!UICONTROL Étiquettes] . L’espace de travail des libellés vous permet d’appliquer, de créer et de modifier des libellés à vos champs de schéma ad hoc et de contrôler les autorisations d’accès via l’interface utilisateur. Tous les champs du schéma ad hoc sont représentés ici.
 
 ## Modification des libellés du schéma ou du champ
 
-Pour modifier les libellés de l’ensemble du schéma, sélectionnez l’icône représentant un crayon (![Une icône en forme de crayon.](../images/data-governance/edit-icon.png)) sur le côté du nom du schéma sous la propriété [!UICONTROL Étiquettes] .
+Pour modifier les libellés de l’ensemble du schéma, sélectionnez l’icône en forme de crayon (![Une icône en forme de crayon.](../images/data-governance/edit-icon.png)) sur le côté du nom du schéma sous l’onglet [!UICONTROL Étiquettes].
 
-![La vue des libellés dans l’espace de travail des schémas avec l’icône en forme de crayon surlignée.](../images/data-governance/edit-entire-schema-labels.png)
+![La vue des libellés dans l’espace de travail des schémas avec l’icône en forme de crayon mise en surbrillance.](../images/data-governance/edit-entire-schema-labels.png)
 
-Pour appliquer un libellé à un champ existant, sélectionnez un ou plusieurs champs dans la liste, puis choisissez [!UICONTROL Modification des étiquettes de gouvernance] dans la barre latérale droite.
+Pour appliquer un libellé à un champ existant, sélectionnez un ou plusieurs champs dans la liste, puis [!UICONTROL Modifier les libellés de gouvernance] dans la barre latérale droite.
 
 ![La vue des libellés dans l’espace de travail des schémas avec l’option &quot;Modifier les libellés de gouvernance&quot; mise en surbrillance dans la barre latérale droite.](../images/data-governance/edit-governance-labels.png)
 
 ## Fenêtre contextuelle Modifier les libellés
 
-La variable [!UICONTROL Modifier les libellés] s’affiche. Dans cette vue, vous pouvez créer ou modifier des étiquettes de gouvernance existantes via l’interface utilisateur.
+La fenêtre contextuelle [!UICONTROL Modifier les étiquettes] s’affiche. Dans cette vue, vous pouvez créer ou modifier des étiquettes de gouvernance existantes via l’interface utilisateur.
 
-![La fenêtre contextuelle Modifier les étiquettes .](../images/data-governance/edit-labels-popover.png)
+![Fenêtre contextuelle Modifier les étiquettes.](../images/data-governance/edit-labels-popover.png)
 
-Consultez la documentation pour obtenir des conseils sur la manière de procéder. [créer ou modifier des libellés pour le schéma ou le champ sélectionné](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field).
+Consultez la documentation pour savoir comment [créer ou modifier des étiquettes pour le schéma ou le champ sélectionné](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field).
 
 >[!NOTE]
 >
 >La création d’un nouveau libellé ou la modification d’un libellé existant nécessite des autorisations d’administrateur pour votre entreprise. Si vous ne disposez pas de droits d’administrateur, contactez votre administrateur système pour en obtenir l’accès.
 
-Vous pouvez également créer des libellés à l’aide de l’espace de travail des autorisations. Voir [guide sur la création de libellés dans l’espace de travail des autorisations](../../access-control/abac/ui/labels.md) pour obtenir des instructions.
+Vous pouvez également créer des libellés à l’aide de l’espace de travail des autorisations. Pour obtenir des instructions, reportez-vous au [guide sur la création d’étiquettes dans l’espace de travail des autorisations](../../access-control/abac/ui/labels.md) .
 
 Une fois le niveau approprié de contrôle d’accès basé sur les attributs appliqué, le comportement système suivant s’applique à toute requête exécutée via Query Service lorsqu’un utilisateur tente d’accéder à des données non accessibles :
 

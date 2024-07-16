@@ -48,10 +48,10 @@ Platform vous permet de définir vos propres groupes de champs et types de donn�
 
 >[!IMPORTANT]
 >
->SPI et PII ne doivent être enregistrés que dans la variable [XDM Individual Profile](../classes/individual-profile.md) et [XDM ExperienceEvent](../classes/experienceevent.md) classes. En tant que bonne pratique à des fins de suppression des données, de confidentialité et de gouvernance, n’enregistrez pas SPI et PII dans aucune autre classe XDM personnalisée ou standard.
+>SPI et PII ne doivent être enregistrés que dans les classes [XDM Individual Profile](../classes/individual-profile.md) et [XDM ExperienceEvent](../classes/experienceevent.md). En tant que bonne pratique à des fins de suppression des données, de confidentialité et de gouvernance, n’enregistrez pas SPI et PII dans aucune autre classe XDM personnalisée ou standard.
 
 ## Étapes suivantes
 
-Ce document couvrait les principales considérations concernant les données sensibles et personnelles dans XDM. Pour plus d’informations sur la manière de modéliser vos schémas pour mieux répondre à vos cas d’utilisation professionnels, consultez le guide sur [bonnes pratiques pour la modélisation des données](./best-practices.md).
+Ce document couvrait les principales considérations concernant les données sensibles et personnelles dans XDM. Pour plus d’informations sur la manière de modéliser vos schémas pour répondre au mieux à vos cas d’utilisation professionnels, consultez le guide sur les [bonnes pratiques pour la modélisation des données](./best-practices.md).
 
-Pour plus d’informations sur les fonctionnalités de gouvernance et de confidentialité des données dans Experience Platform, consultez la présentation de [gouvernance, confidentialité et sécurité](../../landing/governance-privacy-security/overview.md).
+Pour plus d’informations sur les fonctionnalités de gouvernance et de confidentialité des données dans Experience Platform, consultez la présentation sur [la gouvernance, la confidentialité et la sécurité](../../landing/governance-privacy-security/overview.md).

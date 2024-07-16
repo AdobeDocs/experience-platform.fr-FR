@@ -13,24 +13,24 @@ ht-degree: 37%
 
 Si votre entreprise vend des produits ou des services, vous pouvez utiliser cette page comme guide sur la manière de suivre ces produits et services.
 
-Cette page utilise XDM [Schéma de commerce](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md) groupe de champs.
+Cette page utilise le groupe de champs XDM [Schéma Commerce](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md).
 
 Ce groupe de champs se compose de deux parties principales :
 
-* La variable `commerce` . Cet objet vous permet d’indiquer les actions qui se produisent dans la variable `productListItems` tableau.
-* La variable `productListItems` tableau.
+* Objet `commerce`. Cet objet vous permet d’indiquer les actions qui se produisent dans le tableau `productListItems`.
+* Le tableau `productListItems`.
 
 >[!TIP]
 >
->Si vous connaissez Adobe Analytics, la variable `commerce` contient des données similaires aux événements de commerce dans `events` Variable . La variable `productListItems` Le tableau d’objets contient des données similaires à `products` Variable .
+>Si vous connaissez Adobe Analytics, l’objet `commerce` contient des données similaires aux événements commerciaux dans la variable `events`. Le tableau d’objets `productListItems` contient des données similaires à la variable `products`.
 
-## La variable `commerce` objet {#commerce-object}
+## Objet `commerce` {#commerce-object}
 
-Cette section décrit les champs disponibles dans la variable `commerce` .
+Cette section décrit les champs disponibles dans l’objet `commerce`.
 
 >[!TIP]
 >
->Une mesure comporte deux champs : `id` et `value`. La plupart du temps, vous utilisez uniquement la variable `value` (par exemple, `'value':1`). La variable `id` vous permet de définir un identifiant unique pour le suivi lorsque la mesure a été envoyée. Consultez la documentation XDM pour [Mesure](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/measure.schema.md) pour plus d’informations.
+>Une mesure comporte deux champs : `id` et `value`. La plupart du temps, vous utilisez uniquement le champ `value` (par exemple, `'value':1`). Le champ `id` vous permet de définir un identifiant unique pour le suivi lorsque la mesure a été envoyée. Pour plus d’informations, consultez la documentation XDM pour [Mesure](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/data/measure.schema.md) .
 
 | Mesure | Recommandation | Description |
 |---|---|---|
@@ -47,13 +47,13 @@ Cette section décrit les champs disponibles dans la variable `commerce` .
 
 {style="table-layout:auto"}
 
-### `Commerce` exemples d’objets
+### Exemples d’objets `Commerce`
 
-Développez la section ci-dessous pour voir un exemple de commande d’un SDK Web à l’aide d’un champ du `commerce` .
+Développez la section ci-dessous pour voir un exemple de commande du SDK Web à l’aide d’un champ de l’objet `commerce`.
 
 +++`productViews`
 
-Un SDK Web de base `sendEvent` paramètre d’appel `productViews` champ à `1`:
+Un appel de base du SDK Web `sendEvent` définissant le champ `productViews` sur `1` :
 
 ```javascript
 alloy("sendEvent", {
@@ -69,11 +69,11 @@ alloy("sendEvent", {
 
 +++
 
-## La variable `order` objet {#order-object}
+## Objet `order` {#order-object}
 
-La variable `commerce` contient un objet dédié pour la collecte des détails de commande. Cela s’appelle la variable `order` .
+L’objet `commerce` contient un objet dédié pour la collecte des détails de commande. Il s’agit de l’objet `order` .
 
-Cette section décrit tous les champs pris en charge par le `order` .
+Cette section décrit tous les champs pris en charge par l’objet `order`.
 
 | Champ | Option | Recommandation | Description |
 |---|---|---|---|
@@ -89,11 +89,11 @@ Cette section décrit tous les champs pris en charge par le `order` .
 
 ### Exemples d’objets de commande
 
-Développez la section ci-dessous pour voir un exemple de commande de SDK Web à l’aide de la propriété `commerce` .
+Développez la section ci-dessous pour voir un exemple de commande de SDK Web à l’aide de l’objet `commerce`.
 
-+++`Order` exemple d’objet
++++Exemple d’objet `Order`
 
-Un SDK Web `sendEvent` paramètre d’appel `order` qui s’applique à plusieurs produits dans la variable `productListItems` tableau :
+Un appel du SDK Web `sendEvent` définissant l’objet `order` qui s’applique à plusieurs produits dans le tableau `productListItems` :
 
 ```javascript
 alloy("sendEvent",{
@@ -139,21 +139,21 @@ La liste de produits indique quels produits sont liés à l’action corresponda
 
 | Champ | Recommandation | Description |
 |---|---|---|
-| [`currencyCode`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmcurrencycode) | Facultatif | La variable [ISO 4217](https://fr.wikipedia.org/wiki/ISO_4217) devise du produit. Ce champ s’applique généralement uniquement lorsque plusieurs produits de la liste de produits comportent des codes de devise différents. |
-| [`priceTotal`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmpricetotal) | Fortement recommandé | Définissez ce champ uniquement le cas échéant. Par exemple, il peut ne pas être possible de définir sur `productView` car différentes variations du produit peuvent avoir des prix différents, mais sur un `productListAdds` . |
+| [`currencyCode`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmcurrencycode) | Facultatif | Devise [ISO 4217](https://fr.wikipedia.org/wiki/ISO_4217) pour le produit. Ce champ s’applique généralement uniquement lorsque plusieurs produits de la liste de produits comportent des codes de devise différents. |
+| [`priceTotal`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmpricetotal) | Fortement recommandé | Définissez ce champ uniquement le cas échéant. Par exemple, il peut ne pas être possible de définir sur l’événement `productView` car différentes variantes du produit peuvent avoir des prix différents, mais sur un événement `productListAdds`. |
 | [`product`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmproduct) | Fortement recommandé | Identifiant XDM du produit. |
-| [`productAddMethod`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmproductaddmethod) | Fortement recommandé | Méthode utilisée par le visiteur pour ajouter un produit à la liste. Défini sur `productListAdds` mesure et n’est utilisé que lorsqu’un produit est ajouté à la liste. Par exemple, `add to cart button`, `quick add` et `upsell`. |
+| [`productAddMethod`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmproductaddmethod) | Fortement recommandé | Méthode utilisée par le visiteur pour ajouter un produit à la liste. Défini avec des mesures `productListAdds` et utilisé uniquement lorsqu’un produit est ajouté à la liste. Par exemple, `add to cart button`, `quick add` et `upsell`. |
 | [`productName`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmname) | Fortement recommandé | Nom d’affichage ou nom lisible du produit. |
 | [`quantity`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmquantity) | Fortement recommandé | Nombre d’unités du produit que le client a indiqué. Doit être défini sur `productListAdds`, `productListRemoves`, `purchases`, `saveForLaters`, etc. |
 | [`SKU`](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/productlistitem.schema.md#xdmsku) | Fortement recommandé | Unité de gestion des stocks. Il s’agit de l’identifiant unique du produit. |
 
 ### Exemples de listes de produits
 
-Développez les sections ci-dessous pour voir des exemples de commandes du SDK Web à l’aide de la fonction `productListItems` .
+Développez les sections ci-dessous pour voir des exemples de commandes du SDK Web à l’aide de l’objet `productListItems`.
 
-+++`productListItems` example
++++Exemple `productListItems`
 
-Un SDK Web `sendEvent` paramètre d’appel `productViews` pour plusieurs produits dans la variable `productListItems` tableau :
+Un appel du SDK Web `sendEvent` définissant le `productViews` pour plusieurs produits dans le tableau `productListItems` :
 
 ```javascript
 alloy("sendEvent",{
@@ -179,9 +179,9 @@ alloy("sendEvent",{
 
 +++
 
-+++`productListAdds` examplae
++++`productListAdds` exemple
 
-Un SDK Web `sendEvent` paramètre d’appel `productListAdds` pour plusieurs produits dans `productListItems` tableau :
+Un appel du SDK Web `sendEvent` définissant l’événement `productListAdds` pour plusieurs produits dans le tableau `productListItems` :
 
 ```javascript
 alloy("sendEvent",{
@@ -213,9 +213,9 @@ alloy("sendEvent",{
 
 +++
 
-+++`checkouts` example
++++Exemple `checkouts`
 
-Un SDK Web `sendEvent` paramètre d’appel `checkouts` pour plusieurs produits dans `productListItems` tableau :
+Un appel du SDK Web `sendEvent` définissant l’événement `checkouts` pour plusieurs produits dans le tableau `productListItems` :
 
 ```javascript
 alloy("sendEvent",{

@@ -4,7 +4,7 @@ description: Découvrez comment réutiliser plusieurs conditions dans de nombreu
 exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
 source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '486'
 ht-degree: 100%
 
 ---

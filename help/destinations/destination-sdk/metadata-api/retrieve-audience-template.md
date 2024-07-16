@@ -4,7 +4,7 @@ title: Récupération d’un modèle d’audience
 exl-id: 44f2d571-49c5-4112-b3ee-bc839f2b0874
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '420'
 ht-degree: 100%
 
 ---

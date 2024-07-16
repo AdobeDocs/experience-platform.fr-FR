@@ -17,7 +17,7 @@ Dans Adobe Experience Platform, les données sont ingérées à partir d’une
 
 ## Utilisation des flux de données
 
-Les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Ces flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers les jeux de données cibles, où elles sont ensuite utilisées par Identity Service et le profil client en temps réel avant d’être finalement activées vers les destinations.
+Les flux de données sont une représentation des tâches de données qui déplacent ces dernières dans Platform. Ces flux de données sont configurés sur différents services, ce qui permet de déplacer les données des connecteurs sources vers les jeux de données cibles, où elles sont ensuite utilisées par le service d’identités et le profil client en temps réel avant d’être finalement activées vers les destinations.
 
 Pour en savoir plus sur l’utilisation des flux de données dans les connecteurs sources, consultez la [présentation des sources](../sources/home.md).
 

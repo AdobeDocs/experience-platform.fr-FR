@@ -22,7 +22,7 @@ Pour étiqueter un champ en tant qu’identité, vous devrez respecter les crit�
 - Les identités ne sont reconnues que dans les données d’enregistrement et de séries temporelles.
 - Seuls les champs PII doivent être marqués comme identité. Choisir un champ représentant des données plus génériques entraînerait des relations moins précises et des erreurs potentielles pour accéder aux identités associées du graphique d’identités.
 
-Pour obtenir des instructions sur l’utilisation de l’API Schema Registry pour étiqueter un champ en tant qu’identité, consultez [guide de point de terminaison des descripteurs](../../xdm/api/descriptors.md#create).
+Pour plus d’informations sur l’utilisation de l’API Schema Registry pour étiqueter un champ en tant qu’identité, consultez le [guide de point de terminaison des descripteurs](../../xdm/api/descriptors.md#create).
 
 ## Étapes suivantes
 

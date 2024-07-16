@@ -5,16 +5,16 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
 source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
 workflow-type: tm+mt
-source-wordcount: '509'
-ht-degree: 58%
+source-wordcount: '500'
+ht-degree: 59%
 
 ---
 
-# Créez un [!DNL Amazon Redshift] connexion de base à l’aide de [!DNL Flow Service] API
+# Créez une connexion de base [!DNL Amazon Redshift] à l’aide de l’API [!DNL Flow Service]
 
 >[!IMPORTANT]
 >
->La variable [!DNL Amazon Redshift] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+>La source [!DNL Amazon Redshift] est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-Time Customer Data Platform Ultimate.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -27,22 +27,22 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 * [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL Amazon Redshift] en utilisant la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL Amazon Redshift] à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
-Pour [!DNL Flow Service] pour vous connecter à [!DNL Amazon Redshift], vous devez fournir les propriétés de connexion suivantes :
+Pour que [!DNL Flow Service] se connecte à [!DNL Amazon Redshift], vous devez fournir les propriétés de connexion suivantes :
 
-| **Informations d’identification** | **Description** |
+| **Credential** | **Description** |
 | -------------- | --------------- |
-| `server` | Le serveur associé à votre [!DNL Amazon Redshift] compte . |
-| `port` | Le port TCP qu’un [!DNL Amazon Redshift] Le serveur utilise pour écouter les connexions client. |
-| `username` | Le nom d’utilisateur associé à votre [!DNL Amazon Redshift] compte . |
-| `password` | Le mot de passe associé à votre [!DNL Amazon Redshift] compte . |
-| `database` | La variable [!DNL Amazon Redshift] la base de données à laquelle vous accédez. |
-| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Amazon Redshift] is `3416976c-a9ca-4bba-901a-1f08f66978ff`. |
+| `server` | Serveur associé à votre compte [!DNL Amazon Redshift]. |
+| `port` | Port TCP utilisé par un serveur [!DNL Amazon Redshift] pour écouter les connexions client. |
+| `username` | Nom d’utilisateur associé à votre compte [!DNL Amazon Redshift]. |
+| `password` | Mot de passe associé à votre compte [!DNL Amazon Redshift]. |
+| `database` | La base de données [!DNL Amazon Redshift] à laquelle vous accédez. |
+| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’ID de spécification de connexion pour [!DNL Amazon Redshift] est `3416976c-a9ca-4bba-901a-1f08f66978ff`. |
 
-Pour plus d’informations sur la prise en main, reportez-vous à cette section [[!DNL Amazon Redshift] document](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).
+Pour plus d&#39;informations sur la prise en main, consultez ce [[!DNL Amazon Redshift] document](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).
 
 ### Utiliser les API Platform
 
@@ -98,11 +98,11 @@ curl -X POST \
 
 | Propriété | Description |
 | ------------- | --------------- |
-| `auth.params.server` | Votre [!DNL Amazon Redshift] serveur. |
-| `auth.params.port` | Le port TCP que la variable [!DNL Amazon Redshift] Le serveur utilise pour écouter les connexions client. |
-| `auth.params.database` | La base de données associée à votre [!DNL Amazon Redshift] compte . |
-| `auth.params.password` | Le mot de passe associé à votre [!DNL Amazon Redshift] compte . |
-| `auth.params.username` | Le nom d’utilisateur associé à votre [!DNL Amazon Redshift] compte . |
+| `auth.params.server` | Votre serveur [!DNL Amazon Redshift]. |
+| `auth.params.port` | Port TCP utilisé par le serveur [!DNL Amazon Redshift] pour écouter les connexions client. |
+| `auth.params.database` | La base de données associée à votre compte [!DNL Amazon Redshift]. |
+| `auth.params.password` | Mot de passe associé à votre compte [!DNL Amazon Redshift]. |
+| `auth.params.username` | Nom d’utilisateur associé à votre compte [!DNL Amazon Redshift]. |
 | `connectionSpec.id` | Identifiant de spécification de connexion [!DNL Amazon Redshift] : `3416976c-a9ca-4bba-901a-1f08f66978ff`. |
 
 **Réponse**
@@ -121,4 +121,4 @@ Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant d
 Ce tutoriel vous a permis de créer une connexion de base [!DNL Amazon Redshift] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de la fonction [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/database-nosql.md)

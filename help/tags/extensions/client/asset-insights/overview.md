@@ -4,8 +4,8 @@ description: Découvrez lʼextension de balise AEM Asset Insights dans Adobe Ex
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1118'
-ht-degree: 100%
+source-wordcount: '1062'
+ht-degree: 99%
 
 ---
 
@@ -24,7 +24,7 @@ Cette extension est destinée à être utilisée avec [AEM Asset Insights](https
 Les rapports AEM Aseet dans Analytics contiennent trois dimensions AEM :
 
 * ID de ressource
-* Source de la ressource
+* Source de ressources
 * Ressource ayant fait l’objet d’un clic
 
 Il existe également deux mesures :
@@ -37,7 +37,7 @@ L&#39;extension de balise « *Adobe Analytics* » pour Adobe Experience Pla
 
 ### Adobe Experience Manager (AEM)
 
-1. Activez [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=fr). Dans AEM, sélectionnez **[!UICONTROL Outils > Ressources]**, puis ouvrez le panneau **[!UICONTROL Configuration des statistiques]**.
+1. Activez [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/touch-ui-configuring-asset-insights.html?lang=fr). Dans AEM, sélectionnez **[!UICONTROL Outils > Ressources]**, puis ouvrez le panneau **[!UICONTROL Configuration d’Insights]**.
 
 1. Désactivez le suivi UUID.
 

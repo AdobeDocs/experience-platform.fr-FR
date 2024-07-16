@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;API REST générique
-title: Création d’une connexion source de l’API REST générique dans l’interface utilisateur
+title: Création d’une connexion Source d’API REST générique dans l’interface utilisateur
 type: Tutorial
 description: Découvrez comment créer une connexion source de l’API REST générique à l’aide de l’interface utilisateur de Adobe Experience Platform.
 source-git-commit: e37c00863249e677f1645266859bf40fe6451827
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 36%
+source-wordcount: '641'
+ht-degree: 34%
 
 ---
 
@@ -14,20 +14,20 @@ ht-degree: 36%
 
 >[!NOTE]
 >
-> La source [!DNL Generic REST API] est en version Beta. Voir [Présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de connecteurs libellés en version bêta.
+> La source [!DNL Generic REST API] est en version Beta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez la [Présentation des sources](../../../../home.md#terms-and-conditions) .
 
-Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Generic REST API] connecteur source à l’aide de l’interface utilisateur de Adobe Experience Platform.
+Ce tutoriel décrit les étapes de création d’un connecteur source [!DNL Generic REST API] à l’aide de l’interface utilisateur de Adobe Experience Platform.
 
-## Prise en main
+## Commencer
 
-Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Platform : 
+Ce tutoriel nécessite une compréhension pratique des composants suivants de Platform :
 
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
 * [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 ### Collecter les informations d’identification requises
 
-Pour accéder à [!DNL Generic REST API] sur Platform, vous devez fournir des informations d’identification valides pour le type d’authentification de votre choix. L’API REST générique prend en charge le code d’actualisation OAuth 2 et l’authentification de base. Consultez les tableaux suivants pour plus d’informations sur les informations d’identification des deux types d’authentification pris en charge.
+Pour accéder à votre compte [!DNL Generic REST API] sur Platform, vous devez fournir des identifiants valides pour le type d’authentification de votre choix. L’API REST générique prend en charge le code d’actualisation OAuth 2 et l’authentification de base. Consultez les tableaux suivants pour plus d’informations sur les informations d’identification des deux types d’authentification pris en charge.
 
 #### Code d’actualisation OAuth 2
 
@@ -38,7 +38,7 @@ Pour accéder à [!DNL Generic REST API] sur Platform, vous devez fournir des in
 | Identifiant client | (Facultatif) Identifiant client associé à votre compte utilisateur. |
 | Secret client | (Facultatif) Le secret client associé à votre compte utilisateur. |
 | Jeton d’accès | Informations d’identification d’authentification principales utilisées pour accéder à votre application. Le jeton d’accès représente l’autorisation de votre application, pour accéder à certains aspects des données d’un utilisateur. Cette valeur est requise et ne peut pas être ignorée à l’aide du remplacement du paramètre de requête. |
-| Jeton d’actualisation | (Facultatif) Jeton utilisé pour générer un nouveau jeton d’accès, lorsque le jeton d’accès a expiré. |
+| Actualiser le jeton | (Facultatif) Jeton utilisé pour générer un nouveau jeton d’accès, lorsque le jeton d’accès a expiré. |
 | URL du jeton d’accès | (Facultatif) Le point de terminaison URL utilisé pour récupérer votre jeton d’accès. |
 | Remplacement du paramètre de requête | (Facultatif) Une propriété qui vous permet de spécifier les paramètres d’identification à remplacer. |
 
@@ -57,11 +57,11 @@ Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également sélectionner la source de votre choix à l’aide de la barre de recherche.
 
-Sous , [!UICONTROL Protocoles] catégorie, sélectionnez **[!UICONTROL API REST générique]** puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Dans la catégorie [!UICONTROL Protocoles], sélectionnez **[!UICONTROL API REST générique]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 ![catalogue](../../../../images/tutorials/create/generic-rest/catalog.png)
 
-La variable **[!UICONTROL Connexion à l’API REST générique]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Se connecter à l’API REST générique]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 ### Compte existant
 
@@ -71,19 +71,19 @@ Pour connecter un compte existant, sélectionnez le compte API REST générique 
 
 ### Nouveau compte
 
-Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom et une description d’option pour votre nouvelle [!DNL Generic REST API] compte .
+Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom et une description d’option pour votre nouveau compte [!DNL Generic REST API].
 
 ![nouveau](../../../../images/tutorials/create/generic-rest/new.png)
 
-#### S’authentifier à l’aide d’OAuth 2 actualiser le code
+#### Authentification à l’aide du code d’actualisation OAuth 2
 
-[!DNL Generic REST API] prend en charge le code d’actualisation OAuth 2 et l’authentification de base. Pour vous authentifier à l’aide d’une authentification OAuth2, sélectionnez **[!UICONTROL OAuth2RefreshCode]**, saisissez vos informations d’identification OAuth 2, puis sélectionnez **[!UICONTROL Connexion à la source]**.
+[!DNL Generic REST API] prend en charge le code d’actualisation OAuth 2 et l’authentification de base. Pour vous authentifier à l’aide d’une authentification OAuth2, sélectionnez **[!UICONTROL OAuth2RefreshCode]**, fournissez vos informations d’identification OAuth 2, puis sélectionnez **[!UICONTROL Se connecter à la source]**.
 
 ![](../../../../images/tutorials/create/generic-rest/oauth2.png)
 
 #### S’authentifier à l’aide de l’authentification de base
 
-Pour utiliser l’authentification de base, sélectionnez **[!UICONTROL Authentification de base]**, indiquez votre hôte, votre nom d’utilisateur et votre mot de passe, puis sélectionnez **[!UICONTROL Connexion à la source]**.
+Pour utiliser une authentification de base, sélectionnez **[!UICONTROL Authentification de base]**, fournissez votre hôte, votre nom d’utilisateur et votre mot de passe, puis sélectionnez **[!UICONTROL Se connecter à la source]**.
 
 ![](../../../../images/tutorials/create/generic-rest/basic-authentication.png)
 

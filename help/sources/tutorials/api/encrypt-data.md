@@ -125,7 +125,7 @@ Une réponse réussie renvoie votre clé publique codée en Base64, votre identi
 
 ### Récupération des clés de chiffrement {#retrieve-encryption-keys}
 
-Pour récupérer toutes les clés de chiffrement de votre organisation, envoyez une requête GET à la fonction `/encryption/keys` endpoint=nt.
+Pour récupérer toutes les clés de chiffrement de votre organisation, envoyez une requête GET au point de terminaison `/encryption/keys`=nt.
 
 **Format d’API**
 
@@ -168,7 +168,7 @@ Une réponse réussie renvoie votre algorithme de chiffrement, votre clé publiq
 
 ### Récupération des clés de chiffrement par identifiant {#retrieve-encryption-keys-by-id}
 
-Pour récupérer un ensemble spécifique de clés de chiffrement, envoyez une demande de GET à la variable `/encryption/keys` et fournissez votre ID de clé publique comme paramètre d’en-tête.
+Pour récupérer un ensemble spécifique de clés de chiffrement, envoyez une requête GET au point de terminaison `/encryption/keys` et fournissez votre ID de clé publique comme paramètre d’en-tête.
 
 **Format d’API**
 
@@ -457,7 +457,7 @@ Une réponse réussie renvoie l’identifiant (`id`) du nouveau flux de données
 
 ### Suppression des clés de chiffrement {#delete-encryption-keys}
 
-Pour supprimer vos clés de chiffrement, envoyez une demande de DELETE au `/encryption/keys` et fournissez votre ID de clé publique comme paramètre d’en-tête.
+Pour supprimer vos clés de chiffrement, envoyez une requête de DELETE au point de terminaison `/encryption/keys` et fournissez votre ID de clé publique comme paramètre d’en-tête.
 
 **Format d’API**
 
@@ -485,7 +485,7 @@ Une réponse réussie renvoie un état HTTP 204 (Pas de contenu) et un corps vi
 
 ### Validation des clés de chiffrement {#validate-encryption-keys}
 
-Pour valider vos clés de chiffrement, envoyez une demande de GET à la fonction `/encryption/keys/validate/` et fournissez l’ID de clé publique que vous souhaitez valider en tant que paramètre d’en-tête.
+Pour valider vos clés de chiffrement, envoyez une requête de GET au point de terminaison `/encryption/keys/validate/` et fournissez l’identifiant de clé publique que vous souhaitez valider en tant que paramètre d’en-tête.
 
 ```http
 GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}
@@ -513,7 +513,7 @@ Une réponse réussie renvoie une confirmation que vos identifiants sont valides
 
 >[!TAB Valide]
 
-Un identifiant de clé publique valide renvoie un état de `Active` ainsi que votre ID de clé publique.
+Un ID de clé publique valide renvoie un état de `Active` avec votre ID de clé publique.
 
 ```json
 {
@@ -522,9 +522,9 @@ Un identifiant de clé publique valide renvoie un état de `Active` ainsi que vo
 }
 ```
 
->[!TAB Non valide]
+>[!TAB Invalid]
 
-Un identifiant de clé publique non valide renvoie un état de `Expired` ainsi que votre ID de clé publique.
+Un ID de clé publique non valide renvoie un état de `Expired` avec votre ID de clé publique.
 
 ```json
 {
@@ -540,7 +540,7 @@ Un identifiant de clé publique non valide renvoie un état de `Expired` ainsi q
 
 L’ingestion de données chiffrées ne prend pas en charge l’ingestion de dossiers récurrents ou à plusieurs niveaux dans des sources. Tous les fichiers cryptés doivent être contenus dans un seul dossier. Les caractères génériques avec plusieurs dossiers dans un seul chemin source ne sont pas non plus pris en charge.
 
-Voici un exemple de structure de dossiers prise en charge, où le chemin source est `/ACME-customers/*.csv.gpg`.
+Voici un exemple de structure de dossiers prise en charge, où le chemin d’accès source est `/ACME-customers/*.csv.gpg`.
 
 Dans ce scénario, les fichiers en gras sont ingérés dans Experience Platform.
 
@@ -568,4 +568,4 @@ Dans ce scénario, l’exécution du flux échoue et renvoie un message d’erre
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une paire de clés de chiffrement pour vos données d’espace de stockage dans le cloud et un flux de données pour ingérer vos données chiffrées à l’aide de [!DNL Flow Service API]. Pour connaître les mises à jour d’état relatives à l’exhaustivité, aux erreurs et aux mesures de votre flux de données, consultez le guide sur [surveillance de votre flux de données à l’aide de la fonction [!DNL Flow Service] API](./monitor.md).
+En suivant ce tutoriel, vous avez créé une paire de clés de chiffrement pour vos données d’espace de stockage dans le cloud et un flux de données pour ingérer vos données chiffrées à l’aide de [!DNL Flow Service API]. Pour connaître les mises à jour d’état concernant l’exhaustivité, les erreurs et les mesures de votre flux de données, consultez le guide sur la [surveillance de votre flux de données à l’aide de l’ [!DNL Flow Service] API](./monitor.md).

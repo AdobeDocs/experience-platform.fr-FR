@@ -20,15 +20,15 @@ Query Service prend en charge l’utilisation de requêtes paramétrées dans Qu
 
 ## Conditions préalables
 
-Avant de poursuivre avec ce guide, lisez le [Guide de l’interface utilisateur de Query Editor](./user-guide.md). Le guide Query Editor fournit des informations détaillées sur la manière d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur de l’Experience Platform.
+Avant de poursuivre avec ce guide, lisez le [guide de l’interface utilisateur de Query Editor](./user-guide.md). Le guide Query Editor fournit des informations détaillées sur la manière d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur de l’Experience Platform.
 
 >[!NOTE]
 >
->Dans l’interface utilisateur de Adobe Experience Platform, les requêtes paramétrées ne sont prises en charge qu’au niveau parent des modèles intégrés. Cela signifie que les requêtes paramétrées ne fonctionnent que lorsqu’elles sont utilisées dans le modèle d’origine. Les modèles enfants doivent être un modèle statique et ne peuvent pas comporter de paramètres dynamiques. Voir [documentation sur les modèles en ligne](../key-concepts/inline-templates.md) pour en savoir plus.
+>Dans l’interface utilisateur de Adobe Experience Platform, les requêtes paramétrées ne sont prises en charge qu’au niveau parent des modèles intégrés. Cela signifie que les requêtes paramétrées ne fonctionnent que lorsqu’elles sont utilisées dans le modèle d’origine. Les modèles enfants doivent être un modèle statique et ne peuvent pas comporter de paramètres dynamiques. Pour en savoir plus, consultez la [documentation sur les modèles intégrés](../key-concepts/inline-templates.md) .
 
 ## Syntaxe de requête paramétrée {#syntax}
 
-Les requêtes paramétrées utilisent le format `'$YOUR_PARAMETER_NAME'` et peuvent être concaténés à l’aide de la notation par points. Vous trouverez ci-dessous un exemple d’instruction SQL qui utilise des requêtes paramétrées.
+Les requêtes paramétrées utilisent le format `'$YOUR_PARAMETER_NAME'` et peuvent être concaténées à l’aide de la notation par points. Vous trouverez ci-dessous un exemple d’instruction SQL qui utilise des requêtes paramétrées.
 
 ```sql
 INSERT INTO
@@ -45,38 +45,38 @@ SELECT
 
 ## Créer une requête paramétrée {#create}
 
-Pour créer votre requête paramétrée dans l’interface utilisateur, accédez à l’éditeur de requêtes. Voir la section sur [Accès à Query Editor](./user-guide.md#accessing-query-editor) pour plus d’instructions.
+Pour créer votre requête paramétrée dans l’interface utilisateur, accédez à l’éditeur de requêtes. Pour plus d’informations, reportez-vous à la section sur l’ [accès à l’éditeur de requêtes](./user-guide.md#accessing-query-editor) .
 
-Utilisez la préface `'$'` pour saisir un paramètre de requête dans l’éditeur de texte. Sélectionnez ensuite le **[!UICONTROL Paramètres de requête]** en regard de l’onglet [!UICONTROL Console] ajoutez la valeur manquante pour la clé. La requête ne peut pas être exécutée si vous négligez d’ajouter une valeur à l’une des clés requises. Icône d’alerte (![Icône d’alerte.](../images/ui/parameterized-queries/alert-icon.png)) apparaît dans la section Paramètres de requête en regard de tout élément vide [!UICONTROL Valeur] champs de saisie.
+Utilisez la préface `'$'` pour saisir un paramètre de requête dans l’éditeur de texte. Ensuite, sélectionnez l’onglet **[!UICONTROL Paramètres de requête]** en regard de la [!UICONTROL Console] pour ajouter la valeur manquante pour la clé. La requête ne peut pas être exécutée si vous négligez d’ajouter une valeur à l’une des clés requises. Icône d’alerte (![ icône d’alerte.](../images/ui/parameterized-queries/alert-icon.png)) apparaît dans la section Paramètres de requête en regard des champs d’entrée [!UICONTROL Valeur] vides.
 
 >[!NOTE]
 >
 >Si votre requête ne prend pas de paramètres, vous pouvez toujours saisir des paramètres inutiles dans l’éditeur de requêtes. L’éditeur de requêtes ignore toutes les paires clé-valeur inutiles et elles n’ont aucun effet sur l’exécution ou les résultats de la requête.
 
-![L’éditeur de requêtes avec une requête paramétrée est mis en surbrillance et la section Paramètres de requête est mise en surbrillance.](../images/ui/parameterized-queries/parameterized-query.png)
+![L’éditeur de requêtes avec une requête paramétrée et la section Paramètres de requête mise en surbrillance.](../images/ui/parameterized-queries/parameterized-query.png)
 
 >[!TIP]
 >
->Modifier les onglets depuis [!UICONTROL Paramètres de requête] to [!UICONTROL Console] pour visualiser la sortie console de la requête.
+>Remplacez les onglets de [!UICONTROL Paramètres de requête] par [!UICONTROL Console] pour afficher la sortie console de la requête.
 
 ## Utiliser les détails des logs de requête pour vérifier les valeurs des paramètres {#check-parameter-values}
 
-Vous ne pouvez pas enregistrer de paramètres dans les modèles, car les valeurs utilisées ne sont pas persistantes. Vous pouvez toutefois vérifier la variable [!UICONTROL Détails du journal de requête] pour rechercher les valeurs de paramètre utilisées dans une exécution de requête. Dans ce cas, les logs n&#39;indiquent pas que la requête était paramétrée. Voir [documentation sur les journaux de requête](./query-logs.md) pour obtenir des instructions sur la manière de trouver les valeurs utilisées.
+Vous ne pouvez pas enregistrer de paramètres dans les modèles, car les valeurs utilisées ne sont pas persistantes. Cependant, vous pouvez consulter la page [!UICONTROL Détails du journal de requête] pour trouver les valeurs de paramètre utilisées dans une exécution de requête. Dans ce cas, les logs n&#39;indiquent pas que la requête était paramétrée. Pour obtenir des instructions sur la recherche des valeurs utilisées, reportez-vous à la [documentation sur les journaux de requête](./query-logs.md).
 
-![La vue des logs de requête avec le SQL d’une requête paramétrée mise en surbrillance dans la section détails.](../images/ui/parameterized-queries/parameterized-query-logs.png)
+![La vue des logs de requête avec le SQL d&#39;une requête paramétrée mise en surbrillance dans la section des détails.](../images/ui/parameterized-queries/parameterized-query-logs.png)
 
 <!-- improve screenshot above ^ I am waiting for a scheduled run to complete -->
 
 ## Planification d’une requête paramétrée {#schedule}
 
-Les valeurs des paramètres sont enregistrées lorsque vous planifiez une requête paramétrée. Pour planifier une requête paramétrée, suivez le processus type pour créer une requête planifiée comme décrit dans le guide de [création d’un planning de requête](./query-schedules.md#create-schedule), puis saisissez les valeurs de paramètre à utiliser dans l’exécution de la requête. Cette section de l’interface utilisateur s’affiche uniquement pour les requêtes paramétrées. Voir la section sur [définition des paramètres d’une requête planifiée](./query-schedules.md#set-parameters) pour obtenir des instructions spécifiques.
+Les valeurs des paramètres sont enregistrées lorsque vous planifiez une requête paramétrée. Pour planifier une requête paramétrée, suivez le processus type pour créer une requête planifiée comme décrit dans le guide [créer un planning de requête](./query-schedules.md#create-schedule), puis saisissez les valeurs de paramètre à utiliser dans l’exécution de la requête. Cette section de l’interface utilisateur s’affiche uniquement pour les requêtes paramétrées. Pour obtenir des instructions spécifiques, reportez-vous à la section sur la [définition des paramètres pour une requête paramétrée planifiée](./query-schedules.md#set-parameters) .
 
 >[!TIP]
 >
->Query Service prend en charge les instructions préparées à l’aide de requêtes paramétrées. Voir [guide de syntaxe des instructions préparées](../sql/prepared-statements.md) pour plus d’informations sur la syntaxe SQL impliquée.
+>Query Service prend en charge les instructions préparées à l’aide de requêtes paramétrées. Pour plus d’informations sur la syntaxe SQL impliquée, consultez le [guide de syntaxe d’instructions préparées](../sql/prepared-statements.md) .
 
 ## Étapes suivantes
 
 En lisant ce document, vous avez appris à paramétrer des requêtes dans l’interface utilisateur de Adobe Experience Platform et à les utiliser dans des exécutions de requêtes planifiées. Le document a également mis en évidence la manière de vérifier les journaux pour les valeurs de paramètre utilisées dans les exécutions de requête.
 
-Il est ensuite recommandé de lire le guide sur la [surveillance des requêtes planifiées](./monitor-queries.md) pour mieux comprendre l’état de toutes les tâches de requête via l’interface utilisateur de Platform.
+Ensuite, il est recommandé de lire le guide sur la [surveillance des requêtes planifiées](./monitor-queries.md) pour mieux comprendre l’état de toutes les tâches de requête via l’interface utilisateur de Platform.

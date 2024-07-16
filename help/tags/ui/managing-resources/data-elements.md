@@ -95,7 +95,7 @@ Lors de la création ou de la modification d’éléments, vous pouvez enregistr
 >
 >Les types d’éléments de données sont déterminés par l’extension. Les types qui peuvent être créés ne sont pas limités.
 
-Les sections suivantes décrivent les types d’éléments de données disponibles dans la variable **Extension Core**. D’autres extensions utilisent d’autres types d’éléments de données.
+Les sections suivantes décrivent les types d’éléments de données disponibles dans l’ **extension Core**. D’autres extensions utilisent d’autres types d’éléments de données.
 
 ### Cookie
 
@@ -139,7 +139,7 @@ Vous pouvez alors les utiliser dans des scripts personnalisés à l’aide de la
 var rule = _satellite.getVar('return event rule', event);
 ```
 
-Lorsque vous utilisez un pourcentage (`%`), il vous suffit de spécifier le nom de l’élément de données. Vous n&#39;avez pas besoin de spécifier `event`.
+Lors de l’utilisation de la syntaxe percent (`%`), il vous suffit de spécifier le nom de l’élément de données. Vous n&#39;avez pas besoin de spécifier `event`.
 
 ```text
 %data element name%
@@ -176,7 +176,7 @@ Par exemple, supposons que vos balises contiennent une variable JavaScript nomm�
 
 Vous devez indiquer le chemin d’accès à cette variable lorsque vous créez l’élément de données.
 
-Si vous utilisez un objet collecteur de données dans votre couche de données, utilisez simplement la notation point dans le chemin pour référencer l’objet et la propriété que vous souhaitez capturer dans l’élément de données, par exemple `_myData.pageName`, ou `digitalData.pageName`, etc.
+Si vous utilisez un objet collecteur de données dans votre couche de données, utilisez simplement la notation point dans le chemin pour faire référence à l’objet et la propriété que vous souhaitez capturer dans l’élément de données, par exemple `_myData.pageName`, `digitalData.pageName`, etc.
 
 #### Exemple :
 

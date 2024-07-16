@@ -18,19 +18,19 @@ ht-degree: 10%
 >
 >Si un jeton utilisateur est transmis, l’utilisateur du jeton doit disposer d’un rôle &quot;d’administrateur org&quot; pour l’organisation demandée.
 
-Les politiques de contrôle d&#39;accès sont des déclarations qui rassemblent les attributs pour établir les actions permises et non autorisées. Ces politiques peuvent être locales ou globales et peuvent remplacer d’autres politiques. La variable `/policies` Le point de terminaison de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les stratégies, y compris des informations sur les règles qui les régissent, ainsi que leurs conditions d’objet respectives.
+Les politiques de contrôle d&#39;accès sont des déclarations qui rassemblent les attributs pour établir les actions permises et non autorisées. Ces politiques peuvent être locales ou globales et peuvent remplacer d’autres politiques. Le point d’entrée `/policies` de l’API de contrôle d’accès basé sur les attributs vous permet de gérer par programmation les stratégies, y compris des informations sur les règles qui les régissent ainsi que leurs conditions d’objet respectives.
 
 >[!IMPORTANT]
 >
->Ce point de terminaison ne doit pas être confondu avec la variable `/policies` du point de terminaison [API Policy Service](../../../data-governance/api/policies.md), qui permet de gérer les stratégies d’utilisation des données.
+>Ce point de terminaison ne doit pas être confondu avec le point de terminaison `/policies` de l’ [API Policy Service](../../../data-governance/api/policies.md), qui est utilisé pour gérer les stratégies d’utilisation des données.
 
-## Prise en main
+## Commencer
 
 Le point de terminaison API utilisé dans ce guide fait partie de l’API de contrôle d’accès basé sur les attributs. Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 ## Récupération dʼune liste de politiques {#list}
 
-Envoyez une requête de GET à la fonction `/policies` point de terminaison pour répertorier toutes les stratégies existantes dans votre organisation.
+Envoyez une requête de GET au point de terminaison `/policies` pour répertorier toutes les stratégies existantes dans votre organisation.
 
 **Format d’API**
 
@@ -136,22 +136,22 @@ Une réponse réussie renvoie une liste des stratégies existantes.
 | `id` | Identifiant qui correspond à une stratégie. Cet identifiant est généré automatiquement et peut être utilisé pour rechercher, mettre à jour et supprimer une stratégie. |
 | `imsOrgId` | L’organisation dans laquelle la stratégie interrogée est accessible. |
 | `createdBy` | L’identifiant de l’utilisateur qui a créé la stratégie. |
-| `createdAt` | Heure de création de la stratégie. La variable `createdAt` s’affiche dans l’horodatage d’époque unix. |
+| `createdAt` | Heure de création de la stratégie. La propriété `createdAt` s’affiche dans l’horodatage de l’époque unix. |
 | `modifiedBy` | ID de l’utilisateur qui a mis à jour la stratégie pour la dernière fois. |
-| `modifiedAt` | Heure de la dernière mise à jour de la stratégie. La variable `modifiedAt` s’affiche dans l’horodatage d’époque unix. |
+| `modifiedAt` | Heure de la dernière mise à jour de la stratégie. La propriété `modifiedAt` s’affiche dans l’horodatage de l’époque unix. |
 | `name` | Nom de la stratégie. |
 | `description` | (Facultatif) Une propriété qui peut être ajoutée pour fournir des informations supplémentaires sur une stratégie spécifique. |
 | `status` | État actuel dʼune politique. Cette propriété définit si une stratégie est actuellement `active` ou `inactive`. |
 | `subjectCondition` | Conditions appliquées à un sujet. Un sujet est un utilisateur avec certains attributs qui demande l’accès à une ressource pour effectuer une action. Dans ce cas, `subjectCondition` sont des conditions de type requête appliquées aux attributs d’objet. |
 | `rules` | Ensemble de règles qui définissent une stratégie. Les règles définissent les combinaisons d’attributs autorisées pour que le sujet exécute correctement une action sur la ressource. |
-| `rules.effect` | Effet résultant de la prise en compte des valeurs pour `action`, `condition` et `resource`. Les valeurs possibles sont les suivantes : `permit`, `deny`, ou `indeterminate`. |
+| `rules.effect` | Effet résultant de la prise en compte des valeurs de `action`, `condition` et `resource`. Les valeurs possibles sont : `permit`, `deny` ou `indeterminate`. |
 | `rules.resource` | Ressource ou objet auquel un sujet peut ou ne peut pas accéder.  Les ressources peuvent être des fichiers, des applications, des serveurs ou même des API. |
 | `rules.condition` | Conditions appliquées à une ressource. Par exemple, si une ressource est un schéma, certains libellés peuvent lui être appliqués, ce qui contribue à déterminer si une action contre ce schéma est admissible ou non. |
-| `rules.action` | Action autorisée d’un sujet par rapport à une ressource interrogée. Les valeurs possibles sont les suivantes : `read`, `create`, `edit`, et `delete`. |
+| `rules.action` | Action autorisée d’un sujet par rapport à une ressource interrogée. Les valeurs possibles sont les suivantes : `read`, `create`, `edit` et `delete`. |
 
 ## Recherche des détails de la stratégie par identifiant {#lookup}
 
-Envoyez une requête de GET à la fonction `/policies` point de terminaison tout en fournissant un identifiant de stratégie dans le chemin d’accès de la requête pour récupérer des informations sur cette stratégie individuelle.
+Effectuez une requête de GET au point de terminaison `/policies` tout en fournissant un identifiant de stratégie dans le chemin de requête pour récupérer des informations sur cette stratégie individuelle.
 
 **Format d’API**
 
@@ -232,23 +232,23 @@ Une requête réussie renvoie des informations sur l’ID de stratégie interrog
 | `id` | Identifiant qui correspond à une stratégie. Cet identifiant est généré automatiquement et peut être utilisé pour rechercher, mettre à jour et supprimer une stratégie. |
 | `imsOrgId` | L’organisation dans laquelle la stratégie interrogée est accessible. |
 | `createdBy` | L’identifiant de l’utilisateur qui a créé la stratégie. |
-| `createdAt` | Heure de création de la stratégie. La variable `createdAt` s’affiche dans l’horodatage d’époque unix. |
+| `createdAt` | Heure de création de la stratégie. La propriété `createdAt` s’affiche dans l’horodatage de l’époque unix. |
 | `modifiedBy` | ID de l’utilisateur qui a mis à jour la stratégie pour la dernière fois. |
-| `modifiedAt` | Heure de la dernière mise à jour de la stratégie. La variable `modifiedAt` s’affiche dans l’horodatage d’époque unix. |
+| `modifiedAt` | Heure de la dernière mise à jour de la stratégie. La propriété `modifiedAt` s’affiche dans l’horodatage de l’époque unix. |
 | `name` | Nom de la stratégie. |
 | `description` | (Facultatif) Une propriété qui peut être ajoutée pour fournir des informations supplémentaires sur une stratégie spécifique. |
 | `status` | État actuel dʼune politique. Cette propriété définit si une stratégie est actuellement `active` ou `inactive`. |
 | `subjectCondition` | Conditions appliquées à un sujet. Un sujet est un utilisateur avec certains attributs qui demande l’accès à une ressource pour effectuer une action. Dans ce cas, `subjectCondition` sont des conditions de type requête appliquées aux attributs d’objet. |
 | `rules` | Ensemble de règles qui définissent une stratégie. Les règles définissent les combinaisons d’attributs autorisées pour que le sujet exécute correctement une action sur la ressource. |
-| `rules.effect` | Effet résultant de la prise en compte des valeurs pour `action`, `condition` et `resource`. Les valeurs possibles sont les suivantes : `permit`, `deny`, ou `indeterminate`. |
+| `rules.effect` | Effet résultant de la prise en compte des valeurs de `action`, `condition` et `resource`. Les valeurs possibles sont : `permit`, `deny` ou `indeterminate`. |
 | `rules.resource` | Ressource ou objet auquel un sujet peut ou ne peut pas accéder.  Les ressources peuvent être des fichiers, des applications, des serveurs ou même des API. |
 | `rules.condition` | Conditions appliquées à une ressource. Par exemple, si une ressource est un schéma, certains libellés peuvent lui être appliqués, ce qui contribue à déterminer si une action contre ce schéma est admissible ou non. |
-| `rules.action` | Action autorisée d’un sujet par rapport à une ressource interrogée. Les valeurs possibles sont les suivantes : `read`, `create`, `edit`, et `delete`. |
+| `rules.action` | Action autorisée d’un sujet par rapport à une ressource interrogée. Les valeurs possibles sont les suivantes : `read`, `create`, `edit` et `delete`. |
 
 
 ## Création d’une politique {#create}
 
-Pour créer une stratégie, envoyez une requête de POST à la fonction `/policies` point de terminaison .
+Pour créer une nouvelle stratégie, envoyez une requête de POST au point de terminaison `/policies`.
 
 **Format d’API**
 
@@ -289,10 +289,10 @@ curl -X POST \
 | `description` | (Facultatif) Une propriété qui peut être ajoutée pour fournir des informations supplémentaires sur une stratégie spécifique. |
 | `imsOrgId` | L’organisation qui contient la stratégie. |
 | `rules` | Ensemble de règles qui définissent une stratégie. Les règles définissent les combinaisons d’attributs autorisées pour que le sujet exécute correctement une action sur la ressource. |
-| `rules.effect` | Effet résultant de la prise en compte des valeurs pour `action`, `condition` et `resource`. Les valeurs possibles sont les suivantes : `permit`, `deny`, ou `indeterminate`. |
+| `rules.effect` | Effet résultant de la prise en compte des valeurs de `action`, `condition` et `resource`. Les valeurs possibles sont : `permit`, `deny` ou `indeterminate`. |
 | `rules.resource` | Ressource ou objet auquel un sujet peut ou ne peut pas accéder.  Les ressources peuvent être des fichiers, des applications, des serveurs ou même des API. |
 | `rules.condition` | Conditions appliquées à une ressource. Par exemple, si une ressource est un schéma, certains libellés peuvent lui être appliqués, ce qui contribue à déterminer si une action contre ce schéma est admissible ou non. |
-| `rules.action` | Action autorisée d’un sujet par rapport à une ressource interrogée. Les valeurs possibles sont les suivantes : `read`, `create`, `edit`, et `delete`. |
+| `rules.action` | Action autorisée d’un sujet par rapport à une ressource interrogée. Les valeurs possibles sont les suivantes : `read`, `create`, `edit` et `delete`. |
 
 **Réponse**
 
@@ -329,15 +329,15 @@ Une requête réussie renvoie la nouvelle stratégie, y compris son identifiant 
 | `id` | Identifiant qui correspond à une stratégie. Cet identifiant est généré automatiquement et peut être utilisé pour rechercher, mettre à jour et supprimer une stratégie. |
 | `name` | Nom d’une stratégie. |
 | `rules` | Ensemble de règles qui définissent une stratégie. Les règles définissent les combinaisons d’attributs autorisées pour que le sujet exécute correctement une action sur la ressource. |
-| `rules.effect` | Effet résultant de la prise en compte des valeurs pour `action`, `condition` et `resource`. Les valeurs possibles sont les suivantes : `permit`, `deny`, ou `indeterminate`. |
+| `rules.effect` | Effet résultant de la prise en compte des valeurs de `action`, `condition` et `resource`. Les valeurs possibles sont : `permit`, `deny` ou `indeterminate`. |
 | `rules.resource` | Ressource ou objet auquel un sujet peut ou ne peut pas accéder.  Les ressources peuvent être des fichiers, des applications, des serveurs ou même des API. |
 | `rules.condition` | Conditions appliquées à une ressource. Par exemple, si une ressource est un schéma, certains libellés peuvent lui être appliqués, ce qui contribue à déterminer si une action contre ce schéma est admissible ou non. |
-| `rules.action` | Action autorisée d’un sujet par rapport à une ressource interrogée. Les valeurs possibles sont les suivantes : `read`, `create`, `edit`, et `delete`. |
+| `rules.action` | Action autorisée d’un sujet par rapport à une ressource interrogée. Les valeurs possibles sont les suivantes : `read`, `create`, `edit` et `delete`. |
 
 
 ## Mise à jour d’une stratégie par identifiant de stratégie {#put}
 
-Pour mettre à jour les règles d’une stratégie individuelle, envoyez une requête de PUT à la variable `/policies` point de terminaison tout en fournissant l’identifiant de la stratégie que vous souhaitez mettre à jour dans le chemin d’accès de la requête.
+Pour mettre à jour les règles d’une stratégie individuelle, envoyez une requête de PUT au point de terminaison `/policies` tout en fournissant l’identifiant de la stratégie que vous souhaitez mettre à jour dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -406,7 +406,7 @@ Une réponse réussie renvoie la stratégie mise à jour.
 
 ## Mise à jour des propriétés de stratégie {#patch}
 
-Pour mettre à jour les propriétés d’une stratégie individuelle, envoyez une requête de PATCH à la variable `/policies` point de terminaison tout en fournissant l’identifiant de la stratégie que vous souhaitez mettre à jour dans le chemin d’accès de la requête.
+Pour mettre à jour les propriétés d’une stratégie individuelle, envoyez une requête de PATCH au point de terminaison `/policies` tout en fournissant l’identifiant de la stratégie que vous souhaitez mettre à jour dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -477,7 +477,7 @@ Une réponse réussie renvoie l’identifiant de stratégie interrogé avec une 
 
 ## Supprimer une politique {#delete}
 
-Pour supprimer une stratégie, envoyez une requête de DELETE à la fonction `/policies` point de terminaison tout en fournissant l’identifiant de la stratégie que vous souhaitez supprimer.
+Pour supprimer une stratégie, envoyez une requête de DELETE au point de terminaison `/policies` tout en fournissant l’identifiant de la stratégie que vous souhaitez supprimer.
 
 **Format d’API**
 
@@ -491,7 +491,7 @@ DELETE /policies/{POLICY_ID}
 
 **Requête**
 
-La requête suivante supprime la stratégie avec l’identifiant de `c3863937-5d40-448d-a7be-416e538f955e`.
+La requête suivante supprime la stratégie avec l’ID `c3863937-5d40-448d-a7be-416e538f955e`.
 
 ```shell
 curl -X DELETE \

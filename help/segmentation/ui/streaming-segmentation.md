@@ -28,7 +28,7 @@ La segmentation en flux continu sur [!DNL Adobe Experience Platform] permet aux 
 
 >[!NOTE]
 >
->Pour que la segmentation en flux continu fonctionne, vous devez activer la segmentation planifiée pour l’organisation. Pour plus d’informations sur l’activation de la segmentation planifiée, reportez-vous à [Présentation d’Audience Portal](./audience-portal.md#scheduled-segmentation).
+>Pour que la segmentation en flux continu fonctionne, vous devez activer la segmentation planifiée pour l’organisation. Pour plus d’informations sur l’activation de la segmentation planifiée, reportez-vous à la [présentation d’Audience Portal](./audience-portal.md#scheduled-segmentation).
 
 Une requête est automatiquement évaluée avec la segmentation en flux continu si elle répond à l’un des critères suivants :
 
@@ -75,7 +75,7 @@ Un graphique linéaire se trouve en dessous, qui indique le nombre de nouvelles 
 >
 >Une définition de segment est considérée comme éligible si elle passe de l’absence de statut au statut réalisé ou du statut sorti au statut réalisé. Une définition de segment est considérée comme non éligible si elle passe du statut réalisé au statut sorti.
 >
->Vous trouverez plus d’informations sur ces statuts dans le tableau des statuts du [Présentation d’Audience Portal](./audience-portal.md#customize).
+>Vous trouverez plus d’informations sur ces statuts dans le tableau d’état de la [présentation d’Audience Portal](./audience-portal.md#customize).
 
 ![La carte Profils au fil du temps est mise en surbrillance, avec un graphique linéaire des profils au fil du temps.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
@@ -123,4 +123,4 @@ La disponibilité d’une définition de segment peut prendre jusqu’à une heu
 
 ### Existe-t-il des limites aux données diffusées en continu ?
 
-Pour que les données en flux continu soient utilisées dans la segmentation par flux, cet élément **must** espacement entre les événements diffusés en continu. Si trop d’événements sont diffusés en continu dans la même seconde, Platform traite ces événements comme des données générées par des robots et ils seront ignorés. Pour respecter les bonnes pratiques, vous devez disposer des **au moins** cinq secondes entre les données d’événement afin de s’assurer que les données sont correctement utilisées.
+Pour que les données en flux continu puissent être utilisées dans la segmentation par flux, il existe **must** un espacement entre les événements diffusés en continu. Si trop d’événements sont diffusés en continu dans la même seconde, Platform traite ces événements comme des données générées par des robots et ils seront ignorés. Pour respecter les bonnes pratiques, **au moins** doit s&#39;écouler cinq secondes entre les données d&#39;événement afin de s&#39;assurer que les données sont correctement utilisées.

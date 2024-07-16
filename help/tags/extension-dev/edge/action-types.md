@@ -4,7 +4,7 @@ description: Découvrez comment définir un module de bibliothèque de type acti
 exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
 source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '377'
 ht-degree: 94%
 
 ---

@@ -7,8 +7,8 @@ user-guide-description: Consultez ce guide pour obtenir un aperçu général des
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
 workflow-type: tm+mt
-source-wordcount: '870'
-ht-degree: 91%
+source-wordcount: '871'
+ht-degree: 89%
 
 ---
 
@@ -40,7 +40,7 @@ Pour plus d’informations, consultez la [présentation de Data Ingestion](../..
 
 ## Étiquettes appliquées aux jeux de données des schémas
 
-La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Le cadre de gouvernance des données vous permet d’appliquer des étiquettes d’utilisation pour classer les données en fonction des politiques d’utilisation qui s’appliquent à ces données. Les libellés peuvent être appliqués à des schémas individuels, à des champs de ces schémas et à des jeux de données individuels entiers. Lorsque des libellés sont appliqués directement à un schéma, ces libellés sont propagés à tous les jeux de données existants et futurs basés sur ce schéma.
+La gouvernance des données d’Adobe Experience Platform vous permet de gérer les données clients et de garantir la conformité aux réglementations, aux restrictions et aux politiques applicables à l’utilisation des données. Le cadre de gouvernance des données vous permet d’appliquer des libellés d’utilisation pour classer les données en fonction des stratégies d’utilisation qui s’appliquent à ces données. Les libellés peuvent être appliqués à des schémas individuels, à des champs de ces schémas et à des jeux de données individuels entiers. Lorsque des libellés sont appliqués directement à un schéma, ces libellés sont propagés à tous les jeux de données existants et futurs basés sur ce schéma.
 
 >[!IMPORTANT]
 >
@@ -58,7 +58,7 @@ Une fois que les jeux de données ont été utilisés pour stocker les données 
 Voici une liste des services en aval qui utilisent des jeux de données pour diverses opérations. Veuillez consulter la documentation de chaque service pour en savoir plus.
 
 * [[!DNL Data Access API]](../../data-access/home.md) : vous permet d’accéder au contenu des fichiers stockés dans les jeux de données et de le télécharger.
-* [Service Adobe Experience Platform Identity](../../identity-service/home.md) : associe les identités des appareils et des systèmes, en liant les jeux de données en fonction des champs d’identité définis par les schémas XDM auxquels ils se conforment.
+* [Service d’identités d’Adobe Experience Platform](../../identity-service/home.md) : associe les identités des appareils et des systèmes, en liant les jeux de données en fonction des champs d’identité définis par les schémas XDM auxquels ils se conforment.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md) : tire parti de [!DNL Identity Service] pour créer des profils client détaillés à partir de vos jeux de données en temps réel. [!DNL Real-Time Customer Profile] extrait les données du [!DNL Data Lake] et conserve les profils clients dans sa propre banque de données distincte.
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) : permet de créer des segments et de générer des audiences à partir de vos données [!DNL Real-Time Customer Profile]. Ces audiences peuvent ensuite être exportées vers leurs propres jeux de données dans le [!DNL Data Lake].
 * [Espace de travail de science des données d’Adobe Experience Platform](../../data-science-workspace/home.md) : utilise le machine learning et l’intelligence artificielle pour découvrir des informations dans les jeux de données volumineux.

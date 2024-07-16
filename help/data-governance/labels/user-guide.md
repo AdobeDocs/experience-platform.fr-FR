@@ -34,9 +34,9 @@ Vous pouvez ajouter des libellés directement à un schéma ou à des champs de 
 >
 >Si vos stratégies d’utilisation des données ont été créées avant que vous n’ayez étiqueté votre champ, vous risquez de rencontrer une boîte de dialogue de violation de stratégie de gouvernance lorsque vous appliquez des libellés à votre nouveau schéma. Cette boîte de dialogue indique que l’application de ce libellé violera une stratégie d’utilisation existante. Utilisez le diagramme de lignage de données pour comprendre les autres modifications de configuration à effectuer avant de pouvoir ajouter le libellé à votre champ de schéma.
 >
->![La violation de la politique de gouvernance des données a détecté la boîte de dialogue avec le résumé de la violation et le diagramme de lignage des données mis en surbrillance.](../images/labels/policy-violation-dialog.png)
+>![La violation de la politique de gouvernance des données a détecté une boîte de dialogue avec le résumé de la violation et le diagramme de traçabilité des données mis en surbrillance.](../images/labels/policy-violation-dialog.png)
 >
->Voir [documentation sur les violations de stratégies d’utilisation des données](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/auto-enforcement#data-usage-violation) pour plus d’informations sur les violations de stratégie partielles.
+>Pour plus d’informations sur les violations de stratégie partielles, consultez la [documentation sur les violations de stratégie d’utilisation des données](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/auto-enforcement#data-usage-violation) .
 
 Pour gérer les libellés d’utilisation des données au niveau du schéma, vous devez sélectionner un schéma existant ou en créer un nouveau. Après votre connexion à Adobe Experience Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche pour ouvrir l’espace de travail **[!UICONTROL Schémas]**. Cette page répertorie tous les schémas créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque schéma.
 

@@ -1,19 +1,19 @@
 ---
 description: Découvrez comment utiliser Destination SDK pour configurer une destination Azure Data Lake Storage avec des options de mise en forme de fichier personnalisées et une configuration de nom de fichier personnalisée.
-title: Configurer une destination Azure Data Lake Storage avec des options de formatage de fichiers personnalisées et une configuration des noms de fichiers personnalisée.
+title: Configurez une destination Azure Data Lake Storage avec des options de formatage de fichier personnalisées et une configuration de nom de fichier personnalisée.
 exl-id: cb67b126-cd30-4fb7-b67e-c15dc7daef73
 source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 12%
+source-wordcount: '716'
+ht-degree: 8%
 
 ---
 
-# Configurez une [!DNL Azure Data Lake Storage] destination avec options de formatage de fichier personnalisées et configuration de nom de fichier personnalisé
+# Configuration d’une destination [!DNL Azure Data Lake Storage] avec des options de formatage de fichier personnalisées et une configuration de nom de fichier personnalisée
 
 ## Vue d’ensemble {#overview}
 
-Cette page décrit comment utiliser la Destination SDK pour configurer une [!DNL Azure Data Lake Storage] destination avec personnalisation [options de formatage de fichier](configure-file-formatting-options.md) et une [configuration du nom de fichier](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
+Cette page décrit comment utiliser la Destination SDK pour configurer une destination [!DNL Azure Data Lake Storage] avec des [ options de formatage de fichier ](configure-file-formatting-options.md) personnalisées et une [configuration de nom de fichier](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration) personnalisée.
 
 Cette page affiche toutes les options de configuration disponibles pour les destinations Azure Data Lake Storage. Vous pouvez modifier les configurations affichées dans les étapes ci-dessous ou supprimer certaines parties des configurations, si nécessaire.
 
@@ -21,11 +21,11 @@ Pour obtenir des descriptions détaillées des paramètres utilisés ci-dessous,
 
 ## Conditions préalables {#prerequisites}
 
-Avant de passer aux étapes décrites ci-dessous, veuillez lire la section [Prise en main de Destination SDK](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’authentification d’Adobe I/O nécessaires et d’autres conditions préalables requises pour utiliser les API Destination SDK.
+Avant de passer aux étapes décrites ci-dessous, consultez la page [Prise en main de la Destination SDK](../../getting-started.md) pour plus d’informations sur l’obtention des informations d’identification d’authentification d’Adobe I/O nécessaires et d’autres conditions préalables requises pour utiliser les API Destination SDK.
 
 ## Étape 1 : créer une configuration de serveur et de fichier {#create-server-file-configuration}
 
-Commencez par utiliser la variable `/destination-server` point d’entrée [créer une configuration de serveur et de fichier ;](../../authoring-api/destination-server/create-destination-server.md).
+Commencez par utiliser le point d’entrée `/destination-server` pour [créer une configuration de serveur et de fichier](../../authoring-api/destination-server/create-destination-server.md).
 
 **Format d’API**
 
@@ -35,8 +35,8 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 
 **Requête**
 
-La requête suivante crée une nouvelle configuration de serveur de destination, configurée en fonction des paramètres fournis dans la payload.
-La payload ci-dessous inclut un [!DNL Azure Data Lake Storage] configuration, avec [Formatage des fichiers CSV](../../functionality/destination-server/file-formatting.md) paramètres de configuration que les utilisateurs peuvent définir dans l’interface utilisateur de l’Experience Platform.
+La requête suivante crée une configuration de serveur de destination, configurée par les paramètres fournis dans la payload.
+La payload ci-dessous inclut une configuration [!DNL Azure Data Lake Storage] générique, avec des paramètres de configuration [formatage de fichier CSV](../../functionality/destination-server/file-formatting.md) personnalisés que les utilisateurs peuvent définir dans l’interface utilisateur Experience Platform.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -123,9 +123,9 @@ Une réponse réussie renvoie la nouvelle configuration du serveur de destinatio
 
 ## Étape 2 : créer une configuration de destination {#create-destination-configuration}
 
-Après avoir créé la configuration du serveur de destination et du formatage des fichiers à l’étape précédente, vous pouvez désormais utiliser la variable `/destinations` Point de terminaison de l’API pour créer une configuration de destination.
+Après avoir créé la configuration de mise en forme du serveur de destination et des fichiers à l’étape précédente, vous pouvez désormais utiliser le point d’entrée de l’API `/destinations` pour créer une configuration de destination.
 
-Pour connecter la configuration du serveur dans [étape 1](#create-server-file-configuration) sur cette configuration de destination, remplacez la variable `destinationServerId` dans la requête API ci-dessous avec la valeur obtenue lors de la création de votre serveur de destination dans [étape 1](#create-server-file-configuration).
+Pour connecter la configuration du serveur de l’ [étape 1](#create-server-file-configuration) à cette configuration de destination, remplacez la valeur `destinationServerId` de la requête API ci-dessous par la valeur obtenue lors de la création de votre serveur de destination à l’ [étape 1](#create-server-file-configuration).
 
 **Format d’API**
 
@@ -400,9 +400,9 @@ Une réponse réussie renvoie la nouvelle configuration de destination, y compri
 
 En fonction des configurations ci-dessus, le catalogue des Experience Platform affiche désormais une nouvelle carte de destination privée que vous pouvez utiliser.
 
-![Enregistrement de l’écran affichant la page du catalogue des destinations avec une carte de destination sélectionnée.](../../assets/guides/batch/adls-destination-card.gif)
+![ Enregistrement d’écran affichant la page du catalogue des destinations avec une carte de destination sélectionnée.](../../assets/guides/batch/adls-destination-card.gif)
 
-Dans les images et enregistrements ci-dessous, notez comment les options de la variable [workflow d’activation pour les destinations basées sur des fichiers](../../../ui/activate-batch-profile-destinations.md) correspondent aux options que vous avez sélectionnées dans la configuration de destination.
+Dans les images et enregistrements ci-dessous, notez comment les options du [workflow d’activation pour les destinations basées sur des fichiers](../../../ui/activate-batch-profile-destinations.md) correspondent aux options que vous avez sélectionnées dans la configuration de destination.
 
 Lorsque vous renseignez des détails sur la destination, notez comment les champs sont apparus comme les champs de données personnalisés que vous configurez dans la configuration.
 
@@ -410,23 +410,23 @@ Lorsque vous renseignez des détails sur la destination, notez comment les champ
 >
 >L’ordre dans lequel vous ajoutez les champs de données personnalisés à la configuration de destination n’est pas reflété dans l’interface utilisateur. Les champs de données personnalisés sont toujours affichés dans l’ordre indiqué dans l’enregistrement à l’écran ci-dessous.
 
-![remplir les détails de destination](../../assets/guides/batch/file-configuration-options.gif)
+![ Renseignez les détails de destination](../../assets/guides/batch/file-configuration-options.gif)
 
-Lors de la planification des intervalles d’exportation, notez comment les champs apparaissaient sont les champs que vous configurez dans la variable `batchConfig` configuration.
+Lors de la planification des intervalles d’exportation, notez comment les champs sont apparus comme les champs que vous avez configurés dans la configuration `batchConfig`.
 ![options de planification d’exportation](../../assets/guides/batch/file-export-scheduling.png)
 
-Lors de l’affichage des options de configuration du nom de fichier, notez comment les champs affichés représentent la variable `filenameConfig` options que vous configurez dans la configuration.
+Lors de l’affichage des options de configuration du nom de fichier, notez comment les champs sont apparus représentent les options `filenameConfig` que vous avez configurées dans la configuration.
 ![options de configuration du nom de fichier](../../assets/guides/batch/file-naming-options.gif)
 
-Si vous souhaitez ajuster l’un des champs mentionnés ci-dessus, répétez l’opération. [étapes 1](#create-server-file-configuration) et [two](#create-destination-configuration) pour modifier les configurations en fonction de vos besoins.
+Si vous souhaitez ajuster l’un des champs mentionnés ci-dessus, répétez les [étapes un](#create-server-file-configuration) et [deux](#create-destination-configuration) pour modifier les configurations selon vos besoins.
 
-## Étape 4 : (facultative) Publier votre destination {#publish-destination}
+## Étape 4 : (facultative) Publish votre destination {#publish-destination}
 
 >[!NOTE]
 >
 >Cette étape n’est pas requise si vous créez une destination privée à des fins personnelles et que vous ne souhaitez pas la publier dans le catalogue de destinations pour que d’autres clients puissent l’utiliser.
 
-Après avoir configuré votre destination, utilisez la variable [API de publication de destination](../../publishing-api/create-publishing-request.md) pour envoyer votre configuration à Adobe en vue de la révision.
+Après avoir configuré votre destination, utilisez l’ [API de publication de destination](../../publishing-api/create-publishing-request.md) pour envoyer votre configuration à Adobe pour révision.
 
 ## Étape 5 : (facultative) documenter votre destination {#document-destination}
 
@@ -438,4 +438,4 @@ Si vous êtes un fournisseur de logiciels indépendant (ISV) ou un intégrateur 
 
 ## Étapes suivantes {#next-steps}
 
-En lisant cet article, vous savez maintenant comment créer une [!DNL Azure Data Lake Storage] destination à l’aide de Destination SDK. Ensuite, votre équipe peut utiliser la variable [workflow d’activation pour les destinations basées sur des fichiers](../../../ui/activate-batch-profile-destinations.md) pour exporter des données vers la destination.
+En lisant cet article, vous savez maintenant comment créer une destination [!DNL Azure Data Lake Storage] personnalisée à l’aide de Destination SDK. Ensuite, votre équipe peut utiliser le [workflow d’activation pour les destinations basées sur des fichiers](../../../ui/activate-batch-profile-destinations.md) pour exporter des données vers la destination.

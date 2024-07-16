@@ -17,7 +17,7 @@ ht-degree: 51%
 
 >[!IMPORTANT]
 >
->Vérifiez vos droits de licence dans votre commande commerciale et les [Description du produit](https://helpx.adobe.com/fr/legal/product-descriptions.html) sur les limites d’utilisation réelles en plus de cette page des barrières de sécurité.
+>Vérifiez vos droits de licence dans votre commande de ventes et la [description du produit](https://helpx.adobe.com/fr/legal/product-descriptions.html) correspondante sur les limites d’utilisation réelles en plus de cette page de garde-fous.
 
 Cette page fournit les limites d’utilisation et de débit par défaut en ce qui concerne le comportement d’activation. Lors de la révision des mécanismes de sécurisation suivants, on suppose que vous avez correctement [connecté aux destinations](/help/destinations/ui/connect-destination.md).
 
@@ -34,7 +34,7 @@ Ce document comprend deux types de limites par défaut :
 | Type de protection | Description |
 |----------|---------|
 | **Barrière de sécurité des performances (limite de soft)** | Les barrières de performance sont des limites d’utilisation liées à la portée de vos cas d’utilisation. Lorsque vous dépassez les barrières de performance, vous pouvez rencontrer une dégradation des performances et une latence. Adobe n’est pas responsable d’une telle dégradation des performances. Les clients qui dépassent systématiquement une barrière de performance peuvent choisir d’acquérir une capacité supplémentaire afin d’éviter une dégradation des performances. |
-| **Barrières de sécurité appliquées par le système (limite stricte)** | Les barrières de sécurité appliquées par le système sont appliquées par l’interface utilisateur ou l’API de Real-Time CDP. Il s’agit de limites que vous ne pouvez pas dépasser, car l’interface utilisateur et l’API vous empêcheront de le faire ou renverront une erreur. |
+| **Barrières de sécurité système (limite stricte)** | Les barrières de sécurité appliquées par le système sont appliquées par l’interface utilisateur ou l’API de Real-Time CDP. Il s’agit de limites que vous ne pouvez pas dépasser, car l’interface utilisateur et l’API vous empêcheront de le faire ou renverront une erreur. |
 
 {style="table-layout:auto"}
 
@@ -51,7 +51,7 @@ Les mécanismes de sécurisation ci-dessous s’appliquent généralement à l�
 | --- | --- | --- | --- |
 | Nombre maximal d’audiences vers une seule destination | 250 | Protecteur des performances | Il est recommandé de mapper un maximum de 250 audiences à une seule destination dans un flux de données. <br><br> Si vous devez activer plus de 250 audiences vers une destination, vous pouvez effectuer l’une des opérations suivantes : <ul><li> Dissociez les audiences que vous ne souhaitez plus activer, ou</li><li>Créez un nouveau flux de données vers la destination souhaitée et mappez les audiences à ce nouveau flux de données.</li></ul> <br> Notez que dans le cas de certaines destinations, vous pouvez être limité à moins de 250 audiences mappées à la destination. Ces destinations sont répertoriées plus bas sur la page, dans leurs sections respectives. |
 | Nombre maximal d’attributs mappés vers une destination | 50 | Protecteur des performances | Dans le cas de plusieurs destinations et types de destination, vous pouvez sélectionner des attributs de profil et des identités à mapper pour l’exportation. Pour des performances optimales, un maximum de 50 attributs doit être mappé dans un flux de données vers une destination. |
-| Nombre maximal de destinations | 100 | Barrière de sécurité mise en place par le système | Vous pouvez créer un maximum de 100 destinations auxquelles vous pouvez vous connecter et activer des données, *par environnement de test*. Les [destinations de personnalisation Edge (personnalisation personnalisée)](#edge-destinations-activation) peuvent représenter un maximum de 10 sur les 100 destinations recommandées. |
+| Nombre maximal de destinations | 100 | Barrière de sécurité mise en place par le système | Vous pouvez créer un maximum de 100 destinations auxquelles vous pouvez vous connecter et activer des données, *par sandbox*. Les [destinations de personnalisation Edge (personnalisation personnalisée)](#edge-destinations-activation) peuvent représenter un maximum de 10 sur les 100 destinations recommandées. |
 | Type de données activées vers les destinations | Données de profil, y compris les identités et le mappage d’identités | Barrière de sécurité mise en place par le système | Actuellement, il n’est possible d’exporter que des *attributs d’enregistrement de profil* vers les destinations. Pour l’instant, les attributs XDM qui décrivent les données d’événement ne sont pas pris en charge pour l’exportation. |
 | Type de données activées vers les destinations : prise en charge des attributs de tableau et de mappage | Non disponible | Barrière de sécurité mise en place par le système | À l’heure actuelle, il n’est **pas** possible d’exporter des *attributs de tableau ou de mappage* vers des destinations. L’exception à cette règle est le [mappage d’identités](/help/xdm/field-groups/profile/identitymap.md), qui est exporté à la fois dans les activations par flux et basées sur des fichiers. |
 
@@ -98,13 +98,13 @@ Les mécanismes de sécurisation ci-dessous s’appliquent à l’activation par
 | --- | --- | --- | --- |
 | Nombre maximal de destinations de [Personnalisation personnalisée](/help/destinations/catalog/personalization/custom-personalization.md) | 10 | Protecteur des performances | Vous pouvez configurer des flux de données vers 10 destinations de personnalisation personnalisée par sandbox. |
 | Nombre maximal d’attributs mappés à une destination de personnalisation par sandbox | 30 | Barrière de sécurité mise en place par le système | Un maximum de 30 attributs peuvent être mappés dans un flux de données à une destination de personnalisation, par sandbox. |
-| Nombre maximal d’audiences mappées à une seule [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) destination | 50 | Protecteur des performances | Vous pouvez activer un maximum de 50 audiences dans un flux d’activation vers une seule destination Adobe Target. |
+| Nombre maximal d’audiences mappées à une seule destination [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) | 50 | Protecteur des performances | Vous pouvez activer un maximum de 50 audiences dans un flux d’activation vers une seule destination Adobe Target. |
 
 {style="table-layout:auto"}
 
 ### Exports de jeux de données {#dataset-exports}
 
-Les exportations de jeux de données sont actuellement prises en charge dans une **[!UICONTROL Premier Complet puis Incrémentiel]** [pattern](/help/destinations/ui/export-datasets.md#scheduling). Les barrières de sécurité décrites dans cette section *s&#39;appliquer au premier export complet* qui se produit après la configuration d’un workflow d’exportation de jeux de données.
+Les exportations de jeux de données sont actuellement prises en charge dans un **[!UICONTROL premier complet, puis incrémentiel]** [modèle](/help/destinations/ui/export-datasets.md#scheduling). Les barrières de sécurité décrites dans cette section *s’appliquent à la première exportation complète* qui se produit après la configuration d’un workflow d’exportation de jeux de données.
 
 <!--
 
@@ -121,16 +121,16 @@ Les exportations de jeux de données sont actuellement prises en charge dans une
 Les barrières de sécurité à l’exportation des jeux de données s’appliquent à deux types de jeux de données exportés depuis un Experience Platform, comme décrit ci-dessous :
 
 **Jeux de données basés sur le schéma des événements d’expérience XDM**
-Dans le cas de jeux de données basés sur le schéma d’événements d’expérience XDM, le schéma de jeu de données comprend un niveau supérieur. *timestamp* colonne . Les données sont ingérées de manière à ajouter uniquement.
+Dans le cas de jeux de données basés sur le schéma d’événements d’expérience XDM, le schéma de jeu de données comprend une colonne de niveau supérieur *horodatage* . Les données sont ingérées de manière à ajouter uniquement.
 
 **Jeux de données basés sur le schéma XDM Individual Profile**
-Dans le cas de jeux de données basés sur le schéma XDM Individual Profile, le schéma de jeu de données n’inclut pas un niveau supérieur. *timestamp* colonne . Les données sont ingérées de manière positive.
+Dans le cas de jeux de données basés sur le schéma XDM Individual Profile, le schéma de jeu de données n’inclut pas une colonne de niveau supérieur *horodatage*. Les données sont ingérées de manière positive.
 
 La barrière de sécurité logicielle ci-dessous s’applique à tous les jeux de données exportés hors d’Experience Platform. Examinez également les garde-fous durs plus loin ci-dessous, spécifiques à différents types de jeux de données et de compression.
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
-| Taille des jeux de données exportés | 5 milliards d’enregistrements | Protecteur des performances | La limite décrite ici pour les exportations de jeux de données est une *garde-fou souple*. Par exemple, bien que l’interface utilisateur ne vous empêche pas d’exporter des jeux de données de plus de 5 milliards d’enregistrements, le comportement est imprévisible et les exportations peuvent échouer ou présenter une latence d’exportation très longue. |
+| Taille des jeux de données exportés | 5 milliards d’enregistrements | Protecteur des performances | La limite décrite ici pour les exportations de jeux de données est un *garde-fous souple*. Par exemple, bien que l’interface utilisateur ne vous empêche pas d’exporter des jeux de données de plus de 5 milliards d’enregistrements, le comportement est imprévisible et les exportations peuvent échouer ou présenter une latence d’exportation très longue. |
 
 {style="table-layout:auto"}
 
@@ -144,8 +144,8 @@ Pour les exportations planifiées ou récurrentes de jeux de données, les barri
 
 | Type de jeu de données | Mécanisme de sécurisation | Type de protection | Description |
 ---------|----------|---------|-------|
-| Jeux de données basés sur la variable **Schéma des événements d’expérience XDM** | 365 derniers jours de données | Barrière de sécurité mise en place par le système | Les données de la dernière année civile sont exportées. |
-| Jeux de données basés sur la variable **Schéma XDM Individual Profile** | Dix milliards d’enregistrements sur tous les fichiers exportés dans un flux de données | Barrière de sécurité mise en place par le système | Le nombre d’enregistrements du jeu de données doit être inférieur à dix milliards pour les fichiers JSON ou parquet compressés et à un million pour les fichiers parquet non compressés. Dans le cas contraire, l’exportation échoue. Réduisez la taille du jeu de données que vous essayez d’exporter s’il est supérieur au seuil autorisé. |
+| Jeux de données basés sur le **schéma des événements d’expérience XDM** | 365 derniers jours de données | Barrière de sécurité mise en place par le système | Les données de la dernière année civile sont exportées. |
+| Jeux de données basés sur le **schéma XDM Individual Profile** | Dix milliards d’enregistrements sur tous les fichiers exportés dans un flux de données | Barrière de sécurité mise en place par le système | Le nombre d’enregistrements du jeu de données doit être inférieur à dix milliards pour les fichiers JSON ou parquet compressés et à un million pour les fichiers parquet non compressés. Dans le cas contraire, l’exportation échoue. Réduisez la taille du jeu de données que vous essayez d’exporter s’il est supérieur au seuil autorisé. |
 
 {style="table-layout:auto"}
 
@@ -168,7 +168,7 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 
 -->
 
-En savoir plus sur [exportation de jeux de données](/help/destinations/ui/export-datasets.md).
+En savoir plus sur l’ [exportation de jeux de données](/help/destinations/ui/export-datasets.md).
 
 
 ### Mécanismes de sécurisation de Destination SDK {#destination-sdk-guardrails}
@@ -198,6 +198,6 @@ Pour plus d’informations sur les barrières de sécurité des autres services 
 
 * [Barrières de sécurité Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
-* [Real-time Customer Data Platform (Édition B2C - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (Édition B2C - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

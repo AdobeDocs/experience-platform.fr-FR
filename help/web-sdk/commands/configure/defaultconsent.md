@@ -12,7 +12,7 @@ ht-degree: 5%
 
 # `defaultConsent`
 
-La variable `defaultConsent` détermine la manière dont vous gérez le consentement pour la collecte de données avant d’appeler la méthode [`setConsent`](../setconsent.md) . Cette propriété est utile lorsque vous ne souhaitez pas collecter accidentellement des données d’individus résidant dans des zones où le consentement est requis avant de collecter des données.
+La propriété `defaultConsent` détermine la manière dont vous gérez le consentement pour la collecte de données avant d’appeler la commande [`setConsent`](../setconsent.md). Cette propriété est utile lorsque vous ne souhaitez pas collecter accidentellement des données d’individus résidant dans des zones où le consentement est requis avant de collecter des données.
 
 Par défaut, les utilisateurs sont inscrits à tous les usages et le SDK Web est autorisé à effectuer les tâches suivantes :
 
@@ -21,11 +21,11 @@ Par défaut, les utilisateurs sont inscrits à tous les usages et le SDK Web est
 
 Si les utilisateurs se désinscrivent de tous les usages, le SDK Web n’effectue aucune de ces tâches.
 
-La variable `defaultConsent` prend en charge trois valeurs :
+La propriété `defaultConsent` prend en charge trois valeurs :
 
-* **`in`**: la collecte des données se poursuit normalement, jusqu’à ce que l’utilisateur se désinscrive.
-* **`out`**: les données sont définitivement ignorées jusqu’à ce que l’utilisateur se connecte.
-* **`pending`**: les données sont stockées localement jusqu’à ce que l’utilisateur choisisse d’utiliser la variable [`setConsent`](../setconsent.md) . Lorsque le consentement par défaut à des fins générales est défini sur `pending`, en essayant d’exécuter des commandes qui dépendent des préférences de consentement de l’utilisateur (par exemple, la fonction [`sendEvent`](../sendevent/overview.md) ) entraîne la mise en file d’attente de la commande dans le SDK Web. Les commandes en file d’attente ne sont pas traitées tant que vous n’avez pas communiqué les préférences de souscription de l’utilisateur au SDK Web.
+* **`in`** : la collecte de données se poursuit normalement, jusqu’à ce que l’utilisateur se désinscrive.
+* **`out`** : les données sont définitivement ignorées jusqu’à ce que l’utilisateur se connecte.
+* **`pending`** : les données sont stockées localement jusqu’à ce que l’utilisateur donne son consentement à l’aide de la commande [`setConsent`](../setconsent.md). Lorsque le consentement par défaut à des fins générales est défini sur `pending`, toute tentative d’exécution de commandes qui dépend des préférences de consentement de l’utilisateur (par exemple, la commande [`sendEvent`](../sendevent/overview.md)) entraîne la mise en file d’attente de la commande dans le SDK Web. Les commandes en file d’attente ne sont pas traitées tant que vous n’avez pas communiqué les préférences de souscription de l’utilisateur au SDK Web.
 
 >[!NOTE]
 >
@@ -33,18 +33,18 @@ La variable `defaultConsent` prend en charge trois valeurs :
 
 Si un visiteur ne figure pas dans la compétence du Règlement général sur la protection des données (RGPD), le consentement par défaut peut être défini sur `in`. Le consentement par défaut des visiteurs se trouvant dans la juridiction du RGPD peut être défini sur `pending`. Votre plateforme de gestion du consentement (CMP) peut détecter la région du client et fournir l’indicateur `gdprApplies` à IAB TCF 2.0. Cet indicateur peut être utilisé pour définir le consentement par défaut.
 
-Si vous ne souhaitez pas collecter les événements qui se sont produits avant la définition des préférences d’inclusion de l’utilisateur, vous pouvez transmettre `"defaultConsent": "out"` pendant la configuration du SDK Web. Toute tentative d’exécution de commandes qui dépend des préférences de consentement de l’utilisateur n’aura aucun effet tant que vous n’aurez pas communiqué les préférences de consentement de l’utilisateur au SDK Web.
+Si vous ne souhaitez pas collecter les événements qui se sont produits avant que les préférences d’inclusion de l’utilisateur ne soient définies, vous pouvez transmettre `"defaultConsent": "out"` lors de la configuration du SDK Web. Toute tentative d’exécution de commandes qui dépend des préférences de consentement de l’utilisateur n’aura aucun effet tant que vous n’aurez pas communiqué les préférences de consentement de l’utilisateur au SDK Web.
 
 >[!NOTE]
 >
->Actuellement, le SDK Web ne prend en charge qu’une seule fonction tout ou rien. Bien que nous prévoyions de créer un ensemble plus robuste d’objectifs ou de catégories qui correspondront aux différentes fonctionnalités d’Adobe et offres de produits, l’implémentation actuelle est une approche d’opt-in &quot;tout ou rien&quot;.  Cela ne s’applique qu’à [!DNL Web SDK] et PAS d’autres bibliothèques JavaScript d’Adobe.
+>Actuellement, le SDK Web ne prend en charge qu’une seule fonction tout ou rien. Bien que nous prévoyions de créer un ensemble plus robuste d’objectifs ou de catégories qui correspondront aux différentes fonctionnalités d’Adobe et offres de produits, l’implémentation actuelle est une approche d’opt-in &quot;tout ou rien&quot;.  Cela s’applique uniquement à [!DNL Web SDK] et NON à d’autres bibliothèques JavaScript Adobe.
 
-## Utilisation `defaultConsent` ensemble avec `setConsent` {#using-consent}
+## Utilisation de `defaultConsent` avec `setConsent` {#using-consent}
 
 Le SDK Web propose deux commandes de configuration de consentement complémentaires :
 
-* [`defaultConsent`](defaultconsent.md): cette commande est destinée à capturer les préférences de consentement des clients Adobe utilisant le SDK Web.
-* [`setConsent`](../setconsent.md): cette commande est destinée à capturer les préférences de consentement des visiteurs de votre site.
+* [`defaultConsent`](defaultconsent.md) : cette commande est destinée à capturer les préférences de consentement des clients Adobe utilisant le SDK Web.
+* [`setConsent`](../setconsent.md) : cette commande est destinée à capturer les préférences de consentement des visiteurs de votre site.
 
 Lorsqu’ils sont utilisés ensemble, ces paramètres peuvent donner lieu à différents résultats de collecte de données et de définition des cookies, selon leurs valeurs configurées.
 
@@ -66,7 +66,7 @@ Les cookies suivants sont définis lorsque la configuration du consentement perm
 
 | Nom | Âge max. | Description |
 |---|---|---|
-| **AMCV_##@AdobeOrg** | 34128000 (395 jours) | Présenter quand [`idMigrationEnabled`](../configure/idmigrationenabled.md) est activée. Cela s’avère utile lors de la transition vers le SDK Web alors que certaines parties du site utilisent toujours `visitor.js`. |
+| **AMCV_###@AdobeOrg** | 34128000 (395 jours) | Présent lorsque [`idMigrationEnabled`](../configure/idmigrationenabled.md) est activé. Cela s’avère utile lors de la transition vers le SDK Web alors que certaines parties du site utilisent toujours `visitor.js`. |
 | **Cookie Demdex** | 15552000 (180 jours) | Présent si la synchronisation des identifiants est activée. L’Audience Manager définit ce cookie afin d’affecter un identifiant unique à un visiteur du site. Le cookie demdex permet à Audience Manager d’exécuter des fonctions de base, telles que l’identification des visiteurs, la synchronisation des identifiants, la segmentation, la modélisation, la création de rapports, etc. |
 | **kndctr_orgid_cluster** | 1800 (30 minutes) | Stocke la région de l’Edge Network qui sert les requêtes de l’utilisateur actuel. La région est utilisée dans le chemin de l’URL afin que l’Edge Network puisse acheminer la requête vers la région appropriée. Si un utilisateur se connecte à une autre adresse IP ou lors d’une autre session, la demande est de nouveau acheminée vers la région la plus proche. |
 | **kndct_orgid_identity** | 34128000 (395 jours) | Stocke l’ECID, ainsi que d’autres informations relatives à l’ECID. |
@@ -75,18 +75,18 @@ Les cookies suivants sont définis lorsque la configuration du consentement perm
 
 ## Définition du consentement par défaut à l’aide de l’extension de balise SDK Web
 
-Sélectionnez un bouton radio sous **[!UICONTROL Consentement par défaut]** when [configuration de l’extension de balise](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Sélectionnez le bouton radio de votre choix sous **[!UICONTROL Consentement par défaut]** lors de la [ configuration de l’extension de balise](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
 
-1. Connexion à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
+1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
 1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
 1. Sélectionnez la propriété de balise de votre choix.
-1. Accédez à **[!UICONTROL Extensions]**, puis cliquez sur **[!UICONTROL Configurer]** sur le [!UICONTROL SDK Web Adobe Experience Platform] carte.
-1. Faites défiler l’écran vers le bas jusqu’à [!UICONTROL Privacy] , puis sélectionnez la **[!UICONTROL Consentement par défaut]**.
+1. Accédez à **[!UICONTROL Extensions]**, puis cliquez sur **[!UICONTROL Configurer]** sur la carte [!UICONTROL SDK Web Adobe Experience Platform].
+1. Faites défiler l’écran jusqu’à la section [!UICONTROL Confidentialité], puis sélectionnez le **[!UICONTROL consentement par défaut]** de votre choix.
 1. Cliquez sur **[!UICONTROL Enregistrer]**, puis publiez vos modifications.
 
 ## Définition du consentement par défaut à l’aide de la bibliothèque JavaScript du SDK Web
 
-Définissez la variable `defaultConsent` de chaîne au niveau de consentement souhaité lors de l’exécution de la propriété `configure` . Cette propriété est sensible à la casse et ne prend en charge que les trois valeurs suivantes : `"in"`, `"out"`, et `"pending"`. Si vous tentez d’utiliser une autre valeur, la bibliothèque renvoie une erreur.
+Définissez la propriété de chaîne `defaultConsent` sur le niveau de consentement souhaité lors de l’exécution de la commande `configure`. Cette propriété est sensible à la casse et ne prend en charge que les trois valeurs suivantes : `"in"`, `"out"` et `"pending"`. Si vous tentez d’utiliser une autre valeur, la bibliothèque renvoie une erreur.
 
 ```js
 alloy("configure", {

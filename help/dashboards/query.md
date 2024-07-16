@@ -17,29 +17,29 @@ Adobe Experience Platform fournit des informations importantes sur les données 
 
 ## Prise en main de [!DNL Query Service]
 
-Adobe Experience Platform [!DNL Query Service] prend en charge les marketeurs pour obtenir des informations à partir de leurs données en permettant l’utilisation de SQL standard pour interroger les données du lac de données. [!DNL Query Service] offre une interface utilisateur et une API qui peuvent être utilisées pour joindre n’importe quel jeu de données dans le lac de données et capturer les résultats de la requête sous forme de nouveaux jeux de données à utiliser dans les rapports, l’apprentissage automatique ou pour ingestion dans Real-time Customer Profile.
+Adobe Experience Platform [!DNL Query Service] prend en charge les marketeurs pour obtenir des informations à partir de leurs données en permettant l’utilisation de SQL standard pour interroger les données dans le lac de données. [!DNL Query Service] offre une interface utilisateur et une API qui peuvent être utilisées pour joindre n’importe quel jeu de données dans le lac de données et capturer les résultats de la requête en tant que nouveaux jeux de données à utiliser dans les rapports, l’apprentissage automatique ou pour ingestion dans Real-Time Customer Profile.
 
-Pour en savoir plus sur [!DNL Query Service] et son rôle dans l&#39;Experience Platform, veuillez commencer par lire [[!DNL Query Service] aperçu](../query-service/home.md).
+Pour en savoir plus sur [!DNL Query Service] et son rôle dans Experience Platform, commencez par lire la [[!DNL Query Service] présentation](../query-service/home.md).
 
 ## Accès aux jeux de données disponibles
 
-Vous pouvez utiliser [!DNL Query Service] pour interroger des jeux de données bruts pour les tableaux de bord de profil, d’audience et de destinations. Pour afficher vos jeux de données disponibles, dans l’interface utilisateur de l’Experience Platform, sélectionnez **Jeux de données** dans le volet de navigation de gauche pour ouvrir le tableau de bord Jeux de données . Le tableau de bord répertorie tous les jeux de données disponibles pour votre organisation. Des détails s’affichent pour chaque jeu de données répertorié, notamment son nom, le schéma auquel le jeu de données adhère et l’état de l’exécution d’ingestion la plus récente.
+Vous pouvez utiliser [!DNL Query Service] pour interroger des jeux de données bruts pour les tableaux de bord de profil, d’audience et de destinations. Pour afficher vos jeux de données disponibles, dans l’interface utilisateur de l’Experience Platform, sélectionnez **Jeux de données** dans le volet de navigation de gauche pour ouvrir le tableau de bord Jeux de données. Le tableau de bord répertorie tous les jeux de données disponibles pour votre organisation. Des détails s’affichent pour chaque jeu de données répertorié, notamment son nom, le schéma auquel le jeu de données adhère et l’état de l’exécution d’ingestion la plus récente.
 
-![Le tableau de bord Parcourir le jeu de données avec l’onglet Jeux de données surligné dans le volet de navigation de gauche.](./images/query/browse-datasets.png)
+![Le tableau de bord de navigation des jeux de données avec l’onglet Jeux de données surligné dans le volet de navigation de gauche.](./images/query/browse-datasets.png)
 
 ### Jeux de données générés par le système {#system-generated-datasets}
 
 >[!IMPORTANT]
 >
->Les jeux de données générés par le système sont masqués par défaut. Par défaut, la variable [!UICONTROL Parcourir] n’affiche que les jeux de données dans lesquels vous avez ingéré des données.
+>Les jeux de données générés par le système sont masqués par défaut. Par défaut, l’onglet [!UICONTROL Parcourir] affiche uniquement les jeux de données dans lesquels vous avez ingéré des données.
 
 Pour afficher les jeux de données générés par le système, sélectionnez l’icône de filtre (![Icône de filtre.](./images/query/filter.png)) situé à gauche de la barre de recherche.
 
-![L’onglet Parcourir des jeux de données avec l’icône de filtre mise en surbrillance.](./images/query/filter-datasets.png)
+![Onglet Parcourir des jeux de données avec l’icône de filtre mise en surbrillance.](./images/query/filter-datasets.png)
 
-Une barre latérale s’affiche avec deux bascules, [!UICONTROL Inclus dans Profile] et [!UICONTROL Affichage des jeux de données système]. Sélectionnez le bouton bascule pour [!UICONTROL Affichage des jeux de données système] pour inclure des jeux de données générés par le système dans la liste des jeux de données pouvant être parcourus.
+Une barre latérale s’affiche et contient deux bascules, [!UICONTROL Inclus dans Profile] et [!UICONTROL Afficher les jeux de données système]. Sélectionnez le bouton d’activation/désactivation de [!UICONTROL Afficher les jeux de données système] pour inclure les jeux de données générés par le système dans la liste des jeux de données pouvant être parcourus.
 
-![L’onglet Parcourir des jeux de données avec le bouton Afficher les jeux de données système mis en surbrillance.](./images/query/show-system-datasets.png)
+![L’onglet Parcourir des jeux de données avec l’option Afficher les jeux de données système mise en surbrillance.](./images/query/show-system-datasets.png)
 
 ### Jeux de données d’attributs de profils {#profile-attribute-datasets}
 
@@ -86,11 +86,11 @@ Pour comprendre le schéma complet du jeu de données de destination DIM, vous p
 
 La fonction Modèles de données de statistiques CDP expose le code SQL qui alimente les informations pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQl afin de créer des rapports CDP pour vos cas d’utilisation de marketing et d’ICP.
 
-Les rapports CDP fournissent des informations sur vos données de profil et sur leurs relations avec les audiences et les destinations. Consultez la documentation du modèle de données de statistiques de la plateforme de données clients pour obtenir des informations détaillées sur la manière de procéder. [appliquer les modèles de données d’insights de la plateforme de données clients à vos cas d’utilisation d’IPC spécifiques ;](./data-models/cdp-insights-data-model-b2c.md).
+Les rapports CDP fournissent des informations sur vos données de profil et sur leurs relations avec les audiences et les destinations. Pour plus d’informations sur la manière d’ [appliquer les modèles de données de statistiques de la plateforme CDP à vos cas d’utilisation d’IPC spécifiques, consultez la documentation du modèle de données de statistiques de la plateforme CDP ](./data-models/cdp-insights-data-model-b2c.md).
 
 ## Exemples de requêtes
 
-Les exemples de requêtes suivants incluent des exemples de SQL pouvant être utilisés dans [!DNL Query Service] pour explorer, vérifier et traiter les jeux de données bruts qui alimentent vos tableaux de bord.
+Les exemples de requêtes suivants incluent des exemples de requêtes SQL pouvant être utilisées dans [!DNL Query Service] pour explorer, vérifier et traiter les jeux de données bruts qui alimentent vos tableaux de bord.
 
 ### Nombre de profils par identité
 

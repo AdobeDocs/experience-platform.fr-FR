@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
-title: Fonctions diverses PQL
-description: La fonction suivante est une fonction diverse pour le langage de requête de profil (PQL).
+title: Fonctions diverses de PQL
+description: La fonction suivante est une fonction diverse pour Profile Query Language (PQL).
 exl-id: a6ed31a2-a649-4dc8-89b1-48c1170b7f16
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '115'
-ht-degree: 79%
+source-wordcount: '117'
+ht-degree: 69%
 
 ---
 
 # Fonctions diverses
 
-La fonction suivante est une fonction diverse pour [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
+La fonction suivante est une fonction diverse pour [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
 
 ## Let
 

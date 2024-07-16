@@ -13,7 +13,7 @@ ht-degree: 16%
 
 Un package d’extension représente une [extension](./extensions.md) telle qu’elle a été créée par un développeur d’extension. Les fonctionnalités supplémentaires qui peuvent être mises à la disposition des utilisateurs de balises sont définies par un package d’extension. Ces fonctionnalités peuvent inclure des modules principaux et des modules partagés, bien qu’ils soient le plus souvent fournis en tant que [composants de règle](./rule-components.md) (événements, conditions et actions) et [éléments de données](./data-elements.md).
 
-Un package d’extension est détenu par le [société](./companies.md). Les propriétaires des packages d’extension peuvent autoriser d’autres entreprises à utiliser leurs versions privées des packages. Chaque entreprise autorisée dispose d’une autorisation d’utilisation pour un package d’extension unique, valide pour toutes les versions privées futures et actuelles du package.
+Un package d’extension est détenu par la [société](./companies.md) du développeur. Les propriétaires des packages d’extension peuvent autoriser d’autres entreprises à utiliser leurs versions privées des packages. Chaque entreprise autorisée dispose d’une autorisation d’utilisation pour un package d’extension unique, valide pour toutes les versions privées futures et actuelles du package.
 
 ## Prise en main
 
@@ -31,7 +31,7 @@ GET /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authoriza
 
 | Paramètre | Description |
 | --- | --- |
-| `{PROPERTY_ID}` | La variable `ID` de la propriété dont vous souhaitez répertorier l’autorisation d’utilisation du package d’extension. |
+| `{PROPERTY_ID}` | `ID` de la propriété dont vous souhaitez répertorier l’autorisation d’utilisation du package d’extension. |
 
 {style="table-layout:auto"}
 
@@ -102,7 +102,7 @@ Une réponse réussie renvoie une liste des packages d’extension.
 
 ## Création d’une autorisation d’utilisation de package d’extension {#create}
 
-Création d’une autorisation d’utilisation de package d’extension pour chaque [package d&#39;extension](./extension-packages.md) et `{ORG_ID}` de l’organisation que vous souhaitez autoriser. Pour créer une autorisation d’utilisation de package d’extension, envoyez une requête de POST au point de terminaison ci-dessous.
+Créez une autorisation d’utilisation de package d’extension pour chaque [package d’extension](./extension-packages.md) et `{ORG_ID}` de l’organisation que vous souhaitez autoriser. Pour créer une autorisation d’utilisation de package d’extension, envoyez une requête de POST au point de terminaison ci-dessous.
 
 **Format d’API**
 
@@ -112,7 +112,7 @@ POST /extension_packages/{EXTENSION_PACKAGE_ID}/extension_package_usage_authoriz
 
 | Paramètre | Description |
 | --- | --- |
-| `EXTENSION_PACKAGE_ID` | La variable `ID` du package d’extension pour lequel vous souhaitez créer une autorisation.&quot; |
+| `EXTENSION_PACKAGE_ID` | `ID` du package d’extension pour lequel vous souhaitez créer une autorisation.&quot; |
 
 {style="table-layout:auto"}
 
@@ -137,7 +137,7 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes.authorized_org_id` | La variable `ID` de l’organisation que vous souhaitez autoriser. |
+| `attributes.authorized_org_id` | `ID` de l’organisation à autoriser. |
 
 **Réponse**
 
@@ -183,7 +183,7 @@ Une réponse réussie renvoie les détails de l’autorisation d’utilisation d
 
 >[!NOTE]
 >
->Dans l’exemple de réponse ci-dessus, l’autorisation figure actuellement dans la variable `pending_approval` scène. Avant d’utiliser le package d’extension, l’organisation doit approuver l’autorisation. Les utilisateurs de l’organisation peuvent parcourir le package d’extension privé pendant que l’autorisation est en attente d’approbation, mais ils ne peuvent pas l’installer et ne peuvent pas le trouver dans leur catalogue d’extensions.
+>Dans l’exemple de réponse ci-dessus, l’autorisation se trouve actuellement à l’étape `pending_approval` . Avant d’utiliser le package d’extension, l’organisation doit approuver l’autorisation. Les utilisateurs de l’organisation peuvent parcourir le package d’extension privé pendant que l’autorisation est en attente d’approbation, mais ils ne peuvent pas l’installer et ne peuvent pas le trouver dans leur catalogue d’extensions.
 
 ## Récupérer une liste des autorisations d’utilisation des packages d’extension {#list_authorizations}
 
@@ -264,7 +264,7 @@ Une réponse réussie renvoie une liste des packages d’extension.
 
 ## Suppression d’une autorisation d’utilisation de package d’extension {#delete}
 
-Pour supprimer une autorisation d’utilisation de package d’extension, incluez sa variable `ID` dans le chemin d’une requête de DELETE. Cela empêche l’organisation autorisée d’afficher les versions privées du package d’extension dans le catalogue et de l’installer sur leurs propriétés.
+Pour supprimer une autorisation d’utilisation de package d’extension, incluez son `ID` dans le chemin d’accès d’une requête de DELETE. Cela empêche l’organisation autorisée d’afficher les versions privées du package d’extension dans le catalogue et de l’installer sur leurs propriétés.
 
 >[!NOTE]
 >
@@ -278,7 +278,7 @@ DELETE /extension_package_usage_authorizations/{ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `ID` | La variable `ID` de l’autorisation d’utilisation du package d’extension que vous souhaitez supprimer. |
+| `ID` | `ID` de l’autorisation d’utilisation du package d’extension que vous souhaitez supprimer. |
 
 {style="table-layout:auto"}
 
@@ -298,11 +298,11 @@ Une réponse réussie renvoie un état HTTP 204 (No Content) sans corps de répo
 
 ## Mettre à jour une autorisation d’utilisation de package d’extension {#update}
 
-Pour approuver ou rejeter une autorisation d’utilisation de package d’extension, incluez `ID` dans le chemin d’une requête de PATCH.
+Pour approuver ou rejeter une autorisation d’utilisation de package d’extension, incluez son `ID` dans le chemin d’une demande de PATCH.
 
 >[!NOTE]
 >
->Pour approuver ou rejeter une autorisation d’utilisation de package d’extension pour votre entreprise, vous devez disposer des `manage_properties` droits.
+>Pour approuver ou rejeter une autorisation d’utilisation de package d’extension pour votre entreprise, vous devez disposer des droits `manage_properties`.
 
 **Format d’API**
 
@@ -312,7 +312,7 @@ PATCH /extension_package_usage_authorizations/{ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `ID` | La variable `ID` de l’autorisation d’utilisation du package d’extension que vous souhaitez supprimer. |
+| `ID` | `ID` de l’autorisation d’utilisation du package d’extension que vous souhaitez supprimer. |
 
 {style="table-layout:auto"}
 
@@ -338,7 +338,7 @@ curl -X PATCH \
 
 | Propriété | Description |
 | --- | --- |
-| `attributes` | Attributs que vous souhaitez réviser. Pour les autorisations d’utilisation de modules d’extension, vous pouvez revoir leurs `state`. |
+| `attributes` | Attributs que vous souhaitez réviser. Pour les autorisations d’utilisation de package d’extension, vous pouvez réviser leur `state`. |
 
 **Réponse**
 
@@ -398,7 +398,7 @@ GET /extension_package_usage_authorizations/{ID}/extension_package
 
 | Paramètre | Description |
 | --- | --- |
-| `ID` | La variable `ID` de l’autorisation d’utilisation du package d’extension que vous souhaitez récupérer. |
+| `ID` | `ID` de l’autorisation d’utilisation du package d’extension que vous souhaitez récupérer. |
 
 {style="table-layout:auto"}
 

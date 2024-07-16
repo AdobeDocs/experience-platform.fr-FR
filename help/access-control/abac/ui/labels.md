@@ -27,13 +27,13 @@ Les libellés vous permettent de classer les jeux de données et les champs en f
 
 >[!NOTE]
 >
->Il existe une liste unique d’étiquettes pour l’ensemble de l’organisation. Pour créer une étiquette personnalisée, vous devez **[!UICONTROL Gestion des étiquettes d’utilisation]** autorisations sur l’environnement de test de production. La suppression d’étiquettes n’est actuellement pas prise en charge.
+>Il existe une liste unique d’étiquettes pour l’ensemble de l’organisation. Pour créer une étiquette personnalisée, vous aurez besoin des autorisations **[!UICONTROL Gérer les libellés d’utilisation]** sur l’environnement de test de production. La suppression d’étiquettes n’est actuellement pas prise en charge.
 
-Pour créer un nouveau libellé, sélectionnez le **[!UICONTROL Étiquettes]** dans la barre latérale et sélectionnez **[!UICONTROL Créer une étiquette]**.
+Pour créer une nouvelle étiquette, sélectionnez l’onglet **[!UICONTROL Étiquettes]** dans la barre latérale et sélectionnez **[!UICONTROL Créer une étiquette]**.
 
 ![flac-new-label](../../images/flac-ui/create-label.png)
 
-La variable **[!UICONTROL Créer un nouveau libellé]** s’affiche, vous invitant à saisir un nom, un nom convivial facultatif et une description facultative.
+La boîte de dialogue **[!UICONTROL Créer une étiquette]** s’affiche, vous invitant à saisir un nom, un nom convivial facultatif et une description facultative.
 
 ![new-label-info](../../images/flac-ui/new-label-info.png)
 

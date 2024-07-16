@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques les plus consultées;espace de travail Data Science;science des données
+keywords: Experience Platform;guide de développement;point de terminaison;Data Science Workspace;rubriques populaires;espace de travail Data Science;science des données
 solution: Experience Platform
 title: Guide de l’API d’apprentissage automatique Sensei
 description: L’API Sensei Machine Learning permet aux développeurs d’effectuer des opérations CRUD sur diverses ressources Data Science Workspace. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
@@ -14,13 +14,13 @@ ht-degree: 62%
 
 # Guide de l’API [!DNL Sensei Machine Learning]
 
-La variable [!DNL Sensei Machine Learning] L’API fournit un mécanisme permettant aux spécialistes des données d’organiser et de gérer les services d’apprentissage automatique, de l’intégration des algorithmes à l’expérimentation en passant par le déploiement des services.
+L’API [!DNL Sensei Machine Learning] fournit un mécanisme permettant aux spécialistes des données d’organiser et de gérer les services d’apprentissage automatique, de l’intégration des algorithmes à l’expérimentation et au déploiement des services.
 
 Ce guide de développement décrit les étapes à suivre pour vous aider à prendre en main l’[API Sensei Machine Learning](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) et présente les appels d’API visant à effectuer des opérations CRUD sur diverses ressources de l’espace de travail de science des données.
 
 ## Prise en main
 
-Vous devez avoir terminé la [authentication](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) tutoriel afin d’avoir accès aux en-têtes de requête suivants pour effectuer des appels vers [!DNL Adobe Experience Platform] API :
+Vous devez avoir terminé le tutoriel [authentication](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) afin d’avoir accès aux en-têtes de requête suivants pour effectuer des appels vers les API [!DNL Adobe Experience Platform] :
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`

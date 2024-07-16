@@ -4,8 +4,8 @@ description: Découvrez les principes de base de la configuration des secrets da
 exl-id: 0298c0cd-9fba-4b54-86db-5d2d8f9ade54
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '1232'
-ht-degree: 89%
+source-wordcount: '1206'
+ht-degree: 88%
 
 ---
 
@@ -27,7 +27,7 @@ Ce guide fournit un aperçu général de la configuration des secrets pour une u
 
 ## Informations d’identification
 
-Chaque secret contient un attribut `credentials` qui rassemble ses valeurs d’identification respectives. When [création d’un secret dans l’API](../endpoints/secrets.md#create), chaque type de secret possède des attributs obligatoires différents, comme illustré dans les sections ci-dessous :
+Chaque secret contient un attribut `credentials` qui rassemble ses valeurs d’identification respectives. Lors de la [création d’un secret dans l’API](../endpoints/secrets.md#create), chaque type de secret dispose d’attributs requis différents, comme indiqué dans les sections ci-dessous :
 
 * [`token`](#token)
 * [`simple-http`](#simple-http)
@@ -101,19 +101,19 @@ En cas d’échec de l’échange, l’opération est tentée trois fois de plus
 
 ### `oauth2-google` {#oauth2-google}
 
-Secrets avec un `type_of` valeur de `oauth2-google` nécessite l’attribut suivant sous `credentials`:
+Les secrets avec une valeur `type_of` de `oauth2-google` requièrent l’attribut suivant sous `credentials` :
 
 | Attribut Credential | Type de données | Description |
 | --- | --- | --- |
-| `scopes` | Tableau | Répertorie les portées du produit Google pour l’authentification. Les portées suivantes sont prises en charge :<ul><li>[Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview): `https://www.googleapis.com/auth/adwords`</li><li>[Pub/Sous-programme Google](https://cloud.google.com/pubsub/docs/reference/service_apis_overview): `https://www.googleapis.com/auth/pubsub`</li></ul> |
+| `scopes` | Tableau | Répertorie les portées du produit Google pour l’authentification. Les portées suivantes sont prises en charge :<ul><li>[Publicités Google](https://developers.google.com/google-ads/api/docs/oauth/overview) : `https://www.googleapis.com/auth/adwords`</li><li>[ Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview) Google : `https://www.googleapis.com/auth/pubsub`</li></ul> |
 
-Après avoir créé la variable `oauth2-google` secret, la réponse comprend une `meta.authorization_url` . Vous devez copier et coller cette URL dans un navigateur pour terminer le flux d’authentification Google.
+Après avoir créé le secret `oauth2-google`, la réponse inclut une propriété `meta.authorization_url`. Vous devez copier et coller cette URL dans un navigateur pour terminer le flux d’authentification Google.
 
-#### Réautoriser `oauth2-google` secret
+#### Réautoriser un secret `oauth2-google`
 
-L’URL d’autorisation d’un `oauth2-google` Le secret expire une heure après la création du secret (comme indiqué par `meta.authorization_url_expires_at`). Au-delà, le secret doit être réautorisé afin de renouveler le processus d&#39;authentification.
+L’URL d’autorisation d’un secret `oauth2-google` expire une heure après la création du secret (comme indiqué par `meta.authorization_url_expires_at`). Au-delà, le secret doit être réautorisé afin de renouveler le processus d&#39;authentification.
 
-Reportez-vous à la section [guide de point de fin secrets](../endpoints/secrets.md#reauthorize) pour plus d’informations sur la manière dont réautoriser une `oauth2-google` secret en adressant une demande de PATCH à l’API Reactor.
+Pour plus d’informations sur la réautorisation d’un secret `oauth2-google` en adressant une demande de PATCH à l’API Reactor, reportez-vous au [guide de point de terminaison de secrets](../endpoints/secrets.md#reauthorize) .
 
 ## Relation entre les environnements
 

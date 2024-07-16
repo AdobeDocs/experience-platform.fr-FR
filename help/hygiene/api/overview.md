@@ -44,17 +44,17 @@ Une expiration de jeu de données correspond à une action « supprimer un jeu 
 
 >[!IMPORTANT]
 >
->Les demandes de suppression d’enregistrement ne sont disponibles que pour les organisations qui ont acheté **Adobe Health Care Shield**.
+>Les demandes de suppression d’enregistrements ne sont disponibles que pour les organisations qui ont acheté **Adobe Healthcare Shield**.
 >
 >
 >Les suppressions d’enregistrements sont destinées au nettoyage des données, à la suppression des données anonymes ou à la minimisation des données. Elles ne sont **pas** destinées aux demandes de droits des titulaires de données (conformité) en ce qui concerne les réglementations de confidentialité comme le Règlement général sur la protection des données (RGPD). Pour tous les cas d’utilisation de conformité, utilisez plutôt [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
 
-L’API Data Hygiene vous permet de supprimer tous les enregistrements associés à une identité dans un ou tous les jeux de données. Toutes les tâches du cycle de vie des données qui suppriment les identités sont représentées par un concept appelé ordre de travail. Voir [guide de point de terminaison des commandes de travail](./workorder.md) pour plus d’informations sur l’utilisation des suppressions d’enregistrement dans l’API.
+L’API Data Hygiene vous permet de supprimer tous les enregistrements associés à une identité dans un ou tous les jeux de données. Toutes les tâches du cycle de vie des données qui suppriment les identités sont représentées par un concept appelé ordre de travail. Pour plus d’informations sur l’utilisation des suppressions d’enregistrement dans l’API, reportez-vous au [guide de point d’entrée de l’ordre de travail](./workorder.md) .
 
 ## Quota
 
-Votre entreprise est limitée à un quota mensuel de tâches prédéterminé pour chaque type d’opération de cycle de vie des données, qui peut varier en fonction des licences. Voir [Guide du point de fin de quota](./quota.md) pour plus d’informations sur l’affichage de l’état actuel du quota de vos processus de cycle de vie des données.
+Votre entreprise est limitée à un quota mensuel de tâches prédéterminé pour chaque type d’opération de cycle de vie des données, qui peut varier en fonction des licences. Pour plus d’informations sur l’affichage de l’état actuel du quota de vos processus de cycle de vie des données, consultez le [guide de point de terminaison de quota](./quota.md) .
 
 ## Étapes suivantes
 
-Ce guide explique comment gérer les demandes du cycle de vie des données à l’aide d’appels API. Pour plus d’informations sur l’exécution de ces actions dans l’interface utilisateur de Platform, voir [guide de l’interface utilisateur du cycle de vie des données](../ui/overview.md).
+Ce guide explique comment gérer les demandes du cycle de vie des données à l’aide d’appels API. Pour plus d’informations sur l’exécution de ces actions dans l’interface utilisateur de Platform, consultez le [guide de l’interface utilisateur du cycle de vie des données](../ui/overview.md).

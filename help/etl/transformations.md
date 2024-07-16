@@ -6,7 +6,7 @@ description: Cet article présente les exemples de transformations qu’un déve
 exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
 source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '474'
 ht-degree: 88%
 
 ---
@@ -19,7 +19,7 @@ Cet article présente les exemples de transformations qu’un développeur ETL (
 
 ### Exemples de fichiers
 
-Des exemples de fichiers CSV et JSON sont disponibles à partir de la référence ETL publique. [!DNL GitHub] référentiel géré par Adobe :
+Des exemples de fichiers CSV et JSON sont disponibles à partir du référentiel public de référence ETL [!DNL GitHub] géré par Adobe :
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -176,7 +176,7 @@ La hiérarchie d’un cadre de données (tel qu’un fichier Parquet) doit corre
 
 ### Exemple de cadre de données
 
-La structure de l’exemple de cadre de données suivant a été mappée à un schéma qui implémente l’ [!DNL XDM Individual Profile] et contient les champs les plus courants associés aux schémas de ce type.
+La structure de l’exemple de cadre de données suivant a été mappée à un schéma qui implémente la classe [!DNL XDM Individual Profile] et contient les champs les plus courants associés aux schémas de ce type.
 
 ```python
 [

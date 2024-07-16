@@ -6,7 +6,7 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 source-git-commit: 060f6bb0ff6f57a84698a27bd9f640c0178e5b51
 workflow-type: tm+mt
 source-wordcount: '1811'
-ht-degree: 86%
+ht-degree: 87%
 
 ---
 
@@ -18,15 +18,15 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 >[!IMPORTANT]
 >
->Google [hasannonce](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) prévoit d’interrompre la prise en charge des cookies tiers par Chrome au cours du deuxième semestre 2024. Par conséquent, les cookies tiers ne seront plus pris en charge dans aucun des principaux navigateurs.
+>Google [a annoncé](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout) qu’il prévoit d’interrompre la prise en charge des cookies tiers par Chrome au cours du second semestre 2024. Par conséquent, les cookies tiers ne seront plus pris en charge dans aucun des principaux navigateurs.
 >
->Une fois cette modification mise en oeuvre, l’Adobe arrêtera la prise en charge de la variable `demdex` cookie actuellement pris en charge dans le SDK Web.
+>Lorsque cette modification est mise en oeuvre, Adobe arrête la prise en charge du cookie `demdex` actuellement pris en charge dans le SDK Web.
 
 ## Version 2.20.0 - mercredi 21 mai 2024
 
 **Nouvelles fonctionnalités**
 
-* Ajout de la prise en charge de [Collection de médias en flux continu](../web-sdk/commands/configure/streamingmedia.md).
+* Ajout de la prise en charge de [Streaming Media Collection](../web-sdk/commands/configure/streamingmedia.md).
 
 **Correctifs et améliorations**
 
@@ -37,8 +37,8 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 **Correctifs et améliorations**
 
 * Correction d’un problème en raison duquel les erreurs d’identité masquaient d’autres erreurs et transformaient les erreurs d’identité en avertissements.
-* Correction d’un problème en raison duquel le bas des appels de page n’était jamais envoyé en cas d’appel de haut de page avec `renderDecisions` défini sur `false`.
-* Correction d’un problème en raison duquel le SDK Web ne pouvait pas lire les identités inter-domaines en présence de plusieurs `adobe_mc` paramètres de chaîne de requête.
+* Correction d’un problème en raison duquel le bas des appels de page n’était jamais envoyé lorsqu’un appel de haut de page avec `renderDecisions` défini sur `false` était présent.
+* Correction d’un problème en raison duquel le SDK Web ne pouvait pas lire les identités inter-domaines en présence de plusieurs paramètres de chaîne de requête `adobe_mc`.
 
 ## Version 2.19.1 - 10 novembre 2023
 
@@ -51,8 +51,8 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 **Nouvelles fonctionnalités**
 
 * Ajout de la prise en charge du rendu des messages in-app d’Adobe Journey Optimizer.
-* Ajout de la prise en charge de [en haut et en bas des événements de page](use-cases/top-bottom-page-events.md).
-* Ajout [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) à l’option `sendEvent` pour contrôler la demande de la portée à l’échelle de la page et de la surface par défaut.
+* Ajout de la prise en charge des [événements de haut et de bas de page](use-cases/top-bottom-page-events.md).
+* Ajout de l’option [`defaultPersonalizationEnabled`](commands/sendevent/personalization.md) à la commande `sendEvent` pour contrôler la demande de la portée à l’échelle de la page et de la surface par défaut.
 
 **Correctifs et améliorations**
 
@@ -117,7 +117,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 * Ajout de la prise en charge de la [Migration complète page par page](home.md#migrating-to-web-sdk). Le profil Adobe Target est désormais conservé lorsqu’un visiteur ou un visiteuse passe d’une page at.js à une page SDK web.
 * Ajout de la prise en charge configurable des [Indicateurs clients d’agent utilisateur à forte entropie](/help/web-sdk/use-cases/client-hints.md).
-* Ajout de la prise en charge de la fonction [`applyResponse`](/help/web-sdk/commands/applyresponse.md) . Cela permet une personnalisation hybride via l’[API Edge Network Server](../server-api/overview.md).
+* Ajout de la prise en charge de la commande [`applyResponse`](/help/web-sdk/commands/applyresponse.md). Cela permet une personnalisation hybride via l’[API Edge Network Server](../server-api/overview.md).
 * Les liens du mode QA fonctionnent désormais sur plusieurs pages.
 
 **Correctifs et améliorations**
@@ -205,13 +205,13 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 ## Version 2.4.0 - Mars 2021
 
-* Le SDK peut désormais être installé en tant que [Package NPM](/help/web-sdk/install/npm.md).
+* Le SDK peut désormais être installé en tant que [package NPM](/help/web-sdk/install/npm.md).
 * Ajout de la prise en charge d’une option `out` lors de la [configuration du consentement par défaut](/help/web-sdk/commands/configure/defaultconsent.md), qui ignore tous les événements jusqu’à ce que le consentement soit reçu (l’option `pending` existante met les événements en file d’attente et les envoie une fois le consentement reçu).
-* La variable [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) Vous pouvez désormais utiliser le rappel pour empêcher l’envoi d’un événement.
+* Le rappel [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) peut désormais être utilisé pour empêcher l’envoi d’un événement.
 * Utilise désormais un groupe de champs de schéma XDM au lieu de `meta.personalization` lors de l’envoi d’événements au sujet du contenu personnalisé rendu ou sur lequel l’utilisateur ou l’utilisatrice a cliqué.
-* La variable [`getIdentity`](/help/web-sdk/commands/getidentity.md) renvoie désormais l’identifiant de région Edge avec l’identité.
+* La commande [`getIdentity`](/help/web-sdk/commands/getidentity.md) renvoie désormais l’identifiant de région de périphérie à côté de l’identité.
 * Amélioration et gestion plus efficace des avertissements et des erreurs reçus du serveur.
-* Ajout de la prise en charge de la norme Consentement 2.0 de l’Adobe pour la variable [`setConsent`](/help/web-sdk/commands/setconsent.md) .
+* Ajout de la prise en charge de la norme Consent 2.0 d’Adobe pour la commande [`setConsent`](/help/web-sdk/commands/setconsent.md).
 * Une fois reçues, les préférences de consentement sont hachées et stockées dans un espace de stockage local afin d’optimiser l’intégration entre les CMP, le SDK web de Platform et le Platform Edge Network. Si vous collectez des préférences de consentement, nous vous recommandons d’appeler `setConsent` à chaque chargement de page.
 * Ajout des deux [hooks de surveillance](https://github.com/adobe/alloy/wiki/Monitoring-Hooks) suivants : `onCommandResolved` et `onCommandRejected`.
 * Correction de bug : les événements de notification d’interaction de personnalisation contenaient des informations en double sur la même activité lorsqu’un utilisateur ou une utilisatrice accédait à une nouvelle vue d’application monopage, revenait à la vue d’origine, puis cliquait sur un élément éligible à la conversion.
@@ -229,7 +229,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 ## Version 2.2.0 - Octobre 2020
 
-* Bug Fix : l’objet Opt-in empêchait le SDK web d’effectuer des appels lorsque `idMigrationEnabled` is `true`.
+* Bug Fix : l’objet Opt-in empêchait le SDK Web d’effectuer des appels lorsque `idMigrationEnabled` est `true`.
 * Bug Fix : faites prendre conscience au SDK Web des requêtes qui doivent renvoyer des offres de personnalisation pour éviter un problème de scintillement.
 
 ## Version 2.1.0 - Août 2020

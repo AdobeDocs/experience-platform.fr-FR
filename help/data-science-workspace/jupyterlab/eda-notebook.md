@@ -7,7 +7,7 @@ description: Ce guide porte sur l’utilisation du notebook d’analyse explorat
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
 source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
 workflow-type: tm+mt
-source-wordcount: '2760'
+source-wordcount: '2766'
 ht-degree: 100%
 
 ---
@@ -18,7 +18,7 @@ Le notebook d’analyse exploratoire des données (AED) est conçu pour vous aid
 
 L’exemple du notebook AED a été optimisé en tenant compte des données web et se compose de deux parties. La première partie commence par l’utilisation de Query Service pour afficher les tendances et les instantanés de données. Ensuite, les données sont agrégées au niveau du profil et du visiteur, en tenant compte de l’objectif d’analyse exploratoire des données.
 
-La seconde partie commence par une analyse descriptive sur les données agrégées à l’aide des bibliothèques Python. Ce notebook présente des visualisations telles que des histogrammes, des graphiques de dispersion, des diagrammes à surface et une matrice de corrélation afin d’obtenir des insights exploitables utilisés pour déterminer les fonctionnalités les plus susceptibles de contribuer à la prédiction d’un objectif.
+La seconde partie commence par une analyse descriptive sur les données agrégées à l’aide des bibliothèques Python. Ce notebook présente des visualisations telles que des histogrammes, des graphiques de dispersion, des diagrammes à surface et une matrice de corrélation afin d’obtenir des informations exploitables utilisées pour déterminer les fonctionnalités les plus susceptibles de contribuer à la prédiction d’un objectif.
 
 ## Prise en main
 
@@ -786,9 +786,9 @@ else:
 
 ![fonctionnalités importantes](../images/jupyterlab/eda/important-feature-model.PNG)
 
-### Exemple d’insights
+### Exemple d’information
 
-Pendant que vous analysez vos données, il n’est pas rare de découvrir des insights. L’exemple suivant illustre un insight qui mappe la récence et la valeur monétaire d’un événement cible.
+Pendant que vous analysez vos données, il n’est pas rare de découvrir des informations. L’exemple suivant illustre une information qui mappe la récence et la valeur monétaire d’un événement cible.
 
 ```python
 # Proxy for monetary value is TOTAL_ORDER_REVENUE and proxy for frequency is NUMBER_VISITS
@@ -800,7 +800,7 @@ else:
     sns.lmplot("DAYS_SINCE_VISIT", "TOTAL_ORDER_REVENUE", Data, hue="TARGET", fit_reg=False);
 ```
 
-![exemple d’insight](../images/jupyterlab/eda/insight.PNG)
+![exemple d’information](../images/jupyterlab/eda/insight.PNG)
 
 ## Étape facultative de nettoyage des données {#optional-data-clean}
 
@@ -828,6 +828,6 @@ Data = pd.concat([Data_categorical, Data_numerical, TARGET], axis = 1)
 
 ## Étapes suivantes
 
-Une fois votre analyse de données exploratoires terminée, vous pouvez commencer à créer un modèle. Vous pouvez également utiliser les données et les insights que vous avez dérivés pour créer un tableau de bord avec des outils tels que Power BI.
+Une fois votre analyse de données exploratoires terminée, vous pouvez commencer à créer un modèle. Vous pouvez également utiliser les données et les informations que vous avez dérivées pour créer un tableau de bord avec des outils tels que Power BI.
 
 Adobe Experience Platform sépare le processus de création de modèle en deux étapes distinctes : recettes (une instance de modèle) et modèles. Pour lancer le processus de création de recette, consultez la documentation de [création d’une recette dans les notebooks JupyerLab](./create-a-model.md). Ce document contient des informations et des exemples pour la création, la formation et la notation d’une recette dans les notebooks [!DNL JupyterLab].

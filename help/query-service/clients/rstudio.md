@@ -6,38 +6,38 @@ description: Ce document décrit les étapes à suivre pour connecter RStudio à
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
 source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 15%
+source-wordcount: '439'
+ht-degree: 11%
 
 ---
 
 # Connecter [!DNL RStudio] à Query Service
 
-Ce document décrit les étapes à suivre pour se connecter. [!DNL RStudio] avec Adobe Experience Platform [!DNL Query Service].
+Ce document décrit les étapes à suivre pour se connecter à [!DNL RStudio] avec Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> [!DNL RStudio] a été renommé [!DNL Posit]. [!DNL RStudio] Les produits ont été renommés [!DNL Posit Connect], [!DNL Posit Workbench], [!DNL Posit Package] Manager, [!DNL Posit Cloud], et [!DNL Posit Academy].
+> [!DNL RStudio] a désormais été renommé [!DNL Posit]. [!DNL RStudio] produits ont été renommés [!DNL Posit Connect], [!DNL Posit Workbench], [!DNL Posit Package] Manager, [!DNL Posit Cloud] et [!DNL Posit Academy].
 >
-> Ce guide suppose que vous avez déjà accès à [!DNL RStudio] et connaissent comment l’utiliser. Plus d’informations sur [!DNL RStudio] se trouve dans la variable [officiel [!DNL RStudio] documentation](https://rstudio.com/products/rstudio/).
+> Ce guide suppose que vous avez déjà accès à [!DNL RStudio] et que vous savez l&#39;utiliser. Vous trouverez plus d&#39;informations sur [!DNL RStudio] dans la [documentation officielle [!DNL RStudio] 3}.](https://rstudio.com/products/rstudio/)
 > 
-> En outre, pour utiliser [!DNL RStudio] avec Query Service, vous devez installer le [!DNL PostgreSQL] Pilote JDBC 4.2. Vous pouvez télécharger le pilote JDBC à partir du [[!DNL PostgreSQL] site officiel](https://jdbc.postgresql.org/download/).
+> De plus, pour utiliser [!DNL RStudio] avec Query Service, vous devez installer le pilote [!DNL PostgreSQL] JDBC 4.2 Driver. Vous pouvez télécharger le pilote JDBC à partir du [[!DNL PostgreSQL] site officiel](https://jdbc.postgresql.org/download/).
 
-## Créez un [!DNL Query Service] dans la [!DNL RStudio] interface
+## Créer une connexion [!DNL Query Service] dans l’interface [!DNL RStudio]
 
-Après installation [!DNL RStudio], vous devez installer le package RJDBC. Instructions sur la manière de procéder [connexion à une base de données via la ligne de commande](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) Vous pouvez le trouver dans la documentation officielle de la publication.
+Après avoir installé [!DNL RStudio], vous devez installer le package RJDBC. Les instructions pour [connecter une base de données par le biais de la ligne de commande](https://solutions.posit.co/connections/db/best-practices/drivers/#connecting-to-a-database-in-r) se trouvent dans la documentation officielle de Posit.
 
-Si vous utilisez un système d’exploitation Mac, vous pouvez sélectionner **[!UICONTROL Outils]** à partir de la barre de menus, suivie de **[!UICONTROL Installation de packages]** dans le menu déroulant. Vous pouvez également sélectionner la variable **[!DNL Packages]** dans l’interface utilisateur de RStudio, puis sélectionnez **[!DNL Install]**.
+Si vous utilisez un système d’exploitation Mac, vous pouvez sélectionner **[!UICONTROL Outils]** dans la barre de menus, puis **[!UICONTROL Installer des packages]** dans le menu déroulant. Vous pouvez également sélectionner l’onglet **[!DNL Packages]** de l’interface utilisateur RStudio et sélectionner **[!DNL Install]**.
 
-Une fenêtre contextuelle s’affiche, affichant la variable **[!DNL Install Packages]** écran. Assurez-vous que **[!DNL Repository (CRAN)]** est sélectionné pour le **[!DNL Install from]** . La valeur de **[!DNL Packages]** should `RJDBC`. Assurez-vous que **[!DNL Install dependencies]** est sélectionnée. Une fois que toutes les valeurs sont correctes, sélectionnez **[!DNL Install]** pour installer les packages. Maintenant que le package RJDBC a été installé, redémarrez [!DNL RStudio] pour terminer le processus d’installation.
+Une fenêtre contextuelle s’affiche, affichant l’écran **[!DNL Install Packages]**. Assurez-vous que **[!DNL Repository (CRAN)]** est sélectionné pour la section **[!DNL Install from]**. La valeur de **[!DNL Packages]** doit être `RJDBC`. Assurez-vous que **[!DNL Install dependencies]** est sélectionné. Après avoir confirmé que toutes les valeurs sont correctes, sélectionnez **[!DNL Install]** pour installer les packages. Maintenant que le package RJDBC a été installé, redémarrez [!DNL RStudio] pour terminer le processus d’installation.
 
-Après [!DNL RStudio] a redémarré, vous pouvez désormais vous connecter à Query Service. Sélectionnez la **[!DNL RJDBC]** du module **[!DNL Packages]** et saisissez la commande suivante dans la console :
+Une fois [!DNL RStudio] redémarré, vous pouvez vous connecter à Query Service. Sélectionnez le package **[!DNL RJDBC]** dans le volet **[!DNL Packages]** et saisissez la commande suivante dans la console :
 
 ```console
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-Où `{PATH TO THE POSTGRESQL JDBC JAR}` représente le chemin d’accès à la variable [!DNL PostgreSQL] JDBC JAR installé sur votre ordinateur.
+Où `{PATH TO THE POSTGRESQL JDBC JAR}` représente le chemin d’accès au fichier JDBC [!DNL PostgreSQL] qui a été installé sur votre ordinateur.
 
 Vous pouvez maintenant créer votre connexion à Query Service. Saisissez la commande suivante dans la console :
 
@@ -47,9 +47,9 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 
 >[!IMPORTANT]
 >
->Voir [[!DNL Query Service] Documentation SSL](./ssl-modes.md) pour en savoir plus sur la prise en charge du protocole SSL pour les connexions tierces à Adobe Experience Platform Query Service et sur la connexion à l’aide de `verify-full` Mode SSL.
+>Consultez la [[!DNL Query Service] documentation SSL](./ssl-modes.md) pour en savoir plus sur la prise en charge du protocole SSL pour les connexions tierces à Adobe Experience Platform Query Service et sur la connexion à l’aide du mode SSL `verify-full`.
 
-Pour plus d’informations sur la manière dont trouver le nom, l’hôte et le port de votre base de données ainsi que vos informations d’identification de connexion, consultez le [guide des informations d’identification](../ui/credentials.md). Pour trouver vos informations d’identification, connectez-vous à [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, suivie de **[!UICONTROL Informations d’identification]**.
+Pour plus d’informations sur la recherche de votre nom de base de données, de votre hôte, de votre port et de vos informations de connexion, consultez le [guide d’identification](../ui/credentials.md). Pour trouver vos informations d’identification, connectez-vous à [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, suivi de **[!UICONTROL Informations d’identification]**.
 
 Un message dans la sortie de console confirme la connexion à Query Service.
 
@@ -94,4 +94,4 @@ df_pageviews
 
 ## Étapes suivantes
 
-Pour plus d’informations sur l’écriture et l’exécution de requêtes, veuillez lire le guide sur [exécution de requêtes](../best-practices/writing-queries.md).
+Pour plus d’informations sur la façon d’écrire et d’exécuter des requêtes, consultez le guide sur l’ [exécution de requêtes](../best-practices/writing-queries.md).

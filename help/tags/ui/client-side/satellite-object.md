@@ -51,9 +51,9 @@ Dans lʼexemple proposé, sʼil existe un élément de données avec un nom corr
 
 >[!NOTE]
 >
->Vous pouvez utiliser le pourcentage (`%`) pour référencer des variables pour de nombreux champs de formulaire dans l’implémentation des balises, ce qui réduit la nécessité d’appeler `_satellite.getVar()`. Par exemple, en utilisant `%product%` accède à la valeur de l’élément de données de produit ou de la variable personnalisée.
+>Vous pouvez utiliser la syntaxe de pourcentage (`%`) pour référencer des variables pour de nombreux champs de formulaire dans votre mise en oeuvre de balise, ce qui réduit la nécessité d’appeler `_satellite.getVar()`. Par exemple, l’utilisation de `%product%` permet d’accéder à la valeur de l’élément de données du produit ou de la variable personnalisée.
 
-Lorsqu’un événement déclenche une règle, vous pouvez transmettre la variable correspondante `event` dans `_satellite.getVar()` comme si :
+Lorsqu’un événement déclenche une règle, vous pouvez transmettre l’objet `event` correspondant à la règle dans `_satellite.getVar()` comme suit :
 
 ```javascript
 // event refers to the calling rule's event
@@ -64,7 +64,7 @@ var rule = _satellite.getVar('return event rule', event);
 
 >[!NOTE]
 >
->La variable `setVar` Le code est entièrement distinct d’un élément de données spécifié dans les balises .
+>Le code `setVar` est entièrement distinct d’un élément de données spécifié dans les balises.
 
 **Code**
 
@@ -160,7 +160,7 @@ _satellite.cookie.set(name: string, value: string[, attributes: Object])
 
 >[!NOTE]
 >
->Dans l&#39;ancien [`setCookie`](#setCookie) pour définir les cookies, le troisième argument (facultatif) de cet appel de fonction était un entier qui indiquait le délai d’expiration du cookie en jours. Dans cette nouvelle méthode, un objet « attributes » est accepté comme troisième argument à la place. Pour définir une expiration pour un cookie à l’aide de la nouvelle méthode, vous devez fournir un `expires` dans l’objet attributes et définissez-le sur la valeur souhaitée. Ceci est illustré dans lʼexemple ci-dessous.
+>Dans l’ancienne méthode [`setCookie`](#setCookie) de définition des cookies, le troisième argument (facultatif) de cet appel de fonction était un entier qui indiquait le délai d’expiration du cookie en jours. Dans cette nouvelle méthode, un objet « attributes » est accepté comme troisième argument à la place. Pour définir une expiration pour un cookie à l’aide de la nouvelle méthode, vous devez fournir une propriété `expires` dans l’objet attributes et la définir sur la valeur souhaitée. Ceci est illustré dans lʼexemple ci-dessous.
 
 **Exemple**
 

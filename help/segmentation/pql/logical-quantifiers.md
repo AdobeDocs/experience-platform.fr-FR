@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: Quantificateurs logiques PQL
-description: Les quantificateurs logiques peuvent être utilisés pour insérer des conditions dans des tableaux dans le langage de requête de profil (PQL).
+description: Les quantificateurs logiques peuvent être utilisés pour insérer des conditions avec des tableaux dans Profile Query Language (PQL).
 exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 86%
+source-wordcount: '203'
+ht-degree: 79%
 
 ---
 
 # Fonctions de quantificateur logique
 
-Les quantificateurs logiques peuvent être utilisés pour insérer des conditions dans des tableaux. [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
+Les quantificateurs logiques peuvent être utilisés pour insérer des conditions avec des tableaux dans [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
 
 ## Existe
 

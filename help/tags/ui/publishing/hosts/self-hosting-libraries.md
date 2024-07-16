@@ -17,7 +17,7 @@ ht-degree: 100%
 
 La fonctionnalité Balises dans Adobe Experience Platform permet la production d’un ensemble de fichiers appelé [version](../builds.md). Cet ensemble de fichiers contrôle le comportement de votre application au moment de l’exécution.
 
-Les versions doivent être hébergées quelque part afin que les périphériques clients puissent les récupérer au moment de l’exécution.
+Les versions doivent être hébergées quelque part afin que les appareils clients puissent les récupérer au moment de l’exécution.
 
 Vous pouvez laisser Platform gérer l’hébergement de ces fichiers ou vous en occuper vous-même.
 

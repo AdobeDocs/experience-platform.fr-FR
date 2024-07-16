@@ -8,7 +8,7 @@ description: Apprenez-en plus sur les événements, les entrées et les sorties 
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
 workflow-type: tm+mt
-source-wordcount: '2484'
+source-wordcount: '2505'
 ht-degree: 100%
 
 ---

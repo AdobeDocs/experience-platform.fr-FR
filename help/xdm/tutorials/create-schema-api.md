@@ -7,16 +7,16 @@ description: Ce tutoriel utilise l’API Schema Registry pour vous guider tout a
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
 workflow-type: tm+mt
-source-wordcount: '2588'
-ht-degree: 41%
+source-wordcount: '2583'
+ht-degree: 36%
 
 ---
 
-# Créez un schéma à l’aide du [!DNL Schema Registry] API
+# Créez un schéma à l’aide de l’API [!DNL Schema Registry]
 
-Le [!DNL Schema Registry] est utilisé pour accéder à la variable [!DNL Schema Library] dans Adobe Experience Platform. Le [!DNL Schema Library] contient les ressources mises à votre disposition par Adobe, [!DNL Experience Platform] partenaires et fournisseurs dont vous utilisez les applications. Le registre fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les ressources disponibles de la bibliothèque sont accessibles.
+[!DNL Schema Registry] est utilisé pour accéder à [!DNL Schema Library] dans Adobe Experience Platform. [!DNL Schema Library] contient des ressources mises à votre disposition par Adobe, [!DNL Experience Platform] partenaires et fournisseurs dont vous utilisez les applications. Le registre fournit une interface utilisateur et une API RESTful à partir de laquelle toutes les ressources disponibles de la bibliothèque sont accessibles.
 
-Ce tutoriel utilise la méthode [!DNL Schema Registry] API pour vous guider dans les étapes de composition d’un schéma à l’aide d’une classe standard. Si vous préférez utiliser l’interface utilisateur dans [!DNL Experience Platform], la variable [Tutoriel de l’éditeur de schémas](create-schema-ui.md) fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de schémas.
+Ce tutoriel utilise l’API [!DNL Schema Registry] pour vous guider dans les étapes de composition d’un schéma à l’aide d’une classe standard. Si vous préférez utiliser l’interface utilisateur dans [!DNL Experience Platform], le [tutoriel de l’éditeur de schémas](create-schema-ui.md) fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de schémas.
 
 >[!NOTE]
 >
@@ -29,9 +29,9 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [[!DNL Experience Data Model (XDM) System]](../home.md) : cadre normalisé selon lequel [!DNL Experience Platform] organise les données de l’expérience client.
    * [Principes de base de la composition des schémas](../schema/composition.md) : découvrez les blocs de création de base des schémas XDM, y compris les principes clés et les bonnes pratiques en matière de composition de schémas.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
-* [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
+* [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Avant de commencer ce tutoriel, veuillez consulter le [guide de développement](../api/getting-started.md) pour trouver les informations importantes à connaître afin d’effectuer avec succès des appels vers l’API [!DNL Schema Registry] Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête `Accept` et à ses valeurs possibles).
+Avant de commencer ce tutoriel, consultez le [guide de développement](../api/getting-started.md) pour obtenir des informations importantes à connaître afin d’effectuer avec succès des appels vers l’API [!DNL Schema Registry]. Cela inclut votre `{TENANT_ID}`, le concept de « conteneurs » et les en-têtes requis pour effectuer des requêtes (avec une attention particulière à l’en-tête `Accept` et à ses valeurs possibles).
 
 Ce tutoriel passe en revue les étapes de la composition d’un schéma Loyalty Members qui décrit les données relatives aux membres d’un programme de fidélité dans la vente au détail. Avant de commencer, vous pouvez consulter avoir un aperçu de [l’intégralité du schéma Loyalty Members](#complete-schema) dans l’annexe.
 
@@ -43,7 +43,7 @@ Un schéma peut être considéré comme le plan directeur des données que vous 
 
 Le processus de composition du schéma commence par la sélection d’une classe. La classe définit les principaux aspects comportementaux des données (enregistrement ou série temporelle), ainsi que les champs minimaux requis pour décrire les données qui seront ingérées.
 
-Le schéma que vous créez dans ce tutoriel utilise la variable [!DNL XDM Individual Profile] classe . [!DNL XDM Individual Profile] est une classe standard fournie par Adobe pour définir le comportement des enregistrements. Vous trouverez plus d’informations sur le comportement dans les [principes de base de la composition des schémas](../schema/composition.md).
+Le schéma que vous créez dans ce tutoriel utilise la classe [!DNL XDM Individual Profile]. [!DNL XDM Individual Profile] est une classe standard fournie par Adobe pour définir le comportement des enregistrements. Vous trouverez plus d’informations sur le comportement dans les [principes de base de la composition des schémas](../schema/composition.md).
 
 Pour attribuer une classe, un appel API est effectué pour créer (POST) un nouveau schéma dans le conteneur du client. Cet appel inclut la classe que le schéma va implémenter. Chaque schéma ne peut mettre en œuvre qu’une seule classe.
 
@@ -55,7 +55,7 @@ POST /tenant/schemas
 
 **Requête**
 
-La requête doit inclure un attribut `allOf` qui fait référence à la clé `$id` d’une classe. Cet attribut définit la « classe de base » que le schéma va mettre en œuvre. Dans cet exemple, la classe de base est la suivante : [!DNL XDM Individual Profile] classe . La clé `$id`[!DNL XDM Individual Profile] de la classe est utilisée comme valeur du champ `$ref` dans le tableau `allOf` ci-dessous.
+La requête doit inclure un attribut `allOf` qui fait référence à la clé `$id` d’une classe. Cet attribut définit la « classe de base » que le schéma va mettre en œuvre. Dans cet exemple, la classe de base est la classe [!DNL XDM Individual Profile]. La `$id` de la classe [!DNL XDM Individual Profile] est utilisée comme valeur du champ `$ref` dans le tableau `allOf` ci-dessous.
 
 ```SHELL
 curl -X POST \
@@ -79,7 +79,7 @@ curl -X POST \
 
 **Réponse**
 
-Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un corps de réponse qui contient les détails du nouveau schéma, y compris les clés `$id`, `meta:altIt`, et `version`. Ces valeurs sont en lecture seule et sont affectées par la variable [!DNL Schema Registry].
+Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un corps de réponse qui contient les détails du nouveau schéma, y compris les clés `$id`, `meta:altIt`, et `version`. Ces valeurs sont en lecture seule et sont attribuées par le [!DNL Schema Registry].
 
 ```JSON
 {
@@ -139,7 +139,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | Le `meta:altId` ou encodé URL `$id` du schéma que vous souhaitez rechercher. |
+| `{SCHEMA_ID}` | `meta:altId` ou encodé URL `$id` du schéma que vous souhaitez rechercher. |
 
 **Requête**
 
@@ -155,7 +155,7 @@ curl -X GET \
 
 **Réponse**
 
-Le format de réponse dépend de la variable `Accept` en-tête envoyé avec la requête. Tentative d’expérimentation avec différentes `Accept` pour identifier celle qui répond le mieux à vos besoins.
+Le format de la réponse dépend de l’en-tête `Accept` envoyé avec la requête. Tentez de tester différents en-têtes `Accept` pour déterminer lequel répond le mieux à vos besoins.
 
 ```JSON
 {
@@ -205,7 +205,7 @@ Le format de réponse dépend de la variable `Accept` en-tête envoyé avec la r
 
 Maintenant que le schéma Loyalty Members a été créé et confirmé, des groupes de champs peuvent y être ajoutés.
 
-Différents groupes de champs standard sont disponibles, selon la classe de schéma sélectionnée. Chaque groupe de champs contient une `intendedToExtend` champ qui définit la ou les classes avec lesquelles ce groupe de champs est compatible.
+Différents groupes de champs standard sont disponibles, selon la classe de schéma sélectionnée. Chaque groupe de champs contient un champ `intendedToExtend` qui définit la ou les classes avec lesquelles ce groupe de champs est compatible.
 
 Les groupes de champs définissent des concepts, tels que &quot;name&quot; ou &quot;address&quot;, qui peuvent être réutilisés dans n’importe quel schéma qui doit capturer les mêmes informations.
 
@@ -217,13 +217,13 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | Le `meta:altId` ou encodé URL `$id` du schéma auquel vous ajoutez le groupe de champs. |
+| `{SCHEMA_ID}` | `meta:altId` ou encodé URL `$id` du schéma auquel vous ajoutez le groupe de champs. |
 
 **Requête**
 
-Cette requête met à jour le schéma Loyalty Members pour inclure les champs dans la variable [[!UICONTROL Détails démographiques] groupe de champs](../field-groups/profile/demographic-details.md) (`profile-person-details`).
+Cette requête met à jour le schéma Loyalty Members pour inclure les champs dans le [[!UICONTROL groupe de champs Détails démographiques]](../field-groups/profile/demographic-details.md) (`profile-person-details`).
 
-En ajoutant la variable `profile-person-details` groupe de champs, le schéma Loyalty Members capture désormais des informations démographiques pour les membres du programme de fidélité, telles que leur prénom, leur nom et leur anniversaire.
+En ajoutant le groupe de champs `profile-person-details`, le schéma Loyalty Members capture désormais des informations démographiques pour les membres du programme de fidélité telles que leur prénom, leur nom et leur anniversaire.
 
 ```SHELL
 curl -X PATCH \
@@ -240,7 +240,7 @@ curl -X PATCH \
 
 **Réponse**
 
-La réponse affiche le nouveau groupe de champs ajouté dans la variable `meta:extends` et contient un `$ref` au groupe de champs de la `allOf` attribut.
+La réponse affiche le groupe de champs nouvellement ajouté dans le tableau `meta:extends` et contient un `$ref` au groupe de champs dans l’attribut `allOf` .
 
 ```JSON
 {
@@ -304,10 +304,9 @@ Les schémas Loyalty Members nécessitent deux autres groupes de champs standard
 
 >[!TIP]
 >
->Il est utile de passer en revue tous les groupes de champs disponibles pour mieux connaître les champs inclus dans chacun d’eux. Vous pouvez répertorier (par GET) tous les groupes de champs disponibles pour une classe particulière en exécutant une requête sur chacun des conteneurs &quot;global&quot; et &quot;client&quot;, en ne renvoyant que les groupes de champs dont le champ &quot;meta:intendedToExtend&quot; correspond à la classe que vous utilisez. Dans ce cas, il s’agit de la variable [!DNL XDM Individual Profile] , donc la variable [!DNL XDM Individual Profile] `$id` est utilisé :
+>Il est utile de passer en revue tous les groupes de champs disponibles pour mieux connaître les champs inclus dans chacun d’eux. Vous pouvez répertorier (par GET) tous les groupes de champs disponibles pour une classe particulière en exécutant une requête sur chacun des conteneurs &quot;global&quot; et &quot;client&quot;, en ne renvoyant que les groupes de champs dont le champ &quot;meta:intendedToExtend&quot; correspond à la classe que vous utilisez. Dans ce cas, il s’agit de la classe [!DNL XDM Individual Profile]. Par conséquent, [!DNL XDM Individual Profile] `$id` est utilisé :
 >
->
-```http
+>```http
 >GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 >GET /tenant/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 >```
@@ -320,14 +319,14 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | Le `meta:altId` ou encodé URL `$id` du schéma que vous mettez à jour. |
+| `{SCHEMA_ID}` | `meta:altId` ou encodé URL `$id` du schéma que vous mettez à jour. |
 
 **Requête**
 
 Cette requête met à jour le schéma Loyalty Members pour inclure les champs dans les groupes de champs standard suivants :
 
-* [[!UICONTROL Détails du contact personnel]](../field-groups/profile/personal-contact-details.md) (`profile-personal-details`) : Ajoute des informations de contact telles que l’adresse du domicile, l’adresse électronique et le téléphone personnel.
-* [[!UICONTROL Détails de fidélité]](../field-groups/profile/loyalty-details.md) (`profile-loyalty-details`) : Ajoute des informations de contact telles que l’adresse du domicile, l’adresse électronique et le téléphone personnel.
+* [[!UICONTROL Détails de contact personnel]](../field-groups/profile/personal-contact-details.md) (`profile-personal-details`) : ajoute des informations de contact telles que l’adresse du domicile, l’adresse électronique et le téléphone personnel.
+* [[!UICONTROL Loyalty Details]](../field-groups/profile/loyalty-details.md) (`profile-loyalty-details`) : ajoute des informations de contact telles que l’adresse du domicile, l’adresse électronique et le téléphone personnel.
 
 ```SHELL
 curl -X PATCH \
@@ -345,9 +344,9 @@ curl -X PATCH \
 
 **Réponse**
 
-La réponse affiche les groupes de champs nouvellement ajoutés dans la variable `meta:extends` et contient un `$ref` au groupe de champs de la `allOf` attribut.
+La réponse affiche les groupes de champs nouvellement ajoutés dans le tableau `meta:extends` et contient un `$ref` au groupe de champs dans l’attribut `allOf` .
 
-Le schéma Loyalty Members doit maintenant contenir quatre `$ref` dans la variable `allOf` tableau : `profile`, `profile-person-details`, `profile-personal-details`, et `profile-loyalty-details` comme illustré ci-dessous.
+Le schéma Loyalty Members doit maintenant contenir quatre valeurs `$ref` dans le tableau `allOf` : `profile`, `profile-person-details`, `profile-personal-details` et `profile-loyalty-details` comme illustré ci-dessous.
 
 ```JSON
 {
@@ -421,11 +420,11 @@ Le schéma Loyalty Members doit maintenant contenir quatre `$ref` dans la variab
 
 ### Définir un nouveau groupe de champs
 
-Lors de la [!UICONTROL Détails de fidélité] Le groupe de champs fournit des champs utiles liés à la fidélité au schéma. Il existe des champs de fidélité supplémentaires qui ne sont inclus dans aucun groupe de champs standard.
+Bien que le groupe de champs [!UICONTROL Loyalty Details] fournisse des champs utiles liés à la fidélité au schéma, il existe d’autres champs de fidélité qui ne sont inclus dans aucun groupe de champs standard.
 
-Pour ajouter ces champs, vous pouvez définir vos propres groupes de champs personnalisés au sein du `tenant` conteneur. Ces groupes de champs sont propres à votre organisation et ne sont ni visibles ni modifiables par quiconque en dehors de votre organisation.
+Pour ajouter ces champs, vous pouvez définir vos propres groupes de champs personnalisés dans le conteneur `tenant`. Ces groupes de champs sont propres à votre organisation et ne sont ni visibles ni modifiables par quiconque en dehors de votre organisation.
 
-Pour créer (POST) un groupe de champs, votre requête doit inclure une `meta:intendedToExtend` contenant le champ `$id` pour la ou les classes de base avec lesquelles le groupe de champs est compatible, ainsi que les propriétés que le groupe de champs va inclure.
+Pour créer (POST) un nouveau groupe de champs, votre requête doit inclure un champ `meta:intendedToExtend` contenant le `$id` de la ou des classes de base avec lesquelles le groupe de champs est compatible, ainsi que les propriétés que le groupe de champs va inclure.
 
 Toutes les propriétés personnalisées doivent être imbriquées sous votre `TENANT_ID` pour éviter les collisions avec d’autres groupes de champs ou champs.
 
@@ -437,7 +436,7 @@ POST /tenant/fieldgroups
 
 **Requête**
 
-Cette requête crée un groupe de champs doté d’un `loyaltyTier` contenant quatre champs spécifiques au programme de fidélité d’une entreprise : `id`, `effectiveDate`, `currentThreshold`, et `nextThreshold`.
+Cette requête crée un nouveau groupe de champs avec un objet `loyaltyTier` contenant quatre champs spécifiques au programme de fidélité spécifique d’une entreprise : `id`, `effectiveDate`, `currentThreshold` et `nextThreshold`.
 
 ```SHELL
 curl -X POST\
@@ -501,7 +500,7 @@ curl -X POST\
 
 **Réponse**
 
-Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un corps de réponse contenant les détails du nouveau groupe de champs, y compris le `$id`, `meta:altIt`, et `version`. Ces valeurs sont en lecture seule et sont affectées par la variable [!DNL Schema Registry].
+Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un corps de réponse contenant les détails du nouveau groupe de champs, y compris les éléments `$id`, `meta:altIt` et `version`. Ces valeurs sont en lecture seule et sont attribuées par le [!DNL Schema Registry].
 
 ```JSON
 {
@@ -589,7 +588,7 @@ Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un co
 
 ### Ajout du groupe de champs personnalisé au schéma
 
-Vous pouvez maintenant suivre les mêmes étapes que pour [ajout d’un groupe de champs standard](#add-a-field-group) pour ajouter ce nouveau groupe de champs à votre schéma.
+Vous pouvez maintenant suivre les mêmes étapes que pour [l’ajout d’un groupe de champs standard](#add-a-field-group) pour ajouter ce nouveau groupe de champs à votre schéma.
 
 **Format d’API**
 
@@ -599,7 +598,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | Le `meta:altId` ou encodé URL `$id` du schéma. |
+| `{SCHEMA_ID}` | `meta:altId` ou encodé URL `$id` du schéma. |
 
 **Requête**
 
@@ -620,7 +619,7 @@ curl -X PATCH \
 
 **Réponse**
 
-Vous pouvez constater que le groupe de champs a bien été ajouté, car la réponse affiche maintenant le nouveau groupe de champs ajouté dans la variable `meta:extends` tableau et contenir un `$ref` au groupe de champs de la `allOf` attribut.
+Vous pouvez constater que le groupe de champs a bien été ajouté car la réponse affiche désormais le nouveau groupe de champs ajouté dans le tableau `meta:extends` et contient un `$ref` au groupe de champs dans l’attribut `allOf` .
 
 ```JSON
 {
@@ -711,7 +710,7 @@ GET /tenant/schemas/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | Le `meta:altId` ou encodé URL `$id` du schéma. |
+| `{SCHEMA_ID}` | `meta:altId` ou encodé URL `$id` du schéma. |
 
 **Requête**
 
@@ -727,9 +726,9 @@ curl -X GET \
 
 **Réponse**
 
-En utilisant l’en-tête `application/vnd.adobe.xed-full+json; version=1`, vous pouvez voir le schéma complet indiquant toutes les propriétés. `Accept` Ces propriétés sont les champs fournis par la classe et les groupes de champs qui ont été utilisés pour composer le schéma. Dans l’exemple de réponse ci-dessous, seuls les champs récemment ajoutés sont affichés pour l’espace. Vous pouvez consulter le schéma dans son intégralité, y compris toutes les propriétés et leurs attributs, dans l’[annexe](#appendix) à la fin de ce document.
+En utilisant l’en-tête `application/vnd.adobe.xed-full+json; version=1` `Accept`, vous pouvez voir le schéma complet qui montre toutes les propriétés. Ces propriétés sont les champs fournis par la classe et les groupes de champs qui ont été utilisés pour composer le schéma. Dans l’exemple de réponse ci-dessous, seuls les champs récemment ajoutés sont affichés pour l’espace. Vous pouvez consulter le schéma dans son intégralité, y compris toutes les propriétés et leurs attributs, dans l’[annexe](#appendix) à la fin de ce document.
 
-Sous `"properties"`, vous pouvez voir la variable `_{TENANT_ID}` espace de noms créé lors de l’ajout du groupe de champs personnalisé. Dans cet espace de noms se trouve la variable `loyaltyTier` et les champs définis lors de la création du groupe de champs.
+Sous `"properties"`, vous pouvez voir l’espace de noms `_{TENANT_ID}` créé lors de l’ajout du groupe de champs personnalisé. Dans cet espace de noms se trouvent l’objet `loyaltyTier` et les champs définis lors de la création du groupe de champs.
 
 ```JSON
 {
@@ -831,7 +830,7 @@ POST /tenant/datatypes
 
 **Requête**
 
-La définition d’un type de données ne nécessite pas `meta:extends` ou `meta:intendedToExtend` Les champs et ne doivent pas être imbriqués sous votre ID de client pour éviter les collisions.
+La définition d’un type de données ne nécessite pas de champs `meta:extends` ou `meta:intendedToExtend`, et les champs n’ont pas besoin d’être imbriqués sous votre ID de client pour éviter les collisions.
 
 ```SHELL
 curl -X POST \
@@ -883,7 +882,7 @@ curl -X POST \
 
 **Réponse**
 
-Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un corps de réponse qui contient les détails du nouveau type de données, y compris les clés `$id`, `meta:altIt`, et `version`. Ces valeurs sont en lecture seule et sont affectées par la variable [!DNL Schema Registry].
+Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un corps de réponse qui contient les détails du nouveau type de données, y compris les clés `$id`, `meta:altIt`, et `version`. Ces valeurs sont en lecture seule et sont attribuées par le [!DNL Schema Registry].
 
 ```JSON
 {
@@ -956,11 +955,11 @@ Une requête réussie renvoie un état de réponse HTTP 201 (Created) avec un c
 }
 ```
 
-Vous pouvez effectuer une requête de recherche (GET) à l’aide de l’URI `$id` encodé par URL pour afficher directement le nouveau type de données. Veillez à inclure `version` dans l’en-tête pour une requête de recherche.`Accept`
+Vous pouvez effectuer une requête de recherche (GET) à l’aide de l’URI `$id` encodé par URL pour afficher directement le nouveau type de données. Veillez à inclure le `version` dans l’en-tête `Accept` pour une requête de recherche.
 
 ### Utilisation du type de données dans le schéma
 
-Maintenant que le type de données Loyalty Level a été créé, vous pouvez mettre à jour (PATCH) la variable `loyaltyTier` dans le groupe de champs que vous avez créé pour référencer le type de données à la place des champs qui existaient auparavant.
+Maintenant que le type de données Loyalty Level a été créé, vous pouvez mettre à jour (en PATCH) le champ `loyaltyTier` dans le groupe de champs que vous avez créé pour référencer le type de données à la place des champs qui y étaient déjà.
 
 **Format d’API**
 
@@ -970,7 +969,7 @@ PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{FIELD_GROUP_ID}` | Le `meta:altId` ou encodé URL `$id` du groupe de champs à mettre à jour. |
+| `{FIELD_GROUP_ID}` | `meta:altId` ou encodé URL `$id` du groupe de champs à mettre à jour. |
 
 **Requête**
 
@@ -999,7 +998,7 @@ curl -X PATCH \
 
 **Réponse**
 
-La réponse comprend désormais une référence (`$ref`) au type de données dans la variable `loyaltyTier` au lieu des champs précédemment définis.
+La réponse inclut désormais une référence (`$ref`) au type de données dans l’objet `loyaltyTier` au lieu des champs précédemment définis.
 
 ```JSON
 {
@@ -1066,7 +1065,7 @@ La réponse comprend désormais une référence (`$ref`) au type de données dan
 }
 ```
 
-Si vous effectuez une requête de GET pour rechercher le schéma maintenant, la variable `loyaltyTier` affiche la référence au type de données sous `meta:referencedFrom`:
+Si vous effectuez une requête de GET pour rechercher le schéma maintenant, la propriété `loyaltyTier` affiche la référence au type de données sous `meta:referencedFrom` :
 
 ```JSON
 "_{TENANT_ID}": {
@@ -1113,11 +1112,11 @@ Si vous effectuez une requête de GET pour rechercher le schéma maintenant, la 
 
 ### Définition d’un descripteur d’identité
 
-Les schémas sont utilisés pour ingérer des données dans [!DNL Experience Platform]. Ces données sont finalement utilisées par plusieurs services pour créer une vue unique et unifiée d’un individu. Pour faciliter ce processus, les champs clés peuvent être désignés comme champs « Identity » et, lors de l’ingestion de données, les données de ces champs sont intégrées au « Graphique d’identité » pour cette personne. Les données du graphique sont ensuite accessibles par [[!DNL Real-Time Customer Profile]](../../profile/home.md) et autres [!DNL Experience Platform] services pour offrir une vue d’ensemble de chaque client.
+Les schémas sont utilisés pour ingérer des données dans [!DNL Experience Platform]. Ces données sont finalement utilisées par plusieurs services pour créer une vue unique et unifiée d’un individu. Pour faciliter ce processus, les champs clés peuvent être désignés comme champs « Identity » et, lors de l’ingestion de données, les données de ces champs sont intégrées au « Graphique d’identité » pour cette personne. Les données du graphique peuvent ensuite être consultées par [[!DNL Real-Time Customer Profile]](../../profile/home.md) et d&#39;autres services [!DNL Experience Platform] afin de fournir une vue d&#39;ensemble de chaque client.
 
-Les champs généralement désignés comme champs &quot;Identité&quot; sont les suivants : adresse email, numéro de téléphone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr), ID de gestion de la relation client ou d’autres champs d’identifiant uniques. Tenez compte des identifiants uniques propres à votre organisation, dans la mesure où ils peuvent aussi représenter de bons champs d’identité.
+Les champs généralement marqués comme &quot;Identité&quot; sont les suivants : adresse électronique, numéro de téléphone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=fr), identifiant CRM ou autres champs d’identification uniques. Tenez compte des identifiants uniques propres à votre organisation, dans la mesure où ils peuvent aussi représenter de bons champs d’identité.
 
-Les descripteurs d’identité signalent que la variable `sourceProperty` de `sourceSchema` est un identifiant unique qui doit être considéré comme une identité.
+Les descripteurs d’identité signalent que le `sourceProperty` de `sourceSchema` est un identifiant unique qui doit être considéré comme une identité.
 
 Pour plus d’informations sur l’utilisation des descripteurs, consultez le [guide de développement du registre des schémas](../api/getting-started.md).
 
@@ -1129,7 +1128,7 @@ POST /tenant/descriptors
 
 **Requête**
 
-La requête suivante définit un descripteur d’identité sur la variable `personalEmail.address` pour le schéma Loyalty Members. Ceci indique : [!DNL Experience Platform] pour utiliser l’adresse électronique du membre du programme de fidélité comme identifiant afin de faciliter la collecte d’informations sur l’individu. Cet appel définit également ce champ comme identité Principale du schéma en définissant `xdm:isPrimary` to `true`, qui est une exigence de [activation du schéma à utiliser dans Real-time Customer Profile](#profile).
+La requête suivante définit un descripteur d’identité sur le champ `personalEmail.address` pour le schéma Loyalty Members. Cela indique à [!DNL Experience Platform] d’utiliser l’adresse électronique du membre du programme de fidélité comme identifiant pour aider à rassembler les informations sur l’individu. Cet appel définit également ce champ comme identité principale du schéma en définissant `xdm:isPrimary` sur `true`, ce qui est obligatoire pour [activer le schéma à utiliser dans Real-Time Customer Profile](#profile).
 
 ```SHELL
 curl -X POST \
@@ -1152,11 +1151,11 @@ curl -X POST \
 
 >[!NOTE]
 >
->Vous pouvez répertorier les valeurs &quot;xdm:namespace&quot; disponibles ou en créer de nouvelles, à l’aide de la fonction [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). La valeur de « xdm:property » peut être soit « xdm:code », soit « xdm:id », selon la clé « xdm:namespace » utilisée.
+>Vous pouvez répertorier les valeurs &quot;xdm:namespace&quot; disponibles, ou en créer de nouvelles, à l’aide de [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). La valeur de « xdm:property » peut être soit « xdm:code », soit « xdm:id », selon la clé « xdm:namespace » utilisée.
 
 **Réponse**
 
-Une réponse réussie renvoie un état de réponse HTTP 201 (Created) avec un corps de réponse qui contient les détails du nouveau descripteur, y compris la clé `@id`. Le `@id` est un champ en lecture seule attribué par la variable [!DNL Schema Registry] et sert à référencer le descripteur dans l’API.
+Une réponse réussie renvoie un état de réponse HTTP 201 (Created) avec un corps de réponse qui contient les détails du nouveau descripteur, y compris la clé `@id`. `@id` est un champ en lecture seule attribué par [!DNL Schema Registry] et est utilisé pour référencer le descripteur dans l’API.
 
 ```JSON
 {
@@ -1178,15 +1177,15 @@ Une réponse réussie renvoie un état de réponse HTTP 201 (Created) avec un c
 
 ## Activer le schéma à utiliser dans [!DNL Real-Time Customer Profile] {#profile}
 
-Une fois qu’un descripteur d’identité Principal est appliqué au schéma, vous pouvez activer le schéma Loyalty Members pour l’utiliser par [!DNL Real-Time Customer Profile] en ajoutant une `union` vers la balise `meta:immutableTags` attribut.
+Une fois qu’un descripteur d’identité principal est appliqué au schéma, vous pouvez activer le schéma Loyalty Members pour l’utiliser par [!DNL Real-Time Customer Profile] en ajoutant une balise `union` à l’attribut `meta:immutableTags` .
 
 >[!NOTE]
 >
->Pour plus d’informations sur l’utilisation des vues d’union, consultez la section sur [syndicats](../api/unions.md) dans le [!DNL Schema Registry] guide de développement.
+>Pour plus d’informations sur l’utilisation des unions, consultez la section sur les [unions](../api/unions.md) dans le guide de développement [!DNL Schema Registry].
 
-### Ajouter un `union` tag
+### Ajouter une balise `union`
 
-Pour qu’un schéma soit inclus dans la vue d’union fusionnée, la variable `union` doit être ajoutée à la balise `meta:immutableTags` du schéma. Pour ce faire, vous devez envoyer une requête de PATCH pour mettre à jour le schéma et ajouter une `meta:immutableTags` tableau avec la valeur de `union`.
+Pour qu’un schéma soit inclus dans la vue d’union fusionnée, la balise `union` doit être ajoutée à l’attribut `meta:immutableTags` du schéma. Pour ce faire, vous devez effectuer une requête de PATCH pour mettre à jour le schéma et ajouter un tableau `meta:immutableTags` avec une valeur `union`.
 
 **Format d’API**
 
@@ -1196,7 +1195,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SCHEMA_ID}` | Le `meta:altId` ou encodé URL `$id` du schéma que vous activez pour Profile. |
+| `{SCHEMA_ID}` | `meta:altId` ou encodé URL `$id` du schéma que vous activez pour Profile. |
 
 **Requête**
 
@@ -1299,9 +1298,9 @@ La réponse indique que l’opération a été effectuée correctement, et que l
 
 ### Liste des schémas dans une union
 
-Vous avez maintenant ajouté votre schéma à l’événement [!DNL XDM Individual Profile] union. Afin d’obtenir une liste de tous les schémas qui font partie d’une même union, vous pouvez effectuer une requête GET en utilisant les paramètres de requête pour filtrer la réponse.
+Vous avez maintenant ajouté votre schéma à l’union [!DNL XDM Individual Profile]. Afin d’obtenir une liste de tous les schémas qui font partie d’une même union, vous pouvez effectuer une requête GET en utilisant les paramètres de requête pour filtrer la réponse.
 
-En utilisant le paramètre de requête `property`, vous pouvez spécifier que seuls les schémas contenant un champ `meta:immutableTags` qui a une `meta:class` égale à la clé `$id` de la classe doivent être renvoyés.[!DNL XDM Individual Profile]
+En utilisant le paramètre de requête `property`, vous pouvez spécifier que seuls les schémas contenant un champ `meta:immutableTags` dont le `meta:class` est égal à `$id` de la classe [!DNL XDM Individual Profile] sont renvoyés.
 
 **Format d’API**
 
@@ -1311,7 +1310,7 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 **Requête**
 
-L’exemple de requête ci-dessous renvoie tous les schémas qui font partie du [!DNL XDM Individual Profile] union.
+L’exemple de requête ci-dessous renvoie tous les schémas qui font partie de l’union [!DNL XDM Individual Profile].
 
 ```SHELL
 curl -X GET \
@@ -1325,7 +1324,7 @@ curl -X GET \
 
 **Réponse**
 
-La réponse est une liste filtrée de schémas, contenant uniquement ceux qui répondent aux deux exigences. N’oubliez pas que lorsque vous utilisez plusieurs paramètres de requête, une relation ET est présumée. Le format de la réponse de liste dépend de la variable `Accept` en-tête envoyé dans la requête.
+La réponse est une liste filtrée de schémas, contenant uniquement ceux qui répondent aux deux exigences. N’oubliez pas que lorsque vous utilisez plusieurs paramètres de requête, une relation ET est présumée. Le format de la réponse de liste dépend de l’en-tête `Accept` envoyé dans la requête.
 
 ```JSON
 {
@@ -1385,7 +1384,7 @@ Les informations suivantes complètent le tutoriel sur l’API.
 
 Dans ce tutoriel, un schéma est composé pour décrire les membres d’un programme de fidélité dans la vente au détail.
 
-Le schéma met en oeuvre le [!DNL XDM Individual Profile] et combine plusieurs groupes de champs. Il capture des informations sur les membres du programme de fidélité à l’aide de la norme [!DNL Demographic Details], [!UICONTROL Détails du contact personnel], et [!UICONTROL Détails de fidélité] groupes de champs, ainsi que par le biais d’un groupe de champs Niveau de fidélité personnalisé défini pendant le tutoriel.
+Le schéma met en oeuvre la classe [!DNL XDM Individual Profile] et combine plusieurs groupes de champs. Il capture des informations sur les membres du programme de fidélité à l’aide des groupes de champs [!DNL Demographic Details], [!UICONTROL Personal Contact Details] et [!UICONTROL Loyalty Details] standard, ainsi que par le biais d’un groupe de champs Niveau de fidélité personnalisé défini pendant le tutoriel.
 
 Vous trouverez ci-dessous le schéma Loyalty Members au format JSON :
 

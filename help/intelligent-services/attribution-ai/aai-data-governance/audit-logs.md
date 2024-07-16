@@ -6,7 +6,7 @@ exl-id: 83c55dbc-f03d-4bda-ae07-68b7914483c8
 source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
 source-wordcount: '271'
-ht-degree: 98%
+ht-degree: 90%
 
 ---
 
@@ -18,7 +18,7 @@ Pour faire simple, un journal d’audit indique qui a effectué quelle action et
 
 <!-- [The audit logs selected in the Attribution AI workspace](../../../attribution-ai/aai-data-governance/images/data-governance/audit-logs-cai.png) -->
 
-## Accéder aux journaux d’audit
+## Accès aux journaux d’audit
 
 Lorsque la fonction est activée pour votre organisation, les journaux d’audit sont automatiquement collectés au fur et à mesure de l’activité. Vous n’avez pas besoin d’activer manuellement la collecte des journaux.
 

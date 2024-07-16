@@ -4,7 +4,7 @@ title: Configuration de l’authentification du client
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
 source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1101'
 ht-degree: 97%
 
 ---
@@ -26,7 +26,7 @@ Pendant la [création d’une destination](../../authoring-api/destination-confi
 
 * Pour les destinations qui utilisent un moyen d’[authentification de base](#basic), les utilisateurs doivent fournir un nom d’utilisateur et un mot de passe directement dans la page d’authentification de l’interface utilisateur Experience Platform.
 * Pour les destinations qui utilisent l’[authentification du porteur](#bearer), les utilisateurs doivent fournir un jeton porteur.
-* Pour les destinations qui utilisent [Autorisation OAuth2](#oauth2), les utilisateurs sont redirigés vers la page de connexion de votre destination, où ils peuvent se connecter à l’aide de leurs informations d’identification.
+* Pour les destinations qui utilisent l’autorisation [OAuth2](#oauth2), les utilisateurs sont redirigés vers la page de connexion de votre destination où ils peuvent se connecter avec leurs informations d’identification.
 * Pour les destinations [Amazon S3](#s3), les utilisateurs doivent fournir leurs clés d’accès et clé secrète [!DNL Amazon S3].
 * Pour les destinations [Azure Blob](#blob), les utilisateurs doivent fournir leur chaîne de connexion [!DNL Azure Blob].
 

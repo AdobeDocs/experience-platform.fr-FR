@@ -36,21 +36,21 @@ Pour charger des audiences générées en externe, vous devez disposer des autor
 Lorsque vous téléchargez une audience générée de l’extérieur, les éléments suivants sont créés :
 
 - Jeu de données
-   - Le jeu de données sera visible dans l’inventaire du jeu de données et le nom du jeu de données sera **same** comme nom de l’audience générée en externe que vous avez chargée.
+   - Le jeu de données sera visible dans l’inventaire du jeu de données et le nom du jeu de données sera le **même** que le nom de l’audience générée en externe que vous avez chargée.
 - Tâche par lots
-   - Une tâche par lot est **automatiquement** s’exécute lorsque vous chargez une audience générée de l’extérieur. Cela signifie que vous le faites **not** vous devez attendre que la tâche de segmentation quotidienne s’exécute afin d’activer l’audience générée en externe.
+   - Une tâche par lots s’exécute **automatiquement** lorsque vous chargez une audience générée en externe. Cela signifie que vous n’avez **pas** besoin d’attendre l’exécution de la tâche de segmentation quotidienne pour activer l’audience générée en externe.
 - Schéma ad hoc
-   - A **new** Le schéma XDM sera créé pour être utilisé avec l’audience générée en externe. Les champs de ce schéma XDM peuvent être utilisés avec le jeu de données qui a également été créé.
+   - Un schéma XDM **new** sera créé pour être utilisé avec l’audience générée en externe. Les champs de ce schéma XDM peuvent être utilisés avec le jeu de données qui a également été créé.
 
 ### Qu’est-ce qu’une audience générée en externe comprend et qu’advient-il de ces données lorsqu’elles sont importées dans Platform ?
 
-Lors du workflow d&#39;import d&#39;audience externe, vous devez indiquer la colonne du fichier CSV correspondant au **Identité du Principal**. Un exemple d’identité principale inclut une adresse électronique, un ECID ou un espace de noms d’identité personnalisée spécifique à l’organisation.
+Au cours du workflow d&#39;import d&#39;audience externe, vous devez spécifier la colonne du fichier CSV correspondant à l&#39; **identité de Principal**. Un exemple d’identité principale inclut une adresse électronique, un ECID ou un espace de noms d’identité personnalisée spécifique à l’organisation.
 
-Les données associées à cette colonne d’identité principale renseignent la variable **only** données jointes au profil. Si aucun profil existant ne correspond aux données de la colonne Identité principale, un nouveau profil est créé. Cependant, ce profil est essentiellement un profil orphelin, car **non** des attributs ou des événements d’expérience sont associés à ce profil.
+Les données associées à cette identité principale contiennent les données **uniquement** qui sont jointes au profil. Si aucun profil existant ne correspond aux données de la colonne Identité principale, un nouveau profil est créé. Cependant, ce profil est essentiellement un profil orphelin, car les attributs **no** ou les événements d’expérience sont associés à ce profil.
 
-Toutes les autres données de l’audience générée en externe sont prises en compte. **attributs payload**. Ces attributs peuvent **only** être utilisé pour la personnalisation et l’enrichissement lors de l’activation ; et sont **not** joint à un profil. Ces attributs sont toutefois stockés dans le lac de données.
+Toutes les autres données de l’audience générée en externe sont considérées comme des **attributs de payload**. Ces attributs peuvent **uniquement** être utilisés pour la personnalisation et l’enrichissement lors de l’activation et sont **non** associés à un profil. Ces attributs sont toutefois stockés dans le lac de données.
 
-Bien que l’audience générée en externe puisse être référencée lors de la création d’audiences à l’aide du créateur de segments, les attributs de profil individuels **cannot** à utiliser.
+Bien que l’audience générée en externe puisse être référencée lors de la création d’audiences à l’aide du créateur de segments, les attributs de profil individuels **ne peuvent pas** être utilisés.
 
 ### Puis-je réconcilier des données d’audience générées en externe avec un profil existant dans Platform ?
 
@@ -94,9 +94,9 @@ Si vous avez accidentellement chargé une audience générée en externe et que 
 
 ### Combien de temps durent les audiences générées en externe ?
 
-L’expiration actuelle des données pour les audiences générées en externe est la suivante : **30 jours**. Cette expiration de données a été choisie pour réduire la quantité de données excédentaires stockées au sein de votre organisation.
+L’expiration actuelle des données pour les audiences générées en externe est de **30 jours**. Cette expiration de données a été choisie pour réduire la quantité de données excédentaires stockées au sein de votre organisation.
 
-Une fois la période d’expiration des données écoulée, le jeu de données associé sera toujours visible dans l’inventaire des jeux de données, mais vous pourrez **not** être en mesure d’activer l’audience et le nombre de profils s’affichera comme nul.
+Une fois la période d’expiration des données écoulée, le jeu de données associé sera toujours visible dans l’inventaire du jeu de données, mais vous **not** pourrez activer l’audience et le nombre de profils s’affichera comme nul.
 
 ### Comment le portail d’audience et la composition d’audience interagiront-ils avec les données du partenaire Real-Time CDP ?
 
@@ -107,15 +107,15 @@ Le portail d’audience et la composition d’audience interagissent avec les do
 
 ### Comment utiliser des attributs supplémentaires avec mes audiences ?
 
-Avec les audiences, il existe **two** différents types d’attributs supplémentaires que vous pouvez ajouter : attributs de payload (contextuels) et attributs d’enrichissement.
+Avec les audiences, il existe **deux** différents types d’attributs supplémentaires que vous pouvez ajouter : attributs de payload (contextuels) et attributs d’enrichissement.
 
-Les attributs de payload sont des attributs ingérés dans le cadre du chargement au format CSV d’une audience générée de l’extérieur. Ces attributs sont **not** ingéré dans Real-time Customer Profile, mais peut être utilisé dans le cadre d’une destination en aval.
+Les attributs de payload sont des attributs ingérés dans le cadre du chargement au format CSV d’une audience générée de l’extérieur. Ces attributs sont **non** ingérés dans le profil client en temps réel, mais peuvent être utilisés comme partie d’une destination en aval.
 
 Les attributs d’enrichissement sont des attributs qui proviennent d’un jeu de données et qui sont associés à une audience dans la composition de l’audience. Actuellement, ces attributs ne peuvent être utilisés que dans les campagnes Adobe Journey Optimizer. La prise en charge des parcours Adobe Journey Optimizer est bientôt disponible, avec la prise en charge des destinations en aval dans l’attente d’une version ultérieure.
 
 | Canal d’activation | Audiences à partir d’un téléchargement personnalisé CSV | Audiences de la composition de l’audience |
 | --- | --- | --- |
-| Destinations Real-Time CDP | Les attributs de payload et les audiences peuvent être activés. | Seule l’audience peut être activée. Attributs d’enrichissement **cannot** être activée. |
+| Destinations Real-Time CDP | Les attributs de payload et les audiences peuvent être activés. | Seule l’audience peut être activée. Les attributs d’enrichissement **ne peuvent pas** être activés. |
 | Campagnes Adobe Journey Optimizer | Ni l’audience ni les attributs de payload ne peuvent être activés. | Les attributs audience et enrichissement peuvent être activés. |
 
 ## États du cycle de vie {#lifecycle-states}
@@ -128,26 +128,26 @@ Le graphique suivant explique les différents états du cycle de vie, ce qu’il
 
 | État | Définition | Visible dans Audience Portal ? | Visible dans les destinations ? | Affecte les limites de segmentation ? | Impact sur les audiences basées sur des fichiers | Impact sur l’évaluation des audiences | Utilisable dans d’autres audiences ? | Modifiable |
 | --- | --- | --- | --- | --- | --- | --- | --- | -- |
-| Brouillon | Une audience dans le **Version préliminaire** state est une audience qui est encore en cours de développement et qui n’est pas encore prête à être utilisée dans d’autres services. | Oui, mais peut être caché. | Non | Oui | Peuvent être importées ou mises à jour pendant le processus d’affinage. | Évalués pour obtenir des comptes de publication précis. | Oui, mais non recommandé. | Oui |
-| Publié | Une audience dans le **Publié** state est une audience prête à être utilisée sur tous les services en aval. | Oui | Oui | Oui | Peut être importé ou mis à jour. | Évalués à l’aide de la segmentation par lots, par flux ou par périphérie. | Oui | Oui |
-| Inactif | Une audience dans le **Inactif** state est une audience qui n’est actuellement pas utilisée. Il existe toujours dans Platform, mais il le sera **not** être utilisable jusqu’à ce qu’il soit marqué comme brouillon ou publié. | Non, mais peut être affiché. | Non | Non | N’est plus mis à jour. | N’est plus évalué ou mis à jour par Platform. | Non | Oui |
-| Supprimé | Une audience dans le **Supprimé** state est une audience qui a été supprimée. L’exécution de la suppression des données peut prendre jusqu’à quelques minutes. | Non | Non | Non | Les données sous-jacentes sont supprimées. | Aucune évaluation ou exécution des données n’a lieu une fois la suppression terminée. | Non | Non |
+| Brouillon | Une audience dans l’état **Draft** est une audience qui est encore en cours de développement et qui n’est pas encore prête à être utilisée dans d’autres services. | Oui, mais peut être caché. | Non | Oui | Peuvent être importées ou mises à jour pendant le processus d’affinage. | Évalués pour obtenir des comptes de publication précis. | Oui, mais non recommandé. | Oui |
+| Publié | Une audience à l’état **Publiée** est une audience prête à être utilisée sur tous les services en aval. | Oui | Oui | Oui | Peut être importé ou mis à jour. | Évalués à l’aide de la segmentation par lots, par flux ou par périphérie. | Oui | Oui |
+| Inactif | Une audience à l’état **Inactive** est une audience qui n’est actuellement pas utilisée. Il existe toujours dans Platform, mais **pas** pourra être utilisé jusqu’à ce qu’il soit marqué comme brouillon ou publié. | Non, mais peut être affiché. | Non | Non | N’est plus mis à jour. | N’est plus évalué ou mis à jour par Platform. | Non | Oui |
+| Supprimé | Une audience à l’état **Supprimée** est une audience qui a été supprimée. L’exécution de la suppression des données peut prendre jusqu’à quelques minutes. | Non | Non | Non | Les données sous-jacentes sont supprimées. | Aucune évaluation ou exécution des données n’a lieu une fois la suppression terminée. | Non | Non |
 
 ### Dans quels états puis-je modifier mes audiences ?
 
 Les audiences peuvent être modifiées dans les états de cycle de vie suivants :
 
-- **Version préliminaire**: si une audience est modifiée à l’état de brouillon, elle reste à l’état de brouillon sauf si elle est publiée explicitement.
-- **Publié**: si une audience est modifiée à l’état publié, elle reste publiée et l’audience est automatiquement mise à jour.
-- **Inactif**: si une audience est modifiée à l’état inactif, elle reste inactive. Cela signifie qu’il ne sera pas évalué ni mis à jour. Si vous devez mettre à jour l’audience, vous devez la publier.
+- **Version préliminaire** : si une audience est modifiée à l’état préliminaire, elle reste à l’état préliminaire sauf si elle est publiée explicitement.
+- **Publié** : si une audience est modifiée à l’état publié, elle reste publiée et l’audience est automatiquement mise à jour.
+- **Inactive** : si une audience est modifiée à l’état inactif, elle reste inactive. Cela signifie qu’il ne sera pas évalué ni mis à jour. Si vous devez mettre à jour l’audience, vous devez la publier.
 
-Une fois qu’une audience est supprimée, elle **cannot** être édités.
+Une fois qu’une audience est supprimée, elle **ne peut pas** être modifiée.
 
 ### À quels états de cycle de vie puis-je déplacer une audience ?
 
 Le cycle de vie possible indique qu’une audience peut être déplacée en fonction de l’état actuel de l’audience.
 
-![Diagramme décrivant les transitions possibles d’état de cycle de vie disponibles pour les audiences.](./images/faq/lifecycle-state-transition.png)
+![ Diagramme décrivant les transitions possibles de l’état de cycle de vie disponibles pour les audiences.](./images/faq/lifecycle-state-transition.png)
 
 Si votre audience est à l’état de brouillon, vous pouvez la publier ou la supprimer si elle n’a aucune dépendance.
 
@@ -157,9 +157,9 @@ Si votre audience est à l’état inactif, vous pouvez la republier ou la suppr
 
 ### Existe-t-il des avertissements pour les audiences dans certains états de cycle de vie ?
 
-Les audiences dans l’état publié ne peuvent être déplacées dans un autre état que si l’audience le fait **not** avoir des dépendances. Cela signifie que si votre audience est utilisée dans un service en aval, elle ne peut pas être désactivée ni supprimée.
+Les audiences dans l’état publié ne peuvent être déplacées vers un autre état que si l’audience **et non** a des dépendances. Cela signifie que si votre audience est utilisée dans un service en aval, elle ne peut pas être désactivée ni supprimée.
 
-Si une audience évaluée à l’aide de la segmentation par lots est republiée, c’est-à-dire lorsqu’une audience passe d’inactive à publiée, l’audience est actualisée. **after** la tâche par lots quotidienne. Lors de la première republication, les profils et les données seront **same** comme lorsque l’audience était inactive.
+Si une audience évaluée à l’aide de la segmentation par lots est republiée, c’est-à-dire lorsqu’une audience passe d’inactive à publiée, l’audience actualise **après** la tâche par lots quotidienne. Lors de sa première republication, les profils et les données sont **identiques** comme lorsque l’audience a été inactive.
 
 ### Comment placer une audience dans l’état de brouillon ?
 
@@ -171,7 +171,7 @@ Pour les audiences créées dans la composition de l’audience, les audiences s
 
 Pour les audiences créées en externe, les audiences sont automatiquement publiées.
 
-Une fois qu’une audience est à l’état publié, vous **cannot** redéfinissez l’audience d’origine sur l’état brouillon. Cependant, si vous copiez l’audience nouvellement copiée, elle se trouve à l’état de brouillon.
+Une fois qu’une audience est à l’état publié, vous **ne pouvez pas** redéfinir l’audience d’origine en état de brouillon. Cependant, si vous copiez l’audience nouvellement copiée, elle se trouve à l’état de brouillon.
 
 ### Comment placer une audience dans l’état publié ?
 
@@ -195,7 +195,7 @@ Vous pouvez republier une audience en sélectionnant une audience inactive, en o
 
 >[!IMPORTANT]
 >
->Vous ne pouvez supprimer que les audiences qui sont **not** utilisée dans toute activation en aval. De plus, vous ne pouvez pas supprimer une audience référencée dans une autre audience. Si vous ne pouvez pas supprimer votre audience, veuillez vous assurer que vous êtes **not** l’utiliser dans n’importe quel service en aval ou en tant que composante essentielle d’une autre audience.
+>Vous ne pouvez supprimer que les audiences **et non** utilisées dans les activations en aval. De plus, vous ne pouvez pas supprimer une audience référencée dans une autre audience. Si vous ne pouvez pas supprimer votre audience, assurez-vous que vous ne l’utilisez **pas** dans les services en aval ou comme bloc de création d’une autre audience.
 
 Vous pouvez placer une audience dans l’état de suppression en ouvrant le menu des actions rapides dans Audience Portal et en sélectionnant [!UICONTROL Supprimer].
 
@@ -203,9 +203,9 @@ Vous pouvez placer une audience dans l’état de suppression en ouvrant le menu
 
 Oui, vous devez tenir compte de certains avertissements lorsque vous utilisez des audiences dans des services en aval tels que Adobe Journey Optimizer ou des audiences non basées sur les clients telles que les audiences basées sur un compte.
 
-À l’heure actuelle, vous **must** vérifier manuellement si l’audience est utilisée en aval dans Adobe Journey Optimizer, car ce statut n’est actuellement pas automatiquement vérifié.
+Actuellement, vous **devez** vérifier manuellement si l’audience est utilisée en aval dans Adobe Journey Optimizer, car ce statut n’est actuellement pas automatiquement vérifié.
 
-En outre, vous pouvez **must** vérifier manuellement si l’audience est utilisée comme composant d’une audience basée sur un compte, car ce statut n’est pas non plus actuellement vérifié automatiquement.
+De plus, vous **devez** vérifier manuellement si l’audience est utilisée comme composant d’une audience basée sur un compte, car ce statut n’est pas actuellement vérifié automatiquement.
 
 ### Que se passe-t-il lorsque je copie une audience ? {#copy}
 
@@ -215,19 +215,19 @@ Lorsque vous copiez une audience, la nouvelle audience se trouve à l’état de
 
 >[!NOTE]
 >
->Une audience parente est une audience qui **uses** une autre audience comme dépendance de l’audience.
+>Une audience parente est une audience que **utilise** une autre audience comme dépendance de l’audience.
 >
->Une audience enfant est une audience qui est **used as** une dépendance pour l’audience.
+>Une audience enfant est une audience **utilisée comme** une dépendance pour l’audience.
 
 Oui, l’utilisation d’une audience en tant qu’audience enfant affecte les états de cycle de vie des transitions que peuvent entreprendre l’audience enfant et parente.
 
-Pour qu’une audience enfant soit déplacée vers l’état publié, l’ensemble de l’audience parent **must** être dans l’état publié. Les audiences parents peuvent être publiées avant la publication de l’audience enfant ou, si l’utilisateur le confirme, peuvent être automatiquement publiées lorsque l’audience enfant est publiée.
+Pour qu’une audience enfant soit déplacée vers l’état publié, l’ensemble de l’audience parent **doit** se trouve dans l’état publié. Les audiences parents peuvent être publiées avant la publication de l’audience enfant ou, si l’utilisateur le confirme, peuvent être automatiquement publiées lorsque l’audience enfant est publiée.
 
-Pour que l’audience parent soit déplacée vers l’état inactif ou supprimé, toutes ses audiences enfants **must** être désactivés ou supprimés.
+Pour que l’audience parent soit déplacée vers l’état inactif ou supprimé, toutes ses audiences enfants **doivent** être désactivées ou supprimées.
 
 ### Puis-je faire référence à une audience dont l’état de cycle de vie est différent ?
 
-Oui! Si votre audience se trouve actuellement à l’état de brouillon, vous pouvez vous référer aux audiences à l’état de brouillon ou de publication. Cependant, pour publier cette audience, vous devez : **must** publiez les autres audiences parentes.
+Oui! Si votre audience se trouve actuellement à l’état de brouillon, vous pouvez vous référer aux audiences à l’état de brouillon ou de publication. Cependant, pour publier cette audience, vous **devez** publier les autres audiences parentes.
 
 ## Inventaire de l’audience
 
@@ -235,23 +235,23 @@ La section suivante répertorie les questions relatives à l’inventaire des au
 
 ### Ai-je besoin d’autorisations supplémentaires pour utiliser les fonctionnalités d’inventaire des audiences ?
 
-Non, ce n&#39;est pas le cas. Tant que vous disposez des autorisations de modification des audiences, vous pouvez créer, mettre à jour et gérer vos dossiers et balises dans le portail Audience. Pour plus d’informations sur la gestion des autorisations, consultez la section [guide de gestion des autorisations](../access-control/ui/permissions.md).
+Non, ce n&#39;est pas le cas. Tant que vous disposez des autorisations de modification des audiences, vous pouvez créer, mettre à jour et gérer vos dossiers et balises dans le portail Audience. Pour plus d’informations sur la gestion des autorisations, consultez le [guide de gestion des autorisations](../access-control/ui/permissions.md).
 
 ### Le nombre de dossiers que je peux créer est-il limité ?
 
-Non, le nombre de dossiers que vous pouvez créer n’est pas limité. Pour plus d’informations sur les dossiers, veuillez lire le [section d’inventaire des audiences](./ui/audience-portal.md#folders) de la présentation de l’interface utilisateur de Segmentation Service.
+Non, le nombre de dossiers que vous pouvez créer n’est pas limité. Pour plus d’informations sur les dossiers, consultez la [section d’inventaire des audiences](./ui/audience-portal.md#folders) de la présentation de l’interface utilisateur de Segmentation Service.
 
 ### Le nombre de balises pouvant être ajoutées à une audience est-il limité ?
 
-Non, il n’existe pas de limite au nombre de balises pouvant être ajoutées à une audience. Pour plus d’informations sur les balises, veuillez lire le [section d’inventaire des audiences](./ui/audience-portal.md#tags) de la présentation de l’interface utilisateur de Segmentation Service.
+Non, il n’existe pas de limite au nombre de balises pouvant être ajoutées à une audience. Pour plus d’informations sur les balises, consultez la [section d’inventaire des audiences](./ui/audience-portal.md#tags) de la présentation de l’interface utilisateur de Segmentation Service.
 
 ### Le nombre de balises que je peux créer est-il limité ?
 
-Non, il n’y a pas de limite au nombre de balises que vous pouvez créer. Cependant, vous pouvez créer un maximum de **100** catégories à appliquer aux balises. Pour plus d’informations sur la gestion des balises, consultez la section [Guide de gestion des balises](../administrative-tags/ui/managing-tags.md).
+Non, il n’y a pas de limite au nombre de balises que vous pouvez créer. Cependant, vous pouvez créer un maximum de catégories **100** à appliquer aux balises. Pour plus d’informations sur la gestion des balises, consultez le [guide de gestion des balises](../administrative-tags/ui/managing-tags.md).
 
 ### Lorsque je recherche une audience par nom ou balise dans un dossier parent, puis-je également effectuer une recherche dans les dossiers enfants associés ?
 
-Non, ce comportement n’est pas pris en charge. Cependant, vous pouvez modifier la vue de l’inventaire de l’audience pour examiner **Toutes les audiences**, puis effectuez une recherche dans tous les dossiers. Pour plus d’informations sur l’utilisation de la recherche dans l’inventaire des audiences, veuillez lire la section [section de recherche](./ui/audience-portal.md#search) de la présentation de l’interface utilisateur de Segmentation Service.
+Non, ce comportement n’est pas pris en charge. Cependant, vous pouvez modifier la vue d’inventaire des audiences pour consulter **Toutes les audiences**, puis effectuer une recherche dans tous les dossiers. Pour plus d’informations sur l’utilisation de la recherche dans l’inventaire des audiences, consultez la [section de recherche](./ui/audience-portal.md#search) de la présentation de l’interface utilisateur de Segmentation Service.
 
 ### Puis-je affecter automatiquement une audience à un dossier au moment de sa création ?
 
@@ -269,15 +269,15 @@ La section suivante répertorie les questions relatives à la composition de l�
 
 La composition de l’audience et le créateur de segments ont des rôles importants dans la création d’audiences dans Platform.
 
-Le créateur de segments est plus adapté à l’audience **création** (pour créer une audience à partir de zéro), tandis que la composition de l’audience est plus adaptée à l’audience **traitement et personnalisation** (pour créer de nouvelles audiences basées sur une audience existante).
+Le créateur de segments est plus adapté à la **création** de l’audience (pour créer une audience à partir de zéro), tandis que la composition de l’audience est plus adaptée à la **conservation et personnalisation** de l’audience (pour créer de nouvelles audiences basées sur une audience existante).
 
 Le tableau suivant illustre la différence entre les deux services :
 
 | Créateur de segments | Composition de l’audience |
 | --------------- | -------------------- |
-| <ul><li>Génération d’audiences à un seul niveau</li><li>Crée les blocs de base d’audiences à partir de données de profil, de séries temporelles et multi-entités.</li><li>Utilisé pour créer **one** audience</li></ul> | <ul><li>Génération d’audiences à plusieurs étapes, à l’aide d’opérations basées sur des ensembles</li><li>Utilise les audiences créées par le créateur de segments et applique les options d’enrichissement de données telles que le classement des attributs de profil et la division en sous-audiences</li><li>Utilisé pour créer **multiple** audiences à la fois</li></ul> |
+| <ul><li>Génération d’audiences à un seul niveau</li><li>Crée les blocs de base d’audiences à partir de données de profil, de séries temporelles et multi-entités.</li><li>Utilisé pour créer une audience **une**</li></ul> | <ul><li>Génération d’audiences à plusieurs étapes, à l’aide d’opérations basées sur des ensembles</li><li>Utilise les audiences créées par le créateur de segments et applique les options d’enrichissement de données telles que le classement des attributs de profil et la division en sous-audiences</li><li>Utilisé pour créer **plusieurs** audiences à la fois</li></ul> |
 
-Pour en savoir plus sur le créateur de segments, veuillez lire le [Guide du créateur de segments](./ui/segment-builder.md). Pour en savoir plus sur la composition de l’audience, veuillez lire le [Guide sur la composition de l’audience](./ui/audience-composition.md).
+Pour en savoir plus sur le créateur de segments, consultez le [guide du créateur de segments](./ui/segment-builder.md). Pour en savoir plus sur la composition de l’audience, consultez le [guide sur la composition de l’audience](./ui/audience-composition.md).
 
 ### Puis-je utiliser des audiences générées en externe dans la composition de l’audience ?
 
@@ -297,19 +297,19 @@ Le placement du composant de composition suit une structure rigide comme suit :
 
 1. Vous commencez **toujours** par le bloc [!UICONTROL Audience] pour sélectionner votre activité de départ. Vous pouvez avoir un maximum d’**un** bloc [!UICONTROL Audience].
 2. Vous pouvez éventuellement ajouter un bloc [!UICONTROL Exclure] qui suit le bloc [!UICONTROL Audience].
-3. Vous pouvez éventuellement ajouter une [!UICONTROL Enrichir] qui suit le bloc [!UICONTROL Exclure] bloque. Vous pouvez uniquement utiliser **one** [!UICONTROL Enrichir] par composition.
+3. Vous pouvez éventuellement ajouter un bloc [!UICONTROL Enrichir] qui suit le bloc [!UICONTROL Exclure]. Vous ne pouvez utiliser que **un** [!UICONTROL bloc Enrichir] par composition.
 4. Vous pouvez éventuellement ajouter un bloc [!UICONTROL Classer] ou [!UICONTROL Partager]. Vous pouvez **uniquement** avoir l’un de ces blocs par composition.
 5. Vous terminez **toujours** par un bloc [!UICONTROL Enregistrer] pour enregistrer votre audience.
 
 En outre, les restrictions suivantes(?) appliquer lors de l’utilisation de ces blocs :
 
 - Bloc de partage
-   - Ce bloc ne prend en charge que **Chaîne** types de données. Le bloc de partage fonctionne **not** prend en charge le type de données date ou booléen.
-   - En outre, ce bloc fait **not** prendre en charge les attributs d’enrichissement.
+   - Ce bloc ne prend en charge que les types de données **String**. Le bloc de partage ne prend **pas** en charge la date ou le type de données booléen.
+   - De plus, ce bloc ne prend pas en charge les attributs d&#39;enrichissement **et non**.
 - Exclure le bloc
-   - Ce bloc fait ce qui suit : **not** prend en charge le type de données date ou booléen.
+   - Ce bloc ne prend **pas** en charge la date ou le type de données booléen.
 - Bloc de classement
-   - Ce bloc fait ce qui suit : **not** prendre en charge les attributs d’enrichissement.
+   - Ce bloc ne prend **pas** en charge les attributs d&#39;enrichissement.
 
 Pour plus d’informations sur l’utilisation de la composition de l’audience, lisez le [Guide de l’interface utilisateur de la composition d’audience](./ui/audience-composition.md).
 
@@ -321,11 +321,11 @@ Une fois l’audience créée, l’évaluation peut prendre jusqu’à 24 heures
 
 ### Quand puis-je utiliser l’audience que j’ai créée ?
 
-L’audience créée dans la composition de l’audience **immédiatement** s’affichent dans Audience Portal. Toutefois, pour l’utiliser dans Adobe Journey Optimizer, vous devez attendre au moins 24 heures après l’évaluation.
+L’audience créée dans la composition de l’audience s’affichera **immédiatement** dans Audience Portal. Toutefois, pour l’utiliser dans Adobe Journey Optimizer, vous devez attendre au moins 24 heures après l’évaluation.
 
 ### Les tâches d’évaluation sont-elles visibles dans la section de surveillance ?
 
-Actuellement, les tâches d’évaluation sont **not** s’affichaient dans l’interface utilisateur de surveillance.
+À l’heure actuelle, les tâches d’évaluation ne sont **pas** affichées dans l’interface utilisateur de surveillance.
 
 ### Puis-je utiliser une composition d’audience dans une autre composition ?
 
@@ -337,11 +337,11 @@ Le fractionnement de l’audience vous permet de sous-définir davantage votre a
 
 En se divisant par attribut, il existe une exclusivité mutuelle entre les groupes. Cela signifie que si un enregistrement répond aux critères de plusieurs chemins de partage, le **premier** chemin à partir de la gauche lui sera attribué et **pas** l’un des autres chemins.
 
-Lors d’une division par pourcentage, les divisions sont **de manière aléatoire** terminé. Cela signifie que les profils seront affectés de manière aléatoire à chaque chemin d’accès. La division **is** persistant, ce qui signifie que le profil sera dans la même sous-audience pour chaque évaluation.
+Lors de la division par pourcentage, les divisions sont **aléatoirement** effectuées. Cela signifie que les profils seront affectés de manière aléatoire à chaque chemin d’accès. La division **est** persistante, ce qui signifie que le profil sera dans la même sous-audience sur chaque évaluation.
 
 >[!NOTE]
 >
->Auparavant, les divisions dans la composition de l’audience étaient **not** persistant.
+>Auparavant, les divisions dans la composition de l’audience étaient **et non** persistantes.
 
 Pour plus d’informations sur le bloc Partage, lisez le [Guide de l’interface utilisateur de composition d’audience](./ui/audience-composition.md#split).
 
@@ -359,17 +359,17 @@ Pour confirmer l’appartenance à l’audience d’un profil, consultez la page
 
 ### Comment la segmentation par lots résout-elle l’appartenance à un profil ?
 
-Les audiences évaluées à l’aide de la segmentation par lots se résolvent tous les jours, les résultats de l’adhésion à l’audience étant enregistrés dans la variable `segmentMembership` attribut. Les recherches de profil génèrent une nouvelle version du profil au moment de la recherche, mais elles le font **not** actualisez les résultats de la segmentation par lots.
+Les audiences évaluées à l’aide de la segmentation par lots se résolvent tous les jours, les résultats de l’adhésion à l’audience étant enregistrés dans l’attribut `segmentMembership` du profil. Les recherches de profil génèrent une nouvelle version du profil au moment de la recherche, mais elles n’actualisent **pas** les résultats de la segmentation par lots.
 
-Par conséquent, lorsque des modifications sont apportées au profil, comme la fusion de deux profils ensemble, ces modifications **will** apparaissent dans le profil lors de la recherche, mais **not** est reflété dans la variable `segmentMembership` jusqu’à ce que la tâche d’évaluation de segment soit exécutée à nouveau.
+Par conséquent, lorsque des modifications sont apportées au profil, par exemple la fusion de deux profils ensemble, ces modifications **apparaissent dans le profil lors de la recherche, mais** not **sont répercutées dans l’attribut `segmentMembership` jusqu’à ce que la tâche d’évaluation de segment soit exécutée à nouveau.**
 
-Par exemple, supposons que vous ayez créé deux audiences mutuellement exclusives : l’audience A est destinée aux personnes qui vivent à Washington et l’audience B est destinée aux personnes qui le font. **not** habite à Washington. Il existe deux profils : le profil 1 pour une personne qui vit à Washington et le profil 2 pour une personne qui vit dans l’Oregon.
+Supposons, par exemple, que vous ayez créé deux audiences mutuellement exclusives : l’audience A est destinée aux personnes qui vivent à Washington et l’audience B est destinée aux personnes qui **ne vivent pas** à Washington. Il existe deux profils : le profil 1 pour une personne qui vit à Washington et le profil 2 pour une personne qui vit dans l’Oregon.
 
 Lorsque la tâche d’évaluation de la segmentation par lots s’exécute, le profil 1 accède à l’audience A, tandis que le profil 2 passe à l’audience B. Plus tard, mais avant que la tâche d’évaluation de la segmentation par lots du lendemain ne s’exécute, un événement qui réconcilie les deux profils entre dans Platform. Par conséquent, un seul profil fusionné contenant les profils 1 et 2 est créé.
 
-Jusqu’à l’exécution de la tâche d’évaluation de segment par lot suivante, le nouveau profil fusionné sera associé à l’audience dans **both** profil 1 et profil 2. Par conséquent, cela signifie qu’il sera membre de **both** Audience A et Audience B, bien que ces audiences aient des définitions contradictoires. Pour l’utilisateur final, il s’agit de la variable **situation identique** comme avant les profils étaient connectés, puisqu&#39;il n&#39;y avait toujours que la seule personne impliquée, et Platform l&#39;a fait. **not** disposer de suffisamment d&#39;informations pour connecter les deux profils.
+Jusqu’à l’exécution de la tâche d’évaluation de segment par lot suivante, le nouveau profil fusionné aura une appartenance à l’audience dans **profile 1} et profile 2.** Par conséquent, cela signifie qu’il sera membre de l’**audience A et de l’audience B, même si ces audiences ont des définitions contradictoires.** Pour l&#39;utilisateur final, il s&#39;agit de la **même situation** qu&#39;avant la connexion des profils, puisqu&#39;il n&#39;y avait toujours qu&#39;une seule personne impliquée, et que Platform n&#39;avait **pas** assez d&#39;informations pour connecter les deux profils ensemble.
 
-Si vous utilisez la recherche de profil pour récupérer le profil nouvellement créé et examinez son appartenance à l’audience, elle indique qu’il est membre de **both** Audience A et Audience B, bien que ces deux audiences aient des définitions contradictoires. Une fois la tâche d’évaluation de la segmentation par lots exécutée quotidiennement, l’appartenance à l’audience est mise à jour pour refléter cet état mis à jour des données de profil.
+Si vous utilisez la recherche de profil pour récupérer le profil nouvellement créé et examinez son appartenance à l’audience, elle montrera qu’elle est membre de **à la fois** Audience A et Audience B, bien que ces deux audiences aient des définitions contradictoires. Une fois la tâche d’évaluation de la segmentation par lots exécutée quotidiennement, l’appartenance à l’audience est mise à jour pour refléter cet état mis à jour des données de profil.
 
 Si vous avez besoin d’une résolution d’audience plus élevée en temps réel, utilisez la segmentation par flux ou en périphérie.
 
@@ -377,5 +377,5 @@ Si vous avez besoin d’une résolution d’audience plus élevée en temps rée
 
 Il peut s’écouler jusqu’à trois heures avant que les données en continu ne soient disponibles dans les workflows de segmentation par lots.
 
-Par exemple, si une tâche de segmentation par lots s’exécute à 21 h, elle contient certainement des données ingérées par flux. **jusqu’à** 18 heures. Diffusion en continu des données ingérées après 18h00 et avant 21h00 **may** être inclus.
+Par exemple, si une tâche de segmentation par lots s’exécute à 21 h, elle contient certainement des données ingérées par flux **jusqu’à** 18 h. La diffusion en continu des données ingérées après 18h00 mais avant 21h00 **may** doit être incluse.
 

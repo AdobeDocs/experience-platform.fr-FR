@@ -1,5 +1,5 @@
 ---
-title: Création d’une connexion PubSub-Source Google dans l’interface utilisateur
+title: Création d’une connexion Google PubSub Source dans l’interface utilisateur
 description: Découvrez comment créer un connecteur source Google PubSub à l’aide de l’interface utilisateur de Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
@@ -14,7 +14,7 @@ ht-degree: 36%
 
 >[!IMPORTANT]
 >
->La variable [!DNL Google PubSub] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+>La source [!DNL Google PubSub] est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-Time Customer Data Platform Ultimate.
 
 Ce tutoriel décrit les étapes à suivre pour créer une connexion de source [!DNL Google PubSub] (ci-après dénommée « [!DNL PubSub] ») à l’aide de l’interface utilisateur de Platform.
 
@@ -29,7 +29,7 @@ Si vous disposez déjà d’une connexion [!DNL PubSub] valide, vous pouvez igno
 
 ### Collecter les informations d’identification requises
 
-Pour connecter votre [!DNL PubSub] compte à Experience Platform. Pour plus d’informations sur l’authentification et la configuration des prérequis, consultez la section [[!DNL PubSub source] aperçu](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
+Vous devez fournir des valeurs pour les propriétés de connexion décrites ci-dessous afin de connecter votre compte [!DNL PubSub] à Experience Platform. Pour plus d’informations sur l’authentification et la configuration des prérequis, consultez la [[!DNL PubSub source] présentation](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
 
 
 >[!BEGINTABS]
@@ -41,13 +41,13 @@ Pour connecter votre [!DNL PubSub] compte à Experience Platform. Pour plus d’
 | Identifiant de projet | Identifiant de projet requis pour authentifier [!DNL PubSub]. |
 | Informations d’identification | Informations d’identification requises pour l’authentification [!DNL PubSub]. Vous devez vous assurer de placer l’intégralité du fichier JSON après avoir supprimé les espaces blancs de vos informations d’identification. |
 
->[!TAB Authentification par thème et par abonnement]
+>[!TAB  Authentification par sujet et par abonnement ]
 
 | Informations d’identification | Description |
 | --- | --- |
 | Informations d’identification | Informations d’identification requises pour l’authentification [!DNL PubSub]. Vous devez vous assurer de placer l’intégralité du fichier JSON après avoir supprimé les espaces blancs de vos informations d’identification. |
-| Nom de la rubrique | Le nom de votre [!DNL PubSub] abonnement. Dans [!DNL PubSub], les abonnements permettent de recevoir des messages, en s’abonnant à la rubrique sur laquelle les messages ont été publiés. **Remarque**: une seule [!DNL PubSub] abonnement ne peut être utilisé que pour un seul flux de données. Pour créer plusieurs flux de données, vous devez disposer de plusieurs abonnements. |
-| Nom de l’abonnement | Le nom de votre [!DNL PubSub] abonnement. Dans [!DNL PubSub], les abonnements permettent de recevoir des messages, en s’abonnant à la rubrique sur laquelle les messages ont été publiés. |
+| Nom de la rubrique | Nom de votre abonnement [!DNL PubSub]. Dans [!DNL PubSub], les abonnements permettent de recevoir des messages, en s’abonnant à la rubrique vers laquelle les messages ont été publiés. **Remarque** : un seul abonnement [!DNL PubSub] ne peut être utilisé que pour un seul flux de données. Pour créer plusieurs flux de données, vous devez disposer de plusieurs abonnements. |
+| Nom d&#39;abonnement | Nom de votre abonnement [!DNL PubSub]. Dans [!DNL PubSub], les abonnements permettent de recevoir des messages, en s’abonnant à la rubrique vers laquelle les messages ont été publiés. |
 
 >[!ENDTABS]
 
@@ -61,7 +61,7 @@ Une fois que vous avez rassemblé les informations d’identification requises, 
 
 ## Connecter votre compte [!DNL PubSub]
 
-Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. La variable [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
+Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. L’écran [!UICONTROL Catalogue] affiche diverses sources avec lesquelles vous pouvez créer un compte.
 
 Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
@@ -82,49 +82,49 @@ Pour utiliser un compte existant, sélectionnez le compte [!DNL PubSub] avec leq
 >[!TIP]
 >
 >* Lors de la création d’un compte avec accès restreint, vous devez indiquer au moins un nom de rubrique ou d’abonnement. L’authentification échoue si les deux valeurs sont manquantes.
->* Une fois créée, vous ne pouvez pas modifier le type d&#39;authentification d&#39;un [!DNL Google PubSub] connexion de base. Pour modifier le type d&#39;authentification, vous devez créer une nouvelle connexion de base.
+>* Une fois créé, vous ne pouvez pas modifier le type d&#39;authentification d&#39;une connexion de base [!DNL Google PubSub]. Pour modifier le type d&#39;authentification, vous devez créer une nouvelle connexion de base.
 
-Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom et une description facultative de votre nouvelle [!DNL PubSub] compte .
+Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom et une description facultative de votre nouveau compte [!DNL PubSub].
 
-![Nouvelle interface de compte pour Google PubSub dans le processus des sources](../../../../images/tutorials/create/google-pubsub/new.png)
+![Nouvelle interface de compte pour Google PubSub-source dans le processus des sources](../../../../images/tutorials/create/google-pubsub/new.png)
 
-La variable [!DNL PubSub] source vous permet de spécifier le type d’accès que vous souhaitez autoriser lors de l’authentification. Vous pouvez configurer votre compte pour qu’il dispose d’une authentification basée sur le projet ou d’une authentification par rubrique et par abonnement. L’authentification basée sur un projet vous permet d’accorder l’accès au projet racine dans votre compte, tandis que l’authentification par rubrique et par abonnement vous permet de restreindre l’accès à un [!DNL PubSub] rubrique et abonnement.
+La source [!DNL PubSub] vous permet de spécifier le type d’accès que vous souhaitez autoriser lors de l’authentification. Vous pouvez configurer votre compte pour qu’il dispose d’une authentification basée sur le projet ou d’une authentification par rubrique et par abonnement. L’authentification basée sur un projet vous permet d’accorder l’accès au projet racine dans votre compte, tandis que l’authentification par rubrique et par abonnement vous permet de restreindre l’accès à une rubrique et à un abonnement [!DNL PubSub] spécifiques.
 
 >[!BEGINTABS]
 
 >[!TAB Authentification basée sur un projet]
 
-Pour créer un compte ayant accès à la racine [!DNL PubSub] dossier du projet. Sélectionner **[!UICONTROL Identifiants d’authentification Google PubSub]** comme type d’authentification et fournissez votre ID de projet et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
+Pour créer un compte ayant accès au dossier du projet [!DNL PubSub] racine. Sélectionnez les **[!UICONTROL informations d’authentification PubSub de Google]** comme type d’authentification et fournissez votre ID de projet et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
 ![Nouvelle interface de compte pour le PubSub Google avec accès racine sélectionné.](../../../../images/tutorials/create/google-pubsub/root.png)
 
->[!TAB Authentification par thème et par abonnement]
+>[!TAB  Authentification par sujet et par abonnement ]
 
-Pour créer un compte avec accès limité uniquement à un [!DNL PubSub] rubrique et abonnement, sélectionnez **[!UICONTROL Informations d’identification d’authentification de Google PubSub]** et indiquez ensuite vos informations d’identification, nom de rubrique et/ou nom d’abonnement. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
+Pour créer un compte avec un accès limité uniquement à une rubrique et à un abonnement [!DNL PubSub] spécifiques, sélectionnez **[!UICONTROL Informations d’authentification Google PubSub Scoped]** , puis fournissez vos informations d’identification, le nom de la rubrique et/ou le nom de l’abonnement. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
-![Nouvelle interface de compte pour la sous-source de publication Google avec accès limité sélectionné.](../../../../images/tutorials/create/google-pubsub/scoped.png)
+![Nouvelle interface de compte pour la sous-source de publication Google avec accès étendu sélectionné.](../../../../images/tutorials/create/google-pubsub/scoped.png)
 
 >[!ENDTABS]
 
 >[!NOTE]
 >
->Entité de sécurité (rôles) affectée à une [!DNL PubSub] les projets sont hérités dans toutes les rubriques et tous les abonnements créés dans une [!DNL PubSub] projet. Si vous souhaitez qu’une entité (rôle) ait accès à une rubrique spécifique, cette entité (rôle) doit également être ajoutée à l’abonnement correspondant à la rubrique. Pour plus d’informations, consultez la section [[!DNL PubSub] documentation sur le contrôle d’accès](<https://cloud.google.com/pubsub/docs/access-control>).
+>Les entités de sécurité (rôles) affectées à un projet [!DNL PubSub] sont héritées dans toutes les rubriques et tous les abonnements créés dans un projet [!DNL PubSub]. Si vous souhaitez qu’une entité (rôle) ait accès à une rubrique spécifique, cette entité (rôle) doit également être ajoutée à l’abonnement correspondant à la rubrique. Pour plus d’informations, consultez la [[!DNL PubSub] documentation sur le contrôle d’accès](<https://cloud.google.com/pubsub/docs/access-control>).
 
 ## Sélectionner les données
 
-Une authentification réussie vous permet d’accéder au [!UICONTROL Sélectionner des données] , où vous pouvez naviguer dans votre [!DNL PubSub] hiérarchie des données et sélectionnez les données à importer dans Experience Platform.
+Une authentification réussie vous amène à l’étape [!UICONTROL Sélectionner les données], où vous pouvez parcourir votre hiérarchie de données [!DNL PubSub] et sélectionner les données à importer dans Experience Platform.
 
 >[!BEGINTABS]
 
 >[!TAB Authentification basée sur un projet]
 
-Si vous vous êtes authentifié avec un accès basé sur un projet, la variable [!UICONTROL Sélectionner des données] L’interface affiche tous les abonnements au sein de votre projet auxquels est associée une rubrique.
+Si vous vous êtes authentifié avec un accès basé sur un projet, l’interface [!UICONTROL Sélectionner les données] affichera tous les abonnements de votre projet auxquels est associée une rubrique.
 
 ![L’étape de sélection des données du workflow des sources avec authentification basée sur le projet.](../../../../images/tutorials/create/google-pubsub/root-folders.png)
 
->[!TAB Authentification par thème et par abonnement]
+>[!TAB  Authentification par sujet et par abonnement ]
 
-Si vous vous êtes authentifié avec une rubrique et un accès par abonnement, la variable [!UICONTROL Sélectionner des données] l’affichage de l’interface peut varier en fonction des informations que vous avez fournies.
+Si vous vous êtes authentifié avec un accès par rubrique et par abonnement, l’affichage de l’interface [!UICONTROL Sélectionner les données] peut varier en fonction des informations que vous avez fournies.
 
 * Si vous indiquez uniquement le nom de la rubrique, l’interface affiche toutes les paires rubrique-abonnement qui correspondent à la rubrique fournie.
 * Si vous fournissez uniquement le nom de l’abonnement, l’interface affiche toutes les paires rubrique-abonnement qui correspondent au nom d’abonnement fourni.
@@ -136,4 +136,4 @@ Si vous vous êtes authentifié avec une rubrique et un accès par abonnement, l
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé une connexion entre votre [!DNL PubSub] compte et plateforme. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données de diffusion en continu depuis votre espace de stockage dans Platform](../../dataflow/streaming/cloud-storage-streaming.md).
+En suivant ce tutoriel, vous avez créé une connexion entre votre compte [!DNL PubSub] et Platform. Vous pouvez maintenant passer au tutoriel suivant et [configurer un flux de données pour importer des données de diffusion en continu depuis votre espace de stockage dans Platform](../../dataflow/streaming/cloud-storage-streaming.md).

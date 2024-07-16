@@ -7,7 +7,7 @@ role: Developer
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '61'
-ht-degree: 95%
+ht-degree: 96%
 
 ---
 
@@ -27,4 +27,4 @@ ht-degree: 95%
 - [Jeux de mappages](mapping-set.md)
 - [Améliorations apportées aux diffusions](upserts.md)
 - [Guide de dépannage](troubleshooting-guide.md)
-- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

@@ -6,7 +6,7 @@ description: Adobe Experience Platform s’engage à fournir des fonctionnalit
 exl-id: 54ce6826-09ee-4716-8237-ef904a41986f
 source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '307'
 ht-degree: 100%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 100%
 
 L’accessibilité fait référence à une série de fonctionnalités qui rendent un produit logiciel utilisable, avec le moins d’effort possible, par des utilisateurs présentant un handicap visuel, auditif, cognitif, moteur ou autre. Leader du secteur en matière d’accessibilité, Adobe soutient la création d’expériences web exceptionnelles en encourageant les développeurs à produire du contenu riche et attrayant accessible à tous les utilisateurs. Pour plus d’informations sur l’engagement d’Adobe en matière d’accessibilité, consultez la section [Accessibilité d’Adobe](https://www.adobe.com/accessibility.html).
 
-Adobe Experience Platform s’engage à fournir des fonctionnalités accessibles et inclusives à tous les individus, y compris les utilisateurs ayant recours à des dispositifs d’assistance tels que des logiciels de reconnaissance vocale et des lecteurs d’écran. Experience Platform est continuellement amélioré pour répondre aux besoins de tous les types d’utilisateurs et applique les normes internationales afin d’inclure les personnes atteintes d’une déficience visuelle ou auditive, souffrant de mobilité réduite ou autre.
+Adobe Experience Platform s’engage à fournir des fonctionnalités accessibles et inclusives à tous les individus, y compris les utilisateurs ayant recours à des appareils d’assistance tels que des logiciels de reconnaissance vocale et des lecteurs d’écran. Experience Platform est continuellement amélioré pour répondre aux besoins de tous les types d’utilisateurs et applique les normes internationales afin d’inclure les personnes atteintes d’une déficience visuelle ou auditive, souffrant de mobilité réduite ou autre.
 
 Les autres fonctionnalités d’accessibilité prises en charge par Platform incluent la navigation au clavier, la structure sémantique, un contraste suffisant entre les éléments de premier plan et les éléments d’arrière-plan, la prise en charge des technologies d’assistance ainsi que des libellés d’éléments clairs.
 

@@ -6,7 +6,7 @@ description: Découvrez comment connecter Zoho CRM à Adobe Experience Platfo
 exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '496'
 ht-degree: 100%
 
 ---

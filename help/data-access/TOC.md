@@ -8,7 +8,7 @@ role: Developer
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '35'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -19,4 +19,4 @@ ht-degree: 97%
 - [API Data Access](api.md)
 - Tutoriels {#tutorials}
    - [Affichage des données du jeu de données](tutorials/dataset-data.md)
-- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

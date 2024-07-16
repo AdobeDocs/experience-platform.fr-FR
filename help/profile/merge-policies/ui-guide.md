@@ -6,7 +6,7 @@ description: Lorsque vous rassemblez des données provenant de plusieurs sources
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
 workflow-type: tm+mt
-source-wordcount: '2320'
+source-wordcount: '2327'
 ht-degree: 91%
 
 ---
@@ -25,7 +25,7 @@ Pour en savoir plus sur les politiques de fusion et le rôle qu’elles jouent d
 Ce guide nécessite une compréhension pratique de plusieurs fonctions [!DNL Experience Platform] importantes. Avant de lire ce guide d’utilisation, veuillez consulter la documentation relative aux services suivants :
 
 * [Profil client en temps réel](../home.md) : fournit un profil client en temps réel unifié basé sur des données agrégées issues de plusieurs sources.
-* [Service Adobe Experience Platform Identity](../../identity-service/home.md): active Real-time Customer Profile en rapprochant des identités de sources de données disparates ingérées dans [!DNL Platform].
+* [Service Adobe Experience Platform Identity](../../identity-service/home.md) : active Real-time Customer Profile en rapprochant des identités de sources de données disparates ingérées dans [!DNL Platform].
 * [Modèle de données d’expérience (XDM)](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données d’expérience client.
 
 ## Affichage des politiques de fusion {#view-merge-policies}
@@ -59,7 +59,7 @@ La première étape du workflow vous permet de configurer votre stratégie de fu
    * **[!UICONTROL Graphique privé]** : réalise des combinaisons d’identités basées sur votre graphique d’identités privé.
 * **[!UICONTROL Politique de fusion par défaut]** : un bouton de basculement qui vous permet de sélectionner cette politique de fusion ou non comme politique par défaut pour votre organisation. Si le sélecteur est activé, un avertissement s’affiche vous demandant de confirmer que vous souhaitez modifier la politique de fusion par défaut de votre organisation. Voir la [présentation des politiques de fusion](overview.md) pour en savoir plus sur les politiques de fusion par défaut.
   ![](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Politique de fusion Active-On-Edge]** : bouton de basculement qui vous permet de choisir si cette politique de fusion sera Active-On-Edge (active sur le bord). Pour garantir que tous les consommateurs de profils utilisent la même vue sur les bords, les politiques de fusion peuvent être marquées comme Active-on-Edge (actives sur le bord). Pour qu’une audience soit activée en périphérie (indiquée comme audience en périphérie), elle doit être liée à une stratégie de fusion marquée comme active en périphérie. Si une audience est **not** liée à une stratégie de fusion marquée comme étant active sur Edge, l’audience ne sera pas marquée comme active sur Edge et sera marquée comme une audience en continu. En outre, chaque environnement de test d’une organisation ne peut avoir que des **one** stratégie de fusion active sur Edge.
+* **[!UICONTROL Politique de fusion Active-On-Edge]** : bouton de basculement qui vous permet de choisir si cette politique de fusion sera Active-On-Edge (active sur le bord). Pour garantir que tous les consommateurs de profils utilisent la même vue sur les bords, les politiques de fusion peuvent être marquées comme Active-on-Edge (actives sur le bord). Pour qu’une audience soit activée en périphérie (indiquée comme audience en périphérie), elle doit être liée à une stratégie de fusion marquée comme active en périphérie. Si une audience est **et non** liée à une stratégie de fusion marquée comme active sur le serveur Edge, l’audience ne sera pas marquée comme active sur le serveur Edge et sera marquée comme une audience en continu. De plus, chaque environnement de test d’une organisation ne peut avoir qu’une stratégie de fusion **one** active sur le serveur Edge.
 
 Une fois les champs obligatoires renseignés, vous pouvez sélectionner **[!UICONTROL Suivant]** pour poursuivre le workflow.
 
@@ -193,7 +193,7 @@ Une fois les modifications nécessaires effectuées, examinez votre politique de
 
 ## Violations de la politique de gouvernance des données
 
-Lors de la création ou de la mise à jour d’une stratégie de fusion, une vérification est effectuée pour déterminer si la politique de fusion enfreint l’une des stratégies en matière d’utilisation des données définies par votre organisation. Les politiques d’utilisation des données font partie de la gouvernance des données d’Adobe Experience Platform et sont des règles qui décrivent les types d’action marketing que vous êtes autorisé à réaliser ou dont la réalisation est limitée sur certaines données de [!DNL Platform]. Par exemple, si une stratégie de fusion a été utilisée pour créer une audience qui est activée vers une destination tierce et que votre organisation dispose d’une stratégie d’utilisation des données empêchant l’exportation de données spécifiques vers des tiers, vous recevrez une **[!UICONTROL Violation de la politique de gouvernance des données détectée]** lorsque vous tentez d’enregistrer votre stratégie de fusion.
+Lors de la création ou de la mise à jour d’une stratégie de fusion, une vérification est effectuée pour déterminer si la politique de fusion enfreint l’une des stratégies en matière d’utilisation des données définies par votre organisation. Les politiques d’utilisation des données font partie de la gouvernance des données d’Adobe Experience Platform et sont des règles qui décrivent les types d’action marketing que vous êtes autorisé à réaliser ou dont la réalisation est limitée sur certaines données de [!DNL Platform]. Par exemple, si une stratégie de fusion a été utilisée pour créer une audience qui est activée vers une destination tierce et que votre organisation dispose d’une stratégie d’utilisation des données empêchant l’exportation de données spécifiques vers des tiers, vous recevrez une notification **[!UICONTROL Violations de la stratégie de gouvernance des données détectée]** lorsque vous tentez d’enregistrer votre stratégie de fusion.
 
 Cette notification inclut une liste des politiques d’utilisation des données ayant été enfreintes et vous permet de consulter les détails de la violation en sélectionnant une politique depuis la liste. Si vous avez sélectionné une politique ayant fait lʼobjet dʼune infraction, lʼonglet **[!UICONTROL Liaison des données]** fournit un motif de violation et les activations concernées, chacun fournissant plus de détails sur la manière dont la politique dʼutilisation des données a été enfreinte.
 
@@ -203,4 +203,4 @@ Pour en savoir plus sur la manière dont la gouvernance des données est réalis
 
 ## Étapes suivantes
 
-Maintenant que vous avez créé et configuré des stratégies de fusion pour votre organisation, vous pouvez les utiliser pour ajuster l’affichage des profils clients dans Platform et pour créer des audiences à partir de vos données de profil. Voir [présentation de la segmentation](../../segmentation/home.md) pour plus d’informations sur la création et l’utilisation d’audiences à l’aide du [!DNL Experience Platform] Interface utilisateur et API.
+Maintenant que vous avez créé et configuré des stratégies de fusion pour votre organisation, vous pouvez les utiliser pour ajuster l’affichage des profils clients dans Platform et pour créer des audiences à partir de vos données de profil. Pour plus d’informations sur la création et l’utilisation d’audiences à l’aide de l’interface utilisateur et des API [!DNL Experience Platform], consultez la [présentation de la segmentation](../../segmentation/home.md) .

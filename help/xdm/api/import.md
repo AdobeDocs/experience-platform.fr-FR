@@ -4,29 +4,29 @@ description: Le point de terminaison /import de l’API Schema Registry vous per
 exl-id: 30613535-4770-4f9c-9061-8e3efaf4de48
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 18%
+source-wordcount: '288'
+ht-degree: 17%
 
 ---
 
 # Point de terminaison d’importation
 
-Le `/rpc/import` du point de terminaison [!DNL Schema Registry] L’API vous permet de créer des ressources de modèle de données d’expérience (XDM) à partir de payloads d’exportation générés. Les payloads d’exportation peuvent être créés à partir de deux sources :
+Le point d’entrée `/rpc/import` de l’API [!DNL Schema Registry] vous permet de créer des ressources de modèle de données d’expérience (XDM) à partir des charges d’exportation générées. Les payloads d’exportation peuvent être créés à partir de deux sources :
 
-* Le [`/rpc/export` endpoint](./export.md) crée des payloads d’exportation à partir de ressources XDM existantes, ce qui vous permet de partager des ressources entre environnements de test.
-* Le [`/rpc/csv2schema` endpoint](./csv-to-schema.md) crée des payloads d’exportation à partir de modèles CSV.
+* Le point d’entrée [`/rpc/export` ](./export.md) crée des payloads d’exportation à partir de ressources XDM existantes, ce qui vous permet de partager des ressources entre environnements de test.
+* Le point d’entrée [`/rpc/csv2schema` ](./csv-to-schema.md) crée des payloads d’exportation à partir de modèles CSV.
 
-Une fois que vous avez créé une payload d’exportation, vous pouvez utiliser la variable `/rpc/import` point de terminaison pour générer la ressource (et toutes les ressources dépendantes) dans l’environnement de test de votre choix.
+Une fois que vous avez créé une payload d’exportation, vous pouvez utiliser le point de terminaison `/rpc/import` pour générer la ressource (et toutes les ressources dépendantes) dans l’environnement de test de votre choix.
 
-## Prise en main
+## Commencer
 
-Le `/rpc/import` Le point de terminaison fait partie de la variable [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Le point d’entrée `/rpc/import` fait partie de l’ [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
-Le `/rpc/import` Le point d’entrée fait partie des appels de procédure distants (RPC) pris en charge par la fonction [!DNL Schema Registry]. Contrairement aux autres points de terminaison dans la variable [!DNL Schema Registry] API, les points de terminaison RPC ne nécessitent pas d’en-têtes supplémentaires comme `Accept` ou `Content-Type`, et n’utilisez pas d’événement `CONTAINER_ID`. Ils doivent plutôt utiliser la variable `/rpc` , comme illustré dans les appels API ci-dessous.
+Le point d’entrée `/rpc/import` fait partie des appels de procédure distante (RPC) pris en charge par [!DNL Schema Registry]. Contrairement à d’autres points de terminaison dans l’API [!DNL Schema Registry], les points de terminaison RPC ne nécessitent pas d’en-têtes supplémentaires tels que `Accept` ou `Content-Type` et n’utilisent pas un `CONTAINER_ID`. Au lieu de cela, ils doivent utiliser l’espace de noms `/rpc`, comme illustré dans les appels API ci-dessous.
 
 ## Importer une ressource {#import}
 
-Une fois que vous avez généré un payload d’exportation pour une ressource XDM, vous pouvez utiliser ce payload dans une requête de POST à la fonction `/import` point de terminaison pour importer cette ressource dans une organisation cible et un environnement de test.
+Une fois que vous avez généré un payload d’exportation pour une ressource XDM, vous pouvez utiliser ce payload dans une requête de POST sur le point de terminaison `/import` pour importer cette ressource dans une organisation cible et un environnement de test.
 
 **Format d’API**
 
@@ -36,7 +36,7 @@ POST /rpc/import
 
 **Requête**
 
-La requête suivante utilise la charge utile renvoyée par un appel à la fonction [`/rpc/export` endpoint](./export.md) pour importer un groupe de champs (`Restaurant`) dans une nouvelle organisation et un nouvel environnement de test, comme déterminé par la variable `x-gw-ims-org-id` et `x-sandbox-name` en-têtes, respectivement.
+La requête suivante utilise la charge utile renvoyée par un appel au point de terminaison [`/rpc/export`](./export.md) pour importer un groupe de champs (`Restaurant`) dans une nouvelle organisation et un nouvel environnement de test, comme déterminé par les en-têtes `x-gw-ims-org-id` et `x-sandbox-name` respectivement.
 
 ```shell
 curl -X POST \

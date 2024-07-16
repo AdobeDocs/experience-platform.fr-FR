@@ -15,23 +15,23 @@ ht-degree: 27%
 
 >[!NOTE]
 >
->La variable [!DNL Acxiom Prospect-Suppression] destination est en version bêta. Ce connecteur de destination et cette page de documentation sont créés et conservés par l’équipe d’Acxiom. Pour toute demande d&#39;information ou de mise à jour, contactez-les directement à l&#39;adresse acxiom-adobe-help@acxiom.com.
+>La destination [!DNL Acxiom Prospect-Suppression] est en version bêta. Ce connecteur de destination et cette page de documentation sont créés et conservés par l’équipe d’Acxiom. Pour toute demande d&#39;information ou de mise à jour, contactez-les directement à l&#39;adresse acxiom-adobe-help@acxiom.com.
 
 ## Vue d’ensemble {#overview}
 
-Utilisation [!DNL Acxiom Prospect-Suppression] pour fournir les audiences de prospects les plus productives possible. Ce connecteur exporte en toute sécurité des données propriétaires à partir de Real-Time Customer Data Platform et les exécute via une résolution d’identité et d’hygiène primée qui produit un fichier de données à utiliser comme liste de suppression. Cela sera comparé au [!DNL Acxiom Global] qui permet de personnaliser les listes de prospects pour les importer. Ensuite, utilisez le [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) le connecteur source vers les listes de prospects d’Acxiom vers Real-Time CDP, avec vos clients connus ou convertis supprimés.
+Utilisez [!DNL Acxiom Prospect-Suppression] pour fournir les audiences de prospects les plus productives possible. Ce connecteur exporte en toute sécurité des données propriétaires à partir de Real-Time Customer Data Platform et les exécute via une résolution d’identité et d’hygiène primée qui produit un fichier de données à utiliser comme liste de suppression. Cela sera comparé à la base de données [!DNL Acxiom Global] qui permet aux listes de prospects d&#39;être personnalisées pour l&#39;import. Ensuite, utilisez le connecteur source [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) pour créer des listes de prospects d’Acxiom vers Real-Time CDP, avec vos clients connus ou convertis supprimés.
 
-![Diagramme marketing permettant d’exporter des données propriétaires vers Acxiom, puis de réimporter des données de prospects dans Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow.png)
+![Diagramme marketing pour exporter des données propriétaires vers Acxiom, puis réimporter des données de prospects dans Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow.png)
 
 Acxiom propose les audiences les plus performantes du secteur avec le plus grand catalogue de plus de 12 000 attributs de données globaux spécifiquement axés sur la fourniture d’expériences personnalisées. Appuyez sur des combinaisons illimitées de données de haute qualité pour créer et distribuer des audiences afin de répondre à des besoins de campagne spécifiques.
 
-Ce tutoriel décrit les étapes à suivre pour créer une [!DNL Acxiom Prospect-Suppression] connexion de destination et flux de données à l’aide de l’interface utilisateur de Adobe Experience Platform. Ce connecteur est utilisé pour diffuser des données vers le service prospect Acxiom à l’aide d’Amazon S3 comme point de dépôt. Contactez votre gestionnaire de compte Acxiom lorsque vous commencez à exporter des fichiers vers le point de dépôt Amazon S3.
+Ce tutoriel décrit les étapes à suivre pour créer une connexion de destination [!DNL Acxiom Prospect-Suppression] et un flux de données à l’aide de l’interface utilisateur de Adobe Experience Platform. Ce connecteur est utilisé pour diffuser des données vers le service prospect Acxiom à l’aide d’Amazon S3 comme point de dépôt. Contactez votre gestionnaire de compte Acxiom lorsque vous commencez à exporter des fichiers vers le point de dépôt Amazon S3.
 
-![Le catalogue des destinations avec la destination Acxiom sélectionnée.](../../assets/catalog/data-partner/acxiom/image-destination-catalog.png)
+![Catalogue de destinations avec la destination Acxiom sélectionnée.](../../assets/catalog/data-partner/acxiom/image-destination-catalog.png)
 
 ## Cas d’utilisation {#use-cases}
 
-Pour mieux comprendre comment et à quel moment utiliser la variable [!DNL Acxiom Prospect-Suppression] destination, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
+Pour vous aider à mieux comprendre comment et à quel moment utiliser la destination [!DNL Acxiom Prospect-Suppression], voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 
 ### Création d’une liste de suppression pour les jeux de données de prospection {#create-suppression-list}
 
@@ -43,14 +43,14 @@ Le cas d’utilisation est exécuté par une combinaison de connecteurs source e
 
 Vous commencez par exporter vos profils clients existants à l’aide de ce connecteur de destination à utiliser comme fichier de suppression. Cela permet de s’assurer qu’aucun enregistrement de client existant n’est inclus.
 
-Le service d’Acxiom recherche le fichier, le récupère et l’utilise avec d’autres critères de sélection et génère un fichier de prospect. Vous utiliserez alors la variable [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) connecteur source pour ingérer les profils de prospect dans Adobe Real-Time CDP.
+Le service d’Acxiom recherche le fichier, le récupère et l’utilise avec d’autres critères de sélection et génère un fichier de prospect. Vous utiliserez ensuite le connecteur source [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) correspondant pour ingérer les profils de prospect dans Adobe Real-Time CDP.
 
 ## Conditions préalables {#prerequisites}
 
 >[!IMPORTANT]
 >
->* Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter *identités*, vous avez besoin de la fonction **[!UICONTROL Affichage du graphique des identités]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour vous connecter à la destination, vous avez besoin des **[!UICONTROL vues des destinations]** et **[!UICONTROL Gérer les destinations]**, **[!UICONTROL activer les destinations]**, **[!UICONTROL afficher les profils]** et **[!UICONTROL afficher les segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous avez besoin de l&#39;autorisation **[!UICONTROL Afficher le graphique d&#39;identités]** [ ](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 ## Audiences prises en charge {#supported-audiences}
 
@@ -79,7 +79,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 > 
->Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion des destinations]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin des **** et des **** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -91,9 +91,9 @@ Pour accéder à votre compartiment sur Experience Platform, vous devez fournir 
 
 | Informations d’identification | Description |
 |---------------|----------------------------------------------------------------------------------------------------------|
-| Clé d’accès S3 | Identifiant de la clé d’accès pour votre compartiment. Vous pouvez récupérer cette valeur à partir de la variable [!DNL Acxiom] l&#39;équipe. |
-| Clé secrète S3 | Identifiant de clé secrète pour votre compartiment. Vous pouvez récupérer cette valeur à partir de la variable [!DNL Acxiom] l&#39;équipe. |
-| Nom du compartiment | Il s’agit de votre compartiment où les fichiers seront partagés. Vous pouvez récupérer cette valeur à partir de la variable [!DNL Acxiom] l&#39;équipe. |
+| Clé d’accès S3 | Identifiant de la clé d’accès pour votre compartiment. Vous pouvez récupérer cette valeur de l’équipe [!DNL Acxiom]. |
+| Clé secrète S3 | Identifiant de clé secrète pour votre compartiment. Vous pouvez récupérer cette valeur de l’équipe [!DNL Acxiom]. |
+| Nom du compartiment | Il s’agit de votre compartiment où les fichiers seront partagés. Vous pouvez récupérer cette valeur de l’équipe [!DNL Acxiom]. |
 
 ### Nouveau compte
 
@@ -103,7 +103,7 @@ Pour définir un nouvel emplacement Acxiom Managed S3 :
 
 ### Compte existant
 
-Comptes déjà définis à l’aide de la variable [!DNL Acxiom Prospect Suppression] La destination apparaît dans une fenêtre contextuelle de liste. Lorsque cette option est sélectionnée, les détails du compte s’affichent dans le rail de droite. Affichez l’exemple dans l’interface utilisateur lorsque vous accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Comptes]**:
+Les comptes déjà définis à l’aide de la destination [!DNL Acxiom Prospect Suppression] apparaissent dans une fenêtre contextuelle de liste. Lorsque cette option est sélectionnée, les détails du compte s’affichent dans le rail de droite. Affichez l’exemple dans l’interface utilisateur lorsque vous accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Comptes]** :
 
 ![Compte existant](../../assets/catalog/data-partner/acxiom/image-destination-account.png)
 
@@ -111,17 +111,17 @@ Comptes déjà définis à l’aide de la variable [!DNL Acxiom Prospect Suppres
 
 Pour configurer les détails de la destination, renseignez les champs obligatoires et facultatifs ci-dessous. Un astérisque situé en regard d’un champ de l’interface utilisateur indique que le champ est obligatoire.
 
-![Détails de la destination](../../assets/catalog/data-partner/acxiom/image-destination-details.png)
+![Détail de la destination](../../assets/catalog/data-partner/acxiom/image-destination-details.png)
 
-* **Nom (obligatoire)** : nom sous lequel la destination sera enregistrée.
+* **Nom (obligatoire)** - Nom sous lequel la destination sera enregistrée.
 * **Description** - brève explication de l’objectif de la destination
 * **Nom du compartiment (obligatoire)** - Nom du compartiment Amazon S3 configuré sur S3
-* **Chemin d’accès au dossier (requis)** - Si des sous-répertoires d’un compartiment sont utilisés, un chemin doit être défini ou &quot;/&quot; pour référencer le chemin racine.
+* **Chemin du dossier (requis)** - Si des sous-répertoires d’un compartiment sont utilisés, un chemin d’accès doit être défini ou &quot;/&quot; pour référencer le chemin d’accès racine.
 * **Type de fichier** - Sélectionnez le format que l’Experience Platform doit utiliser pour les fichiers exportés. Actuellement, le seul type de fichier attendu par le traitement Acxiom est le format CSV.
 
 >[!IMPORTANT]
 >
->Lors de la sélection de l’option CSV, *Délimiteur*, *Caractère de citation*, *Caractère d’échappement*, *Valeur vide*, *Valeur nulle*, *Format de compression*, et *Inclure le fichier manifeste* Les options seront présentées. Le document suivant explique plus en détail ces paramètres. [configuration des options de formatage](../../ui/batch-destinations-file-formatting-options.md).
+>Lors de la sélection de l’option CSV, les options *Délimiteur*, *Caractère de citation*, *Caractère d’échappement*, *Valeur vide*, *Valeur nulle*, *Format de compression* et *Inclure le fichier manifeste* seront présentées, le document suivant explique ces paramètres plus de détails [configurez les options de formatage](../../ui/batch-destinations-file-formatting-options.md).
 
 ![Options CSV](../../assets/catalog/data-partner/acxiom/image-destination-csv-options.png)
 
@@ -135,8 +135,8 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter *identités*, vous avez besoin de la fonction **[!UICONTROL Affichage du graphique des identités]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des ****, **[!UICONTROL Activer les destinations]**, **** et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous avez besoin de l&#39;autorisation **[!UICONTROL Afficher le graphique d&#39;identités]** [ ](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez la section [Activer des données d’audience vers des destinations d’exportation de profils par lots](/help/destinations/ui/activate-batch-profile-destinations.md) pour obtenir des instructions sur l’activation des audience vers cette destination.
 
@@ -146,14 +146,14 @@ Le traitement nécessite des éléments de nom et d’adresse, tandis que tous l
 
 | Champ cible | Description Source |
 |--------------|-------------------------------------------------------------|
-| nom | La variable `person.name.fullName` dans Experience Platform. |
-| Prénom | La variable `person.name.firstName` dans Experience Platform. |
-| Nom | La variable `person.name.lastName` dans Experience Platform. |
-| address1 | La variable `mailingAddress.street1` dans Experience Platform. |
-| address2 | La variable `mailingAddress.street2` dans Experience Platform. |
-| ville | La variable `mailingAddress.city` dans Experience Platform. |
-| state | La variable `mailingAddress.state` dans Experience Platform. |
-| zip | La variable `mailingAddress.postalCode` dans Experience Platform. |
+| nom | La valeur `person.name.fullName` en Experience Platform. |
+| Prénom | La valeur `person.name.firstName` en Experience Platform. |
+| Nom | La valeur `person.name.lastName` en Experience Platform. |
+| address1 | La valeur `mailingAddress.street1` en Experience Platform. |
+| address2 | La valeur `mailingAddress.street2` en Experience Platform. |
+| ville | La valeur `mailingAddress.city` en Experience Platform. |
+| state | La valeur `mailingAddress.state` en Experience Platform. |
+| zip | La valeur `mailingAddress.postalCode` en Experience Platform. |
 
 {style="table-layout:auto"}
 
@@ -173,7 +173,7 @@ Pour contrôler que l’exportation des données a bien réussi, vérifiez votre
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé un flux de données pour exporter des données par lots de l’Experience Platform vers votre [!DNL Acxiom] emplacement S3 géré. Vous devez contacter votre représentant Acxiom avec le nom du compte, le nom du fichier et le chemin du compartiment afin que le traitement puisse être configuré.
+En suivant ce tutoriel, vous avez créé un flux de données pour exporter des données de lot de l’Experience Platform vers votre emplacement S3 géré [!DNL Acxiom]. Vous devez contacter votre représentant Acxiom avec le nom du compte, le nom du fichier et le chemin du compartiment afin que le traitement puisse être configuré.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
@@ -181,4 +181,4 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-*Acxiom Audience Data and Distribution :* https://www.acxiom.com/customer-data/audience-data-distribution/
+*Données et distribution d’audience Acxiom :* https://www.acxiom.com/customer-data/audience-data-distribution/

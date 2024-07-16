@@ -4,8 +4,8 @@ description: Découvrez comment effectuer des appels au point d’entrée /rule_
 exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1155'
-ht-degree: 93%
+source-wordcount: '1151'
+ht-degree: 92%
 
 ---
 
@@ -15,7 +15,7 @@ Dans les balises de collecte de données, les [règles](./rules.md) contrôlent 
 
 >[!NOTE]
 >
->Ce document explique comment gérer les composants de règle dans l’API Reactor. Pour plus d’informations sur l’interaction avec les règles et les composants de règle dans l’interface utilisateur, reportez-vous à la section [Guide de l’interface utilisateur](../../ui/managing-resources/rules.md).
+>Ce document explique comment gérer les composants de règle dans l’API Reactor. Pour plus d’informations sur l’interaction avec les règles et les composants de règle dans l’interface utilisateur, reportez-vous au [guide de l’interface utilisateur](../../ui/managing-resources/rules.md).
 
 Les composants de règle possèdent trois types de base :
 
@@ -310,13 +310,13 @@ POST /properties/{PROPERTY_ID}/rule_components
 
 | Paramètre | Description |
 | --- | --- |
-| `PROPERTY_ID` | La variable `id` de la propriété sous laquelle vous définissez le composant de règle. |
+| `PROPERTY_ID` | `id` de la propriété sous laquelle vous définissez le composant de règle. |
 
 {style="table-layout:auto"}
 
 **Requête**
 
-La requête suivante crée un composant de règle. Dans la payload, la variable `relationships` associe le composant à des règles spécifiques et à une extension existante. Pour plus d’informations, consultez le guide sur la [relation](../guides/relationships.md).
+La requête suivante crée un composant de règle. Dans la payload, la propriété `relationships` associe le composant à une ou plusieurs règles spécifiques et à une extension existante. Pour plus d’informations, consultez le guide sur la [relation](../guides/relationships.md).
 
 ```shell
 curl -X POST \
@@ -366,7 +366,7 @@ curl -X POST \
 | `attributes.rule_order` | Nombre entier indiquant la priorité de déclenchement de la règle associée. |
 | `attributes.settings` | Un objet JSON de paramétrage représenté sous la forme d’une chaîne. |
 | `attributes.timeout` | Nombre entier indiquant le délai d’expiration de l’action exécutée en séquence. |
-| `relationships` | Objet qui établit les relations nécessaires pour le composant de règle. Deux relations doivent être établies : <ol><li>`extension` : l’extension qui définit ce composant de règle. Il doit s’agir de la même extension que celle du package d’extension indiqué par `delegate_descriptor_id`.</li><li>`rules` : la règle sous laquelle ce composant est défini.</li></ol>Pour plus d’informations générales sur les relations, consultez le [guide sur les relations](../guides/relationships.md). |
+| `relationships` | Objet qui établit les relations nécessaires pour le composant de règle. Deux relations doivent être établies : <ol><li>`extension` : l’extension qui définit ce composant de règle. Il doit s’agir de la même extension que celle du package d’extension indiqué par `delegate_descriptor_id`.</li><li>`rules` : règle sous laquelle ce composant est défini.</li></ol>Pour plus d’informations générales sur les relations, consultez le [guide sur les relations](../guides/relationships.md). |
 | `type` | Le type de ressource en cours de création. Pour ce point d’entrée, la valeur doit être `rule_components`. |
 
 {style="table-layout:auto"}

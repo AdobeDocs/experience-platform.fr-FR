@@ -20,16 +20,16 @@ Adobe n’est pas responsable de la dégradation des performances provoquée par
 
 >[!IMPORTANT]
 >
->Vérifiez vos droits de licence dans votre commande commerciale et les [Description du produit](https://helpx.adobe.com/fr/legal/product-descriptions.html) sur les limites d’utilisation réelles en plus de cette page des barrières de sécurité.
+>Vérifiez vos droits de licence dans votre commande de ventes et la [description du produit](https://helpx.adobe.com/fr/legal/product-descriptions.html) correspondante sur les limites d’utilisation réelles en plus de cette page de garde-fous.
 
 ## Définitions
 
-* **Disponibilité** est calculé pour chaque intervalle de cinq minutes sous la forme du pourcentage de requêtes traitées par l’Edge Network Experience Platform qui n’échouent pas en erreur et se rapportent uniquement aux API Edge Network configurées. Si un client n’a effectué aucune requête au cours d’un intervalle de cinq minutes donné, cet intervalle est considéré comme 100 % disponible.
-* **Pourcentage de disponibilité mensuelle** pour une région donnée est calculée en moyenne de la disponibilité pour tous les intervalles de cinq minutes d’un mois.
-* Un **amont** est un service derrière l’Edge Network, activé pour un flux de données spécifique, tel que le transfert côté serveur Adobe, la segmentation Adobe Edge ou Adobe Target.
-* A **unité de requête** correspond à un fragment de 8 Ko d’une requête et un en amont configuré pour un flux de données.
-* A **requête** est un message unique envoyé par une application détenue par le client à la variable [!DNL Server API]. Une requête peut contenir une ou plusieurs unités de requête.
-* Un **error** est une requête qui échoue en raison d’un Edge Network [erreur de service interne](error-handling.md).
+* **Disponibilité** est calculé pour chaque intervalle de cinq minutes en tant que pourcentage des demandes traitées par l’Edge Network Experience Platform qui ne échouent pas en erreur et se rapportent uniquement aux API Edge Network configurées. Si un client n’a effectué aucune requête au cours d’un intervalle de cinq minutes donné, cet intervalle est considéré comme 100 % disponible.
+* **Le pourcentage de disponibilité mensuelle** pour une région donnée est calculé comme la moyenne de disponibilité pour tous les intervalles de cinq minutes dans un mois.
+* Un **en amont** est un service derrière l’Edge Network, activé pour un flux de données spécifique, tel que le transfert côté serveur d’Adobe, la segmentation Adobe Edge ou Adobe Target.
+* Une **unité de requête** correspond à un fragment de 8 Ko d’une requête et à un élément en amont configuré pour un flux de données.
+* Une **requête** est un message unique envoyé par une application détenue par le client à [!DNL Server API]. Une requête peut contenir une ou plusieurs unités de requête.
+* Une **erreur** est une requête qui échoue en raison d’une [ erreur de service interne ](error-handling.md) de l’Edge Network.
 
 ## Limites de service
 
@@ -37,7 +37,7 @@ Toutes les séries de données imposent certaines limites d’utilisation, qui c
 
 ### Unités de requête
 
-Toutes les limites sont appliquées et normalisées sur une **unité de demande (RU)**, défini comme **Fragment de 8 Ko** d’une requête adressée à un service en amont configuré dans un flux de données.
+Toutes les limites sont appliquées et normalisées sur une **unité de requête (RU)**, définie sous la forme d’un **fragment de 8 Ko** d’une requête dirigée vers un service en amont configuré dans un flux de données.
 
 #### Exemples
 
@@ -75,6 +75,6 @@ Pour plus d’informations sur les barrières de sécurité des autres services 
 
 * [Barrières de sécurité Real-Time CDP](/help/rtcdp/guardrails/overview.md)
 * [Diagrammes de latence de bout en bout](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) pour divers services Experience Platform.
-* [Real-time Customer Data Platform (Édition B2C - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (Édition B2C - Packages Prime et Ultimate)](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Packages Prime et Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

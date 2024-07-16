@@ -4,7 +4,7 @@ description: Découvrez comment effectuer des appels vers le point d’entrée /
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1239'
 ht-degree: 89%
 
 ---
@@ -302,7 +302,7 @@ Vous pouvez créer un secret en effectuant une requête POST.
 
 >[!NOTE]
 >
->Lorsque vous créez un secret, l’API renvoie une réponse immédiate contenant des informations pour cette ressource. Dans le même temps, une tâche d’échange de secrets est déclenchée pour vérifier que l’échange d’informations d’identification est fonctionnel. Cette tâche est traitée de manière asynchrone et met à jour l’attribut status du secret vers `succeeded` ou `failed` selon le résultat.
+>Lorsque vous créez un secret, l’API renvoie une réponse immédiate contenant des informations pour cette ressource. Dans le même temps, une tâche d’échange de secrets est déclenchée pour vérifier que l’échange d’informations d’identification est fonctionnel. Cette tâche est traitée de manière asynchrone et met à jour l’attribut statut du secret vers `succeeded` ou `failed` en fonction du résultat.
 
 **Format d’API**
 
@@ -644,11 +644,11 @@ Une réponse réussie renvoie les détails du secret, dont le statut est réinit
 }
 ```
 
-## Réautoriser `oauth2-google` secret {#reauthorize}
+## Réautoriser un secret `oauth2-google` {#reauthorize}
 
-Chaque `oauth2-google` secret contient un `meta.authorization_url_expires_at` qui indique quand l’URL d’autorisation expirera. Au-delà de cette date, le secret doit être réautorisé afin de renouveler le processus d&#39;authentification.
+Chaque secret `oauth2-google` contient une propriété `meta.authorization_url_expires_at` qui indique quand l’URL d’autorisation expirera. Au-delà de cette date, le secret doit être réautorisé afin de renouveler le processus d&#39;authentification.
 
-Pour réautoriser un `oauth2-google` secret, faites une demande PATCH pour le secret en question.
+Pour réautoriser un secret `oauth2-google`, effectuez une demande de PATCH pour le secret en question.
 
 **Format d’API**
 
@@ -658,11 +658,11 @@ PATCH /secrets/{SECRET_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{SECRET_ID}` | La variable `id` du secret que vous souhaitez réautoriser. |
+| `{SECRET_ID}` | `id` du secret que vous souhaitez réautoriser. |
 
 **Requête**
 
-La variable `data` dans le payload de la requête doit contenir un `meta.action` définie sur `reauthorize`.
+L’objet `data` du payload de requête doit contenir une propriété `meta.action` définie sur `reauthorize`.
 
 ```shell
 curl -X PATCH \
@@ -688,7 +688,7 @@ curl -X PATCH \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du secret mis à jour. À partir de là, vous devez copier et coller le `meta.authorization_url` dans un navigateur pour terminer le processus d’autorisation.
+Une réponse réussie renvoie les détails du secret mis à jour. A partir de là, vous devez copier et coller le `meta.authorization_url` dans un navigateur pour terminer le processus d’autorisation.
 
 ```json
 {

@@ -1,6 +1,6 @@
 ---
 keywords: segments rtcdp;rtcdp du créateur de segments;segment rtcdp;segment rtcdp;rtcdp du client
-title: IA dédiée aux clients dans Real-time Customer Data Platform
+title: IA dédiée aux clients dans Real-Time Customer Data Platform
 description: Présentation de Customer AI et de la manière dont il peut contribuer à générer des scores pour des résultats spécifiques tels que les conversions ou la perte de clientèle.
 exl-id: 40210196-3c02-4d82-8692-628f2a46b3b5
 source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
@@ -10,9 +10,9 @@ ht-degree: 67%
 
 ---
 
-# IA dédiée aux clients dans Real-time Customer Data Platform
+# IA dédiée aux clients dans Real-Time Customer Data Platform
 
-Customer AI, une fonctionnalité d’IA intégrée dans Adobe Real-time Customer Data Platform, permet aux marketeurs de générer des scores de niveau individuel pour un résultat spécifique, tel que les conversions ou l’attrition.
+Customer AI, une fonctionnalité d’IA intégrée dans Adobe Real-Time Customer Data Platform, permet aux marketeurs de générer des scores de niveau individuel pour un résultat spécifique, tel que les conversions ou l’attrition.
 
 À l’aide de facteurs d’influence, Customer AI peut vous indiquer ce qu’un client est susceptible de faire et pourquoi. De plus, vous pouvez tirer parti des prédictions et des informations de l’IA dédiée aux clients pour personnaliser les expériences client en diffusant les offres et les messages les plus appropriés. L’IA dédiée aux clients peut vous aider à :
 

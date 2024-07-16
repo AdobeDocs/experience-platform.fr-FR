@@ -7,13 +7,13 @@ exl-id: 209654f7-0bde-439a-989c-ce2e41599105
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '244'
-ht-degree: 20%
+ht-degree: 24%
 
 ---
 
-# [!UICONTROL Canal d’expérience] type de données
+# Type de données [!UICONTROL Experience channel]
 
-[!UICONTROL Canal d’expérience] est un type de données XDM (Experience Data Model) standard qui décrit un canal d’expérience. Un canal d’expérience représente une méthode ou un chemin d’accès pour la manière dont les expériences numériques sont utilisées.
+[!UICONTROL Experience channel] est un type de données XDM (Experience Data Model) standard qui décrit un canal d’expérience. Un canal d’expérience représente une méthode ou un chemin d’accès pour la manière dont les expériences numériques sont utilisées.
 
 Il existe plusieurs canaux d’expérience, chacun avec des contraintes différentes sur la manière dont le contenu est diffusé, sur la manière dont l’interaction client peut être observée et sur la manière dont les données sont collectées. Dans un canal, les expériences peuvent être diffusées à des emplacements spécifiques. Les emplacements et les types d’emplacements existant dans un canal diffèrent d’un canal à l’autre.
 
@@ -26,7 +26,7 @@ Il existe plusieurs canaux d’expérience, chacun avec des contraintes différe
 | `contentTypes` | Tableau de chaînes | Types de contenu que ce canal peut diffuser. |
 | `locationTypes` | Tableau de chaînes | Types d’emplacements (emplacements virtuels) correspondant à ce canal et vers lesquels il peut diffuser du contenu. |
 | `mediaAction` | Chaîne | Décrit une action multimédia d’événement d’expérience, le cas échéant. |
-| `mediaType` | Chaîne | Indique si le type de média est payé, détenu ou gagné. |
+| `mediaType` | Chaîne | Décrit le type de média : exposition médiatique achetée, exposition médiatique détenue ou exposition médiatique gagnée. |
 | `metricTypes` | Tableau de chaînes | Mesures pouvant être collectées dans ce canal. |
 | `mode` | Chaîne | Façon dont les expériences sont diffusées dans ce canal. |
 | `typeAtSource` | Chaîne | Nom personnalisé pour le canal. |
@@ -35,5 +35,5 @@ Il existe plusieurs canaux d’expérience, chacun avec des contraintes différe
 
 Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/channels/channel.schema.json)

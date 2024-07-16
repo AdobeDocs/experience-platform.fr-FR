@@ -1,22 +1,22 @@
 ---
 keywords: extension de décibel;décibel;destination de décibel
 title: Extension Decibel
-description: L’extension Decibel est une destination d’analyse de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Decibel est une destination d’analyse de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 0508f8f8-d512-48f1-b2ea-1429f59079db
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 92%
+source-wordcount: '447'
+ht-degree: 94%
 
 ---
 
 # Extension [!DNL Decibel] {#decibel-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Déploiement rapide et transparent [!DNL Decibel] sur vos propriétés web. D’autres configurations avancées peuvent également être déployées à l’aide de règles grâce aux actions proposées par l’extension.
+Déployez rapidement et facilement [!DNL Decibel] sur vos propriétés web. D’autres configurations avancées peuvent également être déployées à l’aide de règles grâce aux actions proposées par l’extension.
 
-[!DNL Decibel] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100913.html).
+[!DNL Decibel] est une extension d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100913.html).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Decibel] extension :
+Pour installer l’extension [!DNL Decibel], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

@@ -5,7 +5,7 @@ description: Ce document présente les configurations que vous devez préparer p
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
 source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '522'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 Les spécifications d’authentification définissent la manière dont les utilisateurs de Adobe Experience Platform peuvent se connecter à votre source.
 
-La variable `authSpec` contient des informations sur les paramètres d’authentification requis pour connecter une source à Platform. Toute source donnée peut prendre en charge plusieurs types d’authentification différents.
+Le tableau `authSpec` contient des informations sur les paramètres d’authentification requis pour connecter une source à Platform. Toute source donnée peut prendre en charge plusieurs types d’authentification différents.
 
 ## Spécifications d’authentification
 
@@ -181,7 +181,7 @@ L’authentification de base est un type d’authentification qui vous permet d�
 
 ## Exemple de spécification d’authentification
 
-Voici un exemple de spécification d’authentification terminée à l’aide d’une [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md) source.
+Voici un exemple de spécification d’authentification terminée utilisant une source [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
 
 ```json
   "authSpec": [
@@ -237,4 +237,4 @@ Voici un exemple de spécification d’authentification terminée à l’aide d�
 
 ## Étapes suivantes
 
-Une fois vos spécifications d’authentification renseignées, vous pouvez procéder à la configuration des spécifications source pour la source que vous souhaitez intégrer à Platform. Consultez le document sur [configuration des spécifications source](./sourcespec.md) pour plus d’informations.
+Une fois vos spécifications d’authentification renseignées, vous pouvez procéder à la configuration des spécifications source pour la source que vous souhaitez intégrer à Platform. Pour plus d’informations, consultez le document sur la [configuration des spécifications source](./sourcespec.md) .

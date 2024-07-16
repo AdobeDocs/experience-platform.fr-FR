@@ -17,9 +17,9 @@ ht-degree: 16%
 
 ---
 
-# Création d’une stratégie de fusion dans l’interface utilisateur de l’Experience Platform
+# Création d’une stratégie de fusion dans l’interface utilisateur Experience Platform
 
-Cette vidéo fournit une compréhension de base des stratégies de fusion dans Adobe Experience Platform et explique comment définir des stratégies de fusion à l’aide de l’interface utilisateur de Platform. Pour en savoir plus sur les stratégies de fusion, commencez par lire la section [présentation des stratégies de fusion](../merge-policies/overview.md).
+Cette vidéo fournit une compréhension de base des stratégies de fusion dans Adobe Experience Platform et explique comment définir des stratégies de fusion à l’aide de l’interface utilisateur de Platform. Pour en savoir plus sur les stratégies de fusion, commencez par lire la [présentation des stratégies de fusion](../merge-policies/overview.md).
 
 >[!NOTE]
 >

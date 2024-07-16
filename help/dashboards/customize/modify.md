@@ -24,13 +24,13 @@ Ce guide fournit des instructions détaillées pour personnaliser l’affichage 
 
 Depuis n’importe quel tableau de bord (par exemple, le tableau de bord [!UICONTROL Profils]), vous pouvez sélectionner **[!UICONTROL Modifier le tableau de bord]** afin de redimensionner et de réorganiser les widgets existants.
 
-![Le tableau de bord Profils avec modification du tableau de bord est mis en surbrillance.](../images/customization/modify-dashboard.png)
+![ Le tableau de bord Profils avec l’option Modifier le tableau de bord en surbrillance.](../images/customization/modify-dashboard.png)
 
 ## Réorganisation de widgets
 
 Après avoir choisi de modifier le tableau de bord, vous pouvez réorganiser les widgets en sélectionnant le titre des widgets, puis en les faisant glisser et en les déposant dans l’ordre souhaité. Dans cet exemple, le widget **[!UICONTROL Tendance du nombre de profils]** est déplacé vers la ligne supérieure et le widget **[!UICONTROL Nombre de profils]** apparaît sur la deuxième ligne.
 
-![Le tableau de bord Profils avec deux widgets réorganisés mis en surbrillance.](../images/customization/move-widget.png)
+![ Le tableau de bord Profils avec deux widgets réorganisés mis en surbrillance.](../images/customization/move-widget.png)
 
 ## Redimensionnement de widgets
 
@@ -40,13 +40,13 @@ Vous pouvez également redimensionner un widget en sélectionnant le symbole d�
 >
 >Lors de l’ajustement de la taille des widgets, un repositionnement dynamique est effectué pour les widgets environnants. Cela peut entraîner le déplacement de certains widgets vers d’autres lignes. Il vous faut alors faire défiler l’écran pour afficher tous les widgets.
 
-![Le tableau de bord Profils avec un widget redimensionné surligné.](../images/customization/resize-widget.png)
+![ Le tableau de bord Profils avec un widget redimensionné en surbrillance.](../images/customization/resize-widget.png)
 
 ## Enregistrement des mises à jour de tableaux de bord
 
 Une fois que vous avez déplacé et redimensionné les widgets, sélectionnez **[!UICONTROL Enregistrer et quitter]** pour enregistrer les modifications et revenir à la vue principale du tableau de bord. Si vous ne souhaitez pas conserver vos modifications, sélectionnez **[!UICONTROL Annuler]** pour réinitialiser le tableau de bord et revenir à l’affichage principal du tableau de bord.
 
-![Le tableau de bord Profils avec les options Annuler et Enregistrer et quitter est mis en surbrillance.](../images/customization/save-changes.png)
+![ Le tableau de bord Profils avec les options Annuler et Enregistrer et quitter en surbrillance.](../images/customization/save-changes.png)
 
 ## Bibliothèque de widgets
 
@@ -54,7 +54,7 @@ Outre le redimensionnement et la réorganisation des widgets, la sélection de *
 
 Pour obtenir des instructions détaillées sur l’accès et l’utilisation de la [!UICONTROL bibliothèque de widgets], reportez-vous au [guide de la bibliothèque de widgets](widget-library.md).
 
-![Espace de travail de la bibliothèque de widgets en surbrillance Standard et Personnalisé.](../images/customization/widget-library.png)
+![Espace de travail de la bibliothèque de widgets avec l’option Standard et Personnalisé mise en surbrillance.](../images/customization/widget-library.png)
 
 ## Étapes suivantes
 

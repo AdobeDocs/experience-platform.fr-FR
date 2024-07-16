@@ -1,18 +1,19 @@
 ---
-title: Type de données de collection Détails de la capsule Advertising
-description: Découvrez le type de données XDM (Advertising Pod Details Collection Experience Data Model).
-source-git-commit: a604dc8b541784ace8aedef42030e5bd8b646c28
+title: Type de données de collecte Détails de la capsule Advertising
+description: Découvrez le type de données XDM (Modèle de données d’expérience de collecte de détails de la capsule Advertising).
+exl-id: 401c393f-aeda-4ecd-89f4-458833190ced
+source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 8%
 
 ---
 
-# [!UICONTROL Détails de la capsule publicitaire] Type de données de collecte
+# [!UICONTROL Détails de la capsule Advertising] Type de données de collection
 
-[!UICONTROL Détails de la capsule publicitaire] La collecte est un type de données XDM (Experience Data Model) standard. Il définit une séquence ou un groupe de publicités généralement lues l’une après l’autre lors des pauses de contenu. Utilisez la variable [!UICONTROL Détails de la capsule publicitaire] Type de données de collection pour la capture de détails tels que l’ID de coupure publicitaire, un nom convivial pour la coupure publicitaire, l’index des publicités pendant la coupure et le décalage de la coupure publicitaire dans la chronologie du contenu en secondes.
+[!UICONTROL  La collection {Advertising Pod Details] est un type de données XDM (Experience Data Model) standard. Il définit une séquence ou un groupe de publicités généralement lues l’une après l’autre lors des pauses de contenu. Utilisez le type de données Collection [!UICONTROL Détails de la capsule Advertising] pour capturer des détails tels que l’ID de coupure publicitaire, un nom convivial pour la coupure publicitaire, l’index des publicités pendant la coupure et le décalage de la coupure publicitaire dans la chronologie du contenu en secondes.
 
-![Schéma du type de données Collection d’informations sur la capsule Advertising.](../images/data-types/advertising-pod-details-collection.png)
+![Schéma du type de données Collecte d’informations sur la capsule Advertising.](../images/data-types/advertising-pod-details-collection.png)
 
 | Nom d’affichage | Propriété | Type de données | Obligatoire | Description |
 |-----------------------------------------|-----------------|-----------|--------------------------------------------------------------------|

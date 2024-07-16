@@ -9,7 +9,7 @@ ht-degree: 8%
 
 ---
 
-# [!UICONTROL Compte financier] type de données
+# Type de données [!UICONTROL Compte financier]
 
 [!UICONTROL Compte financier] est un type de données XDM standard qui décrit les détails d’un compte financier, y compris son type, son propriétaire et son solde actuel.
 

@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;automatisation du marketing
+keywords: Experience Platform;accueil;rubriques les plus consultées;automatisation marketing
 solution: Experience Platform
 title: Exploration d’un système d’automatisation du marketing à l’aide de l’API Flow Service
 description: Ce tutoriel utilise l’API Flow Service pour explorer les systèmes d’automatisation du marketing.
 exl-id: 250c1ba0-1baa-444f-ab2b-58b3a025561e
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 38%
+source-wordcount: '616'
+ht-degree: 37%
 
 ---
 
-# Explorez un système d’automatisation du marketing à l’aide du [!DNL Flow Service] API
+# Explorez un système d’automatisation du marketing à l’aide de l’API [!DNL Flow Service]
 
-[!DNL Flow Service] sert à collecter et à centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisé pour collecter et centraliser des données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
 
-Ce tutoriel utilise la méthode [!DNL Flow Service] API pour explorer les systèmes d’automatisation du marketing.
+Ce tutoriel utilise l’API [!DNL Flow Service] pour explorer les systèmes d’automatisation du marketing.
 
 ## Prise en main
 
@@ -24,11 +24,11 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Sources](../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 * [Sandbox](../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à un système d’automatisation du marketing à l’aide de la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à un système d’automatisation du marketing à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
-Ce tutoriel nécessite que vous disposiez d’une connexion valide à l’application d’automatisation marketing tierce à partir de laquelle vous souhaitez ingérer des données. Une connexion valide implique l’identifiant de spécification de connexion et l’identifiant de connexion de votre application. Vous trouverez plus d’informations sur la création d’une connexion d’automatisation marketing et la récupération de ces valeurs dans la section [Connexion d’une source d’automatisation marketing à Platform](../../api/create/marketing-automation/hubspot.md) tutoriel .
+Ce tutoriel nécessite que vous disposiez d’une connexion valide à l’application d’automatisation marketing tierce à partir de laquelle vous souhaitez ingérer des données. Une connexion valide implique l’identifiant de spécification de connexion et l’identifiant de connexion de votre application. Vous trouverez plus d’informations sur la création d’une connexion d’automatisation marketing et la récupération de ces valeurs dans le tutoriel [Connexion d’une source d’automatisation marketing à Platform](../../api/create/marketing-automation/hubspot.md) .
 
 ### Lecture d’exemples d’appels API
 
@@ -52,7 +52,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ## Exploration des tableaux de données
 
-À l’aide de la connexion de base de votre système d’automatisation marketing, vous pouvez explorer vos tableaux de données en effectuant des requêtes GET. Utilisez l’appel suivant pour trouver le chemin du tableau que vous souhaitez inspecter ou ingérer. [!DNL Platform].
+À l’aide de la connexion de base de votre système d’automatisation marketing, vous pouvez explorer vos tableaux de données en effectuant des requêtes GET. Utilisez l’appel suivant pour trouver le chemin de la table que vous souhaitez inspecter ou ingérer dans [!DNL Platform].
 
 **Format d’API**
 
@@ -77,7 +77,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie est un tableau de tableaux allant de à votre système d’automatisation marketing. Trouvez la table que vous souhaitez importer [!DNL Platform] et notez ses `path` , car vous devez le fournir à l’étape suivante pour inspecter sa structure.
+Une réponse réussie est un tableau de tableaux allant de à votre système d’automatisation marketing. Recherchez la table que vous souhaitez importer dans [!DNL Platform] et notez sa propriété `path`, car vous devez la fournir à l&#39;étape suivante pour inspecter sa structure.
 
 ```json
 [
@@ -140,7 +140,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie la structure d’un tableau. Les détails relatifs à chaque colonne du tableau se trouvent dans les éléments du `columns` tableau.
+Une réponse réussie renvoie la structure d’un tableau. Les détails concernant chacune des colonnes de la table se trouvent dans les éléments du tableau `columns`.
 
 ```json
 {
@@ -184,4 +184,4 @@ Une réponse réussie renvoie la structure d’un tableau. Les détails relatifs
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez exploré votre système d’automatisation du marketing, trouvé le chemin du tableau que vous souhaitez importer. [!DNL Platform]et obtenir des informations sur sa structure. Vous pouvez utiliser ces informations dans le tutoriel suivant pour [collecter des données à partir de votre système d’automatisation marketing et les importer dans Platform ;](../collect/marketing-automation.md).
+En suivant ce tutoriel, vous avez exploré votre système d’automatisation du marketing, trouvé le chemin de la table que vous souhaitez importer dans [!DNL Platform] et obtenu des informations sur sa structure. Vous pouvez utiliser ces informations dans le tutoriel suivant pour [collecter des données de votre système d’automatisation marketing et les importer dans Platform](../collect/marketing-automation.md).

@@ -4,7 +4,7 @@ description: Dernières notes de mise à jour pour l’extension de de balises d
 exl-id: 2e24a28f-b0c6-4aa5-a98f-3056024d312c
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
 workflow-type: tm+mt
-source-wordcount: '123'
+source-wordcount: '127'
 ht-degree: 100%
 
 ---

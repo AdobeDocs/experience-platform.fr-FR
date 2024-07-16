@@ -33,7 +33,7 @@ En utilisant les événements de haut et de bas de page dans le SDK Web, l’éq
 
 ## Exemple d’événement haut de page {#top-of-page}
 
-L’exemple de code ci-dessous illustre une configuration d’événement haut de page qui demande une personnalisation, mais ne le fait pas. [envoi d’événements d’affichage](../personalization/display-events.md#send-sendEvent-calls) pour les propositions générées automatiquement. La variable [événements d’affichage](../personalization/display-events.md#send-sendEvent-calls) sera envoyé dans le cadre de l’événement du bas de page.
+L’exemple de code ci-dessous illustre une configuration d’événement de haut de page qui demande une personnalisation, mais n’envoie pas [d’événements d’affichage d’envoi](../personalization/display-events.md#send-sendEvent-calls) pour les propositions générées automatiquement. Les [événements d’affichage](../personalization/display-events.md#send-sendEvent-calls) seront envoyés dans le cadre de l’événement du bas de page.
 
 >[!BEGINTABS]
 
@@ -52,7 +52,7 @@ alloy("sendEvent", {
 | Paramètre | Obligatoire / Facultatif | Description |
 |---|---|---|
 | `type` | Obligatoire | Définissez ce paramètre sur `decisioning.propositionFetch`. Ce type d’événement spécial indique à Adobe Analytics de déposer cet événement. Lors de l’utilisation de Customer Journey Analytics, vous pouvez également configurer un filtre pour supprimer ces événements. |
-| `renderDecisions` | Obligatoire | Définissez ce paramètre sur `true`. Ce paramètre indique au SDK Web de rendre les décisions renvoyées par le réseau Edge. |
+| `renderDecisions` | Obligatoire | Définissez ce paramètre sur `true`. Ce paramètre indique au SDK Web de rendre les décisions renvoyées par l’Edge Network. |
 | `personalization.sendDisplayEvent` | Obligatoire | Définissez ce paramètre sur `false`. Cela empêche l’envoi des événements d’affichage. |
 
 >[!ENDTABS]
@@ -61,13 +61,13 @@ alloy("sendEvent", {
 
 >[!BEGINTABS]
 
->[!TAB Propositions générées automatiquement]
+>[!TAB  Propositions générées automatiquement]
 
-L’exemple de code ci-dessous illustre une configuration d’événement de page inférieure qui envoie des événements d’affichage pour les propositions qui sont automatiquement générées sur la page, mais pour lesquelles les événements d’affichage ont été supprimés dans [haut de la page](#top-of-page) .
+L’exemple de code ci-dessous illustre une configuration d’événement de page inférieure qui envoie des événements d’affichage pour les propositions qui ont été automatiquement générées sur la page, mais pour lesquelles les événements d’affichage ont été supprimés dans l’événement [top of page](#top-of-page).
 
 >[!NOTE]
 >
->Dans ce scénario, vous devez appeler le bas de l’événement de page. _after_ en haut de la première page. Toutefois, il n’est pas nécessaire d’attendre que le haut de la page 1 soit terminé.
+>Dans ce scénario, vous devez appeler le bas de l’événement de page _after_ en haut de la page 1. Toutefois, il n’est pas nécessaire d’attendre que le haut de la page 1 soit terminé.
 
 ```js
 alloy("sendEvent", {
@@ -83,7 +83,7 @@ alloy("sendEvent", {
 | `personalization.includeRenderedPropositions` | Obligatoire | Définissez ce paramètre sur `true`. Cela permet l’envoi d’événements d’affichage qui ont été supprimés en haut de l’événement de page. |
 | `xdm` | Facultatif | Utilisez cette section pour inclure toutes les données dont vous avez besoin pour l’événement du bas de la page. |
 
->[!TAB Propositions générées manuellement]
+>[!TAB  Propositions générées manuellement]
 
 L’exemple de code ci-dessous illustre une configuration d’événement de page inférieure qui envoie des événements d’affichage pour les propositions générées manuellement sur la page (c’est-à-dire pour les portées ou les surfaces de décision personnalisées).
 
@@ -117,7 +117,7 @@ alloy("sendEvent", {
 
 | Paramètre | Obligatoire / Facultatif | Description |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | Obligatoire | Cette section définit les propositions générées manuellement. Vous devez inclure la proposition `ID`, `scope`, et `scopeDetails`. Consultez la documentation sur la manière de [personnalisation du rendu manuel](../personalization/rendering-personalization-content.md#manually) pour plus d’informations sur l’enregistrement des événements d’affichage pour le contenu rendu manuel. Le contenu de personnalisation rendu manuellement doit être inclus dans l’accès au bas de la page. |
+| `xdm._experience.decisioning.propositions` | Obligatoire | Cette section définit les propositions générées manuellement. Vous devez inclure la proposition `ID`, `scope` et `scopeDetails`. Pour plus d’informations sur l’enregistrement des événements d’affichage pour le contenu rendu manuel, consultez la documentation sur la [personnalisation du rendu manuel](../personalization/rendering-personalization-content.md#manually) . Le contenu de personnalisation rendu manuellement doit être inclus dans l’accès au bas de la page. |
 | `xdm._experience.decisioning.propositionEventType` | Obligatoire | Définissez ce paramètre sur `display: 1`. |
 | `xdm` | Facultatif | Utilisez cette section pour inclure toutes les données dont vous avez besoin pour l’événement du bas de la page. |
 
@@ -131,7 +131,7 @@ alloy("sendEvent", {
 
 >[!TAB Première page vue]
 
-L’exemple ci-dessous inclut l’ajout de la variable `xdm.web.webPageDetails.viewName` . C’est ce qui en fait une application d’une seule page. La variable `viewName` dans cet exemple, est la vue chargée au chargement de la page.
+L’exemple ci-dessous inclut l’ajout du paramètre `xdm.web.webPageDetails.viewName` requis. C’est ce qui en fait une application d’une seule page. `viewName` dans cet exemple est la vue chargée au chargement de la page.
 
 ```js
 // Top of page, render decisions for the "home" view.
@@ -191,7 +191,7 @@ alloy("sendEvent", {
 
 >[!TAB Deuxième page vue (Option 2)]
 
-Si vous devez toujours retarder l’accès au bas de la page, vous pouvez utiliser `applyPropositions` pour l’accès en haut de la page. Puisqu’aucune personnalisation ne doit être récupérée et qu’aucune donnée Analytics ne doit être enregistrée, il n’est pas nécessaire d’adresser une requête au réseau Edge.
+Si vous devez toujours retarder l’accès au bas de la page, vous pouvez utiliser `applyPropositions` pour l’accès au haut de la page. Puisqu’aucune personnalisation n’a besoin d’être récupérée et qu’aucune donnée Analytics ne doit être enregistrée, il n’est pas nécessaire d’adresser une requête à l’Edge Network.
 
 ```js
 // top of page, render the decisions already fetched for the "cart" view.

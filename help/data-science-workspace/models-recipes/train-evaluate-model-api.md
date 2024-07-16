@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;formation et évaluation;Data Science Workspace;rubriques les plus consultées;API Sensei Machine Learning
+keywords: Experience Platform;formation et évaluation;Data Science Workspace;rubriques les plus consultées;API d’apprentissage automatique Sensei
 solution: Experience Platform
-title: Formation et évaluation d’un modèle à l’aide de l’API d’apprentissage automatique de Sensei
+title: Formation et évaluation d’un modèle à l’aide de l’API d’apprentissage automatique Sensei
 type: Tutorial
 description: Ce tutoriel vous explique comment créer, former et évaluer un modèle à l’aide d’appels d’API d’apprentissage automatique Sensei.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
 workflow-type: tm+mt
-source-wordcount: '1227'
-ht-degree: 85%
+source-wordcount: '1217'
+ht-degree: 81%
 
 ---
 
-# Entraînez et évaluez un modèle à l’aide de la fonction [!DNL Sensei Machine Learning] API
+# Formation et évaluation d’un modèle à l’aide de l’API [!DNL Sensei Machine Learning]
 
 
 Ce tutoriel vous explique comment créer, former et évaluer un modèle à l’aide d’appels API. Reportez-vous à [ce document](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) pour obtenir une liste détaillée de la documentation sur les API.
@@ -21,25 +21,25 @@ Ce tutoriel vous explique comment créer, former et évaluer un modèle à l’a
 
 Suivez la procédure [Importer une recette empaquetée à l’aide de l’API](./import-packaged-recipe-api.md) pour créer un moteur, ce qui est nécessaire pour former et évaluer un modèle à l’aide de l’API.
 
-Suivez la [Tutoriel sur l’authentification des API Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour commencer à effectuer des appels API.
+Suivez le [ tutoriel sur l’authentification des API Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr) pour commencer à effectuer des appels API.
 
 Grâce au tutoriel, vous devez maintenant disposer des valeurs suivantes :
 
 - `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.
-- `{ORG_ID}`: Les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.
+- `{ORG_ID}` : les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.
 - `{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.
 
 - Lien vers une image Docker d’un service intelligent
 
 ## Workflow API
 
-Nous utiliserons les API pour créer une exécution d’expérience pour la formation. Dans ce tutoriel, nous allons nous concentrer sur les points d’entrée Engines,MLInstances et Experiments. Le graphique suivant décrit la relation entre les trois points et présente également la notion d’exécution et de modèle.
+Nous utiliserons les API pour créer une exécution d’expérience pour la formation. Pour ce tutoriel, nous nous concentrerons sur les points de terminaison Moteurs, MLInstances et Experiments. Le graphique suivant décrit la relation entre les trois points et présente également la notion d’exécution et de modèle.
 
 ![](../images/models-recipes/train-evaluate-api/engine_hierarchy_api.png)
 
 >[!NOTE]
 >
->Les termes « Engine », « MLInstance », « MLService », « Experiment » et « Model »* ne sont pas désignés de la même façon dans l’interface utilisateur. Si vous venez de l’interface utilisateur, le tableau suivant associe les différences.
+>Les termes &quot;Engine&quot;, &quot;MLInstance&quot;, &quot;MLService&quot;, &quot;Experiment&quot; et &quot;Model&quot; sont appelés des termes différents dans l’interface utilisateur. Si vous venez de l’interface utilisateur, le tableau suivant associe les différences.
 
 | Terme de l’interface utilisateur | Terme de l’API |
 | --- | --- |
@@ -65,7 +65,7 @@ curl -X POST \
 ```
 
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{ORG_ID}`: Les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.\
+`{ORG_ID}` : les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.\
 `{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
 `{JSON_PAYLOAD}` : la configuration de notre MLInstance. Voici l’exemple utilisé dans notre tutoriel :
 
@@ -122,9 +122,9 @@ curl -X POST \
 
 >[!NOTE]
 >
-> Dans la `{JSON_PAYLOAD}`, nous définissons les paramètres utilisés pour la formation et la notation dans le tableau `tasks`. `{ENGINE_ID}` représente l’identifiant du moteur que vous souhaitez utiliser et le champ `tag` est un paramètre facultatif utilisé pour identifier l’instance.
+>Dans le `{JSON_PAYLOAD}`, nous définissons les paramètres utilisés pour la formation et la notation dans le tableau `tasks`. `{ENGINE_ID}` représente l’identifiant du moteur que vous souhaitez utiliser et le champ `tag` est un paramètre facultatif utilisé pour identifier l’instance.
 
-La réponse contient la variable `{INSTANCE_ID}` qui représente l’instance MLInstance créée. Vous pouvez créer plusieurs MLInstances de modèle avec des configurations différentes.
+La réponse contient le `{INSTANCE_ID}` qui représente l’instance MLInstance créée. Vous pouvez créer plusieurs MLInstances de modèle avec des configurations différentes.
 
 **Réponse**
 
@@ -176,7 +176,7 @@ curl -X POST \
   -d `{JSON PAYLOAD}`
 ```
 
-`{ORG_ID}`: Les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.\
+`{ORG_ID}` : les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
 `{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
 `{JSON_PAYLOAD}` : objet d’expérience créé. Voici l’exemple utilisé dans notre tutoriel :
@@ -231,7 +231,7 @@ curl -X POST \
   -d '{JSON_PAYLOAD}`
 ```
 
-`{ORG_ID}`: Les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.\
+`{ORG_ID}` : les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
 `{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
 `{JSON_PAYLOAD}` : données à publier. Voici l’exemple utilisé dans notre tutoriel :
@@ -319,7 +319,7 @@ curl -X POST \
 ```
 
 `{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience que vous souhaitez cibler. Vous pouvez le trouver dans la réponse lors de la création de votre expérience.\
-`{ORG_ID}`: Les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.\
+`{ORG_ID}` : les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
 `{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.\
 `{JSON_PAYLOAD}` : pour créer une exécution de formation, vous devez inclure les éléments suivants dans le corps :
@@ -390,7 +390,7 @@ curl -X GET \
 `{EXPERIMENT_ID}` : identifiant qui représente l’expérience.\
 `{EXPERIMENT_RUN_ID}` : identifiant qui représente l’exécution de l’expérience.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{ORG_ID}`: Les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.\
+`{ORG_ID}` : les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.\
 `{API_KEY}` : votre valeur clé d’API spécifique, qui se trouve dans votre intégration unique d’Adobe Experience Platform.
 
 **Réponse**
@@ -453,7 +453,7 @@ curl -X GET \
 
 `{EXPERIMENT_RUN_ID}` : identifiant qui correspond à l’exécution d’expérience que vous souhaitez cibler. Vous pouvez le trouver dans la réponse lors de la création de votre exécution d’expérience.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{ORG_ID}`: Les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.
+`{ORG_ID}` : les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.
 
 La réponse représente le modèle formé qui a été créé.
 
@@ -500,7 +500,7 @@ curl -X DELETE \
 
 `{EXPERIMENT_ID}` : identifiant qui correspond à l’expérience.\
 `{ACCESS_TOKEN}` : votre valeur de jeton porteur spécifique fournie après l’authentification.\
-`{ORG_ID}`: Les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.
+`{ORG_ID}` : les informations d’identification de votre organisation se trouvent dans votre intégration Adobe Experience Platform unique.
 
 >[!NOTE]
 >

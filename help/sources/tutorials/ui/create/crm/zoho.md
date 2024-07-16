@@ -7,7 +7,7 @@ description: Découvrez comment créer une connexion source Zoho CRM à l’aide
 exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
 source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '539'
 ht-degree: 100%
 
 ---
@@ -35,8 +35,8 @@ Pour connecter [!DNL Zoho CRM] à Platform, vous devez fournir des valeurs pour 
 | --- | --- |
 | Point d’entrée | Point d’entrée du serveur [!DNL Zoho CRM] auprès duquel vous effectuez votre demande. |
 | URL des comptes | L’URL des comptes est utilisée pour générer vos jetons d’accès et d’actualisation. L’URL doit être spécifique au domaine. |
-| Identifiant client | Identifiant client correspondant à votre compte utilisateur [!DNL Zoho CRM]. |
-| Secret client | Secret client correspondant à votre compte utilisateur [!DNL Zoho CRM]. |
+| Identifiant client | Identifiant client correspondant à votre compte d’utilisateur [!DNL Zoho CRM]. |
+| Secret client | Secret client correspondant à votre compte d’utilisateur [!DNL Zoho CRM]. |
 | Jeton d’accès | Le jeton d’accès autorise l’accès sécurisé et temporaire à votre compte [!DNL Zoho CRM]. |
 | Jeton d’actualisation | Un jeton d’actualisation est un jeton utilisé pour générer un nouveau jeton d’accès, une fois que votre jeton d’accès a expiré. |
 

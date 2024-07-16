@@ -7,13 +7,13 @@ exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '174'
-ht-degree: 35%
+ht-degree: 46%
 
 ---
 
-# [!UICONTROL Géo] type de données
+# Type de données [!UICONTROL Geo]
 
-[!UICONTROL Géo] est un type de données XDM standard qui décrit la zone géographique dans laquelle un événement a été observé.
+[!UICONTROL Geo] est un type de données XDM standard qui décrit la zone géographique dans laquelle un événement a été observé.
 
 <img src="../images/data-types/geo.png" width="400" /><br />
 
@@ -23,14 +23,14 @@ ht-degree: 35%
 | `_id` | Chaîne | Identifiant unique généré par le système pour les coordonnées. |
 | `city` | Chaîne | Nom de la ville. |
 | `countryCode` | Chaîne | Code <a href="https://datahub.io/core/country-list">ISO 3166-1 alpha-2</a> à deux caractères pour le pays. |
-| `dmaID` | Nombre entier | Zone de marché désignée pour la recherche sur les médias Nielsen. |
-| `msaID` | Nombre entier | Zone statistique métropolitaine aux États-Unis où l’observation s’est produite. |
+| `dmaID` | Nombre entier | Zone de marché désignée par Nielsen Media Research. |
+| `msaID` | Nombre entier | Région métropolitaine des États-Unis dans laquelle cette observation a été effectuée. |
 | `postalCode` | Chaîne | Code postal de l’emplacement. Les codes postaux ne sont pas disponibles pour tous les pays. Dans certains pays, ce champ ne contiendra qu’une partie du code postal. |
-| `stateProvince` | Chaîne | Partie de l’état ou de la province de l’observation. Le format suit le [ISO 3166-2 (pays et subdivisions)](https://www.unece.org/cefact/locode/subdivisions.html) standard. |
+| `stateProvince` | Chaîne | Partie de l’état ou de la province de l’observation. Le format suit la norme [ISO 3166-2 (pays et subdivisions)](https://www.unece.org/cefact/locode/subdivisions.html). |
 
 {style="table-layout:auto"}
 
 Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.schema.json)

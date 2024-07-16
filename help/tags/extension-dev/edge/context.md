@@ -4,7 +4,7 @@ description: Découvrez l’objet Contexte ainsi que son rôle dans l’interact
 exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
 source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '729'
 ht-degree: 100%
 
 ---
@@ -36,7 +36,7 @@ logger.log(context.arc.event);
 
 ### [!DNL request]
 
-À ne pas confondre avec une requête du périphérique client, `request` est un objet légèrement modifié qui provient d’Adobe Experience Platform Edge Network.
+À ne pas confondre avec une requête de l’appareil client, `request` est un objet légèrement modifié qui provient d’Adobe Experience Platform Edge Network.
 
 ```js
 logger.log(context.arc.request)

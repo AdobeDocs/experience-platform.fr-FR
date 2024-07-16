@@ -18,7 +18,7 @@ Dans certains cas, il est possible que vous souhaitiez interagir avec deux propr
 * Des relations de partage de données entre plusieurs entreprises.
 * Des clients qui testent de nouvelles solutions Adobe et qui ne souhaitent pas perturber leur implémentation existante.
 
-Le SDK permet de créer une instance distincte pour chaque propriété en ajoutant un autre nom au tableau dans le code de base. L’exemple suivant fournit deux noms : `titanium` et `copper`.
+Le SDK permet de créer une instance distincte pour chaque propriété en ajoutant un autre nom au tableau dans le code de base. L’exemple suivant fournit deux noms, `titanium` et `copper`.
 
 ```html
 <script>
@@ -32,7 +32,7 @@ Le SDK permet de créer une instance distincte pour chaque propriété en ajouta
 
 Par conséquent, le script crée deux instances du SDK. La fonction globale permettant d’interagir avec la première instance est appelée `titanium` et celle permettant d’interagir avec la seconde instance est appelée `copper`.
 
-En créant deux instances distinctes, chacune peut être configurée pour une propriété différente. Toute communication ou persistance des données résultant d’une interaction avec `titanium` est isolé de `copper`.
+En créant deux instances distinctes, chacune peut être configurée pour une propriété différente. Toute communication ou persistance de données résultant d&#39;une interaction avec `titanium` est isolée de `copper`.
 
 En suivant l’exemple ci-dessus, vous pouvez exécuter des commandes à l’aide de chaque instance :
 
@@ -64,4 +64,4 @@ Veillez à exécuter la commande `configure` pour chaque instance avant d’exé
 
 >[!IMPORTANT]
 >
->Pour éviter tout conflit avec les cookies, chaque instance du SDK Web doit avoir sa propre `edgeConfigId` et son propre `orgId`.
+>Pour éviter tout conflit avec les cookies, chaque instance du SDK Web doit disposer de son propre `edgeConfigId` unique et de son propre `orgId` unique.

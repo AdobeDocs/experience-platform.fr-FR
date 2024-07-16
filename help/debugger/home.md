@@ -19,8 +19,8 @@ L’extension Adobe Experience Platform Debugger pour [Chrome](https://chrome.go
 
 Vous pouvez utiliser Platform Debugger avec les autres solutions d’activation d’Adobe pour effectuer les opérations suivantes :
 
-1. Utilisation [tags](../tags/home.md) pour insérer du code qui active [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=fr) produits sur vos pages.
-1. Utilisez la variable [**[!UICONTROL Auditor ]**tab](./auditor/overview.md) dans Platform Debugger pour tester vos mises en oeuvre.
+1. Utilisez [tags](../tags/home.md) pour insérer du code qui active les produits [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=fr) sur vos pages.
+1. Utilisez l’onglet [**[!UICONTROL Auditor ]**](./auditor/overview.md) de Platform Debugger pour tester vos mises en oeuvre.
 1. Utilisez des outils basés sur un événement et spécifiques à une solution dans Platform Debugger pour déboguer les problèmes détectés par Auditor ou pour examiner d’autres informations sur vos mises en oeuvre.
 
 >[!NOTE]
@@ -33,9 +33,9 @@ Vous pouvez exécuter Platform Debugger sur n’importe quelle page web et l’e
 
 Vous pouvez utiliser les informations collectées par Platform Debugger pour mieux comprendre comment vos solutions Experience Cloud sont mises en oeuvre. Par exemple :
 
-* **Balises**: découvrez la propriété, l’environnement et la version déployés sur une page.
-* **Adobe Target**: découvrez les activités pour lesquelles vous remplissez les critères ou non et pourquoi.
-* **Adobe Analytics**: voir les suites de rapports actives sur la page active.
+* **Balises** : découvrez la propriété, l’environnement et la version déployés sur une page.
+* **Adobe Target** : découvrez les activités pour lesquelles vous remplissez les critères ou non et pourquoi.
+* **Adobe Analytics** : découvrez les suites de rapports actives sur la page active.
 
 ## Tutoriel vidéo
 

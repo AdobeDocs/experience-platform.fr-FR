@@ -1,13 +1,13 @@
 ---
 title: Configuration de la prise en charge de la messagerie web in-app dans le SDK web
 description: Découvrez comment configurer l’extension de balise du SDK Web pour prendre en charge la messagerie in-app web.
-source-git-commit: bc3ae849bd7fd8a9f50ba98528adc43d7282df90
+exl-id: 90a19ef4-e94c-4f16-a26a-8919ad2dbd6f
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 0%
 
 ---
-
 
 # Configuration de la prise en charge de la messagerie web in-app dans le SDK web
 
@@ -19,9 +19,9 @@ En utilisant les messages in-app, vous pouvez interagir efficacement avec votre 
 
 >[!IMPORTANT]
 >
->La messagerie web in-app est une [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=fr) qui utilise le SDK Web pour diffuser le contenu personnalisé.
+>La messagerie in-app web est une fonctionnalité [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=fr) qui utilise le SDK web pour diffuser le contenu personnalisé.
 >
->Pour obtenir des instructions détaillées sur la configuration de votre campagne de messagerie web in-app, voir [Documentation Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html).
+>Pour obtenir des instructions détaillées sur la configuration de votre campagne de messagerie web in-app, consultez la [documentation de Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html).
 
 
 ## Conditions préalables {#prerequisites}
@@ -32,21 +32,21 @@ La fonctionnalité de messagerie in-app web requiert la dernière version de l�
 
 ### Configuration d’une CSP pour la messagerie web in-app {#csp}
 
-Lorsque vous configurez [Messagerie in-app web](../personalization/web-in-app-messaging.md), vous devez inclure la directive suivante dans votre CSP :
+Lorsque vous configurez la [messagerie in-app web](../personalization/web-in-app-messaging.md), vous devez inclure la directive suivante dans votre CSP :
 
 ```
 default-src  blob:;
 ```
 
-Pour plus d’informations sur la configuration d’une CSP, voir la section [documentation dédiée](../use-cases/configuring-a-csp.md).
+Pour plus d’informations sur la configuration d’une CSP, consultez la [documentation dédiée](../use-cases/configuring-a-csp.md).
 
 ## Configuration de la messagerie web in-app à l’aide de l’extension de balise SDK web {#tag-extension}
 
-Voir [Page de configuration de l’extension de balise SDK Web](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) pour savoir où trouver les paramètres décrits ci-dessous.
+Reportez-vous à la [page de configuration de l’extension de balise SDK Web](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) pour savoir où trouver les paramètres décrits ci-dessous.
 
-Après avoir [installé](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#install-the-web-sdk-tag-extension) Pour configurer l’extension pour la messagerie in-app web, procédez comme suit.
+Une fois [installé](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#install-the-web-sdk-tag-extension) sur l’extension de balise SDK Web, suivez les étapes ci-dessous pour configurer l’extension pour la messagerie in-app web.
 
-Dans le **[!UICONTROL Personnalisation]** , vérifiez les **[!UICONTROL Activer le stockage de personnalisation]** . Cette option permet au SDK Web de suivre les expériences qui ont été vues par l’utilisateur lors du chargement d’une page.
+Dans la section **[!UICONTROL Personalization]** , cochez l&#39;option **[!UICONTROL Activer le stockage de personnalisation]** . Cette option permet au SDK Web de suivre les expériences qui ont été vues par l’utilisateur lors du chargement d’une page.
 
 ![Image montrant l’option de stockage de personnalisation dans la page de configuration de l’extension de balise.](assets/web-in-app-messaging/enable-personalization-storage.png)
 
@@ -58,42 +58,42 @@ La messagerie web in-app prend en charge deux types de déclencheurs :
 
 Reportez-vous aux sections suivantes pour configurer l’extension de balise du SDK Web en fonction des déclencheurs que vous souhaitez utiliser.
 
-### Étapes de configuration de la variable **[!UICONTROL Envoi de données à Platform]** trigger {#send-data-platform}
+### Étapes de configuration du déclencheur **[!UICONTROL Envoyer des données à Platform]** {#send-data-platform}
 
-Sélectionnez la propriété de balise qui contient votre extension SDK Web, et [créer une règle](../../tags/ui/managing-resources/rules.md##create-a-rule) avec les paramètres suivants :
+Sélectionnez la propriété de balise qui contient votre extension SDK Web et [créez une règle](../../tags/ui/managing-resources/rules.md##create-a-rule) avec les paramètres suivants :
 
-1. **[!UICONTROL Extension]** : [!UICONTROL Core]
-2. **[!UICONTROL Type d’événement]**: [!UICONTROL Bibliothèque chargée (Haut de page)]
+1. **[!UICONTROL Extension]** : [!UICONTROL Core]
+2. **[!UICONTROL Type d’événement]** : [!UICONTROL Bibliothèque chargée (Haut de page)]
 
-   ![Image montrant l’écran de configuration de l’événement.](assets/web-in-app-messaging/rule-configuration.png)
+   ![Image montrant l&#39;écran de configuration de l&#39;événement.](assets/web-in-app-messaging/rule-configuration.png)
 
-3. Sélectionner **[!UICONTROL Conserver les modifications]** pour enregistrer la configuration de l’événement.
+3. Sélectionnez **[!UICONTROL Conserver les modifications]** pour enregistrer la configuration de l’événement.
 
 Vous devez ensuite ajouter une action à la règle que vous avez créée.
 
-1. Dans le [!DNL Actions] , sélectionnez **[!UICONTROL Ajouter]**.
-   ![Image affichant l’écran de modification des règles.](assets/web-in-app-messaging/add-action.png)
+1. Dans la section [!DNL Actions], sélectionnez **[!UICONTROL Ajouter]**.
+   ![Image montrant l&#39;écran de modification de règle.](assets/web-in-app-messaging/add-action.png)
 
-2. Utilisez ce qui suit : **[!UICONTROL Action]** settings :
-   * **[!UICONTROL Extension]**: [!UICONTROL SDK Web Adobe Experience Platform]
-   * **[!UICONTROL Type d’action]**: [!UICONTROL Envoyer un événement]
+2. Utilisez les paramètres **[!UICONTROL Action]** suivants :
+   * **[!UICONTROL Extension]** : [!UICONTROL SDK Web Adobe Experience Platform]
+   * **[!UICONTROL Type d’action]** : [!UICONTROL Envoyer l’événement]
 
-     ![Image affichant l’écran de configuration de l’action.](assets/web-in-app-messaging/action-configuration.png)
+     ![Image montrant l&#39;écran de configuration de l&#39;action.](assets/web-in-app-messaging/action-configuration.png)
 
-3. Dans la partie droite de l’écran, dans la **[!UICONTROL Personnalisation]** , activez la fonction **[!UICONTROL Rendu des décisions de personnalisation visuelle]** .
+3. Sur le côté droit de l’écran, dans la section **[!UICONTROL Personalization]**, activez l’option **[!UICONTROL Render Visual personalization Decisions]** .
    ![Image montrant l&#39;écran de configuration de la personnalisation.](assets/web-in-app-messaging/render-visual-personalization.png)
 
-4. Dans la partie droite de l’écran, dans la **[!UICONTROL Contexte de décision]** , définissez les **[!UICONTROL Clé]**/**[!UICONTROL Valeur]** des paires que vous avez utilisées dans la configuration de votre campagne pour remplir les critères du message in-app.
+4. Sur le côté droit de l’écran, dans la section **[!UICONTROL Contexte de décision]**, définissez les paires **[!UICONTROL Clé]**/**[!UICONTROL Valeur]** que vous avez utilisées dans la configuration de votre campagne pour remplir les critères du message in-app.
    ![Image montrant l&#39;écran de configuration de la personnalisation.](assets/web-in-app-messaging/decision-context.png)
 
-5. Sélectionner **[!UICONTROL Conserver les modifications]** pour enregistrer votre configuration.
+5. Sélectionnez **[!UICONTROL Conserver les modifications]** pour enregistrer votre configuration.
 
 
 Vous devez ensuite ajouter la règle nouvellement créée à la bibliothèque de propriétés de balise. Pour ce faire, accédez à **[!UICONTROL Flux de publication]** et sélectionnez la règle que vous avez créée précédemment.
 
-![Image affichant l’écran de la bibliothèque.](assets/web-in-app-messaging/add-rule-to-library.png)
+![Image montrant l&#39;écran de la bibliothèque.](assets/web-in-app-messaging/add-rule-to-library.png)
 
-Après avoir ajouté la règle à la bibliothèque, sélectionnez **[!UICONTROL Enregistrement et création pour le développement]**.
+Après avoir ajouté la règle à la bibliothèque, sélectionnez **[!UICONTROL Enregistrer et créer dans le développement]**.
 
 ![Image montrant l&#39;écran de configuration de la personnalisation.](assets/web-in-app-messaging/publish-flow.png)
 
@@ -101,40 +101,40 @@ Le processus de configuration est maintenant terminé et votre message est prêt
 
 ### Étapes de configuration pour l’utilisation de déclencheurs manuels {#manual-trigger}
 
-Sélectionnez la propriété de balise qui contient votre extension SDK Web, et [créer une règle](../../tags/ui/managing-resources/rules.md##create-a-rule) avec les paramètres suivants :
+Sélectionnez la propriété de balise qui contient votre extension SDK Web et [créez une règle](../../tags/ui/managing-resources/rules.md##create-a-rule) avec les paramètres suivants :
 
-1. **[!UICONTROL Extension]** : [!UICONTROL Core]
-2. **[!UICONTROL Type d’événement]**: [!UICONTROL Cliquez sur]
+1. **[!UICONTROL Extension]** : [!UICONTROL Core]
+2. **[!UICONTROL Type d’événement]** : [!UICONTROL Cliquez sur]
 3. Définissez le déclencheur d’un élément spécifique sur la page, l’identifiant par un sélecteur CSS de votre choix.
 
-   ![Image montrant l’écran de configuration de l’événement.](assets/web-in-app-messaging/event-configuration-manual.png)
+   ![Image montrant l&#39;écran de configuration de l&#39;événement.](assets/web-in-app-messaging/event-configuration-manual.png)
 
 
 Vous devez ensuite ajouter une action à la règle que vous avez créée.
 
-1. Dans le [!DNL Actions] , sélectionnez **[!UICONTROL Ajouter]**.
-   ![Image affichant l’écran de modification des règles.](assets/web-in-app-messaging/add-action.png)
+1. Dans la section [!DNL Actions], sélectionnez **[!UICONTROL Ajouter]**.
+   ![Image montrant l&#39;écran de modification de règle.](assets/web-in-app-messaging/add-action.png)
 
-2. Utilisez ce qui suit : **[!UICONTROL Action]** settings :
-   * **[!UICONTROL Extension]**: [!UICONTROL SDK Web Adobe Experience Platform]
-   * **[!UICONTROL Type d’action]**: [!UICONTROL Évaluation des jeux de règles]
+2. Utilisez les paramètres **[!UICONTROL Action]** suivants :
+   * **[!UICONTROL Extension]** : [!UICONTROL SDK Web Adobe Experience Platform]
+   * **[!UICONTROL Type d’action]** : [!UICONTROL Évaluer les jeux de règles]
 
-     ![Image affichant l’écran de configuration de l’action.](assets/web-in-app-messaging/manual-trigger-action.png)
+     ![Image montrant l&#39;écran de configuration de l&#39;action.](assets/web-in-app-messaging/manual-trigger-action.png)
 
-3. Sur le côté droit de l’écran, activez l’option **[!UICONTROL Rendu des décisions de personnalisation visuelle]** .
+3. Sur le côté droit de l’écran, activez l’option **[!UICONTROL Render Visual personalization Decisions]** (Rendre les décisions de personnalisation visuelle).
    ![Image montrant l&#39;écran de configuration de la personnalisation.](assets/web-in-app-messaging/manual-trigger-render.png)
 
 
-4. Dans la partie droite de l’écran, dans la **[!UICONTROL Contexte de décision]** , définissez les **[!UICONTROL Clé]**/**[!UICONTROL Valeur]** des paires que vous avez utilisées dans la configuration de votre campagne pour remplir les critères du message in-app.
+4. Sur le côté droit de l’écran, dans la section **[!UICONTROL Contexte de décision]**, définissez les paires **[!UICONTROL Clé]**/**[!UICONTROL Valeur]** que vous avez utilisées dans la configuration de votre campagne pour remplir les critères du message in-app.
    ![Image montrant l&#39;écran de configuration de la personnalisation.](assets/web-in-app-messaging/manual-trigger-decision-context.png)
 
-5. Sélectionner **[!UICONTROL Conserver les modifications]** pour enregistrer votre configuration.
+5. Sélectionnez **[!UICONTROL Conserver les modifications]** pour enregistrer votre configuration.
 
 Vous devez ensuite ajouter la règle nouvellement créée à la bibliothèque de propriétés de balise. Pour ce faire, accédez à **[!UICONTROL Flux de publication]** et sélectionnez la règle que vous avez créée précédemment.
 
-![Image affichant l’écran de la bibliothèque.](assets/web-in-app-messaging/add-rule-to-library.png)
+![Image montrant l&#39;écran de la bibliothèque.](assets/web-in-app-messaging/add-rule-to-library.png)
 
-Après avoir ajouté la règle à la bibliothèque, sélectionnez **[!UICONTROL Enregistrement et création pour le développement]**.
+Après avoir ajouté la règle à la bibliothèque, sélectionnez **[!UICONTROL Enregistrer et créer dans le développement]**.
 
 ![Image montrant l&#39;écran de configuration de la personnalisation.](assets/web-in-app-messaging/publish-flow.png)
 
@@ -150,7 +150,7 @@ Vous pouvez afficher les messages web in-app à partir de Adobe Journey Optimize
 
 ### Méthode 1 : récupération automatique du contenu de personnalisation {#automatic}
 
-Pour que le SDK Web récupère automatiquement le contenu de personnalisation au chargement de la page, utilisez la méthode `sendEvent` , comme illustré dans l’exemple ci-dessous.
+Pour que le SDK Web récupère automatiquement le contenu de personnalisation au chargement de la page, utilisez la commande `sendEvent`, comme illustré dans l’exemple ci-dessous.
 
 ```js
   alloy("sendEvent", {
@@ -163,9 +163,9 @@ Pour que le SDK Web récupère automatiquement le contenu de personnalisation au
 
 ### Méthode 2 : récupération manuelle du contenu de personnalisation selon l’action de l’utilisateur {#manual}
 
-Pour afficher le contenu de personnalisation uniquement après l’exécution d’une action spécifique par l’utilisateur, utilisez la variable `evaluateRulesets` comme illustré dans l’exemple ci-dessous.
+Pour afficher le contenu de personnalisation uniquement une fois que l’utilisateur a effectué une action spécifique, utilisez la commande `evaluateRulesets` comme illustré dans l’exemple ci-dessous.
 
-Dans cet exemple, le contenu de la personnalisation s&#39;affiche lorsqu&#39;un utilisateur clique sur le bouton **[!UICONTROL Acheter maintenant]** sur votre site web.
+Dans cet exemple, le contenu de personnalisation s’affiche lorsqu’un utilisateur clique sur le bouton **[!UICONTROL Acheter maintenant]** de votre site web.
 
 ```js
  alloy("evaluateRulesets", {
@@ -180,9 +180,9 @@ Dans cet exemple, le contenu de la personnalisation s&#39;affiche lorsqu&#39;un 
 
 ### Configuration du stockage de personnalisation {#personalization-storage}
 
-Vous pouvez choisir d’afficher les messages in-app aux utilisateurs pour un nombre défini de fois, ou chaque fois qu’ils visitent une page, au moyen de la variable `personalizationStorageEnabled` l’option de configuration.
+Vous pouvez choisir d’afficher les messages in-app aux utilisateurs pour un nombre défini de fois, ou chaque fois qu’ils visitent une page, par le biais de l’option de configuration `personalizationStorageEnabled`.
 
-Dans le [Configuration du SDK Web](../commands/configure/overview.md) définissez la variable `personalizationStorageEnabled` selon vos besoins :
+Dans la [configuration du SDK Web](../commands/configure/overview.md), définissez l’option `personalizationStorageEnabled` en fonction de vos besoins :
 
-* `personalizationStorageEnabled: true` déclenche le message in-app avec la fréquence que vous avez définie dans la variable [Campagne Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
+* `personalizationStorageEnabled: true` déclenche le message in-app avec la fréquence que vous avez définie dans la [campagne Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
 * `personalizationStorageEnabled: false` déclenche le message in-app à chaque chargement de page.

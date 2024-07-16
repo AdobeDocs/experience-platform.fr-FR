@@ -257,11 +257,11 @@ Pour ce faire, utilisez l’objet `namedEnum` comme illustré ci-dessous et conf
 
 Dans les cas où vous souhaitez appeler une API de manière dynamique et utiliser la réponse pour remplir de manière dynamique les options d’un menu déroulant, vous pouvez utiliser un sélecteur de liste déroulante dynamique.
 
-Les sélecteurs de liste déroulante dynamiques semblent identiques au [sélecteurs de liste déroulante standard](#dropdown-selectors) dans l’interface utilisateur. La seule différence réside dans le fait que les valeurs sont récupérées dynamiquement à partir d’une API.
+Les sélecteurs de liste déroulante dynamiques sont identiques aux [sélecteurs de liste déroulante standard](#dropdown-selectors) dans l’interface utilisateur. La seule différence réside dans le fait que les valeurs sont récupérées dynamiquement à partir d’une API.
 
 Pour créer un sélecteur de liste déroulante dynamique, vous devez configurer deux composants :
 
-**Étape 1.** [Création d’un serveur de destination](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) avec un `responseFields` modèle pour l’appel API dynamique, comme illustré ci-dessous.
+**Étape 1.** [Créez un serveur de destination](../../authoring-api/destination-server/create-destination-server.md#dynamic-dropdown-servers) avec un modèle `responseFields` pour l’appel API dynamique, comme illustré ci-dessous.
 
 ```json
 {
@@ -309,7 +309,7 @@ Pour créer un sélecteur de liste déroulante dynamique, vous devez configurer 
 }
 ```
 
-**Étape 2.** Utilisez la variable `dynamicEnum` comme illustré ci-dessous. Dans l’exemple ci-dessous, la variable `User` la liste déroulante est récupérée à l’aide du serveur dynamique.
+**Étape 2.** Utilisez l’objet `dynamicEnum` comme illustré ci-dessous. Dans l’exemple ci-dessous, la liste déroulante `User` est récupérée à l’aide du serveur dynamique.
 
 
 ```json {line-numbers="true" highlight="13-21"}
@@ -338,7 +338,7 @@ Pour créer un sélecteur de liste déroulante dynamique, vous devez configurer 
 ]
 ```
 
-Définissez la variable `destinationServerId` à l’identifiant du serveur de destination que vous avez créé à l’étape 1. Vous pouvez voir l’identifiant du serveur de destination dans la réponse de la [récupération d’une configuration de serveur de destination](../../authoring-api/destination-server/retrieve-destination-server.md) appel API.
+Définissez le paramètre `destinationServerId` sur l’identifiant du serveur de destination que vous avez créé à l’étape 1. Vous pouvez voir l’identifiant du serveur de destination dans la réponse de l’appel d’API [retrieve a destination server configuration](../../authoring-api/destination-server/retrieve-destination-server.md) .
 
 ## Création de champs de données client imbriqués {#nested-fields}
 
@@ -346,11 +346,11 @@ Vous pouvez créer des champs de données client imbriqués pour des modèles d�
 
 Par exemple, vous pouvez ajouter des champs de données client imbriqués pour exiger des clients qu’ils sélectionnent un type d’intégration avec votre destination, suivi immédiatement d’une autre sélection. La seconde sélection est un champ imbriqué dans le type d’intégration.
 
-Pour ajouter un champ imbriqué, utilisez la méthode `properties` comme illustré ci-dessous. Dans l’exemple de configuration ci-dessous, vous pouvez voir trois champs imbriqués distincts dans la variable **Votre destination : paramètres spécifiques à l’intégration** champ de données client.
+Pour ajouter un champ imbriqué, utilisez le paramètre `properties` comme illustré ci-dessous. Dans l’exemple de configuration ci-dessous, vous pouvez voir trois champs imbriqués distincts dans le champ de données client **Yourdestination - Paramètres spécifiques à l’intégration** .
 
 >[!TIP]
 >
->À compter de la version d’avril 2024, vous pouvez définir une `isRequired` sur les champs imbriqués. Par exemple, dans le fragment de code de configuration ci-dessous, les deux premiers champs imbriqués sont marqués comme obligatoires (ligne xxx mise en surbrillance) et les clients ne peuvent pas procéder à moins de sélectionner une valeur pour le champ. En savoir plus sur les champs obligatoires dans la section [paramètres pris en charge](#supported-parameters) .
+>À compter de la version d’avril 2024, vous pouvez définir un paramètre `isRequired` sur les champs imbriqués. Par exemple, dans le fragment de code de configuration ci-dessous, les deux premiers champs imbriqués sont marqués comme obligatoires (ligne xxx mise en surbrillance) et les clients ne peuvent pas procéder à moins de sélectionner une valeur pour le champ. Pour en savoir plus sur les champs obligatoires, consultez la section [paramètres pris en charge](#supported-parameters) .
 
 ```json {line-numbers="true" highlight="11,20"}
     {
@@ -408,7 +408,7 @@ Pour définir un champ comme conditionnel, utilisez le paramètre `conditional` 
 }
 ```
 
-Dans un contexte plus large, vous pouvez voir la variable `conditional` champ utilisé dans la configuration de destination ci-dessous, avec le champ `fileType` et la chaîne `csvOptions` dans lequel elle est définie. Les champs conditionnels sont définis dans la variable `properties` .
+Dans un contexte plus large, vous pouvez voir le champ `conditional` utilisé dans la configuration de destination ci-dessous, avec la chaîne `fileType` et l’objet `csvOptions` dans lequel il est défini. Les champs conditionnels sont définis dans le paramètre `properties` .
 
 ```json {line-numbers="true" highlight="3-15, 21-25"}
 "customerDataFields":[

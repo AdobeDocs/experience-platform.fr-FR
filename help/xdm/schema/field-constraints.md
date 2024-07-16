@@ -6,8 +6,8 @@ description: Référence pour les contraintes de type de champ dans le modèle d
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 source-git-commit: 88caea133bd2bf994587bda5b31cddd22f2c90cb
 workflow-type: tm+mt
-source-wordcount: '654'
-ht-degree: 11%
+source-wordcount: '666'
+ht-degree: 7%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 11%
 
 Dans les schémas de modèle de données d’expérience (XDM), le type d’un champ restreint le type de données que le champ peut contenir. Ce document fournit un aperçu de chaque type de champ principal, y compris les autres formats de sérialisation auxquels ils peuvent être mappés et comment définir vos propres types de champ dans l’API afin d’appliquer différentes contraintes.
 
-## Prise en main
+## Commencer
 
-Avant d’utiliser ce guide, veuillez consulter la section [principes de base de la composition des schémas](./composition.md) pour une introduction aux schémas XDM, aux classes et aux groupes de champs de schéma.
+Avant d’utiliser ce guide, consultez les [ principes de base de la composition des schémas](./composition.md) pour une introduction aux schémas XDM, aux classes et aux groupes de champs de schéma.
 
-Si vous prévoyez de définir vos propres types de champ dans l’API, il est vivement recommandé de commencer par la variable [Guide de développement du registre des schémas](../api/getting-started.md) pour savoir comment créer des groupes de champs et des types de données pour inclure vos champs personnalisés dans . Si vous utilisez l’interface utilisateur de l’Experience Platform pour créer vos schémas, consultez le guide sur la [définition des champs dans l’interface utilisateur](../ui/fields/overview.md) pour découvrir comment implémenter des contraintes sur les champs que vous définissez dans des groupes de champs personnalisés et des types de données.
+Si vous envisagez de définir vos propres types de champs dans l’API, il est vivement recommandé de commencer par le [guide de développement du registre des schémas](../api/getting-started.md) pour apprendre à créer des groupes de champs et des types de données afin d’inclure vos champs personnalisés dans . Si vous utilisez l’interface utilisateur de l’Experience Platform pour créer vos schémas, consultez le guide sur la [définition des champs dans l’interface utilisateur](../ui/fields/overview.md) pour découvrir comment implémenter des contraintes sur les champs que vous définissez dans les groupes de champs personnalisés et les types de données.
 
 ## Structure de base et exemples {#basic-types}
 
@@ -27,7 +27,7 @@ XDM repose sur le schéma JSON. Par conséquent, les champs XDM héritent d’un
 
 >[!NOTE]
 >
->Voir [Guide de base des API](../../landing/api-fundamentals.md#json-schema) pour plus d’informations sur le schéma JSON et d’autres technologies sous-jacentes dans les API Platform.
+>Pour plus d’informations sur le schéma JSON et d’autres technologies sous-jacentes dans les API Platform, consultez le [guide de base de l’API](../../landing/api-fundamentals.md#json-schema) .
 
 Le tableau suivant décrit la représentation de chaque type XDM dans le schéma JSON, ainsi qu’un exemple de valeur conforme au type :
 
@@ -60,7 +60,11 @@ Le tableau suivant décrit la représentation de chaque type XDM dans le schéma
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 9007199254740991, "minimum": -9007199254740991 }</pre>
+{
+  "type": "integer",
+  "maximum": 9007199254740991,
+  "minimum": -9007199254740991
+}</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
@@ -68,7 +72,11 @@ Le tableau suivant décrit la représentation de chaque type XDM dans le schéma
       <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 2147483648, "minimum": -2147483648 }</pre>
+{
+  "type": "integer",
+  "maximum": 2147483648,
+  "minimum": -2147483648
+}</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -76,7 +84,11 @@ Le tableau suivant décrit la représentation de chaque type XDM dans le schéma
       <td>[!UICONTROL Court]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 32768, "minimum": -32768 }</pre>
+{
+  "type": "integer",
+  "maximum" : 32768,
+  "minimum" : -32768
+}</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -84,7 +96,11 @@ Le tableau suivant décrit la représentation de chaque type XDM dans le schéma
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "integer", "maximum": 128, "minimum": -128 }</pre>
+{
+  "type": "integer",
+  "maximum" : 128,
+  "minimum" : -128
+}</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -92,7 +108,10 @@ Le tableau suivant décrit la représentation de chaque type XDM dans le schéma
       <td>[!UICONTROL Date]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "string", "format": "date" }</pre>
+{
+  "type": "string",
+  "format": "date"
+}</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -100,7 +119,10 @@ Le tableau suivant décrit la représentation de chaque type XDM dans le schéma
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{ "type": "string", "format": "date-time" }</pre>
+{
+  "type": "string",
+  "format": "date-time"
+}</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
@@ -127,24 +149,24 @@ Les sections ci-dessous décrivent comment chaque type XDM est mappé à d’aut
 
 >[!NOTE]
 >
->Parmi les types XDM standard répertoriés dans les tableaux ci-dessous, la variable [!UICONTROL Carte] est également inclus. Les cartes sont utilisées dans les schémas standard lorsque les données sont représentées sous la forme de clés qui mappent à certaines valeurs ou lorsque les clés ne peuvent pas raisonnablement être incluses dans un schéma statique et doivent être traitées comme des valeurs de données.
+>Parmi les types XDM standard répertoriés dans les tableaux ci-dessous, le type [!UICONTROL Map] est également inclus. Les cartes sont utilisées dans les schémas standard lorsque les données sont représentées sous la forme de clés qui mappent à certaines valeurs ou lorsque les clés ne peuvent pas raisonnablement être incluses dans un schéma statique et doivent être traitées comme des valeurs de données.
 >
->De nombreux composants XDM standard utilisent des types de mappage. Vous pouvez également [Définition des champs de mappage personnalisés](../tutorials/custom-fields-api.md#custom-maps) si vous le souhaitez. L’inclusion du type de mappage dans les tableaux ci-dessous a pour but de vous aider à déterminer comment mapper vos données existantes à XDM si elles sont actuellement stockées dans l’un des formats répertoriés ci-dessous.
+>De nombreux composants XDM standard utilisent des types de mappage et vous pouvez également [définir des champs de mappage personnalisés](../tutorials/custom-fields-api.md#custom-maps) si vous le souhaitez. L’inclusion du type de mappage dans les tableaux ci-dessous a pour but de vous aider à déterminer comment mapper vos données existantes à XDM si elles sont actuellement stockées dans l’un des formats répertoriés ci-dessous.
 
 ### Parquet, Spark SQL et Java {#parquet}
 
 | Type XDM | Parquet | Spark SQL | Java |
 | --- | --- | --- | --- |
 | [!UICONTROL Chaîne] | Type : `BYTE_ARRAY`<br>Annotation : `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL Nombre] | Type : `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Number] | Type : `DOUBLE` | `LongType` | `java.lang.Double` |
 | [!UICONTROL Long] | Type : `INT64` | `LongType` | `java.lang.Long` |
-| [!UICONTROL Nombre entier] | Type : `INT32`<br>Annotation : `INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL Entier] | Type : `INT32`<br>Annotation : `INT_32` | `IntegerType` | `java.lang.Integer` |
 | [!UICONTROL Court] | Type : `INT32`<br>Annotation : `INT_16` | `ShortType` | `java.lang.Short` |
 | [!UICONTROL Octet] | Type : `INT32`<br>Annotation : `INT_8` | `ByteType` | `java.lang.Short` |
 | [!UICONTROL Date] | Type : `INT32`<br>Annotation : `DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL DateTime] | Type : `INT64`<br>Annotation : `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
 | [!UICONTROL Booléen] | Type : `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL Carte] | `MAP`-groupe annoté<br><br>(`<key-type>` must `STRING`) | `MapType`<br><br>(`keyType` must `StringType`) | `java.util.Map` |
+| [!UICONTROL Carte] | `MAP`-groupe annoté<br><br>(`<key-type>` doit être `STRING`) | `MapType`<br><br>(`keyType` doit être `StringType`) | `java.util.Map` |
 
 {style="table-layout:auto"}
 
@@ -153,9 +175,9 @@ Les sections ci-dessous décrivent comment chaque type XDM est mappé à d’aut
 | Type XDM | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL Chaîne] | `String` | `System.String` | `String` |
-| [!UICONTROL Nombre] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Number] | `Double` | `System.Double` | `Number` |
 | [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
-| [!UICONTROL Nombre entier] | `Int` | `System.Int32` | `Number` |
+| [!UICONTROL Entier] | `Int` | `System.Int32` | `Number` |
 | [!UICONTROL Court] | `Short` | `System.Int16` | `Number` |
 | [!UICONTROL Octet] | `Byte` | `System.SByte` | `Number` |
 | [!UICONTROL Date] | `java.util.Date` | `System.DateTime` | `String` |
@@ -170,9 +192,9 @@ Les sections ci-dessous décrivent comment chaque type XDM est mappé à d’aut
 | Type XDM | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
 | [!UICONTROL Chaîne] | `string` | `String` | `string` |
-| [!UICONTROL Nombre] | `double` | `Double` | `double` |
+| [!UICONTROL Number] | `double` | `Double` | `double` |
 | [!UICONTROL Long] | `long` | `Integer` | `int64` |
-| [!UICONTROL Nombre entier] | `int` | `Integer` | `int32` |
+| [!UICONTROL Entier] | `int` | `Integer` | `int32` |
 | [!UICONTROL Court] | `int` | `Integer` | `int32` |
 | [!UICONTROL Octet] | `int` | `Integer` | `int32` |
 | [!UICONTROL Date] | `date` | `Integer`<br>(millisecondes Unix) | `int64`<br>(millisecondes Unix) |
@@ -184,4 +206,4 @@ Les sections ci-dessous décrivent comment chaque type XDM est mappé à d’aut
 
 ## Définition des types de champ XDM dans l’API {#define-fields}
 
-L’API Schema Registry vous permet de définir des champs personnalisés à l’aide de formats et de contraintes facultatives. Consultez le guide sur la [définition de champs personnalisés dans l’API Schema Registry](../tutorials/custom-fields-api.md) pour plus d’informations.
+L’API Schema Registry vous permet de définir des champs personnalisés à l’aide de formats et de contraintes facultatives. Pour plus d’informations, consultez le guide sur la [définition de champs personnalisés dans l’API Schema Registry](../tutorials/custom-fields-api.md).

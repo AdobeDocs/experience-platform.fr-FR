@@ -6,18 +6,18 @@ description: Liste des commandes PostgreSQL actuellement prises en charge pour i
 exl-id: bfcbad55-3086-44c9-9938-6ba0504e747b
 source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
 workflow-type: tm+mt
-source-wordcount: '335'
-ht-degree: 78%
+source-wordcount: '332'
+ht-degree: 75%
 
 ---
 
-# Métadonnées [!DNL PostgreSQL] Commandes dans Query Service
+# Commandes de métadonnées [!DNL PostgreSQL] dans Query Service
 
-Pour les métadonnées de votre jeu de données, les éléments suivants [!DNL PostgreSQL] Les commandes sont actuellement prises en charge pour l’interrogation :
+Pour les métadonnées de votre jeu de données, les commandes [!DNL PostgreSQL] suivantes sont actuellement prises en charge pour l’interrogation :
 
 >[!NOTE]
 >
->Les commandes énumérées ci-dessous sont sensibles à la casse.
+>Les commandes répertoriées ci-dessous sont sensibles à la casse.
 
 | Commande | Description |
 |------- | ------------|
@@ -42,4 +42,4 @@ Pour les métadonnées de votre jeu de données, les éléments suivants [!DNL P
 
 Toutes les commandes qui commencent par `\d` peuvent être combinées. Par exemple, vous pouvez émettre `\dtsn` pour afficher une liste de tous les tableaux, les séquences et les schémas. `\d` en elle-même affiche toutes les tables visibles, les vues, les vues matérialisées et les séquences.
 
-Pour plus d’informations sur les commandes énumérées ci-dessus, consultez la documentation à l’adresse [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Toutefois, sachez que toutes les options affichées dans la variable [!DNL PostgreSQL] La documentation est prise en charge par [!DNL Experience Platform].
+Pour plus d’informations sur les commandes énumérées ci-dessus, consultez la documentation à l’adresse [postgresql.org](https://www.postgresql.org/docs/10/app-psql.html). Toutefois, sachez que toutes les options présentées dans la documentation [!DNL PostgreSQL] ne sont pas prises en charge par [!DNL Experience Platform].

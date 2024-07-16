@@ -6,14 +6,14 @@ description: Vous pouvez créer un lot en envoyant une requête de POST au point
 exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
 source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 70%
+source-wordcount: '118'
+ht-degree: 51%
 
 ---
 
 # Création d’un lot
 
-Pour qu’un jeu de données puisse ingérer des données, un lot doit lui être associé. À l’aide de la valeur `id` d’un jeu de données existant, vous pouvez créer un lot en envoyant une requête POST vers le point d’entrée `/batches` dans l’API [!DNL Catalog]
+Pour qu’un jeu de données puisse ingérer des données, un lot doit lui être associé. À l’aide de la valeur `id` d’un jeu de données existant, vous pouvez créer un lot en envoyant une requête de POST au point de terminaison `/batches` dans l’API [!DNL Catalog].
 
 **Format d’API**
 

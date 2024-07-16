@@ -1,20 +1,20 @@
 ---
 keywords: Parse. ly;parverse;Pars;parse.ly;Parse.ly
 title: Extension Parse.ly Analytics
-description: L’extension Parse.ly Analytics est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Parse.ly Analytics est une destination d’analyse dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 84d98e74-3e34-406c-9b80-81100c766dc8
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 92%
+source-wordcount: '434'
+ht-degree: 91%
 
 ---
 
 # Extension [!DNL Parse.ly Analytics] {#parsely-analytics-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-[!DNL Parse.ly Analytics] aide plus de 2 500 entreprises à utiliser les données pour comprendre leur audience en ligne. Cette extension installe un extrait de code JavaScript, qui suit la manière dont les visiteurs interagissent avec le contenu de votre site.
+[!DNL Parse.ly Analytics] aide plus de 2 500 entreprises à utiliser les données pour comprendre leur audience en ligne. Cette extension installe un extrait de code JavaScript, qui suit la manière dont les visiteurs interagissent avec le contenu de votre site.
 
 Parse.ly est une extension d’analyse de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez [Parse.ly Analytics](https://www.parse.ly/).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Parse.ly] extension :
+Pour installer l’extension [!DNL Parse.ly], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

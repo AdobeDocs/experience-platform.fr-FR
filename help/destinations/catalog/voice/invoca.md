@@ -1,22 +1,22 @@
 ---
 keywords: Invoca;invoca
 title: Extension Invoca Tags
-description: L’extension Invoca Tags est une destination de voix du client dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Invoca Tags est une destination de voix du client dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: f66a2e74-8d94-4b3a-9627-083ca875fad7
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 88%
+source-wordcount: '462'
+ht-degree: 86%
 
 ---
 
 # Extension [!DNL Invoca Tags] {#invoca-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-[!DNL Invoca] introduit des données d’appel et des informations vocales dans le parcours client numérique. Avec [!DNL Invoca’s] Appelez intelligence platform, les marketeurs disposent enfin d’analytics pour mesurer les résultats des appels et relier les conversions hors ligne aux dépenses numériques.
+[!DNL Invoca] apporte des données d’appel et des informations vocales dans le parcours client numérique. Avec la plateforme d’intelligence d’appel [!DNL Invoca’s], les marketeurs disposent enfin d’analyses pour mesurer les résultats des appels et relier les conversions hors ligne aux dépenses numériques.
 
-[!DNL Invoca Tags] est une voix de l’extension client dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html).
+[!DNL Invoca Tags] est une extension de voix du client dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100067.invoca.html).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Invoca Tags] extension :
+Pour installer l’extension [!DNL Invoca Tags], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

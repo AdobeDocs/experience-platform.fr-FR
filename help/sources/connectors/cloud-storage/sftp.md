@@ -15,7 +15,7 @@ ht-degree: 94%
 
 >[!IMPORTANT]
 >
->La variable [!DNL SFTP] le serveur auquel Adobe Experience Platform se connecte doit pouvoir prendre en charge le découpage, ce qui signifie plusieurs connexions à un seul fichier. Si votre [!DNL SFTP] Le serveur ne prend pas en charge le découpage, il se peut que vous receviez une erreur empêchant l’ingestion des fichiers.
+>Le serveur [!DNL SFTP] auquel Adobe Experience Platform se connecte doit pouvoir prendre en charge le découpage, ce qui signifie plusieurs connexions à un seul fichier. Si votre serveur [!DNL SFTP] ne prend pas en charge le découpage, une erreur peut s’afficher empêchant l’ingestion des fichiers.
 
 Adobe Experience Platform fournit une connectivité native pour les fournisseurs cloud tels qu’AWS, [!DNL Google Cloud Platform] et [!DNL Azure], ce qui vous permet d’importer vos données à partir de ces systèmes.
 

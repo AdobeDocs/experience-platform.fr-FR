@@ -6,7 +6,7 @@ exl-id: f5b2d0b0-b6ae-4ccc-b4c9-ac9cc6078d81
 source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
 workflow-type: tm+mt
 source-wordcount: '282'
-ht-degree: 98%
+ht-degree: 91%
 
 ---
 
@@ -18,7 +18,7 @@ Pour faire simple, un journal d’audit indique qui a effectué quelle action et
 
 [Les journaux d’audit sélectionnés dans l’espace de travail de l’IA dédiée aux clients](../../customer-ai/images/data-governance/audit-logs-cai.png)
 
-## Accéder aux journaux d’audit
+## Accès aux journaux d’audit
 
 Lorsque la fonction est activée pour votre organisation, les journaux d’audit sont automatiquement collectés au fur et à mesure de l’activité. Vous n’avez pas besoin d’activer manuellement la collecte des journaux.
 

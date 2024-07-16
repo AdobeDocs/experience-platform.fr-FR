@@ -2,7 +2,7 @@
 keywords: Experience Platform;accueil;rubriques populaires;période
 solution: Experience Platform
 title: Présentation d’Observability Insights
-description: Adobe Experience Platform Observability Insights est une API RESTful qui vous permet d’afficher des mesures clés concernant les activités de Platform. Ces mesures fournissent des insights sur les statistiques d’utilisation de Platform, les contrôles d’intégrité des services Platform, les tendances historiques et les indicateurs de performance pour diverses fonctionnalités de Platform.
+description: Adobe Experience Platform Observability Insights est une API RESTful qui vous permet d’afficher des mesures clés concernant les activités de Platform. Ces mesures fournissent des informations sur les statistiques d’utilisation de Platform, les contrôles d’intégrité des services Platform, les tendances historiques et les indicateurs de performance pour diverses fonctionnalités de Platform.
 exl-id: ad9fcd1b-b649-47d8-93f3-4a3752480129
 source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
 workflow-type: tm+mt
@@ -17,7 +17,7 @@ Adobe Experience Platform [!DNL Observability Insights] vous permet de surveil
 
 ## [!DNL Observability Insights] API
 
-L’API [!DNL Observability Insights] est une API RESTful qui vous permet d’afficher des mesures d’observabilité clés dans Adobe Experience Platform. Ces mesures fournissent des insights sur les statistiques d’utilisation de [!DNL Platform], les contrôles d’intégrité des services [!DNL Platform], les tendances historiques et les indicateurs de performance pour diverses fonctionnalités de [!DNL Platform].
+L’API [!DNL Observability Insights] est une API RESTful qui vous permet d’afficher des mesures d’observabilité clés dans Adobe Experience Platform. Ces mesures fournissent des informations sur les statistiques d’utilisation de [!DNL Platform], les contrôles d’intégrité des services [!DNL Platform], les tendances historiques et les indicateurs de performance pour diverses fonctionnalités de [!DNL Platform].
 
 Pour plus d’informations sur l’utilisation de cette API, consultez le[[!DNL Observability Insights]  guide du développement de l’API](./api/overview.md).
 

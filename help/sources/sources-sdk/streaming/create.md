@@ -2,7 +2,7 @@
 title: Création d’une spécification de connexion pour le SDK de diffusion en continu à l’aide de l’API Flow Service
 description: Le document suivant décrit les étapes à suivre pour créer une spécification de connexion à l’aide de l’API Flow Service et intégrer une nouvelle source par le biais de sources en libre-service.
 exl-id: ad8f6004-4e82-49b5-aede-413d72a1482d
-badge: Version Beta
+badge: Version bêta
 source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
 workflow-type: tm+mt
 source-wordcount: '756'
@@ -10,7 +10,7 @@ ht-degree: 36%
 
 ---
 
-# Créez une nouvelle spécification de connexion à l’aide du [!DNL Flow Service] API
+# Créez une nouvelle spécification de connexion à l’aide de l’API [!DNL Flow Service]
 
 >[!NOTE]
 >
@@ -18,7 +18,7 @@ ht-degree: 36%
 
 Une spécification de connexion représente la structure d’une source. Elle contient des informations sur les exigences d’authentification d’une source, définit la manière dont les données sources peuvent être explorées et inspectées et fournit des informations sur les attributs d’une source donnée. Le point dʼentrée `/connectionSpecs` de l’API [!DNL Flow Service] vous permet de gérer par programmation les spécifications de connexion au sein de votre organisation.
 
-Le document suivant décrit les étapes à suivre pour créer une spécification de connexion à l’aide de la fonction [!DNL Flow Service] API et intégrer une nouvelle source par le biais de sources en libre-service (SDK de diffusion en continu).
+Le document suivant décrit les étapes à suivre pour créer une spécification de connexion à l’aide de l’API [!DNL Flow Service] et intégrer une nouvelle source par le biais de sources en libre-service (SDK de diffusion en continu).
 
 ## Prise en main
 
@@ -42,8 +42,8 @@ Une fois fourni, vous devez structurer votre référentiel Git privé comme suit
 | Artefacts (noms de fichier) | Description | Exemple |
 | --- | --- | --- |
 | {your_source} | Nom de la source. Ce dossier doit contenir tous les artefacts liés à votre source, dans votre référentiel Git privé. | `medallia` |
-| {your_source}-category.txt | Catégorie à laquelle appartient votre source, formatée en tant que fichier texte. **Remarque**: si vous pensez que votre source ne correspond à aucune des catégories ci-dessus, contactez votre représentant d’Adobe pour discuter. | `medallia-category.txt` Dans le fichier, veuillez spécifier la catégorie de votre source, par exemple : `streaming`. |
-| {your_source}-description.txt | Brève description de votre source. | [!DNL Medallia] est la source d’automatisation du marketing que vous pouvez utiliser pour apporter. [!DNL Medallia] données à Experience Platform. |
+| {your_source}-category.txt | Catégorie à laquelle appartient votre source, formatée en tant que fichier texte. **Remarque** : Si vous pensez que votre source ne rentre dans aucune des catégories ci-dessus, contactez votre représentant Adobe pour discuter. | `medallia-category.txt` Dans le fichier, spécifiez la catégorie de votre source, par exemple : `streaming`. |
+| {your_source}-description.txt | Brève description de votre source. | [!DNL Medallia] est une source d’automatisation du marketing que vous pouvez utiliser pour importer des données [!DNL Medallia] dans Experience Platform. |
 | {your_source}-icon.svg | L’image à utiliser pour représenter votre source dans le catalogue de sources Experience Platform. Cette icône doit être un fichier de SVG. |
 | {your_source}-label.txt | Le nom de votre source tel qu’il doit apparaître dans le catalogue des sources Experience Platform. | Medallia |
 | {your_source}-connectionSpec.json | Un fichier JSON contenant la spécification de connexion de votre source. Ce fichier n’est pas initialement requis, car vous renseignez votre spécification de connexion à mesure que vous suivez ce guide. | `medallia-connectionSpec.json` |
@@ -56,7 +56,7 @@ Une fois fourni, vous devez structurer votre référentiel Git privé comme suit
 
 Une fois que vous avez ajouté les fichiers nécessaires à votre référentiel Git privé, vous devez créer une requête de tirage (PR) que l’Adobe doit examiner. Une fois votre requête de tirage approuvée et fusionnée, vous recevez un identifiant qui peut être utilisé pour votre spécification de connexion pour faire référence au libellé, à la description et à l’icône de votre source.
 
-Suivez ensuite les étapes décrites ci-dessous pour configurer votre spécification de connexion. Pour plus d’informations sur les différentes fonctionnalités que vous pouvez ajouter à votre source, telles qu’une planification avancée, un schéma personnalisé ou différents types de pagination, consultez le guide sur [configuration des spécifications source](../config/sourcespec.md).
+Suivez ensuite les étapes décrites ci-dessous pour configurer votre spécification de connexion. Pour plus d’informations sur les différentes fonctionnalités que vous pouvez ajouter à votre source, telles que la planification avancée, le schéma personnalisé ou différents types de pagination, consultez le guide sur la [configuration des spécifications de la source](../config/sourcespec.md).
 
 ## Copier le modèle de spécification de connexion
 

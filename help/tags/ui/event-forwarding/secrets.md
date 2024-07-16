@@ -21,7 +21,7 @@ Les types de secret suivants sont actuellement pris en charge :
 | [!UICONTROL HTTP] | Contient deux attributs de chaîne pour un nom dʼutilisateur et un mot de passe, respectivement. |
 | [!UICONTROL [!DNL LinkedIn] OAuth 2] | Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
 | [!UICONTROL OAuth 2] | Contient plusieurs attributs pour prendre en charge le [type d’octroi des informations d’identification du client](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) pour la spécification d’authentification [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749). Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
-| [!UICONTROL JWT OAuth 2] | Contient plusieurs attributs pour la prise en charge du profil JSON Web Token (JWT) pour [Autorisation OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1) subventions. Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
+| [!UICONTROL OAuth 2 JWT] | Contient plusieurs attributs pour la prise en charge du profil JSON Web Token (JWT) pour les subventions [OAuth 2.0 Authorization](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1). Le système vous demande les informations requises, puis gère le renouvellement de ces jetons pour vous à un intervalle spécifié. |
 | [!UICONTROL Jeton] | Chaîne unique de caractères représentant une valeur de jeton dʼauthentification connue et comprise par les deux systèmes. |
 
 {style="table-layout:auto"}
@@ -75,7 +75,7 @@ Pour chaque environnement ajouté, vous devez attribuer un nouveau nom unique po
 * [[!UICONTROL Jeton]](#token)
 * [[!UICONTROL HTTP]](#http)
 * [[!UICONTROL OAuth 2]](#oauth2)
-* [[!UICONTROL JWT OAuth 2]](#oauth2jwt)
+* [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 * [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
 
@@ -121,39 +121,39 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Créer un secret]** pour
 
 ![Enregistrer le décalage OAuth 2](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
 
-### [!UICONTROL JWT OAuth 2] {#oauth2jwt}
+### [!UICONTROL OAuth 2 JWT] {#oauth2jwt}
 
-Pour créer un secret JWT OAuth 2, sélectionnez **[!UICONTROL JWT OAuth 2]** de la **[!UICONTROL Type]** menu déroulant.
+Pour créer un secret JWT OAuth 2, sélectionnez **[!UICONTROL OAuth 2 JWT]** dans la liste déroulante **[!UICONTROL Type]** .
 
-![La variable [!UICONTROL Créer un secret] avec le secret JWT OAuth 2 mis en surbrillance dans la [!UICONTROL Type] menu déroulant.](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+![Onglet [!UICONTROL Créer un secret] avec le secret JWT OAuth 2 surligné dans la liste déroulante [!UICONTROL Type].](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
 
 >[!NOTE]
 >
->La seule [!UICONTROL Algorithme] qui est actuellement pris en charge pour la signature du JWT est RS256.
+>Le seul [!UICONTROL algorithme] actuellement pris en charge pour la signature du JWT est RS256.
 
-Dans les champs qui s’affichent ci-dessous, fournissez vos [!UICONTROL Émetteur], [!UICONTROL Objet], [!UICONTROL Audience], [!UICONTROL Demandes personnalisées], [!UICONTROL TTL], puis sélectionnez la variable [!UICONTROL Algorithme] dans la liste déroulante. Ensuite, saisissez le [!UICONTROL Id De Clé Privée], ainsi que vos [[!UICONTROL URL du jeton]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) pour votre intégration OAuth. La variable [!UICONTROL URL du jeton] n’est pas un champ obligatoire. Si une valeur est fournie, le jeton JWT est échangé avec un jeton d’accès. Le secret sera actualisé en fonction des `expires_in` de la réponse et de la variable [!UICONTROL Actualiser le décalage] . Si aucune valeur n’est fournie, le secret envoyé au bord est le JWT. Le jeton JWT sera actualisé en fonction de la variable [!UICONTROL TTL] et [!UICONTROL Actualiser le décalage] valeurs.
+Dans les champs qui s’affichent ci-dessous, fournissez vos [!UICONTROL Emetteur], [!UICONTROL Objet], [!UICONTROL Audience], [!UICONTROL Demandes personnalisées], [!UICONTROL TTL], puis sélectionnez l’ [!UICONTROL algorithme] dans la liste déroulante. Ensuite, saisissez l’ [!UICONTROL  ID de clé privée ], ainsi que votre [[!UICONTROL  URL de jeton]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) pour votre intégration OAuth. Le champ [!UICONTROL URL du jeton] n’est pas obligatoire. Si une valeur est fournie, le jeton JWT est échangé avec un jeton d’accès. Le secret sera actualisé en fonction de l’attribut `expires_in` de la réponse et de la valeur [!UICONTROL Actualiser le décalage]. Si aucune valeur n’est fournie, le secret envoyé au bord est le JWT. Le JWT sera actualisé conformément aux valeurs [!UICONTROL TTL] et [!UICONTROL Actualiser le décalage] .
 
-![La variable [!UICONTROL Créer un secret] avec une sélection de champs de saisie en surbrillance.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+![ Onglet [!UICONTROL Créer un secret] avec une sélection de champs de saisie en surbrillance.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
 
-Sous **[!UICONTROL Options d’identification]**, vous pouvez fournir d’autres options d’identification, telles que `jwt_param` sous la forme de paires clé-valeur. Pour ajouter des paires clé-valeur supplémentaires, sélectionnez **[!UICONTROL Ajouter une autre]**.
+Sous **[!UICONTROL Credential Options]**, vous pouvez fournir d’autres options d’identification telles que `jwt_param` sous la forme de paires clé-valeur. Pour ajouter des paires clé-valeur supplémentaires, sélectionnez **[!UICONTROL Ajouter une autre]**.
 
-![La variable [!UICONTROL Créer un secret] mise en surbrillance de l’onglet [!UICONTROL Options d’identification] des champs.](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+![ L&#39;onglet [!UICONTROL Créer un secret] qui surligne les [!UICONTROL  champs ] d&#39;options d&#39;identification.](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
 
 Enfin, vous pouvez configurer la valeur **[!UICONTROL Actualiser le décalage]** pour le secret. Cette valeur représente le nombre de secondes avant l’expiration du jeton pendant lesquelles le système effectue une actualisation automatique. L’équivalent en heures et minutes s’affiche à droite du champ et se met automatiquement à jour au fur et à mesure que vous tapez.
 
-![La variable [!UICONTROL Créer un secret] mise en surbrillance de l’onglet [!UICONTROL Actualiser le décalage] champ .](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+![L’onglet [!UICONTROL Créer un secret] qui met en surbrillance le champ [!UICONTROL Actualiser le décalage].](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
 
-Par exemple, si le décalage d’actualisation est défini sur la valeur par défaut de `1800` (30 minutes) et le jeton d’accès comporte une `expires_in` valeur de `3600` (une heure), le système actualise automatiquement le secret en une heure.
+Par exemple, si le décalage d’actualisation est défini sur la valeur par défaut `1800` (30 minutes) et que le jeton d’accès a une valeur `expires_in` de `3600` (une heure), le système actualise automatiquement le secret dans une heure.
 
 >[!IMPORTANT]
 >
 >Un secret JWT OAuth 2 nécessite au moins 30 minutes entre les actualisations et doit également être valide pendant au moins une heure. Cette restriction vous donne un minimum de 30 minutes pour intervenir en cas de problème avec le jeton généré.
 >
->Par exemple, si le décalage est défini sur `1800` (30 minutes) et le jeton d’accès comporte une `expires_in` de `2700` (45 minutes), l’échange échouerait, car la différence résultante serait inférieure à 30 minutes.
+>Par exemple, si le décalage est défini sur `1800` (30 minutes) et que le jeton d’accès a un `expires_in` de `2700` (45 minutes), l’exchange échoue en raison de la différence qui en résulte : moins de 30 minutes.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Créer un secret]** pour enregistrer le secret.
 
-![La variable [!UICONTROL Créer un secret] mise en surbrillance des onglets [!UICONTROL Créer un secret]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
+![ L’onglet [!UICONTROL  Créer un secret] surlignant [!UICONTROL  Créer un secret]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
@@ -180,35 +180,35 @@ Une boîte de dialogue s’affiche et vous permet de saisir les informations d�
 
 ### [!UICONTROL [!DNL LinkedIn] OAuth 2] {#linkedin-oauth2}
 
-Pour créer une [!DNL LinkedIn] Secret OAuth 2, sélectionnez **[!UICONTROL [!DNL LinkedIn]OAuth 2]** de la **[!UICONTROL Type]** menu déroulant. Ensuite, sélectionnez **[!UICONTROL Créer un secret]**.
+Pour créer un secret [!DNL LinkedIn] OAuth 2, sélectionnez **[!UICONTROL [!DNL LinkedIn]OAuth 2]** dans la liste déroulante **[!UICONTROL Type]**. Sélectionnez ensuite **[!UICONTROL Créer un secret]**.
 
-![La variable [!UICONTROL Créer un secret] avec l’onglet [!UICONTROL Type] en surbrillance.](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
+![Onglet [!UICONTROL Créer un secret] avec le champ [!UICONTROL Type] en surbrillance.](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
 
-Une fenêtre contextuelle s’affiche pour vous informer que le secret doit être autorisé manuellement via [!DNL LinkedIn]. Sélectionner **[!UICONTROL Créer et autoriser le secret avec[!DNL LinkedIn]]** pour continuer.
+Une fenêtre contextuelle s’affiche pour vous informer que le secret doit être autorisé manuellement via [!DNL LinkedIn]. Sélectionnez **[!UICONTROL Créer et autoriser le secret avec[!DNL LinkedIn]]** pour continuer.
 
-![[!DNL LinkedIn] surlignage de la fenêtre contextuelle d’autorisation [!UICONTROL Créer et autoriser le secret avec [!DNL LinkedIn]].](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+![[!DNL LinkedIn] fenêtre contextuelle d’autorisation surlignant [!UICONTROL Créer et autoriser un secret avec [!DNL LinkedIn]].](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
 
-Une boîte de dialogue s’affiche, vous invitant à saisir votre [!DNL LinkedIn] informations d’identification. Suivez les invites pour accorder l’accès au transfert d’événement à vos données.
+Une boîte de dialogue s’affiche vous invitant à saisir vos informations d’identification [!DNL LinkedIn]. Suivez les invites pour accorder l’accès au transfert d’événement à vos données.
 
-Une fois le processus d’autorisation terminé, vous revenez à la variable **[!UICONTROL Secrets]** dans laquelle vous pouvez voir le secret que vous venez de créer. Vous pouvez y voir le statut du secret et la date d&#39;expiration.
+Une fois le processus d’autorisation terminé, vous revenez à l’onglet **[!UICONTROL Secrets]** où vous pouvez voir le secret que vous venez de créer. Vous pouvez y voir le statut du secret et la date d&#39;expiration.
 
-![La variable [!UICONTROL Secret] en surbrillant le secret nouvellement créé.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
+![L’onglet [!UICONTROL Secret] qui met en surbrillance le secret nouvellement créé.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
 
-#### Réautoriser un [!UICONTROL [!DNL LinkedIn] OAuth 2] secret
+#### Réautoriser un secret [!UICONTROL [!DNL LinkedIn] OAuth 2]
 
 >IMPORTANT
 >
->Vous devez réautoriser à l’aide de [!DNL LinkedIn] informations d’identification tous les 365 jours. Si vous ne réautorisez pas votre secret dans les délais impartis, il ne sera pas actualisé et la variable [!DNL LinkedIn] les demandes de conversion échoueront.
+>Vous devez réautoriser l’utilisation de vos informations d’identification [!DNL LinkedIn] tous les 365 jours. Si vous ne réautorisez pas votre secret dans les délais impartis, il ne sera pas actualisé et les demandes de conversion [!DNL LinkedIn] échoueront.
 
-Trois mois avant la réautorisation du secret, une fenêtre contextuelle s’affiche lorsque vous naviguez sur une page de la propriété. Sélectionner **[!UICONTROL Cliquez ici pour accéder à vos secrets]**.
+Trois mois avant la réautorisation du secret, une fenêtre contextuelle s’affiche lorsque vous naviguez sur une page de la propriété. Sélectionnez **[!UICONTROL Cliquez ici pour accéder à vos secrets]**.
 
-![La variable [!UICONTROL Présentation de la propriété] onglet surlignant la fenêtre contextuelle de réautorisation secrète.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
+![L’onglet [!UICONTROL Présentation de la propriété] qui met en surbrillance la fenêtre contextuelle de réautorisation secrète.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
 
-Vous êtes redirigé vers le [!UICONTROL Secrets] . Les secrets répertoriés sur cette page sont filtrés pour n’afficher que les secrets qui doivent être réautorisés. Sélectionner **[!UICONTROL Audits nécessaires]** pour le secret que vous devez réautoriser.
+Vous êtes redirigé vers l’onglet [!UICONTROL Secrets] . Les secrets répertoriés sur cette page sont filtrés pour n’afficher que les secrets qui doivent être réautorisés. Sélectionnez **[!UICONTROL Auth Needed]** pour le secret que vous devez réautoriser.
 
-![La variable [!UICONTROL Secret] mise en surbrillance des onglets [!UICONTROL Audits nécessaires]pour le [!DNL LinkedIn] secret.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+![L’onglet [!UICONTROL Secret] surlignant [!UICONTROL Auth Needed]pour le secret [!DNL LinkedIn].](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
 
-Une boîte de dialogue s’affiche, vous invitant à saisir votre [!DNL LinkedIn] informations d’identification. Suivez les invites pour réautoriser votre secret.
+Une boîte de dialogue s’affiche, vous invitant à saisir vos informations d’identification [!DNL LinkedIn]. Suivez les invites pour réautoriser votre secret.
 
 ## Modifier un secret
 

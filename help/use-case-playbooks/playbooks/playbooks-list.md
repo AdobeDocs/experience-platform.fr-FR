@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: Cas d’utilisation disponibles des classeurs pour Real-time Customer Data Platform et Adobe Journey Optimizer.
-description: Liste de tous les playbooks dans Real-time Customer Data Platform et Adobe Journey Optimizer.
+title: Cas d’utilisation disponibles des classeurs pour Real-Time Customer Data Platform et Adobe Journey Optimizer.
+description: Liste de tous les playbooks dans Real-Time Customer Data Platform et Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
 source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
@@ -38,8 +38,8 @@ Lisez cette page pour obtenir un aperçu de tous les playbooks disponibles que v
 | Augmenter l’achat de produits lors de la visite du magasin | Défaites les acheteurs pour acheter des produits lorsqu’ils se trouvent près du magasin. |
 | Augmenter les achats de produits et de services durant la durée du séjour | Pouvez les invités à acheter des produits et des services lorsqu’ils se trouvent dans la propriété. |
 | Augmentation des achats de jeux uniques | Ciblez les fans afin d’augmenter les achats à un seul jeu. |
-| Enquête sur les événements de publication et promotion d’incitation | Dirigez les fans pour qu’ils répondent à une enquête post-événement en proposant une promotion d’incitation. |
-| Enquête après le voyage | Pouvez inciter les invités à répondre à un questionnaire après le voyage en proposant une promotion d’incitation. |
+| Enquête sur les événements Post et promotion d’incitation | Dirigez les fans pour qu’ils répondent à une enquête post-événement en proposant une promotion d’incitation. |
+| Post-Trip Survey | Pouvez inciter les invités à répondre à un questionnaire après le voyage en proposant une promotion d’incitation. |
 | Promotion de produit | Déplace les acheteurs pour acheter des produits au cours d’une campagne promotionnelle continue. |
 | Confirmation d’achat : marchandisage | Confirmez un nouveau fan d’achat de marchandises. |
 | Confirmation d’achat : produit | Confirmez la création d’un nouvel acheteur de produits. |
@@ -56,7 +56,7 @@ Lisez cette page pour obtenir un aperçu de tous les playbooks disponibles que v
 
 {style="table-layout:auto"}
 
-## Cas d’utilisation des classeurs de cas d’utilisation dans Real-time Customer Data Platform {#rtcdp-playbooks}
+## Cas d’utilisation des classeurs de cas d’utilisation dans Real-Time Customer Data Platform {#rtcdp-playbooks}
 
 | Nom du manuel | Description |
 | ------------- | ----------- |
@@ -77,4 +77,4 @@ Lisez cette page pour obtenir un aperçu de tous les playbooks disponibles que v
 
 ## Étapes suivantes
 
-Maintenant que vous connaissez les playbooks disponibles, lisez ceci : [guide](/help/use-case-playbooks/playbooks/choose.md) pour comprendre comment commencer à utiliser les playbooks et choisir celui qui vous convient dans l’interface utilisateur.
+Maintenant que vous connaissez les playbooks disponibles, lisez ce [guide](/help/use-case-playbooks/playbooks/choose.md) pour comprendre comment commencer à utiliser les playbooks et choisir celui qui vous convient dans l’interface utilisateur.

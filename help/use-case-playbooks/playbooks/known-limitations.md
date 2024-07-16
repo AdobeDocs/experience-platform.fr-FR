@@ -20,9 +20,9 @@ Découvrez comment résoudre les erreurs lors de l’utilisation de classeurs de
 
 Deux limites connues s’affichent lorsque vous créez une instance d’un playbook et que vous générez des ressources.
 
-* Pour les schémas générés, si un schéma est généré dans une instance d’un playbook et que vous le modifiez, alors un autre schéma *will not* est généré si vous activez une autre instance du playbook. Continuez également à utiliser le schéma que vous avez modifié dans l’instance.
+* Pour les schémas générés, si un schéma est généré dans une instance d’un playbook et que vous le modifiez, un autre schéma *n’est pas généré si vous activez une autre instance du playbook.* Continuez également à utiliser le schéma que vous avez modifié dans l’instance.
 
-* Lors de l’utilisation de la variable [fonctionnalité de sensibilisation aux données](/help/use-case-playbooks/playbooks/data-awareness.md) pour promouvoir le schéma de l’environnement de test d’inspiration vers l’environnement de test de développement, vous pouvez voir des erreurs similaires à celles ci-dessous :
+* Lors de l’utilisation de la [fonctionnalité de sensibilisation aux données](/help/use-case-playbooks/playbooks/data-awareness.md) pour promouvoir le schéma de l’environnement de test d’inspiration vers l’environnement de test de développement, vous pouvez voir des erreurs similaires à celles ci-dessous :
 
 ![Erreurs affichées dans le workflow de mappage de schéma.](/help/use-case-playbooks/assets/playbooks/troubleshooting/schema-errors.png){width="1000" zoomable="yes"}
 

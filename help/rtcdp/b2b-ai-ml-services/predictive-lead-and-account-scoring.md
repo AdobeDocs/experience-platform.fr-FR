@@ -7,8 +7,8 @@ badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/l
 exl-id: d3afbabb-005d-4537-831a-857c88043759
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt
-source-wordcount: '869'
-ht-degree: 14%
+source-wordcount: '859'
+ht-degree: 11%
 
 ---
 
@@ -26,7 +26,7 @@ Le service de notation de compte et de piste prédictive répond aux défis ci-d
 
 >[!NOTE]
 >
->[!DNL Marketo] la source de données est actuellement requise, car il s’agit de la seule source de données pouvant fournir les événements de conversion au niveau du profil de la personne.
+>La source de données [!DNL Marketo] est actuellement requise, car il s’agit de la seule source de données pouvant fournir les événements de conversion au niveau du profil de la personne.
 
 La notation prédictive des pistes et des comptes utilise une méthode d’apprentissage automatique basée sur l’arborescence (boosting aléatoire de forêt/gradient) pour créer le modèle de notation prédictive des pistes.
 
@@ -37,13 +37,13 @@ La notation prédictive des pistes et des comptes prend en charge les types d’
 | Type d’objectif | Champs |
 | --- | --- |
 | `leadOperation.convertLead` | <ul><li>`leadOperation.convertLead.convertedStatus`</li><li>`leadOperation.convertLead.assignTo`</li></ul> |
-| `opportunityEvent.opportunityUpdated` | <ul><li>`opportunityEvent.dataValueChanges.attributeName`</li><li>`opportunityEvent.dataValueChanges.newValue`</li><li>`opportunityEvent.dataValueChanges.oldValue`</li>Exemple : `opportunityEvent.dataValueChanges.attributeName` est égal à `Stage` et `opportunityEvent.dataValueChanges.newValue` est égal à `Contract`</ul> |
+| `opportunityEvent.opportunityUpdated` | <ul><li>`opportunityEvent.dataValueChanges.attributeName`</li><li>`opportunityEvent.dataValueChanges.newValue`</li><li>`opportunityEvent.dataValueChanges.oldValue`</li>Exemple : `opportunityEvent.dataValueChanges.attributeName` est égal `Stage` et `opportunityEvent.dataValueChanges.newValue` est égal `Contract`</ul> |
 
 L’algorithme prend en compte les attributs et données d’entrée suivants :
 
 * Profil de personne
 
-| Champ XDM | Obligatoire / Facultatif |
+| Champ XDM | Obligatoire/Facultatif |
 | --- | --- |
 | `personComponents.sourceAccountKey.sourceKey` | Obligatoire |
 | `workAddress.country` | Facultatif |
@@ -52,11 +52,11 @@ L’algorithme prend en compte les attributs et données d’entrée suivants :
 
 >[!NOTE]
 > 
->L’algorithme n’examine que `sourceAccountKey.sourceKey` dans le groupe de champs Person:personComponents .
+>L’algorithme n’examine que le champ `sourceAccountKey.sourceKey` du groupe de champs Person:personComponents .
 
-* Profil du compte
+* Profil de compte
 
-| Champ XDM | Obligatoire / Facultatif |
+| Champ XDM | Obligatoire/Facultatif |
 | --- | --- |
 | `accountKey.sourceKey` | Obligatoire |
 | `extSourceSystemAudit.createdDate` | Obligatoire |
@@ -66,7 +66,7 @@ L’algorithme prend en compte les attributs et données d’entrée suivants :
 
 * Événement d’expérience
 
-| Champ XDM | Obligatoire / Facultatif |
+| Champ XDM | Obligatoire/Facultatif |
 | --- | --- |
 | `_id` | Obligatoire |
 | `personKey.sourceKey` | Obligatoire |
@@ -86,11 +86,11 @@ Les exigences de qualité des données sont les suivantes :
 
 Les tâches de notation sont exécutées tous les jours et les résultats sont enregistrés en tant qu’attributs de profil et attributs de compte, qui peuvent ensuite être utilisés dans les définitions de segment et la personnalisation. Des informations d’analyse d’usine sont également disponibles dans le tableau de bord de présentation du compte.
 
-Consultez la documentation pour plus d’informations sur la manière de [gestion de la notation prédictive des pistes et des comptes](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md) service.
+Consultez la documentation pour plus d’informations sur la façon de [gérer le service de piste prédictive et de notation de compte](/help/rtcdp/b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md).
 
 ## Affichage des résultats prédictifs de piste et de notation de compte {#how-to-view}
 
-Après l’exécution de la tâche, les résultats sont enregistrés dans un nouveau jeu de données système pour chaque modèle sous le nom `LeadsAI.Scores` - ***nom du score***. Chaque groupe de champs de score peut se trouver à l’adresse `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`.
+Après l’exécution de la tâche, les résultats sont enregistrés dans un nouveau jeu de données système pour chaque modèle sous le nom `LeadsAI.Scores` - ***nom du score***. Chaque groupe de champs de score peut se trouver à l’emplacement `{CUSTOM_FIELD_GROUP}.LeadsAI.the_score_name`.
 
 | Attribut | Description |
 | --- | --- |
@@ -102,19 +102,19 @@ Après l’exécution de la tâche, les résultats sont enregistrés dans un nou
 
 ### Affichage des scores du profil client
 
-Pour afficher les scores prédictifs d’un profil de personne, sélectionnez **[!UICONTROL Profils]** sous la section client du panneau de gauche, puis saisissez l’espace de noms et la valeur d’identité. Une fois l’opération terminée, sélectionnez **[!UICONTROL Affichage]**.
+Pour afficher les scores prédictifs d’un profil de personne, sélectionnez **[!UICONTROL Profils]** sous la section client dans le panneau de gauche, puis saisissez l’espace de noms d’identité et la valeur d’identité. Une fois que vous avez terminé, sélectionnez **[!UICONTROL Afficher]**.
 
 Sélectionnez ensuite le profil dans la liste.
 
 ![Profil client](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
-La variable **[!UICONTROL Détail]** inclut désormais les scores prédictifs. Cliquez sur l’icône de graphique en regard du score prédictif.
+La page **[!UICONTROL Detail]** inclut désormais les scores prédictifs. Cliquez sur l’icône de graphique en regard du score prédictif.
 
-![Score prédictif du profil client](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
+![Score prédictif de profil client](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 
 Une boîte de dialogue contextuelle affiche le score, la distribution globale du score, les principaux facteurs d’influence de ce score et la définition de l’objectif du score.
 
-![Détails sur les scores prédictifs du profil client](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score-details.png)
+![Détails sur le score prédictif du profil client](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score-details.png)
 
 ## Surveillance des tâches de notation de compte et de piste prédictives {#monitoring-jobs}
 
@@ -124,4 +124,4 @@ Le tableau de bord vous permet de surveiller les mesures de base et l’état d�
 * Tâche de notation suivante (date)
 * Prochaine tâche de formation (date)
 
-Pour plus d’informations, voir la documentation sur [suivi des tâches pour la prévision de piste et la notation de compte](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).
+Pour plus d’informations, consultez la documentation sur la [surveillance des tâches pour la piste prédictive et la notation de compte](/help/dataflows/ui/b2b/monitor-profile-enrichment.md).

@@ -6,8 +6,8 @@ description: Vous pouvez utiliser le point d’entrée `/mappingSets` dans l’A
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
-source-wordcount: '852'
-ht-degree: 90%
+source-wordcount: '859'
+ht-degree: 88%
 
 ---
 
@@ -17,7 +17,7 @@ Les jeux de mappages peuvent être utilisés pour définir la façon dont les do
 
 ## Liste des jeux de mappages
 
-Vous pouvez récupérer une liste de tous les ensembles de mappages pour votre organisation en envoyant une requête de GET à la variable `/mappingSets` point de terminaison .
+Vous pouvez récupérer une liste de tous les ensembles de mappages pour votre organisation en envoyant une requête de GET au point de terminaison `/mappingSets`.
 
 **Format d’API**
 
@@ -218,7 +218,7 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 | -------- | ----------- |
 | `outputSchema.schemaRef.id` | Identifiant du schéma XDM auquel vous faites référence. |
 | `outputSchema.schemaRef.contentType` | Détermine le format de réponse du schéma référencé. Vous trouverez plus d’informations sur ce champ dans le [guide de développement du registre des schémas](../../xdm/api/schemas.md#lookup). |
-| `mappings.sourceType` | Le type de source décrit comment la valeur sera extraite de la source vers la destination. Le type de source prend en charge deux valeurs possibles : <ul><li>`ATTRIBUTE`: Le type de source `ATTRIBUTE` est utilisé lorsque l’attribut d’entrée provient d’un schéma source.</li><li>`EXPRESSION`: Le type de source `EXPRESSION` est utilisé lorsque le mapping est effectué à l’aide d’un champ calculé.</li></ul> **AVERTISSEMENT**: La définition incorrecte des valeurs de type source peut rendre vos jeux de mappages non modifiables. |
+| `mappings.sourceType` | Le type de source décrit comment la valeur sera extraite de la source vers la destination. Le type de source prend en charge deux valeurs possibles : <ul><li>`ATTRIBUTE` : le type source `ATTRIBUTE` est utilisé lorsque l’attribut d’entrée provient d’un schéma source.</li><li>`EXPRESSION` : le type de source `EXPRESSION` est utilisé lorsque le mappage est terminé à l’aide d’un champ calculé.</li></ul> **WARNING** : la définition incorrecte des valeurs de type source peut rendre vos jeux de mappages non modifiables. |
 | `mappings.source` | L’emplacement à partir duquel vous souhaitez mapper les données. |
 | `mappings.destination` | L’emplacement auquel vous souhaitez mapper les données. |
 

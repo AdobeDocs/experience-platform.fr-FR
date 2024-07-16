@@ -3,8 +3,8 @@ description: Découvrez comment utiliser l’API de test de destination pour val
 title: Validation de la structure de profil exportée
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
 source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
-workflow-type: ht
-source-wordcount: '789'
+workflow-type: tm+mt
+source-wordcount: '793'
 ht-degree: 100%
 
 ---

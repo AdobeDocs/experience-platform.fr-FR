@@ -4,7 +4,7 @@ description: Utilisez les modèles de rapport pour explorer les données d’Exp
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
 source-git-commit: 729d218f72a8caecc90a98810b973d0754f7757b
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1465'
 ht-degree: 92%
 
 ---
@@ -17,7 +17,7 @@ Ce document explique comment connecter Adobe Experience Platform à l’applic
 
 ## Prise en main
 
-Avant de poursuivre ce tutoriel, il est recommandé de bien comprendre les [composition du schéma](../../xdm/schema/composition.md) dans Experience Platform et comment les attributs sont inclus dans Real-time Customer Profile via la variable [schéma d’union](../../xdm/schema/composition.md#union).
+Avant de poursuivre ce tutoriel, il est recommandé de bien comprendre la [composition de schéma](../../xdm/schema/composition.md) en Experience Platform et la manière dont les attributs sont inclus dans Real-time Customer Profile par le biais du [schéma d’union](../../xdm/schema/composition.md#union).
 
 Pour installer l’intégration de l’application Power BI, les utilisateurs doivent avoir au préalable acquis les autorisations Platform suivantes :
 

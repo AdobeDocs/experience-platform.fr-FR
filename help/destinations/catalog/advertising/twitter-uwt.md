@@ -1,22 +1,22 @@
 ---
-keywords: twitter;Twitter;balise de site web universelle twitter;balise de site web universelle Twitter;balise UWT Twitter;Twitter uwt;twitter uwt
+keywords: twitter;Twitter;balise de site web universelle de twitter;balise de site web universelle de Twitter;balise de Twitter UWT;Twitter uwt;twitter uwt
 title: Extension Twitter Universal Website Tag
-description: L’extension Twitter Universal Website Tag est une destination publicitaire dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension Twitter Universal Website Tag est une destination publicitaire dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 51ee94f7-e44a-4192-b684-3d7838af4359
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 83%
+source-wordcount: '437'
+ht-degree: 85%
 
 ---
 
 # Extension [!DNL Twitter Universal Website Tag] {#twitter-uwt-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-[!DNL Twitter Universal Website Tag] fournit des actions pour envoyer des balises à Twitter UWT Tag.
+[!DNL Twitter Universal Website Tag] fournit des actions pour envoyer des balises à la balise UWT de Twitter.
 
-[!DNL Twitter Universal Website Tag] est une extension publicitaire dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, voir [Suivi des conversions](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) dans la documentation de Twitter.
+[!DNL Twitter Universal Website Tag] est une extension publicitaire dans Adobe Experience Platform. Pour plus d’informations sur la fonctionnalité de l’extension, voir [Suivi des conversions](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) dans la documentation du Twitter.
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL Twitter Universal Website Tag] extension :
+Pour installer l’extension [!DNL Twitter Universal Website Tag], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

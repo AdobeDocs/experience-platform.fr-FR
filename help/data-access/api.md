@@ -150,7 +150,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `data.name` | Le nom du fichier (par exemple : `profiles.csv`). |
+| `data.name` | Nom du fichier (par exemple, `profiles.csv`). |
 | `data.length` | Taille du fichier (en octets). |
 | `data._links.self.href` | L’URL de téléchargement du fichier. |
 
@@ -197,12 +197,12 @@ Lorsqu’un répertoire est renvoyé, il contient un tableau de tous les fichier
 
 | Propriété | Description |
 | -------- | ----------- |
-| `data.name` | Le nom du fichier (par exemple : `profiles.csv`). |
+| `data.name` | Nom du fichier (par exemple, `profiles.csv`). |
 | `data._links.self.href` | L’URL de téléchargement du fichier. |
 
 ## Accès aux contenus d’un fichier {#access-file-contents}
 
-Vous pouvez également utiliser la variable [!DNL Data Access] API pour accéder au contenu d’un fichier. Vous pouvez ensuite télécharger le contenu vers une source externe.
+Vous pouvez également utiliser l’API [!DNL Data Access] pour accéder au contenu d’un fichier. Vous pouvez ensuite télécharger le contenu vers une source externe.
 
 **Format d’API**
 
@@ -227,7 +227,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 | Propriété | Description |
 | -------- | ----------- |
 | `{FILE_ID}` | L’identifiant du fichier au sein d’un jeu de données. |
-| `{FILE_NAME}` | Nom complet du fichier (par exemple : `profiles.csv`). |
+| `{FILE_NAME}` | Nom complet du fichier (par exemple, `profiles.csv`). |
 
 **Réponse**
 
@@ -235,8 +235,8 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 
 ## Exemples de code supplémentaires
 
-Pour des exemples supplémentaires, reportez-vous à la section [tutoriel sur l’accès aux données](tutorials/dataset-data.md).
+Pour d’autres exemples, reportez-vous au [ tutoriel sur l’accès aux données](tutorials/dataset-data.md).
 
 ## Abonnement aux événements d’ingestion de données {#subscribe-to-data-ingestion-events}
 
-Vous pouvez vous abonner à des événements à forte valeur ajoutée spécifiques par le biais de la variable [Console Adobe Developer](https://developer.adobe.com/console/). Par exemple, vous pouvez vous abonner aux événements d’ingestion de données pour être informé des retards et des échecs potentiels. Pour plus dʼinformations, consultez le tutoriel sur [lʼabonnement aux notifications dʼingestion des données](../ingestion/quality/subscribe-events.md).
+Vous pouvez vous abonner à des événements à valeur élevée spécifiques par le biais de [Adobe Developer Console](https://developer.adobe.com/console/). Par exemple, vous pouvez vous abonner aux événements d’ingestion de données pour être informé des retards et des échecs potentiels. Pour plus dʼinformations, consultez le tutoriel sur [lʼabonnement aux notifications dʼingestion des données](../ingestion/quality/subscribe-events.md).

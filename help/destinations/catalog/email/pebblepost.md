@@ -5,7 +5,7 @@ description: L’extension PebblePost est une destination d’e-mail dans Adobe 
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
 source-git-commit: baa0ea072c80e141974bb595dfff149aa5de6270
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '448'
 ht-degree: 82%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 82%
 
 ## Vue d’ensemble {#overview}
 
-[!DNL PebblePost's Programmatic Direct Mail] La solution permet aux spécialistes du marketing numérique de connecter l’intérêt et l’intention en ligne à des médias tangibles hors ligne qui convertissent. Les marketeurs peuvent tirer parti des audiences de données personnalisées qu’ils ont créées en Adobe pour désormais cibler les consommateurs avec une impression multimédia pertinente, plus durable et à domicile. Analysez les performances en temps réel en fonction de l’activité du chemin de réponse et des conversions sur site.
+La solution [!DNL PebblePost's Programmatic Direct Mail] permet aux spécialistes du marketing numérique de connecter l’intérêt et l’intention en ligne aux médias tangibles hors ligne qui convertissent. Les marketeurs peuvent tirer parti des audiences de données personnalisées qu’ils ont créées en Adobe pour désormais cibler les consommateurs avec une impression multimédia pertinente, plus durable et à domicile. Analysez les performances en temps réel en fonction de l’activité du chemin de réponse et des conversions sur site.
 
 [!DNL PebblePost] est une extension de messagerie dans Adobe Experience Platform.
 

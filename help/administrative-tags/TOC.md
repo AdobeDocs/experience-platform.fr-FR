@@ -14,7 +14,7 @@ ht-degree: 82%
 # Balises unifiées{#administrative-tags}
 
 * [Présentation des balises unifiées](overview.md)
-* API de balises unifiées {#api}
+* API des balises unifiées {#api}
    * [Vue d’ensemble](api/overview.md)
    * [Prise en main](api/getting-started.md)
    * [Dossiers](api/folders.md)

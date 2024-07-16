@@ -13,33 +13,33 @@ ht-degree: 40%
 
 # Tableau de bord des [!UICONTROL Audiences] {#audiences-dashboard}
 
-L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos audiences, telles qu’elles sont capturées lors d’un instantané quotidien. Ce guide explique comment accéder à et utiliser le [!UICONTROL Audiences] tableau de bord dans l’interface utilisateur et fournit des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
+L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos audiences, telles qu’elles sont capturées lors d’un instantané quotidien. Ce guide explique comment accéder au tableau de bord [!UICONTROL Audiences] et l’utiliser dans l’interface utilisateur. Il fournit également des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
 
 Pour obtenir un aperçu de toutes les fonctionnalités du service de segmentation d’Adobe Experience Platform au sein de l’interface utilisateur de la plateforme, veuillez consulter le [Guide de l’interface utilisateur du service de segmentation](../../segmentation/ui/overview.md).
 
-## [!UICONTROL Audiences] données du tableau de bord
+## Données du tableau de bord [!UICONTROL Audiences]
 
-La variable [!UICONTROL Audiences] Le tableau de bord affiche un instantané des données d’attribut (enregistrement) dont votre organisation dispose dans la banque de profils dans Experience Platform. L’instantané n’inclut aucune donnée d’événement (série temporelle).
+Le tableau de bord [!UICONTROL Audiences] affiche un instantané des données d’attribut (enregistrement) dont votre organisation dispose dans la banque de profils en Experience Platform. L’instantané n’inclut aucune donnée d’événement (série temporelle).
 
-Les données de lʼinstantané montrent les données exactement comme elles apparaissent au moment précis où lʼinstantané a été pris. En d’autres termes, l’instantané n’est pas une approximation ou un échantillon des données, et la variable [!UICONTROL Audiences] Le tableau de bord n’est pas mis à jour en temps réel.
+Les données de lʼinstantané montrent les données exactement comme elles apparaissent au moment précis où lʼinstantané a été pris. En d’autres termes, l’instantané n’est pas une approximation ou un échantillon des données, et le tableau de bord [!UICONTROL Audiences] n’est pas mis à jour en temps réel.
 
 >[!NOTE]
 >
 >Les modifications ou mises à jour apportées aux données depuis la prise dʼun instantané ne seront pas reflétées dans le tableau de bord avant la prise de lʼinstantané suivant.
 
-## Explorez les [!UICONTROL Audiences] tableau de bord {#explore}
+## Explorez le tableau de bord [!UICONTROL Audiences] {#explore}
 
-Pour accéder au [!UICONTROL Audiences] Tableau de bord dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Audiences]** dans le rail de gauche, puis sélectionnez l’option **[!UICONTROL Présentation]** pour afficher le tableau de bord.
+Pour accéder au tableau de bord [!UICONTROL Audiences] dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Audiences]** dans le rail de gauche, puis sélectionnez l’onglet **[!UICONTROL Aperçu]** pour afficher le tableau de bord.
 
 >[!NOTE]
 >
 >Si votre organisation débute sur Platform et ne dispose pas encore de jeux de données de profils actifs ou de politiques de fusion créés, le tableau de bord [!UICONTROL Audiences] n’est pas visible. Au lieu de cela, l’onglet [!UICONTROL Présentation] affiche des liens et de la documentation pour vous aider à démarrer avec la segmentation.
 
-![La variable [!UICONTROL Audiences] tableau de bord [!UICONTROL Présentation] avec [!UICONTROL Audiences] et [!UICONTROL Présentation] surlignée.](../images/audiences/dashboard-overview.png)
+![ Onglet [!UICONTROL Audiences] du tableau de bord [!UICONTROL Aperçu] avec [!UICONTROL Audiences] et [!UICONTROL Présentation] mise en surbrillance.](../images/audiences/dashboard-overview.png)
 
-### Modifiez la variable [!UICONTROL Audiences] tableau de bord {#modify}
+### Modification du tableau de bord [!UICONTROL Audiences] {#modify}
 
-Vous pouvez modifier l’aspect de la variable [!UICONTROL Audiences] tableau de bord en sélectionnant **[!UICONTROL Modifier le tableau de bord]**. Cela vous permet de déplacer, d’ajouter et de supprimer des widgets du tableau de bord ainsi que d’accéder à la **[!UICONTROL Bibliothèque de widgets]** pour explorer les widgets disponibles et créer des widgets personnalisés pour votre organisation.
+Vous pouvez modifier l’aspect du tableau de bord [!UICONTROL Audiences] en sélectionnant **[!UICONTROL Modifier le tableau de bord]**. Cela vous permet de déplacer, d’ajouter et de supprimer des widgets du tableau de bord ainsi que d’accéder à la **[!UICONTROL Bibliothèque de widgets]** pour explorer les widgets disponibles et créer des widgets personnalisés pour votre organisation.
 
 Reportez-vous à la section [Modification des tableaux de bord](../customize/modify.md) et [Présentation de la bibliothèque de widgets](../customize/widget-library.md) pour en savoir plus.
 
@@ -47,13 +47,13 @@ Reportez-vous à la section [Modification des tableaux de bord](../customize/mod
 
 Sélectionnez **[!UICONTROL Ajouter un widget]** pour accéder à la bibliothèque de widgets et voir la liste des widgets disponibles à ajouter à votre tableau de bord.
 
-![La variable [!UICONTROL Audiences] présentation du tableau de bord avec [!UICONTROL Ajouter un widget] surlignée.](../images/audiences/audiences-overview-add-widget.png)
+![Présentation du tableau de bord [!UICONTROL Audiences] avec [!UICONTROL Ajouter un widget] surligné.](../images/audiences/audiences-overview-add-widget.png)
 
 Dans la bibliothèque de widgets, vous pouvez parcourir la sélection de widgets d’audience standard et personnalisés. Pour plus d’informations sur l’ajout de widgets, consultez la documentation de la bibliothèque de widgets sur la manière d’[ajouter un widget](../customize/widget-library.md#add-widgets).
 
 ### Afficher le SQL {#view-sql}
 
-Vous pouvez afficher le code SQL qui génère les insights visualisés sur votre tableau de bord avec une bascule sur le [!UICONTROL Présentation] workspace. Vous pouvez vous inspirer du SQL de vos insights existants pour créer de nouvelles requêtes qui obtiennent des insights uniques à partir des données Platform en fonction des besoins de votre entreprise. Pour en savoir plus sur cette fonctionnalité, voir [Afficher le guide de l’interface utilisateur SQL](../view-sql.md).
+Vous pouvez afficher le code SQL qui génère les insights visualisés sur votre tableau de bord avec une bascule sur l’espace de travail [!UICONTROL Overview]. Vous pouvez vous inspirer du SQL de vos insights existants pour créer de nouvelles requêtes qui obtiennent des insights uniques à partir des données Platform en fonction des besoins de votre entreprise. Pour en savoir plus sur cette fonctionnalité, consultez le [guide de l’interface utilisateur SQL d’affichage](../view-sql.md).
 
 ## Sélection d’une audience {#select-audience}
 
@@ -65,17 +65,17 @@ Pour choisir une autre audience, sélectionnez la liste déroulante en regard du
 >
 >Seules les audiences dont le nombre de profils est supérieur à zéro s’affichent dans la liste des audiences sélectionnables.
 
-![Aperçu du tableau de bord Audiences avec le menu déroulant de l’audience globale en surbrillance.](../images/audiences/change-audience.png)
+![Présentation du tableau de bord Audiences avec la mise en surbrillance du menu déroulant de l’audience globale.](../images/audiences/change-audience.png)
 
-![La variable [!UICONTROL Sélection de l’audience] qui affiche toutes les audiences disponibles.](../images/audiences/select-audience-dialog.png)
+![ La boîte de dialogue [!UICONTROL Sélectionner l’audience] qui affiche toutes les audiences disponibles.](../images/audiences/select-audience-dialog.png)
 
 ## Widgets et mesures {#widgets-and-metrics}
 
-La variable [!UICONTROL Audiences] Le tableau de bord est composé de widgets, qui sont des mesures en lecture seule fournissant des informations importantes sur votre audience sélectionnée.
+Le tableau de bord [!UICONTROL Audiences] est composé de widgets, qui sont des mesures en lecture seule fournissant des informations importantes sur l’audience sélectionnée.
 
-La date et l’heure de l’instantané le plus récent sont affichées en haut de la [!UICONTROL Présentation] à côté de la liste déroulante audience. Toutes les données du widget sont exactes à cette date et cette heure. La date et l’heure de l’instantané sont fournies en UTC ; elles ne se trouvent pas dans le fuseau horaire de l’utilisateur/utilisatrice ou de l’organisation.
+La date et l’heure de l’instantané le plus récent sont affichées en haut de l’onglet [!UICONTROL Aperçu] en regard de la liste déroulante de l’audience. Toutes les données du widget sont exactes à cette date et cette heure. La date et l’heure de l’instantané sont fournies en UTC ; elles ne se trouvent pas dans le fuseau horaire de l’utilisateur/utilisatrice ou de l’organisation.
 
-![Onglet Aperçu des audiences avec un horodatage de widget mis en surbrillance.](../images/audiences/widget-timestamp.png)
+![Onglet Aperçu des audiences avec un horodatage de widget en surbrillance.](../images/audiences/widget-timestamp.png)
 
 ## Widgets par défaut {#default-widgets}
 
@@ -88,12 +88,12 @@ Un chargement de widget par défaut est fourni pour toutes les nouvelles instanc
 
 >[!NOTE]
 >
->Depuis le 26 juillet 2023, [!UICONTROL Profils], [!UICONTROL Audiences], et [!UICONTROL Destinations] Les tableaux de bord Aperçu ont été réinitialisés à un nouveau chargement de widget par défaut pour tous les utilisateurs qui n’ont pas modifié leurs vues au cours des six derniers mois.
->Reportez-vous à la documentation du [Profils](./profiles.md#default-widgets) et [Destinations](./destinations.md#default-widgets) sections de widget par défaut pour plus d’informations sur les widgets qui sont inclus dans les chargements de widgets par défaut. Vous pouvez continuer à personnaliser vos widgets de tableau de bord comme auparavant.
+>Depuis le 26 juillet 2023, les tableaux de bord [!UICONTROL Profils], [!UICONTROL Audiences] et [!UICONTROL Destinations] de présentation ont été réinitialisés à un nouveau chargement de widget par défaut pour tous les utilisateurs qui n’ont pas modifié leurs vues au cours des six derniers mois.
+>Reportez-vous à la documentation des sections de widget par défaut [Profils](./profiles.md#default-widgets) et [Destinations](./destinations.md#default-widgets) pour plus d’informations sur les widgets inclus dans les chargements de widget par défaut. Vous pouvez continuer à personnaliser vos widgets de tableau de bord comme auparavant.
 
 ## Widgets Customer AI {#customer-ai-audiences-widgets}
 
-Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Pour ce faire, Customer AI analyse les données d’événement d’expérience client existantes afin de prédire **scores de propension à l’attrition ou à la conversion**. Ces modèles de propension des clients à haute précision permettent une segmentation et un ciblage plus précis. La variable [distribution des scores](#customer-ai-distribution-of-scores) et [résumé de notation](#customer-ai-scoring-summary) les insights montrent la division de votre audience. Ils mettent en évidence les profils qui correspondent à une propension élevée/faible/moyenne et la manière dont ils sont répartis dans les nombres de profils.
+Customer AI est utilisé pour générer des scores de propension personnalisés tels que les taux d’attrition et de conversion de profils individuels à grande échelle. Pour ce faire, Customer AI analyse les données d’événement d’expérience client existantes afin de prédire les **scores de propension à l’attrition ou à la conversion**. Ces modèles de propension des clients à haute précision permettent une segmentation et un ciblage plus précis. La [distribution des scores](#customer-ai-distribution-of-scores) et les [résumé de notation](#customer-ai-scoring-summary) affichent la division dans votre audience. Ils mettent en évidence les profils qui correspondent à une propension élevée/faible/moyenne et la manière dont ils sont répartis dans les nombres de profils.
 
 * [[!UICONTROL Résumé des scores de l’IA dédiée aux clientes et aux clients]](#customer-ai-scoring-summary)
 * [[!UICONTROL Distribution des scores par l’IA dédiée aux clientes et aux clients]](#customer-ai-distribution-of-scores)
@@ -105,27 +105,27 @@ Customer AI est utilisé pour générer des scores de propension personnalisés 
 >title="Distribution des scores"
 >abstract="Ce widget visualise la distribution du nombre total de profils en fonction de leurs scores de propension, par incréments de cinq pour cent. La distribution du nombre de profils est déterminée par le modèle d’IA et la politique de fusion sélectionnée. Vous pouvez modifier le modèle d’IA dans le menu déroulant sous le titre du widget."
 
-La variable [!UICONTROL Distribution des scores par Customer AI] widget classe le nombre total de profils en fonction de leurs scores de propension. La distribution du nombre de profils est déterminée par le modèle AI et la stratégie de fusion sélectionnée, puis visualisée par incréments de 5 % qui indiquent leur propension. Le nombre de profils est fourni le long de l’axe Y et les scores de propension sont fournis le long de l’axe X.
+Le widget [!UICONTROL distribution Customer AI des scores] classe le nombre total de profils en fonction de leurs scores de propension. La distribution du nombre de profils est déterminée par le modèle AI et la stratégie de fusion sélectionnée, puis visualisée par incréments de 5 % qui indiquent leur propension. Le nombre de profils est fourni le long de l’axe Y et les scores de propension sont fournis le long de l’axe X.
 
 >[!NOTE]
 >
 >Si la visualisation est un score de propension à la conversion, les scores élevés sont en vert et les scores faibles en rouge. Si vous prédisez la propension à l’attrition, les scores élevés sont en rouge et les scores faibles en vert. Le compartiment moyen reste jaune quel que soit le type de propension sélectionné.
 
-Le modèle AI qui détermine les scores de propension est sélectionné dans le sélecteur de liste déroulante sous le titre du widget. La liste déroulante contient une liste de tous les modèles Customer AI configurés. Sélectionnez le modèle d’IA approprié à votre analyse dans la liste des modèles disponibles. Si aucun modèle Customer AI n’est disponible, un message du widget vous invite à configurer au moins un modèle Customer AI et fournit un lien hypertexte vers la page de configuration du modèle Customer AI. Consultez la documentation pour obtenir des instructions sur [Configuration d’une instance Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md).
+Le modèle AI qui détermine les scores de propension est sélectionné dans le sélecteur de liste déroulante sous le titre du widget. La liste déroulante contient une liste de tous les modèles Customer AI configurés. Sélectionnez le modèle d’IA approprié à votre analyse dans la liste des modèles disponibles. Si aucun modèle Customer AI n’est disponible, un message du widget vous invite à configurer au moins un modèle Customer AI et fournit un lien hypertexte vers la page de configuration du modèle Customer AI. Consultez la documentation pour obtenir des instructions sur la configuration d’une instance Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md).[
 
 >[!NOTE]
 >
->Sélectionnez la liste déroulante juste en dessous de l’onglet d’aperçu pour modifier la stratégie de fusion qui détermine les profils inclus dans l’analyse. Voir la section sur [stratégies de fusion](#merge-policies) pour une brève description, ou la variable [présentation des stratégies de fusion](../../profile/merge-policies/overview.md) pour plus d’informations.
+>Sélectionnez la liste déroulante juste en dessous de l’onglet d’aperçu pour modifier la stratégie de fusion qui détermine les profils inclus dans l’analyse. Pour obtenir une brève description, reportez-vous à la section sur les [stratégies de fusion](#merge-policies) ou à la [présentation des stratégies de fusion](../../profile/merge-policies/overview.md) pour plus d’informations.
 
-Pour accéder à la page d’informations détaillées du modèle Customer AI sélectionné, sélectionnez **[!UICONTROL Affichage des détails du modèle]**.
+Pour accéder à la page d’informations détaillées du modèle Customer AI sélectionné, sélectionnez **[!UICONTROL Afficher les détails du modèle]**.
 
-![Le tableau de bord Audiences Experience Platform avec la variable [!UICONTROL Distribution des scores par Customer AI] widget [!UICONTROL Affichage des détails du modèle] surlignée.](../images/segments/customer-ai-distribution-of-scores.png)
+![Le tableau de bord Audiences Experience Platform avec le widget [!UICONTROL  Distribution Customer AI des scores] et [!UICONTROL Afficher les détails du modèle] mis en surbrillance.](../images/segments/customer-ai-distribution-of-scores.png)
 
 La page d’informations détaillées sur les modèles s’affiche.
 
-![Page d’informations de Customer AI.](../images/profiles/customer-ai-insights-page.png)
+![Page d’insights pour Customer AI.](../images/profiles/customer-ai-insights-page.png)
 
-Pour plus d’informations sur Customer AI, voir [guide de l’interface utilisateur de discover insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+Vous trouverez plus d’informations sur Customer AI dans le [guide de découverte de l’interface utilisateur d’insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
 ### [!UICONTROL Résumé des scores de l’IA dédiée aux clientes et aux clients] {#customer-ai-scoring-summary}
 
@@ -140,15 +140,15 @@ Ce widget affiche le nombre total de profils notés et les classe en compartimen
 >
 >Si la visualisation est un score de propension à la conversion, les scores élevés sont en vert et les scores faibles en rouge. Si vous prédisez la propension à l’attrition, les scores élevés sont en rouge et les scores faibles en vert. Le compartiment moyen reste jaune quel que soit le type de propension sélectionné.
 
-Le menu déroulant sous le titre du widget fournit une liste de tous les modèles Customer AI configurés. Sélectionnez le modèle d’IA approprié à votre analyse dans la liste des modèles disponibles. Si aucun modèle Customer AI n’est disponible, un message du widget vous invite à configurer au moins un modèle Customer AI et fournit un lien hypertexte vers la page de configuration du modèle Customer AI. Consultez la documentation relative à [Configuration d’une instance Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md) pour obtenir des instructions détaillées.
+Le menu déroulant sous le titre du widget fournit une liste de tous les modèles Customer AI configurés. Sélectionnez le modèle d’IA approprié à votre analyse dans la liste des modèles disponibles. Si aucun modèle Customer AI n’est disponible, un message du widget vous invite à configurer au moins un modèle Customer AI et fournit un lien hypertexte vers la page de configuration du modèle Customer AI. Pour obtenir des instructions détaillées, consultez la documentation sur [la configuration d’une instance Customer AI](../../intelligent-services/customer-ai/user-guide/configure.md) .
 
 >[!NOTE]
 >
->Le nombre total de profils calculés dépend de la stratégie de fusion choisie. Pour modifier la stratégie de fusion utilisée, sélectionnez la liste déroulante juste en dessous de l’onglet d’aperçu. Voir la section sur [stratégies de fusion](#merge-policies) pour une brève description, ou la variable [présentation des stratégies de fusion](../../profile/merge-policies/overview.md) pour plus d’informations.
+>Le nombre total de profils calculés dépend de la stratégie de fusion choisie. Pour modifier la stratégie de fusion utilisée, sélectionnez la liste déroulante juste en dessous de l’onglet d’aperçu. Pour obtenir une brève description, reportez-vous à la section sur les [stratégies de fusion](#merge-policies) ou à la [présentation des stratégies de fusion](../../profile/merge-policies/overview.md) pour plus d’informations.
 
 ![Le tableau de bord Audiences Experience Platform avec le widget de résumé de notation de Customer AI mis en surbrillance.](../images/segments/customer-ai-scoring-summary.png)
 
-Sélectionner **[!UICONTROL Affichage des détails du modèle]** pour accéder à la page d’informations détaillées du modèle Customer AI sélectionné. Pour plus d’informations sur Customer AI, voir [guide de l’interface utilisateur de discover insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
+Sélectionnez **[!UICONTROL Afficher les détails du modèle]** pour accéder à la page d’informations détaillées du modèle Customer AI sélectionné. Vous trouverez plus d’informations sur Customer AI dans le [guide de découverte de l’interface utilisateur d’insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
 ## Widgets standard {#standard-widgets}
 
@@ -174,11 +174,11 @@ Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez 
 >title="Taille de l’audience"
 >abstract="Ce widget affiche le nombre total de profils fusionnés dans l’audience sélectionnée. Ce nombre dépend de la politique de fusion appliquée à vos données et est correct au moment de l’instantané le plus récent."
 
-La variable **[!UICONTROL Taille de l’audience]** widget affiche le nombre total de profils fusionnés dans l’audience sélectionnée au moment de la prise de vue instantanée. Ce nombre est le résultat de l’application de la stratégie de fusion d’audiences à vos données de profil pour fusionner des fragments de profil et former un seul profil pour chaque individu de l’audience.
+Le widget **[!UICONTROL Taille de l’audience]** affiche le nombre total de profils fusionnés dans l’audience sélectionnée au moment de l’instantané. Ce nombre est le résultat de l’application de la stratégie de fusion d’audiences à vos données de profil pour fusionner des fragments de profil et former un seul profil pour chaque individu de l’audience.
 
-Pour plus d&#39;informations sur les fragments et les profils fusionnés, reportez-vous à la section [Présentation de Real-Time Customer Profile](../../profile/home.md).
+Pour plus d’informations sur les fragments et les profils fusionnés, reportez-vous à la [présentation de Real-time Customer Profile](../../profile/home.md).
 
-![La variable [!UICONTROL Audiences] présentation du tableau de bord avec la méthode [!UICONTROL Taille de l’audience] en surbrillance.](../images/audiences/audience-size.png)
+![Présentation du tableau de bord [!UICONTROL Audiences] avec le widget [!UICONTROL Taille de l’audience] en surbrillance.](../images/audiences/audience-size.png)
 
 ### [!UICONTROL Tendance de la taille de l’audience] {#audience-size-trend}
 
@@ -187,17 +187,17 @@ Pour plus d&#39;informations sur les fragments et les profils fusionnés, report
 >title="Tendance de la taille de l’audience"
 >abstract="Ce widget fournit des informations sur le nombre total de profils qui répondent aux critères de **toute** définition de segment, telle qu’elle est capturée lors de l’instantané quotidien, pendant les derniers 30 jours, 90 jours ou 12 mois."
 
-La variable **[!UICONTROL Tendance de la taille de l’audience]** Le widget fournit une représentation graphique linéaire pour le nombre total de profils à inclure **any** sur une période donnée. La tendance de la taille d’audience peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. La taille de l’audience est représentée sur l’axe y et le temps est représenté sur l’axe x.
+Le widget **[!UICONTROL Tendance de la taille de l’audience]** fournit une illustration graphique linéaire du nombre total de profils qui remplissent les critères pour une audience **n’importe quelle audience** sur une période donnée. La tendance de la taille d’audience peut être visualisée sur des périodes de 30 jours, 90 jours et 12 mois. La période est sélectionnée dans un menu déroulant du widget. La taille de l’audience est représentée sur l’axe y et le temps est représenté sur l’axe x.
 
-Ce widget inclut également le [!UICONTROL Sous-titres] fonction dans laquelle un modèle d’apprentissage automatique analyse les données de graphique et d’audience et génère automatiquement des sous-titres pour décrire les tendances clés et les événements importants. Sélectionnez **[!UICONTROL Légendes]** pour ouvrir la boîte de dialogue des légendes automatiques.
+Ce widget inclut également la fonctionnalité [!UICONTROL Sous-titres] automatique dans laquelle un modèle d’apprentissage automatique analyse les données de graphique et d’audience et génère automatiquement des sous-titres pour décrire les tendances clés et les événements importants. Sélectionnez **[!UICONTROL Légendes]** pour ouvrir la boîte de dialogue des légendes automatiques.
 
-![La variable [!UICONTROL Audiences] La présentation affiche le widget de tendance de taille d’audience .](../images/audiences/audience-size-trend-captions.png)
+![ La [!UICONTROL présentation d’Audiences] affiche le widget de tendance de la taille de l’audience.](../images/audiences/audience-size-trend-captions.png)
 
 La boîte de dialogue de légendes automatique s’ouvre, vous permettant d’obtenir des informations sur vos données.
 
 ![La boîte de dialogue de légendes automatique pour le widget Tendance de la taille d’audience.](../images/audiences/audience-size-trend-automatic-captions-dialog.png)
 
-Pour en savoir plus sur l’évaluation des audiences et sur la façon dont les profils remplissent les critères et sortent des audiences, reportez-vous à la section [Documentation de Segmentation Service](../../segmentation/home.md).
+Pour en savoir plus sur l’évaluation des audiences et sur la façon dont les profils remplissent les critères et sortent des audiences, consultez la [documentation du service de segmentation](../../segmentation/home.md).
 
 ### [!UICONTROL Tendance de changement de la taille de l’audience] {#audience-size-change-trend}
 
@@ -213,7 +213,7 @@ Ce widget illustre la tendance de taille de l’audience pour une audience spéc
 
 ### [!UICONTROL Ordre d’activation de l’audience] {#audience-activation-order}
 
-La variable [!UICONTROL Ordre d’activation de l’audience] widget fournit un tableau à trois colonnes qui répertorie le nom de destination, la plateforme et la date d’activation de l’audience. La liste est classée en fonction de la date en commençant par la plus récente et peut contenir jusqu’à 10 lignes.
+Le widget [!UICONTROL Commande d’activation d’audience] fournit un tableau à trois colonnes qui répertorie le nom de destination, la plateforme et la date d’activation de l’audience. La liste est classée en fonction de la date en commençant par la plus récente et peut contenir jusqu’à 10 lignes.
 
 ![Le widget Ordre d’activation de l’audience.](../images/audiences/audience-activation-order.png)
 
@@ -227,7 +227,7 @@ Ce widget vous permet d’optimiser la stratégie de segmentation en consultant 
 
 ### [!UICONTROL Rapport de chevauchement des audiences] {#audience-overlap-report}
 
-Ce widget tabulaire les données de chevauchement de profils pour une audience spécifique. Une liste de cinq audiences classées des pourcentages de chevauchement les plus élevés aux plus bas est fournie pour l’audience choisie dans le menu déroulant en haut de l’écran. Pour plus de clarté, l’audience choisie est répertoriée dans la variable [!UICONTROL AUDIENCE A NAME] colonne . L’analyse du chevauchement des audiences est fournie pour la deuxième audience répertoriée dans le [!UICONTROL NOM DE L’AUDIENCE B] colonne . Le chevauchement en pourcentage est fourni dans la troisième colonne avec une précision de douze décimales.
+Ce widget tabulaire les données de chevauchement de profils pour une audience spécifique. Une liste de cinq audiences classées des pourcentages de chevauchement les plus élevés aux plus bas est fournie pour l’audience choisie dans le menu déroulant en haut de l’écran. Pour plus de clarté, l’audience choisie est répertoriée dans la colonne [!UICONTROL AUDIENCE A NAME] . L’analyse du chevauchement des audiences est fournie pour la deuxième audience répertoriée dans la colonne [!UICONTROL AUDIENCE B NAME]. Le chevauchement en pourcentage est fourni dans la troisième colonne avec une précision de douze décimales.
 
 Le rapport sur les chevauchements d’audiences vous aide à créer de nouvelles audiences hautement performantes. L’observation des chevauchements au pourcentage élevé vous permet de supprimer des audiences et d’empêcher l’envoi d’une même audience vers différentes destinations. Elle vous aide également à identifier les informations cachées qui peuvent contribuer à une meilleure segmentation. Un chevauchement au pourcentage faible permet de localiser les profils uniques à rechercher.
 
@@ -251,7 +251,7 @@ Sélectionnez une ligne dans le rapport pour ouvrir un diagramme de Venn de l’
 
 ![La boîte de dialogue Rapport de chevauchement des audiences avec un diagramme de Venn et une ligne en surbrillance.](../images/audiences/audience-overlap-report-dialog-venn.png)
 
-Sélectionner **[!UICONTROL Fermer]** pour revenir au [!UICONTROL Audiences] tableau de bord.
+Sélectionnez **[!UICONTROL Fermer]** pour revenir au tableau de bord [!UICONTROL Audiences].
 
 ### [!UICONTROL Chevauchement des identités] {#identity-overlap}
 
@@ -260,15 +260,15 @@ Sélectionner **[!UICONTROL Fermer]** pour revenir au [!UICONTROL Audiences] tab
 >title="Chevauchement des identités"
 >abstract="Ce widget affiche le chevauchement des profils de votre audience contenant les deux identités sélectionnées. Les cercles affichent la taille relative de chaque identité. Le nombre de profils contenant les deux espaces de noms est représenté par le chevauchement entre les cercles."
 
-La variable **[!UICONTROL Superposition des identités]** ce widget affiche un diagramme de Venn, ou un diagramme de jeu, qui montre le chevauchement des profils de votre audience contenant plusieurs identités.
+Le widget **[!UICONTROL chevauchement des identités]** affiche un diagramme de Venn, ou un diagramme de définition, qui montre le chevauchement des profils de votre audience contenant plusieurs identités.
 
 Utilisez les menus déroulants du widget pour sélectionner les identités à comparer. Les cercles affichent la taille relative de chaque identité choisie, le nombre de profils contenant les deux espaces de noms étant représenté par la taille du chevauchement entre les cercles.
 
 Si un client interagit avec votre marque sur plusieurs canaux, plusieurs identités seront associées à ce client individuel. Cette situation rend probable le fait que votre organisation comportera plusieurs profils contenant des fragments provenant de plusieurs identités.
 
-Pour en savoir plus sur les identités, consultez la [Documentation d’Identity Service](../../identity-service/home.md).
+Pour en savoir plus sur les identités, consultez la [documentation Identity Service](../../identity-service/home.md).
 
-![La variable [!UICONTROL Audiences] Présentation du tableau de bord avec le widget de chevauchement d’identités surligné.](../images/audiences/identity-overlap.png)
+![Présentation du tableau de bord [!UICONTROL Audiences] avec le widget de chevauchement des identités surligné.](../images/audiences/identity-overlap.png)
 
 ### [!UICONTROL Profils par identité] {#profiles-by-identity}
 
@@ -277,15 +277,15 @@ Pour en savoir plus sur les identités, consultez la [Documentation d’Identity
 >title="Profils par identité"
 >abstract="Ce widget affiche la répartition des identités pour chaque profil fusionné dans votre audience sélectionnée."
 
-La variable **[!UICONTROL Profils par identité]** widget affiche la ventilation des identités pour chaque profil fusionné de l’audience sélectionnée. Le nombre total de profils par identité peut être supérieur au nombre total de profils dans l’audience, car plusieurs identités peuvent y être associées pour un profil. En d’autres termes, le fait de additionner les valeurs affichées pour chaque identité peut représenter un total supérieur à la taille totale de l’audience. En effet, si un client interagit avec votre marque sur plusieurs canaux, plusieurs identités peuvent être associées à ce client individuel.
+Le widget **[!UICONTROL Profils par identité]** affiche la ventilation des identités pour chaque profil fusionné de l’audience sélectionnée. Le nombre total de profils par identité peut être supérieur au nombre total de profils dans l’audience, car plusieurs identités peuvent y être associées pour un profil. En d’autres termes, le fait de additionner les valeurs affichées pour chaque identité peut représenter un total supérieur à la taille totale de l’audience. En effet, si un client interagit avec votre marque sur plusieurs canaux, plusieurs identités peuvent être associées à ce client individuel.
 
 Sélectionnez **[!UICONTROL Légendes]** pour ouvrir la boîte de dialogue des légendes automatiques.
 
-![La variable [!UICONTROL Audiences] Présentation du tableau de bord avec l’option Profils par widget d’identité et Légendes mise en surbrillance.](../images/audiences/profiles-by-identity.png)
+![Présentation du tableau de bord [!UICONTROL Audiences] avec l&#39;option Profils par widget d&#39;identité mise en surbrillance et l&#39;option Sous-titres.](../images/audiences/profiles-by-identity.png)
 
 Un modèle de machine learning génère automatiquement des informations sur les données en analysant la distribution globale et les dimensions clés des données.
 
-Pour en savoir plus sur les identités, consultez la [Documentation d’Identity Service](../../identity-service/home.md).
+Pour en savoir plus sur les identités, consultez la [documentation Identity Service](../../identity-service/home.md).
 
 ### Activations planifiées {#scheduled-activations}
 
@@ -297,4 +297,4 @@ Le widget vous permet de découvrir en un coup d’œil où et quand l’audienc
 
 ## Étapes suivantes
 
-En suivant ce document, vous devriez maintenant pouvoir localiser la variable [!UICONTROL Audiences] tableau de bord et sélectionnez l’audience à afficher. Vous devriez également comprendre désormais les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des audiences dans l’interface utilisateur de l’Experience Platform, reportez-vous au [Guide de l’interface utilisateur de Segmentation Service](../../segmentation/ui/overview.md).
+En suivant ce document, vous devriez maintenant pouvoir localiser le tableau de bord [!UICONTROL Audiences] et sélectionner une audience à afficher. Vous devriez également comprendre désormais les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des audiences dans l’interface utilisateur de l’Experience Platform, consultez le [guide de l’interface utilisateur de Segmentation Service](../../segmentation/ui/overview.md).

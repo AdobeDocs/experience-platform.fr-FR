@@ -11,9 +11,9 @@ ht-degree: 93%
 
 # Présentation complète de la collecte de données
 
-Adobe Experience Platform collecte et transfère vos données vers d’autres produits Adobe et destinations tierces. Pour envoyer des données d’événement de votre application au réseau Edge Experience Platform, il est important de comprendre ces technologies de base et de les configurer afin de fournir vos données aux destinations dont vous avez besoin, lorsque vous en avez besoin.
+Adobe Experience Platform collecte et transfère vos données vers d’autres produits Adobe et destinations tierces. Pour envoyer des données d’événement de votre application à l’Edge Network Experience Platform, il est important de comprendre ces technologies de base et de les configurer afin de diffuser vos données vers les destinations dont vous avez besoin, lorsque vous en avez besoin.
 
-Ce guide fournit un tutoriel général sur la manière d’envoyer un événement par le biais du réseau Edge à l’aide des fonctionnalités de collecte de données de Platform. Plus précisément, le tutoriel décrit les étapes à suivre pour installer et configurer l’extension de balise SDK Web Adobe Experience Platform dans l’interface utilisateur de collecte de données (anciennement Adobe Experience Platform Launch).
+Ce guide fournit un tutoriel général sur la manière d’envoyer un événement par l’intermédiaire de l’Edge Network à l’aide des fonctionnalités de collecte de données de Platform. Plus précisément, le tutoriel décrit les étapes à suivre pour installer et configurer l’extension de balise SDK Web Adobe Experience Platform dans l’interface utilisateur de collecte de données (anciennement Adobe Experience Platform Launch).
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ Un flux de données est une configuration qui indique à Edge Network où vous s
 >
 >Si vous souhaitez utiliser le [transfert d’événement](../tags/ui/event-forwarding/overview.md) (en supposant que votre organisation dispose d’une licence pour cette fonctionnalité), vous devez l’activer pour un flux de données de la même manière que vous activez les produits Adobe. Les détails de ce processus sont traités dans une [section ultérieure](#event-forwarding).
 
-Sélectionner **[!UICONTROL Datastreams]** dans le volet de navigation de gauche. À partir de là, vous pouvez sélectionner un flux de données existant à modifier dans la liste ou créer une configuration en sélectionnant **[!UICONTROL Nouveau flux de données]**.
+Sélectionnez **[!UICONTROL Datastreams]** dans le volet de navigation de gauche. À partir de là, vous pouvez sélectionner un flux de données existant à modifier dans la liste ou créer une configuration en sélectionnant **[!UICONTROL Nouveau flux de données]**.
 
 ![Flux de données](./images/e2e/datastreams.png)
 

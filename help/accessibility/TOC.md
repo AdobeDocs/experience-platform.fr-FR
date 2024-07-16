@@ -5,7 +5,7 @@ user-guide-description: Découvrez l’engagement d’Experience Platform à fo
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '41'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -17,4 +17,4 @@ ht-degree: 97%
 * [Accessibilité personnalisée pour Platform](custom.md)
 * [Documentation de Platform](https://experienceleague.adobe.com/docs/experience-platform.html?lang=fr)
 * [Présentation de Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=fr)
-* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

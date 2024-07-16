@@ -11,21 +11,21 @@ ht-degree: 6%
 
 ---
 
-# [!UICONTROL Devise] type de données
+# Type de données [!UICONTROL Currency]
 
-[!UICONTROL Devise] est un type de données XDM standard qui décrit une quantité de devise, y compris le type de devise et la date de conversion.
+[!UICONTROL Currency] est un type de données XDM standard qui décrit une quantité de devise, y compris le type de devise et la date de conversion.
 
 ![](../images/data-types/currency.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `amount` | Double | Montant de la devise définie par la variable `currencyCode`. |
+| `amount` | Double | Montant de la devise définie par le `currencyCode`. |
 | `conversionDate` | DateTime | Horodatage du moment où la conversion de devise a été effectuée. |
-| `currencyCode` | Chaîne | Un code ISO 4217 indiquant le type de devise qui `amount` représente . |
+| `currencyCode` | Chaîne | Un code ISO 4217 indiquant le type de devise représenté par `amount`. |
 
 {style="table-layout:auto"}
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/currency.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/currency.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/currency.schema.json)

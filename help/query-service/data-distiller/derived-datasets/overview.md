@@ -50,4 +50,4 @@ Vous pouvez également calculer des mesures commerciales en tant qu’attribut d
 
 ## Étapes suivantes et cas pratiques
 
-En lisant ce document, vous comprenez mieux comment les jeux de données dérivés de Query Service facilitent des cas d’utilisation complexes pour optimiser l’utilité de vos données. Vous devriez ensuite lire le [Cas d’utilisation des attributs dérivés basés sur des déciles](../../use-cases/deciles-use-case.md) pour voir comment cette fonction est appliquée dans un scénario réel.
+En lisant ce document, vous comprenez mieux comment les jeux de données dérivés de Query Service facilitent des cas d’utilisation complexes pour optimiser l’utilité de vos données. Vous devez ensuite lire le [cas d’utilisation d’attribut dérivé basé sur des déciles](../../use-cases/deciles-use-case.md) pour voir comment cette fonctionnalité est appliquée dans un scénario réel.

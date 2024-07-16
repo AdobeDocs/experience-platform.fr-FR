@@ -21,7 +21,7 @@ Il existe plusieurs types de destinations dans Experience Platform, comme illust
 
 ## Agrégation des messages dans les destinations de diffusion en continu
 
-Avant de passer à des informations spécifiques par type de destination, il est important de comprendre le concept d’agrégation des messages pour *destinations de diffusion en continu*.
+Avant de passer à des informations spécifiques par type de destination, il est important de comprendre le concept d’agrégation des messages pour les *destinations de diffusion en continu*.
 
 Les destinations Experience Platform exportent les données vers des intégrations basées sur les API sous la forme d’appels HTTPS. Une fois que le service de destinations est informé par d’autres services en amont que les profils ont été mis à jour suite à l’ingestion par lots, à l’ingestion par streaming, à la segmentation par lots, à la segmentation par streaming ou aux modifications des graphiques d’identité, les données sont exportées et envoyées vers les destinations de streaming.
 

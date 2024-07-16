@@ -3,8 +3,9 @@ title: Créer une connexion source  [!DNL Oracle NetSuite Activities]  dans l’
 description: Découvrez comment créer une connexion source d’activités NetSuite Oracle à l’aide de l’interface utilisateur de Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-badge: Version Beta
-source-git-commit: 053cf0af327b39830f025686e0f8f67c27f1c45c
+badge: Version bêta
+exl-id: 99ef0b50-c8d6-48d6-895f-46b7ade47520
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '618'
 ht-degree: 46%
@@ -15,9 +16,9 @@ ht-degree: 46%
 
 >[!NOTE]
 >
->La source [!DNL Oracle NetSuite Activities] est en version Beta. Voir [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
+>La source [!DNL Oracle NetSuite Activities] est en version Beta. Pour plus d’informations sur l’utilisation de sources étiquetées bêta, consultez la [présentation des sources](../../../../home.md#terms-and-conditions) .
 
-Lisez le tutoriel suivant pour savoir comment importer des données d’événement de votre [!DNL Oracle NetSuite Activities] compte vers Adobe Experience Platform dans l’interface utilisateur.
+Lisez le tutoriel suivant pour savoir comment importer des données d’événements de votre compte [!DNL Oracle NetSuite Activities] vers Adobe Experience Platform dans l’interface utilisateur.
 
 ## Prise en main {#getting-started}
 
@@ -32,33 +33,33 @@ Si vous disposez déjà d’un compte [!DNL Oracle NetSuite], vous pouvez ignore
 
 >[!TIP]
 >
->Lisez la section [[!DNL Oracle NetSuite] aperçu](../../../../connectors/marketing-automation/oracle-netsuite.md) pour plus d’informations sur la manière de récupérer vos informations d’authentification.
+>Lisez la [[!DNL Oracle NetSuite] présentation](../../../../connectors/marketing-automation/oracle-netsuite.md) pour plus d’informations sur la manière de récupérer vos informations d’authentification.
 
 ## Connecter votre compte [!DNL Oracle NetSuite] {#connect-account}
 
 Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous , *Automatisation du marketing* catégorie, sélectionnez **[!DNL Oracle NetSuite Activities]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Sous la catégorie *Automatisation du marketing*, sélectionnez **[!DNL Oracle NetSuite Activities]**, puis **[!UICONTROL Ajouter des données]**.
 
-![Copie d’écran de l’interface utilisateur de Platform pour le catalogue avec carte Oracle d’activités NetSuite](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/catalog-card.png)
+![ Copie d’écran de l’interface utilisateur de Platform pour le catalogue avec carte Oracle NetSuite Activities](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/catalog-card.png)
 
-La variable **[!UICONTROL Connexion au compte Activités Oracle NetSuite]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
+La page **[!UICONTROL Connecter le compte d’activités NetSuite Oracle]** s’affiche. Sur cette page, vous pouvez utiliser de nouvelles informations d’identification ou des informations d’identification existantes.
 
 >[!IMPORTANT]
 >
->Le jeton d’actualisation expire après sept jours. Une fois votre jeton arrivé à expiration, vous devez créer un compte sur Experience Platform avec votre jeton mis à jour. Si vous ne créez pas de compte avec votre jeton mis à jour, le message d’erreur suivant peut s’afficher : `The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`
+>Le jeton d’actualisation expire après sept jours. Une fois votre jeton arrivé à expiration, vous devez créer un compte sur Experience Platform avec votre jeton mis à jour. Si vous ne créez pas de compte avec votre jeton mis à jour, le message d&#39;erreur suivant peut s&#39;afficher : `The request could not be processed. Error from flow provider: The request could not be processed. Rest call failed with client error, status code 401 Unauthorized, please check your activity settings.`
 
 ### Compte existant {#existing-account}
 
 Pour utiliser un compte existant, sélectionnez le compte [!DNL Oracle NetSuite Activities] avec lequel vous souhaitez créer un flux de données, puis sélectionnez **[!UICONTROL Suivant]** pour continuer.
 
-![Copie d’écran de l’interface utilisateur de Platform pour connecter le compte d’activités Oracle NetSuite à un compte existant](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/existing.png)
+![ Copie d’écran de l’interface utilisateur de Platform pour connecter le compte Oracle NetSuite Activities à un compte existant ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/existing.png)
 
 ### Nouveau compte {#new-account}
 
 Si vous créez un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez un nom, une description facultative et vos informations d’identification. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]** puis attendez que la nouvelle connexion s’établisse.
 
-![Copie d’écran de l’interface utilisateur de Platform pour connecter le compte d’activités Oracle NetSuite à un nouveau compte](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/new.png)
+![ Copie d’écran de l’interface utilisateur de Platform pour connecter le compte Oracle NetSuite Activities à un nouveau compte ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/new.png)
 
 ## Étapes suivantes {#next-steps}
 
@@ -66,26 +67,26 @@ En suivant ce tutoriel, vous avez établi une connexion à votre compte [!DNL Or
 
 ## Ressources supplémentaires {#additional-resources}
 
-Les sections ci-dessous contiennent des ressources supplémentaires auxquelles vous pouvez vous référer lors de l’utilisation de la variable [!DNL Oracle NetSuite Activities] source.
+Les sections ci-dessous fournissent des ressources supplémentaires auxquelles vous pouvez vous référer lors de l’utilisation de la source [!DNL Oracle NetSuite Activities].
 
 ### Mappage {#mapping}
 
-Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, voir la section [Guide de l’interface utilisateur de la préparation de données](../../../../../data-prep/ui/mapping.md).
+Platform fournit des recommandations intelligentes pour les champs mappés automatiquement en fonction du schéma ou du jeu de données cible que vous avez sélectionné. Vous pouvez ajuster manuellement les règles de mappage en fonction de vos cas d’utilisation. Selon vos besoins, vous pouvez choisir de mapper directement des champs ou d’utiliser des fonctions de préparation de données pour transformer les données sources afin d’obtenir des valeurs informatisées ou calculées. Pour obtenir des instructions complètes sur l’utilisation de l’interface du mappeur et des champs calculés, consultez le [guide de l’interface utilisateur de la préparation des données](../../../../../data-prep/ui/mapping.md).
 
 >[!NOTE]
 >
->Les champs affichés dépendent des abonnements que votre [!DNL Oracle NetSuite] a accès à . Par exemple, si vous n’avez pas accès à la facturation, les champs relatifs à la facturation ne s’affichent pas.
+>Les champs affichés dépendent des abonnements auxquels votre compte [!DNL Oracle NetSuite] a accès. Par exemple, si vous n’avez pas accès à la facturation, les champs relatifs à la facturation ne s’affichent pas.
 
 ### Planification {#scheduling}
 
-Lorsque vous planifiez votre [!DNL Oracle NetSuite Activities] le flux de données pour l’ingestion, vous devez sélectionner la configuration de fréquence et d’intervalle suivante :
+Lors de la planification de votre flux de données [!DNL Oracle NetSuite Activities] pour l’ingestion, vous devez sélectionner la configuration de fréquence et d’intervalle suivante :
 
 | Fréquence | Intervalle |
 | --- | --- |
 | `Once` | 1 |
 
-Lors de la récupération des données, la variable [!DNL Oracle NetSuite] répond avec la date de dernière modification ou créée sous forme de date au lieu d’un horodatage. Par conséquent, la planification est limitée à un jour.
+Lors de la récupération des données, le [!DNL Oracle NetSuite] répond avec la date de dernière modification ou créée sous la forme d’un format de date au lieu d’un horodatage. Par conséquent, la planification est limitée à un jour.
 
-Une fois les valeurs fournies pour votre planning, sélectionnez **[!UICONTROL Suivant]**.
+Une fois que vous avez fourni les valeurs de votre planning, sélectionnez **[!UICONTROL Suivant]**.
 
 ![L’étape de planification du workflow des sources.](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/scheduling.png)

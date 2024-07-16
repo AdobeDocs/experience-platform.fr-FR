@@ -17,7 +17,7 @@ Si vous souhaitez afficher plusieurs objets spécifiques, plutôt qu’effectuer
 
 >[!NOTE]
 >
->Même lorsque vous demandez des [!DNL Catalog] , il est toujours recommandé d’utiliser `properties` paramètre de requête pour renvoyer uniquement les propriétés dont vous avez besoin.
+>Même lors de la demande d’objets [!DNL Catalog] spécifiques, il est toujours recommandé au paramètre de requête `properties` de renvoyer uniquement les propriétés dont vous avez besoin.
 
 **Format d’API**
 
@@ -28,7 +28,7 @@ GET /{OBJECT_TYPE}/{ID_1},{ID_2},{ID_3},{ID_4}?properties={PROPERTY_1},{PROPERTY
 
 | Paramètre | Description |
 | -------- | ----------- |
-| `{OBJECT_TYPE}` | Le type de [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
+| `{OBJECT_TYPE}` | Type d’objet [!DNL Catalog] à récupérer. Les objets valides sont : <ul><li>`batches`</li><li>`dataSets`</li><li>`dataSetFiles`</li></ul> |
 | `{ID}` | Identifiant de l’un des objets spécifiques que vous souhaitez récupérer. |
 
 **Requête**
@@ -50,7 +50,7 @@ Une réponse réussie renvoie une liste des jeux de données spécifiés contena
 
 >[!NOTE]
 >
->Si un objet renvoyé ne contient pas une ou plusieurs des propriétés demandées indiquées par la variable `properties` , la réponse renvoie uniquement les propriétés demandées qu’elle inclut, comme indiqué dans la section ***`Sample Dataset 3`*** et ***`Sample Dataset 4`*** ci-dessous
+>Si un objet renvoyé ne contient pas une ou plusieurs des propriétés demandées indiquées par la requête `properties`, la réponse renvoie uniquement les propriétés demandées incluses, comme illustré dans les sections ***`Sample Dataset 3`*** et ***`Sample Dataset 4`*** ci-dessous.
 
 ```json
 {

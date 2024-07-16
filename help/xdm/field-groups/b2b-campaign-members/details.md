@@ -5,15 +5,15 @@ exl-id: 597629c8-7f41-4c1c-95b6-aed5e16cee72
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '335'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
-# [!UICONTROL Détails des membres XDM Business Campaign] groupe de champs de schéma
+# [!UICONTROL Détails du membre XDM Business Campaign] du groupe de champs de schéma
 
-[!UICONTROL Détails des membres XDM Business Campaign] est un groupe de champs de schéma standard pour la variable [[!UICONTROL Membres de XDM Business Campaign] class](../../classes/b2b/business-campaign-members.md), qui capture des informations détaillées sur une campagne d’entreprise.
+[!UICONTROL XDM Business Campaign Member Details] est un groupe de champs de schéma standard pour la [[!UICONTROL classe XDM Business Campaign Members]](../../classes/b2b/business-campaign-members.md), qui capture des informations détaillées sur une campagne d’entreprise.
 
-![Structure du groupe de champs Détails des membres de XDM Business Campaign tel qu’il apparaît dans l’interface utilisateur](../../images/field-groups/b2b/business-campaign-member-details.png)
+![Structure du groupe de champs Détails des membres XDM Business Campaign tel qu’il apparaît dans l’interface utilisateur](../../images/field-groups/b2b/business-campaign-member-details.png)
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
@@ -22,7 +22,7 @@ ht-degree: 4%
 | `firstRespondedDate` | [!UICONTROL DateTime] | Date et heure ISO 8601 de la première réponse de la personne à la campagne. |
 | `hasReachedSuccess` | [!UICONTROL Booléen] | Indique si ce membre de campagne a généré une conversion réussie. |
 | `hasResponded` | [!UICONTROL Booléen] | Indique si ce membre de campagne a répondu à la campagne. |
-| `isDeleted` | [!UICONTROL Booléen] | Indique si ce membre de campagne a été supprimé dans Marketo Engage.<br><br>Lors de l’utilisation de la variable [Connecteur source Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tous les enregistrements supprimés dans Marketo sont automatiquement répercutés dans Real-time Customer Profile. Cependant, les enregistrements relatifs à ces profils peuvent toujours persister dans le lac de données. En définissant `isDeleted` to `true`, vous pouvez utiliser ce champ pour filtrer les enregistrements qui ont été supprimés de vos sources lors de l’interrogation du lac de données. |
+| `isDeleted` | [!UICONTROL Booléen] | Indique si ce membre de campagne a été supprimé dans Marketo Engage.<br><br>Lors de l’utilisation du [connecteur source Marketo](../../../sources/connectors/adobe-applications/marketo/marketo.md), tous les enregistrements supprimés dans Marketo sont automatiquement répercutés dans Real-time Customer Profile. Cependant, les enregistrements relatifs à ces profils peuvent toujours persister dans le lac de données. En définissant `isDeleted` sur `true`, vous pouvez utiliser le champ pour filtrer les enregistrements qui ont été supprimés de vos sources lors de l’interrogation du lac de données. |
 | `isExhausted` | [!UICONTROL Booléen] | Indique si ce membre de campagne a épuisé toutes les interactions de campagne. |
 | `lastStatus` | [!UICONTROL Chaîne] | Dernier état du membre de la campagne. |
 | `memberStatus` | [!UICONTROL Chaîne] | État actuel du membre de la campagne. |
@@ -38,5 +38,5 @@ ht-degree: 4%
 
 Pour plus d’informations sur le groupe de champs, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/fieldgroups/campaign-member/campaign-member-details.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/fieldgroups/campaign-member/campaign-member-details.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/fieldgroups/campaign-member/campaign-member-details.schema.json)

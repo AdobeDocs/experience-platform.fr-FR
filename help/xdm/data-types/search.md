@@ -11,9 +11,9 @@ ht-degree: 18%
 
 ---
 
-# [!UICONTROL Rechercher] type de données
+# Type de données [!UICONTROL Search]
 
-[!UICONTROL Rechercher] est un type de données XDM (Experience Data Model) standard qui contient des informations sur l’activité de recherche web.
+[!UICONTROL Search] est un type de données XDM (Experience Data Model) standard qui contient des informations sur l’activité de recherche web.
 
 <img src="../images/data-types/search.PNG" width="500" /><br />
 
@@ -25,11 +25,11 @@ ht-degree: 18%
 | `position` | Nombre entier | Position ou classement de la liste dans la page des résultats de recherche. |
 | `searchEngine` | Chaîne | Moteur de recherche utilisé pour la recherche. |
 | `searchEngineID` | Chaîne | Identifiant spécifique à l’application utilisé pour identifier le moteur de recherche. |
-| `slot` | Chaîne | Section nommée de la page dans laquelle le résultat de la recherche s’est affiché. La valeur de cette propriété doit être égale à l’une des valeurs d’énumération connues que vous définissez, par exemple `top`, `side`, ou `bottom`. |
+| `slot` | Chaîne | Section nommée de la page dans laquelle le résultat de la recherche s’est affiché. La valeur de cette propriété doit être égale à l’une des valeurs d’énumération connues que vous définissez, par exemple `top`, `side` ou `bottom`. |
 
 {style="table-layout:auto"}
 
 Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/search.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/search.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/search.schema.json)

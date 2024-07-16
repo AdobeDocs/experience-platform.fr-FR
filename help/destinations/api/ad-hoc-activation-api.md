@@ -16,19 +16,19 @@ ht-degree: 12%
 
 >[!IMPORTANT]
 >
->Une fois la phase bêta terminée, la variable [!DNL ad-hoc activation API] est désormais disponible en général (GA) pour tous les clients Experience Platform. Dans la version GA, l’API a été mise à niveau vers la version 2. Étape 4 ([Obtention du dernier ID de tâche d’exportation d’audience](#segment-export-id)) n’est plus requis, car l’API ne nécessite plus l’ID d’exportation.
+>Une fois la phase Beta terminée, le [!DNL ad-hoc activation API] est désormais disponible (GA) pour tous les clients Experience Platform. Dans la version GA, l’API a été mise à niveau vers la version 2. L’étape 4 ([Obtenir le dernier ID de tâche d’exportation d’audience](#segment-export-id)) n’est plus requise, car l’API ne nécessite plus l’ID d’exportation.
 >
->Voir [Exécution de la tâche d’activation ad hoc](#activation-job) plus loin dans ce tutoriel pour plus d’informations.
+>Pour plus d’informations, reportez-vous à la section [Exécution de la tâche d’activation ad hoc](#activation-job) ci-dessous dans ce tutoriel.
 
 ## Vue d’ensemble {#overview}
 
 L’API d’activation ad hoc permet aux marketeurs d’activer par programmation les audiences d’audience vers les destinations, de manière rapide et efficace, dans les cas où une activation immédiate est requise.
 
-Utilisez l’API d’activation ad hoc pour exporter des fichiers complets vers le système de réception de fichiers souhaité. L’activation des audiences ad hoc n’est prise en charge que par [destinations basées sur des fichiers de lots](../destination-types.md#file-based).
+Utilisez l’API d’activation ad hoc pour exporter des fichiers complets vers le système de réception de fichiers souhaité. L’activation des audiences ad hoc est uniquement prise en charge par les [destinations basées sur des fichiers de lot](../destination-types.md#file-based).
 
 Le diagramme ci-dessous illustre le workflow de bout en bout pour activer les audiences via l’API d’activation ad hoc, y compris les tâches de segmentation qui ont lieu dans Platform toutes les 24 heures.
 
-![activation ad hoc](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
+![ad-hoc-activation](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
 
 
@@ -51,7 +51,7 @@ Les responsables informatiques peuvent utiliser l’API d’activation ad hoc Ex
 Gardez à l’esprit les barrières de sécurité suivantes lors de l’utilisation de l’API d’activation ad hoc.
 
 * Actuellement, chaque tâche d’activation ad hoc peut activer jusqu’à 80 audiences. Si vous tentez d’activer plus de 80 audiences par tâche, la tâche échouera. Ce comportement peut faire l’objet de modifications dans les prochaines versions.
-* Les tâches d’activation ad hoc ne peuvent pas s’exécuter en parallèle avec les tâches planifiées [tâches d’exportation d’audiences](../../segmentation/api/export-jobs.md). Avant d’exécuter une tâche d’activation ad hoc, assurez-vous que la tâche d’exportation d’audience planifiée est terminée. Voir [surveillance des flux de données de destination](../../dataflows/ui/monitor-destinations.md) pour plus d’informations sur la manière de surveiller l’état des flux d’activation. Par exemple, si votre flux de données d’activation affiche une **[!UICONTROL Traitement]** , attendez qu’il se termine avant d’exécuter la tâche d’activation ad hoc.
+* Les tâches d’activation ad hoc ne peuvent pas s’exécuter en parallèle avec les [tâches d’exportation d’audiences](../../segmentation/api/export-jobs.md) planifiées. Avant d’exécuter une tâche d’activation ad hoc, assurez-vous que la tâche d’exportation d’audience planifiée est terminée. Pour plus d’informations sur la surveillance de l’état des flux d’activation, voir [surveillance des flux de données de destination](../../dataflows/ui/monitor-destinations.md) . Par exemple, si votre flux de données d’activation affiche l’état **[!UICONTROL Traitement]**, attendez qu’il se termine avant d’exécuter la tâche d’activation ad hoc.
 * N’exécutez pas plusieurs tâches d’activation ad hoc simultanées par audience.
 
 ## Considérations relatives à la segmentation {#segmentation-considerations}
@@ -63,8 +63,8 @@ Adobe Experience Platform exécute des tâches de segmentation planifiées toute
 Avant de pouvoir appeler les API Adobe Experience Platform, assurez-vous de respecter les conditions préalables suivantes :
 
 * Vous disposez d’un compte d’organisation ayant accès à Adobe Experience Platform.
-* Votre compte d’Experience Platform a la variable `developer` et `user` rôles activés pour le profil de produit de l’API Adobe Experience Platform. Contactez votre [Admin Console](../../access-control/home.md) pour activer ces rôles pour votre compte.
-* Vous avez une Adobe ID. Si vous ne possédez pas d’Adobe ID, accédez à la [Console Adobe Developer](https://developer.adobe.com/console) et créez un compte.
+* Les rôles `developer` et `user` sont activés pour votre compte d’Experience Platform pour le profil de produit de l’API Adobe Experience Platform. Contactez votre administrateur [Admin Console](../../access-control/home.md) pour activer ces rôles pour votre compte.
+* Vous avez une Adobe ID. Si vous ne possédez pas d’Adobe ID, accédez à [Adobe Developer Console](https://developer.adobe.com/console) et créez un compte.
 
 ## Étape 2 : collecte des informations d’identification {#credentials}
 
@@ -105,7 +105,7 @@ Une fois que vous avez configuré un flux d’activation pour votre destination 
 
 Avant de pouvoir exécuter la tâche d’activation ad hoc, vous devez obtenir l’identifiant de la dernière tâche d’exportation d’audience. Vous devez transmettre cet identifiant dans la requête de tâche d’activation ad hoc.
 
-Suivez les instructions décrites [here](../../segmentation/api/export-jobs.md#retrieve-list) pour récupérer une liste de toutes les tâches d’export d’audience.
+Suivez les instructions décrites [ici](../../segmentation/api/export-jobs.md#retrieve-list) pour récupérer une liste de toutes les tâches d’exportation d’audience.
 
 Dans la réponse, recherchez le premier enregistrement contenant la propriété de schéma ci-dessous.
 
@@ -115,9 +115,9 @@ Dans la réponse, recherchez le premier enregistrement contenant la propriété 
 }
 ```
 
-L’ID de la tâche d’exportation d’audience se trouve dans la variable `id` , comme illustré ci-dessous.
+L’ID de la tâche d’exportation d’audience se trouve dans la propriété `id`, comme illustré ci-dessous.
 
-![ID de tâche d’exportation d’audience](../assets/api/ad-hoc-activation/segment-export-job-id.png)
+![ID de la tâche d’exportation d’audience](../assets/api/ad-hoc-activation/segment-export-job-id.png)
 
 
 ## Étape 5 : exécution de la tâche d’activation ad hoc {#activation-job}
@@ -126,9 +126,9 @@ Adobe Experience Platform exécute des tâches de segmentation planifiées toute
 
 >[!IMPORTANT]
 >
->Notez la contrainte ponctuelle suivante : avant d’exécuter une tâche d’activation ad hoc, assurez-vous qu’au moins 20 minutes se sont écoulées entre le moment où l’audience a été activée pour la première fois, selon le planning défini dans [Étape 3 - Création du flux d’activation dans l’interface utilisateur de Platform](#activation-flow).
+>Notez la contrainte ponctuelle suivante : avant d’exécuter une tâche d’activation ad hoc, assurez-vous qu’au moins 20 minutes se sont écoulées entre le moment où l’audience a été activée pour la première fois selon le planning que vous avez défini dans [Étape 3 - Créer un flux d’activation dans l’interface utilisateur de Platform](#activation-flow).
 
-Avant d’exécuter une tâche d’activation ad hoc, assurez-vous que la tâche d’exportation d’audience planifiée pour vos audiences est terminée. Voir [surveillance des flux de données de destination](../../dataflows/ui/monitor-destinations.md) pour plus d’informations sur la manière de surveiller l’état des flux d’activation. Par exemple, si votre flux de données d’activation affiche une **[!UICONTROL Traitement]** , attendez qu’il se termine avant d’exécuter la tâche d’activation ad hoc pour exporter un fichier complet.
+Avant d’exécuter une tâche d’activation ad hoc, assurez-vous que la tâche d’exportation d’audience planifiée pour vos audiences est terminée. Pour plus d’informations sur la surveillance de l’état des flux d’activation, voir [surveillance des flux de données de destination](../../dataflows/ui/monitor-destinations.md) . Par exemple, si votre flux de données d’activation affiche l’état **[!UICONTROL Traitement]**, attendez qu’il se termine avant d’exécuter la tâche d’activation ad hoc pour exporter un fichier complet.
 
 Une fois la tâche d&#39;export d&#39;audience terminée, vous pouvez déclencher l&#39;activation.
 
@@ -140,7 +140,7 @@ Une fois la tâche d&#39;export d&#39;audience terminée, vous pouvez déclenche
 
 >[!IMPORTANT]
 >
->Il est obligatoire d’inclure la variable `Accept: application/vnd.adobe.adhoc.activation+json; version=2` en-tête de votre requête afin d’utiliser la version v2 de l’API d’activation ad hoc.
+>Il est obligatoire d’inclure l’en-tête `Accept: application/vnd.adobe.adhoc.activation+json; version=2` dans votre requête afin d’utiliser la version v2 de l’API d’activation ad hoc.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun' \
@@ -166,8 +166,8 @@ curl --location --request POST 'https://platform.adobe.io/data/core/activation/d
 
 | Propriété | Description |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Les identifiants des instances de destination vers lesquelles vous souhaitez activer les audiences. Vous pouvez obtenir ces ID à partir de l’interface utilisateur de Platform en accédant à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]** et cliquez sur la ligne de destination de votre choix pour afficher l’ID de destination dans le rail de droite. Pour plus d’informations, consultez la section [documentation de l’espace de travail des destinations](/help/destinations/ui/destinations-workspace.md#browse). |
-| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Les identifiants des audiences que vous souhaitez activer vers la destination sélectionnée. Vous pouvez utiliser l’API ad hoc pour exporter des audiences générées par Platform ainsi que des audiences externes (téléchargement personnalisé). Lors de l’activation d’audiences externes, utilisez l’identifiant généré par le système au lieu de l’identifiant d’audience. L’identifiant généré par le système est accessible dans la vue de synthèse de l’audience de l’interface utilisateur d’audiences. <br> ![Vue de l’ID d’audience qui ne doit pas être sélectionné.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "Vue de l’ID d’audience qui ne doit pas être sélectionné."){width="100" zoomable="yes"} <br> ![Vue de l’ID d’audience généré par le système qui doit être utilisé.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "Vue de l’ID d’audience généré par le système qui doit être utilisé."){width="100" zoomable="yes"} |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Les identifiants des instances de destination vers lesquelles vous souhaitez activer les audiences. Vous pouvez obtenir ces ID à partir de l’interface utilisateur de Platform, en accédant à l’onglet **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]** et en cliquant sur la ligne de destination de votre choix pour afficher l’ID de destination dans le rail de droite. Pour plus d’informations, consultez la [documentation de l’espace de travail des destinations](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Les identifiants des audiences que vous souhaitez activer vers la destination sélectionnée. Vous pouvez utiliser l’API ad hoc pour exporter des audiences générées par Platform ainsi que des audiences externes (téléchargement personnalisé). Lors de l’activation d’audiences externes, utilisez l’identifiant généré par le système au lieu de l’identifiant d’audience. Vous pouvez trouver l&#39;identifiant généré par le système dans la vue de synthèse de l&#39;audience dans l&#39;interface utilisateur des audiences. <br> ![Affichage de l’ID d’audience qui ne doit pas être sélectionné.](/help/destinations/assets/api/ad-hoc-activation/audience-id-do-not-use.png "Affichage de l’ID d’audience qui ne doit pas être sélectionné."){width="100" zoomable="yes"} <br> ![Affichage de l’ID d’audience généré par le système qui doit être utilisé.](/help/destinations/assets/api/ad-hoc-activation/system-generated-id-to-use.png "Affichage de l’ID d’audience généré par le système qui doit être utilisé."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -207,9 +207,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 
 | Propriété | Description |
 | -------- | ----------- |
-| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Les identifiants des instances de destination vers lesquelles vous souhaitez activer les audiences. Vous pouvez obtenir ces ID à partir de l’interface utilisateur de Platform en accédant à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]** et cliquez sur la ligne de destination de votre choix pour afficher l’ID de destination dans le rail de droite. Pour plus d’informations, consultez la section [documentation de l’espace de travail des destinations](/help/destinations/ui/destinations-workspace.md#browse). |
+| <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | Les identifiants des instances de destination vers lesquelles vous souhaitez activer les audiences. Vous pouvez obtenir ces ID à partir de l’interface utilisateur de Platform, en accédant à l’onglet **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]** et en cliquant sur la ligne de destination de votre choix pour afficher l’ID de destination dans le rail de droite. Pour plus d’informations, consultez la [documentation de l’espace de travail des destinations](/help/destinations/ui/destinations-workspace.md#browse). |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul> | Les identifiants des audiences que vous souhaitez activer vers la destination sélectionnée. |
-| <ul><li>`exportId1`</li></ul> | L’ID renvoyé dans la réponse de la variable [export d&#39;audience](../../segmentation/api/export-jobs.md#retrieve-list) tâche. Voir [Étape 4 : Obtention du dernier ID de tâche d’exportation d’audience](#segment-export-id) pour obtenir des instructions sur la manière de trouver cet identifiant. |
+| <ul><li>`exportId1`</li></ul> | L’ID renvoyé dans la réponse de la tâche [export d’audience](../../segmentation/api/export-jobs.md#retrieve-list). Voir [Étape 4 : obtenir le dernier ID de tâche d’exportation d’audience](#segment-export-id) pour obtenir des instructions sur la manière de trouver cet ID. |
 
 {style="table-layout:auto"}
 
@@ -233,7 +233,7 @@ Une réponse réussie renvoie un état HTTP 200.
 | -------- | ----------- |
 | `segment` | Identifiant de l’audience activée. |
 | `order` | Identifiant de la destination vers laquelle l’audience a été activée. |
-| `statusURL` | URL d’état du flux d’activation. Vous pouvez suivre la progression du flux à l’aide de la variable [API de service de flux](../../sources/tutorials/api/monitor.md). |
+| `statusURL` | URL d’état du flux d’activation. Vous pouvez suivre la progression du flux à l’aide de l’ [ API Flow Service](../../sources/tutorials/api/monitor.md). |
 
 {style="table-layout:auto"}
 
@@ -247,8 +247,8 @@ Lors de l’utilisation de l’API d’activation ad hoc, vous pouvez rencontrer
 
 | Message d’erreur | Résolution |
 |---------|----------|
-| Exécution déjà en cours pour l’audience `segment ID` pour la commande `dataflow ID` avec identifiant d’exécution `flow run ID` | Ce message d’erreur indique qu’un flux d’activation ad hoc est actuellement en cours pour une audience. Attendez que la tâche se termine avant de déclencher à nouveau la tâche d’activation. |
-| Segments `<segment name>` ne font pas partie de ce flux de données ou ne font pas partie de la plage de dates prévue. | Ce message d’erreur indique que les audiences que vous avez sélectionnées pour activer ne sont pas mappées au flux de données ou que le planning d’activation configuré pour les audiences a expiré ou n’a pas encore commencé. Vérifiez si l’audience est bien mappée au flux de données et que le planning d’activation de l’audience chevauche la date actuelle. |
+| Exécutez déjà pour l&#39;audience `segment ID` de la commande `dataflow ID` avec l&#39;identifiant d&#39;exécution `flow run ID` | Ce message d’erreur indique qu’un flux d’activation ad hoc est actuellement en cours pour une audience. Attendez que la tâche se termine avant de déclencher à nouveau la tâche d’activation. |
+| Les segments `<segment name>` ne font pas partie de ce flux de données ou ne font pas partie de la plage de planification ! | Ce message d’erreur indique que les audiences que vous avez sélectionnées pour activer ne sont pas mappées au flux de données ou que le planning d’activation configuré pour les audiences a expiré ou n’a pas encore commencé. Vérifiez si l’audience est bien mappée au flux de données et que le planning d’activation de l’audience chevauche la date actuelle. |
 
 ## Informations connexes {#related-information}
 

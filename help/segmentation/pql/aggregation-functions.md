@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: Fonctions d’agrégation PQL
-description: Les fonctions d’agrégation sont utilisées pour grouper plusieurs valeurs dans des tableaux PQL (langue de requête de profil) afin de former une seule valeur de résumé.
+description: Les fonctions d’agrégation sont utilisées pour regrouper plusieurs valeurs dans des tableaux Profile Query Language (PQL) afin de former une seule valeur de résumé.
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '227'
-ht-degree: 93%
+ht-degree: 76%
 
 ---
 
 # Fonctions d’agrégation
 
-Les fonctions d’agrégation sont utilisées pour regrouper plusieurs valeurs dans des tableaux [!DNL Profile Query Language] (PQL) afin de former une seule valeur de synthèse. Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
+Les fonctions d’agrégation sont utilisées pour regrouper plusieurs valeurs dans des tableaux [!DNL Profile Query Language] (PQL) afin de former une seule valeur de résumé. Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
 
 ## Nombre
 

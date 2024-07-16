@@ -33,7 +33,7 @@ curl -X GET \
 
 **Réponse**
 
-La réponse comprend un tableau d’objets, chaque objet représentant un espace de noms disponible. Espaces de noms avec &quot;[!UICONTROL custom]&quot; valeur de &quot;[!UICONTROL false]&quot; sont des espaces de noms standard, tandis que ceux dotés de &quot;[!UICONTROL custom]&quot; valeur de &quot;[!UICONTROL true]&quot; sont des espaces de noms que votre organisation a créés.
+La réponse comprend un tableau d’objets, chaque objet représentant un espace de noms disponible. Les espaces de noms avec une valeur &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL false]&quot; sont des espaces de noms standard, tandis que ceux avec une valeur &quot;[!UICONTROL custom]&quot; de &quot;[!UICONTROL true]&quot; sont des espaces de noms que votre organisation a créés.
 
 >[!NOTE]
 >

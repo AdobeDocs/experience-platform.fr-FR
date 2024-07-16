@@ -11,7 +11,7 @@ ht-degree: 3%
 
 # [!UICONTROL Transferts de solde] groupe de champs de schéma
 
-[!UICONTROL Transferts de solde] est un groupe de champs de schéma standard pour la variable [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Le groupe de champs fournit une `personalFinances.balanceTransfers` à un schéma, qui capture les détails d’un transfert de solde financier entre des comptes.
+[!UICONTROL Transferts de solde] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Le groupe de champs fournit un seul objet `personalFinances.balanceTransfers` à un schéma, qui capture les détails d’un transfert de la balance financière entre les comptes.
 
 ![](../../images/field-groups/balance-transfers.png)
 

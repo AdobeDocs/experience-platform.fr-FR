@@ -2,11 +2,12 @@
 title: Création d’un flux de données pour les données de Braze dans l’interface utilisateur
 description: Découvrez comment créer un flux de données pour votre compte Braze à l’aide de l’interface utilisateur de Adobe Experience Platform.
 last-substantial-update: 2024-01-30T00:00:00Z
-badge: Version Beta
-source-git-commit: bfcea2a30a0ecadcafaddf7660eef90952dcade6
+badge: Version bêta
+exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
+source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
 workflow-type: tm+mt
 source-wordcount: '689'
-ht-degree: 23%
+ht-degree: 24%
 
 ---
 
@@ -16,16 +17,16 @@ ht-degree: 23%
 >
 >La source [!DNL Braze Currents] est en version Beta. Veuillez lire la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-[!DNL Braze] alimente en temps réel les interactions centrées sur les clients entre les consommateurs et les marques. [!DNL Braze Currents] est un flux de données en temps réel d’événements d’engagement de la plateforme Braze, qui constitue l’exportation la plus robuste mais la plus granulaire de la [!DNL Braze] plateforme.
+[!DNL Braze] alimente en temps réel les interactions centrées sur les clients entre les consommateurs et les marques. [!DNL Braze Currents] est un flux de données en temps réel d’événements d’engagement de la plateforme Braze, qui est l’exportation la plus robuste mais la plus granulaire de la plateforme [!DNL Braze].
 
-Lisez le tutoriel suivant pour savoir comment importer des données d’événements d’engagement de votre [!DNL Braze] compte vers Adobe Experience Platform dans l’interface utilisateur.
+Lisez le tutoriel suivant pour savoir comment importer des données d’événements d’engagement de votre compte [!DNL Braze] vers Adobe Experience Platform dans l’interface utilisateur.
 
 ## Conditions préalables
 
 Pour suivre les étapes de ce guide, vous aurez besoin des éléments suivants :
 
-* Une connexion à [Adobe Experience Platform](https://platform.adobe.com) et l’autorisation de créer une nouvelle connexion source en continu.
-* Une connexion à [[!DNL Braze] tableau de bord](https://dashboard.braze.com/sign_in), une valeur inutilisée [Licence currents Connector](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents)et les autorisations pour créer un connecteur. Pour plus d’informations, consultez la section [conditions requises pour configurer [!DNL Currents]](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements).
+* Connexion à [Adobe Experience Platform](https://platform.adobe.com) et autorisation de créer une connexion source en continu.
+* Connectez-vous à votre [[!DNL Braze] tableau de bord](https://dashboard.braze.com/sign_in), une [licence Currents Connector](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents) inutilisée et des autorisations pour créer un connecteur. Pour plus d’informations, consultez les [exigences de configuration [!DNL Currents]](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#requirements).
 
 ## Prise en main
 
@@ -36,38 +37,38 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
    * [Tutoriel sur l’éditeur de schémas](../../../../../xdm/tutorials/create-schema-ui.md) : découvrez comment créer des schémas personnalisés à l’aide de l’interface utilisateur de l’éditeur de schémas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 
-Ce tutoriel nécessite également une compréhension pratique de [[!DNL Braze] Courants](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents).
+Ce tutoriel nécessite également une compréhension pratique des [[!DNL Braze] courants](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents).
 
-Si vous disposez déjà d’une [!DNL Braze] vous pouvez ignorer le reste de ce document et passer au tutoriel sur [configuration d’un flux de données](../../dataflow/marketing-automation.md).
+Si vous disposez déjà d’une connexion [!DNL Braze], vous pouvez ignorer le reste de ce document et passer au tutoriel sur la [configuration d’un flux de données](../../dataflow/marketing-automation.md).
 
-## Connectez-vous à [!DNL Braze] compte à Experience Platform
+## Connectez votre compte [!DNL Braze] à l’Experience Platform
 
 Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Sous , *Automatisation du marketing* catégorie, sélectionnez **[!UICONTROL Courants de braquage]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
+Sous la catégorie *Automatisation marketing*, sélectionnez **[!UICONTROL Courants de braze]**, puis sélectionnez **[!UICONTROL Ajouter des données]**.
 
 ![Catalogue des sources sur l’interface utilisateur Experience Platform avec la source Courants de braze sélectionnée.](../../../../images/tutorials/create/braze/catalog.png)
 
-Ensuite, chargez le [Exemple de fichier Courants de braquage](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json). Ce fichier contient tous les champs que Braze peut envoyer dans le cadre d’un événement.
+Ensuite, téléchargez le fichier d&#39;exemple [Braze Currents](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json) fourni. Ce fichier contient tous les champs que Braze peut envoyer dans le cadre d’un événement.
 
-![L’écran &quot;Ajouter des données&quot;.](../../../../images/tutorials/create/braze/select-data.png)
+![L&#39;écran &quot;Ajouter des données&quot;.](../../../../images/tutorials/create/braze/select-data.png)
 
 Une fois votre fichier chargé, vous devez fournir les détails de votre flux de données, y compris des informations sur votre jeu de données et le schéma vers lequel vous mappez.
 ![L’écran &quot;Détails du flux de données&quot; surlignant &quot;Détails du jeu de données&quot;.](../../../../images/tutorials/create/braze/dataflow-detail.png)
 
 Ensuite, configurez le mappage pour vos données à l’aide de l’interface de mappage.
 
-![L’écran &quot;Mappage&quot;.](../../../../images/tutorials/create/braze/mapping.png)
+![L&#39;écran &quot;Mapping&quot;.](../../../../images/tutorials/create/braze/mapping.png)
 
 >[!IMPORTANT]
 >
 >Les horodatages de Braze ne sont pas exprimés en millisecondes, mais en secondes. Pour que les horodatages dans Experience Platform soient reflétés avec précision, vous devez créer des champs calculés en millisecondes. Un calcul de &quot;time * 1000&quot; sera correctement converti en millisecondes, approprié pour le mappage à un champ d’horodatage dans Experience Platform.
 >
->![Création d’un champ calculé pour l’horodatage ](../../../../images/tutorials/create/braze/create-calculated-field.png)
+>![ Création d&#39;un champ calculé pour l&#39;horodatage ](../../../../images/tutorials/create/braze/create-calculated-field.png)
 
 ### Collecter les informations d’identification requises
 
-Une fois votre connexion créée, vous devez collecter les valeurs d’informations d’identification suivantes, que vous fournissez ensuite dans le tableau de bord Braze pour envoyer des données à Experience Platform. Pour plus d’informations, consultez la section [!DNL Braze] [guide sur la navigation vers les courants](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+Une fois votre connexion créée, vous devez collecter les valeurs d’informations d’identification suivantes, que vous fournissez ensuite dans le tableau de bord Braze pour envoyer des données à Experience Platform. Pour plus d’informations, consultez le [!DNL Braze] [ guide de navigation vers les courants](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 | Champ | Description |
 | --- | --- |
@@ -75,12 +76,12 @@ Une fois votre connexion créée, vous devez collecter les valeurs d’informati
 | Secret client | Le secret client associé à la source de votre Experience Platform. |
 | Identifiant du client | Identifiant du tenant associé à la source de votre Experience Platform. |
 | Nom du sandbox | Environnement de test associé à la source de votre Experience Platform. |
-| Identifiant de flux de données | Identifiant de flux de données associé à la source de votre Experience Platform. |
-| Point de terminaison de diffusion en continu | Point de terminaison de diffusion en continu associé à votre source Experience Platform. **Remarque**: [!DNL Braze] convertit automatiquement ce paramètre au point de terminaison de la diffusion par lots. |
+| ID du flux de données | Identifiant de flux de données associé à la source de votre Experience Platform. |
+| Point de terminaison de diffusion en continu | Point de terminaison de diffusion en continu associé à votre source Experience Platform. **Remarque** : [!DNL Braze] la convertit automatiquement en point de terminaison de la diffusion par lots. |
 
-### Configurer [!DNL Braze Currents] pour diffuser des données vers votre source de données
+### Configuration de [!DNL Braze Currents] pour diffuser des données vers votre source de données
 
-Dans le [!DNL Braze Dashboard], accédez à Intégrations des partenaires . **->** Exportation de données, puis sélectionnez **[!DNL Create New Current]**. Vous serez invité à attribuer un nom au connecteur, à contacter les notifications concernant le connecteur et aux informations d’identification répertoriées ci-dessus. Sélectionnez les événements que vous souhaitez recevoir, configurez éventuellement les exclusions/transformations de champ souhaitées, puis sélectionnez **[!DNL Launch Current]**.
+Dans [!DNL Braze Dashboard], accédez à Intégration de partenaire **->** Exportation de données, puis sélectionnez **[!DNL Create New Current]**. Vous serez invité à attribuer un nom au connecteur, à contacter les notifications concernant le connecteur et aux informations d’identification répertoriées ci-dessus. Sélectionnez les événements que vous souhaitez recevoir, configurez éventuellement les exclusions/transformations de champ souhaitées, puis sélectionnez **[!DNL Launch Current]**.
 
 ## Étapes suivantes
 

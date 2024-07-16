@@ -6,8 +6,8 @@ description: Le point de terminaison /comportements de l’API Schema Registry v
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 27%
+source-wordcount: '417'
+ht-degree: 23%
 
 ---
 
@@ -16,23 +16,23 @@ ht-degree: 27%
 Dans le modèle de données d’expérience (XDM), les comportements définissent la nature des données décrites par un schéma. Chaque classe XDM doit faire référence à un comportement spécifique, dont tous les schémas qui utilisent cette classe hériteront. Pour la plupart des cas d’utilisation de Platform, il existe deux comportements disponibles :
 
 * **[!UICONTROL Enregistrement]** : fournit des informations sur les attributs d’un sujet. Un sujet peut être une organisation ou un individu.
-* **[!UICONTROL Série temporelle]** : fournit un instantané du système au moment où une action a été entreprise directement ou indirectement par un sujet enregistré.
+* **[!UICONTROL Série temporelle]** : fournit un instantané du système au moment où une action a été entreprise directement ou indirectement par un objet d’enregistrement.
 
 >[!NOTE]
 >
->Dans Platform, certains cas d’utilisation nécessitent l’utilisation d’un schéma qui n’emploie aucun des comportements ci-dessus. Pour ces cas, un troisième comportement &quot;ad hoc&quot; est disponible. Voir le tutoriel sur [création d’un schéma ad hoc](../tutorials/ad-hoc.md) pour plus d’informations.
+>Dans Platform, certains cas d’utilisation nécessitent l’utilisation d’un schéma qui n’emploie aucun des comportements ci-dessus. Pour ces cas, un troisième comportement &quot;ad hoc&quot; est disponible. Pour plus d’informations, consultez le tutoriel sur la [création d’un schéma ad hoc](../tutorials/ad-hoc.md) .
 >
->Pour des informations plus générales sur les comportements de données en termes d’impact sur la composition des schémas, consultez le guide sur la [principes de base de la composition des schémas](../schema/composition.md).
+>Pour des informations plus générales sur les comportements de données en termes d’impact sur la composition des schémas, consultez le guide sur les [ principes de base de la composition des schémas](../schema/composition.md).
 
-Le `/behaviors` du point de terminaison [!DNL Schema Registry] L’API vous permet d’afficher les comportements disponibles dans la variable `global` conteneur.
+Le point d’entrée `/behaviors` de l’API [!DNL Schema Registry] vous permet d’afficher les comportements disponibles dans le conteneur `global`.
 
-## Prise en main
+## Commencer
 
-Le point d’entrée utilisé dans ce guide fait partie de lʼ[[!DNL Schema Registry] API ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
+Le point de terminaison utilisé dans ce guide fait partie de l’ [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/behavior-registry.yaml). Avant de continuer, consultez le [guide de prise en main](./getting-started.md) pour obtenir des liens vers la documentation associée, un guide de lecture des exemples d’appels API dans ce document et des informations importantes sur les en-têtes requis pour réussir des appels vers n’importe quelle API d’Experience Platform.
 
 ## Récupération d’une liste de comportements {#list}
 
-Vous pouvez récupérer une liste de tous les comportements disponibles en envoyant une requête de GET à la variable `/behaviors` point de terminaison .
+Vous pouvez récupérer une liste de tous les comportements disponibles en envoyant une requête de GET au point de terminaison `/behaviors`.
 
 **Format d’API**
 
@@ -89,7 +89,7 @@ curl -X GET \
 
 ## Rechercher un comportement {#lookup}
 
-Vous pouvez rechercher un comportement spécifique en fournissant son identifiant dans le chemin d’accès d’une requête de GET à la variable `/behaviors` point de terminaison .
+Vous pouvez rechercher un comportement spécifique en fournissant son identifiant dans le chemin d’accès d’une requête de GET au point de terminaison `/behaviors`.
 
 **Format d’API**
 
@@ -99,13 +99,13 @@ GET /global/behaviors/{BEHAVIOR_ID}
 
 | Paramètre | Description |
 | --- | --- |
-| `{BEHAVIOR_ID}` | Le `meta:altId` ou encodé URL `$id` du comportement que vous souhaitez rechercher. |
+| `{BEHAVIOR_ID}` | `meta:altId` ou encodé URL `$id` du comportement que vous souhaitez rechercher. |
 
 {style="table-layout:auto"}
 
 **Requête**
 
-La requête suivante récupère les détails du comportement de l’enregistrement en fournissant ses `meta:altId` dans le chemin d’accès de la requête.
+La requête suivante récupère les détails du comportement de l’enregistrement en fournissant son `meta:altId` dans le chemin de la requête.
 
 ```shell
 curl -X GET \
@@ -172,4 +172,4 @@ Une réponse réussie renvoie les détails du comportement, y compris sa version
 
 ## Étapes suivantes
 
-Ce guide couvre lʼutilisation du point d’entrée `/behaviors` dans lʼAPI [!DNL Schema Registry] Pour savoir comment attribuer un comportement à une classe à l’aide de l’API, reportez-vous à la section [guide de point de terminaison des classes](./classes.md).
+Ce guide décrit l’utilisation du point d’entrée `/behaviors` dans l’API [!DNL Schema Registry]. Pour savoir comment attribuer un comportement à une classe à l’aide de l’API, consultez le [guide de point de terminaison de classes](./classes.md).

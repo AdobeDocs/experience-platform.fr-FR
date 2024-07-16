@@ -4,14 +4,14 @@ description: Ce document fournit des informations supplémentaires sur l’utili
 exl-id: fdfa019d-ce0e-456b-b591-7d96d1115e02
 source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '180'
 ht-degree: 2%
 
 ---
 
 # Annexe du guide de l’API Sandbox
 
-Ce document fournit des informations supplémentaires relatives à l’utilisation de la fonction [!DNL Sandbox] API.
+Ce document fournit des informations supplémentaires sur l’utilisation de l’API [!DNL Sandbox].
 
 ## Utilisation des paramètres de requête {#query}
 
@@ -19,7 +19,7 @@ L’API d’outils Sandbox prend en charge l’utilisation de paramètres de req
 
 >[!NOTE]
 >
->La variable `limit` peuvent être transmis et démarrés individuellement.
+>Le `limit` peut être transmis et démarré individuellement.
 
 | Paramètre | Description |
 | --- | --- |

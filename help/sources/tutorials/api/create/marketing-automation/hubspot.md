@@ -7,8 +7,8 @@ description: Découvrez comment connecter Adobe Experience Platform à HubSpot �
 exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
 source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 65%
+source-wordcount: '479'
+ht-degree: 63%
 
 ---
 
@@ -25,21 +25,21 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Sources](../../../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 * [Sandbox](../../../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL HubSpot] en utilisant la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL HubSpot] à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
-Pour [!DNL Flow Service] pour vous connecter à [!DNL HubSpot], vous devez fournir les propriétés de connexion suivantes :
+Pour que [!DNL Flow Service] se connecte à [!DNL HubSpot], vous devez fournir les propriétés de connexion suivantes :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `clientId` | L’ID client associé à votre [!DNL HubSpot] application. |
-| `clientSecret` | Le secret client associé à votre [!DNL HubSpot] application. |
+| `clientId` | L’ID client associé à votre application [!DNL HubSpot]. |
+| `clientSecret` | Le secret client associé à votre application [!DNL HubSpot]. |
 | `accessToken` | Jeton d’accès obtenu lors de l’authentification initiale de votre intégration OAuth. |
 | `refreshToken` | Jeton d’actualisation obtenu lors de l’authentification initiale de votre intégration OAuth. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL HubSpot] est `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
 
-Pour plus d’informations sur la prise en main, reportez-vous à cette section [Document HubSpot](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview).
+Pour plus d’informations sur la prise en main, reportez-vous à ce [document HubSpot](https://developers.hubspot.com/docs/methods/oauth2/oauth2-overview).
 
 ### Utiliser les API Platform
 
@@ -90,15 +90,15 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `auth.params.clientId` | L’ID client associé à votre [!DNL HubSpot] application. |
-| `auth.params.clientSecret` | Le secret client associé à votre [!DNL HubSpot] application. |
+| `auth.params.clientId` | L’ID client associé à votre application [!DNL HubSpot]. |
+| `auth.params.clientSecret` | Le secret client associé à votre application [!DNL HubSpot]. |
 | `auth.params.accessToken` | Jeton d’accès obtenu lors de l’authentification initiale de votre intégration OAuth. |
 | `auth.params.refreshToken` | Jeton d’actualisation obtenu lors de l’authentification initiale de votre intégration OAuth. |
-| `connectionSpec.id` | Le [!DNL HubSpot] identifiant de spécification de connexion : `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
+| `connectionSpec.id` | ID de spécification de connexion [!DNL HubSpot] : `cc6a4487-9e91-433e-a3a3-9cf6626c1806`. |
 
 **Réponse**
 
-Une réponse réussie renvoie la nouvelle connexion de , y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
+Une réponse réussie renvoie la nouvelle connexion, y compris son identifiant de connexion unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
 
 ```json
 {

@@ -5,7 +5,7 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '524'
 ht-degree: 59%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 59%
 
 >[!IMPORTANT]
 >
->La variable [!DNL Google BigQuery] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+>La source [!DNL Google BigQuery] est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-Time Customer Data Platform Ultimate.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -27,22 +27,22 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
 * [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter. [!DNL Google BigQuery] en utilisant la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL Google BigQuery] à l’aide de l’API [!DNL Flow Service].
 
 ### Collecter les informations d’identification requises
 
-Pour [!DNL Flow Service] pour se connecter [!DNL Google BigQuery] Pour Platform, vous devez fournir les valeurs d’authentification OAuth 2.0 suivantes :
+Pour que [!DNL Flow Service] se connecte [!DNL Google BigQuery] à Platform, vous devez fournir les valeurs d’authentification OAuth 2.0 suivantes :
 
 | Informations d’identification | Description |
 | ---------- | ----------- |
-| `project` | ID de projet de la valeur par défaut [!DNL Google BigQuery] projet sur lequel effectuer une requête. |
+| `project` | ID de projet par défaut du projet [!DNL Google BigQuery] sur lequel effectuer la requête. |
 | `clientID` | La valeur d’identifiant utilisée pour générer le jeton d’actualisation. |
 | `clientSecret` | La valeur secrète utilisée pour générer le jeton d’actualisation. |
 | `refreshToken` | Jeton d’actualisation obtenu à partir de [!DNL Google] utilisé pour autoriser l’accès à [!DNL Google BigQuery]. |
-| `largeResultsDataSetId` | La variable  [!DNL Google BigQuery] identifiant du jeu de données requis pour activer la prise en charge des jeux de résultats volumineux. |
+| `largeResultsDataSetId` | L’identifiant du jeu de données [!DNL Google BigQuery] précréé qui est requis pour permettre la prise en charge des jeux de résultats volumineux. |
 | `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Google BigQuery] est `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
 
-Pour plus d’informations sur ces valeurs, reportez-vous à cette section [[!DNL Google BigQuery] document](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing).
+Pour plus d&#39;informations sur ces valeurs, consultez ce [[!DNL Google BigQuery] document](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing).
 
 ### Utiliser les API Platform
 
@@ -94,11 +94,11 @@ curl -X POST \
 
 | Propriété | Description |
 | --------- | ----------- |
-| `auth.params.project` | ID de projet de la valeur par défaut [!DNL Google BigQuery] projet à interroger. par rapport à . |
+| `auth.params.project` | ID de projet par défaut du projet [!DNL Google BigQuery] à interroger. par rapport à . |
 | `auth.params.clientId` | La valeur d’identifiant utilisée pour générer le jeton d’actualisation. |
 | `auth.params.clientSecret` | La valeur client utilisée pour générer le jeton d’actualisation. |
 | `auth.params.refreshToken` | Jeton d’actualisation obtenu à partir de [!DNL Google] utilisé pour autoriser l’accès à [!DNL Google BigQuery]. |
-| `connectionSpec.id` | La variable [!DNL Google BigQuery] identifiant de spécification de connexion : `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
+| `connectionSpec.id` | ID de spécification de connexion [!DNL Google BigQuery] : `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
 
 **Réponse**
 
@@ -116,4 +116,4 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
 Ce tutoriel vous a permis de créer une connexion de base à [!DNL Google BigQuery] à l’aide de l’API [!DNL Flow Service]. Vous pouvez utiliser cet identifiant de connexion de base dans les tutoriels suivants : 
 
 * [Explorez la structure et le contenu de vos tableaux de données à l’aide de l’API  [!DNL Flow Service] .](../../explore/tabular.md)
-* [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de la fonction [!DNL Flow Service] API](../../collect/database-nosql.md)
+* [Créez un flux de données pour importer des données de base de données dans Platform à l’aide de l’API  [!DNL Flow Service] ](../../collect/database-nosql.md)

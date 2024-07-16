@@ -1,18 +1,18 @@
 ---
-keywords: linkedIn;linkedin;Linkedin;LinkedIn Insight Tag;balise Insight;balise Insight
+keywords: LinkedIn;linkedin;Linkedin;LinkedIn Insight Tag;balise Insight;balise Insight
 title: Extension LinkedIn Insight Tag
-description: L’extension LinkedIn Insight Tag est une destination publicitaire de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension LinkedIn Insight Tag est une destination publicitaire de Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: f3475621-79df-4208-a47a-e0cfd8acec7f
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '452'
-ht-degree: 89%
+source-wordcount: '441'
+ht-degree: 90%
 
 ---
 
 # Extension [!DNL LinkedIn Insight Tag] {#linkedin-insights-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
 Installez le [!DNL LinkedIn Insight Tag] pour utiliser les fonctionnalités de suivi de conversion, de reciblage et de données démographiques du site web.
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL LinkedIn Insight Tag] extension :
+Pour installer l’extension [!DNL LinkedIn Insight Tag], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

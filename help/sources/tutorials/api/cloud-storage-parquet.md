@@ -7,16 +7,16 @@ description: Ce tutoriel utilise l’API Flow Service pour vous guider tout au l
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
 source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
 workflow-type: tm+mt
-source-wordcount: '1095'
-ht-degree: 47%
+source-wordcount: '1088'
+ht-degree: 44%
 
 ---
 
-# Ingestion de données Parquet à partir d’un système de stockage dans le cloud tiers à l’aide de la méthode [!DNL Flow Service] API
+# Ingestion de données Parquet à partir d’un système de stockage dans le cloud tiers à l’aide de l’API [!DNL Flow Service]
 
-[!DNL Flow Service] sert à collecter et à centraliser les données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
+[!DNL Flow Service] est utilisé pour collecter et centraliser des données client à partir de diverses sources disparates dans Adobe Experience Platform. Le service fournit une interface utilisateur et une API RESTful à partir desquelles toutes les sources prises en charge sont connectables.
 
-Ce tutoriel utilise la méthode [!DNL Flow Service] API permettant de vous guider tout au long des étapes nécessaires à l’ingestion de données Parquet à partir d’un système de stockage dans le cloud tiers.
+Ce tutoriel utilise l’API [!DNL Flow Service] pour vous guider tout au long des étapes d’ingestion de données Parquet à partir d’un système de stockage dans le cloud tiers.
 
 ## Prise en main
 
@@ -25,7 +25,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 - [Sources](../../home.md) : [!DNL Experience Platform] permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services [!DNL Platform].
 - [Sandbox](../../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour ingérer correctement des données Parquet à partir d’un espace de stockage dans le cloud tiers à l’aide de la variable [!DNL Flow Service] API.
+Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour ingérer correctement des données Parquet à partir d’un espace de stockage cloud tiers à l’aide de l’API [!DNL Flow Service].
 
 ### Lecture d’exemples d’appels API
 
@@ -49,7 +49,7 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ## Création d’une connexion
 
-Pour ingérer des données Parquet à l’aide de [!DNL Platform] API, vous devez posséder une connexion valide pour la source de stockage dans le cloud tierce à laquelle vous accédez. Si vous ne disposez pas déjà d’une connexion pour le stockage que vous souhaitez utiliser, vous pouvez en créer une via les tutoriels suivants :
+Pour ingérer des données Parquet à l’aide d’API [!DNL Platform], vous devez posséder une connexion valide pour la source de stockage dans le cloud tierce à laquelle vous accédez. Si vous ne disposez pas déjà d’une connexion pour le stockage que vous souhaitez utiliser, vous pouvez en créer une via les tutoriels suivants :
 
 - [Amazon S3](./create/cloud-storage/s3.md)
 - [Azure Blob](./create/cloud-storage/blob.md)
@@ -61,9 +61,9 @@ Obtenez et stockez l’identifiant unique (`$id`) de la connexion, puis passez �
 
 ## Création d’un schéma cible
 
-Pour que les données source soient utilisées dans [!DNL Platform], un schéma cible doit également être créé pour structurer les données source en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer une [!DNL Platform] jeu de données dans lequel les données source sont contenues.
+Pour que les données source soient utilisées dans [!DNL Platform], un schéma cible doit également être créé pour structurer les données source en fonction de vos besoins. Le schéma cible est ensuite utilisé pour créer un jeu de données [!DNL Platform] dans lequel les données source sont contenues.
 
-Si vous préférez utiliser l’interface utilisateur dans [!DNL Experience Platform], la variable [Tutoriel de l’éditeur de schémas](../../../xdm/tutorials/create-schema-ui.md) fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de schémas.
+Si vous préférez utiliser l’interface utilisateur dans [!DNL Experience Platform], le [tutoriel de l’éditeur de schémas](../../../xdm/tutorials/create-schema-ui.md) fournit des instructions détaillées pour exécuter des actions similaires dans l’éditeur de schémas.
 
 **Format d’API**
 
@@ -73,7 +73,7 @@ POST /schemaregistry/tenant/schemas
 
 **Requête**
 
-L’exemple de requête suivant crée un schéma XDM qui étend le XDM [!DNL Individual Profile] classe .
+L’exemple de requête suivant crée un schéma XDM qui étend la classe XDM [!DNL Individual Profile].
 
 ```shell
 curl -X POST \
@@ -198,7 +198,7 @@ Une réponse réussie renvoie les détails du schéma nouvellement créé, y com
 
 ## Créer une connexion source {#source}
 
-Une fois qu’un schéma XDM cible est créé, une connexion source peut désormais être créée à l’aide d’une requête de POST à la fonction [!DNL Flow Service] API. Une connexion source se compose d’une connexion pour l’API, d’un format de données source et d’une référence au schéma XDM cible récupéré à l’étape précédente.
+Une fois un schéma XDM cible créé, une connexion source peut désormais être créée à l’aide d’une requête de POST vers l’API [!DNL Flow Service]. Une connexion source se compose d’une connexion pour l’API, d’un format de données source et d’une référence au schéma XDM cible récupéré à l’étape précédente.
 
 **Format d’API**
 
@@ -241,7 +241,7 @@ curl -X POST \
 | Propriété | Description |
 | -------- | ----------- |
 | `baseConnectionId` | La connexion de l’API qui représente votre espace de stockage dans le cloud. |
-| `data.schema.id` | (`$id`) si le schéma xdm cible a été récupéré à l’étape précédente. |
+| `data.schema.id` | Le (`$id`) si le schéma xdm cible est récupéré à l’étape précédente. |
 | `params.path` | Chemin d’accès au fichier source. |
 
 **Réponse**
@@ -257,9 +257,9 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion sour
 
 ## Création d’une connexion de base de jeu de données
 
-Pour ingérer des données externes dans [!DNL Platform], un [!DNL Experience Platform] la connexion de base du jeu de données doit d’abord être acquise.
+Pour ingérer des données externes dans [!DNL Platform], une connexion de base de jeu de données [!DNL Experience Platform] doit d’abord être acquise.
 
-Pour créer une connexion de base de jeu de données, suivez les étapes décrites dans la section [tutoriel sur la connexion à la base de jeux de données](./create-dataset-base-connection.md).
+Pour créer une connexion de base de jeu de données, suivez les étapes décrites dans le [tutoriel sur la connexion de base de jeu de données](./create-dataset-base-connection.md).
 
 Continuez à suivre les étapes décrites dans le guide de développement jusqu’à ce que vous ayez créé une connexion de base de jeux de données. Obtenez et stockez l’identifiant unique (`$id`) et continuez à l’utiliser comme identifiant de connexion de base à l’étape suivante pour créer une connexion cible.
 
@@ -298,7 +298,7 @@ curl -X POST \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau contenant l’identifiant du jeu de données que vous venez de créer au format `"@/datasets/{DATASET_ID}"`. L’identifiant du jeu de données est une chaîne en lecture seule générée par le système et utilisée pour référencer le jeu de données dans les appels API. Stockez l’identifiant du jeu de données cible, car il est nécessaire lors des étapes suivantes pour créer une connexion cible et un flux de données.
+Une réponse réussie renvoie un tableau contenant l’identifiant du jeu de données nouvellement créé au format `"@/datasets/{DATASET_ID}"`. L’identifiant du jeu de données est une chaîne en lecture seule générée par le système et utilisée pour référencer le jeu de données dans les appels API. Stockez l’identifiant du jeu de données cible, car il est nécessaire lors des étapes suivantes pour créer une connexion cible et un flux de données.
 
 ```json
 [
@@ -411,7 +411,7 @@ curl -X POST \
 
 | Propriété | Description |
 | -------- | ----------- |
-| `sourceConnectionIds` | Identifiant de connexion source récupéré lors d’une étape précédente. |
+| `sourceConnectionIds` | L’identifiant de connexion source récupéré lors d’une étape précédente. |
 | `targetConnectionIds` | Identifiant de connexion cible récupéré lors d’une étape précédente. |
 
 **Réponse**

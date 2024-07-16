@@ -22,7 +22,7 @@ ht-degree: 33%
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
-Vous trouverez ci-dessous une liste de la documentation relative aux extensions de transfert d’événement côté serveur. Pour obtenir la liste des extensions côté client disponibles, voir [référence des extensions de balise](../client/overview.md) au lieu de .
+Vous trouverez ci-dessous une liste de la documentation relative aux extensions de transfert d’événement côté serveur. Pour obtenir la liste des extensions côté client disponibles, reportez-vous à la [référence des extensions de balise](../client/overview.md) à la place.
 
 >[!NOTE]
 >
@@ -31,7 +31,7 @@ Vous trouverez ci-dessous une liste de la documentation relative aux extensions 
 * [Connecteur Adobe Experience Platform Cloud](./cloud-connector/overview.md)
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
-* [Connecteur cloud pour les Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
+* [Connecteur cloud pour Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
 <!-- * [Cloud Connector for Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)* -->
 * [Base](./core/overview.md)
 * [API d’événement Epsilon](https://exchange.adobe.com/apps/ec/109127)*
@@ -48,5 +48,5 @@ Vous trouverez ci-dessous une liste de la documentation relative aux extensions 
 * [Snowflake](./snowflake/overview.md)
 * [[!DNL Splunk]](./splunk/overview.md)
 * [[!DNL Twitter]](./twitter/overview.md)
-* [[!DNL Tiktok] API des événements web](./tiktok/overview.md)
+* [[!DNL Tiktok] API d’événements Web](./tiktok/overview.md)
 * [[!DNL Zendesk] API d’événements](./zendesk/overview.md)

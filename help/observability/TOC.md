@@ -7,7 +7,7 @@ role: Developer
 source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
 workflow-type: tm+mt
 source-wordcount: '55'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -25,4 +25,4 @@ ht-degree: 98%
    * [Guide de l’interface utilisateur du ](./alerts/ui.md)
    * [Abonnement aux notifications d’événement I/O](./alerts/subscribe.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
-* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)

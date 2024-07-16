@@ -13,11 +13,11 @@ ht-degree: 8%
 
 L’outil Sandbox vous permet de sélectionner différents artefacts (également appelés objets) et de les exporter dans un package. Un module peut se composer d’un ou de plusieurs artefacts (tels que des jeux de données ou des schémas). Tous les artefacts inclus dans un package doivent provenir du même environnement de test.
 
-La variable `/packages` Le point de terminaison de l’API des outils d’environnement de test vous permet de gérer par programmation les modules de votre organisation, y compris de publier un module et d’importer un module dans un environnement de test.
+Le point d’entrée `/packages` de l’API des outils d’environnement de test vous permet de gérer par programmation les modules de votre organisation, y compris de publier un module et d’importer un module dans un environnement de test.
 
-## Créez un package. {#create}
+## Création d’un package {#create}
 
-Vous pouvez créer un module multi-artefact en adressant une requête de POST à la variable `/packages` point d’entrée tout en fournissant des valeurs pour le nom et le type de module de votre module.
+Vous pouvez créer un module à plusieurs artefacts en envoyant une requête de POST au point de terminaison `/packages` tout en fournissant des valeurs pour le nom et le type de module de votre module.
 
 **Format d’API**
 
@@ -57,10 +57,10 @@ curl -X POST \
 | --- | --- | --- | --- |
 | `name` | Le nom de votre package. | Chaîne | Oui |
 | `description` | Description pour fournir plus d’informations sur votre module. | Chaîne | Non |
-| `packageType` | Le type de module est **PARTIEL** pour indiquer que vous incluez des artefacts spécifiques dans un package. | Chaîne | OUI |
+| `packageType` | Le type de package est **PARTIAL** pour indiquer que vous incluez des artefacts spécifiques dans un package. | Chaîne | OUI |
 | `sourceSandbox` | Environnement de test source du package. | Chaîne | Non |
 | `expiry` | Horodatage qui définit la date d’expiration du package. La valeur par défaut est de 90 jours à compter de la date de création. Le champ d’expiration de la réponse sera l’heure UTC de l’époque. | Chaîne (format UTC Timestamp) | Non |
-| `artifacts` | Liste des artefacts à exporter dans le package. La variable `artifacts` doit être **null** ou **empty**, lorsque la variable `packageType` is `FULL`. | Tableau | Non |
+| `artifacts` | Liste des artefacts à exporter dans le package. La valeur `artifacts` doit être **null** ou **empty**, lorsque `packageType` est `FULL`. | Tableau | Non |
 
 **Réponse**
 
@@ -100,11 +100,11 @@ Une réponse réussie renvoie le module que vous venez de créer. La réponse co
 
 ## Mettre à jour un package {#update}
 
-Vous pouvez mettre à jour un module en adressant une requête de PUT à la variable `/packages` point de terminaison .
+Vous pouvez mettre à jour un package en envoyant une requête de PUT au point de terminaison `/packages`.
 
 ### Ajout d’artefacts à un module {#add-artifacts}
 
-Pour ajouter des artefacts à un module, vous devez fournir un `id` et inclure **AJOUTER** pour le `action`.
+Pour ajouter des artefacts à un package, vous devez fournir un `id` et inclure **ADD** pour le `action`.
 
 **Format d’API**
 
@@ -137,8 +137,8 @@ curl -X PUT \
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
 | `id` | Identifiant du package à mettre à jour. | Chaîne | Oui |
-| `action` | Pour ajouter des artefacts au module, la valeur d’action doit être **AJOUTER**. Cette action est prise en charge uniquement pour **PARTIEL** types de packages. | Chaîne | Oui |
-| `artifacts` | Liste des artefacts à ajouter au module. Le module ne sera pas modifié si la liste est **null** ou **empty**. Les artefacts sont dédupliqués avant d’être ajoutés au module. | Tableau | Non |
+| `action` | Pour ajouter des artefacts dans le package, la valeur de l’action doit être **ADD**. Cette action est prise en charge uniquement pour les types de packages **PARTIAL**. | Chaîne | Oui |
+| `artifacts` | Liste des artefacts à ajouter au module. Le package ne sera pas modifié si la liste est **null** ou **empty**. Les artefacts sont dédupliqués avant d’être ajoutés au module. | Tableau | Non |
 | `expiry` | Horodatage qui définit la date d’expiration du package. La valeur par défaut est de 90 jours à compter de l’appel de l’API PUT si l’expiration n’est pas spécifiée dans la payload. Le champ d’expiration de la réponse sera l’heure UTC de l’époque. | Chaîne (format UTC Timestamp) | Non |
 
 **Réponse**
@@ -183,7 +183,7 @@ Une réponse réussie renvoie votre package mis à jour. La réponse comprend l�
 
 ### Suppression d’artefacts d’un module {#delete-artifacts}
 
-Pour supprimer des artefacts d’un module, vous devez fournir un `id` et inclure **DELETE** pour le `action`.
+Pour supprimer des artefacts d’un package, vous devez fournir un `id` et inclure **DELETE** pour le `action`.
 
 
 **Format d’API**
@@ -216,8 +216,8 @@ curl -X PUT \
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
 | `id` | Identifiant du package à mettre à jour. | Chaîne | Oui |
-| `action` | Pour supprimer des artefacts d’un module, la valeur de l’action doit être **DELETE**. Cette action est prise en charge uniquement pour **PARTIEL** types de packages. | Chaîne | Oui |
-| `artifacts` | Liste des artefacts à supprimer du package. Le module ne sera pas modifié si la liste est **null** ou **empty**. | Tableau | Non |
+| `action` | Pour supprimer des artefacts d’un package, la valeur de l’action doit être **DELETE**. Cette action est prise en charge uniquement pour les types de packages **PARTIAL**. | Chaîne | Oui |
+| `artifacts` | Liste des artefacts à supprimer du package. Le package ne sera pas modifié si la liste est **null** ou **empty**. | Tableau | Non |
 
 **Réponse**
 
@@ -257,7 +257,7 @@ Une réponse réussie renvoie votre package mis à jour. La réponse comprend l�
 
 >[!NOTE]
 >
->La variable **UPDATE** est utilisée pour mettre à jour les champs de métadonnées du module et **cannot** peut être utilisé pour ajouter/supprimer des artefacts à un module.
+>L’action **UPDATE** est utilisée pour mettre à jour les champs de métadonnées du package et **ne peut pas** être utilisée pour ajouter/supprimer des artefacts à un package.
 
 Pour mettre à jour les champs de métadonnées dans un package, vous devez fournir un `id` et inclure **UPDATE** pour le `action`.
 
@@ -291,9 +291,9 @@ curl -X PUT \
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
 | `id` | Identifiant du package à mettre à jour. | Chaîne | Oui |
-| `action` | Pour mettre à jour les champs de métadonnées dans un package, la valeur d’action doit être **UPDATE**. Cette action est prise en charge uniquement pour **PARTIEL** types de packages. | Chaîne | Oui |
+| `action` | Pour mettre à jour les champs de métadonnées dans un package, la valeur de l’action doit être **UPDATE**. Cette action est prise en charge uniquement pour les types de packages **PARTIAL**. | Chaîne | Oui |
 | `name` | Nom mis à jour du module. Les noms de modules en double ne sont pas autorisés. | Tableau | Oui |
-| `sourceSandbox` | L’environnement de test source doit appartenir à la même organisation que celle spécifiée dans l’en-tête de la requête. | Chaîne | Oui |
+| `sourceSandbox` | L’environnement de test Source doit appartenir à la même organisation que celle spécifiée dans l’en-tête de la requête. | Chaîne | Oui |
 
 **Réponse**
 
@@ -331,7 +331,7 @@ Une réponse réussie renvoie votre package mis à jour. La réponse comprend l�
 
 ## Suppression d’un package {#delete}
 
-Pour supprimer un module, envoyez une requête de DELETE à la fonction `/packages` et indiquez l’identifiant du module à supprimer.
+Pour supprimer un package, envoyez une requête de DELETE au point de terminaison `/packages` et spécifiez l’identifiant du package que vous souhaitez supprimer.
 
 **Format d’API**
 
@@ -345,7 +345,7 @@ DELETE /packages/{PACKAGE_ID}
 
 **Requête**
 
-La requête suivante supprime le module avec l’identifiant de {PACKAGE_ID}.
+La requête suivante supprime le package avec l’ID {PACKAGE_ID}.
 
 ```shell
 curl -X DELETE \
@@ -365,9 +365,9 @@ Une réponse réussie renvoie une raison qui indique que l’ID de module a ét�
 }
 ```
 
-## Publier un package {#publish}
+## Publish d’un package {#publish}
 
-Pour permettre l’importation d’un package dans un environnement de test, vous devez le publier. Envoyez une requête de GET à la fonction `/packages` point d’entrée lors de la spécification de l’identifiant du module que vous souhaitez publier.
+Pour permettre l’importation d’un package dans un environnement de test, vous devez le publier. Effectuez une requête de GET au point de terminaison `/packages` tout en spécifiant l’identifiant du module que vous souhaitez publier.
 
 **Format d’API**
 
@@ -381,7 +381,7 @@ GET /packages/{PACKAGE_ID}/export
 
 **Requête**
 
-La requête suivante publie le module avec l’identifiant de {PACKAGE_ID}.
+La requête suivante publie le package avec l’ID {PACKAGE_ID}.
 
 ```shell
 curl -X GET \
@@ -416,7 +416,7 @@ Une réponse réussie renvoie le module publié.
 
 ## Recherche d’un module {#look-up-package}
 
-Vous pouvez rechercher un module individuel en adressant une requête de GET à la fonction `/packages` point de terminaison qui inclut l’identifiant correspondant du package dans le chemin d’accès de la requête.
+Vous pouvez rechercher un package individuel en envoyant une requête GET au point de terminaison `/packages` qui inclut l’identifiant correspondant du package dans le chemin d’accès de la requête.
 
 **Format d’API**
 
@@ -483,7 +483,7 @@ Une réponse réussie renvoie les détails de l’ID de module interrogé. La r�
 
 ## Lister des packages {#list-packages}
 
-Vous pouvez répertorier tous les modules de votre organisation en adressant une requête GET à la fonction `/packages` point de terminaison .
+Vous pouvez répertorier tous les modules de votre organisation en envoyant une requête GET au point de terminaison `/packages`.
 
 **Format d’API**
 
@@ -493,11 +493,11 @@ GET /packages/?{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --- | --- |
-| {QUERY_PARAMS} | Paramètres de requête facultatifs pour filtrer les résultats. Voir la section sur [paramètres de requête](./appendix.md) pour plus d’informations. |
+| {QUERY_PARAMS} | Paramètres de requête facultatifs pour filtrer les résultats. Pour plus d’informations, consultez la section sur les [paramètres de requête](./appendix.md) . |
 
 **Requête**
 
-La requête suivante récupère les informations des modules en fonction de la variable {QUERY_PARAMS}.
+La requête suivante récupère les informations des modules en fonction de {QUERY_PARAMS}.
 
 ```shell
 curl -X GET \
@@ -615,7 +615,7 @@ curl -X GET \
 
 **Réponse**
 
-Les conflits sont renvoyés dans la réponse. La réponse affiche le package d’origine plus le `alternatives` fragment sous la forme d’un tableau trié par classement.
+Les conflits sont renvoyés dans la réponse. La réponse affiche le package d’origine plus le fragment `alternatives` sous la forme d’un tableau trié par classement.
 
 Affichage de la réponse+++
 
@@ -735,7 +735,7 @@ Affichage de la réponse+++
 >
 >La résolution des conflits implique que l’artefact alternatif existe déjà dans l’environnement de test cible.
 
-Vous pouvez envoyer un import pour un package une fois que vous avez examiné les conflits et fourni des substitutions en envoyant une requête de POST à la variable `/packages` point de terminaison . Le résultat est fourni sous la forme d’un payload, qui lance la tâche d’importation pour l’environnement de test de destination, comme indiqué dans le payload.
+Vous pouvez soumettre un import pour un package une fois que vous avez examiné les conflits et fourni des substitutions en effectuant une requête de POST sur le point de terminaison `/packages`. Le résultat est fourni sous la forme d’un payload, qui lance la tâche d’importation pour l’environnement de test de destination, comme indiqué dans le payload.
 
 La charge utile accepte également le nom et la description de la tâche d’importation spécifiés par l’utilisateur. Si le nom et la description spécifiés par l’utilisateur ne sont pas disponibles, le nom et la description du module sont utilisés pour le nom et la description de la tâche.
 
@@ -747,7 +747,7 @@ POST /packages/import
 
 **Requête**
 
-La requête suivante récupère les packages à importer. La payload est une carte des substitutions où, si une entrée existe, la clé est la `artifactId` fourni par le package et l’alternative est la valeur . Si la carte ou la charge utile est **empty**, aucune substitution n’est effectuée.
+La requête suivante récupère les packages à importer. La payload est une carte de substitutions où, si une entrée existe, la clé est le `artifactId` fourni par le package et l’alternative est la valeur. Si la carte ou la charge utile est **vide**, aucune substitution n’est effectuée.
 
 ```shell
 curl -X POST \
@@ -801,7 +801,7 @@ curl -X POST \
 
 ## Liste de tous les objets dépendants {#dependent-objects}
 
-Répertorier tous les objets dépendants pour les objets exportés dans un package en envoyant une requête de POST à la fonction `/packages` point d’entrée lors de la spécification de l’identifiant du module.
+Répertorier tous les objets dépendants pour les objets exportés dans un package en effectuant une requête de POST sur le point de terminaison `/packages` tout en spécifiant l’identifiant du package.
 
 **Format d’API**
 
@@ -815,7 +815,7 @@ POST /packages/{PACKAGE_ID}/children
 
 **Requête**
 
-La requête suivante répertorie tous les objets dépendants pour la variable {PACKAGE_ID}.
+La requête suivante répertorie tous les objets dépendants pour le {PACKAGE_ID}.
 
 ```shell
 curl -X POST \
@@ -880,7 +880,7 @@ Une réponse réussie renvoie une liste d’enfants pour les objets.
 
 ## Vérification des autorisations basées sur les rôles pour importer tous les artefacts de package {#role-based-permissions}
 
-Vous pouvez vérifier si vous êtes autorisé à importer des artefacts de package en adressant une requête GET à la variable `/packages` point d’entrée lors de la spécification de l’identifiant du package et du nom de l’environnement de test cible.
+Vous pouvez vérifier si vous disposez des autorisations nécessaires pour importer des artefacts de package en envoyant une requête GET au point de terminaison `/packages` tout en spécifiant l’identifiant du package et le nom de l’environnement de test cible.
 
 **Format d’API**
 
@@ -894,7 +894,7 @@ GET /packages/preflight/{packageId}?targetSandbox=<sandbox_name
 
 **Requête**
 
-La requête suivante vérifie vos autorisations pour la variable {PACKAGE_ID} et sandbox.
+La requête suivante vérifie vos autorisations pour {PACKAGE_ID} et l’environnement de test.
 
 ```shell
 curl -X GET \
@@ -1028,7 +1028,7 @@ Affichage de la réponse+++
 
 ## Liste des traitements d&#39;export/d&#39;import {#list-jobs}
 
-Vous pouvez répertorier les traitements d’exportation/d’importation en cours en adressant une demande de GET à la fonction `/packages` point de terminaison .
+Vous pouvez répertorier les tâches d’exportation/d’importation actuelles en effectuant une requête de GET sur le point de terminaison `/packages`.
 
 **Format d’API**
 
@@ -1038,7 +1038,7 @@ GET /packages/jobs?{QUERY_PARAMS}
 
 | Paramètre | Description |
 | --- | --- |
-| {QUERY_PARAMS} | Paramètres de requête facultatifs pour filtrer les résultats. Voir la section sur [paramètres de requête](./appendix.md) pour plus d’informations. |
+| {QUERY_PARAMS} | Paramètres de requête facultatifs pour filtrer les résultats. Pour plus d’informations, consultez la section sur les [paramètres de requête](./appendix.md) . |
 
 **Requête**
 

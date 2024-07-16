@@ -11,21 +11,21 @@ ht-degree: 3%
 
 ---
 
-# [!UICONTROL Interaction avec le point ciblé] type de données
+# Type de données [!UICONTROL Interaction avec le point ciblé]
 
-[!UICONTROL Interaction avec le point ciblé] est un type de données XDM standard qui décrit l’appareil sans fil qui communique des informations d’identité aux applications mobiles à mesure que les appareils mobiles sont en portée.
+[!UICONTROL Interaction avec un point ciblé] est un type de données XDM standard qui décrit le périphérique sans fil qui communique des informations d’identité aux applications mobiles à mesure que les périphériques mobiles sont en portée.
 
 <img src="../images/data-types/poi-interaction.png" width="400" /><br />
 
 | Propriété | Type de données | Description |
 | --- | --- | --- |
-| `poiDetail` | [[!UICONTROL Détails des points ciblés]](./poi-details.md) | Décrit les détails du point ciblé qui a provoqué l’événement. |
-| `poiEntries` | Objet | Décrit le nombre de fois où une personne est entrée dans le point ciblé. Contient deux propriétés : <ul><li>`id`: identifiant unique de la mesure.</li><li>`value`: valeur quantifiable de la mesure.</li></ul> |
-| `poiExits` | Objet | Décrit le nombre de fois où une personne a quitté le point ciblé. Contient deux propriétés : <ul><li>`id`: identifiant unique de la mesure.</li><li>`value`: valeur quantifiable de la mesure.</li></ul> |
+| `poiDetail` | [[!UICONTROL Détails du point ciblé]](./poi-details.md) | Décrit les détails du point ciblé qui a provoqué l’événement. |
+| `poiEntries` | Objet | Décrit le nombre de fois où une personne est entrée dans le point ciblé. Contient deux propriétés : <ul><li>`id` : identifiant unique de la mesure.</li><li>`value` : valeur quantifiable de la mesure.</li></ul> |
+| `poiExits` | Objet | Décrit le nombre de fois où une personne a quitté le point ciblé. Contient deux propriétés : <ul><li>`id` : identifiant unique de la mesure.</li><li>`value` : valeur quantifiable de la mesure.</li></ul> |
 
 {style="table-layout:auto"}
 
 Pour plus d’informations sur le type de données, reportez-vous au référentiel XDM public :
 
-* [Exemple rempli](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/poi-interaction.example.1.json)
+* [Exemple renseigné](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/poi-interaction.example.1.json)
 * [Schéma complet](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/poi-interaction.schema.json)

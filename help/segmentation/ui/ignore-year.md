@@ -19,7 +19,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
->Vous pouvez uniquement utiliser la contrainte temporelle &quot;ignorer l’année&quot; dans une définition de segment évaluée à l’aide de **segmentation par lots**. L’ajout de la contrainte temporelle &quot;ignorer l’année&quot; à votre définition de segment rendra l’audience résultante **inéligible** pour la segmentation par flux ou par périphérie.
+>Vous pouvez uniquement utiliser la contrainte temporelle &quot;ignorer l’année&quot; dans une définition de segment évaluée à l’aide de la **segmentation par lots**. L’ajout de la contrainte temporelle &quot;ignorer l’année&quot; à votre définition de segment rendra l’audience résultante **inéligible** pour la segmentation par flux ou en périphérie.
 
 La version de février 2024 pour Adobe Experience Platform a introduit des modifications dans le service de segmentation Adobe Experience Platform, qui résout un problème lié à l’option &quot;ignorer l’année&quot; dans la création et l’évaluation d’audiences.
 

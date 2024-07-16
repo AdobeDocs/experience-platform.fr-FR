@@ -5,13 +5,13 @@ exl-id: 5df99f9a-b36a-4c2b-a4a4-d3cf054f09b8
 source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
 workflow-type: tm+mt
 source-wordcount: '123'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
 # [!UICONTROL Détails de l’application] groupe de champs de schéma
 
-[!UICONTROL Détails de l’application] est un groupe de champs de schéma standard pour la variable [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Le groupe de champs fournit une `application` vers un schéma, qui capture les détails liés à l’application tels que les blocages, l’utilisation des fonctionnalités, les lancements et les mises à niveau.
+[!UICONTROL Détails de l’application] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Le groupe de champs fournit un seul objet `application` à un schéma, qui capture les détails liés à l’application tels que les blocages, l’utilisation des fonctionnalités, les lancements et les mises à niveau.
 
 ![](../../images/field-groups/application-details.png)
 

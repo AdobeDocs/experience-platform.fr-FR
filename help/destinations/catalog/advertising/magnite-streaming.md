@@ -16,22 +16,22 @@ ht-degree: 32%
 
 ## Vue d’ensemble {#overview}
 
-La variable [!DNL Magnite Streaming: Real-Time] et la diffusion en continu Magnite : les destinations par lots dans Adobe Experience Platform vous aident à mapper et exporter des audiences pour le ciblage et l’activation sur la plateforme de diffusion en continu Magnite.
+[!DNL Magnite Streaming: Real-Time] et les destinations de diffusion en continu Magnite : les destinations par lots dans Adobe Experience Platform vous aident à mapper et à exporter des audiences pour le ciblage et l’activation sur la plateforme de diffusion en continu Magnite.
 
-Activation des audiences vers le [!DNL Magnite Streaming] platform est un processus en deux étapes qui nécessite l’utilisation de la diffusion en continu Magnite : en temps réel et de la diffusion en continu Magnite : destinations par lot.
+L’activation des audiences vers la plateforme [!DNL Magnite Streaming] est un processus en deux étapes qui nécessite l’utilisation de la diffusion en continu Magnite : en temps réel et de la diffusion en continu Magnite : destinations par lot.
 
 Pour activer vos audiences vers [!DNL Magnite Streaming], vous devez :
 
-* Activez les audiences sur la page [!DNL Magnite Streaming: Real-Time] destination, comme indiqué dans cette page.
-* Activez la même audience sur Magnite Streaming: Batch destination. La variable [!DNL Magnite Streaming: Batch] destination est un composant obligatoire. Échec de l’activation de l’audience sur le [!DNL Magnite Streaming] La destination du lot entraînera un échec de l’intégration et vos audiences ne seront pas activées.
+* Activez les audiences sur la destination [!DNL Magnite Streaming: Real-Time], comme illustré dans cette page.
+* Activez la même audience sur Magnite Streaming: Batch destination. La destination [!DNL Magnite Streaming: Batch] est un composant obligatoire. Si vous n’activez pas l’audience sur la destination [!DNL Magnite Streaming] par lot, l’intégration échouera et vos audiences ne seront pas activées.
 
-Remarque : Lors de l’utilisation de la destination en temps réel, [!DNL Magnite: Streaming] recevra des audiences en temps réel, mais nous ne pouvons stocker que temporairement les audiences en temps réel sur notre plateforme, et elles seront supprimées de notre système dans les quelques jours. Pour cette raison, si vous souhaitez utiliser la destination Magnite : Diffusion en temps réel, vous allez *également* Vous devez utiliser la fonction Diffusion en continu Magnite : destination par lot : chaque audience que vous activez vers la destination en temps réel. Vous devez également l’activer vers la destination par lot.
+Remarque : Lors de l’utilisation de la destination en temps réel, [!DNL Magnite: Streaming] recevra des audiences en temps réel, mais nous ne pouvons stocker les audiences en temps réel que temporairement dans notre plateforme. Elles seront supprimées de notre système dans les quelques jours qui suivent. Pour cette raison, si vous souhaitez utiliser la destination Magnite : Diffusion en temps réel, vous devrez *également* utiliser la destination Diffusion en continu Magnite : par lot - chaque audience que vous activez vers la destination Temps réel, vous devrez également l’activer vers la destination Lot.
 
 >[!IMPORTANT]
 >
 >Ce connecteur de destination est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès, contactez votre représentant Adobe.
 >
->La page de documentation et le connecteur de destination sont créés et conservés par la fonction [!DNL Magnite] l&#39;équipe. Pour toute demande d’information ou de mise à jour, contactez-les directement à l’adresse `adobe-tech@magnite.com`.
+>Le connecteur de destination et la page de documentation sont créés et gérés par l’équipe [!DNL Magnite]. Pour toute question ou demande de mise à jour, contactez-les directement à l’adresse `adobe-tech@magnite.com`.
 
 ## Cas d’utilisation {#use-cases}
 
@@ -43,12 +43,12 @@ Cette intégration à Magnite permet aux clients de transmettre leurs audiences 
 
 ## Conditions préalables {#prerequisites}
 
-Pour utiliser la variable [!DNL Magnite] destinations dans Adobe Experience Platform, vous devez d’abord avoir une [!DNL Magnite Streaming] compte . Si vous avez une [!DNL Magnite Streaming] compte, contactez votre [!DNL Magnite] gestionnaire de compte à fournir pour l’accès [!DNL Magnite's] destinations.
-Si vous n’avez pas de [!DNL Magnite Streaming] compte, contactez adobe-tech@magnite.com
+Pour utiliser les destinations [!DNL Magnite] dans Adobe Experience Platform, vous devez d’abord disposer d’un compte [!DNL Magnite Streaming]. Si vous disposez d’un compte [!DNL Magnite Streaming], contactez votre gestionnaire de compte [!DNL Magnite] pour qu’il vous fournisse les informations d’identification lui permettant d’accéder aux destinations [!DNL Magnite's].
+Si vous ne disposez pas d’un compte [!DNL Magnite Streaming], contactez adobe-tech@magnite.com
 
 ## Identités prises en charge {#supported-identities}
 
-La variable [!DNL Magnite Streaming: Real-Time] destination prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
+La destination [!DNL Magnite Streaming: Real-Time] prend en charge l’activation des identités décrites dans le tableau ci-dessous. En savoir plus sur les [identités](/help/identity-service/features/namespaces.md).
 
 | Identité cible | Description | Considérations |
 |-------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
@@ -82,7 +82,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Pour vous connecter à la destination, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]** et **[!UICONTROL Gestion des destinations]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+>Pour vous connecter à la destination, vous avez besoin de l’**[!UICONTROL affichage des destinations]** et de l’**[!UICONTROL gestion des destinations]** [ autorisation de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous connecter à cette destination, procédez comme décrit dans le [tutoriel sur la configuration des destinations](../../ui/connect-destination.md). Dans le workflow de configuration des destinations, renseignez les champs répertoriés dans les deux sections ci-dessous.
 
@@ -90,10 +90,10 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 
 Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
-![Champs d’authentification de la configuration de destination vides](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-unfilled.png)
+![Champs d’authentification de configuration de destination vides](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-unfilled.png)
 
-* **[!UICONTROL Nom d’utilisateur]**: nom d’utilisateur fourni par [!DNL Magnite].
-* **[!UICONTROL Password]**: mot de passe fourni par [!DNL Magnite].
+* **[!UICONTROL Nom d’utilisateur]** : nom d’utilisateur qui vous a été fourni par [!DNL Magnite].
+* **[!UICONTROL Mot de passe]** : mot de passe fourni par [!DNL Magnite].
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -101,13 +101,13 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Nom de votre partenaire source]**: nom de votre client/société. Prise en charge uniquement [!DNL Magnite Streaming] Les clients peuvent être sélectionnés.
+* **[!UICONTROL Nom de votre partenaire source]** : nom de votre client/société. Seuls les clients [!DNL Magnite Streaming] pris en charge peuvent être sélectionnés.
 
-![Champs d’authentification de la configuration de destination renseignés](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
+![Champs d’authentification de configuration de destination renseignés](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 
-Une fois que vous avez terminé, sélectionnez la variable **[!UICONTROL Créer]** bouton .
+Une fois que vous avez terminé, cliquez sur le bouton **[!UICONTROL Créer]** .
 
-![Stratégies de gouvernance facultatives et actions d’application](../../assets/catalog/advertising/magnite/destination-realtime-config-grouping-policy.png)
+![Stratégie de gouvernance et actions d’application facultatives](../../assets/catalog/advertising/magnite/destination-realtime-config-grouping-policy.png)
 
 ### Activer les alertes {#enable-alerts}
 
@@ -119,8 +119,8 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!IMPORTANT]
 >
->* Pour activer les données, vous avez besoin de l’événement **[!UICONTROL Affichage des destinations]**, **[!UICONTROL Activation des destinations]**, **[!UICONTROL Afficher les profils]**, et **[!UICONTROL Affichage de segments]** [autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
->* Pour exporter *identités*, vous avez besoin de la fonction **[!UICONTROL Affichage du graphique des identités]** [autorisation de contrôle d’accès](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
+>* Pour activer les données, vous avez besoin des **** destinations d’affichage, **[!UICONTROL activer les destinations]**, **** profils d’affichage et **** [  autorisations de contrôle d’accès](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur ou administratrice du produit pour obtenir les autorisations requises.
+>* Pour exporter des *identités*, vous avez besoin de l&#39;autorisation **[!UICONTROL Afficher le graphique d&#39;identités]** [ ](/help/access-control/home.md#permissions). <br> ![Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations.](/help/destinations/assets/overview/export-identities-to-destination.png "Sélectionnez l’espace de noms d’identité en surbrillance dans le workflow pour activer les audiences vers les destinations."){width="100" zoomable="yes"}
 
 Consultez [Activer les profils et les segments vers les destinations d’exportation de segments de diffusion en continu](/help/destinations/ui/activate-segment-streaming-destinations.md) pour obtenir des instructions sur l’activation des segments d’audience vers cette destination.
 
@@ -134,23 +134,23 @@ L’étape suivante consiste à mapper les identifiants de source à l’identif
 
 Cet exemple utilisant la destination en temps réel affiche une ligne qui contient un identifiant source deviceId générique mappé sur le champ cible Magnite device_id . Lorsque vous utilisez les mappages, sélectionnez [!UICONTROL Suivant].
 
-![Mappage des champs de données de votre choix au champ device_ID](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
+![ Mappez les champs de données de votre choix avec le champ device_ID](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
 
 Veillez à définir les identifiants de mappage sur toutes les audiences activées ou à définir AUCUN si aucun identifiant de mappage n’est présent.
 
-![Veillez à définir les identifiants de mappage sur toutes les audiences activées ou à définir AUCUN si aucun identifiant de mappage n’est présent.](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-mappingid.png)
+![Veillez à définir les identifiants de mappage sur toutes les audiences activées, ou à définir AUCUN si aucun identifiant de mappage n&#39;est présent](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-mappingid.png)
 
 Vous devez maintenant configurer une date de début (obligatoire), une date de fin (facultatif) et un identifiant de mappage pour chaque audience.
 
 **Identifiant de mappage**
 
-* Utilisez la variable **[!UICONTROL ID de mappage]** lorsqu’une audience possède un identifiant de segment préexistant précédemment connu de Magnite.
+* Utilisez le champ **[!UICONTROL ID de mappage]** lorsqu’une audience a un identifiant de segment préexistant précédemment connu de Magnite.
 
-* Pour ajouter une **[!UICONTROL ID de mappage]** pour une audience, sélectionnez unitairement chaque ligne d’audience et saisissez les données dans la colonne de droite (voir l’image ci-dessus). Si vous ne souhaitez pas ajouter d’ID de mappage, saisissez NONE dans le champ ID de mappage .
+* Pour ajouter un **[!UICONTROL ID de mappage]** à une audience, sélectionnez chaque ligne d’audience individuellement, puis saisissez les données dans la colonne de droite (voir l’image ci-dessus). Si vous ne souhaitez pas ajouter d’ID de mappage, saisissez NONE dans le champ ID de mappage .
 
-Sélectionner **[!UICONTROL Suivant]** et finalisez le flux d’activation.
+Sélectionnez **[!UICONTROL Suivant]** et finalisez le flux d’activation.
 
-![Sélectionnez suivant et finalisez le flux d’activation.](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-review.png)
+![Sélectionnez le flux d’activation suivant et finalisez-le.](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-review.png)
 
 ## Données exportées / Valider l’exportation des données {#exported-data}
 
@@ -162,11 +162,11 @@ Une fois les audiences chargées, vous pouvez vérifier que les audiences ont é
 
 -->
 
-* Post-ingest , les audiences doivent apparaître dans [!DNL Magnite Streaming] en quelques minutes et peut être appliqué à une transaction. Vous pouvez le confirmer en recherchant l’identifiant du segment qui a été partagé lors des étapes d’activation dans Adobe Experience Platform.
+* Post-ingest , les audiences doivent apparaître dans [!DNL Magnite Streaming] dans les quelques minutes et peuvent être appliquées à une transaction. Vous pouvez le confirmer en recherchant l’identifiant du segment qui a été partagé lors des étapes d’activation dans Adobe Experience Platform.
 
-## Activez les mêmes audiences à l’aide du [!DNL Magnite Streaming: Batch]destination
+## Activez les mêmes audiences via la destination [!DNL Magnite Streaming: Batch]
 
-Audiences partagées avec [!DNL Magnite Streaming] L’utilisation de la destination en temps réel doit également être partagée à l’aide de la destination de diffusion en continu Magnite : lot . Lorsqu’ils sont correctement configurés, les noms de segment dans la variable [!DNL Magnite Streaming] L’interface utilisateur est mise à jour pour prendre en compte celles utilisées dans la mise à jour post-quotidienne de Adobe Experience Platform.
+Les audiences partagées avec [!DNL Magnite Streaming] à l’aide de la destination Temps réel devront également être partagées à l’aide de la destination Diffusion en continu Magnite : lot . Lorsqu’ils sont correctement configurés, les noms de segment dans l’interface utilisateur de [!DNL Magnite Streaming] sont mis à jour pour prendre en compte ceux utilisés dans la mise à jour post-quotidienne de Adobe Experience Platform.
 
 Enfin, si une destination de lot n’a pas été configurée pour votre intégration, configurez-la maintenant via le document Diffusion en continu Magnite : destination de lot .
 
@@ -176,4 +176,4 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-Pour accéder à une documentation d’aide supplémentaire, consultez la page [Centre d’aide Magnite](https://help.magnite.com/help).
+Pour obtenir une aide supplémentaire, consultez le [Centre d’aide Magnite](https://help.magnite.com/help).

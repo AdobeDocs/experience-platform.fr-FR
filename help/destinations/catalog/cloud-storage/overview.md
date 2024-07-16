@@ -5,8 +5,8 @@ description: Adobe Experience Platform peut fournir vos audiences sous forme de 
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
 source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
 workflow-type: tm+mt
-source-wordcount: '384'
-ht-degree: 49%
+source-wordcount: '387'
+ht-degree: 50%
 
 ---
 
@@ -26,7 +26,7 @@ Adobe Experience Platform prend en charge les exportations de données vers les 
 * [Connexion Amazon S3](amazon-s3.md)
 * [Connexion Azure Blob](azure-blob.md)
 * [Azure Data Lake Storage Gen2](adls-gen2.md)
-* [Azure Event Hubs Connexion](azure-event-hubs.md)
+* [Connexion Azure Event Hubs](azure-event-hubs.md)
 * [Zone d’atterrissage des données](data-landing-zone.md)
 * [Google Cloud Storage](google-cloud-storage.md)
 * [Connexion SFTP](sftp.md)
@@ -46,7 +46,7 @@ Pour créer un dossier personnalisé par fichier d’audience à l’emplacement
 
 ![Utiliser des macros pour créer un dossier dans votre espace de stockage](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)
 
-Les exemples ci-dessous référencent un exemple d’audience `Luxury Audience` avec ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
+Les exemples ci-dessous font référence à un exemple d’audience `Luxury Audience` avec l’ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
 
 **Macro 1 :`%SEGMENT_NAME%`**
 
@@ -66,9 +66,9 @@ Chemin du dossier dans votre emplacement de stockage : `acme/campaigns/2021/Lux
 ## Type d’exportation de données {#export-type}
 
 Les destinations de stockage dans le cloud prennent en charge les types d’exportation suivants :
-* **Exportation basée sur les profils**. Cela signifie que vous exportez des détails sur les individus dans l’audience. Ces détails sont nécessaires à la personnalisation et peuvent inclure des attributs, des événements, des appartenances à l’audience, etc.
-* **Exportation des jeux de données**. Cette fonctionnalité vous permet d’exporter des jeux de données entiers vers des destinations de stockage dans le cloud. [En savoir plus](/help/destinations/ui/export-datasets.md) à propos de la fonctionnalité.
+* **Exportation basée sur un profil**. Cela signifie que vous exportez des détails sur les individus dans l’audience. Ces détails sont nécessaires à la personnalisation et peuvent inclure des attributs, des événements, des appartenances à l’audience, etc.
+* **Exportation du jeu de données**. Cette fonctionnalité vous permet d’exporter des jeux de données entiers vers des destinations de stockage dans le cloud. [En savoir plus](/help/destinations/ui/export-datasets.md) sur la fonctionnalité.
 
 ## Étapes suivantes {#next-steps}
 
-Après avoir sélectionné l’une des options [destinations cloud prises en charge](#supported-destinations) Si vous souhaitez utiliser, lisez le [tutoriel sur la connexion aux destinations](/help/destinations/ui/connect-destination.md) pour savoir comment établir une connexion à la destination. Lisez ensuite le tutoriel sur l’activation pour les destinations basées sur des fichiers afin d’apprendre à démarrer. [export](/help/destinations/ui/activate-batch-profile-destinations.md) données vers votre destination de stockage dans le cloud.
+Après avoir sélectionné l’une des [ destinations de cloud prises en charge](#supported-destinations) que vous souhaitez utiliser, lisez le [tutoriel de connexion aux destinations](/help/destinations/ui/connect-destination.md) pour apprendre à établir une connexion à la destination. Lisez ensuite le tutoriel sur l’activation des destinations basées sur des fichiers pour savoir comment commencer à [exporter](/help/destinations/ui/activate-batch-profile-destinations.md) des données vers votre destination de stockage dans le cloud.

@@ -3,7 +3,7 @@ title: Notes de mise à jour de l’extension Adobe Analytics
 description: Dernières notes de mise à jour pour lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 source-git-commit: fbb8e2e7944fc6ef5be6fb0c6dc0ef256ca65b77
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1438'
 ht-degree: 100%
 

@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: Fonctions arithmétiques PAL
-description: Les fonctions arithmétiques sont utilisées pour effectuer des calculs de base sur des valeurs dans le langage de requête de profil (PQL).
+description: Les fonctions arithmétiques sont utilisées pour effectuer des calculs de base sur les valeurs dans Profile Query Language (PQL).
 exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
 source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
 workflow-type: tm+mt
 source-wordcount: '243'
-ht-degree: 93%
+ht-degree: 82%
 
 ---
 
 # Fonctions arithmétiques
 
-Les fonctions arithmétiques sont utilisées pour effectuer des calculs de base sur des valeurs dans [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la section [[!DNL Profile Query Language] aperçu](./overview.md).
+Les fonctions arithmétiques sont utilisées pour effectuer des calculs de base sur les valeurs dans [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
 
 ## Addition
 

@@ -5,41 +5,41 @@ badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
 source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
 workflow-type: tm+mt
-source-wordcount: '499'
-ht-degree: 19%
+source-wordcount: '486'
+ht-degree: 14%
 
 ---
 
-# [!DNL Amazon Kinesis] source
+# Source [!DNL Amazon Kinesis]
 
 >[!IMPORTANT]
 >
->La variable [!DNL Amazon Kinesis] source est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-time Customer Data Platform Ultimate.
+>La source [!DNL Amazon Kinesis] est disponible dans le catalogue des sources pour les utilisateurs qui ont acheté Real-Time Customer Data Platform Ultimate.
 
-Adobe Experience Platform fournit une connectivité native pour les fournisseurs cloud tels qu’AWS, [!DNL Google Cloud Platform], et [!DNL Azure]. Vous pouvez importer vos données de ces systèmes dans [!DNL Platform].
+Adobe Experience Platform fournit une connectivité native pour les fournisseurs cloud tels qu’AWS, [!DNL Google Cloud Platform] et [!DNL Azure]. Vous pouvez importer vos données de ces systèmes dans [!DNL Platform].
 
-Les sources de stockage dans le cloud peuvent introduire vos propres données dans [!DNL Platform] sans avoir à les télécharger, les formater ou les transférer. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. [!DNL Platform] vous permet d’importer des données depuis [!DNL Amazon Kinesis] en temps réel.
+Les sources de stockage dans le cloud peuvent introduire vos propres données dans [!DNL Platform] sans avoir à les télécharger, les formater ou les transférer. Les données ingérées peuvent être formatées sous la forme XDM JSON, XDM Parquet ou délimitées. Chaque étape du processus est intégrée dans le processus Sources. [!DNL Platform] vous permet d’importer des données de [!DNL Amazon Kinesis] en temps réel.
 
 >[!NOTE]
 >
->Le facteur d’échelle pour [!DNL Kinesis] doit être augmenté si vous devez ingérer des données à volume élevé. Actuellement, volume maximum de données que vous pouvez importer de votre [!DNL Kinesis] compte à Platform est de 4 000 enregistrements par seconde. Pour augmenter et ingérer des données à volume supérieur, contactez votre représentant Adobe.
+>Le facteur d’échelle de [!DNL Kinesis] doit être augmenté si vous devez ingérer des données à volume élevé. Actuellement, le volume maximal de données que vous pouvez importer de votre compte [!DNL Kinesis] vers Platform est de 4 000 enregistrements par seconde. Pour augmenter et ingérer des données à volume supérieur, contactez votre représentant Adobe.
 
 ## Conditions préalables
 
-La section suivante fournit des informations supplémentaires sur la configuration de prérequis requise avant de pouvoir créer une [!DNL Kinesis] connexion source.
+La section suivante fournit des informations supplémentaires sur la configuration de prérequis requise pour pouvoir créer une connexion source [!DNL Kinesis].
 
 ### Configuration de la stratégie d’accès
 
-A [!DNL Kinesis] Le flux nécessite les autorisations suivantes pour créer une connexion source :
+Un flux [!DNL Kinesis] nécessite les autorisations suivantes pour créer une connexion source :
 
 - `GetShardIterator`
 - `GetRecords`
 - `DescribeStream`
 - `ListStreams`
 
-Ces autorisations sont organisées à l’aide de la fonction [!DNL Kinesis] et sont vérifiées par Platform une fois que vous avez saisi vos informations d’identification et sélectionné votre flux de données.
+Ces autorisations sont organisées via la console [!DNL Kinesis] et sont vérifiées par Platform une fois que vous avez saisi vos informations d’identification et sélectionné votre flux de données.
 
-L’exemple ci-dessous illustre les droits d’accès minimaux requis pour créer une [!DNL Kinesis] connexion source.
+L’exemple ci-dessous illustre les droits d’accès minimaux requis pour créer une connexion source [!DNL Kinesis].
 
 ```json
 {
@@ -68,11 +68,11 @@ L’exemple ci-dessous illustre les droits d’accès minimaux requis pour crée
 | `kinesis:DescribeStream` | Action qui renvoie des informations concernant le flux, y compris la carte partagée, nécessaire pour générer un identifiant partagé. |
 | `kinesis:ListStreams` | Action requise pour répertorier les flux disponibles que vous pouvez sélectionner dans l’interface utilisateur. |
 
-Pour plus d’informations sur le contrôle de l’accès à [!DNL Kinesis] flux de données, voir ce qui suit [[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
+Pour plus d’informations sur le contrôle de l’accès pour les flux de données [!DNL Kinesis], consultez le [[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html) suivant.
 
 ### Configuration du type d’itérateur
 
-[!DNL Kinesis] prend en charge les types d’itérateur suivants pour vous permettre de spécifier l’ordre de lecture de vos données :
+[!DNL Kinesis] prend en charge les types d’itérateurs suivants pour vous permettre de spécifier l’ordre de lecture de vos données :
 
 | Type d’itérateur | Description |
 | ------------- | ----------- |
@@ -82,13 +82,13 @@ Pour plus d’informations sur le contrôle de l’accès à [!DNL Kinesis] flux
 | `TRIM_HORIZON` | Les données sont lues à partir de l’enregistrement de données le plus ancien. |
 | `LATEST` | Les données sont lues à partir de l’enregistrement de données le plus récent. |
 
-A [!DNL Kinesis] La source de l’interface utilisateur ne prend actuellement en charge que `TRIM_HORIZON`, tandis que l’API prend en charge les deux `TRIM_HORIZON` et `LATEST` comme modes d’obtention des données. La valeur d’itérateur par défaut utilisée par Platform pour la variable [!DNL Kinesis] la source est `TRIM_HORIZON`.
+Actuellement, une source d’interface utilisateur [!DNL Kinesis] prend uniquement en charge `TRIM_HORIZON`, tandis que l’API prend en charge `TRIM_HORIZON` et `LATEST` comme modes d’obtention de données. La valeur d’itérateur par défaut utilisée par Platform pour la source [!DNL Kinesis] est `TRIM_HORIZON`.
 
-Pour plus d’informations sur les types d’itérateur, voir : [[!DNL Kinesis] document](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
+Pour plus d’informations sur les types d’itérateurs, consultez le [[!DNL Kinesis] document](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax) suivant.
 
-## Connexion [!DNL Amazon Kinesis] to [!DNL Platform]
+## Connectez [!DNL Amazon Kinesis] à [!DNL Platform]
 
-La documentation ci-dessous fournit des informations sur la connexion d’[!DNL Amazon Kinesis] à à l’aide d’API ou de l’interface utilisateur :[!DNL Platform]
+La documentation ci-dessous fournit des informations sur la connexion de [!DNL Amazon Kinesis] à [!DNL Platform] à l’aide des API ou de l’interface utilisateur :
 
 ### Utiliser les API
 

@@ -9,9 +9,9 @@ ht-degree: 5%
 
 ---
 
-# [!UICONTROL Recherche de site d’assistance] groupe de champs de schéma
+# [!UICONTROL Prise en charge de la recherche de site] groupe de champs de schéma
 
-[!UICONTROL Recherche de site d’assistance] est un groupe de champs de schéma standard pour la variable [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md). Il fournit une `siteKnowledge.supportSiteSearch` vers un schéma qui capture les informations sur une recherche de site d’assistance.
+[!UICONTROL Support Site Search] est un groupe de champs de schéma standard pour la [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Il fournit un seul objet `siteKnowledge.supportSiteSearch` à un schéma qui capture les informations sur une recherche de site d’assistance.
 
 ![](../../images/field-groups/support-site-search.png)
 

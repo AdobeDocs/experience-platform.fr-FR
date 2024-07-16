@@ -5,21 +5,21 @@ keywords: debugger;extension experience platform debugger;chrome;extension;audit
 exl-id: 409094f8-a7d9-45f7-ba12-b5e6250abc0f
 source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
 workflow-type: tm+mt
-source-wordcount: '363'
-ht-degree: 33%
+source-wordcount: '368'
+ht-degree: 32%
 
 ---
 
-# Onglet Auditeur
+# Onglet Auditor
 
-Dans Adobe Experience Platform Debugger, vous pouvez utiliser la variable **[!UICONTROL Auditor]** pour exécuter une série de tests d’audit sur votre page.
+Dans Adobe Experience Platform Debugger, vous pouvez utiliser l’onglet **[!UICONTROL Auditor]** pour exécuter une série de tests d’audit sur votre page.
 
-Pour utiliser cette fonctionnalité :
+Pour utiliser cette fonctionnalité :
 
-1. Sélectionner **[!UICONTROL Auditor]** dans le volet de navigation de gauche.
-1. Sélectionner **[!UICONTROL Exécution de tests d’Auditor]**. Une fois les tests terminés, leurs résultats apparaissent ci-dessous.
+1. Sélectionnez **[!UICONTROL Auditor]** dans le volet de navigation de gauche.
+1. Sélectionnez **[!UICONTROL Exécuter les tests d’Auditor]**. Une fois les tests terminés, leurs résultats apparaissent ci-dessous.
 
-![Capture d’écran des résultats du test sur l’onglet Auditor](../images/auditor-results.png)
+![Capture d’écran des résultats de test sur l’onglet Auditor](../images/auditor-results.png)
 
 La liste des résultats contient le test et son résultat, ainsi que des suggestions pour résoudre les problèmes éventuels.
 
@@ -42,14 +42,14 @@ Il est **vivement recommandé** de corriger les résultats de niveau 4 ou 5.
 
 Il est **recommandé** de corriger les résultats de niveau 1 à 3.
 
-## Technologies d’Adobe prises en charge
+## Technologies Adobes prises en charge
 
 La fonction d’audit peut évaluer les technologies d’Adobe suivantes :
 
 * Adobe Advertising Cloud DSP
 * Adobe Advertising Cloud Search
 * Adobe Analytics
-* Adobe Experience Cloud Identity Service
+* Service d’identités d’Adobe Experience Cloud
 * Adobe Target
 * Balises (anciennement Adobe Experience Platform Launch)
 

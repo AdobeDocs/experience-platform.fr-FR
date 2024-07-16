@@ -45,7 +45,7 @@ Ces valeurs requises proviennent de vos informations d’identification Adobe E
 
 >[!IMPORTANT]
 >
->En tant qu’utilisateur Power BI ou Tableau, vous pouvez connecter Customer Journey Analytics à vos outils de BI à partir de l’onglet Informations d’identification de Query Service. Pour obtenir des instructions sur la manière de procéder, reportez-vous à la documentation sur les informations d’identification . [connecter vos outils de BI à Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
+>En tant qu’utilisateur Power BI ou Tableau, vous pouvez connecter Customer Journey Analytics à vos outils de BI à partir de l’onglet Informations d’identification de Query Service. Consultez la documentation des informations d’identification pour obtenir des instructions sur la [connexion de vos outils de BI à Customer Journey Analytics](../ui/credentials.md#connect-to-customer-journey-analytics).
 
 ![L’espace de travail Requêtes Experience Platform avec l’onglet Informations d’identification et Informations d’identification arrivant à expiration en surbrillance.](../images/clients/power-bi/query-service-credentials-page.png)
 

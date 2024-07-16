@@ -19,12 +19,12 @@ ht-degree: 73%
 * Interface utilisateur du cycle de vie des données {#ui}
    * [Vue d’ensemble](./ui/overview.md)
    * [Expirations automatisées des jeux de données](./ui/dataset-expiration.md)
-   * [(Version bêta) Suppression d’enregistrements](./ui/record-delete.md)
+   * [(Beta) Suppression d’enregistrements](./ui/record-delete.md)
    * [Parcourir les ordres de travail relatifs au cycle de vie des données](./ui/browse.md)
 * API Data Hygiene {#api}
    * [Présentation](./api/overview.md)
    * [Expirations de jeux de données](./api/dataset-expiration.md)
    * [Suppressions d’enregistrements](./api/jobs.md)
-   * [(Version bêta) Suppressions d’enregistrement](./api/workorder.md)
+   * [(Beta) Suppressions d’enregistrements](./api/workorder.md)
    * [Quota](./api/quota.md)
 * [Bonnes pratiques](./best-practices.md)

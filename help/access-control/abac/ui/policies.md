@@ -6,7 +6,7 @@ exl-id: 66820711-2db0-4621-908d-01187771de14
 source-git-commit: 7cafe1f7e9dd6789db4199631cb605be666ce48a
 workflow-type: tm+mt
 source-wordcount: '613'
-ht-degree: 13%
+ht-degree: 11%
 
 ---
 
@@ -16,7 +16,7 @@ Les politiques de contrôle d&#39;accès sont des déclarations qui rassemblent 
 
 >[!IMPORTANT]
 >
->Les stratégies d’accès ne doivent pas être confondues avec les stratégies d’utilisation des données, qui contrôlent la manière dont les données sont utilisées dans Adobe Experience Platform au lieu des utilisateurs de votre entreprise qui y ont accès. Consultez le guide de création [stratégies d’utilisation des données](../../../data-governance/policies/create.md) pour plus d’informations.
+>Les stratégies d’accès ne doivent pas être confondues avec les stratégies d’utilisation des données, qui contrôlent la manière dont les données sont utilisées dans Adobe Experience Platform au lieu des utilisateurs de votre entreprise qui y ont accès. Pour plus d’informations, consultez le guide sur la création de [stratégies d’utilisation des données](../../../data-governance/policies/create.md) .
 
 <!-- ## Create a new policy
 
@@ -120,29 +120,29 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 >[!IMPORTANT]
 >
->Par défaut, la variable [!UICONTROL Inclusion automatique] est activée pour tous les clients, ce qui signifie que tous les environnements de test sont ajoutés à la stratégie.
+>Par défaut, la fonction [!UICONTROL Inclusion automatique] est activée pour tous les clients, ce qui signifie que tous les environnements de test sont ajoutés à la stratégie.
 
 >[!NOTE]
 >
->La variable **[!UICONTROL Règle de contrôle d’accès basée sur le libellé par défaut]** est actuellement la seule disponible pour la configuration.
+>La stratégie **[!UICONTROL Default-Label-Based-Access-Control-Policy]** est actuellement la seule disponible pour la configuration.
 
-Pour afficher les environnements de test associés à une stratégie, sélectionnez la stratégie dans la **[!UICONTROL Stratégies]** .
+Pour afficher les environnements de test associés à une stratégie, sélectionnez la stratégie dans l’onglet **[!UICONTROL Stratégies]** .
 
-![La page Stratégies affiche la liste des stratégies existantes disponibles.](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
+![Page Stratégies présentant la liste des stratégies existantes disponibles.](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-Sélectionnez ensuite la stratégie, puis cliquez sur **[!UICONTROL Environnements de test]** . Une liste des environnements de test associés à la stratégie s’affiche.
+Sélectionnez ensuite la stratégie, puis l’onglet **[!UICONTROL Sandbox]** . Une liste des environnements de test associés à la stratégie s’affiche.
 
-![La page Stratégies affiche la liste des stratégies existantes disponibles.](../../images/flac-ui/abac-policies-sandboxes-tab.png)
+![Page Stratégies présentant la liste des stratégies existantes disponibles.](../../images/flac-ui/abac-policies-sandboxes-tab.png)
 
 ### Ajouter une stratégie à tous les environnements de test
 
-Utilisez la variable **[!UICONTROL Inclusion automatique]** bascule sur le bouton **[!UICONTROL Environnements de test]** pour activer la stratégie pour tous les environnements de test.
+Utilisez la bascule **[!UICONTROL Auto-include]** de l’onglet **[!UICONTROL Sandbox]** pour activer la stratégie pour tous les environnements de test.
 
-![La variable [!UICONTROL Environnements de test] affichant le [!UICONTROL Inclusion automatique] bascule.](../../images/flac-ui/abac-policies-auto-include.png)
+![Onglet [!UICONTROL Sandbox] présentant le bouton d’activation/désactivation [!UICONTROL Auto-include].](../../images/flac-ui/abac-policies-auto-include.png)
 
-La variable **[!UICONTROL Activation de l’inclusion automatique]** s’affiche, vous invitant à confirmer votre sélection. Sélectionner **[!UICONTROL Activer]** pour terminer le paramètre de configuration.
+La boîte de dialogue **[!UICONTROL Activer l’inclusion automatique]** s’affiche et vous invite à confirmer votre sélection. Sélectionnez **[!UICONTROL Activer]** pour terminer le paramètre de configuration.
 
-![La variable [!UICONTROL Activation de l’inclusion automatique] mise en surbrillance de la boîte de dialogue [!UICONTROL Activer].](../../images/flac-ui/abac-policies-auto-include-enable.png)
+![ La boîte de dialogue [!UICONTROL Activer l’inclusion automatique] surlignant [!UICONTROL Activer].](../../images/flac-ui/abac-policies-auto-include-enable.png)
 
 >[!SUCCESS]
 >
@@ -152,19 +152,19 @@ La variable **[!UICONTROL Activation de l’inclusion automatique]** s’affiche
 
 >[!IMPORTANT]
 >
->Les futurs environnements de test ne seront pas inclus par défaut dans la stratégie si la variable [!UICONTROL Inclusion automatique] est désactivé. Vous devrez gérer et ajouter manuellement des environnements de test à la stratégie.
+>Les futurs environnements de test ne seront pas inclus par défaut dans la stratégie si le bouton d’inclusion automatique [!UICONTROL  est désactivé. ] Vous devrez gérer et ajouter manuellement des environnements de test à la stratégie.
 
-Utilisez la variable **[!UICONTROL Inclusion automatique]** bascule sur le bouton **[!UICONTROL Environnements de test]** pour désactiver la stratégie pour tous les environnements de test.
+Utilisez la bascule **[!UICONTROL Auto-include]** de l’onglet **[!UICONTROL Sandbox]** pour désactiver la stratégie pour tous les environnements de test.
 
-![La variable [!UICONTROL Environnements de test] affichant le [!UICONTROL Inclusion automatique] bascule.](../../images/flac-ui/abac-policies-auto-include.png)
+![Onglet [!UICONTROL Sandbox] présentant le bouton d’activation/désactivation [!UICONTROL Auto-include].](../../images/flac-ui/abac-policies-auto-include.png)
 
-Dans la **[!UICONTROL Environnements de test]** onglet, sélectionnez **[!UICONTROL Ajouter des environnements de test]** pour sélectionner les environnements de test auxquels cette stratégie s’appliquera.
+Dans l’onglet **[!UICONTROL Sandbox]** , sélectionnez **[!UICONTROL Ajouter des sandbox]** pour sélectionner les environnements de test auxquels cette stratégie s’appliquera.
 
-![La variable [!UICONTROL Environnements de test] onglet présentant une liste des environnements de test ajoutés à la stratégie.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
+![Onglet [!UICONTROL Sandbox] présentant une liste d’environnements de test ajoutés à la stratégie.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
 
 Une liste des environnements de test s’affiche. Sélectionnez l’environnement de test à ajouter dans la liste. Vous pouvez également utiliser la barre de recherche pour rechercher l’environnement de test. Sélectionnez **[!UICONTROL Enregistrer]**.
 
-![La variable [!UICONTROL Ajouter des environnements de test] page présentant une liste des environnements de test existants pouvant être ajoutés à la stratégie.](../../images/flac-ui/abac-policies-sandboxes-list.png)
+![La page [!UICONTROL Ajouter des environnements de test] qui affiche la liste des environnements de test existants à ajouter à la stratégie.](../../images/flac-ui/abac-policies-sandboxes-list.png)
 
 >[!SUCCESS]
 >
@@ -172,13 +172,13 @@ Une liste des environnements de test s’affiche. Sélectionnez l’environnemen
 
 ### Suppression d’environnements de test d’une stratégie
 
-Pour supprimer un environnement de test, sélectionnez l’option **X** en regard du nom de l’environnement de test.
+Pour supprimer un environnement de test, sélectionnez l’icône **X** en regard du nom de l’environnement de test.
 
-![La variable [!UICONTROL Environnements de test] d’un onglet présentant une liste d’environnements de test, en surbrillant le [!UICONTROL X] à supprimer.](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
+![L’onglet [!UICONTROL Environnements de test] présentant une liste d’environnements de test, mettant en surbrillance le [!UICONTROL X] à supprimer.](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
 
-La variable **[!UICONTROL Supprimer]** s’affiche, vous invitant à confirmer votre sélection. Sélectionner **[!UICONTROL Confirmer]** pour terminer la suppression.
+La boîte de dialogue **[!UICONTROL Supprimer]** s’affiche et vous invite à confirmer votre sélection. Sélectionnez **[!UICONTROL Confirmer]** pour terminer la suppression.
 
-![La variable [!UICONTROL Supprimer] mise en surbrillance de la boîte de dialogue [!UICONTROL Confirmer].](../../images/flac-ui/abac-policies-remove-sandbox.png)
+![ La boîte de dialogue [!UICONTROL Supprimer] surlignant [!UICONTROL Confirmer].](../../images/flac-ui/abac-policies-remove-sandbox.png)
 
 >[!SUCCESS]
 >
@@ -186,7 +186,7 @@ La variable **[!UICONTROL Supprimer]** s’affiche, vous invitant à confirmer v
 
 ## Activer une politique
 
-Pour activer une politique existante, sélectionnez-la dans l’onglet **[!UICONTROL Politiques]**.
+Pour activer une stratégie existante, sélectionnez-la dans l’onglet **[!UICONTROL Stratégies]** .
 
 ![flac-policy-select](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
@@ -194,7 +194,7 @@ Sélectionnez ensuite les points de suspension (`…`) à côté du nom des poli
 
 ![flac-policy-activate](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-La variable **[!UICONTROL Activation de la stratégie]** s’affiche, vous invitant à confirmer l’activation.
+La boîte de dialogue **[!UICONTROL Activer la stratégie]** s’affiche et vous invite à confirmer l’activation.
 
 ![flac-policy-activate-confirm](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
@@ -205,4 +205,4 @@ Vous revenez alors à l’onglet **[!UICONTROL Politiques]** et une fenêtre con
 
 ## Étapes suivantes
 
-Une fois la stratégie activée, vous pouvez passer à l’étape suivante en sélectionnant [gestion des autorisations pour un rôle](permissions.md).
+Une fois qu’une stratégie est activée, vous pouvez passer à l’étape suivante : [gérer les autorisations pour un rôle](permissions.md).

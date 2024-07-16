@@ -1,22 +1,22 @@
 ---
 keywords: InMoment;intime;Intime;Launch integration
 title: Extension InMoment
-description: L’extension InMoment est une destination de sondage dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
+description: L’extension InMoment est une destination de sondage dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans Adobe Exchange.
 exl-id: 61f32bc1-97a6-45ff-a962-990a2e522735
 source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 90%
+source-wordcount: '464'
+ht-degree: 91%
 
 ---
 
 # Extension [!DNL InMoment] {#inmoment-extension}
 
-## Présentation {#overview}
+## Vue d’ensemble {#overview}
 
-Le [!DNL InMoment] l’extension de balise vous permet d’activer rapidement et facilement les commentaires en ligne via le produit Digital Intercept. Dans l’application, les interceptions peuvent être configurées et gérées à l’aide de l’administrateur CXI Cloud, ce qui permet aux gestionnaires CX de mieux contrôler leur programme.
+L’extension de balise [!DNL InMoment] vous permet d’activer rapidement et facilement les commentaires en ligne via le produit Digital Intercept. Dans l’application, les interceptions peuvent être configurées et gérées à l’aide de l’administrateur CXI Cloud, ce qui permet aux gestionnaires CX de mieux contrôler leur programme.
 
-[!DNL InMoment] est une extension d&#39;enquête dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100847.html).
+[!DNL InMoment] est une extension de sondage dans Adobe Experience Platform. Pour plus d’informations sur les fonctionnalités de l’extension, consultez la page de l’extension dans [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100847.html).
 
 Cette destination est une extension de balise. Pour plus d’informations sur le fonctionnement des extensions de balises dans Platform, voir la [présentation des extensions de balises](../launch-extensions/overview.md).
 
@@ -30,7 +30,7 @@ Pour utiliser cette extension, vous devez avoir accès aux balises dans Adobe Ex
 
 ## Installation l’extension {#install-extension}
 
-Pour installer le [!DNL InMoment] extension :
+Pour installer l’extension [!DNL InMoment], procédez comme suit :
 
 Dans l’[interface de Platform](https://platform.adobe.com/), accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Catalogue]**.
 

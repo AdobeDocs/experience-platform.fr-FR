@@ -15,7 +15,7 @@ ht-degree: 83%
 
 # Onglet Résumé
 
-Pour exécuter Adobe Experience Platform Debugger, ouvrez la page à examiner dans le navigateur, puis sélectionnez l’icône (![](images/start-icon.jpg)) dans la barre de votre navigateur. L’extension s’ouvre sur le **Résumé** .
+Pour exécuter Adobe Experience Platform Debugger, ouvrez la page à examiner dans le navigateur, puis sélectionnez l’icône (![](images/start-icon.jpg)) sur la barre de votre navigateur. L’extension s’ouvre sur l’onglet **Summary**.
 
 ![](images/summary.jpg)
 
@@ -85,11 +85,11 @@ Experience Platform Debugger affiche les informations suivantes pour chaque so
   </tr> 
   <tr> 
    <td colname="col1"> <p>Date de version </p> </td> 
-   <td colname="col2"> <p>La balise <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html?lang=fr" format="https" scope="external"> bibliothèque</a> date de création </p> </td> 
+   <td colname="col2"> <p>Date de version de la balise <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html?lang=fr" format="https" scope="external"> library</a> </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Environnement </p> </td> 
-   <td colname="col2"> <p>La variable <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=fr" format="https" scope="external"> environnement</a> utilisé par la bibliothèque de balises </p> </td> 
+   <td colname="col2"> <p>Environnement <a href="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=fr" format="https" scope="external"></a> utilisé par la bibliothèque de balises </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Extensions </p> </td> 
@@ -162,7 +162,7 @@ Experience Platform Debugger affiche les informations suivantes pour chaque so
   </tr> 
   <tr> 
    <td colname="col1"> <p>Événement de chargement de page </p> </td> 
-   <td colname="col2"> <p>Type d’<a href="https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html?lang=fr" format="html" scope="external">événement</a> qui se déclenche au chargement de la page. </p> </td> 
+   <td colname="col2"> <p>Type d’<a href="https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html" format="html" scope="external">événement</a> qui se déclenche au chargement de la page. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>Nom de la demande </p> </td> 
@@ -186,7 +186,7 @@ Experience Platform Debugger affiche les informations suivantes pour chaque so
   </tr> 
   <tr> 
    <td colname="col1"> <p>Nom de l’offre</p> </td> 
-   <td colname="col2"> <p>Nom de <a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?=lang=fr" format="html" scope="external"> l’offre</a> de Target. Disponible sans authentification uniquement si vous implémentez le récepteur d’événements de débogage dans votre gestionnaire de codes ou de balises et si vous activez les <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> jetons de réponse</a> nécessaires dans l’interface utilisateur de Target. </p> </td> 
+   <td colname="col2"> <p>Nom de <a href="https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html" format="html" scope="external"> l’offre</a> de Target. Disponible sans authentification uniquement si vous implémentez le récepteur d’événements de débogage dans votre gestionnaire de codes ou de balises et si vous activez les <a href="https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html" format="html" scope="external"> jetons de réponse</a> nécessaires dans l’interface utilisateur de Target. </p> </td> 
   </tr> 
   <tr> 
    <td colname="col1"> <p>ID d’offre </p> </td> 

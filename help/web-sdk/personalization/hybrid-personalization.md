@@ -16,7 +16,7 @@ ht-degree: 84%
 
 La personnalisation hybride décrit le processus de récupération du contenu de personnalisation côté serveur, à l’aide de l’[API Edge Network Server](../../server-api/overview.md), et de le rendre côté client, à l’aide du [SDK Web](../home.md).
 
-Vous pouvez utiliser la personnalisation hybride avec des solutions de personnalisation comme Adobe Target, Adobe Journey Optimizer ou Offer Decisioning, la différence étant le contenu de la variable [!UICONTROL API du serveur] payload.
+Vous pouvez utiliser la personnalisation hybride avec des solutions de personnalisation comme Adobe Target, Adobe Journey Optimizer ou Offer Decisioning, la différence étant le contenu de la payload [!UICONTROL Server API].
 
 ## Conditions préalables {#prerequisites}
 
@@ -25,7 +25,7 @@ Avant d’implémenter une personnalisation hybride sur vos propriétés web, as
 * Vous avez choisi la solution de personnalisation que vous souhaitez utiliser. Cela aura un impact sur le contenu de la payload de l’[!UICONTROL API du serveur].
 * Vous avez accès à un serveur d’applications que vous pouvez utiliser pour effectuer les appels de l’[!UICONTROL API du serveur].
 * Vous avez accès a l’[API Edge Network Server](../../server-api/authentication.md).
-* Vous avez correctement [configuré](/help/web-sdk/commands/configure/overview.md) et a déployé le SDK Web sur les pages que vous souhaitez personnaliser.
+* Vous avez correctement [configuré](/help/web-sdk/commands/configure/overview.md) et déployé le SDK Web sur les pages que vous souhaitez personnaliser.
 
 ## Diagramme de flux {#flow-diagram}
 
@@ -39,9 +39,9 @@ Le diagramme de flux ci-dessous décrit l’ordre des étapes effectuées pour f
 1. L’API du serveur renvoie le contenu de personnalisation à votre serveur d’applications.
 1. Le serveur d’applications renvoie une réponse HTML au navigateur client, contenant les [cookies d’identité et de cluster](#cookies).
 1. Sur la page client, la commande [!DNL Web SDK] `applyResponse` est appelée, en transmettant les en-têtes et le corps de la réponse de l’[!UICONTROL API du serveur] de l’étape précédente.
-1. La variable [!DNL Web SDK] effectue le rendu de Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) offres et éléments de canal web Journey Optimizer automatiquement, car la variable `renderDecisions` L’indicateur est défini sur `true`.
-1. Basé sur les formulaires de Target [!DNL HTML]/[!DNL JSON] les offres et les expériences basées sur du code Journey Optimizer sont appliquées manuellement par le biais de la variable `applyProposition` pour mettre à jour la méthode [!DNL DOM] en fonction du contenu de personnalisation de la proposition.
-1. Pour les formulaires basés sur Target [!DNL HTML]/[!DNL JSON] offres et expériences basées sur du code Journey Optimizer, des événements d’affichage doivent être envoyés manuellement pour indiquer le moment où le contenu renvoyé a été affiché. Cela s’effectue via la commande `sendEvent`.
+1. Le [!DNL Web SDK] effectue automatiquement le rendu des offres Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) et des éléments de canal web Journey Optimizer, car l’indicateur `renderDecisions` est défini sur `true`.
+1. Les offres [!DNL HTML]/[!DNL JSON] basées sur des formulaires Target et les expériences basées sur du code Journey Optimizer sont appliquées manuellement par le biais de la méthode `applyProposition`, afin de mettre à jour l’ [!DNL DOM] en fonction du contenu de personnalisation dans la proposition.
+1. Pour les offres [!DNL HTML]/[!DNL JSON] basées sur des formulaires Target et les expériences basées sur du code Journey Optimizer, des événements d’affichage doivent être envoyés manuellement pour indiquer le moment où le contenu renvoyé a été affiché. Cela s’effectue via la commande `sendEvent`.
 
 ## Cookies {#cookies}
 

@@ -7,45 +7,45 @@ exl-id: 9bd34313-3042-46e7-b670-7a330654b178
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
 workflow-type: tm+mt
 source-wordcount: '440'
-ht-degree: 15%
+ht-degree: 8%
 
 ---
 
-# S’abonner à [!DNL Privacy Service Events]
+# Abonnez-vous à [!DNL Privacy Service Events]
 
-[!DNL Privacy Service Events] sont des messages fournis par Adobe Experience Platform ; [!DNL Privacy Service], qui tirent parti des événements d’Adobe I/O envoyés à un webhook configuré pour faciliter l’automatisation efficace des requêtes de tâche. Ils réduisent ou éliminent la nécessité de consulter l’API [!DNL Privacy Service] pour savoir si une tâche est terminée ou si un certain jalon a été atteint dans un workflow.
+[!DNL Privacy Service Events] sont des messages fournis par Adobe Experience Platform [!DNL Privacy Service], qui tirent parti des événements d’Adobe I/O envoyés à un webhook configuré pour faciliter l’automatisation efficace des requêtes de tâche. Elles réduisent ou éliminent la nécessité d’interroger l’API [!DNL Privacy Service] afin de vérifier si une tâche est terminée ou si un certain jalon a été atteint dans un workflow.
 
 Il existe actuellement quatre types de notifications liées au cycle de vie de la tâche de demande d’accès à des informations personnelles :
 
 | Type | Description |
 | --- | --- |
-| Fin de tâche | Tous [!DNL Experience Cloud] les demandes ont fait l’objet de rapports et l’état global ou global de la tâche a été marqué comme terminé. |
+| Fin de tâche | Toutes les applications [!DNL Experience Cloud] ont fait l’objet de rapports et l’état global ou global de la tâche a été marqué comme étant terminé. |
 | Erreur de tâche | Une ou plusieurs applications ont signalé une erreur lors du traitement de la requête. |
 | Produit terminé | Une des applications associées à cette tâche a terminé son travail. |
 | Erreur de produit | L’une des applications a signalé une erreur lors du traitement de la requête. |
 
-Ce document décrit les étapes de configuration d’un enregistrement d’événement pour [!DNL Privacy Service] notifications et comment interpréter les payloads des notifications.
+Ce document décrit les étapes de configuration d’un enregistrement d’événement pour les notifications [!DNL Privacy Service] et comment interpréter les payloads des notifications.
 
-## Prise en main
+## Commencer
 
 Avant de commencer ce tutoriel, consultez la documentation du Privacy Service suivante :
 
 * [Présentation de Privacy Service](./home.md)
 * [Guide de l’API Privacy Service](./api/overview.md)
 
-## Enregistrement d’un webhook sur [!DNL Privacy Service Events]
+## Enregistrer un webhook sur [!DNL Privacy Service Events]
 
-Pour recevoir [!DNL Privacy Service Events], vous devez utiliser la console Adobe Developer pour enregistrer un webhook dans votre [!DNL Privacy Service] intégration.
+Pour recevoir [!DNL Privacy Service Events], vous devez utiliser Adobe Developer Console pour enregistrer un webhook dans votre intégration [!DNL Privacy Service].
 
-Suivez le tutoriel sur [abonnement aux notifications [!DNL I/O Event]](../observability/alerts/subscribe.md) pour obtenir des instructions détaillées sur la manière d’y parvenir. Assurez-vous de choisir **[!UICONTROL Événements de Privacy Service]** en tant que fournisseur d’événements afin d’accéder aux événements répertoriés ci-dessus.
+Suivez le tutoriel [abonnement aux notifications [!DNL I/O Event]](../observability/alerts/subscribe.md) pour obtenir des instructions détaillées sur la manière d’y parvenir. Veillez à choisir **[!UICONTROL Événements de Privacy Service]** comme fournisseur d’événements afin d’accéder aux événements répertoriés ci-dessus.
 
 ## Recevoir [!DNL Privacy Service Event] notifications
 
-Une fois que vous avez enregistré votre webhook et que les tâches de confidentialité ont été exécutées, vous pouvez commencer à recevoir des notifications d’événement. Ces événements peuvent être visualisés à l’aide du webhook lui-même ou en sélectionnant l’événement **[!UICONTROL Suivi du débogage]** dans la vue d’ensemble de l’enregistrement des événements de votre projet dans la console Adobe Developer.
+Une fois que vous avez enregistré votre webhook et que les tâches de confidentialité ont été exécutées, vous pouvez commencer à recevoir des notifications d’événement. Ces événements peuvent être visualisés à l’aide du webhook lui-même ou en sélectionnant l’onglet **[!UICONTROL Suivi du débogage]** dans la présentation de l’enregistrement des événements de votre projet dans Adobe Developer Console.
 
 ![](images/privacy-events/debug-tracing.png)
 
-Le fichier JSON suivant est un exemple de [!DNL Privacy Service Event] payload de notification qui serait envoyée à votre webhook lorsque l’une des applications associées à une tâche de confidentialité a terminé son travail :
+Le fichier JSON suivant est un exemple de payload de notification [!DNL Privacy Service Event] qui serait envoyé à votre webhook lorsque l’une des applications associées à une tâche de confidentialité a terminé son travail :
 
 ```json
 {
@@ -68,10 +68,10 @@ Le fichier JSON suivant est un exemple de [!DNL Privacy Service Event] payload d
 | Propriété | Description |
 | --- | --- |
 | `id` | Identifiant unique généré par le système pour la notification. |
-| `type` | Le type de notification en cours d&#39;envoi, en mettant en contexte les informations fournies sous `data`. Les valeurs potentielles sont les suivantes : <ul><li>`com.adobe.platform.gdpr.jobcomplete`</li><li>`com.adobe.platform.gdpr.joberror`</li><li>`com.adobe.platform.gdpr.productcomplete`</li><li>`com.adobe.platform.gdpr.producterror`</li></ul> |
-| `time` | Horodatage du moment où l’événement s’est produit. |
-| `data.value` | Contient des informations supplémentaires sur ce qui a déclenché la notification : <ul><li>`jobId`: Identifiant de la tâche de confidentialité qui a déclenché la notification.</li><li>`message`: Message concernant l’état spécifique de la tâche. Pour `productcomplete` ou `producterror` notifications, ce champ indique l&#39;application Experience Cloud en question.</li></ul> |
+| `type` | Le type de notification en cours d’envoi, en mettant en contexte les informations fournies sous `data`. Les valeurs potentielles sont les suivantes : <ul><li>`com.adobe.platform.gdpr.jobcomplete`</li><li>`com.adobe.platform.gdpr.joberror`</li><li>`com.adobe.platform.gdpr.productcomplete`</li><li>`com.adobe.platform.gdpr.producterror`</li></ul> |
+| `time` | Horodatage de l’événement. |
+| `data.value` | Contient des informations supplémentaires sur ce qui a déclenché la notification : <ul><li>`jobId` : identifiant de la tâche de confidentialité qui a déclenché la notification.</li><li>`message` : message concernant l’état spécifique de la tâche. Pour les notifications `productcomplete` ou `producterror`, ce champ indique l’application Experience Cloud en question.</li></ul> |
 
 ## Étapes suivantes
 
-Ce document explique comment enregistrer des événements de Privacy Service dans un webhook configuré et comment interpréter les payloads de notification. Pour savoir comment effectuer le suivi des tâches de confidentialité à l’aide de l’interface utilisateur, reportez-vous à la section [Guide d’utilisation du Privacy Service](./ui/user-guide.md).
+Ce document explique comment enregistrer des événements de Privacy Service dans un webhook configuré et comment interpréter les payloads de notification. Pour savoir comment suivre les tâches de confidentialité à l’aide de l’interface utilisateur, consultez le [guide de l’utilisateur du Privacy Service](./ui/user-guide.md).

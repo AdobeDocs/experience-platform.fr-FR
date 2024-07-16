@@ -95,9 +95,9 @@ Tous les tableaux de l’interface utilisateur d’Experience Platform sont acc
 * Lorsqu’une ligne est sélectionnée ou fait l’objet du focus, l’utilisation de la touche **Entrée** permet d’obtenir des détails dans le rail de droite.
 * Lorsqu’une ligne est sélectionnée ou fait l’objet du focus, utilisez les **touches fléchées** pour vous déplacer parmi tous les éléments de la ligne.
 * Appuyez sur **Entrée** pour sélectionner un élément de la ligne. Les utilisateurs disposant de lecteurs d’écran sont avertis si une nouvelle fenêtre doit s’ouvrir.
-* Lorsque vous effectuez un zoom à 200 % ou plus, vous pouvez voir la variable **inspecteur de rail** comme le rail de droite s’effondre afin de libérer de l’espace pour le tableau.
+* Lorsque vous effectuez un zoom à 200 % ou plus, vous pouvez voir l’icône **inspecteur de rail** alors que le rail de droite se réduit pour libérer de l’espace pour le tableau.
 
-![Icône d’inspection du rail active lorsqu’un utilisateur effectue un zoom sur 200 %.](images/rail-inspector.png)
+![Icône de l’inspecteur de rail active lorsqu’un utilisateur effectue un zoom sur 200 %.](images/rail-inspector.png)
 
 ### Accessibilité de la navigation dans un tableau à l’aide du clavier
 
@@ -134,7 +134,7 @@ Lors de l’utilisation de l’interface utilisateur du créateur de segments po
 
 Vous pouvez désormais réduire ou développer les rails gauche et droit du canevas du créateur de segments afin de gagner plus d’espace sur l’écran. Cette fonctionnalité est particulièrement utile, car elle offre une fonctionnalité complète avec un zoom de 200 %.
 
-![Zone de travail du créateur de segments avec les widgets de divulgation du rail gauche et droit en surbrillance.](images/left-right-rail-expandables.png)
+![Le canevas du créateur de segments avec les widgets de divulgation du rail de gauche et de droite mis en surbrillance.](images/left-right-rail-expandables.png)
 
 ## Éditeur de Query Service
 
@@ -145,7 +145,7 @@ Les fonctionnalités d’accessibilité suivantes sont disponibles dans l’édi
 
 >[!NOTE]
 >
->L’éditeur de requêtes ne gère pas la variable **Onglet** clé par défaut. Pour appeler **Onglet** lorsque vous vous trouvez dans l’éditeur, vous devez appuyer sur la touche **Échappement** appuyez sur , puis appuyez sur **Onglet** directement après. Presse **Onglet** une fois de plus, pour déplacer l’accent au-delà de l’éditeur.
+>L’éditeur de requêtes ne gère pas par défaut la clé **Tab**. Pour appeler la fonctionnalité **Tab** dans l’éditeur, vous devez appuyer sur la touche **Escape**, puis appuyer directement sur la touche **Tab** après celle-ci. Appuyez à nouveau sur **Tab** pour déplacer la cible d&#39;action au-delà de l&#39;éditeur.
 
 ## Onglet Vue du système dans Sources et Destinations
 
