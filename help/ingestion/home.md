@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Présentation de Data Ingestion
 description: Ce document présente les trois principales manières dont les données sont ingérées dans Platform, avec des liens vers leur documentation de présentation respectives pour plus d’informations.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: cde8db1f75cf83451e240f32a877b9d6d26a0e18
 workflow-type: tm+mt
-source-wordcount: '461'
-ht-degree: 100%
+source-wordcount: '521'
+ht-degree: 73%
 
 ---
 
 # Présentation de Data Ingestion
 
-Adobe Experience Platform rassemble des données provenant de plusieurs sources afin d’aider les professionnels du marketing à mieux comprendre le comportement de leurs clients. L’ingestion des données d’Adobe Experience Platform représente les diverses méthodes que [!DNL Platform] emploie pour ingérer des données à partir de ces sources, ainsi que la manière dont ces données sont conservées dans le lac de données pour être utilisées par les services de [!DNL Platform] en aval.
+Adobe Experience Platform rassemble des données provenant de plusieurs sources afin d’aider les spécialistes marketing à mieux comprendre le comportement de leurs clients. Adobe Experience Platform Data Ingestion représente les multiples méthodes par lesquelles Experience Platform ingère des données à partir de ces sources, ainsi que la manière dont ces données sont conservées dans le lac de données pour être utilisées par les services Experience Platform en aval.
 
-Ce document présente les trois principales manières dont les données sont ingérées dans [!DNL Platform], avec des liens vers leur documentation de présentation respective pour plus dʼinformations.
+Ce document présente les trois principales manières dont les données sont ingérées dans Experience Platform, avec des liens vers la documentation de présentation correspondante pour plus d’informations.
 
 ## Ingestion par lots
 
@@ -25,9 +25,13 @@ Les fichiers de données chargés manuellement, tels que les fichiers CSV plats 
 
 Pour plus d’informations, consultez la [présentation de l’ingestion par lots](./batch-ingestion/overview.md).
 
-## Ingestion par flux
+>[!TIP]
+>
+>Utilisez le format JSON à une seule ligne au lieu du format JSON à plusieurs lignes comme entrée pour l’ingestion par lots. Le format JSON à une seule ligne permet de meilleures performances, car le système peut diviser un fichier d’entrée en plusieurs blocs et les traiter en parallèle, tandis que le format JSON à plusieurs lignes ne peut pas être divisé. Cela peut réduire considérablement les coûts de traitement des données et améliorer la latence du traitement par lots.
 
-Lʼingestion par flux vous permet dʼenvoyer en temps réel des données provenant des appareils côté client et serveur vers [!DNL Experience Platform] [!DNL Platform] prend en charge l’utilisation des entrées de données pour diffuser des données d’expérience entrantes, qui sont conservées dans les jeux de données activés dans le flux au sein du lac de données. Les entrées de données peuvent être configurées pour authentifier automatiquement les données qu’elles collectent, en veillant à ce que celles-ci proviennent d’une source approuvée.
+## Ingestion en flux continu
+
+Lʼingestion par flux vous permet dʼenvoyer en temps réel des données provenant des appareils côté client et serveur vers [!DNL Experience Platform] Experience Platform prend en charge l’utilisation d’entrées de données pour diffuser des données d’expérience entrantes, qui sont conservées dans les jeux de données activés pour la diffusion en continu dans le lac de données. Les entrées de données peuvent être configurées pour authentifier automatiquement les données qu’elles collectent, en veillant à ce que celles-ci proviennent d’une source approuvée.
 
 Pour plus d’informations, consultez la [présentation de l’ingestion par flux](./streaming-ingestion/overview.md).
 
