@@ -2,10 +2,10 @@
 description: Découvrez comment configurer les schémas du partenaire pour les destinations créées avec Destination SDK.
 title: Configuration des schémas de partenaire
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f502631a3e97f3c90c13f188f3a4bb081f6db112
 workflow-type: tm+mt
-source-wordcount: '1897'
-ht-degree: 97%
+source-wordcount: '1939'
+ht-degree: 95%
 
 ---
 
@@ -21,7 +21,7 @@ Pendant la configuration du schéma de partenaire pour la destination, vous pouv
 * Créer des schémas de partenaire dynamique qu’Experience Platform peut appeler dynamiquement pour récupérer une liste de tous les attributs pris en charge dans la destination.
 * Définir les mappages de champs obligatoires par votre plateforme de destination.
 
-Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la section [options de configuration](../configuration-options.md) ou consulter le guide sur la manière d’effectuer [utiliser la Destination SDK pour configurer une destination basée sur des fichiers ;](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Pour comprendre où ce composant entre dans une intégration créée avec Destination SDK, reportez-vous au diagramme de la documentation [options de configuration](../configuration-options.md) ou consultez le guide sur la [manière d’utiliser la Destination SDK pour configurer une destination basée sur des fichiers](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Vous pouvez configurer vos paramètres de schéma via le point d’entrée `/authoring/destinations`. Pour obtenir des exemples d’appels API détaillés dans lesquels vous pouvez configurer les composants affichés sur cette page, consultez les pages de référence de l’API suivantes.
 
@@ -238,6 +238,19 @@ Ainsi, la section **[!UICONTROL Champ cible]** dans l’interface utilisateur de
 ![Image des mappages obligatoires dans le flux d’activation de l’interface utilisateur.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 
 >[!ENDTABS]
+
+## Configuration de la prise en charge des audiences externes {#external-audiences}
+
+Pour configurer votre destination afin de prendre en charge l’activation des [audiences générées de l’extérieur](../../../../segmentation/ui/audience-portal.md#import-audience), insérez le fragment de code ci-dessous dans la section `schemaConfig` .
+
+```json
+"schemaConfig": {
+  "segmentNamespaceDenyList": [],
+  ...
+}
+```
+
+Pour en savoir plus sur la fonctionnalité `segmentNamespaceDenyList`, voir les descriptions des propriétés dans la [table](#attributes-schema) ci-dessus sur cette page.
 
 ## Étapes suivantes {#next-steps}
 
