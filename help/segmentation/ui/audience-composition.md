@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
 description: La Composition d’audience dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 3852fc4eca8ea4b6b3fdcfb6aaa54315d83038b4
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '1913'
-ht-degree: 87%
+source-wordcount: '1951'
+ht-degree: 83%
 
 ---
 
@@ -268,14 +268,18 @@ En outre, vous pouvez activer le bouton **[!UICONTROL Autres profils]** pour cr�
 
 ## Publier votre audience
 
-Après avoir composé votre audience, vous pouvez l’enregistrer et la publier en sélectionnant **[!UICONTROL Publier]**.
+>[!IMPORTANT]
+>
+>Lors de la publication de la composition de votre audience, il peut s’écouler jusqu’à 48 heures avant qu’elle ne soit évaluée et activée pour être utilisée dans des services en aval tels qu’une destination Real-Time CDP ou un canal Adobe Journey Optimizer.
 
-![Le bouton « Publier » est mis en surbrillance et vous montre comment enregistrer et publier votre audience.](../images/ui/audience-composition/publish.png)
+Après avoir créé votre composition, vous pouvez l’enregistrer et la publier en sélectionnant **[!UICONTROL Publish]**.
+
+![Le bouton Publish est mis en surbrillance et vous montre comment enregistrer et publier votre composition.](../images/ui/audience-composition/publish.png)
 
 En cas d’erreur lors de la création de l’audience, une alerte s’affiche, vous indiquant comment résoudre le problème.
 
-![Le bouton « Publier » est mis en surbrillance et vous montre comment enregistrer et publier votre audience.](../images/ui/audience-composition/audience-alert.png)
+![Le bouton Publish est mis en surbrillance et vous montre comment enregistrer et publier votre composition.](../images/ui/audience-composition/audience-alert.png)
 
 ## Étapes suivantes
 
-La Composition d’audience offre un workflow riche qui vous permet de créer des audiences à partir des différents types de bloc. Pour en savoir plus sur d’autres parties de l’interface utilisateur de Segmentation Service, veuillez lire le [Guide d’utilisation de Segmentation Service](./overview.md).
+Composition d’audience fournit un workflow riche qui vous permet de créer des compositions à partir des différents types de blocs. Pour en savoir plus sur d’autres parties de l’interface utilisateur de Segmentation Service, veuillez lire le [Guide d’utilisation de Segmentation Service](./overview.md).

@@ -2,9 +2,9 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '4096'
+source-wordcount: '4092'
 ht-degree: 22%
 
 ---
@@ -317,7 +317,7 @@ Pour plus d’informations sur l’utilisation de la composition de l’audience
 
 Les audiences sont automatiquement enregistrées lors de leur création dans la composition de l’audience. L’heure de création de l’audience sera la première fois que cet enregistrement automatique se produit.
 
-Une fois l’audience créée, l’évaluation peut prendre jusqu’à 24 heures.
+Une fois la composition de l’audience créée, il peut s’écouler jusqu’à 48 heures avant qu’elle ne soit évaluée et activée pour être utilisée dans les services en aval, tels qu’une destination Real-Time CDP ou un canal Adobe Journey Optimizer.
 
 ### Quand puis-je utiliser l’audience que j’ai créée ?
 
@@ -337,11 +337,7 @@ Le fractionnement de l’audience vous permet de sous-définir davantage votre a
 
 En se divisant par attribut, il existe une exclusivité mutuelle entre les groupes. Cela signifie que si un enregistrement répond aux critères de plusieurs chemins de partage, le **premier** chemin à partir de la gauche lui sera attribué et **pas** l’un des autres chemins.
 
-Lors de la division par pourcentage, les divisions sont **aléatoirement** effectuées. Cela signifie que les profils seront affectés de manière aléatoire à chaque chemin d’accès. La division **est** persistante, ce qui signifie que le profil sera dans la même sous-audience sur chaque évaluation.
-
->[!NOTE]
->
->Auparavant, les divisions dans la composition de l’audience étaient **et non** persistantes.
+Lors de la division par pourcentage, les divisions sont **aléatoirement** effectuées. Cela signifie que les profils seront affectés de manière aléatoire à chaque chemin d’accès.
 
 Pour plus d’informations sur le bloc Partage, lisez le [Guide de l’interface utilisateur de composition d’audience](./ui/audience-composition.md#split).
 

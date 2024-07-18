@@ -1,9 +1,9 @@
 ---
 title: Présentation d’Audience Portal
 description: Découvrez comment utiliser Audience Portal pour afficher, gérer et créer des audiences dans Adobe Experience Platform.
-source-git-commit: c724baba6972e1a033c18b63ab824149567d20fb
+source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
 workflow-type: tm+mt
-source-wordcount: '3673'
+source-wordcount: '3693'
 ht-degree: 66%
 
 ---
@@ -258,6 +258,10 @@ Sélectionner **[!UICONTROL Modifier les propriétés]** vous permet de modifier
 ### Total des audiences {#audience-total}
 
 La section **[!UICONTROL Audience totale]** indique le nombre de profils qui remplissent les critères de l’audience.
+
+>[!NOTE]
+>
+>La mise à jour du nombre total d’audiences peut prendre jusqu’à 30 minutes une fois la tâche d’exportation terminée.
 
 Les estimations sont générées en utilisant une taille d’échantillon des données d’exemple du jour. S’il y a moins d’un million d’entités dans votre banque de profils, l’ensemble des données est utilisé ; entre 1 et 20 millions d’entités, 1 million d’entités sont utilisées ; et pour plus de 20 millions d’entités, 5 % du total des entités est utilisé. Vous trouverez plus d’informations sur la génération d’estimations dans la [section sur la génération d’estimations](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) du tutoriel sur la création d’audiences.
 
