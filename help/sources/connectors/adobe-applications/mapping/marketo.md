@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Mapper des champs pour la source Marketo Engage
 description: Les tableaux ci-dessous contiennent les mappages entre les champs des jeux de données Marketo et les champs XDM correspondants.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 9399ac0e2e0a284799874af15188bbf4a4a380a7
+source-git-commit: 3084ed50f3665c7b33863f3a1aab4236c182c503
 workflow-type: tm+mt
 source-wordcount: '890'
 ht-degree: 94%
@@ -280,7 +280,7 @@ Lisez la [Présentation des comptes professionnels XDM](../../../../xdm/classes/
 | `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | La valeur de `"${MUNCHKIN_ID}"` sera automatiquement remplacée. |
 | `concat(id, ".mkto_acct")` | `accountKey.sourceID` |
 | `concat(id, ".mkto_acct@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | Identité principale. La valeur de `"${MUNCHKIN_ID}"` sera automatiquement remplacée. |
-| `iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | Le champ `extSourceSystemAudit.externalKey` est l’identité secondaire. Les valeurs de `{CRM_ORG_ID}` et `{CRM_TYPE}` seront automatiquement remplacées. |
+| `iif(externalSourceId != null && externalSourceId != "", to_object("sourceType", externalSourceType, "sourceInstanceID", externalSourceInstanceId, "sourceID", externalSourceId, "sourceKey", externalSourceKey), iif(crmGuid != null && crmGuid != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", crmGuid, "sourceKey", concat(crmGuid,"@${CRM_ORG_ID}.${CRM_TYPE}")), null))` | `extSourceSystemAudit.externalKey` | Le champ `extSourceSystemAudit.externalKey` est l’identité secondaire. Les valeurs de `{CRM_ORG_ID}` et `{CRM_TYPE}` seront automatiquement remplacées. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
