@@ -2,10 +2,10 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+source-git-commit: 5e677e53677cd28787004043e9fcc9b94e631fc8
 workflow-type: tm+mt
-source-wordcount: '4092'
-ht-degree: 22%
+source-wordcount: '4187'
+ht-degree: 21%
 
 ---
 
@@ -46,7 +46,7 @@ Lorsque vous téléchargez une audience générée de l’extérieur, les élém
 
 Au cours du workflow d&#39;import d&#39;audience externe, vous devez spécifier la colonne du fichier CSV correspondant à l&#39; **identité de Principal**. Un exemple d’identité principale inclut une adresse électronique, un ECID ou un espace de noms d’identité personnalisée spécifique à l’organisation.
 
-Les données associées à cette identité principale contiennent les données **uniquement** qui sont jointes au profil. Si aucun profil existant ne correspond aux données de la colonne Identité principale, un nouveau profil est créé. Cependant, ce profil est essentiellement un profil orphelin, car les attributs **no** ou les événements d’expérience sont associés à ce profil.
+Les données associées à cette colonne d’identité principale sont les **seules** données jointes au profil. Si aucun profil existant ne correspond aux données de la colonne Identité principale, un nouveau profil est créé. Cependant, ce profil est essentiellement un profil orphelin, car les attributs **no** ou les événements d’expérience sont associés à ce profil.
 
 Toutes les autres données de l’audience générée en externe sont considérées comme des **attributs de payload**. Ces attributs peuvent **uniquement** être utilisés pour la personnalisation et l’enrichissement lors de l’activation et sont **non** associés à un profil. Ces attributs sont toutefois stockés dans le lac de données.
 
@@ -59,6 +59,10 @@ Oui, l’audience générée en externe sera fusionnée avec le profil existant 
 ### Puis-je utiliser une audience générée en externe pour créer d’autres audiences ?
 
 Oui, les audiences générées en externe apparaîtront dans l’inventaire des audiences. elles peuvent être utilisés lors de la création d’audiences dans le [Créateur de segments](./ui/segment-builder.md).
+
+### À quelle fréquence les audiences générées en externe sont-elles évaluées ?
+
+Les audiences générées de manière externe sont **uniquement** évaluées au moment de l’importation. Comme les attributs associés à ces audiences d’importation ne sont pas durables et qu’elles font **et non** partie de la banque de profils, la seule fois où une audience générée en externe sera mise à jour est lorsque l’audience existante est mise à jour manuellement.
 
 ### Puis-je utiliser des attributs téléchargés en externe dans le cadre de la segmentation ?
 
@@ -97,6 +101,10 @@ Si vous avez accidentellement chargé une audience générée en externe et que 
 L’expiration actuelle des données pour les audiences générées en externe est de **30 jours**. Cette expiration de données a été choisie pour réduire la quantité de données excédentaires stockées au sein de votre organisation.
 
 Une fois la période d’expiration des données écoulée, le jeu de données associé sera toujours visible dans l’inventaire du jeu de données, mais vous **not** pourrez activer l’audience et le nombre de profils s’affichera comme nul.
+
+### Existe-t-il un nombre maximal d’audiences générées en externe que je puisse importer ?
+
+Le nombre d’audiences générées en externe que vous pouvez importer est illimité. Toutefois, notez que les audiences importées **do** sont comptabilisées par rapport à la limite globale d’audience.
 
 ### Comment le portail d’audience et la composition d’audience interagiront-ils avec les données du partenaire Real-Time CDP ?
 
