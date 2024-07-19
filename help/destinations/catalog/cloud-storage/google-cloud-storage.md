@@ -3,10 +3,10 @@ title: Connexion à Google Cloud Storage
 description: Découvrez comment vous connecter à Google Cloud Storage et activer des audiences ou exporter des jeux de données.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 679c1723965271b6a9c1b5b873cf8ac8de67458d
 workflow-type: tm+mt
-source-wordcount: '1199'
-ht-degree: 63%
+source-wordcount: '1228'
+ht-degree: 62%
 
 ---
 
@@ -114,6 +114,22 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’[abonnement aux alertes des destinations dans l’interface utilisateur](../../ui/alerts.md).
 
 Lorsque vous avez terminé de renseigner les détails sur votre connexion de destination, sélectionnez **[!UICONTROL Suivant]**.
+
+### Autorisations [!DNL Google Cloud Storage] nécessaires {#required-google-cloud-storage-permission}
+
+Pour connecter et exporter des données vers votre emplacement de stockage [!DNL Google Cloud Storage], vous avez besoin des autorisations [!DNL Google Cloud Storage] suivantes pour vos compartiments :
+
+*`orgpolicy.policy.get`
+*`resourcemanager.projects.get`
+*`resourcemanager.projects.list`
+*`storage.managedFolders.create`
+*`storage.multipartUploads.abort`
+*`storage.multipartUploads.create`
+*`storage.multipartUploads.listParts`
+*`storage.objects.create`
+*`storage.objects.list`
+
+En savoir plus sur [le contrôle d’accès et les autorisations](https://cloud.google.com/storage/docs/access-control/iam-permissions) dans [!DNL Google Cloud Storage].
 
 ## Activer des audiences vers cette destination {#activate}
 
