@@ -3,10 +3,10 @@ keywords: destinations;destination;types de destinations
 title: Types et catégories de destination
 description: Découvrez les différents types et catégories de destinations dans Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: c6019737e93756f3f524d5a85ea57383baa1a31d
+source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
 workflow-type: tm+mt
-source-wordcount: '776'
-ht-degree: 65%
+source-wordcount: '804'
+ht-degree: 55%
 
 ---
 
@@ -20,7 +20,7 @@ Dans Adobe Experience Platform, nous faisons la distinction entre différents ty
 
 Enfin, les connexions peuvent également être distinguées entre les destinations publiques disponibles dans toutes les organisations du catalogue des destinations et les destinations privées que les clients Real-Time CDP Ultimate peuvent créer pour répondre à leurs cas d’utilisation spécifiques à l’exportation.
 
-![Diagramme des types de destinations.](./assets/destination-types/types-of-destinations-no-highlight.png)
+![Diagramme des types de destinations.](./assets/destination-types/types-of-destinations-no-highlight.png "Diagramme des types de destinations."){zoomable="yes"}
 
 ## Connexions {#connections}
 
@@ -33,17 +33,17 @@ Les destinations d’exportation de profils reçoivent des données brutes, souv
 * [Destinations d’exportation de profils en flux continu (destinations d’entreprise)](#streaming-profile-export)
 * [Destinations de lot (basées sur des fichiers)](#file-based)
 
-### Destinations d’exportation de profils en flux continu (destinations d’entreprise) {#streaming-profile-export}
+### Destinations d’entreprise avancées (destinations d’exportation de profils en continu) {#streaming-profile-export}
 
 >[!IMPORTANT]
 >
->Les destinations d’entreprise, ou destinations d’exportation de profil en flux continu, sont disponibles uniquement pour les clients [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html).
+>Les destinations d’entreprise avancées, ou les destinations d’exportation de profils en continu, sont disponibles uniquement pour les clients [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html).
 
-Utilisez des connecteurs de données de destination d’entreprise pour transmettre les profils Adobe Real-Time Customer Data Platform en quasi temps réel à des systèmes internes ou à des systèmes tiers à des fins de synchronisation des données, d’analyse et d’enrichissement des profils.
+Utilisez les connecteurs de données de destination avancés de l’entreprise pour fournir des profils Adobe Real-Time Customer Data Platform en temps quasi réel aux systèmes internes ou à d’autres systèmes tiers pour la synchronisation des données, l’analyse et d’autres cas d’utilisation d’enrichissement de profil.
 
 Ces destinations reçoivent les données d’audience et de profil en tant que flux de données Experience Platform.
 
-Les destinations d’entreprise incluent :
+Les destinations d’entreprise avancées incluent :
 
 * [Destination de l’API HTTP](catalog/streaming/http-destination.md)
 * [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md)
@@ -81,7 +81,7 @@ En savoir plus sur les [différents types d’audience](/help/segmentation/ui/ac
 
 Un symbole sur la carte de destination indique les types d’audiences que vous pouvez exporter vers chaque destination.
 
-![ Exemple de carte de destination avec des symboles indiquant quels types d’audience peuvent être exportés.](/help/destinations/assets/destination-types/types-of-audiences.png)
+![Exemple de carte de destination avec des symboles indiquant quels types d’audience peuvent être exportés.](/help/destinations/assets/destination-types/types-of-audiences.png " Exemple de carte de destination avec des symboles indiquant quels types d’audience peuvent être exportés."){zoomable="yes"}
 
 
 ## Destinations d’exportation de jeux de données {#dataset-export-destinations}
@@ -114,4 +114,4 @@ Les extensions s’avèrent utiles lorsque des données d’événement sont uti
 
 Les connexions et extensions du [catalogue des destinations](https://platform.adobe.com/destination/catalog) sont regroupées par catégorie de destination (**Publicité**, **Espace de stockage**, **Plateformes d’enquête**, **Marketing par e-mail**, etc.), selon l’action marketing qu’elles permettent de réaliser. Pour plus d’informations sur chaque catégorie, ainsi que sur les destinations incluses dans chaque catégorie, consultez la [documentation du catalogue des destinations](./catalog/overview.md).
 
-![Catégories de destination mises en surbrillance dans la page de catalogue.](./assets/destination-types/destination-categories-menu.png)
+![Catégories de destination mises en surbrillance dans la page de catalogue.](./assets/destination-types/destination-categories-menu.png "Catégories de destination mises en surbrillance dans la page de catalogue."){zoomable="yes"}

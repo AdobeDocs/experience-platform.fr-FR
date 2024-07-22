@@ -1,34 +1,34 @@
 ---
-title: Destination du lot de diffusion en continu Magnite
+title: Destination du lot Magnite
 description: Utilisez cette destination pour diffuser par lots des audiences CDP d’Adobe vers la plateforme de diffusion en continu Magnite.
 badgeBeta: label="Version bêta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: b8921e887b827fcc7b9115045a1954c41a37bce8
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1663'
 ht-degree: 14%
 
 ---
 
 
-# Diffusion en continu Magnite : connexion par lots {#magnite-streaming-batch}
+# Magnite : connexion par lots {#magnite-streaming-batch}
 
 ## Vue d’ensemble {#overview}
 
-Ce document décrit la diffusion en continu Magnite : destination par lots et fournit des exemples de cas d’utilisation pour vous aider à mieux comprendre comment activer et exporter des audiences vers cette destination.
+Ce document décrit la destination Magnite : lot et fournit des exemples de cas d’utilisation pour vous aider à mieux comprendre comment activer et exporter des audiences vers cette destination.
 
-Les audiences Adobe Real-Time CDP peuvent être diffusées sur Magnite : la plateforme de diffusion en continu de deux manières : elles peuvent être diffusées une fois par jour ou elles peuvent être diffusées en temps réel :
+Les audiences Adobe Real-Time CDP peuvent être diffusées sur la plateforme de diffusion en continu Magnite de deux manières : elles peuvent être diffusées une fois par jour ou elles peuvent être diffusées en temps réel :
 
-1. Si vous ne souhaitez diffuser des audiences qu’une fois par jour et/ou si vous devez le faire, vous pouvez utiliser la destination Magnite : lot de diffusion en continu , qui diffuse des audiences vers Magnite : diffusion en continu via une diffusion quotidienne de fichier de diffusion par lots S3. Ces audiences par lots sont stockées indéfiniment dans notre plateforme, à la différence des audiences en temps réel, qui ne sont stockées que pendant quelques jours.
+1. Si vous ne souhaitez diffuser des audiences qu’une seule fois par jour et/ou si vous devez le faire, vous pouvez utiliser la destination Magnite : lot qui diffuse des audiences vers la diffusion en continu Magnite par le biais d’une diffusion quotidienne de fichiers par lots S3. Ces audiences par lots sont stockées indéfiniment dans la plateforme Magnite, à la différence des audiences en temps réel, qui ne sont stockées que pendant quelques jours.
 
-2. Cependant, si vous souhaitez et/ou devez diffuser des audiences en temps réel, vous devrez utiliser la destination Magnite : diffusion en continu en temps réel . Lors de l’utilisation de la destination en temps réel, Magnite : la diffusion en flux continu recevra les audiences en temps réel, mais nous ne pouvons stocker que les audiences en temps réel temporairement dans notre plateforme. Elles seront supprimées de notre système dans les quelques jours qui suivent. Pour cette raison, si vous souhaitez utiliser la destination Magnite : Diffusion en temps réel, vous devez ÉGALEMENT utiliser la destination Magnite : Lot en flux continu : chaque audience que vous activez vers la destination Temps réel, vous devez également l’activer vers la destination Lot.
+2. Cependant, si vous souhaitez diffuser des audiences plus fréquemment, vous devrez utiliser la destination [Magnite Real-Time](/help/destinations/catalog/advertising/magnite-streaming.md). Lors de l’utilisation de la destination en temps réel, la diffusion en flux continu Magnite recevra les audiences en temps réel, mais elle ne pourra stocker que les audiences en temps réel temporairement sur sa plateforme, et celles-ci seront supprimées du système dans les quelques jours. Pour cette raison, si vous souhaitez utiliser la destination en temps réel de Magnite, vous devrez *également* utiliser la destination de lot Magnite : chaque audience que vous activez vers la destination en temps réel, vous devrez également l’activer vers la destination de lot.
 
-Pour récapituler : si vous ne souhaitez diffuser des audiences Adobe Real-Time CDP qu’une fois par jour, vous utiliserez la destination Magnite : lot de diffusion en continu uniquement, et les audiences seront diffusées une fois par jour. Si vous souhaitez diffuser des audiences Adobe Real-Time CDP en temps réel, vous utiliserez À LA FOIS la destination Magnite : lot de diffusion en continu et la destination Magnite : destination en temps réel de diffusion. Pour plus d’informations, contactez Magnite : Streaming.
+Pour récapituler : si vous ne souhaitez diffuser des audiences Adobe Real-Time CDP qu’une fois par jour, vous utiliserez la destination Magnite : lot uniquement, et les audiences seront diffusées une fois par jour. Si vous souhaitez diffuser des audiences Adobe Real-Time CDP en temps réel, vous utiliserez *à la fois* la destination Magnite : lot et la destination Magnite en temps réel. Pour plus d’informations, contactez Magnite : Streaming.
 
 
-Pour plus d’informations sur Magnite : destination du lot de diffusion en continu, comment s’y connecter et comment activer les audiences Adobe Real-Time CDP vers celui-ci, continuez la lecture ci-dessous.
-Pour plus d’informations sur la destination en temps réel, reportez-vous à [ce document](magnite-streaming.md) à la place.
+Pour plus d’informations sur Magnite : destination du lot, comment s’y connecter et comment activer les audiences Adobe Real-Time CDP, reportez-vous à la section ci-dessous.
+Pour plus d’informations sur la destination en temps réel, reportez-vous à [cette page de documentation](magnite-streaming.md) à la place.
 
 >[!IMPORTANT]
 >
@@ -38,31 +38,31 @@ Pour plus d’informations sur la destination en temps réel, reportez-vous à [
 
 ## Cas d’utilisation {#use-cases}
 
-Pour vous aider à mieux comprendre comment et à quel moment utiliser la destination Diffusion en continu Magnite : par lot, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
+Pour vous aider à mieux comprendre comment et à quel moment utiliser la destination Magnite : lot, voici des exemples de cas d’utilisation que les clients Adobe Experience Platform peuvent résoudre à l’aide de cette destination.
 
 ### Cas d’utilisation #1 {#use-case-1}
 
-Vous avez activé une audience sur la destination de diffusion en continu Magnite : temps réel .
+Vous avez activé une audience sur la destination en temps réel de Magnite.
 
-Toutes les audiences activées via la diffusion en flux continu Magnite : la destination en temps réel doit également utiliser la destination de diffusion en flux continu Magnite : la destination par lot, car les données de la diffusion par lot sont destinées à remplacer/conserver les données de la diffusion en temps réel dans la plateforme de diffusion en flux continu Magnite.
+Toutes les audiences activées via la destination Temps réel de Magnite doivent également utiliser la destination Magnite : Lot , car les données de la diffusion par lot sont destinées à remplacer/conserver les données de la diffusion en temps réel dans la plateforme de diffusion en continu de Magnite.
 
 ### Cas d’utilisation #2 {#use-case-2}
 
 Vous souhaitez activer une audience uniquement par lots/par jour vers la plateforme de diffusion en continu Magnite.
 
-Toute audience activée via la diffusion en continu Magnite : la destination du lot sera diffusée par lots/quotidiennement et pourra ensuite être ciblée dans la plateforme de diffusion en continu Magnite.
+Toutes les audiences activées via Magnite : la destination du lot sera diffusée en mode batch/quotidien et seront ensuite disponibles pour le ciblage dans la plateforme de diffusion en continu Magnite.
 
 ## Conditions préalables {#prerequisites}
 
-Pour utiliser les destinations Magnite dans Adobe Experience Platform, vous devez d’abord disposer d’un compte de diffusion en continu Magnite. Si vous disposez d’un compte [!DNL Magnite Streaming], contactez votre gestionnaire de compte [!DNL Magnite] pour qu’il vous fournisse les informations d’identification lui permettant d’accéder aux destinations [!DNL Magnite's]. Si vous ne disposez pas d’un compte [!DNL Magnite Streaming], contactez adobe-tech@magnite.com
+Pour utiliser les destinations [!DNL Magnite] dans Adobe Experience Platform, vous devez d’abord disposer d’un compte de diffusion en continu Magnite. Si vous disposez d’un compte [!DNL Magnite Streaming], contactez votre gestionnaire de compte [!DNL Magnite] pour qu’il vous fournisse les informations d’identification lui permettant d’accéder aux destinations [!DNL Magnite's]. Si vous ne disposez pas d’un compte [!DNL Magnite Streaming], contactez adobe-tech@magnite.com
 
 ## Identités prises en charge {#supported-identities}
 
-La diffusion en continu Magnite : la destination par lot peut recevoir *n’importe quelle* source d’identité de la plateforme de données clients de l’Adobe. Actuellement, cette destination comporte trois champs d’identité cible auxquels vous pouvez mapper.
+La destination Magnite : lot peut recevoir *n’importe quelle* source d’identité de la plateforme de données clients Adobe. Actuellement, cette destination comporte trois champs d’identité cible auxquels vous pouvez mapper.
 
 >[!NOTE]
 >
->*Toutes les sources d’identité* peuvent mapper sur n’importe quelle identité cible magnite_deviceId.
+>*Toutes les sources d’identité* peuvent mapper sur n’importe quelle identité cible `magnite_deviceId`.
 
 | Identité cible | Description | Considérations |
 |:--------------------------- |:------------------------------------------------------------------------------------------------ |:------------------------------------------------------------------------------------- |
@@ -85,7 +85,7 @@ La diffusion en continu Magnite : la destination par lot peut recevoir *n’impo
 
 | Élément | Type | Notes |
 |-----------------------------|----------|----------|
-| Type d’exportation | Exportation de l’audience | Vous exportez tous les membres d’une audience avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans la diffusion en continu Magnite : destination du lot. |
+| Type d’exportation | Exportation de l’audience | Vous exportez tous les membres d’une audience avec les identifiants (nom, numéro de téléphone ou autres) utilisés dans Magnite : destination du lot. |
 | Fréquence des exportations | Lot | Les destinations par lots exportent des fichiers vers des plateformes en aval par incréments de trois, six, huit, douze ou vingt-quatre heures. En savoir plus sur les [destinations basées sur des fichiers](/help/destinations/destination-types.md). |
 
 {style="table-layout:auto"}
@@ -96,7 +96,7 @@ Une fois que votre utilisation de destination a été approuvée et que la diffu
 
 ### S’authentifier auprès de la destination {#authenticate}
 
-Recherchez la destination de diffusion en continu Magnite : lot dans le catalogue d’expériences d’Adobe. Cliquez sur le bouton des options supplémentaires (\..), puis configurez la connexion/l’instance de destination.
+Localisez Magnite : destination du lot dans le catalogue de l’expérience d’Adobe. Cliquez sur le bouton des options supplémentaires (\..), puis configurez la connexion/l’instance de destination.
 
 Si vous disposez déjà d’un compte, vous pouvez le localiser en définissant l’option Type de compte sur &quot;Compte existant&quot;. Sinon, vous allez créer un compte ci-dessous :
 
@@ -126,7 +126,7 @@ connexion/instance de destination à l’avenir.
 
 Vous pouvez ensuite procéder en sélectionnant **[!UICONTROL Suivant]**
 
-Dans l’écran suivant, intitulé &quot;Stratégie de gouvernance et actions d’application (facultatif)&quot;, vous pouvez éventuellement sélectionner toute stratégie de gouvernance des données appropriée. L’option &quot;Exportation de données&quot; est généralement sélectionnée pour la destination de lot de diffusion en continu Magnite.
+Dans l’écran suivant, intitulé &quot;Stratégie de gouvernance et actions d’application (facultatif)&quot;, vous pouvez éventuellement sélectionner toute stratégie de gouvernance des données appropriée. L’option &quot;Exportation de données&quot; est généralement sélectionnée pour la destination Magnite : lot.
 
 ![Stratégie de gouvernance et actions d’application facultatives](../../assets/catalog/advertising/magnite/destination-batch-config-grouping-policy.png)
 
@@ -175,11 +175,11 @@ Dans l&#39;écran &quot;Configurer un nom de fichier et un planning d&#39;export
 
 Une fois vos audiences chargées, vous pouvez vérifier qu’elles ont été créées et chargées correctement.
 
-* La destination de lot de diffusion en continu Magnite diffuse des fichiers S3 vers la diffusion en continu Magnite à une cadence quotidienne. Après la diffusion et l’ingestion, les audiences/segments doivent apparaître dans la diffusion en continu Magnite et peuvent être appliqués à une transaction. Vous pouvez le confirmer en recherchant l’identifiant du segment ou le nom du segment qui a été partagé lors des étapes d’activation dans Adobe Experience Platform.
+* La destination Magnite : un lot permet de diffuser des fichiers S3 en flux continu Magnite à une cadence quotidienne. Après la diffusion et l’ingestion, les audiences/segments doivent apparaître dans la diffusion en continu Magnite et peuvent être appliqués à une transaction. Vous pouvez le confirmer en recherchant l’identifiant du segment ou le nom du segment qui a été partagé lors des étapes d’activation dans Adobe Experience Platform.
 
 >[!NOTE]
 >
->Les audiences activées/diffusées vers la destination par lots de diffusion en continu Magnite *remplaceront* les mêmes audiences qui ont été activées/diffusées via la destination en temps réel de diffusion en continu Magnite. Si vous recherchez un segment à l’aide du nom du segment, il se peut que vous ne trouviez pas le segment en temps réel tant que le lot n’a pas été ingéré et traité par la plateforme de diffusion en continu Magnite.
+>Audiences activées/diffusées vers Magnite : la destination par lots *remplacera* les mêmes audiences qui ont été activées/diffusées via la destination en temps réel de Magnite. Si vous recherchez un segment à l’aide du nom du segment, il se peut que vous ne trouviez pas le segment en temps réel tant que le lot n’a pas été ingéré et traité par la plateforme de diffusion en continu Magnite.
 
 ## Utilisation et gouvernance des données {#data-usage-governance}
 
