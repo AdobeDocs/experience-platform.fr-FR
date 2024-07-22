@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5086e6419c14356b47963b8445389a0048ad11d7
+source-git-commit: e874459cd3018e0cf2358e590c6ec5eb0f7b4c98
 workflow-type: tm+mt
-source-wordcount: '2158'
-ht-degree: 97%
+source-wordcount: '2192'
+ht-degree: 96%
 
 ---
 
@@ -13,6 +13,15 @@ ht-degree: 97%
 # Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir les [notes de mise à jour du SDK Web Platform](/help/web-sdk/release-notes.md).
+
+## Version 2.25.0 - vendredi 18 juillet 2024
+
+**Nouvelles fonctionnalités**
+
+* Ajout de la prise en charge du suivi automatique de la personnalisation dans Adobe Journey Optimizer.
+* Ajout de nouveaux paramètres pour gérer la collecte de clics améliorée.
+
+Contient la version 2.21.1 du SDK Web de Adobe Experience Platform.
 
 ## Version 2.24.0 - jeudi 5 juin 2024
 
