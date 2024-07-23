@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de dépannage de l’ingestion par lots
 description: Cette documentation vous aidera à répondre aux questions fréquentes sur les API Batch Data Ingestion d’Adobe Experience Platform.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
 workflow-type: tm+mt
-source-wordcount: '1418'
-ht-degree: 100%
+source-wordcount: '1426'
+ht-degree: 97%
 
 ---
 
@@ -212,11 +212,11 @@ Lorsqu’un lot se trouve dans l’état « Chargement », cela signifie que l
 
 ### Existe-t-il un moyen de savoir si un lot a bien été ingéré ?
 
-Si l’état du lot est « Actif », le lot a bien été ingéré. Pour connaître l’état du lot, suivez les étapes décrites [plus haut](#how-is-batch-ingestion-monitored).
+Oui, une fois que l’état du lot est &quot;Actif&quot;, le lot a été ingéré avec succès. Pour connaître l’état du lot, suivez les étapes décrites [plus haut](#how-is-batch-ingestion-monitored).
 
-### Que se passe-t-il après l’échec d’un lot ?
+### Que se passe-t-il après l’échec d’un lot ? {#what-if-a-batch-fails}
 
-Lorsqu’un lot échoue, la raison de son échec peut être identifiée dans la section `errors` du payload. Vous trouverez ci-dessous des exemples d’erreurs :
+Lorsqu’un lot échoue, le processus s’arrête et renvoie un état `Failure`. La raison de son échec peut être identifiée dans la section `errors` du payload. Vous trouverez ci-dessous des exemples d’erreurs :
 
 ```json
     "errors":[

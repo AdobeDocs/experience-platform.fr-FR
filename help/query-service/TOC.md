@@ -5,10 +5,10 @@ breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: bb95e0aa8ee92aee5a2f126d85e78308e652a061
+source-git-commit: 3e4fe58deb48622129c919b8c4a93ba4e57c4338
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 83%
+source-wordcount: '323'
+ht-degree: 82%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 83%
       - [Fonctionnalités de conception pour ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Exportation des données dans des environnements ML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Workflow d’enrichissement de pipeline de données AI/ML de bout en bout](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
-- Cas d’utilisation {#use-cases}
+- Exemples pratiques {#use-cases}
    - [Vue d’ensemble](use-cases/overview.md)
    - [Navigation abandonnée](use-cases/abandoned-browse.md)
    - [Analyse de l’attribution](use-cases/attribution-analysis.md)
@@ -47,6 +47,7 @@ ht-degree: 83%
    - [Créer un rapport de tendance d’événements](use-cases/trended-report-of-events.md)
    - [Analyse du consentement](use-cases/consent-analysis.md)
    - [Valeur durée de vie client](use-cases/customer-lifetime-value.md)
+   - [Exploration des données](./use-cases/data-exploration.md)
    - [Jeux de données dérivés basés sur le décile](use-cases/deciles-use-case.md)
    - [Correspondance approximative](use-cases/fuzzy-match.md)
    - [Répertorier les pages vues d’un utilisateur ou d’une utilisatrice](use-cases/list-visitor-sessions.md)
