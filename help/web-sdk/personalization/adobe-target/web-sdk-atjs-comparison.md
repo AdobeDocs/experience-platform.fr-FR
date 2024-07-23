@@ -3,9 +3,9 @@ title: Comparaison d’at.js au SDK Web Experience Platform
 description: Découvrez comment comparer les fonctionnalités d’at.js au SDK Web Experience Platform
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;champ de décision;fragment de code de masquage préalable;vec;compositeur d’expérience d’après les formulaires;xdm;audiences;décisions;portée;schéma;schéma;diagramme système;diagramme
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: b50ea35bf0e394298c0c8f0ffb13032aaa1ffafb
 workflow-type: tm+mt
-source-wordcount: '2175'
+source-wordcount: '2182'
 ht-degree: 4%
 
 ---
@@ -614,20 +614,42 @@ alloy("sendEvent", {
 Cet exemple effectue le suivi d’un événement déclenché après l’exécution d’une action spécifique, comme un clic sur un bouton.
 Vous pouvez ajouter d’autres paramètres personnalisés par le biais de l’objet de données `__adobe.target`.
 
+Vous pouvez également ajouter l’objet XDM `commerce`.
+
 ```js
-//replicates an at.js trackEvent call
 alloy("sendEvent", {
-    "type": "decisioning.propositionDisplay",
     "xdm": {
         "_experience": {
             "decisioning": {
-                "propositions": [{
-                    "scope": "sumbitButtonClick" // Or any mbox/location name you want to use in Adobe Target
-                }]
+                "propositions": [
+                    {
+                        "scope": "orderConfirm" //example scope name
+                    }
+                ],
+                "propositionEventType": {
+                    "display": 1
+                }
+            }
+        },
+        "eventType": "decisioning.propositionDisplay"
+    },
+    "commerce": {
+        "order": {
+            "purchaseID": "a8g784hjq1mnp3",
+            "purchaseOrderNumber": "VAU3123",
+            "currencyCode": "USD",
+            "priceTotal": 999.98
+        }
+    },
+    "data": {
+        "__adobe": {
+            "target": {
+                "pageType": "Order Confirmation",
+                "user.categoryId": "Insurance"
             }
         }
     }
-});
+})
 ```
 
 ## Comment déclencher un changement d’affichage dans une application d’une seule page
