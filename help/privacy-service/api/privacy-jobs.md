@@ -5,7 +5,7 @@ title: Point de terminaison de l’API Privacy Jobs
 description: Découvrez comment gérer les tâches de confidentialité pour les applications Experience Cloud à l’aide de l’API Privacy Service.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: e8e8a9267ddcf7ee9d1d199da8d157ed5f36d344
+source-git-commit: 341cc4cb150717f08b2e59412ef58fbd6f7b3450
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 45%
@@ -42,7 +42,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | Paramètre | Description |
 | --- | --- |
-| `{REGULATION}` | Le type de réglementation pour lequel vous souhaitez effectuer une requête. Les valeurs acceptées sont les suivantes : <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`gdpr` - Remarque : Ceci est également utilisé pour les demandes liées aux **réglementations ccpa**.</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda_usa`</li><li>`nzpa_nzl`</li><li>`pdpa_tha`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Pour plus d’informations sur les réglementations de confidentialité représentées par les valeurs ci-dessus, consultez la présentation des [réglementations prises en charge](../regulations/overview.md). |
+| `{REGULATION}` | Le type de réglementation pour lequel vous souhaitez effectuer une requête. Les valeurs acceptées sont les suivantes : <ul><li>`apa_aus`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`fdbr_usa`</li><li>`gdpr` - Remarque : Ceci est également utilisé pour les demandes liées aux **réglementations ccpa**.</li><li>`hipaa_usa`</li><li>`lgpd_bra`</li><li>`mhmda_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Pour plus d’informations sur les réglementations de confidentialité représentées par les valeurs ci-dessus, consultez la présentation des [réglementations prises en charge](../regulations/overview.md). |
 | `{PAGE}` | La page de données à afficher à l’aide d’une numérotation basée sur 0. La valeur par défaut est de `0`. |
 | `{SIZE}` | Le nombre de résultats à afficher sur chaque page. `100` est la valeur par défaut et `1000` est le maximum. Dépasser le maximum entraîne le code d’erreur 400 dans l’API. |
 | `{status}` | Le comportement par défaut consiste à inclure tous les états. Si vous spécifiez un type d’état, la requête renvoie uniquement les tâches de confidentialité correspondant à ce type d’état. Les valeurs acceptées sont les suivantes : <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -51,10 +51,6 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 | `{filterDate}` | Ce paramètre limite les résultats aux résultats traités à une date spécifiée. Il accepte le format AAAA-MM-JJ. Le système peut revenir sur les 45 derniers jours. |
 
 {style="table-layout:auto"}
-
-<!-- Not released yet:
-<li>`pdpd_vnm`</li> 
- -->
 
 **Requête**
 

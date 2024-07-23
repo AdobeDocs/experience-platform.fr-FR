@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologie des règlements sur la confidentialité
 description: Ce document fournit des définitions des termes clés liés aux réglementations de confidentialité prises en charge par Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: be219530f33209cb4f3fe70425bb293edff4b309
 workflow-type: tm+mt
-source-wordcount: '1842'
+source-wordcount: '2020'
 ht-degree: 2%
 
 ---
@@ -71,6 +71,8 @@ Ce document fournit des définitions des termes clés liés aux réglementations
 
 **Système de filtrage** : tout ensemble spécifique de données personnelles accessible selon des critères spécifiques ou pouvant être consulté.
 
+**DBR** : le [!DNL Florida Digital Bill of Rights] (DBR) est une loi qui accorde aux résidents de Floride les droits d&#39;accès, de correction, de suppression et de copie de leurs données personnelles. Elle exige la transparence des pratiques de données, autorise les désinscriptions pour la vente de données ou la publicité ciblée et interdit la surveillance non autorisée. Le département des affaires juridiques de Floride applique ces droits, exigeant des contrôleurs de données qu’ils répondent aux demandes dans les 45 jours.
+
 ## G
 
 **RGPD** : [!DNL General Data Protection Regulation] (RGPD) est un cadre juridique qui définit des lignes directrices pour la collecte et le traitement des informations personnelles des individus au sein de l’Espace économique européen (EEE). Le RGPD énonce les principes de la gestion des données et les droits des individus, tout en prévoyant des amendes susceptibles d’être calculées sur la base des recettes. Le RGPD couvre toutes les entreprises qui traitent les données des citoyens de l’EEE. Il s’agit donc d’une réglementation essentielle pour les agents de conformité des entreprises dans les banques, les assurances et d’autres sociétés financières.
@@ -107,13 +109,11 @@ Ce document fournit des définitions des termes clés liés aux réglementations
 
 ## O
 
+**OCPA** : la législation de l’Oregon Consumer Privacy Act (OCPA) accorde aux résidents de l’Oregon des droits clés sur leurs données personnelles, y compris les droits de connaître, corriger, supprimer et obtenir une copie de leurs données. Elle impose des obligations strictes aux entreprises, les obligeant à fournir des avis détaillés de confidentialité, à obtenir le consentement pour certaines utilisations des données et à mettre en oeuvre une protection accrue des informations sensibles. La législation vise à équilibrer la vie privée des consommateurs avec les intérêts commerciaux.
+
 ## P
 
 **PDPA** : le [!DNL Personal Data Protection Act] de Thaïlande (PDPA) a été introduit pour protéger les propriétaires de données thaïlandais de la collecte, de l’utilisation ou de la divulgation illégale de leurs données personnelles. Inspirée par le RGPD de l&#39;Union européenne, la réglementation accorde aux citoyens thaïlandais le droit de demander l&#39;accès à leurs données personnelles stockées ou de les supprimer.
-
-<!-- Not yet released:
-**PDPD**: The [!DNL Personal Data Protection Decree] of Vietnam (PDPD) ...  
--->
 
 **Données personnelles** : toute information relative à une personne physique ou à un &quot;sujet des données&quot;, qui peut être utilisée pour identifier directement ou indirectement la personne.
 
@@ -152,6 +152,8 @@ Ce document fournit des définitions des termes clés liés aux réglementations
 **Autorité de surveillance** : autorité publique qui est établie par un État membre conformément à l’article 46.
 
 ## T
+
+**TDPSA** : la loi TDPSA (Texas Data Privacy and Security Act) est une législation complète qui protège les droits sur les données personnelles des résidents du Texas. Il accorde aux individus le droit d’accéder, de corriger, de supprimer et d’obtenir des copies de leurs données et de se désinscrire des ventes de données et de la publicité ciblée. Les entreprises qui enfreignent cette législation peuvent faire l&#39;objet de sanctions financières.
 
 **Trilogues** : les trilogues sont des négociations informelles entre la Commission européenne, le Parlement européen et le Conseil de l&#39;Union européenne. Ces négociations ont généralement lieu à la suite des premières lectures de la législation proposée afin de convenir plus rapidement d&#39;un texte de compromis à adopter.
 s&#39;entendre plus rapidement sur l&#39;adoption d&#39;un compromis.

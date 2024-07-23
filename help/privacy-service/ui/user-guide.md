@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gestion des tâches liées à la confidentialité dans l’interface utilisateur du Privacy Service
 description: Découvrez comment utiliser l’interface utilisateur du Privacy Service pour coordonner et surveiller les demandes d’accès à des informations personnelles dans différentes applications Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 8ba06a5d572310e2822a5b3c9f82ff0721540f69
+source-git-commit: 341cc4cb150717f08b2e59412ef58fbd6f7b3450
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '1728'
 ht-degree: 46%
 
 ---
@@ -43,20 +43,19 @@ Le tableau de bord de l’interface utilisateur de [!DNL Privacy Service] fourni
 | [!UICONTROL CCPA] | Le [!DNL California Consumer Privacy Act] |
 | [!UICONTROL CPRA_USA] | Le [!DNL California Consumer Privacy Rights Act (CPRA)] |
 | [!UICONTROL CTDPA] | Le [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL DBR_USA] | Le [!DNL Florida Digital Bill of Rights] |
 | [!UICONTROL GDPR] | Les [!DNL General Data Protection Regulation] de l&#39;Union européenne |
 | [!UICONTROL HIPAA_AUS] | Le [!DNL Health Insurance Portability and Accountability Act] |
 | [!UICONTROL LGPD_BRA] | [!DNL Lei Geral de Proteção de Dados] du Brésil |
 | [!UICONTROL MHMDA] | Le [!DNL Washington My Health My Data Act] |
 | [!UICONTROL NZPA_NZL] | La Nouvelle-Zélande [!DNL Privacy Act] |
+| [!UICONTROL OCPA_USA] | Le [!DNL Oregon Consumer Privacy Act] |
 | [!UICONTROL PDPA_THA] | [!DNL Personal Data Protection Act] de la Thaïlande |
+| [!UICONTROL TDPSA_USA] | Le [!DNL Texas Data Privacy and Security Act] |
 | [!UICONTROL UCPA] | Le [!DNL Utah Consumer Privacy Act] |
 | [!UICONTROL VCDPA_USA] | Le [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
-
-<!--Not released yet:
-| [!UICONTROL PDPA_VNM] | Vietnam's [!DNL Personal Data Protection Decree] |
- -->
 
 >[!NOTE]
 >
