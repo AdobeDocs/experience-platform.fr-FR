@@ -1,11 +1,11 @@
 ---
 title: Méthodes de débogage
 description: Découvrez comment activer/désactiver les fonctionnalités de débogage dans le SDK Web.
-keywords: débogage du sdk web;débogage;configurer;commande de configuration;commande de débogage;edgeConfigId;setDebug;debugEnabled;debug;
+keywords: débogage du sdk web;débogage;commande debug;setDebug;debugEnabled;debug
 exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '276'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ Définissez la valeur booléenne `debugEnabled` sur true lors de la configuratio
 
 ```js
 alloy("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "debugEnabled": true
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
+  debugEnabled: true
 });
 ```
 

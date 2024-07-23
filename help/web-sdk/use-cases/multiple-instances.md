@@ -1,12 +1,12 @@
 ---
 title: Utilisation de plusieurs instances de SDK Web
 description: Découvrez comment interagir avec plusieurs propriétés du SDK Web Experience Platform.
-keywords: plusieurs propriétés;configurer;sendEvent;edgeConfigId;orgId;
+keywords: propriétés multiples
 exl-id: e07afb0d-3490-414f-bc9c-f71bc04fe664
-source-git-commit: f75dcfc945be2f45c1638bdd4d670288aef6e1e6
+source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
 workflow-type: tm+mt
-source-wordcount: '219'
-ht-degree: 63%
+source-wordcount: '215'
+ht-degree: 64%
 
 ---
 
@@ -38,24 +38,24 @@ En suivant l’exemple ci-dessus, vous pouvez exécuter des commandes à l’aid
 
 ```javascript
 titanium("configure", {
-  "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-  "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg"
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg"
 });
 
 titanium("sendEvent", {
-  "data": {
-    "key": "value"
+  data: {
+    key: "value"
   }
 });
 
 copper("configure", {
-  "edgeConfigId": "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
-  "orgId": "ADB3NUMBERSANDLETTERS2@AdobeOrg"
+  datastreamId: "f46e981f-fd03-4bdd-a9d9-73ce4447f870",
+  orgId: "ADB3NUMBERSANDLETTERS2@AdobeOrg"
 });
 
 copper("sendEvent", {
-  "data": {
-    "key": "value"
+  data: {
+    key: "value"
   }
 });
 ```
@@ -64,4 +64,4 @@ Veillez à exécuter la commande `configure` pour chaque instance avant d’exé
 
 >[!IMPORTANT]
 >
->Pour éviter tout conflit avec les cookies, chaque instance du SDK Web doit disposer de son propre `edgeConfigId` unique et de son propre `orgId` unique.
+>Pour éviter tout conflit avec les cookies, chaque instance du SDK Web doit disposer de son propre `datastreamId` unique et de son propre `orgId` unique.

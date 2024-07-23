@@ -1,13 +1,13 @@
 ---
 title: clickCollectionEnabled
 description: Découvrez comment configurer le SDK Web pour déterminer si les données de clic sur les liens sont automatiquement collectées.
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+exl-id: e91b5bc6-8880-4884-87f9-60ec8787027e
+source-git-commit: d3be2a9e75514023a7732a1c3460f8695ef02e68
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
-
 
 # `clickCollectionEnabled`
 
@@ -33,14 +33,13 @@ Dans tous les cas, `xdm.web.webInteraction.name` est défini sur l’étiquette 
 
 ## Activation du suivi automatique des liens à l’aide de l’extension de balise SDK Web {#tag-extension}
 
-Cochez la case **[!UICONTROL Activer la collecte de données de clic]** lors de la [configuration de l’extension de balise](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).
+Cette variable est automatiquement gérée par l’extension de balise ; vous n’avez pas besoin de la définir explicitement. Si l’un des éléments suivants est sélectionné lors de la [configuration de l’extension de balise](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md), les données de suivi des liens applicables sont collectées :
 
-1. Connectez-vous à [experience.adobe.com](https://experience.adobe.com?lang=fr) à l’aide de vos informations d’identification Adobe ID.
-1. Accédez à **[!UICONTROL Collecte de données]** > **[!UICONTROL Balises]**.
-1. Sélectionnez la propriété de balise de votre choix.
-1. Accédez à **[!UICONTROL Extensions]**, puis cliquez sur **[!UICONTROL Configurer]** sur la carte [!UICONTROL SDK Web Adobe Experience Platform].
-1. Faites défiler l’écran jusqu’à la section [!UICONTROL Collecte de données], puis cochez la case **[!UICONTROL Activer la collecte de données de clic]**.
-1. Cliquez sur **[!UICONTROL Enregistrer]**, puis publiez vos modifications.
+* [!UICONTROL Collecter les clics sur les liens internes]
+* [!UICONTROL Collecter les clics sur les liens externes]
+* [!UICONTROL Collecter les clics sur les liens de téléchargement]
+
+Voir [`clickCollection`](clickcollection.md) pour plus d’informations.
 
 ## Activation du suivi automatique des liens à l’aide de la bibliothèque JavaScript du SDK Web {#library}
 
@@ -48,7 +47,7 @@ Définissez la valeur booléenne `clickCollectionEnabled` lors de l’exécution
 
 ```js
 alloy(configure, {
-  edgeConfigId: "ebebf826-a01f-4458-8cec-ef61de241c93",
+  datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
   clickCollectionEnabled: false
 });
