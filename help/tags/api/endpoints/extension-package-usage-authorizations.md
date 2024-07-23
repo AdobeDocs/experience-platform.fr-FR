@@ -1,13 +1,13 @@
 ---
 title: Point de terminaison des autorisations d’utilisation du package d’extension
 description: Découvrez comment effectuer des appels au point de terminaison /extension_package_usage des autorisations dans l’API Reactor.
-source-git-commit: fdf01451527e2fab8eb6e6f9d7b4901a85381450
+exl-id: ad3fb704-7d2f-45ec-b80b-ea4d327f2205
+source-git-commit: 9cdd349e0eccb4498d88f24a84b0f1c116b0adfe
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 16%
 
 ---
-
 
 # Point d’entrée des autorisations d’utilisation des modules d’extension
 
@@ -185,7 +185,7 @@ Une réponse réussie renvoie les détails de l’autorisation d’utilisation d
 >
 >Dans l’exemple de réponse ci-dessus, l’autorisation se trouve actuellement à l’étape `pending_approval` . Avant d’utiliser le package d’extension, l’organisation doit approuver l’autorisation. Les utilisateurs de l’organisation peuvent parcourir le package d’extension privé pendant que l’autorisation est en attente d’approbation, mais ils ne peuvent pas l’installer et ne peuvent pas le trouver dans leur catalogue d’extensions.
 
-## Récupérer une liste des autorisations d’utilisation des packages d’extension {#list_authorizations}
+## Récupérer une liste des autorisations d’utilisation des packages d’extension {#list-authorizations}
 
 Vous pouvez récupérer une liste des autorisations d’utilisation de package d’extension en effectuant une requête de GET.
 
@@ -386,7 +386,7 @@ Une réponse réussie renvoie les détails de l’autorisation d’utilisation d
 >
 >Une fois l’autorisation approuvée, votre entreprise peut installer le package d’extension sur vos propriétés.
 
-## Récupérer les données du package d’extension pour une autorisation d’utilisation de package d’extension {#retrieve_data}
+## Récupérer les données du package d’extension pour une autorisation d’utilisation de package d’extension {#retrieve-data}
 
 Vous pouvez récupérer les données du package d’extension pour une autorisation d’utilisation de package d’extension en effectuant une demande de GET.
 

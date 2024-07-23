@@ -6,9 +6,9 @@ user-guide-description: Découvrez comment déployer et gérer des balises d’a
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: aca7597d524633e86d88cc3b40f292c8d1673839
+source-git-commit: 5cbc2f6809156bc1a554154527ff2c5e35d3a922
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '773'
 ht-degree: 97%
 
 ---
@@ -316,6 +316,7 @@ ht-degree: 97%
       * [ID de descripteur de délégué](./api/guides/delegate-descriptor-ids.md)
       * [Chiffrement des valeurs](./api/guides/encrypting-values.md)
       * [Traitement des erreurs](./api/guides/error-handling.md)
+      * [Partage de packages d’extension privés](./api/guides/extension-packages.md)
       * [Filtrage des réponses](./api/guides/filtering.md)
       * [Pagination des réponses](./api/guides/pagination.md)
       * [Tri des réponses](./api/guides/sorting.md)
