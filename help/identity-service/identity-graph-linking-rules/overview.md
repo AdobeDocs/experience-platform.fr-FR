@@ -3,9 +3,9 @@ title: Présentation des règles de liaison de graphiques d’identités
 description: Découvrez les règles de liaison de graphique d’identités dans Identity Service.
 badge: Version bêta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1177'
 ht-degree: 1%
 
 ---
@@ -14,12 +14,16 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Cette fonctionnalité n’est pas encore disponible ; le programme bêta pour les règles de liaison de graphiques d’identités devrait commencer en juillet sur les environnements de test de développement. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation.
+>Les règles de liaison de graphiques d’identités sont actuellement en version bêta. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
 
 ## Table des matières 
 
 * [Vue d’ensemble](./overview.md)
 * [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
+* [Priorité d’espace de noms](./namespace-priority.md)
+* [Interface utilisateur de la simulation graphique](./graph-simulation.md)
+* [Interface utilisateur des paramètres d’identité](./identity-settings-ui.md)
+* [Exemples de configurations de graphique](./configuration.md)
 * [Exemples de scénarios](./example-scenarios.md)
 
 Avec Adobe Experience Platform Identity Service et Real-time Customer Profile, il est facile de supposer que vos données sont parfaitement ingérées et que tous les profils fusionnés représentent une seule personne par le biais d’un identifiant de personne, tel qu’un identifiant CRM. Cependant, il existe des scénarios possibles où certaines données peuvent tenter de fusionner plusieurs profils disparates en un seul profil (&quot;effondrement du graphique&quot;). Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par le biais des règles de liaison des graphiques d’identités et permettre une personnalisation précise pour vos utilisateurs.

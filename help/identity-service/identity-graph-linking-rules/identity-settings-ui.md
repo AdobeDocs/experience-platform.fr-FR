@@ -2,10 +2,11 @@
 title: Interface utilisateur des paramètres d’identité
 description: Découvrez comment utiliser l’interface utilisateur des paramètres d’identité.
 badge: Version bêta
-source-git-commit: 72773f9ba5de4387c631bd1aa0c4e76b74e5f1dc
+exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
+source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 0%
+source-wordcount: '517'
+ht-degree: 2%
 
 ---
 
@@ -13,7 +14,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Cette fonctionnalité n’est pas encore disponible ; le programme bêta pour les règles de liaison de graphiques d’identités devrait commencer en juillet sur les environnements de test de développement. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation.
+>Les règles de liaison de graphiques d’identités sont actuellement en version bêta. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
 
 Les paramètres d’identité sont une fonctionnalité de l’interface utilisateur du service Adobe Experience Platform Identity que vous pouvez utiliser pour désigner des espaces de noms uniques et configurer la priorité des espaces de noms.
 

@@ -3,9 +3,9 @@ title: Priorité d’espace de noms
 description: Découvrez la priorité des espaces de noms dans Identity Service.
 badge: Version bêta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 5d19a22dc8d1b7f0151008d14b2f5bf89c85c638
+source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
 workflow-type: tm+mt
-source-wordcount: '1574'
+source-wordcount: '1567'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->Cette fonctionnalité n’est pas encore disponible ; le programme bêta pour les règles de liaison de graphiques d’identités devrait commencer en juillet sur les environnements de test de développement. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation.
+>Les règles de liaison de graphiques d’identités sont actuellement en version bêta. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
 
 Chaque mise en oeuvre client est unique et personnalisée pour répondre aux objectifs d’une organisation spécifique. Par conséquent, l’importance d’un espace de noms donné varie d’un client à l’autre. Voici des exemples concrets :
 

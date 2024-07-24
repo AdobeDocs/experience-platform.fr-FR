@@ -3,9 +3,9 @@ title: Algorithme d’optimisation des identités
 description: Découvrez l’algorithme d’optimisation des identités dans Identity Service.
 badge: Version bêta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 5d19a22dc8d1b7f0151008d14b2f5bf89c85c638
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1565'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Cette fonctionnalité n’est pas encore disponible ; le programme bêta pour les règles de liaison de graphiques d’identités devrait commencer en juillet sur les environnements de test de développement. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation.
+>Les règles de liaison de graphiques d’identités sont actuellement en version bêta. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
 
 L’algorithme d’optimisation des identités est un algorithme graphique d’Identity Service qui permet de s’assurer qu’un graphique d’identités est représentatif d’une seule personne et, par conséquent, empêche la fusion indésirable d’identités sur Real-time Customer Profile.
 
@@ -162,6 +162,7 @@ Consultez le diagramme ci-dessous pour mieux comprendre le fonctionnement de l�
 Pour plus d’informations sur les règles de liaison des graphiques d’identités, consultez la documentation suivante :
 
 * [Présentation des règles de liaison de graphiques d’identités](./overview.md)
+* [Priorité d’espace de noms](./namespace-priority.md)
 * [Exemples de scénarios de configuration des règles de liaison de graphiques d’identités](./example-scenarios.md)
 * [Logique de liaison d’identités](../features/identity-linking-logic.md)
 * [Identity Service et Real-time Customer Profile](../identity-and-profile.md)

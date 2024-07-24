@@ -3,10 +3,10 @@ title: Guide de l’interface utilisateur de simulation graphique
 description: Découvrez comment utiliser la simulation graphique dans l’interface utilisateur d’Identity Service.
 badge: Version bêta
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 4c49bec7974dafe18d18deded6ddc936ece47dc3
+source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
 workflow-type: tm+mt
-source-wordcount: '1438'
-ht-degree: 1%
+source-wordcount: '1436'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Cette fonctionnalité n’est pas encore disponible ; le programme bêta pour les règles de liaison de graphiques d’identités devrait commencer en juillet sur les environnements de test de développement. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation.
+>Les règles de liaison de graphiques d’identités sont actuellement en version bêta. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
 
 [!DNL Graph Simulation] est un outil de l’interface utilisateur d’Identity Service que vous pouvez utiliser pour simuler le comportement d’un graphique d’identités en fonction d’une combinaison particulière d’identités et de la manière dont vous configurez l’ [algorithme d’optimisation des identités](./identity-optimization-algorithm.md).
 
@@ -172,6 +172,8 @@ Dans l’exemple de graphique ci-dessous, une ligne pointillée existe entre `{E
 
 En lisant ce document, vous savez maintenant comment utiliser l’outil [!DNL Graph Simulation] pour mieux comprendre comment vos données d’identité sont traitées selon un ensemble particulier de règles et de configurations. Pour plus d’informations, lisez les documents suivants :
 
-* [Règles de liaison de graphiques d’identités](overview.md)
-* [Algorithme d’optimisation des identités](identity-optimization-algorithm.md)
-* [Priorité d’espace de noms](namespace-priority.md)
+* [Règles de liaison de graphiques d’identités](./overview.md)
+* [Guide de configuration](./configuration.md)
+* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
+* [Priorité d’espace de noms](./namespace-priority.md)
+* [Exemples de configurations de graphique](./example-configurations.md)

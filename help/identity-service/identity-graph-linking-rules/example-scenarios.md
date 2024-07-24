@@ -1,16 +1,16 @@
 ---
-title: Exemples De Scénarios De Configuration Des Paramètres D’Identité
-description: Découvrez les exemples de scénarios de configuration des paramètres d’identité.
+title: Exemples De Scénarios Client Résolus Par Les Règles De Liaison De Graphique D’Identité
+description: Découvrez des exemples de scénarios client résolus par des règles de liaison de graphiques d’identités.
 badge: Version bêta
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: f1779ee75c877649a69f9fa99f3872aea861beca
+source-git-commit: be6fdb7e23ed4769ab4ee7ef72532296f020f4a4
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 1%
 
 ---
 
-# Exemples de scénarios de configuration des règles de liaison de graphiques d’identités
+# Exemples de scénarios client résolus par des règles de liaison de graphiques d’identités
 
 >[!AVAILABILITY]
 >
@@ -30,22 +30,22 @@ Il existe des cas où plusieurs connexions peuvent se produire sur un seul appar
 
 ![shared-devices](../images/identity-settings/shared-devices.png)
 
-Dans ce cas, d’un point de vue graphique, sans limites activées, un seul ECID est lié à plusieurs identifiants CRM.
+Dans ce cas, d’un point de vue graphique, sans limites activées, un seul ECID est lié à plusieurs CRMID.
 
 Avec les règles de liaison de graphiques d’identités, vous pouvez :
 
-* Configurez l’identifiant utilisé pour la connexion en tant qu’identifiant unique. Par exemple, vous pouvez limiter un graphique pour stocker une seule identité avec un espace de noms d’identifiant CRM, puis définir cet identifiant CRM comme identifiant unique d’un appareil partagé.
-   * Ce faisant, vous pouvez vous assurer que les identifiants CRM ne sont pas fusionnés par l’ECID.
+* Configurez l’identifiant utilisé pour la connexion en tant qu’identifiant unique. Par exemple, vous pouvez limiter un graphique pour stocker une seule identité avec un espace de noms CRMID, et ainsi définir ce CRMID en tant qu’identifiant unique d’un appareil partagé.
+   * Ce faisant, vous pouvez vous assurer que les CRMID ne sont pas fusionnés par l’ECID.
 
 ## Scénarios d’email/de téléphone non valides
 
-Il existe également des cas d’utilisateurs qui fournissent des valeurs fausses comme des numéros de téléphone et/ou des adresses électroniques lors de l’enregistrement. Dans ce cas, si les limites ne sont pas activées, les identités liées au téléphone/à l’email finiront par être liées à plusieurs identifiants CRM différents.
+Il existe également des cas d’utilisateurs qui fournissent des valeurs fausses comme des numéros de téléphone et/ou des adresses électroniques lors de l’enregistrement. Dans ce cas, si les limites ne sont pas activées, les identités liées au téléphone/à l’email finiront par être liées à plusieurs CRMID différents.
 
 ![invalid-email-phone](../images/identity-settings/invalid-email-phone.png)
 
 Avec les règles de liaison de graphiques d’identités, vous pouvez :
 
-* Configurez l’identifiant CRM, le numéro de téléphone ou l’adresse électronique comme identifiant unique et limitez ainsi une personne à un seul identifiant CRM, numéro de téléphone et/ou adresse électronique associée à son compte.
+* Configurez le CRMID, le numéro de téléphone ou l’adresse électronique comme identifiant unique et limitez ainsi une personne à un seul CRMID, numéro de téléphone et/ou adresse électronique associée à son compte.
 
 ## Valeurs d’identité erronées ou mauvaises
 
@@ -56,11 +56,11 @@ Dans certains cas, des valeurs d’identité erronées non uniques sont ingéré
 * Espace de noms du numéro de téléphone avec la valeur d’identité &quot;non spécifié&quot;.
    * Les numéros de téléphone ne doivent pas comporter de caractères alphabétiques.
 
-Ces identités peuvent entraîner la fusion de plusieurs identifiants CRM avec la &quot;mauvaise&quot; identité dans les graphiques suivants :
+Ces identités peuvent donner lieu aux graphiques suivants, où plusieurs CRMID sont fusionnés avec la &quot;mauvaise&quot; identité :
 
 ![bad-data](../images/identity-settings/bad-data.png)
 
-Avec les règles de liaison de graphiques d’identités, vous pouvez configurer l’identifiant CRM en tant qu’identifiant unique afin d’empêcher la réduction des profils indésirables en raison de ce type de données.
+Avec les règles de liaison de graphiques d’identités, vous pouvez configurer le CRMID en tant qu’identifiant unique afin d’empêcher la réduction des profils indésirables en raison de ce type de données.
 
 ## Étapes suivantes
 
