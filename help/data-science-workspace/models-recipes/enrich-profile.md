@@ -5,10 +5,10 @@ title: Enrichissement de Real-Time Customer Profile avec des insights d’appren
 type: Tutorial
 description: Ce document fournit un guide sur la manière d’enrichir Real-Time Customer Profile avec des insights d’apprentissage automatique.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: afa27069c7490848398c92973dd77810564b5993
 workflow-type: tm+mt
-source-wordcount: '577'
-ht-degree: 15%
+source-wordcount: '630'
+ht-degree: 14%
 
 ---
 
@@ -16,11 +16,13 @@ ht-degree: 15%
 
 Adobe Experience Platform [!DNL Data Science Workspace] fournit les outils et les ressources nécessaires pour créer, évaluer et utiliser des modèles d’apprentissage automatique afin de générer des prédictions et des insights sur les données. Lorsque des insights d’apprentissage automatique sont ingérés dans un jeu de données [!DNL Profile] activé, ces mêmes données sont également ingérées en tant qu’enregistrements [!DNL Profile] qui peuvent ensuite être segmentées à l’aide de [!DNL Adobe Experience Platform Segmentation Service].
 
+Le processus de segmentation dépend de la méthode d’évaluation de l’audience. Si une audience est configurée comme **diffusion en continu**, elle traitera toutes les nouvelles mises à jour écrites par le modèle dans le profil en temps réel. Cependant, si une audience est configurée pour l’évaluation **batch**, les nouvelles valeurs seront évaluées dans le lot suivant.
+
 Ce document fournit des liens vers des tutoriels qui vous permettent d’enrichir [!DNL Real-Time Customer Profile] de vos insights d’apprentissage automatique.
 
 ## Commencer
 
-Pour suivre les tutoriels ci-dessous, vous devez maîtriser l’ingestion de données [!DNL Profile] et la création de segments. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
+Pour suivre les tutoriels ci-dessous, vous devez maîtriser l’ingestion de données [!DNL Profile] et la création d’audiences. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit une représentation complète et unifiée de chaque client en fonction de données agrégées provenant de plusieurs sources.
 - [[!DNL Identity Service]](../../identity-service/home.md) : active [!DNL Real-Time Customer Profile] en rapprochant des identités de sources de données disparates ingérées dans Platform.
@@ -41,20 +43,20 @@ Si vous préférez composer un schéma à l’aide de l’API [!DNL Schema Regis
 
 Une fois votre schéma et votre jeu de données préparés, vous pouvez générer et ingérer des données de notation dans le jeu de données en effectuant des exécutions de notation à l’aide d’un modèle approprié.
 
-## Créez des segments à l’aide de [!DNL Segment Builder] {#create-segments-using-the-segment-builder}
+## Créer des audiences à l’aide de [!DNL Segment Builder] {#create-audiences-using-the-segment-builder}
 
-Une fois que vous avez généré et ingéré vos insights de données de notation pour votre jeu de données activé [!DNL Profile], vous pouvez créer des segments dynamiques à l’aide de [!DNL Segment Builder].
+Une fois que vous avez généré et ingéré vos insights de données de notation dans votre jeu de données activé [!DNL Profile], vous pouvez créer des audiences dynamiques à l’aide de [!DNL Segment Builder].
 
 [!DNL Segment Builder] fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données [!DNL Profile]. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données. Suivez le [[!DNL Segment Builder] guide de l’utilisateur](../../segmentation/ui/segment-builder.md) pour en savoir plus sur :
 
 - Création de définitions de segment à l’aide d’une combinaison d’attributs, d’événements et d’audiences existantes comme blocs de création.
-- Utilisation du canevas et des conteneurs du créateur de règles pour contrôler l’ordre d’exécution des règles de segmentation.
+- Utilisation du canevas et des conteneurs du créateur de règles pour contrôler l’ordre d’exécution des règles d’audience.
 - Affichage des estimations de votre audience potentielle, ce qui vous permet d’ajuster vos définitions de segment selon vos besoins.
 - Activation de toutes les définitions de segment pour la segmentation planifiée.
 - Activation de définitions de segment spécifiées pour la segmentation par flux.
 
 ## Étapes suivantes {#next-steps}
 
-Pour en savoir plus sur les segments et le [!DNL Segment Builder], consultez la [présentation de Segmentation Service](../../segmentation/home.md).
+Pour en savoir plus sur les audiences et le [!DNL Segment Builder], consultez la [présentation de Segmentation Service](../../segmentation/home.md).
 
 Pour en savoir plus sur [!DNL Real-Time Customer Profile], consultez la [présentation de Real-Time Customer Profile](../../profile/home.md)
