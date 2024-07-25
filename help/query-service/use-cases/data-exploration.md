@@ -1,9 +1,10 @@
 ---
 title: Exploration, dépannage et vérification de l’ingestion par lots avec SQL
-description: Découvrez comment comprendre et gérer le processus d’ingestion de données dans Adobe Experience Platform. Ce document explique comment vérifier les lots, gérer les erreurs et interroger les données ingérées.
-source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
+description: Découvrez comment comprendre et gérer le processus d’ingestion de données dans Adobe Experience Platform. Ce document explique comment vérifier les lots et interroger les données ingérées.
+exl-id: 8f49680c-42ec-488e-8586-50182d50e900
+source-git-commit: 692a061e3b2facbfafc65f966832230187f5244d
 workflow-type: tm+mt
-source-wordcount: '1215'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,6 @@ ht-degree: 0%
 
 Ce document explique comment vérifier et valider les enregistrements dans les lots ingérés avec SQL. Ce document vous explique comment :
 
-- Gestion des erreurs qui peuvent survenir pendant le processus d’ingestion
 - Accès aux métadonnées de lot du jeu de données
 - Dépannage et intégrité des données en interrogeant des lots
 
@@ -26,7 +26,6 @@ Pour mieux comprendre les concepts abordés dans ce document, vous devez connaî
 
 - **Ingestion de données** : consultez la [présentation de l’ingestion de données](../../ingestion/home.md) pour en savoir plus sur la manière dont les données sont ingérées dans Platform, y compris les différentes méthodes et processus impliqués.
 - **Ingestion par lots** : consultez la [présentation de l’API d’ingestion par lots](../../ingestion/batch-ingestion/overview.md) pour découvrir les concepts de base de l’ingestion par lots. Plus précisément, ce qu’est un &quot;lot&quot; et son fonctionnement dans le processus d’ingestion de données de Platform.
-- **Gestion des erreurs dans l’ingestion de données** : découvrez les [ différents types d’erreurs qui peuvent se produire ](../../ingestion/quality/error-diagnostics.md#retrieve-errors) lors de l’ingestion de données et [comment les gérer](../../ingestion/batch-ingestion/troubleshooting.md#what-if-a-batch-fails).
 - **Métadonnées système dans les jeux de données** : consultez la [présentation du service de catalogue](../../catalog/home.md) pour découvrir comment les champs de métadonnées système sont utilisés pour effectuer le suivi et interroger les données ingérées.
 - **Modèle de données d’expérience (XDM)** : consultez la [présentation de l’interface utilisateur des schémas](../../xdm/ui/overview.md) et les [&#39;basics of schema composition&#39;](../../xdm/schema/composition.md) pour en savoir plus sur les schémas XDM et sur la manière dont ils représentent et valident la structure et le format des données ingérées dans Platform.
 
@@ -57,11 +56,7 @@ Les résultats de cette requête sont présentés dans l&#39;image ci-dessous.
 
 Ces résultats montrent que le nombre de lots d’entrée ne correspond pas nécessairement au nombre de lots de sortie, car le système détermine le moyen le plus efficace de grouper et de stocker les données dans le lac de données.
 
-L’exemple suivant utilise un jeu de données différent pour illustrer ce point.
-
->[!NOTE]
->
->Si vous souhaitez essayer cet exemple, vous pouvez ingérer le fichier d’exemple fourni ([`drug_checkout_data`](../images/use-cases/drug_checkout_data.zip)) dans Platform et configurer votre mappage de schéma.
+Pour les besoins de cet exemple, on suppose que vous avez ingéré un fichier CSV dans Platform et créé un jeu de données appelé `drug_checkout_data`.
 
 Le fichier `drug_checkout_data` est un ensemble profondément imbriqué de 35 000 enregistrements. Utilisez l’instruction SQL `SELECT * FROM drug_orders;` pour prévisualiser le premier ensemble d’enregistrements du jeu de données `drug_orders` basé sur JSON.
 
@@ -97,7 +92,7 @@ Ensuite, validez et vérifiez les enregistrements ingérés dans le jeu de donn�
 
 >[!TIP]
 >
->Pour récupérer l’identifiant de lot et les enregistrements de requête associés à cet identifiant de lot, vous devez d’abord créer un lot dans Platform. Si vous souhaitez tester le processus vous-même, vous pouvez ingérer des données CSV dans Platform. Lisez le guide sur la façon de [mapper un fichier CSV à un schéma XDM existant à l’aide de recommandations générées par l’IA](../../ingestion/tutorials/map-csv/recommendations.md). Un [exemple de fichier CSV de profil](../images/use-cases/sample-profiles.csv) est disponible ici pour votre commodité.
+>Pour récupérer l’identifiant de lot et les enregistrements de requête associés à cet identifiant de lot, vous devez d’abord créer un lot dans Platform. Si vous souhaitez tester le processus vous-même, vous pouvez ingérer des données CSV dans Platform. Lisez le guide sur la façon de [mapper un fichier CSV à un schéma XDM existant à l’aide de recommandations générées par l’IA](../../ingestion/tutorials/map-csv/recommendations.md).
 
 Une fois que vous avez ingéré un lot, vous devez accéder à l’onglet [!UICONTROL Activité des jeux de données] pour le jeu de données dans lequel vous avez ingéré des données.
 
