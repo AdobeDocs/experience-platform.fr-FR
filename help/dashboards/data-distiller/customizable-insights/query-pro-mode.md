@@ -2,7 +2,7 @@
 title: Mode Query Pro
 description: Découvrez comment utiliser les requêtes SQL dans l’interface utilisateur de Adobe Experience Platform pour générer des graphiques pour vos tableaux de bord personnalisés.
 exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1060'
 ht-degree: 1%
@@ -35,7 +35,7 @@ Pour inclure [global](./filters/global-filter.md) ou [filtres de date](./filters
 >
 >Si vous souhaitez utiliser un filtre global, vous devez placer un paramètre de requête dans votre SQL, puis associer ce paramètre de requête au filtre global dans le compositeur de widgets. Dans la capture d’écran ci-dessous, `CONSENT_VALUE_FILTER` est utilisé dans le SQL comme paramètre de requête pour un filtre global. Pour plus d’informations sur la façon de procéder, consultez la [documentation sur les filtres globaux](./filters/global-filter.md#enable-global-filter) .
 
-Pour exécuter votre requête, sélectionnez l’icône d’exécution (![Icône d’exécution.](../../images/customizable-insights/run-icon.png)). L’éditeur de requêtes affiche l’onglet des résultats. Ensuite, pour confirmer votre configuration et ouvrir le compositeur de widget, sélectionnez **[!UICONTROL Sélectionner]**.
+Pour exécuter votre requête, sélectionnez l’icône d’exécution (![Icône d’exécution.](/help/images/icons/play.png)). L’éditeur de requêtes affiche l’onglet des résultats. Ensuite, pour confirmer votre configuration et ouvrir le compositeur de widget, sélectionnez **[!UICONTROL Sélectionner]**.
 
 >[!TIP]
 >
@@ -45,7 +45,7 @@ Pour exécuter votre requête, sélectionnez l’icône d’exécution (![Icône
 
 ## Renseigner le widget {#populate-widget}
 
-Le compositeur de widgets est maintenant renseigné avec les colonnes du code SQL exécuté. Le type de tableau de bord est indiqué dans le coin supérieur gauche ; dans ce cas, il s’agit de [!UICONTROL Saisie SQL manuelle]. Sélectionnez l’icône en forme de crayon (![Une icône en forme de crayon.](../../images/customizable-insights/edit-icon.png)) pour modifier le SQL à tout moment.
+Le compositeur de widgets est maintenant renseigné avec les colonnes du code SQL exécuté. Le type de tableau de bord est indiqué dans le coin supérieur gauche ; dans ce cas, il s’agit de [!UICONTROL Saisie SQL manuelle]. Sélectionnez l’icône en forme de crayon (![Une icône en forme de crayon.](/help/images/icons/edit.png)) pour modifier le SQL à tout moment.
 
 >[!TIP]
 >
@@ -57,13 +57,13 @@ Pour créer votre widget, utilisez les attributs répertoriés dans la colonne [
 
 ### Ajouter des attributs {#add-attributes}
 
-Pour ajouter un attribut à votre widget, sélectionnez l’icône plus (![A plus).](../../images/customizable-insights/add-icon.png)) en regard d’un nom d’attribut. Le menu déroulant qui s&#39;affiche vous permet d&#39;ajouter un attribut au graphique à partir des options déterminées par votre SQL. Les différents types de graphique disposent de différentes options, telles qu’une liste déroulante des axes X et Y.
+Pour ajouter un attribut à votre widget, sélectionnez l’icône plus (![A plus).](/help/images/icons/add-circle.png)) en regard d’un nom d’attribut. Le menu déroulant qui s&#39;affiche vous permet d&#39;ajouter un attribut au graphique à partir des options déterminées par votre SQL. Les différents types de graphique disposent de différentes options, telles qu’une liste déroulante des axes X et Y.
 
 Dans cet exemple de graphique en anneau, les options sont taille et couleur. La couleur ventile les résultats du graphique en anneau et la taille correspond à la mesure utilisée. Ajoutez un attribut au champ [!UICONTROL Color] pour diviser les résultats en différentes couleurs en fonction de leur composition.
 
 >[!TIP]
 >
->Sélectionnez l’icône de flèche vers le haut et vers le bas (![Icône de flèche vers le haut et vers le bas.](../../images/customizable-insights/switch-axis-icon.png)) pour changer la disposition des axes X et Y sur les graphiques à barres ou en courbes.
+>Sélectionnez l’icône de flèche vers le haut et vers le bas (![Icône de flèche vers le haut et vers le bas.](/help/images/icons/switch.png)) pour changer la disposition des axes X et Y sur les graphiques à barres ou en courbes.
 
 ![Le compositeur de widget avec la liste déroulante des icônes supplémentaires et les flèches de commutation surlignées.](../../images/customizable-insights/add-icon-and-switch-arrows.png)
 
@@ -73,7 +73,7 @@ Pour modifier le type de graphique ou de graphique de votre widget, sélectionne
 
 ## Propriétés du widget {#properties}
 
-Sélectionnez l’icône Propriétés (![Icône Propriétés .](../../images/customizable-insights/properties-icon.png)) dans le rail de droite pour ouvrir le panneau des propriétés. Dans le panneau [!UICONTROL Propriétés], saisissez un nom pour le widget dans le champ de texte **[!UICONTROL Titre du widget]**. Vous pouvez également renommer différents aspects de votre graphique.
+Sélectionnez l’icône Propriétés (![Icône Propriétés .](/help/images/icons/properties.png)) dans le rail de droite pour ouvrir le panneau des propriétés. Dans le panneau [!UICONTROL Propriétés], saisissez un nom pour le widget dans le champ de texte **[!UICONTROL Titre du widget]**. Vous pouvez également renommer différents aspects de votre graphique.
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ Sélectionnez **[!UICONTROL Modifier]** pour modifier l’intégralité de votre
 
 ![Tableau de bord personnalisé avec modification mise en surbrillance.](../../images/customizable-insights/edit-dashboard.png)
 
-Sélectionnez **[!UICONTROL Ajouter un filtre]** pour créer un [[!UICONTROL filtre de date]](#create-date-filter) ou un [[!UICONTROL filtre global]](#create-global-filter). Une fois créés, tous les filtres globaux et de date sont disponibles à partir de [l’icône de filtre](#select-global-filter) (![Icône de filtre.](../../images/customizable-insights/filter.png)) de votre tableau de bord.
+Sélectionnez **[!UICONTROL Ajouter un filtre]** pour créer un [[!UICONTROL filtre de date]](#create-date-filter) ou un [[!UICONTROL filtre global]](#create-global-filter). Une fois créés, tous les filtres globaux et de date sont disponibles à partir de [l’icône de filtre](#select-global-filter) (![Icône de filtre.](/help/images/icons/filter.png)) de votre tableau de bord.
 
 ![Un tableau de bord personnalisé avec le menu déroulant Ajouter un filtre en surbrillance.](../../images/customizable-insights/add-filter.png)
 

@@ -6,7 +6,7 @@ hide: true
 hidefromtoc: true
 role: Developer, Admin, User
 exl-id: 85944720-8551-491c-8991-dd9668beb0ca
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 1%
@@ -59,7 +59,7 @@ Grâce au contrôle d’accès au niveau de l’objet pour les destinations, lim
 Pour appliquer des libellés d’accès à un flux de données spécifique :
 
 1. Accédez à **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]** et localisez le flux de données de destination auquel vous souhaitez limiter l’accès des utilisateurs.
-1. Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez le contrôle ![Modifier les détails](/help/access-control/images/olac/key-icon.svg) **[!UICONTROL Appliquer les étiquettes d’accès]** pour ajouter de nouvelles étiquettes et gérer les étiquettes existantes pour le flux de données.
+1. Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez le contrôle ![Modifier les détails](/help/images/icons/key.png) **[!UICONTROL Appliquer les étiquettes d’accès]** pour ajouter de nouvelles étiquettes et gérer les étiquettes existantes pour le flux de données.
    ![Sélectionnez Appliquer les étiquettes d’accès dans la vue Parcourir de l’espace de travail des destinations.](/help/access-control/images/olac/apply-access-labels.png)
 1. Sélectionnez les étiquettes à ajouter au flux de données de destination et sélectionnez **[!UICONTROL Enregistrer]**.
    ![Sélectionnez les étiquettes d’accès dans qui doivent s’appliquer au flux de données de destination.](/help/access-control/images/olac/view-access-labels.png)

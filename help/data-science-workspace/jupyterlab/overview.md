@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de l’interface utilisateur de JupyterLab
 description: JupyterLab est une interface utilisateur web pour Project Jupyter et est étroitement intégré à Adobe Experience Platform. Elle fournit un environnement de développement interactif pour que les analystes de données puissent travailler avec les notebooks, le code et les données Jupyter. Ce document présente JupyterLab et ses fonctionnalités ainsi que des instructions pour effectuer des actions courantes.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1812'
 ht-degree: 99%
@@ -116,9 +116,9 @@ Dans [!DNL JupyterLab], sélectionnez l’icône d’engrenage dans le coin sup�
 
 ### Mettre fin à [!DNL JupyterLab] et redémarrer
 
-Dans [!DNL JupyterLab], vous pouvez mettre fin à votre session pour empêcher l’utilisation d’autres ressources. Commencez par sélectionner l’**icône d’alimentation** ![icône d’alimentation](../images/jupyterlab/user-guide/power_button.png), puis sélectionnez **[!UICONTROL Arrêter]** dans la fenêtre contextuelle qui s’affiche pour mettre fin à votre session. Les sessions Notebook se terminent automatiquement après 12 heures d’absence d’activité.
+Dans [!DNL JupyterLab], vous pouvez mettre fin à votre session pour empêcher l’utilisation d’autres ressources. Commencez par sélectionner l’**icône d’alimentation** ![icône d’alimentation](/help/images/icons/power.png), puis sélectionnez **[!UICONTROL Arrêter]** dans la fenêtre contextuelle qui s’affiche pour mettre fin à votre session. Les sessions Notebook se terminent automatiquement après 12 heures d’absence d’activité.
 
-Pour redémarrer [!DNL JupyterLab], sélectionnez l’**icône de redémarrage** ![icône de redémarrage](../images/jupyterlab/user-guide/restart_button.png) située directement à gauche de l’icône d’alimentation, puis sélectionnez **[!UICONTROL Redémarrer]** dans la fenêtre contextuelle qui s’affiche.
+Pour redémarrer [!DNL JupyterLab], sélectionnez l’**icône de redémarrage** ![icône de redémarrage](/help/images/icons/restart.png) située directement à gauche de l’icône d’alimentation, puis sélectionnez **[!UICONTROL Redémarrer]** dans la fenêtre contextuelle qui s’affiche.
 
 ![mettre fin à jupyterlab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 

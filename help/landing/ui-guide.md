@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de l’interface utilisateur de l’Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1795'
 ht-degree: 3%
@@ -75,17 +75,17 @@ Si vous sélectionnez le sélecteur, un menu déroulant des organisations auxque
 
 ### Changement d’applications
 
-L’élément suivant sur le côté droit de la navigation supérieure est le **sélecteur d’applications**, représenté par l’icône ![ du sélecteur d’applications](./images/user-guide/app-switcher-icon.png). Lorsque vous sélectionnez cette icône, vous pouvez basculer entre les applications d’Adobe auxquelles votre entreprise a accès (Experience Platform, Analytics, Assets, etc.).
+L’élément suivant sur le côté droit de la navigation supérieure est le **sélecteur d’applications**, représenté par l’icône ![ du sélecteur d’applications](/help/images/icons/apps.png). Lorsque vous sélectionnez cette icône, vous pouvez basculer entre les applications d’Adobe auxquelles votre entreprise a accès (Experience Platform, Analytics, Assets, etc.).
 
 ### Aide
 
-À droite du sélecteur d’applications se trouve le **menu d’aide et de support**, qui est représenté par l’icône ![ point d’interrogation/aide](./images/user-guide/help-icon.png). Lorsque vous sélectionnez cette icône, un menu contextuel s’affiche, contenant plusieurs ressources d’aide et d’assistance. L’onglet **[!UICONTROL Aide]** affiche la liste de la documentation appropriée pour la page sur laquelle vous vous trouvez actuellement. L’onglet **[!UICONTROL Assistance]** vous permet de créer un ticket d’assistance avec l’équipe d’assistance d’Adobe. L’onglet **[!UICONTROL Commentaires]** vous permet d’envoyer des commentaires sur Platform à Adobe.
+À droite du sélecteur d’applications se trouve le **menu d’aide et de support**, qui est représenté par l’icône ![ point d’interrogation/aide](/help/images/icons/help.png). Lorsque vous sélectionnez cette icône, un menu contextuel s’affiche, contenant plusieurs ressources d’aide et d’assistance. L’onglet **[!UICONTROL Aide]** affiche la liste de la documentation appropriée pour la page sur laquelle vous vous trouvez actuellement. L’onglet **[!UICONTROL Assistance]** vous permet de créer un ticket d’assistance avec l’équipe d’assistance d’Adobe. L’onglet **[!UICONTROL Commentaires]** vous permet d’envoyer des commentaires sur Platform à Adobe.
 
 ![](images/user-guide/homepage-help-clicked.png)
 
 ### Notifications et annonces
 
-Dans la **section des notifications**, qui est représentée par l’icône ![ {cloche/notifications et annonces](images/user-guide/notification-icon.png) . L’onglet **[!UICONTROL Notifications]** affiche des informations importantes sur le produit et d’autres mises à jour pertinentes, tandis que l’onglet **[!UICONTROL Annonces]** affiche des informations sur la maintenance du service.
+Dans la **section des notifications**, qui est représentée par l’icône ![ {cloche/notifications et annonces](/help/images/icons/bell.png) . L’onglet **[!UICONTROL Notifications]** affiche des informations importantes sur le produit et d’autres mises à jour pertinentes, tandis que l’onglet **[!UICONTROL Annonces]** affiche des informations sur la maintenance du service.
 
 ### Profil utilisateur
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les principes de base de la création et de l’édition de schémas dans l’interface utilisateur de l’Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
-source-wordcount: '3732'
+source-wordcount: '3736'
 ht-degree: 3%
 
 ---
@@ -117,7 +117,7 @@ Cochez la case en regard du nom du groupe de champs que vous souhaitez ajouter a
 
 >[!TIP]
 >
->Pour tout groupe de champs répertorié, vous pouvez pointer ou vous concentrer sur l’icône d’informations (![](../../images/ui/resources/schemas/info-icon.png)) pour afficher une brève description du type de données que le groupe de champs capture. Vous pouvez également sélectionner l’icône d’aperçu (![](../../images/ui/resources/schemas/preview-icon.png)) pour afficher la structure des champs que le groupe de champs fournit avant de décider de l’ajouter au schéma.
+>Pour tout groupe de champs répertorié, vous pouvez pointer ou vous concentrer sur l’icône d’informations (![icône d’information](/help/images/icons/info.png)) pour afficher une brève description du type de données que le groupe de champs capture. Vous pouvez également sélectionner l’icône d’aperçu (![icône d’aperçu](/help/images/icons/preview.png)) pour afficher la structure des champs fournis par le groupe de champs avant de décider de l’ajouter au schéma.
 
 Une fois que vous avez choisi vos groupes de champs, sélectionnez **[!UICONTROL Ajouter des groupes de champs]** pour les ajouter au schéma.
 
@@ -129,7 +129,7 @@ Une fois que vous avez choisi vos groupes de champs, sélectionnez **[!UICONTROL
 
 >[!NOTE]
 >
->Dans l’éditeur de schémas, les classes standard (générées par un Adobe) et les groupes de champs sont indiqués par l’icône de cadenas (![Icône de cadenas.](../../images/ui/explore/padlock-icon.png). Le cadenas s’affiche dans le rail de gauche en regard du nom de la classe ou du groupe de champs, ainsi qu’en regard de tout champ du diagramme de schéma qui fait partie d’une ressource générée par le système.
+>Dans l’éditeur de schémas, les classes standard (générées par un Adobe) et les groupes de champs sont indiqués par l’icône de cadenas (![Icône de cadenas.](/help/images/icons/lock-closed.png). Le cadenas s’affiche dans le rail de gauche en regard du nom de la classe ou du groupe de champs, ainsi qu’en regard de tout champ du diagramme de schéma qui fait partie d’une ressource générée par le système.
 >
 >![L’éditeur de schéma avec l’icône de cadenas mise en surbrillance](../../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -189,7 +189,7 @@ Sous **[!UICONTROL Nom du champ]**, commencez à saisir le nom du champ que vous
 
 Bien que certains champs standard portent le même nom, leur structure peut varier en fonction du groupe de champs d’où ils proviennent. Si un champ standard est imbriqué dans un objet parent dans la structure du groupe de champs, le champ parent sera également inclus dans le schéma si le champ enfant est ajouté.
 
-Sélectionnez l’icône d’aperçu (![Icône Aperçu](../../images/ui/resources/schemas/preview-icon.png)) en regard d’un champ standard pour afficher la structure de son groupe de champs et mieux comprendre comment il peut être imbriqué. Pour ajouter le champ standard au schéma, sélectionnez l’icône plus (![Icône Plus](../../images/ui/resources/schemas/add-icon.png)).
+Sélectionnez l’icône d’aperçu (![Icône Aperçu](/help/images/icons/preview.png)) en regard d’un champ standard pour afficher la structure de son groupe de champs et mieux comprendre comment il peut être imbriqué. Pour ajouter le champ standard au schéma, sélectionnez l’icône plus (![Icône Plus](/help/images/icons/add-circle.png)).
 
 ![Ajouter un champ standard](../../images/ui/resources/schemas/add-standard-field.png)
 

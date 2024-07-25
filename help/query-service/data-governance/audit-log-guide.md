@@ -2,7 +2,7 @@
 title: Intégration du journal d’audit de Query Service
 description: Les journaux d’audit de Query Service conservent des enregistrements pour diverses actions de l’utilisateur afin de former un journal d’audit pour la résolution des problèmes ou le respect des politiques de gestion des données d’entreprise et des exigences réglementaires. Ce tutoriel présente un aperçu des fonctionnalités de journal d’audit spécifiques à Query Service.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: cde7c99291ec34be811ecf3c85d12fad09bcc373
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 8%
@@ -31,7 +31,7 @@ Les catégories de journaux d’audit fournies par [!DNL Query Service] sont les
 
 ## Exécution d’un journal d’audit [!DNL Query Service] {#perform-an-audit-log}
 
-Pour effectuer un audit pour les activités [!DNL Query Service], sélectionnez **[!UICONTROL Audits]** dans le volet de navigation de gauche, suivi de l’icône d’entonnoir (![Icône de filtre).](../images/audit-log/filter.png)) pour afficher une liste de contrôles de filtre permettant d’affiner les résultats.
+Pour effectuer un audit pour les activités [!DNL Query Service], sélectionnez **[!UICONTROL Audits]** dans le volet de navigation de gauche, suivi de l’icône d’entonnoir (![Icône de filtre).](/help/images/icons/filter.png)) pour afficher une liste de contrôles de filtre permettant d’affiner les résultats.
 
 ![Le tableau de bord du journal d’audit de l’interface utilisateur de Platform avec &quot;Audits&quot; dans le volet de navigation de gauche et les contrôles de filtre mis en surbrillance.](../images/audit-log/filter-controls.png)
 

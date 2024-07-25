@@ -2,7 +2,7 @@
 title: Journaux de requête
 description: Les logs de requête sont générés automatiquement chaque fois qu’une requête est exécutée et sont disponibles via l’interface utilisateur pour faciliter la résolution des problèmes. Ce document explique comment utiliser et parcourir la section Journaux de Query Service de l’interface utilisateur.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1012'
 ht-degree: 3%
@@ -31,7 +31,7 @@ Pour vérifier les journaux de requête, sélectionnez [!UICONTROL Requêtes] po
 
 ## Personnalisation et recherche {#customize-and-search}
 
-Les journaux de Query Service sont présentés dans un format de tableau personnalisable. Pour personnaliser les colonnes du tableau, cliquez sur l’icône de paramètres (![Icône Paramètres A.](../images/ui/query-log/settings-icon.png)) à droite de l’écran. Une boîte de dialogue [!UICONTROL Personnaliser le tableau] s’affiche, dans laquelle chaque colonne peut être désélectionnée.
+Les journaux de Query Service sont présentés dans un format de tableau personnalisable. Pour personnaliser les colonnes du tableau, cliquez sur l’icône de paramètres (![Icône Paramètres A.](/help/images/icons/column-settings.png)) à droite de l’écran. Une boîte de dialogue [!UICONTROL Personnaliser le tableau] s’affiche, dans laquelle chaque colonne peut être désélectionnée.
 
 Vous pouvez également rechercher des logs relatifs à des modèles de requête spécifiques en saisissant le nom du modèle dans le champ de recherche.
 
@@ -67,13 +67,13 @@ Vous pouvez également sélectionner un nom de modèle de requête dans la colon
 
 ## Editer les journaux {#edit-logs}
 
-Une icône de crayon (![Une icône de crayon se trouve à côté du nom de modèle de chaque ligne ou d’un extrait de code SQL.](../images/ui/query-log/edit-icon.png)) que vous pouvez utiliser pour accéder à l’éditeur de requêtes. La requête est alors prérenseignée dans l’éditeur en vue de sa modification.
+Une icône de crayon (![Une icône de crayon se trouve à côté du nom de modèle de chaque ligne ou d’un extrait de code SQL.](/help/images/icons/edit.png)) que vous pouvez utiliser pour accéder à l’éditeur de requêtes. La requête est alors prérenseignée dans l’éditeur en vue de sa modification.
 
 ![ L&#39;espace de travail Journal des requêtes avec une icône en forme de crayon mise en surbrillance.](../images/ui/query-log/edit-query.png)
 
 ## Journaux des filtres {#filter-logs}
 
-Vous pouvez filtrer la liste des logs de requête en fonction de différents paramètres. Sélectionnez l’icône de filtre (![Icône de filtre.](../images/ui/query-log/filter-icon.png)) en haut à gauche de l’espace de travail pour ouvrir un ensemble d’options de filtre dans le rail de gauche.
+Vous pouvez filtrer la liste des logs de requête en fonction de différents paramètres. Sélectionnez l’icône de filtre (![Icône de filtre.](/help/images/icons/filter.png)) en haut à gauche de l’espace de travail pour ouvrir un ensemble d’options de filtre dans le rail de gauche.
 
 ![ L&#39;espace de travail Journal des requêtes avec l&#39;icône de filtre mise en surbrillance.](../images/ui/query-log/log-filter.png)
 

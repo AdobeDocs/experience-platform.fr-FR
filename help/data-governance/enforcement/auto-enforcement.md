@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Application automatique des politiques
 description: Ce document présente l’application automatique des politiques d’utilisation de données lors de l’activation d’audiences vers des destinations dans Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2109'
 ht-degree: 84%
@@ -104,7 +104,7 @@ Un graphique relatif à la parenté des données s’affiche sous le résumé de
 
 ![Boîte de dialogue de violation de politique avec le graphique de lignage de données surligné.](../images/enforcement/data-lineage.png)
 
-Vous pouvez également utiliser l’icône **[!UICONTROL Filtre]** (![Icône de filtre).](../images/enforcement/filter.png)) pour filtrer les entités affichées par catégorie. Au moins deux catégories doivent être sélectionnées pour que les données s’affichent.
+Vous pouvez également utiliser l’icône **[!UICONTROL Filtre]** (![Icône de filtre).](/help/images/icons/filter.png)) pour filtrer les entités affichées par catégorie. Au moins deux catégories doivent être sélectionnées pour que les données s’affichent.
 
 ![Une boîte de dialogue de violation de politique avec le filtre de traçabilité des données et le menu déroulant mis en surbrillance.](../images/enforcement/lineage-filter.png)
 

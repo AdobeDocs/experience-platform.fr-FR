@@ -3,7 +3,7 @@ description: Découvrez comment surveiller les flux de données lors de la segme
 title: Surveillance des flux de données pour les audiences dans l’interface utilisateur
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: 716c14f29be24d084111864053e3e4ae884003f0
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1862'
 ht-degree: 7%
@@ -64,7 +64,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | **[!UICONTROL Dernières identités d’activation]** | Nombre d’identités qui ont été activées dans la dernière tâche d’activation de l’audience. |
 | **[!UICONTROL Destination de la dernière activation]** | Nom de la destination à laquelle la dernière tâche d’activation de l’audience a été activée. |
 
-Vous pouvez filtrer les résultats sur une audience spécifique et afficher ses tâches de segmentation en sélectionnant l’icône de filtre (![Icône de filtre.](../assets/ui/monitor-audiences/filter-icon.png)). Les tâches de segmentation sont triées par ordre chronologique, les tâches de segmentation les plus récentes apparaissant en premier.
+Vous pouvez filtrer les résultats sur une audience spécifique et afficher ses tâches de segmentation en sélectionnant l’icône de filtre (![Icône de filtre.](/help/images/icons/filter-add.png)). Les tâches de segmentation sont triées par ordre chronologique, les tâches de segmentation les plus récentes apparaissant en premier.
 
 ![L’icône de filtre est mise en surbrillance. Cette sélection vous permet d’afficher les tâches de segmentation pour l’audience spécifiée.](../assets/ui/monitor-audiences/filter-audience.png)
 
@@ -89,7 +89,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | **[!UICONTROL Identité activée]** | Nombre d’identités activées par la tâche de segmentation. Chaque profil peut avoir plusieurs identités. Par exemple, un profil peut avoir un email, un numéro de téléphone et un numéro de fidélité comme identités. |
 | **[!UICONTROL Nom de la destination]** | Nom de la destination vers laquelle la tâche de segmentation est activée. |
 
-Vous pouvez filtrer davantage une tâche de segmentation spécifique et en afficher les détails en sélectionnant l’icône de filtre (![Icône de filtre.](../assets/ui/monitor-audiences/filter-icon.png)). Il existe deux types différents de tâches de segmentation qui peuvent être filtrées : les tâches d’activation et les tâches d’évaluation.
+Vous pouvez filtrer davantage une tâche de segmentation spécifique et en afficher les détails en sélectionnant l’icône de filtre (![Icône de filtre.](/help/images/icons/filter.png)). Il existe deux types différents de tâches de segmentation qui peuvent être filtrées : les tâches d’activation et les tâches d’évaluation.
 
 ### Détails de la tâche d’activation {#activation-job-details}
 

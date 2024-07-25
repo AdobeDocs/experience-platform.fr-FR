@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Connexion de PSQL à Query Service
 description: PSQL est une interface de ligne de commande qui s’affiche lorsque vous installez PostgreSQL sur votre machine. Vous pouvez l’installer en suivant ces instructions.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 58eadaaf461ecd9598f3f508fab0c192cf058916
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '292'
 ht-degree: 11%
@@ -21,7 +21,7 @@ PSQL est une interface de ligne de commande installée lorsque vous installez [!
 
 Après avoir installé PSQL sur votre ordinateur, vous êtes prêt à connecter PSQL à Query Service. Revenez à l’interface utilisateur [!DNL Platform], puis sélectionnez **[!UICONTROL Requêtes]**, suivie de **[!UICONTROL Credentials]**.
 
-Sous la section **[!UICONTROL Commande PSQL]**, sélectionnez l’icône **[!UICONTROL Copier dans le presse-papiers]** (![Copier l’icône](../images/clients/psql/copy-icon.png)) pour copier la chaîne de commande.
+Sous la section **[!UICONTROL Commande PSQL]**, sélectionnez l’icône **[!UICONTROL Copier dans le presse-papiers]** (![Copier l’icône](/help/images/icons/copy.png)) pour copier la chaîne de commande.
 
 ![Onglet Informations d’identification du tableau de bord Requêtes avec l’icône de copie mise en surbrillance.](../images/clients/psql/connect-bi.png)
 

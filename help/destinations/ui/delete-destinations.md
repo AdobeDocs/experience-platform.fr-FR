@@ -4,7 +4,7 @@ title: Supprimer les destinations
 type: Tutorial
 description: Ce tutoriel répertorie les étapes de suppression d’une destination existante dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 32%
@@ -32,11 +32,11 @@ Suivez les étapes ci-dessous pour supprimer une destination de l’onglet [!UIC
 
    ![Parcourir les destinations](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Sélectionnez l’icône filtre ![Icône Filtre](../assets/ui/delete-destinations/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de flux de données associés à la destination sélectionnée.
+2. Sélectionnez l’icône filtre ![Icône Filtre](/help/images/icons/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de flux de données associés à la destination sélectionnée.
 
    ![Filtrer les destinations](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Sélectionnez le bouton ![Plus](../assets/ui/delete-destinations/more-icon.png) dans la colonne Nom, puis le bouton ![Supprimer](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Supprimer]** pour supprimer une connexion de destination existante.
+3. Sélectionnez le bouton ![Plus](/help/images/icons/more.png) dans la colonne Nom, puis le bouton ![Supprimer](/help/images/icons/delete.png) **[!UICONTROL Supprimer]** pour supprimer une connexion de destination existante.
    ![Supprimer des destinations](../assets/ui/delete-destinations/delete-destinations.png)
 
 4. Sélectionnez **[!UICONTROL Supprimer]** pour confirmer la suppression de la connexion de destination.
@@ -51,7 +51,7 @@ Suivez les étapes ci-dessous pour supprimer une destination de la page de déta
 
    ![Parcourir les destinations](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Sélectionnez l’icône filtre ![Icône Filtre](../assets/ui/delete-destinations/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de flux de données associés à la destination sélectionnée.
+2. Sélectionnez l’icône filtre ![Icône Filtre](/help/images/icons/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de flux de données associés à la destination sélectionnée.
 
    ![Filtrer les destinations](../assets/ui/delete-destinations/filter-destinations.png)
 

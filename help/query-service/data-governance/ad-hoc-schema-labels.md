@@ -2,7 +2,7 @@
 title: Prise en charge du contrôle d’accès basé sur les attributs pour les schémas ad hoc
 description: Un guide pour restreindre l’accès aux champs de données dans les schémas ad hoc générés via Adobe Experience Platform Query Service.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: 7cde32f841497edca7de0c995cc4c14501206b1a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 7%
@@ -42,7 +42,7 @@ Pour ajouter une étiquette de données, accédez à l’onglet de navigation du
 
 ## Découvrez les schémas ad hoc dans l’inventaire des schémas de l’interface utilisateur de Platform {#discover-ad-hoc-schemas}
 
-Pour activer l’affichage des schémas ad hoc dans l’interface utilisateur de Platform, sélectionnez l’icône de filtre (![Icône de filtre).](../images/data-governance/filter.png)) à gauche du champ de recherche, puis sélectionnez **[!UICONTROL Afficher les schémas ad hoc] dans le rail de gauche qui s’affiche.
+Pour activer l’affichage des schémas ad hoc dans l’interface utilisateur de Platform, sélectionnez l’icône de filtre (![Icône de filtre).](/help/images/icons/filter.png)) à gauche du champ de recherche, puis sélectionnez **[!UICONTROL Afficher les schémas ad hoc] dans le rail de gauche qui s’affiche.
 
 ![Les options de filtre du tableau de bord de schéma ont été activées dans le rail de gauche avec la bascule &quot;Afficher le schéma ad hoc&quot; activée.](../images/data-governance/adhoc-schema-toggle.png)
 
@@ -56,7 +56,7 @@ Pour modifier les libellés de données de votre schéma ad hoc, sélectionnez l
 
 ## Modification des libellés du schéma ou du champ
 
-Pour modifier les libellés de l’ensemble du schéma, sélectionnez l’icône en forme de crayon (![Une icône en forme de crayon.](../images/data-governance/edit-icon.png)) sur le côté du nom du schéma sous l’onglet [!UICONTROL Étiquettes].
+Pour modifier les libellés de l’ensemble du schéma, sélectionnez l’icône en forme de crayon (![Une icône en forme de crayon.](/help/images/icons/edit.png)) sur le côté du nom du schéma sous l’onglet [!UICONTROL Étiquettes].
 
 ![La vue des libellés dans l’espace de travail des schémas avec l’icône en forme de crayon mise en surbrillance.](../images/data-governance/edit-entire-schema-labels.png)
 

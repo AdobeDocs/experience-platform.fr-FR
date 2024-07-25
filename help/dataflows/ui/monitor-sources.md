@@ -2,7 +2,7 @@
 description: Découvrez comment utiliser le tableau de bord de surveillance pour surveiller les données ingérées à partir de sources.
 title: Surveillance des flux de données pour les sources dans l’interface utilisateur
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: 51f8a8c77518a0b2e9e4b914c891f97433db1ef2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 22%
@@ -83,13 +83,13 @@ Vous pouvez filtrer davantage vos données à l’aide des options fournies au-d
 
 {style="table-layout:auto"}
 
-Pour surveiller les données ingérées dans un flux de données spécifique, sélectionnez l’icône de filtre ![filter](../assets/ui/monitor-sources/filter.png) en regard d’une source.
+Pour surveiller les données ingérées dans un flux de données spécifique, sélectionnez l’icône de filtre ![filter](/help/images/icons/filter-add.png) en regard d’une source.
 
 ![Surveillez un flux de données spécifique en sélectionnant l’icône de filtre en regard d’une source donnée.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
 Le tableau des mesures est mis à jour vers un tableau de flux de données actifs qui correspondent à la source que vous avez sélectionnée. Au cours de cette étape, vous pouvez afficher des informations supplémentaires sur vos flux de données, y compris leur jeu de données et type de données correspondants, ainsi qu’un horodatage pour indiquer le moment où ils ont été activés pour la dernière fois.
 
-Pour examiner un flux de données plus en détail, sélectionnez l’icône de filtre ![filter](../assets/ui/monitor-sources/filter.png) en regard d’un flux de données.
+Pour examiner un flux de données plus en détail, sélectionnez l’icône de filtre ![filter](/help/images/icons/filter-add.png) en regard d’un flux de données.
 
 ![La table des flux de données dans le tableau de bord de surveillance.](../assets/ui/monitor-sources/select-dataflow.png)
 
@@ -97,7 +97,7 @@ Ensuite, vous accédez à une interface qui répertorie toutes les itérations d
 
 Les exécutions de flux de données représentent une instance d’exécution de flux de données. Par exemple, si un flux de données est planifié pour s’exécuter toutes les heures à 9h00, 10h00 et 11h00, vous aurez trois instances d’une exécution de flux. Les exécutions de flux sont spécifiques à votre organisation.
 
-Pour examiner les mesures d’une itération d’exécution de flux de données spécifique, sélectionnez l’icône de filtre ![filter](../assets/ui/monitor-sources/filter.png) en regard de votre flux de données.
+Pour examiner les mesures d’une itération d’exécution de flux de données spécifique, sélectionnez l’icône de filtre ![filter](/help/images/icons/filter-add.png) en regard de votre flux de données.
 
 ![Page de mesure d’exécution du flux de données.](../assets/ui/monitor-sources/dataflow-page.png)
 

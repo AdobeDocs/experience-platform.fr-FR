@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Suppression de flux de données dans l’interface utilisateur
 type: Tutorial
 exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 18%
@@ -33,7 +33,7 @@ Dans l’ [ interface utilisateur Experience Platform](https://platform.adobe.co
 
 La page **[!UICONTROL Flux de données]** s’affiche. Cette page contient une liste de flux de données affichables, y compris des informations sur leur jeu de données cible, leur source, leur nom de compte et leur date de création.
 
-Sélectionnez l’icône de filtre (![filter-icon](../../images/tutorials/delete/filter.png)) en haut à gauche pour lancer le panneau de tri.
+Sélectionnez l’icône de filtre (![filter-icon](/help/images/icons/filter.png)) en haut à gauche pour lancer le panneau de tri.
 
 ![dataflows](../../images/tutorials/delete/dataflows.png)
 

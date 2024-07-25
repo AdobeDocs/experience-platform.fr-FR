@@ -3,7 +3,7 @@ title: Présentation de l’extension AWS
 description: Découvrez l’extension AWS pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 826a96aa-2d64-4a8b-88cf-34a0b6c26df5
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: 1c417744518a7ac7cfb9c65d6af8219dcbc70d46
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 7%
@@ -66,7 +66,7 @@ Le panneau de droite se met à jour afin d’afficher les options de configurati
 
 | Entrée | Description |
 | --- | --- |
-| [!UICONTROL Charge utile] | Ce champ contient les données qui seront transférées vers le flux de données [!DNL Kinesis], au format JSON.<br><br>Sous l’option **[!UICONTROL Brut]**, vous pouvez coller l’objet JSON directement dans le champ de texte fourni, ou vous pouvez sélectionner l’icône d’élément de données (![Icône Jeu de données](../../../images/extensions/server/aws/data-element-icon.png)) pour effectuer une sélection dans une liste d’éléments de données existants pour représenter la charge utile.<br><br>Vous pouvez également utiliser l’option **[!UICONTROL Éditeur de paires clé-valeur JSON]** pour ajouter manuellement chaque paire clé-valeur via un éditeur d’interface utilisateur. Chaque valeur peut être représentée par une entrée brute ou un élément de données peut être sélectionné à la place. |
+| [!UICONTROL Charge utile] | Ce champ contient les données qui seront transférées vers le flux de données [!DNL Kinesis], au format JSON.<br><br>Sous l’option **[!UICONTROL Brut]**, vous pouvez coller l’objet JSON directement dans le champ de texte fourni, ou vous pouvez sélectionner l’icône d’élément de données (![Icône Jeu de données](/help/images/icons/database.png)) pour effectuer une sélection dans une liste d’éléments de données existants pour représenter la charge utile.<br><br>Vous pouvez également utiliser l’option **[!UICONTROL Éditeur de paires clé-valeur JSON]** pour ajouter manuellement chaque paire clé-valeur via un éditeur d’interface utilisateur. Chaque valeur peut être représentée par une entrée brute ou un élément de données peut être sélectionné à la place. |
 
 {style="table-layout:auto"}
 

@@ -2,7 +2,7 @@
 title: Création d’un filtre global
 description: Découvrez comment filtrer vos informations sur les données à l’aide d’un filtre personnalisé appliqué globalement.
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 5bb954da7c1e05922a4e0f8d0bc7d3ab5c8e0e58
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 1%
@@ -21,7 +21,7 @@ Pour créer un filtre global, sélectionnez d’abord **[!UICONTROL Ajouter un f
 
 Vous pouvez rapidement modifier les insights fournis par votre SQL avec des filtres globaux personnalisés.
 
-La boîte de dialogue [!UICONTROL Créer un filtre global] s’ouvre. La création d&#39;un filtre global suit le même processus que la création d&#39;un insight avec SQL. Sélectionnez tout d’abord une base de données (modèle de données d’insights) à interroger, puis saisissez votre code SQL personnalisé dans Query Editor, et enfin sélectionnez l’icône d’exécution (![Icône d’exécution.](../../../images/customizable-insights/run-icon.png)).
+La boîte de dialogue [!UICONTROL Créer un filtre global] s’ouvre. La création d&#39;un filtre global suit le même processus que la création d&#39;un insight avec SQL. Sélectionnez tout d’abord une base de données (modèle de données d’insights) à interroger, puis saisissez votre code SQL personnalisé dans Query Editor, et enfin sélectionnez l’icône d’exécution (![Icône d’exécution.](/help/images/icons/play.png)).
 
 >[!IMPORTANT]
 >
@@ -57,6 +57,6 @@ Après avoir créé votre filtre global pour votre tableau de bord, le bouton d�
 
 ## Sélectionner un filtre global {#select-global-filter}
 
-Pour ouvrir la boîte de dialogue [!UICONTROL Filtres] qui répertorie tous vos filtres personnalisés, sélectionnez l’icône de filtre (![Icône de filtre).](../../../images/customizable-insights/filter.png)) à gauche de votre tableau de bord. Ensuite, pour appliquer les effets sur vos insights de tableau de bord, sélectionnez une option dans le menu déroulant de votre filtre global, puis sélectionnez **[!UICONTROL Appliquer]**.
+Pour ouvrir la boîte de dialogue [!UICONTROL Filtres] qui répertorie tous vos filtres personnalisés, sélectionnez l’icône de filtre (![Icône de filtre).](/help/images/icons/filter.png)) à gauche de votre tableau de bord. Ensuite, pour appliquer les effets sur vos insights de tableau de bord, sélectionnez une option dans le menu déroulant de votre filtre global, puis sélectionnez **[!UICONTROL Appliquer]**.
 
 ![Un tableau de bord personnalisé avec la boîte de dialogue de filtrage mise en surbrillance.](../../../images/customizable-insights/custom-filters.png)

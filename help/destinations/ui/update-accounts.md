@@ -4,7 +4,7 @@ title: Mettre à jour les comptes de destination
 type: Tutorial
 description: Ce tutoriel répertorie les étapes de mise à jour des comptes de destination dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 10%
@@ -33,11 +33,11 @@ Suivez les étapes ci-dessous pour mettre à jour les détails de connexion vers
 
    ![Onglet Comptes](../assets/ui/update-accounts/accounts-tab.png)
 
-2. Sélectionnez l’icône filtre ![Icône Filtre](../assets/ui/update-accounts/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de comptes associés aux destinations sélectionnées.
+2. Sélectionnez l’icône filtre ![Icône Filtre](/help/images/icons/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de comptes associés aux destinations sélectionnées.
 
    ![Filtrer les comptes de destination](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Sélectionnez les points de suspension (`...`) en regard du nom du compte que vous avez l’intention de mettre à jour. Un panneau contextuel s’affiche, fournissant des options pour **[!UICONTROL Activer les audiences]**, **[!UICONTROL Modifier les détails]** et **[!UICONTROL Supprimer]** du compte. Sélectionnez le bouton ![Modifier les détails](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Modifier les détails]** pour modifier les informations du compte.
+3. Sélectionnez les points de suspension (`...`) en regard du nom du compte que vous avez l’intention de mettre à jour. Un panneau contextuel s’affiche, fournissant des options pour **[!UICONTROL Activer les audiences]**, **[!UICONTROL Modifier les détails]** et **[!UICONTROL Supprimer]** du compte. Sélectionnez le bouton ![Modifier les détails](/help/images/icons/edit.png) **[!UICONTROL Modifier les détails]** pour modifier les informations du compte.
 
    ![Modifier le compte](../assets/ui/update-accounts/accounts-edit.png)
 

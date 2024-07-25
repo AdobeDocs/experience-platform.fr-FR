@@ -2,7 +2,7 @@
 title: Requêtes paramétrées
 description: Découvrez comment utiliser des requêtes paramétrées dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: 9cf8dabfdf3f20f4032a79ba191bd2dc8123a369
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 13%
@@ -47,7 +47,7 @@ SELECT
 
 Pour créer votre requête paramétrée dans l’interface utilisateur, accédez à l’éditeur de requêtes. Pour plus d’informations, reportez-vous à la section sur l’ [accès à l’éditeur de requêtes](./user-guide.md#accessing-query-editor) .
 
-Utilisez la préface `'$'` pour saisir un paramètre de requête dans l’éditeur de texte. Ensuite, sélectionnez l’onglet **[!UICONTROL Paramètres de requête]** en regard de la [!UICONTROL Console] pour ajouter la valeur manquante pour la clé. La requête ne peut pas être exécutée si vous négligez d’ajouter une valeur à l’une des clés requises. Icône d’alerte (![ icône d’alerte.](../images/ui/parameterized-queries/alert-icon.png)) apparaît dans la section Paramètres de requête en regard des champs d’entrée [!UICONTROL Valeur] vides.
+Utilisez la préface `'$'` pour saisir un paramètre de requête dans l’éditeur de texte. Ensuite, sélectionnez l’onglet **[!UICONTROL Paramètres de requête]** en regard de la [!UICONTROL Console] pour ajouter la valeur manquante pour la clé. La requête ne peut pas être exécutée si vous négligez d’ajouter une valeur à l’une des clés requises. Icône d’alerte (![ icône d’alerte.](/help/images/icons/alert.png)) apparaît dans la section Paramètres de requête en regard des champs d’entrée [!UICONTROL Valeur] vides.
 
 >[!NOTE]
 >

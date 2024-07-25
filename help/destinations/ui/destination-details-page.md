@@ -3,7 +3,7 @@ keywords: destinations;destination;page des détails des destinations;page des d
 title: Afficher les détails de la destination
 description: La page de détails d’une destination individuelle fournit un aperçu des détails de destination. Les détails de la destination incluent le nom de destination, l’identifiant, les audiences mappées à la destination et les contrôles permettant de modifier l’activation et d’activer et désactiver le flux de données.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: de867c1747fcdb14d8eb72bd3432c177e680c4fa
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1189'
 ht-degree: 9%
@@ -28,19 +28,19 @@ Suivez les étapes ci-dessous pour afficher plus de détails sur une destination
 
    ![Parcourir les destinations](../assets/ui/details-page/browse-destinations.png)
 
-1. Sélectionnez l’icône filtre ![Icône Filtre](../assets/ui/details-page/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de flux de données associés à la destination sélectionnée.
+2. Sélectionnez l’icône filtre ![Icône Filtre](/help/images/icons/filter.png) en haut à gauche pour lancer le panneau de tri. Le panneau de tri fournit une liste de toutes vos destinations. Vous pouvez sélectionner plusieurs destinations dans la liste pour afficher une sélection filtrée de flux de données associés à la destination sélectionnée.
 
    ![Filtrer les destinations](../assets/ui/details-page/filter-destinations.png)
 
-1. Sélectionnez la ligne de la destination pour laquelle vous souhaitez afficher plus d’informations. Un rail de droite s’affiche avec des informations sur la destination, y compris l’ID de destination, l’utilisateur qui a créé la connexion de destination et d’autres informations.
+3. Sélectionnez la ligne de la destination pour laquelle vous souhaitez afficher plus d’informations. Un rail de droite s’affiche avec des informations sur la destination, y compris l’ID de destination, l’utilisateur qui a créé la connexion de destination et d’autres informations.
 
    ![ID de destination dans le rail droit](../assets/ui/details-page/right-rail-info-including-destination-id.png)
 
-1. Vous pouvez également afficher d’autres informations sur la destination en sélectionnant *le nom de la destination* que vous souhaitez afficher.
+4. Vous pouvez également afficher d’autres informations sur la destination en sélectionnant *le nom de la destination* que vous souhaitez afficher.
 
    ![Sélectionnez des destinations](../assets/ui/details-page/destination-select.png)
 
-1. La page de détails de la destination apparaît dans le rail de droite, affichant ses commandes disponibles.
+5. La page de détails de la destination apparaît dans le rail de droite, affichant ses commandes disponibles.
 
    ![Détails de la destination](../assets/ui/details-page/destination-details.png)
 

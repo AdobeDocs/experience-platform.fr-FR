@@ -4,7 +4,7 @@ feature: Attribution AI
 title: Guide de l’interface utilisateur Attribution AI
 description: Ce document sert de guide pour interagir avec Attribution AI dans l’interface utilisateur d’Intelligent Services.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2450'
 ht-degree: 29%
@@ -63,7 +63,7 @@ Après avoir sélectionné les jeux de données que vous souhaitez utiliser, cli
 
 ![Sélectionner des jeux de données](./images/user-guide/select-datasets.png)
 
-La sélection de l’icône d’information ![icône d’information](./images/user-guide/info-icon.png) en regard d’un jeu de données ouvre la fenêtre contextuelle d’aperçu du jeu de données.
+La sélection de l’icône d’information ![icône d’information](/help/images/icons/info.png) en regard d’un jeu de données ouvre la fenêtre contextuelle d’aperçu du jeu de données.
 
 ![Sélectionner et rechercher un jeu de données](./images/user-guide/dataset-preview.png)
 

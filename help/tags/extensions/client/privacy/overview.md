@@ -2,7 +2,7 @@
 title: Présentation de l’extension Adobe Privacy
 description: Découvrez lʼextension de balise Adobe Privacy dans Adobe Experience Platform.
 exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 89%
@@ -95,7 +95,7 @@ Lors de la configuration de l’action pour la règle, sélectionnez **[!UICONTR
 
 ![Sélectionner le type d’action](../../../images/extensions/client/privacy/action-type.png)
 
-Le panneau de droite vous invite à sélectionner un élément de données qui servira de rappel à l’action. Sélectionnez l’icône de la base de données (![Icône de base de données](../../../images/extensions/client/privacy/database.png)) et choisissez l’élément de données que vous avez créé précédemment dans la liste. Sélectionner **[!UICONTROL Conserver les modifications]** pour continuer.
+Le panneau de droite vous invite à sélectionner un élément de données qui servira de rappel à l’action. Sélectionnez l’icône de la base de données (![Icône de base de données](/help/images/icons/database.png)) et choisissez l’élément de données que vous avez créé précédemment dans la liste. Sélectionner **[!UICONTROL Conserver les modifications]** pour continuer.
 
 ![Sélectionner l’élément de données](../../../images/extensions/client/privacy/add-data-element.png)
 

@@ -5,7 +5,7 @@ title: Query Service dans Jupyter Notebook
 type: Tutorial
 description: Adobe Experience Platform vous permet d’utiliser le langage de requête structuré (SQL) dans Data Science Workspace en intégrant Query Service à JupyterLab en tant que fonctionnalité standard. Ce tutoriel présente des exemples de requêtes SQL pour des cas d’utilisation courants afin d’explorer, de transformer et d’analyser les données Adobe Analytics.
 exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
 workflow-type: tm+mt
 source-wordcount: '822'
 ht-degree: 50%
@@ -98,7 +98,7 @@ Avant de commencer ce tutoriel, vous devez disposer des éléments suivants :
 
 Entrez les requêtes SQL suivantes dans des cellules de notebook distinctes. Exécutez une requête en la sélectionnant dans sa cellule, puis en sélectionnant le bouton **[!UICONTROL play]** . Les résultats des requêtes réussies ou les journaux d’erreurs sont affichés sous la cellule exécutée.
 
-Lorsqu’un notebook est inactif pendant une longue période, la connexion entre le notebook et [!DNL Query Service] peut être rompue. Dans ce cas, redémarrez [!DNL JupyterLab] en sélectionnant le bouton **Redémarrer** ![bouton de redémarrage](../images/jupyterlab/user-guide/restart_button.png) situé dans le coin supérieur droit à côté du bouton d’alimentation.
+Lorsqu’un notebook est inactif pendant une longue période, la connexion entre le notebook et [!DNL Query Service] peut être rompue. Dans ce cas, redémarrez [!DNL JupyterLab] en sélectionnant le bouton **Redémarrer** ![bouton de redémarrage](/help/images/icons/restart.png) situé dans le coin supérieur droit à côté du bouton d’alimentation.
 
 Le noyau du notebook se réinitialise, mais les cellules restent, exécutez à nouveau toutes les cellules pour continuer là où vous vous êtes arrêté.
 

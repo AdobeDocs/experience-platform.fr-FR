@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gestion des libellés d’utilisation des données dans l’interface utilisateur
 description: Ce guide détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: ea58ece75d2208ae96bd71c2f51e14279769640f
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1538'
 ht-degree: 93%
@@ -71,7 +71,7 @@ Pour appliquer des libellés à l’ensemble du jeu de données, accédez à l�
 
 ![L’onglet [!UICONTROL Gouvernance des données] de l’espace de travail [!UICONTROL Jeux de données] avec la gouvernance des données en surbrillance.](../images/labels/dataset-governance.png)
 
-Pour modifier les libellés d’utilisation des données au niveau du jeu de données, commencez par sélectionner l’icône en forme de crayon (![une icône en forme de crayon.](../images/labels/edit-icon.png)) dans la ligne du nom du jeu de données.
+Pour modifier les libellés d’utilisation des données au niveau du jeu de données, commencez par sélectionner l’icône en forme de crayon (![une icône en forme de crayon.](/help/images/icons/edit.png)) dans la ligne du nom du jeu de données.
 
 ![L’onglet [!UICONTROL Gouvernance des données] de l’espace de travail [!UICONTROL Jeux de données] affiche l’icône de modification en forme de crayon en surbrillance.](../images/labels/dataset-level-edit.png)
 

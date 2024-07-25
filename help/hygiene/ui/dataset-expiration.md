@@ -2,7 +2,7 @@
 title: Expiration automatisée de jeux de données
 description: Découvrez comment planifier l’expiration d’un jeu de données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: 2aba88ac657e73a12be14d2c3a67dd5714513c97
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '871'
 ht-degree: 49%
@@ -55,11 +55,11 @@ Le workflow de création de requête s’affiche. Dans la section [!UICONTROL Ac
 
 ### Sélectionner une date et un jeu de données {#select-date-and-dataset}
 
-Dans la section **[!UICONTROL Action demandée]**, sélectionnez une date à laquelle vous souhaitez que le jeu de données soit supprimé. Vous pouvez saisir la date manuellement (au format `mm/dd/yyyy`) ou sélectionner l’icône Calendrier (![Icône Calendrier .](../images/ui/ttl/calendar-icon.png)) pour sélectionner la date dans une boîte de dialogue.
+Dans la section **[!UICONTROL Action demandée]**, sélectionnez une date à laquelle vous souhaitez que le jeu de données soit supprimé. Vous pouvez saisir la date manuellement (au format `mm/dd/yyyy`) ou sélectionner l’icône Calendrier (![Icône Calendrier .](/help/images/icons/calendar.png)) pour sélectionner la date dans une boîte de dialogue.
 
 ![Boîte de dialogue de calendrier avec une date d’expiration sélectionnée et mise en surbrillance pour le jeu de données.](../images/ui/ttl/select-date.png)
 
-Ensuite, sous **[!UICONTROL Détails du jeu de données]**, sélectionnez l’icône de base de données (![Icône de base de données.](../images/ui/ttl/database-icon.png)) pour ouvrir une boîte de dialogue de sélection de jeux de données. Dans la liste, sélectionnez un jeu de données auquel appliquer l’expiration, puis cliquez sur **[!UICONTROL Terminé]**.
+Ensuite, sous **[!UICONTROL Détails du jeu de données]**, sélectionnez l’icône de base de données (![Icône de base de données.](/help/images/icons/database.png)) pour ouvrir une boîte de dialogue de sélection de jeux de données. Dans la liste, sélectionnez un jeu de données auquel appliquer l’expiration, puis cliquez sur **[!UICONTROL Terminé]**.
 
 ![La boîte de dialogue [!UICONTROL Sélectionner un jeu de données] avec un jeu de données sélectionné et [!UICONTROL Terminé] surligné.](../images/ui/ttl/select-dataset.png)
 

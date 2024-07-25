@@ -2,7 +2,7 @@
 title: Présentation des journaux d’audit
 description: Découvrez comment les journaux d’audit vous permettent de savoir qui a effectué quelles actions dans Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1291'
 ht-degree: 40%
@@ -94,7 +94,7 @@ Sélectionnez un événement dans la liste pour afficher ses détails dans le ra
 >Comme il s’agit d’une nouvelle fonctionnalité, les données affichées remontent uniquement à mars 2022. Selon la ressource sélectionnée, des données antérieures pourront être disponibles à partir de janvier 2022.
 
 
-Sélectionnez l’icône d’entonnoir (![Icône Filtrer](../../images/audit-logs/icon.png)) pour afficher une liste de contrôles de filtre permettant d’affiner les résultats. Seuls les 1000 derniers enregistrements sont affichés, quels que soient les différents filtres sélectionnés.
+Sélectionnez l’icône d’entonnoir (![Icône Filtrer](/help/images/icons/filter.png)) pour afficher une liste de contrôles de filtre permettant d’affiner les résultats. Seuls les 1000 derniers enregistrements sont affichés, quels que soient les différents filtres sélectionnés.
 
 ![Le tableau de bord Audits avec le journal d’activité filtré en surbrillance.](../../images/audit-logs/filters.png)
 

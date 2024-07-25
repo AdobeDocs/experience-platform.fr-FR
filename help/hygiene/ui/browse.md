@@ -2,7 +2,7 @@
 title: Parcourir les commandes de travail du cycle de vie des données
 description: Découvrez comment afficher et gérer les ordres de travail du cycle de vie des données existants dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 80%
@@ -31,7 +31,7 @@ La liste affiche uniquement les ordres de travail d’une catégorie à la fois.
 
 ![Image illustrant l’onglet [!UICONTROL Jeu de données]](../images/ui/browse/dataset-tab.png).
 
-Sélectionnez l’icône d’entonnoir (![image de l’icône d’entonnoir](../images/ui/browse/funnel-icon.png)) pour consulter une liste de filtres pour les ordres de travail affichés.
+Sélectionnez l’icône d’entonnoir (![image de l’icône d’entonnoir](/help/images/icons/filter.png)) pour consulter une liste de filtres pour les ordres de travail affichés.
 
 ![Image des filtres d’ordres de travail affichés](../images/ui/browse/filters.png)
 

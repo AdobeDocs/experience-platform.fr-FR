@@ -4,7 +4,7 @@ description: Découvrez l’extension de l’API de conversion en temps réel de
 hide: true
 hidefromtoc: true
 exl-id: 1ff32e2b-9ff8-4395-ae44-cba75a2da515
-source-git-commit: 161cb8a587026012bb07acce9da67037feb5391c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 3%
@@ -90,7 +90,7 @@ Pour plus d’informations sur les [ propriétés de demande ](https://partner.t
 
 **[!UICONTROL Paramètres de requête d’objet]**
 
-Objet JSON contenant plus d’informations. Vous avez la possibilité d’utiliser un jeu réduit d’entrées clé-valeur ou de fournir un fichier JSON brut. De plus, vous pouvez récupérer les données dynamiques d’un élément de données en sélectionnant les disques (![Icône de disque](../../../images/extensions/server/tradedesk/disk-icon.png)) à droite.
+Objet JSON contenant plus d’informations. Vous avez la possibilité d’utiliser un jeu réduit d’entrées clé-valeur ou de fournir un fichier JSON brut. De plus, vous pouvez récupérer les données dynamiques d’un élément de données en sélectionnant les disques (![Icône de disque](/help/images/icons/database.png)) à droite.
 
 
 ![La section [!DNL Object Request Parameters] présentant les champs disponibles.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)

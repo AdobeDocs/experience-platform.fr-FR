@@ -2,7 +2,7 @@
 title: Guide de l’interface utilisateur des attributs calculés
 description: Découvrez comment créer, afficher et mettre à jour des attributs calculés à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: bc621167-6dba-473e-90e4-aac7ceb6579a
-source-git-commit: 762a7fc7dd00657e4e710eb763c5bb63b210593a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1576'
 ht-degree: 7%
@@ -32,7 +32,7 @@ Dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UIC
 
 ![La section [!UICONTROL Profil] et les onglets [!UICONTROL Attributs calculés] sont mis en surbrillance, ce qui montre aux utilisateurs comment accéder à la page de navigation des attributs calculés.](./images/ui/browse.png)
 
-Pour sélectionner les champs visibles, vous pouvez sélectionner ![l&#39;icône de configuration des colonnes](./images/ui/configure-icon.png) pour ajouter ou supprimer les champs à afficher.
+Pour sélectionner les champs visibles, vous pouvez sélectionner ![l&#39;icône de configuration des colonnes](/help/images/icons/column-settings.png) pour ajouter ou supprimer les champs à afficher.
 
 | Champ | Description |
 | ----- | ----------- |
@@ -47,7 +47,7 @@ Pour sélectionner les champs visibles, vous pouvez sélectionner ![l&#39;icône
 | [!UICONTROL Créé] | Horodatage indiquant la date et l’heure de création de l’attribut calculé. |
 | [!UICONTROL Dernière modification] | Horodatage indiquant la date et l’heure de la dernière modification de l’attribut calculé. |
 
-Vous pouvez également filtrer les attributs calculés affichés en fonction de l’état du cycle de vie. Sélectionnez l’icône ![funnel](./images/ui/filter-icon.png) .
+Vous pouvez également filtrer les attributs calculés affichés en fonction de l’état du cycle de vie. Sélectionnez l’icône ![funnel](/help/images/icons/filter.png) .
 
 ![L’icône de filtre est mise en surbrillance.](./images/ui/select-filter.png)
 

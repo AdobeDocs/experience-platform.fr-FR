@@ -3,7 +3,7 @@ title: Audiences de prospects
 description: Découvrez comment créer et utiliser des audiences de prospects pour cibler une clientèle inconnue à l’aide d’informations tierces.
 type: Documentation
 exl-id: b48cc0cf-f1c4-46fe-bb1d-cad53a9439dc
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '395'
 ht-degree: 89%
@@ -26,7 +26,7 @@ La page Parcourir s’affiche. Une liste de toutes les audiences de prospects de
 
 Cette vue répertorie les informations sur l’audience, notamment le nom, le nombre de profils, l’origine, le statut du cycle de vie, la date de création, la date de dernière mise à jour et la répartition.
 
-Vous pouvez ajouter des champs supplémentaires à cet affichage en sélectionnant ![l’icône d’attribut de filtre](../images/ui/prospect-audience/filter-attribute.png). Ces champs supplémentaires comprennent Fréquence des mises à jour et Dernière mise à jour effectuée par.
+Vous pouvez ajouter des champs supplémentaires à cet affichage en sélectionnant ![l’icône d’attribut de filtre](/help/images/icons/column-settings.png). Ces champs supplémentaires comprennent Fréquence des mises à jour et Dernière mise à jour effectuée par.
 
 Vous trouverez plus d’informations sur la page de navigation, y compris des informations détaillées sur les champs répertoriés, dans la [présentation d’Audience Portal](./audience-portal.md#list).
 

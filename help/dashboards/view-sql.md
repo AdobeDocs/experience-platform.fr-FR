@@ -2,7 +2,7 @@
 title: Afficher Insight SQL
 description: Affichez le code SQL derrière votre profil, audience, destination et informations personnalisées et exécutez la requête à la demande via Query Editor.
 exl-id: fd728926-c113-4593-92b1-916a02d09d41
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '409'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Une boîte de dialogue s’affiche et contient le titre de l’insight et du cod
 
 >[!TIP]
 >
->Vous pouvez copier l’intégralité de l’instruction SQL dans le presse-papiers en sélectionnant l’icône Copier (![Icône Copier.](./images/view-sql/copy-icon.png)) en haut à droite de la boîte de dialogue.
+>Vous pouvez copier l’intégralité de l’instruction SQL dans le presse-papiers en sélectionnant l’icône Copier (![Icône Copier.](/help/images/icons/copy.png)) en haut à droite de la boîte de dialogue.
 
 ![Une boîte de dialogue d’informations avec l’instruction SQL mise en surbrillance.](./images/view-sql/sql-dialog.png)
 

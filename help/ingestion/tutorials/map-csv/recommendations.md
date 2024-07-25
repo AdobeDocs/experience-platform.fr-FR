@@ -2,7 +2,7 @@
 title: Mappage d’un fichier CSV à un schéma XDM à l’aide de Recommendations généré par l’IA
 description: Ce tutoriel explique comment mapper un fichier CSV à un schéma XDM à l’aide de recommandations générées par l’IA.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: 6632086641004c2b788a28cbc47ac6d8bd4eace3
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1100'
 ht-degree: 82%
@@ -90,7 +90,7 @@ Les champs CSV sont automatiquement mappés à des groupes de champs existants �
 
 ![Bouton [!UICONTROL Modifier] sélectionné en regard de l’arborescence des schémas.](../../images/tutorials/map-csv-recommendations/edit-schema-structure.png)
 
-Une boîte de dialogue s’affiche, vous permettant de modifier le nom d’affichage, le type de données et le groupe de champs de n’importe quel champ du mappage. Sélectionnez l’icône Modifier (![icône Modifier](../../images/tutorials/map-csv-recommendations/edit-icon.png)) à côté d’un champ source pour modifier ses détails dans la colonne de droite avant de sélectionner **[!UICONTROL Appliquer]**.
+Une boîte de dialogue s’affiche, vous permettant de modifier le nom d’affichage, le type de données et le groupe de champs de n’importe quel champ du mappage. Sélectionnez l’icône Modifier (![icône Modifier](/help/images/icons/edit.png)) à côté d’un champ source pour modifier ses détails dans la colonne de droite avant de sélectionner **[!UICONTROL Appliquer]**.
 
 ![Le groupe de champs recommandé pour un champ source en cours de modification.](../../images/tutorials/map-csv-recommendations/select-schema-field.png)
 

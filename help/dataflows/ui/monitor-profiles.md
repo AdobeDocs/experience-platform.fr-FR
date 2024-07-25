@@ -4,7 +4,7 @@ description: Real-Time Customer Profile vous permet d’obtenir une vue d’ense
 title: Surveillance des flux de données pour les profils dans l’interface utilisateur
 type: Tutorial
 exl-id: 00b624b2-f6d1-4ef2-abf2-52cede89b684
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 14%
@@ -63,7 +63,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | **[!UICONTROL Nombre total de fragments de profil]** | Le nombre total d&#39;enregistrements écrits dans [!DNL Profile], y compris tous les fragments [!DNL Profile] existants mis à jour et les nouveaux fragments [!DNL Profile] créés. |
 | **[!UICONTROL Total des flux de données ayant échoué]** | Nombre d’exécutions de flux de données ayant échoué. |
 
-Vous pouvez sélectionner l’icône de filtre ![Icône Filtrer](../assets/ui/monitor-profiles/filter.png) en regard du nom de la source pour afficher les informations de traitement de profil pour les flux de données de cette source sélectionnée.
+Vous pouvez sélectionner l’icône de filtre ![Icône Filtrer](/help/images/icons/filter.png) en regard du nom de la source pour afficher les informations de traitement de profil pour les flux de données de cette source sélectionnée.
 
 ![L’icône de filtre est mise en surbrillance. La sélection de cette icône vous permet d’afficher les flux de données de la source sélectionnée.](../assets/ui/monitor-profiles/sources-filter.png)
 
@@ -86,7 +86,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | **[!UICONTROL Nombre total d’exécutions de flux ayant échoué]** | Nombre d’exécutions de flux de données ayant échoué. |
 | **[!UICONTROL Dernier actif]** | Horodatage de la dernière exécution du flux de données. |
 
-Sélectionnez l’icône de filtre ![filter](../assets/ui/monitor-profiles/filter.png) en regard de l’heure de début de l’exécution du flux de données pour afficher plus d’informations sur votre exécution du flux de données [!DNL Profile].
+Sélectionnez l’icône de filtre ![filter](/help/images/icons/filter.png) en regard de l’heure de début de l’exécution du flux de données pour afficher plus d’informations sur votre exécution du flux de données [!DNL Profile].
 
 ![L’icône de filtre est mise en surbrillance. La sélection de cette icône vous permet d’afficher les détails du flux de données sélectionné.](../assets/ui/monitor-profiles/dataflows-filter.png)
 

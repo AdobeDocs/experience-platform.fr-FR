@@ -2,7 +2,7 @@
 title: Définition d’une relation entre deux schémas dans Real-Time Customer Data Platform B2B Edition
 description: Découvrez comment définir une relation de type "plusieurs à un" entre deux schémas dans Adobe Real-Time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 18%
@@ -97,7 +97,7 @@ Pour définir une relation entre deux schémas, le schéma source doit disposer 
 >
 >Actuellement, seules les relations multiples-à-un et une-à-un peuvent être définies d’un schéma source à un schéma de référence. Pour les relations de type &quot;un à plusieurs&quot;, vous devez définir le champ de relation dans le schéma qui représente le &quot;plusieurs&quot;.
 
-Pour définir un champ de relation, sélectionnez l’icône de flèche (![Icône de flèche](../images/tutorials/relationship-b2b/arrow.png)) en regard du champ en question dans la zone de travail. Dans le cas du schéma [!DNL Opportunities], il s’agit du champ `accountKey.sourceKey` , car l’objectif est d’établir une relation multiple-à-un avec un compte.
+Pour définir un champ de relation, sélectionnez l’icône de flèche (![Icône de flèche](/help/images/icons/alias.png)) en regard du champ en question dans la zone de travail. Dans le cas du schéma [!DNL Opportunities], il s’agit du champ `accountKey.sourceKey` , car l’objectif est d’établir une relation multiple-à-un avec un compte.
 
 ![Bouton Relation](../images/tutorials/relationship-b2b/relationship-button.png)
 

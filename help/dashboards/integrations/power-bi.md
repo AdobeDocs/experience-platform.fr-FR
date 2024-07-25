@@ -2,10 +2,10 @@
 title: Modèles de rapport Power BI pour les tableaux de bord de Platform
 description: Utilisez les modèles de rapport pour explorer les données d’Experience Platform à l’aide de Power BI.
 exl-id: fb98a79f-3d82-4e11-b08a-b7cb06414462
-source-git-commit: 729d218f72a8caecc90a98810b973d0754f7757b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
-source-wordcount: '1465'
-ht-degree: 92%
+source-wordcount: '1467'
+ht-degree: 91%
 
 ---
 
@@ -144,7 +144,7 @@ Une fois que votre tableau de bord contient les mesures et attributs appropriés
 
 ## Suppression de l’intégration de l’application Power BI
 
-Pour supprimer le tableau de bord, accédez à l’inventaire des tableaux de bord et sélectionnez l’icône supprimer (![](../images/power-bi/delete-icon.png)) à côté du nom du tableau de bord.
+Pour supprimer le tableau de bord, accédez à l’inventaire du tableau de bord et sélectionnez l’icône de suppression (![icône de suppression](/help/images/icons/delete.png)) en regard du nom du tableau de bord.
 
 >[!NOTE]
 >

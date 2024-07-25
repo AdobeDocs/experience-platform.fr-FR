@@ -2,7 +2,7 @@
 title: Workflows basés sur les champs dans l’éditeur de schémas
 description: Découvrez comment ajouter individuellement des champs provenant de groupes de champs existants à vos schémas de modèle de données d’expérience (XDM).
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: 19e0a26958ec57ccbc614be53b5aaacce7ce9450
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1301'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Sous **[!UICONTROL Nom du champ]**, commencez à saisir le nom du champ que vous
 
 Bien que certains champs standard portent le même nom, leur structure peut varier en fonction du groupe de champs d’où ils proviennent. Si un champ standard est imbriqué dans un objet parent dans la structure du groupe de champs, le champ parent sera également inclus dans le schéma si le champ enfant est ajouté.
 
-Sélectionnez l’icône d’aperçu (![Icône Aperçu](../images/ui/field-based-workflows/preview-icon.png)) en regard d’un champ standard pour afficher la structure de son groupe de champs et mieux comprendre comment il peut être imbriqué. Pour ajouter le champ standard au schéma, sélectionnez l’icône plus (![Icône Plus](../images/ui/field-based-workflows/add-icon.png)).
+Sélectionnez l’icône d’aperçu (![Icône Aperçu](/help/images/icons/preview.png)) en regard d’un champ standard pour afficher la structure de son groupe de champs et mieux comprendre comment il peut être imbriqué. Pour ajouter le champ standard au schéma, sélectionnez l’icône plus (![Icône Plus](/help/images/icons/add-circle.png)).
 
 ![Icône d’ajout mise en surbrillance sur un élément des champs standard suggérés.](../images/ui/field-based-workflows/add-standard-field.png)
 

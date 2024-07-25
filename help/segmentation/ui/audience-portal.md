@@ -1,13 +1,13 @@
 ---
 title: Présentation d’Audience Portal
 description: Découvrez comment utiliser Audience Portal pour afficher, gérer et créer des audiences dans Adobe Experience Platform.
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
+source-git-commit: d1fbfe5dd887059a6aab96566311cbd63c5b091f
 workflow-type: tm+mt
 source-wordcount: '3693'
 ht-degree: 66%
 
 ---
-
 
 # Présentation d’Audience Portal
 
@@ -90,7 +90,7 @@ Le graphique circulaire s’affiche, affichant une ventilation des audiences par
 
 ### Personnaliser {#customize}
 
-Vous pouvez ajouter des champs supplémentaires à Audience Portal en sélectionnant ![l’icône d’attribut de filtre](../images/ui/audience-portal/filter-attribute.png). Ces champs supplémentaires comprennent le statut du cycle de vie, la fréquence de mise à jour, la dernière mise à jour par, la description, la création par et les libellés d’accès.
+Vous pouvez ajouter des champs supplémentaires à Audience Portal en sélectionnant ![l’icône d’attribut de filtre](/help/images/icons/column-settings.png). Ces champs supplémentaires comprennent le statut du cycle de vie, la fréquence de mise à jour, la dernière mise à jour par, la description, la création par et les libellés d’accès.
 
 | Champ | Description |
 | ----- | ----------- |
@@ -116,7 +116,7 @@ Si la répartition est sélectionnée, l’affichage présente un graphique à b
 | [!UICONTROL Existant] | Nombre de profils qui **sont restés** dans le segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
 | [!UICONTROL Sortant] | Nombre de profils qui **sont sortis** du segment au cours des dernières 24 heures depuis la dernière exécution de la tâche de segmentation par lots. |
 
-Après avoir sélectionné les champs à afficher, vous pouvez redimensionner la largeur des colonnes affichées. Pour ce faire, faites glisser la zone entre les colonnes ou sélectionnez l’![icône de flèche](../images/ui/audience-portal/arrow-icon.png) de la colonne à redimensionner, suivie de l’option **[!UICONTROL Redimensionner la colonne]**.
+Après avoir sélectionné les champs à afficher, vous pouvez redimensionner la largeur des colonnes affichées. Pour ce faire, faites glisser la zone entre les colonnes ou sélectionnez l’![icône de flèche](/help/images/icons/chevron-down.png) de la colonne à redimensionner, suivie de l’option **[!UICONTROL Redimensionner la colonne]**.
 
 ![Le bouton Redimensionner la colonne est surligné.](../images/ui/audience-portal/browse-audience-resize-column.png)
 
@@ -177,7 +177,7 @@ Une fois l’audience déplacée dans un dossier, vous pouvez choisir d’affich
 
 Vous pouvez également filtrer les audiences selon différents paramètres.
 
-Pour filtrer les audiences disponibles, sélectionnez l’![icône Filtrer](../images/ui/audience-portal/filter-icon.png).
+Pour filtrer les audiences disponibles, sélectionnez l’![icône Filtrer](/help/images/icons/filter.png).
 
 ![La page Parcourir les audiences s’affiche, avec l’icône Filtrer mise en surbrillance.](../images/ui/audience-portal/browse-select-filter.png)
 

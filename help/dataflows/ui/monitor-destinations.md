@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Surveillance des flux de données pour les destinations dans l’interface utilisateur
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 93430a9ba5911bf8dc901ec3f82f06a6b25b8dc4
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
 source-wordcount: '3337'
 ht-degree: 12%
@@ -178,7 +178,7 @@ La page Détails affiche également une liste des identités qui ont échoué et
 >title="Activation"
 >abstract="La vue d’activation de destination contient des informations sur le statut d’activation d’une audience et des mesures obtenues à partir du profil client en temps réel pour générer des identités uniques."
 
-Pour accéder au tableau de bord [!UICONTROL Surveillance], sélectionnez **[!UICONTROL Surveillance]** (![icône de surveillance](../assets/ui/monitor-destinations/monitoring-icon.png)) dans le volet de navigation de gauche. Une fois sur la page [!UICONTROL Surveillance], sélectionnez [!UICONTROL Destinations]. Le tableau de bord [!UICONTROL Surveillance] contient des mesures et des informations sur les tâches d’exécution de destination.
+Pour accéder au tableau de bord [!UICONTROL Surveillance], sélectionnez **[!UICONTROL Surveillance]** (![icône de surveillance](/help/images/icons/monitoring.png)) dans le volet de navigation de gauche. Une fois sur la page [!UICONTROL Surveillance], sélectionnez [!UICONTROL Destinations]. Le tableau de bord [!UICONTROL Surveillance] contient des mesures et des informations sur les tâches d’exécution de destination.
 
 Utilisez le tableau de bord [!UICONTROL Destinations] pour avoir une idée générale de l’état de vos flux d’activation. Commencez par obtenir des informations sur un niveau agrégé pour toutes les destinations de lot et de diffusion en continu, puis explorez les vues détaillées des flux de données, des exécutions de flux de données et des audiences activées afin d’obtenir un aperçu détaillé de vos données d’activation. Les écrans du tableau de bord [!UICONTROL Surveillance] fournissent des informations exploitables au moyen de mesures et de descriptions d’erreur pour vous aider à résoudre les problèmes qui peuvent survenir dans vos scénarios d’activation.
 
@@ -199,7 +199,7 @@ Par défaut, les données affichées contiennent les informations d&#39;activati
 
 ![ Modifier le contrôle de période de recherche en amont mis en surbrillance pour les destinations activées](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
-Utilisez l’icône de flèche (![icône de flèche](/help/dataflows/assets/ui/monitor-destinations/chevron-up.png)) pour développer ou ignorer les cartes en haut de l’écran, qui affichent des informations en un coup d’oeil sur les détails de l’activation, en fonction du type de destination (diffusion en continu ou lot) :
+Utilisez l’icône de flèche (![icône de flèche](/help/images/icons/chevron-up.png)) pour développer ou ignorer les cartes en haut de l’écran, qui affichent des informations en un coup d’oeil sur les détails de l’activation, en fonction du type de destination (diffusion en continu ou lot) :
 
 - **[!UICONTROL Taux d’activation par flux]** : représente le pourcentage d’identités reçues qui ont été activées avec succès ou ignorées. La formule utilisée pour calculer ce pourcentage est décrite plus haut sur cette page, dans la section [Le flux de données s’exécute pour les destinations de diffusion en continu](#dataflow-runs-for-streaming-destinations) .
 - **[!UICONTROL Le flux de données par lot a échoué]** : représente le nombre d’exécutions de flux de données ayant échoué dans l’intervalle de temps sélectionné.
@@ -226,13 +226,13 @@ Vous pouvez également filtrer votre liste de destinations pour n’afficher que
 
 ![Filtrer les destinations à l’aide du sélecteur de liste déroulante](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
 
-De plus, vous pouvez saisir une destination dans la barre de recherche pour l’isoler vers une seule destination. Si vous souhaitez afficher les flux de données de la destination, vous pouvez sélectionner le filtre ![filter](../assets/ui/monitor-destinations/filter-add.png) à côté de celui-ci pour afficher la liste de ses flux de données actifs.
+De plus, vous pouvez saisir une destination dans la barre de recherche pour l’isoler vers une seule destination. Si vous souhaitez afficher les flux de données de la destination, vous pouvez sélectionner le filtre ![filter](/help/images/icons/filter-add.png) à côté de celui-ci pour afficher la liste de ses flux de données actifs.
 
 ![Filtrez les destinations à l’aide de la barre de recherche mise en surbrillance dans la vue de surveillance.](../assets/ui/monitor-destinations/filtered-destinations.png)
 
 Si vous souhaitez afficher tous les flux de données existants sur toutes les destinations, sélectionnez **[!UICONTROL Flux de données]**.
 
-Une liste de flux de données s’affiche, triée par la dernière exécution de flux de données. Vous pouvez afficher des détails supplémentaires pour un flux de données spécifique en recherchant la destination que vous souhaitez surveiller, en sélectionnant le filtre ![filter](../assets/ui/monitor-destinations/filter-add.png) à côté, puis en sélectionnant par la suite le filtre ![filter](../assets/ui/monitor-destinations/filter-add.png) à côté du flux de données dont vous souhaitez obtenir plus d’informations.
+Une liste de flux de données s’affiche, triée par la dernière exécution de flux de données. Vous pouvez afficher des détails supplémentaires pour un flux de données spécifique en recherchant la destination que vous souhaitez surveiller, en sélectionnant le filtre ![filter](/help/images/icons/filter-add.png) à côté, puis en sélectionnant par la suite le filtre ![filter](/help/images/icons/filter-add.png) à côté du flux de données dont vous souhaitez obtenir plus d’informations.
 
 ![Tous les flux de données mis en surbrillance dans le tableau de bord de surveillance.](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
@@ -269,7 +269,7 @@ Par exemple, vous activez une audience appelée &quot;Loyalty Members in Califor
 ![Audiences mises en surbrillance dans le panneau du flux de données.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
 Dans la vue au niveau de l’audience, les mesures sont agrégées sur plusieurs exécutions de flux de données au cours de la période sélectionnée. S’il existe plusieurs exécutions de flux de données, vous pouvez descendre au niveau de l’audience pour afficher la ventilation pour chaque exécution de flux de données, filtrée par l’audience sélectionnée.
-Utilisez le bouton de filtrage ![filter](../assets/ui/monitor-destinations/filter-add.png) pour parcourir la vue d’exécution du flux de données pour chaque audience du flux de données.
+Utilisez le bouton de filtrage ![filter](/help/images/icons/filter-add.png) pour parcourir la vue d’exécution du flux de données pour chaque audience du flux de données.
 
 ### Page Exécution du flux de données {#dataflow-runs-page}
 
@@ -283,7 +283,7 @@ Lorsque vous explorez la page des exécutions du flux de données à partir de l
 
 ![Boutons radio montrant comment filtrer les exécutions de flux de données pour les audiences.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
-Pour plus d’informations sur une exécution de flux de données spécifique, sélectionnez le filtre ![filter](../assets/ui/monitor-destinations/filter-add.png) en regard de l’heure de début de l’exécution du flux de données pour afficher la page des détails de l’exécution du flux de données.
+Pour plus d’informations sur une exécution de flux de données spécifique, sélectionnez le filtre ![filter](/help/images/icons/filter-add.png) en regard de l’heure de début de l’exécution du flux de données pour afficher la page des détails de l’exécution du flux de données.
 
 ![Le flux de données exécute un filtre dans le tableau de bord de surveillance pour analyser plus d’informations sur une certaine exécution de flux de données.](../assets/ui/monitor-destinations/dataflow-runs-filter.png)
 

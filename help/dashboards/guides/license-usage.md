@@ -4,7 +4,7 @@ title: Tableau de bord d’utilisation de la licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2103'
 ht-degree: 9%
@@ -101,7 +101,7 @@ Pour afficher **une mesure d’utilisation spécifique d’un environnement de t
 
 ![Onglet Détails du tableau de bord Utilisation de la licence.](../images/license-usage/details-tab.png)
 
-Dans cette vue, vous pouvez sélectionner l&#39;icône ![Inspecter.](../images/license-usage/inspect-icon.png) en regard d’un nom d’environnement de test pour afficher la visualisation de cette mesure. Une boîte de dialogue s’ouvre avec une visualisation pour cette mesure.
+Dans cette vue, vous pouvez sélectionner l&#39;icône ![Inspecter.](/help/images/icons/inspect.png) en regard d’un nom d’environnement de test pour afficher la visualisation de cette mesure. Une boîte de dialogue s’ouvre avec une visualisation pour cette mesure.
 
 ### Visualisations {#visualizations}
 

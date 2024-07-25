@@ -2,7 +2,7 @@
 title: Surveillance des requêtes planifiées
 description: Découvrez comment surveiller les requêtes via l’interface utilisateur de Query Service.
 exl-id: 4640afdd-b012-4768-8586-32f1b8232879
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2454'
 ht-degree: 26%
@@ -25,7 +25,7 @@ Le tableau ci-dessous décrit chaque colonne disponible.
 
 >[!NOTE]
 >
->Icône d’abonnement aux alertes (![ icône d’abonnement aux alertes .](../images/ui/monitor-queries/alert-subscription-icon.png)) est contenu dans chaque ligne d’une colonne sans titre. Consultez la section [Abonnements aux alertes](#alert-subscription) pour plus d’informations.
+>Icône d’abonnement aux alertes (![ icône d’abonnement aux alertes .](/help/images/icons/alert-add.png)) est contenu dans chaque ligne d’une colonne sans titre. Consultez la section [Abonnements aux alertes](#alert-subscription) pour plus d’informations.
 
 | Colonne | Description |
 |---|---|
@@ -45,7 +45,7 @@ Le tableau ci-dessous décrit chaque colonne disponible.
 
 ## Personnaliser les paramètres des tableaux pour les requêtes planifiées {#customize-table}
 
-Vous pouvez ajuster les colonnes de l’onglet [!UICONTROL Requêtes planifiées] à vos besoins. Pour ouvrir la boîte de dialogue de paramètres [!UICONTROL Personnaliser le tableau] et modifier les colonnes disponibles, sélectionnez l’icône de paramètres (![Icône de paramètres A.](../images/ui/monitor-queries/settings-icon.png)) en haut à droite de l’écran.
+Vous pouvez ajuster les colonnes de l’onglet [!UICONTROL Requêtes planifiées] à vos besoins. Pour ouvrir la boîte de dialogue de paramètres [!UICONTROL Personnaliser le tableau] et modifier les colonnes disponibles, sélectionnez l’icône de paramètres (![Icône de paramètres A.](/help/images/icons/column-settings.png)) en haut à droite de l’écran.
 
 >[!NOTE]
 >
@@ -89,7 +89,7 @@ Si vous souhaitez planifier des exécutions pour ce modèle de requête, sélect
 
 ### S’abonner aux alertes {#alert-subscription}
 
-Pour vous abonner aux alertes pour les exécutions de requête planifiées, sélectionnez l’icône `...` (points de suspension) ou l’icône d’abonnement aux alertes (![Icône d’abonnement aux alertes).](../images/ui/monitor-queries/alert-subscription-icon.png)) pour la requête planifiée que vous souhaitez gérer. Le menu déroulant des actions intégrées s’affiche. Sélectionnez ensuite **[!UICONTROL S’abonner]** parmi les options disponibles.
+Pour vous abonner aux alertes pour les exécutions de requête planifiées, sélectionnez l’icône `...` (points de suspension) ou l’icône d’abonnement aux alertes (![Icône d’abonnement aux alertes).](/help/images/icons/alert-add.png)) pour la requête planifiée que vous souhaitez gérer. Le menu déroulant des actions intégrées s’affiche. Sélectionnez ensuite **[!UICONTROL S’abonner]** parmi les options disponibles.
 
 ![ L’espace de travail des requêtes planifiées avec des ellipses, une icône d’abonnement aux alertes et le menu déroulant des actions intégrées est mis en surbrillance.](../images/ui/monitor-queries/subscribe.png)
 
@@ -115,7 +115,7 @@ Pour plus d’informations, consultez la [documentation de l’API d’abonnemen
 
 ### Afficher les détails de la requête {#query-details}
 
-Sélectionnez l’icône d’information (![Icône d’information.](../images/ui/monitor-queries/information-icon.png)) pour afficher le panneau des détails de la requête. Le panneau Détails contient toutes les informations pertinentes sur la requête, au-delà des faits inclus dans le tableau des requêtes planifiées. Les informations supplémentaires incluent l’identifiant de la requête, la date de dernière modification, le code SQL de la requête, l’identifiant de planification et le planning défini actuel.
+Sélectionnez l’icône d’information (![Icône d’information.](/help/images/icons/info.png)) pour afficher le panneau des détails de la requête. Le panneau Détails contient toutes les informations pertinentes sur la requête, au-delà des faits inclus dans le tableau des requêtes planifiées. Les informations supplémentaires incluent l’identifiant de la requête, la date de dernière modification, le code SQL de la requête, l’identifiant de planification et le planning défini actuel.
 
 ![Onglet Requêtes planifiées avec l’icône d’informations et le panneau de détails mis en surbrillance.](../images/ui/monitor-queries/details-panel.png)
 
@@ -151,7 +151,7 @@ Consultez la section abonner aux alertes pour savoir comment [s’abonner aux [!
 
 ## Filtrer des requêtes {#filter}
 
-Vous pouvez filtrer les requêtes selon la fréquence d’exécution. Dans l’onglet [!UICONTROL Requêtes planifiées], sélectionnez l’icône de filtre (![Icône Filtrer](../images/ui/monitor-queries/filter-icon.png)) pour ouvrir la barre latérale du filtre.
+Vous pouvez filtrer les requêtes selon la fréquence d’exécution. Dans l’onglet [!UICONTROL Requêtes planifiées], sélectionnez l’icône de filtre (![Icône Filtrer](/help/images/icons/filter.png)) pour ouvrir la barre latérale du filtre.
 
 ![Onglet Requêtes planifiées avec l’icône de filtre mise en surbrillance.](../images/ui/monitor-queries/filter-queries.png)
 

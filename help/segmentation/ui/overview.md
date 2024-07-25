@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guide de l’IU de Segmentation Service
 description: Découvrez comment créer et gérer des audiences et des définitions de segment dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: acfe91144175e136955ffd9f0cdae2c351217c16
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 80%
@@ -69,7 +69,7 @@ Une icône de points de suspension se trouve à côté de chaque audience. Cette
 | Gérer l’accès | Gère les étiquettes d’accès qui appartiennent à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
 | Supprimer | Supprime l’audience sélectionnée. Les audiences qui sont utilisées dans des destinations en aval ou qui sont dépendantes d’autres audiences **ne peuvent pas** être supprimées. Pour plus d’informations sur la suppression d’audience, consultez la [FAQ sur la segmentation](../faq.md#lifecycle-states). |
 
-Vous pouvez sélectionner l’icône ![Personnaliser le tableau](../images/ui/overview/customize-table.png) pour modifier les champs affichés.
+Vous pouvez sélectionner l’icône ![Personnaliser le tableau](/help/images/icons/column-settings.png) pour modifier les champs affichés.
 
 ![Le bouton Personnaliser le tableau est mis en surbrillance. Sélectionnez ce bouton pour personnaliser les champs affichés sur la page de Composition d’audience.](../images/ui/overview/compositions-select-customize-table.png)
 

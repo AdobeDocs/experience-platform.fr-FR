@@ -4,7 +4,7 @@ title: Exploration, vérification et traitement des jeux de données de tableau 
 type: Documentation
 description: Découvrez comment utiliser Query Service pour explorer et traiter des jeux de données bruts alimentant les tableaux de bord de profil, d’audience et de destination dans Experience Platform.
 exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 37%
@@ -33,7 +33,7 @@ Vous pouvez utiliser [!DNL Query Service] pour interroger des jeux de données b
 >
 >Les jeux de données générés par le système sont masqués par défaut. Par défaut, l’onglet [!UICONTROL Parcourir] affiche uniquement les jeux de données dans lesquels vous avez ingéré des données.
 
-Pour afficher les jeux de données générés par le système, sélectionnez l’icône de filtre (![Icône de filtre.](./images/query/filter.png)) situé à gauche de la barre de recherche.
+Pour afficher les jeux de données générés par le système, sélectionnez l’icône de filtre (![Icône de filtre.](/help/images/icons/filter.png)) situé à gauche de la barre de recherche.
 
 ![Onglet Parcourir des jeux de données avec l’icône de filtre mise en surbrillance.](./images/query/filter-datasets.png)
 

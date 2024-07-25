@@ -2,7 +2,7 @@
 title: Présentation complète de la collecte de données
 description: Présentation générale de l’envoi de données d’événement aux solutions Adobe Experience Cloud à l’aide des fonctionnalités de collecte de données Adobe Experience Platform.
 exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2616'
 ht-degree: 93%
@@ -228,7 +228,7 @@ La page de configuration d’action s’affiche. Pour obtenir la règle permetta
 
 ![Type d’action](./images/e2e/action-type.png)
 
-L’écran se met à jour afin d’afficher des options supplémentaires pour configurer l’action d’envoi d’événement. Sous **[!UICONTROL Type]**, vous pouvez fournir une valeur de type personnalisée pour renseigner le champ XDM `eventType`. Sous **[!UICONTROL Données XDM]**, indiquez le nom du type de données XDM que vous avez créé précédemment (entouré de signes de pourcentage) ou sélectionnez l’icône de base de données (![Icône de base](./images/e2e/database-symbol.png)) pour le sélectionner dans une liste. Il s’agit des données qui seront envoyées au réseau Edge.
+L’écran se met à jour afin d’afficher des options supplémentaires pour configurer l’action d’envoi d’événement. Sous **[!UICONTROL Type]**, vous pouvez fournir une valeur de type personnalisée pour renseigner le champ XDM `eventType`. Sous **[!UICONTROL Données XDM]**, indiquez le nom du type de données XDM que vous avez créé précédemment (entouré de signes de pourcentage) ou sélectionnez l’icône de base de données (![Icône de base](/help/images/icons/database.png)) pour le sélectionner dans une liste. Il s’agit des données qui seront envoyées au réseau Edge.
 
 Sélectionnez **[!UICONTROL Conserver les modifications]** lorsque vous avez terminé.
 

@@ -4,7 +4,7 @@ title: Exportation des schémas XDM dans l’interface utilisateur
 description: Découvrez comment exporter un schéma existant vers un environnement de test ou une organisation différente dans l’interface utilisateur de Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: 0f0842c1d14ce42453b09bf97e1f3690448f6e9a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 11%
@@ -40,7 +40,7 @@ Pour générer une payload d’exportation, sélectionnez **[!UICONTROL Schémas
 >
 >Consultez le guide sur l’ [exploration des ressources XDM](./explore.md) pour plus d’informations sur la manière de trouver la ressource XDM que vous recherchez.
 
-Sélectionnez ensuite l’icône **[!UICONTROL Copier JSON]** (![Copier l’icône](../images/ui/export/icon.png)) dans les options disponibles.
+Sélectionnez ensuite l’icône **[!UICONTROL Copier JSON]** (![Copier l’icône](/help/images/icons/copy.png)) dans les options disponibles.
 
 ![ L’espace de travail des schémas avec une ligne de schéma et [!UICONTROL Copier vers JSON] mis en surbrillance.](../images/ui/export/copy-json.png)
 

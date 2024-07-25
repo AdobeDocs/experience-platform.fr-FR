@@ -4,7 +4,7 @@ description: Adobe Experience Platform Identity Service vous offre une vue d’e
 title: Surveillance des flux de données pour les identités dans l’interface utilisateur
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 15%
@@ -62,7 +62,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | **[!UICONTROL Graphiques mis à jour]** | Nombre de graphiques d’identités existants mis à jour avec de nouvelles périphéries. |
 | **[!UICONTROL Total des flux de données ayant échoué]** | Nombre d’exécutions de flux de données ayant échoué. |
 
-Vous pouvez sélectionner l’icône de filtre ![Icône Filtrer](../assets/ui/monitor-identities/filter.png) en regard du nom de la source pour afficher les informations de traitement des identités pour les flux de données de cette source sélectionnée.
+Vous pouvez sélectionner l’icône de filtre ![Icône Filtrer](/help/images/icons/filter.png) en regard du nom de la source pour afficher les informations de traitement des identités pour les flux de données de cette source sélectionnée.
 
 ![L’icône de filtre est mise en surbrillance. La sélection de cette icône vous permet d’afficher les flux de données de la source sélectionnée.](../assets/ui/monitor-identities/sources-filter.png)
 
@@ -87,7 +87,7 @@ Les mesures suivantes sont disponibles pour cette vue de tableau de bord :
 | **[!UICONTROL Graphiques mis à jour]** | Nombre de graphiques d’identités existants mis à jour avec de nouvelles périphéries. |
 | **[!UICONTROL Total des flux de données ayant échoué]** | Nombre d’exécutions de flux de données ayant échoué. |
 
-Sélectionnez l’icône de filtre ![filter](../assets/ui/monitor-identities/filter.png) en regard de l’heure de début de l’exécution du flux de données pour afficher plus d’informations sur votre exécution du flux de données [!DNL Identity].
+Sélectionnez l’icône de filtre ![filter](/help/images/icons/filter.png) en regard de l’heure de début de l’exécution du flux de données pour afficher plus d’informations sur votre exécution du flux de données [!DNL Identity].
 
 ![L’icône de filtre est mise en surbrillance. La sélection de cette icône vous permet d’afficher les détails du flux de données sélectionné.](../assets/ui/monitor-identities/dataflows-filter.png)
 

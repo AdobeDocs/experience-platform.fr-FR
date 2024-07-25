@@ -2,7 +2,7 @@
 title: Création d’une connexion Source Marketo Engage et d’un flux de données pour les données d’activité personnalisée dans l’interface utilisateur
 description: Ce tutoriel décrit les étapes à suivre pour créer une connexion source Marketo Engage et un flux de données dans l’interface utilisateur afin d’importer des données d’activités personnalisées dans Adobe Experience Platform.
 exl-id: 05a7b500-11d2-4d58-be43-a2c4c0ceeb87
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1470'
 ht-degree: 22%
@@ -127,7 +127,7 @@ Parcourez la structure de données source et recherchez le champ d’activité p
 
 ![Structure de données source.](../../../../images/tutorials/create/marketo-custom-activities/select-new-mapping-field.png)
 
-Pour ajouter un champ cible, sélectionnez l’icône de schéma ![icône de schéma](../../../../images/tutorials/create/marketo-custom-activities/schema-icon.png) , puis sélectionnez les champs d’activité personnalisés dans le schéma cible.
+Pour ajouter un champ cible, sélectionnez l’icône de schéma ![icône de schéma](/help/images/icons/schema.png) , puis sélectionnez les champs d’activité personnalisés dans le schéma cible.
 
 ![ La structure du schéma cible.](../../../../images/tutorials/create/marketo-custom-activities/add-target-mapping-field.png)
 

@@ -3,7 +3,7 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations basées sur un profil de lot.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 68781d27e374261108955b24dfb7b46141f5108b
 workflow-type: tm+mt
 source-wordcount: '3975'
 ht-degree: 57%
@@ -529,14 +529,14 @@ Les attributs d’enrichissement correspondent à des audiences téléchargées 
 
 Suivez les étapes ci-dessous pour sélectionner les attributs d’enrichissement pour chaque audience externe :
 
-1. Dans la colonne **[!UICONTROL Attributs d&#39;enrichissement]**, sélectionnez le bouton ![Modifier](../assets/ui/activate-batch-profile-destinations/edit-button.svg) (Modifier).
-2. Sélectionnez **[!UICONTROL Ajouter un attribut d’enrichissement]**. Un nouveau champ de schéma vide s’affiche.
+1. Dans la colonne **[!UICONTROL Attributs d&#39;enrichissement]**, sélectionnez le bouton ![Modifier](/help/images/icons/edit.png) (Modifier).
+1. Sélectionnez **[!UICONTROL Ajouter un attribut d’enrichissement]**. Un nouveau champ de schéma vide s’affiche.
    ![Image de l&#39;interface utilisateur affichant l&#39;écran modal des attributs d&#39;enrichissement.](../assets/ui/activate-batch-profile-destinations/add-enrichment-attribute.png)
-3. Sélectionnez le bouton situé à droite du champ vide pour ouvrir l’écran de sélection du champ.
-4. Sélectionnez les attributs à exporter pour l’audience.
+1. Sélectionnez le bouton situé à droite du champ vide pour ouvrir l’écran de sélection du champ.
+1. Sélectionnez les attributs à exporter pour l’audience.
    ![Image de l&#39;interface utilisateur affichant la liste des attributs d&#39;enrichissement.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes.png)
-5. Après avoir ajouté tous les attributs à exporter, sélectionnez **[!UICONTROL Enregistrer et fermer]**.
-6. Répétez ces étapes pour chaque audience externe.
+1. Après avoir ajouté tous les attributs à exporter, sélectionnez **[!UICONTROL Enregistrer et fermer]**.
+1. Répétez ces étapes pour chaque audience externe.
 
 Si vous souhaitez activer des audiences externes vers vos destinations sans exporter d’attribut, activez le bouton d’activation/désactivation **[!UICONTROL Exclure les attributs d’enrichissement]** . Cette option exporte les profils des audiences externes, mais aucun de leurs attributs correspondants n’est envoyé vers votre destination.
 

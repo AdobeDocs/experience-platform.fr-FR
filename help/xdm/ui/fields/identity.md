@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Définition des champs d’identité dans l’interface utilisateur
 description: Découvrez comment définir un champ d’identité dans l’interface utilisateur de l’Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 16%
@@ -46,7 +46,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]** pour appliq
 
 ![](../../images/ui/fields/special/identity-config.png)
 
-Le canevas se met à jour pour refléter les modifications, le champ sélectionné gagnant un symbole d’empreinte digitale (![](../../images/ui/fields/special/identity-symbol.png)) pour le désigner comme identité. Dans le rail de gauche, le champ d’identité est désormais répertorié sous le nom de la classe ou du groupe de champs de schéma qui fournit le champ au schéma.
+Le canevas se met à jour pour refléter les modifications, le champ sélectionné gagnant un symbole d’empreinte digitale (![](/help/images/icons/identity-service.png)) pour le désigner comme identité. Dans le rail de gauche, le champ d’identité est désormais répertorié sous le nom de la classe ou du groupe de champs de schéma qui fournit le champ au schéma.
 
 Si le champ a également été défini comme identité principale, il sera également répertorié sous **[!UICONTROL Champs obligatoires]** dans le rail de gauche. Si le champ d’identité est imbriqué dans la structure du schéma, tous les champs parents sont également répertoriés selon les besoins.
 

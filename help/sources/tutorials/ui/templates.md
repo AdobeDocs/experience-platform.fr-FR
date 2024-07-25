@@ -3,7 +3,7 @@ description: Découvrez comment utiliser des modèles dans l’interface utilisa
 title: Créer un flux de données de sources à l’aide de modèles dans l’interface utilisateur
 badge1: « Version bêta »
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 4a9cae014a8eba20f93023913f3a73103b16d944
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2241'
 ht-degree: 44%
@@ -84,7 +84,7 @@ Pour utiliser un compte existant, sélectionnez [!UICONTROL Compte existant] pui
 
 >[!TAB Créer un compte]
 
-Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez les informations de connexion source et les informations d’authentification du compte. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion à la source]**, puis patientez quelques instants le temps que la nouvelle connexion sʼétablisse.
+Pour créer un compte, sélectionnez **[!UICONTROL Nouveau compte]**, puis fournissez les informations d’identification de connexion source et les informations d’authentification du compte. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Connexion à la source]**, puis patientez quelques instants le temps que la nouvelle connexion sʼétablisse.
 
 ![La page d’authentification d’un nouveau compte avec les détails de connexion source et les informations d’authentification du compte.](../../images/tutorials/templates/new-account.png)
 
@@ -174,7 +174,7 @@ Le tableau suivant décrit les modèles B2C disponibles pour la source [!DNL Mic
 
 +++
 
-Selon le type d’entreprise sélectionné, une liste de modèles s’affiche. Sélectionnez l’icône d’aperçu ![icône d’aperçu](../../images/tutorials/templates/preview-icon.png) en regard d’un nom de modèle pour prévisualiser des données d’exemple du modèle.
+Selon le type d’entreprise sélectionné, une liste de modèles s’affiche. Sélectionnez l’icône d’aperçu ![icône d’aperçu](/help/images/icons/preview.png) en regard d’un nom de modèle pour prévisualiser des données d’exemple du modèle.
 
 ![Une liste de modèles avec l’icône d’aperçu mise en surbrillance.](../../images/tutorials/templates/templates.png)
 

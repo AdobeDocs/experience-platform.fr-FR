@@ -3,7 +3,7 @@ title: Suppression d’enregistrements
 description: Découvrez comment supprimer des enregistrements dans l’interface utilisateur de Adobe Experience Platform.
 badgeBeta: label="Version bêta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 9981f35732b041a92c5a371e727a8facb6636cf5
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 28%
@@ -51,7 +51,7 @@ Le workflow de création de requête s’affiche. Par défaut, l’option **[!UI
 
 L’étape suivante consiste à déterminer si vous souhaitez supprimer des enregistrements d’un seul jeu de données ou de tous les jeux de données. Si cette option n’est pas disponible, passez à la section [Fournir des identités](#provide-identities) du guide.
 
-Dans la section **[!UICONTROL Détails de l’enregistrement]**, utilisez le bouton radio pour sélectionner un jeu de données spécifique et tous les jeux de données. Si vous choisissez **[!UICONTROL Sélectionner un jeu de données]**, passez à l’icône de base de données (![L’icône de base de données](../images/ui/record-delete/database-icon.png)) pour ouvrir une boîte de dialogue qui fournit une liste de jeux de données disponibles. Sélectionnez le jeu de données de votre choix dans la liste, puis **[!UICONTROL Terminé]**.
+Dans la section **[!UICONTROL Détails de l’enregistrement]**, utilisez le bouton radio pour sélectionner un jeu de données spécifique et tous les jeux de données. Si vous choisissez **[!UICONTROL Sélectionner un jeu de données]**, passez à l’icône de base de données (![L’icône de base de données](/help/images/icons/database.png)) pour ouvrir une boîte de dialogue qui fournit une liste de jeux de données disponibles. Sélectionnez le jeu de données de votre choix dans la liste, puis **[!UICONTROL Terminé]**.
 
 ![La boîte de dialogue [!UICONTROL Sélectionner un jeu de données] avec un jeu de données sélectionné et [!UICONTROL Terminé] surligné.](../images/ui/record-delete/select-dataset.png)
 
@@ -130,7 +130,7 @@ Les commandes qui s’affichent vous permettent de saisir des identités une par
 
 ![Le workflow de création de requête avec un champ d’identité ajouté manuellement.](../images/ui/record-delete/identity-added.png)
 
-Pour ajouter d’autres identités, sélectionnez l’icône plus (![A plus).](../images/ui/record-delete/plus-icon.png)) en regard de l’une des lignes ou sélectionnez **[!UICONTROL Ajouter une identité]**.
+Pour ajouter d’autres identités, sélectionnez l’icône plus (![A plus).](/help/images/icons/tree-expand-all.png)) en regard de l’une des lignes ou sélectionnez **[!UICONTROL Ajouter une identité]**.
 
 ![Le workflow de création de requête avec l’icône plus et l’icône d’ajout d’identité mise en surbrillance.](../images/ui/record-delete/more-identities.png)
 

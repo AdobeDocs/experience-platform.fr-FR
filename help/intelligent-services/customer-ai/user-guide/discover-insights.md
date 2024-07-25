@@ -5,7 +5,7 @@ feature: Customer AI
 title: Découvrez les informations sur Customer AI
 description: Ce document sert de guide pour interagir avec les informations d’instance de service dans l’interface utilisateur d’Intelligent Services Customer AI.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2098'
 ht-degree: 27%
@@ -180,7 +180,7 @@ Le survol des lignes avec le curseur affiche la date et le taux réel/attendu po
 
 ![Exemple de compartiment](../images/insights/churn_tab.png)
 
-Vous pouvez filtrer la période pour les taux prévus et réels affichés. Sélectionnez l&#39;**icône de calendrier** ![icône](../images/insights/calendar_icon.png) , puis sélectionnez une nouvelle plage de dates. Les résultats de chacun des compartiments sont mis à jour pour s’afficher dans la nouvelle période.
+Vous pouvez filtrer la période pour les taux prévus et réels affichés. Sélectionnez l&#39;**icône de calendrier** ![icône](/help/images/icons/calendar.png) , puis sélectionnez une nouvelle plage de dates. Les résultats de chacun des compartiments sont mis à jour pour s’afficher dans la nouvelle période.
 
 ![Sélecteur de date](../images/insights/date_selector.png)
 

@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques populaires;contrôle d’accès
 title: Gestion des autorisations de rôle du contrôle d’accès basé sur les attributs
 description: Ce document fournit des informations sur la configuration des autorisations pour un rôle dans l’interface Autorisations d’Adobe Experience Cloud.
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: c1c7a851315214e2362085d3283d144066d4dd8a
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '984'
 ht-degree: 93%
@@ -24,7 +24,7 @@ Immédiatement après la [création d’un nouveau rôle](#create-a-new-role), v
 
 ## Filtrer les rôles
 
-Sélectionnez l’icône en forme d’entonnoir (![icône filtre](../../images/icon.png)) pour afficher une liste de contrôles de filtre afin de limiter les résultats.
+Sélectionnez l’icône en forme d’entonnoir (![icône filtre](/help/images/icons/filter.png)) pour afficher une liste de contrôles de filtre afin de limiter les résultats.
 
 ![Filtres FLAC](../../images/flac-ui/flac-filters.png)
 

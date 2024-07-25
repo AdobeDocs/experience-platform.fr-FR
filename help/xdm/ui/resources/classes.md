@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Création et modification de classes dans l’interface utilisateur
 description: Découvrez comment créer et modifier des classes dans l’interface utilisateur de l’Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 8%
@@ -74,7 +74,7 @@ Sélectionnez un bouton radio pour filtrer les classes selon qu’elles sont per
 
 ![Le workflow [!UICONTROL Créer un schéma] avec la barre de recherche, [!UICONTROL Personnalisé] et [!UICONTROL Industries] surlignée.](../../images/ui/resources/classes/filter-and-search.png)
 
-Pour vous aider à décider de la classe appropriée, il y a des informations (![Une icône d’information.](../../images/ui/resources/classes/info.png)) et aperçu (![Icône Aperçu.](../../images/ui/resources/classes/preview.png)) pour chaque classe. L’icône d’information ouvre une boîte de dialogue qui fournit une description de la classe et du secteur auquel elle est associée. L’icône d’aperçu ouvre une boîte de dialogue d’aperçu pour la classe contenant un schéma et ses propriétés.
+Pour vous aider à décider de la classe appropriée, il y a des informations (![Une icône d’information.](/help/images/icons/info.png)) et aperçu (![Icône Aperçu.](/help/images/icons/preview.png)) pour chaque classe. L’icône d’information ouvre une boîte de dialogue qui fournit une description de la classe et du secteur auquel elle est associée. L’icône d’aperçu ouvre une boîte de dialogue d’aperçu pour la classe contenant un schéma et ses propriétés.
 
 ![Aperçu de la classe sélectionnée avec le schéma de schéma et les propriétés de classe mises en surbrillance.](../../images/ui/resources/classes/class-preview.png)
 

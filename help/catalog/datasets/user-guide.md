@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des jeux de données
 description: Découvrez comment exécuter des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3080'
 ht-degree: 14%
@@ -161,11 +161,11 @@ La boîte de dialogue [!UICONTROL Déplacer] le jeu de données vers le dossier 
 
 >[!TIP]
 >
->Vous pouvez également créer des dossiers directement à partir de la boîte de dialogue Déplacer le jeu de données . Pour créer un dossier, sélectionnez l’icône Créer un dossier (![Icône Créer un dossier .](../images/datasets/user-guide/create-folder-icon.png)) en haut à droite de la boîte de dialogue.
+>Vous pouvez également créer des dossiers directement à partir de la boîte de dialogue Déplacer le jeu de données . Pour créer un dossier, sélectionnez l’icône Créer un dossier (![Icône Créer un dossier .](/help/images/icons/folder-add.png)) en haut à droite de la boîte de dialogue.
 >
 >![La boîte de dialogue [!UICONTROL Déplacer] du jeu de données avec l’icône de création de dossier mise en surbrillance.](/help/catalog/images/datasets/user-guide/create-folder.png)
 
-Une fois que le jeu de données se trouve dans un dossier, vous pouvez choisir d’afficher uniquement les jeux de données appartenant à un dossier spécifique. Pour ouvrir la structure de dossiers, sélectionnez l’icône Afficher les dossiers (![Icône Afficher les dossiers](../images/datasets/user-guide/show-folders-icon.png)). Sélectionnez ensuite le dossier de votre choix pour afficher tous les jeux de données associés.
+Une fois que le jeu de données se trouve dans un dossier, vous pouvez choisir d’afficher uniquement les jeux de données appartenant à un dossier spécifique. Pour ouvrir la structure de dossiers, sélectionnez l’icône Afficher les dossiers (![Icône Afficher les dossiers](/help/images/icons/rail-left.png)). Sélectionnez ensuite le dossier de votre choix pour afficher tous les jeux de données associés.
 
 ![ Les tableaux de bord [!UICONTROL Jeux de données] avec la structure de dossiers des jeux de données affichée, l’icône Afficher les dossiers et un dossier sélectionné en surbrillance.](../images/datasets/user-guide/folder-structure.png)
 
@@ -197,7 +197,7 @@ Vous pouvez supprimer les données de profil associées à un jeu de données du
 
 ## Recherche et filtrage de jeux de données {#search-and-filter}
 
-Pour rechercher ou filtrer la liste des jeux de données disponibles, sélectionnez l’icône de filtre (![Icône de filtre.](../images/datasets/user-guide/icon.png)) en haut à gauche de l’espace de travail. Un ensemble d’options de filtre dans le rail de gauche s’affiche. Il existe plusieurs méthodes pour filtrer vos jeux de données disponibles. Il s’agit notamment des éléments suivants : [[!UICONTROL Afficher les jeux de données système]](#show-system-datasets), [[!UICONTROL  inclus dans le profil]](#filter-profile-enabled-datasets), [[!UICONTROL Balises]](#filter-by-tag), [[!UICONTROL Date de création]](#filter-by-creation-date), [[!UICONTROL Date de modification], [!UICONTROL Créée par]](#filter-by-creation-date) et [[!UICONTROL Schéma]](#filter-by-schema).
+Pour rechercher ou filtrer la liste des jeux de données disponibles, sélectionnez l’icône de filtre (![Icône de filtre.](/help/images/icons/filter.png)) en haut à gauche de l’espace de travail. Un ensemble d’options de filtre dans le rail de gauche s’affiche. Il existe plusieurs méthodes pour filtrer vos jeux de données disponibles. Il s’agit notamment des éléments suivants : [[!UICONTROL Afficher les jeux de données système]](#show-system-datasets), [[!UICONTROL  inclus dans le profil]](#filter-profile-enabled-datasets), [[!UICONTROL Balises]](#filter-by-tag), [[!UICONTROL Date de création]](#filter-by-creation-date), [[!UICONTROL Date de modification], [!UICONTROL Créée par]](#filter-by-creation-date) et [[!UICONTROL Schéma]](#filter-by-schema).
 
 La liste des filtres appliqués s’affiche au-dessus des résultats filtrés.
 

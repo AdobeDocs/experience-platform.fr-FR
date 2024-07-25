@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Définition des champs d’énumération et des valeurs proposées dans l’interface utilisateur
 description: Découvrez comment définir des énumérations et des valeurs suggérées pour les champs de chaîne dans l’interface utilisateur de l’Experience Platform.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 8%
@@ -40,7 +40,7 @@ Sélectionnez **[!UICONTROL Enums et valeurs proposées]**, puis **[!UICONTROL E
 
 Sous la colonne **[!UICONTROL Valeur]** , vous devez fournir la valeur exacte à laquelle vous souhaitez limiter le champ. Vous pouvez également fournir un **[!UICONTROL nom d’affichage]** convivial pour la contrainte, ce qui affecte la manière dont la valeur sera représentée dans la segmentation.
 
-Continuez à utiliser **[!UICONTROL Ajouter une ligne]** pour ajouter les contraintes souhaitées et les libellés facultatifs à l’énumération, ou sélectionnez l’icône de suppression (![Image de l’icône de suppression](../../images/ui/fields/enum/remove-icon.png)) en regard d’une ligne précédemment ajoutée pour la supprimer. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]** pour appliquer les modifications au schéma.
+Continuez à utiliser **[!UICONTROL Ajouter une ligne]** pour ajouter les contraintes souhaitées et les libellés facultatifs à l’énumération, ou sélectionnez l’icône de suppression (![Image de l’icône de suppression](/help/images/icons/remove-circle.png)) en regard d’une ligne précédemment ajoutée pour la supprimer. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]** pour appliquer les modifications au schéma.
 
 ![Image montrant les valeurs d’énumération et les noms d’affichage renseignés pour le champ de chaîne dans l’interface utilisateur](../../images/ui/fields/enum/enum-confirm.png)
 
@@ -52,7 +52,7 @@ Sélectionnez **[!UICONTROL Enumérations et valeurs proposées]**, puis **[!UIC
 
 ![Image présentant l’option Valeurs proposées sélectionnée dans l’interface utilisateur](../../images/ui/fields/enum/suggested-add-row.png)
 
-Dans la colonne **[!UICONTROL Nom d’affichage]**, indiquez un nom convivial pour la valeur telle que vous souhaitez la voir apparaître dans l’interface utilisateur de segmentation. Pour ajouter d’autres valeurs suggérées, sélectionnez à nouveau **[!UICONTROL Ajouter une ligne]** et répétez le processus selon vos besoins. Pour supprimer une ligne précédemment ajoutée, sélectionnez ![l’icône de suppression](../../images/ui/fields/enum/remove-icon.png) en regard de la ligne en question.
+Dans la colonne **[!UICONTROL Nom d’affichage]**, indiquez un nom convivial pour la valeur telle que vous souhaitez la voir apparaître dans l’interface utilisateur de segmentation. Pour ajouter d’autres valeurs suggérées, sélectionnez à nouveau **[!UICONTROL Ajouter une ligne]** et répétez le processus selon vos besoins. Pour supprimer une ligne précédemment ajoutée, sélectionnez ![l’icône de suppression](/help/images/icons/remove-circle.png) en regard de la ligne en question.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]** pour appliquer les modifications au schéma.
 
@@ -68,7 +68,7 @@ Certains champs des composants XDM standard contiennent leurs propres valeurs su
 
 ![Image montrant les valeurs d’énumération et les noms d’affichage renseignés pour le champ de chaîne dans l’interface utilisateur](../../images/ui/fields/enum/suggested-standard.png)
 
-Pour ajouter de nouvelles valeurs suggérées pour un champ standard, sélectionnez **[!UICONTROL Ajouter une ligne]**. Pour supprimer une valeur suggérée précédemment ajoutée par votre organisation, sélectionnez ![l’icône de suppression](../../images/ui/fields/enum/remove-icon.png) en regard de la ligne en question.
+Pour ajouter de nouvelles valeurs suggérées pour un champ standard, sélectionnez **[!UICONTROL Ajouter une ligne]**. Pour supprimer une valeur suggérée précédemment ajoutée par votre organisation, sélectionnez ![l’icône de suppression](/help/images/icons/remove-circle.png) en regard de la ligne en question.
 
 ![Image montrant les valeurs d’énumération et les noms d’affichage renseignés pour le champ de chaîne dans l’interface utilisateur](../../images/ui/fields/enum/suggested-standard-add.png)
 

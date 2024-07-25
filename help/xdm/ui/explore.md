@@ -5,7 +5,7 @@ title: Exploration des ressources de schéma dans l’interface utilisateur
 description: Découvrez comment explorer les schémas, classes, groupes de champs de schéma et types de données existants dans l’interface utilisateur de l’Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 0e1fb15cfa56fb4c2a4a645578327f0a4bd22e68
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1078'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas
 
 ![](../images/ui/explore/tabs.png)
 
-L’icône de filtre (![Icône de filtre ](../images/ui/explore/icon.png)) affiche les commandes dans le rail de gauche pour réduire les résultats répertoriés. Les contrôles affichés diffèrent selon le type de ressource répertoriée.
+L’icône de filtre (![Icône de filtre ](/help/images/icons/filter.png)) affiche les commandes dans le rail de gauche pour réduire les résultats répertoriés. Les contrôles affichés diffèrent selon le type de ressource répertoriée.
 
 Par exemple, pour filtrer la liste afin de n’afficher que les types de données standard fournis par Adobe, sélectionnez respectivement **[!UICONTROL Type de données]** et **[!UICONTROL Adobe]** sous les sections **[!UICONTROL Type]** et **[!UICONTROL Propriétaire]** .
 
@@ -56,7 +56,7 @@ Tous les champs de type objet contenant des sous-propriétés sont réduits par 
 
 ### Indicateur de classe standard et de groupe de champs {#standard-class-and-field-group-indicator}
 
-Dans l’éditeur de schémas, les classes standard (générées par un Adobe) et les groupes de champs sont indiqués par l’icône de cadenas (![Icône de cadenas.](../images/ui/explore/padlock-icon.png). Le cadenas s’affiche dans le rail de gauche en regard du nom de la classe ou du groupe de champs, ainsi qu’en regard de tout champ du diagramme de schéma qui fait partie d’une ressource générée par le système.
+Dans l’éditeur de schémas, les classes standard (générées par un Adobe) et les groupes de champs sont indiqués par l’icône de cadenas (![Icône de cadenas.](/help/images/icons/lock-closed.png). Le cadenas s’affiche dans le rail de gauche en regard du nom de la classe ou du groupe de champs, ainsi qu’en regard de tout champ du diagramme de schéma qui fait partie d’une ressource générée par le système.
 
 ![L’éditeur de schéma avec l’icône de cadenas mise en surbrillance](../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -94,7 +94,7 @@ Si le champ que vous inspectez est un champ d’énumération, le rail droit aff
 
 Lors de l’inspection des schémas qui contiennent des champs d’identité, ces champs sont répertoriés dans le rail de gauche sous la classe ou le groupe de champs qui les fournit au schéma. Sélectionnez le nom du champ d’identité dans le rail de gauche pour afficher le champ dans la zone de travail, quelle que soit la profondeur d’imbrication.
 
-Les champs d’identité sont mis en surbrillance dans la zone de travail avec une icône d’empreinte digitale (![Icône d’empreinte digitale ](../images/ui/explore/identity-symbol.png)). Si vous sélectionnez le nom du champ d’identité, vous pouvez afficher des informations supplémentaires telles que l’ [espace de noms d’identité](../../identity-service/features/namespaces.md) et déterminer si le champ est l’identité principale du schéma.
+Les champs d’identité sont mis en surbrillance dans la zone de travail avec une icône d’empreinte digitale (![Icône d’empreinte digitale ](/help/images/icons/identity-service.png)). Si vous sélectionnez le nom du champ d’identité, vous pouvez afficher des informations supplémentaires telles que l’ [espace de noms d’identité](../../identity-service/features/namespaces.md) et déterminer si le champ est l’identité principale du schéma.
 
 ![](../images/ui/explore/identity-field.png)
 

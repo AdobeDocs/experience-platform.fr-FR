@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 305aa7f44cd64d9a0ae704fe9aa01d2d1c536ade
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '3743'
 ht-degree: 85%
@@ -141,7 +141,7 @@ Si vous sélectionnez une valeur dans cette liste d’énumérations, elle sera 
 
 ![Avertissement qui s’affiche si vous insérez une valeur qui ne fait pas partie de la liste d’énumérations.](../images/ui/segment-builder/enum-warning.png)
 
-Si vous créez plusieurs valeurs, vous pouvez toutes les ajouter en même temps à l’aide du téléchargement massif. Sélectionnez l’![icône plus](../images/ui/segment-builder/plus-icon.png) pour afficher la fenêtre contextuelle **[!UICONTROL Ajouter des valeurs en bloc]**.
+Si vous créez plusieurs valeurs, vous pouvez toutes les ajouter en même temps à l’aide du téléchargement massif. Sélectionnez l’![icône plus](/help/images/icons/add-circle.png) pour afficher la fenêtre contextuelle **[!UICONTROL Ajouter des valeurs en bloc]**.
 
 ![L’icône plus est mise en surbrillance, affichant le bouton que vous pouvez sélectionner pour accéder à la fenêtre contextuelle de téléchargement massif.](../images/ui/segment-builder/add-bulk-values.png)
 
@@ -287,7 +287,7 @@ Au fur et à mesure que vous continuez à créer votre définition de segment, v
 >
 >Vous trouverez plus d’informations sur la génération d’estimations de définitions de segments dans la [section Génération d’estimations](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) du tutoriel sur la création de définitions de segments.
 
-Vous pouvez également sélectionner votre méthode d’évaluation. Si vous savez quelle méthode d’évaluation vous voulez utiliser, vous pouvez sélectionner la méthode d’évaluation souhaitée à l’aide de la liste déroulante. Si vous souhaitez savoir pour quels types d’évaluation cette définition de segment est admissible, vous pouvez sélectionner l’icône Parcourir ![icône de dossier avec une loupe](../images/ui/segment-builder/segment-evaluation-select-icon.png) pour voir la liste des méthodes d’évaluation de définition de segment disponibles.
+Vous pouvez également sélectionner votre méthode d’évaluation. Si vous savez quelle méthode d’évaluation vous voulez utiliser, vous pouvez sélectionner la méthode d’évaluation souhaitée à l’aide de la liste déroulante. Si vous souhaitez savoir pour quels types d’évaluation cette définition de segment est admissible, vous pouvez sélectionner l’icône Parcourir ![icône de dossier avec une loupe](/help/images/icons/folder-search.png) pour voir la liste des méthodes d’évaluation de définition de segment disponibles.
 
 L’[!UICONTROL Éligibilité de la méthode d’évaluation] s’affiche. Cette fenêtre contextuelle affiche les méthodes d’évaluation disponibles, à savoir par lots, en flux continu et Edge. La fenêtre contextuelle affiche les méthodes d’évaluation éligibles et non éligibles. Selon les paramètres que vous avez utilisés dans votre définition de segment, il se peut qu’elle ne soit pas admissible pour certaines méthodes d’évaluation. Pour plus d’informations sur les exigences de chaque méthode d’évaluation, veuillez lire les présentations sur la [segmentation en flux continu](./streaming-segmentation.md#query-types) ou la [segmentation Edge](./edge-segmentation.md#query-types).
 

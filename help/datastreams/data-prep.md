@@ -2,7 +2,7 @@
 title: Préparation des données pour la collecte de données
 description: Découvrez comment mapper vos données à un schéma d’événement du modèle de données d’expérience (XDM) lors de la configuration d’un flux de données pour les SDK web et mobile d’Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1183'
 ht-degree: 60%
@@ -173,11 +173,11 @@ Pour créer une règle de mappage, sélectionnez **[!UICONTROL Ajouter un nouvea
 
 ![Ajout d&#39;un nouveau mapping.](assets/data-prep/add-new-mapping.png)
 
-Sélectionnez l’icône de source (![icône de source](assets/data-prep/source-icon.png)) et, dans la boîte de dialogue qui s’affiche, sélectionnez le champ source que vous souhaitez mapper dans la zone de travail fournie. Une fois que vous avez choisi un champ, utilisez le bouton **[!UICONTROL Sélectionner]** pour continuer.
+Sélectionnez l’icône de source (![icône de source](/help/images/icons/source.png)) et, dans la boîte de dialogue qui s’affiche, sélectionnez le champ source que vous souhaitez mapper dans la zone de travail fournie. Une fois que vous avez choisi un champ, utilisez le bouton **[!UICONTROL Sélectionner]** pour continuer.
 
 ![Sélectionner le champ à mapper dans le schéma source.](assets/data-prep/source-mapping.png)
 
-Ensuite, sélectionnez l’icône de schéma (![icône de schéma](assets/data-prep/schema-icon.png)) pour ouvrir une boîte de dialogue similaire pour le schéma d’événement cible. Sélectionnez le champ vers lequel vous souhaitez mapper les données avant de confirmer à l’aide du bouton **[!UICONTROL Sélectionner]**.
+Ensuite, sélectionnez l’icône de schéma (![icône de schéma](/help/images/icons/schema.png)) pour ouvrir une boîte de dialogue similaire pour le schéma d’événement cible. Sélectionnez le champ vers lequel vous souhaitez mapper les données avant de confirmer à l’aide du bouton **[!UICONTROL Sélectionner]**.
 
 ![Sélectionner le champ à mapper dans le schéma cible.](assets/data-prep/target-mapping.png)
 

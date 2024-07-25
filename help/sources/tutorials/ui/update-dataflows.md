@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Mise à jour d’un flux de données de connexion Source dans l’interface utilisateur
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: cef5c203acf3318445399669336166e6627ebe66
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 20%
@@ -36,7 +36,7 @@ Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]
 
 La page [!UICONTROL Flux de données] contient une liste de tous les flux de données existants, y compris des informations sur leur jeu de données cible, leur source et leur nom de compte correspondants.
 
-Pour trier la liste, sélectionnez l’icône de filtre ![filter](../../images/tutorials/update/filter.png) en haut à gauche pour utiliser le panneau de tri.
+Pour trier la liste, sélectionnez l’icône de filtre ![filter](/help/images/icons/filter.png) en haut à gauche pour utiliser le panneau de tri.
 
 ![filter-dataflows](../../images/tutorials/update-dataflows/filter-dataflows.png)
 

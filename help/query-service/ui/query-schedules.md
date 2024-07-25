@@ -2,7 +2,7 @@
 title: Planifications de requête
 description: Découvrez comment automatiser les exécutions de requêtes planifiées, supprimer ou désactiver un planning de requêtes et utiliser les options de planification disponibles via l’interface utilisateur de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 0b056da8457010ce36efc48e3dd91f280a9b15c5
+source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
 workflow-type: tm+mt
 source-wordcount: '1848'
 ht-degree: 15%
@@ -75,7 +75,7 @@ Sélectionnez **[!UICONTROL Créer et ajouter dans un nouveau jeu de données]**
 
 ![Le panneau Détails de la planification avec les détails du jeu de données et les options [!UICONTROL Créer et ajouter dans un nouveau jeu de données] mises en surbrillance.](../images/ui/query-schedules/dataset-details-create-and-append.png)
 
-Vous pouvez également sélectionner **[!UICONTROL Ajouter au jeu de données existant]** suivi de l’icône du jeu de données (![Icône du jeu de données.](../images/ui/query-schedules/dataset-icon.png)).
+Vous pouvez également sélectionner **[!UICONTROL Ajouter au jeu de données existant]** suivi de l’icône du jeu de données (![Icône du jeu de données.](/help/images/icons/database.png)).
 
 ![Panneau Détails de la planification avec les détails du jeu de données et l’ajout dans le jeu de données existant mis en surbrillance.](../images/ui/query-schedules/dataset-details-existing.png)
 

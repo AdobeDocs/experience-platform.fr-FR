@@ -2,7 +2,7 @@
 title: Présentation de l’extension de l’API Meta Conversions
 description: Découvrez l’extension de l’API Meta Conversions pour le transfert d’événement dans Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: 3cd937f49f27006e3cab60df1692d33138944ce2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '2583'
 ht-degree: 0%
@@ -160,7 +160,7 @@ Patientez quelques minutes avant que le processus de configuration initial ne so
 
 ![ Écran de confirmation de la configuration initiale terminée](../../../images/extensions/server/meta/setup-complete.png)
 
-Dans la boîte de dialogue **[!UICONTROL Ajouter le code sur votre site]** , copiez le code fourni à l’aide de la fonction ![Copier](../../../images/extensions/server/meta/copy-icon.png) et collez-le dans le `<head>` de votre site web source. Une fois la mise en oeuvre terminée, sélectionnez **[!UICONTROL Start Validation]**
+Dans la boîte de dialogue **[!UICONTROL Ajouter le code sur votre site]** , copiez le code fourni à l’aide de la fonction ![Copier](/help/images/icons/copy.png) et collez-le dans le `<head>` de votre site web source. Une fois la mise en oeuvre terminée, sélectionnez **[!UICONTROL Start Validation]**
 
 ![Ajouter du code dans la boîte de dialogue de votre site](../../../images/extensions/server/meta/add-code-on-your-site.png)
 

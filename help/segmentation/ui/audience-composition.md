@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
 description: La Composition d’audience dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: ca8f0c3df9581af7be37e242c9e300ef1b6ea814
+source-git-commit: 8bc03889ff108630bd20fe47f2c2920ceba5069b
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 83%
@@ -20,7 +20,7 @@ La Composition d’audience offre un espace de travail permettant de créer et d
 
 ![Interface utilisateur de la Composition d’audience.](../images/ui/audience-composition/audience-composition.png)
 
-Pour modifier les détails de la composition, y compris le titre et la description, sélectionnez le bouton ![curseur](../images/ui/audience-composition/sliders.png).
+Pour modifier les détails de la composition, y compris le titre et la description, sélectionnez le bouton ![curseur](/help/images/icons/properties.png).
 
 La fenêtre contextuelle **[!UICONTROL Propriétés de la composition]** s’affiche. Vous pouvez insérer ici des détails sur votre composition, y compris le titre et la description.
 
@@ -114,7 +114,7 @@ Une liste d’audiences s’affiche. Sélectionnez **[!UICONTROL Ajouter]** pour
 
 ### Exclure par attribut {#exclude-attribute}
 
-Si vous excluez par attribut, vous pouvez sélectionner les attributs à exclure en sélectionnant l’icône de ![filtre](../images/ui/audience-composition/filter-attribute.png) dans la section **[!UICONTROL Règle d’exclusion]**.
+Si vous excluez par attribut, vous pouvez sélectionner les attributs à exclure en sélectionnant l’icône de ![filtre](/help/images/icons/project-edit.png) dans la section **[!UICONTROL Règle d’exclusion]**.
 
 ![La section d’attribut est mise en surbrillance, vous indiquant où sélectionner l’attribut à exclure.](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -140,7 +140,7 @@ Pour ajouter un bloc **[!UICONTROL Enrichir]**, sélectionnez l’icône **+**, 
 
 Le bloc **[!UICONTROL Enrichir]** est ajouté. Lors de la sélection du bloc, les détails de l’enrichissement apparaissent dans le rail de droite. Le libellé du bloc et le jeu de données d’enrichissement sont indiqués.
 
-Pour sélectionner le jeu de données avec lequel enrichir l’audience, sélectionnez l’icône ![Filtrer](../images/ui/audience-composition/filter-attribute.png).
+Pour sélectionner le jeu de données avec lequel enrichir l’audience, sélectionnez l’icône ![Filtrer](/help/images/icons/project-edit.png).
 
 ![Le bouton de filtre est mis en surbrillance. Sélectionnez l’icône pour afficher la fenêtre contextuelle [!UICONTROL Sélectionner un jeu de données].](../images/ui/audience-composition/enrich-select-dataset.png)
 
@@ -160,7 +160,7 @@ La section **[!UICONTROL Critères d’enrichissement]** s’affiche maintenant 
 
 ![La zone [!UICONTROL Critères d’enrichissement] est mise en surbrillance.](../images/ui/audience-composition/enrichment-criteria.png)
 
-Pour sélectionner la **[!UICONTROL clé de jointure source]**, cliquez sur l’icône ![Filtrer](../images/ui/audience-composition/filter-attribute.png).
+Pour sélectionner la **[!UICONTROL clé de jointure source]**, cliquez sur l’icône ![Filtrer](/help/images/icons/project-edit.png).
 
 ![L’icône de filtre de la [!UICONTROL clé de jointure source] est mise en surbrillance.](../images/ui/audience-composition/enrich-select-source-join-key.png)
 
@@ -168,7 +168,7 @@ La fenêtre contextuelle de **[!UICONTROL Sélection d’un attribut de profil]*
 
 ![L’attribut à utiliser comme clé de jointure source est mis en surbrillance.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
 
-Pour sélectionner la **[!UICONTROL clé de jointure du jeu de données d’enrichissement]**, cliquez sur l’icône ![Filtrer](../images/ui/audience-composition/filter-attribute.png).
+Pour sélectionner la **[!UICONTROL clé de jointure du jeu de données d’enrichissement]**, cliquez sur l’icône ![Filtrer](/help/images/icons/project-edit.png).
 
 ![L’icône de filtre de la [!UICONTROL clé de jointure du jeu de données d’enrichissement] est mise en surbrillance.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
 
@@ -216,7 +216,7 @@ Lorsque vous sélectionnez le bloc, les détails du classement s’affichent dan
 
 ![Le bloc de classement est mis en surbrillance, ainsi que les détails le concernant.](../images/ui/audience-composition/rank.png)
 
-Pour sélectionner l’attribut par lequel classer les audiences, sélectionnez l’icône de ![filtre](../images/ui/audience-composition/filter-attribute.png).
+Pour sélectionner l’attribut par lequel classer les audiences, sélectionnez l’icône de ![filtre](/help/images/icons/project-edit.png).
 
 ![L’icône de filtre est mise en surbrillance et indique les éléments à sélectionner pour accéder à l’écran de sélection des attributs de profil.](../images/ui/audience-composition/select-rank-attribute.png)
 
@@ -250,7 +250,7 @@ Par exemple, vous pouvez avoir trois chemins, chacun avec un pourcentage de prof
 
 ### Fractionner par attribut {#split-attribute}
 
-Lors du fractionnement par attribut, les audiences sont fractionnées en fonction des attributs fournis. Pour sélectionner l’attribut du fractionnement, sélectionnez le bloc **[!UICONTROL Fractionner]**, puis l’icône de ![filtrage](../images/ui/audience-composition/filter-attribute.png).
+Lors du fractionnement par attribut, les audiences sont fractionnées en fonction des attributs fournis. Pour sélectionner l’attribut du fractionnement, sélectionnez le bloc **[!UICONTROL Fractionner]**, puis l’icône de ![filtrage](/help/images/icons/project-edit.png).
 
 ![Le bouton de filtrage est sélectionné et indique comment filtrer par attribut.](../images/ui/audience-composition/select-split-attribute.png)
 

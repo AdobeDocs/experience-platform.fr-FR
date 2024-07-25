@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide des informations d’identification de Query Service
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui permet d’écrire et d’exécuter des requêtes, d’afficher des requêtes précédemment exécutées et d’accéder aux requêtes enregistrées par les utilisateurs de votre entreprise.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: ba4ff2715d4e3eb71377542ab2361b967cd3ac11
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1807'
 ht-degree: 3%
@@ -36,7 +36,7 @@ La section **[!UICONTROL Informations d’identification d’expiration]** fourn
 - **[!UICONTROL Port]** : numéro de port de l’hôte auquel se connecter.
 - **[!UICONTROL Base de données]** : nom de la base de données à laquelle se connecter un client.
 - **[!UICONTROL Nom d’utilisateur]** : nom d’utilisateur utilisé pour se connecter à Query Service.
-- **[!UICONTROL Mot de passe]** : mot de passe utilisé pour se connecter à Query Service. Les mots de passe de l’interface utilisateur ont été hachés pour des raisons de sécurité. Sélectionnez l’icône de copie (![Icône Copier.](../images/ui/credentials/copy-icon.png)) pour copier vos informations d’identification complètes et non hachées dans le Presse-papiers.
+- **[!UICONTROL Mot de passe]** : mot de passe utilisé pour se connecter à Query Service. Les mots de passe de l’interface utilisateur ont été hachés pour des raisons de sécurité. Sélectionnez l’icône de copie (![Icône Copier.](/help/images/icons/copy.png)) pour copier vos informations d’identification complètes et non hachées dans le Presse-papiers.
 - **[!UICONTROL Commande PSQL]** : une commande qui a automatiquement inséré toutes les informations pertinentes pour vous connecter à Query Service à l’aide de PSQL sur la ligne de commande.
 - **[!UICONTROL Expire]** : date et heure d’expiration des informations d’identification arrivant à expiration. La durée de validité par défaut du jeton est de 24 heures, mais elle peut être modifiée dans les paramètres avancés de l’Admin Console.
 
@@ -126,7 +126,7 @@ Après avoir enregistré vos informations d’identification générées, sélec
 
 ![ L&#39;onglet Informations d&#39;identification du tableau de bord Requêtes avec la section Informations d&#39;identification non arrivant à expiration mise en surbrillance.](../images/ui/credentials/list-credentials.png)
 
-Vous pouvez modifier ou supprimer vos informations d’identification non arrivant à expiration. Pour modifier des informations d’identification non expirantes, sélectionnez l’icône représentant un crayon (![Icône représentant un crayon.](../images/ui/credentials/edit-icon.png)). Pour supprimer des informations d’identification non expirantes, sélectionnez l’icône de suppression (![Icône de corbeille.](../images/ui/credentials/delete-icon.png)).
+Vous pouvez modifier ou supprimer vos informations d’identification non arrivant à expiration. Pour modifier des informations d’identification non expirantes, sélectionnez l’icône représentant un crayon (![Icône représentant un crayon.](/help/images/icons/edit.png)). Pour supprimer des informations d’identification non expirantes, sélectionnez l’icône de suppression (![Icône de corbeille.](/help/images/icons/delete.png)).
 
 Lors de la modification d’informations d’identification non expirantes, un modal s’affiche. Vous pouvez fournir les détails suivants à mettre à jour :
 

@@ -3,7 +3,7 @@ title: Extension de transfert d’événement de l’API Conversions liées
 description: Cette extension de transfert d’événement Adobe Experience Platform vous permet de mesurer les performances de votre campagne marketing Linkedin.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 411e7b77-081e-4139-ba34-04468e519ea5
-source-git-commit: 0d6ade1a0b6c00a4f87395d476dd7e7915489ea5
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '790'
 ht-degree: 3%
@@ -52,7 +52,7 @@ Une fois la sélection effectuée, d’autres commandes s’affichent pour confi
 | --- | --- |
 | [!UICONTROL E-mail.] | Adresse électronique du contact associé à l’événement de conversion. La valeur de l’email sera encodée par le code d’extension dans SHA256, sauf si la valeur fournie est déjà une chaîne SHA256. |
 | [!UICONTROL LinkedIn First Party Ads Tracking UID] | Il s’agit d’un identifiant de cookie propriétaire. Les annonceurs doivent activer le suivi de conversion amélioré à partir de [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/help/lms/answer/a423304/enable-first-party-cookies-on-a-linkedin-insight-tag) afin d’activer les cookies propriétaires qui ajoutent un paramètre d’ID de clic `li_fat_id` aux URL de clic. |
-| [!UICONTROL Données d’informations client] | Ce champ contient un objet JSON avec des attributs supplémentaires qui seront envoyés avec le message.<br><br>Sous l’option **[!UICONTROL Brut]**, vous pouvez coller l’objet JSON directement dans le champ de texte fourni, ou vous pouvez sélectionner l’icône d’élément de données (![Icône Jeu de données](../../../images/extensions/server/aws/data-element-icon.png)) pour effectuer une sélection dans une liste d’éléments de données existants pour représenter les données.<br><br>Vous pouvez également utiliser l’option **[!UICONTROL Éditeur de paires clé-valeur JSON]** pour ajouter manuellement chaque paire clé-valeur via un éditeur d’interface utilisateur. Chaque valeur peut être représentée par une entrée brute ou un élément de données peut être sélectionné à la place. Les valeurs de clé acceptées sont : `firstName`, `lastName`, `companyName`, `title` et `country`. |
+| [!UICONTROL Données d’informations client] | Ce champ contient un objet JSON avec des attributs supplémentaires qui seront envoyés avec le message.<br><br>Sous l’option **[!UICONTROL Brut]**, vous pouvez coller l’objet JSON directement dans le champ de texte fourni, ou vous pouvez sélectionner l’icône d’élément de données (![Icône Jeu de données](/help/images/icons/database.png)) pour effectuer une sélection dans une liste d’éléments de données existants pour représenter les données.<br><br>Vous pouvez également utiliser l’option **[!UICONTROL Éditeur de paires clé-valeur JSON]** pour ajouter manuellement chaque paire clé-valeur via un éditeur d’interface utilisateur. Chaque valeur peut être représentée par une entrée brute ou un élément de données peut être sélectionné à la place. Les valeurs de clé acceptées sont : `firstName`, `lastName`, `companyName`, `title` et `country`. |
 
 {style="table-layout:auto"}
 

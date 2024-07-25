@@ -2,7 +2,7 @@
 title: Visionneuse de graphique d’identités
 description: Un graphique d’identités est une carte des relations entre différentes identités pour un client spécifique, qui vous fournit une représentation visuelle de la manière dont votre client interagit avec votre marque sur différents canaux.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1402'
 ht-degree: 6%
@@ -46,7 +46,7 @@ Pour afficher un graphique d’identités, fournissez un espace de noms d’iden
 
 >[!TIP]
 >
->Sélectionnez l’icône de table ![icône de table](../images/identity-graph-viewer/table-icon.png) pour afficher un panneau avec une liste de tous les espaces de noms d’identité disponibles dans votre organisation. Vous pouvez utiliser n’importe quel espace de noms d’identité tant qu’une valeur d’identité valide y est connectée. Pour plus d’informations, consultez le [guide sur l’espace de noms d’identité](./namespaces.md).
+>Sélectionnez l’icône de table ![icône de table](/help/images/icons/table.png) pour afficher un panneau avec une liste de tous les espaces de noms d’identité disponibles dans votre organisation. Vous pouvez utiliser n’importe quel espace de noms d’identité tant qu’une valeur d’identité valide y est connectée. Pour plus d’informations, consultez le [guide sur l’espace de noms d’identité](./namespaces.md).
 
 ![ Un espace de noms d’identité et sa valeur correspondante, fournis dans l’écran de recherche du graphique d’identités.](../images/graph-viewer/namespace-and-value.png)
 

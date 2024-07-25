@@ -4,7 +4,7 @@ title: Guide de lʼinterface utilisateur des alertes
 description: Découvrez comment gérer les alertes dans lʼinterface utilisateur dʼExperience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 8d63e9fa4c7eb09ffb90edca612a6e6d44dd18fa
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '626'
 ht-degree: 40%
@@ -71,7 +71,7 @@ Vous avez correctement ajouté des utilisateurs à votre liste de notifications 
 
 Les notifications d&#39;alerte peuvent être diffusées directement à votre email.
 
-Sélectionnez l’icône représentant une cloche (![icône représentant une cloche](../images/alerts/ui/bell-icon.png)) située dans le ruban supérieur à droite pour afficher les notifications et les annonces. Dans la liste déroulante qui s’affiche, sélectionnez l’icône représentant un engrenage (![icône représentant un engrenage](../images/alerts/ui/cog-icon.png)) pour accéder à la page des préférences de l’Experience Cloud.
+Sélectionnez l’icône représentant une cloche (![icône représentant une cloche](/help/images/icons/bell.png)) située dans le ruban supérieur à droite pour afficher les notifications et les annonces. Dans la liste déroulante qui s’affiche, sélectionnez l’icône représentant un engrenage (![icône représentant un engrenage](/help/images/icons/settings.png)) pour accéder à la page des préférences de l’Experience Cloud.
 
 ![ Une liste d’alertes affichée qui met en surbrillance l’icône représentant une cloche et l’icône représentant un engrenage.](../images/alerts/ui/edit-preferences.png)
 

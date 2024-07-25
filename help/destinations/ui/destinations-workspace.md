@@ -3,7 +3,7 @@ keywords: platform;destinations;espace de travail des destinations;espace de tra
 title: Espace de travail des destinations
 description: 'L’espace de travail des destinations se compose de cinq sections : Vue d’ensemble, Catalogue, Parcourir, Comptes et Vue du système. Elles sont décrites dans les sections ci-dessous.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: dad07add8c5f9cc98a187c2e2222a51611dbd1a2
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1231'
 ht-degree: 81%
@@ -69,9 +69,9 @@ L’onglet **[!UICONTROL Comptes]** vous montre les détails des connexions que 
 
 >[!TIP]
 >
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Plateforme] et utilisez le contrôle ![Activer le contrôle](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activer ]**/**[!UICONTROL  Activer les audiences ]**/**[!UICONTROL  Exporter des jeux de données ]**pour exporter des audiences ou des jeux de données vers cette destination.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Modifier les détails](../assets/ui/workspace/pencil-icon.png)**[!UICONTROL Modifier les détails ]**pour [mettre à jour](update-accounts.md) les détails d’un compte de destination existant.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la ![commande Supprimer](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Supprimer ]**pour [supprimer](delete-destination-account.md) un compte de destination existant.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Plateforme] et utilisez le contrôle ![Activer le contrôle](/help/images/icons/data-add.png)**[!UICONTROL Activer ]**/**[!UICONTROL  Activer les audiences ]**/**[!UICONTROL  Exporter des jeux de données ]**pour exporter des audiences ou des jeux de données vers cette destination.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la commande ![Modifier les détails](/help/images/icons/edit.png)**[!UICONTROL Modifier les détails ]**pour [mettre à jour](update-accounts.md) les détails d’un compte de destination existant.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Platform] et utilisez la ![commande Supprimer](/help/images/icons/delete.png)**[!UICONTROL Supprimer ]**pour [supprimer](delete-destination-account.md) un compte de destination existant.
 
 ![Onglet Comptes](../assets/ui/workspace/destination-account-options.png)
 
@@ -91,10 +91,10 @@ L’onglet **[!UICONTROL Parcourir]** affiche les destinations avec lesquelles v
 
 >[!TIP]
 >
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez le contrôle ![Activer les audiences](../assets/ui/workspace/add-data-symbol.png)**[!UICONTROL Activer ]**pour exporter des audiences ou des jeux de données vers cette destination.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Supprimer](../assets/ui/workspace/delete-destination-symbol.png)**[!UICONTROL Supprimer ]**pour [supprimer](delete-destinations.md) une connexion existante à une destination.
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Affichage dans la surveillance](../assets/ui/workspace/monitoring-icon.png)**[!UICONTROL Affichage dans la surveillance ]**pour afficher les informations d’activation de cette destination dans le [tableau de bord de la surveillance](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
-> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![S’abonner aux alertes ](../assets/ui/workspace/alerts-icon.png)**[!UICONTROL S’abonner aux alertes ]**pour vous abonner aux alertes de flux de données de destination. Vous pouvez vous abonner à des alertes pour recevoir des messages concernant l’état, la réussite ou l’échec de votre exécution de flux. Consultez [S’abonner aux alertes de destination en contexte](alerts.md) pour des informations détaillées sur les alertes de flux de données de destination.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez le contrôle ![Activer les audiences](/help/images/icons/data-add.png)**[!UICONTROL Activer ]**pour exporter des audiences ou des jeux de données vers cette destination.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Supprimer](/help/images/icons/delete.png)**[!UICONTROL Supprimer ]**pour [supprimer](delete-destinations.md) une connexion existante à une destination.
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![Affichage dans la surveillance](/help/images/icons/monitoring.png)**[!UICONTROL Affichage dans la surveillance ]**pour afficher les informations d’activation de cette destination dans le [tableau de bord de la surveillance](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Sélectionnez les points de suspension (`...`) dans la colonne [!UICONTROL Nom] et utilisez la commande ![S’abonner aux alertes ](/help/images/icons/alert-add.png)**[!UICONTROL S’abonner aux alertes ]**pour vous abonner aux alertes de flux de données de destination. Vous pouvez vous abonner à des alertes pour recevoir des messages concernant l’état, la réussite ou l’échec de votre exécution de flux. Consultez [S’abonner aux alertes de destination en contexte](alerts.md) pour des informations détaillées sur les alertes de flux de données de destination.
 
 ![Onglet Parcourir](../assets/ui/workspace/browse-tab.png)
 

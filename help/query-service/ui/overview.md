@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l’IU de Query Service
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui permet d’écrire et d’exécuter des requêtes, d’afficher des requêtes précédemment exécutées et d’accéder aux requêtes enregistrées par les utilisateurs de votre entreprise.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '1132'
 ht-degree: 71%
@@ -81,7 +81,7 @@ L’onglet **[!UICONTROL Journal]** fournit une liste de requêtes qui ont été
 
 >
 >
->Sélectionnez l’icône en forme de crayon (![Une icône en forme de crayon.](../images/ui/overview/edit-icon.png)) de n’importe quelle ligne du journal de requête pour accéder à [!DNL Query Editor]. La requête est prérenseignée pour faciliter la modification.
+>Sélectionnez l’icône en forme de crayon (![Une icône en forme de crayon.](/help/images/icons/edit.png)) de n’importe quelle ligne du journal de requête pour accéder à [!DNL Query Editor]. La requête est prérenseignée pour faciliter la modification.
 
 Pour plus d’informations sur les fichiers journaux générés automatiquement par un événement de requête, reportez-vous à la [documentation sur les journaux de requête](./query-logs.md) .
 

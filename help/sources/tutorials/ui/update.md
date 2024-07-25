@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Mise à jour des détails du compte de connexion Source dans l’interface utilisateur
 type: Tutorial
 exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 16%
@@ -33,7 +33,7 @@ Connectez-vous à l’[interface utilisateur Experience Platform](https://platfo
 
 La page **[!UICONTROL Comptes]** s’affiche. Cette page contient une liste des comptes consultables, y compris des informations sur leur source, leur nom d’utilisateur, le nombre de flux de données et la date de création.
 
-Sélectionnez l’icône de filtre ![filter](../../images/tutorials/update/filter.png) en haut à gauche pour lancer le panneau de tri.
+Sélectionnez l’icône de filtre ![filter](/help/images/icons/filter.png) en haut à gauche pour lancer le panneau de tri.
 
 ![accounts-list](../../images/tutorials/update/accounts-list.png)
 
