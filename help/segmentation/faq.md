@@ -2,9 +2,9 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 5e677e53677cd28787004043e9fcc9b94e631fc8
+source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
 workflow-type: tm+mt
-source-wordcount: '4187'
+source-wordcount: '4362'
 ht-degree: 21%
 
 ---
@@ -56,6 +56,16 @@ Bien que l’audience générée en externe puisse être référencée lors de l
 
 Oui, l’audience générée en externe sera fusionnée avec le profil existant dans Platform si les identifiants principaux correspondent. La réconciliation des données peut prendre jusqu’à 24 heures. Si les données de profil n’existent pas déjà, un profil est créé lors de l’ingestion des données.
 
+### Comment les préférences de consentement du client sont-elles honorées pour les audiences générées en externe qui sont importées dans Audience Portal ?{#consent}
+
+Lorsque les données client sont capturées à partir de plusieurs canaux, les stratégies de combinaison d’identités et de fusion permettent de consolider ces données dans un seul profil client en temps réel. Les informations sur les préférences de consentement des clients sont stockées et évaluées au niveau du profil.
+
+Les destinations en aval vérifient les informations de consentement de chaque profil avant l’activation. Les informations de consentement de chaque profil sont comparées aux exigences de consentement pour une destination spécifique. Si le profil ne satisfait pas aux exigences, il n’est pas envoyé vers une destination.
+
+Lorsqu’une audience externe est ingérée dans Audience Portal, elle est associée à des profils existants à l’aide d’un identifiant principal, tel qu’un email ou un ECID. Par conséquent, les politiques de consentement existantes resteront en vigueur pendant toute l’activation.
+
+Veuillez noter que **et non** vous devez inclure des informations de consentement avec des audiences générées en externe, puisque les variables de payload sont **non** stockées dans la banque de profils mais dans le lac de données. À la place, vous **devez** utiliser un canal d’ingestion Adobe Experience Platform où les données de profil sont importées.
+
 ### Puis-je utiliser une audience générée en externe pour créer d’autres audiences ?
 
 Oui, les audiences générées en externe apparaîtront dans l’inventaire des audiences. elles peuvent être utilisés lors de la création d’audiences dans le [Créateur de segments](./ui/segment-builder.md).
@@ -80,7 +90,7 @@ La stratégie de fusion par défaut propre à l’organisation est automatiqueme
 
 ### Où puis-je activer les audiences générées en externe vers ?
 
-Une audience générée en externe peut être mappée à n’importe quelle destination RTCDP et peut être utilisée dans des campagnes Adobe Journey Optimizer.
+Une audience générée en externe peut être mappée à n’importe quelle destination et peut être utilisée dans des campagnes Adobe Journey Optimizer.
 
 ### Dans combien de temps les audiences générées en externe sont-elles prêtes à être activées ?
 

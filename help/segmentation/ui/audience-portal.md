@@ -2,10 +2,10 @@
 title: Présentation d’Audience Portal
 description: Découvrez comment utiliser Audience Portal pour afficher, gérer et créer des audiences dans Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: d1fbfe5dd887059a6aab96566311cbd63c5b091f
+source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
 workflow-type: tm+mt
-source-wordcount: '3693'
-ht-degree: 66%
+source-wordcount: '3725'
+ht-degree: 65%
 
 ---
 
@@ -391,7 +391,9 @@ Une fois que les détails sont corrects, sélectionnez **[!UICONTROL Terminer]**
 >
 >Par défaut, les audiences générées en externe ont une expiration de données de 30 jours. L’expiration des données est réinitialisée si l’audience est mise à jour ou modifiée de quelque manière que ce soit.
 >
->De plus, si votre audience générée en externe contient des informations sensibles et/ou liées à la santé, vous **devez** appliquer les libellés d’utilisation des données nécessaires avant de l’activer vers n’importe quelle destination. Puisque les variables provenant d’audiences générées de l’extérieur sont stockées dans le lac de données plutôt que dans Real-time Customer Profile, vous devez **ne pas** inclure des données de consentement dans votre fichier CSV. Pour plus d’informations sur l’application des libellés d’utilisation des données, consultez la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md).
+>De plus, si votre audience générée en externe contient des informations sensibles et/ou liées à la santé, vous **devez** appliquer les libellés d’utilisation des données nécessaires avant de l’activer vers n’importe quelle destination. Puisque les variables provenant d’audiences générées de l’extérieur sont stockées dans le lac de données plutôt que dans Real-time Customer Profile, vous devez **ne pas** inclure des données de consentement dans votre fichier CSV.
+>
+>Pour plus d’informations sur l’application des libellés d’utilisation des données, consultez la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). Pour en savoir plus sur les libellés d’utilisation des données sur Platform en général, consultez la [présentation des libellés d’utilisation des données](../../data-governance/labels/overview.md). Pour en savoir plus sur le fonctionnement du consentement dans les audiences générées en externe, consultez la [FAQ sur les audiences](../faq.md#consent).
 
 ## Étapes suivantes
 
