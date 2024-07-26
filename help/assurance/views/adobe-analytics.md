@@ -2,14 +2,18 @@
 title: Vue Adobe Analytics dans Assurance
 description: Ce guide explique comment utiliser Adobe Analytics avec Adobe Experience Platform Assurance.
 exl-id: e5cc72b0-d6d6-430b-9321-4835c1f77581
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 515f58175a8ccba03581ce4d7faf23fdfed3571e
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '394'
 ht-degree: 1%
 
 ---
 
 # Vue Adobe Analytics dans Assurance
+
+>[!IMPORTANT]
+>
+>La vue d’événements Analytics est consolidée dans le plug-in **Analytics Events 2.0 (Beta)**.  Il sera retiré de l’assurance dans le futur. Nous vous recommandons d’utiliser le **module externe Analytics Events 2.0 (Beta)** pour votre débogage Analytics pour les sessions d’assurance.
 
 L’intégration de Adobe Experience Platform Assurance à Adobe Analytics offre une vue plus riche des événements de SDK aux utilisateurs pour le débogage et la validation de leur mise en oeuvre Adobe Analytics. La vue affiche désormais les événements de cycle de vie et d’action/d’état envoyés à Adobe Analytics à partir du [SDK Adobe Experience Platform](https://developer.adobe.com/client-sdks/documentation/adobe-analytics/). La vue comprend également des détails de &quot;réponse&quot; qui fournissent des informations sur le traitement des événements après l’application des règles de traitement de chaque suite de rapports respective.
 
@@ -24,7 +28,7 @@ Avant de poursuivre, assurez-vous que vous disposez des services suivants :
 
 Pour savoir comment installer Assurance dans votre application, consultez le [guide d’assurance d’implémentation](../tutorials/implement-assurance.md).
 
-## Statut traité par Post
+## Etat post-traitement
 
 Une fois que le SDK a effectué une requête réseau avec Adobe Analytics, l’état vous indique si Assurance a été en mesure de récupérer les informations de post-traitement pour la requête Adobe Analytics.
 
@@ -47,4 +51,4 @@ Pour un événement de suivi Analytics, la vue détaillée contient les élémen
 
 - Événement de demande d’Analytics du SDK d’origine.
 - Métadonnées et données contextuelles prêtes à l’emploi de la requête, telles que l’identifiant de la suite de rapports, les versions de l’extension SDK, les données contextuelles prêtes à l’emploi, etc.
-- Informations traitées par Post sur l’événement Analytics qui contient le mappage des variables, evars, props, etc.
+- Informations post-traitées sur l’événement Analytics qui contient le mappage des variables, evars, props, etc.
