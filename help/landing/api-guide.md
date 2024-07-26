@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Prise en main des API Adobe Experience Platform
 description: Adobe Experience Platform fournit des services d’API étroitement liés les uns aux autres. Ce guide contient des informations sur les services disponibles, les en-têtes requis pour les opérations CRUD, les messages d’erreur, les collections Postman et des exemples d’appels API.
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: c728d63c22593ca56999dd0bb6679dea7de0e00a
+source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
 workflow-type: tm+mt
-source-wordcount: '1405'
-ht-degree: 28%
+source-wordcount: '1446'
+ht-degree: 27%
 
 ---
 
@@ -124,8 +124,10 @@ Pour plus d’informations sur des points de terminaison spécifiques dans les A
 | [[!DNL Catalog Service] Guide de l’API](.././catalog/api/getting-started.md) | L’API [!DNL Catalog Service] permet aux développeurs de gérer les métadonnées des jeux de données dans Adobe Experience Platform. Cela inclut l’emplacement des données, les étapes de traitement, les erreurs qui se sont produites pendant le traitement et les rapports de données. |
 | [[!DNL Data Access] Guide de l’API](.././data-access/api.md) | L’API [!DNL Data Access] permet aux développeurs de récupérer des informations sur les jeux de données ingérés dans Experience Platform. Cela inclut l’accès et le téléchargement de fichiers de jeu de données, la récupération des informations d’en-tête, la liste des lots ayant échoué et réussi et le téléchargement de fichiers CSV/Parquet d’aperçu. |
 | [[!DNL Dataset Service] Guide de l’API](.././data-governance/labels/dataset-api.md) | LʼAPI Dataset Service vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données. |
+| [[!DNL Data Hygiene API guide]](../hygiene/api/overview.md) | L’API [!DNL Data Hygiene] vous permet de corriger ou de supprimer par programmation les données personnelles stockées de vos clients dans Adobe Experience Platform, ainsi que de planifier des dates d’expiration pour les jeux de données. |
 | [[!DNL Edge Network Server] Guide de l’API](../server-api/overview.md) | L’ [!DNL Edge Network Server API] peut être utilisé pour divers cas d’utilisation de la collecte de données, de la personnalisation, de la publicité et du marketing. Le [!DNL Server API] peut être utilisé sur les serveurs, les appareils [!DNL IoT], les décodeurs et sur divers autres appareils. |
 | [[!DNL Identity Service] Guide de l’API](.././identity-service/api/getting-started.md) | L’API [!DNL Identity Service] permet aux développeurs de gérer l’identification inter-appareils, cross-canal et en temps quasi réel de vos clients à l’aide de graphiques d’identités dans Adobe Experience Platform. |
+| [[!DNL MTLS Service API guide]](../data-governance/mtls-api/overview.md) | L’API [!DNL MTLS Service] vous permet de récupérer en toute sécurité les certificats publics émis par Adobe pour votre organisation. |
 | [[!DNL Observability Insights] Guide de l’API](.././observability/api/overview.md) | [!DNL Observability Insights] est une API RESTful qui permet aux développeurs d’exposer les mesures d’observabilité clés dans Adobe Experience Platform. Ces mesures fournissent des informations sur les statistiques d’utilisation de Platform, les contrôles d’intégrité des services Platform, les tendances historiques et les indicateurs de performance pour diverses fonctionnalités de Platform. |
 | [[!DNL Policy Service] Guide de l’API](.././data-governance/api/overview.md) <br> (Gouvernance des données) | L’API [!DNL Policy Service] vous permet de créer et de gérer des libellés et des stratégies d’utilisation des données afin de déterminer quelles actions marketing peuvent être entreprises concernant les données contenant certains libellés d’utilisation des données. Pour appliquer des libellés aux jeux de données et aux champs, reportez-vous au guide [[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md) |
 | [[!DNL Privacy Service] Guide de l’API](.././privacy-service/api/getting-started.md) | L’API [!DNL Privacy Service] permet aux développeurs de créer et de gérer des demandes de clients pour accéder ou supprimer leurs données personnelles dans des applications Experience Cloud, conformément aux réglementations de confidentialité légales. |

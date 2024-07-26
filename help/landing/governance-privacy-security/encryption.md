@@ -2,9 +2,9 @@
 title: Chiffrement des données dans Adobe Experience Platform
 description: Découvrez comment les données sont chiffrées en transit et au repos dans Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: 4f67df5d3667218c79504535534de57f871b0650
+source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '737'
 ht-degree: 8%
 
 ---
@@ -54,6 +54,8 @@ Si vous souhaitez vérifier le CN ou le SAN pour effectuer une validation tierce
 
 - [Certificat public Adobe Journey Optimizer](../images/governance-privacy-security/encryption/AJO-public-certificate.pem)
 - [Certificat public du service Destinations](../images/governance-privacy-security/encryption/destinations-public-cert.pem).
+
+Vous pouvez également récupérer les certificats publics en toute sécurité en effectuant une requête GET sur le point de terminaison MTLS. Pour plus d’informations, consultez la [documentation du point d’entrée de certificat public](../../data-governance/mtls-api/public-certificate-endpoint.md) .
 
 ## Données au repos {#at-rest}
 

@@ -5,10 +5,10 @@ breadcrumb-title: Guide de gouvernance des données
 user-guide-description: Faites respecter les restrictions d’utilisation des données au moyen de libellés, d’actions marketing et de politiques de gouvernance.
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 8837d719fbdf2864995c0d73a87a41c4b119cfb7
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 100%
+source-wordcount: '99'
+ht-degree: 93%
 
 ---
 
@@ -30,6 +30,10 @@ ht-degree: 100%
    * [Présentation](enforcement/overview.md)
    * [Application automatique](enforcement/auto-enforcement.md)
    * [Application basée sur les API](enforcement/api-enforcement.md)
+* API du service MTLS {#mtls-api}
+   * [Vue d’ensemble](mtls-api/overview.md)
+   * [Prise en main](mtls-api/getting-started.md)
+   * [Point d’entrée du certificat public](mtls-api/public-certificate-endpoint.md)
 * API Policy Service {#api}
    * [Présentation](api/overview.md)
    * [Prise en main](api/getting-started.md)
