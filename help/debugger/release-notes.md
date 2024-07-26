@@ -4,14 +4,20 @@ description: Dernières notes de mise à jour pour Adobe Experience Platform 
 keywords: debugger ; extension experience cloud debugger ; chrome ; extension ; notes de mise à jour
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: c99234cf3f5af9abe590c90fbdefc7d50c1539da
+source-git-commit: 877e38154f6959d50bd0620290c2dce9decfc2b5
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 94%
+source-wordcount: '781'
+ht-degree: 92%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform Debugger
+
+## Version 1.6.1 - vendredi 25 juillet 2024
+
+### Correctifs et améliorations
+
+* Correction d’un problème qui empêchait les utilisateurs d’ajouter de nouveaux codes incorporés de balises aux pages sans ces codes.
 
 ## Version 1.6.0 - vendredi 11 juillet 2024
 
