@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’IU de Segmentation Service
 description: Découvrez comment créer et gérer des audiences et des définitions de segment dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 80%
+source-wordcount: '1043'
+ht-degree: 74%
 
 ---
 
@@ -89,6 +89,12 @@ Une fenêtre contextuelle s’affiche, répertoriant tous les champs pouvant êt
 Pour afficher la composition de l’audience, sélectionnez le nom d’une audience sous l’onglet [!UICONTROL Audiences].
 
 La page Composition d’audience s’affiche avec les blocs de création qui composent votre audience. Pour plus d’informations sur l’utilisation de la Composition d’audience, consultez le [guide de l’interface utilisateur de la Composition d’audience](./audience-composition.md).
+
+## Composition d’audiences fédérées {#fac}
+
+Outre les compositions d’audience et les définitions de segment, vous pouvez utiliser la fonction Adobe la composition d’audiences fédérées pour créer de nouvelles audiences à partir de jeux de données d’entreprise sans copier de données sous-jacentes et stocker ces audiences dans Adobe Experience Platform Audience Portal. Vous pouvez également enrichir les audiences existantes dans Adobe Experience Platform en utilisant des données d’audience composites qui ont été fédérées à partir de l’entrepôt de données d’entreprise. Veuillez lire le guide sur la [Composition de l’audience fédérée](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+![Liste des audiences créées dans la composition d’audiences fédérées de votre organisation.](../images/ui/overview/federated-audience-composition.png)
 
 ## Segmentation en flux continu {#streaming-segmentation}
 

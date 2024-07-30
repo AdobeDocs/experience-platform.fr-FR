@@ -5,10 +5,10 @@ breadcrumb-title: Guide de Segmentation Service
 user-guide-description: Créez des audiences à partir de vos données de profil client en temps réel à l’aide des définitions de segment générées par Adobe Experience Platform ou de sources externes.
 feature: Segments
 role: User
-source-git-commit: 62a174e6f3b1bd1b0bc518ff7e5f236893e9e5d3
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 93%
+source-wordcount: '191'
+ht-degree: 90%
 
 ---
 
@@ -36,6 +36,7 @@ ht-degree: 93%
    - [Audience Portal](ui/audience-portal.md)
    - [Composition de l’audience](ui/audience-composition.md)
    - [Créateur de segments](ui/segment-builder.md)
+   - [Composition de l’audience fédérée (disponibilité limitée)](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
    - [Audiences de compte](ui/account-audiences.md)
    - [Audiences semblables](ui/lookalike-audiences.md)
    - [Audiences de prospects](ui/prospect-audience.md)

@@ -2,10 +2,10 @@
 title: Présentation d’Audience Portal
 description: Découvrez comment utiliser Audience Portal pour afficher, gérer et créer des audiences dans Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
+source-git-commit: 527c9bf7ff60ceb1e621ccac5a88b8e9eb32ebfb
 workflow-type: tm+mt
-source-wordcount: '3725'
-ht-degree: 65%
+source-wordcount: '3826'
+ht-degree: 63%
 
 ---
 
@@ -25,6 +25,7 @@ Dans Audience Portal, vous pouvez accomplir les tâches suivantes :
 - [Créer une audience](#create-audience)
    - [Utilisation du créateur de segments pour créer une audience](#segment-builder)
    - [Utilisation de la composition de l’audience pour créer une audience](#audience-composition)
+   - [ Utilisez la composition d’audiences fédérées pour créer une audience à l’aide des données de votre entrepôt de données existant ](#fac) (Disponibilité limitée)
 - [Importer des audiences générées de manière externe](#import-audience)
 
 Pour ouvrir Audience Portal, sélectionnez l’onglet **[!UICONTROL Parcourir]** dans la section Segmentation .
@@ -339,6 +340,12 @@ Sélectionner **[!UICONTROL Composer les audiences]** vous conduit à la Composi
 Sélectionner **[!UICONTROL Créer une règle]** vous dirige vers le créateur de segments. L’espace de travail fournit des commandes intuitives pour la création et la modification de définitions de segment, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données. Pour en savoir plus sur la création de définitions de segment, consultez le [guide du créateur de segments](./segment-builder.md)
 
 ![L‘espace de travail du créateur de segments s’affiche.](../images/ui/audience-portal/segment-builder.png)
+
+### Composition d’audiences fédérées {#fac}
+
+Outre les compositions d’audience et les définitions de segment, vous pouvez utiliser la fonction Adobe la composition d’audiences fédérées pour créer de nouvelles audiences à partir de jeux de données d’entreprise sans copier de données sous-jacentes et stocker ces audiences dans Adobe Experience Platform Audience Portal. Vous pouvez également enrichir les audiences existantes dans Adobe Experience Platform en utilisant des données d’audience composites qui ont été fédérées à partir de l’entrepôt de données d’entreprise. Veuillez lire le guide sur la [Composition de l’audience fédérée](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+![Liste des audiences créées dans la composition d’audiences fédérées de votre organisation.](../images/ui/overview/federated-audience-composition.png)
 
 ## Importer une audience {#import-audience}
 

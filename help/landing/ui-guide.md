@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation de l’interface utilisateur de l’Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
 workflow-type: tm+mt
-source-wordcount: '1795'
+source-wordcount: '1947'
 ht-degree: 3%
 
 ---
@@ -43,11 +43,11 @@ Le tableau de bord de données récent fournit des informations sur les jeux de 
 
 ![](images/user-guide/homepage-recent.png)
 
-La section **[!UICONTROL Jeux de données récents]** répertorie les cinq jeux de données créés le plus récemment au sein de votre organisation. Cette liste est mise à jour chaque fois qu’un nouveau jeu de données est créé. Vous pouvez sélectionner un jeu de données dans la liste pour afficher plus d’informations sur le jeu de données spécifié ou sélectionner **[!UICONTROL Afficher tout]** pour afficher la liste de tous les jeux de données créés. Vous trouverez plus d’informations sur les jeux de données dans la [présentation des jeux de données](../catalog/datasets/overview.md).
+La section **[!UICONTROL Jeux de données récents]** répertorie les cinq jeux de données créés le plus récemment au sein de votre organisation. Cette liste est mise à jour chaque fois qu’un nouveau jeu de données est créé. Vous pouvez sélectionner un jeu de données dans la liste pour l’afficher. Vous trouverez plus d’informations sur le jeu de données spécifié ou sélectionner **[!UICONTROL Afficher tout]** pour afficher la liste de tous les jeux de données créés. Vous trouverez plus d’informations sur les jeux de données dans la [présentation des jeux de données](../catalog/datasets/overview.md).
 
-La section **[!UICONTROL Sources récentes]** répertorie les cinq connecteurs source créés le plus récemment au sein de votre organisation. Cette liste est mise à jour chaque fois qu’un nouveau connecteur source est créé. Vous pouvez sélectionner une connexion source dans la liste pour afficher plus d’informations sur le connecteur spécifié ou sélectionner **[!UICONTROL Afficher tout]** pour afficher la liste de toutes les connexions source créées. Vous trouverez plus d’informations sur les sources dans la [présentation des sources](../sources/home.md).
+La section **[!UICONTROL Sources récentes]** répertorie les cinq connecteurs source créés le plus récemment au sein de votre organisation. Cette liste est mise à jour chaque fois qu’un nouveau connecteur source est créé. Vous pouvez sélectionner une connexion source dans la liste pour afficher. Vous trouverez plus d’informations sur le connecteur spécifié ou sélectionner **[!UICONTROL Afficher tout]** pour afficher la liste de toutes les connexions source créées. Vous trouverez plus d’informations sur les sources dans la [présentation des sources](../sources/home.md).
 
-La section **[!UICONTROL Segments récents]** répertorie les cinq définitions de segment créées le plus récemment au sein de votre organisation. Cette liste est mise à jour chaque fois qu’une nouvelle définition de segment est créée. Vous pouvez sélectionner une définition de segment dans la liste pour afficher plus d’informations sur la définition de segment spécifiée ou sélectionner **[!UICONTROL Afficher tout]** pour afficher une liste de toutes les définitions de segment créées. Vous trouverez plus d’informations sur les segments dans la [présentation de Segmentation Service](../segmentation/home.md).
+La section **[!UICONTROL Segments récents]** répertorie les cinq définitions de segment créées le plus récemment au sein de votre organisation. Cette liste est mise à jour chaque fois qu’une nouvelle définition de segment est créée. Vous pouvez sélectionner une définition de segment dans la liste pour afficher. Vous trouverez plus d’informations sur la définition de segment spécifiée ou sélectionner **[!UICONTROL Afficher tout]** pour afficher la liste de toutes les définitions de segment créées. Vous trouverez plus d’informations sur les segments dans la [présentation de Segmentation Service](../segmentation/home.md).
 
 La section **[!UICONTROL Destinations récentes]** répertorie les cinq destinations créées le plus récemment au sein de votre organisation. Cette liste est mise à jour chaque fois qu’une nouvelle destination est créée. Vous pouvez sélectionner une destination dans la liste pour afficher plus d’informations sur la destination spécifiée ou sélectionner **[!UICONTROL Afficher tout]** pour afficher une liste de toutes les destinations créées. Vous trouverez plus d’informations sur les destinations dans la [présentation des destinations](../destinations/home.md).
 
@@ -156,6 +156,19 @@ La section **[!UICONTROL Jeux de données]** vous permet de créer et de gérer 
 La section **[!UICONTROL Requêtes]** vous permet de créer et gérer des requêtes, de consigner des requêtes SQL effectuées par Adobe Experience Platform Query Service et d’afficher vos informations d’identification [!DNL PostgreSQL]. Vous trouverez plus d’informations sur les requêtes dans le [guide d’utilisation de Query Service](../query-service/ui/overview.md).
 
 La section **[!UICONTROL Surveillance]** vous permet de surveiller l’ingestion par lots et par flux. Vous trouverez plus d’informations sur la surveillance dans le [guide d’utilisation de la surveillance de l’ingestion de données](../ingestion/quality/monitor-data-ingestion.md).
+
+### [!UICONTROL Données fédérées] (Disponibilité limitée)
+
+La section **[!UICONTROL Modèles]** vous permet de concevoir et de créer des modèles et des schémas de données qui définissent la structure, les relations et les contraintes de vos données. Vous trouverez plus d’informations sur les modèles et schémas de données dans le [guide d’utilisation de la composition d’audiences fédérées](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas).
+
+La section **[!UICONTROL Suivi]** fournit un enregistrement détaillé et chronologique de toutes les actions et tous les événements qui ont été réalisés dans votre environnement en temps réel. Vous trouverez plus d’informations sur le journal d’audit dans le [guide d’utilisation de la composition d’audiences fédérées](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/audit-trail/audit-trail).
+
+
+La section **[!UICONTROL Base de données fédérées]** vous permet de connecter Adobe Experience Platform à votre entrepôt de données d’entreprise. Vous trouverez plus d’informations sur la connexion aux bases de données fédérées dans le [guide d’utilisation de la composition d’audiences fédérées](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db).
+
+>[!AVAILABILITY]
+>
+>La composition d’audiences fédérées n’est actuellement disponible que pour un ensemble d’organisations (disponibilité limitée). Pour en savoir plus, contactez votre représentant ou représentante Adobe.
 
 ### [!UICONTROL Prise de décision]
 

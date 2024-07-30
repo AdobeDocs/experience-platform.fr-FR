@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Présentation de Segmentation Service
 description: Découvrez Adobe Experience Platform Segmentation Service et le rôle qu’il occupe dans l’écosystème de Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
 workflow-type: tm+mt
-source-wordcount: '1607'
-ht-degree: 96%
+source-wordcount: '1700'
+ht-degree: 92%
 
 ---
 
@@ -51,6 +51,14 @@ Pour plus d’informations sur la création de définitions de segments à l’a
 >Dans l’éventualité où un schéma est étendu, tous les chargements ultérieurs doivent mettre à jour les nouveaux champs ajoutés en conséquence. Pour plus d’informations sur la personnalisation du [!DNL Experience Data Model] (XDM), consultez le [tutoriel de l’éditeur de schémas](../xdm/tutorials/create-schema-ui.md).
 >
 >En outre, si une valeur d’expiration de l’événement d’expérience est activée sur le jeu de données, cela peut affecter l’appartenance de la définition de segment créée. Veuillez lire le guide sur l’[expiration des événements d’expérience](../profile/event-expirations.md) pour plus d’informations sur la manière dont cette fonctionnalité peut affecter la segmentation.
+
+### Composition d’audiences fédérées {#fac}
+
+Outre les compositions d’audience et les définitions de segment, vous pouvez utiliser la fonction Adobe la composition d’audiences fédérées pour créer de nouvelles audiences à partir de jeux de données d’entreprise sans copier de données sous-jacentes et stocker ces audiences dans Adobe Experience Platform Audience Portal. Vous pouvez également enrichir les audiences existantes dans Adobe Experience Platform en utilisant des données d’audience composites qui ont été fédérées à partir de l’entrepôt de données d’entreprise. Veuillez lire le guide sur la [Composition de l’audience fédérée](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+
+>[!AVAILABILITY]
+>
+>La composition d’audiences fédérées n’est actuellement disponible que pour un ensemble d’organisations (disponibilité limitée). Pour en savoir plus, contactez votre représentant ou représentante Adobe.
 
 ## Évaluer les audiences {#evaluate-segments}
 
