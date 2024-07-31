@@ -4,10 +4,10 @@ title: Tableau de bord d’utilisation de la licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 3e465803b6c8fe11cef1633c0f0624465086c2a3
 workflow-type: tm+mt
-source-wordcount: '2103'
-ht-degree: 9%
+source-wordcount: '2328'
+ht-degree: 8%
 
 ---
 
@@ -64,6 +64,7 @@ Ce tableau de bord affiche sous forme de tableau tous les produits Adobe Experie
 | **[!UICONTROL Montant de la licence]** | La valeur contractuelle correspondant au montant maximal de la mesure de Principal, conformément à ce qui est convenu dans votre contrat de licence de produit. |
 | **[!UICONTROL Utilisation]** | Montant de la mesure principale utilisée. Cette valeur fournit l’utilisation totale de cette mesure pour tous les environnements de test, que ce soit la production ou le développement. |
 | **[!UICONTROL Utilisation %]** | Le pourcentage de votre mesure principale utilisée en fonction de votre montant de licence. |
+| **[!UICONTROL Utilisation de prédiction]** | (**Beta**) Pourcentage d’utilisation prévu de votre mesure principale en fonction de votre quantité de licence. |
 
 >[!NOTE]
 >
@@ -71,29 +72,57 @@ Ce tableau de bord affiche sous forme de tableau tous les produits Adobe Experie
 
 Le tableau indique la mesure principale de chaque produit, car chaque produit peut effectuer le suivi de nombreuses mesures.
 
+### [!BADGE Beta]{type=Informative} Utilisation prévue {#predicted-usage}
+
+>[!AVAILABILITY]
+>
+La fonctionnalité de prédiction de l’utilisation future des licences est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+
+Gérez et optimisez vos ressources de licence de manière proactive en fonction de prédictions d’utilisation éclairées. La colonne [!UICONTROL  Utilisation prédite] prédit précisément l’utilisation future des licences au niveau des environnements de test, dans tous les environnements de test de production et de développement, pour tous les produits que vous avez achetés. Cette fonctionnalité d’alerte fournit une prévision de l’utilisation des licences pour six semaines à venir, en fonction de votre utilisation jusqu’au 15 du mois civil. Les prédictions sont fournies avec une limite inférieure et une limite supérieure.
+
+>[!IMPORTANT]
+>
+Les prévisions sont actualisées tous les mois. La date d’actualisation est incluse dans une icône d’information (![Cette icône d’information.](../images/license-usage/info-icon.png)) au-dessus du titre de la colonne.
+
+Pour afficher un résumé de l’utilisation des droits des produits, sélectionnez un produit dans la liste [!UICONTROL Aperçu].
+
+![ [!UICONTROL Utilisation de la licence] [!UICONTROL Aperçu] avec un produit et la colonne d’utilisation prédite mise en surbrillance.](../images/license-usage/product-predicted-usage.png)
+
+L’onglet Résumé s’affiche. Vous pouvez utiliser les prédictions granulaires disponibles sur les onglets [!UICONTROL Summary] et [!UICONTROL Details] pour garantir une prise de décision éclairée pour une utilisation efficace de la licence.
+
+![L’affichage récapitulatif d’un produit Platform avec la colonne d’utilisation prédite mise en surbrillance.](../images/license-usage/summary-predicted-usage.png)
+
+La fonction d’utilisation prévue prend en charge les mesures suivantes :
+
+- [!UICONTROL Audience adressable]
+- [!UICONTROL Richesse moyenne du profil]
+- [!UICONTROL Heures de calcul]
+- [!UICONTROL Nombre de lignes de l’audience du Parcours client]
+- [!UICONTROL Stockage total]
+
 ## Onglet [!UICONTROL Résumé] {#summary-tab}
 
 Pour afficher d’autres mesures et des informations détaillées sur l’utilisation de votre licence de produit, sélectionnez un nom de produit dans la liste. La vue [!UICONTROL Summary] pour ce produit s’affiche. Toutes les mesures disponibles sont affichées dans l’onglet [!UICONTROL Résumé]. Les mesures disponibles dépendent du produit sous licence. Cette vue fournit **une vue consolidée de toutes les mesures sur tous les environnements de test de production ou de développement**. Le même niveau d’analyse est fourni pour les environnements de test de production et de développement.
 
 ![Vue récapitulative d’un produit Platform qui affiche toutes les mesures disponibles pour ce produit.](../images/license-usage/summary-tab.png)
 
-Dans l’onglet Résumé, le tableau comprend la colonne [!UICONTROL Mesure]. Ces descriptions lisibles par l’utilisateur indiquent toutes les mesures utilisées pour ce type d’environnement de test.
+Dans l’onglet Résumé, le tableau comprend la colonne [!UICONTROL Mesure]. Ces descriptions lisibles indiquent toutes les mesures utilisées pour ce type of sandbox.
 
 ### Sélectionner un sandbox {#select-sandbox}
 
-Pour modifier l’affichage entre les types d’environnements de test de production et de développement, sélectionnez [!UICONTROL Environnements de test de production] ou [!UICONTROL Environnements de test de développement]. Le type d’environnement de test sélectionné est indiqué par le bouton radio en regard du nom de l’environnement de test.
+Pour modifier l’affichage entre les types d’environnements de test de production et de développement, select [!UICONTROL Environnements de test de production] ou [!UICONTROL Environnements de test de développement]. Type d’environnement de test sélectionné is indiqué par le bouton radio en regard du nom de l’environnement de test.
 
-La création de rapports de consommation pour les environnements de test est cumulative pour tous les environnements de test du même type. En d’autres termes, la sélection de [!UICONTROL Production] ou [!UICONTROL Développement] fournit des rapports de consommation pour tous les environnements de test de production ou de développement, respectivement.
+La création de rapports de consommation pour les environnements de test est cumulative pour tous les environnements de test du même type. In en d’autres termes, la sélection de [!UICONTROL Production] ou [!UICONTROL Développement] fournit des rapports de consommation pour tous les environnements de test de production ou de développement, respectivement.
 
 ![L’affichage récapitulatif d’un produit Platform avec des environnements de test de production et des environnements de test de développement mis en surbrillance.](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >
->L’autorisation d’afficher le tableau de bord de l’utilisation des licences doit être spécifiée au niveau de l’environnement de test. Ajoutez des autorisations à chaque environnement de test individuel pour les afficher dans le tableau de bord. Cette limitation sera corrigée dans une version ultérieure. En attendant, la solution suivante est disponible :
+L’autorisation d’afficher le tableau de bord de l’utilisation des licences doit être spécifiée au niveau de l’environnement de test. Ajoutez des autorisations à chaque environnement de test individuel pour les afficher dans le tableau de bord. Cette limitation sera corrigée dans une version ultérieure. En attendant, la solution suivante est disponible :
 >
->1. Créez un profil de produit dans Adobe Admin Console.
->2. Sous Autorisation dans la catégorie Sandbox , ajoutez tous les environnements de test que vous souhaitez afficher dans le tableau de bord de l’utilisation des licences.
->3. Dans la catégorie Autorisation du tableau de bord utilisateur , ajoutez l’autorisation &quot;Afficher le tableau de bord de l’utilisation de la licence&quot;.
+1. Créez un profil de produit dans Adobe Admin Console.
+2. Sous Autorisation dans la catégorie Sandbox , ajoutez tous les environnements de test que vous souhaitez afficher dans le tableau de bord de l’utilisation des licences.
+3. Dans la catégorie Autorisation du tableau de bord utilisateur , ajoutez l’autorisation &quot;Afficher le tableau de bord de l’utilisation de la licence&quot;.
 
 ## Onglet [!UICONTROL Détails] {#details-tab}
 
@@ -154,7 +183,7 @@ Le tableau de bord de l’utilisation des licences répertorie plusieurs mesures
 
 >[!TIP]
 >
->Vous pouvez vérifier vos droits de licence dans votre commande de ventes pour calculer des mesures telles que votre &quot;Autorisation de stockage&quot;.<br>Par exemple,<ul><li>Allocation de stockage = nombre de &quot;profils autorisés&quot; dans votre contrat X Richesse moyenne du profil</li></ul>
+Vous pouvez vérifier vos droits de licence dans votre commande de ventes pour calculer des mesures telles que votre &quot;Autorisation de stockage&quot;.<br>Par exemple,<ul><li>Allocation de stockage = nombre de &quot;profils autorisés&quot; dans votre contrat X Richesse moyenne du profil</li></ul>
 
 La disponibilité de ces mesures et la définition spécifique de chacune d’elles varient en fonction des licences achetées par votre entreprise. Pour obtenir des définitions détaillées de chaque mesure, reportez-vous à la documentation Description du produit appropriée :
 
@@ -169,7 +198,7 @@ La disponibilité de ces mesures et la définition spécifique de chacune d’el
 
 >[!WARNING]
 >
->Le tableau de bord de l’utilisation des licences ne tient compte que de la dernière licence configurée pour votre entreprise. Si la dernière licence configurée pour votre entreprise n’apparaît pas dans le tableau ci-dessus, le tableau de bord de l’utilisation des licences peut ne pas s’afficher correctement. La prise en charge de licences supplémentaires et de plusieurs licences au sein d’une même organisation est prévue pour une version ultérieure.
+Le tableau de bord de l’utilisation des licences ne tient compte que de la dernière licence configurée pour votre entreprise. Si la dernière licence configurée pour votre entreprise n’apparaît pas dans le tableau ci-dessus, le tableau de bord de l’utilisation des licences peut ne pas s’afficher correctement. La prise en charge de licences supplémentaires et de plusieurs licences au sein d’une même organisation est prévue pour une version ultérieure.
 
 ## Étapes suivantes
 
