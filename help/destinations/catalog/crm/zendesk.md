@@ -3,10 +3,10 @@ title: Connexion Zendesk
 description: La destination Zendesk vous permet d’exporter les données de votre compte et de les activer dans Zendesk en fonction des besoins de votre entreprise.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1469'
-ht-degree: 42%
+ht-degree: 43%
 
 ---
 
@@ -121,12 +121,14 @@ Pour mapper correctement vos champs XDM vers les champs de destination [!DNL Zen
 1. Dans l’étape **[!UICONTROL Mappage]**, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**. Une nouvelle ligne de mappage s’affichera à l’écran.
 1. Dans la fenêtre **[!UICONTROL Sélectionner le champ source]**, choisissez la catégorie **[!UICONTROL Sélectionner les attributs]** et sélectionnez l’attribut XDM ou l’attribut **[!UICONTROL Sélectionner l’espace de noms d’identité]** et sélectionnez une identité.
 1. Dans la fenêtre **[!UICONTROL Sélectionner le champ cible]** , choisissez la catégorie **[!UICONTROL Sélectionner l’espace de noms d’identité]** et sélectionnez une identité cible, ou choisissez la catégorie **[!UICONTROL Sélectionner des attributs]** et sélectionnez l’un des attributs de schéma pris en charge.
+
    * Répétez ces étapes pour ajouter les mappages obligatoires suivants. Vous pouvez également ajouter tout autre attribut que vous souhaitez mettre à jour entre votre schéma de profil XDM et votre instance [!DNL Zendesk] :
-|Champ Source|Champ cible| Obligatoire|
-|—|—|—|
-|`xdm: person.name.lastName`|`xdm: last_name`| Oui |
-|`IdentityMap: Email`|`Identity: email`| Oui |
-|`xdm: person.name.firstName`|`xdm: first_name`| |
+
+     | Champ source | Champ cible | Obligatoire |
+     |---|---|---|
+     | `xdm: person.name.lastName` | `xdm: last_name` | Oui |
+     | `IdentityMap: Email` | `Identity: email` | Oui |
+     | `xdm: person.name.firstName` | `xdm: first_name` | |
 
    * Un exemple d’utilisation de ces mappages est illustré ci-dessous :
      ![Exemple de capture d’écran de l’interface utilisateur de Platform avec mappages d’attributs.](../../assets/catalog/crm/zendesk/mappings.png)

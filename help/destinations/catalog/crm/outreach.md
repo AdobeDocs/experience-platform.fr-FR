@@ -3,10 +3,10 @@ keywords: crm;CRM;destinations crm;portée globale;destination crm de diffusion
 title: Connexion sortante
 description: La destination de diffusion vous permet d’exporter les données de votre compte et de les activer dans le cadre d’Outreach pour vos besoins professionnels.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1678'
-ht-degree: 43%
+ht-degree: 42%
 
 ---
 
@@ -154,18 +154,21 @@ Pour envoyer correctement vos données d’audience d’Adobe Experience Platf
    * **[!UICONTROL Sélectionner un espace de noms d’identité]** : sélectionnez cette option pour mapper votre champ source vers un espace de noms d’identité de la liste.
      ![ Copie d’écran de l’interface utilisateur de Platform montrant le mapping de ciblage à l’aide de l’identifiant de diffusion.](../../assets/catalog/crm/outreach/target-mapping.png)
 
-   * Ajoutez le mappage suivant entre votre schéma de profil XDM et votre instance [!DNL Outreach] :
-|Schéma de profil XDM|[!DNL Outreach] Instance| Obligatoire|
-|—|—|—| |`Oid`|`OutreachId`| Oui |
+   * Ajoutez le mappage suivant entre votre schéma de profil XDM et votre instance [!DNL Outreach] :
+
+     | Schéma de profil XDM | [!DNL Outreach] Instance | Obligatoire |
+     |---|---|---|
+     | `Oid` | `OutreachId` | Oui |
 
    * **[!UICONTROL Sélectionner des attributs personnalisés]** : sélectionnez cette option pour mapper votre champ source vers un attribut personnalisé que vous définissez dans le champ [!UICONTROL Nom de l’attribut]. Pour obtenir la liste complète des attributs pris en charge, reportez-vous à la [[!DNL Outreach] documentation sur les prospects](https://api.outreach.io/api/v2/docs#prospect) .
      ![Copie d’écran de l’interface utilisateur de Platform montrant le mapping de ciblage à l’aide du nom.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * Par exemple, en fonction des valeurs que vous souhaitez mettre à jour, ajoutez le mappage suivant entre votre schéma de profil XDM et votre instance [!DNL Outreach] :
-|Schéma de profil XDM|[!DNL Outreach] Instance|
-|—|—|
-|`person.name.firstName`|`firstName`|
-|`person.name.lastName`|`lastName`|
+
+     | Schéma de profil XDM | [!DNL Outreach] Instance |
+     |---|---|
+     | `person.name.firstName` | `firstName` |
+     | `person.name.lastName` | `lastName` |
 
    * Un exemple d’utilisation de ces mappages est illustré ci-dessous :
      ![Capture d’écran de l’interface utilisateur de Platform montrant les mappings de ciblage.](../../assets/catalog/crm/outreach/mappings.png)

@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;flow servic
 title: Création d’une exécution de flux pour l’ingestion à la demande à l’aide de l’API Flow Service
 description: Découvrez comment créer une exécution de flux pour l’ingestion à la demande à l’aide de l’API Flow Service
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: cea12160656ba0724789db03e62213022bacd645
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 13%
@@ -104,6 +104,7 @@ Une réponse réussie renvoie les détails de l’exécution de flux nouvellemen
 | --- | --- |
 | `id` | L’identifiant de l’exécution de flux nouvellement créée. Consultez le guide sur la [récupération des spécifications de flux](../api/collect/database-nosql.md#specs) pour plus d’informations sur les spécifications d’exécution basées sur des tables. |
 | `etag` | Version de ressource de l’exécution de flux. |
+
 <!-- 
 | `createdAt` | The unix timestamp that designates when the flow run was created. |
 | `updatedAt` | The unix timestamp that designates when the flow run was last updated. |

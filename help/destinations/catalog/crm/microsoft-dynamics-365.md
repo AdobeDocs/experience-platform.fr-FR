@@ -4,10 +4,10 @@ title: Connexion à Microsoft Dynamics 365
 description: La destination Microsoft Dynamics 365 vous permet d’exporter les données de votre compte et de les activer dans Microsoft Dynamics 365 pour répondre aux besoins de votre entreprise.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2019'
-ht-degree: 63%
+ht-degree: 61%
 
 ---
 
@@ -169,9 +169,11 @@ Pour envoyer correctement vos données d’audience d’Adobe Experience Platf
    * **[!UICONTROL Sélectionner un espace de noms d’identité]** : sélectionnez cette option pour mapper votre champ source vers un espace de noms d’identité de la liste.
      ![ Copie d’écran de l’interface utilisateur de Platform montrant le mapping de ciblage pour contactid.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
-   * Ajoutez le mappage suivant entre votre schéma de profil XDM et votre instance [!DNL Dynamics 365] :
-|Schéma de profil XDM|[!DNL Dynamics 365] Instance| Obligatoire|
-|—|—|—| |`contactid`|`contactid`| Oui |
+   * Ajoutez le mappage suivant entre votre schéma de profil XDM et votre instance [!DNL Dynamics 365] :
+
+     | Schéma de profil XDM | [!DNL Dynamics 365] Instance | Obligatoire |
+     |---|---|---|
+     | `contactid` | `contactid` | Oui |
 
    * **[!UICONTROL Sélectionner des attributs personnalisés]** : sélectionnez cette option pour mapper votre champ source vers un attribut personnalisé que vous définissez dans le champ **[!UICONTROL Nom de l’attribut]**. Pour une liste complète des attributs pris en charge, consultez la [[!DNL Dynamics 365] documentation](https://docs.microsoft.com/fr-fr/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties).
      ![Copie d’écran de l’interface utilisateur de Platform montrant le mapping de ciblage pour le courrier électronique.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
@@ -181,15 +183,17 @@ Pour envoyer correctement vos données d’audience d’Adobe Experience Platf
      > * Les noms des champs cibles doivent se trouver dans `lowercase`.
      > * De plus, si vous disposez d’un champ source de date ou d’horodatage mappé à un champ cible [!DNL Dynamics 365] [ date ou timestamp](https://docs.microsoft.com/fr-fr/power-apps/developer/data-platform/webapi/reference/timestampdatemapping?view=dataverse-latest) , assurez-vous que la valeur mappée n’est pas vide. Si la valeur du champ exporté est vide, un message d’erreur *`Bad request reported while pushing events to the destination. Please contact the administrator and try again.`* s’affiche et les données ne sont pas mises à jour. Il s’agit d’une limitation de [!DNL Dynamics 365].
 
-   * Par exemple, en fonction des valeurs que vous souhaitez mettre à jour, ajoutez le mappage suivant entre votre schéma de profil XDM et votre instance [!DNL Dynamics 365] :
-|Schéma de profil XDM|[!DNL Dynamics 365] Instance|
-|—|—|
-|`person.name.firstName`|`firstname`|
-|`person.name.lastName`|`lastname`|
-|`personalEmail.address`|`emailaddress1`|
+   * Par exemple, en fonction des valeurs que vous souhaitez mettre à jour, ajoutez le mappage suivant entre votre schéma de profil XDM et votre instance [!DNL Dynamics 365] :
+
+     | Schéma de profil XDM | [!DNL Dynamics 365] Instance |
+     |---|---|
+     | `person.name.firstName` | `firstname` |
+     | `person.name.lastName` | `lastname` |
+     | `personalEmail.address` | `emailaddress1` |
 
    * Un exemple d’utilisation de ces mappages est illustré ci-dessous :
-     ![Capture d’écran de l’interface utilisateur de Platform montrant les mappings de ciblage.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
+
+   ![Capture d’écran de l’interface utilisateur de Platform montrant les mappings de ciblage.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
 
 ### Planification de l’export d’audience et exemple {#schedule-audience-export-example}
 

@@ -4,10 +4,10 @@ title: Connexion LINE
 description: La destination LINE vous permet d’ajouter des profils à votre audience Platform et de fournir des expériences personnalisées aux utilisateurs connectés.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1190'
-ht-degree: 41%
+ht-degree: 42%
 
 ---
 
@@ -121,9 +121,10 @@ Consultez la section [Activer les profils et les audiences vers les destinations
 Pour envoyer correctement vos données d’audience d’Adobe Experience Platform vers la destination [!DNL LINE], vous devez passer par l’étape de mappage des champs. Le mappage consiste à créer un lien entre vos champs de schéma de modèle de données d’expérience (XDM) dans votre compte Platform et leurs équivalents issus de la destination cible. Pour mapper correctement vos champs XDM vers les champs de destination [!DNL LINE], procédez comme suit :
 
 En fonction de votre identité source, le ou les espaces de noms d’identité cible suivants doivent être mappés :
-| Identité cible | Champ Source | Champ cible |
-| — | — | — |
-| ID pour les annonceurs (IFA) | `IDFA` ou `GAID` | `LineId` |
+
+| Identité cible | Champ source | Champ cible |
+| --- | --- | --- |
+| ID pour les annonceurs (IFA) | `IDFA` ou `GAID`. | `LineId` |
 | ID utilisateur LINE | `UserID` | `LineId` |
 
 Si les identités de votre cible sont *ID utilisateur LINE*, vous aurez besoin des éléments suivants :

@@ -3,7 +3,7 @@ title: Connexion SAP Commerce
 description: Utilisez le connecteur de destination SAP Commerce pour mettre à jour les enregistrements de client dans votre compte SAP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '2246'
 ht-degree: 26%
@@ -194,6 +194,7 @@ Pour envoyer correctement les données d’audience de Adobe Experience Platform
 #### Faire correspondre l’identité `customerNumberSAP`
 
 L’identité `customerNumberSAP` est un mappage obligatoire pour cette destination. Suivez les étapes ci-dessous pour le mapper :
+
 1. Dans l’étape **[!UICONTROL Mappage]**, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**. Vous pouvez désormais voir une nouvelle ligne de mappage sur l’écran.
    ![Copie d’écran de l’interface utilisateur de Platform avec ajout d’un nouveau bouton de mappage surligné.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. Dans la fenêtre **[!UICONTROL Sélectionner le champ source]**, choisissez l’ **[!UICONTROL espace de noms d’identité sélectionné]** et sélectionnez `customerNumberSAP`.
@@ -211,6 +212,7 @@ Un exemple de mappage d’identité est illustré ci-dessous :
 #### Mappage des attributs
 
 Pour ajouter d’autres attributs que vous souhaitez mettre à jour entre votre schéma de profil XDM et votre compte [!DNL SAP Subscription Billing], répétez les étapes ci-dessous :
+
 1. Dans l’étape **[!UICONTROL Mappage]**, sélectionnez **[!UICONTROL Ajouter un nouveau mappage]**. Vous pouvez désormais voir une nouvelle ligne de mappage sur l’écran.
    ![Copie d’écran de l’interface utilisateur de Platform avec ajout d’un nouveau bouton de mappage surligné.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. Dans la fenêtre **[!UICONTROL Sélectionner le champ source]** , choisissez la catégorie **[!UICONTROL Sélectionner les attributs]** et sélectionnez l’attribut XDM.
@@ -302,8 +304,9 @@ Comme indiqué, la valeur du champ **[!UICONTROL ID de mappage]** doit correspon
 Répétez cette section pour chaque audience Platform activée.
 
 En fonction de l’image affichée ci-dessus, où vous avez sélectionné deux audiences, le mappage serait le suivant :
-| [!DNL SAP Commerce] nom de l’audience | [!DNL SAP Subscription Billing] **[!UICONTROL Type de référence]** | [!DNL SAP Commerce] **[!UICONTROL Valeur de l’ID de mappage]** |
-| — | — | — |
+
+| [!DNL SAP Commerce] nom de l’audience | [!DNL SAP Subscription Billing] **[!UICONTROL Type de référence]** | Valeur [!DNL SAP Commerce] **[!UICONTROL ID de mappage]** |
+| --- | --- | --- |
 | sap_audience1 | `SAP_1` | `SAP_1` |
 | SAP Audience2 | `SAP_2` | `SAP_2` |
 

@@ -3,10 +3,10 @@ title: Balises Mailchimp
 description: La destination Balises Mailchimp vous permet d’exporter les données de votre compte et de les activer dans Mailchimp pour interagir avec des contacts.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
 workflow-type: tm+mt
 source-wordcount: '1646'
-ht-degree: 27%
+ht-degree: 28%
 
 ---
 
@@ -175,9 +175,10 @@ Pour mapper correctement vos champs XDM aux champs de destination [!DNL Mailchim
    ![ Copie d’écran de l’interface utilisateur de Platform avec le champ Target comme adresse électronique à partir de l’espace de noms d’identité.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
    Les mappages entre votre schéma de profil XDM et [!DNL Mailchimp Tags] seront les suivants :
-| Champ Source | Champ cible | Obligatoire |
-| — | — | — |
-|`IdentityMap: Email`|`Identity: Email`| Oui |
+
+   | Champ source | Champ cible | Obligatoire |
+   | --- | --- | --- |
+   | `IdentityMap: Email` | `Identity: Email` | Oui |
 
    Un exemple avec les mappages terminés est illustré ci-dessous :
    ![ Exemple de capture d’écran de l’interface utilisateur de Platform montrant les mappages de champs.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
