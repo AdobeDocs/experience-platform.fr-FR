@@ -4,10 +4,10 @@ title: Cas d’utilisation disponibles des classeurs pour Real-Time Customer Dat
 description: Liste de tous les playbooks dans Real-Time Customer Data Platform et Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 5b1209ed96c78810b6bd7489825b19496d8b0b6a
 workflow-type: tm+mt
-source-wordcount: '776'
-ht-degree: 3%
+source-wordcount: '965'
+ht-degree: 2%
 
 ---
 
@@ -25,6 +25,8 @@ Lisez cette page pour obtenir un aperçu de tous les playbooks disponibles que v
 | Nom du manuel | Description |
 | ------------- |  ----------- |
 | Navigation abandonnée : marchandisage | Déplacez les fans à se réengager après qu’ils ont quitté votre site web ou votre application après avoir navigué sur un produit. |
+| Navigation abandonnée : produit | Déplacez les acheteurs à se réengager après qu’ils ont quitté votre site web ou votre application après avoir navigué sur un produit. |
+| Navigation abandonnée : réservation | Pouvez les invités à se réengager après avoir quitté votre site web ou votre application après avoir parcouru une éventuelle réservation. |
 | Panier abandonné : marchandise | Déplacez les fans pour qu’ils se réengagent une fois qu’ils ont quitté votre site web ou votre application après avoir ajouté de la marchandise au panier. |
 | Panier abandonné : produit | Déplacez les acheteurs pour qu’ils se réengagent une fois qu’ils ont quitté votre site web ou votre application après avoir ajouté des produits au panier. |
 | Panier abandonné : réservation | Pouvez les invités à reprendre le contact après avoir quitté votre site web ou application après avoir ajouté une nouvelle réservation au panier. |
@@ -38,12 +40,15 @@ Lisez cette page pour obtenir un aperçu de tous les playbooks disponibles que v
 | Augmenter l’achat de produits lors de la visite du magasin | Défaites les acheteurs pour acheter des produits lorsqu’ils se trouvent près du magasin. |
 | Augmenter les achats de produits et de services durant la durée du séjour | Pouvez les invités à acheter des produits et des services lorsqu’ils se trouvent dans la propriété. |
 | Augmentation des achats de jeux uniques | Ciblez les fans afin d’augmenter les achats à un seul jeu. |
-| Enquête sur les événements Post et promotion d’incitation | Dirigez les fans pour qu’ils répondent à une enquête post-événement en proposant une promotion d’incitation. |
-| Post-Trip Survey | Pouvez inciter les invités à répondre à un questionnaire après le voyage en proposant une promotion d’incitation. |
+| Enquête sur les événements de publication et promotion d’incitation | Dirigez les fans pour qu’ils répondent à une enquête post-événement en proposant une promotion d’incitation. |
+| Enquête après le voyage | Pouvez inciter les invités à répondre à un questionnaire après le voyage en proposant une promotion d’incitation. |
 | Promotion de produit | Déplace les acheteurs pour acheter des produits au cours d’une campagne promotionnelle continue. |
 | Confirmation d’achat : marchandisage | Confirmez un nouveau fan d’achat de marchandises. |
 | Confirmation d’achat : produit | Confirmez la création d’un nouvel acheteur de produits. |
 | Confirmation d’achat : réservation | Confirmez un nouvel invité de réservation. |
+| Réengager les fans | Réengagez intelligemment et de manière responsable les fans qui ont abandonné une conversion avant de l’achever. Agissez avec intelligence et empathie pour créer des expériences pour vos fans, et pas de simples rappels. |
+| Réengager les invités | Réengagez intelligemment et de manière responsable les invités qui ont abandonné une réservation avant de l’achever. Agissez avec intelligence et empathie pour créer des expériences pour vos invités, et pas de simples rappels. |
+| Réengager les acheteurs | Réengagez intelligemment et de manière responsable les clients qui ont abandonné un achat avant de le terminer. Agissez avec intelligence et empathie pour créer des expériences pour vos clients, et pas de simples rappels. |
 | Envoyer Un Message D’Anniversaire Aux Fans | Bienvenue aux fans le jour de leur anniversaire avec une offre exclusive. |
 | Envoyer un message d’anniversaire aux invités | Bienvenue aux invités le jour de leur anniversaire avec une offre exclusive. |
 | Envoyer un message d’anniversaire aux acheteurs | Saluez les acheteurs le jour de leur anniversaire avec une offre exclusive. |
@@ -60,7 +65,10 @@ Lisez cette page pour obtenir un aperçu de tous les playbooks disponibles que v
 
 | Nom du manuel | Description |
 | ------------- | ----------- |
-| Panier abandonné : Marchandisage - Pour activation | Reciblez les fans après qu’ils ont quitté votre site web ou votre application après avoir ajouté la marchandise au panier. |
+| Navigation abandonnée : Marchandisage pour activation | Reciblez les fans après qu’ils ont quitté votre site web ou votre application après avoir ajouté la marchandise au panier. |
+| Navigation abandonnée : Product—For Activation | Reciblez les acheteurs après qu’ils ont quitté votre site web ou votre application après avoir ajouté les produits au panier. |
+| Navigation abandonnée : réservation pour activation | Reciblez les invités après qu’ils ont quitté votre site web ou votre application après avoir ajouté une nouvelle réservation au panier. |
+| Panier abandonné : Marchandisage - Pour activation | Reciblez les fans après qu’ils ont quitté votre site web ou votre application après avoir ajouté la marchandise de sport au panier. |
 | Panier abandonné : produit pour activation | Reciblez les acheteurs une fois qu’ils ont quitté votre site web ou votre application après avoir ajouté des produits au panier. |
 | Panier abandonné : réservation pour activation | Reciblez les invités après qu’ils ont quitté votre site web ou votre application après avoir ajouté une nouvelle réservation au panier. |
 | Promotion de destination : pour activation | Ciblez les invités à effectuer une réservation lors d’une promotion de destination de voyage en cours. |
