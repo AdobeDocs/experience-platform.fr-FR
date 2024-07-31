@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Surveillance des flux de données pour les destinations dans l’interface utilisateur
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: ee63f5ee6cca98e0b5838dc2de656d1d615a0b3a
+source-git-commit: 27802292a7a06f2edaea9efc39d4a63507e0e7e1
 workflow-type: tm+mt
-source-wordcount: '3549'
+source-wordcount: '3542'
 ht-degree: 11%
 
 ---
@@ -86,7 +86,7 @@ Une liste des exécutions individuelles et de leurs mesures spécifiques s’aff
 
 Chaque exécution de flux de données individuelle affiche les détails suivants :
 
-- **[!UICONTROL Démarrage de l’exécution du flux de données]** : l’heure à laquelle le flux de données a commencé. Pour les exécutions de flux de données en continu, Experience Platform capture les mesures en fonction du début de l’exécution du flux de données, sous la forme de mesures horaires. Cela signifie que pour les exécutions de flux de données en continu, si une exécution de flux de données a commencé, par exemple à 22 h 30, la mesure affiche l’heure de début sur 22 h dans l’interface utilisateur.
+- **[!UICONTROL Démarrage de l’exécution du flux de données]** : heure à laquelle l’exécution du flux de données a commencé. Pour les exécutions de flux de données en continu, Experience Platform capture les mesures en fonction du début de l’exécution du flux de données, sous la forme de mesures horaires. Cela signifie que pour les exécutions de flux de données en continu, si une exécution de flux de données a commencé, par exemple à 22 h 30, la mesure affiche l’heure de début sur 22 h dans l’interface utilisateur.
 - **[!UICONTROL Temps de traitement]** : temps nécessaire au traitement du flux de données.
    - Pour les exécutions **[!UICONTROL terminées]**, la mesure de temps de traitement affiche toujours une heure.
    - Pour les exécutions de flux de données qui se trouvent toujours à l’état **[!UICONTROL processing]**, la fenêtre permettant de capturer toutes les mesures reste ouverte pendant plus d’une heure, afin de traiter toutes les mesures qui correspondent à l’exécution de flux de données. Par exemple, une exécution de flux de données démarrée à 9h30 peut rester en état de traitement pendant une heure et demie pour capturer et traiter toutes les mesures. Ensuite, une fois que la fenêtre de traitement se ferme et que l’état de l’exécution du flux de données est mis à jour vers **completed**, le temps de traitement affiché est remplacé par une heure.
@@ -110,13 +110,13 @@ La page Détails affiche également une liste des identités qui ont échoué et
 
 #### (Beta) Surveillance de l’exécution du flux de données au niveau de l’audience pour les destinations de diffusion en continu {#audience-level-dataflow-runs-for-streaming-destinations}
 
-Vous pouvez afficher des informations sur les identités activées, exclues ou ayant échoué, ventilées au niveau de l’audience, pour chaque audience faisant partie du flux de données. Cela peut vous aider à comprendre que la surveillance au niveau de l’audience pour les destinations de diffusion en continu est actuellement disponible uniquement pour la [[!DNL Google Customer Match + Display & Video 360] destination](/help/destinations/catalog/advertising/google-customer-match-dv360.md).
+Vous pouvez afficher des informations sur les identités activées, exclues ou ayant échoué, ventilées au niveau de l’audience, pour chaque audience faisant partie du flux de données. La surveillance au niveau de l’audience pour les destinations de diffusion en continu est actuellement disponible uniquement pour la [[!DNL Google Customer Match + Display & Video 360] destination](/help/destinations/catalog/advertising/google-customer-match-dv360.md).
 
 ![Surveillance au niveau de l’audience pour les destinations de diffusion en continu.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
 >[!NOTE]
 >
->Le nombre de **[!UICONTROL profils reçus]** dans l’onglet Audiences peut ne pas toujours correspondre au nombre de profils reçus pour l’exécution du flux de données. Cela est dû au fait qu’un profil donné peut faire partie de plusieurs audiences activées dans le flux de données.
+>Le nombre de **[!UICONTROL profils reçus]** dans l’onglet **[!UICONTROL Audiences]** peut ne pas toujours correspondre au nombre de profils reçus pour l’exécution du flux de données. Cela est dû au fait qu’un profil donné peut faire partie de plusieurs audiences activées dans le flux de données.
 
 ### Exécutions de flux de données pour les destinations par lots {#dataflow-runs-for-batch-destinations}
 
@@ -150,7 +150,7 @@ Pour les destinations par lot, l’onglet [!UICONTROL  Exécution de flux de don
 
 Chaque exécution de flux de données individuelle affiche les détails suivants :
 
-- **[!UICONTROL Démarrage de l’exécution du flux de données]** : l’heure à laquelle le flux de données a commencé.
+- **[!UICONTROL Démarrage de l’exécution du flux de données]** : heure à laquelle l’exécution du flux de données a commencé.
 - **[!UICONTROL Audience]** : nom de l’audience associée à chaque exécution de flux de données.
 - **[!UICONTROL Temps de traitement]** : temps nécessaire au traitement du flux de données.
 - **[!UICONTROL Profils reçus]** : nombre total de profils reçus dans le flux de données. Cette valeur est mise à jour toutes les 60 minutes.

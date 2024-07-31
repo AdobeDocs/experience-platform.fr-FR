@@ -3,7 +3,7 @@ title: Correspondance client Google + connexion Display & Video 360
 description: Avec le connecteur de destination Correspondance client Google + Display & Video 360 , vous pouvez utiliser vos données en ligne et hors ligne d’Experience Platform pour atteindre et réengager vos clients dans les propriétés Google détenues et exploitées, telles que la recherche, le shopping, Gmail et YouTube.
 badgeBeta: label="Version bêta" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: c3de72a0f90578803b969f32cc484047089099bd
+source-git-commit: 27802292a7a06f2edaea9efc39d4a63507e0e7e1
 workflow-type: tm+mt
 source-wordcount: '1999'
 ht-degree: 18%
@@ -223,11 +223,11 @@ Les données de la source d’attributs ne sont pas automatiquement hachées. Lo
 
 ![Appliquez un contrôle de transformation surligné dans l&#39;étape Mapping du workflow d&#39;activation.](../../assets/catalog/advertising/google-customer-match-dv360/transformation.png)
 
-## Destination du moniteur
+## Destination du moniteur {#monitor-destination}
 
 Après vous être connecté à la destination et avoir créé un flux de données de destination, vous pouvez utiliser la [fonctionnalité de surveillance](/help/dataflows/ui/monitor-destinations.md) dans Real-Time CDP pour obtenir des informations détaillées sur les enregistrements de profil activés à votre destination lors de chaque exécution de flux de données.
 
-Les informations de surveillance pour la connexion [!DNL Google Customer Match + Display & Video 360] incluent des informations au niveau de l’audience liées aux identités activées, exclues et ayant échoué dans chaque flux de données et exécution de flux de données. En savoir plus sur les fonctionnalités.
+Les informations de surveillance pour la connexion [!DNL Google Customer Match + Display & Video 360] incluent des informations au niveau de l’audience liées aux identités activées, exclues et ayant échoué dans chaque flux de données et exécution de flux de données. [En savoir plus](/help/dataflows/ui/monitor-destinations.md#segment-level-view) sur la fonctionnalité.
 
 ## Vérification de la réussite de l’activation de l’audience {#verify-activation}
 
