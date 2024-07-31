@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Surveillance des flux de données pour les destinations dans l’interface utilisateur
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
+source-git-commit: ee63f5ee6cca98e0b5838dc2de656d1d615a0b3a
 workflow-type: tm+mt
-source-wordcount: '3337'
-ht-degree: 12%
+source-wordcount: '3549'
+ht-degree: 11%
 
 ---
 
@@ -86,7 +86,7 @@ Une liste des exécutions individuelles et de leurs mesures spécifiques s’aff
 
 Chaque exécution de flux de données individuelle affiche les détails suivants :
 
-- **[!UICONTROL Démarrage de l’exécution du flux de données]** : l’heure à laquelle le flux de données a commencé. Pour les exécutions de flux de données en continu, Experience Platform capture les mesures en fonction du début de l’exécution du flux de données, sous la forme de mesures horaires. Pour les exécutions de flux de données en continu, si une exécution de flux de données a commencé, par exemple à 22 h 30, la mesure affiche l’heure de début sur 22 h dans l’interface utilisateur.
+- **[!UICONTROL Démarrage de l’exécution du flux de données]** : l’heure à laquelle le flux de données a commencé. Pour les exécutions de flux de données en continu, Experience Platform capture les mesures en fonction du début de l’exécution du flux de données, sous la forme de mesures horaires. Cela signifie que pour les exécutions de flux de données en continu, si une exécution de flux de données a commencé, par exemple à 22 h 30, la mesure affiche l’heure de début sur 22 h dans l’interface utilisateur.
 - **[!UICONTROL Temps de traitement]** : temps nécessaire au traitement du flux de données.
    - Pour les exécutions **[!UICONTROL terminées]**, la mesure de temps de traitement affiche toujours une heure.
    - Pour les exécutions de flux de données qui se trouvent toujours à l’état **[!UICONTROL processing]**, la fenêtre permettant de capturer toutes les mesures reste ouverte pendant plus d’une heure, afin de traiter toutes les mesures qui correspondent à l’exécution de flux de données. Par exemple, une exécution de flux de données démarrée à 9h30 peut rester en état de traitement pendant une heure et demie pour capturer et traiter toutes les mesures. Ensuite, une fois que la fenêtre de traitement se ferme et que l’état de l’exécution du flux de données est mis à jour vers **completed**, le temps de traitement affiché est remplacé par une heure.
@@ -107,6 +107,16 @@ La page des détails d’une exécution de flux de données contient des informa
 La page Détails affiche également une liste des identités qui ont échoué et des identités qui ont été exclues. Les informations relatives aux identités ayant échoué et exclues s’affichent, notamment le code d’erreur, le nombre d’identités et la description. Par défaut, la liste affiche les identités ayant échoué. Pour afficher les identités ignorées, sélectionnez la bascule **[!UICONTROL Identités exclues]** .
 
 ![Enregistrements de flux de données pour les destinations de diffusion en continu avec un message d’erreur surligné.](../assets/ui/monitor-destinations/dataflow-records-stream.png)
+
+#### (Beta) Surveillance de l’exécution du flux de données au niveau de l’audience pour les destinations de diffusion en continu {#audience-level-dataflow-runs-for-streaming-destinations}
+
+Vous pouvez afficher des informations sur les identités activées, exclues ou ayant échoué, ventilées au niveau de l’audience, pour chaque audience faisant partie du flux de données. Cela peut vous aider à comprendre que la surveillance au niveau de l’audience pour les destinations de diffusion en continu est actuellement disponible uniquement pour la [[!DNL Google Customer Match + Display & Video 360] destination](/help/destinations/catalog/advertising/google-customer-match-dv360.md).
+
+![Surveillance au niveau de l’audience pour les destinations de diffusion en continu.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
+
+>[!NOTE]
+>
+>Le nombre de **[!UICONTROL profils reçus]** dans l’onglet Audiences peut ne pas toujours correspondre au nombre de profils reçus pour l’exécution du flux de données. Cela est dû au fait qu’un profil donné peut faire partie de plusieurs audiences activées dans le flux de données.
 
 ### Exécutions de flux de données pour les destinations par lots {#dataflow-runs-for-batch-destinations}
 
@@ -166,12 +176,25 @@ La page Détails affiche également une liste des identités qui ont échoué et
 
 ![ Enregistrements de flux de données pour les destinations par lots avec un message d’erreur surligné.](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
+### Afficher dans la surveillance {#view-in-monitoring}
+
+Vous pouvez également choisir d’afficher des informations riches sur un certain flux de données et son flux de données s’exécute dans le tableau de bord de surveillance. Pour afficher des informations sur un flux de données dans le tableau de bord de surveillance :
+
+1. Accédez à l’onglet **[!UICONTROL Connexions]** > **[!UICONTROL Destinations]** > **[!UICONTROL Parcourir]** .
+2. Accédez au flux de données que vous souhaitez inspecter.
+3. Sélectionnez le symbole représentant des points de suspension et ![icône de surveillance](/help/images/icons/monitoring.png) **[!UICONTROL Afficher dans la surveillance]**.
+
+![Sélectionnez Afficher dans la surveillance dans le workflow des destinations pour obtenir plus d’informations sur un flux de données.](/help/dataflows/assets/ui/monitor-destinations/view-in-monitoring.png)
+
+>[!SUCCESS]
+>
+>Vous pouvez désormais afficher des informations sur le flux de données et ses exécutions de flux de données associées dans le tableau de bord de surveillance. Pour plus d’informations, consultez la section ci-dessous.
+
 ## Tableau de bord de surveillance des destinations {#monitoring-destinations-dashboard}
 
 >[!NOTE]
 >
->- La fonctionnalité de surveillance des destinations est actuellement prise en charge pour toutes les destinations dans les destinations Experience Platform *à l’exception* des destinations [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) et [Personnalisation personnalisée](/help/destinations/catalog/personalization/custom-personalization.md).
->- Pour les destinations [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) et [API HTTP](/help/destinations/catalog/streaming/http-destination.md), les mesures liées aux identités exclues, en échec et activées sont estimées. Des volumes plus importants de données d’activation augmentent la précision des mesures.
+>La fonctionnalité de surveillance des destinations est actuellement prise en charge pour toutes les destinations dans les destinations Experience Platform *à l’exception* des destinations [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) et [Personnalisation personnalisée](/help/destinations/catalog/personalization/custom-personalization.md).
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
@@ -208,17 +231,20 @@ Utilisez l’icône de flèche (![icône de flèche](/help/images/icons/chevron-
 
 Le graphique **[!UICONTROL Activation]** s’affiche par défaut et vous pouvez le désactiver pour développer la liste des destinations ci-dessous. Sélectionnez le bouton d’activation/désactivation **[!UICONTROL Mesures et graphiques]** pour désactiver les graphiques.
 
-Le panneau **[!UICONTROL Activation]** affiche une liste des destinations qui contiennent au moins un compte existant. Cette liste contient également des informations sur les profils reçus, les identités activées, les identités ayant échoué, les identités exclues, le taux d’activation, le nombre total de flux de données ayant échoué et la date de dernière mise à jour pour ces destinations. Toutes les mesures ne sont pas disponibles pour tous les types de destinations. Le tableau ci-dessous décrit les mesures et les informations disponibles par type de destination, diffusion en continu ou par lot.
+Le panneau **[!UICONTROL Activation]** affiche une liste des destinations qui contiennent au moins un compte existant. Cette liste contient également des informations sur les profils reçus, les identités activées, les identités ayant échoué, les identités exclues, le taux d’activation, le nombre total de flux de données ayant échoué et la date de dernière mise à jour pour ces destinations. Toutes les mesures ne sont pas disponibles pour tous les types de destinations. Le tableau ci-dessous décrit les mesures et les informations disponibles par type de destination.
 
 | Mesure | Type de destination |
----------|----------|
-| **[!UICONTROL Profils reçus]** | Diffusion en continu et par lots |
-| **[!UICONTROL Identités activées]** | Diffusion en continu et par lots |
-| **[!UICONTROL Échec des identités]** | Diffusion en continu |
-| **[!UICONTROL Identités exclues]** | Diffusion en continu et par lots |
+|--------------------------------------|-----------------------|
+| **[!UICONTROL Enregistrements reçus]** | Diffusion en continu et par lots |
+| **[!UICONTROL Enregistrements activés]** | Diffusion en continu et par lots |
+| **[!UICONTROL Échec des enregistrements]** | Diffusion en continu |
+| **[!UICONTROL Enregistrements ignorés]** | Diffusion en continu et par lots |
+| **[!UICONTROL Type de données]** | Diffusion en continu et par lots |
 | **[!UICONTROL Taux d’activation]** | Diffusion en continu |
 | **[!UICONTROL Total des flux de données ayant échoué]** | Lot |
 | **[!UICONTROL Dernière mise à jour]** | Diffusion en continu et par lots |
+
+{style="table-layout:auto"}
 
 ![Surveillance du tableau de bord avec toutes les destinations activées en surbrillance.](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
@@ -256,15 +282,15 @@ Utilisez le bouton d’activation/désactivation **[!UICONTROL Afficher les éch
 
 ### Vue au niveau de l’audience {#segment-level-view}
 
-Lorsque l’option **[!UICONTROL Audiences]** est sélectionnée, la liste des audiences qui ont été activées dans le flux de données sélectionné s’affiche dans la période sélectionnée. Cet écran comprend des informations au niveau de l’audience sur les identités activées, les identités exclues, ainsi que l’état et l’heure de la dernière exécution du flux de données. En examinant les mesures des identités exclues et activées, vous pouvez vérifier si une audience a été activée ou non.
+Lorsque l’option **[!UICONTROL Audiences]** est sélectionnée, la liste des audiences qui ont été activées dans le flux de données sélectionné s’affiche dans la période sélectionnée. Cet écran comprend des informations au niveau de l’audience sur les enregistrements activés, les enregistrements exclus, ainsi que sur l’état et l’heure de la dernière exécution du flux de données. En examinant les mesures des enregistrements exclus et activés, vous pouvez vérifier si une audience a été activée ou non.
 
-Par exemple, vous activez une audience appelée &quot;Loyalty Members in California&quot; vers une destination Amazon S3 &quot;Loyalty Members California December&quot;. Supposons qu’il existe 100 profils dans l’audience sélectionnée, mais que seulement 80 des 100 profils contiennent des attributs Loyalty ID et que vous ayez défini les règles de mappage d’exportation comme `loyalty.id` est requis. Dans ce cas, au niveau de l’audience, 80 identités sont activées et 20 identités exclues.
+Par exemple, vous activez une audience appelée &quot;Loyalty Members in California&quot; vers une destination Amazon S3 &quot;Loyalty Members California December&quot;. Supposons qu’il existe 100 profils dans l’audience sélectionnée, mais que seulement 80 enregistrements sur 100 contiennent des attributs Loyalty ID et que vous ayez défini les règles de mappage d’exportation comme `loyalty.id` est requis. Dans ce cas, au niveau de l’audience, 80 enregistrements sont activés et 20 enregistrements exclus.
 
 >[!IMPORTANT]
 >
 >Notez les limites actuelles liées aux mesures au niveau de l’audience :
->- Actuellement, la vue au niveau de l’audience n’est disponible que pour les destinations par lots.
->- Les mesures au niveau de l’audience sont actuellement enregistrées uniquement pour les exécutions de flux de données réussies. Ils ne sont pas enregistrés pour les exécutions de flux de données ayant échoué et les enregistrements exclus.
+>- La vue au niveau de l’audience est actuellement disponible pour les destinations par lot (basées sur des fichiers) et la destination de diffusion en continu [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) uniquement. Le déploiement est prévu pour d’autres destinations de diffusion en continu.
+>- Pour les destinations par lot, les mesures au niveau de l’audience sont actuellement enregistrées uniquement pour les exécutions de flux de données réussies. Ils ne sont pas enregistrés pour les exécutions de flux de données ayant échoué et les enregistrements exclus. Pour les exécutions de flux de données vers des destinations de diffusion en continu, les mesures sont capturées et affichées pour les enregistrements activés et exclus.
 
 ![Audiences mises en surbrillance dans le panneau du flux de données.](../assets/ui/monitor-destinations/dashboard-segments-view.png)
 
@@ -273,13 +299,13 @@ Utilisez le bouton de filtrage ![filter](/help/images/icons/filter-add.png) pour
 
 ### Page Exécution du flux de données {#dataflow-runs-page}
 
-La page des exécutions du flux de données affiche des informations sur vos exécutions de flux de données, notamment l’heure de début de l’exécution du flux de données, l’heure de traitement, les profils reçus, les identités activées, les identités exclues, les identités ayant échoué, le taux d’activation et l’état.
+La page des exécutions du flux de données affiche des informations sur vos exécutions de flux de données, notamment l’heure de début de l’exécution du flux de données, le temps de traitement, les enregistrements reçus, les enregistrements activés, les enregistrements exclus, les enregistrements en échec, le taux d’activation et l’état.
 
 Lorsque vous explorez la page des exécutions du flux de données à partir de la [vue au niveau de l’audience](#segment-level-view), vous avez la possibilité de filtrer les exécutions du flux de données selon les options suivantes :
 
-- **[!UICONTROL Le flux de données s’exécute avec des identités ayant échoué]** : pour l’audience sélectionnée, cette option répertorie toutes les exécutions de flux de données qui ont échoué pour l’activation. Pour déterminer pourquoi les identités d’une certaine exécution de flux de données ont échoué, consultez la [page des détails d’exécution de flux de données](#dataflow-run-details-page) pour cette exécution de flux de données.
-- **[!UICONTROL Le flux de données s’exécute avec des identités ignorées]** : pour l’audience sélectionnée, cette option répertorie toutes les exécutions de flux de données où certaines identités n’ont pas été entièrement activées et certains profils ont été ignorés. Pour déterminer pourquoi les identités d’une certaine exécution de flux de données ont été ignorées, consultez la [page des détails d’exécution de flux de données](#dataflow-run-details-page) pour cette exécution de flux de données.
-- **[!UICONTROL Le flux de données s’exécute avec des identités activées]** : pour l’audience sélectionnée, cette option répertorie toutes les exécutions de flux de données avec des identités qui ont été activées avec succès.
+- **[!UICONTROL Le flux de données s’exécute avec des enregistrements ayant échoué]** : pour l’audience sélectionnée, cette option répertorie toutes les exécutions de flux de données qui ont échoué pour l’activation. Pour déterminer pourquoi les enregistrements d’une certaine exécution de flux de données ont échoué, consultez la [page des détails d’exécution de flux de données](#dataflow-run-details-page) pour cette exécution de flux de données.
+- **[!UICONTROL Le flux de données s’exécute avec des enregistrements exclus]** : pour l’audience sélectionnée, cette option répertorie toutes les exécutions de flux de données où certains enregistrements n’ont pas été entièrement activés et certains profils ont été ignorés. Pour déterminer pourquoi les enregistrements d’une certaine exécution de flux de données ont été ignorés, consultez la [page des détails d’exécution de flux de données](#dataflow-run-details-page) pour cette exécution de flux de données.
+- **[!UICONTROL Le flux de données s’exécute avec les enregistrements activés]** : pour l’audience sélectionnée, cette option répertorie toutes les exécutions de flux de données qui comportent des enregistrements qui ont été activés avec succès.
 
 ![Boutons radio montrant comment filtrer les exécutions de flux de données pour les audiences.](/help/dataflows/assets/ui/monitor-destinations/dataflow-runs-segment-filter.png)
 
@@ -295,13 +321,13 @@ La page des détails de l’exécution du flux de données, en plus des détails
 - **[!UICONTROL ID d’organisation IMS]** : organisation à laquelle appartient le flux de données.
 - **[!UICONTROL Dernière mise à jour]** : heure de la dernière mise à jour du flux de données.
 
-La page Détails comporte également un bouton d’activation/désactivation pour basculer entre les erreurs d’exécution de flux de données et les audiences. Cette option est disponible uniquement pour les exécutions de flux de données dans les destinations par lots.
+La page Détails comporte également un bouton d’activation/désactivation pour basculer entre les erreurs d’exécution de flux de données et les audiences. Cette option est disponible uniquement pour les exécutions de flux de données dans les destinations par lots et pour la destination de diffusion en continu [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md).
 
-La vue des erreurs d’exécution du flux de données affiche une liste des identités qui ont échoué et des identités qui ont été exclues. Les informations relatives aux identités ayant échoué et exclues s’affichent, notamment le code d’erreur, le nombre d’identités et la description. Par défaut, la liste affiche les identités ayant échoué. Pour afficher les identités ignorées, sélectionnez la bascule **[!UICONTROL Identités exclues]** .
+La vue des erreurs d’exécution du flux de données affiche la liste des enregistrements ayant échoué et des enregistrements ayant été ignorés. Les informations relatives aux enregistrements ayant échoué et ignorés s’affichent, notamment le code d’erreur, le nombre d’identités et la description. Par défaut, la liste affiche les enregistrements ayant échoué. Pour afficher les enregistrements ignorés, sélectionnez la bascule **[!UICONTROL Enregistrements ignorés]** .
 
 ![Bascule des identités exclues surligné dans la vue de surveillance](../assets/ui/monitor-destinations/identities-excluded.png)
 
-Lorsque **[!UICONTROL Audiences]** est sélectionné, la liste des audiences qui ont été activées dans l’exécution de flux de données sélectionnée s’affiche. Cet écran comprend des informations au niveau de l’audience sur les identités activées, les identités exclues, ainsi que l’état et l’heure de la dernière exécution du flux de données.
+Lorsque **[!UICONTROL Audiences]** est sélectionné, la liste des audiences qui ont été activées dans l’exécution de flux de données sélectionnée s’affiche. Cet écran comprend des informations au niveau de l’audience sur les enregistrements activés, les enregistrements exclus, ainsi que sur l’état et l’heure de la dernière exécution du flux de données.
 
 ![Vue Audiences dans l’écran des détails de l’exécution du flux de données.](../assets/ui/monitor-destinations/dataflow-run-segments-view.png)
 
