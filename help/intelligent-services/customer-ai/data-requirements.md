@@ -6,10 +6,10 @@ title: Exigences des données dans l’IA dédiée aux clientes et clients
 topic-legacy: Getting started
 description: Apprenez-en plus sur les événements, les entrées et les sorties requis utilisés par l’IA dédiée aux clientes et clients.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 63bdb48936070d23d1801d8e6143db3aefad5f6e
 workflow-type: tm+mt
-source-wordcount: '2505'
-ht-degree: 100%
+source-wordcount: '2545'
+ht-degree: 96%
 
 ---
 
@@ -63,7 +63,7 @@ Le tableau suivant présente la terminologie courante utilisée dans ce document
 | Terme | Définition |
 | --- | --- |
 | [Modèle de données d’expérience (XDM)](../../xdm/home.md) | XDM est le cadre de base qui permet à Adobe Experience Cloud, optimisé par Experience Platform, de transmettre le message approprié à la bonne personne, sur le bon canal et exactement au bon moment. Platform utilise le système XDM pour organiser les données d’une manière qui facilite leur utilisation pour les services Platform. |
-| [Schéma XDM](../../xdm/schema/composition.md) | Experience Platform utilise des schémas pour décrire la structure des données de manière cohérente et réutilisable. En définissant les données de manière cohérente sur l’ensemble des systèmes, il est plus simple de leur donner du sens et donc d’en tirer profit. Avant que les données puissent être ingérées dans Platform, il est nécessaire de composer un schéma pour décrire la structure des données et fournir des contraintes au type de données pouvant être contenu dans chaque champ. Les schémas se composent d’une classe XDM de base et de zéro ou plusieurs groupes de champs. |
+| [Schéma XDM](../../xdm/schema/composition.md) | Experience Platform utilise des schémas pour décrire la structure des données de manière cohérente et réutilisable. En définissant les données de manière cohérente sur l’ensemble des systèmes, il est plus simple de leur donner du sens et donc d’en tirer profit. Avant que les données puissent être ingérées dans Platform, il est nécessaire de composer un schéma pour décrire la structure des données et fournir des contraintes au type de données pouvant être contenues dans chaque champ. Les schémas se composent d’une classe XDM de base et de zéro ou plusieurs groupes de champs. |
 | [Classe XDM](../../xdm/schema/field-constraints.md) | Tous les schémas XDM décrivent des données qui peuvent être catégorisées comme `Experience Event`. Le comportement des données d’un schéma est défini par la classe du schéma attribuée à celui-ci lorsqu’il est créé pour la première fois. Les classes XDM décrivent le plus petit nombre de propriétés qu’un schéma doit contenir pour représenter un comportement de données spécifique. |
 | [Groupes de champs](../../xdm/schema/composition.md) | Un composant qui définit un ou plusieurs champs d’un schéma. Les groupes de champs imposent la manière dont leurs champs apparaissent dans la hiérarchie du schéma, et présentent donc la même structure dans chaque schéma dans lequel ils sont inclus. Les groupes de champs ne sont compatibles qu’avec des classes spécifiques, identifiées par leur attribut `meta:intendedToExtend`. |
 | [Type de données](../../xdm/schema/composition.md) | Un composant qui peut également fournir un ou plusieurs champs pour un schéma. Toutefois, contrairement aux groupes de champs, les types de données ne sont pas limités à une classe particulière. Ainsi, les types de données constituent une option plus souple pour décrire des structures de données communes réutilisables sur plusieurs schémas avec des classes potentiellement différentes. Les types de données décrits dans ce document sont pris en charge par les schémas CEE et Adobe Analytics. |
@@ -83,7 +83,7 @@ Vous pouvez utiliser des schémas XDM d’événement d’expérience ou d’év
 
 ### Groupes de champs standards utilisés par l’IA dédiée aux clientes et clients {#standard-events}
 
-Les événements d’expérience sont utilisés pour déterminer divers comportements de clientèle. Selon la structure de vos données, les types d’événements répertoriés ci-dessous peuvent ne pas englober tous les comportements de votre clientèle. C’est à vous de déterminer quels champs contiennent les données nécessaires pour identifier clairement et sans ambiguïté l’activité de l’utilisateur ou de l’utilisatrice sur le web ou sur un autre canal. Selon l’objectif de prédiction, les champs requis peuvent changer.
+Les événements d’expérience sont utilisés pour déterminer divers comportements de clientèle. Selon la structure de vos données, les types d’événements répertoriés ci-dessous peuvent ne pas englober tous les comportements de votre client. C’est à vous de déterminer quels champs contiennent les données nécessaires pour identifier clairement et sans ambiguïté l’activité de l’utilisateur ou de l’utilisatrice sur le web ou sur un autre canal. Selon l’objectif de prédiction, les champs requis peuvent changer.
 
 >[!NOTE]
 >
@@ -159,6 +159,8 @@ Par défaut, l’IA dédiée aux clientes et clients recherche un utilisateur ou
 
 Les exemples suivants montrent l’utilisation d’une formule simple qui vous aide à déterminer la quantité minimale de données requise. Si vous disposez de données plus volumineuses que le minimum requis, votre modèle est susceptible de fournir des résultats plus précis. Si vous disposez de moins que la quantité minimale requise, le modèle échoue, car il n’y a pas suffisamment de données pour la formation du modèle.
 
+Customer AI utilise un modèle de survie pour estimer la probabilité qu’un événement se produise à un moment donné et identifier les facteurs d’influence, ainsi que l’apprentissage supervisé qui définit les populations positives et négatives et les arbres basés sur des décisions comme `lightgbm` pour générer un score de probabilité.
+
 **Formule** :
 
 Pour décider de la durée minimale requise des données du système :
@@ -185,7 +187,7 @@ Pour décider de la durée minimale requise des données du système :
 
    - Données requises = 60 jours + 30 jours = 90 jours
 
-- Vous souhaitez prédire si l’utilisateur ou l’utilisatrice est susceptible d’acheter une montre au cours des 7 prochains jours **sans** fournir une population éligible explicite. Dans ce cas, la population éligible est définie par défaut sur « personnes qui ont eu une activité au cours des 45 derniers jours » et la fenêtre de résultat est de 7 jours.
+- Vous souhaitez prédire si l’utilisateur ou l’utilisatrice est susceptible d’acheter une montre au cours des 7 prochains jours **sans** fournir une population éligible explicite. Dans ce cas, la population éligible est définie par défaut sur &quot;ceux qui ont eu une activité au cours des 45 derniers jours&quot; et la fenêtre de résultat est de 7 jours.
 
    - Fenêtre de recherche en amont d’éligibilité = 45 jours
 
@@ -226,4 +228,4 @@ Le tableau ci-dessous décrit les différents attributs trouvés dans les sortie
 
 ## Étapes suivantes {#next-steps}
 
-Une fois que vous avez préparé vos données et que tous vos identifiants et schémas sont en place, reportez-vous au guide de [Configuration d’une instance Customer AI](./user-guide/configure.md) qui vous guide tout au long d’un tutoriel détaillé sur la création d’une instance Customer AI.
+Une fois que vous avez préparé vos données et que l’ensemble de vos informations d’identification et schémas sont en place, reportez-vous au guide de [Configuration d’une instance Customer AI](./user-guide/configure.md) qui vous guide tout au long d’un tutoriel détaillé sur la création d’une instance Customer AI.
