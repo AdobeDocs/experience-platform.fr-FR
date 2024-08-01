@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestion des libellés d’utilisation des données dans l’interface utilisateur
 description: Ce guide détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7a4de0491057747c7ce4d7bc4378da453f3b3a1c
 workflow-type: tm+mt
-source-wordcount: '1538'
-ht-degree: 93%
+source-wordcount: '1550'
+ht-degree: 92%
 
 ---
 
@@ -22,7 +22,7 @@ Ce guide d’utilisation détaille la procédure d’utilisation des libellés d
 
 ## Gérer les libellés {#manage-labels}
 
-Pour appliquer des libellés à vos données, vous devez obtenir l’autorisation de **[!UICONTROL gestion des libellés d’utilisation]** afin de les utiliser sur le sandbox de production par défaut appelé « prod ». Pour créer un libellé personnalisé, vous devez également disposer de droits d’administration sur le profil de produit. Chaque organisation ne possède qu’une seule liste de libellés applicables. Pour le moment, la suppression des libellés n’est pas prise en charge.
+Pour appliquer des libellés à vos données, vous devez obtenir l’autorisation de **[!UICONTROL gestion des libellés d’utilisation]** afin de les utiliser sur le sandbox de production par défaut appelé « prod ». Pour créer un libellé personnalisé, vous devez également disposer de droits d’administration sur le profil de produit. Chaque organisation ne dispose que d’une seule liste de libellés applicables. Vous **ne pouvez pas** supprimer des étiquettes. Vous pouvez plutôt les supprimer des jeux de données ou des champs auxquels ils sont appliqués.
 
 Veuillez consulter le guide sur la façon de [configurer des autorisations](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) ou la [vue d’ensemble du contrôle d’accès](../../access-control/home.md) pour plus d’informations sur l’attribution d’une autorisation. Si vous n’avez pas accès à Admin Console de votre organisation, contactez l’administrateur ou l’administratrice de cette dernière.
 

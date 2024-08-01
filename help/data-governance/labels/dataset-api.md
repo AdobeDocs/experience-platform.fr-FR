@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestion des étiquettes dʼutilisation des données pour les jeux de données à lʼaide dʼAPI
 description: LʼAPI Dataset Service vous permet dʼappliquer et de modifier des étiquettes dʼutilisation pour les jeux de données. LʼAPI fait partie des fonctionnalités de catalogue de données dʼAdobe Experience Platform, mais est distinct de lʼAPI Catalog Service qui gère les métadonnées du jeu de données.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 8db484e4a65516058d701ca972fcbcb6b73abb31
+source-git-commit: 9eda7068eb2a3fd5e59fbeff69c85abfad5ccf39
 workflow-type: tm+mt
-source-wordcount: '1314'
-ht-degree: 93%
+source-wordcount: '1340'
+ht-degree: 91%
 
 ---
 
@@ -166,6 +166,10 @@ Une réponse réussie renvoie le jeu de libellés mis à jour pour le jeu de don
 ## Suppression des étiquettes dʼun jeu de données {#remove}
 
 Pour supprimer des libellés du champ précédemment appliqués, mettez à jour la ou les valeurs `optionalLabels` existantes avec un sous-ensemble des libellés du champ existants ou une liste vide pour les supprimer entièrement. Envoyez une requête PUT à l’API [!DNL Dataset Service] pour mettre à jour ou supprimer les libellés précédemment appliqués.
+
+>[!NOTE]
+>
+>Vous pouvez entièrement supprimer les étiquettes d’un jeu de données en fournissant une liste vide pour le paramètre `labels`. Il n’est pas obligatoire pour un jeu de données de conserver des libellés.
 
 **Format d’API**
 

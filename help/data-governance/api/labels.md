@@ -5,10 +5,10 @@ title: Point d’entrée de lʼAPI Labels
 description: Découvrez la façon de gérer les libellés dʼutilisation des données dans Experience Platform à lʼaide de lʼAPI Policy Service.
 role: Developer
 exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 77d68a42b16c78cdc2b55f7776ba1c8ec98d8acd
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 100%
+source-wordcount: '536'
+ht-degree: 89%
 
 ---
 
@@ -18,7 +18,7 @@ Les libellés dʼutilisation des données vous permettent de classer les donnée
 
 >[!NOTE]
 >
->Le point d’entrée `/labels` nʼest utilisé que pour la récupération, la création et la mise à jour des étiquettes dʼutilisation des données. Pour obtenir des instructions détaillées sur lʼajout dʼétiquettes aux jeux de données et aux champs à lʼaide dʼappels API, consultez le guide de [gestion des étiquettes des jeux de données](../labels/dataset-api.md).
+>Le point d’entrée `/labels` nʼest utilisé que pour la récupération, la création et la mise à jour des étiquettes dʼutilisation des données. Vous ne pouvez pas supprimer de libellés. Cependant, vous pouvez ajouter ou supprimer des libellés aux jeux de données et aux champs à l’aide d’appels API. Pour obtenir des instructions, reportez-vous au guide sur la [gestion des libellés de jeux de données](../labels/dataset-api.md) .
 
 ## Prise en main
 
@@ -163,6 +163,10 @@ Une réponse réussie renvoie les détails de lʼétiquette personnalisée.
 ## Création ou mise à jour dʼune étiquette personnalisée {#create-update}
 
 Pour créer ou mettre à jour une étiquette personnalisée, vous devez envoyer une requête PUT à lʼAPI [!DNL Policy Service].
+
+>[!NOTE]
+>
+>Si vous souhaitez supprimer des libellés d’un jeu de données, vous pouvez exécuter une [requête de PUT sur l’API du service de jeux de données](../labels/dataset-api.md#remove) ou à l’aide de l’[interface utilisateur des jeux de données](../labels/user-guide.md#remove-labels-from-a-dataset).
 
 **Format d’API**
 
