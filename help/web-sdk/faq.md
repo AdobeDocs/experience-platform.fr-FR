@@ -2,9 +2,9 @@
 title: FAQ sur le SDK Web Adobe Experience Platform
 description: Obtenez des réponses aux questions fréquentes sur le SDK Web de Adobe Experience Platform.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: 002a57d1d5cfb2e7bdbd9b587e77ca4487a28f65
+source-git-commit: cd2ac132c77d5d2e90c0f881d7b89a3c339fed6f
 workflow-type: tm+mt
-source-wordcount: '2268'
+source-wordcount: '2184'
 ht-degree: 5%
 
 ---
@@ -198,16 +198,6 @@ Si vous avez déterminé que vous devez polyfiller `window.Promise`, incluez la 
 ```
 
 Cette balise charge un script qui s’assure que `window.Promise` est une implémentation de promesse valide.
-
->[!NOTE]
->
->Si vous choisissez de charger une implémentation de promesse différente, assurez-vous qu&#39;elle prend en charge `Promise.prototype.finally`.
-
-### Prise en charge d’Internet Explorer
-
-Le SDK Adobe Experience Platform utilise des promesses, qui sont une méthode de communication de l’achèvement des tâches asynchrones. L’implémentation [Promise](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Global_Objects/Promise) utilisée par le SDK est prise en charge en mode natif par tous les navigateurs cibles, à l’exception de [!DNL Internet Explorer]. Pour utiliser le SDK sur [!DNL Internet Explorer], vous devez disposer de `window.Promise` [polyfill](https://remysharp.com/2010/10/08/what-is-a-polyfill).
-
-Une bibliothèque que vous pouvez utiliser pour polyfiller la promesse est promesse-polyfill. Pour plus d’informations sur l’installation avec NPM, consultez la [documentation prometteuse-polyfill](https://www.npmjs.com/package/promise-polyfill) .
 
 >[!NOTE]
 >
