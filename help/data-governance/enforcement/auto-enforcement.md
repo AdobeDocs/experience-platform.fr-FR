@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Application automatique des politiques
 description: Ce document présente l’application automatique des politiques d’utilisation de données lors de l’activation d’audiences vers des destinations dans Experience Platform.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b0c4a26c2e8bb90a3494fcd6eb76c4d0d7421219
 workflow-type: tm+mt
-source-wordcount: '2109'
-ht-degree: 84%
+source-wordcount: '2118'
+ht-degree: 80%
 
 ---
 
@@ -70,8 +70,8 @@ Chaque étape de la chronologie ci-dessus représente une entité qui peut contr
 | --- | --- |
 | Jeu de données | Les jeux de données contiennent des libellés d’utilisation des données (appliqués au niveau du champ de schéma ou du champ de l’intégralité du jeu de données) qui définissent les cas d’utilisation pour lesquels l’intégralité du jeu de données ou des champs spécifiques peut être utilisée. Des violations de politique se produisent si un jeu de données ou un champ contenant certains libellés est utilisé à des fins limitées par une politique.<br><br>Tous les attributs de consentement collectés auprès de vos clients sont également stockés dans des jeux de données. Si vous avez accès aux politiques de consentement, tous les profils qui ne répondent pas aux exigences d’attribut de consentement de vos politiques seront exclus des audiences qui sont activées vers une destination. |
 | Politique de fusion | Les politiques de fusion sont les règles utilisées par Platform pour déterminer le classement par priorité des données lors de la fusion de fragments provenant de plusieurs jeux de données. Des violations de politique se produisent si vos politiques de fusion sont configurées de telle sorte que les jeux de données dotés de libellés limités sont activés pour une destination. Pour plus d’informations, consultez la [présentation des politiques de fusion](../../profile/merge-policies/overview.md). |
-| Audience | Les règles de segmentation définissent les attributs à inclure dans les profils clients. En fonction des champs inclus dans une définition de segment, l’audience hérite des libellés d’utilisation appliqués pour ces champs. Des violations de politique se produisent si vous activez une audience dont les libellés hérités sont limités par les politiques applicables de la destination cible, en fonction de son cas d’utilisation marketing. |
-| Destination | Lors de la configuration d’une destination, une action marketing (parfois appelée cas d’utilisation marketing) peut être définie. Ce cas d’utilisation correspond à une action marketing telle que définie dans une politique. En d’autres termes, l’action marketing que vous définissez comme une destination détermine les politiques d’utilisation des données et de consentement applicables à cette destination.<br><br>Des violations de politique d’utilisation des données se produisent si vous activez une audience dont les libellés d’utilisation sont limités pour l’action marketing de la destination cible.<br><br>(Version Beta) Lorsqu’une audience est activée, tous les profils qui ne contiennent pas les attributs de consentement requis pour l’action marketing (tels que définis par vos politiques de consentement) sont exclus de l’audience activée. |
+| Audience | Les règles de segmentation définissent les attributs à inclure dans les profils clients. En fonction des champs inclus dans une définition de segment, l’audience hérite des libellés d’utilisation appliqués pour ces champs. Des violations de stratégie se produiront si vous tentez d’activer une audience dont les libellés hérités sont limités par les stratégies applicables de la destination cible, en fonction de son cas d’utilisation marketing. |
+| Destination | Lors de la configuration d’une destination, une action marketing (parfois appelée cas d’utilisation marketing) peut être définie. Ce cas d’utilisation correspond à une action marketing telle que définie dans une politique. En d’autres termes, l’action marketing que vous définissez comme une destination détermine les politiques d’utilisation des données et de consentement applicables à cette destination.<br><br> Des violations de stratégie d’utilisation des données se produisent si vous tentez d’activer une audience dont les libellés d’utilisation sont limités pour l’action marketing de la destination cible.<br><br>(Version Beta) Lorsqu’une audience est activée, tous les profils qui ne contiennent pas les attributs de consentement requis pour l’action marketing (tels que définis par vos politiques de consentement) sont exclus de l’audience activée. |
 
 >[!IMPORTANT]
 >
@@ -122,7 +122,7 @@ Utilisez le diagramme de lignage de données pour comprendre les autres modifica
 
 ### Évaluation des politiques de consentement {#consent-policy-evaluation}
 
-Lors de l’activation d’une audience vers une destination, vous pouvez voir comment vos [stratégies de consentement](../policies/user-guide.md#consent-policy) affectent différents pourcentages de profils inclus dans l’activation.
+Lors de l’activation d’une audience vers une destination, vous pouvez voir comment vos [stratégies de consentement](../policies/user-guide.md) affectent la portée de votre audience au cours de l’ [étape de révision du workflow [!UICONTROL  Activation des destinations]](#pre-activation-evaluation).
 
 >[!NOTE]
 >
@@ -138,13 +138,13 @@ Ces améliorations permettent une plus grande confiance dans votre stratégie ma
 >
 >Cette amélioration n’a entraîné aucune modification de l’IU.
 
-#### Évaluation préalable à l’activation
+#### Évaluation préalable à l’activation {#pre-activation-evaluation}
 
-Une fois que vous avez atteint l’étape **[!UICONTROL Réviser]** lors de l’[activation d’une destination](../../destinations/ui/activation-overview.md), sélectionnez **[!UICONTROL Affichage des politiques appliquées]**.
+Une fois que vous avez atteint l’étape **[!UICONTROL Réviser]** lors de l’ [activation d’une destination](../../destinations/ui/activation-overview.md), sélectionnez **[!UICONTROL Afficher les stratégies appliquées]**.
 
 ![Bouton Afficher les politiques appliquées dans le workflow d’activation de la destination](../images/enforcement/view-applied-policies.png)
 
-Une boîte de dialogue de vérification de politique s’affiche, vous montrant un aperçu de la manière dont vos politiques de consentement affectent l’audience consentante des audiences activées.
+Une boîte de dialogue de vérification de stratégie s’affiche, vous montrant un aperçu de la manière dont vos stratégies de consentement affectent l’audience approuvée des audiences à activer.
 
 ![Boîte de dialogue de vérification de la politique de consentement dans l’interface utilisateur de Platform](../images/enforcement/consent-policy-check.png)
 

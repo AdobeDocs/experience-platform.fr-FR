@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gestion des libellés d’utilisation des données dans l’interface utilisateur
 description: Ce guide détaille la procédure d’utilisation des libellés d’utilisation des données dans l’interface utilisateur d’Adobe Experience Platform.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: 7a4de0491057747c7ce4d7bc4378da453f3b3a1c
+source-git-commit: c1722c59c437215ce578a1a44cf0cad3b03ceca9
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: '1549'
 ht-degree: 92%
 
 ---
@@ -36,7 +36,7 @@ Vous pouvez ajouter des libellés directement à un schéma ou à des champs de 
 >
 >![La violation de la politique de gouvernance des données a détecté une boîte de dialogue avec le résumé de la violation et le diagramme de traçabilité des données mis en surbrillance.](../images/labels/policy-violation-dialog.png)
 >
->Pour plus d’informations sur les violations de stratégie partielles, consultez la [documentation sur les violations de stratégie d’utilisation des données](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/enforcement/auto-enforcement#data-usage-violation) .
+>Pour plus d’informations sur les violations de stratégie partielles, consultez la [documentation sur les violations de stratégie d’utilisation des données](../enforcement/auto-enforcement.md#data-usage-violation) .
 
 Pour gérer les libellés d’utilisation des données au niveau du schéma, vous devez sélectionner un schéma existant ou en créer un nouveau. Après votre connexion à Adobe Experience Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche pour ouvrir l’espace de travail **[!UICONTROL Schémas]**. Cette page répertorie tous les schémas créés appartenant à votre organisation, ainsi que des détails utiles relatifs à chaque schéma.
 
