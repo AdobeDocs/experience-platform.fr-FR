@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Juillet 2024
 description: Les notes de mise à jour de juillet 2024 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8d25e396fc816546348268b8b4f2bb16175b4513
+source-git-commit: c38f6845a4819b648abacea2c36a576dac61f38f
 workflow-type: tm+mt
-source-wordcount: '1048'
-ht-degree: 26%
+source-wordcount: '1225'
+ht-degree: 27%
 
 ---
 
@@ -23,7 +23,9 @@ Mises à jour des fonctionnalités et de la documentation existantes dans Experi
 - [Collecte de données](#data-collection)
 - [Gouvernance des données](#data-governance)
 - [Destinations](#destinations)
+- [Segmentation Service](#segmentation)
 - [Sources](#sources)
+- [Balises unifiées](#unified-tags)
 
 ## Composition d’audiences fédérées {#federated-audience-composition}
 
@@ -105,6 +107,18 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 Pour plus d’informations, consultez la [présentation des destinations](../../destinations/home.md).
 
+## Segmentation Service {#segmentation}
+
+[!DNL Segmentation Service] permet de segmenter en audiences les données stockées dans [!DNL Experience Platform] qui se rapportent aux personnes (tels que les clientes et clients, les prospects, les utilisateurs et utilisatrices ou les organisations). Vous pouvez créer des audiences par le biais de définitions de segment ou d’autres sources à partir de vos données [!DNL Real-Time Customer Profile]. Ces audiences sont configurées et conservées de manière centralisée sur [!DNL Platform] et sont facilement accessibles à partir de n’importe quelle solution Adobe.
+
+**Nouvelle documentation**
+
+| Nouvelle documentation | Description |
+| ----------------- | ----------- | 
+| [Audience Portal](../../segmentation/ui/audience-portal.md) | Découvrez comment utiliser Audience Portal, qui vous permet d’afficher, de gérer et de créer des audiences dans Adobe Experience Platform dans un hub centralisé. |
+
+{style="table-layout:auto"}
+
 ## Sources
 
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
@@ -113,10 +127,25 @@ Utilisez les sources dans Experience Platform pour ingérer des données à par
 
 **Documentation mise à jour**
 
-| Documentation mise à jour | description |
+| Documentation mise à jour | Description |
 | --- | --- |
 | Guide d’authentification étendu pour [[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md) | Lisez le guide d&#39;authentification étendu pour [!DNL Snowflake] pour apprendre à récupérer votre [identifiant de compte](../../sources/connectors/databases/snowflake.md#retrieve-your-account-identifier) et votre [clé privée](../../sources/connectors/databases/snowflake.md#retrieve-your-private-key) pour l&#39;authentification. De plus, utilisez le guide d’authentification étendu pour savoir comment [vérifier les configurations de votre entrepôt et de vos rôles](../../sources/connectors/databases/snowflake.md#verify-configurations). |
 
 {style="table-layout:auto"}
 
 Pour plus d’informations, consultez la [présentation des sources](../../sources/home.md).
+
+## Balises unifiées
+
+Les balises unifiées vous permettent de classer et de gérer vos objets commerciaux dans Adobe Experience Platform. Avec l’API des balises unifiées, vous pouvez créer des dossiers et des balises pour mieux organiser les objets Platform tels que les audiences ou les jeux de données.
+
+**Nouvelle documentation**
+
+| Nouvelle documentation | Description |
+| ----------------- | ----------- |
+| [Guide de l’API des balises unifiées](../../administrative-tags/api/overview.md) | Lisez le guide de l’API des balises unifiées pour savoir comment créer des dossiers et des balises pour trier vos objets commerciaux. |
+| [Référence de l’API de balises unifiées](https://developer.adobe.com/experience-platform-apis/references/unified-tags/) | Utilisez la référence de l’API des balises unifiées pour tester de manière interactive les points de terminaison des balises unifiées. |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations, consultez la [présentation des balises unifiées](../../administrative-tags/overview.md).
