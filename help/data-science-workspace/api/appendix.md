@@ -5,14 +5,20 @@ title: Guide de l’API d’apprentissage automatique Sensei
 description: Les sections suivantes fournissent des informations de référence pour différentes fonctionnalités de l’API Sensei Machine Learning.
 role: Developer
 exl-id: 2c8d3ae8-7ad7-4ff6-8d6b-3a42d3eccdff
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '330'
-ht-degree: 66%
+source-wordcount: '353'
+ht-degree: 62%
 
 ---
 
 # [!DNL Sensei Machine Learning] annexe du guide de l’API
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Les sections suivantes fournissent des informations de référence pour différentes fonctionnalités de l’API [!DNL Sensei Machine Learning].
 

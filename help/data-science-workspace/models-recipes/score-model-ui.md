@@ -5,14 +5,20 @@ title: Notation d’un modèle dans l’interface utilisateur de Data Science Wo
 type: Tutorial
 description: La notation dans l’espace de travail de science des données d’Adobe Experience Platform peut être réalisée en alimentant un modèle formé existant avec des données d’entrée. Les résultats de la notation sont ensuite stockés et consultables dans un jeu de données de sortie spécifié sous la forme d’un nouveau lot.
 exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '647'
-ht-degree: 31%
+source-wordcount: '670'
+ht-degree: 30%
 
 ---
 
 # Notation d’un modèle dans l’interface utilisateur de Data Science Workspace
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 La notation dans Adobe Experience Platform [!DNL Data Science Workspace] peut être obtenue en alimentant les données d’entrée dans un modèle formé existant. Les résultats de la notation sont ensuite stockés et consultables dans un jeu de données de sortie spécifié sous la forme d’un nouveau lot.
 

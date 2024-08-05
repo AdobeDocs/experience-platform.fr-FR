@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Accès aux données dans les notebooks Jupyterlab
 description: Ce guide se concentre sur l’utilisation des notebooks Jupyter, conçus dans Data Science Workspace pour accéder à vos données.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '3320'
+source-wordcount: '3343'
 ht-degree: 22%
 
 ---
 
 # Accès aux données dans les notebooks [!DNL Jupyterlab]
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Chaque noyau pris en charge fournit des fonctionnalités intégrées qui vous permettent de lire les données de Platform à partir d’un jeu de données dans un notebook. Actuellement, JupyterLab dans Adobe Experience Platform Data Science Workspace prend en charge les notebooks pour [!DNL Python], R, PySpark et Scala. Toutefois, la prise en charge de la pagination des données est limitée aux notebooks [!DNL Python] et R. Ce guide se concentre sur l’utilisation des notebooks JupyterLab pour accéder à vos données.
 
@@ -104,8 +110,8 @@ Lors de la lecture de jeux de données avec des notebooks PySpark et Scala, vous
 | Nombre de lignes | 1 K | 10K | 100 000 | 1M | 2M | 3M | 5M | 10M | 50M | 100M | 500M | 1B |
 |--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
 | Taille du disque | 1,12 Mo | 11,24 Mo | 109,48 Mo | 2,69 Go | 2,14 Go | 3,21 Go | 5,36 Go | 10,71 Go | 53,58 Go | 107,52 Go | 535,88 Go | 1,05 To |
-| Mode interactif SDK (en secondes) | 35,7 s | 31 s | 19.5s | 25.3 | 23 s | 33.2s | 25.5s | - | - | - | - | - |
-| Mode batch du SDK (en secondes) | 448.8s | 459,7 s | 519s | 475.8s | 599.9s | 347.6s | 407.8s | 397 s | 518.8s | 487.9s | 760.2s | 975.4 s |
+| Mode interactif SDK (en secondes) | 35,7 s | 31 s | 19.5s | 25.3s | 23s | 33,2 s | 25.5s | - | - | - | - | - |
+| Mode de lot du SDK (en secondes) | 448.8s | 459,7 s | 519s | 475.8s | 599.9s | 347.6s | 407.8s | 397 s | 518.8s | 487.9s | 760.2s | 975.4 s |
 
 ## notebooks Python {#python-notebook}
 
@@ -220,7 +226,7 @@ Une liste d’opérateurs de filtrage est décrite ci-dessous :
 - `And()` : opérateur ET logique
 - `Or()` : opérateur OU logique
 
-La cellule suivante filtre un jeu de données [!DNL ExperienceEvent] sur les données qui existent exclusivement entre le 1er janvier 2019 et la fin du 31 décembre 2019.
+La cellule suivante filtre un [!DNL ExperienceEvent] ensemble de données sur des données existant exclusivement entre le 1er janvier 2019 et la fin du 31 décembre 2019.
 
 ```python
 # Python
@@ -234,9 +240,9 @@ df = dataset_reader.\
 ).read()
 ```
 
-## notebooks R {#r-notebooks}
+## Notebooks R {#r-notebooks}
 
-Les notebooks R vous permettent de paginer les données lors de l’accès aux jeux de données. Vous trouverez ci-dessous un exemple de code pour lire des données avec et sans pagination. Pour plus d’informations sur les notebooks de démarrage R disponibles, consultez la section [[!DNL JupyterLab] Launcher](./overview.md#launcher) dans le guide d’utilisation de JupyterLab.
+Les notebooks R vous permettent de paginer les données lors de l’accès aux jeux de données. L’exemple de code permettant de lire des données avec et sans pagination est illustré ci-dessous. Pour plus d’informations sur les notebooks de démarrage R disponibles, consultez la section [[!DNL JupyterLab] Launcher](./overview.md#launcher) dans le guide d’utilisation de JupyterLab.
 
 La documentation R ci-dessous décrit les concepts suivants :
 
@@ -372,12 +378,12 @@ Une commande magique [!DNL Data Science Workspace] personnalisée pour lire ou �
 | --- | --- | --- |
 | `{action}` | Type d’action à effectuer sur le jeu de données. Deux actions sont disponibles &quot;read&quot; ou &quot;write&quot;. | Oui |
 | `--datasetId {id}` | Utilisé pour fournir l’identifiant du jeu de données à lire ou à écrire. | Oui |
-| `--dataFrame {df}` | Le cadre de données pandas. <ul><li> Lorsque l’action est &quot;read&quot;, {df} est la variable où les résultats de l’opération de lecture du jeu de données sont disponibles (un cadre de données, par exemple). </li><li> Lorsque l’action est &quot;write&quot;, ce cadre de données {df} est écrit dans le jeu de données. </li></ul> | Oui |
-| `--mode` | Paramètre supplémentaire qui modifie la manière dont les données sont lues. Les paramètres autorisés sont &quot;batch&quot; et &quot;interactive&quot;. Par défaut, le mode est défini sur &quot;batch&quot;.<br> Il est recommandé d’utiliser le mode &quot;interactif&quot; pour améliorer les performances des requêtes sur les jeux de données plus petits. | Oui |
+| `--dataFrame {df}` | Le dataframe des pandas. <ul><li> Lorsque l’action est « lue », {df} est la variable où les résultats de l’opération de lecture de jeu de données sont disponibles (comme un dataframe). </li><li> Lorsque l’action est « write », cette trame {df} de données est écrite dans le jeu de données. </li></ul> | Oui |
+| `--mode` | Un paramètre supplémentaire qui modifie la façon dont les données sont lues. Les paramètres autorisés sont « batch » et « interactif ». Par défaut, le mode est réglé sur « batch ».<br> Il est recommandé d’utiliser le mode « interactif » pour améliorer les performances des requêtes sur des jeux de données plus petits. | Oui |
 
 >[!TIP]
 >
->Consultez les tables PySpark dans la section [Limites de données de notebook](#notebook-data-limits) pour déterminer si `mode` doit être défini sur `interactive` ou `batch`.
+>Consultez les tables PySpark dans la [section des limites](#notebook-data-limits) de données du bloc-notes pour déterminer si `mode` vous devez définir sur `interactive` ou `batch`.
 
 **Exemples**
 
@@ -526,22 +532,22 @@ df1.show(10)
 >
 >Passez en revue les tables Scala dans la section [Limites de données de notebook](#notebook-data-limits) pour déterminer si `mode` doit être défini sur `interactive` ou `batch`.
 
-Vous pouvez générer automatiquement l’exemple ci-dessus dans JupyterLab en achetant à l’aide de la méthode suivante :
+Vous pouvez générer automatiquement l’exemple ci-dessus dans JupyterLab acheter en utilisant la méthode suivante :
 
-Sélectionnez l’onglet Icône de données (en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les **[!UICONTROL jeux de données]** et les répertoires de **[!UICONTROL schémas]** s’affichent. Sélectionnez **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Exploration des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable s’affiche au bas de votre notebook.
+Sélectionnez l’onglet Icône Données (mis en surbrillance ci-dessous) dans le volet de navigation de gauche de JupyterLab. Les **[!UICONTROL jeux de données]** et les répertoires de **[!UICONTROL schémas]** s’affichent. Sélectionnez **[!UICONTROL Jeux de données]** puis cliquez avec le bouton droit de la souris. Sélectionnez ensuite l’option **[!UICONTROL Exploration des données dans Notebook]** dans le menu déroulant du jeu de données que vous souhaitez utiliser. Une entrée de code exécutable apparaît au bas de votre bloc-notes.
 Et
 - Utilisez **[!UICONTROL Explorer les données dans Notebook]** pour générer une cellule de lecture.
-- Utilisez **[!UICONTROL Write Data in Notebook]** pour générer une cellule d’écriture.
+- Utilisez **[!UICONTROL l’option Écrire les données dans le Notebook]** pour générer une cellule d’écriture.
 
 ![](../images/jupyterlab/data-access/scala-write-dataset.png)
 
-### Écriture dans un jeu de données {#scala-write-dataset}
+### Écrire dans un jeu de données {#scala-write-dataset}
 
-Dans Scala, vous pouvez importer `clientContext` pour obtenir et renvoyer des valeurs Platform, ce qui élimine la nécessité de définir des variables telles que `var userToken`. Dans l’exemple Scala ci-dessous, `clientContext` est utilisé pour définir et renvoyer toutes les valeurs requises pour écrire dans un jeu de données.
+Dans Scala, vous pouvez importer `clientContext` pour obtenir et renvoyer Platform valeurs, ce qui élimine le besoin de définir des variables telles que `var userToken`. Dans l’exemple Scala ci-dessous, `clientContext` est utilisé pour définir et renvoyer toutes les valeurs requises pour l’écriture dans un jeu de données.
 
 >[!IMPORTANT]
 >
-> La mise en cache de données à l’aide de `df.cache()` avant l’écriture de données peut améliorer considérablement les performances des notebooks. Cela peut vous aider si vous recevez l’une des erreurs suivantes :
+> La mise en cache des données avant l’écriture `df.cache()` des données peut grandement améliorer les performances de l’ordinateur portable. Cela peut être utile si vous recevez l’une des erreurs suivantes :
 > 
 > - Tâche abandonnée en raison d’un échec de test ... Peut uniquement compresser les RDD avec le même nombre d’éléments dans chaque partition.
 > - Client RPC distant dissocié et autres erreurs de mémoire.

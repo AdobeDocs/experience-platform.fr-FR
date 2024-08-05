@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Création de modèles à l’aide du SDK Adobe Experience Platform Platform
 description: Ce tutoriel vous fournit des informations sur la conversion de data_access_sdk_python en nouveau Python platform_sdk en Python et en R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 60%
+source-wordcount: '509'
+ht-degree: 57%
 
 ---
 
 # Création de modèles à l’aide du SDK Adobe Experience Platform [!DNL Platform]
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Ce tutoriel vous fournit des informations sur la conversion de `data_access_sdk_python` en nouveau `platform_sdk` Python en Python et en R. Ce tutoriel fournit des informations sur les opérations suivantes :
 

@@ -5,14 +5,20 @@ title: Point d’entrée de l’API MLInstances
 description: Une instance MLInstance correspond à l’association d’un moteur existant avec un ensemble approprié de configurations qui définit tous les paramètres de formation, paramètres de notation ou configurations de ressources matérielles.
 role: Developer
 exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '619'
-ht-degree: 87%
+source-wordcount: '642'
+ht-degree: 84%
 
 ---
 
 # Point d’entrée MLInstances
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Une instance MLInstance correspond à l’association d’un [moteur](./engines.md) existant avec un ensemble approprié de configurations qui définit les paramètres de formation, les paramètres de notation ou les configurations de ressources matérielles.
 

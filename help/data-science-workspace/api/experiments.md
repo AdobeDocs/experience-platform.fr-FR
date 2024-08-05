@@ -5,14 +5,20 @@ title: Point de terminaison de l’API d’expériences
 description: Le développement et la formation de modèle se déroulent au niveau de l’expérience qui se compose d’une instance MLInstance ainsi que d’exécutions de formation et de notation.
 role: Developer
 exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '783'
-ht-degree: 89%
+source-wordcount: '806'
+ht-degree: 86%
 
 ---
 
 # Point d’entrée des expériences
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Le développement et la formation de modèle se déroulent au niveau de l’expérience qui se compose d’une instance MLInstance ainsi que d’exécutions de formation et de notation.
 

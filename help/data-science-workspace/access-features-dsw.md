@@ -4,21 +4,27 @@ solution: Experience Platform
 title: Accès et fonctionnalités de Data Science Workspace
 description: Le document suivant décrit les autorisations de Data Science Workspace et l’accès aux fonctionnalités.
 exl-id: 6759fea4-adb9-4e4e-9f3d-e0e8c885b1dd
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '715'
 ht-degree: 15%
 
 ---
 
 # Accès à l’espace de travail de science des données et fonctionnalités associées
 
-Le document suivant décrit les autorisations de Data Science Workspace et l’accès aux fonctionnalités.
+>[!NOTE]
+>
+>Le Workspace Data Science n’est plus disponible à l’achat.
+>
+>Cette documentation est destinée aux clients existants disposant de droits préalables à la Workspace Data Science.
+
+Le document suivant décrit les autorisations et l’accès aux fonctionnalités de l’Workspace Data Science.
 
 ![Onglets DSW](./images/access/platform-tabs.png)
 
-- **Notebooks :** Fournit un environnement de développement interactif ([JupyterLab](./jupyterlab/overview.md)) pour explorer, analyser et modéliser vos données sur Experience Platform.
-- **Modèles :** fournit des outils utilisés pour créer, publier et stocker des recettes et des modèles d’apprentissage automatique avancés. Pour plus d’informations, consultez le tutoriel [Création et publication d’un modèle d’apprentissage automatique](./models-recipes/create-publish-model.md) .
+- **Notebooks :** fournit un environnement de développement interactif ([JupyterLab](./jupyterlab/overview.md)) pour explorer, analyser et modéliser vos données sur Experience Platform.
+- **Modèles :** fournit des outils utilisés pour créer, publier et stocker des recettes et des modèles d’apprentissage automatique avancés. Pour plus d’informations, consultez le didacticiel [Créer et publier un modèle](./models-recipes/create-publish-model.md) Machine Learning.
 - **Services :** contient à la fois des services fournis par l’Adobe tels que des [services AI/ML](../intelligent-services/home.md) et tous les services personnalisés que vous avez créés avec Data Science Workspace.
 
 Pourquoi est-ce que je ne vois que l’onglet Services ?
@@ -27,26 +33,26 @@ Pourquoi est-ce que je ne vois que l’onglet Services ?
 
 Si vous ne parvenez pas à voir l’un des onglets **Data Science** et souhaitez utiliser les fonctionnalités de Data Science Workspace, contactez votre administrateur de société pour vérifier si vous disposez d’une licence Adobe Experience Platform Intelligence.
 
-## Package Workspace Data Science
+## Packaging du Workspace de la science des données
 
-Les fonctionnalités de Data Science Workspace sont disponibles dans le package Adobe Experience Platform Intelligence et le module complémentaire Advanced Intelligence Pack
+Les fonctionnalités de Workspace de la science des données sont disponibles dans le package Adobe Experience Platform Intelligence et le module complémentaire Advanced Intelligence Pack
 
-Le tableau suivant présente certaines des différences clés entre les droits Data Science Workspace avec et sans le module complémentaire Advanced Intelligence Pack :
+Le tableau suivant présente certaines des principales différences entre les droits de Workspace Data Science avec et sans le module complémentaire Advanced Intelligence Pack :
 
 >[!NOTE]
 >
->Vous pouvez acquérir sous licence plusieurs modules d’intelligence avancée et la capacité accrue est ajoutée à vos droits globaux. Par exemple, si vous possédez 2 modules complémentaires Adobe Experience Platform Advanced Intelligence Pack sous licence, vous avez droit à un total de 20 utilisateurs simultanés de notebooks.
+>Vous pouvez obtenir plus d’un module complémentaire Advanced Intelligence Pack et la capacité accrue est ajoutée à votre droit global. Par exemple, si vous avez obtenu une licence 2 modules complémentaires Advanced Intelligence Pack Adobe Experience Platform, vous avez droit à un total de 20 utilisateurs simultanés de blocs-notes.
 
-| Droit relatif à Data Science Workspace | Adobe Experience Platform Intelligence Package uniquement | Module complémentaire Adobe Experience Platform Intelligence plus Advanced Intelligence Pack |
+| Droit au Workspace science des données | Adobe Experience Platform Intelligence Package uniquement | Module complémentaire Adobe Experience Platform Intelligence plus Advanced Intelligence Pack |
 | --- | :---: | :---: |
 | Nombre d’utilisateurs de notebook pris en charge. | 5 utilisateurs simultanés | Le premier pack ajoute 5 utilisateurs simultanés et 10 utilisateurs simultanés par package pour les achats supplémentaires. |
-| Permet l’intégration de notebooks Jupyter pour l’analyse exploratoire des données et la création de modèles. | X (prend en charge les bibliothèques R, Python et Scala) | X (ajoute des bibliothèques PySpark et Spark ML) |
-| Intégration native à Query Service. Possibilité d’explorer et de former des jeux de données à l’aide de SQL dans les notebooks. | X | X |
+| Permet l’intégration de notebooks Jupyter pour l’analyse exploratoire des données et la création de modèles. | X (prend en charge les bibliothèques R, Python et Scala) | X (ajoute les bibliothèques PySpark et Spark ML) |
+| Intégration native avec Query Service. Possibilité d’explorer et de façonner des ensembles de données à l’aide de SQL dans des blocs-notes. | X | X |
 | Accès aux modèles de notebook prédéfinis pour les analyses prédictives. | X | X |
 | Entraînez et notez manuellement les modèles avec les notebooks Jupyter. | X | X |
-| Déployer et mettre en oeuvre des modèles avec la possibilité de planifier des tâches de formation et d’inférencement. | | X |
-| Structure de recette pour configurer, évaluer, former, noter et publier facilement des modèles en production. |  | X |
-| Expérience et évaluation de modèles pilotés par l’interface utilisateur. | | X |
+| Déployez et opérationnalisez des modèles avec la possibilité de planifier des tâches de formation et d’inférence. | | X |
+| Cadre de recette pour configurer, évaluer, entraîner, noter et publier facilement des modèles en production. |  | X |
+| Expérimentation et évaluation de modèles basés sur l’interface utilisateur. | | X |
 | Prise en charge de l’apprentissage profond pour les modèles Tensorflow (GPU Compute). | | X |
 | Calcul distribué basé sur Spark pour entraîner et noter des jeux de données volumineux (10 MM + lignes). | | X |
 
@@ -58,7 +64,7 @@ Pour utiliser Data Science Workspace, l’autorisation &quot;Gérer Data Science
 
 | Autorisation | Activé | Désactivé |
 |---|---|---|
-| Gestion de l’espace de travail de science des données | Permet d’accéder à tous les services de l’espace de travail de science des données. | L’accès aux API et à l’interface utilisateur de tous les services de Data Science Workspace est désactivé. Lorsque cette option est désactivée, la sélection des pages **Notebooks**, **Models** et **Services** est bloquée. <li>L’accès à **Services** peut toujours être disponible via Adobe Real-Time Customer Data Platform (Real-Time CDP).</li> |
+| Gestion de l’espace de travail de science des données | Permet d’accéder à tous les services de l’espace de travail de science des données. | L’accès via l’API et l’interface utilisateur à tous les services dans Data Science Workspace est désactivé. Lorsque cette option est désactivée, la sélection des **pages Blocs-notes**, **Modèles** et **Services** est empêchée. <li>L’accès à **Services** peut toujours être disponible via Adobe Real-Time Customer Data Platform (Real-Time CDP).</li> |
 
 ## Prise en charge des sandbox
 
@@ -70,6 +76,6 @@ Actuellement, Data Science Workspace présente la limitation d’environnement d
 
 ## Étapes suivantes
 
-Ce document décrit les différents types d’accès et de fonctionnalités disponibles dans Data Science Workspace.
+Ce document décrit les différents types d’accès et les fonctionnalités disponibles dans Data Science Workspace.
 
-Pour en savoir plus sur Data Science Workspace, par exemple sur un workflow quotidien complet, commencez par lire la [présentation de Data Science Workspace](./walkthrough.md) . Pour plus d’informations, consultez la [présentation de Data Science Workspace](./home.md).
+Pour en savoir plus sur les Workspace de la science des données, telles qu’un flux de travail quotidien complet, commencez par lire la documentation pas à pas du Workspace](./walkthrough.md) de la [science des données. Pour plus d’informations générales, consultez la page d’aperçu](./home.md) de la Workspace de la [science des données.

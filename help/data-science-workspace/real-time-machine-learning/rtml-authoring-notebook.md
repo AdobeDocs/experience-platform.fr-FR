@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Gérer les notebooks de machine learning en temps réel
 description: Le guide suivant décrit les étapes nécessaires à la création d’une application de machine learning en temps réel dans Adobe Experience Platform JupyterLab.
 exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '1663'
-ht-degree: 100%
+source-wordcount: '1686'
+ht-degree: 98%
 
 ---
 
 # Gérer les notebooks de machine learning en temps réel (Alpha)
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 >[!IMPORTANT]
 >

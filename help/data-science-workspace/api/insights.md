@@ -5,14 +5,20 @@ title: Point de terminaison de l’API Insights
 description: Les informations contiennent des mesures qui permettent à un scientifique de données d’évaluer et de choisir des modèles ML optimaux en affichant les mesures d’évaluation appropriées.
 role: Developer
 exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '514'
-ht-degree: 96%
+source-wordcount: '537'
+ht-degree: 91%
 
 ---
 
 # Point d’entrée Insights
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Les informations contiennent des mesures qui permettent à un scientifique de données d’évaluer et de choisir des modèles ML optimaux en affichant les mesures d’évaluation appropriées.
 

@@ -5,14 +5,20 @@ title: Importation d’une recette empaquetée dans l’interface utilisateur de
 type: Tutorial
 description: Ce tutoriel explique comment configurer et importer une recette empaquetée à l’aide de l’exemple de ventes au détail fourni. Après avoir terminé ce tutoriel, vous serez prêt à créer, à former et à évaluer un modèle dans l’espace de travail de science des données d’Adobe Experience Platform.
 exl-id: 2556e1f0-3f9c-4884-a699-06c041d5c4d1
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1832'
+source-wordcount: '1855'
 ht-degree: 32%
 
 ---
 
 # Importation d’une recette empaquetée dans l’interface utilisateur de Data Science Workspace
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Ce tutoriel explique comment configurer et importer une recette empaquetée à l’aide de l’exemple de ventes au détail fourni. D’ici la fin de ce tutoriel, vous serez prêt à créer, former et évaluer un modèle dans Adobe Experience Platform [!DNL Data Science Workspace].
 

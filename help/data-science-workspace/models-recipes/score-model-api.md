@@ -5,14 +5,20 @@ title: Notation d’un modèle à l’aide de l’API d’apprentissage automati
 type: Tutorial
 description: Ce tutoriel vous explique comment tirer parti des API d’apprentissage automatique de Sensei pour créer une expérience et une exécution d’expérience.
 exl-id: 202c63b0-86d8-4a82-8ec8-d144a8911d08
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '547'
-ht-degree: 77%
+source-wordcount: '570'
+ht-degree: 74%
 
 ---
 
 # Notation d’un modèle à l’aide de [!DNL Sensei Machine Learning API]
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Ce tutoriel explique comment utiliser les API pour créer une expérience et une exécution d’expérience. Pour obtenir la liste de tous les points de terminaison de l’API Sensei Machine Learning, reportez-vous à [ce document](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/).
 

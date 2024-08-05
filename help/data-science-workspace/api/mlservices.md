@@ -5,14 +5,20 @@ title: Point d’entrée de l’API MLServices
 description: Un MLService est un modèle formé publié qui permet à votre organisation d’accéder aux modèles précédemment développés et de les réutiliser. L’une des principales caractéristiques de MLServices est sa capacité d’automatiser la formation et la notation selon un calendrier précis. Les exécutions de formation planifiées peuvent contribuer à préserver l’efficacité et la précision d’un modèle, tandis que les exécutions de notation planifiées peuvent garantir que de nouvelles informations sont générées de manière cohérente.
 role: Developer
 exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '887'
-ht-degree: 94%
+source-wordcount: '910'
+ht-degree: 92%
 
 ---
 
 # Point d’entrée MLServices
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Un MLService est un modèle formé publié qui permet à votre organisation d’accéder aux modèles précédemment développés et de les réutiliser. L’une des principales caractéristiques de MLServices est sa capacité d’automatiser la formation et la notation selon un calendrier précis. Les exécutions de formation planifiées peuvent contribuer à préserver l’efficacité et la précision d’un modèle, tandis que les exécutions de notation planifiées peuvent garantir que de nouvelles informations sont générées de manière cohérente.
 

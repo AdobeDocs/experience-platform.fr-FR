@@ -5,14 +5,20 @@ title: Notebook d’analyse exploratoire des données (AED)
 type: Tutorial
 description: Ce guide porte sur l’utilisation du notebook d’analyse exploratoire des données (AED) pour découvrir des modèles dans les données web, agréger les événements avec un objectif de prédiction, nettoyer les données agrégées et comprendre la relation entre les prédicteurs et un objectif.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '2766'
-ht-degree: 100%
+source-wordcount: '2789'
+ht-degree: 99%
 
 ---
 
 # Exploration des données web pour les modèles prédictifs à l’aide du notebook d’analyse exploratoire des données (AED)
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Le notebook d’analyse exploratoire des données (AED) est conçu pour vous aider à découvrir des modèles au sein des données, à vérifier l’intégrité de ces dernières et à faire la synthèse des données pertinentes pour les modèles prédictifs.
 

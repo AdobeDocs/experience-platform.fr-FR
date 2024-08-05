@@ -5,14 +5,20 @@ title: Accès aux données à l’aide de Spark dans Data Science Workspace
 type: Tutorial
 description: Le document suivant contient des exemples d’accès aux données à l’aide de Spark pour une utilisation dans Data Science Workspace.
 exl-id: 9bffb52d-1c16-4899-b455-ce570d76d3b4
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
 
 # Accès aux données à l’aide de Spark dans Data Science Workspace
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Le document suivant contient des exemples d’accès aux données à l’aide de Spark pour une utilisation dans Data Science Workspace. Pour plus d’informations sur l’accès aux données à l’aide des notebooks JupyterLab, consultez la documentation [ sur l’accès aux données des notebooks JupyterLab](../jupyterlab/access-notebook-data.md).
 

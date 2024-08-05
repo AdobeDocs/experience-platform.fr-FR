@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Guide de dépannage de l’espace de travail de science des données
 description: Ce document fournit des réponses aux questions fréquentes sur l’espace de travail de science des données d’Adobe Experience Platform.
 exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1474'
-ht-degree: 100%
+source-wordcount: '1497'
+ht-degree: 98%
 
 ---
 
 # Guide de dépannage de [!DNL Data Science Workspace]
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Ce document répond aux questions les plus fréquentes sur [!DNL Data Science Workspace] d’Adobe Experience Platform. Pour toute question ou tout dépannage concernant les API [!DNL Platform] en général, reportez-vous au [guide de dépannage des API Adobe Experience Platform](../landing/troubleshooting.md).
 

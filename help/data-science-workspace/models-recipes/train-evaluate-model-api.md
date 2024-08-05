@@ -5,15 +5,20 @@ title: Formation et évaluation d’un modèle à l’aide de l’API d’appren
 type: Tutorial
 description: Ce tutoriel vous explique comment créer, former et évaluer un modèle à l’aide d’appels d’API d’apprentissage automatique Sensei.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 81%
+source-wordcount: '1240'
+ht-degree: 79%
 
 ---
 
 # Formation et évaluation d’un modèle à l’aide de l’API [!DNL Sensei Machine Learning]
 
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Ce tutoriel vous explique comment créer, former et évaluer un modèle à l’aide d’appels API. Reportez-vous à [ce document](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) pour obtenir une liste détaillée de la documentation sur les API.
 

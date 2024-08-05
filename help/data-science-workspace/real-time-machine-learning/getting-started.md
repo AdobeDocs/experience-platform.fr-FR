@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Prise en main du machine learning en temps réel
 description: Le document suivant décrit les étapes requises pour créer un modèle de machine learning en temps réel dans Adobe Experience Platform.
 exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '438'
-ht-degree: 94%
+source-wordcount: '461'
+ht-degree: 89%
 
 ---
 
 # Prise en main du machine learning en temps réel (Alpha)
+
+>[!NOTE]
+>
+>Le Workspace Data Science n’est plus disponible à l’achat.
+>
+>Cette documentation est destinée aux clients existants disposant de droits préalables à la Workspace Data Science.
 
 >[!IMPORTANT]
 >
@@ -25,7 +31,7 @@ Les guides sur le machine learning en temps réel nécessitent une compréhensio
 
 - **DSL :** langue spécifique au domaine.
 - **Edge :** le service de notation du machine learning en temps réel peut être exécuté sur des grappes Edge plus proches de vos activations et applications.
-- **Hub :** L’alpha actuel exécute le service de notation de l’apprentissage automatique en temps réel sur Adobe Experience Platform Hub pendant que l’Edge Network est en cours de développement.
+- **Hub :** l’alpha actuel exécute le service de notation de l’apprentissage automatique en temps réel sur le hub Adobe Experience Platform pendant le développement du réseau Edge.
 - **Nœud :** un nœud est l’unité fondamentale à partir de laquelle des graphiques sont formés. Chaque nœud effectue une tâche spécifique et ces nœuds peuvent être liés ensemble à l’aide de liens afin de former un graphique représentant un pipeline ML. La tâche effectuée par un nœud représente une opération sur les données d’entrée, telle qu’une transformation des données ou un schéma, ou une inférence de machine learning. Le nœud sort la valeur transformée ou déduite pour le ou les nœuds suivants.
 
 ## Jeux de données dans Adobe Experience Platform

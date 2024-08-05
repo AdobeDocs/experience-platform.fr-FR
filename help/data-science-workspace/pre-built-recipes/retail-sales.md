@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Recette Ventes Au Détail
 description: La recette Ventes au détail vous fournit des prévisions de ventes pour tous les magasins contrôlés pour une période donnée. Avec un modèle de prévision précis, le détaillant serait en mesure d’identifier la relation entre les politiques de demande et de prix, mais aussi de prendre des décisions optimisées concernant le prix afin de maximiser les ventes et le chiffre d’affaires.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '580'
-ht-degree: 92%
+source-wordcount: '603'
+ht-degree: 88%
 
 ---
 
 # Recette Ventes au détail
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 La recette Ventes au détail vous fournit des prévisions de ventes pour tous les magasins contrôlés pour une période donnée. Avec un modèle de prévision précis, le détaillant serait en mesure d’identifier la relation entre les politiques de demande et de prix, mais aussi de prendre des décisions optimisées concernant le prix afin de maximiser les ventes et le chiffre d’affaires.
 

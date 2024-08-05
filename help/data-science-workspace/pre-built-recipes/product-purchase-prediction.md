@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Recette de prédiction d’achat de produit
 description: La recette de prédiction d’achat de produit vous permet de prévoir la probabilité d’un certain type d’événement d’achat de client, un achat de produit, par exemple.
 exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 94%
+source-wordcount: '415'
+ht-degree: 89%
 
 ---
 
 # Recette de prédiction d’achat de produit
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 La recette de prédiction d’achat de produit vous permet de prévoir la probabilité d’un certain type d’événement d’achat de client, un achat de produit, par exemple.
 

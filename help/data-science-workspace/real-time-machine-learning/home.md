@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Vue d’ensemble du machine learning en temps réel
 description: Le machine learning en temps réel peut considérablement améliorer la pertinence de votre contenu d’expérience digitale pour vos utilisateurs finaux. Pour ce faire, vous pouvez tirer parti des référencements en temps réel et de l’apprentissage continu sur l’Edge Network Experience Platform.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '553'
-ht-degree: 93%
+source-wordcount: '576'
+ht-degree: 89%
 
 ---
 
 # Vue d’ensemble du machine learning en temps réel (version alpha)
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 >[!IMPORTANT]
 >

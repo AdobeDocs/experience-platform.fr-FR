@@ -5,14 +5,20 @@ title: Point de terminaison de l’API Modèles
 description: Un modèle est une instance d’une recette de machine learning entraînée à l’aide de données historiques et de configurations dans le but de résoudre un cas d’usage commercial.
 role: Developer
 exl-id: e66119a9-9552-497c-9b3a-b64eb3b51fcf
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 62%
+source-wordcount: '887'
+ht-degree: 61%
 
 ---
 
 # Point de terminaison des modèles
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Un modèle est une instance d’une recette de machine learning entraînée à l’aide de données historiques et de configurations dans le but de résoudre un cas d’usage commercial.
 

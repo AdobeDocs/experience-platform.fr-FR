@@ -5,14 +5,20 @@ title: Regroupez les fichiers Source dans une recette
 type: Tutorial
 description: Ce tutoriel explique comment regrouper les fichiers sources fournis d’exemples de ventes au détail dans un fichier d’archives, pouvant être utilisé pour créer une recette dans l’espace de travail de science des données d’Adobe Experience Platform en suivant le processus d’importation des recettes dans l’interface utilisateur ou à l’aide de l’API.
 exl-id: 199b8127-4f1b-43a4-82e6-58cb70fcdc08
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1143'
-ht-degree: 44%
+source-wordcount: '1166'
+ht-degree: 43%
 
 ---
 
 # Regroupement des fichiers sources dans une recette
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Ce tutoriel explique comment regrouper les fichiers source d’exemples de ventes au détail fournis dans un fichier d’archive, qui peut être utilisé pour créer une recette dans Adobe Experience Platform [!DNL Data Science Workspace] en suivant le workflow d’importation de recette dans l’interface utilisateur ou à l’aide de l’API.
 

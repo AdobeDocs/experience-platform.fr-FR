@@ -5,14 +5,20 @@ title: Aperçu du schéma et du jeu de données de ventes au détail
 type: Tutorial
 description: Le document suivant décrit la prévisualisation des schémas et des jeux de données sur Adobe Experience Platform.
 exl-id: dca9835b-4f76-42cc-b262-b20323bf4356
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 22%
+source-wordcount: '259'
+ht-degree: 20%
 
 ---
 
 # Aperçu du schéma et du jeu de données des ventes au détail
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Une fois le script de bootstrap du tutoriel [schéma et jeu de données de ventes au détail](./create-retails-sales-dataset.md) terminé avec succès. Les schémas de sortie et les jeux de données peuvent être affichés sur [!DNL Experience Platform]. Pour afficher les schémas et les jeux de données, suivez les étapes ci-dessous :
 

@@ -5,14 +5,20 @@ title: Création de jeux de données et de schémas web Luma
 type: Tutorial
 description: Ce tutoriel vous fournit les prérequis et les ressources requis pour le modèle de propension aux démonstrations Luma.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
 
 # Création de schémas et de jeux de données de modèle de propension Luma
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Ce tutoriel vous fournit les prérequis et les ressources requis pour tous les autres tutoriels [!DNL Adobe Experience Platform] [!DNL Data Science Workspace]. Une fois l’opération terminée, vous et votre organisation aurez accès aux schémas et jeux de données suivants.
 

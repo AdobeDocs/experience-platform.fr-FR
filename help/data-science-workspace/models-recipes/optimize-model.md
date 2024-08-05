@@ -5,14 +5,20 @@ title: Optimisation d’un modèle à l’aide de Model Insights Framework
 type: Tutorial
 description: Model Insights Framework fournit aux analystes de données des outils dans Data Science Workspace pour faire des choix rapides et éclairés pour des modèles d’apprentissage automatique optimaux basés sur des expériences.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1187'
-ht-degree: 81%
+source-wordcount: '1210'
+ht-degree: 80%
 
 ---
 
 # Optimisation d’un modèle à l’aide de la structure Model Insights
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Model Insights Framework fournit aux analystes de données des outils dans [!DNL Data Science Workspace] pour faire des choix rapides et éclairés pour des modèles d’apprentissage automatique optimaux basés sur des expériences. Le framework améliorera la vitesse et l’efficacité du processus de machine learning et la facilité d’utilisation pour les analystes de données. Pour ce faire, un modèle par défaut est fourni pour chaque type d’algorithme de machine learning afin de faciliter le réglage des modèles. Le résultat final permet aux analystes de données et aux analystes de données citoyens de prendre de meilleures décisions d’optimisation des modèles pour leurs clients finaux.
 

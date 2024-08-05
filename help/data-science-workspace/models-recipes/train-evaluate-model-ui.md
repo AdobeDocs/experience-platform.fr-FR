@@ -5,14 +5,20 @@ title: Formation et évaluation d’un modèle dans l’interface utilisateur de
 type: Tutorial
 description: Dans l’espace de travail de science des données d’Adobe Experience Platform, un modèle de machine learning est créé en incorporant une recette existante adéquate au but du modèle. Le modèle est ensuite formé et évalué afin d’optimiser son efficience et son efficacité opérationnelles en affinant ses hyperparamètres associés. Les recettes sont réutilisables, ce qui signifie que plusieurs modèles peuvent être créés et adaptés à des fins spécifiques à l’aide d’une seule recette.
 exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '1084'
-ht-degree: 55%
+source-wordcount: '1107'
+ht-degree: 53%
 
 ---
 
 # Formation et évaluation d’un modèle dans l’interface utilisateur de Data Science Workspace
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Dans l’espace de travail de science des données d’Adobe Experience Platform, un modèle de machine learning est créé en incorporant une recette existante adéquate au but du modèle. Le modèle est ensuite formé et évalué afin d’optimiser son efficience et son efficacité opérationnelles en affinant ses hyperparamètres associés. Les recettes sont réutilisables, ce qui signifie que plusieurs modèles peuvent être créés et adaptés à des fins spécifiques à l’aide d’une seule recette.
 

@@ -4,14 +4,20 @@ solution: Experience Platform
 title: Recette des recommandations de produits
 description: La recette des recommandations de produits vous permet d’apporter à vos clients des recommandations de produits personnalisées et adaptées à leurs besoins et à leurs intérêts. Grâce à une modélisation prédictive précise, l’historique des achats d’un client peut vous fournir des informations sur les produits susceptibles de l’intéresser.
 exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
 workflow-type: tm+mt
-source-wordcount: '466'
-ht-degree: 90%
+source-wordcount: '489'
+ht-degree: 86%
 
 ---
 
 # Recette des recommandations de produits
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 La recette des recommandations de produits vous permet d’apporter à vos clients des recommandations de produits personnalisées et adaptées à leurs besoins et à leurs intérêts. Grâce à une modélisation prédictive précise, l’historique des achats d’un client peut vous fournir des informations sur les produits susceptibles de l’intéresser.
 

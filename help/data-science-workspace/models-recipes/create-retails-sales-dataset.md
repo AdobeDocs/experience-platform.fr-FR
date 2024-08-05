@@ -5,15 +5,21 @@ title: Création d’un schéma et d’un jeu de données de vente au détail
 type: Tutorial
 description: Ce tutoriel vous présente les prérequis et les ressources nécessaires à tous les autres tutoriels sur l’espace de travail de science des données d’Adobe Experience Platform. Une fois l’opération terminée, les jeux de données et le schéma de vente au détail seront disponibles pour vous et les membres de votre organisation sur Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 43%
+source-wordcount: '557'
+ht-degree: 41%
 
 ---
 
 
 # Création de jeux de données et de schéma de vente au détail
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Ce tutoriel vous fournit les prérequis et les ressources requis pour tous les autres tutoriels [!DNL Adobe Experience Platform] [!DNL Data Science Workspace]. Une fois l’opération terminée, les jeux de données et le schéma de vente au détail seront disponibles pour vous et les membres de votre organisation sur [!DNL Experience Platform].
 

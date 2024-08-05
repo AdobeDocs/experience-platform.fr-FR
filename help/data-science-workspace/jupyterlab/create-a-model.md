@@ -5,14 +5,20 @@ title: Création d’un modèle à l’aide de notebooks JupyterLab
 type: Tutorial
 description: Ce tutoriel vous guide tout au long des étapes requises pour créer une recette à l’aide du modèle de créateur de recettes des notebooks JupyterLab.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: 86e6924078c115fb032ce39cd678f1d9c622e297
+source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '2106'
 ht-degree: 29%
 
 ---
 
 # Création d’un modèle à l’aide de notebooks JupyterLab
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté.
+>
+>Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 Ce tutoriel vous guide tout au long des étapes requises pour créer un modèle à l’aide du modèle de créateur de recettes de notebooks JupyterLab.
 
