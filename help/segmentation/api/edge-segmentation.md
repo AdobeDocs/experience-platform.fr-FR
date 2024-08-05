@@ -4,7 +4,7 @@ title: Effectuer une segmentation Edge à l’aide de l’API
 description: Ce document contient des exemples d’utilisation de la segmentation Edge avec l’API Segmentation Service Adobe Experience Platform.
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
+source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 89%
@@ -101,7 +101,6 @@ Une réponse réussie renvoie un tableau de segments de votre entreprise activé
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 30,
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
@@ -135,7 +134,6 @@ Une réponse réussie renvoie un tableau de segments de votre entreprise activé
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 30,
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
@@ -206,7 +204,6 @@ curl -X POST \
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 30,
     "name": "Homepage_continuous",
     "description": "People who are on their homepage - continuous",
     "expression": {
@@ -238,7 +235,6 @@ Une réponse réussie renvoie les détails de la définition de segment nouvelle
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 30,
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "{SANDBOX_ID}",

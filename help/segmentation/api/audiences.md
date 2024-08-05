@@ -3,9 +3,9 @@ title: Point de terminaison de l’API Audiences
 description: Utilisez le point de terminaison audiences dans l’API Adobe Experience Platform Segmentation Service pour créer, gérer et mettre à jour par programmation les audiences de votre entreprise.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 87b491339469e69653cad79b657bd1edfbca1de9
+source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
 workflow-type: tm+mt
-source-wordcount: '1879'
+source-wordcount: '1869'
 ht-degree: 5%
 
 ---
@@ -73,7 +73,6 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste des audiences cr�
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 60,
             "profileInstanceId": "ups",
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
@@ -236,8 +235,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
         },
         "labels": [
           "core/C1"
-        ],
-        "ttlInDays": 60
+        ]
     }'
 ```
 
@@ -249,7 +247,6 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 | `expression` | Expression Profile Query Language (PQL) de l’audience. Vous trouverez plus d’informations sur les expressions PQL dans le [guide des expressions PQL](../pql/overview.md). |
 | `schema` | Schéma du modèle de données d’expérience (XDM) de l’audience. |
 | `labels` | Utilisation des données au niveau de l’objet et libellés de contrôle d’accès basés sur des attributs pertinents pour l’audience. |
-| `ttlInDays` | Représente la valeur d’expiration des données de l’audience, en jours. |
 
 +++
 
@@ -317,7 +314,6 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur votre 
      "schema": {
       "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -462,7 +458,6 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur l’au
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -619,7 +614,6 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur votre 
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 60,
     "profileInstanceId": "ups",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -845,7 +839,6 @@ Une réponse réussie renvoie un état HTTP 207 avec des informations sur les au
          "schema": {
             "name": "_xdm.context.profile"
          },
-         "ttlInDays": 30,
          "imsOrgId": "{ORG_ID}",
          "sandbox": {
             "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",

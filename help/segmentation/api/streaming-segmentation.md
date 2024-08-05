@@ -4,7 +4,7 @@ title: Évaluer les événements en temps quasi réel grâce à la segmentation 
 description: Ce document contient des exemples d’utilisation de la segmentation par diffusion en flux continu avec l’API du service de segmentation Adobe Experience Platform.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: c14c6b8037993b3696b4a99633c80c6ee9679399
+source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
 workflow-type: tm+mt
 source-wordcount: '2050'
 ht-degree: 67%
@@ -136,7 +136,6 @@ Une réponse réussie renvoie un tableau de définitions de segment de votre org
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 30,
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
@@ -170,7 +169,6 @@ Une réponse réussie renvoie un tableau de définitions de segment de votre org
             "schema": {
                 "name": "_xdm.context.profile"
             },
-            "ttlInDays": 30,
             "imsOrgId": "{ORG_ID}",
             "sandbox": {
                 "sandboxId": "",
@@ -237,7 +235,6 @@ curl -X POST \
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 30,
     "name": "Homepage_continuous",
     "description": "People who are on their homepage - continuous",
     "expression": {
@@ -273,7 +270,6 @@ Une réponse réussie renvoie les détails de la nouvelle définition de segment
     "schema": {
         "name": "_xdm.context.profile"
     },
-    "ttlInDays": 30,
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
         "sandboxId": "{SANDBOX_ID}",
