@@ -4,9 +4,9 @@ title: Vue d’ensemble des playbooks de cas d’utilisation
 description: Découvrez comment utiliser la fonction des playbooks de cas d’utilisation dans Experience Platform pour commencer à utiliser divers cas d’utilisation marketing
 role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '529'
 ht-degree: 30%
 
 ---
@@ -29,10 +29,12 @@ Ce guide vous apportera la documentation suivante :
 
 ## Vue d’ensemble {#overview}
 
-[!UICONTROL Les classeurs de cas d’utilisation] peuvent vous aider à résoudre le problème lorsque vous commencez à utiliser Real-Time CDP ou Adobe Journey Optimizer alors que vous ne savez peut-être pas exactement par quoi commencer ou comment créer les ressources appropriées afin d’atteindre les cas d’utilisation souhaités. Les cahiers de lecture de cas d’utilisation peuvent vous aider en procédant comme suit :
+[!UICONTROL Les classeurs de cas d’utilisation] peuvent vous aider à résoudre le problème lorsque vous commencez à utiliser Real-Time CDP ou Adobe Journey Optimizer alors que vous ne savez peut-être pas exactement par quoi commencer ou comment créer les ressources appropriées afin d’atteindre les cas d’utilisation souhaités.
 
-* Affichage des cas d’utilisation pour l’inspiration
-* Création de différentes ressources pour que vous puissiez utiliser, tester et promouvoir en production lorsque vous êtes prêt.
+Les cahiers de lecture de cas d’utilisation peuvent vous aider en procédant comme suit :
+
+* [Présentation d’un catalogue de classeurs disponibles pour commencer plus rapidement à utiliser les cas pratiques](../playbooks/playbooks-list.md)
+* [Création de différentes ressources](../playbooks/create-share-reuse.md)
 
 ![Afficher tous les playbooks](/help/use-case-playbooks/assets/playbooks/overview/playbooks-landing-page.png)
 

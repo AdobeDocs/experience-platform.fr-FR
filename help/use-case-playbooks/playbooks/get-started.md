@@ -4,10 +4,10 @@ title: Prise en main des livres de cas d’utilisation
 description: Commencez à utiliser la fonctionnalité des Playbooks de cas d’utilisation.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 15%
+source-wordcount: '990'
+ht-degree: 14%
 
 ---
 
@@ -19,6 +19,8 @@ Découvrez comment configurer votre compte pour les classeurs de cas d’utilisa
 * Créer un sandbox
 * Configurer les autorisations des utilisateurs et des utilisatrices
 * Configuration des surfaces des canaux Journey Optimizer pour les notifications par e-mail, push et SMS (si vous envisagez d’utiliser des playbooks Journey Optimizer)
+
+Pour accéder à une riche galerie de playbooks de cas d’utilisation dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UICONTROL Playbooks]** dans le volet de navigation de gauche. Lisez la documentation sur la [navigation dans les cahiers de lecture de cas d’utilisation](../playbooks/navigate.md) et commencez à utiliser un [environnement de test inspirant](../playbooks/navigate.md).
 
 ## Configuration des classeurs de cas d’utilisation - Présentation vidéo {#video}
 
