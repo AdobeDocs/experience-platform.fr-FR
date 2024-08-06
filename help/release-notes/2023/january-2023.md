@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Janvier 2023
 description: Notes de mise à jour de janvier 2023 pour Adobe Experience Platform.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '2224'
 ht-degree: 99%
@@ -175,7 +175,7 @@ Pour supprimer la redondance dans le cycle de vie de l’adhésion au segment, l
 
 Après l’obsolescence, les profils qualifiés dans un segment seront représentés comme `Realized` et les profils disqualifiés continueront à être représentés comme `Exited`. Cela permettra d’obtenir la parité avec les destinations basées sur des fichiers avec les statuts de segment `Active` et `Expired`.
 
-Cette modification peut vous impacter si vous utilisez des [destinations d’entreprise](../../destinations/destination-types.md#streaming-profile-export) (Amazon Kinesis, Azure Event Hubs, API HTTP) et avez mis en place en aval des processus automatisés, en fonction des statuts `Existing`. Vérifiez vos intégrations en aval si c’est votre cas. Si vous souhaitez identifier les profils nouvellement qualifiés au-delà d’un certain temps, envisagez d’utiliser une combinaison du statut `Realized` et du `lastQualificationTime` dans votre mappage d’appartenance aux segments. Pour plus d’informations, contactez votre représentant ou représentante Adobe.
+Cette modification peut vous impacter si vous utilisez des [destinations d’entreprise](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Azure Event Hubs, API HTTP) et avez mis en place en aval des processus automatisés, en fonction des statuts `Existing`. Vérifiez vos intégrations en aval si c’est votre cas. Si vous souhaitez identifier les profils nouvellement qualifiés au-delà d’un certain temps, envisagez d’utiliser une combinaison du statut `Realized` et du `lastQualificationTime` dans votre mappage d’appartenance aux segments. Pour plus d’informations, contactez votre représentant ou représentante Adobe.
 
 Pour en savoir plus sur le profil client en temps réel, notamment les bonnes pratiques et les tutoriels relatifs à lʼutilisation des données de profil, consultez la [présentation du profil client en temps réel](../../profile/home.md).
 

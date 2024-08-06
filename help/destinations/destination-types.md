@@ -3,7 +3,7 @@ keywords: destinations;destination;types de destinations
 title: Types et catégories de destination
 description: Découvrez les différents types et catégories de destinations dans Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 13ceaa53b53f17457c8d2c914b3fd05f6af2441b
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 54%
@@ -35,9 +35,9 @@ Les destinations **[!UICONTROL Export de profil]**, **[!UICONTROL Export d’aud
 Les destinations d’exportation de profils reçoivent des données brutes, souvent avec l’adresse e-mail comme clé primaire. Experience Platform prend actuellement en charge deux types de destinations d’exportation de profils :
 
 * [Destinations de lot (basées sur des fichiers)](#file-based)
-* [Destinations d’entreprise avancées (destinations d’exportation de profils en continu)](#streaming-profile-export)
+* [Destinations d’entreprise avancées (destinations d’exportation de profils en continu)](#advanced-enterprise-destinations)
 
-### Destinations d’entreprise avancées (destinations d’exportation de profils en continu) {#streaming-profile-export}
+### Destinations d’entreprise avancées (destinations d’exportation de profils en continu) {#advanced-enterprise-destinations}
 
 >[!IMPORTANT]
 >

@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: En savoir plus sur l’utilisation par défaut de l’activation des données et les limites de débit.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '1685'
 ht-degree: 51%
@@ -92,7 +92,7 @@ Les mécanismes de sécurisation ci-dessous s’appliquent à la méthode d’[a
 
 ### Activation des destinations de personnalisation Edge {#edge-destinations-activation}
 
-Les mécanismes de sécurisation ci-dessous s’appliquent à l’activation par le biais des [Destinations de personnalisation Edge](/help/destinations/destination-types.md#streaming-profile-export).
+Les mécanismes de sécurisation ci-dessous s’appliquent à l’activation par le biais des [Destinations de personnalisation Edge](/help/destinations/destination-types.md#advanced-enterprise-destinations).
 
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |

@@ -2,7 +2,7 @@
 title: Gestion des identités dans le workflow d’activation des destinations
 description: Découvrez comment l’exportation d’identités est gérée dans le workflow d’activation, en fonction du type de destination.
 exl-id: f4894a08-c7a9-4d57-a6d3-660c49206d6a
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '1163'
 ht-degree: 99%
@@ -92,7 +92,7 @@ Lors de la configuration d’un train de données comme décrit dans la document
 
 ## Destinations d’entreprise {#enterprise-destinations}
 
-[Destinations d’entreprise](/help/destinations/destination-types.md#streaming-profile-export) ([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], API HTTP) ne nécessitent pas d’identifiants spécifiques dans l’exportation des données, car ils sont conçus pour les cas d’utilisation de l’intégration d’entreprise. Cependant, vous pouvez exporter des identités en tant qu’attributs XDM ou à partir du mappage d’identité, si vous le souhaitez. Affichez un [exemple de données exportées vers la destination HTTP](/help/destinations/catalog/streaming/http-destination.md#exported-data), qui inclut l’attribut XDM `personalEmail.address` et les identités `ECID` et `email_lc_sha256` (adresse électronique hachée) à partir du mappge d’identité.
+[Destinations d’entreprise](/help/destinations/destination-types.md#advanced-enterprise-destinations) ([!DNL Amazon Kinesis], [!DNL Azure Event Hubs], API HTTP) ne nécessitent pas d’identifiants spécifiques dans l’exportation des données, car ils sont conçus pour les cas d’utilisation de l’intégration d’entreprise. Cependant, vous pouvez exporter des identités en tant qu’attributs XDM ou à partir du mappage d’identité, si vous le souhaitez. Affichez un [exemple de données exportées vers la destination HTTP](/help/destinations/catalog/streaming/http-destination.md#exported-data), qui inclut l’attribut XDM `personalEmail.address` et les identités `ECID` et `email_lc_sha256` (adresse électronique hachée) à partir du mappge d’identité.
 
 ## Destinations de personnalisation {#personalization-destinations}
 

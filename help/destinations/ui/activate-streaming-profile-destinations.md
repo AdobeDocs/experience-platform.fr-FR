@@ -4,7 +4,7 @@ type: Tutorial
 description: Découvrez comment activer les données d’audience que vous avez dans Adobe Experience Platform en envoyant des audiences vers des destinations basées sur un profil en continu.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 6b186030c66598cddcdfcf509b8863e10d4fd0a7
+source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
 workflow-type: tm+mt
 source-wordcount: '764'
 ht-degree: 23%
@@ -23,7 +23,7 @@ ht-degree: 23%
 
 ## Présentation {#overview}
 
-Cet article explique le processus requis pour activer les données d’audience dans Adobe Experience Platform vers des destinations basées sur des profils en continu (également appelées [destinations d’entreprise](/help/destinations/destination-types.md#streaming-profile-export)).
+Cet article explique le processus requis pour activer les données d’audience dans Adobe Experience Platform vers des destinations basées sur des profils en continu (également appelées [destinations d’entreprise](/help/destinations/destination-types.md#advanced-enterprise-destinations)).
 
 Cet article s’applique aux trois destinations suivantes :
 
