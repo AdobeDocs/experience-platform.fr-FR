@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Fonctions de mappage de prép de données
 description: Ce document présente les fonctions de mappage utilisées avec Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 6509447ff2e67eac7b6b41754981cd18eb52562e
+source-git-commit: 5a4e0b3c97d315262ded35ca5bfada3612ed6db4
 workflow-type: tm+mt
 source-wordcount: '5805'
 ht-degree: 8%
@@ -130,7 +130,7 @@ Les tableaux suivants répertorient toutes les fonctions de mappage prises en ch
 | set_date_part | Remplace un composant à une date donnée. Les composants suivants sont acceptés : <br><br>&quot;year&quot;<br>&quot;yyyy&quot;<br>&quot;yy&quot;<br><br>&quot;month&quot;<br>&quot;mm&quot;<br>&quot;m&quot;<br><br>&quot;day&quot;<br>&quot;dd&quot;<br>&quot;d&quot;<br><br>&quot;hour&quot;<br>&quot;hh&quot;<br><br>&quot;minute&quot;<br>&quot;mi&quot;<br>&quot;n&quot;<br><br>&quot;second&quot;<br>&quot;ss&quot;<br>&quot;s&quot; | <ul><li>COMPOSANT : **Obligatoire** Chaîne représentant la partie de la date. </li><li>VALEUR : **Obligatoire** Valeur à définir pour le composant pour une date donnée.</li><li>DATE : **Obligatoire** Date, dans un format standard.</li></ul> | set_date_part &#x200B;(COMPONENT, VALUE, DATE) | set_date_part(&quot;m&quot;, 4, date(&quot;2016-11-09T11:44:44.797&quot;) | &quot;2016-04-09T11:44:44Z&quot; |
 | make_date_time | Crée une date à partir de parties. Cette fonction peut également être induite à l’aide de make_timestamp. | <ul><li>ANNÉE : **Obligatoire** L’année, écrite à quatre chiffres.</li><li>MOIS : **Obligatoire** Mois. Les valeurs autorisées sont comprises entre 1 et 12.</li><li>JOUR : **Obligatoire** Le jour. Les valeurs autorisées sont comprises entre 1 et 31.</li><li>HEURE : **Obligatoire** Heure. Les valeurs autorisées sont comprises entre 0 et 23.</li><li>MINUTE : **Obligatoire** La minute. Les valeurs autorisées sont comprises entre 0 et 59.</li><li>NANOSECOND : **Obligatoire** Valeurs nanosecondes. Les valeurs autorisées sont 0 à 999999999.</li><li>TIMEZONE : **Obligatoire** Fuseau horaire de la date et de l’heure.</li></ul> | make_date_time &#x200B;(ANNÉE, MOIS, JOUR, HEURE, MINUTE, SECONDE, NANOSECOND, TIMEZONE) | make_date_time &#x200B;(2019, 10, 17, 11, 55, 12, 999, &quot;Amérique/Los_Angeles&quot;) | `2019-10-17T11:55:12Z` |
 | zone_date_to_utc | Convertit une date de n’importe quel fuseau horaire en date en UTC. | <ul><li>DATE : **Obligatoire** Date à laquelle vous essayez de convertir.</li></ul> | zone_date_to_utc &#x200B;(DATE) | `zone_date_to_utc&#x200B;(2019-10-17T11:55:&#x200B;12 PST` | `2019-10-17T19:55:12Z` |
-| zone_date_to_zone | Convertit une date d’un fuseau horaire en un autre. | <ul><li>DATE : **Obligatoire** Date à laquelle vous essayez de convertir.</li><li>ZONE : **Obligatoire** Fuseau horaire auquel vous essayez de convertir la date.</li></ul> | zone_date_to_zone &#x200B;(DATE, ZONE) | `zone_date_to_utc&#x200B;(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
+| zone_date_to_zone | Convertit une date d’un fuseau horaire en un autre. | <ul><li>DATE : **Obligatoire** Date à laquelle vous essayez de convertir.</li><li>ZONE : **Obligatoire** Fuseau horaire auquel vous essayez de convertir la date.</li></ul> | zone_date_to_zone &#x200B;(DATE, ZONE) | `zone_date_to_zone(now(), "Europe/Paris")` | `2021-10-26T15:43:59Z` |
 
 {style="table-layout:auto"}
 
