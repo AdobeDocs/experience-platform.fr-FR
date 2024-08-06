@@ -2,9 +2,9 @@
 title: Connexion de votre compte Salesforce à l’aide de l’interface utilisateur Experience Platform
 description: Découvrez comment connecter votre compte Salesforce et importer vos données CRM dans Experience Platform à l’aide de l’interface utilisateur.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 7930a869627130a5db34780e64b809cda0c1e5f4
+source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '841'
 ht-degree: 21%
 
 ---
@@ -36,7 +36,7 @@ Vous devez fournir des valeurs pour les informations d’identification suivante
 
 | Informations d’identification | Description |
 | --- | --- |
-| URL de l’environnement | URL de l’instance source [!DNL Salesforce]. |
+| URL de l’environnement | URL de l’instance source [!DNL Salesforce]. Le format de l’URL d’environnement est `https://[domain].my.salesforce.com`. |
 | Nom d’utilisateur | Nom d’utilisateur du compte utilisateur [!DNL Salesforce]. |
 | Mot de passe | Mot de passe du compte utilisateur [!DNL Salesforce]. |
 | Jeton de sécurité | Jeton de sécurité pour le compte utilisateur [!DNL Salesforce]. |
@@ -50,7 +50,7 @@ Vous devez fournir des valeurs pour les informations d’identification suivante
 
 | Informations d’identification | Description |
 | --- | --- |
-| URL de l’environnement | URL de l’instance source [!DNL Salesforce]. |
+| URL de l’environnement | URL de l’instance source [!DNL Salesforce]. Le format de l’URL d’environnement est `https://[domain].my.salesforce.com`. |
 | Identifiant client | L’ID client est utilisé en tandem avec le secret client dans le cadre de l’authentification OAuth2. Ensemble, l’ID client et le secret client permettent à votre application d’opérer pour le compte de votre compte en identifiant votre application sur [!DNL Salesforce]. |
 | Secret client | Le secret client est utilisé en tandem avec l’ID client dans le cadre de l’authentification OAuth2. Ensemble, l’ID client et le secret client permettent à votre application d’opérer pour le compte de votre compte en identifiant votre application sur [!DNL Salesforce]. |
 | Version de l’API | Version de l’API REST de l’instance [!DNL Salesforce] que vous utilisez. La valeur de la version de l’API doit être formatée avec une valeur décimale. Par exemple, si vous utilisez la version d’API `52`, vous devez saisir la valeur `52.0`. Si ce champ n’est pas renseigné, Experience Platform utilisera automatiquement la dernière version disponible. |
