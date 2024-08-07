@@ -4,16 +4,16 @@ title: Choisissez parmi une sélection de livres de lecture
 description: Découvrez comment choisir un manuel adapté à votre cas d’utilisation pour activer les livres de jeu.
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: ea735c486ca88de05f2ee2a8e40c68e3ef29c4fd
+source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
 workflow-type: tm+mt
 source-wordcount: '757'
-ht-degree: 94%
+ht-degree: 92%
 
 ---
 
 # Choisissez parmi une sélection de livres de lecture
 
-Pour utiliser un playbook, accédez à **[!UICONTROL Playbooks de cas d’utilisation] > [!UICONTROL Playbooks]**. Parcourez et utilisez les différentes options de recherche et de filtrage de la page pour sélectionner et commencer à utiliser un playbook spécifique.
+Pour utiliser un playbook, sélectionnez **[!UICONTROL Playbooks]** dans le volet de navigation de gauche. Parcourez et utilisez les différentes options de recherche et de filtrage de la page pour sélectionner et commencer à utiliser un playbook spécifique.
 
 ## Rechercher et filtrer {#search-and-filter}
 
