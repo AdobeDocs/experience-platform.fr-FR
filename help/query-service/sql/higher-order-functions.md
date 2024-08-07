@@ -1,10 +1,10 @@
 ---
 title: Gestion des types de données de tableau et de mappage avec des fonctions d’ordre supérieur
-description: Découvrez comment gérer les types de données de tableau et de mappage avec des fonctions d’ordre supérieur dans Query Service. Des exemples pratiques sont fournis avec des cas d’utilisation courants.
+description: Découvrez comment gérer les types de données de tableau et de mappage avec des fonctions d’ordre supérieur dans Query Service. Des exemples sont fournis avec des cas d’utilisation courants.
 exl-id: dec4e4f6-ad6b-4482-ae8c-f10cc939a634
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1470'
 ht-degree: 1%
 
 ---

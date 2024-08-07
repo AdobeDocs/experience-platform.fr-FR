@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Questions fréquentes
 description: Ce document contient les questions les plus fréquentes et les réponses associées concernant Query Service. Les rubriques incluent l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: 84f30a47102a51b40d6811cd4815c36f6ffd34b5
 workflow-type: tm+mt
-source-wordcount: '4425'
-ht-degree: 96%
+source-wordcount: '4564'
+ht-degree: 93%
 
 ---
 
@@ -18,7 +18,11 @@ Ce document fournit des réponses aux questions fréquentes sur Query Service e
 La liste suivante de réponses aux questions fréquentes est divisée en plusieurs catégories :
 
 - [Général](#general)
+- [Interface utilisateur des requêtes](#queries-ui) 
+- [Échantillon de jeux de données](#dataset-samples)
 - [Exportation des données](#exporting-data)
+- [Syntaxe SQL](#sql-syntax) 
+- [Requêtes ITAS](#itas-queries)
 - [Outils tiers](#third-party-tools)
 - [Erreurs de l’API PostgreSQL](#postgresql-api-errors)
 - [Erreurs de l’API REST](#rest-api-errors)
@@ -603,6 +607,22 @@ Oui, vous pouvez utiliser la commande `CREATE VIEW` sans accès à Data Distille
 Oui. Bien que certains clients tiers, tels que DbVisualizer, puissent avoir besoin d’un identifiant distinct avant et après un bloc SQL pour indiquer qu’une partie d’un script doit être traitée comme une seule instruction. Vous trouverez plus de détails dans la [documentation du bloc anonyme](./key-concepts/anonymous-block.md) ou dans la [documentation officielle de DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
+## Interface utilisateur des requêtes
+
+### La &quot;Créer une requête&quot; est bloquée &quot;Initialisation de la connexion...&quot; lors de la tentative de connexion à Query Service. Comment résoudre le problème ?
+
++++Réponse
+Si l’option &quot;Créer une requête&quot; est bloquée sur &quot;Initialiser la connexion...&quot;, il est probable qu’il s’agisse d’un problème de connexion ou de session. Actualisez le navigateur si vous utilisez l’interface utilisateur de Platform et réessayez.
++++
+
+## Échantillon de jeux de données
+
+### Puis-je créer des exemples sur un jeu de données système ?
+
++++Réponse
+Non. Les autorisations d’écriture sont restreintes sur les jeux de données système afin que vous ne puissiez pas créer d’exemples.
++++
+
 ## Exportation des données {#exporting-data}
 
 Cette section fournit des informations sur l’exportation des données et des limites.
@@ -647,6 +667,22 @@ timestamp >= to_timestamp('2022-07-22')
 and timestamp < to_timestamp('2022-07-23');
 ```
 
++++
+
+## Syntaxe SQL
+
+### La FUSION DANS est-elle prise en charge par Data Distiller ou Query Service ?
+
++++Réponse
+Le concept de FUSION DANS SQL n’est pas pris en charge par Data Distiller ou Query Service.
++++
+
+## Requêtes ITAS
+
+### Que sont les requêtes ITAS ?
+
++++Réponse
+Les requêtes INSERT INTO sont appelées requêtes ITAS. Notez que les requêtes CREATE TABLE sont appelées requêtes CTAS.
 +++
 
 ## Outils tiers {#third-party-tools}
