@@ -3,9 +3,9 @@ title: Types d’action dans l’extension SDK Web Adobe Experience Platform
 description: Découvrez les différents types d’actions fournis par l’extension de balise du SDK Web de Adobe Experience Platform.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: c3b05dfd57b3335230e9abb40de6f2e1ee5ee6fa
+source-git-commit: 760484bb7f95df97701f81f78783f0214aecaf5b
 workflow-type: tm+mt
-source-wordcount: '2114'
+source-wordcount: '2112'
 ht-degree: 2%
 
 ---
@@ -93,10 +93,6 @@ Utilisez le sélecteur **[!UICONTROL Instance]** pour choisir l’instance de SD
 
 * **[!UICONTROL Instance]** : sélectionnez l’instance du SDK Web que vous souhaitez configurer. Si vous n’avez qu’une seule instance, elle sera présélectionnée.
 * **[!UICONTROL Utiliser des événements guidés]** : activez cette option pour renseigner ou masquer automatiquement certains champs afin d’activer un cas d’utilisation spécifique. L’activation de cette option déclenche l’affichage des paramètres suivants.
-
-  >[!NOTE]
-  >
-  >Les événements guidés affichés ci-dessous sont liés aux [événements de haut et de bas de page](../../../../web-sdk/use-cases/top-bottom-page-events.md).
    * **[!UICONTROL Demander la personnalisation]** : cet événement est conçu pour être appelé en haut de la page. Lorsqu’il est sélectionné, cet événement définit les champs suivants :
       * **[!UICONTROL Type]** : **[!UICONTROL Récupération de proposition de prise de décision]**
       * **[!UICONTROL Envoyer automatiquement un événement d’affichage]** : **[!UICONTROL false]**
@@ -104,6 +100,10 @@ Utilisez le sélecteur **[!UICONTROL Instance]** pour choisir l’instance de SD
    * **[!UICONTROL Collect analytics]** : cet événement est conçu pour être appelé au bas de la page. Lorsqu’il est sélectionné, cet événement définit les champs suivants :
       * **[!UICONTROL Inclure les propositions rendues]** : **[!UICONTROL true]**
       * Les paramètres **[!UICONTROL Personalization]** sont masqués
+
+  >[!NOTE]
+  >
+  >Les événements guidés sont liés aux [événements de haut et de bas de page](../../../../web-sdk/use-cases/top-bottom-page-events.md).
 
 
 ### Données {#data}
