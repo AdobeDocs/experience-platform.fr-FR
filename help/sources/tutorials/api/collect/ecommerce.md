@@ -5,10 +5,10 @@ title: Créer un flux de données pour les sources d’e-commerce à l’aide de
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer les données d’un système e-commerce tiers et les ingérer dans Platform à l’aide des connecteurs source et des API.
 exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
-source-git-commit: f5ac10980e08843f6ed9e892f7e1d4aefc8f0de7
+source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
 workflow-type: tm+mt
-source-wordcount: '1304'
-ht-degree: 90%
+source-wordcount: '1306'
+ht-degree: 88%
 
 ---
 
@@ -628,7 +628,7 @@ curl -X POST \
 | `transformations.params.mappingId` | Identifiant de mappage associé à votre source d’e-commerce. |
 | `scheduleParams.startTime` | Heure de début du flux de données en temps Unix. |
 | `scheduleParams.frequency` | `frequency` à laquelle le flux de données collecte des données. Les valeurs possibles sont les suivantes : `once`, `minute`, `hour`, `day` ou `week`. |
-| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. Un intervalle n’est pas requis lorsque `frequency` est défini sur `once` et doit être supérieur ou égal à `15` pour les autres valeurs de `frequency`. |
+| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. La valeur minimale de l’intervalle accepté pour chaque fréquence est la suivante :<ul><li>**Une fois** : n/a</li><li>**Minute** : 15</li><li>**Heure** : 1</li><li>**Jour** : 1</li><li>**Semaine** : 1</li></ul> |
 
 **Réponse**
 

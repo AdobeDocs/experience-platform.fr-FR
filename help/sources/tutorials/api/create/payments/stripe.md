@@ -3,10 +3,10 @@ title: Ingérer des données de paiement de votre compte  [!DNL Stripe]  vers l�
 description: Découvrez comment ingérer des données de paiement de votre compte de Stripe vers Experience Platform à l’aide de l’API Flow Service
 badge: Version bêta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
 workflow-type: tm+mt
-source-wordcount: '1998'
-ht-degree: 45%
+source-wordcount: '2020'
+ht-degree: 44%
 
 ---
 
@@ -881,7 +881,7 @@ curl -X POST \
 | `transformations.params.mappingVersion` | Version correspondante de l’identifiant de mappage. Ce paramètre est défini par défaut sur `0`. |
 | `scheduleParams.startTime` | Heure à laquelle votre flux de données commencera. Vous devez fournir la valeur de l’heure de début au format d’un horodatage Unix. |
 | `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. Vous pouvez configurer la fréquence d’ingestion pour :  <ul><li>**Une fois** : définissez votre fréquence sur `once` pour créer une ingestion unique. Les configurations de l’intervalle et du renvoi ne sont pas disponibles lors de la création d’un flux de données d’ingestion unique. Par défaut, la fréquence de planification est définie sur une seule fois.</li><li>**Minute** : définissez votre fréquence sur `minute` pour planifier votre flux de données de sorte qu’il ingère des données par minute.</li><li>**Heure** : définissez votre fréquence sur `hour` pour planifier votre flux de données pour ingérer des données par heure.</li><li>**Jour** : définissez votre fréquence sur `day` pour planifier votre flux de données de sorte qu’il ingère des données quotidiennement.</li><li>**Semaine** : définissez votre fréquence sur `week` pour planifier votre flux de données de sorte qu’il ingère des données sur une base hebdomadaire.</li></ul> |
-| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. Par exemple, si vous définissez votre fréquence sur &quot;jour&quot; et configurez l’intervalle sur 15, votre flux de données s’exécute tous les 15 jours. La valeur de l’intervalle doit être un entier non nul. |
+| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. Par exemple, si vous définissez votre fréquence sur &quot;jour&quot; et configurez l’intervalle sur 15, votre flux de données s’exécute tous les 15 jours. La valeur de l’intervalle doit être un entier non nul. La valeur minimale de l’intervalle accepté pour chaque fréquence est la suivante :<ul><li>**Une fois** : n/a</li><li>**Minute** : 15</li><li>**Heure** : 1</li><li>**Jour** : 1</li><li>**Semaine** : 1</li></ul> |
 
 **Réponse**
 

@@ -4,9 +4,9 @@ description: Découvrez comment connecter les données de prospection Acxiom à 
 last-substantial-update: 2024-02-21T00:00:00Z
 badge: Version bêta
 exl-id: cde0bfe9-0604-41d3-8422-114f58a74d04
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
 workflow-type: tm+mt
-source-wordcount: '1752'
+source-wordcount: '1861'
 ht-degree: 15%
 
 ---
@@ -153,10 +153,12 @@ Utilisez l’interface de mappage pour mapper vos données source aux champs de 
 
 Utilisez l’interface de planification pour définir le planning d’ingestion de votre flux de données.
 
-* **Fréquence** : configurez la fréquence pour indiquer la fréquence d’exécution du flux de données. Vous pouvez définir votre fréquence sur : une fois, une minute, une heure, un jour ou une semaine.
-* **Intervalle** : une fois que vous avez sélectionné une fréquence, vous pouvez configurer le paramètre d’intervalle pour établir la période entre chaque ingestion. Par exemple, si vous définissez votre fréquence sur &quot;jour&quot; et configurez l’intervalle sur 15, votre flux de données s’exécute tous les 15 jours. L’intervalle ne peut pas être défini sur zéro et doit être défini sur au moins 15.
-* **Heure de début** - Horodatage de l’exécution prévue, présenté dans le fuseau horaire UTC.
-* **Renvoi** - Le renvoi détermine les données ingérées initialement. Si le renvoi est activé, tous les fichiers actuels du chemin spécifié seront ingérés lors de la première ingestion planifiée. Si le renvoi est désactivé, seuls les fichiers chargés entre la première exécution de l’ingestion et l’heure de début seront ingérés. Les fichiers chargés avant l’heure de début ne seront pas ingérés.
+| Configuration de la planification | Description |
+| --- | --- |
+| Fréquence | Configurez la fréquence pour indiquer la fréquence d’exécution du flux de données. Vous pouvez définir votre fréquence sur : <ul><li>**Une fois** : définissez votre fréquence sur `once` pour créer une ingestion unique. Les configurations de l’intervalle et du renvoi ne sont pas disponibles lors de la création d’un flux de données d’ingestion unique. Par défaut, la fréquence de planification est définie sur une seule fois.</li><li>**Minute** : définissez votre fréquence sur `minute` pour planifier votre flux de données de sorte qu’il ingère des données par minute.</li><li>**Heure** : définissez votre fréquence sur `hour` pour planifier votre flux de données pour ingérer des données par heure.</li><li>**Jour** : définissez votre fréquence sur `day` pour planifier votre flux de données de sorte qu’il ingère des données quotidiennement.</li><li>**Semaine** : définissez votre fréquence sur `week` pour planifier votre flux de données de sorte qu’il ingère des données sur une base hebdomadaire.</li></ul> |
+| Intervalle | Une fois que vous avez sélectionné une fréquence, vous pouvez configurer le paramètre d’intervalle afin de définir la période entre chaque ingestion. Par exemple, si vous définissez votre fréquence sur &quot;jour&quot; et configurez l’intervalle sur 15, votre flux de données s’exécute tous les 15 jours. Vous ne pouvez pas définir l’intervalle sur zéro. La valeur minimale de l’intervalle accepté pour chaque fréquence est la suivante :<ul><li>**Une fois** : n/a</li><li>**Minute** : 15</li><li>**Heure** : 1</li><li>**Jour** : 1</li><li>**Semaine** : 1</li></ul> |
+| Heure de début | Horodatage de l’exécution projetée, présenté dans le fuseau horaire UTC. |
+| Renvoyer | Le renvoi détermine les données ingérées initialement. Si le renvoi est activé, tous les fichiers actuels du chemin spécifié seront ingérés lors de la première ingestion planifiée. Si le renvoi est désactivé, seuls les fichiers chargés entre la première exécution de l’ingestion et l’heure de début seront ingérés. Les fichiers chargés avant l’heure de début ne seront pas ingérés. |
 
 ![ L&#39;interface de configuration de la planification.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-scheduling.png)
 
