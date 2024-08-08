@@ -31,7 +31,7 @@ Mises à jour des fonctionnalités et de la documentation existantes dans Experi
 
 La composition d’audiences fédérées permet aux entreprises de composer des données pour une meilleure application dans divers cas d’utilisation. Grâce à cette nouvelle approche, en tant qu’utilisateur Adobe Real-Time Customer Data Platform et/ou Adobe Journey Optimizer, vous pouvez fédérer les jeux de données directement à partir de votre entrepôt de données existant pour créer et enrichir les audiences et attributs Adobe Experience Platform dans un seul système.
 
-Pour plus d’informations, consultez la [documentation sur la composition d’audiences fédérées](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Pour plus d’informations, consultez la [documentation sur la composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/home).
 
 ## Gestion avancée du cycle de vie des données {#advanced-data-lifecycle-management}
 
