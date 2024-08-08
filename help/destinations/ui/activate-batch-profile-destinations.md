@@ -3,10 +3,10 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations basées sur un profil de lot.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 14c534abe51a43d45f8709657a6049a463f35045
+source-git-commit: b020f8e204e28ceb97b314d9368075064b3ebb94
 workflow-type: tm+mt
-source-wordcount: '4024'
-ht-degree: 56%
+source-wordcount: '4069'
+ht-degree: 55%
 
 ---
 
@@ -32,8 +32,13 @@ Pour activer les audiences vers les destinations, [ doit être connecté à une 
 ## Formats de fichiers pris en charge pour l’exportation {#supported-file-formats-export}
 
 >[!CONTEXTUALHELP]
->id="legacy_dataflow_needs_schedule_end_date"
+>id="dataset_dataflow_needs_schedule_end_date_header"
 >title="Mettre à jour la date de fin de ce flux de données"
+>abstract="En raison des mises à jour récentes apportées à cette destination, le flux de données nécessite désormais une date de fin. Adobe a défini une date de fin par défaut sur le 1er mars 2025. Mettez à jour à la date de fin souhaitée, sinon les exportations de données s’arrêteront à la date par défaut."
+
+>[!CONTEXTUALHELP]
+>id="dataset_dataflow_needs_schedule_end_date_body"
+>title="Mettre à jour la date de fin de ce corps de flux de données"
 >abstract="En raison des mises à jour récentes apportées à cette destination, le flux de données nécessite désormais une date de fin. Adobe a défini une date de fin par défaut sur le 1er mars 2025. Mettez à jour à la date de fin souhaitée, sinon les exportations de données s’arrêteront à la date par défaut."
 
 Les formats de fichiers suivants sont pris en charge lors de l’exportation d’audiences :
@@ -522,7 +527,6 @@ Les exportations de fichiers varient comme suit, selon que `segmentMembership.se
 id="platform_destinations_activate_exclude_enrichment_attributes"
 title="Exclure les attributs d’enrichissement"
 abstract="Activez cette option pour exporter les profils des audiences chargées personnalisées sélectionnées vers votre destination, tout en excluant leurs attributs."
-additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=fr#select-enrichment-attributes" text="En savoir plus dans la documentation."
 
 >[!IMPORTANT]
 >
