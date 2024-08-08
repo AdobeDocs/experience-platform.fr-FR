@@ -3,14 +3,18 @@ title: Prise en main du transfert dʼévénements
 description: Suivez ce tutoriel détaillé pour commencer à utiliser le transfert d’événement dans Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 05170986263b6eed2d19a65e34f70dc28eb8ba2f
+source-git-commit: 0a95d09eb1ce59e45d52372c4b08725c009001c3
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '887'
 ht-degree: 84%
 
 ---
 
 # Prise en main du transfert dʼévénements
+
+>[!NOTE]
+>
+>Le transfert d’événement est une fonctionnalité payante uniquement incluse dans les offres Connections, Prime, ou Ultimate d’Adobe Real-Time Customer Data Platform.
 
 >[!NOTE]
 >
