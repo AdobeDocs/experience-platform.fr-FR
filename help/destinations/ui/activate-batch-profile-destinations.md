@@ -3,9 +3,9 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations basées sur un profil de lot.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
+source-git-commit: dab3b432cac4ad416576f9d3d35e679d9483c816
 workflow-type: tm+mt
-source-wordcount: '4112'
+source-wordcount: '4077'
 ht-degree: 55%
 
 ---
@@ -34,7 +34,7 @@ Pour activer les audiences vers les destinations, [ doit être connecté à une 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"
 >title="Mettre à jour la date de fin de ce flux de données"
->abstract="En raison des mises à jour récentes apportées à cette destination, le flux de données nécessite désormais une date de fin. Adobe a défini une date de fin par défaut sur le 1er mars 2025. Mettez à jour à la date de fin souhaitée, sinon les exportations de données s’arrêteront à la date par défaut."
+>abstract="Mettre à jour la date de fin de ce flux de données"
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
