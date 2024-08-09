@@ -3,9 +3,9 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations basées sur un profil de lot.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b020f8e204e28ceb97b314d9368075064b3ebb94
+source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
 workflow-type: tm+mt
-source-wordcount: '4069'
+source-wordcount: '4112'
 ht-degree: 55%
 
 ---
@@ -40,6 +40,16 @@ Pour activer les audiences vers les destinations, [ doit être connecté à une 
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="Mettre à jour la date de fin de ce corps de flux de données"
 >abstract="En raison des mises à jour récentes apportées à cette destination, le flux de données nécessite désormais une date de fin. Adobe a défini une date de fin par défaut sur le 1er mars 2025. Mettez à jour à la date de fin souhaitée, sinon les exportations de données s’arrêteront à la date par défaut."
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template"
+>title="Modifier le chemin du dossier"
+>abstract="Utilisez plusieurs macros fournies pour personnaliser le chemin du dossier dans lequel les jeux de données sont exportés."
+
+>[!CONTEXTUALHELP]
+>id="destinations_folder_name_template_preview"
+>title="Aperçu du chemin du dossier du jeu de données"
+>abstract="Obtenez un aperçu de la structure de dossiers créée à l’emplacement de stockage en fonction des macros que vous avez ajoutées dans cette fenêtre."
 
 Les formats de fichiers suivants sont pris en charge lors de l’exportation d’audiences :
 

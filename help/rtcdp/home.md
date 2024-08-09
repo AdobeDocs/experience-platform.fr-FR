@@ -4,9 +4,9 @@ description: Commencez à utiliser Adobe Real-Time CDP, découvrez les fonctionn
 solution: Real-Time Customer Data Platform
 product: Real Time CDP
 exl-id: 92179d9a-be79-4a39-b2ab-9a85a542f53c
-source-git-commit: c9a954d2a78abcea67e68e5ae9563e6db1ae706c
+source-git-commit: 7a909c362b9e367fa4b86a8525fe98f203e3c2d5
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1175'
 ht-degree: 12%
 
 ---
@@ -21,6 +21,12 @@ Découvrez les dernières améliorations apportées au produit et à la document
 
 >[!BEGINTABS]
 
+>[!TAB Composition de l’audience fédérée]
+
+La composition d’audiences fédérées permet aux entreprises de composer des données pour une meilleure application dans divers cas d’utilisation. Grâce à cette nouvelle approche, en tant qu’utilisateur Adobe Real-Time Customer Data Platform et/ou Adobe Journey Optimizer, vous pouvez fédérer les jeux de données directement à partir de votre entrepôt de données existant pour créer et enrichir les audiences et attributs Adobe Experience Platform dans un seul système.
+
+[![image](assets/do-not-localize/learn-more-button.svg)](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/home)
+
 >[!TAB Playbooks de cas d’utilisation]
 
 La fonctionnalité [!UICONTROL Playbooks de cas d’utilisation] est désormais disponible pour les clientes et les clients Real-Time CDP et Adobe Journey Optimizer. Les [!UICONTROL Playbooks de cas d’utilisation] sont conçus pour aider les utilisateurs et les utilisatrices à surmonter les défis lorsqu’ils commencent à utiliser Real-time Customer Data Platform ou Adobe Journey Optimizer. Lorsque vous ne savez pas par où commencer ou comment créer les ressources appropriées pour les cas d’utilisation souhaités, les Paybooks de cas d’utilisation sont une source d’inspiration et créent différentes ressources que vous pouvez tester et importer dans des environnements de production lorsque vous le souhaitez.
@@ -31,19 +37,19 @@ La fonctionnalité [!UICONTROL Playbooks de cas d’utilisation] est désormais 
 
 Utilisez la fonction d’outil d’environnement de test pour améliorer la précision de la configuration dans les environnements de test et exporter et importer en toute transparence des configurations entre les environnements de test. Vous pouvez utiliser la fonction d’outils des environnements de test pour sélectionner différents objets et les exporter dans un package.
 
-[![image](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
+[![Image](assets/do-not-localize/learn-more-button.svg)](/help/sandboxes/ui/sandbox-tooling.md)
 
 >[!TAB Attributs calculés]
 
 Résumez facilement les données d’événement dans les attributs de profil à l’aide d’une interface utilisateur intuitive afin d’améliorer la segmentation, la personnalisation et l’activation basées sur le comportement. Grâce à cette fonctionnalité, vous pouvez créer des attributs calculés en libre-service, les gérer et les utiliser dans la segmentation, les destinations Real-Time CDP ou Adobe Journey Optimizer. En outre, les attributs calculés simplifient la segmentation et les workflows de parcours pour vous aider à fournir facilement des expériences pertinentes.
 
-[![image](assets/do-not-localize/learn-more-button.svg)](/help/profile/computed-attributes/overview.md)
+[![Image](assets/do-not-localize/learn-more-button.svg)](/help/profile/computed-attributes/overview.md)
 
 >[!TAB Exports de données]
 
 La fonctionnalité d’exportation des jeux de données est désormais disponible dans l’ensemble. Découvrez [les jeux de données que vous pouvez exporter en fonction de l’application Experience Platform](../destinations/ui/export-datasets.md#datasets-to-export) que vous avez achetée, puis vérifiez les [mécanismes de sécurité pour l’export des jeux de données](/help/destinations/guardrails.md#dataset-exports).
 
-[![image](assets/do-not-localize/learn-more-button.svg)](../destinations/ui/export-datasets.md)
+[![Image](assets/do-not-localize/learn-more-button.svg)](../destinations/ui/export-datasets.md)
 
 >[!TAB Prise en charge des données du partenaire]
 
