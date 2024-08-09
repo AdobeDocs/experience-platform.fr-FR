@@ -3,10 +3,10 @@ keywords: Experience Platform;identité;service d’identité;dépannage;garde-f
 title: Barrières de sécurité pour Identity Service
 description: Ce document fournit des informations sur l’utilisation et les limites de taux pour les données Identity Service afin de vous aider à optimiser l’utilisation du graphique d’identités.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 6d36a6ff1243b15dcafc2f37d8bad982730f7a39
 workflow-type: tm+mt
-source-wordcount: '1549'
-ht-degree: 40%
+source-wordcount: '1591'
+ht-degree: 39%
 
 ---
 
@@ -57,6 +57,10 @@ Le tableau suivant décrit les règles à suivre pour garantir la validation de 
 ### Ingestion des espaces de noms d’identité
 
 Depuis le 31 mars 2023, le service d’identités bloque l’ingestion des identifiants Adobe Analytics (AAID) pour les nouvelles clientes et les nouveaux clients. L’ingestion de cette identité s’effectue généralement par la [source Adobe Analytics](../sources/connectors/adobe-applications/analytics.md). La [source Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) est redondante, car l’ECID représente le même navigateur web. Si vous souhaitez modifier cette configuration par défaut, contactez votre équipe Adobe en charge des comptes.
+
+## Mécanismes de sécurisation des performances {#performance-guardrails}
+
+Identity Service surveille en permanence les données entrantes pour garantir des performances élevées et une fiabilité à grande échelle. Cependant, un afflux de données d’événement d’expérience dans une courte période peut entraîner une dégradation des performances et une latence. Adobe n’est pas responsable d’une telle dégradation des performances.
 
 ## Comprendre la logique de suppression lorsqu’un graphique d’identités à la capacité est mis à jour {#deletion-logic}
 
