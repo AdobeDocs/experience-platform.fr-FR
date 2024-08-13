@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide des informations d’identification de Query Service
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui permet d’écrire et d’exécuter des requêtes, d’afficher des requêtes précédemment exécutées et d’accéder aux requêtes enregistrées par les utilisateurs de votre entreprise.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 569f8f96a1039e52ac374e2eb07fd96ad8138edd
 workflow-type: tm+mt
-source-wordcount: '1807'
+source-wordcount: '1828'
 ht-degree: 3%
 
 ---
@@ -76,7 +76,11 @@ Vous pouvez utiliser des informations d’identification non arrivant à expirat
 
 >[!NOTE]
 >
->Les informations d’identification non arrivant à expiration ont les limites suivantes :<br><ul><li>Les utilisateurs doivent se connecter avec leur nom d’utilisateur et mot de passe `{technicalAccountId}:{credential}`. Vous trouverez plus d’informations dans la section [Générer les informations d’identification](#generate-credentials) .</li><li>Lors de la création des informations d’identification arrivant à expiration, un nouveau rôle avec un ensemble d’autorisations de base est créé pour permettre aux utilisateurs d’afficher les schémas et les jeux de données. L’autorisation &quot;gérer les requêtes&quot; est également affectée à ce rôle en vue d’une utilisation avec Query Service.</li><li>Les clients tiers peuvent réaliser des performances différentes de celles attendues lors de la mise en liste des objets de requête. Par exemple, certains clients tiers tels que [!DNL DB Visualizer] n’afficheront pas le nom de la vue dans le panneau de gauche. Cependant, le nom de la vue est accessible s’il est appelé dans une requête SELECT. De même, [!DNL PowerUI] peut ne pas répertorier les vues temporaires créées via SQL à sélectionner pour la création du tableau de bord.</li></ul>
+>Les informations d’identification non expirantes présentent les limites suivantes :
+>
+>- Les utilisateurs doivent se connecter avec leur nom d’utilisateur et mot de passe au format `{technicalAccountId}:{credential}`. Vous trouverez plus d’informations dans la section [Générer les informations d’identification](#generate-credentials) .
+>- Par défaut, les informations d’identification non expirantes se voient accorder les autorisations nécessaires pour exécuter uniquement des requêtes `SELECT`. Pour exécuter des requêtes `CTAS` ou `ITAS`, ajoutez manuellement les autorisations &quot;Gérer le jeu de données&quot; et &quot;Gérer les schémas&quot; au rôle associé aux informations d’identification non arrivées à expiration. L’autorisation &quot;Gérer les schémas&quot; se trouve sous la section &quot;Modélisation des données&quot; et l’autorisation &quot;Gérer les jeux de données&quot; se trouve sous la section &quot;Data Management&quot; de [Adobe Developer Console](<https://developer.adobe.com/console/>).
+>- Les clients tiers peuvent réaliser des performances différentes de celles attendues lors de la mise en liste des objets de requête. Par exemple, certains clients tiers tels que [!DNL DB Visualizer] n’afficheront pas le nom de la vue dans le panneau de gauche. Cependant, le nom de la vue est accessible s’il est appelé dans une requête `SELECT`. De même, [!DNL PowerUI] peut ne pas répertorier les vues temporaires créées via SQL pour sélection dans la création du tableau de bord.
 
 ### Conditions préalables
 
