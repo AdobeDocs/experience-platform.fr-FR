@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des jeux de données
 description: Découvrez comment exécuter des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 10140efe33b42f9099b28564c9824839d83521a3
 workflow-type: tm+mt
-source-wordcount: '3080'
+source-wordcount: '3111'
 ht-degree: 14%
 
 ---
@@ -92,6 +92,10 @@ Vous pouvez prévisualiser des données d’exemple de jeu de données à partir
 ![Onglet Parcourir de l’espace de travail des jeux de données avec les points de suspension et l’option Prévisualiser le jeu de données mise en surbrillance pour le jeu de données sélectionné.](../images/datasets/user-guide/preview-dataset-option.png)
 
 La fenêtre d’aperçu s’ouvre alors, dans laquelle la vue hiérarchique du schéma du jeu de données s’affiche à droite.
+
+>[!NOTE]
+>
+>Le schéma sur le côté gauche de la vue affiche uniquement les champs qui contiennent des données. Les champs sans données sont automatiquement masqués afin de rationaliser l’interface utilisateur et de se concentrer sur les informations pertinentes.
 
 ![La boîte de dialogue d’aperçu du jeu de données avec des informations sur la structure, ainsi que des exemples de valeurs, pour le jeu de données s’affiche.](../images/datasets/user-guide/preview-dataset.png)
 
