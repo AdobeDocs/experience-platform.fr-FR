@@ -2,10 +2,10 @@
 title: Point de terminaison de l’API des modules d’outils Sandbox
 description: Le point de terminaison /packages de l’API Sandbox Tooling vous permet de gérer les packages par programmation dans Adobe Experience Platform.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 8ff9c50b4999a49413f8c45274815225ba58361c
+source-git-commit: f81e15ccfd89e2d0cb450f596743341264187f52
 workflow-type: tm+mt
-source-wordcount: '1531'
-ht-degree: 8%
+source-wordcount: '1621'
+ht-degree: 10%
 
 ---
 
@@ -138,8 +138,23 @@ curl -X PUT \
 | --- | --- | --- | --- |
 | `id` | Identifiant du package à mettre à jour. | Chaîne | Oui |
 | `action` | Pour ajouter des artefacts dans le package, la valeur de l’action doit être **ADD**. Cette action est prise en charge uniquement pour les types de packages **PARTIAL**. | Chaîne | Oui |
-| `artifacts` | Liste des artefacts à ajouter au module. Le package ne sera pas modifié si la liste est **null** ou **empty**. Les artefacts sont dédupliqués avant d’être ajoutés au module. | Tableau | Non |
+| `artifacts` | Liste des artefacts à ajouter au module. Le package ne sera pas modifié si la liste est **null** ou **empty**. Les artefacts sont dédupliqués avant d’être ajoutés au module. Consultez le tableau ci-dessous pour obtenir la liste complète des artefacts pris en charge. | Tableau | Non |
 | `expiry` | Horodatage qui définit la date d’expiration du package. La valeur par défaut est de 90 jours à compter de l’appel de l’API PUT si l’expiration n’est pas spécifiée dans la payload. Le champ d’expiration de la réponse sera l’heure UTC de l’époque. | Chaîne (format UTC Timestamp) | Non |
+
+Les types d’artefacts suivants sont actuellement pris en charge.
+
+| Artefact | Platform | Objet | Flux partiel | Environnement de test complet |
+| --- | --- | --- | --- | --- |
+| `JOURNEY` | Adobe Journey Optimizer | Parcours | Oui | Non |
+| `ID_NAMESPACE` | Plateforme de données clients | Identités | Oui | Oui |
+| `REGISTRY_DATATYPE` | Plateforme de données clients | Type de données | Oui | Oui |
+| `REGISTRY_CLASS` | Plateforme de données clients | Classe | Oui | Oui |
+| `REGISTRY_MIXIN` | Plateforme de données clients | Groupe de champs | Oui | Oui |
+| `REGISTRY_SCHEMA` | Plateforme de données clients | Schémas | Oui | Oui |
+| `CATALOG_DATASET` | Plateforme de données clients | Jeux de données | Oui | Oui |
+| `DULE_CONSENT_POLICY` | Plateforme de données clients | Stratégies de consentement et de gouvernance | Oui | Oui |
+| `PROFILE_SEGMENT` | Plateforme de données clients | Audiences | Oui | Oui |
+| `FLOW` | Plateforme de données clients | Flux de données de sources | Oui | Oui |
 
 **Réponse**
 
