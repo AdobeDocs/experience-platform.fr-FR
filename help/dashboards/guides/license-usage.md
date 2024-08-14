@@ -4,9 +4,9 @@ title: Tableau de bord d’utilisation de la licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 3e465803b6c8fe11cef1633c0f0624465086c2a3
+source-git-commit: 090b870dcfb16e59831f1e03eb46b22da4f24f0f
 workflow-type: tm+mt
-source-wordcount: '2328'
+source-wordcount: '2429'
 ht-degree: 8%
 
 ---
@@ -91,6 +91,16 @@ Pour afficher un résumé de l’utilisation des droits des produits, sélection
 L’onglet Résumé s’affiche. Vous pouvez utiliser les prédictions granulaires disponibles sur les onglets [!UICONTROL Summary] et [!UICONTROL Details] pour garantir une prise de décision éclairée pour une utilisation efficace de la licence.
 
 ![L’affichage récapitulatif d’un produit Platform avec la colonne d’utilisation prédite mise en surbrillance.](../images/license-usage/summary-predicted-usage.png)
+
+Le pourcentage d’utilisation prévue est déterminé comme suit :
+
+- Si les limites inférieure et supérieure sont significativement différentes, elles s’affichent sous la forme d’une plage (par exemple, entre 32 % et 35 %).
+- Si les limites inférieure et supérieure sont presque identiques et non nulles, elles s’affichent sous la forme d’une valeur approximative (par exemple, ~34 %).
+- Si les limites inférieure et supérieure sont presque identiques et nulles, elles s’affichent exactement à 0 %.
+
+>[!NOTE]
+>
+Dans ce contexte, &quot;Presque identique&quot; signifie que les valeurs sont statistiquement significatives à deux décimales (par exemple, une limite inférieure de 0,342 et une limite supérieure de 0,344 sont toutes deux arrondies à 34 %).
 
 La fonction d’utilisation prévue prend en charge les mesures suivantes :
 
