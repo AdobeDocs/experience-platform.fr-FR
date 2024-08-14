@@ -5,10 +5,10 @@ breadcrumb-title: Guide de Segmentation Service
 user-guide-description: Créez des audiences à partir de vos données de profil client en temps réel à l’aide des définitions de segment générées par Adobe Experience Platform ou de sources externes.
 feature: Segments
 role: User
-source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
+source-git-commit: 0bbee2100ed6fdc0f40457965e195d07de6eb2a1
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 90%
+source-wordcount: '194'
+ht-degree: 92%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 90%
    - [Audience Portal](ui/audience-portal.md)
    - [Composition de l’audience](ui/audience-composition.md)
    - [Créateur de segments](ui/segment-builder.md)
-   - [Composition de l’audience fédérée (disponibilité limitée)](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
+   - [Composition d’audiences fédérées (disponibilité limitée)](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/home)
    - [Audiences de compte](ui/account-audiences.md)
    - [Audiences semblables](ui/lookalike-audiences.md)
    - [Audiences de prospects](ui/prospect-audience.md)
@@ -73,6 +73,7 @@ ht-degree: 90%
    - [Import et utilisation d’audiences externes](tutorials/using-external-audiences.md)
    - [Création d’un jeu de données pour exporter des données](tutorials/create-dataset-export-segment.md)
    - [Application de la conformité à l’utilisation des données pour les segments](tutorials/governance.md)
+- [Mise à jour des critères d’éligibilité](./eligibility-criteria-update.md)
 - [Questions fréquentes](./faq.md)
 - [Référence d’API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 - [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
