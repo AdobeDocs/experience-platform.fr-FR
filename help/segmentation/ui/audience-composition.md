@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
 description: La Composition d’audience dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 44848a250cb6020744b51dc0d0247f5fa91ab2ef
+source-git-commit: e17403f0529c5b94869d3bd4e860c798db620d31
 workflow-type: tm+mt
-source-wordcount: '1952'
+source-wordcount: '1951'
 ht-degree: 83%
 
 ---
@@ -232,7 +232,7 @@ De plus, vous pouvez limiter le nombre de profils renvoyés en activant le bouto
 
 ## [!UICONTROL Fractionner] {#split-block}
 
-Le type de bloc **[!UICONTROL Fractionner]** vous permet de fractionner votre nouvelle audience en différentes sous-audiences. Vous pouvez fractionner cette audience en fonction d’un pourcentage ou d’un attribut. Lors de la division de votre audience en sous-audiences, cette division est **non** persistante. Cela signifie que les profils peuvent se trouver dans les différentes sous-audiences de chaque évaluation.
+Le type de bloc **[!UICONTROL Fractionner]** vous permet de fractionner votre nouvelle audience en différentes sous-audiences. Vous pouvez fractionner cette audience en fonction d’un pourcentage ou d’un attribut. Lors de la division de votre audience en sous-audiences, cette division est **non** persistante. Cela signifie que les profils peuvent se trouver dans différentes sous-audiences pour chaque évaluation.
 
 Pour ajouter un bloc **[!UICONTROL Fractionner]**, sélectionnez l’icône **+**, puis **[!UICONTROL Fractionner]**.
 
