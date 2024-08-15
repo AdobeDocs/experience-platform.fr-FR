@@ -3,7 +3,7 @@ title: Activer les audiences vers des destinations de personnalisation Edge
 description: Découvrez comment activer les audiences de Adobe Experience Platform vers les destinations de personnalisation de périphérie pour les cas d’utilisation de la personnalisation de la même page et de la page suivante.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
 workflow-type: tm+mt
 source-wordcount: '1957'
 ht-degree: 15%
@@ -47,7 +47,7 @@ Pour une brève présentation du partage d’audiences et d’attributs de profi
 
 ## Cas d’utilisation {#use-cases}
 
-Utilisez des solutions de personnalisation d’Adobe, telles qu’Adobe Target, ou vos propres plateformes de partenaire de personnalisation (par exemple, [!DNL Optimizely], [!DNL Pega]), ainsi que des systèmes propriétaires (par exemple, un CMS interne) pour offrir une expérience de personnalisation client plus approfondie via la destination [Personalization personnalisée](../catalog/personalization/custom-personalization.md). Tout cela tout en tirant parti des fonctionnalités Experience Platform de collecte et de segmentation des données Edge Network.
+Utilisez des solutions de personnalisation d’Adobe, telles qu’Adobe Target, ou vos propres plateformes de partenaire de personnalisation (par exemple, [!DNL Optimizely], [!DNL Pega]), ainsi que des systèmes propriétaires (par exemple, CMS interne) pour offrir une expérience de personnalisation client plus approfondie via la destination [Personalization personnalisé](../catalog/personalization/custom-personalization.md). Tout cela tout en tirant parti des fonctionnalités Experience Platform de collecte et de segmentation des données Edge Network.
 
 Les cas d’utilisation décrits ci-dessous incluent à la fois la personnalisation du site et la publicité ciblée sur site.
 
@@ -112,7 +112,7 @@ Suivez le [tutoriel sur la création de connexion de destination](../ui/connect-
 Selon la destination que vous configurez, reportez-vous aux articles suivants pour connaître les conditions préalables spécifiques à une destination et les informations connexes :
 
 * [Connexion Adobe Target](../catalog/personalization/adobe-target-connection.md#parameters)
-* [Connexion de personnalisation personnalisée](../catalog/personalization/custom-personalization.md##parameters)
+* [Connexion de personnalisation personnalisée](../catalog/personalization/custom-personalization.md#parameters)
 
 ## Sélectionner votre destination {#select-destination}
 

@@ -3,10 +3,10 @@ keywords: personnalisation cible;destination;destination cible Experience Platfo
 title: Connexion Adobe Target
 description: Adobe Target est une application qui permet la personnalisation et l’expérimentation en temps réel, grâce à l’IA, au niveau de toutes les interactions avec les clients entrants sur les sites web, les applications mobiles, etc.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
 workflow-type: tm+mt
-source-wordcount: '1555'
-ht-degree: 36%
+source-wordcount: '1755'
+ht-degree: 32%
 
 ---
 
@@ -35,6 +35,15 @@ Pour un bref aperçu de la configuration de la connexion Adobe Target dans Exper
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
+## Cas d’utilisation pris en charge en fonction du type d’implémentation {#supported-use-cases}
+
+Le tableau ci-dessous présente les cas d’utilisation pris en charge pour la destination Adobe Target, en fonction de votre type d’implémentation, avec ou sans [SDK Web](/help/web-sdk/home.md) et avec ou sans [segmentation Edge](/help/segmentation/home.md#edge) activée.
+
+| Mise en oeuvre d’Adobe Target *sans* SDK Web | Mise en oeuvre d’Adobe Target *avec* SDK Web | Mise en oeuvre d’Adobe Target *avec* SDK Web *et* segmentation de périphérie |
+|---|---|---|
+| <ul><li>Un flux de données n’est pas requis. Adobe Target peut être déployé par l’intermédiaire des méthodes d’implémentation [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [côté serveur](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation) ou [hybride](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation).</li><li>[La segmentation Edge](../../../segmentation/ui/edge-segmentation.md) n’est pas prise en charge.</li><li>[La personnalisation de la même page et de la page suivante](../../ui/activate-edge-personalization-destinations.md) ne sont pas prises en charge.</li><li>Vous pouvez partager des audiences et des attributs de profil avec la connexion Adobe Target pour l’ *environnement de test de production par défaut* et les environnements de test autres que les environnements par défaut.</li><li>Pour configurer la personnalisation de la prochaine session sans utiliser d’identifiant de flux de données, utilisez [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>Un flux de données avec Adobe Target et Experience Platform configurés en tant que services est requis.</li><li>La segmentation Edge fonctionne comme prévu.</li><li>[La personnalisation de la même page et de la page suivante](../../ui/activate-edge-personalization-destinations.md#use-cases) sont prises en charge.</li><li>Le partage d’audiences et d’attributs de profil à partir d’autres environnements de test est pris en charge.</li></ul> | <ul><li>Un flux de données avec Adobe Target et Experience Platform configurés en tant que services est requis.</li><li>Lors de la [configuration de la banque de données](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), ne cochez pas la case **Segmentation Edge** .</li><li>[La personnalisation de session suivante](../../ui/activate-edge-personalization-destinations.md#next-session) est prise en charge.</li><li>Le partage d’audiences et d’attributs de profil à partir d’autres environnements de test est pris en charge.</li></ul> |
+
+
 ## Conditions préalables {#prerequisites}
 
 ### Identifiant du flux de données {#datastream-id}
@@ -54,7 +63,7 @@ Dans Adobe Target, assurez-vous que votre utilisateur dispose des éléments sui
 * Accès à l’ [espace de travail par défaut](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#default-workspace) ;
 * **Approbateur** [rôle](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#roles-and-permissions).
 
-En savoir plus sur l’octroi d’autorisations pour [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80) et pour [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions).
+En savoir plus sur l&#39;octroi d&#39;autorisations pour [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80) et pour [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions).
 
 ## Audiences prises en charge {#supported-audiences}
 
@@ -62,7 +71,7 @@ Cette section décrit les types d’audiences que vous pouvez exporter vers cett
 
 >[!IMPORTANT]
 >
->Lors de l’activation des *audiences Edge pour les cas d’utilisation de personnalisation de la même page et de la page suivante*, les audiences *doivent* utiliser une [stratégie de fusion active sur la page suivante](../../../segmentation/ui/segment-builder.md#merge-policies). La stratégie de fusion [!DNL active-on-edge] garantit que les audiences sont constamment évaluées [sur la périphérie](../../../segmentation/ui/edge-segmentation.md) et qu’elles sont disponibles pour les cas d’utilisation de la personnalisation en temps réel et de la page suivante.  Lisez environ [tous les cas d’utilisation disponibles](#parameter), en fonction du type d’implémentation.
+>Lors de l’activation des *audiences Edge pour les cas d’utilisation de personnalisation de la même page et de la page suivante*, les audiences *doivent* utiliser une [stratégie de fusion active sur la page suivante](../../../segmentation/ui/segment-builder.md#merge-policies). La stratégie de fusion [!DNL active-on-edge] garantit que les audiences sont constamment évaluées [sur la périphérie](../../../segmentation/ui/edge-segmentation.md) et qu’elles sont disponibles pour les cas d’utilisation de la personnalisation en temps réel et de la page suivante.  Lisez environ [tous les cas d’utilisation disponibles](#parameters), en fonction du type d’implémentation.
 >Si vous mappez des audiences de périphérie qui utilisent une stratégie de fusion différente vers des destinations Adobe Target, ces audiences ne seront pas évaluées pour les cas d’utilisation en temps réel et de la page suivante.
 >Suivez les instructions de la section [création d’une politique de fusion](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy) et assurez-vous d’activer le bouton **[!UICONTROL Politique de fusion Active-On-Edge]**.
 
@@ -119,7 +128,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
   >
   >L’identifiant de flux de données est unique pour chaque connexion de destination Adobe Target. Si vous devez mapper les mêmes audiences à plusieurs jeux de données, vous devez [créer une nouvelle connexion de destination](../../ui/connect-destination.md) pour chaque identifiant de flux de données, et passer par le [flux d’activation d’audience](#activate).
 
-   * **[!UICONTROL Aucun]** : sélectionnez cette option si vous devez configurer la personnalisation Adobe Target, mais que vous ne pouvez pas implémenter le [SDK Web Experience Platform](/help/web-sdk/home.md). Lorsque vous utilisez cette option, les audiences exportées d’Experience Platform vers Target ne prennent en charge que la personnalisation de la prochaine session, et la segmentation Edge est désactivée. Reportez-vous au tableau ci-dessous pour une comparaison des cas d’utilisation disponibles par type d’implémentation.
+   * **[!UICONTROL Aucun]** : sélectionnez cette option si vous devez configurer la personnalisation Adobe Target, mais que vous ne pouvez pas implémenter le [SDK Web Experience Platform](/help/web-sdk/home.md). Lorsque vous utilisez cette option, les audiences exportées d’Experience Platform vers Target ne prennent en charge que la personnalisation de la prochaine session, et la segmentation Edge est désactivée. Consultez le tableau de la section [Cas d’utilisation pris en charge](#supported-use-cases) pour une comparaison des cas d’utilisation disponibles par type d’implémentation.
 
   | Mise en oeuvre d’Adobe Target *sans* SDK Web | Mise en oeuvre d’Adobe Target *avec* SDK Web | Mise en oeuvre d’Adobe Target *avec* SDK Web *et* segmentation de périphérie |
   |---|---|---|

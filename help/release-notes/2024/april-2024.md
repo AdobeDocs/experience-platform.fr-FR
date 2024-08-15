@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform
 description: Les notes de mise à jour d’avril 2024 pour Adobe Experience Platform.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
+source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
 workflow-type: tm+mt
 source-wordcount: '1895'
 ht-degree: 25%
@@ -74,7 +74,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Fonction | Description |
 | ----------- | ----------- |
 | Paramètre `isRequired` désormais disponible pour les champs de données client imbriqués dans Destination SDK | Lors de la configuration d’une destination dans Destination SDK, vous pouvez désormais [définir des champs de données client imbriqués comme requis](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields). Ainsi, les utilisateurs configurant votre destination ne peuvent pas poursuivre leur flux d’activation tant qu’ils n’ont pas sélectionné une valeur pour ce champ. |
-| La segmentation Edge n’est plus obligatoire lors de la configuration d’une destination Adobe Target avec SDK Web. | Auparavant, lors de la configuration d’une [destination Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) avec le SDK Web, la banque de données devait être activée pour la personnalisation et la segmentation Edge. L’exigence que le flux de données soit activé pour la segmentation Edge [a été supprimée ](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Notez que ce modèle d’intégration vous permet uniquement de bénéficier d’un sous-ensemble de cas d’utilisation de la personnalisation lors de l’utilisation d’Adobe Target avec Real-Time CDP. En savoir plus sur les [cas d’utilisation activés par type d’intégration](/help/destinations/catalog/personalization/adobe-target-connection.md#parameters). |
+| La segmentation Edge n’est plus obligatoire lors de la configuration d’une destination Adobe Target avec SDK Web. | Auparavant, lors de la configuration d’une [destination Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) avec le SDK Web, la banque de données devait être activée pour la personnalisation et la segmentation Edge. L’exigence que le flux de données soit activé pour la segmentation Edge [a été supprimée ](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Notez que ce modèle d’intégration vous permet uniquement de bénéficier d’un sous-ensemble de cas d’utilisation de la personnalisation lors de l’utilisation d’Adobe Target avec Real-Time CDP. En savoir plus sur les [cas d’utilisation activés par type d’intégration](/help/destinations/catalog/personalization/adobe-target-connection.md#supported-use-cases). |
 | [!BADGE Beta]{type=Informative} Supprimer plusieurs audiences et jeux de données des flux d’activation | Vous pouvez désormais sélectionner et supprimer plusieurs audiences et jeux de données des flux d’activation de destination. Pour plus d’informations, consultez la documentation [détails de destination](../../destinations/ui/destination-details-page.md#bulk-remove) et [ exportation de jeux de données](../../destinations/ui/export-datasets.md) . |
 
 {style="table-layout:auto"}
