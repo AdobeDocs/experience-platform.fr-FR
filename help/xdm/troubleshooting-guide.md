@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de dépannage du système XDM
 description: Trouvez des réponses aux questions fréquentes sur le modèle de données d’expérience (XDM), y compris les étapes pour résoudre les erreurs d’API courantes.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 83d3d31b2d24fd01876ff7b0f1c03a5670ed3845
 workflow-type: tm+mt
-source-wordcount: '1947'
-ht-degree: 100%
+source-wordcount: '2446'
+ht-degree: 79%
 
 ---
 
@@ -20,6 +20,10 @@ Ce document répond aux questions fréquentes sur [!DNL Experience Data Model] (
 ## FAQ
 
 Vous trouverez ci-dessous une liste de réponses aux questions fréquentes concernant le système XDM et l’utilisation de l’API [!DNL Schema Registry].
+
+## Concepts de base des schémas
+
+Dans cette section, vous trouverez des réponses aux questions fondamentales sur la structure des schémas, l’utilisation des champs et l’identification dans le système XDM.
 
 ### Comment ajouter des champs à un schéma ?
 
@@ -39,15 +43,59 @@ Toutes les ressources [!DNL Schema Registry] (schémas, groupes de champs, types
 
 Pour plus d’informations, consultez la section sur l’[identification des ressources](api/getting-started.md#resource-identification) dans le guide de l’API [!DNL Schema Registry].
 
-### Quand un schéma commence-t-il à éviter les modifications avec rupture ?
-
-Des modifications avec rupture peuvent être apportées à un schéma tant qu’il n’a jamais été utilisé pour la création d’un jeu de données ou activé pour être utilisé dans [[!DNL Real-Time Customer Profile]](../profile/home.md). Une fois qu’un schéma a été utilisé pour la création d’un jeu de données ou activé pour être utilisé avec [!DNL Real-Time Customer Profile], les règles de l’[évolution des schémas](schema/composition.md#evolution) sont strictement appliquées par le système.
-
 ### Quelle est la taille maximale d’un type de champ long ?
 
 Un type de champ long est un entier dont la taille maximale est de 53 (+1) bits, ce qui lui donne une plage potentielle comprise entre -9007199254740992 et 9007199254740992. Cela est dû à une limitation des possibilités de représentation des entiers longs lors des mises en œuvre de JSON en JavaScript.
 
 Pour plus d’informations sur les types de champs, consultez le document sur les [Contraintes de type de champ XDM](./schema/field-constraints.md).
+
+### Qu’est-ce que meta:AltId et comment puis-je le récupérer ?
+
+`meta:altId` est un identifiant unique pour un schéma. `meta:altId` fournit un ID de référence facile à utiliser dans les appels API. Cet identifiant évite d’avoir à être codé/décodé chaque fois qu’il est utilisé avec le format URI JSON.
+<!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
+
+<!-- ### How can I generate a sample payload for a schema? -->
+
+<!-- No Answer available.  -->
+<!-- INCOMPLETE ... -->
+
+### Puis-je obtenir un exemple de représentation JSON pour créer un type de données ?
+
+Vous pouvez utiliser l’API Schema Registry et l’interface utilisateur de Platform pour créer un type de données. Consultez la documentation pour obtenir des instructions sur la façon de :
+
+- [Création d’un type de données à l’aide de l’API](./api/data-types.md#create)
+- [Créer un type de données à l’aide de l’interface utilisateur](./ui/resources/data-types.md#create)
+
+### Quelles sont les restrictions d’utilisation pour un type de données de carte ?
+
+XDM impose les restrictions suivantes à l’utilisation de ce type de données :
+
+- Les types de mappage DOIVENT être de type objet .
+- Les types de carte NE DOIVENT PAS avoir de propriétés définies (en d’autres termes, ils définissent des objets &quot;vides&quot;).
+- Les types de mappage DOIVENT inclure un champ additionalProperties.type qui décrit les valeurs qui peuvent être placées dans le mappage, soit une chaîne, soit un entier.
+- La segmentation d’entités multiples ne peut être définie que sur la base des clés de mappage et non des valeurs.
+- Les cartes ne sont pas prises en charge pour les audiences de compte.
+
+Pour plus d’informations, voir les [restrictions d’utilisation des objets map](./ui/fields/map.md#restrictions) .
+
+>[!NOTE]
+>
+>Les cartes à plusieurs niveaux ou les cartes de cartes ne sont pas prises en charge.
+
+<!-- You cannot create a complex map object. However, you can define map fields in the Schema Editor. See the guide on [defining map fields in the UI](./ui/fields/map.md) for more information. -->
+
+<!-- ### How do I create a complex map object using APIs? -->
+
+<!-- You cannot create a complex map object. -->
+
+<!-- ### How can I manage schema inheritance in Adobe Experience Platform? -->
+
+<!-- No Answer available.  -->
+<!-- INCOMPLETE ... -->
+
+## Identity Management du schéma
+
+Cette section contient des réponses aux questions courantes concernant la définition et la gestion des identités au sein de vos schémas.
 
 ### Comment définir les identités pour mon schéma ?
 
@@ -55,7 +103,7 @@ Dans [!DNL Experience Platform], les identités sont utilisées pour identifier 
 
 Les champs peuvent être marqués comme identités à l’aide de l’API ou de l’interface utilisateur.
 
-#### Définition des identités dans l’API
+### Définition des identités dans l’API
 
 Dans l’API, les identités sont établies en créant des descripteurs d’identité. Les descripteurs d’identité signalent qu’une propriété spécifique d’un schéma est un identifiant unique.
 
@@ -63,7 +111,7 @@ Les descripteurs d’identité sont créés par une requête POST au point d’e
 
 Pour plus d’informations sur la création de descripteurs d’identité dans l’API, consultez le document sur la section des [descripteurs](api/descriptors.md) dans le guide de développement du [!DNL Schema Registry].
 
-#### Définition des identités dans l’interface utilisateur
+### Définition des identités dans l’interface utilisateur
 
 Une fois votre schéma ouvert dans l’éditeur de schémas, sélectionnez le champ de la section **[!UICONTROL Structure]** de l’éditeur que vous souhaitez marquer comme identité. Sous **[!UICONTROL Propriétés du champ]** à droite, cochez la case **[!UICONTROL Identité]**.
 
@@ -73,22 +121,49 @@ Pour plus d’informations sur la gestion des identités dans l’interface util
 
 Les identités principales sont facultatives, car les schémas peuvent en avoir une ou aucune. Cependant, un schéma doit avoir une identité principale afin de pouvoir être utilisé dans [!DNL Real-Time Customer Profile]. Pour plus d’informations, consultez la section [Identité](./tutorials/create-schema-ui.md#identity-field) du tutoriel de l’éditeur de schémas.
 
+## Activation du profil de schéma
+
+Cette section fournit des conseils sur l’activation des schémas à utiliser avec Real-time Customer Profile.
+
 ### Comment activer un schéma pour l’utiliser dans [!DNL Real-Time Customer Profile] ?
 
 Les schémas peuvent être utilisés dans [[!DNL Real-Time Customer Profile]](../profile/home.md) grâce à l’ajout d’une balise « union » dans l’attribut `meta:immutableTags` du schéma. L’activation d’un schéma à utiliser avec [!DNL Profile] peut se faire à l’aide de l’API ou de l’interface utilisateur.
 
-#### Activation d’un schéma existant pour [!DNL Profile] à l’aide de l’API
+### Activation d’un schéma existant pour [!DNL Profile] à l’aide de l’API
 
 Effectuez une requête PATCH pour mettre à jour le schéma et ajoutez l’attribut `meta:immutableTags` sous forme de tableau contenant la valeur « union ». Si la mise à jour se déroule correctement, la réponse affichera le schéma mis à jour qui contient désormais la balise union.
 
 Pour plus d’informations sur l’utilisation de l’API pour activer un schéma à utiliser dans [!DNL Real-Time Customer Profile], consultez le document sur les [unions](./api/unions.md) du guide de développement du [!DNL Schema Registry].
 
-#### Activation d’un schéma existant pour [!DNL Profile] à l’aide de l’interface utilisateur
+### Activation d’un schéma existant pour [!DNL Profile] à l’aide de l’interface utilisateur
 
 Dans [!DNL Experience Platform], cliquez sur **[!UICONTROL Schémas]** dans le volet de navigation de gauche, et sélectionnez le nom du schéma que vous souhaitez activer dans la liste des schémas. Ensuite, dans la partie droite de l’éditeur, sous **[!UICONTROL Propriétés du schéma]**, sélectionnez **[!UICONTROL Profile]** pour l’activer.
 
-
 Pour plus d’informations, consultez la section sur l’[utilisation dans le profil client en temps réel](./tutorials/create-schema-ui.md#profile) dans le tutoriel de l’[!UICONTROL éditeur de schémas].
+
+### Lorsque des données Adobe Analytics sont importées en tant que source, le schéma créé automatiquement est-il activé pour Profile ?
+
+Le schéma n’est pas automatiquement activé pour Real-time Customer Profile. Vous devez activer explicitement le jeu de données pour Profile en fonction du schéma activé pour Profile. Consultez la documentation pour découvrir les [ étapes et exigences nécessaires pour activer un jeu de données à utiliser dans Real-time Customer Profile ](../catalog/datasets/user-guide.md#enable-profile).
+
+### Puis-je supprimer des schémas activés dans Profile ?
+
+Vous ne pouvez pas supprimer un schéma une fois qu’il a été activé pour Real-Time Customer Profile. Une fois qu’un schéma est activé pour Profile, il ne peut pas être désactivé ni supprimé et les champs ne peuvent pas être supprimés du schéma. Par conséquent, il est essentiel de planifier et de vérifier soigneusement la configuration du schéma avant de l’activer pour Profile. Vous pouvez toutefois supprimer un jeu de données activé par Profile. Vous trouverez des informations ici : <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+
+>[!IMPORTANT]
+>
+>Pour supprimer un schéma activé par Profile, vous avez besoin de l’aide de l’équipe d’assistance de la plateforme XDM et devez suivre les étapes suivantes :
+>
+> 1. Supprimer tous les jeux de données associés au schéma (activé pour Profile)
+> 2. Supprimez l’instantané de l’exportation du profil de l’environnement de test (cela nécessite l’aide de l’équipe d’assistance XDM Platform).
+> 3. Forcer la suppression du schéma de l’environnement de test (cette opération ne peut être effectuée que par l’équipe d’assistance de la plateforme XDM)
+
+## Modification et restrictions du schéma
+
+Cette section fournit des clarifications sur les règles de modification de schéma et sur la prévention des modifications entraînant une rupture.
+
+### Quand un schéma commence-t-il à éviter les modifications avec rupture ?
+
+Des modifications avec rupture peuvent être apportées à un schéma tant qu’il n’a jamais été utilisé pour la création d’un jeu de données ou activé pour être utilisé dans [[!DNL Real-Time Customer Profile]](../profile/home.md). Une fois qu’un schéma a été utilisé pour la création d’un jeu de données ou activé pour être utilisé avec [!DNL Real-Time Customer Profile], les règles de l’[évolution des schémas](schema/composition.md#evolution) sont strictement appliquées par le système.
 
 ### Puis-je modifier directement un schéma d’union ?
 
@@ -99,6 +174,10 @@ Pour plus d’informations sur les unions dans XDM, consultez la section sur les
 ### Comment dois-je formater mon fichier de données pour ingérer des données dans mon schéma ?
 
 [!DNL Experience Platform] accepte les fichiers de données au format [!DNL Parquet] ou JSON. Le contenu de ces fichiers doit être conforme au schéma référencé par le jeu de données. Pour plus d’informations sur les bonnes pratiques en matière d’ingestion de fichiers de données, reportez-vous à la [présentation de l’ingestion par lots](../ingestion/home.md).
+
+### Comment puis-je convertir un schéma en lecture seule ?
+
+Actuellement, vous ne pouvez pas convertir un schéma en lecture seule.
 
 ## Erreurs et résolution des problèmes
 
@@ -127,14 +206,14 @@ Cette erreur s’affiche lorsque le système n’a pas pu trouver une ressource 
 >
 >Selon le type de ressource récupéré, cette erreur peut utiliser l’une des URI `type` suivantes :
 >
->* `http://ns.adobe.com/aep/errors/XDM-1010-404`
->* `http://ns.adobe.com/aep/errors/XDM-1011-404`
->* `http://ns.adobe.com/aep/errors/XDM-1012-404`
->* `http://ns.adobe.com/aep/errors/XDM-1013-404`
->* `http://ns.adobe.com/aep/errors/XDM-1014-404`
->* `http://ns.adobe.com/aep/errors/XDM-1015-404`
->* `http://ns.adobe.com/aep/errors/XDM-1016-404`
->* `http://ns.adobe.com/aep/errors/XDM-1017-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1010-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1011-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1012-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1013-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1014-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1015-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1016-404`
+>- `http://ns.adobe.com/aep/errors/XDM-1017-404`
 
 Pour plus d’informations sur la création de chemins de recherche dans l’API, consultez les sections sur les [conteneurs](./api/getting-started.md#container) et l’[identification des ressources](api/getting-started.md#resource-identification) dans le guide du développement de [!DNL Schema Registry].
 
@@ -182,17 +261,17 @@ Les ressources définies par votre organisation doivent doter leurs champs d’u
 >
 >Selon la nature spécifique de l’erreur d’espace de noms, cette erreur peut utiliser l’une des URI `type` suivantes avec différents détails de message :
 >
->* `http://ns.adobe.com/aep/errors/XDM-1020-400`
->* `http://ns.adobe.com/aep/errors/XDM-1021-400`
->* `http://ns.adobe.com/aep/errors/XDM-1022-400`
->* `http://ns.adobe.com/aep/errors/XDM-1023-400`
->* `http://ns.adobe.com/aep/errors/XDM-1024-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1020-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1021-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1022-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1023-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1024-400`
 
 Vous trouverez des exemples détaillés de structures de données appropriées pour les ressources XDM dans le guide de l’API Schema Registry :
 
-* [Créer une classe personnalisée](./api/classes.md#create)
-* [Créer un groupe de champs personnalisé](./api/field-groups.md#create)
-* [Créer un type de données personnalisé](./api/data-types.md#create)
+- [Créer une classe personnalisée](./api/classes.md#create)
+- [Créer un groupe de champs personnalisé](./api/field-groups.md#create)
+- [Créer un type de données personnalisé](./api/data-types.md#create)
 
 ### En-tête Accept non valide
 
@@ -219,10 +298,10 @@ Selon le point d’entrée que vous utilisez, la propriété `detailed-message` 
 >
 >Selon le point d’entrée utilisé, cette erreur peut utiliser l’une des URI `type` suivantes :
 >
->* `http://ns.adobe.com/aep/errors/XDM-1006-400`
->* `http://ns.adobe.com/aep/errors/XDM-1007-400`
->* `http://ns.adobe.com/aep/errors/XDM-1008-400`
->* `http://ns.adobe.com/aep/errors/XDM-1009-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1006-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1007-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1008-400`
+>- `http://ns.adobe.com/aep/errors/XDM-1009-400`
 
 Pour obtenir la liste des en-têtes Accept compatibles pour les différentes requêtes API, veuillez vous référer aux sections correspondantes dans le [guide de développement du registre des schémas](./api/overview.md).
 
