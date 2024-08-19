@@ -2,9 +2,9 @@
 title: Accès à l’ECID
 description: Découvrez comment accéder à l’ID d’Experience Cloud à partir de la préparation de données ou des balises.
 exl-id: 8e63a873-d7b5-4c6c-b14d-3c3fbc82b62f
-source-git-commit: e01dfcf3cccea589083a23171f4b8d9ecad58233
+source-git-commit: e53ae6053a4b00e7e75242b95496c6795953005a
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '283'
 ht-degree: 3%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 3%
 Vous pouvez accéder à l’ECID par l’intermédiaire de l’option [Préparation de données pour la collecte de données](../../../../datastreams/data-prep.md) (recommandée) ou par l’intermédiaire de balises.
 
 ## Accès à l’ECID via la préparation des données (méthode préférée) {#accessing-ecid-data-prep}
+
+Cette méthode utilise [Préparation de données pour la collecte de données](../../../../datastreams/data-prep.md) pour configurer un mappage personnalisé pour `ECID`.
+
+Pour découvrir comment utiliser cette fonctionnalité, consultez la documentation [Préparation de données pour la collecte de données](../../../../datastreams/data-prep.md) .
 
 Si vous souhaitez définir l’ECID dans un champ XDM personnalisé, en plus de l’avoir dans la carte d’identité, vous pouvez le faire en définissant le `source` sur le chemin suivant :
 
