@@ -5,10 +5,10 @@ breadcrumb-title: Playbooks de cas d’utilisation d’Adobe Experience Platfo
 user-guide-description: Utilisez les playbooks dans Adobe Experience Platform pour générer des ressources et commencer divers cas pratiques marketing.
 feature: Playbooks
 role: User
-source-git-commit: 7f4ce404836bb9df4ff203db74c1bd17431c5b96
+source-git-commit: 44956c2c658ff2e0a5673f2898b344a6221d79b3
 workflow-type: tm+mt
-source-wordcount: '73'
-ht-degree: 68%
+source-wordcount: '76'
+ht-degree: 63%
 
 ---
 
@@ -17,8 +17,8 @@ ht-degree: 68%
 
 * Playbooks {#playbooks}
    * [Vue d’ensemble](/help/use-case-playbooks/playbooks/overview.md)
-   * [Commencer](/help/use-case-playbooks/playbooks/get-started.md)
    * [Accédez aux classeurs de cas d’utilisation](/help/use-case-playbooks/playbooks/navigate.md)
+   * [Autre façon de commencer](/help/use-case-playbooks/playbooks/get-started.md)
    * [Manuels de cas d’utilisation disponibles](/help/use-case-playbooks/playbooks/playbooks-list.md)
    * [Choisissez parmi une sélection de livres de lecture](/help/use-case-playbooks/playbooks/choose.md)
    * [Créer, partager et réutiliser des instances de playbook](/help/use-case-playbooks/playbooks/create-share-reuse.md)
