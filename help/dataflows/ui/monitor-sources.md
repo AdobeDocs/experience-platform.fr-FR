@@ -2,10 +2,10 @@
 description: Découvrez comment utiliser le tableau de bord de surveillance pour surveiller les données ingérées à partir de sources.
 title: Surveillance des flux de données pour les sources dans l’interface utilisateur
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 9d9ae58997ec1c23af2a9124321fdfd9f03b7c4e
 workflow-type: tm+mt
-source-wordcount: '1256'
-ht-degree: 22%
+source-wordcount: '1320'
+ht-degree: 21%
 
 ---
 
@@ -62,9 +62,9 @@ La partie inférieure du tableau de bord affiche un tableau qui décrit le rappo
 
 | Mesures | Description |
 | --- | --- |
-| Enregistrements reçus | Nombre total d’enregistrements reçus de la source. |
+| Enregistrements reçus | Nombre total d’enregistrements reçus d’une source donnée. |
 | Enregistrements ingérés | Nombre total d’enregistrements ingérés dans le lac de données. |
-| Enregistrements ignorés | Nombre total d’enregistrements ignorés. |
+| Enregistrements ignorés | Nombre total d’enregistrements ignorés. Un enregistrement ignoré fait référence à des champs qui ont été ignorés car ils n’étaient pas nécessaires à l’ingestion. Par exemple, si vous créez un flux de données de sources avec l’ingestion partielle activée, vous pouvez configurer un seuil de taux d’erreur acceptable. Pendant le processus d’ingestion, l’ingestion ignore les enregistrements des champs qui ne sont pas obligatoires, tels que les champs d’identité, tant qu’ils se trouvent dans le seuil d’erreur. |
 | Échec des enregistrements | Nombre total d’enregistrements qui n’ont pas pu être ingérés en raison d’erreurs. |
 | Taux d&#39;ingestion | Pourcentage d’enregistrements ingérés en fonction du nombre total d’enregistrements reçus. |
 | Nombre total de flux de données ayant échoué | Nombre total de flux de données ayant échoué. |
