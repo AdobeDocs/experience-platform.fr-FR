@@ -3,9 +3,9 @@ title: Priorité d’espace de noms
 description: Découvrez la priorité des espaces de noms dans Identity Service.
 badge: Version bêta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: c9610f935a074adf82d96c1eb824c159b18f2837
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1639'
 ht-degree: 2%
 
 ---
@@ -78,13 +78,13 @@ Pour les structures graphiques relativement complexes, la priorité des espaces 
 * Pour les événements d’expérience, une fois que vous avez configuré les paramètres d’identité pour un environnement de test donné, l’identité principale sera déterminée par la priorité d’espace de noms la plus élevée.
    * En effet, les événements d’expérience sont dynamiques par nature. Un mappage d’identité peut contenir trois identités ou plus et la priorité de l’espace de noms garantit que l’espace de noms le plus important est associé à l’événement d’expérience.
 * Par conséquent, les configurations **suivantes ne seront plus utilisées par Real-Time Customer Profile** :
-   * Case à cocher &quot;Principal&quot; sur le type d’élément de données dans WebSDK.
+   * La case à cocher &quot;Principal&quot; sur le type d’élément de données dans WebSDK (qui se traduit par `primary=true` dans identityMap). **Remarque** : L’espace de noms d’identité et la valeur d’identité continueront à être utilisés dans Profile. De plus, vous devez toujours configurer vos paramètres de case à cocher &quot;Principal&quot;, car les services en dehors de Real-Time Customer Profile continueront à faire référence à cette configuration.
    * Tous les champs marqués comme identité principale sur un schéma de classe d’événement d’expérience XDM.
    * Paramètres d’identité principale par défaut dans le connecteur source Adobe Analytics (ECID ou AAID).
 * D’un autre côté, la priorité **espace de noms ne détermine pas l’identité principale des enregistrements de profil**.
    * Pour les enregistrements de profil, vous pouvez utiliser l’espace de travail des schémas de l’interface utilisateur de l’Experience Platform pour définir vos champs d’identité, y compris l’identité principale. Pour plus d’informations, consultez le guide sur la [définition des champs d’identité dans l’interface utilisateur](../../xdm/ui/fields/identity.md) .
 
->[!NOTE]
+>[!TIP]
 >
 >* La priorité de l’espace de noms est **une propriété d’un espace de noms**. Il s’agit d’une valeur numérique attribuée à un espace de noms pour indiquer son importance relative.
 >
@@ -183,3 +183,7 @@ La fonction [Demandes de suppression de Privacy Service](../privacy.md) fonction
 * Lac de données : supprime tout enregistrement avec l’identité spécifiée comme identité principale ou secondaire.
 
 Pour plus d’informations, consultez la [présentation de Privacy Service](../../privacy-service/home.md).
+
+### Personnalisation Adobe Target et Edge
+
+[Personnalisation Edge](../../server-api/personalization-target.md) continuera à faire référence à la manière dont vous avez configuré la case à cocher &quot;Principal&quot; sur le type d’élément de données dans WebSDK (qui se traduit par `primary=true` dans identityMap).
