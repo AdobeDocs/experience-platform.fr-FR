@@ -214,8 +214,7 @@ Pour supprimer des jeux de données d’un flux de données existant, procédez 
 3. [!BADGE Beta] La page **[!UICONTROL Données d’activation]** de la destination apparaît. Utilisez les cases à cocher situées à gauche de la liste des jeux de données pour sélectionner les jeux de données à supprimer, puis sélectionnez **[!UICONTROL Supprimer les jeux de données]** dans le rail de droite pour déclencher la boîte de dialogue de confirmation de suppression des jeux de données.
 
    >[!NOTE]
-   >
-Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe.
+   >Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe.
 
    ![Boîte de dialogue Supprimer le jeu de données présentant la commande Supprimer le jeu de données dans le rail de droite.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
