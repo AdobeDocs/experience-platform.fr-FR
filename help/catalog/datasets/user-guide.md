@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des jeux de données
 description: Découvrez comment exécuter des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 10140efe33b42f9099b28564c9824839d83521a3
+source-git-commit: a168f61fabddd06d586f7909fd92c0409fd2f51e
 workflow-type: tm+mt
-source-wordcount: '3111'
+source-wordcount: '3203'
 ht-degree: 14%
 
 ---
@@ -38,6 +38,22 @@ Ce guide d’utilisation nécessite une compréhension professionnelle des compo
 >id="platform_datasets_browse_daysRemaining"
 >title="Expiration du jeu de données"
 >abstract="Cette colonne indique le nombre de jours restants au jeu de données cible avant son expiration automatique."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_datalakeretention"
+>title="Conservation des données"
+>abstract="Affiche la politique de conservation actuelle pour chaque jeu de données. Cette valeur peut être modifiée dans les paramètres de conservation de chaque jeu de données. Vous pouvez uniquement définir le délai de conservation pour le jeu de données ExperienceEvent."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_browse_profileretention"
+>title="Conservation des profils"
+>abstract="Affiche la politique de conservation actuelle pour chaque jeu de données. Cette valeur peut être modifiée dans les paramètres de conservation de chaque jeu de données. Vous pouvez uniquement définir le délai de conservation pour un jeu de données ExperienceEvent."
+
+>[!CONTEXTUALHELP]
+>id="platform_datasets_datalakesettings_datasetretention"
+>title="Conservation des jeux de données"
+>abstract="La rétention des données définit des règles pour la durée pendant laquelle les données sont stockées et quand elles doivent être supprimées dans différents services. Cela garantit la conformité aux réglementations, la gestion des coûts de stockage et la maintenance de la qualité des données."
+
 
 Dans l’interface utilisateur de [!DNL Experience Platform], sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour ouvrir le tableau de bord **[!UICONTROL Jeux de données]**. Le tableau de bord répertorie tous les jeux de données disponibles pour votre organisation. Des détails s’affichent pour chaque jeu de données répertorié, notamment son nom, le schéma auquel le jeu de données adhère et l’état de l’exécution d’ingestion la plus récente.
 

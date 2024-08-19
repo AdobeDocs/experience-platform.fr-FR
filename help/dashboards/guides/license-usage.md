@@ -4,9 +4,9 @@ title: Tableau de bord d’utilisation de la licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 090b870dcfb16e59831f1e03eb46b22da4f24f0f
+source-git-commit: 41c2d8e28536a140136c7eb20c2a4c3dc343f5fa
 workflow-type: tm+mt
-source-wordcount: '2429'
+source-wordcount: '2466'
 ht-degree: 8%
 
 ---
@@ -89,6 +89,10 @@ Pour afficher un résumé de l’utilisation des droits des produits, sélection
 ![ [!UICONTROL Utilisation de la licence] [!UICONTROL Aperçu] avec un produit et la colonne d’utilisation prédite mise en surbrillance.](../images/license-usage/product-predicted-usage.png)
 
 L’onglet Résumé s’affiche. Vous pouvez utiliser les prédictions granulaires disponibles sur les onglets [!UICONTROL Summary] et [!UICONTROL Details] pour garantir une prise de décision éclairée pour une utilisation efficace de la licence.
+
+>[!NOTE]
+>
+Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence de votre entreprise avec Adobe.
 
 ![L’affichage récapitulatif d’un produit Platform avec la colonne d’utilisation prédite mise en surbrillance.](../images/license-usage/summary-predicted-usage.png)
 
