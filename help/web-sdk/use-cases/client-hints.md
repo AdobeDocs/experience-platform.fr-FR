@@ -3,10 +3,10 @@ title: Conseils sur le client de l’agent utilisateur
 description: Découvrez comment les conseils client de l’agent utilisateur fonctionnent dans le SDK Web. Les conseils aux clients permettent aux propriétaires de sites web d’accéder à une grande partie des mêmes informations disponibles dans la chaîne de l’agent utilisateur, mais de manière plus respectueuse de la vie privée.
 keywords: user-agent;conseils client ; chaîne ; chaîne user-agent ; faible entropie ; grande entropie
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
 workflow-type: tm+mt
-source-wordcount: '1152'
-ht-degree: 3%
+source-wordcount: '1245'
+ht-degree: 4%
 
 ---
 
@@ -98,13 +98,16 @@ Les conseils client à faible entropie sont activés par défaut dans le SDK Web
 
 Les conseils client à forte entropie sont des informations plus détaillées sur l’appareil client, telles que la version de la plateforme, l’architecture, le modèle, la résolution (plateformes 64 ou 32 bits) ou la version complète du système d’exploitation. Ces informations peuvent éventuellement être utilisées pour l’empreinte digitale.
 
-| En-tête HTTP | JavaScript | Inclus par défaut dans l’agent utilisateur | Inclus par défaut dans les conseils client |
-|---|---|---|---|
-| `Sec-CH-UA-Platform-Version` | `platformVersion` | Oui | Non |
-| `Sec-CH-UA-Arc` | `architecture` | Oui | Non |
-| `Sec-CH-UA-Model` | `model` | Oui | Non |
-| `Sec-CH-UA-Bitness` | `Bitness` | Oui | Non |
-| `Sec-CH-UA-Full-Version-List` | `fullVersionList` | Oui | Non |
+| Propriété | Description | En-tête HTTP | Chemin XDM | Exemple | Inclus par défaut dans l’agent utilisateur | Inclus par défaut dans les conseils client |
+| --- | --- | --- | --- | --- |---|---|
+| Version du système d’exploitation | Version du système d’exploitation. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` | Oui | Non |
+| Architecture | Architecture du processeur sous-jacent. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` | Oui | Non |
+| Modèle de périphérique | Nom du périphérique utilisé. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` | Oui | Non |
+| Bitness | Nombre de bits pris en charge par l’architecture du processeur sous-jacente. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` | Oui | Non |
+| Fournisseur du navigateur | Société qui a créé le navigateur. L’indice d’entropie faible `Sec-CH-UA` collecte également cet élément. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` | Oui | Non |
+| Nom du navigateur | Le navigateur utilisé. L’indice d’entropie faible `Sec-CH-UA` collecte également cet élément. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` | Oui | Non |
+| Version du navigateur | Version significative du navigateur. L’indice d’entropie faible `Sec-CH-UA` collecte également cet élément. La version exacte du navigateur n’est pas collectée automatiquement. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` | Oui | Non |
+
 
 Les indices client à forte entropie sont désactivés par défaut dans le SDK Web. Pour les activer, vous devez configurer manuellement le SDK Web afin de demander des conseils client à forte entropie.
 

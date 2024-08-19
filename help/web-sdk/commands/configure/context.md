@@ -2,10 +2,10 @@
 title: contexte
 description: Collecte automatique des données d’appareil, d’environnement ou de lieu.
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
 workflow-type: tm+mt
-source-wordcount: '900'
-ht-degree: 14%
+source-wordcount: '915'
+ht-degree: 13%
 
 ---
 
@@ -89,21 +89,25 @@ Le mot-clé `implementationDetails` collecte des informations sur la version du 
 | Environnement | Environnement dans lequel les données ont été collectées. Cette valeur est toujours définie sur `browser`. | `xdm.implementationDetails.environment` | `browser` |
 
 
-### Conseils client à forte entropie
+### Conseils client à forte entropie {#high-entropy-client-hints}
+
+>[!TIP]
+>
+>Consultez la documentation sur les [conseils sur le client de l’agent utilisateur](../../use-cases/client-hints.md) pour obtenir des informations détaillées sur la manière de les configurer.
 
 Le mot-clé `"highEntropyUserAgentHints"` collecte des informations détaillées sur l’appareil de l’utilisateur. Ces données sont incluses dans l’en-tête HTTP de la demande envoyée à Adobe. Une fois les données arrivées dans le réseau Edge, l’objet XDM renseigne son chemin d’accès XDM respectif. Si vous définissez le chemin XDM respectif dans votre appel `sendEvent`, il est prioritaire sur la valeur de l’en-tête HTTP.
 
 Si vous utilisez des recherches d’appareils lors de la [configuration de votre flux de données](/help/datastreams/configure.md), les données peuvent être effacées au profit des valeurs de recherche d’appareils. Certains champs de conseil client et de recherche de périphérique ne peuvent pas exister dans le même accès.
 
-| Dimension | Description | En-tête HTTP | Chemin XDM | Exemple de valeur |
+| Propriété | Description | En-tête HTTP | Chemin XDM | Exemple |
 | --- | --- | --- | --- | --- |
-| Version du système d’exploitation | Version du système d’exploitation. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | |
-| Architecture | Architecture du processeur sous-jacent. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | |
-| Modèle de périphérique | Nom du périphérique utilisé. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | |
-| Bitness | Nombre de bits pris en charge par l’architecture du processeur sous-jacente. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | |
-| Fournisseur du navigateur | Société qui a créé le navigateur. L’indice d’entropie faible `Sec-CH-UA` collecte également cet élément. | `Sec-CH-UA-Full-Version-List` | | |
-| Nom du navigateur | Le navigateur utilisé. L’indice d’entropie faible `Sec-CH-UA` collecte également cet élément. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | |
-| Version du navigateur | Version significative du navigateur. L’indice d’entropie faible `Sec-CH-UA` collecte également cet élément. La version exacte du navigateur n’est pas collectée automatiquement. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | |
+| Version du système d’exploitation | Version du système d’exploitation. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` |
+| Architecture | Architecture du processeur sous-jacent. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` |
+| Modèle de périphérique | Nom du périphérique utilisé. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` |
+| Bitness | Nombre de bits pris en charge par l’architecture du processeur sous-jacente. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` |
+| Fournisseur du navigateur | Société qui a créé le navigateur. L’indice d’entropie faible `Sec-CH-UA` collecte également cet élément. | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` |
+| Nom du navigateur | Le navigateur utilisé. L’indice d’entropie faible `Sec-CH-UA` collecte également cet élément. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` |
+| Version du navigateur | Version significative du navigateur. L’indice d’entropie faible `Sec-CH-UA` collecte également cet élément. La version exacte du navigateur n’est pas collectée automatiquement. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` |
 
 {style="table-layout:auto"}
 
