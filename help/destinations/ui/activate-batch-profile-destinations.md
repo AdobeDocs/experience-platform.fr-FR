@@ -6,7 +6,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: d7a530c5ec2cad37b93273f5843609110d61cbfc
 workflow-type: tm+mt
 source-wordcount: '4077'
-ht-degree: 55%
+ht-degree: 58%
 
 ---
 
@@ -29,7 +29,7 @@ Cet article explique le processus requis pour activer les audiences dans Adobe E
 
 Pour activer les audiences vers les destinations, [ doit être connecté à une destination](./connect-destination.md). Si vous ne l’avez pas déjà fait, accédez au [catalogue de destinations](../catalog/overview.md), parcourez les destinations prises en charge et configurez la destination que vous souhaitez utiliser.
 
-## Formats de fichiers pris en charge pour l’exportation {#supported-file-formats-export}
+## Formats de fichiers pris en charge pour l’export {#supported-file-formats-export}
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"
@@ -39,12 +39,12 @@ Pour activer les audiences vers les destinations, [ doit être connecté à une 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="Mettre à jour la date de fin de ce corps de flux de données"
->abstract="En raison des mises à jour récentes apportées à cette destination, le flux de données nécessite désormais une date de fin. Adobe a défini une date de fin par défaut sur le 1er mars 2025. Mettez à jour à la date de fin souhaitée, sinon les exportations de données s’arrêteront à la date par défaut."
+>abstract="En raison des mises à jour récentes apportées à cette destination, le flux de données nécessite désormais une date de fin. Adobe a défini une date de fin par défaut sur le 1er mars 2025. Mettez à jour à la date de fin souhaitée. Dans le cas contraire, les exports de données s’arrêteront à la date par défaut."
 
 >[!CONTEXTUALHELP]
 >id="destinations_folder_name_template"
 >title="Modifier le chemin du dossier"
->abstract="Utilisez plusieurs macros fournies pour personnaliser le chemin du dossier dans lequel les jeux de données sont exportés."
+>abstract="Utilisez plusieurs macros fournies pour personnaliser le chemin du dossier dans lequel le jeu de données est exporté."
 
 >[!CONTEXTUALHELP]
 >id="destinations_folder_name_template_preview"

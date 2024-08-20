@@ -180,17 +180,17 @@ Lorsque vous avez terminé de renseigner les détails sur votre connexion de des
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
->title="Origine de l&#39;audience"
+>title="Origine de l’audience"
 >abstract="Les annonceurs ont collecté des données directement auprès des clients."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_partners"
->title="Origine de l&#39;audience"
+>title="Origine de l’audience"
 >abstract="Les annonceurs ont collecté des données directement auprès de leurs partenaires."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
->title="Origine de l&#39;audience"
+>title="Origine de l’audience"
 >abstract="Les annonceurs ont collecté des données directement auprès de leurs clients et partenaires."
 
 >[!IMPORTANT]

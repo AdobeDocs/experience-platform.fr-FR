@@ -45,7 +45,7 @@ Pour plus d’informations sur les états, reportez-vous au tableau suivant :
 | En cours de traitement | L’état `Processing` indique qu’un flux de données n’est pas encore actif. Cet état est souvent rencontré immédiatement après la création d’un nouveau flux de données. |
 | Erreur | L’état `Error` indique que le processus d’activation d’un flux de données a été interrompu. |
 
-### Exécutions de flux de données pour les destinations de diffusion en flux continu {#dataflow-runs-for-streaming-destinations}
+### Exécutions de flux de données pour les destinations de diffusion en continu {#dataflow-runs-for-streaming-destinations}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_dataflow_run_details_activation_streaming"

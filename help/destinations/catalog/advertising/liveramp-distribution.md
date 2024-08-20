@@ -123,13 +123,13 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_acast_client"
 >title="Nom du client ou de la cliente"
->abstract="Nom de votre compte publicitaire, tel que vous souhaitez le présenter au partenaire ou à la partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux."
+>abstract="Nom de votre compte publicitaire, tel que vous souhaitez le présenter au partenaire ou à la partenaire de destination. Utilisez le nom de votre société. N’utilisez ni espaces ni caractères spéciaux."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
 ![Image de l’interface utilisateur de Platform montrant les champs de données du client pour la destination Acast.](../../assets/catalog/advertising/liveramp-distribution/LR_Acast_DestSpecific.png)
 
-* **[!UICONTROL Nom du client]** : nom de votre compte publicitaire, comme vous souhaitez qu’il soit présenté au partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux.
+* **[!UICONTROL Nom du client]** : nom de votre compte publicitaire, comme vous souhaitez qu’il soit présenté au partenaire de destination. Utilisez le nom de votre société. N’utilisez ni espaces ni caractères spéciaux.
 
 ### [!DNL Ampersand.tv] {#ampersand-tv}
 
@@ -142,33 +142,33 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 
 ![Image de l’interface utilisateur de Platform montrant les champs de données client pour la destination d’esperluette.](../../assets/catalog/advertising/liveramp-distribution/LR_Ampersand_DestSpecific.png)
 
-* **[!UICONTROL Nom de votre société]** : nom de votre société, comme vous souhaitez qu’il soit présenté au partenaire de destination. N&#39;utilisez ni espaces ni caractères spéciaux.
+* **[!UICONTROL Nom de votre société]** : nom de votre société, comme vous souhaitez qu’il soit présenté au partenaire de destination. N’utilisez ni espaces ni caractères spéciaux.
 
 ### [!DNL Captify] {#captify}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_captify_client"
 >title="Nom du client ou de la cliente"
->abstract="Nom de votre compte publicitaire, tel que vous souhaitez le présenter au partenaire ou à la partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux."
+>abstract="Nom de votre compte publicitaire, tel que vous souhaitez le présenter au partenaire ou à la partenaire de destination. Utilisez le nom de votre société. N’utilisez ni espaces ni caractères spéciaux."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
 ![Image de l’interface utilisateur de Platform montrant les champs de données du client pour la destination de résumé.](../../assets/catalog/advertising/liveramp-distribution/LR_Captify_DestSpecific.png)
 
-* **[!UICONTROL Nom du client]** : nom de votre compte publicitaire, comme vous souhaitez qu’il soit présenté au partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux.
+* **[!UICONTROL Nom du client]** : nom de votre compte publicitaire, comme vous souhaitez qu’il soit présenté au partenaire de destination. Utilisez le nom de votre société. N’utilisez ni espaces ni caractères spéciaux.
 
 ### [!DNL Cardlytics] {#cardlytics}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_cardlytics_client"
 >title="Nom du client ou de la cliente"
->abstract="Nom de votre compte publicitaire, tel que vous souhaitez le présenter au partenaire ou à la partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux."
+>abstract="Nom de votre compte publicitaire, tel que vous souhaitez le présenter au partenaire ou à la partenaire de destination. Utilisez le nom de votre société. N’utilisez ni espaces ni caractères spéciaux."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
 ![Image de l’interface utilisateur de Platform montrant les champs de données du client pour la destination Cardlytics.](../../assets/catalog/advertising/liveramp-distribution/LR_Cardlytics_DestSpecific.png)
 
-* **[!UICONTROL Nom du client]** : nom de votre compte publicitaire, comme vous souhaitez qu’il soit présenté au partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux.
+* **[!UICONTROL Nom du client]** : nom de votre compte publicitaire, comme vous souhaitez qu’il soit présenté au partenaire de destination. Utilisez le nom de votre société. N’utilisez ni espaces ni caractères spéciaux.
 
 ### [!DNL Disney (Hulu/ESPN/ABC)] {#disney}
 
@@ -182,7 +182,7 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_client"
 >title="Nom du client ou de la cliente"
->abstract="Nom de votre compte publicitaire, tel que vous souhaitez le présenter au partenaire ou à la partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux."
+>abstract="Nom de votre compte publicitaire, tel que vous souhaitez le présenter au partenaire ou à la partenaire de destination. Utilisez le nom de votre société. N’utilisez ni espaces ni caractères spéciaux."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_email"
@@ -202,13 +202,13 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_iheartmedia_client"
 >title="Nom du client ou de la cliente"
->abstract="Nom de votre compte publicitaire, tel que vous souhaitez le présenter au partenaire ou à la partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux."
+>abstract="Nom de votre compte publicitaire, tel que vous souhaitez le présenter au partenaire ou à la partenaire de destination. Utilisez le nom de votre société. N’utilisez ni espaces ni caractères spéciaux."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
 ![Image de l’interface utilisateur de Platform montrant les champs de données du client pour la destination iHeartMedia.](../../assets/catalog/advertising/liveramp-distribution/LR_iHeart_DestSpecific.png)
 
-* **[!UICONTROL Nom du client]** : nom de votre compte publicitaire, comme vous souhaitez qu’il soit présenté au partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux.
+* **[!UICONTROL Nom du client]** : nom de votre compte publicitaire, comme vous souhaitez qu’il soit présenté au partenaire de destination. Utilisez le nom de votre société. N’utilisez ni espaces ni caractères spéciaux.
 
 ### [!DNL Index Exchange] {#index-exchange}
 
@@ -228,13 +228,13 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_magnitectv_client"
 >title="client"
->abstract="Nom de votre client ou cliente, tel que vous souhaitez le présenter au partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux."
+>abstract="Nom de votre client ou cliente, tel que vous souhaitez le présenter au partenaire de destination. Utilisez le nom de votre société. N’utilisez ni espaces ni caractères spéciaux."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
 ![Image de l’interface utilisateur de Platform montrant les champs de données client pour la destination Magnite CTV.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteCTV_DestSpecific.png)
 
-* **[!UICONTROL Client]** : votre nom de client, comme vous souhaitez qu’il soit présenté au partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux.
+* **[!UICONTROL Client]** : votre nom de client, comme vous souhaitez qu’il soit présenté au partenaire de destination. Utilisez le nom de votre société. N’utilisez ni espaces ni caractères spéciaux.
 
 ### [!DNL Magnite DV+ (Rubicon Project)] {#magnite-dv}
 
@@ -304,13 +304,13 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_pandora_account_name"
 >title="Nom du compte"
->abstract="Nom de votre compte Pandora. Contactez le représentant ou la représentante de votre compte Pandora si vous ne savez pas quel est le nom de votre compte. N&#39;utilisez ni espaces ni caractères spéciaux."
+>abstract="Nom de votre compte Pandora. Contactez le représentant ou la représentante de votre compte Pandora si vous ne savez pas quel est le nom de votre compte. N’utilisez ni espaces ni caractères spéciaux."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
 ![Image de l&#39;interface utilisateur de Platform montrant les champs de données du client pour la destination Pandora.](../../assets/catalog/advertising/liveramp-distribution/LR_Pandora_DestSpecific.png)
 
-* **[!UICONTROL Nom du compte]** : nom de votre compte Pandora. Contactez le représentant ou la représentante de votre compte Pandora si vous ne savez pas quel est le nom de votre compte. N&#39;utilisez ni espaces ni caractères spéciaux.
+* **[!UICONTROL Nom du compte]** : nom de votre compte Pandora. Contactez le représentant ou la représentante de votre compte Pandora si vous ne savez pas quel est le nom de votre compte. N’utilisez ni espaces ni caractères spéciaux.
 
 ### [!DNL Reddit] {#reddit}
 
@@ -322,14 +322,14 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_reddit_advertiser_name"
 >title="Nom d&#39;annonceur Reddit"
->abstract="Votre nom d’annonceur Reddit. N&#39;utilisez ni espaces ni caractères spéciaux."
+>abstract="Votre nom d’annonceur Reddit. N’utilisez ni espaces ni caractères spéciaux."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
 ![Image de l’interface utilisateur de Platform montrant les champs de données du client pour la destination Reddit.](../../assets/catalog/advertising/liveramp-distribution/LR_Reddit_DestSpecific.png)
 
 * **[!UICONTROL Reddit advertiser ID]** : votre identifiant Reddit advertiser. Doit commencer par « t2_ » ou « a2_ ». Contactez le représentant ou la représentante de votre compte Reddit si vous ne connaissez pas votre identifiant d’annonceur.
-* **[!UICONTROL Reddit advertiser name]** : nom de votre publicitaire Reddit. N&#39;utilisez ni espaces ni caractères spéciaux.
+* **[!UICONTROL Reddit advertiser name]** : nom de votre publicitaire Reddit. N’utilisez ni espaces ni caractères spéciaux.
 
 ### [!DNL Roku] {#roku}
 
@@ -355,13 +355,13 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_spotify_client"
 >title="Nom du client ou de la cliente"
->abstract="Nom de votre compte publicitaire, tel que vous souhaitez le présenter au partenaire ou à la partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux."
+>abstract="Nom de votre compte publicitaire, tel que vous souhaitez le présenter au partenaire ou à la partenaire de destination. Utilisez le nom de votre société. N’utilisez ni espaces ni caractères spéciaux."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
 ![Image de l’interface utilisateur de Platform montrant les identifiants pris en charge pour la destination Spotify.](../../assets/catalog/advertising/liveramp-distribution/LR_Spotify_DestSpecific.png)
 
-* **[!UICONTROL Nom du client]** : nom de votre compte publicitaire, comme vous souhaitez qu’il soit présenté au partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux.
+* **[!UICONTROL Nom du client]** : nom de votre compte publicitaire, comme vous souhaitez qu’il soit présenté au partenaire de destination. Utilisez le nom de votre société. N’utilisez ni espaces ni caractères spéciaux.
 
 ### [!DNL Taboola] {#taboola}
 
@@ -387,13 +387,13 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_targetspot_client"
 >title="Nom du client ou de la cliente"
->abstract="Nom de votre compte publicitaire, tel que vous souhaitez le présenter au partenaire ou à la partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux."
+>abstract="Nom de votre compte publicitaire, tel que vous souhaitez le présenter au partenaire ou à la partenaire de destination. Utilisez le nom de votre société. N’utilisez ni espaces ni caractères spéciaux."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
 ![Image de l’interface utilisateur de Platform montrant les identifiants pris en charge pour la destination TargetSpot.](../../assets/catalog/advertising/liveramp-distribution/LR_TargetSpot_DestSpecific.png)
 
-* **[!UICONTROL Nom du client]** : nom de votre compte publicitaire, comme vous souhaitez qu’il soit présenté au partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux.
+* **[!UICONTROL Nom du client]** : nom de votre compte publicitaire, comme vous souhaitez qu’il soit présenté au partenaire de destination. Utilisez le nom de votre société. N’utilisez ni espaces ni caractères spéciaux.
 
 ### [!DNL Teads] {#teads}
 
@@ -413,13 +413,13 @@ Pour configurer les détails de la destination, renseignez les champs ci-dessous
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_wb_client"
 >title="Nom du client ou de la cliente"
->abstract="Nom de votre compte publicitaire, tel que vous souhaitez le présenter au partenaire ou à la partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux."
+>abstract="Nom de votre compte publicitaire, tel que vous souhaitez le présenter au partenaire ou à la partenaire de destination. Utilisez le nom de votre société. N’utilisez ni espaces ni caractères spéciaux."
 
 Pour configurer les détails de la destination, renseignez les champs ci-dessous.
 
 ![Image de l’interface utilisateur de Platform montrant les identifiants pris en charge pour la destination de détection de flux de travaux.](../../assets/catalog/advertising/liveramp-distribution/LR_WBD_DestSpecific.png)
 
-* **[!UICONTROL Nom du client]** : nom de votre compte publicitaire, comme vous souhaitez qu’il soit présenté au partenaire de destination. Utilisez le nom de votre société. N&#39;utilisez ni espaces ni caractères spéciaux.
+* **[!UICONTROL Nom du client]** : nom de votre compte publicitaire, comme vous souhaitez qu’il soit présenté au partenaire de destination. Utilisez le nom de votre société. N’utilisez ni espaces ni caractères spéciaux.
 
 ### Activer les alertes {#enable-alerts}
 
