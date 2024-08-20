@@ -2,9 +2,9 @@
 title: Questions fréquentes sur les audiences
 description: Découvrez les réponses aux questions fréquentes sur les audiences et d’autres concepts liés à la segmentation.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 2d15ba41ff326034a6f9a32301f67f5d3b2a1c14
+source-git-commit: 29d9445e6e71c60f4b596a5e645a56d2b70e133c
 workflow-type: tm+mt
-source-wordcount: '4362'
+source-wordcount: '4235'
 ht-degree: 21%
 
 ---
@@ -33,14 +33,7 @@ Pour charger des audiences générées en externe, vous devez disposer des autor
 
 ### Que se passe-t-il lorsque je charge une audience générée en externe ?
 
-Lorsque vous téléchargez une audience générée de l’extérieur, les éléments suivants sont créés :
-
-- Jeu de données
-   - Le jeu de données sera visible dans l’inventaire du jeu de données et le nom du jeu de données sera le **même** que le nom de l’audience générée en externe que vous avez chargée.
-- Tâche par lots
-   - Une tâche par lots s’exécute **automatiquement** lorsque vous chargez une audience générée en externe. Cela signifie que vous n’avez **pas** besoin d’attendre l’exécution de la tâche de segmentation quotidienne pour activer l’audience générée en externe.
-- Schéma ad hoc
-   - Un schéma XDM **new** sera créé pour être utilisé avec l’audience générée en externe. Les champs de ce schéma XDM peuvent être utilisés avec le jeu de données qui a également été créé.
+Lorsque vous chargez une audience générée en externe, un jeu de données est créé et visible dans l’inventaire du jeu de données. Le nom du jeu de données sera le **même** que le nom de l’audience générée en externe que vous avez chargée.
 
 ### Qu’est-ce qu’une audience générée en externe comprend et qu’advient-il de ces données lorsqu’elles sont importées dans Platform ?
 
@@ -91,12 +84,6 @@ La stratégie de fusion par défaut propre à l’organisation est automatiqueme
 ### Où puis-je activer les audiences générées en externe vers ?
 
 Une audience générée en externe peut être mappée à n’importe quelle destination et peut être utilisée dans des campagnes Adobe Journey Optimizer.
-
-### Dans combien de temps les audiences générées en externe sont-elles prêtes à être activées ?
-
-Si cette option est activée vers une destination de diffusion en continu, les données de l’audience générée en externe sont disponibles dans les deux heures.
-
-S’il est activé sur une destination par lot, les données de l’audience générée en externe seront synchronisées avec la tâche de segmentation de 24 heures suivante.
 
 ### Puis-je supprimer une audience générée en externe ?
 
