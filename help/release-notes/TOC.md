@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Notes de mise à jour d’Adobe Experience Platform
 breadcrumb-title: Notes de mise à jour de Platform
 user-guide-description: Trouvez les notes de mise à jour mensuelles pour Adobe Experience Platform.
-source-git-commit: b3afd8ccd885f43ade95858759fd5669350193b9
+source-git-commit: f8aacabaef3cd715d63271a7d753d64aa03c6822
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '147'
 ht-degree: 100%
 
 ---
@@ -15,6 +15,7 @@ ht-degree: 100%
 
 * [Notes de mise à jour actuelles de Platform](latest/latest.md)
 * 2024 {#2024}
+   * [Août 2024](2024/august-2024.md)
    * [Juillet 2024](2024/july-2024.md)
    * [Juin 2024](2024/june-2024.md)
    * [Mai 2024](2024/may-2024.md)
