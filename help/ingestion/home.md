@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de Data Ingestion
 description: Ce document présente les trois principales manières dont les données sont ingérées dans Platform, avec des liens vers leur documentation de présentation respectives pour plus d’informations.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: cde8db1f75cf83451e240f32a877b9d6d26a0e18
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '521'
-ht-degree: 73%
+source-wordcount: '578'
+ht-degree: 66%
 
 ---
 
@@ -42,6 +42,12 @@ Pour plus d’informations, consultez la [présentation de l’ingestion par flu
 Les connexions source peuvent être configurées pour collecter les données dʼautres applications Adobe (telles quʼAdobe Analytics et Adobe Audience Manager), de sources tierces de stockage dans le cloud (telles quʼ[!DNL Azure Blob], [!DNL Amazon]S3, serveurs FTP et SFTP) et de systèmes de gestion de la relation client tiers (tels que [!DNL Microsoft Dynamics] et [!DNL Salesforce]).
 
 Pour plus d’informations, consultez la [présentation des sources](../sources/home.md).
+
+### Création de schéma assisté ML {#ml-assisted-schema-creation}
+
+Pour intégrer rapidement de nouvelles sources de données, vous pouvez désormais utiliser des algorithmes d’apprentissage automatique afin de générer un schéma à partir de données d’exemple. Cette automatisation simplifie la création de schémas précis, réduit les erreurs et accélère le processus, de la collecte de données à l’analyse et aux informations.
+
+Pour plus d’informations sur ce processus, consultez le [guide de création de schéma assisté par ML](../xdm/ui/ml-assisted-schema-creation.md) .
 
 ## Étapes suivantes et ressources supplémentaires
 

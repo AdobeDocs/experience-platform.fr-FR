@@ -5,10 +5,10 @@ title: Mapper un fichier CSV à un schéma XDM existant
 type: Tutorial
 description: Ce tutoriel explique comment mapper un fichier CSV à un schéma XDM existant à l’aide de l’interface utilisateur d’Adobe Experience Platform.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '944'
-ht-degree: 100%
+source-wordcount: '1018'
+ht-degree: 92%
 
 ---
 
@@ -121,3 +121,7 @@ Une fois votre fichier CSV mappé et créé, vous pouvez surveiller les données
 ## Étapes suivantes
 
 En suivant ce tutoriel, vous avez mappé un fichier CSV plat à un schéma XDM et l’avez ingéré dans [!DNL Platform]. Ces données peuvent désormais être utilisées par les services de [!DNL Platform] en aval, comme [!DNL Real-Time Customer Profile]. Pour de plus d’informations, rendez-vous sur la présentation de [[!DNL Real-Time Customer Profile]](../../../profile/home.md).
+
+>[!TIP]
+>
+>Vous pouvez également utiliser des algorithmes d’apprentissage automatique pour **générer un schéma à partir de données d’exemple** à partir de l’espace de travail des schémas. Ce workflow crée automatiquement un nouveau schéma en fonction de la structure et du contenu de votre fichier, en veillant à ce que le schéma corresponde au format de vos données. Cela vous permet de gagner du temps et d’accroître la précision lors de la définition de la structure, des champs et des types de données pour les jeux de données complexes volumineux. Pour plus d’informations sur ce processus, consultez le [guide de création de schéma assisté ML](../../../xdm/ui/ml-assisted-schema-creation.md) .

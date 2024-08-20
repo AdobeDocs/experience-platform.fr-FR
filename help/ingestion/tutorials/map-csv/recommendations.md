@@ -2,10 +2,10 @@
 title: Mappage d’un fichier CSV à un schéma XDM à l’aide de Recommendations généré par l’IA
 description: Ce tutoriel explique comment mapper un fichier CSV à un schéma XDM à l’aide de recommandations générées par l’IA.
 exl-id: 1daedf0b-5a25-4ca5-ae5d-e9ee1eae9e4d
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: cbebee894d68f60f82e1154f41dcecc76c706a3b
 workflow-type: tm+mt
-source-wordcount: '1100'
-ht-degree: 82%
+source-wordcount: '1172'
+ht-degree: 77%
 
 ---
 
@@ -101,3 +101,5 @@ Lorsque vous avez terminé d’ajuster les recommandations de schéma pour vos c
 Ce guide explique comment mapper un fichier CSV à un schéma XDM à l’aide de recommandations générées par l’IA, ce qui vous permet d’importer ces données dans Platform par ingestion par lots.
 
 Pour savoir comment mapper un fichier CSV à un schéma existant, reportez-vous à la section [workflow de mappage de schéma existant](./existing-schema.md). Pour plus d’informations sur la diffusion en continu de données vers Platform en temps réel par le biais de connexions source préconfigurées, reportez-vous à la section [présentation des sources](../../../sources/home.md).
+
+Vous pouvez également utiliser des algorithmes d’apprentissage automatique pour **générer un schéma à partir d’exemples de données CSV**. Ce workflow crée automatiquement un nouveau schéma en fonction de la structure et du contenu de votre fichier CSV. Ce nouveau schéma correspond au format de vos données afin de gagner du temps et d’accroître la précision lors de la définition de la structure, des champs et des types de données pour les jeux de données complexes de grande taille. Pour plus d’informations sur ce processus, consultez le [guide de création de schéma assisté ML](../../../xdm/ui/ml-assisted-schema-creation.md) .

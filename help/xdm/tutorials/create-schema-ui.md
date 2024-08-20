@@ -5,10 +5,10 @@ title: Créer un schéma à l’aide de l’éditeur de schémas
 type: Tutorial
 description: Ce tutoriel décrit les étapes de création d’un schéma à l’aide de l’éditeur de schémas d’Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '4813'
-ht-degree: 80%
+source-wordcount: '4922'
+ht-degree: 78%
 
 ---
 
@@ -46,14 +46,23 @@ Pour commencer à composer un schéma, sélectionnez **[!UICONTROL Créer un sch
 
 ![L’onglet [!UICONTROL Parcourir] de l’espace de travail [!UICONTROL  avec ] en surbrillance [!UICONTROL Créer un schéma].](../images/tutorials/create-schema/create-schema-button.png)
 
+La boîte de dialogue [!UICONTROL Créer un schéma] s’affiche. Dans cette boîte de dialogue, vous pouvez soit créer manuellement un schéma en ajoutant des champs et des groupes de champs, soit télécharger un fichier CSV et utiliser des algorithmes ML pour générer un schéma. Sélectionnez un workflow de création de schéma dans la boîte de dialogue.
+
+![La boîte de dialogue Créer un schéma avec les options du workflow et sélectionnez mise en surbrillance.](../images/tutorials/create-schema/create-a-schema-dialog.png)
+
+### Création manuelle ou avec assistance ML de schéma {#manual-or-assisted}
+
+Pour savoir comment utiliser un algorithme ML afin de recommander une structure de schéma basée sur un fichier téléchargé, consultez le [guide de création de schémas assisté par l’apprentissage automatique](../ui/ml-assisted-schema-creation.md). Ce guide de l’interface utilisateur se concentre sur le workflow de création manuelle.
+
+### Choisir une classe de base {#choose-a-class}
+
 Le workflow [!UICONTROL Créer un schéma] s’affiche. Choisissez ensuite une classe de base pour le schéma. Vous pouvez choisir entre les classes principales de [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent], ou [!UICONTROL Other] si ces classes ne répondent pas à vos besoins. L’option [!UICONTROL Other] classes vous permet de [créer une nouvelle classe](#create-new-class) ou de choisir parmi d’autres classes préexistantes.
 
-Pour plus d’informations sur ces classes, consultez la documentation [XDM Individual profile](../classes/individual-profile.md) et [XDM ExperienceEvent](../classes/experienceevent.md) . Pour les besoins de ce tutoriel, sélectionnez **[!UICONTROL XDM Individual Profile]** suivi de **[!UICONTROL Next]**.
-
-<!-- You can  by selecting either **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]**, or **[!UICONTROL Other]**, followed by **[!UICONTROL Next]** to confirm your choice.  -->
-
+Pour plus d’informations sur ces classes, consultez la documentation [[!UICONTROL XDM Individual profile]](../classes/individual-profile.md) et [[!UICONTROL XDM ExperienceEvent]](../classes/experienceevent.md) . Pour les besoins de ce tutoriel, sélectionnez **[!UICONTROL XDM Individual Profile]** suivi de **[!UICONTROL Next]**.
 
 ![Le workflow [!UICONTROL Créer un schéma] avec les options [!UICONTROL Profil XDM individuel] et [!UICONTROL Suivant] mis en surbrillance.](../images/tutorials/create-schema/individual-profile-base-class.png)
+
+### Nom et révision {#name-and-review}
 
 Une fois que vous avez sélectionné une classe, la section [!UICONTROL Nom et révision] s’affiche. Dans cette section, vous fournissez un nom et une description pour identifier votre schéma. Plusieurs éléments importants doivent être pris en compte lors du choix d’un nom pour votre schéma :
 
@@ -68,6 +77,8 @@ Ce tutoriel décrit la composition d’un schéma pour ingérer les données rel
 Saisissez un [!UICONTROL nom d’affichage de schéma] convivial dans le champ de texte. Saisissez ensuite une description appropriée pour vous aider à identifier votre schéma. Une fois la structure de votre schéma revue et vos paramètres satisfaits, sélectionnez **[!UICONTROL Terminer]** pour créer votre schéma.
 
 ![La section [!UICONTROL Nom et révision] du workflow [!UICONTROL Créer un schéma] avec le [!UICONTROL nom d’affichage du schéma], la [!UICONTROL Description] et la [!UICONTROL Terminer] mise en surbrillance.](../images/ui/resources/schemas/name-and-review.png)
+
+### Composition de votre schéma {#compose-your-schema}
 
 L’[!DNL Schema Editor] apparaît. C’est la zone de travail sur laquelle vous allez composer votre schéma. Le schéma autointitulé est automatiquement créé dans la section **[!UICONTROL Structure]** du canevas lorsque vous arrivez dans l’éditeur, avec les champs standard inclus dans la classe de base que vous avez sélectionnée. La classe affectée pour le schéma est également répertoriée sous **[!UICONTROL Classe]** dans la section **[!UICONTROL Composition]**.
 

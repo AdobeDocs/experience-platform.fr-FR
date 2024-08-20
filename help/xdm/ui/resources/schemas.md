@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les principes de base de la création et de l’édition de schémas dans l’interface utilisateur de l’Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '3736'
+source-wordcount: '3861'
 ht-degree: 3%
 
 ---
@@ -29,13 +29,23 @@ Ce guide nécessite une compréhension pratique du système XDM. Reportez-vous �
 
 >[!NOTE]
 >
->Cette section explique comment créer manuellement un nouveau schéma dans l’interface utilisateur. Si vous ingérez des données CSV dans Platform, vous pouvez choisir de [mapper ces données à un schéma XDM créé par les recommandations générées par l’IA](../../../ingestion/tutorials/map-csv/recommendations.md) (actuellement en version bêta) sans avoir à créer manuellement le schéma.
+>Cette section explique comment créer manuellement un nouveau schéma dans l’interface utilisateur. Si vous ingérez des données CSV dans Platform, vous pouvez utiliser des algorithmes d’apprentissage automatique pour **générer un schéma à partir d’exemples de données CSV**. Ce workflow correspond à votre format de données et crée automatiquement un nouveau schéma basé sur la structure et le contenu de votre fichier CSV. Pour plus d’informations sur ce processus, consultez le [guide de création de schéma assisté ML](../ml-assisted-schema-creation.md) .
 
 Dans l’espace de travail [!UICONTROL Schémas], sélectionnez **[!UICONTROL Créer un schéma]** dans le coin supérieur droit.
 
 ![ L’espace de travail des schémas avec [!UICONTROL Créer un schéma] surligné.](../../images/ui/resources/schemas/create-schema.png)
 
-Le workflow [!UICONTROL Créer un schéma] s’affiche. Vous pouvez choisir une classe de base pour le schéma en sélectionnant **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]** ou **[!UICONTROL Other]**, suivi de **[!UICONTROL Next]** pour confirmer votre choix. Pour plus d’informations sur ces classes, consultez la documentation [XDM Individual profile](../../classes/individual-profile.md) et [XDM ExperienceEvent](../../classes/experienceevent.md) .
+La boîte de dialogue [!UICONTROL Créer un schéma] s’affiche. Dans cette boîte de dialogue, vous pouvez soit créer manuellement un schéma en ajoutant des champs et des groupes de champs, soit télécharger un fichier CSV et utiliser des algorithmes ML pour générer un schéma. Sélectionnez un workflow de création de schéma dans la boîte de dialogue.
+
+![La boîte de dialogue Créer un schéma avec les options du workflow et sélectionnez mise en surbrillance.](../../images/tutorials/create-schema/create-a-schema-dialog.png)
+
+### Création manuelle ou avec assistance ML de schéma {#manual-or-assisted}
+
+Pour savoir comment utiliser un algorithme ML afin de recommander une structure de schéma basée sur un fichier csv, consultez le [guide de création de schémas assisté par l’apprentissage automatique](../ml-assisted-schema-creation.md). Ce guide de l’interface utilisateur se concentre sur le workflow de création manuelle.
+
+### Création manuelle de schémas {#manual-creation}
+
+Le workflow [!UICONTROL Créer un schéma] s’affiche. Vous pouvez choisir une classe de base pour le schéma en sélectionnant **[!UICONTROL Individual Profile]**, **[!UICONTROL Experience Event]** ou **[!UICONTROL Other]**, suivi de **[!UICONTROL Next]** pour confirmer votre choix. Pour plus d’informations sur ces classes, consultez la documentation [[!UICONTROL XDM Individual profile]](../../classes/individual-profile.md) et [[!UICONTROL XDM ExperienceEvent]](../../classes/experienceevent.md) .
 
 ![Le workflow [!UICONTROL Créer un schéma] avec les trois options de classe et [!UICONTROL Suivant] mis en surbrillance.](../../images/ui/resources/schemas/schema-class-options.png)
 

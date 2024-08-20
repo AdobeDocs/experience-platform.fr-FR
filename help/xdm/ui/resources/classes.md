@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création et modification de classes dans l’interface utilisateur
 description: Découvrez comment créer et modifier des classes dans l’interface utilisateur de l’Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 15de9351203f6b43653042ab73ede17781486160
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1560'
 ht-degree: 8%
 
 ---
@@ -60,7 +60,15 @@ La classe que vous avez créée est disponible et répertoriée dans la vue [!UI
 
 ### Création ou modification d’une classe {#create-or-edit}
 
-Si vous sélectionnez également **[!UICONTROL Créer un schéma]**, le workflow [!UICONTROL Créer un schéma] s’affiche. Dans la section [!UICONTROL Schéma details], sélectionnez **[!UICONTROL Autre]**. Une liste des classes disponibles s’affiche. À partir de là, vous pouvez parcourir et filtrer les classes préexistantes sur lesquelles baser votre nouvelle classe.
+Si vous choisissez de créer manuellement un schéma, vous pouvez également créer ou modifier une classe existante dans le cadre de ce workflow. Sélectionnez **[!UICONTROL Créer un schéma]** suivi de **[!UICONTROL Manuel]** dans la boîte de dialogue [!UICONTROL Créer un schéma] qui s’affiche.
+
+>[!NOTE]
+>
+>Si vous utilisez le workflow de création de schéma assisté ML, vous pouvez charger un fichier et utiliser des algorithmes ML pour générer un schéma recommandé. Dans ce workflow de création de schéma, vous n’avez pas besoin de spécifier la classe de base de votre schéma. Pour savoir comment ML peut recommander une structure de schéma basée sur un fichier csv, consultez le [guide de création de schémas assisté par l’apprentissage automatique](../ml-assisted-schema-creation.md).
+
+![La boîte de dialogue Créer un schéma avec les options du workflow et sélectionnez mise en surbrillance.](../../images/ui/resources/classes/manually-create-a-schema.png)
+
+Le workflow de création de schéma s’affiche. Dans la section [!UICONTROL Schéma details], sélectionnez **[!UICONTROL Autre]**. Une liste des classes disponibles s’affiche. À partir de là, vous pouvez parcourir et filtrer les classes préexistantes sur lesquelles baser votre nouvelle classe.
 
 >[!NOTE]
 >
