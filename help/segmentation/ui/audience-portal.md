@@ -2,10 +2,10 @@
 title: Présentation d’Audience Portal
 description: Découvrez comment utiliser Audience Portal pour afficher, gérer et créer des audiences dans Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 527c9bf7ff60ceb1e621ccac5a88b8e9eb32ebfb
+source-git-commit: 56939b18d532f3c12ed8fdd76513d953ae74b613
 workflow-type: tm+mt
-source-wordcount: '3826'
-ht-degree: 63%
+source-wordcount: '4125'
+ht-degree: 59%
 
 ---
 
@@ -254,17 +254,39 @@ Sélectionner **[!UICONTROL Modifier l’audience]** vous permet de modifier vot
 
 Sélectionner **[!UICONTROL Modifier les propriétés]** vous permet de modifier les détails de base de l’audience, tels que le nom, la description et les balises.
 
-![](../images/ui/audience-portal/audience-details-edit-properties.png)
+![Le bouton Modifier les propriétés est mis en surbrillance dans la page Détails de l’audience.](../images/ui/audience-portal/audience-details-edit-properties.png)
 
 ### Total des audiences {#audience-total}
 
-La section **[!UICONTROL Audience totale]** indique le nombre de profils qui remplissent les critères de l’audience.
+Pour les audiences et les compositions générées par Platform, la section **[!UICONTROL Audience total]** indique le nombre total de profils qualifiés pour l’audience.
 
 >[!NOTE]
 >
 >La mise à jour du nombre total d’audiences peut prendre jusqu’à 30 minutes une fois la tâche d’exportation terminée.
 
 Les estimations sont générées en utilisant une taille d’échantillon des données d’exemple du jour. S’il y a moins d’un million d’entités dans votre banque de profils, l’ensemble des données est utilisé ; entre 1 et 20 millions d’entités, 1 million d’entités sont utilisées ; et pour plus de 20 millions d’entités, 5 % du total des entités est utilisé. Vous trouverez plus d’informations sur la génération d’estimations dans la [section sur la génération d’estimations](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) du tutoriel sur la création d’audiences.
+
+### Détails d’ingestion {#ingestion-details}
+
+Pour les audiences dont l’origine est le **[!UICONTROL téléchargement personnalisé]**, la section **[!UICONTROL Détails de l’ingestion]** présente le total du profil, ainsi que les détails du jeu de données dans lequel l’audience générée en externe a été ingérée.
+
+![La section des détails de l’ingestion de la page des détails de l’audience s’affiche.](../images/ui/audience-portal/audience-details-ingestion-details.png)
+
+| Propriété | Description |
+| -------- | ----------- |
+| Nombre de profils | Nombre total de profils qui remplissent les critères de l’audience. |
+| Nom du jeu de données | Nom du jeu de données dans lequel l’audience a été ingérée. Vous pouvez sélectionner le nom du jeu de données pour plus d’informations sur le jeu de données. Pour en savoir plus sur les jeux de données, consultez le [guide de l’interface utilisateur des jeux de données](../../catalog/datasets/user-guide.md). |
+| Lot de jeux de données | Identifiant du jeu de données dans lequel l’audience a été ingérée. Vous pouvez sélectionner l’identifiant du lot pour plus d’informations sur le lot. Pour en savoir plus sur les lots, consultez le [guide de surveillance de l’ingestion des données](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Lot de profils | Identifiant du lot qui a créé les profils sur Platform. Vous pouvez sélectionner l’identifiant du lot pour plus d’informations sur le lot. Pour en savoir plus sur les lots, consultez le [guide de surveillance de l’ingestion des données](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Schéma | Nom du schéma auquel l’audience appartient. Vous pouvez sélectionner le nom du schéma pour afficher des informations sur la structure du schéma et appliquer des libellés d’utilisation des données. Pour plus d’informations, consultez le [guide de gestion des libellés d’utilisation des données pour un schéma](../../xdm/tutorials/labels.md). |
+| Enregistrements ingérés | Nombre d’enregistrements ingérés dans le jeu de données. |
+| Échec des enregistrements | Nombre d’enregistrements qui n’ont pas pu être ingérés dans le jeu de données. |
+| Nouveaux fragments de profil | Le nombre de nouveaux profils qui ont été créés. |
+| Fragments de profil existants | Le nombre de profils existants qui ont été mis à jour. |
+
+>[!NOTE]
+>
+>Il est recommandé d’appliquer des libellés d’utilisation des données au schéma. Vous **ne pouvez pas** appliquer une étiquette d’utilisation des données directement à l’audience.
 
 ### Destinations activées {#activated-destinations}
 
@@ -343,7 +365,7 @@ Sélectionner **[!UICONTROL Créer une règle]** vous dirige vers le créateur d
 
 ### Composition d’audiences fédérées {#fac}
 
-Outre les compositions d’audience et les définitions de segment, vous pouvez utiliser la fonction Adobe la composition d’audiences fédérées pour créer de nouvelles audiences à partir de jeux de données d’entreprise sans copier de données sous-jacentes et stocker ces audiences dans Adobe Experience Platform Audience Portal. Vous pouvez également enrichir les audiences existantes dans Adobe Experience Platform en utilisant des données d’audience composites qui ont été fédérées à partir de l’entrepôt de données d’entreprise. Veuillez lire le guide sur la [Composition de l’audience fédérée](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Outre les compositions d’audience et les définitions de segment, vous pouvez utiliser la fonction Adobe la composition d’audiences fédérées pour créer de nouvelles audiences à partir de jeux de données d’entreprise sans copier de données sous-jacentes et stocker ces audiences dans Adobe Experience Platform Audience Portal. Vous pouvez également enrichir les audiences existantes dans Adobe Experience Platform en utilisant des données d’audience composites qui ont été fédérées à partir de l’entrepôt de données d’entreprise. Veuillez lire le guide sur la [Composition d’audiences fédérées](https://experienceleague.adobe.com/fr/docs/federated-audience-composition/using/home).
 
 ![Liste des audiences créées dans la composition d’audiences fédérées de votre organisation.](../images/ui/overview/federated-audience-composition.png)
 
