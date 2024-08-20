@@ -5,9 +5,9 @@ description: La détection des appareils partagés identifie les différents uti
 hide: true
 hidefromtoc: true
 exl-id: 36318163-ba07-4209-b1be-dc193ab7ba41
-source-git-commit: d7c7bed74d746aba2330ecba62f9f810fbaf0d63
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1353'
 ht-degree: 9%
 
 ---
@@ -60,7 +60,7 @@ Il est important de comprendre la terminologie suivante lorsque vous utilisez
 [!DNL Shared Device Detection] fonctionne en établissant deux espaces de noms : **Espace de noms d’identité partagée** et **espace de noms d’identité utilisateur**.
 
 * L’espace de noms d’identité partagée représente l’appareil qui peut être utilisé par plusieurs utilisateurs. Adobe recommande aux clients d’utiliser ECID comme identifiant d’appareil partagé.
-* L’espace de noms d’identité de l’utilisateur est mappé à l’espace de noms d’identité qui correspond à l’identifiant de connexion d’un utilisateur. Il peut s’agir de l’identifiant CRM, de l’adresse électronique, du courrier électronique haché ou du numéro de téléphone d’un utilisateur.
+* L’espace de noms d’identité de l’utilisateur est mappé à l’espace de noms d’identité qui correspond à l’identifiant de connexion d’un utilisateur. Il peut s’agir du CRMID, de l’adresse électronique, du courrier électronique haché ou du numéro de téléphone d’un utilisateur.
 
 Un appareil partagé, comme une tablette, possède un seul **espace de noms d’identité partagée**. D’un autre côté, chaque utilisateur d’un appareil partagé a son propre **espace de noms d’identité utilisateur** désigné qui correspond à ses identifiants de connexion respectifs. Par exemple, une tablette que Kevin et Nora partagent pour l’utilisation du commerce électronique possède son propre ECID de `1234`, tandis que Kevin possède son propre espace de noms d’identité utilisateur qui est mappé à son compte `kevin@email.com` et Nora son propre espace de noms d’identité utilisateur mappé à son compte `nora@email.com`.
 
@@ -72,17 +72,17 @@ Examinez l’exemple suivant pour mieux comprendre le fonctionnement de [!DNL Sh
 
 >[!NOTE]
 >
->Dans ce diagramme, l’espace de noms d’identité partagée est configuré sur ECID et l’espace de noms d’identité utilisateur est configuré sur l’identifiant CRM.
+>Dans ce diagramme, l’espace de noms d’identité partagée est configuré sur ECID et l’espace de noms d’identité utilisateur est configuré sur CRMID.
 
-![diagramme](./images/shared-device/diagram.png)
+![Diagramme](./images/shared-device/diagram.png)
 
 * Kevin et Nora partagent une tablette pour visiter un site de commerce électronique. Cependant, ils disposent tous deux de leurs propres comptes indépendants qu&#39;ils utilisent chacun pour naviguer et faire des achats en ligne ;
    * En tant qu’appareil partagé, la tablette dispose d’un ECID correspondant, qui représente l’ID de cookie du navigateur web de la tablette ;
-* Supposons que Kevin utilise la tablette et **se connecte à son compte de commerce électronique pour rechercher des écouteurs. Cela signifie alors que l’ID CRM de Kevin (** User Identity Namespace **) est désormais lié à l’ECID de la tablette (** Shared Identity Namespace **).** Les données de navigation de la tablette sont maintenant intégrées au graphique d&#39;identités de Kevin.
-   * Si Kevin **se déconnecte** et que Nora utilise la tablette et **se connecte à** sur son propre compte et achète une caméra, son ID de gestion de la relation client est désormais lié à l’ECID de la tablette. Par conséquent, les données de navigation de la tablette sont désormais intégrées au graphique d’identités de Nora.
-   * Si Nora **ne se déconnecte pas** et que Kevin utilise la tablette, mais **ne se connecte pas**, les données de navigation de la tablette sont toujours intégrées à Nora, car elle reste en tant qu’utilisateur authentifié et son identifiant CRM est toujours lié à l’ECID de la tablette.
-   * Si Nora **se déconnecte** et que Kevin utilise la tablette, mais **ne se connecte pas**, les données de navigation de la tablette sont toujours intégrées au graphique d’identités de Nora, car en tant que **dernier utilisateur authentifié**, son identifiant CRM reste lié à l’ECID de la tablette.
-   * Si Kevin **se connecte à nouveau à**, son ID de gestion de la relation client est maintenant lié à l’ECID de la tablette, car il est désormais le dernier utilisateur authentifié et les données de navigation de la tablette sont désormais intégrées à son graphique d’identités.
+* Supposons que Kevin utilise la tablette et **se connecte à son compte de commerce électronique pour rechercher des écouteurs. Cela signifie alors que le CRMID de Kevin (** User Identity Namespace **) est maintenant lié à l’ECID de la tablette (** Shared Identity Namespace **).** Les données de navigation de la tablette sont maintenant intégrées au graphique d&#39;identités de Kevin.
+   * Si Kevin **se déconnecte** et que Nora utilise la tablette et **se connecte à** sur son propre compte et achète une caméra, son CRMID est maintenant lié à l’ECID de la tablette. Par conséquent, les données de navigation de la tablette sont désormais intégrées au graphique d’identités de Nora.
+   * Si Nora **ne se déconnecte pas** et que Kevin utilise la tablette, mais **ne se connecte pas**, les données de navigation de la tablette sont toujours intégrées à Nora, car elle reste en tant qu’utilisateur authentifié et son CRMID est toujours lié à l’ECID de la tablette.
+   * Si Nora **se déconnecte** et que Kevin utilise la tablette, mais **ne se connecte pas**, les données de navigation de la tablette sont toujours intégrées au graphique d’identités de Nora, car en tant que **dernier utilisateur authentifié**, son CRMID reste lié à l’ECID de la tablette.
+   * Si Kevin **se connecte à nouveau à**, son CRMID est maintenant associé à l’ECID de la tablette, car il est désormais le dernier utilisateur authentifié et les données de navigation de la tablette sont désormais intégrées à son graphique d’identités.
 
 ### Comment [!DNL Profile Service] fusionne les fragments de profil avec [!DNL Shared Device Detection] activé
 

@@ -3,10 +3,10 @@ title: Algorithme d’optimisation des identités
 description: Découvrez l’algorithme d’optimisation des identités dans Identity Service.
 badge: Version bêta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
+source-git-commit: 8762ea655399fbc82c63c87310337b8e875bd5bc
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 1%
+source-wordcount: '1533'
+ht-degree: 2%
 
 ---
 
@@ -26,14 +26,14 @@ Lisez cette section pour plus d’informations sur les espaces de noms uniques e
 
 Un espace de noms unique détermine les liens qui sont supprimés en cas d’effondrement du graphique.
 
-Un profil fusionné unique et son graphique d’identités correspondant doivent représenter une seule personne (entité de personne). Une seule personne est généralement représentée par des identifiants de gestion de la relation client et/ou des identifiants de connexion. On s’attend à ce qu’aucun deux individus (ID CRM) ne soient fusionnés dans un seul profil ou graphique.
+Un profil fusionné unique et son graphique d’identités correspondant doivent représenter une seule personne (entité de personne). Une seule personne est généralement représentée par des CRMID et/ou des identifiants de connexion. On s’attend à ce qu’aucun deux individus (CRMID) ne soient fusionnés dans un seul profil ou graphique.
 
-Vous devez spécifier les espaces de noms qui représentent une entité de personne dans Identity Service à l’aide de l’algorithme d’optimisation des identités. Par exemple, si une base de données CRM définit un compte utilisateur à associer à un identifiant CRM unique et à une seule adresse email, les paramètres d’identité de cet environnement de test se présentent comme suit :
+Vous devez spécifier les espaces de noms qui représentent une entité de personne dans Identity Service à l’aide de l’algorithme d’optimisation des identités. Par exemple, si une base de données CRM définit un compte utilisateur à associer à un seul CRMID et à une seule adresse électronique, les paramètres d’identité de cet environnement de test se présentent comme suit :
 
-* Espace de noms de l’ID de gestion de la relation client = unique
+* Espace de noms CRMID = unique
 * Espace de noms de courriel = unique
 
-Un espace de noms que vous déclarez unique est automatiquement configuré pour avoir une limite maximale d’un dans un graphique d’identités donné. Par exemple, si vous déclarez un espace de noms d’identifiant CRM unique, un graphique d’identités ne peut avoir qu’une seule identité contenant un espace de noms d’identifiant CRM. Si vous ne déclarez pas d’espace de noms unique, le graphique peut contenir plusieurs identités avec cet espace de noms.
+Un espace de noms que vous déclarez unique est automatiquement configuré pour avoir une limite maximale d’un dans un graphique d’identités donné. Par exemple, si vous déclarez un espace de noms CRMID comme unique, un graphique d’identités ne peut avoir qu’une seule identité contenant un espace de noms CRMID. Si vous ne déclarez pas d’espace de noms unique, le graphique peut contenir plusieurs identités avec cet espace de noms.
 
 >[!NOTE]
 >
@@ -84,15 +84,15 @@ Un appareil partagé fait référence à un appareil utilisé par plusieurs indi
 
 | Espace de noms | Espace de noms unique |
 | --- | --- |
-| Identifiant CRM | Oui |
+| CRMID | Oui |
 | E-mail | Oui |
 | ECID | Non |
 
-Dans cet exemple, l’identifiant CRM et le courrier électronique sont désignés comme espaces de noms uniques. À `timestamp=0`, un jeu de données d’enregistrement CRM est ingéré et crée deux graphiques différents en raison de la configuration d’espace de noms unique. Chaque graphique contient un identifiant CRM et un espace de noms Email.
+Dans cet exemple, CRMID et Email sont tous deux désignés comme espaces de noms uniques. À `timestamp=0`, un jeu de données d’enregistrement CRM est ingéré et crée deux graphiques différents en raison de la configuration d’espace de noms unique. Chaque graphique contient un CRMID et un espace de noms Email.
 
-* `timestamp=1` : Jane se connecte à votre site web de commerce électronique à l’aide d’un ordinateur portable. Jane est représentée par son identifiant CRM et son e-mail, tandis que le navigateur web sur son ordinateur portable qu’elle utilise est représenté par un ECID.
-* `timestamp=2` : John se connecte à votre site web de commerce électronique avec le même ordinateur portable. John est représenté par son identifiant CRM et son e-mail, tandis que le navigateur web qu’il a utilisé est déjà représenté par un ECID. Comme le même ECID est lié à deux graphiques différents, Identity Service peut savoir que cet appareil (ordinateur portable) est un appareil partagé.
-* Cependant, en raison de la configuration d’espace de noms unique qui définit un maximum d’un espace de noms d’identifiant CRM et d’un espace de noms d’email par graphique, l’algorithme d’optimisation de l’identité divise ensuite le graphique en deux.
+* `timestamp=1` : Jane se connecte à votre site web de commerce électronique à l’aide d’un ordinateur portable. Jane est représentée par son CRMID et son e-mail, tandis que le navigateur web sur son ordinateur portable qu’elle utilise est représenté par un ECID.
+* `timestamp=2` : John se connecte à votre site web de commerce électronique avec le même ordinateur portable. John est représenté par son CRMID et son Email, tandis que le navigateur web qu’il a utilisé est déjà représenté par un ECID. Comme le même ECID est lié à deux graphiques différents, Identity Service peut savoir que cet appareil (ordinateur portable) est un appareil partagé.
+* Cependant, en raison de la configuration d’espace de noms unique qui définit un maximum d’un espace de noms CRMID et un espace de noms d’email par graphique, l’algorithme d’optimisation de l’identité divise ensuite le graphique en deux.
    * Enfin, puisque John est le dernier utilisateur authentifié, l’ECID qui représente l’ordinateur portable reste lié à son graphique au lieu de celui de Jane.
 
 ![cas d’appareil partagé 1](../images/identity-settings/shared-device-case-one.png)
@@ -101,16 +101,16 @@ Dans cet exemple, l’identifiant CRM et le courrier électronique sont désign�
 
 | Espace de noms | Espace de noms unique |
 | --- | --- |
-| Identifiant CRM | Oui |
+| CRMID | Oui |
 | ECID | Non |
 
-Dans cet exemple, l’espace de noms de l’identifiant CRM est désigné comme un espace de noms unique.
+Dans cet exemple, l’espace de noms CRMID est désigné comme un espace de noms unique.
 
-* `timestamp=1` : Jane se connecte à votre site web de commerce électronique à l’aide d’un ordinateur portable. Elle est représentée par son identifiant CRM et le navigateur web sur l’ordinateur portable est représenté par l’ECID.
-* `timestamp=2` : John se connecte à votre site web de commerce électronique avec le même ordinateur portable. Il est représenté par son identifiant CRM et le navigateur web qu’il utilise est représenté par le même ECID.
-   * Cet événement lie deux identifiants CRM indépendants au même ECID, qui dépasse la limite configurée d’un identifiant CRM.
-   * Par conséquent, l’algorithme d’optimisation des identités supprime l’ancien lien, qui dans ce cas est l’identifiant CRM Jane’s qui a été lié à `timestamp=1`.
-   * Cependant, bien que l’identifiant CRM de Jane n’existe plus sous forme de graphique sur Identity Service, il persistera toujours en tant que profil sur Real-time Customer Profile. En effet, un graphique d’identités doit contenir au moins deux identités liées. En raison de la suppression des liens, l’identifiant CRM de Jane ne dispose plus d’une autre identité à laquelle créer un lien.
+* `timestamp=1` : Jane se connecte à votre site web de commerce électronique à l’aide d’un ordinateur portable. Elle est représentée par son CRMID et le navigateur web sur l’ordinateur portable est représenté par l’ECID.
+* `timestamp=2` : John se connecte à votre site web de commerce électronique avec le même ordinateur portable. Il est représenté par son CRMID et le navigateur web qu’il utilise est représenté par le même ECID.
+   * Cet événement lie deux CRMID indépendants au même ECID, qui dépasse la limite configurée d’un CRMID.
+   * Par conséquent, l’algorithme d’optimisation de l’identité supprime l’ancien lien, qui dans ce cas est le CRMID de Jane, qui a été lié à `timestamp=1`.
+   * Cependant, bien que le CRMID de Jane n’existe plus sous forme de graphique sur Identity Service, il persistera toujours en tant que profil sur Real-time Customer Profile. En effet, un graphique d’identités doit contenir au moins deux identités liées. En raison de la suppression des liens, le CRMID de Jane n’a plus d’autre identité à lier.
 
 ![shared-device-case-two](../images/identity-settings/shared-device-case-two.png)
 
@@ -122,18 +122,18 @@ Dans certains cas, un utilisateur peut saisir des valeurs erronées pour son adr
 
 | Espace de noms | Espace de noms unique |
 | --- | --- |
-| Identifiant CRM | Oui |
+| CRMID | Oui |
 | E-mail | Oui |
 | ECID | Non |
 
-Dans cet exemple, l’identifiant CRM et les espaces de noms de courrier électronique sont désignés comme uniques. Supposons que Jane et John se soient inscrits à votre site web d’e-commerce à l’aide d’une valeur d’e-mail incorrecte (par exemple, test<span>@test.com).
+Dans cet exemple, les espaces de noms CRMID et Email sont désignés comme uniques. Supposons que Jane et John se soient inscrits à votre site web d’e-commerce à l’aide d’une valeur d’e-mail incorrecte (par exemple, test<span>@test.com).
 
-* `timestamp=1` : Jane se connecte à votre site web de commerce électronique à l’aide de Safari sur son iPhone, en établissant son identifiant CRM (informations de connexion) et son ECID (navigateur).
-* `timestamp=2` : John se connecte à votre site web de commerce électronique à l’aide de Google Chrome sur son iPhone, en établissant son identifiant CRM (informations de connexion) et son ECID (navigateur).
-* `timestamp=3` : votre ingénieur de données ingère l’enregistrement CRM de Jane, ce qui entraîne l’association de son identifiant CRM au mauvais courrier électronique.
-* `timestamp=4` : votre ingénieur de données ingère l’enregistrement CRM de John, ce qui entraîne l’association de son identifiant CRM au mauvais courrier électronique.
-   * Cela devient alors une violation de la configuration d’espace de noms unique, car il crée un graphique unique avec deux espaces de noms d’ID CRM.
-   * Par conséquent, l’algorithme d’optimisation des identités supprime l’ancien lien, qui dans ce cas est le lien entre l’identité de Jane avec l’espace de noms de l’ID CRM et l’identité avec test<span>@test.
+* `timestamp=1` : Jane se connecte à votre site web de commerce électronique à l’aide de Safari sur son iPhone, en établissant son CRMID (informations de connexion) et son ECID (navigateur).
+* `timestamp=2` : John se connecte à votre site web de commerce électronique à l’aide de Google Chrome sur son iPhone, en établissant son CRMID (informations de connexion) et son ECID (navigateur).
+* `timestamp=3` : votre ingénieur de données ingère l’enregistrement CRM de Jane, ce qui entraîne l’association de son CRMID au mauvais courrier électronique.
+* `timestamp=4` : votre ingénieur de données ingère l’enregistrement CRM de John, ce qui entraîne l’association de son CRMID au mauvais courrier électronique.
+   * Cela devient alors une violation de la configuration d’espace de noms unique, car il crée un graphique unique avec deux espaces de noms CRMID.
+   * Par conséquent, l’algorithme d’optimisation des identités supprime l’ancien lien, qui dans ce cas est le lien entre l’identité de Jane avec l’espace de noms CRMID et l’identité avec test<span>@test.
 
 Avec l’algorithme d’optimisation des identités, les valeurs d’identité erronées telles que les faux emails ou les numéros de téléphone ne sont pas propagées sur plusieurs graphiques d’identités différents.
 
@@ -141,13 +141,13 @@ Avec l’algorithme d’optimisation des identités, les valeurs d’identité e
 
 ### Association d’événements anonymes
 
-Les ECID stockent les événements non authentifiés (anonymes), tandis que l’ID de gestion de la relation client stocke les événements authentifiés. Dans le cas des appareils partagés, l’ECID (porteur d’événements non authentifiés) est associé au **dernier utilisateur authentifié**.
+Les ECID stockent les événements non authentifiés (anonymes), tandis que CRMID stocke les événements authentifiés. Dans le cas des appareils partagés, l’ECID (porteur d’événements non authentifiés) est associé au **dernier utilisateur authentifié**.
 
 Consultez le diagramme ci-dessous pour mieux comprendre le fonctionnement de l’association d’événements anonymes :
 
 * Kevin et Nora partagent une tablette.
-   * `timestamp=1` : Kevin se connecte à un site web de commerce électronique à l’aide de son compte, établissant ainsi son identifiant CRM (informations de connexion) et un ECID (navigateur). Au moment de la connexion, Kevin est désormais considéré comme le dernier utilisateur authentifié.
-   * `timestamp=2` : Nora se connecte à un site web de commerce électronique à l’aide de son compte, établissant ainsi son identifiant CRM (informations de connexion) et le même ECID. Au moment de la connexion, Nora est désormais considérée comme le dernier utilisateur authentifié.
+   * `timestamp=1` : Kevin se connecte à un site web de commerce électronique à l’aide de son compte, établissant ainsi son CRMID (informations de connexion) et un ECID (navigateur). Au moment de la connexion, Kevin est désormais considéré comme le dernier utilisateur authentifié.
+   * `timestamp=2` : Nora se connecte à un site web de commerce électronique à l’aide de son compte, établissant ainsi son CRMID (informations de connexion) et le même ECID. Au moment de la connexion, Nora est désormais considérée comme le dernier utilisateur authentifié.
    * `timestamp=3` : Kevin utilise la tablette pour parcourir le site web d’e-commerce, mais ne se connecte pas avec son compte. L’activité de navigation de Kevin est ensuite stockée dans l’ECID, qui, à son tour, est associé à Nora car elle est le dernier utilisateur authentifié. A ce stade, Nora possède les événements anonymes.
       * Jusqu’à ce que Kevin se reconnecte, le profil fusionné de Nora sera associé à tous les événements non authentifiés stockés par rapport à l’ECID (les événements étant l’endroit où ECID est l’identité principale).
    * `timestamp=4` : Kevin se connecte une seconde fois. À ce stade, il redevient le dernier utilisateur authentifié et possède désormais les événements non authentifiés :

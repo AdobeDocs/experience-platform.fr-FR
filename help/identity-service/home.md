@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation du service d’identités
 description: Le service d’identités d’Adobe Experience Platform vous permet de mieux connaître vos clients et leurs comportements, en établissant un lien entre les identités des différents appareils et systèmes, ce qui vous permet de proposer des expériences digitales personnelles et percutantes en temps réel.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1555'
 ht-degree: 8%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 8%
 
 Pour offrir des expériences numériques pertinentes, vous avez besoin d’une représentation complète et exacte des entités du monde réel qui constituent votre base de clients.
 
-Aujourd’hui, les entreprises et les entreprises font face à un grand nombre de jeux de données disparates : leurs clients individuels sont représentés par une variété d’identifiants différents. Votre client peut être lié à différents navigateurs web (Safari, Google Chrome), périphériques matériels (téléphones, ordinateurs portables) et autres identifiants de personne (identifiants CRM, comptes de messagerie électronique). Cela crée une vue disjointe de votre client.
+Aujourd’hui, les entreprises et les entreprises font face à un grand nombre de jeux de données disparates : leurs clients individuels sont représentés par une variété d’identifiants différents. Votre client peut être lié à différents navigateurs web (Safari, Google Chrome), périphériques matériels (téléphones, ordinateurs portables) et autres identifiants de personne (CRMID, comptes de messagerie électronique). Cela crée une vue disjointe de votre client.
 
 Vous pouvez résoudre ces problèmes avec Adobe Experience Platform Identity Service et ses fonctionnalités pour :
 
@@ -78,20 +78,20 @@ Un lien entre deux identités est établi lorsque l’espace de noms de l’iden
 
 Un événement de connexion type **envoie deux identités** dans l’Experience Platform :
 
-* Identifiant de personne (un identifiant CRM, par exemple) qui représente un utilisateur authentifié.
+* Identifiant de personne (CRMID, par exemple) qui représente un utilisateur authentifié.
 * Identifiant du navigateur (tel qu’un ECID) qui représente le navigateur web.
 
 Examinez lʼexemple suivant :
 
-* Vous vous connectez avec votre nom d’utilisateur et votre mot de passe à un site web de commerce électronique à l’aide de votre ordinateur portable. Cet événement vous qualifie en tant qu’utilisateur authentifié, de sorte qu’Identity Service reconnaît votre ID de gestion de la relation client.
+* Vous vous connectez avec votre nom d’utilisateur et votre mot de passe à un site web de commerce électronique à l’aide de votre ordinateur portable. Cet événement vous qualifie en tant qu’utilisateur authentifié, de sorte qu’Identity Service reconnaît votre CRMID.
 * L’utilisation d’un navigateur pour accéder au site web de commerce électronique est également reconnue comme un événement par Identity Service. Cet événement est représenté dans Identity Service par le biais d’un ECID.
 * En arrière-plan, Identity Service traite les deux événements comme suit : `CRM_ID:ABC, ECID:123`.
-   * Identifiant CRM : ABC est l’espace de noms et la valeur qui vous représentent, en tant qu’utilisateur authentifié.
+   * CRMID : ABC est l’espace de noms et la valeur qui vous représentent, en tant qu’utilisateur authentifié.
    * ECID : 123 est l’espace de noms et la valeur qui représente l’utilisation de votre navigateur web sur votre ordinateur portable.
 * Ensuite, si vous vous connectez avec les mêmes informations d’identification au même site web d’e-commerce, mais que vous utilisez le navigateur web sur votre téléphone au lieu du navigateur web sur votre ordinateur portable, un nouvel ECID est enregistré dans Identity Service.
 * En arrière-plan, Identity Service traite ce nouvel événement comme `{CRM_ID:ABC, ECID:456}`, où CRM_ID: ABC représente votre ID client authentifié et ECID:456 représente le navigateur web sur votre appareil mobile.
 
-Dans les scénarios ci-dessus, Identity Service établit un lien entre `{CRM_ID:ABC, ECID:123}` et `{CRM_ID:ABC, ECID:456}`. Cela génère un graphique d’identités dans lequel vous &quot;possédez&quot; trois identités : une pour l’identifiant de personne (ID CRM) et deux pour les identifiants de cookie (ECID).
+Dans les scénarios ci-dessus, Identity Service établit un lien entre `{CRM_ID:ABC, ECID:123}` et `{CRM_ID:ABC, ECID:456}`. Cela génère un graphique d’identités dans lequel vous &quot;possédez&quot; trois identités : une pour l’identifiant de personne (CRMID) et deux pour les identifiants de cookie (ECID).
 
 Pour plus d’informations, consultez le guide sur la [façon dont Identity Service lie les identités](./features/identity-linking-logic.md).
 

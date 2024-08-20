@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de dépannage du service d’identités
 description: Ce document fournit des réponses aux questions fréquentes sur le service d’identités d’Adobe Experience Platform, ainsi qu’un guide de dépannage pour les erreurs courantes.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 3fe94be9f50d64fc893b16555ab9373604b62e59
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '2166'
-ht-degree: 100%
+source-wordcount: '2165'
+ht-degree: 99%
 
 ---
 
@@ -31,7 +31,7 @@ L’étiquetage de certains champs de données comme identités dans vos donnée
 
 ## Que sont les identités connues et anonymes ?
 
-Une identité connue fait référence à une valeur d’identité pouvant être utilisée seule ou avec d’autres informations pour identifier, contacter ou localiser une personne. Les adresses électroniques, les numéros de téléphone et les identifiants CRM sont des exemples d’identités connues.
+Une identité connue fait référence à une valeur d’identité pouvant être utilisée seule ou avec d’autres informations pour identifier, contacter ou localiser une personne. Les adresses électroniques, les numéros de téléphone et les CRMID sont des exemples d’identités connues.
 
 Une identité anonyme fait référence à une valeur d’identité ne pouvant pas être utilisée seule ou avec d’autres informations pour identifier, contacter ou localiser une personne (un identifiant de cookie, par exemple).
 

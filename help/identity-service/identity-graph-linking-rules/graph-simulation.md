@@ -3,9 +3,9 @@ title: Guide de l’interface utilisateur de simulation graphique
 description: Découvrez comment utiliser la simulation graphique dans l’interface utilisateur d’Identity Service.
 badge: Version bêta
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1435'
 ht-degree: 2%
 
 ---
@@ -142,7 +142,7 @@ Une ligne de configuration vide s’affiche. Tout d’abord, saisissez le même 
 
 Répétez ensuite les mêmes étapes et ajoutez votre second espace de noms, qui est ici l’ECID. Une fois tous vos espaces de noms renseignés, vous pouvez commencer à configurer leurs priorités et leur unicité.
 
-* **Priorité de l’espace de noms** : la priorité d’un espace de noms détermine son importance relative par rapport aux autres espaces de noms d’un graphique d’identités donné. Par exemple, si votre graphique d’identités comporte quatre espaces de noms différents : ID CRM, ECID, Email et Apple IDFA, vous pouvez configurer des priorités afin de déterminer un ordre d’importance pour les quatre espaces de noms.
+* **Priorité de l’espace de noms** : la priorité d’un espace de noms détermine son importance relative par rapport aux autres espaces de noms d’un graphique d’identités donné. Par exemple, si votre graphique d’identités comporte quatre espaces de noms différents : CRMID, ECID, Email et Apple IDFA, vous pouvez configurer des priorités afin de déterminer un ordre d’importance pour les quatre espaces de noms.
 * **Espace de noms unique** : si un espace de noms est désigné comme unique, Identity Service génère des graphiques avec l’avertissement qu’une seule identité avec un espace de noms unique donné peut exister. Par exemple, si l’espace de noms Email est désigné comme un espace de noms unique, un graphique ne peut avoir qu’une seule identité avec Email. S’il existe plusieurs identités avec l’espace de noms Email, le lien le plus ancien est supprimé.
 
 Pour configurer la priorité des espaces de noms, sélectionnez les rangées d’espaces de noms et faites-les glisser selon l’ordre de priorité souhaité, la rangée supérieure représentant la priorité la plus élevée et la rangée inférieure la priorité la plus faible. Pour désigner un espace de noms comme unique, cochez la case **[!UICONTROL Unique Per Graph]** .

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Développement d’intégrations ETL pour Adobe Experience Platform
 description: Le guide d’intégration ETL décrit les étapes générales de la création de connecteurs sécurisés et haute performance pour Experience Platform et l’ingestion de données dans Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '3978'
-ht-degree: 100%
+source-wordcount: '3977'
+ht-degree: 99%
 
 ---
 
@@ -789,5 +789,5 @@ Actuellement, Adobe Experience Platform n’identifie pas les données différ
 | ---- | ------ | ----------- |
 | 19/01/2019 | Suppression de la propriété « fields » des jeux de données | Les jeux de données comprenaient auparavant une propriété « fields » qui contenait une copie du schéma. Cette fonctionnalité ne doit plus être utilisée. Si la propriété « fields » est trouvée, elle doit être ignorée et la propriété « observedSchema » ou « schemaRef » utilisée à la place. |
 | 15/03/2019 | Ajout de la propriété « schemaRef » aux jeux de données | La propriété « schemaRef » d’un jeu de données contient un URI référençant le XDM sur lequel le jeu de données est basé et représente tous les champs potentiels pouvant être utilisés par le jeu de données. |
-| 15/03/2019 | Tous les identifiants d’utilisateur final mappent vers la propriété « identityMap ». | « identityMap » contient tous les identifiants uniques d’un sujet, tels que l’identifiant de logiciel de gestion de la relation client, l’ECID ou l’identifiant du programme de fidélité. Cette map est utilisée par le [[!DNL Identity Service]](../identity-service/home.md) pour résoudre toutes les identités connues et anonymes d’un sujet, formant un graphique d’identités unique pour chaque utilisateur final. |
+| 15/03/2019 | Tous les identifiants d’utilisateur final mappent vers la propriété « identityMap ». | &quot;identityMap&quot; contient tous les identifiants uniques d’un sujet, tels que CRMID, ECID ou l’identifiant du programme de fidélité. Cette map est utilisée par le [[!DNL Identity Service]](../identity-service/home.md) pour résoudre toutes les identités connues et anonymes d’un sujet, formant un graphique d’identités unique pour chaque utilisateur final. |
 | 30/05/2019 | Fin de vie et suppression de la propriété « schema » des jeux de données | La propriété « schema » du jeu de données fournissait un lien de référence vers le schéma à l’aide du point d’entrée `/xdms` obsolète dans l’API [!DNL Catalog] Cette valeur a été remplacée par un « schemaRef » qui fournit les valeurs « id », « version » et « contentType » du schéma, comme indiqué dans la nouvelle API [!DNL Schema Registry]. |

@@ -3,9 +3,9 @@ title: Guide de configuration des règles de liaison de graphique d’identités
 description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec des configurations de règles de liaison de graphiques d’identités.
 badge: Version bêta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: e3568aa925661f4f519daf6572fd2df40b163cb5
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1357'
 ht-degree: 3%
 
 ---
@@ -76,6 +76,7 @@ Pour plus d’informations sur la création d’un jeu de données, consultez le
 >
 >* Pendant votre processus de prémise en oeuvre, vous devez vous assurer que les événements authentifiés que votre système enverra à l’Experience Platform contiennent toujours un identifiant de personne, tel que CRMID.
 >* Pendant l’implémentation, vous devez vous assurer que l’espace de noms unique ayant la priorité la plus élevée est toujours présent dans chaque profil. Consultez l’ [annexe](#appendix) pour obtenir des exemples de scénarios graphiques qui sont résolus en s’assurant que chaque profil contient l’espace de noms unique avec la priorité la plus élevée.
+>* Si vous utilisez le [connecteur source Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) pour ingérer des données, vous devez accorder à vos ECID une priorité plus élevée que celle d’AAID car Identity Service bloque AAID. En établissant la priorité d’ECID, vous pouvez demander à Identity Service de stocker les événements non authentifiés dans ECID au lieu d’AAID.
 
 À ce stade, vous devriez disposer des éléments suivants :
 

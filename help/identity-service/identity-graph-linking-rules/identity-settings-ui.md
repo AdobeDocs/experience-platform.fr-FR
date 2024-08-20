@@ -3,9 +3,9 @@ title: Interface utilisateur des paramètres d’identité
 description: Découvrez comment utiliser l’interface utilisateur des paramètres d’identité.
 badge: Version bêta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 536770d0c3e7e93921fe40887dafa5c76e851f5e
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '517'
+source-wordcount: '515'
 ht-degree: 2%
 
 ---
@@ -49,7 +49,7 @@ Pour désigner un espace de noms unique, cochez la case [!UICONTROL Unique per g
 
 ![Deux espaces de noms sélectionnés et définis comme uniques.](../images/rules/unique-namespace.png)
 
-Une fois vos espaces de noms uniques définis, les graphiques ne pourront plus avoir plusieurs identités contenant un espace de noms unique. Par exemple, si vous avez désigné l’identifiant CRM comme un espace de noms unique, un graphique ne peut avoir qu’une seule identité avec l’espace de noms de l’identifiant CRM. Pour plus d’informations, consultez la [présentation de l’algorithme d’optimisation des identités](./identity-optimization-algorithm.md#unique-namespace).
+Une fois vos espaces de noms uniques définis, les graphiques ne pourront plus avoir plusieurs identités contenant un espace de noms unique. Par exemple, si vous avez désigné CRMID comme espace de noms unique, un graphique ne peut avoir qu’une seule identité avec l’espace de noms CRMID. Pour plus d’informations, consultez la [présentation de l’algorithme d’optimisation des identités](./identity-optimization-algorithm.md#unique-namespace).
 
 Lorsque vos configurations sont terminées, sélectionnez **[!UICONTROL Suivant]**. Un message de confirmation s’affiche. Utilisez cette opportunité pour vérifier que vos configurations sont correctes, puis sélectionnez **[!UICONTROL Terminer]**.
 

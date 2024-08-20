@@ -2,9 +2,9 @@
 title: Aperçu de l’espace de noms des identités
 description: Découvrez les espaces de noms d’identité dans Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 59ac3d8b7fee0327396c990ef309ca3a4f292a77
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1858'
 ht-degree: 26%
 
 ---
@@ -35,7 +35,7 @@ Les espaces de noms d’identité nécessitent une compréhension des différent
 >abstract="Une valeur d’identité est un identifiant qui représente un individu, une organisation ou une ressource unique. Le contexte ou le type d’identité représenté par la valeur est défini par un espace de noms d’identités correspondant. Lors de la mise en correspondance de données d’enregistrement avec des fragments de profil, l’espace de noms et la valeur d’identité doivent correspondre. Lors de la mise en correspondance de données d’enregistrement avec des fragments de profil, l’espace de noms et la valeur d’identité doivent correspondre."
 >text="Learn more in documentation"
 
-Une identité complète comprend deux composants : une **valeur d’identité** et un **espace de noms d’identité**. Par exemple, si la valeur d’une identité est `scott@acme.com`, un espace de noms fournit du contexte à cette valeur en la distinguant comme adresse électronique. De même, un espace de noms peut distinguer `555-123-456` en tant que numéro de téléphone et `3126ABC` en tant qu’identifiant CRM. Essentiellement, **un espace de noms fournit du contexte à une identité donnée**. Lors de la mise en correspondance des données d’enregistrement entre les fragments de profil, comme lorsque [!DNL Real-Time Customer Profile] fusionne les données de profil, la valeur d’identité et l’espace de noms doivent correspondre.
+Une identité complète comprend deux composants : une **valeur d’identité** et un **espace de noms d’identité**. Par exemple, si la valeur d’une identité est `scott@acme.com`, un espace de noms fournit du contexte à cette valeur en la distinguant comme adresse électronique. De même, un espace de noms peut distinguer `555-123-456` en tant que numéro de téléphone et `3126ABC` en tant que CRMID. Essentiellement, **un espace de noms fournit du contexte à une identité donnée**. Lors de la mise en correspondance des données d’enregistrement entre les fragments de profil, comme lorsque [!DNL Real-Time Customer Profile] fusionne les données de profil, la valeur d’identité et l’espace de noms doivent correspondre.
 
 Par exemple, deux fragments de profil peuvent contenir des identifiants principaux différents, mais ils partagent la même valeur pour l’espace de noms &quot;Email&quot;. Par conséquent, l’Experience Platform peut voir que ces fragments sont en fait la même personne et rassemble les données dans le graphique d’identités de la personne.
 
@@ -47,8 +47,8 @@ Une autre manière de mieux comprendre le concept d’espace de noms consiste à
 
 Application de la même logique à Identity Service :
 
-* En un coup d’oeil, la valeur d’identité de : `1-234-567-8900` peut ressembler à un numéro de téléphone. Cependant, du point de vue du système, cette valeur peut avoir été configurée en tant qu’identifiant CRM. Identity Service n’aurait aucun moyen d’appliquer le contexte nécessaire à cette valeur d’identité sans un espace de noms correspondant.
-* Un autre exemple est la valeur d’identité de : `john@gmail.com`. Bien que cette valeur d’identité puisse facilement être considérée comme un e-mail, il est tout à fait possible qu’elle soit configurée en tant qu’identifiant CRM d’espace de noms personnalisé. Avec l’espace de noms, vous pouvez distinguer `Email:john@gmail.com` de `CRM ID:john@gmail.com`.
+* En un coup d’oeil, la valeur d’identité de : `1-234-567-8900` peut ressembler à un numéro de téléphone. Toutefois, du point de vue du système, cette valeur aurait pu être configurée comme CRMID. Identity Service n’aurait aucun moyen d’appliquer le contexte nécessaire à cette valeur d’identité sans un espace de noms correspondant.
+* Un autre exemple est la valeur d’identité de : `john@gmail.com`. Bien que cette valeur d’identité puisse facilement être considérée comme un e-mail, il est tout à fait possible qu’elle soit configurée en tant que CRMID d’espace de noms personnalisé. Avec l’espace de noms, vous pouvez distinguer `Email:john@gmail.com` de `CRMID:john@gmail.com`.
 
 >[!ENDSHADEBOX]
 
@@ -81,7 +81,7 @@ Les types d’identité suivants sont disponibles dans Experience Platform :
 | Type d’identité | Description |
 | --- | --- |
 | ID de cookie | Les ID de cookie identifient les navigateurs Web. Ces identités sont essentielles à l’expansion et constituent la majorité du graphique d’identités. Cependant, par nature, ils se désintègrent rapidement et perdent leur valeur au fil du temps. |
-| Identifiant multi-appareils | Les identifiants multi-appareils identifient un individu et lient généralement d’autres identifiants ensemble. Par exemple, un identifiant de connexion, un identifiant CRM et un identifiant de fidélité. Ceci indique à [!DNL Identity Service] de gérer la valeur avec précaution. |
+| Identifiant multi-appareils | Les identifiants multi-appareils identifient un individu et lient généralement d’autres identifiants ensemble. Par exemple, un identifiant de connexion, un identifiant CRMID et un identifiant de fidélité. Ceci indique à [!DNL Identity Service] de gérer la valeur avec précaution. |
 | ID d’appareil | Les identifiants d’appareils identifient les appareils, tels que les IDFA (iPhone et iPad), GAID (Android) et RIDA (Roku), et peuvent être partagés par plusieurs personnes d’un même foyer. |
 | Adresse e-mail | Les adresses électroniques sont souvent associées à une seule personne et peuvent donc être utilisées pour identifier cette personne sur différents canaux. Les identités de ce type comprennent des informations d’identification personnelle (PII). Ceci indique à [!DNL Identity Service] de gérer la valeur avec précaution. |
 | Identifiant non personnel | Les identifiants autres que les identifiants pour personnes sont utilisés pour enregistrer les identifiants qui nécessitent des espaces de noms mais qui ne sont pas connectés à un groupe de personnes. Par exemple, un SKU produit, des données associées à des produits, à des organisations ou à des magasins. |

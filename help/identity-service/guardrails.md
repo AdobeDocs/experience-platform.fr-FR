@@ -3,9 +3,9 @@ keywords: Experience Platform;identité;service d’identité;dépannage;garde-f
 title: Barrières de sécurité pour Identity Service
 description: Ce document fournit des informations sur l’utilisation et les limites de taux pour les données Identity Service afin de vous aider à optimiser l’utilisation du graphique d’identités.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 6d36a6ff1243b15dcafc2f37d8bad982730f7a39
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1591'
+source-wordcount: '1585'
 ht-degree: 39%
 
 ---
@@ -92,7 +92,7 @@ Les sections suivantes décrivent les implications de la logique de suppression 
 
 Contactez votre équipe de compte d’Adobe pour demander un changement de type d’identité si votre environnement de test de production contient :
 
-* Espace de noms personnalisé dans lequel les identifiants de personne (tels que les identifiants CRM) sont configurés en tant que type d’identité de cookie/appareil.
+* Espace de noms personnalisé dans lequel les identifiants de personne (tels que les CRMID) sont configurés en tant que type d’identité de cookie/appareil.
 * Espace de noms personnalisé dans lequel les identifiants de cookie/d’appareil sont configurés en tant que type d’identité multi-appareils.
 
 Une fois cette fonction disponible, les graphiques qui dépassent la limite de 50 identités sont réduits jusqu’à 50 identités. Pour Real-Time CDP Édition B2C, cela peut entraîner une augmentation minimale du nombre de profils qualifiés pour une audience, car ces profils étaient auparavant ignorés de la segmentation et de l’activation.
@@ -106,7 +106,7 @@ La suppression se produit uniquement pour les données d’Identity Service et n
 
 #### Real-Time Customer Profile et WebSDK : suppression d’identité par Principal
 
-Si vous souhaitez conserver vos événements authentifiés par rapport à l’identifiant CRM, il est recommandé de modifier vos identifiants principaux ECID en identifiant CRM. Lisez les documents suivants pour connaître les étapes de mise en oeuvre de cette modification :
+Si vous souhaitez conserver vos événements authentifiés par rapport au CRMID, il est recommandé de modifier vos ID principaux d’ECID en CRMID. Lisez les documents suivants pour connaître les étapes de mise en oeuvre de cette modification :
 
 * [Configurez le mappage d’identité pour les balises Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
 * [Données d’identité dans le SDK Web Experience Platform](../web-sdk/identity/overview.md#using-identitymap)
@@ -149,7 +149,7 @@ Par conséquent, Identity Service supprime l’identité la plus ancienne en fon
 
 >[!TAB Sortie graphique]
 
-Suite à la suppression de ECID:35577, les périphéries qui liaient l’ID CRM:60013 et l’ID CRM:25212 avec l’ECID:35577 désormais supprimé sont également supprimées. Ce processus de suppression entraîne la division du graphique en deux graphiques plus petits.
+Suite à la suppression de ECID:35577, les périphéries qui liaient CRMID:60013 et CRMID:25212 avec l’ECID:35577 désormais supprimé sont également supprimées. Ce processus de suppression entraîne la division du graphique en deux graphiques plus petits.
 
 ![](./images/guardrails/after-split.png)
 
@@ -176,7 +176,7 @@ Dans l’exemple ci-dessous, ECID:21011 est ingéré et lié au graphique à l�
 
 Par conséquent, Identity Service supprime uniquement l’identité la plus ancienne du graphique d’identités, qui dans ce cas est ECID:35577. La suppression de ECID:35577 entraîne également la suppression des éléments suivants :
 
-* Le lien entre l’ID de gestion de la relation client : 60013 et l’ECID:35577 désormais supprimé, ce qui entraîne un scénario de partage de graphique.
+* Le lien entre CRMID : 60013 et l’ECID désormais supprimé : 35577, ce qui entraîne un scénario de partage de graphique.
 * IDFA : 32110, IDFA : 02383, et les identités restantes représentées par `(...)`. Ces identités sont supprimées car, individuellement, elles ne sont liées à aucune autre identité et ne peuvent donc pas être représentées dans un graphique.
 
 ![](./images/guardrails/hub-and-spoke-process.png)

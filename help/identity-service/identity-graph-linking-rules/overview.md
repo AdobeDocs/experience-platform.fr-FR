@@ -3,9 +3,9 @@ title: Présentation des règles de liaison de graphiques d’identités
 description: Découvrez les règles de liaison de graphique d’identités dans Identity Service.
 badge: Version bêta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 7daa9191f2e095f01c7c09f02f87aa8724e2e325
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1177'
+source-wordcount: '1170'
 ht-degree: 1%
 
 ---
@@ -26,13 +26,13 @@ ht-degree: 1%
 * [Exemples de configurations de graphique](./configuration.md)
 * [Exemples de scénarios](./example-scenarios.md)
 
-Avec Adobe Experience Platform Identity Service et Real-time Customer Profile, il est facile de supposer que vos données sont parfaitement ingérées et que tous les profils fusionnés représentent une seule personne par le biais d’un identifiant de personne, tel qu’un identifiant CRM. Cependant, il existe des scénarios possibles où certaines données peuvent tenter de fusionner plusieurs profils disparates en un seul profil (&quot;effondrement du graphique&quot;). Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par le biais des règles de liaison des graphiques d’identités et permettre une personnalisation précise pour vos utilisateurs.
+Avec Adobe Experience Platform Identity Service et Real-time Customer Profile, il est facile de supposer que vos données sont parfaitement ingérées et que tous les profils fusionnés représentent une seule personne par le biais d’un identifiant de personne, tel un CRMID. Cependant, il existe des scénarios possibles où certaines données peuvent tenter de fusionner plusieurs profils disparates en un seul profil (&quot;effondrement du graphique&quot;). Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par le biais des règles de liaison des graphiques d’identités et permettre une personnalisation précise pour vos utilisateurs.
 
 ## Exemples de scénarios de réduction de graphiques
 
 * **Appareil partagé** : l’appareil partagé fait référence aux appareils utilisés par plusieurs individus. Les tablettes, les ordinateurs de bibliothèque et les kiosques sont des exemples d’appareils partagés.
 * **Mauvais numéros de téléphone et d’adresse électronique** : les mauvais numéros de téléphone et d’adresse électronique se rapportent aux utilisateurs finaux qui enregistrent des informations de contact non valides, telles que &quot;test<span>@test.com&quot; pour l’adresse électronique et &quot;+1-111-111-1111&quot; pour le numéro de téléphone.
-* **Valeurs d’identité erronées ou incorrectes** : les valeurs d’identité erronées ou incorrectes font référence à des valeurs d’identité non uniques pouvant fusionner des identifiants CRM. Par exemple, bien que les identifiants IDFA doivent comporter 36 caractères (32 caractères alphanumériques et quatre tirets), il existe des scénarios où un IDFA avec une valeur d’identité &quot;user_null&quot; peut être ingéré. De même, les numéros de téléphone ne prennent en charge que les caractères numériques, mais un espace de noms de téléphone avec une valeur d’identité &quot;non spécifié&quot; peut être ingéré.
+* **Valeurs d’identité erronées ou incorrectes** : les valeurs d’identité erronées ou incorrectes font référence à des valeurs d’identité non uniques pouvant fusionner des CRMID. Par exemple, bien que les identifiants IDFA doivent comporter 36 caractères (32 caractères alphanumériques et quatre tirets), il existe des scénarios où un IDFA avec une valeur d’identité &quot;user_null&quot; peut être ingéré. De même, les numéros de téléphone ne prennent en charge que les caractères numériques, mais un espace de noms de téléphone avec une valeur d’identité &quot;non spécifié&quot; peut être ingéré.
 
 Pour plus d’informations sur les scénarios de cas d’utilisation des règles de liaison de graphiques d’identités, lisez le document sur [exemples de scénarios](./example-scenarios.md).
 
@@ -60,15 +60,15 @@ Examinez le scénario suivant :
 * Scott utilise une tablette et ouvre son navigateur Google Chrome pour accéder à nike<span>.com, où il se connecte et recherche de nouvelles chaussures de basket.
    * En arrière-plan, ce scénario consigne les identités suivantes :
       * Espace de noms et valeur ECID représentant l’utilisation du navigateur
-      * Un espace de noms et une valeur de l’identifiant CRM pour représenter l’utilisateur authentifié (Scott s’est connecté avec son nom d’utilisateur et son mot de passe).
+      * Un espace de noms et une valeur CRMID pour représenter l’utilisateur authentifié (Scott s’est connecté avec son nom d’utilisateur et son mot de passe).
 * Son fils Peter utilise alors la même tablette et utilise également Google Chrome pour aller sur nike<span>.com, où il se connecte avec son propre compte pour rechercher du matériel de football.
    * En arrière-plan, ce scénario consigne les identités suivantes :
       * Espace de noms et valeur ECID identiques pour représenter le navigateur.
-      * Un nouvel espace de noms et une nouvelle valeur de l’identifiant CRM pour représenter l’utilisateur authentifié.
+      * Un nouvel espace de noms et une nouvelle valeur CRMID pour représenter l’utilisateur authentifié.
 
-Si l’identifiant CRM a été configuré en tant qu’espace de noms unique, l’algorithme d’optimisation des identités divise les identifiants CRM en deux graphiques d’identités distincts, au lieu de les fusionner.
+Si le CRMID a été configuré en tant qu’espace de noms unique, l’algorithme d’optimisation des identités divise les CRMID en deux graphiques d’identités distincts, au lieu de les fusionner.
 
-Si vous ne configurez pas d’espace de noms unique, vous pouvez obtenir des fusions de graphiques indésirables, telles que deux identités avec le même espace de noms d’identifiant CRM, mais des valeurs d’identité différentes (des scénarios comme celui-ci représentent souvent deux entités de personne différentes dans le même graphique).
+Si vous ne configurez pas d’espace de noms unique, vous pouvez obtenir des fusions de graphiques indésirables, telles que deux identités avec le même espace de noms CRMID, mais des valeurs d’identité différentes (des scénarios comme celui-ci représentent souvent deux entités de personne différentes dans le même graphique).
 
 Vous devez configurer un espace de noms unique pour informer l’algorithme d’optimisation des identités afin d’appliquer des limites aux données d’identité ingérées dans un graphique d’identités donné.
 

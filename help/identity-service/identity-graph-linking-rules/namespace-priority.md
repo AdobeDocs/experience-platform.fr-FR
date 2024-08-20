@@ -3,10 +3,10 @@ title: Priorité d’espace de noms
 description: Découvrez la priorité des espaces de noms dans Identity Service.
 badge: Version bêta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: c9610f935a074adf82d96c1eb824c159b18f2837
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1639'
-ht-degree: 2%
+source-wordcount: '1626'
+ht-degree: 3%
 
 ---
 
@@ -18,8 +18,8 @@ ht-degree: 2%
 
 Chaque mise en oeuvre client est unique et personnalisée pour répondre aux objectifs d’une organisation spécifique. Par conséquent, l’importance d’un espace de noms donné varie d’un client à l’autre. Voici des exemples concrets :
 
-* D’un côté, vous pouvez considérer l’espace de noms Email comme représentant une entité de personne et donc comme unique par personne. D’un autre côté, un autre client peut considérer l’espace de noms Email comme un identifiant non fiable et donc permettre à un seul identifiant CRM d’être associé à plusieurs identités avec l’espace de noms Email.
-* Vous pouvez collecter des comportements en ligne à l’aide d’un espace de noms &quot;Identifiant de connexion&quot;. Cet identifiant de connexion peut avoir une relation 1:1 avec l’identifiant CRM, qui stocke ensuite les attributs d’un système CRM et peut être considéré comme l’espace de noms le plus important. Dans ce cas, vous déterminez alors que l’espace de noms de l’ID de gestion de la relation client est une représentation plus précise d’une personne, tandis que l’espace de noms de l’ID de connexion est le deuxième plus important.
+* D’un côté, vous pouvez considérer l’espace de noms Email comme représentant une entité de personne et donc comme unique par personne. D’un autre côté, un autre client peut considérer l’espace de noms Email comme un identifiant non fiable et donc permettre à un seul CRMID d’être associé à plusieurs identités avec l’espace de noms Email.
+* Vous pouvez collecter des comportements en ligne à l’aide d’un espace de noms &quot;Identifiant de connexion&quot;. Cet identifiant de connexion peut avoir une relation 1:1 avec le CRMID, qui stocke ensuite les attributs d’un système CRM et peut être considéré comme l’espace de noms le plus important. Dans ce cas, vous déterminez alors que l’espace de noms CRMID est une représentation plus précise d’une personne, tandis que l’espace de noms Identifiant de connexion est le deuxième plus important.
 
 Vous devez effectuer des configurations dans Identity Service qui reflètent l’importance de vos espaces de noms, car cela influence la manière dont les profils sont formés et segmentés.
 
@@ -49,7 +49,7 @@ Une identité représente un objet réel. Trois objets sont représentés dans l
 
 Les espaces de noms de personne sont relativement immuables par rapport aux appareils matériels (comme IDFA, GAID), qui sont relativement immuables par rapport aux navigateurs web. En gros, vous (personne) serez toujours une seule entité, qui peut avoir plusieurs appareils (téléphone, ordinateur portable, tablette, etc.) et utiliser plusieurs navigateurs (Google Chrome, Safari, FireFox, etc.)
 
-Une autre façon d&#39;aborder ce sujet est la cardinalité. Pour une entité de personne donnée, combien d’identités seront créées ? Dans la plupart des cas, une personne dispose d’un identifiant CRM, d’une poignée d’identifiants d’appareil matériel (les réinitialisations IDFA/GAID ne doivent pas se produire souvent) et d’encore plus de cookies (un individu peut facilement naviguer sur plusieurs appareils, utiliser le mode incognito ou réinitialiser les cookies à tout moment). En règle générale, **la cardinalité inférieure indique un espace de noms avec une valeur supérieure**.
+Une autre façon d&#39;aborder ce sujet est la cardinalité. Pour une entité de personne donnée, combien d’identités seront créées ? Dans la plupart des cas, une personne dispose d’un seul CRMID, d’une poignée d’identifiants d’appareil matériel (les réinitialisations IDFA/GAID ne doivent pas se produire souvent) et d’encore plus de cookies (un individu peut facilement naviguer sur plusieurs appareils, utiliser le mode incognito ou réinitialiser les cookies à tout moment). En règle générale, **la cardinalité inférieure indique un espace de noms avec une valeur supérieure**.
 
 ## Validation des paramètres de priorité de votre espace de noms
 
@@ -112,9 +112,9 @@ Compte tenu des configurations décrites ci-dessus, les actions de l’utilisate
 | --- | --- | --- | --- | --- |
 | Afficher la page d’offre de carte de crédit | Non authentifié (anonyme) | SDK Web | {ECID} | ECID |
 | Afficher la page d’aide | Non authentifié | SDK Mobile | {ECID, IDFA} | IDFA |
-| Afficher le solde du compte de contrôle | Authenticated (Authentifié) | SDK Web | {Identifiant CRM, ECID} | Identifiant CRM |
-| Inscrivez-vous au prêt immobilier | Authenticated (Authentifié) | Connecteur source Analytics | {Identifiant CRM, ECID, AAID} | Identifiant CRM |
-| Transférer 1 000 $ de l’archivage à l’épargne | Authenticated (Authentifié) | SDK Mobile | {Identifiant CRM, GAID, ECID} | Identifiant CRM |
+| Afficher le solde du compte de contrôle | Authenticated (Authentifié) | SDK Web | {CRMID, ECID} | CRMID |
+| Inscrivez-vous au prêt immobilier | Authenticated (Authentifié) | Connecteur source Analytics | {CRMID, ECID, AAID} | CRMID |
+| Transférer 1 000 $ de l’archivage à l’épargne | Authenticated (Authentifié) | SDK Mobile | {CRMID, GAID, ECID} | CRMID |
 
 {style="table-layout:auto"}
 
@@ -148,7 +148,7 @@ Pour plus d’informations, consultez la [présentation de la gestion avancée d
 
 ### Attributs calculés
 
-Les attributs calculés n’utilisent pas la priorité d’espace de noms pour calculer les valeurs. Si vous utilisez des attributs calculés, vous devez vous assurer que l’identifiant CRM est désigné comme votre identité principale pour WebSDK. Cette limitation devrait être résolue en août 2024.
+Les attributs calculés n’utilisent pas la priorité d’espace de noms pour calculer les valeurs. Si vous utilisez des attributs calculés, vous devez vous assurer que le CRMID est désigné comme votre identité principale pour WebSDK. Cette limitation devrait être résolue en août 2024.
 
 Pour plus d’informations, consultez le [guide de l’interface utilisateur des attributs calculés](../../profile/computed-attributes/ui.md).
 
@@ -168,8 +168,8 @@ Pour plus d’informations sur les schémas XDM, consultez la [présentation des
 
 Lors de la sélection de vos données, vous devez spécifier un espace de noms qui sera utilisé pour déterminer les événements qui calculent les scores et les événements qui stockent les scores calculés. Il est recommandé de sélectionner l’espace de noms qui représente une personne.
 
-* Si vous collectez des données de comportement web à l’aide de WebSDk, il est recommandé de choisir l’espace de noms de l’identifiant CRM dans la carte d’identité.
-* Si vous collectez des données de comportement web à l’aide du connecteur source Analytics, vous devez sélectionner le descripteur d’identité (ID CRM).
+* Si vous collectez des données de comportement web à l’aide de WebSDk, il est recommandé de choisir l’espace de noms CRMID dans la carte d’identité.
+* Si vous collectez des données de comportement web à l’aide du connecteur source Analytics, vous devez sélectionner le descripteur d’identité (CRMID).
 
 Cette configuration entraîne le calcul des scores uniquement à l’aide d’événements authentifiés.
 

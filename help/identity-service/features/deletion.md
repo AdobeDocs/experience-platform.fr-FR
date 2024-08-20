@@ -2,10 +2,10 @@
 title: Suppressions dans le service d’identités
 description: Ce document présente les différents mécanismes que vous pouvez utiliser pour supprimer vos données d’identité dans Experience Platform et explique clairement comment les graphiques d’identités peuvent être affectés.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 576b17842ee1c5722332ba49e26b037537ec96ed
+source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
 workflow-type: tm+mt
-source-wordcount: '1199'
-ht-degree: 97%
+source-wordcount: '1198'
+ht-degree: 95%
 
 ---
 
@@ -23,7 +23,7 @@ Le document ci-dessous fait référence aux fonctions suivantes d’Experience P
 
 * [Service d’identités](../home.md) : obtenez une meilleure compréhension des clients individuels et de leurs comportements en reliant les identités entre les appareils et les systèmes.
    *  [Graphique d’identités](./identity-graph-viewer.md) : Un graphique d’identités est une carte des relations entre différentes identités pour un client spécifique. Il permet de visualiser la façon dont un client interagit avec votre marque sur différents canaux.
-   * [Espaces de noms d’identité](./namespaces.md) : Les espaces de noms d’identité sont des composants du service d’identités qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur « name<span>@email.com » comme adresse e-mail ou « 443522 » comme identifiant CRM numérique.
+   * [Espaces de noms d’identité](./namespaces.md) : Les espaces de noms d’identité sont des composants du service d’identités qui servent d’indicateurs du contexte auquel une identité se rapporte. Par exemple, ils distinguent une valeur &quot;name<span>@email.com&quot; comme adresse électronique ou &quot;443522&quot; comme identifiant CRMID numérique.
 * [Service de catalogue](../../catalog/home.md) : découvrez le traçabilité des données, les métadonnées, les descriptions de fichiers, les répertoires et les jeux de données dans le lac de données.
 * [Hygiène des données](../../hygiene/home.md) : gérez vos données client stockées en planifiant des expirations de jeux de données automatisées ou en supprimant des enregistrements individuels d’un jeu de données ou de tous les jeux de données.
 * [Adobe Experience Platform Privacy Service](../../privacy-service/home.md) : gère les demandes de clients souhaitant accéder à leurs données personnelles, en refuser la vente ou les effacer dans différentes applications Adobe Experience Cloud.
