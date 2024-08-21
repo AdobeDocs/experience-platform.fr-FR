@@ -2,7 +2,7 @@
 title: Type de données de collecte de détails Advertising
 description: Découvrez le type de données XDM (Modèle de données d’expérience de collecte de détails d’Advertising).
 exl-id: 3f6bf1f9-c728-46af-804a-cb41eb29951b
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 14%
@@ -22,7 +22,7 @@ ht-degree: 14%
 >Chaque nom d’affichage contient un lien vers des informations supplémentaires sur ses paramètres audio et vidéo. Les pages liées contiennent des détails sur les données de publicité vidéo collectées par Adobe, les valeurs d’implémentation, les paramètres réseau, la création de rapports et des considérations importantes.
 
 | Nom d’affichage | Propriété | Type de données | Obligatoire | Description |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|----------------------------------------------------------------------------------------------------------------------------------|
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|-----------|----------|-----------------------------------------------------------------------------------------------------------------------|
 | [[!UICONTROL Annonceur d’annonce]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#advertiser) | `advertiser` | Chaîne | Non | Entreprise ou marque dont le produit apparaît dans la publicité. |
 | [[!UICONTROL Campagne publicitaire]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#campaign-id) | `campaignID` | Chaîne | Non | Identifiant de la campagne publicitaire. |
 | [[!UICONTROL ID de création publicitaire]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#creative-id) | `creativeID` | Chaîne | Non | ID de la création publicitaire. |
@@ -33,3 +33,5 @@ ht-degree: 14%
 | [[!UICONTROL Identifiant de référencement de la publicité]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#placement-id) | `placementID` | Chaîne | Non | Identifiant de référencement de la publicité. |
 | [[!UICONTROL Nom du lecteur de publicités]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#ad-player-name) | `playerName` | Chaîne | Oui | Nom du lecteur responsable du rendu de la publicité. |
 | [[!UICONTROL Identifiant du site publicitaire]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/ad-parameters.html#site-id) | `siteID` | Chaîne | Non | Identifiant du site de la publicité. |
+
+{style="table-layout:auto"}

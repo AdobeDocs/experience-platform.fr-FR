@@ -1,7 +1,7 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Août 2024
 description: Les notes de mise à jour d’août 2024 pour Adobe Experience Platform.
-source-git-commit: 67152524c9448ad1c6cd1f25437e5ed69900ef84
+source-git-commit: d01e16938485f6648cc02ce1674e0e9e84d78147
 workflow-type: tm+mt
 source-wordcount: '1300'
 ht-degree: 31%
@@ -69,11 +69,9 @@ XDM est une spécification Open Source qui fournit des structures et des défini
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Flux de création de schéma assisté ML | Utilisez des algorithmes avancés d’apprentissage automatique pour analyser vos exemples de fichiers de données CSV et créer automatiquement des schémas optimisés à l’aide de champs standard et personnalisés.<br>Principales fonctionnalités :<br><ul><li>Création plus rapide de schémas : générez des schémas directement à partir d’exemples de fichiers de données à l’aide de champs XDM générés et recommandés par ML.</li><li>Flexibilité de l’évolution des schémas : ajoutez ou mettez facilement à jour des champs dans le schéma généré.</li><li>Intégration transparente : entièrement intégrée au flux de création de schéma de base dans l’URL des schémas, ce qui garantit une expérience utilisateur fluide et cohérente.</li><li>Révision et modification efficaces : affichez et mettez à jour rapidement votre schéma à l’aide de l’éditeur d’affichage plat, ce qui rend le processus de création plus efficace et convivial.</li></ul> |
+| Flux de création de schéma assisté ML | Utilisez des algorithmes avancés d’apprentissage automatique pour analyser vos fichiers de données d’exemple et créer automatiquement des schémas optimisés à l’aide de champs standard et personnalisés.<br>Principales fonctionnalités :<br><ul><li>Création plus rapide de schémas : générez des schémas directement à partir d’exemples de fichiers de données à l’aide de champs XDM générés et recommandés par ML.</li><li>Flexibilité de l’évolution des schémas : ajoutez ou mettez facilement à jour des champs dans le schéma généré.</li><li>Intégration transparente : entièrement intégrée au flux de création de schéma de base dans l’URL des schémas, ce qui garantit une expérience utilisateur fluide et cohérente.</li><li>Révision et modification efficaces : affichez et mettez à jour rapidement votre schéma à l’aide de l’éditeur d’affichage plat, ce qui rend le processus de création plus efficace et convivial.</li></ul><br>Pour en savoir plus, consultez le [guide de processus de création de schémas avec assistance ML](../../xdm/ui/ml-assisted-schema-creation.md). |
 
 {style="table-layout:auto"}
-
-Pour en savoir plus, consultez la [présentation de la création de schéma assistée par ML](../../xdm/ui/ml-assisted-schema-creation.md)
 
 Pour plus d’informations sur XDM dans Platform, consultez la [présentation du système XDM](../../xdm/home.md).
 

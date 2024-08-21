@@ -2,10 +2,10 @@
 title: Type de données de collection Détails de la session
 description: Découvrez le type de données XDM (Session Details Collection Experience Data Model).
 exl-id: ffe6bcf7-61e1-4f7a-ba95-7fcb78683cc9
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: 9350cfc299c20bd63a2a559c177b3af02739e5b9
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 15%
+source-wordcount: '857'
+ht-degree: 16%
 
 ---
 
@@ -31,7 +31,6 @@ ht-degree: 15%
 | [[!UICONTROL Type de contenu de diffusion]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-type) | `contentType` | Chaîne | Oui | [!UICONTROL Type de contenu de diffusion] de la diffusion en continu. Les valeurs disponibles par [!UICONTROL Type de diffusion] sont les suivantes :<br>Audio : &quot;chanson&quot;, &quot;podcast&quot;, &quot;audio-ok&quot; et &quot;radio&quot;;<br>Vidéo : &quot;VoD&quot;, &quot;Live&quot;, &quot;Linéaire&quot;, &quot;UGC&quot; et &quot;DVoD&quot;.<br>Les clients peuvent fournir des valeurs personnalisées pour ce paramètre. |
 | [[!UICONTROL Réseau de diffusion]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#network) | `network` | Chaîne | Non | Nom du réseau/canal. |
 | [[!UICONTROL Canal de contenu]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-channel) | `channel` | Chaîne | Oui | Le [!UICONTROL canal de contenu] est le canal de distribution à partir duquel le contenu a été lu. |
-| [[!UICONTROL Contenu terminé]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-complete) | `isCompleted` | Booléen | Non | [!UICONTROL Contenu terminé] indique si une ressource multimédia minutée a été visionnée jusqu’à la fin. Cet événement ne signifie pas nécessairement que le spectateur a visionné toute la vidéo ; il aurait pu sauter devant. |
 | [!UICONTROL Réseau de diffusion de contenu] | `cdn` | Chaîne | Non | Le [!UICONTROL réseau de diffusion de contenu] du contenu est lu. |
 | [[!UICONTROL ID de contenu]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-id) | `name` | Chaîne | Oui | L’ [!UICONTROL ID de contenu] est un identifiant unique du contenu. Il peut être utilisé pour renvoyer vers d’autres ID d’industrie ou CMS. |
 | [[!UICONTROL Nom du contenu]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-name-(variable)) | `friendlyName` | Chaîne | Non | Le [!UICONTROL Nom du contenu] est le nom &quot;convivial&quot; (lisible par l’utilisateur) du contenu. |
@@ -45,7 +44,6 @@ ht-degree: 15%
 | [[!UICONTROL Genre]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#genre) | `genre` | Chaîne | Non | Type ou regroupement de contenu tel que défini par le producteur de contenu. Les valeurs doivent être délimitées par des virgules dans l’implémentation de la variable. |
 | [[!UICONTROL Media Authorized]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#authorized) | `authorized` | Chaîne | Non | Confirme si l’utilisateur a été autorisé via l’authentification Adobe. |
 | [[!UICONTROL Longueur du contenu multimédia]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#content-length-(variable)) | `length` | Nombre entier | Oui | La [!UICONTROL longueur du contenu multimédia] contient la longueur/l’exécution de l’élément vidéo : il s’agit de la longueur maximale (ou durée) du contenu en cours de consommation (en secondes). |
-| [[!UICONTROL Démarrages de média]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#media-starts) | `isViewed` | Booléen | Non | Événement de chargement pour le média. Cela se produit lorsque la visionneuse sélectionne le bouton de lecture. Cela compte même s’il existe des publicités preroll, des mises en mémoire tampon, des erreurs, etc. |
 | [[!UICONTROL Identifiant MVPD]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#mvpd) | `mvpd` | Chaîne | Non | Identifiant MVPD (Multi-channel Video Programming Distributor) fourni via l’authentification Adobe. |
 | [[!UICONTROL Publisher]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#publisher) | `publisher` | Chaîne | Non | Nom de l’éditeur de contenu audio. |
 | [[!UICONTROL Radio Station]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#station) | `station` | Chaîne | Non | Nom de la station radio sur laquelle le contenu audio est lu. |
@@ -60,10 +58,3 @@ ht-degree: 15%
 | [[!UICONTROL Version]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/audio-video-parameters.html#sdk-version) | `appVersion` | Chaîne | Non | Version du SDK utilisée par le lecteur. Cela peut avoir toute valeur personnalisée qui convient à votre lecteur. |
 
 {style="table-layout:auto"}
-
-<!-- This is required for sessionStart. 
-Q) How do I indicate that?
-Q) Do you know where to link for:
-Ad Load Type
-Content Delivery Network
- -->

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les principes de base de la création et de l’édition de schémas dans l’interface utilisateur de l’Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: f530e4ff755ac89141ee67bef80700b46acf0868
 workflow-type: tm+mt
-source-wordcount: '3861'
+source-wordcount: '3859'
 ht-degree: 3%
 
 ---
@@ -39,7 +39,7 @@ La boîte de dialogue [!UICONTROL Créer un schéma] s’affiche. Dans cette bo�
 
 ![La boîte de dialogue Créer un schéma avec les options du workflow et sélectionnez mise en surbrillance.](../../images/tutorials/create-schema/create-a-schema-dialog.png)
 
-### Création manuelle ou avec assistance ML de schéma {#manual-or-assisted}
+### [!BADGE Beta]{type=Informative} Création manuelle ou de schéma avec assistance ML {#manual-or-assisted}
 
 Pour savoir comment utiliser un algorithme ML afin de recommander une structure de schéma basée sur un fichier csv, consultez le [guide de création de schémas assisté par l’apprentissage automatique](../ml-assisted-schema-creation.md). Ce guide de l’interface utilisateur se concentre sur le workflow de création manuelle.
 
@@ -63,7 +63,7 @@ L&#39;onglet [!UICONTROL Schéma] [!UICONTROL Parcourir] s&#39;affiche. Le sché
 
 >[!NOTE]
 >
->Une fois qu’un schéma a été enregistré et utilisé dans l’ingestion de données, seules des modifications additifs peuvent lui être apportées. Pour plus d’informations, voir les [règles de l’évolution du schéma](../../schema/composition.md#evolution) .
+Une fois qu’un schéma a été enregistré et utilisé dans l’ingestion de données, seules des modifications additifs peuvent lui être apportées. Pour plus d’informations, voir les [règles de l’évolution du schéma](../../schema/composition.md#evolution) .
 
 Pour modifier un schéma existant, sélectionnez l’onglet **[!UICONTROL Parcourir]**, puis sélectionnez le nom du schéma à modifier. Vous pouvez également utiliser la barre de recherche pour réduire la liste des options disponibles.
 
@@ -71,7 +71,7 @@ Pour modifier un schéma existant, sélectionnez l’onglet **[!UICONTROL Parcou
 
 >[!TIP]
 >
->Vous pouvez utiliser les fonctionnalités de recherche et de filtrage de l’espace de travail pour faciliter la recherche du schéma. Pour plus d’informations, consultez le guide sur l’ [exploration des ressources XDM](../explore.md) .
+Vous pouvez utiliser les fonctionnalités de recherche et de filtrage de l’espace de travail pour faciliter la recherche du schéma. Pour plus d’informations, consultez le guide sur l’ [exploration des ressources XDM](../explore.md) .
 
 Une fois que vous avez sélectionné un schéma, le [!DNL Schema Editor] apparaît avec la structure du schéma affichée dans la zone de travail. Vous pouvez désormais [ajouter des groupes de champs](#add-field-groups) au schéma (ou [ajouter des champs individuels](#add-individual-fields) à partir de ces groupes), [modifier les noms d’affichage des champs](#display-names) ou [modifier les groupes de champs personnalisés existants](./field-groups.md#edit) si le schéma en utilise un.
 
@@ -89,7 +89,7 @@ Pour votre commodité, l’éditeur de schémas propose un bouton d’activation
 
 >[!NOTE]
 >
->Le changement des noms de champ en noms d’affichage est purement cosmétique et ne modifie aucune ressource en aval.
+Le changement des noms de champ en noms d’affichage est purement cosmétique et ne modifie aucune ressource en aval.
 
 ![ L’éditeur de schémas avec [!UICONTROL  Afficher les noms d’affichage pour les champs] surligné.](../../images/ui/resources/schemas/display-name-toggle.png)
 
@@ -99,7 +99,7 @@ Les noms d’affichage des groupes de champs standard sont générés par le sys
 
 >[!NOTE]
 >
->Cette section explique comment ajouter des groupes de champs existants à un schéma. Si vous souhaitez créer un groupe de champs personnalisé, reportez-vous au guide sur la [création et modification de groupes de champs](./field-groups.md#create) à la place.
+Cette section explique comment ajouter des groupes de champs existants à un schéma. Si vous souhaitez créer un groupe de champs personnalisé, reportez-vous au guide sur la [création et modification de groupes de champs](./field-groups.md#create) à la place.
 
 Une fois que vous avez ouvert un schéma dans [!DNL Schema Editor], vous pouvez ajouter des champs au schéma à l’aide de groupes de champs. Pour commencer, sélectionnez **[!UICONTROL Ajouter]** en regard de **[!UICONTROL Groupes de champs]** dans le rail de gauche.
 
@@ -115,7 +115,7 @@ Si vous connaissez l’activité générale ou le domaine d’activité des cham
 
 >[!NOTE]
 >
->Pour plus d’informations sur les bonnes pratiques de modélisation des données spécifiques à un secteur d’activité dans XDM, consultez la documentation sur les [modèles de données du secteur](../../schema/industries/overview.md).
+Pour plus d’informations sur les bonnes pratiques de modélisation des données spécifiques à un secteur d’activité dans XDM, consultez la documentation sur les [modèles de données du secteur](../../schema/industries/overview.md).
 
 Vous pouvez également utiliser la barre de recherche pour localiser le groupe de champs souhaité. Les groupes de champs dont le nom correspond à la requête apparaissent en haut de la liste. Sous **[!UICONTROL Champs standard]**, des groupes de champs contenant des champs qui décrivent les attributs de données souhaités s’affichent.
 
@@ -127,7 +127,7 @@ Cochez la case en regard du nom du groupe de champs que vous souhaitez ajouter a
 
 >[!TIP]
 >
->Pour tout groupe de champs répertorié, vous pouvez pointer ou vous concentrer sur l’icône d’informations (![icône d’information](/help/images/icons/info.png)) pour afficher une brève description du type de données que le groupe de champs capture. Vous pouvez également sélectionner l’icône d’aperçu (![icône d’aperçu](/help/images/icons/preview.png)) pour afficher la structure des champs fournis par le groupe de champs avant de décider de l’ajouter au schéma.
+Pour tout groupe de champs répertorié, vous pouvez pointer ou vous concentrer sur l’icône d’informations (![icône d’information](/help/images/icons/info.png)) pour afficher une brève description du type de données que le groupe de champs capture. Vous pouvez également sélectionner l’icône d’aperçu (![icône d’aperçu](/help/images/icons/preview.png)) pour afficher la structure des champs fournis par le groupe de champs avant de décider de l’ajouter au schéma.
 
 Une fois que vous avez choisi vos groupes de champs, sélectionnez **[!UICONTROL Ajouter des groupes de champs]** pour les ajouter au schéma.
 
@@ -139,9 +139,9 @@ Une fois que vous avez choisi vos groupes de champs, sélectionnez **[!UICONTROL
 
 >[!NOTE]
 >
->Dans l’éditeur de schémas, les classes standard (générées par un Adobe) et les groupes de champs sont indiqués par l’icône de cadenas (![Icône de cadenas.](/help/images/icons/lock-closed.png). Le cadenas s’affiche dans le rail de gauche en regard du nom de la classe ou du groupe de champs, ainsi qu’en regard de tout champ du diagramme de schéma qui fait partie d’une ressource générée par le système.
+Dans l’éditeur de schémas, les classes standard (générées par un Adobe) et les groupes de champs sont indiqués par l’icône de cadenas (![Icône de cadenas.](/help/images/icons/lock-closed.png). Le cadenas s’affiche dans le rail de gauche en regard du nom de la classe ou du groupe de champs, ainsi qu’en regard de tout champ du diagramme de schéma qui fait partie d’une ressource générée par le système.
 >
->![L’éditeur de schéma avec l’icône de cadenas mise en surbrillance](../../images/ui/explore/schema-editor-padlock-icon.png)
+![L’éditeur de schéma avec l’icône de cadenas mise en surbrillance](../../images/ui/explore/schema-editor-padlock-icon.png)
 
 Après avoir ajouté un groupe de champs à un schéma, vous pouvez éventuellement [supprimer des champs existants](#remove-fields) ou [ajouter de nouveaux champs personnalisés](#add-fields) à ces groupes, en fonction de vos besoins.
 
@@ -151,7 +151,7 @@ Après avoir ajouté un groupe de champs à un schéma, vous pouvez supprimer to
 
 >[!NOTE]
 >
->La suppression de champs d’un groupe de champs affecte uniquement le schéma en cours de traitement et n’affecte pas le groupe de champs lui-même. Si vous supprimez des champs dans un schéma, ces champs sont toujours disponibles dans tous les autres schémas qui utilisent le même groupe de champs.
+La suppression de champs d’un groupe de champs affecte uniquement le schéma en cours de traitement et n’affecte pas le groupe de champs lui-même. Si vous supprimez des champs dans un schéma, ces champs sont toujours disponibles dans tous les autres schémas qui utilisent le même groupe de champs.
 
 Dans l’exemple suivant, le groupe de champs standard **[!UICONTROL Demographic Details]** a été ajouté à un schéma. Pour supprimer un champ unique, tel que `taxId`, sélectionnez le champ dans la zone de travail, puis sélectionnez **[!UICONTROL Supprimer]** dans le rail de droite.
 
@@ -185,7 +185,7 @@ L’éditeur de schémas vous permet d’ajouter des champs individuels directem
 
 >[!IMPORTANT]
 >
->Même si l’éditeur de schémas permet fonctionnellement d’ajouter des champs individuels directement à un schéma, cela ne change pas le fait que tous les champs d’un schéma XDM doivent être fournis par sa classe ou un groupe de champs compatible avec cette classe. Comme les sections ci-dessous l’expliquent, tous les champs individuels sont toujours associés à une classe ou à un groupe de champs comme étape clé lorsqu’ils sont ajoutés à un schéma.
+Même si l’éditeur de schémas permet fonctionnellement d’ajouter des champs individuels directement à un schéma, cela ne change pas le fait que tous les champs d’un schéma XDM doivent être fournis par sa classe ou un groupe de champs compatible avec cette classe. Comme les sections ci-dessous l’expliquent, tous les champs individuels sont toujours associés à une classe ou à un groupe de champs comme étape clé lorsqu’ils sont ajoutés à un schéma.
 
 ### Ajouter des champs standard {#add-standard-fields}
 
@@ -219,23 +219,23 @@ Commencez à saisir le nom du champ que vous souhaitez ajouter, et le système c
 
 ![Nouveau champ](../../images/ui/resources/schemas/custom-field-search.png)
 
-Après avoir fourni un nom d’affichage et un type de données pour le champ, l’étape suivante consiste à attribuer le champ à une ressource XDM parente. Si votre schéma utilise une classe personnalisée, vous pouvez choisir d’[ajouter le champ à la classe affectée](#add-to-class) ou un [groupe de champs](#add-to-field-group) à la place. Cependant, si votre schéma utilise une classe standard, vous ne pouvez affecter le champ personnalisé qu’à un groupe de champs.
+Après avoir fourni un nom d’affichage et un type de données for Dans le champ, l’étape suivante consiste à affecter le champ à une ressource XDM parente. Si votre schéma utilise une classe personnalisée, vous pouvez choisir d’[ajouter le champ à la classe affectée](#add-to-class) ou un [groupe de champs](#add-to-field-group) à la place. Cependant, si votre schéma utilise une classe standard, vous ne pouvez affecter le champ personnalisé qu’à un groupe de champs.
 
 #### Affecter le champ à un groupe de champs personnalisé {#add-to-field-group}
 
 >[!NOTE]
 >
->Cette section décrit uniquement comment affecter le champ à un groupe de champs personnalisé. Si vous souhaitez étendre un groupe de champs standard avec le nouveau champ personnalisé à la place, reportez-vous à la section sur l’ [ajout de champs personnalisés aux groupes de champs standard](#custom-fields-for-standard-groups).
+Cette section décrit uniquement comment affecter le champ à un groupe de champs personnalisé. Si vous souhaitez étendre un groupe de champs standard avec le nouveau champ personnalisé à la place, reportez-vous à la section sur l’ [ajout de champs personnalisés aux groupes de champs standard](#custom-fields-for-standard-groups).
 
 Sous **[!UICONTROL Attribuer à]**, sélectionnez **[!UICONTROL Groupe de champs]**. Si votre schéma utilise une classe standard, il s’agit de la seule option disponible et elle est sélectionnée par défaut.
 
-Vous devez ensuite sélectionner un groupe de champs pour le nouveau champ à associer. Commencez à saisir le nom du groupe de champs dans la saisie de texte fournie. Si des groupes de champs personnalisés correspondent à l’entrée, ils s’affichent dans la liste déroulante. Vous pouvez également saisir un nom unique pour créer un groupe de champs.
+Vous devez ensuite sélectionner un groupe de champs pour le nouveau champ à associer. Commencez à saisir le nom du groupe de champs dans la saisie de texte fournie. Si des groupes de champs personnalisés correspondent à l’entrée, ils s’affichent dans la liste déroulante. Vous pouvez également saisir a nom unique pour créer un groupe de champs à la place.
 
 ![Sélectionner un groupe de champs](../../images/ui/resources/schemas/select-field-group.png)
 
 >[!WARNING]
 >
->Si vous sélectionnez un groupe de champs personnalisé existant, tout autre schéma qui l’emploie héritera également du nouveau champ ajouté après avoir enregistré vos modifications. Pour cette raison, sélectionnez un groupe de champs existant uniquement si vous souhaitez ce type de propagation. Dans le cas contraire, vous devez choisir de créer un groupe de champs personnalisé.
+Si vous sélectionnez un groupe de champs personnalisé existant, tout autre schéma qui l’emploie héritera également du nouveau champ ajouté après avoir enregistré vos modifications. Pour cette raison, sélectionnez un groupe de champs existant uniquement si vous souhaitez ce type of propagation. Dans le cas contraire, vous devez choisir de créer un groupe de champs personnalisé.
 
 Après avoir sélectionné le groupe de champs dans la liste, sélectionnez **[!UICONTROL Appliquer]**.
 
@@ -247,7 +247,7 @@ Le nouveau champ est ajouté à la zone de travail et est un espace de noms situ
 
 >[!NOTE]
 >
->Les autres champs fournis par le groupe de champs personnalisé sélectionné sont supprimés du schéma par défaut. Si vous souhaitez ajouter certains de ces champs au schéma, sélectionnez un champ appartenant au groupe, puis sélectionnez **[!UICONTROL Gérer les champs associés]** dans le rail de droite.
+Les autres champs fournis par le groupe de champs personnalisé sélectionné sont supprimés du schéma par défaut. Si vous souhaitez ajouter certains de ces champs au schéma, sélectionnez un champ appartenant au groupe, puis sélectionnez **[!UICONTROL Gérer les champs associés]** dans le rail de droite.
 
 #### Affectation du champ à une classe personnalisée {#add-to-class}
 
@@ -265,15 +265,15 @@ Le nouveau champ est ajouté à la zone de travail et est un espace de noms situ
 
 ### Ajouter des champs personnalisés à la structure des groupes de champs standard {#custom-fields-for-standard-groups}
 
-Si le schéma sur lequel vous travaillez comporte un champ de type objet fourni par un groupe de champs standard, vous pouvez ajouter vos propres champs personnalisés à cet objet standard.
+Si le schéma sur lequel vous travaillez a un type d’objet field fourni par un groupe de champs standard, vous pouvez ajouter vos propres champs personnalisés à cet objet standard.
 
 >[!WARNING]
 >
->Tous les champs ajoutés à un groupe de champs dans un schéma apparaîtront également dans tous les autres schémas qui utilisent ce même groupe de champs. En outre, si un champ personnalisé est ajouté à un groupe de champs standard, ce groupe sera converti en groupe de champs personnalisé et le groupe de champs standard d’origine ne sera plus disponible.
+Tous les champs ajoutés à un groupe de champs dans un schéma apparaîtront également dans tous les autres schémas qui utilisent ce même groupe de champs. En outre, si un champ personnalisé est ajouté à un groupe de champs standard, ce groupe sera converti en groupe de champs personnalisé et le groupe de champs standard d’origine ne sera plus disponible.
 >
->Si vous avez participé à la version bêta de cette fonctionnalité, vous recevrez une boîte de dialogue vous informant des groupes de champs standard que vous avez précédemment personnalisés. Une fois que vous avez sélectionné **[!UICONTROL Accepter]**, les ressources répertoriées sont converties en groupes de champs personnalisés.
+Si vous avez participé à la version bêta de cette fonctionnalité, vous recevrez une boîte de dialogue vous informant des groupes de champs standard que vous avez précédemment personnalisés. Une fois que vous avez sélectionné **[!UICONTROL Accepter]**, les ressources répertoriées sont converties en groupes de champs personnalisés.
 >
->![Boîte de dialogue de confirmation pour convertir des groupes de champs standard](../../images/ui/resources/schemas/beta-extension-confirmation.png)
+![Boîte de dialogue de confirmation pour convertir des groupes de champs standard](../../images/ui/resources/schemas/beta-extension-confirmation.png)
 
 Pour commencer, sélectionnez l’icône plus (**+**) en regard de la racine de l’objet fourni par le groupe de champs standard.
 
@@ -293,16 +293,16 @@ Après avoir appliqué vos modifications, le nouveau champ s’affiche sous l’
 
 ## Activer un schéma pour le profil client en temps réel {#profile}
 
->[!CONTEXTUALHELP]
->id="platform_schemas_enableforprofile"
->title="Activation d&#39;un schéma pour Profil"
->abstract="Lorsqu&#39;un schéma est activé pour Profil, tous les jeux de données créés à partir de ce schéma participent au profil client en temps réel, qui fusionne les données de différentes sources pour créer une vue complète de chaque client. Une fois qu&#39;un schéma est utilisé pour ingérer des données dans Profil, il ne peut pas être désactivé. Pour plus d&#39;informations, consultez la documentation."
+[!CONTEXTUALHELP]
+id="platform_schemas_enableforprofile"
+title="Activation d&#39;un schéma pour Profil"
+abstract="Lorsqu&#39;un schéma est activé pour Profil, tous les jeux de données créés à partir de ce schéma participent au profil client en temps réel, qui fusionne les données de différentes sources pour créer une vue complète de chaque client. Une fois qu&#39;un schéma est utilisé pour ingérer des données dans Profil, il ne peut pas être désactivé. Pour plus d&#39;informations, consultez la documentation."
 
 [Real-Time Customer Profile](../../../profile/home.md) fusionne les données de sources disparates afin de construire une vue complète de chaque client. Si vous souhaitez que les données capturées par un schéma participent à ce processus, vous devez activer le schéma à utiliser dans [!DNL Profile].
 
 >[!IMPORTANT]
 >
->Pour activer un schéma pour [!DNL Profile], un champ d’identité principal doit être défini. Pour plus d’informations, consultez le guide sur la [définition des champs d’identité](../fields/identity.md) .
+Pour activer un schéma pour [!DNL Profile], un champ d’identité principal doit être défini. Pour plus d’informations, consultez le guide sur la [définition des champs d’identité](../fields/identity.md) .
 
 Pour activer le schéma, commencez par sélectionner le nom du schéma dans le rail de gauche, puis sélectionnez le bouton d’activation/désactivation **[!UICONTROL Profile]** dans le rail de droite.
 
@@ -316,7 +316,7 @@ Le canevas réapparaît avec le bouton bascule [!UICONTROL Profile] activé.
 
 >[!IMPORTANT]
 >
->Comme le schéma n’est pas encore enregistré, il s’agit d’un point de non-retour si vous changez d’avis concernant la possibilité de laisser le schéma participer à Real-Time Customer Profile : une fois que vous avez enregistré un schéma activé, il ne peut plus être désactivé. Sélectionnez à nouveau le bouton d’activation/désactivation **[!UICONTROL Profile]** pour désactiver le schéma.
+Comme le schéma n’est pas encore enregistré, il s’agit d’un point de non-retour si vous changez d’avis concernant la possibilité de laisser le schéma participer à Real-Time Customer Profile : une fois que vous avez enregistré un schéma activé, il ne peut plus être désactivé. Sélectionnez à nouveau le bouton d’activation/désactivation **[!UICONTROL Profile]** pour désactiver le schéma.
 
 Pour terminer le processus, sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer le schéma.
 
@@ -330,9 +330,9 @@ Une fois que vous avez affecté une classe et ajouté des groupes de champs à u
 
 >[!NOTE]
 >
->Gardez à l’esprit que les noms d’affichage des champs appartenant à des classes standard ou à des groupes de champs ne peuvent être modifiés que dans le contexte d’un schéma spécifique. En d’autres termes, la modification du nom d’affichage d’un champ standard dans un schéma n’affecte pas les autres schémas qui utilisent la même classe ou le même groupe de champs associé.
+Gardez à l’esprit que les noms d’affichage des champs appartenant à des classes standard ou à des groupes de champs ne peuvent être modifiés que dans le contexte d’un schéma spécifique. En d’autres termes, la modification du nom d’affichage d’un champ standard dans un schéma n’affecte pas les autres schémas qui utilisent la même classe ou le même groupe de champs associé.
 >
->Une fois que vous avez apporté des modifications aux noms d’affichage des champs d’un schéma, ces modifications sont immédiatement répercutées dans tous les jeux de données existants basés sur ce schéma.
+Une fois que vous avez apporté des modifications aux noms d’affichage des champs d’un schéma, ces modifications sont immédiatement répercutées dans tous les jeux de données existants basés sur ce schéma.
 
 Pour modifier le nom d’affichage d’un champ de schéma, sélectionnez le champ dans la zone de travail. Dans le rail de droite, indiquez le nouveau nom sous **[!UICONTROL Nom d’affichage]**.
 
@@ -348,7 +348,7 @@ Vous pouvez modifier la classe d’un schéma à tout moment au cours du process
 
 >[!WARNING]
 >
->La réattribution de la classe d’un schéma doit être effectuée avec une extrême prudence. Les groupes de champs ne sont compatibles qu’avec certaines classes. Par conséquent, la modification de la classe réinitialisera la zone de travail et tous les champs que vous avez ajoutés.
+La réattribution de la classe d’un schéma doit être effectuée avec une extrême prudence. Les groupes de champs ne sont compatibles qu’avec certaines classes. Par conséquent, la modification de la classe réinitialisera la zone de travail et tous les champs que vous avez ajoutés.
 
 Pour réaffecter une classe, sélectionnez **[!UICONTROL Attribuer]** dans la partie gauche du canevas.
 
@@ -368,7 +368,7 @@ Après avoir confirmé la modification de classe, le canevas est réinitialisé 
 
 ## Étapes suivantes {#next-steps}
 
-Ce document couvrait les principes de base de la création et de la modification de schémas dans l’interface utilisateur de Platform. Il est vivement recommandé de consulter le [tutoriel de création de schéma](../../tutorials/create-schema-ui.md) pour obtenir un processus complet de création d’un schéma complet dans l’interface utilisateur, y compris la création de groupes de champs personnalisés et de types de données pour des cas d’utilisation uniques.
+Ce document couvrait les principes de base de la création et de la modification de schémas dans l’interface utilisateur de Platform. Il est vivement recommandé de consulter le [tutoriel sur la création de schémas](../../tutorials/create-schema-ui.md) pour obtenir un processus complet de création d’un schéma complet dans l’interface utilisateur, y compris la création de groupes de champs personnalisés et de types de données. for cas d’utilisation uniques.
 
 Pour plus d’informations sur les fonctionnalités de l’espace de travail [!UICONTROL Schémas], consultez la [[!UICONTROL présentation des schémas] de l’espace de travail](../overview.md).
 

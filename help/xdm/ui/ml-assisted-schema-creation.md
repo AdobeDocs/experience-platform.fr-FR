@@ -1,14 +1,19 @@
 ---
 title: Création de schémas assistés par l’apprentissage automatique
 description: Découvrez comment créer des schémas dans l’interface utilisateur de l’Experience Platform.
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+badgeBeta: label="Version bêta" type="Informative"
+source-git-commit: f1db409a2af34ac66c81d7e5a11ee1bc8e5f4c9c
 workflow-type: tm+mt
-source-wordcount: '978'
-ht-degree: 1%
+source-wordcount: '996'
+ht-degree: 2%
 
 ---
 
 # Création de schémas assistés par l’apprentissage automatique
+
+>[!AVAILABILITY]
+>
+>* La création de schémas assistés par l’apprentissage automatique est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
 
 Utilisez des algorithmes ML pour générer un schéma à partir de données d’exemple. Ce processus permet de gagner du temps et d’accroître la précision lors de la définition de la structure, des champs et des types de données pour les jeux de données complexes volumineux.
 
