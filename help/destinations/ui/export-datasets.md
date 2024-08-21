@@ -3,10 +3,10 @@ title: Exportation de jeux de données vers des destinations de stockage dans le
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 938e4875318f07b296fc884487ca1c664be659ef
+source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
 workflow-type: tm+mt
-source-wordcount: '1836'
-ht-degree: 48%
+source-wordcount: '1814'
+ht-degree: 49%
 
 ---
 
@@ -211,10 +211,7 @@ Pour supprimer des jeux de données d’un flux de données existant, procédez 
 
    ![L’option de navigation des jeux de données disponibles est affichée en surbrillance dans la colonne Données d’activation.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-3. [!BADGE Beta] La page **[!UICONTROL Données d’activation]** de la destination apparaît. Utilisez les cases à cocher situées à gauche de la liste des jeux de données pour sélectionner les jeux de données à supprimer, puis sélectionnez **[!UICONTROL Supprimer les jeux de données]** dans le rail de droite pour déclencher la boîte de dialogue de confirmation de suppression des jeux de données.
-
-   >[!NOTE]
-   >Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe.
+3. La page **[!UICONTROL Données d’activation]** pour la destination s’affiche. Utilisez les cases à cocher situées à gauche de la liste des jeux de données pour sélectionner les jeux de données à supprimer, puis sélectionnez **[!UICONTROL Supprimer les jeux de données]** dans le rail de droite pour déclencher la boîte de dialogue de confirmation de suppression des jeux de données.
 
    ![Boîte de dialogue Supprimer le jeu de données présentant la commande Supprimer le jeu de données dans le rail de droite.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 

@@ -1,16 +1,17 @@
 ---
-title: (Version bêta) Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform
+title: Exportation de fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform
 type: Tutorial
 description: Découvrez comment exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur de l’Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 64833e29d062225bc774a14ae60b102b293bb5c4
+source-git-commit: 97ae720fa4d081fcf8d6b84c81a2131e55b9b1b5
 workflow-type: tm+mt
-source-wordcount: '722'
-ht-degree: 21%
+source-wordcount: '720'
+ht-degree: 17%
 
 ---
 
-# (Version bêta) Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform
+
+# Exportation de fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform
 
 >[!IMPORTANT]
 >

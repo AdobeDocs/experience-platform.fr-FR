@@ -3,10 +3,10 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations basées sur un profil de lot.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: d7a530c5ec2cad37b93273f5843609110d61cbfc
+source-git-commit: 85b69af6fd21cfa9712e9c57593cbf00a62837c8
 workflow-type: tm+mt
-source-wordcount: '4077'
-ht-degree: 58%
+source-wordcount: '4202'
+ht-degree: 56%
 
 ---
 
@@ -110,6 +110,10 @@ Experience Platform définit automatiquement un planning par défaut pour chaque
 
 ![Modifier le contrôle de planification en surbrillance dans l’étape de planification.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
+Pour modifier plusieurs plannings en même temps, cochez les audiences à l’aide des cases situées à gauche de l’écran, puis sélectionnez **[!UICONTROL Modifier la planification]**. Le planning que vous configurez sera alors appliqué à tous les fichiers exportés pour les audiences sélectionnées.
+
+![Image de l’interface utilisateur de l’Experience Platform présentant l’option de modification de la planification pour plusieurs audiences sélectionnées.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
+
 >[!TIP]
 >
 >Vous pouvez modifier les calendriers d’activation de l’audience pour les flux d’activation existants à partir de la page **[!UICONTROL Données d’activation]** . Pour plus d’informations, consultez la documentation sur la [modification en masse des plannings d’activation](../ui/destination-details-page.md#bulk-edit-schedule) .
@@ -200,7 +204,7 @@ Sélectionnez **[!UICONTROL Exporter les fichiers incrémentiels]** pour déclen
 
 4. Sélectionnez **[!UICONTROL Créer]** pour enregistrer le planning.
 
-### Configurer les noms de fichiers
+### Configurer les noms de fichiers {#configure-file-names}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_filename"
@@ -234,6 +238,10 @@ Le nom de destination et l’ID d’audience ne peuvent pas être supprimés des
 | **[!UICONTROL Nom du sandbox]** | ID de l’environnement de test que vous utilisez pour exporter l’audience. |
 
 {style="table-layout:auto"}
+
+Pour modifier plusieurs noms de fichier en même temps, cochez les audiences à l’aide des cases situées à gauche de l’écran, puis sélectionnez **[!UICONTROL Modifier le nom du fichier]**. Les options de nom de fichier que vous configurez seront alors appliquées à tous les fichiers exportés pour les audiences sélectionnées.
+
+![ Image de l&#39;interface utilisateur de l&#39;Experience Platform affichant l&#39;option de modification du nom de fichier pour plusieurs audiences sélectionnées.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
 Sélectionnez **[!UICONTROL Appliquer les modifications]** pour confirmer votre sélection.
 
