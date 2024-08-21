@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Août 2024
 description: Les notes de mise à jour d’août 2024 pour Adobe Experience Platform.
-source-git-commit: cbfbac0ad2e43424b22a283d1a2f55bdcb11159b
+source-git-commit: 67152524c9448ad1c6cd1f25437e5ed69900ef84
 workflow-type: tm+mt
-source-wordcount: '1086'
-ht-degree: 29%
+source-wordcount: '1300'
+ht-degree: 31%
 
 ---
 
@@ -18,11 +18,28 @@ ht-degree: 29%
 
 Mises à jour des fonctionnalités et de la documentation existantes dans Experience Platform :
 
+- [Contrôle d’accès basé sur les attributs](#abac)
 - [Destinations](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Service d’identités](#identity-service)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
+
+## Contrôle d’accès basé sur les attributs {#abac}
+
+Le contrôle d’accès basé sur les attributs est une fonctionnalité de Adobe Experience Platform qui offre aux marques soucieuses de la confidentialité une plus grande flexibilité pour gérer l’accès des utilisateurs. Les objets individuels tels que les champs de schéma et les segments peuvent être affectés à des rôles d’utilisateur. Cette fonctionnalité vous permet d’accorder ou de révoquer l’accès à des objets individuels pour des utilisateurs Platform spécifiques au sein de votre organisation.
+
+Grâce au contrôle d’accès basé sur les attributs, les administrateurs de votre organisation peuvent contrôler l’accès des utilisateurs aux données personnelles sensibles (SPD), aux informations d’identification personnelle (PII) et à d’autres types de données personnalisés dans tous les workflows et ressources Platform. Les administrateurs et administratrices peuvent définir des rôles d’utilisateur ou d’utilisatrice qui n’ont accès qu’à des champs spécifiques et aux données correspondant à ces champs.
+
+**Nouvelle fonctionnalité**
+
+| Mise à jour des fonctionnalités | Description |
+| --- | --- |
+| Nouvelle fonctionnalité Gestionnaire d’autorisations | Vous pouvez désormais utiliser [Gestionnaire d’autorisations](../../access-control/abac/permission-manager/overview.md) pour générer des rapports à l’aide de requêtes simples, ce qui vous aidera à comprendre la gestion des accès et à gagner du temps en vérifiant les autorisations d’accès sur plusieurs workflows et niveaux de granularité. Pour plus d’informations sur la création de rapports pour les utilisateurs et les rôles, consultez le [guide d’utilisation d’Permission Manager](../../access-control/abac/permission-manager/permissions.md). ![ L’interface utilisateur de l’Experience Platform d’images met en surbrillance le Gestionnaire des autorisations dans le volet de navigation de gauche.](../2024/assets/august/permission-manager-rn.png "Gestionnaire d&#39;autorisations dans l&#39;interface utilisateur."){width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+Pour plus d’informations sur le contrôle d’accès basé sur les attributs, consultez la [présentation du contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md). Pour consulter un guide complet sur le workflow de contrôle d’accès basé sur les attributs, reportez-vous au [guide complet du contrôle d’accès basé sur les attributs](../../access-control/abac/end-to-end-guide.md).
 
 ## Destinations {#destinations}
 
