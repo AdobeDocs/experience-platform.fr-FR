@@ -3,20 +3,15 @@ title: Exportation de fichiers à la demande vers des destinations par lots à l
 type: Tutorial
 description: Découvrez comment exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur de l’Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 97ae720fa4d081fcf8d6b84c81a2131e55b9b1b5
+source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
 workflow-type: tm+mt
-source-wordcount: '720'
-ht-degree: 17%
+source-wordcount: '690'
+ht-degree: 16%
 
 ---
 
 
 # Exportation de fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform
-
->[!IMPORTANT]
->
->L’option **[!UICONTROL Exporter le fichier maintenant]** de Adobe Experience Platform se trouve actuellement dans Beta. La documentation et les fonctionnalités peuvent changer.
->Contactez votre représentant Adobe pour accéder à cette fonctionnalité.
 
 >[!IMPORTANT]
 > 

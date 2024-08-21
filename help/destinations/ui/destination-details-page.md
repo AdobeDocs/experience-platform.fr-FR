@@ -3,9 +3,9 @@ keywords: destinations;destination;page des détails des destinations;page des d
 title: Afficher les détails de la destination
 description: La page de détails d’une destination individuelle fournit un aperçu des détails de destination. Les détails de la destination incluent le nom de destination, l’identifiant, les audiences mappées à la destination et les contrôles permettant de modifier l’activation et d’activer et désactiver le flux de données.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 9ebdf6e675ddfe03f43b56ed10f625a7d000a662
+source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1286'
 ht-degree: 8%
 
 ---
@@ -144,11 +144,7 @@ Pour supprimer plusieurs audiences des flux d’activation existants, sélection
 
 ![L’écran de données d’activation met en surbrillance l’option Supprimer les audiences.](../assets/ui/details-page/bulk-remove-audiences.png)
 
-### [!BADGE Beta]{type=Informative} Exporter plusieurs fichiers à la demande vers des destinations par lot {#bulk-export}
-
->[!NOTE]
->
-Cette fonctionnalité est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès à cette fonctionnalité, contactez votre représentant Adobe.
+### Exportation de plusieurs fichiers à la demande vers des destinations par lot {#bulk-export}
 
 Vous pouvez [ exporter plusieurs fichiers à la demande ](../ui/export-file-now.md) à partir de la page **[!UICONTROL Données d’activation]**. Pour ce faire, sélectionnez les audiences pour lesquelles vous souhaitez exporter des fichiers à la demande et sélectionnez le contrôle **[!UICONTROL Exporter le fichier maintenant]** afin de déclencher une exportation ponctuelle qui diffusera un fichier pour chaque audience sélectionnée vers votre destination de lot.
 
@@ -162,7 +158,7 @@ Pour modifier le planning d’activation existant de plusieurs audiences en mêm
 
 >[!NOTE]
 >
-Pour plus d’informations sur l’exploration de la page de détails d’une audience, reportez-vous à la [présentation d’Audience Portal](../../segmentation/ui/audience-portal.md#segment-details).
+>Pour plus d’informations sur l’exploration de la page de détails d’une audience, reportez-vous à la [présentation d’Audience Portal](../../segmentation/ui/audience-portal.md#segment-details).
 
 ### Modification des noms de fichier pour plusieurs audiences exportées vers des destinations par lot {#bulk-edit-file-names}
 
