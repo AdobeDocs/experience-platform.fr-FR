@@ -13,7 +13,7 @@ ht-degree: 40%
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
->title="Actions principales"
+>title="Principales actions"
 >abstract="Ce widget affiche les principaux types d&#39;actions exécutées dans Experience Platform au cours de la période sélectionnée. Pour afficher la liste complète des actions enregistrées dans Platform, sélectionnez **Audits** dans le volet de navigation de gauche."
 
 >[!CONTEXTUALHELP]

@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: a168f61fabddd06d586f7909fd92c0409fd2f51e
 workflow-type: tm+mt
 source-wordcount: '3203'
-ht-degree: 14%
+ht-degree: 17%
 
 ---
 
@@ -41,18 +41,18 @@ Ce guide d’utilisation nécessite une compréhension professionnelle des compo
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_datalakeretention"
->title="Conservation des données"
->abstract="Affiche la politique de conservation actuelle pour chaque jeu de données. Cette valeur peut être modifiée dans les paramètres de conservation de chaque jeu de données. Vous pouvez uniquement définir le délai de conservation pour le jeu de données ExperienceEvent."
+>title="Conservation des lacs de données"
+>abstract="Affiche la politique de conservation actuelle pour chaque jeu de données. Cette valeur peut être modifiée dans les paramètres de conservation de chaque jeu de données. Vous ne pouvez définir le délai de conservation que pour le jeu de données ExperienceEvent."
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_browse_profileretention"
 >title="Conservation des profils"
->abstract="Affiche la politique de conservation actuelle pour chaque jeu de données. Cette valeur peut être modifiée dans les paramètres de conservation de chaque jeu de données. Vous pouvez uniquement définir le délai de conservation pour un jeu de données ExperienceEvent."
+>abstract="Affiche la politique de conservation actuelle pour chaque jeu de données. Cette valeur peut être modifiée dans les paramètres de conservation de chaque jeu de données. Vous ne pouvez définir le délai de conservation que pour le jeu de données ExperienceEvent."
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_datalakesettings_datasetretention"
 >title="Conservation des jeux de données"
->abstract="La rétention des données définit des règles pour la durée pendant laquelle les données sont stockées et quand elles doivent être supprimées dans différents services. Cela garantit la conformité aux réglementations, la gestion des coûts de stockage et la maintenance de la qualité des données."
+>abstract="La conservation des lacs de données définit des règles définissant la durée pendant laquelle les données sont stockées, ainsi que le moment où elles doivent être supprimées dans différents services. Cela garantit ainsi la conformité aux réglementations, la gestion des coûts de stockage et la maintenance de la qualité des données."
 
 
 Dans l’interface utilisateur de [!DNL Experience Platform], sélectionnez **[!UICONTROL Jeux de données]** dans le volet de navigation de gauche pour ouvrir le tableau de bord **[!UICONTROL Jeux de données]**. Le tableau de bord répertorie tous les jeux de données disponibles pour votre organisation. Des détails s’affichent pour chaque jeu de données répertorié, notamment son nom, le schéma auquel le jeu de données adhère et l’état de l’exécution d’ingestion la plus récente.
