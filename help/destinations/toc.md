@@ -5,10 +5,10 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
+source-git-commit: 029cd5bdf58a143f765b37190428b817825317b0
 workflow-type: tm+mt
-source-wordcount: '1248'
-ht-degree: 87%
+source-wordcount: '1247'
+ht-degree: 86%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 87%
       * [Activation des audiences vers des destinations traitées en fonction des identifiants LiveRamp](./ui/activate-curated-destinations.md)
       * [Activer les audiences de prospects vers des destinations](./ui/activate-prospect-audiences.md)
       * [Activation des audiences de compte vers les destinations](./ui/activate-account-audiences.md)
-      * [(Version bêta) Exporter des fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform](./ui/export-file-now.md)
+      * [Exportation de fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform](./ui/export-file-now.md)
       * [Exportation de jeux de données à l’aide de l’interface utilisateur Experience Platform](./ui/export-datasets.md)
       * [(Version bêta) Utiliser l’attribut XDM de l’heure de la dernière qualification dans les nouvelles destinations de stockage dans le cloud en version bêta](./ui/activate-last-qualification-time.md)
       * [(Version bêta) Utiliser des champs calculés pour exporter des tableaux dans des fichiers de schéma plats](/help/destinations/ui/export-arrays-calculated-fields.md)
