@@ -3,9 +3,9 @@ title: Types d’événement dans l’extension SDK Web Adobe Experience Platfor
 description: Découvrez comment utiliser les types d’événements fournis par l’extension SDK Web Adobe Experience Platform dans Adobe Experience Platform Launch.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 666e8c6fcccf08d0841c5796677890409b22d794
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1127'
 ht-degree: 0%
 
 ---
@@ -260,3 +260,14 @@ if (propositions) {
   // them in some other way.
 }
 ```
+
+## [!UICONTROL Abonner des éléments d’ensemble de règles] {#subscribe-ruleset-items}
+
+Le type d’événement **[!UICONTROL Abonner les éléments d’ensemble de règles]** vous permet de vous abonner aux cartes de contenu Adobe Journey Optimizer pour une surface. Chaque fois que les jeux de règles sont évalués, le rappel fourni à cette commande reçoit un objet de résultat avec des propositions contenant les données de la carte de contenu.
+
+![Image de l&#39;interface utilisateur des balises Experience Platform montrant le type d&#39;événement Abonner les éléments de l&#39;ensemble de règles.](assets/subscribe-ruleset-items.png)
+
+Ce type d’événement prend en charge les propriétés configurables suivantes :
+
+* **[!UICONTROL Schémas]** : un tableau de schémas pour lesquels vous souhaitez vous abonner aux cartes de contenu. Vous pouvez saisir les schémas manuellement ou en fournissant un élément de données.
+* **[!UICONTROL Surfaces]** : un tableau de surfaces pour lequel vous souhaitez vous abonner aux cartes de contenu. Vous pouvez saisir les surfaces manuellement ou en fournissant un élément de données.
