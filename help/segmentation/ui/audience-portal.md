@@ -2,10 +2,10 @@
 title: Présentation d’Audience Portal
 description: Découvrez comment utiliser Audience Portal pour afficher, gérer et créer des audiences dans Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 34964bc5af0676872fb472a7309aa99c21efdbc5
+source-git-commit: b59f5ffeb8af6f3bab7ed79189219f39533d2f1b
 workflow-type: tm+mt
-source-wordcount: '4162'
-ht-degree: 59%
+source-wordcount: '4250'
+ht-degree: 58%
 
 ---
 
@@ -161,6 +161,18 @@ Pour plus d’informations sur la création et la gestion des balises, consultez
 #### Dossiers {#folders}
 
 Vous pouvez placer des audiences dans des dossiers pour une meilleure gestion de l’audience.
+
+Pour créer un dossier destiné à contenir vos audiences, sélectionnez **[!UICONTROL Créer un dossier]**.
+
+![Le bouton Créer un dossier est mis en surbrillance.](../images/ui/audience-portal/create-folder.png)
+
+>[!NOTE]
+>
+>Vous ne pouvez créer un dossier que si vous vous trouvez dans un autre dossier. Cela signifie que vous **ne pouvez pas** créer un dossier si **[!UICONTROL Toutes les audiences]** sont sélectionnées sur la barre de navigation de gauche.
+
+Une fenêtre contextuelle s’affiche, vous permettant de nommer le dossier que vous venez de créer. Sélectionnez **[!UICONTROL Enregistrer]** après avoir nommé votre dossier pour terminer la création du dossier. Veuillez noter que les noms **must** doivent être uniques au dossier parent.
+
+![Le bouton Enregistrer de la boîte de dialogue de création de dossier est mis en surbrillance.](../images/ui/audience-portal/create-folder-dialog.png)
 
 Pour déplacer une audience dans un dossier, sélectionnez **[!UICONTROL Déplacer vers le dossier]** sur l’audience que vous souhaitez déplacer.
 
