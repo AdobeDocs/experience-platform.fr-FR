@@ -3,10 +3,10 @@ keywords: publicité, bureau de commerce, bureau de publicité
 title: Connexion à The Trade Desk
 description: Le bureau commercial est une plateforme en libre-service permettant aux acheteurs de publicités d’exécuter le reciblage et d’exécuter des campagnes numériques ciblées sur l’affichage, la vidéo et les sources d’inventaire mobiles.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 916c56cf8fa25c40c061b3bddc57ba2fa59cbbb1
 workflow-type: tm+mt
-source-wordcount: '742'
-ht-degree: 41%
+source-wordcount: '778'
+ht-degree: 40%
 
 ---
 
@@ -14,15 +14,15 @@ ht-degree: 41%
 
 ## Présentation {#overview}
 
-La destination [!DNL The Trade Desk] vous aide à envoyer des données de profil à [!DNL The Trade Desk].
+Utilisez ce connecteur de destination pour envoyer des données de profil à [!DNL The Trade Desk]. Ce connecteur envoie des données au point d’entrée propriétaire [!DNL The Trade Desk]. L’intégration entre Adobe Experience Platform et [!DNL The Trade Desk] ne prend pas en charge l’exportation de données vers le point d’entrée tiers [!DNL The Trade Desk].
 
-[!DNL The Trade Desk] est une plateforme en libre-service permettant aux acheteurs de publicités d’exécuter le reciblage et d’exécuter des campagnes numériques ciblées sur l’affichage, la vidéo et les sources d’inventaire mobiles.
+[!DNL The Trade Desk] est une plateforme en libre-service permettant aux acheteurs de publicités d’exécuter un reciblage et des campagnes numériques ciblées par l’audience sur l’affichage, la vidéo et les sources d’inventaire mobiles.
 
-Pour envoyer des données de profil à [!DNL Trade Desk], vous devez d’abord vous connecter à la destination.
+Pour envoyer des données de profil à [!DNL Trade Desk], vous devez d’abord vous connecter à la destination, comme décrit dans les sections suivantes de cette page.
 
 ## Cas d’utilisation {#use-cases}
 
-En tant que marketeur, je souhaite pouvoir utiliser des audiences créées à partir de [!DNL Trade Desk IDs] ou des identifiants d’appareil pour créer un reciblage ou des campagnes numériques ciblées d’audience.
+En tant que marketeur, je souhaite pouvoir utiliser des audiences créées à partir de [!DNL Trade Desk IDs] ou des identifiants d’appareil pour créer des campagnes numériques de reciblage ou ciblées sur l’audience.
 
 ## Identités prises en charge {#supported-identities}
 
@@ -62,7 +62,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 >[!IMPORTANT]
 >
->Si vous souhaitez créer votre première destination avec [!DNL The Trade Desk] et que vous n’avez pas activé par le passé la [fonctionnalité de synchronisation des identifiants](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=fr) dans le service d’ID Experience Cloud (avec Adobe Audience Manager ou d’autres applications), contactez Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants. Si vous avez configuré précédemment des intégrations [!DNL The Trade Desk] dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers Platform.
+>Si vous souhaitez créer votre première destination avec [!DNL The Trade Desk] et que vous n’avez pas activé par le passé la [fonctionnalité de synchronisation des identifiants](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) dans le service d’ID Experience Cloud (avec Adobe Audience Manager ou d’autres applications), contactez Adobe Consulting ou l’assistance clientèle pour activer la synchronisation des identifiants. Si vous avez configuré précédemment des intégrations [!DNL The Trade Desk] dans Audience Manager, les synchronisations d’identifiant que vous aviez configurées sont transférées vers Platform.
 
 ## Se connecter à la destination {#connect}
 
@@ -79,7 +79,7 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
 * **[!UICONTROL ID de compte]** : votre [!DNL Trade Desk] [!UICONTROL ID de compte].
-* **[!UICONTROL Emplacement du serveur]** : demandez à votre représentant [!DNL Trade Desk] quel serveur régional vous devriez utiliser. Il s’agit des serveurs régionaux disponibles :
+* **[!UICONTROL Emplacement du serveur]** : demandez à votre représentant [!DNL Trade Desk] quel serveur régional vous devriez utiliser. Vous trouverez ci-dessous les serveurs régionaux disponibles :
    * **[!UICONTROL Europe]**
    * **[!UICONTROL Singapour]**
    * **[!UICONTROL Tokyo]**
@@ -104,7 +104,7 @@ Voir [Activer les données d’audience vers des destinations d’export d’aud
 
 À l’étape [Planification de l’audience](../../ui/activate-segment-streaming-destinations.md#scheduling), vous devez mapper manuellement vos audiences à leur identifiant ou nom convivial correspondant dans la plateforme de destination.
 
-Lors du mappage des segments, nous vous recommandons d’utiliser le nom de l’audience Platform ou une forme plus courte de celui-ci, afin de faciliter son utilisation. Toutefois, l’ID ou le nom de l’audience dans votre destination ne doit pas nécessairement correspondre à celui de votre compte Platform. Toute valeur que vous insérez dans le champ de mappage sera répercutée par la destination.
+Lors du mappage des audiences, Adobe vous recommande d’utiliser le nom de l’audience Platform ou une forme plus courte, afin de faciliter son utilisation. Toutefois, l’ID ou le nom de l’audience dans votre destination ne doit pas nécessairement correspondre à celui de votre compte Platform. Toute valeur que vous insérez dans le champ de mappage sera répercutée par la destination.
 
 Si vous utilisez plusieurs mappages d’appareils (identifiants de cookie, [!DNL IDFA], [!DNL GAID]), veillez à utiliser la même valeur de mappage pour les trois mappages. [!DNL The Trade Desk] les agrégera tous en un seul segment, avec une ventilation au niveau de l’appareil.
 

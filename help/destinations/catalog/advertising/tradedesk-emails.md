@@ -3,9 +3,9 @@ title: (Beta) Le bureau commercial - connexion CRM
 description: Activez les profils dans votre compte de bureau Commerce pour le ciblage et la suppression des audiences en fonction des données CRM.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 3c645ccf5b9dd17e4c3cc1267b60a9c4f1131668
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1148'
 ht-degree: 18%
 
 ---
@@ -25,6 +25,8 @@ ht-degree: 18%
 ## Vue d’ensemble {#overview}
 
 Ce document est conçu pour vous aider à activer les profils sur votre compte [!DNL Trade Desk] pour le ciblage et la suppression des audiences en fonction des données CRM.
+
+Ce connecteur envoie des données au point d’entrée propriétaire [!DNL The Trade Desk]. L’intégration entre Adobe Experience Platform et [!DNL The Trade Desk] ne prend pas en charge l’exportation de données vers le point d’entrée tiers [!DNL The Trade Desk].
 
 [!DNL The Trade Desk(TTD)] ne gère pas directement le fichier de téléchargement des adresses électroniques à tout moment et [!DNL The Trade Desk] ne stocke pas vos adresses électroniques brutes (non hachées).
 
@@ -138,9 +140,9 @@ Sélection des champs cibles :
 
 ## Validation de l’exportation des données {#validate}
 
-Pour vérifier que les données sont correctement exportées depuis l’Experience Platform vers [!DNL The Trade Desk], recherchez les audiences sous la mosaïque de données 1PD d’Adobe dans [!DNL The Trade Desk] Data Management Platform (DMP). Voici les étapes pour trouver l’ID correspondant dans l’interface utilisateur de [!DNL Trade Desk] :
+Pour vérifier que les données sont correctement exportées d’Experience Platform vers [!DNL The Trade Desk], recherchez les audiences sous la mosaïque de données 1PD d’Adobe dans [!DNL The Trade Desk] Data Management Platform (DMP). Voici les étapes pour trouver l’ID correspondant dans l’interface utilisateur de [!DNL Trade Desk] :
 
-1. Cliquez d’abord sur l’onglet **[!UICONTROL Data]** et passez en revue **[!UICONTROL First-Party]**.
+1. Sélectionnez tout d&#39;abord l&#39;onglet **[!UICONTROL Data]** et passez en revue la section **[!UICONTROL First-Party]** .
 2. Faites défiler la page vers le bas, sous **[!UICONTROL Données importées]**, vous trouverez la **[!UICONTROL mosaïque Adobe 1PD]**.
 3. Cliquez sur la mosaïque **[!UICONTROL Adobe 1PD]** et répertorie toutes les audiences activées vers la destination [!DNL Trade Desk] de votre annonceur. Vous pouvez également utiliser la fonction de recherche.
 4. Le numéro d’ID de segment de l’Experience Platform apparaîtra comme nom de segment dans l’interface utilisateur de [!DNL Trade Desk].
