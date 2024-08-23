@@ -1,9 +1,9 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Août 2024
 description: Les notes de mise à jour d’août 2024 pour Adobe Experience Platform.
-source-git-commit: bc09b03cf34c9da9a93e27b7d1a07b7a3bc7f0aa
+source-git-commit: 6d91112654d08dd31e5334982e534ec42d9fc226
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1502'
 ht-degree: 30%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 30%
 Mises à jour des fonctionnalités et de la documentation existantes dans Experience Platform :
 
 - [Contrôle d’accès basé sur les attributs](#abac)
+- [Ingestion des données](#data-ingestion)
 - [Destinations](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Service d’identités](#identity-service)
@@ -40,6 +41,19 @@ Grâce au contrôle d’accès basé sur les attributs, les administrateurs de v
 {style="table-layout:auto"}
 
 Pour plus d’informations sur le contrôle d’accès basé sur les attributs, consultez la [présentation du contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md). Pour consulter un guide complet sur le workflow de contrôle d’accès basé sur les attributs, reportez-vous au [guide complet du contrôle d’accès basé sur les attributs](../../access-control/abac/end-to-end-guide.md).
+
+## Ingestion de données (mise à jour le 23 août) {#data-ingestion}
+
+Adobe Experience Platform fournit un ensemble riche de fonctionnalités permettant d’ingérer n’importe quel type et n’importe quelle latence de données. Vous pouvez les ingérer à l’aide des API Batch ou Streaming, des sources intégrées Adobe, des partenaires d’intégration de données ou de l’interface utilisateur d’Adobe Experience Platform.
+
+**Gestion du format de mise à jour de date dans l’ingestion de données par lots**
+
+Cette version corrige un problème lié à la *gestion du format de date* dans l’ingestion de données par lots. Auparavant, le système transformait les champs de date insérés par les clients au format `Date` au format `DateTime`. Cela signifie que le fuseau horaire a été automatiquement ajouté aux champs et qu’il a causé des difficultés aux utilisateurs qui ont préféré ou requis le format `Date`. Dorénavant, le fuseau horaire ne sera pas automatiquement ajouté aux champs de type `Date`. Cette mise à jour garantit que le format exporté des données correspond au format représenté sur le profil pour ce champ, comme le demandent les clients.
+
+`Date` champs avant la version : `"birthDate": "2018-01-12T00:00:00Z"`
+`Date` champs après la version : `"birthDate": "2018-01-12"`
+
+En savoir plus sur l’ [ingestion par lots](/help/ingestion/batch-ingestion/overview.md).
 
 ## Destinations {#destinations}
 
