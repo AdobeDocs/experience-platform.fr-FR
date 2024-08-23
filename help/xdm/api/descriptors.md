@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Point de terminaison de l’API Descripteurs
 description: Le point de terminaison /descriptors de l’API Schema Registry vous permet de gérer par programmation les descripteurs XDM dans votre application d’expérience.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 44355aa2ddf03b20aca64c6675414b73682bc2b5
+source-git-commit: 866e00459c66ea4678cd98d119a7451fd8e78253
 workflow-type: tm+mt
-source-wordcount: '1919'
+source-wordcount: '1920'
 ht-degree: 40%
 
 ---
@@ -291,7 +291,7 @@ La section suivante fournit des informations supplémentaires sur l’utilisatio
 
 >[!NOTE]
 >
->Le nombre maximal de descripteurs pouvant être appliqués à un schéma est de 4 000.
+>Le nombre maximal de descripteurs pouvant être appliqués à l’environnement de test d’une organisation est de 4 000.
 
 Les sections suivantes présentent les types de descripteurs disponibles, y compris les champs nécessaires pour définir un descripteur de chaque type.
 
