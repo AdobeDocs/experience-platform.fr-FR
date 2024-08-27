@@ -3,7 +3,7 @@ title: Algorithme d’optimisation des identités
 description: Découvrez l’algorithme d’optimisation des identités dans Identity Service.
 badge: Version bêta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 8762ea655399fbc82c63c87310337b8e875bd5bc
+source-git-commit: 84ad4a5f522b04430ee304f1a812da25e26f6954
 workflow-type: tm+mt
 source-wordcount: '1533'
 ht-degree: 2%
@@ -68,7 +68,7 @@ Lorsque la contrainte d’espace de noms unique est enfreinte, l’algorithme d�
 * Le graphique est restauré en fonction de l’ordre ci-dessus. Si l’ajout du lien enfreint la contrainte limite (par exemple, le graphique contient plusieurs identités avec un espace de noms unique), les liens sont supprimés.
 * Le graphique qui en résulte sera alors conforme à la contrainte d’espace de noms unique que vous avez configurée.
 
-![Diagramme qui visualise l’algorithme d’optimisation de l’identité.](../images/ido.png)
+![Diagramme qui visualise l’algorithme d’optimisation de l’identité.](../images/ido_algorithm.png)
 
 ## Exemples de scénarios pour l’algorithme d’optimisation des identités
 
