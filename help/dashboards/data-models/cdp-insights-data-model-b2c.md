@@ -4,7 +4,7 @@ description: Découvrez comment utiliser les requêtes SQL avec les modèles de 
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # Modèle de données Real-Time Customer Data Platform Insights B2C Edition
 
-Le modèle de données Real-Time Customer Data Platform Insights pour l’[ édition B2C](../../rtcdp/overview.md#rtcdp-b2c) expose les modèles de données et SQL qui alimentent les insights pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL afin de créer des rapports Real-Time CDP pour vos cas d’utilisation d’indicateurs de performance clés (IPC) et marketing. Ces informations peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur. Consultez la documentation sur les insights de reporting de magasin accéléré pour découvrir [comment créer un modèle de données d’insights de reporting via Query Service pour l’utiliser avec les données de magasin accélérées et les tableaux de bord définis par l’utilisateur](../../query-service/data-distiller/customizable-insights/reporting-insights-data-model.md).
+Le modèle de données Real-Time Customer Data Platform Insights pour l’[ édition B2C](../../rtcdp/overview.md#rtcdp-b2c) expose les modèles de données et SQL qui alimentent les insights pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL afin de créer des rapports Real-Time CDP pour vos cas d’utilisation d’indicateurs de performance clés (IPC) et marketing. Ces informations peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur. Consultez la documentation sur les insights de reporting de magasin accéléré pour découvrir [comment créer un modèle de données d’insights de reporting via Query Service pour l’utiliser avec les données de magasin accélérées et les tableaux de bord définis par l’utilisateur](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md).
 
 >[!NOTE]
 >

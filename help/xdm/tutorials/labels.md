@@ -2,9 +2,9 @@
 title: Gestion des étiquettes d’utilisation des données pour un schéma
 description: Découvrez comment ajouter des libellés d’utilisation des données aux champs de schéma du modèle de données d’expérience (XDM) dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: 37395e5762c8d54e6fca5c3502bdbf56f5b5472c
+source-git-commit: 22233d2bda488aa223555f85215be31d007eaa37
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '804'
 ht-degree: 10%
 
 ---
@@ -19,7 +19,7 @@ Toutes les données introduites dans Adobe Experience Platform sont contraintes 
 
 Un libellé appliqué à un champ de schéma indique les stratégies d’utilisation qui s’appliquent aux données contenues dans ce champ spécifique.
 
-Les libellés peuvent être appliqués à des schémas individuels, ainsi qu’aux champs de ces schémas. Lorsque des libellés sont appliqués directement à un schéma, ces libellés sont propagés à tous les jeux de données existants et futurs basés sur ce schéma.
+Les libellés peuvent être appliqués à des schémas et champs individuels de ces schémas. Lorsque des libellés sont appliqués directement à un schéma, ces libellés sont propagés à tous les jeux de données existants et futurs basés sur ce schéma.
 
 En outre, tout libellé de champ que vous ajoutez dans un schéma se propage à tous les autres schémas qui utilisent le même champ d’une classe partagée ou d’un groupe de champs. Cela permet de s’assurer que les règles d’utilisation des champs similaires sont cohérentes dans l’ensemble de votre modèle de données.
 

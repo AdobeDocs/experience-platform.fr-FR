@@ -5,7 +5,7 @@ breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 83%
@@ -27,11 +27,11 @@ ht-degree: 83%
       - [Vue d’ensemble](data-distiller/derived-datasets/overview.md)
       - [Création de jeux de données dérivés avec SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [Création de jeux de données dérivés basés sur des déciles](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - Informations personnalisables pour la création de rapports d’application étendue {#customizable-insights}
-      - [Vue d’ensemble](data-distiller/customizable-insights/overview.md)
-      - [Mode de requête pro](data-distiller/customizable-insights/query-pro-mode.md)
-      - [Envoi de requêtes accélérées](data-distiller/customizable-insights/send-accelerated-queries.md)
-      - [Guide sur le modèle de données d’insights de rapports](data-distiller/customizable-insights/reporting-insights-data-model.md)
+   - Statistiques SQL pour les rapports d’application étendue {#sql-insights}
+      - [Vue d’ensemble](data-distiller/sql-insights/overview.md)
+      - [Mode de requête pro](data-distiller/sql-insights/query-pro-mode.md)
+      - [Envoi de requêtes accélérées](data-distiller/sql-insights/send-accelerated-queries.md)
+      - [Guide sur le modèle de données d’insights de rapports](data-distiller/sql-insights/reporting-insights-data-model.md)
    - Pipelines de fonctionnalités AI/ML {#ml-feature-pipelines}
       - [Vue d’ensemble](data-distiller/ml-feature-pipelines/overview.md)
       - [Connexion aux notebooks Jupyter](data-distiller/ml-feature-pipelines/establish-connection.md)

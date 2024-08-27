@@ -2,7 +2,7 @@
 title: Packages de Query Service
 description: Le document suivant décrit le regroupement des fonctionnalités et des produits disponibles pour Query Service et met en évidence les différences entre les requêtes ad hoc et les requêtes par lots.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 1e18a60478e2755f49d37d4d3bf4bd3ca6dbf23b
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '980'
 ht-degree: 5%
@@ -67,9 +67,9 @@ Le tableau suivant décrit les effets de l’autorisation [!DNL Manage Queries] 
 
 {style="table-layout:auto"}
 
-### Autorisations de statistiques personnalisables pertinentes {#customizable-insights-permissions}
+### Autorisations SQL Insights pertinentes {#sql-insights-permissions}
 
-Pour créer des [statistiques personnalisables](./data-distiller/customizable-insights/overview.md) de Data Distiller dans les tableaux de bord, les autorisations suivantes **doivent** être activées dans Admin Console.
+Pour créer Data Distiller [SQL Insights](./data-distiller/sql-insights/overview.md) dans les tableaux de bord, les autorisations suivantes **doivent** être activées dans Admin Console.
 
 | Autorisation | Fonction |
 |---|---|

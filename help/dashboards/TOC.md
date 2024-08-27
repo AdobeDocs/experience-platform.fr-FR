@@ -5,9 +5,9 @@ breadcrumb-title: Guide des tableaux de bord
 user-guide-description: Découvrez comment visualiser les données dans Experience Platform via des tableaux de bord personnalisables.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 3ebd17eced73424135fc93a90f05d758912eb7d0
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '133'
 ht-degree: 63%
 
 ---
@@ -22,15 +22,17 @@ ht-degree: 63%
 * [Téléchargement de tableaux de bord au format PDF](download.md)
 * Data Distiller {#data-distiller}
    * [Aperçu](data-distiller/overview.md)
-   * Informations personnalisables pour la création de rapports d’application étendue {#customizable-insights}
-      * [Vue d’ensemble](data-distiller/customizable-insights/overview.md)
-      * [Mode Requête pro (création de graphiques SQL)](data-distiller/customizable-insights/query-pro-mode.md)
+   * SQl Insights for extended app reporting {#sql-insights}
+      * [Vue d’ensemble](data-distiller/sql-insights/overview.md)
+   * Requête en mode pro {#query-pro-mode}
+      * [Vue d’ensemble](data-distiller/query-pro-mode/overview.md)
       * Filtres {#filters}
-         * [Filtre de date](data-distiller/customizable-insights/filters/date-filter.md)
-         * [Filtre global](data-distiller/customizable-insights/filters/global-filter.md)
-      * [Afficher plus](data-distiller/customizable-insights/view-more.md)
-      * [Afficher le SQL](data-distiller/customizable-insights/view-sql.md)
-      * [Téléchargement au format CSV](data-distiller/customizable-insights/download-csv.md)
+         * [Filtre de date](data-distiller/query-pro-mode/filters/date-filter.md)
+         * [Filtre global](data-distiller/query-pro-mode/filters/global-filter.md)
+      * [Afficher plus](data-distiller/query-pro-mode/view-more.md)
+      * [Afficher le SQL](data-distiller/query-pro-mode/view-sql.md)
+      * [Téléchargement au format CSV](data-distiller/query-pro-mode/download-csv.md)
+      * [Exporter en tant que PDF](data-distiller/query-pro-mode/export-pdf.md)
 * Tableaux de bord disponibles {#guides}
    * [Profils](guides/profiles.md)
    * [Profils de compte](guides/account-profiles.md)

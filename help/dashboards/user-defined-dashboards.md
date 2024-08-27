@@ -2,7 +2,7 @@
 title: Tableaux de bord personnalisés
 description: Découvrez comment créer et gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser des mesures clés.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 2ddfa221ecdebad81343516935e81691021e1fbc
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 3%
@@ -37,7 +37,7 @@ La boîte de dialogue [!UICONTROL Créer un tableau de bord] s’affiche. Saisis
 
 ![Boîte de dialogue Créer un tableau de bord.](./images/user-defined-dashboards/create-dashboard-dialog.png)
 
-Les utilisateurs qui ont acheté le SKU de Data Distiller ont la possibilité d’utiliser des requêtes SQL personnalisées pour créer leurs informations. Pour obtenir des instructions sur ce processus, consultez le [guide de création d’informations personnalisables](./data-distiller/customizable-insights/overview.md) .
+Les utilisateurs qui ont acheté le SKU de Data Distiller ont la possibilité d’utiliser des requêtes SQL personnalisées pour créer leurs informations. Consultez le [guide de création de SQL Insight](./data-distiller/sql-insights/overview.md) pour obtenir des instructions sur ce processus.
 
 Le tableau de bord vierge nouvellement créé s’affiche avec le nom de votre choix dans le coin supérieur gauche de la vue.
 

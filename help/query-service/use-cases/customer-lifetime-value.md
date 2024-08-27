@@ -2,7 +2,7 @@
 title: Suivi des signaux de données pour générer la valeur de durée de vie client
 description: Ce guide fournit une démonstration de bout en bout sur l’utilisation de Data Distiller et de tableaux de bord définis par l’utilisateur avec Real-Time Customer Data Platform pour mesurer et visualiser la valeur de durée de vie des clients.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 7%
@@ -47,7 +47,7 @@ La première étape de la création de votre CLV consiste à créer un jeu de do
 
 ## Étendre le modèle de données d’insights et planifier les mises à jour {#extend-data-model-and-set-refresh-schedule}
 
-Ensuite, vous devez créer un modèle de données personnalisé ou étendre un modèle de données Adobe Real-Time CDP existant pour interagir avec vos informations de création de rapports CLV. Consultez la documentation pour savoir comment [créer un modèle de données d’informations sur les rapports via Query Service pour l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur](../data-distiller/customizable-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). Ce tutoriel couvre les étapes suivantes :
+Ensuite, vous devez créer un modèle de données personnalisé ou étendre un modèle de données Adobe Real-Time CDP existant pour interagir avec vos informations de création de rapports CLV. Consultez la documentation pour savoir comment [créer un modèle de données d’informations sur les rapports via Query Service pour l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur](../data-distiller/sql-insights/reporting-insights-data-model.md#build-a-reporting-insights-data-model). Ce tutoriel couvre les étapes suivantes :
 
 * Créez un modèle pour créer des rapports d’informations avec Data Distiller.
 * Créer des tableaux, des relations et renseigner des données.

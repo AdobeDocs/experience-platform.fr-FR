@@ -2,7 +2,7 @@
 title: Gouvernance des données dans Query Service
 description: Cette présentation couvre les principaux éléments de la gouvernance des données dans Experience Platform Query Service.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 18c1d32bbc2732c38a9c37ee8fb9d36a23d4e515
+source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
 workflow-type: tm+mt
 source-wordcount: '3129'
 ht-degree: 1%
@@ -93,7 +93,7 @@ Le mot-clé `CREATE VIEW` définit une vue d’une requête, mais la vue n’est
 
 #### Création de restrictions d’accès basées sur les champs sur les jeux de données accélérés {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-Avec la [fonctionnalité de contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md), vous pouvez définir des portées d’utilisation des données ou organisationnelles sur les jeux de données de faits et de dimensions dans la [boutique accélérée](../data-distiller/customizable-insights/send-accelerated-queries.md). Cela permet aux administrateurs de gérer l’accès à des segments spécifiques et de mieux gérer l’accès attribué aux utilisateurs ou groupes d’utilisateurs.
+Avec la [fonctionnalité de contrôle d’accès basé sur les attributs](../../access-control/abac/overview.md), vous pouvez définir des portées d’utilisation des données ou organisationnelles sur les jeux de données de faits et de dimensions dans la [boutique accélérée](../data-distiller/sql-insights/send-accelerated-queries.md). Cela permet aux administrateurs de gérer l’accès à des segments spécifiques et de mieux gérer l’accès attribué aux utilisateurs ou groupes d’utilisateurs.
 
 Pour créer des restrictions d’accès basées sur les champs sur des jeux de données accélérés, vous pouvez utiliser les requêtes CTAS de Query Service pour créer des jeux de données accélérés et structurer ces jeux de données en fonction de schémas XDM ou de schémas ad hoc existants. Les administrateurs peuvent ensuite [ajouter et modifier des libellés d’utilisation des données pour le schéma](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) ou le [schéma ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Vous pouvez appliquer, créer et modifier des libellés à vos schémas à partir de l’espace de travail [!UICONTROL Étiquettes] de l’interface utilisateur [!UICONTROL Schémas].
 
