@@ -2,10 +2,10 @@
 title: Comportement d’exportation de profils
 description: Découvrez comment le comportement d’exportation de profils varie entre les différents modèles d’intégration pris en charge dans les destinations Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 223734e2998568f3b9b78933fa5adf740b521f5f
 workflow-type: tm+mt
-source-wordcount: '2931'
-ht-degree: 97%
+source-wordcount: '2930'
+ht-degree: 89%
 
 ---
 
@@ -145,9 +145,11 @@ Dans l’une des situations d’exportation ci-dessus, les fichiers exportés in
 
 ### Exportations de fichiers incrémentiels {#incremental-file-exports}
 
-Toutes les mises à jour d’un profil n’entraînent pas l’inclusion de celui-ci dans les exportations de fichiers incrémentiels. Par exemple, si un attribut a été ajouté à un profil ou supprimé de celui-ci, le profil n’est pas inclus dans l’exportation. Seuls les profils pour lesquels l’attribut `segmentMembership` a changé seront inclus dans les fichiers exportés. En d’autres termes, ce n’est que si le profil fait partie de l’audience ou est supprimé de celle-ci qu’il est inclus dans les exports de fichiers incrémentiels.
+Toutes les mises à jour d’un profil n’entraînent pas l’inclusion de celui-ci dans les exportations de fichiers incrémentiels. Par exemple, si un attribut a été ajouté ou supprimé d’un profil, il n’inclut pas le profil dans l’exportation.
 
-De même, si une nouvelle identité (nouvelle adresse e-mail, nouveau numéro de téléphone, nouvel ECID, etc.) est ajoutée à un profil dans le [graphique d’identité](/help/identity-service/features/identity-graph-viewer.md), cela ne représente pas une raison d’inclure le profil dans une nouvelle exportation de fichiers incrémentiels.
+Cependant, lorsque l’attribut `segmentMembership` sur un profil change, le profil est inclus dans les fichiers exportés. En d’autres termes, si le profil fait partie de l’audience ou est supprimé de l’audience, il est inclus dans les exportations incrémentielles de fichiers.
+
+De même, si une nouvelle identité (nouvelle adresse électronique, numéro de téléphone, ECID, etc.) est ajoutée à un profil dans le [graphique d’identités](/help/identity-service/features/identity-graph-viewer.md), cela déclenchera l’inclusion du profil dans une nouvelle exportation de fichier incrémentielle.
 
 Si une nouvelle audience est ajoutée à un mappage de destination, cela n’a aucune incidence sur les qualifications et les exportations d’un autre segment. Les plannings d’export sont configurés individuellement par audience et les fichiers sont exportés séparément pour chaque segment, même si les audiences ont été ajoutées au même flux de données de destination.
 
@@ -157,10 +159,10 @@ Par exemple, dans le paramètre d’export illustré ci-dessous, dans lequel une
 
 ![Paramètre d’exportation avec plusieurs attributs sélectionnés.](/help/destinations/assets/how-destinations-work/export-selection-batch-destination.png)
 
-* Un profil est inclus dans une exportation de fichiers incrémentiels qu’il remplisse ou pas les critères pour le segment.
-* Un profil n’est *pas* inclus dans une exportation de fichiers incrémentiels lorsqu’un nouveau numéro de téléphone est ajouté au graphique d’identité.
-* Un profil n’est *pas* inclus dans une exportation de fichiers incrémentiels lorsque la valeur de l’un des champs XDM mappés, comme `xdm: loyalty.points`, `xdm: loyalty.tier`, `xdm: personalEmail.address` est mise à jour sur un profil.
-* Lorsque le champ XDM `segmentMembership.status` est mappé dans le workflow d’activation de destination, les profils qui sortent de l’audience sont également inclus dans les fichiers incrémentiels exportés, avec un statut `exited`.
+* Un profil *est* inclus dans une exportation de fichier incrémentielle lorsqu’il est admissible ou non pour le segment.
+* Un profil *est* inclus dans un export de fichier incrémentiel lorsqu’un nouveau numéro de téléphone est ajouté au graphique d’identités.
+* Un profil *n’est pas* inclus dans une exportation de fichier incrémentielle lorsque la valeur de l’un des champs XDM mappés comme `xdm: loyalty.points`, `xdm: loyalty.tier` et `xdm: personalEmail.address` est mise à jour sur un profil.
+* Chaque fois que le champ XDM `segmentMembership.status` est mappé dans le workflow d’activation de destination, les profils sortant de l’audience *sont également inclus* dans les fichiers incrémentiels exportés, avec le statut `exited`.
 
 >[!ENDSHADEBOX]
 
@@ -184,7 +186,7 @@ Dans le premier export de fichiers, après avoir configuré le workflow d’acti
 
 | Ce qui détermine une exportation de destination | Éléments inclus dans le fichier exporté |
 |---------|----------|
-| <ul><li>Le planning d’exportation défini dans l’interface utilisateur ou l’API détermine le début d’une exportation de destination.</li><li>Toute modification de l’appartenance à une audience d’un profil, qu’elle remplisse les critères pour le segment ou non, rend un profil éligible à l’inclusion dans les exports incrémentiels. Les modifications des attributs ou des mappages d’identités d’un profil ne qualifient *pas* un profil pour qu’il soit inclus dans les exportations incrémentielles.</li></ul> | <p>Les profils pour lesquels l’appartenance à une audience a changé, ainsi que les informations les plus récentes pour chaque attribut XDM sélectionné pour l’export.</p><p>Les profils à l’état de sortie sont inclus dans les exportations de destination si le champ XDM `segmentMembership.status` est sélectionné à l’étape de mappage.</p> |
+| <ul><li>Le planning d’exportation défini dans l’interface utilisateur ou l’API détermine le début d’une exportation de destination.</li><li>Toute modification de l’appartenance à l’audience d’un profil, qu’il soit admissible ou non dans le segment, ou toute modification des mappages d’identité, qualifie un profil à inclure dans les exportations incrémentielles. Les modifications apportées aux attributs d’un profil *ne qualifient pas* un profil à inclure dans les exportations incrémentielles.</li></ul> | <p>Les profils pour lesquels l’appartenance à une audience a changé, ainsi que les informations les plus récentes pour chaque attribut XDM sélectionné pour l’export.</p><p>Les profils à l’état de sortie sont inclus dans les exportations de destination si le champ XDM `segmentMembership.status` est sélectionné à l’étape de mappage.</p> |
 
 {style="table-layout:fixed"}
 
