@@ -3,9 +3,9 @@ title: Interface utilisateur des paramètres d’identité
 description: Découvrez comment utiliser l’interface utilisateur des paramètres d’identité.
 badge: Version bêta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 04b04807196bb5902e398403612429eae0de3988
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '529'
 ht-degree: 2%
 
 ---
@@ -55,7 +55,7 @@ Lorsque vos configurations sont terminées, sélectionnez **[!UICONTROL Suivant]
 
 ![ La page de validation avec l’option Terminer mise en surbrillance.](../images/rules/finish.png)
 
-Un avertissement s’affiche indiquant que vos nouveaux paramètres n’auront aucune incidence sur les liens existants dans un graphique d’identités et les fragments de profil d’événement d’expérience qui ont déjà été ingérés. En outre, vous êtes averti que la prise en compte de vos nouveaux paramètres dans le système prendra jusqu’à six heures. Pour confirmer, saisissez le nom de votre environnement de test, puis sélectionnez **[!UICONTROL Confirmer]**.
+Un message d’avertissement s’affiche, indiquant que les graphiques existants ne seront affectés par l’algorithme graphique que si les graphiques sont mis à jour **après avoir enregistré vos paramètres** et que l’identité principale des fragments d’événement sur Real-time Customer Profile ne sera pas mise à jour même après les modifications de la priorité de l’espace de noms. De plus, vous êtes averti que la prise en compte de vos nouveaux paramètres prendra jusqu’à **six heures**. Pour confirmer, saisissez le nom de votre environnement de test, puis sélectionnez **[!UICONTROL Confirmer]**.
 
 ![Fenêtre de confirmation qui affiche un avertissement de retard de six heures avant le traitement des configurations.](../images/rules/confirm-settings.png)
 

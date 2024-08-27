@@ -3,10 +3,10 @@ title: Exemples De Scénarios Client Résolus Par Les Règles De Liaison De Grap
 description: Découvrez des exemples de scénarios client résolus par des règles de liaison de graphiques d’identités.
 badge: Version bêta
 exl-id: bccd5b7a-3836-47d8-b976-51747b9c1803
-source-git-commit: be6fdb7e23ed4769ab4ee7ef72532296f020f4a4
+source-git-commit: 04b04807196bb5902e398403612429eae0de3988
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 1%
+source-wordcount: '448'
+ht-degree: 3%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Cette fonctionnalité n’est pas encore disponible ; le programme bêta pour les règles de liaison de graphiques d’identités devrait commencer en juillet sur les environnements de test de développement. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation.
+>Les règles de liaison de graphiques d’identités sont actuellement en version bêta. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
 
 Ce document présente des exemples de scénarios que vous pouvez prendre en compte lors de la configuration des règles de liaison de graphiques d’identités.
 
