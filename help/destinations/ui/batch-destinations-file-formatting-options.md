@@ -2,10 +2,10 @@
 description: Découvrez comment configurer les options de formatage des fichiers lors de l’activation des données vers des destinations basées sur des fichiers.
 title: Configuration des options de formatage de fichier pour les destinations basées sur des fichiers
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
-source-git-commit: 0eb17d4d7ad9db3737a14f383bdafe40d59eb12c
+source-git-commit: 4dd6e8685ff5cc61342b20e971216416918b95da
 workflow-type: tm+mt
-source-wordcount: '1193'
-ht-degree: 50%
+source-wordcount: '1228'
+ht-degree: 48%
 
 ---
 
@@ -68,17 +68,21 @@ Affichez les exemples ci-dessous du contenu dans les fichiers CSV exportés avec
 >title="Guillemets"
 >abstract="Utilisez cette option pour supprimer les guillemets doubles des chaînes exportées. Consultez la documentation pour obtenir des exemples pour chaque sélection."
 
-Utilisez cette option pour supprimer les guillemets doubles des chaînes exportées. Les options disponibles sont les suivantes :
+Utilisez cette option pour contrôler si les guillemets doubles doivent être supprimés ou conservés dans les chaînes exportées.
+
+Les options disponibles sont les suivantes :
 
 * **[!UICONTROL Caractère nul (\0000)]**. Utilisez cette option pour supprimer les guillemets doubles des fichiers CSV exportés.
-* **[!UICONTROL Guillemets doubles (&quot;)]**. Utilisez cette option pour conserver les guillemets doubles dans les fichiers CSV exportés.
+* **[!UICONTROL Guillemets doubles (&quot;)]**. Utilisez cette option lorsque les valeurs de chaîne contiennent un délimiteur ou des guillemets doubles. Cette option permet de conserver les délimiteurs ou les guillemets doubles dans les fichiers CSV exportés, afin que vous puissiez identifier correctement la valeur qui correspond au champ.
 
 #### Exemples
 
+Examinez la valeur d’entrée `Anna,"Doe,John"`.
+
 Affichez les exemples ci-dessous du contenu des fichiers CSV exportés avec chacune des sélections dans l’interface utilisateur.
 
-* Exemple de sortie avec **[!UICONTROL Caractère nul (\0000)]** sélectionné : `Test,John,LastName`
-* Exemple de sortie avec **[!UICONTROL Guillemets doubles (&quot;)]** sélectionné : `"Test","John","LastName"`
+* Exemple de sortie avec **[!UICONTROL Caractère nul (\0000)]** sélectionné : `Anna,Doe,John`
+* Exemple de sortie avec **[!UICONTROL Guillemets doubles (&quot;)]** sélectionné : `Anna,"Doe,John"`
 
 ### Caractère d’échappement {#escape-character}
 
