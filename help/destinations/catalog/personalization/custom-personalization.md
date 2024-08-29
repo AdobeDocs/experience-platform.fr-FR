@@ -3,10 +3,10 @@ keywords: personnalisation personnalisée;destination;destination personnalisée
 title: Connexion de personnalisation personnalisée
 description: Cette destination fournit une personnalisation externe, des systèmes de gestion de contenu, des serveurs de publicités et d’autres applications qui s’exécutent sur votre site pour récupérer les informations d’audience de Adobe Experience Platform. Cette destination fournit une personnalisation en temps réel basée sur l’appartenance à l’audience du profil utilisateur.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 182176aa2e588aa356d5fea23b49f17bc8a50314
+source-git-commit: 0f70e072402bca055b96195ded91816810759fc2
 workflow-type: tm+mt
-source-wordcount: '912'
-ht-degree: 57%
+source-wordcount: '962'
+ht-degree: 51%
 
 ---
 
@@ -35,7 +35,11 @@ Configurez cette destination pour permettre aux plateformes de personnalisation 
 
 ## Conditions préalables {#prerequisites}
 
-Cette intégration est optimisée par le [SDK web Adobe Experience Platform](/help/web-sdk/home.md) ou le [SDK mobile Adobe Experience Platform](https://developer.adobe.com/client-sdks/documentation/). Pour utiliser cette destination, vous devez utiliser l’un de ces SDK.
+Cette destination nécessite l’utilisation de l’une des méthodes de collecte de données suivantes, selon votre mise en oeuvre :
+
+* Utilisez le [SDK Web Adobe Experience Platform](/help/web-sdk/home.md) si vous souhaitez collecter des données à partir de votre site Web.
+* Utilisez le [SDK Mobile Adobe Experience Platform](https://developer.adobe.com/client-sdks/documentation/) si vous souhaitez collecter des données à partir de votre application mobile.
+* Utilisez l’ [ API serveur Edge Network](../../../server-api/overview.md) si vous n’utilisez pas le [SDK web](/help/web-sdk/home.md) ou le [SDK mobile](https://developer.adobe.com/client-sdks/documentation/), ou si vous souhaitez personnaliser l’expérience utilisateur en fonction des attributs de profil.
 
 >[!IMPORTANT]
 >
