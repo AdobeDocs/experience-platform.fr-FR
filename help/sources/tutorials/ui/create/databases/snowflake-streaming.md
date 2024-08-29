@@ -4,9 +4,9 @@ type: Tutorial
 description: Découvrez comment diffuser des données de votre base de données Snwoflake vers Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: f39ee3af176e3d9b8ad04bfad81793db0ebe71a7
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1648'
 ht-degree: 17%
 
 ---
@@ -54,7 +54,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la sourc
 
 | Informations d’identification | Description |
 | --- | --- |
-| Compte | Nom de votre compte [!DNL Snowflake]. |
+| Compte | Nom de votre compte [!DNL Snowflake]. Pour les conventions sur les noms de compte, lisez le [[!DNL Snowflake Streaming] guide d&#39;authentification](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials). |
 | Entrepôt | Nom de votre entrepôt [!DNL Snowflake]. Les entrepôts gèrent l’exécution des requêtes dans [!DNL Snowflake]. Chaque entrepôt [!DNL Snowflake] est indépendant l’un de l’autre et doit être accessible individuellement pour importer des données dans Experience Platform. |
 | Base de données | Nom de la base de données [!DNL Snowflake]. La base de données contient les données que vous souhaitez importer dans Experience Platform. |
 | Schéma | (Facultatif) Le schéma de base de données associé à votre compte [!DNL Snowflake]. |
@@ -78,7 +78,9 @@ Cliquez sur **[!UICONTROL Suivant]** pour continuer.
 
 >[!IMPORTANT]
 >
->Une colonne d’horodatage doit exister dans votre table source pour qu’un flux de données en continu soit créé. L’horodatage est requis pour que l’Experience Platform sache quand les données seront ingérées et quand les données incrémentielles seront diffusées. Vous pouvez ajouter rétroactivement une colonne d’horodatage pour une connexion existante et créer un nouveau flux de données.
+>* Une colonne d’horodatage doit exister dans votre table source pour qu’un flux de données en continu soit créé. L’horodatage est requis pour que l’Experience Platform sache quand les données seront ingérées et quand les données incrémentielles seront diffusées. Vous pouvez ajouter rétroactivement une colonne d’horodatage pour une connexion existante et créer un nouveau flux de données.
+>
+>* Assurez-vous que la casse des champs de données de votre fichier de données source d’exemple est conforme aux instructions de [!DNL Snowflake] sur la résolution de la casse pour les identifiants. Pour plus d’informations, consultez le [[!DNL Snowflake] document sur la casse de l’identifiant](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing) .
 
 L’étape [!UICONTROL Sélectionner des données] apparaît. Au cours de cette étape, vous devez sélectionner les données à importer dans Experience Platform, configurer les horodatages et les fuseaux horaires, puis fournir un exemple de fichier de données source pour l’ingestion de données brutes.
 
