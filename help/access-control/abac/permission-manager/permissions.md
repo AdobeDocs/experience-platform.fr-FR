@@ -1,9 +1,10 @@
 ---
 title: Gestionnaire des autorisations de contrôle d’accès basé sur les attributs
 description: Découvrez comment utiliser le Gestionnaire des autorisations dans Adobe Experience Platform pour générer des rapports et valider les autorisations d’accès.
-source-git-commit: 3f2a899705d2c05b12300b6d5b0b860ad2c05bfd
+exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
+source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '603'
 ht-degree: 4%
 
 ---
@@ -40,7 +41,7 @@ Pour un rapport plus granulaire, vous pouvez spécifier la ressource avec des ac
 
 >[!INFO]
 >
->[!UICONTROL Resource], [!UICONTROL Actions] et [!UICONTROL Sandbox] ne sont pas des champs obligatoires. Un seul [!UICONTROL Resource] peut être sélectionné pour chaque rapport. Une fois ajoutée, une action ou un environnement de test peut être supprimé en sélectionnant le **&#39;x&#39;** en regard de la sélection que vous souhaitez supprimer.
+>[!UICONTROL Resource], [!UICONTROL Actions] et [!UICONTROL Sandbox] ne sont pas des champs obligatoires. Une fois ajoutée, une action ou un environnement de test peut être supprimé en sélectionnant le **&#39;x&#39;** en regard de la sélection que vous souhaitez supprimer.
 
 ![Les listes déroulantes Ressource, Actions, Environnements de test et Afficher les résultats en surbrillance](../../images/permission-manager/users-additional-attributes-select.png)
 
