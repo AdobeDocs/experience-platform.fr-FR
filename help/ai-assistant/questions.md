@@ -2,7 +2,7 @@
 title: Guide de questions pour l’assistant d’IA
 description: Lisez ce document pour découvrir des exemples de questions que vous pouvez utiliser lors de l’interrogation de l’assistant d’IA.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 196a39edd493dcc8296f4b6d2904393dd6f6cdd4
+source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
 workflow-type: tm+mt
 source-wordcount: '1524'
 ht-degree: 1%
@@ -33,6 +33,8 @@ Les exemples de questions suivants sont regroupées par objectifs que vous pouve
 ## Connaissances opérationnelles par entité et questions sur les connaissances des produits{#objects-questions}
 
 Les questions suivantes sont regroupées par objet de données et classées comme [informations opérationnelles](./home.md#operational-insights) ou [connaissance du produit](./home.md#product-knowledge).
+
+![](./images/prompt.png)
 
 * **Audiences - insights opérationnels**
    * Quelles audiences utilisent d’autres audiences ?
