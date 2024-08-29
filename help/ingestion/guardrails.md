@@ -3,10 +3,10 @@ keywords: Experience Platform;dépannage;mécanismes de sécurisation;conseils;
 title: Mécanismes de sécurisation pour l’ingestion des données
 description: Découvrez les barrières de sécurité pour l’ingestion de données dans Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: a574e30a12f56618e8bfaff988aa095025b36a28
+source-git-commit: 9c3f7f522ce6451e1d312a0221cc34287d3e8ae3
 workflow-type: tm+mt
-source-wordcount: '721'
-ht-degree: 47%
+source-wordcount: '737'
+ht-degree: 46%
 
 ---
 
@@ -34,7 +34,7 @@ Le tableau suivant décrit les mécanismes de sécurisation à prendre en compte
 | Ingestion du lac de données à l’aide de sources de lots | <ul><li>Vous pouvez ingérer jusqu’à 200 Go de données par heure dans le lac de données à l’aide de sources d’ingestion par lots, telles que [!DNL Azure Blob], [!DNL Amazon S3] et [!DNL SFTP].</li><li>La taille du lot doit être comprise entre 256 Mo et 100 Go. Cela s’applique aux données non compressées et compressées. Lorsque les données compressées sont décompressées dans le lac de données, ces limites s’appliquent.</li><li>Le nombre maximal de fichiers par lot est de 1 500.</li><li>La taille minimale d’un fichier ou d’un dossier est de 1 octet. Vous ne pouvez pas ingérer de fichiers ou de dossiers de taille 0 octet.</li></ul> | Lisez la [présentation des sources](../sources/home.md) pour obtenir un catalogue de sources que vous pouvez utiliser pour l’ingestion de données. |
 | Ingestion par lots vers le profil | <ul><li>La taille maximale d’une classe d’enregistrement est de 100 Ko (en dur).</li><li>La taille maximale d’une classe ExperienceEvent est de 10 Ko (en dur).</li></ul> | |
 | Nombre de lots Profile ou ExperienceEvent ingérés par jour | **Le nombre maximal de lots Profile ou ExperienceEvent ingérés par jour est de 90.** Cela signifie que le total combiné des lots Profile et ExperienceEvent ingérés chaque jour ne peut pas dépasser 90. L’ingestion de lots supplémentaires affectera les performances du système. | C’est une limite conditionnelle. Limite conditionnelle : il est possible d’aller au-delà d’une limite conditionnelle. Cependant, ces limites fournissent une orientation recommandée pour les performances du système. |
-| Ingestion de données chiffrées | La taille maximale prise en charge d’un seul fichier chiffré est de 1 Go. Par exemple, bien que vous puissiez ingérer 2 Go ou plus de données dans une seule exécution de flux de données, aucun fichier individuel de l’exécution de flux de données ne peut dépasser 1 Go. | Pour plus d’informations, consultez le [guide de l’API d’ingestion de données chiffrées](../sources/tutorials/api/encrypt-data.md) . |
+| Ingestion de données chiffrées | La taille maximale prise en charge d’un seul fichier chiffré est de 1 Go. Par exemple, bien que vous puissiez ingérer 2 Go ou plus de données dans une seule exécution de flux de données, aucun fichier individuel de l’exécution de flux de données ne peut dépasser 1 Go. | Le processus d’ingestion de données chiffrées peut prendre plus de temps que celui d’une ingestion régulière de données. Pour plus d’informations, consultez le [guide de l’API d’ingestion de données chiffrées](../sources/tutorials/api/encrypt-data.md) . |
 
 {style="table-layout:auto"}
 
