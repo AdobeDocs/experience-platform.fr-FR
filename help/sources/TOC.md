@@ -5,9 +5,9 @@ breadcrumb-title: Guide des connecteurs sources
 user-guide-description: Ingérez des données à partir de diverses sources. Découvrez comment structurer, étiqueter et améliorer les données déjà ingérées.
 feature: Sources
 role: Developer
-source-git-commit: 485881d4cbba09ae89d26b3613907174c0f24cc3
+source-git-commit: b18f93078d3cdbd0498b5b282236ac9b7bad153c
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1043'
 ht-degree: 97%
 
 ---
@@ -28,7 +28,6 @@ ht-degree: 97%
       - Mappages de champs {#mapping}
          - [Mappages de champs Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Mappages de champs Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
-         - [Mappages de champs cibles](connectors/adobe-applications/mapping/target.md)
          - [Mappages de champs Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
          - [Mappages de champs Microsoft Dynamics](connectors/adobe-applications/mapping/dynamics.md)
          - [Mappages de champs Salesforce](connectors/adobe-applications/mapping/salesforce.md)
