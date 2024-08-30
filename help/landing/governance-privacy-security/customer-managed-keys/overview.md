@@ -2,10 +2,10 @@
 title: Clés gérées par le client dans Adobe Experience Platform
 description: Découvrez comment configurer vos propres clés de chiffrement pour les données stockées dans Adobe Experience Platform.
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 5a5d35dad5f1b89c0161f4b29722b76c3caf3609
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 36%
+source-wordcount: '752'
+ht-degree: 29%
 
 ---
 
@@ -15,7 +15,7 @@ Les données stockées sur Adobe Experience Platform sont chiffrées au repos 
 
 >[!NOTE]
 >
->Les données du lac de données Adobe Experience Platform et de la banque de profils sont chiffrées à l’aide de CMK. Ils sont considérés comme vos principaux entrepôts de données.
+>Les données de profil client stockées dans la banque de profils [!DNL Azure Data Lake] et [!DNL Azure Cosmos DB] de Platform sont chiffrées exclusivement à l’aide du CMK, une fois activées. La révocation des clés dans vos entrepôts de données principaux peut prendre entre **quelques minutes et 24 heures** et peut prendre plus de temps, **jusqu’à 7 jours** pour les entrepôts de données transitoires ou secondaires. Pour plus d’informations, reportez-vous aux [ implications de la révocation de l’accès à la clé ](#revoke-access).
 
 Ce document fournit un aperçu général du processus d’activation de la fonctionnalité de clés gérées par le client (CMK) dans Platform, ainsi que les informations préalables requises pour effectuer ces étapes.
 
@@ -54,15 +54,22 @@ Le processus se présente comme suit :
 
 Une fois le processus de configuration terminé, toutes les données intégrées à Platform dans l’ensemble des sandbox seront chiffrées à l’aide de votre configuration de clé [!DNL Azure]. Pour vous servir de la fonction CMK, vous utiliserez la fonctionnalité [!DNL Microsoft Azure] pouvant faire partie de leur [programme de préversion publique](https://azure.microsoft.com/fr-fr/support/legal/preview-supplemental-terms/).
 
-## Révoquer l’accès {#revoke-access}
+## Conséquences de la révocation de l’accès à la clé {#revoke-access}
 
-Si vous souhaitez révoquer l’accès de Platform à vos données, vous pouvez supprimer le rôle d’utilisateur associé à l’application du coffre de clés dans [!DNL Azure].
+Le fait de révoquer ou de désactiver l’accès à l’application Key Vault, key ou CMK peut entraîner des perturbations importantes, notamment la rupture des modifications apportées aux opérations de votre plateforme. Une fois ces clés désactivées, les données de Platform peuvent devenir inaccessibles et toutes les opérations en aval qui dépendent de ces données cesseront de fonctionner. Il est essentiel de bien comprendre les impacts en aval avant d’apporter des modifications à vos configurations clés.
 
->[!WARNING]
->
->La désactivation du coffre de clés, de la clé ou de l’application CMK peut entraîner une modification entraînant une rupture. Une fois que l’application Key Vault, Key ou CMK est désactivée et que les données ne sont plus accessibles dans Platform, les opérations en aval liées à ces données ne seront plus possibles. Assurez-vous de comprendre les impacts en aval de la révocation de l’accès à Platform à votre clé avant d’apporter des modifications à votre configuration.
+Si vous décidez de révoquer l’accès de Platform à vos données, vous pouvez le faire en supprimant le rôle d’utilisateur associé à l’application du Key Vault dans [!DNL Azure].
 
-Après avoir supprimé l’accès à la clé ou désactivé/supprimé la clé de votre coffre de clé [!DNL Azure], la propagation de cette configuration aux entrepôts de données principaux peut prendre entre quelques minutes et 24 heures. Les workflows Platform incluent également les entrepôts de données en mémoire cache et transitoires requis pour les performances et les fonctionnalités de base des applications. La propagation de la révocation du CMK via ces magasins mis en cache et transitoires peut prendre jusqu’à sept jours, comme déterminé par leurs workflows de traitement des données. Par exemple, cela signifie que le tableau de bord Profil conserve et affiche les données de son entrepôt de données de cache et met sept jours à expiration pour que les données conservées dans les entrepôts de données du cache fassent l’objet d’un cycle d’actualisation. Le même délai s’applique pour que les données soient à nouveau disponibles lors de la réactivation de l’accès à l’application.
+### Chronologies de propagation {#propagation-timelines}
+
+Une fois l’accès à la clé révoqué de votre KeyVault [!DNL Azure], les modifications se propagent comme suit :
+
+| **Type de magasin** | **Description** | **Planning** |
+|---|---|---|
+| Stockages de données de Principal | Ces magasins incluent les magasins Azure Data Lake et Azure Cosmos DB Profile. Une fois l’accès à la clé révoqué, les données deviennent inaccessibles. | Un **à 24 heures**. |
+| Stockages de données mis en cache/transitoires | Inclut des entrepôts de données utilisés pour les fonctionnalités de performances et d’application de base. L’impact de la révocation de la clé est retardé. | **Jusqu’à 7 jours**. |
+
+Par exemple, le tableau de bord du profil continuera à afficher les données de son cache pendant sept jours au maximum avant l’expiration et l’actualisation des données. De même, la réactivation de l’accès à l’application prend le même temps pour restaurer la disponibilité des données dans ces magasins.
 
 >[!NOTE]
 >
