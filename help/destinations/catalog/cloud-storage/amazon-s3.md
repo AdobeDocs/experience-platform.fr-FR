@@ -2,10 +2,10 @@
 title: Connexion Amazon S3
 description: Créez une connexion sortante active vers votre stockage Amazon Web Services (AWS) S3 pour exporter régulièrement des fichiers de données CSV depuis Adobe Experience Platform vers vos propres compartiments S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 8dbdfb1e8e574647bf621a320ee07ecc7a653a6c
 workflow-type: tm+mt
-source-wordcount: '1440'
-ht-degree: 51%
+source-wordcount: '1499'
+ht-degree: 49%
 
 ---
 
@@ -109,7 +109,7 @@ Utilisez cette méthode d’authentification lorsque vous souhaitez saisir votre
 
 Utilisez ce type d’authentification si vous préférez ne pas partager les clés de compte et les clés secrètes avec Adobe. Experience Platform se connecte plutôt à votre emplacement Amazon S3 à l’aide d’un accès basé sur les rôles.
 
-Pour ce faire, vous devez créer dans la console AWS un utilisateur présumé pour l’Adobe avec les [autorisations requises appropriées](#required-s3-permission) pour écrire dans vos compartiments Amazon S3. Créez une **[!UICONTROL entité approuvée]** dans AWS avec le compte Adobe **[!UICONTROL 670664943635]**. Pour plus d&#39;informations, consultez la [documentation AWS sur la création de rôles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+Pour ce faire, vous devez créer dans la console AWS un utilisateur présumé pour l’Adobe avec les [autorisations requises appropriées](#minimum-permissions-iam-user) pour écrire dans vos compartiments Amazon S3. Créez une **[!UICONTROL entité approuvée]** dans AWS avec le compte Adobe **[!UICONTROL 670664943635]**. Pour plus d&#39;informations, consultez la [documentation AWS sur la création de rôles](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 
 * **[!DNL Role]** : collez l’ARN du rôle que vous avez créé dans AWS pour l’utilisateur Adobe. Le modèle est similaire à `arn:aws:iam::800873819705:role/destinations-role-customer`.
 * **[!UICONTROL Clé de chiffrement]** : vous pouvez éventuellement joindre votre clé publique au format RSA pour ajouter un chiffrement à vos fichiers exportés. Vous pouvez voir un exemple de clé correctement formatée dans l’image ci-dessous.
@@ -162,6 +162,38 @@ Pour établir une connexion et exporter des données vers votre emplacement de s
 * `s3:ListBucket`
 * `s3:PutObject`
 * `s3:ListMultipartUploadParts`
+
+#### Autorisations minimales requises pour l’authentification des rôles par IAM {#minimum-permissions-iam-user}
+
+Lors de la configuration du rôle IAM en tant que client, assurez-vous que la stratégie d’autorisation associée au rôle inclut les actions requises sur le dossier cible dans le compartiment et l’action `s3:ListBucket` pour la racine du compartiment. Vous trouverez ci-dessous un exemple de stratégie d’autorisations minimales pour ce type d’authentification :
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:GetBucketLocation",
+                "s3:ListMultipartUploadParts"
+            ],
+            "Resource": "arn:aws:s3:::bucket/folder/*"
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "s3:ListBucket"
+            ],
+            "Resource": "arn:aws:s3:::bucket"
+        }
+    ]
+}  
+```
 
 <!--
 
