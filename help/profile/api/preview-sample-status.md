@@ -4,7 +4,7 @@ title: Aperçu de l’exemple d’état (aperçu du profil), point de terminaiso
 description: L’aperçu de l’exemple de point de terminaison d’état de l’API Real-time Customer Profile vous permet de prévisualiser le dernier échantillon réussi de vos données de profil, de répertorier la distribution du profil par jeu de données et par identité, et de générer des rapports montrant le chevauchement des jeux de données, le chevauchement d’identités et les profils désassemblés.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 49196473f304585193e87393f8dc5dc37be7e4d9
 workflow-type: tm+mt
 source-wordcount: '2906'
 ht-degree: 5%
@@ -84,7 +84,7 @@ La réponse inclut les détails du dernier exemple de tâche réussi qui a été
     "status": true,
     "submissionTimestamp": "2020-08-01 17:57:57.0"
   },
-  "cosmosDocCount": "\"300803\"",
+  "docCount": "\"300803\"",
   "totalFragmentCount": 47429,
   "lastSuccessfulBatchTimestamp": "\"null\"",
   "streamingDriven": "\"false\"",
@@ -101,7 +101,7 @@ La réponse inclut les détails du dernier exemple de tâche réussi qui a été
 |---|---|
 | `numRowsToRead` | Le nombre total de profils fusionnés dans l’exemple. |
 | `sampleJobRunning` | Une valeur booléenne qui renvoie `true` lorsqu’un exemple de tâche est en cours. Fournit une transparence quant à la latence qui survient lorsqu’un fichier de lot est chargé dans lorsqu’il est réellement ajouté à la banque de profils. |
-| `cosmosDocCount` | Nombre total de documents dans Cosmos. |
+| `docCount` | Nombre total de documents dans la base de données. |
 | `totalFragmentCount` | Nombre total de fragments de profil dans la banque de profils. |
 | `lastSuccessfulBatchTimestamp` | Dernier horodatage d’ingestion par lots réussi. |
 | `streamingDriven` | *Ce champ a été abandonné et ne contient aucune signification pour la réponse.* |
