@@ -3,10 +3,10 @@ keywords: destination de stockage dans le cloud;espace de stockage dans le cloud
 title: Présentation des destinations de stockage dans le cloud
 description: Adobe Experience Platform peut fournir vos audiences sous forme de fichiers de données à vos emplacements de stockage dans le cloud Amazon S3, AWS Kinesis, Azure Event Hubs ou SFTP.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 8b8abea65ee0448594113ca77f75b84293646146
+source-git-commit: 9c1699471d5b3c3c725e46581e256a0c07f08a49
 workflow-type: tm+mt
-source-wordcount: '387'
-ht-degree: 50%
+source-wordcount: '453'
+ht-degree: 42%
 
 ---
 
@@ -62,6 +62,13 @@ Chemin du dossier dans votre emplacement de stockage : `acme/campaigns/2021/257
 
 Entrée : `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
 Chemin du dossier dans votre emplacement de stockage : `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+**Autres macros**
+
+Comme dans les exemples ci-dessus, vous pouvez utiliser d’autres macros pour créer une structure de dossiers personnalisée dans l’emplacement de votre dossier :
+
+* `%DATETIME%` ou `%TIMESTAMP%` pour ajouter un nom de dossier personnalisé en fonction de l’heure d’exportation des fichiers. Le format de la première macro est `MMDDYYYY_HHMMSS` et le format UNIX 10 chiffres de la seconde macro.
+* `%DESTINATION_NAME%` pour ajouter un dossier personnalisé en fonction du nom du flux de données de destination.
 
 ## Type d’exportation de données {#export-type}
 
