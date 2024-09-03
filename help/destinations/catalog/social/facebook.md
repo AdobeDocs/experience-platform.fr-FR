@@ -3,10 +3,10 @@ keywords: Connexion facebook;connexion facebook;destinations facebook;facebook;i
 title: Connexion Facebook
 description: Activez les profils dans vos campagnes Facebook pour cibler votre audience et effectuer des personnalisat ions ou encore des suppressions reposant sur les e-mails hachés.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 742801c31a0371feb42df2c98b3a4ddb63ae2f48
 workflow-type: tm+mt
-source-wordcount: '1952'
-ht-degree: 31%
+source-wordcount: '1985'
+ht-degree: 30%
 
 ---
 
@@ -80,7 +80,7 @@ Avant d’envoyer vos audiences à [!DNL Facebook], assurez-vous de respecter le
   >[!IMPORTANT]
   >
   > Lors de la configuration des autorisations pour Adobe Experience Cloud, vous devez activer l’autorisation **Gérer des campagnes**. L’autorisation est requise pour l’intégration [!DNL Adobe Experience Platform].
-* Lisez et signez les Conditions d’utilisation [!DNL Facebook Custom Audiences]. Pour ce faire, accédez à `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, où `accountID` correspond à votre [!DNL Facebook Ad Account ID].
+* Lisez et signez les Conditions d’utilisation [!DNL Facebook Custom Audiences]. Pour ce faire, accédez à `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973`, où `accountID` correspond à votre [!DNL Facebook Ad Account ID]. Assurez-vous que la section `business_id=206617933627973` est présente dans l’URL lorsque vous signez les Conditions d’utilisation.
   >[!IMPORTANT]
   >
   >Lors de la signature des conditions d’utilisation de [!DNL Facebook Custom Audiences], veillez à utiliser le même compte utilisateur que celui que vous utilisiez pour vous authentifier dans l’API Facebook.
@@ -251,4 +251,10 @@ Lors de la configuration de cette destination, vous risquez de recevoir l’erre
 
 Cette erreur se produit lorsque les clients utilisent des comptes nouvellement créés et que les autorisations [!DNL Facebook] ne sont pas encore actives.
 
+>[!IMPORTANT]
+>
+>Veillez à accepter le [!DNL Facebook Custom Audience Terms of Service] sous `business ID 206617933627973`, comme indiqué dans le modèle d’URL de la section [ Conditions préalables du compte ](#facebook-account-prerequisites) .
+
 Si vous recevez le message d’erreur `400 Bad Request` après avoir suivi les étapes des [conditions préalables du compte Facebook](#facebook-account-prerequisites), attendez quelques jours pour que les autorisations [!DNL Facebook] entrent en vigueur.
+
+
