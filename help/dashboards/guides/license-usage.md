@@ -4,10 +4,10 @@ title: Tableau de bord d’utilisation de la licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 3ea67d5bcdaeefd26cd95b89c60d21bef34ecd53
+source-git-commit: f9b7275a9cf066db8192be6a5b5528e19d18c313
 workflow-type: tm+mt
-source-wordcount: '2646'
-ht-degree: 8%
+source-wordcount: '2664'
+ht-degree: 9%
 
 ---
 
@@ -66,7 +66,7 @@ Ce tableau de bord affiche sous forme de tableau tous les produits Adobe Experie
 | **[!UICONTROL Montant de la licence]** | La valeur contractuelle correspondant au montant maximal de la mesure de Principal, conformément à ce qui est convenu dans votre contrat de licence de produit. |
 | **[!UICONTROL Utilisation]** | Montant de la mesure principale utilisée. Cette valeur fournit l’utilisation totale de cette mesure pour tous les environnements de test, que ce soit la production ou le développement. |
 | **[!UICONTROL Utilisation %]** | Le pourcentage de votre mesure principale utilisée en fonction de votre montant de licence. |
-| **[!UICONTROL Utilisation de prédiction]** | (**Beta**) Pourcentage d’utilisation prévu de votre mesure principale en fonction de votre quantité de licence. |
+| **[!UICONTROL Utilisation de prédiction]** | Pourcentage d’utilisation prévu de votre mesure principale en fonction du montant de votre licence. |
 
 >[!NOTE]
 >
@@ -74,31 +74,27 @@ Ce tableau de bord affiche sous forme de tableau tous les produits Adobe Experie
 
 Le tableau indique la mesure principale de chaque produit, car chaque produit peut effectuer le suivi de nombreuses mesures.
 
-### [!BADGE Beta]{type=Informative} Utilisation prévue {#predicted-usage}
+### Utilisation prévue {#predicted-usage}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Utilisation prévue"
-abstract="Les prédictions sont basées sur l&#39;utilisation des 6 à 7 derniers mois et sont générées le 15 de chaque mois. Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence de votre entreprise avec Adobe. Pour réduire l’utilisation, vous pouvez configurer des expirations de données de jeu de données ou de profil pseudonymes pour les environnements de test et les jeux de données."
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirations automatisées des jeux de données"
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Expiration des données de profils pseudonymes"
+>abstract="Les prédictions sont basées sur l&#39;utilisation des 6 à 7 derniers mois et sont générées le 15 de chaque mois. L’utilisation doit atteindre les valeurs prédites comprises entre {startDate} et {endDate}. Les données ont été collectées pour la dernière fois le {collectionDate}. Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence de votre entreprise avec Adobe. Pour réduire l’utilisation, vous pouvez configurer des expirations de données de jeu de données ou de profil pseudonymes pour les environnements de test et les jeux de données."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirations automatisées des jeux de données"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Expiration des données de profils pseudonymes"
 
-[!CONTEXTUALHELP]
-id="platform_licenseusage_prediction"
-title="Utilisation prévue"
-abstract="Les prédictions sont basées sur l&#39;utilisation des 6 à 7 derniers mois et sont générées le 15 de chaque mois. Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence de votre entreprise avec Adobe. Pour réduire l’utilisation, vous pouvez configurer des expirations de données de jeu de données ou de profil pseudonymes pour les environnements de test et les jeux de données."
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirations automatisées des jeux de données"
-additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Expiration des données de profils pseudonymes"
-
->[!AVAILABILITY]
->
-La fonctionnalité de prédiction de l’utilisation future des licences est actuellement en version bêta. La documentation et les fonctionnalités peuvent changer.
+>[!CONTEXTUALHELP]
+>id="platform_licenseusage_prediction"
+>title="Utilisation prévue"
+>abstract="Les prédictions sont basées sur l&#39;utilisation des 6 à 7 derniers mois et sont générées le 15 de chaque mois. L’utilisation doit atteindre les valeurs prédites comprises entre {startDate} et {endDate}. Les données ont été collectées pour la dernière fois le {collectionDate}. Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence de votre entreprise avec Adobe. Pour réduire l’utilisation, vous pouvez configurer des expirations de données de jeu de données ou de profil pseudonymes pour les environnements de test et les jeux de données."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirations automatisées des jeux de données"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Expiration des données de profils pseudonymes"
 
 Gérez et optimisez vos ressources de licence de manière proactive en fonction de prédictions d’utilisation éclairées. La colonne [!UICONTROL  Utilisation prédite] prédit précisément l’utilisation future des licences au niveau des environnements de test, dans tous les environnements de test de production et de développement, pour tous les produits que vous avez achetés. Cette fonctionnalité d’alerte fournit une prévision de l’utilisation des licences pour six semaines à venir, en fonction de votre utilisation jusqu’au 15 du mois civil. Les prédictions sont fournies avec une limite inférieure et une limite supérieure.
 
 >[!IMPORTANT]
 >
-Les prévisions sont actualisées tous les mois. La date d’actualisation est incluse dans une icône d’information (![Cette icône d’information.](../images/license-usage/info-icon.png)) au-dessus du titre de la colonne.
+>Les prévisions sont actualisées tous les mois. La date d’actualisation est incluse dans une icône d’information (![Cette icône d’information.](../images/license-usage/info-icon.png)) au-dessus du titre de la colonne.
 
 Pour afficher un résumé de l’utilisation des droits des produits, sélectionnez un produit dans la liste [!UICONTROL Aperçu].
 
@@ -108,7 +104,7 @@ L’onglet Résumé s’affiche. Vous pouvez utiliser les prédictions granulair
 
 >[!NOTE]
 >
-Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence de votre entreprise avec Adobe.
+>Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence de votre entreprise avec Adobe.
 
 ![L’affichage récapitulatif d’un produit Platform avec la colonne d’utilisation prédite mise en surbrillance.](../images/license-usage/summary-predicted-usage.png)
 
@@ -120,7 +116,7 @@ Le pourcentage d’utilisation prévue est déterminé comme suit :
 
 >[!NOTE]
 >
-Dans ce contexte, &quot;Presque identique&quot; signifie que les valeurs sont statistiquement significatives à deux décimales (par exemple, une limite inférieure de 0,342 et une limite supérieure de 0,344 sont toutes deux arrondies à 34 %).
+>Dans ce contexte, &quot;Presque identique&quot; signifie que les valeurs sont statistiquement significatives à deux décimales (par exemple, une limite inférieure de 0,342 et une limite supérieure de 0,344 sont toutes deux arrondies à 34 %).
 
 La fonction d’utilisation prévue prend en charge les mesures suivantes :
 
@@ -136,23 +132,23 @@ Pour afficher d’autres mesures et des informations détaillées sur l’utilis
 
 ![Vue récapitulative d’un produit Platform qui affiche toutes les mesures disponibles pour ce produit.](../images/license-usage/summary-tab.png)
 
-Dans l’onglet Résumé, le tableau comprend la colonne [!UICONTROL Mesure]. Ces descriptions lisibles indiquent toutes les mesures utilisées pour ce type of sandbox.
+Dans l’onglet Résumé, le tableau comprend la colonne [!UICONTROL Mesure]. Ces descriptions lisibles par l’utilisateur indiquent toutes les mesures utilisées pour ce type d’environnement de test.
 
 ### Sélectionner un sandbox {#select-sandbox}
 
-Pour modifier l’affichage entre les types d’environnements de test de production et de développement, select [!UICONTROL Environnements de test de production] ou [!UICONTROL Environnements de test de développement]. Type d’environnement de test sélectionné is indiqué par le bouton radio en regard du nom de l’environnement de test.
+Pour modifier l’affichage entre les types d’environnements de test de production et de développement, sélectionnez [!UICONTROL Environnements de test de production] ou [!UICONTROL Environnements de test de développement]. Le type d’environnement de test sélectionné est indiqué par le bouton radio en regard du nom de l’environnement de test.
 
-La création de rapports de consommation pour les environnements de test est cumulative pour tous les environnements de test du même type. In en d’autres termes, la sélection de [!UICONTROL Production] ou [!UICONTROL Développement] fournit des rapports de consommation pour tous les environnements de test de production ou de développement, respectivement.
+La création de rapports de consommation pour les environnements de test est cumulative pour tous les environnements de test du même type. En d’autres termes, la sélection de [!UICONTROL Production] ou [!UICONTROL Développement] fournit des rapports de consommation pour tous les environnements de test de production ou de développement, respectivement.
 
 ![L’affichage récapitulatif d’un produit Platform avec des environnements de test de production et des environnements de test de développement mis en surbrillance.](../images/license-usage/summary-tab-sandboxes.png)
 
 >[!WARNING]
 >
-L’autorisation d’afficher le tableau de bord de l’utilisation des licences doit être spécifiée au niveau de l’environnement de test. Ajoutez des autorisations à chaque environnement de test individuel pour les afficher dans le tableau de bord. Cette limitation sera corrigée dans une version ultérieure. En attendant, la solution suivante est disponible :
+>L’autorisation d’afficher le tableau de bord de l’utilisation des licences doit être spécifiée au niveau de l’environnement de test. Ajoutez des autorisations à chaque environnement de test individuel pour les afficher dans le tableau de bord. Cette limitation sera corrigée dans une version ultérieure. En attendant, la solution suivante est disponible :
 >
-1. Créez un profil de produit dans Adobe Admin Console.
-2. Sous Autorisation dans la catégorie Sandbox , ajoutez tous les environnements de test que vous souhaitez afficher dans le tableau de bord de l’utilisation des licences.
-3. Dans la catégorie Autorisation du tableau de bord utilisateur , ajoutez l’autorisation &quot;Afficher le tableau de bord de l’utilisation de la licence&quot;.
+>1. Créez un profil de produit dans Adobe Admin Console.
+>2. Sous Autorisation dans la catégorie Sandbox , ajoutez tous les environnements de test que vous souhaitez afficher dans le tableau de bord de l’utilisation des licences.
+>3. Dans la catégorie Autorisation du tableau de bord utilisateur , ajoutez l’autorisation &quot;Afficher le tableau de bord de l’utilisation de la licence&quot;.
 
 ## Onglet [!UICONTROL Détails] {#details-tab}
 
@@ -201,7 +197,7 @@ Le tableau de bord de l’utilisation des licences répertorie plusieurs mesures
 | [!UICONTROL Taille de l’exportation des données] | La quantité de données envoyée par le biais des activations de jeux de données au cours d’une année. |
 | [!UICONTROL Exports de données] | Taille totale des jeux de données pouvant être exportés vers une solution autre qu’un Adobe (directement ou indirectement) au cours d’une année. |
 | [!UICONTROL Stockage du lac de données] | Quantité utilisée par l’entrepôt de données analytiques dans Adobe Experience Platform. |
-| [!UICONTROL Audience pouvant être activée] | Cette mesure fait référence à l’audience des profils engageants. Un profil engageant est un enregistrement d’informations représentant un individu et est représenté dans le service de profil. Ces enregistrements sont des profils avec lesquels vous avez tenté d’interagir à l’aide des fonctionnalités de création, de prise de décision, de diffusion, d’expérimentation ou d’orchestration de Journey Optimizer au cours des 12 derniers mois. |
+| [!UICONTROL Audience pouvant être activée] | Cette mesure fait référence à l’audience des profils engageants. Un profil engageable est un enregistrement d’informations représentant une personne et est représenté dans le service de profil. Ces enregistrements sont des profils avec lesquels vous avez tenté d’interagir à l’aide des fonctionnalités de création, de prise de décision, de diffusion, d’expérimentation ou d’orchestration de Journey Optimizer au cours des 12 derniers mois. |
 | [!UICONTROL Audiences analogue] | Nombre d’audiences générées par la modélisation d’une audience de consommateur existante afin d’identifier les profils de personne similaires à cette audience de consommateur existante. |
 | [!UICONTROL Nombre de modèles AMM] | Nombre du modèle d’apprentissage automatique (intégré à l’Adobe Mix Modeler) utilisé pour mesurer et/ou prédire un résultat spécifié en fonction de vos investissements. |
 | [!UICONTROL Nombre d’environnements de test] | Nombre de séparations logiques au sein de votre instance de tout service On-Demand Adobe accédant à Adobe Experience Platform pour isoler les données et les opérations. |
@@ -213,7 +209,7 @@ Le tableau de bord de l’utilisation des licences répertorie plusieurs mesures
 
 >[!TIP]
 >
-Vous pouvez vérifier vos droits de licence dans votre commande de ventes pour calculer des mesures telles que votre &quot;Autorisation de stockage&quot;.<br>Par exemple,<ul><li>Allocation de stockage = nombre de &quot;profils autorisés&quot; dans votre contrat X Richesse moyenne du profil</li></ul>
+>Vous pouvez vérifier vos droits de licence dans votre commande de ventes pour calculer des mesures telles que votre &quot;Autorisation de stockage&quot;.<br>Par exemple,<ul><li>Allocation de stockage = nombre de &quot;profils autorisés&quot; dans votre contrat X Richesse moyenne du profil</li></ul>
 
 La disponibilité de ces mesures et la définition spécifique de chacune d’elles varient en fonction des licences achetées par votre entreprise. Pour obtenir des définitions détaillées de chaque mesure, reportez-vous à la documentation Description du produit appropriée :
 
@@ -228,7 +224,7 @@ La disponibilité de ces mesures et la définition spécifique de chacune d’el
 
 >[!WARNING]
 >
-Le tableau de bord de l’utilisation des licences ne tient compte que de la dernière licence configurée pour votre entreprise. Si la dernière licence configurée pour votre entreprise n’apparaît pas dans le tableau ci-dessus, le tableau de bord de l’utilisation des licences peut ne pas s’afficher correctement. La prise en charge de licences supplémentaires et de plusieurs licences au sein d’une même organisation est prévue pour une version ultérieure.
+>Le tableau de bord de l’utilisation des licences ne tient compte que de la dernière licence configurée pour votre entreprise. Si la dernière licence configurée pour votre entreprise n’apparaît pas dans le tableau ci-dessus, le tableau de bord de l’utilisation des licences peut ne pas s’afficher correctement. La prise en charge de licences supplémentaires et de plusieurs licences au sein d’une même organisation est prévue pour une version ultérieure.
 
 ## Étapes suivantes
 
