@@ -4,10 +4,10 @@ title: Tableau de bord d’utilisation de la licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: f9b7275a9cf066db8192be6a5b5528e19d18c313
+source-git-commit: c512cce90eaee407a3b101cbf819685f21760a91
 workflow-type: tm+mt
-source-wordcount: '2664'
-ht-degree: 9%
+source-wordcount: '2626'
+ht-degree: 10%
 
 ---
 
@@ -79,14 +79,14 @@ Le tableau indique la mesure principale de chaque produit, car chaque produit pe
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Utilisation prévue"
->abstract="Les prédictions sont basées sur l&#39;utilisation des 6 à 7 derniers mois et sont générées le 15 de chaque mois. L’utilisation doit atteindre les valeurs prédites comprises entre {startDate} et {endDate}. Les données ont été collectées pour la dernière fois le {collectionDate}. Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence de votre entreprise avec Adobe. Pour réduire l’utilisation, vous pouvez configurer des expirations de données de jeu de données ou de profil pseudonymes pour les environnements de test et les jeux de données."
+>abstract="Les prédictions sont basées sur l&#39;utilisation des 6 à 7 derniers mois et sont générées le 15 de chaque mois. Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence de votre entreprise avec Adobe. Pour réduire l’utilisation, vous pouvez configurer des expirations de données de jeu de données ou de profil pseudonymes pour les environnements de test et les jeux de données."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirations automatisées des jeux de données"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Expiration des données de profils pseudonymes"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="Utilisation prévue"
->abstract="Les prédictions sont basées sur l&#39;utilisation des 6 à 7 derniers mois et sont générées le 15 de chaque mois. L’utilisation doit atteindre les valeurs prédites comprises entre {startDate} et {endDate}. Les données ont été collectées pour la dernière fois le {collectionDate}. Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence de votre entreprise avec Adobe. Pour réduire l’utilisation, vous pouvez configurer des expirations de données de jeu de données ou de profil pseudonymes pour les environnements de test et les jeux de données."
+>abstract="Les prédictions sont basées sur l&#39;utilisation des 6 à 7 derniers mois et sont générées le 15 de chaque mois. Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence de votre entreprise avec Adobe. Pour réduire l’utilisation, vous pouvez configurer des expirations de données de jeu de données ou de profil pseudonymes pour les environnements de test et les jeux de données."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirations automatisées des jeux de données"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Expiration des données de profils pseudonymes"
 
