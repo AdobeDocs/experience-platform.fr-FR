@@ -4,14 +4,19 @@ title: Tableau de bord d’utilisation de la licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: c512cce90eaee407a3b101cbf819685f21760a91
+source-git-commit: dedffe90e9107b70d4ddf65a7bf8079396ff8e8b
 workflow-type: tm+mt
-source-wordcount: '2626'
+source-wordcount: '2641'
 ht-degree: 10%
 
 ---
 
 # Tableau de bord d’utilisation des licences {#license-usage-dashboard}
+
+>[!CONTEXTUALHELP]
+>id="testy-mctestface"
+>title="Boîte de dialogue de test qui ne doit pas être visible"
+>abstract="L&#39;objet {name} est affiché sur {date}."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
