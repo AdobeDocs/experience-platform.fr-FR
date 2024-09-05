@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’API Data Access
 description: L’API Data Access prend en charge Adobe Experience Platform en fournissant aux développeurs une interface RESTful axée sur la découverte et l’accessibilité des jeux de données ingérés dans Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: dbb96744c873d2bf656be03ebf1b8ea2fb08acf3
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
 source-wordcount: '554'
-ht-degree: 44%
+ht-degree: 42%
 
 ---
 
@@ -243,4 +243,4 @@ Pour d’autres exemples, reportez-vous au [ tutoriel sur l’accès aux donnée
 
 ## Abonnement aux événements d’ingestion de données {#subscribe-to-data-ingestion-events}
 
-Vous pouvez vous abonner à des événements à valeur élevée spécifiques par le biais de [Adobe Developer Console](https://developer.adobe.com/console/). Par exemple, vous pouvez vous abonner aux événements d’ingestion de données pour être informé des retards et des échecs potentiels. Pour plus dʼinformations, consultez le tutoriel sur [lʼabonnement aux notifications dʼingestion des données](../ingestion/quality/subscribe-events.md).
+Vous pouvez vous abonner à des événements à valeur élevée spécifiques par le biais de [Adobe Developer Console](https://developer.adobe.com/console/). Par exemple, vous pouvez vous abonner aux événements d’ingestion de données pour être informé des retards et des échecs potentiels. Pour plus d’informations, consultez le tutoriel sur l’ [abonnement aux notifications d’événement d’Adobe](../observability/alerts/subscribe.md) .

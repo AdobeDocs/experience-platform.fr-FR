@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de Data Access
 description: Data Access prend en charge Adobe Experience Platform en fournissant aux utilisateurs des outils axés sur la découverte et lʼaccessibilité des jeux de données Platform ingérés.
 exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
-source-git-commit: 74867f56ee13430cbfd9083a916b7167a9a24c01
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
 source-wordcount: '180'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -29,4 +29,4 @@ Pour plus dʼinformations sur [!DNL Data Science Workspace], commencez par lire 
 
 ## Abonnement aux événements d’ingestion de données
 
-[!DNL Platform] met à disposition des événements ayant une valeur élevée à lʼabonnement par lʼintermédiaire de la [console des développeurs Adobe](https://www.adobe.com/go/devs_console_ui). Par exemple, vous pouvez vous abonner aux événements d’ingestion de données pour être informé des retards et des échecs potentiels. Pour plus dʼinformations, consultez le tutoriel sur [lʼabonnement aux notifications dʼingestion des données](../ingestion/quality/subscribe-events.md).
+[!DNL Platform] met à disposition des événements ayant une valeur élevée à lʼabonnement par lʼintermédiaire de la [console des développeurs Adobe](https://www.adobe.com/go/devs_console_ui). Par exemple, vous pouvez vous abonner aux événements d’ingestion de données pour être informé des retards et des échecs potentiels. Pour plus d’informations, consultez le tutoriel sur l’ [abonnement aux notifications d’événement d’Adobe](../observability/alerts/subscribe.md) .

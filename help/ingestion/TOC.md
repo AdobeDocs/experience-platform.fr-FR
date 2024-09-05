@@ -5,9 +5,9 @@ breadcrumb-title: Guide d’ingestion de données
 user-guide-description: Insérez vos données dans Experience Platform par ingestion en lot ou en flux continu.
 feature: Data Ingestion
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '142'
 ht-degree: 95%
 
 ---
@@ -44,7 +44,6 @@ ht-degree: 95%
    - [Récupération des diagnostics d’erreur](quality/error-diagnostics.md)
    - [Récupération des lots en échec](quality/retrieve-failed-batches.md)
    - [Validation de l’ingestion par flux](quality/streaming-validation.md)
-   - [Notifications d’ingestion de données](quality/subscribe-events.md)
 - [Barrières de sécurité pour l’ingestion de données](guardrails.md)
 - [Connecteurs source](source-connectors.md)
 - [Référence de l’API d’ingestion par lots](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
