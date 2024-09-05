@@ -1,10 +1,11 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Août 2024
 description: Les notes de mise à jour d’août 2024 pour Adobe Experience Platform.
-source-git-commit: 6d91112654d08dd31e5334982e534ec42d9fc226
+exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
+source-git-commit: 4fecb47084a522b4eb9808dc317e0d70e7ef42c6
 workflow-type: tm+mt
-source-wordcount: '1502'
-ht-degree: 30%
+source-wordcount: '1562'
+ht-degree: 29%
 
 ---
 
@@ -130,6 +131,12 @@ Pour plus d’informations sur [!DNL Segmentation Service], consultez la [prése
 Experience Platform fournit une API RESTful et une interface utilisateur interactive qui vous permet de configurer facilement des connexions source à différents fournisseurs de données. Ces connexions source vous permettent de vous authentifier et de vous connecter à des services de gestion de la relation client et à des systèmes de stockage externes, de définir des heures d’ingestion et de gérer le débit d’ingestion des données.
 
 Utilisez les sources dans Experience Platform pour ingérer des données à partir d’une application Adobe ou d’une source de données tierce.
+
+**Fonctionnalité mise à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Mises à jour du connecteur source Adobe Analytics | La page de l’activité du jeu de données n’affiche pas d’informations sur les lots, car Analytics Source Connector est entièrement géré par Adobe. Vous pouvez vérifier que les données circulent en examinant les mesures relatives aux enregistrements ingérés. Pour plus d’informations, consultez le guide sur la création d’une [connexion source pour les données Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) . |
 
 **Documentation mise à jour**
 

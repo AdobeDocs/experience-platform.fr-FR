@@ -2,10 +2,10 @@
 title: Créer une connexion source Adobe Analytics dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f177a8058f6533151978bfd7b8bba4845792f5ed
+source-git-commit: 40ad3101f643e6ce1b24d2a02c1817cfe04bd5d5
 workflow-type: tm+mt
-source-wordcount: '2755'
-ht-degree: 40%
+source-wordcount: '2577'
+ht-degree: 42%
 
 ---
 
@@ -301,7 +301,7 @@ Une liste des flux de données Analytics existants dans votre organisation s’a
 
 ![Liste des flux de données Adobe Analytics existants dans votre organisation.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-La page [!UICONTROL Activité du jeu de données] fournit des informations sur la progression des données envoyées d’Analytics à l’Experience Platform. L’interface affiche des mesures telles que le nombre d’enregistrements ingérés, le nombre de lots ingérés et le nombre de lots en échec.
+La page [!UICONTROL Activité du jeu de données] fournit des informations sur la progression des données envoyées d’Analytics à l’Experience Platform. L’interface affiche des mesures telles que le total des enregistrements du mois précédent, le total des enregistrements ingérés au cours des sept derniers jours et la taille des données du mois précédent.
 
 La source instancie deux flux de jeux de données. L’un représente les données de renvoi, l’autre les données actives. Les données de renvoi ne sont pas configurées pour être ingérées dans Real-Time Customer Profile, mais sont envoyées au lac de données à des fins d’analyse et de cas d’utilisation en science des données.
 
@@ -309,35 +309,9 @@ Pour plus d’informations sur le renvoi, les données en direct et leurs latenc
 
 ![ Page d’activité du jeu de données pour un jeu de données cible donné pour les données Adobe Analytics.](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-+++Affichage de lots individuels à l’aide de l’interface de surveillance héritée
-
-La page d’activité du jeu de données n’affiche pas de liste de lots individuels. Pour afficher une liste de lots individuels, sélectionnez un graphique dans l’interface de l’activité du jeu de données.
-
-![ Page de l’activité du jeu de données avec un graphique sélectionné.](../../../../images/tutorials/create/analytics/select-chart.png)
-
-Vous accédez au tableau de bord Surveillance . Sélectionnez ensuite **[!UICONTROL UNIQUEMENT INGEST FAILURES: YES]** pour effacer le filtre et afficher une liste de lots individuels.
-
-![Le tableau de bord de surveillance avec le filtre d’échec sélectionné.](../../../../images/tutorials/create/analytics/clear-filter.png)
-
-L’interface se met à jour vers une liste de lots individuels, y compris des informations sur leurs mesures respectives.
-
-![Page de surveillance héritée pour les données de lot.](../../../../images/tutorials/create/analytics/batch-end-to-end.png)
-
-| Mesures | Description |
-| --- | --- |
-| ID de lot | L’identifiant d’un lot donné. Cette valeur est générée en interne. |
-| Nom du jeu de données | Nom d’un jeu de données donné utilisé pour les données Analytics. |
-| Source | Source des données ingérées. |
-| Mis à jour | Date de l’itération d’exécution de flux la plus récente. |
-| Enregistrements dans le jeu de données | Nombre total d’enregistrements dans le jeu de données. **Remarque** : ce paramètre affiche parfois l’état de `in-progress`. Ce statut indique que le processus d’ingestion des enregistrements n’est pas encore terminé. |
-| Nouveaux fragments de profil | Nombre total de nouveaux fragments de profil qui ont été ingérés. |
-| Fragments de profil existants | Comptage total des fragments de profil existants. |
-| Enregistrements d’identités assemblés | Comptage total des enregistrements d’identité assemblés après ingestion. |
-| Enregistrements dans le profil | Nombre total d’enregistrements ingérés dans Real-Time Customer Profile. |
-
-{style="table-layout:auto"}
-
-+++
+>[!NOTE]
+>
+>La page de l’activité du jeu de données n’affiche pas d’informations sur les lots, car le connecteur source Analytics est entièrement géré par Adobe. Vous pouvez vérifier que les données circulent en examinant les mesures relatives aux enregistrements ingérés.
 
 ## Étapes suivantes et ressources supplémentaires
 
