@@ -2,10 +2,10 @@
 title: Création et configuration des flux de données
 description: Découvrez comment connecter votre intégration SDK Web côté client à d’autres produits Adobe et destinations tierces.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 43d97ea4d850a36d350894d70a082464a21e449d
+source-git-commit: f99370a9bff156b5cf9ecf286a1f8bc09eccc06a
 workflow-type: tm+mt
-source-wordcount: '2753'
-ht-degree: 53%
+source-wordcount: '2813'
+ht-degree: 52%
 
 ---
 
@@ -189,7 +189,7 @@ Ce service contrôle si et comment les données sont envoyées à Adobe Target.
 | --- | --- |
 | [!UICONTROL Jeton de propriété] | [!DNL Target] permet aux clients de contrôler les autorisations à l’aide de propriétés. Pour plus d’informations sur les propriétés, consultez le guide sur la [configuration des autorisations d’entreprise](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=fr) dans la documentation de [!DNL Target].<br><br>Le jeton de propriété se trouve dans l’interface utilisateur d’Adobe Target sous [!UICONTROL Configuration] > [!UICONTROL Propriétés]. |
 | [!UICONTROL Identifiant d’environnement Target] | Les [environnements dans Adobe Target](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=fr) vous permettent de gérer la mise en œuvre à toutes les étapes de développement. Ce paramètre spécifie l’environnement que vous allez utiliser avec ce flux de données.<br><br>Une bonne pratique consiste à définir ce paramètre différemment pour chacun des environnements de flux de données `dev`, `stage` et `prod` afin de simplifier le processus. Cependant, si des environnements Adobe Target sont déjà définis, vous pouvez les utiliser. |
-| [!UICONTROL Espace de noms d’identifiant tiers de Target] | L’espace de noms d’identité du `mbox3rdPartyId` que vous souhaitez utiliser pour ce flux de données. Pour plus d’informations, consultez le guide sur la [mise en œuvre de `mbox3rdPartyId` avec le SDK web](../web-sdk/personalization/adobe-target/using-mbox-3rdpartyid.md). |
+| [!UICONTROL Espace de noms d’identifiant tiers de Target] | L’espace de noms d’identité du `mbox3rdPartyId` que vous souhaitez utiliser pour ce flux de données. Si vous utilisez une intégration [!DNL Customer Attributes] avec Adobe Target ou `thirdPartyId` pour mettre à jour ou créer des profils via [l&#39;API de profils Adobe Target](https://experienceleague.adobe.com/en/docs/target-dev/developer/api/profile-apis/profiles-api), vous devez fournir une valeur d&#39;espace de noms de votre choix. Vous devez utiliser cet espace de noms dans la section `IdentityMap` de votre schéma XDM pour envoyer les `customerID` ou `thirdPartyId` utilisés dans les téléchargements de fichiers d’attributs du client ou dans vos appels d’API de mise à jour de profil.  Pour plus d’informations, consultez le guide sur la [mise en œuvre de `mbox3rdPartyId` avec le SDK web](../web-sdk/personalization/adobe-target/using-mbox-3rdpartyid.md). |
 | [!UICONTROL Remplacements de jetons de propriété] | Dans cette section, vous pouvez définir des jetons de propriété supplémentaires que vous pouvez utiliser pour remplacer celui par défaut. |
 
 ### Paramètres [!UICONTROL Transfert d’événement]
