@@ -4,10 +4,10 @@ title: Point de terminaison de l’API de tâches de segmentation
 description: Le point de terminaison des tâches de segmentation de l’API Adobe Experience Platform Segmentation Service vous permet de gérer par programmation les tâches de segmentation pour votre organisation.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: f22246dec74c20459e5ac53bedc16cb6e4fba56e
+source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
 workflow-type: tm+mt
-source-wordcount: '1655'
-ht-degree: 16%
+source-wordcount: '1648'
+ht-degree: 15%
 
 ---
 
@@ -922,18 +922,7 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
 
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 204 avec les informations suivantes.
-
-+++ Exemple de réponse lors de la suppression d’une tâche de segmentation.
-
-```json
-{
-    "status": true,
-    "message": "Segment job with id 'd3b4a50d-dfea-43eb-9fca-557ea53771fd' has been marked for cancelling"
-}
-```
-
-+++
+Une réponse réussie renvoie un état HTTP 204 avec un corps de réponse vide.
 
 ## Étapes suivantes
 
