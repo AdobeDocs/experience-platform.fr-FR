@@ -4,10 +4,10 @@ title: Point de terminaison de l’API des tâches d’exportation de segments
 description: Les tâches d’exportation sont des processus asynchrones utilisés pour conserver les membres du segment d’audience dans des jeux de données. Vous pouvez utiliser le point de terminaison /export/jobs dans l’API Adobe Experience Platform Segmentation Service, qui vous permet de récupérer, créer et annuler des tâches d’exportation par programmation.
 role: Developer
 exl-id: 5b504a4d-291a-4969-93df-c23ff5994553
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 33%
+source-wordcount: '1678'
+ht-degree: 32%
 
 ---
 
@@ -33,20 +33,26 @@ Le point d’entrée `/export/jobs` prend en charge plusieurs paramètres de req
 
 ```http
 GET /export/jobs
-GET /export/jobs?limit={LIMIT}
-GET /export/jobs?offset={OFFSET}
-GET /export/jobs?status={STATUS}
+GET /export/jobs?{QUERY_PARAMETERS}
 ```
 
-| Paramètre | Description |
-| --------- | ----------- |
-| `{LIMIT}` | Indique le nombre de tâches d’exportation renvoyées. |
-| `{OFFSET}` | Indique le décalage des pages de résultats. |
-| `{STATUS}` | Filtre les résultats selon l’état. Les valeurs prises en charge sont &quot;NEW&quot;, &quot;SUCCEEDED&quot; et &quot;FAILED&quot;. |
+**Paramètres de requête**
+
++++ Liste des paramètres de requête disponibles.
+
+| Paramètre | Description | Exemple |
+| --------- | ----------- | ------- |
+| `limit` | Indique le nombre de tâches d’exportation renvoyées. | `limit=10` |
+| `offset` | Indique le décalage des pages de résultats. | `offset=1540974701302_96` |
+| `status` | Filtre les résultats selon l’état. Les valeurs prises en charge sont &quot;NEW&quot;, &quot;SUCCEEDED&quot; et &quot;FAILED&quot;. | `status=NEW` |
+
++++
 
 **Requête**
 
 La requête suivante récupère les deux dernières tâches d’exportation au sein de votre organisation.
+
++++ Exemple de requête pour récupérer des tâches d’exportation.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
@@ -56,9 +62,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs?limit=2 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Réponse**
 
 La réponse suivante renvoie un état HTTP 200 avec une liste des tâches d’exportation terminées, en fonction du paramètre de requête fourni dans le chemin de requête.
+
++++ Exemple de réponse lors de la récupération de tâches d’exportation.
 
 ```json
 {
@@ -207,6 +217,8 @@ La réponse suivante renvoie un état HTTP 200 avec une liste des tâches d’ex
 | `page` | Informations sur la pagination des tâches d’exportation demandées. |
 | `link.next` | Lien vers la page suivante des tâches d’exportation. |
 
++++
+
 ## Création d’une tâche d’exportation {#create}
 
 Vous pouvez créer une tâche d’exportation en effectuant une requête POST sur le point d’entrée `/export/jobs`.
@@ -220,6 +232,8 @@ POST /export/jobs
 **Requête**
 
 La requête suivante crée une tâche d’exportation configurée par les paramètres fournis dans le payload.
+
++++ Exemple de requête pour créer une tâche d’exportation.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
@@ -290,9 +304,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/export/jobs \
 | `schema.name` | **(Obligatoire)** Le nom du schéma associé au jeu de données vers lequel les données doivent être exportées. |
 | `evaluationInfo.segmentation` | *(Facultatif)* Une valeur booléenne qui, si elle n’est pas fournie, est définie par défaut sur `false`. Une valeur `true` indique que la segmentation doit être effectuée sur la tâche d’exportation. |
 
++++
+
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 200 avec les détails de la tâche d’exportation que vous venez de créer.
+
++++ Exemple de réponse lors de la création d’une tâche d’exportation.
 
 ```json
 {
@@ -380,6 +398,8 @@ Si `destination.segmentPerBatch` avait été défini sur `true`, l’objet `dest
     }
 ```
 
++++
+
 ## Récupération d’une tâche d’exportation spécifique {#get}
 
 Vous pouvez récupérer des informations détaillées sur une tâche d’exportation spécifique en effectuant une requête de GET sur le point de terminaison `/export/jobs` et en fournissant l’identifiant de la tâche d’exportation que vous souhaitez récupérer dans le chemin d’accès de la requête.
@@ -396,6 +416,8 @@ GET /export/jobs/{EXPORT_JOB_ID}
 
 **Requête**
 
++++ Exemple de requête pour récupérer une tâche d’exportation.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -404,9 +426,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/11037 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la tâche d’exportation spécifiée.
+
++++ Exemple de réponse lors de la récupération d’une tâche d’exportation.
 
 ```json
 {
@@ -476,6 +502,8 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 | `metrics.profileExportTime` | Un champ indiquant le temps nécessaire à l’exportation des profils. |
 | `totalExportedProfileCounter` | Le nombre total de profils exportés entre tous les lots. |
 
++++
+
 ## Annulation ou suppression d’une tâche d’exportation spécifique {#delete}
 
 Vous pouvez demander la suppression de la tâche d’exportation spécifiée en effectuant une requête de DELETE sur le point de terminaison `/export/jobs` et en fournissant l’identifiant de la tâche d’exportation que vous souhaitez supprimer dans le chemin d’accès de la requête.
@@ -492,6 +520,8 @@ DELETE /export/jobs/{EXPORT_JOB_ID}
 
 **Requête**
 
++++ Exemple de requête pour supprimer une tâche d’exportation.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_ID} \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -499,6 +529,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/export/jobs/{EXPORT_JOB_I
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **Réponse**
 

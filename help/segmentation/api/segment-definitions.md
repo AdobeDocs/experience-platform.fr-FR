@@ -4,10 +4,10 @@ title: Point de terminaison de l’API de définitions de segment
 description: Le point de terminaison des définitions de segment de l’API Adobe Experience Platform Segmentation Service vous permet de gérer par programmation les définitions de segment pour votre organisation.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '1228'
-ht-degree: 29%
+source-wordcount: '1328'
+ht-degree: 28%
 
 ---
 
@@ -36,17 +36,23 @@ GET /segment/definitions?{QUERY_PARAMETERS}
 
 **Paramètres de requête**
 
++++ Liste des paramètres de requête disponibles.
+
 | Paramètre | Description | Exemple |
 | --------- | ----------- | ------- |
 | `start` | Indique le décalage de début pour les définitions de segment renvoyées. | `start=4` |
 | `limit` | Indique le nombre de définitions de segment renvoyées par page. | `limit=20` |
 | `page` | Indique à partir de quelle page commencent les résultats des définitions de segment. | `page=5` |
-| `sort` | Indique le champ d’après lequel trier les résultats. Est écrit au format suivant : `[attributeName]:[desc|asc]`. | `sort=updateTime:desc` |
+| `sort` | Indique le champ d’après lequel trier les résultats. Est écrit au format suivant : `[attributeName]:[desc/asc]`. | `sort=updateTime:desc` |
 | `evaluationInfo.continuous.enabled` | Indique si la définition de segment est activée dans le flux. | `evaluationInfo.continuous.enabled=true` |
+
++++
 
 **Requête**
 
 La requête suivante récupère les deux dernières définitions de segment publiées dans votre organisation.
+
++++ Exemple de requête pour récupérer une liste de définitions de segment.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 \
@@ -56,9 +62,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions?limit=2 
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 200 avec une liste de définitions de segment pour l’organisation spécifiée sous JSON.
+
++++ Exemple de réponse lors de la récupération d’une liste de définitions de segment.
 
 ```json
 {
@@ -148,6 +158,8 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de définitions d
 }
 ```
 
++++
+
 ## Création d’une définition de segment {#create}
 
 Vous pouvez créer une définition de segment en envoyant une requête POST au point d’entrée `/segment/definitions`.
@@ -163,6 +175,8 @@ POST /segment/definitions
 ```
 
 **Requête**
+
++++ Exemple de requête pour créer une définition de segment.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
@@ -209,15 +223,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.format` | Indique la structure de l’expression en valeur. Actuellement, le format suivant est pris en charge : <ul><li>`pql/text` : une représentation textuelle d’une définition de segment, selon la grammaire PQL publiée.  Par exemple : `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | Une expression conforme au type indiqué dans `expression.format`. |
 
-<!-- >[!NOTE]
->
->A segment definition expression may also reference a computed attribute. To learn more, please refer to the [computed attribute API endpoint guide](../../profile/computed-attributes/ca-api.md)
->
->Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change. -->
++++
 
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 200 avec les détails de la définition de segment que vous venez de créer.
+
++++ Exemple de réponse lors de la création d’une définition de segment.
 
 ```json
 {
@@ -265,6 +277,8 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la défini
 | `id` | Identifiant généré par le système de votre définition de segment nouvellement créée. |
 | `evaluationInfo` | Objet qui indique le type d’évaluation que la définition de segment va subir. Il peut s’agir d’une segmentation par lots, par flux (également appelée continue) ou par périphérie (également appelée synchrone). |
 
++++
+
 ## Récupération d’une définition de segment spécifique {#get}
 
 Vous pouvez récupérer des informations détaillées sur une définition de segment spécifique en envoyant une requête GET au point de terminaison `/segment/definitions` et en fournissant l’identifiant de la définition de segment que vous souhaitez récupérer dans le chemin d’accès de la requête.
@@ -281,6 +295,8 @@ GET /segment/definitions/{SEGMENT_ID}
 
 **Requête**
 
++++ Exemple de requête pour récupérer une définition de segment.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -289,9 +305,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 200 avec les informations détaillées de la définition de segment spécifiée.
+
++++ Exemple de réponse lors de la récupération d’une définition de segment.
 
 ```json
 {
@@ -346,6 +366,8 @@ Une réponse réussie renvoie un état HTTP 200 avec les informations détaill�
 | `description` | Une description lisible par l’utilisateur de la définition. |
 | `evaluationInfo` | Objet qui indique le type d’évaluation, de lot, de diffusion en continu (également appelé continue) ou de périphérie (également appelé synchrone), auquel la définition de segment sera appliquée. |
 
++++
+
 ## Récupération en masse de définitions de segment {#bulk-get}
 
 Vous pouvez récupérer des informations détaillées sur plusieurs définitions de segment spécifiées en envoyant une requête de POST au point de terminaison `/segment/definitions/bulk-get` et en fournissant les valeurs `id` des définitions de segment dans le corps de la requête.
@@ -357,6 +379,8 @@ POST /segment/definitions/bulk-get
 ```
 
 **Requête**
+
++++ Exemple de requête lors de l’utilisation du point de terminaison get en masse.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-get \
@@ -377,9 +401,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
     }'
 ```
 
++++
+
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 207 avec les définitions de segment demandées.
+
++++ Exemple de réponse lors de l’utilisation du point de terminaison get en masse.
 
 ```json
 {
@@ -477,6 +505,8 @@ Une réponse réussie renvoie un état HTTP 207 avec les définitions de segment
 | `description` | Une description lisible par l’utilisateur de la définition. |
 | `evaluationInfo` | Objet qui indique le type d’évaluation, de lot, de diffusion en continu (également appelé continue) ou de périphérie (également appelé synchrone), auquel la définition de segment sera appliquée. |
 
++++
+
 ## Suppression d’une définition de segment spécifique {#delete}
 
 Vous pouvez demander la suppression d’une définition de segment spécifique en envoyant une requête de DELETE au point de terminaison `/segment/definitions` et en fournissant l’identifiant de la définition de segment que vous souhaitez supprimer dans le chemin d’accès de la requête.
@@ -497,6 +527,8 @@ DELETE /segment/definitions/{SEGMENT_ID}
 
 **Requête**
 
++++ Exemple de requête pour supprimer une définition de segment.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -504,6 +536,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/definitions/4afe3
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **Réponse**
 
@@ -526,6 +560,8 @@ PATCH /segment/definitions/{SEGMENT_ID}
 **Requête**
 
 La requête suivante mettra à jour le pays de l&#39;adresse de travail des Etats-Unis vers le Canada.
+
++++ Exemple de requête pour mettre à jour une définition de segment.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -555,9 +591,13 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/segment/definitions/4afe34
 }'
 ```
 
++++
+
 **Réponse**
 
-Une réponse réussie renvoie un état HTTP 200 avec les détails de la définition de segment que vous venez de mettre à jour. Notez comment le pays de l’adresse de travail a été mis à jour des États-Unis vers le Canada (CA).
+Une réponse réussie renvoie un état HTTP 200 avec les détails de la définition de segment que vous venez de mettre à jour.
+
++++ Exemple de réponse lors de la mise à jour d’une définition de segment.
 
 ```json
 {
@@ -600,6 +640,8 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la définit
 }
 ```
 
++++
+
 ## Conversion de la définition de segment
 
 Vous pouvez convertir une définition de segment entre `pql/text` et `pql/json` ou `pql/json` en `pql/text` en effectuant une requête de POST vers le point de terminaison `/segment/conversion`.
@@ -613,6 +655,8 @@ POST /segment/conversion
 **Requête**
 
 La requête suivante changera le format de la définition de segment de `pql/text` à `pql/json`.
+
++++ Exemple de requête pour convertir la définition de segment.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
@@ -637,9 +681,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
     }'
 ```
 
++++
+
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 200 avec les détails de la définition de segment que vous venez de convertir.
+
++++ Exemple de réponse lors de la conversion de la définition de segment.
 
 ```json
 {
@@ -658,6 +706,8 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la définit
     }
 }
 ```
+
++++
 
 ## Étapes suivantes
 

@@ -4,10 +4,10 @@ title: Points de terminaison de l’API d’aperçu et d’estimation
 description: Au fur et à mesure que la définition de segment est développée, vous pouvez utiliser les outils d’estimation et de prévisualisation dans Adobe Experience Platform pour afficher des informations de niveau résumé afin de vous assurer que vous isolez l’audience attendue.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '971'
-ht-degree: 19%
+source-wordcount: '1016'
+ht-degree: 18%
 
 ---
 
@@ -62,6 +62,8 @@ POST /preview
 
 **Requête**
 
++++ Exemple de requête pour créer un aperçu.
+
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/preview \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -85,9 +87,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `predicateModel` | Nom de la classe de schéma [!DNL Experience Data Model] (XDM) sur laquelle les données de profil sont basées. |
 | `graphType` | Type de graphique à partir duquel vous souhaitez obtenir la grappe. Les valeurs prises en charge sont `none` (aucune combinaison d’identités) et `pdg` (réalise des combinaisons d’identités basées sur votre graphique d’identités privé). |
 
++++
+
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 201 (Created) avec les détails de la prévisualisation que vous venez de créer.
+
++++ Exemple de réponse lors de la création d’un aperçu.
 
 ```json
 {
@@ -103,6 +109,8 @@ Une réponse réussie renvoie un état HTTP 201 (Created) avec les détails de 
 | -------- | ----------- |
 | `state` | L’état actuel de la tâche de prévisualisation. Lors de sa création initiale, il est à l’état &quot;NEW&quot;. Par la suite, il sera à l’état &quot;RUNNING&quot; jusqu’à ce que le traitement soit terminé, auquel cas il deviendra &quot;RESULT_READY&quot; ou &quot;FAILED&quot;. |
 | `previewId` | Identifiant de la tâche de prévisualisation à utiliser à des fins de recherche lors de l’affichage d’une estimation ou d’une prévisualisation, comme indiqué dans la section suivante. |
+
++++
 
 ## Récupération des résultats d’une prévisualisation spécifique {#get-preview}
 
@@ -120,6 +128,8 @@ GET /preview/{PREVIEW_ID}
 
 **Requête**
 
++++ Exemple de requête pour récupérer un aperçu.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgtM2YzMS00YjY0LThkODQtYWNkMGM0ZmJkYWQzOmU4OTAwNjhiLWY1Y2EtNGE4Zi1hNmI1LWFmODdmZjBjYWFjMzow \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -128,7 +138,11 @@ curl -X GET https://platform.adobe.io/data/core/ups/preview/MDphcHAtMzJiZTAzMjgt
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Réponse**
+
++++ Exemple de réponse lors de la récupération d’un aperçu.
 
 Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la prévisualisation spécifiée.
 
@@ -181,6 +195,8 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 | -------- | ----------- |
 | `results` | Liste des identifiants d’entité, ainsi que leurs identités associées. Les liens fournis peuvent être utilisés pour rechercher les entités spécifiées, à l’aide du [point d’entrée de l’API d’accès au profil](../../profile/api/entities.md). |
 
++++
+
 ## Récupération des résultats d’une tâche d’estimation spécifique {#get-estimate}
 
 Une fois que vous avez créé une tâche de prévisualisation, vous pouvez utiliser son `previewId` dans le chemin d’une requête de GET vers le point de terminaison `/estimate` pour afficher des informations statistiques sur la définition de segment, y compris la taille prévue de l’audience, l’intervalle de confiance et l’écart type d’erreur.
@@ -199,6 +215,8 @@ GET /estimate/{PREVIEW_ID}
 
 La requête suivante récupère les résultats d’une tâche d’estimation spécifique.
 
++++ Exemple de requête pour récupérer une tâche d’estimation.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWFjOTEtNGJiNy1hNDI2LTE1MDkzN2I2YWY1Yzo0Mg \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -207,9 +225,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/estimate/MDoyOjRhNDVlODUzLWF
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 200 avec des détails concernant la tâche d’estimation.
+
++++ Exemple de réponse lors de la récupération d’une tâche d’estimation.
 
 ```json
 {
@@ -243,9 +265,11 @@ Une réponse réussie renvoie un état HTTP 200 avec des détails concernant la
 
 | Propriété | Description |
 | -------- | ----------- |
-| `estimatedNamespaceDistribution` | Tableau d’objets indiquant le nombre de profils dans le segment ventilé par espace de noms d’identité. Le nombre total de profils par espace de noms (additionnant les valeurs affichées pour chaque espace de noms) peut être supérieur à la mesure du nombre de profils, car un profil peut être associé à plusieurs espaces de noms. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms seront associés à ce client individuel. |
+| `estimatedNamespaceDistribution` | Tableau d’objets indiquant le nombre de profils dans la définition de segment ventilé par espace de noms d’identité. Le nombre total de profils par espace de noms (additionnant les valeurs affichées pour chaque espace de noms) peut être supérieur à la mesure du nombre de profils, car un profil peut être associé à plusieurs espaces de noms. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, plusieurs espaces de noms seront associés à ce client individuel. |
 | `state` | L’état actuel de la tâche de prévisualisation. L’état est &quot;EN COURS&quot; jusqu’à ce que le traitement soit terminé, à ce moment-là il devient &quot;RESULT_READY&quot; ou &quot;FAILED&quot;. |
 | `_links.preview` | Lorsque `state` est &quot;RESULT_READY&quot;, ce champ fournit une URL pour afficher l’estimation. |
+
++++
 
 ## Étapes suivantes
 

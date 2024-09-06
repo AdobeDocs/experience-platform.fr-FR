@@ -4,10 +4,10 @@ title: Point de terminaison de l’API de tâches de segmentation
 description: Le point de terminaison des tâches de segmentation de l’API Adobe Experience Platform Segmentation Service vous permet de gérer par programmation les tâches de segmentation pour votre organisation.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f22246dec74c20459e5ac53bedc16cb6e4fba56e
 workflow-type: tm+mt
-source-wordcount: '1524'
-ht-degree: 17%
+source-wordcount: '1655'
+ht-degree: 16%
 
 ---
 
@@ -36,6 +36,8 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 
 **Paramètres de requête**
 
++++ Liste des paramètres de requête disponibles.
+
 | Paramètre | Description | Exemple |
 | --------- | ----------- | ------- |
 | `start` | Spécifie le décalage de départ pour les tâches de segmentation renvoyées. | `start=1` |
@@ -44,7 +46,11 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `sort` | Commande les tâches de segmentation renvoyées. Codé au format `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
 | `property` | Filtre les tâches de segmentation et obtient des correspondances exactes pour le filtre donné. Peut être codé dans l’un des formats suivants : <ul><li>`[jsonObjectPath]==[value]` : filtrage sur la clé d’objet</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` : filtrage dans le tableau</li></ul> | `property=segments~segmentId==workInUS` |
 
++++
+
 **Requête**
+
++++ Exemple de requête pour afficher une liste de tâches de segmentation.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDED \
@@ -54,17 +60,23 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 200 avec une liste de tâches de segmentation pour l’organisation spécifiée sous JSON. Cependant, la réponse sera différente, selon le nombre de définitions de segment dans la tâche de segmentation.
 
-**Définitions de segment inférieures ou égales à 1 500 dans votre tâche de segmentation**
+>[!BEGINTABS]
+
+>[!TAB  Définitions de segment inférieures ou égales à 1 500 dans votre tâche de segmentation]
 
 Si moins de 1 500 définitions de segment sont exécutées dans votre tâche de segmentation, une liste complète de toutes les définitions de segment s’affiche dans l’attribut `children.segments`.
 
 >[!NOTE]
 >
 >La réponse suivante a été tronquée pour l’espace et affiche uniquement la première tâche renvoyée.
+
++++ Exemple de réponse lors de la récupération d’une liste de tâches de segmentation.
 
 ```json
 {
@@ -166,13 +178,17 @@ Si moins de 1 500 définitions de segment sont exécutées dans votre tâche de 
 }
 ```
 
-**Plus de 1 500 définitions de segment**
++++
+
+>[!TAB Plus de 1 500 définitions de segment]
 
 Si plus de 1 500 définitions de segment sont exécutées dans votre tâche de segmentation, l’attribut `children.segments` affichera `*`, indiquant que toutes les définitions de segment sont évaluées.
 
 >[!NOTE]
 >
 >La réponse suivante a été tronquée pour l’espace et affiche uniquement la première tâche renvoyée.
+
++++ Exemple de réponse lors de l’affichage d’une liste de tâches de segmentation.
 
 ```json
 {
@@ -276,6 +292,10 @@ Si plus de 1 500 définitions de segment sont exécutées dans votre tâche de s
 | `metrics.segmentProfileByStatusCounter` | Nombre de profils pour chaque état. Les trois états suivants sont pris en charge : <ul><li>&quot;réalisé&quot; : nombre de profils qui remplissent les critères de la définition de segment.</li><li>&quot;exited&quot; : nombre de profils qui n’existent plus dans la définition de segment.</li></ul> |
 | `metrics.totalProfilesByMergePolicy` | Le nombre total de profils fusionnés par stratégie de fusion. |
 
++++
+
+>[!ENDTABS]
+
 ## Création d’une tâche de segmentation {#create}
 
 Vous pouvez créer une tâche de segmentation en effectuant une requête de POST sur le point de terminaison `/segment/jobs` et en incluant dans le corps l’identifiant de la définition de segment à partir de laquelle vous souhaitez créer une audience.
@@ -288,9 +308,13 @@ POST /segment/jobs
 
 Lors de la création d’une tâche de segmentation, la requête et la réponse diffèrent en fonction du nombre de définitions de segment dans la tâche de segmentation.
 
-**Définitions de segment inférieures ou égales à 1 500 dans votre tâche de segmentation**
+>[!BEGINTABS]
+
+>[!TAB Inférieur ou égal à 1 500 segments dans votre tâche de segmentation]
 
 **Requête**
+
++++Exemple de requête pour créer une tâche de segmentation
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -302,6 +326,9 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
  -d '[
     {
         "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e"
+    },
+    {
+        "segmentId": "07d39471-05d1-4083-a310-d96978fd7c85"
     }
  ]'
 ```
@@ -310,9 +337,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | -------- | ----------- |
 | `segmentId` | L’identifiant de la définition de segment pour laquelle vous souhaitez créer une tâche de segmentation. Ces définitions de segment peuvent appartenir à différentes stratégies de fusion. Vous trouverez plus d’informations sur les définitions de segment dans le [guide de point de terminaison de définition de segment](./segment-definitions.md). |
 
++++
+
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 200 avec des informations sur la tâche de segmentation que vous venez de créer.
+
++++ Exemple de réponse lors de la création d’une tâche de segmentation.
 
 ```json
 {
@@ -335,6 +366,22 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur la tâ
             "segmentId": "7863c010-e092-41c8-ae5e-9e533186752e",
             "segment": {
                 "id": "7863c010-e092-41c8-ae5e-9e533186752e",
+                "expression": {
+                    "type": "PQL",
+                    "format": "pql/json",
+                    "value": "workAddress.country = \"US\""
+                },
+                "mergePolicyId": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
+                "mergePolicy": {
+                    "id": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
+                    "version": 1
+                }
+            }
+        },
+        {
+            "segmentId": "07d39471-05d1-4083-a310-d96978fd7c85",
+            "segment": {
+                "id": "07d39471-05d1-4083-a310-d96978fd7c85",
                 "expression": {
                     "type": "PQL",
                     "format": "pql/json",
@@ -411,13 +458,17 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations sur la tâ
 | `segments.segment.id` | L’identifiant de la définition de segment que vous avez fournie. |
 | `segments.segment.expression` | Objet contenant des informations sur l’expression de la définition de segment, écrites dans PQL. |
 
-**Plus de 1 500 définitions de segment**
++++
+
+>[!TAB Plus de 1 500 définitions de segment dans votre tâche de segmentation]
 
 **Requête**
 
 >[!NOTE]
 >
 >Bien que vous puissiez créer une tâche de segmentation avec plus de 1 500 définitions de segment, il s’agit de **hautement déconseillé**.
+
++++ Exemple de requête pour créer une tâche de segmentation.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -443,9 +494,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 | `schema.name` | Nom du schéma pour les définitions de segment. |
 | `segments.segmentId` | Lors de l’exécution d’une tâche de segmentation avec plus de 1 500 segments, vous devrez transmettre `*` comme identifiant de segment pour indiquer que vous souhaitez exécuter une tâche de segmentation avec tous les segments. |
 
++++
+
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 200 avec les détails de la tâche de segmentation que vous venez de créer.
+
++++ Exemple de réponse lors de la création d’une tâche de segmentation.
 
 ```json
 {
@@ -530,6 +585,11 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de la tâche 
 | `segments` | Objet contenant des informations sur les définitions de segment pour lesquelles cette tâche de segmentation est en cours d’exécution. |
 | `segments.segment.id` | `*` signifie que cette tâche de segmentation est en cours d’exécution pour toutes les définitions de segment de votre organisation. |
 
++++
+
+>[!ENDTABS]
+
+
 ## Récupération d’une tâche de segmentation spécifique {#get}
 
 Vous pouvez récupérer des informations détaillées sur une tâche de segmentation spécifique en envoyant une requête de GET au point de terminaison `/segment/jobs` et en fournissant l’identifiant de la tâche de segmentation que vous souhaitez récupérer dans le chemin d’accès de la requête.
@@ -546,6 +606,8 @@ GET /segment/jobs/{SEGMENT_JOB_ID}
 
 **Requête**
 
++++ Exemple de requête pour récupérer une tâche de segmentation.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -554,13 +616,19 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur la tâche de segmentation spécifiée.  Cependant, la réponse varie en fonction du nombre de définitions de segment dans la tâche de segmentation.
 
-**Définitions de segment inférieures ou égales à 1 500 dans votre tâche de segmentation**
+>[!BEGINTABS]
+
+>[!TAB  Définitions de segment inférieures ou égales à 1 500 dans votre tâche de segmentation]
 
 Si moins de 1 500 définitions de segment sont exécutées dans votre tâche de segmentation, une liste complète de toutes les définitions de segment s’affiche dans l’attribut `children.segments`.
+
++++ Exemple de réponse pour récupérer une tâche de segmentation.
 
 ```json
 {
@@ -622,9 +690,13 @@ Si moins de 1 500 définitions de segment sont exécutées dans votre tâche de 
 }
 ```
 
-**Plus de 1 500 définitions de segment**
++++
+
+>[!TAB Plus de 1 500 définitions de segment]
 
 Si plus de 1 500 définitions de segment sont exécutées dans votre tâche de segmentation, l’attribut `children.segments` affichera `*`, indiquant que toutes les définitions de segment sont évaluées.
+
++++ Exemple de réponse pour récupérer une tâche de segmentation.
 
 ```json
 {
@@ -711,6 +783,10 @@ Si plus de 1 500 définitions de segment sont exécutées dans votre tâche de s
 | `segments.segment.expression` | Objet contenant des informations sur l’expression de la définition de segment, écrites dans PQL. |
 | `metrics` | Objet contenant des informations de diagnostic sur la tâche de segmentation. |
 
++++
+
+>[!ENDTABS]
+
 ## Récupération en masse de tâches de segmentation {#bulk-get}
 
 Vous pouvez récupérer des informations détaillées sur plusieurs tâches de segmentation en envoyant une requête de POST au point de terminaison `/segment/jobs/bulk-get` et en fournissant les valeurs `id` des tâches de segmentation dans le corps de la requête.
@@ -722,6 +798,8 @@ POST /segment/jobs/bulk-get
 ```
 
 **Requête**
+
++++ Exemple de requête pour l’utilisation du point de terminaison de récupération en masse.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
@@ -742,6 +820,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
     }'
 ```
 
++++
+
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 207 avec les tâches de segmentation demandées. Cependant, la valeur de l’attribut `children.segments` varie selon que la tâche de segmentation est exécutée pour plus de 1 500 définitions de segment.
@@ -749,6 +829,8 @@ Une réponse réussie renvoie un état HTTP 207 avec les tâches de segmentation
 >[!NOTE]
 >
 >La réponse suivante a été tronquée pour l’espace, affichant uniquement les détails partiels de chaque tâche de segmentation. La réponse complète répertorie les détails complets des tâches de segmentation demandées.
+
++++ Exemple de réponse lors de l’utilisation de la réponse d’obtention en bloc.
 
 ```json
 {
@@ -804,6 +886,8 @@ Une réponse réussie renvoie un état HTTP 207 avec les tâches de segmentation
 | `segments.segment.id` | L’identifiant de la définition de segment. |
 | `segments.segment.expression` | Objet contenant des informations sur l’expression de la définition de segment, écrites dans PQL. |
 
++++
+
 ## Annulation ou suppression d’une tâche de segmentation spécifique {#delete}
 
 Vous pouvez supprimer une tâche de segmentation spécifique en effectuant une requête de DELETE sur le point de terminaison `/segment/jobs` et en fournissant l’identifiant de la tâche de segmentation que vous souhaitez supprimer dans le chemin d’accès de la requête.
@@ -824,6 +908,8 @@ DELETE /segment/jobs/{SEGMENT_JOB_ID}
 
 **Requête**
 
++++ Exemple de requête pour supprimer une tâche de segmentation.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-43eb-9fca-557ea53771fd \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -832,9 +918,13 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfe
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 204 avec les informations suivantes.
+
++++ Exemple de réponse lors de la suppression d’une tâche de segmentation.
 
 ```json
 {
@@ -842,6 +932,8 @@ Une réponse réussie renvoie un état HTTP 204 avec les informations suivantes
     "message": "Segment job with id 'd3b4a50d-dfea-43eb-9fca-557ea53771fd' has been marked for cancelling"
 }
 ```
+
++++
 
 ## Étapes suivantes
 

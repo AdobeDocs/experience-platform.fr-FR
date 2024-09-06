@@ -4,10 +4,10 @@ title: Point de terminaison de l’API Schedules
 description: Les planifications sont un outil qui peut être utilisé pour exécuter automatiquement des tâches de segmentation par lots une fois par jour.
 role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
 workflow-type: tm+mt
-source-wordcount: '2040'
-ht-degree: 16%
+source-wordcount: '2104'
+ht-degree: 15%
 
 ---
 
@@ -29,18 +29,25 @@ Le point d’entrée `/config/schedules` prend en charge plusieurs paramètres d
 
 ```http
 GET /config/schedules
-GET /config/schedules?start={START}
-GET /config/schedules?limit={LIMIT}
+GET /config/schedules?{QUERY_PARAMETERS}
 ```
 
-| Paramètre | Description |
-| --------- | ----------- |
-| `{START}` | Spécifie la page à partir de laquelle le décalage commencera. Par défaut, cette valeur sera définie sur 0. |
-| `{LIMIT}` | Indique le nombre de plannings renvoyés. Par défaut, cette valeur sera définie sur 100. |
+**Paramètres de requête**
+
++++ Liste des paramètres de requête disponibles.
+
+| Paramètre | Description | Exemple |
+| --------- | ----------- | ------- |
+| `start` | Spécifie la page à partir de laquelle le décalage commencera. Par défaut, cette valeur sera définie sur 0. | `start=5` |
+| `limit` | Indique le nombre de plannings renvoyés. Par défaut, cette valeur sera définie sur 100. | `limit=20` |
+
++++
 
 **Requête**
 
 La requête suivante récupère les dix derniers plannings publiés au sein de votre organisation.
+
++++ Exemple de requête pour récupérer une liste de plannings.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
@@ -50,6 +57,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 200 avec une liste de plannings pour l’organisation spécifiée comme JSON.
@@ -57,6 +66,8 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de plannings pour
 >[!NOTE]
 >
 >La réponse suivante a été tronquée pour l’espace et affiche uniquement la première planification renvoyée.
+
++++ Exemple de réponse lors de la récupération d’une liste de plannings.
 
 ```json
 {
@@ -102,6 +113,8 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de plannings pour
 | `children.schedule` | Chaîne contenant le planning de la tâche. L’exécution des tâches ne peut être planifiée qu’une fois par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution de plusieurs tâches sur une période de 24 heures. Pour plus d’informations sur les plannings cron, veuillez lire l’annexe sur le [format d’expression cron](#appendix). Dans cet exemple, &quot;0 0 1 * *&quot; signifie que cette planification s’exécutera à 1h00 tous les jours. |
 | `children.state` | Chaîne contenant l’état du planning. Les deux états pris en charge sont &quot;actif&quot; et &quot;inactif&quot;. Par défaut, l’état est défini sur &quot;inactif&quot;. |
 
++++
+
 ## Création d’un nouveau planning {#create}
 
 Vous pouvez créer un nouveau planning en effectuant une requête POST au point d’entrée `/config/schedules`.
@@ -113,6 +126,8 @@ POST /config/schedules
 ```
 
 **Requête**
+
++++ Exemple de requête pour créer un planning.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
@@ -144,9 +159,13 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `schedule` | *Facultatif.* Chaîne contenant le planning de la tâche. L’exécution des tâches ne peut être planifiée qu’une fois par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution de plusieurs tâches sur une période de 24 heures. Pour plus d’informations sur les plannings cron, veuillez lire l’annexe sur le [format d’expression cron](#appendix). Dans cet exemple, &quot;0 0 1 * *&quot; signifie que cette planification s’exécutera à 1h00 tous les jours. <br><br>Si cette chaîne n’est pas fournie, un planning généré par le système sera automatiquement généré. |
 | `state` | *Facultatif.* Chaîne contenant l’état du planning. Les deux états pris en charge sont &quot;actif&quot; et &quot;inactif&quot;. Par défaut, l’état est défini sur &quot;inactif&quot;. |
 
++++
+
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 200 avec les détails de votre nouveau planning.
+
++++ Exemple de réponse lors de la création d’un planning.
 
 ```json
 {
@@ -172,6 +191,8 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails de votre nouv
 }
 ```
 
++++
+
 ## Récupération d’un planning spécifique {#get}
 
 Vous pouvez récupérer des informations détaillées sur un planning spécifique en envoyant une requête GET au point de terminaison `/config/schedules` et en fournissant l’identifiant du planning que vous souhaitez récupérer dans le chemin d’accès de la requête.
@@ -188,6 +209,8 @@ GET /config/schedules/{SCHEDULE_ID}
 
 **Requête**
 
++++ Exemple de requête pour récupérer un planning.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -196,9 +219,13 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-db
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
++++
+
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 200 avec des informations détaillées sur le planning spécifié.
+
++++ Exemple de réponse lors de la récupération d’un planning.
 
 ```json
 {
@@ -233,15 +260,13 @@ Une réponse réussie renvoie un état HTTP 200 avec des informations détaill�
 | `schedule` | Chaîne contenant le planning de la tâche. Vous ne pouvez planifier qu’une seule exécution de tâche par jour, ce qui signifie que vous ne pouvez pas planifier l’exécution d’une tâche plus d’une fois au cours d’une période de 24 heures. Pour plus d’informations sur les plannings cron, veuillez lire l’annexe sur le [format d’expression cron](#appendix). Dans cet exemple, &quot;0 0 1 * *&quot; signifie que cette planification s’exécutera à 1h00 tous les jours. |
 | `state` | Chaîne contenant l’état du planning. Les deux états pris en charge sont `active` et `inactive`. Par défaut, l’état est défini sur `inactive`. |
 
++++
+
 ## Mise à jour des détails d’un planning spécifique {#update}
 
 Vous pouvez mettre à jour un planning spécifique en envoyant une requête de PATCH au point de terminaison `/config/schedules` et en fournissant l’identifiant du planning que vous essayez de mettre à jour dans le chemin d’accès de la requête.
 
 La requête du PATCH vous permet de mettre à jour [state](#update-state) ou la [planification cron](#update-schedule) pour une planification individuelle.
-
-### Mise à jour de l’état du planning {#update-state}
-
-Vous pouvez utiliser une opération de correctif JSON pour mettre à jour l’état du planning. Pour mettre à jour l’état, vous déclarez la propriété `path` comme `/state` et définissez `value` sur `active` ou `inactive`. Pour plus d’informations sur le correctif JSON, consultez la documentation [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) .
 
 **Format d’API**
 
@@ -253,7 +278,15 @@ PATCH /config/schedules/{SCHEDULE_ID}
 | --------- | ----------- |
 | `{SCHEDULE_ID}` | La valeur `id` du planning que vous souhaitez mettre à jour. |
 
+>[!BEGINTABS]
+
+>[!TAB Mettre à jour l’état du planning]
+
+Vous pouvez utiliser une opération de correctif JSON pour mettre à jour l’état du planning. Pour mettre à jour l’état, vous déclarez la propriété `path` comme `/state` et définissez `value` sur `active` ou `inactive`. Pour plus d’informations sur le correctif JSON, consultez la documentation [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) .
+
 **Requête**
+
++++ Exemple de requête pour mettre à jour l’état du planning.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -271,6 +304,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 ]'
 ```
 
++++
+
 | Propriété | Description |
 | -------- | ----------- |
 | `path` | Chemin d’accès de la valeur que vous souhaitez mettre à jour. Dans ce cas, puisque vous mettez à jour l’état du planning, vous devez définir la valeur de `path` sur &quot;/state&quot;. |
@@ -280,21 +315,15 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 
 Une réponse réussie renvoie un état HTTP 204 (No Content).
 
-### Mise à jour du planning cron {#update-schedule}
+>[!TAB Mettre à jour le planning cron]
 
 Vous pouvez utiliser une opération de correctif JSON pour mettre à jour le planning cron. Pour mettre à jour le planning, vous déclarez la propriété `path` comme `/schedule` et définissez `value` sur un planning cron valide. Pour plus d’informations sur le correctif JSON, consultez la documentation [JSON Patch](https://datatracker.ietf.org/doc/html/rfc6902) . Pour plus d’informations sur les plannings cron, veuillez lire l’annexe sur le [format d’expression cron](#appendix).
 
-**Format d’API**
-
-```http
-PATCH /config/schedules/{SCHEDULE_ID}
-```
-
-| Paramètre | Description |
-| --------- | ----------- |
-| `{SCHEDULE_ID}` | La valeur `id` du planning que vous souhaitez mettre à jour. |
+>[!ENDTABS]
 
 **Requête**
+
++++ Exemple de requête pour mettre à jour le planning.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
@@ -317,6 +346,8 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/config/schedules/4e538382-
 | `path` | Chemin d’accès de la valeur que vous souhaitez mettre à jour. Dans ce cas, puisque vous mettez à jour le planning cron, vous devez définir la valeur de `path` sur `/schedule`. |
 | `value` | La valeur mise à jour du planning cron. Cette valeur doit se présenter sous la forme d’un planning cron. Dans cet exemple, le planning se déroulera le deuxième jour de chaque mois. |
 
++++
+
 **Réponse**
 
 Une réponse réussie renvoie un état HTTP 204 (No Content).
@@ -337,6 +368,8 @@ DELETE /config/schedules/{SCHEDULE_ID}
 
 **Requête**
 
++++ Exemple de requête pour supprimer un planning.
+
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -344,6 +377,8 @@ curl -X DELETE https://platform.adobe.io/data/core/ups/config/schedules/4e538382
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 **Réponse**
 
