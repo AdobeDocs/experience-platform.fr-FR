@@ -4,9 +4,9 @@ title: Point de terminaison de l’API de définitions de segment
 description: Le point de terminaison des définitions de segment de l’API Adobe Experience Platform Segmentation Service vous permet de gérer par programmation les définitions de segment pour votre organisation.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
+source-git-commit: b3c7b97e257f76337bd02d1db9390ab314f7d1cd
 workflow-type: tm+mt
-source-wordcount: '1472'
+source-wordcount: '1519'
 ht-degree: 25%
 
 ---
@@ -458,6 +458,10 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions/bulk-ge
     }'
 ```
 
+| Propriété | Description |
+| -------- | ----------- |
+| `ids` | Tableau contenant des objets indiquant les identifiants des définitions de segment que vous souhaitez récupérer. |
+
 +++
 
 **Réponse**
@@ -617,6 +621,10 @@ PATCH /segment/definitions/{SEGMENT_ID}
 **Requête**
 
 La requête suivante mettra à jour le pays de l&#39;adresse de travail des Etats-Unis vers le Canada.
+
+>[!NOTE]
+>
+>Puisque cet appel d’API **remplace** le contenu de la définition de segment, veillez à ce que **tous** les champs que vous souhaitez conserver soient inclus dans le corps de la requête.
 
 +++ Exemple de requête pour mettre à jour une définition de segment.
 
