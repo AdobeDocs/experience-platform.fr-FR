@@ -5,10 +5,10 @@ breadcrumb-title: Guide d’Assurance
 user-guide-description: Adobe Experience Platform permet de contrôler, de tester, de simuler et de valider la manière dont vous collectez les données ou dont les expériences sont accomplies dans vos applications mobiles.
 feature: Assurance
 role: Developer
-source-git-commit: 3c2d7fafb2d4385c8631c6737c5753f3b669e203
+source-git-commit: 0209c873438a3bda1b0df6434f49735c2d3e150b
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 59%
+source-wordcount: '67'
+ht-degree: 62%
 
 ---
 
@@ -27,7 +27,6 @@ ht-degree: 59%
    - [Push Debug View](./views/push-debug-view.md)
    - [Résumé de validation](./views/validation-summary.md)
    - [Adobe Analytics](./views/adobe-analytics.md)
-   - [Analytics Events 2.0 (Beta)](./views/adobe-analytics-edge.md)
    - [Adobe Analytics Streaming Media](./views/adobe-analytics-streaming-media.md)
 - Tutoriels {#tutorials}
    - [Mise en oeuvre d’Assurance](./tutorials/implement-assurance.md)
