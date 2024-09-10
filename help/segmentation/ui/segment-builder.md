@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7d2fe8d5e5abea768b3514d97ea7edfbb9334511
 workflow-type: tm+mt
-source-wordcount: '3743'
-ht-degree: 85%
+source-wordcount: '4767'
+ht-degree: 67%
 
 ---
 
@@ -213,6 +213,90 @@ La fonction de comptage est maintenant ajoutée. Vous pouvez maintenant sélecti
 
 ![Une liste des fonctions de comptage s’affiche et est mise en surbrillance.](../images/ui/segment-builder/select-count.png)
 
+### Contraintes temporelles {#time-constraints}
+
+Les contraintes de temps vous permettent d’appliquer des restrictions de temps aux attributs temporels, aux événements et à la séquence entre les événements.
+
+>[!IMPORTANT]
+>
+>Si vous avez créé une définition de segment avec les contraintes de temps &quot;Ce mois-ci&quot; ou &quot;Cette année&quot; avant juin 2024, vous devez enregistrer à nouveau vos définitions de segment. Avant juin 2024, &quot;Ce mois-ci&quot; était basé sur 30 jours et &quot;Cette année&quot; était basé sur 365 jours.
+
+La liste des contraintes de temps disponibles est la suivante :
+
++++ Contraintes de temps disponibles
+
+>[!NOTE]
+>
+>Toutes les contraintes de temps sont basées sur l’UTC.
+>
+>De plus, si la case à cocher [!UICONTROL Ignorer l’année] est activée, l’année sera **pas** comparée dans le cadre de l’évaluation de la définition de segment.
+
+| Contrainte horaire | Description | Peut activer l’année ignorée | Exemple |
+| --------------- | ----------- | ------------------- | ------- |
+| Today | L’attribut ou l’événement comparé **must** se produit aujourd’hui. | Oui | ![Exemple de contrainte horaire &quot;Aujourd’hui&quot; utilisée.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Hier | L’attribut ou l’événement en cours de comparaison **must** a lieu hier. | Oui | ![Exemple de contrainte d’heure &quot;Hier&quot; utilisée.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
+| Ce mois-ci | L’attribut ou l’événement en cours de comparaison **must** se produit ce mois-ci du calendrier. | Oui | ![Exemple de contrainte horaire &quot;Ce mois-ci&quot; utilisée.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
+| Cette année | L’attribut ou l’événement comparé **must** a lieu cette année calendaire. | Non | ![Exemple de contrainte horaire &quot;Cette année&quot; utilisée.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
+| Date personnalisée | L’attribut ou l’événement en cours de comparaison **must** se produit à la date indiquée. | Oui | ![Exemple de contrainte d&#39;heure &quot;Date personnalisée&quot; utilisée.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
+| En dernier | L’attribut ou l’événement en cours de comparaison **must** se produit au cours de la dernière période choisie. Cette période est **incluse** jusqu’à l’heure d’évaluation. | Non | ![Exemple de contrainte d’heure &quot;In last&quot; utilisée.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
+| De (à) | L’attribut ou l’événement en cours de comparaison **must** se produit dans les deux dates calendaires sélectionnées. Cette période est **incluse** des deux dates. | Oui, si date personnalisée | ![Exemple de &quot;De à&quot; utilisé.](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
+| Durant | L’attribut ou l’événement en cours de comparaison **must** se produit au cours du mois ou de l’année sélectionné. Si un mois est sélectionné, vous devez choisir le mois et l’année au cours desquels l’attribut ou l’événement a eu lieu.  Si une année est sélectionnée, vous devez simplement choisir l’année dans laquelle l’attribut ou l’événement a eu lieu. Si vous sélectionnez un mois, vous pouvez également activer la case à cocher [!UICONTROL Ignorer l&#39;année] . | Oui | ![Exemple de contrainte de temps &quot;Durant&quot; utilisée.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| Dans (+/-) | L’attribut ou l’événement comparé **must** se produit dans les jours, semaines, mois ou années suivant la date sélectionnée. Cette période est **incluse** des deux dates. La date sélectionnée peut être aujourd’hui, hier ou une autre date personnalisée de votre choix. | Oui | ![Exemple de contrainte temporelle &quot;Within&quot; utilisée.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
+| Avant | L’attribut ou l’événement en cours de comparaison **doit** a lieu avant la date sélectionnée. La date sélectionnée peut être une date personnalisée de votre choix ou une sélection entre jours, semaines, mois ou années auparavant. | Oui | ![Exemple de contrainte horaire &quot;Avant&quot; utilisée.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
+| Après | L’attribut ou l’événement en cours de comparaison **must** se produit après la date sélectionnée. La date sélectionnée peut être une date personnalisée de votre choix ou une sélection entre jours, semaines, mois ou années auparavant. | Oui | ![Exemple de contrainte de temps &quot;Après&quot; utilisée.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
+| Plage variable | L’attribut ou l’événement en cours de comparaison doit se produire entre les deux dates relatives. Les dates peuvent être représentées en secondes, minutes, heures, jours, semaines, mois ou années. | Non | ![Exemple de contrainte temporelle &quot;Plage variable&quot; utilisée.](../images/ui/segment-builder/time-constraints/rolling-range.png){width="100" zoomable="yes"} |
+| Dans le suivant | L’attribut ou l’événement en cours de comparaison doit se produire au cours de la période sélectionnée suivante. Les périodes sélectionnées comprennent les minutes, les heures, les jours, les semaines, les mois et les années. | Non | ![Exemple de contrainte d&#39;heure &quot;Dans la prochaine&quot; utilisée.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
+| Existe | L’attribut existe. | Non | ![Exemple de contrainte temporelle &quot;Existe&quot; utilisée.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
+| N’existe pas | L’attribut n’existe pas. | Non | ![Exemple de contrainte temporelle &quot;N’existe pas&quot; utilisée.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+
++++
+
+Lorsque vous appliquez une contrainte temporelle à un événement, vous pouvez l’appliquer au niveau de la zone de travail, au niveau de la carte ou entre les événements.
+
+#### Contrainte au niveau de la zone de travail
+
+Pour appliquer une contrainte temporelle au niveau de la zone de travail, sélectionnez l’icône d’horloge qui s’affiche au-dessus de la chronologie des événements.
+
+![Le sélecteur de contraintes temporelles au niveau de la zone de travail est mis en surbrillance.](../images/ui/segment-builder/time-constraints/canvas-level.png)
+
+Lorsque vous appliquez une contrainte temporelle au niveau de la zone de travail, celle-ci s’applique à tous les événements **1} de l’audience.**
+
+#### Contrainte de niveau carte
+
+Pour appliquer une contrainte de niveau carte, sélectionnez la carte sur laquelle vous souhaitez appliquer la contrainte de temps, suivie de l’icône représentant des ellipses, et de la **[!UICONTROL règle d’application de la durée]**. Vous pouvez ainsi sélectionner une contrainte temporelle dans le conteneur **[!UICONTROL Règles d’événement]**.
+
+![Le sélecteur de contraintes temporelles de niveau carte est mis en surbrillance.](../images/ui/segment-builder/time-constraints/card-level.png)
+
+Lorsque vous appliquez une contrainte temporelle au niveau de la carte, elle s’applique à l’événement **specified** dans l’audience.
+
+#### Contrainte entre événements
+
+Pour appliquer une contrainte temporelle entre les événements, sélectionnez l’icône d’horloge entre les deux événements sur lesquels vous souhaitez appliquer la contrainte temporelle.
+
+![ Le sélecteur de contraintes de temps entre les événements est mis en surbrillance.](../images/ui/segment-builder/time-constraints/between-event.png)
+
+Lorsque vous appliquez une contrainte temporelle entre l’événement, elle s’applique à la contrainte temporelle entre **et les événements.**
+
+La liste des contraintes de temps disponibles pour cette opération diffère de la liste principale des contraintes de temps et se présente comme suit :
+
++++ Contraintes de temps disponibles
+
+| Contrainte horaire | Description |
+| --------------- | ----------- |
+| Après | Le dernier événement **doit avoir lieu au moins** après l’événement précédent. |
+| Within | Les deux événements **must** ont lieu pendant la période répertoriée dans la contrainte temporelle. |
+
+>[!NOTE]
+>
+>Lors de l’utilisation de la contrainte de temps &quot;Après&quot;, ce dernier événement peut avoir lieu pendant plus de la durée indiquée dans la contrainte de temps. >
+>Par exemple, si vous avez un événement Page vue et un événement Checkout (Passage en caisse) et que vous placez la contrainte temporelle &quot;Après 1 heure&quot; entre ces deux événements, une définition de segment avec un événement Checkout (Passage en caisse) 2 heures après l’événement Page vue est admissible.
+>
+>En outre, ces deux contraintes de temps peuvent être utilisées en coordination les unes avec les autres.
+>
+>Par exemple, si vous avez un événement Page vue et un événement Checkout (Passage en caisse) et que vous placez les contraintes de temps &quot;Après 1 heure&quot; et &quot;Dans les 24 heures&quot;, une définition de segment avec un événement Checkout (Passage en caisse) 12 heures après l’événement Page vue est admissible, mais une définition de segment avec un événement Checkout (Passage en caisse) 36 heures après l’événement Page vue ne peut pas être.
+
++++
+
 ## Conteneurs
 
 Les règles de segmentation sont évaluées dans l’ordre dans lequel elles sont répertoriées. Les conteneurs permettent de contrôler l’ordre d’exécution grâce à l’utilisation de requêtes imbriquées.
@@ -248,7 +332,7 @@ Vous pouvez sélectionner une politique de fusion qui correspond à votre object
 
 Pour sélectionner une politique de fusion pour votre définition de segment, sélectionnez l’icône en forme d’engrenage dans l’onglet **[!UICONTROL Champs]**, puis utilisez le menu déroulant **[!UICONTROL Politique de fusion]** pour sélectionner la politique de fusion à utiliser.
 
-![Le sélecteur de politique de fusion est mis en surbrillance. Vous pouvez ainsi choisir la politique de fusion à sélectionner pour votre définition de segment.](../images/ui/segment-builder/merge-policy-selector.png)
+![Le sélecteur de politique de fusion est mis en surbrillance. Vous pouvez ainsi choisir la stratégie de fusion à sélectionner pour votre définition de segment.](../images/ui/segment-builder/merge-policy-selector.png)
 
 ## Propriétés de définition de segment {#segment-properties}
 
