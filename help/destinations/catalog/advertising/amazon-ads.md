@@ -3,10 +3,10 @@ title: Amazon Ads
 description: Amazon Ads offre toute une gamme de solutions pour vous aider à atteindre vos objectifs publicitaires. Les partenaires de vente enregistrés, les vendeurs et vendeuses, les marchands de livres, les auteures et auteurs Kindle Direct Publishing (KDP), les personnes développant des applications et/ou les agences peuvent tirer parti du connecteur. L’intégration d’Amazon Ads à Adobe Experience Platform offre une intégration clé en main aux produits Amazon Ads, y compris Amazon DSP (ADSP). À l’aide de la destination Amazon Ads dans Adobe Experience Platform, les utilisateurs et utilisatrices peuvent définir des audiences d’annonceurs pour le ciblage et l’activation sur Amazon DSP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 8e34e5488ab80cd1f3c8086bf7c16d3f22527540
+source-git-commit: 56971631eb7ab2ef3dd2dcf077ee3b52f131ffe7
 workflow-type: tm+mt
-source-wordcount: '1646'
-ht-degree: 55%
+source-wordcount: '1761'
+ht-degree: 52%
 
 ---
 
@@ -97,7 +97,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 >[!NOTE]
 >
->Après avoir enregistré la configuration de destination, vous ne pourrez pas modifier l’identifiant publicitaire [!DNL Amazon Ads], même si vous vous authentifiez à nouveau via votre compte Amazon. Pour utiliser un autre identifiant publicitaire [!DNL Amazon Ads], vous devez créer une nouvelle connexion de destination.
+>Après avoir enregistré la configuration de destination, vous ne pourrez pas modifier l’identifiant publicitaire [!DNL Amazon Ads], même si vous vous authentifiez à nouveau via votre compte Amazon. Pour utiliser un autre identifiant publicitaire [!DNL Amazon Ads], vous devez créer une nouvelle connexion de destination. Les annonceurs qui sont déjà configurés sur une intégration avec ADSP doivent créer un nouveau flux de destination s’ils souhaitent que leurs audiences soient diffusées à AMC ou à un autre compte ADSP.
 
 * **[!UICONTROL Zone géographique des annonceurs]** : sélectionnez la zone géographique dans laquelle votre annonceur est hébergé. Pour plus d’informations sur les marchés pris en charge par chaque zone géographique, consultez la [documentation Amazon Ads](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
@@ -129,6 +129,7 @@ La connexion [!DNL Amazon Ads] prend en charge les adresses électroniques hach�
 * Pour mapper des adresses e-mail hachées, sélectionnez l’espace de noms d’identité `Email_LC_SHA256` comme champ source.
 * Pour mapper des numéros de téléphone hachés, sélectionnez l’espace de noms d’identité `Phone_SHA256` comme champ source.
 * Pour mapper des adresses e-mail ou des numéros de téléphone non hachés, sélectionnez les espaces de noms d’identité correspondants comme champs source, puis cochez la case `Apply Transformation` pour que Platform hache les identités lors de l’activation.
+* *NOUVEAU À partir de la version de septembre 2024* : Amazon Ads exige que vous mappez un champ contenant une valeur `countryCode` au format ISO à 2 caractères afin de faciliter le processus de résolution de l’identité (par exemple : États-Unis, GB, MX, CA, etc.). Les connexions sans mappages `countryCode` auront un impact négatif sur les taux de correspondance d’identité.
 
 Vous ne sélectionnez un champ cible donné qu’une seule fois dans une configuration de destination du connecteur [!DNL Amazon Ads].  Par exemple, si vous envoyez des courriers électroniques professionnels, vous ne pouvez pas mapper les courriers électroniques personnels dans la même configuration de destination.
 
@@ -148,7 +149,7 @@ Accédez à votre **[!UICONTROL identifiant publicitaire]** > **[!UICONTROL Audi
 
 Dans le navigateur de schéma de gauche, recherchez votre audience sous **[!UICONTROL Annonceur téléchargé]** > **[!UICONTROL aep_audiences]**. Vous pouvez ensuite interroger votre audience dans l’éditeur AMC SQL avec la clause suivante :
 
-`select count(user_id) from aep_audiences where audienceId = '1234567'`
+`select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
 ![Validation de la création d’audience de Marketing Cloud Amazon](../../assets/catalog/advertising/amazon_ads_image_5.png)
 
@@ -171,6 +172,7 @@ Cette section répertorie les nouvelles fonctionnalités et les mises à jour im
 
 | Mois de publication | Type de mise à jour | Description |
 |---|---|---|
+| Mai 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | Ajout de l’option de mappage pour exporter le paramètre `countryCode` vers Amazon Ads. Utilisez `countryCode` dans l’ [étape de mappage](#map) pour améliorer les taux de correspondance d’identité avec Amazon. |
 | Mars 2024 | Nouvelles fonctionnalités et mise à jour de la documentation | Ajout de l’option permettant d’exporter les audiences à utiliser dans [!DNL Amazon Marketing Cloud] (AMC). |
 | Mai 2023 | Nouvelles fonctionnalités et mise à jour de la documentation | <ul><li>Ajout de la prise en charge de la sélection de la zone géographique de l’annonceur dans le [workflow de connexion de destination](#destination-details).</li><li>Nouvelle documentation sur la fonctionnalité de sélection de la zone géographique de l’annonceur. Pour plus d’informations sur la sélection de la zone géographique de l’annonceur appropriée, consultez la [documentation d’Amazon](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | Mars 2023 | Version initiale | Publication de la destination initiale et de la documentation. |
