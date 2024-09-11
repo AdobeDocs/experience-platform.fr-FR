@@ -2,7 +2,8 @@
 title: Point de terminaison de certificat public
 description: Découvrez comment récupérer vos certificats publics à l’aide du point de terminaison /public-certificate de l’API du service MTLS.
 role: Developer
-source-git-commit: ce02c1a15d4e87c130de5e6133edda6b66cc2196
+exl-id: 8369c783-e595-476f-9546-801cf4f10f71
+source-git-commit: 754044621cdaf1445f809bceaa3e865261eb16f0
 workflow-type: tm+mt
 source-wordcount: '358'
 ht-degree: 3%
@@ -51,7 +52,7 @@ Un exemple de requête pour renvoyer les certificats publics associés à votre 
 +++Exemple de requête
 
 ```shell
-curl -X GET https://experience.adobe.io/data/core/mtls/v1/certificate/public-certificate
+curl -X GET https://platform.adobe.io/data/core/mtls/v1/certificate/public-certificate
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -111,4 +112,3 @@ Après avoir lu ce guide, vous comprenez désormais comment récupérer vos cert
 <!-- To test this API call, navigate to the [MTLS API reference page]() to interact with the Experience Platform API endpoints. -->
 
 <!-- Add link after developer page is live -->
-
