@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation du contrôle d’accès
 description: Dans Adobe Experience Platform, le contrôle dʼaccès est fourni par le biais dʼAdobe Admin Console. Cette fonctionnalité exploite les profils de produit dans l’Admin Console, liant les utilisateurs et utilisatrices à des autorisations et des sandbox.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 734a34e9acf80300c28ca14587198fb7eaf83c17
+source-git-commit: 5d5c57dfb9e4abda6b1bca96147a95d063bc17c6
 workflow-type: tm+mt
-source-wordcount: '1731'
-ht-degree: 82%
+source-wordcount: '1787'
+ht-degree: 78%
 
 ---
 
@@ -116,7 +116,11 @@ Le tableau suivant décrit les autorisations disponibles pour Experience Platfo
 | [!DNL Identity Management] | [!UICONTROL Gestion des espaces de noms d’identité] | Accès à la lecture, la création, la modification et la suppression des espaces de noms d’identité. |
 | [!DNL Identity Management] | [!UICONTROL Affichages des espaces de noms d’identité] | Accès en lecture seule aux espaces de noms d’identité. |
 | [!DNL Identity Management] | [!UICONTROL Afficher un graphique d’identité] | Accès en lecture seule aux graphiques d’identité. |
-| [!DNL Profile Management] | [!UICONTROL Gestion des profils] | Accès à la lecture, la création, la modification et la suppression des jeux de données utilisés pour les profils de clients. Accès en lecture seule aux profils disponibles. |
+| [!DNL Intelligent Services] | [!UICONTROL Afficher l’Attribution AI] | Accès en lecture seule aux paramètres et informations Attribution AI. |
+| [!DNL Intelligent Services] | [!UICONTROL Gérer Attribution AI] | Accès à la lecture, la création, la modification et la suppression des modèles Attribution AI. |
+| [!DNL Intelligent Services] | [!UICONTROL Afficher Customer AI] | Accès à la lecture ou à l’affichage des modèles de Customer AI. |
+| [!DNL Intelligent Services] | [!UICONTROL Gérer l’IA dédiée aux clients] | Accès pour créer, mettre à jour, supprimer, activer ou désactiver des modèles Customer AI. |
+| [!DNL Profile Management] | [!UICONTROL Gestion des profils] | Ingérez des données provenant de plusieurs sources, créez des profils fiables pour les clients individuels et stockez des données activées pour les profils dans le lac de données et dans la banque de données de Real-time Customer Profile. |
 | [!DNL Profile Management] | [!UICONTROL Affichage des profils] | Accès en lecture seule aux profils disponibles. |
 | [!DNL Profile Management] | [!UICONTROL Gestion des segments] | Accès à la lecture, la création, la modification et la suppression des segments. |
 | [!DNL Profile Management] | [!UICONTROL Affichage des segments] | Accès en lecture seule aux segments disponibles. |
