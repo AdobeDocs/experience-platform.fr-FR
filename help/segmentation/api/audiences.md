@@ -3,9 +3,9 @@ title: Point de terminaison de l’API Audiences
 description: Utilisez le point de terminaison audiences dans l’API Adobe Experience Platform Segmentation Service pour créer, gérer et mettre à jour par programmation les audiences de votre entreprise.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 5d5c1f903e6a54ea983b718c4c371ada2a937297
+source-git-commit: 9c50ca0db55ce4b21978273d7b4d1de9b5f9338d
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1438'
 ht-degree: 6%
 
 ---
@@ -30,6 +30,10 @@ Le point d’entrée `/audiences` prend en charge plusieurs paramètres de requ�
 GET /audiences
 GET /audiences?{QUERY_PARAMETERS}
 ```
+
+>[!NOTE]
+>
+>Si vous utilisez ce point de terminaison sans paramètres de requête, les audiences inactives **not** seront renvoyées. Cependant, si vous utilisez ce point de terminaison conjointement avec le paramètre de requête `property=audienceId`, les audiences inactives **seront** renvoyées.
 
 Les paramètres de requête suivants peuvent être utilisés lors de la récupération d’une liste d’audiences :
 
