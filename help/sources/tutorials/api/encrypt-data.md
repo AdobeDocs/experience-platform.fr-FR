@@ -2,10 +2,10 @@
 title: Ingestion de données chiffrées
 description: Découvrez comment ingérer des fichiers chiffrés par le biais de sources de lots d’espaces de stockage à l’aide de l’API.
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: adb48b898c85561efb2d96b714ed98a0e3e4ea9b
+source-git-commit: 9a5599473f874d86e2b3c8449d1f4d0cf54b672c
 workflow-type: tm+mt
-source-wordcount: '1736'
-ht-degree: 76%
+source-wordcount: '1806'
+ht-degree: 72%
 
 ---
 
@@ -15,7 +15,7 @@ Vous pouvez ingérer des fichiers de données chiffrés dans Adobe Experience Pl
 
 Le processus d’ingestion des données chiffrées est le suivant :
 
-1. [Créer une paire de clés de chiffrement à l’aide des API d’Experience Platform](#create-encryption-key-pair). La paire de clés de chiffrement se compose d’une clé privée et d’une clé publique. Une fois créée, vous pouvez copier ou télécharger la clé publique, ainsi que son identifiant de clé publique correspondant et sa date d’expiration. Au cours de ce processus, la clé privée sera stockée par Experience Platform dans un coffre sécurisé. **REMARQUE :** la clé publique de la réponse est codée en Base64 et doit être déchiffrée avant utilisation.
+1. [Créer une paire de clés de chiffrement à l’aide des API d’Experience Platform](#create-encryption-key-pair). La paire de clés de chiffrement se compose d’une clé privée et d’une clé publique. Une fois créée, vous pouvez copier ou télécharger la clé publique, ainsi que son identifiant de clé publique correspondant et sa date d’expiration. Au cours de ce processus, la clé privée sera stockée par Experience Platform dans un coffre sécurisé. **REMARQUE :** La clé publique de la réponse est codée en Base64 et doit être décodée avant d’être utilisée.
 2. Utilisez la clé publique pour chiffrer le fichier de données à ingérer.
 3. Placez votre fichier chiffré dans votre espace de stockage dans le cloud.
 4. Une fois le fichier chiffré prêt, [créez une connexion source et un flux de données pour votre source d’espace de stockage dans le cloud](#create-a-dataflow-for-encrypted-data). Lors de l’étape de création de flux, vous devez fournir un paramètre `encryption` et inclure votre identifiant de clé publique.
@@ -64,6 +64,10 @@ La liste des extensions de fichier prises en charge pour les fichiers chiffrés 
 
 ## Créer une paire de clés de chiffrement {#create-encryption-key-pair}
 
+>[!IMPORTANT]
+>
+>Les clés de chiffrement sont spécifiques à un environnement de test donné. Par conséquent, vous devez créer de nouvelles clés de chiffrement si vous souhaitez ingérer des données chiffrées dans un autre environnement de test, au sein de votre organisation.
+
 La première étape de l’ingestion de données chiffrées sur Experience Platform consiste à créer votre paire de clés de chiffrement en effectuant une requête POST au point d’entrée `/encryption/keys` de l‘API [!DNL Connectors].
 
 **Format d’API**
@@ -87,6 +91,7 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-encryption",
       "encryptionAlgorithm": "PGP",
       "params": {
           "passPhrase": "{{PASSPHRASE}}"
@@ -96,6 +101,7 @@ curl -X POST \
 
 | Paramètre | Description |
 | --- | --- |
+| `name` | Nom de la paire de clés de chiffrement. |
 | `encryptionAlgorithm` | Type d’algorithme de chiffrement que vous utilisez. Les types de chiffrement pris en charge sont `PGP` et `GPG`. |
 | `params.passPhrase` | La phrase secrète fournit un niveau supplémentaire de protection pour vos clés de chiffrement. Lors de sa création, Experience Platform stocke la phrase secrète dans un coffre sécurisé différent de celui de la clé publique. Vous devez fournir une chaîne non vide comme phrase secrète. |
 
@@ -153,13 +159,15 @@ curl -X GET \
 
 +++Affichage d’un exemple de réponse
 
-Une réponse réussie renvoie votre algorithme de chiffrement, votre clé publique, votre ID de clé publique et le délai d’expiration correspondant de vos clés.
+Une réponse réussie renvoie votre algorithme de chiffrement, votre nom, votre clé publique, votre ID de clé publique, votre type de clé et l’heure d’expiration correspondante de vos clés.
 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -194,13 +202,15 @@ curl -X GET \
 
 +++Affichage d’un exemple de réponse
 
-Une réponse réussie renvoie votre algorithme de chiffrement, votre clé publique, votre ID de clé publique et le délai d’expiration correspondant de vos clés.
+Une réponse réussie renvoie votre algorithme de chiffrement, votre nom, votre clé publique, votre ID de clé publique, votre type de clé et l’heure d’expiration correspondante de vos clés.
 
 ```json
 {
     "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+    "name": "{NAME}",
     "publicKeyId": "{PUBLIC_KEY_ID}",
     "publicKey": "{PUBLIC_KEY}",
+    "keyType": "{KEY_TYPE}",
     "expiryTime": "{EXPIRY_TIME}"
 }
 ```
@@ -236,8 +246,12 @@ curl -X POST \
   -H 'x-sandbox-name: {{SANDBOX_NAME}}' \
   -H 'Content-Type: application/json' 
   -d '{
+      "name": "acme-sign-verification-keys"
       "encryptionAlgorithm": {{ENCRYPTION_ALGORITHM}},       
-      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}}
+      "publicKey": {{BASE_64_ENCODED_PUBLIC_KEY}},
+      "params": {
+          "passPhrase": {{PASS_PHRASE}}
+      }
     }'
 ```
 
@@ -261,6 +275,48 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `publicKeyId` | Cet identifiant de clé publique est renvoyé en réponse au partage de votre clé gérée par le client ou la cliente avec Experience Platform. Vous pouvez fournir cet ID de clé publique comme ID de clé de vérification de signature lors de la création d’un flux de données pour les données signées et chiffrées. |
+
++++
+
+### Récupération de la paire de clés gérées par le client
+
+Pour récupérer vos clés gérées par le client, effectuez une requête de GET au point de terminaison `/customer-keys`.
+
+**Format d’API**
+
+```http
+GET /data/foundation/connectors/encryption/customer-keys
+```
+
+**Requête**
+
++++Affichage d’un exemple de requête
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/connectors/encryption/customer-keys' \
+  -H 'Authorization: Bearer {{ACCESS_TOKEN}}' \
+  -H 'x-api-key: {{API_KEY}}' \
+  -H 'x-gw-ims-org-id: {{ORG_ID}}' \
+```
+
++++
+
+**Réponse**
+
++++Affichage d’un exemple de réponse
+
+```json
+[
+    {
+        "encryptionAlgorithm": "{ENCRYPTION_ALGORITHM}",
+        "name": "{NAME}",
+        "publicKeyId": "{PUBLIC_KEY_ID}",
+        "publicKey": "{PUBLIC_KEY}",
+        "keyType": "{KEY_TYPE}",
+    }
+]
+```
 
 +++
 
