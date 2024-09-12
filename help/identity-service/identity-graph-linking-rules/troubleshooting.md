@@ -3,9 +3,9 @@ title: Guide de dépannage des règles de liaison de graphique d’identités
 description: Découvrez comment résoudre les problèmes courants des règles de liaison de graphiques d’identités.
 badge: Version bêta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: edda302a1f24c9991074c16fd9e770f2bf262b7c
+source-git-commit: 7104781435c0cf3891f7216797af4e873b9b37f9
 workflow-type: tm+mt
-source-wordcount: '3181'
+source-wordcount: '3226'
 ht-degree: 0%
 
 ---
@@ -333,6 +333,8 @@ Cette section présente une liste de réponses aux questions fréquentes sur les
 
 ### Algorithme d’optimisation des identités {#identity-optimization-algorithm}
 
+Lisez cette section pour obtenir des réponses aux questions fréquentes sur l’[algorithme d’optimisation des identités](./identity-optimization-algorithm.md).
+
 #### J’ai un CRMID pour chacune de mes unités commerciales (CRMID B2C, CRMID B2B), mais je n’ai pas d’espace de noms unique sur tous mes profils. Que se passe-t-il si je marque le CRMID B2C et le CRMID B2B comme uniques, et que j’active mes paramètres d’identité ?
 
 Ce scénario n’est pas pris en charge. Par conséquent, vous pouvez voir les graphiques s’effondrer lorsqu’un utilisateur utilise son CRMID B2C pour se connecter et qu’un autre utilisateur utilise son CRMID B2B pour se connecter. Pour plus d’informations, consultez la section sur l’ [exigence d’espace de noms d’une seule personne](./configuration.md#single-person-namespace-requirement) dans la page de mise en oeuvre.
@@ -367,6 +369,8 @@ Les points clés à mettre en évidence sont les suivants :
 
 ### Priorité d’espace de noms
 
+Lisez cette section pour obtenir des réponses aux questions fréquentes sur la [priorité d’espace de noms](./namespace-priority.md).
+
 #### J’ai activé mes paramètres d’identité. Qu’advient-il de mes paramètres si je souhaite ajouter un espace de noms personnalisé une fois les paramètres activés ?
 
 Il existe deux &quot;compartiments&quot; d’espaces de noms : espaces de noms de personne et espaces de noms d’appareil/de cookie. L’espace de noms personnalisé nouvellement créé aura la priorité la plus faible dans chaque &quot;compartiment&quot; afin que ce nouvel espace de noms personnalisé n’ait aucune incidence sur l’ingestion des données existantes.
@@ -384,6 +388,8 @@ Non. La priorité d’espace de noms s’applique uniquement aux jeux de donnée
 L’algorithme d’optimisation des identités sera appliqué en premier pour garantir la représentation des entités de personne. Par la suite, si le graphique tente de dépasser la [barrière de sécurité du graphique d’identités](../guardrails.md) (50 identités par graphique), cette logique sera appliquée. La priorité de l’espace de noms n’affecte pas la logique de suppression de la barrière de sécurité 50 identités/graphiques.
 
 ### Test
+
+Lisez cette section pour obtenir des réponses aux questions fréquentes sur le test et le débogage des fonctionnalités dans les règles de liaison des graphiques d’identités.
 
 #### Quels scénarios dois-je tester dans un environnement de test de développement ?
 
