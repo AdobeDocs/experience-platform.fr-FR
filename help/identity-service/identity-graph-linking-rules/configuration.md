@@ -1,16 +1,16 @@
 ---
-title: Guide de configuration des règles de liaison de graphique d’identités
+title: Guide de mise en oeuvre des règles de liaison de graphiques d’identités
 description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec des configurations de règles de liaison de graphiques d’identités.
 badge: Version bêta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 3d96e057123a4dd0b4f6f34a64a93c756b583c9b
+source-git-commit: cfa2cd91f523d80fd42cb6fd2ba17e6eb3eca609
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1361'
 ht-degree: 3%
 
 ---
 
-# Guide de configuration des règles de liaison de graphique d’identités
+# Guide de mise en oeuvre des règles de liaison de graphiques d’identités
 
 >[!AVAILABILITY]
 >
@@ -102,7 +102,7 @@ Pour tout commentaire, utilisez l’option **[!UICONTROL Commentaires Beta]** da
 
 Lisez cette section pour plus d’informations sur la mise en oeuvre de vos paramètres d’identité et espaces de noms uniques.
 
-### Scénario d’appareil partagé {#shared-device-scenario}
+### Exigences d’espace de noms pour une seule personne {#single-person-namespace-requirement}
 
 Vous devez vous assurer qu’un seul espace de noms est utilisé sur tous les profils qui représentent une personne. Cela permet à Identity Service de détecter l’identifiant de personne approprié dans un graphique donné.
 

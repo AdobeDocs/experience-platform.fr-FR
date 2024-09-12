@@ -5,10 +5,10 @@ breadcrumb-title: Guide de Platform Identity Service
 user-guide-description: Associez les identités des clients, quel que soit l’appareil ou le système utilisé, afin d’offrir des expériences digitales personnalisées.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 16d29811715805e2f297836bf266c854db45d4c6
+source-git-commit: cfa2cd91f523d80fd42cb6fd2ba17e6eb3eca609
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 70%
+source-wordcount: '149'
+ht-degree: 66%
 
 ---
 
@@ -24,14 +24,14 @@ ht-degree: 70%
    - [Suppressions dans le service d’identités](./features/deletion.md)
    - Règles de liaison de graphiques d’identités {#identity-graph-linking-rules}
       - [Présentation des fonctionnalités](./identity-graph-linking-rules/overview.md)
-      - [Guide de configuration](./identity-graph-linking-rules/configuration.md)
       - [Algorithme d’optimisation des identités](./identity-graph-linking-rules/identity-optimization-algorithm.md)
-      - [Priorité d’espace de noms](./identity-graph-linking-rules/namespace-priority.md)
-      - [Interface utilisateur de la simulation graphique](./identity-graph-linking-rules/graph-simulation.md)
-      - [Paramètres des identités](./identity-graph-linking-rules/identity-settings-ui.md)
-      - [Exemples de scénarios client](./identity-graph-linking-rules/example-scenarios.md)
+      - [Guide de mise en oeuvre des règles de liaison de graphiques d’identités](./identity-graph-linking-rules/configuration.md)
       - [Exemples de configurations de graphique](./identity-graph-linking-rules/example-configurations.md)
       - [Dépannage des règles de liaison de graphiques d’identités](./identity-graph-linking-rules/troubleshooting.md)
+      - [Priorité d’espace de noms](./identity-graph-linking-rules/namespace-priority.md)
+      - [Interface utilisateur de la simulation graphique](./identity-graph-linking-rules/graph-simulation.md)
+      - [Interface utilisateur des paramètres d’identité](./identity-graph-linking-rules/identity-settings-ui.md)
+      - [Exemples de scénarios client](./identity-graph-linking-rules/example-scenarios.md)
    - [Présentation d’ECID](./features/ecid.md)
 - [Guide de mise en oeuvre](implementation.md)
 - [Barrières de sécurité pour les données Identity ](guardrails.md)

@@ -3,9 +3,9 @@ title: Guide de dépannage des règles de liaison de graphique d’identités
 description: Découvrez comment résoudre les problèmes courants des règles de liaison de graphiques d’identités.
 badge: Version bêta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 56e2e359812fcbfd011505ad917403d6f5317b4a
+source-git-commit: edda302a1f24c9991074c16fd9e770f2bf262b7c
 workflow-type: tm+mt
-source-wordcount: '2019'
+source-wordcount: '3181'
 ht-degree: 0%
 
 ---
@@ -132,12 +132,42 @@ Plusieurs raisons expliquent pourquoi les fragments d’événement d’expérie
 * [Un échec de validation peut s’être produit sur Profile](../../xdm/classes/experienceevent.md).
    * Par exemple, un événement d’expérience doit contenir à la fois un `_id` et un `timestamp`.
    * De plus, le `_id` doit être unique pour chaque événement (enregistrement).
+* L’espace de noms ayant la priorité la plus élevée est une chaîne vide.
 
-Dans le contexte de la priorité d’espace de noms, Profile rejettera tout événement contenant deux identités ou plus avec la priorité d’espace de noms la plus élevée. Par exemple, si GAID n’est pas marqué comme un espace de noms unique et que deux identités avec un espace de noms GAID et des valeurs d’identité différentes sont entrées, Profile ne stockera aucun des événements.
+Dans le contexte de la priorité d’espace de noms, Profile rejettera :
+
+* Tout événement contenant deux identités ou plus avec la priorité d’espace de noms la plus élevée. Par exemple, si GAID n’est pas marqué comme un espace de noms unique et que deux identités avec un espace de noms GAID et des valeurs d’identité différentes sont entrées, Profile ne stockera aucun des événements.
+* Tout événement dont l’espace de noms avec la priorité la plus élevée est une chaîne vide.
 
 **Étapes de dépannage**
 
-Pour résoudre cette erreur, lisez les étapes de dépannage décrites dans le guide ci-dessus sur les [erreurs de dépannage concernant les données non ingérées dans Identity Service](#my-identities-are-not-getting-ingested-into-identity-service).
+Si vos données sont envoyées au lac de données, mais pas à Profile, et que vous pensez que cela est dû à l’envoi de deux identités ou plus avec la priorité d’espace de noms la plus élevée dans un seul événement, vous pouvez exécuter la requête suivante pour vérifier qu’il existe deux valeurs d’identité différentes envoyées sur le même espace de noms :
+
+>[!TIP]
+>
+>Dans les requêtes suivantes, vous devez :
+>
+>* Remplacez `_testimsorg.identification.core.email` par le chemin qui envoie l’identité.
+>* Remplacez `Email` par l’espace de noms avec la priorité la plus élevée. Il s’agit du même espace de noms qui n’est pas ingéré.
+>* Remplacez `dataset_name` par le jeu de données que vous souhaitez interroger.
+
+```sql
+  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
+  FROM (SELECT key, explode(value), * 
+  FROM (SELECT explode(identityMap), * 
+  FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
+```
+
+Vous pouvez également exécuter la requête suivante pour vérifier si l’ingestion dans Profile n’a pas lieu en raison d’un espace de noms supérieur ayant une chaîne vide :
+
+```sql
+  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
+  FROM (SELECT key, explode(value), * 
+  FROM (SELECT explode(identityMap), * 
+  FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
+```
+
+Ces deux requêtes supposent qu’une identité est envoyée à partir de identityMap et qu’une autre identité est envoyée à partir d’un descripteur d’identité. **REMARQUE** : dans les schémas de modèle de données d’expérience (XDM), le descripteur d’identité est le champ marqué comme identité.
 
 ### Mes fragments d’événement d’expérience sont ingérés, mais leur identité principale est &quot;incorrecte&quot; dans Profile.
 
@@ -296,3 +326,79 @@ Vous pouvez utiliser la requête suivante dans le jeu de données d’exportatio
 >[!TIP]
 >
 >Les deux requêtes répertoriées ci-dessus produiront des résultats attendus si l’environnement de test n’est pas activé pour l’approche intermédiaire de l’appareil partagé et se comporte différemment des règles de liaison de graphique d’identités.
+
+## Questions fréquentes {#faq}
+
+Cette section présente une liste de réponses aux questions fréquentes sur les règles de liaison des graphiques d’identités.
+
+### Algorithme d’optimisation des identités {#identity-optimization-algorithm}
+
+#### J’ai un CRMID pour chacune de mes unités commerciales (CRMID B2C, CRMID B2B), mais je n’ai pas d’espace de noms unique sur tous mes profils. Que se passe-t-il si je marque le CRMID B2C et le CRMID B2B comme uniques, et que j’active mes paramètres d’identité ?
+
+Ce scénario n’est pas pris en charge. Par conséquent, vous pouvez voir les graphiques s’effondrer lorsqu’un utilisateur utilise son CRMID B2C pour se connecter et qu’un autre utilisateur utilise son CRMID B2B pour se connecter. Pour plus d’informations, consultez la section sur l’ [exigence d’espace de noms d’une seule personne](./configuration.md#single-person-namespace-requirement) dans la page de mise en oeuvre.
+
+#### L’algorithme d’optimisation des identités &quot;corrige&quot;-t-il les graphiques réduits existants ?
+
+Les graphiques réduits existants seront affectés (&#39;fixes&#39;) par l’algorithme graphique uniquement si ces graphiques sont mis à jour après l’enregistrement de vos nouveaux paramètres.
+
+#### Si deux personnes se connectent et se déconnectent à l’aide du même appareil, qu’advient-il des événements ? Tous les événements seront-ils transférés vers le dernier utilisateur authentifié ?
+
+* Les événements anonymes (événements avec ECID comme identité principale sur Real-Time Customer Profile) seront transférés au dernier utilisateur authentifié. En effet, l’ECID sera lié au CRMID du dernier utilisateur authentifié (sur Identity Service).
+* Tous les événements authentifiés (événements avec un CRMID défini comme identité principale) resteront avec la personne.
+
+Pour plus d’informations, consultez le guide sur [la détermination de l’identité principale pour les événements d’expérience](../identity-graph-linking-rules/namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events).
+
+#### Comment les parcours dans Adobe Journey Optimizer seront-ils affectés lorsque l’ECID est transféré d’une personne à une autre ?
+
+Le CRMID du dernier utilisateur authentifié sera lié à l’ECID (appareil partagé). Les ECID peuvent être réaffectés d’une personne à une autre en fonction du comportement de l’utilisateur. L’impact dépendra de la manière dont le parcours est construit. Il est donc important que les clients testent le parcours dans un environnement de test de développement pour valider le comportement.
+
+Les points clés à mettre en évidence sont les suivants :
+
+* Une fois qu’un profil entre dans un parcours, sa réaffectation ECID n’entraîne pas la fermeture du profil au milieu d’un parcours.
+   * Les sorties de parcours ne sont pas déclenchées par les modifications du graphique.
+* Si un profil n’est plus associé à un ECID, cela peut entraîner la modification du chemin d’accès au parcours si une condition utilise la qualification de l’audience.
+   * La suppression d’ECID peut modifier les événements associés à un profil, ce qui peut entraîner des modifications dans la qualification de l’audience.
+* La rentrée d’un parcours dépend des propriétés du parcours.
+   * Si vous désactivez la rentrée d’un parcours, une fois qu’un profil quitte ce parcours, le même profil ne reviendra pas pendant 91 jours (en fonction du délai d’expiration du parcours global).
+* Si un parcours commence par un espace de noms ECID, le profil qui entre et le profil qui reçoit l’action (par exemple, email, offre) peut être différent selon la conception du parcours.
+   * Par exemple, en cas de condition d’attente entre les actions et si l’ECID transfère pendant la période d’attente, un autre profil peut être ciblé.
+   * Avec cette fonctionnalité, les ECID ne sont plus toujours associés à un profil.
+   * Il est recommandé de commencer les parcours avec les espaces de noms de personne (CRMID).
+
+### Priorité d’espace de noms
+
+#### J’ai activé mes paramètres d’identité. Qu’advient-il de mes paramètres si je souhaite ajouter un espace de noms personnalisé une fois les paramètres activés ?
+
+Il existe deux &quot;compartiments&quot; d’espaces de noms : espaces de noms de personne et espaces de noms d’appareil/de cookie. L’espace de noms personnalisé nouvellement créé aura la priorité la plus faible dans chaque &quot;compartiment&quot; afin que ce nouvel espace de noms personnalisé n’ait aucune incidence sur l’ingestion des données existantes.
+
+#### Si Real-Time Customer Profile n’utilise plus l’indicateur &quot;principal&quot; sur identityMap, cette valeur doit-elle toujours être envoyée ?
+
+Oui, l’indicateur &quot;principal&quot; sur identityMap est utilisé par d’autres services. Pour plus d’informations, consultez le guide sur [les implications de la priorité d’espace de noms sur les autres services Experience Platform](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
+
+#### La priorité d’espace de noms s’applique-t-elle aux jeux de données d’enregistrement de profil dans Real-time Customer Profile ?
+
+Non. La priorité d’espace de noms s’applique uniquement aux jeux de données Experience Event utilisant la classe XDM ExperienceEvent.
+
+#### Comment cette fonctionnalité fonctionne-t-elle en tandem avec les barrières de sécurité des graphiques d’identités de 50 identités par graphique ? La priorité de l’espace de noms affecte-t-elle cette barrière de sécurité définie par le système ?
+
+L’algorithme d’optimisation des identités sera appliqué en premier pour garantir la représentation des entités de personne. Par la suite, si le graphique tente de dépasser la [barrière de sécurité du graphique d’identités](../guardrails.md) (50 identités par graphique), cette logique sera appliquée. La priorité de l’espace de noms n’affecte pas la logique de suppression de la barrière de sécurité 50 identités/graphiques.
+
+### Test
+
+#### Quels scénarios dois-je tester dans un environnement de test de développement ?
+
+En règle générale, le test sur un environnement de test de développement doit reproduire les cas d’utilisation que vous avez l’intention d’exécuter sur votre environnement de test de production. Consultez le tableau suivant pour connaître les principaux domaines à valider lors d’un test complet :
+
+| Cas de test | Étapes du test | Résultat attendu |
+| --- | --- | --- |
+| Représentation exacte de l’entité de personne | <ul><li>Imiter la navigation anonyme</li><li>Imiter deux personnes (John, Jane) qui se connectent à l’aide du même appareil</li></ul> | <ul><li>John et Jane doivent être associés à leurs attributs et aux événements authentifiés.</li><li>Le dernier utilisateur authentifié doit être associé aux événements de navigation anonymes.</li></ul> |
+| Segmentation | Créez quatre définitions de segment (**REMARQUE** : l’une de ces deux définitions de segment doit être évaluée à l’aide d’un lot et l’autre diffusion en continu.) <ul><li>Définition de segment A : qualification de segment basée sur les événements authentifiés de John.</li><li>Définition de segment B : qualification de segment basée sur les événements authentifiés de Jane.</li></ul> | Quels que soient les scénarios d’appareil partagé, John et Jane doivent toujours être qualifiés pour leurs segments respectifs. |
+| Qualification de l’audience / parcours unitaires sur Adobe Journey Optimizer | <ul><li>Créez un parcours commençant par une activité de qualification d’audience (comme la segmentation par flux créée ci-dessus).</li><li>Créez un parcours commençant par un événement unitaire. Cet événement unitaire doit être un événement authentifié.</li><li>Vous devez désactiver la rentrée lors de la création de ces parcours.</li></ul> | <ul><li>Quels que soient les scénarios d’appareils partagés, John et Jane doivent déclencher les parcours respectifs qu’ils doivent entrer.</li><li>John et Jane ne doivent pas revenir dans le parcours lorsque l’ECID leur est renvoyé.</li></ul> |
+
+{style="table-layout:auto"}
+
+#### Comment puis-je vérifier que cette fonctionnalité fonctionne comme prévu ?
+
+Utilisez l’ [ outil de simulation graphique](./graph-simulation.md) pour vérifier que la fonctionnalité fonctionne à un niveau de graphique individuel.
+
+Pour valider la fonctionnalité au niveau de l’environnement de test, reportez-vous à la section [!UICONTROL Nombre de graphiques avec plusieurs espaces de noms] dans le tableau de bord des identités.
