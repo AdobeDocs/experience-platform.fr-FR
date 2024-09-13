@@ -3,7 +3,7 @@ title: Guide de dépannage des règles de liaison de graphique d’identités
 description: Découvrez comment résoudre les problèmes courants des règles de liaison de graphiques d’identités.
 badge: Version bêta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 7104781435c0cf3891f7216797af4e873b9b37f9
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
 source-wordcount: '3226'
 ht-degree: 0%
@@ -176,7 +176,7 @@ La priorité d’espace de noms joue un rôle important dans la manière dont le
 * Une fois que vous avez configuré et enregistré vos [paramètres d’identité](./identity-settings-ui.md) pour un environnement de test donné, Profile utilisera alors la [priorité d’espace de noms](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) pour déterminer l’identité principale. Dans le cas d’identityMap, Profile n’utilisera plus l’indicateur `primary=true`.
 * Bien que Profile ne fasse plus référence à cet indicateur, d’autres services sur Experience Platform peuvent continuer à utiliser l’indicateur `primary=true`.
 
-Pour que les [événements d’utilisateur authentifiés](configuration.md#ingest-your-data) soient liés à l’espace de noms de la personne, tous les événements authentifiés doivent contenir l’espace de noms de la personne (CRMID). Cela signifie que même après la connexion d’un utilisateur, l’espace de noms de la personne doit toujours être présent sur chaque événement authentifié.
+Pour que les [événements d’utilisateur authentifiés](implementation-guide.md#ingest-your-data) soient liés à l’espace de noms de la personne, tous les événements authentifiés doivent contenir l’espace de noms de la personne (CRMID). Cela signifie que même après la connexion d’un utilisateur, l’espace de noms de la personne doit toujours être présent sur chaque événement authentifié.
 
 Vous pouvez continuer à voir l’indicateur &quot;events&quot; `primary=true` lors de la recherche d’un profil dans la visionneuse de profils. Cependant, cette opération est ignorée et ne sera pas utilisée par Profile.
 
@@ -272,9 +272,9 @@ ORDER BY timestamp desc
 Reportez-vous à la documentation sur l’ [algorithme d’optimisation des identités](./identity-optimization-algorithm.md), ainsi que les types de structures graphiques pris en charge.
 
 * Lisez le [guide de configuration graphique](./example-configurations.md) pour obtenir des exemples de structures graphiques prises en charge.
-* Vous pouvez également lire le [guide de mise en oeuvre](./configuration.md#appendix) pour obtenir des exemples de structures graphiques non prises en charge. Deux scénarios peuvent se produire :
+* Vous pouvez également lire le [guide de mise en oeuvre](./implementation-guide.md#appendix) pour obtenir des exemples de structures graphiques non prises en charge. Deux scénarios peuvent se produire :
    * Aucun espace de noms unique sur tous vos profils.
-   * Un scénario [&quot;dangling ID&quot;](./configuration.md#dangling-loginid-scenario) se produit. Dans ce scénario, Identity Service ne peut pas déterminer si l’ID de pendaison est associé à l’une des entités de personne dans les graphiques.
+   * Un scénario [&quot;dangling ID&quot;](./implementation-guide.md#dangling-loginid-scenario) se produit. Dans ce scénario, Identity Service ne peut pas déterminer si l’ID de pendaison est associé à l’une des entités de personne dans les graphiques.
 
 Vous pouvez également utiliser l’[outil de simulation graphique de l’interface utilisateur](./graph-simulation.md) pour simuler des événements et configurer vos propres paramètres de priorité d’espace de noms et d’espace de noms uniques. Cela peut vous aider à comprendre de base le comportement de l’algorithme d’optimisation des identités.
 
@@ -331,26 +331,26 @@ Vous pouvez utiliser la requête suivante dans le jeu de données d’exportatio
 
 Cette section présente une liste de réponses aux questions fréquentes sur les règles de liaison des graphiques d’identités.
 
-### Algorithme d’optimisation des identités {#identity-optimization-algorithm}
+## Algorithme d’optimisation des identités {#identity-optimization-algorithm}
 
 Lisez cette section pour obtenir des réponses aux questions fréquentes sur l’[algorithme d’optimisation des identités](./identity-optimization-algorithm.md).
 
-#### J’ai un CRMID pour chacune de mes unités commerciales (CRMID B2C, CRMID B2B), mais je n’ai pas d’espace de noms unique sur tous mes profils. Que se passe-t-il si je marque le CRMID B2C et le CRMID B2B comme uniques, et que j’active mes paramètres d’identité ?
+### J’ai un CRMID pour chacune de mes unités commerciales (CRMID B2C, CRMID B2B), mais je n’ai pas d’espace de noms unique sur tous mes profils. Que se passe-t-il si je marque le CRMID B2C et le CRMID B2B comme uniques, et que j’active mes paramètres d’identité ?
 
-Ce scénario n’est pas pris en charge. Par conséquent, vous pouvez voir les graphiques s’effondrer lorsqu’un utilisateur utilise son CRMID B2C pour se connecter et qu’un autre utilisateur utilise son CRMID B2B pour se connecter. Pour plus d’informations, consultez la section sur l’ [exigence d’espace de noms d’une seule personne](./configuration.md#single-person-namespace-requirement) dans la page de mise en oeuvre.
+Ce scénario n’est pas pris en charge. Par conséquent, vous pouvez voir les graphiques s’effondrer lorsqu’un utilisateur utilise son CRMID B2C pour se connecter et qu’un autre utilisateur utilise son CRMID B2B pour se connecter. Pour plus d’informations, consultez la section sur l’ [exigence d’espace de noms d’une seule personne](./implementation-guide.md#single-person-namespace-requirement) dans la page de mise en oeuvre.
 
-#### L’algorithme d’optimisation des identités &quot;corrige&quot;-t-il les graphiques réduits existants ?
+### L’algorithme d’optimisation des identités &quot;corrige&quot;-t-il les graphiques réduits existants ?
 
 Les graphiques réduits existants seront affectés (&#39;fixes&#39;) par l’algorithme graphique uniquement si ces graphiques sont mis à jour après l’enregistrement de vos nouveaux paramètres.
 
-#### Si deux personnes se connectent et se déconnectent à l’aide du même appareil, qu’advient-il des événements ? Tous les événements seront-ils transférés vers le dernier utilisateur authentifié ?
+### Si deux personnes se connectent et se déconnectent à l’aide du même appareil, qu’advient-il des événements ? Tous les événements seront-ils transférés vers le dernier utilisateur authentifié ?
 
 * Les événements anonymes (événements avec ECID comme identité principale sur Real-Time Customer Profile) seront transférés au dernier utilisateur authentifié. En effet, l’ECID sera lié au CRMID du dernier utilisateur authentifié (sur Identity Service).
 * Tous les événements authentifiés (événements avec un CRMID défini comme identité principale) resteront avec la personne.
 
 Pour plus d’informations, consultez le guide sur [la détermination de l’identité principale pour les événements d’expérience](../identity-graph-linking-rules/namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events).
 
-#### Comment les parcours dans Adobe Journey Optimizer seront-ils affectés lorsque l’ECID est transféré d’une personne à une autre ?
+### Comment les parcours dans Adobe Journey Optimizer seront-ils affectés lorsque l’ECID est transféré d’une personne à une autre ?
 
 Le CRMID du dernier utilisateur authentifié sera lié à l’ECID (appareil partagé). Les ECID peuvent être réaffectés d’une personne à une autre en fonction du comportement de l’utilisateur. L’impact dépendra de la manière dont le parcours est construit. Il est donc important que les clients testent le parcours dans un environnement de test de développement pour valider le comportement.
 
@@ -367,31 +367,31 @@ Les points clés à mettre en évidence sont les suivants :
    * Avec cette fonctionnalité, les ECID ne sont plus toujours associés à un profil.
    * Il est recommandé de commencer les parcours avec les espaces de noms de personne (CRMID).
 
-### Priorité d’espace de noms
+## Priorité d’espace de noms
 
 Lisez cette section pour obtenir des réponses aux questions fréquentes sur la [priorité d’espace de noms](./namespace-priority.md).
 
-#### J’ai activé mes paramètres d’identité. Qu’advient-il de mes paramètres si je souhaite ajouter un espace de noms personnalisé une fois les paramètres activés ?
+### J’ai activé mes paramètres d’identité. Qu’advient-il de mes paramètres si je souhaite ajouter un espace de noms personnalisé une fois les paramètres activés ?
 
 Il existe deux &quot;compartiments&quot; d’espaces de noms : espaces de noms de personne et espaces de noms d’appareil/de cookie. L’espace de noms personnalisé nouvellement créé aura la priorité la plus faible dans chaque &quot;compartiment&quot; afin que ce nouvel espace de noms personnalisé n’ait aucune incidence sur l’ingestion des données existantes.
 
-#### Si Real-Time Customer Profile n’utilise plus l’indicateur &quot;principal&quot; sur identityMap, cette valeur doit-elle toujours être envoyée ?
+### Si Real-Time Customer Profile n’utilise plus l’indicateur &quot;principal&quot; sur identityMap, cette valeur doit-elle toujours être envoyée ?
 
 Oui, l’indicateur &quot;principal&quot; sur identityMap est utilisé par d’autres services. Pour plus d’informations, consultez le guide sur [les implications de la priorité d’espace de noms sur les autres services Experience Platform](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
 
-#### La priorité d’espace de noms s’applique-t-elle aux jeux de données d’enregistrement de profil dans Real-time Customer Profile ?
+### La priorité d’espace de noms s’applique-t-elle aux jeux de données d’enregistrement de profil dans Real-time Customer Profile ?
 
 Non. La priorité d’espace de noms s’applique uniquement aux jeux de données Experience Event utilisant la classe XDM ExperienceEvent.
 
-#### Comment cette fonctionnalité fonctionne-t-elle en tandem avec les barrières de sécurité des graphiques d’identités de 50 identités par graphique ? La priorité de l’espace de noms affecte-t-elle cette barrière de sécurité définie par le système ?
+### Comment cette fonctionnalité fonctionne-t-elle en tandem avec les barrières de sécurité des graphiques d’identités de 50 identités par graphique ? La priorité de l’espace de noms affecte-t-elle cette barrière de sécurité définie par le système ?
 
 L’algorithme d’optimisation des identités sera appliqué en premier pour garantir la représentation des entités de personne. Par la suite, si le graphique tente de dépasser la [barrière de sécurité du graphique d’identités](../guardrails.md) (50 identités par graphique), cette logique sera appliquée. La priorité de l’espace de noms n’affecte pas la logique de suppression de la barrière de sécurité 50 identités/graphiques.
 
-### Test
+## Test
 
 Lisez cette section pour obtenir des réponses aux questions fréquentes sur le test et le débogage des fonctionnalités dans les règles de liaison des graphiques d’identités.
 
-#### Quels scénarios dois-je tester dans un environnement de test de développement ?
+### Quels scénarios dois-je tester dans un environnement de test de développement ?
 
 En règle générale, le test sur un environnement de test de développement doit reproduire les cas d’utilisation que vous avez l’intention d’exécuter sur votre environnement de test de production. Consultez le tableau suivant pour connaître les principaux domaines à valider lors d’un test complet :
 
@@ -403,7 +403,7 @@ En règle générale, le test sur un environnement de test de développement doi
 
 {style="table-layout:auto"}
 
-#### Comment puis-je vérifier que cette fonctionnalité fonctionne comme prévu ?
+### Comment puis-je vérifier que cette fonctionnalité fonctionne comme prévu ?
 
 Utilisez l’ [ outil de simulation graphique](./graph-simulation.md) pour vérifier que la fonctionnalité fonctionne à un niveau de graphique individuel.
 

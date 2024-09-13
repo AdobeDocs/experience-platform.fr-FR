@@ -3,9 +3,9 @@ title: Guide de l’interface utilisateur de simulation graphique
 description: Découvrez comment utiliser la simulation graphique dans l’interface utilisateur d’Identity Service.
 badge: Version bêta
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
-source-wordcount: '1435'
+source-wordcount: '1443'
 ht-degree: 2%
 
 ---
@@ -172,8 +172,10 @@ Dans l’exemple de graphique ci-dessous, une ligne pointillée existe entre `{E
 
 En lisant ce document, vous savez maintenant comment utiliser l’outil [!DNL Graph Simulation] pour mieux comprendre comment vos données d’identité sont traitées selon un ensemble particulier de règles et de configurations. Pour plus d’informations, lisez les documents suivants :
 
-* [Règles de liaison de graphiques d’identités](./overview.md)
-* [Guide de configuration](./configuration.md)
+* [Présentation des règles de liaison de graphiques d’identités](./overview.md)
 * [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
-* [Priorité d’espace de noms](./namespace-priority.md)
+* [Guide de mise en oeuvre](./implementation-guide.md)
+* [Dépannage et FAQ](./troubleshooting.md)
 * [Exemples de configurations de graphique](./example-configurations.md)
+* [Priorité d’espace de noms](./namespace-priority.md)
+* [Interface utilisateur des paramètres d’identité](./identity-settings-ui.md)

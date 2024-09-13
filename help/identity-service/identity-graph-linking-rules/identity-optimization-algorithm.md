@@ -3,9 +3,9 @@ title: Algorithme d’optimisation des identités
 description: Découvrez l’algorithme d’optimisation des identités dans Identity Service.
 badge: Version bêta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: d3b43c5fa90b67bcba6015d521b78998d50cc3d7
+source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1531'
 ht-degree: 2%
 
 ---
@@ -162,7 +162,9 @@ Consultez le diagramme ci-dessous pour mieux comprendre le fonctionnement de l�
 Pour plus d’informations sur les règles de liaison des graphiques d’identités, consultez la documentation suivante :
 
 * [Présentation des règles de liaison de graphiques d’identités](./overview.md)
+* [Guide de mise en oeuvre](./implementation-guide.md)
+* [Exemples de configurations de graphique](./example-configurations.md)
+* [Dépannage et FAQ](./troubleshooting.md)
 * [Priorité d’espace de noms](./namespace-priority.md)
-* [Exemples de scénarios de configuration des règles de liaison de graphiques d’identités](./example-scenarios.md)
-* [Logique de liaison d’identités](../features/identity-linking-logic.md)
-* [Identity Service et Real-time Customer Profile](../identity-and-profile.md)
+* [Interface utilisateur de la simulation graphique](./graph-simulation.md)
+* [Interface utilisateur des paramètres d’identité](./identity-settings-ui.md)

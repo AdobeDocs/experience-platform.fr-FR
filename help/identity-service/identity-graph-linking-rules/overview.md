@@ -1,11 +1,11 @@
 ---
-title: Présentation des règles de liaison de graphiques d’identités
-description: Découvrez les règles de liaison de graphique d’identités dans Identity Service.
+title: Règles de liaison de graphiques d’identités
+description: Découvrez les règles de liaison de graphiques d’identités dans Identity Service.
 badge: Version bêta
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1581'
 ht-degree: 1%
 
 ---
@@ -16,17 +16,19 @@ ht-degree: 1%
 >
 >Les règles de liaison de graphiques d’identités sont actuellement en version bêta. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
 
-## Table des matières 
+Avec Adobe Experience Platform Identity Service et Real-time Customer Profile, il est facile de supposer que vos données sont parfaitement ingérées et que tous les profils fusionnés représentent une seule personne par le biais d’un identifiant de personne, tel un CRMID. Cependant, il existe des scénarios possibles où certaines données peuvent tenter de fusionner plusieurs profils disparates en un seul profil (&quot;effondrement du graphique&quot;). Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par le biais des règles de liaison des graphiques d’identités et permettre une personnalisation précise pour vos utilisateurs.
 
-* [Vue d’ensemble](./overview.md)
+## Commencer
+
+Les documents suivants sont essentiels pour comprendre les règles de liaison des graphiques d’identités.
+
 * [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
+* [Guide de mise en oeuvre](./implementation-guide.md)
+* [Exemples de configurations de graphique](./example-configurations.md)
+* [Dépannage et FAQ](./troubleshooting.md)
 * [Priorité d’espace de noms](./namespace-priority.md)
 * [Interface utilisateur de la simulation graphique](./graph-simulation.md)
 * [Interface utilisateur des paramètres d’identité](./identity-settings-ui.md)
-* [Exemples de configurations de graphique](./configuration.md)
-* [Exemples de scénarios](./example-scenarios.md)
-
-Avec Adobe Experience Platform Identity Service et Real-time Customer Profile, il est facile de supposer que vos données sont parfaitement ingérées et que tous les profils fusionnés représentent une seule personne par le biais d’un identifiant de personne, tel un CRMID. Cependant, il existe des scénarios possibles où certaines données peuvent tenter de fusionner plusieurs profils disparates en un seul profil (&quot;effondrement du graphique&quot;). Pour éviter ces fusions indésirables, vous pouvez utiliser les configurations fournies par le biais des règles de liaison des graphiques d’identités et permettre une personnalisation précise pour vos utilisateurs.
 
 ## Exemples de scénarios de réduction de graphiques
 
@@ -34,7 +36,7 @@ Avec Adobe Experience Platform Identity Service et Real-time Customer Profile, i
 * **Mauvais numéros de téléphone et d’adresse électronique** : les mauvais numéros de téléphone et d’adresse électronique se rapportent aux utilisateurs finaux qui enregistrent des informations de contact non valides, telles que &quot;test<span>@test.com&quot; pour l’adresse électronique et &quot;+1-111-111-1111&quot; pour le numéro de téléphone.
 * **Valeurs d’identité erronées ou incorrectes** : les valeurs d’identité erronées ou incorrectes font référence à des valeurs d’identité non uniques pouvant fusionner des CRMID. Par exemple, bien que les identifiants IDFA doivent comporter 36 caractères (32 caractères alphanumériques et quatre tirets), il existe des scénarios où un IDFA avec une valeur d’identité &quot;user_null&quot; peut être ingéré. De même, les numéros de téléphone ne prennent en charge que les caractères numériques, mais un espace de noms de téléphone avec une valeur d’identité &quot;non spécifié&quot; peut être ingéré.
 
-Pour plus d’informations sur les scénarios de cas d’utilisation des règles de liaison de graphiques d’identités, lisez le document sur [exemples de scénarios](./example-scenarios.md).
+Pour plus d’informations sur les scénarios de cas d’utilisation des règles de liaison de graphiques d’identités, consultez la section sur les [exemples de scénarios](#example-scenarios).
 
 ## Règles de liaison de graphiques d’identités {#identity-graph-linking-rules}
 
@@ -94,10 +96,63 @@ Les espaces de noms uniques et les priorités d’espace de noms peuvent être c
 
 Pour plus d’informations, consultez le guide sur [la priorité d’espace de noms](./namespace-priority.md).
 
+## Exemples de scénarios client résolus par des règles de liaison de graphiques d’identités {#example-scenarios}
+
+Cette section décrit les exemples de scénarios que vous pouvez prendre en compte lors de la configuration des règles de liaison de graphiques d’identités.
+
+### Appareil partagé
+
+Il existe des cas où plusieurs connexions peuvent se produire sur un seul appareil :
+
+| Appareil partagé | Description |
+| --- | --- |
+| Ordinateurs de famille et tablettes | Le mari et la femme se connectent tous deux à leurs comptes bancaires respectifs. |
+| kiosque public | Les voyageurs qui se connectent à un aéroport se servant de leur carte de fidélité pour enregistrer leurs sacs et imprimer leurs cartes d&#39;embarquement. |
+| Centre d’appel | Le personnel du centre d’appels se connecte sur un seul appareil au nom des clients qui appellent le service clientèle pour résoudre les problèmes. |
+
+![Schéma de certains appareils partagés courants.](../images/identity-settings/shared-devices.png)
+
+Dans ce cas, d’un point de vue graphique, sans limites activées, un seul ECID est lié à plusieurs CRMID.
+
+Avec les règles de liaison de graphiques d’identités, vous pouvez :
+
+* Configurez l’identifiant utilisé pour la connexion en tant qu’identifiant unique. Par exemple, vous pouvez limiter un graphique pour stocker une seule identité avec un espace de noms CRMID, et ainsi définir ce CRMID en tant qu’identifiant unique d’un appareil partagé.
+   * Ce faisant, vous pouvez vous assurer que les CRMID ne sont pas fusionnés par l’ECID.
+
+### Scénarios d’email/de téléphone non valides
+
+Il existe également des cas d’utilisateurs qui fournissent des valeurs fausses comme des numéros de téléphone et/ou des adresses électroniques lors de l’enregistrement. Dans ce cas, si les limites ne sont pas activées, les identités liées au téléphone/à l’email finiront par être liées à plusieurs CRMID différents.
+
+![ Diagramme représentant des scénarios de courrier électronique ou de téléphone non valides.](../images/identity-settings/invalid-email-phone.png)
+
+Avec les règles de liaison de graphiques d’identités, vous pouvez :
+
+* Configurez le CRMID, le numéro de téléphone ou l’adresse électronique comme identifiant unique et limitez ainsi une personne à un seul CRMID, numéro de téléphone et/ou adresse électronique associée à son compte.
+
+### Valeurs d’identité erronées ou mauvaises
+
+Dans certains cas, des valeurs d’identité erronées non uniques sont ingérées dans le système, quel que soit l’espace de noms. Par exemple :
+
+* Espace de noms IDFA avec la valeur d’identité &quot;user_null&quot;.
+   * Les valeurs d’identité IDFA doivent comporter 36 caractères : 32 caractères alphanumériques et quatre tirets.
+* Espace de noms du numéro de téléphone avec la valeur d’identité &quot;non spécifié&quot;.
+   * Les numéros de téléphone ne doivent pas comporter de caractères alphabétiques.
+
+Ces identités peuvent donner lieu aux graphiques suivants, où plusieurs CRMID sont fusionnés avec la &quot;mauvaise&quot; identité :
+
+![Exemple graphique de données d’identité avec des valeurs d’identité erronées ou incorrectes.](../images/identity-settings/bad-data.png)
+
+Avec les règles de liaison de graphiques d’identités, vous pouvez configurer le CRMID en tant qu’identifiant unique afin d’empêcher la réduction des profils indésirables en raison de ce type de données.
+
+
 ## Étapes suivantes
 
 Pour plus d’informations sur les règles de liaison des graphiques d’identités, consultez la documentation suivante :
 
-* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md).
-* [Priorité de l’espace de noms](./namespace-priority.md).
-* [Exemples de scénarios de configuration des règles de liaison de graphiques d’identités](./example-scenarios.md).
+* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
+* [Guide de mise en oeuvre](./implementation-guide.md)
+* [Exemples de configurations de graphique](./example-configurations.md)
+* [Dépannage et FAQ](./troubleshooting.md)
+* [Priorité d’espace de noms](./namespace-priority.md)
+* [Interface utilisateur de la simulation graphique](./graph-simulation.md)
+* [Interface utilisateur des paramètres d’identité](./identity-settings-ui.md)

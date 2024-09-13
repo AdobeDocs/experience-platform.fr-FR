@@ -5,10 +5,10 @@ breadcrumb-title: Guide de Platform Identity Service
 user-guide-description: Associez les identités des clients, quel que soit l’appareil ou le système utilisé, afin d’offrir des expériences digitales personnalisées.
 feature: Identities
 role: Admin,Developer
-source-git-commit: cfa2cd91f523d80fd42cb6fd2ba17e6eb3eca609
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 66%
+source-wordcount: '146'
+ht-degree: 67%
 
 ---
 
@@ -25,13 +25,12 @@ ht-degree: 66%
    - Règles de liaison de graphiques d’identités {#identity-graph-linking-rules}
       - [Présentation des fonctionnalités](./identity-graph-linking-rules/overview.md)
       - [Algorithme d’optimisation des identités](./identity-graph-linking-rules/identity-optimization-algorithm.md)
-      - [Guide de mise en oeuvre des règles de liaison de graphiques d’identités](./identity-graph-linking-rules/configuration.md)
+      - [Guide de mise en oeuvre des règles de liaison de graphiques d’identités](./identity-graph-linking-rules/implementation-guide.md)
       - [Exemples de configurations de graphique](./identity-graph-linking-rules/example-configurations.md)
       - [Dépannage des règles de liaison de graphiques d’identités](./identity-graph-linking-rules/troubleshooting.md)
       - [Priorité d’espace de noms](./identity-graph-linking-rules/namespace-priority.md)
       - [Interface utilisateur de la simulation graphique](./identity-graph-linking-rules/graph-simulation.md)
       - [Interface utilisateur des paramètres d’identité](./identity-graph-linking-rules/identity-settings-ui.md)
-      - [Exemples de scénarios client](./identity-graph-linking-rules/example-scenarios.md)
    - [Présentation d’ECID](./features/ecid.md)
 - [Guide de mise en oeuvre](implementation.md)
 - [Barrières de sécurité pour les données Identity ](guardrails.md)

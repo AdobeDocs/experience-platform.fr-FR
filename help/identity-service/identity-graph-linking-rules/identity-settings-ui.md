@@ -3,9 +3,9 @@ title: Interface utilisateur des paramètres d’identité
 description: Découvrez comment utiliser l’interface utilisateur des paramètres d’identité.
 badge: Version bêta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 04b04807196bb5902e398403612429eae0de3988
+source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '539'
 ht-degree: 2%
 
 ---
@@ -24,8 +24,10 @@ Lisez ce guide pour savoir comment configurer vos paramètres d’identité dans
 
 Lisez les documents suivants avant de commencer à utiliser les paramètres d’identité :
 
-* [Guide de configuration des règles de liaison de graphique d’identités](./configuration.md)
+* [Règles de liaison de graphiques d’identités](./overview.md)
 * [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
+* [Guide de mise en oeuvre](./implementation-guide.md)
+* [Exemples de configurations de graphique](./example-configurations.md)
 * [Priorité d’espace de noms](./namespace-priority.md)
 * [Simulation graphique](./graph-simulation.md)
 
@@ -61,4 +63,12 @@ Un message d’avertissement s’affiche, indiquant que les graphiques existants
 
 ## Étapes suivantes
 
-Vous avez maintenant configuré les priorités de vos espaces de noms et désigné vos espaces de noms uniques à l’aide de la page d’interface utilisateur des paramètres d’identité. Pour plus d’informations, consultez la [présentation des règles de liaison de graphiques d’identités](./overview.md).
+Pour plus d’informations sur les règles de liaison des graphiques d’identités, consultez la documentation suivante :
+
+* [Présentation des règles de liaison de graphiques d’identités](./overview.md)
+* [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
+* [Guide de mise en oeuvre](./implementation-guide.md)
+* [Exemples de configurations de graphique](./example-configurations.md)
+* [Dépannage et FAQ](./troubleshooting.md)
+* [Priorité d’espace de noms](./namespace-priority.md)
+* [Interface utilisateur de la simulation graphique](./graph-simulation.md)
