@@ -1,13 +1,13 @@
 ---
 title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 description: Extension de la balise SDK Web Adobe Experience Platform
-source-git-commit: 73a82825dd6c9ae97db76018df5462ab20c7d15e
-workflow-type: tm+mt
+exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
+source-git-commit: d9e9275db1989df22b13b4f000dde645f40d5744
+workflow-type: ht
 source-wordcount: '2258'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
-
 
 # Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 
@@ -17,33 +17,33 @@ Ce document contient les notes de mise à jour de l’extension de balises du SD
 
 **Nouvelles fonctionnalités**
 
-- Ajout de l’événement `triggered` du point de contrôle.
-- Les [événements guidés](action-types.md#instance), [Demander la personnalisation par défaut](action-types.md#personalization), [abonner les éléments d’ensemble de règles](event-types.md#subscribe-ruleset-items) et [évaluer les jeux de règles](action-types.md#evaluate-rulesets) sont désormais disponibles de manière générale.
+- Ajout du point de contrôle de l’événement `triggered`.
+- Les fonctionnalités [Événements guidés](action-types.md#instance), [Demander une personnalisation par défaut](action-types.md#personalization), [S’abonner aux éléments de l’ensemble de règles](event-types.md#subscribe-ruleset-items), et [Évaluer les ensembles de règles](action-types.md#evaluate-rulesets) sont désormais généralement disponibles.
 
 **Correctifs et améliorations**
 
-- Correction d’un problème en raison duquel les éléments de données de variable dupliqués pouvaient s’écraser les uns les autres.
-- Lors de l’utilisation de l’événement guidé [Demander la personnalisation par défaut](action-types.md#personalization), les décisions de personnalisation visuelle sont désormais activées automatiquement.
+- Correction d’un problème où des éléments de données variables dupliqués pouvaient se remplacer les uns les autres.
+- En utilisant l’événement guidé [ Demander la personnalisation par défaut](action-types.md#personalization), les choix de personnalisation visuelle sont maintenant activés automatiquement.
 
-Contient la version 2.22.0 du SDK Web de Adobe Experience Platform.
+Contient la version 2.22.0 du SDK web d’Adobe Experience Platform.
 
 ## Version 2.25.0 - vendredi 18 juillet 2024
 
 **Nouvelles fonctionnalités**
 
-- Ajout de la prise en charge du suivi automatique de la personnalisation dans Adobe Journey Optimizer.
+- Ajout de la prise en charge du suivi automatique de la personnalisation dans Adobe Journey Optimizer.
 - Ajout de nouveaux paramètres pour gérer la collecte de clics améliorée.
 
-Contient la version 2.21.1 du SDK Web de Adobe Experience Platform.
+Contient la version 2.21.1 du SDK web d’Adobe Experience Platform.
 
 ## Version 2.24.0 - jeudi 5 juin 2024
 
 **Correctifs et améliorations**
 
 - Correction d’une erreur qui se produisait lors de la modification de la configuration de l’extension lorsque des remplacements de configuration étaient définis.
-- Autorisez la définition de valeurs vides pour les intervalles de ping de collecte de médias.
+- Permet de définir des valeurs vides pour les intervalles de ping de la collecte de médias.
 - Correction d’une erreur qui se produisait lors de la modification d’une action de variable de mise à jour.
-- Autoriser la réinitialisation du conteneur de synchronisation des identifiants dans les remplacements de configuration.
+- Permet la réinitialisation du conteneur de synchronisation des identifiants dans les remplacements de configuration.
 
 Contient la version 2.20.0 du SDK web d’Adobe Experience Platform.
 

@@ -3,9 +3,9 @@ title: Notes de mise à jour de l’extension Adobe Analytics
 description: Dernières notes de mise à jour pour lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 source-git-commit: c783906b20db2b86d58aea7b3a94bde007c0a465
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1451'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -17,13 +17,13 @@ Vous trouverez ci-dessous une liste des notes de mise à jour de l’extension d
 >
 >L’extension de balises Analytics est régulièrement mise à jour en réponse aux mises à jour apportées à la [Bibliothèque JavaScript AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=fr). Voir [Notes de mise à jour d’AppMeasurement](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=fr) pour plus d’informations sur les versions spécifiques mentionnées ci-dessous.
 
-## 12 août 2024
+## 12 août 2024
 
 **Extension Adobe Analytics 1.9.5**
 
 **Fonctionnalités** :
 
-* Mise à niveau vers [AppMeasurement vers la version 2.27.0](https://github.com/adobe/appmeasurement/releases/tag/v2.27.0).
+* Mise à niveau vers [AppMeasurement v2.27.0](https://github.com/adobe/appmeasurement/releases/tag/v2.27.0).
 
 ## 4 mars 2024
 
