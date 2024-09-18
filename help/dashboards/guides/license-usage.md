@@ -4,10 +4,10 @@ title: Tableau de bord d’utilisation de la licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: dedffe90e9107b70d4ddf65a7bf8079396ff8e8b
+source-git-commit: b1de61b2e7d0dedf2da8ef8ffb02fe5c15e82fb2
 workflow-type: tm+mt
-source-wordcount: '2641'
-ht-degree: 10%
+source-wordcount: '2720'
+ht-degree: 9%
 
 ---
 
@@ -17,6 +17,16 @@ ht-degree: 10%
 >id="testy-mctestface"
 >title="Boîte de dialogue de test qui ne doit pas être visible"
 >abstract="L&#39;objet {name} est affiché sur {date}."
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_core"
+>title="Table des produits principaux"
+>abstract="Les produits principaux répertoriés dans le tableau comportent leurs propres mesures, suivi de l’utilisation et vues d’analyse au niveau de l’environnement de test. Ces produits principaux fournissent les mesures clés pour le suivi et les modules complémentaires sont inclus dans ces mesures."
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_addons"
+>title="Tableau des modules complémentaires"
+>abstract="Le tableau des modules complémentaires répertorie les produits dont le montant des licences est combiné aux mesures prises en charge par les produits principaux. Ces modules complémentaires ne comportent pas de mesures distinctes, mais améliorent le suivi de l’utilisation des produits principaux auxquels ils sont associés."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage"
