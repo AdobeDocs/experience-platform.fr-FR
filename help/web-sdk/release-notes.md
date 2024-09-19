@@ -3,10 +3,10 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 73a82825dd6c9ae97db76018df5462ab20c7d15e
+source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
 workflow-type: tm+mt
-source-wordcount: '1882'
-ht-degree: 85%
+source-wordcount: '1920'
+ht-degree: 84%
 
 ---
 
@@ -16,11 +16,21 @@ ht-degree: 85%
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.23.0 - vendredi 19 septembre 2024
+
+**Nouvelles fonctionnalités**
+
+- Ajout de la prise en charge de la demande de l’[ID CORE](identity/overview.md#tracking-coreid-web-sdk) dans la commande [getIdentity](commands/getidentity.md#get-identity-using-the-web-sdk-javascript-library) .
+
+**Correctifs et améliorations**
+
+- Correction d’un problème en raison duquel les cookies n’étaient pas correctement écrits lors de l’exécution locale du SDK Web.
+
 ## Version 2.22.0 - vendredi 22 août 2024
 
 **Nouvelles fonctionnalités**
 
-- Ajout de moniteurs de personnalisation.
+- Ajout de la prise en charge des hooks de surveillance de la personnalisation.
 
 **Correctifs et améliorations**
 
