@@ -3,10 +3,10 @@ title: Création d’une connexion Google BigQuery Base à l’aide de l’API F
 description: Découvrez comment connecter Adobe Experience Platform à Google BigQuery à l’aide de l’API Flow Service.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: 1fa79b31b5a257ebb3cbd60246b757d8a4a63d7c
 workflow-type: tm+mt
-source-wordcount: '524'
-ht-degree: 59%
+source-wordcount: '523'
+ht-degree: 53%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 59%
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
-Ce tutoriel vous guide tout au long des étapes de création dʼune connexion de base pour [!DNL Google BigQuery] à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lisez ce guide pour savoir comment créer une connexion de base pour [!DNL Google BigQuery] à l’aide de l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Prise en main
+## Commencer
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Experience Platform :
 
@@ -31,18 +31,7 @@ Les sections suivantes apportent des informations supplémentaires dont vous aur
 
 ### Collecter les informations d’identification requises
 
-Pour que [!DNL Flow Service] se connecte [!DNL Google BigQuery] à Platform, vous devez fournir les valeurs d’authentification OAuth 2.0 suivantes :
-
-| Informations d’identification | Description |
-| ---------- | ----------- |
-| `project` | ID de projet par défaut du projet [!DNL Google BigQuery] sur lequel effectuer la requête. |
-| `clientID` | La valeur d’identifiant utilisée pour générer le jeton d’actualisation. |
-| `clientSecret` | La valeur secrète utilisée pour générer le jeton d’actualisation. |
-| `refreshToken` | Jeton d’actualisation obtenu à partir de [!DNL Google] utilisé pour autoriser l’accès à [!DNL Google BigQuery]. |
-| `largeResultsDataSetId` | L’identifiant du jeu de données [!DNL Google BigQuery] précréé qui est requis pour permettre la prise en charge des jeux de résultats volumineux. |
-| `connectionSpec.id` | La spécification de connexion renvoie les propriétés du connecteur d’une source, y compris les spécifications d’authentification liées à la création des connexions de base et source. L’identifiant de spécification de connexion pour [!DNL Google BigQuery] est `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
-
-Pour plus d&#39;informations sur ces valeurs, consultez ce [[!DNL Google BigQuery] document](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing).
+Lisez le [[!DNL Google BigQuery] guide d&#39;authentification](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials) pour obtenir des instructions détaillées sur la collecte de vos informations d&#39;identification requises.
 
 ### Utiliser les API Platform
 
@@ -60,9 +49,13 @@ Pour créer un identifiant de connexion de base, envoyez une requête POST au po
 POST /connections
 ```
 
+>[!BEGINTABS]
+
+>[!TAB  Utilisation de l’authentification de base ]
+
 **Requête**
 
-La requête suivante permet de créer une connexion de base pour [!DNL Google BigQuery] :
+La requête suivante crée une connexion de base pour [!DNL Google BigQuery] à l’aide de l’authentification de base :
 
 ```shell
 curl -X POST \
@@ -73,8 +66,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Google BigQuery connection",
-        "description": "Google BigQuery connection",
+        "name": "Google BigQuery connection with basic authentication",
+        "description": "Google BigQuery connection with basic authentication",
         "auth": {
             "specName": "Basic Authentication",
             "type": "OAuth2.0",
@@ -110,6 +103,59 @@ Une réponse réussie renvoie les détails de la connexion nouvellement créée,
     "etag": "\"ca00acbf-0000-0200-0000-60149e1e0000\""
 }
 ```
+
+>[!TAB Utiliser l’authentification de service]
+
+
+**Requête**
+
+La requête suivante crée une connexion de base pour [!DNL Google BigQuery] à l’aide de l’authentification de service :
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/flowservice/connections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "Google BigQuery base connection with service account",
+        "description": "Google BigQuery connection with service account",
+        "auth": {
+            "specName": "Service Authentication",
+            "params": {
+                    "projectId": "{PROJECT_ID}",
+                    "keyFileContent": "{KEY_FILE_CONTENT},
+                    "largeResultsDataSetId": "{LARGE_RESULTS_DATASET_ID}"
+                }
+        },
+        "connectionSpec": {
+            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+            "version": "1.0"
+        }
+    }'
+```
+
+| Propriété | Description |
+| --------- | ----------- |
+| `auth.params.projectId` | ID de projet par défaut du projet [!DNL Google BigQuery] à interroger. par rapport à . |
+| `auth.params.keyFileContent` | Fichier clé utilisé pour authentifier le compte de service. Vous devez coder le contenu du fichier clé dans [!DNL Base64]. |
+| `auth.params.largeResultsDataSetId` | (Facultatif) L’identifiant de jeu de données [!DNL Google BigQuery] précréé qui est requis pour activer la prise en charge des jeux de résultats volumineux. |
+
+**Réponse**
+
+Une réponse réussie renvoie les détails de la connexion nouvellement créée, y compris son identifiant unique (`id`). Cet identifiant est nécessaire pour explorer vos données dans le tutoriel suivant.
+
+```json
+{
+    "id": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "etag": "\"ca00acbf-0000-0200-0000-60149e1e0000\""
+}
+```
+
+>[!ENDTABS]
+
 
 ## Étapes suivantes
 
