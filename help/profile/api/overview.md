@@ -4,9 +4,9 @@ title: Guide de l’API Real-Time Customer Profile
 description: L’API Real-time Customer Profile permet aux développeurs d’explorer et d’utiliser les données de profil, notamment d’afficher les profils, de créer et de mettre à jour des stratégies de fusion, d’exporter ou d’échantillonner des données de profil, ainsi que de supprimer les données de profil qui ne sont plus requises ou qui ont été ajoutées par erreur. Suivez ce guide pour savoir comment effectuer des opérations clés à l’aide de l’API.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: cb276c55c010aa7ccc936947ad87bf74239d6e99
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '860'
 ht-degree: 19%
 
 ---
@@ -21,11 +21,7 @@ Pour afficher tous les points de terminaison disponibles et les opérations CRUD
 
 Pour obtenir un guide sur l’utilisation des données [!DNL Real-Time Customer Profile] dans l’interface utilisateur de [!DNL Experience Platform], reportez-vous au [guide d’utilisation du profil](../ui/user-guide.md).
 
-## [!BADGE Beta]{type=Informative} Attributs calculés {#computed-attributes}
-
->[!IMPORTANT]
->
-La fonctionnalité d’attribut calculé est en version bêta et n’est pas disponible pour tous les utilisateurs. La documentation et la fonctionnalité peuvent faire l’objet de modifications.
+## Attributs calculés {#computed-attributes}
 
 Les attributs calculés sont des fonctions utilisées pour regrouper des données au niveau de l’événement en attributs au niveau du profil. Ces fonctions sont automatiquement calculées afin de pouvoir être utilisées pour la segmentation, l’activation et la personnalisation.
 
