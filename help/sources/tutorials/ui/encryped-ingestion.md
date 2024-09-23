@@ -2,13 +2,11 @@
 title: Ingestion de données chiffrées dans l’interface utilisateur de sources Workspace
 description: Découvrez comment ingérer des données chiffrées dans l’espace de travail de l’interface utilisateur des sources.
 badge: Version bêta
-hide: true
-hidefromtoc: true
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: b4545943abbb68d36a64935feb4466d075331504
+source-git-commit: 3eba8690dcf9c808495a00b7fd4558478606f628
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 18%
+source-wordcount: '1458'
+ht-degree: 6%
 
 ---
 
@@ -18,26 +16,13 @@ ht-degree: 18%
 >
 >La prise en charge de l’ingestion de données chiffrées dans l’interface utilisateur des sources est en version bêta et peut ne pas être disponible pour votre entreprise. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
 
-Vous pouvez ingérer des fichiers de données et des dossiers chiffrés dans Adobe Experience Platform à l’aide de sources par lots de stockage dans le cloud. Avec l’ingestion de données chiffrées, vous pouvez utiliser des mécanismes de chiffrement asymétrique pour transférer en toute sécurité des données par lots dans Experience Platform. Actuellement, les mécanismes de chiffrement asymétrique pris en charge sont PGP et GPG.
-
-Cette fonctionnalité est disponible pour les sources suivantes :
-
-* [Amazon S3]
-* [Azure Blob]
-* [Azure Data Lake Storage Gen2]
-* [Stockage de fichier Azure]
-* [Zone d’atterrissage des données]
-* [FTP]
-* [Google Cloud Storage]
-* [HDFS]
-* [Oracle Object Storage]
-* [SFTP]
+Vous pouvez ingérer des fichiers de données et des dossiers chiffrés dans Adobe Experience Platform à l’aide de sources par lots de stockage dans le cloud. Avec l’ingestion de données chiffrées, vous pouvez utiliser des mécanismes de chiffrement asymétrique pour transférer en toute sécurité des données par lots dans Experience Platform. Les mécanismes de cryptage asymétrique pris en charge sont PGP et GPG.
 
 Lisez ce guide pour savoir comment ingérer des données chiffrées avec des sources par lots de stockage dans le cloud à l’aide de l’interface utilisateur.
 
 ## Commencer
 
-Il est utile de connaître les fonctions et concepts Experience Platform suivants avant d’utiliser l’ingestion de données chiffrées dans l’interface utilisateur :
+Avant de poursuivre ce tutoriel, veuillez lire les documents suivants pour mieux comprendre les fonctionnalités et concepts Experience Platform suivants.
 
 * [Sources](../../home.md) : utilisez des sources en Experience Platform pour ingérer des données à partir d’une application d’Adobe ou d’une source de données tierce.
 * [Flux de données](../../../dataflows/home.md) : les flux de données sont des représentations des tâches de données qui déplacent les données entre Experience Platform. Vous pouvez utiliser l’espace de travail des sources pour créer des flux de données qui assimilent des données d’une source donnée à un Experience Platform.
@@ -45,12 +30,14 @@ Il est utile de connaître les fonctions et concepts Experience Platform suivant
 
 ### Composition de haut niveau
 
-1. Créez une paire de clés de chiffrement à l’aide de l’espace de travail des sources dans l’interface utilisateur de l’Experience Platform. Vous pouvez également créer une paire de clés de vérification des signes afin de fournir une couche supplémentaire de sécurité à vos données chiffrées.
-2. Utilisez la clé publique pour chiffrer vos données.
-3. Placez vos données chiffrées dans votre fournisseur de stockage dans le cloud. Au cours de cette étape, vous devez également vous assurer que vous disposez d’un fichier d’exemple qui peut être utilisé comme référence pour mapper vos données source à un schéma de modèle de données d’expérience (XDM).
-4. Ingérez vos données cryptées dans Experience Platform en créant une connexion source.
-5. Lors de la création de votre connexion source, fournissez l’ID de clé correspondant à la clé publique que vous avez utilisée pour chiffrer vos données. Si vous avez également utilisé le mécanisme de paire de clés de vérification des signes, vous devez également fournir l’identifiant de clé de vérification des signes qui correspond à vos données chiffrées.
-6. Passez aux étapes de création du flux de données.
+* Créez une paire de clés de chiffrement à l’aide de l’espace de travail des sources dans l’interface utilisateur de l’Experience Platform.
+   * Vous pouvez également créer votre propre paire de clés de vérification des signes afin de fournir une couche supplémentaire de sécurité à vos données chiffrées.
+* Utilisez la clé publique de votre paire de clés de chiffrement pour chiffrer vos données.
+* Placez vos données chiffrées dans votre fournisseur de stockage dans le cloud. Au cours de cette étape, vous devez également vous assurer que vous disposez d’un fichier d’exemple qui peut être utilisé comme référence pour mapper vos données source à un schéma de modèle de données d’expérience (XDM).
+* Utilisez votre source par lots de stockage dans le cloud et commencez le processus d’ingestion des données dans l’espace de travail des sources de l’interface utilisateur Experience Platform.
+* Pendant le processus de création de la connexion source, indiquez l’identifiant de la clé qui correspond à la clé publique que vous avez utilisée pour chiffrer vos données.
+   * Si vous avez également utilisé le mécanisme de paire de clés de vérification des signes, vous devez également fournir l’identifiant de clé de vérification des signes qui correspond à vos données chiffrées.
+* Passez aux étapes de création du flux de données.
 
 ## Création d’une paire de clés de chiffrement {#create-an-encryption-key-pair}
 
@@ -59,9 +46,39 @@ Il est utile de connaître les fonctions et concepts Experience Platform suivant
 >title="ID de clé de chiffrement"
 >abstract="Indiquez l’ID de clé de chiffrement correspondant à votre clé de chiffrement qui a été utilisée pour chiffrer vos données source."
 
-* Dans l’interface utilisateur de Platform, accédez à l’espace de travail des sources, puis sélectionnez [!UICONTROL Paires de clés] dans l’en-tête supérieur.
-* Vous accédez à une page qui affiche une liste des paires de clés de chiffrement existantes dans votre entreprise. Cette page fournit des informations sur le titre, l’identifiant, le type, l’algorithme de chiffrement, l’expiration et l’état d’une clé donnée. Pour créer une paire de clés, sélectionnez **[!UICONTROL Créer une clé]**.
-* Sélectionnez ensuite le type de clé à créer. Pour créer une clé de chiffrement, sélectionnez **[!UICONTROL Clé de chiffrement]**, puis fournissez un titre et un mot de passe pour votre clé de chiffrement. La phrase secrète est une couche supplémentaire de protection pour vos clés de chiffrement. Lors de sa création, Experience Platform stocke la phrase secrète dans un coffre sécurisé différent de celui de la clé publique. Vous devez fournir une chaîne non vide comme phrase secrète.
+>[!BEGINSHADEBOX]
+
+**Qu’est-ce qu’une paire de clés de chiffrement ?**
+
+Une paire de clés de cryptage est un mécanisme de cryptographie asymétrique constitué d’une clé publique et d’une clé privée. La clé publique est utilisée pour crypter les données et la clé privée est ensuite utilisée pour décrypter ces données.
+
+Vous pouvez créer votre paire de clés de chiffrement via l’interface utilisateur de l’Experience Platform. Une fois généré, vous recevez une clé publique et un identifiant de clé correspondant. Utilisez la clé publique pour crypter vos données, puis utilisez l’identifiant de clé pour confirmer votre identité, lorsque vous êtes en train d’ingérer vos données chiffrées. La clé privée est automatiquement envoyée à l’Experience Platform, où elle est stockée dans un coffre sécurisé, et ne sera utilisée qu’une fois vos données prêtes pour le décryptage.
+
+>[!ENDSHADEBOX]
+
+Dans l’interface utilisateur de Platform, accédez à l’espace de travail des sources, puis sélectionnez [!UICONTROL Paires de clés] dans l’en-tête supérieur.
+
+![Catalogue des sources avec l&#39;en-tête &quot;Paires clés&quot; sélectionné.](../../images/tutorials/edi/catalog.png)
+
+Vous accédez à une page qui affiche une liste des paires de clés de chiffrement existantes dans votre entreprise. Cette page fournit des informations sur le titre, l’identifiant, le type, l’algorithme de chiffrement, l’expiration et l’état d’une clé donnée. Pour créer une paire de clés, sélectionnez **[!UICONTROL Créer une clé]**.
+
+![La page des paires de clés, avec &quot;clé de chiffrement&quot; sélectionnée comme type de clé et le bouton &quot;créer la clé&quot; sélectionné.](../../images/tutorials/edi/encryption_key_page.png)
+
+Sélectionnez ensuite le type de clé à créer. Pour créer une clé de chiffrement, sélectionnez **[!UICONTROL Clé de chiffrement]**, puis **[!UICONTROL Continuer]**.
+
+![ La fenêtre de création de la clé, avec la clé de chiffrement sélectionnée.](../../images/tutorials/edi/choose_encryption_key_type.png)
+
+Indiquez un titre et un mot de passe pour votre clé de chiffrement. La phrase secrète est une couche supplémentaire de protection pour vos clés de chiffrement. Lors de sa création, Experience Platform stocke la phrase secrète dans un coffre sécurisé différent de celui de la clé publique. Vous devez fournir une chaîne non vide comme mot de passe. Lorsque vous avez terminé, cliquez sur **[!UICONTROL Créer]**.
+
+![ Fenêtre de création de clé de chiffrement, dans laquelle un titre et un mot de passe sont fournis.](../../images/tutorials/edi/create_encryption_key.png)
+
+En cas de réussite, une nouvelle fenêtre s’affiche, affichant votre nouvelle clé de chiffrement, y compris son titre, sa clé publique et son identifiant de clé. Utilisez la valeur de clé publique pour chiffrer vos données. Vous utiliserez l’identifiant de clé à une étape ultérieure pour prouver votre identité lors de l’ingestion de vos données chiffrées pendant le processus de création du flux de données.
+
+![Fenêtre qui affiche des informations sur la paire de clés de chiffrement que vous venez de créer.](../../images/tutorials/edi/encryption_key_details.png)
+
+Pour afficher des informations sur une clé de chiffrement existante, sélectionnez les ellipses (`...`) en regard du titre de la clé. Sélectionnez **[!UICONTROL Détails de la clé]** pour afficher la clé publique et l’ID de la clé. Si vous souhaitez également supprimer votre clé de chiffrement, sélectionnez **[!UICONTROL Supprimer]**.
+
+![Page des paires de clés, où une liste des clés de chiffrement s’affiche. Les points de suspension en regard de &quot;acme-encryption-key&quot; sont sélectionnés et la liste déroulante affiche des options pour afficher les détails de la clé ou supprimer les clés.](../../images/tutorials/edi/configuration_options.png)
 
 ### Création d’une clé de vérification des signes {#create-a-sign-verification-key}
 
@@ -69,6 +86,26 @@ Il est utile de connaître les fonctions et concepts Experience Platform suivant
 >id="platform_sources_encrypted_signVerificationKeyId"
 >title="Identifiant de clé de vérification de signature"
 >abstract="Fournissez l’identifiant de la clé de vérification des signes qui correspond à vos données source signées et chiffrées."
+
+>[!BEGINSHADEBOX]
+
+**Qu’est-ce qu’une clé de vérification des signes ?**
+
+Une clé de vérification des signes est un autre mécanisme de chiffrement qui implique une clé privée et une clé publique. Dans ce cas, vous pouvez créer votre paire de clés de vérification de signature et utiliser la clé privée pour signer et fournir une couche de chiffrement supplémentaire à vos données. Vous partagerez ensuite la clé publique correspondante à l’Experience Platform. Pendant l’ingestion, l’Experience Platform utilisera la clé publique pour vérifier la signature associée à votre clé privée.
+
+>[!ENDSHADEBOX]
+
+Pour créer une clé de vérification des signes, sélectionnez **[!UICONTROL Sign Verification Key]** dans la fenêtre de sélection du type de clé, puis **[!UICONTROL Continue]** (Continuer).
+
+![Fenêtre de sélection du type de clé dans laquelle la clé de vérification de signature est sélectionnée.](../../images/tutorials/edi/choose_sign_verification_key_type.png)
+
+Ensuite, fournissez un titre et une clé PGP codée [!DNL Base64] comme clé publique, puis sélectionnez **[!UICONTROL Créer]**.
+
+![ La fenêtre Créer une clé de vérification des signes.](../../images/tutorials/edi/create_sign_verification_key.png)
+
+En cas de réussite, une nouvelle fenêtre s’affiche, affichant votre nouvelle clé de vérification de signature, y compris son titre et son identifiant de clé.
+
+![Détails de la clé de vérification de signe nouvellement créée.](../../images/tutorials/edi/sign_verification_key_details.png)
 
 ## Ingérer des données chiffrées {#ingest-encrypted-data}
 
@@ -82,39 +119,50 @@ Il est utile de connaître les fonctions et concepts Experience Platform suivant
 >title="Sélectionner le fichier d’exemple"
 >abstract="Vous devez ingérer un fichier d’exemple lors de l’ingestion de données chiffrées afin de créer un mapping."
 
+Vous pouvez ingérer des données chiffrées à l’aide des sources par lots de stockage dans le cloud suivantes :
 
-<!-- 
-## Outline
+* [[!DNL Amazon S3]](../ui/create/cloud-storage/s3.md)
+* [[!DNL Azure Blob]](../ui/create/cloud-storage/blob.md)
+* [[!DNL Azure Data Lake Storage Gen2]](../ui/create/cloud-storage/adls-gen2.md)
+* [[!DNL Azure File Storage]](../ui/create/cloud-storage/azure-file-storage.md)
+* [[!DNL Data Landing Zone]](../ui/create/cloud-storage/data-landing-zone.md)
+* [[!DNL FTP]](../ui/create/cloud-storage/ftp.md)
+* [[!DNL Google Cloud Storage]](../ui/create/cloud-storage/google-cloud-storage.md)
+* [[!DNL HDFS]](../ui/create/cloud-storage/hdfs.md)
+* [[!DNL Oracle Object Storage]](../ui/create/cloud-storage/oracle-object-storage.md)
+* [[!DNL SFTP]](../ui/create/cloud-storage/sftp.md)
 
-Sections:
+Authentifiez-vous avec la source de stockage dans le cloud de votre choix. Lors de l’étape de sélection des données du workflow, sélectionnez le fichier ou le dossier chiffré à ingérer, puis activez le bouton d’activation/désactivation **[!UICONTROL Is the file encrypted]**.
 
-* Create public key
-* Create customer key
-* Create sources flow to ingest encrypted data
-  * File ingestion
-  * Folder ingestion
-* Updated encrypted flow
+![L&#39;étape &quot;sélectionner les données&quot; du workflow des sources, où un fichier de données chiffré est sélectionné pour être ingéré.](../../images/tutorials/edi/select_data.png)
 
-* Select [!UICONTROL Key Pairs] from the header in the sources UI workspace.
-  * You are taken to the [!UICONTROL Key Pairs] page:
-    * Select **[!UICONTROL Encryption key]** for list of key pairs that you have created and managed.
-    * Select **[!UICONTROL Customer key]** for a list of key pairs that your customers have created and managed.
-* Key Pair functions:
-  * Select **[!UICONTROL Key details]** to view key details.
-  * Select **[!UICONTROL Delete]** to delete.
-* Select [!UICONTROL Create key] to create either an encryption key or a customer key
+Sélectionnez ensuite un fichier d’exemple parmi vos données source. Puisque vos données sont chiffrées, Experience Platform aura besoin d’un fichier d’exemple pour créer un schéma XDM pouvant être mappé à vos données source.
 
-## Questions and clarifications
+![ &quot;Ce fichier est-il chiffré ?&quot; Activez l’option et le bouton &quot;Sélectionner un fichier d’exemple&quot; sélectionné. ](../../images/tutorials/edi/select_sample_file.png)
 
-* Public key vs. customer key
-* Verify E2E:
-  * Create keys (encryption key or customer key)
-  * Use these keys to encrypt your data
-  * Place your encrypted data in your cloud storage (Amazon S3 or Google Cloud Storage)
-  * Ingest that encrypted data to Experience Platform by creating a source connection
-    * Select the encrypted source data
-    * Enable "Is the file encrypted"
-    * Select/upload sample file for mapping
-    * Use the encryption key name that corresponds with the key used to encrypt the source data
-      * If the data was encrypted using customer key, provide the sign verification key.
-  * Proceed with source connection creation flow -->
+Une fois le fichier d’exemple sélectionné, configurez les paramètres de vos données, tels que le format de données, le délimiteur et le type de compression correspondants. Laissez un certain temps à l’interface d’aperçu pour un rendu complet, puis sélectionnez **[!UICONTROL Enregistrer]**.
+
+![Un exemple est sélectionné pour l’ingestion et l’aperçu du fichier est entièrement chargé.](../../images/tutorials/edi/file_preview.png)
+
+À partir de là, utilisez le menu déroulant pour sélectionner le titre de la clé publique de l’ID de clé publique correspondant à la clé publique que vous avez utilisée pour chiffrer vos données.
+
+![Titre de la clé publique de l’ID de la clé publique correspondant à la clé publique utilisée pour chiffrer vos données.](../../images/tutorials/edi/public_key_id.png)
+
+Si vous avez également utilisé la paire de clés de vérification des signes pour fournir une couche supplémentaire de chiffrement, activez le bouton bascule de la clé de vérification des signes puis, de la même manière, utilisez la liste déroulante pour sélectionner l’identifiant de clé de vérification des signes correspondant à la clé que vous avez utilisée pour chiffrer vos données.
+
+![Titre de la clé de vérification de signature de l’identifiant de clé qui correspond à votre chiffrement de vérification de signature.](../../images/tutorials/edi/custom_key_id.png)
+
+Lorsque vous avez terminé, sélectionnez **[!UICONTROL Suivant]**.
+
+Suivez les étapes restantes du workflow des sources pour terminer la création de votre flux de données.
+
+* [Fournir des détails sur le flux de données et le jeu de données](../ui/dataflow/batch/cloud-storage.md#provide-dataflow-details)
+* [Mappage des données source à un schéma XDM](../ui/dataflow/batch/cloud-storage.md#map-data-fields-to-an-xdm-schema)
+* [Configuration d’un planning d’ingestion pour votre flux de données](../ui/dataflow/batch/cloud-storage.md#schedule-ingestion-runs)
+* [Vérifier le flux de données](../ui/dataflow/batch/cloud-storage.md#review-your-dataflow)
+
+Vous pouvez continuer à [mettre à jour votre flux de données](../ui/update-dataflows.md) une fois qu’il a été créé.
+
+## Étapes suivantes
+
+En lisant ce document, vous pouvez désormais ingérer des données chiffrées à partir de votre source de lot de stockage dans le cloud vers Experience Platform. Pour plus d’informations sur l’ingestion de données chiffrées à l’aide des API, lisez le guide sur l’[ingestion de données chiffrées à l’aide de l’ [!DNL Flow Service] API](../api/encrypt-data.md). Pour obtenir des informations générales sur les sources sur Experience Platform, consultez la [présentation des sources](../../home.md).
