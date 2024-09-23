@@ -1,13 +1,12 @@
 ---
 title: Présentation du connecteur Source de diffusion en continu Snowflake
 description: Découvrez comment créer une connexion source et un flux de données pour ingérer des données en continu de votre instance de Snowflake vers Adobe Experience Platform
-badgeBeta: label="Version bêta" type="Informative"
 badgeUltimate: label="Ultimate" type="Positive"
-last-substantial-update: 2023-05-25T00:00:00Z
+last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: e8ab39ce085a95eac898f65667706b71bdadd350
+source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '772'
 ht-degree: 18%
 
 ---
@@ -16,8 +15,7 @@ ht-degree: 18%
 
 >[!IMPORTANT]
 >
->* La source de diffusion [!DNL Snowflake] est en version bêta. Pour plus d’informations sur l’utilisation de sources étiquetées bêta, consultez la [Présentation des sources](../../home.md#terms-and-conditions).
->* La source de diffusion en continu [!DNL Snowflake] est disponible dans l’API pour les utilisateurs qui ont acheté Real-Time Customer Data Platform Ultimate.
+> La source de diffusion en continu [!DNL Snowflake] est disponible dans l’API pour les utilisateurs qui ont acheté Real-Time Customer Data Platform Ultimate.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 

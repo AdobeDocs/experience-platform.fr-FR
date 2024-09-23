@@ -1,12 +1,10 @@
 ---
 title: Diffusion en continu des données de votre base de données de Snowflake vers l’Experience Platform à l’aide de l’interface utilisateur
-type: Tutorial
 description: Découvrez comment diffuser des données de votre base de données Snwoflake vers Experience Platform
-badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: f39ee3af176e3d9b8ad04bfad81793db0ebe71a7
+source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1647'
 ht-degree: 17%
 
 ---
