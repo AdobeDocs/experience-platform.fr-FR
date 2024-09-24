@@ -4,9 +4,9 @@ title: Prise en main des livres de cas d’utilisation
 description: Commencez à utiliser la fonctionnalité des Playbooks de cas d’utilisation.
 role: Admin
 exl-id: 1c39792e-49fe-4c5f-9796-fa29f60b7461
-source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
+source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '989'
 ht-degree: 14%
 
 ---
@@ -105,11 +105,11 @@ Configurez également les canaux des livres de lecture qui contiennent des messa
 
 ### Surface du canal push
 
-Vérifiez que les surfaces de l’application sont configurées à partir de l’Experience Platform ou de l’interface Collections de données. Voici à quoi ressemblent les surfaces d’application dans l’environnement Collections de données.
+Vérifiez que les configurations de canal sont configurées à partir de l’Experience Platform ou de l’interface Collections de données. Voici à quoi ressemblent les configurations de canal dans l’environnement Collections de données .
 
-<!-- ![App surfaces in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
+<!-- ![Channel configurations in Data collections](/help/use-case-playbooks/assets/playbooks/get-started/.png) -->
 
-Sélectionnez ensuite le canal, les plateformes et les applications que vous avez étudiés dans les configurations de surface de l’application. Sélectionnez **Submit** pour créer la surface du canal push.
+Ensuite, sélectionnez le canal, les plateformes et les applications que vous avez étudiés dans les configurations de canal. Sélectionnez **Submit** pour créer la surface du canal push.
 
 Lisez la documentation sur la [configuration des surfaces de canal push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
 

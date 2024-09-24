@@ -4,7 +4,7 @@ title: Accédez aux classeurs de cas d’utilisation
 description: Découvrez comment parcourir une galerie de livres de jeu et commencer à utiliser un environnement de test inspirant.
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
-source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
+source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
 workflow-type: tm+mt
 source-wordcount: '717'
 ht-degree: 2%
@@ -67,7 +67,7 @@ Configurez également les canaux des livres de lecture qui contiennent des messa
 
 ### Surface du canal push
 
-Vérifiez que les surfaces de l’application sont configurées à partir de l’Experience Platform ou de l’interface Collections de données. Voici à quoi ressemblent les surfaces d’application dans l’environnement Collections de données.
+Vérifiez que les configurations de canal sont configurées à partir de l’Experience Platform ou de l’interface Collections de données. Voici à quoi ressemblent les configurations de canal dans l’environnement Collections de données .
 
 ## Étapes suivantes {#next-steps}
 

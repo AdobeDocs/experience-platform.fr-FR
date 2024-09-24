@@ -2,9 +2,9 @@
 title: Push Debug View
 description: Ce guide contient des informations détaillées sur la vue Débogage Push dans Adobe Experience Platform Assurance.
 exl-id: a9558ee2-2e80-4b0d-ab45-2020be85e634
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f9cc088cdda4323c80e35978fcde373cbba9204d
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Cette vue n’est activée que pour un seul client. La sélection d’un autre c
 
 ## Validation de la configuration
 
-L’onglet **[!UICONTROL Valider la configuration]** valide et fournit des détails supplémentaires sur la configuration push de l’application. Trois panneaux effectuent des validations. Une coche verte s’affiche si les validations réussissent toutes. S’il existe trois coches vertes, l’application a été correctement configurée pour la messagerie push, écrit des jetons push sur le profil utilisateur et a une surface d’application associée configurée.
+L’onglet **[!UICONTROL Valider la configuration]** valide et fournit des détails supplémentaires sur la configuration push de l’application. Trois panneaux effectuent des validations. Une coche verte s’affiche si les validations réussissent toutes. S’il existe trois coches vertes, l’application a été correctement configurée pour la messagerie push, écrit des jetons push sur le profil utilisateur et a une configuration de canal associée configurée.
 
 Si quelque chose ne fonctionne pas comme prévu, une alerte vous indique comment résoudre ce problème :
 
@@ -49,11 +49,9 @@ Enfin, au bas du panneau se trouve un lien qui ouvre ce profil spécifique dans 
 
 ### Informations d’identification et configuration d’AppStore
 
-Ce panneau valide la création d’une surface d’application correspondante pour l’ID de l’application et la plateforme de messagerie enregistrée dans le profil. Une surface d’application est l’endroit où les informations d’identification push de l’application sont chargées.
+Ce panneau valide la création de la configuration de canal correspondante pour l’ID de l’application et la plateforme de messagerie enregistrée dans le profil. Une configuration de canal est l’emplacement où les informations d’identification push de l’application sont chargées.
 
-S’il est valide, le profil affiche le nom de la surface de l’application, l’identifiant de l’application et le nom du service de messagerie.
-
-Enfin, au bas du panneau se trouve un lien qui ouvre cette surface d’application spécifique dans un nouvel onglet.
+S’il est valide, le profil affiche le nom de la configuration du canal, l’ID de l’application et le nom du service de messagerie.
 
 ## Envoyer un test push
 
@@ -71,9 +69,9 @@ Dans le volet **[!UICONTROL Message]**, vous pouvez fournir un titre et un corps
 
 ### Cible push
 
-Le volet **[!UICONTROL Cible push]** vous permet de personnaliser le jeton push et la surface de l’application à utiliser lors de l’envoi du message push.
+Le volet **[!UICONTROL Cible push]** vous permet de personnaliser le jeton push et la configuration de canal à utiliser lors de l’envoi du message push.
 
-Ces informations sont fournies par défaut si l’onglet **[!UICONTROL Valider la configuration]** affiche trois coches vertes. Cependant, vous pouvez fournir votre propre jeton push et votre propre surface d’application, même si votre application n’est pas entièrement configurée.
+Ces informations sont fournies par défaut si l’onglet **[!UICONTROL Valider la configuration]** affiche trois coches vertes. Cependant, vous pouvez fournir votre propre configuration de jeton push et de canal, même si votre application n’est pas entièrement configurée.
 
 ![Volet cible](./images/push-debug-view/target-pane.png)
 
