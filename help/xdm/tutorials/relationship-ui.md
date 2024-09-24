@@ -5,10 +5,10 @@ title: Définition d’une relation entre deux schémas à l’aide de l’édit
 description: Ce document fournit un tutoriel sur la définition d’une relation entre deux schémas à l’aide de l’éditeur de schémas dans l’interface utilisateur de l’Experience Platform.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
 workflow-type: tm+mt
-source-wordcount: '1158'
-ht-degree: 26%
+source-wordcount: '1376'
+ht-degree: 21%
 
 ---
 
@@ -109,19 +109,49 @@ Une fois que le champ de référence dédié de votre schéma source est défini
 
 >[!NOTE]
 >
->Les étapes ci-dessous expliquent comment définir un champ de relation à l’aide des commandes de rail droit dans la zone de travail. Si vous avez accès à l’édition B2B de Real-Time CDP, vous pouvez également définir une relation un-à-un à l’aide de la [même boîte de dialogue](./relationship-b2b.md#relationship-field) comme lors de la création de relations plusieurs-à-un.
+>Les relations ne peuvent être prises en charge que dans les champs de tableau de chaîne ou de chaîne.
 
-Sélectionnez le champ `preferredHotel` dans la zone de travail, puis faites défiler l’écran sous **[!UICONTROL Propriétés du champ]** jusqu’à ce que la case **[!UICONTROL Relationship]** s’affiche. Cochez la case pour afficher les paramètres requis pour la configuration d’un champ de relation.
+Sélectionnez le champ `preferredHotel` dans la zone de travail, puis **[!UICONTROL Ajouter une relation]** dans la barre latérale **[!UICONTROL Propriétés du champ]**.
 
-![](../images/tutorials/relationship/relationship-checkbox.png)
+![ L’éditeur de schémas avec l’option Ajouter une relation mise en surbrillance dans la barre latérale des propriétés du champ.](../images/tutorials/relationship/add-relationship.png)
 
-Sélectionnez la liste déroulante pour **[!UICONTROL Schéma de référence]** et sélectionnez le schéma de référence pour la relation (&quot;[!DNL Hotels]&quot; dans cet exemple). Sous **[!UICONTROL Espace de noms de l’identité de référence]**, sélectionnez l’espace de noms du champ d’identité du schéma de référence (dans ce cas, &quot;[!DNL Hotel ID]&quot;). Sélectionnez **[!UICONTROL Apply]** lorsque vous avez terminé.
+La boîte de dialogue [!UICONTROL Ajouter une relation] s’affiche. Dans cette boîte de dialogue, vous pouvez définir les paramètres requis pour configurer un champ de relation. Pour les utilisateurs de Real-Time CDP B2C, vous pouvez **uniquement** définir une relation un-à-un entre le schéma source et le schéma de référence.
 
-![](../images/tutorials/relationship/reference-schema-id-namespace.png)
+>[!NOTE]
+>
+>Si vous avez accès à l’édition B2B de Real-Time CDP, vous pouvez utiliser les commandes du rail droit du canevas pour définir un champ de relation, ainsi que créer une relation multiple-à-un à l’aide de la [même boîte de dialogue](./relationship-b2b.md#relationship-field).
+
+![Boîte de dialogue Ajouter une relation.](../images/tutorials/relationship/add-relationship-dialog.png)
+
+Utilisez la liste déroulante pour **[!UICONTROL Schéma de référence]** et sélectionnez le schéma de référence pour la relation (&quot;[!DNL Hotels]&quot; dans cet exemple).
+
+>[!NOTE]
+>
+>Seuls les schémas qui contiennent une identité principale sont inclus dans le menu déroulant du schéma de référence. Cette protection vous empêche de créer accidentellement une relation avec un schéma qui n’est pas encore correctement configuré.
+
+L’espace de noms d’identité du schéma de référence (dans ce cas, &quot;[!DNL Hotel ID]&quot;) est automatiquement renseigné sous **[!UICONTROL Espace de noms d’identité de référence]**. Sélectionnez **[!UICONTROL Apply]** lorsque vous avez terminé.
+
+![La boîte de dialogue Ajouter une relation avec les paramètres de relation configurés et Appliquer mis en surbrillance.](../images/tutorials/relationship/apply-relationship.png)
 
 Le champ `preferredHotel` est désormais mis en surbrillance en tant que relation dans la zone de travail, affichant le nom du schéma de référence. Sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer vos modifications et terminer le processus.
 
-![](../images/tutorials/relationship/relationship-save.png)
+![L’éditeur de schéma avec les références de relation et l’option Enregistrer en surbrillance.](../images/tutorials/relationship/relationship-save.png)
+
+### Modifier un champ de relation existant {#edit-relationship}
+
+Pour modifier le schéma de référence, sélectionnez un champ avec une relation existante, puis sélectionnez **[!UICONTROL Modifier la relation]** dans la barre latérale **[!UICONTROL Propriétés du champ]**.
+
+![L’éditeur de schémas avec la relation Modifier mise en surbrillance.](../images/tutorials/relationship/edit-relationship.png)
+
+La boîte de dialogue [!UICONTROL Modifier la relation] s’affiche. À partir de là, vous pouvez suivre le processus décrit dans [définition d&#39;un champ de relation](#relationship-field) ou supprimer la relation. Sélectionnez **[!UICONTROL Supprimer la relation]** pour supprimer la relation avec le schéma de référence.
+
+![Boîte de dialogue Modifier la relation.](../images/tutorials/relationship/edit-relationship-dialog.png)
+
+## Filtrage et recherche de relations {#filter-and-search}
+
+Vous pouvez filtrer et rechercher des relations spécifiques dans vos schémas à partir de l’onglet [!UICONTROL Relationships] de l’espace de travail [!UICONTROL Schemas] . Vous pouvez utiliser cette vue pour localiser et gérer rapidement vos relations. Lisez le document sur l’ [exploration des ressources de schéma](../ui/explore.md#lookup) pour obtenir des instructions détaillées sur les options de filtrage.
+
+![Onglet Relations de l’espace de travail des schémas.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## Étapes suivantes
 

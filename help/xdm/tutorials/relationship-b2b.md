@@ -2,10 +2,10 @@
 title: Définition d’une relation entre deux schémas dans Real-Time Customer Data Platform B2B Edition
 description: Découvrez comment définir une relation de type "plusieurs à un" entre deux schémas dans Adobe Real-Time Customer Data Platform B2B Edition.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 85d6cf10599d153a15c1bd56067f57439ddd0133
 workflow-type: tm+mt
-source-wordcount: '1363'
-ht-degree: 18%
+source-wordcount: '1769'
+ht-degree: 14%
 
 ---
 
@@ -65,19 +65,19 @@ Pour en tenir compte, toutes les classes B2B standard contiennent des champs &qu
 
 À titre de référence, les sections suivantes décrivent la structure de chaque schéma utilisé dans ce tutoriel avant la définition d’une relation. Prenez note de l’emplacement où les identités primaires ont été définies dans la structure du schéma et les espaces de noms personnalisés qu’elles utilisent.
 
-### schéma [!DNL Opportunities]
+### Schéma des opportunités
 
 Le schéma source &quot;[!DNL Opportunities]&quot; est basé sur la classe [!UICONTROL XDM Business Opportunity]. L’un des champs fournis par la classe, `opportunityKey`, sert d’identifiant pour le schéma. Plus précisément, le champ `sourceKey` sous l’objet `opportunityKey` est défini comme identité principale du schéma sous un espace de noms personnalisé appelé [!DNL B2B Opportunity].
 
-Comme vous pouvez le constater sous **[!UICONTROL Propriétés du schéma]**, ce schéma a été activé pour une utilisation dans [!DNL Real-Time Customer Profile].
+Comme vous pouvez le constater sous **[!UICONTROL Propriétés du champ]**, ce schéma a été activé pour une utilisation dans [!DNL Real-Time Customer Profile].
 
-![Schéma d’opportunités](../images/tutorials/relationship-b2b/opportunities.png)
+![Le schéma Opportunités dans l’éditeur de schémas avec l’objet opportunitésKey et le bouton bascule Activer pour le profil mis en surbrillance.](../images/tutorials/relationship-b2b/opportunities.png)
 
 ### schéma [!DNL Accounts]
 
 Le schéma de référence &quot;[!DNL Accounts]&quot; est basé sur la classe [!UICONTROL XDM Account]. Le champ `accountKey` de niveau racine contient le `sourceKey` qui agit comme son identité principale sous un espace de noms personnalisé appelé [!DNL B2B Account]. Ce schéma a également été activé pour une utilisation dans Profile.
 
-![Schéma de comptes](../images/tutorials/relationship-b2b/accounts.png)
+![Le schéma Comptes dans l’éditeur de schémas avec l’objet accountKey et le bouton activer pour le basculement de profil mis en surbrillance.](../images/tutorials/relationship-b2b/accounts.png)
 
 ## Définir un champ de relation pour le schéma source {#relationship-field}
 
@@ -97,29 +97,64 @@ Pour définir une relation entre deux schémas, le schéma source doit disposer 
 >
 >Actuellement, seules les relations multiples-à-un et une-à-un peuvent être définies d’un schéma source à un schéma de référence. Pour les relations de type &quot;un à plusieurs&quot;, vous devez définir le champ de relation dans le schéma qui représente le &quot;plusieurs&quot;.
 
-Pour définir un champ de relation, sélectionnez l’icône de flèche (![Icône de flèche](/help/images/icons/alias.png)) en regard du champ en question dans la zone de travail. Dans le cas du schéma [!DNL Opportunities], il s’agit du champ `accountKey.sourceKey` , car l’objectif est d’établir une relation multiple-à-un avec un compte.
+Pour définir un champ de relation, sélectionnez le champ en question dans la zone de travail, suivi de **[!UICONTROL Ajouter une relation]** dans la barre latérale [!UICONTROL Propriétés du schéma]. Dans le cas du schéma [!DNL Opportunities], il s’agit du champ `accountKey.sourceKey` , car l’objectif est d’établir une relation multiple-à-un avec un compte.
 
-![Bouton Relation](../images/tutorials/relationship-b2b/relationship-button.png)
+![L’éditeur de schéma avec le champ sourceKey et l’option Ajouter une relation mise en surbrillance.](../images/tutorials/relationship-b2b/add-relationship.png)
 
-Une boîte de dialogue s’affiche, vous permettant de spécifier les détails de la relation. Le type de relation est automatiquement défini sur **[!UICONTROL Multiple-à-un]**.
+La boîte de dialogue [!UICONTROL Ajouter une relation] s’affiche. Utilisez cette boîte de dialogue pour spécifier les détails de la relation. Par défaut, le type de relation est défini sur **[!UICONTROL Multiple-à-un]**.
 
-![Boîte de dialogue de relation](../images/tutorials/relationship-b2b/relationship-dialog.png)
+![La boîte de dialogue Ajouter une relation avec la relation de schéma multiple-à-un est mise en surbrillance.](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
-Sous **[!UICONTROL Schéma de référence]**, utilisez la barre de recherche pour trouver le nom du schéma de référence. Lorsque vous mettez en surbrillance le nom du schéma de référence, le champ **[!UICONTROL Espace de noms d’identité de référence]** est automatiquement mis à jour vers l’espace de noms de l’identité principale du schéma.
+Sous **[!UICONTROL Schéma de référence]**, utilisez la barre de recherche ou le menu déroulant pour trouver le nom du schéma de référence. Lorsque vous mettez en surbrillance le nom du schéma de référence, le champ **[!UICONTROL Espace de noms d’identité de référence]** se met automatiquement à jour vers l’espace de noms de l’identité principale du schéma de référence.
 
-![Schéma de référence](../images/tutorials/relationship-b2b/reference-schema.png)
+>[!NOTE]
+>
+>La liste des schémas de référence disponibles est filtrée pour ne contenir que les schémas appropriés. Les schémas **must** ont une identité principale affectée et sont soit une classe B2B, soit la classe Individual Profile. Les schémas de classe Prospect ne sont pas en mesure d’avoir des relations.
 
-Sous **[!UICONTROL Nom de la relation du schéma actuel]** et **[!UICONTROL Nom de la relation du schéma de référence]**, fournissez des noms conviviaux pour la relation dans le contexte des schémas source et de référence, respectivement. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** pour appliquer les modifications et enregistrer le schéma.
+![La boîte de dialogue Ajouter une relation avec les champs Schéma de référence et Espace de noms d’identité de référence est mise en surbrillance.](../images/tutorials/relationship-b2b/reference-schema.png)
 
-![Nom de la relation](../images/tutorials/relationship-b2b/relationship-name.png)
+Sous **[!UICONTROL Nom de la relation du schéma actuel]** et **[!UICONTROL Nom de la relation du schéma de référence]**, fournissez des noms conviviaux pour la relation dans le contexte des schémas source et de référence, respectivement. Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]** pour confirmer les modifications et enregistrer la relation.
 
-Le canevas réapparaît, le champ de relation étant désormais marqué du nom convivial que vous avez fourni précédemment. Le nom de la relation est également répertorié sous le rail de gauche pour référence facile.
+>[!NOTE]
+>
+>Les noms de relation doivent comporter 35 caractères ou moins.
 
-![Relation Appliquée](../images/tutorials/relationship-b2b/relationship-applied.png)
+![La boîte de dialogue Ajouter une relation avec les champs Nom de la relation est mise en surbrillance.](../images/tutorials/relationship-b2b/relationship-name.png)
+
+Le canevas réapparaît, le champ de relation étant désormais marqué du nom convivial que vous avez fourni précédemment. Le nom de la relation est également répertorié dans le rail de gauche pour référence facile.
+
+![Éditeur de schéma avec le nouveau nom de relation appliqué.](../images/tutorials/relationship-b2b/relationship-applied.png)
 
 Si vous affichez la structure du schéma de référence, le marqueur de relation s’affiche en regard du champ d’identité principal du schéma et dans le rail de gauche.
 
-![Marqueur de relation de schéma de destination](../images/tutorials/relationship-b2b/destination-relationship.png)
+![Le schéma de destination dans l’éditeur de schémas avec le nouveau marqueur de relation mis en surbrillance.](../images/tutorials/relationship-b2b/destination-relationship.png)
+
+## Modification d’une relation de schéma B2B {#edit-schema-relationship}
+
+Une fois une relation de schéma établie, sélectionnez le champ de relation dans le schéma source, suivi de **[!UICONTROL Modifier la relation]**.
+
+>[!NOTE]
+>
+>Pour afficher toutes les relations associées, sélectionnez le champ d’identité principal dans le schéma de référence, suivi de [!UICONTROL Afficher les relations].
+>![L’éditeur de schémas avec un champ de relation sélectionné et la relation Afficher mise en surbrillance.](../images/tutorials/relationship-b2b/view-relationships.png "L’éditeur de schémas avec un champ de relation sélectionné et Afficher la relation mise en surbrillance."){width="100" zoomable="yes"}
+
+![ L’éditeur de schémas avec un champ de relation et la relation Modifier mise en surbrillance.](../images/tutorials/relationship-b2b/edit-b2b-relationship.png)
+
+La boîte de dialogue [!UICONTROL Modifier la relation] s’affiche. Dans cette boîte de dialogue, vous pouvez modifier le schéma de référence et les noms des relations, ou supprimer la relation. Le type de relation multiple-à-un ne peut pas être modifié.
+
+![Boîte de dialogue Modifier la relation.](../images/tutorials/relationship-b2b/edit-b2b-relationship-dialog.png)
+
+Pour préserver l’intégrité des données et éviter les interruptions de la segmentation et d’autres processus, tenez compte des instructions suivantes lors de la gestion des relations de schéma avec les jeux de données liés :
+
+* Évitez de supprimer directement des relations si un schéma est associé à un jeu de données, car cela peut avoir un impact négatif sur la segmentation. Supprimez plutôt le jeu de données associé avant de supprimer la relation.
+* Vous ne pouvez pas modifier le schéma de référence sans supprimer au préalable la relation existante. Toutefois, cette opération doit être effectuée avec précaution, car la suppression d’une relation avec un jeu de données associé peut entraîner des conséquences inattendues.
+* L’ajout de nouvelles relations à un schéma avec des jeux de données liés existants peut ne pas fonctionner comme prévu et peut entraîner des conflits potentiels.
+
+## Filtrage et recherche de relations {#filter-and-search}
+
+Vous pouvez filtrer et rechercher des relations spécifiques dans vos schémas à partir de l’onglet [!UICONTROL Relationships] de l’espace de travail [!UICONTROL Schemas] . Vous pouvez utiliser cette vue pour localiser et gérer rapidement vos relations. Lisez le document sur l’ [exploration des ressources de schéma](../ui/explore.md#lookup) pour obtenir des instructions détaillées sur les options de filtrage.
+
+![Onglet Relations de l’espace de travail des schémas.](../images/tutorials/relationship-b2b/relationship-tab.png)
 
 ## Étapes suivantes
 

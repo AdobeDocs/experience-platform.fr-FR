@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation de l’interface utilisateur des schémas
 description: Cet aperçu couvre les principales fonctionnalités de l’espace de travail des schémas dans Experience Platform.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 16d6090bc71dbdc9ab42db98eafa0ea5afb5967b
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '307'
 ht-degree: 9%
 
 ---
@@ -17,7 +17,7 @@ L’espace de travail [!UICONTROL Schémas] de l’interface utilisateur de Adob
 
 Pour accéder à l’espace de travail dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le rail de gauche.
 
-![](../images/ui/overview/schemas-tab.png)
+![L’espace de travail des schémas avec les schémas surlignés dans l’interface utilisateur de Platform dans la navigation de gauche.](../images/ui/overview/schemas-tab.png)
 
 ## Commencer
 
