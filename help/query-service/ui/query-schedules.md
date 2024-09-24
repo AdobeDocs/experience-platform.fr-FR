@@ -2,10 +2,10 @@
 title: Planifications de requête
 description: Découvrez comment automatiser les exécutions de requêtes planifiées, supprimer ou désactiver un planning de requêtes et utiliser les options de planification disponibles via l’interface utilisateur de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: 19f1f64434d655d3b19260460519018fc9c8e174
+source-git-commit: c69311b3188a8d066a24235466afad1e725d489c
 workflow-type: tm+mt
-source-wordcount: '1848'
-ht-degree: 15%
+source-wordcount: '2051'
+ht-degree: 14%
 
 ---
 
@@ -141,7 +141,28 @@ Ou bien, pour afficher la liste des exécutions planifiées d’un modèle de re
 
 La liste des exécutions de requête pour cette requête planifiée s’affiche.
 
+### Calcul des heures au niveau de la tâche {#compute-hours}
+
+Effectuez le suivi des heures de calcul consommées au niveau de l’exécution des requêtes pour vos requêtes par lots CTAS/ITAS. Cette fonctionnalité offre des informations sur l’utilisation des ordinateurs, ce qui vous permet d’optimiser l’affectation des ressources et d’améliorer les performances des requêtes.
+
+>[!AVAILABILITY]
+>
+>La fonctionnalité Heures de calcul est réservée aux utilisateurs qui ont acheté le [SKU du Distiller de données](../data-distiller/overview.md). Pour plus d’informations, contactez votre représentant d’Adobe.
+
 ![La section des détails de l’espace de travail Requêtes planifiées avec une liste d’exécutions de requête mise en surbrillance pour une requête planifiée.](../images/ui/query-schedules/list-of-scheduled-runs.png)
+
+Le tableau suivant fournit des descriptions de chaque colonne disponible dans la section de détails qui répertorie les exécutions de requête planifiées.
+
+| Titre de la colonne | Description |
+|---------------------|----------------------------------|
+| [!UICONTROL ID d’exécution de requête] | Affiche un identifiant unique pour chaque exécution de requête, ce qui vous permet de suivre et de référencer les exécutions individuelles de vos requêtes planifiées. |
+| [!UICONTROL Démarrage de l’exécution de requête] | Indique la date et l’heure de début de l’exécution de la requête afin de vous aider à contrôler le début de chaque exécution. |
+| [!UICONTROL Exécution de requête terminée] | Affiche la date et l’heure d’achèvement de l’exécution de la requête, afin de fournir des informations sur la durée et l’état de l’exécution. |
+| [!UICONTROL Statut] | Affiche l’état actuel de l’exécution de la requête, par exemple `Completed,` `Running,` ou `Failed,` pour évaluer rapidement le résultat. |
+| [!UICONTROL Jeux de données] | Répertorie les jeux de données utilisés dans l’exécution de requête, pour indiquer les sources de données impliquées dans l’exécution. |
+| [!UICONTROL Heures de calcul] | Affiche le temps de calcul utilisé pour chaque exécution de requête, mesuré en heures. Cela permet de suivre l’utilisation des ressources et d’optimiser les performances des requêtes. |
+
+{style="table-layout:auto"}
 
 Pour obtenir des informations complètes sur la manière de surveiller l’état de toutes les tâches de requête via l’interface utilisateur, consultez le [guide de surveillance des requêtes planifiées](./monitor-queries.md#inline-actions) .
 
