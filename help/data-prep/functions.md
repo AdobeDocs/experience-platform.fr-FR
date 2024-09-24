@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Fonctions de mappage de prép de données
 description: Ce document présente les fonctions de mappage utilisées avec Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 5a4e0b3c97d315262ded35ca5bfada3612ed6db4
+source-git-commit: 1e06fa2f8a5685cf5debcc3b5279d7efab9af0c8
 workflow-type: tm+mt
-source-wordcount: '5805'
+source-wordcount: '6024'
 ht-degree: 8%
 
 ---
@@ -178,6 +178,10 @@ Pour plus d’informations sur la fonctionnalité de copie d’objet, reportez-v
 | size_of | Renvoie la taille de l’entrée. | <ul><li>INPUT : **Obligatoire** Objet dont vous essayez de trouver la taille.</li></ul> | size_of(INPUT) | `size_of([1, 2, 3, 4])` | 4 |
 | upsert_array_append | Cette fonction est utilisée pour ajouter tous les éléments du tableau d’entrée entier à la fin du tableau dans Profile. Cette fonction est **uniquement** applicable lors des mises à jour. Si elle est utilisée dans le contexte d’insertions, cette fonction renvoie l’entrée telle quelle. | <ul><li>ARRAY : **Obligatoire** Tableau à ajouter au tableau dans le profil.</li></ul> | upsert_array_append(ARRAY) | `upsert_array_append([123, 456])` | [123, 456] |
 | upsert_array_replace | Cette fonction est utilisée pour remplacer des éléments d’un tableau. Cette fonction est **uniquement** applicable lors des mises à jour. Si elle est utilisée dans le contexte d’insertions, cette fonction renvoie l’entrée telle quelle. | <ul><li>ARRAY : **Obligatoire** Le tableau pour remplacer le tableau dans le profil.</li></li> | upsert_array_replace(ARRAY) | `upsert_array_replace([123, 456], 1)` | [123, 456] |
+| [!BADGE Beta]{type=Informative} array_to_string | Associe les représentations sous forme de chaîne des éléments d’un tableau à l’aide du séparateur spécifié. Si le tableau est multidimensionnel, il est aplati avant d’être joint. **Remarque** : Cette fonction est utilisée dans les destinations. Pour plus d’informations, consultez la [documentation](../destinations/ui/export-arrays-calculated-fields.md) . | <ul><li>SÉPARATEUR : **Obligatoire** Le séparateur utilisé pour joindre les éléments du tableau.</li><li>ARRAY : **Obligatoire** Tableau à joindre (après aplatissement).</li></ul> | array_to_string(SEPAROR, ARRAY) | `array_to_string(";", ["Hello", "world"])` | &quot;Hello;world&quot; |
+| [!BADGE Beta]{type=Informative} filterArray* | Filtre le tableau donné en fonction d’un prédicat. **Remarque** : Cette fonction est utilisée dans les destinations. Pour plus d’informations, consultez la [documentation](../destinations/ui/export-arrays-calculated-fields.md) . | <ul><li>ARRAY : **Obligatoire** Tableau à filtrer</li><li>PREDICATE : **Obligatoire** Prédicat à appliquer sur chaque élément du tableau donné. | filterArray(ARRAY, PREDICATE) | `filterArray([5, -6, 0, 7], x -> x > 0)` | [5, 7] |
+| [!BADGE Beta]{type=Informative} transformArray* | Transforme le tableau donné en fonction d’un prédicat. **Remarque** : Cette fonction est utilisée dans les destinations. Pour plus d’informations, consultez la [documentation](../destinations/ui/export-arrays-calculated-fields.md) . | <ul><li>ARRAY : **Obligatoire** Tableau à transformer.</li><li>PREDICATE : **Obligatoire** Prédicat à appliquer sur chaque élément du tableau donné. | transformArray(ARRAY, PREDICATE) | ` transformArray([5, 6, 7], x -> x + 1)` | [6, 7, 8] |
+| [!BADGE Beta]{type=Informative} flattenArray* | Aplatit le tableau (multidimensionnel) donné en tableau unidimensionnel. **Remarque** : Cette fonction est utilisée dans les destinations. Pour plus d’informations, consultez la [documentation](../destinations/ui/export-arrays-calculated-fields.md) . | <ul><li>ARRAY : **Obligatoire** Le tableau à aplatir.</li></ul> | flattenArray(ARRAY) | flattenArray([[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;, &#39;d&#39;]], [[&#39;e&#39;], [&#39;f&#39;]]) | [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;] |
 
 {style="table-layout:auto"}
 
