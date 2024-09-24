@@ -3,10 +3,10 @@ title: Création d’une connexion Google Big Query Source dans l’interface ut
 description: Découvrez comment créer une connexion source Google Big Query à l’aide de l’interface utilisateur de Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: 55aaaa39659566de81bb161d704b6f8212e29a8b
+source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 39%
+source-wordcount: '620'
+ht-degree: 33%
 
 ---
 
@@ -74,6 +74,12 @@ Pour utiliser l’authentification du service, sélectionnez **[!UICONTROL Authe
 ![Nouvelle interface de compte dans laquelle l’authentification de service est sélectionnée.](../../../../images/tutorials/create/google-big-query/service_auth.png)
 
 >[!ENDTABS]
+
+### Ignorer l’aperçu des données d’exemple {#skip-preview-of-sample-data}
+
+Au cours de l’étape de sélection des données, vous pouvez rencontrer un délai d’expiration lors de l’ingestion de tables volumineuses ou de fichiers de données. Vous pouvez ignorer l’aperçu des données pour contourner le délai d’expiration et tout en affichant votre schéma, bien que sans exemple de données. Pour ignorer l’aperçu des données, activez la bascule **[!UICONTROL Ignorer l’aperçu des données d’exemple]** .
+
+Le reste du workflow restera le même. Le seul avertissement à retenir est que l’absence de prévisualisation des données peut empêcher la validation automatique des champs calculés et obligatoires lors de l’étape de mappage. Vous devrez ensuite valider manuellement ces champs lors du mappage.
 
 ## Étapes suivantes
 

@@ -2,10 +2,10 @@
 title: Connexion de votre compte Salesforce à l’aide de l’interface utilisateur Experience Platform
 description: Découvrez comment connecter votre compte Salesforce et importer vos données CRM dans Experience Platform à l’aide de l’interface utilisateur.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 5951b0f549c2fd2723945f8f4089d12f73b92e6c
+source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
 workflow-type: tm+mt
-source-wordcount: '841'
-ht-degree: 21%
+source-wordcount: '935'
+ht-degree: 19%
 
 ---
 
@@ -102,7 +102,7 @@ Pour une authentification de base, sélectionnez **[!UICONTROL Authentification 
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la source]**.
 
-![ Interface d’authentification de base pour la création de compte Salesforce.](../../../../images/tutorials/create/salesforce/basic.png)
+![Interface d’authentification de base pour la création de compte Salesforce.](../../../../images/tutorials/create/salesforce/basic.png)
 
 >[!TAB Informations d’identification du client OAuth2]
 
@@ -118,6 +118,12 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la sourc
 ![Interface OAuth pour la création de compte Salesforce.](../../../../images/tutorials/create/salesforce/oauth2.png)
 
 >[!ENDTABS]
+
+### Ignorer l’aperçu des données d’exemple {#skip-preview-of-sample-data}
+
+Au cours de l’étape de sélection des données, vous pouvez rencontrer un délai d’expiration lors de l’ingestion de tables volumineuses ou de fichiers de données. Vous pouvez ignorer l’aperçu des données pour contourner le délai d’expiration et tout en affichant votre schéma, bien que sans exemple de données. Pour ignorer l’aperçu des données, activez la bascule **[!UICONTROL Ignorer l’aperçu des données d’exemple]** .
+
+Le reste du workflow restera le même. Le seul avertissement à retenir est que l’absence de prévisualisation des données peut empêcher la validation automatique des champs calculés et obligatoires lors de l’étape de mappage. Vous devrez ensuite valider manuellement ces champs lors du mappage.
 
 ## Étapes suivantes
 
