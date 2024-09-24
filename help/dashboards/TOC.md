@@ -5,10 +5,10 @@ breadcrumb-title: Guide des tableaux de bord
 user-guide-description: Découvrez comment visualiser les données dans Experience Platform via des tableaux de bord personnalisables.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: 18d768f296d1f7087d05208fdff317b2fd9770af
 workflow-type: tm+mt
-source-wordcount: '133'
-ht-degree: 63%
+source-wordcount: '135'
+ht-degree: 64%
 
 ---
 
@@ -29,6 +29,7 @@ ht-degree: 63%
       * Filtres {#filters}
          * [Filtre de date](data-distiller/query-pro-mode/filters/date-filter.md)
          * [Filtre global](data-distiller/query-pro-mode/filters/global-filter.md)
+      * [Exploration](data-distiller/query-pro-mode/drill-through.md)
       * [Afficher plus](data-distiller/query-pro-mode/view-more.md)
       * [Afficher le SQL](data-distiller/query-pro-mode/view-sql.md)
       * [Téléchargement au format CSV](data-distiller/query-pro-mode/download-csv.md)
