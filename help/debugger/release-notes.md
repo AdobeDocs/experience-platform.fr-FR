@@ -5,32 +5,32 @@ keywords: debugger ; extension experience cloud debugger ; chrome ; extensi
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
 source-git-commit: 877e38154f6959d50bd0620290c2dce9decfc2b5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '781'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
 # Notes de mise à jour d’Adobe Experience Platform Debugger
 
-## Version 1.6.1 - vendredi 25 juillet 2024
+## Version 1.6.1 - 25 juillet 2024
 
 ### Correctifs et améliorations
 
-* Correction d’un problème qui empêchait les utilisateurs d’ajouter de nouveaux codes incorporés de balises aux pages sans ces codes.
+* Correction d’un problème qui empêchait les utilisateurs et utilisatrices d’ajouter de nouveaux codes incorporés de balises aux pages sans ces codes.
 
-## Version 1.6.0 - vendredi 11 juillet 2024
+## Version 1.6.0 - 11 juillet 2024
 
 ### Nouvelles fonctionnalités
 
-* Permet aux utilisateurs de s’inscrire/refuser à la collecte de données techniques et personnelles.
+* Permettre aux utilisateurs et utilisatrices d’accepter ou de refuser la collecte de données techniques et personnelles.
 
 ### Correctifs et améliorations
 
-* Correction du lien d’injection de script Firefox et de politique de confidentialité.
-* Capturez les requêtes Analytics manquantes.
-* Correction des blocages sur les pages avec de nombreux messages de console complexes.
-* Mettez à jour l’Adobe Experience Platform Debugger vers une extension Manifest v3.
+* Correction de l’injection de script dans Firefox et du lien vers la politique de confidentialité.
+* Capture des requêtes Analytics manquantes.
+* Correction des blocages sur les pages contenant de nombreux messages de console complexes.
+* Mise à jour d’Adobe Experience Platform Debugger vers une extension Manifest v3.
 
 ## Version 1.5.4 - 19 décembre 2023
 

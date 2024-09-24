@@ -3,7 +3,7 @@ title: Notes de mise à jour de l’extension Adobe Analytics Product String
 description: Dernières notes de mise à jour pour l’extension de balises d’Adobe Analytics Product String dans Adobe Experience Platform.
 exl-id: 3ddc3e6f-412c-42d5-8cbf-25273c1794d5
 source-git-commit: 88939d674c0002590939004e0235d3da8b072118
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '135'
 ht-degree: 100%
 

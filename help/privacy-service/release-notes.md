@@ -5,7 +5,7 @@ title: Notes de mise à jour de Privacy Service
 description: Dernières notes de mise à jour pour Adobe Experience Platform Privacy Service.
 exl-id: 66ee38f1-f0d5-44ff-823d-d1b8a9765c6d
 source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '552'
 ht-degree: 100%
 
