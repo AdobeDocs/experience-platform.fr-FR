@@ -3,7 +3,7 @@ title: Exemples de configurations de graphique
 description: Découvrez les scénarios de graphiques courants que vous pouvez rencontrer lors de l’utilisation de graphiques d’identités liant les règles et les données d’identité.
 badge: Version bêta
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
+source-git-commit: 6ad4709d8d361c16c22eddeef5f7ccdd1f4b2fb3
 workflow-type: tm+mt
 source-wordcount: '2786'
 ht-degree: 6%
@@ -767,6 +767,6 @@ Pour plus d’informations sur les règles de liaison des graphiques d’identit
 * [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
 * [Guide de mise en oeuvre](./implementation-guide.md)
 * [Dépannage et FAQ](./troubleshooting.md)
-* [Priorité d’espace de noms](./namespace-priority.md)
+* [Priorité des espaces de noms](./namespace-priority.md)
 * [Interface utilisateur de la simulation graphique](./graph-simulation.md)
 * [Interface utilisateur des paramètres d’identité](./identity-settings-ui.md)

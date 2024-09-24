@@ -2,10 +2,10 @@
 title: Créer une connexion source Adobe Analytics dans l’interface utilisateur
 description: Découvrez comment créer une connexion source Adobe Analytics dans l’interface utilisateur pour importer des données client dans Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 40ad3101f643e6ce1b24d2a02c1817cfe04bd5d5
+source-git-commit: 71932d6f743d8cf767ce4e088231e61e9c2160e0
 workflow-type: tm+mt
-source-wordcount: '2577'
-ht-degree: 42%
+source-wordcount: '2672'
+ht-degree: 41%
 
 ---
 
@@ -312,6 +312,13 @@ Pour plus d’informations sur le renvoi, les données en direct et leurs latenc
 >[!NOTE]
 >
 >La page de l’activité du jeu de données n’affiche pas d’informations sur les lots, car le connecteur source Analytics est entièrement géré par Adobe. Vous pouvez vérifier que les données circulent en examinant les mesures relatives aux enregistrements ingérés.
+
+## Supprimer le flux de données {#delete-dataflow}
+
+Pour supprimer votre flux de données Analytics, sélectionnez **[!UICONTROL Flux de données]** dans l’en-tête supérieur de l’espace de travail des sources. Utilisez la page des flux de données pour localiser le flux de données Analytics que vous souhaitez supprimer, puis sélectionnez les ellipses (`...`) à côté. Ensuite, utilisez le menu déroulant et sélectionnez **[!UICONTROL Supprimer]**.
+
+* La suppression du flux de données Analytics actif supprimera également son jeu de données sous-jacent.
+* La suppression du flux de données Analytics de renvoi ne supprime pas le jeu de données sous-jacent, mais arrête le processus de renvoi pour sa suite de rapports correspondante. Si vous supprimez le flux de données de renvoi, les données ingérées peuvent toujours être consultées par le biais du jeu de données.
 
 ## Étapes suivantes et ressources supplémentaires
 
