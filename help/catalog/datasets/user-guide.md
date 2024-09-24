@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur des jeux de données
 description: Découvrez comment exécuter des actions courantes lors de l’utilisation de jeux de données dans l’interface utilisateur de Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: a168f61fabddd06d586f7909fd92c0409fd2f51e
+source-git-commit: 0bb10754e2f5bc289567368c803d4397cec77bf6
 workflow-type: tm+mt
-source-wordcount: '3203'
-ht-degree: 17%
+source-wordcount: '3801'
+ht-degree: 14%
 
 ---
 
@@ -96,6 +96,7 @@ L’interface utilisateur des jeux de données propose désormais des collection
 * [[!UICONTROL  Gestion des données et des étiquettes d’accès]](#manage-and-enforce-data-governance)
 * [[!UICONTROL Activer le profil unifié]](#enable-profile)
 * [[!UICONTROL Gérer les balises]](#manage-tags)
+* [(Beta) [!UICONTROL Définition de la politique de conservation des données]](#data-retention-policy)
 * [[!UICONTROL Déplacer vers des dossiers]](#move-to-folders)
 * [[!UICONTROL Supprimer]](#delete).
 
@@ -168,6 +169,53 @@ La boîte de dialogue [!UICONTROL Gérer les balises] peut également supprimer 
 Une fois qu’une balise a été ajoutée à un jeu de données, les jeux de données peuvent être filtrés en fonction de la balise correspondante. Pour plus d’informations, consultez la section sur la [filtrage des jeux de données par balises](#enable-profile) .
 
 Pour plus d’informations sur la manière de classer les objets d’entreprise pour une découverte et une catégorisation plus simples, consultez le guide sur la [gestion des taxonomies de métadonnées](../../administrative-tags/ui/managing-tags.md). Ce guide explique comment un utilisateur disposant des autorisations appropriées peut créer des balises prédéfinies, affecter des catégories aux balises et effectuer toutes les opérations CRUD associées sur des balises et des catégories de balises dans l’interface utilisateur de Platform.
+
+### (Beta) Définition de la politique de conservation des données {#data-retention-policy}
+
+>[!AVAILABILITY]
+> 
+>Les paramètres de conservation des données sont actuellement en version bêta et ne sont disponibles que dans une **version limitée** pour certaines organisations. Il se peut que votre interface utilisateur ne reflète pas la fonctionnalité décrite ci-dessous.
+
+Gérez les stratégies d’expiration et de conservation des jeux de données au niveau du jeu de données à partir de l’onglet [!UICONTROL Parcourir] de l’espace de travail [!UICONTROL Jeux de données]. Vous pouvez utiliser cette fonction pour configurer des stratégies de rétention pour les données déjà ingérées dans le lac de données et les services Profile. La date d’expiration est basée sur le moment où les données ont été ingérées dans Platform et vos règles de conservation.
+
+Pour ouvrir la boîte de dialogue [!UICONTROL Définir la rétention des données], sélectionnez les points de suspension en regard du jeu de données suivi de l’option **[!UICONTROL Définir la politique de rétention des données]** dans le menu déroulant.
+
+![Onglet Parcourir de l’espace de travail des jeux de données avec les points de suspension et l’option Définir la politique de conservation des données mise en surbrillance.](../images/datasets/user-guide/set-data-retention-policy-dropdown.png)
+
+La boîte de dialogue [!UICONTROL Définir la rétention des données] s’affiche. La boîte de dialogue affiche les mesures d’utilisation des licences au niveau de l’environnement de test , les détails au niveau du jeu de données et les paramètres du lac de données. Ces mesures indiquent votre utilisation par rapport à vos droits. Les détails du jeu de données incluent le nom du jeu de données, le type, l’état d’activation de Profile et l’utilisation actuelle du stockage du lac de données.
+
+>[!NOTE]
+>
+>Les mesures de stockage de lac de données sous licence au niveau des environnements de test sont toujours en cours de développement et ne sont pas disponibles.
+
+![Boîte de dialogue Définir la rétention des données.](../images/datasets/user-guide/set-data-retention-dialog.png)
+
+Avant de configurer la politique de conservation des jeux de données, la boîte de dialogue affiche les paramètres de conservation recommandés. La période de conservation recommandée par défaut est d’un mois. Pour ajuster la politique de conservation standard, sélectionnez et mettez à jour le nombre, puis choisissez la période souhaitée (jours, mois, années). Vous pouvez configurer vos paramètres de rétention pour le lac de données et le service de profil indépendamment.
+
+>[!NOTE]
+> 
+>La durée minimale de conservation des données pour le lac de données est de 30 jours. La durée minimale de rétention des données pour Profile Service est d’un jour.
+
+![ La boîte de dialogue Définir la rétention des données avec la liste déroulante Durée et Enregistrer en surbrillance.](../images/datasets/user-guide/time-unit-dropdown.png)
+
+Pour plus d’informations sur les règles qui définissent les plages de dates d’expiration des jeux de données et les bonnes pratiques pour configurer votre politique de conservation des données, consultez la [page des questions fréquentes](../catalog-faq.md) .
+
+#### (Beta) Amélioration de la visibilité des périodes de conservation et des mesures de stockage {#retention-and-storage-metrics}
+
+Quatre nouvelles colonnes sont disponibles pour les utilisateurs bêta qui offrent une meilleure visibilité sur votre gestion des données : **[!UICONTROL Stockage du lac de données]**, **[!UICONTROL Rétention du lac de données]**, **[!UICONTROL Stockage de profil]** et **[!UICONTROL Rétention des profils]**. Ces mesures indiquent le volume de stockage de vos données et leur durée de conservation dans le lac de données et les services Profile. Ces informations vous aident à optimiser les politiques de rétention, à suivre l’utilisation par rapport aux droits et à garantir la conformité aux normes organisationnelles et réglementaires. Cette visibilité accrue vous permet de prendre des décisions éclairées, de gérer les coûts, de rationaliser la gouvernance et de comprendre clairement votre paysage de données.
+
+![Onglet Parcourir de l’espace de travail des jeux de données avec les quatre nouvelles colonnes de stockage et de rétention surlignées.](../images/datasets/user-guide/storage-and-retention-columns.png)
+
+Le tableau suivant présente un aperçu des nouvelles mesures de conservation et de stockage disponibles dans la version bêta. Il détaille l’objectif de chaque colonne et la manière dont il facilite la gestion de la conservation et du stockage des données dans l’interface utilisateur de Platform.
+
+| Titre de la colonne | Description |
+|---|---|
+| [!UICONTROL Conservation du lac de données] | Affiche la durée de conservation actuelle de chaque jeu de données. Cette valeur peut être modifiée dans les paramètres de conservation de chaque jeu de données. La politique de conservation des données du lac établit des règles pour la durée pendant laquelle les données sont stockées et quand elles doivent être supprimées dans différents services. |
+| [!UICONTROL Stockage du lac de données] | Affiche l’utilisation actuelle du stockage pour chaque jeu de données du lac de données. Cette mesure permet de suivre l’espace occupé par chaque jeu de données, ce qui facilite la gestion des limites de stockage et l’optimisation de l’utilisation. |
+| [!UICONTROL Stockage de profil] | Affiche l’utilisation actuelle du stockage pour chaque jeu de données dans les services Profile. Utilisez ces informations pour surveiller la consommation de stockage et vous assurer qu’elles correspondent à vos objectifs de Data Management. |
+| [!UICONTROL Rétention des profils] | Indique la durée de rétention pour chaque jeu de données Profile. Cette valeur peut être ajustée dans les paramètres de rétention du jeu de données, ce qui vous permet de contrôler la durée pendant laquelle les données Profile sont stockées avant la suppression. |
+
+{style="table-layout:auto"}
 
 ### Déplacer vers des dossiers {#move-to-folders}
 
@@ -344,3 +392,4 @@ Ce guide d’utilisation a fourni des instructions pour exécuter des actions co
 * [Création d’un jeu de données à l’aide d’API](create.md)
 * [Interrogation des données d’un jeu de données à l’aide de l’API Data Access](../../data-access/home.md)
 * [Configuration d’un jeu de données pour Real-time Customer Profile et Identity Service à l’aide des API](../../profile/tutorials/dataset-configuration.md)
+

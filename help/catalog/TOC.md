@@ -4,9 +4,9 @@ user-guide-title: Guide des catalogues et des jeux de données
 user-guide-description: Explorez la traçabilité des données, les métadonnées, les descriptions de fichiers, les répertoires et les jeux de données dans le lac de données et découvrez-en plus sur le système de service de catalogue.
 feature: Catalog
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 71fc03194c38a155822d6fc1ee69c82e6f71ad73
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '115'
 ht-degree: 100%
 
 ---
@@ -36,4 +36,5 @@ ht-degree: 100%
    * [Activer un jeu de données pour les mises à jour de profil (upsert)](datasets/enable-upsert.md)
 * [Traitement des demandes d’accès à des informations personnelles dans le lac de données](privacy.md)
 * [Référence d’API](https://www.adobe.io/experience-platform-apis/references/catalog/)
+* [Questions fréquentes](catalog-faq.md)
 * [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
