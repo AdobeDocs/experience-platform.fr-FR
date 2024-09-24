@@ -2,10 +2,10 @@
 title: Présentation des journaux d’audit
 description: Découvrez comment les journaux d’audit vous permettent de savoir qui a effectué quelles actions dans Adobe Experience Platform.
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 7ae5e9dc79b4e1f08d2bf98876b02db1967ccbe1
 workflow-type: tm+mt
-source-wordcount: '1291'
-ht-degree: 40%
+source-wordcount: '1350'
+ht-degree: 39%
 
 ---
 
@@ -133,6 +133,22 @@ Pour exporter la liste actuelle des journaux d’audit, sélectionnez **[!UICONT
 Dans la boîte de dialogue qui s’affiche, sélectionnez le format souhaité (**[!UICONTROL CSV]** ou **[!UICONTROL JSON]**), puis sélectionnez **[!UICONTROL Télécharger]**. Le navigateur télécharge le fichier généré et l’enregistre sur votre ordinateur.
 
 ![ La boîte de dialogue de sélection du format de fichier avec [!UICONTROL Téléchargement] surligné.](../../images/audit-logs/select-download-format.png)
+
+## Activer les alertes {#enable-alerts}
+
+Vous pouvez activer les alertes d’audit pour recevoir des notifications pour les règles suivantes :
+
+* Création d’audience
+* Mise à jour d’audience
+* Suppression d’audience
+* Création de jeux de données
+* Mise à jour du jeu de données
+* Suppression de jeux de données
+* Création de schéma
+* Mise à jour du schéma
+* Suppression de schéma
+
+Sélectionnez l’alerte de votre choix dans la liste pour vous abonner aux notifications. Pour plus d’informations sur les alertes, consultez le guide sur l’ [abonnement aux alertes à l’aide de l’interface utilisateur](../../../observability/alerts/ui.md).
 
 ## Gestion des journaux d’audit dans l’API
 
