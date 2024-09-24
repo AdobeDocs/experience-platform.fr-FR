@@ -4,10 +4,10 @@ title: Guide de lʼinterface utilisateur des alertes
 description: Découvrez comment gérer les alertes dans lʼinterface utilisateur dʼExperience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 9004a2203996f0fd64833a03f211232ebf14e3e4
+source-git-commit: 2e0fc17fee9b1586b4c2b44c326e2c305c127fad
 workflow-type: tm+mt
-source-wordcount: '626'
-ht-degree: 40%
+source-wordcount: '797'
+ht-degree: 36%
 
 ---
 
@@ -23,7 +23,7 @@ Commencez par sélectionner **[!UICONTROL Alertes]** dans le volet de navigation
 
 ![ La page Alertes surlignant les [!UICONTROL alertes] dans le volet de navigation de gauche.](../images/alerts/ui/workspace.png)
 
-## Gestion des règles dʼalerte
+## Gestion des règles dʼalerte {#manage-rules}
 
 Lʼonglet **[!UICONTROL Parcourir]** répertorie les règles disponibles susceptibles de déclencher une alerte.
 
@@ -37,7 +37,7 @@ Sélectionnez les points de suspension (**...**) en regard du nom dʼune règle 
 
 ![Les ellipses sélectionnées affichent le menu déroulant.](../images/alerts/ui/disable-subscribe.png)
 
-## Gérer les abonnés aux alertes
+## Gérer les abonnés aux alertes {#manage-subscribers}
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Vous avez correctement ajouté des utilisateurs à votre liste de notifications 
 
 ![Exemple de courrier électronique de notification d’alerte reçue.](../images/alerts/ui/manage-alert-subscribers-email.png)
 
-## Activation des alertes par email
+## Activation des alertes par email {#enable-email}
 
 Les notifications d&#39;alerte peuvent être diffusées directement à votre email.
 
@@ -85,7 +85,35 @@ Accédez à la section **Emails** au bas de la page et sélectionnez **[!UICONTR
 
 Toutes les alertes auxquelles vous êtes abonné seront désormais envoyées à l’adresse électronique connectée à votre compte Adobe ID.
 
-## Affichage de lʼhistorique des alertes
+## Personnalisation du seuil d’alerte {#alert-threshold}
+
+Les seuils d’alerte peuvent être personnalisés pour les types d’alerte suivants :
+
+| Type d’alerte | Paramètre personnalisé |
+|---|---|
+| Retard de la tâche relative aux segments | Seuil de délai |
+| Délai d’exportation de segments | Seuil de délai |
+| Délai d’exécution du flux de destination | Seuil de délai |
+| Retard d’exécution du flux du service d’identités | Seuil de délai |
+| Retard d’exécution du flux de profils | Seuil de délai |
+| Délai d’exécution du flux des sources | Seuil de délai |
+| Retard d’exécution de requête | Seuil de délai |
+| Taux de saut d’activation dépassé | Seuil d’erreur |
+| Taux d’erreur d’ingestion des sources dépassé | Seuil d’erreur |
+
+Sélectionnez les points de suspension (**...**) en regard du nom d’une règle. Une liste déroulante affiche les commandes. Sélectionnez **[!UICONTROL Modifier]**.
+
+![L’option [!UICONTROL Modifier] est mise en surbrillance pour la règle sélectionnée.](../images/alerts/ui/threshold-edit.png)
+
+La page **[!UICONTROL Personnaliser l’alerte]** s’affiche. Mettez à jour le seuil à la minute souhaitée, puis sélectionnez **[!UICONTROL Confirmer]**.
+
+![ La page Personnaliser l&#39;alerte surlignant les options [!UICONTROL Seuil] et [!UICONTROL Confirmer].](../images/alerts/ui/threshold-update.png)
+
+Vous revenez à la page **[!UICONTROL Alertes]** . Pour afficher les paramètres de seuil de l’alerte, sélectionnez la règle dans la liste. Vous pouvez voir les paramètres de seuil de l’alerte dans le rail de droite, y compris des détails tels que l’état et la gravité.
+
+![Une alerte mise en surbrillance pour afficher les détails dans le rail de droite et mettre en surbrillance [!UICONTROL Seuil].](../images/alerts/ui/threshold-view.png)
+
+## Affichage de lʼhistorique des alertes {#alert-history}
 
 Lʼonglet **[!UICONTROL Historique]** affiche lʼhistorique des alertes reçues pour votre organisation, y compris la règle qui a déclenché lʼalerte, la date de déclenchement et la date de résolution (le cas échéant).
 
