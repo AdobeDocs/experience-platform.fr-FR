@@ -2,10 +2,10 @@
 title: Bonnes pratiques relatives aux droits de licence de gestion des données
 description: Découvrez les bonnes pratiques à suivre et les outils que vous pouvez utiliser pour mieux gérer vos droits de licence avec Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 1b8fd7671146519fa66768aab3fe081adb0bd6c6
 workflow-type: tm+mt
-source-wordcount: '2237'
-ht-degree: 73%
+source-wordcount: '2145'
+ht-degree: 74%
 
 ---
 
@@ -42,12 +42,7 @@ Lorsque vous acquérez une licence pour Experience Platform, vous recevez des d
 
 **[!DNL Addressable Audience]** : le nombre total de profils clients autorisés par contrat dans Experience Platform, y compris les profils connus et pseudonymes.
 
-**[!DNL Profile Richness]** : le volume moyen des données de profil dans Experience Platform. Vous pouvez augmenter vos droits de [!DNL Profile Richness] en achetant un pack d’augmentation de richesse.
-
-La mesure de [!DNL Profile Richness] varie en fonction de la licence que vous avez achetée. Deux calculs de [!DNL Profile Richness] sont disponibles :
-
-* La somme de toutes les données de production stockées dans Adobe Real-Time Customer Data Platform (c’est-à-dire Real-Time Customer Profile et Identity Service) à tout moment, divisée par le [!DNL Addressable Audience] ;
-* Somme de toutes les données stockées dans Platform (y compris, mais sans s’y limiter, [!DNL data lake], Real-Time Customer Profile et Identity Service) à tout moment et toutes les données que vous diffusez (au lieu de les stocker) dans Platform au cours des 12 derniers mois, divisée par [!DNL Addressable Audience].
+**[!DNL Total Data Volume]** : quantité totale de données disponibles pour le service de profil Adobe Experience Platform à utiliser dans les workflows d’engagement.
 
 La disponibilité de ces mesures et la définition spécifique de chacune d’elles varient en fonction des licences achetées par l’entreprise.
 
@@ -108,7 +103,7 @@ Les filtres d’ingestion vous permettent d’importer uniquement les données n
 | --- | --- |
 | Filtrage de la source Adobe Audience Manager | Lorsque vous créez une connexion source Adobe Audience Manager, vous pouvez choisir les segments et les caractéristiques à importer dans [!DNL data lake] et Real-Time Customer Profile, plutôt que d’ingérer les données d’Audience Manager dans leur intégralité. Pour plus d’informations, consultez le guide sur la [création d’une connexion source Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). |
 | Préparation de données Adobe Analytics | Vous pouvez utiliser les fonctionnalités de [!DNL Data Prep] lors de la création d’une connexion source Analytics pour filtrer les données qui ne sont pas requises pour vos cas d’utilisation. [!DNL Data Prep] vous permet de définir les attributs/colonnes à publier dans le profil. Vous pouvez également fournir des instructions conditionnelles pour indiquer à Platform si les données doivent être publiées dans le profil ou uniquement dans le [!DNL data lake]. Pour plus d’informations, consultez le guide sur la [création d’une connexion source Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md). |
-| Prise en charge de l’activation et de la désactivation des jeux de données pour le profil | Pour ingérer des données dans Real-time Customer Profile, vous devez activer un jeu de données à utiliser dans la banque de profils. Ce faisant, vous élargissez l’[!DNL Addressable Audience] et les droits de [!DNL Profile Richness]. Une fois qu’un jeu de données n’est plus nécessaire pour les cas d’utilisation de profil client, vous pouvez désactiver l’intégration de ce jeu de données au profil afin de vous assurer que vos données restent conformes à la licence. Pour plus d’informations, consultez le guide sur l’[activation et la désactivation des jeux de données pour le profil](../../catalog/datasets/enable-for-profile.md). |
+| Prise en charge de l’activation et de la désactivation des jeux de données pour le profil | Pour ingérer des données dans Real-time Customer Profile, vous devez activer un jeu de données à utiliser dans la banque de profils. Ce faisant, vous élargissez l’[!DNL Addressable Audience] et les droits de [!DNL Total Data Volume]. Une fois qu’un jeu de données n’est plus nécessaire pour les cas d’utilisation de profil client, vous pouvez désactiver l’intégration de ce jeu de données au profil afin de vous assurer que vos données restent conformes à la licence. Pour plus d’informations, consultez le guide sur l’[activation et la désactivation des jeux de données pour le profil](../../catalog/datasets/enable-for-profile.md). |
 | Exclusion des données du SDK Web et du SDK mobile | Il existe deux types de collecte de données par le SDK Web et Mobile : les données collectées automatiquement et les données collectées explicitement par le développeur. Pour mieux gérer la conformité de licence, vous pouvez désactiver la collecte de données automatique dans la configuration du SDK via le paramètre contextuel. Les données personnalisées peuvent également être supprimées ou non définies par votre développeur. |
 | Exclusion des données du transfert côté serveur | Si vous envoyez des données à Platform à l’aide du transfert côté serveur, vous pouvez exclure les données envoyées en supprimant le mappage dans une action de règle pour l’exclure de tous les événements ou en ajoutant des conditions à la règle afin que les données ne se déclenchent que pour certains événements. Pour plus d’informations, consultez la documentation sur les [événements et conditions](/help/tags/ui/managing-resources/rules.md#events-and-conditions-if). |
 | Filtrer des données au niveau de la source | Vous pouvez utiliser des opérateurs logiques et de comparaison pour filtrer les données au niveau des lignes de vos sources avant de créer une connexion et d’ingérer des données vers Experience Platform. Pour plus d’informations, consultez le guide sur le [filtrage des données au niveau des lignes pour une source à l’aide de l’ [!DNL Flow Service] API](../../sources/tutorials/api/filter.md). |

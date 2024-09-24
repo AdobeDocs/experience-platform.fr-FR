@@ -3,10 +3,10 @@ title: Complémenter les profils propriétaires avec des attributs fournis par l
 description: Découvrez comment compléter les profils propriétaires avec des attributs de partenaires de données de confiance pour améliorer vos bases de données, obtenir de nouvelles informations sur votre base de clientes et de clients et optimiser l’audience.
 feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
-source-git-commit: 9737508bd8435f4edf0e60a3559c1b4352ccb29f
+source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '1256'
-ht-degree: 79%
+source-wordcount: '1257'
+ht-degree: 77%
 
 ---
 
@@ -41,7 +41,7 @@ Lorsque vous envisagez de compléter vos propres profils propriétaires avec des
 
 >[!WARNING]
 >
->Les attributs supplémentaires fournis par le partenaire ingérés dans Real-Time CDP ont un impact sur la *richesse moyenne du profil*. Pour plus d’informations sur la richesse du profil, consultez la [description du produit Real-time Customer Data Platform](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html).
+>Les attributs supplémentaires fournis par le partenaire ingérés dans Real-Time CDP ont un impact sur le *volume total de données*. Lisez la [description du produit Real-Time Customer Data Platform](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) pour plus d’informations sur le volume total de données.
 
 ## Présentation vidéo {#video-walkthrough}
 

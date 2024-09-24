@@ -4,9 +4,9 @@ title: Tableau de bord d’utilisation de la licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: b1de61b2e7d0dedf2da8ef8ffb02fe5c15e82fb2
+source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
 workflow-type: tm+mt
-source-wordcount: '2720'
+source-wordcount: '2702'
 ht-degree: 9%
 
 ---
@@ -205,7 +205,6 @@ Le tableau de bord de l’utilisation des licences répertorie plusieurs mesures
 | [!UICONTROL Taille de l’Audience Activation] | Taille totale des profils activés sur toute destination basée sur des fichiers au cours d’une année. Remarque : Cela n’inclut pas les profils envoyés par le biais de destinations de diffusion en continu. |
 | [!UICONTROL Audience adressable] | Somme des droits de l’audience de votre entreprise et des droits de l’audience du consommateur. Une audience de consommateur est définie comme le nombre de profils de personne identifiés comme &quot;audience de consommateur&quot; sur la commande client. Une audience métier est définie comme le nombre de profils de personnes économiques identifiées comme le &quot;public professionnel&quot; dans la commande client. |
 | [!UICONTROL Packs d’utilisateurs d’Adhoc Query Service] | Module complémentaire permettant d’augmenter les droits des utilisateurs de Query Service simultanés autorisés de cinq autres utilisateurs simultanés de Query Service et d’une requête ad hoc supplémentaire en cours d’exécution par pack. Plusieurs packs d’utilisateur de requête ad hoc supplémentaires peuvent être sous licence. |
-| [!UICONTROL Richesse moyenne du profil] | La somme de toutes les données de production stockées dans le service de profil Hub à un moment donné, divisée par cinq fois le nombre de profils de personnes commerciales autorisés. [!UICONTROL Richesse moyenne du profil] est une fonctionnalité partagée. |
 | [!UICONTROL Lignes CJA disponibles] | Lignes de données quotidiennes moyennes disponibles pour l’analyse dans Customer Journey Analytics. |
 | [!UICONTROL Attributs calculés] | Comptage total des données comportementales de profil agrégées. Les données comportementales de profil agrégées sont basées sur des événements d’expérience convertis en attribut de profil et pouvant être inclus dans un profil de personne ou de personne professionnelle. |
 | [!UICONTROL Audience des consommateurs] | Le nombre de profils de personne identifiés comme &quot;Audience client&quot; sur la commande client. |
@@ -216,9 +215,10 @@ Le tableau de bord de l’utilisation des licences répertorie plusieurs mesures
 | [!UICONTROL Audiences analogue] | Nombre d’audiences générées par la modélisation d’une audience de consommateur existante afin d’identifier les profils de personne similaires à cette audience de consommateur existante. |
 | [!UICONTROL Nombre de modèles AMM] | Nombre du modèle d’apprentissage automatique (intégré à l’Adobe Mix Modeler) utilisé pour mesurer et/ou prédire un résultat spécifié en fonction de vos investissements. |
 | [!UICONTROL Nombre d’environnements de test] | Nombre de séparations logiques au sein de votre instance de tout service On-Demand Adobe accédant à Adobe Experience Platform pour isoler les données et les opérations. |
-| [!UICONTROL Richesse du profil : nombre de packs] | Augmentation de la richesse moyenne autorisée du profil de 25 Ko par profil pour chaque pack de richesse de profil supplémentaire. |
+| [!UICONTROL Richesse du profil : nombre de packs] | Augmentation de 25 Ko du volume total de données autorisé par profil pour chaque pack de richesse de profil supplémentaire. |
 | [!UICONTROL Heures de calcul de Query Service] | Mesure du temps pris par les moteurs Query Service pour lire, traiter et écrire des données dans le lac de données lors de l’exécution d’une requête par lots. |
 | [!UICONTROL Segmentation par flux : nombre de packs] | Les packs mettent à jour l’adhésion au segment pour un profil de personne lorsque de nouvelles données entrent dans le service de segmentation par le biais d’un flux continu. L’appartenance au segment est évaluée en fonction des attributs de profil de la personne actuelle et de la valeur de l’événement actuel, sans prendre en compte le comportement historique. La segmentation par flux est une fonctionnalité partagée. |
+| [!UICONTROL Volume total de données] | La quantité totale de données disponibles pour le service de profil Adobe Experience Platform à utiliser dans les workflows d’engagement. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 

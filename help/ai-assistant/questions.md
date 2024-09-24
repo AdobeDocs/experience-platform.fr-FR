@@ -2,9 +2,9 @@
 title: Guide de questions pour l’assistant d’IA
 description: Lisez ce document pour découvrir des exemples de questions que vous pouvez utiliser lors de l’interrogation de l’assistant d’IA.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: fc87c28d7019e123d974e4d2ad307928a3d3fe89
+source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1519'
 ht-degree: 1%
 
 ---
@@ -80,7 +80,6 @@ Les questions suivantes sont regroupées par objet de données et classées comm
    * Comment les groupes d’utilisateurs sont-ils liés aux rôles ?
    * Quand dois-je utiliser un type de données par rapport à un groupe de champs ?
    * Quelle est la différence entre une identité et une clé primaire ou étrangère ?
-   * Comment est calculé la richesse de Profile ?
 * **Dépannage - Connaissances produit (Real-Time CDP et Journey Optimizer)**
    * En quoi l’assistant IA peut-il vous aider ?
    * Puis-je supprimer un schéma activé pour le profil une fois les données ingérées ?
