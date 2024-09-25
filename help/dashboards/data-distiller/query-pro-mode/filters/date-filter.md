@@ -2,10 +2,10 @@
 title: Création d’un filtre de date
 description: Découvrez comment filtrer vos insights personnalisés par date.
 exl-id: fa05d651-ea43-41f0-9b7d-f19c4a9ac256
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: 77cedd351b5628d15c279fceabde735f4f93f392
 workflow-type: tm+mt
-source-wordcount: '662'
-ht-degree: 0%
+source-wordcount: '922'
+ht-degree: 1%
 
 ---
 
@@ -22,6 +22,60 @@ Si vous ne connaissez pas les paramètres de requête, reportez-vous à la docum
 Pour appliquer un filtre de date, sélectionnez **[!UICONTROL Ajouter un filtre]**, puis **[!UICONTROL Filtre de date]** dans le menu déroulant de la vue de votre tableau de bord.
 
 ![ Un tableau de bord personnalisé avec l’option Ajouter un filtre et son menu déroulant en surbrillance.](../../../images/query-pro-mode/add-filter.png)
+
+Les options de filtrage par date suivantes s’affichent.
+
+| Filtre | Description |
+| --- | --- |
+| Aucune date personnalisée | Sélectionnez une ou plusieurs dates personnalisées à partir de plusieurs valeurs prédéfinies. |
+| Période personnalisée | Sélectionnez une ou plusieurs dates personnalisées à partir de plusieurs valeurs prédéfinies ou spécifiez une plage de dates personnalisée. |
+| Date personnalisée | Choisissez parmi les valeurs prédéfinies ou indiquez la date de début de votre tableau de bord. |
+
+![La boîte de dialogue de création de filtre de date avec les trois options de sélecteur de date personnalisées mises en surbrillance.](../../../images/query-pro-mode/create-date-filter.png)
+
+### Création d’un filtre de date non personnalisé
+
+Pour appliquer un filtre de date prédéfini, sélectionnez **[!UICONTROL Aucune date personnalisée]**, puis sélectionnez les options de date prédéfinies que vous souhaitez inclure. Enfin, utilisez la liste déroulante pour sélectionner la période par défaut, puis sélectionnez **[!UICONTROL Enregistrer]**.
+
+![La boîte de dialogue de création de filtre de date sans filtre de date personnalisé et d’enregistrement en surbrillance.](../../../images/query-pro-mode/no-custom-date-filter.png)
+
+Le tableau de bord affiche alors la période par défaut que vous avez sélectionnée. Utilisez le menu déroulant pour sélectionner une autre période prédéfinie.
+
+![Un tableau de bord personnalisé avec la plage de dates par défaut en surbrillance avec la liste déroulante.](../../../images/query-pro-mode/no-custom-date-filter-results.png)
+
+### Création d’un filtre de période personnalisé
+
+Pour appliquer un filtre de période personnalisé, sélectionnez **[!UICONTROL Période personnalisée]**, puis sélectionnez les options de date prédéfinies que vous souhaitez inclure. Enfin, sélectionnez **[!UICONTROL Personnalisé]** pour définir la période par défaut. Utilisez le calendrier pour spécifier une période, puis sélectionnez **[!UICONTROL Enregistrer]**.
+
+>[!NOTE]
+>
+>Il n’est pas nécessaire de sélectionner des options de date prédéfinies.
+
+![La boîte de dialogue Créer un filtre de date avec filtre de période personnalisé, personnalisé et enregistrement en surbrillance.](../../../images/query-pro-mode/custom-date-range-filter.png)
+
+Le tableau de bord affiche alors la plage de données personnalisée que vous avez précédemment spécifiée. Utilisez le menu déroulant pour sélectionner une autre période prédéfinie.
+
+![Un tableau de bord personnalisé présentant la période par défaut avec la date personnalisée mise en surbrillance.](../../../images/query-pro-mode/custom-date-range-filter-results.png)
+
+### Création d’un filtre de date personnalisé
+
+Pour appliquer un filtre de date personnalisé, sélectionnez **[!UICONTROL Date personnalisée]**, puis les options de date prédéfinies que vous souhaitez inclure. Enfin, sélectionnez **[!UICONTROL Personnalisé]**, puis utilisez le calendrier pour sélectionner une date de début. Enfin, sélectionnez **[!UICONTROL Enregistrer]**.
+
+>[!NOTE]
+>
+>Il n’est pas nécessaire de sélectionner des options de date prédéfinies.
+
+![La boîte de dialogue de création de filtre de date avec le filtre de date personnalisé, personnalisé et l’enregistrement mis en surbrillance.](../../../images/query-pro-mode/custom-date-filter.png)
+
+Le tableau de bord affiche alors les données personnalisées que vous avez précédemment spécifiées. Utilisez le menu déroulant pour sélectionner une autre date.
+
+![Un tableau de bord personnalisé présentant la période par défaut avec la date personnalisée mise en surbrillance.](../../../images/query-pro-mode/custom-date-filter-results.png)
+
+## Suppression d’un filtre de date {#delete-date-filter}
+
+Pour supprimer votre filtre de date, sélectionnez l’icône Supprimer le filtre (![Icône Supprimer le filtre.](/help/images/icons/filter-delete.png)).
+
+![Un tableau de bord personnalisé avec l’icône de suppression de filtre mise en surbrillance.](../../../images/query-pro-mode/delete-date-filter.png)
 
 ## Modifier votre code SQL pour inclure les paramètres de requête de date {#include-date-parameters}
 
@@ -75,25 +129,3 @@ Sélectionnez ensuite les paramètres de requête appropriés dans les menus dé
 ![Le compositeur de widget avec le menu déroulant Start_date en surbrillance.](../../../images/sql-insights/widget-composer-date-filter-dropdown.png)
 
 Enfin, sélectionnez **[!UICONTROL Enregistrer et fermer]** pour revenir à votre tableau de bord. Les filtres de date sont désormais activés pour toutes les informations qui comportent des paramètres de date de début et de fin.
-
-## Utiliser le filtre de date
-
-Pour utiliser un filtre de date personnalisé, sélectionnez l&#39;icône du calendrier et choisissez un début et une fin dans la vue Calendrier.
-
->[!IMPORTANT]
->
->L’ajout simple d’un filtre de date ne modifie pas les graphiques. Vous devez modifier chacune de vos informations afin d’inclure les dates de début et de fin de votre choix.
-
-![Un tableau de bord personnalisé avec le calendrier de filtre de date en surbrillance.](../../../images/query-pro-mode/date-filter.png)
-
-Une fois que vous avez sélectionné une plage de dates dans votre tableau de bord, les insights dont le code SQL contient des paramètres de date affichent les options de filtre de dates dans le compositeur de widget.
-
->[!NOTE]
->
->La sélection d’une période sur votre tableau de bord affiche les bascules des filtres de date dans le cadre du processus de création des informations.
-
-## Suppression d’un filtre de date {#delete-date-filter}
-
-Pour supprimer votre filtre de date, sélectionnez l’icône Supprimer le filtre (![Icône Supprimer le filtre.](/help/images/icons/filter-delete.png)).
-
-![Un tableau de bord personnalisé avec l’icône de suppression de filtre mise en surbrillance.](../../../images/query-pro-mode/delete-date-filter.png)
