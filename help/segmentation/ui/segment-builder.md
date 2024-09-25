@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6e1fecf2f986cbb39a2a92c28b05131e22d14b6e
+source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
 workflow-type: tm+mt
-source-wordcount: '4717'
-ht-degree: 66%
+source-wordcount: '4784'
+ht-degree: 65%
 
 ---
 
@@ -98,6 +98,11 @@ Une fois les suites de rapports mappées, vous pouvez utiliser ces nouveaux cham
 | Suites de rapports multiples | Aucun descripteur de nom convivial n’est inclus avec les variables génériques. <br><br>**Exemple :** eVar2 | <ul><li>Tout champ comportant plusieurs descripteurs apparaît comme générique. Cela signifie qu’aucun nom convivial n’apparaît dans l’interface utilisateur.</li><li>Les requêtes peuvent utiliser les données de n’importe quel jeu de données contenant l’eVar, ce qui peut entraîner des résultats variés ou incorrects.</li></ul> | Les requêtes utilisent correctement les résultats combinés de plusieurs jeux de données. |
 
 ### Audiences
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentBuilder_b2b_decomposition"
+>title="Évaluation complexe"
+>abstract="L’expression suivante est trop compliquée pour être exprimée en audience unique. Pour utiliser les règles B2B et les événements basés sur les personnes dans la même définition de segment, suivez les étapes ci-dessous.<ol><li>Créez une définition de segment qui ne fait référence qu’aux événements basés sur les personnes et enregistrez-la comme sa propre définition de segment.</li><li>Dans une nouvelle définition de segment, importez la définition de segment créée précédemment en vous référant aux règles B2B.</li></ol>"
 
 >[!NOTE]
 >
