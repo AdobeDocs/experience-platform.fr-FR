@@ -4,9 +4,9 @@ title: Tableau de bord d’utilisation de la licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 3b4a38be9b47ca65dc142bff4800ef595d3cacca
 workflow-type: tm+mt
-source-wordcount: '2702'
+source-wordcount: '2739'
 ht-degree: 9%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 9%
 
 Vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise via le tableau de bord [!UICONTROL Utilisation de la licence] de Adobe Experience Platform. Les informations affichées ici sont capturées pendant un instantané quotidien de votre instance Platform.
 
-Les rapports sur l’utilisation des licences fournissent un niveau de granularité élevé par rapport à vos mesures d’utilisation des licences. Le tableau de bord fournit des mesures d’utilisation pour chaque produit acheté, l’utilisation consolidée des mesures dans tous les environnements de test de production ou de développement et la mesure d’utilisation d’un environnement de test spécifique. Les applications Experience Platform suivantes peuvent être suivies avec des mesures d’utilisation : Real-Time Customer Data Platform, Adobe Journey Optimizer et Customer Journey Analytics.
+Les rapports sur l’utilisation des licences fournissent un niveau de granularité élevé par rapport à vos mesures d’utilisation des licences. Le tableau de bord fournit des mesures d’utilisation pour chaque produit acheté (et les modules complémentaires associés), l’utilisation consolidée des mesures dans tous les environnements de test de production ou de développement, ainsi que la mesure d’utilisation d’un environnement de test spécifique. Les applications Experience Platform suivantes peuvent être suivies avec des mesures d’utilisation : Real-Time Customer Data Platform, Adobe Journey Optimizer et Customer Journey Analytics.
 
 Ce guide explique comment accéder au tableau de bord de l’utilisation des licences dans l’interface utilisateur et l’utiliser. Il fournit également des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
 
@@ -52,7 +52,7 @@ Pour une présentation générale de l’interface utilisateur de Platform, repo
 
 ## Données du tableau de bord [!UICONTROL Usage de la licence]
 
-Le tableau de bord [!UICONTROL Utilisation de la licence] affiche la liste de tous les produits Experience Platform que vous avez achetés. Dans cette liste, vous pouvez trouver un instantané des données liées aux licences de votre entreprise pour Experience Platform sur n’importe quel environnement de test associé.
+Le tableau de bord [!UICONTROL Utilisation de la licence] affiche la liste de tous les produits Experience Platform que vous avez achetés et les modules complémentaires pour ces produits. Ce tableau de bord vous permet de trouver un instantané des données liées aux licences de votre entreprise pour Experience Platform dans n’importe quel environnement de test associé.
 
 Les données de ce tableau de bord s’affichent exactement comme elles apparaissent au moment précis où l’instantané a été pris. En d’autres termes, l’instantané n’est pas une approximation ou un échantillon des données et le tableau de bord n’est pas mis à jour en temps réel.
 
@@ -72,12 +72,16 @@ Pour accéder au tableau de bord de l’utilisation des licences dans l’interf
 
 ## Onglet [!UICONTROL Aperçu] {#overview-tab}
 
-Ce tableau de bord affiche sous forme de tableau tous les produits Adobe Experience Platform sous licence, y compris les modules complémentaires. Le tableau fournit des informations clés sur l’utilisation de votre licence pour tous les profils disponibles.
+Le tableau de bord [!UICONTROL Utilisation de la licence] affiche deux tables distinctes : **Produits principaux** et **Modules complémentaires**.
+
+- **[!UICONTROL Table des produits principaux]** : ce tableau répertorie les principaux produits Adobe Experience Platform sous licence par votre organisation. Chaque produit principal possède ses propres mesures, suivi d’utilisation et vues d’analyse au niveau de l’environnement de test. Ces produits principaux fournissent les mesures clés pour le suivi et les modules complémentaires sont inclus dans ces mesures.
+
+- **[!UICONTROL Table des modules complémentaires]** : ce tableau répertorie les produits supplémentaires dont le montant de licence est combiné avec les mesures prises en charge par les produits principaux. Les modules complémentaires ne comportent pas de mesures distinctes, mais améliorent le suivi de l’utilisation des produits principaux auxquels ils sont associés.
 
 | Nom de la colonne | Description |
 |---|---|
 | **[!UICONTROL Produit]** | La solution d’Adobe sous licence de votre entreprise. |
-| **[!UICONTROL Mesure de Principal]** | Mesure principale utilisée pour le suivi dans pour ce produit. |
+| **[!UICONTROL Mesure de Principal]** | Mesure principale utilisée pour le suivi dans ce produit. |
 | **[!UICONTROL Montant de la licence]** | La valeur contractuelle correspondant au montant maximal de la mesure de Principal, conformément à ce qui est convenu dans votre contrat de licence de produit. |
 | **[!UICONTROL Utilisation]** | Montant de la mesure principale utilisée. Cette valeur fournit l’utilisation totale de cette mesure pour tous les environnements de test, que ce soit la production ou le développement. |
 | **[!UICONTROL Utilisation %]** | Le pourcentage de votre mesure principale utilisée en fonction de votre montant de licence. |
@@ -85,9 +89,9 @@ Ce tableau de bord affiche sous forme de tableau tous les produits Adobe Experie
 
 >[!NOTE]
 >
->Des ajouts au [!UICONTROL montant de la licence] résultant de modules complémentaires sont ajoutés en plus du [!UICONTROL montant de la licence] pour les produits de base tels que Real-Time Customer Data Platform, Adobe Journey Optimizer et Customer Journey Analytics. L’utilisation de ce montant sous licence (après les modules complémentaires) est suivie par le biais des produits de base. Par exemple, si vous achetez un pack de cinq environnements de test, la quantité de cinq est ajoutée à celle du produit de base. Dans ce cas, le module complémentaire affiche un [!UICONTROL montant de la licence] d’un seul et l’utilisation de ce module complémentaire est &quot;vide&quot; car l’utilisation est suivie par le biais du produit de base.
+>Les quantités de licence pour les modules complémentaires sont incluses dans le [!UICONTROL montant de la licence] des produits principaux. Par exemple, si vous achetez un pack de cinq environnements de test en tant que module complémentaire, la quantité est ajoutée à celle du produit de base. Le tableau des modules complémentaires affiche un [!UICONTROL montant de la licence] spécifique au module complémentaire, mais l’utilisation réelle est suivie par le biais du produit de base.
 
-Le tableau indique la mesure principale de chaque produit, car chaque produit peut effectuer le suivi de nombreuses mesures.
+Les tableaux indiquent la mesure principale de chaque produit, car chaque produit peut effectuer le suivi de nombreuses mesures.
 
 ### Utilisation prévue {#predicted-usage}
 
@@ -111,16 +115,18 @@ Gérez et optimisez vos ressources de licence de manière proactive en fonction 
 >
 >Les prévisions sont actualisées tous les mois. La date d’actualisation est incluse dans une icône d’information (![Cette icône d’information.](../images/license-usage/info-icon.png)) au-dessus du titre de la colonne.
 
-Pour afficher un résumé de l’utilisation des droits des produits, sélectionnez un produit dans la liste [!UICONTROL Aperçu].
+Pour afficher un résumé de l’utilisation des droits d’un produit, sélectionnez un produit dans la table [!UICONTROL Core products].
 
+<!-- update image ... -->
 ![ [!UICONTROL Utilisation de la licence] [!UICONTROL Aperçu] avec un produit et la colonne d’utilisation prédite mise en surbrillance.](../images/license-usage/product-predicted-usage.png)
 
-L’onglet Résumé s’affiche. Vous pouvez utiliser les prédictions granulaires disponibles sur les onglets [!UICONTROL Summary] et [!UICONTROL Details] pour garantir une prise de décision éclairée pour une utilisation efficace de la licence.
+L’onglet Résumé s’affiche. Vous pouvez utiliser les prédictions granulaires disponibles sur les onglets [!UICONTROL Summary] et [!UICONTROL Details] pour assurer une prise de décision éclairée pour une utilisation efficace de la licence.
 
 >[!NOTE]
 >
 >Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence de votre entreprise avec Adobe.
 
+<!-- update image ... -->
 ![L’affichage récapitulatif d’un produit Platform avec la colonne d’utilisation prédite mise en surbrillance.](../images/license-usage/summary-predicted-usage.png)
 
 Le pourcentage d’utilisation prévue est déterminé comme suit :
@@ -229,7 +235,7 @@ Le tableau de bord de l’utilisation des licences répertorie plusieurs mesures
 La disponibilité de ces mesures et la définition spécifique de chacune d’elles varient en fonction des licences achetées par votre entreprise. Pour obtenir des définitions détaillées de chaque mesure, reportez-vous à la documentation Description du produit appropriée :
 
 | Licence | Description du produit |
-|---|---|
+| --- | --- |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, App Services et Intelligent Services](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT CUSTOMOMENT DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL À 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL À 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) |
