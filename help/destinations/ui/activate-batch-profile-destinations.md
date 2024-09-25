@@ -3,10 +3,10 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations basées sur un profil de lot.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 21fd5957da8914be8b4abfad5c78d1929f76d6f6
+source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
-source-wordcount: '4202'
-ht-degree: 56%
+source-wordcount: '4095'
+ht-degree: 55%
 
 ---
 
@@ -30,26 +30,6 @@ Cet article explique le processus requis pour activer les audiences dans Adobe E
 Pour activer les audiences vers les destinations, [ doit être connecté à une destination](./connect-destination.md). Si vous ne l’avez pas déjà fait, accédez au [catalogue de destinations](../catalog/overview.md), parcourez les destinations prises en charge et configurez la destination que vous souhaitez utiliser.
 
 ## Formats de fichiers pris en charge pour l’export {#supported-file-formats-export}
-
->[!CONTEXTUALHELP]
->id="dataset_dataflow_needs_schedule_end_date_header"
->title="Mettre à jour la date de fin de ce flux de données"
->abstract="Mettre à jour la date de fin de ce flux de données"
-
->[!CONTEXTUALHELP]
->id="dataset_dataflow_needs_schedule_end_date_body"
->title="Mettre à jour la date de fin de ce corps de flux de données"
->abstract="En raison des mises à jour récentes apportées à cette destination, le flux de données nécessite désormais une date de fin. Adobe a défini une date de fin par défaut sur le 1er mai 2025. Mettez à jour à la date de fin souhaitée. Dans le cas contraire, les exports de données s’arrêteront à la date par défaut."
-
->[!CONTEXTUALHELP]
->id="destinations_folder_name_template"
->title="Modifier le chemin du dossier"
->abstract="Utilisez plusieurs macros fournies pour personnaliser le chemin du dossier dans lequel le jeu de données est exporté."
-
->[!CONTEXTUALHELP]
->id="destinations_folder_name_template_preview"
->title="Aperçu du chemin du dossier du jeu de données"
->abstract="Obtenez un aperçu de la structure de dossiers créée à l’emplacement de stockage en fonction des macros que vous avez ajoutées dans cette fenêtre."
 
 Les formats de fichiers suivants sont pris en charge lors de l’exportation d’audiences :
 

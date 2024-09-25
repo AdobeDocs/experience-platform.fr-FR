@@ -4,10 +4,10 @@ title: Exportation de jeux de données à l’aide de l’API Flow Service
 description: Découvrez comment utiliser l’API Flow Service pour exporter des jeux de données vers des destinations sélectionnées.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: af705b8a77b2ea15b44b97ed3f1f2c5aa7433eb1
+source-git-commit: 22a752e28fe3cc4cb3337b456e80ef1b273f6a71
 workflow-type: tm+mt
-source-wordcount: '3524'
-ht-degree: 16%
+source-wordcount: '5107'
+ht-degree: 11%
 
 ---
 
@@ -16,6 +16,19 @@ ht-degree: 16%
 >[!AVAILABILITY]
 >
 >* Cette fonctionnalité est disponible pour les clients qui ont acheté le package Real-Time CDP Prime et Ultimate, Adobe Journey Optimizer ou Customer Journey Analytics. Pour plus d’informations, contactez votre représentant d’Adobe.
+
+>[!IMPORTANT]
+>
+>**Action item** : la version de [septembre 2024 de Experience Platform](/help/release-notes/latest/latest.md#destinations) introduit l’option permettant de définir une date `endTime` pour exporter les flux de données du jeu de données. Adobe introduit également une date de fin par défaut du 1er mai 2025 pour tous les flux de données d’exportation de jeux de données créés *avant la version de septembre*. Pour l’un de ces flux de données, vous devez mettre à jour manuellement la date de fin dans le flux de données avant la date de fin, sinon vos exportations pour arrêt à cette date. Utilisez l’interface utilisateur de l’Experience Platform pour afficher les flux de données qui seront définis pour s’arrêter le 1er mai.
+>
+>De même, pour les flux de données que vous créez sans spécifier de date `endTime`, ils sont définis par défaut sur une heure de fin six mois à compter de leur création.
+
+<!--
+
+>You can retrieve a list of such dataflows by performing the following API call: `https://platform.adobe.io/data/foundation/flowservice/flows?property=scheduleParams.endTime==UNIXTIMESTAMPTHATWEWILLUSE`
+>
+
+-->
 
 Cet article explique le processus requis pour utiliser [!DNL Flow Service API] afin d’exporter des [jeux de données](/help/catalog/datasets/overview.md) de Adobe Experience Platform vers l’emplacement de stockage dans le cloud de votre choix, tel que [!DNL Amazon S3], les emplacements SFTP ou [!DNL Google Cloud Storage].
 
@@ -49,7 +62,7 @@ Actuellement, vous pouvez exporter des jeux de données vers les destinations de
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
 * [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md) : toutes les données correctement ingérées dans Adobe Experience Platform sont conservées dans [!DNL Data Lake] en tant que jeux de données. Un jeu de données est une structure de stockage et de gestion pour la collecte de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les jeux de données contiennent également des métadonnées qui décrivent divers aspects des données stockées.
-* [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
+   * [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
 Les sections suivantes apportent des informations supplémentaires que vous devez connaître pour exporter des jeux de données vers des destinations de stockage dans le cloud dans Platform.
 
@@ -1955,13 +1968,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
         "interval": 3, // also supports 6, 9, 12 hour increments
-        "timeUnit": "hour", // also supports "day" for daily increments. Use "interval": 1 when you select "timeUnit": "day"
-        "startTime": 1675901210 // UNIX timestamp start time (in seconds)
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
 
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, ce qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+
+| Paramètre | Description |
+|---------|----------|
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter les fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter les fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel sur l’activation des destinations par lot. Les trois options d’exportation disponibles sont : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` ne peut être utilisé qu’en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes des jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle. <br> **Exports quotidiens incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` : `1` pour les exportations incrémentielles quotidiennes. <br> **Exports horaires incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles horaires. |
+| `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeux de données. |
+| `interval` | Sélectionnez `1` lorsque le `timeUnit` est un jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
+| `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
+| `endTime` | Date et heure, en secondes UNIX, auxquelles l’exportation du jeu de données doit se terminer. |
+| `foldernameTemplate` | Indiquez la structure de nom de dossier attendue dans l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMdd_HHmss.</span></li><li><code>EXPORT_TIME</code> = <span>L’heure planifiée de l’exportation des données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>SANDBOX_NAME</code> = <span>Nom de l’environnement de test.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
+
+{style="table-layout:auto"}
 +++
 
 **Réponse**
@@ -2008,12 +2037,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, ce qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+
+| Paramètre | Description |
+|---------|----------|
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter les fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter les fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel sur l’activation des destinations par lot. Les trois options d’exportation disponibles sont : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` ne peut être utilisé qu’en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes des jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle. <br> **Exports quotidiens incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` : `1` pour les exportations incrémentielles quotidiennes. <br> **Exports horaires incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles horaires. |
+| `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeux de données. |
+| `interval` | Sélectionnez `1` lorsque le `timeUnit` est un jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
+| `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
+| `endTime` | Date et heure, en secondes UNIX, auxquelles l’exportation du jeu de données doit se terminer. |
+| `foldernameTemplate` | Indiquez la structure de nom de dossier attendue dans l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMdd_HHmss.</span></li><li><code>EXPORT_TIME</code> = <span>L’heure planifiée de l’exportation des données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>SANDBOX_NAME</code> = <span>Nom de l’environnement de test.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2061,12 +2107,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, ce qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+
+| Paramètre | Description |
+|---------|----------|
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter les fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter les fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel sur l’activation des destinations par lot. Les trois options d’exportation disponibles sont : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` ne peut être utilisé qu’en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes des jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle. <br> **Exports quotidiens incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` : `1` pour les exportations incrémentielles quotidiennes. <br> **Exports horaires incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles horaires. |
+| `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeux de données. |
+| `interval` | Sélectionnez `1` lorsque le `timeUnit` est un jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
+| `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
+| `endTime` | Date et heure, en secondes UNIX, auxquelles l’exportation du jeu de données doit se terminer. |
+| `foldernameTemplate` | Indiquez la structure de nom de dossier attendue dans l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMdd_HHmss.</span></li><li><code>EXPORT_TIME</code> = <span>L’heure planifiée de l’exportation des données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>SANDBOX_NAME</code> = <span>Nom de l’environnement de test.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2114,13 +2177,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
 
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, ce qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+
+| Paramètre | Description |
+|---------|----------|
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter les fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter les fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel sur l’activation des destinations par lot. Les trois options d’exportation disponibles sont : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` ne peut être utilisé qu’en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes des jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle. <br> **Exports quotidiens incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` : `1` pour les exportations incrémentielles quotidiennes. <br> **Exports horaires incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles horaires. |
+| `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeux de données. |
+| `interval` | Sélectionnez `1` lorsque le `timeUnit` est un jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
+| `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
+| `endTime` | Date et heure, en secondes UNIX, auxquelles l’exportation du jeu de données doit se terminer. |
+| `foldernameTemplate` | Indiquez la structure de nom de dossier attendue dans l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMdd_HHmss.</span></li><li><code>EXPORT_TIME</code> = <span>L’heure planifiée de l’exportation des données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>SANDBOX_NAME</code> = <span>Nom de l’environnement de test.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
+
+{style="table-layout:auto"}
 +++
 
 **Réponse**
@@ -2167,12 +2246,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, ce qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+
+| Paramètre | Description |
+|---------|----------|
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter les fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter les fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel sur l’activation des destinations par lot. Les trois options d’exportation disponibles sont : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` ne peut être utilisé qu’en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes des jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle. <br> **Exports quotidiens incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` : `1` pour les exportations incrémentielles quotidiennes. <br> **Exports horaires incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles horaires. |
+| `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeux de données. |
+| `interval` | Sélectionnez `1` lorsque le `timeUnit` est un jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
+| `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
+| `endTime` | Date et heure, en secondes UNIX, auxquelles l’exportation du jeu de données doit se terminer. |
+| `foldernameTemplate` | Indiquez la structure de nom de dossier attendue dans l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMdd_HHmss.</span></li><li><code>EXPORT_TIME</code> = <span>L’heure planifiée de l’exportation des données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>SANDBOX_NAME</code> = <span>Nom de l’environnement de test.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2220,12 +2316,29 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     ],
     "transformations": [],
     "scheduleParams": { // specify the scheduling info
-        "interval": 3, // also supports 6, 9, 12, 24 hour increments
-        "timeUnit": "hour",
-        "startTime": 1675901210 // UNIX timestamp start time(in seconds)
+        "exportMode": DAILY_FULL_EXPORT or FIRST_FULL_THEN_INCREMENTAL
+        "interval": 3, // also supports 6, 9, 12 hour increments
+        "timeUnit": "hour", // also supports "day" for daily increments. 
+        "interval": 1, // when you select "timeUnit": "day"
+        "startTime": 1675901210, // UNIX timestamp start time (in seconds)
+        "endTime": 1975901210, // UNIX timestamp end time (in seconds)
+        "foldernameTemplate": "%DESTINATION%_%DATASET_ID%_%DATETIME(YYYYMMdd_HHmmss)%"
     }
 }'
 ```
+
+Le tableau ci-dessous fournit des descriptions de tous les paramètres de la section `scheduleParams`, ce qui vous permet de personnaliser les heures d’exportation, la fréquence, l’emplacement, etc. pour vos exportations de jeux de données.
+
+| Paramètre | Description |
+|---------|----------|
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter les fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter les fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel sur l’activation des destinations par lot. Les trois options d’exportation disponibles sont : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` ne peut être utilisé qu’en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes des jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle. <br> **Exports quotidiens incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` : `1` pour les exportations incrémentielles quotidiennes. <br> **Exports horaires incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles horaires. |
+| `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeux de données. |
+| `interval` | Sélectionnez `1` lorsque le `timeUnit` est un jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
+| `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
+| `endTime` | Date et heure, en secondes UNIX, auxquelles l’exportation du jeu de données doit se terminer. |
+| `foldernameTemplate` | Indiquez la structure de nom de dossier attendue dans l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMdd_HHmss.</span></li><li><code>EXPORT_TIME</code> = <span>L’heure planifiée de l’exportation des données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>SANDBOX_NAME</code> = <span>Nom de l’environnement de test.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
+
+{style="table-layout:auto"}
 
 +++
 
@@ -2345,10 +2458,15 @@ Notez la différence de format de fichier entre les deux types de fichiers, lors
 
 * Lors de l’exportation de fichiers JSON compressés, le format de fichier exporté est `json.gz`
 * Lors de l’exportation de fichiers parquet compressés, le format de fichier exporté est `gz.parquet`
+* Les fichiers JSON peuvent uniquement être exportés en mode compressé.
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
 Les points de terminaison d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API d’Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur, reportez-vous aux [codes d’état d’API](/help/landing/troubleshooting.md#api-status-codes) et [ erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
+
+## Questions fréquentes {#faq}
+
+Affichez une [liste des questions fréquentes](/help/destinations/ui/export-datasets.md#faq) sur les exportations de jeux de données.
 
 ## Étapes suivantes {#next-steps}
 
