@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de Query Editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: d2bc580ba1cacdfab45bdc6356c630a63e7d0f6e
+source-git-commit: 7ba9eb6891657e7f3d7ebbd41314b7973e31ea61
 workflow-type: tm+mt
-source-wordcount: '2430'
-ht-degree: 31%
+source-wordcount: '2802'
+ht-degree: 24%
 
 ---
 
@@ -49,6 +49,12 @@ Les requêtes exécutées à partir de Query Editor s’exécutent de manière i
 
 Avec Query Editor, vous pouvez écrire, exécuter et enregistrer des requêtes de données d’expérience client. Toutes les requêtes exécutées ou enregistrées dans Query Editor sont disponibles pour tous les utilisateurs de votre entreprise ayant accès à Query Service.
 
+### Sélecteur de base de données {#database-selector}
+
+Sélectionnez une base de données à interroger dans le menu déroulant en haut à droite de l’éditeur de requêtes. La base de données sélectionnée s’affiche dans la liste déroulante.
+
+![L’éditeur de requêtes avec le menu déroulant de la base de données en surbrillance.](../images/ui/query-editor/database-dropdown.png)
+
 ### Paramètres       {#settings}
 
 Une icône de paramètres au-dessus du champ de saisie de l’éditeur de requêtes comprend des options pour activer/désactiver le thème sombre ou désactiver/activer la saisie automatique.
@@ -66,9 +72,6 @@ Pour activer les thèmes foncés ou clairs, sélectionnez l’icône des paramè
 L’éditeur de requêtes propose automatiquement des mots-clés SQL potentiels, ainsi que des détails de tableau ou de colonne pour la requête au fur et à mesure que vous l’écrivez. La fonction de saisie automatique est activée par défaut et peut être désactivée ou activée à tout moment dans les paramètres de l’éditeur de requêtes.
 
 Le paramètre de configuration de saisie automatique est défini par utilisateur et mémorisé pour les connexions consécutives de cet utilisateur. La désactivation de cette fonction arrête le traitement de plusieurs commandes de métadonnées et la suggestion de recommandations qui accélère généralement la vitesse de l’auteur lors de la modification des requêtes.
-
-<!-- Currently editing the auto complete setting info. -->
-
 
 
 ### Exécution de plusieurs requêtes séquentielles {#execute-multiple-sequential-queries}
@@ -112,17 +115,7 @@ Pour réduire le temps de développement, il est recommandé de développer vos 
 
 ## Outils d’écriture dans Query Editor {#writing-tools}
 
-- **Mise en surbrillance automatique de la syntaxe :** facilite la lecture et l’organisation SQL.
-
-![Instruction SQL dans le Query Editor présentant une mise en surbrillance des couleurs de syntaxe.](../images/ui/query-editor/syntax-highlight.png)
-
-- **Saisie automatique de mots-clés SQL :** commencez à saisir votre requête, puis utilisez les touches fléchées pour accéder au terme souhaité et appuyez sur **Entrée**.
-
-![Quelques caractères SQL avec le menu déroulant de saisie automatique qui fournit des options du Query Editor.](../images/ui/query-editor/syntax-auto.png)
-
-- **Saisie automatique de tableau et de champ :** commencez à saisir le nom du tableau auquel vous souhaitez appliquer `SELECT`, puis utilisez les touches fléchées pour accéder au tableau recherché et appuyez sur **Entrée**. Une fois qu’un tableau est sélectionné, la saisie automatique reconnaît les champs de ce tableau.
-
-![Entrée du Query Editor affichant les suggestions de noms de tableau déroulant.](../images/ui/query-editor/tables-auto.png)
+Utilisez les outils d’écriture de Query Editor pour améliorer votre processus de création de requêtes. Les fonctionnalités incluent des options permettant de mettre en forme le texte, de copier SQL, de gérer les détails des requêtes, ainsi que d’enregistrer ou de planifier votre travail au fur et à mesure que vous progressez.
 
 ### Mettre le texte en forme {#format-text}
 
@@ -202,6 +195,43 @@ Si une requête a été planifiée, alors l’onglet [!UICONTROL Requêtes plani
 >[!NOTE]
 >
 >Les requêtes non exécutées ne sont pas enregistrées dans le journal. Pour que la requête soit disponible dans Query Service, elle doit être exécutée ou enregistrée dans Query Editor.
+
+### Explorateur d’objets {#object-browser}
+
+>[!AVAILABILITY]
+>
+>Le rail de navigation du jeu de données n’est disponible que pour les clients Data Distiller. Votre interface utilisateur Platform peut ne pas contenir le rail de navigation du jeu de données de gauche.  D’autres images de ce document peuvent ne pas refléter le rail de navigation du jeu de données. Pour plus d’informations, contactez votre représentant d’Adobe.
+
+Utilisez l’explorateur d’objets pour rechercher et filtrer facilement des jeux de données. L’explorateur d’objets réduit le temps passé à rechercher des tableaux et des jeux de données dans des environnements volumineux avec de nombreux jeux de données. Grâce à un accès simplifié aux données et métadonnées pertinentes, vous pouvez vous concentrer davantage sur la création de requêtes et moins sur la navigation.
+
+Pour naviguer dans votre base de données à l’aide du navigateur d’objets, saisissez un nom de tableau dans le champ de recherche ou sélectionnez **[!UICONTROL Tableaux]** pour développer la liste des jeux de données et des tableaux disponibles. Lors de l’utilisation du champ de recherche, la liste des tables disponibles est filtrée dynamiquement en fonction de votre saisie.
+
+>[!NOTE]
+>
+>Chaque jeu de données contenu dans [votre base de données sélectionnée](#database-dropdown) est répertorié dans un rail de navigation à gauche de Query Editor.
+
+![ Rail de navigation du jeu de données Query Editor avec l’entrée de recherche mise en surbrillance.](../images/ui/query-editor/search-tables.png)
+
+Le schéma affiché dans l’explorateur d’objets est un schéma observable. Cela signifie que vous pouvez l’utiliser pour surveiller les modifications et les mises à jour en temps réel lorsque les modifications sont immédiatement visibles. Les schémas observables permettent d’assurer la synchronisation des données et aident à effectuer des tâches de débogage ou d’analyse.
+
+#### Limites actuelles {#current-limitations}
+
+Voici une liste des limites actuelles :
+
+- Exécution de requête séquentielle : une seule requête peut être exécutée à la fois. Lorsqu’une requête est en cours, aucune table supplémentaire ne peut être ouverte dans le volet de navigation de gauche, car les requêtes sont traitées de manière séquentielle.
+- Lignes supplémentaires dans les logs de requête : vous pouvez rencontrer des requêtes superflues étiquetées &quot;AFFICHER LES TABLES&quot; dans les logs. Elles seront supprimées dans les prochaines versions.
+
+#### Accès aux métadonnées de tableau {#table-metadata}
+
+Outre les recherches rapides, vous pouvez désormais accéder facilement aux métadonnées d’un tableau en cliquant sur l’icône &quot;i&quot; en regard du nom de ce dernier. Vous disposez ainsi d’informations détaillées sur le tableau sélectionné, qui vous permettent de prendre des décisions éclairées lors de l’écriture de requêtes.
+
+![ Rail de navigation du jeu de données Query Editor avec l’entrée de recherche mise en surbrillance.](../images/ui/query-editor/table-metadata.png)
+
+#### Exploration des tables enfants
+
+Pour explorer des tables enfants ou liées, sélectionnez la flèche de liste déroulante en regard d’un nom de table dans la liste. Le tableau est ainsi développé afin d’afficher les tables enfants associées. Il donne une vue précise de la structure des données et permet des constructions de requêtes plus complexes. L’icône en regard du nom du champ indique le type de données de la colonne, afin de vous aider à l’identifier lors de requêtes complexes.
+
+![L’éditeur de requêtes avec la liste des tableaux filtrés affichée.](../images/ui/query-editor/child-table-list.png)
 
 ## Exécution de requête à l’aide de Query Editor {#executing-queries}
 
