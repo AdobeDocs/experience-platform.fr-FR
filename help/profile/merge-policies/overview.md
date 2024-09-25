@@ -4,10 +4,10 @@ title: Présentation des politiques de fusion
 type: Documentation
 description: Adobe Experience Platform permet de rassembler des données issues de plusieurs sources et de les combiner pour obtenir une vue complète de chacun de vos clients. Les politiques de fusion sont les règles utilisées par Platform pour déterminer la priorité des données et les données qui seront combinées pour créer cette vue unifiée.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 8ae18565937adca3596d8663f9c9e6d84b0ce95a
+source-git-commit: 5e8bbdf5b7b07c31a36730c86b177fce6041e319
 workflow-type: tm+mt
-source-wordcount: '1265'
-ht-degree: 80%
+source-wordcount: '1285'
+ht-degree: 77%
 
 ---
 
@@ -71,11 +71,11 @@ Une organisation peut créer une politique de fusion par défaut à utiliser lor
 
 Chaque organisation peut créer plusieurs politiques de fusion liées à une seule classe de schéma XDM. Toutefois, une seule politique de fusion par défaut peut être choisie pour chaque classe. Par exemple, votre organisation peut avoir une politique de fusion par défaut associée à la classe [!DNL XDM Individual Profile] et une politique de fusion par défaut différente pour une classe Inventaire de produits personnalisée.
 
-Si vous créez une politique de fusion et la définissez comme politique par défaut, la politique de fusion par défaut précédente sera automatiquement mise à jour par le système et ne sera plus la politique par défaut.
+Si vous créez une stratégie de fusion et la définissez comme stratégie par défaut, la stratégie de fusion par défaut précédente sera automatiquement mise à jour par le système pour ne plus être la stratégie par défaut. Toute audience créée après ce moment utilisera cette nouvelle stratégie de fusion par défaut.
 
 >[!WARNING]
 >
->Le nombre de profils et les audiences avec une stratégie de fusion par défaut associée peuvent être affectés. Toute audience à laquelle une stratégie de fusion par défaut est appliquée sera mise à jour vers la nouvelle stratégie de fusion par défaut.
+>Le nombre de profils et les audiences avec une stratégie de fusion par défaut associée peuvent être affectés. En outre, les audiences **not** seront automatiquement mises à jour pour utiliser la nouvelle stratégie de fusion par défaut et continueront à utiliser la stratégie de fusion précédente.
 
 ## Étapes suivantes
 
