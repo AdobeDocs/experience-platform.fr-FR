@@ -2,9 +2,9 @@
 title: Présentation du mode Query Pro
 description: Découvrez comment utiliser les requêtes SQL dans l’interface utilisateur de Adobe Experience Platform pour générer des graphiques pour vos tableaux de bord personnalisés.
 exl-id: 15c664c4-8546-4e04-b81d-c78bf83500d3
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1212'
 ht-degree: 0%
 
 ---
@@ -68,6 +68,26 @@ Dans cet exemple de graphique en anneau, les options sont taille et couleur. La 
 Pour modifier le type de graphique ou de graphique de votre widget, sélectionnez l’une des options disponibles dans la liste déroulante [!UICONTROL Marques] . Les options incluent [!UICONTROL Line], [!UICONTROL Donut], [!UICONTROL Big number] et [!UICONTROL Bar]. Une fois cette option sélectionnée, une visualisation d’aperçu des paramètres actuels de votre widget est générée.
 
 ![Le compositeur de widget avec l’aperçu du widget mis en surbrillance.](../../images/sql-insights/widget-preview.png)
+
+## Attributs de tableau avancés {#advanced-attributes}
+
+Pour appliquer des fonctionnalités de tri automatique pour toutes les colonnes de vos tableaux, sélectionnez **[!UICONTROL Modifier]** pour modifier l’intégralité de votre tableau de bord.
+
+![Tableau de bord personnalisé avec modification mise en surbrillance.](../../images/query-pro-mode/advanced-edit-dashboard.png)
+
+Sélectionnez les points de suspension (`...`) dans le graphique de tableau où vous souhaitez ajouter le tri des colonnes, puis sélectionnez **[!UICONTROL Modifier]**.
+
+![Tableau présentant le menu de points de suspension avec l’option Modifier mise en surbrillance.](../../images/query-pro-mode/advanced-table-edit.png)
+
+Pour activer le tri pour n&#39;importe quelle colonne, cochez les cases **[!UICONTROL Trier]** .
+
+![Page de modification de tableau avec cases à cocher triables en surbrillance.](../../images/query-pro-mode/advanced-table-sortable.png)
+
+Sélectionnez l’icône Propriétés (![Icône Propriétés .](/help/images/icons/properties.png)) dans le rail de droite pour ouvrir le panneau [!UICONTROL Propriétés]. Dans le panneau **[!UICONTROL Propriétés]**, utilisez la liste déroulante pour sélectionner la colonne **[!UICONTROL Tri par défaut]**, puis utilisez la liste déroulante pour sélectionner la **[!UICONTROL direction du tri]**. Enfin, sélectionnez **[!UICONTROL Enregistrer et fermer]**.
+
+![Le compositeur de widget avec l’icône de propriétés, le tri par défaut, la direction de tri et l’enregistrement et la fermeture en surbrillance.](../../images/query-pro-mode/advanced-table-properties.png)
+
+Pour plus d&#39;informations sur l&#39;utilisation des fonctionnalités de tri, de redimensionnement des colonnes et de pagination, reportez-vous à la section [Afficher plus](./view-more.md).
 
 ## Propriétés du widget {#properties}
 

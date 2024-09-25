@@ -2,10 +2,10 @@
 title: En savoir plus
 description: Découvrez les différentes options d'affichage pour vos données analysées par SQL. Depuis votre tableau de bord personnalisé, vous pouvez afficher les résultats tabulés de votre analyse ou télécharger les données traitées au format CSV.
 exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 2%
+source-wordcount: '551'
+ht-degree: 1%
 
 ---
 
@@ -30,6 +30,38 @@ La fonction [!UICONTROL Afficher plus] affiche sous forme tabulaire les points d
 >Le téléchargement CSV est limité aux 500 premiers enregistrements.
 
 ![Boîte de dialogue affichant un aperçu de votre aperçu et des résultats tabulés de votre SQL qui ont généré l’insight.](../../images/query-pro-mode/view-more-download-csv.png)
+
+## Tri par colonne {#sort-column}
+
+Lors de l’affichage des résultats tabulés, vous pouvez utiliser la fonctionnalité de tri pour trier par colonne dans l’ordre croissant ou décroissant. Dans votre tableau de bord personnalisé, sélectionnez les ellipses (`...`) sur n’importe quelle table pour accéder à l’option [!UICONTROL Afficher plus] .
+
+![Un tableau de bord personnalisé avec un menu déroulant représentant des ellipses de table et l’option Afficher plus mise en surbrillance.](../../images/query-pro-mode/advanced-ellipses-dropdown.png)
+
+Vous pouvez trier les colonnes en sélectionnant le menu déroulant en regard de leur nom, puis en sélectionnant **[!UICONTROL Tri croissant]** ou **[!UICONTROL Tri décroissant]**.
+
+>[!NOTE]
+>
+>Les options [!UICONTROL Tri croissant] et [!UICONTROL Tri décroissant] s’affichent uniquement pour les colonnes qui ont été configurées avec la [fonctionnalité de tri](../overview.md/#advanced-attributes).
+
+![Une liste déroulante de colonnes de tableau présentant les options Tri croissant et Tri décroissant mises en surbrillance.](../../images/query-pro-mode/advanced-sort-dropdown.png)
+
+## Redimensionner une colonne {#resize-column}
+
+Vous pouvez redimensionner les colonnes dans les résultats tabulés afin d’améliorer la lisibilité des données. Dans votre tableau de bord personnalisé, sélectionnez les ellipses (`...`) de votre table pour accéder à l’option [!UICONTROL Afficher plus] . Utilisez le menu déroulant en regard du nom de la colonne pour la redimensionner, puis sélectionnez **[!UICONTROL Redimensionner la colonne]**.
+
+![Une liste déroulante de colonnes de tableau présentant l’option Redimensionner la colonne mise en surbrillance.](../../images/query-pro-mode/advanced-resize-dropdown.png)
+
+Sélectionnez le curseur et faites-le glisser vers la gauche ou la droite pour ajuster la taille de la colonne selon les besoins.
+
+![Tableau présentant la barre de redimensionnement de colonne surlignée.](../../images/query-pro-mode/advanced-resize-column.png)
+
+## Pagination des tableaux {#table-pagination}
+
+La pagination est automatiquement appliquée à vos tables dans la fonction [!UICONTROL Afficher plus], ce qui évite d’avoir à modifier manuellement vos requêtes SQL. Cette fonctionnalité garantit que vos données sont présentées dans un format plus gérable, ce qui facilite le processus de navigation dans les jeux de données volumineux.
+
+Vous pouvez afficher jusqu’à 500 enregistrements par page. Pour parcourir les enregistrements, utilisez le **[!UICONTROL >]** situé au bas de la page.
+
+![ Résultats tabulés avec les résultats et la pagination mise en surbrillance.](../../images/query-pro-mode/advanced-table-pagination.png)
 
 ## Étapes suivantes
 
