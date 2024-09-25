@@ -3,7 +3,7 @@ keywords: Experience Platform;query service;Query service;structures de données
 title: Aplatir les structures de données imbriquées à utiliser avec les outils BI
 description: Ce document explique comment aplatir les schémas XDM pour toutes les tables et vues au cours d’une session lors de l’utilisation d’outils BI tiers avec Query Service.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 100%
@@ -56,7 +56,7 @@ prod:all?FLATTEN
 
 L’exemple de schéma utilisé dans ce guide a recours au groupe de champs standard [!UICONTROL Détails du commerce], qui utilise la structure de l’objet `commerce` et la table `productListItems`. Consultez la documentation XDM pour [en savoir plus sur le groupe de champs [!UICONTROL Détails du commerce]](../../xdm/field-groups/event/commerce-details.md). Une représentation de la structure du schéma est visible dans l’image ci-dessous.
 
-![Schéma du groupe de champs Détails du commerce comprenant les structures `commerce` et `productListItems`.](../images/essential-concepts/commerce-details.png)
+![Schéma du groupe de champs Détails du commerce comprenant les structures `commerce` et `productListItems`.](../images/key-concepts/commerce-details.png)
 
 Si votre outil BI ne prend pas en charge les structures de données imbriquées, il peut être difficile de référencer des champs imbriqués s’ils contiennent des valeurs sérialisées (comme `commerce` et `productListItems` dans l’exemple de schéma). Ces valeurs peuvent apparaître sous la forme de parties d’un seul champ de chaîne `commerce` encodée et ne sont pas inutilisables de manière réalistique.
 

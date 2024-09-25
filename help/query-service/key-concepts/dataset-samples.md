@@ -2,10 +2,10 @@
 title: Échantillon de jeux de données
 description: Les échantillons de jeux de données Query Service vous permettent de mener des requêtes exploratoires sur le Big Data avec un temps de traitement considérablement réduit, mais au prix de la précision des requêtes. Ce guide fournit des informations sur la gestion de vos échantillons pour le traitement approximatif des requêtes.
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 28fe8ec5a589b8d181ba2f888d50fa9d2d7d4996
+source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
 workflow-type: tm+mt
-source-wordcount: '643'
-ht-degree: 100%
+source-wordcount: '632'
+ht-degree: 96%
 
 ---
 
@@ -17,14 +17,15 @@ Comme de nombreux utilisateurs et de nombreuses utilisatrices n’ont pas besoin
 
 Pour vous aider à gérer vos échantillons pour le traitement approximatif des requêtes, Query Service prend en charge les opérations suivantes pour les échantillons de jeux de données :
 
-- [Créer un échantillon de jeu de données aléatoire uniforme.](#create-a-sample)
-- [Vous pouvez également indiquer un critère de filtre.](##optional-filter-criteria)
-- [Afficher la liste des échantillons pour une table ADLS.](#view-list-of-samples)
-- [Interroger directement les échantillons de jeux de données.](#query-sample-datasets)
-- [Supprimer un échantillon.](#delete-a-sample)
-- Supprimer les échantillons associés lorsque la table ADLS d’origine est abandonnée.
+- [Échantillons de jeux de données](#dataset-samples)
+   - [Prise en main {#get-started}](#getting-started-get-started)
+   - [Créer un exemple de jeu de données aléatoire uniforme {#create-a-sample}](#create-a-uniform-random-dataset-sample-create-a-sample)
+   - [Vous pouvez éventuellement spécifier un critère de filtre {#optional-filter-criteria}](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+   - [Afficher la liste des exemples {#view-list-of-samples}](#view-the-list-of-samples-view-list-of-samples)
+   - [Interrogation de l’exemple de jeu de données {#query-sample-datasets}](#query-the-sample-dataset-query-sample-datasets)
+   - [Suppression d’exemples de jeux de données {#delete-a-sample}](#delete-dataset-samples-delete-a-sample)
 
-## Prise en main {#get-started}
+## Commencer {#get-started}
 
 Pour utiliser les fonctionnalités de création et de suppression du traitement approximatif des requêtes présentées dans ce document, vous devez définir l’indicateur de session sur `true`. Dans la ligne de commande de Query Editor ou de votre client PSQL, saisissez la commande `SET aqp=true;`.
 
@@ -32,7 +33,7 @@ Pour utiliser les fonctionnalités de création et de suppression du traitement 
 >
 >Vous devez activer l’indicateur de session chaque fois que vous vous connectez à Platform.
 
-![L’éditeur de requêtes avec la commande SET aqp=true mise en surbrillance.](../images/essential-concepts/set-session-flag.png)
+![L’éditeur de requêtes avec la commande SET aqp=true mise en surbrillance.](../images/key-concepts/set-session-flag.png)
 
 ## Créer un échantillon de jeu de données aléatoire uniforme {#create-a-sample}
 
