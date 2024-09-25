@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2024
 description: Les notes de mise à jour de septembre 2024 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 50b0387dacb3e995d9c88206ef968ddc53edb14c
+source-git-commit: 0cb134fe6b0a87571e01ada7946c4bbb7d4c346b
 workflow-type: tm+mt
-source-wordcount: '1823'
-ht-degree: 29%
+source-wordcount: '1975'
+ht-degree: 27%
 
 ---
 
@@ -112,6 +112,12 @@ Pour plus d’informations sur XDM, consultez la [présentation du système XDM]
 
 Utilisez le service d’identités d’Adobe Experience Platform pour créer une vue complète de votre clientèle et de ses comportements en reliant les identités entre les appareils et les systèmes, vous permettant ainsi de proposer des expériences numériques personnelles et percutantes en temps réel.
 
+**Fonctionnalité mise à jour**
+
+| Fonctionnalité | Description |
+| --- | --- |
+| Disponibilité limitée des règles de liaison de graphiques d’identités | Les règles de liaison de graphiques d’identités sont une suite d’outils d’Identity Service que vous pouvez utiliser pour garantir une personnalisation précise pour vos utilisateurs. <ul><li>Vous pouvez désormais utiliser l’[ algorithme d’optimisation des identités](../../identity-service/identity-graph-linking-rules/identity-optimization-algorithm.md) pour vous assurer qu’un graphique d’identités est représentatif d’une seule personne et, par conséquent, empêcher la fusion indésirable d’identités sur Real-time Customer Profile.</li><li>Configurez les [priorités d’espace de noms](../../identity-service/identity-graph-linking-rules/namespace-priority.md) pour définir l’importance de vos espaces de noms respectifs et influencer la manière dont vos profils sont formés et segmentés.</li><li>Utilisez l’outil de simulation [graphique dans l’interface utilisateur](../../identity-service/identity-graph-linking-rules/graph-simulation.md) pour simuler des graphiques d’identités avec des configurations variées.</li><li>Utilisez l’ [ interface des paramètres d’identité](../../identity-service/identity-graph-linking-rules/identity-settings-ui.md) pour désigner votre espace de noms unique et établir des priorités pour tous les espaces de noms de votre organisation.</li><li>Reportez-vous au [tableau de bord d’identité](../../identity-service/identity-graph-linking-rules/implementation-guide.md#validate-your-graphs) pour connaître les mesures et les tendances concernant vos données graphiques.</li></ul> Pour tester les règles de liaison de graphiques d’identités, contactez votre équipe de compte d’Adobe pour accéder aux environnements de test de développement. |
+
 **Documentation mise à jour**
 
 | Fonctionnalité | Description |
@@ -131,7 +137,7 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Audiences Distiller de données | Créez, gérez et activez facilement des audiences avec l’extension d’audience SQL dans Experience Platform Data Distiller. Définissez des segments d’audience avec des commandes SQL directement depuis votre lac de données, en contournant la nécessité de données brutes dans les profils. Affinez les stratégies de ciblage et synchronisez automatiquement les audiences avec les destinations basées sur les fichiers avec cette approche flexible et axée sur les données. Rationalisez les workflows, optimisez la gestion de l’audience et déverrouillez tout le potentiel des données. Lisez le [guide sur l’utilisation de l’extension d’audience SQL](../../query-service/home.md) pour améliorer vos stratégies d’audience. |
+| Audiences Distiller de données | Créez, gérez et activez facilement des audiences avec l’extension d’audience SQL dans Experience Platform Data Distiller. Définissez des segments d’audience avec des commandes SQL directement depuis votre lac de données, en contournant la nécessité de données brutes dans les profils. Affinez les stratégies de ciblage et synchronisez automatiquement les audiences avec les destinations basées sur les fichiers avec cette approche flexible et axée sur les données. Rationalisez les workflows, optimisez la gestion de l’audience et déverrouillez tout le potentiel des données. Lisez le [guide sur l’utilisation de l’extension d’audience SQL](../../query-service/data-distiller-audiences/overview.md) pour améliorer vos stratégies d’audience. |
 | Statistiques Data Distiller - Hypercubes | Optimisez l&#39;analyse des données volumineuses avec les hypercubes. Gérez des calculs complexes, tels que des décomptes distincts et des analyses multidimensionnelles, sans retraiter les données historiques. Mettez à jour les données de manière incrémentielle, rationalisez les workflows et réduisez le temps de traitement tout en assurant précision et efficacité. Obtenez des informations plus rapides, évolutives et économiques qui transforment la prise de décision. Explorez le [guide sur l’utilisation d’hypercubes](../../query-service/hypercubes.md) pour déverrouiller l’analyse avancée. |
 | Explorateur d’objets de Query Editor | Améliorez l’efficacité des requêtes grâce au nouvel explorateur d’objets de l’éditeur de requêtes. Recherchez, filtrez et accédez rapidement aux jeux de données pour écrire et affiner plus rapidement les requêtes. Grâce aux mises à jour de schémas en temps réel et aux métadonnées instantanées de la table, vous pouvez rationaliser les workflows, réduire le temps de navigation et améliorer votre expérience de requête. Déverrouillez le potentiel de vos données et optimisez l’analyse. Pour plus d’informations, consultez le [guide sur l’utilisation de l’explorateur d’objets](../../query-service/ui/user-guide.md#object-browser) . |
 | Heures de calcul | Contrôlez l’utilisation des ressources avec la mesure Heures de calcul nouvellement visible pour les requêtes planifiées. Affichez les heures de calcul au niveau de l’exécution des requêtes afin de surveiller et d’optimiser l’utilisation des ressources pour les requêtes par lots CTAS/ITAS. Suivez les heures de début, l’état d’achèvement et l’heure de calcul pour chaque exécution de requête. Ajustez les performances et réduisez les coûts sans effort. Lisez le [guide sur les heures de calcul](../../query-service/ui/query-schedules.md#compute-hours-at-job-level) pour plus d’informations sur la manière d’optimiser l’efficacité de vos requêtes. |

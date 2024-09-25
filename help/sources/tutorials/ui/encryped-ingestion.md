@@ -3,9 +3,9 @@ title: Ingestion de données chiffrées dans l’interface utilisateur de source
 description: Découvrez comment ingérer des données chiffrées dans l’espace de travail de l’interface utilisateur des sources.
 badge: Version bêta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 3eba8690dcf9c808495a00b7fd4558478606f628
+source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
 workflow-type: tm+mt
-source-wordcount: '1458'
+source-wordcount: '1464'
 ht-degree: 6%
 
 ---
@@ -33,7 +33,7 @@ Avant de poursuivre ce tutoriel, veuillez lire les documents suivants pour mieux
 * Créez une paire de clés de chiffrement à l’aide de l’espace de travail des sources dans l’interface utilisateur de l’Experience Platform.
    * Vous pouvez également créer votre propre paire de clés de vérification des signes afin de fournir une couche supplémentaire de sécurité à vos données chiffrées.
 * Utilisez la clé publique de votre paire de clés de chiffrement pour chiffrer vos données.
-* Placez vos données chiffrées dans votre fournisseur de stockage dans le cloud. Au cours de cette étape, vous devez également vous assurer que vous disposez d’un fichier d’exemple qui peut être utilisé comme référence pour mapper vos données source à un schéma de modèle de données d’expérience (XDM).
+* Placez vos données chiffrées dans votre espace de stockage dans le cloud. Au cours de cette étape, vous devez également vous assurer que vous disposez d’un fichier d’exemple de vos données dans votre espace de stockage dans le cloud qui peut être utilisé comme référence pour mapper vos données source à un schéma de modèle de données d’expérience (XDM).
 * Utilisez votre source par lots de stockage dans le cloud et commencez le processus d’ingestion des données dans l’espace de travail des sources de l’interface utilisateur Experience Platform.
 * Pendant le processus de création de la connexion source, indiquez l’identifiant de la clé qui correspond à la clé publique que vous avez utilisée pour chiffrer vos données.
    * Si vous avez également utilisé le mécanisme de paire de clés de vérification des signes, vous devez également fournir l’identifiant de clé de vérification des signes qui correspond à vos données chiffrées.
