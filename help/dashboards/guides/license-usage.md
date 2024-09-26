@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 3b4a38be9b47ca65dc142bff4800ef595d3cacca
 workflow-type: tm+mt
 source-wordcount: '2739'
-ht-degree: 9%
+ht-degree: 16%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 9%
 >[!CONTEXTUALHELP]
 >id="testy-mctestface"
 >title="Boîte de dialogue de test qui ne doit pas être visible"
->abstract="L&#39;objet {name} est affiché sur {date}."
+>abstract="L’objet {name} est affiché le {date}."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_core"
@@ -32,15 +32,15 @@ ht-degree: 9%
 >id="platform_dashboards_licenseUsage"
 >title="Tableau de bord d’utilisation des licences"
 >abstract="Le tableau de bord d’utilisation des licences donne des informations sur les produits Adobe Experience Platform que vous avez achetés. La vue d’ensemble du tableau de bord affiche les mesures principales pour vos produits, notamment votre utilisation pour chacune d’entre elles et la quantité de licences contractées. L’espace de travail des détails affiche une répartition de vos mesures pour chaque produit dans des sandbox spécifiques."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirations automatisées des jeux de données"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Expiration des données de profils pseudonymes"
+>additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirations automatisées des jeux de données"
+>additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/profile/pseudonymous-profiles" text="Expiration des données de profils pseudonymes"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage"
 >title="Tableau de bord d’utilisation des licences"
 >abstract="Le tableau de bord d’utilisation des licences donne des informations sur les produits Adobe Experience Platform que vous avez achetés. La vue d’ensemble du tableau de bord affiche les mesures principales pour vos produits, notamment votre utilisation pour chacune d’entre elles et la quantité de licences contractées. L’espace de travail des détails affiche une répartition de vos mesures pour chaque produit dans des sandbox spécifiques."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirations automatisées des jeux de données"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Expiration des données de profils pseudonymes"
+>additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirations automatisées des jeux de données"
+>additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/profile/pseudonymous-profiles" text="Expiration des données de profils pseudonymes"
 
 Vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise via le tableau de bord [!UICONTROL Utilisation de la licence] de Adobe Experience Platform. Les informations affichées ici sont capturées pendant un instantané quotidien de votre instance Platform.
 
@@ -93,21 +93,21 @@ Le tableau de bord [!UICONTROL Utilisation de la licence] affiche deux tables di
 
 Les tableaux indiquent la mesure principale de chaque produit, car chaque produit peut effectuer le suivi de nombreuses mesures.
 
-### Utilisation prévue {#predicted-usage}
+### Utilisation prédite {#predicted-usage}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
->title="Utilisation prévue"
->abstract="Les prédictions sont basées sur l&#39;utilisation des 6 à 7 derniers mois et sont générées le 15 de chaque mois. Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence de votre entreprise avec Adobe. Pour réduire l’utilisation, vous pouvez configurer des expirations de données de jeu de données ou de profil pseudonymes pour les environnements de test et les jeux de données."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirations automatisées des jeux de données"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Expiration des données de profils pseudonymes"
+>title="Utilisation prédite"
+>abstract="Les prédictions sont basées sur l’utilisation des 6 à 7 derniers mois et sont générées le 15 de chaque mois. Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence obtenue par votre entreprise auprès d’Adobe. Pour réduire l’utilisation, vous pouvez configurer l’expiration des données des jeux de données ou des profils pseudonymes pour les sandbox et les jeux de données."
+>additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirations automatisées des jeux de données"
+>additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/profile/pseudonymous-profiles" text="Expiration des données de profils pseudonymes"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
->title="Utilisation prévue"
->abstract="Les prédictions sont basées sur l&#39;utilisation des 6 à 7 derniers mois et sont générées le 15 de chaque mois. Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence de votre entreprise avec Adobe. Pour réduire l’utilisation, vous pouvez configurer des expirations de données de jeu de données ou de profil pseudonymes pour les environnements de test et les jeux de données."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirations automatisées des jeux de données"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Expiration des données de profils pseudonymes"
+>title="Utilisation prédite"
+>abstract="Les prédictions sont basées sur l’utilisation des 6 à 7 derniers mois et sont générées le 15 de chaque mois. Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence obtenue par votre entreprise auprès d’Adobe. Pour réduire l’utilisation, vous pouvez configurer l’expiration des données des jeux de données ou des profils pseudonymes pour les sandbox et les jeux de données."
+>additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirations automatisées des jeux de données"
+>additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/profile/pseudonymous-profiles" text="Expiration des données de profils pseudonymes"
 
 Gérez et optimisez vos ressources de licence de manière proactive en fonction de prédictions d’utilisation éclairées. La colonne [!UICONTROL  Utilisation prédite] prédit précisément l’utilisation future des licences au niveau des environnements de test, dans tous les environnements de test de production et de développement, pour tous les produits que vous avez achetés. Cette fonctionnalité d’alerte fournit une prévision de l’utilisation des licences pour six semaines à venir, en fonction de votre utilisation jusqu’au 15 du mois civil. Les prédictions sont fournies avec une limite inférieure et une limite supérieure.
 

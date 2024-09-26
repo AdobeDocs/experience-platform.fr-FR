@@ -5,7 +5,7 @@ exl-id: 4c2b8b8e-ac4f-4c6e-a23f-66f658bb6e24
 source-git-commit: 7e65e88bc49ea28d567e8204db877d22ddb8d9a6
 workflow-type: tm+mt
 source-wordcount: '603'
-ht-degree: 4%
+ht-degree: 9%
 
 ---
 
@@ -17,12 +17,12 @@ ht-degree: 4%
 
 Utilisez des requêtes simples dans le [!UICONTROL Gestionnaire d’autorisations] pour créer des rapports concis qui vous aideront à comprendre la gestion des accès et à gagner du temps en validant les autorisations d’accès sur de nombreux workflows et niveaux de granularité. Vous pouvez utiliser [!UICONTROL Permission Manager] pour rechercher des utilisateurs appartenant à un groupe d’utilisateurs et disposant de privilèges d’accès spécifiés, ainsi que des rôles possédant des libellés spécifiques.
 
-## Recherche d’utilisateurs au sein d’un groupe d’utilisateurs spécifique {#search-users}
+## Rechercher des utilisateurs et utilisatrices au sein d’un groupe de personnes spécifique {#search-users}
 
 >[!CONTEXTUALHELP]
 >id="platform_permission_manager"
 >title="Gestionnaire d’autorisations"
->abstract="Utilisez les sélecteurs de liste déroulante sur la page pour obtenir des rapports de niveau d’accès de différents niveaux de granularité pour les utilisateurs et les rôles."
+>abstract="Utilisez les sélecteurs de liste déroulante sur la page pour obtenir des rapports de niveau d’accès de différents niveaux de granularité pour les utilisateurs et utilisatrices et les rôles."
 <!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
 
 Dans la liste déroulante, sélectionnez l’attribut **[!UICONTROL Users]**.

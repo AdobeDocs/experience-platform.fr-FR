@@ -147,7 +147,7 @@ Utilisez les cases à cocher situées à gauche des jeux de données pour sélec
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_body"
 >title="Mettre à jour la date de fin de ce corps de flux de données"
->abstract="En raison des mises à jour récentes apportées à cette destination, le flux de données nécessite désormais une date de fin. Adobe a défini une date de fin par défaut sur le 1er mai 2025. Mettez à jour à la date de fin souhaitée. Dans le cas contraire, les exports de données s’arrêteront à la date par défaut."
+>abstract="En raison des mises à jour récentes apportées à cette destination, le flux de données nécessite désormais une date de fin. Adobe a défini une date de fin par défaut au 1er mai 2025. Mettez à jour à la date de fin souhaitée. Dans le cas contraire, les exports de données s’arrêteront à la date par défaut."
 
 Utilisez l’étape **[!UICONTROL Planification]** pour :
 

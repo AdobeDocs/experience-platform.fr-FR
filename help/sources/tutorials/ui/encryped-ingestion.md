@@ -6,7 +6,7 @@ exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
 source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
 workflow-type: tm+mt
 source-wordcount: '1464'
-ht-degree: 6%
+ht-degree: 9%
 
 ---
 
@@ -39,12 +39,12 @@ Avant de poursuivre ce tutoriel, veuillez lire les documents suivants pour mieux
    * Si vous avez également utilisé le mécanisme de paire de clés de vérification des signes, vous devez également fournir l’identifiant de clé de vérification des signes qui correspond à vos données chiffrées.
 * Passez aux étapes de création du flux de données.
 
-## Création d’une paire de clés de chiffrement {#create-an-encryption-key-pair}
+## Créer une paire de clés de chiffrement {#create-an-encryption-key-pair}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_encryptionKeyId"
 >title="ID de clé de chiffrement"
->abstract="Indiquez l’ID de clé de chiffrement correspondant à votre clé de chiffrement qui a été utilisée pour chiffrer vos données source."
+>abstract="Indiquez l’ID de clé de chiffrement correspondant à la clé de chiffrement qui a été utilisée pour chiffrer vos données source."
 
 >[!BEGINSHADEBOX]
 
@@ -80,12 +80,12 @@ Pour afficher des informations sur une clé de chiffrement existante, sélection
 
 ![Page des paires de clés, où une liste des clés de chiffrement s’affiche. Les points de suspension en regard de &quot;acme-encryption-key&quot; sont sélectionnés et la liste déroulante affiche des options pour afficher les détails de la clé ou supprimer les clés.](../../images/tutorials/edi/configuration_options.png)
 
-### Création d’une clé de vérification des signes {#create-a-sign-verification-key}
+### Créer une clé de vérification de signe {#create-a-sign-verification-key}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_encrypted_signVerificationKeyId"
->title="Identifiant de clé de vérification de signature"
->abstract="Fournissez l’identifiant de la clé de vérification des signes qui correspond à vos données source signées et chiffrées."
+>title="ID de clé de vérification de signe"
+>abstract="Fournissez l’ID de clé de vérification de signe qui correspond à vos données source signées et chiffrées."
 
 >[!BEGINSHADEBOX]
 
