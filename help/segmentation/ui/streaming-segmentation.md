@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de la segmentation en flux continu
 description: La segmentation en flux continu sur Adobe Experience Platform vous permet d’effectuer une segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données entrent dans Platform, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segment peuvent désormais être évaluées au fur et à mesure que les données sont transmises à Platform, ce qui signifie que l’appartenance à un segment sera maintenue à jour sans avoir à exécuter des tâches de segmentation planifiée.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
 workflow-type: tm+mt
-source-wordcount: '1537'
-ht-degree: 89%
+source-wordcount: '1443'
+ht-degree: 86%
 
 ---
 
@@ -32,15 +32,13 @@ La segmentation en flux continu sur [!DNL Adobe Experience Platform] permet aux 
 
 Une requête est automatiquement évaluée avec la segmentation en flux continu si elle répond à l’un des critères suivants :
 
-| Type de requête | Détails | Exemple |
-| ---------- | ------- | ------- |
-| Événement unique | Toute définition de segment qui fait référence à un seul événement entrant sans restriction temporelle. | ![Un exemple d’événement unique s’affiche.](../images/ui/streaming-segmentation/incoming-hit.png) |
-| Événement unique dans une fenêtre temporelle relative | Toute définition de segment qui fait référence à un seul événement entrant. | ![Un exemple d’événement unique dans une fenêtre temporelle relative s’affiche.](../images/ui/streaming-segmentation/relative-hit-success.png) |
-| Événement unique avec une fenêtre temporelle | Toute définition de segment qui fait référence à un seul événement entrant avec une fenêtre temporelle. | ![Un exemple d’événement unique avec une fenêtre temporelle s’affiche.](../images/ui/streaming-segmentation/historic-time-window.png) |
-| Profil uniquement | Toute définition de segment qui ne fait référence qu’à un attribut de profil. | |
-| Événement unique avec un attribut de profil dans une fenêtre de temps relatif inférieure à 24 heures | Toute définition de segment qui fait référence à un seul événement entrant, avec un ou plusieurs attributs de profil, et qui se produit dans une fenêtre de temps relative de moins de 24 heures. | ![Un exemple d’événement unique avec un attribut de profil dans une fenêtre temporelle relative s’affiche.](../images/ui/streaming-segmentation/profile-relative-success.png) |
-| Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lots ou en diffusion en flux continu. **Remarque :** si un segment est utilisé, la disqualification du profil se produit **toutes les 24 heures**. | ![Un exemple d’un segment de segments s’affiche.](../images/ui/streaming-segmentation/two-batches.png) |
-| Plusieurs événements avec un attribut de profil | Toute définition de segment qui fait référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. | ![Un exemple de plusieurs événements avec un attribut de profil s’affiche.](../images/ui/streaming-segmentation/event-history-success.png) |
+| Type de requête | Détails |
+| ---------- | ------- |
+| Événement unique dans une fenêtre temporelle de moins de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant dans une fenêtre temporelle de moins de 24 heures. |
+| Profil uniquement | Toute définition de segment qui ne fait référence qu’à un attribut de profil. |
+| Événement unique avec un attribut de profil dans une fenêtre de temps relatif inférieure à 24 heures | Toute définition de segment qui fait référence à un seul événement entrant, avec un ou plusieurs attributs de profil, et qui se produit dans une fenêtre de temps relative de moins de 24 heures. |
+| Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lots ou en diffusion en flux continu. **Remarque :** si un segment est utilisé, la disqualification du profil se produit **toutes les 24 heures**. |
+| Plusieurs événements avec un attribut de profil | Toute définition de segment qui fait référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. |
 
 Une définition de segment ne sera **pas** activée pour la segmentation en flux continu dans les scénarios suivants :
 

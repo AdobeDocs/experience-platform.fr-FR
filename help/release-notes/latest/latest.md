@@ -2,10 +2,10 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2024
 description: Les notes de mise à jour de septembre 2024 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 0cb134fe6b0a87571e01ada7946c4bbb7d4c346b
+source-git-commit: e93d27ef67802c5fbdffdacb3a0649d373a41a2d
 workflow-type: tm+mt
-source-wordcount: '1975'
-ht-degree: 27%
+source-wordcount: '2144'
+ht-degree: 24%
 
 ---
 
@@ -50,9 +50,11 @@ Experience Platform fournit plusieurs tableaux de bord grâce auxquels vous pouv
 
 | Fonctionnalité | Description |
 | --- | --- |
+| Tableau des modules complémentaires d’utilisation de licence | Obtenez une visibilité granulaire sur l’utilisation des licences et gérez vos ressources Platform avec des tables dédiées pour les produits principaux et les modules complémentaires. Effectuez le suivi et l’analyse des mesures clés de chaque produit principal avec des vues d’analyse au niveau de l’environnement de test. Les mesures de module complémentaire s’intègrent de manière transparente aux mesures de produits de base, offrant une vue d’ensemble complète de l’utilisation. Une meilleure visibilité vous permet d’optimiser la gestion des licences et d’aligner les ressources avec les besoins de l’entreprise. Pour plus d’informations, consultez le [[!UICONTROL guide de tableau de bord Utilisation de la licence] .](../../dashboards/guides/license-usage.md#overview-tab) |
 | Mode Query Pro - Mises à niveau des filtres globaux | Amélioration de l’analyse avec le nouveau filtre de date de Query Pro Mode. Affinez les informations à l’aide de paramètres de date dynamiques dans vos requêtes SQL et filtrez les données selon des périodes spécifiques. Choisissez des périodes prédéfinies ou personnalisées dans une interface utilisateur intuitive, en conservant les tableaux de bord pertinents pour tous les utilisateurs. Simplifiez les workflows, maintenez la précision et prenez des décisions opportunes. Pour plus d’informations, consultez le [guide sur la création de filtres de date](../../dashboards/data-distiller/query-pro-mode/filters/global-filter.md) . |
 | Modes Query Pro - Exploration publicitaires | Déverrouillez des informations plus précises avec la fonction d’exploration du mode Query Pro et naviguez facilement des graphiques de haut niveau aux tableaux de bord détaillés. Utilisez cette fonction pour passer facilement des résumés aux analyses approfondies et explorer les tendances, les comportements des clients et les indicateurs clés de performance. Les dépassements automatiques de filtre et les explorations à plusieurs niveaux maintiennent les données homogènes, assurant une exploration en douceur. Simplifiez les workflows, conservez le contexte et accélérez les décisions. Pour plus d’informations, lisez le [guide détaillé sur la création d’explorations publicitaires](../../dashboards/data-distiller/query-pro-mode/drill-through.md) . |
 | Mode Query Pro - Attributs de tableau avancés | Utilisez les attributs de tableau avancés du mode Query Pro pour rationaliser la visualisation des données, améliorer l’efficacité des workflows et améliorer la clarté des données. Ajoutez un tri, un redimensionnement et une pagination automatiques à vos tableaux de bord directement depuis les tableaux de bord personnalisés. Triez les colonnes afin de prioriser les données clés, redimensionnez-les pour une lisibilité optimale et naviguez facilement les jeux de données volumineux sans modifier les requêtes SQL. Lisez le guide &quot;[Afficher plus](../../dashboards/data-distiller/query-pro-mode/view-more.md)&quot; pour savoir comment intégrer ces fonctionnalités et améliorer vos informations sur les données. |
+| Volume total des données | La mesure &quot;Richesse moyenne du profil&quot; a été remplacée par la mesure &quot;Volume total des données&quot;. Le volume total de données fait référence à la quantité totale de données disponibles pouvant être utilisées avec Real-time Customer Profile pour les workflows d’engagement et de personnalisation. Vous trouverez plus d’informations sur cette modification dans le [guide Total Data Volume](../../landing/license-usage-and-guardrails/total-data-volume.md). |
 
 {style="table-layout:auto"}
 
@@ -153,7 +155,8 @@ Pour en savoir plus sur Query Service, consultez la [présentation de Query Serv
 **Fonctionnalités nouvelles ou mises à jour**
 
 | Fonctionnalité | Description |
-| --- | --- |
+| ------- | ----------- |
+| Mise à jour des critères de segmentation par flux | À compter de la version de septembre 2024, les critères permettant aux audiences d’être éligibles pour la segmentation par flux ont été mis à jour. Vous trouverez plus d’informations sur ces modifications dans la [mise à jour des critères d’éligibilité de la segmentation par flux](../../segmentation/eligibility-criteria-update.md). |
 | Implémentation de la recherche unifiée | Le comportement de recherche dans le créateur de segments utilise désormais la recherche unifiée. Cela permet une expérience plus robuste lors de la gestion et de la recherche d’audiences à réutiliser pour l’adhésion au segment. Pour plus d’informations sur cette modification, consultez le [guide du créateur de segments](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 
 {style="table-layout:auto"}

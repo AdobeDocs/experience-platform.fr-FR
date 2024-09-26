@@ -4,10 +4,10 @@ title: Évaluer les événements en temps quasi réel grâce à la segmentation 
 description: Ce document contient des exemples d’utilisation de la segmentation par diffusion en flux continu avec l’API du service de segmentation Adobe Experience Platform.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: 914174de797d7d5f6c47769d75380c0ce5685ee2
+source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
 workflow-type: tm+mt
-source-wordcount: '2050'
-ht-degree: 67%
+source-wordcount: '2027'
+ht-degree: 65%
 
 ---
 
@@ -73,9 +73,7 @@ Pour qu’une définition de segment soit évaluée à l’aide de la segmentati
 
 | Type de requête | Détails |
 | ---------- | ------- |
-| Événement unique | Toute définition de segment qui fait référence à un seul événement entrant sans restriction temporelle. |
-| Événement unique dans une fenêtre temporelle relative | Toute définition de segment qui fait référence à un seul événement entrant. |
-| Événement unique avec une fenêtre temporelle | Toute définition de segment qui fait référence à un seul événement entrant avec une fenêtre temporelle. |
+| Événement unique dans une fenêtre temporelle de moins de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant dans une fenêtre temporelle de moins de 24 heures. |
 | Profil uniquement | Toute définition de segment qui ne fait référence qu’à un attribut de profil. |
 | Événement unique avec un attribut de profil dans une fenêtre de temps relatif inférieure à 24 heures | Toute définition de segment qui fait référence à un seul événement entrant, avec un ou plusieurs attributs de profil, et qui se produit dans une fenêtre de temps relative de moins de 24 heures. |
 | Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lots ou en diffusion en flux continu. **Remarque :** si un segment est utilisé, la disqualification du profil se produit **toutes les 24 heures**. |

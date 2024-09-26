@@ -4,10 +4,10 @@ title: Effectuer une segmentation Edge à l’aide de l’API
 description: Ce document contient des exemples d’utilisation de la segmentation Edge avec l’API Segmentation Service Adobe Experience Platform.
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: 057db1432493a8443eb91b0fc371d0bdffb3de86
+source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
 workflow-type: tm+mt
-source-wordcount: '806'
-ht-degree: 83%
+source-wordcount: '783'
+ht-degree: 79%
 
 ---
 
@@ -43,9 +43,7 @@ Pour qu’un segment soit évalué à l’aide de la segmentation Edge, la requ�
 
 | Type de requête | Détails |
 | ---------- | ------- |
-| Événement unique | Toute définition de segment qui fait référence à un seul événement entrant sans restriction temporelle. |
-| Événement unique dans une fenêtre temporelle relative | Toute définition de segment qui fait référence à un seul événement entrant. |
-| Événement unique avec une fenêtre temporelle | Toute définition de segment qui fait référence à un seul événement entrant avec une fenêtre temporelle. |
+| Événement unique dans une fenêtre temporelle de moins de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant dans une fenêtre temporelle de moins de 24 heures. |
 | Profil uniquement | Toute définition de segment qui ne fait référence qu’à un attribut de profil. |
 | Événement unique avec un attribut de profil dans une fenêtre de temps relatif inférieure à 24 heures | Toute définition de segment qui fait référence à un seul événement entrant, avec un ou plusieurs attributs de profil, et qui se produit dans une fenêtre de temps relative de moins de 24 heures. |
 | Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lots ou en diffusion en flux continu. **Remarque :** si un segment est utilisé, la disqualification du profil se produit **toutes les 24 heures**. |
