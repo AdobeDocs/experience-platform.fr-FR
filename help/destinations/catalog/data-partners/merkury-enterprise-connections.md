@@ -1,13 +1,14 @@
 ---
 title: Destination des connexions d’entreprise Merkury
 description: Découvrez comment créer une connexion de destination Connexions d’entreprise Merkury à l’aide de l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: 01ce38d26cf61706de84ec143e3dd8af720d0591
+last-substantial-update: 2024-07-20T00:00:00Z
+exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
+source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
 workflow-type: tm+mt
 source-wordcount: '1375'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
-
 
 # Destination des connexions d’entreprise Merkury
 
@@ -60,7 +61,7 @@ Cette section décrit le type d’audiences que vous pouvez exporter vers cette 
 
 | **Audience** | **Pris en charge** | **Description origin** |
 |---|---|---|      
-| Segmentation Service | ✓ | Audiences générées par l’Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Segmentation Service | ✓ | Audiences générées par l’Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/home). |
 | Chargements personnalisés | X | Audiences [[importées]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
@@ -127,7 +128,7 @@ Les comptes déjà définis à l’aide de la destination Connexions de l’entr
 
 ## Activer les alertes
 
-Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’ [ abonnement aux alertes de destinations à l’aide de l’interface utilisateur ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts).
+Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’ [ abonnement aux alertes de destinations à l’aide de l’interface utilisateur ](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/ui/alerts).
 
 Lorsque vous avez terminé de fournir des détails sur votre connexion de destination, sélectionnez **Suivant**.
 

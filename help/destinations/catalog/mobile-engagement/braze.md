@@ -2,8 +2,9 @@
 keywords: mobile, braser, messagerie;
 title: Connexion Braze
 description: Braze est une plateforme d’engagement client complète qui optimise les expériences pertinentes et mémorables entre les clients et les marques qu’ils aiment.
+last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 31%

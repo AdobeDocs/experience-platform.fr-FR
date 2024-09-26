@@ -1,13 +1,14 @@
 ---
 title: Destination Merkury Enterprise Identity
 description: Découvrez comment créer une connexion de destination d’identité d’entreprise Merkury à l’aide de l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: 0a1d024b5642c08cd9349220a9686d8d4cbfd55a
+last-substantial-update: 2024-07-20T00:00:00Z
+exl-id: a5452183-289c-49c3-9574-e09b0153dc00
+source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 18%
 
 ---
-
 
 # Destination Merkury Enterprise Identity
 
@@ -67,7 +68,7 @@ Cette section décrit le type d’audiences que vous pouvez exporter vers cette 
 
 | **Audience** | **Pris en charge** | **Description** | **origin** |
 |---|---|---|---|
-| Segmentation Service | ✓ | Audiences générées par l’Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Segmentation Service | ✓ | Audiences générées par l’Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/home). |
 | Chargements personnalisés | x | Audiences [[importées]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
@@ -78,7 +79,7 @@ Reportez-vous au tableau ci-dessous pour plus d’informations sur le type et la
 
 | **Audience** | **Pris en charge** | **Description origin** |
 |---|---|---|      
-| Segmentation Service | ✓ | Audiences générées par l’Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Segmentation Service | ✓ | Audiences générées par l’Experience Platform [[Segmentation Service]](https://experienceleague.adobe.com/fr/docs/experience-platform/segmentation/home). |
 | Chargements personnalisés | X | Audiences [[importées]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) dans Experience Platform à partir de fichiers CSV. |
 
 {style="table-layout:auto"}
@@ -135,7 +136,7 @@ Les comptes déjà définis à l’aide de la destination Merkury Enterprise Ide
 
 ### Activer les alertes
 
-Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’ [ abonnement aux alertes de destinations à l’aide de l’interface utilisateur ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts).
+Vous pouvez activer les alertes pour recevoir des notifications sur le statut de votre flux de données vers votre destination. Sélectionnez une alerte dans la liste et abonnez-vous à des notifications concernant le statut de votre flux de données. Pour plus d’informations sur les alertes, consultez le guide sur l’ [ abonnement aux alertes de destinations à l’aide de l’interface utilisateur ](https://experienceleague.adobe.com/fr/docs/experience-platform/destinations/ui/alerts).
 
 Lorsque vous avez terminé de fournir des détails sur votre connexion de destination, sélectionnez **Suivant**.
 
