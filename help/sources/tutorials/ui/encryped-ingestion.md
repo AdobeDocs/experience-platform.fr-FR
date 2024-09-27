@@ -3,9 +3,9 @@ title: Ingestion de données chiffrées dans l’interface utilisateur de source
 description: Découvrez comment ingérer des données chiffrées dans l’espace de travail de l’interface utilisateur des sources.
 badge: Version bêta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 990be6351f1ea8b1a9288c55067bb81f075d1c4f
+source-git-commit: 70bfebc747c7e6267939eb313048cb2d0e132202
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1456'
 ht-degree: 9%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 9%
 
 >[!AVAILABILITY]
 >
->La prise en charge de l’ingestion de données chiffrées dans l’interface utilisateur des sources est en version bêta et peut ne pas être disponible pour votre entreprise. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
+>La prise en charge de l’ingestion de données chiffrées dans l’interface utilisateur des sources est en version bêta. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
 
 Vous pouvez ingérer des fichiers de données et des dossiers chiffrés dans Adobe Experience Platform à l’aide de sources par lots de stockage dans le cloud. Avec l’ingestion de données chiffrées, vous pouvez utiliser des mécanismes de chiffrement asymétrique pour transférer en toute sécurité des données par lots dans Experience Platform. Les mécanismes de cryptage asymétrique pris en charge sont PGP et GPG.
 

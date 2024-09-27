@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestion des formats de données avec la préparation des données
 description: Ce document donne un aperçu de la manière dont différents types de données sont traités dans la préparation des données.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: a49140853124f4f7beee87a739c8e670838947f4
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 99%
+source-wordcount: '626'
+ht-degree: 95%
 
 ---
 
@@ -75,6 +75,10 @@ Lorsque les champs de chaîne des données entrantes sont mappés aux champs de 
 > La préparation de données tentera de convertir les chaînes en dates autant que possible. Cependant, ces conversions peuvent entraîner des résultats indésirables. Par exemple, la valeur de chaîne « 12112020 » correspond au modèle « MMjjaaaa », mais l’utilisateur peut avoir prévu que la date soit lue avec le modèle « jjMMaaaa ». Par conséquent, les utilisateurs doivent mentionner explicitement le format de date pour les chaînes.
 
 ### Chaînes de format de date/heure {#format}
+
+>[!TIP]
+>
+>Actuellement, la fonction de date dans l’ingestion par lots supprime les millisecondes si les valeurs de date sont dans ce format : `2024-05-05 20:39:00.005` PST. Pour conserver les millisecondes, utilisez ce format : `2024-05-05 20:39:00.005-0800`
 
 Le tableau suivant indique les lettres de modèle définies pour les chaînes de format. Veuillez noter que les lettres sont sensibles à la casse.
 

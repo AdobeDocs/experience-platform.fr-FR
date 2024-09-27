@@ -3,9 +3,9 @@ title: Guide de mise en oeuvre des règles de liaison de graphiques d’identit�
 description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec des configurations de règles de liaison de graphiques d’identités.
 badge: Version bêta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1e9d16c53100c1ee930cf4bf5e9a9a5b6bd9c347
+source-git-commit: adfb1e83289435e6991d4cdd2e2a45e3d5a9b32f
 workflow-type: tm+mt
-source-wordcount: '1526'
+source-wordcount: '1546'
 ht-degree: 3%
 
 ---
@@ -168,6 +168,8 @@ Pour tout commentaire, utilisez l’option **[!UICONTROL Commentaires Beta]** da
 ## Validation des graphiques {#validate}
 
 Utilisez le tableau de bord des identités pour obtenir des informations sur l’état de vos graphiques d’identités, tels que le nombre total d’identités et les tendances du nombre de graphiques, le nombre d’identités par espace de noms et le nombre de graphiques par taille de graphique. Vous pouvez également utiliser le tableau de bord des identités pour afficher les tendances sur les graphiques comportant plusieurs identités, organisées par espace de noms.
+
+Sélectionnez les points de suspension (`...`), puis **[!UICONTROL Afficher plus]** pour plus d’informations et pour vérifier qu’il n’existe aucun graphique réduit.
 
 ## Annexe {#appendix}
 
