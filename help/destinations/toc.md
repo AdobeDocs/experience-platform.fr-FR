@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 029cd5bdf58a143f765b37190428b817825317b0
+source-git-commit: 7db60161b638cce1845c430f6086441599a0bc61
 workflow-type: tm+mt
-source-wordcount: '1247'
+source-wordcount: '1251'
 ht-degree: 86%
 
 ---
@@ -67,6 +67,7 @@ ht-degree: 86%
       * [Partage d’audiences Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=fr)
       * [ Connexion de composition d’audience fédérée (disponibilité limitée)](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinations publicitaires{#advertising}
+      * [(Beta) Répartition d’audiences simultanées](./catalog/advertising/acxiom-audience-distribution.md)
       * [Présentation des destinations publicitaires](./catalog/advertising/overview.md)
       * [Connexion Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
       * [Extension Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud.md)
