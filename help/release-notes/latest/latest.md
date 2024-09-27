@@ -2,9 +2,9 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2024
 description: Les notes de mise à jour de septembre 2024 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e93d27ef67802c5fbdffdacb3a0649d373a41a2d
+source-git-commit: 059ed53ace6d54a0c0fb406c2f0379588fea2c44
 workflow-type: tm+mt
-source-wordcount: '2144'
+source-wordcount: '2149'
 ht-degree: 24%
 
 ---
@@ -15,15 +15,16 @@ ht-degree: 24%
 
 Mises à jour des fonctionnalités et de la documentation existantes dans Adobe Experience Platform :
 
-- [Alertes](#alerts)
-- [Tableaux de bord](#dashboards)
-- [Préparation des données](#data-prep)
-- [Destinations](#destinations)
-- [Modèle de données d’expérience (XDM)](#xdm)
-- [Service d’identités](#identity-service)
-- [Query Service](#query-service)
-- [Segmentation Service](#segmentation-service)
-- [Sources](#sources)
+- [Notes de mise à jour d’Adobe Experience Platform](#adobe-experience-platform-release-notes)
+   - [Alertes {#alerts}](#alerts-alerts)
+   - [Tableaux de bord {#dashboards}](#dashboards-dashboards)
+   - [Préparation de données {#data-prep}](#data-prep-data-prep)
+   - [Destinations {#destinations}](#destinations-destinations)
+   - [Modèle de données d’expérience (XDM) {#xdm}](#experience-data-model-xdm-xdm)
+   - [Identity Service {#identity-service}](#identity-service-identity-service)
+   - [Query Service {#query-service}](#query-service-query-service)
+   - [Segmentation Service {#segmentation-service}](#segmentation-service-segmentation-service)
+   - [Sources {#sources}](#sources-sources)
 
 ## Alertes {#alerts}
 
@@ -140,7 +141,7 @@ Query Service vous permet d’utiliser le langage SQL standard pour interroger l
 | Fonctionnalité | Description |
 | --- | --- |
 | Audiences Distiller de données | Créez, gérez et activez facilement des audiences avec l’extension d’audience SQL dans Experience Platform Data Distiller. Définissez des segments d’audience avec des commandes SQL directement depuis votre lac de données, en contournant la nécessité de données brutes dans les profils. Affinez les stratégies de ciblage et synchronisez automatiquement les audiences avec les destinations basées sur les fichiers avec cette approche flexible et axée sur les données. Rationalisez les workflows, optimisez la gestion de l’audience et déverrouillez tout le potentiel des données. Lisez le [guide sur l’utilisation de l’extension d’audience SQL](../../query-service/data-distiller-audiences/overview.md) pour améliorer vos stratégies d’audience. |
-| Statistiques Data Distiller - Hypercubes | Optimisez l&#39;analyse des données volumineuses avec les hypercubes. Gérez des calculs complexes, tels que des décomptes distincts et des analyses multidimensionnelles, sans retraiter les données historiques. Mettez à jour les données de manière incrémentielle, rationalisez les workflows et réduisez le temps de traitement tout en assurant précision et efficacité. Obtenez des informations plus rapides, évolutives et économiques qui transforment la prise de décision. Explorez le [guide sur l’utilisation d’hypercubes](../../query-service/hypercubes.md) pour déverrouiller l’analyse avancée. |
+| Statistiques Data Distiller - Hypercubes | Optimisez l&#39;analyse des données volumineuses avec les hypercubes. Gérez des calculs complexes, tels que des décomptes distincts et des analyses multidimensionnelles, sans retraiter les données historiques. Mettez à jour les données de manière incrémentielle, rationalisez les workflows et réduisez le temps de traitement tout en assurant précision et efficacité. Obtenez des informations plus rapides, évolutives et économiques qui transforment la prise de décision. Explorez le [guide sur l’utilisation d’hypercubes](../../query-service/hypercubes/overview.md) pour déverrouiller l’analyse avancée. |
 | Explorateur d’objets de Query Editor | Améliorez l’efficacité des requêtes grâce au nouvel explorateur d’objets de l’éditeur de requêtes. Recherchez, filtrez et accédez rapidement aux jeux de données pour écrire et affiner plus rapidement les requêtes. Grâce aux mises à jour de schémas en temps réel et aux métadonnées instantanées de la table, vous pouvez rationaliser les workflows, réduire le temps de navigation et améliorer votre expérience de requête. Déverrouillez le potentiel de vos données et optimisez l’analyse. Pour plus d’informations, consultez le [guide sur l’utilisation de l’explorateur d’objets](../../query-service/ui/user-guide.md#object-browser) . |
 | Heures de calcul | Contrôlez l’utilisation des ressources avec la mesure Heures de calcul nouvellement visible pour les requêtes planifiées. Affichez les heures de calcul au niveau de l’exécution des requêtes afin de surveiller et d’optimiser l’utilisation des ressources pour les requêtes par lots CTAS/ITAS. Suivez les heures de début, l’état d’achèvement et l’heure de calcul pour chaque exécution de requête. Ajustez les performances et réduisez les coûts sans effort. Lisez le [guide sur les heures de calcul](../../query-service/ui/query-schedules.md#compute-hours-at-job-level) pour plus d’informations sur la manière d’optimiser l’efficacité de vos requêtes. |
 

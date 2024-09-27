@@ -2,9 +2,9 @@
 title: Planifications de requête
 description: Découvrez comment automatiser les exécutions de requêtes planifiées, supprimer ou désactiver un planning de requêtes et utiliser les options de planification disponibles via l’interface utilisateur de Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: c69311b3188a8d066a24235466afad1e725d489c
+source-git-commit: c0d2f4b4f8e294d5a7b0a519ab9dad8b78558b26
 workflow-type: tm+mt
-source-wordcount: '2051'
+source-wordcount: '2066'
 ht-degree: 14%
 
 ---
@@ -163,6 +163,11 @@ Le tableau suivant fournit des descriptions de chaque colonne disponible dans la
 | [!UICONTROL Heures de calcul] | Affiche le temps de calcul utilisé pour chaque exécution de requête, mesuré en heures. Cela permet de suivre l’utilisation des ressources et d’optimiser les performances des requêtes. |
 
 {style="table-layout:auto"}
+
+>[!NOTE]
+>
+>Les données Heures de calcul sont disponibles à partir de la version 08/15/2024. Les données antérieures à cette date apparaissent comme &quot;Non disponible&quot;.
+
 
 Pour obtenir des informations complètes sur la manière de surveiller l’état de toutes les tâches de requête via l’interface utilisateur, consultez le [guide de surveillance des requêtes planifiées](./monitor-queries.md#inline-actions) .
 
