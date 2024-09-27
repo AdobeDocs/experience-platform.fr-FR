@@ -2,10 +2,10 @@
 title: Bloc anonyme dans Query Service
 description: Le bloc anonyme est une syntaxe SQL prise en charge par Adobe Experience Platform Query Service, qui permet d’exécuter efficacement une séquence de requêtes.
 exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
-source-git-commit: 9193ba821409806cd7b4667c5de73a0cf2660c66
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 73%
+source-wordcount: '603'
+ht-degree: 69%
 
 ---
 
@@ -44,9 +44,7 @@ $$;
 
 Dans l’exemple ci-dessous, `SET` conserve le résultat d’une requête `SELECT` dans la variable locale spécifiée. La variable est étendue sur le bloc anonyme.
 
-L’ID d’instantané est stocké en tant que variable locale (`@current_sid`). Il est ensuite utilisé dans la requête suivante pour renvoyer les résultats en fonction de l’instantané du même jeu de données/du même tableau.
-
-Un instantané de base de données est une vue statique en lecture seule d’une base de données SQL Server. Pour plus d’[informations sur la clause d’instantané](../sql/syntax.md#SNAPSHOT-clause), consultez la documentation sur la syntaxe SQL.
+L’ID d’instantané est stocké en tant que variable locale (`@current_sid`). Il est ensuite utilisé dans la requête suivante pour renvoyer les résultats en fonction de l’SNAPSHOT du même jeu de données/tableau. Pour plus d’[informations sur la clause d’instantané](../sql/syntax.md#SNAPSHOT-clause), consultez la documentation sur la syntaxe SQL.
 
 ```SQL
 $$ BEGIN                                             

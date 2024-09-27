@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Syntaxe SQL dans Query Service
 description: Ce document décrit et explique la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: d2cb7c3d1968a33300d480e63c4cb007df3cce7b
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '4305'
+source-wordcount: '4291'
 ht-degree: 5%
 
 ---
@@ -707,11 +707,7 @@ Les valeurs provenant de `source_dataset` sont utilisées pour remplir la table 
 | product-id-2 | (&quot;(&quot;(&quot;(AF, C, D, NULL)&quot;)&quot;))&quot;) | 6 | 40 |
 | product-id-4 | (&quot;(&quot;(&quot;(BM, pass, NA,NULL)&quot;)&quot;)&quot;) | 3 | 12 |
 
-## [!DNL Spark] commandes SQL
-
-La sous-section ci-dessous couvre les commandes Spark SQL prises en charge par Query Service.
-
-### SET
+## SET
 
 La commande `SET` définit une propriété et renvoie la valeur d’une propriété existante ou répertorie toutes les propriétés existantes. Si une valeur est fournie pour une clé de propriété existante, l’ancienne valeur est remplacée.
 

@@ -2,10 +2,10 @@
 title: Chargement incrémentiel dans Query Service
 description: La fonction de chargement incrémentiel utilise des fonctions d’instantanés et de blocs anonymes afin de fournir une solution en temps quasi réel pour déplacer les données du lac de données vers votre entrepôt de données, tout en ignorant les données correspondantes.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 100%
+source-wordcount: '671'
+ht-degree: 99%
 
 ---
 
@@ -125,10 +125,6 @@ Les étapes ci-dessous montrent comment créer et charger incrémentiellement de
 Cette logique peut être appliquée à n’importe quelle table pour effectuer des chargements incrémentiels.
 
 ## Instantanés expirés
-
->[!IMPORTANT]
->
->Les métadonnées d’instantané expirent après **deux** jours. Un instantané expiré invalide la logique du script fourni ci-dessus.
 
 Pour résoudre le problème d’un ID d’instantané expiré, insérez la commande suivante au début du bloc anonyme. La ligne de code suivante remplace l’`@from_snapshot_id` par l’`snapshot_id` disponible en premier à partir des métadonnées.
 
