@@ -6,7 +6,7 @@ exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
 workflow-type: tm+mt
 source-wordcount: '2573'
-ht-degree: 36%
+ht-degree: 37%
 
 ---
 
@@ -137,7 +137,7 @@ Utilisez les cases à cocher situées à gauche des jeux de données pour sélec
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_datasets_exportoptions"
 >title="Options d’exportation de fichiers pour les jeux de données"
->abstract="Sélectionnez **Exporter des fichiers incrémentiels** pour n’exporter que les données ajoutées au jeu de données depuis la dernière exportation. <br> La première exportation de fichier incrémentiel inclut toutes les données du jeu de données, agissant comme un renvoi. Les futurs fichiers incrémentiels incluent uniquement les données qui ont été ajoutées au jeu de données depuis la première exportation. <br> Sélectionnez **Exporter les fichiers complets** pour exporter l’appartenance complète de chaque jeu de données à chaque exportation. "
+>abstract="Sélectionnez **Exporter des fichiers incrémentiels** pour n’exporter que les données ajoutées au jeu de données depuis la dernière exportation. <br> La première exportation de fichier incrémentiel inclut toutes les données du jeu de données, agissant comme un renvoi. Les futurs fichiers incrémentiels incluent uniquement les données qui ont été ajoutées au jeu de données depuis le premier export. <br> Sélectionnez **Exporter les fichiers complets** pour exporter l’abonnement complet de chaque jeu de données à chaque export. "
 
 >[!CONTEXTUALHELP]
 >id="dataset_dataflow_needs_schedule_end_date_header"

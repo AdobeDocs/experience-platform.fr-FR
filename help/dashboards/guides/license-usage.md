@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
 workflow-type: tm+mt
 source-wordcount: '2738'
-ht-degree: 16%
+ht-degree: 19%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 16%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_core"
 >title="Table des produits principaux"
->abstract="Les produits principaux répertoriés dans le tableau comportent leurs propres mesures, suivi de l’utilisation et vues d’analyse au niveau de l’environnement de test. Ces produits principaux fournissent les mesures clés pour le suivi et les modules complémentaires sont inclus dans ces mesures."
+>abstract="Les produits principaux répertoriés dans le tableau comportent leurs propres mesures, le suivi de l’utilisation et des vues détaillées au niveau du sandbox. Ces produits principaux fournissent les mesures clés pour le suivi et les modules complémentaires sont inclus dans ces mesures."
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_addons"

@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
 workflow-type: tm+mt
 source-wordcount: '4784'
-ht-degree: 65%
+ht-degree: 67%
 
 ---
 
@@ -164,8 +164,8 @@ Veuillez noter qu’un maximum de 250 valeurs est autorisé. Si vous dépassez 
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_addaudiences"
->title="Mises à jour de recherche"
->abstract="Le système de recherche existant a été mis à jour pour utiliser la recherche unifiée. La recherche unifiée vous permet de rechercher plus facilement et de manière plus robuste l’appartenance à un segment pour vos audiences."
+>title="Mises à jour de la recherche"
+>abstract="Le système de recherche existant a été mis à jour pour utiliser la recherche unifiée. La recherche unifiée vous permet de rechercher plus facilement et plus efficacement l’appartenance à un segment pour vos audiences."
 
 Vous pouvez faire glisser une audience depuis l’onglet **[!UICONTROL Audience]** sur la zone de travail du créateur de règles pour référencer l’appartenance à l’audience dans la nouvelle définition de segment. Cela vous permet d’inclure ou d’exclure l’appartenance à une audience en tant qu’attribut dans les nouvelles règles de définition de segment.
 
