@@ -5,10 +5,10 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 7db60161b638cce1845c430f6086441599a0bc61
+source-git-commit: 5e2e8996ee48d7816d78fc9cacf6ba102f7ae66f
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 86%
+source-wordcount: '1253'
+ht-degree: 85%
 
 ---
 
@@ -77,6 +77,7 @@ ht-degree: 86%
       * [Extension Bing Ads Universal Event Tracking (UET)](./catalog/advertising/bing-ads.md)
       * [Extension Branch](./catalog/advertising/branch.md)
       * [(Version bêta) Connexion Criteo](./catalog/advertising/criteo.md)
+      * [Connexion Demandbase](./catalog/advertising/demandbase.md)
       * [Extension DoubleClick Floodlight (Version Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Extension Pixel Facebook](./catalog/advertising/facebook-pixel.md)
       * [Extension Flashtalking OneTag](./catalog/advertising/flashtalking.md)
