@@ -1,9 +1,9 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2024
 description: Les notes de mise à jour de septembre 2024 pour Adobe Experience Platform.
-source-git-commit: 059ed53ace6d54a0c0fb406c2f0379588fea2c44
+source-git-commit: a342f38f09b84ef720d6135bc555844df12ee251
 workflow-type: tm+mt
-source-wordcount: '2149'
+source-wordcount: '2199'
 ht-degree: 24%
 
 ---
@@ -14,16 +14,15 @@ ht-degree: 24%
 
 Mises à jour des fonctionnalités et de la documentation existantes dans Adobe Experience Platform :
 
-- [Notes de mise à jour d’Adobe Experience Platform](#adobe-experience-platform-release-notes)
-   - [Alertes {#alerts}](#alerts-alerts)
-   - [Tableaux de bord {#dashboards}](#dashboards-dashboards)
-   - [Préparation de données {#data-prep}](#data-prep-data-prep)
-   - [Destinations {#destinations}](#destinations-destinations)
-   - [Modèle de données d’expérience (XDM) {#xdm}](#experience-data-model-xdm-xdm)
-   - [Identity Service {#identity-service}](#identity-service-identity-service)
-   - [Query Service {#query-service}](#query-service-query-service)
-   - [Segmentation Service {#segmentation-service}](#segmentation-service-segmentation-service)
-   - [Sources {#sources}](#sources-sources)
+- [Alertes {#alerts}](#alerts)
+- [Tableaux de bord {#dashboards}](#dashboards)
+- [Préparation de données {#data-prep}](#data-prep)
+- [Destinations {#destinations}](#destinations)
+- [Modèle de données d’expérience (XDM) {#xdm}](#xdm)
+- [Identity Service {#identity-service}](#identity-service)
+- [Query Service {#query-service}](#query-service)
+- [Segmentation Service {#segmentation-service}](#segmentation-service)
+- [Sources {#sources}](#sources)
 
 ## Alertes {#alerts}
 
@@ -76,6 +75,8 @@ Pour plus d’informations sur la préparation des données, consultez la [prés
 
 ## Destinations {#destinations}
 
+**Mise à jour : 30 septembre 2024**
+
 Les [!DNL Destinations] sont des intégrations préconfigurées à des plateformes de destination qui permettent d’activer facilement des données provenant d’Adobe Experience Platform. Vous pouvez utiliser les destinations pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 
 **Fonctionnalités nouvelles ou mises à jour** {#new-updated-destinations}
@@ -83,6 +84,7 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 | Destination | Description |
 | --- | --- |
 | [Publicités Amazon](/help/destinations/catalog/advertising/amazon-ads.md) | La version de septembre 2024 ajoute l’option de mappage pour exporter le paramètre `countryCode` vers Amazon Ads. Utilisez `countryCode` dans l’ [étape de mappage](/help/destinations/catalog/advertising/amazon-ads.md#map) pour améliorer les taux de correspondance d’identité avec Amazon. |
+| [[!BADGE B2B]{type=Informative} Demandbase](/help/destinations/catalog/advertising/demandbase.md) | Utilisez cette destination pour activer les audiences de votre compte pour les cas d’utilisation de Account-Based Marketing (ABM). Annoncez les rôles et les personnalités appropriés dans vos comptes cibles via le Demand Side Platform B2B de DemandBase (DSP). Les comptes Target peuvent également être enrichis avec des données tierces Demandbase, pour d’autres cas d’utilisation en aval dans le marketing et les ventes. |
 
 {style="table-layout:auto"}
 

@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: En savoir plus sur l’utilisation par défaut de l’activation des données et les limites de débit.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
 workflow-type: tm+mt
-source-wordcount: '1685'
-ht-degree: 51%
+source-wordcount: '1686'
+ht-degree: 50%
 
 ---
 
@@ -178,7 +178,7 @@ En savoir plus sur l’ [exportation de jeux de données](/help/destinations/ui/
 | Mécanisme de sécurisation | Limite | Type de limite | Description |
 | --- | --- | --- | --- |
 | Nombre maximal de [destinations personnalisées privées](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Protecteur des performances | Vous pouvez créer un maximum de 5 destinations de diffusion en continu ou par lots privées à l’aide de Destination SDK. Contactez un représentant de l’assistance clientèle si vous devez créer plus de 5 destinations de ce type. |
-| Politique d’exportation de profils pour Destination SDK | <ul><li>`maxBatchAgeInSecs` (1 800 au minimum et 3 600 au maximum)</li><li>`maxNumEventsInBatch` (1 000 au minimum, 10 000 au maximum)</li></ul> | Barrière de sécurité mise en place par le système | Lors de l’utilisation de l’option [agrégation configurable](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) pour votre destination, gardez à l’esprit les valeurs minimale et maximale qui déterminent la fréquence d’envoi des messages HTTP vers votre destination basée sur l’API et le nombre de profils que les messages doivent inclure. |
+| Politique d’exportation de profils pour Destination SDK | <ul><li>`maxBatchAgeInSecs` (1 800 minimum et 3 600 maximum)</li><li>`maxNumEventsInBatch` (1 000 minimum et 10 000 maximum)</li></ul> | Barrière de sécurité mise en place par le système | Lors de l’utilisation de l’option [agrégation configurable](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) pour votre destination, gardez à l’esprit les valeurs minimale et maximale qui déterminent la fréquence d’envoi des messages HTTP vers votre destination basée sur l’API et le nombre de profils que les messages doivent inclure. |
 
 {style="table-layout:auto"}
 

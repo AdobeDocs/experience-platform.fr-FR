@@ -2,7 +2,7 @@
 description: Découvrez comment configurer une politique d’agrégation pour déterminer comment les requêtes HTTP vers la destination doivent être associées et regroupées par lot.
 title: Politique d’agrégation
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 96%
