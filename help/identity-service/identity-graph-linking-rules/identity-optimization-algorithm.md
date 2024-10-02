@@ -1,11 +1,10 @@
 ---
 title: Algorithme d’optimisation des identités
 description: Découvrez l’algorithme d’optimisation des identités dans Identity Service.
-badge: Version bêta
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 1ea840e2c6c44d5d5080e0a034fcdab4cbdc87f1
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1528'
 ht-degree: 2%
 
 ---
@@ -14,7 +13,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en version bêta. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
+>Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez votre équipe de compte d’Adobe pour plus d’informations sur la manière d’accéder à la fonctionnalité dans les environnements de test de développement.
 
 L’algorithme d’optimisation des identités est un algorithme graphique d’Identity Service qui permet de s’assurer qu’un graphique d’identités est représentatif d’une seule personne et, par conséquent, empêche la fusion indésirable d’identités sur Real-time Customer Profile.
 
@@ -41,7 +40,7 @@ Un espace de noms que vous déclarez unique est automatiquement configuré pour 
 >
 >* Tous les espaces de noms qui sont des identifiants de personne et utilisés dans l’environnement de test pour générer des graphiques d’identité doivent être marqués comme un espace de noms unique. Dans le cas contraire, il se peut que des résultats de liaison indésirables s’affichent.
 
-### Priorité d’espace de noms {#namespace-priority}
+### Priorité des espaces de noms {#namespace-priority}
 
 La priorité de l’espace de noms détermine la manière dont l’algorithme d’optimisation des identités supprime les liens.
 
@@ -165,6 +164,6 @@ Pour plus d’informations sur les règles de liaison des graphiques d’identit
 * [Guide de mise en oeuvre](./implementation-guide.md)
 * [Exemples de configurations de graphique](./example-configurations.md)
 * [Dépannage et FAQ](./troubleshooting.md)
-* [Priorité d’espace de noms](./namespace-priority.md)
+* [Priorité des espaces de noms](./namespace-priority.md)
 * [Interface utilisateur de la simulation graphique](./graph-simulation.md)
 * [Interface utilisateur des paramètres d’identité](./identity-settings-ui.md)

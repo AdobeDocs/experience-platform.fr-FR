@@ -1,11 +1,10 @@
 ---
 title: Exemples de configurations de graphique
 description: Découvrez les scénarios de graphiques courants que vous pouvez rencontrer lors de l’utilisation de graphiques d’identités liant les règles et les données d’identité.
-badge: Version bêta
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 6ad4709d8d361c16c22eddeef5f7ccdd1f4b2fb3
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '2786'
+source-wordcount: '2783'
 ht-degree: 6%
 
 ---
@@ -14,13 +13,12 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en version bêta. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
+>Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez votre équipe de compte d’Adobe pour plus d’informations sur la manière d’accéder à la fonctionnalité dans les environnements de test de développement.
 
 >[!NOTE]
 >
 >* &quot;CRMID&quot; et &quot;loginID&quot; sont des espaces de noms personnalisés. Dans ce document, &quot;CRMID&quot; est un identifiant de personne et &quot;loginID&quot; est un identifiant de connexion associé à une personne donnée.
 >* Pour simuler les exemples de scénarios graphiques décrits dans ce document, vous devez d’abord créer deux espaces de noms personnalisés, l’un avec le symbole d’identité &quot;CRMID&quot; et l’autre avec le symbole d’identité &quot;loginID&quot;. Les symboles d’identité sont sensibles à la casse.
-
 
 Ce document présente des exemples de configuration de graphique de scénarios courants que vous pouvez rencontrer lors de l’utilisation de règles de liaison de graphiques d’identités et de données d’identité.
 

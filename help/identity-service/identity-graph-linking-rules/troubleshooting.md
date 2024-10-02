@@ -1,20 +1,19 @@
 ---
 title: Guide de dépannage des règles de liaison de graphique d’identités
 description: Découvrez comment résoudre les problèmes courants des règles de liaison de graphiques d’identités.
-badge: Version bêta
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '3226'
+source-wordcount: '3247'
 ht-degree: 0%
 
 ---
 
-# Guide de dépannage des règles de liaison de graphiques d’identités
+# Guide de dépannage des règles de liaison de graphiques d’identité
 
 >[!AVAILABILITY]
 >
->La fonctionnalité des règles de liaison de graphique d’identités est actuellement en version bêta. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
+>Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez votre équipe de compte d’Adobe pour plus d’informations sur la manière d’accéder à la fonctionnalité dans les environnements de test de développement.
 
 Lorsque vous testez et validez des règles de liaison de graphiques d’identités, vous pouvez rencontrer des problèmes liés à l’ingestion de données et au comportement des graphiques. Lisez ce document pour savoir comment résoudre certains problèmes courants que vous pouvez rencontrer lors de l’utilisation de règles de liaison de graphiques d’identités.
 
@@ -167,7 +166,10 @@ Vous pouvez également exécuter la requête suivante pour vérifier si l’inge
   FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
 ```
 
-Ces deux requêtes supposent qu’une identité est envoyée à partir de identityMap et qu’une autre identité est envoyée à partir d’un descripteur d’identité. **REMARQUE** : dans les schémas de modèle de données d’expérience (XDM), le descripteur d’identité est le champ marqué comme identité.
+Ces deux requêtes supposent que :
+
+* Une identité est envoyée à partir de identityMap et une autre identité à partir d’un descripteur d’identité. **REMARQUE** : dans les schémas de modèle de données d’expérience (XDM), le descripteur d’identité est le champ marqué comme identité.
+* Le CRMID est envoyé via identityMap. Si le CRMID est envoyé en tant que champ, supprimez `key='Email'` de la clause WHERE.
 
 ### Mes fragments d’événement d’expérience sont ingérés, mais leur identité principale est &quot;incorrecte&quot; dans Profile.
 
@@ -367,7 +369,7 @@ Les points clés à mettre en évidence sont les suivants :
    * Avec cette fonctionnalité, les ECID ne sont plus toujours associés à un profil.
    * Il est recommandé de commencer les parcours avec les espaces de noms de personne (CRMID).
 
-## Priorité d’espace de noms
+## Priorité des espaces de noms
 
 Lisez cette section pour obtenir des réponses aux questions fréquentes sur la [priorité d’espace de noms](./namespace-priority.md).
 
@@ -398,7 +400,7 @@ En règle générale, le test sur un environnement de test de développement doi
 | Cas de test | Étapes du test | Résultat attendu |
 | --- | --- | --- |
 | Représentation exacte de l’entité de personne | <ul><li>Imiter la navigation anonyme</li><li>Imiter deux personnes (John, Jane) qui se connectent à l’aide du même appareil</li></ul> | <ul><li>John et Jane doivent être associés à leurs attributs et aux événements authentifiés.</li><li>Le dernier utilisateur authentifié doit être associé aux événements de navigation anonymes.</li></ul> |
-| Segmentation | Créez quatre définitions de segment (**REMARQUE** : l’une de ces deux définitions de segment doit être évaluée à l’aide d’un lot et l’autre diffusion en continu.) <ul><li>Définition de segment A : qualification de segment basée sur les événements authentifiés de John.</li><li>Définition de segment B : qualification de segment basée sur les événements authentifiés de Jane.</li></ul> | Quels que soient les scénarios d’appareil partagé, John et Jane doivent toujours être qualifiés pour leurs segments respectifs. |
+| Segmentation | Créez quatre définitions de segment (**REMARQUE** : l’une de ces deux définitions de segment doit être évaluée à l’aide d’un lot et l’autre diffusion en continu.) <ul><li>Définition de segment A : qualification de segment basée sur les événements et/ou attributs authentifiés de John.</li><li>Définition de segment B : qualification de segment basée sur les événements et/ou attributs authentifiés de Jane.</li></ul> | Quels que soient les scénarios d’appareil partagé, John et Jane doivent toujours être qualifiés pour leurs segments respectifs. |
 | Qualification de l’audience / parcours unitaires sur Adobe Journey Optimizer | <ul><li>Créez un parcours commençant par une activité de qualification d’audience (comme la segmentation par flux créée ci-dessus).</li><li>Créez un parcours commençant par un événement unitaire. Cet événement unitaire doit être un événement authentifié.</li><li>Vous devez désactiver la rentrée lors de la création de ces parcours.</li></ul> | <ul><li>Quels que soient les scénarios d’appareils partagés, John et Jane doivent déclencher les parcours respectifs qu’ils doivent entrer.</li><li>John et Jane ne doivent pas revenir dans le parcours lorsque l’ECID leur est renvoyé.</li></ul> |
 
 {style="table-layout:auto"}

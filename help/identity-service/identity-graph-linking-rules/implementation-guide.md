@@ -3,10 +3,10 @@ title: Guide de mise en oeuvre des règles de liaison de graphiques d’identit�
 description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec des configurations de règles de liaison de graphiques d’identités.
 badge: Version bêta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: adfb1e83289435e6991d4cdd2e2a45e3d5a9b32f
+source-git-commit: 0bb99a359e7331f2235cd5385dcf546ab4c2b494
 workflow-type: tm+mt
-source-wordcount: '1546'
-ht-degree: 3%
+source-wordcount: '1635'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en version bêta. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
+>Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez votre équipe de compte d’Adobe pour plus d’informations sur la manière d’accéder à la fonctionnalité dans les environnements de test de développement.
 
 Lisez ce document pour obtenir un guide détaillé que vous pouvez suivre lors de l’implémentation de vos données avec Adobe Experience Platform Identity Service.
 
@@ -61,8 +61,67 @@ Si vous utilisez le [connecteur source Adobe Analytics](../../sources/tutorials/
 
 ### Événements d’expérience XDM
 
-* Pendant votre processus de prémise en oeuvre, vous devez vous assurer que les événements authentifiés que votre système enverra à l’Experience Platform contiennent toujours un identifiant de personne, tel que CRMID.
-* N’envoyez pas de chaîne vide en tant que valeur d’identité lors de l’envoi d’événements à l’aide d’événements d’expérience XDM. Cela entraînera des erreurs système.
+Pendant votre processus de prémise en oeuvre, vous devez vous assurer que les événements authentifiés que votre système enverra à l’Experience Platform contiennent toujours un identifiant de personne, tel que CRMID.
+
+>[!BEGINTABS]
+
+>[!TAB Événements authentifiés avec identifiant de personne]
+
+```json
+{
+  "_id": "test_id",
+  "identityMap": {
+      "ECID": [
+          {
+              "id": "62486695051193343923965772747993477018",
+              "primary": false
+          }
+      ],
+      "CRMID": [
+          {
+              "id": "John",
+              "primary": true
+          }
+      ]
+  },
+  "timestamp": "2024-09-24T15:02:32+00:00",
+  "web": {
+      "webPageDetails": {
+          "URL": "https://business.adobe.com/",
+          "name": "Adobe Business"
+      }
+  }
+}
+```
+
+>[!TAB Événements authentifiés sans identifiant de personne]
+
+
+```json
+{
+    "_id": "test_id"
+    "identityMap": {
+        "ECID": [
+            {
+                "id": "62486695051193343923965772747993477018",
+                "primary": false
+            }
+        ]
+    },
+    "timestamp": "2024-09-24T15:02:32+00:00",
+    "web": {
+        "webPageDetails": {
+            "URL": "https://business.adobe.com/",
+            "name": "Adobe Business"
+        }
+    }
+}
+```
+
+
+>[!ENDTABS]
+
+N’envoyez pas de chaîne vide en tant que valeur d’identité lors de l’envoi d’événements à l’aide d’événements d’expérience XDM. Si la valeur d’identité de l’espace de noms ayant la priorité la plus élevée est une chaîne vide, l’enregistrement est ignoré de Real-Time Customer Profile. Cela s’applique à la fois à identityMap et aux champs marqués comme une identité.
 
 +++Sélectionner pour afficher un exemple de payload avec une chaîne vide
 
@@ -170,6 +229,12 @@ Pour tout commentaire, utilisez l’option **[!UICONTROL Commentaires Beta]** da
 Utilisez le tableau de bord des identités pour obtenir des informations sur l’état de vos graphiques d’identités, tels que le nombre total d’identités et les tendances du nombre de graphiques, le nombre d’identités par espace de noms et le nombre de graphiques par taille de graphique. Vous pouvez également utiliser le tableau de bord des identités pour afficher les tendances sur les graphiques comportant plusieurs identités, organisées par espace de noms.
 
 Sélectionnez les points de suspension (`...`), puis **[!UICONTROL Afficher plus]** pour plus d’informations et pour vérifier qu’il n’existe aucun graphique réduit.
+
+![Le tableau de bord d’identité dans l’espace de travail de l’interface utilisateur d’Identity Service.](../images/implementation/identity_dashboard.png)
+
+Utilisez la fenêtre qui s’affiche pour afficher des informations sur vos graphiques réduits. Dans cet exemple, le courrier électronique et le téléphone sont marqués comme un espace de noms unique. Il n’existe donc pas de graphiques réduits dans votre environnement de test.
+
+![Fenêtre contextuelle pour les graphiques avec plusieurs identités.](../images/implementation/graphs.png)
 
 ## Annexe {#appendix}
 

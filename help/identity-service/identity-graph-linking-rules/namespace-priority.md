@@ -1,20 +1,19 @@
 ---
-title: Priorité d’espace de noms
+title: Priorité des espaces de noms
 description: Découvrez la priorité des espaces de noms dans Identity Service.
-badge: Version bêta
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '1626'
-ht-degree: 3%
+source-wordcount: '1605'
+ht-degree: 2%
 
 ---
 
-# Priorité d’espace de noms
+# Priorité des espaces de noms
 
 >[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en version bêta. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
+>Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez votre équipe de compte d’Adobe pour plus d’informations sur la manière d’accéder à la fonctionnalité dans les environnements de test de développement.
 
 Chaque mise en oeuvre client est unique et personnalisée pour répondre aux objectifs d’une organisation spécifique. Par conséquent, l’importance d’un espace de noms donné varie d’un client à l’autre. Voici des exemples concrets :
 
@@ -90,7 +89,7 @@ Pour les structures graphiques relativement complexes, la priorité des espaces 
 >
 >* L’identité de Principal est l’identité par laquelle un fragment de profil est stocké. Un fragment de profil est un enregistrement de données qui stocke des informations sur un utilisateur spécifique : des attributs (généralement ingérés via des enregistrements CRM) ou des événements (généralement ingérés à partir d’événements d’expérience ou de données en ligne).
 
-### Exemple de scénario graphique
+### Exemple de scénario
 
 Cette section fournit un exemple de la manière dont la configuration des priorités peut affecter vos données.
 
@@ -184,6 +183,6 @@ La fonction [Demandes de suppression de Privacy Service](../privacy.md) fonction
 
 Pour plus d’informations, consultez la [présentation de Privacy Service](../../privacy-service/home.md).
 
-### Personnalisation Adobe Target et Edge
+### Adobe Target
 
-[Personnalisation Edge](../../server-api/personalization-target.md) continuera à faire référence à la manière dont vous avez configuré la case à cocher &quot;Principal&quot; sur le type d’élément de données dans WebSDK (qui se traduit par `primary=true` dans identityMap).
+Vous pouvez uniquement activer la segmentation par lots et par flux vers Adobe Target.

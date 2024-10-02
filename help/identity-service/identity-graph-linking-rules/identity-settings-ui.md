@@ -1,12 +1,11 @@
 ---
 title: Interface utilisateur des paramètres d’identité
 description: Découvrez comment utiliser l’interface utilisateur des paramètres d’identité.
-badge: Version bêta
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 2%
+source-wordcount: '536'
+ht-degree: 1%
 
 ---
 
@@ -14,7 +13,7 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->Les règles de liaison de graphiques d’identités sont actuellement en version bêta. Contactez votre équipe de compte d’Adobe pour plus d’informations sur les critères de participation. Les fonctionnalités et la documentation sont susceptibles d’être modifiées.
+>Les règles de liaison de graphiques d’identités sont actuellement en disponibilité limitée. Contactez votre équipe de compte d’Adobe pour plus d’informations sur la manière d’accéder à la fonctionnalité dans les environnements de test de développement.
 
 Les paramètres d’identité sont une fonctionnalité de l’interface utilisateur du service Adobe Experience Platform Identity que vous pouvez utiliser pour désigner des espaces de noms uniques et configurer la priorité des espaces de noms.
 
@@ -28,8 +27,8 @@ Lisez les documents suivants avant de commencer à utiliser les paramètres d’
 * [Algorithme d’optimisation des identités](./identity-optimization-algorithm.md)
 * [Guide de mise en oeuvre](./implementation-guide.md)
 * [Exemples de configurations de graphique](./example-configurations.md)
-* [Priorité d’espace de noms](./namespace-priority.md)
-* [Simulation graphique](./graph-simulation.md)
+* [Priorité des espaces de noms](./namespace-priority.md)
+* [Simulation de graphique](./graph-simulation.md)
 
 ## Configuration des paramètres d’identité
 
@@ -70,5 +69,5 @@ Pour plus d’informations sur les règles de liaison des graphiques d’identit
 * [Guide de mise en oeuvre](./implementation-guide.md)
 * [Exemples de configurations de graphique](./example-configurations.md)
 * [Dépannage et FAQ](./troubleshooting.md)
-* [Priorité d’espace de noms](./namespace-priority.md)
+* [Priorité des espaces de noms](./namespace-priority.md)
 * [Interface utilisateur de la simulation graphique](./graph-simulation.md)
