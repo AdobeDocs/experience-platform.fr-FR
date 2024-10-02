@@ -2,14 +2,14 @@
 title: Tableau de bord des profils de compte
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les profils de compte B2B de votre entreprise.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: b6811d447f76a671adc98bddef6e760c8be8cd9b
+source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
 workflow-type: tm+mt
-source-wordcount: '1763'
+source-wordcount: '1827'
 ht-degree: 4%
 
 ---
 
-# Tableau de bord [!UICONTROL Profils de compte]
+# Tableau de bord Profils de compte
 
 L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur vos profils de compte, telles qu’elles sont capturées lors d’un instantané quotidien. Ce guide explique comment accéder au tableau de bord [!UICONTROL Profils de compte] et l’utiliser dans l’interface utilisateur. Il fournit également des informations supplémentaires sur les visualisations affichées dans le tableau de bord.
 
@@ -64,6 +64,11 @@ Sélectionnez l&#39;[!UICONTROL ID de profil] dans les résultats affichés sur 
 Les informations de profil du compte affichées dans l’onglet [!UICONTROL Détails] ont été fusionnées à partir de plusieurs fragments de profil pour former une vue unique du compte individuel. Pour en savoir plus sur les fonctionnalités d’affichage des profils de compte dans l’interface utilisateur de Platform, consultez la documentation sur la [navigation des profils de compte dans Adobe Real-Time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) .
 
 ## Widgets standard {#standard-widgets}
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_accountprofiles_customersperaccountoverview"
+>title="Présentation des clients par compte"
+>abstract="Ce widget d’analyse fournit des informations sur la structure de vos données B2B. Il vous permet d’identifier le nombre de profils de compte auxquels aucun profil client n’est associé ou auxquels un ou plusieurs profils clients sont associés.<ul><li>Clients directs : sont des profils clients directement liés à un compte par l’itinéraire `personComponents`.</li><li>Clients directs : sont des profils client liés à un compte via l’itinéraire `Account-Person`.</li></ul>"
 
 Adobe fournit des widgets standard que vous pouvez utiliser pour visualiser différentes mesures liées à vos profils de compte.
 

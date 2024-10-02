@@ -3,10 +3,10 @@ keywords: Adresse IP, plage IP, liste autorisée, liste autorisée, Query Servic
 title: LISTE AUTORISÉE d’adresse IP pour Query Service
 description: Cette page fournit des plages d’adresses IP mises à jour que vous pouvez ajouter à votre liste autorisée pour un accès sécurisé à Query Service.
 exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
-source-git-commit: 029d0ad63460a71770e5ba3cd75a29cb04c0cb9c
+source-git-commit: a48b3995abc1ee2033e3827b12581f4771cdb2d7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '268'
+ht-degree: 5%
 
 ---
 
@@ -15,14 +15,11 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > * Adobe vous recommande de mettre cette page en signet et de la revoir tous les trois mois pour rechercher les dernières adresses IP. Adobe ne fournit pas de notification pour les nouvelles plages d’adresses IP.
-> * Bien qu’Adobe prenne en charge les exportations de données vers les serveurs SFTP, les emplacements de stockage dans le cloud recommandés pour exporter des données sont [!DNL Amazon S3] et [!DNL Azure Blob].
 > * Du 15 octobre 2024, de nouvelles plages d’adresses IP ont remplacé les plages existantes. Veillez à ce que les anciennes et les nouvelles adresses IP soient ajoutées à votre liste autorisée avant cette date afin d’éviter toute interruption de service.
 
 ## Vue d’ensemble {#overview}
 
-Cette page fournit des adresses IP que vous pouvez ajouter à votre liste autorisée pour exporter en toute sécurité des données de l’Experience Platform vers votre [serveur SFTP](../destinations/catalog/cloud-storage/sftp.md).
-
-Vous pouvez définir des contrôles d’accès réseau via votre pare-feu réseau. En spécifiant la plage d’adresses IP appropriée, vous pouvez autoriser le trafic pour le service de transfert de données.
+Vous pouvez définir des contrôles d’accès réseau via votre pare-feu réseau. En spécifiant la plage d’adresses IP appropriée, vous pouvez autoriser le trafic pour l’accès à Query Service.
 
 Dans le cadre des améliorations en cours, Adobe a mis à jour les plages d’adresses IP utilisées pour l’accès réseau à Query Service le 15 octobre 2024. Les adresses IP existantes seront abandonnées et de nouvelles adresses IP remplaceront celles-ci. Il est essentiel d’ajouter les anciennes et nouvelles plages d’adresses IP à votre liste autorisée pendant la période de transition pour garantir un service ininterrompu.
 
