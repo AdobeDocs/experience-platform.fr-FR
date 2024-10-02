@@ -1,7 +1,7 @@
 ---
 title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2024
 description: Les notes de mise à jour de septembre 2024 pour Adobe Experience Platform.
-source-git-commit: a342f38f09b84ef720d6135bc555844df12ee251
+source-git-commit: 33d1305aef7c763e7b0bd8c6db6a1a9417cc2a9d
 workflow-type: tm+mt
 source-wordcount: '2199'
 ht-degree: 24%
@@ -14,15 +14,15 @@ ht-degree: 24%
 
 Mises à jour des fonctionnalités et de la documentation existantes dans Adobe Experience Platform :
 
-- [Alertes {#alerts}](#alerts)
-- [Tableaux de bord {#dashboards}](#dashboards)
-- [Préparation de données {#data-prep}](#data-prep)
-- [Destinations {#destinations}](#destinations)
-- [Modèle de données d’expérience (XDM) {#xdm}](#xdm)
-- [Identity Service {#identity-service}](#identity-service)
-- [Query Service {#query-service}](#query-service)
-- [Segmentation Service {#segmentation-service}](#segmentation-service)
-- [Sources {#sources}](#sources)
+- [Alertes](#alerts)
+- [Tableaux de bord](#dashboards)
+- [Préparation des données](#data-prep)
+- [Destinations](#destinations)
+- [Modèle de données d’expérience (XDM)](#xdm)
+- [Service d’identités](#identity-service)
+- [Query Service](#query-service)
+- [Segmentation Service](#segmentation-service)
+- [Sources](#sources)
 
 ## Alertes {#alerts}
 
