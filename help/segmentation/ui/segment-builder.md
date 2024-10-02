@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur du créateur de segments
 description: Le créateur de segments de l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail fournit des commandes intuitives pour la création et la modification de règles, telles que le glisser-déposer de mosaïques utilisées pour représenter les propriétés des données.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 6ceb28b2c9bab3b9df212764a43b202980ae239c
+source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
 workflow-type: tm+mt
-source-wordcount: '4784'
-ht-degree: 67%
+source-wordcount: '4955'
+ht-degree: 65%
 
 ---
 
@@ -28,6 +28,19 @@ Le [!DNL Segment Builder] offre un vaste espace de travail qui vous permet d’i
 >abstract="Une définition de segment est constituée des trois types de champ suivants : les attributs, les événements et les audiences. Les attributs vous permettent d’utiliser des attributs de profil appartenant à la classe XDM Individual Profile, les événements vous permettent de créer une audience basée sur des actions ou des événements qui ont lieu à l’aide des éléments de données XDM ExperienceEvent et les audiences vous permettent d’utiliser des audiences importées à partir de sources externes."
 
 Les blocs de création de base des définitions de segment sont les attributs et les événements. En outre, les attributs et les événements contenus dans les audiences existantes peuvent être utilisés comme éléments de nouvelles définitions.
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_summarydata"
+>title="Données récapitulatives"
+>abstract="Les données récapitulatives s’affichent uniquement pour les attributs de profil et <b>not</b> s’affichent pour les attributs d’événement ou d’audience.<br/><br/>Les données récapitulatives des attributs de profil peuvent ne pas apparaître dans les cas suivants : <ol><li>Certaines valeurs de l’attribut comportent plus de 100 caractères.</li><li>Il existe plus de 3 000 valeurs uniques pour l’attribut .</li></ol>"
+
+>[!NOTE]
+>
+>Si vous sélectionnez la bulle d’informations d’un attribut, vous pouvez visualiser la répartition des valeurs, également appelées données récapitulatives, du champ. Ils sont **uniquement** disponibles dans l’onglet Attributs et ne peuvent pas être utilisés dans l’onglet Événements ou audiences.
+>
+>Des données récapitulatives s’affichent si l’attribut répond aux critères suivants : toutes les valeurs de l’attribut comportent 100 caractères ou moins et l’attribut contient 3 000 valeurs uniques ou moins.
+>
+>Cependant, un attribut **not** possède des données récapitulatives s’il s’agit de données multi-entités liées au profil par le biais d’une relation. Par exemple, si vous avez un schéma personnalisé appelé `Vehicle`, les **propriétés** dans le schéma `Vehicle` auront **et non** des données récapitulatives.
 
 Vous pouvez voir ces blocs de création dans la section **[!UICONTROL Champs]** sur le côté gauche de l’espace de travail [!DNL Segment Builder]. Les **[!UICONTROL champs]** contiennent un onglet pour chacun des blocs de création principaux : « [!UICONTROL attributs] », « [!UICONTROL événements] », et « [!UICONTROL audiences] ».
 
