@@ -2,9 +2,9 @@
 title: Identifiants d’appareil propriétaires dans le SDK Web
 description: Découvrez comment configurer des identifiants d’appareil propriétaires (FPID) dans le SDK Web de Adobe Experience Platform.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 1cb38e3eaa83f2ad0e7dffef185d5edaf5e6c38c
+source-git-commit: 04ef39cbfc614369cb15f4d947474b491c34ef33
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '2055'
 ht-degree: 0%
 
 ---
@@ -219,6 +219,16 @@ Dans ce cas, la réponse d’erreur renvoyée par l’Edge Network est similaire
     }
 }
 ```
+
+## Définition d’un FPID sur votre propre domaine {#setting-fpid-domain}
+
+Outre la définition de [!DNL FPID] dans la carte des identités, vous pouvez définir le cookie [!DNL FPID] sur votre propre domaine, si une collecte de données propriétaires [!DNL CNAME] est configurée.
+
+Lorsque la collecte de données propriétaires est activée à l’aide d’un [!DNL CNAME], tous les cookies de votre domaine sont envoyés sur les demandes effectuées au point de terminaison de la collecte de données.
+
+Tous les cookies non pertinents aux fins de collecte de données d’Adobe sont ignorés. Pour [!DNL FPID], vous pouvez spécifier le nom du cookie [!DNL FPID] dans la configuration du flux de données. Lorsque vous procédez de la sorte, l’Edge Network lit le contenu du cookie [!DNL FPID] au lieu de rechercher le [!DNL FPID] dans la carte d’identité.
+
+Pour utiliser cette fonctionnalité, vous devez définir le [!DNL FPID] au niveau supérieur de votre domaine au lieu d’un sous-domaine spécifique. Si vous la définissez sur un sous-domaine, la valeur du cookie ne sera pas envoyée à l’Edge Network et la solution [!DNL FPID] ne fonctionnera pas comme prévu.
 
 ## Hiérarchie des identifiants {#id-hierarchy}
 
