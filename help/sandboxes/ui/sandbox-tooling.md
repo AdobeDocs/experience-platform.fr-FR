@@ -2,9 +2,9 @@
 title: Outils Sandbox
 description: Exportez et importez en toute transparence des configurations Sandbox entre des environnements de test.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 50f3976d73c8a34a51179157a7c93e3d9b1c0ff4
+source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
 workflow-type: tm+mt
-source-wordcount: '2404'
+source-wordcount: '2403'
 ht-degree: 8%
 
 ---
@@ -58,7 +58,7 @@ Le tableau ci-dessous répertorie les [!DNL Adobe Journey Optimizer] objets actu
 | [!DNL Adobe Journey Optimizer] | Événement | Les événements et les détails de l’événement utilisés dans le parcours sont copiés. Il crée toujours une nouvelle version dans l’environnement de test cible. |
 | [!DNL Adobe Journey Optimizer] | Action | Les messages électroniques et push utilisés dans le parcours peuvent être copiés en tant qu’objets dépendants. Les activités d’action de canal utilisées dans les champs de parcours, qui sont utilisées pour la personnalisation dans le message, ne sont pas vérifiées pour être complètes. Les blocs de contenu ne sont pas copiés.<br><br>L&#39;action de mise à jour de profil utilisée dans le parcours peut être copiée. Les actions personnalisées et les détails des actions utilisées dans le parcours sont également copiés. Il crée toujours une nouvelle version dans l’environnement de test cible. |
 | [!DNL Adobe Journey Optimizer] | Parcours | L’ajout d’un parcours entier à un module permet de copier la majorité des objets dont dépend le parcours, notamment les audiences, les schémas, les événements et les actions. |
-| [!DNL Adobe Journey Optimizer] | Modèle de contenu | Un modèle de contenu peut être copié en tant qu’objet dépendant de l’objet de parcours. Modèles autonomes qui vous permettent de réutiliser facilement du contenu personnalisé dans des campagnes et des parcours Journey Optimizer. |
+| [!DNL Adobe Journey Optimizer] | Modèle de contenu | Un modèle de contenu peut être copié en tant qu’objet dépendant de l’objet de parcours. Les modèles autonomes vous permettent de réutiliser facilement du contenu personnalisé dans des campagnes et des parcours Journey Optimizer. |
 | [!DNL Adobe Journey Optimizer] | Fragment | Un fragment peut être copié en tant qu’objet dépendant de l’objet parcours. Les fragments sont des composants réutilisables qui peuvent être référencés dans un ou plusieurs emails dans des campagnes et parcours Journey Optimizer. |
 
 Les surfaces (par exemple, les paramètres prédéfinis) ne sont pas copiées. Le système sélectionne automatiquement la correspondance la plus proche possible sur l’environnement de test de destination en fonction du type de message et du nom de la surface. Si aucune surface n’est trouvée sur l’environnement de test cible, la copie de surface échoue, ce qui entraîne l’échec de la copie du message, car un message nécessite qu’une surface soit disponible pour la configuration. Dans ce cas, au moins une surface doit être créée pour le bon canal du message pour que la copie fonctionne.
