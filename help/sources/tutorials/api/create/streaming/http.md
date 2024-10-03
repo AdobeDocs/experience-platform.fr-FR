@@ -3,10 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;connexion e
 title: Création d’une connexion en continu d’API HTTP à l’aide de l’API Flow Service
 description: Ce tutoriel explique comment créer une connexion en continu à l’aide de la source d’API HTTP pour les données brutes et XDM à l’aide de l’API Flow Service.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 84ffbb86e8973c2795d19122d3866e980949759d
+source-git-commit: 6ea5eaf28f260f974d168db2bed9bc95fcfa52af
 workflow-type: tm+mt
-source-wordcount: '1658'
-ht-degree: 34%
+source-wordcount: '1646'
+ht-degree: 35%
 
 ---
 
@@ -470,9 +470,9 @@ POST /flows
 
 >[!BEGINTABS]
 
->[!TAB Sans transformations]
+>[!TAB XDM]
 
-La requête suivante crée un flux de données en continu pour l’API HTTP sans transformation de données.
+La requête suivante crée un flux de données en continu pour les données XDM.
 
 ```shell
 curl -X POST \
@@ -498,9 +498,9 @@ curl -X POST \
     }'
 ```
 
->[!TAB Avec transformations]
+>[!TAB RAW]
 
-Les requêtes suivantes créent un flux de données en continu pour l’API HTTP avec des transformations de mappage appliquées à vos données.
+Les requêtes suivantes créent un flux de données en continu pour les données brutes.
 
 Lors de la création d’un flux de données avec des transformations, le paramètre `name` ne peut pas être modifié. Cette valeur doit toujours être définie sur `Mapping`.
 
@@ -559,7 +559,7 @@ Une réponse réussie renvoie un état HTTP 201 avec les détails du nouveau flu
 }
 ```
 
-## Données Post à ingérer dans Platform {#ingest-data}
+## Données de publication à ingérer dans Platform {#ingest-data}
 
 >[!NOTE]
 >
