@@ -1,11 +1,11 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform
+title: Notes de mise à jour d’Adobe Experience Platform - Avril 2024
 description: Les notes de mise à jour d’avril 2024 pour Adobe Experience Platform.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '1895'
-ht-degree: 25%
+source-wordcount: '1897'
+ht-degree: 27%
 
 ---
 
@@ -83,7 +83,7 @@ Pour obtenir plus d’informations générales sur les destinations, consultez l
 
 ## Service d’identités {#identity-service}
 
-Utilisez Adobe Experience Platform Identity Service pour créer une vue d’ensemble complète de vos clients et de leurs comportements en rapprochant des identités entre les appareils et les systèmes, ce qui vous permet de fournir des expériences numériques personnelles et percutantes en temps réel.
+Utilisez le service d’identités d’Adobe Experience Platform pour créer une vue complète de votre clientèle et de ses comportements en reliant les identités entre les appareils et les systèmes, vous permettant ainsi de proposer des expériences numériques personnelles et percutantes en temps réel.
 
 **Fonctionnalités mises à jour**
 
@@ -93,7 +93,7 @@ Utilisez Adobe Experience Platform Identity Service pour créer une vue d’ense
 
 {style="table-layout:auto"}
 
-Pour plus d’informations sur le service d’identités, consultez la [présentation du service d’identités](../../identity-service/home.md).
+Pour plus d’informations sur le service d’identités, consultez la [vue d’ensemble du service d’identités](../../identity-service/home.md).
 
 ## Surveillance {#monitoring}
 

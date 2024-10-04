@@ -1,10 +1,10 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform
+title: Notes de mise à jour d’octobre 2023 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2023 pour Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: f2d0848952902d94b441566da677ef174518192e
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1054'
 ht-degree: 100%
 
 ---

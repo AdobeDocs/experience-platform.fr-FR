@@ -1,10 +1,10 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform
+title: Notes de mise à jour d’Adobe Experience Platform - Août 2023
 description: Les notes de mise à jour d’août 2023 pour Adobe Experience Platform.
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1741'
 ht-degree: 46%
 
 ---
@@ -90,7 +90,7 @@ Pour plus d’informations, consultez la [présentation des collections de donn�
 
 ## Ingestion des données {#data-ingestion}
 
-Adobe Experience Platform fournit un ensemble riche de fonctionnalités permettant d’ingérer n’importe quel type et n’importe quelle latence de données. Vous pouvez les ingérer à l’aide des API Batch ou Streaming, des sources intégrées Adobe, des partenaires d’intégration de données ou de l’interface utilisateur d’Adobe Experience Platform.
+Adobe Experience Platform propose un ensemble riche de fonctionnalités permettant d’ingérer n’importe quel type et n’importe quelle latence de données. Vous pouvez les ingérer à l’aide des API Batch ou Streaming, des sources intégrées Adobe, des partenaires d’intégration de données ou de l’interface utilisateur d’Adobe Experience Platform.
 
 **Fonctionnalités nouvelles ou mises à jour**
 

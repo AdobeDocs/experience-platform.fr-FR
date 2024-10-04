@@ -1,10 +1,10 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform
+title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2023
 description: Les notes de mise à jour de septembre 2023 pour Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
 workflow-type: tm+mt
-source-wordcount: '2263'
+source-wordcount: '2265'
 ht-degree: 97%
 
 ---
@@ -27,7 +27,7 @@ Mises à jour des fonctionnalités existantes dans Experience Platform :
 - [Destinations](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Service d’identités](#identity-service)
-- [Query Service](#query-service)
+- [Query Service](#query-service)
 - [Segmentation Service](#segmentation)
 - [Sources](#sources)
 
