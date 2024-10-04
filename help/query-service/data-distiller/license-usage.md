@@ -2,9 +2,9 @@
 title: Surveillance de l’utilisation de la licence de requête par lots
 description: L’interface utilisateur de Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation de la licence Data Distiller de votre entreprise.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: 971c462a18a2a3ff3c98936c99b54a0d03b7c488
+source-git-commit: d83604b2bf6a8e2f2b5802a5e7f26447fbf7eb2e
 workflow-type: tm+mt
-source-wordcount: '258'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,9 @@ Le tableau de bord fournit des mesures d’utilisation pour chaque produit achet
 >
 >Le tableau de bord de l’utilisation des licences n’est pas activé par défaut. Les utilisateurs doivent disposer de l’autorisation &quot;Afficher le tableau de bord de l’utilisation de la licence&quot; pour pouvoir afficher le tableau de bord. Pour obtenir des instructions sur l’octroi des autorisations d’accès pour l’affichage du tableau de bord d’utilisation des licences, reportez-vous au [guide des autorisations du tableau de bord](../../dashboards/permissions.md).
 
-## Calcul des heures {#compute-hours}
+## Heures de calcul {#compute-hours}
 
 La mesure [!UICONTROL Heures de calcul] s’applique uniquement aux clients disposant de la licence Data Distiller pour les requêtes par lots. [!UICONTROL Les heures de calcul] sont la mesure du temps nécessaire aux moteurs Query Service pour lire, traiter et écrire des données dans le lac de données lors de l’exécution d’une requête par lots.
-
->[!NOTE]
->
->Les données affichées pour l’utilisation de [!UICONTROL Compute hours] commencent le 15 septembre 2023 ou la date du renouvellement annuel de votre contrat, selon ce qui se produit plus tard.
 
 ![Le tableau de bord de l’utilisation des licences avec la mesure des heures de calcul mise en surbrillance.](../images/data-distiller/compute-hours.png)
 

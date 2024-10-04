@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de Query Editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 7ba9eb6891657e7f3d7ebbd41314b7973e31ea61
+source-git-commit: d83604b2bf6a8e2f2b5802a5e7f26447fbf7eb2e
 workflow-type: tm+mt
-source-wordcount: '2802'
-ht-degree: 24%
+source-wordcount: '2821'
+ht-degree: 23%
 
 ---
 
@@ -102,6 +102,10 @@ Une boîte de dialogue de confirmation s’affiche. Sélectionnez **[!UICONTROL 
 ### Nombre de résultats {#result-count}
 
 L’éditeur de requêtes dispose d’une sortie de ligne maximale de 50 000 lignes. Vous pouvez choisir le nombre de lignes affichées simultanément dans la console de l’éditeur de requêtes. Pour modifier le nombre de lignes affichées dans la console, sélectionnez la liste déroulante **[!UICONTROL Result count]** et sélectionnez les options 50, 100, 150, 300 et 500.
+
+>[!NOTE]
+>
+>Comme l’interface utilisateur de Platform ne peut prendre en charge que 500 lignes au maximum, la transmission d’une valeur LIMIT supérieure à 500 est ignorée.
 
 ![Éditeur de requête avec la liste déroulante Nombre de résultats mise en surbrillance.](../images/ui/query-editor/result-count.png)
 
