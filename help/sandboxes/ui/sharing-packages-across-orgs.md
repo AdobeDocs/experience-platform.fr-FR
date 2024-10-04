@@ -2,9 +2,9 @@
 title: Partage de modules à l’échelle de l’entreprise à l’aide d’outils Sandbox
 description: Découvrez comment utiliser les outils Sandbox dans Adobe Experience Platform pour partager des modules entre différentes organisations.
 badge: Version bêta
-source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
+source-git-commit: 0e280972feb990221272d272aa2a9e3852beb5e8
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '650'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Pour créer une demande de partenariat d’organisation, accédez à l’onglet 
 
 ![L’interface utilisateur des environnements de test, avec l’onglet Organisations partenaires et Gérer les organisations partenaires en surbrillance.](../images/ui/sandbox-tooling/private-manage-partner-orgs.png)
 
-Dans la boîte de dialogue [!UICONTROL Gestion des partenaires de package], saisissez l’ID d’organisation dans **[!UICONTROL Saisir l’ID d’organisation]** et appuyez sur Entrée. L’ID d’organisation s’affiche dans la section **[!UICONTROL ID d’organisation sélectionnés]** ci-dessous. Après avoir ajouté les ID, sélectionnez **[!UICONTROL Confirmer]**.
+Dans la boîte de dialogue [!UICONTROL Gestion des partenaires de package], saisissez l’ID d’organisation dans **[!UICONTROL Saisir l’ID d’organisation]** et appuyez sur Entrée (Windows) ou Retour (Mac). L’ID d’organisation s’affiche dans la section **[!UICONTROL ID d’organisation sélectionnés]** ci-dessous. Après avoir ajouté les ID, sélectionnez **[!UICONTROL Confirmer]**.
 
 >[!TIP]
 >
