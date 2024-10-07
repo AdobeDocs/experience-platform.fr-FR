@@ -1,11 +1,10 @@
 ---
 title: Guide de mise en oeuvre des règles de liaison de graphiques d’identités
 description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec des configurations de règles de liaison de graphiques d’identités.
-badge: Version bêta
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 35ccc39fdfef31ca1f59e2e11f0d3d762e423635
+source-git-commit: 5d1bcaa84875e55595996253fb72cf768af16e05
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1634'
 ht-degree: 2%
 
 ---
