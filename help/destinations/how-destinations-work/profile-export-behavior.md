@@ -2,10 +2,10 @@
 title: Comportement d’exportation de profils
 description: Découvrez comment le comportement d’exportation de profils varie entre les différents modèles d’intégration pris en charge dans les destinations Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 223734e2998568f3b9b78933fa5adf740b521f5f
+source-git-commit: 6c2d10cffa30d9feb4d342014ea1b712094bb673
 workflow-type: tm+mt
-source-wordcount: '2930'
-ht-degree: 89%
+source-wordcount: '2939'
+ht-degree: 87%
 
 ---
 
@@ -192,7 +192,7 @@ Dans le premier export de fichiers, après avoir configuré le workflow d’acti
 
 >[!TIP]
 >
->Pour rappel, les modifications apportées aux valeurs d’attribut ou aux mappages d’identité d’un profil ne qualifie pas un profil pour qu’il soit inclus dans une exportation de fichier incrémentiel.
+>Pour rappel, les modifications apportées aux mappages d’identité d’un profil le qualifient pour être inclus dans une exportation de fichier incrémentielle. Les modifications apportées aux valeurs d’attribut *ne font pas* en sorte qu’elles soient incluses dans une exportation de fichier incrémentielle.
 
 ## Étapes suivantes {#next-steps}
 
