@@ -2,7 +2,7 @@
 title: Informations SQL
 description: Découvrez les cas d’utilisation, les fonctionnalités essentielles et les étapes requises pour développer un tableau de bord des insights SQL avec Data Distiller. Découvrez comment la fonctionnalité SQL Insights de Data Distiller peut améliorer la transparence et obtenir des informations opérationnelles sur différentes dimensions telles que les profils, les audiences, les campagnes, les parcours, les droits et le consentement.
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: 3435ddd4b235c1c66cd29c75b779bcca607a5d4f
+source-git-commit: 4e78a7983fba492ded866a8f1fc6f98e20510b2b
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 5%
@@ -13,7 +13,7 @@ ht-degree: 5%
 
 Créez des modèles de données de rapports personnalisés pour extraire des informations plus approfondies, optimiser des stratégies et adapter les analyses afin de répondre à des besoins professionnels spécifiques avec Data Distiller SQL Insights. Utilisez la fonctionnalité SQL Insights pour améliorer la transparence et obtenir des informations opérationnelles à partir de vos données Adobe Experience Platform sur des dimensions telles que les profils, les audiences, les campagnes, les parcours, les droits et le consentement. Cette fonctionnalité offre une solution adaptative polyvalente pour adapter les modèles de données de rapport de votre entreprise en fonction de vos besoins spécifiques.
 
-Pour [visualiser vos statistiques SQL](../../../dashboards/data-distiller/overview.md), vous pouvez utiliser le [mode de requête pro](../../../dashboards/data-distiller/query-pro-mode/overview.md) pour effectuer des analyses complexes avec des requêtes SQL personnalisées et transformer vos données en graphiques facilement interprétables. Utilisez le mode professionnel des requêtes pour créer des insights et des visualisations personnalisés sur vos tableaux de bord et répondre aux audiences techniques et non techniques en téléchargeant vos informations au format CSV.
+Pour [visualiser vos statistiques SQL](../../../dashboards/data-distiller/sql-insights/overview.md), vous pouvez utiliser le [mode de requête pro](../../../dashboards/data-distiller/query-pro-mode/overview.md) pour effectuer des analyses complexes avec des requêtes SQL personnalisées et transformer vos données en graphiques facilement interprétables. Utilisez le mode professionnel des requêtes pour créer des insights et des visualisations personnalisés sur vos tableaux de bord et répondre aux audiences techniques et non techniques en téléchargeant vos informations au format CSV.
 
 Ce document couvre les cas d’utilisation, les fonctionnalités essentielles et les étapes requises pour développer un tableau de bord d’insights SQL avec Data Distiller.
 

@@ -5,9 +5,9 @@ breadcrumb-title: Guide des tableaux de bord
 user-guide-description: Découvrez comment visualiser les données dans Experience Platform via des tableaux de bord personnalisables.
 feature: Dashboards
 role: Developer,User
-source-git-commit: 18d768f296d1f7087d05208fdff317b2fd9770af
+source-git-commit: 06e319a6f7e2294a9c5daea0f41e89a09d93efd2
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '134'
 ht-degree: 64%
 
 ---
@@ -21,7 +21,6 @@ ht-degree: 64%
 * [Tableaux de bord](user-defined-dashboards.md)
 * [Téléchargement de tableaux de bord au format PDF](download.md)
 * Data Distiller {#data-distiller}
-   * [Aperçu](data-distiller/overview.md)
    * SQl Insights for extended app reporting {#sql-insights}
       * [Vue d’ensemble](data-distiller/sql-insights/overview.md)
    * Requête en mode pro {#query-pro-mode}

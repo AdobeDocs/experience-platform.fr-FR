@@ -2,7 +2,7 @@
 title: En savoir plus
 description: Découvrez les différentes options d'affichage pour vos données analysées par SQL. Depuis votre tableau de bord personnalisé, vous pouvez afficher les résultats tabulés de votre analyse ou télécharger les données traitées au format CSV.
 exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
-source-git-commit: ed1565fad1c539d69b85fb644d4bc16d4a262673
+source-git-commit: 1ef8208ccde2f44b6c5188bd5b9a57ff876da30f
 workflow-type: tm+mt
 source-wordcount: '551'
 ht-degree: 1%
@@ -41,7 +41,7 @@ Vous pouvez trier les colonnes en sélectionnant le menu déroulant en regard de
 
 >[!NOTE]
 >
->Les options [!UICONTROL Tri croissant] et [!UICONTROL Tri décroissant] s’affichent uniquement pour les colonnes qui ont été configurées avec la [fonctionnalité de tri](../overview.md/#advanced-attributes).
+>Les options [!UICONTROL Tri croissant] et [!UICONTROL Tri décroissant] s’affichent uniquement pour les colonnes qui ont été configurées avec la [fonctionnalité de tri](./overview.md#advanced-attributes).
 
 ![Une liste déroulante de colonnes de tableau présentant les options Tri croissant et Tri décroissant mises en surbrillance.](../../images/query-pro-mode/advanced-sort-dropdown.png)
 

@@ -1,17 +1,16 @@
 ---
 title: Package Distiller de données
 description: Cette section présente le package Data Distiller dans Adobe Experience Platform.
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 4e78a7983fba492ded866a8f1fc6f98e20510b2b
 workflow-type: tm+mt
-source-wordcount: '71'
+source-wordcount: '107'
 ht-degree: 0%
 
 ---
 
 # Package Distiller de données
 
-Data Distiller est une offre de package qui comprend un sous-ensemble des fonctionnalités de Adobe Experience Platform. Ce module est destiné à la préparation des données post-ingestion pour les cas d’utilisation de profils clients en temps réel ou de données analytiques par des requêtes par lots exécutées dans Query Service. Pour plus d’informations sur le package Data Distiller, reportez-vous à la [présentation de Data Distiller](../data-distiller/overview.md) .
+Data Distiller est une offre de package qui comprend un sous-ensemble des fonctionnalités de Adobe Experience Platform. Ce module est destiné à la préparation des données post-ingestion pour les cas d’utilisation de profils clients en temps réel ou de données analytiques par des requêtes par lots exécutées dans Query Service.
 
-<!-- Document is hidden temporarily
-See the [Data Distiller overview](../data-distiller/overview.md) for more details on the Data Distiller package, or the [Data Distiller license usage document](../data-distiller/license-usage.md) for information about your organization's Query Service license usage.
--->
+Consultez les guides sur la [visualisation de vos statistiques SQL](../../dashboards/data-distiller/sql-insights/overview.md) ou sur l’utilisation du mode pro requête pour [ effectuer des analyses complexes avec des requêtes SQL personnalisées et transformer vos données en graphiques facilement interprétables](../../dashboards/data-distiller/query-pro-mode/overview.md). Vous pouvez utiliser le mode professionnel des requêtes pour créer des insights et des visualisations personnalisés sur vos tableaux de bord personnalisés.
+
