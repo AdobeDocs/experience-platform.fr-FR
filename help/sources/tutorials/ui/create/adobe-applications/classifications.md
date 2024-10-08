@@ -1,22 +1,23 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;analytics;classifications
 description: Découvrez comment créer un connecteur source Adobe Analytics dans l’interface utilisateur pour importer des données de classification dans Adobe Experience Platform.
-solution: Experience Platform
 title: Création d’une connexion Adobe Analytics Source pour les données de classification dans l’interface utilisateur
-type: Tutorial
 exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
-source-git-commit: fcebef97ba9cc667f80afd55980c5460912a56fb
+source-git-commit: 02b5c5f963c21247adbb1d13114f92b22f8758de
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '513'
 ht-degree: 15%
 
 ---
 
 # Créer une connexion source Adobe Analytics pour les données de classification dans l’interface utilisateur
 
-Ce tutoriel décrit les étapes à suivre pour créer une connexion à la source de données Adobe Analytics Classifications dans l’interface utilisateur afin d’importer des données de classification dans Adobe Experience Platform.
+>[!TIP]
+>
+>Par défaut, les données de classification d’Adobe Analytics sont mises à jour toutes les semaines. L’ingestion de données pour vos données de classification sera traitée sept jours après la configuration initiale de votre flux de données. Le premier chargement ingère l’ensemble des données et l’ingestion hebdomadaire qui en résulte exécute des données incrémentielles.
 
-## Prise en main
+Lisez ce tutoriel pour savoir comment ingérer vos données de classification Adobe Analytics dans Adobe Experience Platform par le biais de l’interface utilisateur.
+
+## Commencer
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
@@ -24,60 +25,42 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) : fournit un profil de consommateur unifié en temps réel, basé sur des données agrégées provenant de plusieurs sources.
 * [[!DNL Sandboxes]](../../../../../sandboxes/home.md) : Experience Platform fournit des environnements de test virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience numérique.
 
-Le connecteur de données des classifications Analytics requiert la migration de vos données vers la nouvelle infrastructure [!DNL Classifications] d’Adobe Analytics avant son utilisation. Pour confirmer l’état de migration de vos données, contactez votre équipe de compte d’Adobe.
+Le connecteur source des classifications Analytics nécessite que vos données aient été migrées vers la nouvelle infrastructure de classifications d’Adobe Analytics avant d’être utilisées. Pour confirmer l’état de migration de vos données, contactez votre équipe de compte d’Adobe.
 
 ## Sélectionner vos classifications
 
-Connectez-vous à [Adobe Experience Platform](https://platform.adobe.com), puis sélectionnez **[!UICONTROL Sources]** dans la barre de navigation de gauche pour accéder à l’espace de travail des sources. L’écran **[!UICONTROL Catalogue]** affiche les sources disponibles pour créer des connexions entrantes avec . Chaque carte source affiche une option permettant de configurer un nouveau compte ou d’ajouter des données à un compte existant.
+Dans l’interface utilisateur de l’Experience Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
 
-Vous pouvez sélectionner la catégorie appropriée dans le catalogue sur le côté gauche de votre écran. Vous pouvez également trouver la source spécifique à utiliser à l’aide de l’option de recherche.
+Sous la catégorie *Adobe applications*, sélectionnez **[!UICONTROL Adobe Analytics]**, puis **[!UICONTROL Configurer]**.
 
-Sous la catégorie **[!UICONTROL Adobe d’applications]**, sélectionnez la carte **[!UICONTROL Adobe Analytics]**, puis sélectionnez **[!UICONTROL Ajouter des données]** pour commencer à utiliser les données des classifications Analytics.
+>[!TIP]
+>
+>Les sources dans le catalogue des sources affichent l’option **[!UICONTROL Configurer]** s’il n’existe aucun compte authentifié. Une fois qu’un compte est authentifié, l’option devient **[!UICONTROL Ajouter des données]**.
 
-![](../../../../images/tutorials/create/classifications/catalog.png)
+![Catalogue des sources dans l’interface utilisateur de l’Experience Platform avec la source Adobe Analytics sélectionnée.](../../../../images/tutorials/create/classifications/catalog.png)
 
-L’écran permettant dʼ&#x200B;**[!UICONTROL Ajouter des données à la source Analytics]** s’affiche. Sélectionnez **[!UICONTROL Classifications]** dans l’en-tête supérieur pour afficher une liste de [!DNL Classifications] jeux de données, y compris des informations sur leur ID de dimension, le nom de la suite de rapports et l’identifiant de la suite de rapports.
+Sélectionnez ensuite [!UICONTROL Classifications] et sélectionnez les jeux de données de classification à ingérer à l’Experience Platform.
 
-Chaque page affiche jusqu’à dix jeux de données [!DNL Classifications] différents parmi lesquels vous pouvez choisir. Sélectionnez **[!UICONTROL Suivant]** au bas de la page pour rechercher d’autres options. Le panneau de droite affiche le nombre total de [!DNL Classifications] jeux de données que vous avez sélectionnés, ainsi que leurs noms. Ce panneau vous permet également de supprimer tous les jeux de données [!DNL Classifications] que vous avez peut-être sélectionnés par erreur ou d’effacer toutes les sélections avec une seule action.
+Vous pouvez sélectionner jusqu’à 30 jeux de données de classifications différents à importer dans Experience Platform. Tous les jeux de données que vous sélectionnez s’affichent dans le rail de droite. Lorsque vous avez terminé, sélectionnez [!UICONTROL Suivant] pour continuer.
 
-Vous pouvez sélectionner jusqu’à 30 jeux de données [!DNL Classifications] différents à importer dans [!DNL Platform].
-
-Une fois que vous avez sélectionné vos jeux de données [!DNL Classifications], sélectionnez **[!UICONTROL Suivant]** en haut à droite de la page.
-
-![](../../../../images/tutorials/create/classifications/add-data.png)
+![Page de classifications avec plusieurs jeux de données de classifications sélectionnés.](../../../../images/tutorials/create/classifications/select.png)
 
 ## Vérification des classifications
 
-L’étape **[!UICONTROL Réviser]** s’affiche, ce qui vous permet de revoir vos jeux de données [!DNL Classifications] sélectionnés avant qu’ils ne soient créés. Les détails sont regroupés dans les catégories suivantes :
+L’étape **[!UICONTROL Réviser]** s’affiche, vous permettant de passer en revue les jeux de données de classification sélectionnés avant qu’ils ne soient créés. Les détails sont regroupés dans les catégories suivantes :
 
 * **[!UICONTROL Connexion]** : affiche la plateforme source et l’état de la connexion.
-* **[!UICONTROL Type de données]** : affiche le nombre de [!DNL Classifications] sélectionnés.
-* **[!UICONTROL Planification]** : affiche la fréquence de synchronisation des données [!DNL Classifications].
+* **[!UICONTROL Type de données]** : affiche le nombre de classifications sélectionnées.
+* **[!UICONTROL Planification]** : affiche la fréquence de synchronisation des données de classification. **Remarque** : les données des classifications sont mises à jour chaque semaine.
 
 Une fois que vous avez examiné votre flux de données, cliquez sur **[!UICONTROL Terminer]** et laissez un certain temps pour créer le flux de données.
 
-![](../../../../images/tutorials/create/classifications/review.png)
-
-## Surveillance du flux de données des classifications
-
-Une fois votre flux de données créé, vous pouvez surveiller les données ingérées par celui-ci. Dans l’écran **[!UICONTROL Catalogue]**, sélectionnez **[!UICONTROL Flux de données]** pour afficher la liste des flux établis associés à votre compte [!DNL Classifications].
-
-![](../../../../images/tutorials/create/classifications/dataflows.png)
-
-L’écran **[!UICONTROL Flux de données]** s’affiche. Cette page contient une liste de flux de données, y compris des informations sur leur nom, les données source et l’état d’exécution de flux de données. À droite, se trouve le panneau **[!UICONTROL Propriétés]** qui contient des métadonnées concernant votre flux de données [!DNL Classifications].
-
-Sélectionnez le **[!UICONTROL jeu de données Target]** auquel vous souhaitez accéder.
-
-![](../../../../images/tutorials/create/classifications/list-of-dataflows.png)
-
-La page **[!UICONTROL Activité du jeu de données]** affiche des informations sur le jeu de données cible que vous avez sélectionné, y compris des détails sur son état de lot, son identifiant de jeu de données et son schéma.
-
-![](../../../../images/tutorials/create/classifications/dataset.png)
+![Page de révision des données de classification Adobe Analytics.](../../../../images/tutorials/create/classifications/review.png)
 
 ## Étapes suivantes
 
-En suivant ce tutoriel, vous avez créé un connecteur de données Analytics Classifications qui apporte [!DNL Classifications] données dans [!DNL Platform]. Consultez les documents suivants pour plus d’informations sur les données [!DNL Analytics] et [!DNL Classifications] :
+En suivant ce tutoriel, vous avez créé un connecteur de données de classification Analytics qui apporte des données de classification dans Experience Platform. Consultez les documents suivants pour plus d’informations sur [!DNL Analytics] et les données de classification :
 
-* [Présentation du connecteur de données Analytics](../../../../connectors/adobe-applications/analytics.md)
-* [Créer une connexion aux données Analytics dans l’interface utilisateur](./analytics.md)
+* [Présentation du connecteur source Adobe Analytics](../../../../connectors/adobe-applications/analytics.md)
+* [Création d’une connexion source Analytics pour les données de suite de rapports dans l’interface utilisateur](./analytics.md)
 * [À propos des classifications](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
