@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Syntaxe SQL dans Query Service
 description: Ce document décrit et explique la syntaxe SQL prise en charge par Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: 654a8b6a3f961514ef96eaec879697cde36f8b1b
 workflow-type: tm+mt
-source-wordcount: '4291'
+source-wordcount: '4265'
 ht-degree: 5%
 
 ---
@@ -577,7 +577,7 @@ Le tableau suivant montre la différence de résultats entre le paramètre `auto
 
 ### Résoudre l’instantané de secours en cas d’échec {#resolve-fallback-snapshot-on-failure}
 
-L’option `resolve_fallback_snapshot_on_failure` est utilisée pour résoudre le problème d’un ID d’instantané expiré. Les métadonnées d’instantané expirent au bout de deux jours et un instantané expiré peut invalider la logique d’un script. Cela peut poser problème lors de l&#39;utilisation de blocs anonymes.
+L’option `resolve_fallback_snapshot_on_failure` est utilisée pour résoudre le problème d’un ID d’instantané expiré.
 
 Définissez l’option `resolve_fallback_snapshot_on_failure` sur true pour remplacer un instantané avec un ID d’instantané précédent.
 

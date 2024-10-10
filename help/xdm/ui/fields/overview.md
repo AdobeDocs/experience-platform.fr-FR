@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Définition des champs XDM dans l’interface utilisateur
 description: Découvrez comment définir des champs XDM dans l’interface utilisateur de l’Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 89519918aa830dc09365fa80449099229dc475d5
+source-git-commit: 807ce0b0304fd73a455f228529d75cfc68769bf5
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1607'
 ht-degree: 1%
 
 ---
@@ -89,7 +89,6 @@ Lors de la définition d’un nouveau champ, d’autres options de configuration
 | Propriété du champ | Types compatibles | Description |
 | --- | --- | --- |
 | [!UICONTROL Type de valeur de carte] | [!UICONTROL Carte] | La propriété [!UICONTROL Type de valeur de carte] apparaît uniquement dans l’interface utilisateur si vous sélectionnez la valeur de carte dans les options de liste déroulante [!UICONTROL Type]. Vous pouvez choisir entre les types de valeurs Chaîne et Entier pour la carte.<br>![L’éditeur de schémas avec les champs Type et Type de valeur de mappage mis en surbrillance.](../../images/ui/fields/overview/map-type.png "L’éditeur de schémas avec les champs Type et Type de valeur de mappage mis en surbrillance."){width="100" zoomable="yes"}<br>Remarque : tous les types de données de mappage créés par le biais de l’API qui ne sont pas de type Chaîne ou Entier sont affichés sous la forme d’un type de données &#39;[!UICONTROL Complex]&#39;. Vous ne pouvez pas créer de types de données &#39;[!UICONTROL Complex]&#39; via l’interface utilisateur. |
-| [!UICONTROL Valeur par défaut] | [!UICONTROL Chaîne], [!UICONTROL Double], [!UICONTROL Long], [!UICONTROL Entier], [!UICONTROL Court], [!UICONTROL Octet], [!UICONTROL Booléen] | Valeur par défaut attribuée à ce champ si aucune autre valeur n’est fournie pendant l’ingestion. Cette valeur doit être conforme au type sélectionné du champ.<br><br>Les valeurs par défaut ne sont pas enregistrées dans le jeu de données au moment de l’ingestion, car elles peuvent changer au fil du temps. Les valeurs par défaut définies dans le schéma sont déduites par les services et applications Platform en aval lorsqu’ils lisent les données du jeu de données. Par exemple, lors de l’interrogation des données à l’aide de Query Service, si l’attribut a une valeur NULL, mais que la valeur par défaut est `5` au niveau du schéma, il est prévu que Query Service renvoie `5` au lieu de NULL. Notez que ce comportement n’est actuellement pas uniforme pour tous les services AEP. |
 | [!UICONTROL Modèle] | [!UICONTROL Chaîne] | Une [expression régulière](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) à laquelle la valeur de ce champ doit être conforme pour être acceptée lors de l’ingestion. |
 | [!UICONTROL Format] | [!UICONTROL Chaîne] | Effectuez une sélection dans une liste de formats prédéfinis pour les chaînes auxquelles la valeur doit se conformer. Les formats disponibles sont les suivants : <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
 | [!UICONTROL Longueur minimale] | [!UICONTROL Chaîne] | Nombre minimum de caractères que doit contenir la chaîne pour que la valeur soit acceptée lors de l’ingestion. |

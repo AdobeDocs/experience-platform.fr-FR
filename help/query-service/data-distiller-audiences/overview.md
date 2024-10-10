@@ -1,9 +1,9 @@
 ---
 title: Création d’audiences à l’aide de SQL
 description: Découvrez comment utiliser l’extension d’audience SQL dans Adobe Experience Platform Data Distiller pour créer, gérer et publier des audiences à l’aide de commandes SQL. Ce guide couvre tous les aspects du cycle de vie de l’audience, notamment la création, la mise à jour et la suppression de profils, ainsi que l’utilisation de définitions d’audience pilotées par les données pour cibler des destinations basées sur des fichiers.
-source-git-commit: fbfd232c4e101f29ae01328c33763786a0e4a8cb
+source-git-commit: 8b9a46d9dd35a60fc3f3087d5fd3c4dad395b1aa
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1280'
 ht-degree: 1%
 
 ---
@@ -137,41 +137,103 @@ Cette section traite des questions fréquentes sur la création et la gestion d�
 
 +++Sélectionner pour afficher les questions et réponses
 
+**Questions** :
+
 - La création d’audience est-elle prise en charge uniquement pour les jeux de données plats ?
-- Les jeux de données imbriqués sont également pris en charge, mais seuls les attributs plats sont disponibles dans l’audience.
+
++++Réponse
+
+Les jeux de données imbriqués sont également pris en charge, mais seuls les attributs plats sont disponibles dans l’audience.
+
++++
 
 - La création d’audience génère-t-elle un ou plusieurs jeux de données uniques ou varie-t-elle en fonction de la configuration ?
-- Il existe un mappage un-à-un entre une audience et un jeu de données.
+
++++Réponse
+
+Il existe un mappage un-à-un entre une audience et un jeu de données.
+
++++
 
 - Le jeu de données créé lors de la création de l’audience est-il marqué pour Profile ?
-- Non, le jeu de données créé lors de la création de l’audience n’est pas marqué pour Profile.
+
++++Réponse
+
+Non, le jeu de données créé lors de la création de l’audience n’est pas marqué pour Profile.
+
++++
 
 - Le jeu de données est-il créé sur le lac de données ?
-- Oui, le jeu de données est créé sur le lac de données.
+
++++Réponse
+
+Oui, le jeu de données est créé sur le lac de données.
+
++++
 
 - Les attributs de l’audience sont-ils limités à une utilisation uniquement dans les destinations basées sur des fichiers de lot d’entreprise ? (Oui ou Non)
-- Oui, les attributs de l’audience sont limités pour une utilisation uniquement dans les destinations basées sur des fichiers de lot d’entreprise.
+
++++Réponse
+
+Oui, les attributs de l’audience sont limités pour une utilisation uniquement dans les destinations basées sur des fichiers de lot d’entreprise.
+
++++
 
 - Puis-je créer une audience d’audiences qui utilise une audience Distiller de données ?
-- Oui, vous pouvez créer une audience qui utilise une audience Distiller de données.
+
++++Réponse
+
+Oui, vous pouvez créer une audience qui utilise une audience Distiller de données.
+
++++
 
 - Ces audiences s’affichent-elles dans Adobe Journey Optimizer ? Dans le cas contraire, que se passe-t-il lorsque je crée une audience dans le créateur de règles qui inclut tous les membres de cette audience ?
-- Les audiences du Distilleur de données ne sont actuellement pas disponibles dans Adobe Journey Optimizer. Pour être disponible dans Adobe Journey Optimizer, vous devez créer une audience dans le créateur de règles Adobe Journey Optimizer.
+
++++Réponse
+
+Les audiences du Distilleur de données ne sont actuellement pas disponibles dans Adobe Journey Optimizer. Pour être disponible dans Adobe Journey Optimizer, vous devez créer une audience dans le créateur de règles Adobe Journey Optimizer.
+
++++
 
 - Comment créer deux audiences Distiller de données avec des plannings différents ? Combien de jeux de données sont créés et sont-ils marqués pour Profile ?
-- Deux jeux de données seront créés, car chaque audience possède un jeu de données sous-jacent. Toutefois, ces jeux de données ne sont pas marqués pour Profile. Les deux jeux de données sont gérés selon leurs propres plannings.
+
++++Réponse
+
+Deux jeux de données seront créés, car chaque audience possède un jeu de données sous-jacent. Toutefois, ces jeux de données ne sont pas marqués pour Profile. Les deux jeux de données sont gérés selon leurs propres plannings.
+
++++
 
 - Comment supprimer une audience ?
-- Pour supprimer une audience, vous pouvez utiliser la commande [`DROP AUDIENCE`](#delete-audience) dans l’interface de ligne de commande ou utiliser les [ actions rapides de l’espace de travail Audiences](../../segmentation/ui/audience-portal.md#quick-actions). REMARQUE : les audiences utilisées dans des destinations en aval ou dépendantes d’autres audiences ne peuvent pas être supprimées.
+
++++Réponse
+
+Pour supprimer une audience, vous pouvez utiliser la commande [`DROP AUDIENCE`](#delete-audience) dans l’interface de ligne de commande ou utiliser les [ actions rapides de l’espace de travail Audiences](../../segmentation/ui/audience-portal.md#quick-actions). REMARQUE : les audiences utilisées dans des destinations en aval ou dépendantes d’autres audiences ne peuvent pas être supprimées.
+
++++
 
 - Lorsque je publie une audience dans Profile, à quelle heure est-elle disponible dans l’interface utilisateur du créateur de segments et quand est-elle disponible dans les destinations ?
-- Une fois l’exportation de l’instantané de profil terminée, les profils sont visibles dans l’audience.
+
++++Réponse
+
+Une fois l’exportation de l’instantané de profil terminée, les profils sont visibles dans l’audience.
+
++++
 
 - Les audiences Data Distiller sont-elles supprimées tous les 30 jours puisqu’elles sont des audiences externes ?
-- Oui, les audiences Distiller de données sont supprimées tous les 30 jours puisqu’il s’agit d’audiences externes.
+
++++Réponse
+
+Oui, les audiences Distiller de données sont supprimées tous les 30 jours puisqu’il s’agit d’audiences externes.
+
++++
 
 - Les audiences Data Distiller apparaissent-elles dans l’inventaire des audiences ?
-- Oui, les audiences Distiller de données apparaissent dans l’inventaire des audiences sous le nom d’origine &quot;Distiller de données&quot;.
+
++++Réponse
+
+Oui, les audiences Distiller de données apparaissent dans l’inventaire des audiences sous le nom d’origine &quot;Distiller de données&quot;.
+
++++
 
 +++
 
