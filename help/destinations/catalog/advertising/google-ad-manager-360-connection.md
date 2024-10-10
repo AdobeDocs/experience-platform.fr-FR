@@ -2,10 +2,10 @@
 title: Connexion à  [!DNL Google Ad Manager 360]  (Version bêta)
 description: Google Ad Manager 360 est une plateforme de diffusion des publicités de Google qui donne aux éditeurs les moyens de gérer l’affichage des publicités sur leurs sites web, en vidéo et dans les applications mobiles.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 21b76877e8b36d6b844d9c0726a2347b1fab170e
 workflow-type: tm+mt
-source-wordcount: '1206'
-ht-degree: 61%
+source-wordcount: '1217'
+ht-degree: 60%
 
 ---
 
@@ -35,6 +35,7 @@ La destination [!DNL Google Ad Manager 360] exporte des fichiers [!DNL CSV] vers
 
 Notez les détails suivants qui sont spécifiques aux destinations [!DNL Google Ad Manager 360].
 
+* Cette destination ne prend actuellement pas en charge la fonctionnalité [exporter des fichiers à la demande](../../ui/export-file-now.md).
 * Les audiences activées sont créées par programmation dans la plateforme Google et renseignées dans le fichier CSV.
 
 ## Identités prises en charge {#supported-identities}
@@ -79,7 +80,7 @@ La liste autorisée est obligatoire avant de configurer votre première destinat
 >
 >L’exception à cette règle concerne les clients [Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=fr) existants. Si vous avez déjà créé une connexion à cette destination Google dans Audience Manager, il n’est pas nécessaire de passer à nouveau par le processus de liste autorisée et vous pouvez passer directement aux étapes suivantes.
 
-1. Suivez les étapes décrites dans la [documentation de Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=fr) pour ajouter l’Adobe en tant que plateforme de gestion des données liée (DMP).
+1. Suivez les étapes décrites dans la [documentation de Google Ad Manager](https://support.google.com/admanager/answer/3289669?hl=fr) pour ajouter Adobe en tant que plateforme de gestion des données liée (DMP).
 2. Dans l’interface [!DNL Google Ad Manager], accédez à **[!UICONTROL Admin]** > **[!UICONTROL Paramètres globaux]** > **[!UICONTROL Paramètres réseau]**, puis activez le curseur **[!UICONTROL Accès API]**.
 
 
