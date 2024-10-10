@@ -1,30 +1,29 @@
 ---
-title: (Version bêta) Utiliser des champs calculés pour exporter des tableaux dans des fichiers de schéma plats
+title: Utilisation de champs calculés pour exporter des tableaux en tant que chaînes
 type: Tutorial
-description: Découvrez comment utiliser des champs calculés pour exporter des tableaux dans des fichiers de schéma plats de Real-Time CDP vers des destinations de stockage dans le cloud.
-badge: Version bêta
+description: Découvrez comment utiliser les champs calculés pour exporter des tableaux de Real-Time CDP vers des destinations de stockage dans le cloud en tant que chaînes.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 787aaef26fab5ca3acff8303f928efa299cafa93
+source-git-commit: 6fec0432f71e58d0e17ac75121fb1028644016e1
 workflow-type: tm+mt
-source-wordcount: '1477'
-ht-degree: 5%
+source-wordcount: '1513'
+ht-degree: 0%
 
 ---
 
-# (Version bêta) Utiliser des champs calculés pour exporter des tableaux dans des fichiers de schéma plats {#use-calculated-fields-to-export-arrays-in-flat-schema-files}
+# Utilisation de champs calculés pour exporter des tableaux en tant que chaînes{#use-calculated-fields-to-export-arrays-as-strings}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
->title="(Beta) Prise en charge de l’export des tableaux"
->abstract="Utilisez la commande **Ajouter un champ calculé** pour exporter des tableaux simples de valeurs entières, de chaîne ou booléennes d’Experience Platform vers la destination d’espace de stockage dans le cloud de votre choix. Certaines limites s’appliquent. Consultez la documentation pour obtenir des exemples complets et des fonctions prises en charge."
+>title="Prise en charge des tableaux d’exportation"
+>abstract="<p>Utilisez le contrôle **Ajouter un champ calculé** pour exporter des tableaux de valeurs int, string, boolean et object de l’Experience Platform vers la destination de stockage dans le cloud souhaitée.</p><p> Les tableaux doivent être exportés en tant que chaînes à l’aide de la fonction `array_to_string` . Consultez la documentation pour obtenir des exemples complets et d’autres fonctions prises en charge.</p>"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=fr#examples" text="Exemples"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=fr#known-limitations" text="Limites connues"
 
 >[!AVAILABILITY]
 >
->* La fonctionnalité d’exportation de tableaux par le biais de champs calculés se trouve actuellement dans Beta. La documentation et les fonctionnalités peuvent changer.
+>* La fonctionnalité d’exportation de tableaux par le biais de champs calculés est généralement disponible.
 
-Découvrez comment exporter des tableaux à travers des champs calculés de Real-Time CDP dans des fichiers de schéma plats vers les [destinations de stockage dans le cloud](/help/destinations/catalog/cloud-storage/overview.md). Lisez ce document pour comprendre les cas d’utilisation activés par cette fonctionnalité.
+Découvrez comment exporter des tableaux par le biais de champs calculés de Real-Time CDP vers les [destinations de stockage dans le cloud](/help/destinations/catalog/cloud-storage/overview.md) en tant que chaînes. Lisez ce document pour comprendre les cas d’utilisation activés par cette fonctionnalité.
 
 Obtenez des informations détaillées sur les champs calculés - ce qu’ils sont et pourquoi ils comptent. Lisez les pages liées ci-dessous pour une introduction aux champs calculés dans la préparation des données et pour plus d’informations sur toutes les fonctions disponibles :
 
@@ -43,14 +42,34 @@ Obtenez des informations détaillées sur les champs calculés - ce qu’ils son
 
 Dans Experience Platform, vous pouvez utiliser les [schémas XDM](/help/xdm/home.md) pour gérer différents types de champs. Auparavant, vous pouviez exporter des champs de type paire clé-valeur simples tels que des chaînes hors Experience Platform vers les destinations souhaitées. `personalEmail.address`:`johndoe@acme.org` est un exemple de champ qui a été pris en charge pour l’exportation précédemment.
 
-Les autres types de champ dans Experience Platform incluent les champs de tableau. En savoir plus sur la [gestion des champs de tableau dans l’interface utilisateur Experience Platform](/help/xdm/ui/fields/array.md). Outre les types de champ précédemment pris en charge, vous pouvez désormais exporter des objets de tableau tels que : `organizations:[marketing, sales, engineering]`. Reportez-vous aux [exemples étendus](#examples) qui illustrent l’utilisation de différentes fonctions pour accéder aux éléments de tableaux, joindre des éléments de tableau dans une chaîne, etc.
+Les autres types de champ dans Experience Platform incluent les champs de tableau. En savoir plus sur la [gestion des champs de tableau dans l’interface utilisateur Experience Platform](/help/xdm/ui/fields/array.md). Outre les types de champ précédemment pris en charge, vous pouvez désormais exporter des objets de tableau tels que l’exemple ci-dessous, concaténés dans une chaîne à l’aide de la fonction `array_to_string`.
+
+```
+organizations = [{
+  id: 123,
+  orgName: "Acme Inc",
+  founded: 1990,
+  latestInteraction: "2024-02-16"
+}, {
+  id: 456,
+  orgName: "Superstar Inc",
+  founded: 2004,
+  latestInteraction: "2023-08-25"
+}, {
+  id: 789,
+  orgName: 'Energy Corp',
+  founded: 2021,
+  latestInteraction: "2024-09-08"
+}]
+```
+
+Reportez-vous aux [ exemples complets](#examples) qui illustrent l’utilisation de différentes fonctions pour accéder aux éléments de tableaux, transformer et filtrer des tableaux, joindre des éléments de tableau en chaîne, etc.
 
 ## Limites connues {#known-limitations}
 
-Notez les limites connues suivantes pour la version bêta de cette fonctionnalité :
+Notez les limites connues suivantes qui s’appliquent actuellement à cette fonctionnalité :
 
-* L’exportation vers des fichiers JSON ou Parquet avec des schémas hiérarchiques n’est pas prise en charge pour l’instant. Vous pouvez exporter des tableaux uniquement vers des fichiers CSV, JSON et Parquet de schéma plat.
-* Pour l’instant, *vous pouvez uniquement exporter des tableaux simples (ou des tableaux de valeurs primitives) vers des destinations de stockage dans le cloud*. Cela signifie que vous pouvez exporter des objets de tableau qui incluent des valeurs string, int ou boolean. Vous ne pouvez pas exporter de mappages ou de tableaux de mappages ou d’objets La fenêtre modale des champs calculés affiche uniquement les tableaux que vous pouvez exporter.
+* L’exportation vers des fichiers JSON ou Parquet *avec des schémas hiérarchiques* n’est pas prise en charge pour l’instant. Vous pouvez exporter des tableaux au format CSV, JSON et Parquet *en tant que chaînes uniquement* à l’aide de la fonction `array_to_string`.
 
 ## Conditions préalables {#prerequisites}
 
@@ -58,25 +77,21 @@ Notez les limites connues suivantes pour la version bêta de cette fonctionnalit
 
 ## Comment exporter des champs calculés {#how-to-export-calculated-fields}
 
-À l’étape de mappage du workflow d’activation pour les destinations de stockage dans le cloud, sélectionnez **[!UICONTROL (Beta) Ajouter un champ calculé]**.
+Dans l’étape de mappage du workflow d’activation pour les destinations de stockage dans le cloud, sélectionnez **[!UICONTROL Ajouter un champ calculé]**.
 
 ![Ajoutez le champ calculé surligné dans l’étape de mappage du workflow d’activation par lots.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
-Cela ouvre une fenêtre modale dans laquelle vous pouvez sélectionner des attributs que vous pouvez utiliser pour exporter des attributs hors d’Experience Platform.
-
->[!IMPORTANT]
->
->Seuls certains des champs de votre schéma XDM sont disponibles dans la vue **[!UICONTROL Field]**. Vous pouvez voir des valeurs de chaîne et des tableaux de valeurs string, int et boolean. Par exemple, le tableau `segmentMembership` n’est pas affiché, car il inclut d’autres valeurs de tableau.
+Cela ouvre une fenêtre modale dans laquelle vous pouvez sélectionner des fonctions et des champs pour exporter des attributs hors d’Experience Platform.
 
 ![Fenêtre modale de la fonctionnalité de champ calculé sans fonction encore sélectionnée.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
 
-Par exemple, utilisez la fonction `join` sur le champ `loyaltyID` comme illustré ci-dessous pour exporter un tableau d’identifiants de fidélité sous la forme d’une chaîne concaténée avec un trait de soulignement dans un fichier CSV. Affichez [ plus d&#39;informations à ce sujet et d&#39;autres exemples plus loin sous](#join-function-export-arrays).
+Par exemple, utilisez la fonction `array_to_string` sur le champ `organizations` comme illustré ci-dessous pour exporter le tableau des organisations sous la forme d’une chaîne dans un fichier CSV. Affichez [ plus d&#39;informations à ce sujet et d&#39;autres exemples plus loin sous](#array-to-string-function-export-arrays).
 
-![Fenêtre modale de la fonctionnalité de champ calculé avec la fonction de jointure sélectionnée.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
+![Fenêtre modale de la fonctionnalité de champ calculé avec la fonction tableau-à-chaîne sélectionnée.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
 
 Sélectionnez **[!UICONTROL Enregistrer]** pour conserver le champ calculé et revenir à l’étape de mappage.
 
-![Fenêtre modale de la fonctionnalité de champ calculé avec la fonction de jointure sélectionnée et le contrôle Enregistrer en surbrillance.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+![Fenêtre modale de la fonctionnalité de champ calculé avec la fonction tableau-à-chaîne sélectionnée et le contrôle Enregistrer surligné.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
 
 De retour à l’étape de mappage du workflow, renseignez le **[!UICONTROL Champ cible]** avec la valeur de l’en-tête de colonne que vous souhaitez pour ce champ dans les fichiers exportés.
 
@@ -88,13 +103,16 @@ Une fois prêt, sélectionnez **[!UICONTROL Suivant]** pour passer à l’étape
 
 ![Étape de mappage avec le champ cible surligné et une valeur cible renseignée.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
 
-## Fonctions prises en charge {#supported-functions}
+## Exemples de fonctions prises en charge pour exporter des tableaux {#supported-functions}
 
 Toutes les [ fonctions de préparation de données ](/help/data-prep/functions.md) documentées sont prises en charge lors de l’activation de données vers des destinations basées sur des fichiers.
 
-Notez toutefois que des descriptions détaillées de cas d’utilisation et des exemples d’informations de sortie ne sont actuellement fournies pour les fonctions suivantes que dans la version bêta des champs calculés et de la prise en charge des tableaux pour les destinations :
+Les fonctions ci-dessous, spécifiques à la gestion des exportations de tableaux, sont documentées avec des exemples.
 
-* `join`
+* `array_to_string`
+* `flattenArray`
+* `filterArray`
+* `transformArray`
 * `coalesce`
 * `size_of`
 * `iif`
@@ -103,31 +121,66 @@ Notez toutefois que des descriptions détaillées de cas d’utilisation et des 
 * `to_array`
 * `first`
 * `last`
-* `sha256`
-* `md5`
 
 ## Exemples de fonctions utilisées pour exporter des tableaux {#examples}
 
 Consultez des exemples et des informations supplémentaires dans les sections ci-dessous pour connaître certaines des fonctions répertoriées ci-dessus. Pour le reste des fonctions répertoriées, reportez-vous à la [documentation générale sur les fonctions dans la section Préparation de données](/help/data-prep/functions.md).
 
-### fonction `join` pour exporter des tableaux {#join-function-export-arrays}
+### fonction `array_to_string` pour exporter des tableaux {#array-to-string-function-export-arrays}
 
-Utilisez la fonction `join` pour concaténer les éléments d’un tableau dans une chaîne à l’aide d’un séparateur souhaité, tel que `_` ou `|`.
+Utilisez la fonction `array_to_string` pour concaténer les éléments d’un tableau dans une chaîne à l’aide d’un séparateur souhaité, tel que `_` ou `|`.
 
-Par exemple, vous pouvez combiner les champs XDM suivants comme illustré dans la capture d’écran de mappage à l’aide d’une syntaxe `join('_',loyalty.loyaltyID)` :
+Par exemple, vous pouvez combiner les champs XDM suivants comme illustré dans la capture d’écran de mappage à l’aide d’une syntaxe `array_to_string('_',organizations)` :
 
-* `"organizations": ["Marketing","Sales,"Finance"]` array
+* `organizations` array
 * `person.name.firstName` string
 * `person.name.lastName` string
 * `personalEmail.address` string
 
-![Exemple de mappage comprenant la fonction de jointure.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-join-function.png)
+![Exemple de mappage comprenant la fonction array_to_string.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-array-to-string-function.png)
 
-Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Notez comment les trois éléments du tableau sont concaténés en une seule chaîne à l’aide du caractère `_`.
+Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Notez comment les éléments du tableau sont concaténés en une seule chaîne à l’aide du caractère `_`.
 
 ```
-`First_Name,Last_Name,Personal_Email,Organization
-John,Doe,johndoe@acme.org, "Marketing_Sales_Finance"
+First_Name,Last_Name,Personal_Email,Organization
+John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
+```
+
+### fonction `flattenArray` pour exporter des tableaux aplatis
+
+Utilisez la fonction `flattenArray` pour aplatir un tableau multidimensionnel exporté. Vous pouvez combiner cette fonction avec la fonction `array_to_string` décrite plus haut.
+
+Si vous continuez avec l’objet de tableau `organizations` ci-dessus, vous pouvez écrire une fonction comme `array_to_string('_', flattenArray(organizations))`. Notez que la fonction `array_to_string` aplatit le tableau d’entrée par défaut dans une chaîne.
+
+Le résultat obtenu est le même que pour la fonction `array_to_string` décrite ci-dessus.
+
+
+### fonction `filterArray` pour exporter des tableaux filtrés
+
+Utilisez la fonction `filterArray` pour filtrer les éléments d’un tableau exporté. Vous pouvez combiner cette fonction avec la fonction `array_to_string` décrite plus haut.
+
+En continuant avec l’objet de tableau `organizations` d’en haut, vous pouvez écrire une fonction du type `array_to_string('_', filterArray(organizations, org -> org.founded > 2021))`, renvoyant aux organisations ayant une valeur pour `founded` dans l’année 2021 ou plus récente.
+
+![Exemple de fonction filterArray.](/help/destinations/assets/ui/export-arrays-calculated-fields/filter-array-function.png)
+
+Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Notez comment les deux éléments du tableau qui répondent au critère sont concaténés en une seule chaîne à l’aide du caractère `_`.
+
+```
+John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
+```
+
+### fonction `transformArray` pour exporter des tableaux transformés
+
+Utilisez la fonction `transformArray` pour transformer les éléments d’un tableau exporté. Vous pouvez combiner cette fonction avec la fonction `array_to_string` décrite plus haut.
+
+Si vous continuez avec l’objet de tableau `organizations` ci-dessus, vous pouvez écrire une fonction telle que `array_to_string('_', transformArray(organizations, org -> ucase(org.orgName)))`, renvoyant les noms des organisations converties en majuscules.
+
+![Exemple de fonction transformArray.](/help/destinations/assets/ui/export-arrays-calculated-fields/transform-array-function.png)
+
+Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Notez comment les trois éléments du tableau sont transformés et concaténés en une seule chaîne à l’aide du caractère `_`.
+
+```
+John,Doe,johndoe@acme.org,ACME INC_SUPERSTAR INC_ENERGY CORP
 ```
 
 ### fonction `iif` pour exporter des tableaux {#iif-function-export-arrays}
@@ -145,9 +198,9 @@ John,Doe, johndoe@acme.org, "isMarketing"
 
 ### fonction `add_to_array` pour exporter des tableaux {#add-to-array-function-export-arrays}
 
-Utilisez la fonction `add_to_array` pour ajouter des éléments à un tableau exporté. Vous pouvez combiner cette fonction avec la fonction `join` décrite plus haut.
+Utilisez la fonction `add_to_array` pour ajouter des éléments à un tableau exporté. Vous pouvez combiner cette fonction avec la fonction `array_to_string` décrite plus haut.
 
-En continuant avec l’objet de tableau `organizations` d’en haut, vous pouvez écrire une fonction du type `source: join('_', add_to_array(organizations,"2023"))`, renvoyant les organisations dont une personne est membre au cours de l’année 2023.
+En continuant avec l’objet de tableau `organizations` d’en haut, vous pouvez écrire une fonction du type `source: array_to_string('_', add_to_array(organizations,"2023"))`, renvoyant les organisations dont une personne est membre au cours de l’année 2023.
 
 ![Exemple de mappage comprenant la fonction add_to_array.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
 
@@ -222,21 +275,25 @@ Dans ce cas, votre fichier de sortie ressemble à ce qui suit, en exportant la p
 johndoe@acme.org,"1538097126","1664327526"
 ```
 
-### Fonctions de hachage {#hashing-functions}
+<!--
 
-Outre les fonctions spécifiques à l’exportation de tableaux ou d’éléments à partir d’un tableau, vous pouvez utiliser des fonctions de hachage pour hacher des attributs dans les fichiers exportés. Par exemple, si vous disposez d’informations d’identification personnelle dans les attributs, vous pouvez hacher ces champs lors de leur exportation.
+### Hashing functions {#hashing-functions}
 
-Vous pouvez hacher directement des valeurs de chaîne, par exemple `md5(personalEmail.address)`. Si vous le souhaitez, vous pouvez également hacher des éléments individuels des champs de tableau, en supposant que les éléments du tableau soient des chaînes, comme ceci : `md5(purchaseTime[0])`
+In addition to the functions specific for exporting arrays or elements from an array, you can use hashing functions to hash attributes in the exported files. For example, if you have any personally identifiable information in attributes, you can hash those fields when exporting them. 
 
-Les fonctions de hachage prises en charge sont les suivantes :
+You can hash string values directly, for example `md5(personalEmail.address)`. If desired, you can also hash individual elements of array fields, assuming elements in the array are strings, like this: `md5(purchaseTime[0])`
 
-| Fonction | Exemple d’expression |
+The supported hashing functions are:
+
+|Function | Sample expression |
 |---------|----------|
 | `sha1` | `sha1(organizations[0])` |
 | `sha256` | `sha256(organizations[0])` |
 | `sha512` | `sha512(organizations[0])` |
 | `hash` | `hash("crc32", organizations[0], "UTF-8")` |
-| `md5` | `md5(organizations[0], "UTF-8")` |
+| `md5` |  `md5(organizations[0], "UTF-8")` |
 | `crc32` | `crc32(organizations[0])` |
 
 {style="table-layout:auto"}
+
+-->
