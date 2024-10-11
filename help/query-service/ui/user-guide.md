@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de Query Editor
 description: Query Editor est un outil interactif fourni par Adobe Experience Platform Query Service. Il permet d’écrire, de valider et d’exécuter des requêtes pour les données d’expérience client dans l’interface utilisateur d’Experience Platform. Query Editor prend en charge le développement de requête pour l’analyse et l’exploration de données. Il vous permet également d’exécuter des requêtes interactives à des fins de développement, ainsi que des requêtes non interactives pour renseigner les jeux de données dans Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: d83604b2bf6a8e2f2b5802a5e7f26447fbf7eb2e
+source-git-commit: f68dd020b05d1eaf6d873b9cdc2a40007ad60c84
 workflow-type: tm+mt
-source-wordcount: '2821'
+source-wordcount: '2845'
 ht-degree: 23%
 
 ---
@@ -200,19 +200,18 @@ Si une requête a été planifiée, alors l’onglet [!UICONTROL Requêtes plani
 >
 >Les requêtes non exécutées ne sont pas enregistrées dans le journal. Pour que la requête soit disponible dans Query Service, elle doit être exécutée ou enregistrée dans Query Editor.
 
-### Explorateur d’objets {#object-browser}
+### [!BADGE Beta]{type=Informative} Explorateur d’objets {#object-browser}
 
 >[!AVAILABILITY]
 >
->Le rail de navigation du jeu de données n’est disponible que pour les clients Data Distiller. Votre interface utilisateur Platform peut ne pas contenir le rail de navigation du jeu de données de gauche.  D’autres images de ce document peuvent ne pas refléter le rail de navigation du jeu de données. Pour plus d’informations, contactez votre représentant d’Adobe.
+Le rail de navigation du jeu de données n’est disponible que pour les clients Data Distiller. Votre interface utilisateur Platform peut ne pas contenir le rail de navigation du jeu de données de gauche. D’autres images de ce document peuvent ne pas refléter le rail de navigation du jeu de données. Pour plus d’informations, contactez votre représentant d’Adobe.<br>
+Le navigateur d’objets est actuellement en version bêta et n’est disponible que dans une **version limitée**. Contactez votre représentant d’Adobe pour obtenir un accès anticipé à la version.
 
 Utilisez l’explorateur d’objets pour rechercher et filtrer facilement des jeux de données. L’explorateur d’objets réduit le temps passé à rechercher des tableaux et des jeux de données dans des environnements volumineux avec de nombreux jeux de données. Grâce à un accès simplifié aux données et métadonnées pertinentes, vous pouvez vous concentrer davantage sur la création de requêtes et moins sur la navigation.
 
 Pour naviguer dans votre base de données à l’aide du navigateur d’objets, saisissez un nom de tableau dans le champ de recherche ou sélectionnez **[!UICONTROL Tableaux]** pour développer la liste des jeux de données et des tableaux disponibles. Lors de l’utilisation du champ de recherche, la liste des tables disponibles est filtrée dynamiquement en fonction de votre saisie.
 
->[!NOTE]
->
->Chaque jeu de données contenu dans [votre base de données sélectionnée](#database-dropdown) est répertorié dans un rail de navigation à gauche de Query Editor.
+Chaque jeu de données contenu dans [votre base de données sélectionnée](#database-dropdown) est répertorié dans un rail de navigation à gauche de Query Editor.
 
 ![ Rail de navigation du jeu de données Query Editor avec l’entrée de recherche mise en surbrillance.](../images/ui/query-editor/search-tables.png)
 
@@ -233,7 +232,7 @@ Outre les recherches rapides, vous pouvez désormais accéder facilement aux mé
 
 #### Exploration des tables enfants
 
-Pour explorer des tables enfants ou liées, sélectionnez la flèche de liste déroulante en regard d’un nom de table dans la liste. Le tableau est ainsi développé afin d’afficher les tables enfants associées. Il donne une vue précise de la structure des données et permet des constructions de requêtes plus complexes. L’icône en regard du nom du champ indique le type de données de la colonne, afin de vous aider à l’identifier lors de requêtes complexes.
+Pour explorer des tables enfants ou liées, sélectionnez la flèche de liste déroulante en regard d’un nom de table dans la liste. Le tableau est ainsi développé afin d’afficher les tables enfants associées. Il donne une vue précise de la structure des données et permet des constructions de requêtes plus complexes. L&#39;icône en regard du nom du champ indique le type de données de la colonne, to vous aide à l’identifier lors de requêtes complexes.
 
 ![L’éditeur de requêtes avec la liste des tableaux filtrés affichée.](../images/ui/query-editor/child-table-list.png)
 
@@ -249,7 +248,7 @@ La console fournit des informations sur l’état et le fonctionnement de Query 
 
 >[!NOTE]
 >
->La console affiche uniquement les erreurs résultant de l&#39;exécution d&#39;une requête. Elle n’affiche pas les erreurs de validation de requête qui se produisent avant l’exécution d’une requête.
+La console affiche uniquement les erreurs résultant de l&#39;exécution d&#39;une requête. Elle n’affiche pas les erreurs de validation de requête qui se produisent avant l’exécution d’une requête.
 
 ### Résultats de requête {#query-results}
 
@@ -269,7 +268,7 @@ La vidéo suivante montre comment exécuter des requêtes dans l’interface Ado
 
 >[!NOTE]
 >
->L’interface utilisateur décrite dans la vidéo est obsolète, mais la logique utilisée dans le workflow reste la même.
+L’interface utilisateur décrite dans la vidéo est obsolète, mais la logique utilisée dans le workflow reste la même.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
