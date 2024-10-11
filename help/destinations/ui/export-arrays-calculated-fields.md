@@ -3,9 +3,9 @@ title: Utilisation de champs calculés pour exporter des tableaux en tant que ch
 type: Tutorial
 description: Découvrez comment utiliser les champs calculés pour exporter des tableaux de Real-Time CDP vers des destinations de stockage dans le cloud en tant que chaînes.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 6fec0432f71e58d0e17ac75121fb1028644016e1
+source-git-commit: ea3ff80ed1e1de37d5d96bff96f73183a6fa3927
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1520'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Obtenez des informations détaillées sur les champs calculés - ce qu’ils son
 
 ## Tableaux et autres types d’objets dans Platform {#arrays-strings-other-objects}
 
-Dans Experience Platform, vous pouvez utiliser les [schémas XDM](/help/xdm/home.md) pour gérer différents types de champs. Auparavant, vous pouviez exporter des champs de type paire clé-valeur simples tels que des chaînes hors Experience Platform vers les destinations souhaitées. `personalEmail.address`:`johndoe@acme.org` est un exemple de champ qui a été pris en charge pour l’exportation précédemment.
+Dans Experience Platform, vous pouvez utiliser les [schémas XDM](/help/xdm/home.md) pour gérer différents types de champs. Avant d’ajouter la prise en charge des exportations de tableaux, vous pouviez exporter des champs de type paire clé-valeur simples tels que des chaînes en dehors de l’Experience Platform vers les destinations souhaitées. `personalEmail.address`:`johndoe@acme.org` est un exemple de champ qui a été pris en charge pour l’exportation précédemment.
 
 Les autres types de champ dans Experience Platform incluent les champs de tableau. En savoir plus sur la [gestion des champs de tableau dans l’interface utilisateur Experience Platform](/help/xdm/ui/fields/array.md). Outre les types de champ précédemment pris en charge, vous pouvez désormais exporter des objets de tableau tels que l’exemple ci-dessous, concaténés dans une chaîne à l’aide de la fonction `array_to_string`.
 
@@ -146,15 +146,6 @@ First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
-### fonction `flattenArray` pour exporter des tableaux aplatis
-
-Utilisez la fonction `flattenArray` pour aplatir un tableau multidimensionnel exporté. Vous pouvez combiner cette fonction avec la fonction `array_to_string` décrite plus haut.
-
-Si vous continuez avec l’objet de tableau `organizations` ci-dessus, vous pouvez écrire une fonction comme `array_to_string('_', flattenArray(organizations))`. Notez que la fonction `array_to_string` aplatit le tableau d’entrée par défaut dans une chaîne.
-
-Le résultat obtenu est le même que pour la fonction `array_to_string` décrite ci-dessus.
-
-
 ### fonction `filterArray` pour exporter des tableaux filtrés
 
 Utilisez la fonction `filterArray` pour filtrer les éléments d’un tableau exporté. Vous pouvez combiner cette fonction avec la fonction `array_to_string` décrite plus haut.
@@ -210,6 +201,14 @@ Dans ce cas, votre fichier de sortie ressemble à ce qui suit. Notez comment les
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
+
+### fonction `flattenArray` pour exporter des tableaux aplatis
+
+Utilisez la fonction `flattenArray` pour aplatir un tableau multidimensionnel exporté. Vous pouvez combiner cette fonction avec la fonction `array_to_string` décrite plus haut.
+
+Si vous continuez avec l’objet de tableau `organizations` ci-dessus, vous pouvez écrire une fonction comme `array_to_string('_', flattenArray(organizations))`. Notez que la fonction `array_to_string` aplatit le tableau d’entrée par défaut dans une chaîne.
+
+Le résultat obtenu est le même que pour la fonction `array_to_string` décrite plus haut.
 
 ### fonction `coalesce` pour exporter des tableaux {#coalesce-function-export-arrays}
 
