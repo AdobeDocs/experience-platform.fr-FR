@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gestion des tâches liées à la confidentialité dans l’interface utilisateur du Privacy Service
 description: Découvrez comment utiliser l’interface utilisateur du Privacy Service pour coordonner et surveiller les demandes d’accès à des informations personnelles dans différentes applications Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 341cc4cb150717f08b2e59412ef58fbd6f7b3450
+source-git-commit: 25c173e22f2aa4922aed89f7c9721e2303d5d4b9
 workflow-type: tm+mt
-source-wordcount: '1728'
-ht-degree: 46%
+source-wordcount: '1765'
+ht-degree: 45%
 
 ---
 
@@ -36,26 +36,36 @@ Le tableau de bord de l’interface utilisateur de [!DNL Privacy Service] fourni
 
 [!DNL Privacy Service] prend en charge les demandes de tâche pour plusieurs réglementations de confidentialité. Le tableau suivant répertorie les réglementations prises en charge et leur libellé correspondant, tel qu’il est représenté dans l’interface utilisateur :
 
-| Libellé de l’interface utilisateur | Réglementation |
-| --- | --- |
-| [!UICONTROL APA_AUS] | Le [!DNL Australia Privacy Act (Privacy Act)] |
-| [!UICONTROL CPA] | Le [!DNL Colorado Privacy Act] |
-| [!UICONTROL CCPA] | Le [!DNL California Consumer Privacy Act] |
-| [!UICONTROL CPRA_USA] | Le [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL CTDPA] | Le [!DNL Connecticut Data Privacy Act] |
-| [!UICONTROL DBR_USA] | Le [!DNL Florida Digital Bill of Rights] |
-| [!UICONTROL GDPR] | Les [!DNL General Data Protection Regulation] de l&#39;Union européenne |
-| [!UICONTROL HIPAA_AUS] | Le [!DNL Health Insurance Portability and Accountability Act] |
-| [!UICONTROL LGPD_BRA] | [!DNL Lei Geral de Proteção de Dados] du Brésil |
-| [!UICONTROL MHMDA] | Le [!DNL Washington My Health My Data Act] |
-| [!UICONTROL NZPA_NZL] | La Nouvelle-Zélande [!DNL Privacy Act] |
-| [!UICONTROL OCPA_USA] | Le [!DNL Oregon Consumer Privacy Act] |
-| [!UICONTROL PDPA_THA] | [!DNL Personal Data Protection Act] de la Thaïlande |
-| [!UICONTROL TDPSA_USA] | Le [!DNL Texas Data Privacy and Security Act] |
-| [!UICONTROL UCPA] | Le [!DNL Utah Consumer Privacy Act] |
-| [!UICONTROL VCDPA_USA] | Le [!DNL Virginia Consumer Data Protection Act] |
+| Libellé d’interface | Réglementation |
+|-------------------------------------|------------------------|
+| [!UICONTROL APA_AUS (Australie)] | Le [!DNL Australia Privacy Act] |
+| [!UICONTROL CCPA (Californie)] | Le [!DNL California Consumer Privacy Act] |
+| [!UICONTROL CPA_USA (Colorado)] | Le [!DNL Colorado Privacy Act] |
+| [!UICONTROL CPRA_USA (Californie)] | Le [!DNL California Consumer Privacy Rights Act (CPRA)] |
+| [!UICONTROL CTDPA_USA (Connecticut)] | Le [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL DBR_USA (Floride)] | Le [!DNL Florida Digital Bill of Rights] |
+| [!UICONTROL RGPD (Union européenne)] | Les [!DNL General Data Protection Regulation] de l&#39;Union européenne |
+| [!UICONTROL HIPPA_USA (États-Unis)] | Le [!DNL Health Insurance Portability and Accountability Act] |
+| [!UICONTROL ICDPA_USA] (Iowa) | Le [!DNL Iowa Consumer Data Protection Act] |
+| [!UICONTROL LGPD_BRA (Brésil)] | &quot;[!DNL General Data Protection Law]&quot; [!DNL Lei Geral de Proteção de Dados] du Brésil |
+| [!UICONTROL MHMDA_USA (Washington)] | Le [!DNL Washington My Health My Data Act] |
+| [!UICONTROL MCDPA_USA (Montana)] | Le [!DNL Montana Consumer Data Privacy Act] |
+| [!UICONTROL NDPA_USA (Nebraska)] | Le [!DNL Nebraska Data Protection Act] |
+| [!UICONTROL NZPA_NZL (Nouvelle-Zélande)] | [!DNL Privacy Act] de la Nouvelle-Zélande |
+| [!UICONTROL NHPA_USA (New Hampshire)] | Le [!DNL New Hampshire Data Privacy Act] |
+| [!UICONTROL NJDPA_USA (New Jersey)] | Le [!DNL New Jersey Data Protection Act] |
+| [!UICONTROL OCPA USA (Oregon)] | Le [!DNL Oregon Consumer Privacy Act] |
+| [!UICONTROL PDPA_THA (Thaïlande)] | [!DNL Personal Data Protection Act] de la Thaïlande |
+| [!UICONTROL TDPSA USA (Texas)] | Le [!DNL Texas Data Privacy and Security Act] |
+| [!UICONTROL UCPA_USA (Utah)] | Le [!DNL Utah Consumer Privacy Act] |
+| [!UICONTROL VCDPA_USA (Virginie)] | Le [!DNL Virginia Consumer Data Protection Act] |
 
 {style="table-layout:auto"}
+
+<!-- 
+Waiting:
+| **[!UICONTROL PIPA_KOR]**  ?        | South Korea [!DNL Personal Information Privacy Act] |
+ -->
 
 >[!NOTE]
 >

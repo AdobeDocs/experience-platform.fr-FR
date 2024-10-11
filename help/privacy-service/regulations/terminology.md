@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Terminologie des règlements sur la confidentialité
 description: Ce document fournit des définitions des termes clés liés aux réglementations de confidentialité prises en charge par Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: be219530f33209cb4f3fe70425bb293edff4b309
+source-git-commit: c4ca3dc975b13e2dce2e12784480e53bd0c4ee02
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2301'
 ht-degree: 2%
 
 ---
@@ -91,6 +91,8 @@ Ce document fournit des définitions des termes clés liés aux réglementations
 
 **Identifiant de l’organisation IMS** : fait référence à un jeton d’autorisation d’Adobe pour l’authentification service à service, qui ne nécessite pas d’identification d’utilisateur. Il est attribué à un client IMS et n’a aucun utilisateur associé. Un client IMS a besoin d’un jeton de service pour autoriser les demandes rétroactives entre les services. (Le terme &quot;jeton système&quot; est parfois utilisé pour désigner un jeton de service.)
 
+**[!DNL Iowa Consumer Data Protection Act]** : Une loi sur la protection de la vie privée de l&#39;État qui accorde aux résidents de l&#39;Iowa le droit d&#39;accéder à leurs données personnelles, de les supprimer et de les exclure de la vente. Le CIDPA s’applique aux entreprises qui traitent des données pour plus de 100 000 résidents de l’Iowa ou qui tirent plus de 50 % des recettes des ventes de données. Les ONG et les établissements d&#39;enseignement sont des exemptions notables. La loi prévoit une période de traitement de 90 jours pour les entreprises afin de corriger les infractions avant l&#39;imposition de sanctions.
+
 ## J
 
 ## K
@@ -105,7 +107,16 @@ Ce document fournit des définitions des termes clés liés aux réglementations
 
 **MHMDAa** : [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) améliore les droits de confidentialité pour les consommateurs concernant leurs données d’intégrité. Elle exige la divulgation, le consentement des consommateurs et les droits de suppression des données de santé, et interdit la vente de données de santé sans autorisation. En outre, la loi interdit l&#39;utilisation de la géoclôture autour des établissements de santé.
 
+**[!DNL Montana Consumer Data Privacy Act]** : Cette loi donne aux résidents du Montana les droits d&#39;accéder, de corriger, de supprimer et de demander des copies de leurs données personnelles. La MCDPA s’applique aux entreprises qui traitent des données pour plus de 50 000 consommateurs du Montana et met l’accent sur la protection des données personnelles sensibles, telles que les données biométriques et génétiques. Elle applique la transparence autour de la collecte, du partage et des pratiques de vente des données.
+
 ## N
+
+**[!DNL Nebraska Data Protection Act]** : Une loi sur la protection de la vie privée qui accorde aux Nébraskiens le droit d’accéder, de corriger, de supprimer et de se désabonner de la vente de leurs données personnelles. Elle s’applique aux entreprises qui respectent des seuils de recettes et de traitement des données spécifiques. La loi sur la protection des données exige également que les entreprises mettent en oeuvre des mesures de sécurité des données raisonnables et prévoit une période de traitement de 30 jours pour résoudre les violations avant l’application des sanctions.
+
+**[!DNL New Hampshire Data Privacy Act]** : Ce règlement protège les données personnelles des résidents du New Hampshire en leur accordant des droits d’accès, de suppression et de transfert de leurs données. Il oblige les entreprises à divulguer leurs pratiques de collecte et de partage de données et permet aux consommateurs de se désinscrire de la vente des données. La LNH s&#39;applique aux entreprises qui respectent des seuils de traitement des données spécifiés.
+
+**[!DNL New Jersey Data Protection Act]** : loi de confidentialité étatique complète qui accorde aux résidents du New Jersey les droits d’accès, de correction et de suppression des données personnelles. Il comprend des mécanismes d’exclusion pour la vente de données et la publicité ciblée. La NJDPA s’applique aux entreprises qui traitent de grands volumes de données sur les consommateurs et nécessite une transparence dans la manière dont les entreprises traitent les informations personnelles.
+
 
 ## O
 
