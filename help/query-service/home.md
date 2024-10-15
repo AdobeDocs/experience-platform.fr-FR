@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de Query Service
 description: Découvrez le rôle de Query Service dans Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '860'
 ht-degree: 20%
@@ -54,7 +54,7 @@ Cet [exemple d’abandon de la navigation est centré sur l’utilisation des do
 
 ## Génération d’informations avec des tableaux de bord personnalisés {#custom-dashboards}
 
-Adobe Experience Platform vous permet dʼingérer, de stocker, de structurer et dʼextraire tous les jeux de données stockés, y compris les données comportementales, de gestion de la relation client et de point de vente. [!DNL Experience Platform's Query Service] vous permet dʼinterroger ces jeux de données et de répondre à des questions spécifiques sur lʼentreprise, puis de commencer à générer des informations pertinentes. Découvrez comment créer et gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser des mesures clés avec des [ tableaux de bord définis par l’utilisateur ](../dashboards/user-defined-dashboards.md). Vous pouvez même [personnaliser vos propres rapports Real-Time CDP](../dashboards/data-models/cdp-insights-data-model-b2c.md) pour vos cas d’utilisation de marketing et d’indicateurs de performance clés en utilisant des requêtes SQL avec les modèles de données de Real-Time Customer Data Platform Insights.
+Adobe Experience Platform vous permet dʼingérer, de stocker, de structurer et dʼextraire tous les jeux de données stockés, y compris les données comportementales, de gestion de la relation client et de point de vente. [!DNL Experience Platform's Query Service] vous permet dʼinterroger ces jeux de données et de répondre à des questions spécifiques sur lʼentreprise, puis de commencer à générer des informations pertinentes. Découvrez comment créer et gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser des mesures clés avec des [ tableaux de bord définis par l’utilisateur ](../dashboards/standard-dashboards.md). Vous pouvez même [personnaliser vos propres rapports Real-Time CDP](../dashboards/data-models/cdp-insights-data-model-b2c.md) pour vos cas d’utilisation de marketing et d’indicateurs de performance clés en utilisant des requêtes SQL avec les modèles de données de Real-Time Customer Data Platform Insights.
 
 ## Étapes suivantes et ressources supplémentaires
 

@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Avril 2023
 description: Les notes de mise à jour d’avril 2023 pour Adobe Experience Platform.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '2038'
 ht-degree: 98%
@@ -37,13 +37,13 @@ Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Tableaux de bord définis par l’utilisateur ou l’utilisatrice | Vous pouvez désormais **filtrer les données historiques** à partir de vos informations sur les widgets et utiliser des données récentes ou une période d’analyse personnalisée. Pour plus d’informations, consultez le [guide des tableaux de bord définis par l’utilisateur](../../dashboards/user-defined-dashboards.md#filter-historical-data).<br>Vous pouvez également **dupliquer vos widgets existants**. En personnalisant un doublon et en modifiant ses attributs, vous pouvez éviter de repartir de zéro lors de la création d’un widget unique. Lisez le [guide de duplication des widgets](../../dashboards/user-defined-dashboards.md#duplicate-a-widget) pour en savoir plus. |
+| Tableaux de bord définis par l’utilisateur ou l’utilisatrice | Vous pouvez désormais **filtrer les données historiques** à partir de vos informations sur les widgets et utiliser des données récentes ou une période d’analyse personnalisée. Pour plus d’informations, consultez le [guide des tableaux de bord définis par l’utilisateur](../../dashboards/standard-dashboards.md#filter-historical-data).<br>Vous pouvez également **dupliquer vos widgets existants**. En personnalisant un doublon et en modifiant ses attributs, vous pouvez éviter de repartir de zéro lors de la création d’un widget unique. Lisez le [guide de duplication des widgets](../../dashboards/standard-dashboards.md#duplicate-a-widget) pour en savoir plus. |
 
 {style="table-layout:auto"}
 
 Pour plus dʼinformations sur les tableaux de bord, notamment sur la manière dʼoctroyer des autorisations dʼaccès et de créer des widgets personnalisés, commencez par lire la [Présentation des tableaux de bord](../../dashboards/home.md).
 
-## Préparation de données {#data-prep}
+## Préparation des données {#data-prep}
 
 La préparation des données permet aux personnes travaillant dans l’ingénierie de données de mapper, de transformer et de valider les données vers et à partir du modèle de données d’expérience (XDM).
 

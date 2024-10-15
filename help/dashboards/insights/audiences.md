@@ -2,7 +2,7 @@
 title: Informations sur les audiences
 description: Découvrez le code SQL qui alimente vos insights d’audience et utilisez ces requêtes pour générer des insights personnalisés afin d’explorer plus en détail les données d’audience de Adobe Experience Platform.
 exl-id: 99624234-c4e1-44bb-9567-505bc0c4723e
-source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1124'
 ht-degree: 3%
@@ -17,7 +17,7 @@ Comprenez vos insights d’audience en accédant au code SQL qui les alimente, p
 
 Pour plus d’informations sur la manière d’adapter le langage SQL de vos insights directement via l’interface utilisateur de PLatform, consultez la [documentation sur l’affichage de SQL](../view-sql.md) .
 
-Les informations suivantes sont toutes disponibles pour que vous puissiez les utiliser dans le [tableau de bord Audiences](../guides/audiences.md) ou dans un [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md) personnalisé. Consultez la [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou la [création et modification de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md#create-widget).
+Les informations suivantes sont toutes disponibles pour que vous puissiez les utiliser dans le [tableau de bord Audiences](../guides/audiences.md) ou dans un [tableau de bord défini par l’utilisateur](../standard-dashboards.md) personnalisé. Consultez la [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou la [création et modification de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../standard-dashboards.md#create-widget).
 
 Les informations suivantes sont toutes disponibles pour que vous puissiez les utiliser dans le [tableau de bord Audiences](../guides/audiences.md) ou dans un tableau de bord personnalisé.
 

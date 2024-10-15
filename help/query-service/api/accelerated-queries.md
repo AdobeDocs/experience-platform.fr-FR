@@ -3,7 +3,7 @@ title: Point d’entrée de requêtes accélérées
 description: Découvrez comment accéder sans état à la boutique accélérée de requêtes pour renvoyer rapidement des résultats basés sur des données agrégées. Ce document fournit un exemple de requête HTTP et de réponse pour le point d’entrée de requêtes accélérées de Query Service.
 role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 97%
@@ -12,7 +12,7 @@ ht-degree: 97%
 
 # Point d’entrée de requêtes accélérées
 
-Dans le cadre du SKU Data Distiller, l’[API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/) vous permet d’effectuer des requêtes sans état vers la boutique accélérée. Les résultats renvoyés sont basés sur des données agrégées. La diminution de la latence des résultats permet un échange plus interactif d’informations. Les API de requêtes accélérées sont également utilisées pour alimenter les [tableaux de bord définis par l’utilisateur](../../dashboards/user-defined-dashboards.md).
+Dans le cadre du SKU Data Distiller, l’[API Query Service](https://developer.adobe.com/experience-platform-apis/references/query-service/) vous permet d’effectuer des requêtes sans état vers la boutique accélérée. Les résultats renvoyés sont basés sur des données agrégées. La diminution de la latence des résultats permet un échange plus interactif d’informations. Les API de requêtes accélérées sont également utilisées pour alimenter les [tableaux de bord définis par l’utilisateur](../../dashboards/standard-dashboards.md).
 
 Avant de poursuivre avec ce guide, assurez-vous d’avoir lu et compris le [guide de l’API Query Service](./getting-started.md) pour utiliser correctement l’API Query Service.
 

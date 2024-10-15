@@ -2,7 +2,7 @@
 title: Informations sur les destinations
 description: Découvrez le code SQL qui alimente vos informations sur les destinations et utilisez ces requêtes pour générer des informations personnalisées afin d’explorer plus en détail l’activation des données de Adobe Experience Platform.
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: d4baf6cfaa772e5d46cef470fb35818c7af868b1
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 3%
@@ -17,7 +17,7 @@ Comprenez vos informations de destination en accédant au code SQL qui les alime
 
 Pour plus d’informations sur la manière d’adapter le langage SQL de vos insights directement via l’interface utilisateur de PLatform, consultez la [documentation sur l’affichage de SQL](../view-sql.md) .
 
-Les informations suivantes sont toutes disponibles pour que vous puissiez les utiliser dans le [tableau de bord des destinations](../guides/destinations.md) ou dans un [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md) personnalisé. Consultez la [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou la [création et modification de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md#create-widget).
+Les informations suivantes sont toutes disponibles pour que vous puissiez les utiliser dans le [tableau de bord des destinations](../guides/destinations.md) ou dans un [tableau de bord défini par l’utilisateur](../standard-dashboards.md) personnalisé. Consultez la [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou la [création et modification de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../standard-dashboards.md#create-widget).
 
 ## Audiences activées {#activated-audiences}
 

@@ -2,7 +2,7 @@
 title: Analyse et suivi du consentement
 description: Découvrez comment créer un tableau de bord d’analyse du consentement pour suivre les tendances du consentement des utilisateurs au fil du temps.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1909'
 ht-degree: 0%
@@ -90,7 +90,7 @@ La boîte de dialogue Rapport de chevauchement d’audiences se développe pour 
 
 ![Rapport de chevauchement d’audiences, avec le consentement des utilisateurs pour l’audience de courrier électronique mise en surbrillance.](../images/insights-use-cases/consent-analysis/additional-audience-overlap-reports.png)
 
-## Tendances de la taille de l’audience {#audience-size-trends}
+## Tendances de la taille d’audience {#audience-size-trends}
 
 Lorsque vous créez une audience basée sur le consentement, celle-ci évolue automatiquement jusqu’à 12 mois à compter de la date de création de l’audience. Pour afficher une tendance fonctionnelle du consentement de votre client, ajoutez les widgets suivants à la page [!UICONTROL Segments] [!UICONTROL Aperçu] . Ces informations offrent un moyen puissant de suivre l’évolution de votre consentement au fil du temps. Ils sont même corrélés avec toute campagne que vous exécutez en parallèle qui peut avoir un impact positif ou négatif sur le consentement. Les descriptions proposées pour ces widgets s’appliquent à un cas d’utilisation du consentement.
 
@@ -112,13 +112,13 @@ Après avoir créé une audience liée au consentement, telle que &quot;Utilisat
 
 Vous pouvez également créer vos propres widgets avec des tableaux de bord définis par l’utilisateur. La création de votre propre widget vous permet de contrôler entièrement le type de widget, ainsi que de vous offrir la possibilité d’ajouter des filtres et bien plus encore, directement dans Adobe Real-Time CDP.
 
-Par exemple, si vous souhaitez afficher la tendance de plusieurs audiences de consentement dans le même graphique afin que vous puissiez voir au fil du temps comment chacune de vos préférences de consentement a changé. Ce type de visualisation est possible avec des tableaux de bord définis par l’utilisateur en quelques étapes et une configuration unique. Sélectionnez tout d’abord **[!UICONTROL Tableaux de bord]** dans le volet de navigation de gauche. L’espace de travail [!UICONTROL Tableaux de bord] s’affiche. Sélectionnez ensuite **[!UICONTROL Créer un tableau de bord]**. Vous trouverez des instructions complètes sur la façon de [créer un tableau de bord et un widget personnalisé](../user-defined-dashboards.md) dans le guide des tableaux de bord définis par l’utilisateur.
+Par exemple, si vous souhaitez afficher la tendance de plusieurs audiences de consentement dans le même graphique afin que vous puissiez voir au fil du temps comment chacune de vos préférences de consentement a changé. Ce type de visualisation est possible avec des tableaux de bord définis par l’utilisateur en quelques étapes et une configuration unique. Sélectionnez tout d’abord **[!UICONTROL Tableaux de bord]** dans le volet de navigation de gauche. L’espace de travail [!UICONTROL Tableaux de bord] s’affiche. Sélectionnez ensuite **[!UICONTROL Créer un tableau de bord]**. Vous trouverez des instructions complètes sur la façon de [créer un tableau de bord et un widget personnalisé](../standard-dashboards.md) dans le guide des tableaux de bord définis par l’utilisateur.
 
-![ L’espace de travail des tableaux de bord avec les tableaux de bord et l’option Créer un tableau de bord en surbrillance.](../images/user-defined-dashboards/create-dashboard.png)
+![ L’espace de travail des tableaux de bord avec les tableaux de bord et l’option Créer un tableau de bord en surbrillance.](../images/standard-dashboards/create-dashboard.png)
 
-Lorsque vous [sélectionnez votre modèle de données](../user-defined-dashboards.md#select-data-model) dans le compositeur de widget, sélectionnez `CDPInsights` suivi de **[!UICONTROL Suivant]**. La boîte de dialogue [!UICONTROL Sélectionner la table] s’affiche.
+Lorsque vous [sélectionnez votre modèle de données](../standard-dashboards.md#select-data-model) dans le compositeur de widget, sélectionnez `CDPInsights` suivi de **[!UICONTROL Suivant]**. La boîte de dialogue [!UICONTROL Sélectionner la table] s’affiche.
 
-![ La boîte de dialogue Select data model avec le modèle CDPInsights en surbrillance.](../images/user-defined-dashboards/select-data-model-dialog.png)
+![ La boîte de dialogue Select data model avec le modèle CDPInsights en surbrillance.](../images/standard-dashboards/select-data-model-dialog.png)
 
 La vue suivante affiche la liste des tableaux disponibles dans le rail de gauche. Sélectionnez le `adwh_fact_profile_by_segment_and_namespace_trendlines`.
 
@@ -126,16 +126,16 @@ La vue suivante affiche la liste des tableaux disponibles dans le rail de gauche
 
 Une fois que le compositeur de widget est renseigné avec les données du tableau de votre choix, procédez comme suit :
 
-- [Recherchez [!UICONTROL Attributs]](../user-defined-dashboards.md#add-filter-attributes) pour `[!UICONTROL date]`, puis utilisez l’icône + pour ajouter l’attribut `[!UICONTROL date]` à l’axe X dans le menu déroulant.
-  ![Le compositeur de widget avec l’icône d’ajout et le menu déroulant mis en surbrillance.](../images/user-defined-dashboards/attributes-dropdown.png)
+- [Recherchez [!UICONTROL Attributs]](../standard-dashboards.md#add-filter-attributes) pour `[!UICONTROL date]`, puis utilisez l’icône + pour ajouter l’attribut `[!UICONTROL date]` à l’axe X dans le menu déroulant.
+  ![Le compositeur de widget avec l’icône d’ajout et le menu déroulant mis en surbrillance.](../images/standard-dashboards/attributes-dropdown.png)
 - Recherchez [!UICONTROL Attributs] pour `[!UICONTROL count_of_profiles]`, puis utilisez l’icône + pour ajouter l’attribut `[!UICONTROL count_of_profiles]` à l’axe Y dans le menu déroulant.
 - Sélectionnez l’icône `...` (ellipses) dans le champ [!UICONTROL Axe Y], puis sélectionnez la fonction d’agrégat [!UICONTROL SUM] dans le menu déroulant.
   ![Le widget compositeur de widgets accepte le widget de tendances avec le modèle de données, le tableau, le menu déroulant de l’axe Y et la fonction SUM mise en surbrillance. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
 - Sélectionnez le menu déroulant [!UICONTROL Marques] et remplacez le type de graphique par [!UICONTROL Ligne].
 - Recherchez [!UICONTROL Attributs] pour le `[!UICONTROL segment_name]`, puis utilisez l’icône + pour ajouter le `segment_name` en tant que [!UICONTROL filtre] dans le menu déroulant. La boîte de dialogue [!UICONTROL Filtre : nom_segment] s’affiche. Sélectionnez les audiences créées précédemment et liées au consentement. Pour cet exemple, sélectionnez **[!UICONTROL Utilisateurs envoyés aux appels]**, **[!UICONTROL Utilisateurs envoyés aux SMS]** et **[!UICONTROL Utilisateurs envoyés aux e-mails]**, puis **[!UICONTROL Appliquer]**.
 - Recherchez [!UICONTROL Attributs] pour `[!UICONTROL segment_name]`, puis sélectionnez l’icône + pour ajouter `segment_name` en tant que [!UICONTROL couleur] dans le menu déroulant.
-- Ouvrez [ le [!UICONTROL panneau Propriétés]](../user-defined-dashboards.md#widget-properties) et fournissez le [!UICONTROL titre du widget] et le [!UICONTROL libellé de l’axe] approprié.
-  ![Le compositeur de widget avec l’icône de propriétés et le titre du widget mis en surbrillance.](../images/user-defined-dashboards/properties-panel.png)
+- Ouvrez [ le [!UICONTROL panneau Propriétés]](../standard-dashboards.md#widget-properties) et fournissez le [!UICONTROL titre du widget] et le [!UICONTROL libellé de l’axe] approprié.
+  ![Le compositeur de widget avec l’icône de propriétés et le titre du widget mis en surbrillance.](../images/standard-dashboards/properties-panel.png)
 - Sélectionnez **[!UICONTROL Enregistrer et fermer]** pour confirmer vos paramètres.
 
 >[!TIP]

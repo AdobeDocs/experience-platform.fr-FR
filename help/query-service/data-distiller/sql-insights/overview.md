@@ -2,7 +2,7 @@
 title: Informations SQL
 description: Découvrez les cas d’utilisation, les fonctionnalités essentielles et les étapes requises pour développer un tableau de bord des insights SQL avec Data Distiller. Découvrez comment la fonctionnalité SQL Insights de Data Distiller peut améliorer la transparence et obtenir des informations opérationnelles sur différentes dimensions telles que les profils, les audiences, les campagnes, les parcours, les droits et le consentement.
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: 4e78a7983fba492ded866a8f1fc6f98e20510b2b
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '941'
 ht-degree: 5%
@@ -13,13 +13,13 @@ ht-degree: 5%
 
 Créez des modèles de données de rapports personnalisés pour extraire des informations plus approfondies, optimiser des stratégies et adapter les analyses afin de répondre à des besoins professionnels spécifiques avec Data Distiller SQL Insights. Utilisez la fonctionnalité SQL Insights pour améliorer la transparence et obtenir des informations opérationnelles à partir de vos données Adobe Experience Platform sur des dimensions telles que les profils, les audiences, les campagnes, les parcours, les droits et le consentement. Cette fonctionnalité offre une solution adaptative polyvalente pour adapter les modèles de données de rapport de votre entreprise en fonction de vos besoins spécifiques.
 
-Pour [visualiser vos statistiques SQL](../../../dashboards/data-distiller/sql-insights/overview.md), vous pouvez utiliser le [mode de requête pro](../../../dashboards/data-distiller/query-pro-mode/overview.md) pour effectuer des analyses complexes avec des requêtes SQL personnalisées et transformer vos données en graphiques facilement interprétables. Utilisez le mode professionnel des requêtes pour créer des insights et des visualisations personnalisés sur vos tableaux de bord et répondre aux audiences techniques et non techniques en téléchargeant vos informations au format CSV.
+Pour [visualiser vos statistiques SQL](../../../dashboards/sql-insights-query-pro-mode/overview.md), vous pouvez utiliser le [mode de requête pro](../../../dashboards/sql-insights-query-pro-mode/overview.md) pour effectuer des analyses complexes avec des requêtes SQL personnalisées et transformer vos données en graphiques facilement interprétables. Utilisez le mode professionnel des requêtes pour créer des insights et des visualisations personnalisés sur vos tableaux de bord et répondre aux audiences techniques et non techniques en téléchargeant vos informations au format CSV.
 
 Ce document couvre les cas d’utilisation, les fonctionnalités essentielles et les étapes requises pour développer un tableau de bord d’insights SQL avec Data Distiller.
 
 ## Conditions préalables
 
-Ce tutoriel utilise des tableaux de bord définis par l’utilisateur pour visualiser les données de votre modèle de données personnalisé dans l’interface utilisateur de Platform. Pour en savoir plus sur cette fonctionnalité, consultez la [documentation des tableaux de bord définis par l’utilisateur](../../../dashboards/user-defined-dashboards.md) .
+Ce tutoriel utilise des tableaux de bord définis par l’utilisateur pour visualiser les données de votre modèle de données personnalisé dans l’interface utilisateur de Platform. Pour en savoir plus sur cette fonctionnalité, consultez la [documentation des tableaux de bord définis par l’utilisateur](../../../dashboards/standard-dashboards.md) .
 
 ## Commencer
 
@@ -72,7 +72,7 @@ Pour développer un tableau de bord SQL Insights dans Data Distiller, suivez les
 1. **Exploration des requêtes ad hoc :** commencez par exécuter des requêtes ad hoc `SELECT` pour explorer les données brutes sur le lac de données. Cela permet une analyse des données exploratoires à la volée et valide les données où les résultats des requêtes ne sont pas stockés dans le lac de données.
 1. **Utilisation des requêtes par lots :** utilisez des requêtes par lots pour [ créer des tâches planifiées ](../../api/scheduled-queries.md#create-a-new-scheduled-query) afin de générer des tables agrégées d’informations, ce qui garantit une approche systématique et automatisée du traitement des données. Les requêtes par lots exécutent des requêtes `INSERT TABLE AS SELECT` et `CREATE TABLE AS SELECT` pour nettoyer, former, manipuler et enrichir les données. Les résultats de ces requêtes sont stockés sur le lac de données.
 1. **Chargement des insights agrégés :** Chargez les insights agrégés générés dans le magasin accéléré et utilisez SQL pour tester les requêtes, et assurer la précision et l’efficacité de la récupération des données. Pour savoir comment [ effectuer des requêtes sans état sur le magasin accéléré ](../../api/accelerated-queries.md), consultez la documentation.
-1. **Accès et intégration :** Accédez de manière transparente aux informations stockées dans le magasin accéléré en intégrant les [ tableaux de bord définis par l’utilisateur ](../../../dashboards/user-defined-dashboards.md) de Adobe Experience Platform ou d’autres outils de Business Intelligence préférés (BI). Ces intégrations avec des clients tiers facilitent une expérience cohérente et intuitive pour les utilisateurs.
+1. **Accès et intégration :** Accédez de manière transparente aux informations stockées dans le magasin accéléré en intégrant les [ tableaux de bord définis par l’utilisateur ](../../../dashboards/standard-dashboards.md) de Adobe Experience Platform ou d’autres outils de Business Intelligence préférés (BI). Ces intégrations avec des clients tiers facilitent une expérience cohérente et intuitive pour les utilisateurs.
 
 ![Infographie illustrant les quatre étapes de SQL Insights dans Data Distiller.](../../images/data-distiller/sql-insights/steps-to-customizable-insights.png)
 

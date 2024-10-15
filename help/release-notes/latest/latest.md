@@ -3,7 +3,7 @@ title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2024
 description: Les notes de mise à jour de septembre 2024 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: eac613434f631cab567ab3fa6e30d33acac79d2f
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2199'
 ht-degree: 100%
 

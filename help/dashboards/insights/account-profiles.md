@@ -4,7 +4,7 @@ description: Découvrez le code SQL qui alimente vos informations de profil de c
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: 8b6cd84a31f9cdccef9f342df7f7b8450c2405dc
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '549'
 ht-degree: 1%
@@ -19,7 +19,7 @@ Grâce à l’accès au code SQL qui alimente vos informations, vous pouvez mieu
 
 <!-- Add link to new generate insights with SQL workflow doc after April release.-->
 
-Les informations suivantes sont toutes disponibles pour que vous puissiez les utiliser dans le [tableau de bord Profils de compte](../guides/account-profiles.md) ou dans un [tableau de bord personnalisé](../user-defined-dashboards.md). Consultez la [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou la [création et modification de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md#create-widget).
+Les informations suivantes sont toutes disponibles pour que vous puissiez les utiliser dans le [tableau de bord Profils de compte](../guides/account-profiles.md) ou dans un [tableau de bord personnalisé](../standard-dashboards.md). Consultez la [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou la [création et modification de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../standard-dashboards.md#create-widget).
 
 ## Profils de compte ajoutés {#account-profiles-added}
 

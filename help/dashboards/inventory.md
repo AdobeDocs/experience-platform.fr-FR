@@ -2,7 +2,7 @@
 title: Afficher les tableaux de bord configurés
 description: Affichez une liste des tableaux de bord configurés de votre entreprise dans l’interface utilisateur d’Experience Platform.
 exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
-source-git-commit: bc3db67b5b9e3bfb98571541d6e4dd2ca19b3303
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 100%
@@ -27,4 +27,4 @@ Lorsqu’il est sélectionné, le tableau de bord s’ouvre soit dans l’interf
 
 ## Créer des tableaux de bord personnalisés
 
-Les Tableaux de bord Adobe Experience Platform vous permettent de créer et de gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser les mesures clés pertinentes pour votre organisation. Voir le [guide des tableaux de bord définis par l’utilisateur](./user-defined-dashboards.md) pour obtenir des instructions complètes sur la création et la configuration de tableaux de bord personnalisés.
+Les Tableaux de bord Adobe Experience Platform vous permettent de créer et de gérer des tableaux de bord personnalisés dans lesquels vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser les mesures clés pertinentes pour votre organisation. Voir le [guide des tableaux de bord définis par l’utilisateur](./standard-dashboards.md) pour obtenir des instructions complètes sur la création et la configuration de tableaux de bord personnalisés.

@@ -4,7 +4,7 @@ description: Découvrez comment utiliser les requêtes SQL avec les modèles de 
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 1%
@@ -21,7 +21,7 @@ Le modèle de données Real-Time Customer Data Platform Insights pour l’[ édi
 
 ## Conditions préalables
 
-Ce guide nécessite une compréhension pratique de la [fonctionnalité de tableaux de bord définis par l’utilisateur](../user-defined-dashboards.md). Veuillez lire la documentation avant de poursuivre avec ce guide.
+Ce guide nécessite une compréhension pratique de la [fonctionnalité de tableaux de bord définis par l’utilisateur](../standard-dashboards.md). Veuillez lire la documentation avant de poursuivre avec ce guide.
 
 ## Rapports et cas d’utilisation Real-Time CDP
 

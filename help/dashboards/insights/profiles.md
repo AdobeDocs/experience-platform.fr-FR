@@ -2,7 +2,7 @@
 title: Informations sur le profil
 description: Découvrez le langage SQL qui alimente vos insights de profil et utilisez ces requêtes pour générer des insights personnalisés qui explorent davantage vos clients et leurs expériences client.
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: 34eb9151cc6bb8551553b0a8427e58871acb4dbb
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1661'
 ht-degree: 3%
@@ -17,7 +17,7 @@ Comprenez vos informations sur les profils en accédant aux données SQL qui les
 
 Pour plus d’informations sur la manière d’adapter le langage SQL de vos insights directement via l’interface utilisateur de Platform, consultez la [documentation sur l’affichage SQL](../view-sql.md).
 
-Les informations suivantes sont toutes disponibles pour que vous puissiez les utiliser dans le [tableau de bord des profils](../guides/profiles.md) ou dans un [ tableau de bord personnalisé ](../user-defined-dashboards.md) défini par l’utilisateur. Consultez la [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou la [création et modification de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../user-defined-dashboards.md#create-widget).
+Les informations suivantes sont toutes disponibles pour que vous puissiez les utiliser dans le [tableau de bord des profils](../guides/profiles.md) ou dans un [ tableau de bord personnalisé ](../standard-dashboards.md) défini par l’utilisateur. Consultez la [présentation de la personnalisation](../customize/overview.md) pour obtenir des instructions sur la personnalisation de votre tableau de bord ou la [création et modification de nouveaux widgets](../customize/custom-widgets.md) dans la bibliothèque de widgets et [tableau de bord défini par l’utilisateur](../standard-dashboards.md#create-widget).
 
 ## Chevauchement des audiences par politique de fusion {#audience-overlap-by-merge-policy}
 

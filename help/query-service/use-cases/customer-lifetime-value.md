@@ -2,7 +2,7 @@
 title: Suivi des signaux de données pour générer la valeur de durée de vie client
 description: Ce guide fournit une démonstration de bout en bout sur l’utilisation de Data Distiller et de tableaux de bord définis par l’utilisateur avec Real-Time Customer Data Platform pour mesurer et visualiser la valeur de durée de vie des clients.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 7%
@@ -62,7 +62,7 @@ Veillez à définir un planning pour actualiser votre modèle de données person
 
 ## Création d’un tableau de bord pour recueillir des informations {#build-a-custom-dashboard}
 
-Maintenant que vous avez créé votre modèle de données personnalisé, vous êtes prêt à visualiser vos données avec des requêtes personnalisées et des tableaux de bord définis par l’utilisateur. Consultez la présentation des tableaux de bord définis par l’utilisateur pour obtenir des instructions complètes sur la [création d’un tableau de bord personnalisé](../../dashboards/user-defined-dashboards.md). Le guide de l’interface utilisateur comprend des détails sur :
+Maintenant que vous avez créé votre modèle de données personnalisé, vous êtes prêt à visualiser vos données avec des requêtes personnalisées et des tableaux de bord définis par l’utilisateur. Consultez la présentation des tableaux de bord définis par l’utilisateur pour obtenir des instructions complètes sur la [création d’un tableau de bord personnalisé](../../dashboards/standard-dashboards.md). Le guide de l’interface utilisateur comprend des détails sur :
 
 * Comment créer un widget.
 * Comment utiliser le compositeur de widgets.

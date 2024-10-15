@@ -2,7 +2,7 @@
 title: Guide d’informations sur les rapports de magasin accélérés de requête
 description: Découvrez comment créer un modèle de données d’informations sur les rapports via Query Service afin de l’utiliser avec des données de magasin accélérées et des tableaux de bord définis par l’utilisateur.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '1034'
 ht-degree: 82%
@@ -19,7 +19,7 @@ Le modèle de données Real-Time CDP de Adobe Experience Platform fournit des in
 
 ## Conditions préalables
 
-Ce tutoriel utilise des tableaux de bord définis par l’utilisateur pour visualiser les données de votre modèle de données personnalisé dans l’interface utilisateur de Platform. Veuillez consulter la [documentation des tableaux de bord définis par l’utilisateur](../../../dashboards/user-defined-dashboards.md) pour en savoir plus sur cette fonctionnalité.
+Ce tutoriel utilise des tableaux de bord définis par l’utilisateur pour visualiser les données de votre modèle de données personnalisé dans l’interface utilisateur de Platform. Veuillez consulter la [documentation des tableaux de bord définis par l’utilisateur](../../../dashboards/standard-dashboards.md) pour en savoir plus sur cette fonctionnalité.
 
 ## Prise en main
 
@@ -228,4 +228,4 @@ L’image ci-dessous fournit un exemple des visualisations personnalisées possi
 
 ![Un nombre de correspondances par destination et widget d’audience créé à partir du nouveau modèle de données d’informations sur les rapports.](../../images/data-distiller/sql-insights/user-defined-dashboard-widget.png)
 
-Votre modèle de données personnalisé se trouve dans la liste des modèles de données disponibles dans l’espace de travail du tableau de bord défini par l’utilisateur. Voir le [guide de tableau de bord défini par l’utilisateur](../../../dashboards/user-defined-dashboards.md) pour obtenir des conseils sur l’utilisation de votre modèle de données personnalisé.
+Votre modèle de données personnalisé se trouve dans la liste des modèles de données disponibles dans l’espace de travail du tableau de bord défini par l’utilisateur. Voir le [guide de tableau de bord défini par l’utilisateur](../../../dashboards/standard-dashboards.md) pour obtenir des conseils sur l’utilisation de votre modèle de données personnalisé.

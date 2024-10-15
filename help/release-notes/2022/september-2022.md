@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’Adobe Experience Platform - Septembre 2022
 description: Les notes de mise à jour de septembre 2022 pour Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: e0af1f0110ceb514a5b249c42a05bf780ea834c6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '2762'
 ht-degree: 99%
@@ -26,7 +26,7 @@ Mises à jour des fonctionnalités existantes dans Adobe Experience Platform 
 - [Destinations](#destinations)
 - [Modèle de données d’expérience (XDM)](#xdm)
 - [Service d’identités](#identity-service)
-- [Query Service](#query-service)
+- [Query Service](#query-service)
 - [Sources](#sources)
 
 ## Contrôle d’accès basé sur les attributs {#abac}
@@ -93,7 +93,7 @@ Adobe Experience Platform fournit de nombreux tableaux de bord grâce auxquels
 | Fonctionnalité | Description |
 | --- | --- |
 | Libellé en cours d’utilisation | Lorsqu’il est affiché dans la bibliothèque de widgets, le libellé en cours d’utilisation identifie facilement la présence de widgets existants dans votre tableau de bord. Cela permet d’éviter facilement la duplication, bien que vous puissiez ajouter le même widget plusieurs fois si vous le souhaitez. |
-| Tableaux de bord définis par l’utilisateur | Les tableaux de bord définis par l’utilisateur accélérèrent les informations et personnalisent les visualisations en vous permettant de créer et de gérer des tableaux de bord personnalisés. Grâce aux tableaux de bord définis par l’utilisateur, vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser les mesures clés pertinentes pour votre organisation. Lisez le [guide des fonctionnalités](../../dashboards/user-defined-dashboards.md) pour en savoir plus. |
+| Tableaux de bord définis par l’utilisateur | Les tableaux de bord définis par l’utilisateur accélérèrent les informations et personnalisent les visualisations en vous permettant de créer et de gérer des tableaux de bord personnalisés. Grâce aux tableaux de bord définis par l’utilisateur, vous pouvez créer, ajouter et modifier des widgets personnalisés pour visualiser les mesures clés pertinentes pour votre organisation. Lisez le [guide des fonctionnalités](../../dashboards/standard-dashboards.md) pour en savoir plus. |
 | Modèle de données d’informations Customer Data Platform | La fonctionnalité Modèle de données d’informations Customer Data Platform (CDP) expose les modèles de données et SQL qui alimentent les informations pour divers widgets de profil, de destination et de segmentation. Vous pouvez personnaliser ces modèles de requête SQL pour créer des rapports CDP pour vos cas d’utilisation de marketing et d’indicateurs clés de performance. Ces informations peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord définis par l’utilisateur. Lisez le [guide de fonctionnalité du modèle de données d’informations CDP](../../dashboards/data-models/cdp-insights-data-model-b2c.md) pour en savoir plus. |
 | Widget de rapport de chevauchements d’audience | Ce widget est disponible pour les deux tableaux de bord [!UICONTROL Profils] et [!UICONTROL Segments]. Le rapport fournit une liste d’audiences classées selon les pourcentages de chevauchement les plus élevés ou les plus bas pour le segment sélectionné. Dans le tableau de bord [!UICONTROL Profils], vous pouvez filtrer et afficher le chevauchement de vos audiences par politique de fusion de tous les segments disponibles. Les tableaux de bord [!UICONTROL Segments] vous permettent de filtrer le chevauchement des audiences selon un segment spécifique.<br>Utilisez cette analyse pour créer de nouveaux segments hautement performants et éviter d’envoyer la même audience vers différentes destinations. Le rapport permet également d’identifier les informations masquées afin d’améliorer la segmentation ou de localiser les profils uniques à rechercher. Lisez les guides des widgets [profils](../../dashboards/guides/profiles.md#audience-overlap-report) et [segments](../../dashboards/guides/audiences.md#audience-overlap-report) pour en savoir plus. |
 

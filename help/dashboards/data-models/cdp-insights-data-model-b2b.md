@@ -1,19 +1,19 @@
 ---
-title: Modèle de données Real-Time Customer Data Platform Insights B2B
-description: Découvrez comment utiliser les requêtes SQL avec les modèles de données de statistiques Real-Time Customer Data Platform (édition B2B) pour personnaliser vos propres rapports Real-Time CDP pour vos cas d’utilisation de marketing et d’indicateurs de performance clés.
+title: B2B edition du modèle de données Real-Time Customer Data Platform Insights
+description: Découvrez comment utiliser les requêtes SQL avec les modèles de données Real-Time Customer Data Platform Insights (B2B edition) pour personnaliser vos propres rapports Real-Time CDP pour vos cas d’utilisation de marketing et d’indicateurs de performance clés.
 badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 7b77ca19-e4c6-4e93-b9e7-c4ef77d6d6d1
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 3%
 
 ---
 
-# Modèle de données Real-time Customer Data Platform Insights B2B
+# B2B edition du modèle de données Real-time Customer Data Platform Insights
 
-Le modèle de données Real-Time Customer Data Platform Insights pour l’édition B2B expose les modèles de données et SQL qui alimentent les insights pour les [profils de compte](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). Vous pouvez personnaliser ces modèles de requête SQL afin de créer des rapports Real-Time CDP pour vos cas d’utilisation d’indicateurs de performance clés et de marketing B2B. Ces informations peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord.
+Le modèle de données Real-Time Customer Data Platform Insights pour B2B edition expose les modèles de données et SQL qui alimentent les insights pour les [profils de compte](https://experienceleague.adobe.com/en/docs/experience-platform/rtcdp/account/account-profile-overview). Vous pouvez personnaliser ces modèles de requête SQL afin de créer des rapports Real-Time CDP pour vos cas d’utilisation d’indicateurs de performance clés et de marketing B2B. Ces informations peuvent ensuite être utilisées comme widgets personnalisés pour vos tableaux de bord.
 
 >[!AVAILABILITY]
 >
@@ -25,7 +25,7 @@ See the query accelerated store reporting insights documentation to learn [how t
 
 ## Conditions préalables
 
-Ce guide nécessite une compréhension pratique des tableaux de bord personnalisés. Lisez la documentation sur [la création d’un tableau de bord personnalisé](../user-defined-dashboards.md) avant de poursuivre avec ce guide.
+Ce guide nécessite une compréhension pratique des tableaux de bord personnalisés. Lisez la documentation sur [la création d’un tableau de bord personnalisé](../standard-dashboards.md) avant de poursuivre avec ce guide.
 
 ## Rapports d’informations sur Real-Time CDP B2B et cas d’utilisation {#B2B-insight-reports-and-use-cases}
 
