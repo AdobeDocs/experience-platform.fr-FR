@@ -3,9 +3,9 @@ title: Utilisation de champs calculés pour exporter des tableaux en tant que ch
 type: Tutorial
 description: Découvrez comment utiliser les champs calculés pour exporter des tableaux de Real-Time CDP vers des destinations de stockage dans le cloud en tant que chaînes.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: ea3ff80ed1e1de37d5d96bff96f73183a6fa3927
+source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
 workflow-type: tm+mt
-source-wordcount: '1520'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
@@ -76,6 +76,16 @@ Notez les limites connues suivantes qui s’appliquent actuellement à cette fon
 [Connectez-vous](/help/destinations/ui/connect-destination.md) à une destination de stockage dans le cloud souhaitée, passez par les [étapes d’activation des destinations de stockage dans le cloud](/help/destinations/ui/activate-batch-profile-destinations.md) et accédez à l’étape [mapping](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Comment exporter des champs calculés {#how-to-export-calculated-fields}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_control"
+>title="Activation du schéma de sortie hiérarchique"
+>abstract="Activez cette option si vous souhaitez exporter des structures hiérarchiques telles que des tableaux."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_calculated_field_disabled"
+>title="Ajouter les champs calculés désactivés"
+>abstract="Ce contrôle est désactivé car vous avez choisi d’exporter des structures plates lors de la connexion à la destination."
 
 Dans l’étape de mappage du workflow d’activation pour les destinations de stockage dans le cloud, sélectionnez **[!UICONTROL Ajouter un champ calculé]**.
 
