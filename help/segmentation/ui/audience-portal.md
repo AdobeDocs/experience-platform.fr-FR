@@ -2,10 +2,10 @@
 title: Présentation d’Audience Portal
 description: Découvrez comment utiliser Audience Portal pour afficher, gérer et créer des audiences dans Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: b59f5ffeb8af6f3bab7ed79189219f39533d2f1b
+source-git-commit: 919e5c183296e3fbf1fc385c2a9c34dc36349660
 workflow-type: tm+mt
-source-wordcount: '4250'
-ht-degree: 58%
+source-wordcount: '4298'
+ht-degree: 57%
 
 ---
 
@@ -209,6 +209,11 @@ La liste des filtres disponibles s’affiche.
 ![Les filtres disponibles sont affichés et mis en surbrillance sur la page d’accès aux audiences.](../images/ui/audience-portal/filter-audiences.png)
 
 #### Actions en masse {#bulk-actions}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_browse_flexibleaudienceevaluation"
+>title="Limites flexibles de l’évaluation des audiences"
+>abstract="Vous pouvez évaluer jusqu’à 20 audiences au cours d’une seule opération d’évaluation d’audience flexible.<br/><br/>De plus, même si la tâche d’évaluation s’exécute dès que possible, des retards peuvent se produire dans le système, car les évaluations à la demande <b>ne peuvent pas</b> s’exécuter simultanément avec une autre évaluation à la demande ou par lot."
 
 En outre, vous pouvez sélectionner jusqu’à 25 audiences différentes et effectuer diverses actions sur ces audiences. Ces actions incluent [le déplacement vers un dossier](#folders), [la modification ou l’application d’une balise](#tags), [l’application d’étiquettes d’accès](../../access-control/abac/ui/labels.md) et [la suppression](#browse).
 
