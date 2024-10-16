@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Prise en main de l’API Schema Registry
 description: Ce document présente les concepts de base que vous devez connaître avant d’effectuer des appels vers l’API Schema Registry.
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
 workflow-type: tm+mt
-source-wordcount: '1345'
+source-wordcount: '1361'
 ht-degree: 42%
 
 ---
@@ -254,6 +254,7 @@ Le champ d’exemple suivant illustre un champ XDM formaté correctement avec de
 * Le nom d’un objet de champ peut contenir des caractères alphanumériques, des tirets ou des traits de soulignement, mais **ne peut pas** commencer par un trait de soulignement.
    * **Correct :** `fieldName`, `field_name2`, `Field-Name`, `field-name_3`
    * **Incorrect :** `_fieldName`
+* Les noms de champ ne sont pas sensibles à la casse et doivent porter des noms différents au même niveau dans votre schéma.
 * Le Camel case est préférable pour le nom du champ objet. Exemple : `fieldName`
 * Le champ doit inclure un `title`, écrit en Casse Titre. Exemple : `Field Name`
 * Le champ nécessite un `type`.

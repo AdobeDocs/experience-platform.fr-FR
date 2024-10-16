@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Contraintes de type de champ XDM
 description: Référence pour les contraintes de type de champ dans le modèle de données d’expérience (XDM), y compris les autres formats de sérialisation auxquels elles peuvent être mappées et comment définir vos propres types de champ dans l’API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: 88caea133bd2bf994587bda5b31cddd22f2c90cb
+source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '683'
 ht-degree: 7%
 
 ---
@@ -23,7 +23,7 @@ Si vous envisagez de définir vos propres types de champs dans l’API, il est v
 
 ## Structure de base et exemples {#basic-types}
 
-XDM repose sur le schéma JSON. Par conséquent, les champs XDM héritent d’une syntaxe similaire lors de la définition de leur type. La compréhension de la manière dont différents types de champ sont représentés dans le schéma JSON peut aider à indiquer les contraintes de base de chaque type.
+XDM repose sur le schéma JSON. Par conséquent, les champs XDM héritent d’une syntaxe similaire lors de la définition de leur type. La compréhension de la manière dont différents types de champ sont représentés dans le schéma JSON peut aider à indiquer les contraintes de base de chaque type. Les noms de champs personnalisés ne sont pas sensibles à la casse et doivent porter des noms différents au même niveau dans votre schéma.
 
 >[!NOTE]
 >
