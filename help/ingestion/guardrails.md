@@ -3,10 +3,10 @@ keywords: Experience Platform;dépannage;mécanismes de sécurisation;conseils;
 title: Mécanismes de sécurisation pour l’ingestion des données
 description: Découvrez les barrières de sécurité pour l’ingestion de données dans Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: 9c3f7f522ce6451e1d312a0221cc34287d3e8ae3
+source-git-commit: b8f64793b7f869e50c33ead3a5f02f3a8af51ff4
 workflow-type: tm+mt
-source-wordcount: '737'
-ht-degree: 46%
+source-wordcount: '810'
+ht-degree: 42%
 
 ---
 
@@ -35,6 +35,7 @@ Le tableau suivant décrit les mécanismes de sécurisation à prendre en compte
 | Ingestion par lots vers le profil | <ul><li>La taille maximale d’une classe d’enregistrement est de 100 Ko (en dur).</li><li>La taille maximale d’une classe ExperienceEvent est de 10 Ko (en dur).</li></ul> | |
 | Nombre de lots Profile ou ExperienceEvent ingérés par jour | **Le nombre maximal de lots Profile ou ExperienceEvent ingérés par jour est de 90.** Cela signifie que le total combiné des lots Profile et ExperienceEvent ingérés chaque jour ne peut pas dépasser 90. L’ingestion de lots supplémentaires affectera les performances du système. | C’est une limite conditionnelle. Limite conditionnelle : il est possible d’aller au-delà d’une limite conditionnelle. Cependant, ces limites fournissent une orientation recommandée pour les performances du système. |
 | Ingestion de données chiffrées | La taille maximale prise en charge d’un seul fichier chiffré est de 1 Go. Par exemple, bien que vous puissiez ingérer 2 Go ou plus de données dans une seule exécution de flux de données, aucun fichier individuel de l’exécution de flux de données ne peut dépasser 1 Go. | Le processus d’ingestion de données chiffrées peut prendre plus de temps que celui d’une ingestion régulière de données. Pour plus d’informations, consultez le [guide de l’API d’ingestion de données chiffrées](../sources/tutorials/api/encrypt-data.md) . |
+| Ingestion par lots | L’ingestion de lots d’assemblage peut être jusqu’à 10 fois plus lente que les lots standard. Par conséquent, **conservez vos lots d’assemblage sous deux millions d’enregistrements** afin d’assurer un exécution efficace et d’éviter d’empêcher d’autres lots d’être traités dans l’environnement de test. | Bien que vous puissiez sans aucun doute ingérer des lots qui dépassent deux millions d’enregistrements, le temps d’ingestion sera considérablement plus long en raison des limites des petits environnements de test. |
 
 {style="table-layout:auto"}
 
