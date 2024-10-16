@@ -2,9 +2,9 @@
 title: Présentation d’Audience Portal
 description: Découvrez comment utiliser Audience Portal pour afficher, gérer et créer des audiences dans Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 919e5c183296e3fbf1fc385c2a9c34dc36349660
+source-git-commit: f74e91ba1fe2be58e1e933fa81f590566f02fff7
 workflow-type: tm+mt
-source-wordcount: '4298'
+source-wordcount: '4320'
 ht-degree: 57%
 
 ---
@@ -286,6 +286,10 @@ Les estimations sont générées en utilisant une taille d’échantillon des do
 ### Détails d’ingestion {#ingestion-details}
 
 Pour les audiences dont l’origine est le **[!UICONTROL téléchargement personnalisé]**, la section **[!UICONTROL Détails de l’ingestion]** présente le total du profil, ainsi que les détails du jeu de données dans lequel l’audience générée en externe a été ingérée.
+
+>[!NOTE]
+>
+>La mise à jour complète du nombre de profils de l’audience peut prendre jusqu’à 30 minutes après la tâche d’exportation.
 
 ![La section des détails de l’ingestion de la page des détails de l’audience s’affiche.](../images/ui/audience-portal/audience-details-ingestion-details.png)
 
