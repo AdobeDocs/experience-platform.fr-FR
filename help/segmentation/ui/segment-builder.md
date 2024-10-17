@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
 workflow-type: tm+mt
 source-wordcount: '4955'
-ht-degree: 65%
+ht-degree: 66%
 
 ---
 
@@ -31,8 +31,8 @@ Les blocs de création de base des définitions de segment sont les attributs et
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_summarydata"
->title="Données récapitulatives"
->abstract="Les données récapitulatives s’affichent uniquement pour les attributs de profil et <b>not</b> s’affichent pour les attributs d’événement ou d’audience.<br/><br/>Les données récapitulatives des attributs de profil peuvent ne pas apparaître dans les cas suivants : <ol><li>Certaines valeurs de l’attribut comportent plus de 100 caractères.</li><li>Il existe plus de 3 000 valeurs uniques pour l’attribut .</li></ol>"
+>title="Données de résumé"
+>abstract="Les données de résumé s’affichent uniquement pour les attributs de profil et <b>non pas</b> pour les attributs d’événement ou d’audience.<br/><br/>Les données de résumé des attributs de profil peuvent ne pas apparaître dans les cas suivants : <ol><li>Certaines valeurs de l’attribut comportent plus de 100 caractères.</li><li>Il existe plus de 3 000 valeurs uniques pour l’attribut.</li></ol>"
 
 >[!NOTE]
 >

@@ -5,7 +5,7 @@ exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
 source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
 workflow-type: tm+mt
 source-wordcount: '1827'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -67,8 +67,8 @@ Les informations de profil du compte affichées dans l’onglet [!UICONTROL Dét
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_accountprofiles_customersperaccountoverview"
->title="Présentation des clients par compte"
->abstract="Ce widget d’analyse fournit des informations sur la structure de vos données B2B. Il vous permet d’identifier le nombre de profils de compte auxquels aucun profil client n’est associé ou auxquels un ou plusieurs profils clients sont associés.<ul><li>Clients directs : sont des profils clients directement liés à un compte par l’itinéraire `personComponents`.</li><li>Clients directs : sont des profils client liés à un compte via l’itinéraire `Account-Person`.</li></ul>"
+>title="Vue d’ensemble des clientes et clients par compte"
+>abstract="Ce widget d’analyse fournit des informations sur la structure de vos données B2B. Il vous permet d’identifier le nombre de profils de compte auxquels aucun profil client n’est associé ou auxquels un ou plusieurs profils clients sont associés.<ul><li>Clients directs : profils clients directement associés à un compte par l’itinéraire `personComponents`.</li><li>Clients indirects : profils client associés à un compte via l’itinéraire `Account-Person`.</li></ul>"
 
 Adobe fournit des widgets standard que vous pouvez utiliser pour visualiser différentes mesures liées à vos profils de compte.
 
