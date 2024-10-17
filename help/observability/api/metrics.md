@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Point de terminaison de l’API de mesures
 description: Découvrez comment récupérer les mesures d’observabilité dans Experience Platform à l’aide de l’API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: 39eda018611d0244eaff908e924afa93dc46e14d
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1278'
 ht-degree: 25%
 
 ---
@@ -56,8 +56,7 @@ curl -X POST \
                 "groupBy": true
               }
             ],
-            "aggregator": "sum",
-            "downsample": "sum"
+            "aggregator": "sum"
           },
           {
             "name": "timeseries.ingestion.dataset.dailysize",
@@ -79,12 +78,11 @@ curl -X POST \
 | --- | --- |
 | `start` | Date/heure la plus ancienne à partir de laquelle récupérer les données de mesure. |
 | `end` | Date/heure la plus récente à partir de laquelle récupérer les données de mesure. |
-| `granularity` | Champ facultatif qui indique l’intervalle de temps pour lequel diviser les données de mesure. Par exemple, une valeur de `DAY` renvoie des mesures pour chaque jour entre la date `start` et `end`, tandis qu’une valeur de `MONTH` regrouperait les résultats des mesures par mois à la place. Lors de l’utilisation de ce champ, une propriété `downsample` correspondante doit également être fournie pour indiquer la fonction d’agrégation par laquelle regrouper les données. |
+| `granularity` | Champ facultatif qui indique l’intervalle de temps pour lequel diviser les données de mesure. Par exemple, une valeur de `DAY` renvoie des mesures pour chaque jour entre la date `start` et `end`, tandis qu’une valeur de `MONTH` regrouperait les résultats des mesures par mois à la place. |
 | `metrics` | Tableau d’objets, un pour chaque mesure que vous souhaitez récupérer. |
 | `name` | Nom d’une mesure reconnue par Observability Insights. Consultez l’ [annexe](#available-metrics) pour obtenir la liste complète des noms de mesure acceptés. |
 | `filters` | Champ facultatif qui vous permet de filtrer les mesures selon des jeux de données spécifiques. Le champ est un tableau d’objets (un pour chaque filtre), chaque objet contenant les propriétés suivantes : <ul><li>`name` : type d’entité par rapport auquel filtrer les mesures. Actuellement, seul `dataSets` est pris en charge.</li><li>`value` : identifiant d’un ou de plusieurs jeux de données. Plusieurs identifiants de jeu de données peuvent être fournis sous la forme d’une seule chaîne, chaque identifiant étant séparé par des caractères de barre verticale (`\|`).</li><li>`groupBy` : lorsqu’elle est définie sur true, indique que le `value` correspondant représente plusieurs jeux de données dont les résultats de mesure doivent être renvoyés séparément. S’il est défini sur false, les résultats des mesures de ces jeux de données sont regroupés.</li></ul> |
-| `aggregator` | Spécifie la fonction d’agrégation qui doit être utilisée pour regrouper plusieurs enregistrements de série temporelle en résultats uniques. Pour plus d&#39;informations sur les agrégateurs disponibles, consultez la [documentation OpenTSDB](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
-| `downsample` | Champ facultatif qui vous permet de spécifier une fonction d’agrégation afin de réduire le taux d’échantillonnage des données de mesure en triant les champs en intervalles (ou &quot;intervalles&quot;). L’intervalle de sous-échantillonnage est déterminé par la propriété `granularity` . Pour plus d&#39;informations sur le sous-échantillonnage, consultez la [documentation OpenTSDB](https://docs.w3cub.com/opentsdb/user_guide/query/aggregators). |
+| `aggregator` | Spécifie la fonction d’agrégation qui doit être utilisée pour regrouper plusieurs enregistrements de série temporelle en résultats uniques. Les agrégateurs actuellement pris en charge sont min, max, sum et avg selon la définition de la mesure. |
 
 {style="table-layout:auto"}
 
@@ -221,8 +219,7 @@ Le tableau suivant décrit les mesures pour Adobe Experience Platform [!DNL Iden
 | ---- | ---- | ---- |
 | timeseries.identity.dataset.recordsuccess.count | Nombre d’enregistrements écrits dans leur source de données par [!DNL Identity Service] pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
 | timeseries.identity.dataset.recordfailed.count | Nombre d’enregistrements échoués par [!DNL Identity Service], pour un jeu de données ou tous les jeux de données. | Identifiant du jeu de données |
-| timeseries.identity.dataset.namespacecode.recordfailed.count | Nombre d’enregistrements d’identité échoués par un espace de noms. | Identifiant d’espace de noms (**obligatoire**) |
-| timeseries.identity.dataset.namespacecode.recordskipped.count | Nombre d’enregistrements d’identité ignorés par un espace de noms. | Identifiant d’espace de noms (**obligatoire**) |
+| timeseries.identity.dataset.namespacecode.recordskipped.count | Nombre d’enregistrements d’identité ignorés. | ID d’organisation |
 | timeseries.identity.graph.imsorg.uniqueidentities.count | Nombre d’identités uniques stockées dans le graphique d’identités de votre organisation. | N/A |
 | timeseries.identity.graph.imsorg.namespacecode.uniqueidentities.count | Nombre d’identités uniques stockées dans le graphique d’identités pour un espace de noms. | Identifiant d’espace de noms (**obligatoire**) |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Nombre d’identités uniques stockées dans le graphique d’identités de votre organisation pour une force de graphique spécifique (&quot;inconnu&quot;, &quot;faible&quot; ou &quot;fort&quot;). | Force de graphique (**obligatoire**) |
