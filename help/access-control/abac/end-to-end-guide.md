@@ -4,7 +4,7 @@ title: Guide de bout en bout du contrôle d’accès basé sur les attributs
 description: Ce document fournit un guide de bout en bout sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: c89ae9befa3befbffab9d6468f3c207ab8e7b74f
+source-git-commit: 9c415b7721eeceff75d46463853f22dd3310cb9a
 workflow-type: tm+mt
 source-wordcount: '1736'
 ht-degree: 24%
@@ -45,8 +45,7 @@ Vous allez :
 
 * [Étiqueter les rôles de vos utilisateurs](#label-roles) : utilisez l’exemple d’un prestataire de services de santé (ACME Business Group) dont le groupe marketing travaille avec des agences externes.
 * [Étiqueter vos ressources (champs de schéma et segments)](#label-resources) : Attribuez l’étiquette **[!UICONTROL PHI/données d’intégrité réglementées]** aux ressources de schéma et aux segments.
-* 
-   * [Activez la stratégie qui les reliera :](#policy) : activez la stratégie par défaut pour empêcher l’accès aux champs de schéma et aux segments en connectant les libellés de vos ressources aux libellés de votre rôle. Les utilisateurs disposant de libellés correspondants auront alors accès au champ de schéma et au segment dans tous les environnements de test.
+* [Activez la stratégie qui les reliera ](#policy) : activez la stratégie par défaut pour empêcher l’accès aux champs de schéma et aux segments en connectant les libellés de vos ressources aux libellés de votre rôle. Les utilisateurs disposant de libellés correspondants auront alors accès au champ de schéma et au segment dans tous les environnements de test.
 
 ## Autorisations
 
