@@ -1,9 +1,9 @@
 ---
 title: Création d’audiences à l’aide de SQL
 description: Découvrez comment utiliser l’extension d’audience SQL dans Adobe Experience Platform Data Distiller pour créer, gérer et publier des audiences à l’aide de commandes SQL. Ce guide couvre tous les aspects du cycle de vie de l’audience, notamment la création, la mise à jour et la suppression de profils, ainsi que l’utilisation de définitions d’audience pilotées par les données pour cibler des destinations basées sur des fichiers.
-source-git-commit: 8b9a46d9dd35a60fc3f3087d5fd3c4dad395b1aa
+source-git-commit: b790dc0a485011022ac637f9d9c55f21c882d5fc
 workflow-type: tm+mt
-source-wordcount: '1280'
+source-wordcount: '1166'
 ht-degree: 1%
 
 ---
@@ -135,15 +135,13 @@ Activez vos audiences en les ciblant sur n’importe quelle destination basée s
 
 Cette section traite des questions fréquentes sur la création et la gestion d’audiences externes à l’aide de SQL dans Data Distiller.
 
-+++Sélectionner pour afficher les questions et réponses
-
 **Questions** :
 
 - La création d’audience est-elle prise en charge uniquement pour les jeux de données plats ?
 
 +++Réponse
 
-Les jeux de données imbriqués sont également pris en charge, mais seuls les attributs plats sont disponibles dans l’audience.
+Actuellement, la création de l’audience est limitée aux attributs plats (au niveau racine) lors de la définition de l’audience.
 
 +++
 
@@ -167,15 +165,15 @@ Non, le jeu de données créé lors de la création de l’audience n’est pas 
 
 +++Réponse
 
-Oui, le jeu de données est créé sur le lac de données.
+Oui, le jeu de données associé à l’audience est créé sur le lac de données. Les attributs de ce jeu de données sont disponibles dans le compositeur d’audience et le flux de destination sous forme d’attributs enrichis.
 
 +++
 
-- Les attributs de l’audience sont-ils limités à une utilisation uniquement dans les destinations basées sur des fichiers de lot d’entreprise ? (Oui ou Non)
+- Les attributs de l’audience sont-ils limités aux destinations basées sur des fichiers de lot d’entreprise ? (Oui ou Non)
 
 +++Réponse
 
-Oui, les attributs de l’audience sont limités pour une utilisation uniquement dans les destinations basées sur des fichiers de lot d’entreprise.
+Non. Les attributs enrichis dans l’audience peuvent être utilisés dans des destinations par lots d’entreprise et des destinations basées sur des fichiers. Si vous rencontrez une erreur du type &quot;Les identifiants de segment suivants ont des espaces de noms non autorisés pour cette destination : e917f626-a038-42f7-944c-xyxyx&quot;, créez un segment dans Data Distiller et utilisez-le avec n’importe quelle destination disponible.
 
 +++
 
@@ -195,45 +193,11 @@ Les audiences du Distilleur de données ne sont actuellement pas disponibles dan
 
 +++
 
-- Comment créer deux audiences Distiller de données avec des plannings différents ? Combien de jeux de données sont créés et sont-ils marqués pour Profile ?
-
-+++Réponse
-
-Deux jeux de données seront créés, car chaque audience possède un jeu de données sous-jacent. Toutefois, ces jeux de données ne sont pas marqués pour Profile. Les deux jeux de données sont gérés selon leurs propres plannings.
-
-+++
-
-- Comment supprimer une audience ?
-
-+++Réponse
-
-Pour supprimer une audience, vous pouvez utiliser la commande [`DROP AUDIENCE`](#delete-audience) dans l’interface de ligne de commande ou utiliser les [ actions rapides de l’espace de travail Audiences](../../segmentation/ui/audience-portal.md#quick-actions). REMARQUE : les audiences utilisées dans des destinations en aval ou dépendantes d’autres audiences ne peuvent pas être supprimées.
-
-+++
-
-- Lorsque je publie une audience dans Profile, à quelle heure est-elle disponible dans l’interface utilisateur du créateur de segments et quand est-elle disponible dans les destinations ?
-
-+++Réponse
-
-Une fois l’exportation de l’instantané de profil terminée, les profils sont visibles dans l’audience.
-
-+++
-
 - Les audiences Data Distiller sont-elles supprimées tous les 30 jours puisqu’elles sont des audiences externes ?
 
 +++Réponse
 
 Oui, les audiences Distiller de données sont supprimées tous les 30 jours puisqu’il s’agit d’audiences externes.
-
-+++
-
-- Les audiences Data Distiller apparaissent-elles dans l’inventaire des audiences ?
-
-+++Réponse
-
-Oui, les audiences Distiller de données apparaissent dans l’inventaire des audiences sous le nom d’origine &quot;Distiller de données&quot;.
-
-+++
 
 +++
 
