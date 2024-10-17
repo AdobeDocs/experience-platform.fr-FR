@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Fonctions booléennes PQL
 description: Les fonctions booléennes sont utilisées pour exécuter une logique booléenne sur différents éléments dans Profile Query Language (PQL).
 exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 81%
+source-wordcount: '248'
+ht-degree: 64%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 81%
 
 Les fonctions booléennes sont utilisées pour exécuter une logique booléenne sur différents éléments dans [!DNL Profile Query Language] (PQL).  Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
 
-## And
+## Et
 
-La fonction `and` est utilisée pour convertir un nombre en pourcentage.
+La fonction `and` est utilisée pour créer une conjonction logique en tant que valeur booléenne.
 
 **Format**
 
@@ -34,7 +34,7 @@ homeAddress.countryISO = "CA" and person.birthYear = 1985
 
 ## Or
 
-La fonction `or` est utilisée pour créer une disjonction logique.
+La fonction `or` est utilisée pour créer une disjonction logique en tant que valeur booléenne.
 
 **Format**
 
@@ -71,7 +71,7 @@ not (homeAddress.countryISO = "CA")
 
 ## If
 
-La fonction `if` est utilisée pour résoudre une expression selon qu’une condition spécifiée est vraie ou non.
+La fonction `if` est utilisée pour résoudre une expression selon qu’une condition spécifiée est vraie ou non en tant que valeur booléenne.
 
 **Format**
 

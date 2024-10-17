@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Fonctions d’agrégation PQL
 description: Les fonctions d’agrégation sont utilisées pour regrouper plusieurs valeurs dans des tableaux Profile Query Language (PQL) afin de former une seule valeur de résumé.
 exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 76%
+source-wordcount: '242'
+ht-degree: 45%
 
 ---
 
@@ -16,7 +16,7 @@ Les fonctions d’agrégation sont utilisées pour regrouper plusieurs valeurs d
 
 ## Nombre
 
-La fonction `count` renvoie le nombre d&#39;éléments dans le tableau donné.
+La fonction `count` renvoie le nombre d’éléments dans le tableau donné sous la forme d’un nombre.
 
 **Format**
 
@@ -34,7 +34,7 @@ orders.count()
 
 ## Sum
 
-La fonction `sum` renvoie la somme de toutes les valeurs sélectionnées dans le tableau.
+La fonction `sum` renvoie la somme de toutes les valeurs sélectionnées dans le tableau sous la forme d’un nombre.
 
 **Format**
 
@@ -52,7 +52,7 @@ orders.sum(order.price)
 
 ## Average
 
-La fonction `average` renvoie la moyenne arithmétique de toutes les valeurs sélectionnées dans le tableau.
+La fonction `average` renvoie la moyenne arithmétique de toutes les valeurs sélectionnées dans le tableau sous la forme d’un nombre.
 
 **Format**
 
@@ -70,7 +70,7 @@ orders.average(order.price)
 
 ## Minimum
 
-La fonction `min` renvoie la plus petite de toutes les valeurs sélectionnées dans le tableau.
+La fonction `min` renvoie la plus petite de toutes les valeurs sélectionnées dans le tableau sous la forme d’un nombre.
 
 **Format**
 
@@ -88,7 +88,7 @@ orders.min(order.price)
 
 ## Maximum
 
-La fonction `max` renvoie la plus grande de toutes les valeurs sélectionnées dans le tableau.
+La fonction `max` renvoie la plus grande de toutes les valeurs sélectionnées dans le tableau sous la forme d’un nombre.
 
 **Format**
 

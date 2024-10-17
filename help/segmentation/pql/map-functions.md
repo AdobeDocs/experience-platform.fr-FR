@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Fonctions de mappage PQL
 description: Profile Query Language (PQL) offre des fonctions pour faciliter l’interaction avec les cartes.
 exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 76%
+source-wordcount: '169'
+ht-degree: 46%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 76%
 
 ## Obtenir
 
-La fonction `get` est utilisée pour récupérer la valeur d&#39;une carte pour une clé donnée.
+La fonction `get` est utilisée pour récupérer la valeur d’une carte pour une clé donnée en tant qu’objet.
 
 **Format**
 
@@ -34,7 +34,7 @@ identityMap.get("example@example.com")
 
 ## Keys
 
-La fonction `keys` est utilisée pour récupérer toutes les clés d&#39;une carte donnée.
+La fonction `keys` est utilisée pour récupérer toutes les clés d’une carte donnée sous forme de tableau ou de liste.
 
 **Format**
 
@@ -52,7 +52,7 @@ identityMap.keys()
 
 ## Values
 
-La fonction `values` est utilisée pour récupérer toutes les valeurs d&#39;une carte donnée.
+La fonction `values` est utilisée pour récupérer toutes les valeurs d’une carte donnée sous forme de tableau ou de liste.
 
 **Format**
 

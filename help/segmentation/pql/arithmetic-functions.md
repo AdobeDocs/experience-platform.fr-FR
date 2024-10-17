@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Fonctions arithmétiques PAL
 description: Les fonctions arithmétiques sont utilisées pour effectuer des calculs de base sur les valeurs dans Profile Query Language (PQL).
 exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 82%
+source-wordcount: '258'
+ht-degree: 51%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 82%
 
 Les fonctions arithmétiques sont utilisées pour effectuer des calculs de base sur les valeurs dans [!DNL Profile Query Language] (PQL). Vous trouverez plus d’informations sur les autres fonctions PQL dans la [[!DNL Profile Query Language] présentation](./overview.md).
 
-## Addition
+## Ajouter
 
-La fonction `+` (addition) est utilisée pour trouver la somme de deux expressions d&#39;argument.
+La fonction `+` (addition) est utilisée pour trouver la somme de deux expressions d’argument en tant que nombre.
 
 **Format**
 
@@ -34,7 +34,7 @@ product1.price + product2.price
 
 ## Multiplication
 
-La fonction `*` (multiplication) est utilisée pour trouver le produit de deux expressions d&#39;argument.
+La fonction `*` (multiplication) est utilisée pour trouver le produit de deux expressions d’argument en tant que nombre.
 
 **Format**
 
@@ -52,7 +52,7 @@ product.inventory * product.price
 
 ## Soustraction
 
-La fonction `-` (soustraction) permet de trouver la différence entre deux expressions d&#39;argument.
+La fonction `-` (soustraction) est utilisée pour trouver la différence entre deux expressions d’argument en tant que nombre.
 
 **Format**
 
@@ -70,7 +70,7 @@ product1.price - product2.price
 
 ## Division
 
-La fonction `/` (division) est utilisée pour trouver le quotient de deux expressions d&#39;argument.
+La fonction `/` (division) est utilisée pour trouver le quotient de deux expressions d’argument en tant que nombre.
 
 **Format**
 
@@ -88,7 +88,7 @@ totalProduct.price / totalProduct.sold
 
 ## Reste
 
-La fonction `%` (modulo/reste) est utilisée pour trouver le reste après la division des deux expressions d&#39;argument.
+La fonction `%` (modulo/reste) est utilisée pour trouver le reste après la division des deux expressions d’argument en tant que nombre.
 
 **Format**
 

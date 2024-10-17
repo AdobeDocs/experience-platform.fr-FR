@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Fonctions de date et d’heure PQL
 description: Les fonctions de date et d’heure sont utilisées pour effectuer des opérations de date et d’heure sur des valeurs dans Profile Query Language (PQL).
 exl-id: 8cbffcb6-1c25-454f-8f02-eca602318e5e
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 88%
+source-wordcount: '496'
+ht-degree: 85%
 
 ---
 
@@ -124,7 +124,7 @@ product.sale.getDayOfMonth() <= 15
 
 ## Occurs
 
-La fonction `occurs` compare la fonction d’horodatage donnée à une période fixe.
+La fonction `occurs` compare la fonction d’horodatage donnée à une période fixe sous la forme d’une valeur booléenne.
 
 **Format**
 

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Fonctions de chaîne PQL
 description: Profile Query Language (PQL) offre des fonctions pour faciliter l’interaction avec les chaînes.
 exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 88%
+source-wordcount: '848'
+ht-degree: 66%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 88%
 
 ## Comme
 
-La fonction `like` permet de déterminer si une chaîne correspond à un modèle donné.
+La fonction `like` permet de déterminer si une chaîne correspond à un modèle spécifié en tant que valeur booléenne.
 
 **Format**
 
@@ -39,7 +39,7 @@ city like "%es%"
 
 ## Starts with
 
-La fonction `startsWith` permet de déterminer si une chaîne commence par une sous-chaîne donnée.
+La fonction `startsWith` permet de déterminer si une chaîne commence par une sous-chaîne donnée en tant que valeur booléenne.
 
 **Format**
 
@@ -63,7 +63,7 @@ person.name.startsWith("Joe")
 
 ## Does not start with
 
-La fonction `doesNotStartWith` permet de déterminer si une chaîne ne commence pas par une sous-chaîne donnée.
+La fonction `doesNotStartWith` permet de déterminer si une chaîne ne commence pas par une sous-chaîne donnée en tant que valeur booléenne.
 
 **Format**
 
@@ -87,7 +87,7 @@ person.name.doesNotStartWith("Joe")
 
 ## Ends with
 
-La fonction `endsWith` permet de déterminer si une chaîne se termine par une sous-chaîne donnée.
+La fonction `endsWith` permet de déterminer si une chaîne se termine par une sous-chaîne spécifiée sous la forme d’une valeur booléenne.
 
 **Format**
 
@@ -111,7 +111,7 @@ person.emailAddress.endsWith(".com")
 
 ## Does not end with
 
-La fonction `doesNotEndWith` permet de déterminer si une chaîne ne se termine pas par une sous-chaîne donnée.
+La fonction `doesNotEndWith` permet de déterminer si une chaîne ne se termine pas par une sous-chaîne donnée en tant que valeur booléenne.
 
 **Format**
 
@@ -135,7 +135,7 @@ person.emailAddress.doesNotEndWith(".com")
 
 ## Contains
 
-La fonction `contains` permet de déterminer si une chaîne contient une sous-chaîne donnée.
+La fonction `contains` permet de déterminer si une chaîne contient une sous-chaîne spécifiée en tant que valeur booléenne.
 
 **Format**
 
@@ -159,7 +159,7 @@ person.emailAddress.contains("2010@gm")
 
 ## Does not contain
 
-La fonction `doesNotContain` permet de déterminer si une chaîne ne contient pas une sous-chaîne donnée.
+La fonction `doesNotContain` permet de déterminer si une chaîne ne contient pas de sous-chaîne spécifiée en tant que valeur booléenne.
 
 **Format**
 
@@ -183,7 +183,7 @@ person.emailAddress.doesNotContain("2010@gm")
 
 ## Equals
 
-La fonction `equals` permet de déterminer si une chaîne est égale à une sous-chaîne donnée.
+La fonction `equals` permet de déterminer si une chaîne est égale à la chaîne spécifiée en tant que valeur booléenne.
 
 **Format**
 
@@ -206,7 +206,7 @@ person.name.equals("John")
 
 ## Not equal to
 
-La fonction `notEqualTo` permet de déterminer si une chaîne est différente d&#39;une chaîne donnée.
+La fonction `notEqualTo` permet de déterminer si une chaîne n’est pas égale à la chaîne spécifiée en tant que valeur booléenne.
 
 **Format**
 
@@ -229,7 +229,7 @@ person.name.notEqualTo("John")
 
 ## Matches
 
-La fonction `matches` permet de déterminer si une chaîne correspond à une expression régulière donnée. Reportez-vous à [ce document](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) pour plus d&#39;informations concernant les modèles correspondants dans les expressions régulières.
+La fonction `matches` permet de déterminer si une chaîne correspond à une expression régulière donnée. Pour plus d’informations sur les modèles correspondants dans les expressions régulières en tant que valeur booléenne, reportez-vous à [ce document](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) .
 
 **Format**
 
@@ -251,7 +251,7 @@ person.name.matches("(?i)^John")
 
 ## Groupe d’expressions régulières
 
-La fonction `regexGroup` est utilisée pour extraire des informations spécifiques en fonction de l&#39;expression régulière fournie.
+La fonction `regexGroup` est utilisée pour extraire des informations spécifiques, en fonction de l’expression régulière fournie sous forme de chaîne.
 
 **Format**
 

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Fonctions de tableau, de liste et de définition de PQL
 description: Profile Query Language (PQL) offre des fonctions pour faciliter l’interaction avec des tableaux, des listes et des chaînes.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
 workflow-type: tm+mt
-source-wordcount: '753'
-ht-degree: 94%
+source-wordcount: '820'
+ht-degree: 57%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 94%
 
 ## Dans
 
-La fonction `in` permet de déterminer si un élément est un membre d&#39;un tableau ou d&#39;une liste.
+La fonction `in` est utilisée pour déterminer si un élément est membre d’un tableau ou d’une liste en tant que valeur booléenne.
 
 **Format**
 
@@ -34,7 +34,7 @@ person.birthMonth in [3, 6, 9]
 
 ## Not in
 
-La fonction `notIn` permet de déterminer si un élément n&#39;est pas un membre d&#39;un tableau ou d&#39;une liste.
+La fonction `notIn` permet de déterminer si un élément n’est pas membre d’un tableau ou d’une liste en tant que valeur booléenne.
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ person.birthMonth notIn [3, 6, 9]
 
 ## Intersects
 
-La fonction `intersects` permet de déterminer si deux tableaux ou deux listes ont au moins un membre commun.
+La fonction `intersects` permet de déterminer si deux tableaux ou deux listes ont au moins un membre commun en tant que valeur booléenne.
 
 **Format**
 
@@ -74,7 +74,7 @@ person.favoriteColors.intersects(["red", "blue", "green"])
 
 ## Intersection
 
-La fonction `intersection` sert à déterminer les membres communs à deux tableaux ou deux listes.
+La fonction `intersection` est utilisée pour déterminer les membres communs de deux tableaux ou deux listes en tant que liste.
 
 **Format**
 
@@ -92,7 +92,7 @@ person1.favoriteColors.intersection(person2.favoriteColors) = ["red", "blue", "g
 
 ## Subset of
 
-La fonction `subsetOf` sert à déterminer si un tableau spécifique (tableau A) est un sous-ensemble d&#39;un autre tableau (tableau B). En d&#39;autres termes, elle permet de déterminer si tous les éléments du tableau A sont des éléments du tableau B.
+La fonction `subsetOf` sert à déterminer si un tableau spécifique (tableau A) est un sous-ensemble d&#39;un autre tableau (tableau B). En d’autres termes, que tous les éléments du tableau A sont des éléments du tableau B sous la forme d’une valeur booléenne.
 
 **Format**
 
@@ -110,7 +110,7 @@ person.favoriteCities.subsetOf(person.visitedCities)
 
 ## Superset of
 
-La fonction `supersetOf` sert à déterminer si un tableau spécifique (tableau A) est un sur-ensemble d&#39;un autre tableau (tableau B). En d&#39;autres termes, elle permet de déterminer si le tableau A contient tous les éléments du tableau B.
+La fonction `supersetOf` sert à déterminer si un tableau spécifique (tableau A) est un sur-ensemble d&#39;un autre tableau (tableau B). En d’autres termes, ce tableau A contient tous les éléments du tableau B sous forme de valeur booléenne.
 
 **Format**
 
@@ -128,7 +128,7 @@ person.eatenFoods.supersetOf(["sushi", "pizza"])
 
 ## Includes
 
-La fonction `includes` permet de déterminer si un tableau ou une liste contient un élément donné.
+La fonction `includes` permet de déterminer si un tableau ou une liste contient un élément donné comme valeur booléenne.
 
 **Format**
 
@@ -146,7 +146,7 @@ person.favoriteColors.includes("red")
 
 ## Distinct
 
-La fonction `distinct` est utilisée pour supprimer les doublons d’un tableau ou d’une liste.
+La fonction `distinct` est utilisée pour supprimer les valeurs en double d’un tableau ou d’une liste en tant que tableau.
 
 **Format**
 
@@ -164,12 +164,12 @@ person.orders.storeId.distinct().count() > 1
 
 ## Group by
 
-La fonction `groupBy` est utilisée pour partitionner les valeurs d’un tableau ou d’une liste dans un groupe, en fonction de la valeur de l’expression.
+La fonction `groupBy` est utilisée pour partitionner les valeurs d’un tableau ou d’une liste dans un groupe en fonction de la valeur de l’expression sous la forme d’un mappage à partir des valeurs uniques de l’expression de regroupement vers des tableaux qui sont des partitions de la valeur de l’expression de tableau.
 
 **Format**
 
 ```sql
-{ARRAY}.groupBy({EXPRESSION)
+{ARRAY}.groupBy({EXPRESSION})
 ```
 
 | Argument | Description |
@@ -182,12 +182,12 @@ La fonction `groupBy` est utilisée pour partitionner les valeurs d’un tableau
 La requête PQL suivante regroupe toutes les commandes par boutique dans laquelle la commande a été placée.
 
 ```sql
-orders.groupBy(storeId)
+xEvent[type="order"].groupBy(storeId)
 ```
 
 ## Filtre
 
-La fonction `filter` est utilisée pour filtrer un tableau ou une liste en fonction d’une expression.
+La fonction `filter` est utilisée pour filtrer un tableau ou une liste en fonction d’une expression sous la forme d’un tableau ou d’une liste, selon l’entrée.
 
 **Format**
 
@@ -210,7 +210,7 @@ person.filter(age >= 21)
 
 ## Map
 
-La fonction `map` sert à créer un tableau en appliquant une expression à chaque élément d’un tableau donné.
+La fonction `map` est utilisée pour créer un tableau en appliquant une expression à chaque élément d’un tableau donné sous forme de tableau.
 
 **Format**
 
@@ -228,7 +228,7 @@ numbers.map(square)
 
 ## First `n` in array {#first-n}
 
-La fonction `topN` est utilisée pour renvoyer les premiers éléments `N` d’un tableau, lorsqu’ils sont triés dans l’ordre croissant en fonction d’une expression numérique donnée.
+La fonction `topN` est utilisée pour renvoyer les premiers éléments `N` d’un tableau, lorsqu’ils sont triés dans l’ordre croissant en fonction de l’expression numérique donnée sous forme de tableau.
 
 **Format**
 
@@ -252,7 +252,7 @@ orders.topN(price, 5)
 
 ## Last `n` in array
 
-La fonction `bottomN` est utilisée pour renvoyer les derniers éléments `N` d’un tableau, lorsqu’ils sont triés dans l’ordre croissant en fonction d’une expression numérique donnée.
+La fonction `bottomN` est utilisée pour renvoyer les `N` derniers éléments d’un tableau, lorsqu’ils sont triés dans l’ordre croissant en fonction de l’expression numérique donnée sous forme de tableau.
 
 **Format**
 
@@ -276,7 +276,7 @@ orders.bottomN(price, 5)
 
 ## First item
 
-La fonction `head` est utilisée pour renvoyer le premier élément du tableau ou de la liste.
+La fonction `head` est utilisée pour renvoyer le premier élément du tableau ou de la liste en tant qu’objet.
 
 **Format**
 
