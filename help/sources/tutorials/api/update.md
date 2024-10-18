@@ -1,22 +1,23 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;flow service;mettre à jour des comptes
-solution: Experience Platform
 title: Mettre à jour des comptes à l’aide de l’API Flow Service
-type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour mettre à jour les détails et les informations d’identification d’un compte à l’aide de l’API Flow Service.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
 workflow-type: tm+mt
-source-wordcount: '519'
-ht-degree: 100%
+source-wordcount: '539'
+ht-degree: 91%
 
 ---
 
 # Mettre à jour des comptes à l’aide de l’API Flow Service
 
-Dans certains cas, il peut être nécessaire de mettre à jour les détails d’une connexion source existante. [!DNL Flow Service] vous permet d’ajouter, de modifier et de supprimer les détails d’un lot ou d’une connexion de diffusion en continu existante, y compris son nom, sa description et ses informations d’identification.
+Dans certains cas, il peut être nécessaire de mettre à jour les détails d’une connexion de base existante. [!DNL Flow Service] vous permet d’ajouter, de modifier et de supprimer les détails d’un lot ou d’une connexion de diffusion en continu existante, y compris son nom, sa description et ses informations d’identification.
 
 Ce tutoriel décrit les étapes à suivre pour mettre à jour les détails et les informations d’identification d’une connexion à l’aide de lʼ[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!TIP]
+>
+>Vous n’avez pas besoin de créer une nouvelle connexion de base lorsqu’une mise à jour est requise. Toutes les modifications apportées à votre connexion de base sont répercutées dans le flux de données associé.
 
 ## Prise en main
 
