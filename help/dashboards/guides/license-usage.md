@@ -4,9 +4,9 @@ title: Tableau de bord d’utilisation de la licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
+source-git-commit: 80380fb1287d710460ad2c75d73ea5c2c38f5ebd
 workflow-type: tm+mt
-source-wordcount: '2738'
+source-wordcount: '2855'
 ht-degree: 19%
 
 ---
@@ -117,7 +117,6 @@ Gérez et optimisez vos ressources de licence de manière proactive en fonction 
 
 Pour afficher un résumé de l’utilisation des droits d’un produit, sélectionnez un produit dans la table [!UICONTROL Core products].
 
-<!-- update image ... -->
 ![ [!UICONTROL Utilisation de la licence] [!UICONTROL Aperçu] avec un produit et la colonne d’utilisation prédite mise en surbrillance.](../images/license-usage/product-predicted-usage.png)
 
 L’onglet Résumé s’affiche. Vous pouvez utiliser les prédictions granulaires disponibles sur les onglets [!UICONTROL Summary] et [!UICONTROL Details] pour assurer une prise de décision éclairée pour une utilisation efficace de la licence.
@@ -126,7 +125,6 @@ L’onglet Résumé s’affiche. Vous pouvez utiliser les prédictions granulair
 >
 >Notez que les prédictions d’utilisation des licences sont des approximations basées sur l’utilisation passée. Il vous incombe de comprendre l’utilisation réelle de votre entreprise et de vous assurer que cette utilisation ne dépasse pas la portée de la licence de votre entreprise avec Adobe.
 
-<!-- update image ... -->
 ![L’affichage récapitulatif d’un produit Platform avec la colonne d’utilisation prédite mise en surbrillance.](../images/license-usage/summary-predicted-usage.png)
 
 Le pourcentage d’utilisation prévue est déterminé comme suit :
@@ -142,10 +140,9 @@ Le pourcentage d’utilisation prévue est déterminé comme suit :
 La fonction d’utilisation prévue prend en charge les mesures suivantes :
 
 - [!UICONTROL Audience adressable]
-- [!UICONTROL Richesse moyenne du profil]
 - [!UICONTROL Heures de calcul]
 - [!UICONTROL Nombre de lignes de l’audience du Parcours client]
-- [!UICONTROL Stockage total]
+- [!UICONTROL Volume total de données]
 
 ## Onglet [!UICONTROL Résumé] {#summary-tab}
 
@@ -204,6 +201,10 @@ Vous pouvez également sélectionner **[!UICONTROL Date personnalisée]** pour c
 
 ## Mesures disponibles {#available-metrics}
 
+>[!IMPORTANT]
+>
+>À compter du 20 août, les clients ayant des droits pour &quot;[!UICONTROL Richesse moyenne du profil]&quot; et &quot;[!UICONTROL Stockage total]&quot; ont à la place vu &quot;[!UICONTROL Volume total de données]&quot; dans le tableau de bord de l’utilisation de la licence. Les droits des clients n’ont pas été modifiés, ce qui n’a été qu’une simplification des mesures de suivi. [!UICONTROL Volume total de données] représente les données disponibles dans le service de profil Adobe Experience Platform pour les workflows d’engagement et de personnalisation. Cette mesure simplifiée a amélioré la gestion et la mesure de l’utilisation du service de profil. Les clients ont été invités à contacter leur représentant Adobe pour plus d’informations sur cette modification.
+
 Le tableau de bord de l’utilisation des licences répertorie plusieurs mesures uniques qui s’appliquent à plusieurs produits de l’entreprise. Les mesures disponibles sont les suivantes :
 
 | Mesure | Description |
@@ -211,6 +212,7 @@ Le tableau de bord de l’utilisation des licences répertorie plusieurs mesures
 | [!UICONTROL Taille de l’Audience Activation] | Taille totale des profils activés sur toute destination basée sur des fichiers au cours d’une année. Remarque : Cela n’inclut pas les profils envoyés par le biais de destinations de diffusion en continu. |
 | [!UICONTROL Audience adressable] | Somme des droits de l’audience de votre entreprise et des droits de l’audience du consommateur. Une audience de consommateur est définie comme le nombre de profils de personne identifiés comme &quot;audience de consommateur&quot; sur la commande client. Une audience métier est définie comme le nombre de profils de personnes économiques identifiées comme le &quot;public professionnel&quot; dans la commande client. |
 | [!UICONTROL Packs d’utilisateurs d’Adhoc Query Service] | Module complémentaire permettant d’augmenter les droits des utilisateurs de Query Service simultanés autorisés de cinq autres utilisateurs simultanés de Query Service et d’une requête ad hoc supplémentaire en cours d’exécution par pack. Plusieurs packs d’utilisateur de requête ad hoc supplémentaires peuvent être sous licence. |
+| [!UICONTROL Richesse moyenne du profil] | **Obsolète** - Somme de toutes les données de production stockées dans le service de profil Hub à un moment donné, divisée par cinq fois le nombre de profils de personnes commerciales autorisés. [!UICONTROL Richesse moyenne du profil] est une fonctionnalité partagée. |
 | [!UICONTROL Lignes CJA disponibles] | Lignes de données quotidiennes moyennes disponibles pour l’analyse dans Customer Journey Analytics. |
 | [!UICONTROL Attributs calculés] | Comptage total des données comportementales de profil agrégées. Les données comportementales de profil agrégées sont basées sur des événements d’expérience convertis en attribut de profil et pouvant être inclus dans un profil de personne ou de personne professionnelle. |
 | [!UICONTROL Audience des consommateurs] | Le nombre de profils de personne identifiés comme &quot;Audience client&quot; sur la commande client. |
