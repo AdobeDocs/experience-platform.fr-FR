@@ -4,9 +4,9 @@ description: Découvrez comment créer des configurations de flux de données dy
 hide: true
 hidefromtoc: true
 badge: label="Version bêta" type="Informative"
-source-git-commit: 86416dc11f92a774cda5d95365d3981a637a5595
+source-git-commit: 615318744c233930fb9bc20e55ff42c3a396e651
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '577'
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ Après avoir [créé un flux de données](configure.md) et [ajouté un service](
 
    ![Image de l’interface utilisateur des flux de données montrant la règle de configuration dynamique.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. Dans la section **[!UICONTROL Configuration]** , faites basculer les services que vous souhaitez activer ou désactiver pour chaque règle, selon que vous souhaitez que les données soient envoyées à chaque service. Si vous désactivez ce bouton, la règle est désactivée et *toutes les données* seront envoyées au service en amont.
+1. Dans la section **[!UICONTROL Configuration]** , faites basculer les services que vous souhaitez activer ou désactiver pour chaque règle, selon que vous souhaitez que les données soient envoyées à chaque service. Si vous désactivez ce bouton, le routage du service est désactivé et *aucune donnée* ne sera envoyée au service en amont.
 
    ![Image de l’interface utilisateur des flux de données montrant la règle de configuration dynamique.](assets/configure-dynamic-datastream/enable-service.png)
 
