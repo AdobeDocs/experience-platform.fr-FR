@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Terminologie des règlements sur la confidentialité
 description: Ce document fournit des définitions des termes clés liés aux réglementations de confidentialité prises en charge par Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: c4ca3dc975b13e2dce2e12784480e53bd0c4ee02
+source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
 workflow-type: tm+mt
 source-wordcount: '2301'
 ht-degree: 2%
@@ -113,7 +113,7 @@ Ce document fournit des définitions des termes clés liés aux réglementations
 
 **[!DNL Nebraska Data Protection Act]** : Une loi sur la protection de la vie privée qui accorde aux Nébraskiens le droit d’accéder, de corriger, de supprimer et de se désabonner de la vente de leurs données personnelles. Elle s’applique aux entreprises qui respectent des seuils de recettes et de traitement des données spécifiques. La loi sur la protection des données exige également que les entreprises mettent en oeuvre des mesures de sécurité des données raisonnables et prévoit une période de traitement de 30 jours pour résoudre les violations avant l’application des sanctions.
 
-**[!DNL New Hampshire Data Privacy Act]** : Ce règlement protège les données personnelles des résidents du New Hampshire en leur accordant des droits d’accès, de suppression et de transfert de leurs données. Il oblige les entreprises à divulguer leurs pratiques de collecte et de partage de données et permet aux consommateurs de se désinscrire de la vente des données. La LNH s&#39;applique aux entreprises qui respectent des seuils de traitement des données spécifiés.
+**[!DNL New Hampshire Privacy Act]** : Ce règlement protège les données personnelles des résidents du New Hampshire en leur accordant des droits d’accès, de suppression et de transfert de leurs données. Il oblige les entreprises à divulguer leurs pratiques de collecte et de partage de données et permet aux consommateurs de se désinscrire de la vente des données. La LNH s&#39;applique aux entreprises qui respectent des seuils de traitement des données spécifiés.
 
 **[!DNL New Jersey Data Protection Act]** : loi de confidentialité étatique complète qui accorde aux résidents du New Jersey les droits d’accès, de correction et de suppression des données personnelles. Il comprend des mécanismes d’exclusion pour la vente de données et la publicité ciblée. La NJDPA s’applique aux entreprises qui traitent de grands volumes de données sur les consommateurs et nécessite une transparence dans la manière dont les entreprises traitent les informations personnelles.
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gestion des tâches liées à la confidentialité dans l’interface utilisateur du Privacy Service
 description: Découvrez comment utiliser l’interface utilisateur du Privacy Service pour coordonner et surveiller les demandes d’accès à des informations personnelles dans différentes applications Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 25c173e22f2aa4922aed89f7c9721e2303d5d4b9
+source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
 workflow-type: tm+mt
 source-wordcount: '1765'
 ht-degree: 45%
@@ -52,7 +52,7 @@ Le tableau de bord de l’interface utilisateur de [!DNL Privacy Service] fourni
 | [!UICONTROL MCDPA_USA (Montana)] | Le [!DNL Montana Consumer Data Privacy Act] |
 | [!UICONTROL NDPA_USA (Nebraska)] | Le [!DNL Nebraska Data Protection Act] |
 | [!UICONTROL NZPA_NZL (Nouvelle-Zélande)] | [!DNL Privacy Act] de la Nouvelle-Zélande |
-| [!UICONTROL NHPA_USA (New Hampshire)] | Le [!DNL New Hampshire Data Privacy Act] |
+| [!UICONTROL NHPA_USA (New Hampshire)] | Le [!DNL New Hampshire Privacy Act] |
 | [!UICONTROL NJDPA_USA (New Jersey)] | Le [!DNL New Jersey Data Protection Act] |
 | [!UICONTROL OCPA USA (Oregon)] | Le [!DNL Oregon Consumer Privacy Act] |
 | [!UICONTROL PDPA_THA (Thaïlande)] | [!DNL Personal Data Protection Act] de la Thaïlande |
