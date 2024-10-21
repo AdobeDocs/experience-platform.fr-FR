@@ -2,10 +2,10 @@
 description: Cette page fournit toutes les informations dont vous avez besoin pour soumettre une révision d’une destination productisée créée à l’aide de Destination SDK.
 title: Envoyer pour révision une destination productisée créée en Destination SDK
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 2c778f98815af87453e84f24ba8bf077774349a1
+source-git-commit: 756c14c67e349a9ca906c027a07766e952485525
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 36%
+source-wordcount: '1052'
+ht-degree: 35%
 
 ---
 
@@ -32,6 +32,7 @@ Cette page répertorie toutes les informations dont vous avez besoin pour envoye
 * Une description des cas d’utilisation que votre destination résout. Cela n’est nécessaire que si vous envoyez une nouvelle configuration de destination.
 * Description de la raison de l’envoi vers la destination. Cela n’est nécessaire que si vous mettez à jour une configuration de destination existante.
 * Des résultats de test après avoir utilisé le point dʼentrée de l’API de destination de test pour effectuer un appel HTTP vers votre destination. Partagez avec l’Adobe un appel API effectué à votre point de terminaison de destination et la réponse de l’API reçue de votre point de terminaison de destination.
+* Enregistrement d’écran qui montre l’expérience utilisateur d’une personne se connectant à votre destination et passant par les étapes d’activation.
 * Autres exigences pour les destinations basées sur des fichiers :
    * Partagez une requête et un exemple de réponse après avoir utilisé l’API de test sur [tester votre destination basée sur des fichiers avec des exemples de profils](../testing-api/batch-destinations/file-based-destination-testing-api.md).
    * Joignez un fichier d’exemple généré par votre destination et exporté vers votre emplacement de stockage.
