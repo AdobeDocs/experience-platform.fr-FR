@@ -2,10 +2,10 @@
 title: Guide de mise en oeuvre d’Identity Service
 description: Découvrez comment les données fournies à Adobe Experience Platform sont traitées avant d’être utilisées par Identity Service pour créer des graphiques d’identités.
 exl-id: c961bbf6-6b46-470f-a671-93ff4173876c
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 4ba25ed684ff126ab1c4f1a33e6503f0342e8720
 workflow-type: tm+mt
-source-wordcount: '581'
-ht-degree: 64%
+source-wordcount: '600'
+ht-degree: 62%
 
 ---
 
@@ -46,6 +46,7 @@ Par exemple, en désignant les champs de numéro de téléphone comme des champs
 >
 >* Les champs de type tableau et mappage ne sont pas pris en charge et ne peuvent pas être marqués et libellés comme des champs dʼidentité.
 >* L’espace de noms des identités résultantes est fourni au moment où le champ est libellé.
+>* Un champ peut être marqué comme identité tant que ce champ n’est pas sous un objet de tableau.
 
 Pour plus d’informations, consultez le guide sur la [définition des champs d’identité dans l’interface utilisateur](../xdm/ui/fields/identity.md).
 
