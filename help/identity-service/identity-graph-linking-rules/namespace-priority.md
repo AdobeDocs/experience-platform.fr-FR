@@ -2,9 +2,9 @@
 title: Priorité des espaces de noms
 description: Découvrez la priorité des espaces de noms dans Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: aae82bc84eff7584098ddb35a481d7349ff837c4
+source-git-commit: b50633a8518f32051549158b23dfc503db255a82
 workflow-type: tm+mt
-source-wordcount: '1605'
+source-wordcount: '1700'
 ht-degree: 2%
 
 ---
@@ -107,7 +107,7 @@ Supposons que les configurations suivantes soient établies pour un environnemen
 
 Compte tenu des configurations décrites ci-dessus, les actions de l’utilisateur et la détermination de l’identité principale seront résolues en tant que telles :
 
-| Action de l’utilisateur (événement d’expérience) | État d’authentification | Source de données | Mappage d’identités | Identité du Principal (clé primaire du fragment de profil) |
+| Action de l’utilisateur (événement d’expérience) | État d’authentification | Source de données | Espaces de noms dans un événement | Espace de noms de l’identité principale |
 | --- | --- | --- | --- | --- |
 | Afficher la page d’offre de carte de crédit | Non authentifié (anonyme) | SDK Web | {ECID} | ECID |
 | Afficher la page d’aide | Non authentifié | SDK Mobile | {ECID, IDFA} | IDFA |
@@ -121,12 +121,16 @@ Compte tenu des configurations décrites ci-dessus, les actions de l’utilisate
 
 ![ Diagramme de stockage de l’adhésion au segment ](../images/namespace-priority/segment-membership-storage.png)
 
-Pour un profil fusionné donné, les appartenances au segment sont stockées par rapport à l’identité avec l’espace de noms de priorité la plus élevée.
+Pour un profil fusionné donné, les appartenances aux segments sont stockées par rapport à l’identité ayant la priorité d’espace de noms la plus élevée.
 
 Supposons, par exemple, qu’il existe deux profils :
 
-* Le premier profil représente John.
-* Le deuxième profil représente Jane.
+* Le profil 1 représente John.
+   * Le profil de John est admissible pour S1 (adhésion au segment 1). Par exemple, S1 peut faire référence à un segment de clients qui s’identifient comme masculins.
+   * Le profil de John est également admissible pour S2 (appartenance au segment 2). Cela peut faire référence à un segment de clients dont l’état de fidélité est or.
+* Le profil 2 représente Jane.
+   * Le profil de Jeanne est admissible pour S3 (appartenance au segment 3). Cela peut se rapporter à un segment de clients qui s’identifient comme femmes.
+   * Le profil de Jeanne est également admissible pour S4 (appartenance au segment 4). Cela peut se rapporter à un segment de clients dont le statut de fidélité est platine.
 
 Si John et Jane partagent un appareil, l’ECID (navigateur web) passe d’une personne à une autre. Cependant, cela n’a aucune incidence sur les informations d’adhésion au segment stockées par rapport à John et Jane.
 
@@ -141,15 +145,13 @@ Cette section décrit comment la priorité des espaces de noms peut affecter d�
 Les demandes de suppression d’enregistrements d’hygiène des données fonctionnent comme suit pour une identité donnée :
 
 * Profil client en temps réel : supprime tout fragment de profil avec une identité spécifiée comme identité principale. **L’identité principale sur Profile sera désormais déterminée en fonction de la priorité de l’espace de noms.**
-* Lac de données : supprime tout enregistrement avec l’identité spécifiée comme identité principale.
+* Lac de données : supprime tout enregistrement avec l’identité spécifiée comme identité principale. Contrairement à Real-Time Customer Profile, l’identité principale dans le lac de données est basée sur l’identité principale spécifiée sur WebSDK (`primary=true`) ou un champ marqué comme identité principale.
 
 Pour plus d’informations, consultez la [présentation de la gestion avancée du cycle de vie](../../hygiene/home.md).
 
 ### Attributs calculés
 
-Les attributs calculés n’utilisent pas la priorité d’espace de noms pour calculer les valeurs. Si vous utilisez des attributs calculés, vous devez vous assurer que le CRMID est désigné comme votre identité principale pour WebSDK. Cette limitation devrait être résolue en août 2024.
-
-Pour plus d’informations, consultez le [guide de l’interface utilisateur des attributs calculés](../../profile/computed-attributes/ui.md).
+Les attributs calculés n’utilisent pas la priorité d’espace de noms pour calculer les valeurs. Si vous utilisez des attributs calculés, vous devez vous assurer que le CRMID est désigné comme votre identité principale pour WebSDK. Pour plus d’informations, consultez le [guide de l’interface utilisateur des attributs calculés](../../profile/computed-attributes/ui.md).
 
 ### Lac de données
 

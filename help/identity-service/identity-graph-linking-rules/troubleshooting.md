@@ -2,9 +2,9 @@
 title: Guide de dépannage des règles de liaison de graphique d’identités
 description: Découvrez comment résoudre les problèmes courants des règles de liaison de graphiques d’identités.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: b50633a8518f32051549158b23dfc503db255a82
 workflow-type: tm+mt
-source-wordcount: '3247'
+source-wordcount: '3335'
 ht-degree: 0%
 
 ---
@@ -59,8 +59,8 @@ Dans le contexte des règles de liaison de graphiques d’identités, un enregis
 
 Tenez compte de l’événement suivant avec deux hypothèses :
 
-* Le nom du champ CRMID est marqué comme identité avec l’espace de noms CRMID.
-* L’espace de noms CRMID est défini comme un espace de noms unique.
+1. Le nom du champ CRMID est marqué comme identité avec l’espace de noms CRMID.
+2. L’espace de noms CRMID est défini comme un espace de noms unique.
 
 L’événement suivant renvoie un message d’erreur indiquant que l’ingestion a échoué.
 
@@ -123,6 +123,24 @@ Après avoir exécuté votre requête, recherchez l’enregistrement d’événe
 >
 >Si les deux identités sont exactement les mêmes et si l’événement est ingéré par flux, Identity et Profile dédupliquent l’identité.
 
+### Les ExperienceEvents de post-authentification sont attribués à un profil authentifié incorrect
+
+La priorité d’espace de noms joue un rôle important dans la manière dont les fragments d’événement déterminent l’identité principale.
+
+* Une fois que vous avez configuré et enregistré vos [paramètres d’identité](./identity-settings-ui.md) pour un environnement de test donné, Profile utilisera alors la [priorité d’espace de noms](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) pour déterminer l’identité principale. Dans le cas d’identityMap, Profile n’utilisera plus l’indicateur `primary=true`.
+* Bien que Profile ne fasse plus référence à cet indicateur, d’autres services sur Experience Platform peuvent continuer à utiliser l’indicateur `primary=true`.
+
+Pour que les [événements d’utilisateur authentifiés](implementation-guide.md#ingest-your-data) soient liés à l’espace de noms de la personne, tous les événements authentifiés doivent contenir l’espace de noms de la personne (CRMID). Cela signifie que même après la connexion d’un utilisateur, l’espace de noms de la personne doit toujours être présent sur chaque événement authentifié.
+
+Vous pouvez continuer à voir l’indicateur &quot;events&quot; `primary=true` lors de la recherche d’un profil dans la visionneuse de profils. Cependant, cette opération est ignorée et ne sera pas utilisée par Profile.
+
+Les AAID sont bloqués par défaut. Par conséquent, si vous utilisez le [connecteur source Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md), vous devez vous assurer que l’ECID a une priorité supérieure à l’ECID afin que les événements non authentifiés aient une identité principale d’ECID.
+
+**Étapes de dépannage**
+
+1. Pour vérifier que les événements authentifiés contiennent à la fois l’espace de noms de personne et de cookie, lisez les étapes décrites dans la section [ sur la résolution des erreurs de dépannage concernant les données non ingérées dans Identity Service](#my-identities-are-not-getting-ingested-into-identity-service).
+2. Pour vérifier que les événements authentifiés possèdent l’identité principale de l’espace de noms de la personne (CRMID, par exemple), recherchez l’espace de noms de la personne dans la visionneuse de profils à l’aide de la stratégie de fusion sans regroupement (il s’agit de la stratégie de fusion qui n’utilise pas de graphique privé). Cette recherche renvoie uniquement les événements associés à l’espace de noms de la personne.
+
 ### Mes fragments d’événement d’expérience ne sont pas ingérés dans Profile {#my-experience-event-fragments-are-not-getting-ingested-into-profile}
 
 Plusieurs raisons expliquent pourquoi les fragments d’événement d’expérience ne sont pas ingérés dans Profile, notamment :
@@ -171,29 +189,11 @@ Ces deux requêtes supposent que :
 * Une identité est envoyée à partir de identityMap et une autre identité à partir d’un descripteur d’identité. **REMARQUE** : dans les schémas de modèle de données d’expérience (XDM), le descripteur d’identité est le champ marqué comme identité.
 * Le CRMID est envoyé via identityMap. Si le CRMID est envoyé en tant que champ, supprimez `key='Email'` de la clause WHERE.
 
-### Mes fragments d’événement d’expérience sont ingérés, mais leur identité principale est &quot;incorrecte&quot; dans Profile.
-
-La priorité d’espace de noms joue un rôle important dans la manière dont les fragments d’événement déterminent l’identité principale.
-
-* Une fois que vous avez configuré et enregistré vos [paramètres d’identité](./identity-settings-ui.md) pour un environnement de test donné, Profile utilisera alors la [priorité d’espace de noms](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) pour déterminer l’identité principale. Dans le cas d’identityMap, Profile n’utilisera plus l’indicateur `primary=true`.
-* Bien que Profile ne fasse plus référence à cet indicateur, d’autres services sur Experience Platform peuvent continuer à utiliser l’indicateur `primary=true`.
-
-Pour que les [événements d’utilisateur authentifiés](implementation-guide.md#ingest-your-data) soient liés à l’espace de noms de la personne, tous les événements authentifiés doivent contenir l’espace de noms de la personne (CRMID). Cela signifie que même après la connexion d’un utilisateur, l’espace de noms de la personne doit toujours être présent sur chaque événement authentifié.
-
-Vous pouvez continuer à voir l’indicateur &quot;events&quot; `primary=true` lors de la recherche d’un profil dans la visionneuse de profils. Cependant, cette opération est ignorée et ne sera pas utilisée par Profile.
-
-Les AAID sont bloqués par défaut. Par conséquent, si vous utilisez le [connecteur source Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md), vous devez vous assurer que l’ECID a une priorité supérieure à l’ECID afin que les événements non authentifiés aient une identité principale d’ECID.
-
-**Étapes de dépannage**
-
-* Pour vérifier que les événements authentifiés contiennent à la fois l’espace de noms de personne et de cookie, lisez les étapes décrites dans la section [ sur la résolution des erreurs de dépannage concernant les données non ingérées dans Identity Service](#my-identities-are-not-getting-ingested-into-identity-service).
-* Pour vérifier que les événements authentifiés possèdent l’identité principale de l’espace de noms de la personne (CRMID, par exemple), recherchez l’espace de noms de la personne dans la visionneuse de profils à l’aide de la stratégie de fusion sans regroupement (il s’agit de la stratégie de fusion qui n’utilise pas de graphique privé). Cette recherche renvoie uniquement les événements associés à l’espace de noms de la personne.
-
 ## Problèmes liés au comportement du graphique {#graph-behavior-related-issues}
 
 Cette section décrit les problèmes courants que vous pouvez rencontrer concernant le comportement du graphique d’identités.
 
-### L&#39;identité est liée à la &quot;mauvaise&quot; personne
+### Les ExperienceEvents non authentifiés sont associés à un profil authentifié incorrect.
 
 L’algorithme d’optimisation des identités honorera [les liens les plus récemment établis et supprimera les liens les plus anciens](./identity-optimization-algorithm.md#identity-optimization-algorithm-details). Par conséquent, il est possible qu’une fois cette fonctionnalité activée, les ECID puissent être réaffectés (réliés) d’une personne à une autre. Pour comprendre l’historique des liens entre une identité au fil du temps, procédez comme suit :
 
@@ -209,11 +209,11 @@ L’algorithme d’optimisation des identités honorera [les liens les plus réc
 
 Tout d’abord, vous devez collecter les informations suivantes :
 
-* Le symbole d’identité (namespaceCode) de l’espace de noms du cookie (par exemple, ECID) et l’espace de noms de la personne (par exemple, CRMID) qui ont été envoyés.
-   * Pour les implémentations du SDK Web, il s’agit généralement des espaces de noms inclus dans identityMap.
-   * Pour les mises en oeuvre du connecteur source Analytics, il s’agit de l’identifiant de cookie inclus dans identityMap. L’identifiant de personne est un champ d’eVar marqué comme identité.
-* Jeu de données dans lequel l’événement a été envoyé (nom_jeu_de_données).
-* La valeur d’identité de l’espace de noms du cookie à rechercher (identity_value).
+1. Le symbole d’identité (namespaceCode) de l’espace de noms du cookie (par exemple, ECID) et l’espace de noms de la personne (par exemple, CRMID) qui ont été envoyés.
+1.1. Pour les implémentations de SDK Web, il s’agit généralement des espaces de noms inclus dans identityMap.
+1.2. Pour les mises en oeuvre du connecteur source Analytics, il s’agit de l’identifiant de cookie inclus dans identityMap. L’identifiant de personne est un champ d’eVar marqué comme identité.
+2. Jeu de données dans lequel l’événement a été envoyé (nom_jeu_de_données).
+3. La valeur d’identité de l’espace de noms du cookie à rechercher (identity_value).
 
 Les symboles d’identité (namespaceCode) sont sensibles à la casse. Pour récupérer tous les symboles d’identité d’un jeu de données donné dans identityMap, exécutez la requête suivante :
 
@@ -241,7 +241,7 @@ Si vous ne connaissez pas la valeur d’identité de votre identifiant de cookie
 
 >[!ENDTABS]
 
-Examinez ensuite l’association de l’espace de noms du cookie par ordre d’horodatage en exécutant la requête suivante :
+Maintenant que vous avez identifié les valeurs de cookie liées à plusieurs identifiants de personne, prenez-en une dans les résultats et utilisez-la dans la requête suivante pour obtenir une vue chronologique du moment où cette valeur de cookie a été liée à un autre identifiant de personne :
 
 >[!BEGINTABS]
 
@@ -368,6 +368,13 @@ Les points clés à mettre en évidence sont les suivants :
    * Par exemple, en cas de condition d’attente entre les actions et si l’ECID transfère pendant la période d’attente, un autre profil peut être ciblé.
    * Avec cette fonctionnalité, les ECID ne sont plus toujours associés à un profil.
    * Il est recommandé de commencer les parcours avec les espaces de noms de personne (CRMID).
+
+>[!TIP]
+>
+>Parcours doit rechercher un profil avec des espaces de noms uniques, car un espace de noms non unique peut être réaffecté à un autre utilisateur.
+>
+>* Les ECID et les espaces de noms de téléphone/e-mail non uniques peuvent passer d’une personne à une autre.
+>* Si un parcours a une condition d’attente et si ces espaces de noms non uniques sont utilisés pour rechercher un profil sur un parcours, le message du parcours peut être envoyé à une personne incorrecte.
 
 ## Priorité des espaces de noms
 
