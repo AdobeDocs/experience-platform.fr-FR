@@ -1,21 +1,21 @@
 ---
-title: Utilisation de champs calculés pour exporter des tableaux en tant que chaînes
+title: Utiliser des champs calculés pour exporter des tableaux en tant que chaînes
 type: Tutorial
 description: Découvrez comment utiliser les champs calculés pour exporter des tableaux de Real-Time CDP vers des destinations de stockage dans le cloud en tant que chaînes.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
 workflow-type: tm+mt
 source-wordcount: '1556'
-ht-degree: 0%
+ht-degree: 7%
 
 ---
 
-# Utilisation de champs calculés pour exporter des tableaux en tant que chaînes{#use-calculated-fields-to-export-arrays-as-strings}
+# Utiliser des champs calculés pour exporter des tableaux en tant que chaînes{#use-calculated-fields-to-export-arrays-as-strings}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
->title="Prise en charge des tableaux d’exportation"
->abstract="<p>Utilisez le contrôle **Ajouter un champ calculé** pour exporter des tableaux de valeurs int, string, boolean et object de l’Experience Platform vers la destination de stockage dans le cloud souhaitée.</p><p> Les tableaux doivent être exportés en tant que chaînes à l’aide de la fonction `array_to_string` . Consultez la documentation pour obtenir des exemples complets et d’autres fonctions prises en charge.</p>"
+>title="Prise en charge de l’export des tableaux"
+>abstract="<p>Utilisez la commande **Ajouter un champ calculé** pour exporter des tableaux simples d’entiers, de chaînes, de valeurs booléennes ou d’objets d’Experience Platform vers la destination d’espace de stockage dans le cloud de votre choix.</p><p> Les tableaux doivent être exportés en tant que chaînes à l’aide de la fonction `array_to_string`. Consultez la documentation pour obtenir des exemples complets et des fonctions prises en charge.</p>"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=fr#examples" text="Exemples"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html?lang=fr#known-limitations" text="Limites connues"
 
@@ -79,13 +79,13 @@ Notez les limites connues suivantes qui s’appliquent actuellement à cette fon
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
->title="Activation du schéma de sortie hiérarchique"
->abstract="Activez cette option si vous souhaitez exporter des structures hiérarchiques telles que des tableaux."
+>title="Activer le schéma de sortie hiérarchique"
+>abstract="Activez cette option pour exporter des structures hiérarchiques telles que des tableaux."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
->title="Ajouter les champs calculés désactivés"
->abstract="Ce contrôle est désactivé car vous avez choisi d’exporter des structures plates lors de la connexion à la destination."
+>title="« Ajouter des champs calculés » désactivé"
+>abstract="Cette commande est désactivée, car vous avez choisi d’exporter des structures plates lors de la connexion à la destination."
 
 Dans l’étape de mappage du workflow d’activation pour les destinations de stockage dans le cloud, sélectionnez **[!UICONTROL Ajouter un champ calculé]**.
 
