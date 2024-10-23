@@ -2,9 +2,9 @@
 title: Guide de mise en oeuvre des règles de liaison de graphiques d’identités
 description: Découvrez les étapes recommandées à suivre lors de l’implémentation de vos données avec des configurations de règles de liaison de graphiques d’identités.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 5d1bcaa84875e55595996253fb72cf768af16e05
+source-git-commit: 720ffa1ca0ee69cfc802cd50aef26b6f38d2142c
 workflow-type: tm+mt
-source-wordcount: '1634'
+source-wordcount: '1668'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Composition détaillé :
 1. [Conditions préalables requises pour la mise en oeuvre](#prerequisites-for-implementation)
 2. [Créer les espaces de noms d’identité nécessaires](#namespace)
 3. [Utilisez l’outil de simulation graphique pour vous familiariser avec l’algorithme d’optimisation des identités.](#graph-simulation)
-4. [Utilisez l’outil de paramètres d’identité pour désigner vos espaces de noms uniques et configurer des classements de priorité pour vos espaces de noms.](#identity-settings)
+4. [Utilisez l’interface utilisateur des paramètres d’identité pour désigner vos espaces de noms uniques et configurer des classements de priorité pour vos espaces de noms.](#identity-settings)
 5. [Création d’un schéma de modèle de données d’expérience (XDM)](#schema)
 6. [Créer un jeu de données](#dataset)
 7. [Ingestion de vos données dans Experience Platform](#ingest)
@@ -183,9 +183,13 @@ En créant différentes configurations, vous pouvez utiliser l’outil de simula
 
 ## Configuration des paramètres d’identité {#identity-settings}
 
-Une fois que vous avez une meilleure idée du comportement de votre graphique, accédez à l’ [outil de paramètres d’identité](./identity-settings-ui.md) dans l’espace de travail de l’interface utilisateur d’Identity Service.
+Une fois que vous avez une meilleure idée du comportement de votre graphique, accédez à l’[ interface utilisateur des paramètres d’identité](./identity-settings-ui.md) dans l’espace de travail de l’interface utilisateur d’Identity Service. Pour accéder à l’interface utilisateur des paramètres d’identité, sélectionnez **[!UICONTROL Identités]** dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Paramètres]**.
 
-Utilisez l’outil de paramètres d’identité pour désigner vos espaces de noms uniques et configurer vos espaces de noms par ordre de priorité. Une fois que vous avez terminé d’appliquer vos paramètres, vous devez attendre au moins six heures avant de pouvoir procéder à l’ingestion des données, car au moins six heures sont nécessaires pour que les nouveaux paramètres soient reflétés dans Identity Service.
+![La page de navigation des identités avec le bouton de paramètres en surbrillance.](../images/implementation/settings.png)
+
+Utilisez l’interface utilisateur des paramètres d’identité pour désigner vos espaces de noms uniques et configurer vos espaces de noms par ordre de priorité. Une fois que vous avez terminé d’appliquer vos paramètres, vous devez attendre au moins six heures avant de pouvoir procéder à l’ingestion des données, car au moins six heures sont nécessaires pour que les nouveaux paramètres soient reflétés dans Identity Service.
+
+Pour plus d’informations, consultez le [guide de l’interface utilisateur des paramètres d’identité](./identity-settings-ui.md).
 
 ## Créer un schéma XDM {#schema}
 

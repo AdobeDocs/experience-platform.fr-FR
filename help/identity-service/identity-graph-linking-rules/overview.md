@@ -2,7 +2,7 @@
 title: Règles de liaison de graphiques d’identités
 description: Découvrez les règles de liaison de graphiques d’identités dans Identity Service.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: 5092421ed8d0ff61fb3ed7f0849d2271f1fa144c
 workflow-type: tm+mt
 source-wordcount: '1424'
 ht-degree: 2%
@@ -98,11 +98,11 @@ Vous pouvez configurer un espace de noms pour qu’il soit unique à l’aide de
 
 Examinez le scénario suivant :
 
-* Scott utilise une tablette et ouvre son navigateur Google Chrome pour accéder à nike<span>.com, où il se connecte et recherche de nouvelles chaussures de basket.
+* Scott utilise une tablette et ouvre son navigateur Google Chrome pour accéder à acme<span>.com, où il se connecte et recherche de nouvelles chaussures de basket.
    * En arrière-plan, ce scénario consigne les identités suivantes :
       * Espace de noms et valeur ECID représentant l’utilisation du navigateur
       * Un espace de noms et une valeur CRMID pour représenter l’utilisateur authentifié (Scott s’est connecté avec son nom d’utilisateur et son mot de passe).
-* Son fils Peter utilise alors la même tablette et utilise également Google Chrome pour aller sur nike<span>.com, où il se connecte avec son propre compte pour rechercher du matériel de football.
+* Son fils Peter utilise alors la même tablette et utilise également Google Chrome pour aller sur acme<span>.com, où il se connecte avec son propre compte pour rechercher du matériel de football.
    * En arrière-plan, ce scénario consigne les identités suivantes :
       * Espace de noms et valeur ECID identiques pour représenter le navigateur.
       * Un nouvel espace de noms et une nouvelle valeur CRMID pour représenter l’utilisateur authentifié.
