@@ -1,29 +1,29 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;service de flux;API de service de flux;sources;sources
 title: Filtrage Des Données Au Niveau De La Ligne Pour Un Source À L’Aide De L’API Flow Service
 description: Ce tutoriel décrit les étapes de filtrage des données au niveau de la source à l’aide de l’API Flow Service
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: b0e2fc4767fb6fbc90bcdd3350b3add965988f8f
+source-git-commit: 544bb7b5aff437fd49c30ac3d6261f103a609cac
 workflow-type: tm+mt
-source-wordcount: '778'
-ht-degree: 14%
+source-wordcount: '1820'
+ht-degree: 16%
 
 ---
 
 # Filtrage des données au niveau des lignes pour une source à l’aide de l’API [!DNL Flow Service]
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
 >La prise en charge du filtrage des données au niveau des lignes n’est actuellement disponible que pour les sources suivantes :
 >
->* [Google BigQuery](../../connectors/databases/bigquery.md)
->* [Microsoft Dynamics](../../connectors/crm/ms-dynamics.md)
->* [Salesforce](../../connectors/crm/salesforce.md)
->* [Snowflake](../../connectors/databases/snowflake.md)
+>* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
+>* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
+>* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
+>* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+>* [[!DNL Marketo Engage] activités standard](../../connectors/adobe-applications/marketo/marketo.md)
 
-Ce tutoriel décrit les étapes à suivre pour filtrer les données au niveau des lignes pour une source à l’aide de l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lisez ce guide pour savoir comment filtrer les données au niveau des lignes pour une source à l’aide de l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-## Prise en main
+## Commencer
 
 Ce tutoriel nécessite une compréhension du fonctionnement des composants suivants d’Adobe Experience Platform :
 
@@ -34,15 +34,15 @@ Ce tutoriel nécessite une compréhension du fonctionnement des composants suiva
 
 Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide [Prise en main des API Platform](../../../landing/api-guide.md).
 
-## Filtrage des données source
+## Filtrage des données source {#filter-source-data}
 
 Les étapes suivantes décrivent les étapes à suivre pour filtrer les données au niveau de la ligne pour votre source.
 
-### Recherche des spécifications de connexion
+### Récupération des spécifications de connexion {#retrieve-your-connection-specs}
 
-Avant de pouvoir utiliser l’API pour filtrer les données au niveau des lignes d’une source, vous devez d’abord récupérer les détails de spécification de connexion de votre source afin de déterminer les opérateurs et la langue pris en charge par une source spécifique.
+La première étape du filtrage des données au niveau des lignes pour votre source consiste à récupérer les spécifications de connexion de votre source et à déterminer les opérateurs et la langue pris en charge par votre source.
 
-Pour récupérer la spécification de connexion d’une source donnée, envoyez une requête GET au point de terminaison `/connectionSpecs` de l’API [!DNL Flow Service] tout en fournissant le nom de propriété de votre source dans le cadre de vos paramètres de requête.
+Pour récupérer la spécification de connexion d’une source donnée, envoyez une requête GET au point de terminaison `/connectionSpecs` de l’API [!DNL Flow Service] et fournissez le nom de propriété de votre source dans le cadre de vos paramètres de requête.
 
 **Format d’API**
 
@@ -54,7 +54,7 @@ GET /connectionSpecs/{QUERY_PARAMS}
 | --- | --- |
 | `{QUERY_PARAMS}` | Paramètres de requête facultatifs selon lesquels filtrer les résultats. Vous pouvez récupérer la spécification de connexion [!DNL Google BigQuery] en appliquant la propriété `name` et en spécifiant `"google-big-query"` dans votre recherche. |
 
-**Requête**
++++Requête
 
 La requête suivante récupère les spécifications de connexion pour [!DNL Google BigQuery].
 
@@ -67,13 +67,11 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Réponse**
++++
 
-Une réponse réussie renvoie les spécifications de connexion pour [!DNL Google BigQuery], y compris des informations sur le langage de requête et les opérateurs logiques pris en charge.
++++Réponse
 
->[!NOTE]
->
->La réponse de l’API ci-dessous est tronquée pour des raisons de concision.
+Une réponse réussie renvoie le code d’état 200 et les spécifications de connexion pour [!DNL Google BigQuery], y compris des informations sur son langage de requête pris en charge et les opérateurs logiques.
 
 ```json
 "attributes": {
@@ -111,7 +109,9 @@ Une réponse réussie renvoie les spécifications de connexion pour [!DNL Google
 
 {style="table-layout:auto"}
 
-#### Opérateurs de comparaison 
++++
+
+#### Opérateurs de comparaison  {#comparison-operators}
 
 | Opérateur | Description |
 | --- | --- |
@@ -126,7 +126,7 @@ Une réponse réussie renvoie les spécifications de connexion pour [!DNL Google
 
 {style="table-layout:auto"}
 
-### Définition des conditions de filtrage pour l’ingestion
+### Définition des conditions de filtrage pour l’ingestion {#specify-filtering-conditions-for-ingestion}
 
 Une fois que vous avez identifié les opérateurs logiques et le langage de requête pris en charge par votre source, vous pouvez utiliser Profile Query Language (PQL) pour spécifier les conditions de filtrage à appliquer à vos données source.
 
@@ -153,7 +153,7 @@ Dans l’exemple ci-dessous, les conditions sont appliquées uniquement à la s�
 }
 ```
 
-### Prévisualiser vos données
+### Prévisualiser vos données {#preview-your-data}
 
 Vous pouvez prévisualiser vos données en envoyant une requête de GET au point de terminaison `/explore` de l’API [!DNL Flow Service] tout en fournissant `filters` dans le cadre de vos paramètres de requête et en spécifiant vos conditions d’entrée PQL dans [!DNL Base64].
 
@@ -169,7 +169,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=table&object={TABLE_PAT
 | `{TABLE_PATH}` | La propriété path de la table que vous souhaitez inspecter. |
 | `{FILTERS}` | Vos conditions de filtrage PQL codées dans [!DNL Base64]. |
 
-**Requête**
++++Requête
 
 ```shell
 curl -X GET \
@@ -180,9 +180,11 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-**Réponse**
++++
 
-Une requête réussie renvoie la réponse suivante.
++++Réponse
+
+Une réponse réussie renvoie le contenu et la structure de vos données.
 
 ```json
 {
@@ -328,9 +330,11 @@ Une requête réussie renvoie la réponse suivante.
 }
 ```
 
++++
+
 ### Créer une connexion source pour les données filtrées
 
-Pour créer une connexion source et ingérer des données filtrées, envoyez une requête de POST au point de terminaison `/sourceConnections` tout en fournissant vos conditions de filtrage dans le cadre de vos paramètres de corps.
+Pour créer une connexion source et ingérer des données filtrées, envoyez une requête de POST au point de terminaison `/sourceConnections` et fournissez vos conditions de filtrage dans les paramètres du corps de la requête.
 
 **Format d’API**
 
@@ -338,7 +342,7 @@ Pour créer une connexion source et ingérer des données filtrées, envoyez une
 POST /sourceConnections
 ```
 
-**Requête**
++++Requête
 
 La requête suivante crée une connexion source pour ingérer des données à partir de `test1.fasTestTable` où `city` = `DDN`.
 
@@ -385,7 +389,9 @@ curl -X POST \
     }'
 ```
 
-**Réponse**
++++
+
++++Réponse
 
 Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion source nouvellement créée.
 
@@ -396,6 +402,493 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la connexion sour
 }
 ```
 
++++
+
+## Filtrage des entités d’activité pour [!DNL Marketo Engage] {#filter-for-marketo}
+
+Vous pouvez utiliser le filtrage au niveau des lignes pour filtrer les entités d’activité lors de l’utilisation du [[!DNL Marketo Engage] connecteur source](../../connectors/adobe-applications/marketo/marketo.md). Actuellement, vous pouvez uniquement filtrer les entités d’activité et les types d’activité standard. Les activités personnalisées restent régies par les [[!DNL Marketo] mappages de champs](../../connectors/adobe-applications/mapping/marketo.md).
+
+### [!DNL Marketo] types d’activité standard {#marketo-standard-activity-types}
+
+Le tableau suivant décrit les types d’activité standard pour [!DNL Marketo]. Utilisez ce tableau comme référence pour vos critères de filtrage.
+
+| Identifiant de type d’activité | Nom du type d’activité |
+| --- | --- |
+| 1 | Visite de page web |
+| 2 | Remplir le formulaire |
+| 3 | Cliquez sur Lien |
+| 6 | Envoyer un courrier électronique |
+| 7 | E-mail remis |
+| 8 | E-mail non remis |
+| 9 | Désabonner les e-mails |
+| 10 | Ouvrir le courrier électronique |
+| 11 | Cliquez sur Courriel |
+| 12 | Nouveau prospect |
+| 21 | Convertir le prospect |
+| 22 | Modifier le score |
+| 24 | Ajouter à la liste |
+| 25 | Supprimer de la liste |
+| 27 | Non-remise temporaire de l’e-mail |
+| 32 | Fusionner les prospects |
+| 34 | Ajouter à l’opportunité |
+| 35 | Supprimer de l’opportunité |
+| 36 | Mettre à jour l’opportunité |
+| 46 | Moment intéressant |
+| 101 | Modifier l’étape Revenu |
+| 104 | Changement d’état dans la progression |
+| 110 | Appeler le Webhook |
+| 113 | Ajouter à l’alimentation |
+| 114 | Modifier le suivi de l’infirmière |
+| 115 | Changement de cadence d&#39;infirmière |
+
+{style="table-layout:auto"}
+
+Suivez les étapes ci-dessous pour filtrer vos entités d’activité standard lors de l’utilisation du connecteur source [!DNL Marketo].
+
+### Créer un brouillon de flux de données
+
+Créez tout d’abord un [[!DNL Marketo] flux de données](../ui/create/adobe-applications/marketo.md) et enregistrez-le en tant que brouillon. Pour obtenir des instructions détaillées sur la création d’un flux de données de brouillon, reportez-vous à la documentation suivante :
+
+* [Enregistrement d’un flux de données en tant que brouillon à l’aide de l’interface utilisateur](../ui/draft.md)
+* [Enregistrement d’un flux de données en tant que brouillon à l’aide de l’API](../api/draft.md)
+
+### Récupération de votre identifiant de flux de données
+
+Une fois que vous disposez d’un flux de données en version préliminaire, vous devez récupérer son identifiant correspondant.
+
+Dans l’interface utilisateur, accédez au catalogue des sources, puis sélectionnez **[!UICONTROL Flux de données]** dans l’en-tête supérieur. Utilisez la colonne d’état pour identifier tous les flux de données enregistrés en mode préliminaire, puis sélectionnez le nom de votre flux de données. Ensuite, utilisez le panneau **[!UICONTROL Propriétés]** situé à droite pour localiser votre identifiant de flux de données.
+
+### Récupération des détails de votre flux de données
+
+Ensuite, vous devez récupérer les détails de votre flux de données, en particulier l’identifiant de connexion source associé à votre flux de données. Pour récupérer les détails de votre flux de données, envoyez une requête GET au point de terminaison `/flows` et fournissez votre identifiant de flux de données comme paramètre de chemin d’accès.
+
+**Format d’API**
+
+```http
+GET /flows/{FLOW_ID}
+```
+
+| Paramètre | Description |
+| --- | --- |
+| `{FLOW_ID}` | L’identifiant du flux de données que vous souhaitez récupérer. |
+
++++Requête
+
+La requête suivante récupère des informations sur l’identifiant de flux de données : `a7e88a01-40f9-4ebf-80b2-0fc838ff82ef`.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/flows/a7e88a01-40f9-4ebf-80b2-0fc838ff82ef' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
++++Réponse
+
+Une réponse réussie renvoie les détails de votre flux de données, y compris des informations sur les connexions source et cible correspondantes. Vous devez prendre note de vos identifiants de connexion source et cible, car ces valeurs sont requises ultérieurement pour publier votre flux de données.
+
+```json {line-numbers="true" start-line="1" highlight="23, 26"}
+{
+    "items": [
+        {
+            "id": "a7e88a01-40f9-4ebf-80b2-0fc838ff82ef",
+            "createdAt": 1728592929650,
+            "updatedAt": 1728597187444,
+            "createdBy": "acme@AdobeID",
+            "updatedBy": "acme@AdobeID",
+            "createdClient": "exc_app",
+            "updatedClient": "acme",
+            "sandboxId": "7f3419ce-53e2-476b-b419-ce53e2376b02",
+            "sandboxName": "prod",
+            "imsOrgId": "acme@AdobeOrg",
+            "name": "Marketo Engage Standard Activities ACME",
+            "description": "",
+            "flowSpec": {
+                "id": "15f8402c-ba66-4626-b54c-9f8e54244d61",
+                "version": "1.0"
+            },
+            "state": "enabled",
+            "version": "\"600290fc-0000-0200-0000-67084cc30000\"",
+            "etag": "\"600290fc-0000-0200-0000-67084cc30000\"",
+            "sourceConnectionIds": [
+                "56f7eb3a-b544-4eaa-b167-ef1711044c7a"
+            ],
+            "targetConnectionIds": [
+                "7e53e6e8-b432-4134-bb29-21fc6e8532e5"
+            ],
+            "inheritedAttributes": {
+                "properties": {
+                    "isSourceFlow": true
+                },
+                "sourceConnections": [
+                    {
+                        "id": "56f7eb3a-b544-4eaa-b167-ef1711044c7a",
+                        "connectionSpec": {
+                            "id": "bf1f4218-73ce-4ff0-b744-48d78ffae2e4",
+                            "version": "1.0"
+                        },
+                        "baseConnection": {
+                            "id": "0137118b-373a-4c4e-847c-13a0abf73b33",
+                            "connectionSpec": {
+                                "id": "bf1f4218-73ce-4ff0-b744-48d78ffae2e4",
+                                "version": "1.0"
+                            }
+                        }
+                    }
+                ],
+                "targetConnections": [
+                    {
+                        "id": "7e53e6e8-b432-4134-bb29-21fc6e8532e5",
+                        "connectionSpec": {
+                            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+                            "version": "1.0"
+                        }
+                    }
+                ]
+            },
+            "options": {
+                "isSampleDataflow": false,
+                "errorDiagnosticsEnabled": true
+            },
+            "transformations": [
+                {
+                    "name": "Mapping",
+                    "params": {
+                        "mappingVersion": 0,
+                        "mappingId": "f6447514ef95482889fac1818972e285"
+                    }
+                }
+            ],
+            "runs": "/runs?property=flowId==a7e88a01-40f9-4ebf-80b2-0fc838ff82ef",
+            "lastOperation": {
+                "started": 1728592929650,
+                "updated": 0,
+                "operation": "create"
+            },
+            "lastRunDetails": {
+                "id": "2d7863d5-ca4d-4313-ac52-2603eaf2cdbe",
+                "state": "success",
+                "startedAtUTC": 1728594713537,
+                "completedAtUTC": 1728597183080
+            },
+            "labels": [],
+            "recordTypes": [
+                {
+                    "type": "experienceevent",
+                    "extensions": {}
+                }
+            ]
+        }
+    ]
+}
+```
+
++++
+
+### Récupération des détails de votre connexion source
+
+Ensuite, utilisez votre ID de connexion source et envoyez une requête GET au point de terminaison `/sourceConnections` pour récupérer les détails de votre connexion source.
+
+**Format d’API**
+
+```http
+GET /sourceConnections/{SOURCE_CONNECTION_ID}
+```
+
+| Paramètre | Description |
+| --- | --- |
+| `{SOURCE_CONNECTION_ID}` | L’identifiant de la connexion source que vous souhaitez récupérer. |
+
++++Requête
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections/56f7eb3a-b544-4eaa-b167-ef1711044c7a' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
++++Réponse
+
+Une réponse réussie renvoie les détails de votre connexion source. Prenez note de la version, car vous aurez besoin de cette valeur à l’étape suivante pour mettre à jour votre connexion source.
+
+```json {line-numbers="true" start-line="1" highlight="30"}
+{
+    "items": [
+        {
+            "id": "b85b895f-a289-42e9-8fe1-ae448ccc7e53",
+            "createdAt": 1729634331185,
+            "updatedAt": 1729634331185,
+            "createdBy": "acme@AdobeID",
+            "updatedBy": "acme@AdobeID",
+            "createdClient": "exc_app",
+            "updatedClient": "acme",
+            "sandboxId": "7f3419ce-53e2-476b-b419-ce53e2376b02",
+            "sandboxName": "prod",
+            "imsOrgId": "acme@AdobeOrg",
+            "name": "New Source Connection - 2024-10-23T03:28:50+05:30",
+            "description": "Source connection created from the workflow",
+            "baseConnectionId": "fd9f7455-1e23-4831-9283-7717e20bee40",
+            "state": "draft",
+            "data": {
+                "format": "tabular",
+                "schema": null,
+                "properties": null
+            },
+            "connectionSpec": {
+                "id": "2d31dfd1-df1a-456b-948f-226e040ba102",
+                "version": "1.0"
+            },
+            "params": {
+                "columns": [],
+                "tableName": "Activity"
+            },
+            "version": "\"210068a6-0000-0200-0000-6718201b0000\"",
+            "etag": "\"210068a6-0000-0200-0000-6718201b0000\"",
+            "inheritedAttributes": {
+                "baseConnection": {
+                    "id": "fd9f7455-1e23-4831-9283-7717e20bee40",
+                    "connectionSpec": {
+                        "id": "2d31dfd1-df1a-456b-948f-226e040ba102",
+                        "version": "1.0"
+                    }
+                }
+            },
+            "lastOperation": {
+                "started": 1729634331185,
+                "updated": 0,
+                "operation": "draft_create"
+            }
+        }
+    ]
+}
+```
+
++++
+
+### Mettre à jour la connexion source avec les conditions de filtrage
+
+Maintenant que vous disposez de votre ID de connexion source et de sa version correspondante, vous pouvez effectuer une demande de PATCH avec les conditions de filtrage qui spécifient vos types d’activité standard.
+
+Pour mettre à jour votre connexion source, envoyez une requête de PATCH au point de terminaison `/sourceConnections` et fournissez votre ID de connexion source comme paramètre de requête. De plus, vous devez fournir un paramètre d’en-tête `If-Match` avec la version correspondante de votre connexion source.
+
+>[!TIP]
+>
+>L’en-tête `If-Match` est requis lors de l’exécution d’une requête PATCH. La valeur de cet en-tête est la version/l’etag unique du flux de données que vous souhaitez mettre à jour. La valeur version/etag est mise à jour à chaque mise à jour réussie d’un flux de données.
+
+**Format d’API**
+
+```http
+GET /sourceConnections/{SOURCE_CONNECTION_ID}
+```
+
+| Paramètre | Description |
+| --- | --- |
+| `{SOURCE_CONNECTION_ID}` | L’identifiant de la connexion source que vous souhaitez récupérer. |
+
++++Requête
+
+```shell
+curl -X PATCH \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections/56f7eb3a-b544-4eaa-b167-ef1711044c7a' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'If-Match: {VERSION_HERE}'
+  -d '
+      {
+        "op": "add",
+        "path": "/params/filters",
+        "value": {
+            "type": "PQL",
+            "format": "pql/json",
+            "value": {
+                "nodeType": "fnApply",
+                "fnName": "in",
+                "params": [
+                    {
+                        "nodeType": "fieldLookup",
+                        "fieldName": "activityType"
+                    },
+                    {
+                        "nodeType": "literal",
+                        "value": [
+                            "Change Status in Progression",
+                            "Fill Out Form"
+                        ]
+                    }
+                ]
+            }
+        }
+    }'
+```
+
++++
+
++++Réponse
+
+Une réponse réussie renvoie votre identifiant de connexion source et votre balise (version).
+
+```json
+{
+    "id": "56f7eb3a-b544-4eaa-b167-ef1711044c7a",
+    "etag": "\"210068a6-0000-0200-0000-6718201b0000\""
+}
+```
+
++++
+
+### Publish votre connexion source
+
+Une fois la connexion source mise à jour avec vos conditions de filtrage, vous pouvez désormais vous déplacer à partir de l’état de brouillon et publier votre connexion source. Pour ce faire, envoyez une requête de POST au point de terminaison `/sourceConnections` et fournissez l’identifiant de votre connexion source de brouillon, ainsi qu’une opération d’action pour la publication.
+
+**Format d’API**
+
+```http
+POST /sourceConnections/{SOURCE_CONNECTION_ID}/action?op=publish
+```
+
+| Paramètre | Description |
+| --- | --- |
+| `{SOURCE_CONNECTION_ID}` | L’identifiant de la connexion source que vous souhaitez publier. |
+| `op` | Opération d’action qui met à jour le statut de la connexion source interrogée. Pour publier un brouillon de connexion source, définissez `op` sur `publish`. |
+
++++Requête
+
+La requête suivante publie un brouillon de connexion source.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections/56f7eb3a-b544-4eaa-b167-ef1711044c7a/action?op=publish' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
++++
+
++++Réponse
+
+Une réponse réussie renvoie votre identifiant de connexion source et votre balise (version).
+
+```json
+{
+    "id": "56f7eb3a-b544-4eaa-b167-ef1711044c7a",
+    "etag": "\"9f007f7b-0000-0200-0000-670ef1150000\""
+}
+```
+
++++
+
+### Publish votre connexion cible
+
+Comme à l’étape précédente, vous devez également publier votre connexion cible pour pouvoir continuer et publier votre flux de données de brouillon. Effectuez une requête de POST sur le point de terminaison `/targetConnections` et fournissez l’identifiant de la connexion cible de brouillon que vous souhaitez publier, ainsi qu’une opération d’action pour la publication.
+
+**Format d’API**
+
+```http
+POST /targetConnections/{TARGET_CONNECTION_ID}/action?op=publish
+```
+
+| Paramètre | Description |
+| --- | --- |
+| `{TARGET_CONNECTION_ID}` | Identifiant de la connexion cible que vous souhaitez publier. |
+| `op` | Opération d’action qui met à jour le statut de la connexion cible interrogée. Pour publier un brouillon de connexion cible, définissez `op` sur `publish`. |
+
++++Requête
+
+La requête suivante publie la connexion cible avec l’ID : `7e53e6e8-b432-4134-bb29-21fc6e8532e5`.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections/7e53e6e8-b432-4134-bb29-21fc6e8532e5/action?op=publish' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
++++
+
++++Réponse
+
+Une réponse réussie renvoie l’identifiant et l’etag correspondant à votre connexion cible publiée.
+
+```json
+{
+    "id": "7e53e6e8-b432-4134-bb29-21fc6e8532e5",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
+}
+```
+
++++
+
+
+### Publish de votre flux de données
+
+Une fois vos connexions source et cible publiées, vous pouvez passer à l’étape finale et publier votre flux de données. Pour publier votre flux de données, envoyez une requête de POST au point de terminaison `/flows` et fournissez votre identifiant de flux de données ainsi qu’une opération d’action pour la publication.
+
+**Format d’API**
+
+```http
+POST /flows/{FLOW_ID}/action?op=publish
+```
+
+| Paramètre | Description |
+| --- | --- |
+| `{FLOW_ID}` | L’identifiant du flux de données que vous souhaitez publier. |
+| `op` | Opération d’action qui met à jour le statut du flux de données interrogé. Pour publier un brouillon de flux de données, définissez `op` sur `publish`. |
+
++++Requête
+
+La requête suivante permet de publier le brouillon de flux de données.
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows/a7e88a01-40f9-4ebf-80b2-0fc838ff82ef/action?op=publish' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
++++
+
++++Réponse
+
+Une réponse réussie renvoie l’identifiant et l’`etag` correspondant du flux de données.
+
+```json
+{
+  "id": "a7e88a01-40f9-4ebf-80b2-0fc838ff82ef",
+  "etag": "\"4b0354b7-0000-0200-0000-6716ce1f0000\""
+}
+```
+
++++
+
+Vous pouvez utiliser l’interface utilisateur de l’Experience Platform pour vérifier que votre flux de données de brouillon a été publié. Accédez à la page des flux de données dans le catalogue de sources et référencez l’ **[!UICONTROL état]** de votre flux de données. En cas de réussite, l’état doit maintenant être défini sur **Enabled**.
+
+>[!TIP]
+>
+>* Un flux de données avec le filtrage activé ne sera renvoyé qu’une seule fois. Toute modification apportée aux critères de filtrage (qu’il s’agisse d’un ajout ou d’une suppression) ne peut prendre effet que pour les données incrémentielles.
+>* Si vous devez ingérer des données historiques pour tout nouveau type d’activité, il est recommandé de créer un nouveau flux de données et de définir les critères de filtrage avec les types d’activité appropriés dans la condition de filtrage.
+>* Vous ne pouvez pas filtrer les types d’activité personnalisés.
+>* Vous ne pouvez pas prévisualiser les données filtrées.
+
 ## Annexe
 
 Cette section fournit d’autres exemples de payloads différents pour le filtrage.
@@ -403,6 +896,8 @@ Cette section fournit d’autres exemples de payloads différents pour le filtra
 ### Conditions uniques
 
 Vous pouvez omettre le `fnApply` initial pour les scénarios qui ne nécessitent qu’une seule condition.
+
++++Sélectionner pour afficher l’exemple
 
 ```json
 {
@@ -425,9 +920,13 @@ Vous pouvez omettre le `fnApply` initial pour les scénarios qui ne nécessitent
 }
 ```
 
++++
+
 ### Utilisation de l’opérateur `in`
 
 Consultez l’exemple de payload ci-dessous pour obtenir un exemple de l’opérateur `in`.
+
++++Sélectionner pour afficher l’exemple
 
 ```json
 {
@@ -459,7 +958,11 @@ Consultez l’exemple de payload ci-dessous pour obtenir un exemple de l’opér
 }
 ```
 
++++
+
 ### Utilisation de l’opérateur `isNull`
+
++++Sélectionner pour afficher l’exemple
 
 Consultez l’exemple de payload ci-dessous pour obtenir un exemple de l’opérateur `isNull`.
 
@@ -480,9 +983,14 @@ Consultez l’exemple de payload ci-dessous pour obtenir un exemple de l’opér
 }
 ```
 
++++
+
 ### Utilisation de l’opérateur `NOT`
 
 Consultez l’exemple de payload ci-dessous pour obtenir un exemple de l’opérateur `NOT`.
+
+
++++Sélectionner pour afficher l’exemple
 
 ```json
 {
@@ -507,9 +1015,13 @@ Consultez l’exemple de payload ci-dessous pour obtenir un exemple de l’opér
 }
 ```
 
++++
+
 ### Exemple avec conditions imbriquées
 
 Consultez l’exemple de payload ci-dessous pour obtenir un exemple de conditions imbriquées complexes.
+
++++Sélectionner pour afficher l’exemple
 
 ```json
 {
@@ -585,3 +1097,5 @@ Consultez l’exemple de payload ci-dessous pour obtenir un exemple de condition
   }
 }
 ```
+
++++

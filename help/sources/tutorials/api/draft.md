@@ -2,7 +2,7 @@
 title: Créer des brouillons de votre API Flow Service Entities
 description: Découvrez comment créer des brouillons de votre connexion de base, connexion source, connexion cible et flux de données à l’aide de l’API Flow Service.
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
-source-git-commit: ebd650355a5a4c2a949739384bfd5c8df9577075
+source-git-commit: 9c40f6254b548027d271e5831bd1b03aec98df77
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 100%
@@ -589,7 +589,7 @@ La requête suivante crée un brouillon de connexion de base pour la source [!DN
 
 ```shell
 curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  'https://platform.adobe.io/data/foundation/flowservice/connections?mode=draft' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
