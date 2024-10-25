@@ -5,9 +5,9 @@ breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 67d4bcbf2a055d4427218ba7d98355f09d860a8c
+source-git-commit: 3583f6e0ac72e4f813abd87949cb640d0b20b6e2
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '341'
 ht-degree: 80%
 
 ---
@@ -76,6 +76,7 @@ ht-degree: 80%
    - [Modes SSL](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
    - [DbVisualizer](./clients/dbvisulaizer.md)
+   - [Copilot GitHub](./clients/github-copilot.md)
    - [Notebook Jupyter](clients//jupyter-notebook.md)
    - [Looker](clients/looker.md)
    - [Postico](clients/postico.md)
