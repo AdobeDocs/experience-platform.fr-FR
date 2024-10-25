@@ -2,7 +2,7 @@
 title: Filtrage Des Données Au Niveau De La Ligne Pour Un Source À L’Aide De L’API Flow Service
 description: Ce tutoriel décrit les étapes de filtrage des données au niveau de la source à l’aide de l’API Flow Service
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 544bb7b5aff437fd49c30ac3d6261f103a609cac
+source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
 workflow-type: tm+mt
 source-wordcount: '1820'
 ht-degree: 16%
@@ -687,12 +687,12 @@ Pour mettre à jour votre connexion source, envoyez une requête de PATCH au poi
 **Format d’API**
 
 ```http
-GET /sourceConnections/{SOURCE_CONNECTION_ID}
+PATCH /sourceConnections/{SOURCE_CONNECTION_ID}
 ```
 
 | Paramètre | Description |
 | --- | --- |
-| `{SOURCE_CONNECTION_ID}` | L’identifiant de la connexion source que vous souhaitez récupérer. |
+| `{SOURCE_CONNECTION_ID}` | L’identifiant de la connexion source que vous souhaitez mettre à jour |
 
 +++Requête
 

@@ -2,9 +2,9 @@
 title: Priorité des espaces de noms
 description: Découvrez la priorité des espaces de noms dans Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: b50633a8518f32051549158b23dfc503db255a82
+source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1689'
 ht-degree: 2%
 
 ---
@@ -109,11 +109,11 @@ Compte tenu des configurations décrites ci-dessus, les actions de l’utilisate
 
 | Action de l’utilisateur (événement d’expérience) | État d’authentification | Source de données | Espaces de noms dans un événement | Espace de noms de l’identité principale |
 | --- | --- | --- | --- | --- |
-| Afficher la page d’offre de carte de crédit | Non authentifié (anonyme) | SDK Web | {ECID} | ECID |
-| Afficher la page d’aide | Non authentifié | SDK Mobile | {ECID, IDFA} | IDFA |
-| Afficher le solde du compte de contrôle | Authenticated (Authentifié) | SDK Web | {CRMID, ECID} | CRMID |
-| Inscrivez-vous au prêt immobilier | Authenticated (Authentifié) | Connecteur source Analytics | {CRMID, ECID, AAID} | CRMID |
-| Transférer 1 000 $ de l’archivage à l’épargne | Authenticated (Authentifié) | SDK Mobile | {CRMID, GAID, ECID} | CRMID |
+| Afficher la page d’offre de carte de crédit | Non authentifié (anonyme) | SDK Web | `{ECID}` | ECID |
+| Afficher la page d’aide | Non authentifié | SDK Mobile | `{ECID, IDFA}` | IDFA |
+| Afficher le solde du compte de contrôle | Authenticated (Authentifié) | SDK Web | `{CRMID, ECID}` | CRMID |
+| Inscrivez-vous au prêt immobilier | Authenticated (Authentifié) | Connecteur source Analytics | `{CRMID, ECID, AAID}` | CRMID |
+| Transférer 1 000 $ de l’archivage à l’épargne | Authenticated (Authentifié) | SDK Mobile | `{CRMID, GAID, ECID}` | CRMID |
 
 {style="table-layout:auto"}
 
