@@ -3,9 +3,9 @@ keywords: personnalisation cible;destination;destination cible Experience Platfo
 title: Connexion Adobe Target
 description: Adobe Target est une application qui permet la personnalisation et l’expérimentation en temps réel, grâce à l’IA, au niveau de toutes les interactions avec les clients entrants sur les sites web, les applications mobiles, etc.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 14dccb993b38ca352c6de3ed851bafe7c44ca631
+source-git-commit: dae0cb108c62b078d0c7dd5bec466091d4937c53
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1768'
 ht-degree: 32%
 
 ---
@@ -126,7 +126,8 @@ Pendant la [configuration](../../ui/connect-destination.md) de cette destination
 
   >[!IMPORTANT]
   >
-  >L’identifiant de flux de données est unique pour chaque connexion de destination Adobe Target. Si vous devez mapper les mêmes audiences à plusieurs jeux de données, vous devez [créer une nouvelle connexion de destination](../../ui/connect-destination.md) pour chaque identifiant de flux de données, et passer par le [flux d’activation d’audience](#activate).
+  >L’identifiant de flux de données est unique pour chaque connexion de destination Adobe Target. Vous ne pouvez pas utiliser le même identifiant de flux de données pour plusieurs connexions de destination Adobe Target.
+  >Si vous devez mapper les mêmes audiences à plusieurs jeux de données, vous devez [créer une nouvelle connexion de destination](../../ui/connect-destination.md) pour chaque identifiant de flux de données, et passer par le [flux d’activation d’audience](#activate).
 
    * **[!UICONTROL Aucun]** : sélectionnez cette option si vous devez configurer la personnalisation Adobe Target, mais que vous ne pouvez pas implémenter le [SDK Web Experience Platform](/help/web-sdk/home.md). Lorsque vous utilisez cette option, les audiences exportées d’Experience Platform vers Target ne prennent en charge que la personnalisation de la prochaine session, et la segmentation Edge est désactivée. Consultez le tableau de la section [Cas d’utilisation pris en charge](#supported-use-cases) pour une comparaison des cas d’utilisation disponibles par type d’implémentation.
 
