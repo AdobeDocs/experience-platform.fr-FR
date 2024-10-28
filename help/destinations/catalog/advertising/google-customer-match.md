@@ -3,10 +3,10 @@ keywords: correspondance client Google;correspondance client Google;correspondan
 title: Connexion à Google Customer Match
 description: La correspondance client Google vous permet d’utiliser vos données en ligne et hors ligne pour atteindre vos clients et interagir avec eux dans les propriétés détenues et exploitées de Google, telles que la recherche, le shopping, Gmail et YouTube.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
 workflow-type: tm+mt
-source-wordcount: '1969'
-ht-degree: 19%
+source-wordcount: '2100'
+ht-degree: 18%
 
 ---
 
@@ -215,6 +215,20 @@ Les données des espaces de noms non hachés sont automatiquement hachées par [
 Les données de la source d’attributs ne sont pas automatiquement hachées. Lorsque votre champ source contient des attributs non hachés, cochez l’option **[!UICONTROL Appliquer la transformation]** pour que [!DNL Platform] hache automatiquement les données lors de l’activation.
 
 ![Appliquez un contrôle de transformation surligné dans l&#39;étape Mapping du workflow d&#39;activation.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+
+## Destination du moniteur {#monitor-destination}
+
+Après vous être connecté à la destination et avoir créé un flux de données de destination, vous pouvez utiliser la [fonctionnalité de surveillance](/help/dataflows/ui/monitor-destinations.md) dans Real-Time CDP pour obtenir des informations détaillées sur les enregistrements de profil activés à votre destination lors de chaque exécution de flux de données.
+
+>[!IMPORTANT]
+>
+> Depuis octobre 2024, Adobe met à jour une mise à jour afin d’accroître la précision des rapports pour les destinations de diffusion en continu. Cette amélioration garantit un meilleur alignement entre l’Experience Platform et les rapports sur les plateformes de destination.
+>
+> Avant cette mise à jour, **[!UICONTROL Identités ayant échoué]** incluait toutes les tentatives d’activation. Après cette mise à jour, seule la dernière reprise d’activation est incluse dans le nombre total.
+>
+> Cette amélioration s’applique actuellement à la [destination de correspondance client Google](google-customer-match.md), mais sera progressivement déployée vers d’autres destinations de diffusion en continu Experience Platform.
+> Suite à cette amélioration, les utilisateurs de cette destination peuvent constater une baisse attendue de leur nombre **[!UICONTROL Identités ayant échoué]**.
+
 
 ## Vérification de la réussite de l’activation de l’audience {#verify-activation}
 

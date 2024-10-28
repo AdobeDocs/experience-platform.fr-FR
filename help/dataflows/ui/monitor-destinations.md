@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Surveillance des flux de données pour les destinations dans l’interface utilisateur
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 27802292a7a06f2edaea9efc39d4a63507e0e7e1
+source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
 workflow-type: tm+mt
-source-wordcount: '3542'
+source-wordcount: '3639'
 ht-degree: 11%
 
 ---
@@ -94,6 +94,17 @@ Chaque exécution de flux de données individuelle affiche les détails suivants
 - **[!UICONTROL Identités activées]** : nombre total d’identités de profil qui ont été activées avec succès vers la destination sélectionnée dans le cadre de l’exécution du flux de données. Cette mesure inclut les identités qui sont créées, mises à jour et supprimées dans les audiences exportées.
 - **[!UICONTROL Identités exclues]** : nombre total d’identités de profil qui sont exclues de l’activation en raison d’attributs manquants et de la violation du consentement.
 - **[!UICONTROL Échec des identités]** : nombre total d’identités de profil qui ne sont pas activées vers la destination en raison d’erreurs.
+
+  >[!IMPORTANT]
+  >
+  > Depuis octobre 2024, Adobe met à jour une mise à jour afin d’accroître la précision des rapports pour les destinations de diffusion en continu. Cette amélioration garantit un meilleur alignement entre l’Experience Platform et les rapports sur les plateformes de destination.
+  >
+  > Avant cette mise à jour, **[!UICONTROL Identités ayant échoué]** incluait toutes les tentatives d’activation. Après cette mise à jour, seule la dernière reprise d’activation est incluse dans le nombre total.
+  > 
+  > Cette amélioration s’applique actuellement à la [destination de correspondance client Google](../../destinations/catalog/advertising/google-customer-match.md), mais sera progressivement déployée vers d’autres destinations de diffusion en continu Experience Platform.
+  > Suite à cette amélioration, les utilisateurs de la [destination de correspondance du client Google](../../destinations/catalog/advertising/google-customer-match.md) peuvent constater une baisse attendue de leur nombre **[!UICONTROL identités ayant échoué]**.
+
+
 - **[!UICONTROL Taux d’activation]** : pourcentage d’identités reçues qui ont été activées avec succès ou ignorées. La formule suivante illustre le mode de calcul de cette valeur :
   ![Formule de taux d&#39;activation.](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL Status]** : représente l’état du flux de données : [!UICONTROL Completed] ou [!UICONTROL Processing]. [!UICONTROL Completed] signifie que toutes les identités de l’exécution de flux de données correspondante ont été exportées au cours de la période d’une heure. [!UICONTROL Traitement] signifie que l’exécution du flux de données n’est pas encore terminée.
