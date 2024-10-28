@@ -2,10 +2,10 @@
 title: Présentation de lʼextension Adobe Analytics
 description: Découvrez lʼextension de balise Adobe Analytics dans Adobe Experience Platform.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 764a9a29df0be6064d36f952d2e8a61acfa9bd33
 workflow-type: tm+mt
-source-wordcount: '2105'
-ht-degree: 93%
+source-wordcount: '2331'
+ht-degree: 83%
 
 ---
 
@@ -289,7 +289,19 @@ L’extension Analytics fournit les actions suivantes :
 
 ### Définir des variables {#set-variables}
 
-Important : L’utilisation d’une action « Set Variables » (Définir des variables) n’envoie pas la balise. Vous devez utiliser l’action « Send Beacon » (Envoyer la balise).
+>[!IMPORTANT]
+>
+>Vous ne pouvez pas envoyer la balise avec l’action &quot;set variables&quot; (définir des variables). Pour envoyer la balise, vous devez sélectionner l’action &quot;envoyer la balise&quot;.
+
+Vous pouvez choisir entre deux vues différentes dans **Définir des variables** :
+
+>[!BEGINTABS]
+
+>[!TAB Fournir des attributs individuels]
+
+Dans cette vue, vous pouvez spécifier différentes variables telles que `eVars`, `Props`, `Events`.
+
+![ Page de vue de formulaire Adobe Analytics, où des attributs supplémentaires sont répertoriés.](../../../images/adobe_analytics_extension_form_view.png)
 
 #### eVars
 
@@ -319,6 +331,25 @@ Définissez un ou plusieurs [événements](https://experienceleague.adobe.com/do
 1. (Facultatif) Sélectionnez ou spécifiez un élément de données utilisé pour la [sérialisation des événements](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html?lang=fr).
 1. (Facultatif) Cliquez sur **[!UICONTROL Ajouter un événement]** pour définir dʼautres événements.
 1. Sélectionnez **[!UICONTROL Conserver les modifications]**.
+
+>[!TAB Vue JSON]
+
+Dans cette vue, vous pouvez afficher et modifier une version JSON de l’action **Définir les variables**.
+
+![Vue représentant la configuration actuelle des variables définies au format JSON dans l’extension Adobe Analytics.](../../../images/adobe_analytics_extension_json_view.png)
+
+#### JSON
+
+Dans l’action **Set Variables** (Définir des variables), utilisez la vue JSON pour charger, copier ou télécharger des données JSON et les stocker sur votre appareil.
+
+Cependant, certaines limites existent :
+
+* **Code personnalisé** : si vous utilisez du code personnalisé pour renseigner des variables, il ne s’affichera pas dans la vue JSON. À la place, une alerte s’affiche lors de l’affichage, de la copie ou du téléchargement du fichier JSON, indiquant que les modifications effectuées via le code personnalisé ne seront pas incluses.
+* **Copier à partir de l’attribut d’URL** : la copie d’une valeur à partir d’une URL n’est pas prise en charge dans la vue JSON. Une alerte s’affiche pour indiquer cette limitation.
+* **Variables abandonnées** : les variables abandonnées ou obsolètes s’affichent dans la vue JSON et une alerte s’affiche pour informer que les variables retirées ont été définies.
+* **Éléments de données** : les éléments de données sont représentés dans la vue JSON. Si les données JSON sont copiées vers une autre propriété de balises, les éléments de données correspondants peuvent ne pas y être définis et ne se résolvent pas correctement lorsqu’ils sont exécutés.
+
+>[!ENDTABS]
 
 #### Hierarchy (Hiérarchie)
 
