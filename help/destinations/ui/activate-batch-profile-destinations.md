@@ -3,10 +3,10 @@ title: Activer les audiences vers des destinations d’export de profils par lot
 type: Tutorial
 description: Découvrez comment activer les audiences que vous avez dans Adobe Experience Platform en les envoyant vers des destinations basées sur un profil de lot.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
+source-git-commit: fdb92a0c03ce6a0d44cfc8eb20c2e3bd1583b1ce
 workflow-type: tm+mt
-source-wordcount: '4095'
-ht-degree: 55%
+source-wordcount: '4151'
+ht-degree: 54%
 
 ---
 
@@ -133,11 +133,11 @@ Sélectionnez **[!UICONTROL Exporter les fichiers complets]** pour déclencher l
 
 2. Utilisez le bouton d’activation/désactivation **[!UICONTROL Time]** pour sélectionner si l’exportation doit avoir lieu immédiatement après l’évaluation de l’audience ou sur une base planifiée, à une heure donnée. Lorsque vous sélectionnez la variable **[!UICONTROL Planifié]**, vous pouvez utiliser le sélecteur pour choisir l’heure du jour à laquelle l’exportation doit avoir lieu, au format [!DNL UTC].
 
-   >[!NOTE]
-   >
-   >L’option **[!UICONTROL Après l’évaluation du segment]** décrite ci-dessous est disponible uniquement pour sélectionner les clients Beta.
+   Utiliser l’option **[!UICONTROL Après l’évaluation du segment]** pour que le traitement d’activation s’exécute immédiatement après la fin du traitement quotidien de segmentation par lots de Platform. Cette option garantit que lorsque la tâche d’activation s’exécute, les profils les plus récents sont exportés vers votre destination. Cela peut entraîner l’export d’une audience plusieurs fois par jour, en fonction de vos actions.
 
-   Utiliser l’option **[!UICONTROL Après l’évaluation du segment]** pour que le traitement d’activation s’exécute immédiatement après la fin du traitement quotidien de segmentation par lots de Platform. Cette option garantit que lorsque la tâche d’activation s’exécute, les profils les plus récents sont exportés vers votre destination.
+   >[!IMPORTANT]
+   >
+   >Si vous exécutez l’ [évaluation d’audience flexible](../../segmentation/ui/audience-portal.md#flexible-audience-evaluation) sur des audiences déjà configurées pour être activées après l’évaluation des segments, les audiences seront activées dès que la tâche d’évaluation d’audience flexible sera terminée, quelles que soient les tâches d’activation quotidiennes précédentes. Cela peut entraîner l’exportation d’audiences plusieurs fois par jour, en fonction de vos actions.
 
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
@@ -485,7 +485,7 @@ En tant que solution temporaire, si vous devez ajouter des espaces de noms d’i
 > 
 Toutes les destinations de stockage dans le cloud du catalogue peuvent afficher une [[!UICONTROL étape de mappage]](#mapping) améliorée qui remplace l’étape **[!UICONTROL Sélectionner des attributs]** décrite dans cette section.
 >
-Cette étape **[!UICONTROL Sélectionner les attributs]** s’affiche toujours pour les destinations de marketing par e-mail Adobe Campaign, Oracle Responsys, Oracle Eloqua et Salesforce Marketing Cloud.
+Cette étape **[!UICONTROL Sélectionner les attributs]** s’affiche toujours pour les destinations Adobe Campaign, Oracle Responsys, Oracle Eloqua et Salesforce Marketing Cloud de marketing par e-mail.
 
 Pour les destinations basées sur un profil, vous devez sélectionner les attributs de profil à envoyer à la destination cible.
 
