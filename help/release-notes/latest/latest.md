@@ -2,7 +2,7 @@
 title: Notes de mise à jour d’octobre 2024 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2024 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 5fc786058a187b161a147a8bd361d19c5f35105d
+source-git-commit: f30a124a40928abf69366d311131e353c2779191
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 31%
@@ -15,12 +15,12 @@ ht-degree: 31%
 
 Mises à jour des fonctionnalités et de la documentation existantes dans Adobe Experience Platform :
 
-- [Tableaux de bord {#dashboards}](#dashboards-dashboards)<!-- omit in toc -->
-- [Collecte de données {#collection}](#data-collection-collection)
-- [Destinations {#destinations}](#destinations-destinations)
-- [Segmentation Service {#segmentation-service}](#segmentation-service-segmentation-service)
-- [Sandbox {#sandboxes}](#sandboxes-sandboxes)
-- [Sources {#sources}](#sources-sources)
+- [Tableaux de bord](#dashboards)
+- [Collecte de données](#data-collection-)
+- [Destinations](#destinations)
+- [Segmentation Service](#segmentation-service)
+- [Sandbox](#sandboxes)
+- [Sources](#sources)
 
 ## Tableaux de bord {#dashboards}
 
@@ -40,7 +40,7 @@ Experience Platform propose de nombreux tableaux de bord qui vous permettent d�
 
 Pour plus dʼinformations sur les tableaux de bord, notamment sur la manière dʼoctroyer des autorisations dʼaccès et de créer des widgets personnalisés, commencez par lire la [Présentation des tableaux de bord](../../dashboards/home.md).
 
-## Collecte de données {#collection}
+## Collecte de données {#data-collection}
 
 Adobe Experience Platform fournit une suite de technologies qui vous permet de collecter des données d’expérience client côté client et de les envoyer à l’Edge Network Experience Platform où elles peuvent être enrichies, transformées et distribuées vers des destinations Adobe ou non Adobe.
 
