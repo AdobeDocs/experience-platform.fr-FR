@@ -1,10 +1,10 @@
 ---
 title: Notes de mise à jour d’octobre 2024 d’Adobe Experience Platform
 description: Les notes de mise à jour d’octobre 2024 pour Adobe Experience Platform.
-source-git-commit: a381bdc45ee9c3c7ffb32bb7a7ec43a1233d1556
+source-git-commit: 5fc786058a187b161a147a8bd361d19c5f35105d
 workflow-type: tm+mt
-source-wordcount: '861'
-ht-degree: 36%
+source-wordcount: '1159'
+ht-degree: 31%
 
 ---
 
@@ -14,29 +14,30 @@ ht-degree: 36%
 
 Mises à jour des fonctionnalités et de la documentation existantes dans Adobe Experience Platform :
 
-- [Collecte de données](#data-collection)
-- [Destinations](#destinations)
-- [Segmentation Service](#segmentation-service)
-- [Sandbox](#sandboxes)
-- [Sources](#sources)
+- [Tableaux de bord {#dashboards}](#dashboards-dashboards)<!-- omit in toc -->
+- [Collecte de données {#collection}](#data-collection-collection)
+- [Destinations {#destinations}](#destinations-destinations)
+- [Segmentation Service {#segmentation-service}](#segmentation-service-segmentation-service)
+- [Sandbox {#sandboxes}](#sandboxes-sandboxes)
+- [Sources {#sources}](#sources-sources)
 
-<!-- ## Dashboards {#dashboards}
+## Tableaux de bord {#dashboards}
 
-Experience Platform provides multiple dashboards through which you can view important insights about your organization's data, as captured during daily snapshots.
+Experience Platform propose de nombreux tableaux de bord qui vous permettent d’afficher des informations importantes sur les données de votre organisation, telles quʼelles ont été capturées lors dʼinstantanés quotidiens.
 
-**New or updated features**
+**Fonctionnalités nouvelles ou mises à jour**
 
-| Feature | Description |
+| Fonctionnalité | Description |
 | --- | --- |
-| Data Distiller Templates | Explore multiple templates to gain structured insights into audience data. Use dashboards like **Advanced [!UICONTROL Audience Overlaps]**, **[!UICONTROL Audience Comparison]**, **[!UICONTROL Audience Trends]**, and **[!UICONTROL Audience Identity Overlaps]** to make data-driven decisions, optimize segmentation, and enhance engagement strategies. See the [Data Distiller Templates guide](../../dashboards/sql-insights-query-pro-mode/templates/overview.md) for more details. |
-| Advanced Audience Overlaps | Quickly analyze audience intersections for specific audiences or view all overlaps to uncover valuable insights across your entire audience set. Use these insights to refine segmentation, reduce redundant messaging, and create more targeted campaigns for improved marketing efficiency. See the [Advanced Audience Overlaps guide](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md) for more details. |
-| Audience Comparison enhancements | View a side-by-side comparison of key metrics between different audience groups using the **Audience Comparison** dashboard. With this dashboard you can select specific time frames and KPIs, such as audience size and identity composition, to make more informed decisions about audience segmentation and targeting strategies. Read the [Audience Comparison guide](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md) for more information. |
-| Audience Trends Visualization | Analyze audience metrics over time with the **[!UICONTROL Audience Trends]** dashboard. Visualize trends for audience size, number of identities, and number of single identity profiles to help you monitor audience evolution, measure growth, and refine your engagement strategies. See the [Audience Trends guide](../../dashboards/sql-insights-query-pro-mode/templates/trends.md) for more details. |
-| Identity Overlaps Analysis | Analyze identity overlaps in selected audiences with the **[!UICONTROL Audience Identity Overlaps]** dashboard. View identity trends and breakdowns to understand how different identity types relate within your audience, enhancing identity stitching and improving customer segmentation accuracy. Refer to the [Audience Identity Overlaps guide](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md) for more details. |
+| Modèles Distiller de données | Explorez plusieurs modèles pour obtenir des informations structurées sur les données d’audience. Utilisez des tableaux de bord tels que **Audience Overlaps]**, **[!UICONTROL Comparaison d’audience]**, **[!UICONTROL Audience Trends]** et **[!UICONTROL Audience Identity Overlaps]** pour prendre des décisions basées sur les données, optimiser la segmentation et améliorer les stratégies d’engagement. [!UICONTROL  Pour plus d’informations, consultez le [guide des modèles de Distiller de données](../../dashboards/sql-insights-query-pro-mode/templates/overview.md) . |
+| Chevauchements avancés des audiences | Analysez rapidement les intersections d’audience pour des audiences spécifiques ou affichez toutes les superpositions pour découvrir des insights précieux sur l’ensemble de vos audiences. Utilisez ces informations pour affiner la segmentation, réduire les messages redondants et créer des campagnes plus ciblées pour une meilleure efficacité marketing. Pour plus d’informations, consultez le [guide de chevauchement d’audiences avancé](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md) . |
+| Améliorations de la comparaison des audiences | Affichez une comparaison côte à côte des mesures clés entre différents groupes d’audiences à l’aide du tableau de bord **Comparaison de l’audience**. Ce tableau de bord vous permet de sélectionner des périodes et des indicateurs de performance clés spécifiques, tels que la taille de l’audience et la composition de l’identité, afin de prendre des décisions plus éclairées sur la segmentation et les stratégies de ciblage de l’audience. Pour plus d’informations, consultez le [guide de comparaison d’audiences](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md) . |
+| Visualisation des tendances d’audience | Analysez les mesures d’audience au fil du temps à l’aide du tableau de bord **[!UICONTROL Tendances d’audience]**. Visualisez les tendances relatives à la taille de l’audience, au nombre d’identités et au nombre de profils d’identité uniques afin de vous aider à surveiller l’évolution de l’audience, à mesurer la croissance et à affiner vos stratégies d’engagement. Pour plus d’informations, consultez le [guide sur les tendances d’audience](../../dashboards/sql-insights-query-pro-mode/templates/trends.md) . |
+| Analyse des chevauchements d’identités | Analysez les chevauchements d’identités dans les audiences sélectionnées avec le tableau de bord **[!UICONTROL Recouvrements d’identités d’audience]**. Affichez les tendances et les ventilations d’identité pour comprendre comment différents types d’identité sont associés au sein de votre audience, ce qui améliore le regroupement des identités et la précision de la segmentation des clients. Pour plus d’informations, consultez le [guide sur les recouvrements d’identité d’audience](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md) . |
 
 {style="table-layout:auto"}
 
-For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md). -->
+Pour plus dʼinformations sur les tableaux de bord, notamment sur la manière dʼoctroyer des autorisations dʼaccès et de créer des widgets personnalisés, commencez par lire la [Présentation des tableaux de bord](../../dashboards/home.md).
 
 ## Collecte de données {#collection}
 

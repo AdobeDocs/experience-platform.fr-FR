@@ -5,10 +5,10 @@ breadcrumb-title: Guide des tableaux de bord
 user-guide-description: Découvrez comment visualiser les données dans Experience Platform via des tableaux de bord personnalisables.
 feature: Dashboards
 role: Developer,User
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cb3cc06a31c0390d9b1f152c2186da3847647f64
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 64%
+source-wordcount: '142'
+ht-degree: 65%
 
 ---
 
@@ -22,6 +22,12 @@ ht-degree: 64%
 * [Téléchargement de tableaux de bord au format PDF](download.md)
 * Connaissances SQL : mode de requête pro {#sql-insights-query-pro-mode}
    * [Vue d’ensemble](sql-insights-query-pro-mode/overview.md)
+   * Modèles Data Distiller {#templates}
+      * [Vue d’ensemble](sql-insights-query-pro-mode/templates/overview.md)
+      * [Chevauchements avancés des audiences](sql-insights-query-pro-mode/templates/overlaps.md)
+      * [Comparaison des audiences](sql-insights-query-pro-mode/templates/comparison.md)
+      * [Tendances des audiences](sql-insights-query-pro-mode/templates/trends.md)
+      * [Chevauchements d’identité d’audience](sql-insights-query-pro-mode/templates/identity-overlaps.md)
    * Filtres {#filters}
       * [Filtre de date](sql-insights-query-pro-mode/filters/date-filter.md)
       * [Filtre global](sql-insights-query-pro-mode/filters/global-filter.md)
@@ -51,7 +57,7 @@ ht-degree: 64%
 * Cas d’utilisation des statistiques {#insights-use-cases}
    * [Analyse du consentement](insights-use-cases/consent-analysis.md)
 * Modèles de données disponibles {#data-models}
-   * [Edition B2B du modèle de données Real-Time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2b.md)
+   * [B2B edition du modèle de données Real-Time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2b.md)
    * [Edition B2C du modèle de données Real-Time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2c.md)
 * Intégrations d’applications {#integrations}
    * [Power BI](integrations/power-bi.md)
