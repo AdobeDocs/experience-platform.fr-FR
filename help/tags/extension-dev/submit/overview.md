@@ -2,10 +2,10 @@
 title: Présentation du processus d’envoi des extensions
 description: Découvrez la procédure qui vous permettra d’envoyer votre extension Adobe Experience Platform du développement à la publication.
 exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 100%
+source-wordcount: '231'
+ht-degree: 97%
 
 ---
 
@@ -21,7 +21,7 @@ L’envoi d’une extension au catalogue de collecte de données dans Adobe Exp
 1. [Octroyer un accès utilisateur pour le développement d’extensions](./access.md)
 1. [Développement d’une extension](./develop.md)
 1. [Créer une liste Exchange](./create-listing.md)
-1. Créer un package d’extension
+1. [Créer le fichier zip de votre package d’extension](./create-extension-package-zip.md)
 1. [Télécharger et tester votre extension](./upload-and-test.md)
 1. [Publier votre extension](./release.md)
 

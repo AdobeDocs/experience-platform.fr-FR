@@ -6,10 +6,10 @@ user-guide-description: Découvrez comment déployer et gérer des balises d’a
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 5cbc2f6809156bc1a554154527ff2c5e35d3a922
+source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 97%
+source-wordcount: '778'
+ht-degree: 96%
 
 ---
 
@@ -265,6 +265,7 @@ ht-degree: 97%
       * [Octroyer un accès utilisateur](./extension-dev/submit/access.md)
       * [Développer une extension](./extension-dev/submit/develop.md)
       * [Créer une liste Exchange](./extension-dev/submit/create-listing.md)
+      * [Créer un fichier zip de package d’extension](./extension-dev/submit/create-extension-package-zip.md)
       * [Téléchargement et implémentation de tests de bout en bout](./extension-dev/submit/upload-and-test.md)
       * [Publication d’une extension](./extension-dev/submit/release.md)
    * [Configuration d’extension](./extension-dev/configuration.md)

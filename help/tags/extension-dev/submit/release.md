@@ -2,10 +2,10 @@
 title: Publication d’une extension
 description: Découvrez comment effectuer une publication publique ou privée d’une extension de balise dans Adobe Experience Platform.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
+source-git-commit: 2152cf98d9809654cca7abd7b8469a72e8387b2a
 workflow-type: tm+mt
-source-wordcount: '303'
-ht-degree: 99%
+source-wordcount: '479'
+ht-degree: 67%
 
 ---
 
@@ -24,11 +24,30 @@ Une fois les tests terminés et la documentation prête, lʼextension est apte �
 >
 >Après avoir publié votre extension, vous ne pouvez plus y apporter de modifications ni annuler sa publication.  Une fois qu’elle est publiée, les correctifs de bug et les ajouts de fonctionnalités sont effectués en `POST`ant une nouvelle version de votre package d’extension et en suivant les étapes de test et de publication ci-dessus sur cette nouvelle version.
 
-Vous devez publier votre extension en tant qu’extension privée avant de pouvoir la publier publiquement.
+Vous devez d’abord publier votre extension en tant qu’extension privée avant qu’elle ne puisse être publiée publiquement.
 
 ## Publication privée
 
-Le moyen le plus simple de publier votre extension en disponibilité privée consiste à utiliser lʼoutil [Tag Extension Releaser](https://www.npmjs.com/package/@adobe/reactor-releaser). Vous trouverez davantage d’instructions dans sa documentation.
+Le moyen le plus simple de publier votre extension avec une disponibilité privée est d’utiliser le [lanceur de publication d’extension de balise](https://www.npmjs.com/package/@adobe/reactor-releaser).
+
+```bash
+npx @adobe/reactor-releaser
+```
+
+`npx` vous permet de télécharger et d’exécuter un package npm sans véritablement l’installer sur votre machine. Il s’agit de la manière la plus simple d’exécuter l’outil de libération.
+
+>[!NOTE]
+> Par défaut, le créateur attend des informations d’identification d’Adobe I/O pour un flux Oauth serveur à serveur. Informations d’identification `jwt-auth` héritées
+> peut être utilisé en exécutant `npx @adobe/reactor-releaser@v3.1.3` jusqu’à son abandon le 1er janvier 2025. Paramètres requis
+> pour exécuter la version `jwt-auth`, vous trouverez [ici](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
+
+L’outil de publication vous demande de ne saisir que quelques informations. Les `clientId` et `clientSecret` peuvent être récupérés à partir de la console Adobe I/O. Accédez à la [page Intégrations](https://console.adobe.io/integrations) dans la console I/O. Sélectionnez lʼorganisation adéquate dans la liste déroulante puis recherchez lʼintégration appropriée et cliquez sur **[!UICONTROL Afficher]**.
+
+- Qu’est-ce que votre `clientId` ? Copiez et collez-le à partir de la console I/O.
+- Qu’est-ce que votre `clientSecret` ? Copiez et collez-le à partir de la console I/O.
+
+L’auteur lira les champs `name` et `platform` de votre manifeste d’extension et interrogera l’API pour obtenir un package d’extension correspondant dans la disponibilité du développement.
+L’auteur de la version vous demande ensuite de confirmer qu’il a trouvé le package d’extension correct que vous souhaitez publier pour une disponibilité privée.
 
 Si vous souhaitez publier directement votre extension pour une disponibilité privée à lʼaide de lʼAPI, reportez-vous à lʼexemple dʼappel de [publication privée dʼun package dʼextension](../../api/endpoints/extension-packages.md/#private-release) dans la documentation API pour plus de détails.
 

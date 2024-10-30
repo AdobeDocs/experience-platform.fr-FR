@@ -2,10 +2,10 @@
 title: Téléchargement et implémentation de tests de bout en bout pour une extension
 description: Découvrez comment valider, télécharger et tester votre extension dans Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 9b99ec5e526fcbe34a41d3ce397b34a9b4105819
+source-git-commit: 8e843ce14d726f18b77189b5523b823bfa4473be
 workflow-type: tm+mt
-source-wordcount: '2362'
-ht-degree: 92%
+source-wordcount: '2345'
+ht-degree: 86%
 
 ---
 
@@ -43,7 +43,7 @@ Pour plus d’informations sur la création d’un compte technique à utiliser 
 
 >[!IMPORTANT]
 >
->Pour créer une intégration dans Adobe I/O, vous devez être un administrateur d’organisation Experience Cloud ou un développeur d’organisation Experience Cloud.
+>Pour créer une intégration dans Adobe I/O, vous devez être un administrateur d’organisation Experience Cloud ou un développeur d’organisation Experience Cloud.
 
 Si vous ne pouvez pas créer d’intégration, il est probable que vous ne disposiez pas des autorisations appropriées. Un administrateur de l’organisation doit alors terminer les étapes pour vous ou vous devez être affecté en tant que développeur.
 
@@ -61,14 +61,16 @@ npx @adobe/reactor-uploader
 
 `npx` vous permet de télécharger et d’exécuter un package npm sans véritablement l’installer sur votre machine. Il s’agit de la manière la plus simple d’exécuter le téléchargeur.
 
-Le téléchargeur vous demande de saisir plusieurs informations. L’ID de compte technique, la clé d’API et d’autres informations peuvent être récupérés à partir de la console Adobe I/O. Accédez à la [page Intégrations](https://console.adobe.io/integrations) dans la console I/O. Sélectionnez lʼorganisation adéquate dans la liste déroulante puis recherchez lʼintégration appropriée et cliquez sur **[!UICONTROL Afficher]**.
+>[!NOTE]
+> Par défaut, le téléchargeur attend des informations d’identification d’Adobe I/O pour un flux Oauth serveur à serveur. Informations d’identification `jwt-auth` héritées
+> peut être utilisé en exécutant `npx @adobe/reactor-uploader@v5.2.0` jusqu’à son abandon le 1er janvier 2025. Paramètres requis
+> pour exécuter la version `jwt-auth`, vous trouverez [ici](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
-- Quel est le chemin d’accès à votre clé privée ? /path/to/private.key. Il s’agit de l’emplacement où vous avez enregistré votre clé privée à l’étape 2 ci-dessus.
-- Quel est votre ID d’organisation ? Copiez et collez-le à partir de la page d’aperçu de la console I/O que vous avez laissée ouverte auparavant.
-- Quel est votre ID de compte technique ? Copiez et collez-le à partir de la console I/O.
-- Quelle est votre clé d’API ? Copiez et collez-le à partir de la console I/O.
-- Qu’est-ce que le secret client ? Copiez et collez-le à partir de la console I/O.
-- Quel est le chemin d’accès au package d’extension que vous souhaitez télécharger ? /path/to/extension_package.zip. Si vous appelez le téléchargeur depuis le répertoire contenant votre package .zip, vous pouvez simplement le sélectionner dans la liste au lieu de saisir le chemin d’accès.
+Le téléchargeur vous demande de ne saisir que quelques informations. Les `clientId` et `clientSecret` peuvent être récupérés à partir de la console Adobe I/O. Accédez à la [page Intégrations](https://console.adobe.io/integrations) dans la console I/O. Sélectionnez lʼorganisation adéquate dans la liste déroulante puis recherchez lʼintégration appropriée et cliquez sur **[!UICONTROL Afficher]**.
+
+- Qu’est-ce que votre `clientId` ? Copiez et collez-le à partir de la console I/O.
+- Qu’est-ce que votre `clientSecret` ? Copiez et collez-le à partir de la console I/O.
+- Si vous appelez le téléchargeur depuis le répertoire contenant votre package .zip, vous pouvez simplement le sélectionner dans la liste au lieu de saisir le chemin d’accès.
 
 Votre package d’extension sera ensuite téléchargé et le téléchargeur vous donnera l’ID du package d’extension.
 
@@ -79,6 +81,8 @@ Votre package d’extension sera ensuite téléchargé et le téléchargeur vous
 >[!NOTE]
 >
 >Si vous prévoyez d’exécuter fréquemment le téléchargeur, intégrer toutes ces informations à chaque fois peut s’avérer fastidieux. Vous pouvez également les transmettre sous forme d’arguments à partir de la ligne de commande. Pour plus d’informations, consultez la section [Arguments de ligne de commande](https://www.npmjs.com/package/@adobe/reactor-uploader#command-line-arguments) des documents npm.
+
+Si vous souhaitez gérer le téléchargement de votre extension à l’aide de l’API directement, reportez-vous à l’exemple d’appels pour [créer](../../api/endpoints/extension-packages.md/#create) ou [mettre à jour](../../api/endpoints/extension-packages.md#update) un package d’extension dans la documentation de l’API pour plus de détails.
 
 ## Créer une propriété de développement {#property}
 

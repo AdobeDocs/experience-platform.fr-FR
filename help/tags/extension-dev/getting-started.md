@@ -2,10 +2,10 @@
 title: Prise en main du développement des extensions
 description: Commencez à développer vos propres extensions de balises dans Adobe Experience Platform.
 exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
-source-git-commit: 0a4883cff4f8e04dd0dd62a9e01435fa302a9e54
+source-git-commit: 077d3ac5a34f052ef6293927d67e3cc8afb27563
 workflow-type: tm+mt
-source-wordcount: '448'
-ht-degree: 95%
+source-wordcount: '510'
+ht-degree: 80%
 
 ---
 
@@ -40,9 +40,13 @@ npx @adobe/reactor-scaffold
 L’outil de génération de modèles automatique vous invite à définir certaines options de configuration initiales comme suit :
 
 * Nom d’affichage : nom visible de l’extension
+* Plateforme : indique si l’extension est développée pour le web, les appareils mobiles ou les périphériques.
 * Version : version de l’extension
 * Description : brève description de l’objet de l’extension
 * Auteur : nom de l’auteur de l’extension
+
+>[!NOTE]
+> Pour les extensions mobiles, plusieurs questions seront posées concernant la structure de vos applications Android et iOS.
 
 L’outil de génération de modèles automatique fournit ensuite des options pour la construction de la structure d’extension :
 
@@ -51,8 +55,10 @@ L’outil de génération de modèles automatique fournit ensuite des options po
 * [Types de condition](./web/condition-types.md) : les types de condition évaluent si un élément est vrai ou faux. Par exemple, le type de condition peut renvoyer si le navigateur de l’utilisateur est Chrome, s’il utilise un iPad ou s’il se trouve sur un domaine spécifique.
 * [Types d’action](./web/action-types.md) : action à effectuer lorsqu’un événement se produit. Par exemple, envoyer une balise d’analyse, afficher une offre, enregistrer un cookie ou ouvrir une conversation d’assistance.
 * [Types d’éléments de données](./web/data-element-types.md) : un type d’élément de données récupère une donnée. Cette donnée peut se trouver dans un enregistrement local, dans un cookie, dans un élément DOM ou dans un emplacement personnalisé.
-* [Modules partagés](./web/shared.md) : un module partagé est un mécanisme par lequel les extensions peuvent communiquer avec d’autres extensions.
+* [Modules partagés](./web/shared.md) (web uniquement) : un module partagé est un mécanisme par lequel les extensions peuvent communiquer avec d’autres extensions.
 * [Vues](./web/views.md) : chaque type d’événement, de condition, d’action ou d’élément de données peut fournir une vue permettant à un utilisateur de fournir des paramètres.
+* URL de l’Exchange (web et Edge uniquement) : lorsqu’une extension est publiée dans le catalogue public de l’Adobe, indiquez l’URL de liste ici.
+* Icône Path : chemin d’accès à un fichier d’icône pour l’extension.
 
 >[!NOTE]
 >
