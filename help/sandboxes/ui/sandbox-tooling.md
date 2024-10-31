@@ -2,9 +2,9 @@
 title: Outils Sandbox
 description: Exportez et importez en toute transparence des configurations Sandbox entre des environnements de test.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 209aaaf0c2bfdb321f75257309980c7a48cb1eb4
+source-git-commit: 85476ea8a667cf3e74cd7a24da07d81c635e1628
 workflow-type: tm+mt
-source-wordcount: '2403'
+source-wordcount: '2431'
 ht-degree: 8%
 
 ---
@@ -151,6 +151,8 @@ La page [!UICONTROL Objet de module et dépendances] fournit une liste de tous l
 >[!NOTE]
 >
 >Les objets dépendants peuvent être remplacés par des objets existants dans l’environnement de test cible, ce qui vous permet de réutiliser des objets existants plutôt que de créer une nouvelle version. Par exemple, lorsque vous importez un package comprenant des schémas, vous pouvez réutiliser des groupes de champs personnalisés et des espaces de noms d’identité existants dans l’environnement de test cible. Vous pouvez également réutiliser des segments existants dans l’environnement de test cible lorsque vous importez un package comprenant des Parcours.
+>
+>L’outil Sandbox ne prend actuellement pas en charge la mise à jour ou le remplacement d’objets existants. Vous pouvez choisir de créer un objet ou continuer à utiliser l’objet existant sans modification.
 
 Pour utiliser un objet existant, sélectionnez l’icône en forme de crayon en regard de l’objet dépendant.
 
