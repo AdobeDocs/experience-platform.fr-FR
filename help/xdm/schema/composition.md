@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Principes de base de la composition des schémas
 description: Découvrez les schémas de modèle de données d’expérience (XDM) et les blocs de création, les principes et les bonnes pratiques pour la composition de schémas dans Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 42038ecfeecc774b3a57e05d961bbd80f3178c21
+source-git-commit: 595d9bd6a0aa0c9f1059e485c54e89ce02b7ec68
 workflow-type: tm+mt
-source-wordcount: '4293'
+source-wordcount: '4365'
 ht-degree: 26%
 
 ---
@@ -223,6 +223,10 @@ La capture d’écran suivante montre comment les groupes de champs sont représ
 
 Pour obtenir la liste la plus récente des groupes de champs XDM standard disponibles, reportez-vous au [référentiel XDM officiel](https://github.com/adobe/xdm/tree/master/components/fieldgroups). Vous pouvez également vous reporter au guide sur l’ [exploration des composants XDM](../ui/explore.md) si vous préférez afficher des ressources dans l’interface utilisateur.
 
+>[!NOTE]
+>
+> Les groupes de champs XDM standard évoluent toujours et certains groupes de champs ont été abandonnés. Pour obtenir la liste des groupes de champs obsolètes la plus récente, reportez-vous à la [section des groupes de champs obsolètes](https://github.com/adobe/xdm/tree/master/components/fieldgroups/deprecated) du référentiel XDM officiel.
+
 ### Type de données {#data-type}
 
 Les types de données sont utilisés comme types de champ de référence dans des classes ou des schémas de la même manière que des champs littéraux de base. La principale différence réside dans le fait que les types de données peuvent définir plusieurs sous-champs de la même manière que les groupes de champs. La principale différence entre eux est que les types de données peuvent être inclus n’importe où dans un schéma en l’ajoutant comme &quot;type de données&quot; d’un champ. Bien que les groupes de champs ne soient compatibles qu’avec certaines classes, les types de données peuvent être inclus dans n’importe quelle classe parent ou groupe de champs.
@@ -238,6 +242,10 @@ La capture d’écran suivante montre comment les types de données sont représ
 ![Diagramme de l’éditeur de schémas pour une personne individuelle avec l’objet Nom complet et les attributs mis en surbrillance.](../images/schema-composition/data-type.png)
 
 Pour obtenir la liste la plus récente des types de données XDM standard disponibles, reportez-vous au [référentiel XDM officiel](https://github.com/adobe/xdm/tree/master/components/datatypes). Vous pouvez également vous reporter au guide sur l’ [exploration des composants XDM](../ui/explore.md) si vous préférez afficher des ressources dans l’interface utilisateur.
+
+>[!NOTE]
+>
+> Les types de données XDM standard évoluent toujours et certains types de données ont été abandonnés. Pour obtenir la liste des types de données obsolètes la plus récente, reportez-vous à la [section sur les types de données obsolètes](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated) du référentiel XDM officiel.
 
 ### Champ {#field}
 
