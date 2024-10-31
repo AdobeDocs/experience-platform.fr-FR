@@ -3,10 +3,10 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
+source-git-commit: f31d250cfbe42680ee6f4d1334bf04a2ee8643a1
 workflow-type: tm+mt
-source-wordcount: '1920'
-ht-degree: 84%
+source-wordcount: '2044'
+ht-degree: 80%
 
 ---
 
@@ -16,6 +16,26 @@ ht-degree: 84%
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Version 2.24.0 - vendredi 31 octobre 2024
+
+**Nouvelles fonctionnalités**
+
+- [Les remplacements de jeux de données](../datastreams/overrides.md) sont désormais pris en charge lors du démarrage de sessions multimédia.
+
+- Ajout de la prise en charge des jetons de réponse Adobe Target dans le crochet de surveillance de réussite du rendu.
+
+**Correctifs et améliorations**
+
+- Lorsque plusieurs messages in-app sont renvoyés, seul celui ayant la priorité la plus élevée s’affiche. Les autres sont enregistrés comme supprimés.
+- Les remplacements de flux de données vides ne sont plus envoyés à l’Edge Network, ce qui réduit les conflits potentiels avec les configurations de routage côté serveur.
+- Changement du nom des composants de messages de journalisation suivants, afin de s’aligner sur d’autres SDK d’Adobe :
+   - `DecisioningEngine` a été renommé `RulesEngine`
+   - `LegacyMediaAnalytics` a été renommé `MediaAnalyticsBridge`
+   - `Privacy` a été renommé `Consent`
+- Correction d’une erreur qui se produisait lorsque les éléments de contenu par défaut étaient rendus via [`applyPropositions`](../web-sdk/commands/applypropositions.md).
+- Correction d’une erreur CSS dans les actions de déplacement et de redimensionnement d’Adobe Target.
+- Suppression de la clé `machineLearning` des réponses [`sendEvent`](../web-sdk/commands/sendevent/overview.md).
+
 ## Version 2.23.0 - vendredi 19 septembre 2024
 
 **Nouvelles fonctionnalités**
@@ -24,7 +44,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 **Correctifs et améliorations**
 
-- Correction d’un problème en raison duquel les cookies n’étaient pas correctement écrits lors de l’exécution locale du SDK Web.
+- Correction d’un problème en raison duquel les cookies n’étaient pas correctement écrits lors de l’exécution locale du SDK web.
 
 ## Version 2.22.0 - vendredi 22 août 2024
 

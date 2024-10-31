@@ -2,16 +2,25 @@
 title: Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 description: Extension de la balise SDK Web Adobe Experience Platform
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: c1fb9fe7d4863e316b824d6c8dd2ff0d3405d7ea
-workflow-type: ht
-source-wordcount: '2291'
-ht-degree: 100%
+source-git-commit: c38456ab44f3e143a0120f1a756105213a46fab5
+workflow-type: tm+mt
+source-wordcount: '2332'
+ht-degree: 98%
 
 ---
 
 # Notes de mise à jour de l’extension du SDK Web Adobe Experience Platform
 
 Ce document contient les notes de mise à jour de l’extension de balises du SDK Web Adobe Experience Platform. Pour obtenir les dernières notes de mise à jour sur le SDK lui-même, voir les [notes de mise à jour du SDK Web Platform](/help/web-sdk/release-notes.md).
+
+## Version 2.27.0 - vendredi 31 octobre 2024
+
+**Nouvelles fonctionnalités**
+
+- [Le remplacement de la banque de données](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) comprend désormais des paramètres pour désactiver les solutions Experience Cloud et les services Adobe Experience Platform.
+- Vous pouvez désormais créer des [remplacements de la banque de données](../web-sdk/web-sdk-extension-configuration.md) pour les sessions multimédia.
+
+Contient la version 2.24.0 du SDK Web de Adobe Experience Platform.
 
 ## Version 2.26.1 - 19 septembre 2024
 
