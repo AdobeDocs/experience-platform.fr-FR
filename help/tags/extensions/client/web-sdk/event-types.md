@@ -3,9 +3,9 @@ title: Types d’événement dans l’extension SDK Web Adobe Experience Platfor
 description: Découvrez comment utiliser les types d’événements fournis par l’extension SDK Web Adobe Experience Platform dans Adobe Experience Platform Launch.
 solution: Experience Platform
 exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
-source-git-commit: 666e8c6fcccf08d0841c5796677890409b22d794
+source-git-commit: b37bf09e3ec16f29d6acee3bca71463fa2c876ce
 workflow-type: tm+mt
-source-wordcount: '1127'
+source-wordcount: '1490'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,34 @@ ht-degree: 0%
 # Types d’événements 
 
 Cette page décrit les types d’événements Adobe Experience Platform fournis par l’extension de balise du SDK Web de Adobe Experience Platform. Ils sont utilisés pour [créer des règles](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html?lang=fr) et ne doivent pas être confondus avec le champ `eventType` de l’objet [`xdm`](/help/web-sdk/commands/sendevent/xdm.md).
+
+## Surveiller le déclenchement du point d&#39;extension {#monitoring-hook-triggered}
+
+Le SDK Web de Adobe Experience Platform comprend des hooks de surveillance que vous pouvez utiliser pour surveiller divers événements système. Ces outils sont utiles pour développer vos propres outils de débogage et pour capturer les journaux du SDK Web.
+
+Pour plus d’informations sur les paramètres contenus par chaque événement de crochet de surveillance, consultez la [documentation sur les hooks de surveillance du SDK Web](../../../../web-sdk/monitoring-hooks.md).
+
+![Image de l’interface utilisateur des balises indiquant le type d’événement de crochet de surveillance](assets/monitoring-hook-triggered.png)
+
+L’extension de balise SDK Web prend en charge les hooks de surveillance suivants :
+
+* **[!UICONTROL onInstanceCreated]** : cet événement de crochet de surveillance est déclenché lorsque vous avez créé une instance de SDK Web.
+* **[!UICONTROL onInstanceConfigured]** : cet événement de point d’extension de surveillance est déclenché par le SDK Web lorsque la commande [`configure`](../../../../web-sdk/commands/configure/overview.md) est résolue
+* **[!UICONTROL onBeforeCommand]** : cet événement de point d’extension de surveillance est déclenché par le SDK Web avant toute autre commande. Vous pouvez utiliser ce point d’extension de surveillance pour récupérer les options de configuration d’une commande spécifique.
+* **[!UICONTROL onCommandResolved]** : cet événement d’extension de surveillance est déclenché avant de résoudre la promesse de commande. Vous pouvez utiliser cette fonction pour afficher les options de commande et le résultat.
+* **[!UICONTROL onCommandRejected]** : cet événement d’extension de surveillance est déclenché lorsqu’une promesse de commande est rejetée et contient des informations sur la cause de l’erreur.
+* **[!UICONTROL onBeforeNetworkRequest]** : cet événement de point d’extension de surveillance est déclenché avant l’exécution d’une requête réseau.
+* **[!UICONTROL onNetworkResponse]** : cet événement d’extension de surveillance est déclenché lorsque le navigateur reçoit une réponse.
+* **[!UICONTROL onNetworkError]** : cet événement d’extension de surveillance est déclenché lorsque la demande réseau a échoué.
+* **[!UICONTROL onBeforeLog]** : cet événement de crochet de surveillance est déclenché avant que le SDK Web ne consigne quoi que ce soit dans la console.
+* **[!UICONTROL onContentRendering]** : cet événement d’extension de surveillance est déclenché par le composant `personalization` et vous aide à déboguer le rendu du contenu de personnalisation. Cet événement peut avoir des états différents :
+   * `rendering-started` : indique que le SDK Web est sur le point d’effectuer le rendu des propositions. Avant que le SDK Web ne commence à effectuer le rendu d’une portée de décision ou d’une vue, dans l’objet `data`, vous pouvez voir les propositions sur le point d’être générées par le composant `personalization` et le nom de la portée.
+   * `no-offers` : indique qu’aucune charge utile n’a été reçue pour les paramètres demandés.
+   * `rendering-failed` : indique que le SDK Web n’a pas pu effectuer le rendu d’une proposition.
+   * `rendering-succeeded` : indique que le rendu est terminé pour une portée de décision.
+   * `rendering-redirect` : indique que le SDK Web exécutera une proposition de redirection.
+* **[!UICONTROL onContentHiding]** : Cet événement de crochet de surveillance est déclenché lorsqu’un style de masquage préalable est appliqué ou supprimé.
+
 
 ## [!UICONTROL Envoyer l’événement terminé]
 

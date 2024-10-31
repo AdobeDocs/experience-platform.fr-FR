@@ -3,9 +3,9 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: f31d250cfbe42680ee6f4d1334bf04a2ee8643a1
+source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
 workflow-type: tm+mt
-source-wordcount: '2044'
+source-wordcount: '2042'
 ht-degree: 80%
 
 ---
@@ -22,7 +22,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 - [Les remplacements de jeux de données](../datastreams/overrides.md) sont désormais pris en charge lors du démarrage de sessions multimédia.
 
-- Ajout de la prise en charge des jetons de réponse Adobe Target dans le crochet de surveillance de réussite du rendu.
+- Ajout de la prise en charge des jetons de réponse Adobe Target dans le crochet de surveillance [`onContentRendering`](monitoring-hooks.md#onContentRendering).
 
 **Correctifs et améliorations**
 
