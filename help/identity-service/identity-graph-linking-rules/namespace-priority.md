@@ -2,9 +2,9 @@
 title: Priorité des espaces de noms
 description: Découvrez la priorité des espaces de noms dans Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
+source-git-commit: 07d54bf341ef2aacc6612ad323585609c0830824
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1732'
 ht-degree: 2%
 
 ---
@@ -150,6 +150,8 @@ Les demandes de suppression d’enregistrements d’hygiène des données foncti
 Pour plus d’informations, consultez la [présentation de la gestion avancée du cycle de vie](../../hygiene/home.md).
 
 ### Attributs calculés
+
+Les attributs calculés utilisent la priorité d’espace de noms pour stocker la valeur d’attribut calculée. Pour un événement donné, l’identité avec la priorité d’espace de noms la plus élevée aura la valeur de l’attribut calculé écrit sur celle-ci. Pour plus d’informations, consultez le [guide de l’interface utilisateur des attributs calculés](../../profile/computed-attributes/ui.md).
 
 Les attributs calculés n’utilisent pas la priorité d’espace de noms pour calculer les valeurs. Si vous utilisez des attributs calculés, vous devez vous assurer que le CRMID est désigné comme votre identité principale pour WebSDK. Pour plus d’informations, consultez le [guide de l’interface utilisateur des attributs calculés](../../profile/computed-attributes/ui.md).
 
