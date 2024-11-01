@@ -4,10 +4,10 @@ title: Tableau de bord d’utilisation de la licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 80380fb1287d710460ad2c75d73ea5c2c38f5ebd
+source-git-commit: 37192addffea094cb2d2f3b0201bb128c912e762
 workflow-type: tm+mt
-source-wordcount: '2855'
-ht-degree: 19%
+source-wordcount: '2867'
+ht-degree: 18%
 
 ---
 
@@ -226,7 +226,7 @@ Le tableau de bord de l’utilisation des licences répertorie plusieurs mesures
 | [!UICONTROL Richesse du profil : nombre de packs] | Augmentation de 25 Ko du volume total de données autorisé par profil pour chaque pack de richesse de profil supplémentaire. |
 | [!UICONTROL Heures de calcul de Query Service] | Mesure du temps pris par les moteurs Query Service pour lire, traiter et écrire des données dans le lac de données lors de l’exécution d’une requête par lots. |
 | [!UICONTROL Segmentation par flux : nombre de packs] | Les packs mettent à jour l’adhésion au segment pour un profil de personne lorsque de nouvelles données entrent dans le service de segmentation par le biais d’un flux continu. L’appartenance au segment est évaluée en fonction des attributs de profil de la personne actuelle et de la valeur de l’événement actuel, sans prendre en compte le comportement historique. La segmentation par flux est une fonctionnalité partagée. |
-| [!UICONTROL Volume total de données] | La quantité totale de données disponibles pour le service de profil Adobe Experience Platform à utiliser dans les workflows d’engagement. |
+| [!UICONTROL Volume total de données] | La quantité totale de données disponibles pour le service de profil Adobe Experience Platform à utiliser dans les workflows d’engagement. Pour en savoir plus, consultez les [questions fréquentes sur le volume total de données](../../landing/license-usage-and-guardrails/total-data-volume.md). |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 

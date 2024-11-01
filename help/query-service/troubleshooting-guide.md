@@ -1,24 +1,43 @@
 ---
 keywords: Experience Platform;accueil;rubriques les plus consultées;service de requête;Query Service;guide de dépannage;questions fréquentes;dépannage;
 solution: Experience Platform
-title: Questions fréquentes
-description: Ce document contient les questions les plus fréquentes et les réponses associées concernant Query Service. Les rubriques incluent l’exportation de données, les outils tiers et les erreurs PSQL.
+title: Questions fréquentes sur Query Service et Data Distiller
+description: Ce document contient les questions fréquentes et les réponses relatives à Query Service et à Data Distiller. Les rubriques incluent l’exportation de données, les outils tiers et les erreurs PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: 84f30a47102a51b40d6811cd4815c36f6ffd34b5
+source-git-commit: dc15ab9b94513d3acdf0e62ef0fec710c05a9fc9
 workflow-type: tm+mt
-source-wordcount: '4564'
-ht-degree: 93%
+source-wordcount: '5055'
+ht-degree: 83%
 
 ---
 
-# Questions fréquentes
+# Questions fréquentes sur Query Service et Data Distiller
 
-Ce document fournit des réponses aux questions fréquentes sur Query Service et fournit une liste des codes d’erreur courants lors de l’utilisation de Query Service. Pour toute question ou dépannage concernant les autres services d’Adobe Experience Platform, consultez le [guide de dépannage d’Experience Platform](../landing/troubleshooting.md).
+Ce document répond aux questions les plus fréquemment posées sur Query Service et Data Distiller. Il inclut également les codes d’erreur courants lors de l’utilisation du produit &quot;Requêtes&quot; pour la validation des données ou l’écriture de données transformées dans le lac de données. Pour toute question ou dépannage d’autres services Adobe Experience Platform, reportez-vous au [guide de dépannage Experience Platform](../landing/troubleshooting.md).
+
+Pour clarifier la façon dont Query Service et Data Distiller fonctionnent ensemble au sein de Adobe Experience Platform, voici deux questions fondamentales.
+
+## Quelle est la relation entre Query Service et Data Distiller ?
+
+Query Service et Data Distiller sont des composants complémentaires distincts qui fournissent des fonctionnalités d’interrogation de données spécifiques. Query Service est conçu pour les requêtes ad hoc afin d’explorer, de valider et d’expérimenter les données ingérées sans modifier le lac de données. En revanche, Data Distiller se concentre sur les requêtes par lots qui transforment et enrichissent les données, avec des résultats stockés dans le lac de données pour une utilisation ultérieure. Les requêtes par lots dans Data Distiller peuvent être planifiées, surveillées et gérées, ce qui permet un traitement et une manipulation plus approfondis des données que Query Service ne facilite pas à lui seul.
+
+Ensemble, Query Service facilite les insights rapides, tandis que Data Distiller permet des transformations approfondies et persistantes des données.
+
+## Quelle est la différence entre Query Service et Data Distiller ?
+
+**Query Service** : utilisé pour les requêtes SQL axées sur l’exploration, la validation et l’expérimentation des données. Les sorties ne sont pas stockées dans le lac de données et le temps d’exécution est limité à 10 minutes. Les requêtes ad hoc sont adaptées aux contrôles et analyses de données interactifs et légers.
+
+**Distiller de données** : permet aux requêtes par lots de traiter, nettoyer et enrichir les données, avec les résultats stockés dans le lac de données. Ces requêtes prennent en charge une exécution plus longue (jusqu’à 24 heures) et des fonctionnalités supplémentaires telles que la planification, la surveillance et la création de rapports accélérée. Data Distiller est idéal pour une manipulation approfondie des données et des tâches de traitement des données planifiées.
+
+Pour plus d’informations, consultez le [document de package Query Service](./packaging.md) .
+
+## Catégories de questions {#categories}
 
 La liste suivante de réponses aux questions fréquentes est divisée en plusieurs catégories :
 
 - [Général](#general)
-- [Interface utilisateur des requêtes](#queries-ui) 
+- [Data Distiller](#data-distiller)
+- [Interface utilisateur des requêtes](#queries-ui)
 - [Échantillon de jeux de données](#dataset-samples)
 - [Exportation des données](#exporting-data)
 - [Syntaxe SQL](#sql-syntax) 
@@ -605,6 +624,38 @@ Oui, vous pouvez utiliser la commande `CREATE VIEW` sans accès à Data Distille
 
 +++Réponse
 Oui. Bien que certains clients tiers, tels que DbVisualizer, puissent avoir besoin d’un identifiant distinct avant et après un bloc SQL pour indiquer qu’une partie d’un script doit être traitée comme une seule instruction. Vous trouverez plus de détails dans la [documentation du bloc anonyme](./key-concepts/anonymous-block.md) ou dans la [documentation officielle de DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
++++
+
+## Data Distiller {#data-distiller}
+
+### Comment l’utilisation des licences de Data Distiller est-elle suivie et où puis-je voir ces informations ?
+
++++Réponse\
+La mesure principale utilisée pour suivre l’utilisation des requêtes par lots est l’Heure de calcul. Vous avez accès à ces informations et à votre consommation actuelle via le [tableau de bord de l’utilisation de la licence](../dashboards/guides/license-usage.md).
++++
+
+### Qu’est-ce qu’une Heure de calcul ?
+
++++Réponse\
+Les heures de calcul sont la mesure du temps nécessaire aux moteurs Query Service pour lire, traiter et écrire des données dans le lac de données lorsqu’une requête par lots est exécutée.
++++
+
+### Comment les heures de calcul sont-elles mesurées ?
+
++++Réponse\
+Les heures de calcul sont mesurées de manière cumulative sur tous vos environnements de test autorisés.
++++
+
+### Pourquoi est-ce que je remarque parfois une variation de la consommation Heure de calcul même lorsque j’exécute la même requête consécutivement ?
+
++++Réponse\
+Les heures de calcul d’une requête peuvent varier en raison de plusieurs facteurs. Il s’agit notamment du volume de données traité, de la complexité des opérations de transformation dans la requête SQL, etc. Query Service met à l’échelle la grappe en fonction des paramètres ci-dessus pour chaque requête, ce qui peut entraîner des différences dans Compute Hours.
++++
+
+### Est-il normal de constater une réduction des heures de calcul lorsque j’exécute la même requête en utilisant les mêmes données sur une longue période ? Pourquoi cela se produirait-il ?
+
++++Réponse\
+L’infrastructure du serveur principal est constamment améliorée afin d’optimiser l’utilisation de l’heure de calcul et le temps de traitement. Par conséquent, vous remarquerez peut-être des changements au fil du temps à mesure que des améliorations des performances sont mises en oeuvre.
 +++
 
 ## Interface utilisateur des requêtes
