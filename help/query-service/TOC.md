@@ -5,10 +5,10 @@ breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 3583f6e0ac72e4f813abd87949cb640d0b20b6e2
+source-git-commit: c94213b37813730911d207cb0de773d8aac22c13
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 80%
+source-wordcount: '357'
+ht-degree: 78%
 
 ---
 
@@ -39,6 +39,16 @@ ht-degree: 80%
       - [Fonctionnalités de conception pour ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Exportation des données dans des environnements ML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Workflow d’enrichissement de pipeline de données AI/ML de bout en bout](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+- Statistiques Distiller de données {#advanced-statistics}
+   - [Vue d’ensemble](advanced-statistics/overview.md)
+   - [Conception des fonctionnalités](advanced-statistics/feature-engineering.md)
+   - [Modèles](advanced-statistics/models.md)
+Mise en oeuvre de modèles {#implement-models}
+      - [Mise en oeuvre de modèles](advanced-statistics/implement-models/implement-models.md)
+      - [Régression](advanced-statistics/implement-models/regression.md)
+      - [Classification](advanced-statistics/implement-models/classification.md)
+      - [Mise en cluster](advanced-statistics/implement-models/clustering.md)
+   - [Transformation des fonctionnalités](advanced-statistics/feature-transformation.md)
 - Audiences Distiller de données {#data-distiller-audiences}
    - [Création d’audiences externes à l’aide de SQL](data-distiller-audiences/overview.md)
 - Exemples {#use-cases}
