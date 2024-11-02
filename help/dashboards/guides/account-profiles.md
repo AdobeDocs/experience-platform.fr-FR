@@ -2,10 +2,10 @@
 title: Tableau de bord des profils de compte
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les profils de compte B2B de votre entreprise.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 8caa10010109f9936271cb45a2166455f3678687
+source-git-commit: 442fcee17cbe38a9e1608324581ebedee4ba7fe6
 workflow-type: tm+mt
-source-wordcount: '1827'
-ht-degree: 8%
+source-wordcount: '2362'
+ht-degree: 6%
 
 ---
 
@@ -17,7 +17,7 @@ Ce document présente les fonctionnalités du tableau de bord [!UICONTROL Profil
 
 ## Commencer
 
-Vous devez avoir le droit d’accéder au tableau de bord [Profils de compte] d’Adobe Real-Time Customer Data Platform B2B.](../../rtcdp/b2b-overview.md)[!UICONTROL 
+Vous devez avoir le droit d’accéder au tableau de bord [Profils de compte](../../rtcdp/b2b-overview.md) d’Adobe Real-Time Customer Data Platform [!UICONTROL  B2B.]
 
 ## Données des profils de compte {#data}
 
@@ -79,6 +79,10 @@ Adobe fournit des widgets standard que vous pouvez utiliser pour visualiser diff
 Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez le nom d’un widget dans la liste suivante :
 
 * [Profils de compte ajoutés](#account-profiles-added)
+* [Vue d’ensemble des clientes et clients par compte](#customers-per-account-overview)
+   * [Présentation des opportunités par compte](#opportunities-per-account-overview)
+   * [Opportunités par détail de compte](#opportunities-per-account-detail)
+   * [Clients par détail de compte](#customers-per-account-detail)
 * [Nouveaux comptes par secteur](#accounts-by-industry)
 * [Nouveaux comptes par type](#accounts-by-type)
 * [Nouvelles opportunités par rôle individuel](#opportunities-by-person-role)
@@ -94,6 +98,52 @@ Pour en savoir plus sur chacun des widgets standards disponibles, sélectionnez 
 Le widget [!UICONTROL Profils de compte ajoutés] utilise un graphique linéaire pour afficher le nombre de profils de compte ajoutés chaque jour sur une période donnée. Utilisez le filtre de date globale situé en haut de votre tableau de bord pour déterminer la période d’analyse. Si aucun filtre de date n’est fourni, le comportement par défaut répertorie les profils de compte ajoutés pour l’année précédente. Les résultats peuvent être utilisés pour déduire une tendance du nombre de profils de compte ajoutés.
 
 ![ Le widget des profils de compte ajoutés.](../images/account-profiles/account-profiles-added.png)
+
+### Vue d’ensemble des clientes et clients par compte {#customers-per-account-overview}
+
+Le graphique [!UICONTROL Clients par compte] fournit un résumé des comptes en fonction de leurs types de clients. Il affiche un tableau de quatre lignes qui classe les comptes comme ayant des clients directs ou indirects, ou ceux qui n’en ont pas. Il indique le nombre total de comptes pour chaque catégorie. Le graphique permet d’identifier la répartition des comptes ayant des clients directs par rapport aux clients indirects.
+
+Les clients directs sont des profils clients directement liés à un compte via l’itinéraire `personComponents`. Cette relation est plus simple et implique une connexion directe et explicite entre le client et le compte.
+
+Les clients directs sont des profils client liés à un compte via l’itinéraire `Account-Person`. Cette relation est moins simple et implique une entité intermédiaire ou une connexion plus complexe entre le client et le compte, généralement par le biais d’autres comptes ou relations.
+
+![Widget de présentation des clients par compte.](../images/account-profiles/customers-per-account-overview-widget.png)
+
+Pour accéder à des insights plus détaillés, sélectionnez l’ellipse (**...**) sur le graphique [!UICONTROL Aperçu des clients par compte] et sélectionnez **[!UICONTROL Parcourir]** dans le menu déroulant.
+
+![Le widget de présentation des clients par compte avec le menu déroulant ellipse et l’option Exploration en surbrillance.](../images/account-profiles/customers-per-account-overview-dropdown.png)
+
+La vue d’exploration s’affiche. Ensuite, explorez les graphiques d’exploration disponibles pour mieux comprendre la structure de vos données B2B. Vous pouvez utiliser ces graphiques détaillés pour identifier le nombre de profils de compte auxquels aucun profil client n’est associé ou auxquels un ou plusieurs profils clients sont associés. Vous pouvez également les utiliser pour identifier le nombre de clients directs ou indirects associés à vos comptes.
+
+* [[!UICONTROL Clients par détail de compte]](#customers-per-account-detail)
+* [[!UICONTROL Présentation des comptes par opportunité]](#accounts-per-opportunity-overview)
+* [[!UICONTROL Opportunités par détail de compte]](#accounts-per-opportunity-detail)
+
+### [!UICONTROL Navigation entre les vues du tableau de bord] {#dashboard-view-navigation}
+
+Pour passer de l’analyse au tableau de bord Profils de compte, sélectionnez l’icône de dossier (![Icône de dossier](../images/account-profiles/folder-icon.png)) suivi de la vue correcte dans le menu déroulant.
+
+![L’affichage de l’analyse dans le tableau de bord Profils de comptes avec le menu déroulant de navigation en surbrillance.](../images/account-profiles/navigation-dropdown.png)
+
+Pour en savoir plus sur les explorations dans l’interface utilisateur de Platform, consultez le [guide d’exploration](../sql-insights-query-pro-mode/drill-through.md).
+
+#### [!UICONTROL Clients par détail de compte] {#customers-per-account-detail}
+
+Le graphique [!UICONTROL  Clients par détails de compte] fournit des détails plus détaillés sur le nombre de comptes associés à différents types de clients. Il affiche un tableau en trois colonnes détaillant le nombre de comptes par type de client (direct ou indirect) et la plage de clients qui lui sont associés. Ce graphique vous permet de comprendre comment les clients sont répartis dans différentes catégories de clients et le nombre total de comptes qui leur sont associés.
+
+![Widget de détails Clients par compte.](../images/account-profiles/customers-per-account-detail.png)
+
+#### [!UICONTROL Présentation des opportunités par compte] {#opportunities-per-account-overview}
+
+Le graphique [!UICONTROL Opportunités par compte] présente un résumé des comptes qui ont ou n&#39;ont pas d&#39;opportunités. Ce tableau de deux lignes permet de déterminer rapidement le nombre de comptes associés aux opportunités, fournissant un aperçu de l’engagement des opportunités entre les comptes.
+
+![Widget de présentation des opportunités par compte.](../images/account-profiles/opportunities-per-account-overview.png)
+
+#### [!UICONTROL Opportunités par détail de compte] {#opportunities-per-account-detail}
+
+Le graphique [!UICONTROL Détails des opportunités par compte] offre une ventilation plus détaillée des comptes en fonction du nombre d&#39;opportunités dont ils disposent. Le tableau affiche le nombre de comptes regroupés par plages de nombres d’opportunités, par exemple 1 à 10 opportunités ou plus de 100 opportunités. Ce graphique vous permet d’identifier la manière dont les comptes sont répartis par le nombre d’opportunités qu’ils gèrent.
+
+![Widget de détails Opportunités par compte.](../images/account-profiles/opportunities-per-account-detail.png)
 
 ### Nouveaux comptes par secteur {#accounts-by-industry}
 
@@ -185,4 +235,4 @@ Pour résoudre ce problème, vous devez ingérer dans l’environnement de test 
 
 ## Étapes suivantes
 
-En suivant ce document, vous devez maintenant savoir comment localiser le tableau de bord [!UICONTROL Profils de compte] et comprendre également les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des profils de compte dans le cadre de vos données B2B dans l’interface utilisateur de l’Experience Platform, reportez-vous à la [présentation des profils de compte](../../rtcdp/accounts/account-profile-overview.md) pour Adobe Real-Time CDP, édition B2B.
+En suivant ce document, vous devez maintenant savoir comment localiser le tableau de bord [!UICONTROL Profils de compte] et comprendre également les mesures affichées dans les widgets disponibles. Pour en savoir plus sur l’utilisation des profils de compte dans le cadre de vos données B2B dans l’interface utilisateur de l’Experience Platform, reportez-vous à la [présentation des profils de compte](../../rtcdp/accounts/account-profile-overview.md) pour Adobe Real-Time CDP, B2B edition.
