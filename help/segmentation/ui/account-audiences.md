@@ -1,13 +1,13 @@
 ---
 title: Audiences du compte
 description: Découvrez comment créer et utiliser des audiences de compte pour cibler des profils de compte dans des destinations en aval.
-badgeB2B: label="Édition B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: c2f9bcd9aeb0073b8b26413ec29e2dff1ee5c80d
+source-git-commit: fd0a495d68d6a09ccca66c400993d2e72673321c
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 30%
+source-wordcount: '1518'
+ht-degree: 22%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 30%
 
 >[!AVAILABILITY]
 >
->Les audiences de compte ne sont disponibles que dans l’[édition B2B de Real-Time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) et l’[ édition B2P de Real-Time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
+>Les audiences de compte ne sont disponibles que dans [B2B edition of Real-Time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2b) et l’ [édition B2P de Real-Time Customer Data Platform](../../rtcdp/overview.md#rtcdp-b2p).
 
 Grâce à la segmentation des comptes, Adobe Experience Platform vous permet d’offrir une expérience de segmentation marketing simplifiée et conviviale, allant des audiences basées sur les personnes aux audiences basées sur les comptes.
 
@@ -66,6 +66,39 @@ Sous l’onglet [!UICONTROL Audiences] , vous pouvez ajouter des audiences basé
 ![L’onglet Audiences du créateur de segments est mis en surbrillance.](../images/ui/account-audiences/audiences.png)
 
 Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [Guide de l’interface utilisateur du créateur de segments](./segment-builder.md).
+
+### Établissement de relations {#relationships}
+
+Par défaut, pour les audiences de compte, l’interface utilisateur du créateur de segments affiche la relation directe entre un compte et une personne. Cependant, d’autres types de relations sont disponibles pour les audiences de compte.
+
+Pour utiliser d’autres types de relations, sélectionnez ![l’icône de paramètres](../../images/icons/settings.png).
+
+![L&#39;icône des paramètres est mise en surbrillance dans la section Champs.](../images/ui/account-audiences/select-settings.png)
+
+Sur l’onglet [!UICONTROL Paramètres], sélectionnez **[!UICONTROL Afficher les sélecteurs de relation]** dans la section **[!UICONTROL Relation des champs]** .
+
+![ Le bouton d’activation/désactivation Afficher les sélecteurs de relation est sélectionné dans la section Relation des champs de l’onglet Paramètres.](../images/ui/account-audiences/show-relation-selectors.png)
+
+Sélectionnez à nouveau ![l’icône de paramètres](../../images/icons/settings.png) pour revenir à l’onglet [!UICONTROL Champs]. Vous pouvez maintenant consulter la section **[!UICONTROL Établissement de relations]** , qui vous permet de déterminer comment le compte est connecté à la personne et comment la personne est connectée à l’opportunité.
+
+![La section Créer des relations est mise en évidence. Elle affiche les options permettant de connecter un compte à une personne et de connecter une personne à une opportunité.](../images/ui/account-audiences/establish-relationships.png)
+
+Lors de la connexion du compte à la personne, vous pouvez choisir parmi les options suivantes :
+
+| Option | Description |
+| ------ | ----------- |
+| Relation directe | La connexion directe entre le compte et la personne. Cela spécifie les comptes auxquels chaque personne est liée via le tableau de valeurs `accountID` dans le tableau `personComponents` du schéma de personne. Ce chemin est le plus fréquemment utilisé. |
+| Relation entre les comptes et les personnes | La relation entre le compte et la personne, définie par l’objet `accountPersonRelation`. Ce chemin permet également à chaque personne d’être connectée à plusieurs comptes. Elle est utilisée lorsque votre organisation a défini un tableau de relation explicite à partir des données source. |
+| Relation opportunités-personnes | La relation entre l’opportunité et la personne, définie par l’objet `opportunityPersonRelation`. Cela permet de connecter la personne à un compte en passant de l’opportunité à l’opportunité d’accéder au compte. Vous pouvez ainsi décrire les entreprises auxquelles la personne est associée à des opportunités à l’adresse . |
+
+Lors de la connexion de l&#39;opportunité à la personne, vous pouvez choisir parmi les options suivantes :
+
+| Option | Description |
+| ------ | ----------- |
+| Compte | La connexion directe entre le compte et l’opportunité. Lorsque vous l’utilisez dans une audience de compte, ce chemin connecte toutes les personnes de l’entreprise à l’opportunité. |
+| Relation opportunités-personnes | La relation entre l’opportunité et la personne, qui est basée sur l’objet personne-opportunité. Ce chemin ne connecte que les personnes qui ont été spécifiquement identifiées comme impliquées dans une opportunité à cette opportunité. |
+
+Après avoir établi la relation souhaitée, vous pouvez ajouter les personnes-audiences requises à votre définition de segment.
 
 ## Activer l&#39;audience {#activate}
 
