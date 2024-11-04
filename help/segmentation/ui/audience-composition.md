@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur d’Audiences
 description: La Composition d’audience dans l’interface utilisateur d’Adobe Experience Platform fournit un espace de travail riche qui vous permet d’interagir avec les éléments de données de profil. L’espace de travail propose des commandes intuitives pour créer et modifier des audiences pour votre organisation.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: e17403f0529c5b94869d3bd4e860c798db620d31
+source-git-commit: 3c0fdab5d7561238a64e79e5bab5fd4843fccb0a
 workflow-type: tm+mt
-source-wordcount: '1951'
-ht-degree: 83%
+source-wordcount: '1952'
+ht-degree: 80%
 
 ---
 
@@ -88,7 +88,7 @@ Une fois que vous avez ajouté une règle personnalisée, sélectionnez **[!UICO
 
 ## [!UICONTROL Exclure] {#exclude-block}
 
-Le type de bloc **[!UICONTROL Exclure]** permet d’exclure des sous-audiences ou attributs spécifiés de votre nouvelle audience plus grande.
+Le type de bloc **[!UICONTROL Exclure]** vous permet d’exclure une sous-audience ou des attributs spécifiés de votre nouvelle audience plus large.
 
 Pour ajouter un bloc **[!UICONTROL Exclure]**, sélectionnez l’icône **+**, puis **[!UICONTROL Exclure]**.
 
@@ -100,7 +100,7 @@ Le bloc **[!UICONTROL Exclure]** est ajouté. Lorsque ce bloc est sélectionné,
 
 ### Exclure par audience {#exclude-audience}
 
-Si vous excluez par audience, vous pouvez sélectionner les audiences à exclure en sélectionnant **[!UICONTROL Ajouter une audience]**.
+Si vous excluez par audience, vous pouvez sélectionner l’audience à exclure en sélectionnant **[!UICONTROL Ajouter une audience]**.
 
 ![Le bouton [!UICONTROL Ajouter une audience] est sélectionné, ce qui vous permet de choisir l’audience que vous souhaitez exclure.](../images/ui/audience-composition/add-excluded-audience.png)
 
@@ -108,7 +108,7 @@ Si vous excluez par audience, vous pouvez sélectionner les audiences à exclure
 >
 >Seules les audiences **publiées** créées à l’aide du créateur de segments peuvent être utilisées. Les audiences créées à l’aide de la composition d’audience et des audiences générées en externe sont **non** disponibles.
 
-Une liste d’audiences s’affiche. Sélectionnez **[!UICONTROL Ajouter]** pour ajouter les audiences que vous souhaitez exclure à votre bloc d’exclusion.
+Une liste d’audiences s’affiche. Sélectionnez **[!UICONTROL Ajouter]** pour ajouter l’audience que vous souhaitez exclure à votre bloc d’exclusion.
 
 ![Une liste d’audiences s’affiche. Dans cette boîte de dialogue, vous pouvez sélectionner l’audience à ajouter.](../images/ui/audience-composition/select-audience.png)
 
