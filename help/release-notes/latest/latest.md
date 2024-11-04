@@ -4,8 +4,8 @@ description: Les notes de mise à jour d’octobre 2024 pour Adobe Experience P
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f30a124a40928abf69366d311131e353c2779191
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 78%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
