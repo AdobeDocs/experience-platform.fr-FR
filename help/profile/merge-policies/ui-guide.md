@@ -6,7 +6,7 @@ exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 source-git-commit: 400b20578e9a13fa2f41462b188707a34a462ea9
 workflow-type: tm+mt
 source-wordcount: '2455'
-ht-degree: 76%
+ht-degree: 78%
 
 ---
 
@@ -31,8 +31,8 @@ Ce guide nécessite une compréhension pratique de plusieurs fonctions [!DNL Exp
 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_101221_404"
->title="Politique de fusion pour un ID d’organisation/de sandbox/de politique de fusion introuvable"
->abstract="Cela signifie que Platform n’a pas pu trouver la stratégie de fusion demandée. Pour résoudre cette erreur, essayez l’une des solutions suivantes :<ul><li>Assurez-vous que l’identifiant de stratégie de fusion correct est répertorié dans l’URL.</li><li>Assurez-vous que vous disposez de la combinaison d’organisation et d’environnement de test correcte pour la stratégie de fusion à laquelle vous essayez d’accéder.</li></ul>"
+>title="Stratégie de fusion introuvable"
+>abstract="Cela signifie que Platform n’a pas pu trouver la stratégie de fusion demandée. Pour résoudre cette erreur, essayez l’une des solutions suivantes :<ul><li>Vérifiez que le bon identifiant de stratégie de fusion figure dans l’URL.</li><li>Assurez-vous de disposer de la bonne combinaison d’organisation et de sandbox pour accéder à la stratégie de fusion souhaitée.</li></ul>"
 
 Dans l’interface utilisateur de [!DNL Experience Platform], vous pouvez commencer à utiliser des stratégies de fusion en sélectionnant **[!UICONTROL Profils]** dans le volet de navigation de gauche, puis en sélectionnant l’onglet **[!UICONTROL Stratégies de fusion]**.
 
