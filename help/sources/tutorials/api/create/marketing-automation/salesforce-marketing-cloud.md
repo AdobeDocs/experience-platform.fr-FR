@@ -2,10 +2,10 @@
 title: Création d’une connexion de base de Marketing Cloud Salesforce à l’aide de l’API Flow Service
 description: Découvrez comment authentifier votre compte de Marketing Cloud Salesforce par rapport à Experience Platform à l’aide de l’API Flow Service.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 58%
+source-wordcount: '508'
+ht-degree: 56%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 58%
 
 >[!IMPORTANT]
 >
->L’ingestion d’objets personnalisés n’est actuellement pas prise en charge par l’intégration de la source [!DNL Salesforce Marketing Cloud].
+>La source [!DNL Salesforce Marketing Cloud] sera abandonnée fin mai 2025. Vous pouvez également utiliser la source [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 
@@ -46,6 +46,10 @@ Pour que [!DNL Flow Service] se connecte à [!DNL Salesforce Marketing Cloud], v
 Pour plus d&#39;informations sur la prise en main, consultez ce [[!DNL Salesforce Marketing Cloud] document](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
 
 ## Créer une connexion de base
+
+>[!IMPORTANT]
+>
+>L’ingestion d’objets personnalisés n’est actuellement pas prise en charge par l’intégration de la source [!DNL Salesforce Marketing Cloud].
 
 Une connexion de base conserve les informations échangées entre votre source et Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 

@@ -1,17 +1,21 @@
 ---
 solution: Experience Platform
 title: Présentation de Salesforce Marketing Cloud Source
-description: Découvrez comment connecter le Marketing Cloud Salesforce à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
+description: Découvrez comment connecter Salesforce Marketing Cloud à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: bc37d41d0f7b0ff0cf4d52242f41467f2891d613
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '322'
-ht-degree: 44%
+source-wordcount: '341'
+ht-degree: 41%
 
 ---
 
 # [!DNL Salesforce Marketing Cloud]
+
+>[!IMPORTANT]
+>
+>La source [!DNL Salesforce Marketing Cloud] sera abandonnée fin mai 2025. Vous pouvez également utiliser la source [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
@@ -48,5 +52,5 @@ La documentation ci-dessous fournit des informations sur la connexion de [!DNL S
 
 La documentation ci-dessous fournit des informations sur la connexion de [!DNL Salesforce Marketing Cloud] à Platform à l’aide de l’interface utilisateur :
 
-* [Création d’une connexion source de Marketing Cloud Salesforce dans l’interface utilisateur](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+* [Création d’une connexion source au Marketing Cloud Salesforce dans l’interface utilisateur](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Créer un flux de données pour une connexion à une source d’automatisation du marketing dans l’interface utilisateur](../../tutorials/ui/dataflow/marketing-automation.md)

@@ -2,10 +2,10 @@
 title: Connexion de votre compte de Marketing Cloud Salesforce à un Experience Platform via l’interface utilisateur
 description: Découvrez comment connecter votre compte de Marketing Cloud Salesforce à Experience Platform via l’interface utilisateur.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 30f1e8a0424ee0f81d8e98fb24886ad1480b270c
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 27%
+source-wordcount: '517'
+ht-degree: 26%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 27%
 
 >[!IMPORTANT]
 >
->L’ingestion d’objets personnalisés n’est actuellement pas prise en charge par l’intégration de la source [!DNL Salesforce Marketing Cloud].
+>La source [!DNL Salesforce Marketing Cloud] sera abandonnée fin mai 2025. Vous pouvez également utiliser la source [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 Ce tutoriel décrit les étapes à suivre pour connecter votre compte [!DNL Salesforce Marketing Cloud] à Adobe Experience Platform par le biais de l’interface utilisateur.
 
@@ -42,6 +42,10 @@ Pour plus d&#39;informations sur l&#39;authentification pour [!DNL Salesforce Ma
 
 ## Connecter votre compte [!DNL Salesforce Marketing Cloud]
 
+>[!IMPORTANT]
+>
+>L’ingestion d’objets personnalisés n’est actuellement pas prise en charge par l’intégration de la source [!DNL Salesforce Marketing Cloud].
+
 Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Sources]** dans le volet de navigation de gauche pour accéder à l’espace de travail [!UICONTROL Sources]. Le [!UICONTROL catalogue] affiche diverses sources prises en charge par Experience Platform.
 
 Vous pouvez sélectionner la catégorie appropriée dans la liste des catégories. Vous pouvez également utiliser la barre de recherche pour filtrer une source spécifique.
@@ -64,7 +68,7 @@ Lorsque vous avez terminé, sélectionnez **[!UICONTROL Se connecter à la sourc
 
 Si vous disposez déjà d’un compte, sélectionnez **[!UICONTROL Compte existant]** , puis sélectionnez le compte que vous souhaitez utiliser dans la liste qui s’affiche.
 
-![Interface de compte existante dans laquelle vous pouvez effectuer une sélection dans une liste de comptes de Marketing Cloud Salesforce existants.](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
+![Interface du compte existant dans laquelle vous pouvez effectuer une sélection dans une liste de comptes de Marketing Cloud Salesforce existants.](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
 
 ## Étapes suivantes
 

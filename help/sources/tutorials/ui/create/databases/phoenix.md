@@ -2,14 +2,18 @@
 title: Connexion de votre compte Phoenix à l’aide de l’interface utilisateur Experience Platform
 description: Découvrez comment connecter votre compte Phoenix et importer des données de votre base de données Phoenix vers Experience Platform à l’aide de l’interface utilisateur.
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: b7e42eb180b8f16344afedadf763c33bcf22fa35
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '602'
-ht-degree: 22%
+source-wordcount: '621'
+ht-degree: 21%
 
 ---
 
 # Connectez votre compte [!DNL Phoenix] à un Experience Platform à l’aide de l’interface utilisateur
+
+>[!IMPORTANT]
+>
+>La source [!DNL Phoenix] sera abandonnée fin mai 2025. Vous pouvez également utiliser la source [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 Ce tutoriel décrit les étapes à suivre pour connecter votre compte [!DNL Phoenix] et importer des données de votre base de données [!DNL Phoenix] vers l’Experience Platform.
 

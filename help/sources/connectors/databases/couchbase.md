@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Présentation de Couchbase Source Connector
 description: Découvrez comment connecter Couchbase à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: 0e3fee4d78646b1d1d6730495358b3ced4127f4e
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '211'
 ht-degree: 33%
 
 ---
 
-# (Beta) [!DNL Couchbase] connecteur
+# Connecteur [!DNL Couchbase]
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Le connecteur [!DNL Couchbase] est en version bêta. Pour plus d’informations sur l’utilisation de connecteurs bêta, consultez la [Présentation des sources](../../home.md#terms-and-conditions) .
+>La source [!DNL Couchbase] sera abandonnée fin mai 2025. Vous pouvez également utiliser la source [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md).
 
 Adobe Experience Platform fournit une connectivité native pour les fournisseurs de base de données tels que [!DNL Microsoft], MySQL et [!DNL Azure], ce qui vous permet d’importer vos données de ces systèmes. Différents types de bases de données tierces sont pris en charge, y compris les entrepôts de données relationnels, NoSQL ou de données. [!DNL Couchbase] est compatible avec les fournisseurs de base de données.
 
