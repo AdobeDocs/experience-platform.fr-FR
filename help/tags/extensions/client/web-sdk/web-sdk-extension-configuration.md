@@ -2,10 +2,10 @@
 title: Configuration de l’extension de balise du SDK Web
 description: Découvrez comment configurer l’extension de balise SDK Web Experience Platform dans l’interface utilisateur des balises.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 660d4e72bd93ca65001092520539a249eae23bfc
+source-git-commit: f2f61c8e68fa794317e3b4f845f1950cebc59ec7
 workflow-type: tm+mt
-source-wordcount: '2012'
-ht-degree: 5%
+source-wordcount: '2525'
+ht-degree: 4%
 
 ---
 
@@ -170,6 +170,66 @@ Au lieu de transmettre les remplacements par le biais d’une commande SDK Web, 
 Les remplacements de flux de données doivent être configurés par environnement. Les environnements de développement, d’évaluation et de production ont tous des remplacements distincts. Vous pouvez copier les paramètres entre eux à l’aide des options dédiées affichées dans l’écran ci-dessous.
 
 ![Image montrant le remplacement de la configuration du flux de données à l’aide de la page d’extension de balise du SDK Web.](assets/datastream-overrides.png)
+
+Par défaut, le remplacement de la configuration du flux de données est désactivé. L’option **[!UICONTROL Correspondance de la configuration de la banque de données]** est sélectionnée par défaut.
+
+![ L’interface utilisateur de l’extension de balise SDK Web présentant la configuration de la chaîne de données remplace le paramètre par défaut.](assets/datastream-override-default.png)
+
+Pour activer les remplacements de flux de données dans l’extension de balise, sélectionnez **[!UICONTROL Enabled]** dans le menu déroulant.
+
+![ L’interface utilisateur de l’extension de balise SDK Web affiche la configuration du flux de données remplace le paramètre Activé.](assets/datastream-override-enabled.png)
+
+Une fois que vous avez activé les remplacements de configuration du flux de données, vous pouvez configurer les remplacements pour chaque service décrit ci-dessous.
+
+Les paramètres de remplacement de la banque de données ci-dessous remplacent toutes les configurations et règles de flux de données côté serveur pour l’environnement sélectionné.
+
+### Adobe Analytics {#analytics}
+
+Utilisez les paramètres de cette section pour remplacer le routage des données vers le service Adobe Analytics.
+
+![Image de l’interface utilisateur de l’extension de balise SDK Web montrant les paramètres de remplacement de la banque de données Adobe Analytics.](assets/datastream-override-analytics.png)
+
+* **[!UICONTROL Activé]** / **[!UICONTROL Désactivé]** : utilisez ce menu déroulant pour activer ou désactiver le routage des données vers le service Adobe Analytics.
+* **[!UICONTROL Suites de rapports]** : identifiants des suites de rapports de destination dans Adobe Analytics. La valeur doit être une suite de rapports de remplacement préconfigurée (ou une liste de suites de rapports séparées par des virgules) de votre configuration de flux de données. Ce paramètre remplace les suites de rapports principales.
+* **[!UICONTROL Ajouter une suite de rapports]** : sélectionnez cette option pour ajouter d’autres suites de rapports.
+
+### Adobe Audience Manager {#audience-manager}
+
+Utilisez les paramètres de cette section pour remplacer le routage des données vers le service Adobe Audience Manager.
+
+![Image de l’interface utilisateur de l’extension de balise SDK Web montrant les paramètres de remplacement de la banque de données Adobe Audience Manager.](assets/datastream-override-audience-manager.png)
+
+* **[!UICONTROL Activé]** / **[!UICONTROL Désactivé]** : utilisez ce menu déroulant pour activer ou désactiver le routage des données vers le service Adobe Audience Manager.
+* **[!UICONTROL Conteneur de synchronisation des identifiants tiers]** : identifiant du conteneur de synchronisation des identifiants tiers de destination dans Audience Manager. La valeur doit être un conteneur secondaire préconfiguré de votre configuration de flux de données et remplace le conteneur principal.
+
+### Adobe Experience Platform {#experience-platform}
+
+Utilisez les paramètres de cette section pour remplacer le routage des données vers le service Adobe Experience Platform.
+
+![Image de l’interface utilisateur de l’extension de balise SDK Web montrant les paramètres de remplacement de la banque de données Adobe Experience Platform.](assets/datastream-override-experience-platform.png)
+
+* **[!UICONTROL Activé]** / **[!UICONTROL Désactivé]** : utilisez ce menu déroulant pour activer ou désactiver le routage des données vers le service Adobe Experience Platform.
+* **[!UICONTROL Jeu de données d’événement]** : identifiant du jeu de données d’événement de destination dans Adobe Experience Platform. La valeur doit être un jeu de données secondaire préconfiguré de votre configuration de flux de données.
+* **[!UICONTROL Offer decisioning]** : utilisez ce menu déroulant pour activer ou désactiver le routage des données vers le service [!DNL Offer Decisioning].
+* **[!UICONTROL Segmentation Edge]** : utilisez ce menu déroulant pour activer ou désactiver le routage des données vers le service [!DNL Edge Segmentation].
+* **[!UICONTROL Destinations Personalization]** : utilisez ce menu déroulant pour activer ou désactiver le routage des données vers les destinations de personnalisation.
+* **[!UICONTROL Adobe Journey Optimizer]** : utilisez ce menu déroulant pour activer ou désactiver le routage des données vers le service [!DNL Adobe Journey Optimizer].
+
+### Transfert des événements côté serveur d’Adobe {#ssf}
+
+Utilisez les paramètres de cette section pour remplacer le routage des données par le service de transfert des événements côté serveur Adobe.
+
+![Image de l’interface utilisateur de l’extension de balise SDK Web montrant les paramètres de remplacement de la bande de données de transfert d’événement côté serveur Adobe.](assets/datastream-override-ssf.png)
+
+* **[!UICONTROL Activé]** / **[!UICONTROL Désactivé]** : utilisez ce menu déroulant pour activer ou désactiver le routage des données vers le service de transfert des événements côté serveur Adobe.
+
+### Adobe Target {#target}
+
+Utilisez les paramètres de cette section pour remplacer le routage des données vers le service Adobe Target.
+
+![Image de l’interface utilisateur de l’extension de balise SDK Web montrant les paramètres de remplacement de la banque de données Adobe Target.](assets/datastream-override-target.png)
+
+* **[!UICONTROL Activé]** / **[!UICONTROL Désactivé]** : utilisez ce menu déroulant pour activer ou désactiver le routage des données vers le service Adobe Target.
 
 ## Configuration des paramètres avancés
 
