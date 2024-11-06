@@ -2,9 +2,9 @@
 title: Tableau de bord des profils de compte
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur les profils de compte B2B de votre entreprise.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: 442fcee17cbe38a9e1608324581ebedee4ba7fe6
+source-git-commit: a0b762cb89f45313724187ce36b80b2f3d0548eb
 workflow-type: tm+mt
-source-wordcount: '2362'
+source-wordcount: '2397'
 ht-degree: 6%
 
 ---
@@ -100,6 +100,10 @@ Le widget [!UICONTROL Profils de compte ajoutés] utilise un graphique linéaire
 ![ Le widget des profils de compte ajoutés.](../images/account-profiles/account-profiles-added.png)
 
 ### Vue d’ensemble des clientes et clients par compte {#customers-per-account-overview}
+
+>[!NOTE]
+>
+>L’ [!UICONTROL  aperçu des clients par compte] et ses graphiques d’exploration ([!UICONTROL Clients par compte détail], [!UICONTROL Aperçu des opportunités par compte] et [!UICONTROL Opportunités par compte détail]) ne sont pas affectés par les filtres de date globaux que vous avez peut-être définis.
 
 Le graphique [!UICONTROL Clients par compte] fournit un résumé des comptes en fonction de leurs types de clients. Il affiche un tableau de quatre lignes qui classe les comptes comme ayant des clients directs ou indirects, ou ceux qui n’en ont pas. Il indique le nombre total de comptes pour chaque catégorie. Le graphique permet d’identifier la répartition des comptes ayant des clients directs par rapport aux clients indirects.
 

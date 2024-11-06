@@ -2,10 +2,10 @@
 title: Clusterisation d’algorithmes
 description: Découvrez comment configurer et optimiser divers algorithmes de mise en grappe avec des paramètres, descriptions et exemples de code clés pour vous aider à mettre en oeuvre des modèles statistiques avancés.
 role: Developer
-source-git-commit: 4d4e9ae527deb149f02edb39716851e995c23d21
+source-git-commit: 4ee7ce2468c1ea5f0960349c288d406f43a8bb91
 workflow-type: tm+mt
-source-wordcount: '878'
-ht-degree: 5%
+source-wordcount: '874'
+ht-degree: 4%
 
 ---
 
@@ -112,7 +112,7 @@ Create MODEL modelname OPTIONS(
 
 **Paramètres**
 
-| Paramètre | Description | Valeur par défaut | Valeurs possibles |                                                                                                                                                                  | Valeur par défaut | Valeurs possibles |
+| Paramètre | Description | Valeur par défaut | Valeurs possibles |
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|------------------------------------------|
 | `MAX_ITER` | Nombre maximal d’itérations exécutées par l’algorithme. | 20 | (>= 0) |
 | `OPTIMIZER` | Opérateur ou algorithme d’inférence utilisé pour estimer le modèle LDA. Les options prises en charge sont `"online"` (Online Variational Bayes) et `"em"` (Expectation-Maximization). | &quot;online&quot; | `online`, `em` |
@@ -127,6 +127,8 @@ Create MODEL modelname OPTIONS(
 | `SUBSAMPLING_RATE` | Pour l’optimiseur `online` : fraction du corpus échantillonnée et utilisée à chaque itération de descente en dégradé mini-lot, dans la plage `(0, 1]`. | 0,05 | `(0, 1]` |
 | `TOPIC_CONCENTRATION` | Paramètre de concentration (&quot;beta&quot; ou &quot;eta&quot;) pour la précédente mise sur la distribution des sujets par rapport aux termes. | Automatique | (>= 0) |
 | `TOPIC_DISTRIBUTION_COL` | Colonne de sortie avec des estimations de la distribution du mélange de rubriques pour chaque document. | NON DÉFINI | Toute chaîne |
+
+{style="table-layout:auto"}
 
 **Exemple**
 
