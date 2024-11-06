@@ -2,9 +2,9 @@
 title: Présentation d’Audience Portal
 description: Découvrez comment utiliser Audience Portal pour afficher, gérer et créer des audiences dans Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 0378cc313445ff22d1d2d003c9ae248d791b3707
+source-git-commit: a48df00b61fd5736cfb6fd29c60cf73a02342451
 workflow-type: tm+mt
-source-wordcount: '4530'
+source-wordcount: '4547'
 ht-degree: 55%
 
 ---
@@ -54,13 +54,13 @@ Une icône de points de suspension se trouve à côté de chaque audience. Cette
 
 | Action | Origines | Description |
 | ------ | ------- | ----------- |
-| [!UICONTROL Modifier] | Segmentation Service | Ouvre le créateur de segments pour modifier votre audience. Notez que si votre audience a été créée par le biais de l’API, vous ne pourrez **pas** la modifier à l’aide du créateur de segments. Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [Guide de l’interface utilisateur du créateur de segments](./segment-builder.md). |
+| [!UICONTROL Modifier] | Service de segmentation | Ouvre le créateur de segments pour modifier votre audience. Notez que si votre audience a été créée par le biais de l’API, vous ne pourrez **pas** la modifier à l’aide du créateur de segments. Pour plus d’informations sur l’utilisation du créateur de segments, consultez le [Guide de l’interface utilisateur du créateur de segments](./segment-builder.md). |
 | [!UICONTROL Composition ouverte] | Composition de l’audience | Ouvre la composition d’audience pour afficher votre audience. Pour plus d’informations sur la composition d’audience, consultez le [Guide de l’interface utilisateur de la composition d’audience](./audience-composition.md). |
-| [!UICONTROL Activer la destination] | Segmentation Service | Active l’audience vers une destination. Pour plus d’informations sur l’activation d’une audience vers une destination, consultez la [vue d’ensemble de l’activation](../../destinations/ui/activation-overview.md). |
+| [!UICONTROL Activer la destination] | Service de segmentation | Active l’audience vers une destination. Pour plus d’informations sur l’activation d’une audience vers une destination, consultez la [vue d’ensemble de l’activation](../../destinations/ui/activation-overview.md). |
 | [!UICONTROL Partager avec des partenaires] | Composition d’audience, chargement personnalisé, Segmentation Service | Partage votre audience avec d’autres utilisateurs de Platform. Pour plus d’informations sur cette fonctionnalité, consultez la [vue d’ensemble de la correspondance de segments](./segment-match/overview.md). |
 | [!UICONTROL Gérer les balises] | Composition d’audience, chargement personnalisé, Segmentation Service | Gère les balises définies par l’utilisateur qui appartiennent à l’audience. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
 | [!UICONTROL Déplacer vers le dossier] | Composition d’audience, chargement personnalisé, Segmentation Service | Gère le dossier auquel l’audience appartient. Pour plus d’informations sur cette fonctionnalité, consultez la section sur [le filtrage et le balisage](#manage-audiences). |
-| [!UICONTROL Copier] | Segmentation Service | Duplique l’audience sélectionnée. Vous trouverez plus d’informations sur cette fonction dans la [FAQ sur la segmentation](../faq.md#copy). |
+| [!UICONTROL Copier] | Service de segmentation | Duplique l’audience sélectionnée. Vous trouverez plus d’informations sur cette fonction dans la [FAQ sur la segmentation](../faq.md#copy). |
 | [!UICONTROL Appliquer les étiquettes d’accès] | Composition d’audience, chargement personnalisé, Segmentation Service | Gère les étiquettes d’accès qui appartiennent à l’audience. Pour plus d’informations sur les libellés d’accès, veuillez lire la documentation sur la [gestion des libellés](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Publier] | Chargement personnalisé, service de segmentation | Publie l’audience sélectionnée. Pour plus d’informations sur la gestion de l’état du cycle de vie, consultez la section [état du cycle de vie dans le FAQ sur la segmentation](../faq.md#lifecycle-states). |
 | [!UICONTROL Désactiver] | Chargement personnalisé, service de segmentation | Désactive l’audience sélectionnée. Pour plus d’informations sur la gestion de l’état du cycle de vie, consultez la section [état du cycle de vie dans le FAQ sur la segmentation](../faq.md#lifecycle-states). |
@@ -244,7 +244,7 @@ La fenêtre contextuelle **[!UICONTROL Évaluer les audiences à la demande]** s
 
 ![Les audiences qui peuvent être évaluées à l’aide de l’évaluation d’audience flexible sont affichées.](../images/ui/audience-portal/evaluate-audiences-modal.png)
 
-Une fois que vous avez confirmé que les audiences correctes sont répertoriées, effectuez la requête et l’évaluation d’audience flexible commencera.
+Une fois que vous avez confirmé que les audiences correctes sont répertoriées, vous pouvez poursuivre la requête et l’évaluation d’audience flexible commencera. Vous pouvez afficher l’état de cette évaluation de l’audience dans la [vue de surveillance des tâches d’évaluation](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
 
 >[!NOTE]
 >
