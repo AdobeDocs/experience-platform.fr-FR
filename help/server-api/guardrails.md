@@ -2,9 +2,9 @@
 title: Protections des performances pour l’API du serveur réseau Edge
 description: Découvrez comment utiliser l’API du serveur dans des barrières de sécurité de performances optimales.
 exl-id: 063d0fbb-26d1-4727-9dea-8e7223b2173d
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 316efe577274b389bd1bf50e896ad6ef53e44b7b
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '569'
 ht-degree: 5%
 
 ---
@@ -21,6 +21,8 @@ Adobe n’est pas responsable de la dégradation des performances provoquée par
 >[!IMPORTANT]
 >
 >Vérifiez vos droits de licence dans votre commande de ventes et la [description du produit](https://helpx.adobe.com/fr/legal/product-descriptions.html) correspondante sur les limites d’utilisation réelles en plus de cette page de garde-fous.
+
+Toutes les barrières de performance décrites dans cette page s’appliquent au niveau de l’organisation IMS. Pour les utilisateurs disposant de plusieurs organisations IMS configurées, chaque organisation est soumise individuellement aux barrières de performance ci-dessous. Pour plus d’informations sur [!DNL IMS Organizations], consultez le [glossaire Experience Platform](../landing/glossary.md) .
 
 ## Définitions
 
