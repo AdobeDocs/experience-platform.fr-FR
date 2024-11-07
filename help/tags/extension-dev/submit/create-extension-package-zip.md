@@ -1,14 +1,14 @@
 ---
-title: Préparation d’un fichier zip de package d’extension
+title: Création d’un fichier zip de package d’extension
 description: Découvrez comment préparer un fichier zip de package d’extension.
-source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
+source-git-commit: 92e519e0662c3c3521bfe5ca814b37464e55c7e1
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 50%
+source-wordcount: '102'
+ht-degree: 45%
 
 ---
 
-# Téléchargement et implémentation de tests de bout en bout
+# Créez un fichier zip de package d’extension.
 
 >[!NOTE]
 >
