@@ -2,9 +2,9 @@
 title: Priorité des espaces de noms
 description: Découvrez la priorité des espaces de noms dans Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 07d54bf341ef2aacc6612ad323585609c0830824
+source-git-commit: a2a60f429836e26179f68a40fce91a90d73d8eee
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1788'
 ht-degree: 2%
 
 ---
@@ -176,7 +176,16 @@ Lors de la sélection de vos données, vous devez spécifier un espace de noms q
 
 Cette configuration entraîne le calcul des scores uniquement à l’aide d’événements authentifiés.
 
-Pour plus d’informations sur, lisez les documents sur [Attribution AI](../../intelligent-services/attribution-ai/overview.md) et [Customer AI](../../intelligent-services/customer-ai/overview.md).
+Pour plus d’informations, lisez les documents sur [Attribution AI](../../intelligent-services/attribution-ai/overview.md) et [Customer AI](../../intelligent-services/customer-ai/overview.md).
+
+### Destinations conçues par les partenaires
+
+Les résultats d’exclusion d’audience mis à jour pour les profils associés à un appareil partagé peuvent ne pas être envoyés vers les destinations en aval. Cela peut se produire dans certains cas rares où :
+
+* La qualification de l’audience est basée uniquement sur une activité anonyme.
+* Les connexions entre plusieurs profils se produisent en peu de temps.
+
+Pour plus d’informations sur les destinations créées par des partenaires, consultez la [présentation des destinations](../../destinations/home.md#adobe-built-and-partner-built-destinations).
 
 ### Privacy Service
 
