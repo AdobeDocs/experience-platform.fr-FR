@@ -5,10 +5,10 @@ title: Créer une connexion source Zoho CRM dans l’interface utilisateur
 type: Tutorial
 description: Découvrez comment créer une connexion source Zoho CRM à l’aide de l’interface utilisateur d’Adobe Experience Platform.
 exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 96%
+source-wordcount: '550'
+ht-degree: 98%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 96%
 
 >[!IMPORTANT]
 >
->La source [!DNL Zoho CRM] sera abandonnée fin juin 2025. Vous pouvez utiliser [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) à la place de la source [!DNL Zoho CRM].
+>La source [!DNL Zoho CRM] sera abandonnée fin juin 2025.
 
 Les connecteurs source d’Adobe Experience Platform permettent d’ingérer des données CRM externes selon un calendrier précis. Ce tutoriel décrit les étapes à suivre pour créer un connecteur source [!DNL Zoho CRM] à l’aide de l’interface utilisateur de [!DNL Platform].
 

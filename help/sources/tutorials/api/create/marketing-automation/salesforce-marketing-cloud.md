@@ -2,10 +2,10 @@
 title: Création d’une connexion de base de Marketing Cloud Salesforce à l’aide de l’API Flow Service
 description: Découvrez comment authentifier votre compte de Marketing Cloud Salesforce par rapport à Experience Platform à l’aide de l’API Flow Service.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '509'
-ht-degree: 56%
+source-wordcount: '500'
+ht-degree: 57%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 56%
 
 >[!IMPORTANT]
 >
->La source [!DNL Salesforce Marketing Cloud] sera abandonnée fin mai 2025. Vous pouvez utiliser [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) à la place de la source [!DNL Salesforce Marketing Cloud].
+>La source [!DNL Salesforce Marketing Cloud] sera abandonnée fin mai 2025.
 
 Une connexion de base représente la connexion authentifiée entre une source et Adobe Experience Platform.
 

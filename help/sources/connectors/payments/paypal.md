@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation du connecteur Source PayPal
 description: Découvrez comment connecter PayPal à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
 exl-id: c70a9b91-b883-4e58-9ec5-6fc9b2163efd
-source-git-commit: 0781d04af12c4c11dfc917adfdec8673cf3be8de
+source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 56%
+source-wordcount: '231'
+ht-degree: 58%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 56%
 
 >[!IMPORTANT]
 >
->La source [!DNL PayPal] sera abandonnée fin mai 2025. Vous pouvez utiliser [[!DNL Data Landing Zone]](../cloud-storage/data-landing-zone.md) à la place de la source [!DNL PayPal].
+>La source [!DNL PayPal] sera abandonnée fin mai 2025.
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
