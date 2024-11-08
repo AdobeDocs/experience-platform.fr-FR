@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Terminologie des règlements sur la confidentialité
 description: Ce document fournit des définitions des termes clés liés aux réglementations de confidentialité prises en charge par Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 0a8d7c4414f6091025d36ed85dc09e057ee24df9
+source-git-commit: 16a3900e7cb54ae1525c11c9316b3928e5f43096
 workflow-type: tm+mt
-source-wordcount: '2301'
-ht-degree: 2%
+source-wordcount: '2404'
+ht-degree: 1%
 
 ---
 
@@ -52,6 +52,8 @@ Ce document fournit des définitions des termes clés liés aux réglementations
 **Administrateur de la protection des données** : expert en matière de confidentialité des données qui travaille indépendamment pour s’assurer qu’une entité adhère aux politiques et procédures détaillées dans le RGPD.
 
 **Titulaire de données** : personne physique dont les données personnelles sont traitées par un contrôleur ou une entité de traitement des données.
+
+**[!DNL Delaware Personal Data Privacy Act]** : [!DNL Delaware Personal Data Privacy Act] accorde aux résidents du Delaware les droits d’accéder, de corriger, de supprimer et de se désinscrire des ventes de données personnelles et de la publicité ciblée. La loi s’applique aux entreprises qui traitent des données pour au moins 35 000 consommateurs ou qui tirent plus de 20 % des recettes des ventes de données affectant plus de 10 000 consommateurs. Appliquée par le ministère de la Justice, elle comprend des pratiques de protection des données obligatoires et une période de 60 jours pour traiter les violations.
 
 **Actes délégués** : actes non législatifs promulgués pour compléter la législation existante et fournir des critères ou des précisions.
 
@@ -141,6 +143,8 @@ Ce document fournit des définitions des termes clés liés aux réglementations
 **Pseudonymization** : traitement des données personnelles de sorte qu’elles ne puissent plus être attribuées à un seul sujet de données sans l’utilisation de données supplémentaires, à condition que ces données supplémentaires restent séparées pour garantir la non-attribution.
 
 ## Q
+
+**[!DNL Quebec Law 25]** : [!DNL Quebec Law 25] améliore les droits à la confidentialité pour les résidents, en imposant un consentement explicite, une réduction des données et des droits d’accès, de correction, de suppression et de transfert des données personnelles. Les organisations doivent nommer un agent de la protection des renseignements personnels, effectuer des évaluations d&#39;impact sur la vie privée et signaler les violations. Les délais de conformité et les sanctions significatives s&#39;appliquent en cas de violation.
 
 ## R
 
