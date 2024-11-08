@@ -5,7 +5,7 @@ title: Création d’une connexion Source Couchbase dans l’interface utilisate
 type: Tutorial
 description: Découvrez comment créer une connexion source Couchbase à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 51%
@@ -14,7 +14,7 @@ ht-degree: 51%
 
 # Créer une connexion source [!DNL Couchbase] dans l’interface utilisateur
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >La source [!DNL Couchbase] sera abandonnée fin mai 2025.
 

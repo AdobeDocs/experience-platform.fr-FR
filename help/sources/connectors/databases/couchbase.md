@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Présentation de Couchbase Source Connector
 description: Découvrez comment connecter Couchbase à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 34%
@@ -13,7 +13,7 @@ ht-degree: 34%
 
 # Connecteur [!DNL Couchbase]
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >La source [!DNL Couchbase] sera abandonnée fin mai 2025.
 

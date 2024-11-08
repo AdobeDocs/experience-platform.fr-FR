@@ -3,7 +3,7 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;Oracle Serv
 title: Créer une connexion source Oracle Service Cloud dans l’interface utilisateur.
 description: Découvrez comment créer une connexion source Oracle Service Cloud à l’aide de l’interface utilisateur d’Adobe Experience Platform.
 exl-id: e5869c09-b61e-4d23-a594-5a07769da3c4
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 97%
@@ -12,7 +12,7 @@ ht-degree: 97%
 
 # Créer une connexion source Oracle Service Cloud dans l’interface utilisateur.
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >La source [!DNL Oracle Service Cloud] sera abandonnée fin mai 2025.
 

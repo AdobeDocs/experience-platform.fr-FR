@@ -5,7 +5,7 @@ title: Création d’une connexion de base Couchbase à l’aide de l’API Flow
 type: Tutorial
 description: Découvrez comment connecter Couchbase à Adobe Experience Platform à l’aide de l’API Flow Service.
 exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 64%
@@ -14,7 +14,7 @@ ht-degree: 64%
 
 # Créez une connexion de base à [!DNL Couchbase] à l’aide de l’API [!DNL Flow Service].
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >La source [!DNL Couchbase] sera abandonnée fin mai 2025.
 

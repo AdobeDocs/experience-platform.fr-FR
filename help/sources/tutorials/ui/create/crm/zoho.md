@@ -5,7 +5,7 @@ title: Créer une connexion source Zoho CRM dans l’interface utilisateur
 type: Tutorial
 description: Découvrez comment créer une connexion source Zoho CRM à l’aide de l’interface utilisateur d’Adobe Experience Platform.
 exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
-source-git-commit: a32d0d7ed7d18454099d2b55b3f6809cfbcd9b62
+source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 98%
@@ -14,7 +14,7 @@ ht-degree: 98%
 
 # Créer une connexion source [!DNL Zoho CRM] dans l’interface utilisateur
 
->[!IMPORTANT]
+>[!WARNING]
 >
 >La source [!DNL Zoho CRM] sera abandonnée fin juin 2025.
 
