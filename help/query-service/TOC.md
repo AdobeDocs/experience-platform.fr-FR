@@ -5,10 +5,10 @@ breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: c94213b37813730911d207cb0de773d8aac22c13
+source-git-commit: fed47e132e1ff46fdf3df1a5a3f9f3e99bd1340c
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 78%
+source-wordcount: '366'
+ht-degree: 77%
 
 ---
 
@@ -104,7 +104,7 @@ Mise en oeuvre de modèles {#implement-models}
    - [Surveiller les requêtes planifiées](ui/monitor-queries.md)
    - [Guide sur les informations d’identification](ui/credentials.md)
    - [Générer des jeux de données de sortie à partir des résultats de requête](ui/create-datasets.md)
-- Points d’entrée de l’API Query Service {#api}
+- API Query Service {#api}
    - [Prise en main](api/getting-started.md)
    - [Requêtes](api/queries.md)
    - [Paramètres de connexion](api/connection-parameters.md)
@@ -113,6 +113,11 @@ Mise en oeuvre de modèles {#implement-models}
    - [Modèles de requête](api/query-templates.md)
    - [Requêtes accélérées](api/accelerated-queries.md)
    - [Abonnements aux alertes](api/alert-subscriptions.md)
+- API d’authentification Query Service {#auth-api}
+   - [Vue d’ensemble](auth-api/overview.md)
+   - [Prise en main](auth-api/getting-started.md)
+   - [Accès IP](auth-api/ip-access.md)
+   - [Valider](auth-api/validate.md)
 - Gouvernance des données {#data-governance}
    - [Aperçu](data-governance/overview.md)
    - [Guide du journal d’audit](data-governance/audit-log-guide.md)
