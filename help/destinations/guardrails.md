@@ -6,10 +6,10 @@ product: experience platform
 type: Documentation
 description: En savoir plus sur l’utilisation par défaut de l’activation des données et les limites de débit.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
+source-git-commit: d01e9b6d64e9040df11c45750c784079a0289477
 workflow-type: tm+mt
-source-wordcount: '1686'
-ht-degree: 50%
+source-wordcount: '1715'
+ht-degree: 48%
 
 ---
 
@@ -53,7 +53,7 @@ Les mécanismes de sécurisation ci-dessous s’appliquent généralement à l�
 | Nombre maximal d’attributs mappés vers une destination | 50 | Protecteur des performances | Dans le cas de plusieurs destinations et types de destination, vous pouvez sélectionner des attributs de profil et des identités à mapper pour l’exportation. Pour des performances optimales, un maximum de 50 attributs doit être mappé dans un flux de données vers une destination. |
 | Nombre maximal de destinations | 100 | Barrière de sécurité mise en place par le système | Vous pouvez créer un maximum de 100 destinations auxquelles vous pouvez vous connecter et activer des données, *par sandbox*. Les [destinations de personnalisation Edge (personnalisation personnalisée)](#edge-destinations-activation) peuvent représenter un maximum de 10 sur les 100 destinations recommandées. |
 | Type de données activées vers les destinations | Données de profil, y compris les identités et le mappage d’identités | Barrière de sécurité mise en place par le système | Actuellement, il n’est possible d’exporter que des *attributs d’enregistrement de profil* vers les destinations. Pour l’instant, les attributs XDM qui décrivent les données d’événement ne sont pas pris en charge pour l’exportation. |
-| Type de données activées vers les destinations : prise en charge des attributs de tableau et de mappage | Non disponible | Barrière de sécurité mise en place par le système | À l’heure actuelle, il n’est **pas** possible d’exporter des *attributs de tableau ou de mappage* vers des destinations. L’exception à cette règle est le [mappage d’identités](/help/xdm/field-groups/profile/identitymap.md), qui est exporté à la fois dans les activations par flux et basées sur des fichiers. |
+| Type de données activées vers les destinations : prise en charge des attributs de tableau et de mappage | Partiellement disponible | Barrière de sécurité mise en place par le système | Vous pouvez exporter des attributs de tableau vers des [destinations basées sur des fichiers](/help/destinations/destination-types.md#file-based). Vous devez toujours utiliser la fonction `array_to_string` pour aplatir le tableau en une chaîne dans le fichier cible. [En savoir plus](/help/release-notes/2024/october-2024.md#destinations-new-updated-functionality) sur la fonctionnalité. <br><br> À l’heure actuelle, il n’est **pas** possible d’exporter des *attributs de mappage* vers des destinations. L’exception à cette règle est le [mappage d’identités](/help/xdm/field-groups/profile/identitymap.md), qui est exporté à la fois dans les activations par flux et basées sur des fichiers. |
 
 {style="table-layout:auto"}
 
