@@ -2,7 +2,7 @@
 title: applyPropositions
 description: Rendre les propositions qui ont déjà été générées avec sendEvent.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 9aab41b338907f3c9fb15d08bfa877eb218f5627
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
@@ -46,7 +46,7 @@ Exécutez la commande `applyPropositions` lors de l’appel de votre instance co
 * **`viewName`** : nom de la vue à afficher dans une application d’une seule page. Les notifications d’affichage de ces décisions sont mises en cache et peuvent être incluses dans une commande `sendEvent` suivante à l’aide de `personalization.includePendingDisplayNotifications`.
 
 ```js
-alloy("applyPropositiions",{
+alloy("applyPropositions",{
   "propositions": [],
   "metadata": {},
   "viewName": ""
