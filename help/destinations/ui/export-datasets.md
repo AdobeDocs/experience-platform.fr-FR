@@ -3,9 +3,9 @@ title: Exportation de jeux de données vers des destinations de stockage dans le
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: ad33eaa48928b25502ef279f000b92f31e1667ca
+source-git-commit: 74dcaff91a264062feec262784e056a296072fd7
 workflow-type: tm+mt
-source-wordcount: '2573'
+source-wordcount: '2603'
 ht-degree: 37%
 
 ---
@@ -238,7 +238,7 @@ Dans le [workflow de connexion à la destination](/help/destinations/ui/connect-
 
 Notez la différence de format de fichier entre les deux types de fichiers, lorsqu’ils sont compressés :
 
-* Lors de l’exportation de fichiers JSON compressés, le format de fichier exporté est `json.gz`
+* Lors de l’exportation de fichiers JSON compressés, le format du fichier exporté est `json.gz`. Le format du fichier JSON exporté est NDJSON, qui est le format d’échange standard dans l’écosystème de données massives. Adobe recommande d’utiliser un client compatible NDJSON pour lire les fichiers exportés.
 * Lors de l’exportation de fichiers parquet compressés, le format de fichier exporté est `gz.parquet`
 
 Les exportations vers les fichiers JSON sont prises en charge *en mode compressé uniquement*. Les exportations vers les fichiers Parquet sont prises en charge en mode compressé et non compressé.

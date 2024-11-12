@@ -4,9 +4,9 @@ title: Exportation de jeux de données à l’aide de l’API Flow Service
 description: Découvrez comment utiliser l’API Flow Service pour exporter des jeux de données vers des destinations sélectionnées.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 22a752e28fe3cc4cb3337b456e80ef1b273f6a71
+source-git-commit: c32d2801fe38183225d24f38284b42e3d78e2631
 workflow-type: tm+mt
-source-wordcount: '5107'
+source-wordcount: '5138'
 ht-degree: 11%
 
 ---
@@ -1163,9 +1163,11 @@ Notez l’identifiant de connexion de la réponse. Cet identifiant sera requis �
 
 Ensuite, vous devez créer une connexion cible qui stocke les paramètres d’exportation de vos jeux de données. Les paramètres d’exportation incluent l’emplacement, le format de fichier, la compression et d’autres détails. Reportez-vous aux propriétés `targetSpec` fournies dans la spécification de connexion de la destination pour comprendre les propriétés prises en charge pour chaque type de destination. Référencez les onglets ci-dessous pour les propriétés `targetSpec` de toutes les destinations prises en charge.
 
->[!WARNING]
+>[!IMPORTANT]
 >
->Les exportations vers les fichiers JSON sont prises en charge en mode compressé uniquement. Les exportations vers les fichiers [!DNL Parquet] sont prises en charge en mode compressé et non compressé.
+>Les exportations vers les fichiers JSON sont prises en charge en mode compressé uniquement. Les exportations vers les fichiers [!DNL Parquet] sont prises en charge en modes compressé et non compressé.
+>
+>Le format du fichier JSON exporté est NDJSON, qui est le format d’échange standard dans l’écosystème de données massives. Adobe recommande d’utiliser un client compatible NDJSON pour lire les fichiers exportés.
 
 >[!BEGINTABS]
 
