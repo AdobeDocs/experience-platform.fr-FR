@@ -2,9 +2,10 @@
 title: Fonctionnalités Alpha et Beta pour l’assistant AI
 description: Découvrez les fonctionnalités de l’assistant d’IA qui se trouvent actuellement dans les étapes Alpha ou Beta.
 badge: Alpha
-source-git-commit: c628b5b68bb098187b51e175e6116bde996ae9d2
+exl-id: 48e7737e-9aee-4d01-8f24-bc562e443e3a
+source-git-commit: 1606513b3bf7bf8fcee1b416a06a286b5f33cf72
 workflow-type: tm+mt
-source-wordcount: '58'
+source-wordcount: '61'
 ht-degree: 1%
 
 ---
@@ -14,3 +15,4 @@ ht-degree: 1%
 Lisez les documents suivants pour en savoir plus sur les fonctionnalités de l’assistant d’IA pour Adobe Experience Platform qui se trouvent actuellement dans les étapes Alpha ou Beta :
 
 * [Surveillance des changements significatifs et des prévisions de l’audience](./audience-forecasting.md)
+* [Estimation du langage naturel](./natural-language.md)
