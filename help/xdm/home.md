@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Présentation du système XDM
 description: La normalisation et l’interopérabilité sont les concepts clés d’Adobe Experience Platform. Le modèle de données d’expérience (XDM), optimisé par Adobe, vise à normaliser les données d’expérience client et à définir des schémas pour la gestion de l’expérience client.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 48caa318f0e951979db4fd2c94624a73311422d6
+source-git-commit: 442df54080b08b7fc3888e8bd5c7bd3e8f301240
 workflow-type: tm+mt
-source-wordcount: '2101'
+source-wordcount: '2124'
 ht-degree: 74%
 
 ---
@@ -105,7 +105,7 @@ Pour commencer l’ingestion de données dans Experience Platform, vous pouvez u
 
 Pour plus d’informations, consultez la [présentation du service de catalogue](../catalog/home.md) . Pour plus d’informations sur Adobe Experience Platform Data Ingestion, consultez la [présentation de Data Ingestion](../ingestion/home.md) .
 
-### Query Service {#query-service}
+### Query Service {#query-service}
 
 Vous pouvez utiliser SQL standard pour interroger les données Experience Platform afin de prendre en charge de nombreux cas d’utilisation différents avec Adobe Experience Platform Query Service.
 
@@ -127,7 +127,11 @@ Les données [!UICONTROL XDM Individual Profile] permettent de guider et d’ex�
 
 Pour plus d’informations, consultez la [vue d’ensemble du profil client en temps réel](../profile/home.md).
 
-### Espace de travail de science des données {#data-science-workspace}
+### Data Science Workspace {#data-science-workspace}
+
+>[!NOTE]
+>
+>Data Science Workspace ne peut plus être acheté. Cette documentation est destinée aux clients existants disposant de droits antérieurs à Data Science Workspace.
 
 L’espace de travail de science des données d’Adobe Experience Platform utilise le machine learning et l’intelligence artificielle pour obtenir des informations à partir des données stockées dans Experience Platform. Data Science Workspace permet aux spécialistes des données de créer des recettes basées sur les données [!UICONTROL XDM Individual Profile] et [!UICONTROL XDM ExperienceEvent] relatives aux clients et à leurs activités. Ces recettes facilitent les prédictions telles que la propension à acheter et les offres recommandées que l’individu est susceptible d’apprécier et d’utiliser.
 
