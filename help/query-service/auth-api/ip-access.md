@@ -3,14 +3,19 @@ keywords: Experience Platform ; sécurité ; accès ip ; QS-Auth ; guide API ; s
 title: Point de terminaison d’accès IP
 description: Découvrez comment gérer les plages d’adresses IP pour l’accès aux environnements de test dans Query Service à l’aide du point de terminaison de l’API d’accès IP.
 role: Developer
-source-git-commit: 23e5260133f0f16ac30d14346c227a21f251b7e1
+exl-id: fc15ab50-c125-4f00-a311-81fd41697c7d
+source-git-commit: bf696c8836407a2fea82e9078201cb1f5004bcf8
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 3%
+source-wordcount: '422'
+ht-degree: 5%
 
 ---
 
 # Point d’entrée d’accès IP
+
+>[!AVAILABILITY]
+>
+>Cette fonctionnalité est disponible pour les clients qui ont acheté le module complémentaire Data Distiller. Pour en savoir plus, contactez votre représentant ou représentante Adobe.
 
 Pour sécuriser l’accès aux données dans un environnement de test Query Service spécifié, utilisez le point de terminaison Accès IP pour gérer les plages d’adresses IP autorisées. Vous pouvez utiliser cette API pour récupérer, configurer ou supprimer des plages d’adresses IP associées à l’ID de votre organisation.
 
@@ -163,4 +168,3 @@ Une réponse réussie renvoie un état HTTP 200 avec les détails des plages d�
   ]
 }
 ```
-
