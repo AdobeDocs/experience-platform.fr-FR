@@ -2,16 +2,18 @@
 title: Présentation des trains de données
 description: Découvrez comment les flux de données vous aident à connecter l’intégration de votre SDK Experience Platform côté client à des produits Adobe et à des destinations tierces.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
 workflow-type: tm+mt
-source-wordcount: '727'
-ht-degree: 77%
+source-wordcount: '712'
+ht-degree: 70%
 
 ---
 
-# Présentation des flux de données
+# Présentation des trains de données
 
-Un flux de données représente la configuration côté serveur lors de la mise en œuvre des SDK web et mobile d’Adobe Experience Platform. Bien que la commande [`configure`](/help/web-sdk/commands/configure/overview.md) du SDK contrôle les éléments qui doivent être gérés sur le client (comme `edgeDomain`), les flux de données gèrent toutes les autres configurations pour le SDK. Lorsqu’une requête est envoyée à Adobe Experience Platform Edge Network, `datastreamId` est utilisé pour référencer le flux de données. Cela vous permet de mettre à jour la configuration côté serveur sans devoir modifier le code du site web.
+Un flux de données représente la configuration côté serveur pour les SDK Web et Mobile Adobe Experience Platform. Bien que la commande [`configure`](/help/web-sdk/commands/configure/overview.md) du SDK gère les paramètres côté client (tels que `edgeDomain`), les flux de données gèrent toutes les autres configurations.
+
+Lorsque vous envoyez une requête à l’Edge Network, `datastreamId` référence la banque de données dans laquelle les données sont envoyées. Cela vous permet de mettre à jour la configuration côté serveur sans modifier le code de votre site web.
 
 Vous pouvez créer et gérer des trains de données en sélectionnant **[!UICONTROL Trains de données]** dans le volet de navigation de gauche de l’interface utilisateur d’Adobe Experience Platform ou de l’interface utilisateur de collecte des données.
 
@@ -27,7 +29,7 @@ Pour plus d’informations sur la configuration d’un train de données dans l�
 
 Les politiques de gestion des données d’entreprise et les exigences réglementaires augmentent les restrictions quant à la manière dont les données sensibles des clientes et des clients peuvent être collectées, traitées et utilisées. Cela concerne la collecte, le traitement et l’utilisation des données de santé protégées, qui sont soumises à des règlements comme la loi sur la portabilité et la responsabilité des assurances-maladie (Health Insurance Portability and Accountability Act, HIPAA).
 
-Les trains de données proposent trois méthodes pour vous aider à gérer vos données sensibles en toute sécurité :
+Les flux de données proposent trois méthodes pour vous aider à gérer vos données sensibles en toute sécurité :
 
 * [Chiffrement amélioré](#encryption)
 * [Gouvernance des données](#governance)

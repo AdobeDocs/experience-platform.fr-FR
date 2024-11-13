@@ -2,24 +2,22 @@
 title: Configuration de la détection des robots pour les flux de données
 description: Découvrez comment configurer la détection des robots pour les flux de données afin de différencier le trafic humain et non humain.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: ff95e5e105f7b3e1213eab90456b9fa9000918d3
+source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
 workflow-type: tm+mt
-source-wordcount: '1367'
+source-wordcount: '1358'
 ht-degree: 0%
 
 ---
 
 # Configuration de la détection des robots pour les flux de données
 
-Le trafic provenant d’entités non humaines, telles que les programmes automatisés, les web-scrapers, les araignées, les scanneurs à scripts, peut rendre plus difficile l’identification des événements provenant de visiteurs humains. Ce type de trafic peut avoir une incidence négative sur les mesures commerciales importantes, ce qui entraîne des rapports de trafic incorrects.
+Le trafic non humain provenant de programmes automatisés, de web scrapers, d’araignées et de scanneurs scriptés peut rendre difficile l’identification des événements provenant de visiteurs humains. Ce type de trafic peut avoir une incidence négative sur les mesures commerciales importantes, ce qui entraîne des rapports de trafic incorrects.
 
 La détection des robots permet d’identifier les événements générés par le [SDK Web](../web-sdk/home.md), le [SDK mobile](https://developer.adobe.com/client-sdks/home/) et [[!DNL Server API]](../server-api/overview.md) comme étant générés par des araignées et des robots connus.
 
-En configurant la détection des robots pour vos flux de données, vous pouvez identifier des adresses IP, des plages d’adresses IP et des en-têtes de requête spécifiques que vous souhaitez classer comme événements de robots.
+En configurant la détection des robots pour vos flux de données, vous pouvez identifier des adresses IP, des plages d’adresses IP et des en-têtes de requête spécifiques à classer comme des événements de robots. Cela permet de mesurer plus précisément l’activité des utilisateurs sur votre site ou application mobile.
 
-L’identification du trafic de robots peut vous fournir une mesure plus précise de l’activité des utilisateurs sur votre site ou application mobile.
-
-Lorsqu’une requête à l’Edge Network correspond à l’une des règles de détection de robots, le schéma XDM est mis à jour avec une notation de robot (toujours définie sur 1), comme illustré ci-dessous.
+Lorsqu’une requête à l’Edge Network correspond à l’une des règles de détection de robots, le schéma XDM est mis à jour avec un score de robot (toujours défini sur 1), comme illustré ci-dessous :
 
 ```json
 {
@@ -66,9 +64,12 @@ Sur la page Règles de détection des robots , vous pouvez configurer la détect
 
 ### Utilisation de la liste internationale des robots (Robots) fournie par l’IAB/ABC {#iab-list}
 
-La [ liste internationale des robots et araignées IAB/ABC ](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) est une liste tierce, standard du secteur, d’araignées et de robots Internet, qui vous permet d’identifier le trafic automatisé, tel que les robots de moteur de recherche, les outils de surveillance et d’autres trafics non humains, que vous ne souhaitez peut-être pas afficher dans vos comptes d’analyses.
+La [ liste internationale des robots et araignées IAB/ABC ](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) est une liste tierce et standard d’araignées et de robots Internet. Cette liste vous permet d’identifier le trafic automatisé, tel que les moteurs de recherche, les outils de surveillance et tout autre trafic non humain, que vous pouvez ne pas inclure dans vos comptes d’analyses.
 
-Pour configurer votre flux de données de manière à utiliser le [!DNL IAB/ABC International Spiders and Bots List], activez l’option **[!UICONTROL Utiliser la liste internationale des robots et araignées IAB/ABC pour la détection des robots dans cette banque de données]**, puis sélectionnez Enregistrer pour appliquer les paramètres de détection des robots à votre flux de données.
+Pour configurer votre flux de données afin d’utiliser la liste internationale des robots fournie par l’IAB/ABC :
+
+1. Activez/désactivez l’option **[!UICONTROL Utiliser la liste internationale des robots et araignées IAB/ABC pour la détection des robots dans cette banque de données]** .
+2. Sélectionnez **[!UICONTROL Enregistrer]** pour appliquer les paramètres de détection des robots à votre flux de données.
 
 ![Les araignées IAB et la liste de robots sont activées.](assets/bot-detection/bot-detection-list.png)
 
