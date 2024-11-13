@@ -6,7 +6,7 @@ user-guide-description: Découvrez comment déployer et gérer des balises d’a
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: fa50e101e5756923eddcd2cab409bda2a629a8a3
+source-git-commit: 82d6d2e7d0d7f0f9484c4ebcd34339fd63e04b59
 workflow-type: tm+mt
 source-wordcount: '778'
 ht-degree: 96%
@@ -261,7 +261,7 @@ ht-degree: 96%
    * [Navigateurs pris en charge](./extension-dev/browsers.md)
    * Processus de soumission {#submit}
       * [Aperçu](./extension-dev/submit/overview.md)
-      * [Configuration de la société](./extension-dev/submit/setup.md)
+      * [Configuration de l’organisation](./extension-dev/submit/setup.md)
       * [Octroyer un accès utilisateur](./extension-dev/submit/access.md)
       * [Développer une extension](./extension-dev/submit/develop.md)
       * [Créer une liste Exchange](./extension-dev/submit/create-listing.md)
