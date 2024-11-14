@@ -3,13 +3,13 @@ title: Plateforme marketing Zeta
 description: La plateforme Zeta Marketing (ZMP) est un système basé sur le cloud qui vous permet d’acquérir, de développer et de fidéliser vos clients plus efficacement, optimisé par l’intelligence (données propriétaires et IA).
 hide: true
 hidefromtoc: true
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
+source-git-commit: 0c3c192105146dd949e9b11f8925bf4f9d7c15c0
 workflow-type: tm+mt
 source-wordcount: '1352'
 ht-degree: 28%
 
 ---
-
 
 # Plateforme marketing Zeta {#zeta-marketing-platform}
 
@@ -31,17 +31,17 @@ Un marketeur souhaite créer des profils d’audience uniques, identifier les se
 
 ### Cibler les utilisateurs avec des publicités {#use-case-target-users}
 
-Un annonceur a pour but de cibler des utilisateurs dans des audiences spécifiques par le biais du Demand Side Platform Zeta (DSP), car ces utilisateurs interagissent avec leurs marques. Pour plus d&#39;informations sur le DSP Zeta, cliquez [ici](https://knowledgebase.zetaglobal.com/programmatic-user-guide/).
+Un annonceur a pour but de cibler des utilisateurs dans des audiences spécifiques par le biais du Demand Side Platform Zeta (DSP), car ces utilisateurs interagissent avec leurs marques. Pour plus d&#39;informations sur le DSP Zeta, cliquez [ici](https://knowledgebase.zetaglobal.com/pug/).
 
 ## Conditions préalables {#prerequisites}
 
 ### Conditions préalables de la plateforme marketing Zeta
 
-* Avant de configurer une nouvelle connexion à la destination Zeta Marketing Platform, vous devez créer une liste de clients vide dans votre compte Zeta Marketing Platform. Vous devez choisir l’une de ces listes de clients comme cible désignée pour recevoir l’audience Adobe Experience Platform que vous prévoyez d’envoyer. Vous pouvez créer une liste de clients vide dans le fichier ZMP en suivant les instructions [ici](https://knowledgebase.zetaglobal.com/zmp/creating-audiences#CreatingAudiences-CreatingaCustomerList).
+* Avant de configurer une nouvelle connexion à la destination Zeta Marketing Platform, vous devez créer une liste de clients vide dans votre compte Zeta Marketing Platform. Vous devez choisir l’une de ces listes de clients comme cible désignée pour recevoir l’audience Adobe Experience Platform que vous prévoyez d’envoyer. Vous pouvez créer une liste de clients vide dans le fichier ZMP en suivant les instructions [ici](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList).
 * Bien que Adobe Experience Platform permette l’activation de plusieurs audiences vers une instance de destination ZMP spécifique, il est obligatoire que chaque instance de destination ZMP ne reçoive qu’une seule audience Experience Platform. Pour gérer plusieurs audiences de l’Experience Platform, créez des instances de destination ZMP supplémentaires pour chaque audience et sélectionnez une liste de clients différente dans la liste déroulante. Cette approche permet de s’assurer que les audiences ZMP cibles ne sont pas écrasées. Voir [Renseignement des détails de destination](#destination-details) pour plus d’informations.
 * Utilisez les informations d’identification suivantes pour configurer la destination :
    * Nom d’utilisateur : **api**
-   * Mot de passe : votre clé d’API REST ZMP. Vous pouvez trouver votre clé API REST en vous connectant à votre compte ZMP et en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications** . Pour plus d’informations, consultez la [documentation ZMP](https://knowledgebase.zetaglobal.com/zmp/integrations) .
+   * Mot de passe : votre clé d’API REST ZMP. Vous pouvez trouver votre clé API REST en vous connectant à votre compte ZMP et en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications** . Pour plus d’informations, consultez la [documentation ZMP](https://knowledgebase.zetaglobal.com/kb/integrations) .
 
 ## Identités prises en charge {#supported-identities}
 
@@ -94,7 +94,7 @@ Pour vous connecter à cette destination, procédez comme décrit dans le [tutor
 Pour vous authentifier à la destination, renseignez les champs requis et sélectionnez **[!UICONTROL Se connecter à la destination]**.
 
 * **[!UICONTROL Nom d’utilisateur]** : `api`
-* **[!UICONTROL Mot de passe]** : votre clé d’API REST ZMP. Vous pouvez trouver votre clé API REST en vous connectant à votre compte ZMP et en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications** . Pour plus d’informations, consultez la [documentation ZMP](https://knowledgebase.zetaglobal.com/zmp/integrations) .
+* **[!UICONTROL Mot de passe]** : votre clé d’API REST ZMP. Vous pouvez trouver votre clé API REST en vous connectant à votre compte ZMP et en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications** . Pour plus d’informations, consultez la [documentation ZMP](https://knowledgebase.zetaglobal.com/kb/integrations) .
 
 ### Renseigner les détails de la destination {#destination-details}
 
@@ -103,7 +103,7 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 ![Image montrant la configuration ZMP](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-configure-new-destination.png)
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Identifiant du site du compte ZMP]** : votre **identifiant du site** ZMP auquel vous souhaitez envoyer vos audiences. Vous pouvez afficher votre ID de site en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications** . Vous trouverez plus d&#39;informations [ici](https://knowledgebase.zetaglobal.com/zmp/integrations).
+* **[!UICONTROL Identifiant du site du compte ZMP]** : votre **identifiant du site** ZMP auquel vous souhaitez envoyer vos audiences. Vous pouvez afficher votre ID de site en accédant à la section **Paramètres** > **Intégrations** > **Clés et applications** . Vous trouverez plus d&#39;informations [ici](https://knowledgebase.zetaglobal.com/kb/integrations).
 * **[!UICONTROL Segment ZMP]** : segment de liste de clients dans votre compte d’ID de site ZMP que vous souhaitez mettre à jour avec l’audience Platform.
 
 ### Activer les alertes {#enable-alerts}
@@ -152,4 +152,4 @@ Lors de la gestion de vos données, toutes les destinations [!DNL Adobe Experien
 
 ## Ressources supplémentaires {#additional-resources}
 
-* [Base de connaissances Zeta](https://knowledgebase.zetaglobal.com/zmp/)
+* [Base de connaissances Zeta](https://knowledgebase.zetaglobal.com/kb/)
