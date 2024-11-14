@@ -2,9 +2,9 @@
 title: Priorité des espaces de noms
 description: Découvrez la priorité des espaces de noms dans Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: a2a60f429836e26179f68a40fce91a90d73d8eee
+source-git-commit: 893d8a089dee01e65436b7ac035233ba556b231b
 workflow-type: tm+mt
-source-wordcount: '1788'
+source-wordcount: '1789'
 ht-degree: 2%
 
 ---
@@ -17,10 +17,10 @@ ht-degree: 2%
 
 Chaque mise en oeuvre client est unique et personnalisée pour répondre aux objectifs d’une organisation spécifique. Par conséquent, l’importance d’un espace de noms donné varie d’un client à l’autre. Voici des exemples concrets :
 
-* D’un côté, vous pouvez considérer l’espace de noms Email comme représentant une entité de personne et donc comme unique par personne. D’un autre côté, un autre client peut considérer l’espace de noms Email comme un identifiant non fiable et donc permettre à un seul CRMID d’être associé à plusieurs identités avec l’espace de noms Email.
+* Votre entreprise peut considérer que chaque adresse électronique représente une entité d’une seule personne et, par conséquent, utiliser les [paramètres d’identité](./identity-settings-ui.md) pour configurer l’espace de noms de l’adresse électronique comme unique. Une autre société peut toutefois vouloir représenter les entités d’une seule personne comme ayant plusieurs adresses électroniques, et configurer ainsi l’espace de noms de l’email comme non unique. Ces sociétés doivent utiliser un autre espace de noms d’identité comme espace unique, tel qu’un espace de noms CRMID, de sorte qu’un identifiant d’une seule personne puisse être associé à plusieurs adresses électroniques.
 * Vous pouvez collecter des comportements en ligne à l’aide d’un espace de noms &quot;Identifiant de connexion&quot;. Cet identifiant de connexion peut avoir une relation 1:1 avec le CRMID, qui stocke ensuite les attributs d’un système CRM et peut être considéré comme l’espace de noms le plus important. Dans ce cas, vous déterminez alors que l’espace de noms CRMID est une représentation plus précise d’une personne, tandis que l’espace de noms Identifiant de connexion est le deuxième plus important.
 
-Vous devez effectuer des configurations dans Identity Service qui reflètent l’importance de vos espaces de noms, car cela influence la manière dont les profils sont formés et segmentés.
+Vous devez effectuer des configurations dans Identity Service qui reflètent l’importance de vos espaces de noms, car cela influence la manière dont les profils et leurs graphiques d’identités associés sont formés et divisés.
 
 ## Déterminer vos priorités
 
@@ -52,11 +52,11 @@ Une autre façon d&#39;aborder ce sujet est la cardinalité. Pour une entité de
 
 ## Validation des paramètres de priorité de votre espace de noms
 
-Une fois que vous avez une idée de la manière dont vous hiérarchisez vos espaces de noms, vous pouvez utiliser l’outil Simulation de graphique pour tester différents scénarios de réduction des graphiques et vous assurer que vos configurations de priorité renvoient les résultats graphiques attendus. Pour plus d’informations, lisez le guide sur l’utilisation de l’ [outil de simulation graphique](./graph-simulation.md).
+Une fois que vous avez compris comment vous allez hiérarchiser vos espaces de noms, vous pouvez utiliser l’outil Simulation de graphique dans l’interface utilisateur pour tester différents scénarios de réduction des graphiques et vous assurer que vos configurations de priorité renvoient les résultats graphiques attendus. Pour plus d’informations, lisez le guide sur l’utilisation de l’ [outil de simulation graphique](./graph-simulation.md).
 
 ## Configurer la priorité des espaces de noms
 
-La priorité des espaces de noms peut être configurée à l’aide de [!UICONTROL Paramètres d’identité]. Dans l’interface [!UICONTROL Paramètres d’identité], vous pouvez faire glisser et déposer un espace de noms pour déterminer son importance relative.
+La priorité des espaces de noms peut être configurée à l’aide de l’ [ interface utilisateur des paramètres d’identité](./identity-settings-ui.md). Dans l’interface des paramètres d’identité, vous pouvez faire glisser et déposer un espace de noms pour déterminer son importance relative.
 
 >[!IMPORTANT]
 >
@@ -74,20 +74,20 @@ Pour les structures graphiques relativement complexes, la priorité des espaces 
 
 ### Real-Time Customer Profile : détermination de l’identité principale pour les événements d’expérience
 
-* Pour les événements d’expérience, une fois que vous avez configuré les paramètres d’identité pour un environnement de test donné, l’identité principale sera déterminée par la priorité d’espace de noms la plus élevée.
+* Une fois que vous avez configuré les paramètres d’identité pour un environnement de test donné, l’identité principale des événements d’expérience sera déterminée par la priorité d’espace de noms la plus élevée dans la configuration.
    * En effet, les événements d’expérience sont dynamiques par nature. Un mappage d’identité peut contenir trois identités ou plus et la priorité de l’espace de noms garantit que l’espace de noms le plus important est associé à l’événement d’expérience.
 * Par conséquent, les configurations **suivantes ne seront plus utilisées par Real-Time Customer Profile** :
-   * La case à cocher &quot;Principal&quot; sur le type d’élément de données dans WebSDK (qui se traduit par `primary=true` dans identityMap). **Remarque** : L’espace de noms d’identité et la valeur d’identité continueront à être utilisés dans Profile. De plus, vous devez toujours configurer vos paramètres de case à cocher &quot;Principal&quot;, car les services en dehors de Real-Time Customer Profile continueront à faire référence à cette configuration.
+   * La configuration d’identité principale (`primary=true`) lors de l’envoi d’identités dans identityMap à l’aide du SDK Web, du SDK Mobile ou de l’API de serveur Edge Network (l’espace de noms d’identité et la valeur d’identité continueront à être utilisés dans Profile). **Remarque** : les services en dehors de Real-Time Customer Profile comme le stockage de lac de données ou Adobe Target continueront à utiliser la configuration d’identité principale (`primary=true`).
    * Tous les champs marqués comme identité principale sur un schéma de classe d’événement d’expérience XDM.
    * Paramètres d’identité principale par défaut dans le connecteur source Adobe Analytics (ECID ou AAID).
 * D’un autre côté, la priorité **espace de noms ne détermine pas l’identité principale des enregistrements de profil**.
-   * Pour les enregistrements de profil, vous pouvez utiliser l’espace de travail des schémas de l’interface utilisateur de l’Experience Platform pour définir vos champs d’identité, y compris l’identité principale. Pour plus d’informations, consultez le guide sur la [définition des champs d’identité dans l’interface utilisateur](../../xdm/ui/fields/identity.md) .
+   * Pour les enregistrements de profil, vous devez continuer à définir vos champs d’identité dans le schéma, y compris l’identité principale. Pour plus d’informations, consultez le guide sur la [définition des champs d’identité dans l’interface utilisateur](../../xdm/ui/fields/identity.md) .
 
 >[!TIP]
 >
 >* La priorité de l’espace de noms est **une propriété d’un espace de noms**. Il s’agit d’une valeur numérique attribuée à un espace de noms pour indiquer son importance relative.
 >
->* L’identité de Principal est l’identité par laquelle un fragment de profil est stocké. Un fragment de profil est un enregistrement de données qui stocke des informations sur un utilisateur spécifique : des attributs (généralement ingérés via des enregistrements CRM) ou des événements (généralement ingérés à partir d’événements d’expérience ou de données en ligne).
+>* L’identité de Principal est l’identité par laquelle un fragment de profil est stocké. Un fragment de profil est un enregistrement de données qui stocke des informations sur un utilisateur spécifique : attributs (par exemple, enregistrements CRM) ou événements (par exemple, navigation sur un site web).
 
 ### Exemple de scénario
 
@@ -151,9 +151,7 @@ Pour plus d’informations, consultez la [présentation de la gestion avancée d
 
 ### Attributs calculés
 
-Les attributs calculés utilisent la priorité d’espace de noms pour stocker la valeur d’attribut calculée. Pour un événement donné, l’identité avec la priorité d’espace de noms la plus élevée aura la valeur de l’attribut calculé écrit sur celle-ci. Pour plus d’informations, consultez le [guide de l’interface utilisateur des attributs calculés](../../profile/computed-attributes/ui.md).
-
-Les attributs calculés n’utilisent pas la priorité d’espace de noms pour calculer les valeurs. Si vous utilisez des attributs calculés, vous devez vous assurer que le CRMID est désigné comme votre identité principale pour WebSDK. Pour plus d’informations, consultez le [guide de l’interface utilisateur des attributs calculés](../../profile/computed-attributes/ui.md).
+Si les paramètres d’identité sont activés, les attributs calculés utiliseront la priorité d’espace de noms pour stocker la valeur d’attribut calculée. Pour un événement donné, l’identité avec la priorité d’espace de noms la plus élevée aura la valeur de l’attribut calculé écrit sur celle-ci. Pour plus d’informations, consultez le [guide de l’interface utilisateur des attributs calculés](../../profile/computed-attributes/ui.md).
 
 ### Lac de données
 
@@ -198,4 +196,4 @@ Pour plus d’informations, consultez la [présentation de Privacy Service](../.
 
 ### Adobe Target
 
-Adobe Target peut générer un ciblage utilisateur inattendu pour les scénarios d’appareils partagés.
+Adobe Target peut générer un ciblage utilisateur inattendu pour les scénarios d’appareils partagés lors de l’utilisation de la segmentation Edge.
