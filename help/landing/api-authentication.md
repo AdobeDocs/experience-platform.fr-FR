@@ -4,10 +4,10 @@ title: Authentification et accès aux API Experience Platform
 type: Tutorial
 description: Ce document fournit un tutoriel détaillé pour accéder à un compte de développeur Adobe Experience Platform afin d’effectuer des appels API Experience Platform.
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
-source-git-commit: 2fb0da385baeb96d5665ecc25bf353c7516ef9f7
+source-git-commit: a6da449725d0274ccacc6f6512c9ad395366b689
 workflow-type: tm+mt
-source-wordcount: '2149'
-ht-degree: 7%
+source-wordcount: '2383'
+ht-degree: 6%
 
 ---
 
@@ -67,6 +67,10 @@ Pour plus d’informations, consultez le guide sur la [gestion des groupes d’u
 >Si vous suivez ce document à partir du [guide de l’API du Privacy Service](../privacy-service/api/getting-started.md), vous pouvez maintenant revenir à ce guide pour générer les informations d’identification d’accès uniques à [!DNL Privacy Service].
 
 Une fois que vous avez reçu un accès utilisateur et développeur à Platform via [!DNL Admin Console], l’étape suivante consiste à générer vos informations d’identification `{ORG_ID}` et `{API_KEY}` dans Adobe Developer Console. Ces informations d’identification ne doivent être générées qu’une seule fois et peuvent être réutilisées dans les futurs appels d’API Platform.
+
+>[!TIP]
+>
+>Au lieu d’accéder à Developer Console, vous pouvez obtenir toutes les informations d’authentification dont vous avez besoin pour utiliser les API Platform directement à partir des pages de documentation de référence sur les API. [En savoir plus](#get-credentials-functionality) sur la fonctionnalité.
 
 ### Ajouter un Experience Platform à un projet {#add-platform-to-project}
 
@@ -149,6 +153,26 @@ L’étape suivante consiste à générer des informations d’identification `{
 >[!TIP]
 >
 Vous pouvez également utiliser un environnement et une collection Postman pour générer des jetons d’accès. Pour plus d’informations, consultez la section sur l’ [ utilisation de Postman pour authentifier et tester les appels API](#use-postman).
+
+## Création et récupération des informations d’authentification directement dans la documentation de référence de l’API {#get-credentials-functionality}
+
+À compter de la version de novembre 2024 d’Experience Platform, vous pouvez obtenir des informations d’identification pour utiliser les API Experience Platform directement à partir des pages de référence de l’API, sans avoir à accéder à [!UICONTROL Developer Console]. Consultez l’exemple ci-dessous à partir de la [page API Flow Service - Destinations](https://developer.adobe.com/experience-platform-apis/references/destinations/).
+
+![La fonctionnalité d’obtention des informations d’identification est mise en surbrillance en haut d’une page de référence d’API.](././images/api-authentication/get-credentials-highlighted.png)
+
+Pour obtenir des informations d’identification pour appeler les API de Platform, accédez à une page de référence des API Experience Platform et sélectionnez **[!UICONTROL Se connecter]** en haut de la page. Connectez-vous avec votre **[!UICONTROL compte personnel]** ou **[!UICONTROL compte d&#39;entreprise ou d&#39;école]**.
+
+Une fois connecté, sélectionnez **[!UICONTROL Créer de nouvelles informations d’identification]** pour créer un nouvel ensemble d’informations d’identification permettant d’accéder aux API Platform.
+
+![Créez de nouvelles informations d’identification pour accéder aux API de Platform.](././images/api-authentication/create-credentials.gif)
+
+Ensuite, utilisez le sélecteur de liste déroulante pour ouvrir la fenêtre des informations d’identification, générer un jeton d’accès et obtenir votre clé d’API et votre ID d’organisation. Copiez les informations d’identification dans les blocs [**[!UICONTROL Essayez-le]**](/help/release-notes/2024/may-2024.md#interactive-api-documentation) des pages de référence de l’API pour commencer à utiliser les API Platform.
+
+![Utilisez le sélecteur de liste déroulante pour afficher les informations d’identification et générer un jeton d’accès.](././images/api-authentication/view-copy-credentials.gif)
+
+>[!TIP]
+>
+Le bloc d’informations d’identification du haut de page reste affiché lorsque vous naviguez entre les différentes pages de points de terminaison dans la documentation de référence de l’API Experience Platform.
 
 ## [!BADGE Obsolète]{type=négatif} Générer un jeton Web JSON (JWT) {#jwt}
 
