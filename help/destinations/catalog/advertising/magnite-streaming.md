@@ -1,18 +1,16 @@
 ---
 title: Connexion de destination en temps réel Magnite
 description: Utilisez cette destination pour fournir en temps réel des audiences CDP d’Adobe à la plateforme de diffusion en continu Magnite.
-badgeBeta: label="Version bêta" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: 8314aca706b47c4cbcb993418c287629f5563189
+last-substantial-update: 2024-11-18T00:00:00Z
+exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
+source-git-commit: da05db9376893bdbe8f0aa291f19a507e4a73d4f
 workflow-type: tm+mt
-source-wordcount: '1297'
-ht-degree: 32%
+source-wordcount: '1317'
+ht-degree: 31%
 
 ---
 
-
-# (Beta) Magnite : connexion de destination en temps réel
+# Magnite : connexion de destination en temps réel
 
 ## Vue d’ensemble {#overview}
 
@@ -28,8 +26,6 @@ Pour activer vos audiences vers [!DNL Magnite Streaming], vous devez :
 Remarque : Lors de l’utilisation de la destination en temps réel, [!DNL Magnite Streaming] recevra des audiences en temps réel, mais Magnite ne peut stocker les audiences en temps réel que temporairement sur sa plateforme, et elles seront supprimées du système dans les quelques jours. Pour cette raison, si vous souhaitez utiliser la destination Magnite : Temps réel, vous devrez *également* utiliser la destination Magnite : lot : chaque audience que vous activez vers la destination Temps réel, vous devrez également l’activer vers la destination Lot.
 
 >[!IMPORTANT]
->
->Ce connecteur de destination est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès, contactez votre représentant Adobe.
 >
 >Le connecteur de destination et la page de documentation sont créés et gérés par l’équipe [!DNL Magnite]. Pour toute question ou demande de mise à jour, contactez-les directement à l’adresse `adobe-tech@magnite.com`.
 
@@ -101,7 +97,11 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 
 * **[!UICONTROL Nom]** : un nom par lequel vous reconnaîtrez cette destination à l’avenir.
 * **[!UICONTROL Description]** : une description qui vous aidera à identifier cette destination à l’avenir.
-* **[!UICONTROL Nom de votre partenaire source]** : nom de votre client/société. Seuls les clients [!DNL Magnite Streaming] pris en charge peuvent être sélectionnés.
+* **[!UICONTROL Nom de votre société]** : nom de votre client/société. Seuls les clients [!DNL Magnite Streaming] pris en charge peuvent être sélectionnés.
+
+>[!NOTE]
+>
+>Le nom de l’entreprise doit être une chaîne correspondant au nom du compartiment de diffusion Amazon S3 que vous avez configuré avec Magnite et configuré à l’étape [s’authentifier à la destination](#authenticate). Les caractères pris en charge sont &quot;a-z&quot;, &quot;A-Z&quot;, &quot;0-9&quot;, &quot;-&quot; (tiret) ou &quot;_&quot; (trait de soulignement).
 
 ![Champs d’authentification de configuration de destination renseignés](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 

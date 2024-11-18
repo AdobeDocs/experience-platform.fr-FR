@@ -5,10 +5,10 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 8ccdf80885a04280c4a92e1cb3d18e45e2d9d9e5
+source-git-commit: 07e01847c6e24564682161e88122948d200ab733
 workflow-type: tm+mt
-source-wordcount: '1250'
-ht-degree: 85%
+source-wordcount: '1248'
+ht-degree: 86%
 
 ---
 
@@ -48,7 +48,7 @@ ht-degree: 85%
       * [Exportation de fichiers à la demande vers des destinations par lots à l’aide de l’interface utilisateur Experience Platform](./ui/export-file-now.md)
       * [Exportation de jeux de données à l’aide de l’interface utilisateur Experience Platform](./ui/export-datasets.md)
       * [(Version bêta) Utiliser l’attribut XDM de l’heure de la dernière qualification dans les nouvelles destinations de stockage dans le cloud en version bêta](./ui/activate-last-qualification-time.md)
-      * [Utilisation de champs calculés pour exporter des tableaux en tant que chaînes](/help/destinations/ui/export-arrays-calculated-fields.md)
+      * [Utiliser des champs calculés pour exporter des tableaux en tant que chaînes](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Afficher les détails de la destination](./ui/destination-details-page.md)
    * [Mettre à jour les comptes de destination](./ui/update-accounts.md)
    * [Supprimer les comptes de destination](./ui/delete-destination-account.md)
@@ -92,8 +92,8 @@ ht-degree: 85%
       * [Extension LinkedIn Insight Tag](./catalog/advertising/linkedin.md)
       * [LiveRamp - Connexion pour l’intégration](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp - Connexion de distribution](./catalog/advertising/liveramp-distribution.md)
-      * [(Beta) Lot Magnite](/help/destinations/catalog/advertising/magnite-batch.md)
-      * [(Beta) Connexion en temps réel en flux continu Magnite](/help/destinations/catalog/advertising/magnite-streaming.md)
+      * [Lot Magnite](/help/destinations/catalog/advertising/magnite-batch.md)
+      * [Connexion en temps réel en flux continu Magnite](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Connexion Microsoft Bing](./catalog/advertising/bing.md)
       * [Extension Pinterest Conversion Tracking](./catalog/advertising/pinterest-extension.md)
       * [Connexion Liste des Clients Pinterest](./catalog/advertising/pinterest.md)
