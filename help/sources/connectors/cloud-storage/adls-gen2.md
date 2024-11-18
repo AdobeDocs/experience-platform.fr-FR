@@ -2,10 +2,10 @@
 title: Présentation du connecteur Source Azure Data Lake Storage Gen2
 description: Découvrez comment connecter Azure Data Lake Storage Gen2 à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 424d7278-44d9-4653-82c0-eb21cbb9b623
-source-git-commit: f879f2a627e55db96a89796b9f3308744bf93f67
+source-git-commit: 8877e7dceeebfb1d4f31b63fef4544a69c72b38e
 workflow-type: tm+mt
-source-wordcount: '488'
-ht-degree: 62%
+source-wordcount: '465'
+ht-degree: 66%
 
 ---
 
@@ -21,7 +21,7 @@ Une liste d’adresses IP doit être ajoutée à une liste autorisée avant d’
 
 >[!IMPORTANT]
 >
->La source [!DNL Azure Data Lake Storage Gen2] ne prend pas en charge la connectivité de la même région à l’Experience Platform. Si votre instance Azure utilise la même région de réseau qu’Experience Platform, une connexion aux sources Experience Platform ne peut pas être établie. N’utilisez pas les régions Azure East US 2, Azure West Europe et Azure Australia East lors de la configuration de votre source [!DNL Azure Data Lake Storage Gen2]. Actuellement, seule la connectivité inter-régions est prise en charge.
+>La source [!DNL Azure Data Lake Storage Gen2] ne prend pas en charge la connectivité de la même région à l’Experience Platform. Si votre instance [!DNL Azure] utilise la même région réseau qu’Experience Platform, il est impossible d’établir une connexion à des sources Experience Platform. Actuellement, seule la connectivité inter-régions est prise en charge.
 
 ## Contraintes de dénomination pour fichiers et répertoires
 
