@@ -1,16 +1,14 @@
 ---
 title: Destination du lot Magnite
 description: Utilisez cette destination pour diffuser par lots des audiences CDP d’Adobe vers la plateforme de diffusion en continu Magnite.
-badgeBeta: label="Version bêta" type="Informative"
-hide: true
-hidefromtoc: true
-source-git-commit: b8921e887b827fcc7b9115045a1954c41a37bce8
+last-substantial-update: 2024-11-18T00:00:00Z
+exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
+source-git-commit: 57e6dc4252c031d993592b963efc089f8427ce25
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1680'
 ht-degree: 14%
 
 ---
-
 
 # Magnite : connexion par lots {#magnite-streaming-batch}
 
@@ -31,8 +29,6 @@ Pour plus d’informations sur Magnite : destination du lot, comment s’y conne
 Pour plus d’informations sur la destination en temps réel, reportez-vous à [cette page de documentation](magnite-streaming.md) à la place.
 
 >[!IMPORTANT]
->
->Ce connecteur de destination est en version bêta et disponible uniquement pour certains clients. Pour demander l’accès, contactez votre représentant Adobe.
 >
 >Le connecteur de destination et la page de documentation sont créés et gérés par l’équipe [!DNL Magnite]. Pour toute question ou demande de mise à jour, contactez-les directement à l’adresse `adobe-tech@magnite.com`.
 
@@ -116,13 +112,17 @@ Pour configurer les détails de la destination, renseignez les champs obligatoir
 future.
 * **[!UICONTROL Description]** : description qui vous aidera à identifier ceci
 connexion/instance de destination à l’avenir.
-* **[!UICONTROL Nom de votre partenaire source]** : nom que vous souhaitez utiliser comme source dans la plateforme de diffusion en continu Magnite.
+* **[!UICONTROL Nom de votre société]** : nom de votre client/société. Seuls les clients [!DNL Magnite Streaming] pris en charge peuvent être sélectionnés.
+
+>[!NOTE]
+>
+>Le nom de l’entreprise doit être une chaîne correspondant au nom du compartiment de diffusion Amazon S3 que vous avez configuré avec Magnite et configuré à l’étape [s’authentifier à la destination](#authenticate). Les caractères pris en charge sont &quot;a-z&quot;, &quot;A-Z&quot;, &quot;0-9&quot;, &quot;-&quot; (tiret) ou &quot;_&quot; (trait de soulignement).
 
 ![Champs d’authentification de configuration de destination renseignés](../../assets/catalog/advertising/magnite/destination-batch-config-auth-filled.png)
 
 >[!NOTE]
 >
->Si vous prévoyez d’envoyer plusieurs types d’ID (GAID, IDFA, etc.) à l’aide de la destination de lot, une nouvelle connexion/instance de destination est requise pour chacune d’elles. Pour plus d’informations, contactez votre gestionnaire de compte Magnite.
+>Si vous prévoyez d’envoyer plusieurs types d’ID (GAID, IDFA, etc.) à l’aide de la destination par lot, une nouvelle connexion/instance de destination est requise pour chacun d’eux. Pour plus d’informations, contactez votre gestionnaire de compte Magnite.
 
 Vous pouvez ensuite procéder en sélectionnant **[!UICONTROL Suivant]**
 
@@ -158,7 +158,7 @@ Dans cet exemple, nous avons sélectionné le **[!UICONTROL champ cible]** : mag
 
 >[!NOTE]
 >
->Si vous prévoyez d’envoyer/de mapper plusieurs types d’ID (GAID, IDFA, etc.) à l’aide de la destination de lot, une nouvelle connexion/instance de destination est requise pour chacune d’elles. Pour plus d’informations, contactez votre gestionnaire de compte Magnite.
+>Si vous prévoyez d’envoyer/de mapper plusieurs types d’ID (GAID, IDFA, etc.) à l’aide de la destination par lot, une nouvelle connexion/instance de destination est requise pour chacun d’eux. Pour plus d’informations, contactez votre gestionnaire de compte Magnite.
 
 
 Dans l&#39;écran &quot;Configurer un nom de fichier et un planning d&#39;export pour chaque audience&quot;, vous devez maintenant configurer une date de début (obligatoire), une date de fin (facultatif) et un identifiant de mapping (obligatoire) pour chaque audience.
