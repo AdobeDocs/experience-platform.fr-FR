@@ -5,10 +5,10 @@ product: experience platform
 type: Documentation
 description: Découvrez les performances et les mécanismes de sécurisation appliqués par le système pour les données de profil et la segmentation, afin de garantir une utilisation optimale des fonctionnalités de Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: 6962bb0ba4968ed4860e95819ac2e949bf744d79
 workflow-type: tm+mt
-source-wordcount: '2457'
-ht-degree: 60%
+source-wordcount: '2461'
+ht-degree: 59%
 
 ---
 
@@ -174,7 +174,7 @@ Dans ce document, plusieurs mécanismes de sécurisation font référence à des
 
 ### Politiques de fusion {#merge-policies}
 
-Lorsque des données sont extraites de plusieurs sources, les politiques de fusion sont les règles utilisées par Platform pour déterminer la hiérachisation et le choix des données à combiner pour créer cette vue unifiée. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose de plusieurs fragments de profil associés à ce client unique apparaissant dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans Platform, ils sont fusionnés afin de créer un profil unique pour ce client. Quand les données provenant de plusieurs sources entrent en conflit, la politique de fusion détermine les informations à inclure dans le profil de la personne. Au maximum, cinq (5) politiques de fusion sont autorisées par organisation. Pour en savoir plus sur les politiques de fusion, consultez la section [présentation des politiques de fusion](merge-policies/overview.md).
+Lorsque des données sont extraites de plusieurs sources, les politiques de fusion sont les règles utilisées par Platform pour déterminer la hiérachisation et le choix des données à combiner pour créer cette vue unifiée. Par exemple, si un client interagit avec votre marque sur plusieurs canaux, votre organisation dispose de plusieurs fragments de profil associés à ce client unique apparaissant dans plusieurs jeux de données. Lorsque ces fragments sont ingérés dans Platform, ils sont fusionnés afin de créer un profil unique pour ce client. Quand les données provenant de plusieurs sources entrent en conflit, la politique de fusion détermine les informations à inclure dans le profil de la personne. Un maximum de cinq (5) stratégies de fusion qui utilisent le schéma `_xdm.context.profile` sont autorisées par environnement de test. Pour en savoir plus sur les politiques de fusion, consultez la section [présentation des politiques de fusion](merge-policies/overview.md).
 
 ### Jeux de données de la suite de rapports Adobe Analytics dans Platform {#aa-datasets}
 
