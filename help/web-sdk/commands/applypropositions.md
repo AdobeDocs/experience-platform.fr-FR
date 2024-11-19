@@ -2,7 +2,7 @@
 title: applyPropositions
 description: Rendre les propositions qui ont déjà été générées avec sendEvent.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: 9aab41b338907f3c9fb15d08bfa877eb218f5627
+source-git-commit: 4c7313afdce6645ab638b2998573e5a4f7c5de8f
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
@@ -16,7 +16,7 @@ La commande `applyPropositions` vous permet de rendre à nouveau les proposition
 Cette commande prend en charge les champs suivants :
 
 * **Propositions** : un tableau d’objets de proposition que vous souhaitez rendre à nouveau.
-* **Nom de la vue** : nom de la vue à afficher. Les notifications d’affichage de ces décisions sont mises en cache et peuvent être incluses dans une commande `sendEvent` ultérieure à l’aide de l’option `personalization.includePendingDisplayNotifications` .
+* **Nom de la vue** : nom de la vue à afficher. Les notifications d’affichage de ces décisions sont mises en cache et peuvent être incluses dans une commande `sendEvent` ultérieure à l’aide de l’option `personalization.includeRenderedPropositions` .
 * **Métadonnées** : objet qui détermine la manière dont les offres d’HTML peuvent être appliquées. Il contient les propriétés suivantes :
    * Portée
    * Sélecteur
@@ -43,7 +43,7 @@ Exécutez la commande `applyPropositions` lors de l’appel de votre instance co
 * **`metadata`** : détermine la manière dont les offres d’HTML sont appliquées. Il s’agit d’une carte où la clé est une portée ou une surface, et la valeur est un objet contenant les clés `selector` et `actionType`.
    * `selector` : chaîne contenant un sélecteur CSS indiquant où appliquer l’HTML.
    * `actionType` : action à effectuer avec l’HTML. Les valeurs valides sont `setHtml`, `replaceHtml` et `appendHtml`.
-* **`viewName`** : nom de la vue à afficher dans une application d’une seule page. Les notifications d’affichage de ces décisions sont mises en cache et peuvent être incluses dans une commande `sendEvent` suivante à l’aide de `personalization.includePendingDisplayNotifications`.
+* **`viewName`** : nom de la vue à afficher dans une application d’une seule page. Les notifications d’affichage de ces décisions sont mises en cache et peuvent être incluses dans une commande `sendEvent` suivante à l’aide de `personalization.includeRenderedPropositions`.
 
 ```js
 alloy("applyPropositions",{

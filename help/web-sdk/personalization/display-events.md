@@ -2,7 +2,7 @@
 title: Gestion des événements d’affichage dans le SDK Web
 description: Cet article explique ce que sont les événements d’affichage et comment les utiliser dans le SDK Web.
 exl-id: 7150ad6e-7693-4f4d-917e-8d08a39a0b41
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 4c7313afdce6645ab638b2998573e5a4f7c5de8f
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
@@ -31,7 +31,7 @@ L’envoi d’événements d’affichage fournit automatiquement des mesures d�
 Pour envoyer automatiquement des événements d&#39;affichage après le rendu du contenu personnalisé sur la page, vous devez configurer les paramètres suivants :
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: true` ou non spécifié
+* `personalization.sendDisplayEvent: true` ou non spécifié
 
 Le SDK Web envoie les événements d’affichage immédiatement après le rendu d’une personnalisation suite à un appel `sendEvent`.
 
@@ -50,9 +50,9 @@ De plus, l’envoi d’événements d’affichage dans les appels `sendEvent` mi
 Pour envoyer des événements d’affichage pour les propositions générées automatiquement, vous devez configurer les paramètres suivants dans l’appel `sendEvent` :
 
 * `renderDecisions: true`
-* `personalization.sendDisplayNotifications: false` pour l’accès en haut de la page
+* `personalization.sendDisplayEvent: false` pour l’accès en haut de la page
 
-Pour envoyer les événements d’affichage, appelez `sendEvent` avec `personalization.includePendingDisplayNotifications: true`
+Pour envoyer les événements d’affichage, appelez `sendEvent` avec `personalization.includeRenderedPropositions: true`
 
 ### Envoyer des événements d’affichage pour les propositions générées manuellement {#manually-rendered-propositions}
 
