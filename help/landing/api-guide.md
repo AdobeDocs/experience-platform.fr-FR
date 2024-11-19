@@ -3,8 +3,10 @@ keywords: Experience Platform;accueil;rubriques les plus consultées;Adobe Exper
 solution: Experience Platform
 title: Prise en main des API Adobe Experience Platform
 description: Adobe Experience Platform fournit des services d’API étroitement liés les uns aux autres. Ce guide contient des informations sur les services disponibles, les en-têtes requis pour les opérations CRUD, les messages d’erreur, les collections Postman et des exemples d’appels API.
+role: Developer
+feature: API
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '1446'
 ht-degree: 27%

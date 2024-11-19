@@ -3,8 +3,10 @@ keywords: Experience Platform;accueil;IAB;IAB 2.0;consentement;consentement
 solution: Experience Platform
 title: Création de jeux de données pour la capture des données de consentement IAB TCF 2.0
 description: Ce document décrit les étapes de configuration des deux jeux de données requis pour collecter les données de consentement du TCF 2.0 de l’IAB.
+role: Developer
+feature: Consent, Schemas, Datasets
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
 workflow-type: tm+mt
 source-wordcount: '1674'
 ht-degree: 3%

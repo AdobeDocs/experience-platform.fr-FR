@@ -3,8 +3,10 @@ keywords: Experience Platform;accueil;rubriques populaires
 solution: Experience Platform
 title: Traitement du consentement dans Adobe Experience Platform
 description: Découvrez comment traiter les signaux de consentement des clients dans Adobe Experience Platform à l’aide de la norme Adobe 2.0.
+role: Developer
+feature: Consent
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '1557'
 ht-degree: 1%

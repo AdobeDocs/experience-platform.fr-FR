@@ -1,7 +1,8 @@
 ---
 title: Présentation de la console de confidentialité
 description: Découvrez comment surveiller vos workflows liés à la confidentialité dans l’interface utilisateur de Adobe Experience Platform.
-source-git-commit: 1fac36a0fd767add92283cd256d8bcea783ecf3b
+feature: Privacy
+source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
 workflow-type: tm+mt
 source-wordcount: '412'
 ht-degree: 4%
