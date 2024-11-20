@@ -3,10 +3,10 @@ keywords: platform;destinations;espace de travail des destinations;espace de tra
 title: Espace de travail des destinations
 description: 'L’espace de travail des destinations se compose de cinq sections : Vue d’ensemble, Catalogue, Parcourir, Comptes et Vue du système. Elles sont décrites dans les sections ci-dessous.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 78168493d712d2ec0974b811d288902fd94f3e40
 workflow-type: tm+mt
-source-wordcount: '1231'
-ht-degree: 81%
+source-wordcount: '1233'
+ht-degree: 79%
 
 ---
 
@@ -77,11 +77,11 @@ L’onglet **[!UICONTROL Comptes]** vous montre les détails des connexions que 
 
 | Élément | Description |
 |---|---|
-| [!UICONTROL Plateforme] | La destination pour laquelle vous avez configuré la connexion. |
+| [!UICONTROL Destination] | Connecteur de destination pour lequel vous avez configuré la connexion. |
 | [!UICONTROL Type de connexion] | Représente le type de connexion de compte à votre compartiment de stockage ou à votre destination. Selon la destination, les options d’authentification sont les suivantes : <ul><li>Pour les destinations de marketing par e-mail : il peut s’agir de S3, FTP ou Azure Blob.</li><li>Pour les destinations publicitaires en temps réel : serveur à serveur</li><li>Pour les destinations de stockage dans le cloud Amazon S3 : clé d’accès </li><li>Pour les destinations de stockage dans le cloud SFTP : authentification de base pour SFTP</li><li>Authentification OAuth 1 ou OAuth 2</li><li>Authentification par jeton porteur</li></ul> |
-| [!UICONTROL Nom d’utilisateur] | Le nom d’utilisateur que vous avez sélectionné dans l’[assistant de connexion à la destination](../catalog/email-marketing/overview.md#connect-destination). |
-| [!UICONTROL Destinations] | Représente le nombre de flux de données de destination uniques réussis et connectés avec des informations de base créées pour une destination. |
-| [!UICONTROL Autorisé] | La date à laquelle la connexion à cette destination a été autorisée. |
+| [!UICONTROL Nom d’utilisateur] | Le nom d’utilisateur que vous avez sélectionné dans le [ workflow de connexion à la destination](../catalog/email-marketing/overview.md#connect-destination). |
+| [!UICONTROL Connexions] | Représente le nombre de flux de données de destination uniques réussis et connectés avec des informations de base créées pour une destination. |
+| [!UICONTROL Date d’autorisation] | La date à laquelle la connexion à cette destination a été autorisée. |
 
 {style="table-layout:auto"}
 
