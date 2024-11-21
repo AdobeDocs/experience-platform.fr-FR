@@ -5,7 +5,7 @@ breadcrumb-title: Guide de Query Service
 user-guide-description: Utilisez le langage SQL standard pour interroger les données du lac de données dans Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: fed47e132e1ff46fdf3df1a5a3f9f3e99bd1340c
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 77%
@@ -113,7 +113,7 @@ Mise en oeuvre de modèles {#implement-models}
    - [Modèles de requête](api/query-templates.md)
    - [Requêtes accélérées](api/accelerated-queries.md)
    - [Abonnements aux alertes](api/alert-subscriptions.md)
-- API d’authentification Query Service {#auth-api}
+- API Data Distiller Authorization {#auth-api}
    - [Vue d’ensemble](auth-api/overview.md)
    - [Prise en main](auth-api/getting-started.md)
    - [Accès IP](auth-api/ip-access.md)

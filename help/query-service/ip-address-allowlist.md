@@ -3,7 +3,7 @@ keywords: Adresse IP, plage IP, liste autorisée, liste autorisée, Query Servic
 title: LISTE AUTORISÉE d’adresse IP pour Query Service
 description: Cette page fournit des plages d’adresses IP mises à jour que vous pouvez ajouter à votre liste autorisée pour un accès sécurisé à Query Service.
 exl-id: f6745e0f-d387-45f2-9f72-054e721016ff
-source-git-commit: e6c148b943c68bff5330c7ff021ffa88ba131639
+source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 4%
@@ -47,7 +47,7 @@ Adobe vous recommande d’ajouter les plages d’adresses IP suivantes spécifiq
 
 ## Configuration des restrictions basées sur les adresses IP {#set-ip-restrictions}
 
-Utilisez les [guides de l’API d’autorisation de Query Service](./auth-api/overview.md) pour configurer des restrictions basées sur les adresses IP. Ces restrictions basées sur les adresses IP garantissent que seuls les réseaux et les ordinateurs clients approuvés peuvent accéder aux données via SQL dans Adobe Experience Platform. Découvrez comment configurer, appliquer et surveiller les restrictions d’adresses IP pour respecter des normes de sécurité élevées, avec des fonctionnalités de suivi et d’alerte d’accès en temps réel.
+Utilisez les [guides de l’API d’autorisation de Data Distiller](./auth-api/overview.md) pour configurer des restrictions basées sur les adresses IP. Ces restrictions basées sur les adresses IP garantissent que seuls les réseaux et les ordinateurs clients approuvés peuvent accéder aux données via SQL dans Adobe Experience Platform. Découvrez comment configurer, appliquer et surveiller les restrictions d’adresses IP pour respecter des normes de sécurité élevées, avec des fonctionnalités de suivi et d’alerte d’accès en temps réel.
 
 * [Guide de démarrage](./auth-api/getting-started.md)
 * [Guide du point de terminaison d’accès IP](./auth-api/ip-access.md)
