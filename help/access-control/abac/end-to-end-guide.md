@@ -4,9 +4,9 @@ title: Guide de bout en bout du contrôle d’accès basé sur les attributs
 description: Ce document fournit un guide de bout en bout sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 9c415b7721eeceff75d46463853f22dd3310cb9a
+source-git-commit: b9ce27b6feb0300464507a21510f40900677c3be
 workflow-type: tm+mt
-source-wordcount: '1736'
+source-wordcount: '1762'
 ht-degree: 24%
 
 ---
@@ -156,6 +156,10 @@ La boîte de dialogue **[!UICONTROL Modifier les étiquettes]** s’affiche, vou
 ![Image montrant la sélection de l&#39;étiquette RHD et de l&#39;enregistrement sélectionné](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
 
 Répétez les étapes ci-dessus avec **[!UICONTROL Insuline &lt;50]**.
+
+>[!NOTE]
+>
+> Affectez des étiquettes créées dans l’espace de travail [!UICONTROL Autorisations] (comme les étiquettes de segment ci-dessus) à divers objets dans Adobe Journey Optimizer à l’aide du [ contrôle d’accès au niveau de l’objet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access).&quot;
 
 ## Activer la politique de contrôle d’accès {#policy}
 
