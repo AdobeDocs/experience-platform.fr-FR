@@ -2,9 +2,9 @@
 title: Présentation des destinations
 description: Les destinations sont des intégrations préconfigurées à des plateformes de destination qui permettent dʼactiver facilement des données provenant dʼAdobe Experience Platform. Vous pouvez utiliser les destinations dans Adobe Experience Platform pour activer vos données connues et inconnues pour les campagnes marketing cross-canal, les campagnes par e-mail, la publicité ciblée et de nombreux autres cas d’utilisation.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 6dd6190f1b006ffb3346eea6dc917ce52e0aa1c6
+source-git-commit: 6d97f132788a249e0bf5c293e34d9d529325f099
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1231'
 ht-degree: 63%
 
 ---
@@ -115,3 +115,13 @@ Pour plus d’informations sur les violations de politique de données dans le w
 * [Activer les données d’audience vers des destinations d’export d’audiences en flux continu](./ui/activate-segment-streaming-destinations.md#review)
 * [Activer les données d’audience vers des destinations d’exportation de profils de diffusion en continu](./ui/activate-streaming-profile-destinations.md#review)
 * [Activer les données d’audience vers des destinations d’exportation de profils par lots](./ui/activate-batch-profile-destinations.md#review)
+
+## Conditions générales {#terms-and-conditions}
+
+En utilisant l’une des destinations étiquetées en version bêta (&quot;Beta&quot;), Vous reconnaissez que le Beta est fourni ***&quot;tel quel&quot; sans garantie de quelque type que ce soit***.
+
+Adobe n’a aucune obligation de tenir à jour, corriger, mettre à jour, modifier, remplacer ou prendre en charge cette version Beta. Nous vous conseillons d’utiliser l’ Informatif et de ne pas vous fier de quelque manière que ce soit au bon fonctionnement ou aux bonnes performances de ce Beta et/ou du matériel d’accompagnement. La version Beta est considérée comme étant une information confidentielle dʼAdobe.
+
+Tout « commentaire » (informations relatives à la version Beta, y compris, mais sans s’y limiter, les problèmes ou défauts rencontrés lors de son utilisation, les suggestions, les améliorations et les recommandations) que vous fournissez à Adobe est par la présente cédé à Adobe. Cela inclut tous les droits, titres et intérêts relatifs à ces commentaires.
+
+Envoyez vos commentaires ou créez un ticket dʼassistance pour partager vos suggestions, signaler un bug ou demander une amélioration de fonctionnalité.
