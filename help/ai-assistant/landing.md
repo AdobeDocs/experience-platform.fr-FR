@@ -3,9 +3,10 @@ title: Assistant IA dans la documentation du produit Adobe Experience Platform
 description: Prise en main de l’assistant d’IA dans Adobe Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: 4db38ebceaa7ac4ac46b2ac122b5869e6b28cab3
+exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
+source-git-commit: 8d69d7010442519ce02bb9a504d4228742b4f092
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '549'
 ht-degree: 1%
 
 ---
@@ -23,15 +24,15 @@ Commencez par lire le contenu des liens ci-dessous pour vous familiariser avec l
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
-    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png"></a>
+    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong>Comprendre vos objets de données</strong><br/>Récupérez des informations opérationnelles relatives à vos objets de données pour une meilleure vue sur leur état, leur utilisation et leur impact sur la liaison.</div>
     </td>
     <td>
-    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png"></a>
+    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong>Améliorez votre apprentissage</strong><br/>Découvrez, dépassez et amplifiez votre compréhension des connaissances sur les produits sans interrompre vos workflows.</div>
     </td>
     <td>
-    <a href="./access.md"><img src="./assets/landing/ai-access.png"></a>
+    <a href="./access.md"><img src="./assets/landing/ai-access.png" style="width:" 100%;max-height: 100%"></a>
     <div><strong>Appliquez des autorisations en fonction de votre utilisation</strong><br/>Accordez et révoquez des autorisations d’accès en fonction des rôles des membres de votre équipe.</div>
     </td>
   </tr>
@@ -41,6 +42,7 @@ Commencez par lire le contenu des liens ci-dessous pour vous familiariser avec l
     <td align="center"><a href="./access.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
+
 
 ## Nouvelles fonctionnalités
 
@@ -118,6 +120,14 @@ Regardez les vidéos suivantes pour obtenir des exemples de cas d’utilisation 
 >[!ENDTABS]
 
 ## Ressources supplémentaires
+
+>[!BEGINSHADEBOX]
+
+**Lisez la fiche d’informations de sécurité de l’assistant d’IA**
+
+Pour plus d’informations sur l’assistant d’IA, consultez la [fiche d’information de sécurité de l’assistant d’IA dans Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
+
+>[!ENDSHADEBOX]
 
 Consultez les liens ci-dessous pour mieux comprendre les cas d’utilisation, les fonctionnalités et bien plus encore de l’assistant d’IA.
 
