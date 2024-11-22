@@ -4,9 +4,9 @@ title: Guide de l’API d’autorisation de Data Distiller
 description: Découvrez comment commencer à utiliser les restrictions d’autorisation et de plage d’adresses IP pour un accès sécurisé aux données dans Adobe Experience Platform Query Service.
 role: Developer
 exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
-source-git-commit: ac29d10d3774a736d1e54255508ba244ff72f278
+source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '507'
 ht-degree: 5%
 
 ---
@@ -66,3 +66,5 @@ Lorsque les autorisations requises et les valeurs d’en-tête sont collectées,
 Chaque exemple d’appel API montre comment formater des requêtes et interpréter des réponses, ce qui vous permet d’appliquer un accès sécurisé à vos données dans Query Service.
 
 Pour obtenir des instructions spécifiques sur la configuration et la validation des restrictions IP, reportez-vous à la [documentation du point d’entrée d’accès IP](./ip-access.md) et à la [ documentation du point d’entrée de validation IP](./validate.md).
+
+Reportez-vous à la [documentation de référence OpenAPI d’autorisation de Distiller de données](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) pour afficher un format normalisé et lisible par ordinateur afin de faciliter l’intégration, le test et l’exploration.

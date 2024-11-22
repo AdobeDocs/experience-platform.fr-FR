@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de l’API Data Access
 description: L’API Data Access prend en charge Adobe Experience Platform en fournissant aux développeurs une interface RESTful axée sur la découverte et l’accessibilité des jeux de données ingérés dans Experience Platform.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
+source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 42%
+source-wordcount: '566'
+ht-degree: 41%
 
 ---
 
@@ -23,7 +23,7 @@ L’API Data Access prend en charge Adobe Experience Platform en fournissant aux
 
 ## Référence de spécification API
 
-La documentation de référence OpenAPI se trouve [ici](https://developer.adobe.com/experience-platform-apis/references/data-access/).
+Reportez-vous à la [documentation de référence OpenAPI d’accès aux données](https://developer.adobe.com/experience-platform-apis/references/data-access/) pour afficher un format normalisé et lisible par ordinateur afin de faciliter l’intégration, le test et l’exploration.
 
 ## Terminologie {#terminology}
 
