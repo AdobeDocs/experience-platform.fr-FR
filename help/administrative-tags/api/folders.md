@@ -3,7 +3,7 @@ title: Point de terminaison des dossiers
 description: Découvrez comment créer, mettre à jour, gérer et supprimer des dossiers à l’aide des API Adobe Experience Platform.
 role: Developer
 exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: 78aa48701abaadea963b25e390aa96d7b31386f4
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 5%
@@ -31,7 +31,7 @@ Vous pouvez récupérer une liste des dossiers appartenant à votre organisation
 **Format d’API**
 
 ```http
-GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
+GET /folders/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 ```
 
 | Paramètre | Description |
@@ -44,7 +44,7 @@ GET /folder/{FOLDER_TYPE}/{PARENT_FOLDER_ID}/subfolders
 +++Exemple de requête pour répertorier tous les dossiers de jeux de données de niveau supérieur
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/root/subfolders
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/root/subfolders
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -111,14 +111,14 @@ Une réponse réussie renvoie un état HTTP 200 avec une liste de tous les dossi
 
 +++
 
-## Création d’un dossier {#create}
+## Créer un dossier {#create}
 
 Vous pouvez créer un dossier en envoyant une requête de POST au point de terminaison `/folder` et en spécifiant le type de dossier.
 
 **Format d’API**
 
 ```http
-POST /folder/{FOLDER_TYPE}
+POST /folders/{FOLDER_TYPE}
 ```
 
 | Paramètre | Description |
@@ -130,7 +130,7 @@ POST /folder/{FOLDER_TYPE}
 +++Exemple de requête pour créer un dossier.
 
 ```shell
-curl -X POST https://experience.adobe.io/unifiedfolders/folder/dataset
+curl -X POST https://experience.adobe.io/unifiedfolders/folders/dataset
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -190,7 +190,7 @@ Vous pouvez récupérer un dossier spécifique qui appartient à votre organisat
 **Format d’API**
 
 ```http
-GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
+GET /folders/{FOLDER_TYPE}/{FOLDER_ID}
 ```
 
 | Paramètre | Description |
@@ -203,7 +203,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}
 +++Exemple de requête pour récupérer un dossier spécifique
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -261,7 +261,7 @@ Vous pouvez vérifier si un dossier peut contenir des objets en envoyant une req
 **Format d’API**
 
 ```http
-GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
+GET /folders/{FOLDER_TYPE}/{FOLDER_ID}/validate
 ```
 
 | Paramètre | Description |
@@ -274,7 +274,7 @@ GET /folder/{FOLDER_TYPE}/{FOLDER_ID}/validate
 +++Exemple de requête pour valider un dossier spécifique
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e/validate
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e/validate
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -321,7 +321,7 @@ Vous pouvez mettre à jour les détails d’un dossier spécifique qui appartien
 **Format d’API**
 
 ```http
-PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
+PATCH /folders/{FOLDER_TYPE}/{FOLDER_ID}
 ```
 
 | Paramètre | Description |
@@ -334,7 +334,7 @@ PATCH /folder/{FOLDER_TYPE}/{FOLDER_ID}
 +++Exemple de requête pour mettre à jour un dossier spécifique
 
 ```shell
-curl -X GET https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e
+curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -383,7 +383,7 @@ Vous pouvez supprimer un dossier spécifique qui appartient à votre organisatio
 ***Format d’API**
 
 ```http
-DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
+DELETE /folders/{FOLDER_TYPE}/{FOLDER_ID}
 ```
 
 | Paramètre | Description |
@@ -396,7 +396,7 @@ DELETE /folder/{FOLDER_TYPE}/{FOLDER_ID}
 +++Exemple de requête pour supprimer un dossier spécifique
 
 ```shell
-curl -X DELETE https://experience.adobe.io/unifiedfolders/folder/dataset/83f8287c-767b-4106-b271-257282fd170e
+curl -X DELETE https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
