@@ -2,9 +2,10 @@
 title: Techniques de transformation des fonctionnalités
 description: Découvrez les techniques essentielles de prétraitement telles que la transformation, le codage et la mise à l’échelle des fonctionnalités des données, qui préparent les données à la formation aux modèles statistiques. Il couvre l’importance de gérer les valeurs manquantes et de convertir les données catégorielles afin d’améliorer les performances et la précision du modèle.
 role: Developer
-source-git-commit: b248e8f8420b617a117d36aabad615e5bbf66b58
+exl-id: ed7fa9b7-f74e-481b-afba-8690ce50c777
+source-git-commit: e7bc30c153f67c59e9c04e8c8df60394f48871d0
 workflow-type: tm+mt
-source-wordcount: '3437'
+source-wordcount: '3450'
 ht-degree: 9%
 
 ---
@@ -55,14 +56,14 @@ CREATE model modelname options(model_type='logistic_reg', label='rating') AS SEL
 
 Pour définir le prétraitement des données personnalisé dans votre instruction `CREATE MODEL`, utilisez la clause `TRANSFORM` en combinaison avec n’importe quel nombre de fonctions de transformation disponibles. Ces fonctions de prétraitement manuel peuvent également être utilisées en dehors de la clause `TRANSFORM`. Toutes les transformations mentionnées dans la section [transformateur ci-dessous](#available-transformations) peuvent être utilisées pour prétraiter les données manuellement.
 
-### Caractéristiques clés
+### Caractéristiques clés {#key-characteristics}
 
 Voici les principales caractéristiques de la transformation des fonctionnalités à prendre en compte lorsque vous définissez vos fonctions de prétraitement :
 
 - **Syntaxe** : `TRANSFORM(functionName(colName, parameters) <aliasNAME>)`
    - Le nom de l&#39;alias est obligatoire dans la syntaxe. Vous devez indiquer un nom d’alias pour que la requête échoue.
 
-- **Parameters** : les paramètres sont des arguments de positionnement. Cela signifie que chaque paramètre ne peut prendre que certaines valeurs. Pour plus d’informations sur la fonction qui utilise cet argument, reportez-vous à la documentation appropriée.
+- **Parameters** : les paramètres sont des arguments de positionnement. Cela signifie que chaque paramètre ne peut prendre que certaines valeurs et exiger que tous les paramètres précédents soient spécifiés si des valeurs personnalisées sont fournies. Pour plus d’informations sur la fonction qui utilise cet argument, reportez-vous à la documentation appropriée.
 
 - **Chaînage des transformateurs** : la sortie d’un transformateur peut devenir l’entrée d’un autre transformateur.
 
@@ -180,7 +181,7 @@ transform(string_imputer(name, 'unknown_name') as name_imputed)
 | 1 | ml_unknown |
 | 2 | Alice |
 
-#### Indice booléen {#imputer}
+#### Indice booléen {#boolean-imputer}
 
 Le transformateur **** de l’attribut booléen complète les valeurs manquantes dans un jeu de données pour une colonne booléenne. Les colonnes d’entrée et de sortie doivent être de type `Boolean`.
 

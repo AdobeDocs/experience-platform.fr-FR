@@ -2,9 +2,10 @@
 title: Extension SQL d’ingénierie de fonctionnalités
 description: Découvrez l’extension SQL de conception des fonctionnalités de Data Distiller pour prétraiter les données pour la modélisation statistique avancée. Il couvre les techniques d’extraction, de transformation et de sélection des fonctionnalités disponibles.
 role: Developer
-source-git-commit: 1fcfb5c41750e853daaf036ceaae3527b805391c
+exl-id: 622c8ef3-9651-46b3-ad22-021a93190149
+source-git-commit: e7bc30c153f67c59e9c04e8c8df60394f48871d0
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '735'
 ht-degree: 1%
 
 ---
@@ -41,9 +42,10 @@ Outre l’extraction de fonctionnalités, utilisez les transformateurs générau
 
 Vous trouverez ci-dessous une liste d’outils permettant de traiter un large éventail de types de données afin d’améliorer votre workflow de prétraitement des données.
 
-- **[Ordinateur numérique](./feature-transformation.md#numeric-imputer)** : renseignez les valeurs manquantes dans les colonnes numériques avec un
-- **[String Imputer](./feature-transformation.md#string-imputer)** : remplacez les valeurs de chaîne manquantes par une valeur spécifiée
-- **[Assembler vectoriel](./feature-transformation.md#vector-assembler)** : combine plusieurs colonnes en une seule colonne vectorielle.
+- **[Ordinateur numérique](./feature-transformation.md#numeric-imputer)** : renseignez les valeurs manquantes dans les colonnes numériques avec une valeur spécifiée, comme la moyenne ou la médiane.
+- **[Outil de chaîne](./feature-transformation.md#string-imputer)** : remplacez les valeurs de chaîne manquantes par une valeur spécifiée, telle la chaîne la plus fréquente de la colonne.
+- **[Assembler vectoriel](./feature-transformation.md#vector-assembler)** : Combinez plusieurs colonnes dans une seule colonne vectorielle pour préparer les données pour les modèles d’apprentissage automatique.
+- **[Ordinateur booléen](./feature-transformation.md#boolean-imputer)** : remplissez les valeurs booléennes manquantes avec une valeur spécifiée, telle que `true` ou `false`.
 
 #### Transformeurs numériques
 
@@ -88,7 +90,7 @@ Use a clustering algorithm to group data points into distinct clusters based on 
 
 ## Mise en oeuvre de la clause OPTIONS {#options-clause}
 
-Lorsque vous définissez votre modèle, utilisez la clause `OPTIONS` pour spécifier l’algorithme et ses paramètres. Commencez par définir le paramètre `type` pour indiquer l’algorithme que vous utilisez, par exemple `K-Means`. Définissez ensuite les paramètres appropriés dans la clause `OPTIONS` en tant que paires clé-valeur pour affiner votre modèle. Notez que certains paramètres peuvent être positionnés et nécessitent que tous les paramètres précédents soient spécifiés si des valeurs personnalisées sont fournies. Si vous choisissez de ne pas personnaliser certains paramètres, le système applique les paramètres par défaut. Reportez-vous à la documentation appropriée pour comprendre la fonction et les valeurs par défaut de chaque paramètre.
+Lorsque vous définissez votre modèle, utilisez la clause `OPTIONS` pour spécifier l’algorithme et ses paramètres. Commencez par définir le paramètre `type` pour indiquer l’algorithme que vous utilisez, par exemple `K-Means`. Définissez ensuite les paramètres appropriés dans la clause `OPTIONS` en tant que paires clé-valeur pour affiner votre modèle. Si vous choisissez de ne pas personnaliser certains paramètres, le système applique les paramètres par défaut. Reportez-vous à la documentation appropriée pour comprendre la fonction et les valeurs par défaut de chaque paramètre.
 
 ### Étapes suivantes
 
