@@ -4,18 +4,18 @@ title: Guide de bout en bout du contrôle d’accès basé sur les attributs
 description: Ce document fournit un guide de bout en bout sur le contrôle d’accès basé sur les attributs dans Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: b9ce27b6feb0300464507a21510f40900677c3be
+source-git-commit: 5b9200b9e534519ce2f3c1a529a30b032642ab7f
 workflow-type: tm+mt
-source-wordcount: '1762'
-ht-degree: 24%
+source-wordcount: '1794'
+ht-degree: 23%
 
 ---
 
 # Guide de bout en bout du contrôle d’accès basé sur les attributs
 
-Utilisez le contrôle d’accès basé sur les attributs sur Adobe Experience Platform pour offrir à vous-même et à d’autres clients soucieux de la confidentialité multimarque une plus grande flexibilité pour gérer l’accès des utilisateurs. L’accès à des objets individuels, tels que les champs de schéma et les segments, peut être accordé avec des stratégies basées sur les attributs et le rôle de l’objet. Cette fonctionnalité vous permet d’accorder ou de révoquer l’accès à des objets individuels pour des utilisateurs Platform spécifiques au sein de votre organisation.
+Utilisez le contrôle d’accès basé sur les attributs sur Adobe Experience Platform pour offrir à vous-même et à d’autres clients soucieux de la confidentialité multimarque une plus grande flexibilité pour gérer l’accès des utilisateurs. L’accès à des objets individuels, tels que les champs de schéma et les audiences, peut être accordé avec des stratégies basées sur les attributs et le rôle de l’objet. Cette fonctionnalité vous permet d’accorder ou de révoquer l’accès à des objets individuels pour des utilisateurs Platform spécifiques au sein de votre organisation.
 
-Cette fonctionnalité vous permet de classer les champs de schéma, les segments, etc. avec des libellés qui définissent les portées d’utilisation des données ou de l’organisation. Vous pouvez appliquer ces mêmes étiquettes aux parcours, aux offres et aux autres objets de Adobe Journey Optimizer. En parallèle, les administrateurs peuvent définir des stratégies d’accès concernant les champs de schéma du modèle de données d’expérience (XDM) et mieux gérer les utilisateurs ou les groupes (utilisateurs internes, externes ou tiers) pouvant accéder à ces champs.
+Cette fonctionnalité vous permet de classer les champs de schéma, les audiences, etc. avec des libellés qui définissent les portées d’utilisation des données ou de l’organisation. Vous pouvez appliquer ces mêmes étiquettes aux parcours, aux offres et aux autres objets de Adobe Journey Optimizer. En parallèle, les administrateurs peuvent définir des stratégies d’accès concernant les champs de schéma du modèle de données d’expérience (XDM) et mieux gérer les utilisateurs ou les groupes (utilisateurs internes, externes ou tiers) pouvant accéder à ces champs.
 
 >[!NOTE]
 >
@@ -44,8 +44,8 @@ Pour ce faire, vous devez configurer les rôles, les ressources et les stratégi
 Vous allez :
 
 * [Étiqueter les rôles de vos utilisateurs](#label-roles) : utilisez l’exemple d’un prestataire de services de santé (ACME Business Group) dont le groupe marketing travaille avec des agences externes.
-* [Étiqueter vos ressources (champs de schéma et segments)](#label-resources) : Attribuez l’étiquette **[!UICONTROL PHI/données d’intégrité réglementées]** aux ressources de schéma et aux segments.
-* [Activez la stratégie qui les reliera ](#policy) : activez la stratégie par défaut pour empêcher l’accès aux champs de schéma et aux segments en connectant les libellés de vos ressources aux libellés de votre rôle. Les utilisateurs disposant de libellés correspondants auront alors accès au champ de schéma et au segment dans tous les environnements de test.
+* [Étiqueter vos ressources (champs de schéma et audiences)](#label-resources) : Attribuez l’étiquette **[!UICONTROL PHI/Definated Health Data]** aux ressources de schéma et aux audiences.
+* [Activez la stratégie qui les reliera ](#policy) : activez la stratégie par défaut pour empêcher l’accès aux champs de schéma et aux audiences en connectant les libellés de vos ressources aux libellés de votre rôle. Les utilisateurs disposant de libellés correspondants auront alors accès au champ de schéma et au segment dans tous les environnements de test.
 
 ## Autorisations
 
@@ -59,7 +59,7 @@ Une fois que vous disposez des droits d’administrateur, accédez à [Adobe Exp
 
 ![Image montrant le produit Autorisations sélectionné dans Adobe Experience Cloud](../images/flac-ui/flac-select-product.png)
 
-L’espace de travail Autorisations de l’interface utilisateur de Platform s’affiche, s’ouvrant sur la page **[!UICONTROL Rôles]** .
+L’espace de travail Autorisations de l’interface utilisateur de Platform s’affiche, s’ouvrant sur la page **[!UICONTROL Overview]** .
 
 ## Appliquer des libellés à un rôle {#label-roles}
 
@@ -94,15 +94,15 @@ L’espace de travail Autorisations de l’interface utilisateur de Platform s�
 
 Les rôles sont des moyens de catégoriser les types d’utilisateurs qui interagissent avec votre instance Platform et sont des blocs élémentaires des stratégies de contrôle d’accès. Un rôle possède un ensemble donné d’autorisations et les membres de votre organisation peuvent être affectés à un ou plusieurs rôles, selon la portée de l’accès dont ils ont besoin.
 
-Pour commencer, sélectionnez **[!UICONTROL ACME Business Group]** sur la page **[!UICONTROL Rôles]** .
+Pour commencer, sélectionnez **[!UICONTROL Rôles]** dans le volet de navigation de gauche, puis **[!UICONTROL ACME Business Group]**.
 
-![Image montrant le rôle commercial ACME sélectionné dans les rôles](../images/abac-end-to-end-user-guide/abac-select-role.png)
+![Image montrant le groupe opérationnel ACME sélectionné dans les rôles](../images/abac-end-to-end-user-guide/abac-select-role.png)
 
 Ensuite, sélectionnez **[!UICONTROL Étiquettes]**, puis **[!UICONTROL Ajouter des étiquettes]**.
 
 ![Image montrant l’ajout de libellés sélectionnés dans l’onglet Étiquettes](../images/abac-end-to-end-user-guide/abac-select-add-labels.png)
 
-Une liste de tous les libellés de votre organisation s’affiche. Sélectionnez **[!UICONTROL RHD]** pour ajouter le libellé de **[!UICONTROL PHI/Definated Health Data]**. Laissez passer quelques instants pour qu’une coche bleue apparaisse en regard du libellé, puis sélectionnez **[!UICONTROL Enregistrer]**.
+Une liste de tous les libellés de votre organisation s’affiche. Sélectionnez **[!UICONTROL RHD]** pour ajouter le libellé pour **[!UICONTROL PHI/Definated Health Data]** et sélectionnez ensuite **[!UICONTROL Save]**.
 
 ![Image montrant l&#39;étiquette RHD en cours de sélection et d&#39;enregistrement](../images/abac-end-to-end-user-guide/abac-select-role-label.png)
 
@@ -113,6 +113,10 @@ Une liste de tous les libellés de votre organisation s’affiche. Sélectionnez
 ## Application de libellés aux champs de schéma {#label-resources}
 
 Maintenant que vous avez configuré un rôle utilisateur avec l’étiquette [!UICONTROL RHD], l’étape suivante consiste à ajouter le même libellé aux ressources que vous souhaitez contrôler pour ce rôle.
+
+Dans la barre de navigation supérieure, sélectionnez le **sélecteur d’applications**, représenté par l’icône ![ du sélecteur d’applications](/help/images/icons/apps.png), puis sélectionnez **[!UICONTROL Experience Platform]**.
+
+![Image montrant l’Experience Platform sélectionné dans le menu déroulant du sélecteur d’applications](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
 
 Sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche, puis **[!UICONTROL ACME Healthcare]** dans la liste des schémas qui s’affichent.
 
@@ -130,30 +134,30 @@ La boîte de dialogue **[!UICONTROL Modifier les libellés]** s’affiche, vous 
 >
 >Lorsqu’un libellé est ajouté à un champ, il est appliqué à la ressource parent de ce champ (une classe ou un groupe de champs). Si la classe ou le groupe de champs parent est utilisé par d’autres schémas, ces derniers hériteront du même libellé.
 
-## Application d’étiquettes aux segments
+## Application d’étiquettes à des audiences
 
 >[!NOTE]
 >
->Tout segment qui utilise un attribut étiqueté doit également être étiqueté si vous souhaitez que les mêmes restrictions d’accès s’y appliquent.
+>Toute audience qui utilise un attribut étiqueté doit également être étiquetée si vous souhaitez que les mêmes restrictions d’accès s’appliquent à elle.
 
-Une fois les champs de schéma libellés, vous pouvez commencer à les libeller.
+Une fois que vous avez terminé d’étiqueter vos champs de schéma, vous pouvez maintenant commencer à libeller vos audiences.
 
-Sélectionnez **[!UICONTROL Segments]** dans le volet de navigation de gauche. Une liste des segments disponibles dans votre organisation s’affiche. Dans cet exemple, les deux segments suivants doivent être étiquetés, car ils contiennent des données d’intégrité sensibles :
+Sélectionnez **[!UICONTROL Audiences]** dans le volet de navigation de gauche, sous la section **[!UICONTROL Clients]** . Une liste des audiences disponibles dans votre organisation s’affiche. Dans cet exemple, les deux audiences suivantes doivent être étiquetées, car elles contiennent des données d’intégrité sensibles :
 
 * Glucide sanguin > 100
 * Insuline &lt;50
 
-Sélectionnez **[!UICONTROL Glucide sanguin >100]** pour commencer à étiqueter le segment.
+Sélectionnez **[!UICONTROL Glucide de sang >100]** (par nom d’audience et non la case à cocher) pour commencer à étiqueter l’audience.
 
-![Image montrant le glucose dans le sang >100 sélectionné depuis l’onglet Segments](../images/abac-end-to-end-user-guide/abac-select-segment.png)
+![Image montrant le glucose dans le sang >100 sélectionné dans l&#39;onglet Audiences](../images/abac-end-to-end-user-guide/abac-select-audience.png)
 
 L’écran **[!UICONTROL Détails]** du segment s’affiche. Sélectionnez **[!UICONTROL Gérer l’accès]**.
 
-![Image montrant la sélection de l’accès Manages](../images/abac-end-to-end-user-guide/abac-segment-fields-manage-access.png)
+![Image montrant la sélection de l’accès Manages](../images/abac-end-to-end-user-guide/abac-audience-fields-manage-access.png)
 
-La boîte de dialogue **[!UICONTROL Modifier les étiquettes]** s’affiche, vous permettant de choisir les étiquettes à appliquer au segment. Pour ce cas d’utilisation, sélectionnez l’étiquette **[!UICONTROL PHI/Definated Health Data]** , puis sélectionnez **[!UICONTROL Save]**.
+La boîte de dialogue **[!UICONTROL Appliquer les étiquettes d’accès et de gouvernance des données]** s’affiche, ce qui vous permet de choisir les étiquettes à appliquer à l’audience. Pour ce cas d’utilisation, sélectionnez l’étiquette **[!UICONTROL PHI/Definated Health Data]** , puis sélectionnez **[!UICONTROL Save]**.
 
-![Image montrant la sélection de l&#39;étiquette RHD et de l&#39;enregistrement sélectionné](../images/abac-end-to-end-user-guide/abac-select-segment-labels.png)
+![Image montrant la sélection de l&#39;étiquette RHD et de l&#39;enregistrement sélectionné](../images/abac-end-to-end-user-guide/abac-select-audience-labels.png)
 
 Répétez les étapes ci-dessus avec **[!UICONTROL Insuline &lt;50]**.
 
@@ -163,13 +167,13 @@ Répétez les étapes ci-dessus avec **[!UICONTROL Insuline &lt;50]**.
 
 ## Activer la politique de contrôle d’accès {#policy}
 
-La stratégie de contrôle d’accès par défaut utilise des libellés pour définir les rôles utilisateur ayant accès à des ressources Platform spécifiques. Dans cet exemple, l’accès aux champs de schéma et aux segments sera refusé dans tous les environnements de test pour les utilisateurs qui ne sont pas dans un rôle dont les libellés correspondants sont dans le champ de schéma.
+La stratégie de contrôle d’accès par défaut utilise des libellés pour définir les rôles utilisateur ayant accès à des ressources Platform spécifiques. Dans cet exemple, l’accès aux champs de schéma et aux audiences sera refusé dans tous les environnements de test pour les utilisateurs qui ne sont pas dans un rôle dont les libellés correspondants sont dans le champ de schéma.
 
 Pour activer la stratégie de contrôle d’accès, sélectionnez [!UICONTROL Autorisations] dans le volet de navigation de gauche, puis sélectionnez **[!UICONTROL Stratégies]**.
 
 ![Liste des stratégies affichées](../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-Sélectionnez ensuite les points de suspension (`...`) en regard du nom des stratégies et une liste déroulante affiche les commandes permettant de modifier, activer, supprimer ou dupliquer le rôle. Sélectionnez **[!UICONTROL Activer]** dans la liste déroulante.
+Sélectionnez ensuite les points de suspension (`...`) en regard de l’option **[!UICONTROL Default-Field-Level-Access-Control-Policy]**. Une liste déroulante affiche les commandes pour modifier, activer, supprimer ou dupliquer le rôle. Sélectionnez **[!UICONTROL Activer]** dans la liste déroulante.
 
 ![Liste déroulante pour activer la stratégie](../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
@@ -216,7 +220,7 @@ Access control policies leverage labels to define which user roles have access t
 >[!NOTE]
 >
 >A "deny policy" is created to grant access to sensitive resources because the role grants permission to the subjects. The written policy in this example **denies** you access if you are missing the required labels.
-
+a
 To create an access control policy, select **[!UICONTROL Permissions]** from the left navigation and then select **[!UICONTROL Policies]**. Next, select **[!UICONTROL Create policy]**.
 
 ![Image showing Create policy being selected in the Permissions](../images/abac-end-to-end-user-guide/abac-create-policy.png)
@@ -260,7 +264,7 @@ Select **[!UICONTROL Activate]** to activate the policy, and a dialog appears wh
 
 ## Étapes suivantes
 
-Vous avez terminé l’application des libellés à un rôle, à des champs de schéma et à des segments. L’agence externe affectée à ces rôles ne peut pas afficher ces libellés et leurs valeurs dans le schéma, le jeu de données et la vue de profil. Ces champs ne peuvent pas non plus être utilisés dans la définition de segment lors de l’utilisation du créateur de segments.
+Vous avez terminé l’application des libellés à un rôle, à des champs de schéma et à des audiences. L’agence externe affectée à ces rôles ne peut pas afficher ces libellés et leurs valeurs dans le schéma, le jeu de données et la vue de profil. Ces champs ne peuvent pas non plus être utilisés dans la définition de segment lors de l’utilisation du créateur de segments.
 
 Pour plus d’informations sur le contrôle d’accès basé sur les attributs, consultez la [présentation du contrôle d’accès basé sur les attributs](./overview.md).
 
