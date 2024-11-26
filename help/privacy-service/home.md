@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Présentation de Privacy Service
 description: Découvrez comment Privacy Service peut faciliter la conformité automatique aux réglementations légales en matière de confidentialité dans vos opérations de données Experience Cloud.
 exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
-source-git-commit: 19b33ddf2fc3f8d889d370eedfc732ac54178dcd
+source-git-commit: 61a5b4fd7af68e7379b456ddd37218d183e76256
 workflow-type: tm+mt
-source-wordcount: '1532'
-ht-degree: 48%
+source-wordcount: '1660'
+ht-degree: 45%
 
 ---
 
@@ -68,6 +68,14 @@ Lisez le document sur [les données d’identité pour les demandes d’accès �
 
 Une fois que vous avez déterminé les besoins de confidentialité de votre entreprise et décidé quelles valeurs d’identité envoyer au Privacy Service, vous pouvez commencer à effectuer des demandes d’accès à des informations personnelles. Utilisez Privacy Service pour envoyer des demandes d’accès à des informations personnelles via l’API ou l’interface utilisateur.
 
+#### Accès aux détails du fichier de demande {#access-requests}
+
+En réponse à une demande d’accès réussie, il existe une **URL de téléchargement** qui contient plusieurs fichiers. Un fichier est fourni pour chaque application d’Adobe dans laquelle des données ont été demandées. Notez que le format de fichier de chaque application peut différer en fonction de la structure de données de l’application.
+
+#### Demandes de suppression - Aucune URL de téléchargement {#delete-requests}
+
+La réponse ne contient **aucune URL de téléchargement** pour une **requête de suppression**, car aucune donnée de client n’est en cours de récupération.
+
 >[!IMPORTANT]
 >
 >Les sections ci-dessous contiennent des liens menant à la documentation qui explique comment effectuer des demandes d’accès à des informations personnelles génériques dans l’API ou l’interface utilisateur. Toutefois, en fonction des applications [!DNL Experience Cloud] que vous utilisez, les champs à envoyer dans la payload de requête peuvent différer des exemples qui se trouvent dans ces guides.
@@ -97,6 +105,10 @@ Une fois les tâches de confidentialité effectuées, plusieurs options vous per
 | Interface utilisateur du Privacy Service | Vous pouvez afficher une représentation visuelle de l’état de toutes les requêtes actives avec le tableau de bord de surveillance de l’interface utilisateur de Privacy Service. Pour plus d’informations, consultez le [guide d’utilisation de Privacy Service](ui/overview.md). |
 | API PRIVACY SERVICE | Vous pouvez surveiller par programmation l’état des tâches relatives à la confidentialité à l’aide des points de terminaison de recherche fournis par l’API du Privacy Service. Consultez le [guide de lʼAPI Privacy Service](./api/overview.md) pour obtenir des instructions détaillées sur lʼutilisation de lʼAPI. |
 | [!DNL Privacy Events] | [!DNL Privacy Events] utilise des événements d’Adobe I/O envoyés à un webhook configuré pour faciliter l’automatisation efficace des requêtes de tâche. Elles réduisent ou éliminent la nécessité de consulter l’API du Privacy Service pour vérifier si une tâche est terminée ou si un certain jalon a été atteint dans un workflow. Pour plus d’informations, consultez le tutoriel sur l’[abonnement aux Événements relatifs à la confidentialité](./privacy-events.md). |
+
+#### Réponses pour les utilisateurs non existants {#non-existing-users}
+
+Lorsque vous envoyez une demande d’accès ou de suppression, même si les données utilisateur sont introuvables, la réponse renvoie toujours un `success` si l’appel a été effectué avec succès. Cela signifie que même si les données n’existent pas, un accès ou une suppression peut se terminer avec succès sans que des données ne soient récupérées ou supprimées.
 
 ## Étapes suivantes
 
