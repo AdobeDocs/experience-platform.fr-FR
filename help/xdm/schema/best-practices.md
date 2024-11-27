@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Bonnes pratiques de modélisation des données
 description: Ce document présente les schémas du modèle de données d’expérience (XDM) ainsi que les blocs de création, principes et bonnes pratiques de la composition de schémas à utiliser dans Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: 8e13918abe9a63b186970b24b87bf85d1c73c3a8
+source-git-commit: fed8502afad1dfcb0b4dc91141dd621eacda720c
 workflow-type: tm+mt
-source-wordcount: '3245'
+source-wordcount: '3227'
 ht-degree: 68%
 
 ---
@@ -246,12 +246,12 @@ Pour définir des contraintes sur un champ particulier, sélectionnez le champ d
 Vous trouverez ci-dessous un ensemble de suggestions pour préserver l’intégrité des données lors de la création d’un schéma.
 
 * **Tenir compte des identités principales** : pour les produits d’Adobe tels que le SDK web, le SDK mobile, Adobe Analytics et Adobe Journey Optimizer, le champ `identityMap` sert souvent d’identité principale. Évitez de désigner des champs supplémentaires comme identités principales pour ce schéma.
-* **Évitez d’utiliser `_id` comme identité** : évitez d’utiliser le champ `_id` dans les schémas d’événement d’expérience comme identité. Il est destiné à une unicité record, et non à une utilisation en tant qu&#39;identité.
+* **Assurez-vous que `_id` n’est pas utilisé comme identité** : le champ `_id` des schémas d’événement d’expérience ne peut pas être utilisé comme identité, car il est destiné à l’unicité des enregistrements.
 * **Définir des contraintes de longueur** : il est recommandé de définir des longueurs minimales et maximales sur les champs marqués comme identités. Un avertissement se déclenche si vous essayez d’attribuer un espace de noms personnalisé à un champ d’identité sans respecter les contraintes de longueur minimale et maximale. Ces limites permettent de maintenir la cohérence et la qualité des données.
 * **Appliquez des modèles pour des valeurs cohérentes** : si vos valeurs d’identité suivent un modèle spécifique, vous devez utiliser le paramètre **[!UICONTROL Modèle]** pour appliquer cette contrainte. Ce paramètre peut inclure des règles telles que des chiffres uniquement, des majuscules, des minuscules ou des combinaisons de caractères spécifiques. Utilisez des expressions régulières pour faire correspondre des modèles dans vos chaînes.
 * **Limiter les eVars dans les schémas Analytics** : en règle générale, un schéma Analytics ne doit avoir qu’un seul eVar désigné comme identité. Si vous envisagez d’utiliser plusieurs eVars comme identité, vous devez vérifier deux fois si la structure de données peut être optimisée.
-* **Assurer l’unicité d’un champ sélectionné** : le champ choisi doit être unique par rapport à l’identité principale du schéma. Dans le cas contraire, ne le marquez pas comme une identité. Par exemple, si plusieurs clients peuvent fournir la même adresse électronique, cet espace de noms n’est pas une identité appropriée. Ce principe s’applique également à d’autres espaces de noms d’identité tels que les numéros de téléphone.
-* **Les contraintes déclenchent des avertissements pour les champs d’espace de noms personnalisés** : définissez des contraintes pour déclencher un avertissement lorsqu’un champ de schéma est marqué avec un espace de noms personnalisé sans spécifier les longueurs minimale et maximale. Cet avertissement constitue un avertissement important pour le maintien de l’intégrité des données. Pour plus d’informations sur la manière de définir des contraintes sur un champ particulier, consultez la documentation [propriétés de champ spécifiques au type](../ui/fields/overview.md#type-specific-properties) .
+* **Assurer l’unicité d’un champ sélectionné** : le champ choisi doit être unique par rapport à l’identité principale du schéma. Dans le cas contraire, ne le marquez pas comme une identité. Par exemple, si plusieurs clients peuvent fournir la même adresse électronique, cet espace de noms n’est pas une identité appropriée. Ce principe s’applique également à d’autres espaces de noms d’identité tels que les numéros de téléphone. Le fait de marquer un champ non unique comme identité peut entraîner l’effondrement du profil indésirable.
+* **Vérifier la longueur minimale de chaîne** : tous les champs de chaîne doivent avoir au moins un caractère de longueur, car les valeurs de chaîne ne doivent jamais être vides. Toutefois, les valeurs nulles des champs non obligatoires sont acceptables.
 
 ## Étapes suivantes
 
