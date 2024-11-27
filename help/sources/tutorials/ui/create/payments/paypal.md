@@ -5,7 +5,7 @@ title: Création d’une connexion à Source PayPal dans l’interface utilisate
 type: Tutorial
 description: Découvrez comment créer une connexion source PayPal à l’aide de l’interface utilisateur de Adobe Experience Platform.
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 43%
@@ -16,7 +16,7 @@ ht-degree: 43%
 
 >[!WARNING]
 >
->La source [!DNL PayPal] sera abandonnée fin mai 2025.
+>La source [!DNL PayPal] sera abandonnée fin juin 2025.
 
 Les connecteurs Source dans Adobe Experience Platform permettent d’ingérer des données provenant de l’extérieur de manière planifiée. Ce tutoriel décrit les étapes de création d’un connecteur source [!DNL PayPal] à l’aide de l’interface utilisateur de Platform.
 
