@@ -1,10 +1,11 @@
 ---
 title: Création d’audiences à l’aide de SQL
 description: Découvrez comment utiliser l’extension d’audience SQL dans Adobe Experience Platform Data Distiller pour créer, gérer et publier des audiences à l’aide de commandes SQL. Ce guide couvre tous les aspects du cycle de vie de l’audience, notamment la création, la mise à jour et la suppression de profils, ainsi que l’utilisation de définitions d’audience pilotées par les données pour cibler des destinations basées sur des fichiers.
-source-git-commit: b790dc0a485011022ac637f9d9c55f21c882d5fc
+exl-id: c35757c1-898e-4d65-aeca-4f7113173473
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1166'
-ht-degree: 1%
+source-wordcount: '1164'
+ht-degree: 2%
 
 ---
 
@@ -125,7 +126,7 @@ Les audiences créées à l’aide de l’extension SQL s’enregistrent automat
 
 ![L’espace de travail Audience dans Adobe Experience Platform, présentant les audiences Distiller de données automatiquement publiées et prêtes à l’emploi.](../images/data-distiller/sql-audiences/audiences.png)
 
-## Activation des audiences vers les destinations {#activate-audiences}
+## Activer des audiences vers les destinations {#activate-audiences}
 
 Activez vos audiences en les ciblant sur n’importe quelle destination basée sur des fichiers, telle que [!DNL Amazon S3], [!DNL SFTP] ou [!DNL Azure Blob]. Les attributs d’audience enrichis peuvent être affinés et filtrés selon les besoins.
 
@@ -209,4 +210,4 @@ Vous pouvez ensuite lire la documentation suivante pour développer et optimiser
 
 - **Explorer l’évaluation de l’audience** : découvrez les [méthodes d’évaluation de l’audience dans Adobe Experience Platform](../../segmentation/home.md#evaluate-segments) : segmentation par flux pour les mises à jour en temps réel, segmentation par lots pour le traitement planifié ou à la demande et segmentation de périphérie pour l’évaluation instantanée sur l’Edge Network.
 - **Intégration avec les destinations** : lisez le guide sur l’[exportation de fichiers à la demande vers des destinations par lot](../../destinations/ui/export-file-now.md) à l’aide de l’interface utilisateur Destinations de plateforme.
-- **Réviser les performances de l’audience** : analysez les performances de vos audiences définies par SQL sur différents canaux. Utilisez les informations sur les données pour ajuster et améliorer vos définitions d’audience et vos stratégies de ciblage. Lisez le document sur [Audience insights](../../dashboards/insights/audiences.md) pour savoir comment accéder aux requêtes SQL et les adapter aux informations sur les audiences dans Adobe Real-time Customer Data Platform. Vous pouvez ensuite créer vos propres insights et transformer les données brutes en informations exploitables en personnalisant le tableau de bord Audiences afin de visualiser et d’utiliser efficacement ces informations pour une meilleure prise de décision.
+- **Réviser les performances de l’audience** : analysez les performances de vos audiences définies par SQL sur différents canaux. Utilisez les informations sur les données pour ajuster et améliorer vos définitions d’audience et vos stratégies de ciblage. Lisez le document sur [Audience insights](../../dashboards/insights/audiences.md) pour savoir comment accéder aux requêtes SQL et les adapter aux informations sur les audiences dans Adobe Real-Time CDP. Vous pouvez ensuite créer vos propres insights et transformer les données brutes en informations exploitables en personnalisant le tableau de bord Audiences afin de visualiser et d’utiliser efficacement ces informations pour une meilleure prise de décision.

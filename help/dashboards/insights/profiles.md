@@ -2,16 +2,16 @@
 title: Informations sur le profil
 description: Découvrez le langage SQL qui alimente vos insights de profil et utilisez ces requêtes pour générer des insights personnalisés qui explorent davantage vos clients et leurs expériences client.
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1659'
 ht-degree: 3%
 
 ---
 
 # Informations sur les profils
 
-Les informations dérivées de l’analyse de votre modèle de données rendent vos données Adobe Real-time Customer Data Platform plus accessibles, compréhensibles et pertinentes pour la prise de décision.
+Les informations dérivées de l’analyse de votre modèle de données rendent vos données Adobe Real-Time CDP plus accessibles, compréhensibles et pertinentes pour la prise de décision.
 
 Comprenez vos informations sur les profils en accédant aux données SQL qui les alimentent, puis générez vos propres informations afin d’explorer davantage vos clients et leurs expériences client qui constituent vos profils. Transformez vos données brutes en nouvelles informations exploitables en utilisant le modèle de données Real-Time CDP SQL existant comme source d’inspiration pour créer des requêtes en fonction de vos besoins professionnels uniques.
 

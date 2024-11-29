@@ -4,16 +4,16 @@ description: Découvrez le code SQL qui alimente vos informations de profil de c
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="Édition B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: f9ef0e25dac1715bbb6d73db52d6368c543bf7ec
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
 
 # Informations sur le profil du compte
 
-Les [profils de compte](../../rtcdp/accounts/account-profile-overview.md) sont utilisés pour consolider les informations de compte provenant de diverses sources, y compris de plusieurs canaux marketing et systèmes organisationnels. Cette vue unifiée permet une compréhension complète des comptes clients, améliorant ainsi les campagnes marketing B2B. Les insights dérivés de l’analyse de votre modèle de données rendent vos données Adobe Real-time Customer Data Platform B2B plus accessibles, plus compréhensibles et plus efficaces pour la prise de décision.
+Les [profils de compte](../../rtcdp/accounts/account-profile-overview.md) sont utilisés pour consolider les informations de compte provenant de diverses sources, y compris de plusieurs canaux marketing et systèmes organisationnels. Cette vue unifiée permet une compréhension complète des comptes clients, améliorant ainsi les campagnes marketing B2B. Les insights dérivés de l’analyse de votre modèle de données rendent vos données Adobe Real-Time CDP B2B plus accessibles, plus compréhensibles et plus efficaces pour la prise de décision.
 
 Grâce à l’accès au code SQL qui alimente vos informations, vous pouvez mieux comprendre vos données B2B et générer vos propres informations réutilisables hautement personnalisées pour explorer plus en détail les informations de votre compte client. Transformez vos données brutes en nouvelles informations exploitables en utilisant le modèle de données Real-Time CDP SQL existant comme source d’inspiration pour créer des requêtes en fonction de vos besoins professionnels uniques.
 

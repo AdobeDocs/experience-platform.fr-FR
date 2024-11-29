@@ -2,16 +2,16 @@
 title: Informations sur les destinations
 description: Découvrez le code SQL qui alimente vos informations sur les destinations et utilisez ces requêtes pour générer des informations personnalisées afin d’explorer plus en détail l’activation des données de Adobe Experience Platform.
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1137'
 ht-degree: 3%
 
 ---
 
 # Informations sur les destinations
 
-Les informations dérivées de l’analyse de votre modèle de données rendent vos données Adobe Real-time Customer Data Platform plus accessibles, compréhensibles et pertinentes pour la prise de décision.
+Les informations dérivées de l’analyse de votre modèle de données rendent vos données Adobe Real-Time CDP plus accessibles, compréhensibles et pertinentes pour la prise de décision.
 
 Comprenez vos informations de destination en accédant au code SQL qui les alimente, puis générez vos propres informations afin d’explorer plus en détail l’activation des données de Adobe Experience Platform vers vos plateformes de destination. Transformez vos données brutes en nouvelles informations exploitables en utilisant le modèle de données Real-Time CDP SQL existant comme source d’inspiration pour créer des requêtes en fonction de vos besoins professionnels uniques.
 
