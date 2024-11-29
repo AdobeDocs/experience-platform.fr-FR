@@ -1,11 +1,11 @@
 ---
-title: Notes de mise à jour d’Adobe Experience Platform – Novembre 2024
-description: Les notes de mise à jour de novembre 2024 pour Adobe Experience Platform.
+title: Notes de mise à jour d’Adobe Experience Platform de novembre 2024
+description: Notes de mise à jour de novembre 2024 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 4786a1f33c76b6023f6e3edfd4f70c18230fda5f
+source-git-commit: 3f43e120225bcca640cc46ebdce1e4d61100ad45
 workflow-type: tm+mt
-source-wordcount: '854'
-ht-degree: 25%
+source-wordcount: '852'
+ht-degree: 98%
 
 ---
 
@@ -13,31 +13,31 @@ ht-degree: 25%
 
 >[!TIP]
 >
->La nouvelle [page d’entrée de la documentation du produit de l’assistant d’IA](../../ai-assistant/landing.md) est désormais disponible. Utilisez cette page comme hub pour toutes les ressources liées aux assistants d’IA.
+>La nouvelle [documentation du produit de l’assistant d’IA](../../ai-assistant/landing.md) est désormais disponible. Utilisez cette page en tant que point central pour toutes les ressources liées à l’Assistant IA.
 
-**Date de publication : mercredi 26 novembre 2024.**
+**Date de publication : 26 novembre 2024**
 
 Mises à jour des fonctionnalités et de la documentation existantes dans Adobe Experience Platform :
 
 - [Assistant IA](#ai-assistant)
 - [Destinations](#destinations)
-- [Query Service](#query-service)
+- [Service de requête](#query-service)
 - [Sandbox](#sandboxes)
 - [Mises à jour de la documentation](#documentation-updates)
    - [Documentation interactive de l’API Experience Platform](#interactive-experience-platform-api-documentation)
-   - [Nouvelle table des matières sur l’Experience League](#new-table-of-contents-on-experience-league)
-   - [Nouvelle page d’entrée des assistants IA](#new-ai-assistant-landing-page)
+   - [Nouvelle table des matières sur Experience League](#new-table-of-contents-on-experience-league)
+   - [Nouvelle page de destination Assistant IA](#new-ai-assistant-landing-page)
 
 ## Assistant IA {#ai-assistant}
 
-L’assistant d’IA dans Adobe Experience Platform est une expérience conversationnelle que vous pouvez utiliser pour accélérer vos workflows dans les applications Adobe. Vous pouvez utiliser l’assistant d’IA pour mieux comprendre les connaissances sur les produits, résoudre les problèmes ou rechercher des informations et trouver des informations opérationnelles. L’assistant d’IA prend en charge Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer et Customer Journey Analytics.
+L’Assistant IA dans Adobe Experience Platform est une expérience conversationnelle que vous pouvez utiliser pour accélérer vos workflows dans les applications Adobe. Vous pouvez utiliser l’Assistant IA pour développer vos connaissances sur le produit, résoudre les problèmes ou rechercher des informations et trouver des informations opérationnelles. L’Assistant IA prend en charge Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer et Customer Journey Analytics.
 
 **Nouvelles fonctionnalités**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [!BADGE Alpha]{type=Informative} Surveiller les changements significatifs et prévoir la croissance de l’audience | Utilisez l’assistant d’IA pour surveiller les modifications importantes et fournir des prévisions de croissance pour votre audience et la taille de vos jeux de données. Vous pouvez ensuite utiliser ces informations pour garantir l’intégrité de vos données d’audience et proposer des projections prospectives à l’appui d’une prise de décision éclairée par les données. Pour plus d’informations, consultez le guide sur la [surveillance des changements significatifs et la prévision de la croissance de l’audience](../../ai-assistant/new-features/audience-forecasting.md). |
-| [!BADGE Alpha]{type=Informative} Estimation du langage naturel | Utilisez les fonctionnalités d’estimation de langage naturel de l’assistant d’IA pour estimer la taille des audiences et prédire la propension des audiences en fonction de questions simples et conversationnelles. Pour plus d’informations, consultez le guide sur l’ [utilisation de l’estimation du langage naturel avec l’assistant d’IA](../../ai-assistant/new-features/natural-language.md). |
+| [!BADGE Alpha]{type=Informative} Surveiller les changements significatifs et prévoir la croissance de l’audience | Utilisez l’Assistant IA pour surveiller les changements significatifs et fournir des prévisions de croissance de votre audience et de la taille des jeux de données. Vous pouvez ensuite utiliser ces informations pour garantir l’intégrité de vos données d’audience et proposer des projections prospectives à l’appui d’une prise de décision éclairée par les données. Pour plus d’informations, consultez le guide sur la [surveillance des changements significatifs et la prévision de la croissance de l’audience](../../ai-assistant/new-features/audience-forecasting.md). |
+| [!BADGE Alpha]{type=Informative} Estimation du langage naturel | Utilisez les fonctionnalités d’estimation du langage naturel d’Assistant IA pour estimer la taille des audiences et prédire la propension des audiences sur la base de questions simples et conversationnelles. Pour plus d’informations, consultez le guide sur l’[utilisation de l’estimation du langage naturel avec l’Assistant IA](../../ai-assistant/new-features/natural-language.md). |
 
 {style="table-layout:auto"}
 
@@ -49,8 +49,8 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Destination | Description |
 | --- | --- |
-| [Temps réel de diffusion en continu Magnite](/help/destinations/catalog/advertising/magnite-streaming.md) | Exportez des audiences pour activation, ciblage ou suppression dans la plateforme de diffusion en continu Magnite. Notez que pour que les audiences soient correctement exportées vers Magnite, vous devez utiliser à la fois les destinations temps réel et par lot. |
-| [Lot de diffusion en continu Magnite](/help/destinations/catalog/advertising/magnite-batch.md) | Exportez des audiences pour activation, ciblage ou suppression dans la plateforme de diffusion en continu Magnite. Notez que pour que les audiences soient correctement exportées vers Magnite, vous devez utiliser à la fois les destinations temps réel et par lot. |
+| [Streaming Magnite en temps réel](/help/destinations/catalog/advertising/magnite-streaming.md) | Exportez des audiences pour activation, ciblage ou suppression dans la plateforme de streaming Magnite. Notez que pour que les audiences soient correctement exportées vers Magnite, vous devez utiliser les destinations en temps réel et par lots. |
+| [Lot de streaming Magnite](/help/destinations/catalog/advertising/magnite-batch.md) | Exportez des audiences pour activation, ciblage ou suppression dans la plateforme de streaming Magnite. Notez que pour que les audiences soient correctement exportées vers Magnite, vous devez utiliser les destinations en temps réel et par lots. |
 
 {style="table-layout:auto"}
 
@@ -58,21 +58,21 @@ Les [!DNL Destinations] sont des intégrations préconfigurées à des plateform
 
 | Fonctionnalité | Description |
 | --- | --- |
-| [Recherche d’attributs de profil en temps réel sur la périphérie](/help/destinations/ui/activate-edge-profile-lookup.md) | Découvrez comment rechercher des attributs de profil de périphérie en temps réel pour offrir des expériences de personnalisation ou informer les règles de prise de décision par le biais d’applications en aval, à l’aide de la destination Personalization personnalisée et de l’API Edge Network. |
+| [Rechercher des attributs de profil en temps réel sur Edge](/help/destinations/ui/activate-edge-profile-lookup.md) | Découvrez comment rechercher des attributs de profil Edge en temps réel pour offrir des expériences de personnalisation ou éclairer les règles de prise de décision par le biais d’applications en aval, à l’aide de la destination Personnalisation personnalisée et de l’API Edge Network. |
 
 {style="table-layout:auto"}
 
 Pour plus d’informations, reportez-vous à la [vue d’ensemble des destinations](../../destinations/home.md).
 
-## Query Service {#query-service}
+## Service de requête {#query-service}
 
-Requête de données dans le lac de données Adobe Experience Platform à l’aide de SQL standard avec Query Service. Combinez en toute transparence des jeux de données et générez de nouveaux jeux à partir des résultats de vos requêtes pour alimenter les rapports, activer les workflows de science des données ou faciliter l’ingestion dans Real-time Customer Profile. Vous pouvez, par exemple, fusionner les données de transaction client avec les données comportementales afin d’identifier les audiences à forte valeur ajoutée pour les campagnes marketing ciblées.
+Interrogez des données dans le lac de données Adobe Experience Platform à l’aide de SQL standard avec le service de requête. Combinez en toute transparence des jeux de données et générez-en de nouveaux à partir des résultats de vos requêtes pour alimenter les rapports, activer les workflows de science des données ou faciliter l’ingestion dans le profil client en temps réel. Vous pouvez, par exemple, fusionner les données de transaction client avec les données comportementales afin d’identifier les audiences à forte valeur ajoutée pour les campagnes marketing ciblées.
 
 **Fonctionnalités mises à jour**
 
 | Fonctionnalité | Description |
 | --- | --- |
-| API Dater Distiller Authorization | Gérez et appliquez des restrictions d’accès basées sur les adresses IP pour les environnements de test de Query Service, afin d’améliorer la sécurité des données et de garantir la conformité aux stratégies organisationnelles. Pour plus d’informations sur ses principales fonctionnalités, reportez-vous au [guide de l’API d’autorisation de Data Distiller](../../query-service/auth-api/overview.md) ou à la [documentation d’OpenAPI](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) pour obtenir des informations complètes, notamment des détails de point de terminaison, des listes de paramètres, des exemples de requête/réponse et des fonctionnalités de test. |
+| API Data Distiller Authorization | Gérez et appliquez des restrictions d’accès basées sur les adresses IP pour les sandbox du service de requête afin d’améliorer la sécurité des données et de garantir la conformité aux politiques organisationnelles. Reportez-vous au [guide de l’API Data Distiller Authorization](../../query-service/auth-api/overview.md) pour plus d’informations sur ses principales fonctions et fonctionnalités ou à la [documentation d’OpenAPI](https://developer.adobe.com/experience-platform-apis/references/data-distiller-auth/) pour obtenir des informations complètes, notamment des détails de point d’entrée, des listes de paramètres, des exemples de requête/réponse et des fonctionnalités de test. |
 
 Pour plus d’informations sur Query Service [!DNL Query Service], consultez la [[!DNL Query Service] présentation](../../query-service/home.md) de Query Service.
 
@@ -84,7 +84,7 @@ Adobe Experience Platform est conçu pour enrichir les applications d’expér
 
 | Fonctionnalité | Description |
 | --- | --- |
-| Partage de modules avec l’API des outils Sandbox | Utilisez deux nouveaux points de terminaison API, [`/handshake`](../../sandboxes/sandbox-tooling-api/packages.md#org-linking) et [`/transfers`](../../sandboxes/sandbox-tooling-api/packages.md#transfer-packages) pour gérer le partage de packages entre les organisations, tels que les approbations de demandes, la visibilité des packages et l’importation de packages, à l’aide de l’API de l’outil de test. |
+| Partage de packages avec l’API d’outils sandbox | Utilisez deux nouveaux points d’entrée d’API, [`/handshake`](../../sandboxes/sandbox-tooling-api/packages.md#org-linking) et [`/transfers`](../../sandboxes/sandbox-tooling-api/packages.md#transfer-packages), pour gérer le partage de packages entre les organisations, tels que les approbations de requêtes, la visibilité des packages et l’import de packages, à l’aide de l’API d’outils sandbox. |
 
 Pour plus d’informations sur les sandbox, consultez la [vue d’ensemble des sandbox](../../sandboxes/home.md).
 
@@ -92,12 +92,12 @@ Pour plus d’informations sur les sandbox, consultez la [vue d’ensemble des s
 
 ### Documentation interactive de l’API Experience Platform {#interactive-api-documentation}
 
-La [ documentation de l’API Experience Platform](https://developer.adobe.com/experience-platform-apis/) est désormais entièrement interactive, ce qui vous permet d’authentifier et d’explorer les API directement sur la page de documentation de référence de l’API. Vous pouvez maintenant accéder à la page de documentation de référence de l’API souhaitée, créer ou obtenir vos informations d’authentification de l’API, les coller dans le bloc **[!UICONTROL Essayez-le]** et exécuter l’appel . Tout sur une page. [En savoir plus](/help/landing/api-authentication.md#get-credentials-functionality) sur la fonctionnalité.
+La [documentation de l’API Experience Platform](https://developer.adobe.com/experience-platform-apis/) est désormais entièrement interactive, ce qui vous permet d’authentifier et d’explorer les API directement sur la page de documentation de référence de l’API. Vous pouvez désormais accéder à la page de documentation de référence de l’API souhaitée, créer ou obtenir vos informations d’authentification d’API, les coller dans le bloc **[!UICONTROL Try it]** et exécuter l’appel. Tout ceci sur une seule et même page. [En savoir plus](/help/landing/api-authentication.md#get-credentials-functionality) à propos de la fonctionnalité.
 
-### Nouvelle table des matières sur l’Experience League {#new-table-of-contents-on-experience-league}
+### Nouvelle table des matières sur Experience League {#new-table-of-contents-on-experience-league}
 
-La table des matières des pages de documentation Experience League a été améliorée afin de fournir une expérience améliorée aux lecteurs, notamment un filtre de mots-clés pour découvrir la page exacte dont vous avez besoin, la possibilité de développer toutes les pages, etc. <br> ![Nouvelle expérience de table des matières comprenant le filtre de mots-clés et la possibilité de développer toutes les pages.](../2024/assets/november/new-toc-experience.gif " Nouvelle expérience de table des matières comprenant le filtre de mots-clés et la possibilité de développer toutes les pages."){width="250" align="center" zoomable="yes"}
+La table des matières des pages de documentation d’Experience League a été améliorée afin de fournir une meilleure expérience aux lecteurs et lectrices, notamment grâce à l’ajout d’un filtre de mot-clé pour découvrir la page exacte dont vous avez besoin, de la possibilité de développer toutes les pages, et de bien d’autres choses.<br> ![Nouvelle expérience de table des matières comprenant le filtre de mot-clé et la possibilité de développer toutes les pages.](../2024/assets/november/new-toc-experience.gif "Nouvelle expérience de table des matières comprenant le filtre de mot-clé et la possibilité de développer toutes les pages."){width="250" align="center" zoomable="yes"}
 
-### Nouvelle page d’entrée des assistants IA {#new-ai-assistant-landing-page}
+### Nouvelle page de destination Assistant IA {#new-ai-assistant-landing-page}
 
-Utilisez la nouvelle page [Documentation du produit de l’assistant d’IA](../../ai-assistant/landing.md) comme hub pour tout ce qui est l’assistant d’IA. Reportez-vous à la documentation du produit pour consulter des tutoriels vidéo, de la documentation technique, des cas d’utilisation et des liens vers des publications de blog sur l’assistant d’IA.
+Utilisez la nouvelle page de [documentation du produit Assistant IA](../../ai-assistant/landing.md) en tant que point central pour tout ce qui concerne l’Assistant IA. Reportez-vous à la documentation du produit pour des tutoriels vidéo, de la documentation technique, des cas d’utilisation et des liens vers des publications de blog sur l’Assistant IA.
