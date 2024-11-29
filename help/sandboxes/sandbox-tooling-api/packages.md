@@ -2,9 +2,9 @@
 title: Point de terminaison de l’API des modules d’outils Sandbox
 description: Le point de terminaison /packages de l’API Sandbox Tooling vous permet de gérer les packages par programmation dans Adobe Experience Platform.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: e029380dd970195d1254ee3ea1cd68ba2574bbd3
+source-git-commit: 47e4616e5465ec97512647b9280f461c6971aa42
 workflow-type: tm+mt
-source-wordcount: '2543'
+source-wordcount: '2547'
 ht-degree: 10%
 
 ---
@@ -367,6 +367,7 @@ curl -X DELETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **Réponse**
@@ -403,6 +404,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 | Propriété | Description | Type | Obligatoire |
@@ -424,7 +426,8 @@ Une réponse réussie renvoie le module publié.
         "imsOrgId": "5C1328435BF324E90A49402A@AdobeOrg"
     },
     "type": "PARTIAL",
-    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285"
+    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285",
+    "jobId": "18abab44e25f40c284a4bd6e8f52fd29"
 }
 ```
 
@@ -452,6 +455,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **Réponse**
@@ -809,7 +813,8 @@ curl -X POST \
         "imsOrgId": "5C1328435BF324E90A49402A@AdobeOrg"
     },
     "type": "PARTIAL",
-    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285"
+    "correlationId": "48effe5e-1bef-4250-9c71-23b93ef5d285",
+    "jobId": "18abab44e25f40c284a4bd6e8f52fd29"
 }
 ```
 
@@ -833,10 +838,11 @@ La requête suivante répertorie tous les objets dépendants pour le {PACKAGE_ID
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import?targetSandbox=targetSandboxName \
+  https://platform.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/children \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d'[
       {
         "id": "4d4c874ec3344d64bf8b3160e60ac78b",
@@ -1064,6 +1070,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
 **Réponse**
@@ -1261,7 +1268,7 @@ curl -X POST  \
 | Propriété | Description | Type | Obligatoire |
 | --- | --- | --- | --- |
 | `linkingID` | ID de la demande de partage à laquelle vous répondez. | Chaîne | Oui |
-| `status` | L’action effectuée sur la demande de partage. | Chaîne | Oui |
+| `status` | L’action effectuée sur la demande de partage. Les valeurs possibles sont `APPROVED` ou `REJECTED`. | Chaîne | Oui |
 | `reason` | La raison pour laquelle l’action est entreprise. | Chaîne | Oui |
 | `targetIMSOrgDetails` | Détails sur l’organisation cible où la valeur de l’identifiant doit être l’ **ID** de l’organisation cible, la valeur de nom doit être le **NAME** de l’organisation cible et la valeur de région doit être l’organisation cible **REGION**. | Objet | Oui |
 
@@ -1298,7 +1305,7 @@ Listez les requêtes de partage sortantes et entrantes en effectuant une requêt
 **Format d’API**
 
 ```http
-POST handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING
+GET handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING
 ```
 
 | Paramètre | Valeurs acceptées/par défaut |
@@ -1420,13 +1427,6 @@ Une réponse réussie renvoie les détails du module demandé et son état de pa
         "packageId": "{PACKAGE_ID}",
         "status": "PENDING",
         "initiatedBy": "acme@3ec9197a65a86f34494221.e",
-        "transferDetails": {
-            "messages": [
-                "Fetched Package",
-                "Fetched Manifest"
-            ],
-            "additionalMetadata": null
-        },
         "requestType": "PRIVATE"
     }
 ]
@@ -1475,18 +1475,6 @@ Une réponse de succès renvoie les détails d’une requête de partage.
     "status": "COMPLETED",
     "initiatedBy": "{INITIATED_BY}",
     "createdDate": 1724442856000,
-    "transferDetails": {
-        "messages": [
-            "Fetched Package",
-            "Fetched Manifest",
-            "Tenant Identified",
-            "Fetched Sandbox Id",
-            "Fetched Blob Files",
-            "Message Published to Kafka",
-            "Completed Transfer"
-        ],
-        "additionalMetadata": null
-    },
     "requestType": "PRIVATE"
 }
 ```
@@ -1545,19 +1533,6 @@ Une réponse réussie renvoie une liste de toutes les requêtes de transfert à 
             "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1726129077000,
             "createdDate": 1726129062000,
-            "transferDetails": {
-                "messages": [
-                    "Fetched Package",
-                    "Fetched Manifest",
-                    "Tenant Identified",
-                    "Fetched Sandbox Id",
-                    "Fetched Blob Files",
-                    "Message Published to Kafka",
-                    "Completed Transfer",
-                    "Finished with status: COMPLETED"
-                ],
-                "additionalMetadata": null
-            },
             "requestType": "PRIVATE"
         },
         {
@@ -1572,19 +1547,6 @@ Une réponse réussie renvoie une liste de toutes les requêtes de transfert à 
             "initiatedBy": "{INITIATED_BY}",
             "completedTime": 1726066046000,
             "createdDate": 1726065936000,
-            "transferDetails": {
-                "messages": [
-                    "Fetched Package",
-                    "Fetched Manifest",
-                    "Tenant Identified",
-                    "Fetched Sandbox Id",
-                    "Fetched Blob Files",
-                    "Message Published to Kafka",
-                    "Completed Transfer",
-                    "Finished with status: COMPLETED"
-                ],
-                "additionalMetadata": null
-            },
             "requestType": "PRIVATE"
         }
     ],
@@ -1600,7 +1562,7 @@ Remplacez un module de privé à public en effectuant une requête de GET sur le
 **Format d’API**
 
 ```http
-GET `/packages/update`
+PUT `/packages/update`
 ```
 
 **Requête**
@@ -1608,8 +1570,8 @@ GET `/packages/update`
 La requête suivante modifie la disponibilité des packages du privé au public.
 
 ```shell
-curl -X GET \
-  http://platform.adobe.io/data/foundation/exim/packages/update \
+curl -X PUT \
+  https://platform.adobe.io/data/foundation/exim/packages \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-type: application/json' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -1998,10 +1960,6 @@ curl -X GET \
   -H 'Accept: application/json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
-  -d '{
-      "imsOrgId": "{ORG_ID}",
-      "packageId": "{PACKAGE_ID}"
-  }'
 ```
 
 | Propriété | Description | Type | Obligatoire |
