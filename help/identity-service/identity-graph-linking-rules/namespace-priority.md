@@ -2,9 +2,9 @@
 title: Priorité des espaces de noms
 description: Découvrez la priorité des espaces de noms dans Identity Service.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 893d8a089dee01e65436b7ac035233ba556b231b
+source-git-commit: 3efbb9614f08a74ad33eb1fbb4861c34c762b66b
 workflow-type: tm+mt
-source-wordcount: '1789'
+source-wordcount: '1788'
 ht-degree: 2%
 
 ---
@@ -48,7 +48,7 @@ Une identité représente un objet réel. Trois objets sont représentés dans l
 
 Les espaces de noms de personne sont relativement immuables par rapport aux appareils matériels (comme IDFA, GAID), qui sont relativement immuables par rapport aux navigateurs web. En gros, vous (personne) serez toujours une seule entité, qui peut avoir plusieurs appareils (téléphone, ordinateur portable, tablette, etc.) et utiliser plusieurs navigateurs (Google Chrome, Safari, FireFox, etc.)
 
-Une autre façon d&#39;aborder ce sujet est la cardinalité. Pour une entité de personne donnée, combien d’identités seront créées ? Dans la plupart des cas, une personne dispose d’un seul CRMID, d’une poignée d’identifiants d’appareil matériel (les réinitialisations IDFA/GAID ne doivent pas se produire souvent) et d’encore plus de cookies (un individu peut facilement naviguer sur plusieurs appareils, utiliser le mode incognito ou réinitialiser les cookies à tout moment). En règle générale, **la cardinalité inférieure indique un espace de noms avec une valeur supérieure**.
+Une autre façon d&#39;aborder ce sujet est la cardinalité. Pour une entité de personne donnée, combien d’identités seront créées ? Dans la plupart des cas, une personne dispose d’un seul CRMID, d’une poignée d’identifiants d’appareil matériel (les réinitialisations IDFA/GAID ne doivent pas se produire souvent) et d’encore plus de cookies (une personne peut facilement naviguer sur plusieurs appareils, utiliser le mode incognito ou réinitialiser les cookies à tout moment). En règle générale, **la cardinalité inférieure indique un espace de noms avec une valeur supérieure**.
 
 ## Validation des paramètres de priorité de votre espace de noms
 
