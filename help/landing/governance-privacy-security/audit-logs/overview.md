@@ -4,10 +4,10 @@ description: Découvrez comment les journaux d’audit vous permettent de savoir
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f6e413d2d8b644775b6714739113174f5d9cb0d9
 workflow-type: tm+mt
-source-wordcount: '1350'
-ht-degree: 40%
+source-wordcount: '1388'
+ht-degree: 39%
 
 ---
 
@@ -31,6 +31,10 @@ ht-degree: 40%
 Afin d’accroître la transparence et la visibilité des activités exécutées dans le système, Adobe Experience Platform vous permet de contrôler l’activité des utilisateurs pour divers services et fonctionnalités sous la forme de &quot;journaux d’audit&quot;. Ces journaux constituent un journal d’audit qui peut vous aider à résoudre les problèmes liés à Platform et à aider votre entreprise à se conformer efficacement aux politiques de gestion des données d’entreprise et aux exigences réglementaires.
 
 En un sens simple, un journal d’audit indique **qui** a effectué l’action **ce** et **quand**. Chaque action enregistrée dans un journal contient des métadonnées qui indiquent le type d’action, la date et l’heure, l’e-mail de l’utilisateur qui a exécuté l’action et des attributs supplémentaires liés au type d’action.
+
+>[!NOTE]
+>
+> Les métadonnées des actions **Ajouter un utilisateur** et **Supprimer un utilisateur** dans la ressource **Rôle** ne contiennent pas l’ID de courrier électronique de l’utilisateur qui a exécuté l’action. À la place, les journaux affichent l’ID de courrier électronique généré par le système (system@adobe.com).
 
 Ce document couvre les journaux d’audit dans Platform, y compris la manière de les afficher et de les gérer dans l’interface utilisateur ou l’API.
 
