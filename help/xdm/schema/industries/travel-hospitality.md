@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Modèle de données du secteur du voyage et de l’hôtellerie ERD
 description: Affichez un diagramme de relation d’entité (ERD) qui décrit un modèle de données normalisé pour le secteur du voyage et de l’hôtellerie, compatible avec le modèle de données d’expérience (XDM) à utiliser dans Adobe Experience Platform.
 exl-id: 4d454160-9066-4702-815b-9509942f709e
-source-git-commit: 5caa4c750c9f786626f44c3578272671d85b8425
+source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 4%
@@ -21,12 +21,12 @@ Le diagramme de relation des entités ci-après représente un modèle de donné
 Utilisez la légende suivante pour interpréter cet ERD :
 
 * Chaque entité affichée dans est basée sur une [classe de modèle de données d’expérience (XDM)](../composition.md#class) sous-jacente.
-* Pour une entité donnée, chaque ligne marquée en **bold** représente un groupe de champs ou un type de données, avec les champs pertinents qu’elle fournit ci-dessous dans le texte non en gras.
+* Les champs mis en retrait sous un champ parent représentent un champ enfant, ou sous-champ, qui appartient au groupe de champs du parent.
 * Les champs les plus importants pour une entité donnée sont surlignés en rouge.
 * Toutes les propriétés pouvant être utilisées pour identifier des clients individuels sont marquées comme &quot;identité&quot;, l’une de ces propriétés étant marquée comme &quot;identité principale&quot;.
 * Les relations d’entité sont marquées comme étant non dépendantes, puisque les événements basés sur des cookies ne peuvent souvent pas déterminer la personne ou l’individu qui a effectué la transaction.
 
-![](../../images/industries/travel-hospitality.png)
+![Exemple d’ERD pour un modèle de données d’hospitalité de voyage](../../images/industries/travel-hospitality.png)
 
 >[!NOTE]
 >

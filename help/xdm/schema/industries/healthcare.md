@@ -2,9 +2,9 @@
 title: ERD du modèle de données du secteur des soins de santé
 description: Affichez un diagramme des relations d’entité (ERD) qui décrit un modèle de données normalisé pour le secteur de la santé. Ce modèle de données est compatible avec le modèle de données d’expérience (XDM) à utiliser dans Adobe Experience Platform.
 exl-id: ebcf97ec-f5a4-46e5-b1ad-c80d55aa2c6e
-source-git-commit: 2fd35c4ac29f43391f9dc03c636d20558b701be7
+source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '605'
 ht-degree: 8%
 
 ---
@@ -20,12 +20,12 @@ Le diagramme de relation des entités suivant (ERD) représente un modèle de do
 Utilisez la légende suivante pour interpréter cet ERD :
 
 * Chaque entité affichée dans est basée sur une [classe de modèle de données d’expérience (XDM)](../composition.md#class) sous-jacente.
-* Pour une entité donnée, chaque ligne marquée en **bold** représente un groupe de champs ou un type de données, avec les champs pertinents qu’elle fournit ci-dessous dans le texte non en gras.
+* Les champs mis en retrait sous un champ parent représentent un champ enfant, ou sous-champ, qui appartient au groupe de champs du parent.
 * Les champs les plus importants pour une entité donnée sont surlignés en rouge.
 * Toutes les propriétés pouvant être utilisées pour identifier des clients individuels sont marquées comme &quot;identité&quot;, l’une de ces propriétés étant marquée comme &quot;identité principale&quot;.
 * Les relations d’entité sont marquées comme étant non dépendantes, puisque les événements basés sur des cookies ne peuvent souvent pas déterminer la personne ou l’individu qui a effectué la transaction.
 
-![Image montrant le diagramme de relation de l’entité pour le modèle de données du secteur de la santé](../../images/industries/healthcare.png)
+![Exemple d’ERD pour un modèle de données du secteur de la santé](../../images/industries/healthcare.png)
 
 >[!NOTE]
 >
