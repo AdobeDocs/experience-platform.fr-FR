@@ -2,10 +2,10 @@
 title: Présentation de l’assistant AI dans Adobe Experience Platform
 description: Découvrez l’assistant IA, ses nuances, ses cas d’utilisation et comment l’utiliser pour accélérer votre workflow avec Adobe Experience Platform et Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 1910ac68be2c154467d250a614d0d13d62ef6875
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 9%
+source-wordcount: '938'
+ht-degree: 15%
 
 ---
 
@@ -17,13 +17,13 @@ La vidéo suivante est destinée à vous aider à comprendre l’assistant d’I
 
 Lisez ce document pour en savoir plus sur l’assistant d’IA dans Adobe Experience Platform.
 
-L’assistant d’IA dans Adobe Experience Platform est une expérience conversationnelle que vous pouvez utiliser pour accélérer vos workflows dans les applications Adobe. Vous pouvez utiliser l’assistant d’IA pour mieux comprendre les connaissances sur les produits, résoudre les problèmes ou rechercher des informations et trouver des informations opérationnelles. L’assistant d’IA prend en charge Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer et Customer Journey Analytics.
+L’Assistant IA dans Adobe Experience Platform est une expérience conversationnelle que vous pouvez utiliser pour accélérer vos workflows dans les applications Adobe. Vous pouvez utiliser l’Assistant IA pour développer vos connaissances sur le produit, résoudre les problèmes ou rechercher des informations et trouver des informations opérationnelles. L’Assistant IA prend en charge Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer et Customer Journey Analytics.
 
 ![Interface de l’assistant d’IA avec la première expérience utilisateur déclenchée.](./images/ai-assistant-full.png)
 
 >[!IMPORTANT]
 >
->Vous devez accepter un [contrat utilisateur](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) avant de pouvoir utiliser l’assistant d’IA. Le contrat d’utilisation contient également le contrat bêta public. Vous pouvez ainsi utiliser d’autres fonctions d’assistant d’IA au fur et à mesure qu’elles se déploient en version bêta.
+>Vous devez accepter un [contrat utilisateur](https://www.adobe.com/fr/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) avant de pouvoir utiliser l’assistant d’IA. Le contrat d’utilisation contient également le contrat bêta public. Vous pouvez ainsi utiliser d’autres fonctions d’assistant d’IA au fur et à mesure qu’elles se déploient en version bêta.
 
 +++Sélectionner pour afficher l’interface des accords utilisateur
 
@@ -58,6 +58,10 @@ Les connaissances sur les produits se rapportent aux concepts et aux sujets bas�
 | Dépannage | <ul><li>Pourquoi ne puis-je pas activer un schéma détenu par Adobe pour Profile ?</li><li>Pourquoi ne puis-je pas supprimer un segment ?</li></ul> |
 
 {style="table-layout:auto"}
+
+Regardez la vidéo suivante pour plus d’informations sur les connaissances du produit de l’assistant d’IA :
+
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### Informations opérationnelles {#operational-insights}
 
