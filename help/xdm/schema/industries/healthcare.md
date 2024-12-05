@@ -2,7 +2,7 @@
 title: ERD du modèle de données du secteur des soins de santé
 description: Affichez un diagramme des relations d’entité (ERD) qui décrit un modèle de données normalisé pour le secteur de la santé. Ce modèle de données est compatible avec le modèle de données d’expérience (XDM) à utiliser dans Adobe Experience Platform.
 exl-id: ebcf97ec-f5a4-46e5-b1ad-c80d55aa2c6e
-source-git-commit: 23bf89977b13a1f51e1ea7a0bb0561522a09745d
+source-git-commit: 8f026501cf5c8087cc512ac374163908cebd17c6
 workflow-type: tm+mt
 source-wordcount: '605'
 ht-degree: 8%
