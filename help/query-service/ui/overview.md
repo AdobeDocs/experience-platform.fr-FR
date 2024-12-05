@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guide de l’IU de Query Service
 description: Adobe Experience Platform Query Service fournit une interface utilisateur qui permet d’écrire et d’exécuter des requêtes, d’afficher des requêtes précédemment exécutées et d’accéder aux requêtes enregistrées par les utilisateurs de votre entreprise.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: ab611e33c82bf5b727b855877ee8f686f90bbfff
+source-git-commit: 3b36148aee490554672ee9e76db4e03c430dfae6
 workflow-type: tm+mt
 source-wordcount: '2275'
 ht-degree: 25%
@@ -175,3 +175,4 @@ L’onglet **[!UICONTROL Informations d’identification]** affiche vos informat
 ## Étapes suivantes
 
 Maintenant que vous connaissez l’interface utilisateur de Query Service sur [!DNL Platform], vous pouvez accéder à Query Editor pour commencer à créer vos propres projets de requête à partager avec d’autres utilisateurs de votre entreprise. Pour plus d’informations sur la création et l’exécution de requêtes dans l’éditeur de requêtes, consultez le [guide d’utilisation de l’éditeur de requêtes](./user-guide.md).
+
