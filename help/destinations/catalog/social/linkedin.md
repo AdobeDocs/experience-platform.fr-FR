@@ -3,9 +3,9 @@ keywords: connexion linkedin;connexion linkedin;destinations linkedin;linkedin;
 title: Connexion à des audiences mises en correspondance Linkedin
 description: Activez les profils de vos campagnes LinkedIn pour le ciblage, la personnalisation et la suppression des audiences, en fonction des courriers électroniques hachés.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 74d7c48042b0d2b938705b588c185f3c3f96f1cd
 workflow-type: tm+mt
-source-wordcount: '1099'
+source-wordcount: '1095'
 ht-degree: 37%
 
 ---
@@ -149,7 +149,7 @@ Voir [Activer les données d’audience vers des destinations d’export d’aud
 
 ## Données exportées {#exported-data}
 
-Une activation réussie signifie qu’une audience personnalisée [!DNL LinkedIn] serait créée par programmation dans [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). L’appartenance à une audience serait ajoutée et supprimée lorsque les utilisateurs sont qualifiés ou disqualifiés pour les audiences activées.
+Une activation réussie signifie qu’une audience personnalisée [!DNL LinkedIn] est créée par programmation dans [[!DNL LinkedIn Campaign Manager]](https://www.linkedin.com/campaignmanager/login). L’appartenance à l’audience est ajustée lorsque les utilisateurs sont qualifiés ou disqualifiés pour les audiences activées.
 
 >[!TIP]
 >

@@ -5,9 +5,9 @@ user-guide-description: Activez vos données connues et inconnues pour les campa
 description: Ce document répertorie la table des matières des destinations Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
+source-git-commit: 3a66902ab169c555a52741e3630d2b9f50149155
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1262'
 ht-degree: 85%
 
 ---
@@ -201,6 +201,7 @@ ht-degree: 85%
    * Destinations sociales{#social}
       * [Présentation des destinations sociales](./catalog/social/overview.md)
       * [Connexion Facebook](./catalog/social/facebook.md)
+      * [(Sociétés) Connexion d’audiences mappées LinkedIn](./catalog/social/linkedin-b2b.md)
       * [Connexion des audiences correspondantes linkedIn](./catalog/social/linkedin.md)
       * [Connexion à TikTok](./catalog/social/tiktok.md)
       * [Connexion [!DNL Twitter Custom Audiences]](./catalog/social/twitter.md)
