@@ -3,9 +3,9 @@ title: Notes de mise à jour d’Adobe Experience Platform de novembre 2024
 description: Notes de mise à jour de novembre 2024 pour Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 3f43e120225bcca640cc46ebdce1e4d61100ad45
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '852'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!TIP]
 >
->La nouvelle [documentation du produit de l’assistant d’IA](../../ai-assistant/landing.md) est désormais disponible. Utilisez cette page en tant que point central pour toutes les ressources liées à l’Assistant IA.
+>La nouvelle [documentation du produit Assistant IA](../../ai-assistant/landing.md) est désormais disponible. Utilisez cette page en tant que point central pour toutes les ressources liées à l’Assistant IA.
 
 **Date de publication : 26 novembre 2024**
 
