@@ -2,7 +2,7 @@
 title: sendMediaEvent
 description: Découvrez comment utiliser la commande sendMediaEvent pour effectuer le suivi des sessions multimédia dans le SDK Web.
 exl-id: a38626fd-4810-40a0-8893-e98136634fac
-source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
+source-git-commit: 877e12f1d53bb4a8d7c2564490d4e8f3e9e34e34
 workflow-type: tm+mt
 source-wordcount: '763'
 ht-degree: 0%
@@ -626,7 +626,7 @@ sessionPromise.then(sessionID => {
 
 ### Mises à jour d’état {#state-updates}
 
-Le type d’événement `media.stateUpdate` est utilisé pour effectuer le suivi des modifications de l’état du lecteur. Cet événement doit être envoyé lorsque l’état du lecteur change.
+Le type d’événement `media.statesUpdate` est utilisé pour effectuer le suivi des modifications de l’état du lecteur. Cet événement doit être envoyé lorsque l’état du lecteur change.
 
 >[!BEGINTABS]
 
@@ -636,7 +636,7 @@ Le type d’événement `media.stateUpdate` est utilisé pour effectuer le suivi
 alloy("sendMediaEvent", {
     playerId: "movie-test",
     xdm: {
-        eventType: "media.stateUpdate",
+        eventType: "media.statesUpdate",
         mediaCollection: {
             statesStart: [{
                     name: "mute"
