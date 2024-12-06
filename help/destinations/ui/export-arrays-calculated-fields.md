@@ -3,7 +3,7 @@ title: Utiliser des champs calculés pour exporter des tableaux en tant que cha�
 type: Tutorial
 description: Découvrez comment utiliser les champs calculés pour exporter des tableaux de Real-Time CDP vers des destinations de stockage dans le cloud en tant que chaînes.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
+source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
 workflow-type: tm+mt
 source-wordcount: '1556'
 ht-degree: 7%
@@ -21,7 +21,7 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->* La fonctionnalité d’exportation de tableaux par le biais de champs calculés est généralement disponible.
+>La fonctionnalité d’exportation de tableaux par le biais de champs calculés est généralement disponible.
 
 Découvrez comment exporter des tableaux par le biais de champs calculés de Real-Time CDP vers les [destinations de stockage dans le cloud](/help/destinations/catalog/cloud-storage/overview.md) en tant que chaînes. Lisez ce document pour comprendre les cas d’utilisation activés par cette fonctionnalité.
 

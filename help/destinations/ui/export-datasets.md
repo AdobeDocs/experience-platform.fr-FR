@@ -3,9 +3,9 @@ title: Exportation de jeux de données vers des destinations de stockage dans le
 type: Tutorial
 description: Découvrez comment exporter des jeux de données d’Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 74dcaff91a264062feec262784e056a296072fd7
+source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
 workflow-type: tm+mt
-source-wordcount: '2603'
+source-wordcount: '2612'
 ht-degree: 37%
 
 ---
@@ -293,54 +293,54 @@ Gardez à l’esprit les limites suivantes relatives à la disponibilité géné
 
 **Peut-on générer un fichier sans dossier si nous enregistrons uniquement à l’emplacement `/` comme chemin d’accès au dossier ? En outre, si nous n’avons pas besoin d’un chemin d’accès au dossier, comment les fichiers portant des noms en double seront-ils générés dans un dossier ou un emplacement ?**
 
-+++
++++Réponse
 À compter de la version de septembre 2024, il est possible de personnaliser le nom du dossier et même d’utiliser `/` pour exporter des fichiers pour tous les jeux de données du même dossier. Adobe ne le recommande pas pour les destinations qui exportent plusieurs jeux de données, car les noms de fichier générés par le système et appartenant à différents jeux de données seront mélangés dans le même dossier.
 +++
 
 **Pouvez-vous acheminer le fichier manifeste vers un dossier et les fichiers de données vers un autre dossier ?**
 
-+++
++++Réponse
 Non, il n’est pas possible de copier le fichier manifeste vers un autre emplacement.
 +++
 
 **Peut-on contrôler le séquencement ou le timing de la livraison du fichier ?**
 
-+++
++++Réponse
 Il existe des options pour planifier l’exportation. Il n’existe aucune option pour retarder ou séquencer la copie des fichiers. Ils sont copiés dans votre emplacement de stockage dès qu’ils sont générés.
 +++
 
 **Quels formats sont disponibles pour le fichier manifeste ?**
 
-+++
++++Réponse
 Le fichier de manifeste est au format .json.
 +++
 
 **Existe-t-il une disponibilité de l’API pour le fichier manifeste ?**
 
-+++
++++Réponse
 Aucune API n’est disponible pour le fichier de manifeste, mais elle inclut une liste de fichiers comprenant l’exportation.
 +++
 
 **Pouvons-nous ajouter des détails supplémentaires au fichier de manifeste (c’est-à-dire, le nombre d’enregistrements) ? Si oui, comment ?**
 
-+++
++++Réponse
 Il n’est pas possible d’ajouter des informations supplémentaires au fichier de manifeste. Le nombre d’enregistrements est disponible via l’entité `flowRun` (interrogable via l’API). En savoir plus sur la surveillance des destinations.
 +++
 
 **Comment les fichiers de données sont-ils fractionnés ? Combien d&#39;enregistrements par fichier ?**
 
-+++
++++Réponse
 Les fichiers de données sont fractionnés par partitionnement par défaut dans le lac de données Experience Platform. Les jeux de données plus volumineux comportent un nombre plus élevé de partitions. Le partitionnement par défaut n’est pas configurable par l’utilisateur, car il est optimisé pour la lecture.
 +++
 
 **Pouvons-nous définir un seuil (nombre d&#39;enregistrements par fichier) ?**
 
-+++
++++Réponse
 Non, ce n&#39;est pas possible.
 +++
 
 **Comment renvoyer un jeu de données en cas de mauvais envoi initial ?**
 
-+++
++++Réponse
 Les reprises sont automatiquement en place pour la plupart des types d’erreurs système.
 +++
