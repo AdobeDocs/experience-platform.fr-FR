@@ -5,10 +5,10 @@ breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Découvrez une vue d’ensemble du système de modèle de données d’expérience (XDM) dans Experience Platform et apprenez à utiliser les classes et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
 role: Developer
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: d2baf74bb5fd87045f5d25b2996911c7bce36f36
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 81%
+source-wordcount: '719'
+ht-degree: 74%
 
 ---
 
@@ -29,6 +29,53 @@ ht-degree: 81%
       * [Soins de santé](./schema/industries/healthcare.md)
       * [Télécommunications](./schema/industries/telecom.md)
       * [Voyage et hébergement](./schema/industries/travel-hospitality.md)
+   * Modèle de données des soins de santé V2 {#health-care-data-model-v2}
+      * [Healthcare V2](./schema/industries/healthcare-v2.md)
+      * Classes {#health-care-classes}
+         * [Emplacement](./classes/location.md)
+      * Groupes de champs {#health-care-v2-field-groups}
+         * XDM Individual Profile {#health-care-v2-profile}
+            * [Compte de santé](./field-groups/profile/healthcare-account.md)
+            * [Plan de soins de santé](./field-groups/profile/healthcare-care-plan.md)
+            * [Objectif de santé](./field-groups/profile/healthcare-goal.md)
+            * [Organisation de santé](./field-groups/profile/healthcare-organization.md)
+            * [Patient soignant](./field-groups/profile/healthcare-patient.md)
+            * [Praticien des soins de santé](./field-groups/profile/healthcare-practioner.md)
+            * [Planification des soins de santé](./field-groups/profile/healthcare-schedule.md)
+         * Événement d’expérience XDM {#health-care-v2-event}
+            * [Vaccination contre les soins de santé](./field-groups/event/healthcare-immunization.md)
+         * Emplacement {#health-care-v2-location}
+            * [Emplacement des soins de santé](./field-groups/location/healthcare-location.md)
+         * Médicaments {#health-care-v2-medication}
+            * [Dépense de médicaments pour la santé](./field-groups/medication/healthcare-medication-dispense.md)
+            * [Demande de médicaments pour les soins de santé](./field-groups/medication/healthcare-medication-request.md)
+            * [Médicaments de santé](./field-groups/medication/healthcare-medication-v2.md)
+         * Plans {#health-care-v2-plans}
+            * [Couverture médicale](./field-groups/plan/healthcare-coverage.md)
+      * Types de données {#health-care-v2-data-types}
+         * [Adresse](./data-types/healthcare/address.md)
+         * [Annotation](./data-types/healthcare/annotation.md)
+         * [Disponibilité](./data-types/healthcare/availability.md)
+         * [Concept de code](./data-types/healthcare/codeable-concept.md)
+         * [Référence du code](./data-types/healthcare/codeable-reference.md)
+         * [Codage](./data-types/healthcare/coding.md)
+         * [Point de contact](./data-types/healthcare/contact-point.md)
+         * [Dosage](./data-types/healthcare/dosage.md)
+         * [Durée](./data-types/healthcare/duration.md)
+         * [Détails des contacts étendus](./data-types/healthcare/extended-contact-detail.md)
+         * [Nom humain](./data-types/healthcare/human-name.md)
+         * [Identifiant](./data-types/healthcare/identifier.md)
+         * [Money](./data-types/healthcare/money.md)
+         * [Période](./data-types/healthcare/period.md)
+         * [Personne](./data-types/healthcare/person.md)
+         * [Quantité](./data-types/healthcare/quantity.md)
+         * [Plage](./data-types/healthcare/range.md)
+         * [Rapport](./data-types/healthcare/ratio.md)
+         * [Référence](./data-types/healthcare/reference.md)
+         * [Répéter](./data-types/healthcare/repeat.md)
+         * [Quantité simple](./data-types/healthcare/simple-quantity.md)
+         * [Minutage](./data-types/healthcare/timing.md)
+         * [Service virtuel](./data-types/healthcare/virtual-service-detail.md)
    * [Dictionnaire des champs XDM](schema/field-dictionary.md)
 * Classes {#classes}
    * [XDM Individual Profile](./classes/individual-profile.md)
@@ -54,9 +101,9 @@ ht-degree: 81%
    * XDM Individual Profile {#profile}
       * [Consentements et préférences](./field-groups/profile/consents.md)
       * [Détails démographiques](./field-groups/profile/demographic-details.md)
+      * [Informations sur l’affilié à l’assurance-maladie](./field-groups/profile/healthcare-member-details.md)
       * [Consentement IAB TCF 2.0](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
-      * [Informations sur l’affilié à l’assurance-maladie](./field-groups/profile/healthcare-member-details.md)
       * [Détails de fidélité](./field-groups/profile/loyalty-details.md)
       * [Détails du contact personnel](./field-groups/profile/personal-contact-details.md)
       * [Enrichissement du partenaire de profil (exemple)](./field-groups/profile/profile-partner-enrichment.md)
