@@ -5,10 +5,10 @@ breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Découvrez une vue d’ensemble du système de modèle de données d’expérience (XDM) dans Experience Platform et apprenez à utiliser les classes et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
 role: Developer
-source-git-commit: d2baf74bb5fd87045f5d25b2996911c7bce36f36
+source-git-commit: 670b8ed3abd0e6e9ab35a15ae47a524a2528eb44
 workflow-type: tm+mt
-source-wordcount: '719'
-ht-degree: 74%
+source-wordcount: '705'
+ht-degree: 77%
 
 ---
 
@@ -29,30 +29,30 @@ ht-degree: 74%
       * [Soins de santé](./schema/industries/healthcare.md)
       * [Télécommunications](./schema/industries/telecom.md)
       * [Voyage et hébergement](./schema/industries/travel-hospitality.md)
-   * Modèle de données des soins de santé V2 {#health-care-data-model-v2}
-      * [Healthcare V2](./schema/industries/healthcare-v2.md)
-      * Classes {#health-care-classes}
+   * Modèle de données HealthCare V2 {#healthcare}
+      * [Healthcare V2](./schema/healthcare-v2.md)
+      * Classes {#classes}
          * [Emplacement](./classes/location.md)
-      * Groupes de champs {#health-care-v2-field-groups}
-         * XDM Individual Profile {#health-care-v2-profile}
-            * [Compte de santé](./field-groups/profile/healthcare-account.md)
-            * [Plan de soins de santé](./field-groups/profile/healthcare-care-plan.md)
-            * [Objectif de santé](./field-groups/profile/healthcare-goal.md)
-            * [Organisation de santé](./field-groups/profile/healthcare-organization.md)
-            * [Patient soignant](./field-groups/profile/healthcare-patient.md)
-            * [Praticien des soins de santé](./field-groups/profile/healthcare-practioner.md)
-            * [Planification des soins de santé](./field-groups/profile/healthcare-schedule.md)
-         * Événement d’expérience XDM {#health-care-v2-event}
-            * [Vaccination contre les soins de santé](./field-groups/event/healthcare-immunization.md)
-         * Emplacement {#health-care-v2-location}
-            * [Emplacement des soins de santé](./field-groups/location/healthcare-location.md)
-         * Médicaments {#health-care-v2-medication}
-            * [Dépense de médicaments pour la santé](./field-groups/medication/healthcare-medication-dispense.md)
-            * [Demande de médicaments pour les soins de santé](./field-groups/medication/healthcare-medication-request.md)
-            * [Médicaments de santé](./field-groups/medication/healthcare-medication-v2.md)
-         * Plans {#health-care-v2-plans}
-            * [Couverture médicale](./field-groups/plan/healthcare-coverage.md)
-      * Types de données {#health-care-v2-data-types}
+      * Groupes de champs {#field-groups}
+         * XDM Individual Profile {#profile}
+            * [Compte](./field-groups/profile/healthcare-account.md)
+            * [Plan de prise en charge](./field-groups/profile/healthcare-care-plan.md)
+            * [Objectif](./field-groups/profile/healthcare-goal.md)
+            * [Organisation](./field-groups/profile/healthcare-organization.md)
+            * [Patient](./field-groups/profile/healthcare-patient.md)
+            * [Professionnel ou professionnelle](./field-groups/profile/healthcare-practioner.md)
+            * [Planning](./field-groups/profile/healthcare-schedule.md)
+         * Événement d’expérience XDM {#event}
+            * [Vaccination](./field-groups/event/healthcare-immunization.md)
+         * Emplacement {#location}
+            * [Emplacement](./field-groups/location/healthcare-location.md)
+         * Médicaments {#medication}
+            * [Dépense de médicaments](./field-groups/medication/healthcare-medication-dispense.md)
+            * [Demande de médicament](./field-groups/medication/healthcare-medication-request.md)
+            * [Médicaments](./field-groups/medication/healthcare-medication-v2.md)
+         * Plan {#plan}
+            * [Couverture](./field-groups/plan/healthcare-coverage.md)
+      * Types de données {#data-types}
          * [Adresse](./data-types/healthcare/address.md)
          * [Annotation](./data-types/healthcare/annotation.md)
          * [Disponibilité](./data-types/healthcare/availability.md)
