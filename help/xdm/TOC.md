@@ -5,9 +5,9 @@ breadcrumb-title: Guide de modèle de données d’expérience (XDM)
 user-guide-description: Découvrez une vue d’ensemble du système de modèle de données d’expérience (XDM) dans Experience Platform et apprenez à utiliser les classes et les groupes de champs de schéma pour normaliser les données d’expérience.
 feature: Schemas
 role: Developer
-source-git-commit: 670b8ed3abd0e6e9ab35a15ae47a524a2528eb44
+source-git-commit: 3071d16b6b98040ea3f2e3a34efffae517253b8e
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '696'
 ht-degree: 77%
 
 ---
@@ -30,52 +30,47 @@ ht-degree: 77%
       * [Télécommunications](./schema/industries/telecom.md)
       * [Voyage et hébergement](./schema/industries/travel-hospitality.md)
    * Modèle de données HealthCare V2 {#healthcare}
-      * [Healthcare V2](./schema/healthcare-v2.md)
+      * [Healthcare V2](./schema/healthcare/healthcare-v2.md)
       * Classes {#classes}
-         * [Emplacement](./classes/location.md)
+         * [Emplacement](./schema/healthcare/classes/location.md)
       * Groupes de champs {#field-groups}
-         * XDM Individual Profile {#profile}
-            * [Compte](./field-groups/profile/healthcare-account.md)
-            * [Plan de prise en charge](./field-groups/profile/healthcare-care-plan.md)
-            * [Objectif](./field-groups/profile/healthcare-goal.md)
-            * [Organisation](./field-groups/profile/healthcare-organization.md)
-            * [Patient](./field-groups/profile/healthcare-patient.md)
-            * [Professionnel ou professionnelle](./field-groups/profile/healthcare-practioner.md)
-            * [Planning](./field-groups/profile/healthcare-schedule.md)
-         * Événement d’expérience XDM {#event}
-            * [Vaccination](./field-groups/event/healthcare-immunization.md)
-         * Emplacement {#location}
-            * [Emplacement](./field-groups/location/healthcare-location.md)
-         * Médicaments {#medication}
-            * [Dépense de médicaments](./field-groups/medication/healthcare-medication-dispense.md)
-            * [Demande de médicament](./field-groups/medication/healthcare-medication-request.md)
-            * [Médicaments](./field-groups/medication/healthcare-medication-v2.md)
-         * Plan {#plan}
-            * [Couverture](./field-groups/plan/healthcare-coverage.md)
+         * [Compte](./schema/healthcare/field-groups/account.md)
+         * [Plan de prise en charge](./schema/healthcare/field-groups/care-plan.md)
+         * [Couverture](./schema/healthcare/field-groups/coverage.md)
+         * [Objectif](./schema/healthcare/field-groups/goal.md)
+         * [Vaccination](./schema/healthcare/field-groups/immunization.md)
+         * [Emplacement](./schema/healthcare/field-groups/location.md)
+         * [Médicaments](./schema/healthcare/field-groups/medication.md)
+         * [Dépense de médicaments](./schema/healthcare/field-groups/medication-dispense.md)
+         * [Demande de médicament](./schema/healthcare/field-groups/medication-request.md)
+         * [Organisation](./schema/healthcare/field-groups/organization.md)
+         * [Patient](./schema/healthcare/field-groups/patient.md)
+         * [Professionnel ou professionnelle](./schema/healthcare/field-groups/practioner.md)
+         * [Planning](./schema/healthcare/field-groups/schedule.md)
       * Types de données {#data-types}
-         * [Adresse](./data-types/healthcare/address.md)
-         * [Annotation](./data-types/healthcare/annotation.md)
-         * [Disponibilité](./data-types/healthcare/availability.md)
-         * [Concept de code](./data-types/healthcare/codeable-concept.md)
-         * [Référence du code](./data-types/healthcare/codeable-reference.md)
-         * [Codage](./data-types/healthcare/coding.md)
-         * [Point de contact](./data-types/healthcare/contact-point.md)
-         * [Dosage](./data-types/healthcare/dosage.md)
-         * [Durée](./data-types/healthcare/duration.md)
-         * [Détails des contacts étendus](./data-types/healthcare/extended-contact-detail.md)
-         * [Nom humain](./data-types/healthcare/human-name.md)
-         * [Identifiant](./data-types/healthcare/identifier.md)
-         * [Money](./data-types/healthcare/money.md)
-         * [Période](./data-types/healthcare/period.md)
-         * [Personne](./data-types/healthcare/person.md)
-         * [Quantité](./data-types/healthcare/quantity.md)
-         * [Plage](./data-types/healthcare/range.md)
-         * [Rapport](./data-types/healthcare/ratio.md)
-         * [Référence](./data-types/healthcare/reference.md)
-         * [Répéter](./data-types/healthcare/repeat.md)
-         * [Quantité simple](./data-types/healthcare/simple-quantity.md)
-         * [Minutage](./data-types/healthcare/timing.md)
-         * [Service virtuel](./data-types/healthcare/virtual-service-detail.md)
+         * [Adresse](./schema/healthcare/data-types/address.md)
+         * [Annotation](./schema/healthcare/data-types/annotation.md)
+         * [Disponibilité](./schema/healthcare/data-types/availability.md)
+         * [Concept de code](./schema/healthcare/data-types/codeable-concept.md)
+         * [Référence du code](./schema/healthcare/data-types/codeable-reference.md)
+         * [Codage](./schema/healthcare/data-types/coding.md)
+         * [Point de contact](./schema/healthcare/data-types/contact-point.md)
+         * [Dosage](./schema/healthcare/data-types/dosage.md)
+         * [Durée](./schema/healthcare/data-types/duration.md)
+         * [Détails des contacts étendus](./schema/healthcare/data-types/extended-contact-detail.md)
+         * [Nom humain](./schema/healthcare/data-types/human-name.md)
+         * [Identifiant](./schema/healthcare/data-types/identifier.md)
+         * [Money](./schema/healthcare/data-types/money.md)
+         * [Période](./schema/healthcare/data-types/period.md)
+         * [Personne](./schema/healthcare/data-types/person.md)
+         * [Quantité](./schema/healthcare/data-types/quantity.md)
+         * [Plage](./schema/healthcare/data-types/range.md)
+         * [Rapport](./schema/healthcare/data-types/ratio.md)
+         * [Référence](./schema/healthcare/data-types/reference.md)
+         * [Répéter](./schema/healthcare/data-types/repeat.md)
+         * [Quantité simple](./schema/healthcare/data-types/simple-quantity.md)
+         * [Minutage](./schema/healthcare/data-types/timing.md)
+         * [Service virtuel](./schema/healthcare/data-types/virtual-service-detail.md)
    * [Dictionnaire des champs XDM](schema/field-dictionary.md)
 * Classes {#classes}
    * [XDM Individual Profile](./classes/individual-profile.md)
