@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Création et modification de classes dans l’interface utilisateur
 description: Découvrez comment créer et modifier des classes dans l’interface utilisateur de l’Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
 workflow-type: tm+mt
-source-wordcount: '1560'
-ht-degree: 8%
+source-wordcount: '1689'
+ht-degree: 7%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 8%
 
 Dans Adobe Experience Platform, une classe de schéma définit les aspects comportementaux des données que le schéma contiendra (enregistrement ou série temporelle). En outre, les classes décrivent le plus petit de nombres de propriétés communes que tous les schémas basés sur cette classe doivent inclure et fournir une manière de fusionner plusieurs jeux de données compatibles.
 
-Adobe fournit plusieurs classes standard (&quot;core&quot;) Experience Data Model (XDM), y compris XDM Individual Profile et XDM ExperienceEvent. Outre ces classes de base, vous pouvez également créer vos propres classes personnalisées afin de décrire des cas d’utilisation plus spécifiques à votre organisation.
+Adobe fournit plusieurs classes standard (&quot;core&quot;) Experience Data Model (XDM), dont [XDM Individual Profile](../../classes/individual-profile.md) et [XDM ExperienceEvent](../../classes/experienceevent.md). Outre ces classes de base, vous pouvez également créer vos propres classes personnalisées afin de décrire des cas d’utilisation plus spécifiques à votre organisation.
 
 Ce document présente la création, la modification et la gestion des classes personnalisées dans l’interface utilisateur de l’Experience Platform.
 
@@ -34,6 +34,8 @@ Bien que ce guide ne soit pas obligatoire, il est recommandé de suivre égaleme
 
 Dans l’interface utilisateur de Platform, sélectionnez **[!UICONTROL Schémas]** dans le volet de navigation de gauche pour ouvrir l’espace de travail [!UICONTROL Schémas], puis sélectionnez l’onglet **[!UICONTROL Classes]**. Une liste des classes disponibles s’affiche.
 
+![Nombre de classes dans l’onglet [!UICONTROL Classes] de l’espace de travail [!UICONTROL Schémas] [!UICONTROL Classes] et [!UICONTROL Schémas] mis en surbrillance.](../../images/ui/resources/classes/available-classes.png)
+
 ## Classes de filtre {#filter}
 
 La liste des classes est automatiquement filtrée en fonction de leur mode de création. Le paramètre par défaut affiche les classes définies par Adobe. Vous pouvez également filtrer la liste pour afficher celles créées par votre organisation. Sélectionnez le bouton radio pour choisir entre les options [!UICONTROL Standard] et [!UICONTROL Personnalisé] . L’option [!UICONTROL Standard] affiche les entités créées par Adobe et l’option [!UICONTROL Personnalisée] affiche les entités créées dans votre organisation.
@@ -46,11 +48,15 @@ La liste des classes est automatiquement filtrée en fonction de leur mode de cr
 
 ## Création d’une nouvelle classe {#create}
 
-Il existe deux méthodes pour créer une classe dans l’interface utilisateur de Platform. Dans n’importe quel onglet de l’espace de travail [!UICONTROL Schémas], sélectionnez **[!UICONTROL Créer un schéma]** ou sélectionnez [!UICONTROL Classes] dans l’onglet **[!UICONTROL Créer une classe]**.
+Il existe deux méthodes pour créer une classe dans l’interface utilisateur de Platform : **[!UICONTROL Créer une classe]** ou **[!UICONTROL Créer un schéma]**.
 
-![L’onglet [!UICONTROL Classes] de l’espace de travail [!UICONTROL Schémas] avec [!UICONTROL Créer un schéma] et [!UICONTROL Créer une classe] surlignée](../../images/ui/resources/classes/create-class-methods.png)
+### Créer une classe
 
-Si vous sélectionnez **[!UICONTROL Créer une classe]**, la boîte de dialogue [!UICONTROL Créer une classe] s’affiche. Saisissez un [!UICONTROL nom d’affichage] et une [!UICONTROL description] pour votre classe et choisissez le comportement prévu de votre classe avec les boutons radio. Les classes peuvent être du type, d’une série d’enregistrements ou d’une série temporelle. Sélectionnez **[!UICONTROL Créer]** pour confirmer vos choix et revenir à l’onglet [!UICONTROL Classes].
+Sélectionnez **[!UICONTROL Créer une classe]** dans l’onglet [!UICONTROL Classes] de l’espace de travail [!UICONTROL Schémas].
+
+![L’onglet [!UICONTROL Classes] de l’espace de travail [!UICONTROL Schémas] avec [!UICONTROL Créer une classe] mise en surbrillance](../../images/ui/resources/classes/create-class.png)
+
+La boîte de dialogue [!UICONTROL Créer une classe] s’affiche. Saisissez un [!UICONTROL nom d’affichage] et une [!UICONTROL description] pour votre classe et choisissez le comportement prévu de votre classe avec les boutons radio. Les classes peuvent être du type [!UICONTROL Record] ou [!UICONTROL Time-series]. Sélectionnez **[!UICONTROL Créer]** pour confirmer vos choix et revenir à l’onglet [!UICONTROL Classes].
 
 ![La boîte de dialogue [!UICONTROL Créer une classe] avec [!UICONTROL Créer] surlignée.](../../images/ui/resources/classes/create-class-dialog.png)
 
@@ -58,9 +64,13 @@ La classe que vous avez créée est disponible et répertoriée dans la vue [!UI
 
 ![Onglet [!UICONTROL Classes] de l&#39;espace de travail [!UICONTROL Schémas] avec la classe récemment créée mise en surbrillance.](../../images/ui/resources/classes/new-class-listing.png)
 
-### Création ou modification d’une classe {#create-or-edit}
+### Créer un schéma
 
-Si vous choisissez de créer manuellement un schéma, vous pouvez également créer ou modifier une classe existante dans le cadre de ce workflow. Sélectionnez **[!UICONTROL Créer un schéma]** suivi de **[!UICONTROL Manuel]** dans la boîte de dialogue [!UICONTROL Créer un schéma] qui s’affiche.
+Vous pouvez également créer une classe en créant manuellement un schéma. Sélectionnez **[!UICONTROL Créer un schéma]** dans l’onglet [!UICONTROL Classes] de l’espace de travail [!UICONTROL Schémas].
+
+![L’onglet [!UICONTROL Classes] de l’espace de travail [!UICONTROL Schémas] avec [!UICONTROL Créer un schéma] surligné](../../images/ui/resources/classes/create-schema.png)
+
+Sélectionnez **[!UICONTROL Manuel]** dans la boîte de dialogue [!UICONTROL Créer un schéma] qui s’affiche.
 
 >[!NOTE]
 >
@@ -68,41 +78,27 @@ Si vous choisissez de créer manuellement un schéma, vous pouvez également cr�
 
 ![La boîte de dialogue Créer un schéma avec les options du workflow et sélectionnez mise en surbrillance.](../../images/ui/resources/classes/manually-create-a-schema.png)
 
-Le workflow de création de schéma s’affiche. Dans la section [!UICONTROL Schéma details], sélectionnez **[!UICONTROL Autre]**. Une liste des classes disponibles s’affiche. À partir de là, vous pouvez parcourir et filtrer les classes préexistantes sur lesquelles baser votre nouvelle classe.
-
->[!NOTE]
->
->Seules les classes personnalisées définies par votre organisation peuvent être entièrement modifiées et personnalisées. Pour les classes de base définies par Adobe, seuls les noms d’affichage de leurs champs peuvent être modifiés dans le contexte de schémas individuels. Pour plus d’informations, reportez-vous à la section sur la [modification des noms d’affichage des champs de schéma](./schemas.md#display-names) .
->
->Une fois qu’une classe personnalisée a été enregistrée et utilisée dans l’ingestion de données, seules des modifications supplémentaires peuvent lui être apportées par la suite. Pour plus d’informations, voir les [règles de l’évolution du schéma](../../schema/composition.md#evolution) .
+Le workflow de création de schéma s’affiche. Dans la section [!UICONTROL Schéma details], sélectionnez **[!UICONTROL Autre]**. Une liste des classes disponibles s’affiche. Sélectionnez **[!UICONTROL Créer une classe]**.
 
 ![Le workflow [!UICONTROL Créer un schéma] avec [!UICONTROL Autre] surligné dans la section [!UICONTROL Détails du schéma].](../../images/ui/resources/classes/other-schema-details.png)
 
-Sélectionnez un bouton radio pour filtrer les classes selon qu’elles sont personnalisées ou standard. Vous pouvez également filtrer les résultats disponibles en fonction de leur secteur d’activité ou rechercher une classe spécifique à l’aide du champ de recherche.
+La boîte de dialogue [!UICONTROL Créer une classe] s’affiche. Saisissez un [!UICONTROL nom d’affichage] et une [!UICONTROL description] pour votre classe et choisissez le comportement prévu de votre classe avec les boutons radio. Les classes peuvent être du type [!UICONTROL Record] ou [!UICONTROL Time-series]. Sélectionnez **[!UICONTROL Créer]** pour confirmer vos choix et revenir à l’onglet [!UICONTROL Classes].
 
-![Le workflow [!UICONTROL Créer un schéma] avec la barre de recherche, [!UICONTROL Personnalisé] et [!UICONTROL Industries] surlignée.](../../images/ui/resources/classes/filter-and-search.png)
+![La boîte de dialogue [!UICONTROL Créer une classe] avec [!UICONTROL Créer] surlignée.](../../images/ui/resources/classes/create-class-from-schema.png)
 
-Pour vous aider à décider de la classe appropriée, il y a des informations (![Une icône d’information.](/help/images/icons/info.png)) et aperçu (![Icône Aperçu.](/help/images/icons/preview.png)) pour chaque classe. L’icône d’information ouvre une boîte de dialogue qui fournit une description de la classe et du secteur auquel elle est associée. L’icône d’aperçu ouvre une boîte de dialogue d’aperçu pour la classe contenant un schéma et ses propriétés.
+La liste des classes s’actualise dans la section [!UICONTROL Détails du schéma] et la classe que vous venez de créer est automatiquement sélectionnée. Sélectionnez **[!UICONTROL Suivant]** pour continuer la création de votre schéma.
 
-![Aperçu de la classe sélectionnée avec le schéma de schéma et les propriétés de classe mises en surbrillance.](../../images/ui/resources/classes/class-preview.png)
+![La section [!UICONTROL Détails du schéma] avec la nouvelle classe sélectionnée et [!UICONTROL Suivant] mise en surbrillance.](../../images/ui/resources/classes/select-new-class.png)
 
-Sélectionnez une ligne pour choisir une classe, puis cliquez sur **[!UICONTROL Suivant]** pour confirmer votre choix.
+Une fois que vous avez sélectionné une classe, la section [!UICONTROL Nom et révision] s’affiche. Dans cette section, vous fournissez un nom et une description pour identifier votre schéma. &#x200B;La structure de base du schéma (fournie par la classe) s’affiche dans la zone de travail afin que vous puissiez examiner et vérifier la classe et la structure de schéma sélectionnés.
 
-![Le workflow [!UICONTROL Créer un schéma] avec une classe sélectionnée dans la table des classes disponibles et [!UICONTROL Suivant] surligné.](../../images/ui/resources/classes/select-class.png)
+Saisissez un [!UICONTROL nom d’affichage de schéma] convivial dans le champ de texte. Saisissez ensuite une description appropriée pour vous aider à identifier votre schéma. Une fois la structure de votre schéma revue et vos paramètres satisfaits, sélectionnez **[!UICONTROL Terminer]** pour créer votre schéma.
 
-La section [!UICONTROL Nom et révision] du workflow s’affiche. Dans cette section, indiquez un nom et une description pour identifier votre schéma. &#x200B;La structure de base du schéma (fournie par la classe) s’affiche dans la zone de travail afin que vous puissiez examiner et vérifier la classe et la structure de schéma sélectionnés.
-
-Saisissez un nom court, descriptif, unique et convivial pour la classe dans le champ de texte [!UICONTROL Nom d’affichage du schéma] . Saisissez ensuite une description appropriée pour identifier le comportement des données que le schéma définit. Une fois la structure de votre schéma revue et vos paramètres satisfaits, sélectionnez **[!UICONTROL Terminer]** pour créer votre schéma.
-
-![La section [!UICONTROL Nom et révision] du workflow [!UICONTROL Créer un schéma] avec le [!UICONTROL nom d’affichage du schéma], la [!UICONTROL Description] et la [!UICONTROL Terminer] mise en surbrillance.](../../images/ui/resources/classes/name-and-review-class.png)
-
-L’éditeur de schémas s’affiche, avec la structure du schéma affichée dans la zone de travail. Vous pouvez maintenant commencer [à ajouter des champs à la classe](#add-fields).
-
-![Éditeur de schéma avec la structure du schéma affichée dans la zone de travail.](../../images/ui/resources/classes/edit.png)
+![La section [!UICONTROL Nom et révision] du workflow [!UICONTROL Créer un schéma] avec le [!UICONTROL nom d’affichage du schéma], la [!UICONTROL Description] et la [!UICONTROL Terminer] mise en surbrillance.](../../images/ui/resources/classes/schema-details.png)
 
 ## Ajout de champs à une classe {#add-fields}
 
-Une fois que vous disposez d’un schéma qui utilise une classe personnalisée ouverte dans l’ [!UICONTROL éditeur de schémas], vous pouvez commencer à ajouter des champs à la classe . Pour ajouter un nouveau champ, sélectionnez l’icône **plus (+)** en regard du nom du schéma.
+Une fois que vous disposez d’un schéma qui utilise une classe personnalisée ouverte dans l’éditeur de schémas, vous pouvez commencer à ajouter des champs à la classe . Pour ajouter un nouveau champ, sélectionnez l’icône **plus (+)** en regard du nom du schéma.
 
 >[!IMPORTANT]
 >
@@ -116,13 +112,42 @@ Une fois que vous disposez d’un schéma qui utilise une classe personnalisée 
 
 Un espace réservé **[!UICONTROL Champ sans titre]** s’affiche dans la zone de travail et le rail de droite se met à jour pour afficher les commandes permettant de configurer les propriétés du champ. Sous **[!UICONTROL Attribuer à]**, sélectionnez **[!UICONTROL Classe]**.
 
-![Champ sans titre dans la zone de travail de l’éditeur de schéma avec la propriété de champ Attribuer à la classe sélectionnée et mise en surbrillance.](../../images/ui/resources/classes/assign-to-class.png)
+![Champ sans titre dans la zone de travail de l’éditeur de schémas avec la propriété de champ Attribuer à la [!UICONTROL classe] sélectionnée et mise en surbrillance.](../../images/ui/resources/classes/assign-to-class.png)
 
 Pour obtenir des instructions spécifiques sur la configuration et l’ajout du champ à la classe, consultez le guide sur la [définition des champs dans l’interface utilisateur](../fields/overview.md#define) . Continuez à ajouter autant de champs que nécessaire à la classe . Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer le schéma et la classe.
 
 ![Le nouveau schéma créé sur la zone de travail de l’éditeur de schémas, avec [!UICONTROL Enregistrer] en surbrillance.](../../images/ui/resources/classes/save.png)
 
 Si vous avez déjà créé des schémas qui utilisent cette classe, les champs nouvellement ajoutés s’affichent automatiquement dans ces schémas.
+
+## Modifier une classe (#edit-a-class)
+
+>[!NOTE]
+>
+>Seules les classes personnalisées définies par votre organisation peuvent être entièrement modifiées et personnalisées. Pour les classes de base définies par Adobe, seuls les noms d’affichage de leurs champs peuvent être modifiés dans le contexte de schémas individuels. Pour plus d’informations, reportez-vous à la section sur la [modification des noms d’affichage des champs de schéma](./schemas.md#display-names) .
+>
+>Une fois qu’une classe personnalisée a été enregistrée et utilisée dans l’ingestion de données, seules des modifications supplémentaires peuvent lui être apportées par la suite. Pour plus d’informations, voir les [règles de l’évolution du schéma](../../schema/composition.md#evolution) .
+
+Vous pouvez modifier une classe par le biais du workflow de schéma en éditant un schéma existant qui étend la classe ou en créant manuellement un schéma. Il n’est pas possible de modifier directement une classe. Dans l’onglet [!UICONTROL Parcourir] de l’espace de travail [!UICONTROL Schémas], sélectionnez une classe existante ou **[!UICONTROL Créer un schéma]**.
+
+![ L’éditeur de schémas avec une classe existante et l’élément [!UICONTROL Créer un schéma] mis en surbrillance.](../../images/ui/resources/classes/edit-class-options.png)
+
+Si vous choisissez de créer un nouveau schéma, reportez-vous à la section sur la [création d’un schéma](#create-schema) pour plus de détails. Une fois que vous avez créé le schéma (ou après avoir sélectionné un schéma existant), l’éditeur de schémas s’affiche. Pour mettre à jour un champ de classe existant, sélectionnez le champ dans la structure du schéma. Les informations du champ s’affichent dans le rail de droite. Assurez-vous que la fonction [!UICONTROL Attribuer à]
+L’option **[!UICONTROL Classe]** est sélectionnée ou vos mises à jour n’affectent pas la classe.
+
+![ L’éditeur de schémas avec un champ sélectionné et mis en surbrillance, ainsi que le rail de droite affiché, surlignant [!UICONTROL Attribuer à].](../../images/ui/resources/classes/edit-existing-field.png)
+
+Apportez les modifications souhaitées au champ, en faisant défiler la page vers le bas dans le rail de droite pour sélectionner **[!UICONTROL Appliquer]** pour enregistrer vos modifications.
+
+>[!IMPORTANT]
+>
+> Toutes les mises à jour apportées aux champs seront appliquées à tous les schémas qui utilisent cette classe, en suivant les [règles de l’évolution des schémas](../../schema/composition.md#evolution).
+
+![Éditeur de schéma avec un champ sélectionné et le rail droit exposé, surlignant [!UICONTROL Appliquer].](../../images/ui/resources/classes/save-changes.png)
+
+Pour ajouter de nouveaux champs, suivez le guide [add fields to a class](#add-fields-to-a-class) (Ajouter des champs à une classe). Lorsque vous avez terminé, sélectionnez **[!UICONTROL Enregistrer]** pour enregistrer le schéma et la classe.
+
+![ L’éditeur de schémas avec [!UICONTROL Enregistrer] surligné.](../../images/ui/resources/classes/save-schema.png)
 
 ## Modification de la classe d’un schéma {#schema}
 

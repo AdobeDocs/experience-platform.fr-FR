@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Création et modification de schémas dans l’interface utilisateur
 description: Découvrez les principes de base de la création et de l’édition de schémas dans l’interface utilisateur de l’Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: f530e4ff755ac89141ee67bef80700b46acf0868
+source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
 workflow-type: tm+mt
-source-wordcount: '3859'
+source-wordcount: '4056'
 ht-degree: 3%
 
 ---
@@ -37,7 +37,7 @@ Dans l’espace de travail [!UICONTROL Schémas], sélectionnez **[!UICONTROL Cr
 
 La boîte de dialogue [!UICONTROL Créer un schéma] s’affiche. Dans cette boîte de dialogue, vous pouvez soit créer manuellement un schéma en ajoutant des champs et des groupes de champs, soit télécharger un fichier CSV et utiliser des algorithmes ML pour générer un schéma. Sélectionnez un workflow de création de schéma dans la boîte de dialogue.
 
-![La boîte de dialogue Créer un schéma avec les options du workflow et sélectionnez mise en surbrillance.](../../images/tutorials/create-schema/create-a-schema-dialog.png)
+![La boîte de dialogue Créer un schéma avec les options du workflow et sélectionnez mise en surbrillance.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
 ### [!BADGE Beta]{type=Informative} Création manuelle ou de schéma avec assistance ML {#manual-or-assisted}
 
@@ -49,15 +49,35 @@ Le workflow [!UICONTROL Créer un schéma] s’affiche. Vous pouvez choisir une 
 
 ![Le workflow [!UICONTROL Créer un schéma] avec les trois options de classe et [!UICONTROL Suivant] mis en surbrillance.](../../images/ui/resources/schemas/schema-class-options.png)
 
+Lors du choix de **[!UICONTROL Other]**, une liste des classes disponibles s’affiche. Vous pouvez y parcourir et filtrer les classes préexistantes.
+
+![Le workflow [!UICONTROL Créer un schéma] avec [!UICONTROL Autre] surligné dans la section [!UICONTROL Détails du schéma].](../../images/ui/resources/schemas/other-schema-details.png)
+
+Sélectionnez un bouton radio pour filtrer les classes selon qu’elles sont personnalisées ou standard. Vous pouvez également filtrer les résultats disponibles en fonction de leur secteur d’activité ou rechercher une classe spécifique à l’aide du champ de recherche.
+
+![Le workflow [!UICONTROL Créer un schéma] avec la barre de recherche, [!UICONTROL Personnalisé] et [!UICONTROL Industries] surlignée.](../../images/ui/resources/schemas/filter-and-search.png)
+
+Pour vous aider à choisir la classe appropriée, il existe des informations et des icônes d’aperçu pour chaque classe. Icône d’information (![Icône d’information.](/help/images/icons/info.png)) ouvre une boîte de dialogue qui fournit une description de la classe et de l’industrie à laquelle elle est associée.
+
+![Icône d’information et info-bulle de la classe sélectionnée mise en surbrillance.](../../images/ui/resources/schemas/class-info.png)
+
+Icône Aperçu (![Icône Aperçu.](/help/images/icons/preview.png)) ouvre une boîte de dialogue d’aperçu pour la classe contenant un schéma et ses propriétés.
+
+![Aperçu de la classe sélectionnée avec le schéma de schéma et les propriétés de classe.](../../images/ui/resources/schemas/class-preview.png)
+
+Sélectionnez une ligne pour choisir une classe, puis cliquez sur **[!UICONTROL Suivant]** pour confirmer votre choix.
+
+![Le workflow [!UICONTROL Créer un schéma] avec une classe sélectionnée dans la table des classes disponibles et [!UICONTROL Suivant] surligné.](../../images/ui/resources/schemas/select-class.png)
+
 Une fois que vous avez sélectionné une classe, la section [!UICONTROL Nom et révision] s’affiche. Dans cette section, vous fournissez un nom et une description pour identifier votre schéma. &#x200B;La structure de base du schéma (fournie par la classe) s’affiche dans la zone de travail afin que vous puissiez examiner et vérifier la classe et la structure de schéma sélectionnés.
 
 Saisissez un [!UICONTROL nom d’affichage de schéma] convivial dans le champ de texte. Saisissez ensuite une description appropriée pour vous aider à identifier votre schéma. Une fois la structure de votre schéma revue et vos paramètres satisfaits, sélectionnez **[!UICONTROL Terminer]** pour créer votre schéma.
 
 ![La section [!UICONTROL Nom et révision] du workflow [!UICONTROL Créer un schéma] avec le [!UICONTROL nom d’affichage du schéma], la [!UICONTROL Description] et la [!UICONTROL Terminer] mise en surbrillance.](../../images/ui/resources/schemas/name-and-review.png)
 
-L&#39;onglet [!UICONTROL Schéma] [!UICONTROL Parcourir] s&#39;affiche. Le schéma que vous venez de créer est maintenant répertorié dans la bibliothèque de schémas et peut être modifié dans le [!DNL Schema Editor].
+L’éditeur de schémas s’affiche, avec la structure du schéma affichée dans la zone de travail. Si vous le souhaitez, vous pouvez maintenant commencer [à ajouter des champs à la classe](../../ui/resources/classes.md#add-fields).
 
-![ L&#39;onglet Parcourir de l&#39;espace de travail des schémas affichant votre schéma que vous venez de créer.](../../images/ui/resources/schemas/example-schema.png)
+![Éditeur de schéma avec la structure du schéma affichée dans la zone de travail.](../../images/ui/resources/schemas/edit.png)
 
 ## Modifier un schéma existant {#edit}
 
