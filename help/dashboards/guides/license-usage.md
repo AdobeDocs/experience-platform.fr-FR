@@ -4,9 +4,9 @@ title: Tableau de bord d’utilisation de la licence
 description: Adobe Experience Platform fournit un tableau de bord grâce auquel vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 37192addffea094cb2d2f3b0201bb128c912e762
+source-git-commit: 5d40af5c0645e9e4ee44f0c0c2133f3b3153bcb1
 workflow-type: tm+mt
-source-wordcount: '2867'
+source-wordcount: '2908'
 ht-degree: 18%
 
 ---
@@ -41,6 +41,11 @@ ht-degree: 18%
 >abstract="Le tableau de bord d’utilisation des licences donne des informations sur les produits Adobe Experience Platform que vous avez achetés. La vue d’ensemble du tableau de bord affiche les mesures principales pour vos produits, notamment votre utilisation pour chacune d’entre elles et la quantité de licences contractées. L’espace de travail des détails affiche une répartition de vos mesures pour chaque produit dans des sandbox spécifiques."
 >additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Expirations automatisées des jeux de données"
 >additional-url="https://experienceleague.adobe.com/fr/docs/experience-platform/profile/pseudonymous-profiles" text="Expiration des données de profils pseudonymes"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_computehours"
+>title="Heures de calcul prédites"
+>abstract="Votre utilisation peut atteindre le montant de la licence. Pour évaluer ou réduire vos heures de calcul, accédez à Requêtes > Journal pour consulter l’historique des requêtes. Si vous ne disposez pas des autorisations nécessaires pour accéder à l’espace de travail Requêtes, contactez votre administrateur."
 
 Vous pouvez afficher des informations importantes sur l’utilisation des licences de votre entreprise via le tableau de bord [!UICONTROL Utilisation de la licence] de Adobe Experience Platform. Les informations affichées ici sont capturées pendant un instantané quotidien de votre instance Platform.
 
@@ -243,7 +248,7 @@ La disponibilité de ces mesures et la définition spécifique de chacune d’el
 | <ul><li>RT CUSTOMOMENT DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL À 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL À 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/fr/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>ACTIVATION AEP:OD</li><li>AEP:OD ACTIVATION PRFL À 10M</li><li>AEP:PRFL D’ACTIVATION OD JUSQU’À 50 M</li></ul> | [Adobe Experience Platform Activation](https://helpx.adobe.com/fr/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:INTELLIGENCE OD</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
-| <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME : OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP REAL-TIME CDP : ORCHESTRATION DU PROFIL OD</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/fr/legal/product-descriptions/adobe-journey-optimizer.html) |
+| <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME : OD</li><li>JOURNEY OPTIMIZER ULTIMATE : OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP REAL-TIME CDP : ORCHESTRATION DU PROFIL OD</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/fr/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]
 >
