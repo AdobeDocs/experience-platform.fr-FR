@@ -3,10 +3,10 @@ title: Notes de mise à jour du SDK web d’Adobe Experience Platform
 description: Notes de mise à jour les plus récentes pour le SDK web d’Adobe Experience Platform.
 keywords: SDK web Adobe Experience Platform;SDK web Platform;SDK web;notes de mise à jour;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
+source-git-commit: 3a50468a7596b9ba870920a8188ae50b40aaef69
 workflow-type: tm+mt
-source-wordcount: '2042'
-ht-degree: 80%
+source-wordcount: '2085'
+ht-degree: 78%
 
 ---
 
@@ -15,6 +15,12 @@ ht-degree: 80%
 
 Ce document présente les notes de mise à jour du SDK web d’Adobe Experience Platform.
 Pour obtenir les dernières notes de mise à jour sur l’extension de balise du SDK web, reportez-vous à la section [Notes de mise à jour de l’extension de balise du SDK web](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Version 2.24.1 - samedi 6 décembre 2024
+
+**Correction et améliorations**
+
+- Correction d’un problème de dépendance lié au [moteur de règles Adobe Experience Platform](https://github.com/adobe/aepsdk-rulesengine-typescript/), qui provoquait des erreurs dans certaines intégrations de clients. Le Web SDK requiert désormais la version 2.0.3 ou ultérieure du [moteur de règles Adobe Experience Platform](https://github.com/adobe/aepsdk-rulesengine-typescript/).
 
 ## Version 2.24.0 - vendredi 31 octobre 2024
 
@@ -90,7 +96,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 - Correction d’un problème en raison duquel les erreurs d’identité masquaient d’autres erreurs et transformaient les erreurs d’identité en avertissements.
 - Correction d’un problème en raison duquel le bas des appels de page n’était jamais envoyé lorsqu’un appel de haut de page avec `renderDecisions` défini sur `false` était présent.
-- Correction d’un problème en raison duquel le SDK Web ne pouvait pas lire les identités inter-domaines en présence de plusieurs paramètres de chaîne de requête `adobe_mc`.
+- Correction d’un problème en raison duquel Web SDK ne pouvait pas lire les identités inter-domaines lorsqu’il y avait plusieurs paramètres de chaîne de requête `adobe_mc`.
 
 ## Version 2.19.1 - 10 novembre 2023
 
@@ -257,7 +263,7 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 ## Version 2.4.0 - Mars 2021
 
-- Le SDK peut désormais être installé en tant que [package NPM](/help/web-sdk/install/npm.md).
+- SDK peut désormais être installé en tant que [package NPM](/help/web-sdk/install/npm.md).
 - Ajout de la prise en charge d’une option `out` lors de la [configuration du consentement par défaut](/help/web-sdk/commands/configure/defaultconsent.md), qui ignore tous les événements jusqu’à ce que le consentement soit reçu (l’option `pending` existante met les événements en file d’attente et les envoie une fois le consentement reçu).
 - Le rappel [`onBeforeEventSend`](/help/web-sdk/commands/configure/onbeforeeventsend.md) peut désormais être utilisé pour empêcher l’envoi d’un événement.
 - Utilise désormais un groupe de champs de schéma XDM au lieu de `meta.personalization` lors de l’envoi d’événements au sujet du contenu personnalisé rendu ou sur lequel l’utilisateur ou l’utilisatrice a cliqué.
@@ -281,8 +287,8 @@ Pour obtenir les dernières notes de mise à jour sur l’extension de balise du
 
 ## Version 2.2.0 - Octobre 2020
 
-- Bug Fix : l’objet Opt-in empêchait le SDK Web d’effectuer des appels lorsque `idMigrationEnabled` est `true`.
-- Bug Fix : faites prendre conscience au SDK Web des requêtes qui doivent renvoyer des offres de personnalisation pour éviter un problème de scintillement.
+- Bug Fix : l’objet Opt-in empêchait Web SDK d’effectuer des appels lorsque `idMigrationEnabled` est `true`.
+- Bug Fix : sensibilisez Web SDK aux demandes qui doivent renvoyer des offres de personnalisation pour éviter un problème de scintillement.
 
 ## Version 2.1.0 - Août 2020
 
