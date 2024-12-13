@@ -1,8 +1,8 @@
 ---
-description: Découvrez les adresses IP que vous devez ajouter à votre liste autorisée pour utiliser correctement les sources Adobe Experience Platform.
+description: Découvrez les adresses IP que vous devez ajouter à votre liste autorisée de données pour utiliser correctement les sources Adobe Experience Platform.
 title: LISTE AUTORISÉE d’adresses IP pour les sources
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 2c069df7552b5f03f3edbbf0bccd4ba7cbe397d3
+source-git-commit: bb0e84ff26027e92d617b7fd0b85979dff501a7d
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 30%
@@ -13,9 +13,9 @@ ht-degree: 30%
 
 Vous pouvez définir des contrôles d’accès réseau via votre pare-feu réseau. En spécifiant la plage d’adresses IP source appropriée, vous pouvez autoriser le flux de trafic pour le service de transfert de données. Les adresses IP suivantes doivent être ajoutées à une liste autorisée avant d’utiliser les connecteurs source. Si vous n’ajoutez pas vos adresses IP spécifiques à une région à votre liste autorisée, des erreurs ou une absence de performances peuvent se produire lors de l’utilisation de sources.
 
-## LISTE AUTORISÉE d’adresses IP pour les sources par lots {#batch}
+## LISTE AUTORISÉE d’adresses IP pour les sources de lots {#batch}
 
-Vous devez ajouter les adresses IP suivantes à votre liste autorisée pour permettre le flux de trafic du service de transfert de données pour les sources par lots.
+Vous devez ajouter les adresses IP suivantes à votre liste autorisée de données pour permettre le flux de trafic pour le service de transfert de données des sources par lots.
 
 >[!BEGINTABS]
 
@@ -40,6 +40,11 @@ Vous devez ajouter les adresses IP suivantes à votre liste autorisée pour perm
 - `20.232.89.104/29`
 - `20.98.195.172/32`
 - `172.210.218.144/28`
+- `48.211.4.136/29`
+- `48.211.4.144/28`
+- `48.211.4.160/29`
+- `40.84.85.144/28`
+- `40.84.85.192/28`
 
 >[!TAB NLD2 : Europe]
 
@@ -65,6 +70,8 @@ Vous devez ajouter les adresses IP suivantes à votre liste autorisée pour perm
 - `20.53.46.0/26`
 - `40.79.163.80/28`
 - `40.79.171.160/28`
+- `20.213.194.144/29`
+- `20.227.120.32/27`
 
 >[!TAB CAN2 : Canada]
 
@@ -95,9 +102,9 @@ Vous devez ajouter les adresses IP suivantes à votre liste autorisée pour perm
 
 >[!ENDTABS]
 
-## LISTE AUTORISÉE d’adresses IP pour les sources en continu {#streaming}
+## LISTE AUTORISÉE d’adresses IP pour les sources en flux continu {#streaming}
 
-Vous devez ajouter les adresses IP suivantes à votre liste autorisée pour permettre le flux de trafic pour le service de transfert de données pour les sources en continu telles que [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) et [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
+Vous devez ajouter les adresses IP suivantes à votre liste autorisée de données pour permettre au trafic de circuler pour le service de transfert de données pour les sources en flux continu telles que [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) et [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
 
 >[!BEGINTABS]
 
