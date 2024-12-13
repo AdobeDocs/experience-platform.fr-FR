@@ -2,9 +2,9 @@
 title: Assistant AI dans la documentation du produit Adobe Experience Platform
 description: Prise en main de l’assistant AI dans Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: d2de642b7e84d3c4fad57cf0052afa67878dcac0
+source-git-commit: 26232fbf67418e0a75fe489b6e34890058cd4d81
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '629'
 ht-degree: 1%
 
 ---
@@ -77,57 +77,37 @@ Reportez-vous aux vidéos ci-dessous pour approfondir vos connaissances sur les 
 
 Regardez la vidéo suivante pour une présentation de l’assistant AI.
 
-+++Sélectionnez pour afficher une vidéo de présentation de l’assistant AI
-
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 Pour plus d’informations, consultez le guide de l’interface utilisateur de l’assistant [AI](ui-guide.md).
-
-+++
 
 ### Accéder à l’assistant d’IA
 
 Regardez la vidéo suivante pour savoir comment configurer l’accès à l’assistant d’IA pour vos organisations et utilisateurs.
 
-+++Sélectionnez pour visionner une vidéo sur la manière d’accéder à l’assistant AI
-
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 Pour plus d’informations, consultez le guide d’accès de l’assistant [AI](access.md).
-
-+++
 
 ### Utiliser les connaissances des produits de l’assistant AI pour réduire le temps d’intégration
 
 Regardez la vidéo suivante pour découvrir comment tirer parti des connaissances des produits de l’assistant AI pour réduire le temps d’intégration.
 
-+++Sélectionnez pour visionner une vidéo sur l’utilisation de l’assistant AI afin de réduire le temps d’intégration
-
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 Pour plus d’informations, consultez la section [ Connaissance des produits dans l’assistant AI ](home.md#product-knowledge)
-
-+++
 
 ### Utiliser l’assistant d’IA pour désencombrer vos audiences
 
 Regardez la vidéo suivante pour découvrir comment utiliser l’assistant AI afin de désencombrer votre audience et d’optimiser vos opérations marketing.
 
-+++Sélectionnez cette option pour visionner une vidéo sur l’utilisation de l’assistant AI afin de désencombrer vos audiences
-
 >[!VIDEO](https://video.tv.adobe.com/v/3435532?learn=on)
-
-+++
 
 ### Utiliser le panneau de découvrabilité pour vous aider à commencer
 
 Regardez la vidéo suivante pour en savoir plus sur le panneau de visibilité dans l’assistant AI et sur la manière dont vous pouvez l’utiliser pour commencer à utiliser l’assistant AI
 
-+++Sélectionner pour visionner une vidéo sur la découvrabilité
-
 >[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
-
-+++
 
 ## Bibliothèque de cas d’utilisation de l’assistant AI
 
@@ -150,7 +130,7 @@ Regardez les vidéos suivantes pour découvrir d’autres exemples de cas d’ut
 
 >[!ENDTABS]
 
-## Ressources supplémentaires {#additional-resources}
+## Ressources supplémentaires
 
 >[!BEGINSHADEBOX]
 
