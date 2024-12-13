@@ -1,33 +1,33 @@
 ---
-title: Assistant IA dans la documentation du produit Adobe Experience Platform
-description: Prise en main de l’assistant IA dans Adobe Experience Platform.
+title: Assistant AI dans la documentation du produit Adobe Experience Platform
+description: Prise en main de l’assistant AI dans Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 830daf12b1ae9718a16308d16774f4357f431f6c
+source-git-commit: 86edf0c8eeca5b3d2be5776664c397fcf5028e29
 workflow-type: tm+mt
-source-wordcount: '581'
+source-wordcount: '688'
 ht-degree: 1%
 
 ---
 
-# Assistant IA dans la documentation du produit Adobe Experience Platform
+# Assistant AI dans la documentation du produit Adobe Experience Platform
 
-L’assistant d’IA dans Adobe Experience Platform est un outil conversationnel que vous pouvez utiliser pour accélérer vos workflows avec des applications et services Experience Platform. Utilisez l’assistant d’IA pour accroître votre productivité globale, améliorer votre compréhension des connaissances sur les produits et des informations opérationnelles, et rassembler des recommandations pertinentes pour vos requêtes et vos cas d’utilisation professionnels.
+L’assistant AI dans Adobe Experience Platform est un outil de conversation que vous pouvez utiliser pour accélérer vos workflows avec des applications et des services Experience Platform. Utilisez l’assistant d’IA pour accroître votre productivité globale, améliorer votre compréhension des connaissances sur les produits et des informations opérationnelles, ainsi que pour recueillir des recommandations relatives à vos requêtes et cas d’utilisation métier.
 
-L’assistant d’IA prend en charge Experience Platform, Real-Time CDP, Adobe Journey Optimizer et Customer Journey Analytics.
+L’assistant AI prend en charge Experience Platform, Real-Time CDP, Adobe Journey Optimizer et Customer Journey Analytics.
 
 ## Commencer
 
-Commencez par lire le contenu des liens ci-dessous pour vous familiariser avec les concepts et les fonctionnalités de l’assistant d’IA.
+Commencez par lire le matériel dans les liens ci-dessous pour vous familiariser avec les concepts et les fonctionnalités de l’assistant d’IA.
 
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
     <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png" style="width:" 100%;max-height: 100%"></a>
-    <div><strong>Comprendre vos objets de données</strong><br/>Récupérez des informations opérationnelles relatives à vos objets de données pour une meilleure vue sur leur état, leur utilisation et leur impact sur la liaison.</div>
+    <div><strong>Comprendre vos objets de données</strong><br/>Récupérez des informations opérationnelles relatives à vos objets de données pour obtenir une meilleure vue sur leurs statuts, leur utilisation et l’impact de la liaison.</div>
     </td>
     <td>
     <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png" style="width:" 100%;max-height: 100%"></a>
-    <div><strong>Améliorez votre apprentissage</strong><br/>Découvrez, dépassez et amplifiez votre compréhension des connaissances sur les produits sans interrompre vos workflows.</div>
+    <div><strong>Améliorer votre apprentissage</strong><br/>Découvrir, résoudre les problèmes et améliorer votre compréhension des connaissances sur les produits sans interrompre vos workflows.</div>
     </td>
   </tr>
   <tr style="border: 0;">
@@ -39,31 +39,31 @@ Commencez par lire le contenu des liens ci-dessous pour vous familiariser avec l
 
 ## Nouvelles fonctionnalités
 
-Découvrez les toutes dernières améliorations apportées à l’assistant d’IA, notamment les fonctionnalités en cours dans les phases Alpha ou Beta.
+Découvrez les dernières améliorations apportées à l’assistant AI, y compris les fonctionnalités actuellement en cours d’Alpha ou Beta.
 
 >[!BEGINTABS]
 
->[!TAB Surveiller les modifications importantes]
+>[!TAB Surveillez les modifications importantes]
 
-### Surveiller les modifications importantes et les audiences de prévision
+### Surveiller les modifications importantes et les audiences prévues
 
-Vous pouvez utiliser l’assistant d’IA pour surveiller les modifications importantes et fournir des prévisions de croissance pour votre audience et la taille de vos jeux de données. Vous pouvez ensuite utiliser ces informations pour garantir l’intégrité de vos données d’audience et proposer des projections prospectives à l’appui d’une prise de décision éclairée par les données.
+Vous pouvez utiliser l’assistant d’IA pour surveiller les modifications importantes et fournir des prévisions de croissance pour votre audience et les tailles des jeux de données. Vous pouvez ensuite utiliser ces informations pour garantir l’intégrité de vos données d’audience et offrir des projections prospectives afin de prendre des décisions éclairées par les données.
 
 [![Image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/audience-forecasting.md)
 
->[!TAB Estimation de la taille et de la propension de l’audience]
+>[!TAB Estimer la taille et la propension de l’audience]
 
-### Estimation de la taille et de la propension de l’audience
+### Estimer la taille et la propension de l’audience
 
-Vous pouvez utiliser les fonctionnalités d’estimation de langage naturel de l’assistant d’IA pour estimer la taille des audiences et prédire la propension des audiences, ce qui vous permet d’accéder plus facilement à des informations sur vos audiences.
+Vous pouvez utiliser les fonctionnalités d’estimation en langage naturel de l’assistant d’IA pour estimer la taille des audiences et prédire la propension des audiences, ce qui vous permet d’accéder plus facilement aux informations sur vos audiences.
 
 [![Image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/natural-language.md)
 
->[!TAB Découverte de champ XDM]
+>[!TAB découverte de champs XDM]
 
-### Découvrez les champs XDM pour la création d’audience
+### Découvrir les champs XDM pour la création d’audiences
 
-Vous pouvez utiliser l’assistant d’IA pour vous aider à découvrir les champs de modèle de données d’expérience (XDM) que vous pouvez ensuite utiliser pour créer des audiences cibles dans Experience Platform.
+Vous pouvez utiliser l’assistant d’IA pour vous aider à découvrir les champs du modèle de données d’expérience (XDM) que vous pouvez ensuite utiliser pour créer des audiences cibles dans Experience Platform.
 
 [![Image](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/xdm-field-discovery.md)
 
@@ -71,37 +71,63 @@ Vous pouvez utiliser l’assistant d’IA pour vous aider à découvrir les cham
 
 ## Bibliothèque vidéo
 
-Reportez-vous aux vidéos ci-dessous pour approfondir vos connaissances sur les fonctionnalités et les cas pratiques de l’assistant d’IA :
+Reportez-vous aux vidéos ci-dessous pour approfondir vos connaissances sur les fonctionnalités de l’assistant IA et sur les cas pratiques :
 
-### Connaître l’assistant d’IA
+### Découvrir AI Assistant
 
-Regardez la vidéo suivante pour une présentation de l’assistant d’IA.
+Regardez la vidéo suivante pour une présentation de l’assistant AI.
+
++++Sélectionnez pour afficher une vidéo de présentation de l’assistant AI
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
-Pour plus d’informations, consultez le [guide de l’interface utilisateur de l’assistant d’IA](ui-guide.md).
+Pour plus d’informations, consultez le guide de l’interface utilisateur de l’assistant [AI](ui-guide.md).
 
-### Accès à l’assistant d’IA
++++
+
+### Accéder à l’assistant d’IA
 
 Regardez la vidéo suivante pour savoir comment configurer l’accès à l’assistant d’IA pour vos organisations et utilisateurs.
 
++++Sélectionnez pour visionner une vidéo sur la manière d’accéder à l’assistant AI
+
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
-Pour plus d’informations, consultez le [guide d’accès de l’assistant d’IA](access.md).
+Pour plus d’informations, consultez le guide d’accès de l’assistant [AI](access.md).
 
-### Utilisation des connaissances de produit de l’assistant d’IA pour réduire le temps d’intégration
++++
 
-Regardez la vidéo suivante pour savoir comment utiliser les connaissances de l’assistant d’IA pour réduire le temps d’intégration.
+### Utiliser les connaissances des produits de l’assistant AI pour réduire le temps d’intégration
+
+Regardez la vidéo suivante pour découvrir comment tirer parti des connaissances des produits de l’assistant AI pour réduire le temps d’intégration.
+
++++Sélectionnez pour visionner une vidéo sur l’utilisation de l’assistant AI afin de réduire le temps d’intégration
 
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
-Pour plus d’informations, reportez-vous à la section [connaissances sur les produits dans l’assistant d’IA](home.md#product-knowledge)
+Pour plus d’informations, consultez la section [ Connaissance des produits dans l’assistant AI ](home.md#product-knowledge)
 
-### Utilisation de l’assistant d’IA pour désagréger les audiences
++++
 
-Regardez la vidéo suivante pour découvrir comment utiliser l’assistant d’IA pour décompresser votre audience et optimiser vos opérations marketing.
+### Utiliser l’assistant d’IA pour désencombrer vos audiences
+
+Regardez la vidéo suivante pour découvrir comment utiliser l’assistant AI afin de désencombrer votre audience et d’optimiser vos opérations marketing.
+
++++Sélectionnez cette option pour visionner une vidéo sur l’utilisation de l’assistant AI afin de désencombrer vos audiences
 
 >[!VIDEO](https://video.tv.adobe.com/v/3435532?learn=on)
+
++++
+
+### Utiliser le panneau de découvrabilité pour vous aider à commencer
+
+Regardez la vidéo suivante pour en savoir plus sur le panneau de visibilité dans l’assistant AI et sur la manière dont vous pouvez l’utiliser pour commencer à utiliser l’assistant AI
+
++++Sélectionner pour visionner une vidéo sur la découvrabilité
+
+>[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
+
++++
 
 ## Bibliothèque de cas d’utilisation de l’assistant AI
 
@@ -109,18 +135,18 @@ Regardez la vidéo suivante pour découvrir comment utiliser l’assistant d’I
 
 >[!TAB Contenu du blog]
 
-Lisez les exemples de cas d’utilisation suivants pour l’assistant d’IA :
+Lisez les exemples de cas d’utilisation de l’assistant AI suivants :
 
-* [Réduction du temps d’intégration des nouveaux membres de votre équipe](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
-* [ Dégroupez vos audiences et optimisez vos opérations marketing ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
-* [Vérifier les dépendances et minimiser les risques lors des mises à jour de données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
+* [Réduire le temps d’intégration des nouveaux membres de votre équipe](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
+* [Désencombrez vos audiences et optimisez vos opérations marketing](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
+* [Vérifiez les dépendances et minimisez les risques lors des mises à jour des données](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 
 >[!TAB Contenu vidéo supplémentaire]
 
-Regardez les vidéos suivantes pour obtenir des exemples de cas d’utilisation supplémentaires de l’assistant d’IA :
+Regardez les vidéos suivantes pour découvrir d’autres exemples de cas d’utilisation de l’assistant AI :
 
-* [Déverrouiller la puissance de l’assistant d’IA](https://www.youtube.com/watch?v=J48CNmcV7wc)
-* [Connaître l’assistant d’IA pour les audiences](https://www.youtube.com/live/DYsyii7ldck)
+* [Tirer parti de toute la puissance de l’assistant IA](https://www.youtube.com/watch?v=J48CNmcV7wc)
+* [Découvrir l’assistant AI pour les audiences](https://www.youtube.com/live/DYsyii7ldck)
 
 >[!ENDTABS]
 
@@ -128,22 +154,26 @@ Regardez les vidéos suivantes pour obtenir des exemples de cas d’utilisation 
 
 >[!BEGINSHADEBOX]
 
-**Lisez la fiche d’informations de sécurité de l’assistant d’IA**
+**Consultez la fiche d’information sur la sécurité de l’assistant AI**
 
-Pour plus d’informations sur l’assistant d’IA, consultez la [fiche d’information de sécurité de l’assistant d’IA dans Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
+Pour plus d’informations sur AI Assistant, consultez la [fiche d’information sur la sécurité de l’AI Assistant dans Adobe Experience Platform](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
 
 >[!ENDSHADEBOX]
 
-Consultez les liens ci-dessous pour mieux comprendre les cas d’utilisation, les fonctionnalités et bien plus encore de l’assistant d’IA.
+Regardez la vidéo suivante pour plus d’informations sur les fonctionnalités de sécurité de l’assistant AI :
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
+
+Parcourez les liens ci-dessous pour mieux comprendre les cas d’utilisation, les fonctionnalités et bien plus encore de l’assistant AI.
 
 <table style="table-layout:fixed"><tr style="border: 0;">
 <td><strong>Real-Time CDP</strong><br/>
 <a href="./home.md" target="_blank">Documentation</a> - <a href="./ui-guide.md" target="_blank">Guide de l’interface utilisateur</a> - <a href="./access.md" target="_blank">Accéder à l’assistant d’IA</a> - <a href="./privacy.md" target="_blank">Confidentialité, sécurité et gouvernance</a> - <a href="./faq.md" target="_blank">FAQ</a>
 </td>
 <td><strong>Adobe Journey Optimizer</strong><br/>
-<a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank">Documentation</a>
+<a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank"> Documentation </a>
 </td>
-<td><strong>Customer Journey Analytics</strong><br/>
-<a href="https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant" target="_blank">Documentation</a>
+<td><strong>Customer Journey Analytics </strong><br/>
+<a href="https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant" target="_blank"> Documentation </a>
 </td>
 </tr></table>
