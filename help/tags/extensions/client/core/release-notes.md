@@ -2,10 +2,10 @@
 title: Notes de mise à jour de l’extension Core
 description: Notes de mise à jour les plus récentes pour l’extension Core dans Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 1ce579fc1f8548d1eb5c01d63e9fa4e8b32e2a4f
 workflow-type: tm+mt
-source-wordcount: '1632'
-ht-degree: 100%
+source-wordcount: '1651'
+ht-degree: 98%
 
 ---
 
@@ -14,6 +14,12 @@ ht-degree: 100%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch est désormais une suite de technologies destinées à la collecte de données dans Adobe Experience Platform. Plusieurs modifications terminologiques ont par conséquent été apportées à la documentation du produit. Reportez-vous au [document](../../../term-updates.md) suivant pour consulter une référence consolidée des modifications terminologiques.
+
+## 23 Octobre 2024
+
+v3.4.2
+
+* Correction de l’erreur de validation du schéma pour l’événement Formulaire -> Modifier lorsque « et ayant certaines valeurs de propriété... » est actif.
 
 ## 29 mars 2023
 
