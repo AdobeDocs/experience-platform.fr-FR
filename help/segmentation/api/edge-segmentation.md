@@ -4,10 +4,10 @@ title: Effectuer une segmentation Edge à l’aide de l’API
 description: Ce document contient des exemples d’utilisation de la segmentation Edge avec l’API Segmentation Service Adobe Experience Platform.
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
+source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
 workflow-type: tm+mt
-source-wordcount: '783'
-ht-degree: 79%
+source-wordcount: '808'
+ht-degree: 73%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 79%
 >
 >La segmentation Edge est désormais généralement disponible pour tous les utilisateurs et utilisatrices de Platform. Si vous avez créé des définitions de segments Edge au cours de la version Beta, ces définitions de segments continueront à fonctionner.
 
-La segmentation Edge permet d’évaluer instantanément les définitions de segment dans Adobe Experience Platform, ce qui permet d’activer les cas d’utilisation de la personnalisation de la même page et de la page suivante.
+La segmentation Edge permet d’évaluer les définitions de segment dans Adobe Experience Platform instantanément sur le serveur Edge, en activant les cas d’utilisation de la personnalisation sur une même page et sur la page suivante.
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ La segmentation Edge permet d’évaluer instantanément les définitions de seg
 Ce guide de développement nécessite une connaissance pratique des divers services [!DNL Adobe Experience Platform] impliqués dans la segmentation Edge. Avant de commencer ce tutoriel, veuillez consulter la documentation relative aux services suivants :
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md) : fournit un profil de consommateur en temps réel unifié sur base des données agrégées provenant de plusieurs sources.
-- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md) : vous permet de créer des audiences à partir de données [!DNL Real-Time Customer Profile].
+- [[!DNL Adobe Experience Platform Segmentation Service]](../home.md) : permet de créer des audiences à partir de données [!DNL Real-Time Customer Profile].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md) : cadre normalisé selon lequel [!DNL Platform] organise les données de l’expérience client.
 
 Pour passer avec succès des appels à des points d’entrée d’API Experience Platform, consultez le guide sur la [prise en main des API Platform](../../landing/api-guide.md) pour en savoir plus sur les en-têtes requis et sur la lecture d’exemples d’appels d’API.
@@ -45,8 +45,8 @@ Pour qu’un segment soit évalué à l’aide de la segmentation Edge, la requ�
 | ---------- | ------- |
 | Événement unique dans une fenêtre temporelle de moins de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant dans une fenêtre temporelle de moins de 24 heures. |
 | Profil uniquement | Toute définition de segment qui ne fait référence qu’à un attribut de profil. |
-| Événement unique avec un attribut de profil dans une fenêtre de temps relatif inférieure à 24 heures | Toute définition de segment qui fait référence à un seul événement entrant, avec un ou plusieurs attributs de profil, et qui se produit dans une fenêtre de temps relative de moins de 24 heures. |
-| Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lots ou en diffusion en flux continu. **Remarque :** si un segment est utilisé, la disqualification du profil se produit **toutes les 24 heures**. |
+| Événement unique avec un attribut de profil dans une fenêtre temporelle relative de moins de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant, avec un ou plusieurs attributs de profil, et qui se produit dans une fenêtre temporelle relative de moins de 24 heures. |
+| Segment de segments | Toute définition de segment contenant une ou plusieurs définitions de segment par lots ou en flux continu. **Remarque :** si un segment est utilisé avec des définitions de segment **par lot**, la disqualification du profil peut prendre **jusqu’à 24 heures**. Si un segment de segments est utilisé avec des définitions de segment **streaming**, la disqualification du profil se produit en flux continu. |
 | Plusieurs événements avec un attribut de profil | Toute définition de segment qui fait référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. |
 
 En outre, le segment **doit** être lié à une politique de fusion activée sur le serveur Edge. Pour plus d’informations sur les politiques de fusion, consultez le [guide des politiques de fusion](../../profile/api/merge-policies.md).
@@ -55,11 +55,11 @@ Une définition de segment ne sera **pas** activée pour la segmentation Edge da
 
 - La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment`.
    - Toutefois, si le segment contenu dans l’événement `inSegment` est un segment de profil uniquement, la définition de segment **sera** activée pour la segmentation Edge.
-- La définition de segment utilise &quot;Ignorer l’année&quot; dans le cadre de ses contraintes temporelles.
+- La définition de segment utilise « Ignorer l’année » dans le cadre de ses contraintes de temps.
 
 ## Récupérer tous les segments activés pour la segmentation Edge
 
-Vous pouvez récupérer une liste de tous les segments activés pour la segmentation Edge au sein de votre organisation en envoyant une requête de GET au point de terminaison `/segment/definitions`.
+Vous pouvez récupérer une liste de tous les segments activés pour la segmentation Edge au sein de votre organisation en envoyant une requête GET au point d’entrée `/segment/definitions`.
 
 **Format d’API**
 
@@ -82,7 +82,7 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie un tableau de segments de votre entreprise activés pour la segmentation Edge. Vous trouverez des informations plus détaillées sur la définition de segment renvoyée dans le [guide de point d’entrée des définitions de segment](./segment-definitions.md).
+Une réponse réussie renvoie un tableau de segments de votre organisation qui sont activés pour la segmentation Edge. Vous trouverez des informations plus détaillées sur la définition de segment renvoyée dans le [guide de point d’entrée des définitions de segment](./segment-definitions.md).
 
 ```json
 {

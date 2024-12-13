@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de la segmentation en flux continu
 description: La segmentation en flux continu sur Adobe Experience Platform vous permet d’effectuer une segmentation en temps quasi réel tout en vous concentrant sur la richesse des données. Avec la segmentation en flux continu, la qualification de segment se produit désormais lorsque les données entrent dans Platform, ce qui évite d’avoir à planifier et à exécuter des tâches de segmentation. Grâce à cette fonctionnalité, la plupart des règles de segment peuvent désormais être évaluées au fur et à mesure que les données sont transmises à Platform, ce qui signifie que l’appartenance à un segment sera maintenue à jour sans avoir à exécuter des tâches de segmentation planifiée.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
+source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
 workflow-type: tm+mt
-source-wordcount: '1443'
-ht-degree: 86%
+source-wordcount: '1468'
+ht-degree: 83%
 
 ---
 
@@ -28,7 +28,7 @@ La segmentation en flux continu sur [!DNL Adobe Experience Platform] permet aux 
 
 >[!NOTE]
 >
->Pour que la segmentation en flux continu fonctionne, vous devez activer la segmentation planifiée pour l’organisation. Pour plus d’informations sur l’activation de la segmentation planifiée, reportez-vous à la [présentation d’Audience Portal](./audience-portal.md#scheduled-segmentation).
+>Pour que la segmentation en flux continu fonctionne, vous devez activer la segmentation planifiée pour l’organisation. Pour plus d’informations sur l’activation de la segmentation planifiée, reportez-vous à [présentation d’Audience Portal](./audience-portal.md#scheduled-segmentation).
 
 Une requête est automatiquement évaluée avec la segmentation en flux continu si elle répond à l’un des critères suivants :
 
@@ -36,8 +36,8 @@ Une requête est automatiquement évaluée avec la segmentation en flux continu 
 | ---------- | ------- |
 | Événement unique dans une fenêtre temporelle de moins de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant dans une fenêtre temporelle de moins de 24 heures. |
 | Profil uniquement | Toute définition de segment qui ne fait référence qu’à un attribut de profil. |
-| Événement unique avec un attribut de profil dans une fenêtre de temps relatif inférieure à 24 heures | Toute définition de segment qui fait référence à un seul événement entrant, avec un ou plusieurs attributs de profil, et qui se produit dans une fenêtre de temps relative de moins de 24 heures. |
-| Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lots ou en diffusion en flux continu. **Remarque :** si un segment est utilisé, la disqualification du profil se produit **toutes les 24 heures**. |
+| Événement unique avec un attribut de profil dans une fenêtre temporelle relative de moins de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant, avec un ou plusieurs attributs de profil, et qui se produit dans une fenêtre temporelle relative de moins de 24 heures. |
+| Segment de segments | Toute définition de segment contenant une ou plusieurs définitions de segment par lots ou en flux continu. **Remarque :** si un segment est utilisé avec des définitions de segment **par lot**, la disqualification du profil peut prendre **jusqu’à 24 heures**. Si un segment de segments est utilisé avec des définitions de segment **streaming**, la disqualification du profil se produit en flux continu. |
 | Plusieurs événements avec un attribut de profil | Toute définition de segment qui fait référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. |
 
 Une définition de segment ne sera **pas** activée pour la segmentation en flux continu dans les scénarios suivants :
@@ -46,7 +46,7 @@ Une définition de segment ne sera **pas** activée pour la segmentation en flux
 - La définition de segment comprend plusieurs entités (requêtes d’entités multiples).
 - La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment`.
    - Toutefois, si la définition de segment contenue dans l’événement `inSegment` est un segment de profil uniquement, la définition de segment **sera activée** pour la segmentation en flux continu.
-- La définition de segment utilise &quot;Ignorer l’année&quot; dans le cadre de ses contraintes temporelles.
+- La définition de segment utilise « Ignorer l’année » dans le cadre de ses contraintes de temps.
 
 Veuillez noter que les instructions suivantes s’appliquent lors de la segmentation en flux continu :
 
@@ -73,7 +73,7 @@ Un graphique linéaire se trouve en dessous, qui indique le nombre de nouvelles 
 >
 >Une définition de segment est considérée comme éligible si elle passe de l’absence de statut au statut réalisé ou du statut sorti au statut réalisé. Une définition de segment est considérée comme non éligible si elle passe du statut réalisé au statut sorti.
 >
->Vous trouverez plus d’informations sur ces statuts dans le tableau d’état de la [présentation d’Audience Portal](./audience-portal.md#customize).
+>Vous trouverez plus d’informations sur ces statuts dans le tableau des statuts de la [présentation d’Audience Portal](./audience-portal.md#customize).
 
 ![La carte Profils au fil du temps est mise en surbrillance, avec un graphique linéaire des profils au fil du temps.](../images/ui/streaming-segmentation/monitoring-streaming-segment-graph.png)
 
@@ -119,6 +119,6 @@ Par conséquent, si vous constatez que le nombre sous « X derniers jours » e
 
 La disponibilité d’une définition de segment peut prendre jusqu’à une heure.
 
-### Existe-t-il des limites aux données diffusées en continu ?
+### Existe-t-il des limitations aux données diffusées en continu dans ?
 
-Pour que les données en flux continu puissent être utilisées dans la segmentation par flux, il existe **must** un espacement entre les événements diffusés en continu. Si trop d’événements sont diffusés en continu dans la même seconde, Platform traite ces événements comme des données générées par des robots et ils seront ignorés. Pour respecter les bonnes pratiques, **au moins** doit s&#39;écouler cinq secondes entre les données d&#39;événement afin de s&#39;assurer que les données sont correctement utilisées.
+Pour que les données diffusées soient utilisées dans la segmentation en flux continu, il **doit** y avoir un espacement entre les événements diffusés en flux continu. Si un trop grand nombre d’événements sont diffusés en continu dans la même seconde, Platform traite ces événements comme des données générées par les robots et ils sont ignorés. En règle générale, vous devez disposer d’au **moins** cinq secondes entre les données d’événement pour vous assurer que les données sont correctement utilisées.

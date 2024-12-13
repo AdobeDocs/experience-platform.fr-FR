@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de segmentation Edge
 description: Découvrez comment utiliser la segmentation Edge pour évaluer instantanément les définitions de segment dans Platform, en activant les cas d’utilisation de la personnalisation de la même page et de la page suivante.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 057db1432493a8443eb91b0fc371d0bdffb3de86
+source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
 workflow-type: tm+mt
-source-wordcount: '569'
-ht-degree: 90%
+source-wordcount: '594'
+ht-degree: 81%
 
 ---
 
@@ -40,15 +40,15 @@ Une requête peut être évaluée avec une segmentation Edge si elle répond à 
 | Événement unique dans une fenêtre temporelle relative | Toute définition de segment qui fait référence à un seul événement entrant. |
 | Événement unique avec une fenêtre temporelle | Toute définition de segment qui fait référence à un seul événement entrant avec une fenêtre temporelle. |
 | Profil uniquement | Toute définition de segment qui ne fait référence qu’à un attribut de profil. |
-| Événement unique avec un attribut de profil dans une fenêtre de temps relatif inférieure à 24 heures | Toute définition de segment qui fait référence à un seul événement entrant, avec un ou plusieurs attributs de profil, et qui se produit dans une fenêtre de temps relative de moins de 24 heures. |
-| Segment de segments | Toute définition de segment contenant un ou plusieurs segments par lots ou en diffusion en flux continu. **Remarque :** si un segment est utilisé, la disqualification du profil se produit **toutes les 24 heures**. |
+| Événement unique avec un attribut de profil dans une fenêtre temporelle relative de moins de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant, avec un ou plusieurs attributs de profil, et qui se produit dans une fenêtre temporelle relative de moins de 24 heures. |
+| Segment de segments | Toute définition de segment contenant une ou plusieurs définitions de segment par lots ou en flux continu. **Remarque :** si un segment est utilisé avec des définitions de segment **par lot**, la disqualification du profil peut prendre **jusqu’à 24 heures**. Si un segment de segments est utilisé avec des définitions de segment **streaming**, la disqualification du profil se produit en flux continu. |
 | Plusieurs événements avec un attribut de profil | Toute définition de segment qui fait référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. |
 
 Une définition de segment ne sera **pas** activée pour la segmentation Edge dans le scénario suivant :
 
 - La définition de segment comprend une combinaison d’un événement unique et d’un événement `inSegment`.
    - Toutefois, si la définition de segment contenue dans l’événement `inSegment` est un segment de profil uniquement, la définition de segment **sera** activée pour la segmentation Edge.
-- La définition de segment utilise &quot;Ignorer l’année&quot; dans le cadre de ses contraintes temporelles.
+- La définition de segment utilise « Ignorer l’année » dans le cadre de ses contraintes de temps.
 
 ## Étapes suivantes
 
