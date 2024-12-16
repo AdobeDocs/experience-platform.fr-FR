@@ -2,9 +2,9 @@
 title: Assistant AI dans la documentation du produit Adobe Experience Platform
 description: Prise en main de l’assistant AI dans Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 26232fbf67418e0a75fe489b6e34890058cd4d81
+source-git-commit: 4d89ac33843acd536fbadc85a07bee90a50e6407
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '657'
 ht-degree: 1%
 
 ---
@@ -88,6 +88,14 @@ Regardez la vidéo suivante pour savoir comment configurer l’accès à l’ass
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 Pour plus d’informations, consultez le guide d’accès de l’assistant [AI](access.md).
+
+### Comprendre les connaissances des produits dans l’assistant d’IA
+
+Regardez la vidéo suivante pour en savoir plus sur les connaissances des produits dans l’assistant AI.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441024?learn=on)
+
+Pour plus d’informations, consultez la section [ Connaissance des produits dans l’assistant AI ](home.md#product-knowledge)
 
 ### Utiliser les connaissances des produits de l’assistant AI pour réduire le temps d’intégration
 
