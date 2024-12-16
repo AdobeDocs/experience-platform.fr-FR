@@ -1,27 +1,27 @@
 ---
 solution: Experience Platform
-title: Exportation de jeux de données à l’aide de l’API Flow Service
+title: Exporter des jeux de données à l’aide de l’API Flow Service
 description: Découvrez comment utiliser l’API Flow Service pour exporter des jeux de données vers des destinations sélectionnées.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: c32d2801fe38183225d24f38284b42e3d78e2631
+source-git-commit: 3bce663866e7a6e8288444121331fc931a74076a
 workflow-type: tm+mt
 source-wordcount: '5138'
 ht-degree: 11%
 
 ---
 
-# Exporter des jeux de données à l’aide de [!DNL Flow Service API]
+# Exporter des jeux de données à l’aide de l’[!DNL Flow Service API]
 
 >[!AVAILABILITY]
 >
->* Cette fonctionnalité est disponible pour les clients qui ont acheté le package Real-Time CDP Prime et Ultimate, Adobe Journey Optimizer ou Customer Journey Analytics. Pour plus d’informations, contactez votre représentant d’Adobe.
+>* Cette fonctionnalité est disponible pour les clients qui ont acheté le package Real-Time CDP Prime et Ultimate, Adobe Journey Optimizer ou Customer Journey Analytics. Pour plus d’informations, contactez le représentant de votre Adobe.
 
 >[!IMPORTANT]
 >
->**Action item** : la version de [septembre 2024 de Experience Platform](/help/release-notes/latest/latest.md#destinations) introduit l’option permettant de définir une date `endTime` pour exporter les flux de données du jeu de données. Adobe introduit également une date de fin par défaut du 1er mai 2025 pour tous les flux de données d’exportation de jeux de données créés *avant la version de septembre*. Pour l’un de ces flux de données, vous devez mettre à jour manuellement la date de fin dans le flux de données avant la date de fin, sinon vos exportations pour arrêt à cette date. Utilisez l’interface utilisateur de l’Experience Platform pour afficher les flux de données qui seront définis pour s’arrêter le 1er mai.
+>**Action item** : la version [septembre 2024 d’Experience Platform ](/help/release-notes/latest/latest.md#destinations) offre la possibilité de définir une date de `endTime` pour les flux de données d’exportation du jeu de données. L’Adobe introduit également une date de fin par défaut du 1er mai 2025 pour tous les flux de données d’exportation de jeux de données créés *avant la version de septembre*. Pour l’un de ces flux de données, vous devez mettre à jour manuellement la date de fin du flux de données avant la date de fin, sinon les exportations doivent s’arrêter à cette date. Utilisez l’interface utilisateur de l’Experience Platform pour afficher les flux de données qui seront définis pour s’arrêter le 1er mai.
 >
->De même, pour les flux de données que vous créez sans spécifier de date `endTime`, ils sont définis par défaut sur une heure de fin six mois à compter de leur création.
+>De même, pour les flux de données que vous créez sans spécifier de date de `endTime`, ils prennent par défaut une heure de fin six mois à compter de leur création.
 
 <!--
 
@@ -30,21 +30,21 @@ ht-degree: 11%
 
 -->
 
-Cet article explique le processus requis pour utiliser [!DNL Flow Service API] afin d’exporter des [jeux de données](/help/catalog/datasets/overview.md) de Adobe Experience Platform vers l’emplacement de stockage dans le cloud de votre choix, tel que [!DNL Amazon S3], les emplacements SFTP ou [!DNL Google Cloud Storage].
+Cet article explique le processus requis pour utiliser l’[!DNL Flow Service API] afin d’exporter des [jeux de données](/help/catalog/datasets/overview.md) de Adobe Experience Platform vers l’emplacement d’espace de stockage de votre choix, comme des [!DNL Amazon S3], des emplacements SFTP ou des [!DNL Google Cloud Storage].
 
 >[!TIP]
 >
->Vous pouvez également utiliser l’interface utilisateur Experience Platform pour exporter des jeux de données. Pour plus d’informations, consultez le [tutoriel sur l’interface utilisateur des jeux de données d’exportation](/help/destinations/ui/export-datasets.md) .
+>Vous pouvez également utiliser l’interface utilisateur Experience Platform pour exporter des jeux de données. Pour plus d’informations, consultez le tutoriel [interface utilisateur d’exportation de jeux de données](/help/destinations/ui/export-datasets.md) .
 
 ## Jeux de données disponibles pour l’exportation {#datasets-to-export}
 
 Les jeux de données que vous pouvez exporter dépendent de l’application Experience Platform (Real-Time CDP, Adobe Journey Optimizer), du niveau (Prime ou Ultimate) et des modules complémentaires que vous avez achetés (par exemple : Data Distiller).
 
-Reportez-vous au [tableau sur la page du tutoriel de l’interface utilisateur](/help/destinations/ui/export-datasets.md#datasets-to-export) pour comprendre les jeux de données que vous pouvez exporter.
+Reportez-vous au [tableau de la page du tutoriel de l’interface utilisateur](/help/destinations/ui/export-datasets.md#datasets-to-export) pour comprendre les jeux de données que vous pouvez exporter.
 
 ## Destinations prises en charge {#supported-destinations}
 
-Actuellement, vous pouvez exporter des jeux de données vers les destinations de stockage dans le cloud mises en évidence dans la capture d’écran et répertoriées ci-dessous.
+Actuellement, vous pouvez exporter des jeux de données vers les destinations d’espace de stockage mises en surbrillance dans la capture d’écran et répertoriées ci-dessous.
 
 ![Destinations qui prennent en charge les exportations de jeux de données](/help/destinations/assets/ui/export-datasets/destinations-supporting-dataset-exports.png)
 
@@ -57,18 +57,18 @@ Actuellement, vous pouvez exporter des jeux de données vers les destinations de
 
 ## Commencer {#get-started}
 
-![Aperçu : étapes de création d’une destination et d’exportation de jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
+![Présentation - Étapes de création d’une destination et d’exportation de jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
 Ce guide nécessite une compréhension professionnelle des composants suivants d’Adobe Experience Platform :
 
-* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md) : toutes les données correctement ingérées dans Adobe Experience Platform sont conservées dans [!DNL Data Lake] en tant que jeux de données. Un jeu de données est une structure de stockage et de gestion pour la collecte de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les jeux de données contiennent également des métadonnées qui décrivent divers aspects des données stockées.
+* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md) : toutes les données correctement ingérées par Adobe Experience Platform sont conservées sous forme de jeux de données dans le [!DNL Data Lake]. Un jeu de données est une structure de stockage et de gestion pour la collecte de données, généralement sous la forme d’un tableau, qui contient un schéma (des colonnes) et des champs (des lignes). Les jeux de données contiennent également des métadonnées qui décrivent divers aspects des données stockées.
    * [[!DNL Sandboxes]](../../sandboxes/home.md) : [!DNL Experience Platform] fournit des sandbox virtuels qui divisent une instance [!DNL Platform] unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires que vous devez connaître pour exporter des jeux de données vers des destinations de stockage dans le cloud dans Platform.
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour exporter des jeux de données vers des destinations d’espace de stockage dans Platform.
 
 ### Autorisations nécessaires {#permissions}
 
-Pour exporter des jeux de données, vous avez besoin des ****, **[!UICONTROL d’afficher les jeux de données]** et **[!UICONTROL de]** [ ](/help/access-control/home.md#permissions) autorisations de contrôle d’accès pour  gérer et activer les destinations de jeu de données. Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
+Pour exporter des jeux de données, vous avez besoin des autorisations de contrôle d’accès **[!UICONTROL Afficher les destinations]**, **[!UICONTROL Afficher les jeux de données]** et **[!UICONTROL Gérer et activer les destinations de jeu de données]** [](/help/access-control/home.md#permissions). Lisez la [présentation du contrôle d’accès](/help/access-control/ui/overview.md) ou contactez votre administrateur de produit pour obtenir les autorisations requises.
 
 Pour vous assurer que vous disposez des autorisations nécessaires pour exporter des jeux de données et que la destination prend en charge l’exportation de jeux de données, parcourez le catalogue des destinations. Si une destination comporte un contrôle **[!UICONTROL Activer]** ou **[!UICONTROL Exporter des jeux de données]**, vous disposez des autorisations appropriées.
 
@@ -78,7 +78,7 @@ Ce tutoriel fournit des exemples d’appels API pour démontrer comment formater
 
 ### Collecter des valeurs pour les en-têtes obligatoires et facultatifs {#gather-values-headers}
 
-Pour lancer des appels vers des API [!DNL Platform], vous devez d’abord suivre le [tutoriel sur l’authentification Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
+Pour effectuer des appels vers les API [!DNL Platform], vous devez d&#39;abord suivre le tutoriel [Authentification Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=fr). Le tutoriel d’authentification fournit les valeurs de chacun des en-têtes requis dans tous les appels d’API [!DNL Experience Platform], comme indiqué ci-dessous :
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key : `{API_KEY}`
@@ -98,15 +98,15 @@ Toutes les requêtes qui contiennent un payload (POST, PUT, PATCH) nécessitent 
 
 ### Documentation de référence sur les API {#api-reference-documentation}
 
-Ce tutoriel vous permet de trouver la documentation de référence relative à toutes les opérations API. Reportez-vous à la documentation [[!DNL Flow Service]  - API de destinations sur le site web Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). Nous vous recommandons de consulter ce tutoriel et la documentation de référence sur les API en parallèle.
+Ce tutoriel vous permet de trouver la documentation de référence relative à toutes les opérations API. Reportez-vous à la section [[!DNL Flow Service]  - Documentation de l’API Destinations sur le site web d’Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). Nous vous recommandons de consulter ce tutoriel et la documentation de référence sur les API en parallèle.
 
 ### Glossaire {#glossary}
 
-Pour obtenir des descriptions des termes que vous rencontrerez dans ce tutoriel sur l’API, consultez la [section de glossaire](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) de la documentation de référence sur l’API.
+Pour obtenir une description des termes que vous rencontrerez dans ce tutoriel sur l’API, consultez la [section glossaire](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) de la documentation de référence de l’API.
 
-### Rassemblez les spécifications de connexion et les spécifications de flux pour la destination souhaitée. {#gather-connection-spec-flow-spec}
+### Rassemblez les spécifications de connexion et de flux pour la destination souhaitée. {#gather-connection-spec-flow-spec}
 
-Avant de démarrer le workflow pour exporter un jeu de données, identifiez les identifiants de spécification de connexion et de flux de la destination vers laquelle vous envisagez d’exporter des jeux de données. Utilisez le tableau ci-dessous à titre de référence.
+Avant de démarrer le workflow pour exporter un jeu de données, identifiez la spécification de connexion et les identifiants de spécification de flux de la destination vers laquelle vous envisagez d’exporter des jeux de données. Utilisez le tableau ci-dessous à titre de référence.
 
 
 | Destination | Spécification de connexion | Spécification de flux |
@@ -120,7 +120,7 @@ Avant de démarrer le workflow pour exporter un jeu de données, identifiez les 
 
 {style="table-layout:auto"}
 
-Vous avez besoin de ces identifiants pour construire différentes entités [!DNL Flow Service]. Vous devez également vous référer à certaines parties de l’ [!DNL Connection Spec] lui-même pour configurer certaines entités afin que vous puissiez récupérer l’ [!DNL Connection Spec] de [!DNL Flow Service APIs]. Consultez les exemples ci-dessous de récupération des spécifications de connexion pour toutes les destinations dans le tableau :
+Vous avez besoin de ces identifiants pour construire différentes entités [!DNL Flow Service]. Vous devez également vous reporter à des parties du [!DNL Connection Spec] lui-même pour configurer certaines entités afin de pouvoir récupérer les [!DNL Connection Spec] à partir de [!DNL Flow Service APIs]. Consultez les exemples ci-dessous de récupération des spécifications de connexion pour toutes les destinations du tableau :
 
 >[!BEGINTABS]
 
@@ -128,7 +128,7 @@ Vous avez besoin de ces identifiants pour construire différentes entités [!DNL
 
 **Requête**
 
-+++Récupérer [!DNL connection spec] pour [!DNL Amazon S3]
++++Récupérer des [!DNL connection spec] pour [!DNL Amazon S3]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
@@ -143,7 +143,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Réponse**
 
-+++[!DNL Amazon S3] - Spécification de la connexion
++++[!DNL Amazon S3] - Spécification de connexion
 
 ```json
 {
@@ -162,7 +162,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Requête**
 
-+++Récupérer [!DNL connection spec] pour [!DNL Azure Blob Storage]
++++Récupérer des [!DNL connection spec] pour [!DNL Azure Blob Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6d6b59bf-fb58-4107-9064-4d246c0e5bb2' \
@@ -192,11 +192,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
 
 **Requête**
 
-+++Récupérer [!DNL connection spec] pour [!DNL Azure Data Lake Gen 2(ADLS Gen2])
++++Récupérer des [!DNL connection spec] pour [!DNL Azure Data Lake Gen 2(ADLS Gen2])
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
@@ -226,11 +226,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Zone d’entrée de données (DLZ)]
+>[!TAB Zone d’atterrissage des données (DLZ)]
 
 **Requête**
 
-+++Récupérer [!DNL connection spec] pour [!DNL Data Landing Zone(DLZ)]
++++Récupérer des [!DNL connection spec] pour [!DNL Data Landing Zone(DLZ)]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
@@ -264,7 +264,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Requête**
 
-+++Récupérer [!DNL connection spec] pour [!DNL Google Cloud Storage]
++++Récupérer des [!DNL connection spec] pour [!DNL Google Cloud Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \
@@ -298,7 +298,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Requête**
 
-+++Récupérer [!DNL connection spec] pour SFTP
++++Récupération de [!DNL connection spec] pour SFTP
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/36965a81-b1c6-401b-99f8-22508f1e6a26' \
@@ -330,19 +330,19 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDTABS]
 
-Suivez les étapes ci-dessous pour configurer un flux de données de jeu de données vers une destination de stockage dans le cloud. Pour certaines étapes, les requêtes et les réponses diffèrent entre les différentes destinations de stockage dans le cloud. Dans ces cas, utilisez les onglets de la page pour récupérer les requêtes et réponses spécifiques à la destination à laquelle vous souhaitez vous connecter et exporter des jeux de données. Veillez à utiliser les [!DNL connection spec] et [!DNL flow spec] corrects pour la destination que vous configurez.
+Suivez les étapes ci-dessous pour configurer un flux de données de jeu de données vers une destination d’espace de stockage. Pour certaines étapes, les requêtes et les réponses diffèrent entre les différentes destinations d’espace de stockage. Dans ce cas, utilisez les onglets de la page pour récupérer les requêtes et les réponses spécifiques à la destination à laquelle vous souhaitez vous connecter et exporter des jeux de données. Veillez à utiliser les [!DNL connection spec] et [!DNL flow spec] corrects pour la destination que vous configurez.
 
 ## Récupération d’une liste de jeux de données {#retrieve-list-of-available-datasets}
 
-![Diagramme affichant l’étape 1 dans le workflow d’exportation des jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-retrieve-datasets.png)
+![Diagramme présentant l’étape 1 dans le workflow d’exportation des jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-retrieve-datasets.png)
 
-Pour récupérer une liste de jeux de données éligibles à l’activation, commencez par effectuer un appel API vers le point de terminaison ci-dessous.
+Pour récupérer une liste de jeux de données éligibles à l’activation, commencez par effectuer un appel API vers le point d’entrée ci-dessous.
 
 >[!BEGINSHADEBOX]
 
 **Requête**
 
-+++Récupération des jeux de données éligibles - Requête
++++Récupérer des jeux de données éligibles - Requête
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/23598e46-f560-407b-88d5-ea6207e49db0/configs?outputType=activationDatasets&outputField=datasets&start=0&limit=20&properties=name,state' \
@@ -353,13 +353,13 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 --header 'Authorization: Bearer {ACCESS_TOKEN}'
 ```
 
-Notez que pour récupérer les jeux de données éligibles, l’identifiant [!DNL connection spec] utilisé dans l’URL de requête doit être l’identifiant de spécification de connexion au lac de données, `23598e46-f560-407b-88d5-ea6207e49db0`, et les deux paramètres de requête `outputField=datasets` et `outputType=activationDatasets` doivent être spécifiés. Tous les autres paramètres de requête sont les paramètres standard pris en charge par l’ [ API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/).
+Notez que pour récupérer les jeux de données éligibles, l’identifiant de [!DNL connection spec] utilisé dans l’URL de requête doit être l’identifiant de spécification de connexion à la source de lac de données, `23598e46-f560-407b-88d5-ea6207e49db0`, et les deux paramètres de requête `outputField=datasets` et `outputType=activationDatasets` doivent être spécifiés. Tous les autres paramètres de requête sont les paramètres standard pris en charge par l’[API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/).
 
 +++
 
 **Réponse**
 
-+++Récupération des jeux de données - Réponse
++++Récupération de jeux de données - Réponse
 
 ```json
 {
@@ -440,13 +440,13 @@ Notez que pour récupérer les jeux de données éligibles, l’identifiant [!DN
 
 Une réponse réussie contient une liste de jeux de données éligibles à l’activation. Ces jeux de données peuvent être utilisés lors de la création de la connexion source à l’étape suivante.
 
-Pour plus d’informations sur les différents paramètres de réponse pour chaque jeu de données renvoyé, reportez-vous à la [documentation du développeur de l’API des jeux de données](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).
+Pour plus d’informations sur les différents paramètres de réponse pour chaque jeu de données renvoyé, consultez la [documentation destinée aux développeurs et développeuses de l’API Datasets](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).
 
 ## Créer une connexion source {#create-source-connection}
 
-![Diagramme affichant l’étape 2 dans le workflow d’exportation des jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-create-source-connection.png)
+![Diagramme présentant l’étape 2 dans le workflow d’exportation des jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-create-source-connection.png)
 
-Après avoir récupéré la liste des jeux de données à exporter, vous pouvez créer une connexion source à l’aide de ces identifiants de jeu de données.
+Après avoir récupéré la liste des jeux de données que vous souhaitez exporter, vous pouvez créer une connexion source à l’aide de ces identifiants de jeu de données.
 
 >[!BEGINSHADEBOX]
 
@@ -454,7 +454,7 @@ Après avoir récupéré la liste des jeux de données à exporter, vous pouvez 
 
 +++Créer une connexion source - Requête
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="12,16"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
@@ -501,26 +501,26 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDSHADEBOX]
 
-Une réponse réussie renvoie l’identifiant (`id`) de la nouvelle connexion source et un `etag`. Notez l’identifiant de connexion source, car vous en aurez besoin ultérieurement lors de la création du flux de données.
+Une réponse réussie renvoie l’identifiant (`id`) de la connexion source nouvellement créée et un `etag`. Notez l’identifiant de connexion source, car vous en aurez besoin ultérieurement lors de la création du flux de données.
 
-N’oubliez pas que :
+N&#39;oubliez pas non plus que :
 
-* La connexion source créée au cours de cette étape doit être liée à un flux de données pour que ses jeux de données soient activés vers une destination. Pour plus d’informations sur la liaison d’une connexion source à un flux de données, reportez-vous à la section [Création d’un flux de données](#create-dataflow) .
-* Les identifiants de jeu de données d’une connexion source ne peuvent pas être modifiés après la création. Si vous devez ajouter ou supprimer des jeux de données d’une connexion source, vous devez créer une nouvelle connexion source et lier l’identifiant de la nouvelle connexion source au flux de données.
+* La connexion source créée à cette étape doit être liée à un flux de données pour que ses jeux de données soient activés vers une destination. Consultez la section [Créer un flux de données](#create-dataflow) pour plus d’informations sur la liaison d’une connexion source à un flux de données.
+* Les identifiants du jeu de données d’une connexion source ne peuvent pas être modifiés après la création. Si vous devez ajouter ou supprimer des jeux de données d’une connexion source, vous devez créer une connexion source et lier l’identifiant de la nouvelle connexion source au flux de données.
 
-## Création d’une connexion de base (cible) {#create-base-connection}
+## Créer une connexion de base (cible) {#create-base-connection}
 
-![Diagramme affichant l’étape 3 dans le workflow d’exportation des jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
+![Diagramme présentant l’étape 3 du workflow d’exportation des jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
 
-Une connexion de base stocke en toute sécurité les informations d’identification vers votre destination. Selon le type de destination, les informations d’identification nécessaires pour s’authentifier sur cette destination peuvent varier. Pour trouver ces paramètres d’authentification, récupérez d’abord le [!DNL connection spec] pour la destination souhaitée, comme décrit dans la section [  Spécifications de connexion et spécifications de flux ](#gather-connection-spec-flow-spec) , puis regardez le `authSpec` de la réponse. Référencez les onglets ci-dessous pour les propriétés `authSpec` de toutes les destinations prises en charge.
+Une connexion de base stocke en toute sécurité les informations d’identification vers la destination. Selon le type de destination, les informations d’identification nécessaires pour s’authentifier sur cette destination peuvent varier. Pour trouver ces paramètres d’authentification, récupérez d’abord le [!DNL connection spec] de la destination souhaitée, comme décrit dans la section [Collecter les spécifications de connexion et de flux](#gather-connection-spec-flow-spec), puis examinez le `authSpec` de la réponse. Référencez les onglets ci-dessous pour les propriétés `authSpec` de toutes les destinations prises en charge.
 
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
 
-+++[!DNL Amazon S3] - [!DNL Connection spec] présentant [!DNL auth spec]
++++[!DNL Amazon S3] - [!DNL Connection spec] des [!DNL auth spec]
 
-Notez la ligne mise en surbrillance avec des commentaires intégrés dans l’exemple [!DNL connection spec] ci-dessous, qui fournit des informations supplémentaires sur l’emplacement des paramètres d’authentification dans [!DNL connection spec].
+Notez la ligne en surbrillance avec des commentaires intégrés dans l’exemple de [!DNL connection spec] ci-dessous, qui fournissent des informations supplémentaires sur l’emplacement des paramètres d’authentification dans le [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -565,9 +565,9 @@ Notez la ligne mise en surbrillance avec des commentaires intégrés dans l’ex
 
 >[!TAB Stockage Azure Blob]
 
-+++[!DNL Azure Blob Storage] - [!DNL Connection spec] présentant [!DNL auth spec]
++++[!DNL Azure Blob Storage] - [!DNL Connection spec] des [!DNL auth spec]
 
-Notez la ligne mise en surbrillance avec des commentaires intégrés dans l’exemple [!DNL connection spec] ci-dessous, qui fournit des informations supplémentaires sur l’emplacement des paramètres d’authentification dans [!DNL connection spec].
+Notez la ligne en surbrillance avec des commentaires intégrés dans l’exemple de [!DNL connection spec] ci-dessous, qui fournissent des informations supplémentaires sur l’emplacement des paramètres d’authentification dans le [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -604,11 +604,11 @@ Notez la ligne mise en surbrillance avec des commentaires intégrés dans l’ex
 +++
 
 
->[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] présentant [!DNL auth spec]
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] des [!DNL auth spec]
 
-Notez la ligne mise en surbrillance avec des commentaires intégrés dans l’exemple [!DNL connection spec] ci-dessous, qui fournit des informations supplémentaires sur l’emplacement des paramètres d’authentification dans [!DNL connection spec].
+Notez la ligne en surbrillance avec des commentaires intégrés dans l’exemple de [!DNL connection spec] ci-dessous, qui fournissent des informations supplémentaires sur l’emplacement des paramètres d’authentification dans le [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -660,13 +660,13 @@ Notez la ligne mise en surbrillance avec des commentaires intégrés dans l’ex
 +++
 
 
->[!TAB Zone d’entrée de données (DLZ)]
+>[!TAB Zone d’atterrissage des données (DLZ)]
 
-+++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] présentant [!DNL auth spec]
++++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] des [!DNL auth spec]
 
 >[!NOTE]
 >
->La destination de la zone d’entrée des données ne nécessite pas un [!DNL auth spec].
+>La destination Data Landing Zone ne nécessite pas de [!DNL auth spec].
 
 ```json
 {
@@ -684,9 +684,9 @@ Notez la ligne mise en surbrillance avec des commentaires intégrés dans l’ex
 
 >[!TAB Google Cloud Storage]
 
-+++[!DNL Google Cloud Storage] - [!DNL Connection spec] présentant [!DNL auth spec]
++++[!DNL Google Cloud Storage] - [!DNL Connection spec] des [!DNL auth spec]
 
-Notez la ligne mise en surbrillance avec des commentaires intégrés dans l’exemple [!DNL connection spec] ci-dessous, qui fournit des informations supplémentaires sur l’emplacement des paramètres d’authentification dans [!DNL connection spec].
+Notez la ligne en surbrillance avec des commentaires intégrés dans l’exemple de [!DNL connection spec] ci-dessous, qui fournissent des informations supplémentaires sur l’emplacement des paramètres d’authentification dans le [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -729,13 +729,13 @@ Notez la ligne mise en surbrillance avec des commentaires intégrés dans l’ex
 
 >[!TAB SFTP]
 
-+++SFTP - [!DNL Connection spec] avec [!DNL auth spec]
++++SFTP - [!DNL Connection spec] affichant les [!DNL auth spec]
 
 >[!NOTE]
 >
->La destination SFTP contient deux éléments distincts dans [!DNL auth spec], car elle prend en charge l’authentification par mot de passe et par clé SSH.
+>La destination SFTP contient deux éléments distincts dans le [!DNL auth spec], car elle prend en charge le mot de passe et l’authentification par clé SSH.
 
-Notez la ligne mise en surbrillance avec des commentaires intégrés dans l’exemple [!DNL connection spec] ci-dessous, qui fournit des informations supplémentaires sur l’emplacement des paramètres d’authentification dans [!DNL connection spec].
+Notez la ligne en surbrillance avec des commentaires intégrés dans l’exemple de [!DNL connection spec] ci-dessous, qui fournissent des informations supplémentaires sur l’emplacement des paramètres d’authentification dans le [!DNL connection spec].
 
 ```json {line-numbers="true" start-line="1" highlight="8"}
 {
@@ -819,7 +819,7 @@ Notez la ligne mise en surbrillance avec des commentaires intégrés dans l’ex
 
 >[!ENDTABS]
 
-En utilisant les propriétés spécifiées dans la spécification d’authentification (c’est-à-dire `authSpec` à partir de la réponse), vous pouvez créer une connexion de base avec les informations d’identification requises, spécifiques à chaque type de destination, comme illustré dans les exemples ci-dessous :
+À l’aide des propriétés spécifiées dans la spécification d’authentification (c’est-à-dire `authSpec` à partir de la réponse), vous pouvez créer une connexion de base avec les informations d’identification requises, spécifiques à chaque type de destination, comme illustré dans les exemples ci-dessous :
 
 >[!BEGINTABS]
 
@@ -827,13 +827,13 @@ En utilisant les propriétés spécifiées dans la spécification d’authentifi
 
 **Requête**
 
-+++[!DNL Amazon S3] - Requête de connexion de base
++++[!DNL Amazon S3] - Demande de connexion de base
 
 >[!TIP]
 >
->Pour plus d’informations sur la manière d’obtenir les informations d’authentification requises, reportez-vous à la section [Authentification à la destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) de la page de documentation de destination Amazon S3.
+>Pour plus d’informations sur l’obtention des informations d’authentification requises, reportez-vous à la section [Authentifier à la destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) de la page de documentation sur la destination Amazon S3.
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -863,7 +863,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Réponse**
 
-+++[!DNL Amazon S3] Réponse de connexion de base
++++[!DNL Amazon S3] réponse de connexion de base
 
 ```json
 {
@@ -878,13 +878,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Requête**
 
-+++[!DNL Azure Blob Storage] - Requête de connexion de base
++++[!DNL Azure Blob Storage] - Demande de connexion de base
 
 >[!TIP]
 >
->Pour plus d’informations sur la manière d’obtenir les informations d’authentification requises, reportez-vous à la section [Authentification à la destination](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) de la page de documentation de destination Azure Blob Storage.
+>Pour plus d’informations sur l’obtention des informations d’authentification requises, reportez-vous à la section [Authentifier à la destination](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) de la page de documentation sur la destination Azure Blob Storage.
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="16"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -913,7 +913,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Réponse**
 
-+++[!DNL Azure Blob Storage] - Réponse de connexion de base
++++[!DNL Azure Blob Storage] - Réponse de la connexion de base
 
 ```json
 {
@@ -924,17 +924,17 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
 
 **Requête**
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - Requête de connexion de base
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - Demande de connexion de base
 
 >[!TIP]
 >
->Pour plus d’informations sur la manière d’obtenir les informations d’authentification requises, reportez-vous à la section [ Authentification à la destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) de la page de documentation de destination Azure Data Lake Gen 2 (ADLS Gen2).
+>Pour plus d’informations sur l’obtention des informations d’authentification requises, reportez-vous à la section [Authentifier à la destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) de la page de documentation de destination Azure Data Lake Gen 2 (ADLS Gen2) .
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="20"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -966,7 +966,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Réponse**
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - Réponse de connexion de base
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - Réponse de la connexion de base
 
 ```json
 {
@@ -977,15 +977,15 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Zone d’entrée de données (DLZ)]
+>[!TAB Zone d’atterrissage des données (DLZ)]
 
 **Requête**
 
-+++[!DNL Data Landing Zone(DLZ)] - Requête de connexion de base
++++[!DNL Data Landing Zone(DLZ)] - Demande de connexion de base
 
 >[!TIP]
 >
->Aucune information d’identification d’authentification n’est requise pour la destination de la zone d’entrée des données. Pour plus d’informations, reportez-vous à la section [Authentification à la destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) de la page de documentation de destination de la zone d’entrée de données.
+>Aucune information d’authentification n’est requise pour la destination Data Landing Zone. Pour plus d’informations, reportez-vous à la section [authentification à la destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#authenticate) de la page de documentation sur la destination Data Landing Zone.
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -996,7 +996,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: <SANDBOX-NAME>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "name": "Data Landing Zone(DLZ) Base Connection"
+  "name": "Data Landing Zone Base Connection",
+  "connectionSpec": {
+    "id": "3567r537-2a7b-4583-ac39-ed38d4b848e8",
+    "version": "1.0"
+  }
 }'
 ```
 
@@ -1004,7 +1008,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Réponse**
 
-+++[!DNL Data Landing Zone] - Réponse de connexion de base
++++[!DNL Data Landing Zone] - Réponse de la connexion de base
 
 ```json
 {
@@ -1019,13 +1023,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Requête**
 
-+++[!DNL Google Cloud Storage] - Requête de connexion de base
++++[!DNL Google Cloud Storage] - Demande de connexion de base
 
 >[!TIP]
 >
->Pour plus d’informations sur la manière d’obtenir les informations d’authentification requises, reportez-vous à la section [ Authentification à la destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) de la page de documentation de destination du stockage dans le cloud Google.
+>Pour plus d’informations sur l’obtention des informations d’authentification requises, reportez-vous à la section [S’authentifier à la destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#authenticate) de la page de documentation sur la destination Google Cloud Storage.
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1055,7 +1059,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Réponse**
 
-+++[!DNL Google Cloud Storage] - Réponse de connexion de base
++++[!DNL Google Cloud Storage] - Réponse de la connexion de base
 
 ```json
 {
@@ -1074,9 +1078,9 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Pour plus d’informations sur la manière d’obtenir les informations d’authentification requises, reportez-vous à la section [Authentification à la destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) de la page de documentation de destination SFTP.
+>Pour plus d’informations sur l’obtention des informations d’authentification requises, reportez-vous à la section [Authentifier à la destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) de la page de documentation de la destination SFTP.
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1105,13 +1109,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++SFTP avec clé SSH - requête de connexion de base
++++SFTP avec clé SSH - Demande de connexion de base
 
 >[!TIP]
 >
->Pour plus d’informations sur la manière d’obtenir les informations d’authentification requises, reportez-vous à la section [Authentification à la destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) de la page de documentation de destination SFTP.
+>Pour plus d’informations sur l’obtention des informations d’authentification requises, reportez-vous à la section [Authentifier à la destination](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) de la page de documentation de la destination SFTP.
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1142,7 +1146,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Réponse**
 
-+++SFTP : réponse de connexion de base
++++SFTP - Réponse de la connexion de base
 
 ```json
 {
@@ -1155,27 +1159,27 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-Notez l’identifiant de connexion de la réponse. Cet identifiant sera requis à l’étape suivante lors de la création de la connexion cible.
+Notez l’ID de connexion à partir de la réponse. Cet identifiant sera requis à l’étape suivante lors de la création de la connexion cible.
 
 ## Créer une connexion cible {#create-target-connection}
 
-![Diagramme affichant l’étape 4 dans le workflow d’exportation des jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
+![Diagramme présentant l’étape 4 du workflow d’exportation des jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
 Ensuite, vous devez créer une connexion cible qui stocke les paramètres d’exportation de vos jeux de données. Les paramètres d’exportation incluent l’emplacement, le format de fichier, la compression et d’autres détails. Reportez-vous aux propriétés `targetSpec` fournies dans la spécification de connexion de la destination pour comprendre les propriétés prises en charge pour chaque type de destination. Référencez les onglets ci-dessous pour les propriétés `targetSpec` de toutes les destinations prises en charge.
 
 >[!IMPORTANT]
 >
->Les exportations vers les fichiers JSON sont prises en charge en mode compressé uniquement. Les exportations vers les fichiers [!DNL Parquet] sont prises en charge en modes compressé et non compressé.
+>Les exportations vers des fichiers JSON sont uniquement prises en charge en mode compressé. Les exportations vers des fichiers [!DNL Parquet] sont prises en charge dans les modes compressé et non compressé.
 >
->Le format du fichier JSON exporté est NDJSON, qui est le format d’échange standard dans l’écosystème de données massives. Adobe recommande d’utiliser un client compatible NDJSON pour lire les fichiers exportés.
+>Le format du fichier JSON exporté est NDJSON, qui est le format d’échange standard dans l’écosystème Big Data. Adobe recommande d’utiliser un client compatible NDJSON pour lire les fichiers exportés.
 
 >[!BEGINTABS]
 
 >[!TAB Amazon S3]
 
-+++[!DNL Amazon S3] - [!DNL Connection spec] présentant les paramètres de connexion cible
++++[!DNL Amazon S3] - [!DNL Connection spec] affichant les paramètres de connexion cible
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple [!DNL connection spec] ci-dessous, qui fournissent des informations supplémentaires sur l’emplacement des paramètres [!DNL target spec] dans la spécification de connexion. Vous pouvez également voir dans l’exemple ci-dessous les paramètres cibles *not* applicables aux destinations d’exportation de jeux de données.
+Notez les lignes mises en surbrillance avec des commentaires intégrés dans l’exemple de [!DNL connection spec] ci-dessous, qui fournissent des informations supplémentaires sur l’emplacement des paramètres de [!DNL target spec] dans la spécification de connexion. Vous pouvez également voir dans l’exemple ci-dessous quels paramètres cibles ne s’appliquent *pas* aux destinations d’exportation de jeux de données.
 
 ```json {line-numbers="true" start-line="1" highlight="10,41,56"}
 {
@@ -1259,9 +1263,9 @@ Notez les lignes surlignées avec des commentaires intégrés dans l’exemple [
 
 >[!TAB Stockage Azure Blob]
 
-+++[!DNL Azure Blob Storage] - [!DNL Connection spec] présentant les paramètres de connexion cible
++++[!DNL Azure Blob Storage] - [!DNL Connection spec] affichant les paramètres de connexion cible
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple [!DNL connection spec] ci-dessous, qui fournissent des informations supplémentaires sur l’emplacement des paramètres [!DNL target spec] dans la spécification de connexion. Vous pouvez également voir dans l’exemple ci-dessous les paramètres cibles *not* applicables aux destinations d’exportation de jeux de données.
+Notez les lignes mises en surbrillance avec des commentaires intégrés dans l’exemple de [!DNL connection spec] ci-dessous, qui fournissent des informations supplémentaires sur l’emplacement des paramètres de [!DNL target spec] dans la spécification de connexion. Vous pouvez également voir dans l’exemple ci-dessous quels paramètres cibles ne s’appliquent *pas* aux destinations d’exportation de jeux de données.
 
 ```json {line-numbers="true" start-line="1" highlight="10,29,44"}
 {
@@ -1332,11 +1336,11 @@ Notez les lignes surlignées avec des commentaires intégrés dans l’exemple [
 +++
 
 
->[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
 
-+++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] présentant les paramètres de connexion cible
++++[!DNL Azure Data Lake Gen 2(ADLS Gen2)] - [!DNL Connection spec] affichant les paramètres de connexion cible
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple [!DNL connection spec] ci-dessous, qui fournissent des informations supplémentaires sur l’emplacement des paramètres [!DNL target spec] dans la spécification de connexion. Vous pouvez également voir dans l’exemple ci-dessous les paramètres cibles *not* applicables aux destinations d’exportation de jeux de données.
+Notez les lignes mises en surbrillance avec des commentaires intégrés dans l’exemple de [!DNL connection spec] ci-dessous, qui fournissent des informations supplémentaires sur l’emplacement des paramètres de [!DNL target spec] dans la spécification de connexion. Vous pouvez également voir dans l’exemple ci-dessous quels paramètres cibles ne s’appliquent *pas* aux destinations d’exportation de jeux de données.
 
 ```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
@@ -1398,11 +1402,11 @@ Notez les lignes surlignées avec des commentaires intégrés dans l’exemple [
 
 +++
 
->[!TAB Zone d’entrée de données (DLZ)]
+>[!TAB Zone d’atterrissage des données (DLZ)]
 
-+++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] présentant les paramètres de connexion cible
++++[!DNL Data Landing Zone(DLZ)] - [!DNL Connection spec] affichant les paramètres de connexion cible
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple [!DNL connection spec] ci-dessous, qui fournissent des informations supplémentaires sur l’emplacement des paramètres [!DNL target spec] dans la spécification de connexion. Vous pouvez également voir dans l’exemple ci-dessous les paramètres cibles *not* applicables aux destinations d’exportation de jeux de données.
+Notez les lignes mises en surbrillance avec des commentaires intégrés dans l’exemple de [!DNL connection spec] ci-dessous, qui fournissent des informations supplémentaires sur l’emplacement des paramètres de [!DNL target spec] dans la spécification de connexion. Vous pouvez également voir dans l’exemple ci-dessous quels paramètres cibles ne s’appliquent *pas* aux destinations d’exportation de jeux de données.
 
 ```json {line-numbers="true" start-line="1" highlight="9,21,36"}
 "items": [
@@ -1465,9 +1469,9 @@ Notez les lignes surlignées avec des commentaires intégrés dans l’exemple [
 
 >[!TAB Google Cloud Storage]
 
-+++[!DNL Google Cloud Storage] - [!DNL Connection spec] présentant les paramètres de connexion cible
++++[!DNL Google Cloud Storage] - [!DNL Connection spec] affichant les paramètres de connexion cible
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple [!DNL connection spec] ci-dessous, qui fournissent des informations supplémentaires sur l’emplacement des paramètres [!DNL target spec] dans la spécification de connexion. Vous pouvez également voir dans l’exemple ci-dessous les paramètres cibles *not* applicables aux destinations d’exportation de jeux de données.
+Notez les lignes mises en surbrillance avec des commentaires intégrés dans l’exemple de [!DNL connection spec] ci-dessous, qui fournissent des informations supplémentaires sur l’emplacement des paramètres de [!DNL target spec] dans la spécification de connexion. Vous pouvez également voir dans l’exemple ci-dessous quels paramètres cibles ne s’appliquent *pas* aux destinations d’exportation de jeux de données.
 
 ```json {line-numbers="true" start-line="1" highlight="10,29,44"}
 {
@@ -1539,9 +1543,9 @@ Notez les lignes surlignées avec des commentaires intégrés dans l’exemple [
 
 >[!TAB SFTP]
 
-+++SFTP - [!DNL Connection spec] présentant les paramètres de connexion cible
++++SFTP - [!DNL Connection spec] affichant les paramètres de connexion cible
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple [!DNL connection spec] ci-dessous, qui fournissent des informations supplémentaires sur l’emplacement des paramètres [!DNL target spec] dans la spécification de connexion. Vous pouvez également voir dans l’exemple ci-dessous les paramètres cibles *not* applicables aux destinations d’exportation de jeux de données.
+Notez les lignes mises en surbrillance avec des commentaires intégrés dans l’exemple de [!DNL connection spec] ci-dessous, qui fournissent des informations supplémentaires sur l’emplacement des paramètres de [!DNL target spec] dans la spécification de connexion. Vous pouvez également voir dans l’exemple ci-dessous quels paramètres cibles ne s’appliquent *pas* aux destinations d’exportation de jeux de données.
 
 ```json {line-numbers="true" start-line="1" highlight="10,22,37"}
 {
@@ -1606,7 +1610,7 @@ Notez les lignes surlignées avec des commentaires intégrés dans l’exemple [
 >[!ENDTABS]
 
 
-En utilisant la spécification ci-dessus, vous pouvez créer une requête de connexion cible spécifique à la destination de stockage dans le cloud souhaitée, comme indiqué dans les onglets ci-dessous.
+En utilisant la spécification ci-dessus, vous pouvez créer une demande de connexion cible spécifique à la destination d’espace de stockage souhaitée, comme illustré dans les onglets ci-dessous.
 
 >[!BEGINTABS]
 
@@ -1614,14 +1618,14 @@ En utilisant la spécification ci-dessus, vous pouvez créer une requête de con
 
 **Requête**
 
-+++[!DNL Amazon S3] - Requête de connexion Target
++++[!DNL Amazon S3] - Demande de connexion cible
 
 >[!TIP]
 >
->Pour plus d’informations sur la manière d’obtenir les paramètres de cible requis, reportez-vous à la section [Remplir les détails de destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) de la page de documentation de destination [!DNL Amazon S3].
->Pour obtenir d’autres valeurs prises en charge de `datasetFileType`, consultez la documentation de référence de l’API.
+>Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) de la page de documentation sur la destination [!DNL Amazon S3].
+>Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1652,7 +1656,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Réponse**
 
-+++Connexion à Target - Réponse
++++Connexion cible - Réponse
 
 ```json
 {
@@ -1667,15 +1671,15 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Requête**
 
-+++[!DNL Azure Blob Storage] - Requête de connexion Target
++++[!DNL Azure Blob Storage] - Demande de connexion cible
 
 >[!TIP]
 >
->Pour plus d’informations sur la manière d’obtenir les paramètres de cible requis, reportez-vous à la section [Remplir les détails de destination](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) de la page de documentation de destination [!DNL Azure Blob Storage].
->Pour obtenir d’autres valeurs prises en charge de `datasetFileType`, consultez la documentation de référence de l’API.
+>Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) de la page de documentation sur la destination [!DNL Azure Blob Storage].
+>Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1706,7 +1710,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Réponse**
 
-+++Connexion à Target - Réponse
++++Connexion cible - Réponse
 
 ```json
 {
@@ -1717,18 +1721,18 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
 
 **Requête**
 
-+++[!DNL Azure Blob Storage] - Requête de connexion Target
++++[!DNL Azure Blob Storage] - Demande de connexion cible
 
 >[!TIP]
 >
->Pour plus d’informations sur la manière d’obtenir les paramètres de cible requis, reportez-vous à la section [Remplir les détails de destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) de la page de documentation de destination Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
->Pour obtenir d’autres valeurs prises en charge de `datasetFileType`, consultez la documentation de référence de l’API.
+>Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) de la page de documentation sur la destination Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
+>Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1758,7 +1762,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Réponse**
 
-+++Connexion à Target - Réponse
++++Connexion cible - Réponse
 
 ```json
 {
@@ -1769,18 +1773,18 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Zone d’entrée de données (DLZ)]
+>[!TAB Zone d’atterrissage des données (DLZ)]
 
 **Requête**
 
-+++[!DNL Data Landing Zone] - Requête de connexion Target
++++[!DNL Data Landing Zone] - Demande de connexion cible
 
 >[!TIP]
 >
->Pour plus d’informations sur la manière d’obtenir les paramètres de cible requis, reportez-vous à la section [Remplir les détails de destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) de la page de documentation de destination [!DNL Data Landing Zone].
->Pour obtenir d’autres valeurs prises en charge de `datasetFileType`, consultez la documentation de référence de l’API.
+>Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) de la page de documentation sur la destination [!DNL Data Landing Zone].
+>Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1810,7 +1814,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Réponse**
 
-+++Connexion à Target - Réponse
++++Connexion cible - Réponse
 
 ```json
 {
@@ -1825,15 +1829,15 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Requête**
 
-+++[!DNL Google Cloud Storage] - Requête de connexion Target
++++[!DNL Google Cloud Storage] - Demande de connexion cible
 
 >[!TIP]
 >
->Pour plus d’informations sur la manière d’obtenir les paramètres de cible requis, reportez-vous à la section [Remplir les détails de destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la page de documentation de destination [!DNL Google Cloud Storage].
->Pour obtenir d’autres valeurs prises en charge de `datasetFileType`, consultez la documentation de référence de l’API.
+>Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la page de documentation sur la destination [!DNL Google Cloud Storage].
+>Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1864,7 +1868,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Réponse**
 
-+++Connexion à Target - Réponse
++++Connexion cible - Réponse
 
 ```json
 {
@@ -1879,14 +1883,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Requête**
 
-+++SFTP - Demande de connexion Target
++++SFTP - Demande de connexion cible
 
 >[!TIP]
 >
->Pour plus d’informations sur la manière d’obtenir les paramètres de cible requis, reportez-vous à la section [Remplir les détails de destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la page de documentation de destination SFTP.
->Pour obtenir d’autres valeurs prises en charge de `datasetFileType`, consultez la documentation de référence de l’API.
+>Pour plus d’informations sur l’obtention des paramètres cibles requis, reportez-vous à la section [renseigner les détails de la destination](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de la page de documentation sur la destination SFTP.
+>Pour d’autres valeurs de `datasetFileType` prises en charge, consultez la documentation de référence de l’API .
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1916,7 +1920,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Réponse**
 
-+++Connexion à Target - Réponse
++++Connexion cible - Réponse
 
 ```json
 {
@@ -1929,13 +1933,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-Notez l’identifiant de connexion Target de la réponse. Cet identifiant sera requis à l’étape suivante lors de la création du flux de données pour exporter des jeux de données.
+Notez l’ID de connexion cible dans la réponse. Cet identifiant sera requis à l’étape suivante lors de la création du flux de données pour exporter des jeux de données.
 
 ## Créer un flux de données {#create-dataflow}
 
-![Diagramme affichant l’étape 5 dans le workflow d’exportation des jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-set-up-dataflow.png)
+![Diagramme présentant l’étape 5 dans le workflow d’exportation des jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-set-up-dataflow.png)
 
-La dernière étape de la configuration de destination consiste à configurer un flux de données. Un flux de données relie des entités créées précédemment et fournit également des options pour configurer le planning d’exportation du jeu de données. Pour créer le flux de données, utilisez les payloads ci-dessous, en fonction de la destination de stockage dans le cloud souhaitée, et remplacez les identifiants d’entité des étapes précédentes.
+La dernière étape de la configuration de destination consiste à configurer un flux de données. Un flux de données relie des entités créées précédemment et fournit également des options pour configurer le planning d’exportation du jeu de données. Pour créer le flux de données, utilisez les payloads ci-dessous, en fonction de la destination d’espace de stockage souhaitée, et remplacez les ID d’entité des étapes précédentes.
 
 >[!BEGINTABS]
 
@@ -1943,9 +1947,9 @@ La dernière étape de la configuration de destination consiste à configurer un
 
 **Requête**
 
-+++Créer un flux de données de jeu de données vers la destination [!DNL Amazon S3] - Requête
++++Créer un flux de données de jeu de données vers [!DNL Amazon S3] destination - Requête
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -1985,12 +1989,12 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 
 | Paramètre | Description |
 |---------|----------|
-| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter les fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter les fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel sur l’activation des destinations par lot. Les trois options d’exportation disponibles sont : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` ne peut être utilisé qu’en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes des jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle. <br> **Exports quotidiens incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` : `1` pour les exportations incrémentielles quotidiennes. <br> **Exports horaires incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles horaires. |
-| `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeux de données. |
-| `interval` | Sélectionnez `1` lorsque le `timeUnit` est un jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
+| `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeu de données. |
+| `interval` | Sélectionnez `1` lorsque l’`timeUnit` est jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
 | `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
-| `endTime` | Date et heure, en secondes UNIX, auxquelles l’exportation du jeu de données doit se terminer. |
-| `foldernameTemplate` | Indiquez la structure de nom de dossier attendue dans l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMdd_HHmss.</span></li><li><code>EXPORT_TIME</code> = <span>L’heure planifiée de l’exportation des données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>SANDBOX_NAME</code> = <span>Nom de l’environnement de test.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
+| `endTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent se terminer. |
+| `foldernameTemplate` | Spécifiez la structure de nom de dossier attendue à l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMjj_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Heure planifiée pour l’exportation de données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>NOM_SANDBOX</code> = <span>Nom de l’environnement sandbox.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
 
 {style="table-layout:auto"}
 +++
@@ -2012,9 +2016,9 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 
 **Requête**
 
-+++Créer un flux de données de jeu de données vers la destination [!DNL Azure Blob Storage] - Requête
++++Créer un flux de données de jeu de données vers [!DNL Azure Blob Storage] destination - Requête
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -2054,12 +2058,12 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 
 | Paramètre | Description |
 |---------|----------|
-| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter les fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter les fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel sur l’activation des destinations par lot. Les trois options d’exportation disponibles sont : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` ne peut être utilisé qu’en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes des jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle. <br> **Exports quotidiens incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` : `1` pour les exportations incrémentielles quotidiennes. <br> **Exports horaires incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles horaires. |
-| `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeux de données. |
-| `interval` | Sélectionnez `1` lorsque le `timeUnit` est un jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
+| `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeu de données. |
+| `interval` | Sélectionnez `1` lorsque l’`timeUnit` est jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
 | `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
-| `endTime` | Date et heure, en secondes UNIX, auxquelles l’exportation du jeu de données doit se terminer. |
-| `foldernameTemplate` | Indiquez la structure de nom de dossier attendue dans l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMdd_HHmss.</span></li><li><code>EXPORT_TIME</code> = <span>L’heure planifiée de l’exportation des données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>SANDBOX_NAME</code> = <span>Nom de l’environnement de test.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
+| `endTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent se terminer. |
+| `foldernameTemplate` | Spécifiez la structure de nom de dossier attendue à l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMjj_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Heure planifiée pour l’exportation de données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>NOM_SANDBOX</code> = <span>Nom de l’environnement sandbox.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
 
 {style="table-layout:auto"}
 
@@ -2078,13 +2082,13 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 
 +++
 
->[!TAB Azure Data Lake Gen 2(ADLS Gen2)]
+>[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
 
 **Requête**
 
-+++Créer un flux de données de jeu de données vers la destination [!DNL Azure Data Lake Gen 2(ADLS Gen2)] - Requête
++++Créer un flux de données de jeu de données vers [!DNL Azure Data Lake Gen 2(ADLS Gen2)] destination - Requête
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -2124,12 +2128,12 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 
 | Paramètre | Description |
 |---------|----------|
-| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter les fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter les fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel sur l’activation des destinations par lot. Les trois options d’exportation disponibles sont : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` ne peut être utilisé qu’en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes des jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle. <br> **Exports quotidiens incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` : `1` pour les exportations incrémentielles quotidiennes. <br> **Exports horaires incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles horaires. |
-| `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeux de données. |
-| `interval` | Sélectionnez `1` lorsque le `timeUnit` est un jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
+| `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeu de données. |
+| `interval` | Sélectionnez `1` lorsque l’`timeUnit` est jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
 | `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
-| `endTime` | Date et heure, en secondes UNIX, auxquelles l’exportation du jeu de données doit se terminer. |
-| `foldernameTemplate` | Indiquez la structure de nom de dossier attendue dans l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMdd_HHmss.</span></li><li><code>EXPORT_TIME</code> = <span>L’heure planifiée de l’exportation des données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>SANDBOX_NAME</code> = <span>Nom de l’environnement de test.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
+| `endTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent se terminer. |
+| `foldernameTemplate` | Spécifiez la structure de nom de dossier attendue à l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMjj_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Heure planifiée pour l’exportation de données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>NOM_SANDBOX</code> = <span>Nom de l’environnement sandbox.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
 
 {style="table-layout:auto"}
 
@@ -2148,13 +2152,13 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 
 +++
 
->[!TAB Zone d’entrée de données (DLZ)]
+>[!TAB Zone d’atterrissage des données (DLZ)]
 
 **Requête**
 
-+++Créer un flux de données de jeu de données vers la destination [!DNL Data Landing Zone] - Requête
++++Créer un flux de données de jeu de données vers [!DNL Data Landing Zone] destination - Requête
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -2194,12 +2198,12 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 
 | Paramètre | Description |
 |---------|----------|
-| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter les fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter les fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel sur l’activation des destinations par lot. Les trois options d’exportation disponibles sont : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` ne peut être utilisé qu’en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes des jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle. <br> **Exports quotidiens incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` : `1` pour les exportations incrémentielles quotidiennes. <br> **Exports horaires incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles horaires. |
-| `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeux de données. |
-| `interval` | Sélectionnez `1` lorsque le `timeUnit` est un jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
+| `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeu de données. |
+| `interval` | Sélectionnez `1` lorsque l’`timeUnit` est jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
 | `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
-| `endTime` | Date et heure, en secondes UNIX, auxquelles l’exportation du jeu de données doit se terminer. |
-| `foldernameTemplate` | Indiquez la structure de nom de dossier attendue dans l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMdd_HHmss.</span></li><li><code>EXPORT_TIME</code> = <span>L’heure planifiée de l’exportation des données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>SANDBOX_NAME</code> = <span>Nom de l’environnement de test.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
+| `endTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent se terminer. |
+| `foldernameTemplate` | Spécifiez la structure de nom de dossier attendue à l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMjj_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Heure planifiée pour l’exportation de données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>NOM_SANDBOX</code> = <span>Nom de l’environnement sandbox.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
 
 {style="table-layout:auto"}
 +++
@@ -2221,9 +2225,9 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 
 **Requête**
 
-+++Créer un flux de données de jeu de données vers la destination [!DNL Google Cloud Storage] - Requête
++++Créer un flux de données de jeu de données vers [!DNL Google Cloud Storage] destination - Requête
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -2263,12 +2267,12 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 
 | Paramètre | Description |
 |---------|----------|
-| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter les fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter les fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel sur l’activation des destinations par lot. Les trois options d’exportation disponibles sont : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` ne peut être utilisé qu’en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes des jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle. <br> **Exports quotidiens incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` : `1` pour les exportations incrémentielles quotidiennes. <br> **Exports horaires incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles horaires. |
-| `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeux de données. |
-| `interval` | Sélectionnez `1` lorsque le `timeUnit` est un jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
+| `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeu de données. |
+| `interval` | Sélectionnez `1` lorsque l’`timeUnit` est jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
 | `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
-| `endTime` | Date et heure, en secondes UNIX, auxquelles l’exportation du jeu de données doit se terminer. |
-| `foldernameTemplate` | Indiquez la structure de nom de dossier attendue dans l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMdd_HHmss.</span></li><li><code>EXPORT_TIME</code> = <span>L’heure planifiée de l’exportation des données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>SANDBOX_NAME</code> = <span>Nom de l’environnement de test.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
+| `endTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent se terminer. |
+| `foldernameTemplate` | Spécifiez la structure de nom de dossier attendue à l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMjj_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Heure planifiée pour l’exportation de données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>NOM_SANDBOX</code> = <span>Nom de l’environnement sandbox.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
 
 {style="table-layout:auto"}
 
@@ -2293,7 +2297,7 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 
 +++Créer un flux de données de jeu de données vers la destination SFTP - Requête
 
-Notez les lignes surlignées avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires insérés dans la requête lorsque vous copiez-collez la requête dans votre terminal de votre choix.
+Notez les lignes en surbrillance avec des commentaires intégrés dans l’exemple de requête, qui fournissent des informations supplémentaires. Supprimez les commentaires intégrés dans la requête lors du copier-coller de la requête dans le terminal de votre choix.
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -2333,12 +2337,12 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 
 | Paramètre | Description |
 |---------|----------|
-| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter les fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter les fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel sur l’activation des destinations par lot. Les trois options d’exportation disponibles sont : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` ne peut être utilisé qu’en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes des jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle. <br> **Exports quotidiens incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` : `1` pour les exportations incrémentielles quotidiennes. <br> **Exports horaires incrémentiels** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles horaires. |
-| `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeux de données. |
-| `interval` | Sélectionnez `1` lorsque le `timeUnit` est un jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
+| `exportMode` | Sélectionnez `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Pour plus d’informations sur les deux options, reportez-vous aux sections [Exporter des fichiers complets](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) et [Exporter des fichiers incrémentiels](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) dans le tutoriel consacré à l’activation des destinations par lot. Les trois options d’exportation disponibles sont les suivantes : <br> **Fichier complet - Une fois** : `"DAILY_FULL_EXPORT"` peut uniquement être utilisé en combinaison avec `timeUnit`:`day` et `interval`:`0` pour une exportation complète unique du jeu de données. Les exportations complètes quotidiennes de jeux de données ne sont pas prises en charge. Si vous avez besoin d’exportations quotidiennes, utilisez l’option d’exportation incrémentielle . <br> **Exportations incrémentielles quotidiennes** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` et `interval` :`1` pour les exportations incrémentielles quotidiennes. <br> **Exportations incrémentielles par heure** : sélectionnez `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` et `interval` :`3`,`6`,`9` ou `12` pour les exportations incrémentielles par heure. |
+| `timeUnit` | Sélectionnez `day` ou `hour` selon la fréquence à laquelle vous souhaitez exporter les fichiers de jeu de données. |
+| `interval` | Sélectionnez `1` lorsque l’`timeUnit` est jour et `3`,`6`,`9`,`12` lorsque l’unité de temps est `hour`. |
 | `startTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent commencer. |
-| `endTime` | Date et heure, en secondes UNIX, auxquelles l’exportation du jeu de données doit se terminer. |
-| `foldernameTemplate` | Indiquez la structure de nom de dossier attendue dans l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMdd_HHmss.</span></li><li><code>EXPORT_TIME</code> = <span>L’heure planifiée de l’exportation des données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>SANDBOX_NAME</code> = <span>Nom de l’environnement de test.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
+| `endTime` | Date et heure, en secondes UNIX, auxquelles les exportations de jeux de données doivent se terminer. |
+| `foldernameTemplate` | Spécifiez la structure de nom de dossier attendue à l’emplacement de stockage où les fichiers exportés seront déposés. <ul><li><code>DATASET_ID</code> = <span>Identifiant unique du jeu de données.</span></li><li><code>DESTINATION</code> = <span>Nom de la destination.</span></li><li><code>DATETIME</code> = <span>Date et heure au format aaaaMMjj_HHmmss.</span></li><li><code>EXPORT_TIME</code> = <span>Heure planifiée pour l’exportation de données au format `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>Nom de l’instance spécifique de la destination.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Identifiant unique de l’instance de destination.</span></li><li><code>NOM_SANDBOX</code> = <span>Nom de l’environnement sandbox.</span></li><li><code>ORGANIZATION_NAME</code> = <span>Nom de l’organisation.</span></li></ul> |
 
 {style="table-layout:auto"}
 
@@ -2359,13 +2363,13 @@ Le tableau ci-dessous fournit des descriptions de tous les paramètres de la sec
 
 >[!ENDTABS]
 
-Notez l’identifiant du flux de données de la réponse. Cet identifiant sera requis à l’étape suivante lors de la récupération des exécutions du flux de données pour valider les exportations réussies du jeu de données.
+Notez l’identifiant du flux de données dans la réponse. Cet identifiant est requis à l’étape suivante lors de la récupération des exécutions de flux de données pour valider les exportations réussies du jeu de données.
 
-## Obtention des exécutions de flux de données {#get-dataflow-runs}
+## Obtenir les exécutions du flux de données {#get-dataflow-runs}
 
-![Diagramme affichant l’étape 6 dans le workflow d’exportation des jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-validate-dataflow.png)
+![Diagramme présentant l’étape 6 du workflow d’exportation des jeux de données](../assets/api/export-datasets/export-datasets-api-workflow-validate-dataflow.png)
 
-Pour vérifier les exécutions d’un flux de données, utilisez l’API des exécutions de flux de données :
+Pour vérifier les exécutions d’un flux de données, utilisez l’API d’exécutions de flux de données :
 
 >[!BEGINSHADEBOX]
 
@@ -2373,7 +2377,7 @@ Pour vérifier les exécutions d’un flux de données, utilisez l’API des ex�
 
 +++Obtenir les exécutions de flux de données - Requête
 
-Dans la requête de récupération des exécutions de flux de données, ajoutez en tant que paramètre de requête l’identifiant de flux de données obtenu à l’étape précédente, lors de la création du flux de données.
+Dans la requête pour récupérer les exécutions de flux de données, ajoutez comme paramètre de requête l’identifiant de flux de données que vous avez obtenu à l’étape précédente, lors de la création du flux de données.
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
@@ -2436,11 +2440,11 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 >[!ENDSHADEBOX]
 
-Vous trouverez des informations sur les [différents paramètres renvoyés par l’API Dataflow run](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) dans la documentation de référence de l’API.
+Vous trouverez des informations sur les [différents paramètres renvoyés par l’API d’exécution de flux de données](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflow-runs/operation/getFlowRuns) dans la documentation de référence de l’API.
 
 ## Vérifier l’exportation réussie d’un jeu de données {#verify}
 
-Lors de l’exportation de jeux de données, Experience Platform crée un fichier `.json` ou `.parquet` dans l’emplacement de stockage que vous avez fourni. Attendez-vous à ce qu’un nouveau fichier soit déposé dans votre emplacement de stockage selon le planning d’exportation que vous avez fourni lors de la [création d’un flux de données](#create-dataflow).
+Lors de l’exportation de jeux de données, Experience Platform crée un fichier `.json` ou `.parquet` dans l’emplacement de stockage que vous avez fourni. Attendez-vous à ce qu’un nouveau fichier soit déposé dans votre emplacement de stockage en fonction du planning d’exportation que vous avez fourni lors de la [création d’un flux de données](#create-dataflow).
 
 Experience Platform crée une structure de dossiers dans l’emplacement de stockage que vous avez spécifié, où il dépose les fichiers de jeu de données exportés. Un nouveau dossier est créé pour chaque heure d’exportation, selon le modèle ci-dessous :
 
@@ -2452,27 +2456,27 @@ Le nom de fichier par défaut est généré de manière aléatoire pour garantir
 
 La présence de ces fichiers dans votre emplacement de stockage confirme que l’activation a été réalisée avec succès. Pour comprendre la structure des fichiers exportés, vous pouvez télécharger un exemple de [fichier parquet](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) ou de [fichier JSON](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json).
 
-#### Fichiers de jeux de données compressés {#compressed-dataset-files}
+#### Fichiers de jeu de données compressés {#compressed-dataset-files}
 
-À l’étape [créer une connexion cible](#create-target-connection), vous pouvez sélectionner les fichiers de jeu de données exportés à compresser.
+À l’étape de [création d’une connexion cible](#create-target-connection), vous pouvez sélectionner les fichiers de jeu de données exportés à compresser.
 
-Notez la différence de format de fichier entre les deux types de fichiers, lorsqu’ils sont compressés :
+Notez la différence de format de fichier entre les deux types de fichiers lorsqu’ils sont compressés :
 
-* Lors de l’exportation de fichiers JSON compressés, le format de fichier exporté est `json.gz`
-* Lors de l’exportation de fichiers parquet compressés, le format de fichier exporté est `gz.parquet`
-* Les fichiers JSON peuvent uniquement être exportés en mode compressé.
+* Lors de l’exportation de fichiers JSON compressés, le format du fichier exporté est `json.gz`
+* Lors de l&#39;exportation de fichiers parquet compressés, le format de fichier exporté est `gz.parquet`
+* Les fichiers JSON ne peuvent être exportés qu’en mode compressé.
 
 ## Gestion des erreurs d’API {#api-error-handling}
 
-Les points de terminaison d’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API d’Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur, reportez-vous aux [codes d’état d’API](/help/landing/troubleshooting.md#api-status-codes) et [ erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
+Les points d’entrée de l’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur](/help/landing/troubleshooting.md#api-status-codes) consultez les sections [Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
 
 ## Questions fréquentes {#faq}
 
-Affichez une [liste des questions fréquentes](/help/destinations/ui/export-datasets.md#faq) sur les exportations de jeux de données.
+Consultez une [liste de questions fréquentes](/help/destinations/ui/export-datasets.md#faq) sur les exportations de jeux de données.
 
 ## Étapes suivantes {#next-steps}
 
-En suivant ce tutoriel, vous avez réussi à connecter Platform à l’une de vos destinations de stockage dans le cloud par lots préférées et à configurer un flux de données vers la destination correspondante pour exporter les jeux de données. Consultez les pages suivantes pour plus d’informations, telles que la modification des flux de données existants à l’aide de l’API Flow Service :
+En suivant ce tutoriel, vous avez réussi à connecter Platform à l’une de vos destinations préférées d’espace de stockage par lots dans le cloud et à configurer un flux de données vers la destination correspondante pour exporter des jeux de données. Consultez les pages suivantes pour plus d’informations, telles que la modification des flux de données existants à l’aide de l’API Flow Service :
 
 * [Présentation des destinations](../home.md)
 * [Présentation du catalogue des destinations](../catalog/overview.md)
