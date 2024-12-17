@@ -1,30 +1,32 @@
 ---
-title: Modèle de données HealthCare V2
-description: Découvrez certains cas d’utilisation courants des soins de santé, ainsi que les meilleures classes, groupes de champs associés et types de données à utiliser.
+title: Modèle De Données Des Soins De Santé V2
+description: Découvrez quelques cas d’utilisation courants des soins de santé et les bonnes classes, les groupes de champs associés et les types de données à utiliser.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
-source-git-commit: 8eaff2361e76a7856b3371156ed9fe5c542fec28
+source-git-commit: 8520be2a000edfd2d92bfbc6ebed41b1536fffc1
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '554'
 ht-degree: 4%
 
 ---
 
 # [!UICONTROL Healthcare] Data Model V2
 
-## Groupes de champs et classes {#field-groups}
+## Groupes et classes de champs {#field-groups}
 
-Le tableau suivant décrit les classes recommandées et les groupes de champs de schéma pour plusieurs cas d’utilisation de la santé courants.
+Le tableau suivant décrit les classes et les groupes de champs de schéma recommandés pour plusieurs cas d’utilisation courants des services de santé.
 
 | Cas d’utilisation | Groupes de champs et classes compatibles |
 | --- | --- |
-| **Créer/mettre à jour le patient** : lorsqu’un patient arrive à la réception de l’hôpital, un dossier de patient est établi, y compris des détails démographiques comme un identifiant (facultatif), le nom du patient, sa date de naissance, son sexe et son adresse. Il s’agit là d’une composante essentielle de l’informatique des soins de santé. | <ul><li>**[Profils XDM individuels](../../classes/individual-profile.md)** :<ul><li>[Patient](./field-groups/patient.md)</li></ul></li></ul> |
-| **Vaccination** : Faciliter le processus de vaccination, gérer les dossiers d&#39;immunisation des patients et intégrer les DME aux systèmes de gestion des vaccins. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Vaccination](./field-groups/immunization.md)</li></ul></li><li>**[XDM Individual Profile](../../classes/individual-profile.md)** :<ul><li>[Dépense de médicaments](./field-groups/medication-dispense.md)</li><li>[Demande de médicaments](./field-groups/medication-request.md)</li><li>[Patient](./field-groups/patient.md)</li></ul></li><li>**[Location](./classes/location.md)** :<ul><li>[Emplacement](./field-groups/location.md)</li></ul><li>**[Medication](../../classes/medication.md)** :<ul><li>[Medication](./field-groups/medication.md)</li><li>[Dépense de médicaments](./field-groups/medication-dispense.md)</li><li>[Demande de médicaments](./field-groups/medication-request.md)</li></ul></li><li>**[Provider](../../classes/provider.md)** :<ul><li>[Dépense de médicaments](./field-groups/medication-dispense.md)</li><li>[Demande de médicaments](./field-groups/medication-request.md)</li></ul></li></ul> |
-| **Respect des post-soins** : motiver les patients et les prestataires à compléter leurs plans de traitement et à réduire les taux de transferts. | <ul><li>**[XDM Individual Profile](../../classes/individual-profile.md)** :<ul><li>[Plan d’assistance](./field-groups/care-plan.md)</li><li>[Objectif](./field-groups/goal.md)</li><li>[Patient](./field-groups/patient.md)</li></ul></li><li>**[Location](./classes/location.md)** :<ul><li>[Emplacement](./field-groups/location.md)</li></ul><li>**[Provider](../../classes/provider.md)** :<ul><li>[Objectif](./field-groups/goal.md)</li></ul></li></ul> |
-| **Expérience client pour l’assurance** : améliorez l’acquisition numérique et les expériences client pour les achats d’assurance. Par exemple : <li> Comprendre le comportement des consommateurs lorsqu’ils envoient des emails promotionnels ou des annonces tierces ciblées à des personnes qui accèdent à des pages contenant des informations générales (comme les plans, les noms/niveaux des plans, Medicaid ou les programmes de bien-être)</li><li> Envoi d&#39;informations relatives au vaccin sur la santé cardiaque afin de créer une prise de conscience de la marque ou de demandes de planification de vaccins aux personnes qui recherchent des informations sur la santé cardiaque et le vaccin. </li> | <ul><li>**[XDM Individual Profile](../../classes/individual-profile.md)** :<ul><li>[Compte](./field-groups/account.md)</li><li>[Dépense de médicaments](./field-groups/medication-dispense.md)</li><li>[Demande de médicaments](./field-groups/medication-request.md)</li><li>[Patient](./field-groups/patient.md)</li></ul></li><li>**[Location](./classes/location.md)** :<ul><li>[Emplacement](./field-groups/location.md)</li></ul><li>**[Medication](../../classes/medication.md)** :<ul><li>[Medication](./field-groups/medication.md)</li><li>[Dépense de médicaments](./field-groups/medication-dispense.md)</li><li>[Demande de médicaments](./field-groups/medication-request.md)</li></ul></li><li>**[Provider](../../classes/provider.md)** :<ul><li>[Compte](./field-groups/account.md)</li><li>[Dépense de médicaments](./field-groups/medication-dispense.md)</li><li>[Demande de médicaments](./field-groups/medication-request.md)</li></ul><li>**[Plan](../../classes/plan.md)** :<ul><li>[Objectif](./field-groups/coverage.md)</li></ul></li></ul> |
-| **Amélioration de l’expérience du fournisseur** : utilisation des données du fournisseur du système EMR pour suggérer d’autres fournisseurs en fonction de la disponibilité, de l’emplacement et de la spécialité du rendez-vous. <br> <br> Amélioration des recherches de fournisseurs pour afficher les résultats avec la disponibilité souhaitée, vérification que le fournisseur sélectionné fait partie du réseau de payeurs et estimation des coûts. | <ul><li>**[Profils XDM individuels](../../classes/individual-profile.md)** :<ul><li>[Organisation](./field-groups/organization.md)</li><li>[Patient](./field-groups/patient.md)</li><li>[Praticien](./field-groups/practioner.md)</li><li>[Planning](./field-groups/schedule.md)</li></ul></li><li>**[Location](./classes/location.md)** :<ul><li>[Emplacement](./field-groups/location.md)</li></ul><li>**[Provider](../../classes/provider.md)** :<ul><li>[Organisation](./field-groups/organization.md)</li><li>[Praticien](./field-groups/practioner.md)</li><li>[Planning](./field-groups/schedule.md)</li></ul></li></ul> |
+| **Créer/mettre à jour un patient** : lorsqu&#39;un patient arrive à la réception de l&#39;hôpital, un dossier patient est établi, y compris les détails démographiques tels qu&#39;un identifiant (facultatif), le nom du patient, sa date de naissance, son sexe et son adresse. Il s’agit d’un composant essentiel de l’informatique des soins de santé. | <ul><li>**[Profils individuels XDM](../../classes/individual-profile.md)** :<ul><li>[Patient](./field-groups/patient.md)</li></ul></li></ul> |
+| **Vaccination** : Faciliter le processus de vaccination, gérer les dossiers de vaccination des patients et intégrer les DME aux systèmes de gestion des vaccins. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)** :<ul><li>[Immunisation](./field-groups/immunization.md)</li></ul></li><li>**[Profil individuel XDM](../../classes/individual-profile.md)** :<ul><li>[Distribution de médicaments](./field-groups/medication-dispense.md)</li><li>[Demande de médicaments](./field-groups/medication-request.md)</li><li>[Patient](./field-groups/patient.md)</li></ul></li><li>**[Emplacement](./classes/location.md)** :<ul><li>[Emplacement](./field-groups/location.md)</li></ul><li>**[Médicaments](../../classes/medication.md)** :<ul><li>[Médicaments](./field-groups/medication.md)</li><li>[Distribution de médicaments](./field-groups/medication-dispense.md)</li><li>[Demande de médicaments](./field-groups/medication-request.md)</li></ul></li><li>**[Fournisseur](../../classes/provider.md)** :<ul><li>[Distribution de médicaments](./field-groups/medication-dispense.md)</li><li>[Demande de médicaments](./field-groups/medication-request.md)</li></ul></li></ul> |
+| **Observance post-traitement** : inciter les patients et les soignants à compléter leurs plans de traitement et à réduire les taux de transfert de fonds. | <ul><li>**[Profil individuel XDM](../../classes/individual-profile.md)** :<ul><li>[Plan de soins](./field-groups/care-plan.md)</li><li>[Objectif](./field-groups/goal.md)</li><li>[Patient](./field-groups/patient.md)</li></ul></li><li>**[Emplacement](./classes/location.md)** :<ul><li>[Emplacement](./field-groups/location.md)</li></ul><li>**[Fournisseur](../../classes/provider.md)** :<ul><li>[Objectif](./field-groups/goal.md)</li></ul></li></ul> |
+| **Expérience client pour l’assurance** : améliorez l’acquisition numérique et les expériences des consommateurs qui achètent une assurance. Par exemple : <li> Comprendre le comportement des consommateurs pour envoyer des e-mails promotionnels ou des annonces tierces ciblées aux personnes qui accèdent à des pages contenant des informations générales (telles que les plans, les noms/niveaux de plan, Medicaid ou les programmes de bien-être)</li><li> Envoyer des informations sur la santé cardiaque liées aux vaccins pour sensibiliser la marque ou demander de programmer des vaccins aux personnes qui recherchent des informations sur la santé cardiaque et les vaccins. </li> | <ul><li>**[Profil individuel XDM](../../classes/individual-profile.md)** :<ul><li>[Compte](./field-groups/account.md)</li><li>[Distribution de médicaments](./field-groups/medication-dispense.md)</li><li>[Demande de médicaments](./field-groups/medication-request.md)</li><li>[Patient](./field-groups/patient.md)</li></ul></li><li>**[Emplacement](./classes/location.md)** :<ul><li>[Emplacement](./field-groups/location.md)</li></ul><li>**[Médicaments](../../classes/medication.md)** :<ul><li>[Médicaments](./field-groups/medication.md)</li><li>[Distribution de médicaments](./field-groups/medication-dispense.md)</li><li>[Demande de médicaments](./field-groups/medication-request.md)</li></ul></li><li>**[Fournisseur](../../classes/provider.md)** :<ul><li>[Compte](./field-groups/account.md)</li><li>[Distribution de médicaments](./field-groups/medication-dispense.md)</li><li>[Demande de médicaments](./field-groups/medication-request.md)</li></ul><li>**[Planifier](../../classes/plan.md)** :<ul><li>[Objectif](./field-groups/coverage.md)</li></ul></li></ul> |
+| **Expérience améliorée du fournisseur** : utilisation des données des fournisseurs du système EMR pour suggérer d’autres fournisseurs en fonction de la disponibilité du rendez-vous, du lieu et de la spécialité. <br> <br>Amélioration des recherches de fournisseurs pour afficher les résultats avec la disponibilité souhaitée, vérification que le fournisseur sélectionné fait partie du réseau payeur et fourniture d&#39;estimations de coûts. | <ul><li>**[Profils individuels XDM](../../classes/individual-profile.md)** :<ul><li>[Rendez-vous](./field-groups/appointment.md)</li><li>[Organisation](./field-groups/organization.md)</li><li>[Patient](./field-groups/patient.md)</li><li>[Praticien](./field-groups/practioner.md)</li><li>[Planning](./field-groups/schedule.md)</li></ul></li><li>**[Emplacement](./classes/location.md)** :<ul><li>[Emplacement](./field-groups/location.md)</li></ul><li>**[Fournisseur](../../classes/provider.md)** :<ul><li>[Rendez-vous](./field-groups/appointment.md)</li><li>[Organisation](./field-groups/organization.md)</li><li>[Praticien](./field-groups/practioner.md)</li><li>[Planning](./field-groups/schedule.md)</li></ul></li></ul> |
+
+{style="table-layout:auto"}
 
 ## Types de données {#data-types}
 
@@ -32,26 +34,26 @@ Le tableau suivant décrit les types de données créés conformément aux spéc
 
 | Nom | Description |
 | --- | --- |
-| [[!UICONTROL Adresse]](./data-types/address.md) | Décrit une adresse exprimée à l&#39;aide de conventions postales (par opposition au GPS ou à d&#39;autres formats de définition de localisation). |
-| [[!UICONTROL Annotation]](./data-types/annotation.md) | Noeud de texte avec attribution à l’auteur. |
-| [[!UICONTROL Disponibilité]](./data-types/availability.md) | Données de disponibilité d’un élément. |
-| [[!UICONTROL Concept codeable]](./data-types/codeable-concept.md) | Référence d’une ressource à une autre. |
-| [[!UICONTROL Référence codeable]](./data-types/codeable-reference.md) | Référence à une ressource ou à un concept. |
-| [[!UICONTROL Coding]](./data-types/coding.md) | Référence à un code défini par un système terminologique. |
-| [[!UICONTROL Point de contact]](./data-types/contact-point.md) | Coordonnées d’une personne. |
-| [[!UICONTROL Dosage]](./data-types/dosage.md) | Comment le médicament est-il pris ou doit-il être pris ? |
+| [[!UICONTROL Adresse]](./data-types/address.md) | Décrit une adresse exprimée à l’aide de conventions postales (par opposition au GPS ou à d’autres formats de définition d’emplacement). |
+| [[!UICONTROL Annotation]](./data-types/annotation.md) | Nœud de texte avec attribution à l’auteur. |
+| [[!UICONTROL Disponibilité]](./data-types/availability.md) | Données de disponibilité d&#39;un article. |
+| [[!UICONTROL Concept codable]](./data-types/codeable-concept.md) | Référence d’une ressource à une autre. |
+| [[!UICONTROL Référence codable]](./data-types/codeable-reference.md) | Référence à une ressource ou à un concept. |
+| [[!UICONTROL Codage]](./data-types/coding.md) | Référence à un code défini par un système terminologique. |
+| [[!UICONTROL  Point de contact ]](./data-types/contact-point.md) | Coordonnées d’une personne. |
+| [[!UICONTROL Posologie]](./data-types/dosage.md) | Comment le médicament est/a été pris ou doit être pris. |
 | [[!UICONTROL Durée]](./data-types/duration.md) | Une durée. |
-| [[!UICONTROL  {Extended Contact Details]](./data-types/extended-contact-detail.md) | les informations d’un contact étendu. |
-| [[!UICONTROL Nom de l’homme]](./data-types/human-name.md) | Informations sur le nom d’un être humain ou d’une autre entité vivante. |
+| [[!UICONTROL Détails de contact étendus]](./data-types/extended-contact-detail.md) | Informations sur le contact étendu. |
+| [[!UICONTROL Nom Humain]](./data-types/human-name.md) | Informations sur le nom d’un être humain ou d’une autre entité vivante. |
 | [[!UICONTROL Identifiant]](./data-types/identifier.md) | Identifiant destiné au calcul. |
-| [[!UICONTROL Money]](./data-types/money.md) | Une quantité d&#39;utilité économique dans une monnaie reconnue. |
-| [[!UICONTROL Période]](./data-types/period.md) | Une période définie par une date/heure de début et de fin. |
-| [[!UICONTROL Personne]](./data-types/person.md) | Informations sur un enregistrement de personne générique. |
-| [[!UICONTROL Quantity]](./data-types/quantity.md) | Montant mesuré ou mesurable. |
-| [[!UICONTROL Plage]](./data-types/range.md) | Ensemble de valeurs liées par des valeurs élevées et faibles. |
-| [[!UICONTROL Ratio]](./data-types/ratio.md) | Un ratio de deux valeurs [[!UICONTROL Quantity]](./data-types/quantity.md) via un numérateur et un dénominateur. |
+| [[!UICONTROL Argent]](./data-types/money.md) | Une quantité d&#39;utilité économique dans une monnaie reconnue. |
+| [[!UICONTROL Période]](./data-types/period.md) | Période définie par une date/heure de début et de fin. |
+| [[!UICONTROL  Personne ]](./data-types/person.md) | Informations sur un enregistrement de personne générique. |
+| [[!UICONTROL Quantité]](./data-types/quantity.md) | Une quantité mesurée ou mesurable. |
+| [[!UICONTROL Plage]](./data-types/range.md) | Ensemble de valeurs liées par des valeurs faibles et élevées. |
+| [[!UICONTROL Rapport]](./data-types/ratio.md) | Rapport de deux valeurs [[!UICONTROL Quantité]](./data-types/quantity.md) via un numérateur et un dénominateur. |
 | [[!UICONTROL Référence]](./data-types/reference.md) | Référence d’une ressource à une autre. |
-| [[!UICONTROL Répéter]](./data-types/repeat.md) | Ensemble de règles qui décrivent le moment où un événement est planifié. |
-| [[!UICONTROL Quantité simple]](./data-types/simple-quantity.md) | Montant mesuré ou mesurable. |
-| [[!UICONTROL Minutage]](./data-types/timing.md) | Informations sur un événement qui peut se produire plusieurs fois. |
-| [[!UICONTROL Détails du service virtuel]](./data-types/virtual-service-detail.md) | Détails des contacts du service virtuel. |
+| [[!UICONTROL Répéter]](./data-types/repeat.md) | Ensemble de règles qui décrit le moment où un événement est planifié. |
+| [[!UICONTROL Quantité simple]](./data-types/simple-quantity.md) | Une quantité mesurée ou mesurable. |
+| [[!UICONTROL Planning]](./data-types/timing.md) | Informations sur un événement pouvant se produire plusieurs fois. |
+| [[!UICONTROL Détails du service virtuel]](./data-types/virtual-service-detail.md) | Détails de contact du service virtuel. |
