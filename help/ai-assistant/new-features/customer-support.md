@@ -2,7 +2,8 @@
 title: Assistant AI pour le service clientèle
 description: Découvrez comment utiliser l’assistant AI pour rationaliser la résolution des problèmes et le processus de classement des tickets du service clientèle.
 badge: Alpha
-source-git-commit: 746c40902a052f99db28a629a8e9c4da0559037f
+exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
+source-git-commit: 88c4ba5fd7d5cd4fdd1e1da3f2eac43b03149e5e
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -36,7 +37,7 @@ Obtenez des réponses instantanées aux questions d’assistance les plus couran
 * **Documentation juridique du produit** qui fournit des informations précises et axées sur les licences.
    * Exemples de questions :
       * « Quelle est la limite pour les tâches de segmentation par lots dans l’activation de Adobe Experience Platform ? »
-« Quelle est la limite de richesse moyenne des profils dans l’activation de Adobe Experience Platform ? »
+      * « Quelle est la limite de richesse moyenne des profils dans l’activation de Adobe Experience Platform ? »
 
 ## Création de dossier d’assistance
 
