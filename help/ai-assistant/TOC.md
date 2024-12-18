@@ -2,29 +2,30 @@
 audience: user
 user-guide-title: Assistant IA dans le guide Adobe Experience Platform
 user-guide-description: Découvrez comment utiliser l’Assistant IA pour accélérer votre workflow avec Adobe Experience Platform et Real-time Customer Data Platform.
-description: Ce document répertorie la table des matières de l’assistant d’IA dans Adobe Experience Platform.
+description: Ce document répertorie la table des matières de l’assistant AI dans Adobe Experience Platform.
 role: Admin,User,Developer,Leader
-source-git-commit: 3d16118367c4eab1aea61efd943fe0773b756a98
+source-git-commit: ed09335f7b703be49ed08448ed03ed7bc91831f1
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 31%
+source-wordcount: '102'
+ht-degree: 30%
 
 ---
 
 
-# Assistant IA dans Adobe Experience Platform {#ai-assistant}
+# Assistant AI dans Adobe Experience Platform {#ai-assistant}
 
-* [Documentation du produit de l’assistant IA](landing.md)
+* [Documentation du produit Assistant AI](landing.md)
 * [Présentation de l’assistant AI](home.md)
 * [Accès aux fonctionnalités](access.md)
-* [Guide de questions pour l’assistant d’IA](questions.md)
-* [Guide de l’interface utilisateur de l’assistant IA](ui-guide.md)
+* [Guide de questions pour l’assistant IA](questions.md)
+* [Guide de l’interface utilisateur de l’assistant AI](ui-guide.md)
 * [Confidentialité, sécurité et gouvernance](privacy.md)
 * [FAQ](faq.md)
 * Nouvelles fonctionnalités {#new-features}
    * [Fonctionnalités de l’assistant AI dans Alpha et Beta](./new-features/alpha-beta.md)
-   * [Surveiller les modifications importantes et les audiences de prévision](./new-features/audience-forecasting.md)
-   * [Estimation du langage naturel](./new-features/natural-language.md)
-   * [Découverte de champs XDM pour la création d’audiences](./new-features/xdm-field-discovery.md)
+   * [Assistant AI pour le service clientèle](./new-features/customer-support.md)
+   * [Surveiller les modifications importantes et les audiences prévues](./new-features/audience-forecasting.md)
+   * [Estimation en langage naturel](./new-features/natural-language.md)
+   * [Découverte des champs XDM pour la création d’audiences](./new-features/xdm-field-discovery.md)
 * [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
 
