@@ -4,7 +4,8 @@ description: Découvrez le groupe de champs de schéma Rendez-vous .
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: 2a58f6f1663e95c1c7576cd4909fa937b41ae099
+exl-id: 8224a2ee-51ac-4512-b0e4-5f1ab6bfddc4
+source-git-commit: cb39966de77846758c16153f78fcf521f6a421e3
 workflow-type: tm+mt
 source-wordcount: '1227'
 ht-degree: 5%
@@ -120,3 +121,4 @@ Pour plus d’informations sur le groupe de champs , consultez le référentiel 
 | [!UICONTROL énième semaine du mois] | `nthWeekOfMonth` | [[!UICONTROL Codage]](../data-types/coding.md) | Indique la nième semaine du mois au cours de laquelle le rendez-vous doit avoir lieu. |
 | [!UICONTROL  Jour Du Mois ] | `dayOfMonth` | Nombre entier | Indique que les rendez-vous doivent avoir lieu ce jour spécifique du mois. |
 | [!UICONTROL Intervalle mensuel] | `monthInterval` | Nombre entier | Indique que les rendez-vous récurrents doivent avoir lieu tous les mois. |
+

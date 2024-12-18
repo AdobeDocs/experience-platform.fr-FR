@@ -5,7 +5,7 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
-source-git-commit: 8520be2a000edfd2d92bfbc6ebed41b1536fffc1
+source-git-commit: cb39966de77846758c16153f78fcf521f6a421e3
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 4%
@@ -57,3 +57,4 @@ Le tableau suivant décrit les types de données créés conformément aux spéc
 | [[!UICONTROL Quantité simple]](./data-types/simple-quantity.md) | Une quantité mesurée ou mesurable. |
 | [[!UICONTROL Planning]](./data-types/timing.md) | Informations sur un événement pouvant se produire plusieurs fois. |
 | [[!UICONTROL Détails du service virtuel]](./data-types/virtual-service-detail.md) | Détails de contact du service virtuel. |
+
