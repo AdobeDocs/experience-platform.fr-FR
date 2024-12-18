@@ -4,9 +4,9 @@ title: Exporter des jeux de données à l’aide de l’API Flow Service
 description: Découvrez comment utiliser l’API Flow Service pour exporter des jeux de données vers des destinations sélectionnées.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 3bce663866e7a6e8288444121331fc931a74076a
+source-git-commit: 6f8922f972546d8cceeba63e1bb4d1a75f7ef5c3
 workflow-type: tm+mt
-source-wordcount: '5138'
+source-wordcount: '5146'
 ht-degree: 11%
 
 ---
@@ -2469,6 +2469,10 @@ Notez la différence de format de fichier entre les deux types de fichiers lorsq
 ## Gestion des erreurs d’API {#api-error-handling}
 
 Les points d’entrée de l’API de ce tutoriel suivent les principes généraux des messages d’erreur de l’API Experience Platform. Pour plus d’informations sur l’interprétation des réponses d’erreur](/help/landing/troubleshooting.md#api-status-codes) consultez les sections [Codes d’état API et [Erreurs d’en-tête de requête](/help/landing/troubleshooting.md#request-header-errors) dans le guide de dépannage de Platform.
+
+## Limites connues {#known-limitations}
+
+Affichez les [limites connues](/help/destinations/ui/export-datasets.md#known-limitations) à propos des exportations de jeux de données.
 
 ## Questions fréquentes {#faq}
 
