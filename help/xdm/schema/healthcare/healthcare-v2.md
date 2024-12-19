@@ -5,7 +5,7 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
-source-git-commit: cb39966de77846758c16153f78fcf521f6a421e3
+source-git-commit: 6d1745b93d2ad7cf6ef96510bd5128a43de9ef03
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 4%
@@ -26,7 +26,7 @@ Le tableau suivant décrit les classes et les groupes de champs de schéma recom
 | **Expérience client pour l’assurance** : améliorez l’acquisition numérique et les expériences des consommateurs qui achètent une assurance. Par exemple : <li> Comprendre le comportement des consommateurs pour envoyer des e-mails promotionnels ou des annonces tierces ciblées aux personnes qui accèdent à des pages contenant des informations générales (telles que les plans, les noms/niveaux de plan, Medicaid ou les programmes de bien-être)</li><li> Envoyer des informations sur la santé cardiaque liées aux vaccins pour sensibiliser la marque ou demander de programmer des vaccins aux personnes qui recherchent des informations sur la santé cardiaque et les vaccins. </li> | <ul><li>**[Profil individuel XDM](../../classes/individual-profile.md)** :<ul><li>[Compte](./field-groups/account.md)</li><li>[Distribution de médicaments](./field-groups/medication-dispense.md)</li><li>[Demande de médicaments](./field-groups/medication-request.md)</li><li>[Patient](./field-groups/patient.md)</li></ul></li><li>**[Emplacement](./classes/location.md)** :<ul><li>[Emplacement](./field-groups/location.md)</li></ul><li>**[Médicaments](../../classes/medication.md)** :<ul><li>[Médicaments](./field-groups/medication.md)</li><li>[Distribution de médicaments](./field-groups/medication-dispense.md)</li><li>[Demande de médicaments](./field-groups/medication-request.md)</li></ul></li><li>**[Fournisseur](../../classes/provider.md)** :<ul><li>[Compte](./field-groups/account.md)</li><li>[Distribution de médicaments](./field-groups/medication-dispense.md)</li><li>[Demande de médicaments](./field-groups/medication-request.md)</li></ul><li>**[Planifier](../../classes/plan.md)** :<ul><li>[Objectif](./field-groups/coverage.md)</li></ul></li></ul> |
 | **Expérience améliorée du fournisseur** : utilisation des données des fournisseurs du système EMR pour suggérer d’autres fournisseurs en fonction de la disponibilité du rendez-vous, du lieu et de la spécialité. <br> <br>Amélioration des recherches de fournisseurs pour afficher les résultats avec la disponibilité souhaitée, vérification que le fournisseur sélectionné fait partie du réseau payeur et fourniture d&#39;estimations de coûts. | <ul><li>**[Profils individuels XDM](../../classes/individual-profile.md)** :<ul><li>[Rendez-vous](./field-groups/appointment.md)</li><li>[Organisation](./field-groups/organization.md)</li><li>[Patient](./field-groups/patient.md)</li><li>[Praticien](./field-groups/practioner.md)</li><li>[Planning](./field-groups/schedule.md)</li></ul></li><li>**[Emplacement](./classes/location.md)** :<ul><li>[Emplacement](./field-groups/location.md)</li></ul><li>**[Fournisseur](../../classes/provider.md)** :<ul><li>[Rendez-vous](./field-groups/appointment.md)</li><li>[Organisation](./field-groups/organization.md)</li><li>[Praticien](./field-groups/practioner.md)</li><li>[Planning](./field-groups/schedule.md)</li></ul></li></ul> |
 
-{style="table-layout:auto"}
+{style="table-layout:fixed"}
 
 ## Types de données {#data-types}
 
