@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Définir des champs d’identité dans l’interface utilisateur
 description: Découvrez comment définir un champ d’identité dans l’interface utilisateur Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 6020f1c294f123cbf57629405128580efc5642ec
+source-git-commit: 0d16bbbaf81b2057c6b3518a5b8a8698920c36f7
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 16%
+source-wordcount: '651'
+ht-degree: 15%
 
 ---
 
@@ -43,6 +43,10 @@ Des commandes supplémentaires s’affichent après avoir coché la case. Si vou
 Sous **[!UICONTROL Espace de noms d’identité]**, utilisez le menu déroulant pour sélectionner l’espace de noms approprié pour le champ d’identité. Les espaces de noms standard fournis par Adobe sont répertoriés, ainsi que les espaces de noms personnalisés définis par votre organisation.
 
 Lorsque vous avez terminé, sélectionnez **[!UICONTROL Appliquer]** pour appliquer la modification au schéma.
+
+>[!IMPORTANT]
+>
+>Si un champ d’identité principale est déjà défini, vous pouvez modifier le champ d’identité principale de votre schéma en suivant les étapes ci-dessus. Cependant, vous devez désactiver puis réactiver tous les jeux de données associés dans le profil pour que la modification prenne effet.
 
 ![](../../images/ui/fields/special/identity-config.png)
 
