@@ -2,10 +2,10 @@
 title: Présentation d’Audience Portal
 description: Découvrez comment utiliser Audience Portal pour afficher, gérer et créer des audiences dans Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 1aa10d9cbde66a174ddc64ba9ce11149436393c1
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '4557'
-ht-degree: 55%
+source-wordcount: '4571'
+ht-degree: 54%
 
 ---
 
@@ -249,7 +249,7 @@ Une fois les audiences correctes répertoriées, vous pouvez poursuivre la requ�
 
 >[!NOTE]
 >
-Si vous exécutez l’évaluation d’audience flexible sur des audiences qui sont déjà définies pour être activées [après l’évaluation des segments](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), les audiences seront activées dès que la tâche d’évaluation d’audience flexible se terminera, quels que soient les tâches d’activation quotidiennes précédentes.
+Si vous exécutez l’évaluation d’audience flexible, vous devez vous assurer que la fréquence est définie sur **[!UICONTROL Après l’évaluation du segment]**. L’exécution de l’évaluation d’audience flexible sur des audiences déjà définies pour être activées [après l’évaluation des segments](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) active les audiences dès que la tâche d’évaluation d’audience flexible se termine, indépendamment des tâches d’activation quotidiennes précédentes.
 
 ## Détails de l’audience {#audience-details}
 
