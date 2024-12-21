@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guide de l’interface utilisateur de segmentation Edge
 description: Découvrez comment utiliser la segmentation Edge pour évaluer instantanément les définitions de segment dans Platform, en activant les cas d’utilisation de la personnalisation de la même page et de la page suivante.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
+source-git-commit: 828a586f0264147676da5c43c73d3b3b9d50b9c2
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 81%
+source-wordcount: '595'
+ht-degree: 78%
 
 ---
 
@@ -42,7 +42,7 @@ Une requête peut être évaluée avec une segmentation Edge si elle répond à 
 | Profil uniquement | Toute définition de segment qui ne fait référence qu’à un attribut de profil. |
 | Événement unique avec un attribut de profil dans une fenêtre temporelle relative de moins de 24 heures | Toute définition de segment qui fait référence à un seul événement entrant, avec un ou plusieurs attributs de profil, et qui se produit dans une fenêtre temporelle relative de moins de 24 heures. |
 | Segment de segments | Toute définition de segment contenant une ou plusieurs définitions de segment par lots ou en flux continu. **Remarque :** si un segment est utilisé avec des définitions de segment **par lot**, la disqualification du profil peut prendre **jusqu’à 24 heures**. Si un segment de segments est utilisé avec des définitions de segment **streaming**, la disqualification du profil se produit en flux continu. |
-| Plusieurs événements avec un attribut de profil | Toute définition de segment qui fait référence à plusieurs événements **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. |
+| Plusieurs événements avec un attribut de profil | Toute définition de segment qui fait référence à plusieurs événements non séquentiels **au cours des dernières 24 heures** et (éventuellement) comporte un ou plusieurs attributs de profil. |
 
 Une définition de segment ne sera **pas** activée pour la segmentation Edge dans le scénario suivant :
 
