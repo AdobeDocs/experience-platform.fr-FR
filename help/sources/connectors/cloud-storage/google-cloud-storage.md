@@ -1,21 +1,25 @@
 ---
-keywords: Experience Platform;accueil;rubriques les plus consultées;espace de stockage Google;espace de stockage dans le cloud Google
+keywords: Experience Platform;accueil;rubriques populaires;Google Cloud Storage;google cloud storage
 solution: Experience Platform
 title: Présentation du connecteur Source de Google Cloud Storage
-description: Découvrez comment connecter Google Cloud Storage à Adobe Experience Platform à l’aide des API ou de l’interface utilisateur.
+description: Découvrez comment connecter Google Cloud Storage à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: ae22e423119bf378a068349d481f0717a75171bb
+source-git-commit: ee659ded9701132b12d5b93672b4c958e9720028
 workflow-type: tm+mt
-source-wordcount: '565'
-ht-degree: 78%
+source-wordcount: '610'
+ht-degree: 73%
 
 ---
 
 # Connecteur Google Cloud Storage
 
+>[!IMPORTANT]
+>
+>Vous pouvez désormais utiliser la source [!DNL Google Cloud Storage] lors de l’exécution de Adobe Experience Platform sur Amazon Web Services (AWS). Un Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la présentation multi-cloud de [Experience Platform ](../../../landing/multi-cloud.md).
+
 Adobe Experience Platform fournit une connectivité native pour les fournisseurs cloud tels qu’AWS, [!DNL Google Cloud Platform] et [!DNL Azure], ce qui vous permet d’importer vos données à partir de ces systèmes.
 
-Les sources de stockage dans le cloud peuvent introduire vos propres données dans Platform sans avoir à les télécharger, les formater ou les transférer. Les données ingérées peuvent être formatées au format JSON ou Parquet conforme au modèle de données d’expérience (XDM) ou dans un format délimité. Chaque étape du processus est intégrée dans le processus Sources. Platform vous permet d’importer des données de [!DNL Google Cloud Storage] par lots.
+Les sources de stockage dans le cloud peuvent introduire vos propres données dans Platform sans avoir à les télécharger, les formater ou les transférer. Les données ingérées peuvent être formatées au format JSON ou Parquet conforme au modèle de données d’expérience (XDM), ou dans un format délimité. Chaque étape du processus est intégrée dans le processus Sources. Platform vous permet d’importer des données de [!DNL Google Cloud Storage] par lots.
 
 ## Liste autorisée d’adresses IP
 
@@ -37,7 +41,7 @@ Le page **[!UICONTROL Interopérabilité]** contient des informations sur l’au
 
 Vous pouvez utiliser votre identifiant de clé d’accès nouvellement généré et votre clé d’accès secrète pour connecter votre compte [!DNL Google Cloud Storage] à Platform.
 
-Pour plus d’informations, consultez le guide sur la [création et la gestion des clés de compte de service](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) de la documentation [!DNL Google Cloud].
+Pour plus d’informations, consultez le guide sur la [création et gestion des clés de compte de service](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) disponible dans la documentation [!DNL Google Cloud].
 
 ## Contraintes de dénomination pour fichiers et répertoires
 
@@ -56,11 +60,11 @@ La documentation ci-dessous fournit des informations sur la connexion de [!DNL G
 
 ### Utiliser les API
 
-- [Création d’une connexion de base de stockage dans le cloud Google à l’aide de l’API Flow Service](../../tutorials/api/create/cloud-storage/google.md)
+- [Créer une connexion de base Google Cloud Storage à l’aide de l’API Flow Service](../../tutorials/api/create/cloud-storage/google.md)
 - [Explorer la structure de données et le contenu d’une source de stockage dans le cloud à l’aide de l’API Flow Service](../../tutorials/api/explore/cloud-storage.md)
 - [Créer un flux de données pour une source de stockage dans le cloud à l’aide de l’API Flow Service](../../tutorials/api/collect/cloud-storage.md)
 
 ### Utiliser l’interface utilisateur
 
-- [Création d’une connexion source de stockage dans Google Cloud dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+- [Créer une connexion source Google Cloud Storage dans l’interface utilisateur](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
 - [Créer un flux de données pour une connexion de stockage dans le cloud dans l’interface utilisateur](../../tutorials/ui/dataflow/batch/cloud-storage.md)
