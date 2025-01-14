@@ -2,9 +2,9 @@
 title: Présentation du connecteur Source de Salesforce
 description: Découvrez comment connecter Salesforce à Adobe Experience Platform à l’aide d’API ou de l’interface utilisateur.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: ee659ded9701132b12d5b93672b4c958e9720028
+source-git-commit: f62e13e97cc82fef759d06b94337f4cc25d4fb10
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1533'
 ht-degree: 12%
 
 ---
@@ -14,7 +14,6 @@ ht-degree: 12%
 >[!IMPORTANT]
 >
 >Vous pouvez désormais utiliser la source [!DNL Salesforce] lors de l’exécution de Adobe Experience Platform sur Amazon Web Services (AWS). Un Experience Platform s’exécutant sur AWS est actuellement disponible pour un nombre limité de clients. Pour en savoir plus sur l’infrastructure Experience Platform prise en charge, consultez la présentation multi-cloud de [Experience Platform ](../../../landing/multi-cloud.md).
-
 
 Adobe Experience Platform permet d’ingérer des données à partir de sources externes tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform. Vous pouvez ingérer des données provenant de diverses sources telles que les applications Adobe, le stockage dans le cloud, les bases de données, etc.
 
@@ -50,6 +49,8 @@ Pour utiliser la source de [!DNL Salesforce] dans le cadre de [!DNL B2B-CDP], vo
 
 Grâce à la console de développement et à la configuration des [!DNL Postman] de Platform, vous pouvez maintenant commencer à appliquer les valeurs d’environnement appropriées à votre environnement de [!DNL Postman].
 
++++Afficher le guide du tableau des variables
+
 Le tableau suivant contient des exemples de valeurs ainsi que des informations supplémentaires sur la population de votre environnement [!DNL Postman] :
 
 | Variable | Description | Exemple |
@@ -73,6 +74,8 @@ Le tableau suivant contient des exemples de valeurs ainsi que des informations s
 | `has_msi` | Valeur booléenne qui indique si vous êtes abonné aux [!DNL Marketo Sales Insight]. | `false` |
 
 {style="table-layout:auto"}
+
++++
 
 ### Exécution des scripts
 
@@ -124,7 +127,7 @@ openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out c
 4. Activez la case à [!DNL Enable OAuth Settings].
 5. Définissez une URL de rappel. Comme il ne sera pas utilisé pour le jeton JWT, vous pouvez utiliser `https://localhost`.
 6. Activez la case à [!DNL Use Digital Signatures].
-7. Chargez le fichier cert.perm qui a été créé précédemment.
+7. Chargez le fichier cert.pem créé précédemment.
 
 #### Ajout des autorisations requises
 
