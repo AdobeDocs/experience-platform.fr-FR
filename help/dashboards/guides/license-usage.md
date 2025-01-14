@@ -7,7 +7,7 @@ exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 7605ccef8553fc775ea5496c73971f92ed4c06ab
 workflow-type: tm+mt
 source-wordcount: '2947'
-ht-degree: 19%
+ht-degree: 20%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 19%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="Heures de calcul prévues"
->abstract="Votre utilisation peut atteindre la quantité sous licence. Pour évaluer ou réduire vos heures de calcul, accédez à Requêtes > Journal pour consulter l’historique de vos requêtes. Si vous n’avez pas l’autorisation d’accéder à l’espace de travail Requêtes , contactez votre administrateur."
+>abstract="Votre utilisation peut atteindre la quantité sous licence. Pour évaluer ou réduire vos heures de calcul, accédez à Requêtes > Journal pour consulter l’historique de vos requêtes. Si vous n’avez pas l’autorisation d’accéder à l’espace de travail Requêtes, contactez votre administrateur ou administratrice."
 >additional-url="https://experience.adobe.com/#/platform/query/log" text="Espace de travail Journal des requêtes"
 
 >[!CONTEXTUALHELP]
