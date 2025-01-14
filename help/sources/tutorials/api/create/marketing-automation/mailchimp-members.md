@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Créer un flux de données pour les membres Mailchimp à l’aide de l’API Flow Service
 description: Découvrez comment connecter Adobe Experience Platform aux membres MailChimp à l’aide de l’API Flow Service.
 exl-id: 900d4073-129c-47ba-b7df-5294d25a7219
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '2102'
 ht-degree: 86%
@@ -29,7 +29,7 @@ Une connexion de base conserve les informations échangées entre votre source e
 
 ### Créer une connexion de base [!DNL Mailchimp] à l’aide de l’authentification de base
 
-Pour créer une connexion de base [!DNL Mailchimp] à l’aide de l’authentification de base, envoyez une requête de POST au point de terminaison `/connections` de l’API [!DNL Flow Service] tout en fournissant des informations d’identification pour vos `authorizationTestUrl`, `username` et `password`.
+Pour créer une connexion de base [!DNL Mailchimp] à l’aide de l’authentification de base, envoyez une requête de POST au point d’entrée `/connections` de [!DNL Flow Service]’API et indiquez les informations d’identification de votre `authorizationTestUrl`, de votre `username` et de votre `password`.
 
 **Format d’API**
 
@@ -90,7 +90,7 @@ Une réponse réussie renvoie la nouvelle connexion de base, y compris son ident
 
 ### Créer une connexion de base [!DNL Mailchimp] à l’aide du code d’actualisation OAuth 2
 
-Pour créer une connexion de base [!DNL Mailchimp] à l’aide du code d’actualisation OAuth 2, envoyez une requête de POST au point de terminaison `/connections` tout en fournissant des informations d’identification pour vos `authorizationTestUrl` et `accessToken`.
+Pour créer une connexion de base [!DNL Mailchimp] à l’aide du code d’actualisation OAuth 2, envoyez une requête de POST au point d’entrée `/connections` tout en fournissant les informations d’identification pour votre `authorizationTestUrl`, et `accessToken`.
 
 **Format d’API**
 
@@ -401,7 +401,7 @@ Pour obtenir des instructions détaillées sur la création d’un schéma XDM c
 
 ### Créer un jeu de données cible {#target-dataset}
 
-Un jeu de données cible peut être créé en adressant une requête POST à l’[API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) et en fournissant l’identifiant du schéma cible dans la payload.
+Un jeu de données cible peut être créé en adressant une requête POST à l’[API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/) et en fournissant l’identifiant du schéma cible dans la payload.
 
 Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, suivez le tutoriel sur la [création d’un jeu de données à l’aide de l’API](../../../../../catalog/api/create-dataset.md).
 
@@ -620,24 +620,24 @@ Une réponse réussie renvoie l’identifiant (`id`) du flux de données nouvell
 
 ## Annexe
 
-La section suivante fournit des informations sur les étapes de surveillance, de mise à jour et de suppression de votre flux de données.
+La section suivante fournit des informations sur les étapes que vous pouvez suivre pour surveiller, mettre à jour et supprimer votre flux de données.
 
 ### Surveiller votre flux de données
 
-Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs. Pour obtenir des exemples complets d’API, consultez le guide sur la [surveillance des flux de données de sources à l’aide de l’API](../../monitor.md).
+Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs. Pour obtenir des exemples d’API complets, consultez le guide sur la [surveillance des flux de données sources à l’aide de l’API](../../monitor.md).
 
 ### Mettre à jour votre flux de données
 
-Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les ensembles de mappages associés, en envoyant une requête de PATCH au point de terminaison `/flows` de l’API [!DNL Flow Service], tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique `etag` de votre flux de données dans l’en-tête `If-Match`. Pour obtenir des exemples complets d’API, lisez le guide sur la [mise à jour des flux de données de sources à l’aide de l’API](../../update-dataflows.md).
+Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés en envoyant une requête de PATCH au point d’entrée `/flows` de [!DNL Flow Service]’API , tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir le `etag` unique de votre flux de données dans l’en-tête `If-Match`. Pour obtenir des exemples d’API complets, consultez le guide sur la [mise à jour des flux de données sources à l’aide de l’API](../../update-dataflows.md).
 
 ### Mettre à jour votre compte
 
-Mettez à jour le nom, la description et les informations d’identification de votre compte source en adressant une requête de PATCH à l’API [!DNL Flow Service] tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique `etag` de votre compte source dans l’en-tête `If-Match`. Pour obtenir des exemples complets d’API, lisez le guide sur la [mise à jour de votre compte source à l’aide de l’API](../../update.md).
+Mettez à jour le nom, la description et les informations d’identification de votre compte source en adressant une requête de PATCH à l’API [!DNL Flow Service] et en fournissant votre identifiant de connexion de base comme paramètre de requête. Lors de l’exécution d’une requête de PATCH, vous devez indiquer le `etag` unique de votre compte source dans l’en-tête `If-Match`. Pour obtenir des exemples d’API complets, consultez le guide sur la [mise à jour de votre compte source à l’aide de l’API](../../update.md).
 
 ### Supprimer le flux de données
 
-Supprimez votre flux de données en adressant une requête de DELETE à l’API [!DNL Flow Service] tout en fournissant l’identifiant du flux de données que vous souhaitez supprimer dans le cadre du paramètre de requête . Pour obtenir des exemples complets d’API, lisez le guide sur la [suppression de vos flux de données à l’aide de l’API](../../delete-dataflows.md).
+Supprimez votre flux de données en adressant une requête de DELETE à l’API [!DNL Flow Service] et en fournissant l’identifiant du flux de données à supprimer dans le cadre du paramètre de requête. Pour obtenir des exemples d’API complets, consultez le guide sur la [suppression de vos flux de données à l’aide de l’API](../../delete-dataflows.md).
 
-### Suppression de votre compte
+### Supprimer votre compte
 
-Supprimez votre compte en adressant une requête de DELETE à l’API [!DNL Flow Service] tout en fournissant l’identifiant de connexion de base du compte que vous souhaitez supprimer. Pour obtenir des exemples complets d’API, lisez le guide sur la [suppression de votre compte source à l’aide de l’API](../../delete.md).
+Supprimez votre compte en adressant une requête de DELETE à l’API [!DNL Flow Service] et en fournissant l’identifiant de connexion de base du compte que vous souhaitez supprimer. Pour obtenir des exemples d’API complets, consultez le guide sur la [suppression de votre compte source à l’aide de l’API](../../delete.md).

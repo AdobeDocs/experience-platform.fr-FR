@@ -5,7 +5,7 @@ title: Créer un flux de données pour les sources de stockage cloud à l’aide
 type: Tutorial
 description: Ce tutoriel décrit la procédure à suivre pour récupérer des données à partir d’un stockage cloud tiers afin de les importer dans Platform à l’aide des connecteurs source et des API.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1742'
 ht-degree: 69%
@@ -18,7 +18,7 @@ Ce tutoriel décrit la procédure à suivre pour récupérer des données à par
 
 >[!NOTE]
 >
->Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de stockage dans le cloud. Si vous ne disposez pas de cet ID, consultez la [présentation des sources](../../../home.md#cloud-storage) pour obtenir la liste des sources de stockage dans le cloud avec lesquelles vous pouvez créer une connexion de base.
+>Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source d’espace de stockage dans le cloud. Si vous ne disposez pas de cet identifiant, consultez la [présentation des sources](../../../home.md#cloud-storage) pour obtenir une liste des sources d’espace de stockage avec lesquelles vous pouvez créer une connexion de base.
 
 ## Prise en main
 
@@ -37,9 +37,9 @@ Pour plus d’informations sur la manière d’effectuer correctement des appels
 
 ## Créer une connexion source {#source}
 
-Vous pouvez créer une connexion source en envoyant une requête de POST au point de terminaison `sourceConnections` de l’API [!DNL Flow Service] tout en fournissant votre identifiant de connexion de base, le chemin d’accès au fichier source à ingérer et l’identifiant de spécification de connexion correspondant de votre source.
+Vous pouvez créer une connexion source en adressant une requête de POST au point d’entrée `sourceConnections` de [!DNL Flow Service]’API et en fournissant votre identifiant de connexion de base, le chemin d’accès au fichier source à ingérer et l’identifiant de spécification de connexion correspondant à votre source.
 
-Lors de la création d&#39;une connexion source, vous devez également définir une valeur d&#39;énumération pour l&#39;attribut data format.
+Lors de la création d’une connexion source, vous devez également définir une valeur d’énumération pour l’attribut du format de données.
 
 Utilisez les valeurs d’énumération suivantes pour les sources basées sur des fichiers :
 
@@ -92,15 +92,15 @@ curl -X POST \
 
 | Propriété | Description |
 | --- | --- |
-| `baseConnectionId` | Identifiant de connexion de base de votre source de stockage dans le cloud. |
-| `data.format` | Le format des données que vous souhaitez importer dans Platform. Les valeurs prises en charge sont : `delimited`, `JSON` et `parquet`. |
+| `baseConnectionId` | Identifiant de connexion de base de votre source d’espace de stockage dans le cloud. |
+| `data.format` | Format des données que vous souhaitez importer dans Platform. Les valeurs prises en charge sont les suivantes : `delimited`, `JSON` et `parquet`. |
 | `data.properties` | (Facultatif) Ensemble de propriétés que vous pouvez appliquer à vos données lors de la création d’une connexion source. |
-| `data.properties.columnDelimiter` | (Facultatif) Un délimiteur de colonne à un seul caractère que vous pouvez spécifier lors de la collecte de fichiers plats. Toute valeur de caractère unique est un délimiteur de colonne autorisé. Si elle n’est pas fournie, une virgule (`,`) est utilisée comme valeur par défaut. **Remarque** : La propriété `columnDelimiter` ne peut être utilisée que lors de l’ingestion de fichiers délimités. |
-| `data.properties.encoding` | (Facultatif) Une propriété qui définit le type de codage à utiliser lors de l’ingestion de vos données vers Platform. Les types de codage pris en charge sont : `UTF-8` et `ISO-8859-1`. **Remarque** : Le paramètre `encoding` n’est disponible que lors de l’ingestion de fichiers CSV délimités. D’autres types de fichiers seront ingérés avec l’encodage par défaut, `UTF-8`. |
-| `data.properties.compressionType` | (Facultatif) Une propriété qui définit le type de fichier compressé pour l’ingestion. Les types de fichiers compressés pris en charge sont les suivants : `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` et `tar`. **Remarque** : La propriété `compressionType` ne peut être utilisée que lors de l’ingestion de fichiers délimités ou JSON. |
-| `params.path` | Le chemin d’accès au fichier source auquel vous accédez. Ce paramètre pointe vers un fichier individuel ou un dossier entier.  **Remarque** : Vous pouvez utiliser un astérisque à la place du nom de fichier pour spécifier l’ingestion d’un dossier entier. Par exemple : `/acme/summerCampaign/*.csv` ingère l’intégralité du dossier `/acme/summerCampaign/`. |
-| `params.type` | Type de fichier du fichier de données source que vous ingérez. Utilisez le type `file` pour ingérer un fichier individuel et le type `folder` pour ingérer un dossier entier. |
-| `connectionSpec.id` | Identifiant de spécification de connexion associé à votre source de stockage dans le cloud spécifique. Consultez lʼ[annexe](#appendix) pour obtenir la liste des identifiants de spécification de connexion. |
+| `data.properties.columnDelimiter` | (Facultatif) Délimiteur de colonne à un seul caractère que vous pouvez spécifier lors de la collecte de fichiers plats. Toute valeur de caractère unique est un délimiteur de colonne autorisé. Si elle n’est pas fournie, une virgule (`,`) est utilisée comme valeur par défaut. **Remarque** : la propriété `columnDelimiter` ne peut être utilisée que lors de l’ingestion de fichiers délimités. |
+| `data.properties.encoding` | (Facultatif) Propriété qui définit le type de codage à utiliser lors de l’ingestion de vos données dans Platform. Les types de codage pris en charge sont les suivants : `UTF-8` et `ISO-8859-1`. **Remarque** : le paramètre `encoding` n’est disponible que lors de l’ingestion de fichiers CSV délimités. D’autres types de fichiers seront ingérés avec le codage par défaut, `UTF-8`. |
+| `data.properties.compressionType` | (Facultatif) Propriété qui définit le type de fichier compressé à ingérer. Les types de fichiers compressés pris en charge sont les suivants : `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` et `tar`. **Remarque** : la propriété `compressionType` ne peut être utilisée que lors de l’ingestion de fichiers délimités ou JSON. |
+| `params.path` | Chemin d’accès au fichier source auquel vous accédez. Ce paramètre pointe vers un fichier individuel ou un dossier entier.  **Remarque** : vous pouvez utiliser un astérisque à la place du nom de fichier pour spécifier l’ingestion d’un dossier entier. Par exemple : `/acme/summerCampaign/*.csv` ingérera l’intégralité du dossier `/acme/summerCampaign/`. |
+| `params.type` | Type du fichier de données source que vous ingérez. Utilisez le `file` de type pour ingérer un fichier individuel et le `folder` de type pour ingérer un dossier entier. |
+| `connectionSpec.id` | Identifiant de spécification de connexion associé à votre source d’espace de stockage dans le cloud spécifique. Consultez lʼ[annexe](#appendix) pour obtenir la liste des identifiants de spécification de connexion. |
 
 **Réponse**
 
@@ -113,7 +113,7 @@ Une réponse réussie renvoie l’identifiant unique (`id`) de la nouvelle conne
 }
 ```
 
-### Utilisation d’expressions régulières pour sélectionner un ensemble spécifique de fichiers à ingérer {#regex}
+### Utilisez des expressions régulières pour sélectionner un ensemble spécifique de fichiers à ingérer {#regex}
 
 Vous pouvez utiliser des expressions régulières pour ingérer un ensemble particulier de fichiers de votre source vers Platform lors de la création d’une connexion source.
 
@@ -125,7 +125,7 @@ POST /sourceConnections
 
 **Requête**
 
-Dans l’exemple ci-dessous, l’expression régulière est utilisée dans le chemin d’accès au fichier pour spécifier l’ingestion de tous les fichiers CSV dont le nom contient `premium`.
+Dans l’exemple ci-dessous, l’expression régulière est utilisée dans le chemin d’accès du fichier pour spécifier l’ingestion de tous les fichiers CSV dont le nom contient `premium`.
 
 ```shell
 curl -X POST \
@@ -153,9 +153,9 @@ curl -X POST \
   }'
 ```
 
-### Configurer une connexion source pour ingérer les données de manière récursive
+### Configuration d’une connexion source pour ingérer des données de manière récursive
 
-Lors de la création d’une connexion source, vous pouvez utiliser le paramètre `recursive` pour ingérer des données à partir de dossiers profondément imbriqués.
+Lors de la création d’une connexion source, vous pouvez utiliser le paramètre `recursive` pour ingérer des données provenant de dossiers profondément imbriqués.
 
 **Format d’API**
 
@@ -165,7 +165,7 @@ POST /sourceConnections
 
 **Requête**
 
-Dans l’exemple ci-dessous, le paramètre `recursive: true` informe [!DNL Flow Service] de lire tous les sous-dossiers de manière récursive pendant le processus d’ingestion.
+Dans l’exemple ci-dessous, le paramètre `recursive: true` indique aux [!DNL Flow Service] de lire tous les sous-dossiers de manière récursive pendant le processus d’ingestion.
 
 ```shell
 curl -X POST \
@@ -204,7 +204,7 @@ Pour obtenir des instructions détaillées sur la création d’un schéma XDM c
 
 ## Créer un jeu de données cible {#target-dataset}
 
-Un jeu de données cible peut être créé en adressant une requête POST à l’[API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) et en fournissant l’identifiant du schéma cible dans la payload.
+Un jeu de données cible peut être créé en adressant une requête POST à l’[API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/) et en fournissant l’identifiant du schéma cible dans la payload.
 
 Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, suivez le tutoriel sur la [création d’un jeu de données à l’aide de l’API](../../../../catalog/api/create-dataset.md).
 
@@ -254,7 +254,7 @@ curl -X POST \
 | `data.schema.id` | `$id` du schéma XDM cible. |
 | `data.schema.version` | La version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full+json;version=1`, qui renvoie la dernière version mineure du schéma. |
 | `params.dataSetId` | Identifiant du jeu de données cible généré à l’étape précédente. **Remarque** : vous devez fournir un identifiant de jeu de données valide lors de la création d’une connexion cible. Un identifiant de jeu de données non valide entraînera une erreur. |
-| `connectionSpec.id` | Identifiant de spécification de connexion utilisé pour se connecter au lac de données. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | Identifiant de spécification de connexion utilisé pour la connexion au lac de données. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Réponse**
 
@@ -271,7 +271,7 @@ Une réponse réussie renvoie l’identifiant unique de la nouvelle connexion ci
 
 Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache.
 
-Pour créer un jeu de mappages, envoyez une requête POST au point d’entrée `mappingSets` de l’[[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) tout en fournissant votre schéma XDM cible `$id` et les détails des jeux de mappages que vous souhaitez créer.
+Pour créer un jeu de mappages, envoyez une requête POST au point d’entrée `mappingSets` de l’[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/) tout en fournissant votre schéma XDM cible `$id` et les détails des jeux de mappages que vous souhaitez créer.
 
 >[!TIP]
 >
@@ -368,7 +368,7 @@ curl -X GET \
 
 >[!NOTE]
 >
->Le payload de réponse JSON ci-dessous est masqué pour plus de concision. Sélectionnez &quot;payload&quot; pour afficher la payload de réponse.
+>La payload de réponse JSON ci-dessous est masquée par souci de concision. Sélectionnez « payload » pour afficher la payload de réponse.
 
 +++ Afficher la payload
 
@@ -661,7 +661,7 @@ curl -X POST \
 | `transformations.params.mappingId` | L’[identifiant de mappage](#mapping) récupéré lors d’une étape précédente. |
 | `scheduleParams.startTime` | Heure de début du flux de données en temps Unix. |
 | `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. Les valeurs possibles sont les suivantes : `once`, `minute`, `hour`, `day` ou `week`. |
-| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. La valeur minimale de l’intervalle accepté pour chaque fréquence est la suivante :<ul><li>**Une fois** : n/a</li><li>**Minute** : 15</li><li>**Heure** : 1</li><li>**Jour** : 1</li><li>**Semaine** : 1</li></ul> |
+| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. La valeur d’intervalle minimale acceptée pour chaque fréquence est la suivante :<ul><li>**Une fois** : s.o.</li><li>**Minute** : 15</li><li>**Heure** : 1</li><li>**Jour** : 1</li><li>**Semaine** : 1</li></ul> |
 
 **Réponse**
 

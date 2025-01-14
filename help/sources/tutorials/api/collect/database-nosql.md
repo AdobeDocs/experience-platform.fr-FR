@@ -5,7 +5,7 @@ title: Créez un flux de données pour les sources de base de données à l’ai
 type: Tutorial
 description: Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une base de données et les ingérer dans Platform à l’aide des connecteurs source et des API.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1417'
 ht-degree: 88%
@@ -18,8 +18,8 @@ Ce tutoriel décrit les étapes à suivre pour récupérer des données d’une 
 
 >[!NOTE]
 >
->* Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de base de données. Si vous ne disposez pas de cet ID, consultez la [présentation des sources](../../../home.md#database) pour obtenir la liste des sources de base de données avec lesquelles vous pouvez créer une connexion de base de données.
->* Pour que l’Experience Platform puisse ingérer des données, les fuseaux horaires de toutes les sources par lots basées sur un tableau doivent être configurés en UTC. Le seul horodatage pris en charge pour la [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md) est TIMESTAMP_NTZ avec l’heure UTC.
+>* Pour créer un flux de données, vous devez déjà disposer d’un identifiant de connexion de base valide avec une source de base de données. Si vous ne disposez pas de cet identifiant, consultez la [présentation des sources](../../../home.md#database) pour obtenir une liste des sources de base de données avec lesquelles vous pouvez créer une connexion de base.
+>* Pour qu’un Experience Platform ingère des données, les fuseaux horaires de toutes les sources de lots basées sur un tableau doivent être configurés au format UTC. Le seul horodatage pris en charge pour la [[!DNL Snowflake] source](../../../connectors/databases/snowflake.md) est TIMESTAMP_NTZ avec l’heure UTC.
 
 ## Prise en main
 
@@ -137,7 +137,7 @@ Pour obtenir des instructions détaillées sur la création d’un schéma XDM c
 
 ## Créer un jeu de données cible {#target-dataset}
 
-Un jeu de données cible peut être créé en adressant une requête POST à l’[API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) et en fournissant l’identifiant du schéma cible dans la payload.
+Un jeu de données cible peut être créé en adressant une requête POST à l’[API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/) et en fournissant l’identifiant du schéma cible dans la payload.
 
 Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, suivez le tutoriel sur la [création d’un jeu de données à l’aide de l’API](../../../../catalog/api/create-dataset.md).
 
@@ -187,7 +187,7 @@ curl -X POST \
 | `data.schema.id` | `$id` du schéma XDM cible. |
 | `data.schema.version` | La version du schéma. Cette valeur doit être définie sur `application/vnd.adobe.xed-full+json;version=1`, qui renvoie la dernière version mineure du schéma. |
 | `params.dataSetId` | Identifiant du jeu de données cible généré à l’étape précédente. **Remarque** : vous devez fournir un identifiant de jeu de données valide lors de la création d’une connexion cible. Un identifiant de jeu de données non valide entraînera une erreur. |
-| `connectionSpec.id` | Identifiant de spécification de connexion utilisé pour se connecter au lac de données. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | Identifiant de spécification de connexion utilisé pour la connexion au lac de données. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Réponse**
 
@@ -204,7 +204,7 @@ Une réponse réussie renvoie l’identifiant unique de la nouvelle connexion ci
 
 Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache.
 
-Pour créer un jeu de mappage, envoyez une requête POST au point dʼentrée `mappingSets` de lʼ[[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) et indiquez votre schéma XDM cible `$id` et les détails des jeux de mappages que vous souhaitez créer.
+Pour créer un jeu de mappage, envoyez une requête POST au point dʼentrée `mappingSets` de lʼ[[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/) et indiquez votre schéma XDM cible `$id` et les détails des jeux de mappages que vous souhaitez créer.
 
 **Format d’API**
 
@@ -301,7 +301,7 @@ Une réponse réussie renvoie les détails de la spécification du flux de donn�
 
 >[!NOTE]
 >
->Le payload de réponse JSON ci-dessous est masqué pour plus de concision. Sélectionnez &quot;payload&quot; pour afficher la payload de réponse.
+>La payload de réponse JSON ci-dessous est masquée par souci de concision. Sélectionnez « payload » pour afficher la payload de réponse.
 
 +++ Afficher la payload
 
@@ -669,7 +669,7 @@ curl -X POST \
 | `transformations.params.mappingId` | Identifiant de mappage associé à la base de données. |
 | `scheduleParams.startTime` | Heure de début du flux de données en temps Unix. |
 | `scheduleParams.frequency` | Fréquence de collecte des données par le flux de données. Les valeurs possibles sont les suivantes : `once`, `minute`, `hour`, `day` ou `week`. |
-| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. La valeur minimale de l’intervalle accepté pour chaque fréquence est la suivante :<ul><li>**Une fois** : n/a</li><li>**Minute** : 15</li><li>**Heure** : 1</li><li>**Jour** : 1</li><li>**Semaine** : 1</li></ul> |
+| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. La valeur d’intervalle minimale acceptée pour chaque fréquence est la suivante :<ul><li>**Une fois** : s.o.</li><li>**Minute** : 15</li><li>**Heure** : 1</li><li>**Jour** : 1</li><li>**Semaine** : 1</li></ul> |
 
 **Réponse**
 

@@ -1,24 +1,24 @@
 ---
-title: Création d’une connexion source et d’un flux de données pour les activités Oracle NetSuite à l’aide de l’API Flow Service
-description: Découvrez comment créer une connexion source et un flux de données pour importer des données d’événements NetSuite Oracle à Experience Platform à l’aide de l’API Flow Service.
+title: Créer une connexion source et un flux de données pour les activités NetSuite Oracles à l’aide de l’API Flow Service
+description: Découvrez comment créer une connexion source et un flux de données pour apporter des données d’événements NetSuite Oracles à Experience Platform à l’aide de l’API Flow Service.
 hide: true
 hidefromtoc: true
 badge: Version bêta
 exl-id: 4f695389-2261-469c-8d40-7bd29a4e7f77
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1961'
 ht-degree: 54%
 
 ---
 
-# Créez une connexion source et un flux de données pour [!DNL Oracle NetSuite Activities] à l’aide de l’API Flow Service
+# Créer une connexion source et un flux de données pour [!DNL Oracle NetSuite Activities] à l’aide de l’API Flow Service
 
 >[!NOTE]
 >
->La source [!DNL Oracle NetSuite Activities] est en version Beta. Pour plus d’informations sur l’utilisation de sources étiquetées bêta, consultez la [présentation des sources](../../../../home.md#terms-and-conditions) .
+>La source [!DNL Oracle NetSuite Activities] est en version Beta. Voir la [présentation des sources](../../../../home.md#terms-and-conditions) pour plus d’informations sur l’utilisation de sources étiquetées bêta.
 
-Lisez le tutoriel suivant pour savoir comment importer des données d’événements de votre compte [!DNL Oracle NetSuite Activities] vers Adobe Experience Platform à l’aide de l’ [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lisez le tutoriel suivant pour savoir comment importer des données d’événements de votre compte [!DNL Oracle NetSuite Activities] à Adobe Experience Platform à l’aide de l’[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prise en main
 
@@ -27,7 +27,7 @@ Ce guide nécessite une compréhension professionnelle des composants suivants d
 * [Sources](../../../../home.md) : Experience Platform permet d’ingérer des données provenant de diverses sources tout en vous offrant la possibilité de structurer, d’étiqueter et d’améliorer les données entrantes à l’aide des services de Platform.
 * [Sandbox](../../../../../sandboxes/home.md) : Experience Platform fournit des sandbox virtuels qui divisent une instance de plateforme unique en environnements virtuels distincts pour favoriser le développement et l’évolution d’applications d’expérience digitale.
 
-Les sections suivantes apportent des informations supplémentaires dont vous aurez besoin pour vous connecter à [!DNL Oracle NetSuite Activities] à l’aide de l’API [!DNL Flow Service].
+Les sections suivantes contiennent des informations supplémentaires que vous devez connaître pour réussir à vous connecter à [!DNL Oracle NetSuite Activities] à l’aide de l’API [!DNL Flow Service].
 
 ### Authentification
 
@@ -37,15 +37,15 @@ Lisez la [[!DNL Oracle NetSuite] présentation](../../../../connectors/marketing
 
 Pour plus d’informations sur la manière d’effectuer des appels vers les API Platform, consultez le guide [Prise en main des API Platform](../../../../../landing/api-guide.md).
 
-## Connectez [!DNL Oracle NetSuite Activities] à Platform à l’aide de l’API [!DNL Flow Service]
+## Connecter [!DNL Oracle NetSuite Activities] à Platform à l’aide de l’API [!DNL Flow Service]
 
-Suivez le guide ci-dessous pour savoir comment authentifier votre source [!DNL Oracle NetSuite Activities], créer une connexion source et créer un flux de données pour importer vos données d’événements dans Experience Platform.
+Suivez le guide ci-dessous pour savoir comment authentifier votre source [!DNL Oracle NetSuite Activities], créer une connexion source et créer un flux de données pour apporter vos données d’événements à l’Experience Platform.
 
 ### Créer une connexion de base {#base-connection}
 
-Une connexion de base conserve les informations entre votre source et votre Experience Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
+Une connexion de base conserve les informations échangées entre votre source et votre Experience Platform, y compris les informations d’authentification de votre source, l’état actuel de la connexion et votre identifiant de connexion de base unique. L’identifiant de connexion de base vous permet d’explorer et de parcourir des fichiers à partir de votre source et d’identifier les éléments spécifiques que vous souhaitez ingérer, y compris des informations concernant leurs types et formats de données.
 
-Pour créer un identifiant de connexion de base, envoyez une requête de POST au point de terminaison `/connections` tout en fournissant vos informations d’authentification [!DNL Oracle NetSuite Activities] dans le cadre du corps de la requête.
+Pour créer un identifiant de connexion de base, envoyez une requête de POST au point d’entrée `/connections` et indiquez vos informations d’authentification [!DNL Oracle NetSuite Activities] dans le corps de la requête.
 
 **Format d’API**
 
@@ -87,13 +87,13 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `name` | Nom de la connexion de base. Assurez-vous que le nom de votre connexion de base est explicite, car vous pouvez lʼutiliser pour rechercher des informations sur votre connexion de base. |
-| `description` | Une valeur facultative que vous pouvez inclure pour fournir plus d’informations sur votre connexion de base. |
+| `description` | Valeur facultative que vous pouvez inclure pour fournir plus d’informations sur votre connexion de base. |
 | `connectionSpec.id` | Identifiant de spécification de connexion de votre source. Cet identifiant peut être récupéré une fois que votre source est enregistrée et approuvée par le biais de l’API [!DNL Flow Service]. |
 | `auth.specName` | Type d’authentification que vous utilisez pour authentifier votre source sur Platform. |
-| `auth.params.clientId` | La valeur de l’ID client lorsque vous créez l’enregistrement d’intégration. Le processus de création d&#39;un enregistrement d&#39;intégration est disponible [ici](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). La valeur est une chaîne de 64 caractères similaire à `7fce.....b42f`. |
-| `auth.params.clientSecret` | La valeur de l’ID client lorsque vous créez l’enregistrement d’intégration. Le processus de création d&#39;un enregistrement d&#39;intégration est disponible [ici](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). La valeur est une chaîne de 64 caractères similaire à `5c98.....1b46`. |
-| `auth.params.accessTokenUrl` | L’URL du jeton d’accès [!DNL NetSuite], similaire à `https://{ACCOUNT_ID}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token` où vous allez remplacer ACCOUNT_ID par votre ID de compte [!DNL NetSuite]. |
-| `auth.params.accessToken` | La valeur du jeton d’accès est générée à la fin de l’[étape 2](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) du tutoriel [ OAuth 2.0 Authorization Code Grant Flow](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow) . Les jetons d’accès arrivent à expiration pendant 60 minutes uniquement. la valeur est une chaîne de 1 024 caractères au format JSON Web Token (JWT) similaire à `eyJr......f4V0`. |
+| `auth.params.clientId` | Valeur de l’ID client lors de la création de l’enregistrement d’intégration. Le processus de création d’un enregistrement d’intégration se trouve [ici](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). La valeur est une chaîne de 64 caractères similaire à `7fce.....b42f`. |
+| `auth.params.clientSecret` | Valeur de l’ID client lors de la création de l’enregistrement d’intégration. Le processus de création d’un enregistrement d’intégration se trouve [ici](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_157771733782.html#procedure_157838925981). La valeur est une chaîne de 64 caractères similaire à `5c98.....1b46`. |
+| `auth.params.accessTokenUrl` | L’URL du jeton d’accès [!DNL NetSuite], similaire à `https://{ACCOUNT_ID}.suitetalk.api.netsuite.com/services/rest/auth/oauth2/v1/token` où vous remplacerez ACCOUNT_ID par votre ID de compte [!DNL NetSuite]. |
+| `auth.params.accessToken` | La valeur du jeton d’accès est générée à la fin de l’[étape 2](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint) du tutoriel [Flux d’octroi de code d’autorisation OAuth 2.0](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158074210415.html#OAuth-2.0-Authorization-Code-Grant-Flow). Les jetons d’accès qui expirent ne sont valides que pendant 60 minutes. la valeur est une chaîne de 1 024 caractères formatée en jeton JSON Web Token (JWT) similaire à `eyJr......f4V0`. |
 
 **Réponse**
 
@@ -108,7 +108,7 @@ Une réponse réussie renvoie la nouvelle connexion de base, y compris son ident
 
 ### Explorer votre source {#explore}
 
-Une fois que vous disposez de votre identifiant de connexion de base, vous pouvez désormais explorer le contenu et la structure de vos données source en exécutant une requête de GET sur le point de terminaison `/connections` tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête.
+Une fois que vous disposez de votre identifiant de connexion de base, vous pouvez désormais explorer le contenu et la structure de vos données source en exécutant une requête GET au point d’entrée `/connections` tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête.
 
 **Format d’API**
 
@@ -124,10 +124,10 @@ Lors de l’exécution de requêtes GET pour explorer la structure et le contenu
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | Identifiant de connexion de base généré à l’étape précédente. |
 | `objectType=rest` | Type d’objet que vous souhaitez explorer. Actuellement, cette valeur est toujours définie sur `rest`. |
-| `{OBJECT}` | Ce paramètre est requis uniquement lors de l’affichage d’un répertoire spécifique. Sa valeur représente le chemin du répertoire que vous souhaitez explorer. Pour cette source, la valeur serait `json`. |
+| `{OBJECT}` | Ce paramètre est requis uniquement lors de l’affichage d’un répertoire spécifique. Sa valeur représente le chemin d’accès au répertoire que vous souhaitez explorer. Pour cette source, la valeur serait `json`. |
 | `fileType=json` | Type de fichier du fichier que vous souhaitez importer dans Platform. Actuellement, `json` est le seul type de fichier pris en charge. |
 | `{PREVIEW}` | Valeur booléenne qui définit si le contenu de la connexion prend en charge la prévisualisation. |
-| `{SOURCE_PARAMS}` | Définit les paramètres du fichier source que vous souhaitez importer dans Platform. Pour récupérer le type de format accepté pour `{SOURCE_PARAMS}`, vous devez coder la chaîne entière en base64. <br> La valeur est vide pour [!DNL Oracle NetSuite Activities].</li></ul> |
+| `{SOURCE_PARAMS}` | Définit les paramètres du fichier source que vous souhaitez importer dans Platform. Pour récupérer le type de format accepté pour `{SOURCE_PARAMS}`, vous devez coder l’intégralité de la chaîne en base64. <br> La valeur est vide pour [!DNL Oracle NetSuite Activities].</li></ul> |
 
 ```shell
 curl -X GET \
@@ -140,9 +140,9 @@ curl -X GET \
 
 **Réponse**
 
-Une réponse réussie renvoie une structure JSON comme suit :
+Une réponse réussie renvoie une structure JSON telle que celle-ci :
 
-+++Sélectionner pour afficher la charge utile JSON
++++Sélectionner pour afficher la payload JSON
 
 ```json
 {
@@ -331,7 +331,7 @@ Une réponse réussie renvoie une structure JSON comme suit :
 
 ### Créer une connexion source {#source-connection}
 
-Vous pouvez créer une connexion source en envoyant une requête de POST au point de terminaison `/sourceConnections` de l’API [!DNL Flow Service]. Une connexion source se compose d’un identifiant de connexion, d’un chemin d’accès au fichier de données source et d’un identifiant de spécification de connexion.
+Vous pouvez créer une connexion source en effectuant une requête de POST au point d’entrée `/sourceConnections` de l’API [!DNL Flow Service]. Une connexion source se compose d’un identifiant de connexion, d’un chemin d’accès au fichier de données source et d’un identifiant de spécification de connexion.
 
 **Format d’API**
 
@@ -394,15 +394,15 @@ Pour obtenir des instructions détaillées sur la création d’un schéma XDM c
 
 ### Créer un jeu de données cible {#target-dataset}
 
-Un jeu de données cible peut être créé en adressant une requête POST à l’[API Catalog Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml) et en fournissant l’identifiant du schéma cible dans la payload.
+Un jeu de données cible peut être créé en adressant une requête POST à l’[API Catalog Service](https://developer.adobe.com/experience-platform-apis/references/catalog/) et en fournissant l’identifiant du schéma cible dans la payload.
 
 Pour obtenir des instructions détaillées sur la création d’un jeu de données cible, suivez le tutoriel sur la [création d’un jeu de données à l’aide de l’API](../../../../../catalog/api/create-dataset.md).
 
 ### Créer une connexion cible {#target-connection}
 
-Une connexion cible représente la connexion à la destination vers laquelle les données ingérées doivent être stockées. Pour créer une connexion cible, vous devez indiquer l’identifiant de spécification de connexion fixe qui correspond au lac de données. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Une connexion cible représente la connexion à la destination où les données ingérées doivent être stockées. Pour créer une connexion cible, vous devez fournir l’identifiant de spécification de connexion fixe qui correspond au lac de données. Cet identifiant est `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-Vous disposez désormais des identifiants uniques d’un schéma cible d’un jeu de données cible et de l’identifiant de spécification de connexion au lac de données. À lʼaide de ces identifiants, vous pouvez créer une connexion cible à l’aide de l’API [!DNL Flow Service] pour spécifier le jeu de données qui contiendra les données source entrantes.
+Vous disposez désormais des identifiants uniques d’un schéma cible, d’un jeu de données cible et de l’identifiant de spécification de connexion au lac de données. À lʼaide de ces identifiants, vous pouvez créer une connexion cible à l’aide de l’API [!DNL Flow Service] pour spécifier le jeu de données qui contiendra les données source entrantes.
 
 **Format d’API**
 
@@ -446,7 +446,7 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | Nom de la connexion cible. Assurez-vous que le nom de votre connexion cible est explicite, car vous pouvez l’utiliser pour rechercher des informations sur votre connexion cible. |
 | `description` | Valeur facultative que vous pouvez inclure pour fournir plus d’informations sur votre connexion cible. |
-| `connectionSpec.id` | L’identifiant de spécification de connexion qui correspond au lac de données. Cet ID fixe est `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
+| `connectionSpec.id` | Identifiant de spécification de connexion qui correspond au lac de données. Cet ID fixe est `6b137bf6-d2a0-48c8-914b-d50f4942eb85`. |
 | `data.format` | Format des données [!DNL Oracle NetSuite Activities] à ingérer. |
 | `params.dataSetId` | Identifiant du jeu de données cible récupéré lors d’une étape précédente. |
 
@@ -463,7 +463,7 @@ Une réponse réussie renvoie l’identifiant unique de la nouvelle connexion ci
 
 ### Créer un mappage {#mapping}
 
-Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache. Pour ce faire, effectuez une requête de POST vers [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) avec des mappages de données définis dans le payload de la requête.
+Pour que les données sources soient ingérées dans un jeu de données cible, elles doivent d’abord être mappées au schéma cible auquel le jeu de données cible se rattache. Pour ce faire, il suffit d’adresser une requête de POST à [[!DNL Data Prep] API](https://www.adobe.io/experience-platform-apis/references/data-prep/) avec des mappages de données définis dans la payload de la requête.
 
 **Format d’API**
 
@@ -550,7 +550,7 @@ Une réponse réussie renvoie les détails du mappage nouvellement créé, y com
 
 ### Créer un flux {#flow}
 
-La dernière étape pour apporter des données de [!DNL Oracle NetSuite Activities] à Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
+La dernière étape pour importer des données de [!DNL Oracle NetSuite Activities] vers Platform consiste à créer un flux de données. Vous disposez à présent des valeurs requises suivantes :
 
 * [ID de connexion source](#source-connection)
 * [ID de connexion cible](#target-connection)
@@ -605,7 +605,7 @@ curl -X POST \
 | Propriété | Description |
 | --- | --- |
 | `name` | Nom du flux de données. Assurez-vous que le nom de votre flux de données est explicite, car vous pouvez l’utiliser pour rechercher des informations sur votre flux de données. |
-| `description` | Une valeur facultative que vous pouvez inclure pour fournir plus d’informations sur votre flux de données. |
+| `description` | Valeur facultative que vous pouvez inclure pour fournir plus d’informations sur votre flux de données. |
 | `flowSpec.id` | Identifiant de spécification de flux requis pour créer un flux de données. Cet ID fixe est `6499120c-0b15-42dc-936e-847ea3c24d72`. |
 | `flowSpec.version` | Version correspondante de l’identifiant de spécification de flux. Cette valeur est définie par défaut sur `1.0`. |
 | `sourceConnectionIds` | L’[identifiant de connexion source](#source-connection) généré lors d’une étape précédente. |
@@ -615,8 +615,8 @@ curl -X POST \
 | `transformations.params.mappingId` | [Identifiant de mappage](#mapping) généré lors d’une étape précédente. |
 | `transformations.params.mappingVersion` | Version correspondante de l’identifiant de mappage. Ce paramètre est défini par défaut sur `0`. |
 | `scheduleParams.startTime` | Cette propriété contient des informations sur la planification de l’ingestion du flux de données. |
-| `scheduleParams.frequency` | Fréquence à laquelle le flux de données collectera les données. |
-| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un entier non nul. |
+| `scheduleParams.frequency` | Fréquence à laquelle le flux de données collecte des données. |
+| `scheduleParams.interval` | L’intervalle désigne la période entre deux exécutions consécutives de flux. La valeur de l’intervalle doit être un nombre entier non nul. |
 
 **Réponse**
 
@@ -631,24 +631,24 @@ Une réponse réussie renvoie l’identifiant (`id`) du flux de données nouvell
 
 ## Annexe
 
-La section suivante fournit des informations sur les étapes de surveillance, de mise à jour et de suppression de votre flux de données.
+La section suivante fournit des informations sur les étapes que vous pouvez suivre pour surveiller, mettre à jour et supprimer votre flux de données.
 
 ### Surveiller votre flux de données
 
-Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs. Pour obtenir des exemples complets d’API, consultez le guide sur la [surveillance des flux de données de sources à l’aide de l’API](../../monitor.md).
+Une fois votre flux de données créé, vous pouvez surveiller les données ingérées pour afficher des informations sur les exécutions du flux, le statut d’achèvement et les erreurs. Pour obtenir des exemples d’API complets, consultez le guide sur la [surveillance des flux de données sources à l’aide de l’API](../../monitor.md).
 
 ### Mettre à jour votre flux de données
 
-Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les ensembles de mappages associés, en envoyant une requête de PATCH au point de terminaison `/flows` de l’API [!DNL Flow Service], tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique `etag` de votre flux de données dans l’en-tête `If-Match`. Pour obtenir des exemples complets d’API, lisez le guide sur la [mise à jour des flux de données de sources à l’aide de l’API](../../update-dataflows.md).
+Mettez à jour les détails de votre flux de données, tels que son nom et sa description, ainsi que son planning d’exécution et les jeux de mappages associés en envoyant une requête de PATCH au point d’entrée `/flows` de [!DNL Flow Service]’API , tout en fournissant l’identifiant de votre flux de données. Lors de l’exécution d’une requête de PATCH, vous devez fournir le `etag` unique de votre flux de données dans l’en-tête `If-Match`. Pour obtenir des exemples d’API complets, consultez le guide sur la [mise à jour des flux de données sources à l’aide de l’API](../../update-dataflows.md).
 
 ### Mettre à jour votre compte
 
-Mettez à jour le nom, la description et les informations d’identification de votre compte source en adressant une requête de PATCH à l’API [!DNL Flow Service] tout en fournissant votre identifiant de connexion de base en tant que paramètre de requête. Lors de l’exécution d’une requête de PATCH, vous devez fournir l’unique `etag` de votre compte source dans l’en-tête `If-Match`. Pour obtenir des exemples complets d’API, lisez le guide sur la [mise à jour de votre compte source à l’aide de l’API](../../update.md).
+Mettez à jour le nom, la description et les informations d’identification de votre compte source en adressant une requête de PATCH à l’API [!DNL Flow Service] et en fournissant votre identifiant de connexion de base comme paramètre de requête. Lors de l’exécution d’une requête de PATCH, vous devez indiquer le `etag` unique de votre compte source dans l’en-tête `If-Match`. Pour obtenir des exemples d’API complets, consultez le guide sur la [mise à jour de votre compte source à l’aide de l’API](../../update.md).
 
 ### Supprimer le flux de données
 
-Supprimez votre flux de données en adressant une requête de DELETE à l’API [!DNL Flow Service] tout en fournissant l’identifiant du flux de données que vous souhaitez supprimer dans le cadre du paramètre de requête . Pour obtenir des exemples complets d’API, lisez le guide sur la [suppression de vos flux de données à l’aide de l’API](../../delete-dataflows.md).
+Supprimez votre flux de données en adressant une requête de DELETE à l’API [!DNL Flow Service] et en fournissant l’identifiant du flux de données à supprimer dans le cadre du paramètre de requête. Pour obtenir des exemples d’API complets, consultez le guide sur la [suppression de vos flux de données à l’aide de l’API](../../delete-dataflows.md).
 
-### Suppression de votre compte
+### Supprimer votre compte
 
-Supprimez votre compte en adressant une requête de DELETE à l’API [!DNL Flow Service] tout en fournissant l’identifiant de connexion de base du compte que vous souhaitez supprimer. Pour obtenir des exemples complets d’API, lisez le guide sur la [suppression de votre compte source à l’aide de l’API](../../delete.md).
+Supprimez votre compte en adressant une requête de DELETE à l’API [!DNL Flow Service] et en fournissant l’identifiant de connexion de base du compte que vous souhaitez supprimer. Pour obtenir des exemples d’API complets, consultez le guide sur la [suppression de votre compte source à l’aide de l’API](../../delete.md).

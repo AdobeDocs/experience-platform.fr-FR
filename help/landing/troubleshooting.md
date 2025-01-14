@@ -9,7 +9,7 @@ type: Documentation
 role: Developer
 feature: API, Audiences, Data Ingestion, Datasets, Destinations, Privacy, Queries, Schemas, Sandboxes, Sources
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
-source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1812'
 ht-degree: 97%
@@ -70,7 +70,7 @@ De nombreuses opérations PATCH dans les API [!DNL Platform] utilisent des chaî
 
 ## Quelle est la configuration requise pour [!DNL Platform] ? {#what-are-the-system-requirements-for-platform}
 
-Selon que vous utilisez l’interface utilisateur ou l’API, la configuration système requise suivante s’applique :
+Selon que vous utilisez l’interface utilisateur ou l’API, la configuration requise suivante s’applique :
 
 **Pour les opérations basées sur l’interface utilisateur :**
 - Un navigateur web standard et moderne. Bien que la dernière version de [!DNL Chrome] soit recommandée, les versions majeures actuelles et antérieures de [!DNL Firefox], [!DNL Internet Explorer], et Safari sont également prises en charge.
@@ -94,7 +94,7 @@ Vous pouvez rencontrer les codes d’état suivants sur n’importe quelle API [
 | 401 | Échec de l’authentification | La requête n’a pas pu être authentifiée. Votre jeton d’accès est peut-être absent ou non valide. Pour plus d’informations, reportez-vous à la section [erreurs de jeton OAuth](#oauth-token-is-missing) ci-dessous. |
 | 403 | Interdit | La ressource a été trouvée, mais vous ne possédez pas les informations d’identification appropriées pour la consulter. <br>Une cause probable de cette erreur est que vous ne disposez pas des [autorisations de contrôle d’accès](/help/access-control/home.md) permettant d’accéder à la ressource ou de la modifier. Découvrez comment [obtenir les autorisations de contrôle d’accès basées sur les attributs](/help/landing/api-authentication.md#get-abac-permissions) afin d’utiliser les API Platform. </p> |
 | 404 | Introuvable | La ressource demandée n’a pas été trouvée sur le serveur. La ressource a peut-être été supprimée, ou le chemin d’accès demandé n’a pas été correctement saisi. |
-| 500 | Erreur interne du serveur | Il s’agit d’une erreur côté serveur. Si vous effectuez de nombreux appels simultanés, vous pouvez atteindre la limite de l’API et devoir filtrer vos résultats. (Voir la sous-partie [!DNL Catalog Service] du guide de développement de l&#39;API sur le [filtrage des données](../catalog/api/filter-data.md) pour en savoir plus.) Patientez quelques instants avant de réessayer votre requête et contactez votre administrateur si le problème persiste. |
+| 500 | Erreur interne du serveur | Il s’agit d’une erreur côté serveur. Si vous effectuez de nombreux appels simultanés, vous pouvez atteindre la limite de l’API et devoir filtrer vos résultats. (Pour en savoir plus, consultez la sous-partie du guide de développement de l’API [!DNL Catalog Service] sur le [filtrage des données](../catalog/api/filter-data.md).) Patientez avant de réessayer d’exécuter votre requête et contactez votre administrateur si le problème persiste. |
 
 ## Erreurs dans l’en-tête de la requête {#request-header-errors}
 
@@ -213,7 +213,7 @@ Voici une liste de guides de dépannage et de documentation de référence sur l
 | Contrôle d’accès | [API Access Control](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Guide de dépannage du contrôle d’accès](../access-control/troubleshooting-guide.md) |
 | Adobe Experience Platform Data Ingestion | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [Guide de dépannage de l’ingestion par lots](../ingestion/batch-ingestion/troubleshooting.md) |
 | Adobe Experience Platform Data Ingestion | [[!DNL Streaming Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/) | [Guide de dépannage de l’ingestion en flux continu](../ingestion/streaming-ingestion/troubleshooting.md) |
-| Espace de travail de science des données d’Adobe Experience Platform | [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) | Guide de dépannage du [[!DNL Data Science Workspace] ](../data-science-workspace/troubleshooting-guide.md) |
+| Espace de travail de science des données d’Adobe Experience Platform | [[!DNL Sensei Machine Learning API]](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) | Guide de dépannage du [[!DNL Data Science Workspace] ](../data-science-workspace/troubleshooting-guide.md) |
 | Gouvernance des données d’Adobe Experience Platform | [[!DNL Policy Service API]](https://www.adobe.io/experience-platform-apis/references/policy-service/) |  |
 | Service d’identités d’Adobe Experience Platform | [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service) | Guide de dépannage du [[!DNL Identity Service] ](../identity-service/troubleshooting-guide.md) |
 | Adobe Experience Platform Query Service | [[!DNL Query Service API]](https://www.adobe.io/experience-platform-apis/references/query-service/) | Guide de dépannage du [[!DNL Query Service] ](../query-service/troubleshooting-guide.md) |

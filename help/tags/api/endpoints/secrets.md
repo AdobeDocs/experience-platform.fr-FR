@@ -2,7 +2,7 @@
 title: Point d’entrée des secrets
 description: Découvrez comment effectuer des appels vers le point d’entrée /secrets dans l’API Reactor.
 exl-id: 76875a28-5d13-402d-8543-24db7e2bee8e
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1239'
 ht-degree: 89%
@@ -17,7 +17,7 @@ Ce guide vous explique comment effectuer des appels au point d’entrée `/secre
 
 ## Prise en main
 
-Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la procédure à suivre pour s’authentifier auprès de l’API.
+Le point d’entrée utilisé dans ce guide fait partie de lʼ[API Reactor](https://developer.adobe.com/experience-platform-apis/references/reactor/). Avant de poursuivre, consultez le [guide de prise en main](../getting-started.md) pour obtenir des informations importantes sur la procédure à suivre pour s’authentifier auprès de l’API.
 
 ## Récupération d’une liste de secrets pour une propriété {#list-property}
 
@@ -302,7 +302,7 @@ Vous pouvez créer un secret en effectuant une requête POST.
 
 >[!NOTE]
 >
->Lorsque vous créez un secret, l’API renvoie une réponse immédiate contenant des informations pour cette ressource. Dans le même temps, une tâche d’échange de secrets est déclenchée pour vérifier que l’échange d’informations d’identification est fonctionnel. Cette tâche est traitée de manière asynchrone et met à jour l’attribut statut du secret vers `succeeded` ou `failed` en fonction du résultat.
+>Lorsque vous créez un secret, l’API renvoie une réponse immédiate contenant des informations pour cette ressource. Dans le même temps, une tâche d’échange de secrets est déclenchée pour vérifier que l’échange d’informations d’identification est fonctionnel. Cette tâche est traitée de manière asynchrone et met à jour l’attribut status du secret vers `succeeded` ou `failed` selon le résultat.
 
 **Format d’API**
 
@@ -353,7 +353,7 @@ curl -X POST \
 | --- | --- |
 | `name` | Nom unique et descriptif pour le secret. |
 | `type_of` | Le type d’informations d’authentification que le secret représente. Trois valeurs acceptées :<ul><li>`token` : chaîne de jeton.</li><li>`simple-http` : nom d’utilisateur et mot de passe.</li><li>`oauth2` : informations d’identification conformes à la norme OAuth.</li></ul> |
-| `credentials` | Objet contenant les valeurs d’identification du secret. Selon l’attribut `type_of`, différentes propriétés doivent être fournies. Voir la section sur les [informations d’identification](../guides/secrets.md#credentials) dans le guide des secrets pour plus d’informations sur les exigences de chaque type. |
+| `credentials` | Objet contenant les valeurs d’informations d’identification du secret. Selon l’attribut `type_of`, différentes propriétés doivent être fournies. Voir la section sur les [informations d’identification](../guides/secrets.md#credentials) dans le guide des secrets pour plus d’informations sur les exigences de chaque type. |
 | `relationships.environment` | Chaque secret doit être associé à un environnement lors de sa création. L’objet `data` dans cette propriété doit contenir le `id` de l’environnement auquel le secret est affecté, avec une valeur `type` de `environments`. |
 | `type` | Le type de ressource en cours de création. Pour cet appel, la valeur doit être `secrets`. |
 
@@ -646,7 +646,7 @@ Une réponse réussie renvoie les détails du secret, dont le statut est réinit
 
 ## Réautoriser un secret `oauth2-google` {#reauthorize}
 
-Chaque secret `oauth2-google` contient une propriété `meta.authorization_url_expires_at` qui indique quand l’URL d’autorisation expirera. Au-delà de cette date, le secret doit être réautorisé afin de renouveler le processus d&#39;authentification.
+Chaque secret `oauth2-google` contient une propriété `meta.authorization_url_expires_at` qui indique le moment où l’URL d’autorisation expirera. Passé ce délai, le secret doit être réautorisé pour qu’il puisse renouveler le processus d’authentification.
 
 Pour réautoriser un secret `oauth2-google`, effectuez une demande de PATCH pour le secret en question.
 
@@ -662,7 +662,7 @@ PATCH /secrets/{SECRET_ID}
 
 **Requête**
 
-L’objet `data` du payload de requête doit contenir une propriété `meta.action` définie sur `reauthorize`.
+L’objet `data` dans la payload de requête doit contenir une propriété `meta.action` définie sur `reauthorize`.
 
 ```shell
 curl -X PATCH \
@@ -688,7 +688,7 @@ curl -X PATCH \
 
 **Réponse**
 
-Une réponse réussie renvoie les détails du secret mis à jour. A partir de là, vous devez copier et coller le `meta.authorization_url` dans un navigateur pour terminer le processus d’autorisation.
+Une réponse réussie renvoie les détails du secret mis à jour. À partir de là, vous devez copier et coller le `meta.authorization_url` dans un navigateur pour terminer le processus d’autorisation.
 
 ```json
 {

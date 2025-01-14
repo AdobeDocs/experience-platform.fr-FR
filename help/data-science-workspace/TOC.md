@@ -6,10 +6,10 @@ user-guide-description: Utilisez le machine learning pour développer, entraîne
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '225'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -64,5 +64,5 @@ ht-degree: 100%
    * [Publication d’un modèle en tant que service (API)](models-recipes/publish-model-service-api.md)
    * [Planification de la formation et de la notation automatisées d’un service (interface utilisateur)](models-recipes/schedule-models-ui.md)
 * [Guide de dépannage](troubleshooting-guide.md)
-* [Référence d’API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
+* [Référence d’API](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
 * [Notes de mise à jour de Platform](https://experienceleague.adobe.com/fr/docs/experience-platform/release-notes/latest)
