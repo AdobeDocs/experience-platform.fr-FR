@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guide de dépannage du système XDM
 description: Trouvez des réponses aux questions fréquentes sur le modèle de données d’expérience (XDM), y compris les étapes pour résoudre les erreurs d’API courantes.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: ae98a185fdfad5b6ba787e78ad17296928216d08
+source-git-commit: b345330595aadcfe2380dd1795802470b249cb4a
 workflow-type: tm+mt
-source-wordcount: '2390'
-ht-degree: 81%
+source-wordcount: '2347'
+ht-degree: 82%
 
 ---
 
@@ -21,9 +21,9 @@ Ce document répond aux questions fréquentes sur [!DNL Experience Data Model] (
 
 Vous trouverez ci-dessous une liste de réponses aux questions fréquentes concernant le système XDM et l’utilisation de l’API [!DNL Schema Registry].
 
-## Concepts de base des schémas
+## Principes de base des schémas
 
-Dans cette section, vous trouverez des réponses aux questions fondamentales sur la structure des schémas, l’utilisation des champs et l’identification dans le système XDM.
+Dans cette section, vous trouverez des réponses à des questions fondamentales sur la structure des schémas, l’utilisation des champs et l’identification dans le système XDM.
 
 ### Comment ajouter des champs à un schéma ?
 
@@ -51,7 +51,7 @@ Pour plus d’informations sur les types de champs, consultez le document sur le
 
 ### Qu’est-ce que meta:AltId ?
 
-`meta:altId` est un identifiant unique pour un schéma. `meta:altId` fournit un ID de référence facile à utiliser dans les appels API. Cet identifiant évite d’avoir à être codé/décodé chaque fois qu’il est utilisé avec le format URI JSON.
+`meta:altId` est l’identifiant unique d’un schéma. Le `meta:altId` fournit un identifiant de référence facile à utiliser dans les appels API. Cet identifiant évite d’avoir à être codé/décodé chaque fois qu’il est utilisé comme avec le format URI JSON.
 <!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
 
 <!-- ### How can I generate a sample payload for a schema? -->
@@ -59,17 +59,17 @@ Pour plus d’informations sur les types de champs, consultez le document sur le
 <!-- No Answer available.  -->
 <!-- INCOMPLETE ... -->
 
-### Quelles sont les restrictions d’utilisation pour un type de données de carte ?
+### Quelles sont les restrictions d’utilisation pour un type de données de mappage ?
 
-XDM impose les restrictions suivantes à l’utilisation de ce type de données :
+XDM place les restrictions suivantes sur l’utilisation de ce type de données :
 
-- Les types de mappage DOIVENT être de type objet .
-- Les types de carte NE DOIVENT PAS avoir de propriétés définies (en d’autres termes, ils définissent des objets &quot;vides&quot;).
-- Les types de mappage DOIVENT inclure un champ additionalProperties.type qui décrit les valeurs qui peuvent être placées dans le mappage, soit une chaîne, soit un entier.
-- La segmentation d’entités multiples ne peut être définie que sur la base des clés de mappage et non des valeurs.
-- Les cartes ne sont pas prises en charge pour les audiences de compte.
+- Les types de carte DOIVENT être de type objet .
+- Les propriétés des types de carte NE DOIVENT PAS ÊTRE définies (en d’autres termes, ils définissent des objets « vides »).
+- Les types de mappage DOIVENT inclure un champ additionnelProperties.type qui décrit les valeurs qui peuvent être placées dans le mappage, soit une chaîne, soit un entier.
+- La segmentation d’entités multiples peut uniquement être définie en fonction des clés de mappage et non des valeurs.
+- Les mappages ne sont pas pris en charge pour les audiences de compte.
 
-Pour plus d’informations, voir les [restrictions d’utilisation des objets map](./ui/fields/map.md#restrictions) .
+Pour plus d’informations, consultez la [restrictions d’utilisation des objets map](./ui/fields/map.md#restrictions).
 
 >[!NOTE]
 >
@@ -86,9 +86,9 @@ Pour plus d’informations, voir les [restrictions d’utilisation des objets ma
 <!-- No Answer available.  -->
 <!-- INCOMPLETE ... -->
 
-## Identity Management du schéma
+## Identity Management de schéma
 
-Cette section contient des réponses aux questions courantes concernant la définition et la gestion des identités au sein de vos schémas.
+Cette section contient les réponses aux questions courantes sur la définition et la gestion des identités dans vos schémas.
 
 ### Comment définir les identités pour mon schéma ?
 
@@ -116,7 +116,7 @@ Les identités principales sont facultatives, car les schémas peuvent en avoir 
 
 ## Activation du profil de schéma
 
-Cette section fournit des conseils sur l’activation des schémas à utiliser avec Real-time Customer Profile.
+Cette section fournit des conseils sur l’activation des schémas à utiliser avec le profil client en temps réel.
 
 ### Comment activer un schéma pour l’utiliser dans [!DNL Real-Time Customer Profile] ?
 
@@ -134,25 +134,19 @@ Dans [!DNL Experience Platform], cliquez sur **[!UICONTROL Schémas]** dans le v
 
 Pour plus d’informations, consultez la section sur l’[utilisation dans le profil client en temps réel](./tutorials/create-schema-ui.md#profile) dans le tutoriel de l’[!UICONTROL éditeur de schémas].
 
-### Lorsque des données Adobe Analytics sont importées en tant que source, le schéma créé automatiquement est-il activé pour Profile ?
+### Lorsque les données Adobe Analytics sont importées en tant que source, le schéma créé automatiquement est-il activé pour Profile ?
 
-Le schéma n’est pas automatiquement activé pour Real-time Customer Profile. Vous devez activer explicitement le jeu de données pour Profile en fonction du schéma activé pour Profile. Consultez la documentation pour découvrir les [ étapes et exigences nécessaires pour activer un jeu de données à utiliser dans Real-time Customer Profile ](../catalog/datasets/user-guide.md#enable-profile).
+Le schéma n’est pas automatiquement activé pour le profil client en temps réel. Vous devez activer explicitement le jeu de données pour Profil en fonction du schéma activé pour Profil. Consultez la documentation pour découvrir les [étapes et exigences nécessaires pour activer un jeu de données à utiliser dans le profil client en temps réel](../catalog/datasets/user-guide.md#enable-profile).
 
-### Puis-je supprimer des schémas activés dans Profile ?
+### Puis-je supprimer des schémas activés pour Profile ?
 
-Vous ne pouvez pas supprimer un schéma une fois qu’il a été activé pour Real-Time Customer Profile. Une fois qu’un schéma est activé pour Profile, il ne peut pas être désactivé ni supprimé et les champs ne peuvent pas être supprimés du schéma. Par conséquent, il est essentiel de planifier et de vérifier soigneusement la configuration du schéma avant de l’activer pour Profile. Vous pouvez toutefois supprimer un jeu de données activé par Profile. Vous trouverez des informations ici : <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+Vous ne pouvez pas supprimer un schéma une fois qu’il a été activé pour le profil client en temps réel. Une fois qu’un schéma est activé pour Profil, il ne peut pas être désactivé ni supprimé, et les champs ne peuvent pas être supprimés du schéma. Par conséquent, il est essentiel de planifier et de vérifier soigneusement la configuration du schéma avant de l’activer pour Profile. Vous pouvez toutefois supprimer un jeu de données activé pour Profil. Vous trouverez des informations ici : <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
->[!IMPORTANT]
->
->Pour supprimer un schéma activé par Profile, vous avez besoin de l’aide de l’équipe d’assistance de la plateforme XDM et devez suivre les étapes suivantes :
->
-> 1. Supprimer tous les jeux de données associés au schéma (activé pour Profile)
-> 2. Supprimez l’instantané de l’exportation du profil de l’environnement de test (cela nécessite l’aide de l’équipe d’assistance XDM Platform).
-> 3. Forcer la suppression du schéma de l’environnement de test (cette opération ne peut être effectuée que par l’équipe d’assistance de la plateforme XDM)
+Si vous ne souhaitez plus qu’un schéma activé pour Profile soit utilisé, il est recommandé de renommer le schéma pour inclure **Ne pas utiliser** ou **Inactif**.
 
-## Modification et restrictions du schéma
+## Modification des schémas et restrictions
 
-Cette section fournit des clarifications sur les règles de modification de schéma et sur la prévention des modifications entraînant une rupture.
+Cette section fournit des clarifications sur les règles de modification des schémas et la prévention des modifications avec rupture.
 
 ### Quand un schéma commence-t-il à éviter les modifications avec rupture ?
 
@@ -168,9 +162,9 @@ Pour plus d’informations sur les unions dans XDM, consultez la section sur les
 
 [!DNL Experience Platform] accepte les fichiers de données au format [!DNL Parquet] ou JSON. Le contenu de ces fichiers doit être conforme au schéma référencé par le jeu de données. Pour plus d’informations sur les bonnes pratiques en matière d’ingestion de fichiers de données, reportez-vous à la [présentation de l’ingestion par lots](../ingestion/home.md).
 
-### Comment puis-je convertir un schéma en lecture seule ?
+### Comment convertir un schéma en schéma en lecture seule ?
 
-Actuellement, vous ne pouvez pas convertir un schéma en lecture seule.
+Vous ne pouvez actuellement pas convertir un schéma en lecture seule.
 
 ## Erreurs et résolution des problèmes
 
